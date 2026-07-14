@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "lightaisolutions"
+title: "Sales"
 abstract: "A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script embedding support."
 authors:
   - name: "ShadowAISolutions"
 type: software
 license: "All Rights Reserved"
-repository-code: "https://github.com/LightAISolutions/lightaisolutions"
-url: "https://lightaisolutions.github.io/lightaisolutions"
+repository-code: "https://github.com/LightAISolutions/Sales"
+url: "https://lightaisolutions.github.io/Sales"
 # Developed by: ShadowAISolutions
