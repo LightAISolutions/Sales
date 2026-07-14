@@ -1,0 +1,5 @@
+# robots.txt for lightaisolutions.github.io/lightaisolutions
+User-agent: *
+Allow: /
+
+Sitemap: https://lightaisolutions.github.io/lightaisolutions/sitemap.xml
