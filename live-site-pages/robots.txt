@@ -3,3 +3,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://lightaisolutions.github.io/Sales/sitemap.xml
+
