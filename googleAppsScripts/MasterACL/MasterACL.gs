@@ -1,4 +1,4 @@
-var VERSION = "v01.02g";
+var VERSION = "v01.03g";
 var TITLE = "MasterACL";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -317,12 +317,14 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
  * Because every auth project reads this same central ACL spreadsheet, granting
  * here gives the user access to ALL registered pages at once.
  *
- * Usage:
- *   1. Project Settings → Script Properties:
- *        GRANT_ACCESS_EMAILS = user1@example.com, user2@example.com   (required)
- *        GRANT_ACCESS_ROLE   = viewer | contributor | editor | admin  (optional, default: viewer)
- *   2. Editor → select "grantUserAccess" → Run
- *   3. Check the execution log for a per-email result summary
+ * Usage — zero setup: Editor → select "grantUserAccess" → Run. With no Script
+ * Properties configured, it grants DEFAULT_GRANT_EMAILS the DEFAULT_GRANT_ROLE.
+ *
+ * Optional overrides (Project Settings → Script Properties) for granting other users:
+ *   GRANT_ACCESS_EMAILS = user1@example.com, user2@example.com
+ *   GRANT_ACCESS_ROLE   = viewer | contributor | editor | admin  (default: viewer when
+ *                         GRANT_ACCESS_EMAILS is set; DEFAULT_GRANT_ROLE when using defaults)
+ * Check the execution log for a per-email result summary.
  *
  * Behavior:
  *   - Email not in the Access tab  → appends a row with the role and TRUE for every page column
@@ -331,14 +333,18 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
  *     explicit grant, so it re-enables access for existing rows too)
  *   - Any change bumps the access-cache epoch so it takes effect immediately
  */
+var DEFAULT_GRANT_EMAILS = 'jonyang92@gmail.com, lightaisolution@gmail.com';
+var DEFAULT_GRANT_ROLE = 'admin';
 function grantUserAccess() {
   var props = PropertiesService.getScriptProperties();
   var rawEmails = props.getProperty('GRANT_ACCESS_EMAILS') || '';
   var rawRole = props.getProperty('GRANT_ACCESS_ROLE') || '';
   if (!rawEmails.trim()) {
-    Logger.log('No emails specified. Set Script Properties key "GRANT_ACCESS_EMAILS" '
-      + '(single email or comma-separated list), optionally "GRANT_ACCESS_ROLE", then Run again.');
-    return;
+    // No Script Properties configured — fall back to the built-in defaults so the
+    // function is runnable with zero setup.
+    rawEmails = DEFAULT_GRANT_EMAILS;
+    if (!rawRole.trim()) rawRole = DEFAULT_GRANT_ROLE;
+    Logger.log('Using built-in defaults: ' + DEFAULT_GRANT_EMAILS + ' (role: ' + rawRole + ')');
   }
   var role = rawRole.trim().toLowerCase() || RBAC_DEFAULT_ROLE;
   if (!RBAC_ROLES_FALLBACK.hasOwnProperty(role)) {
