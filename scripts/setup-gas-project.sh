@@ -604,6 +604,37 @@ ${AUTH_SECTION}
 Developed by: ShadowAISolutions
 DIAGEOF
     ok "Created $DIAGRAM_FILE"
+
+    # Every diagram must carry an "Open in mermaid.live" link (repo-docs rule).
+    # Python's zlib output is pako-compatible, so the link is generated in-script.
+    if command -v python3 >/dev/null 2>&1; then
+        if python3 - "$DIAGRAM_FILE" <<'MERMAID_LINK_EOF'
+import sys, re, json, zlib, base64
+path = sys.argv[1]
+with open(path) as f:
+    content = f.read()
+m = re.search(r'```mermaid\n(.*?)\n```', content, re.S)
+if not m:
+    sys.exit(1)
+code = m.group(1)
+state = {"code": code, "mermaid": json.dumps({"theme": "default"}, separators=(",", ":")), "autoSync": True, "updateDiagram": True}
+enc = base64.urlsafe_b64encode(zlib.compress(json.dumps(state, separators=(",", ":")).encode(), 9)).decode().rstrip("=")
+# Round-trip verification before writing
+padded = enc + "=" * ((4 - len(enc) % 4) % 4)
+if json.loads(zlib.decompress(base64.urlsafe_b64decode(padded)))["code"] != code:
+    sys.exit(1)
+link = "> [Open in mermaid.live](https://mermaid.live/edit#pako:" + enc + ")\n\n"
+with open(path, "w") as f:
+    f.write(content.replace("```mermaid\n", link + "```mermaid\n", 1))
+MERMAID_LINK_EOF
+        then
+            ok "Added mermaid.live link to $DIAGRAM_FILE"
+        else
+            warn "mermaid.live link generation failed — add it manually to $DIAGRAM_FILE"
+        fi
+    else
+        warn "python3 not found — add the mermaid.live link manually to $DIAGRAM_FILE"
+    fi
 fi
 
 # ── Phase 6: Register in GAS Projects Table ──
@@ -614,8 +645,14 @@ TABLE_ROW="| ${PROJECT_DIR} | \`${GAS_FILE}\` | \`${GAS_CONFIG}\` | \`${HTML_PAG
 if grep -q "| ${PROJECT_DIR} |" "$GAS_SCRIPTS_RULES" 2>/dev/null; then
     warn "Project ${PROJECT_DIR} already registered in GAS Projects table — skipping"
 else
-    # Find the last row of the table (line starting with |, not the header separator)
-    LAST_TABLE_LINE=$(grep -n '^| ' "$GAS_SCRIPTS_RULES" | grep -v '|---' | tail -1 | cut -d: -f1)
+    # Anchor on the GAS Projects table header, then take the last contiguous row
+    # of THAT table — a file-wide "last | line" grab lands in whatever table is
+    # last in the file (the coding-guidelines pointer table).
+    TABLE_HEADER_LINE=$(grep -n '^| Project | Code File |' "$GAS_SCRIPTS_RULES" 2>/dev/null | head -1 | cut -d: -f1)
+    LAST_TABLE_LINE=""
+    if [ -n "$TABLE_HEADER_LINE" ]; then
+        LAST_TABLE_LINE=$(awk -v s="$TABLE_HEADER_LINE" 'NR>=s { if ($0 ~ /^\|/) last=NR; else exit } END { print last }' "$GAS_SCRIPTS_RULES")
+    fi
     if [ -n "$LAST_TABLE_LINE" ]; then
         sed -i "${LAST_TABLE_LINE}a\\${TABLE_ROW}" "$GAS_SCRIPTS_RULES"
         ok "Registered ${PROJECT_DIR} in GAS Projects table"
@@ -858,11 +895,13 @@ if [ -f "$WORKFLOW_FILE" ]; then
     if grep -q "Deploy ${PROJECT_DIR}" "$WORKFLOW_FILE"; then
         warn "${PROJECT_DIR} deploy step already in workflow — skipping"
     else
-        # Insert before the AHK VERSION FILE UPDATE comment (after last GAS deploy step).
+        # Insert before the "Update AHK version files" step (after the last GAS deploy
+        # step). Anchor on the step name — banner comments are not stable across
+        # workflow revisions and an unmatched anchor makes this phase silently skip.
         # The deploy step reads DEPLOYMENT_ID from config.json at merge time via jq, so it
         # works even when DEPLOYMENT_ID is still a placeholder at project setup — the case
         # statement skips the curl until the user updates config.json with the real ID.
-        AHK_LINE=$(grep -n '# ── AHK VERSION FILE UPDATE ──' "$WORKFLOW_FILE" | head -1 | cut -d: -f1)
+        AHK_LINE=$(grep -n '^      - name: Update AHK version files' "$WORKFLOW_FILE" | head -1 | cut -d: -f1)
         if [ -n "$AHK_LINE" ]; then
             # Write the deploy block to a temp file, then use sed to insert it
             DEPLOY_TMPFILE=$(mktemp)
@@ -890,7 +929,7 @@ DEPLOY_EOF
             rm -f "$DEPLOY_TMPFILE"
             ok "Added Deploy ${PROJECT_DIR} step to workflow"
         else
-            warn "Could not find AHK VERSION FILE UPDATE marker in workflow — manual update needed"
+            warn "Could not find 'Update AHK version files' step in workflow — manual update needed"
         fi
     fi
 else

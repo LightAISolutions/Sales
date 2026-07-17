@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-07-17 06:55:07 PM EST` · Repo version: `v01.02r`
+Last updated: `2026-07-17 07:11:12 PM EST` · Repo version: `v01.03r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -32,7 +32,7 @@ Last updated: `2026-07-17 06:55:07 PM EST` · Repo version: `v01.02r`
 │   🧜‍♀️  Architecture diagram  — ◽  No diagram
 
 <b>Repository Root ─────────────────────────────────────────────────────────────</b>
-<a href="https://github.com/LightAISolutions/Sales">Sales/</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/REPO-ARCHITECTURE.md">🧜‍♀️</a>  — <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG.md">v01.02r</a>
+<a href="https://github.com/LightAISolutions/Sales">Sales/</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/REPO-ARCHITECTURE.md">🧜‍♀️</a>  — <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG.md">v01.03r</a>
 │
 <b>─── Live Site ────────────────────────────────────────────────────────────────</b>
 ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages">live-site-pages/</a>             — [template] Deployed to GitHub Pages
