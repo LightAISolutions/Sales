@@ -39,6 +39,7 @@ Each GAS project has a code file and a corresponding embedding page. Register th
 | Testauthhtml1 | `googleAppsScripts/Testauthhtml1/testauthhtml1.gs` | `googleAppsScripts/Testauthhtml1/testauthhtml1.config.json` | `live-site-pages/testauthhtml1.html` |
 | Globalacl | `googleAppsScripts/Globalacl/globalacl.gs` | `googleAppsScripts/Globalacl/globalacl.config.json` | `live-site-pages/globalacl.html` |
 | MasterACL | `googleAppsScripts/MasterACL/MasterACL.gs` | `googleAppsScripts/MasterACL/MasterACL.config.json` | `live-site-pages/MasterACL.html` |
+| Scraper | `googleAppsScripts/Scraper/Scraper.gs` | `googleAppsScripts/Scraper/Scraper.config.json` | `live-site-pages/Scraper.html` |
 
 
 ## GAS Project Config (config.json)

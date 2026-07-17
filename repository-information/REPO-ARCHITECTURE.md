@@ -4,7 +4,7 @@
 
 ## 1. Flowchart — System Overview
 
-> [Open in mermaid.live — Flowchart](https://mermaid.live/edit#pako:eNq1Wf1u28gRf5UFDzgk11Bycpfc2cC1oClaUk3bgkinDUxDWJEjcuMVl9hd2tHFAfoQfZf-30fpkxS7_BAlkjolverP5cxvvmdnVp-NkEVgnBkxx1mC_PMgRQghkS-Lg8CYQ8YEkYxvzpCHKYjAKGjULyIcQklYqjm35w3-ETwCZRlw9DfGH1aUPTUB1G_kvL9r0g2RTXEeAbJZBIFxv0ttn98FRqgJhj-gJcdpmLSIRs57ZJp_fg6MLBdJYDwj-3xLAWnUo6w9Hdoj9J9__BPhXDJzDTwGsxA22KwpupOwziiWgP79L0RSIgmm5DeI7vdt2nVM84s_n47HzvxzYMxykSDJUGXMXwLjy76tyoqKpRNHm_kBxDPyJtbCnjj25efAsNl6TaQ6CoL0V0SxkGbGWQhCQNSWU7Nu0UaO6_jOwvMt19HRoSABkTQBTiREleOD9IV4IBnSnnrZisMu8DV7Ru8tdzqyfOdzYHjAHyFCJE2BmyLkJJNBkIpNKvEn9Igp6dC0Yq_xzt0b-_IuMC4woYjnqQ7ekrLwIQhSrRX6HkWQUbZRyhZqo4yD0NLbKu9I0K64cuZj5YMrjUZSydAak7TFqel0wG5nCmHhTay7wLjNIiwhCNLdKJihjtFAJLiFtOXXcKPpxcVdYNgJhA8oJhJFZLVq5_z04qJMekoewRREgpnhGMQQhQlOY4hUIcysseMtLlxrfBcY-rNZfkW_IslzOAQ8iEUTa2x5i5Ezc28-6BRRTlZn6JFgFOacotmN57fwtlyFdUWmnc_7vFkTbPPw9-p_a2SJoKQt9Gl_FQXGSFctysrCLKL83MPe30XGRE7yJZop56LCLWtIZbvvbWG3_mvFTrIgSJuQLWvd6XuVny55BOSRItdInEhMBKO56kJiEBOZ5MsBYcOyid_3K6N9pkCPMdZJHwlnqTJQoBdawZf93dCdt3LBn7la7F1g1O31HsVYqFr5CKE0Qw5YMj5I5JqqIlYpNiu-Ibv41q5j3_F869afjC3vdQe-BCFxLpMYi9c1sA9CIiuXCXrdDzjxr9xDiAqsC1LxdeGO3Ztzy7XsTi9QtsQUh3Rruz5Blu12afh33765mllzp1O_T1I1nQxzaKj3SSK7OEQ-Y7SNemV5vjPv1u8KCwncst0asD7ZBTpQLIzFFJCVZQJ5-hIQ22v2_qsyadGM-YFwx6KzJ-0E-FBs9_j7bfMSzCFCcxAs5yF8m2HXN391Lj-47q5Gg5R9hIcNpe0793q0SypYnkZi2CJUdi7eO3Nvl1zZaD4CF6pvtLnGXgdPLA5waDm22yGluEooi7vl7PPEopejPwb7_bSCE8PjpznVoq5vVG7sKjSRa2ql0RgLvzyzcsmKC99MmcoYXRgD-UmNNi90C6iFPhGZsFyqUTPpKOaZu_hKiUfIQ2W5dcssu_HV9LrTXNWT1yQla0xL68zqo6nWiMFHUUlWLbr6dlDOYSlHyyiMa1vVnxf1BcLSFYkPVKbtWrcjZ3G1V1XF8WAdKVXKmwqRVEie6zoWbbPnt66zVziDcpLhOQUxVFCYPuGNMCnDEUToTyjDMjFFyDKIkKbqmLIvp67bAyweCKUFMkkf2QNeUkBP5SaGiq8dmjqzG1Xmu5i8XgUHZbXrULTnRWs8t668PmaTpCvG11h5aRgRHHO8LjTMgJuwnScQ5mFCJIQy54Aqyg77Hd-fXo_7PABSkjQWg4-CpUqKmqB_KBY8TCl76toC1OJyMXX3rrtyihr2T_Lazbs7EopzzKNj01KV84TJB9gcSElrcqkK56bYE5o6qk62ZhFZEYjutY0F2HDbJgY4edBu4ADpigCNUJZTai6xgKhwS64J-bE6__61Pb2e-gvPnk9n_t7dVLAOVfc1VYoMhF4qWQqmSJhEK8Yftr1Z50xnP1l4jn876wYXIPPMbEyUpRDVQKrKXREKSA-anRJsb7aYWN6kW4CaqnLVoERmJlgkJb7tzVQimW_evkPqGBV0B4yoZ8G-MbBndKlntL7xrIOvERNkDvT-o4Mfgao4gRiPhyoiQZByyChW88ubN9pRQr-oVH1xL0X2cqW6xyoZIcs2-tVD-VqtKik86caNsmK5eW6P7v8z0nZm_2ao3TH9m2F2p-kCZu86rNDqmi6mR_3W0pHJL6tNvOm2_wuw9uIfilw79Q9FrX1cRmk_nSpcWC8hEvq1gqw4XkO_J9uJdDRIw2tqp6749PuTKImrHfgQWU9VHCbeT_weDTpyuw93d8U8RNuT6vXbTxlcTuIYuEAC6Kq8eQ5m9Dfw7ybuVwC08_MrmPfSsBopKlYOOELLjaKun0kLyubzX0H7pAYKUZEqlIKyXuEqwnIuQxmjlKRxZ3odw9STbF_Dup96R-nakYjHyexKy2M4u5J0u-4dbOzFCtS8bPaVKP9MkRsK-i-JFaH07Luf8OlJdPoqZJTxs-9Wq1WTTJdSQffu3XL5DvfQ1dlU0MLq7Y9vT3pom2_5Nf0pPq2xT05OmvT6Tf0Y4IajCurVCv_85l0PbH1bHkHbSNpjyOtZpCQO4fTH6JceYr2GHUNY7FXHUDZnqYL8519OT07Dht-MV8Ya-BqTyDgzPgeGTEDdFWeBEcEK51QGxhfjlR7BvE0aGmfqLf6VUbSUUbH7FIdf_gtfc5bp) — *interactive editor with pan, zoom, and export*
+> [Open in mermaid.live — Flowchart](https://mermaid.live/edit#pako:eNq1Wf1u28gRf5UFDyiSayg5uUvubOBa0BQtqaFtQaTTBqYhrMgRufGKS-wu7ahxgD5E36X_91H6JMUuP0SJpE5OU_25nPnN9-zM6osRsgiMMyPmOEuQfx6kCCEk8mVxEBhzyJggkvHNGfIwBREYBY36RYRDKAlLNef2vME_ggegLAOO_sr4_YqyxyaA-o2cD7dNuiGyKc4jQDaLIDDudqnt89vACDXB8Ee05DgNkxbRyPmATPNPT4GR5SIJjCdkn28pII16lLWnQ3uE_vOPfyKcS2augcdgFsIGmzVFtxLWGcUS0L__hUhKJMGU_B2iu32bdh3T_OLPp-OxM_8SGLNcJEgyVBnz58D4um-rsqJi6cTRZn4E8YS8ibWwJ479_ktg2Gy9JlIdBUH6G6JYSDPjLAQhIGrLqVm3aCPHdXxn4fmW6-joUJCASJoAJxKiyvFB-kLckwxpT71sxWEX-Io9oQ-WOx1ZvvMlMDzgDxAhkqbATRFykskgSMUmlfgzesCUdGhasdd45-61_f42MC4woYjnqQ7ekrLwPghSrRX6A4ogo2yjlC3URhkHoaW3Vd6RoF1x6czHygeXGo2kkqE1JmmLU9PpgN3MFMLCm1i3gXGTRVhCEKS7UTBDHaOBSHALacuv4UbTi4vbwLATCO9RTCSKyGrVzvnpxUWZ9JQ8gCmIBDPDMYghChOcxhCpQphZY8dbXLjW-DYw9Gez_Ip-Q5LncAh4EIsm1tjyFiNn5l5_1CminKzO0APBKMw5RbNrz2_hbbkK64pMO5_3ebMm2Obh79X_1sgSQUlb6NP-KgqMka5alJWFWUT5qYe9v4uMiZzkSzRTzkWFW9aQynbf28Ju_deKnWRBkDYhW9a60w8qP13yAMgjRa6ROJGYCEZz1YXEICYyyZcDwoZlE7_rV0b7TIEeY6yTPhDOUmWgQC-0gi_7u6E7b-WCP3O12NvAqNvrHYqxULXyCUJphhywZHyQyDVVRaxSbFZ8Q3bxrV3HvuP51o0_GVve6w58CULiXCYxFq9rYB-ERFYuE_S6H3DiX7qHEBVYF6Ti68Idu9fnlmvZnV6gbIkpDunWdn2CLNvt0vBvvn19ObPmTqd-n6VqOhnm0FDvs0R2cYh8xmgb9dLyfGferd8lFhK4Zbs1YH3ScRnYc2vmzDtgvJDjDLYBvoJHUR3u4hwoOsZiCsjKMs1KMim21_XdszJy0cydA2kTi87etpMoh3Jkj7_fNi_BHCI0B8FyHsK3GXZ1_Rfn_UfX3dVokLJPcL-htB2uq9EuqWB5Golhi1DZufjgzL1dcmWj-QBcqP7T5hp7HTyxOMCh5dhuh5TiSqIs7pazzxOLXo7-GOz35QpODI-fClWru7pWubGr0ESuqZVGYyz88szKJSsGBzNlKmN0bQzkZzUivdCtpBb6SGTCcqlG1qSjKczcxTMlHiEPleXWLbPs6pfTq05zVW9fk5SsMS2tM6uPplpHBp9EJVm1-urbQTmHpRwtozCubVV_XtQXEUtXJD5QmbZr3YycxeVeVRXHg3WkVClvPERSIXmu61i0zZ7fuM5e4QzKiYjnFMRQQWH6iDfCpAxHEKE_ogzLxBQhyyBCmqqjQb-fum4PsLgnlBbIJH1g93hJAT2WGx0qvnZo6syuVZnvYvJ6pRyU1a5D0Z47rfHcuvT6mE2SrhhfY-WlYURwzPG60DADbsJ2LkGYhwmREMqcA6ooO-x3fH96Ne7zAEhJ0lgMPgmWKilqEv-xWBQxpeyxa5tQC9DF1N2778ppbNi_EWg37-5aKM4xj45NS1XOEybvYXMgJa3Je1U418W-0dRRdbI1i8iKQHSnbSzAhts2McDJvXYDB0hXBGiEspxSc4kFRIVbck149BX--9f29GrqLzx7Pp35e3dTwTpU3ddUKTIQejllKZgiYRKtGL_f9madM539ZOE5_s2sG1yAzDOzMZmWQlQDqSp3RSggPbB2SrC92WJieZNuAWo6y1WDEpmZYJGU-LY3U4lkvnn7DqljVNAdMKKeKfvGyZ7RpZ71-sa8Hr5ytOue6jp4GnFE5kDvXjphIlBVKhDj8VBFMQhSDhnFauZ580Y7V-jXnKqX7qXVXn5Vd18lI2TZRr-4qPioNSmFR93sUVYsVk_tteF_RtruC98MtbsifDPM7iT_zTDNOb4A2buHK6y6mRRjq34s6iihl9VTQtP3_xdgHYrvilxH5rui1oH6rqhl3Mq47-d5hQrrJURCP-GQFcdr6I9OO8OPBmlEQj00VHz6UU6UxNXDwCGynnI9TLxfkT0adBRdH-7u3n2ItqsGuyk7y6x-OCtTgJM4Bi6QALoqr9uD1fQN_LtF8wyAdm08g7ldAs9g3sn0agSrGDngCC032sXV83RB2Xx2LWgf1QAmKlKFUlDWK29FWM6xKGOUkjTuzOBjmHry-Tms-9l9lK4duX6czK7MP4azqw6O4WtXxXapPniHFYtm83reV73860tuKOg_kFaE0rMffsanJ9Hpq5BRxs9-WK1WTTJduQXdu3fL5TvcQ1fnYEELq7c_vT3poW3-81LTn-LTGvvk5KRJr_8BOQa44aiCerXCv7x51wNbDwZH0DZS_RjyenoriUM4_Sn6tYdYL7vHEBbb6zGUzemzIP_l19OT07DhN-OVsQa-xiQyzowvgSETUJfYWWBEsMI5lYHx1Xilh1Zvk4bGmfrn5JVRtKFRsWEWh1__C6KtHRo) — *interactive editor with pan, zoom, and export*
 
 ```mermaid
 graph TB
@@ -50,6 +50,7 @@ graph TB
             GLOBALACL_PAGE["[template] globalacl.html\n(Global ACL)"]
             TEXTCOMPARE_PAGE["[template] text-compare.html\n(Text Compare Tool)"]
             MASTERACL_PAGE["[template] MasterACL.html\n(MasterACL)"]
+            SCRAPER_PAGE["[template] Scraper.html\n(News Scraper)"]
         end
 
         subgraph "Google Apps Scripts [template]"
@@ -95,6 +96,7 @@ graph TB
             CSP_HASH["[template] scripts/compute-csp-hash.sh\n(CSP SHA-256 hash computation)"]
             GAS_GLOBALACL["[template] globalacl.gs"]
             GAS_MASTERACL["[template] MasterACL.gs"]
+            GAS_SCRAPER["[template] Scraper.gs"]
             INIT_SCRIPT -.->|"auto-detects org/repo\nreplaces 22 files"| CLAUDE_MD
         end
     end
@@ -103,10 +105,12 @@ graph TB
     TPL_AUTH -.->|"copy to create\nnew auth pages"| TESTAUTHHTML1_PAGE
     TPL_AUTH -.->|"copy to create\nnew auth pages"| GLOBALACL_PAGE
     TPL_AUTH -.->|"copy to create\nnew auth pages"| MASTERACL_PAGE
+    TPL_AUTH -.->|"copy to create\nnew auth pages"| SCRAPER_PAGE
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_TESTAUTHGAS1
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_TESTAUTHHTML1
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_GLOBALACL
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_MASTERACL
+    GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_SCRAPER
     TESTAUTHGAS1_PAGE -.->|"embeds via iframe"| GAS_TESTAUTHGAS1
     TESTAUTHHTML1_PAGE -.->|"embeds via iframe"| GAS_TESTAUTHHTML1
     LIVE -.->|"serves"| GASTPL_PAGE
@@ -115,10 +119,12 @@ graph TB
     LIVE -.->|"serves"| GLOBALACL_PAGE
     LIVE -.->|"serves"| TEXTCOMPARE_PAGE
     LIVE -.->|"serves"| MASTERACL_PAGE
+    LIVE -.->|"serves"| SCRAPER_PAGE
     GAS_DEPLOY -.->|"triggers self-update"| GAS_TESTAUTHGAS1
     GAS_DEPLOY -.->|"triggers self-update"| GAS_TESTAUTHHTML1
     GAS_DEPLOY -.->|"triggers self-update"| GAS_GLOBALACL
     GAS_DEPLOY -.->|"triggers self-update"| GAS_MASTERACL
+    GAS_DEPLOY -.->|"triggers self-update"| GAS_SCRAPER
     SHA_FILE -.->|"read by"| SHA_CHECK
     UPDATE_SHA -.->|"writes"| SHA_FILE
     HTML_VERS -.->|"version polling"| GASTPL_PAGE
@@ -127,6 +133,7 @@ graph TB
     HTML_VERS -.->|"version polling"| GLOBALACL_PAGE
     HTML_VERS -.->|"version polling"| TEXTCOMPARE_PAGE
     HTML_VERS -.->|"version polling"| MASTERACL_PAGE
+    HTML_VERS -.->|"version polling"| SCRAPER_PAGE
     TPL_NOAUTH -.->|"copy to create\nnew noauth pages"| TEXTCOMPARE_PAGE
 
     style DEV fill:#4a90d9,color:#fff
@@ -341,6 +348,7 @@ Environment-specific internals (page lifecycle states, maintenance mode, splash 
 | Test Auth 1 | [`repository-information/diagrams/testauthgas1-diagram.md`](diagrams/testauthgas1-diagram.md) |
 | Global ACL | [`repository-information/diagrams/globalacl-diagram.md`](diagrams/globalacl-diagram.md) |
 | MasterACL | [`repository-information/diagrams/MasterACL-diagram.md`](diagrams/MasterACL-diagram.md) |
+| News Scraper | [`repository-information/diagrams/Scraper-diagram.md`](diagrams/Scraper-diagram.md) |
 
 
 ## 4. Git Graph — Branching Strategy
@@ -534,6 +542,7 @@ classDiagram
     HTMLPage "1" --> "0..1" GASScript : embeds via iframe
     GLOBALACL_PAGE -.->|"embeds via iframe"| GAS_GLOBALACL
     MASTERACL_PAGE -.->|"embeds via iframe"| GAS_MASTERACL
+    SCRAPER_PAGE -.->|"embeds via iframe"| GAS_SCRAPER
     HTMLPage "1" --> "1" Changelog : html changelog
     HTMLPage "1" --> "1" EnvironmentDiagram : internals documented in
     GASScript "1" --> "1" VersionFile : gs.version.txt

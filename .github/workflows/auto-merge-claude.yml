@@ -442,6 +442,23 @@ jobs:
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
           curl -L -X POST "https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec" -d "action=deploy" --max-time 120 || true
 
+      - name: Deploy Scraper
+        if: steps.guard.outputs.skip != 'true' && success()
+        run: |
+          PRE=${{ steps.merge.outputs.pre_merge_sha }}
+          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/Scraper/Scraper.gs" || exit 0
+          DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/Scraper/Scraper.config.json 2>/dev/null || echo "")
+          case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
+          BASE="https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec"
+          # POST first; the runner's POST can lose its body on Google's redirect, so verify
+          # the response and fall back to the GAS doGet deploy route (?action=api&op=deploy)
+          RESP=$(curl -sL -X POST "$BASE" -d "action=deploy" --max-time 120 2>/dev/null || echo "")
+          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (POST): $RESP"; exit 0 ;; esac
+          echo "POST deploy unconfirmed — retrying via GET fallback"
+          RESP=$(curl -sL "$BASE?action=api&op=deploy" --max-time 120 2>/dev/null || echo "")
+          case "$RESP" in *"Updated to"*|*"Already up to date"*) echo "Deploy confirmed (GET): $RESP"; exit 0 ;; esac
+          echo "::warning title=Scraper GAS self-update unconfirmed::Neither POST nor GET deploy returned a confirmation — run pullAndDeployFromGitHub in the Apps Script editor. Response head: $(echo "$RESP" | head -c 200)"
+
       - name: Update AHK version files
         if: steps.guard.outputs.skip != 'true' && success()
         run: |

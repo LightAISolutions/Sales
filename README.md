@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-07-17 07:11:12 PM EST` · Repo version: `v01.03r`
+Last updated: `2026-07-17 07:18:01 PM EST` · Repo version: `v01.04r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -54,6 +54,8 @@ Last updated: `2026-07-17 07:11:12 PM EST` · Repo version: `v01.03r`
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/MasterACL.html">MasterACL.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/MasterACL.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1kG2KftqfKOeYwBCEkxRpw-QBh9s-1-Dvy31sH037UvE/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/MasterACL/MasterACL.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/MasterACLhtml.changelog.md">v01.00w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/MasterACLgs.changelog.md">v01.00g</a> | [template] MasterACL page
 │   │
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Scraper.html">Scraper.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Scraper.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/19U0Wu25eUXEHPVz4VWjKQIpnRozgFycNSjFCTB-umkk/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Scraper/Scraper.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog.md">v01.00w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Scrapergs.changelog.md">v01.00g</a> | [template] News Scraper page
+│   │
 │   <b>│ ─ External Sites (Placeholder) ────────────────────────────────────────────</b>
 │   │   <i>(No external-site pages yet)</i>
 │   │
@@ -97,7 +99,9 @@ Last updated: `2026-07-17 07:11:12 PM EST` · Repo version: `v01.03r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/globalaclhtml.changelog.md">globalaclhtml.changelog.md</a>             — [template] Globalacl page changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/globalaclhtml.changelog-archive.md">globalaclhtml.changelog-archive.md</a>     — [template] Older sections (rotated)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/MasterACLhtml.changelog.md">MasterACLhtml.changelog.md</a>             — [template] MasterACL page changelog
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/MasterACLhtml.changelog-archive.md">MasterACLhtml.changelog-archive.md</a>     — [template] Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/MasterACLhtml.changelog-archive.md">MasterACLhtml.changelog-archive.md</a>     — [template] Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog.md">Scraperhtml.changelog.md</a>             — [template] Scraper page changelog
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog-archive.md">Scraperhtml.changelog-archive.md</a>     — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/gs-changelogs">gs-changelogs/</a>           — [template] GAS changelogs (source of truth + deployed)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/testauthgas1gs.changelog.md">testauthgas1gs.changelog.md</a>               — [template] Testauthgas1 GAS changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/testauthgas1gs.changelog-archive.md">testauthgas1gs.changelog-archive.md</a>       — [template] Older sections (rotated)
@@ -106,7 +110,9 @@ Last updated: `2026-07-17 07:11:12 PM EST` · Repo version: `v01.03r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/globalaclgs.changelog.md">globalaclgs.changelog.md</a>               — [template] Globalacl GAS changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/globalaclgs.changelog-archive.md">globalaclgs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/MasterACLgs.changelog.md">MasterACLgs.changelog.md</a>               — [template] MasterACL GAS changelog
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/MasterACLgs.changelog-archive.md">MasterACLgs.changelog-archive.md</a>       — [template] Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/MasterACLgs.changelog-archive.md">MasterACLgs.changelog-archive.md</a>       — [template] Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Scrapergs.changelog.md">Scrapergs.changelog.md</a>               — [template] Scraper GAS changelog
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Scrapergs.changelog-archive.md">Scrapergs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
@@ -123,9 +129,12 @@ Last updated: `2026-07-17 07:11:12 PM EST` · Repo version: `v01.03r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/googleAppsScripts/Claspdeploytest">Claspdeploytest/</a>           — Pilot: GAS deployed via GitHub Actions (clasp push, not the pull model)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Claspdeploytest/claspdeploytest.gs">claspdeploytest.gs</a>           — Minimal pilot web app (push model — no GITHUB_TOKEN)
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Claspdeploytest/appsscript.json">appsscript.json</a>          — Apps Script manifest (pushed by clasp)
-│   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/googleAppsScripts/MasterACL">MasterACL/</a>             — [template] GAS for live-site-pages/MasterACL.html
-│       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/MasterACL/MasterACL.gs">MasterACL.gs</a>              — [template] Self-updating GAS web app
-│       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/MasterACL/MasterACL.config.json">MasterACL.config.json</a>     — [template] Project config (source of truth)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/googleAppsScripts/MasterACL">MasterACL/</a>             — [template] GAS for live-site-pages/MasterACL.html
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/MasterACL/MasterACL.gs">MasterACL.gs</a>              — [template] Self-updating GAS web app
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/MasterACL/MasterACL.config.json">MasterACL.config.json</a>     — [template] Project config (source of truth)
+│   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/googleAppsScripts/Scraper">Scraper/</a>             — [template] GAS for live-site-pages/Scraper.html
+│       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Scraper/Scraper.gs">Scraper.gs</a>              — [template] Self-updating GAS web app
+│       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Scraper/Scraper.config.json">Scraper.config.json</a>     — [template] Project config (source of truth)
 │
 <b>─── Sample Components ────────────────────────────────────────────────────────</b>
 ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/sample-components">sample-components/</a>          — Self-contained starter kit (HTML version-polling + GAS self-update) for bootstrapping a new repo
@@ -136,10 +145,12 @@ Last updated: `2026-07-17 07:11:12 PM EST` · Repo version: `v01.03r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/sample-components/appsscript.json">appsscript.json</a>             — GAS manifest (webapp settings + oauth scopes)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/sample-components/html-versions">html-versions/</a>              — Page-version files (polled by sample.html)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/sample-components/html-versions/samplehtml.version.txt">samplehtml.version.txt</a>  — `|v01.00w|`
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/MasterACLhtml.version.txt">MasterACLhtml.version.txt</a>          — [template]
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/MasterACLhtml.version.txt">MasterACLhtml.version.txt</a>          — [template]
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/Scraperhtml.version.txt">Scraperhtml.version.txt</a>          — [template]
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/sample-components/gs-versions">gs-versions/</a>                — GAS-version files (cross-referenced from page changelogs)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/sample-components/gs-versions/samplegs.version.txt">samplegs.version.txt</a>    — `|v01.00g|`
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/MasterACLgs.version.txt">MasterACLgs.version.txt</a>            — [template]
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/MasterACLgs.version.txt">MasterACLgs.version.txt</a>            — [template]
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/Scrapergs.version.txt">Scrapergs.version.txt</a>            — [template]
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/sample-components/workflows">workflows/</a>                  — Workflow stubs (drop into `.github/workflows/` in the new repo)
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/sample-components/workflows/auto-merge-and-deploy.yml">auto-merge-and-deploy.yml</a>  — Minimal CI: merge claude/* → main + fire GAS deploy webhook
 │
@@ -189,7 +200,8 @@ Last updated: `2026-07-17 07:11:12 PM EST` · Repo version: `v01.03r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/gas-project-creator-diagram.md">gas-project-creator-diagram.md</a> — [template] GAS Project Creator user flow
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/testauthgas1-diagram.md">testauthgas1-diagram.md</a>         — [template] Testauthgas1 page GAS integration sequence (auth)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/testauthhtml1-diagram.md">testauthhtml1-diagram.md</a>         — [template] Testauthhtml1 page GAS integration sequence (auth)
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/MasterACL-diagram.md">MasterACL-diagram.md</a>         — [template] MasterACL page GAS integration sequence
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/MasterACL-diagram.md">MasterACL-diagram.md</a>         — [template] MasterACL page GAS integration sequence
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/Scraper-diagram.md">Scraper-diagram.md</a>         — [template] Scraper page GAS integration sequence
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG.md">CHANGELOG.md</a>            — [template · initialized] Version history
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG-archive.md">CHANGELOG-archive.md</a>    — [template · initialized] Older changelog sections (rotated from CHANGELOG.md)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASP-PUSH-PILOT-SETUP.md">CLASP-PUSH-PILOT-SETUP.md</a> — Setup for the GitHub Actions → clasp push deployment pilot
