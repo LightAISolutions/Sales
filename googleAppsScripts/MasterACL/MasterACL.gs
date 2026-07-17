@@ -1,4 +1,4 @@
-var VERSION = "v01.00g";
+var VERSION = "v01.01g";
 var TITLE = "MasterACL";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -422,6 +422,55 @@ function registerSelfProject() {
     Logger.log('registerSelfProject error: ' + e.message);
   }
 }
+
+// ── PROJECT OVERRIDE START — Seed admin ACL rows ──
+// Bootstrap: ensures the emails below always have an admin row in the Access
+// tab of the Master ACL spreadsheet. Runs server-side as the deployment owner,
+// so it works even when the visiting user has no spreadsheet access yet.
+// Create-only: if the email already has a row, nothing is touched — manual
+// edits in the spreadsheet always win over the seed list.
+var SEED_ADMIN_EMAILS = ['jonyang92@gmail.com'];
+var _seedAdminsChecked = false;
+function ensureSeedAdmins() {
+  if (_seedAdminsChecked) return;
+  _seedAdminsChecked = true;
+  try {
+    var ss = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID);
+    var sheet = ss.getSheetByName(ACL_SHEET_NAME);
+    if (!sheet) return;
+    var lastRow = sheet.getLastRow();
+    var lastCol = sheet.getLastColumn();
+    // User rows start at row 7 (rows 1-6 are the header + #NAME/#URL/#AUTH/#ICON/#DESC metadata)
+    var existing = [];
+    if (lastRow > 6) {
+      var emailValues = sheet.getRange(7, 1, lastRow - 6, 1).getValues();
+      for (var r = 0; r < emailValues.length; r++) {
+        existing.push(String(emailValues[r][0]).trim().toLowerCase());
+      }
+    }
+    var added = false;
+    for (var i = 0; i < SEED_ADMIN_EMAILS.length; i++) {
+      var email = SEED_ADMIN_EMAILS[i].toLowerCase();
+      if (existing.indexOf(email) > -1) continue;
+      // Col A = Email, col B = Role, cols C+ = page columns (TRUE = access granted)
+      var row = [email, 'admin'];
+      for (var c = 2; c < lastCol; c++) row.push(true);
+      sheet.appendRow(row);
+      if (lastCol > 2) {
+        sheet.getRange(sheet.getLastRow(), 3, 1, lastCol - 2).insertCheckboxes();
+      }
+      added = true;
+      auditLog('admin_action', email, 'seed_admin_row',
+        { reason: 'Auto-seeded admin row from SEED_ADMIN_EMAILS' });
+    }
+    // A denied sign-in attempt before the seed leaves a cached denial that would
+    // block the seeded user until it expires — bump the epoch so access is immediate.
+    if (added) clearAllAccessCache();
+  } catch (e) {
+    Logger.log('ensureSeedAdmins error: ' + e.message);
+  }
+}
+// ── PROJECT OVERRIDE END ──
 
 /**
  * Read the cross-project admin secret from Script Properties.
@@ -2017,6 +2066,9 @@ function doGet(e) {
 
   // Auto-register this project in the Master ACL Projects sheet
   registerSelfProject();
+
+  // PROJECT OVERRIDE: ensure seed admin ACL rows exist (see ensureSeedAdmins)
+  ensureSeedAdmins();
 
   // ── Phase 7: postMessage-based action routes ──
   // These routes return lightweight listener pages that receive sensitive data
