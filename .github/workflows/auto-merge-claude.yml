@@ -433,6 +433,15 @@ jobs:
           case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
           curl -L -X POST "https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec" -d "action=deploy" --max-time 120 || true
 
+      - name: Deploy MasterACL
+        if: steps.guard.outputs.skip != 'true' && success()
+        run: |
+          PRE=${{ steps.merge.outputs.pre_merge_sha }}
+          git diff --name-only "$PRE" HEAD | grep -q "googleAppsScripts/MasterACL/MasterACL.gs" || exit 0
+          DEPLOYMENT_ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/MasterACL/MasterACL.config.json 2>/dev/null || echo "")
+          case "$DEPLOYMENT_ID" in ""|null|YOUR_DEPLOYMENT_ID) exit 0 ;; esac
+          curl -L -X POST "https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec" -d "action=deploy" --max-time 120 || true
+
       - name: Update AHK version files
         if: steps.guard.outputs.skip != 'true' && success()
         run: |

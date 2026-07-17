@@ -6,6 +6,7 @@ paths:
   - "live-site-pages/testauthgas1.html"
   - "live-site-pages/testauthhtml1.html"
   - "live-site-pages/globalacl.html"
+  - "live-site-pages/MasterACL.html"
   - "live-site-pages/*-code.js.txt"
 # Path scope rationale: GAS rules auto-inject for .gs / .config.json / gs-versions
 # edits (directly GAS-related), plus for edits to the 3 GAS-backed HTML pages
@@ -37,6 +38,7 @@ Each GAS project has a code file and a corresponding embedding page. Register th
 | Testauthgas1 | `googleAppsScripts/Testauthgas1/testauthgas1.gs` | `googleAppsScripts/Testauthgas1/testauthgas1.config.json` | `live-site-pages/testauthgas1.html` |
 | Testauthhtml1 | `googleAppsScripts/Testauthhtml1/testauthhtml1.gs` | `googleAppsScripts/Testauthhtml1/testauthhtml1.config.json` | `live-site-pages/testauthhtml1.html` |
 | Globalacl | `googleAppsScripts/Globalacl/globalacl.gs` | `googleAppsScripts/Globalacl/globalacl.config.json` | `live-site-pages/globalacl.html` |
+| MasterACL | `googleAppsScripts/MasterACL/MasterACL.gs` | `googleAppsScripts/MasterACL/MasterACL.config.json` | `live-site-pages/MasterACL.html` |
 
 
 ## GAS Project Config (config.json)
