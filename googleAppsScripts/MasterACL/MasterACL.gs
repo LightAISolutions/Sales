@@ -1,4 +1,4 @@
-var VERSION = "v01.01g";
+var VERSION = "v01.02g";
 var TITLE = "MasterACL";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -310,6 +310,102 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 
 // ══════════════
 // PROJECT START — Add your project-specific code here
+// ══════════════
+
+/**
+ * Grant one or more users access — run from the GAS Editor (select function → Run).
+ * Because every auth project reads this same central ACL spreadsheet, granting
+ * here gives the user access to ALL registered pages at once.
+ *
+ * Usage:
+ *   1. Project Settings → Script Properties:
+ *        GRANT_ACCESS_EMAILS = user1@example.com, user2@example.com   (required)
+ *        GRANT_ACCESS_ROLE   = viewer | contributor | editor | admin  (optional, default: viewer)
+ *   2. Editor → select "grantUserAccess" → Run
+ *   3. Check the execution log for a per-email result summary
+ *
+ * Behavior:
+ *   - Email not in the Access tab  → appends a row with the role and TRUE for every page column
+ *   - Email already in the Access tab → sets every page column TRUE, and updates the
+ *     Role only when GRANT_ACCESS_ROLE is explicitly set (running this function is an
+ *     explicit grant, so it re-enables access for existing rows too)
+ *   - Any change bumps the access-cache epoch so it takes effect immediately
+ */
+function grantUserAccess() {
+  var props = PropertiesService.getScriptProperties();
+  var rawEmails = props.getProperty('GRANT_ACCESS_EMAILS') || '';
+  var rawRole = props.getProperty('GRANT_ACCESS_ROLE') || '';
+  if (!rawEmails.trim()) {
+    Logger.log('No emails specified. Set Script Properties key "GRANT_ACCESS_EMAILS" '
+      + '(single email or comma-separated list), optionally "GRANT_ACCESS_ROLE", then Run again.');
+    return;
+  }
+  var role = rawRole.trim().toLowerCase() || RBAC_DEFAULT_ROLE;
+  if (!RBAC_ROLES_FALLBACK.hasOwnProperty(role)) {
+    Logger.log('WARNING: role "' + role + '" is not in the known role list ('
+      + Object.keys(RBAC_ROLES_FALLBACK).join(', ') + ') — writing it anyway; '
+      + 'make sure it exists in the Roles tab or users will fall back to "' + RBAC_DEFAULT_ROLE + '" permissions.');
+  }
+
+  var ss = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID);
+  var sheet = ss.getSheetByName(ACL_SHEET_NAME);
+  if (!sheet) {
+    Logger.log('ERROR: sheet "' + ACL_SHEET_NAME + '" not found in the Master ACL spreadsheet.');
+    return;
+  }
+  var lastCol = sheet.getLastColumn();
+  var emails = rawEmails.split(',').map(function(e) { return e.trim().toLowerCase(); })
+    .filter(function(e) { return e && e.indexOf('@') > -1; });
+  if (!emails.length) {
+    Logger.log('No valid email addresses found in GRANT_ACCESS_EMAILS: "' + rawEmails + '"');
+    return;
+  }
+
+  var changed = false;
+  for (var i = 0; i < emails.length; i++) {
+    var email = emails[i];
+    // User rows start at row 7 (rows 1-6 are the header + metadata rows)
+    var lastRow = sheet.getLastRow();
+    var foundRow = -1;
+    if (lastRow > 6) {
+      var emailValues = sheet.getRange(7, 1, lastRow - 6, 1).getValues();
+      for (var r = 0; r < emailValues.length; r++) {
+        if (String(emailValues[r][0]).trim().toLowerCase() === email) { foundRow = 7 + r; break; }
+      }
+    }
+    if (foundRow === -1) {
+      // New user: col A = Email, col B = Role, cols C+ = page columns (TRUE = access)
+      var row = [email, role];
+      for (var c = 2; c < lastCol; c++) row.push(true);
+      sheet.appendRow(row);
+      if (lastCol > 2) {
+        sheet.getRange(sheet.getLastRow(), 3, 1, lastCol - 2).insertCheckboxes();
+      }
+      changed = true;
+      Logger.log('ADDED   ' + email + ' — role "' + role + '", all page columns TRUE');
+    } else {
+      if (rawRole.trim()) {
+        sheet.getRange(foundRow, 2).setValue(role);
+      }
+      if (lastCol > 2) {
+        var trues = [[]];
+        for (var t = 2; t < lastCol; t++) trues[0].push(true);
+        sheet.getRange(foundRow, 3, 1, lastCol - 2).setValues(trues);
+      }
+      changed = true;
+      Logger.log('UPDATED ' + email + ' — all page columns TRUE'
+        + (rawRole.trim() ? ', role set to "' + role + '"' : ' (role unchanged)'));
+    }
+  }
+
+  if (changed) {
+    clearAllAccessCache();
+    Logger.log('Done — ' + emails.length + ' user(s) processed. Access cache cleared; '
+      + 'changes are effective immediately.');
+  }
+}
+
+// ══════════════
 // PROJECT END
 // ══════════════
 
