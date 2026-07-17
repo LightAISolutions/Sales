@@ -6,6 +6,25 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-07-17 07:15 PM EST
+**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
+**Repo version:** v01.03r
+
+**What was done:**
+- Fixed `scripts/setup-gas-project.sh` Phase 6 GAS Projects table row placement — now anchors on the `| Project | Code File |` header instead of the last pipe-line in the file (v01.03r)
+- Fixed `scripts/setup-gas-project.sh` Phase 9 workflow deploy step insertion — now anchors on the stable `- name: Update AHK version files` step name (v01.03r)
+- Fixed `scripts/setup-gas-project.sh` Phase 5b — generated diagrams now include the "Open in mermaid.live" pako link with round-trip verification (v01.03r)
+
+**Where we left off:**
+- All changes committed and merged to main
+
+**Active context:**
+- Repo version: v01.03r · 6 tracked pages (all 🟢)
+- No TODO items, no active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+
+## Previous Sessions
+
 **Date:** 2026-07-17 07:04:13 PM EST
 **Repo version:** v01.02r
 
@@ -36,9 +55,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - Fix the three `scripts/setup-gas-project.sh` defects found during the MasterACL setup (row lands in the wrong table in `gas-scripts.md`, Phase 9 never writes the workflow deploy step, generated diagram lacks the mermaid.live link) so future `setup gas project` runs come out clean without manual repair.
 - **To continue:** type `fix the setup script defects`
-
-## Previous Sessions
-
-*(None)*
 
 Developed by: ShadowAISolutions
