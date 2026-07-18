@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.01w">
+  <meta name="build-version" content="v01.02w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>MasterACL</title>
 <!-- ══════════════ -->
@@ -838,6 +838,13 @@
       // cr34t3 1fr4m3
       var f = document.createElement(atob('aWZyYW1l'));
       f.id = 'gas-app';
+      // Load the GAS app without cookies (credentialless iframe): Google then
+      // serves it on the anonymous path — immune to the multi-account /u/N
+      // routing 404s that block cookie-carrying framed /exec requests. The
+      // session travels in the ?session= URL, so no cookies are needed.
+      // Browsers without support ignore the attribute (prior behavior).
+      try { f.credentialless = true; } catch (x) {}
+      f.setAttribute('credentialless', '');
       f.style.cssText = 'width:100%;height:100%;border:none;position:fixed;top:0;left:0;z-index:1;';
       f.dataset.baseUrl = _u;
       document.body.appendChild(f);
@@ -1669,6 +1676,9 @@
       if (!baseUrl) return;
       // Send via hidden iframe with action parameter only — NO sensitive data in URL
       var frame = document.createElement('iframe');
+      // Cookie-less like the main GAS iframe — avoids multi-account 404s
+      try { frame.credentialless = true; } catch (x) {}
+      frame.setAttribute('credentialless', '');
       frame.style.cssText = 'display:none;width:0;height:0;border:0';
       frame.src = baseUrl + '?action=securityEvent';
       document.body.appendChild(frame);
