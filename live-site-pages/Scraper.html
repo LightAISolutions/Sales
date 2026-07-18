@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.03w">
+  <meta name="build-version" content="v01.04w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -337,26 +337,6 @@
 /* PROJECT START */
 /* ══════════════ */
     .html-layer-hidden { display: none !important; }
-    /* Text submission panel — above the GAS iframe (z-index 1), below every
-       overlay wall (10002+), so the auth wall hides it until sign-in */
-    #text-submit-panel {
-      position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
-      z-index: 5; display: flex; gap: 8px; align-items: center;
-      background: #fff; border: 1px solid #d0d4da; border-radius: 8px;
-      padding: 10px 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-      max-width: 92vw;
-    }
-    #text-submit-input {
-      width: min(420px, 60vw); padding: 8px 10px; font-size: 14px;
-      border: 1px solid #c4c9d0; border-radius: 6px; outline: none;
-    }
-    #text-submit-input:focus { border-color: #4a90d9; }
-    #text-submit-btn {
-      padding: 8px 16px; font-size: 14px; border: none; border-radius: 6px;
-      background: #4a90d9; color: #fff; cursor: pointer;
-    }
-    #text-submit-btn:disabled { background: #9db8d4; cursor: default; }
-    #text-submit-status { font-size: 12px; white-space: nowrap; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -496,13 +476,6 @@
 <!-- PROJECT START -->
 <!-- ══════════════ -->
   <!-- YOUR PAGE CONTENT HERE -->
-  <!-- Text submission panel — saves the entered text to the spreadsheet.
-       Invisible before sign-in (the full-screen auth wall covers it). -->
-  <div id="text-submit-panel">
-    <input id="text-submit-input" type="text" maxlength="5000" placeholder="Type text to save to the spreadsheet&hellip;" autocomplete="off">
-    <button id="text-submit-btn" type="button">Submit</button>
-    <span id="text-submit-status"></span>
-  </div>
 <!-- ══════════════ -->
 <!-- PROJECT END -->
 <!-- ══════════════ -->
@@ -4116,42 +4089,6 @@
 // PROJECT START — Add your project-specific JavaScript here
 // ══════════════
 
-    // Text submission → spreadsheet, over the iframe-free fetch transport.
-    // The GAS side (submitText) validates the session and appends
-    // [timestamp, user email, text] to the configured sheet.
-    (function() {
-      var btn = document.getElementById('text-submit-btn');
-      var input = document.getElementById('text-submit-input');
-      var statusEl = document.getElementById('text-submit-status');
-      if (!btn || !input) return;
-      function setStatus(msg, ok) {
-        if (statusEl) { statusEl.textContent = msg; statusEl.style.color = ok ? '#2e7d32' : '#c62828'; }
-      }
-      function submit() {
-        var text = (input.value || '').trim();
-        if (!text) { setStatus('Nothing to submit', false); return; }
-        var session = loadSession();
-        if (!session.token) { setStatus('Sign in first', false); return; }
-        btn.disabled = true;
-        setStatus('Saving…', true);
-        _gasPost({ action: 'submitText', token: session.token, text: text })
-          .then(function(r) {
-            btn.disabled = false;
-            if (r && r.success) {
-              input.value = '';
-              setStatus('Saved ✓', true);
-            } else {
-              setStatus('Could not save (' + ((r && r.error) || 'unknown') + ')', false);
-            }
-          })
-          .catch(function(err) {
-            btn.disabled = false;
-            setStatus('Could not save (' + String((err && err.message) || err) + ')', false);
-          });
-      }
-      btn.addEventListener('click', submit);
-      input.addEventListener('keydown', function(ev) { if (ev.key === 'Enter') submit(); });
-    })();
 
 // PROJECT END
 // ══════════════
