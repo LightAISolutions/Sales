@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-07-18 02:39:24 AM EST` · Repo version: `v01.14r`
+Last updated: `2026-07-18 03:15:05 AM EST` · Repo version: `v01.15r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -52,6 +52,8 @@ Last updated: `2026-07-18 02:39:24 AM EST` · Repo version: `v01.14r`
 │   <b>│ ─ Standalone Utilities ─────────────────────────────────────────────────────</b>
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/text-compare.html">text-compare.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/text-compare.html">🌐</a>  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/text-comparehtml.changelog.md">v01.00w</a> · vNoGASg | [template] Text comparison tool with side-by-side diff highlighting
 │   │
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/spain-argentina.html">spain-argentina.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/spain-argentina.html">🌐</a>🟢  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/spain-argentinahtml.changelog.md">v01.00w</a> · vNoGASg | Spain vs Argentina World Cup 2026 match animation (5s loop, repeats forever)
+│   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/MasterACL.html">MasterACL.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/MasterACL.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1kG2KftqfKOeYwBCEkxRpw-QBh9s-1-Dvy31sH037UvE/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/MasterACL/MasterACL.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/MasterACLhtml.changelog.md">v01.02w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/MasterACLgs.changelog.md">v01.07g</a> | [template] MasterACL page
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Scraper.html">Scraper.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Scraper.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/19U0Wu25eUXEHPVz4VWjKQIpnRozgFycNSjFCTB-umkk/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Scraper/Scraper.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog.md">v01.04w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Scrapergs.changelog.md">v01.04g</a> | [template] News Scraper page
@@ -76,6 +78,7 @@ Last updated: `2026-07-18 02:39:24 AM EST` · Repo version: `v01.14r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/testauthgas1html.version.txt">testauthgas1html.version.txt</a>          — [template]
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/testauthhtml1html.version.txt">testauthhtml1html.version.txt</a>          — [template]
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/globalaclhtml.version.txt">globalaclhtml.version.txt</a>          — [template]
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/spain-argentinahtml.version.txt">spain-argentinahtml.version.txt</a>    — Spain vs Argentina animation page version
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/gs-versions">gs-versions/</a>             — [template] GAS version files for GAS version pill polling
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/testauthgas1gs.version.txt">testauthgas1gs.version.txt</a>            — [template]
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/testauthhtml1gs.version.txt">testauthhtml1gs.version.txt</a>            — [template]
@@ -101,7 +104,9 @@ Last updated: `2026-07-18 02:39:24 AM EST` · Repo version: `v01.14r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/MasterACLhtml.changelog.md">MasterACLhtml.changelog.md</a>             — [template] MasterACL page changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/MasterACLhtml.changelog-archive.md">MasterACLhtml.changelog-archive.md</a>     — [template] Older sections (rotated)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog.md">Scraperhtml.changelog.md</a>             — [template] Scraper page changelog
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog-archive.md">Scraperhtml.changelog-archive.md</a>     — [template] Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog-archive.md">Scraperhtml.changelog-archive.md</a>     — [template] Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/spain-argentinahtml.changelog.md">spain-argentinahtml.changelog.md</a>     — Spain vs Argentina animation page changelog
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/spain-argentinahtml.changelog-archive.md">spain-argentinahtml.changelog-archive.md</a>  — Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/gs-changelogs">gs-changelogs/</a>           — [template] GAS changelogs (source of truth + deployed)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/testauthgas1gs.changelog.md">testauthgas1gs.changelog.md</a>               — [template] Testauthgas1 GAS changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/testauthgas1gs.changelog-archive.md">testauthgas1gs.changelog-archive.md</a>       — [template] Older sections (rotated)
