@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [MasterACLgs.changelog-archive.md](MasterACLgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.05g] — 2026-07-17 08:36:54 PM EST — v01.09r
+
+### Fixed
+- Sign-in no longer times out with a "service isn't responding" message
 
 ## [v01.04g] — 2026-07-17 08:10:18 PM EST — v01.08r
 
