@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [MasterACLgs.changelog-archive.md](MasterACLgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 3/50`
+`Sections: 4/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.04g] — 2026-07-17 08:10:18 PM EST — v01.08r
+
+### Changed
+- Administrative tools now set up access management automatically and report connection health
 
 ## [v01.03g] — 2026-07-17 07:47:16 PM EST — v01.07r
 

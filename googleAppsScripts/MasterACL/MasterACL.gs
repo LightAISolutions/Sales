@@ -1,4 +1,4 @@
-var VERSION = "v01.03g";
+var VERSION = "v01.04g";
 var TITLE = "MasterACL";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -326,12 +326,18 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
  *                         GRANT_ACCESS_EMAILS is set; DEFAULT_GRANT_ROLE when using defaults)
  * Check the execution log for a per-email result summary.
  *
- * Behavior:
- *   - Email not in the Access tab  → appends a row with the role and TRUE for every page column
- *   - Email already in the Access tab → sets every page column TRUE, and updates the
- *     Role only when GRANT_ACCESS_ROLE is explicitly set (running this function is an
- *     explicit grant, so it re-enables access for existing rows too)
- *   - Any change bumps the access-cache epoch so it takes effect immediately
+ * Behavior — three phases, all logged:
+ *   1. STRUCTURE — verifies/repairs the Master ACL spreadsheet: Access tab with
+ *      Email/Role headers + #NAME/#URL/#AUTH/#ICON/#DESC metadata rows, a Roles tab
+ *      with the default permission matrix, and this project's page column
+ *   2. GRANT — email not in the Access tab → appends a row with the role and TRUE for
+ *      every page column; email already present → sets every page column TRUE and
+ *      updates the Role only when a role was explicitly configured. Any change bumps
+ *      the access-cache epoch so it takes effect immediately
+ *   3. WEB APP PROBE — initializes required Script Properties, then fetches this
+ *      project's own /exec URL and logs whether the deployment actually serves the
+ *      app (the page's "sign-in service isn't responding" error means it doesn't) —
+ *      with exact fix instructions when it doesn't
  */
 var DEFAULT_GRANT_EMAILS = 'jonyang92@gmail.com, lightaisolution@gmail.com';
 var DEFAULT_GRANT_ROLE = 'admin';
@@ -353,12 +359,24 @@ function grantUserAccess() {
       + 'make sure it exists in the Roles tab or users will fall back to "' + RBAC_DEFAULT_ROLE + '" permissions.');
   }
 
+  // ── Phase 1: STRUCTURE — verify/repair the Master ACL spreadsheet ──
   var ss = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID);
   var sheet = ss.getSheetByName(ACL_SHEET_NAME);
   if (!sheet) {
-    Logger.log('ERROR: sheet "' + ACL_SHEET_NAME + '" not found in the Master ACL spreadsheet.');
-    return;
+    sheet = ss.insertSheet(ACL_SHEET_NAME);
+    Logger.log('STRUCTURE: created missing "' + ACL_SHEET_NAME + '" tab.');
   }
+  if (String(sheet.getRange(1, 1).getValue()).trim().toLowerCase() !== 'email'
+      || String(sheet.getRange(1, 2).getValue()).trim().toLowerCase() !== 'role') {
+    sheet.getRange(1, 1, 1, 2).setValues([['Email', 'Role']]);
+    Logger.log('STRUCTURE: wrote Email/Role headers to row 1.');
+  }
+  ensureMetadataRows(sheet);   // #NAME/#URL/#AUTH/#ICON/#DESC metadata rows 2-6
+  ensureRolesTab_(ss);         // Roles tab with the default permission matrix
+  registerSelfProject();       // this project's page column + metadata
+  Logger.log('STRUCTURE: Access tab verified (headers, metadata rows, Roles tab, page column).');
+
+  // ── Phase 2: GRANT ──
   var lastCol = sheet.getLastColumn();
   var emails = rawEmails.split(',').map(function(e) { return e.trim().toLowerCase(); })
     .filter(function(e) { return e && e.indexOf('@') > -1; });
@@ -409,6 +427,58 @@ function grantUserAccess() {
     Logger.log('Done — ' + emails.length + ' user(s) processed. Access cache cleared; '
       + 'changes are effective immediately.');
   }
+
+  // ── Phase 3: WEB APP PROBE — why "the sign-in service isn't responding" happens ──
+  // That page error is a reachability watchdog: the deployed /exec never answered the
+  // sign-in handshake. The ACL contents cannot cause it — probe the deployment itself.
+  try {
+    ensureScriptProperties_();  // HMAC_SECRET / CACHE_EPOCH — required by the sign-in flow
+    var execUrl = 'https://script.google.com/macros/s/' + DEPLOYMENT_ID + '/exec';
+    var resp = UrlFetchApp.fetch(execUrl, { muteHttpExceptions: true, followRedirects: true });
+    var httpCode = resp.getResponseCode();
+    var body = resp.getContentText() || '';
+    if (httpCode === 200 && body.indexOf('postMessage') > -1) {
+      Logger.log('WEB APP: OK — the deployment serves the current app. If sign-in still '
+        + 'times out, hard-refresh the page (Ctrl+Shift+R) and try again.');
+    } else if (body.indexOf('accounts.google.com') > -1) {
+      Logger.log('WEB APP: PROBLEM — the deployment demands a Google login, so the page '
+        + 'cannot reach it. Fix: Deploy → Manage deployments → ✏️ Edit → "Who has access" '
+        + '= Anyone → Deploy. (Execute as: Me.)');
+    } else {
+      Logger.log('WEB APP: PROBLEM — HTTP ' + httpCode + ' and the response is not the app '
+        + 'shell. This is exactly why the page shows "the sign-in service isn\'t responding". '
+        + 'Fix: Deploy → Manage deployments → ✏️ Edit → Version: "New version" → Deploy '
+        + '(access: Anyone, execute as: Me). Response starts with: '
+        + body.substring(0, 200).replace(/\s+/g, ' '));
+    }
+  } catch (probeErr) {
+    Logger.log('WEB APP: probe failed — ' + probeErr.message);
+  }
+}
+
+/**
+ * Create the "Roles" tab with the default permission matrix when it is missing.
+ * Layout matches getRolesFromSpreadsheet(): row 1 = [Role, perm...], rows 2+ =
+ * role name + TRUE/FALSE checkboxes per permission.
+ */
+function ensureRolesTab_(ss) {
+  if (ss.getSheetByName('Roles')) return;
+  var tab = ss.insertSheet('Roles');
+  var perms = ['read', 'write', 'delete', 'export', 'amend', 'admin'];
+  var rows = [['Role'].concat(perms.map(function(p) {
+    return p.charAt(0).toUpperCase() + p.slice(1);
+  }))];
+  for (var roleName in RBAC_ROLES_FALLBACK) {
+    if (!RBAC_ROLES_FALLBACK.hasOwnProperty(roleName)) continue;
+    var row = [roleName];
+    for (var i = 0; i < perms.length; i++) {
+      row.push(RBAC_ROLES_FALLBACK[roleName].indexOf(perms[i]) > -1);
+    }
+    rows.push(row);
+  }
+  tab.getRange(1, 1, rows.length, rows[0].length).setValues(rows);
+  tab.getRange(2, 2, rows.length - 1, perms.length).insertCheckboxes();
+  Logger.log('STRUCTURE: created "Roles" tab with the default permission matrix.');
 }
 
 // ══════════════
