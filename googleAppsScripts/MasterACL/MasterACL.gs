@@ -1,4 +1,4 @@
-var VERSION = "v01.06g";
+var VERSION = "v01.07g";
 var TITLE = "MasterACL";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1002,6 +1002,36 @@ function doPost(e) {
     var hbToken = (e && e.parameter && e.parameter.token) || "";
     var hbResult = processHeartbeat(hbToken);
     return ContentService.createTextOutput(JSON.stringify(hbResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // Token exchange via fetch() — iframe-free sign-in transport. The iframe flow
+  // auto-creates HMAC_SECRET via doGet page loads; the fetch flow enters through
+  // doPost, so ensure required Script Properties here too.
+  if (action === "exchangeToken") {
+    var xtToken = (e && e.parameter && e.parameter.token) || "";
+    var xtResult;
+    try {
+      ensureScriptProperties_();
+      xtResult = exchangeTokenForSession(xtToken);
+    } catch (xtErr) {
+      xtResult = { success: false, error: String((xtErr && xtErr.message) || xtErr) };
+    }
+    if (xtResult && xtResult.success) xtResult.version = VERSION;
+    return ContentService.createTextOutput(JSON.stringify(xtResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // Sign-out via fetch() — same iframe-free pattern.
+  if (action === "signOut") {
+    var soToken = (e && e.parameter && e.parameter.token) || "";
+    var soResult;
+    try {
+      soResult = processSignOut(soToken);
+    } catch (soErr) {
+      soResult = { type: 'gas-signed-out', success: false, error: String((soErr && soErr.message) || soErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(soResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -2255,6 +2285,32 @@ function doGet(e) {
   // re-pull what GitHub already contains. Do NOT add guards, secrets, or auth here.
   if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'deploy') {
     return ContentService.createTextOutput(pullAndDeployFromGitHub());
+  }
+
+  // GET API fallback for the fetch transport — Google's serving can drop POST
+  // bodies on its redirect, so the HTML layer retries every doPost call on this
+  // route. Mirrors the doPost fetch routes (JSON in, JSON out).
+  if (action === 'api') {
+    var apiOp = (e && e.parameter && e.parameter.op) || '';
+    var apiToken = (e && e.parameter && e.parameter.token) || '';
+    var apiResult;
+    try {
+      if (apiOp === 'exchangeToken') {
+        ensureScriptProperties_();
+        apiResult = exchangeTokenForSession(apiToken);
+        if (apiResult && apiResult.success) apiResult.version = VERSION;
+      } else if (apiOp === 'signOut') {
+        apiResult = processSignOut(apiToken);
+      } else if (apiOp === 'heartbeat') {
+        apiResult = processHeartbeat(apiToken);
+      } else {
+        apiResult = { error: 'unknown_op' };
+      }
+    } catch (apiErr) {
+      apiResult = { error: String((apiErr && apiErr.message) || apiErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(apiResult))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 
   // Heartbeat action — returns page that listens for token via postMessage

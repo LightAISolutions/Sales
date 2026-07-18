@@ -508,7 +508,11 @@
       // 'localStorage' (standard) or 'sessionStorage' (HIPAA — cleared on tab close)
       STORAGE_TYPE: 'sessionStorage',
       // 'url' (standard) or 'postMessage' (HIPAA — token never in URL)
-      TOKEN_EXCHANGE_METHOD: 'postMessage',
+      // 'fetch' (iframe-free): auth calls go over cookie-less fetch() POSTs (with
+      // GET fallback), so they always reach the anonymous serving path — immune
+      // to blocked framed /exec responses (multi-account /u/N 404s, X-Frame-Options)
+      // that break iframe-based sign-in in cookie-carrying browser contexts.
+      TOKEN_EXCHANGE_METHOD: 'fetch',
       // Heartbeat: extends session while user is active (sends heartbeat to GAS server)
       ENABLE_HEARTBEAT: true,
       HEARTBEAT_INTERVAL: 300000,  // ms — how often to check for activity and send heartbeat (5min)
@@ -1378,7 +1382,9 @@
     function exchangeToken(googleAccessToken) {
       _iframeLoadTime = Date.now();
       showSigningIn();
-      if (HTML_CONFIG.TOKEN_EXCHANGE_METHOD === 'postMessage') {
+      if (HTML_CONFIG.TOKEN_EXCHANGE_METHOD === 'fetch') {
+        exchangeViaFetch(googleAccessToken);
+      } else if (HTML_CONFIG.TOKEN_EXCHANGE_METHOD === 'postMessage') {
         exchangeViaPostMessage(googleAccessToken);
       } else {
         exchangeViaUrl(googleAccessToken);
@@ -1400,6 +1406,120 @@
         gasApp.removeEventListener('load', _urlExchangeLoad);
         _updateSubStep('sub-processing');
       }, { once: true });
+    }
+
+    // --- fetch Path (iframe-free) ---
+    // The iframe transports below stop working when Google blocks framed /exec
+    // responses (X-Frame-Options: SAMEORIGIN; multi-account /u/N routing 404s).
+    // fetch() POSTs to doPost + ContentService are unaffected by framing policy:
+    // cross-origin fetch carries no cookies, gets the anonymous serving path, and
+    // ContentService sets CORS headers on ANYONE_ANONYMOUS deployments. POST is
+    // tried first; when it fails (Google's serving can drop the POST body on its
+    // redirect, and error pages come back without CORS headers) the same call is
+    // retried on the GET api route (action=api&op=...), which remains reliable.
+    function _gasPost(params) {
+      var gasAppF = document.getElementById('gas-app');
+      var baseUrlF = (gasAppF && gasAppF.dataset.baseUrl) || '';
+      if (!baseUrlF) return Promise.reject(new Error('no_base_url'));
+      function _qs(obj) {
+        return Object.keys(obj).map(function(k) {
+          return encodeURIComponent(k) + '=' + encodeURIComponent(obj[k]);
+        }).join('&');
+      }
+      var getParams = {};
+      for (var gk in params) { if (params.hasOwnProperty(gk)) getParams[gk] = params[gk]; }
+      getParams.op = params.action;
+      getParams.action = 'api';
+      function _getFallback() {
+        return fetch(baseUrlF + '?' + _qs(getParams), { method: 'GET', redirect: 'follow' })
+          .then(function(r2) {
+            if (!r2.ok) throw new Error('http_' + r2.status);
+            return r2.json();
+          });
+      }
+      return fetch(baseUrlF + '?' + _qs(params), { method: 'POST', redirect: 'follow' })
+        .then(function(r) {
+          if (!r.ok) throw new Error('http_' + r.status);
+          return r.json();
+        })
+        .catch(function() { return _getFallback(); });
+    }
+
+    function exchangeViaFetch(googleAccessToken) {
+      _updateSignInStage('Verifying your identity…');
+      _updateSubStep('sub-connecting');
+      _startGasExchangeTimer();  // watchdog — fires if the GAS backend never answers
+      _updateSubStep('sub-sending');
+      _gasPost({ action: 'exchangeToken', token: googleAccessToken })
+        .then(function(data) {
+          _updateSubStep('sub-processing');
+          _clearGasExchangeTimer();
+          if (data && data.success) {
+            _completeSignInFetch(data);
+          } else {
+            showAuthWall(_mapExchangeError(data && data.error));
+          }
+        })
+        .catch(function(err) {
+          _clearGasExchangeTimer();
+          showAuthWall('The sign-in service is not responding. The server may be deploying or temporarily unavailable — please try again in a moment. (' + String((err && err.message) || err) + ')');
+        });
+    }
+
+    // Error-code mapping for the fetch exchange (mirrors the gas-session-created
+    // failure branch; unmapped codes are appended so failures stay diagnosable).
+    function _mapExchangeError(authError) {
+      var authMsg = 'Access denied. Contact your administrator. (code: ' + (authError || 'unknown') + ')';
+      if (authError === 'hmac_secret_missing') {
+        authMsg = 'Setup required: HMAC_SECRET is not configured in Script Properties. This should auto-generate on first deploy — verify deployment completed, or set it manually in the GAS editor.';
+      } else if (authError === 'domain_not_configured') {
+        authMsg = 'Setup required: Domain restriction is enabled but ALLOWED_DOMAINS is empty. Set ALLOWED_DOMAINS in the GAS preset config or disable ENABLE_DOMAIN_RESTRICTION.';
+      } else if (authError === 'domain_not_allowed') {
+        authMsg = 'Access denied: your email domain is not in the allowed list. Contact your administrator.';
+      } else if (authError === 'account_locked') {
+        authMsg = 'Account temporarily locked due to too many failed attempts. Contact your administrator.';
+      } else if (authError === 'rate_limited') {
+        authMsg = 'Too many sign-in attempts. Please wait a few minutes and try again.';
+      }
+      return authMsg;
+    }
+
+    // Fetch-mode sign-in completion — the exchange response arrived over direct
+    // HTTPS (not postMessage), so it is transport-verified and the app is shown
+    // without waiting for the iframe's gas-auth-ok. The iframe still loads the
+    // embedded app UI afterwards, wherever framed /exec is still served.
+    function _completeSignInFetch(data) {
+      if (data.version) { try { var _gplf = document.getElementById('gas-pill-label'); if (_gplf) _gplf.textContent = 'GAS ' + data.version; var _gpf = document.getElementById('gas-pill'); if (_gpf) _gpf.style.display = 'flex'; window._gasLiveVersion = data.version; } catch (_ef) {} }
+      _updateSignInStage('Creating your session…');
+      saveSession(data.sessionToken, data.email, data.role, data.permissions);
+      getStorage().setItem(SESSION_START_KEY, String(Date.now()));
+      getStorage().setItem(ABSOLUTE_START_KEY, String(Date.now()));
+      _expiryWarningShown = false;
+      _absoluteWarningShown = false;
+      hideAllWarningBanners();
+      var _absDurF = (data.absoluteTimeout > 0) ? data.absoluteTimeout : ABSOLUTE_SESSION_DURATION;
+      ABSOLUTE_SESSION_DURATION = _absDurF;
+      _lockSessionTimers(SERVER_SESSION_DURATION, _absDurF);
+      if (data.messageKey && !_hmacKeySet) {
+        _importHmacKey(data.messageKey).catch(function(err) {
+          console.error('HMAC key import from fetch exchange failed:', err);
+        });
+      }
+      _updateSignInStage('Loading application…');
+      _updateSubStep('sub-downloading');
+      var gasAppFc = document.getElementById('gas-app');
+      var baseUrlFc = (gasAppFc && gasAppFc.dataset.baseUrl) || '';
+      if (gasAppFc && baseUrlFc) {
+        _expectingSession = true;
+        gasAppFc.src = baseUrlFc + '?session=' + encodeURIComponent(data.sessionToken);
+      }
+      _updateSubStep('sub-starting');
+      _updateSignInStage('Sign-in complete');
+      _completeAllStages();
+      _gasAuthOkHandled = true;  // suppress duplicate handling when the UI iframe confirms
+      showApp(data.email, data.displayName, data.role);
+      startCountdownTimers();
+      startHeartbeat();
     }
 
     // --- postMessage Path (HIPAA) ---
@@ -2720,8 +2840,8 @@
       }
     }
 
-    // Hide sub-sending on URL path (no postMessage exchange)
-    if (HTML_CONFIG.TOKEN_EXCHANGE_METHOD !== 'postMessage') {
+    // Hide sub-sending on URL path only (postMessage and fetch both use it)
+    if (HTML_CONFIG.TOKEN_EXCHANGE_METHOD === 'url') {
       var subSending = document.getElementById('sub-sending');
       if (subSending) subSending.style.display = 'none';
     }
@@ -3333,6 +3453,19 @@
         hbEl.className = 'timer-value warn';
       }
 
+      // fetch transport: POST the heartbeat directly — no iframe involved. The
+      // JSON result is the same object the postMessage path delivers, so it
+      // routes through the existing verified-message handlers.
+      if (HTML_CONFIG.TOKEN_EXCHANGE_METHOD === 'fetch') {
+        _gasPost({ action: 'heartbeat', token: session.token })
+          .then(function(hbData) { if (hbData && hbData.type) _processVerifiedMessage(hbData, null); })
+          .catch(function() {
+            _heartbeatInFlight = false;
+            if (_heartbeatInFlightTimer) { clearTimeout(_heartbeatInFlightTimer); _heartbeatInFlightTimer = null; }
+          });
+        return;
+      }
+
       // Use a hidden iframe so the heartbeat doesn't destroy the main GAS app UI
       var hbFrame = document.getElementById('gas-heartbeat');
       if (!hbFrame) {
@@ -3458,6 +3591,19 @@
       // showAuthWall (with DOM clearing) is deferred until server confirms invalidation,
       // so the sign-out iframe is not destroyed before processSignOut() completes.
       if (session.token) {
+        // fetch transport: invalidate the server session directly — no iframe involved
+        if (HTML_CONFIG.TOKEN_EXCHANGE_METHOD === 'fetch') {
+          var _soDoneF = false;
+          _updateSignOutStage('so-stage-server');
+          _updateSubStep('sub-so-connecting');
+          _updateSubStep('sub-so-sending');
+          _gasPost({ action: 'signOut', token: session.token })
+            .then(function() { if (!_soDoneF) { _soDoneF = true; _updateSignOutStage('so-stage-confirm'); _finalizeSignOut(); } })
+            .catch(function() { if (!_soDoneF) { _soDoneF = true; _finalizeSignOut(); } });
+          // Fallback: never leave the user staring at "Signing out…" indefinitely
+          setTimeout(function() { if (!_soDoneF) { _soDoneF = true; _finalizeSignOut(); } }, 10000);
+          return;
+        }
         var gasApp = document.getElementById('gas-app');
         var baseUrl = (gasApp && gasApp.dataset.baseUrl) || '';
         if (gasApp && baseUrl) {
@@ -3725,6 +3871,41 @@
         if (sessStart && (Date.now() - sessStart) / 1000 > SERVER_SESSION_DURATION) {
           clearSession();
           showAuthWall('Session expired. Click "Sign In with Google" to continue.');
+          return;
+        }
+
+        // fetch transport: validate the stored session directly (no iframe) and
+        // show the app on confirmation — the iframe only carries the embedded UI
+        // wherever framed /exec is still served.
+        if (HTML_CONFIG.TOKEN_EXCHANGE_METHOD === 'fetch') {
+          showReconnecting();
+          _gasPost({ action: 'heartbeat', token: session.token })
+            .then(function(rd) {
+              if (rd && rd.type === 'gas-heartbeat-ok') {
+                _pendingSessionShow = null;
+                getStorage().setItem(SESSION_START_KEY, String(Date.now()));
+                _updateReconnectStage('rc-stage-confirm');
+                _completeAllReconnectStages();
+                _gasAuthOkHandled = true;
+                showApp(session.email, null, session.role);
+                startCountdownTimers();
+                startHeartbeat();
+                var gasAppR = document.getElementById('gas-app');
+                var baseUrlR = (gasAppR && gasAppR.dataset.baseUrl) || '';
+                if (gasAppR && baseUrlR) {
+                  gasAppR.src = baseUrlR + '?session=' + encodeURIComponent(session.token);
+                }
+              } else if (rd && rd.type) {
+                _processVerifiedMessage(rd, null);
+              } else {
+                clearSession();
+                showAuthWall('Session expired. Click "Sign In with Google" to continue.');
+              }
+            })
+            .catch(function() {
+              clearSession();
+              showAuthWall('Click "Sign In with Google" to continue.');
+            });
           return;
         }
 
