@@ -1,4 +1,4 @@
-var VERSION = "v01.03g";
+var VERSION = "v01.04g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -310,6 +310,29 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 
 // ══════════════
 // PROJECT START — Add your project-specific code here
+// ══════════════
+
+/**
+ * Text submission — saves one line of text from the host page into the
+ * spreadsheet. Called via the iframe-free fetch transport (doPost
+ * action=submitText, GET api op=submitText fallback).
+ * Appends [timestamp, user email, text] to SHEET_NAME in SPREADSHEET_ID.
+ */
+function submitText(sessionToken, text) {
+  var user = validateSessionForData(sessionToken, 'submitText');
+  var clean = String(text || '').trim();
+  if (!clean) return { success: false, error: 'empty_text' };
+  if (clean.length > 5000) clean = clean.substring(0, 5000);
+  if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
+    return { success: false, error: 'spreadsheet_not_configured' };
+  }
+  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
+  sheet.appendRow([new Date(), user.email, clean]);
+  return { success: true };
+}
+
+// ══════════════
 // PROJECT END
 // ══════════════
 
@@ -798,6 +821,20 @@ function doPost(e) {
     }
     if (xtResult && xtResult.success) xtResult.version = VERSION;
     return ContentService.createTextOutput(JSON.stringify(xtResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Scraper text submission via fetch() — session-validated write
+  if (action === "submitText") {
+    var stToken = (e && e.parameter && e.parameter.token) || "";
+    var stText = (e && e.parameter && e.parameter.text) || "";
+    var stResult;
+    try {
+      stResult = submitText(stToken, stText);
+    } catch (stErr) {
+      stResult = { success: false, error: String((stErr && stErr.message) || stErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(stResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -2079,6 +2116,9 @@ function doGet(e) {
         apiResult = processSignOut(apiToken);
       } else if (apiOp === 'heartbeat') {
         apiResult = processHeartbeat(apiToken);
+      } else if (apiOp === 'submitText') {
+        // PROJECT: Scraper text submission (GET fallback)
+        apiResult = submitText(apiToken, (e && e.parameter && e.parameter.text) || '');
       } else {
         apiResult = { error: 'unknown_op' };
       }

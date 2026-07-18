@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 3/50`
+`Sections: 4/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.04g] — 2026-07-18 12:05:25 AM EST — v01.13r
+
+### Added
+- Submitted text entries are now saved to the spreadsheet with a timestamp
 
 ## [v01.03g] — 2026-07-17 10:05:56 PM EST — v01.11r
 

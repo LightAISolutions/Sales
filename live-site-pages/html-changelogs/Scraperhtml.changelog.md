@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 2/50`
+`Sections: 3/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.03w] — 2026-07-18 12:05:25 AM EST — v01.13r
+
+### Added
+- New text box with a Submit button that saves your entry to the spreadsheet
 
 ## [v01.02w] — 2026-07-17 11:45:41 PM EST — v01.12r
 
