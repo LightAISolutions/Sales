@@ -1,4 +1,4 @@
-var VERSION = "v01.01g";
+var VERSION = "v01.02g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -40,12 +40,11 @@ var PORTAL_DESCRIPTION = "News Scraper application.";
 
 // Unified toggleable auth configuration (see 6-UNIFIED-TOGGLEABLE-AUTH-PATTERN.md)
 // Select a preset, then apply per-project overrides.
-var ACTIVE_PRESET = 'standard';     // 'standard' or 'hipaa'
+var ACTIVE_PRESET = 'hipaa';     // 'standard' or 'hipaa' — hipaa matches the proven working configuration: its postMessage token exchange is what the auth HTML template hardcodes ('standard' defaults to 'url', which makes every sign-in time out on the reachability watchdog)
 var PROJECT_OVERRIDES = {
   ENABLE_DOMAIN_RESTRICTION: false,
   ALLOWED_DOMAINS: [],
-  SESSION_EXPIRATION: 7200,   // default new projects to a 2-hour rolling session (overrides the preset's shorter default; absolute ceiling stays at the preset's ABSOLUTE_SESSION_TIMEOUT). The client countdown derives from this via the heartbeat's expiresIn, so no second constant is needed.
-  TOKEN_EXCHANGE_METHOD: 'postMessage',  // MUST match the embedding page's HTML_CONFIG — the HTML template hardcodes 'postMessage', but the 'standard' preset defaults to 'url'; a mismatch makes every sign-in time out on the reachability watchdog
+  SESSION_EXPIRATION: 7200,        // seconds — rolling session lifetime (2hr); overrides the hipaa preset's 900s default. The client countdown derives from this via the heartbeat's expiresIn, so no second constant is needed.
 };
 
 // ══════════════
