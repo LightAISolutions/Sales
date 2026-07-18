@@ -6,6 +6,37 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-07-18 12:16:58 AM EST
+**Repo version:** v01.13r
+
+**What we worked on:**
+- Created the **Scraper** (News Scraper) auth GAS project via `setup-gas-project.sh` (v01.04r) — script ran clean, all v01.03r script fixes verified in production
+- Admin permissions: seeded `jonyang92@gmail.com` as admin via `ensureSeedAdmins()` in MasterACL.gs (v01.05r); added zero-setup `grantUserAccess()` editor utility with built-in defaults for both owner emails (v01.06r–v01.07r); it also repairs/builds the Master ACL sheet structure (Access/Roles tabs, metadata rows) and probes the web app (v01.08r)
+- **Sign-in overhaul (the big arc)** — root causes found and fixed in layers: (1) `TOKEN_EXCHANGE_METHOD` mismatch — auth HTML template hardcodes `postMessage` but `standard` GAS preset uses `url` → aligned MasterACL/Scraper to the proven `hipaa` preset (v01.09r–v01.10r); (2) Google's multi-account `/u/N` iframe 404s → ported the **iframe-free `fetch` transport** (exchange/heartbeat/sign-out/restore) from the testauthgas1 scaffold into MasterACL/Scraper/globalacl pages + GAS routes + **both auth templates** (permanent fix — future projects born working, v01.11r); (3) the app-UI iframe itself → **`credentialless` iframes** force Google's anonymous serving path (v01.12r)
+- Added Scraper **text-submission feature**: text box + Submit on the page (PROJECT blocks), session-validated `submitText` fetch route appends [timestamp, email, text] to `Live_Sheet` (v01.13r)
+
+**Where we left off:**
+- Owner confirmed everything works in the normal multi-account browser: sign-in, MasterACL app screen, and Scraper submissions. All committed, merged to main, deployed. Working tree clean
+
+**Key decisions made:**
+- The **fetch transport is now the standard** sign-in architecture (in both auth templates); preset choice no longer affects sign-in
+- GAS iframes load **credentialless** (cookie-less → anonymous serving; unsupported browsers ignore the attribute)
+- `testauthhtml1` intentionally left on postMessage (it's the postMessage test scaffold); `testauthgas1` is the fetch reference
+- Known latent template bug left as-is: doPost `getData` route calls undefined `processDataPoll` (dead route, nothing calls it)
+- Public GAS/page changelog entries kept generic per changelog-security rules; full detail in repo CHANGELOG
+
+**Active context:**
+- Branch: `claude/news-scraper-gas-setup-2kxvc3` (auto-deleted from remote after each merge; recreate by pushing)
+- Repo v01.13r · 7 tracked pages, all 🟢 — MasterACL v01.02w·v01.07g, Scraper v01.03w·v01.04g, globalacl v01.02w·v01.01g, gas-project-creator v01.01w, test pages v01.00w
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- No reminders, no TODO items
+
+**Recommendation for next session:**
+- Configure the **Globalacl** project (it still has placeholder deployment/spreadsheet IDs from initialization) so the central ACL manager UI becomes usable — it already carries the fetch transport and credentialless fixes, it just needs a real Apps Script deployment wired into `globalacl.config.json`.
+- **To continue:** type `set up the globalacl project`
+
+## Previous Sessions
+
 **Date:** 2026-07-17 07:15 PM EST
 **Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
 **Repo version:** v01.03r
@@ -22,38 +53,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Repo version: v01.03r · 6 tracked pages (all 🟢)
 - No TODO items, no active reminders
 - Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-
-## Previous Sessions
-
-**Date:** 2026-07-17 07:04:13 PM EST
-**Repo version:** v01.02r
-
-**What we worked on:**
-- Introduced the repo to the new owner (non-programmer who inherited it) — full orientation tour of the framework, CLAUDE.md rules, commands, and constraints
-- Initialized repo identity for this fork (v01.01r): `lightaisolutions` → `Sales` across 14 files via `scripts/init-repo.sh` + manual fixes (Pages hostname mangling `Sales.github.io` → `lightaisolutions.github.io`, duplicate workflow `main` trigger, sitemap/robots URLs, GAS Project Creator form defaults → v01.01w, CLAUDE.md `YOUR_REPO_NAME` → `Sales`, Flowchart mermaid URL regen)
-- First successful GitHub Pages deployment: run #2 failed at "Setup Pages" (Pages not enabled); after the owner enabled it, a trigger commit (README timestamp + robots.txt no-op) produced fully-green run #3; site live at lightaisolutions.github.io/Sales with HTTP 200 verified
-- Explained/resolved the Google OAuth "Error 403: access_denied" screenshot — app "Sales" is in Testing mode; fix = add test users (Cloud Console → OAuth consent screen → Audience) or publish to Production
-- Set up the **MasterACL** GAS project (v01.02r): auth-enabled, `standard` preset, `IS_MASTER_ACL: true`, real deployment/spreadsheet IDs; fixed three setup-script defects by hand (GAS Projects table row inserted into wrong table in `gas-scripts.md`; "Phase 9" workflow deploy step announced but never written; missing mermaid.live link in generated diagram); run #4 green, page live
-
-**Where we left off:**
-- All work committed, merged to main, and deployed; working tree clean
-- MasterACL page is live but its Google side is untested — sign-in blocked until the OAuth test-user fix is done (manual step for the owner), and the Apps Script deployment `AKfycbxg…` must contain the new code before the iframe responds
-
-**Key decisions made:**
-- Preserved `ShadowAISolutions` developer branding during init (passed explicitly as third arg)
-- Historical docs (`ENTERPRISE-SETUP.md`, `archive info/`, imported skills, rule examples) intentionally keep `lightaisolutions` references — template origin / old-repo documentation
-- C4 Context mermaid URL in REPO-ARCHITECTURE.md was corrupted before this fork — left untouched (payload undecodable, cannot reconstruct)
-- Owner approved the manual setup-script defect fixes (chose "apply fixes" over "as-is" / "undo")
-- API workflow re-runs are 403 for this environment's token — redeploys go through commits on the session's `claude/*` branch instead
-
-**Active context:**
-- Branch: `claude/repo-md-overview-f6l2hp` (auto-deleted from remote after each merge; recreate by pushing)
-- Repo version: v01.02r · 6 tracked pages (MasterACL v01.00w·v01.00g new; gas-project-creator v01.01w; others v01.00w; all 🟢)
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No reminders, no TODO items
-
-**Recommendation for next session:**
-- Fix the three `scripts/setup-gas-project.sh` defects found during the MasterACL setup (row lands in the wrong table in `gas-scripts.md`, Phase 9 never writes the workflow deploy step, generated diagram lacks the mermaid.live link) so future `setup gas project` runs come out clean without manual repair.
-- **To continue:** type `fix the setup script defects`
 
 Developed by: ShadowAISolutions
