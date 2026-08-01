@@ -6,6 +6,24 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-07-31 10:39:15 PM EST
+**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
+**Repo version:** v01.15r
+
+**What was done:**
+- Removed the Scraper text-submission UI (text box + Submit button panel, CSS, and submit wiring JS) from `Scraper.html` (v01.04w); the GAS-side `submitText` route was intentionally retained unchanged (v01.14r)
+- Created standalone page `spain-argentina.html` (v01.00w) — a pure-CSS 5-second Spain vs Argentina World Cup 2026 animation on infinite loop, with tracking files and README/REPO-ARCHITECTURE registration (v01.15r)
+
+**Where we left off:**
+- All changes committed and merged to main
+
+**Active context:**
+- Repo version: v01.15r · 8 tracked pages
+- No TODO items, no active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+
+## Previous Sessions
+
 **Date:** 2026-07-18 12:16:58 AM EST
 **Repo version:** v01.13r
 
@@ -34,24 +52,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - Configure the **Globalacl** project (it still has placeholder deployment/spreadsheet IDs from initialization) so the central ACL manager UI becomes usable — it already carries the fetch transport and credentialless fixes, it just needs a real Apps Script deployment wired into `globalacl.config.json`.
 - **To continue:** type `set up the globalacl project`
-
-## Previous Sessions
-
-**Date:** 2026-07-17 07:15 PM EST
-**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
-**Repo version:** v01.03r
-
-**What was done:**
-- Fixed `scripts/setup-gas-project.sh` Phase 6 GAS Projects table row placement — now anchors on the `| Project | Code File |` header instead of the last pipe-line in the file (v01.03r)
-- Fixed `scripts/setup-gas-project.sh` Phase 9 workflow deploy step insertion — now anchors on the stable `- name: Update AHK version files` step name (v01.03r)
-- Fixed `scripts/setup-gas-project.sh` Phase 5b — generated diagrams now include the "Open in mermaid.live" pako link with round-trip verification (v01.03r)
-
-**Where we left off:**
-- All changes committed and merged to main
-
-**Active context:**
-- Repo version: v01.03r · 6 tracked pages (all 🟢)
-- No TODO items, no active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
 
 Developed by: ShadowAISolutions
