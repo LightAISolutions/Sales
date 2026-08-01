@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 9/50`
+`Sections: 10/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.10g] — 2026-08-01 07:38:37 PM EST — v01.33r
+
+### Changed
+- Your receipts are now private to your account — each signed-in user sees and manages only their own receipts, history, reports, and exports
 
 ## [v01.09g] — 2026-08-01 05:18:59 PM EST — v01.28r
 

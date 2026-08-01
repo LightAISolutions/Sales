@@ -1,4 +1,4 @@
-var VERSION = "v01.09g";
+var VERSION = "v01.10g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -322,6 +322,11 @@ var DRIVE_FOLDER_ID = "1DHfXwzo0qXI_2H0Q2dDLKGn7EOtguI0A";
 // one row per receipt, one row per line item (joined on Receipt ID).
 var RECEIPTS_TAB = "Receipts";
 var LINEITEMS_TAB = "LineItems";
+// Multi-user data isolation — the "Uploaded By" column is the owner of each
+// receipt; every read/write op is scoped to the signed-in user's own rows.
+// Rows created before ownership scoping (blank Uploaded By) are backfilled
+// once to this legacy owner (the app's original single user).
+var RECEIPTS_LEGACY_OWNER = "jonyang92@gmail.com";
 
 // Gemini model for receipt extraction (free-tier Flash family; one-line switch
 // to newer models). API key lives ONLY in Script Properties under
@@ -552,9 +557,10 @@ function extractReceipt(sessionToken, fileId) {
  * string — both are normalized.
  */
 function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded, sortBy, category) {
-  validateSessionForData(sessionToken, 'listReceipts');
+  var user = validateSessionForData(sessionToken, 'listReceipts');
   migrateReceiptIds_(); // one-time data migration; no-op after first run
-  syncDriveFolderAccess_(); // ACL → photo-folder viewer sync; throttled 10 min
+  backfillReceiptOwners_(); // one-time owner backfill; no-op after first run
+  var ownerEmail = String((user && user.email) || '').toLowerCase();
   var sh = ensureReceiptTabs_().receipts;
   var last = sh.getLastRow();
   if (last < 2) return { success: true, receipts: [] };
@@ -570,6 +576,8 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
     var r = vals[i];
     var rDate = (r[3] instanceof Date)
       ? Utilities.formatDate(r[3], 'UTC', 'yyyy-MM-dd') : String(r[3] || '');
+    // Each user sees only their own receipts (owner = Uploaded By column).
+    if (String(r[2] || '').toLowerCase() !== ownerEmail) continue;
     // Default view is confirmed data only — unsaved "uploaded" rows appear
     // only when the client explicitly asks for them.
     if (!showUploaded && String(r[11] || '') !== 'saved') continue;
@@ -607,7 +615,8 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
  * History detail — one receipt's full fields plus its LineItems rows.
  */
 function getReceiptDetail(sessionToken, receiptId) {
-  validateSessionForData(sessionToken, 'getReceiptDetail');
+  var user = validateSessionForData(sessionToken, 'getReceiptDetail');
+  var ownerEmail = String((user && user.email) || '').toLowerCase();
   var rid = String(receiptId || '').trim();
   if (!rid) return { success: false, error: 'no_receipt_id' };
   var tabs = ensureReceiptTabs_();
@@ -618,6 +627,9 @@ function getReceiptDetail(sessionToken, receiptId) {
     var vals = sh.getRange(2, 1, last - 1, 14).getValues();
     for (var i = 0; i < vals.length; i++) {
       if (String(vals[i][0]) === rid) {
+        // Ownership gate — respond as not-found for other users' receipts so
+        // existence is not leaked across accounts.
+        if (String(vals[i][2] || '').toLowerCase() !== ownerEmail) break;
         var r = vals[i];
         receipt = {
           id: rid,
@@ -667,7 +679,9 @@ function getReceiptDetail(sessionToken, receiptId) {
  * receipts — far above personal-use volume, guards the JSON payload size.
  */
 function reportReceipts(sessionToken, dateFrom, dateTo) {
-  validateSessionForData(sessionToken, 'reportReceipts');
+  var user = validateSessionForData(sessionToken, 'reportReceipts');
+  backfillReceiptOwners_(); // one-time owner backfill; no-op after first run
+  var ownerEmail = String((user && user.email) || '').toLowerCase();
   var tabs = ensureReceiptTabs_();
   var sh = tabs.receipts;
   var last = sh.getLastRow();
@@ -679,6 +693,7 @@ function reportReceipts(sessionToken, dateFrom, dateTo) {
   var included = {};
   for (var i = 0; i < vals.length && receipts.length < 2000; i++) {
     var r = vals[i];
+    if (String(r[2] || '').toLowerCase() !== ownerEmail) continue; // own receipts only
     if (String(r[11] || '') !== 'saved') continue;
     var rDate = (r[3] instanceof Date)
       ? Utilities.formatDate(r[3], 'UTC', 'yyyy-MM-dd') : String(r[3] || '');
@@ -738,6 +753,10 @@ function deleteReceipt(sessionToken, receiptId) {
     var vals = sh.getRange(2, 1, last - 1, 12).getValues();
     for (var i = 0; i < vals.length; i++) {
       if (String(vals[i][0]) === rid) {
+        // Ownership gate — users can only delete their own receipts; respond
+        // as not-found so existence is not leaked across accounts.
+        if (String(vals[i][2] || '').toLowerCase()
+            !== String((user && user.email) || '').toLowerCase()) break;
         rowIdx = i + 2;
         imageUrl = String(vals[i][10] || '');
         break;
@@ -772,7 +791,8 @@ function deleteReceipt(sessionToken, receiptId) {
  * returns the workbook base64-encoded for the browser to download.
  */
 function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category) {
-  validateSessionForData(sessionToken, 'exportReceipts');
+  var user = validateSessionForData(sessionToken, 'exportReceipts');
+  var ownerEmail = String((user && user.email) || '').toLowerCase();
   var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded, '', category);
   if (!listed.success) return listed;
   var receipts = listed.receipts || [];
@@ -853,15 +873,25 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
       if (b.count) liSheet.getRange(b.row + 1, 1, b.count, 7).setBackground(b.color);
     });
 
-    // Monthly Summary — mirror the live tab (rebuild first so it's current).
+    // Monthly Summary — mirror the live tab (rebuild first so it's current),
+    // but only the requesting user's rows, with the Owner column dropped so
+    // the exported sheet keeps the familiar Month-first layout.
     var msLive = rebuildMonthlySummary_(src);
     var msLastRow = msLive.getLastRow(), msLastCol = msLive.getLastColumn();
-    if (msLastRow > 0 && msLastCol > 0) {
-      var msSheet = temp.insertSheet('Monthly Summary');
-      msSheet.getRange(1, 1, msLastRow, msLastCol)
-        .setValues(msLive.getRange(1, 1, msLastRow, msLastCol).getValues());
-      msSheet.setFrozenRows(1);
-      msSheet.getRange(1, 1, 1, msLastCol).setFontWeight('bold');
+    if (msLastRow > 1 && msLastCol > 1) {
+      var msAll = msLive.getRange(1, 1, msLastRow, msLastCol).getValues();
+      var msOut = [msAll[0].slice(1)];
+      for (var msI = 1; msI < msAll.length; msI++) {
+        if (String(msAll[msI][0] || '').toLowerCase() === ownerEmail) {
+          msOut.push(msAll[msI].slice(1));
+        }
+      }
+      if (msOut.length > 1) {
+        var msSheet = temp.insertSheet('Monthly Summary');
+        msSheet.getRange(1, 1, msOut.length, msOut[0].length).setValues(msOut);
+        msSheet.setFrozenRows(1);
+        msSheet.getRange(1, 1, 1, msOut[0].length).setFontWeight('bold');
+      }
     }
     SpreadsheetApp.flush();
 
@@ -889,7 +919,8 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
  * audit. Idempotent: re-saving the same receipt overwrites cleanly.
  */
 function saveReceipt(sessionToken, receiptId, dataJson, force) {
-  validateSessionForData(sessionToken, 'saveReceipt');
+  var user = validateSessionForData(sessionToken, 'saveReceipt');
+  var ownerEmail = String((user && user.email) || '').toLowerCase();
   var rid = String(receiptId || '').trim();
   if (!rid) return { success: false, error: 'no_receipt_id' };
   var data;
@@ -907,6 +938,11 @@ function saveReceipt(sessionToken, receiptId, dataJson, force) {
     else { taken[String(all[i][0])] = true; }
   }
   if (rowIdx === -1) return { success: false, error: 'receipt_not_found' };
+  // Ownership gate — users can only save/edit their own receipts; respond as
+  // not-found so existence is not leaked across accounts.
+  if (String(all[rowIdx - 1][2] || '').toLowerCase() !== ownerEmail) {
+    return { success: false, error: 'receipt_not_found' };
+  }
 
   // Duplicate detection — another SAVED receipt with the same merchant,
   // receipt date, and total is almost certainly the same paper receipt
@@ -917,6 +953,9 @@ function saveReceipt(sessionToken, receiptId, dataJson, force) {
     var dupTotal = num(data.total);
     for (var d = 1; d < all.length; d++) {
       if (d + 1 === rowIdx) continue;
+      // Duplicate detection is per-owner — another user's identical receipt
+      // is legitimately a different purchase (and must not leak existence).
+      if (String(all[d][2] || '').toLowerCase() !== ownerEmail) continue;
       if (String(all[d][11]) !== 'saved') continue;
       var dDate = (all[d][3] instanceof Date)
         ? Utilities.formatDate(all[d][3], 'UTC', 'yyyy-MM-dd') : String(all[d][3] || '');
@@ -985,44 +1024,52 @@ function saveReceipt(sessionToken, receiptId, dataJson, force) {
 }
 
 /**
- * Monthly Summary tab — one row per month (receipt date, falling back to
- * upload month for undated receipts): receipt count, total spend, and a
- * column per receipt-level category. Rebuilt in full on every save/delete —
- * cheap at personal-use volumes and immune to drift.
+ * Monthly Summary tab — one row per owner + month (receipt date, falling back
+ * to upload month for undated receipts): receipt count, total spend, and a
+ * column per receipt-level category. Per-owner rows keep each user's spending
+ * separated now that the app is multi-user. Rebuilt in full on every
+ * save/delete — cheap at personal-use volumes and immune to drift.
  */
 function rebuildMonthlySummary_(tabs) {
   var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
   var sh = ss.getSheetByName('Monthly Summary') || ss.insertSheet('Monthly Summary');
   var src = (tabs || ensureReceiptTabs_()).receipts;
   var last = src.getLastRow();
-  var months = {};
+  var buckets = {};
   if (last > 1) {
     var vals = src.getRange(2, 1, last - 1, 12).getValues();
     for (var i = 0; i < vals.length; i++) {
       if (String(vals[i][11]) !== 'saved') continue;
+      var owner = String(vals[i][2] || '').toLowerCase() || '(unknown)';
       var dStr = (vals[i][3] instanceof Date)
         ? Utilities.formatDate(vals[i][3], 'UTC', 'yyyy-MM-dd') : String(vals[i][3] || '');
       var month = /^\d{4}-\d{2}/.test(dStr) ? dStr.substring(0, 7)
         : (vals[i][1] instanceof Date ? Utilities.formatDate(vals[i][1], 'UTC', 'yyyy-MM') : '');
       if (!month) continue;
-      if (!months[month]) {
-        months[month] = { count: 0, total: 0, cats: {} };
-        RECEIPT_CATEGORIES.forEach(function(c) { months[month].cats[c] = 0; });
+      var key = owner + '|' + month;
+      if (!buckets[key]) {
+        buckets[key] = { owner: owner, month: month, count: 0, total: 0, cats: {} };
+        RECEIPT_CATEGORIES.forEach(function(c) { buckets[key].cats[c] = 0; });
       }
       var total = parseFloat(vals[i][8]);
-      months[month].count++;
+      buckets[key].count++;
       if (!isNaN(total)) {
-        months[month].total += total;
+        buckets[key].total += total;
         var cat = RECEIPT_CATEGORIES.indexOf(String(vals[i][9])) >= 0 ? String(vals[i][9]) : 'Other';
-        months[month].cats[cat] += total;
+        buckets[key].cats[cat] += total;
       }
     }
   }
-  var header = ['Month', 'Receipts', 'Total Spend'].concat(RECEIPT_CATEGORIES);
+  var header = ['Owner', 'Month', 'Receipts', 'Total Spend'].concat(RECEIPT_CATEGORIES);
   var out = [header];
-  Object.keys(months).sort().reverse().forEach(function(m) {
-    var row = [m, months[m].count, Math.round(months[m].total * 100) / 100];
-    RECEIPT_CATEGORIES.forEach(function(c) { row.push(Math.round(months[m].cats[c] * 100) / 100); });
+  Object.keys(buckets).sort(function(a, b) {
+    var A = buckets[a], B = buckets[b];
+    if (A.owner !== B.owner) return A.owner < B.owner ? -1 : 1;
+    return A.month < B.month ? 1 : (A.month > B.month ? -1 : 0); // months newest-first
+  }).forEach(function(k) {
+    var m = buckets[k];
+    var row = [m.owner, m.month, m.count, Math.round(m.total * 100) / 100];
+    RECEIPT_CATEGORIES.forEach(function(c) { row.push(Math.round(m.cats[c] * 100) / 100); });
     out.push(row);
   });
   sh.clearContents();
@@ -1095,55 +1142,37 @@ function migrateReceiptIds_() {
 }
 
 /**
- * Drive folder ↔ Master ACL permission sync. Everyone with a TRUE in this
- * project's Access-tab column gets VIEWER access to the receipts photo
- * folder; viewers who lost their grant are removed. The folder owner and
- * manually-added editors are never touched. Runs from listReceipts (first
- * thing a user opens before viewing photos), throttled to once per 10 min.
+ * One-time owner backfill, flag-guarded (Script Properties) — stamps the
+ * legacy owner into any receipt row whose "Uploaded By" cell is blank, so
+ * pre-multi-user rows stay visible to the app's original user after
+ * ownership scoping. Triggered lazily from listReceipts/reportReceipts.
+ *
+ * Note: the previous ACL → photo-folder viewer sync that lived here was
+ * intentionally REMOVED with multi-user isolation (v01.10g) — granting every
+ * ACL member viewer access to the shared photo folder would let users browse
+ * each other's receipt photos.
  */
-function syncDriveFolderAccess_() {
-  if (!DRIVE_FOLDER_ID || DRIVE_FOLDER_ID === 'YOUR_DRIVE_FOLDER_ID') return;
-  if (!MASTER_ACL_SPREADSHEET_ID || MASTER_ACL_SPREADSHEET_ID === 'YOUR_MASTER_ACL_SPREADSHEET_ID') return;
-  var cache = CacheService.getScriptCache();
-  if (cache.get('folder_acl_synced')) return;
-  cache.put('folder_acl_synced', '1', 600);
+function backfillReceiptOwners_() {
+  var props = PropertiesService.getScriptProperties();
+  if (props.getProperty('RECEIPT_OWNER_BACKFILL') === 'v1') return;
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return; // another request is backfilling
   try {
-    var aclSheet = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID).getSheetByName(ACL_SHEET_NAME);
-    if (!aclSheet) return;
-    var data = aclSheet.getDataRange().getValues();
-    if (data.length < 2) return;
-    var headers = data[0];
-    var colIdx = -1;
-    for (var c = 0; c < headers.length; c++) {
-      if (String(headers[c]).trim().toLowerCase() === ACL_PAGE_NAME.toLowerCase()) { colIdx = c; break; }
+    if (props.getProperty('RECEIPT_OWNER_BACKFILL') === 'v1') return;
+    var sh = ensureReceiptTabs_().receipts;
+    var last = sh.getLastRow();
+    if (last > 1) {
+      var owners = sh.getRange(2, 3, last - 1, 1).getValues();
+      for (var i = 0; i < owners.length; i++) {
+        if (!String(owners[i][0] || '').trim()) {
+          sh.getRange(i + 2, 3).setValue(RECEIPTS_LEGACY_OWNER);
+        }
+      }
     }
-    if (colIdx === -1) return;
-    var granted = {};
-    for (var r = 1; r < data.length; r++) {
-      var em = String(data[r][0] || '').trim().toLowerCase();
-      if (em.indexOf('@') === -1) continue; // metadata rows have no email in col A
-      var v = data[r][colIdx];
-      if (v === true || String(v).trim().toUpperCase() === 'TRUE') granted[em] = true;
-    }
-    var folder = DriveApp.getFolderById(DRIVE_FOLDER_ID);
-    var ownerEmail = '';
-    try { ownerEmail = String(folder.getOwner().getEmail()).toLowerCase(); } catch (oe) {}
-    var viewerSet = {}, editorSet = {};
-    folder.getViewers().forEach(function(u) {
-      try { viewerSet[String(u.getEmail()).toLowerCase()] = true; } catch (ve) {}
-    });
-    folder.getEditors().forEach(function(u) {
-      try { editorSet[String(u.getEmail()).toLowerCase()] = true; } catch (ee) {}
-    });
-    Object.keys(granted).forEach(function(em) {
-      if (em === ownerEmail || editorSet[em] || viewerSet[em]) return;
-      try { folder.addViewer(em); } catch (aErr) { /* invalid address — skip */ }
-    });
-    Object.keys(viewerSet).forEach(function(em) {
-      if (granted[em] || em === ownerEmail) return;
-      try { folder.removeViewer(em); } catch (rErr) { /* best-effort */ }
-    });
-  } catch (sErr) { /* best-effort — app auth still gates everything */ }
+    props.setProperty('RECEIPT_OWNER_BACKFILL', 'v1');
+  } finally {
+    lock.releaseLock();
+  }
 }
 
 // ══════════════
