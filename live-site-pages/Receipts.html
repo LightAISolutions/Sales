@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.14w">
+  <meta name="build-version" content="v01.15w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -376,6 +376,15 @@
     .rsp-brand #rsp-date { color: var(--rc-muted); font-size: 12.5px; font-style: italic; }
     /* The "R" hotspot must be visually indistinguishable from the heading */
     #rsp-r-secret { -webkit-tap-highlight-color: transparent; }
+    /* Clean mode — on by default; the "R" hotspot toggles it. !important wins
+       over the template's inline display changes (e.g. showing the user pill
+       or GAS pills after sign-in), so these stay hidden until revealed. */
+    body.rcpt-clean #user-pill,
+    body.rcpt-clean #auth-timers,
+    body.rcpt-clean #gas-pill,
+    body.rcpt-clean #version-indicator,
+    body.rcpt-clean #html-layer-toggle,
+    body.rcpt-clean #gas-layer-toggle { display: none !important; }
     /* Month summary — printed-receipt card with perforated bottom edge */
     #rcpt-month {
       background: var(--rc-paper); border-radius: 3px 3px 0 0;
@@ -5672,37 +5681,18 @@
       })();
 
       // PROJECT: hidden developer hotspot — tapping the "R" in the brand
-      // heading shows/hides the HTML + GAS layer-toggle pills. Both pills
-      // stay hidden by default so the app looks clean to everyone else;
-      // the pills keep their normal per-layer toggle behavior once revealed.
+      // heading toggles "clean mode" (on by default). Clean mode hides the
+      // developer/technical pills via the body.rcpt-clean CSS rule: account
+      // pill (Sign Out), session timer, GAS + HTML version pills, and both
+      // layer-toggle pills. The CSS class outranks the template's inline
+      // display changes, so the pills stay hidden even when the template
+      // "shows" them after sign-in — yet each pill's eligibility and click
+      // behavior is untouched once revealed.
       (function() {
-        var _devPills = false;
-        var _gasEligible = false; // template wants the GAS pill shown (signed in + iframe present)
-        var htmlBtn = document.getElementById('html-layer-toggle');
-        var gasBtn = document.getElementById('gas-layer-toggle');
-        if (htmlBtn) htmlBtn.style.display = 'none';
-        // The template calls _showGasToggle() after sign-in and _hideGasToggle()
-        // on sign-out; keep that eligibility logic but only surface the pill
-        // while the hotspot has dev mode on.
-        var _origShowGas = window._showGasToggle;
-        var _origHideGas = window._hideGasToggle;
-        window._showGasToggle = function() {
-          _gasEligible = true;
-          if (_devPills && typeof _origShowGas === 'function') _origShowGas();
-        };
-        window._hideGasToggle = function() {
-          _gasEligible = false;
-          if (typeof _origHideGas === 'function') _origHideGas();
-        };
+        document.body.classList.add('rcpt-clean');
         var rEl = document.getElementById('rsp-r-secret');
         if (rEl) rEl.addEventListener('click', function() {
-          _devPills = !_devPills;
-          if (htmlBtn) htmlBtn.style.display = _devPills ? '' : 'none';
-          if (_devPills) {
-            if (_gasEligible && typeof _origShowGas === 'function') _origShowGas();
-          } else if (gasBtn) {
-            gasBtn.style.display = 'none';
-          }
+          document.body.classList.toggle('rcpt-clean');
         });
       })();
 

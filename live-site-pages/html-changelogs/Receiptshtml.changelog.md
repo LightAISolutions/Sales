@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15w] — 2026-08-01 07:04:39 PM EST — v01.32r
+
+### Changed
+- Even cleaner home screen — the account bar and the small version and timer indicators are now tucked away with the other technical controls
 
 ## [v01.14w] — 2026-08-01 06:53:29 PM EST — v01.31r
 
