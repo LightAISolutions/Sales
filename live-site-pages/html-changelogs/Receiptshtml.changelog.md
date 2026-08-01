@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 13/50`
+`Sections: 14/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.14w] — 2026-08-01 06:53:29 PM EST — v01.31r
+
+### Changed
+- Cleaner home screen — the small technical toggle buttons in the bottom corner are now tucked away out of sight
 
 ## [v01.13w] — 2026-08-01 06:08:39 PM EST — v01.30r
 
