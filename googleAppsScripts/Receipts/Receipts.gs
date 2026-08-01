@@ -1,4 +1,4 @@
-var VERSION = "v01.06g";
+var VERSION = "v01.07g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -347,6 +347,18 @@ var ITEM_CATEGORIES = ["Produce", "Meat & Seafood", "Dairy & Eggs", "Bakery",
   "Alcohol", "Household", "Personal Care", "Baby", "Pet", "Non-Grocery", "Other"];
 
 /**
+ * Merchant name standardization — first letter of each word capitalized,
+ * rest lower-case ("TRADER JOE'S" → "Trader Joe's"). Word starts are the
+ * string start, whitespace, hyphen, or slash — apostrophes don't start a
+ * new word, so "joe's" stays "Joe's".
+ */
+function titleCase_(s) {
+  return String(s || '').toLowerCase().replace(/(^|[\s\-\/])([a-z])/g, function(m, p, c) {
+    return p + c.toUpperCase();
+  });
+}
+
+/**
  * Human-readable receipt ID: Store_Name-YYYYMMDD (+ -2/-3… on collision).
  * Assigned at save time — merchant and date aren't known at upload.
  */
@@ -541,7 +553,8 @@ function extractReceipt(sessionToken, fileId) {
  */
 function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded, sortBy) {
   validateSessionForData(sessionToken, 'listReceipts');
-  migrateReceiptIds_(); // one-time ID-format migration; no-op after first run
+  migrateReceiptIds_(); // one-time data migration; no-op after first run
+  syncDriveFolderAccess_(); // ACL → photo-folder viewer sync; throttled 10 min
   var sh = ensureReceiptTabs_().receipts;
   var last = sh.getLastRow();
   if (last < 2) return { success: true, receipts: [] };
@@ -824,6 +837,7 @@ function saveReceipt(sessionToken, receiptId, dataJson, force) {
   var data;
   try { data = JSON.parse(String(dataJson || '{}')); }
   catch (jErr) { return { success: false, error: 'bad_json' }; }
+  data.merchant = titleCase_(String(data.merchant || '').trim());
   var tabs = ensureReceiptTabs_();
   var sheet = tabs.receipts;
   var lastRow = Math.max(sheet.getLastRow(), 1);
@@ -960,18 +974,19 @@ function rebuildMonthlySummary_(tabs) {
 }
 
 /**
- * One-time lazy migration to Store_Name-YYYYMMDD IDs — renames every saved
- * receipt still carrying a provisional R-… ID (row, line items, Drive photo).
- * Runs at most once (Script Properties flag), triggered from listReceipts so
- * it happens on the first history load after this version deploys.
+ * One-time lazy data migration, flag-guarded (Script Properties), triggered
+ * from listReceipts so it runs on the first history load after deploy.
+ * v2: provisional R-… IDs → Store_Name-YYYYMMDD.
+ * v3: merchant names title-cased ("TRADER JOE'S" → "Trader Joe's") and IDs /
+ *     photo names regenerated where the standardized name changes them.
  */
 function migrateReceiptIds_() {
   var props = PropertiesService.getScriptProperties();
-  if (props.getProperty('RECEIPT_ID_FORMAT') === 'v2') return;
+  if (props.getProperty('RECEIPT_ID_FORMAT') === 'v3') return;
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) return; // another request is migrating
   try {
-    if (props.getProperty('RECEIPT_ID_FORMAT') === 'v2') return;
+    if (props.getProperty('RECEIPT_ID_FORMAT') === 'v3') return;
     var tabs = ensureReceiptTabs_();
     var sh = tabs.receipts;
     var last = sh.getLastRow();
@@ -984,14 +999,20 @@ function migrateReceiptIds_() {
       var liIds = liLast > 1 ? liSheet.getRange(2, 1, liLast - 1, 1).getValues() : [];
       for (var i = 0; i < vals.length; i++) {
         var oldId = String(vals[i][0]);
-        if (!/^R-/.test(oldId)) continue;
         if (String(vals[i][11]) !== 'saved' || !String(vals[i][4] || '').trim()) continue;
+        var stdMerchant = titleCase_(String(vals[i][4]).trim());
+        if (stdMerchant !== String(vals[i][4])) {
+          sh.getRange(i + 2, 5).setValue(stdMerchant);
+        }
         var dStr = (vals[i][3] instanceof Date)
           ? Utilities.formatDate(vals[i][3], 'UTC', 'yyyy-MM-dd') : String(vals[i][3] || '');
         delete taken[oldId];
-        var newId = makeReceiptId_(vals[i][4], dStr,
+        var newId = makeReceiptId_(stdMerchant, dStr,
           vals[i][1] instanceof Date ? vals[i][1] : new Date(), taken);
+        // Keep the current ID when only the collision suffix would differ.
+        if (oldId.replace(/-\d+$/, '') === newId.replace(/-\d+$/, '')) newId = oldId;
         taken[newId] = true;
+        if (newId === oldId) continue;
         sh.getRange(i + 2, 1).setValue(newId);
         for (var r = 0; r < liIds.length; r++) {
           if (String(liIds[r][0]) === oldId) {
@@ -1009,10 +1030,62 @@ function migrateReceiptIds_() {
       }
     }
     rebuildMonthlySummary_(tabs);
-    props.setProperty('RECEIPT_ID_FORMAT', 'v2');
+    props.setProperty('RECEIPT_ID_FORMAT', 'v3');
   } finally {
     lock.releaseLock();
   }
+}
+
+/**
+ * Drive folder ↔ Master ACL permission sync. Everyone with a TRUE in this
+ * project's Access-tab column gets VIEWER access to the receipts photo
+ * folder; viewers who lost their grant are removed. The folder owner and
+ * manually-added editors are never touched. Runs from listReceipts (first
+ * thing a user opens before viewing photos), throttled to once per 10 min.
+ */
+function syncDriveFolderAccess_() {
+  if (!DRIVE_FOLDER_ID || DRIVE_FOLDER_ID === 'YOUR_DRIVE_FOLDER_ID') return;
+  if (!MASTER_ACL_SPREADSHEET_ID || MASTER_ACL_SPREADSHEET_ID === 'YOUR_MASTER_ACL_SPREADSHEET_ID') return;
+  var cache = CacheService.getScriptCache();
+  if (cache.get('folder_acl_synced')) return;
+  cache.put('folder_acl_synced', '1', 600);
+  try {
+    var aclSheet = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID).getSheetByName(ACL_SHEET_NAME);
+    if (!aclSheet) return;
+    var data = aclSheet.getDataRange().getValues();
+    if (data.length < 2) return;
+    var headers = data[0];
+    var colIdx = -1;
+    for (var c = 0; c < headers.length; c++) {
+      if (String(headers[c]).trim().toLowerCase() === ACL_PAGE_NAME.toLowerCase()) { colIdx = c; break; }
+    }
+    if (colIdx === -1) return;
+    var granted = {};
+    for (var r = 1; r < data.length; r++) {
+      var em = String(data[r][0] || '').trim().toLowerCase();
+      if (em.indexOf('@') === -1) continue; // metadata rows have no email in col A
+      var v = data[r][colIdx];
+      if (v === true || String(v).trim().toUpperCase() === 'TRUE') granted[em] = true;
+    }
+    var folder = DriveApp.getFolderById(DRIVE_FOLDER_ID);
+    var ownerEmail = '';
+    try { ownerEmail = String(folder.getOwner().getEmail()).toLowerCase(); } catch (oe) {}
+    var viewerSet = {}, editorSet = {};
+    folder.getViewers().forEach(function(u) {
+      try { viewerSet[String(u.getEmail()).toLowerCase()] = true; } catch (ve) {}
+    });
+    folder.getEditors().forEach(function(u) {
+      try { editorSet[String(u.getEmail()).toLowerCase()] = true; } catch (ee) {}
+    });
+    Object.keys(granted).forEach(function(em) {
+      if (em === ownerEmail || editorSet[em] || viewerSet[em]) return;
+      try { folder.addViewer(em); } catch (aErr) { /* invalid address — skip */ }
+    });
+    Object.keys(viewerSet).forEach(function(em) {
+      if (granted[em] || em === ownerEmail) return;
+      try { folder.removeViewer(em); } catch (rErr) { /* best-effort */ }
+    });
+  } catch (sErr) { /* best-effort — app auth still gates everything */ }
 }
 
 // ══════════════

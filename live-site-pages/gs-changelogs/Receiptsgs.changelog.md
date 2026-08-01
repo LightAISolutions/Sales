@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.07g] — 2026-08-01 06:25:29 AM EST — v01.25r
+
+### Added
+- Access to the receipt photos folder now stays in sync with the app's access list — anyone granted access to the Receipts app can automatically view the photos, and removed users lose photo access too
+
+### Changed
+- Store names are now standardized automatically (Trader Joe's instead of TRADER JOE'S) — existing receipts, their IDs, and photo names were updated to match
 
 ## [v01.06g] — 2026-08-01 05:28:51 AM EST — v01.23r
 
