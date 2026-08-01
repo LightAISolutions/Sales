@@ -40,6 +40,7 @@ Each GAS project has a code file and a corresponding embedding page. Register th
 | Globalacl | `googleAppsScripts/Globalacl/globalacl.gs` | `googleAppsScripts/Globalacl/globalacl.config.json` | `live-site-pages/globalacl.html` |
 | MasterACL | `googleAppsScripts/MasterACL/MasterACL.gs` | `googleAppsScripts/MasterACL/MasterACL.config.json` | `live-site-pages/MasterACL.html` |
 | Scraper | `googleAppsScripts/Scraper/Scraper.gs` | `googleAppsScripts/Scraper/Scraper.config.json` | `live-site-pages/Scraper.html` |
+| Receipts | `googleAppsScripts/Receipts/Receipts.gs` | `googleAppsScripts/Receipts/Receipts.config.json` | `live-site-pages/Receipts.html` |
 
 
 ## GAS Project Config (config.json)
