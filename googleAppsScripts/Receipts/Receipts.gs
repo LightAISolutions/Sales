@@ -1,4 +1,4 @@
-var VERSION = "v01.02g";
+var VERSION = "v01.03g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -324,9 +324,12 @@ var RECEIPTS_TAB = "Receipts";
 var LINEITEMS_TAB = "LineItems";
 
 // Gemini model for receipt extraction (free-tier Flash family; one-line switch
-// to newer models, e.g. "gemini-3.6-flash"). API key lives ONLY in Script
-// Properties under GEMINI_API_KEY — never in the repo.
+// to newer models). API key lives ONLY in Script Properties under
+// GEMINI_API_KEY — never in the repo. On transient errors (503 overload /
+// 429 rate limit / 500) extraction retries the primary model, then falls
+// back to the secondary model before giving up.
 var GEMINI_MODEL = "gemini-3.5-flash";
+var GEMINI_FALLBACK_MODEL = "gemini-3.6-flash";
 
 // Spending categories offered by extraction and the review screen.
 var RECEIPT_CATEGORIES = ["Groceries", "Dining", "Transport", "Health",
@@ -444,14 +447,31 @@ function extractReceipt(sessionToken, fileId) {
     }],
     generationConfig: { responseMimeType: "application/json", responseSchema: schema, temperature: 0 }
   };
-  var resp = UrlFetchApp.fetch(
-    'https://generativelanguage.googleapis.com/v1beta/models/' + GEMINI_MODEL + ':generateContent',
-    { method: 'post', contentType: 'application/json', headers: { 'x-goog-api-key': apiKey },
-      payload: JSON.stringify(payload), muteHttpExceptions: true });
-  var code = resp.getResponseCode();
-  if (code !== 200) {
-    var msg = '';
-    try { msg = (JSON.parse(resp.getContentText()).error || {}).message || ''; } catch (pe) {}
+  var fetchOpts = { method: 'post', contentType: 'application/json',
+    headers: { 'x-goog-api-key': apiKey },
+    payload: JSON.stringify(payload), muteHttpExceptions: true };
+  // Retry plan for transient errors: primary twice, then the fallback model
+  // twice, with short waits. Non-transient statuses (bad key, bad request)
+  // fail fast — retrying those just burns quota.
+  var plan = [
+    { model: GEMINI_MODEL, wait: 0 },
+    { model: GEMINI_MODEL, wait: 2000 },
+    { model: GEMINI_FALLBACK_MODEL, wait: 1000 },
+    { model: GEMINI_FALLBACK_MODEL, wait: 3000 }
+  ];
+  var resp = null, code = 0, msg = '';
+  for (var a = 0; a < plan.length; a++) {
+    if (!plan[a].model || plan[a].model === 'YOUR_GEMINI_MODEL') continue;
+    if (plan[a].wait) Utilities.sleep(plan[a].wait);
+    var r = UrlFetchApp.fetch(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + plan[a].model + ':generateContent',
+      fetchOpts);
+    code = r.getResponseCode();
+    if (code === 200) { resp = r; break; }
+    try { msg = (JSON.parse(r.getContentText()).error || {}).message || ''; } catch (pe) { msg = ''; }
+    if (code !== 503 && code !== 429 && code !== 500) break;
+  }
+  if (!resp) {
     return { success: false, error: 'gemini_http_' + code + (msg ? ': ' + msg.substring(0, 200) : '') };
   }
   var extracted;
