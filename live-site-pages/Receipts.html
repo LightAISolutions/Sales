@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.03w">
+  <meta name="build-version" content="v01.04w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -372,7 +372,14 @@
     #receipt-review-card {
       position: fixed; top: 72px; left: 50%; transform: translateX(-50%);
       z-index: 6; display: none; width: min(560px, 94vw);
-      max-height: calc(100vh - 92px); overflow-y: auto;
+      /* Mobile viewport fix: 100vh includes the area behind the browser URL
+         bar, which pushed the card's bottom (and the Save button) off-screen.
+         dvh tracks the real visible height; the vh line is the fallback for
+         older browsers. Bottom clearance also keeps the card above the
+         version pills. */
+      max-height: calc(100vh - 170px);
+      max-height: calc(100dvh - 170px);
+      overflow-y: auto;
       background: #fff; border: 1px solid #d0d4da; border-radius: 10px;
       padding: 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.18);
       font: 14px/1.4 sans-serif; color: #222;
@@ -399,7 +406,14 @@
       margin-top: 2px; padding: 6px 12px; font-size: 13px; border: 1px dashed #9db8d4;
       border-radius: 6px; background: #f4f8fc; color: #2a6ebb; cursor: pointer;
     }
-    .rr-actions { display: flex; gap: 10px; margin-top: 14px; align-items: center; }
+    /* Sticky action bar — Save/Discard/Retry stay visible at the card's
+       bottom edge while the fields and item list scroll underneath. */
+    .rr-actions {
+      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+      position: sticky; bottom: -14px; /* counters the card's 14px padding */
+      background: #fff; border-top: 1px solid #e5e8ec;
+      margin: 14px -14px -14px; padding: 10px 14px 12px;
+    }
     #rr-save {
       padding: 10px 22px; font-size: 15px; border: none; border-radius: 6px;
       background: #2e7d32; color: #fff; cursor: pointer;

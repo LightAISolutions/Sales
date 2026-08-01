@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 3/50`
+`Sections: 4/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.04w] — 2026-08-01 03:51:49 AM EST — v01.20r
+
+### Fixed
+- "Save receipt" and "Discard" are now always visible at the bottom of the review screen — on phones with long receipts they could previously be cut off below the screen and unreachable
+
+### Changed
+- The review screen now sizes itself to the phone's actual visible screen area, and the item list scrolls behind the always-visible button bar
 
 ## [v01.03w] — 2026-08-01 03:17:05 AM EST — v01.19r
 
