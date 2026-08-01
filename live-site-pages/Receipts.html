@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.09w">
+  <meta name="build-version" content="v01.10w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -478,12 +478,21 @@
       color: #777; cursor: pointer; padding: 2px 4px; line-height: 1;
     }
     .rh-filters { display: flex; gap: 6px; flex-wrap: wrap; }
-    .rh-filters input {
+    .rh-filters input, .rh-filters select {
       font-size: 16px; padding: 7px 8px; border: 1px solid #c4c9d0;
       border-radius: 6px; outline: none; box-sizing: border-box;
+      background: #fff; color: inherit;
     }
     #rh-search { flex: 1 1 140px; min-width: 0; }
-    #rh-from, #rh-to { flex: 0 1 8.6em; }
+    .rh-dates, .rh-cat-row { margin-top: 8px; }
+    /* Start/End Date get small field labels above the box — date inputs
+       can't show placeholder text the way the merchant search box does. */
+    .rh-field {
+      flex: 1 1 0; min-width: 0; display: flex; flex-direction: column;
+      gap: 3px; font-size: 12px; color: #777;
+    }
+    .rh-field input { width: 100%; }
+    #rh-cat { flex: 1 1 100%; }
     #rh-go {
       padding: 7px 14px; font-size: 14px; border: none; border-radius: 6px;
       background: #4a90d9; color: #fff; cursor: pointer;
@@ -683,9 +692,14 @@
       <h3>Receipt history</h3>
       <div class="rh-filters">
         <input id="rh-search" type="text" placeholder="Search merchant…" autocomplete="off">
-        <input id="rh-from" type="date" title="From date">
-        <input id="rh-to" type="date" title="To date">
         <button id="rh-go" type="button">Search</button>
+      </div>
+      <div class="rh-filters rh-dates">
+        <label class="rh-field"><span>Start Date</span><input id="rh-from" type="date" title="Start date"></label>
+        <label class="rh-field"><span>End Date</span><input id="rh-to" type="date" title="End date"></label>
+      </div>
+      <div class="rh-filters rh-cat-row">
+        <select id="rh-cat" title="Filter by category"></select>
       </div>
       <div class="rh-filters rh-filters-2">
         <label class="rh-chk"><input id="rh-sort-date" type="checkbox"> Sort by receipt date</label>
@@ -4453,6 +4467,20 @@
         });
       })();
 
+      // History category filter — same list, blank option means no filter.
+      (function fillHistoryCategories() {
+        var sel = document.getElementById('rh-cat');
+        if (!sel) return;
+        var all = document.createElement('option');
+        all.value = ''; all.textContent = 'All categories';
+        sel.appendChild(all);
+        CATEGORIES.forEach(function(c) {
+          var o = document.createElement('option');
+          o.value = c; o.textContent = c;
+          sel.appendChild(o);
+        });
+      })();
+
       function setRrStatus(msg, ok) {
         if (rrStatus) { rrStatus.textContent = msg; rrStatus.style.color = ok ? '#2e7d32' : '#c62828'; }
       }
@@ -4740,6 +4768,7 @@
           q: document.getElementById('rh-search').value || '',
           from: document.getElementById('rh-from').value || '',
           to: document.getElementById('rh-to').value || '',
+          cat: document.getElementById('rh-cat').value || '',
           max: '100',
           sort: document.getElementById('rh-sort-date').checked ? 'date' : ''
         }).then(function(res) {
@@ -4844,6 +4873,7 @@
         if (ev.key === 'Enter') loadHistory();
       });
       document.getElementById('rh-sort-date').addEventListener('change', loadHistory);
+      document.getElementById('rh-cat').addEventListener('change', loadHistory);
 
       // .xlsx export — server builds the workbook from the current filters and
       // returns it base64; decoded here into a Blob download.
@@ -4858,7 +4888,8 @@
           action: 'exportReceipts', token: session.token,
           q: document.getElementById('rh-search').value || '',
           from: document.getElementById('rh-from').value || '',
-          to: document.getElementById('rh-to').value || ''
+          to: document.getElementById('rh-to').value || '',
+          cat: document.getElementById('rh-cat').value || ''
         }).then(function(res) {
           if (!(res && res.success && res.base64)) {
             done();

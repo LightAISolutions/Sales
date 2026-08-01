@@ -1,4 +1,4 @@
-var VERSION = "v01.07g";
+var VERSION = "v01.08g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -551,7 +551,7 @@ function extractReceipt(sessionToken, fileId) {
  * Receipt Date may come back from Sheets as a Date object or the original
  * string — both are normalized.
  */
-function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded, sortBy) {
+function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded, sortBy, category) {
   validateSessionForData(sessionToken, 'listReceipts');
   migrateReceiptIds_(); // one-time data migration; no-op after first run
   syncDriveFolderAccess_(); // ACL → photo-folder viewer sync; throttled 10 min
@@ -563,6 +563,7 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
   var from = String(dateFrom || '').trim();
   var to = String(dateTo || '').trim();
   var showUploaded = !!(includeUploaded && String(includeUploaded) !== '0' && String(includeUploaded) !== 'false');
+  var cat = String(category || '').trim();
   var cap = Math.max(1, Math.min(parseInt(maxRows, 10) || 100, 500));
   var out = [];
   for (var i = vals.length - 1; i >= 0 && out.length < cap; i--) {
@@ -573,6 +574,7 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
     // only when the client explicitly asks for them.
     if (!showUploaded && String(r[11] || '') !== 'saved') continue;
     if (q && String(r[4] || '').toLowerCase().indexOf(q) === -1) continue;
+    if (cat && String(r[9] || '') !== cat) continue;
     if ((from || to) && !rDate) continue;
     if (from && rDate < from) continue;
     if (to && rDate > to) continue;
@@ -713,9 +715,9 @@ function deleteReceipt(sessionToken, receiptId) {
  * real .xlsx via the Drive export endpoint, trashes the temp file, and
  * returns the workbook base64-encoded for the browser to download.
  */
-function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded) {
+function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category) {
   validateSessionForData(sessionToken, 'exportReceipts');
-  var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded);
+  var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded, '', category);
   if (!listed.success) return listed;
   var receipts = listed.receipts || [];
   if (!receipts.length) return { success: false, error: 'no_receipts_match' };
@@ -1654,7 +1656,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.to) || "",
         (e && e.parameter && e.parameter.max) || "",
         (e && e.parameter && e.parameter.uploaded) || "",
-        (e && e.parameter && e.parameter.sort) || "");
+        (e && e.parameter && e.parameter.sort) || "",
+        (e && e.parameter && e.parameter.cat) || "");
     } catch (lrErr) {
       lrResult = { success: false, error: String((lrErr && lrErr.message) || lrErr) };
     }
@@ -1700,7 +1703,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.q) || "",
         (e && e.parameter && e.parameter.from) || "",
         (e && e.parameter && e.parameter.to) || "",
-        (e && e.parameter && e.parameter.uploaded) || "");
+        (e && e.parameter && e.parameter.uploaded) || "",
+        (e && e.parameter && e.parameter.cat) || "");
     } catch (xpErr) {
       xpResult = { success: false, error: String((xpErr && xpErr.message) || xpErr) };
     }
@@ -2984,7 +2988,8 @@ function doGet(e) {
           (e && e.parameter && e.parameter.to) || '',
           (e && e.parameter && e.parameter.max) || '',
           (e && e.parameter && e.parameter.uploaded) || '',
-          (e && e.parameter && e.parameter.sort) || '');
+          (e && e.parameter && e.parameter.sort) || '',
+          (e && e.parameter && e.parameter.cat) || '');
       } else if (apiOp === 'getReceiptDetail') {
         // PROJECT: Receipts history detail (GET fallback)
         apiResult = getReceiptDetail(apiToken, (e && e.parameter && e.parameter.receiptId) || '');
@@ -2997,7 +3002,8 @@ function doGet(e) {
           (e && e.parameter && e.parameter.q) || '',
           (e && e.parameter && e.parameter.from) || '',
           (e && e.parameter && e.parameter.to) || '',
-          (e && e.parameter && e.parameter.uploaded) || '');
+          (e && e.parameter && e.parameter.uploaded) || '',
+          (e && e.parameter && e.parameter.cat) || '');
       } else {
         apiResult = { error: 'unknown_op' };
       }

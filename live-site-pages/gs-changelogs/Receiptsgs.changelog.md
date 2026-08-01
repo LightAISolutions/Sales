@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08g] — 2026-08-01 06:51:35 AM EST — v01.27r
+
+### Added
+- The receipt history and spreadsheet exports can now be filtered by spending category
 
 ## [v01.07g] — 2026-08-01 06:25:29 AM EST — v01.25r
 

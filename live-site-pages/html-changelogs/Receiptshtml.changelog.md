@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 9/50`
+`Sections: 10/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.10w] — 2026-08-01 06:51:35 AM EST — v01.27r
+
+### Added
+- Category dropdown in History — narrow the list (and spreadsheet exports) to Groceries, Dining, Transport, Health, Shopping, Entertainment, Utilities, Travel, or Other
+
+### Changed
+- History filters reorganized: the merchant search sits on its own row, with labeled "Start Date" and "End Date" boxes side-by-side beneath it
 
 ## [v01.09w] — 2026-08-01 06:36:33 AM EST — v01.26r
 
