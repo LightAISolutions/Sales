@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08w] — 2026-08-01 06:06:54 AM EST — v01.24r
+
+### Added
+- Each item in the review screen now has its own department dropdown (Produce, Dairy & Eggs, Snacks & Candy, and 13 more) — pre-filled automatically from the photo and adjustable before saving
+
+### Fixed
+- Department assignments read from the photo are now correctly kept when saving — previously they could be lost during review
 
 ## [v01.07w] — 2026-08-01 05:28:51 AM EST — v01.23r
 
