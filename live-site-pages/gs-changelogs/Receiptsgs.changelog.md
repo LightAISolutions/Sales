@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.11g] — 2026-08-01 07:51:32 PM EST — v01.34r
+
+### Added
+- Receipt sharing between users — grants are checked on every request, so shared access works exactly as the owner set it (view only, or view & edit); deleting always stays with the owner
 
 ## [v01.10g] — 2026-08-01 07:38:37 PM EST — v01.33r
 

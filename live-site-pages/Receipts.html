@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.15w">
+  <meta name="build-version" content="v01.16w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -522,7 +522,7 @@
       border-bottom: 1px solid #e2d9c6;
     }
     .rh-head h3 { margin: 0 0 8px; font-size: 17px; font-weight: 600; display: inline-block; }
-    #rh-close {
+    #rh-close, #sc-close {
       float: right; border: none; background: none; font-size: 18px;
       color: var(--rc-muted); cursor: pointer; padding: 2px 4px; line-height: 1;
     }
@@ -664,6 +664,50 @@
     .rp-bar-fill { height: 100%; background: var(--rc-accent); border-radius: 3px; }
     .rp-bar-fill.rp-bar-alt { background: var(--rc-ok); }
     #rp-empty { color: var(--rc-muted); padding: 16px 4px; }
+    /* Sharing card — same geometry as the other cards, z-index 9 on top */
+    #receipt-share-card {
+      position: fixed; top: 76px; left: 50%; transform: translateX(-50%);
+      z-index: 9; display: none; width: min(560px, 94vw);
+      max-height: calc(100vh - 170px);
+      max-height: calc(100dvh - 170px);
+      overflow-y: auto;
+      background: var(--rc-paper); border: 1px solid #d8cfba; border-radius: 8px;
+      padding: 0 14px 14px; box-shadow: 0 6px 22px rgba(35,32,25,0.22);
+      font: 14px/1.4 var(--rc-serif); color: var(--rc-ink);
+    }
+    .sc-section { margin-top: 12px; }
+    .sc-section h4 { margin: 0 0 6px; font-size: 12px; color: var(--rc-muted); letter-spacing: 2px; text-transform: uppercase; }
+    .sc-row {
+      display: flex; gap: 8px; align-items: center; padding: 7px 2px;
+      border-bottom: 1px solid #eae2d0;
+    }
+    .sc-row .sc-mail { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .sc-row .sc-scope { font-size: 11.5px; color: var(--rc-muted); font-style: italic; white-space: nowrap; }
+    .sc-revoke {
+      border: 1px solid var(--rc-err); background: none; color: var(--rc-err);
+      font-size: 12px; padding: 3px 9px; border-radius: 5px; cursor: pointer;
+      font-family: var(--rc-serif); white-space: nowrap;
+    }
+    .sc-revoke:disabled { opacity: 0.5; cursor: default; }
+    .sc-form { display: flex; gap: 6px; margin-top: 9px; flex-wrap: wrap; }
+    .sc-form input {
+      flex: 1 1 160px; min-width: 0; font-size: 16px; padding: 7px 8px;
+      border: 1px solid var(--rc-line); border-radius: 6px; outline: none;
+      background: #fffdf8; color: var(--rc-ink); box-sizing: border-box;
+    }
+    .sc-form input:focus { border-color: var(--rc-ink); }
+    .sc-form select {
+      flex: 0 1 auto; font-size: 14px; padding: 7px 8px;
+      border: 1px solid var(--rc-line); border-radius: 6px; background: #fffdf8; color: inherit;
+    }
+    #sc-grant {
+      padding: 7px 16px; font-size: 14px; border: 1.5px solid var(--rc-ink); border-radius: 6px;
+      background: var(--rc-ink); color: var(--rc-paper); cursor: pointer; font-family: var(--rc-serif);
+    }
+    #sc-grant:disabled { opacity: 0.5; cursor: default; }
+    #sc-status { font-size: 12.5px; margin-top: 6px; min-height: 16px; }
+    .sc-empty { color: var(--rc-muted); font-size: 13px; padding: 6px 2px; font-style: italic; }
+    .sc-hint { color: var(--rc-muted); font-size: 11.5px; margin-top: 8px; font-style: italic; }
     /* History detail edit button */
     .rh-edit {
       margin-top: 8px; padding: 6px 12px; font-size: 13px; border: 1px dashed var(--rc-line);
@@ -836,7 +880,10 @@
       <button id="receipt-upload-btn" class="rbtn" type="button">🖼️&ensp;Upload</button>
       <button id="receipt-report-btn" class="rbtn" type="button">📊&ensp;Reports</button>
     </div>
-    <button id="receipt-history-btn" class="rbtn" type="button">🧾&ensp;History</button>
+    <div class="rsp-row">
+      <button id="receipt-history-btn" class="rbtn" type="button">🧾&ensp;History</button>
+      <button id="receipt-share-btn" class="rbtn" type="button">🤝&ensp;Sharing</button>
+    </div>
     <div class="rsp-status-row">
       <span id="receipt-scan-status">&nbsp;</span>
       <img id="receipt-scan-thumb" alt="">
@@ -861,6 +908,10 @@
       <div class="rh-filters rh-cat-row">
         <select id="rh-cat" title="Filter by category"></select>
       </div>
+      <!-- Shared-view selector — appears only when someone shared with you -->
+      <div class="rh-filters rh-cat-row" id="rh-owner-row" style="display:none">
+        <label class="rh-field" style="flex:1 1 100%"><span>Viewing</span><select id="rh-owner"></select></label>
+      </div>
       <div class="rh-filters rh-filters-2">
         <label class="rh-chk"><input id="rh-sort-date" type="checkbox"> Sort by receipt date</label>
         <button id="rh-export" type="button">⬇️ Export .xlsx</button>
@@ -877,6 +928,10 @@
       <h3>Reports</h3>
       <div id="rp-periods">
         <button type="button" data-p="daily">Daily</button><button type="button" data-p="weekly">Weekly</button><button type="button" data-p="monthly" class="rp-on">Monthly</button><button type="button" data-p="biannual">Bi-annual</button><button type="button" data-p="annual">Annual</button>
+      </div>
+      <!-- Shared-view selector — appears only when someone shared with you -->
+      <div class="rp-filters" id="rp-owner-row" style="display:none">
+        <label class="rp-field"><span>Viewing</span><select id="rp-owner"></select></label>
       </div>
       <div class="rp-filters">
         <input id="rp-merchant" type="text" placeholder="Filter merchant…" autocomplete="off">
@@ -926,6 +981,32 @@
       <button id="rr-discard" type="button">Discard</button>
       <button id="rr-retry" type="button">Retry extraction</button>
       <span id="rr-status"></span>
+    </div>
+  </div>
+  <!-- Sharing card — grant/revoke access to my receipts and see who shared
+       with me. z-index 9 overlays every other receipts card. -->
+  <div id="receipt-share-card">
+    <div class="rh-head">
+      <button id="sc-close" type="button">✕</button>
+      <h3>Sharing</h3>
+    </div>
+    <div class="sc-section">
+      <h4>They can see my receipts</h4>
+      <div id="sc-granted"></div>
+      <div class="sc-form">
+        <input id="sc-email" type="email" placeholder="their.email@gmail.com" autocomplete="off">
+        <select id="sc-scope">
+          <option value="view">Can view</option>
+          <option value="edit">Can view &amp; edit</option>
+        </select>
+        <button id="sc-grant" type="button">Grant</button>
+      </div>
+      <div id="sc-status"></div>
+    </div>
+    <div class="sc-section">
+      <h4>Shared with me</h4>
+      <div id="sc-received"></div>
+      <div class="sc-hint">Pick a person under "Viewing" in History or Reports to browse what they shared.</div>
     </div>
   </div>
 <!-- ══════════════ -->
@@ -4692,6 +4773,7 @@
       var currentFileId = ''; // Drive file of the last upload — lets Retry extraction re-run without re-photographing
       var pendingForce = false; // set after a duplicate warning — next Save sends force=1
       var editingFromHistory = false; // review card opened from History "Edit" — save/discard returns to History
+      var editingOwner = ''; // owner email when editing a receipt shared with me ('' = my own)
 
       (function fillCategories() {
         var sel = document.getElementById('rr-category');
@@ -4871,7 +4953,8 @@
         setRrStatus('Saving…', true);
         setProgress(85);
         _gasPostBody({ action: 'saveReceipt', token: session.token, receiptId: currentReceiptId,
-          data: JSON.stringify(collectReview()), force: pendingForce ? '1' : '' })
+          data: JSON.stringify(collectReview()), force: pendingForce ? '1' : '',
+          owner: editingFromHistory ? editingOwner : '' })
           .then(function(r) {
             saveBtn.disabled = false;
             if (r && r.success) {
@@ -5148,12 +5231,16 @@
         // receipt's saved fields and line items. Saving rewrites the row and
         // LineItems (saveReceipt is idempotent by receipt ID), so lines can
         // be fixed or deleted without deleting/re-uploading the receipt.
+        // Shared view-only receipts get no edit affordance (server enforces
+        // it too — this just avoids a dead-end save attempt).
+        if (r.canEdit === false) return;
         var editBtn = document.createElement('button');
         editBtn.type = 'button'; editBtn.className = 'rh-edit';
         editBtn.textContent = '✏️ Edit receipt / line items';
         editBtn.addEventListener('click', function(ev) {
           ev.stopPropagation();
           editingFromHistory = true;
+          editingOwner = rhOwner(); // '' when browsing my own receipts
           histCard.style.display = 'none';
           openReviewCard(r.id, {
             merchant: r.merchant, address: r.address, date: r.date,
@@ -5164,6 +5251,12 @@
           setRrStatus('Editing saved receipt — fix or remove lines, then save', true);
         });
         box.appendChild(editBtn);
+      }
+
+      // Current "Viewing" owner in History ('' = my own receipts).
+      function rhOwner() {
+        var sel = document.getElementById('rh-owner');
+        return (sel && sel.value) || '';
       }
 
       function loadHistory() {
@@ -5177,7 +5270,8 @@
           to: document.getElementById('rh-to').value || '',
           cat: document.getElementById('rh-cat').value || '',
           max: '100',
-          sort: document.getElementById('rh-sort-date').checked ? 'date' : ''
+          sort: document.getElementById('rh-sort-date').checked ? 'date' : '',
+          owner: rhOwner()
         }).then(function(res) {
           if (!(res && res.success)) {
             histList.innerHTML = '<div id="rh-empty">Could not load (' + esc((res && res.error) || 'unknown') + ')</div>';
@@ -5204,6 +5298,8 @@
             var del = document.createElement('button');
             del.type = 'button'; del.className = 'rh-del'; del.textContent = '🗑';
             del.title = 'Delete this receipt';
+            // Deletion is never shared — hide the control on shared views.
+            if (rhOwner()) del.style.display = 'none';
             var armTimer = null;
             del.addEventListener('click', function(ev) {
               ev.stopPropagation();
@@ -5250,7 +5346,7 @@
               if (!open && !detail.dataset.loaded) {
                 detail.innerHTML = 'Loading…';
                 var s2 = loadSession();
-                _gasPost({ action: 'getReceiptDetail', token: s2.token || '', receiptId: rec.id })
+                _gasPost({ action: 'getReceiptDetail', token: s2.token || '', receiptId: rec.id, owner: rhOwner() })
                   .then(function(d) {
                     if (d && d.success) { renderDetail(detail, d); detail.dataset.loaded = '1'; }
                     else { detail.innerHTML = 'Could not load (' + esc((d && d.error) || 'unknown') + ')'; }
@@ -5271,7 +5367,10 @@
       document.getElementById('receipt-history-btn').addEventListener('click', function() {
         var showing = histCard.style.display === 'block';
         histCard.style.display = showing ? 'none' : 'block';
-        if (!showing) loadHistory();
+        if (!showing) {
+          loadHistory();
+          loadShares(); // populates the "Viewing" selector when grants exist
+        }
       });
       document.getElementById('rh-close').addEventListener('click', function() {
         histCard.style.display = 'none';
@@ -5543,7 +5642,9 @@
         if (!session.token) { body.innerHTML = '<div id="rp-empty">Sign in first</div>'; return; }
         body.innerHTML = '<div id="rp-empty">Loading…</div>';
         document.getElementById('rp-summary').innerHTML = '';
-        _gasPost({ action: 'reportReceipts', token: session.token, from: '', to: '' })
+        var rpOwnerSel = document.getElementById('rp-owner');
+        _gasPost({ action: 'reportReceipts', token: session.token, from: '', to: '',
+          owner: (rpOwnerSel && rpOwnerSel.value) || '' })
           .then(function(res) {
             if (!(res && res.success)) {
               body.innerHTML = '<div id="rp-empty">Could not load (' + esc((res && res.error) || 'unknown') + ')</div>';
@@ -5563,6 +5664,7 @@
         if (!showing) {
           _rpOpen = {}; // every group starts minimized on a fresh open
           loadReportData(); // fresh data on every open; filter changes stay local
+          loadShares(); // populates the "Viewing" selector when grants exist
         }
       });
       document.getElementById('rp-close').addEventListener('click', function() {
@@ -5616,7 +5718,12 @@
         _gasPost({ action: 'reportReceipts', token: session.token, from: '', to: '' })
           .then(function(res) {
             if (!(res && res.success)) return;
-            rpData = { receipts: res.receipts || [], lineItems: res.lineItems || [] };
+            // Warm the reports cache too — but never clobber it while the
+            // Reports card is open on someone else's shared data.
+            var mcOwnerSel = document.getElementById('rp-owner');
+            if (!(reportCard.style.display === 'block' && mcOwnerSel && mcOwnerSel.value)) {
+              rpData = { receipts: res.receipts || [], lineItems: res.lineItems || [] };
+            }
             var now = new Date();
             var ym = now.getFullYear() + '-' + ('0' + (now.getMonth() + 1)).slice(-2);
             var monthReceipts = rpData.receipts.filter(function(r) {
@@ -5663,6 +5770,132 @@
         if (loadSession().token) { clearInterval(_mcTimer); refreshMonthCard(); }
       }, 3000);
 
+      // ── Sharing ──────────────────────────────────────────────────────
+      // Grants live server-side (Shares tab). One listShares fetch fills the
+      // sharing card and the "Viewing" selectors in History and Reports.
+      var shareCard = document.getElementById('receipt-share-card');
+      var _sharesCache = null;
+
+      function refreshShareSelectors() {
+        var received = (_sharesCache && _sharesCache.received) || [];
+        [['rh-owner', 'rh-owner-row'], ['rp-owner', 'rp-owner-row']].forEach(function(pair) {
+          var sel = document.getElementById(pair[0]);
+          var row = document.getElementById(pair[1]);
+          if (!sel) return;
+          var cur = sel.value;
+          sel.innerHTML = '';
+          var mine = document.createElement('option');
+          mine.value = ''; mine.textContent = 'My receipts';
+          sel.appendChild(mine);
+          received.forEach(function(s) {
+            var o = document.createElement('option');
+            o.value = s.email;
+            o.textContent = s.email + (s.scope === 'edit' ? ' (can edit)' : ' (view only)');
+            sel.appendChild(o);
+          });
+          sel.value = received.some(function(s) { return s.email === cur; }) ? cur : '';
+          if (row) row.style.display = received.length ? '' : 'none';
+        });
+      }
+
+      function loadShares(cb) {
+        var session = loadSession();
+        if (!session.token) { if (cb) cb(null); return; }
+        _gasPost({ action: 'listShares', token: session.token })
+          .then(function(res) {
+            if (res && res.success) _sharesCache = res;
+            refreshShareSelectors();
+            if (cb) cb(res);
+          })
+          .catch(function() { if (cb) cb(null); });
+      }
+
+      function setScStatus(msg, ok) {
+        var el = document.getElementById('sc-status');
+        if (el) { el.textContent = msg; el.style.color = ok ? '#3f6f42' : '#a8402e'; }
+      }
+
+      function renderShareCard() {
+        var gList = document.getElementById('sc-granted');
+        var rList = document.getElementById('sc-received');
+        var granted = (_sharesCache && _sharesCache.granted) || [];
+        var received = (_sharesCache && _sharesCache.received) || [];
+        gList.innerHTML = granted.length ? '' : '<div class="sc-empty">No one can see your receipts yet</div>';
+        granted.forEach(function(s) {
+          var row = document.createElement('div');
+          row.className = 'sc-row';
+          row.innerHTML = '<span class="sc-mail">' + esc(s.email) + '</span>'
+            + '<span class="sc-scope">' + (s.scope === 'edit' ? 'can view & edit' : 'can view') + '</span>';
+          var rv = document.createElement('button');
+          rv.type = 'button'; rv.className = 'sc-revoke'; rv.textContent = 'Revoke';
+          rv.addEventListener('click', function() {
+            rv.disabled = true;
+            var session = loadSession();
+            _gasPost({ action: 'removeShare', token: session.token || '', grantee: s.email })
+              .then(function(res) {
+                if (res && res.success) { setScStatus('Access revoked for ' + s.email, true); loadShares(renderShareCard); }
+                else { rv.disabled = false; setScStatus('Revoke failed (' + ((res && res.error) || 'unknown') + ')', false); }
+              })
+              .catch(function(err) { rv.disabled = false; setScStatus('Revoke failed (' + String((err && err.message) || err) + ')', false); });
+          });
+          row.appendChild(rv);
+          gList.appendChild(row);
+        });
+        rList.innerHTML = received.length ? '' : '<div class="sc-empty">Nobody has shared their receipts with you yet</div>';
+        received.forEach(function(s) {
+          var row = document.createElement('div');
+          row.className = 'sc-row';
+          row.innerHTML = '<span class="sc-mail">' + esc(s.email) + '</span>'
+            + '<span class="sc-scope">' + (s.scope === 'edit' ? 'you can view & edit' : 'you can view') + '</span>';
+          rList.appendChild(row);
+        });
+      }
+
+      document.getElementById('receipt-share-btn').addEventListener('click', function() {
+        var showing = shareCard.style.display === 'block';
+        shareCard.style.display = showing ? 'none' : 'block';
+        if (!showing) {
+          document.getElementById('sc-granted').innerHTML = '<div class="sc-empty">Loading…</div>';
+          document.getElementById('sc-received').innerHTML = '';
+          setScStatus('', true);
+          loadShares(renderShareCard);
+        }
+      });
+      document.getElementById('sc-close').addEventListener('click', function() {
+        shareCard.style.display = 'none';
+      });
+      document.getElementById('sc-grant').addEventListener('click', function() {
+        var emailEl = document.getElementById('sc-email');
+        var email = (emailEl.value || '').trim();
+        if (!email) { setScStatus('Enter their email address first', false); return; }
+        var grantBtn = document.getElementById('sc-grant');
+        grantBtn.disabled = true;
+        setScStatus('Granting…', true);
+        var session = loadSession();
+        _gasPost({ action: 'addShare', token: session.token || '', grantee: email,
+          scope: document.getElementById('sc-scope').value || 'view' })
+          .then(function(res) {
+            grantBtn.disabled = false;
+            if (res && res.success) {
+              emailEl.value = '';
+              setScStatus((res.updated ? 'Updated — ' : 'Granted — ') + res.email + ' '
+                + (res.scope === 'edit' ? 'can view & edit' : 'can view') + ' your receipts', true);
+              loadShares(renderShareCard);
+            } else {
+              var msgs = { bad_email: 'That does not look like an email address',
+                cannot_share_with_self: "That's you — no grant needed",
+                share_limit: 'Share limit reached (20 people)' };
+              setScStatus(msgs[(res && res.error)] || ('Grant failed (' + ((res && res.error) || 'unknown') + ')'), false);
+            }
+          })
+          .catch(function(err) {
+            grantBtn.disabled = false;
+            setScStatus('Grant failed (' + String((err && err.message) || err) + ')', false);
+          });
+      });
+      document.getElementById('rh-owner').addEventListener('change', loadHistory);
+      document.getElementById('rp-owner').addEventListener('change', loadReportData);
+
       // PROJECT: extend the template's HTML layer toggle so the Paper Ledger
       // backdrop and receipts cards also hide, revealing the GAS admin UI.
       (function() {
@@ -5673,7 +5906,7 @@
           _orig();
           _rcptHidden = !_rcptHidden;
           ['receipt-backdrop', 'receipt-scan-panel', 'receipt-review-card',
-           'receipt-history-card', 'receipt-report-card'].forEach(function(id) {
+           'receipt-history-card', 'receipt-report-card', 'receipt-share-card'].forEach(function(id) {
             var el = document.getElementById(id);
             if (el) el.classList.toggle('html-layer-hidden', _rcptHidden);
           });
@@ -5710,7 +5943,8 @@
           q: document.getElementById('rh-search').value || '',
           from: document.getElementById('rh-from').value || '',
           to: document.getElementById('rh-to').value || '',
-          cat: document.getElementById('rh-cat').value || ''
+          cat: document.getElementById('rh-cat').value || '',
+          owner: rhOwner()
         }).then(function(res) {
           if (!(res && res.success && res.base64)) {
             done();

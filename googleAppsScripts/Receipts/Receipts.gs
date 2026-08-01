@@ -1,4 +1,4 @@
-var VERSION = "v01.10g";
+var VERSION = "v01.11g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -322,6 +322,7 @@ var DRIVE_FOLDER_ID = "1DHfXwzo0qXI_2H0Q2dDLKGn7EOtguI0A";
 // one row per receipt, one row per line item (joined on Receipt ID).
 var RECEIPTS_TAB = "Receipts";
 var LINEITEMS_TAB = "LineItems";
+var SHARES_TAB = "Shares";
 // Multi-user data isolation — the "Uploaded By" column is the owner of each
 // receipt; every read/write op is scoped to the signed-in user's own rows.
 // Rows created before ownership scoping (blank Uploaded By) are backfilled
@@ -403,6 +404,9 @@ function ensureReceiptTabs_() {
     ]),
     lineItems: ensure(LINEITEMS_TAB, [
       "Receipt ID", "Line #", "Description", "Qty", "Unit Price", "Amount", "Category"
+    ]),
+    shares: ensure(SHARES_TAB, [
+      "Owner", "Grantee", "Scope", "Created At"
     ])
   };
   // In-place header upgrades for sheets created before these columns existed.
@@ -556,11 +560,13 @@ function extractReceipt(sessionToken, fileId) {
  * Receipt Date may come back from Sheets as a Date object or the original
  * string — both are normalized.
  */
-function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded, sortBy, category) {
+function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded, sortBy, category, forOwner) {
   var user = validateSessionForData(sessionToken, 'listReceipts');
   migrateReceiptIds_(); // one-time data migration; no-op after first run
   backfillReceiptOwners_(); // one-time owner backfill; no-op after first run
-  var ownerEmail = String((user && user.email) || '').toLowerCase();
+  var scopeRes = resolveOwnerScope_(user, forOwner, false);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var ownerEmail = scopeRes.owner;
   var sh = ensureReceiptTabs_().receipts;
   var last = sh.getLastRow();
   if (last < 2) return { success: true, receipts: [] };
@@ -614,9 +620,11 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
 /**
  * History detail — one receipt's full fields plus its LineItems rows.
  */
-function getReceiptDetail(sessionToken, receiptId) {
+function getReceiptDetail(sessionToken, receiptId, forOwner) {
   var user = validateSessionForData(sessionToken, 'getReceiptDetail');
-  var ownerEmail = String((user && user.email) || '').toLowerCase();
+  var scopeRes = resolveOwnerScope_(user, forOwner, false);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var ownerEmail = scopeRes.owner;
   var rid = String(receiptId || '').trim();
   if (!rid) return { success: false, error: 'no_receipt_id' };
   var tabs = ensureReceiptTabs_();
@@ -651,6 +659,10 @@ function getReceiptDetail(sessionToken, receiptId) {
     }
   }
   if (!receipt) return { success: false, error: 'receipt_not_found' };
+  // The client uses canEdit to show/hide the edit affordance: own receipts
+  // and 'edit'-scope shares are editable, 'view'-scope shares are not.
+  receipt.owner = ownerEmail;
+  receipt.canEdit = (scopeRes.scope === 'own' || scopeRes.scope === 'edit');
   var items = [];
   var li = tabs.lineItems;
   var liLast = li.getLastRow();
@@ -678,10 +690,12 @@ function getReceiptDetail(sessionToken, receiptId) {
  * change is instant (no server round-trip per keystroke). Capped at 2000
  * receipts — far above personal-use volume, guards the JSON payload size.
  */
-function reportReceipts(sessionToken, dateFrom, dateTo) {
+function reportReceipts(sessionToken, dateFrom, dateTo, forOwner) {
   var user = validateSessionForData(sessionToken, 'reportReceipts');
   backfillReceiptOwners_(); // one-time owner backfill; no-op after first run
-  var ownerEmail = String((user && user.email) || '').toLowerCase();
+  var scopeRes = resolveOwnerScope_(user, forOwner, false);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var ownerEmail = scopeRes.owner;
   var tabs = ensureReceiptTabs_();
   var sh = tabs.receipts;
   var last = sh.getLastRow();
@@ -790,10 +804,12 @@ function deleteReceipt(sessionToken, receiptId) {
  * real .xlsx via the Drive export endpoint, trashes the temp file, and
  * returns the workbook base64-encoded for the browser to download.
  */
-function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category) {
+function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner) {
   var user = validateSessionForData(sessionToken, 'exportReceipts');
-  var ownerEmail = String((user && user.email) || '').toLowerCase();
-  var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded, '', category);
+  var scopeRes = resolveOwnerScope_(user, forOwner, false);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var ownerEmail = scopeRes.owner;
+  var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded, '', category, forOwner);
   if (!listed.success) return listed;
   var receipts = listed.receipts || [];
   if (!receipts.length) return { success: false, error: 'no_receipts_match' };
@@ -918,9 +934,12 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
  * replaces its LineItems rows. The raw extraction JSON is kept in the row for
  * audit. Idempotent: re-saving the same receipt overwrites cleanly.
  */
-function saveReceipt(sessionToken, receiptId, dataJson, force) {
+function saveReceipt(sessionToken, receiptId, dataJson, force, forOwner) {
   var user = validateSessionForData(sessionToken, 'saveReceipt');
-  var ownerEmail = String((user && user.email) || '').toLowerCase();
+  // Saving someone else's receipt requires an 'edit' grant from them.
+  var scopeRes = resolveOwnerScope_(user, forOwner, true);
+  if (scopeRes.error) return { success: false, error: scopeRes.error };
+  var ownerEmail = scopeRes.owner;
   var rid = String(receiptId || '').trim();
   if (!rid) return { success: false, error: 'no_receipt_id' };
   var data;
@@ -1173,6 +1192,116 @@ function backfillReceiptOwners_() {
   } finally {
     lock.releaseLock();
   }
+}
+
+/**
+ * Sharing — the Shares tab holds one row per grant (Owner → Grantee, scope
+ * "view" or "edit"). A grantee can browse the owner's receipts, history,
+ * reports, and exports; an "edit" grant additionally allows re-saving the
+ * owner's receipts (fixing fields / line items). Deletion is never shared —
+ * it stays owner-only.
+ */
+
+// Latest grant scope from owner → grantee ('', 'view', or 'edit').
+function getShareScope_(ownerEmail, granteeEmail) {
+  var sh = ensureReceiptTabs_().shares;
+  var last = sh.getLastRow();
+  if (last < 2) return '';
+  var vals = sh.getRange(2, 1, last - 1, 3).getValues();
+  var scope = '';
+  for (var i = 0; i < vals.length; i++) {
+    if (String(vals[i][0] || '').toLowerCase() === ownerEmail
+        && String(vals[i][1] || '').toLowerCase() === granteeEmail) {
+      scope = String(vals[i][2] || 'view').toLowerCase();
+    }
+  }
+  if (!scope) return '';
+  return scope === 'edit' ? 'edit' : 'view';
+}
+
+/**
+ * Resolves which owner's data an op should target. Empty/self forOwner →
+ * the session user's own data. Another email → requires a grant from that
+ * owner to the session user (and an 'edit' grant when needEdit). Returns
+ * { owner, scope } or { error }.
+ */
+function resolveOwnerScope_(user, forOwner, needEdit) {
+  var me = String((user && user.email) || '').toLowerCase();
+  var target = String(forOwner || '').trim().toLowerCase();
+  if (!target || target === me) return { owner: me, scope: 'own' };
+  var scope = getShareScope_(target, me);
+  if (!scope) return { error: 'not_shared' };
+  if (needEdit && scope !== 'edit') return { error: 'view_only' };
+  return { owner: target, scope: scope };
+}
+
+// Grants I've made (granted) + grants made to me (received).
+function listShares(sessionToken) {
+  var user = validateSessionForData(sessionToken, 'listShares');
+  var me = String((user && user.email) || '').toLowerCase();
+  var sh = ensureReceiptTabs_().shares;
+  var last = sh.getLastRow();
+  var granted = [], received = [];
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 3).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      var o = String(vals[i][0] || '').toLowerCase();
+      var g = String(vals[i][1] || '').toLowerCase();
+      var sc = String(vals[i][2] || 'view').toLowerCase() === 'edit' ? 'edit' : 'view';
+      if (o === me) granted.push({ email: g, scope: sc });
+      else if (g === me) received.push({ email: o, scope: sc });
+    }
+  }
+  return { success: true, granted: granted, received: received };
+}
+
+// Grant (or update) access to my receipts. Upsert — one row per pair.
+function addShare(sessionToken, granteeEmail, scope) {
+  var user = validateSessionForData(sessionToken, 'addShare');
+  var me = String((user && user.email) || '').toLowerCase();
+  var g = String(granteeEmail || '').trim().toLowerCase();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g)) return { success: false, error: 'bad_email' };
+  if (g === me) return { success: false, error: 'cannot_share_with_self' };
+  var sc = String(scope || 'view').toLowerCase() === 'edit' ? 'edit' : 'view';
+  var sh = ensureReceiptTabs_().shares;
+  var last = sh.getLastRow();
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 2).getValues();
+    var count = 0;
+    for (var i = 0; i < vals.length; i++) {
+      if (String(vals[i][0] || '').toLowerCase() !== me) continue;
+      count++;
+      if (String(vals[i][1] || '').toLowerCase() === g) {
+        sh.getRange(i + 2, 3).setValue(sc);
+        return { success: true, email: g, scope: sc, updated: true };
+      }
+    }
+    if (count >= 20) return { success: false, error: 'share_limit' };
+  }
+  sh.appendRow([me, g, sc, new Date()]);
+  return { success: true, email: g, scope: sc };
+}
+
+// Revoke a grant I made.
+function removeShare(sessionToken, granteeEmail) {
+  var user = validateSessionForData(sessionToken, 'removeShare');
+  var me = String((user && user.email) || '').toLowerCase();
+  var g = String(granteeEmail || '').trim().toLowerCase();
+  if (!g) return { success: false, error: 'no_email' };
+  var sh = ensureReceiptTabs_().shares;
+  var last = sh.getLastRow();
+  var removed = 0;
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 2).getValues();
+    for (var i = vals.length - 1; i >= 0; i--) {
+      if (String(vals[i][0] || '').toLowerCase() === me
+          && String(vals[i][1] || '').toLowerCase() === g) {
+        sh.deleteRow(i + 2);
+        removed++;
+      }
+    }
+  }
+  return { success: true, removed: removed };
 }
 
 // ══════════════
@@ -1722,7 +1851,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.token) || "",
         (e && e.parameter && e.parameter.receiptId) || "",
         (e && e.parameter && e.parameter.data) || "",
-        (e && e.parameter && e.parameter.force) || "");
+        (e && e.parameter && e.parameter.force) || "",
+        (e && e.parameter && e.parameter.owner) || "");
     } catch (svErr) {
       svResult = { success: false, error: String((svErr && svErr.message) || svErr) };
     }
@@ -1742,7 +1872,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.max) || "",
         (e && e.parameter && e.parameter.uploaded) || "",
         (e && e.parameter && e.parameter.sort) || "",
-        (e && e.parameter && e.parameter.cat) || "");
+        (e && e.parameter && e.parameter.cat) || "",
+        (e && e.parameter && e.parameter.owner) || "");
     } catch (lrErr) {
       lrResult = { success: false, error: String((lrErr && lrErr.message) || lrErr) };
     }
@@ -1756,7 +1887,8 @@ function doPost(e) {
     try {
       rdResult = getReceiptDetail(
         (e && e.parameter && e.parameter.token) || "",
-        (e && e.parameter && e.parameter.receiptId) || "");
+        (e && e.parameter && e.parameter.receiptId) || "",
+        (e && e.parameter && e.parameter.owner) || "");
     } catch (rdErr) {
       rdResult = { success: false, error: String((rdErr && rdErr.message) || rdErr) };
     }
@@ -1789,7 +1921,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.from) || "",
         (e && e.parameter && e.parameter.to) || "",
         (e && e.parameter && e.parameter.uploaded) || "",
-        (e && e.parameter && e.parameter.cat) || "");
+        (e && e.parameter && e.parameter.cat) || "",
+        (e && e.parameter && e.parameter.owner) || "");
     } catch (xpErr) {
       xpResult = { success: false, error: String((xpErr && xpErr.message) || xpErr) };
     }
@@ -1804,11 +1937,30 @@ function doPost(e) {
       rpResult = reportReceipts(
         (e && e.parameter && e.parameter.token) || "",
         (e && e.parameter && e.parameter.from) || "",
-        (e && e.parameter && e.parameter.to) || "");
+        (e && e.parameter && e.parameter.to) || "",
+        (e && e.parameter && e.parameter.owner) || "");
     } catch (rpErr) {
       rpResult = { success: false, error: String((rpErr && rpErr.message) || rpErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(rpResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts sharing — list/grant/revoke access to my receipts.
+  if (action === "listShares" || action === "addShare" || action === "removeShare") {
+    var shResult;
+    try {
+      var shToken = (e && e.parameter && e.parameter.token) || "";
+      if (action === "listShares") shResult = listShares(shToken);
+      else if (action === "addShare") shResult = addShare(shToken,
+        (e && e.parameter && e.parameter.grantee) || "",
+        (e && e.parameter && e.parameter.scope) || "");
+      else shResult = removeShare(shToken,
+        (e && e.parameter && e.parameter.grantee) || "");
+    } catch (shErr) {
+      shResult = { success: false, error: String((shErr && shErr.message) || shErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(shResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -3089,10 +3241,13 @@ function doGet(e) {
           (e && e.parameter && e.parameter.max) || '',
           (e && e.parameter && e.parameter.uploaded) || '',
           (e && e.parameter && e.parameter.sort) || '',
-          (e && e.parameter && e.parameter.cat) || '');
+          (e && e.parameter && e.parameter.cat) || '',
+          (e && e.parameter && e.parameter.owner) || '');
       } else if (apiOp === 'getReceiptDetail') {
         // PROJECT: Receipts history detail (GET fallback)
-        apiResult = getReceiptDetail(apiToken, (e && e.parameter && e.parameter.receiptId) || '');
+        apiResult = getReceiptDetail(apiToken,
+          (e && e.parameter && e.parameter.receiptId) || '',
+          (e && e.parameter && e.parameter.owner) || '');
       } else if (apiOp === 'deleteReceipt') {
         // PROJECT: Receipts record deletion (GET fallback)
         apiResult = deleteReceipt(apiToken, (e && e.parameter && e.parameter.receiptId) || '');
@@ -3103,12 +3258,25 @@ function doGet(e) {
           (e && e.parameter && e.parameter.from) || '',
           (e && e.parameter && e.parameter.to) || '',
           (e && e.parameter && e.parameter.uploaded) || '',
-          (e && e.parameter && e.parameter.cat) || '');
+          (e && e.parameter && e.parameter.cat) || '',
+          (e && e.parameter && e.parameter.owner) || '');
       } else if (apiOp === 'reportReceipts') {
         // PROJECT: Receipts reports dataset (GET fallback)
         apiResult = reportReceipts(apiToken,
           (e && e.parameter && e.parameter.from) || '',
-          (e && e.parameter && e.parameter.to) || '');
+          (e && e.parameter && e.parameter.to) || '',
+          (e && e.parameter && e.parameter.owner) || '');
+      } else if (apiOp === 'listShares') {
+        // PROJECT: Receipts sharing — grants list (GET fallback)
+        apiResult = listShares(apiToken);
+      } else if (apiOp === 'addShare') {
+        // PROJECT: Receipts sharing — grant/update (GET fallback)
+        apiResult = addShare(apiToken,
+          (e && e.parameter && e.parameter.grantee) || '',
+          (e && e.parameter && e.parameter.scope) || '');
+      } else if (apiOp === 'removeShare') {
+        // PROJECT: Receipts sharing — revoke (GET fallback)
+        apiResult = removeShare(apiToken, (e && e.parameter && e.parameter.grantee) || '');
       } else {
         apiResult = { error: 'unknown_op' };
       }

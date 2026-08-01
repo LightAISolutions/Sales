@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16w] — 2026-08-01 07:51:32 PM EST — v01.34r
+
+### Added
+- Sharing — a new button on the home screen lets you give another user access to your receipts (view only, or view & edit) and take it back anytime; you can also see who shared with you
+- "Viewing" picker in History and Reports — switch between your own receipts and those shared with you
+- Sensible guardrails on shared views: only the owner can delete, and editing is possible only when the owner allowed it
 
 ## [v01.15w] — 2026-08-01 07:04:39 PM EST — v01.32r
 
