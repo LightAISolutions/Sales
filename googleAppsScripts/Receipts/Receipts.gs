@@ -1,4 +1,4 @@
-var VERSION = "v01.05g";
+var VERSION = "v01.06g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -332,9 +332,36 @@ var LINEITEMS_TAB = "LineItems";
 var GEMINI_MODEL = "gemini-3.6-flash";
 var GEMINI_FALLBACK_MODEL = "gemini-3.5-flash";
 
-// Spending categories offered by extraction and the review screen.
+// Receipt-level spending categories offered by extraction and the review
+// screen — aligned with the category style used by Expensify / Smart Receipts
+// style expense apps (merchant-level buckets).
 var RECEIPT_CATEGORIES = ["Groceries", "Dining", "Transport", "Health",
   "Shopping", "Entertainment", "Utilities", "Travel", "Other"];
+
+// Per-line-item categories assigned automatically during extraction. The
+// reference apps stop at receipt-level buckets, so item level uses standard
+// supermarket department taxonomy — granular enough to cover any grocery
+// store item, still meaningful for non-grocery receipts via the tail entries.
+var ITEM_CATEGORIES = ["Produce", "Meat & Seafood", "Dairy & Eggs", "Bakery",
+  "Deli & Prepared", "Frozen", "Pantry", "Snacks & Candy", "Beverages",
+  "Alcohol", "Household", "Personal Care", "Baby", "Pet", "Non-Grocery", "Other"];
+
+/**
+ * Human-readable receipt ID: Store_Name-YYYYMMDD (+ -2/-3… on collision).
+ * Assigned at save time — merchant and date aren't known at upload.
+ */
+function makeReceiptId_(merchant, dateStr, fallbackDate, takenIds) {
+  var name = String(merchant || '').replace(/&/g, ' and ')
+    .replace(/[^A-Za-z0-9]+/g, '_').replace(/^_+|_+$/g, '').substring(0, 40) || 'Receipt';
+  var ymd = String(dateStr || '').replace(/-/g, '');
+  if (!/^\d{8}$/.test(ymd)) {
+    ymd = Utilities.formatDate(fallbackDate instanceof Date ? fallbackDate : new Date(), 'UTC', 'yyyyMMdd');
+  }
+  var base = name + '-' + ymd;
+  var id = base, n = 2;
+  while (takenIds && takenIds[id]) { id = base + '-' + n; n++; }
+  return id;
+}
 
 /**
  * Idempotent tab bootstrap — creates the Receipts and LineItems tabs with
@@ -351,16 +378,24 @@ function ensureReceiptTabs_() {
     }
     return sh;
   }
-  return {
+  var tabs = {
     receipts: ensure(RECEIPTS_TAB, [
       "Receipt ID", "Uploaded At", "Uploaded By", "Receipt Date", "Merchant",
       "Currency", "Subtotal", "Tax", "Total", "Category", "Image Link",
-      "Status", "Raw Extraction"
+      "Status", "Raw Extraction", "Store Address"
     ]),
     lineItems: ensure(LINEITEMS_TAB, [
-      "Receipt ID", "Line #", "Description", "Qty", "Unit Price", "Amount"
+      "Receipt ID", "Line #", "Description", "Qty", "Unit Price", "Amount", "Category"
     ])
   };
+  // In-place header upgrades for sheets created before these columns existed.
+  if (String(tabs.receipts.getRange(1, 14).getValue()) !== 'Store Address') {
+    tabs.receipts.getRange(1, 14).setValue('Store Address');
+  }
+  if (String(tabs.lineItems.getRange(1, 7).getValue()) !== 'Category') {
+    tabs.lineItems.getRange(1, 7).setValue('Category');
+  }
+  return tabs;
 }
 
 /**
@@ -427,6 +462,7 @@ function extractReceipt(sessionToken, fileId) {
     type: "object",
     properties: {
       merchant: { type: "string" },
+      address: { type: "string", description: "Store street address as printed on the receipt; empty string if absent" },
       date: { type: "string", description: "Receipt date as YYYY-MM-DD; empty string if unreadable" },
       currency: { type: "string", description: "3-letter ISO code, e.g. USD" },
       subtotal: { type: "number" },
@@ -441,9 +477,10 @@ function extractReceipt(sessionToken, fileId) {
             description: { type: "string" },
             qty: { type: "number" },
             unitPrice: { type: "number" },
-            amount: { type: "number" }
+            amount: { type: "number" },
+            category: { type: "string", enum: ITEM_CATEGORIES }
           },
-          required: ["description", "amount"]
+          required: ["description", "amount", "category"]
         }
       }
     },
@@ -452,7 +489,7 @@ function extractReceipt(sessionToken, fileId) {
   var payload = {
     contents: [{
       parts: [
-        { text: "Extract the data from this receipt photo. Use an empty string or 0 for unreadable fields. Line items are the purchased products/services only — do not include subtotal, tax, or total rows as line items." },
+        { text: "Extract the data from this receipt photo. Use an empty string or 0 for unreadable fields. Line items are the purchased products/services only — do not include subtotal, tax, or total rows as line items. Assign each line item the best-fitting category from the schema's enum (supermarket departments); use Non-Grocery for items sold outside grocery contexts and Other only when nothing fits." },
         { inline_data: { mime_type: blob.getContentType() || 'image/jpeg', data: Utilities.base64Encode(blob.getBytes()) } }
       ]
     }],
@@ -502,8 +539,9 @@ function extractReceipt(sessionToken, fileId) {
  * Receipt Date may come back from Sheets as a Date object or the original
  * string — both are normalized.
  */
-function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded) {
+function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded, sortBy) {
   validateSessionForData(sessionToken, 'listReceipts');
+  migrateReceiptIds_(); // one-time ID-format migration; no-op after first run
   var sh = ensureReceiptTabs_().receipts;
   var last = sh.getLastRow();
   if (last < 2) return { success: true, receipts: [] };
@@ -537,6 +575,16 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
       status: String(r[11] || '')
     });
   }
+  // Default order is upload recency (bottom-up append order). sortBy=date
+  // re-sorts by the printed receipt date, newest first; undated rows sink.
+  if (String(sortBy || '') === 'date') {
+    out.sort(function(a, b) {
+      if (a.date === b.date) return 0;
+      if (!a.date) return 1;
+      if (!b.date) return -1;
+      return a.date < b.date ? 1 : -1;
+    });
+  }
   return { success: true, receipts: out };
 }
 
@@ -552,7 +600,7 @@ function getReceiptDetail(sessionToken, receiptId) {
   var last = sh.getLastRow();
   var receipt = null;
   if (last > 1) {
-    var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+    var vals = sh.getRange(2, 1, last - 1, 14).getValues();
     for (var i = 0; i < vals.length; i++) {
       if (String(vals[i][0]) === rid) {
         var r = vals[i];
@@ -568,7 +616,8 @@ function getReceiptDetail(sessionToken, receiptId) {
           total: (r[8] === '' || r[8] === null) ? '' : r[8],
           category: String(r[9] || ''),
           imageUrl: String(r[10] || ''),
-          status: String(r[11] || '')
+          status: String(r[11] || ''),
+          address: String(r[13] || '')
         };
         break;
       }
@@ -579,14 +628,15 @@ function getReceiptDetail(sessionToken, receiptId) {
   var li = tabs.lineItems;
   var liLast = li.getLastRow();
   if (liLast > 1) {
-    var liVals = li.getRange(2, 1, liLast - 1, 6).getValues();
+    var liVals = li.getRange(2, 1, liLast - 1, 7).getValues();
     for (var k = 0; k < liVals.length; k++) {
       if (String(liVals[k][0]) === rid) {
         items.push({
           description: String(liVals[k][2] || ''),
           qty: (liVals[k][3] === '' || liVals[k][3] === null) ? '' : liVals[k][3],
           unitPrice: (liVals[k][4] === '' || liVals[k][4] === null) ? '' : liVals[k][4],
-          amount: (liVals[k][5] === '' || liVals[k][5] === null) ? '' : liVals[k][5]
+          amount: (liVals[k][5] === '' || liVals[k][5] === null) ? '' : liVals[k][5],
+          category: String(liVals[k][6] || '')
         });
       }
     }
@@ -640,6 +690,7 @@ function deleteReceipt(sessionToken, receiptId) {
     try { DriveApp.getFileById(m[1]).setTrashed(true); photoTrashed = true; }
     catch (tErr) { /* photo already gone or inaccessible — record deletion still succeeded */ }
   }
+  rebuildMonthlySummary_(tabs);
   return { success: true, receiptId: rid, lineItemsDeleted: itemsDeleted, photoTrashed: photoTrashed };
 }
 
@@ -663,41 +714,84 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded) 
   try {
     var rSheet = temp.getSheets()[0];
     rSheet.setName('Receipts');
-    var rRows = [['Receipt ID', 'Date', 'Merchant', 'Currency', 'Subtotal', 'Tax',
-      'Total', 'Category', 'Status', 'Image Link', 'Uploaded At']];
+    var rRows = [['Receipt ID', 'Date', 'Merchant', 'Store Address', 'Currency',
+      'Subtotal', 'Tax', 'Total', 'Category', 'Status', 'Image Link', 'Uploaded At']];
     receipts.forEach(function(rc) {
-      rRows.push([rc.id, rc.date, rc.merchant, rc.currency,
+      rRows.push([rc.id, rc.date, rc.merchant, '', rc.currency,
         '', '', '', rc.category, rc.status, rc.imageUrl, rc.uploadedAt]);
     });
-    // Subtotal/Tax/Total pulled from the sheet in one read (list payload only carries total).
+    // Subtotal/Tax/Total/Address pulled from the sheet in one read.
     var src = ensureReceiptTabs_();
+    var byId = {};
     var srcLast = src.receipts.getLastRow();
     if (srcLast > 1) {
-      var srcVals = src.receipts.getRange(2, 1, srcLast - 1, 12).getValues();
-      var byId = {};
+      var srcVals = src.receipts.getRange(2, 1, srcLast - 1, 14).getValues();
       srcVals.forEach(function(v) { byId[String(v[0])] = v; });
       for (var x = 1; x < rRows.length; x++) {
         var srcRow = byId[rRows[x][0]];
         if (srcRow) {
-          rRows[x][4] = (srcRow[6] === '' || srcRow[6] === null) ? '' : srcRow[6];
-          rRows[x][5] = (srcRow[7] === '' || srcRow[7] === null) ? '' : srcRow[7];
-          rRows[x][6] = (srcRow[8] === '' || srcRow[8] === null) ? '' : srcRow[8];
+          rRows[x][3] = String(srcRow[13] || '');
+          rRows[x][5] = (srcRow[6] === '' || srcRow[6] === null) ? '' : srcRow[6];
+          rRows[x][6] = (srcRow[7] === '' || srcRow[7] === null) ? '' : srcRow[7];
+          rRows[x][7] = (srcRow[8] === '' || srcRow[8] === null) ? '' : srcRow[8];
         }
       }
     }
     rSheet.getRange(1, 1, rRows.length, rRows[0].length).setValues(rRows);
     rSheet.setFrozenRows(1);
+    rSheet.getRange(1, 1, 1, rRows[0].length).setFontWeight('bold');
 
+    // LineItems: grouped per receipt for readability — a bold banded header
+    // row per receipt (store · date · total), item rows beneath, a blank
+    // separator row, and alternating band colors per receipt block. The
+    // Receipt ID column is still populated on every item row so the sheet
+    // remains filterable/pivotable.
     var liSheet = temp.insertSheet('LineItems');
-    var liRows = [['Receipt ID', 'Line #', 'Description', 'Qty', 'Unit Price', 'Amount']];
+    var liHeader = ['Receipt ID', 'Line #', 'Description', 'Qty', 'Unit Price', 'Amount', 'Category'];
+    var liRows = [liHeader];
+    var bandRanges = []; // {row (1-based in sheet), count, color}
+    var BAND_COLORS = ['#dbe8f8', '#e6f2e2'];
+    var liByReceipt = {};
     var liSrc = src.lineItems;
     var liLast = liSrc.getLastRow();
     if (liLast > 1) {
-      var liVals = liSrc.getRange(2, 1, liLast - 1, 6).getValues();
-      liVals.forEach(function(v) { if (ids[String(v[0])]) liRows.push(v); });
+      liSrc.getRange(2, 1, liLast - 1, 7).getValues().forEach(function(v) {
+        var vid = String(v[0]);
+        if (!ids[vid]) return;
+        (liByReceipt[vid] = liByReceipt[vid] || []).push(v);
+      });
     }
-    liSheet.getRange(1, 1, liRows.length, 6).setValues(liRows);
+    var band = 0, liTotal = 0;
+    receipts.forEach(function(rc) {
+      var headerRow = liRows.length + 1;
+      liRows.push([rc.id,
+        '— ' + (rc.merchant || '(no merchant)') + ' · ' + (rc.date || 'no date')
+        + ' · Total ' + (rc.total === '' ? '—' : rc.total) + ' ' + (rc.currency || ''),
+        '', '', '', '', '']);
+      var items = liByReceipt[rc.id] || [];
+      items.forEach(function(v) { liRows.push(v); liTotal++; });
+      bandRanges.push({ row: headerRow, count: items.length, color: BAND_COLORS[band % 2] });
+      liRows.push(['', '', '', '', '', '', '']);
+      band++;
+    });
+    liSheet.getRange(1, 1, liRows.length, 7).setValues(liRows);
     liSheet.setFrozenRows(1);
+    liSheet.getRange(1, 1, 1, 7).setFontWeight('bold');
+    bandRanges.forEach(function(b) {
+      liSheet.getRange(b.row, 1, 1, 7).setFontWeight('bold').setBackground(b.color);
+      if (b.count) liSheet.getRange(b.row + 1, 1, b.count, 7).setBackground(b.color);
+    });
+
+    // Monthly Summary — mirror the live tab (rebuild first so it's current).
+    var msLive = rebuildMonthlySummary_(src);
+    var msLastRow = msLive.getLastRow(), msLastCol = msLive.getLastColumn();
+    if (msLastRow > 0 && msLastCol > 0) {
+      var msSheet = temp.insertSheet('Monthly Summary');
+      msSheet.getRange(1, 1, msLastRow, msLastCol)
+        .setValues(msLive.getRange(1, 1, msLastRow, msLastCol).getValues());
+      msSheet.setFrozenRows(1);
+      msSheet.getRange(1, 1, 1, msLastCol).setFontWeight('bold');
+    }
     SpreadsheetApp.flush();
 
     var xlsxResp = UrlFetchApp.fetch(
@@ -710,7 +804,7 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded) 
       success: true,
       fileName: 'receipts-export-' + stamp + '.xlsx',
       receipts: receipts.length,
-      lineItems: liRows.length - 1,
+      lineItems: liTotal,
       base64: Utilities.base64Encode(xlsxResp.getBlob().getBytes())
     };
   } finally {
@@ -723,7 +817,7 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded) 
  * replaces its LineItems rows. The raw extraction JSON is kept in the row for
  * audit. Idempotent: re-saving the same receipt overwrites cleanly.
  */
-function saveReceipt(sessionToken, receiptId, dataJson) {
+function saveReceipt(sessionToken, receiptId, dataJson, force) {
   validateSessionForData(sessionToken, 'saveReceipt');
   var rid = String(receiptId || '').trim();
   if (!rid) return { success: false, error: 'no_receipt_id' };
@@ -732,26 +826,76 @@ function saveReceipt(sessionToken, receiptId, dataJson) {
   catch (jErr) { return { success: false, error: 'bad_json' }; }
   var tabs = ensureReceiptTabs_();
   var sheet = tabs.receipts;
-  var ids = sheet.getRange(1, 1, Math.max(sheet.getLastRow(), 1), 1).getValues();
-  var rowIdx = -1;
-  for (var i = 1; i < ids.length; i++) {
-    if (String(ids[i][0]) === rid) { rowIdx = i + 1; break; }
+  var lastRow = Math.max(sheet.getLastRow(), 1);
+  var all = sheet.getRange(1, 1, lastRow, 14).getValues();
+  var rowIdx = -1, taken = {};
+  var num = function(v) { var n = parseFloat(v); return isNaN(n) ? '' : n; };
+  for (var i = 1; i < all.length; i++) {
+    if (String(all[i][0]) === rid) { rowIdx = i + 1; }
+    else { taken[String(all[i][0])] = true; }
   }
   if (rowIdx === -1) return { success: false, error: 'receipt_not_found' };
-  var num = function(v) { var n = parseFloat(v); return isNaN(n) ? '' : n; };
-  // Receipts columns: A Receipt ID … D Receipt Date, E Merchant, F Currency,
-  // G Subtotal, H Tax, I Total, J Category, K Image Link, L Status, M Raw Extraction
+
+  // Duplicate detection — another SAVED receipt with the same merchant,
+  // receipt date, and total is almost certainly the same paper receipt
+  // scanned twice. The client can override with force=1 ("Save anyway").
+  var isForced = !!(force && String(force) !== '0' && String(force) !== 'false');
+  if (!isForced) {
+    var normMerchant = String(data.merchant || '').toLowerCase().replace(/\s+/g, ' ').trim();
+    var dupTotal = num(data.total);
+    for (var d = 1; d < all.length; d++) {
+      if (d + 1 === rowIdx) continue;
+      if (String(all[d][11]) !== 'saved') continue;
+      var dDate = (all[d][3] instanceof Date)
+        ? Utilities.formatDate(all[d][3], 'UTC', 'yyyy-MM-dd') : String(all[d][3] || '');
+      var dMerchant = String(all[d][4] || '').toLowerCase().replace(/\s+/g, ' ').trim();
+      if (normMerchant && dMerchant === normMerchant
+          && dDate === String(data.date || '')
+          && dupTotal !== '' && num(all[d][8]) === dupTotal) {
+        return { success: false, error: 'duplicate', duplicateOf: String(all[d][0]) };
+      }
+    }
+  }
+
+  // Human-readable ID (Store_Name-YYYYMMDD) assigned at save; keep the
+  // current ID if it already matches (re-save of the same receipt).
+  var uploadedAt = (all[rowIdx - 1][1] instanceof Date) ? all[rowIdx - 1][1] : new Date();
+  var imageUrl = String(all[rowIdx - 1][10] || '');
+  var newId = rid;
+  if (String(data.merchant || '').trim()) {
+    var candidate = makeReceiptId_(data.merchant, data.date, uploadedAt, taken);
+    var baseOfRid = rid.replace(/-\d+$/, '');
+    var baseOfCand = candidate.replace(/-\d+$/, '');
+    if (baseOfRid !== baseOfCand) newId = candidate;
+  }
+
+  sheet.getRange(rowIdx, 1).setValue(newId);
   sheet.getRange(rowIdx, 4, 1, 7).setValues([[
     String(data.date || ''), String(data.merchant || ''), String(data.currency || ''),
     num(data.subtotal), num(data.tax), num(data.total), String(data.category || '')
   ]]);
   sheet.getRange(rowIdx, 12, 1, 2).setValues([['saved', String(data.raw || '')]]);
+  sheet.getRange(rowIdx, 14).setValue(String(data.address || ''));
+
+  // Rename the Drive photo to match the new ID.
+  if (newId !== rid && imageUrl) {
+    var fm = imageUrl.match(/\/d\/([^\/]+)/);
+    if (fm && fm[1]) {
+      try {
+        var pFile = DriveApp.getFileById(fm[1]);
+        var extM = String(pFile.getName()).match(/\.[A-Za-z0-9]+$/);
+        pFile.setName(newId + (extM ? extM[0] : '.jpg'));
+      } catch (rnErr) { /* rename is cosmetic — save still succeeds */ }
+    }
+  }
+
   var li = tabs.lineItems;
   var last = li.getLastRow();
   if (last > 1) {
     var liIds = li.getRange(2, 1, last - 1, 1).getValues();
     for (var r = liIds.length - 1; r >= 0; r--) {
-      if (String(liIds[r][0]) === rid) li.deleteRow(r + 2);
+      var liId = String(liIds[r][0]);
+      if (liId === rid || liId === newId) li.deleteRow(r + 2);
     }
   }
   var items = (data.lineItems && data.lineItems.length) ? data.lineItems : [];
@@ -759,11 +903,116 @@ function saveReceipt(sessionToken, receiptId, dataJson) {
     var rows = [];
     for (var k = 0; k < items.length; k++) {
       var it = items[k] || {};
-      rows.push([rid, k + 1, String(it.description || ''), num(it.qty), num(it.unitPrice), num(it.amount)]);
+      rows.push([newId, k + 1, String(it.description || ''), num(it.qty),
+        num(it.unitPrice), num(it.amount), String(it.category || '')]);
     }
-    li.getRange(li.getLastRow() + 1, 1, rows.length, 6).setValues(rows);
+    li.getRange(li.getLastRow() + 1, 1, rows.length, 7).setValues(rows);
   }
-  return { success: true, receiptId: rid, lineItems: items.length };
+  rebuildMonthlySummary_(tabs);
+  return { success: true, receiptId: newId, previousId: rid, lineItems: items.length };
+}
+
+/**
+ * Monthly Summary tab — one row per month (receipt date, falling back to
+ * upload month for undated receipts): receipt count, total spend, and a
+ * column per receipt-level category. Rebuilt in full on every save/delete —
+ * cheap at personal-use volumes and immune to drift.
+ */
+function rebuildMonthlySummary_(tabs) {
+  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var sh = ss.getSheetByName('Monthly Summary') || ss.insertSheet('Monthly Summary');
+  var src = (tabs || ensureReceiptTabs_()).receipts;
+  var last = src.getLastRow();
+  var months = {};
+  if (last > 1) {
+    var vals = src.getRange(2, 1, last - 1, 12).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      if (String(vals[i][11]) !== 'saved') continue;
+      var dStr = (vals[i][3] instanceof Date)
+        ? Utilities.formatDate(vals[i][3], 'UTC', 'yyyy-MM-dd') : String(vals[i][3] || '');
+      var month = /^\d{4}-\d{2}/.test(dStr) ? dStr.substring(0, 7)
+        : (vals[i][1] instanceof Date ? Utilities.formatDate(vals[i][1], 'UTC', 'yyyy-MM') : '');
+      if (!month) continue;
+      if (!months[month]) {
+        months[month] = { count: 0, total: 0, cats: {} };
+        RECEIPT_CATEGORIES.forEach(function(c) { months[month].cats[c] = 0; });
+      }
+      var total = parseFloat(vals[i][8]);
+      months[month].count++;
+      if (!isNaN(total)) {
+        months[month].total += total;
+        var cat = RECEIPT_CATEGORIES.indexOf(String(vals[i][9])) >= 0 ? String(vals[i][9]) : 'Other';
+        months[month].cats[cat] += total;
+      }
+    }
+  }
+  var header = ['Month', 'Receipts', 'Total Spend'].concat(RECEIPT_CATEGORIES);
+  var out = [header];
+  Object.keys(months).sort().reverse().forEach(function(m) {
+    var row = [m, months[m].count, Math.round(months[m].total * 100) / 100];
+    RECEIPT_CATEGORIES.forEach(function(c) { row.push(Math.round(months[m].cats[c] * 100) / 100); });
+    out.push(row);
+  });
+  sh.clearContents();
+  sh.getRange(1, 1, out.length, header.length).setValues(out);
+  sh.setFrozenRows(1);
+  return sh;
+}
+
+/**
+ * One-time lazy migration to Store_Name-YYYYMMDD IDs — renames every saved
+ * receipt still carrying a provisional R-… ID (row, line items, Drive photo).
+ * Runs at most once (Script Properties flag), triggered from listReceipts so
+ * it happens on the first history load after this version deploys.
+ */
+function migrateReceiptIds_() {
+  var props = PropertiesService.getScriptProperties();
+  if (props.getProperty('RECEIPT_ID_FORMAT') === 'v2') return;
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return; // another request is migrating
+  try {
+    if (props.getProperty('RECEIPT_ID_FORMAT') === 'v2') return;
+    var tabs = ensureReceiptTabs_();
+    var sh = tabs.receipts;
+    var last = sh.getLastRow();
+    if (last > 1) {
+      var vals = sh.getRange(2, 1, last - 1, 14).getValues();
+      var taken = {};
+      vals.forEach(function(v) { taken[String(v[0])] = true; });
+      var liSheet = tabs.lineItems;
+      var liLast = liSheet.getLastRow();
+      var liIds = liLast > 1 ? liSheet.getRange(2, 1, liLast - 1, 1).getValues() : [];
+      for (var i = 0; i < vals.length; i++) {
+        var oldId = String(vals[i][0]);
+        if (!/^R-/.test(oldId)) continue;
+        if (String(vals[i][11]) !== 'saved' || !String(vals[i][4] || '').trim()) continue;
+        var dStr = (vals[i][3] instanceof Date)
+          ? Utilities.formatDate(vals[i][3], 'UTC', 'yyyy-MM-dd') : String(vals[i][3] || '');
+        delete taken[oldId];
+        var newId = makeReceiptId_(vals[i][4], dStr,
+          vals[i][1] instanceof Date ? vals[i][1] : new Date(), taken);
+        taken[newId] = true;
+        sh.getRange(i + 2, 1).setValue(newId);
+        for (var r = 0; r < liIds.length; r++) {
+          if (String(liIds[r][0]) === oldId) {
+            liSheet.getRange(r + 2, 1).setValue(newId);
+          }
+        }
+        var fm = String(vals[i][10] || '').match(/\/d\/([^\/]+)/);
+        if (fm && fm[1]) {
+          try {
+            var mFile = DriveApp.getFileById(fm[1]);
+            var extM = String(mFile.getName()).match(/\.[A-Za-z0-9]+$/);
+            mFile.setName(newId + (extM ? extM[0] : '.jpg'));
+          } catch (mErr) { /* cosmetic */ }
+        }
+      }
+    }
+    rebuildMonthlySummary_(tabs);
+    props.setProperty('RECEIPT_ID_FORMAT', 'v2');
+  } finally {
+    lock.releaseLock();
+  }
 }
 
 // ══════════════
@@ -1312,7 +1561,8 @@ function doPost(e) {
       svResult = saveReceipt(
         (e && e.parameter && e.parameter.token) || "",
         (e && e.parameter && e.parameter.receiptId) || "",
-        (e && e.parameter && e.parameter.data) || "");
+        (e && e.parameter && e.parameter.data) || "",
+        (e && e.parameter && e.parameter.force) || "");
     } catch (svErr) {
       svResult = { success: false, error: String((svErr && svErr.message) || svErr) };
     }
@@ -1330,7 +1580,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.from) || "",
         (e && e.parameter && e.parameter.to) || "",
         (e && e.parameter && e.parameter.max) || "",
-        (e && e.parameter && e.parameter.uploaded) || "");
+        (e && e.parameter && e.parameter.uploaded) || "",
+        (e && e.parameter && e.parameter.sort) || "");
     } catch (lrErr) {
       lrResult = { success: false, error: String((lrErr && lrErr.message) || lrErr) };
     }
@@ -2659,7 +2910,8 @@ function doGet(e) {
           (e && e.parameter && e.parameter.from) || '',
           (e && e.parameter && e.parameter.to) || '',
           (e && e.parameter && e.parameter.max) || '',
-          (e && e.parameter && e.parameter.uploaded) || '');
+          (e && e.parameter && e.parameter.uploaded) || '',
+          (e && e.parameter && e.parameter.sort) || '');
       } else if (apiOp === 'getReceiptDetail') {
         // PROJECT: Receipts history detail (GET fallback)
         apiResult = getReceiptDetail(apiToken, (e && e.parameter && e.parameter.receiptId) || '');

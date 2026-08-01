@@ -87,7 +87,7 @@ sequenceDiagram
 
 Sequence for the receipts app feature (v01.01g/w upload, v01.02g/w extraction + review + save, v01.03g retry/fallback, v01.04g/v01.05w extraction cache + history browser). All routes require a validated session; the upload and save calls travel as body-POSTs with client-side retry because their payloads exceed GET URL limits. Extraction results are cached server-side by file ID (10 min) so transport retries never re-run Gemini.
 
-> [Open in mermaid.live — Receipt Pipeline](https://mermaid.live/edit#pako:eNqVV01v20YQ_SsDXkLBlO0gaQ5Kk0KOHNtBohimg8KIgmLEHZEbL3eZ3aFkIXDQU4Ee-wH0UqCX_jL_gv6EdpeUbNWKEp9EkztvZ968ebv-GGVGUNSLHH2oSWc0kJhbLEcaAKBCyzKTFWqGN47s7beHp69eAjo4oYxkxW674FJ9O7ZPY5ehhgo1KdgCS1NJM8jQis5tkIN-6jH8z_c0hn5VBQRhjo3jNesHVk4pRBiTK2r-DiG2TQMmRgmy6_aiUmoZgpun_vFRCM1Jk0WWU1Ko8xpzWhOdhkTTyhIKVxBxCF0UD1vwUmo6YiodMI5dZ6QbjKFhAjMlG2hM0rQHJ_ShlpYcOJlrEl2pwZFz0miIseYCJsrMAMdmukjEh3afPvWU9-AUKxhFqSe5LXoUwdVPv0KGJVmEHZhIRVDJ7HzRNx-4jB-YmXYZKgI2cPXz3_cf7e5WF_DieP8A4gz1FF0n4I3R0aOHKwgH_bQHx6_TU8CMpdFP6koZFC0NEE-MLWFsxPyxR34AyExlxS4BbeBg_xQmqNQYs_O2sIN-ukCdopICmdKGiufGDpAxZnNOemV16HkPMkvI9Fwqik-6Z2dnZ69eDQbdw8OydK47HA6H2--rfCXQc0_a1ZbafE9x7H6IO7AFWFWkBVgzg9gxcu3aykjcgFhS-LEl_kgkgezF7xurLjfzRRdsMeMlYZ4TrCSYaj01bbE5sa90b34k4mbDznZOvKfMOF6lMkjbBwRN0zOjmTTD1Y-_gywxpzCSrjLaUZoVVKIv2MqM4UX6erjACijdRQEl2axAzQn4BiWQ1daSzuYJuHrMhlElwHiRQPucIVNu7DwBtRiKt-_W0ejqLCPnAi62zKFi2G9Y8hMRlpAg0Xy9wa0fCj9MS38BU5F2UFnqTqRSJCBGpWAiSQkHJCTjWC1GipSjm_tMUKo7bOJVPQ-slqhrVECa7byF1mLN2PbF-9rxIpudQA3IYBh-2FKc0nKeN0rI4ZRuD1wPlppcui6JlaYuh-C5VGqxfEXzHlokYHEGdE3NOVUME2MBayH5FtoJVQozumGA1sxcCOBCuuu8NipgqZQeDFdnqGnBKPIMCbj687dRBPFAutANqR0TClCEU3LABYWCbs_wZ934UDo2dg5jnzVZiKe797d3H-awA-Hpm9ljCLx0jVZzEDTBWnH7bbnq0ezzVt3u0Lr0RCom6yBeTBXshLECizon2AFXmFm31mFPyArKzsfmorNZE0o6Xp5FXzSVpmsolme3P7KSNrNVMUCtFTkHCyaf3O8koGlGQcrW8QZ3dG_fXYaSfXZgSQuyJD5DE94U5OZic1rUOiBGqe5Q8E3Rb4Fk9z_VbqhmxcyauuiiQi1IgGjy2IKqMGz8wvON539mrA9SFOYr_mot_fPXH7-EnaUO9jGKBh6EvhtFgP8Zgf_EnswcpYaZ5EJqeOg20xnyoK8-kUL8yV7_WaPN4IH3Gox7UJEtZXOVmRWkwRpFDjKjJzKvl82_bkqT_h3asjwRHfGpRVeQiNnW1AGjw_Q3HfDXQU-6N3z49GAXBM5dZ4MBNQ31-1sqjRf-xJoyIHr1bujm9oVyF14KxvIdWjmK9puQEO8trXaeqnC0MhStK7Vu0fnSrcJD3c0A9mqpBPjrGbjrW21o59pbbfi8rhNtHQEJXctH_Lpfc9FJPIMa2HcqkBlW-RvMul7490MsKWmvnk1T_CUHhJlp70Agmza3bh0lUUm2RCmiXvRxFHFBJY2i3ihqfXoUXUZJhDWbdK6zqOe1kkR15R23_YeneXn5L55hXEw)
+> [Open in mermaid.live — Receipt Pipeline](https://mermaid.live/edit#pako:eNqVV01vG0cS_SuFuWQIzUhy7PjAxA7o0JZlxLIhKlgYYWAUu4szHfV0j7t7SHENLXJaYI-7CZBLgFwW-8P0C_Yn7FbPhyWLpu0ThzNT1V2v3nvV8zYRVlIyTjy9acgImiosHFZzAwBQowtKqBpNgB88udt3n549_x7QwykJUnXw-2Wo9DcL9zD1Ag3UaEjDHjhaKVqDQCdHt5McTWacg3_-QguY1HXMIO1L68OW96dOrShGWFtoav_HENdtA5ZWS3Lb1qJKGRWD26vJy-MYWpAhh0GtSKMpGixoS_QsbnRWO0LpS6IQQ_viYQ--V4aOA1UeAi78aG7aHCc2ENgVuQhjNpuN4ZTeNMqRB68KQzJXBjx5r6yBFJtQwlLbNeDCrvqNcGj-8CFDPoYzrGGezBjkruh5Ald__xcIrMghHMBSaYJaifO-bxw4xE_t2niBmiBYuPrHv-_cPzysL-DZy8dHkAo0K_SjmG-Bnu7fu5HhaDIbw8sXszNAEZQ1D5paW5QdDJAuratgYeXma858FzAEqurgMzAWjh6fwRK1XqA47wo7msz6rCvUSmKgWQvFE-umGDAN9pzMjbdjz8cgHGGgJ0pTepq_evXq1fPn02n-9GlVeZ-fnJyc7P9cFzcCGXsyvnHU7fcMF_51OoI9wLomI8HZNaQ-YGh8VxnJaykGCN92wB_LLILd__7g9OVuvOgiOBRhAIwxwVqBrbdD0xVbUOBKH22OZdouONovKDzSdpHehDJSmwMip-k7awKZAFe__AaqwoKiJH1tjaeZKKlCLtgpEeDZ7MVJnytmyfsCKnKiRBMyQCkdeZ8BdyoD0ThHRmwy8M0i2IA6g4AXGbTXLBGBgQrrNhnoXiA__gQpoShhrUIJCJJYaBVvs397K-i-EaJfHDucUQd43GLK-omvkCTZPr3WCZYQS29wI7A1GQ-1o3yptCYJKWoNS0VaeiCpAi50L0DSnq6vs0SlP2MR1sAm9qBC06AGMsFtutRGbhH5RP7c-NDv5iCCByraC0tzhisa1L-TcB5XdFueYxgYPHg0yUgB2IOldYJgqbG4LdNpU2vFbQJRkjiPRXmsaCDJHlNjLxKAHROBdyD79ZgSXMBbcs66Mcg-3SU0RpP37eIP7kA6T2KVaDZr3MyT21uZeDZQYEfmVsHxFGbBOnp9ghUNlgCpsFor39JjuVQXkH95kN_dJrNTMlxKKAnq0gbLDllhEGW8ZWgNx9P3HeWJ0rqvLhqIMkLv90oZ7CSikIHDNdA7Hp1THW551CnVGgVdmyjOrj2kUS41uZx50EtFkd-SYNEoLeOmn1sTSr2BWVNV6DY8nJjo3oI1IElToN1iG4gyZgCO5U2DaxnftkrC1R-_zhNIp8pH8ivjA6EETbgiH7fDAN022A-OyqfKB-s2sGAEyEG6Oryzf3ivgAOIV1-tv275lVujNyBpiY0O3bPhrfvrD8_RboVuhC6VDuQ8pD2b4SBaHTg0BcEB-NKu88a0nD4Ab13IF5uc3xntFqJWPgzHhY_6fgx_YSgPqiLQ-NcN07tSBR9U-KBwml_98p_WC25zPovizYsG3c0J1vMD5XBuY0ZkXeE32dorsm_UgzujaOntf7BOkgPreoZEELq7KQPz4BoqW8en__Gny1gCYwOOjCRH8gOtwusi2w11QT3SUwqo9MfhHlC5LuQ9UMG_p8Id1dyYcG1ddFGjkSRBtvvY62xFK3O-84AorJOtOmOzP5nP__3z93_GlZWJE2OeTKPEv50ngP_3fn4UGMwClYnzVxm453fD2brEJx9ZYvzpo8l31ybEF22OL9i-KtWeddclGXBWkwdhzVIVzdD8d01pt_8ZbRm83FM4c-hLkmlwDY3Y794ZO38vMOhxcPzt7iFI3PhdRtg2lNd3VFlWx9LZKmZk9u7o5v6F9hdMBevCZ7RynjxuQ2I822rjGap45ApQds7YOdboY8dOTvXp9sP7ftTOEKpq8O8-e2I7t372xMfbOtHVETOh7_BIX0yaUI4yRtBA4E5FMONbfMTd1gu-z0aXdd8mbVP4FAzSrk20JdW2uZsYSZZU5CpUMhknb-dJKKmieTKeJ92smCeXSZZgE-xsY0QyZq5kSVOzd3VfxO3Ny_8BEIQVcA)
 
 ```mermaid
 sequenceDiagram
@@ -109,7 +109,7 @@ sequenceDiagram
     HTML->>GAS: POST action=extractReceipt (GET api op fallback)
     GAS->>Drive: getFileById(fileId).getBlob()
     GAS->>Gemini: generateContent — image + responseSchema (strict JSON)
-    Gemini-->>GAS: merchant, date, currency, subtotal, tax, total, category, lineItems[]
+    Gemini-->>GAS: merchant, address, date, currency, subtotal, tax, total,<br>category, lineItems[] (each with a department category)
     GAS-->>HTML: {success, data}
     alt Extraction succeeded
         HTML->>User: Review card opens pre-filled (all fields editable)
@@ -117,16 +117,21 @@ sequenceDiagram
         HTML->>User: Review card opens empty — manual entry
     end
     User->>HTML: Adjust fields / line items → Save receipt
-    HTML->>GAS: POST action=saveReceipt (form body: receiptId + reviewed JSON)
-    GAS->>SS: Fill receipt row (status=saved, raw extraction kept for audit)
-    GAS->>SS: Replace LineItems rows for this receiptId
-    GAS-->>HTML: {success, lineItems: N}
+    HTML->>GAS: POST action=saveReceipt (form body: receiptId + reviewed JSON + force flag)
+    GAS->>GAS: Duplicate check — same merchant+date+total as a saved receipt<br>→ {error: duplicate} unless force=1 ("Save anyway")
+    GAS->>GAS: Assign readable ID Store_Name-YYYYMMDD (collision suffix -2/-3)
+    GAS->>Drive: Rename the photo to match the new ID
+    GAS->>SS: Fill receipt row incl. address (status=saved, raw extraction kept)
+    GAS->>SS: Replace LineItems rows (with per-item categories)
+    GAS->>SS: Rebuild the Monthly Summary tab (also on delete)
+    GAS-->>HTML: {success, receiptId: newId}
     HTML->>User: "Saved ✓" (Discard instead leaves the row status=uploaded)
 
     Note over User,SS: History browser (v01.04g / v01.05w; saved-only default v01.05g / v01.06w)
-    User->>HTML: Tap "History" → filters (merchant / date range / show-unsaved checkbox)
+    User->>HTML: Tap "History" → filters (merchant / date range / show-unsaved / sort-by-date)
     HTML->>GAS: POST action=listReceipts (GET api op fallback)
-    GAS->>SS: Read Receipts tab, filter (status=saved unless uploaded=1), newest first
+    GAS->>GAS: One-time lazy ID migration (R-… → Store_Name-YYYYMMDD, flag-guarded)
+    GAS->>SS: Read Receipts tab, filter (status=saved unless uploaded=1),<br>upload order or receipt-date order (sort=date)
     GAS-->>HTML: {receipts[]} → list rendered
     User->>HTML: Tap a receipt row
     HTML->>GAS: POST action=getReceiptDetail (GET api op fallback)

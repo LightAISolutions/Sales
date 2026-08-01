@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.06w">
+  <meta name="build-version" content="v01.07w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -352,17 +352,29 @@
        overlay wall (10002+), so the auth wall hides it until sign-in */
     #receipt-scan-panel {
       position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
-      z-index: 5; display: flex; gap: 10px; align-items: center;
+      z-index: 5; display: flex; flex-direction: column; gap: 8px;
+      align-items: stretch; width: min(420px, 92vw);
       background: #fff; border: 1px solid #d0d4da; border-radius: 8px;
       padding: 10px 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-      max-width: 92vw;
     }
+    .rsp-row { display: flex; gap: 10px; align-items: center; }
     #receipt-scan-btn {
       padding: 10px 18px; font-size: 15px; border: none; border-radius: 6px;
       background: #4a90d9; color: #fff; cursor: pointer; white-space: nowrap;
     }
     #receipt-scan-btn:disabled { background: #9db8d4; cursor: default; }
-    #receipt-scan-status { font-size: 13px; color: #444; max-width: 44vw; }
+    #receipt-scan-status { font-size: 13px; color: #444; }
+    /* Pipeline progress bar — stepped percentages per stage
+       (Compressing → Uploading → Extracting → Done / Saving → Saved) */
+    #receipt-progress {
+      height: 6px; background: #e8ebef; border-radius: 3px;
+      overflow: hidden; display: none;
+    }
+    #receipt-progress-fill {
+      height: 100%; width: 0%; background: #4a90d9; border-radius: 3px;
+      transition: width 0.45s ease;
+    }
+    #receipt-progress-fill.rp-done { background: #2e7d32; }
     #receipt-scan-thumb {
       width: 34px; height: 34px; object-fit: cover; border-radius: 4px;
       border: 1px solid #d0d4da; display: none;
@@ -370,15 +382,16 @@
     /* Review-before-save card — opens after extraction, below the scan panel.
        Same layering rationale: above the GAS iframe, below the overlay walls. */
     #receipt-review-card {
-      position: fixed; top: 72px; left: 50%; transform: translateX(-50%);
+      /* top clears the full scan panel (buttons + status + progress rows) */
+      position: fixed; top: 128px; left: 50%; transform: translateX(-50%);
       z-index: 6; display: none; width: min(560px, 94vw);
       /* Mobile viewport fix: 100vh includes the area behind the browser URL
          bar, which pushed the card's bottom (and the Save button) off-screen.
          dvh tracks the real visible height; the vh line is the fallback for
          older browsers. Bottom clearance also keeps the card above the
          version pills. */
-      max-height: calc(100vh - 170px);
-      max-height: calc(100dvh - 170px);
+      max-height: calc(100vh - 226px);
+      max-height: calc(100dvh - 226px);
       overflow-y: auto;
       background: #fff; border: 1px solid #d0d4da; border-radius: 10px;
       padding: 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.18);
@@ -438,10 +451,10 @@
     /* History card — same layering + dvh sizing rationale as the review card,
        but z-index 7 so it overlays the review card when both are open. */
     #receipt-history-card {
-      position: fixed; top: 72px; left: 50%; transform: translateX(-50%);
+      position: fixed; top: 128px; left: 50%; transform: translateX(-50%);
       z-index: 7; display: none; width: min(560px, 94vw);
-      max-height: calc(100vh - 170px);
-      max-height: calc(100dvh - 170px);
+      max-height: calc(100vh - 226px);
+      max-height: calc(100dvh - 226px);
       overflow-y: auto;
       background: #fff; border: 1px solid #d0d4da; border-radius: 10px;
       padding: 0 14px 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.18);
@@ -646,10 +659,13 @@
        "uploaded" row in the Receipts tab; Phase 2 adds extraction. -->
   <div id="receipt-scan-panel">
     <input id="receipt-file-input" type="file" accept="image/*" capture="environment" style="display:none">
-    <button id="receipt-scan-btn" type="button">📷 Scan receipt</button>
-    <button id="receipt-history-btn" type="button">🧾 History</button>
-    <img id="receipt-scan-thumb" alt="">
+    <div class="rsp-row">
+      <button id="receipt-scan-btn" type="button">📷 Scan receipt</button>
+      <button id="receipt-history-btn" type="button">🧾 History</button>
+      <img id="receipt-scan-thumb" alt="">
+    </div>
     <span id="receipt-scan-status">Photograph or choose a receipt to upload</span>
+    <div id="receipt-progress"><div id="receipt-progress-fill"></div></div>
   </div>
   <!-- History browser — searchable list of past receipts with tap-to-expand
        details and a link to each photo. Read-only; z-index 7 overlays the
@@ -666,6 +682,7 @@
       </div>
       <div class="rh-filters rh-filters-2">
         <label class="rh-chk"><input id="rh-show-uploaded" type="checkbox"> Show unsaved uploads</label>
+        <label class="rh-chk"><input id="rh-sort-date" type="checkbox"> Sort by receipt date</label>
         <button id="rh-export" type="button">⬇️ Export .xlsx</button>
       </div>
     </div>
@@ -679,6 +696,7 @@
     <div class="rr-grid">
       <label>Merchant<input id="rr-merchant" type="text" autocomplete="off"></label>
       <label>Date<input id="rr-date" type="date"></label>
+      <label style="grid-column: 1 / -1">Store Address<input id="rr-address" type="text" autocomplete="off" placeholder="As printed on the receipt"></label>
       <label>Currency<input id="rr-currency" type="text" maxlength="3" placeholder="USD" autocomplete="off"></label>
       <label>Category<select id="rr-category"></select></label>
       <label>Subtotal<input id="rr-subtotal" type="number" step="0.01" inputmode="decimal"></label>
@@ -4326,6 +4344,29 @@
         if (statusEl) { statusEl.textContent = msg; statusEl.style.color = ok ? '#2e7d32' : '#c62828'; }
       }
 
+      // Stepped pipeline progress bar. setProgress(pct) shows/advances it;
+      // setProgress(100) turns it green and auto-hides; setProgress(null)
+      // hides immediately (failures).
+      var _progressHideTimer = null;
+      function setProgress(pct) {
+        var bar = document.getElementById('receipt-progress');
+        var fill = document.getElementById('receipt-progress-fill');
+        if (!bar || !fill) return;
+        clearTimeout(_progressHideTimer);
+        if (pct === null || pct === undefined) {
+          bar.style.display = 'none';
+          fill.style.width = '0%';
+          fill.classList.remove('rp-done');
+          return;
+        }
+        bar.style.display = 'block';
+        fill.style.width = pct + '%';
+        fill.classList.toggle('rp-done', pct >= 100);
+        if (pct >= 100) {
+          _progressHideTimer = setTimeout(function() { setProgress(null); }, 1800);
+        }
+      }
+
       function _gasPostBody(params) {
         var gasApp = document.getElementById('gas-app');
         var baseUrl = (gasApp && gasApp.dataset.baseUrl) || '';
@@ -4386,6 +4427,7 @@
       var currentReceiptId = '';
       var currentRaw = '';
       var currentFileId = ''; // Drive file of the last upload — lets Retry extraction re-run without re-photographing
+      var pendingForce = false; // set after a duplicate warning — next Save sends force=1
 
       (function fillCategories() {
         var sel = document.getElementById('rr-category');
@@ -4429,7 +4471,9 @@
       function openReviewCard(receiptId, data, note) {
         currentReceiptId = receiptId;
         currentRaw = data ? JSON.stringify(data) : '';
+        pendingForce = false;
         var d = data || {};
+        document.getElementById('rr-address').value = d.address || '';
         document.getElementById('rr-merchant').value = d.merchant || '';
         document.getElementById('rr-date').value = /^\d{4}-\d{2}-\d{2}$/.test(d.date || '') ? d.date : '';
         document.getElementById('rr-currency').value = d.currency || '';
@@ -4471,6 +4515,7 @@
         });
         return {
           merchant: (document.getElementById('rr-merchant').value || '').trim(),
+          address: (document.getElementById('rr-address').value || '').trim(),
           date: document.getElementById('rr-date').value || '',
           currency: (document.getElementById('rr-currency').value || '').trim().toUpperCase(),
           category: document.getElementById('rr-category').value || '',
@@ -4517,18 +4562,30 @@
         var saveBtn = document.getElementById('rr-save');
         saveBtn.disabled = true;
         setRrStatus('Saving…', true);
-        _gasPostBody({ action: 'saveReceipt', token: session.token, receiptId: currentReceiptId, data: JSON.stringify(collectReview()) })
+        setProgress(85);
+        _gasPostBody({ action: 'saveReceipt', token: session.token, receiptId: currentReceiptId,
+          data: JSON.stringify(collectReview()), force: pendingForce ? '1' : '' })
           .then(function(r) {
             saveBtn.disabled = false;
             if (r && r.success) {
               closeReviewCard();
+              setProgress(100);
               setStatus('Saved ✓ ' + (r.receiptId || '') + ' — ready for the next receipt', true);
+            } else if (r && r.error === 'duplicate') {
+              // Duplicate detection — same store, date, and total as an
+              // already-saved receipt. Second Save press overrides.
+              pendingForce = true;
+              setProgress(null);
+              setRrStatus('Possible duplicate of ' + (r.duplicateOf || 'a saved receipt')
+                + ' (same store, date, total) — tap Save again to save anyway', false);
             } else {
+              setProgress(null);
               setRrStatus('Save failed (' + ((r && r.error) || 'unknown') + ')', false);
             }
           })
           .catch(function(err) {
             saveBtn.disabled = false;
+            setProgress(null);
             setRrStatus('Save failed (' + String((err && err.message) || err) + ')', false);
           });
       });
@@ -4540,27 +4597,33 @@
         btn.disabled = true;
         closeReviewCard();
         setStatus('Compressing…', true);
+        setProgress(15);
         if (thumb) { thumb.src = URL.createObjectURL(file); thumb.style.display = 'inline-block'; }
         compressImage(file)
           .then(function(b64) {
             if (b64.length > 6000000) throw new Error('image_too_large');
             setStatus('Uploading…', true);
+            setProgress(40);
             return _gasPostBody({ action: 'uploadReceipt', token: session.token, image: b64, mime: 'image/jpeg', name: file.name || '' });
           })
           .then(function(r) {
             if (!(r && r.success)) {
               btn.disabled = false;
+              setProgress(null);
               setStatus('Upload failed (' + ((r && r.error) || 'unknown') + ')', false);
               return;
             }
-            setStatus('Uploaded ✓ ' + (r.receiptId || '') + ' — extracting…', true);
+            setStatus('Uploaded ✓ — reading the receipt…', true);
+            setProgress(70);
             return _gasPost({ action: 'extractReceipt', token: session.token, fileId: r.fileId || '' })
               .then(function(x) {
                 btn.disabled = false;
                 if (x && x.success && x.data) {
+                  setProgress(100);
                   setStatus('Extracted ✓ — review below', true);
                   openReviewCard(r.receiptId, x.data);
                 } else {
+                  setProgress(null);
                   setStatus('Uploaded ✓ (extraction failed)', false);
                   openReviewCard(r.receiptId, null,
                     'Extraction failed (' + ((x && x.error) || 'unknown') + ') — retry or enter the details manually');
@@ -4569,6 +4632,7 @@
               })
               .catch(function(xErr) {
                 btn.disabled = false;
+                setProgress(null);
                 setStatus('Uploaded ✓ (extraction failed)', false);
                 openReviewCard(r.receiptId, null,
                   'Extraction failed (' + String((xErr && xErr.message) || xErr) + ') — retry or enter the details manually');
@@ -4577,6 +4641,7 @@
           })
           .catch(function(err) {
             btn.disabled = false;
+            setProgress(null);
             setStatus('Upload failed (' + String((err && err.message) || err) + ')', false);
           });
       }
@@ -4614,6 +4679,9 @@
           + ' · Subtotal: ' + fmtMoney(r.subtotal, r.currency)
           + ' · Tax: ' + fmtMoney(r.tax, r.currency)
           + ' · <b>Total: ' + fmtMoney(r.total, r.currency) + '</b></div>';
+        if (r.address) {
+          html += '<div style="color:#666">📍 ' + esc(r.address) + '</div>';
+        }
         if (r.imageUrl) {
           html += '<div><a href="' + esc(r.imageUrl) + '" target="_blank" rel="noopener">View photo ↗</a></div>';
         }
@@ -4621,7 +4689,9 @@
         if (items.length) {
           html += '<table>';
           items.forEach(function(it) {
-            html += '<tr><td>' + esc(it.description) + '</td>'
+            html += '<tr><td>' + esc(it.description)
+              + (it.category ? ' <span style="color:#888;font-size:11px">(' + esc(it.category) + ')</span>' : '')
+              + '</td>'
               + '<td class="num">' + (it.qty !== '' ? esc(it.qty) + '×' : '') + '</td>'
               + '<td class="num">' + fmtMoney(it.amount, '') + '</td></tr>';
           });
@@ -4642,7 +4712,8 @@
           from: document.getElementById('rh-from').value || '',
           to: document.getElementById('rh-to').value || '',
           max: '100',
-          uploaded: document.getElementById('rh-show-uploaded').checked ? '1' : ''
+          uploaded: document.getElementById('rh-show-uploaded').checked ? '1' : '',
+          sort: document.getElementById('rh-sort-date').checked ? 'date' : ''
         }).then(function(res) {
           if (!(res && res.success)) {
             histList.innerHTML = '<div id="rh-empty">Could not load (' + esc((res && res.error) || 'unknown') + ')</div>';
@@ -4745,6 +4816,7 @@
         if (ev.key === 'Enter') loadHistory();
       });
       document.getElementById('rh-show-uploaded').addEventListener('change', loadHistory);
+      document.getElementById('rh-sort-date').addEventListener('change', loadHistory);
 
       // .xlsx export — server builds the workbook from the current filters and
       // returns it base64; decoded here into a Blob download.

@@ -3,11 +3,23 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.07w] — 2026-08-01 05:28:51 AM EST — v01.23r
+
+### Added
+- Progress bar under the buttons showing each step of the scan (compressing → uploading → reading → done, and saving)
+- "Sort by receipt date" checkbox in History — orders receipts by the date printed on them instead of when they were scanned
+- Store address field in the review screen (read automatically from the photo, editable before saving) and shown in receipt details
+- Duplicate protection: saving a receipt that matches an already-saved one (same store, date, and total) asks for confirmation before saving again
+- Each item now shows its department category (Produce, Dairy & Eggs, Snacks, and more) in receipt details
+
+### Changed
+- Status messages moved below the Scan and History buttons for a cleaner layout
 
 ## [v01.06w] — 2026-08-01 04:38:48 AM EST — v01.22r
 

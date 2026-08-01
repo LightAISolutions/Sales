@@ -3,11 +3,24 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.06g] — 2026-08-01 05:28:51 AM EST — v01.23r
+
+### Added
+- Receipt IDs are now readable — Store_Name-YYYYMMDD — and existing receipts (and their photos) were renamed automatically to match
+- The store address is read from each receipt and saved alongside the other details
+- Every purchased item is automatically assigned a department category (Produce, Meat & Seafood, Dairy & Eggs, Bakery, Frozen, Pantry, Snacks & Candy, Beverages, Household, Personal Care, and more)
+- New "Monthly Summary" tab in the spreadsheet — per-month totals, receipt counts, and spending by category, kept up to date automatically and included in exports
+- Saving a receipt that matches an already-saved one (same store, date, total) is flagged as a possible duplicate before anything is written
+
+### Changed
+- In the exported spreadsheet, items are now grouped under a highlighted header row per receipt with alternating colors, making it easy to tell receipts apart
+- History can be sorted by the receipt's printed date instead of scan order
 
 ## [v01.05g] — 2026-08-01 04:38:48 AM EST — v01.22r
 
