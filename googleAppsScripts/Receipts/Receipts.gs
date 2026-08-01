@@ -1,4 +1,4 @@
-var VERSION = "v01.00g";
+var VERSION = "v01.01g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -310,6 +310,83 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 
 // ══════════════
 // PROJECT START — Add your project-specific code here
+// ══════════════
+
+// Google Drive folder that stores the uploaded receipt photos (owned by the
+// script account; shared to the developer's personal account for viewing).
+// Mirrored in Receipts.config.json — keep both in sync.
+var DRIVE_FOLDER_ID = "1DHfXwzo0qXI_2H0Q2dDLKGn7EOtguI0A";
+
+// Spreadsheet tabs for the structured receipt data. The wired SPREADSHEET_ID's
+// data lives in two normalized tabs so spending analysis can pivot/filter:
+// one row per receipt, one row per line item (joined on Receipt ID).
+var RECEIPTS_TAB = "Receipts";
+var LINEITEMS_TAB = "LineItems";
+
+/**
+ * Idempotent tab bootstrap — creates the Receipts and LineItems tabs with
+ * frozen header rows if they don't exist yet. Safe to call on every write.
+ */
+function ensureReceiptTabs_() {
+  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  function ensure(name, headers) {
+    var sh = ss.getSheetByName(name);
+    if (!sh) sh = ss.insertSheet(name);
+    if (sh.getLastRow() === 0) {
+      sh.appendRow(headers);
+      sh.setFrozenRows(1);
+    }
+    return sh;
+  }
+  return {
+    receipts: ensure(RECEIPTS_TAB, [
+      "Receipt ID", "Uploaded At", "Uploaded By", "Receipt Date", "Merchant",
+      "Currency", "Subtotal", "Tax", "Total", "Category", "Image Link",
+      "Status", "Raw Extraction"
+    ]),
+    lineItems: ensure(LINEITEMS_TAB, [
+      "Receipt ID", "Line #", "Description", "Qty", "Unit Price", "Amount"
+    ])
+  };
+}
+
+/**
+ * Receipt photo upload — saves the image to the Drive folder and records an
+ * "uploaded" row in the Receipts tab (Phase 2's extraction fills in the
+ * remaining columns). Called via the fetch transport's body-POST
+ * (doPost action=uploadReceipt — no GET fallback; images exceed URL limits).
+ */
+function uploadReceipt(sessionToken, imageBase64, mimeType, fileName) {
+  var user = validateSessionForData(sessionToken, 'uploadReceipt');
+  var b64 = String(imageBase64 || '');
+  if (!b64) return { success: false, error: 'no_image' };
+  // Client compresses to well under this; the cap guards the POST body limit.
+  if (b64.length > 7000000) return { success: false, error: 'image_too_large' };
+  var mime = String(mimeType || 'image/jpeg');
+  if (mime.indexOf('image/') !== 0) return { success: false, error: 'not_an_image' };
+  if (!DRIVE_FOLDER_ID || DRIVE_FOLDER_ID === 'YOUR_DRIVE_FOLDER_ID') {
+    return { success: false, error: 'folder_not_configured' };
+  }
+  if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
+    return { success: false, error: 'spreadsheet_not_configured' };
+  }
+  var bytes;
+  try { bytes = Utilities.base64Decode(b64); }
+  catch (decErr) { return { success: false, error: 'bad_base64' }; }
+  var receiptId = 'R-' + Utilities.formatDate(new Date(), 'UTC', 'yyyyMMdd-HHmmss')
+    + '-' + Math.floor(Math.random() * 9000 + 1000);
+  var ext = (mime === 'image/png') ? '.png' : (mime === 'image/webp') ? '.webp' : '.jpg';
+  var blob = Utilities.newBlob(bytes, mime, receiptId + ext);
+  var file = DriveApp.getFolderById(DRIVE_FOLDER_ID).createFile(blob);
+  var fileUrl = file.getUrl();
+  ensureReceiptTabs_().receipts.appendRow([
+    receiptId, new Date(), user.email, '', '', '', '', '', '', '',
+    fileUrl, 'uploaded', ''
+  ]);
+  return { success: true, receiptId: receiptId, fileUrl: fileUrl };
+}
+
+// ══════════════
 // PROJECT END
 // ══════════════
 
@@ -811,6 +888,25 @@ function doPost(e) {
       soResult = { type: 'gas-signed-out', success: false, error: String((soErr && soErr.message) || soErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(soResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts photo upload via fetch() — session-validated write.
+  // Body-POST only: the base64 image cannot fit in a GET URL, so the HTML
+  // layer retries this POST on transient failures instead of falling back
+  // to the GET api route like the other fetch calls do.
+  if (action === "uploadReceipt") {
+    var upResult;
+    try {
+      upResult = uploadReceipt(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.image) || "",
+        (e && e.parameter && e.parameter.mime) || "",
+        (e && e.parameter && e.parameter.name) || "");
+    } catch (upErr) {
+      upResult = { success: false, error: String((upErr && upErr.message) || upErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(upResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 

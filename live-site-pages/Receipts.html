@@ -5,13 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="no-referrer">
   <!-- CSP: CURRENT (unsafe-inline) — Remove this tag when enabling hash-based CSP below -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
+  <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (receipts.webmanifest); applied to both CSP tags -->
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <!-- CSP: HARDENED (hash-based) — Phase 8: Uncomment this tag and replace HASH_HERE after running: bash scripts/compute-csp-hash.sh
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.00w">
+  <meta name="build-version" content="v01.01w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
+       Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
+  <link rel="manifest" href="receipts.webmanifest">
+  <meta name="theme-color" content="#4a90d9">
+  <link rel="apple-touch-icon" href="images/receipts-icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Receipts">
   <title>Receipts</title>
 <!-- ══════════════ -->
 <!-- AUTH START -->
@@ -337,6 +348,25 @@
 /* PROJECT START */
 /* ══════════════ */
     .html-layer-hidden { display: none !important; }
+    /* Receipt scan panel — above the GAS iframe (z-index 1), below every
+       overlay wall (10002+), so the auth wall hides it until sign-in */
+    #receipt-scan-panel {
+      position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
+      z-index: 5; display: flex; gap: 10px; align-items: center;
+      background: #fff; border: 1px solid #d0d4da; border-radius: 8px;
+      padding: 10px 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      max-width: 92vw;
+    }
+    #receipt-scan-btn {
+      padding: 10px 18px; font-size: 15px; border: none; border-radius: 6px;
+      background: #4a90d9; color: #fff; cursor: pointer; white-space: nowrap;
+    }
+    #receipt-scan-btn:disabled { background: #9db8d4; cursor: default; }
+    #receipt-scan-status { font-size: 13px; color: #444; max-width: 44vw; }
+    #receipt-scan-thumb {
+      width: 34px; height: 34px; object-fit: cover; border-radius: 4px;
+      border: 1px solid #d0d4da; display: none;
+    }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -475,7 +505,16 @@
 <!-- ══════════════ -->
 <!-- PROJECT START -->
 <!-- ══════════════ -->
-  <!-- YOUR PAGE CONTENT HERE -->
+  <!-- Receipt scan panel — camera-direct capture on phones (capture attribute),
+       file picker on desktop. Invisible before sign-in (the full-screen auth
+       wall covers it). Uploads land in the configured Drive folder and get an
+       "uploaded" row in the Receipts tab; Phase 2 adds extraction. -->
+  <div id="receipt-scan-panel">
+    <input id="receipt-file-input" type="file" accept="image/*" capture="environment" style="display:none">
+    <button id="receipt-scan-btn" type="button">📷 Scan receipt</button>
+    <img id="receipt-scan-thumb" alt="">
+    <span id="receipt-scan-status">Photograph or choose a receipt to upload</span>
+  </div>
 <!-- ══════════════ -->
 <!-- PROJECT END -->
 <!-- ══════════════ -->
@@ -4089,6 +4128,106 @@
 // PROJECT START — Add your project-specific JavaScript here
 // ══════════════
 
+    // Receipt photo upload → Drive, via a body-POST variant of the fetch
+    // transport. The template's _gasPost() carries params in the URL (fine for
+    // tokens, impossible for images), so this variant sends a form-encoded
+    // body and retries on Google's transient HTML-error responses — there is
+    // no GET fallback at image sizes.
+    (function() {
+      var btn = document.getElementById('receipt-scan-btn');
+      var input = document.getElementById('receipt-file-input');
+      var statusEl = document.getElementById('receipt-scan-status');
+      var thumb = document.getElementById('receipt-scan-thumb');
+      if (!btn || !input) return;
+
+      function setStatus(msg, ok) {
+        if (statusEl) { statusEl.textContent = msg; statusEl.style.color = ok ? '#2e7d32' : '#c62828'; }
+      }
+
+      function _gasPostBody(params) {
+        var gasApp = document.getElementById('gas-app');
+        var baseUrl = (gasApp && gasApp.dataset.baseUrl) || '';
+        if (!baseUrl) return Promise.reject(new Error('no_base_url'));
+        var body = Object.keys(params).map(function(k) {
+          return encodeURIComponent(k) + '=' + encodeURIComponent(params[k]);
+        }).join('&');
+        var left = 3;
+        function attempt() {
+          return fetch(baseUrl, {
+            method: 'POST', redirect: 'follow',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: body
+          }).then(function(r) {
+            if (!r.ok) throw new Error('http_' + r.status);
+            return r.json(); // Google's transient failure page is HTML → json() throws → retry
+          }).catch(function(err) {
+            left -= 1;
+            if (left <= 0) throw err;
+            return new Promise(function(res) { setTimeout(res, (3 - left) * 800); }).then(attempt);
+          });
+        }
+        return attempt();
+      }
+
+      // Downscale to max 1600px and re-encode as JPEG — keeps the base64
+      // payload comfortably under the GAS POST limit while staying sharp
+      // enough for Phase 2's AI extraction. createImageBitmap honors EXIF
+      // orientation in modern browsers; the Image() path is the fallback.
+      function compressImage(file) {
+        var loadBitmap = (window.createImageBitmap)
+          ? createImageBitmap(file)
+          : new Promise(function(resolve, reject) {
+              var url = URL.createObjectURL(file);
+              var img = new Image();
+              img.onload = function() { URL.revokeObjectURL(url); resolve(img); };
+              img.onerror = function() { URL.revokeObjectURL(url); reject(new Error('image_load_failed')); };
+              img.src = url;
+            });
+        return loadBitmap.then(function(img) {
+          var w = img.width, h = img.height;
+          var scale = Math.min(1, 1600 / Math.max(w, h));
+          var canvas = document.createElement('canvas');
+          canvas.width = Math.round(w * scale);
+          canvas.height = Math.round(h * scale);
+          canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+          var dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+          return dataUrl.substring(dataUrl.indexOf(',') + 1);
+        });
+      }
+
+      function handleFile(file) {
+        if (!file) return;
+        var session = loadSession();
+        if (!session.token) { setStatus('Sign in first', false); return; }
+        btn.disabled = true;
+        setStatus('Compressing…', true);
+        if (thumb) { thumb.src = URL.createObjectURL(file); thumb.style.display = 'inline-block'; }
+        compressImage(file)
+          .then(function(b64) {
+            if (b64.length > 6000000) throw new Error('image_too_large');
+            setStatus('Uploading…', true);
+            return _gasPostBody({ action: 'uploadReceipt', token: session.token, image: b64, mime: 'image/jpeg', name: file.name || '' });
+          })
+          .then(function(r) {
+            btn.disabled = false;
+            if (r && r.success) {
+              setStatus('Uploaded ✓ ' + (r.receiptId || ''), true);
+            } else {
+              setStatus('Upload failed (' + ((r && r.error) || 'unknown') + ')', false);
+            }
+          })
+          .catch(function(err) {
+            btn.disabled = false;
+            setStatus('Upload failed (' + String((err && err.message) || err) + ')', false);
+          });
+      }
+
+      btn.addEventListener('click', function() { input.click(); });
+      input.addEventListener('change', function() {
+        handleFile(input.files && input.files[0]);
+        input.value = ''; // allow re-selecting the same file
+      });
+    })();
 
 // PROJECT END
 // ══════════════
