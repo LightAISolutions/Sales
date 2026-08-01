@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12w] — 2026-08-01 05:53:12 PM EST — v01.29r
+
+### Added
+- "By department" breakdown in Reports — appears when the category filter is set to Groceries, showing where the grocery money went (Produce, Dairy, Meat, …)
+- Circle graphs option in Reports — a checkbox switches every group to a donut chart with percentage comparisons
+- Report groups are now collapsible — everything starts minimized; tap the "+" on the right of a group to expand it
+
+### Changed
+- Friendlier report period labels — days show as "Wed, 7/29/26", weeks as "7/26/26 - 8/1/26" (Sunday through Saturday), months as "July 2026", and half-years as "First Half of 2026" / "Second Half of 2026"
 
 ## [v01.11w] — 2026-08-01 05:18:59 PM EST — v01.28r
 

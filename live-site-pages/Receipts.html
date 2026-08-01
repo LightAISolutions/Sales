@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.11w">
+  <meta name="build-version" content="v01.12w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -625,8 +625,25 @@
     .rp-chip .rp-chip-val { font-size: 15px; font-weight: 700; color: var(--rc-ink); font-family: 'Courier New', monospace; }
     .rp-chip .rp-chip-lbl { font-size: 11px; color: var(--rc-muted); }
     /* Per-period rows + proportional spend bars */
-    .rp-section { margin-top: 14px; }
-    .rp-section h4 { margin: 0 0 6px; font-size: 12px; color: var(--rc-muted); letter-spacing: 2px; text-transform: uppercase; }
+    .rp-section { margin-top: 10px; border: 1px solid #e0d6bf; border-radius: 8px; padding: 8px 10px; background: #faf6ec; }
+    .rp-section h4 { margin: 0; font-size: 12px; color: var(--rc-muted); letter-spacing: 2px; text-transform: uppercase; }
+    /* Collapsible group header — title left, +/− toggle right */
+    .rp-sec-head { display: flex; align-items: center; justify-content: space-between; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    .rp-sec-toggle {
+      flex: 0 0 auto; width: 22px; height: 22px; line-height: 20px; text-align: center;
+      border: 1.5px solid var(--rc-ink); border-radius: 50%; color: var(--rc-ink);
+      font-size: 15px; font-weight: 700; user-select: none;
+    }
+    .rp-sec-body { margin-top: 4px; }
+    /* Donut (circle graph) mode */
+    .rp-donut-wrap { display: flex; gap: 12px; align-items: center; padding: 6px 0 2px; }
+    .rp-donut { flex: 0 0 108px; width: 108px; height: 108px; }
+    .rp-legend { flex: 1 1 auto; min-width: 0; }
+    .rp-leg { display: flex; gap: 6px; align-items: baseline; font-size: 12px; padding: 2px 0; }
+    .rp-leg-sw { flex: 0 0 10px; width: 10px; height: 10px; border-radius: 3px; align-self: center; }
+    .rp-leg-lbl { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .rp-leg-pct { font-family: 'Courier New', monospace; font-weight: 700; white-space: nowrap; }
+    .rp-leg-amt { font-family: 'Courier New', monospace; color: var(--rc-muted); white-space: nowrap; font-size: 11px; }
     .rp-brow { padding: 6px 0; border-bottom: 1px solid #eae2d0; }
     .rp-brow-line { display: flex; gap: 8px; align-items: baseline; }
     .rp-brow-lbl { flex: 0 0 auto; font-size: 13px; }
@@ -864,6 +881,9 @@
       <div class="rp-filters">
         <label class="rp-field"><span>Min total</span><input id="rp-min" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
         <label class="rp-field"><span>Max total</span><input id="rp-max" type="number" step="0.01" inputmode="decimal" placeholder="no limit"></label>
+      </div>
+      <div class="rp-filters">
+        <label class="rh-chk"><input type="checkbox" id="rp-circle"> Circle graphs (percentage comparison)</label>
       </div>
     </div>
     <div id="rp-note"></div>
@@ -5278,25 +5298,45 @@
         });
       })();
 
-      // ISO-8601 week key (YYYY-Www) — weeks start Monday, week 1 holds Jan 4.
-      function isoWeekKey(dateStr) {
+      // Sunday-start week key — the week's start date as YYYY-MM-DD (sortable).
+      function weekStartKey(dateStr) {
         var d = new Date(dateStr + 'T00:00:00Z');
         if (isNaN(d.getTime())) return '';
-        var day = (d.getUTCDay() + 6) % 7;
-        d.setUTCDate(d.getUTCDate() - day + 3);
-        var year = d.getUTCFullYear();
-        var jan4 = new Date(Date.UTC(year, 0, 4));
-        var week = 1 + Math.round(((d - jan4) / 86400000 - 3 + ((jan4.getUTCDay() + 6) % 7)) / 7);
-        return year + '-W' + (week < 10 ? '0' + week : week);
+        d.setUTCDate(d.getUTCDate() - d.getUTCDay());
+        return d.toISOString().substring(0, 10);
       }
 
       function bucketKey(dateStr) {
         if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr || '')) return '(no date)';
         if (rpPeriod === 'daily') return dateStr;
-        if (rpPeriod === 'weekly') return isoWeekKey(dateStr) || '(no date)';
+        if (rpPeriod === 'weekly') return weekStartKey(dateStr) || '(no date)';
         if (rpPeriod === 'monthly') return dateStr.substring(0, 7);
         if (rpPeriod === 'biannual') return dateStr.substring(0, 4) + (dateStr.substring(5, 7) <= '06' ? '-H1' : '-H2');
         return dateStr.substring(0, 4);
+      }
+
+      // Human period labels: daily "Wed, 7/29/26" · weekly "7/26/26 - 8/1/26"
+      // (Sunday–Saturday) · monthly "July 2026" · bi-annual "First Half of 2026".
+      var RP_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      var RP_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'];
+      function shortDate(d) {
+        return (d.getUTCMonth() + 1) + '/' + d.getUTCDate() + '/' + String(d.getUTCFullYear()).slice(-2);
+      }
+      function bucketLabel(k) {
+        if (k === '(no date)') return k;
+        if (rpPeriod === 'daily') {
+          var d = new Date(k + 'T00:00:00Z');
+          return RP_DAYS[d.getUTCDay()] + ', ' + shortDate(d);
+        }
+        if (rpPeriod === 'weekly') {
+          var s = new Date(k + 'T00:00:00Z');
+          var e = new Date(s.getTime() + 6 * 86400000);
+          return shortDate(s) + ' - ' + shortDate(e);
+        }
+        if (rpPeriod === 'monthly') return RP_MONTHS[parseInt(k.substring(5, 7), 10) - 1] + ' ' + k.substring(0, 4);
+        if (rpPeriod === 'biannual') return (k.slice(-2) === 'H1' ? 'First Half of ' : 'Second Half of ') + k.substring(0, 4);
+        return k;
       }
 
       function barRow(label, count, amtStr, pct, alt) {
@@ -5305,6 +5345,70 @@
           + '<span class="rp-brow-cnt">' + count + '</span>'
           + '<span class="rp-brow-amt">' + amtStr + '</span></div>'
           + '<div class="rp-bar"><div class="rp-bar-fill' + (alt ? ' rp-bar-alt' : '') + '" style="width:' + pct + '%"></div></div></div>';
+      }
+
+      // ── Collapsible report groups + circle-graph mode ────────────────
+      // Groups start minimized; the +/− toggle state lives in _rpOpen so it
+      // survives filter-driven re-renders (but resets when the card reopens).
+      var _rpOpen = {};
+      var RP_COLORS = ['#b3542e', '#3f6f42', '#8a6510', '#4a6b8a', '#7d5a7a',
+        '#2e6b6b', '#a8402e', '#5a5346', '#8a8274'];
+
+      // Donut chart via stroke-dasharray circles; legend carries the
+      // percentage labels (readable on a 390px screen where on-slice
+      // labels would collide).
+      function donutSection(rows, cur) {
+        var sum = 0;
+        rows.forEach(function(r) { sum += Math.max(0, r.value); });
+        if (!sum) return '<div class="rp-brow-cnt">No positive amounts to chart</div>';
+        // Cap at 8 slices; everything past that folds into "Other".
+        var slices = rows.slice(0, 8).map(function(r) { return { label: r.label, value: Math.max(0, r.value) }; });
+        if (rows.length > 8) {
+          var rest = 0;
+          rows.slice(8).forEach(function(r) { rest += Math.max(0, r.value); });
+          if (rest > 0) slices.push({ label: 'Other', value: rest });
+        }
+        var C = 2 * Math.PI * 40;
+        var off = 0;
+        var circles = '';
+        var legend = '';
+        slices.forEach(function(s, i) {
+          var frac = s.value / sum;
+          var color = RP_COLORS[i % RP_COLORS.length];
+          circles += '<circle r="40" cx="60" cy="60" fill="none" stroke="' + color + '" stroke-width="24" '
+            + 'stroke-dasharray="' + (frac * C).toFixed(2) + ' ' + C.toFixed(2) + '" '
+            + 'stroke-dashoffset="' + (-off * C).toFixed(2) + '"></circle>';
+          legend += '<div class="rp-leg"><span class="rp-leg-sw" style="background:' + color + '"></span>'
+            + '<span class="rp-leg-lbl">' + esc(s.label) + '</span>'
+            + '<span class="rp-leg-pct">' + (frac * 100).toFixed(frac < 0.1 ? 1 : 0) + '%</span>'
+            + '<span class="rp-leg-amt">' + cur + s.value.toFixed(2) + '</span></div>';
+          off += frac;
+        });
+        return '<div class="rp-donut-wrap">'
+          + '<svg viewBox="0 0 120 120" class="rp-donut" role="img" aria-label="Circle graph">'
+          + '<g transform="rotate(-90 60 60)">' + circles + '</g></svg>'
+          + '<div class="rp-legend">' + legend + '</div></div>';
+      }
+
+      // rows: [{label, cnt, value}] sorted; renders one collapsible group.
+      function rpSection(id, title, rows, cur, alt) {
+        var open = !!_rpOpen[id];
+        var max = 0;
+        rows.forEach(function(r) { if (r.value > max) max = r.value; });
+        var inner;
+        if (document.getElementById('rp-circle').checked) {
+          inner = donutSection(rows, cur);
+        } else {
+          inner = '';
+          rows.forEach(function(r) {
+            var pct = max ? Math.max(2, Math.round(r.value / max * 100)) : 0;
+            inner += barRow(esc(r.label), r.cnt || '', cur + r.value.toFixed(2), pct, alt);
+          });
+        }
+        return '<div class="rp-section">'
+          + '<div class="rp-sec-head" data-sec="' + id + '" role="button" aria-expanded="' + open + '">'
+          + '<h4>' + title + '</h4><span class="rp-sec-toggle">' + (open ? '−' : '+') + '</span></div>'
+          + '<div class="rp-sec-body"' + (open ? '' : ' style="display:none"') + '>' + inner + '</div></div>';
       }
 
       function renderReport() {
@@ -5379,40 +5483,46 @@
           buckets[k].count++;
         });
         var keys = Object.keys(buckets).sort().reverse();
-        var maxTotal = 0;
-        keys.forEach(function(k) { if (buckets[k].total > maxTotal) maxTotal = buckets[k].total; });
         var periodLabel = { daily: 'Daily', weekly: 'Weekly', monthly: 'Monthly', biannual: 'Bi-annual', annual: 'Annual' }[rpPeriod];
-        var html = '<div class="rp-section"><h4>' + periodLabel + ' totals</h4>';
-        keys.forEach(function(k) {
-          var b = buckets[k];
-          var pct = maxTotal ? Math.max(2, Math.round(b.total / maxTotal * 100)) : 0;
-          html += barRow(esc(k), b.count + (itemMode ? ' items' : ' receipts'), cur + b.total.toFixed(2), pct, false);
+        var periodRows = keys.map(function(k) {
+          return { label: bucketLabel(k), cnt: buckets[k].count + (itemMode ? ' items' : ' receipts'), value: buckets[k].total };
         });
-        html += '</div>';
+        var html = rpSection('period', periodLabel + ' totals', periodRows, cur, false);
 
         if (!itemMode) {
           var cats = {};
           rows.forEach(function(r) { var c = r.cat || 'Uncategorized'; cats[c] = (cats[c] || 0) + r.amount; });
           var cKeys = Object.keys(cats).sort(function(a, b) { return cats[b] - cats[a]; });
-          var cMax = cKeys.length ? cats[cKeys[0]] : 0;
-          html += '<div class="rp-section"><h4>By category</h4>';
-          cKeys.forEach(function(c) {
-            var pct = cMax ? Math.max(2, Math.round(cats[c] / cMax * 100)) : 0;
-            html += barRow(esc(c), '', cur + cats[c].toFixed(2), pct, true);
-          });
-          html += '</div>';
+          html += rpSection('cats', 'By category', cKeys.map(function(c) {
+            return { label: c, cnt: '', value: cats[c] };
+          }), cur, true);
+
+          // Department drill-down — only when the category filter is set to
+          // Groceries. byId only holds the filtered receipts, so these line
+          // items are already scoped to the Groceries receipts on screen.
+          if (cat === 'Groceries') {
+            var deps = {};
+            rpData.lineItems.forEach(function(it) {
+              if (!byId[it.receiptId]) return;
+              var dep = it.category || 'Uncategorized';
+              var a = parseFloat(it.amount);
+              deps[dep] = (deps[dep] || 0) + (isNaN(a) ? 0 : a);
+            });
+            var dKeys = Object.keys(deps).sort(function(a, b) { return deps[b] - deps[a]; });
+            if (dKeys.length) {
+              html += rpSection('depts', 'By department', dKeys.map(function(dk) {
+                return { label: dk, cnt: '', value: deps[dk] };
+              }), cur, true);
+            }
+          }
         }
 
         var merch = {};
         rows.forEach(function(r) { var m = r.merchant || '(no merchant)'; merch[m] = (merch[m] || 0) + r.amount; });
         var mKeys = Object.keys(merch).sort(function(a, b) { return merch[b] - merch[a]; }).slice(0, 8);
-        var mMax = mKeys.length ? merch[mKeys[0]] : 0;
-        html += '<div class="rp-section"><h4>Top merchants</h4>';
-        mKeys.forEach(function(m) {
-          var pct = mMax ? Math.max(2, Math.round(merch[m] / mMax * 100)) : 0;
-          html += barRow(esc(m), '', cur + merch[m].toFixed(2), pct, false);
-        });
-        html += '</div>';
+        html += rpSection('merch', 'Top merchants', mKeys.map(function(m) {
+          return { label: m, cnt: '', value: merch[m] };
+        }), cur, false);
         body.innerHTML = html;
       }
 
@@ -5439,11 +5549,28 @@
       document.getElementById('receipt-report-btn').addEventListener('click', function() {
         var showing = reportCard.style.display === 'block';
         reportCard.style.display = showing ? 'none' : 'block';
-        if (!showing) loadReportData(); // fresh data on every open; filter changes stay local
+        if (!showing) {
+          _rpOpen = {}; // every group starts minimized on a fresh open
+          loadReportData(); // fresh data on every open; filter changes stay local
+        }
       });
       document.getElementById('rp-close').addEventListener('click', function() {
         reportCard.style.display = 'none';
       });
+      // Expand/collapse a report group — delegated so it survives re-renders.
+      // Toggles in place (no re-render) to keep the tap latency at zero.
+      document.getElementById('rp-body').addEventListener('click', function(ev) {
+        var head = ev.target && ev.target.closest ? ev.target.closest('.rp-sec-head') : null;
+        if (!head) return;
+        var id = head.dataset.sec;
+        _rpOpen[id] = !_rpOpen[id];
+        var bodyEl = head.nextElementSibling;
+        if (bodyEl) bodyEl.style.display = _rpOpen[id] ? '' : 'none';
+        head.setAttribute('aria-expanded', String(!!_rpOpen[id]));
+        var tog = head.querySelector('.rp-sec-toggle');
+        if (tog) tog.textContent = _rpOpen[id] ? '−' : '+';
+      });
+      document.getElementById('rp-circle').addEventListener('change', renderReport);
       document.getElementById('rp-periods').addEventListener('click', function(ev) {
         var b = ev.target && ev.target.closest ? ev.target.closest('button') : null;
         if (!b || !b.dataset.p) return;
