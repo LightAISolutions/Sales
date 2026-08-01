@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.12w">
+  <meta name="build-version" content="v01.13w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -635,10 +635,10 @@
       font-size: 15px; font-weight: 700; user-select: none;
     }
     .rp-sec-body { margin-top: 4px; }
-    /* Donut (circle graph) mode */
-    .rp-donut-wrap { display: flex; gap: 12px; align-items: center; padding: 6px 0 2px; }
-    .rp-donut { flex: 0 0 108px; width: 108px; height: 108px; }
-    .rp-legend { flex: 1 1 auto; min-width: 0; }
+    /* Donut (circle graph) mode — large circle on top, legend rows below */
+    .rp-donut-wrap { display: flex; flex-direction: column; gap: 10px; align-items: center; padding: 8px 0 2px; }
+    .rp-donut { flex: 0 0 auto; width: min(210px, 62vw); height: auto; }
+    .rp-legend { width: 100%; min-width: 0; }
     .rp-leg { display: flex; gap: 6px; align-items: baseline; font-size: 12px; padding: 2px 0; }
     .rp-leg-sw { flex: 0 0 10px; width: 10px; height: 10px; border-radius: 3px; align-self: center; }
     .rp-leg-lbl { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -872,7 +872,7 @@
       </div>
       <div class="rp-filters">
         <select id="rp-cat" title="Major category"></select>
-        <select id="rp-subcat" title="Minor category (line items)"></select>
+        <select id="rp-subcat" title="Minor category (line items)" style="display:none"></select>
       </div>
       <div class="rp-filters">
         <label class="rp-field"><span>Start Date</span><input id="rp-from" type="date"></label>
@@ -883,7 +883,7 @@
         <label class="rp-field"><span>Max total</span><input id="rp-max" type="number" step="0.01" inputmode="decimal" placeholder="no limit"></label>
       </div>
       <div class="rp-filters">
-        <label class="rh-chk"><input type="checkbox" id="rp-circle"> Circle graphs (percentage comparison)</label>
+        <label class="rh-chk"><input type="checkbox" id="rp-circle"> Circle graphs</label>
       </div>
     </div>
     <div id="rp-note"></div>
@@ -5361,11 +5361,11 @@
         var sum = 0;
         rows.forEach(function(r) { sum += Math.max(0, r.value); });
         if (!sum) return '<div class="rp-brow-cnt">No positive amounts to chart</div>';
-        // Cap at 8 slices; everything past that folds into "Other".
-        var slices = rows.slice(0, 8).map(function(r) { return { label: r.label, value: Math.max(0, r.value) }; });
-        if (rows.length > 8) {
+        // Cap at 20 slices; everything past that folds into "Other".
+        var slices = rows.slice(0, 20).map(function(r) { return { label: r.label, value: Math.max(0, r.value) }; });
+        if (rows.length > 20) {
           var rest = 0;
-          rows.slice(8).forEach(function(r) { rest += Math.max(0, r.value); });
+          rows.slice(20).forEach(function(r) { rest += Math.max(0, r.value); });
           if (rest > 0) slices.push({ label: 'Other', value: rest });
         }
         var C = 2 * Math.PI * 40;
@@ -5585,6 +5585,14 @@
       });
       ['rp-cat', 'rp-subcat', 'rp-from', 'rp-to'].forEach(function(id) {
         document.getElementById(id).addEventListener('change', renderReport);
+      });
+      // The department dropdown only applies to Groceries — keep it hidden
+      // (and its filter cleared) for every other category selection.
+      document.getElementById('rp-cat').addEventListener('change', function() {
+        var subEl = document.getElementById('rp-subcat');
+        var isGroceries = this.value === 'Groceries';
+        subEl.style.display = isGroceries ? '' : 'none';
+        if (!isGroceries && subEl.value) { subEl.value = ''; renderReport(); }
       });
 
       // ── Month summary card (landing hero) ────────────────────────────
