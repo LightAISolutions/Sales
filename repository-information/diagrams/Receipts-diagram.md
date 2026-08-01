@@ -83,4 +83,45 @@ sequenceDiagram
 - **Two splash screens** — green "Website Ready" for HTML version changes, blue "Code Ready" for GAS version changes
 - **Audio unlock via UAv2** — since the GAS iframe covers the entire page, click events don't reach the parent document. The UAv2 poll detects `navigator.userActivation.hasBeenActive` (propagated from cross-origin iframe clicks) and unlocks AudioContext without needing a direct click on the parent
 
+## Receipt Pipeline — Upload → Extract → Review → Save
+
+Sequence for the receipts app feature (added v01.01g/v01.01w upload, v01.02g/v01.02w extraction + review + save). All routes require a validated session; the upload and save calls travel as body-POSTs with client-side retry because their payloads exceed GET URL limits.
+
+> [Open in mermaid.live — Receipt Pipeline](https://mermaid.live/edit#pako:eNqVlc9u4zYQxl9loJOCyNktWuzBbQN46_xbbLxB5EUR1EUxIscyNxTJJUd2jCBATwV6bXvssU-WJylIS964MQL0ZFnm93Hmx_no-0xYSdkwC_S5JSNorLD22MwMAIBDz0ooh4bhYyD__O359PI9YIBrEqQch6MFN_q7yh_nQaABh4Y0HIKnpaIVCPTy4LnJ2aiMHvHjR6pg5FxykPbKBt6zfuzVkpLC2lrT5nuS-K4MmFstye_bixplVBJvnkZXF0lakyGPrJak0dQt1rRHXaZCS-cJZVgQcZL2zcMhvFeGLpiaAIxVOJiZjcfEMoFdkk8Yi7IcwjV9bpWnAEHVhuRAGQgUgrIGcmx5AXNtV4CVXfaFROng-DgiH8IUHcyyMkLump5l8PjbHyCwIY_wCuZKEzglbvtzi8KtfmxXJgjUBGzh8fd_vnrz-rW7g3dXJ2eQCzRLDAfJr8JAb77ZcTgblUO4-lBOAQUra75vnbYoOwyQz61voLJy_W10_hqQmRrHoQBj4exkCnPUukJx2zV2Nip71yVqJZGp3KA4tX6MjDnbWzI7q9OZD0F4QqZTpSm_Htzc3NxcXo7Hg_PzpglhMJlMJkefXL0jjOzJhNZTV-8Uq_BLfgCHgM6RkeDtCvLAyG3oOiP5xGKL8L4DfyGLBLv__Oj1w8u86I49Ct4Ci0zQKbBuP5qu2Zo4dvp2fSHzzYYHRzXxW22rfBdlGu0oSDNNP1jDZBgef_0LVIM1pUgGZ02gUiyowdiwV4LhXflh0nsll0HfQENeLNBwAfGAChCt92TEuoDQVmwZdQGMdwV0zwKZauvXBeg-FD_9vA9jaIWgEJIvduRQM5xsKMVEpCUkSW5-fcI2hiKGaXu_gHVkAjhPg7nSmiTkqDXMFWkZgKRirHQfKdKBnu4zR6X_xyZxqteJaoOmRQ1k2K87ayP3xHYkP7WB-2peJTSg0oURw1bikrZ5fnGEAi7peeCGsJ3J7a1LcudQtyE4VVr3y3dmPlrLAjyugL6guSXHMLcesJWKn7ldk9Mo6MkF6O0qJAEvVPhS14sTsJ2UIUx2M7Q5glkWCUl4_PvPWQb5WIV0GsoEJpSgCZcUgBeUGvpvhrMia8g3qGQ2zO5nGS-ooVk2nGWS5thqnmUPWZFhy7ZcG5EN2bdUZK2LA9_9MW5ePvwLirFsyA)
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant HTML as Receipts.html<br>(scan panel + review card)
+    participant GAS as GAS Web App<br>(doPost)
+    participant Drive as Google Drive<br>(receipts folder)
+    participant Gemini as Gemini API<br>(generativelanguage)
+    participant SS as Spreadsheet<br>(Receipts + LineItems tabs)
+
+    Note over User,SS: Requires signed-in session (auth flow above)
+    User->>HTML: Tap "Scan receipt" → camera / file picker
+    HTML->>HTML: Downscale to ≤1600px JPEG (canvas) → base64
+    HTML->>GAS: POST action=uploadReceipt (form body; ≤3 attempts, no GET fallback)
+    GAS->>GAS: validateSessionForData(token)
+    GAS->>Drive: createFile(R-YYYYMMDD-HHmmss-NNNN.jpg)
+    GAS->>SS: ensureReceiptTabs_() + append row (status=uploaded)
+    GAS-->>HTML: {receiptId, fileId, fileUrl}
+    HTML->>GAS: POST action=extractReceipt (GET api op fallback)
+    GAS->>Drive: getFileById(fileId).getBlob()
+    GAS->>Gemini: generateContent — image + responseSchema (strict JSON)
+    Gemini-->>GAS: merchant, date, currency, subtotal, tax, total, category, lineItems[]
+    GAS-->>HTML: {success, data}
+    alt Extraction succeeded
+        HTML->>User: Review card opens pre-filled (all fields editable)
+    else Extraction failed
+        HTML->>User: Review card opens empty — manual entry
+    end
+    User->>HTML: Adjust fields / line items → Save receipt
+    HTML->>GAS: POST action=saveReceipt (form body: receiptId + reviewed JSON)
+    GAS->>SS: Fill receipt row (status=saved, raw extraction kept for audit)
+    GAS->>SS: Replace LineItems rows for this receiptId
+    GAS-->>HTML: {success, lineItems: N}
+    HTML->>User: "Saved ✓" (Discard instead leaves the row status=uploaded)
+```
+
 Developed by: ShadowAISolutions

@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.01w">
+  <meta name="build-version" content="v01.02w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -367,6 +367,49 @@
       width: 34px; height: 34px; object-fit: cover; border-radius: 4px;
       border: 1px solid #d0d4da; display: none;
     }
+    /* Review-before-save card — opens after extraction, below the scan panel.
+       Same layering rationale: above the GAS iframe, below the overlay walls. */
+    #receipt-review-card {
+      position: fixed; top: 72px; left: 50%; transform: translateX(-50%);
+      z-index: 6; display: none; width: min(560px, 94vw);
+      max-height: calc(100vh - 92px); overflow-y: auto;
+      background: #fff; border: 1px solid #d0d4da; border-radius: 10px;
+      padding: 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+      font: 14px/1.4 sans-serif; color: #222;
+    }
+    #receipt-review-card h3 { margin: 0 0 10px; font-size: 16px; }
+    .rr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; }
+    .rr-grid label { display: flex; flex-direction: column; font-size: 12px; color: #555; gap: 3px; }
+    .rr-grid input, .rr-grid select, .rr-items input {
+      font-size: 16px; padding: 7px 8px; border: 1px solid #c4c9d0;
+      border-radius: 6px; outline: none; width: 100%; box-sizing: border-box;
+    }
+    .rr-grid input:focus, .rr-items input:focus { border-color: #4a90d9; }
+    .rr-items { margin-top: 12px; }
+    .rr-items .rr-row {
+      display: grid; grid-template-columns: 1fr 3.2em 4.6em 5em 1.8em;
+      gap: 6px; margin-bottom: 6px; align-items: center;
+    }
+    .rr-items .rr-head { font-size: 11px; color: #777; margin-bottom: 2px; }
+    .rr-remove {
+      border: none; background: none; color: #c62828; font-size: 17px;
+      cursor: pointer; padding: 2px; line-height: 1;
+    }
+    #rr-add-item {
+      margin-top: 2px; padding: 6px 12px; font-size: 13px; border: 1px dashed #9db8d4;
+      border-radius: 6px; background: #f4f8fc; color: #2a6ebb; cursor: pointer;
+    }
+    .rr-actions { display: flex; gap: 10px; margin-top: 14px; align-items: center; }
+    #rr-save {
+      padding: 10px 22px; font-size: 15px; border: none; border-radius: 6px;
+      background: #2e7d32; color: #fff; cursor: pointer;
+    }
+    #rr-save:disabled { background: #93b995; cursor: default; }
+    #rr-discard {
+      padding: 10px 16px; font-size: 14px; border: 1px solid #c4c9d0;
+      border-radius: 6px; background: #fff; color: #555; cursor: pointer;
+    }
+    #rr-status { font-size: 13px; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -514,6 +557,31 @@
     <button id="receipt-scan-btn" type="button">📷 Scan receipt</button>
     <img id="receipt-scan-thumb" alt="">
     <span id="receipt-scan-status">Photograph or choose a receipt to upload</span>
+  </div>
+  <!-- Review-before-save card — AI-extracted fields, editable before anything
+       is written to the spreadsheet. Opens automatically after extraction;
+       also serves as the manual-entry form when extraction fails. -->
+  <div id="receipt-review-card">
+    <h3>Review receipt</h3>
+    <div class="rr-grid">
+      <label>Merchant<input id="rr-merchant" type="text" autocomplete="off"></label>
+      <label>Date<input id="rr-date" type="date"></label>
+      <label>Currency<input id="rr-currency" type="text" maxlength="3" placeholder="USD" autocomplete="off"></label>
+      <label>Category<select id="rr-category"></select></label>
+      <label>Subtotal<input id="rr-subtotal" type="number" step="0.01" inputmode="decimal"></label>
+      <label>Tax<input id="rr-tax" type="number" step="0.01" inputmode="decimal"></label>
+      <label>Total<input id="rr-total" type="number" step="0.01" inputmode="decimal"></label>
+    </div>
+    <div class="rr-items">
+      <div class="rr-row rr-head"><span>Item</span><span>Qty</span><span>Unit</span><span>Amount</span><span></span></div>
+      <div id="rr-item-rows"></div>
+      <button id="rr-add-item" type="button">+ Add item</button>
+    </div>
+    <div class="rr-actions">
+      <button id="rr-save" type="button">Save receipt</button>
+      <button id="rr-discard" type="button">Discard</button>
+      <span id="rr-status"></span>
+    </div>
   </div>
 <!-- ══════════════ -->
 <!-- PROJECT END -->
@@ -4195,11 +4263,141 @@
         });
       }
 
+      // ── Review-before-save card ──────────────────────────────────────
+      var CATEGORIES = ['Groceries', 'Dining', 'Transport', 'Health',
+        'Shopping', 'Entertainment', 'Utilities', 'Travel', 'Other'];
+      var card = document.getElementById('receipt-review-card');
+      var rrStatus = document.getElementById('rr-status');
+      var rrRows = document.getElementById('rr-item-rows');
+      var currentReceiptId = '';
+      var currentRaw = '';
+
+      (function fillCategories() {
+        var sel = document.getElementById('rr-category');
+        if (!sel) return;
+        var blank = document.createElement('option');
+        blank.value = ''; blank.textContent = '—';
+        sel.appendChild(blank);
+        CATEGORIES.forEach(function(c) {
+          var o = document.createElement('option');
+          o.value = c; o.textContent = c;
+          sel.appendChild(o);
+        });
+      })();
+
+      function setRrStatus(msg, ok) {
+        if (rrStatus) { rrStatus.textContent = msg; rrStatus.style.color = ok ? '#2e7d32' : '#c62828'; }
+      }
+
+      function addItemRow(item) {
+        var it = item || {};
+        var row = document.createElement('div');
+        row.className = 'rr-row';
+        function inp(type, val, step) {
+          var el = document.createElement('input');
+          el.type = type;
+          if (step) { el.step = step; el.inputMode = 'decimal'; }
+          if (val !== undefined && val !== null && val !== '') el.value = val;
+          return el;
+        }
+        var desc = inp('text', it.description);
+        var qty = inp('number', it.qty, '0.01');
+        var unit = inp('number', it.unitPrice, '0.01');
+        var amt = inp('number', it.amount, '0.01');
+        var del = document.createElement('button');
+        del.type = 'button'; del.className = 'rr-remove'; del.textContent = '✕';
+        del.addEventListener('click', function() { row.remove(); });
+        [desc, qty, unit, amt, del].forEach(function(el) { row.appendChild(el); });
+        rrRows.appendChild(row);
+      }
+
+      function openReviewCard(receiptId, data, note) {
+        currentReceiptId = receiptId;
+        currentRaw = data ? JSON.stringify(data) : '';
+        var d = data || {};
+        document.getElementById('rr-merchant').value = d.merchant || '';
+        document.getElementById('rr-date').value = /^\d{4}-\d{2}-\d{2}$/.test(d.date || '') ? d.date : '';
+        document.getElementById('rr-currency').value = d.currency || '';
+        document.getElementById('rr-category').value = (CATEGORIES.indexOf(d.category) >= 0) ? d.category : '';
+        document.getElementById('rr-subtotal').value = (d.subtotal || d.subtotal === 0) ? d.subtotal : '';
+        document.getElementById('rr-tax').value = (d.tax || d.tax === 0) ? d.tax : '';
+        document.getElementById('rr-total').value = (d.total || d.total === 0) ? d.total : '';
+        rrRows.innerHTML = '';
+        var items = (d.lineItems && d.lineItems.length) ? d.lineItems : [];
+        if (items.length) { items.forEach(addItemRow); } else { addItemRow(); }
+        setRrStatus(note || 'Check the fields against your receipt, then save', !note);
+        card.style.display = 'block';
+      }
+
+      function closeReviewCard() {
+        card.style.display = 'none';
+        currentReceiptId = '';
+        currentRaw = '';
+      }
+
+      function collectReview() {
+        var items = [];
+        var rows = rrRows.querySelectorAll('.rr-row');
+        rows.forEach(function(row) {
+          var f = row.querySelectorAll('input');
+          if (!f.length) return;
+          var desc = (f[0].value || '').trim();
+          var amount = f[3] ? f[3].value : '';
+          if (!desc && !amount) return; // skip empty rows
+          items.push({
+            description: desc,
+            qty: f[1] ? f[1].value : '',
+            unitPrice: f[2] ? f[2].value : '',
+            amount: amount
+          });
+        });
+        return {
+          merchant: (document.getElementById('rr-merchant').value || '').trim(),
+          date: document.getElementById('rr-date').value || '',
+          currency: (document.getElementById('rr-currency').value || '').trim().toUpperCase(),
+          category: document.getElementById('rr-category').value || '',
+          subtotal: document.getElementById('rr-subtotal').value,
+          tax: document.getElementById('rr-tax').value,
+          total: document.getElementById('rr-total').value,
+          lineItems: items,
+          raw: currentRaw
+        };
+      }
+
+      document.getElementById('rr-add-item').addEventListener('click', function() { addItemRow(); });
+      document.getElementById('rr-discard').addEventListener('click', function() {
+        closeReviewCard();
+        setStatus('Receipt kept as uploaded (not saved) — scan the next one anytime', true);
+      });
+      document.getElementById('rr-save').addEventListener('click', function() {
+        var session = loadSession();
+        if (!session.token) { setRrStatus('Sign in first', false); return; }
+        if (!currentReceiptId) { setRrStatus('No receipt selected', false); return; }
+        var saveBtn = document.getElementById('rr-save');
+        saveBtn.disabled = true;
+        setRrStatus('Saving…', true);
+        _gasPostBody({ action: 'saveReceipt', token: session.token, receiptId: currentReceiptId, data: JSON.stringify(collectReview()) })
+          .then(function(r) {
+            saveBtn.disabled = false;
+            if (r && r.success) {
+              closeReviewCard();
+              setStatus('Saved ✓ ' + (r.receiptId || '') + ' — ready for the next receipt', true);
+            } else {
+              setRrStatus('Save failed (' + ((r && r.error) || 'unknown') + ')', false);
+            }
+          })
+          .catch(function(err) {
+            saveBtn.disabled = false;
+            setRrStatus('Save failed (' + String((err && err.message) || err) + ')', false);
+          });
+      });
+
       function handleFile(file) {
         if (!file) return;
         var session = loadSession();
         if (!session.token) { setStatus('Sign in first', false); return; }
         btn.disabled = true;
+        closeReviewCard();
         setStatus('Compressing…', true);
         if (thumb) { thumb.src = URL.createObjectURL(file); thumb.style.display = 'inline-block'; }
         compressImage(file)
@@ -4209,12 +4407,30 @@
             return _gasPostBody({ action: 'uploadReceipt', token: session.token, image: b64, mime: 'image/jpeg', name: file.name || '' });
           })
           .then(function(r) {
-            btn.disabled = false;
-            if (r && r.success) {
-              setStatus('Uploaded ✓ ' + (r.receiptId || ''), true);
-            } else {
+            if (!(r && r.success)) {
+              btn.disabled = false;
               setStatus('Upload failed (' + ((r && r.error) || 'unknown') + ')', false);
+              return;
             }
+            setStatus('Uploaded ✓ ' + (r.receiptId || '') + ' — extracting…', true);
+            return _gasPost({ action: 'extractReceipt', token: session.token, fileId: r.fileId || '' })
+              .then(function(x) {
+                btn.disabled = false;
+                if (x && x.success && x.data) {
+                  setStatus('Extracted ✓ — review below', true);
+                  openReviewCard(r.receiptId, x.data);
+                } else {
+                  setStatus('Uploaded ✓ (extraction failed)', false);
+                  openReviewCard(r.receiptId, null,
+                    'Extraction failed (' + ((x && x.error) || 'unknown') + ') — enter the details manually');
+                }
+              })
+              .catch(function(xErr) {
+                btn.disabled = false;
+                setStatus('Uploaded ✓ (extraction failed)', false);
+                openReviewCard(r.receiptId, null,
+                  'Extraction failed (' + String((xErr && xErr.message) || xErr) + ') — enter the details manually');
+              });
           })
           .catch(function(err) {
             btn.disabled = false;

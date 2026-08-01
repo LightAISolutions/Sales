@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 1/50`
+`Sections: 2/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.02g] — 2026-08-01 03:07:59 AM EST — v01.18r
+
+### Added
+- Receipt photos are now read automatically using AI to pull out the merchant, date, totals, tax, and each purchased item
+- Confirmed receipt details are saved into organized spreadsheet columns, with individual items stored separately for easy analysis
+- Saving the same receipt again cleanly replaces its earlier details instead of duplicating them
 
 ## [v01.01g] — 2026-08-01 02:26:53 AM EST — v01.17r
 

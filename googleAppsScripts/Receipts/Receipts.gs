@@ -1,4 +1,4 @@
-var VERSION = "v01.01g";
+var VERSION = "v01.02g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -323,6 +323,15 @@ var DRIVE_FOLDER_ID = "1DHfXwzo0qXI_2H0Q2dDLKGn7EOtguI0A";
 var RECEIPTS_TAB = "Receipts";
 var LINEITEMS_TAB = "LineItems";
 
+// Gemini model for receipt extraction (free-tier Flash family; one-line switch
+// to newer models, e.g. "gemini-3.6-flash"). API key lives ONLY in Script
+// Properties under GEMINI_API_KEY — never in the repo.
+var GEMINI_MODEL = "gemini-3.5-flash";
+
+// Spending categories offered by extraction and the review screen.
+var RECEIPT_CATEGORIES = ["Groceries", "Dining", "Transport", "Health",
+  "Shopping", "Entertainment", "Utilities", "Travel", "Other"];
+
 /**
  * Idempotent tab bootstrap — creates the Receipts and LineItems tabs with
  * frozen header rows if they don't exist yet. Safe to call on every write.
@@ -383,7 +392,123 @@ function uploadReceipt(sessionToken, imageBase64, mimeType, fileName) {
     receiptId, new Date(), user.email, '', '', '', '', '', '', '',
     fileUrl, 'uploaded', ''
   ]);
-  return { success: true, receiptId: receiptId, fileUrl: fileUrl };
+  return { success: true, receiptId: receiptId, fileId: file.getId(), fileUrl: fileUrl };
+}
+
+/**
+ * AI extraction — reads the uploaded photo back from Drive and asks Gemini
+ * for strict JSON (merchant, date, currency, subtotal, tax, total, category,
+ * line items) via responseSchema. Returns the parsed object; the client shows
+ * it in the review-before-save screen — nothing is written here.
+ */
+function extractReceipt(sessionToken, fileId) {
+  validateSessionForData(sessionToken, 'extractReceipt');
+  var apiKey = PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY') || '';
+  if (!apiKey) return { success: false, error: 'gemini_key_missing' };
+  if (!fileId) return { success: false, error: 'no_file_id' };
+  var blob;
+  try { blob = DriveApp.getFileById(fileId).getBlob(); }
+  catch (fErr) { return { success: false, error: 'file_not_found' }; }
+  var schema = {
+    type: "object",
+    properties: {
+      merchant: { type: "string" },
+      date: { type: "string", description: "Receipt date as YYYY-MM-DD; empty string if unreadable" },
+      currency: { type: "string", description: "3-letter ISO code, e.g. USD" },
+      subtotal: { type: "number" },
+      tax: { type: "number" },
+      total: { type: "number" },
+      category: { type: "string", enum: RECEIPT_CATEGORIES },
+      lineItems: {
+        type: "array",
+        items: {
+          type: "object",
+          properties: {
+            description: { type: "string" },
+            qty: { type: "number" },
+            unitPrice: { type: "number" },
+            amount: { type: "number" }
+          },
+          required: ["description", "amount"]
+        }
+      }
+    },
+    required: ["merchant", "date", "total", "lineItems"]
+  };
+  var payload = {
+    contents: [{
+      parts: [
+        { text: "Extract the data from this receipt photo. Use an empty string or 0 for unreadable fields. Line items are the purchased products/services only — do not include subtotal, tax, or total rows as line items." },
+        { inline_data: { mime_type: blob.getContentType() || 'image/jpeg', data: Utilities.base64Encode(blob.getBytes()) } }
+      ]
+    }],
+    generationConfig: { responseMimeType: "application/json", responseSchema: schema, temperature: 0 }
+  };
+  var resp = UrlFetchApp.fetch(
+    'https://generativelanguage.googleapis.com/v1beta/models/' + GEMINI_MODEL + ':generateContent',
+    { method: 'post', contentType: 'application/json', headers: { 'x-goog-api-key': apiKey },
+      payload: JSON.stringify(payload), muteHttpExceptions: true });
+  var code = resp.getResponseCode();
+  if (code !== 200) {
+    var msg = '';
+    try { msg = (JSON.parse(resp.getContentText()).error || {}).message || ''; } catch (pe) {}
+    return { success: false, error: 'gemini_http_' + code + (msg ? ': ' + msg.substring(0, 200) : '') };
+  }
+  var extracted;
+  try {
+    extracted = JSON.parse(JSON.parse(resp.getContentText()).candidates[0].content.parts[0].text);
+  } catch (xErr) {
+    return { success: false, error: 'gemini_parse_failed' };
+  }
+  return { success: true, data: extracted };
+}
+
+/**
+ * Review-confirmed save — fills the receipt's row (matched by Receipt ID) and
+ * replaces its LineItems rows. The raw extraction JSON is kept in the row for
+ * audit. Idempotent: re-saving the same receipt overwrites cleanly.
+ */
+function saveReceipt(sessionToken, receiptId, dataJson) {
+  validateSessionForData(sessionToken, 'saveReceipt');
+  var rid = String(receiptId || '').trim();
+  if (!rid) return { success: false, error: 'no_receipt_id' };
+  var data;
+  try { data = JSON.parse(String(dataJson || '{}')); }
+  catch (jErr) { return { success: false, error: 'bad_json' }; }
+  var tabs = ensureReceiptTabs_();
+  var sheet = tabs.receipts;
+  var ids = sheet.getRange(1, 1, Math.max(sheet.getLastRow(), 1), 1).getValues();
+  var rowIdx = -1;
+  for (var i = 1; i < ids.length; i++) {
+    if (String(ids[i][0]) === rid) { rowIdx = i + 1; break; }
+  }
+  if (rowIdx === -1) return { success: false, error: 'receipt_not_found' };
+  var num = function(v) { var n = parseFloat(v); return isNaN(n) ? '' : n; };
+  // Receipts columns: A Receipt ID … D Receipt Date, E Merchant, F Currency,
+  // G Subtotal, H Tax, I Total, J Category, K Image Link, L Status, M Raw Extraction
+  sheet.getRange(rowIdx, 4, 1, 7).setValues([[
+    String(data.date || ''), String(data.merchant || ''), String(data.currency || ''),
+    num(data.subtotal), num(data.tax), num(data.total), String(data.category || '')
+  ]]);
+  sheet.getRange(rowIdx, 12, 1, 2).setValues([['saved', String(data.raw || '')]]);
+  var li = tabs.lineItems;
+  var last = li.getLastRow();
+  if (last > 1) {
+    var liIds = li.getRange(2, 1, last - 1, 1).getValues();
+    for (var r = liIds.length - 1; r >= 0; r--) {
+      if (String(liIds[r][0]) === rid) li.deleteRow(r + 2);
+    }
+  }
+  var items = (data.lineItems && data.lineItems.length) ? data.lineItems : [];
+  if (items.length) {
+    var rows = [];
+    for (var k = 0; k < items.length; k++) {
+      var it = items[k] || {};
+      rows.push([rid, k + 1, String(it.description || ''), num(it.qty), num(it.unitPrice), num(it.amount)]);
+    }
+    li.getRange(li.getLastRow() + 1, 1, rows.length, 6).setValues(rows);
+  }
+  return { success: true, receiptId: rid, lineItems: items.length };
 }
 
 // ══════════════
@@ -907,6 +1032,36 @@ function doPost(e) {
       upResult = { success: false, error: String((upErr && upErr.message) || upErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(upResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts AI extraction via fetch() — session-validated read (Gemini).
+  if (action === "extractReceipt") {
+    var exResult;
+    try {
+      exResult = extractReceipt(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.fileId) || "");
+    } catch (exErr) {
+      exResult = { success: false, error: String((exErr && exErr.message) || exErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(exResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts review-confirmed save via fetch() — session-validated write.
+  // Body-POST only (the reviewed JSON can exceed GET URL limits).
+  if (action === "saveReceipt") {
+    var svResult;
+    try {
+      svResult = saveReceipt(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.receiptId) || "",
+        (e && e.parameter && e.parameter.data) || "");
+    } catch (svErr) {
+      svResult = { success: false, error: String((svErr && svErr.message) || svErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(svResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -2175,6 +2330,9 @@ function doGet(e) {
         apiResult = processSignOut(apiToken);
       } else if (apiOp === 'heartbeat') {
         apiResult = processHeartbeat(apiToken);
+      } else if (apiOp === 'extractReceipt') {
+        // PROJECT: Receipts AI extraction (GET fallback — params are small)
+        apiResult = extractReceipt(apiToken, (e && e.parameter && e.parameter.fileId) || '');
       } else {
         apiResult = { error: 'unknown_op' };
       }
