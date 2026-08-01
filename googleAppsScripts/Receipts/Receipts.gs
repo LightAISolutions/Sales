@@ -1,4 +1,4 @@
-var VERSION = "v01.08g";
+var VERSION = "v01.09g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -657,6 +657,62 @@ function getReceiptDetail(sessionToken, receiptId) {
     }
   }
   return { success: true, receipt: receipt, lineItems: items };
+}
+
+/**
+ * Reports dataset — every SAVED receipt (optionally date-bounded) plus all of
+ * their line items, in compact arrays. One call feeds the client-side Reports
+ * card, which does all aggregation and filtering locally so every filter
+ * change is instant (no server round-trip per keystroke). Capped at 2000
+ * receipts — far above personal-use volume, guards the JSON payload size.
+ */
+function reportReceipts(sessionToken, dateFrom, dateTo) {
+  validateSessionForData(sessionToken, 'reportReceipts');
+  var tabs = ensureReceiptTabs_();
+  var sh = tabs.receipts;
+  var last = sh.getLastRow();
+  if (last < 2) return { success: true, receipts: [], lineItems: [] };
+  var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+  var from = String(dateFrom || '').trim();
+  var to = String(dateTo || '').trim();
+  var receipts = [];
+  var included = {};
+  for (var i = 0; i < vals.length && receipts.length < 2000; i++) {
+    var r = vals[i];
+    if (String(r[11] || '') !== 'saved') continue;
+    var rDate = (r[3] instanceof Date)
+      ? Utilities.formatDate(r[3], 'UTC', 'yyyy-MM-dd') : String(r[3] || '');
+    if ((from || to) && !rDate) continue;
+    if (from && rDate < from) continue;
+    if (to && rDate > to) continue;
+    var id = String(r[0] || '');
+    included[id] = true;
+    receipts.push({
+      id: id,
+      date: rDate,
+      merchant: String(r[4] || ''),
+      currency: String(r[5] || ''),
+      total: (r[8] === '' || r[8] === null) ? '' : r[8],
+      category: String(r[9] || '')
+    });
+  }
+  var lineItems = [];
+  var li = tabs.lineItems;
+  var liLast = li.getLastRow();
+  if (liLast > 1) {
+    var liVals = li.getRange(2, 1, liLast - 1, 7).getValues();
+    for (var k = 0; k < liVals.length; k++) {
+      var rid = String(liVals[k][0] || '');
+      if (!included[rid]) continue;
+      lineItems.push({
+        receiptId: rid,
+        description: String(liVals[k][2] || ''),
+        amount: (liVals[k][5] === '' || liVals[k][5] === null) ? '' : liVals[k][5],
+        category: String(liVals[k][6] || '')
+      });
+    }
+  }
+  return { success: true, receipts: receipts, lineItems: lineItems };
 }
 
 /**
@@ -1709,6 +1765,21 @@ function doPost(e) {
       xpResult = { success: false, error: String((xpErr && xpErr.message) || xpErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(xpResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts reports dataset via fetch() — session-validated read.
+  if (action === "reportReceipts") {
+    var rpResult;
+    try {
+      rpResult = reportReceipts(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.from) || "",
+        (e && e.parameter && e.parameter.to) || "");
+    } catch (rpErr) {
+      rpResult = { success: false, error: String((rpErr && rpErr.message) || rpErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(rpResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -3004,6 +3075,11 @@ function doGet(e) {
           (e && e.parameter && e.parameter.to) || '',
           (e && e.parameter && e.parameter.uploaded) || '',
           (e && e.parameter && e.parameter.cat) || '');
+      } else if (apiOp === 'reportReceipts') {
+        // PROJECT: Receipts reports dataset (GET fallback)
+        apiResult = reportReceipts(apiToken,
+          (e && e.parameter && e.parameter.from) || '',
+          (e && e.parameter && e.parameter.to) || '');
       } else {
         apiResult = { error: 'unknown_op' };
       }

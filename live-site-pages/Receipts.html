@@ -12,12 +12,12 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.10w">
+  <meta name="build-version" content="v01.11w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
   <link rel="manifest" href="receipts.webmanifest">
-  <meta name="theme-color" content="#4a90d9">
+  <meta name="theme-color" content="#e9e3d6">
   <link rel="apple-touch-icon" href="images/receipts-icon-192.png">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -348,63 +348,106 @@
 /* PROJECT START */
 /* ══════════════ */
     .html-layer-hidden { display: none !important; }
-    /* Receipt scan panel — above the GAS iframe (z-index 1), below every
-       overlay wall (10002+), so the auth wall hides it until sign-in */
+    /* ── Paper Ledger theme (chosen landing design) ──
+       Cream paper + ink + serif type; every receipts surface shares these. */
+    :root {
+      --rc-ink: #232019; --rc-paper: #f7f3ea; --rc-page: #e9e3d6;
+      --rc-line: #c9c0ad; --rc-muted: #8a8274; --rc-accent: #b3542e;
+      --rc-ok: #3f6f42; --rc-err: #a8402e;
+      --rc-serif: Georgia, 'Times New Roman', serif;
+    }
+    /* Full-screen cream page behind the panel — sits above the GAS iframe
+       (z-index 1) and below all receipts cards. Toggleable via the HTML
+       layer toggle so the GAS admin UI stays reachable. */
+    #receipt-backdrop { position: fixed; inset: 0; z-index: 4; background: var(--rc-page); }
+    /* Receipt scan panel — above the backdrop, below every overlay wall
+       (10002+), so the auth wall hides it until sign-in */
     #receipt-scan-panel {
-      position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
-      z-index: 5; display: flex; flex-direction: column; gap: 8px;
+      position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+      z-index: 5; display: flex; flex-direction: column; gap: 11px;
       align-items: stretch; width: min(420px, 92vw);
-      background: #fff; border: 1px solid #d0d4da; border-radius: 8px;
-      padding: 10px 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      max-height: calc(100vh - 66px);
+      max-height: calc(100dvh - 66px);
+      overflow-y: auto;
+      color: var(--rc-ink); font: 15px/1.5 var(--rc-serif);
     }
-    .rsp-row { display: flex; gap: 10px; align-items: center; }
-    #receipt-scan-btn {
-      padding: 10px 18px; font-size: 15px; border: none; border-radius: 6px;
-      background: #4a90d9; color: #fff; cursor: pointer; white-space: nowrap;
+    .rsp-brand { display: flex; align-items: baseline; justify-content: space-between; margin: 2px 2px 0; }
+    .rsp-brand h2 { margin: 0; font: 600 26px/1.2 var(--rc-serif); letter-spacing: .5px; }
+    .rsp-brand span { color: var(--rc-muted); font-size: 12.5px; font-style: italic; }
+    /* Month summary — printed-receipt card with perforated bottom edge */
+    #rcpt-month {
+      background: var(--rc-paper); border-radius: 3px 3px 0 0;
+      padding: 14px 16px 12px; box-shadow: 0 4px 16px rgba(35,32,25,0.16);
+      position: relative; margin-bottom: 9px;
     }
-    #receipt-scan-btn:disabled { background: #9db8d4; cursor: default; }
-    #receipt-scan-status { font-size: 13px; color: #444; }
+    #rcpt-month:after {
+      content: ''; position: absolute; left: 0; right: 0; bottom: -9px; height: 9px;
+      background: radial-gradient(circle at 9px -3px, transparent 9px, var(--rc-paper) 9.5px);
+      background-size: 18px 9px;
+    }
+    .rm-title { font-size: 10.5px; letter-spacing: 3.5px; text-transform: uppercase; color: var(--rc-muted); text-align: center; }
+    .rm-amt { font: 600 36px/1.15 var(--rc-serif); text-align: center; margin: 7px 0 2px; }
+    .rm-sub { text-align: center; color: var(--rc-muted); font-size: 12.5px; }
+    .rm-dash { border-top: 1.5px dashed var(--rc-line); margin: 11px 0 7px; }
+    .rm-row { display: flex; justify-content: space-between; font-size: 13px; padding: 2px 0; color: #4a4438; }
+    .rm-row b { font-family: 'Courier New', monospace; font-size: 12.5px; }
+    /* Action buttons — ink-outlined paper buttons, solid-ink primary */
+    .rbtn {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      width: 100%; box-sizing: border-box; padding: 13px 14px;
+      font: 600 15.5px var(--rc-serif); border-radius: 6px;
+      border: 1.5px solid var(--rc-ink); background: var(--rc-paper);
+      color: var(--rc-ink); cursor: pointer; white-space: nowrap;
+    }
+    .rbtn-primary { background: var(--rc-ink); color: var(--rc-paper); box-shadow: 0 3px 0 #a39a86; }
+    .rbtn:disabled { opacity: 0.45; cursor: default; }
+    .rsp-row { display: flex; gap: 11px; align-items: center; }
+    .rsp-row .rbtn { flex: 1 1 0; padding: 12px 8px; font-size: 14.5px; }
+    .rsp-status-row { display: flex; gap: 10px; align-items: center; justify-content: center; min-height: 20px; }
+    #receipt-scan-status {
+      font-size: 12.5px; color: var(--rc-muted); font-style: italic; text-align: center;
+    }
     /* Pipeline progress bar — stepped percentages per stage
        (Compressing → Uploading → Extracting → Done / Saving → Saved) */
     #receipt-progress {
-      height: 6px; background: #e8ebef; border-radius: 3px;
+      height: 6px; background: #ddd5c2; border-radius: 3px;
       overflow: hidden; display: none;
     }
     #receipt-progress-fill {
-      height: 100%; width: 0%; background: #4a90d9; border-radius: 3px;
+      height: 100%; width: 0%; background: var(--rc-accent); border-radius: 3px;
       transition: width 0.45s ease;
     }
-    #receipt-progress-fill.rp-done { background: #2e7d32; }
+    #receipt-progress-fill.rp-done { background: var(--rc-ok); }
     #receipt-scan-thumb {
       width: 34px; height: 34px; object-fit: cover; border-radius: 4px;
-      border: 1px solid #d0d4da; display: none;
+      border: 1px solid var(--rc-line); display: none;
     }
-    /* Review-before-save card — opens after extraction, below the scan panel.
-       Same layering rationale: above the GAS iframe, below the overlay walls. */
+    /* Review-before-save card — opens after extraction, over the scan panel.
+       Same layering rationale: above the backdrop, below the overlay walls. */
     #receipt-review-card {
-      /* top clears the full scan panel (buttons + status + progress rows) */
-      position: fixed; top: 128px; left: 50%; transform: translateX(-50%);
+      position: fixed; top: 76px; left: 50%; transform: translateX(-50%);
       z-index: 6; display: none; width: min(560px, 94vw);
       /* Mobile viewport fix: 100vh includes the area behind the browser URL
          bar, which pushed the card's bottom (and the Save button) off-screen.
          dvh tracks the real visible height; the vh line is the fallback for
          older browsers. Bottom clearance also keeps the card above the
          version pills. */
-      max-height: calc(100vh - 226px);
-      max-height: calc(100dvh - 226px);
+      max-height: calc(100vh - 170px);
+      max-height: calc(100dvh - 170px);
       overflow-y: auto;
-      background: #fff; border: 1px solid #d0d4da; border-radius: 10px;
-      padding: 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.18);
-      font: 14px/1.4 sans-serif; color: #222;
+      background: var(--rc-paper); border: 1px solid #d8cfba; border-radius: 8px;
+      padding: 14px; box-shadow: 0 6px 22px rgba(35,32,25,0.22);
+      font: 14px/1.4 var(--rc-serif); color: var(--rc-ink);
     }
-    #receipt-review-card h3 { margin: 0 0 10px; font-size: 16px; }
+    #receipt-review-card h3 { margin: 0 0 10px; font-size: 17px; font-weight: 600; }
     .rr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; }
-    .rr-grid label { display: flex; flex-direction: column; font-size: 12px; color: #555; gap: 3px; }
+    .rr-grid label { display: flex; flex-direction: column; font-size: 12px; color: var(--rc-muted); gap: 3px; }
     .rr-grid input, .rr-grid select, .rr-items input {
-      font-size: 16px; padding: 7px 8px; border: 1px solid #c4c9d0;
+      font-size: 16px; padding: 7px 8px; border: 1px solid var(--rc-line);
       border-radius: 6px; outline: none; width: 100%; box-sizing: border-box;
+      background: #fffdf8; color: var(--rc-ink);
     }
-    .rr-grid input:focus, .rr-items input:focus { border-color: #4a90d9; }
+    .rr-grid input:focus, .rr-items input:focus { border-color: var(--rc-ink); }
     .rr-items { margin-top: 12px; }
     .rr-items .rr-item { margin-bottom: 10px; }
     .rr-items .rr-row {
@@ -413,75 +456,70 @@
     }
     /* Per-item department selector — second line of each item row */
     .rr-items .rr-cat {
-      font-size: 13px; padding: 4px 6px; border: 1px solid #d6dae0;
-      border-radius: 5px; background: #f7f9fb; color: #555;
+      font-size: 13px; padding: 4px 6px; border: 1px solid var(--rc-line);
+      border-radius: 5px; background: #f1ebdd; color: #5a5346;
       max-width: 60%; outline: none;
     }
-    .rr-items .rr-head { font-size: 11px; color: #777; margin-bottom: 2px; }
+    .rr-items .rr-head { font-size: 11px; color: var(--rc-muted); margin-bottom: 2px; }
     .rr-remove {
-      border: none; background: none; color: #c62828; font-size: 17px;
+      border: none; background: none; color: var(--rc-err); font-size: 17px;
       cursor: pointer; padding: 2px; line-height: 1;
     }
     #rr-add-item {
-      margin-top: 2px; padding: 6px 12px; font-size: 13px; border: 1px dashed #9db8d4;
-      border-radius: 6px; background: #f4f8fc; color: #2a6ebb; cursor: pointer;
+      margin-top: 2px; padding: 6px 12px; font-size: 13px; border: 1px dashed var(--rc-line);
+      border-radius: 6px; background: #f1ebdd; color: var(--rc-accent); cursor: pointer;
+      font-family: var(--rc-serif);
     }
     /* Sticky action bar — Save/Discard/Retry stay visible at the card's
        bottom edge while the fields and item list scroll underneath. */
     .rr-actions {
       display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
       position: sticky; bottom: -14px; /* counters the card's 14px padding */
-      background: #fff; border-top: 1px solid #e5e8ec;
+      background: var(--rc-paper); border-top: 1px solid #e2d9c6;
       margin: 14px -14px -14px; padding: 10px 14px 12px;
     }
     #rr-save {
-      padding: 10px 22px; font-size: 15px; border: none; border-radius: 6px;
-      background: #2e7d32; color: #fff; cursor: pointer;
+      padding: 10px 22px; font-size: 15px; border: 1.5px solid var(--rc-ink); border-radius: 6px;
+      background: var(--rc-ink); color: var(--rc-paper); cursor: pointer; font-family: var(--rc-serif); font-weight: 600;
     }
-    #rr-save:disabled { background: #93b995; cursor: default; }
+    #rr-save:disabled { opacity: 0.45; cursor: default; }
     #rr-discard {
-      padding: 10px 16px; font-size: 14px; border: 1px solid #c4c9d0;
-      border-radius: 6px; background: #fff; color: #555; cursor: pointer;
+      padding: 10px 16px; font-size: 14px; border: 1.5px solid var(--rc-line);
+      border-radius: 6px; background: var(--rc-paper); color: #5a5346; cursor: pointer; font-family: var(--rc-serif);
     }
     #rr-retry {
-      padding: 10px 16px; font-size: 14px; border: 1px solid #e0a03c;
-      border-radius: 6px; background: #fff7ea; color: #a86a00; cursor: pointer;
-      display: none;
+      padding: 10px 16px; font-size: 14px; border: 1px solid #cf9b3c;
+      border-radius: 6px; background: #f6ecd6; color: #8a6510; cursor: pointer;
+      display: none; font-family: var(--rc-serif);
     }
-    #rr-retry:disabled { color: #c9b58e; border-color: #ead9bd; cursor: default; }
-    /* History button in the scan panel */
-    #receipt-history-btn {
-      padding: 10px 14px; font-size: 15px; border: 1px solid #c4c9d0;
-      border-radius: 6px; background: #fff; color: #333; cursor: pointer;
-      white-space: nowrap;
-    }
+    #rr-retry:disabled { opacity: 0.5; cursor: default; }
     /* History card — same layering + dvh sizing rationale as the review card,
        but z-index 7 so it overlays the review card when both are open. */
     #receipt-history-card {
-      position: fixed; top: 128px; left: 50%; transform: translateX(-50%);
+      position: fixed; top: 76px; left: 50%; transform: translateX(-50%);
       z-index: 7; display: none; width: min(560px, 94vw);
-      max-height: calc(100vh - 226px);
-      max-height: calc(100dvh - 226px);
+      max-height: calc(100vh - 170px);
+      max-height: calc(100dvh - 170px);
       overflow-y: auto;
-      background: #fff; border: 1px solid #d0d4da; border-radius: 10px;
-      padding: 0 14px 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.18);
-      font: 14px/1.4 sans-serif; color: #222;
+      background: var(--rc-paper); border: 1px solid #d8cfba; border-radius: 8px;
+      padding: 0 14px 14px; box-shadow: 0 6px 22px rgba(35,32,25,0.22);
+      font: 14px/1.4 var(--rc-serif); color: var(--rc-ink);
     }
     .rh-head {
-      position: sticky; top: 0; background: #fff; z-index: 1;
+      position: sticky; top: 0; background: var(--rc-paper); z-index: 1;
       margin: 0 -14px; padding: 12px 14px 10px;
-      border-bottom: 1px solid #e5e8ec;
+      border-bottom: 1px solid #e2d9c6;
     }
-    .rh-head h3 { margin: 0 0 8px; font-size: 16px; display: inline-block; }
+    .rh-head h3 { margin: 0 0 8px; font-size: 17px; font-weight: 600; display: inline-block; }
     #rh-close {
       float: right; border: none; background: none; font-size: 18px;
-      color: #777; cursor: pointer; padding: 2px 4px; line-height: 1;
+      color: var(--rc-muted); cursor: pointer; padding: 2px 4px; line-height: 1;
     }
     .rh-filters { display: flex; gap: 6px; flex-wrap: wrap; }
     .rh-filters input, .rh-filters select {
-      font-size: 16px; padding: 7px 8px; border: 1px solid #c4c9d0;
+      font-size: 16px; padding: 7px 8px; border: 1px solid var(--rc-line);
       border-radius: 6px; outline: none; box-sizing: border-box;
-      background: #fff; color: inherit;
+      background: #fffdf8; color: inherit;
     }
     #rh-search { flex: 1 1 140px; min-width: 0; }
     .rh-dates, .rh-cat-row { margin-top: 8px; }
@@ -489,48 +527,121 @@
        can't show placeholder text the way the merchant search box does. */
     .rh-field {
       flex: 1 1 0; min-width: 0; display: flex; flex-direction: column;
-      gap: 3px; font-size: 12px; color: #777;
+      gap: 3px; font-size: 12px; color: var(--rc-muted);
     }
     .rh-field input { width: 100%; }
     #rh-cat { flex: 1 1 100%; }
     #rh-go {
-      padding: 7px 14px; font-size: 14px; border: none; border-radius: 6px;
-      background: #4a90d9; color: #fff; cursor: pointer;
+      padding: 7px 14px; font-size: 14px; border: 1.5px solid var(--rc-ink); border-radius: 6px;
+      background: var(--rc-ink); color: var(--rc-paper); cursor: pointer; font-family: var(--rc-serif);
     }
     .rh-filters-2 {
       margin-top: 8px; align-items: center; justify-content: space-between;
     }
-    .rh-chk { font-size: 13px; color: #555; display: flex; align-items: center; gap: 6px; }
-    .rh-chk input { width: 16px; height: 16px; }
+    .rh-chk { font-size: 13px; color: #5a5346; display: flex; align-items: center; gap: 6px; }
+    .rh-chk input { width: 16px; height: 16px; accent-color: var(--rc-ink); }
     #rh-export {
-      padding: 7px 12px; font-size: 13px; border: 1px solid #2e7d32;
-      border-radius: 6px; background: #f2f9f2; color: #2e7d32; cursor: pointer;
-      white-space: nowrap;
+      padding: 7px 12px; font-size: 13px; border: 1px solid var(--rc-ok);
+      border-radius: 6px; background: #edf2e8; color: var(--rc-ok); cursor: pointer;
+      white-space: nowrap; font-family: var(--rc-serif);
     }
-    #rh-export:disabled { color: #93b995; border-color: #cfe3cf; cursor: default; }
+    #rh-export:disabled { opacity: 0.5; cursor: default; }
     .rh-row {
       display: flex; gap: 8px; align-items: baseline; padding: 10px 2px;
-      border-bottom: 1px solid #f0f2f4; cursor: pointer;
+      border-bottom: 1px solid #eae2d0; cursor: pointer;
     }
     .rh-del {
-      border: none; background: none; color: #c62828; cursor: pointer;
+      border: none; background: none; color: var(--rc-err); cursor: pointer;
       font-size: 14px; padding: 2px 4px; line-height: 1; white-space: nowrap;
       border-radius: 5px;
     }
-    .rh-del.rh-del-arm { background: #c62828; color: #fff; font-size: 12px; padding: 4px 7px; }
-    .rh-row .rh-date { color: #777; font-size: 12px; flex: 0 0 5.6em; }
+    .rh-del.rh-del-arm { background: var(--rc-err); color: #fff; font-size: 12px; padding: 4px 7px; }
+    .rh-row .rh-date { color: var(--rc-muted); font-size: 12px; flex: 0 0 6.6em; font-family: 'Courier New', monospace; white-space: nowrap; }
     .rh-row .rh-merchant { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .rh-row .rh-total { font-weight: 600; white-space: nowrap; }
+    .rh-row .rh-total { font-weight: 600; white-space: nowrap; font-family: 'Courier New', monospace; font-size: 13px; }
     .rh-row .rh-status { font-size: 11px; }
     .rh-detail {
-      background: #f7f9fb; border-radius: 8px; padding: 10px 12px;
+      background: #f1ebdd; border-radius: 8px; padding: 10px 12px;
       margin: 4px 0 10px; font-size: 13px; display: none;
     }
     .rh-detail table { width: 100%; border-collapse: collapse; margin-top: 6px; }
     .rh-detail td { padding: 3px 4px 3px 0; vertical-align: top; }
-    .rh-detail td.num { text-align: right; white-space: nowrap; }
-    #rh-empty { color: #777; padding: 16px 4px; }
+    .rh-detail td.num { text-align: right; white-space: nowrap; font-family: 'Courier New', monospace; font-size: 12px; }
+    #rh-empty { color: var(--rc-muted); padding: 16px 4px; }
     #rr-status { font-size: 13px; }
+    /* Batch review position — "· 2 of 8" chip inside the review card title */
+    #rr-queue-pos { font-size: 13px; color: var(--rc-muted); font-weight: normal; }
+    /* Reports card — same layering + dvh sizing rationale as history, but
+       z-index 8 so it overlays both the review and history cards. */
+    #receipt-report-card {
+      position: fixed; top: 76px; left: 50%; transform: translateX(-50%);
+      z-index: 8; display: none; width: min(560px, 94vw);
+      max-height: calc(100vh - 170px);
+      max-height: calc(100dvh - 170px);
+      overflow-y: auto;
+      background: var(--rc-paper); border: 1px solid #d8cfba; border-radius: 8px;
+      padding: 0 14px 14px; box-shadow: 0 6px 22px rgba(35,32,25,0.22);
+      font: 14px/1.4 var(--rc-serif); color: var(--rc-ink);
+    }
+    .rp-head {
+      position: sticky; top: 0; background: var(--rc-paper); z-index: 1;
+      margin: 0 -14px; padding: 12px 14px 10px;
+      border-bottom: 1px solid #e2d9c6;
+    }
+    .rp-head h3 { margin: 0 0 8px; font-size: 17px; font-weight: 600; display: inline-block; }
+    #rp-close {
+      float: right; border: none; background: none; font-size: 18px;
+      color: var(--rc-muted); cursor: pointer; padding: 2px 4px; line-height: 1;
+    }
+    /* Period segmented control — one active segment at a time */
+    #rp-periods { display: flex; gap: 0; margin-bottom: 8px; border: 1.5px solid var(--rc-ink); border-radius: 6px; overflow: hidden; }
+    #rp-periods button {
+      flex: 1 1 0; padding: 7px 2px; font-size: 12px; border: none;
+      background: var(--rc-paper); color: #5a5346; cursor: pointer;
+      border-left: 1px solid #e2d9c6; font-family: var(--rc-serif);
+    }
+    #rp-periods button:first-child { border-left: none; }
+    #rp-periods button.rp-on { background: var(--rc-ink); color: var(--rc-paper); }
+    .rp-filters { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+    .rp-filters input, .rp-filters select {
+      font-size: 16px; padding: 7px 8px; border: 1px solid var(--rc-line);
+      border-radius: 6px; outline: none; box-sizing: border-box;
+      background: #fffdf8; color: inherit;
+    }
+    #rp-merchant { flex: 1 1 140px; min-width: 0; }
+    #rp-cat, #rp-subcat { flex: 1 1 0; min-width: 0; }
+    .rp-field {
+      flex: 1 1 0; min-width: 0; display: flex; flex-direction: column;
+      gap: 3px; font-size: 12px; color: var(--rc-muted);
+    }
+    .rp-field input { width: 100%; }
+    #rp-note { color: #8a6510; font-size: 12px; padding: 6px 0 0; font-style: italic; }
+    /* Summary chips — total / count / average for the filtered set */
+    #rp-summary { display: flex; gap: 8px; margin-top: 10px; }
+    .rp-chip {
+      flex: 1 1 0; background: #f1ebdd; border: 1px solid #e0d6bf;
+      border-radius: 8px; padding: 8px 10px; text-align: center;
+    }
+    .rp-chip .rp-chip-val { font-size: 15px; font-weight: 700; color: var(--rc-ink); font-family: 'Courier New', monospace; }
+    .rp-chip .rp-chip-lbl { font-size: 11px; color: var(--rc-muted); }
+    /* Per-period rows + proportional spend bars */
+    .rp-section { margin-top: 14px; }
+    .rp-section h4 { margin: 0 0 6px; font-size: 12px; color: var(--rc-muted); letter-spacing: 2px; text-transform: uppercase; }
+    .rp-brow { padding: 6px 0; border-bottom: 1px solid #eae2d0; }
+    .rp-brow-line { display: flex; gap: 8px; align-items: baseline; }
+    .rp-brow-lbl { flex: 0 0 auto; font-size: 13px; }
+    .rp-brow-cnt { flex: 1 1 auto; font-size: 11px; color: var(--rc-muted); }
+    .rp-brow-amt { font-weight: 600; white-space: nowrap; font-family: 'Courier New', monospace; font-size: 13px; }
+    .rp-bar { height: 5px; background: #e4dcc8; border-radius: 3px; margin-top: 4px; overflow: hidden; }
+    .rp-bar-fill { height: 100%; background: var(--rc-accent); border-radius: 3px; }
+    .rp-bar-fill.rp-bar-alt { background: var(--rc-ok); }
+    #rp-empty { color: var(--rc-muted); padding: 16px 4px; }
+    /* History detail edit button */
+    .rh-edit {
+      margin-top: 8px; padding: 6px 12px; font-size: 13px; border: 1px dashed var(--rc-line);
+      border-radius: 6px; background: #f1ebdd; color: var(--rc-accent); cursor: pointer;
+      font-family: var(--rc-serif);
+    }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -673,14 +784,35 @@
        file picker on desktop. Invisible before sign-in (the full-screen auth
        wall covers it). Uploads land in the configured Drive folder and get an
        "uploaded" row in the Receipts tab; Phase 2 adds extraction. -->
+  <!-- Paper Ledger backdrop — covers the GAS iframe with the cream page
+       background. The GAS admin UI stays reachable via the existing HTML
+       layer toggle (extended in project JS to include these elements). -->
+  <div id="receipt-backdrop"></div>
   <div id="receipt-scan-panel">
     <input id="receipt-file-input" type="file" accept="image/*" capture="environment" style="display:none">
+    <!-- Batch picker — no capture attribute (opens the gallery, not the
+         camera) and multiple selection for mass processing. -->
+    <input id="receipt-upload-input" type="file" accept="image/*" multiple style="display:none">
+    <div class="rsp-brand"><h2>Receipts</h2><span id="rsp-date"></span></div>
+    <!-- Month summary styled as a printed receipt with a perforated edge.
+         Populated from reportReceipts once a session exists; hidden until. -->
+    <div id="rcpt-month">
+      <div class="rm-title">— This Month —</div>
+      <div class="rm-amt" id="rm-amt">—</div>
+      <div class="rm-sub" id="rm-sub">&nbsp;</div>
+      <div class="rm-dash"></div>
+      <div id="rm-rows"></div>
+    </div>
+    <button id="receipt-scan-btn" class="rbtn rbtn-primary" type="button">📷&ensp;Scan receipt</button>
     <div class="rsp-row">
-      <button id="receipt-scan-btn" type="button">📷 Scan receipt</button>
-      <button id="receipt-history-btn" type="button">🧾 History</button>
+      <button id="receipt-upload-btn" class="rbtn" type="button">🖼️&ensp;Upload</button>
+      <button id="receipt-report-btn" class="rbtn" type="button">📊&ensp;Reports</button>
+    </div>
+    <button id="receipt-history-btn" class="rbtn" type="button">🧾&ensp;History</button>
+    <div class="rsp-status-row">
+      <span id="receipt-scan-status">&nbsp;</span>
       <img id="receipt-scan-thumb" alt="">
     </div>
-    <span id="receipt-scan-status">Photograph or choose a receipt to upload</span>
     <div id="receipt-progress"><div id="receipt-progress-fill"></div></div>
   </div>
   <!-- History browser — searchable list of past receipts with tap-to-expand
@@ -708,11 +840,41 @@
     </div>
     <div id="rh-list"></div>
   </div>
+  <!-- Reports card — client-side aggregation over one reportReceipts fetch.
+       Every filter (merchant, categories, dates, cost range) re-renders
+       locally, so filtering is instant. z-index 8 overlays history/review. -->
+  <div id="receipt-report-card">
+    <div class="rp-head">
+      <button id="rp-close" type="button">✕</button>
+      <h3>Reports</h3>
+      <div id="rp-periods">
+        <button type="button" data-p="daily">Daily</button><button type="button" data-p="weekly">Weekly</button><button type="button" data-p="monthly" class="rp-on">Monthly</button><button type="button" data-p="biannual">Bi-annual</button><button type="button" data-p="annual">Annual</button>
+      </div>
+      <div class="rp-filters">
+        <input id="rp-merchant" type="text" placeholder="Filter merchant…" autocomplete="off">
+      </div>
+      <div class="rp-filters">
+        <select id="rp-cat" title="Major category"></select>
+        <select id="rp-subcat" title="Minor category (line items)"></select>
+      </div>
+      <div class="rp-filters">
+        <label class="rp-field"><span>Start Date</span><input id="rp-from" type="date"></label>
+        <label class="rp-field"><span>End Date</span><input id="rp-to" type="date"></label>
+      </div>
+      <div class="rp-filters">
+        <label class="rp-field"><span>Min total</span><input id="rp-min" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
+        <label class="rp-field"><span>Max total</span><input id="rp-max" type="number" step="0.01" inputmode="decimal" placeholder="no limit"></label>
+      </div>
+    </div>
+    <div id="rp-note"></div>
+    <div id="rp-summary"></div>
+    <div id="rp-body"></div>
+  </div>
   <!-- Review-before-save card — AI-extracted fields, editable before anything
        is written to the spreadsheet. Opens automatically after extraction;
        also serves as the manual-entry form when extraction fails. -->
   <div id="receipt-review-card">
-    <h3>Review receipt</h3>
+    <h3>Review receipt <span id="rr-queue-pos"></span></h3>
     <div class="rr-grid">
       <label>Merchant<input id="rr-merchant" type="text" autocomplete="off"></label>
       <label>Date<input id="rr-date" type="date"></label>
@@ -4361,8 +4523,53 @@
       if (!btn || !input) return;
 
       function setStatus(msg, ok) {
-        if (statusEl) { statusEl.textContent = msg; statusEl.style.color = ok ? '#2e7d32' : '#c62828'; }
+        _lastStatusAt = Date.now(); // pauses the affirmation rotation below
+        if (statusEl) { statusEl.textContent = msg; statusEl.style.color = ok ? '#3f6f42' : '#a8402e'; }
       }
+
+      // ── Idle affirmations ────────────────────────────────────────────
+      // The status line's idle text cycles through positive one-liners.
+      // Real pipeline/status messages take over whenever setStatus() fires
+      // and linger 12s before the rotation resumes.
+      var _lastStatusAt = 0;
+      var AFFIRMATIONS = [
+        'Love yourself',
+        "You're the best!",
+        "Today's gonna be a good day",
+        "You've got this 💪",
+        'Small steps add up',
+        'Be proud of yourself',
+        'You make it look easy',
+        'Something good is coming',
+        "Breathe — you're doing fine",
+        'Your future self says thanks',
+        'Keep shining ✨',
+        "You're stronger than you think",
+        'Enjoy the little things'
+      ];
+      var _affIdx = 0;
+      function showAffirmation() {
+        if (!statusEl) return;
+        statusEl.textContent = AFFIRMATIONS[_affIdx % AFFIRMATIONS.length];
+        statusEl.style.color = '#8a8274';
+        _affIdx++;
+      }
+      showAffirmation();
+      setInterval(function() {
+        if (Date.now() - _lastStatusAt < 12000) return;
+        showAffirmation();
+      }, 7000);
+
+      // Landing date label — "Fri, Aug 1"
+      (function() {
+        var el = document.getElementById('rsp-date');
+        if (el) {
+          try {
+            el.textContent = new Date().toLocaleDateString(undefined,
+              { weekday: 'short', month: 'short', day: 'numeric' });
+          } catch (dErr) { el.textContent = ''; }
+        }
+      })();
 
       // Stepped pipeline progress bar. setProgress(pct) shows/advances it;
       // setProgress(100) turns it green and auto-hides; setProgress(null)
@@ -4453,6 +4660,7 @@
       var currentRaw = '';
       var currentFileId = ''; // Drive file of the last upload — lets Retry extraction re-run without re-photographing
       var pendingForce = false; // set after a duplicate warning — next Save sends force=1
+      var editingFromHistory = false; // review card opened from History "Edit" — save/discard returns to History
 
       (function fillCategories() {
         var sel = document.getElementById('rr-category');
@@ -4482,7 +4690,7 @@
       })();
 
       function setRrStatus(msg, ok) {
-        if (rrStatus) { rrStatus.textContent = msg; rrStatus.style.color = ok ? '#2e7d32' : '#c62828'; }
+        if (rrStatus) { rrStatus.textContent = msg; rrStatus.style.color = ok ? '#3f6f42' : '#a8402e'; }
       }
 
       function addItemRow(item) {
@@ -4527,6 +4735,8 @@
         currentReceiptId = receiptId;
         currentRaw = data ? JSON.stringify(data) : '';
         pendingForce = false;
+        var qp = document.getElementById('rr-queue-pos');
+        if (qp) qp.textContent = ''; // batch review sets its "· n of N" chip after opening
         var d = data || {};
         document.getElementById('rr-address').value = d.address || '';
         document.getElementById('rr-merchant').value = d.merchant || '';
@@ -4610,7 +4820,16 @@
       });
       document.getElementById('rr-discard').addEventListener('click', function() {
         closeReviewCard();
-        setStatus('Receipt kept as uploaded (not saved) — scan the next one anytime', true);
+        if (batchActive) {
+          batchSkipped++;
+          openNextInBatch();
+        } else if (editingFromHistory) {
+          editingFromHistory = false;
+          histCard.style.display = 'block';
+          setStatus('Edit cancelled — nothing changed', true);
+        } else {
+          setStatus('Receipt kept as uploaded (not saved) — scan the next one anytime', true);
+        }
       });
       document.getElementById('rr-save').addEventListener('click', function() {
         var session = loadSession();
@@ -4626,8 +4845,22 @@
             saveBtn.disabled = false;
             if (r && r.success) {
               closeReviewCard();
-              setProgress(100);
-              setStatus('Saved ✓ ' + (r.receiptId || '') + ' — ready for the next receipt', true);
+              if (batchActive) {
+                batchSaved++;
+                setStatus('Saved ✓ ' + (r.receiptId || ''), true);
+                openNextInBatch();
+              } else if (editingFromHistory) {
+                editingFromHistory = false;
+                setProgress(null);
+                setStatus('Updated ✓ ' + (r.receiptId || ''), true);
+                histCard.style.display = 'block';
+                loadHistory();
+                refreshMonthCard();
+              } else {
+                setProgress(100);
+                setStatus('Saved ✓ ' + (r.receiptId || '') + ' — ready for the next receipt', true);
+                refreshMonthCard();
+              }
             } else if (r && r.error === 'duplicate') {
               // Duplicate detection — same store, date, and total as an
               // already-saved receipt. Second Save press overrides.
@@ -4649,6 +4882,7 @@
 
       function handleFile(file) {
         if (!file) return;
+        if (batchActive) { setStatus('Finish the current batch first', false); return; }
         var session = loadSession();
         if (!session.token) { setStatus('Sign in first', false); return; }
         btn.disabled = true;
@@ -4709,6 +4943,128 @@
         input.value = ''; // allow re-selecting the same file
       });
 
+      // ── Batch upload (mass processing) ───────────────────────────────
+      // Photos are processed strictly one at a time: compress → upload →
+      // extract, then the review cards are stepped through one per receipt.
+      // MAX_BATCH = 15 keeps a full batch inside Gemini's free-tier rate
+      // limit (~10 requests/min — extraction calls are also spaced ≥6.5s
+      // apart below) and keeps the wall-clock run to a few minutes.
+      var MAX_BATCH = 15;
+      var uploadBtn = document.getElementById('receipt-upload-btn');
+      var uploadInput = document.getElementById('receipt-upload-input');
+      var batchQueue = [];   // processed receipts awaiting review
+      var batchTotal = 0;    // photos accepted into the current batch
+      var batchSaved = 0, batchSkipped = 0, batchFailed = 0;
+      var batchActive = false;
+      var lastExtractAt = 0;
+
+      function extractThrottled(session, fileId) {
+        var wait = Math.max(0, 6500 - (Date.now() - lastExtractAt));
+        return new Promise(function(res) { setTimeout(res, wait); }).then(function() {
+          lastExtractAt = Date.now();
+          return _gasPost({ action: 'extractReceipt', token: session.token, fileId: fileId });
+        });
+      }
+
+      function openNextInBatch() {
+        var qp = document.getElementById('rr-queue-pos');
+        if (!batchQueue.length) {
+          batchActive = false;
+          if (qp) qp.textContent = '';
+          setProgress(null);
+          setStatus('Batch done — ' + batchSaved + ' saved'
+            + (batchSkipped ? ', ' + batchSkipped + ' discarded' : '')
+            + (batchFailed ? ', ' + batchFailed + ' failed' : ''), true);
+          refreshMonthCard();
+          return;
+        }
+        var entry = batchQueue.shift();
+        var reviewable = batchTotal - batchFailed;
+        var pos = reviewable - batchQueue.length;
+        openReviewCard(entry.receiptId, entry.data, entry.note || null);
+        currentFileId = entry.fileId; // enables Retry extraction on failed entries
+        if (qp) qp.textContent = '· ' + pos + ' of ' + reviewable;
+      }
+
+      function processBatch(files) {
+        var session = loadSession();
+        batchQueue = []; batchTotal = files.length;
+        batchSaved = 0; batchSkipped = 0; batchFailed = 0;
+        batchActive = true;
+        btn.disabled = true; uploadBtn.disabled = true;
+        closeReviewCard();
+        var idx = 0;
+        function finishProcessing() {
+          btn.disabled = false; uploadBtn.disabled = false;
+          if (!batchQueue.length) {
+            batchActive = false;
+            setProgress(null);
+            setStatus('Batch failed — nothing to review ('
+              + batchFailed + ' of ' + batchTotal + ' failed)', false);
+            return;
+          }
+          setProgress(100);
+          setStatus('Processed ' + batchQueue.length + ' of ' + batchTotal
+            + ' — review each receipt below', true);
+          openNextInBatch();
+        }
+        function step() {
+          if (idx >= files.length) { finishProcessing(); return; }
+          var file = files[idx]; idx++;
+          var n = idx, N = files.length;
+          setStatus('Receipt ' + n + ' of ' + N + ' — compressing…', true);
+          setProgress(Math.round(((n - 1) + 0.15) / N * 100));
+          compressImage(file)
+            .then(function(b64) {
+              if (b64.length > 6000000) throw new Error('image_too_large');
+              setStatus('Receipt ' + n + ' of ' + N + ' — uploading…', true);
+              setProgress(Math.round(((n - 1) + 0.4) / N * 100));
+              return _gasPostBody({ action: 'uploadReceipt', token: session.token,
+                image: b64, mime: 'image/jpeg', name: file.name || '' });
+            })
+            .then(function(r) {
+              if (!(r && r.success)) throw new Error((r && r.error) || 'upload_failed');
+              setStatus('Receipt ' + n + ' of ' + N + ' — reading the receipt…', true);
+              setProgress(Math.round(((n - 1) + 0.7) / N * 100));
+              return extractThrottled(session, r.fileId || '')
+                .then(function(x) {
+                  batchQueue.push({
+                    receiptId: r.receiptId, fileId: r.fileId || '',
+                    data: (x && x.success && x.data) ? x.data : null,
+                    note: (x && x.success && x.data) ? '' :
+                      'Extraction failed (' + ((x && x.error) || 'unknown') + ') — retry or enter manually'
+                  });
+                })
+                .catch(function(xErr) {
+                  batchQueue.push({ receiptId: r.receiptId, fileId: r.fileId || '', data: null,
+                    note: 'Extraction failed (' + String((xErr && xErr.message) || xErr) + ') — retry or enter manually' });
+                });
+            })
+            .catch(function(err) {
+              batchFailed++;
+              setStatus('Receipt ' + n + ' of ' + N + ' failed ('
+                + String((err && err.message) || err) + ') — continuing…', false);
+            })
+            .then(step);
+        }
+        step();
+      }
+
+      uploadBtn.addEventListener('click', function() { uploadInput.click(); });
+      uploadInput.addEventListener('change', function() {
+        var files = Array.prototype.slice.call(uploadInput.files || []);
+        uploadInput.value = ''; // allow re-selecting the same files
+        if (!files.length) return;
+        var session = loadSession();
+        if (!session.token) { setStatus('Sign in first', false); return; }
+        if (batchActive || btn.disabled) { setStatus('Finish the current batch first', false); return; }
+        if (files.length > MAX_BATCH) {
+          setStatus('Max ' + MAX_BATCH + ' receipts per batch — processing the first ' + MAX_BATCH, false);
+          files = files.slice(0, MAX_BATCH);
+        }
+        processBatch(files);
+      });
+
       // ── History browser ──────────────────────────────────────────────
       var histCard = document.getElementById('receipt-history-card');
       var histList = document.getElementById('rh-list');
@@ -4757,6 +5113,26 @@
           html += '<div><i>No line items recorded</i></div>';
         }
         box.innerHTML = html;
+        // Edit-in-place — reopens the review card pre-filled with this
+        // receipt's saved fields and line items. Saving rewrites the row and
+        // LineItems (saveReceipt is idempotent by receipt ID), so lines can
+        // be fixed or deleted without deleting/re-uploading the receipt.
+        var editBtn = document.createElement('button');
+        editBtn.type = 'button'; editBtn.className = 'rh-edit';
+        editBtn.textContent = '✏️ Edit receipt / line items';
+        editBtn.addEventListener('click', function(ev) {
+          ev.stopPropagation();
+          editingFromHistory = true;
+          histCard.style.display = 'none';
+          openReviewCard(r.id, {
+            merchant: r.merchant, address: r.address, date: r.date,
+            currency: r.currency, category: r.category,
+            subtotal: r.subtotal, tax: r.tax, total: r.total,
+            lineItems: d.lineItems || []
+          }, null);
+          setRrStatus('Editing saved receipt — fix or remove lines, then save', true);
+        });
+        box.appendChild(editBtn);
       }
 
       function loadHistory() {
@@ -4818,6 +5194,7 @@
                   if (dr && dr.success) {
                     row.remove();
                     detail.remove();
+                    refreshMonthCard();
                     if (!histList.querySelector('.rh-row')) {
                       histList.innerHTML = '<div id="rh-empty">No receipts found</div>';
                     }
@@ -4874,6 +5251,288 @@
       });
       document.getElementById('rh-sort-date').addEventListener('change', loadHistory);
       document.getElementById('rh-cat').addEventListener('change', loadHistory);
+
+      // ── Reports ──────────────────────────────────────────────────────
+      // One reportReceipts fetch per open pulls every saved receipt + line
+      // item; all aggregation and filtering happens locally so every filter
+      // change re-renders instantly with no server round-trip.
+      var reportCard = document.getElementById('receipt-report-card');
+      var rpData = null;
+      var rpPeriod = 'monthly';
+
+      (function fillReportCategories() {
+        var cat = document.getElementById('rp-cat');
+        var sub = document.getElementById('rp-subcat');
+        if (!cat || !sub) return;
+        var allC = document.createElement('option');
+        allC.value = ''; allC.textContent = 'All categories';
+        cat.appendChild(allC);
+        CATEGORIES.forEach(function(c) {
+          var o = document.createElement('option'); o.value = c; o.textContent = c; cat.appendChild(o);
+        });
+        var allS = document.createElement('option');
+        allS.value = ''; allS.textContent = 'All departments';
+        sub.appendChild(allS);
+        ITEM_CATS.forEach(function(c) {
+          var o = document.createElement('option'); o.value = c; o.textContent = c; sub.appendChild(o);
+        });
+      })();
+
+      // ISO-8601 week key (YYYY-Www) — weeks start Monday, week 1 holds Jan 4.
+      function isoWeekKey(dateStr) {
+        var d = new Date(dateStr + 'T00:00:00Z');
+        if (isNaN(d.getTime())) return '';
+        var day = (d.getUTCDay() + 6) % 7;
+        d.setUTCDate(d.getUTCDate() - day + 3);
+        var year = d.getUTCFullYear();
+        var jan4 = new Date(Date.UTC(year, 0, 4));
+        var week = 1 + Math.round(((d - jan4) / 86400000 - 3 + ((jan4.getUTCDay() + 6) % 7)) / 7);
+        return year + '-W' + (week < 10 ? '0' + week : week);
+      }
+
+      function bucketKey(dateStr) {
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr || '')) return '(no date)';
+        if (rpPeriod === 'daily') return dateStr;
+        if (rpPeriod === 'weekly') return isoWeekKey(dateStr) || '(no date)';
+        if (rpPeriod === 'monthly') return dateStr.substring(0, 7);
+        if (rpPeriod === 'biannual') return dateStr.substring(0, 4) + (dateStr.substring(5, 7) <= '06' ? '-H1' : '-H2');
+        return dateStr.substring(0, 4);
+      }
+
+      function barRow(label, count, amtStr, pct, alt) {
+        return '<div class="rp-brow"><div class="rp-brow-line">'
+          + '<span class="rp-brow-lbl">' + label + '</span>'
+          + '<span class="rp-brow-cnt">' + count + '</span>'
+          + '<span class="rp-brow-amt">' + amtStr + '</span></div>'
+          + '<div class="rp-bar"><div class="rp-bar-fill' + (alt ? ' rp-bar-alt' : '') + '" style="width:' + pct + '%"></div></div></div>';
+      }
+
+      function renderReport() {
+        if (!rpData) return;
+        var body = document.getElementById('rp-body');
+        var summary = document.getElementById('rp-summary');
+        var note = document.getElementById('rp-note');
+        var q = (document.getElementById('rp-merchant').value || '').toLowerCase().trim();
+        var cat = document.getElementById('rp-cat').value || '';
+        var sub = document.getElementById('rp-subcat').value || '';
+        var from = document.getElementById('rp-from').value || '';
+        var to = document.getElementById('rp-to').value || '';
+        var minV = parseFloat(document.getElementById('rp-min').value);
+        var maxV = parseFloat(document.getElementById('rp-max').value);
+
+        var receipts = rpData.receipts.filter(function(r) {
+          if (q && (r.merchant || '').toLowerCase().indexOf(q) === -1) return false;
+          if (cat && r.category !== cat) return false;
+          if ((from || to) && !r.date) return false;
+          if (from && r.date < from) return false;
+          if (to && r.date > to) return false;
+          var t = parseFloat(r.total);
+          if (!isNaN(minV) && (isNaN(t) || t < minV)) return false;
+          if (!isNaN(maxV) && (isNaN(t) || t > maxV)) return false;
+          return true;
+        });
+        var byId = {};
+        receipts.forEach(function(r) { byId[r.id] = r; });
+
+        // Minor-category mode — totals switch from receipt totals to the
+        // matching line items' amounts inside the filtered receipts.
+        var itemMode = !!sub;
+        var rows = [];
+        if (itemMode) {
+          rpData.lineItems.forEach(function(it) {
+            var rec = byId[it.receiptId];
+            if (!rec || it.category !== sub) return;
+            var amt = parseFloat(it.amount);
+            rows.push({ date: rec.date, merchant: rec.merchant, cat: rec.category, amount: isNaN(amt) ? 0 : amt });
+          });
+          note.textContent = 'Showing ' + sub + ' line items inside the filtered receipts — totals are item amounts, not receipt totals.';
+        } else {
+          receipts.forEach(function(r) {
+            var amt = parseFloat(r.total);
+            rows.push({ date: r.date, merchant: r.merchant, cat: r.category, amount: isNaN(amt) ? 0 : amt });
+          });
+          note.textContent = '';
+        }
+
+        var total = 0;
+        rows.forEach(function(r) { total += r.amount; });
+        var curSet = {};
+        receipts.forEach(function(r) { if (r.currency) curSet[r.currency] = true; });
+        var curKeys = Object.keys(curSet);
+        var cur = (curKeys.length === 1) ? curKeys[0] + ' ' : '';
+
+        summary.innerHTML =
+          '<div class="rp-chip"><div class="rp-chip-val">' + cur + total.toFixed(2) + '</div><div class="rp-chip-lbl">Total spend</div></div>'
+          + '<div class="rp-chip"><div class="rp-chip-val">' + (itemMode ? rows.length : receipts.length) + '</div><div class="rp-chip-lbl">' + (itemMode ? 'Line items' : 'Receipts') + '</div></div>'
+          + '<div class="rp-chip"><div class="rp-chip-val">' + cur + (rows.length ? (total / rows.length).toFixed(2) : '0.00') + '</div><div class="rp-chip-lbl">Average</div></div>';
+
+        if (!rows.length) {
+          body.innerHTML = '<div id="rp-empty">Nothing matches these filters</div>';
+          return;
+        }
+
+        var buckets = {};
+        rows.forEach(function(r) {
+          var k = bucketKey(r.date);
+          if (!buckets[k]) buckets[k] = { total: 0, count: 0 };
+          buckets[k].total += r.amount;
+          buckets[k].count++;
+        });
+        var keys = Object.keys(buckets).sort().reverse();
+        var maxTotal = 0;
+        keys.forEach(function(k) { if (buckets[k].total > maxTotal) maxTotal = buckets[k].total; });
+        var periodLabel = { daily: 'Daily', weekly: 'Weekly', monthly: 'Monthly', biannual: 'Bi-annual', annual: 'Annual' }[rpPeriod];
+        var html = '<div class="rp-section"><h4>' + periodLabel + ' totals</h4>';
+        keys.forEach(function(k) {
+          var b = buckets[k];
+          var pct = maxTotal ? Math.max(2, Math.round(b.total / maxTotal * 100)) : 0;
+          html += barRow(esc(k), b.count + (itemMode ? ' items' : ' receipts'), cur + b.total.toFixed(2), pct, false);
+        });
+        html += '</div>';
+
+        if (!itemMode) {
+          var cats = {};
+          rows.forEach(function(r) { var c = r.cat || 'Uncategorized'; cats[c] = (cats[c] || 0) + r.amount; });
+          var cKeys = Object.keys(cats).sort(function(a, b) { return cats[b] - cats[a]; });
+          var cMax = cKeys.length ? cats[cKeys[0]] : 0;
+          html += '<div class="rp-section"><h4>By category</h4>';
+          cKeys.forEach(function(c) {
+            var pct = cMax ? Math.max(2, Math.round(cats[c] / cMax * 100)) : 0;
+            html += barRow(esc(c), '', cur + cats[c].toFixed(2), pct, true);
+          });
+          html += '</div>';
+        }
+
+        var merch = {};
+        rows.forEach(function(r) { var m = r.merchant || '(no merchant)'; merch[m] = (merch[m] || 0) + r.amount; });
+        var mKeys = Object.keys(merch).sort(function(a, b) { return merch[b] - merch[a]; }).slice(0, 8);
+        var mMax = mKeys.length ? merch[mKeys[0]] : 0;
+        html += '<div class="rp-section"><h4>Top merchants</h4>';
+        mKeys.forEach(function(m) {
+          var pct = mMax ? Math.max(2, Math.round(merch[m] / mMax * 100)) : 0;
+          html += barRow(esc(m), '', cur + merch[m].toFixed(2), pct, false);
+        });
+        html += '</div>';
+        body.innerHTML = html;
+      }
+
+      function loadReportData() {
+        var session = loadSession();
+        var body = document.getElementById('rp-body');
+        if (!session.token) { body.innerHTML = '<div id="rp-empty">Sign in first</div>'; return; }
+        body.innerHTML = '<div id="rp-empty">Loading…</div>';
+        document.getElementById('rp-summary').innerHTML = '';
+        _gasPost({ action: 'reportReceipts', token: session.token, from: '', to: '' })
+          .then(function(res) {
+            if (!(res && res.success)) {
+              body.innerHTML = '<div id="rp-empty">Could not load (' + esc((res && res.error) || 'unknown') + ')</div>';
+              return;
+            }
+            rpData = { receipts: res.receipts || [], lineItems: res.lineItems || [] };
+            renderReport();
+          })
+          .catch(function(err) {
+            body.innerHTML = '<div id="rp-empty">Could not load (' + esc(String((err && err.message) || err)) + ')</div>';
+          });
+      }
+
+      document.getElementById('receipt-report-btn').addEventListener('click', function() {
+        var showing = reportCard.style.display === 'block';
+        reportCard.style.display = showing ? 'none' : 'block';
+        if (!showing) loadReportData(); // fresh data on every open; filter changes stay local
+      });
+      document.getElementById('rp-close').addEventListener('click', function() {
+        reportCard.style.display = 'none';
+      });
+      document.getElementById('rp-periods').addEventListener('click', function(ev) {
+        var b = ev.target && ev.target.closest ? ev.target.closest('button') : null;
+        if (!b || !b.dataset.p) return;
+        rpPeriod = b.dataset.p;
+        document.getElementById('rp-periods').querySelectorAll('button').forEach(function(x) {
+          x.classList.toggle('rp-on', x === b);
+        });
+        renderReport();
+      });
+      ['rp-merchant', 'rp-min', 'rp-max'].forEach(function(id) {
+        document.getElementById(id).addEventListener('input', renderReport);
+      });
+      ['rp-cat', 'rp-subcat', 'rp-from', 'rp-to'].forEach(function(id) {
+        document.getElementById(id).addEventListener('change', renderReport);
+      });
+
+      // ── Month summary card (landing hero) ────────────────────────────
+      // One reportReceipts fetch fills the printed-receipt card with the
+      // current month's spend, count, and top categories. Fired once when a
+      // session first appears, then refreshed after every save/delete.
+      function refreshMonthCard() {
+        var session = loadSession();
+        if (!session.token) return;
+        _gasPost({ action: 'reportReceipts', token: session.token, from: '', to: '' })
+          .then(function(res) {
+            if (!(res && res.success)) return;
+            rpData = { receipts: res.receipts || [], lineItems: res.lineItems || [] };
+            var now = new Date();
+            var ym = now.getFullYear() + '-' + ('0' + (now.getMonth() + 1)).slice(-2);
+            var monthReceipts = rpData.receipts.filter(function(r) {
+              return (r.date || '').substring(0, 7) === ym;
+            });
+            var total = 0, cats = {}, curSet = {};
+            monthReceipts.forEach(function(r) {
+              var t = parseFloat(r.total);
+              if (!isNaN(t)) {
+                total += t;
+                var c = r.category || 'Other';
+                cats[c] = (cats[c] || 0) + t;
+              }
+              if (r.currency) curSet[r.currency] = true;
+            });
+            var curKeys = Object.keys(curSet);
+            var cur = (curKeys.length === 1) ? curKeys[0] + ' ' : '';
+            document.getElementById('rm-amt').textContent = cur + total.toFixed(2);
+            var monthName = '';
+            try {
+              monthName = now.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+            } catch (mErr) { monthName = ym; }
+            document.getElementById('rm-sub').textContent =
+              monthReceipts.length + ' receipt' + (monthReceipts.length === 1 ? '' : 's') + ' · ' + monthName;
+            var cKeys = Object.keys(cats).sort(function(a, b) { return cats[b] - cats[a]; });
+            var top = cKeys.slice(0, 3);
+            var rest = 0;
+            cKeys.slice(3).forEach(function(c) { rest += cats[c]; });
+            var rowsHtml = '';
+            top.forEach(function(c) {
+              rowsHtml += '<div class="rm-row"><span>' + esc(c) + '</span><b>' + cur + cats[c].toFixed(2) + '</b></div>';
+            });
+            if (rest > 0.005) {
+              rowsHtml += '<div class="rm-row"><span>Everything else</span><b>' + cur + rest.toFixed(2) + '</b></div>';
+            }
+            if (!monthReceipts.length) {
+              rowsHtml = '<div class="rm-row"><span>No receipts saved yet this month</span><b>—</b></div>';
+            }
+            document.getElementById('rm-rows').innerHTML = rowsHtml;
+          })
+          .catch(function() { /* hero card is cosmetic — stay quiet on failure */ });
+      }
+      var _mcTimer = setInterval(function() {
+        if (loadSession().token) { clearInterval(_mcTimer); refreshMonthCard(); }
+      }, 3000);
+
+      // PROJECT: extend the template's HTML layer toggle so the Paper Ledger
+      // backdrop and receipts cards also hide, revealing the GAS admin UI.
+      (function() {
+        var _orig = window._toggleHtmlLayer;
+        if (typeof _orig !== 'function') return;
+        var _rcptHidden = false;
+        window._toggleHtmlLayer = function() {
+          _orig();
+          _rcptHidden = !_rcptHidden;
+          ['receipt-backdrop', 'receipt-scan-panel', 'receipt-review-card',
+           'receipt-history-card', 'receipt-report-card'].forEach(function(id) {
+            var el = document.getElementById(id);
+            if (el) el.classList.toggle('html-layer-hidden', _rcptHidden);
+          });
+        };
+      })();
 
       // .xlsx export — server builds the workbook from the current filters and
       // returns it base64; decoded here into a Blob download.

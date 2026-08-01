@@ -3,11 +3,23 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.11w] — 2026-08-01 05:18:59 PM EST — v01.28r
+
+### Added
+- Upload receipts — pick up to 15 photos from your gallery at once; they're read one after another and then reviewed one at a time, with a "n of N" counter
+- Reports — daily, weekly, monthly, bi-annual, and annual spending totals with instant filtering by store, category, department, date range, and cost range, plus category and top-merchant breakdowns
+- Edit saved receipts from History — fix any detail or remove line items without deleting and re-uploading
+- Month-at-a-glance summary on the home screen showing this month's spend, receipt count, and top categories
+
+### Changed
+- Fresh new look — warm paper-and-ink design with a printed-receipt style summary card
+- The idle status line now cycles through encouraging messages
 
 ## [v01.10w] — 2026-08-01 06:51:35 AM EST — v01.27r
 

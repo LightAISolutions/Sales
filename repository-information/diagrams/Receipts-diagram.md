@@ -85,9 +85,9 @@ sequenceDiagram
 
 ## Receipt Pipeline — Upload → Extract → Review → Save
 
-Sequence for the receipts app feature (v01.01g/w upload, v01.02g/w extraction + review + save, v01.03g retry/fallback, v01.04g/v01.05w extraction cache + history browser). All routes require a validated session; the upload and save calls travel as body-POSTs with client-side retry because their payloads exceed GET URL limits. Extraction results are cached server-side by file ID (10 min) so transport retries never re-run Gemini.
+Sequence for the receipts app feature (v01.01g/w upload, v01.02g/w extraction + review + save, v01.03g retry/fallback, v01.04g/v01.05w extraction cache + history browser, v01.09g/v01.11w batch upload + reports + edit-in-place). All routes require a validated session; the upload and save calls travel as body-POSTs with client-side retry because their payloads exceed GET URL limits. Extraction results are cached server-side by file ID (10 min) so transport retries never re-run Gemini.
 
-> [Open in mermaid.live — Receipt Pipeline](https://mermaid.live/edit#pako:eNqVV9uO20YS_ZUCX0xhyLmsHT_Iay9kyx5PYI-N0QQLIwqCUneJ7Eyzm-5uSqMYE-QpwD7uBdiXBfYlX-YvyCck1bx4JiPL9pMoklXddeqcU813ibCSknHi6W1DRtBUYeGwmhsAgBpdUELVaAJ848ndvvv8_OULQA9nJEjVwe-XodJ_XbhHqRdooEZDGvbA0UrRGgQ6Obqd5Hgy4xz883dawKSuYwZpX1sftrw_dWpFMcLaQlP7P4a4bhuwtFqS27YWVcqoGNxeTV6fxNCCDDkMakUaTdFgQVuiZ3Gjs9oRSl8ShRjaFw978EIZOglUeQi48KO5aXOc2kBgV-QijNlsNoYzetsoRx68KgzJXBnw5L2yBlJsQglLbdeAC7vqN8Kh-aNHDPkYzrGGeTJjkLui5wm8_-VfILAih3AAS6UJaiUu-r5x4BA_tWvjBWqCYOH9P349un94WF_C16-fHkMq0KzQj2K-BXq6f-9GhuPJbAyvX83OAUVQ1jxsam1RdjBAurSugoWVmwec-S5gCFTVwWdgLBw_PYclar1AcdEVdjyZ9VlXqJXEQLMWimfWTTFgGuwFmRtvx56PQTjCQM-UpvQsf_PmzZuXL6fT_PnzqvI-Pz09Pd3_oS5uBDL2ZHzjqNvvOS789-kI9gDrmowEZ9eQ-oCh8V1lJK-lGCB81wF_IrMIdv_7jdNXu_Giy-BQhAEwxgRrBbbeDk1XbEGBK328OZFpu-Bov6DwWNtFehPKSG0OiJymJ9YEMgHe__wfUBUWFCXpa2s8zURJFXLBTokAX89enfa5Ypa8L6AiJ0o0IQOU0pH3GXCnMhCNc2TEJgPfLIINqDMIeJlBe80SERiosG6Tge4F8u13kBKKEtYqlIAgiYVW8Tb7t7eC7hsh-sWxwxl1gKctpqyf-ApJku3Ta51gCbH0BjcCW5PxUDvKl0prkpCi1rBUpKUHkirgQvcCJO3p-jpLVPoLFmENbGIPKjQNaiAT3KZLbeQWkU_kD40P_W4OInigor2wNGe4okH9OwnncUW35TmGgcGDR5OMFIA9WFonCJYai9synTa1VtwmECWJi1iUx4oGkuwxNfYiAdgxEXgHsl-PKcEFvCPnrBuD7NNdQWM0ed8u_vAI0nkSq0SzWeNmntzeysSzgQI7MrcKTqYwC9bR96dY0WAJkAqrtfItPZZLdQn5Xw7yu9tkdkaGSwklQV3aYNkhKwyijLcMreFk-mdHeaa07quLBqKM0Pu9UgY7iShk4HAN9IFHF1SHWx51RrVGQdcmirNrD2mUS00uZx70UlHktyRYNErLuOmX1oRSb2DWVBW6DQ8nJrq3YA1I0hRot9gGoowZgBN50-BaxretkvD-f_-eJ5BOlY_kV8YHQgmacEU-bocBum2wHx2Vz5UP1m1gwQiQg3R1eLR_eK-AA4hXX60ftPzKrdEbkLTERofu2fDW_fXH52i3QjdCl0oHch7Sns1wEK0OHJqC4AB8add5Y1pOH4C3LuSLTc7vjHYLUSsfhuPCJ30_hr8ylAdVEWj8cRNdDypV8FGFjwon084LbnM-Om9fgoeggqZcoCf5IMo6Lxp0N2fboIHZxoiW_Xl7lIJoDs6zGCKj0AdyMHny4o7ndYaihNVNZSAtHAMXbcVeUAZHh3mlDITS2RA0baEryuEYyQTNuj7cFE9vED1vHh6NYp3tf7CO92pdT9jYk-5uyn16eK1JW6e5__a7q4gotwocGUmO5EeYg9c1v7vzBfWNn1JApT_d_QGV676yByr4P5nCjmpuDNy2Lrqs0UiSINt97HUup5W52HleFdbJ1iwi8z5bXr_9_7__jCsrEwfYPJlGx_nbPAH8YxTxo8BgFqhMPA4oA_f8bjhb0_rsE1SMP3s8eXJtYN1pc9xhN61Ue_Rel2TAWU1MZLNURTM0_0NT2u1_QVsGWXkK5w59STINrqER2--HOcOfLwx6nGM_3T0EiRu_y5fbhvL6jirL6lg6W8WMzN4d3dy_1P6SqWBd-IJWzpOnbUiMZ5dvPEMVT4ABys6oOwMdfeoUzKk-3w1534_bkUZVDf7DV1hs59avsPh4Wye6OmIm9B0e6atJE8pRxggaCNypCGZ8i0_c23rB99l3s-5TqW0KH8pB2rWJtqTaNncDLMmSilyFSibj5N08CSVVNE_G86QbXfPkKskSbIJlH07GzJUsaWr2ru4Dvb159Ts_JUZ3)
+> [Open in mermaid.live — Receipt Pipeline](https://mermaid.live/edit#pako:eNqlWM2O28gRfpUCL6Yw4mhm_QNEjh3MjMb2LOyxMRojMFaLRYldonqn2U13N6XRGg72tMCeFpsskMsCuSTPkJzzKH6B5BGS6iY1kiXLdnISRbKru6q--uorvklyIyjpJ45e16RzGkgsLJYjDQBQofUylxVqDy8d2c27Ty6fPQV0cEE5ycq7_akv1W_H9mHqctRQoSYFe2BpJmkOOVrR2TTy-GjINvjn9zSGo6oKFoR5YZzf8v7AyhmFFcYUiuL_sMQ2x4CJUYLstr2olFqGxfHq6MVZWFqQJotezkihLmosaMvqYTjosLKEwk2JfFjaOg978FRqOvNUOvA4dp2RjjbOjScwM7IhjN3hsA8X9LqWlhw4WWgSmdTgyDlpNKRY-ylMlJkDjs2sPQgvzR4-5JD34RIrGCVDDnLj9CiBdz_8EXIsySL0YCIVQSXzqzZvvHC5fmDm2uWoCLyBdz_-9fDewUF1DV--OH0MaY56hq4T7I3R0b07axYeHw378OL58BIw99LoB3WlDIomDJBOjC1hbMTiPlu-Deg9lZV3XdAGHp9ewgSVGmN-1Tj2-GjYWp2hkgI9DWMoHhk7QI-pN1ek194OOe9Dbgk9PZKK0ovs1atXr549GwyyJ0_K0rns_Pz8fP_bqlhbyLEn7WpLzXkvcey-STuwB1hVpAVYM4fUefS1azwjsWJiGcI3TeDPRDcEu_19adXb3fGia28x98uAcUywkmCq7aFpnC3Is6fHizORxg07-wX5Y2XG6XooA7R5QcA0nRjtSXt49_0vIEssKJSkq4x2NMynVCI7bGXu4cvh8_PWVrCStQ6UZPMpat8FFMKSc13gTHUhr60lnS-64OqxNx5VFzxedyFec4nk6KkwdtEF1RbIV19DSphPYS79FBAEcaGVfMz27a1Bd3Wet5tjE2dUHk5jTLl-wiskSMSnK5ngEuLSW7IRmIq0g8pSNpFKkYAUlYKJJCUckJAex6otQFKOVveZoFSfsQnXwCLkoERdowLS3i4a01psKfIj8W3tfHuaXggeyEAvXJpDnNGy-ncCzuGMNsuzD0sELzmaRIAA7MHE2JxgorDYLNNBXSnJaYJ8SvlVcMphSUuQ7DE09gIAmDER-ASi3Y8hwQ68IWuN7YNozb2FWityLm7-4BDSURK8RL2Y42KUbB7lyDGBAjMypwrOBjD0xtI351jSkhIgzY1S0kV4TCbyGrIvetntbWV2QZpd8VOCamq8YYYs0efTcEvTHM4G7zPKI6lU610gEKlztd9WypJOQhS6YHEOdIOjK6r8BkddUKUwp5WOYs3cQRrKpSKbMQ7aUpHkthgY11KJcOhnRvupWsCwLku0C25ODHRnwGgQpMjT7mJbAqXPATgT6wQXER9TJeDdr38aJZAOpAvgl9p5QgGKcEYuHIcDtEmwH2yVT6Tzxi5gzBEgC-ns4HD_4E4BPQhXd-f3I74yo9UCBE2wVr55tnzr3vzDfbTZoWmhE6k8WQdpi2boBaoDi7og6IGbmnlW64jpHjhjfTZeZPxOZ3chKun8Ui58lPfD8ueaMi9LAoXfLQLrQSkLliosFc4GDRdsYj4wb-uCAy-9oixHR-J-KOusqNGu97ZlDQwXOo_oz6KUgkAO1nExBESh82Th6OTpLcf7LJ3KjapLDWlhOXCBVswVdeHwICulBj-1xntFW-CKYikjGaDdJg_rxdMSRIubB4ed4Gf8D8byWY1tARty0txNOU8PVpK0tZu7r75-GyLKqQJLWpAl8QHk4GrN7858QW3iB-RRqo9nfxmVVV7ZA-nde6Sww5u1hhv9ousKtSABIp5jr2E5JfXVTr2aGysiWQTkfXJ5_fsvf_457Cx1aGCjZBAY53ejBPC_rYgfeQ5mgVIHOSA13HG7wxlJ65MVVFh_cXx0stKwbkUbt5hNSxml93xKGqxRxEDWE1nUy-TfJCUe_zPSsiwrR_7SopuSSL2tqcP0e9NneHzhoIc-9ofbByBw4Xbxckwo72-pNFwdE2vKYJHRuyOb-9fKXTMUjPWfkcpRchqXhPXM8rXjUAUF6GHaEHVDoJ2PqWA29elsyOc-ji2NygrczRQW0rl1CguPt2Wi8SNYQtfEI31-VPtpp8sR1OA5UyGY4S1W3NtywfeZd7vNqBSTwqIchJnrQEsyprlpYDvychx0RkNmUSo6lqeG0y110eTqN22uDg935OplMNM0tQKVIruAslZeZo4U5Z4nvQoO73IFwJi3bowpYyo4ZXUekNmFOB2oBcTvBF6i2tC9cesTU1ZB87w_PP4vA2Tn40vXZ6kwj-eolANXYc5q5Me_3du_60Iwm5F_YolbKlm4ePEMpoTCGlOu7LWe4NByjYUgVmN2X9dUc7WFRsOd8T0V_6FJwIHzVIUmWBcRW8EU69x__h00mAmcj5JOEMjf_xIVvrHQaikUM9Q5Lbuwpmt_MwF8EFWnQvp1Bc6IjPry0wDVSrCmZ3AMRsm7X3_61z9-itZbu6tDyijZHY3VsSsQ10aP5NBvOc0jeR17PJNe2PD_GIgCZKSgsjJhSB4vVsYiToKluZWeXEP0S3LZ_XWH6cV9Vrk2a5p6rchKI7gLeWu4SzekutsvS5_PqUFj8NS7hhDmUT8laVfYNNDFFwcHBx8RUOuqY8vXpxMlSfvMSUEwrvMr4rMKlGrRmxNdqUWvjBNLbywz1Dwt9-JPKI29MFSwvtyQ6l24-dZw80khfqpwXcgNizqW8Z2km5RkS5Qi6SdvRomfUkmjpD9KmgFilLxNugnW3rAaTvrcsbtJXbGp5jNpvPn2P0CAIDM)
 
 ```mermaid
 sequenceDiagram
@@ -153,6 +153,29 @@ sequenceDiagram
     GAS->>SS: Build temp spreadsheet — Receipts + LineItems sheets
     GAS->>Drive: Export temp as .xlsx (OAuth), then trash the temp file
     GAS-->>HTML: {fileName, base64} → Blob download in the browser
+
+    Note over User,SS: Batch upload — mass processing (v01.09g / v01.11w)
+    User->>HTML: Tap "Upload" → gallery multi-select (cap 15 per batch)
+    loop Each photo, strictly sequential
+        HTML->>HTML: Compress → base64
+        HTML->>GAS: POST action=uploadReceipt (form body)
+        HTML->>GAS: POST action=extractReceipt<br>(calls spaced ≥6.5s — Gemini free-tier RPM headroom)
+        GAS-->>HTML: {data or error} → queued for review
+    end
+    HTML->>User: Review cards step through the queue ("· n of N")<br>— Save or Discard advances to the next receipt
+
+    Note over User,SS: Edit saved receipt in place (v01.09g / v01.11w)
+    User->>HTML: History detail → "✏️ Edit receipt / line items"
+    HTML->>User: Review card pre-filled from getReceiptDetail data
+    User->>HTML: Fix or remove lines → Save receipt
+    HTML->>GAS: POST action=saveReceipt<br>(idempotent by receiptId — rewrites row + LineItems)
+
+    Note over User,SS: Reports (v01.09g / v01.11w)
+    User->>HTML: Tap "Reports" → period control + filters
+    HTML->>GAS: POST action=reportReceipts (GET api op fallback)
+    GAS->>SS: Read all saved receipts + their LineItems (cap 2000)
+    GAS-->>HTML: {receipts[], lineItems[]}
+    HTML->>HTML: Client-side buckets (daily/weekly/monthly/bi-annual/annual)<br>+ instant filters (merchant, category, department, dates, cost range)
 ```
 
 Developed by: ShadowAISolutions
