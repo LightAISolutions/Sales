@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 8/50`
+`Sections: 9/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.09w] — 2026-08-01 06:36:33 AM EST — v01.26r
+
+### Removed
+- The "Show unsaved uploads" checkbox in History — the history list and exports now always show saved receipts only
 
 ## [v01.08w] — 2026-08-01 06:06:54 AM EST — v01.24r
 
