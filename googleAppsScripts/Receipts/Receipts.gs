@@ -1,4 +1,4 @@
-var VERSION = "v01.03g";
+var VERSION = "v01.04g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -327,9 +327,10 @@ var LINEITEMS_TAB = "LineItems";
 // to newer models). API key lives ONLY in Script Properties under
 // GEMINI_API_KEY — never in the repo. On transient errors (503 overload /
 // 429 rate limit / 500) extraction retries the primary model, then falls
-// back to the secondary model before giving up.
-var GEMINI_MODEL = "gemini-3.5-flash";
-var GEMINI_FALLBACK_MODEL = "gemini-3.6-flash";
+// back to the secondary model before giving up. 3.6-flash is primary — it's
+// the faster generation and the observed 503 congestion was on 3.5-flash.
+var GEMINI_MODEL = "gemini-3.6-flash";
+var GEMINI_FALLBACK_MODEL = "gemini-3.5-flash";
 
 // Spending categories offered by extraction and the review screen.
 var RECEIPT_CATEGORIES = ["Groceries", "Dining", "Transport", "Health",
@@ -409,6 +410,16 @@ function extractReceipt(sessionToken, fileId) {
   var apiKey = PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY') || '';
   if (!apiKey) return { success: false, error: 'gemini_key_missing' };
   if (!fileId) return { success: false, error: 'no_file_id' };
+  // Result cache — the fetch transport can legitimately call this twice for
+  // one user action (POST leg succeeds server-side but Google returns an
+  // unparseable error page, then the GET fallback re-asks). Without the
+  // cache that re-runs the whole Gemini extraction; with it the second leg
+  // returns instantly. 10-minute TTL comfortably covers one review session.
+  var exCache = CacheService.getScriptCache();
+  var exCached = exCache.get('extract_' + fileId);
+  if (exCached) {
+    try { return JSON.parse(exCached); } catch (cErr) { /* fall through to re-extract */ }
+  }
   var blob;
   try { blob = DriveApp.getFileById(fileId).getBlob(); }
   catch (fErr) { return { success: false, error: 'file_not_found' }; }
@@ -451,13 +462,13 @@ function extractReceipt(sessionToken, fileId) {
     headers: { 'x-goog-api-key': apiKey },
     payload: JSON.stringify(payload), muteHttpExceptions: true };
   // Retry plan for transient errors: primary twice, then the fallback model
-  // twice, with short waits. Non-transient statuses (bad key, bad request)
-  // fail fast — retrying those just burns quota.
+  // once. Kept to 3 attempts to bound worst-case wall time — the client is
+  // waiting synchronously, and the extraction cache above absorbs transport
+  // retries. Non-transient statuses (bad key, bad request) fail fast.
   var plan = [
     { model: GEMINI_MODEL, wait: 0 },
     { model: GEMINI_MODEL, wait: 2000 },
-    { model: GEMINI_FALLBACK_MODEL, wait: 1000 },
-    { model: GEMINI_FALLBACK_MODEL, wait: 3000 }
+    { model: GEMINI_FALLBACK_MODEL, wait: 1000 }
   ];
   var resp = null, code = 0, msg = '';
   for (var a = 0; a < plan.length; a++) {
@@ -480,7 +491,103 @@ function extractReceipt(sessionToken, fileId) {
   } catch (xErr) {
     return { success: false, error: 'gemini_parse_failed' };
   }
-  return { success: true, data: extracted };
+  var exResult = { success: true, data: extracted };
+  try { exCache.put('extract_' + fileId, JSON.stringify(exResult), 600); } catch (pErr) { /* >100KB — skip caching */ }
+  return exResult;
+}
+
+/**
+ * History list — returns saved/uploaded receipts newest-first, filtered by
+ * merchant substring and/or receipt-date range (YYYY-MM-DD, lexical compare).
+ * Receipt Date may come back from Sheets as a Date object or the original
+ * string — both are normalized.
+ */
+function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows) {
+  validateSessionForData(sessionToken, 'listReceipts');
+  var sh = ensureReceiptTabs_().receipts;
+  var last = sh.getLastRow();
+  if (last < 2) return { success: true, receipts: [] };
+  var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+  var q = String(query || '').toLowerCase().trim();
+  var from = String(dateFrom || '').trim();
+  var to = String(dateTo || '').trim();
+  var cap = Math.max(1, Math.min(parseInt(maxRows, 10) || 100, 500));
+  var out = [];
+  for (var i = vals.length - 1; i >= 0 && out.length < cap; i--) {
+    var r = vals[i];
+    var rDate = (r[3] instanceof Date)
+      ? Utilities.formatDate(r[3], 'UTC', 'yyyy-MM-dd') : String(r[3] || '');
+    if (q && String(r[4] || '').toLowerCase().indexOf(q) === -1) continue;
+    if ((from || to) && !rDate) continue;
+    if (from && rDate < from) continue;
+    if (to && rDate > to) continue;
+    out.push({
+      id: String(r[0] || ''),
+      uploadedAt: (r[1] instanceof Date) ? r[1].toISOString() : String(r[1] || ''),
+      date: rDate,
+      merchant: String(r[4] || ''),
+      currency: String(r[5] || ''),
+      total: (r[8] === '' || r[8] === null) ? '' : r[8],
+      category: String(r[9] || ''),
+      imageUrl: String(r[10] || ''),
+      status: String(r[11] || '')
+    });
+  }
+  return { success: true, receipts: out };
+}
+
+/**
+ * History detail — one receipt's full fields plus its LineItems rows.
+ */
+function getReceiptDetail(sessionToken, receiptId) {
+  validateSessionForData(sessionToken, 'getReceiptDetail');
+  var rid = String(receiptId || '').trim();
+  if (!rid) return { success: false, error: 'no_receipt_id' };
+  var tabs = ensureReceiptTabs_();
+  var sh = tabs.receipts;
+  var last = sh.getLastRow();
+  var receipt = null;
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      if (String(vals[i][0]) === rid) {
+        var r = vals[i];
+        receipt = {
+          id: rid,
+          uploadedAt: (r[1] instanceof Date) ? r[1].toISOString() : String(r[1] || ''),
+          uploadedBy: String(r[2] || ''),
+          date: (r[3] instanceof Date) ? Utilities.formatDate(r[3], 'UTC', 'yyyy-MM-dd') : String(r[3] || ''),
+          merchant: String(r[4] || ''),
+          currency: String(r[5] || ''),
+          subtotal: (r[6] === '' || r[6] === null) ? '' : r[6],
+          tax: (r[7] === '' || r[7] === null) ? '' : r[7],
+          total: (r[8] === '' || r[8] === null) ? '' : r[8],
+          category: String(r[9] || ''),
+          imageUrl: String(r[10] || ''),
+          status: String(r[11] || '')
+        };
+        break;
+      }
+    }
+  }
+  if (!receipt) return { success: false, error: 'receipt_not_found' };
+  var items = [];
+  var li = tabs.lineItems;
+  var liLast = li.getLastRow();
+  if (liLast > 1) {
+    var liVals = li.getRange(2, 1, liLast - 1, 6).getValues();
+    for (var k = 0; k < liVals.length; k++) {
+      if (String(liVals[k][0]) === rid) {
+        items.push({
+          description: String(liVals[k][2] || ''),
+          qty: (liVals[k][3] === '' || liVals[k][3] === null) ? '' : liVals[k][3],
+          unitPrice: (liVals[k][4] === '' || liVals[k][4] === null) ? '' : liVals[k][4],
+          amount: (liVals[k][5] === '' || liVals[k][5] === null) ? '' : liVals[k][5]
+        });
+      }
+    }
+  }
+  return { success: true, receipt: receipt, lineItems: items };
 }
 
 /**
@@ -1082,6 +1189,37 @@ function doPost(e) {
       svResult = { success: false, error: String((svErr && svErr.message) || svErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(svResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts history list via fetch() — session-validated read.
+  if (action === "listReceipts") {
+    var lrResult;
+    try {
+      lrResult = listReceipts(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.q) || "",
+        (e && e.parameter && e.parameter.from) || "",
+        (e && e.parameter && e.parameter.to) || "",
+        (e && e.parameter && e.parameter.max) || "");
+    } catch (lrErr) {
+      lrResult = { success: false, error: String((lrErr && lrErr.message) || lrErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(lrResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts history detail via fetch() — session-validated read.
+  if (action === "getReceiptDetail") {
+    var rdResult;
+    try {
+      rdResult = getReceiptDetail(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.receiptId) || "");
+    } catch (rdErr) {
+      rdResult = { success: false, error: String((rdErr && rdErr.message) || rdErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(rdResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -2353,6 +2491,16 @@ function doGet(e) {
       } else if (apiOp === 'extractReceipt') {
         // PROJECT: Receipts AI extraction (GET fallback — params are small)
         apiResult = extractReceipt(apiToken, (e && e.parameter && e.parameter.fileId) || '');
+      } else if (apiOp === 'listReceipts') {
+        // PROJECT: Receipts history list (GET fallback)
+        apiResult = listReceipts(apiToken,
+          (e && e.parameter && e.parameter.q) || '',
+          (e && e.parameter && e.parameter.from) || '',
+          (e && e.parameter && e.parameter.to) || '',
+          (e && e.parameter && e.parameter.max) || '');
+      } else if (apiOp === 'getReceiptDetail') {
+        // PROJECT: Receipts history detail (GET fallback)
+        apiResult = getReceiptDetail(apiToken, (e && e.parameter && e.parameter.receiptId) || '');
       } else {
         apiResult = { error: 'unknown_op' };
       }

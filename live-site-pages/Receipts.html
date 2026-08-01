@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.04w">
+  <meta name="build-version" content="v01.05w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -429,6 +429,61 @@
       display: none;
     }
     #rr-retry:disabled { color: #c9b58e; border-color: #ead9bd; cursor: default; }
+    /* History button in the scan panel */
+    #receipt-history-btn {
+      padding: 10px 14px; font-size: 15px; border: 1px solid #c4c9d0;
+      border-radius: 6px; background: #fff; color: #333; cursor: pointer;
+      white-space: nowrap;
+    }
+    /* History card — same layering + dvh sizing rationale as the review card,
+       but z-index 7 so it overlays the review card when both are open. */
+    #receipt-history-card {
+      position: fixed; top: 72px; left: 50%; transform: translateX(-50%);
+      z-index: 7; display: none; width: min(560px, 94vw);
+      max-height: calc(100vh - 170px);
+      max-height: calc(100dvh - 170px);
+      overflow-y: auto;
+      background: #fff; border: 1px solid #d0d4da; border-radius: 10px;
+      padding: 0 14px 14px; box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+      font: 14px/1.4 sans-serif; color: #222;
+    }
+    .rh-head {
+      position: sticky; top: 0; background: #fff; z-index: 1;
+      margin: 0 -14px; padding: 12px 14px 10px;
+      border-bottom: 1px solid #e5e8ec;
+    }
+    .rh-head h3 { margin: 0 0 8px; font-size: 16px; display: inline-block; }
+    #rh-close {
+      float: right; border: none; background: none; font-size: 18px;
+      color: #777; cursor: pointer; padding: 2px 4px; line-height: 1;
+    }
+    .rh-filters { display: flex; gap: 6px; flex-wrap: wrap; }
+    .rh-filters input {
+      font-size: 16px; padding: 7px 8px; border: 1px solid #c4c9d0;
+      border-radius: 6px; outline: none; box-sizing: border-box;
+    }
+    #rh-search { flex: 1 1 140px; min-width: 0; }
+    #rh-from, #rh-to { flex: 0 1 8.6em; }
+    #rh-go {
+      padding: 7px 14px; font-size: 14px; border: none; border-radius: 6px;
+      background: #4a90d9; color: #fff; cursor: pointer;
+    }
+    .rh-row {
+      display: flex; gap: 8px; align-items: baseline; padding: 10px 2px;
+      border-bottom: 1px solid #f0f2f4; cursor: pointer;
+    }
+    .rh-row .rh-date { color: #777; font-size: 12px; flex: 0 0 5.6em; }
+    .rh-row .rh-merchant { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .rh-row .rh-total { font-weight: 600; white-space: nowrap; }
+    .rh-row .rh-status { font-size: 11px; }
+    .rh-detail {
+      background: #f7f9fb; border-radius: 8px; padding: 10px 12px;
+      margin: 4px 0 10px; font-size: 13px; display: none;
+    }
+    .rh-detail table { width: 100%; border-collapse: collapse; margin-top: 6px; }
+    .rh-detail td { padding: 3px 4px 3px 0; vertical-align: top; }
+    .rh-detail td.num { text-align: right; white-space: nowrap; }
+    #rh-empty { color: #777; padding: 16px 4px; }
     #rr-status { font-size: 13px; }
 /* ══════════════ */
 /* PROJECT END */
@@ -575,8 +630,25 @@
   <div id="receipt-scan-panel">
     <input id="receipt-file-input" type="file" accept="image/*" capture="environment" style="display:none">
     <button id="receipt-scan-btn" type="button">📷 Scan receipt</button>
+    <button id="receipt-history-btn" type="button">🧾 History</button>
     <img id="receipt-scan-thumb" alt="">
     <span id="receipt-scan-status">Photograph or choose a receipt to upload</span>
+  </div>
+  <!-- History browser — searchable list of past receipts with tap-to-expand
+       details and a link to each photo. Read-only; z-index 7 overlays the
+       review card. -->
+  <div id="receipt-history-card">
+    <div class="rh-head">
+      <button id="rh-close" type="button">✕</button>
+      <h3>Receipt history</h3>
+      <div class="rh-filters">
+        <input id="rh-search" type="text" placeholder="Search merchant…" autocomplete="off">
+        <input id="rh-from" type="date" title="From date">
+        <input id="rh-to" type="date" title="To date">
+        <button id="rh-go" type="button">Search</button>
+      </div>
+    </div>
+    <div id="rh-list"></div>
   </div>
   <!-- Review-before-save card — AI-extracted fields, editable before anything
        is written to the spreadsheet. Opens automatically after extraction;
@@ -4492,6 +4564,118 @@
       input.addEventListener('change', function() {
         handleFile(input.files && input.files[0]);
         input.value = ''; // allow re-selecting the same file
+      });
+
+      // ── History browser ──────────────────────────────────────────────
+      var histCard = document.getElementById('receipt-history-card');
+      var histList = document.getElementById('rh-list');
+
+      function esc(s) {
+        return String(s).replace(/[&<>"']/g, function(c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      function fmtMoney(v, cur) {
+        if (v === '' || v === null || v === undefined) return '—';
+        var n = parseFloat(v);
+        if (isNaN(n)) return esc(v);
+        return (cur ? esc(cur) + ' ' : '') + n.toFixed(2);
+      }
+
+      function renderDetail(box, d) {
+        var r = d.receipt || {};
+        var html = '';
+        html += '<div><b>' + esc(r.merchant || '(no merchant)') + '</b>'
+          + (r.category ? ' · ' + esc(r.category) : '')
+          + (r.status ? ' · <i>' + esc(r.status) + '</i>' : '') + '</div>';
+        html += '<div>Date: ' + esc(r.date || '—')
+          + ' · Subtotal: ' + fmtMoney(r.subtotal, r.currency)
+          + ' · Tax: ' + fmtMoney(r.tax, r.currency)
+          + ' · <b>Total: ' + fmtMoney(r.total, r.currency) + '</b></div>';
+        if (r.imageUrl) {
+          html += '<div><a href="' + esc(r.imageUrl) + '" target="_blank" rel="noopener">View photo ↗</a></div>';
+        }
+        var items = d.lineItems || [];
+        if (items.length) {
+          html += '<table>';
+          items.forEach(function(it) {
+            html += '<tr><td>' + esc(it.description) + '</td>'
+              + '<td class="num">' + (it.qty !== '' ? esc(it.qty) + '×' : '') + '</td>'
+              + '<td class="num">' + fmtMoney(it.amount, '') + '</td></tr>';
+          });
+          html += '</table>';
+        } else {
+          html += '<div><i>No line items recorded</i></div>';
+        }
+        box.innerHTML = html;
+      }
+
+      function loadHistory() {
+        var session = loadSession();
+        if (!session.token) { histList.innerHTML = '<div id="rh-empty">Sign in first</div>'; return; }
+        histList.innerHTML = '<div id="rh-empty">Loading…</div>';
+        _gasPost({
+          action: 'listReceipts', token: session.token,
+          q: document.getElementById('rh-search').value || '',
+          from: document.getElementById('rh-from').value || '',
+          to: document.getElementById('rh-to').value || '',
+          max: '100'
+        }).then(function(res) {
+          if (!(res && res.success)) {
+            histList.innerHTML = '<div id="rh-empty">Could not load (' + esc((res && res.error) || 'unknown') + ')</div>';
+            return;
+          }
+          var rows = res.receipts || [];
+          if (!rows.length) {
+            histList.innerHTML = '<div id="rh-empty">No receipts found</div>';
+            return;
+          }
+          histList.innerHTML = '';
+          rows.forEach(function(rec) {
+            var row = document.createElement('div');
+            row.className = 'rh-row';
+            row.innerHTML = '<span class="rh-date">' + esc(rec.date || '—') + '</span>'
+              + '<span class="rh-merchant">' + esc(rec.merchant || '(no merchant)') + '</span>'
+              + '<span class="rh-status">' + (rec.status === 'saved' ? '✅' : '📤') + '</span>'
+              + '<span class="rh-total">' + fmtMoney(rec.total, rec.currency) + '</span>';
+            var detail = document.createElement('div');
+            detail.className = 'rh-detail';
+            row.addEventListener('click', function() {
+              var open = detail.style.display === 'block';
+              detail.style.display = open ? 'none' : 'block';
+              if (!open && !detail.dataset.loaded) {
+                detail.innerHTML = 'Loading…';
+                var s2 = loadSession();
+                _gasPost({ action: 'getReceiptDetail', token: s2.token || '', receiptId: rec.id })
+                  .then(function(d) {
+                    if (d && d.success) { renderDetail(detail, d); detail.dataset.loaded = '1'; }
+                    else { detail.innerHTML = 'Could not load (' + esc((d && d.error) || 'unknown') + ')'; }
+                  })
+                  .catch(function(err) {
+                    detail.innerHTML = 'Could not load (' + esc(String((err && err.message) || err)) + ')';
+                  });
+              }
+            });
+            histList.appendChild(row);
+            histList.appendChild(detail);
+          });
+        }).catch(function(err) {
+          histList.innerHTML = '<div id="rh-empty">Could not load (' + esc(String((err && err.message) || err)) + ')</div>';
+        });
+      }
+
+      document.getElementById('receipt-history-btn').addEventListener('click', function() {
+        var showing = histCard.style.display === 'block';
+        histCard.style.display = showing ? 'none' : 'block';
+        if (!showing) loadHistory();
+      });
+      document.getElementById('rh-close').addEventListener('click', function() {
+        histCard.style.display = 'none';
+      });
+      document.getElementById('rh-go').addEventListener('click', loadHistory);
+      document.getElementById('rh-search').addEventListener('keydown', function(ev) {
+        if (ev.key === 'Enter') loadHistory();
       });
     })();
 

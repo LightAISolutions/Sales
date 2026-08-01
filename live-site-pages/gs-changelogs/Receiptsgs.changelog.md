@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 3/50`
+`Sections: 4/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.04g] — 2026-08-01 04:12:06 AM EST — v01.21r
+
+### Added
+- Receipt history: past receipts can now be listed with search and date filters, and each receipt's full details and items can be retrieved
+
+### Changed
+- Automatic receipt reading is significantly faster: results are remembered briefly so retries never redo the work, the quicker reader is now used first, and fewer attempts are made before reporting a problem
 
 ## [v01.03g] — 2026-08-01 03:17:05 AM EST — v01.19r
 

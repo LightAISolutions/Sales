@@ -85,9 +85,9 @@ sequenceDiagram
 
 ## Receipt Pipeline — Upload → Extract → Review → Save
 
-Sequence for the receipts app feature (added v01.01g/v01.01w upload, v01.02g/v01.02w extraction + review + save). All routes require a validated session; the upload and save calls travel as body-POSTs with client-side retry because their payloads exceed GET URL limits.
+Sequence for the receipts app feature (v01.01g/w upload, v01.02g/w extraction + review + save, v01.03g retry/fallback, v01.04g/v01.05w extraction cache + history browser). All routes require a validated session; the upload and save calls travel as body-POSTs with client-side retry because their payloads exceed GET URL limits. Extraction results are cached server-side by file ID (10 min) so transport retries never re-run Gemini.
 
-> [Open in mermaid.live — Receipt Pipeline](https://mermaid.live/edit#pako:eNqVlc9u4zYQxl9loJOCyNktWuzBbQN46_xbbLxB5EUR1EUxIscyNxTJJUd2jCBATwV6bXvssU-WJylIS964MQL0ZFnm93Hmx_no-0xYSdkwC_S5JSNorLD22MwMAIBDz0ooh4bhYyD__O359PI9YIBrEqQch6MFN_q7yh_nQaABh4Y0HIKnpaIVCPTy4LnJ2aiMHvHjR6pg5FxykPbKBt6zfuzVkpLC2lrT5nuS-K4MmFstye_bixplVBJvnkZXF0lakyGPrJak0dQt1rRHXaZCS-cJZVgQcZL2zcMhvFeGLpiaAIxVOJiZjcfEMoFdkk8Yi7IcwjV9bpWnAEHVhuRAGQgUgrIGcmx5AXNtV4CVXfaFROng-DgiH8IUHcyyMkLump5l8PjbHyCwIY_wCuZKEzglbvtzi8KtfmxXJgjUBGzh8fd_vnrz-rW7g3dXJ2eQCzRLDAfJr8JAb77ZcTgblUO4-lBOAQUra75vnbYoOwyQz61voLJy_W10_hqQmRrHoQBj4exkCnPUukJx2zV2Nip71yVqJZGp3KA4tX6MjDnbWzI7q9OZD0F4QqZTpSm_Htzc3NxcXo7Hg_PzpglhMJlMJkefXL0jjOzJhNZTV-8Uq_BLfgCHgM6RkeDtCvLAyG3oOiP5xGKL8L4DfyGLBLv__Oj1w8u86I49Ct4Ci0zQKbBuP5qu2Zo4dvp2fSHzzYYHRzXxW22rfBdlGu0oSDNNP1jDZBgef_0LVIM1pUgGZ02gUiyowdiwV4LhXflh0nsll0HfQENeLNBwAfGAChCt92TEuoDQVmwZdQGMdwV0zwKZauvXBeg-FD_9vA9jaIWgEJIvduRQM5xsKMVEpCUkSW5-fcI2hiKGaXu_gHVkAjhPg7nSmiTkqDXMFWkZgKRirHQfKdKBnu4zR6X_xyZxqteJaoOmRQ1k2K87ayP3xHYkP7WB-2peJTSg0oURw1bikrZ5fnGEAi7peeCGsJ3J7a1LcudQtyE4VVr3y3dmPlrLAjyugL6guSXHMLcesJWKn7ldk9Mo6MkF6O0qJAEvVPhS14sTsJ2UIUx2M7Q5glkWCUl4_PvPWQb5WIV0GsoEJpSgCZcUgBeUGvpvhrMia8g3qGQ2zO5nGS-ooVk2nGWS5thqnmUPWZFhy7ZcG5EN2bdUZK2LA9_9MW5ePvwLirFsyA)
+> [Open in mermaid.live — Receipt Pipeline](https://mermaid.live/edit#pako:eNqVVsFuGzcQ_ZXBntbwypbRNAelNaBUju0gVgyvg8KIgmK0HK0Yc0mGnJUsGAZ6KtBr22OP_TJ_SUFqV5FqWUVOS604j_PezBvufVIYQUkv8fSlJl3QQGLpsBppAACLjmUhLWqGD57c07dn1xfvAD1cUUHSsj-YcqV-GLvj1BeowaImBfvgaCZpDgU6sfcU5LSfB4zw-JnG0Lc2IghzaTxv2T9wckYxwphS0fJ3DHFNGjAxSpDbdhZVUssYvFz1L89jaEmaHLKckUJd1ljSlug8JppbRyj8lIhjaEse9uGd1HTOVHlgHPu9kV5iDA0TmBm5KGOW5z24oi-1dOTBy1KT6EgNnryXRkOKNU9hoswccGxmbSIhtHN8HCTvwTVaGCV5ELkhPUrg8bc_oMCKHMIhTKQisLK4besWAlfxAzPXvkBFwAYef__n6GW3a-_g7eXJKaQF6hn6vYg3Rk8vX2wgnPbzHly-z68BC5ZG_1hbZVA0MkA6Ma6CsRGLVwH5O0Bmqiz7DLSB05NrmKBSYyxuG2Kn_bxFnaGSApnypRRvjBsgY8rmlvTG7ljzHhSOkOmNVJRedW5ubm4uLgaDztlZVXnfGQ6Hw4PPttwIDNqT9rWjJt9rHPtf0j3YB7SWtABn5pB6Rq59w4zEGsRKwvtG-HORRbHb5wenHnbrRXfssOCVYEETtBKM3S5NQ7YkDkxfL85Fujxw76Akfq3MON2UMrZ2CIg9TT8ZzaQZHn_9C2SFJUVLemu0p7yYUoWBsJMFw9v8_bDFiiidlkBFrpii5gxCgTIoaudIF4sMfD1mw6gyYLzLoFkXyFQat8hAtab4-GmbjL4uCvI-4mKjHCqGk6VKwRFxCwkSy3_XtA2mCGZazRcwlrQH66gzkUqRgBSVgokkJTyQkIxj1VqKlKf1cyYo1TccErp6EVWtUNeogDS7RQOtxRbb9sXn2nObzWGUBmQcGMFsOc5o5eedLeRxRk8N14NVT66mLomNoq5M8EYq1W7f6PkALTJwOAf6Ks0tWYaJcYC1kPwE7YqswoLWBqAzcx8DeCr917x2dsCqU3ow3PTQsgSjJCgk4PHvP0cJpAPpYzWk9kwoQBHOyANPKRJ66uFnp_GZ9GzcAsYha3KQzrpHB90XJRxCXH0_f34IN7HN_J1IxeQ8pK1f4DAaBhzq1Z3yXFWV9Ly6Tf53LCx1R7G6fcOlkzUZZKBpTrHXnGdIK7yDo2531yDzHz89RA4hDXCkBTkSz_DG9d7ZzaqkltSAGKX6Bmbr_bkPkv1_GmwHm425s-RFdxa1IAFimcc-2KlhEzbeJllSkatQiqSX3I8SnlJFo6Q3SgRNsFY8Sh6SLMGaTb7QRdJjV1OW1DYUt_lqWr58-BfpuR0X)
 
 ```mermaid
 sequenceDiagram
@@ -122,6 +122,16 @@ sequenceDiagram
     GAS->>SS: Replace LineItems rows for this receiptId
     GAS-->>HTML: {success, lineItems: N}
     HTML->>User: "Saved ✓" (Discard instead leaves the row status=uploaded)
+
+    Note over User,SS: History browser (v01.04g / v01.05w)
+    User->>HTML: Tap "History" → filters (merchant / date range)
+    HTML->>GAS: POST action=listReceipts (GET api op fallback)
+    GAS->>SS: Read Receipts tab, filter, newest first (max 100)
+    GAS-->>HTML: {receipts[]} → list rendered
+    User->>HTML: Tap a receipt row
+    HTML->>GAS: POST action=getReceiptDetail (GET api op fallback)
+    GAS->>SS: Read receipt row + its LineItems rows
+    GAS-->>HTML: {receipt, lineItems[]} → expanded detail + photo link
 ```
 
 Developed by: ShadowAISolutions
