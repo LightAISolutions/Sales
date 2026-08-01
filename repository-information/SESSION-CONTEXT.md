@@ -6,6 +6,37 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-01 01:34:25 AM EST
+**Repo version:** v01.15r
+
+**What we worked on:**
+- Diagnosed and resolved the News Scraper sign-in failure ("stuck at Sending credentials" for jonyang92@gmail.com). Root-caused through three layers: (1) the original hang was transient Google-side serving trouble that cleared on its own; (2) the "Sorry, unable to open the file" page on direct `/exec` visits was Google's multi-account cookie routing — a red herring, since the page's fetch transport is cookie-less; (3) the real blocker was `not_authorized` from `checkSpreadsheetAccess()` — the Master ACL grant for jonyang92@gmail.com had been flipped off sometime after 7/18
+- Verified server health directly via curl probes from the session container: anonymous GET of Scraper `/exec` serves the app shell (HTTP 200); the `action=api&op=exchangeToken` GET route returns correct JSON; the POST route currently returns a Google HTML error page (known Google POST flakiness — the client's GET fallback absorbs it, ~1–2s penalty per sign-in)
+- Verified the deployment ID in `Scraper.config.json` matches both the Active deployment in Manage Deployments and the `_e`-encoded URL in `Scraper.html` — no repo changes needed anywhere
+- Owner ran `grantUserAccess()` in the MasterACL editor: structure verified, both owner emails re-granted admin with all page columns TRUE, cache epoch bumped 8→9, web app probe OK — sign-in confirmed restored
+- Session start: auto-reconstructed stale session context (v01.13r → v01.15r) and pushed it (merged to main via auto-merge workflow)
+
+**Where we left off:**
+- Sign-in fully working again; no repo code changes were needed (diagnosis-only session). Working tree clean, all commits merged
+- Open mystery: something edited the Master ACL between 7/18 and 7/31 to remove the grant (cache epoch was already at 8 pre-fix). Developer was advised to check the ACL spreadsheet's File → Version history to identify the edit — result not yet reported
+
+**Key decisions made:**
+- No repo changes warranted — deployment, config, page wiring, and GAS routes all verified correct
+- Google POST flakiness on `/exec` left as-is; the existing POST→GET fallback architecture already handles it
+- The 7-day Testing-mode OAuth expiry hypothesis was investigated and ruled out for this incident (backend served anonymously throughout the final tests)
+
+**Active context:**
+- Branch: `claude/login-sending-credentials-stuck-5nvs31` (auto-deleted from remote after each merge; recreate by pushing)
+- Repo v01.15r · 8 tracked pages, all 🟢 — MasterACL v01.02w·v01.07g, Scraper v01.04w·v01.04g, globalacl v01.02w·v01.01g, gas-project-creator v01.01w, spain-argentina v01.00w, test pages v01.00w, text-compare v01.00w
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- No reminders, no TODO items
+
+**Recommendation for next session:**
+- Configure the **Globalacl** project (carried over from 7/18 — it still has placeholder deployment/spreadsheet IDs from initialization) so the central ACL manager UI becomes usable; it already carries the fetch transport and credentialless fixes, it just needs a real Apps Script deployment wired into `globalacl.config.json`. (Separately, the developer may report the ACL version-history findings for the mystery edit at any time.)
+- **To continue:** type `set up the globalacl project`
+
+## Previous Sessions
+
 **Date:** 2026-07-31 10:39:15 PM EST
 **Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
 **Repo version:** v01.15r
@@ -21,36 +52,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Repo version: v01.15r · 8 tracked pages
 - No TODO items, no active reminders
 - Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-
-## Previous Sessions
-
-**Date:** 2026-07-18 12:16:58 AM EST
-**Repo version:** v01.13r
-
-**What we worked on:**
-- Created the **Scraper** (News Scraper) auth GAS project via `setup-gas-project.sh` (v01.04r) — script ran clean, all v01.03r script fixes verified in production
-- Admin permissions: seeded `jonyang92@gmail.com` as admin via `ensureSeedAdmins()` in MasterACL.gs (v01.05r); added zero-setup `grantUserAccess()` editor utility with built-in defaults for both owner emails (v01.06r–v01.07r); it also repairs/builds the Master ACL sheet structure (Access/Roles tabs, metadata rows) and probes the web app (v01.08r)
-- **Sign-in overhaul (the big arc)** — root causes found and fixed in layers: (1) `TOKEN_EXCHANGE_METHOD` mismatch — auth HTML template hardcodes `postMessage` but `standard` GAS preset uses `url` → aligned MasterACL/Scraper to the proven `hipaa` preset (v01.09r–v01.10r); (2) Google's multi-account `/u/N` iframe 404s → ported the **iframe-free `fetch` transport** (exchange/heartbeat/sign-out/restore) from the testauthgas1 scaffold into MasterACL/Scraper/globalacl pages + GAS routes + **both auth templates** (permanent fix — future projects born working, v01.11r); (3) the app-UI iframe itself → **`credentialless` iframes** force Google's anonymous serving path (v01.12r)
-- Added Scraper **text-submission feature**: text box + Submit on the page (PROJECT blocks), session-validated `submitText` fetch route appends [timestamp, email, text] to `Live_Sheet` (v01.13r)
-
-**Where we left off:**
-- Owner confirmed everything works in the normal multi-account browser: sign-in, MasterACL app screen, and Scraper submissions. All committed, merged to main, deployed. Working tree clean
-
-**Key decisions made:**
-- The **fetch transport is now the standard** sign-in architecture (in both auth templates); preset choice no longer affects sign-in
-- GAS iframes load **credentialless** (cookie-less → anonymous serving; unsupported browsers ignore the attribute)
-- `testauthhtml1` intentionally left on postMessage (it's the postMessage test scaffold); `testauthgas1` is the fetch reference
-- Known latent template bug left as-is: doPost `getData` route calls undefined `processDataPoll` (dead route, nothing calls it)
-- Public GAS/page changelog entries kept generic per changelog-security rules; full detail in repo CHANGELOG
-
-**Active context:**
-- Branch: `claude/news-scraper-gas-setup-2kxvc3` (auto-deleted from remote after each merge; recreate by pushing)
-- Repo v01.13r · 7 tracked pages, all 🟢 — MasterACL v01.02w·v01.07g, Scraper v01.03w·v01.04g, globalacl v01.02w·v01.01g, gas-project-creator v01.01w, test pages v01.00w
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No reminders, no TODO items
-
-**Recommendation for next session:**
-- Configure the **Globalacl** project (it still has placeholder deployment/spreadsheet IDs from initialization) so the central ACL manager UI becomes usable — it already carries the fetch transport and credentialless fixes, it just needs a real Apps Script deployment wired into `globalacl.config.json`.
-- **To continue:** type `set up the globalacl project`
 
 Developed by: ShadowAISolutions
