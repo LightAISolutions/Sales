@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.05g] — 2026-08-01 04:38:48 AM EST — v01.22r
+
+### Added
+- Receipts can now be exported as a downloadable spreadsheet file with separate sheets for receipts and their individual items
+- Receipt records can now be deleted — the record, its items, and its photo (moved to trash, recoverable) are all cleaned up together, with permission checks applied
+
+### Changed
+- The history list now returns only saved receipts unless unsaved uploads are explicitly requested
 
 ## [v01.04g] — 2026-08-01 04:12:06 AM EST — v01.21r
 

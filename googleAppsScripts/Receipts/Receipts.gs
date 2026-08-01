@@ -1,4 +1,4 @@
-var VERSION = "v01.04g";
+var VERSION = "v01.05g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -502,7 +502,7 @@ function extractReceipt(sessionToken, fileId) {
  * Receipt Date may come back from Sheets as a Date object or the original
  * string — both are normalized.
  */
-function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows) {
+function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded) {
   validateSessionForData(sessionToken, 'listReceipts');
   var sh = ensureReceiptTabs_().receipts;
   var last = sh.getLastRow();
@@ -511,12 +511,16 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows) {
   var q = String(query || '').toLowerCase().trim();
   var from = String(dateFrom || '').trim();
   var to = String(dateTo || '').trim();
+  var showUploaded = !!(includeUploaded && String(includeUploaded) !== '0' && String(includeUploaded) !== 'false');
   var cap = Math.max(1, Math.min(parseInt(maxRows, 10) || 100, 500));
   var out = [];
   for (var i = vals.length - 1; i >= 0 && out.length < cap; i--) {
     var r = vals[i];
     var rDate = (r[3] instanceof Date)
       ? Utilities.formatDate(r[3], 'UTC', 'yyyy-MM-dd') : String(r[3] || '');
+    // Default view is confirmed data only — unsaved "uploaded" rows appear
+    // only when the client explicitly asks for them.
+    if (!showUploaded && String(r[11] || '') !== 'saved') continue;
     if (q && String(r[4] || '').toLowerCase().indexOf(q) === -1) continue;
     if ((from || to) && !rDate) continue;
     if (from && rDate < from) continue;
@@ -588,6 +592,130 @@ function getReceiptDetail(sessionToken, receiptId) {
     }
   }
   return { success: true, receipt: receipt, lineItems: items };
+}
+
+/**
+ * Record deletion — removes the receipt row and its LineItems rows, and moves
+ * the Drive photo to trash (recoverable from Drive trash for ~30 days).
+ * When the ACL's RBAC roles are configured, requires the 'delete' permission;
+ * with no roles configured (empty permission set) the session check alone
+ * gates it, matching the other write routes.
+ */
+function deleteReceipt(sessionToken, receiptId) {
+  var user = validateSessionForData(sessionToken, 'deleteReceipt');
+  if (user && user.permissions && user.permissions.length
+      && user.permissions.indexOf('delete') === -1) {
+    return { success: false, error: 'not_authorized_delete' };
+  }
+  var rid = String(receiptId || '').trim();
+  if (!rid) return { success: false, error: 'no_receipt_id' };
+  var tabs = ensureReceiptTabs_();
+  var sh = tabs.receipts;
+  var last = sh.getLastRow();
+  var rowIdx = -1, imageUrl = '';
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      if (String(vals[i][0]) === rid) {
+        rowIdx = i + 2;
+        imageUrl = String(vals[i][10] || '');
+        break;
+      }
+    }
+  }
+  if (rowIdx === -1) return { success: false, error: 'receipt_not_found' };
+  sh.deleteRow(rowIdx);
+  var li = tabs.lineItems;
+  var liLast = li.getLastRow();
+  var itemsDeleted = 0;
+  if (liLast > 1) {
+    var liIds = li.getRange(2, 1, liLast - 1, 1).getValues();
+    for (var r = liIds.length - 1; r >= 0; r--) {
+      if (String(liIds[r][0]) === rid) { li.deleteRow(r + 2); itemsDeleted++; }
+    }
+  }
+  var photoTrashed = false;
+  var m = imageUrl.match(/\/d\/([^\/]+)/);
+  if (m && m[1]) {
+    try { DriveApp.getFileById(m[1]).setTrashed(true); photoTrashed = true; }
+    catch (tErr) { /* photo already gone or inaccessible — record deletion still succeeded */ }
+  }
+  return { success: true, receiptId: rid, lineItemsDeleted: itemsDeleted, photoTrashed: photoTrashed };
+}
+
+/**
+ * .xlsx export — builds a temporary two-sheet spreadsheet (Receipts +
+ * LineItems) from the same filters the history browser uses, exports it as a
+ * real .xlsx via the Drive export endpoint, trashes the temp file, and
+ * returns the workbook base64-encoded for the browser to download.
+ */
+function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded) {
+  validateSessionForData(sessionToken, 'exportReceipts');
+  var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded);
+  if (!listed.success) return listed;
+  var receipts = listed.receipts || [];
+  if (!receipts.length) return { success: false, error: 'no_receipts_match' };
+  var ids = {};
+  receipts.forEach(function(rc) { ids[rc.id] = true; });
+
+  var stamp = Utilities.formatDate(new Date(), 'America/New_York', 'yyyy-MM-dd_HHmm');
+  var temp = SpreadsheetApp.create('Receipts Export ' + stamp);
+  try {
+    var rSheet = temp.getSheets()[0];
+    rSheet.setName('Receipts');
+    var rRows = [['Receipt ID', 'Date', 'Merchant', 'Currency', 'Subtotal', 'Tax',
+      'Total', 'Category', 'Status', 'Image Link', 'Uploaded At']];
+    receipts.forEach(function(rc) {
+      rRows.push([rc.id, rc.date, rc.merchant, rc.currency,
+        '', '', '', rc.category, rc.status, rc.imageUrl, rc.uploadedAt]);
+    });
+    // Subtotal/Tax/Total pulled from the sheet in one read (list payload only carries total).
+    var src = ensureReceiptTabs_();
+    var srcLast = src.receipts.getLastRow();
+    if (srcLast > 1) {
+      var srcVals = src.receipts.getRange(2, 1, srcLast - 1, 12).getValues();
+      var byId = {};
+      srcVals.forEach(function(v) { byId[String(v[0])] = v; });
+      for (var x = 1; x < rRows.length; x++) {
+        var srcRow = byId[rRows[x][0]];
+        if (srcRow) {
+          rRows[x][4] = (srcRow[6] === '' || srcRow[6] === null) ? '' : srcRow[6];
+          rRows[x][5] = (srcRow[7] === '' || srcRow[7] === null) ? '' : srcRow[7];
+          rRows[x][6] = (srcRow[8] === '' || srcRow[8] === null) ? '' : srcRow[8];
+        }
+      }
+    }
+    rSheet.getRange(1, 1, rRows.length, rRows[0].length).setValues(rRows);
+    rSheet.setFrozenRows(1);
+
+    var liSheet = temp.insertSheet('LineItems');
+    var liRows = [['Receipt ID', 'Line #', 'Description', 'Qty', 'Unit Price', 'Amount']];
+    var liSrc = src.lineItems;
+    var liLast = liSrc.getLastRow();
+    if (liLast > 1) {
+      var liVals = liSrc.getRange(2, 1, liLast - 1, 6).getValues();
+      liVals.forEach(function(v) { if (ids[String(v[0])]) liRows.push(v); });
+    }
+    liSheet.getRange(1, 1, liRows.length, 6).setValues(liRows);
+    liSheet.setFrozenRows(1);
+    SpreadsheetApp.flush();
+
+    var xlsxResp = UrlFetchApp.fetch(
+      'https://docs.google.com/spreadsheets/d/' + temp.getId() + '/export?format=xlsx',
+      { headers: { Authorization: 'Bearer ' + ScriptApp.getOAuthToken() }, muteHttpExceptions: true });
+    if (xlsxResp.getResponseCode() !== 200) {
+      return { success: false, error: 'export_http_' + xlsxResp.getResponseCode() };
+    }
+    return {
+      success: true,
+      fileName: 'receipts-export-' + stamp + '.xlsx',
+      receipts: receipts.length,
+      lineItems: liRows.length - 1,
+      base64: Utilities.base64Encode(xlsxResp.getBlob().getBytes())
+    };
+  } finally {
+    try { DriveApp.getFileById(temp.getId()).setTrashed(true); } catch (delErr) { /* temp cleanup best-effort */ }
+  }
 }
 
 /**
@@ -1201,7 +1329,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.q) || "",
         (e && e.parameter && e.parameter.from) || "",
         (e && e.parameter && e.parameter.to) || "",
-        (e && e.parameter && e.parameter.max) || "");
+        (e && e.parameter && e.parameter.max) || "",
+        (e && e.parameter && e.parameter.uploaded) || "");
     } catch (lrErr) {
       lrResult = { success: false, error: String((lrErr && lrErr.message) || lrErr) };
     }
@@ -1220,6 +1349,38 @@ function doPost(e) {
       rdResult = { success: false, error: String((rdErr && rdErr.message) || rdErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(rdResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts record deletion via fetch() — session-validated write
+  // (RBAC 'delete' permission enforced when roles are configured).
+  if (action === "deleteReceipt") {
+    var dlResult;
+    try {
+      dlResult = deleteReceipt(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.receiptId) || "");
+    } catch (dlErr) {
+      dlResult = { success: false, error: String((dlErr && dlErr.message) || dlErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(dlResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts .xlsx export via fetch() — session-validated read.
+  if (action === "exportReceipts") {
+    var xpResult;
+    try {
+      xpResult = exportReceipts(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.q) || "",
+        (e && e.parameter && e.parameter.from) || "",
+        (e && e.parameter && e.parameter.to) || "",
+        (e && e.parameter && e.parameter.uploaded) || "");
+    } catch (xpErr) {
+      xpResult = { success: false, error: String((xpErr && xpErr.message) || xpErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(xpResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -2497,10 +2658,21 @@ function doGet(e) {
           (e && e.parameter && e.parameter.q) || '',
           (e && e.parameter && e.parameter.from) || '',
           (e && e.parameter && e.parameter.to) || '',
-          (e && e.parameter && e.parameter.max) || '');
+          (e && e.parameter && e.parameter.max) || '',
+          (e && e.parameter && e.parameter.uploaded) || '');
       } else if (apiOp === 'getReceiptDetail') {
         // PROJECT: Receipts history detail (GET fallback)
         apiResult = getReceiptDetail(apiToken, (e && e.parameter && e.parameter.receiptId) || '');
+      } else if (apiOp === 'deleteReceipt') {
+        // PROJECT: Receipts record deletion (GET fallback)
+        apiResult = deleteReceipt(apiToken, (e && e.parameter && e.parameter.receiptId) || '');
+      } else if (apiOp === 'exportReceipts') {
+        // PROJECT: Receipts .xlsx export (GET fallback)
+        apiResult = exportReceipts(apiToken,
+          (e && e.parameter && e.parameter.q) || '',
+          (e && e.parameter && e.parameter.from) || '',
+          (e && e.parameter && e.parameter.to) || '',
+          (e && e.parameter && e.parameter.uploaded) || '');
       } else {
         apiResult = { error: 'unknown_op' };
       }

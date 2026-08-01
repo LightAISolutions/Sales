@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.05w">
+  <meta name="build-version" content="v01.06w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -468,10 +468,27 @@
       padding: 7px 14px; font-size: 14px; border: none; border-radius: 6px;
       background: #4a90d9; color: #fff; cursor: pointer;
     }
+    .rh-filters-2 {
+      margin-top: 8px; align-items: center; justify-content: space-between;
+    }
+    .rh-chk { font-size: 13px; color: #555; display: flex; align-items: center; gap: 6px; }
+    .rh-chk input { width: 16px; height: 16px; }
+    #rh-export {
+      padding: 7px 12px; font-size: 13px; border: 1px solid #2e7d32;
+      border-radius: 6px; background: #f2f9f2; color: #2e7d32; cursor: pointer;
+      white-space: nowrap;
+    }
+    #rh-export:disabled { color: #93b995; border-color: #cfe3cf; cursor: default; }
     .rh-row {
       display: flex; gap: 8px; align-items: baseline; padding: 10px 2px;
       border-bottom: 1px solid #f0f2f4; cursor: pointer;
     }
+    .rh-del {
+      border: none; background: none; color: #c62828; cursor: pointer;
+      font-size: 14px; padding: 2px 4px; line-height: 1; white-space: nowrap;
+      border-radius: 5px;
+    }
+    .rh-del.rh-del-arm { background: #c62828; color: #fff; font-size: 12px; padding: 4px 7px; }
     .rh-row .rh-date { color: #777; font-size: 12px; flex: 0 0 5.6em; }
     .rh-row .rh-merchant { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .rh-row .rh-total { font-weight: 600; white-space: nowrap; }
@@ -646,6 +663,10 @@
         <input id="rh-from" type="date" title="From date">
         <input id="rh-to" type="date" title="To date">
         <button id="rh-go" type="button">Search</button>
+      </div>
+      <div class="rh-filters rh-filters-2">
+        <label class="rh-chk"><input id="rh-show-uploaded" type="checkbox"> Show unsaved uploads</label>
+        <button id="rh-export" type="button">⬇️ Export .xlsx</button>
       </div>
     </div>
     <div id="rh-list"></div>
@@ -4620,7 +4641,8 @@
           q: document.getElementById('rh-search').value || '',
           from: document.getElementById('rh-from').value || '',
           to: document.getElementById('rh-to').value || '',
-          max: '100'
+          max: '100',
+          uploaded: document.getElementById('rh-show-uploaded').checked ? '1' : ''
         }).then(function(res) {
           if (!(res && res.success)) {
             histList.innerHTML = '<div id="rh-empty">Could not load (' + esc((res && res.error) || 'unknown') + ')</div>';
@@ -4641,6 +4663,51 @@
               + '<span class="rh-total">' + fmtMoney(rec.total, rec.currency) + '</span>';
             var detail = document.createElement('div');
             detail.className = 'rh-detail';
+            // Two-tap inline delete confirmation — the repo bans browser
+            // confirm() dialogs. First tap arms ("Delete?"), second tap
+            // within 4s deletes; otherwise it disarms.
+            var del = document.createElement('button');
+            del.type = 'button'; del.className = 'rh-del'; del.textContent = '🗑';
+            del.title = 'Delete this receipt';
+            var armTimer = null;
+            del.addEventListener('click', function(ev) {
+              ev.stopPropagation();
+              if (!del.classList.contains('rh-del-arm')) {
+                del.classList.add('rh-del-arm');
+                del.textContent = 'Delete?';
+                armTimer = setTimeout(function() {
+                  del.classList.remove('rh-del-arm');
+                  del.textContent = '🗑';
+                }, 4000);
+                return;
+              }
+              clearTimeout(armTimer);
+              del.disabled = true;
+              del.textContent = '…';
+              var sd = loadSession();
+              _gasPost({ action: 'deleteReceipt', token: sd.token || '', receiptId: rec.id })
+                .then(function(dr) {
+                  if (dr && dr.success) {
+                    row.remove();
+                    detail.remove();
+                    if (!histList.querySelector('.rh-row')) {
+                      histList.innerHTML = '<div id="rh-empty">No receipts found</div>';
+                    }
+                  } else {
+                    del.disabled = false;
+                    del.classList.remove('rh-del-arm');
+                    del.textContent = '🗑';
+                    setStatus('Delete failed (' + ((dr && dr.error) || 'unknown') + ')', false);
+                  }
+                })
+                .catch(function(dErr) {
+                  del.disabled = false;
+                  del.classList.remove('rh-del-arm');
+                  del.textContent = '🗑';
+                  setStatus('Delete failed (' + String((dErr && dErr.message) || dErr) + ')', false);
+                });
+            });
+            row.appendChild(del);
             row.addEventListener('click', function() {
               var open = detail.style.display === 'block';
               detail.style.display = open ? 'none' : 'block';
@@ -4676,6 +4743,48 @@
       document.getElementById('rh-go').addEventListener('click', loadHistory);
       document.getElementById('rh-search').addEventListener('keydown', function(ev) {
         if (ev.key === 'Enter') loadHistory();
+      });
+      document.getElementById('rh-show-uploaded').addEventListener('change', loadHistory);
+
+      // .xlsx export — server builds the workbook from the current filters and
+      // returns it base64; decoded here into a Blob download.
+      document.getElementById('rh-export').addEventListener('click', function() {
+        var session = loadSession();
+        if (!session.token) { setStatus('Sign in first', false); return; }
+        var xBtn = document.getElementById('rh-export');
+        xBtn.disabled = true;
+        xBtn.textContent = 'Exporting…';
+        function done(label) { xBtn.disabled = false; xBtn.textContent = label || '⬇️ Export .xlsx'; }
+        _gasPost({
+          action: 'exportReceipts', token: session.token,
+          q: document.getElementById('rh-search').value || '',
+          from: document.getElementById('rh-from').value || '',
+          to: document.getElementById('rh-to').value || '',
+          uploaded: document.getElementById('rh-show-uploaded').checked ? '1' : ''
+        }).then(function(res) {
+          if (!(res && res.success && res.base64)) {
+            done();
+            setStatus('Export failed (' + ((res && res.error) || 'unknown') + ')', false);
+            return;
+          }
+          var bin = atob(res.base64);
+          var bytes = new Uint8Array(bin.length);
+          for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+          var blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = res.fileName || 'receipts-export.xlsx';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          setTimeout(function() { URL.revokeObjectURL(url); }, 10000);
+          done();
+          setStatus('Exported ' + (res.receipts || 0) + ' receipts / ' + (res.lineItems || 0) + ' items ✓', true);
+        }).catch(function(err) {
+          done();
+          setStatus('Export failed (' + String((err && err.message) || err) + ')', false);
+        });
       });
     })();
 

@@ -87,7 +87,7 @@ sequenceDiagram
 
 Sequence for the receipts app feature (v01.01g/w upload, v01.02g/w extraction + review + save, v01.03g retry/fallback, v01.04g/v01.05w extraction cache + history browser). All routes require a validated session; the upload and save calls travel as body-POSTs with client-side retry because their payloads exceed GET URL limits. Extraction results are cached server-side by file ID (10 min) so transport retries never re-run Gemini.
 
-> [Open in mermaid.live — Receipt Pipeline](https://mermaid.live/edit#pako:eNqVVsFuGzcQ_ZXBntbwypbRNAelNaBUju0gVgyvg8KIgmK0HK0Yc0mGnJUsGAZ6KtBr22OP_TJ_SUFqV5FqWUVOS604j_PezBvufVIYQUkv8fSlJl3QQGLpsBppAACLjmUhLWqGD57c07dn1xfvAD1cUUHSsj-YcqV-GLvj1BeowaImBfvgaCZpDgU6sfcU5LSfB4zw-JnG0Lc2IghzaTxv2T9wckYxwphS0fJ3DHFNGjAxSpDbdhZVUssYvFz1L89jaEmaHLKckUJd1ljSlug8JppbRyj8lIhjaEse9uGd1HTOVHlgHPu9kV5iDA0TmBm5KGOW5z24oi-1dOTBy1KT6EgNnryXRkOKNU9hoswccGxmbSIhtHN8HCTvwTVaGCV5ELkhPUrg8bc_oMCKHMIhTKQisLK4besWAlfxAzPXvkBFwAYef__n6GW3a-_g7eXJKaQF6hn6vYg3Rk8vX2wgnPbzHly-z68BC5ZG_1hbZVA0MkA6Ma6CsRGLVwH5O0Bmqiz7DLSB05NrmKBSYyxuG2Kn_bxFnaGSApnypRRvjBsgY8rmlvTG7ljzHhSOkOmNVJRedW5ubm4uLgaDztlZVXnfGQ6Hw4PPttwIDNqT9rWjJt9rHPtf0j3YB7SWtABn5pB6Rq59w4zEGsRKwvtG-HORRbHb5wenHnbrRXfssOCVYEETtBKM3S5NQ7YkDkxfL85Fujxw76Akfq3MON2UMrZ2CIg9TT8ZzaQZHn_9C2SFJUVLemu0p7yYUoWBsJMFw9v8_bDFiiidlkBFrpii5gxCgTIoaudIF4sMfD1mw6gyYLzLoFkXyFQat8hAtab4-GmbjL4uCvI-4mKjHCqGk6VKwRFxCwkSy3_XtA2mCGZazRcwlrQH66gzkUqRgBSVgokkJTyQkIxj1VqKlKf1cyYo1TccErp6EVWtUNeogDS7RQOtxRbb9sXn2nObzWGUBmQcGMFsOc5o5eedLeRxRk8N14NVT66mLomNoq5M8EYq1W7f6PkALTJwOAf6Ks0tWYaJcYC1kPwE7YqswoLWBqAzcx8DeCr917x2dsCqU3ow3PTQsgSjJCgk4PHvP0cJpAPpYzWk9kwoQBHOyANPKRJ66uFnp_GZ9GzcAsYha3KQzrpHB90XJRxCXH0_f34IN7HN_J1IxeQ8pK1f4DAaBhzq1Z3yXFWV9Ly6Tf53LCx1R7G6fcOlkzUZZKBpTrHXnGdIK7yDo2531yDzHz89RA4hDXCkBTkSz_DG9d7ZzaqkltSAGKX6Bmbr_bkPkv1_GmwHm425s-RFdxa1IAFimcc-2KlhEzbeJllSkatQiqSX3I8SnlJFo6Q3SgRNsFY8Sh6SLMGaTb7QRdJjV1OW1DYUt_lqWr58-BfpuR0X)
+> [Open in mermaid.live — Receipt Pipeline](https://mermaid.live/edit#pako:eNqVV01v20YQ_SsDXkLBlO0gaQ5Kk0KOHNtBohimg8KIgmLEHZEbL3eZ3aFkIXDQU4Ee-wH0UqCX_jL_gv6EdpeUbNWKEp9EkztvZ968ebv-GGVGUNSLHH2oSWc0kJhbLEcaAKBCyzKTFWqGN47s7beHp69eAjo4oYxkxW674FJ9O7ZPY5ehhgo1KdgCS1NJM8jQis5tkIN-6jH8z_c0hn5VBQRhjo3jNesHVk4pRBiTK2r-DiG2TQMmRgmy6_aiUmoZgpun_vFRCM1Jk0WWU1Ko8xpzWhOdhkTTyhIKVxBxCF0UD1vwUmo6YiodMI5dZ6QbjKFhAjMlG2hM0rQHJ_ShlpYcOJlrEl2pwZFz0miIseYCJsrMAMdmukjEh3afPvWU9-AUKxhFqSe5LXoUwdVPv0KGJVmEHZhIRVDJ7HzRNx-4jB-YmXYZKgI2cPXz3_cf7e5WF_DieP8A4gz1FF0n4I3R0aOHKwgH_bQHx6_TU8CMpdFP6koZFC0NEE-MLWFsxPyxR34AyExlxS4BbeBg_xQmqNQYs_O2sIN-ukCdopICmdKGiufGDpAxZnNOemV16HkPMkvI9Fwqik-6Z2dnZ69eDQbdw8OydK47HA6H2--rfCXQc0_a1ZbafE9x7H6IO7AFWFWkBVgzg9gxcu3aykjcgFhS-LEl_kgkgezF7xurLjfzRRdsMeMlYZ4TrCSYaj01bbE5sa90b34k4mbDznZOvKfMOF6lMkjbBwRN0zOjmTTD1Y-_gywxpzCSrjLaUZoVVKIv2MqM4UX6erjACijdRQEl2axAzQn4BiWQ1daSzuYJuHrMhlElwHiRQPucIVNu7DwBtRiKt-_W0ejqLCPnAi62zKFi2G9Y8hMRlpAg0Xy9wa0fCj9MS38BU5F2UFnqTqRSJCBGpWAiSQkHJCTjWC1GipSjm_tMUKo7bOJVPQ-slqhrVECa7byF1mLN2PbF-9rxIpudQA3IYBh-2FKc0nKeN0rI4ZRuD1wPlppcui6JlaYuh-C5VGqxfEXzHlokYHEGdE3NOVUME2MBayH5FtoJVQozumGA1sxcCOBCuuu8NipgqZQeDFdnqGnBKPIMCbj687dRBPFAutANqR0TClCEU3LABYWCbs_wZ934UDo2dg5jnzVZiKe797d3H-awA-Hpm9ljCLx0jVZzEDTBWnH7bbnq0ezzVt3u0Lr0RCom6yBeTBXshLECizon2AFXmFm31mFPyArKzsfmorNZE0o6Xp5FXzSVpmsolme3P7KSNrNVMUCtFTkHCyaf3O8koGlGQcrW8QZ3dG_fXYaSfXZgSQuyJD5DE94U5OZic1rUOiBGqe5Q8E3Rb4Fk9z_VbqhmxcyauuiiQi1IgGjy2IKqMGz8wvON539mrA9SFOYr_mot_fPXH7-EnaUO9jGKBh6EvhtFgP8Zgf_EnswcpYaZ5EJqeOg20xnyoK8-kUL8yV7_WaPN4IH3Gox7UJEtZXOVmRWkwRpFDjKjJzKvl82_bkqT_h3asjwRHfGpRVeQiNnW1AGjw_Q3HfDXQU-6N3z49GAXBM5dZ4MBNQ31-1sqjRf-xJoyIHr1bujm9oVyF14KxvIdWjmK9puQEO8trXaeqnC0MhStK7Vu0fnSrcJD3c0A9mqpBPjrGbjrW21o59pbbfi8rhNtHQEJXctH_Lpfc9FJPIMa2HcqkBlW-RvMul7490MsKWmvnk1T_CUHhJlp70Agmza3bh0lUUm2RCmiXvRxFHFBJY2i3ihqfXoUXUZJhDWbdK6zqOe1kkR15R23_YeneXn5L55hXEw)
 
 ```mermaid
 sequenceDiagram
@@ -123,15 +123,30 @@ sequenceDiagram
     GAS-->>HTML: {success, lineItems: N}
     HTML->>User: "Saved ✓" (Discard instead leaves the row status=uploaded)
 
-    Note over User,SS: History browser (v01.04g / v01.05w)
-    User->>HTML: Tap "History" → filters (merchant / date range)
+    Note over User,SS: History browser (v01.04g / v01.05w; saved-only default v01.05g / v01.06w)
+    User->>HTML: Tap "History" → filters (merchant / date range / show-unsaved checkbox)
     HTML->>GAS: POST action=listReceipts (GET api op fallback)
-    GAS->>SS: Read Receipts tab, filter, newest first (max 100)
+    GAS->>SS: Read Receipts tab, filter (status=saved unless uploaded=1), newest first
     GAS-->>HTML: {receipts[]} → list rendered
     User->>HTML: Tap a receipt row
     HTML->>GAS: POST action=getReceiptDetail (GET api op fallback)
     GAS->>SS: Read receipt row + its LineItems rows
     GAS-->>HTML: {receipt, lineItems[]} → expanded detail + photo link
+
+    Note over User,SS: Record deletion (v01.05g / v01.06w)
+    User->>HTML: Tap 🗑 → inline "Delete?" arm → tap again within 4s
+    HTML->>GAS: POST action=deleteReceipt (GET api op fallback)
+    GAS->>GAS: RBAC check — 'delete' permission when roles configured
+    GAS->>SS: Delete receipt row + its LineItems rows
+    GAS->>Drive: setTrashed(true) on the photo (recoverable ~30 days)
+    GAS-->>HTML: {success} → row removed from the list
+
+    Note over User,SS: .xlsx export (v01.05g / v01.06w)
+    User->>HTML: Tap "Export .xlsx" (uses current history filters)
+    HTML->>GAS: POST action=exportReceipts (GET api op fallback)
+    GAS->>SS: Build temp spreadsheet — Receipts + LineItems sheets
+    GAS->>Drive: Export temp as .xlsx (OAuth), then trash the temp file
+    GAS-->>HTML: {fileName, base64} → Blob download in the browser
 ```
 
 Developed by: ShadowAISolutions

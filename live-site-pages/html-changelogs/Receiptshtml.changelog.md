@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.06w] — 2026-08-01 04:38:48 AM EST — v01.22r
+
+### Added
+- New "⬇️ Export .xlsx" button in History — downloads a spreadsheet file with two organized sheets (receipts + individual items), respecting your current search and date filters
+- Receipts can now be deleted from History — tap 🗑, then tap "Delete?" to confirm (the photo moves to the Drive trash, recoverable for about 30 days)
+- New "Show unsaved uploads" checkbox in History
+
+### Changed
+- History now shows only saved receipts by default — unsaved uploads appear only when the checkbox is ticked
 
 ## [v01.05w] — 2026-08-01 04:12:06 AM EST — v01.21r
 
