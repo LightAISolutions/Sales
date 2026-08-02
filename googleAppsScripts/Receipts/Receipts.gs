@@ -1,4 +1,4 @@
-var VERSION = "v01.14g";
+var VERSION = "v01.15g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4174,9 +4174,12 @@ function doGet(e) {
         /* Admin panel styles */
         /* Admin badge rides inside the #user-email flex row (after the live pills) — a fixed
            top-left position would sit underneath #user-email (z-index 9999) and lose its clicks.
+           Solid accent styling: the dim status-pill look made it blend into the Live/presence
+           pills and read as "gone". flex: 0 0 auto so the row can never squeeze it.
            The dropdown anchors to the badge via #admin-wrap. */
-        #admin-wrap { position: relative; display: inline-flex; }
-        #admin-badge { background: rgba(0,0,0,0.55); padding: 3px 8px; border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font: 10px/1 monospace; text-transform: uppercase; letter-spacing: 0.5px; color: #90caf9; cursor: pointer; opacity: 0.6; transition: opacity 0.2s; white-space: nowrap; }
+        #admin-wrap { position: relative; display: inline-flex; flex: 0 0 auto; }
+        #admin-badge { background: #90caf9; padding: 4px 10px; border: 1px solid #64b5f6; border-radius: 10px; font: bold 11px/1 monospace; text-transform: uppercase; letter-spacing: 0.5px; color: #0d1117; cursor: pointer; white-space: nowrap; }
+        #admin-badge:hover { background: #a6d4fa; }
         #admin-dropdown-gas { display: none; position: absolute; top: 100%; left: 0; margin-top: 6px; z-index: 101; background: rgba(20,20,30,0.95); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 4px 0; min-width: 140px; box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
         #admin-dropdown-gas button { display: block; width: 100%; text-align: left; padding: 6px 12px; background: none; border: none; color: #90caf9; cursor: pointer; font: 11px/1.4 monospace; white-space: nowrap; }
         #admin-dropdown-gas button:hover { background: rgba(144,202,249,0.1); color: #fff; }
@@ -4239,7 +4242,7 @@ function doGet(e) {
         </div>
         ${isAdmin ? `
         <div id="admin-wrap">
-          <div id="admin-badge" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">ADMIN &#x25BE;</div>
+          <div id="admin-badge">ADMIN &#x25BE;</div>
           <div id="admin-dropdown-gas">
             <button data-admin-panel="sessions">Sessions</button>
             <button data-admin-panel="disclosures">Disclosures</button>

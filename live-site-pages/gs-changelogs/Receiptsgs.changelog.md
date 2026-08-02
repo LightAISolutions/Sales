@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15g] — 2026-08-02 12:31:41 AM EST — v01.41r
+
+### Changed
+- The admin menu button is now a bright blue ADMIN button that stands out clearly next to the status pills — it was easy to mistake for another status indicator after its recent move
 
 ## [v01.14g] — 2026-08-01 11:34:35 PM EST — v01.37r
 
