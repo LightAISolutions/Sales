@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 19/50`
+`Sections: 20/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.20w] — 2026-08-01 11:52:43 PM EST — v01.39r
+
+### Changed
+- Receipt history got the same roomy treatment as Reports — search, dates, category, and sort now tuck into a collapsible "Filters" row that starts closed, with the same "n active" note when hidden filters are narrowing the list
+- The Export button stays right on the Filters row, so downloading your spreadsheet never requires opening the filters
+- In Reports, the Circle graphs switch now sits on the always-visible Filters row — flip between bar and circle graphs with one tap, no need to open the filters
 
 ## [v01.19w] — 2026-08-01 11:44:33 PM EST — v01.38r
 

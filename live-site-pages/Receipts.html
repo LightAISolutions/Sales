@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.19w">
+  <meta name="build-version" content="v01.20w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -587,6 +587,16 @@
     }
     .rh-chk { font-size: 13px; color: #5a5346; display: flex; align-items: center; gap: 6px; }
     .rh-chk input { width: 16px; height: 16px; accent-color: var(--rc-ink); }
+    /* Collapsible filter drawer — mirrors the Reports pattern: only the title
+       and this toggle row stay pinned; search/dates/category/sort start
+       collapsed. Export stays on the pinned row — it's an action, not a filter. */
+    #rh-filter-head {
+      display: flex; align-items: center; gap: 8px; cursor: pointer;
+      padding: 2px 0 0; -webkit-tap-highlight-color: transparent;
+    }
+    #rh-filter-head .rh-flt-lbl { font-size: 12px; color: var(--rc-muted); letter-spacing: 2px; text-transform: uppercase; }
+    #rh-filter-hint { flex: 1 1 auto; text-align: right; font-size: 12px; color: var(--rc-accent); font-style: italic; }
+    #rh-filter-body { display: none; padding: 8px 0 4px; border-bottom: 1px solid #e2d9c6; }
     #rh-export {
       padding: 7px 12px; font-size: 13px; border: 1px solid var(--rc-ok);
       border-radius: 6px; background: #edf2e8; color: var(--rc-ok); cursor: pointer;
@@ -958,6 +968,16 @@
     <div class="rh-head">
       <button id="rh-close" type="button">✕</button>
       <h3>Receipt history</h3>
+      <!-- Shared-view selector — appears only when someone shared with you -->
+      <div class="rh-filters rh-cat-row" id="rh-owner-row" style="display:none">
+        <label class="rh-field" style="flex:1 1 100%"><span>Viewing</span><select id="rh-owner"></select></label>
+      </div>
+      <div id="rh-filter-head">
+        <span class="rh-flt-lbl">Filters</span><span id="rh-filter-hint"></span><button id="rh-export" type="button">⬇️ Export .xlsx</button><span class="rp-sec-toggle" id="rh-filter-toggle">+</span>
+      </div>
+    </div>
+    <!-- Filter drawer — collapsed by default; scrolls with the list when open -->
+    <div id="rh-filter-body">
       <div class="rh-filters">
         <input id="rh-search" type="text" placeholder="Search merchant…" autocomplete="off">
         <button id="rh-go" type="button">Search</button>
@@ -969,13 +989,8 @@
       <div class="rh-filters rh-cat-row">
         <select id="rh-cat" title="Filter by category"></select>
       </div>
-      <!-- Shared-view selector — appears only when someone shared with you -->
-      <div class="rh-filters rh-cat-row" id="rh-owner-row" style="display:none">
-        <label class="rh-field" style="flex:1 1 100%"><span>Viewing</span><select id="rh-owner"></select></label>
-      </div>
       <div class="rh-filters rh-filters-2">
         <label class="rh-chk"><input id="rh-sort-date" type="checkbox"> Sort by receipt date</label>
-        <button id="rh-export" type="button">⬇️ Export .xlsx</button>
       </div>
     </div>
     <div id="rh-list"></div>
@@ -995,7 +1010,7 @@
         <label class="rp-field"><span>Viewing</span><select id="rp-owner"></select></label>
       </div>
       <div id="rp-filter-head">
-        <span class="rp-flt-lbl">Filters</span><span id="rp-filter-hint"></span><span class="rp-sec-toggle" id="rp-filter-toggle">+</span>
+        <span class="rp-flt-lbl">Filters</span><span id="rp-filter-hint"></span><label class="rh-chk" id="rp-circle-wrap"><input type="checkbox" id="rp-circle"> Circle graphs</label><span class="rp-sec-toggle" id="rp-filter-toggle">+</span>
       </div>
     </div>
     <!-- Filter drawer — collapsed by default; scrolls with the report content when open -->
@@ -1014,9 +1029,6 @@
       <div class="rp-filters">
         <label class="rp-field"><span>Min total</span><input id="rp-min" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
         <label class="rp-field"><span>Max total</span><input id="rp-max" type="number" step="0.01" inputmode="decimal" placeholder="no limit"></label>
-      </div>
-      <div class="rp-filters">
-        <label class="rh-chk"><input type="checkbox" id="rp-circle"> Circle graphs</label>
       </div>
     </div>
     <div id="rp-note"></div>
@@ -5696,6 +5708,28 @@
       });
       document.getElementById('rh-sort-date').addEventListener('change', loadHistory);
       document.getElementById('rh-cat').addEventListener('change', loadHistory);
+      document.getElementById('rh-filter-head').addEventListener('click', function(ev) {
+        // The Export button shares this row — its clicks must not toggle the drawer
+        if (ev.target && ev.target.closest && ev.target.closest('#rh-export')) return;
+        var fb = document.getElementById('rh-filter-body');
+        var open = fb.style.display === 'block';
+        fb.style.display = open ? 'none' : 'block';
+        document.getElementById('rh-filter-toggle').textContent = open ? '+' : '−';
+      });
+      // "n active" hint on the collapsed Filters row — sort order isn't counted
+      // (it reorders, it doesn't narrow the list).
+      function rhFilterHint() {
+        var n = 0;
+        if ((document.getElementById('rh-search').value || '').trim()) n++;
+        if (document.getElementById('rh-from').value) n++;
+        if (document.getElementById('rh-to').value) n++;
+        if (document.getElementById('rh-cat').value) n++;
+        document.getElementById('rh-filter-hint').textContent = n ? n + ' active' : '';
+      }
+      ['rh-search', 'rh-from', 'rh-to'].forEach(function(id) {
+        document.getElementById(id).addEventListener('input', rhFilterHint);
+      });
+      document.getElementById('rh-cat').addEventListener('change', rhFilterHint);
 
       // ── Reports ──────────────────────────────────────────────────────
       // One reportReceipts fetch per open pulls every saved receipt + line
@@ -6016,7 +6050,9 @@
         if (tog) tog.textContent = _rpOpen[id] ? '−' : '+';
       });
       document.getElementById('rp-circle').addEventListener('change', renderReport);
-      document.getElementById('rp-filter-head').addEventListener('click', function() {
+      document.getElementById('rp-filter-head').addEventListener('click', function(ev) {
+        // The Circle graphs checkbox shares this row — its clicks must not toggle the drawer
+        if (ev.target && ev.target.closest && ev.target.closest('#rp-circle-wrap')) return;
         var fb = document.getElementById('rp-filter-body');
         var open = fb.style.display === 'block';
         fb.style.display = open ? 'none' : 'block';
