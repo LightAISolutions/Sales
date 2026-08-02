@@ -3,11 +3,25 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 20/50`
+`Sections: 21/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.21w] — 2026-08-02 12:11:48 AM EST — v01.40r
+
+### Added
+- A "Clear" button in the History and Reports filters — one tap resets every filter back to default
+- A Settings ⚙️ button in the bottom-right corner — tap it to see your signed-in account and the "Sign out" / "Sign out everywhere" options (they've moved there from the home screen)
+- A hand-drawn receipt icon on the sign-in screen, matching the app's paper-and-ink look
+
+### Changed
+- "Sort by receipt date" in History now sits right under the Filters row, so you can flip the order without opening the filters
+- The encouraging messages on the home screen now change at a more relaxed pace
+
+### Removed
+- The little saved checkmark next to each receipt in History — everything in History is already saved, so it wasn't telling you anything
 
 ## [v01.20w] — 2026-08-01 11:52:43 PM EST — v01.39r
 

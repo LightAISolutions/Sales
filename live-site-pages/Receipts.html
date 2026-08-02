@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.20w">
+  <meta name="build-version" content="v01.21w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -457,18 +457,33 @@
       transition: width 0.45s ease;
     }
     #receipt-progress-fill.rp-done { background: var(--rc-ok); }
-    /* Account row — quiet serif footer with link-style actions */
-    .rsp-account {
-      display: flex; gap: 6px; align-items: baseline; justify-content: center;
-      flex-wrap: wrap; font-size: 12px; color: var(--rc-muted); margin-top: 2px;
+    /* Settings cog (bottom-right) — opens a small account panel with the
+       signed-in email and the sign-out actions. z-index 9 keeps it above the
+       history/report cards (7/8) but below the auth walls (10002+). */
+    #rsp-settings {
+      position: fixed; right: 14px; bottom: 14px; z-index: 9;
+      width: 44px; height: 44px; border-radius: 50%; font-size: 20px; line-height: 1;
+      border: 1px solid #d8cfba; background: var(--rc-paper); color: var(--rc-ink);
+      cursor: pointer; box-shadow: 0 3px 10px rgba(35,32,25,0.18);
+      -webkit-tap-highlight-color: transparent;
     }
-    #rsp-account-email { font-style: italic; overflow: hidden; text-overflow: ellipsis; max-width: 46%; white-space: nowrap; }
-    .rsp-account button {
-      border: none; background: none; padding: 0; cursor: pointer;
+    #rsp-settings-panel {
+      position: fixed; right: 14px; bottom: 66px; z-index: 9; display: none;
+      background: var(--rc-paper); border: 1px solid #d8cfba; border-radius: 8px;
+      padding: 12px 16px; box-shadow: 0 6px 22px rgba(35,32,25,0.22);
+      font: 13px/1.6 var(--rc-serif); color: var(--rc-ink);
+      max-width: min(320px, calc(100vw - 28px));
+    }
+    #rsp-account-email {
+      display: block; font-style: italic; color: var(--rc-muted);
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      border-bottom: 1px solid #e2d9c6; padding-bottom: 8px; margin-bottom: 8px;
+    }
+    #rsp-settings-panel button {
+      display: block; border: none; background: none; padding: 3px 0; cursor: pointer;
       font: inherit; color: var(--rc-accent); text-decoration: underline;
       text-underline-offset: 2px; text-decoration-thickness: 1px;
     }
-    .rsp-acct-sep { color: var(--rc-line); }
     /* Review-before-save card — opens after extraction, over the scan panel.
        Same layering rationale: above the backdrop, below the overlay walls. */
     #receipt-review-card {
@@ -597,6 +612,12 @@
     #rh-filter-head .rh-flt-lbl { font-size: 12px; color: var(--rc-muted); letter-spacing: 2px; text-transform: uppercase; }
     #rh-filter-hint { flex: 1 1 auto; text-align: right; font-size: 12px; color: var(--rc-accent); font-style: italic; }
     #rh-filter-body { display: none; padding: 8px 0 4px; border-bottom: 1px solid #e2d9c6; }
+    /* Clear-filters button — quiet outline style, right-aligned in the drawer */
+    #rh-clear, #rp-clear {
+      margin-left: auto; padding: 6px 16px; font-size: 13px;
+      border: 1px solid var(--rc-line); border-radius: 6px;
+      background: #fffdf8; color: var(--rc-muted); cursor: pointer; font-family: var(--rc-serif);
+    }
     #rh-export {
       padding: 7px 12px; font-size: 13px; border: 1px solid var(--rc-ok);
       border-radius: 6px; background: #edf2e8; color: var(--rc-ok); cursor: pointer;
@@ -616,7 +637,6 @@
     .rh-row .rh-date { color: var(--rc-muted); font-size: 12px; flex: 0 0 6.6em; font-family: 'Courier New', monospace; white-space: nowrap; }
     .rh-row .rh-merchant { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .rh-row .rh-total { font-weight: 600; white-space: nowrap; font-family: 'Courier New', monospace; font-size: 13px; }
-    .rh-row .rh-status { font-size: 11px; }
     .rh-detail {
       background: #f1ebdd; border-radius: 8px; padding: 10px 12px;
       margin: 4px 0 10px; font-size: 13px; display: none;
@@ -953,11 +973,13 @@
     <div class="rsp-status-row">
       <span id="receipt-scan-status">&nbsp;</span>
     </div>
-    <!-- Visible account row — sign in/out without the hidden hotspot -->
-    <div class="rsp-account" id="rsp-account" style="display:none">
+  </div>
+  <!-- Settings cog + account panel — sign in/out without the hidden hotspot -->
+  <div id="rsp-account" style="display:none">
+    <button id="rsp-settings" type="button" title="Settings" aria-label="Settings">⚙️</button>
+    <div id="rsp-settings-panel">
       <span id="rsp-account-email"></span>
       <button id="rsp-signout" type="button">Sign out</button>
-      <span class="rsp-acct-sep">·</span>
       <button id="rsp-signout-all" type="button">Sign out everywhere</button>
     </div>
   </div>
@@ -975,6 +997,9 @@
       <div id="rh-filter-head">
         <span class="rh-flt-lbl">Filters</span><span id="rh-filter-hint"></span><button id="rh-export" type="button">⬇️ Export .xlsx</button><span class="rp-sec-toggle" id="rh-filter-toggle">+</span>
       </div>
+      <div class="rh-filters rh-filters-2">
+        <label class="rh-chk"><input id="rh-sort-date" type="checkbox"> Sort by receipt date</label>
+      </div>
     </div>
     <!-- Filter drawer — collapsed by default; scrolls with the list when open -->
     <div id="rh-filter-body">
@@ -989,8 +1014,8 @@
       <div class="rh-filters rh-cat-row">
         <select id="rh-cat" title="Filter by category"></select>
       </div>
-      <div class="rh-filters rh-filters-2">
-        <label class="rh-chk"><input id="rh-sort-date" type="checkbox"> Sort by receipt date</label>
+      <div class="rh-filters rh-cat-row">
+        <button id="rh-clear" type="button">Clear</button>
       </div>
     </div>
     <div id="rh-list"></div>
@@ -1029,6 +1054,9 @@
       <div class="rp-filters">
         <label class="rp-field"><span>Min total</span><input id="rp-min" type="number" step="0.01" inputmode="decimal" placeholder="0.00"></label>
         <label class="rp-field"><span>Max total</span><input id="rp-max" type="number" step="0.01" inputmode="decimal" placeholder="no limit"></label>
+      </div>
+      <div class="rp-filters">
+        <button id="rp-clear" type="button">Clear</button>
       </div>
     </div>
     <div id="rp-note"></div>
@@ -1166,8 +1194,8 @@
     document.getElementById('splash-logo').src = SPLASH_LOGO_URL;
     document.getElementById('splash-code-logo').src = SPLASH_LOGO_URL;
     document.getElementById('maintenance-logo').src = SPLASH_LOGO_URL;
-    document.getElementById('auth-wall-logo').src = SPLASH_LOGO_URL;
-    var _sol = document.getElementById('signout-logo'); if (_sol) _sol.src = SPLASH_LOGO_URL; // PROJECT: sign-out screen logo
+    document.getElementById('auth-wall-logo').src = 'images/receipts-logo.svg'; // PROJECT OVERRIDE: themed receipt icon instead of the placeholder logo
+    var _sol = document.getElementById('signout-logo'); if (_sol) _sol.src = 'images/receipts-logo.svg'; // PROJECT: sign-out screen logo (same themed receipt icon)
     document.getElementById('auth-wall-title').textContent = document.title || '';
 
     // Hidden maintenance bypass — triple-click the second wrench to dismiss
@@ -4759,7 +4787,7 @@
         var prEl = document.getElementById('receipt-progress');
         if (prEl && prEl.style.display === 'block') setProgress(null);
         showAffirmation();
-      }, 7000);
+      }, 14000);
 
       // Landing date label — "Fri, Aug 1"
       (function() {
@@ -5609,7 +5637,6 @@
             row.className = 'rh-row';
             row.innerHTML = '<span class="rh-date">' + esc(rec.date || '—') + '</span>'
               + '<span class="rh-merchant">' + esc(rec.merchant || '(no merchant)') + '</span>'
-              + '<span class="rh-status">' + (rec.status === 'saved' ? '✅' : '📤') + '</span>'
               + '<span class="rh-total">' + fmtMoney(rec.total, rec.currency) + '</span>';
             var detail = document.createElement('div');
             detail.className = 'rh-detail';
@@ -5730,6 +5757,13 @@
         document.getElementById(id).addEventListener('input', rhFilterHint);
       });
       document.getElementById('rh-cat').addEventListener('change', rhFilterHint);
+      document.getElementById('rh-clear').addEventListener('click', function() {
+        ['rh-search', 'rh-from', 'rh-to', 'rh-cat'].forEach(function(id) {
+          document.getElementById(id).value = '';
+        });
+        rhFilterHint();
+        loadHistory();
+      });
 
       // ── Reports ──────────────────────────────────────────────────────
       // One reportReceipts fetch per open pulls every saved receipt + line
@@ -6050,6 +6084,16 @@
         if (tog) tog.textContent = _rpOpen[id] ? '−' : '+';
       });
       document.getElementById('rp-circle').addEventListener('change', renderReport);
+      document.getElementById('rp-clear').addEventListener('click', function() {
+        ['rp-merchant', 'rp-from', 'rp-to', 'rp-min', 'rp-max', 'rp-subcat'].forEach(function(id) {
+          document.getElementById(id).value = '';
+        });
+        var cat = document.getElementById('rp-cat');
+        // Dispatching change lets the category listener hide/reset the
+        // subcategory dropdown the same way a manual clear would.
+        if (cat.value) { cat.value = ''; cat.dispatchEvent(new Event('change')); }
+        renderReport();
+      });
       document.getElementById('rp-filter-head').addEventListener('click', function(ev) {
         // The Circle graphs checkbox shares this row — its clicks must not toggle the drawer
         if (ev.target && ev.target.closest && ev.target.closest('#rp-circle-wrap')) return;
@@ -6172,6 +6216,15 @@
         });
         document.getElementById('rsp-signout-all').addEventListener('click', function() {
           performSignOut('manual');
+        });
+        var cog = document.getElementById('rsp-settings');
+        var panel = document.getElementById('rsp-settings-panel');
+        cog.addEventListener('click', function(e) {
+          e.stopPropagation();
+          panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+        });
+        document.addEventListener('click', function(e) {
+          if (panel.style.display === 'block' && !panel.contains(e.target)) panel.style.display = 'none';
         });
       })();
 
