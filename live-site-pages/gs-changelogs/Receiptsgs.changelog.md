@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16g] — 2026-08-02 04:46:01 AM EST — v01.43r
+
+### Added
+- Combined view support — your receipts and those shared with you can now be listed, reported, and exported together, with each receipt labeled by its owner
+
+### Changed
+- When someone has given you full editing access to their receipts, you can now also delete those receipts — households can fully manage each other's scans
 
 ## [v01.15g] — 2026-08-02 12:31:41 AM EST — v01.41r
 

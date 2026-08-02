@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.22w">
+  <meta name="build-version" content="v01.23w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -637,6 +637,8 @@
     .rh-row .rh-date { color: var(--rc-muted); font-size: 12px; flex: 0 0 6.6em; font-family: 'Courier New', monospace; white-space: nowrap; }
     .rh-row .rh-merchant { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .rh-row .rh-total { font-weight: 600; white-space: nowrap; font-family: 'Courier New', monospace; font-size: 13px; }
+    /* Combined-view owner chip — whose scan this row is */
+    .rh-owner-tag { flex: 0 0 auto; font-size: 10px; color: var(--rc-paper); background: var(--rc-muted); border-radius: 8px; padding: 1px 7px; white-space: nowrap; max-width: 7em; overflow: hidden; text-overflow: ellipsis; }
     .rh-detail {
       background: #f1ebdd; border-radius: 8px; padding: 10px 12px;
       margin: 4px 0 10px; font-size: 13px; display: none;
@@ -5604,7 +5606,7 @@
         editBtn.addEventListener('click', function(ev) {
           ev.stopPropagation();
           editingFromHistory = true;
-          editingOwner = rhOwner(); // '' when browsing my own receipts
+          editingOwner = rhRowOwner(r); // '' for my own rows (also in combined view)
           histCard.style.display = 'none';
           openReviewCard(r.id, {
             merchant: r.merchant, address: r.address, date: r.date,
@@ -5617,10 +5619,21 @@
         box.appendChild(editBtn);
       }
 
-      // Current "Viewing" owner in History ('' = my own receipts).
+      // Current "Viewing" owner in History ('' = my own receipts, '*' = combined).
       function rhOwner() {
         var sel = document.getElementById('rh-owner');
         return (sel && sel.value) || '';
+      }
+
+      // Per-row owner for detail/edit/photo routing. In the combined view each
+      // row carries its real owner; rows I own normalize to '' so they take
+      // the same code paths as the plain "My receipts" view.
+      function rhRowOwner(rec) {
+        var v = rhOwner();
+        if (v !== '*') return v;
+        var me = String(loadSession().email || '').toLowerCase();
+        var o = String((rec && rec.owner) || '').toLowerCase();
+        return (o && o !== me) ? o : '';
       }
 
       function loadHistory() {
@@ -5650,8 +5663,12 @@
           rows.forEach(function(rec) {
             var row = document.createElement('div');
             row.className = 'rh-row';
+            // Combined view: tag each row with whose scan it is (name part only)
+            var ownTag = (rhOwner() === '*' && rec.owner)
+              ? '<span class="rh-owner-tag">' + esc(String(rec.owner).split('@')[0]) + '</span>' : '';
             row.innerHTML = '<span class="rh-date">' + esc(rec.date || '—') + '</span>'
               + '<span class="rh-merchant">' + esc(rec.merchant || '(no merchant)') + '</span>'
+              + ownTag
               + '<span class="rh-total">' + fmtMoney(rec.total, rec.currency) + '</span>';
             var detail = document.createElement('div');
             detail.className = 'rh-detail';
@@ -5661,8 +5678,9 @@
             var del = document.createElement('button');
             del.type = 'button'; del.className = 'rh-del'; del.textContent = '🗑';
             del.title = 'Delete this receipt';
-            // Deletion is never shared — hide the control on shared views.
-            if (rhOwner()) del.style.display = 'none';
+            // Combined view allows mutual delete on edit-grant rows (the server
+            // enforces the grant); single shared views stay read-only for delete.
+            if (rhOwner() === '*' ? rec.canEdit === false : !!rhOwner()) del.style.display = 'none';
             var armTimer = null;
             del.addEventListener('click', function(ev) {
               ev.stopPropagation();
@@ -5683,8 +5701,9 @@
                 .then(function(dr) {
                   if (dr && dr.success) {
                     // Own-Drive photo → move it to the user's Drive trash
-                    // (best-effort; the server can only trash org-Drive files).
-                    if (!dr.photoTrashed && !rhOwner()) {
+                    // (best-effort; the server can only trash org-Drive files,
+                    // and only the row's owner can trash their own-Drive photo).
+                    if (!dr.photoTrashed && !rhRowOwner(rec)) {
                       var dm = String(rec.imageUrl || '').match(/\/d\/([^\/?]+)/);
                       if (dm && dm[1]) driveTrashFile(dm[1]);
                     }
@@ -5715,7 +5734,7 @@
               if (!open && !detail.dataset.loaded) {
                 detail.innerHTML = 'Loading…';
                 var s2 = loadSession();
-                _gasPost({ action: 'getReceiptDetail', token: s2.token || '', receiptId: rec.id, owner: rhOwner() })
+                _gasPost({ action: 'getReceiptDetail', token: s2.token || '', receiptId: rec.id, owner: rhRowOwner(rec) })
                   .then(function(d) {
                     if (d && d.success) { renderDetail(detail, d); detail.dataset.loaded = '1'; }
                     else { detail.innerHTML = 'Could not load (' + esc((d && d.error) || 'unknown') + ')'; }
@@ -6445,7 +6464,14 @@
             o.textContent = s.email + (s.scope === 'edit' ? ' (can edit)' : ' (view only)');
             sel.appendChild(o);
           });
-          sel.value = received.some(function(s) { return s.email === cur; }) ? cur : '';
+          if (received.length) {
+            var comb = document.createElement('option');
+            comb.value = '*';
+            comb.textContent = 'Combined (mine + shared)';
+            sel.appendChild(comb);
+          }
+          sel.value = (cur === '*' && received.length) ? '*'
+            : (received.some(function(s) { return s.email === cur; }) ? cur : '');
           if (row) row.style.display = received.length ? '' : 'none';
         });
       }

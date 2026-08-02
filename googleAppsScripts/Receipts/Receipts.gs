@@ -1,4 +1,4 @@
-var VERSION = "v01.15g";
+var VERSION = "v01.16g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -652,9 +652,9 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
   var user = validateSessionForData(sessionToken, 'listReceipts');
   migrateReceiptIds_(); // one-time data migration; no-op after first run
   backfillReceiptOwners_(); // one-time owner backfill; no-op after first run
-  var scopeRes = resolveOwnerScope_(user, forOwner, false);
-  if (scopeRes.error) return { success: false, error: scopeRes.error };
-  var ownerEmail = scopeRes.owner;
+  var setRes = resolveOwnerSet_(user, forOwner);
+  if (setRes.error) return { success: false, error: setRes.error };
+  var ownerSet = setRes.set;
   var sh = ensureReceiptTabs_().receipts;
   var last = sh.getLastRow();
   if (last < 2) return { success: true, receipts: [] };
@@ -670,8 +670,11 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
     var r = vals[i];
     var rDate = (r[3] instanceof Date)
       ? Utilities.formatDate(r[3], 'UTC', 'yyyy-MM-dd') : String(r[3] || '');
-    // Each user sees only their own receipts (owner = Uploaded By column).
-    if (String(r[2] || '').toLowerCase() !== ownerEmail) continue;
+    // Owner gate (owner = Uploaded By column): a single-owner view lists one
+    // owner; the combined view lists every owner in the resolved grant set.
+    var rowOwner = String(r[2] || '').toLowerCase();
+    var rowScope = ownerSet[rowOwner];
+    if (rowScope === undefined) continue;
     // Default view is confirmed data only — unsaved "uploaded" rows appear
     // only when the client explicitly asks for them.
     if (!showUploaded && String(r[11] || '') !== 'saved') continue;
@@ -681,6 +684,8 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
     if (from && rDate < from) continue;
     if (to && rDate > to) continue;
     out.push({
+      owner: rowOwner,
+      canEdit: rowScope === 'own' || rowScope === 'edit',
       id: String(r[0] || ''),
       uploadedAt: (r[1] instanceof Date) ? r[1].toISOString() : String(r[1] || ''),
       date: rDate,
@@ -781,9 +786,9 @@ function getReceiptDetail(sessionToken, receiptId, forOwner) {
 function reportReceipts(sessionToken, dateFrom, dateTo, forOwner) {
   var user = validateSessionForData(sessionToken, 'reportReceipts');
   backfillReceiptOwners_(); // one-time owner backfill; no-op after first run
-  var scopeRes = resolveOwnerScope_(user, forOwner, false);
-  if (scopeRes.error) return { success: false, error: scopeRes.error };
-  var ownerEmail = scopeRes.owner;
+  var setRes = resolveOwnerSet_(user, forOwner);
+  if (setRes.error) return { success: false, error: setRes.error };
+  var ownerSet = setRes.set;
   var tabs = ensureReceiptTabs_();
   var sh = tabs.receipts;
   var last = sh.getLastRow();
@@ -795,7 +800,8 @@ function reportReceipts(sessionToken, dateFrom, dateTo, forOwner) {
   var included = {};
   for (var i = 0; i < vals.length && receipts.length < 2000; i++) {
     var r = vals[i];
-    if (String(r[2] || '').toLowerCase() !== ownerEmail) continue; // own receipts only
+    var rowOwner = String(r[2] || '').toLowerCase();
+    if (ownerSet[rowOwner] === undefined) continue; // single owner, or the combined grant set
     if (String(r[11] || '') !== 'saved') continue;
     var rDate = (r[3] instanceof Date)
       ? Utilities.formatDate(r[3], 'UTC', 'yyyy-MM-dd') : String(r[3] || '');
@@ -805,6 +811,7 @@ function reportReceipts(sessionToken, dateFrom, dateTo, forOwner) {
     var id = String(r[0] || '');
     included[id] = true;
     receipts.push({
+      owner: rowOwner,
       id: id,
       date: rDate,
       merchant: String(r[4] || ''),
@@ -855,10 +862,12 @@ function deleteReceipt(sessionToken, receiptId) {
     var vals = sh.getRange(2, 1, last - 1, 12).getValues();
     for (var i = 0; i < vals.length; i++) {
       if (String(vals[i][0]) === rid) {
-        // Ownership gate — users can only delete their own receipts; respond
-        // as not-found so existence is not leaked across accounts.
-        if (String(vals[i][2] || '').toLowerCase()
-            !== String((user && user.email) || '').toLowerCase()) break;
+        // Ownership gate — the owner can always delete; anyone else needs an
+        // edit-scope grant from the owner (mutual delete for households).
+        // Everything else responds as not-found so existence is not leaked.
+        var delOwner = String(vals[i][2] || '').toLowerCase();
+        var delMe = String((user && user.email) || '').toLowerCase();
+        if (delOwner !== delMe && getShareScope_(delOwner, delMe) !== 'edit') break;
         rowIdx = i + 2;
         imageUrl = String(vals[i][10] || '');
         break;
@@ -894,9 +903,8 @@ function deleteReceipt(sessionToken, receiptId) {
  */
 function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner) {
   var user = validateSessionForData(sessionToken, 'exportReceipts');
-  var scopeRes = resolveOwnerScope_(user, forOwner, false);
-  if (scopeRes.error) return { success: false, error: scopeRes.error };
-  var ownerEmail = scopeRes.owner;
+  var setRes = resolveOwnerSet_(user, forOwner); // validates single-owner grants; '*' always resolves
+  if (setRes.error) return { success: false, error: setRes.error };
   var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded, '', category, forOwner);
   if (!listed.success) return listed;
   var receipts = listed.receipts || [];
@@ -909,10 +917,10 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
   try {
     var rSheet = temp.getSheets()[0];
     rSheet.setName('Receipts');
-    var rRows = [['Receipt ID', 'Date', 'Merchant', 'Store Address', 'Currency',
+    var rRows = [['Receipt ID', 'Owner', 'Date', 'Merchant', 'Store Address', 'Currency',
       'Subtotal', 'Tax', 'Total', 'Category', 'Status', 'Image Link', 'Uploaded At']];
     receipts.forEach(function(rc) {
-      rRows.push([rc.id, rc.date, rc.merchant, '', rc.currency,
+      rRows.push([rc.id, rc.owner || '', rc.date, rc.merchant, '', rc.currency,
         '', '', '', rc.category, rc.status, rc.imageUrl, rc.uploadedAt]);
     });
     // Subtotal/Tax/Total/Address pulled from the sheet in one read.
@@ -925,10 +933,11 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
       for (var x = 1; x < rRows.length; x++) {
         var srcRow = byId[rRows[x][0]];
         if (srcRow) {
-          rRows[x][3] = String(srcRow[13] || '');
-          rRows[x][5] = (srcRow[6] === '' || srcRow[6] === null) ? '' : srcRow[6];
-          rRows[x][6] = (srcRow[7] === '' || srcRow[7] === null) ? '' : srcRow[7];
-          rRows[x][7] = (srcRow[8] === '' || srcRow[8] === null) ? '' : srcRow[8];
+          // Column indexes account for the Owner column at position 1.
+          rRows[x][4] = String(srcRow[13] || '');
+          rRows[x][6] = (srcRow[6] === '' || srcRow[6] === null) ? '' : srcRow[6];
+          rRows[x][7] = (srcRow[7] === '' || srcRow[7] === null) ? '' : srcRow[7];
+          rRows[x][8] = (srcRow[8] === '' || srcRow[8] === null) ? '' : srcRow[8];
         }
       }
     }
@@ -1321,6 +1330,38 @@ function resolveOwnerScope_(user, forOwner, needEdit) {
   if (!scope) return { error: 'not_shared' };
   if (needEdit && scope !== 'edit') return { error: 'view_only' };
   return { owner: target, scope: scope };
+}
+
+/**
+ * Combined-view owner resolution for list-type ops. forOwner '*' → the
+ * session user plus every owner who granted them access, as a map of
+ * ownerEmail → scope ('own' | 'edit' | 'view'). Any other forOwner defers
+ * to resolveOwnerScope_ and returns a single-entry map. Combining never
+ * widens access — every entry is backed by an existing grant.
+ */
+function resolveOwnerSet_(user, forOwner) {
+  var me = String((user && user.email) || '').toLowerCase();
+  if (String(forOwner || '').trim() !== '*') {
+    var single = resolveOwnerScope_(user, forOwner, false);
+    if (single.error) return { error: single.error };
+    var one = {};
+    one[single.owner] = single.scope;
+    return { set: one };
+  }
+  var set = {};
+  set[me] = 'own';
+  var sh = ensureReceiptTabs_().shares;
+  var last = sh.getLastRow();
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 3).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      if (String(vals[i][1] || '').toLowerCase() !== me) continue;
+      var o = String(vals[i][0] || '').toLowerCase();
+      if (!o) continue;
+      set[o] = String(vals[i][2] || 'view').toLowerCase() === 'edit' ? 'edit' : 'view';
+    }
+  }
+  return { set: set };
 }
 
 // Grants I've made (granted) + grants made to me (received).

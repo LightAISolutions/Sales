@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 22/50`
+`Sections: 23/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.23w] — 2026-08-02 04:46:01 AM EST — v01.43r
+
+### Added
+- "Combined (mine + shared)" in the History and Reports "Viewing" pickers — see both of your households' receipts merged together in one list, one report, and one Line Items view
+- In the combined History, each receipt shows a small name chip so you can tell whose scan it was, and tapping into any receipt opens and edits it seamlessly no matter who scanned it
+- Spreadsheet exports now include an Owner column, so combined exports stay easy to split
 
 ## [v01.22w] — 2026-08-02 04:34:42 AM EST — v01.42r
 
