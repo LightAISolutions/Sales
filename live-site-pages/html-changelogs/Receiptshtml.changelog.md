@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 24/50`
+`Sections: 25/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.25w] — 2026-08-02 05:10:46 AM EST — v01.45r
+
+### Changed
+- In Reports' Line Items with "Group by item" on, each item row now shows your total spend on that item across all purchases — tap the row to see the individual prices, as before
 
 ## [v01.24w] — 2026-08-02 05:05:19 AM EST — v01.44r
 
