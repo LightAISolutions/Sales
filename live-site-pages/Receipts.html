@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.18w">
+  <meta name="build-version" content="v01.19w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -623,8 +623,8 @@
     #receipt-report-card {
       position: fixed; top: 76px; left: 50%; transform: translateX(-50%);
       z-index: 8; display: none; width: min(560px, 94vw);
-      max-height: calc(100vh - 170px);
-      max-height: calc(100dvh - 170px);
+      max-height: calc(100vh - 120px);
+      max-height: calc(100dvh - 120px);
       overflow-y: auto;
       background: var(--rc-paper); border: 1px solid #d8cfba; border-radius: 8px;
       padding: 0 14px 14px; box-shadow: 0 6px 22px rgba(35,32,25,0.22);
@@ -662,7 +662,16 @@
       gap: 3px; font-size: 12px; color: var(--rc-muted);
     }
     .rp-field input { width: 100%; }
-    #rp-note { color: #8a6510; font-size: 12px; padding: 6px 0 0; font-style: italic; }
+    /* Collapsible filter drawer — only title + period tabs stay pinned; the filter
+       rows live below the sticky head and start collapsed so the report content
+       gets the screen. Toggle row mirrors the report-group +/− language. */
+    #rp-filter-head {
+      display: flex; align-items: center; gap: 8px; cursor: pointer;
+      padding: 8px 0 6px; -webkit-tap-highlight-color: transparent;
+    }
+    #rp-filter-head .rp-flt-lbl { font-size: 12px; color: var(--rc-muted); letter-spacing: 2px; text-transform: uppercase; }
+    #rp-filter-hint { flex: 1 1 auto; text-align: right; font-size: 12px; color: var(--rc-accent); font-style: italic; }
+    #rp-filter-body { display: none; padding-bottom: 4px; border-bottom: 1px solid #e2d9c6; }
     /* Summary chips — total / count / average for the filtered set */
     #rp-summary { display: flex; gap: 8px; margin-top: 10px; }
     .rp-chip {
@@ -985,6 +994,12 @@
       <div class="rp-filters" id="rp-owner-row" style="display:none">
         <label class="rp-field"><span>Viewing</span><select id="rp-owner"></select></label>
       </div>
+      <div id="rp-filter-head">
+        <span class="rp-flt-lbl">Filters</span><span id="rp-filter-hint"></span><span class="rp-sec-toggle" id="rp-filter-toggle">+</span>
+      </div>
+    </div>
+    <!-- Filter drawer — collapsed by default; scrolls with the report content when open -->
+    <div id="rp-filter-body">
       <div class="rp-filters">
         <input id="rp-merchant" type="text" placeholder="Filter merchant…" autocomplete="off">
       </div>
@@ -5820,7 +5835,23 @@
           + '<div class="rp-sec-body"' + (open ? '' : ' style="display:none"') + '>' + inner + '</div></div>';
       }
 
+      // "n active" hint on the collapsed Filters row — without it, a hidden
+      // filter would silently shrink the report with no visible cause.
+      function rpFilterHint() {
+        var n = 0;
+        if ((document.getElementById('rp-merchant').value || '').trim()) n++;
+        if (document.getElementById('rp-cat').value) n++;
+        var sc = document.getElementById('rp-subcat');
+        if (sc.style.display !== 'none' && sc.value) n++;
+        if (document.getElementById('rp-from').value) n++;
+        if (document.getElementById('rp-to').value) n++;
+        if (document.getElementById('rp-min').value) n++;
+        if (document.getElementById('rp-max').value) n++;
+        document.getElementById('rp-filter-hint').textContent = n ? n + ' active' : '';
+      }
+
       function renderReport() {
+        rpFilterHint();
         if (!rpData) return;
         var body = document.getElementById('rp-body');
         var summary = document.getElementById('rp-summary');
@@ -5985,6 +6016,12 @@
         if (tog) tog.textContent = _rpOpen[id] ? '−' : '+';
       });
       document.getElementById('rp-circle').addEventListener('change', renderReport);
+      document.getElementById('rp-filter-head').addEventListener('click', function() {
+        var fb = document.getElementById('rp-filter-body');
+        var open = fb.style.display === 'block';
+        fb.style.display = open ? 'none' : 'block';
+        document.getElementById('rp-filter-toggle').textContent = open ? '+' : '−';
+      });
       document.getElementById('rp-periods').addEventListener('click', function(ev) {
         var b = ev.target && ev.target.closest ? ev.target.closest('button') : null;
         if (!b || !b.dataset.p) return;

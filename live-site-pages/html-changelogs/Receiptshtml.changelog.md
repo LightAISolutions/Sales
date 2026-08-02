@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 18/50`
+`Sections: 19/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.19w] — 2026-08-01 11:44:33 PM EST — v01.38r
+
+### Changed
+- Reports is much roomier — the filters now tuck into a collapsible "Filters" row (tap + to open, − to close) and start closed, so your totals and breakdowns get most of the screen
+- When filters are hidden but active, the Filters row shows a small "n active" note so you always know a filter is narrowing the numbers
+- The Reports panel itself is a little taller, showing more of your report without scrolling
 
 ## [v01.18w] — 2026-08-01 09:57:44 PM EST — v01.36r
 
