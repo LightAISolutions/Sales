@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.21w">
+  <meta name="build-version" content="v01.22w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -721,6 +721,21 @@
       font-size: 15px; font-weight: 700; user-select: none;
     }
     .rp-sec-body { margin-top: 4px; }
+    /* Line Items drill-down — flat item rows, or grouped rows with expandable
+       per-item price history (for cross-merchant / over-time comparison). */
+    .rp-it-tools { display: flex; gap: 10px; align-items: center; margin: 2px 0 8px; }
+    #rp-item-q { flex: 1 1 auto; min-width: 0; font-size: 16px; padding: 6px 8px; border: 1px solid var(--rc-line); border-radius: 6px; background: #fffdf8; color: inherit; outline: none; }
+    .rp-it-row { display: flex; gap: 8px; align-items: baseline; padding: 5px 2px; border-bottom: 1px solid #eee5d2; font-size: 13px; }
+    .rp-it-row:last-child { border-bottom: none; }
+    .rp-it-date { flex: 0 0 5.4em; color: var(--rc-muted); font: 12px 'Courier New', monospace; white-space: nowrap; }
+    .rp-it-merch { flex: 0 1 auto; max-width: 28%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--rc-muted); font-size: 12px; }
+    .rp-it-desc { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .rp-it-amt { flex: 0 0 auto; font: bold 13px 'Courier New', monospace; white-space: nowrap; }
+    .rp-it-stats { flex: 0 0 auto; color: var(--rc-muted); font-size: 11px; white-space: nowrap; }
+    .rp-it-grow { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    .rp-it-hist { display: none; padding: 0 2px 4px 16px; border-bottom: 1px solid #eee5d2; background: #faf3e3; }
+    .rp-it-hist .rp-it-row { border-bottom: none; padding: 2px 0; }
+    .rp-it-note { color: var(--rc-muted); font-size: 12px; font-style: italic; padding: 2px 0 6px; }
     /* Donut (circle graph) mode — large circle on top, legend rows below */
     .rp-donut-wrap { display: flex; flex-direction: column; gap: 10px; align-items: center; padding: 8px 0 2px; }
     .rp-donut { flex: 0 0 auto; width: min(210px, 62vw); height: auto; }
@@ -5903,6 +5918,91 @@
           + '<div class="rp-sec-body"' + (open ? '' : ' style="display:none"') + '>' + inner + '</div></div>';
       }
 
+      // ── Line Items drill-down ──
+      // Search text / group toggle persist across renderReport rebuilds;
+      // _rpItemCtx carries the current render's receipt map so keystrokes can
+      // rebuild only the list (keeping the search box focused).
+      var _rpItemQ = '';
+      var _rpItemGrp = false;
+      var _rpItemCtx = null;
+
+      function rpItemRows(byId, sub) {
+        var items = [];
+        rpData.lineItems.forEach(function(it) {
+          var rec = byId[it.receiptId];
+          if (!rec) return;
+          if (sub && it.category !== sub) return;
+          var amt = parseFloat(it.amount);
+          items.push({ date: rec.date || '', merchant: rec.merchant || '',
+            desc: it.description || '', amount: isNaN(amt) ? 0 : amt });
+        });
+        var q = _rpItemQ.toLowerCase().trim();
+        if (q) items = items.filter(function(x) { return x.desc.toLowerCase().indexOf(q) !== -1; });
+        items.sort(function(a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+        return items;
+      }
+
+      function rpItemListHtml(items, cur) {
+        if (!items.length) return '<div class="rp-it-note">No matching line items.</div>';
+        var iTotal = 0;
+        items.forEach(function(x) { iTotal += x.amount; });
+        var h = '<div class="rp-it-note">' + items.length + ' item' + (items.length === 1 ? '' : 's')
+          + ' · ' + cur + iTotal.toFixed(2) + ' total</div>';
+        if (_rpItemGrp) {
+          // Normalize by lowercased collapsed whitespace — receipts print the
+          // same product with inconsistent casing/spacing.
+          var groups = {}, order = [];
+          items.forEach(function(x) {
+            var k = x.desc.trim().toLowerCase().replace(/\s+/g, ' ');
+            if (!groups[k]) { groups[k] = []; order.push(k); }
+            groups[k].push(x);
+          });
+          order.sort(function(a, b) { return groups[b].length - groups[a].length; });
+          order.forEach(function(k, gi) {
+            var g = groups[k]; // newest-first from the presort
+            var lo = g[0].amount, hi = g[0].amount;
+            g.forEach(function(x) { if (x.amount < lo) lo = x.amount; if (x.amount > hi) hi = x.amount; });
+            h += '<div class="rp-it-row rp-it-grow" data-grp="' + gi + '" title="Tap for price history">'
+              + '<span class="rp-it-desc">' + esc(g[0].desc) + '</span>'
+              + '<span class="rp-it-stats">×' + g.length + (g.length > 1 ? ' · ' + cur + lo.toFixed(2) + '–' + hi.toFixed(2) : '') + '</span>'
+              + '<span class="rp-it-amt">' + cur + g[0].amount.toFixed(2) + '</span></div>'
+              + '<div class="rp-it-hist" data-hist="' + gi + '">';
+            g.forEach(function(x) {
+              h += '<div class="rp-it-row"><span class="rp-it-date">' + esc(x.date) + '</span>'
+                + '<span class="rp-it-merch">' + esc(x.merchant) + '</span>'
+                + '<span class="rp-it-desc"></span>'
+                + '<span class="rp-it-amt">' + cur + x.amount.toFixed(2) + '</span></div>';
+            });
+            h += '</div>';
+          });
+        } else {
+          var shown = items;
+          if (shown.length > 300) {
+            h += '<div class="rp-it-note">Showing the 300 most recent.</div>';
+            shown = shown.slice(0, 300);
+          }
+          shown.forEach(function(x) {
+            h += '<div class="rp-it-row"><span class="rp-it-date">' + esc(x.date) + '</span>'
+              + '<span class="rp-it-merch">' + esc(x.merchant) + '</span>'
+              + '<span class="rp-it-desc">' + esc(x.desc) + '</span>'
+              + '<span class="rp-it-amt">' + cur + x.amount.toFixed(2) + '</span></div>';
+          });
+        }
+        return h;
+      }
+
+      function rpItemSection(byId, sub, cur) {
+        var open = !!_rpOpen['items'];
+        var inner = '<div class="rp-it-tools">'
+          + '<input id="rp-item-q" type="text" placeholder="Search items…" autocomplete="off" value="' + esc(_rpItemQ) + '">'
+          + '<label class="rh-chk"><input type="checkbox" id="rp-item-group"' + (_rpItemGrp ? ' checked' : '') + '> Group by item</label>'
+          + '</div><div id="rp-item-list">' + rpItemListHtml(rpItemRows(byId, sub), cur) + '</div>';
+        return '<div class="rp-section">'
+          + '<div class="rp-sec-head" data-sec="items" role="button" aria-expanded="' + open + '">'
+          + '<h4>🧾 Line items' + (sub ? ' — ' + esc(sub) : '') + '</h4><span class="rp-sec-toggle">' + (open ? '−' : '+') + '</span></div>'
+          + '<div class="rp-sec-body"' + (open ? '' : ' style="display:none"') + '>' + inner + '</div></div>';
+      }
+
       // "n active" hint on the collapsed Filters row — without it, a hidden
       // filter would silently shrink the report with no visible cause.
       function rpFilterHint() {
@@ -6027,6 +6127,15 @@
           }
         }
 
+        // 🧾 Line Items drill-down — appears once a category is chosen; every
+        // matching item with its price, or grouped per item for history.
+        if (cat) {
+          _rpItemCtx = { byId: byId, sub: sub, cur: cur };
+          html += rpItemSection(byId, sub, cur);
+        } else {
+          _rpItemCtx = null;
+        }
+
         var merch = {};
         rows.forEach(function(r) { var m = r.merchant || '(no merchant)'; merch[m] = (merch[m] || 0) + r.amount; });
         var mKeys = Object.keys(merch).sort(function(a, b) { return merch[b] - merch[a]; }).slice(0, 8);
@@ -6063,6 +6172,7 @@
         reportCard.style.display = showing ? 'none' : 'block';
         if (!showing) {
           _rpOpen = {}; // every group starts minimized on a fresh open
+          _rpItemQ = ''; // fresh item search per open; group toggle persists
           loadReportData(); // fresh data on every open; filter changes stay local
           loadShares(); // populates the "Viewing" selector when grants exist
         }
@@ -6082,6 +6192,33 @@
         head.setAttribute('aria-expanded', String(!!_rpOpen[id]));
         var tog = head.querySelector('.rp-sec-toggle');
         if (tog) tog.textContent = _rpOpen[id] ? '−' : '+';
+      });
+      // Line Items interactions — delegated so they survive re-renders. The
+      // search keystroke rebuilds only #rp-item-list, keeping the box focused.
+      function refreshItemList() {
+        var list = document.getElementById('rp-item-list');
+        if (!list || !_rpItemCtx) return;
+        list.innerHTML = rpItemListHtml(rpItemRows(_rpItemCtx.byId, _rpItemCtx.sub), _rpItemCtx.cur);
+      }
+      document.getElementById('rp-body').addEventListener('input', function(ev) {
+        if (ev.target && ev.target.id === 'rp-item-q') {
+          _rpItemQ = ev.target.value || '';
+          refreshItemList();
+        }
+      });
+      document.getElementById('rp-body').addEventListener('change', function(ev) {
+        if (ev.target && ev.target.id === 'rp-item-group') {
+          _rpItemGrp = !!ev.target.checked;
+          refreshItemList();
+        }
+      });
+      document.getElementById('rp-body').addEventListener('click', function(ev) {
+        var row = ev.target && ev.target.closest ? ev.target.closest('.rp-it-grow') : null;
+        if (!row) return;
+        var hist = row.nextElementSibling;
+        if (hist && hist.classList.contains('rp-it-hist')) {
+          hist.style.display = hist.style.display === 'block' ? 'none' : 'block';
+        }
       });
       document.getElementById('rp-circle').addEventListener('change', renderReport);
       document.getElementById('rp-clear').addEventListener('click', function() {

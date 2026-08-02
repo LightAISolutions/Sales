@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 21/50`
+`Sections: 22/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.22w] — 2026-08-02 04:34:42 AM EST — v01.42r
+
+### Added
+- New "🧾 Line items" section in Reports — pick a category (and optionally a subcategory like Pantry) to see every matching purchased item with its date, store, and price
+- Search box inside the section to find a specific item (like "olive oil") and read its price history at a glance
+- "Group by item" switch — identical items collapse into one row showing how many times you bought it, its lowest–highest price range, and the latest price; tap the row to see every dated purchase across stores
+- The section obeys all your Reports filters, so date ranges and store filters narrow the item list too
 
 ## [v01.21w] — 2026-08-02 12:11:48 AM EST — v01.40r
 
