@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12g] — 2026-08-01 08:11:26 PM EST — v01.35r
+
+### Changed
+- Receipt reading no longer needs the photo to pass through shared storage — the app reads it directly, and your photo goes straight to your own Google Drive
 
 ## [v01.11g] — 2026-08-01 07:51:32 PM EST — v01.34r
 

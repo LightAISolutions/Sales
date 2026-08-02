@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.16w">
+  <meta name="build-version" content="v01.17w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1834,11 +1834,17 @@
       gasApp.src = baseUrl + '?action=getNonce';
     }
 
+    // PROJECT: drive.file lets the browser store receipt photos in the
+    // signed-in user's OWN Drive (folder auto-created on first use). The
+    // scope is non-sensitive; every GIS token client below uses this
+    // constant so all consents stay consistent.
+    var AUTH_SCOPES = 'openid email profile https://www.googleapis.com/auth/drive.file';
+
     function initGoogleSignIn() {
       var session = loadSession();
       signInClient = google.accounts.oauth2.initTokenClient({
         client_id: CLIENT_ID,
-        scope: 'openid email profile',
+        scope: AUTH_SCOPES, // PROJECT OVERRIDE: + drive.file for own-Drive photo storage
         prompt: '',                // silent first (no user interaction)
         login_hint: session.email || '',
         callback: handleTokenResponse,
@@ -4219,7 +4225,7 @@
       var hint = emailHint || '';
       signInClient = google.accounts.oauth2.initTokenClient({
         client_id: CLIENT_ID,
-        scope: 'openid email profile',
+        scope: AUTH_SCOPES, // PROJECT OVERRIDE: + drive.file for own-Drive photo storage
         prompt: '',
         login_hint: hint,
         callback: function(response) {
@@ -4229,7 +4235,7 @@
             showAbsoluteWarning('Session expired. Click "Sign In" to continue.');
             signInClient = google.accounts.oauth2.initTokenClient({
               client_id: CLIENT_ID,
-              scope: 'openid email profile',
+              scope: AUTH_SCOPES, // PROJECT OVERRIDE: + drive.file for own-Drive photo storage
               prompt: 'consent',
               login_hint: hint,
               callback: handleTokenResponse,
@@ -4254,7 +4260,7 @@
     document.getElementById('auth-sign-in-btn').addEventListener('click', function() {
       signInClient = google.accounts.oauth2.initTokenClient({
         client_id: CLIENT_ID,
-        scope: 'openid email profile',
+        scope: AUTH_SCOPES, // PROJECT OVERRIDE: + drive.file for own-Drive photo storage
         prompt: 'select_account',
         callback: handleTokenResponse,
         error_callback: _onGisPopupDismissed
@@ -4479,7 +4485,7 @@
               clearInterval(ssoGisCheck);
               var ssoRefreshClient = google.accounts.oauth2.initTokenClient({
                 client_id: CLIENT_ID,
-                scope: 'openid email profile',
+                scope: AUTH_SCOPES, // PROJECT OVERRIDE: + drive.file for own-Drive photo storage
                 prompt: '',  // silent — no user interaction
                 login_hint: session.email || '',
                 callback: function(response) {
@@ -4538,7 +4544,7 @@
       var retrySession = loadSession();
       var retryClient = google.accounts.oauth2.initTokenClient({
         client_id: CLIENT_ID,
-        scope: 'openid email profile',
+        scope: AUTH_SCOPES, // PROJECT OVERRIDE: + drive.file for own-Drive photo storage
         prompt: '',
         login_hint: retrySession.email || '',
         callback: function(response) {
@@ -4771,6 +4777,7 @@
       var currentReceiptId = '';
       var currentRaw = '';
       var currentFileId = ''; // Drive file of the last upload — lets Retry extraction re-run without re-photographing
+      var currentB64 = null;  // image bytes for own-Drive receipts — Retry re-extracts from these (no server Drive read)
       var pendingForce = false; // set after a duplicate warning — next Save sends force=1
       var editingFromHistory = false; // review card opened from History "Edit" — save/discard returns to History
       var editingOwner = ''; // owner email when editing a receipt shared with me ('' = my own)
@@ -4911,17 +4918,20 @@
       document.getElementById('rr-retry').addEventListener('click', function() {
         var session = loadSession();
         if (!session.token) { setRrStatus('Sign in first', false); return; }
-        if (!currentFileId || !currentReceiptId) { setRrStatus('Nothing to retry — scan again', false); return; }
+        if ((!currentFileId && !currentB64) || !currentReceiptId) { setRrStatus('Nothing to retry — scan again', false); return; }
         var retryBtn = document.getElementById('rr-retry');
-        var rid = currentReceiptId, fid = currentFileId;
+        var rid = currentReceiptId, fid = currentFileId, rb64 = currentB64;
         retryBtn.disabled = true;
         setRrStatus('Retrying extraction…', true);
-        _gasPost({ action: 'extractReceipt', token: session.token, fileId: fid })
+        (rb64
+          ? _gasPostBody({ action: 'extractReceiptData', token: session.token, image: rb64, mime: 'image/jpeg' })
+          : _gasPost({ action: 'extractReceipt', token: session.token, fileId: fid }))
           .then(function(x) {
             retryBtn.disabled = false;
             if (x && x.success && x.data) {
               openReviewCard(rid, x.data); // re-populates; hides the retry button
               currentFileId = fid;
+              currentB64 = rb64;
             } else {
               setRrStatus('Still failing (' + ((x && x.error) || 'unknown') + ') — wait a minute and retry, or enter manually', false);
             }
@@ -4958,6 +4968,13 @@
           .then(function(r) {
             saveBtn.disabled = false;
             if (r && r.success) {
+              // Rename the own-Drive photo to the final receipt ID
+              // (best-effort — the server can't touch the user's Drive).
+              var dfid = _drivePhotoByReceipt[currentReceiptId];
+              if (dfid && r.receiptId) {
+                driveRenameFile(dfid, r.receiptId + '.jpg');
+                delete _drivePhotoByReceipt[currentReceiptId];
+              }
               closeReviewCard();
               if (batchActive) {
                 batchSaved++;
@@ -4994,6 +5011,149 @@
           });
       });
 
+      // ── Own-Drive photo storage ──────────────────────────────────────
+      // Photos live in the SIGNED-IN USER'S Drive, uploaded directly from
+      // the browser with their own drive.file credential ("Receipts App"
+      // folder, auto-created on first use). The server only registers the
+      // link. If anything fails (no token, consent declined, Drive error),
+      // storeAndRegister falls back to the legacy server upload so no photo
+      // is ever lost.
+      var _driveFolderId = null; // session cache of the user's folder ID
+      var _drivePhotoByReceipt = {}; // receiptId → own-Drive file ID (rename-on-save)
+
+      function _getDriveToken(cb) {
+        if (_ssoAccessToken) { cb(_ssoAccessToken); return; }
+        try {
+          var c = google.accounts.oauth2.initTokenClient({
+            client_id: CLIENT_ID,
+            scope: AUTH_SCOPES,
+            prompt: '',
+            login_hint: loadSession().email || '',
+            callback: function(resp) {
+              if (resp && resp.access_token) { _ssoAccessToken = resp.access_token; cb(resp.access_token); }
+              else { cb(null); }
+            },
+            error_callback: function() { cb(null); }
+          });
+          c.requestAccessToken();
+        } catch (tErr) { cb(null); }
+      }
+
+      function _driveFetch(tok, url, opts) {
+        opts = opts || {};
+        opts.headers = opts.headers || {};
+        opts.headers['Authorization'] = 'Bearer ' + tok;
+        return fetch(url, opts).then(function(resp) {
+          if (resp.status === 401) { _ssoAccessToken = null; throw new Error('drive_auth'); }
+          if (!resp.ok) throw new Error('drive_http_' + resp.status);
+          return resp.json();
+        });
+      }
+
+      function ensureDriveFolder(tok) {
+        if (_driveFolderId) return Promise.resolve(_driveFolderId);
+        var session = loadSession();
+        return _gasPost({ action: 'getProfile', token: session.token || '' })
+          .then(function(p) {
+            if (p && p.success && p.folderId) { _driveFolderId = p.folderId; return p.folderId; }
+            // First use — create the folder in the user's Drive, register it.
+            return _driveFetch(tok, 'https://www.googleapis.com/drive/v3/files?fields=id', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name: 'Receipts App', mimeType: 'application/vnd.google-apps.folder' })
+            }).then(function(f) {
+              _driveFolderId = f.id;
+              _gasPost({ action: 'setProfileFolder', token: session.token || '', folderId: f.id })
+                .catch(function() { /* registration retries next session */ });
+              return f.id;
+            });
+          });
+      }
+
+      function uploadToOwnDrive(b64, name) {
+        return new Promise(function(resolve) {
+          _getDriveToken(function(tok) {
+            if (!tok) { resolve(null); return; }
+            ensureDriveFolder(tok)
+              .then(function(folderId) {
+                var boundary = 'rcpt' + Date.now().toString(36);
+                var meta = { name: name || ('Receipt-' + Date.now() + '.jpg'), parents: [folderId] };
+                var body = '--' + boundary + '\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n'
+                  + JSON.stringify(meta)
+                  + '\r\n--' + boundary + '\r\nContent-Type: image/jpeg\r\nContent-Transfer-Encoding: base64\r\n\r\n'
+                  + b64 + '\r\n--' + boundary + '--';
+                return _driveFetch(tok,
+                  'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,webViewLink', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'multipart/related; boundary=' + boundary },
+                    body: body
+                  });
+              })
+              .then(function(f) {
+                resolve(f && f.id
+                  ? { id: f.id, link: f.webViewLink || ('https://drive.google.com/file/d/' + f.id + '/view') }
+                  : null);
+              })
+              .catch(function() { resolve(null); });
+          });
+        });
+      }
+
+      // Store the photo + register the receipt row. Own-Drive first; the
+      // legacy org-Drive server upload is the automatic fallback.
+      function storeAndRegister(session, b64, name) {
+        return uploadToOwnDrive(b64, name).then(function(df) {
+          if (df && df.id) {
+            return _gasPost({ action: 'uploadReceipt', token: session.token, imageUrl: df.link })
+              .then(function(r) {
+                if (r && r.success) {
+                  r.extractVia = 'data';
+                  r.driveFileId = df.id;
+                  _drivePhotoByReceipt[r.receiptId] = df.id;
+                }
+                return r;
+              });
+          }
+          return _gasPostBody({ action: 'uploadReceipt', token: session.token, image: b64, mime: 'image/jpeg', name: name })
+            .then(function(r) { if (r && r.success) r.extractVia = 'file'; return r; });
+        });
+      }
+
+      // Extraction router — own-Drive receipts extract straight from the
+      // bytes (no server Drive read); legacy rows extract by file ID.
+      // The throttle spaces Gemini calls ≥6.5s apart during batches.
+      function extractFor(session, r, b64, throttled) {
+        var run = function() {
+          lastExtractAt = Date.now();
+          return (r.extractVia === 'data')
+            ? _gasPostBody({ action: 'extractReceiptData', token: session.token, image: b64, mime: 'image/jpeg' })
+            : _gasPost({ action: 'extractReceipt', token: session.token, fileId: r.fileId || '' });
+        };
+        if (!throttled) return run();
+        var wait = Math.max(0, 6500 - (Date.now() - lastExtractAt));
+        return new Promise(function(res) { setTimeout(res, wait); }).then(run);
+      }
+
+      function driveRenameFile(fileId, newName) {
+        _getDriveToken(function(tok) {
+          if (!tok) return;
+          _driveFetch(tok, 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(fileId), {
+            method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: newName })
+          }).catch(function() { /* cosmetic — save already succeeded */ });
+        });
+      }
+
+      function driveTrashFile(fileId) {
+        _getDriveToken(function(tok) {
+          if (!tok) return;
+          _driveFetch(tok, 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(fileId), {
+            method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ trashed: true })
+          }).catch(function() { /* photo stays in their Drive; deletable there */ });
+        });
+      }
+
       function handleFile(file) {
         if (!file) return;
         if (batchActive) { setStatus('Finish the current batch first', false); return; }
@@ -5004,12 +5164,14 @@
         setStatus('Compressing…', true);
         setProgress(15);
         if (thumb) { thumb.src = URL.createObjectURL(file); thumb.style.display = 'inline-block'; }
+        var pendingB64 = null;
         compressImage(file)
           .then(function(b64) {
             if (b64.length > 6000000) throw new Error('image_too_large');
+            pendingB64 = b64;
             setStatus('Uploading…', true);
             setProgress(40);
-            return _gasPostBody({ action: 'uploadReceipt', token: session.token, image: b64, mime: 'image/jpeg', name: file.name || '' });
+            return storeAndRegister(session, b64, file.name || '');
           })
           .then(function(r) {
             if (!(r && r.success)) {
@@ -5020,7 +5182,7 @@
             }
             setStatus('Uploaded ✓ — reading the receipt…', true);
             setProgress(70);
-            return _gasPost({ action: 'extractReceipt', token: session.token, fileId: r.fileId || '' })
+            return extractFor(session, r, pendingB64, false)
               .then(function(x) {
                 btn.disabled = false;
                 if (x && x.success && x.data) {
@@ -5034,6 +5196,7 @@
                     'Extraction failed (' + ((x && x.error) || 'unknown') + ') — retry or enter the details manually');
                 }
                 currentFileId = r.fileId || '';
+                currentB64 = (r.extractVia === 'data') ? pendingB64 : null;
               })
               .catch(function(xErr) {
                 btn.disabled = false;
@@ -5042,6 +5205,7 @@
                 openReviewCard(r.receiptId, null,
                   'Extraction failed (' + String((xErr && xErr.message) || xErr) + ') — retry or enter the details manually');
                 currentFileId = r.fileId || '';
+                currentB64 = (r.extractVia === 'data') ? pendingB64 : null;
               });
           })
           .catch(function(err) {
@@ -5072,14 +5236,6 @@
       var batchActive = false;
       var lastExtractAt = 0;
 
-      function extractThrottled(session, fileId) {
-        var wait = Math.max(0, 6500 - (Date.now() - lastExtractAt));
-        return new Promise(function(res) { setTimeout(res, wait); }).then(function() {
-          lastExtractAt = Date.now();
-          return _gasPost({ action: 'extractReceipt', token: session.token, fileId: fileId });
-        });
-      }
-
       function openNextInBatch() {
         var qp = document.getElementById('rr-queue-pos');
         if (!batchQueue.length) {
@@ -5097,6 +5253,7 @@
         var pos = reviewable - batchQueue.length;
         openReviewCard(entry.receiptId, entry.data, entry.note || null);
         currentFileId = entry.fileId; // enables Retry extraction on failed entries
+        currentB64 = entry.b64 || null; // own-Drive receipts retry from bytes
         if (qp) qp.textContent = '· ' + pos + ' of ' + reviewable;
       }
 
@@ -5126,31 +5283,37 @@
           if (idx >= files.length) { finishProcessing(); return; }
           var file = files[idx]; idx++;
           var n = idx, N = files.length;
+          var stepB64 = null;
           setStatus('Receipt ' + n + ' of ' + N + ' — compressing…', true);
           setProgress(Math.round(((n - 1) + 0.15) / N * 100));
           compressImage(file)
             .then(function(b64) {
               if (b64.length > 6000000) throw new Error('image_too_large');
+              stepB64 = b64;
               setStatus('Receipt ' + n + ' of ' + N + ' — uploading…', true);
               setProgress(Math.round(((n - 1) + 0.4) / N * 100));
-              return _gasPostBody({ action: 'uploadReceipt', token: session.token,
-                image: b64, mime: 'image/jpeg', name: file.name || '' });
+              return storeAndRegister(session, b64, file.name || '');
             })
             .then(function(r) {
               if (!(r && r.success)) throw new Error((r && r.error) || 'upload_failed');
               setStatus('Receipt ' + n + ' of ' + N + ' — reading the receipt…', true);
               setProgress(Math.round(((n - 1) + 0.7) / N * 100));
-              return extractThrottled(session, r.fileId || '')
+              return extractFor(session, r, stepB64, true)
                 .then(function(x) {
+                  var ok = !!(x && x.success && x.data);
                   batchQueue.push({
                     receiptId: r.receiptId, fileId: r.fileId || '',
-                    data: (x && x.success && x.data) ? x.data : null,
-                    note: (x && x.success && x.data) ? '' :
+                    // Bytes are kept only when a retry might need them —
+                    // holding all 15 photos in memory would strain phones.
+                    b64: (!ok && r.extractVia === 'data') ? stepB64 : null,
+                    data: ok ? x.data : null,
+                    note: ok ? '' :
                       'Extraction failed (' + ((x && x.error) || 'unknown') + ') — retry or enter manually'
                   });
                 })
                 .catch(function(xErr) {
-                  batchQueue.push({ receiptId: r.receiptId, fileId: r.fileId || '', data: null,
+                  batchQueue.push({ receiptId: r.receiptId, fileId: r.fileId || '',
+                    b64: (r.extractVia === 'data') ? stepB64 : null, data: null,
                     note: 'Extraction failed (' + String((xErr && xErr.message) || xErr) + ') — retry or enter manually' });
                 });
             })
@@ -5319,6 +5482,12 @@
               _gasPost({ action: 'deleteReceipt', token: sd.token || '', receiptId: rec.id })
                 .then(function(dr) {
                   if (dr && dr.success) {
+                    // Own-Drive photo → move it to the user's Drive trash
+                    // (best-effort; the server can only trash org-Drive files).
+                    if (!dr.photoTrashed && !rhOwner()) {
+                      var dm = String(rec.imageUrl || '').match(/\/d\/([^\/?]+)/);
+                      if (dm && dm[1]) driveTrashFile(dm[1]);
+                    }
                     row.remove();
                     detail.remove();
                     refreshMonthCard();

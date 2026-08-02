@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 16/50`
+`Sections: 17/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.17w] — 2026-08-01 08:11:26 PM EST — v01.35r
+
+### Changed
+- Your receipt photos now save to your own Google Drive, in a "Receipts App" folder created for you automatically — you own your photos, and they're renamed to match each saved receipt
+- On your next sign-in, Google will ask once for permission to let the app manage the files it creates in your Drive — that's the new photo storage
+- Deleting a receipt now moves its photo to your own Drive trash, where it's recoverable for about 30 days
 
 ## [v01.16w] — 2026-08-01 07:51:32 PM EST — v01.34r
 

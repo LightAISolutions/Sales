@@ -1,4 +1,4 @@
-var VERSION = "v01.11g";
+var VERSION = "v01.12g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -323,6 +323,7 @@ var DRIVE_FOLDER_ID = "1DHfXwzo0qXI_2H0Q2dDLKGn7EOtguI0A";
 var RECEIPTS_TAB = "Receipts";
 var LINEITEMS_TAB = "LineItems";
 var SHARES_TAB = "Shares";
+var PROFILES_TAB = "Profiles";
 // Multi-user data isolation — the "Uploaded By" column is the owner of each
 // receipt; every read/write op is scoped to the signed-in user's own rows.
 // Rows created before ownership scoping (blank Uploaded By) are backfilled
@@ -407,6 +408,9 @@ function ensureReceiptTabs_() {
     ]),
     shares: ensure(SHARES_TAB, [
       "Owner", "Grantee", "Scope", "Created At"
+    ]),
+    profiles: ensure(PROFILES_TAB, [
+      "Email", "Drive Folder ID", "Display Name", "Created At"
     ])
   };
   // In-place header upgrades for sheets created before these columns existed.
@@ -425,8 +429,29 @@ function ensureReceiptTabs_() {
  * remaining columns). Called via the fetch transport's body-POST
  * (doPost action=uploadReceipt — no GET fallback; images exceed URL limits).
  */
-function uploadReceipt(sessionToken, imageBase64, mimeType, fileName) {
+function uploadReceipt(sessionToken, imageBase64, mimeType, fileName, imageUrl) {
   var user = validateSessionForData(sessionToken, 'uploadReceipt');
+  // Own-Drive mode (v01.12g) — the browser already uploaded the photo to the
+  // USER'S Drive with their own credential; the server only registers the
+  // row with the link. No image bytes travel here and no org-Drive write.
+  var link = String(imageUrl || '').trim();
+  if (link) {
+    if (!/^https:\/\/drive\.google\.com\//.test(link)) {
+      return { success: false, error: 'bad_image_url' };
+    }
+    if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
+      return { success: false, error: 'spreadsheet_not_configured' };
+    }
+    var linkReceiptId = 'R-' + Utilities.formatDate(new Date(), 'UTC', 'yyyyMMdd-HHmmss')
+      + '-' + Math.floor(Math.random() * 9000 + 1000);
+    ensureReceiptTabs_().receipts.appendRow([
+      linkReceiptId, new Date(), user.email, '', '', '', '', '', '', '',
+      link, 'uploaded', ''
+    ]);
+    return { success: true, receiptId: linkReceiptId };
+  }
+  // Legacy mode — base64 image stored on the org Drive folder (fallback when
+  // the browser has no Drive token, and the path older cached pages use).
   var b64 = String(imageBase64 || '');
   if (!b64) return { success: false, error: 'no_image' };
   // Client compresses to well under this; the cap guards the POST body limit.
@@ -463,8 +488,6 @@ function uploadReceipt(sessionToken, imageBase64, mimeType, fileName) {
  */
 function extractReceipt(sessionToken, fileId) {
   validateSessionForData(sessionToken, 'extractReceipt');
-  var apiKey = PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY') || '';
-  if (!apiKey) return { success: false, error: 'gemini_key_missing' };
   if (!fileId) return { success: false, error: 'no_file_id' };
   // Result cache — the fetch transport can legitimately call this twice for
   // one user action (POST leg succeeds server-side but Google returns an
@@ -479,6 +502,45 @@ function extractReceipt(sessionToken, fileId) {
   var blob;
   try { blob = DriveApp.getFileById(fileId).getBlob(); }
   catch (fErr) { return { success: false, error: 'file_not_found' }; }
+  var exResult = geminiExtractFromBase64_(
+    Utilities.base64Encode(blob.getBytes()), blob.getContentType() || 'image/jpeg');
+  if (exResult.success) {
+    try { exCache.put('extract_' + fileId, JSON.stringify(exResult), 600); } catch (pErr) { /* >100KB — skip caching */ }
+  }
+  return exResult;
+}
+
+/**
+ * Drive-free AI extraction (own-Drive photo pipeline) — same Gemini read,
+ * but straight from the image bytes the browser already holds; the server
+ * never touches storage. Cached by content digest so transport retries
+ * never re-run Gemini. Body-POST only (images exceed GET URL limits).
+ */
+function extractReceiptData(sessionToken, imageBase64, mimeType) {
+  validateSessionForData(sessionToken, 'extractReceiptData');
+  var b64 = String(imageBase64 || '');
+  if (!b64) return { success: false, error: 'no_image' };
+  if (b64.length > 7000000) return { success: false, error: 'image_too_large' };
+  var mime = String(mimeType || 'image/jpeg');
+  if (mime.indexOf('image/') !== 0) return { success: false, error: 'not_an_image' };
+  var digest = Utilities.base64EncodeWebSafe(
+    Utilities.computeDigest(Utilities.DigestAlgorithm.MD5, b64));
+  var exCache = CacheService.getScriptCache();
+  var hit = exCache.get('extractd_' + digest);
+  if (hit) {
+    try { return JSON.parse(hit); } catch (cErr) { /* fall through to re-extract */ }
+  }
+  var result = geminiExtractFromBase64_(b64, mime);
+  if (result.success) {
+    try { exCache.put('extractd_' + digest, JSON.stringify(result), 600); } catch (pErr) { /* >100KB — skip caching */ }
+  }
+  return result;
+}
+
+// Shared Gemini extraction core — strict-JSON responseSchema + retry plan.
+function geminiExtractFromBase64_(dataB64, mime) {
+  var apiKey = PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY') || '';
+  if (!apiKey) return { success: false, error: 'gemini_key_missing' };
   var schema = {
     type: "object",
     properties: {
@@ -511,7 +573,7 @@ function extractReceipt(sessionToken, fileId) {
     contents: [{
       parts: [
         { text: "Extract the data from this receipt photo. Use an empty string or 0 for unreadable fields. Line items are the purchased products/services only — do not include subtotal, tax, or total rows as line items. Assign each line item the best-fitting category from the schema's enum (supermarket departments); use Non-Grocery for items sold outside grocery contexts and Other only when nothing fits." },
-        { inline_data: { mime_type: blob.getContentType() || 'image/jpeg', data: Utilities.base64Encode(blob.getBytes()) } }
+        { inline_data: { mime_type: mime, data: dataB64 } }
       ]
     }],
     generationConfig: { responseMimeType: "application/json", responseSchema: schema, temperature: 0 }
@@ -549,9 +611,7 @@ function extractReceipt(sessionToken, fileId) {
   } catch (xErr) {
     return { success: false, error: 'gemini_parse_failed' };
   }
-  var exResult = { success: true, data: extracted };
-  try { exCache.put('extract_' + fileId, JSON.stringify(exResult), 600); } catch (pErr) { /* >100KB — skip caching */ }
-  return exResult;
+  return { success: true, data: extracted };
 }
 
 /**
@@ -1282,6 +1342,48 @@ function addShare(sessionToken, granteeEmail, scope) {
   return { success: true, email: g, scope: sc };
 }
 
+/**
+ * Profiles — one row per user (own-Drive photo storage). The browser
+ * auto-creates a "Receipts App" folder in the user's own Drive on first use
+ * and registers its ID here; later sessions look it up instead of searching
+ * Drive again.
+ */
+function getProfile(sessionToken) {
+  var user = validateSessionForData(sessionToken, 'getProfile');
+  var me = String((user && user.email) || '').toLowerCase();
+  var sh = ensureReceiptTabs_().profiles;
+  var last = sh.getLastRow();
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 2).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      if (String(vals[i][0] || '').toLowerCase() === me) {
+        return { success: true, folderId: String(vals[i][1] || '') };
+      }
+    }
+  }
+  return { success: true, folderId: '' };
+}
+
+function setProfileFolder(sessionToken, folderId) {
+  var user = validateSessionForData(sessionToken, 'setProfileFolder');
+  var me = String((user && user.email) || '').toLowerCase();
+  var fid = String(folderId || '').trim();
+  if (!/^[A-Za-z0-9_-]{10,100}$/.test(fid)) return { success: false, error: 'bad_folder_id' };
+  var sh = ensureReceiptTabs_().profiles;
+  var last = sh.getLastRow();
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 1).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      if (String(vals[i][0] || '').toLowerCase() === me) {
+        sh.getRange(i + 2, 2).setValue(fid);
+        return { success: true, folderId: fid, updated: true };
+      }
+    }
+  }
+  sh.appendRow([me, fid, String((user && user.name) || ''), new Date()]);
+  return { success: true, folderId: fid };
+}
+
 // Revoke a grant I made.
 function removeShare(sessionToken, granteeEmail) {
   var user = validateSessionForData(sessionToken, 'removeShare');
@@ -1820,7 +1922,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.token) || "",
         (e && e.parameter && e.parameter.image) || "",
         (e && e.parameter && e.parameter.mime) || "",
-        (e && e.parameter && e.parameter.name) || "");
+        (e && e.parameter && e.parameter.name) || "",
+        (e && e.parameter && e.parameter.imageUrl) || "");
     } catch (upErr) {
       upResult = { success: false, error: String((upErr && upErr.message) || upErr) };
     }
@@ -1839,6 +1942,36 @@ function doPost(e) {
       exResult = { success: false, error: String((exErr && exErr.message) || exErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(exResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Drive-free AI extraction via fetch() — body-POST only (image bytes).
+  if (action === "extractReceiptData") {
+    var exdResult;
+    try {
+      exdResult = extractReceiptData(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.image) || "",
+        (e && e.parameter && e.parameter.mime) || "");
+    } catch (exdErr) {
+      exdResult = { success: false, error: String((exdErr && exdErr.message) || exdErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(exdResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Receipts profile (own-Drive folder registration) via fetch().
+  if (action === "getProfile" || action === "setProfileFolder") {
+    var pfResult;
+    try {
+      var pfToken = (e && e.parameter && e.parameter.token) || "";
+      pfResult = (action === "getProfile")
+        ? getProfile(pfToken)
+        : setProfileFolder(pfToken, (e && e.parameter && e.parameter.folderId) || "");
+    } catch (pfErr) {
+      pfResult = { success: false, error: String((pfErr && pfErr.message) || pfErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(pfResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -3266,6 +3399,16 @@ function doGet(e) {
           (e && e.parameter && e.parameter.from) || '',
           (e && e.parameter && e.parameter.to) || '',
           (e && e.parameter && e.parameter.owner) || '');
+      } else if (apiOp === 'uploadReceipt') {
+        // PROJECT: own-Drive row registration (GET fallback — link only, no bytes)
+        apiResult = uploadReceipt(apiToken, '', '', '',
+          (e && e.parameter && e.parameter.imageUrl) || '');
+      } else if (apiOp === 'getProfile') {
+        // PROJECT: profile lookup (GET fallback)
+        apiResult = getProfile(apiToken);
+      } else if (apiOp === 'setProfileFolder') {
+        // PROJECT: profile folder registration (GET fallback)
+        apiResult = setProfileFolder(apiToken, (e && e.parameter && e.parameter.folderId) || '');
       } else if (apiOp === 'listShares') {
         // PROJECT: Receipts sharing — grants list (GET fallback)
         apiResult = listShares(apiToken);
