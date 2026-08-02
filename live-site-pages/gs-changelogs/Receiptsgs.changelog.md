@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 13/50`
+`Sections: 14/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.14g] — 2026-08-01 11:34:35 PM EST — v01.37r
+
+### Fixed
+- The admin menu button is now fully clickable — it sits next to the status pills instead of hidden behind the signed-in email, and its menu opens on the first tap
 
 ## [v01.13g] — 2026-08-01 09:57:44 PM EST — v01.36r
 

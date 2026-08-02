@@ -1,4 +1,4 @@
-var VERSION = "v01.13g";
+var VERSION = "v01.14g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4143,8 +4143,8 @@ function doGet(e) {
         /* Signed-in email is a flex row in the top band: the live pills nest inside it
            so they sit immediately after the username and track its width automatically.
            Color/opacity live on #user-email-text so the pills stay full-strength. */
-        #user-email { position: fixed; top: 3px; left: 8px; z-index: 9999; display: flex; align-items: center; gap: 10px; font-size: 11px; font-family: monospace; }
-        #user-email-text { color: #666; opacity: 0.7; }
+        #user-email { position: fixed; top: 3px; left: 8px; z-index: 9999; display: flex; align-items: center; gap: 10px; font-size: 11px; font-family: monospace; max-width: calc(100vw - 16px); }
+        #user-email-text { color: #666; opacity: 0.7; flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         /* Discreet usable-area readout: live width×height of the app viewport. Sits on the
            bottom band, left of the HOST page's pill stack (which owns the bottom-right corner
            at right:22px with pills stacked up to ~86px high) */
@@ -4172,8 +4172,12 @@ function doGet(e) {
         .dt-pres-empty { padding:6px 8px; color:#6e7681; font-size:11px; }
         ${isAdmin ? `
         /* Admin panel styles */
-        #admin-badge { position: fixed; top: 7px; left: 12px; z-index: 100; background: rgba(0,0,0,0.55); padding: 3px 8px; border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font: 10px/1 monospace; text-transform: uppercase; letter-spacing: 0.5px; color: #90caf9; cursor: pointer; opacity: 0.6; transition: opacity 0.2s; }
-        #admin-dropdown-gas { display: none; position: fixed; top: 31px; left: 12px; z-index: 101; background: rgba(20,20,30,0.95); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 4px 0; min-width: 140px; box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
+        /* Admin badge rides inside the #user-email flex row (after the live pills) — a fixed
+           top-left position would sit underneath #user-email (z-index 9999) and lose its clicks.
+           The dropdown anchors to the badge via #admin-wrap. */
+        #admin-wrap { position: relative; display: inline-flex; }
+        #admin-badge { background: rgba(0,0,0,0.55); padding: 3px 8px; border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; font: 10px/1 monospace; text-transform: uppercase; letter-spacing: 0.5px; color: #90caf9; cursor: pointer; opacity: 0.6; transition: opacity 0.2s; white-space: nowrap; }
+        #admin-dropdown-gas { display: none; position: absolute; top: 100%; left: 0; margin-top: 6px; z-index: 101; background: rgba(20,20,30,0.95); border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; padding: 4px 0; min-width: 140px; box-shadow: 0 4px 16px rgba(0,0,0,0.4); }
         #admin-dropdown-gas button { display: block; width: 100%; text-align: left; padding: 6px 12px; background: none; border: none; color: #90caf9; cursor: pointer; font: 11px/1.4 monospace; white-space: nowrap; }
         #admin-dropdown-gas button:hover { background: rgba(144,202,249,0.1); color: #fff; }
         #admin-panel-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 200; background: rgba(0,0,0,0.6); }
@@ -4233,29 +4237,33 @@ function doGet(e) {
           <div class="dt-live" id="dt-live" title="Live multi-user sync — others' changes appear automatically"><span class="dt-live-dot"></span><span id="dt-live-lbl">Live</span><span class="dt-live-sub" id="dt-live-since"></span><span class="dt-live-sub">|</span><span class="dt-live-sub" id="dt-live-next">▷ --</span></div>
           <div class="dt-presence" id="dt-presence" title="People currently viewing this app — green = active, amber = away (window not focused). Hover for the list."><span class="dt-pres-ico">👥</span><span id="dt-pres-count">–</span><span class="dt-pres-pop" id="dt-pres-pop"></span></div>
         </div>
+        ${isAdmin ? `
+        <div id="admin-wrap">
+          <div id="admin-badge" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">ADMIN &#x25BE;</div>
+          <div id="admin-dropdown-gas">
+            <button data-admin-panel="sessions">Sessions</button>
+            <button data-admin-panel="disclosures">Disclosures</button>
+            <button data-admin-panel="data-export">My Data</button>
+            <button data-admin-panel="amendment">Correction</button>
+            <button data-admin-panel="amendment-review">Amendments</button>
+            <button data-admin-panel="disagreement">Disagree</button>
+            <button data-admin-panel="extension">Extensions</button>
+            <button data-admin-panel="denial-notice">Denial Notice</button>
+            <button data-admin-panel="ehr-disclosures">EHR Disclosures</button>
+            <button data-admin-panel="breach-log">Breach Log</button>
+            <button data-admin-panel="representatives">Representatives</button>
+            <button data-admin-panel="legal-holds">Legal Holds</button>
+            <button data-admin-panel="compliance-audit">Compliance Audit</button>
+            <button data-admin-panel="archive-integrity">Archive Integrity</button>
+            <button data-admin-panel="retention-policy">Retention Policy</button>
+          </div>
+        </div>
+        ` : ''}
       </div>
       <!-- GAS toggle moved to HTML layer for full iframe hide/show
       <button id="gas-layer-toggle" onclick="window._toggleGasLayer()" style="position:fixed;bottom:7px;left:135px;z-index:9999;background:rgba(0,0,0,0.55);color:#ccc;border:1px solid rgba(255,255,255,0.2);padding:3px 8px;border-radius:10px;font:10px/1 monospace;cursor:pointer;opacity:0.6;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">GAS</button>
       -->
       ${isAdmin ? `
-      <div id="admin-badge" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">ADMIN &#x25BE;</div>
-      <div id="admin-dropdown-gas">
-        <button data-admin-panel="sessions">Sessions</button>
-        <button data-admin-panel="disclosures">Disclosures</button>
-        <button data-admin-panel="data-export">My Data</button>
-        <button data-admin-panel="amendment">Correction</button>
-        <button data-admin-panel="amendment-review">Amendments</button>
-        <button data-admin-panel="disagreement">Disagree</button>
-        <button data-admin-panel="extension">Extensions</button>
-        <button data-admin-panel="denial-notice">Denial Notice</button>
-        <button data-admin-panel="ehr-disclosures">EHR Disclosures</button>
-        <button data-admin-panel="breach-log">Breach Log</button>
-        <button data-admin-panel="representatives">Representatives</button>
-        <button data-admin-panel="legal-holds">Legal Holds</button>
-        <button data-admin-panel="compliance-audit">Compliance Audit</button>
-        <button data-admin-panel="archive-integrity">Archive Integrity</button>
-        <button data-admin-panel="retention-policy">Retention Policy</button>
-      </div>
       <div id="admin-panel-overlay">
         <div id="admin-panel">
           <div id="admin-panel-header">
@@ -4451,7 +4459,7 @@ function doGet(e) {
           document.getElementById('admin-badge').addEventListener('click', function(e) {
             e.stopPropagation();
             var dd = document.getElementById('admin-dropdown-gas');
-            dd.style.display = dd.style.display === 'none' ? 'block' : 'none';
+            dd.style.display = dd.style.display === 'block' ? 'none' : 'block';
           });
           document.addEventListener('click', function(e) {
             var dd = document.getElementById('admin-dropdown-gas');
