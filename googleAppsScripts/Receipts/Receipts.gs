@@ -1,4 +1,4 @@
-var VERSION = "v01.12g";
+var VERSION = "v01.13g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -345,13 +345,41 @@ var GEMINI_FALLBACK_MODEL = "gemini-3.5-flash";
 var RECEIPT_CATEGORIES = ["Groceries", "Dining", "Transport", "Health",
   "Shopping", "Entertainment", "Utilities", "Travel", "Other"];
 
-// Per-line-item categories assigned automatically during extraction. The
-// reference apps stop at receipt-level buckets, so item level uses standard
-// supermarket department taxonomy — granular enough to cover any grocery
-// store item, still meaningful for non-grocery receipts via the tail entries.
-var ITEM_CATEGORIES = ["Produce", "Meat & Seafood", "Dairy & Eggs", "Bakery",
+// Per-line-item subcategories assigned automatically during extraction —
+// the union of every receipt category's subcategory list (the client's
+// SUBCATS map in Receipts.html must stay the per-category mirror of this).
+// Groceries keeps supermarket departments; the rest follow Expensify /
+// Smart Receipts-style buckets.
+var ITEM_CATEGORIES = [
+  // Groceries departments
+  "Produce", "Meat & Seafood", "Dairy & Eggs", "Bakery",
   "Deli & Prepared", "Frozen", "Pantry", "Snacks & Candy", "Beverages",
-  "Alcohol", "Household", "Personal Care", "Baby", "Pet", "Non-Grocery", "Other"];
+  "Alcohol", "Household", "Personal Care", "Baby", "Pet", "Non-Grocery",
+  // Dining
+  "Restaurant", "Fast Food", "Coffee & Tea", "Bar & Alcohol",
+  "Delivery & Takeout", "Bakery & Dessert", "Catering", "Tips & Service",
+  // Transport
+  "Fuel", "Public Transit", "Rideshare & Taxi", "Parking", "Tolls",
+  "Vehicle Maintenance", "Car Rental", "Registration & Fees",
+  // Health
+  "Pharmacy", "Doctor & Dental", "Vision", "Health Insurance",
+  "Fitness & Gym", "Supplements", "Medical Equipment",
+  // Shopping
+  "Clothing & Shoes", "Electronics", "Home & Furniture", "Beauty & Cosmetics",
+  "Books & Stationery", "Toys & Games", "Gifts", "Hobbies & Crafts",
+  "Jewelry & Accessories",
+  // Entertainment
+  "Movies & Theater", "Streaming & Subscriptions", "Concerts & Events",
+  "Games", "Sports & Recreation", "Museums & Attractions", "Music & Media",
+  // Utilities
+  "Electricity", "Water & Sewer", "Gas & Heating", "Internet", "Mobile Phone",
+  "Trash & Recycling", "Cable & TV", "Home Services",
+  // Travel
+  "Flights", "Hotels & Lodging", "Train & Bus", "Cruises", "Baggage & Fees",
+  "Travel Insurance", "Tours & Activities", "Visas & Documents",
+  // Other
+  "General", "Fees & Charges", "Donations", "Education", "Pets",
+  "Office & Business", "Taxes", "Other"];
 
 /**
  * Merchant name standardization — first letter of each word capitalized,
@@ -572,7 +600,7 @@ function geminiExtractFromBase64_(dataB64, mime) {
   var payload = {
     contents: [{
       parts: [
-        { text: "Extract the data from this receipt photo. Use an empty string or 0 for unreadable fields. Line items are the purchased products/services only — do not include subtotal, tax, or total rows as line items. Assign each line item the best-fitting category from the schema's enum (supermarket departments); use Non-Grocery for items sold outside grocery contexts and Other only when nothing fits." },
+        { text: "Extract the data from this receipt photo. Use an empty string or 0 for unreadable fields. Line items are the purchased products/services only — do not include subtotal, tax, or total rows as line items. Assign each line item the best-fitting subcategory from the schema's enum, matching the receipt's overall category (supermarket departments for grocery receipts, dining/transport/health/shopping/entertainment/utilities/travel buckets otherwise); use Other only when nothing fits." },
         { inline_data: { mime_type: mime, data: dataB64 } }
       ]
     }],
@@ -1384,6 +1412,92 @@ function setProfileFolder(sessionToken, folderId) {
   return { success: true, folderId: fid };
 }
 
+/**
+ * Legacy photo migration — moves org-Drive receipt photos into the owner's
+ * own Drive. The server can read the legacy files (it owns them) but cannot
+ * write to the user's Drive, so the browser is the courier: listLegacyPhotos
+ * finds the caller's org-hosted photos, getLegacyPhotoBase64 streams one
+ * photo's bytes, and completePhotoMigration re-links the row to the user's
+ * new Drive URL and trashes the org copy.
+ */
+function listLegacyPhotos(sessionToken) {
+  var user = validateSessionForData(sessionToken, 'listLegacyPhotos');
+  var me = String((user && user.email) || '').toLowerCase();
+  var sh = ensureReceiptTabs_().receipts;
+  var last = sh.getLastRow();
+  var photos = [];
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+    for (var i = 0; i < vals.length && photos.length < 60; i++) {
+      if (String(vals[i][2] || '').toLowerCase() !== me) continue;
+      var m = String(vals[i][10] || '').match(/\/d\/([^\/?]+)/);
+      if (!m || !m[1]) continue;
+      // Legacy = a file this script can open (it owns the org folder).
+      // Photos already in the user's Drive throw here and are skipped.
+      try {
+        var f = DriveApp.getFileById(m[1]);
+        photos.push({ receiptId: String(vals[i][0] || ''), name: String(f.getName() || '') });
+      } catch (aErr) { /* not accessible → already migrated */ }
+    }
+  }
+  return { success: true, photos: photos };
+}
+
+function getLegacyPhotoBase64(sessionToken, receiptId) {
+  var user = validateSessionForData(sessionToken, 'getLegacyPhotoBase64');
+  var me = String((user && user.email) || '').toLowerCase();
+  var rid = String(receiptId || '').trim();
+  if (!rid) return { success: false, error: 'no_receipt_id' };
+  var sh = ensureReceiptTabs_().receipts;
+  var last = sh.getLastRow();
+  if (last < 2) return { success: false, error: 'receipt_not_found' };
+  var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+  for (var i = 0; i < vals.length; i++) {
+    if (String(vals[i][0]) !== rid) continue;
+    if (String(vals[i][2] || '').toLowerCase() !== me) break;
+    var m = String(vals[i][10] || '').match(/\/d\/([^\/?]+)/);
+    if (!m || !m[1]) return { success: false, error: 'no_photo' };
+    var blob;
+    try { blob = DriveApp.getFileById(m[1]).getBlob(); }
+    catch (fErr) { return { success: false, error: 'file_not_accessible' }; }
+    var bytes = blob.getBytes();
+    if (bytes.length > 8000000) return { success: false, error: 'photo_too_large' };
+    return {
+      success: true,
+      base64: Utilities.base64Encode(bytes),
+      mime: blob.getContentType() || 'image/jpeg',
+      name: String(blob.getName() || (rid + '.jpg'))
+    };
+  }
+  return { success: false, error: 'receipt_not_found' };
+}
+
+function completePhotoMigration(sessionToken, receiptId, newUrl) {
+  var user = validateSessionForData(sessionToken, 'completePhotoMigration');
+  var me = String((user && user.email) || '').toLowerCase();
+  var rid = String(receiptId || '').trim();
+  var link = String(newUrl || '').trim();
+  if (!rid) return { success: false, error: 'no_receipt_id' };
+  if (!/^https:\/\/drive\.google\.com\//.test(link)) return { success: false, error: 'bad_image_url' };
+  var sh = ensureReceiptTabs_().receipts;
+  var last = sh.getLastRow();
+  if (last < 2) return { success: false, error: 'receipt_not_found' };
+  var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+  for (var i = 0; i < vals.length; i++) {
+    if (String(vals[i][0]) !== rid) continue;
+    if (String(vals[i][2] || '').toLowerCase() !== me) break;
+    var oldM = String(vals[i][10] || '').match(/\/d\/([^\/?]+)/);
+    sh.getRange(i + 2, 11).setValue(link);
+    var trashed = false;
+    if (oldM && oldM[1]) {
+      try { DriveApp.getFileById(oldM[1]).setTrashed(true); trashed = true; }
+      catch (tErr) { /* old copy stays in the org trash-able state — harmless */ }
+    }
+    return { success: true, receiptId: rid, orgCopyTrashed: trashed };
+  }
+  return { success: false, error: 'receipt_not_found' };
+}
+
 // Revoke a grant I made.
 function removeShare(sessionToken, granteeEmail) {
   var user = validateSessionForData(sessionToken, 'removeShare');
@@ -1957,6 +2071,25 @@ function doPost(e) {
       exdResult = { success: false, error: String((exdErr && exdErr.message) || exdErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(exdResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: legacy photo migration via fetch() — session-validated, owner-scoped.
+  if (action === "listLegacyPhotos" || action === "getLegacyPhotoBase64"
+      || action === "completePhotoMigration") {
+    var pmResult;
+    try {
+      var pmToken = (e && e.parameter && e.parameter.token) || "";
+      if (action === "listLegacyPhotos") pmResult = listLegacyPhotos(pmToken);
+      else if (action === "getLegacyPhotoBase64") pmResult = getLegacyPhotoBase64(pmToken,
+        (e && e.parameter && e.parameter.receiptId) || "");
+      else pmResult = completePhotoMigration(pmToken,
+        (e && e.parameter && e.parameter.receiptId) || "",
+        (e && e.parameter && e.parameter.newUrl) || "");
+    } catch (pmErr) {
+      pmResult = { success: false, error: String((pmErr && pmErr.message) || pmErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(pmResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -3406,6 +3539,17 @@ function doGet(e) {
       } else if (apiOp === 'getProfile') {
         // PROJECT: profile lookup (GET fallback)
         apiResult = getProfile(apiToken);
+      } else if (apiOp === 'listLegacyPhotos') {
+        // PROJECT: legacy photo migration — list (GET fallback)
+        apiResult = listLegacyPhotos(apiToken);
+      } else if (apiOp === 'getLegacyPhotoBase64') {
+        // PROJECT: legacy photo migration — photo bytes (GET fallback)
+        apiResult = getLegacyPhotoBase64(apiToken, (e && e.parameter && e.parameter.receiptId) || '');
+      } else if (apiOp === 'completePhotoMigration') {
+        // PROJECT: legacy photo migration — relink + trash org copy (GET fallback)
+        apiResult = completePhotoMigration(apiToken,
+          (e && e.parameter && e.parameter.receiptId) || '',
+          (e && e.parameter && e.parameter.newUrl) || '');
       } else if (apiOp === 'setProfileFolder') {
         // PROJECT: profile folder registration (GET fallback)
         apiResult = setProfileFolder(apiToken, (e && e.parameter && e.parameter.folderId) || '');

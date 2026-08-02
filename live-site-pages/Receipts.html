@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.17w">
+  <meta name="build-version" content="v01.18w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -424,15 +424,51 @@
       height: 6px; background: #ddd5c2; border-radius: 3px;
       overflow: hidden; display: none;
     }
+    /* Stamp Card stages — coffee-card stamps that ink in as the scan runs */
+    #rsp-stages { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+    .stg-row { display: flex; align-items: center; }
+    .stg {
+      width: 38px; height: 38px; border-radius: 50%; display: flex;
+      align-items: center; justify-content: center; font-size: 16px;
+      background: var(--rc-paper); border: 1.5px dashed var(--rc-line);
+      color: var(--rc-muted); transition: background 0.3s, border-color 0.3s;
+    }
+    .stg.done {
+      background: var(--rc-ink); border: 1.5px solid var(--rc-ink);
+      color: var(--rc-paper); box-shadow: inset 0 0 0 2px var(--rc-paper);
+      font-family: var(--rc-serif); font-weight: 700;
+    }
+    .stg.active {
+      border: 2px solid var(--rc-accent); background: #fdf9f0;
+      box-shadow: 0 0 0 4px rgba(179, 84, 46, 0.15);
+      animation: stg-pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes stg-pulse {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(179, 84, 46, 0.1); }
+      50% { box-shadow: 0 0 0 6px rgba(179, 84, 46, 0.22); }
+    }
+    .stg-link { width: 26px; border-top: 2px dashed var(--rc-line); transition: border-color 0.3s; }
+    .stg-link.done { border-top: 2px solid var(--rc-ink); }
+    .stg-labels { display: flex; font: 10.5px var(--rc-serif); color: var(--rc-muted); letter-spacing: 0.5px; }
+    .stg-labels span { width: 38px; text-align: center; }
+    .stg-labels span.gap { width: 26px; }
     #receipt-progress-fill {
       height: 100%; width: 0%; background: var(--rc-accent); border-radius: 3px;
       transition: width 0.45s ease;
     }
     #receipt-progress-fill.rp-done { background: var(--rc-ok); }
-    #receipt-scan-thumb {
-      width: 34px; height: 34px; object-fit: cover; border-radius: 4px;
-      border: 1px solid var(--rc-line); display: none;
+    /* Account row — quiet serif footer with link-style actions */
+    .rsp-account {
+      display: flex; gap: 6px; align-items: baseline; justify-content: center;
+      flex-wrap: wrap; font-size: 12px; color: var(--rc-muted); margin-top: 2px;
     }
+    #rsp-account-email { font-style: italic; overflow: hidden; text-overflow: ellipsis; max-width: 46%; white-space: nowrap; }
+    .rsp-account button {
+      border: none; background: none; padding: 0; cursor: pointer;
+      font: inherit; color: var(--rc-accent); text-decoration: underline;
+      text-underline-offset: 2px; text-decoration-thickness: 1px;
+    }
+    .rsp-acct-sep { color: var(--rc-line); }
     /* Review-before-save card — opens after extraction, over the scan panel.
        Same layering rationale: above the backdrop, below the overlay walls. */
     #receipt-review-card {
@@ -884,11 +920,27 @@
       <button id="receipt-history-btn" class="rbtn" type="button">🧾&ensp;History</button>
       <button id="receipt-share-btn" class="rbtn" type="button">🤝&ensp;Sharing</button>
     </div>
+    <!-- Scan progress — bar above the Stamp Card stages, status line below -->
+    <div id="receipt-progress"><div id="receipt-progress-fill"></div></div>
+    <div id="rsp-stages" style="display:none">
+      <div class="stg-row">
+        <div class="stg"><span class="stg-ico">📷</span></div><div class="stg-link"></div>
+        <div class="stg"><span class="stg-ico">☁️</span></div><div class="stg-link"></div>
+        <div class="stg"><span class="stg-ico">✨</span></div><div class="stg-link"></div>
+        <div class="stg"><span class="stg-ico">🧾</span></div>
+      </div>
+      <div class="stg-labels"><span>Snap</span><span class="gap"></span><span>Save</span><span class="gap"></span><span>Read</span><span class="gap"></span><span>Done</span></div>
+    </div>
     <div class="rsp-status-row">
       <span id="receipt-scan-status">&nbsp;</span>
-      <img id="receipt-scan-thumb" alt="">
     </div>
-    <div id="receipt-progress"><div id="receipt-progress-fill"></div></div>
+    <!-- Visible account row — sign in/out without the hidden hotspot -->
+    <div class="rsp-account" id="rsp-account" style="display:none">
+      <span id="rsp-account-email"></span>
+      <button id="rsp-signout" type="button">Sign out</button>
+      <span class="rsp-acct-sep">·</span>
+      <button id="rsp-signout-all" type="button">Sign out everywhere</button>
+    </div>
   </div>
   <!-- History browser — searchable list of past receipts with tap-to-expand
        details and a link to each photo. Read-only; z-index 7 overlays the
@@ -4637,7 +4689,6 @@
       var btn = document.getElementById('receipt-scan-btn');
       var input = document.getElementById('receipt-file-input');
       var statusEl = document.getElementById('receipt-scan-status');
-      var thumb = document.getElementById('receipt-scan-thumb');
       if (!btn || !input) return;
 
       function setStatus(msg, ok) {
@@ -4675,6 +4726,11 @@
       showAffirmation();
       setInterval(function() {
         if (Date.now() - _lastStatusAt < 12000) return;
+        // Never talk over a running pipeline — real progress always wins.
+        if (btn.disabled || batchActive) return;
+        // Resuming affirmations also retires the finished progress bar.
+        var prEl = document.getElementById('receipt-progress');
+        if (prEl && prEl.style.display === 'block') setProgress(null);
         showAffirmation();
       }, 7000);
 
@@ -4693,7 +4749,26 @@
       // setProgress(100) turns it green and auto-hides; setProgress(null)
       // hides immediately (failures).
       var _progressHideTimer = null;
-      function setProgress(pct) {
+      // Stamp Card stage icons (pending state); done stamps show a ✓ instead.
+      var STG_ICONS = ['📷', '☁️', '✨', '🧾'];
+      function setStamps(active) {
+        // active = index of the in-progress stage; 4 = everything stamped.
+        var st = document.getElementById('rsp-stages');
+        if (!st) return;
+        if (active === null) { st.style.display = 'none'; return; }
+        st.style.display = '';
+        var stamps = st.querySelectorAll('.stg');
+        Array.prototype.forEach.call(stamps, function(el, i) {
+          el.classList.toggle('done', i < active);
+          el.classList.toggle('active', i === active);
+          el.querySelector('.stg-ico').textContent = (i < active) ? '✓' : STG_ICONS[i];
+        });
+        Array.prototype.forEach.call(st.querySelectorAll('.stg-link'), function(el, i) {
+          el.classList.toggle('done', i < active);
+        });
+      }
+
+      function setProgress(pct, stage) {
         var bar = document.getElementById('receipt-progress');
         var fill = document.getElementById('receipt-progress-fill');
         if (!bar || !fill) return;
@@ -4702,11 +4777,17 @@
           bar.style.display = 'none';
           fill.style.width = '0%';
           fill.classList.remove('rp-done');
+          setStamps(null);
           return;
         }
         bar.style.display = 'block';
         fill.style.width = pct + '%';
         fill.classList.toggle('rp-done', pct >= 100);
+        // Stamp Card: explicit stage wins (batch passes it since its bar
+        // percentage spans the whole batch); otherwise derive from pct.
+        setStamps(pct >= 100 ? 4
+          : (typeof stage === 'number') ? stage
+          : pct >= 85 ? 3 : pct >= 60 ? 2 : pct >= 30 ? 1 : 0);
         if (pct >= 100) {
           _progressHideTimer = setTimeout(function() { setProgress(null); }, 1800);
         }
@@ -4766,11 +4847,38 @@
       // ── Review-before-save card ──────────────────────────────────────
       var CATEGORIES = ['Groceries', 'Dining', 'Transport', 'Health',
         'Shopping', 'Entertainment', 'Utilities', 'Travel', 'Other'];
-      // Per-item department taxonomy — must mirror ITEM_CATEGORIES in the GAS
-      // (extraction assigns from the same list via the response schema).
-      var ITEM_CATS = ['Produce', 'Meat & Seafood', 'Dairy & Eggs', 'Bakery',
-        'Deli & Prepared', 'Frozen', 'Pantry', 'Snacks & Candy', 'Beverages',
-        'Alcohol', 'Household', 'Personal Care', 'Baby', 'Pet', 'Non-Grocery', 'Other'];
+      // Per-category subcategory taxonomy (modeled on Expensify / Smart
+      // Receipts / ReceiptCamp buckets). Groceries keeps its supermarket
+      // departments; every other category gets its own list, revealed only
+      // when that category is chosen. The union of all lists must mirror
+      // ITEM_CATEGORIES in the GAS (the extraction response schema's enum).
+      var SUBCATS = {
+        'Groceries': ['Produce', 'Meat & Seafood', 'Dairy & Eggs', 'Bakery',
+          'Deli & Prepared', 'Frozen', 'Pantry', 'Snacks & Candy', 'Beverages',
+          'Alcohol', 'Household', 'Personal Care', 'Baby', 'Pet', 'Non-Grocery', 'Other'],
+        'Dining': ['Restaurant', 'Fast Food', 'Coffee & Tea', 'Bar & Alcohol',
+          'Delivery & Takeout', 'Bakery & Dessert', 'Catering', 'Tips & Service', 'Other'],
+        'Transport': ['Fuel', 'Public Transit', 'Rideshare & Taxi', 'Parking',
+          'Tolls', 'Vehicle Maintenance', 'Car Rental', 'Registration & Fees', 'Other'],
+        'Health': ['Pharmacy', 'Doctor & Dental', 'Vision', 'Health Insurance',
+          'Fitness & Gym', 'Personal Care', 'Supplements', 'Medical Equipment', 'Other'],
+        'Shopping': ['Clothing & Shoes', 'Electronics', 'Home & Furniture',
+          'Beauty & Cosmetics', 'Books & Stationery', 'Toys & Games', 'Gifts',
+          'Hobbies & Crafts', 'Jewelry & Accessories', 'Other'],
+        'Entertainment': ['Movies & Theater', 'Streaming & Subscriptions',
+          'Concerts & Events', 'Games', 'Sports & Recreation',
+          'Museums & Attractions', 'Music & Media', 'Other'],
+        'Utilities': ['Electricity', 'Water & Sewer', 'Gas & Heating', 'Internet',
+          'Mobile Phone', 'Trash & Recycling', 'Cable & TV', 'Home Services', 'Other'],
+        'Travel': ['Flights', 'Hotels & Lodging', 'Car Rental', 'Train & Bus',
+          'Cruises', 'Baggage & Fees', 'Travel Insurance', 'Tours & Activities',
+          'Visas & Documents', 'Other'],
+        'Other': ['General', 'Fees & Charges', 'Donations', 'Education', 'Pets',
+          'Office & Business', 'Taxes', 'Other']
+      };
+      function subcatsFor(cat) {
+        return SUBCATS[cat] || SUBCATS['Other'];
+      }
       var card = document.getElementById('receipt-review-card');
       var rrStatus = document.getElementById('rr-status');
       var rrRows = document.getElementById('rr-item-rows');
@@ -4834,22 +4942,46 @@
         del.type = 'button'; del.className = 'rr-remove'; del.textContent = '✕';
         del.addEventListener('click', function() { wrap.remove(); });
         [desc, qty, unit, amt, del].forEach(function(el) { row.appendChild(el); });
-        // Department selector — pre-set to the extraction's auto-assignment.
+        // Subcategory selector — options follow the receipt's category and
+        // pre-set to the extraction's auto-assignment.
         var cat = document.createElement('select');
         cat.className = 'rr-cat';
-        var blank = document.createElement('option');
-        blank.value = ''; blank.textContent = 'Department —';
-        cat.appendChild(blank);
-        ITEM_CATS.forEach(function(c) {
-          var o = document.createElement('option');
-          o.value = c; o.textContent = c;
-          cat.appendChild(o);
-        });
-        if (ITEM_CATS.indexOf(it.category) >= 0) cat.value = it.category;
+        fillSubcatSelect(cat, document.getElementById('rr-category').value, it.category || '');
         wrap.appendChild(row);
         wrap.appendChild(cat);
         rrRows.appendChild(wrap);
       }
+
+      // (Re)populate one item's subcategory select for the given receipt
+      // category, preserving the current value — an off-list value (from an
+      // older taxonomy or another category) is kept as an extra option so
+      // switching categories never silently discards data.
+      function fillSubcatSelect(sel, receiptCat, value) {
+        var list = subcatsFor(receiptCat);
+        sel.innerHTML = '';
+        var blank = document.createElement('option');
+        blank.value = ''; blank.textContent = 'Subcategory —';
+        sel.appendChild(blank);
+        list.forEach(function(c) {
+          var o = document.createElement('option');
+          o.value = c; o.textContent = c;
+          sel.appendChild(o);
+        });
+        if (value && list.indexOf(value) === -1) {
+          var keep = document.createElement('option');
+          keep.value = value; keep.textContent = value;
+          sel.appendChild(keep);
+        }
+        sel.value = value || '';
+      }
+
+      // Category change re-themes every item row's subcategory options.
+      document.getElementById('rr-category').addEventListener('change', function() {
+        var newCat = this.value;
+        Array.prototype.forEach.call(rrRows.querySelectorAll('.rr-cat'), function(sel) {
+          fillSubcatSelect(sel, newCat, sel.value);
+        });
+      });
 
       function openReviewCard(receiptId, data, note) {
         currentReceiptId = receiptId;
@@ -5070,7 +5202,7 @@
           });
       }
 
-      function uploadToOwnDrive(b64, name) {
+      function uploadToOwnDrive(b64, name, mime) {
         return new Promise(function(resolve) {
           _getDriveToken(function(tok) {
             if (!tok) { resolve(null); return; }
@@ -5080,7 +5212,7 @@
                 var meta = { name: name || ('Receipt-' + Date.now() + '.jpg'), parents: [folderId] };
                 var body = '--' + boundary + '\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n'
                   + JSON.stringify(meta)
-                  + '\r\n--' + boundary + '\r\nContent-Type: image/jpeg\r\nContent-Transfer-Encoding: base64\r\n\r\n'
+                  + '\r\n--' + boundary + '\r\nContent-Type: ' + (mime || 'image/jpeg') + '\r\nContent-Transfer-Encoding: base64\r\n\r\n'
                   + b64 + '\r\n--' + boundary + '--';
                 return _driveFetch(tok,
                   'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,webViewLink', {
@@ -5163,7 +5295,6 @@
         closeReviewCard();
         setStatus('Compressing…', true);
         setProgress(15);
-        if (thumb) { thumb.src = URL.createObjectURL(file); thumb.style.display = 'inline-block'; }
         var pendingB64 = null;
         compressImage(file)
           .then(function(b64) {
@@ -5285,19 +5416,19 @@
           var n = idx, N = files.length;
           var stepB64 = null;
           setStatus('Receipt ' + n + ' of ' + N + ' — compressing…', true);
-          setProgress(Math.round(((n - 1) + 0.15) / N * 100));
+          setProgress(Math.round(((n - 1) + 0.15) / N * 100), 0);
           compressImage(file)
             .then(function(b64) {
               if (b64.length > 6000000) throw new Error('image_too_large');
               stepB64 = b64;
               setStatus('Receipt ' + n + ' of ' + N + ' — uploading…', true);
-              setProgress(Math.round(((n - 1) + 0.4) / N * 100));
+              setProgress(Math.round(((n - 1) + 0.4) / N * 100), 1);
               return storeAndRegister(session, b64, file.name || '');
             })
             .then(function(r) {
               if (!(r && r.success)) throw new Error((r && r.error) || 'upload_failed');
               setStatus('Receipt ' + n + ' of ' + N + ' — reading the receipt…', true);
-              setProgress(Math.round(((n - 1) + 0.7) / N * 100));
+              setProgress(Math.round(((n - 1) + 0.7) / N * 100), 2);
               return extractFor(session, r, stepB64, true)
                 .then(function(x) {
                   var ok = !!(x && x.success && x.data);
@@ -5569,12 +5700,11 @@
         CATEGORIES.forEach(function(c) {
           var o = document.createElement('option'); o.value = c; o.textContent = c; cat.appendChild(o);
         });
+        // rp-subcat options are populated per-category by the rp-cat change
+        // listener below (each category reveals its own subcategory list).
         var allS = document.createElement('option');
-        allS.value = ''; allS.textContent = 'All departments';
+        allS.value = ''; allS.textContent = 'All subcategories';
         sub.appendChild(allS);
-        ITEM_CATS.forEach(function(c) {
-          var o = document.createElement('option'); o.value = c; o.textContent = c; sub.appendChild(o);
-        });
       })();
 
       // Sunday-start week key — the week's start date as YYYY-MM-DD (sortable).
@@ -5776,10 +5906,10 @@
             return { label: c, cnt: '', value: cats[c] };
           }), cur, true);
 
-          // Department drill-down — only when the category filter is set to
-          // Groceries. byId only holds the filtered receipts, so these line
-          // items are already scoped to the Groceries receipts on screen.
-          if (cat === 'Groceries') {
+          // Subcategory drill-down — whenever a category is chosen, its
+          // line items break down by that category's subcategories. byId only
+          // holds the filtered receipts, so the items are already scoped.
+          if (cat) {
             var deps = {};
             rpData.lineItems.forEach(function(it) {
               if (!byId[it.receiptId]) return;
@@ -5789,9 +5919,11 @@
             });
             var dKeys = Object.keys(deps).sort(function(a, b) { return deps[b] - deps[a]; });
             if (dKeys.length) {
-              html += rpSection('depts', 'By department', dKeys.map(function(dk) {
-                return { label: dk, cnt: '', value: deps[dk] };
-              }), cur, true);
+              html += rpSection('depts',
+                cat === 'Groceries' ? 'By department' : 'By subcategory',
+                dKeys.map(function(dk) {
+                  return { label: dk, cnt: '', value: deps[dk] };
+                }), cur, true);
             }
           }
         }
@@ -5868,13 +6000,24 @@
       ['rp-cat', 'rp-subcat', 'rp-from', 'rp-to'].forEach(function(id) {
         document.getElementById(id).addEventListener('change', renderReport);
       });
-      // The department dropdown only applies to Groceries — keep it hidden
-      // (and its filter cleared) for every other category selection.
+      // The subcategory dropdown appears only once a category is chosen, and
+      // its options are that category's own subcategory list. Switching
+      // categories clears any active subcategory filter.
       document.getElementById('rp-cat').addEventListener('change', function() {
         var subEl = document.getElementById('rp-subcat');
-        var isGroceries = this.value === 'Groceries';
-        subEl.style.display = isGroceries ? '' : 'none';
-        if (!isGroceries && subEl.value) { subEl.value = ''; renderReport(); }
+        var cat = this.value;
+        var hadValue = !!subEl.value;
+        subEl.style.display = cat ? '' : 'none';
+        subEl.innerHTML = '';
+        var allS = document.createElement('option');
+        allS.value = ''; allS.textContent = 'All subcategories';
+        subEl.appendChild(allS);
+        if (cat) {
+          subcatsFor(cat).forEach(function(c) {
+            var o = document.createElement('option'); o.value = c; o.textContent = c; subEl.appendChild(o);
+          });
+        }
+        if (hadValue) renderReport(); // the old subcategory filter was cleared
       });
 
       // ── Month summary card (landing hero) ────────────────────────────
@@ -5937,6 +6080,83 @@
       }
       var _mcTimer = setInterval(function() {
         if (loadSession().token) { clearInterval(_mcTimer); refreshMonthCard(); }
+      }, 3000);
+
+      // ── Visible account row ──────────────────────────────────────────
+      // Sign out / Sign out everywhere for every user — no hidden hotspot
+      // needed. Reuses the template's performSignOut flows.
+      (function() {
+        var rowEl = document.getElementById('rsp-account');
+        var emailEl = document.getElementById('rsp-account-email');
+        if (!rowEl) return;
+        setInterval(function() {
+          var s = loadSession();
+          rowEl.style.display = s.token ? '' : 'none';
+          if (emailEl) emailEl.textContent = s.email || '';
+        }, 2000);
+        document.getElementById('rsp-signout').addEventListener('click', function() {
+          performSignOut('manual', { broadcastSSO: false });
+        });
+        document.getElementById('rsp-signout-all').addEventListener('click', function() {
+          performSignOut('manual');
+        });
+      })();
+
+      // ── One-time legacy photo migration ──────────────────────────────
+      // Moves this user's org-Drive receipt photos into their own Drive:
+      // the server streams each photo's bytes (it owns the legacy files),
+      // the browser re-uploads into the user's "Receipts App" folder, the
+      // row is re-linked, and the org copy is trashed. Runs quietly in the
+      // background once per account; retries next session on any failure.
+      function migrateLegacyPhotos() {
+        var session = loadSession();
+        if (!session.token || !session.email) return;
+        var flagKey = 'Receipts_photo_migration_done_' + session.email.toLowerCase();
+        try { if (localStorage.getItem(flagKey)) return; } catch (lsErr) {}
+        if (!_ssoAccessToken) return; // no silent Drive credential — retry next session
+        _gasPost({ action: 'listLegacyPhotos', token: session.token })
+          .then(function(res) {
+            if (!(res && res.success)) return;
+            var items = res.photos || [];
+            if (!items.length) {
+              try { localStorage.setItem(flagKey, '1'); } catch (lsErr) {}
+              return;
+            }
+            var total = items.length, done = 0, failed = 0;
+            function next() {
+              if (!items.length) {
+                if (!failed) { try { localStorage.setItem(flagKey, '1'); } catch (lsErr) {} }
+                setStatus('Photo move complete ✓ — ' + done + ' of ' + total
+                  + ' now in your Drive' + (failed ? ' (' + failed + ' will retry next visit)' : ''), true);
+                return;
+              }
+              var it = items.shift();
+              setStatus('Moving your receipt photos to your Drive… ' + (done + failed + 1) + ' of ' + total, true);
+              _gasPost({ action: 'getLegacyPhotoBase64', token: session.token, receiptId: it.receiptId })
+                .then(function(ph) {
+                  if (!(ph && ph.success && ph.base64)) throw new Error((ph && ph.error) || 'fetch_failed');
+                  return uploadToOwnDrive(ph.base64, ph.name || (it.receiptId + '.jpg'), ph.mime || 'image/jpeg');
+                })
+                .then(function(df) {
+                  if (!(df && df.id)) throw new Error('drive_upload_failed');
+                  return _gasPost({ action: 'completePhotoMigration', token: session.token,
+                    receiptId: it.receiptId, newUrl: df.link });
+                })
+                .then(function(fin) {
+                  if (fin && fin.success) done++; else failed++;
+                })
+                .catch(function() { failed++; })
+                .then(function() { setTimeout(next, 400); });
+            }
+            next();
+          })
+          .catch(function() { /* retry next session */ });
+      }
+      var _pmTimer = setInterval(function() {
+        if (loadSession().token) {
+          clearInterval(_pmTimer);
+          setTimeout(migrateLegacyPhotos, 8000); // let sign-in + first paint settle
+        }
       }, 3000);
 
       // ── Sharing ──────────────────────────────────────────────────────

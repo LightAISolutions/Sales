@@ -3,11 +3,25 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 17/50`
+`Sections: 18/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.18w] — 2026-08-01 09:57:44 PM EST — v01.36r
+
+### Added
+- A charming new scan progress display — a stamp card whose stages (Snap → Save → Read → Done) get inked in as your receipt is processed, with a progress bar above it
+- Sign out buttons on the home screen — sign out of this app, or everywhere, right from the front page
+- Every category now has its own subcategories (Dining, Transport, Health, Shopping, Entertainment, Utilities, Travel and more), appearing when you pick that category — in both the review screen and Reports
+
+### Changed
+- Encouraging messages now politely wait until scanning is finished instead of covering the progress display
+- If you have older receipt photos stored in shared space, they're quietly moved into your own Google Drive the next time you open the app
+
+### Fixed
+- Removed a broken image icon that could appear next to the scan status
 
 ## [v01.17w] — 2026-08-01 08:11:26 PM EST — v01.35r
 
