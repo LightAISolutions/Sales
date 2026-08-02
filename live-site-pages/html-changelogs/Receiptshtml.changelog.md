@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 23/50`
+`Sections: 24/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.24w] — 2026-08-02 05:05:19 AM EST — v01.44r
+
+### Added
+- Sharing your receipts now also shares your receipt photos — the person you grant access to can open the original photo of any receipt you scanned, automatically
+- Existing grants are covered too: the next time you open the app, photo access is set up for everyone you've already shared with — nothing to redo
+- Revoking someone's access also removes their access to your photos
 
 ## [v01.23w] — 2026-08-02 04:46:01 AM EST — v01.43r
 

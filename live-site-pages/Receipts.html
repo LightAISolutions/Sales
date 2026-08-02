@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.23w">
+  <meta name="build-version" content="v01.24w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -5358,6 +5358,53 @@
         });
       }
 
+      // ── Drive folder sharing ──
+      // Sharing receipts also shares the photos: granting app access adds a
+      // reader permission on my "Receipts App" Drive folder for the grantee,
+      // and revoking removes it. This must run in the owner's browser — the
+      // drive.file token can only manage permissions on folders the app
+      // created for that signed-in user.
+      function driveShareFolder(email, cb) {
+        _getDriveToken(function(tok) {
+          if (!tok) { if (cb) cb(false); return; }
+          ensureDriveFolder(tok)
+            .then(function(folderId) {
+              return _driveFetch(tok, 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(folderId)
+                + '/permissions?sendNotificationEmail=false&fields=id', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ role: 'reader', type: 'user', emailAddress: email })
+              });
+            })
+            .then(function() { if (cb) cb(true); })
+            .catch(function() { if (cb) cb(false); });
+        });
+      }
+
+      function driveUnshareFolder(email, cb) {
+        _getDriveToken(function(tok) {
+          if (!tok) { if (cb) cb(false); return; }
+          ensureDriveFolder(tok)
+            .then(function(folderId) {
+              var base = 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(folderId);
+              return _driveFetch(tok, base + '/permissions?fields=permissions(id,emailAddress)')
+                .then(function(pl) {
+                  var target = String(email || '').toLowerCase();
+                  var perm = ((pl && pl.permissions) || []).filter(function(p) {
+                    return String(p.emailAddress || '').toLowerCase() === target;
+                  })[0];
+                  if (!perm) return null;
+                  // Raw fetch — DELETE returns an empty 204, which _driveFetch's
+                  // .json() would choke on.
+                  return fetch(base + '/permissions/' + encodeURIComponent(perm.id), {
+                    method: 'DELETE', headers: { 'Authorization': 'Bearer ' + tok }
+                  });
+                });
+            })
+            .then(function() { if (cb) cb(true); })
+            .catch(function() { if (cb) cb(false); });
+        });
+      }
+
       function handleFile(file) {
         if (!file) return;
         if (batchActive) { setStatus('Finish the current batch first', false); return; }
@@ -6483,6 +6530,27 @@
           .then(function(res) {
             if (res && res.success) _sharesCache = res;
             refreshShareSelectors();
+            // Folder-permission reconciliation — everyone I've granted app
+            // access must also read my photo folder. Covers grants made
+            // before folder sharing existed and any grant whose Drive call
+            // failed. Skipped cheaply while the granted set is unchanged;
+            // the sync key is only advanced when every grant succeeded.
+            try {
+              var gEmails = ((res && res.granted) || []).map(function(s) { return s.email; }).sort();
+              var syncKey = 'Receipts_folder_perms_synced';
+              var want = JSON.stringify(gEmails);
+              if (gEmails.length && localStorage.getItem(syncKey) !== want) {
+                var pendingN = gEmails.length, allOk = true;
+                gEmails.forEach(function(em) {
+                  driveShareFolder(em, function(ok) {
+                    if (!ok) allOk = false;
+                    if (--pendingN === 0 && allOk) {
+                      try { localStorage.setItem(syncKey, want); } catch (sErr) {}
+                    }
+                  });
+                });
+              }
+            } catch (rErr) { /* retries on the next shares load */ }
             if (cb) cb(res);
           })
           .catch(function() { if (cb) cb(null); });
@@ -6511,8 +6579,11 @@
             var session = loadSession();
             _gasPost({ action: 'removeShare', token: session.token || '', grantee: s.email })
               .then(function(res) {
-                if (res && res.success) { setScStatus('Access revoked for ' + s.email, true); loadShares(renderShareCard); }
-                else { rv.disabled = false; setScStatus('Revoke failed (' + ((res && res.error) || 'unknown') + ')', false); }
+                if (res && res.success) {
+                  setScStatus('Access revoked for ' + s.email, true);
+                  driveUnshareFolder(s.email); // photo folder access goes with the grant
+                  loadShares(renderShareCard);
+                } else { rv.disabled = false; setScStatus('Revoke failed (' + ((res && res.error) || 'unknown') + ')', false); }
               })
               .catch(function(err) { rv.disabled = false; setScStatus('Revoke failed (' + String((err && err.message) || err) + ')', false); });
           });
@@ -6558,6 +6629,10 @@
               emailEl.value = '';
               setScStatus((res.updated ? 'Updated — ' : 'Granted — ') + res.email + ' '
                 + (res.scope === 'edit' ? 'can view & edit' : 'can view') + ' your receipts', true);
+              // Photos ride along with the grant — reader access on my folder.
+              driveShareFolder(res.email || email, function(ok) {
+                if (!ok) setScStatus('Granted — photo folder sharing will retry next time the app opens', true);
+              });
               loadShares(renderShareCard);
             } else {
               var msgs = { bad_email: 'That does not look like an email address',
