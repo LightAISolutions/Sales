@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 25/50`
+`Sections: 26/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.26w] — 2026-08-02 05:44:59 AM EST — v01.46r
+
+### Added
+- 简体中文 support — tap the ⚙️ Settings cog and choose "Language · 中文" to switch the whole app interface to Simplified Chinese (buttons, filters, reports, sharing, encouraging messages, and more); tap "语言 · English" to switch back
+- Your language choice is remembered on each device
+- Receipt contents (store names, item descriptions, categories) stay exactly as scanned
 
 ## [v01.25w] — 2026-08-02 05:10:46 AM EST — v01.45r
 

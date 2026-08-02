@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.25w">
+  <meta name="build-version" content="v01.26w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -996,6 +996,7 @@
     <button id="rsp-settings" type="button" title="Settings" aria-label="Settings">⚙️</button>
     <div id="rsp-settings-panel">
       <span id="rsp-account-email"></span>
+      <button id="rsp-lang" type="button">Language · 中文</button>
       <button id="rsp-signout" type="button">Sign out</button>
       <button id="rsp-signout-all" type="button">Sign out everywhere</button>
     </div>
@@ -4765,6 +4766,7 @@
 
       function setStatus(msg, ok) {
         _lastStatusAt = Date.now(); // pauses the affirmation rotation below
+        if (_zhOn() && typeof I18N_STATUS_ZH === 'object' && I18N_STATUS_ZH && I18N_STATUS_ZH[msg]) msg = I18N_STATUS_ZH[msg];
         if (statusEl) { statusEl.textContent = msg; statusEl.style.color = ok ? '#3f6f42' : '#a8402e'; }
       }
 
@@ -4788,10 +4790,26 @@
         "You're stronger than you think",
         'Enjoy the little things'
       ];
+      var AFFIRMATIONS_ZH = [
+        '爱自己',
+        '你是最棒的！',
+        '今天会是美好的一天',
+        '你可以的 💪',
+        '积少成多',
+        '为自己骄傲',
+        '你举重若轻',
+        '好事将至',
+        '深呼吸——你做得很好',
+        '未来的你会感谢现在的你',
+        '继续发光 ✨',
+        '你比想象中更强大',
+        '享受生活中的小事'
+      ];
       var _affIdx = 0;
       function showAffirmation() {
         if (!statusEl) return;
-        statusEl.textContent = AFFIRMATIONS[_affIdx % AFFIRMATIONS.length];
+        var list = _zhOn() ? AFFIRMATIONS_ZH : AFFIRMATIONS;
+        statusEl.textContent = list[_affIdx % list.length];
         statusEl.style.color = '#8a8274';
         _affIdx++;
       }
@@ -5685,8 +5703,8 @@
 
       function loadHistory() {
         var session = loadSession();
-        if (!session.token) { histList.innerHTML = '<div id="rh-empty">Sign in first</div>'; return; }
-        histList.innerHTML = '<div id="rh-empty">Loading…</div>';
+        if (!session.token) { histList.innerHTML = '<div id="rh-empty">' + t('Sign in first') + '</div>'; return; }
+        histList.innerHTML = '<div id="rh-empty">' + t('Loading…') + '</div>';
         _gasPost({
           action: 'listReceipts', token: session.token,
           q: document.getElementById('rh-search').value || '',
@@ -5703,7 +5721,7 @@
           }
           var rows = res.receipts || [];
           if (!rows.length) {
-            histList.innerHTML = '<div id="rh-empty">No receipts found</div>';
+            histList.innerHTML = '<div id="rh-empty">' + t('No receipts found') + '</div>';
             return;
           }
           histList.innerHTML = '';
@@ -5758,7 +5776,7 @@
                     detail.remove();
                     refreshMonthCard();
                     if (!histList.querySelector('.rh-row')) {
-                      histList.innerHTML = '<div id="rh-empty">No receipts found</div>';
+                      histList.innerHTML = '<div id="rh-empty">' + t('No receipts found') + '</div>';
                     }
                   } else {
                     del.disabled = false;
@@ -5832,7 +5850,7 @@
         if (document.getElementById('rh-from').value) n++;
         if (document.getElementById('rh-to').value) n++;
         if (document.getElementById('rh-cat').value) n++;
-        document.getElementById('rh-filter-hint').textContent = n ? n + ' active' : '';
+        document.getElementById('rh-filter-hint').textContent = n ? (_zhOn() ? n + ' 项生效' : n + ' active') : '';
       }
       ['rh-search', 'rh-from', 'rh-to'].forEach(function(id) {
         document.getElementById(id).addEventListener('input', rhFilterHint);
@@ -5867,7 +5885,7 @@
         // rp-subcat options are populated per-category by the rp-cat change
         // listener below (each category reveals its own subcategory list).
         var allS = document.createElement('option');
-        allS.value = ''; allS.textContent = 'All subcategories';
+        allS.value = ''; allS.textContent = t('All subcategories');
         sub.appendChild(allS);
       })();
 
@@ -6009,11 +6027,13 @@
       }
 
       function rpItemListHtml(items, cur) {
-        if (!items.length) return '<div class="rp-it-note">No matching line items.</div>';
+        if (!items.length) return '<div class="rp-it-note">' + t('No matching line items.') + '</div>';
         var iTotal = 0;
         items.forEach(function(x) { iTotal += x.amount; });
-        var h = '<div class="rp-it-note">' + items.length + ' item' + (items.length === 1 ? '' : 's')
-          + ' · ' + cur + iTotal.toFixed(2) + ' total</div>';
+        var h = '<div class="rp-it-note">'
+          + (_zhOn() ? (items.length + ' 项 · 合计 ' + cur + iTotal.toFixed(2))
+                     : (items.length + ' item' + (items.length === 1 ? '' : 's') + ' · ' + cur + iTotal.toFixed(2) + ' total'))
+          + '</div>';
         if (_rpItemGrp) {
           // Normalize by lowercased collapsed whitespace — receipts print the
           // same product with inconsistent casing/spacing.
@@ -6034,7 +6054,7 @@
             });
             // Row amount is the combined spend on this item — the per-purchase
             // prices live in the tap-to-expand history below.
-            h += '<div class="rp-it-row rp-it-grow" data-grp="' + gi + '" title="Tap for price history">'
+            h += '<div class="rp-it-row rp-it-grow" data-grp="' + gi + '" title="' + t('Tap for price history') + '">'
               + '<span class="rp-it-desc">' + esc(g[0].desc) + '</span>'
               + '<span class="rp-it-stats">×' + g.length + (g.length > 1 ? ' · ' + cur + lo.toFixed(2) + '–' + hi.toFixed(2) : '') + '</span>'
               + '<span class="rp-it-amt">' + cur + gTot.toFixed(2) + '</span></div>'
@@ -6050,7 +6070,7 @@
         } else {
           var shown = items;
           if (shown.length > 300) {
-            h += '<div class="rp-it-note">Showing the 300 most recent.</div>';
+            h += '<div class="rp-it-note">' + t('Showing the 300 most recent.') + '</div>';
             shown = shown.slice(0, 300);
           }
           shown.forEach(function(x) {
@@ -6066,12 +6086,12 @@
       function rpItemSection(byId, sub, cur) {
         var open = !!_rpOpen['items'];
         var inner = '<div class="rp-it-tools">'
-          + '<input id="rp-item-q" type="text" placeholder="Search items…" autocomplete="off" value="' + esc(_rpItemQ) + '">'
-          + '<label class="rh-chk"><input type="checkbox" id="rp-item-group"' + (_rpItemGrp ? ' checked' : '') + '> Group by item</label>'
+          + '<input id="rp-item-q" type="text" placeholder="' + t('Search items…') + '" autocomplete="off" value="' + esc(_rpItemQ) + '">'
+          + '<label class="rh-chk"><input type="checkbox" id="rp-item-group"' + (_rpItemGrp ? ' checked' : '') + '> ' + t('Group by item') + '</label>'
           + '</div><div id="rp-item-list">' + rpItemListHtml(rpItemRows(byId, sub), cur) + '</div>';
         return '<div class="rp-section">'
           + '<div class="rp-sec-head" data-sec="items" role="button" aria-expanded="' + open + '">'
-          + '<h4>🧾 Line items' + (sub ? ' — ' + esc(sub) : '') + '</h4><span class="rp-sec-toggle">' + (open ? '−' : '+') + '</span></div>'
+          + '<h4>' + t('🧾 Line items') + (sub ? ' — ' + esc(sub) : '') + '</h4><span class="rp-sec-toggle">' + (open ? '−' : '+') + '</span></div>'
           + '<div class="rp-sec-body"' + (open ? '' : ' style="display:none"') + '>' + inner + '</div></div>';
       }
 
@@ -6087,7 +6107,7 @@
         if (document.getElementById('rp-to').value) n++;
         if (document.getElementById('rp-min').value) n++;
         if (document.getElementById('rp-max').value) n++;
-        document.getElementById('rp-filter-hint').textContent = n ? n + ' active' : '';
+        document.getElementById('rp-filter-hint').textContent = n ? (_zhOn() ? n + ' 项生效' : n + ' active') : '';
       }
 
       function renderReport() {
@@ -6146,12 +6166,12 @@
         var cur = (curKeys.length === 1) ? curKeys[0] + ' ' : '';
 
         summary.innerHTML =
-          '<div class="rp-chip"><div class="rp-chip-val">' + cur + total.toFixed(2) + '</div><div class="rp-chip-lbl">Total spend</div></div>'
-          + '<div class="rp-chip"><div class="rp-chip-val">' + (itemMode ? rows.length : receipts.length) + '</div><div class="rp-chip-lbl">' + (itemMode ? 'Line items' : 'Receipts') + '</div></div>'
-          + '<div class="rp-chip"><div class="rp-chip-val">' + cur + (rows.length ? (total / rows.length).toFixed(2) : '0.00') + '</div><div class="rp-chip-lbl">Average</div></div>';
+          '<div class="rp-chip"><div class="rp-chip-val">' + cur + total.toFixed(2) + '</div><div class="rp-chip-lbl">' + t('Total spend') + '</div></div>'
+          + '<div class="rp-chip"><div class="rp-chip-val">' + (itemMode ? rows.length : receipts.length) + '</div><div class="rp-chip-lbl">' + (itemMode ? t('Line items') : t('Receipts')) + '</div></div>'
+          + '<div class="rp-chip"><div class="rp-chip-val">' + cur + (rows.length ? (total / rows.length).toFixed(2) : '0.00') + '</div><div class="rp-chip-lbl">' + t('Average') + '</div></div>';
 
         if (!rows.length) {
-          body.innerHTML = '<div id="rp-empty">Nothing matches these filters</div>';
+          body.innerHTML = '<div id="rp-empty">' + t('Nothing matches these filters') + '</div>';
           return;
         }
 
@@ -6165,15 +6185,15 @@
         var keys = Object.keys(buckets).sort().reverse();
         var periodLabel = { daily: 'Daily', weekly: 'Weekly', monthly: 'Monthly', biannual: 'Bi-annual', annual: 'Annual' }[rpPeriod];
         var periodRows = keys.map(function(k) {
-          return { label: bucketLabel(k), cnt: buckets[k].count + (itemMode ? ' items' : ' receipts'), value: buckets[k].total };
+          return { label: bucketLabel(k), cnt: buckets[k].count + (_zhOn() ? (itemMode ? ' 项' : ' 张') : (itemMode ? ' items' : ' receipts')), value: buckets[k].total };
         });
-        var html = rpSection('period', periodLabel + ' totals', periodRows, cur, false);
+        var html = rpSection('period', t(periodLabel + ' totals'), periodRows, cur, false);
 
         if (!itemMode) {
           var cats = {};
           rows.forEach(function(r) { var c = r.cat || 'Uncategorized'; cats[c] = (cats[c] || 0) + r.amount; });
           var cKeys = Object.keys(cats).sort(function(a, b) { return cats[b] - cats[a]; });
-          html += rpSection('cats', 'By category', cKeys.map(function(c) {
+          html += rpSection('cats', t('By category'), cKeys.map(function(c) {
             return { label: c, cnt: '', value: cats[c] };
           }), cur, true);
 
@@ -6191,7 +6211,7 @@
             var dKeys = Object.keys(deps).sort(function(a, b) { return deps[b] - deps[a]; });
             if (dKeys.length) {
               html += rpSection('depts',
-                cat === 'Groceries' ? 'By department' : 'By subcategory',
+                cat === 'Groceries' ? t('By department') : t('By subcategory'),
                 dKeys.map(function(dk) {
                   return { label: dk, cnt: '', value: deps[dk] };
                 }), cur, true);
@@ -6211,7 +6231,7 @@
         var merch = {};
         rows.forEach(function(r) { var m = r.merchant || '(no merchant)'; merch[m] = (merch[m] || 0) + r.amount; });
         var mKeys = Object.keys(merch).sort(function(a, b) { return merch[b] - merch[a]; }).slice(0, 8);
-        html += rpSection('merch', 'Top merchants', mKeys.map(function(m) {
+        html += rpSection('merch', t('Top merchants'), mKeys.map(function(m) {
           return { label: m, cnt: '', value: merch[m] };
         }), cur, false);
         body.innerHTML = html;
@@ -6220,8 +6240,8 @@
       function loadReportData() {
         var session = loadSession();
         var body = document.getElementById('rp-body');
-        if (!session.token) { body.innerHTML = '<div id="rp-empty">Sign in first</div>'; return; }
-        body.innerHTML = '<div id="rp-empty">Loading…</div>';
+        if (!session.token) { body.innerHTML = '<div id="rp-empty">' + t('Sign in first') + '</div>'; return; }
+        body.innerHTML = '<div id="rp-empty">' + t('Loading…') + '</div>';
         document.getElementById('rp-summary').innerHTML = '';
         var rpOwnerSel = document.getElementById('rp-owner');
         _gasPost({ action: 'reportReceipts', token: session.token, from: '', to: '',
@@ -6336,7 +6356,7 @@
         subEl.style.display = cat ? '' : 'none';
         subEl.innerHTML = '';
         var allS = document.createElement('option');
-        allS.value = ''; allS.textContent = 'All subcategories';
+        allS.value = ''; allS.textContent = t('All subcategories');
         subEl.appendChild(allS);
         if (cat) {
           subcatsFor(cat).forEach(function(c) {
@@ -6408,6 +6428,141 @@
         if (loadSession().token) { clearInterval(_mcTimer); refreshMonthCard(); }
       }, 3000);
 
+      // ── App language (English / 简体中文) ─────────────────────────────
+      // Chrome-level translation: UI labels, buttons, section titles, and
+      // common status messages swap language; receipt DATA (merchants, item
+      // descriptions, category values) stays as stored — category strings
+      // are shared data values the server matches on.
+      function _zhOn() { return localStorage.getItem('Receipts_lang') === 'zh'; }
+
+      var I18N_ZH = {
+        'Filters': '筛选', 'Clear': '清除', 'Search': '搜索',
+        'Search items…': '搜索商品…',
+        'Sort by receipt date': '按收据日期排序', 'Circle graphs': '圆形图', 'Group by item': '按商品分组',
+        'Daily': '每日', 'Weekly': '每周', 'Monthly': '每月', 'Bi-annual': '半年', 'Annual': '每年',
+        'Daily totals': '每日总额', 'Weekly totals': '每周总额', 'Monthly totals': '每月总额',
+        'Bi-annual totals': '半年总额', 'Annual totals': '每年总额',
+        'By category': '按类别', 'By department': '按部门', 'By subcategory': '按子类别',
+        'Top merchants': '热门商家', '🧾 Line items': '🧾 明细项',
+        'Total spend': '总支出', 'Receipts': '收据数', 'Line items': '明细项', 'Average': '平均',
+        'Start Date': '开始日期', 'End Date': '结束日期', 'Min total': '最低总额', 'Max total': '最高总额',
+        'Viewing': '查看', 'My receipts': '我的收据', 'Combined (mine + shared)': '合并（我的+共享）',
+        ' (can edit)': '（可编辑）', ' (view only)': '（仅查看）',
+        'All categories': '所有类别', 'All subcategories': '所有子类别',
+        'They can see my receipts': '他们可以看到我的收据', 'Shared with me': '与我共享',
+        'Can view': '可查看', 'Can view & edit': '可查看和编辑',
+        'Pick a person under "Viewing" in History or Reports to browse what they shared.':
+          '在历史记录或报表的“查看”中选择联系人，即可浏览对方共享的内容。',
+        'Merchant': '商家', 'Date': '日期', 'Store Address': '商店地址', 'Currency': '货币',
+        'Category': '类别', 'Subtotal': '小计', 'Tax': '税', 'Total': '总计',
+        'Item': '商品', 'Qty': '数量', 'Unit': '单价', 'Amount': '金额',
+        'Snap': '拍摄', 'Save': '保存', 'Read': '识别', 'Done': '完成',
+        'No matching line items.': '没有匹配的明细项。',
+        'Showing the 300 most recent.': '仅显示最近 300 条。',
+        'Tap for price history': '点按查看价格历史',
+        'Nothing matches these filters': '没有符合筛选条件的数据',
+        'Loading…': '加载中…', 'Sign in first': '请先登录', 'No receipts found': '未找到收据'
+      };
+      // Guarded against eval-time calls: fillReportCategories runs during
+      // script evaluation, before the I18N_ZH var assignment executes. Those
+      // early strings stay English momentarily; applyAppLanguage's option
+      // swap re-translates them right after.
+      function t(s) {
+        return (_zhOn() && typeof I18N_ZH === 'object' && I18N_ZH && I18N_ZH[s]) ? I18N_ZH[s] : s;
+      }
+
+      // Common pipeline/status messages (exact matches; the long tail of rare
+      // error strings stays English).
+      var I18N_STATUS_ZH = {
+        'Sign in first': '请先登录',
+        'Compressing…': '压缩中…',
+        'Uploading…': '上传中…',
+        'Saving…': '保存中…',
+        'Uploaded ✓ — reading the receipt…': '已上传 ✓ — 正在识别收据…',
+        'Extracted ✓ — review below': '已识别 ✓ — 请在下方核对',
+        'Finish the current batch first': '请先完成当前批次'
+      };
+
+      // Elements whose whole text (or placeholder) swaps between fixed strings.
+      var L10N_ELS = [
+        ['#receipt-scan-btn', 'text', '📷 Scan receipt', '📷 扫描收据'],
+        ['#receipt-upload-btn', 'text', '🖼️ Upload', '🖼️ 上传'],
+        ['#receipt-report-btn', 'text', '📊 Reports', '📊 报表'],
+        ['#receipt-history-btn', 'text', '🧾 History', '🧾 历史记录'],
+        ['#receipt-share-btn', 'text', '🤝 Sharing', '🤝 共享'],
+        ['#rcpt-month .rm-title', 'text', '— This Month —', '— 本月 —'],
+        ['#receipt-history-card h3', 'text', 'Receipt history', '收据历史'],
+        ['#receipt-share-card h3', 'text', 'Sharing', '共享'],
+        ['#receipt-report-card h3', 'text', 'Reports', '报表'],
+        ['#rh-filter-head .rh-flt-lbl', 'text', 'Filters', '筛选'],
+        ['#rp-filter-head .rp-flt-lbl', 'text', 'Filters', '筛选'],
+        ['#rh-export', 'text', '⬇️ Export .xlsx', '⬇️ 导出 .xlsx'],
+        ['#rh-go', 'text', 'Search', '搜索'],
+        ['#rh-clear', 'text', 'Clear', '清除'],
+        ['#rp-clear', 'text', 'Clear', '清除'],
+        ['#sc-grant', 'text', 'Grant', '授权'],
+        ['#rsp-signout', 'text', 'Sign out', '退出登录'],
+        ['#rsp-signout-all', 'text', 'Sign out everywhere', '在所有设备退出'],
+        ['#rr-save', 'text', 'Save receipt', '保存收据'],
+        ['#rr-discard', 'text', 'Discard', '放弃'],
+        ['#rr-retry', 'text', 'Retry extraction', '重试识别'],
+        ['#rr-add-item', 'text', '+ Add item', '+ 添加商品'],
+        ['#receipt-review-card h3', 'first', 'Review receipt ', '核对收据 '],
+        ['#rh-search', 'ph', 'Search merchant…', '搜索商家…'],
+        ['#rp-merchant', 'ph', 'Filter merchant…', '筛选商家…'],
+        ['#sc-email', 'ph', 'their.email@gmail.com', '对方的邮箱@gmail.com'],
+        ['#rr-address', 'ph', 'As printed on the receipt', '按收据上打印的地址填写']
+      ];
+
+      function applyAppLanguage() {
+        var zh = _zhOn();
+        L10N_ELS.forEach(function(cfg) {
+          var el = document.querySelector(cfg[0]);
+          if (!el) return;
+          if (cfg[1] === 'text') el.textContent = zh ? cfg[3] : cfg[2];
+          else if (cfg[1] === 'ph') el.setAttribute('placeholder', zh ? cfg[3] : cfg[2]);
+          else if (cfg[1] === 'first' && el.firstChild) el.firstChild.nodeValue = zh ? cfg[3] : cfg[2];
+        });
+        // Dictionary-driven whole-text swaps — the element's original English
+        // text is remembered in data-i18n-en so toggling back is lossless.
+        document.querySelectorAll(
+          '.rh-field > span, .rp-field > span, .stg-labels span:not(.gap), #rp-periods button,'
+          + ' .sc-section h4, .sc-hint, #sc-scope option, #rh-cat option[value=""], #rp-cat option[value=""],'
+          + ' #receipt-review-card .rr-head span, #receipt-review-card .rr-grid label'
+        ).forEach(function(el) {
+          var isLabel = el.matches('#receipt-review-card .rr-grid label');
+          var node = isLabel ? el.firstChild : null;
+          if (isLabel && (!node || node.nodeType !== 3)) return;
+          var cur = isLabel ? node.nodeValue : el.textContent;
+          if (!el.dataset.i18nEn) {
+            if (!cur || !String(cur).trim()) return;
+            el.dataset.i18nEn = String(cur).trim();
+          }
+          var en = el.dataset.i18nEn;
+          var out = zh ? (I18N_ZH[en] || en) : en;
+          if (isLabel) node.nodeValue = out; else el.textContent = out;
+        });
+        // Checkbox labels — only the trailing text node (the input must survive)
+        document.querySelectorAll('label.rh-chk').forEach(function(lb) {
+          var tail = lb.lastChild;
+          if (!tail || tail.nodeType !== 3) return;
+          if (!lb.dataset.i18nEn) {
+            if (!tail.nodeValue.trim()) return;
+            lb.dataset.i18nEn = tail.nodeValue.trim();
+          }
+          var enT = lb.dataset.i18nEn;
+          tail.nodeValue = ' ' + (zh ? (I18N_ZH[enT] || enT) : enT);
+        });
+        var langBtn = document.getElementById('rsp-lang');
+        if (langBtn) langBtn.textContent = zh ? '语言 · English' : 'Language · 中文';
+        try {
+          var dateEl = document.getElementById('rsp-date');
+          if (dateEl) dateEl.textContent = new Date().toLocaleDateString(zh ? 'zh-CN' : undefined,
+            { weekday: 'short', month: 'short', day: 'numeric' });
+        } catch (dErr) { /* date label keeps its default */ }
+      }
+      applyAppLanguage();
+
       // ── Visible account row ──────────────────────────────────────────
       // Sign out / Sign out everywhere for every user — no hidden hotspot
       // needed. Reuses the template's performSignOut flows.
@@ -6425,6 +6580,15 @@
         });
         document.getElementById('rsp-signout-all').addEventListener('click', function() {
           performSignOut('manual');
+        });
+        document.getElementById('rsp-lang').addEventListener('click', function() {
+          try { localStorage.setItem('Receipts_lang', _zhOn() ? 'en' : 'zh'); } catch (lErr) {}
+          applyAppLanguage();
+          refreshShareSelectors();
+          rhFilterHint();
+          rpFilterHint();
+          if (rpData) renderReport();
+          showAffirmation();
         });
         var cog = document.getElementById('rsp-settings');
         var panel = document.getElementById('rsp-settings-panel');
@@ -6509,18 +6673,18 @@
           var cur = sel.value;
           sel.innerHTML = '';
           var mine = document.createElement('option');
-          mine.value = ''; mine.textContent = 'My receipts';
+          mine.value = ''; mine.textContent = t('My receipts');
           sel.appendChild(mine);
           received.forEach(function(s) {
             var o = document.createElement('option');
             o.value = s.email;
-            o.textContent = s.email + (s.scope === 'edit' ? ' (can edit)' : ' (view only)');
+            o.textContent = s.email + (s.scope === 'edit' ? t(' (can edit)') : t(' (view only)'));
             sel.appendChild(o);
           });
           if (received.length) {
             var comb = document.createElement('option');
             comb.value = '*';
-            comb.textContent = 'Combined (mine + shared)';
+            comb.textContent = t('Combined (mine + shared)');
             sel.appendChild(comb);
           }
           sel.value = (cur === '*' && received.length) ? '*'
