@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 9/50`
+`Sections: 10/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.10g] — 2026-08-03 06:20:57 AM EST — v01.55r
+
+### Added
+- Article scoring and summaries can now run on Claude (Anthropic) for higher accuracy, selectable by the site operator — the previous free AI service remains available as a fallback
 
 ## [v01.09g] — 2026-08-03 02:51:07 AM EST — v01.54r
 

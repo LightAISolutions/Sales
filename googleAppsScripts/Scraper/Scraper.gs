@@ -1,4 +1,4 @@
-var VERSION = "v01.09g";
+var VERSION = "v01.10g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -352,7 +352,8 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'analyzeArticles', 'previewBrief'];
 
 // ── Phase 3: AI layer tuning ──
-var SCRAPER_AI_PROVIDER = 'gemini';            // swappable: 'gemini' today, 'claude' slot for later
+var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
+var SCRAPER_CLAUDE_MODEL = 'claude-sonnet-5';  // stable Anthropic alias; ANTHROPIC_MODEL Script Property overrides
 // No hardcoded Gemini model: Google retires model IDs without warning (2.5-flash-lite
 // 404'd on 2026-07-09, months before its announced shutdown). The model is discovered
 // live via ListModels, cached in the GEMINI_MODEL_AUTO Script Property, and
@@ -829,13 +830,53 @@ function listArticles(sessionToken, projectId, limit) {
 
 // ── Phase 3: AI layer ───────────────────────────────────────────────────
 // Swappable provider abstraction: everything above this layer calls
-// aiComplete_() only. Gemini (free tier) is wired today; adding Claude later
-// means one new branch + a CLAUDE_API_KEY Script Property — no caller changes.
+// aiComplete_() only. Two providers are wired: Claude (Anthropic, paid — set
+// ANTHROPIC_API_KEY + AI_PROVIDER=claude in Script Properties) and Gemini
+// (free-tier fallback). The AI_PROVIDER Script Property switches providers
+// without a code change; SCRAPER_AI_PROVIDER is the default when unset.
 
 /** Provider-agnostic completion. Returns plain text or throws ai_* errors. */
 function aiComplete_(prompt, maxTokens) {
-  if (SCRAPER_AI_PROVIDER === 'gemini') return scGeminiComplete_(prompt, maxTokens);
+  var provider = (PropertiesService.getScriptProperties().getProperty('AI_PROVIDER') ||
+                  SCRAPER_AI_PROVIDER).toLowerCase();
+  if (provider === 'claude') return scClaudeComplete_(prompt, maxTokens);
+  if (provider === 'gemini') return scGeminiComplete_(prompt, maxTokens);
   throw new Error('ai_provider_not_configured');
+}
+
+function scClaudeComplete_(prompt, maxTokens) {
+  var props = PropertiesService.getScriptProperties();
+  var key = props.getProperty('ANTHROPIC_API_KEY') || '';
+  if (!key) throw new Error('ai_key_missing');
+  var model = props.getProperty('ANTHROPIC_MODEL') || SCRAPER_CLAUDE_MODEL;
+  var resp = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
+    method: 'post',
+    contentType: 'application/json',
+    headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+    payload: JSON.stringify({
+      model: model,
+      max_tokens: maxTokens || 1024,
+      messages: [{ role: 'user', content: prompt }]
+    }),
+    muteHttpExceptions: true
+  });
+  var code = resp.getResponseCode();
+  var body = resp.getContentText() || '';
+  if (code === 429) throw new Error('ai_rate_limited');
+  if (code < 200 || code >= 300) {
+    var apiMsg = '';
+    try { apiMsg = (JSON.parse(body).error || {}).message || ''; } catch (e) {}
+    throw new Error('ai_http_' + code + (apiMsg ? ' — ' + apiMsg.slice(0, 160) : ''));
+  }
+  var data;
+  try { data = JSON.parse(body); } catch (e2) { throw new Error('ai_bad_json'); }
+  var text = '';
+  var blocks = (data && data.content) || [];
+  for (var i = 0; i < blocks.length; i++) {
+    if (blocks[i] && blocks[i].type === 'text') text += blocks[i].text || '';
+  }
+  if (!text) throw new Error('ai_empty_response');
+  return text;
 }
 
 function scGeminiComplete_(prompt, maxTokens) {
