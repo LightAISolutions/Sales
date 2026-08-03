@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 51/100`
+`Sections: 52/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.52r] — 2026-08-03 02:15:55 AM EST
+
+> **Prompt:** "Deploy works and does give me a bunch of Google News that are questionably related to my topic. Continue with Phase 3."
+
+### Added
+
+#### `Scraper.gs` — v01.07g
+
+##### Added
+- Phase 3 AI layer: provider-agnostic `aiComplete_()` abstraction — Gemini free tier today (`scGeminiComplete_` via `generateContent` v1beta, default model `gemini-2.5-flash-lite` overridable with a `GEMINI_MODEL` Script Property; key from `GEMINI_API_KEY`), Claude slot ready as a future branch
+- `analyzeArticles` route: chunked AI relevance scoring — up to 3 AI calls per invocation × 10 articles per call, 2s spacing for free-tier RPM headroom; scores (0–100) and 1–2 sentence summaries (for scores ≥50) written back to the Articles tab; unscored articles are the natural resume state
+- `previewBrief` route: executive brief synthesized from the top 30 relevant articles (score ≥50), plain-text overview + bullets
+- `listArticles` now returns `summary` and `score`; `scLogUsage_` extended to track AI calls alongside fetch calls in UsageLog
+
+#### `Scraper.html` — v01.07w
+
+##### Added
+- Analyze button per project card driving the chunked scoring loop with progress ("Scoring… N left")
+- Articles panel: color-coded relevance score chips (green ≥70, amber ≥50, red <50), AI summaries shown in place of raw snippets, scored-first sort order
+- Brief button in the articles panel rendering the AI executive brief in a styled box
+- User-facing error messages for AI failure modes (missing key, rate limit, empty/unreadable response, no relevant articles)
 
 ## [v01.51r] — 2026-08-03 01:23:34 AM EST
 

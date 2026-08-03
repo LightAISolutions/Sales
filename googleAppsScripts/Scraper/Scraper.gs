@@ -1,4 +1,4 @@
-var VERSION = "v01.06g";
+var VERSION = "v01.07g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -348,7 +348,17 @@ var SCRAPER_DELIVERIES = ['inapp', 'email', 'both'];
 var SCRAPER_MAX_PROJECTS_PER_USER = 10;
 var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'updateProject', 'setProjectStatus',
-                               'compileNow', 'getCompileStatus', 'listArticles'];
+                               'compileNow', 'getCompileStatus', 'listArticles',
+                               'analyzeArticles', 'previewBrief'];
+
+// ── Phase 3: AI layer tuning ──
+var SCRAPER_AI_PROVIDER = 'gemini';            // swappable: 'gemini' today, 'claude' slot for later
+var SCRAPER_GEMINI_MODEL_DEFAULT = 'gemini-2.5-flash-lite'; // best free-tier daily quota; override via GEMINI_MODEL Script Property
+var SCRAPER_ANALYZE_ARTICLES_PER_CALL = 10;    // articles per AI request
+var SCRAPER_ANALYZE_CALLS_PER_INVOCATION = 3;  // AI requests per analyzeArticles call (client loops until done)
+var SCRAPER_AI_CALL_SPACING_MS = 2000;         // spacing between AI requests (free-tier RPM headroom)
+var SCRAPER_RELEVANT_THRESHOLD = 50;           // score >= this counts as relevant
+var SCRAPER_BRIEF_TOP_N = 30;                  // top-scored articles fed into the executive brief
 
 // ── Phase 2: compilation engine tuning ──
 var SCRAPER_COMPILE_BATCH_FETCHES = 6;    // max URL fetches per compileNow call (client loops until done)
@@ -689,8 +699,8 @@ function scExistingArticleUrls_(ss, projectId) {
   return map;
 }
 
-/** Add fetchCount to today's UsageLog row for ownerEmail (create if absent). */
-function scLogUsage_(ss, ownerEmail, fetchCount) {
+/** Add AI/fetch call counts to today's UsageLog row for ownerEmail (create if absent). */
+function scLogUsage_(ss, ownerEmail, aiCalls, fetchCalls) {
   var sheet = ss.getSheetByName(SCRAPER_TABS.USAGE);
   var today = Utilities.formatDate(new Date(), 'America/New_York', 'yyyy-MM-dd');
   var data = sheet.getDataRange().getValues();
@@ -699,11 +709,12 @@ function scLogUsage_(ss, ownerEmail, fetchCount) {
     var cellStr = (cell instanceof Date)
       ? Utilities.formatDate(cell, 'America/New_York', 'yyyy-MM-dd') : String(cell);
     if (cellStr === today && String(data[i][1]).toLowerCase() === ownerEmail.toLowerCase()) {
-      sheet.getRange(i + 1, 4).setValue(Number(data[i][3] || 0) + fetchCount);
+      sheet.getRange(i + 1, 3, 1, 2).setValues([[
+        Number(data[i][2] || 0) + aiCalls, Number(data[i][3] || 0) + fetchCalls]]);
       return;
     }
   }
-  sheet.appendRow([today, ownerEmail, 0, fetchCount, '']);
+  sheet.appendRow([today, ownerEmail, aiCalls, fetchCalls, '']);
 }
 
 function scCompileStateKey_(projectId) { return SCRAPER_COMPILE_STATE_PREFIX + projectId; }
@@ -761,7 +772,7 @@ function compileNow(sessionToken, projectId) {
       state.errors++;
     }
   }
-  scLogUsage_(ss, user.email, fetches);
+  scLogUsage_(ss, user.email, 0, fetches);
   state.done = state.index >= state.urls.length || state.added >= SCRAPER_COMPILE_MAX_NEW;
   if (state.done) state.finishedAt = new Date().toISOString();
   props.setProperty(key, JSON.stringify(state));
@@ -803,9 +814,167 @@ function listArticles(sessionToken, projectId, limit) {
     if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
     out.push({ id: data[i][0], url: data[i][3], title: data[i][4], source: data[i][5],
       publishedAt: String(data[i][6] || ''), fetchedAt: data[i][7] ? new Date(data[i][7]).toISOString() : '',
-      snippet: data[i][8], verdict: data[i][11] });
+      snippet: data[i][8], summary: data[i][9], score: data[i][10] === '' ? null : Number(data[i][10]),
+      verdict: data[i][11] });
   }
   return { success: true, articles: out };
+}
+
+// ── Phase 3: AI layer ───────────────────────────────────────────────────
+// Swappable provider abstraction: everything above this layer calls
+// aiComplete_() only. Gemini (free tier) is wired today; adding Claude later
+// means one new branch + a CLAUDE_API_KEY Script Property — no caller changes.
+
+/** Provider-agnostic completion. Returns plain text or throws ai_* errors. */
+function aiComplete_(prompt, maxTokens) {
+  if (SCRAPER_AI_PROVIDER === 'gemini') return scGeminiComplete_(prompt, maxTokens);
+  throw new Error('ai_provider_not_configured');
+}
+
+function scGeminiComplete_(prompt, maxTokens) {
+  var props = PropertiesService.getScriptProperties();
+  var key = props.getProperty('GEMINI_API_KEY') || '';
+  if (!key) throw new Error('ai_key_missing');
+  var model = props.getProperty('GEMINI_MODEL') || SCRAPER_GEMINI_MODEL_DEFAULT;
+  var url = 'https://generativelanguage.googleapis.com/v1beta/models/'
+          + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(key);
+  var resp = UrlFetchApp.fetch(url, {
+    method: 'post', contentType: 'application/json', muteHttpExceptions: true,
+    payload: JSON.stringify({
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: { maxOutputTokens: maxTokens || 2048, temperature: 0.2 }
+    })
+  });
+  var code = resp.getResponseCode();
+  if (code === 429) throw new Error('ai_rate_limited');
+  if (code !== 200) throw new Error('ai_http_' + code);
+  var body = JSON.parse(resp.getContentText());
+  var parts = body.candidates && body.candidates[0] && body.candidates[0].content
+              && body.candidates[0].content.parts;
+  var text = '';
+  (parts || []).forEach(function(p) { if (p.text) text += p.text; });
+  if (!text.trim()) throw new Error('ai_empty_response');
+  return text;
+}
+
+/** Extract the first JSON array from an AI response (fences/preamble tolerated). */
+function scParseJsonArray_(text) {
+  var start = text.indexOf('[');
+  var end = text.lastIndexOf(']');
+  if (start === -1 || end === -1 || end <= start) throw new Error('ai_bad_json');
+  try { return JSON.parse(text.substring(start, end + 1)); }
+  catch (pjErr) { throw new Error('ai_bad_json'); }
+}
+
+/** The project scope as prompt lines (shared by scoring and the brief). */
+function scScopePrompt_(project) {
+  var lines = ['Topic: ' + project.topic];
+  if (project.industries.length) lines.push('Industries: ' + project.industries.join(', '));
+  if (project.keywords.length) lines.push('Priority keywords: ' + project.keywords.join(', '));
+  if (project.exclusions.length) lines.push('Exclude coverage of: ' + project.exclusions.join(', '));
+  if (project.regions.length) lines.push('Regions/languages: ' + project.regions.join(', '));
+  return lines.join('\n');
+}
+
+/** Score one batch of articles against the project scope. Returns parsed items. */
+function scScoreBatch_(project, batch) {
+  var lines = [];
+  batch.forEach(function(a, idx) {
+    lines.push((idx + 1) + '. ' + a.title + ' — ' + a.source
+      + (a.snippet ? '\n   ' + a.snippet : ''));
+  });
+  var prompt = 'You are a research analyst filtering news for a monitoring project.\n\n'
+    + 'PROJECT SCOPE:\n' + scScopePrompt_(project) + '\n\n'
+    + 'ARTICLES:\n' + lines.join('\n') + '\n\n'
+    + 'For each article, rate its relevance to the project scope from 0 to 100 '
+    + '(100 = squarely on-topic, 0 = unrelated; anything matching the "Exclude coverage of" list scores under 20). '
+    + 'For articles scoring ' + SCRAPER_RELEVANT_THRESHOLD + ' or above, also write a factual 1-2 sentence summary '
+    + 'based only on the title and text given. '
+    + 'Respond with ONLY a JSON array, no markdown fences, one object per article in order: '
+    + '[{"i":1,"score":85,"summary":"..."}] — omit or empty the summary for scores under '
+    + SCRAPER_RELEVANT_THRESHOLD + '.';
+  return scParseJsonArray_(aiComplete_(prompt, 2048));
+}
+
+/** Chunked relevance scoring: unscored articles are the natural resume state. */
+function analyzeArticles(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'analyzeArticles');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+
+  var sheet = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+  var data = sheet.getDataRange().getValues();
+  var pending = [];
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][1] !== project.id) continue;
+    if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    if (data[i][10] !== '') continue;  // already scored
+    pending.push({ row: i + 1, title: String(data[i][4]), source: String(data[i][5]),
+                   snippet: String(data[i][8]) });
+  }
+  if (!pending.length) return { success: true, done: true, analyzed: 0, remaining: 0 };
+
+  var analyzed = 0;
+  var aiCalls = 0;
+  while (pending.length && aiCalls < SCRAPER_ANALYZE_CALLS_PER_INVOCATION) {
+    var batch = pending.splice(0, SCRAPER_ANALYZE_ARTICLES_PER_CALL);
+    if (aiCalls > 0) Utilities.sleep(SCRAPER_AI_CALL_SPACING_MS);
+    var results = scScoreBatch_(project, batch);
+    aiCalls++;
+    results.forEach(function(r) {
+      var idx = Number(r.i) - 1;
+      if (idx < 0 || idx >= batch.length) return;
+      var score = Math.max(0, Math.min(100, Math.round(Number(r.score) || 0)));
+      var summary = score >= SCRAPER_RELEVANT_THRESHOLD ? scStr_(r.summary, 500) : '';
+      sheet.getRange(batch[idx].row, 10, 1, 2).setValues([[summary, score]]);
+      analyzed++;
+    });
+  }
+  scLogUsage_(ss, user.email, aiCalls, 0);
+  var done = pending.length === 0;
+  if (done) dataAuditLog(user.email, 'analyze', 'project', project.id, analyzed + ' articles scored');
+  return { success: true, done: done, analyzed: analyzed, remaining: pending.length };
+}
+
+/** Executive brief synthesized from the top-scored relevant articles. */
+function previewBrief(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'previewBrief');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+
+  var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
+  var relevant = [];
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][1] !== project.id) continue;
+    if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    if (data[i][10] === '' || Number(data[i][10]) < SCRAPER_RELEVANT_THRESHOLD) continue;
+    relevant.push({ score: Number(data[i][10]), title: String(data[i][4]),
+                    source: String(data[i][5]), summary: String(data[i][9] || data[i][8]) });
+  }
+  if (!relevant.length) return { success: false, error: 'no_relevant_articles' };
+  relevant.sort(function(a, b) { return b.score - a.score; });
+  relevant = relevant.slice(0, SCRAPER_BRIEF_TOP_N);
+
+  var lines = relevant.map(function(a, idx) {
+    return (idx + 1) + '. [' + a.score + '] ' + a.title + ' (' + a.source + '): ' + a.summary;
+  });
+  var prompt = 'You are writing an executive brief for a busy reader monitoring this scope:\n'
+    + scScopePrompt_(project) + '\n\n'
+    + 'Source articles (relevance-scored):\n' + lines.join('\n') + '\n\n'
+    + 'Write a plain-text executive brief: one short overview paragraph, then 4-8 concise '
+    + 'bullet points (start each with "• ") grouping the most important developments. '
+    + 'Base it ONLY on the articles above. No markdown, no headings, no preamble.';
+  var brief = aiComplete_(prompt, 2048);
+  scLogUsage_(ss, user.email, 1, 0);
+  return { success: true, brief: brief.trim(), articleCount: relevant.length };
 }
 
 /** Route dispatcher shared by the doPost actions and the doGet api mirror. */
@@ -819,6 +988,8 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'compileNow') return compileNow(sessionToken, param('projectId'));
   if (op === 'getCompileStatus') return getCompileStatus(sessionToken, param('projectId'));
   if (op === 'listArticles') return listArticles(sessionToken, param('projectId'), param('limit'));
+  if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));
+  if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));
   return { success: false, error: 'unknown_op' };
 }
 

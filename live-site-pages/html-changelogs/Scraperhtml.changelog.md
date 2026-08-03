@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.07w] — 2026-08-03 02:15:55 AM EST — v01.52r
+
+### Added
+- New Analyze button scores each gathered article for relevance to your project, with live progress while it runs
+- Articles now show a color-coded relevance score and a short summary, with the most relevant stories sorted to the top
+- New Brief button writes an executive brief summarizing the most important developments across your relevant articles
 
 ## [v01.06w] — 2026-08-03 01:23:34 AM EST — v01.51r
 
