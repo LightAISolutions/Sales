@@ -6,6 +6,38 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-02 08:36:01 PM EST
+**Repo version:** v01.48r
+
+**What we worked on:**
+- 12 feature pushes on the **Receipts app** (v01.37r → v01.48r, all merged + deployed; Receipts.html v01.28w · Receipts.gs v01.16g)
+- **Admin menu**: fixed the GAS admin dropdown (hidden behind the email row, then a first-tap no-op from the `=== 'none'` toggle) and restyled it as a solid blue ADMIN badge next to the status pills
+- **UI comfort**: collapsible Filters drawers in Reports and History (collapsed by default, "n active" hint), sort/Export/circle-graphs controls pinned outside the drawers, Clear buttons in both filter sets, removed the redundant saved checkmark in History, Settings ⚙️ cog panel (signed-in email + Sign out / Sign out everywhere), themed hand-drawn receipt SVG on the sign-in wall (`images/receipts-logo.svg`), affirmation cycle slowed to 14s
+- **Line Items drill-down**: Reports → category (+ optional subcategory) → searchable line-item list joined to receipts; "Group by item" collapses identical items with purchase count, price range, and total spend across purchases, with expandable per-purchase history
+- **Household combined view**: "Combined (mine + shared)" owner option in History/Reports backed by `resolveOwnerSet_` over the Shares tab; owner name chips on rows, seamless cross-owner open/edit, mutual delete rides the edit grant, Owner column added to exports
+- **Drive photo sharing**: granting view/edit auto-shares the owner's Drive "Receipts App" folder (reader permission) from the owner's browser; revoking unshares; a reconciliation pass on load covers pre-existing grants (localStorage `Receipts_folder_perms_synced`)
+- **Simplified Chinese**: Settings-cog language toggle (localStorage `Receipts_lang`); full chrome translation including all categories/subcategories (History + Reports filters, report breakdowns, review-screen dropdowns), month card, 周X daily / 2026年X月 monthly / 上半年·下半年 biannual period labels, statuses, and affirmations — stored receipt data stays English
+**Where we left off:**
+- All 12 pushes merged via the auto-merge workflow; working tree clean. User confirmed the combined view and cross-user photo access work on real devices. Receipts.html v01.28w · Receipts.gs v01.16g
+
+**Key decisions made:**
+- Translation is **display-only** — stored category values and AI extraction always write English (data is shared across users/languages); `tCat()` relabels dropdowns by option *value* so nothing is lost switching languages
+- Delete permission rides the edit grant (no separate delete scope); the month card stays personal in combined mode; a partner-deleted receipt leaves its photo in the owner's Drive (only the owner's browser can trash it)
+- Drive folder sharing must run in the **owner's browser** (drive.file token) — the server cannot touch user Drives; missed grants self-heal via the on-load reconciliation
+- `t()`/`tCat()` dictionary lookups are guarded with `typeof` checks because category builders run at script-eval before the dict assignments — an unguarded lookup killed the entire inline script (sign-in outage risk, caught by the zh-at-load Playwright test)
+
+**Active context:**
+- Branch: `claude/receipts-app-features-t0nbdq` (auto-deleted from remote after each merge; recreate by pushing)
+- Repo v01.48r · 9 tracked pages, all 🟢 — Receipts v01.28w·v01.16g; all other pages unchanged this session
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- No reminders, no TODO items
+
+**Recommendation for next session:**
+- Run a full end-to-end 中文 pass on the phone — switch language in the ⚙️ cog, then walk scan → review → save → History → Reports → Line Items → sharing — and report any untranslated or awkward strings; the translation layer touched nearly every screen and a native-eye review is the one remaining verification
+- **To continue:** type `review the Chinese translations`
+
+## Previous Sessions
+
 **Date:** 2026-08-01 07:00:24 AM EST
 **Repo version:** v01.27r
 
@@ -34,37 +66,6 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **Recommendation for next session:**
 - The Receipts app is feature-complete and fully phone-tested — no deferred Receipts work. The strongest carried-over item: the **Globalacl** project still has placeholder deployment/spreadsheet IDs from initialization; wiring a real Apps Script deployment into `globalacl.config.json` would make the central ACL manager UI usable
-- **To continue:** type `set up the globalacl project`
-
-## Previous Sessions
-
-**Date:** 2026-08-01 01:34:25 AM EST
-**Repo version:** v01.15r
-
-**What we worked on:**
-- Diagnosed and resolved the News Scraper sign-in failure ("stuck at Sending credentials" for jonyang92@gmail.com). Root-caused through three layers: (1) the original hang was transient Google-side serving trouble that cleared on its own; (2) the "Sorry, unable to open the file" page on direct `/exec` visits was Google's multi-account cookie routing — a red herring, since the page's fetch transport is cookie-less; (3) the real blocker was `not_authorized` from `checkSpreadsheetAccess()` — the Master ACL grant for jonyang92@gmail.com had been flipped off sometime after 7/18
-- Verified server health directly via curl probes from the session container: anonymous GET of Scraper `/exec` serves the app shell (HTTP 200); the `action=api&op=exchangeToken` GET route returns correct JSON; the POST route currently returns a Google HTML error page (known Google POST flakiness — the client's GET fallback absorbs it, ~1–2s penalty per sign-in)
-- Verified the deployment ID in `Scraper.config.json` matches both the Active deployment in Manage Deployments and the `_e`-encoded URL in `Scraper.html` — no repo changes needed anywhere
-- Owner ran `grantUserAccess()` in the MasterACL editor: structure verified, both owner emails re-granted admin with all page columns TRUE, cache epoch bumped 8→9, web app probe OK — sign-in confirmed restored
-- Session start: auto-reconstructed stale session context (v01.13r → v01.15r) and pushed it (merged to main via auto-merge workflow)
-
-**Where we left off:**
-- Sign-in fully working again; no repo code changes were needed (diagnosis-only session). Working tree clean, all commits merged
-- Open mystery: something edited the Master ACL between 7/18 and 7/31 to remove the grant (cache epoch was already at 8 pre-fix). Developer was advised to check the ACL spreadsheet's File → Version history to identify the edit — result not yet reported
-
-**Key decisions made:**
-- No repo changes warranted — deployment, config, page wiring, and GAS routes all verified correct
-- Google POST flakiness on `/exec` left as-is; the existing POST→GET fallback architecture already handles it
-- The 7-day Testing-mode OAuth expiry hypothesis was investigated and ruled out for this incident (backend served anonymously throughout the final tests)
-
-**Active context:**
-- Branch: `claude/login-sending-credentials-stuck-5nvs31` (auto-deleted from remote after each merge; recreate by pushing)
-- Repo v01.15r · 8 tracked pages, all 🟢 — MasterACL v01.02w·v01.07g, Scraper v01.04w·v01.04g, globalacl v01.02w·v01.01g, gas-project-creator v01.01w, spain-argentina v01.00w, test pages v01.00w, text-compare v01.00w
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No reminders, no TODO items
-
-**Recommendation for next session:**
-- Configure the **Globalacl** project (carried over from 7/18 — it still has placeholder deployment/spreadsheet IDs from initialization) so the central ACL manager UI becomes usable; it already carries the fetch transport and credentialless fixes, it just needs a real Apps Script deployment wired into `globalacl.config.json`. (Separately, the developer may report the ACL version-history findings for the mystery edit at any time.)
 - **To continue:** type `set up the globalacl project`
 
 Developed by: ShadowAISolutions
