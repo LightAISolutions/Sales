@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.27w">
+  <meta name="build-version" content="v01.28w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -4988,7 +4988,7 @@
         sel.appendChild(blank);
         CATEGORIES.forEach(function(c) {
           var o = document.createElement('option');
-          o.value = c; o.textContent = c;
+          o.value = c; o.textContent = tCat(c);
           sel.appendChild(o);
         });
       })();
@@ -5050,16 +5050,16 @@
         var list = subcatsFor(receiptCat);
         sel.innerHTML = '';
         var blank = document.createElement('option');
-        blank.value = ''; blank.textContent = 'Subcategory —';
+        blank.value = ''; blank.textContent = _zhOn() ? '子类别 —' : 'Subcategory —';
         sel.appendChild(blank);
         list.forEach(function(c) {
           var o = document.createElement('option');
-          o.value = c; o.textContent = c;
+          o.value = c; o.textContent = tCat(c);
           sel.appendChild(o);
         });
         if (value && list.indexOf(value) === -1) {
           var keep = document.createElement('option');
-          keep.value = value; keep.textContent = value;
+          keep.value = value; keep.textContent = tCat(value);
           sel.appendChild(keep);
         }
         sel.value = value || '';
@@ -6603,9 +6603,13 @@
           tail.nodeValue = ' ' + (zh ? (I18N_ZH[enT] || enT) : enT);
         });
         // Category/subcategory dropdown labels — option.value holds the stored
-        // English value, so relabeling is lossless in both directions.
-        document.querySelectorAll('#rh-cat option, #rp-cat option, #rp-subcat option').forEach(function(op) {
+        // English value, so relabeling is lossless in both directions. Covers
+        // the History/Reports filters and the review screen's selects.
+        document.querySelectorAll('#rh-cat option, #rp-cat option, #rp-subcat option, #rr-category option, .rr-cat option').forEach(function(op) {
           if (op.value) op.textContent = zh ? tCat(op.value) : op.value;
+        });
+        document.querySelectorAll('.rr-cat option[value=""]').forEach(function(op) {
+          op.textContent = zh ? '子类别 —' : 'Subcategory —';
         });
         var langBtn = document.getElementById('rsp-lang');
         if (langBtn) langBtn.textContent = zh ? '语言 · English' : 'Language · 中文';

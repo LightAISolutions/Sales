@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 27/50`
+`Sections: 28/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.28w] — 2026-08-02 08:31:18 PM EST — v01.48r
+
+### Changed
+- 简体中文 mode now also translates the review screen — the receipt category dropdown and every line item's subcategory dropdown show Chinese names while you check a scanned receipt
 
 ## [v01.27w] — 2026-08-02 08:10:52 PM EST — v01.47r
 
