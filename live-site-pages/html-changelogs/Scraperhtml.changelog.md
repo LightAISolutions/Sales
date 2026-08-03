@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.06w] — 2026-08-03 01:23:34 AM EST — v01.51r
+
+### Added
+- New Compile button on each project card gathers news for that project, with live progress shown while it runs
+- New Articles view lists everything gathered so far — headlines link to the original story, with source, date, and a short preview
 
 ## [v01.05w] — 2026-08-02 09:42:54 PM EST — v01.50r
 

@@ -3,11 +3,35 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 50/100`
+`Sections: 51/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.51r] — 2026-08-03 01:23:34 AM EST
+
+> **Prompt:** "I signed into the live Scraper page and created a real project. Continue with Phase 2."
+
+### Added
+
+#### `Scraper.gs` — v01.06g
+
+##### Added
+- Phase 2 compilation engine: `scBuildFetchQueue_()` builds Google News RSS search queries from topic terms (stopword-filtered via `scTopicTerms_`), keyword OR-chunks, industry combinations, and exclusion negations, plus the project's user-specified feed URLs
+- `scParseFeed_()` parses both RSS 2.0 and Atom feeds via XmlService with HTML-stripped, length-bounded fields
+- `compileNow` route: chunked, resumable compilation — each call fetches ≤6 URLs within a 40s budget, persists progress in Script Properties (`scCompile_<projectId>`), dedupes against existing article URLs per project, caps runs at 200 new articles, appends rows to the Articles tab, and logs fetch counts to UsageLog; the client loops until `done`
+- `getCompileStatus` and `listArticles` routes (owner-scoped, newest-first, capped at 100)
+- Dispatcher/action-list extended with the three new ops (doPost + doGet api mirror route automatically)
+
+#### `Scraper.html` — v01.06w
+
+##### Added
+- Compile button per project card with live progress label ("Compiling… N/M") driving the chunked `compileNow` loop, finishing with a result toast and auto-opening the articles panel
+- Articles panel overlay listing fetched articles (linked title opening in a new tab, source · date meta line, snippet)
+
+##### Fixed
+- Articles panel close button now shares the wizard close-button styling
 
 ## [v01.50r] — 2026-08-02 09:42:54 PM EST
 

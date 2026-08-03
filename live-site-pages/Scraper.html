@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.05w">
+  <meta name="build-version" content="v01.06w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -388,8 +388,8 @@
     }
     .sc-wiz-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
     .sc-wiz-head h2 { margin: 0; font-size: 18px; }
-    #sc-wiz-close { background: none; border: none; font-size: 24px; color: #98a2b3; cursor: pointer; line-height: 1; }
-    #sc-wiz-close:hover { color: #1f2733; }
+    #sc-wiz-close, #sc-articles-close { background: none; border: none; font-size: 24px; color: #98a2b3; cursor: pointer; line-height: 1; }
+    #sc-wiz-close:hover, #sc-articles-close:hover { color: #1f2733; }
     #sc-wiz-progress { display: flex; gap: 6px; margin-bottom: 16px; }
     #sc-wiz-progress .dot { flex: 1; height: 4px; border-radius: 2px; background: #e0e4ea; }
     #sc-wiz-progress .dot.done { background: #2f6fdb; }
@@ -415,6 +415,24 @@
     #sc-review .rv-label { font-weight: bold; color: #37455a; }
     .sc-wiz-err { color: #b3261e; font-size: 12px; min-height: 16px; margin-top: 10px; }
     .sc-wiz-nav { display: flex; justify-content: space-between; margin-top: 8px; }
+    #sc-articles-overlay {
+      position: fixed; inset: 0; z-index: 50; background: rgba(15,23,42,0.55);
+      display: none; align-items: flex-start; justify-content: center;
+      overflow-y: auto; padding: 4vh 12px;
+    }
+    #sc-articles {
+      background: #fff; border-radius: 14px; width: 100%; max-width: 720px;
+      padding: 22px 24px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+      box-sizing: border-box; margin-bottom: 4vh;
+    }
+    .sc-art { border-bottom: 1px solid #eef1f5; padding: 12px 0; }
+    .sc-art:last-child { border-bottom: none; }
+    .sc-art h4 { margin: 0 0 3px; font-size: 14px; line-height: 1.4; word-break: break-word; }
+    .sc-art h4 a { color: #2456a8; text-decoration: none; }
+    .sc-art h4 a:hover { text-decoration: underline; }
+    .sc-art-meta { color: #7a8494; font-size: 11px; margin-bottom: 4px; }
+    .sc-art p { margin: 0; color: #55606e; font-size: 12px; line-height: 1.5; word-break: break-word; }
+    .sc-art-loading { color: #667085; font-size: 13px; text-align: center; padding: 24px 0; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -629,6 +647,15 @@
         <button class="sc-btn" id="sc-wiz-back" type="button">Back</button>
         <button class="sc-btn primary" id="sc-wiz-next" type="button">Next</button>
       </div>
+    </div>
+  </div>
+  <div id="sc-articles-overlay">
+    <div id="sc-articles">
+      <div class="sc-wiz-head">
+        <h2 id="sc-articles-title">Articles</h2>
+        <button id="sc-articles-close" type="button" title="Close">&times;</button>
+      </div>
+      <div id="sc-articles-list"></div>
     </div>
   </div>
   <div id="sc-status-msg"></div>
@@ -4349,6 +4376,8 @@
         + '<p class="sc-topic">' + scEsc(p.topic) + '</p>'
         + '<div class="sc-chips">' + scChipRow(p) + '</div>'
         + '<div class="sc-card-actions">'
+        + '<button class="sc-btn primary" type="button" data-act="compile" data-id="' + scEsc(p.id) + '">Compile</button>'
+        + '<button class="sc-btn" type="button" data-act="articles" data-id="' + scEsc(p.id) + '">Articles</button>'
         + '<button class="sc-btn" type="button" data-act="edit" data-id="' + scEsc(p.id) + '">Edit</button>'
         + '<button class="sc-btn" type="button" data-act="status" data-to="' + pauseTo + '" data-id="' + scEsc(p.id) + '">' + pauseLabel + '</button>'
         + '<button class="sc-btn subtle" type="button" data-act="archive" data-id="' + scEsc(p.id) + '">Archive</button>'
@@ -4388,6 +4417,12 @@
     $sc('sc-wizard-overlay').addEventListener('click', function(ev) {
       if (ev.target === this) scCloseWizard();  // click outside the panel closes
     });
+    $sc('sc-articles-close').addEventListener('click', function() {
+      $sc('sc-articles-overlay').style.display = 'none';
+    });
+    $sc('sc-articles-overlay').addEventListener('click', function(ev) {
+      if (ev.target === this) this.style.display = 'none';
+    });
 
     // Frequency checkboxes (built once; custom option reveals the custom field)
     var grid = $sc('scf-freqs');
@@ -4413,6 +4448,10 @@
         var proj = null;
         _scProjects.forEach(function(p) { if (p.id === id) proj = p; });
         if (proj) scOpenWizard(proj);
+      } else if (act === 'compile') {
+        scRunCompile(id, btn);
+      } else if (act === 'articles') {
+        scOpenArticles(id);
       } else if (act === 'status') {
         scSetStatus(id, btn.getAttribute('data-to'), btn);
       } else if (act === 'archive') {
@@ -4432,6 +4471,75 @@
         }
       }
     });
+  }
+
+  // ── Compilation (Phase 2) ──
+  // compileNow is chunked server-side: each call fetches a bounded batch and
+  // reports progress, so the client loops until done.
+  function scRunCompile(id, btn) {
+    if (btn.getAttribute('data-running') === '1') return;
+    btn.setAttribute('data-running', '1');
+    btn.disabled = true;
+    var orig = btn.textContent;
+    function step() {
+      return _gasPost({ action: 'compileNow', token: scToken(), projectId: id })
+        .then(function(data) {
+          if (!(data && data.success)) {
+            var appErr = new Error('app'); appErr.appCode = (data && data.error) || 'unknown';
+            throw appErr;
+          }
+          btn.textContent = 'Compiling… ' + data.processed + '/' + data.total;
+          return data.done ? data : step();
+        });
+    }
+    step()
+      .then(function(data) {
+        scToast('Compilation finished — ' + data.added + ' new article' + (data.added === 1 ? '' : 's')
+          + (data.errors ? ' (' + data.errors + ' source' + (data.errors === 1 ? '' : 's') + ' failed)' : '') + '.');
+        scOpenArticles(id);
+      })
+      .catch(function(err) {
+        scToast(err && err.appCode
+          ? scErrMsg(err.appCode)
+          : 'Could not reach the server (' + String((err && err.message) || err) + '). Compilation will resume where it left off if you retry.', true);
+      })
+      .then(function() {
+        btn.disabled = false;
+        btn.removeAttribute('data-running');
+        btn.textContent = orig;
+      });
+  }
+
+  function scOpenArticles(id) {
+    var proj = null;
+    _scProjects.forEach(function(p) { if (p.id === id) proj = p; });
+    $sc('sc-articles-title').textContent = proj ? proj.name : 'Articles';
+    var list = $sc('sc-articles-list');
+    list.innerHTML = '<p class="sc-art-loading">Loading articles…</p>';
+    $sc('sc-articles-overlay').style.display = 'flex';
+    _gasPost({ action: 'listArticles', token: scToken(), projectId: id })
+      .then(function(data) {
+        if (!(data && data.success)) {
+          list.innerHTML = '<p class="sc-art-loading">' + scEsc(scErrMsg(data && data.error)) + '</p>';
+          return;
+        }
+        if (!data.articles || !data.articles.length) {
+          list.innerHTML = '<p class="sc-art-loading">No articles yet — click <b>Compile</b> to fetch news for this project.</p>';
+          return;
+        }
+        var html = '';
+        data.articles.forEach(function(a) {
+          html += '<div class="sc-art">'
+            + '<h4><a href="' + scEsc(a.url) + '" target="_blank" rel="noopener noreferrer">' + scEsc(a.title || a.url) + '</a></h4>'
+            + '<div class="sc-art-meta">' + scEsc(a.source || '') + (a.publishedAt ? ' · ' + scEsc(a.publishedAt) : '') + '</div>'
+            + (a.snippet ? '<p>' + scEsc(a.snippet) + '</p>' : '')
+            + '</div>';
+        });
+        list.innerHTML = html;
+      })
+      .catch(function(err) {
+        list.innerHTML = '<p class="sc-art-loading">Could not load articles (' + scEsc(String((err && err.message) || err)) + ').</p>';
+      });
   }
 
   // ── Intake wizard ──

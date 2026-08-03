@@ -1,4 +1,4 @@
-var VERSION = "v01.05g";
+var VERSION = "v01.06g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -347,7 +347,16 @@ var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual'
 var SCRAPER_DELIVERIES = ['inapp', 'email', 'both'];
 var SCRAPER_MAX_PROJECTS_PER_USER = 10;
 var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
-                               'updateProject', 'setProjectStatus'];
+                               'updateProject', 'setProjectStatus',
+                               'compileNow', 'getCompileStatus', 'listArticles'];
+
+// ── Phase 2: compilation engine tuning ──
+var SCRAPER_COMPILE_BATCH_FETCHES = 6;    // max URL fetches per compileNow call (client loops until done)
+var SCRAPER_COMPILE_TIME_BUDGET_MS = 40000; // wall-clock budget per compileNow call
+var SCRAPER_COMPILE_MAX_NEW = 200;        // cap on new articles per compilation run
+var SCRAPER_ARTICLE_SNIPPET_MAX = 300;
+var SCRAPER_LIST_ARTICLES_MAX = 100;
+var SCRAPER_COMPILE_STATE_PREFIX = 'scCompile_';
 
 function scraperSs_() {
   if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
@@ -575,6 +584,230 @@ function setProjectStatus(sessionToken, projectId, status) {
   return { success: true, status: newStatus };
 }
 
+// ── Phase 2: compilation engine ─────────────────────────────────────────
+// Google News RSS + user-specified feeds → Articles tab. Compilation is
+// chunked and resumable: each compileNow call fetches a bounded batch and
+// persists progress in Script Properties, so the client loops until done
+// while every call stays far under the 6-minute execution limit. The
+// fetch-source list is built per project; a future paid news API slots in
+// as one more queue entry kind.
+
+/** Significant words from a topic (stopwords removed, first N kept). */
+function scTopicTerms_(topic, n) {
+  var stop = ['the', 'a', 'an', 'and', 'or', 'of', 'in', 'on', 'for', 'to', 'from',
+              'about', 'with', 'news', 'articles', 'e.g', 'eg', 'etc', 'their', 'its',
+              'this', 'that', 'these', 'those', 'as', 'by', 'at', 'is', 'are', 'be'];
+  var words = String(topic || '').toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').split(/\s+/);
+  var out = [];
+  for (var i = 0; i < words.length && out.length < n; i++) {
+    if (words[i].length > 2 && stop.indexOf(words[i]) === -1 && out.indexOf(words[i]) === -1) {
+      out.push(words[i]);
+    }
+  }
+  return out;
+}
+
+/** Build the ordered fetch queue (Google News RSS queries + user sources). */
+function scBuildFetchQueue_(project) {
+  var queue = [];
+  var excl = (project.exclusions || []).slice(0, 5).map(function(t) {
+    return '-"' + t + '"';
+  }).join(' ');
+  function gnews(q, label) {
+    var full = (q + ' ' + excl).trim();
+    queue.push({ kind: 'gnews', label: label,
+      url: 'https://news.google.com/rss/search?q=' + encodeURIComponent(full)
+           + '&hl=en-US&gl=US&ceid=US:en' });
+  }
+  var terms = scTopicTerms_(project.topic, 6);
+  if (terms.length) gnews(terms.join(' '), 'topic');
+  var kws = (project.keywords || []).slice(0, 12);
+  for (var i = 0; i < kws.length; i += 3) {
+    gnews(kws.slice(i, i + 3).map(function(k) { return '"' + k + '"'; }).join(' OR '), 'keywords');
+  }
+  (project.industries || []).slice(0, 3).forEach(function(ind) {
+    gnews('"' + ind + '" ' + terms.slice(0, 2).join(' '), 'industry');
+  });
+  (project.sources || []).slice(0, 20).forEach(function(src) {
+    queue.push({ kind: 'source', label: 'source', url: src });
+  });
+  return queue;
+}
+
+/** Parse an RSS 2.0 or Atom feed into [{url,title,source,publishedAt,snippet}]. */
+function scParseFeed_(xmlText, fallbackSource) {
+  var items = [];
+  var doc = XmlService.parse(xmlText);
+  var root = doc.getRootElement();
+  function clean(s, max) {
+    return scStr_(String(s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' '), max);
+  }
+  if (root.getName().toLowerCase() === 'rss') {
+    var channel = root.getChild('channel');
+    if (!channel) return items;
+    channel.getChildren('item').forEach(function(it) {
+      function ch(name) { var c = it.getChild(name); return c ? c.getText() : ''; }
+      var srcEl = it.getChild('source');
+      items.push({
+        url: scStr_(ch('link'), 500),
+        title: clean(ch('title'), 300),
+        source: clean(srcEl ? srcEl.getText() : fallbackSource, 120),
+        publishedAt: scStr_(ch('pubDate'), 60),
+        snippet: clean(ch('description'), SCRAPER_ARTICLE_SNIPPET_MAX)
+      });
+    });
+  } else if (root.getName().toLowerCase() === 'feed') {
+    var atom = XmlService.getNamespace('http://www.w3.org/2005/Atom');
+    root.getChildren('entry', atom).forEach(function(en) {
+      function ch(name) { var c = en.getChild(name, atom); return c ? c.getText() : ''; }
+      var linkUrl = '';
+      en.getChildren('link', atom).forEach(function(l) {
+        var rel = l.getAttribute('rel');
+        if (!linkUrl || !rel || rel.getValue() === 'alternate') {
+          linkUrl = l.getAttribute('href') ? l.getAttribute('href').getValue() : linkUrl;
+        }
+      });
+      items.push({
+        url: scStr_(linkUrl, 500),
+        title: clean(ch('title'), 300),
+        source: clean(fallbackSource, 120),
+        publishedAt: scStr_(ch('published') || ch('updated'), 60),
+        snippet: clean(ch('summary') || ch('content'), SCRAPER_ARTICLE_SNIPPET_MAX)
+      });
+    });
+  }
+  return items;
+}
+
+/** Existing article URLs for a project (dedupe set as an object map). */
+function scExistingArticleUrls_(ss, projectId) {
+  var map = {};
+  var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][1] === projectId) map[String(data[i][3])] = true;
+  }
+  return map;
+}
+
+/** Add fetchCount to today's UsageLog row for ownerEmail (create if absent). */
+function scLogUsage_(ss, ownerEmail, fetchCount) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.USAGE);
+  var today = Utilities.formatDate(new Date(), 'America/New_York', 'yyyy-MM-dd');
+  var data = sheet.getDataRange().getValues();
+  for (var i = data.length - 1; i >= 1; i--) {
+    var cell = data[i][0];
+    var cellStr = (cell instanceof Date)
+      ? Utilities.formatDate(cell, 'America/New_York', 'yyyy-MM-dd') : String(cell);
+    if (cellStr === today && String(data[i][1]).toLowerCase() === ownerEmail.toLowerCase()) {
+      sheet.getRange(i + 1, 4).setValue(Number(data[i][3] || 0) + fetchCount);
+      return;
+    }
+  }
+  sheet.appendRow([today, ownerEmail, 0, fetchCount, '']);
+}
+
+function scCompileStateKey_(projectId) { return SCRAPER_COMPILE_STATE_PREFIX + projectId; }
+
+/** Run one bounded compilation chunk for a project. Client loops until done. */
+function compileNow(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'compileNow');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(sheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(sheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+
+  var props = PropertiesService.getScriptProperties();
+  var key = scCompileStateKey_(project.id);
+  var state = null;
+  try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (stErr) { state = null; }
+  if (!state || state.done || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
+    var queue = scBuildFetchQueue_(project);
+    state = { owner: user.email, startedAt: new Date().toISOString(),
+              urls: queue.map(function(q) { return q.url; }),
+              labels: queue.map(function(q) { return q.label; }),
+              index: 0, added: 0, errors: 0, done: false };
+  }
+
+  var existing = scExistingArticleUrls_(ss, project.id);
+  var articles = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+  var t0 = Date.now();
+  var fetches = 0;
+  var now = new Date();
+  while (state.index < state.urls.length &&
+         fetches < SCRAPER_COMPILE_BATCH_FETCHES &&
+         (Date.now() - t0) < SCRAPER_COMPILE_TIME_BUDGET_MS &&
+         state.added < SCRAPER_COMPILE_MAX_NEW) {
+    var url = state.urls[state.index];
+    var label = state.labels[state.index];
+    state.index++;
+    fetches++;
+    try {
+      var resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true, followRedirects: true });
+      if (resp.getResponseCode() !== 200) { state.errors++; continue; }
+      var host = (String(url).match(/^https?:\/\/([^\/]+)/) || [])[1] || '';
+      var feedItems = scParseFeed_(resp.getContentText(),
+        label === 'source' ? host : 'Google News');
+      feedItems.forEach(function(item) {
+        if (!item.url || existing[item.url]) return;
+        if (state.added >= SCRAPER_COMPILE_MAX_NEW) return;
+        existing[item.url] = true;
+        state.added++;
+        articles.appendRow([Utilities.getUuid(), project.id, user.email, item.url,
+          item.title, item.source, item.publishedAt, now, item.snippet, '', '', '', '']);
+      });
+    } catch (fetchErr) {
+      state.errors++;
+    }
+  }
+  scLogUsage_(ss, user.email, fetches);
+  state.done = state.index >= state.urls.length || state.added >= SCRAPER_COMPILE_MAX_NEW;
+  if (state.done) state.finishedAt = new Date().toISOString();
+  props.setProperty(key, JSON.stringify(state));
+  if (state.done) dataAuditLog(user.email, 'compile', 'project', project.id,
+    state.added + ' new articles, ' + state.errors + ' errors');
+  return { success: true, done: state.done, processed: state.index,
+           total: state.urls.length, added: state.added, errors: state.errors };
+}
+
+/** Current compilation progress for a project (owner only). */
+function getCompileStatus(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'getCompileStatus');
+  var state = null;
+  try {
+    state = JSON.parse(PropertiesService.getScriptProperties()
+      .getProperty(scCompileStateKey_(String(projectId || ''))) || 'null');
+  } catch (gsErr) { state = null; }
+  if (!state || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
+    return { success: true, state: null };
+  }
+  return { success: true, state: { done: state.done, processed: state.index,
+    total: state.urls.length, added: state.added, errors: state.errors,
+    startedAt: state.startedAt, finishedAt: state.finishedAt || '' } };
+}
+
+/** Newest articles for a project (owner only, capped). */
+function listArticles(sessionToken, projectId, limit) {
+  var user = validateSessionForData(sessionToken, 'listArticles');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(sheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var max = Math.min(Number(limit) || SCRAPER_LIST_ARTICLES_MAX, SCRAPER_LIST_ARTICLES_MAX);
+  var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
+  var out = [];
+  for (var i = data.length - 1; i >= 1 && out.length < max; i--) {
+    if (data[i][1] !== projectId) continue;
+    if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    out.push({ id: data[i][0], url: data[i][3], title: data[i][4], source: data[i][5],
+      publishedAt: String(data[i][6] || ''), fetchedAt: data[i][7] ? new Date(data[i][7]).toISOString() : '',
+      snippet: data[i][8], verdict: data[i][11] });
+  }
+  return { success: true, articles: out };
+}
+
 /** Route dispatcher shared by the doPost actions and the doGet api mirror. */
 function handleProjectAction_(op, sessionToken, e) {
   function param(k) { return (e && e.parameter && e.parameter[k]) || ''; }
@@ -583,6 +816,9 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'getProject') return getProject(sessionToken, param('projectId'));
   if (op === 'updateProject') return updateProject(sessionToken, param('projectId'), param('payload'));
   if (op === 'setProjectStatus') return setProjectStatus(sessionToken, param('projectId'), param('status'));
+  if (op === 'compileNow') return compileNow(sessionToken, param('projectId'));
+  if (op === 'getCompileStatus') return getCompileStatus(sessionToken, param('projectId'));
+  if (op === 'listArticles') return listArticles(sessionToken, param('projectId'), param('limit'));
   return { success: false, error: 'unknown_op' };
 }
 
