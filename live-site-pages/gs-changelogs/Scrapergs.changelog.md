@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08g] — 2026-08-03 02:38:35 AM EST — v01.53r
+
+### Fixed
+- Fixed article analysis failing with a "something went wrong" error — the AI service now automatically selects a current, supported model and keeps working when models are retired
 
 ## [v01.07g] — 2026-08-03 02:15:55 AM EST — v01.52r
 

@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.07w">
+  <meta name="build-version" content="v01.08w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -4313,6 +4313,7 @@
     ai_empty_response: 'The AI service returned an empty answer — please try again.',
     ai_bad_json: 'The AI service returned an unreadable answer — please try again.',
     ai_provider_not_configured: 'No AI provider is configured on the server.',
+    ai_model_not_found: 'No compatible AI model was found for this key — check that it is a Google AI Studio key.',
     no_relevant_articles: 'No relevant articles yet — run Analyze first (articles need a relevance score of 50+).'
   };
   var _scProjects = [];
@@ -4558,10 +4559,15 @@
         });
     }
     step()
-      .then(function() {
-        scToast(totalScored
-          ? 'Analysis finished — ' + totalScored + ' article' + (totalScored === 1 ? '' : 's') + ' scored.'
-          : 'All articles were already scored.');
+      .then(function(data) {
+        if (totalScored) {
+          scToast('Analysis finished — ' + totalScored + ' article' + (totalScored === 1 ? '' : 's') + ' scored.');
+        } else if (data && data.hasArticles === false) {
+          scToast('No articles to analyze yet — run Compile first to gather news.', true);
+          return;  // nothing to show — skip opening the articles panel
+        } else {
+          scToast('All articles were already scored.');
+        }
         scOpenArticles(id);
       })
       .catch(function(err) {

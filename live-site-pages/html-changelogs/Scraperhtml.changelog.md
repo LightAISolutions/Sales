@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08w] — 2026-08-03 02:38:35 AM EST — v01.53r
+
+### Fixed
+- Clicking Analyze before gathering any articles now clearly says to run Compile first
+- Clearer messages when the AI service reports a problem
 
 ## [v01.07w] — 2026-08-03 02:15:55 AM EST — v01.52r
 

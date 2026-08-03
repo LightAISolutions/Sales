@@ -1,4 +1,4 @@
-var VERSION = "v01.07g";
+var VERSION = "v01.08g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -353,7 +353,11 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // swappable: 'gemini' today, 'claude' slot for later
-var SCRAPER_GEMINI_MODEL_DEFAULT = 'gemini-2.5-flash-lite'; // best free-tier daily quota; override via GEMINI_MODEL Script Property
+// No hardcoded Gemini model: Google retires model IDs without warning (2.5-flash-lite
+// 404'd on 2026-07-09, months before its announced shutdown). The model is discovered
+// live via ListModels, cached in the GEMINI_MODEL_AUTO Script Property, and
+// re-discovered automatically when a cached model starts returning 404.
+// A GEMINI_MODEL Script Property still overrides everything when set manually.
 var SCRAPER_ANALYZE_ARTICLES_PER_CALL = 10;    // articles per AI request
 var SCRAPER_ANALYZE_CALLS_PER_INVOCATION = 3;  // AI requests per analyzeArticles call (client loops until done)
 var SCRAPER_AI_CALL_SPACING_MS = 2000;         // spacing between AI requests (free-tier RPM headroom)
@@ -832,22 +836,22 @@ function aiComplete_(prompt, maxTokens) {
 }
 
 function scGeminiComplete_(prompt, maxTokens) {
-  var props = PropertiesService.getScriptProperties();
-  var key = props.getProperty('GEMINI_API_KEY') || '';
+  var key = PropertiesService.getScriptProperties().getProperty('GEMINI_API_KEY') || '';
   if (!key) throw new Error('ai_key_missing');
-  var model = props.getProperty('GEMINI_MODEL') || SCRAPER_GEMINI_MODEL_DEFAULT;
-  var url = 'https://generativelanguage.googleapis.com/v1beta/models/'
-          + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(key);
-  var resp = UrlFetchApp.fetch(url, {
-    method: 'post', contentType: 'application/json', muteHttpExceptions: true,
-    payload: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { maxOutputTokens: maxTokens || 2048, temperature: 0.2 }
-    })
-  });
+  var picked = scGeminiPickModel_(key, false);
+  var resp = scGeminiCall_(key, picked.model, prompt, maxTokens);
+  if (resp.getResponseCode() === 404 && !picked.explicit) {
+    // Cached/auto model likely retired by Google — rediscover once and retry.
+    picked = scGeminiPickModel_(key, true);
+    resp = scGeminiCall_(key, picked.model, prompt, maxTokens);
+  }
   var code = resp.getResponseCode();
   if (code === 429) throw new Error('ai_rate_limited');
-  if (code !== 200) throw new Error('ai_http_' + code);
+  if (code !== 200) {
+    var apiMsg = '';
+    try { apiMsg = JSON.parse(resp.getContentText()).error.message || ''; } catch (emErr) {}
+    throw new Error('ai_http_' + code + (apiMsg ? ' — ' + apiMsg.substring(0, 160) : ''));
+  }
   var body = JSON.parse(resp.getContentText());
   var parts = body.candidates && body.candidates[0] && body.candidates[0].content
               && body.candidates[0].content.parts;
@@ -855,6 +859,68 @@ function scGeminiComplete_(prompt, maxTokens) {
   (parts || []).forEach(function(p) { if (p.text) text += p.text; });
   if (!text.trim()) throw new Error('ai_empty_response');
   return text;
+}
+
+function scGeminiCall_(key, model, prompt, maxTokens) {
+  var url = 'https://generativelanguage.googleapis.com/v1beta/models/'
+          + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(key);
+  return UrlFetchApp.fetch(url, {
+    method: 'post', contentType: 'application/json', muteHttpExceptions: true,
+    payload: JSON.stringify({
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: { maxOutputTokens: maxTokens || 2048, temperature: 0.2 }
+    })
+  });
+}
+
+/** Model choice: explicit GEMINI_MODEL property > cached auto-pick > live discovery. */
+function scGeminiPickModel_(key, forceRefresh) {
+  var props = PropertiesService.getScriptProperties();
+  var explicit = props.getProperty('GEMINI_MODEL');
+  if (explicit) return { model: explicit, explicit: true };
+  if (!forceRefresh) {
+    var cached = props.getProperty('GEMINI_MODEL_AUTO');
+    if (cached) return { model: cached, explicit: false };
+  }
+  var model = scGeminiDiscoverModel_(key);
+  props.setProperty('GEMINI_MODEL_AUTO', model);
+  return { model: model, explicit: false };
+}
+
+/** Query ListModels and pick the best stable generateContent-capable Gemini model. */
+function scGeminiDiscoverModel_(key) {
+  var names = [];
+  var pageToken = '';
+  for (var page = 0; page < 5; page++) {
+    var url = 'https://generativelanguage.googleapis.com/v1beta/models?pageSize=200&key='
+            + encodeURIComponent(key)
+            + (pageToken ? '&pageToken=' + encodeURIComponent(pageToken) : '');
+    var resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+    if (resp.getResponseCode() !== 200) {
+      throw new Error('ai_model_discovery_failed_http_' + resp.getResponseCode());
+    }
+    var body = JSON.parse(resp.getContentText());
+    (body.models || []).forEach(function(m) {
+      if ((m.supportedGenerationMethods || []).indexOf('generateContent') === -1) return;
+      names.push(String(m.name || '').replace(/^models\//, ''));
+    });
+    pageToken = body.nextPageToken || '';
+    if (!pageToken) break;
+  }
+  // Stable text models only; prefer flash-lite (cheapest/highest free quota),
+  // then flash, then any Gemini; newest version wins, shortest (unsuffixed) name breaks ties.
+  var usable = names.filter(function(n) {
+    return /^gemini-/.test(n) && !/preview|exp|image|tts|live|audio|embed|thinking/.test(n);
+  });
+  function ver(n) { var m = n.match(/^gemini-(\d+(?:\.\d+)?)/); return m ? parseFloat(m[1]) : 0; }
+  function pick(re) {
+    var c = usable.filter(function(n) { return re.test(n); });
+    c.sort(function(a, b) { return (ver(b) - ver(a)) || (a.length - b.length); });
+    return c[0] || '';
+  }
+  var model = pick(/flash-lite/) || pick(/flash/) || pick(/^gemini-/);
+  if (!model) throw new Error('ai_model_not_found');
+  return model;
 }
 
 /** Extract the first JSON array from an AI response (fences/preamble tolerated). */
@@ -909,14 +975,18 @@ function analyzeArticles(sessionToken, projectId) {
   var sheet = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
   var data = sheet.getDataRange().getValues();
   var pending = [];
+  var hasArticles = false;
   for (var i = 1; i < data.length; i++) {
     if (data[i][1] !== project.id) continue;
     if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    hasArticles = true;
     if (data[i][10] !== '') continue;  // already scored
     pending.push({ row: i + 1, title: String(data[i][4]), source: String(data[i][5]),
                    snippet: String(data[i][8]) });
   }
-  if (!pending.length) return { success: true, done: true, analyzed: 0, remaining: 0 };
+  if (!pending.length) {
+    return { success: true, done: true, analyzed: 0, remaining: 0, hasArticles: hasArticles };
+  }
 
   var analyzed = 0;
   var aiCalls = 0;

@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-03 02:15:55 AM EST` · Repo version: `v01.52r`
+Last updated: `2026-08-03 02:38:35 AM EST` · Repo version: `v01.53r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -54,7 +54,7 @@ Last updated: `2026-08-03 02:15:55 AM EST` · Repo version: `v01.52r`
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/MasterACL.html">MasterACL.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/MasterACL.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1kG2KftqfKOeYwBCEkxRpw-QBh9s-1-Dvy31sH037UvE/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/MasterACL/MasterACL.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/MasterACLhtml.changelog.md">v01.02w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/MasterACLgs.changelog.md">v01.07g</a> | [template] MasterACL page
 │   │
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Scraper.html">Scraper.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Scraper.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/19U0Wu25eUXEHPVz4VWjKQIpnRozgFycNSjFCTB-umkk/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Scraper/Scraper.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog.md">v01.07w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Scrapergs.changelog.md">v01.07g</a> | [template] News Scraper page
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Scraper.html">Scraper.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Scraper.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/19U0Wu25eUXEHPVz4VWjKQIpnRozgFycNSjFCTB-umkk/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Scraper/Scraper.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog.md">v01.08w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Scrapergs.changelog.md">v01.08g</a> | [template] News Scraper page
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Receipts.html">Receipts.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Receipts.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1SfVRsHm6pUn1bq633BSKiQ8c3IsQeVAs7H0265ckdDM/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Receipts/Receipts.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog.md">v01.28w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog.md">v01.16g</a> | [template] Receipts page
 │   │
