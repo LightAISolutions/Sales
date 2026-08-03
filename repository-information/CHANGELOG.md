@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 55/100`
+`Sections: 56/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.56r] — 2026-08-03 06:43:09 AM EST
+
+> **Prompt:** "Key added as "Scraper-GAS" with an expiry date of "never". Continue the build."
+
+### Added
+
+#### `Scraper.gs` — v01.11g
+
+##### Added
+- GDELT DOC 2.0 historical backfill engine: new `backfillNow`/`getBackfillStatus` actions slice the past 24 months per month × per query and pull date-ranged English article lists (≤250 per slice) into the Articles tab — deduped against existing URLs, batch-appended via `setValues` (not per-row `appendRow`), time-budgeted (40s / 6 fetches per call), with compact resumable state in Script Properties (slices are derived from `startedAt` + stored queries rather than stored, keeping state well under the 9KB property limit)
+
+#### `Scraper.html` — v01.10w
+
+##### Added
+- Backfill button on each project card runs the chunked backfill loop with live progress ("Backfilling… n/total (X found)") and a completion toast; transport failures auto-retry once and an interrupted run resumes where it left off
 
 ## [v01.55r] — 2026-08-03 06:20:57 AM EST
 

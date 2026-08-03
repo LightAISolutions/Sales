@@ -1,4 +1,4 @@
-var VERSION = "v01.10g";
+var VERSION = "v01.11g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -349,7 +349,8 @@ var SCRAPER_MAX_PROJECTS_PER_USER = 10;
 var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'updateProject', 'setProjectStatus',
                                'compileNow', 'getCompileStatus', 'listArticles',
-                               'analyzeArticles', 'previewBrief'];
+                               'analyzeArticles', 'previewBrief',
+                               'backfillNow', 'getBackfillStatus'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -375,6 +376,12 @@ var SCRAPER_COMPILE_MAX_NEW = 200;        // cap on new articles per compilation
 var SCRAPER_ARTICLE_SNIPPET_MAX = 300;
 var SCRAPER_LIST_ARTICLES_MAX = 100;
 var SCRAPER_COMPILE_STATE_PREFIX = 'scCompile_';
+
+// ── Phase 3.5: historical backfill tuning ──
+var SCRAPER_BACKFILL_MONTHS = 24;              // GDELT history window (2 years)
+var SCRAPER_BACKFILL_BATCH_FETCHES = 6;        // GDELT slice fetches per backfillNow call
+var SCRAPER_BACKFILL_TIME_BUDGET_MS = 40000;   // wall-clock budget per backfillNow call
+var SCRAPER_BACKFILL_STATE_PREFIX = 'scBackfill_';
 
 function scraperSs_() {
   if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
@@ -806,6 +813,128 @@ function getCompileStatus(sessionToken, projectId) {
     startedAt: state.startedAt, finishedAt: state.finishedAt || '' } };
 }
 
+// ── Phase 3.5: historical backfill (GDELT DOC 2.0) ──────────────────────
+// GDELT's free DOC API (no key, coverage back to 2017) supplies the 2-year
+// history that Google News RSS cannot (its feeds only cover ~30 days).
+// The window is sliced per month × per query; each slice is one UrlFetch
+// returning ≤250 JSON articles. Same chunked/resumable pattern as
+// compileNow: compact state in Script Properties (slices are derived, not
+// stored — the 9KB property limit rules out storing ~100 task objects),
+// client loops until done.
+
+function scBackfillStateKey_(projectId) { return SCRAPER_BACKFILL_STATE_PREFIX + projectId; }
+
+/** GDELT query strings for a project (quoted phrases, OR groups in parens). */
+function scGdeltQueries_(project) {
+  var queries = [];
+  var terms = scTopicTerms_(project.topic, 4);
+  if (terms.length) queries.push(terms.join(' '));
+  var kws = (project.keywords || []).slice(0, 9);
+  for (var i = 0; i < kws.length; i += 3) {
+    var group = kws.slice(i, i + 3).map(function(k) { return '"' + k + '"'; });
+    queries.push(group.length > 1 ? '(' + group.join(' OR ') + ')' : group[0]);
+  }
+  return queries.slice(0, 4);
+}
+
+/** Task i for a backfill state: month slice × query, anchored to startedAt
+    so boundaries stay identical across resumed invocations. */
+function scBackfillTaskAt_(state, i) {
+  var m = Math.floor(i / state.queries.length);
+  var anchor = new Date(state.startedAt);
+  var start = new Date(anchor.getFullYear(), anchor.getMonth() - m, 1);
+  var end = (m === 0) ? anchor : new Date(anchor.getFullYear(), anchor.getMonth() - m + 1, 1);
+  return { q: state.queries[i % state.queries.length],
+    s: Utilities.formatDate(start, 'GMT', 'yyyyMMddHHmmss'),
+    e: Utilities.formatDate(end, 'GMT', 'yyyyMMddHHmmss') };
+}
+
+/** Run one bounded backfill chunk for a project. Client loops until done. */
+function backfillNow(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'backfillNow');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(sheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(sheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+
+  var props = PropertiesService.getScriptProperties();
+  var key = scBackfillStateKey_(project.id);
+  var state = null;
+  try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (bfErr) { state = null; }
+  if (!state || state.done || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
+    state = { owner: user.email, startedAt: new Date().toISOString(),
+              queries: scGdeltQueries_(project), months: SCRAPER_BACKFILL_MONTHS,
+              index: 0, added: 0, errors: 0, done: false };
+  }
+  var total = state.queries.length * state.months;
+
+  var existing = scExistingArticleUrls_(ss, project.id);
+  var articles = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+  var t0 = Date.now();
+  var fetches = 0;
+  var now = new Date();
+  while (state.index < total &&
+         fetches < SCRAPER_BACKFILL_BATCH_FETCHES &&
+         (Date.now() - t0) < SCRAPER_BACKFILL_TIME_BUDGET_MS) {
+    var task = scBackfillTaskAt_(state, state.index);
+    state.index++;
+    fetches++;
+    try {
+      var url = 'https://api.gdeltproject.org/api/v2/doc/doc'
+        + '?query=' + encodeURIComponent(task.q + ' sourcelang:english')
+        + '&mode=ArtList&format=json&maxrecords=250&sort=DateDesc'
+        + '&startdatetime=' + task.s + '&enddatetime=' + task.e;
+      var resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true, followRedirects: true });
+      if (resp.getResponseCode() !== 200) { state.errors++; continue; }
+      var list = [];
+      // GDELT reports query errors as plain text with HTTP 200 — treat unparseable as error
+      try { list = (JSON.parse(resp.getContentText()) || {}).articles || []; }
+      catch (parseErr) { state.errors++; continue; }
+      var rows = [];
+      list.forEach(function(item) {
+        var u = scStr_(String(item.url || ''), 500);
+        if (!u || existing[u]) return;
+        existing[u] = true;
+        rows.push([Utilities.getUuid(), project.id, user.email, u,
+          scStr_(String(item.title || ''), 300), scStr_(String(item.domain || ''), 120),
+          scStr_(String(item.seendate || ''), 60), now, '', '', '', '', '']);
+      });
+      if (rows.length) {
+        articles.getRange(articles.getLastRow() + 1, 1, rows.length, 13).setValues(rows);
+        state.added += rows.length;
+      }
+    } catch (gdeltErr) {
+      state.errors++;
+    }
+  }
+  scLogUsage_(ss, user.email, 0, fetches);
+  state.done = state.index >= total;
+  if (state.done) state.finishedAt = new Date().toISOString();
+  props.setProperty(key, JSON.stringify(state));
+  if (state.done) dataAuditLog(user.email, 'backfill', 'project', project.id,
+    state.added + ' historical articles, ' + state.errors + ' errors');
+  return { success: true, done: state.done, processed: state.index,
+           total: total, added: state.added, errors: state.errors };
+}
+
+/** Current backfill progress for a project (owner only). */
+function getBackfillStatus(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'getBackfillStatus');
+  var state = null;
+  try {
+    state = JSON.parse(PropertiesService.getScriptProperties()
+      .getProperty(scBackfillStateKey_(String(projectId || ''))) || 'null');
+  } catch (gbErr) { state = null; }
+  if (!state || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
+    return { success: true, state: null };
+  }
+  return { success: true, state: { done: state.done, processed: state.index,
+    total: state.queries.length * state.months, added: state.added, errors: state.errors,
+    startedAt: state.startedAt, finishedAt: state.finishedAt || '' } };
+}
+
 /** Newest articles for a project (owner only, capped). */
 function listArticles(sessionToken, projectId, limit) {
   var user = validateSessionForData(sessionToken, 'listArticles');
@@ -1103,6 +1232,8 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'listArticles') return listArticles(sessionToken, param('projectId'), param('limit'));
   if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));
   if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));
+  if (op === 'backfillNow') return backfillNow(sessionToken, param('projectId'));
+  if (op === 'getBackfillStatus') return getBackfillStatus(sessionToken, param('projectId'));
   return { success: false, error: 'unknown_op' };
 }
 

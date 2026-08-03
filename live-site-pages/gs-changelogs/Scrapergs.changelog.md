@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.11g] — 2026-08-03 06:43:09 AM EST — v01.56r
+
+### Added
+- New historical backfill gathers up to 2 years of past news coverage for each project from a free global news archive, working in resumable stages that continue where they left off
 
 ## [v01.10g] — 2026-08-03 06:20:57 AM EST — v01.55r
 
