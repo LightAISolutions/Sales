@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.08w">
+  <meta name="build-version" content="v01.09w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -4499,6 +4499,15 @@
     });
   }
 
+  // Retry a transport-level failure once (2.5s pause) before surfacing it.
+  // Server-side state is chunked/resumable, so re-sending the same call is safe.
+  // App-level errors ({success:false}) are raised in the caller's .then — never retried here.
+  function scRetryOnce(call) {
+    return call().catch(function() {
+      return new Promise(function(res) { setTimeout(res, 2500); }).then(call);
+    });
+  }
+
   // ── Compilation (Phase 2) ──
   // compileNow is chunked server-side: each call fetches a bounded batch and
   // reports progress, so the client loops until done.
@@ -4508,7 +4517,9 @@
     btn.disabled = true;
     var orig = btn.textContent;
     function step() {
-      return _gasPost({ action: 'compileNow', token: scToken(), projectId: id })
+      return scRetryOnce(function() {
+        return _gasPost({ action: 'compileNow', token: scToken(), projectId: id });
+      })
         .then(function(data) {
           if (!(data && data.success)) {
             var appErr = new Error('app'); appErr.appCode = (data && data.error) || 'unknown';
@@ -4547,7 +4558,9 @@
     var orig = btn.textContent;
     var totalScored = 0;
     function step() {
-      return _gasPost({ action: 'analyzeArticles', token: scToken(), projectId: id })
+      return scRetryOnce(function() {
+        return _gasPost({ action: 'analyzeArticles', token: scToken(), projectId: id });
+      })
         .then(function(data) {
           if (!(data && data.success)) {
             var appErr = new Error('app'); appErr.appCode = (data && data.error) || 'unknown';

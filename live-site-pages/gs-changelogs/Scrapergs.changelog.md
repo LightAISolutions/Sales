@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 8/50`
+`Sections: 9/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.09g] — 2026-08-03 02:51:07 AM EST — v01.54r
+
+### Fixed
+- Fixed article analysis stopping with a "could not reach the server" error — analysis now runs in smaller steps that reliably complete
 
 ## [v01.08g] — 2026-08-03 02:38:35 AM EST — v01.53r
 

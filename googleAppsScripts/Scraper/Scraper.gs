@@ -1,4 +1,4 @@
-var VERSION = "v01.08g";
+var VERSION = "v01.09g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -359,8 +359,11 @@ var SCRAPER_AI_PROVIDER = 'gemini';            // swappable: 'gemini' today, 'cl
 // re-discovered automatically when a cached model starts returning 404.
 // A GEMINI_MODEL Script Property still overrides everything when set manually.
 var SCRAPER_ANALYZE_ARTICLES_PER_CALL = 10;    // articles per AI request
-var SCRAPER_ANALYZE_CALLS_PER_INVOCATION = 3;  // AI requests per analyzeArticles call (client loops until done)
-var SCRAPER_AI_CALL_SPACING_MS = 2000;         // spacing between AI requests (free-tier RPM headroom)
+// One AI request per analyzeArticles invocation: browser→GAS exec requests that run
+// long die at Google's HTTP front-end (observed as http_404 while fast requests on the
+// same deployment return 200). One Gemini call keeps each invocation compile-chunk-sized;
+// the client loop provides both continuation and free-tier RPM spacing.
+var SCRAPER_ANALYZE_CALLS_PER_INVOCATION = 1;
 var SCRAPER_RELEVANT_THRESHOLD = 50;           // score >= this counts as relevant
 var SCRAPER_BRIEF_TOP_N = 30;                  // top-scored articles fed into the executive brief
 
@@ -992,7 +995,6 @@ function analyzeArticles(sessionToken, projectId) {
   var aiCalls = 0;
   while (pending.length && aiCalls < SCRAPER_ANALYZE_CALLS_PER_INVOCATION) {
     var batch = pending.splice(0, SCRAPER_ANALYZE_ARTICLES_PER_CALL);
-    if (aiCalls > 0) Utilities.sleep(SCRAPER_AI_CALL_SPACING_MS);
     var results = scScoreBatch_(project, batch);
     aiCalls++;
     results.forEach(function(r) {
