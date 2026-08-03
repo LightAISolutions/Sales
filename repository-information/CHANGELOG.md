@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 46/100`
+`Sections: 47/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.47r] — 2026-08-02 08:10:52 PM EST
+
+> **Prompt:** "I want the Simplified Chinese translation option to translate everything, including:
+>
+> * "0 receipts * August 2026" and "No receipts saved yet this month" at the top of the dashboard.
+> * All categories (Groceries, Dining, etc) in both History and Reports.
+> * All subcategories for all categories in Reports.
+> * In Daily Reports, change Mon-Sun to their Simplified Chinese equivalents while keeping the ", MM/DD/YY" latter half.
+> * In Monthly Reports, change the months to their Simplified Chinese equivalents.
+> * In Bi-annual Reports, change the "first/second half of 2026" into their Simplified Chinese equivalents."
+
+### Added
+
+- `Receipts.html` (v01.27w) — `I18N_CAT_ZH` (~90 entries) + `tCat()` for category/subcategory display names: History and Reports dropdown labels relabel via `option.value` (stored English values untouched — lossless both directions), report By-category / By-subcategory rows, the Line Items section title and note, and the month card's top-category rows all display 中文 in Chinese mode
+- `Receipts.html` (v01.27w) — localized period labels in `bucketLabel()`: daily `周三, 7/29/26` (RP_DAYS_ZH; date half unchanged), monthly `2026年7月`, bi-annual `2026年上半年/下半年`; weekly and annual stay numeric
+- `Receipts.html` (v01.27w) — month card fully localized: `N 张收据 · 2026年8月` (`zh-CN` locale month name), `本月还没有保存的收据` empty state, `其他项目` for the "Everything else" row; the language toggle now also calls `refreshMonthCard()` so the card flips immediately
 
 ## [v01.46r] — 2026-08-02 05:44:59 AM EST
 

@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 26/50`
+`Sections: 27/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.27w] — 2026-08-02 08:10:52 PM EST — v01.47r
+
+### Changed
+- 简体中文 mode now translates much more: every category and subcategory name (in History and Reports filters, report breakdowns, and the month summary), the month summary itself ("N 张收据 · 2026年8月" and the empty-month message), and report period labels — weekdays as 周一–周日 (dates unchanged), months as 2026年X月, and half-years as 上半年/下半年
 
 ## [v01.26w] — 2026-08-02 05:44:59 AM EST — v01.46r
 

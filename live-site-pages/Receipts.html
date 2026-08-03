@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.26w">
+  <meta name="build-version" content="v01.27w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -5909,6 +5909,7 @@
       // Human period labels: daily "Wed, 7/29/26" · weekly "7/26/26 - 8/1/26"
       // (Sunday–Saturday) · monthly "July 2026" · bi-annual "First Half of 2026".
       var RP_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+      var RP_DAYS_ZH = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
       var RP_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
         'July', 'August', 'September', 'October', 'November', 'December'];
       function shortDate(d) {
@@ -5918,15 +5919,21 @@
         if (k === '(no date)') return k;
         if (rpPeriod === 'daily') {
           var d = new Date(k + 'T00:00:00Z');
-          return RP_DAYS[d.getUTCDay()] + ', ' + shortDate(d);
+          return (_zhOn() ? RP_DAYS_ZH : RP_DAYS)[d.getUTCDay()] + ', ' + shortDate(d);
         }
         if (rpPeriod === 'weekly') {
           var s = new Date(k + 'T00:00:00Z');
           var e = new Date(s.getTime() + 6 * 86400000);
           return shortDate(s) + ' - ' + shortDate(e);
         }
-        if (rpPeriod === 'monthly') return RP_MONTHS[parseInt(k.substring(5, 7), 10) - 1] + ' ' + k.substring(0, 4);
-        if (rpPeriod === 'biannual') return (k.slice(-2) === 'H1' ? 'First Half of ' : 'Second Half of ') + k.substring(0, 4);
+        if (rpPeriod === 'monthly') {
+          if (_zhOn()) return k.substring(0, 4) + '年' + parseInt(k.substring(5, 7), 10) + '月';
+          return RP_MONTHS[parseInt(k.substring(5, 7), 10) - 1] + ' ' + k.substring(0, 4);
+        }
+        if (rpPeriod === 'biannual') {
+          if (_zhOn()) return k.substring(0, 4) + '年' + (k.slice(-2) === 'H1' ? '上半年' : '下半年');
+          return (k.slice(-2) === 'H1' ? 'First Half of ' : 'Second Half of ') + k.substring(0, 4);
+        }
         return k;
       }
 
@@ -6091,7 +6098,7 @@
           + '</div><div id="rp-item-list">' + rpItemListHtml(rpItemRows(byId, sub), cur) + '</div>';
         return '<div class="rp-section">'
           + '<div class="rp-sec-head" data-sec="items" role="button" aria-expanded="' + open + '">'
-          + '<h4>' + t('🧾 Line items') + (sub ? ' — ' + esc(sub) : '') + '</h4><span class="rp-sec-toggle">' + (open ? '−' : '+') + '</span></div>'
+          + '<h4>' + t('🧾 Line items') + (sub ? ' — ' + esc(tCat(sub)) : '') + '</h4><span class="rp-sec-toggle">' + (open ? '−' : '+') + '</span></div>'
           + '<div class="rp-sec-body"' + (open ? '' : ' style="display:none"') + '>' + inner + '</div></div>';
       }
 
@@ -6149,7 +6156,9 @@
             var amt = parseFloat(it.amount);
             rows.push({ date: rec.date, merchant: rec.merchant, cat: rec.category, amount: isNaN(amt) ? 0 : amt });
           });
-          note.textContent = 'Showing ' + sub + ' line items inside the filtered receipts — totals are item amounts, not receipt totals.';
+          note.textContent = _zhOn()
+            ? '正在显示筛选后收据中的「' + tCat(sub) + '」明细项——总额为明细金额，而非收据总额。'
+            : 'Showing ' + sub + ' line items inside the filtered receipts — totals are item amounts, not receipt totals.';
         } else {
           receipts.forEach(function(r) {
             var amt = parseFloat(r.total);
@@ -6194,7 +6203,7 @@
           rows.forEach(function(r) { var c = r.cat || 'Uncategorized'; cats[c] = (cats[c] || 0) + r.amount; });
           var cKeys = Object.keys(cats).sort(function(a, b) { return cats[b] - cats[a]; });
           html += rpSection('cats', t('By category'), cKeys.map(function(c) {
-            return { label: c, cnt: '', value: cats[c] };
+            return { label: tCat(c), cnt: '', value: cats[c] };
           }), cur, true);
 
           // Subcategory drill-down — whenever a category is chosen, its
@@ -6213,7 +6222,7 @@
               html += rpSection('depts',
                 cat === 'Groceries' ? t('By department') : t('By subcategory'),
                 dKeys.map(function(dk) {
-                  return { label: dk, cnt: '', value: deps[dk] };
+                  return { label: tCat(dk), cnt: '', value: deps[dk] };
                 }), cur, true);
             }
           }
@@ -6360,7 +6369,7 @@
         subEl.appendChild(allS);
         if (cat) {
           subcatsFor(cat).forEach(function(c) {
-            var o = document.createElement('option'); o.value = c; o.textContent = c; subEl.appendChild(o);
+            var o = document.createElement('option'); o.value = c; o.textContent = tCat(c); subEl.appendChild(o);
           });
         }
         if (hadValue) renderReport(); // the old subcategory filter was cleared
@@ -6402,23 +6411,24 @@
             document.getElementById('rm-amt').textContent = cur + total.toFixed(2);
             var monthName = '';
             try {
-              monthName = now.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });
+              monthName = now.toLocaleDateString(_zhOn() ? 'zh-CN' : undefined, { month: 'long', year: 'numeric' });
             } catch (mErr) { monthName = ym; }
-            document.getElementById('rm-sub').textContent =
-              monthReceipts.length + ' receipt' + (monthReceipts.length === 1 ? '' : 's') + ' · ' + monthName;
+            document.getElementById('rm-sub').textContent = _zhOn()
+              ? monthReceipts.length + ' 张收据 · ' + monthName
+              : monthReceipts.length + ' receipt' + (monthReceipts.length === 1 ? '' : 's') + ' · ' + monthName;
             var cKeys = Object.keys(cats).sort(function(a, b) { return cats[b] - cats[a]; });
             var top = cKeys.slice(0, 3);
             var rest = 0;
             cKeys.slice(3).forEach(function(c) { rest += cats[c]; });
             var rowsHtml = '';
             top.forEach(function(c) {
-              rowsHtml += '<div class="rm-row"><span>' + esc(c) + '</span><b>' + cur + cats[c].toFixed(2) + '</b></div>';
+              rowsHtml += '<div class="rm-row"><span>' + esc(tCat(c)) + '</span><b>' + cur + cats[c].toFixed(2) + '</b></div>';
             });
             if (rest > 0.005) {
-              rowsHtml += '<div class="rm-row"><span>Everything else</span><b>' + cur + rest.toFixed(2) + '</b></div>';
+              rowsHtml += '<div class="rm-row"><span>' + tCat('Everything else') + '</span><b>' + cur + rest.toFixed(2) + '</b></div>';
             }
             if (!monthReceipts.length) {
-              rowsHtml = '<div class="rm-row"><span>No receipts saved yet this month</span><b>—</b></div>';
+              rowsHtml = '<div class="rm-row"><span>' + (_zhOn() ? '本月还没有保存的收据' : 'No receipts saved yet this month') + '</span><b>—</b></div>';
             }
             document.getElementById('rm-rows').innerHTML = rowsHtml;
           })
@@ -6469,6 +6479,45 @@
       // swap re-translates them right after.
       function t(s) {
         return (_zhOn() && typeof I18N_ZH === 'object' && I18N_ZH && I18N_ZH[s]) ? I18N_ZH[s] : s;
+      }
+
+      // Category/subcategory DISPLAY names. Stored values stay English (the
+      // server filters and matches on them); only what the user sees swaps.
+      var I18N_CAT_ZH = {
+        'Groceries': '食品杂货', 'Dining': '餐饮', 'Transport': '交通', 'Health': '健康',
+        'Shopping': '购物', 'Entertainment': '娱乐', 'Utilities': '水电杂费', 'Travel': '旅行',
+        'Other': '其他', 'Uncategorized': '未分类',
+        'Produce': '生鲜果蔬', 'Meat & Seafood': '肉类海鲜', 'Dairy & Eggs': '乳品蛋类',
+        'Bakery': '烘焙', 'Deli & Prepared': '熟食即食', 'Frozen': '冷冻食品', 'Pantry': '粮油食品',
+        'Snacks & Candy': '零食糖果', 'Beverages': '饮料', 'Alcohol': '酒类', 'Household': '家居用品',
+        'Personal Care': '个人护理', 'Baby': '母婴', 'Pet': '宠物', 'Non-Grocery': '非食品',
+        'Restaurant': '餐厅', 'Fast Food': '快餐', 'Coffee & Tea': '咖啡茶饮', 'Bar & Alcohol': '酒吧酒水',
+        'Delivery & Takeout': '外卖', 'Bakery & Dessert': '烘焙甜点', 'Catering': '宴席餐饮',
+        'Tips & Service': '小费服务',
+        'Fuel': '加油', 'Public Transit': '公共交通', 'Rideshare & Taxi': '网约车/出租车',
+        'Parking': '停车', 'Tolls': '过路费', 'Vehicle Maintenance': '车辆保养', 'Car Rental': '租车',
+        'Registration & Fees': '登记费用',
+        'Pharmacy': '药房', 'Doctor & Dental': '就医牙科', 'Vision': '视力眼镜',
+        'Health Insurance': '医疗保险', 'Fitness & Gym': '健身', 'Supplements': '保健品',
+        'Medical Equipment': '医疗器械',
+        'Clothing & Shoes': '服装鞋履', 'Electronics': '电子产品', 'Home & Furniture': '家居家具',
+        'Beauty & Cosmetics': '美妆', 'Books & Stationery': '图书文具', 'Toys & Games': '玩具游戏',
+        'Gifts': '礼品', 'Hobbies & Crafts': '兴趣手工', 'Jewelry & Accessories': '珠宝配饰',
+        'Movies & Theater': '电影剧院', 'Streaming & Subscriptions': '流媒体订阅',
+        'Concerts & Events': '演出活动', 'Games': '游戏', 'Sports & Recreation': '运动休闲',
+        'Museums & Attractions': '博物馆景点', 'Music & Media': '音乐媒体',
+        'Electricity': '电费', 'Water & Sewer': '水费排污', 'Gas & Heating': '燃气取暖',
+        'Internet': '网络', 'Mobile Phone': '手机话费', 'Trash & Recycling': '垃圾回收',
+        'Cable & TV': '有线电视', 'Home Services': '家政服务',
+        'Flights': '机票', 'Hotels & Lodging': '酒店住宿', 'Train & Bus': '火车巴士',
+        'Cruises': '邮轮', 'Baggage & Fees': '行李费用', 'Travel Insurance': '旅行保险',
+        'Tours & Activities': '跟团活动', 'Visas & Documents': '签证证件',
+        'General': '常规', 'Fees & Charges': '手续费', 'Donations': '捐赠', 'Education': '教育',
+        'Pets': '宠物', 'Office & Business': '办公商务', 'Taxes': '税费',
+        'Everything else': '其他项目'
+      };
+      function tCat(s) {
+        return (_zhOn() && typeof I18N_CAT_ZH === 'object' && I18N_CAT_ZH && I18N_CAT_ZH[s]) ? I18N_CAT_ZH[s] : s;
       }
 
       // Common pipeline/status messages (exact matches; the long tail of rare
@@ -6553,6 +6602,11 @@
           var enT = lb.dataset.i18nEn;
           tail.nodeValue = ' ' + (zh ? (I18N_ZH[enT] || enT) : enT);
         });
+        // Category/subcategory dropdown labels — option.value holds the stored
+        // English value, so relabeling is lossless in both directions.
+        document.querySelectorAll('#rh-cat option, #rp-cat option, #rp-subcat option').forEach(function(op) {
+          if (op.value) op.textContent = zh ? tCat(op.value) : op.value;
+        });
         var langBtn = document.getElementById('rsp-lang');
         if (langBtn) langBtn.textContent = zh ? '语言 · English' : 'Language · 中文';
         try {
@@ -6588,6 +6642,7 @@
           rhFilterHint();
           rpFilterHint();
           if (rpData) renderReport();
+          refreshMonthCard();
           showAffirmation();
         });
         var cog = document.getElementById('rsp-settings');
