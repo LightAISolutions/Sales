@@ -1,4 +1,4 @@
-var VERSION = "v01.04g";
+var VERSION = "v01.05g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -313,23 +313,277 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 // ══════════════
 
 /**
- * Text submission — saves one line of text from the host page into the
- * spreadsheet. Called via the iframe-free fetch transport (doPost
- * action=submitText, GET api op=submitText fallback).
- * Appends [timestamp, user email, text] to SHEET_NAME in SPREADSHEET_ID.
+ * ── News Scraper · Phase 1 ─────────────────────────────────────────────
+ * Data model + project management. Each research topic is a "Project"
+ * owned by the signed-in user (rows keyed by owner email). All routes are
+ * session-gated via validateSessionForData and reached through the
+ * iframe-free fetch transport (doPost actions + doGet api mirror).
  */
-function submitText(sessionToken, text) {
-  var user = validateSessionForData(sessionToken, 'submitText');
-  var clean = String(text || '').trim();
-  if (!clean) return { success: false, error: 'empty_text' };
-  if (clean.length > 5000) clean = clean.substring(0, 5000);
+
+var SCRAPER_TABS = {
+  PROJECTS: 'Projects',
+  SCHEDULES: 'Schedules',
+  ARTICLES: 'Articles',
+  REPORTS: 'Reports',
+  PROFILES: 'Profiles',
+  USAGE: 'UsageLog'
+};
+
+var SCRAPER_TAB_HEADERS = {
+  Projects: ['Project ID', 'Owner', 'Name', 'Topic', 'Industries', 'Keywords',
+             'Exclusions', 'Sources', 'Regions', 'Status', 'Created At', 'Updated At'],
+  Schedules: ['Schedule ID', 'Project ID', 'Owner', 'Frequency', 'Custom Config',
+              'Delivery', 'Active', 'Next Run', 'Last Run'],
+  Articles: ['Article ID', 'Project ID', 'Owner', 'URL', 'Title', 'Source',
+             'Published At', 'Fetched At', 'Snippet', 'Summary', 'Relevance Score',
+             'User Verdict', 'Report ID'],
+  Reports: ['Report ID', 'Project ID', 'Owner', 'Frequency', 'Period Label',
+            'Generated At', 'Status', 'Article Count', 'Content'],
+  Profiles: ['Email', 'Drive Folder ID', 'Display Name', 'Created At'],
+  UsageLog: ['Date', 'Owner', 'AI Calls', 'Fetch Calls', 'Notes']
+};
+
+var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual', 'annual', 'custom'];
+var SCRAPER_DELIVERIES = ['inapp', 'email', 'both'];
+var SCRAPER_MAX_PROJECTS_PER_USER = 10;
+var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
+                               'updateProject', 'setProjectStatus'];
+
+function scraperSs_() {
   if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
-    return { success: false, error: 'spreadsheet_not_configured' };
+    throw new Error('spreadsheet_not_configured');
   }
-  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
-  var sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
-  sheet.appendRow([new Date(), user.email, clean]);
+  return SpreadsheetApp.openById(SPREADSHEET_ID);
+}
+
+/** Create any missing Scraper tabs with their header rows (idempotent). */
+function ensureScraperTabs_(ss) {
+  Object.keys(SCRAPER_TAB_HEADERS).forEach(function(name) {
+    var sheet = ss.getSheetByName(name);
+    if (!sheet) {
+      sheet = ss.insertSheet(name);
+      sheet.appendRow(SCRAPER_TAB_HEADERS[name]);
+      sheet.setFrozenRows(1);
+    }
+  });
+}
+
+/** Trim a value to a bounded plain string. */
+function scStr_(v, max) {
+  var s = String(v == null ? '' : v).trim();
+  return s.length > max ? s.substring(0, max) : s;
+}
+
+/** Normalize a list input (array, or comma/newline-separated string). */
+function scList_(v, maxItems, maxLen) {
+  var arr = Array.isArray(v) ? v : String(v || '').split(/[\n,]/);
+  var out = [];
+  for (var i = 0; i < arr.length && out.length < maxItems; i++) {
+    var item = scStr_(arr[i], maxLen);
+    if (item && out.indexOf(item) === -1) out.push(item);
+  }
+  return out;
+}
+
+/** Validate + normalize a createProject/updateProject payload (JSON string). */
+function scNormalizeProjectPayload_(raw) {
+  var p;
+  try { p = JSON.parse(String(raw || '{}')); } catch (parseErr) { throw new Error('bad_payload'); }
+  var name = scStr_(p.name, 120);
+  var topic = scStr_(p.topic, 2000);
+  if (!name) throw new Error('name_required');
+  if (!topic) throw new Error('topic_required');
+  var frequencies = scList_(p.frequencies, 7, 20).filter(function(f) {
+    return SCRAPER_FREQUENCIES.indexOf(f) !== -1;
+  });
+  if (!frequencies.length) throw new Error('frequency_required');
+  var sources = scList_(p.sources, 20, 300).filter(function(u) {
+    return /^https?:\/\//i.test(u);
+  });
+  return {
+    name: name,
+    topic: topic,
+    industries: scList_(p.industries, 15, 80),
+    keywords: scList_(p.keywords, 30, 80),
+    exclusions: scList_(p.exclusions, 30, 80),
+    sources: sources,
+    regions: scList_(p.regions, 10, 60),
+    frequencies: frequencies,
+    customConfig: scStr_(p.customConfig, 500),
+    delivery: SCRAPER_DELIVERIES.indexOf(p.delivery) !== -1 ? p.delivery : 'inapp'
+  };
+}
+
+/** Convert a Projects sheet row to the client-facing object. */
+function scProjectFromRow_(row) {
+  function parseList(cell) { try { return JSON.parse(cell || '[]'); } catch (e2) { return []; } }
+  return {
+    id: row[0],
+    name: row[2],
+    topic: row[3],
+    industries: parseList(row[4]),
+    keywords: parseList(row[5]),
+    exclusions: parseList(row[6]),
+    sources: parseList(row[7]),
+    regions: parseList(row[8]),
+    status: row[9],
+    createdAt: row[10] ? new Date(row[10]).toISOString() : '',
+    updatedAt: row[11] ? new Date(row[11]).toISOString() : ''
+  };
+}
+
+/** Find the 1-based sheet row of a project owned by ownerEmail (0 = not found). */
+function scFindProjectRow_(sheet, projectId, ownerEmail) {
+  if (!projectId) return 0;
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][0] === projectId &&
+        String(data[i][1]).toLowerCase() === String(ownerEmail).toLowerCase()) {
+      return i + 1;
+    }
+  }
+  return 0;
+}
+
+/** Replace the schedule rows for a project (delete existing, append fresh). */
+function scWriteSchedules_(ss, projectId, ownerEmail, norm) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.SCHEDULES);
+  var data = sheet.getDataRange().getValues();
+  for (var i = data.length - 1; i >= 1; i--) {
+    if (data[i][1] === projectId) sheet.deleteRow(i + 1);
+  }
+  norm.frequencies.forEach(function(freq) {
+    sheet.appendRow([Utilities.getUuid(), projectId, ownerEmail, freq,
+      freq === 'custom' ? norm.customConfig : '', norm.delivery, true, '', '']);
+  });
+}
+
+/** Map projectId → {frequencies, customConfig, delivery} for a set of projects. */
+function scSchedulesFor_(ss, projectIds) {
+  var map = {};
+  var data = ss.getSheetByName(SCRAPER_TABS.SCHEDULES).getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    var pid = data[i][1];
+    if (projectIds.indexOf(pid) === -1) continue;
+    if (!map[pid]) map[pid] = { frequencies: [], customConfig: '', delivery: data[i][5] || 'inapp' };
+    map[pid].frequencies.push(data[i][3]);
+    if (data[i][3] === 'custom') map[pid].customConfig = data[i][4] || '';
+  }
+  return map;
+}
+
+/** Create a new research project for the signed-in user. */
+function createProject(sessionToken, payloadJson) {
+  var user = validateSessionForData(sessionToken, 'createProject');
+  var norm = scNormalizeProjectPayload_(payloadJson);
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var data = sheet.getDataRange().getValues();
+  var owned = 0;
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][1]).toLowerCase() === user.email.toLowerCase() &&
+        data[i][9] !== 'archived') owned++;
+  }
+  if (owned >= SCRAPER_MAX_PROJECTS_PER_USER) {
+    return { success: false, error: 'project_limit_reached' };
+  }
+  var id = Utilities.getUuid();
+  var now = new Date();
+  sheet.appendRow([id, user.email, norm.name, norm.topic,
+    JSON.stringify(norm.industries), JSON.stringify(norm.keywords),
+    JSON.stringify(norm.exclusions), JSON.stringify(norm.sources),
+    JSON.stringify(norm.regions), 'active', now, now]);
+  scWriteSchedules_(ss, id, user.email, norm);
+  dataAuditLog(user.email, 'create', 'project', id, norm.name);
+  return { success: true, projectId: id };
+}
+
+/** List the signed-in user's projects (archived excluded unless requested). */
+function listProjects(sessionToken, includeArchived) {
+  var user = validateSessionForData(sessionToken, 'listProjects');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var data = ss.getSheetByName(SCRAPER_TABS.PROJECTS).getDataRange().getValues();
+  var projects = [];
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][1]).toLowerCase() !== user.email.toLowerCase()) continue;
+    if (!includeArchived && data[i][9] === 'archived') continue;
+    projects.push(scProjectFromRow_(data[i]));
+  }
+  var schedMap = scSchedulesFor_(ss, projects.map(function(p) { return p.id; }));
+  projects.forEach(function(p) {
+    var s = schedMap[p.id] || { frequencies: [], customConfig: '', delivery: 'inapp' };
+    p.frequencies = s.frequencies;
+    p.customConfig = s.customConfig;
+    p.delivery = s.delivery;
+  });
+  return { success: true, projects: projects };
+}
+
+/** Get one project (full detail + schedules) owned by the signed-in user. */
+function getProject(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'getProject');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(sheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(sheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+  var s = scSchedulesFor_(ss, [project.id])[project.id] ||
+          { frequencies: [], customConfig: '', delivery: 'inapp' };
+  project.frequencies = s.frequencies;
+  project.customConfig = s.customConfig;
+  project.delivery = s.delivery;
+  return { success: true, project: project };
+}
+
+/** Update an existing project's scope and schedules (owner only). */
+function updateProject(sessionToken, projectId, payloadJson) {
+  var user = validateSessionForData(sessionToken, 'updateProject');
+  var norm = scNormalizeProjectPayload_(payloadJson);
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(sheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var cur = sheet.getRange(rowNum, 1, 1, 12).getValues()[0];
+  sheet.getRange(rowNum, 1, 1, 12).setValues([[cur[0], cur[1], norm.name, norm.topic,
+    JSON.stringify(norm.industries), JSON.stringify(norm.keywords),
+    JSON.stringify(norm.exclusions), JSON.stringify(norm.sources),
+    JSON.stringify(norm.regions), cur[9], cur[10], new Date()]]);
+  scWriteSchedules_(ss, cur[0], user.email, norm);
+  dataAuditLog(user.email, 'update', 'project', cur[0], norm.name);
   return { success: true };
+}
+
+/** Change a project's lifecycle status: active | paused | archived. */
+function setProjectStatus(sessionToken, projectId, status) {
+  var user = validateSessionForData(sessionToken, 'setProjectStatus');
+  var newStatus = String(status || '').toLowerCase();
+  if (['active', 'paused', 'archived'].indexOf(newStatus) === -1) {
+    return { success: false, error: 'bad_status' };
+  }
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(sheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  sheet.getRange(rowNum, 10).setValue(newStatus);
+  sheet.getRange(rowNum, 12).setValue(new Date());
+  dataAuditLog(user.email, 'status:' + newStatus, 'project', String(projectId), '');
+  return { success: true, status: newStatus };
+}
+
+/** Route dispatcher shared by the doPost actions and the doGet api mirror. */
+function handleProjectAction_(op, sessionToken, e) {
+  function param(k) { return (e && e.parameter && e.parameter[k]) || ''; }
+  if (op === 'createProject') return createProject(sessionToken, param('payload'));
+  if (op === 'listProjects') return listProjects(sessionToken, param('includeArchived') === '1');
+  if (op === 'getProject') return getProject(sessionToken, param('projectId'));
+  if (op === 'updateProject') return updateProject(sessionToken, param('projectId'), param('payload'));
+  if (op === 'setProjectStatus') return setProjectStatus(sessionToken, param('projectId'), param('status'));
+  return { success: false, error: 'unknown_op' };
 }
 
 // ══════════════
@@ -824,17 +1078,16 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 
-  // PROJECT: Scraper text submission via fetch() — session-validated write
-  if (action === "submitText") {
-    var stToken = (e && e.parameter && e.parameter.token) || "";
-    var stText = (e && e.parameter && e.parameter.text) || "";
-    var stResult;
+  // PROJECT: Scraper project management via fetch() — session-validated routes
+  if (SCRAPER_PROJECT_ACTIONS.indexOf(action) !== -1) {
+    var pmToken = (e && e.parameter && e.parameter.token) || "";
+    var pmResult;
     try {
-      stResult = submitText(stToken, stText);
-    } catch (stErr) {
-      stResult = { success: false, error: String((stErr && stErr.message) || stErr) };
+      pmResult = handleProjectAction_(action, pmToken, e);
+    } catch (pmErr) {
+      pmResult = { success: false, error: String((pmErr && pmErr.message) || pmErr) };
     }
-    return ContentService.createTextOutput(JSON.stringify(stResult))
+    return ContentService.createTextOutput(JSON.stringify(pmResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -2116,9 +2369,9 @@ function doGet(e) {
         apiResult = processSignOut(apiToken);
       } else if (apiOp === 'heartbeat') {
         apiResult = processHeartbeat(apiToken);
-      } else if (apiOp === 'submitText') {
-        // PROJECT: Scraper text submission (GET fallback)
-        apiResult = submitText(apiToken, (e && e.parameter && e.parameter.text) || '');
+      } else if (SCRAPER_PROJECT_ACTIONS.indexOf(apiOp) !== -1) {
+        // PROJECT: Scraper project management (GET fallback)
+        apiResult = handleProjectAction_(apiOp, apiToken, e);
       } else {
         apiResult = { error: 'unknown_op' };
       }

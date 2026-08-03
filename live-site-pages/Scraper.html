@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.04w">
+  <meta name="build-version" content="v01.05w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -337,6 +337,84 @@
 /* PROJECT START */
 /* ══════════════ */
     .html-layer-hidden { display: none !important; }
+    /* ── News Scraper app layer — covers the GAS iframe (z-index 1) and sits
+       below every overlay wall (10002+), so the auth wall hides it until
+       sign-in. Toggleable via the HTML layer button. ── */
+    #scraper-app {
+      position: fixed; inset: 0; z-index: 5; overflow-y: auto;
+      background: #f2f4f7; color: #1f2733;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 24px 20px 96px; box-sizing: border-box;
+    }
+    .sc-shell { max-width: 900px; margin: 0 auto; }
+    .sc-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+    .sc-header h1 { font-size: 22px; margin: 0; }
+    .sc-btn {
+      border: none; border-radius: 8px; padding: 10px 16px; font-size: 14px;
+      cursor: pointer; background: #e2e6ec; color: #1f2733;
+    }
+    .sc-btn.primary { background: #2f6fdb; color: #fff; }
+    .sc-btn.subtle { background: transparent; color: #55606e; }
+    .sc-btn:disabled { opacity: 0.55; cursor: default; }
+    .sc-card {
+      background: #fff; border: 1px solid #e0e4ea; border-radius: 12px;
+      padding: 16px 18px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(16,24,40,0.06);
+    }
+    .sc-card h3 { margin: 0 0 4px; font-size: 16px; word-break: break-word; }
+    .sc-card .sc-topic { color: #55606e; font-size: 13px; margin: 0 0 10px; word-break: break-word; }
+    .sc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .sc-chip { background: #eef2f8; color: #37455a; border-radius: 999px; padding: 3px 10px; font-size: 11px; }
+    .sc-chip.status-active { background: #e6f4ea; color: #1e7b34; }
+    .sc-chip.status-paused { background: #fff4e0; color: #9a6b00; }
+    .sc-chip.status-archived { background: #ececec; color: #666; }
+    .sc-card-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .sc-card-actions .sc-btn { padding: 7px 12px; font-size: 12px; }
+    .sc-empty { text-align: center; color: #667085; padding: 48px 12px; line-height: 1.6; }
+    #sc-status-msg {
+      position: fixed; bottom: 44px; left: 50%; transform: translateX(-50%);
+      background: rgba(31,39,51,0.92); color: #fff; padding: 10px 18px;
+      border-radius: 10px; font-size: 13px; display: none; z-index: 60;
+      max-width: 84vw; text-align: center;
+    }
+    #sc-wizard-overlay {
+      position: fixed; inset: 0; z-index: 50; background: rgba(15,23,42,0.55);
+      display: none; align-items: flex-start; justify-content: center;
+      overflow-y: auto; padding: 4vh 12px;
+    }
+    #sc-wizard {
+      background: #fff; border-radius: 14px; width: 100%; max-width: 640px;
+      padding: 22px 24px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+      box-sizing: border-box;
+    }
+    .sc-wiz-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .sc-wiz-head h2 { margin: 0; font-size: 18px; }
+    #sc-wiz-close { background: none; border: none; font-size: 24px; color: #98a2b3; cursor: pointer; line-height: 1; }
+    #sc-wiz-close:hover { color: #1f2733; }
+    #sc-wiz-progress { display: flex; gap: 6px; margin-bottom: 16px; }
+    #sc-wiz-progress .dot { flex: 1; height: 4px; border-radius: 2px; background: #e0e4ea; }
+    #sc-wiz-progress .dot.done { background: #2f6fdb; }
+    .sc-step { display: none; }
+    .sc-step.active { display: block; }
+    .sc-step label { display: block; font-size: 13px; font-weight: bold; margin: 12px 0 4px; }
+    .sc-step input[type="text"], .sc-step textarea, .sc-step select {
+      width: 100%; box-sizing: border-box; padding: 9px 11px; font-size: 14px;
+      border: 1px solid #c8cfd8; border-radius: 8px; font-family: inherit;
+      font-weight: normal; margin-top: 4px;
+    }
+    .sc-step input:focus, .sc-step textarea:focus { border-color: #2f6fdb; outline: none; }
+    .sc-hint { color: #7a8494; font-size: 12px; font-weight: normal; }
+    .sc-freq-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 6px; margin-top: 6px; }
+    .sc-freq-grid label {
+      display: flex; align-items: center; gap: 7px; font-weight: normal;
+      font-size: 13px; margin: 0; border: 1px solid #dde2e9; border-radius: 8px;
+      padding: 8px 10px; cursor: pointer;
+    }
+    .sc-freq-grid input { accent-color: #2f6fdb; }
+    #sc-review { font-size: 13px; line-height: 1.65; }
+    #sc-review .rv-row { margin-bottom: 8px; }
+    #sc-review .rv-label { font-weight: bold; color: #37455a; }
+    .sc-wiz-err { color: #b3261e; font-size: 12px; min-height: 16px; margin-top: 10px; }
+    .sc-wiz-nav { display: flex; justify-content: space-between; margin-top: 8px; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -476,6 +554,84 @@
 <!-- PROJECT START -->
 <!-- ══════════════ -->
   <!-- YOUR PAGE CONTENT HERE -->
+  <!-- News Scraper app layer (Phase 1: project dashboard + intake wizard).
+       Invisible before sign-in — the full-screen auth wall covers it. -->
+  <div id="scraper-app">
+    <div class="sc-shell">
+      <div class="sc-header">
+        <h1>📰 News Scraper</h1>
+        <div>
+          <button class="sc-btn" id="sc-refresh-btn" type="button">Refresh</button>
+          <button class="sc-btn primary" id="sc-new-btn" type="button">+ New Project</button>
+        </div>
+      </div>
+      <div id="sc-list"></div>
+      <div class="sc-empty" id="sc-empty" style="display:none;">
+        <p><b>No projects yet.</b></p>
+        <p>A Project is one research topic the scraper tracks for you —<br>
+        click <b>+ New Project</b> and answer a few questions to scope it.</p>
+      </div>
+    </div>
+  </div>
+  <div id="sc-wizard-overlay">
+    <div id="sc-wizard">
+      <div class="sc-wiz-head">
+        <h2 id="sc-wiz-title">New Project</h2>
+        <button id="sc-wiz-close" type="button" title="Close">&times;</button>
+      </div>
+      <div id="sc-wiz-progress"></div>
+      <div class="sc-step" data-step="0">
+        <label>Project name*
+          <input type="text" id="scf-name" maxlength="120" placeholder="e.g. EV Battery Market Watch" autocomplete="off">
+        </label>
+        <label>What should be researched?* <span class="sc-hint">Describe the topic like you'd brief a research analyst.</span>
+          <textarea id="scf-topic" maxlength="2000" rows="4" placeholder="e.g. News about solid-state EV battery technology: manufacturing breakthroughs, major supplier deals, and regulatory changes."></textarea>
+        </label>
+      </div>
+      <div class="sc-step" data-step="1">
+        <label>Industries <span class="sc-hint">comma-separated</span>
+          <input type="text" id="scf-industries" placeholder="e.g. Automotive, Energy storage" autocomplete="off">
+        </label>
+        <label>Must-have keywords <span class="sc-hint">articles should match these</span>
+          <input type="text" id="scf-keywords" placeholder="e.g. solid-state, battery, lithium" autocomplete="off">
+        </label>
+        <label>Exclude keywords <span class="sc-hint">skip articles about these</span>
+          <input type="text" id="scf-exclusions" placeholder="e.g. stock tips, sponsored" autocomplete="off">
+        </label>
+        <label>Regions / languages
+          <input type="text" id="scf-regions" placeholder="e.g. US, EU, English" autocomplete="off">
+        </label>
+      </div>
+      <div class="sc-step" data-step="2">
+        <label>Sources to always monitor <span class="sc-hint">Google News is always searched. Add site or RSS feed URLs, one per line (optional).</span>
+          <textarea id="scf-sources" rows="4" placeholder="https://example.com/news/feed.xml"></textarea>
+        </label>
+      </div>
+      <div class="sc-step" data-step="3">
+        <label>Report frequencies* <span class="sc-hint">pick at least one</span></label>
+        <div class="sc-freq-grid" id="scf-freqs"></div>
+        <label id="scf-custom-wrap" style="display:none;">Custom dates / frequency
+          <input type="text" id="scf-custom" maxlength="500" placeholder="e.g. every 10 days, or on 2026-09-01 and 2026-12-15" autocomplete="off">
+        </label>
+        <label>Delivery
+          <select id="scf-delivery">
+            <option value="inapp">In-app only</option>
+            <option value="email">Email only</option>
+            <option value="both" selected>In-app + email</option>
+          </select>
+        </label>
+      </div>
+      <div class="sc-step" data-step="4">
+        <div id="sc-review"></div>
+      </div>
+      <div class="sc-wiz-err" id="sc-wiz-err"></div>
+      <div class="sc-wiz-nav">
+        <button class="sc-btn" id="sc-wiz-back" type="button">Back</button>
+        <button class="sc-btn primary" id="sc-wiz-next" type="button">Next</button>
+      </div>
+    </div>
+  </div>
+  <div id="sc-status-msg"></div>
 <!-- ══════════════ -->
 <!-- PROJECT END -->
 <!-- ══════════════ -->
@@ -3041,6 +3197,9 @@
       // RBAC UI gating — hide/show elements with data-requires-permission and
       // data-requires-role attributes based on session storage.
       applyUIGating();
+
+      // PROJECT: activate the News Scraper dashboard once authenticated
+      if (window._scraperInit) window._scraperInit();
     }
 
     /**
@@ -4034,7 +4193,7 @@
       var _htmlLayerVisible = true;
       var _htmlLayerEls = ['user-pill', 'version-indicator', 'gas-pill', 'auth-timers',
         'sso-indicator', 'changelog-overlay', 'gcl-overlay', 'session-warning-banner',
-        'absolute-warning-banner'];
+        'absolute-warning-banner', 'scraper-app']; // PROJECT OVERRIDE: scraper-app joins the HTML layer toggle
       window._toggleHtmlLayer = function() {
         _htmlLayerVisible = !_htmlLayerVisible;
         var btn = document.getElementById('html-layer-toggle');
@@ -4089,6 +4248,331 @@
 // PROJECT START — Add your project-specific JavaScript here
 // ══════════════
 
+// ── News Scraper · Phase 1 — project dashboard + intake wizard ──
+// Activated by showApp() via window._scraperInit after sign-in. Talks to the
+// GAS backend through the iframe-free fetch transport (_gasPost).
+(function() {
+  var SC_FREQ_LABELS = {
+    daily: 'Daily', weekly: 'Weekly', monthly: 'Monthly', quarterly: 'Quarterly',
+    biannual: 'Bi-annual', annual: 'Annual', custom: 'Custom'
+  };
+  var SC_ERROR_MESSAGES = {
+    project_limit_reached: 'You have reached the limit of 10 active projects. Archive one to create another.',
+    name_required: 'Please give the project a name.',
+    topic_required: 'Please describe what should be researched.',
+    frequency_required: 'Pick at least one report frequency.',
+    bad_payload: 'The form data could not be read — please try again.',
+    not_found: 'That project could not be found. It may have been removed.',
+    invalid_session: 'Your session has expired — please sign in again.',
+    session_expired: 'Your session has expired — please sign in again.',
+    spreadsheet_not_configured: 'The server is not fully set up yet (no data store configured).'
+  };
+  var _scProjects = [];
+  var _scWizStep = 0;
+  var _scEditingId = null;   // null = create mode, otherwise project being edited
+  var _scBusy = false;       // guards double-submits
+  var _scInited = false;
+  var _scToastTimer = null;
+  var _scConfirmTimer = null;
+
+  function $sc(id) { return document.getElementById(id); }
+  function scEsc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function(c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function scToken() { return (loadSession() || {}).token || ''; }
+  function scErrMsg(code) {
+    return SC_ERROR_MESSAGES[code] || ('Something went wrong (' + scEsc(code || 'unknown') + '). Please try again.');
+  }
+  function scToast(msg, isError) {
+    var el = $sc('sc-status-msg');
+    if (!el) return;
+    el.textContent = msg;
+    el.style.background = isError ? 'rgba(140,32,28,0.95)' : 'rgba(31,39,51,0.92)';
+    el.style.display = 'block';
+    if (_scToastTimer) clearTimeout(_scToastTimer);
+    _scToastTimer = setTimeout(function() { el.style.display = 'none'; }, 4000);
+  }
+
+  window._scraperInit = function() {
+    if (!_scInited) { scBindEvents(); _scInited = true; }
+    scLoadProjects();
+  };
+
+  function scLoadProjects() {
+    var btn = $sc('sc-refresh-btn');
+    if (btn) { btn.disabled = true; btn.textContent = 'Loading…'; }
+    _gasPost({ action: 'listProjects', token: scToken() })
+      .then(function(data) {
+        if (data && data.success) {
+          _scProjects = data.projects || [];
+          scRenderList();
+        } else {
+          scToast(scErrMsg(data && data.error), true);
+        }
+      })
+      .catch(function(err) {
+        scToast('Could not reach the server (' + scEsc((err && err.message) || err) + '). Please try again.', true);
+      })
+      .then(function() {
+        if (btn) { btn.disabled = false; btn.textContent = 'Refresh'; }
+      });
+  }
+
+  function scChipRow(p) {
+    var chips = '<span class="sc-chip status-' + scEsc(p.status) + '">' + scEsc(p.status) + '</span>';
+    (p.frequencies || []).forEach(function(f) {
+      chips += '<span class="sc-chip">' + scEsc(SC_FREQ_LABELS[f] || f) + '</span>';
+    });
+    var delivery = { inapp: 'In-app', email: 'Email', both: 'In-app + email' }[p.delivery] || p.delivery;
+    chips += '<span class="sc-chip">' + scEsc(delivery) + '</span>';
+    return chips;
+  }
+
+  function scRenderList() {
+    var list = $sc('sc-list');
+    var empty = $sc('sc-empty');
+    if (!list || !empty) return;
+    if (!_scProjects.length) {
+      list.innerHTML = '';
+      empty.style.display = 'block';
+      return;
+    }
+    empty.style.display = 'none';
+    var html = '';
+    _scProjects.forEach(function(p) {
+      var pauseLabel = p.status === 'paused' ? 'Resume' : 'Pause';
+      var pauseTo = p.status === 'paused' ? 'active' : 'paused';
+      html += '<div class="sc-card" data-id="' + scEsc(p.id) + '">'
+        + '<h3>' + scEsc(p.name) + '</h3>'
+        + '<p class="sc-topic">' + scEsc(p.topic) + '</p>'
+        + '<div class="sc-chips">' + scChipRow(p) + '</div>'
+        + '<div class="sc-card-actions">'
+        + '<button class="sc-btn" type="button" data-act="edit" data-id="' + scEsc(p.id) + '">Edit</button>'
+        + '<button class="sc-btn" type="button" data-act="status" data-to="' + pauseTo + '" data-id="' + scEsc(p.id) + '">' + pauseLabel + '</button>'
+        + '<button class="sc-btn subtle" type="button" data-act="archive" data-id="' + scEsc(p.id) + '">Archive</button>'
+        + '</div></div>';
+    });
+    list.innerHTML = html;
+  }
+
+  function scSetStatus(projectId, status, btnEl) {
+    if (_scBusy) return;
+    _scBusy = true;
+    if (btnEl) btnEl.disabled = true;
+    _gasPost({ action: 'setProjectStatus', token: scToken(), projectId: projectId, status: status })
+      .then(function(data) {
+        if (data && data.success) {
+          scToast(status === 'archived' ? 'Project archived.' : ('Project ' + status + '.'));
+          scLoadProjects();
+        } else {
+          scToast(scErrMsg(data && data.error), true);
+        }
+      })
+      .catch(function(err) {
+        scToast('Could not reach the server (' + scEsc((err && err.message) || err) + ').', true);
+      })
+      .then(function() {
+        _scBusy = false;
+        if (btnEl) btnEl.disabled = false;
+      });
+  }
+
+  function scBindEvents() {
+    $sc('sc-refresh-btn').addEventListener('click', scLoadProjects);
+    $sc('sc-new-btn').addEventListener('click', function() { scOpenWizard(null); });
+    $sc('sc-wiz-close').addEventListener('click', scCloseWizard);
+    $sc('sc-wiz-back').addEventListener('click', function() { scWizNav(-1); });
+    $sc('sc-wiz-next').addEventListener('click', function() { scWizNav(1); });
+    $sc('sc-wizard-overlay').addEventListener('click', function(ev) {
+      if (ev.target === this) scCloseWizard();  // click outside the panel closes
+    });
+
+    // Frequency checkboxes (built once; custom option reveals the custom field)
+    var grid = $sc('scf-freqs');
+    var freqHtml = '';
+    Object.keys(SC_FREQ_LABELS).forEach(function(f) {
+      freqHtml += '<label><input type="checkbox" value="' + f + '"> ' + SC_FREQ_LABELS[f] + '</label>';
+    });
+    grid.innerHTML = freqHtml;
+    grid.addEventListener('change', function() {
+      var customChecked = !!grid.querySelector('input[value="custom"]:checked');
+      $sc('scf-custom-wrap').style.display = customChecked ? 'block' : 'none';
+    });
+
+    // Card actions via delegation. Archive uses a two-step inline confirm
+    // (no browser confirm() per coding guidelines): first click arms the
+    // button, second click within 4s archives.
+    $sc('sc-list').addEventListener('click', function(ev) {
+      var btn = ev.target.closest ? ev.target.closest('button[data-act]') : null;
+      if (!btn) return;
+      var act = btn.getAttribute('data-act');
+      var id = btn.getAttribute('data-id');
+      if (act === 'edit') {
+        var proj = null;
+        _scProjects.forEach(function(p) { if (p.id === id) proj = p; });
+        if (proj) scOpenWizard(proj);
+      } else if (act === 'status') {
+        scSetStatus(id, btn.getAttribute('data-to'), btn);
+      } else if (act === 'archive') {
+        if (btn.getAttribute('data-armed') === '1') {
+          if (_scConfirmTimer) clearTimeout(_scConfirmTimer);
+          scSetStatus(id, 'archived', btn);
+        } else {
+          btn.setAttribute('data-armed', '1');
+          btn.textContent = 'Confirm archive?';
+          btn.style.color = '#b3261e';
+          if (_scConfirmTimer) clearTimeout(_scConfirmTimer);
+          _scConfirmTimer = setTimeout(function() {
+            btn.removeAttribute('data-armed');
+            btn.textContent = 'Archive';
+            btn.style.color = '';
+          }, 4000);
+        }
+      }
+    });
+  }
+
+  // ── Intake wizard ──
+  var SC_WIZ_STEPS = 5;  // 0 basics, 1 scope, 2 sources, 3 schedule, 4 review
+
+  function scOpenWizard(project) {
+    _scEditingId = project ? project.id : null;
+    _scWizStep = 0;
+    $sc('sc-wiz-title').textContent = project ? 'Edit Project' : 'New Project';
+    $sc('scf-name').value = project ? project.name : '';
+    $sc('scf-topic').value = project ? project.topic : '';
+    $sc('scf-industries').value = project ? (project.industries || []).join(', ') : '';
+    $sc('scf-keywords').value = project ? (project.keywords || []).join(', ') : '';
+    $sc('scf-exclusions').value = project ? (project.exclusions || []).join(', ') : '';
+    $sc('scf-regions').value = project ? (project.regions || []).join(', ') : '';
+    $sc('scf-sources').value = project ? (project.sources || []).join('\n') : '';
+    $sc('scf-custom').value = project ? (project.customConfig || '') : '';
+    $sc('scf-delivery').value = project && project.delivery ? project.delivery : 'both';
+    var freqs = project ? (project.frequencies || []) : [];
+    var boxes = $sc('scf-freqs').querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < boxes.length; i++) boxes[i].checked = freqs.indexOf(boxes[i].value) !== -1;
+    $sc('scf-custom-wrap').style.display = freqs.indexOf('custom') !== -1 ? 'block' : 'none';
+    $sc('sc-wiz-err').textContent = '';
+    scShowStep();
+    $sc('sc-wizard-overlay').style.display = 'flex';
+  }
+
+  function scCloseWizard() {
+    $sc('sc-wizard-overlay').style.display = 'none';
+  }
+
+  function scShowStep() {
+    var steps = document.querySelectorAll('#sc-wizard .sc-step');
+    for (var i = 0; i < steps.length; i++) {
+      steps[i].className = 'sc-step' + (Number(steps[i].getAttribute('data-step')) === _scWizStep ? ' active' : '');
+    }
+    var dots = '';
+    for (var d = 0; d < SC_WIZ_STEPS; d++) {
+      dots += '<div class="dot' + (d <= _scWizStep ? ' done' : '') + '"></div>';
+    }
+    $sc('sc-wiz-progress').innerHTML = dots;
+    $sc('sc-wiz-back').style.visibility = _scWizStep === 0 ? 'hidden' : 'visible';
+    $sc('sc-wiz-next').textContent = _scWizStep === SC_WIZ_STEPS - 1
+      ? (_scEditingId ? 'Save Changes' : 'Create Project') : 'Next';
+    if (_scWizStep === SC_WIZ_STEPS - 1) scRenderReview();
+  }
+
+  function scValidateStep() {
+    if (_scWizStep === 0) {
+      if (!$sc('scf-name').value.trim()) return 'Please give the project a name.';
+      if (!$sc('scf-topic').value.trim()) return 'Please describe what should be researched.';
+    }
+    if (_scWizStep === 3) {
+      if (!$sc('scf-freqs').querySelector('input:checked')) return 'Pick at least one report frequency.';
+    }
+    return '';
+  }
+
+  function scCollectPayload() {
+    var freqs = [];
+    var checked = $sc('scf-freqs').querySelectorAll('input:checked');
+    for (var i = 0; i < checked.length; i++) freqs.push(checked[i].value);
+    return {
+      name: $sc('scf-name').value,
+      topic: $sc('scf-topic').value,
+      industries: $sc('scf-industries').value,
+      keywords: $sc('scf-keywords').value,
+      exclusions: $sc('scf-exclusions').value,
+      regions: $sc('scf-regions').value,
+      sources: $sc('scf-sources').value,
+      frequencies: freqs,
+      customConfig: $sc('scf-custom').value,
+      delivery: $sc('scf-delivery').value
+    };
+  }
+
+  function scRenderReview() {
+    var p = scCollectPayload();
+    function row(label, value) {
+      return value ? '<div class="rv-row"><span class="rv-label">' + label + ':</span> ' + scEsc(value) + '</div>' : '';
+    }
+    var freqNames = p.frequencies.map(function(f) { return SC_FREQ_LABELS[f] || f; }).join(', ');
+    var delivery = { inapp: 'In-app only', email: 'Email only', both: 'In-app + email' }[p.delivery] || p.delivery;
+    $sc('sc-review').innerHTML =
+      row('Name', p.name) + row('Topic', p.topic) + row('Industries', p.industries)
+      + row('Keywords', p.keywords) + row('Excluded', p.exclusions) + row('Regions', p.regions)
+      + row('Extra sources', p.sources.split('\n').filter(function(s) { return s.trim(); }).join(', '))
+      + row('Reports', freqNames + (p.frequencies.indexOf('custom') !== -1 && p.customConfig ? ' (' + p.customConfig + ')' : ''))
+      + row('Delivery', delivery)
+      + '<div class="rv-row" style="color:#7a8494;">Google News is always searched — extra sources are monitored on top of it.</div>';
+  }
+
+  function scWizNav(dir) {
+    var errEl = $sc('sc-wiz-err');
+    errEl.textContent = '';
+    if (dir < 0) {
+      if (_scWizStep > 0) { _scWizStep--; scShowStep(); }
+      return;
+    }
+    var err = scValidateStep();
+    if (err) { errEl.textContent = err; return; }
+    if (_scWizStep < SC_WIZ_STEPS - 1) {
+      _scWizStep++;
+      scShowStep();
+      return;
+    }
+    scSubmitWizard();
+  }
+
+  function scSubmitWizard() {
+    if (_scBusy) return;
+    _scBusy = true;
+    var nextBtn = $sc('sc-wiz-next');
+    nextBtn.disabled = true;
+    nextBtn.textContent = 'Saving…';
+    var params = {
+      action: _scEditingId ? 'updateProject' : 'createProject',
+      token: scToken(),
+      payload: JSON.stringify(scCollectPayload())
+    };
+    if (_scEditingId) params.projectId = _scEditingId;
+    _gasPost(params)
+      .then(function(data) {
+        if (data && data.success) {
+          scCloseWizard();
+          scToast(_scEditingId ? 'Project updated.' : 'Project created — first compilation will run with Phase 2.');
+          scLoadProjects();
+        } else {
+          $sc('sc-wiz-err').textContent = scErrMsg(data && data.error);
+        }
+      })
+      .catch(function(err) {
+        $sc('sc-wiz-err').textContent = 'Could not reach the server (' + String((err && err.message) || err) + '). Please try again.';
+      })
+      .then(function() {
+        _scBusy = false;
+        nextBtn.disabled = false;
+        scShowStep();  // restores the Next/Create label
+      });
+  }
+})();
 
 // PROJECT END
 // ══════════════
