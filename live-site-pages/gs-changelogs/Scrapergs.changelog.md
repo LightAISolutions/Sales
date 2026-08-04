@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15g] — 2026-08-04 01:17:17 AM EST — v01.63r
+
+### Added
+- Automatic scheduled runs: your project's report schedule now runs by itself — news is gathered, scored against your learned preferences, and turned into an executive brief on your chosen frequency (daily, weekly, monthly, quarterly, biannual, annual, or custom), with runs anchored at 7:00 AM Eastern
+- Finished briefs are saved to the Reports tab of your spreadsheet and emailed to you when your delivery setting includes email
+- Long runs continue automatically across hourly passes until finished, and paused projects are skipped until you resume them
+- The scheduler starts itself the first time the page is opened after this update — no setup needed
 
 ## [v01.14g] — 2026-08-04 01:08:07 AM EST — v01.62r
 

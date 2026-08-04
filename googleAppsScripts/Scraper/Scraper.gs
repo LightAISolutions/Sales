@@ -1,4 +1,4 @@
-var VERSION = "v01.14g";
+var VERSION = "v01.15g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -502,16 +502,27 @@ function scWriteSchedules_(ss, projectId, ownerEmail, norm) {
   });
 }
 
-/** Map projectId → {frequencies, customConfig, delivery} for a set of projects. */
+/** Map projectId → {frequencies, customConfig, delivery, nextRun, lastRun}
+    for a set of projects. nextRun is the earliest upcoming run across the
+    project's schedules; lastRun the most recent completed one. */
 function scSchedulesFor_(ss, projectIds) {
   var map = {};
   var data = ss.getSheetByName(SCRAPER_TABS.SCHEDULES).getDataRange().getValues();
   for (var i = 1; i < data.length; i++) {
     var pid = data[i][1];
     if (projectIds.indexOf(pid) === -1) continue;
-    if (!map[pid]) map[pid] = { frequencies: [], customConfig: '', delivery: data[i][5] || 'inapp' };
+    if (!map[pid]) map[pid] = { frequencies: [], customConfig: '', delivery: data[i][5] || 'inapp',
+                                nextRun: '', lastRun: '' };
     map[pid].frequencies.push(data[i][3]);
     if (data[i][3] === 'custom') map[pid].customConfig = data[i][4] || '';
+    if (data[i][7]) {
+      var nr = new Date(data[i][7]).toISOString();
+      if (!map[pid].nextRun || nr < map[pid].nextRun) map[pid].nextRun = nr;
+    }
+    if (data[i][8]) {
+      var lr = new Date(data[i][8]).toISOString();
+      if (!map[pid].lastRun || lr > map[pid].lastRun) map[pid].lastRun = lr;
+    }
   }
   return map;
 }
@@ -557,10 +568,13 @@ function listProjects(sessionToken, includeArchived) {
   }
   var schedMap = scSchedulesFor_(ss, projects.map(function(p) { return p.id; }));
   projects.forEach(function(p) {
-    var s = schedMap[p.id] || { frequencies: [], customConfig: '', delivery: 'inapp' };
+    var s = schedMap[p.id] || { frequencies: [], customConfig: '', delivery: 'inapp',
+                                nextRun: '', lastRun: '' };
     p.frequencies = s.frequencies;
     p.customConfig = s.customConfig;
     p.delivery = s.delivery;
+    p.nextRun = s.nextRun;
+    p.lastRun = s.lastRun;
   });
   return { success: true, projects: projects };
 }
@@ -763,16 +777,23 @@ function compileNow(sessionToken, projectId) {
   var rowNum = scFindProjectRow_(sheet, String(projectId || ''), user.email);
   if (!rowNum) return { success: false, error: 'not_found' };
   var project = scProjectFromRow_(sheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+  return scCompileChunk_(ss, user.email, project);
+}
 
+/** Session-free compile core — one bounded chunk. Shared by the compileNow
+    action (session-validated wrapper above) and the scheduler, which runs as
+    the script owner on a time-driven trigger with no session in scope.
+    Ownership is the caller's responsibility: email must be the project owner. */
+function scCompileChunk_(ss, email, project) {
   var props = PropertiesService.getScriptProperties();
   var key = scCompileStateKey_(project.id);
   var state = null;
   try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (stErr) { state = null; }
-  if (!state || state.done || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
+  if (!state || state.done || String(state.owner).toLowerCase() !== email.toLowerCase()) {
     var cPrefs = scGetPrefs_(ss, project.id);
     var queue = scBuildFetchQueue_(project, cPrefs ? cPrefs.keywords : [],
-                                   scLikedDomains_(ss, project.id, user.email, 3));
-    state = { owner: user.email, startedAt: new Date().toISOString(),
+                                   scLikedDomains_(ss, project.id, email, 3));
+    state = { owner: email, startedAt: new Date().toISOString(),
               urls: queue.map(function(q) { return q.url; }),
               labels: queue.map(function(q) { return q.label; }),
               index: 0, added: 0, errors: 0, done: false };
@@ -802,18 +823,18 @@ function compileNow(sessionToken, projectId) {
         if (state.added >= SCRAPER_COMPILE_MAX_NEW) return;
         existing[item.url] = true;
         state.added++;
-        articles.appendRow([Utilities.getUuid(), project.id, user.email, item.url,
+        articles.appendRow([Utilities.getUuid(), project.id, email, item.url,
           item.title, item.source, item.publishedAt, now, item.snippet, '', '', '', '']);
       });
     } catch (fetchErr) {
       state.errors++;
     }
   }
-  scLogUsage_(ss, user.email, 0, fetches);
+  scLogUsage_(ss, email, 0, fetches);
   state.done = state.index >= state.urls.length || state.added >= SCRAPER_COMPILE_MAX_NEW;
   if (state.done) state.finishedAt = new Date().toISOString();
   props.setProperty(key, JSON.stringify(state));
-  if (state.done) dataAuditLog(user.email, 'compile', 'project', project.id,
+  if (state.done) dataAuditLog(email, 'compile', 'project', project.id,
     state.added + ' new articles, ' + state.errors + ' errors');
   return { success: true, done: state.done, processed: state.index,
            total: state.urls.length, added: state.added, errors: state.errors };
@@ -1161,6 +1182,160 @@ function resetScores(sessionToken, projectId) {
   return { success: true, cleared: cleared };
 }
 
+// ── Scheduler ───────────────────────────────────────────────────────────
+// An hourly time-driven trigger walks the Schedules tab and drives each due
+// schedule through the same chunked pipeline the UI buttons use:
+// compile → analyze (scoring + auto-distill) → brief → deliver (Reports tab
+// + email). Long runs phase-step within a tick budget and resume next tick;
+// per-schedule run state persists in Script Properties. The trigger installs
+// itself on page load (doGet) and can also be created manually by running
+// setupSchedulerTrigger() in the Apps Script editor.
+
+var SCRAPER_SCHED_TICK_BUDGET_MS = 240000;  // wall-clock budget per tick (under the 6-min GAS limit)
+var SCRAPER_SCHED_RUN_HOUR = 7;             // scheduled runs anchor at 7:00 AM ET
+var SCRAPER_SCHED_STATE_PREFIX = 'scSchedRun_';
+var SCRAPER_SCHED_AI_PAUSE_MS = 4000;       // pause between analyze chunks (free-tier RPM safety)
+
+/** Manual fallback: run once from the Apps Script editor to install the trigger. */
+function setupSchedulerTrigger() {
+  scEnsureSchedulerTrigger_(true);
+}
+
+/** Idempotent hourly-trigger install. Cheap after the first call (property
+    guard); delete the SCHEDULER_TRIGGER_SET Script Property to force a re-check. */
+function scEnsureSchedulerTrigger_(force) {
+  var props = PropertiesService.getScriptProperties();
+  if (!force && props.getProperty('SCHEDULER_TRIGGER_SET')) return;
+  var exists = ScriptApp.getProjectTriggers().some(function(t) {
+    return t.getHandlerFunction() === 'scSchedulerTick';
+  });
+  if (!exists) ScriptApp.newTrigger('scSchedulerTick').timeBased().everyHours(1).create();
+  props.setProperty('SCHEDULER_TRIGGER_SET', '1');
+}
+
+/** Next run for a frequency, anchored at SCRAPER_SCHED_RUN_HOUR (project TZ),
+    stepping forward from `from`. Custom parses "every N days" / "N days" from
+    customConfig, falling back to weekly. Pure — unit-testable. */
+function scNextRun_(freq, from, customConfig) {
+  var d = new Date(from.getTime());
+  var addMonths = { monthly: 1, quarterly: 3, biannual: 6, annual: 12 };
+  if (addMonths[freq]) {
+    d.setMonth(d.getMonth() + addMonths[freq]);
+  } else {
+    var days = freq === 'weekly' ? 7 : 1;
+    if (freq === 'custom') {
+      var m = String(customConfig || '').match(/(\d+)\s*day/i);
+      days = (m && Number(m[1]) > 0) ? Number(m[1]) : 7;
+    }
+    d.setDate(d.getDate() + days);
+  }
+  d.setHours(SCRAPER_SCHED_RUN_HOUR, 0, 0, 0);
+  return d;
+}
+
+/** Hourly trigger entry point. */
+function scSchedulerTick() {
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return;  // a previous tick is still running
+  try {
+    var ss = scraperSs_();
+    ensureScraperTabs_(ss);
+    var t0 = Date.now();
+    var sheet = ss.getSheetByName(SCRAPER_TABS.SCHEDULES);
+    var data = sheet.getDataRange().getValues();
+    var now = new Date();
+    var props = PropertiesService.getScriptProperties();
+    for (var i = 1; i < data.length; i++) {
+      if ((Date.now() - t0) >= SCRAPER_SCHED_TICK_BUDGET_MS) break;
+      var active = data[i][6] === true || String(data[i][6]).toLowerCase() === 'true';
+      if (!active) continue;
+      var inFlight = !!props.getProperty(SCRAPER_SCHED_STATE_PREFIX + String(data[i][0]));
+      var nextRun = data[i][7] ? new Date(data[i][7]) : null;
+      // Due when: a run is already in flight (finish it), or Next Run has
+      // passed, or Next Run was never set (fresh schedule → first run now).
+      if (!inFlight && nextRun && nextRun.getTime() > now.getTime()) continue;
+      scRunScheduleStep_(ss, sheet, i + 1, data[i], t0);
+    }
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/** Advance one schedule's run as far as the tick budget allows. */
+function scRunScheduleStep_(ss, sheet, rowNum, row, t0) {
+  var scheduleId = String(row[0]);
+  var owner = String(row[2]);
+  var freq = String(row[3]);
+  var customConfig = String(row[4] || '');
+  var delivery = String(row[5] || 'inapp');
+  var props = PropertiesService.getScriptProperties();
+  var key = SCRAPER_SCHED_STATE_PREFIX + scheduleId;
+
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var pRow = scFindProjectRow_(pSheet, String(row[1]), owner);
+  var project = pRow ? scProjectFromRow_(pSheet.getRange(pRow, 1, 1, 12).getValues()[0]) : null;
+  if (!project || project.status !== 'active') {
+    // Paused/archived/deleted: skip this cycle but advance Next Run so the
+    // row isn't perpetually due, and drop any half-finished run state.
+    sheet.getRange(rowNum, 8).setValue(scNextRun_(freq, new Date(), customConfig));
+    props.deleteProperty(key);
+    return;
+  }
+
+  var run = null;
+  try { run = JSON.parse(props.getProperty(key) || 'null'); } catch (runErr) { run = null; }
+  if (!run) run = { phase: 'compile', startedAt: new Date().toISOString() };
+
+  while ((Date.now() - t0) < SCRAPER_SCHED_TICK_BUDGET_MS) {
+    try {
+      if (run.phase === 'compile') {
+        if (scCompileChunk_(ss, owner, project).done) run.phase = 'analyze';
+      } else if (run.phase === 'analyze') {
+        var a = scAnalyzeChunk_(ss, owner, project);
+        if (a.done) run.phase = 'brief';
+        else Utilities.sleep(SCRAPER_SCHED_AI_PAUSE_MS);  // free-tier RPM spacing
+      } else {  // brief + deliver + finish
+        var b = scBriefCore_(ss, owner, project);
+        if (b) scDeliverBrief_(ss, owner, project, freq, delivery, b);
+        var now2 = new Date();
+        sheet.getRange(rowNum, 8, 1, 2).setValues([[scNextRun_(freq, now2, customConfig), now2]]);
+        props.deleteProperty(key);
+        dataAuditLog(owner, 'scheduled-run', 'project', project.id,
+          freq + (b ? ' — brief ' + b.articleCount + ' articles' : ' — no relevant articles'));
+        return;
+      }
+    } catch (stepErr) {
+      // Transient failure (AI hiccup, feed timeout): persist progress and let
+      // the next hourly tick resume this phase.
+      props.setProperty(key, JSON.stringify(run));
+      return;
+    }
+  }
+  props.setProperty(key, JSON.stringify(run));  // budget exhausted — resume next tick
+}
+
+/** Write the brief to the Reports tab and email it per the delivery setting. */
+function scDeliverBrief_(ss, owner, project, freq, delivery, b) {
+  var periodLabel = Utilities.formatDate(new Date(), 'America/New_York', 'MMM d, yyyy');
+  var status = 'generated';
+  if (delivery === 'email' || delivery === 'both') {
+    try {
+      MailApp.sendEmail({
+        to: owner,
+        subject: 'News brief — ' + project.name + ' (' + freq + ', ' + periodLabel + ')',
+        body: b.brief + '\n\n—\nGenerated automatically by your News Scraper schedule ('
+          + freq + '). Based on ' + b.articleCount + ' relevant articles.'
+      });
+      status = 'emailed';
+    } catch (mailErr) {
+      status = 'email_failed';
+    }
+  }
+  ss.getSheetByName(SCRAPER_TABS.REPORTS).appendRow([
+    Utilities.getUuid(), project.id, owner, freq, periodLabel, new Date(),
+    status, b.articleCount, b.brief]);
+}
+
 // ── Phase 3: AI layer ───────────────────────────────────────────────────
 // Swappable provider abstraction: everything above this layer calls
 // aiComplete_() only. Two providers are wired: Claude (Anthropic, paid — set
@@ -1438,7 +1613,12 @@ function analyzeArticles(sessionToken, projectId) {
   var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
   if (!rowNum) return { success: false, error: 'not_found' };
   var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+  return scAnalyzeChunk_(ss, user.email, project);
+}
 
+/** Session-free analyze core — one bounded chunk (scoring + auto-distill).
+    Shared by the analyzeArticles action and the scheduler. */
+function scAnalyzeChunk_(ss, email, project) {
   var sheet = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
   var data = sheet.getDataRange().getValues();
   var pending = [];
@@ -1448,7 +1628,7 @@ function analyzeArticles(sessionToken, projectId) {
   var totalVerdicts = 0;
   for (var i = data.length - 1; i >= 1; i--) {  // reverse: newest verdicts win the exemplar slots
     if (data[i][1] !== project.id) continue;
-    if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    if (String(data[i][2]).toLowerCase() !== email.toLowerCase()) continue;
     hasArticles = true;
     var vd = String(data[i][11] || '');
     if (vd === 'up' || vd === 'down') {
@@ -1472,7 +1652,7 @@ function analyzeArticles(sessionToken, projectId) {
   if (totalVerdicts >= SCRAPER_DISTILL_MIN_VERDICTS
       && (!prefs || prefs.verdictsUsed !== totalVerdicts)) {
     try {
-      var d = scDistillFeedback_(ss, user, project, rated, totalVerdicts);
+      var d = scDistillFeedback_(ss, { email: email }, project, rated, totalVerdicts);
       aiCalls++;
       prefs = { note: d.note, keywords: d.keywords, verdictsUsed: totalVerdicts };
       distilledCount = totalVerdicts;
@@ -1484,7 +1664,7 @@ function analyzeArticles(sessionToken, projectId) {
   var prefsNote = prefs ? prefs.note : '';
 
   if (!pending.length) {
-    if (aiCalls) scLogUsage_(ss, user.email, aiCalls, 0);
+    if (aiCalls) scLogUsage_(ss, email, aiCalls, 0);
     return { success: true, done: true, analyzed: 0, remaining: 0, hasArticles: hasArticles,
              distilled: distilledCount };
   }
@@ -1503,9 +1683,9 @@ function analyzeArticles(sessionToken, projectId) {
       analyzed++;
     });
   }
-  scLogUsage_(ss, user.email, aiCalls, 0);
+  scLogUsage_(ss, email, aiCalls, 0);
   var done = pending.length === 0;
-  if (done) dataAuditLog(user.email, 'analyze', 'project', project.id, analyzed + ' articles scored');
+  if (done) dataAuditLog(email, 'analyze', 'project', project.id, analyzed + ' articles scored');
   return { success: true, done: done, analyzed: analyzed, remaining: pending.length,
            distilled: distilledCount };
 }
@@ -1519,17 +1699,24 @@ function previewBrief(sessionToken, projectId) {
   var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
   if (!rowNum) return { success: false, error: 'not_found' };
   var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+  var b = scBriefCore_(ss, user.email, project);
+  if (!b) return { success: false, error: 'no_relevant_articles' };
+  return { success: true, brief: b.brief, articleCount: b.articleCount };
+}
 
+/** Session-free brief core — shared by the previewBrief action and the
+    scheduler. Returns {brief, articleCount} or null when no relevant articles. */
+function scBriefCore_(ss, email, project) {
   var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
   var relevant = [];
   for (var i = 1; i < data.length; i++) {
     if (data[i][1] !== project.id) continue;
-    if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    if (String(data[i][2]).toLowerCase() !== email.toLowerCase()) continue;
     if (data[i][10] === '' || Number(data[i][10]) < SCRAPER_RELEVANT_THRESHOLD) continue;
     relevant.push({ score: Number(data[i][10]), title: String(data[i][4]),
                     source: String(data[i][5]), summary: String(data[i][9] || data[i][8]) });
   }
-  if (!relevant.length) return { success: false, error: 'no_relevant_articles' };
+  if (!relevant.length) return null;
   relevant.sort(function(a, b) { return b.score - a.score; });
   relevant = relevant.slice(0, SCRAPER_BRIEF_TOP_N);
 
@@ -1545,8 +1732,8 @@ function previewBrief(sessionToken, projectId) {
     + 'bullet points (start each with "• ") grouping the most important developments. '
     + 'Base it ONLY on the articles above. No markdown, no headings, no preamble.';
   var brief = aiComplete_(prompt, 2048);
-  scLogUsage_(ss, user.email, 1, 0);
-  return { success: true, brief: brief.trim(), articleCount: relevant.length };
+  scLogUsage_(ss, email, 1, 0);
+  return { brief: brief.trim(), articleCount: relevant.length };
 }
 
 /** Route dispatcher shared by the doPost actions and the doGet api mirror. */
@@ -3321,6 +3508,9 @@ function doGet(e) {
 
   // Auto-register this project in the Master ACL Projects sheet
   registerSelfProject();
+
+  // Self-install the hourly scheduler trigger (idempotent; never blocks page load)
+  try { scEnsureSchedulerTrigger_(); } catch (trgErr) {}
 
   // ── Phase 7: postMessage-based action routes ──
   // These routes return lightweight listener pages that receive sensitive data

@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.16w">
+  <meta name="build-version" content="v01.17w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -511,6 +511,7 @@
     }
     .sc-sugg-chip.added { opacity: .55; }
     .sc-art.sc-art-out { opacity: 0; transition: opacity .25s; }
+    .sc-chip-next { background: #eef7ee; color: #1e6b30; border-color: #cde5cf; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -4467,6 +4468,15 @@
     });
     var delivery = { inapp: 'In-app', email: 'Email', both: 'In-app + email' }[p.delivery] || p.delivery;
     chips += '<span class="sc-chip">' + scEsc(delivery) + '</span>';
+    if (p.nextRun) {
+      var nr = new Date(p.nextRun);
+      var lr = p.lastRun ? 'Last run: ' + new Date(p.lastRun).toLocaleString() : 'No runs yet';
+      chips += '<span class="sc-chip sc-chip-next" title="' + scEsc(lr) + '">⏰ next: '
+        + scEsc(nr.toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }))
+        + '</span>';
+    } else if ((p.frequencies || []).length && p.status === 'active') {
+      chips += '<span class="sc-chip sc-chip-next" title="The hourly scheduler picks this up on its next pass">⏰ first run pending</span>';
+    }
     return chips;
   }
 

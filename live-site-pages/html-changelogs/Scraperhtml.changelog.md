@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 16/50`
+`Sections: 17/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.17w] — 2026-08-04 01:17:17 AM EST — v01.63r
+
+### Added
+- Project cards now show a green ⏰ chip with the next scheduled run time (hover to see the last run), or "first run pending" for a newly scheduled project
 
 ## [v01.16w] — 2026-08-04 01:08:07 AM EST — v01.62r
 
