@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 20/50`
+`Sections: 21/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.21w] — 2026-08-04 03:33:53 AM EST — v01.68r
+
+### Added
+- New Enrich button on each project card fills in missing article previews by fetching them from the publishers — with live progress showing how many previews were found and how many were unavailable
 
 ## [v01.20w] — 2026-08-04 02:39:32 AM EST — v01.66r
 

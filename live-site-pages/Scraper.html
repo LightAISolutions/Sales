@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.20w">
+  <meta name="build-version" content="v01.21w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -4528,6 +4528,7 @@
         + '<div class="sc-card-actions">'
         + '<button class="sc-btn primary" type="button" data-act="compile" data-id="' + scEsc(p.id) + '">Compile</button>'
         + '<button class="sc-btn" type="button" data-act="backfill" data-id="' + scEsc(p.id) + '">Backfill</button>'
+        + '<button class="sc-btn" type="button" data-act="enrich" data-id="' + scEsc(p.id) + '" title="Fetch missing article previews from the publishers">Enrich</button>'
         + '<button class="sc-btn" type="button" data-act="analyze" data-id="' + scEsc(p.id) + '">Analyze</button>'
         + '<button class="sc-btn" type="button" data-act="articles" data-id="' + scEsc(p.id) + '">Articles</button>'
         + '<button class="sc-btn" type="button" data-act="calibrate" data-id="' + scEsc(p.id) + '">Calibrate</button>'
@@ -4630,6 +4631,8 @@
         scRunCompile(id, btn);
       } else if (act === 'backfill') {
         scRunBackfill(id, btn);
+      } else if (act === 'enrich') {
+        scRunEnrich(id, btn);
       } else if (act === 'analyze') {
         scRunAnalyze(id, btn);
       } else if (act === 'articles') {
@@ -4813,6 +4816,56 @@
         scToast(err && err.appCode
           ? scErrMsg(err.appCode)
           : 'Could not reach the server (' + String((err && err.message) || err) + '). Backfill will resume where it left off if you retry.', true);
+      })
+      .then(function() {
+        btn.disabled = false;
+        btn.removeAttribute('data-running');
+        btn.textContent = orig;
+      });
+  }
+
+  // ── Enrich: harvest publisher abstracts for snippet-less articles ──
+  // enrichNow fetches article pages server-side in bounded chunks (no AI
+  // cost); the client loops until done, same pattern as Compile/Backfill.
+  function scRunEnrich(id, btn) {
+    if (btn.getAttribute('data-running') === '1') return;
+    btn.setAttribute('data-running', '1');
+    btn.disabled = true;
+    var orig = btn.textContent;
+    function step() {
+      return scRetryOnce(function() {
+        return _gasPost({ action: 'enrichNow', token: scToken(), projectId: id });
+      })
+        .then(function(data) {
+          if (!(data && data.success)) {
+            var appErr = new Error('app'); appErr.appCode = (data && data.error) || 'unknown';
+            throw appErr;
+          }
+          btn.textContent = 'Enriching… ' + data.processed + '/' + data.total;
+          scProgUpdate(id, 'Fetching article previews',
+            data.total ? (data.processed / data.total) * 100 : null,
+            data.processed + '/' + data.total + ' articles · ' + data.enriched + ' previews found'
+            + (data.failed ? ' · ' + data.failed + ' unavailable' : ''));
+          return data.done ? data : step();
+        });
+    }
+    scProgUpdate(id, 'Fetching article previews', null, 'Finding articles without previews…');
+    step()
+      .then(function(data) {
+        scProgDone(id, data.enriched + ' previews added'
+          + (data.failed ? ' · ' + data.failed + ' unavailable' : ''));
+        if (!data.total) {
+          scToast('Nothing to enrich — every article already has a preview.');
+          return;
+        }
+        scToast('Enrich finished — ' + data.enriched + ' article preview' + (data.enriched === 1 ? '' : 's')
+          + ' added' + (data.failed ? ' (' + data.failed + ' unavailable — paywalled or blocked)' : '') + '.');
+      })
+      .catch(function(err) {
+        scProgFail_(id, 'Stopped — will resume where it left off if you retry');
+        scToast(err && err.appCode
+          ? scErrMsg(err.appCode)
+          : 'Could not reach the server (' + String((err && err.message) || err) + '). Enrich will resume where it left off if you retry.', true);
       })
       .then(function() {
         btn.disabled = false;

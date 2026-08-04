@@ -1,4 +1,4 @@
-var VERSION = "v01.18g";
+var VERSION = "v01.19g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -353,7 +353,7 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'updateProject', 'setProjectStatus',
                                'compileNow', 'getCompileStatus', 'listArticles',
                                'analyzeArticles', 'previewBrief',
-                               'backfillNow', 'getBackfillStatus',
+                               'backfillNow', 'getBackfillStatus', 'enrichNow',
                                'setArticleVerdict', 'distillPreferences', 'resetScores'];
 
 // ── Phase 3: AI layer tuning ──
@@ -379,6 +379,11 @@ var SCRAPER_DISTILL_TITLES_MAX = 40;           // rated titles per side fed into
 var SCRAPER_PREFS_NOTE_MAX = 1500;             // stored learned-preferences note cap (chars)
 var SCRAPER_CALIB_MIN_SCORE = 10;              // calibration never serves scores below this floor
 var SCRAPER_PREFS_KEYWORDS_MAX = 12;           // stored suggested search keywords cap (incl. adjacent topics)
+
+// ── Enrich tuning: harvest publisher abstracts for snippet-less articles ──
+var SCRAPER_ENRICH_BATCH_FETCHES = 15;      // page fetches per enrichNow call (client loops)
+var SCRAPER_ENRICH_TIME_BUDGET_MS = 40000;  // wall-clock budget per call
+var SCRAPER_ENRICH_STATE_PREFIX = 'scEnrich_';
 
 // ── Phase 2: compilation engine tuning ──
 var SCRAPER_COMPILE_BATCH_FETCHES = 6;    // max URL fetches per compileNow call (client loops until done)
@@ -1219,6 +1224,105 @@ function resetScores(sessionToken, projectId) {
   return { success: true, cleared: cleared };
 }
 
+/** Publisher abstract from a news page's HTML head: og:description first,
+    then twitter:description, then plain meta description — the same summary
+    publishers write for search results and social link previews. Handles
+    either attribute order, decodes common entities, caps at snippet length.
+    Pure — unit-testable. */
+function scExtractAbstract_(html) {
+  var head = String(html || '').substring(0, 60000);
+  function meta(re) {
+    var m = head.match(re);
+    return m ? m[1] : '';
+  }
+  var val = meta(/<meta[^>]*property=["']og:description["'][^>]*content=["']([^"']+)["']/i)
+    || meta(/<meta[^>]*content=["']([^"']+)["'][^>]*property=["']og:description["']/i)
+    || meta(/<meta[^>]*name=["']twitter:description["'][^>]*content=["']([^"']+)["']/i)
+    || meta(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/i)
+    || meta(/<meta[^>]*content=["']([^"']+)["'][^>]*name=["']description["']/i);
+  val = String(val)
+    .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#0?39;/g, "'")
+    .replace(/&#x27;/gi, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+  return scStr_(val, SCRAPER_ARTICLE_SNIPPET_MAX);
+}
+
+/** "Enrich": fill empty Snippet columns by fetching each article's page and
+    harvesting the publisher's own abstract — no AI cost. Backfill articles
+    arrive snippet-less (GDELT's list API has no body text), which forced
+    title-only scoring. Chunked/resumable like Backfill: the row cursor is a
+    safe resume point because the Articles sheet is append-only. Failures
+    (paywalls, bot blocks) are counted but not marked, so a later Enrich run
+    retries them. */
+function enrichNow(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'enrichNow');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+  return scEnrichChunk_(ss, user.email, project);
+}
+
+/** Session-free enrich core — one bounded chunk. */
+function scEnrichChunk_(ss, email, project) {
+  var props = PropertiesService.getScriptProperties();
+  var key = SCRAPER_ENRICH_STATE_PREFIX + project.id;
+  var state = null;
+  try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (enErr) { state = null; }
+  var sheet = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+  var data = sheet.getDataRange().getValues();
+  if (!state || state.done || String(state.owner).toLowerCase() !== email.toLowerCase()) {
+    var empty = 0;
+    for (var c = 1; c < data.length; c++) {
+      if (data[c][1] === project.id
+          && String(data[c][2]).toLowerCase() === email.toLowerCase()
+          && data[c][8] === '') empty++;
+    }
+    state = { owner: email, startedAt: new Date().toISOString(),
+              cursor: 1, total: empty, enriched: 0, failed: 0, done: false };
+  }
+
+  var t0 = Date.now();
+  var fetches = 0;
+  var i = state.cursor;
+  for (; i < data.length; i++) {
+    if (fetches >= SCRAPER_ENRICH_BATCH_FETCHES) break;
+    if ((Date.now() - t0) >= SCRAPER_ENRICH_TIME_BUDGET_MS) break;
+    if (data[i][1] !== project.id) continue;
+    if (String(data[i][2]).toLowerCase() !== email.toLowerCase()) continue;
+    if (data[i][8] !== '') continue;  // already has a snippet
+    var url = String(data[i][3] || '');
+    if (!/^https?:\/\//i.test(url)) { state.failed++; continue; }
+    fetches++;
+    try {
+      var resp = UrlFetchApp.fetch(url, {
+        muteHttpExceptions: true, followRedirects: true,
+        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' }
+      });
+      var abs = resp.getResponseCode() === 200 ? scExtractAbstract_(resp.getContentText()) : '';
+      if (abs) {
+        sheet.getRange(i + 1, 9).setValue(abs);
+        state.enriched++;
+      } else {
+        state.failed++;
+      }
+    } catch (fErr) {
+      state.failed++;
+    }
+  }
+  state.cursor = i;
+  state.done = i >= data.length;
+  if (state.done) state.finishedAt = new Date().toISOString();
+  props.setProperty(key, JSON.stringify(state));
+  scLogUsage_(ss, email, 0, fetches);
+  if (state.done) dataAuditLog(email, 'enrich', 'project', project.id,
+    state.enriched + ' abstracts, ' + state.failed + ' unavailable');
+  return { success: true, done: state.done, processed: state.enriched + state.failed,
+           total: state.total, enriched: state.enriched, failed: state.failed };
+}
+
 // ── Scheduler ───────────────────────────────────────────────────────────
 // An hourly time-driven trigger walks the Schedules tab and drives each due
 // schedule through the same chunked pipeline the UI buttons use:
@@ -1804,6 +1908,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'getCompileStatus') return getCompileStatus(sessionToken, param('projectId'));
   if (op === 'listArticles') return listArticles(sessionToken, param('projectId'), param('limit'), param('mode'), param('minScore'), param('days'), param('q'));
   if (op === 'distillPreferences') return distillPreferences(sessionToken, param('projectId'));
+  if (op === 'enrichNow') return enrichNow(sessionToken, param('projectId'));
   if (op === 'resetScores') return resetScores(sessionToken, param('projectId'));
   if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));
   if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));

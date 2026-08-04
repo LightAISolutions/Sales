@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 18/50`
+`Sections: 19/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.19g] — 2026-08-04 03:33:53 AM EST — v01.68r
+
+### Added
+- Articles gathered without preview text (common for historical articles) can now be enriched: the publisher's own summary is fetched and saved for each one, so relevance scoring and your rating cards work from real article content instead of just headlines
+- Enrichment runs in resumable batches, retries previously unavailable articles on a later run, and uses no AI credit
 
 ## [v01.18g] — 2026-08-04 03:28:10 AM EST — v01.67r
 
