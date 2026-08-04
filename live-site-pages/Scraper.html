@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.21w">
+  <meta name="build-version" content="v01.22w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -538,6 +538,28 @@
     .sc-prog-stats { margin-top: 5px; color: #9fb3cd; }
     .sc-progress.done .sc-prog-fill { background: #37b06a; }
     @media (max-width: 760px) { #sc-prog-stack { width: 210px; left: 8px; bottom: 8px; } }
+    /* Score distribution panel */
+    #sc-stats-overlay {
+      position: fixed; inset: 0; z-index: 52; background: rgba(15,23,42,0.55);
+      display: none; align-items: flex-start; justify-content: center;
+      overflow-y: auto; padding: 6vh 12px;
+    }
+    #sc-stats {
+      background: #fff; border-radius: 14px; width: 100%; max-width: 520px;
+      padding: 22px 24px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+      box-sizing: border-box; margin-bottom: 6vh;
+    }
+    #sc-stats-close { background: none; border: none; font-size: 24px; color: #98a2b3; cursor: pointer; line-height: 1; }
+    #sc-stats-close:hover { color: #1f2733; }
+    .sc-stat-headline { text-align: center; margin: 4px 0 14px; }
+    .sc-stat-headline b { font-size: 34px; color: #2456a8; }
+    .sc-stat-headline span { display: block; color: #55606e; font-size: 12px; margin-top: 2px; }
+    .sc-stat-row { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; font-size: 12px; }
+    .sc-stat-label { width: 64px; color: #37455a; text-align: right; flex: none; }
+    .sc-stat-track { flex: 1; background: #eef1f5; border-radius: 999px; height: 16px; overflow: hidden; }
+    .sc-stat-fill { height: 100%; border-radius: 999px; min-width: 2px; }
+    .sc-stat-count { width: 96px; color: #55606e; flex: none; }
+    .sc-stat-foot { margin-top: 14px; border-top: 1px solid #eef1f5; padding-top: 10px; color: #55606e; font-size: 12px; line-height: 1.7; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -791,6 +813,15 @@
     <div id="sc-vlog-lines"></div>
   </div>
   <div id="sc-prog-stack"></div>
+  <div id="sc-stats-overlay">
+    <div id="sc-stats">
+      <div class="sc-wiz-head">
+        <h2 id="sc-stats-title">Score Distribution</h2>
+        <button id="sc-stats-close" type="button" title="Close">&times;</button>
+      </div>
+      <div id="sc-stats-body"></div>
+    </div>
+  </div>
   <div id="sc-status-msg"></div>
 <!-- ══════════════ -->
 <!-- PROJECT END -->
@@ -4532,6 +4563,7 @@
         + '<button class="sc-btn" type="button" data-act="analyze" data-id="' + scEsc(p.id) + '">Analyze</button>'
         + '<button class="sc-btn" type="button" data-act="articles" data-id="' + scEsc(p.id) + '">Articles</button>'
         + '<button class="sc-btn" type="button" data-act="calibrate" data-id="' + scEsc(p.id) + '">Calibrate</button>'
+        + '<button class="sc-btn" type="button" data-act="scorestats" data-id="' + scEsc(p.id) + '" title="Score distribution and corpus health">Stats</button>'
         + '<button class="sc-btn" type="button" data-act="edit" data-id="' + scEsc(p.id) + '">Edit</button>'
         + '<button class="sc-btn" type="button" data-act="status" data-to="' + pauseTo + '" data-id="' + scEsc(p.id) + '">' + pauseLabel + '</button>'
         + '<button class="sc-btn subtle" type="button" data-act="archive" data-id="' + scEsc(p.id) + '">Archive</button>'
@@ -4597,6 +4629,12 @@
       scCalDistill_(true);
     });
     $sc('sc-cal-rescore-btn').addEventListener('click', function() { scCalRescore_(this); });
+    $sc('sc-stats-close').addEventListener('click', function() {
+      $sc('sc-stats-overlay').style.display = 'none';
+    });
+    $sc('sc-stats-overlay').addEventListener('click', function(ev) {
+      if (ev.target === this) this.style.display = 'none';
+    });
     $sc('sc-learned').addEventListener('click', function(ev) {
       var t = ev.target && ev.target.closest ? ev.target.closest('.sc-sugg-add, .sc-sugg-undo') : null;
       if (!t || t.disabled) return;
@@ -4639,6 +4677,8 @@
         scOpenArticles(id);
       } else if (act === 'calibrate') {
         scOpenCalibration(id);
+      } else if (act === 'scorestats') {
+        scOpenStats(id);
       } else if (act === 'status') {
         scSetStatus(id, btn.getAttribute('data-to'), btn);
       } else if (act === 'archive') {
@@ -4822,6 +4862,60 @@
         btn.removeAttribute('data-running');
         btn.textContent = orig;
       });
+  }
+
+  // ── Score distribution panel ──
+  function scOpenStats(id) {
+    var proj = null;
+    _scProjects.forEach(function(p) { if (p.id === id) proj = p; });
+    $sc('sc-stats-title').textContent = (proj ? proj.name + ' — ' : '') + 'Score Distribution';
+    var body = $sc('sc-stats-body');
+    body.innerHTML = '<p class="sc-art-loading">Counting scores…</p>';
+    $sc('sc-stats-overlay').style.display = 'flex';
+    _gasPost({ action: 'getScoreStats', token: scToken(), projectId: id })
+      .then(function(data) {
+        if (!(data && data.success)) {
+          body.innerHTML = '<p class="sc-art-loading">' + scEsc(scErrMsg(data && data.error)) + '</p>';
+          return;
+        }
+        scRenderStats_(data.stats);
+      })
+      .catch(function(err) {
+        body.innerHTML = '<p class="sc-art-loading">Could not load stats (' + scEsc(String((err && err.message) || err)) + ').</p>';
+      });
+  }
+
+  function scRenderStats_(s) {
+    if (!s.scored) {
+      $sc('sc-stats-body').innerHTML = '<p class="sc-art-loading">No scored articles yet — run <b>Analyze</b> first.</p>';
+      return;
+    }
+    var over20Pct = Math.round((s.over20 / s.scored) * 1000) / 10;
+    var bands = [
+      ['0–9', s.b0, '#b3392f', 'unrelated'],
+      ['10–29', s.b10, '#9a6b00', 'weak connection'],
+      ['30–49', s.b30, '#2f6fdb', 'adjacent context'],
+      ['50–79', s.b50, '#1e7b34', 'relevant subtopic'],
+      ['80–100', s.b80, '#0f5132', 'squarely on-topic']
+    ];
+    var max = 1;
+    bands.forEach(function(b) { if (b[1] > max) max = b[1]; });
+    var html = '<div class="sc-stat-headline"><b>' + over20Pct + '%</b>'
+      + '<span>of scored articles score 20 or higher (' + s.over20 + ' of ' + s.scored + ')</span></div>';
+    bands.forEach(function(b) {
+      var pct = Math.round((b[1] / s.scored) * 1000) / 10;
+      html += '<div class="sc-stat-row">'
+        + '<div class="sc-stat-label" title="' + scEsc(b[3]) + '">' + b[0] + '</div>'
+        + '<div class="sc-stat-track"><div class="sc-stat-fill" style="width:' + Math.max(1, (b[1] / max) * 100) + '%;background:' + b[2] + '"></div></div>'
+        + '<div class="sc-stat-count">' + b[1] + ' (' + pct + '%)</div>'
+        + '</div>';
+    });
+    html += '<div class="sc-stat-foot">'
+      + 'Scored: ' + s.scored + ' of ' + s.total + (s.unscored ? ' (' + s.unscored + ' unscored — run Analyze)' : '') + '<br>'
+      + 'Article previews: ' + s.withSnippet + ' of ' + s.total + ' (' + Math.round((s.withSnippet / Math.max(1, s.total)) * 100) + '%)<br>'
+      + 'Your ratings: ' + s.ups + ' 👍 · ' + s.downs + ' 👎 &nbsp;·&nbsp; Unrated articles worth calibrating: ' + s.ratablePool
+      + '</div>';
+    $sc('sc-stats-body').innerHTML = html;
   }
 
   // ── Enrich: harvest publisher abstracts for snippet-less articles ──

@@ -1,4 +1,4 @@
-var VERSION = "v01.20g";
+var VERSION = "v01.21g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -354,7 +354,8 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'compileNow', 'getCompileStatus', 'listArticles',
                                'analyzeArticles', 'previewBrief',
                                'backfillNow', 'getBackfillStatus', 'enrichNow',
-                               'setArticleVerdict', 'distillPreferences', 'resetScores'];
+                               'setArticleVerdict', 'distillPreferences', 'resetScores',
+                               'getScoreStats'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -1224,6 +1225,43 @@ function resetScores(sessionToken, projectId) {
   return { success: true, cleared: cleared };
 }
 
+/** Score distribution + corpus health for the Stats panel — one sheet scan.
+    Bands mirror the scoring rubric so the panel reads directly against it. */
+function getScoreStats(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'getScoreStats');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+
+  var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
+  var s = { total: 0, scored: 0, unscored: 0, withSnippet: 0, over20: 0,
+            b0: 0, b10: 0, b30: 0, b50: 0, b80: 0,
+            ups: 0, downs: 0, ratablePool: 0 };
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][1] !== project.id) continue;
+    if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    s.total++;
+    if (data[i][8] !== '') s.withSnippet++;
+    var vd = String(data[i][11] || '');
+    if (vd === 'up') s.ups++;
+    else if (vd === 'down') s.downs++;
+    if (data[i][10] === '') { s.unscored++; continue; }
+    var sc = Number(data[i][10]);
+    s.scored++;
+    if (sc >= 20) s.over20++;
+    if (sc < 10) s.b0++;
+    else if (sc < 30) s.b10++;
+    else if (sc < 50) s.b30++;
+    else if (sc < 80) s.b50++;
+    else s.b80++;
+    if (!vd && sc >= SCRAPER_CALIB_MIN_SCORE) s.ratablePool++;
+  }
+  return { success: true, stats: s };
+}
+
 /** Publisher abstract from a news page's HTML head: og:description first,
     then twitter:description, then plain meta description — the same summary
     publishers write for search results and social link previews. Handles
@@ -1927,6 +1965,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'listArticles') return listArticles(sessionToken, param('projectId'), param('limit'), param('mode'), param('minScore'), param('days'), param('q'));
   if (op === 'distillPreferences') return distillPreferences(sessionToken, param('projectId'));
   if (op === 'enrichNow') return enrichNow(sessionToken, param('projectId'));
+  if (op === 'getScoreStats') return getScoreStats(sessionToken, param('projectId'));
   if (op === 'resetScores') return resetScores(sessionToken, param('projectId'));
   if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));
   if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));

@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 21/50`
+`Sections: 22/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.22w] — 2026-08-04 04:01:42 PM EST — v01.70r
+
+### Added
+- New Stats button on each project card shows your score distribution at a glance: a big headline with the share of articles scoring 20+, color-coded bars for each score band, and corpus health (preview coverage, your rating counts, and how many articles are worth calibrating)
 
 ## [v01.21w] — 2026-08-04 03:33:53 AM EST — v01.68r
 
