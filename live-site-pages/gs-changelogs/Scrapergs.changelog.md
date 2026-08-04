@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 17/50`
+`Sections: 18/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.18g] — 2026-08-04 03:28:10 AM EST — v01.67r
+
+### Fixed
+- Relevance scoring was far too harsh — most articles scored near zero. Scoring now uses a detailed scale that recognizes adjacent coverage (corporate moves, financing, policy, supply-chain news about relevant players) as moderately relevant instead of dismissing it
+- Articles with only a headline (no preview text) are no longer penalized for the missing text — they're scored on what the headline covers
+- A rating history with mostly 👎s no longer drags all scores down — your ratings are presented to the scorer in a balanced way, and your preference profile now leads with what you value
 
 ## [v01.17g] — 2026-08-04 01:46:24 AM EST — v01.65r
 

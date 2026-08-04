@@ -1,4 +1,4 @@
-var VERSION = "v01.17g";
+var VERSION = "v01.18g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1535,14 +1535,21 @@ function scScopePrompt_(project) {
     every scoring batch sees what the user personally confirmed or rejected. */
 function scFeedbackPrompt_(feedback) {
   if (!feedback || (!feedback.ups.length && !feedback.downs.length)) return '';
+  // Balance the channels: a 👎-heavy history (common early on, when calibration
+  // served mostly junk) must not read as a one-sided lesson in rejection.
+  // Downs shown are capped at ups + 2 and framed as filtered junk rather than
+  // a relevance ceiling — an all-downs prompt measurably collapsed scores to
+  // near-zero across a 2000-article corpus.
+  var downs = feedback.downs.slice(0, feedback.ups.length + 2);
   var fb = 'USER FEEDBACK (articles this user personally rated in this project):\n';
   if (feedback.ups.length) {
     fb += 'Rated RELEVANT — score articles like these HIGH:\n'
       + feedback.ups.map(function(t) { return '- ' + t; }).join('\n') + '\n';
   }
-  if (feedback.downs.length) {
-    fb += 'Rated NOT RELEVANT — score articles like these LOW:\n'
-      + feedback.downs.map(function(t) { return '- ' + t; }).join('\n') + '\n';
+  if (downs.length) {
+    fb += 'Obvious junk the user filtered out (unrelated to their interests — do NOT '
+      + 'treat this as a relevance ceiling for adjacent coverage):\n'
+      + downs.map(function(t) { return '- ' + t; }).join('\n') + '\n';
   }
   return fb + '\n';
 }
@@ -1590,7 +1597,10 @@ function scDistillFeedback_(ss, user, project, rated, totalVerdicts) {
     + '1. "preferences": a concise note (under 150 words) describing what this user '
     + 'actually values and what they reject — specific themes, angles, technologies, '
     + 'and coverage types. Focus on what the ratings reveal that the project scope '
-    + 'alone does not say.\n'
+    + 'alone does not say. State the preferences POSITIVELY first — lead with what '
+    + 'the user values (inferred from the scope plus the relevant-rated articles), '
+    + 'even when most ratings are rejections; rejections get at most a short final '
+    + 'sentence.\n'
     + '2. "keywords": up to ' + SCRAPER_PREFS_KEYWORDS_MAX + ' short search phrases '
     + '(2-4 words each) likely to find MORE articles like the ones rated relevant — '
     + 'concrete and searchable, no boolean operators. Go beyond literal phrases from '
@@ -1631,8 +1641,17 @@ function scScoreBatch_(project, batch, feedback, prefsNote) {
     + scPrefsPrompt_(prefsNote)
     + scFeedbackPrompt_(feedback)
     + 'ARTICLES:\n' + lines.join('\n') + '\n\n'
-    + 'For each article, rate its relevance to the project scope from 0 to 100 '
-    + '(100 = squarely on-topic, 0 = unrelated; anything matching the "Exclude coverage of" list scores under 20). '
+    + 'Score each article\'s relevance to the project scope using this rubric:\n'
+    + '- 80-100: squarely on-topic\n'
+    + '- 50-79: clearly relevant subtopic\n'
+    + '- 30-49: adjacent context worth awareness — corporate moves, financing, policy, '
+    + 'supply chain, or partnerships involving players relevant to the scope\n'
+    + '- 10-29: weak or speculative connection\n'
+    + '- 0-9: unrelated\n'
+    + 'Anything matching the "Exclude coverage of" list scores under 20. '
+    + 'Some articles are headline-only (no body text): a missing body is NOT evidence '
+    + 'of irrelevance — score these on what the headline plausibly covers, using the '
+    + 'same rubric. Use the full range; do not default to the extremes.\n'
     + 'For articles scoring ' + SCRAPER_RELEVANT_THRESHOLD + ' or above, also write a factual 1-2 sentence summary '
     + 'based only on the title and text given. '
     + 'Respond with ONLY a JSON array, no markdown fences, one object per article in order: '
