@@ -1,4 +1,4 @@
-var VERSION = "v01.12g";
+var VERSION = "v01.13g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -326,6 +326,7 @@ var SCRAPER_TABS = {
   ARTICLES: 'Articles',
   REPORTS: 'Reports',
   PROFILES: 'Profiles',
+  PREFERENCES: 'Preferences',
   USAGE: 'UsageLog'
 };
 
@@ -340,6 +341,8 @@ var SCRAPER_TAB_HEADERS = {
   Reports: ['Report ID', 'Project ID', 'Owner', 'Frequency', 'Period Label',
             'Generated At', 'Status', 'Article Count', 'Content'],
   Profiles: ['Email', 'Drive Folder ID', 'Display Name', 'Created At'],
+  Preferences: ['Project ID', 'Owner', 'Learned Preferences', 'Suggested Keywords',
+                'Verdicts Used', 'Distilled At'],
   UsageLog: ['Date', 'Owner', 'AI Calls', 'Fetch Calls', 'Notes']
 };
 
@@ -370,6 +373,11 @@ var SCRAPER_ANALYZE_CALLS_PER_INVOCATION = 1;
 var SCRAPER_RELEVANT_THRESHOLD = 50;           // score >= this counts as relevant
 var SCRAPER_BRIEF_TOP_N = 30;                  // top-scored articles fed into the executive brief
 var SCRAPER_FEEDBACK_EXAMPLES_MAX = 8;         // 👍/👎 exemplar titles per side injected into the scoring prompt
+// ── Feedback distillation: all ratings → a learned-preferences note + search keywords ──
+var SCRAPER_DISTILL_MIN_VERDICTS = 3;          // don't distill until at least this many total ratings exist
+var SCRAPER_DISTILL_TITLES_MAX = 40;           // rated titles per side fed into the distillation prompt
+var SCRAPER_PREFS_NOTE_MAX = 1500;             // stored learned-preferences note cap (chars)
+var SCRAPER_PREFS_KEYWORDS_MAX = 8;            // stored suggested search keywords cap
 
 // ── Phase 2: compilation engine tuning ──
 var SCRAPER_COMPILE_BATCH_FETCHES = 6;    // max URL fetches per compileNow call (client loops until done)
@@ -634,8 +642,10 @@ function scTopicTerms_(topic, n) {
   return out;
 }
 
-/** Build the ordered fetch queue (Google News RSS queries + user sources). */
-function scBuildFetchQueue_(project) {
+/** Build the ordered fetch queue (Google News RSS queries + user sources).
+    learnedKeywords (from the distilled Preferences row) widen the net with
+    queries shaped by what the user actually rated relevant. */
+function scBuildFetchQueue_(project, learnedKeywords) {
   var queue = [];
   var excl = (project.exclusions || []).slice(0, 5).map(function(t) {
     return '-"' + t + '"';
@@ -655,6 +665,10 @@ function scBuildFetchQueue_(project) {
   (project.industries || []).slice(0, 3).forEach(function(ind) {
     gnews('"' + ind + '" ' + terms.slice(0, 2).join(' '), 'industry');
   });
+  var learned = (learnedKeywords || []).slice(0, 6);
+  for (var j = 0; j < learned.length; j += 3) {
+    gnews(learned.slice(j, j + 3).map(function(k) { return '"' + k + '"'; }).join(' OR '), 'learned');
+  }
   (project.sources || []).slice(0, 20).forEach(function(src) {
     queue.push({ kind: 'source', label: 'source', url: src });
   });
@@ -751,7 +765,8 @@ function compileNow(sessionToken, projectId) {
   var state = null;
   try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (stErr) { state = null; }
   if (!state || state.done || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
-    var queue = scBuildFetchQueue_(project);
+    var cPrefs = scGetPrefs_(ss, project.id);
+    var queue = scBuildFetchQueue_(project, cPrefs ? cPrefs.keywords : []);
     state = { owner: user.email, startedAt: new Date().toISOString(),
               urls: queue.map(function(q) { return q.url; }),
               labels: queue.map(function(q) { return q.label; }),
@@ -827,7 +842,7 @@ function getCompileStatus(sessionToken, projectId) {
 function scBackfillStateKey_(projectId) { return SCRAPER_BACKFILL_STATE_PREFIX + projectId; }
 
 /** GDELT query strings for a project (quoted phrases, OR groups in parens). */
-function scGdeltQueries_(project) {
+function scGdeltQueries_(project, learnedKeywords) {
   var queries = [];
   var terms = scTopicTerms_(project.topic, 4);
   if (terms.length) queries.push(terms.join(' '));
@@ -836,7 +851,14 @@ function scGdeltQueries_(project) {
     var group = kws.slice(i, i + 3).map(function(k) { return '"' + k + '"'; });
     queries.push(group.length > 1 ? '(' + group.join(' OR ') + ')' : group[0]);
   }
-  return queries.slice(0, 4);
+  queries = queries.slice(0, 4);
+  // One extra query group from the distilled learned keywords (if any) —
+  // bounded to a single group so backfill total slices grow by at most 1×months.
+  var learned = (learnedKeywords || []).slice(0, 3).map(function(k) { return '"' + k + '"'; });
+  if (learned.length) {
+    queries.push(learned.length > 1 ? '(' + learned.join(' OR ') + ')' : learned[0]);
+  }
+  return queries.slice(0, 5);
 }
 
 /** Task i for a backfill state: month slice × query, anchored to startedAt
@@ -866,8 +888,10 @@ function backfillNow(sessionToken, projectId) {
   var state = null;
   try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (bfErr) { state = null; }
   if (!state || state.done || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
+    var bPrefs = scGetPrefs_(ss, project.id);
     state = { owner: user.email, startedAt: new Date().toISOString(),
-              queries: scGdeltQueries_(project), months: SCRAPER_BACKFILL_MONTHS,
+              queries: scGdeltQueries_(project, bPrefs ? bPrefs.keywords : []),
+              months: SCRAPER_BACKFILL_MONTHS,
               index: 0, added: 0, errors: 0, done: false };
   }
   var total = state.queries.length * state.months;
@@ -1167,8 +1191,78 @@ function scFeedbackPrompt_(feedback) {
   return fb + '\n';
 }
 
+/** Load a project's learned-preferences row from the Preferences tab.
+    Returns {row, note, keywords, verdictsUsed} or null when never distilled.
+    Ownership is enforced upstream: callers only pass project IDs the session
+    owner was already matched against via scFindProjectRow_. */
+function scGetPrefs_(ss, projectId) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.PREFERENCES);
+  if (!sheet) return null;
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][0] !== projectId) continue;
+    return {
+      row: i + 1,
+      note: String(data[i][2] || ''),
+      keywords: scList_(data[i][3], SCRAPER_PREFS_KEYWORDS_MAX, 60),
+      verdictsUsed: Number(data[i][4] || 0)
+    };
+  }
+  return null;
+}
+
+/** Learned-preferences note as prompt lines (scoring + brief context). */
+function scPrefsPrompt_(prefsNote) {
+  if (!prefsNote) return '';
+  return 'LEARNED USER PREFERENCES (distilled from all of this user\'s ratings — '
+    + 'weigh these heavily):\n' + prefsNote + '\n\n';
+}
+
+/** Distill ALL of a project's 👍/👎 ratings into a learned-preferences note plus
+    suggested search keywords, persisted to the Preferences tab (one AI call).
+    The note feeds every future scoring prompt; the keywords widen Compile and
+    Backfill queries — the "improve fetching" half of the feedback loop. */
+function scDistillFeedback_(ss, user, project, rated, totalVerdicts) {
+  var prompt = 'You are learning a user\'s news preferences from their article ratings '
+    + 'in a monitoring project.\n\n'
+    + 'PROJECT SCOPE:\n' + scScopePrompt_(project) + '\n\n'
+    + (rated.ups.length ? 'ARTICLES THE USER RATED RELEVANT:\n'
+        + rated.ups.map(function(t) { return '- ' + t; }).join('\n') + '\n\n' : '')
+    + (rated.downs.length ? 'ARTICLES THE USER RATED NOT RELEVANT:\n'
+        + rated.downs.map(function(t) { return '- ' + t; }).join('\n') + '\n\n' : '')
+    + 'From these ratings, distill:\n'
+    + '1. "preferences": a concise note (under 150 words) describing what this user '
+    + 'actually values and what they reject — specific themes, angles, technologies, '
+    + 'and coverage types. Focus on what the ratings reveal that the project scope '
+    + 'alone does not say.\n'
+    + '2. "keywords": up to ' + SCRAPER_PREFS_KEYWORDS_MAX + ' short search phrases '
+    + '(2-4 words each) likely to find MORE articles like the ones rated relevant — '
+    + 'concrete and searchable, no boolean operators.\n\n'
+    + 'Respond with ONLY a JSON object, no markdown fences: '
+    + '{"preferences":"...","keywords":["..."]}';
+  var text = aiComplete_(prompt, 1024);
+  var start = text.indexOf('{');
+  var end = text.lastIndexOf('}');
+  if (start === -1 || end <= start) throw new Error('ai_bad_json');
+  var parsed;
+  try { parsed = JSON.parse(text.substring(start, end + 1)); }
+  catch (djErr) { throw new Error('ai_bad_json'); }
+  var note = scStr_(parsed.preferences, SCRAPER_PREFS_NOTE_MAX);
+  var keywords = scList_(parsed.keywords, SCRAPER_PREFS_KEYWORDS_MAX, 60);
+  if (!note) throw new Error('ai_bad_json');
+
+  var sheet = ss.getSheetByName(SCRAPER_TABS.PREFERENCES);
+  var existing = scGetPrefs_(ss, project.id);
+  var rowVals = [project.id, user.email, note, keywords.join(', '), totalVerdicts, new Date()];
+  if (existing) sheet.getRange(existing.row, 1, 1, 6).setValues([rowVals]);
+  else sheet.appendRow(rowVals);
+  dataAuditLog(user.email, 'distill', 'project', project.id,
+    totalVerdicts + ' verdicts -> ' + keywords.length + ' keywords');
+  return { note: note, keywords: keywords };
+}
+
 /** Score one batch of articles against the project scope. Returns parsed items. */
-function scScoreBatch_(project, batch, feedback) {
+function scScoreBatch_(project, batch, feedback, prefsNote) {
   var lines = [];
   batch.forEach(function(a, idx) {
     lines.push((idx + 1) + '. ' + a.title + ' — ' + a.source
@@ -1176,6 +1270,7 @@ function scScoreBatch_(project, batch, feedback) {
   });
   var prompt = 'You are a research analyst filtering news for a monitoring project.\n\n'
     + 'PROJECT SCOPE:\n' + scScopePrompt_(project) + '\n\n'
+    + scPrefsPrompt_(prefsNote)
     + scFeedbackPrompt_(feedback)
     + 'ARTICLES:\n' + lines.join('\n') + '\n\n'
     + 'For each article, rate its relevance to the project scope from 0 to 100 '
@@ -1203,30 +1298,55 @@ function analyzeArticles(sessionToken, projectId) {
   var pending = [];
   var hasArticles = false;
   var feedback = { ups: [], downs: [] };
+  var rated = { ups: [], downs: [] };   // fuller lists for distillation
+  var totalVerdicts = 0;
   for (var i = data.length - 1; i >= 1; i--) {  // reverse: newest verdicts win the exemplar slots
     if (data[i][1] !== project.id) continue;
     if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
     hasArticles = true;
     var vd = String(data[i][11] || '');
-    if (vd === 'up' && feedback.ups.length < SCRAPER_FEEDBACK_EXAMPLES_MAX) {
-      feedback.ups.push(String(data[i][4]));
-    } else if (vd === 'down' && feedback.downs.length < SCRAPER_FEEDBACK_EXAMPLES_MAX) {
-      feedback.downs.push(String(data[i][4]));
+    if (vd === 'up' || vd === 'down') {
+      totalVerdicts++;
+      var side = vd === 'up' ? 'ups' : 'downs';
+      if (feedback[side].length < SCRAPER_FEEDBACK_EXAMPLES_MAX) feedback[side].push(String(data[i][4]));
+      if (rated[side].length < SCRAPER_DISTILL_TITLES_MAX) rated[side].push(String(data[i][4]));
     }
     if (data[i][10] !== '') continue;  // already scored
     pending.push({ row: i + 1, title: String(data[i][4]), source: String(data[i][5]),
                    snippet: String(data[i][8]) });
   }
   pending.reverse();  // keep the original oldest-first scoring order
+
+  // Distill when enough ratings exist AND the count changed since the last
+  // distillation. Runs at most once per Analyze cycle: the first invocation
+  // stores the new count, so the client's follow-up chunk calls skip it.
+  var aiCalls = 0;
+  var prefs = scGetPrefs_(ss, project.id);
+  var distilledCount = 0;
+  if (totalVerdicts >= SCRAPER_DISTILL_MIN_VERDICTS
+      && (!prefs || prefs.verdictsUsed !== totalVerdicts)) {
+    try {
+      var d = scDistillFeedback_(ss, user, project, rated, totalVerdicts);
+      aiCalls++;
+      prefs = { note: d.note, keywords: d.keywords, verdictsUsed: totalVerdicts };
+      distilledCount = totalVerdicts;
+    } catch (dErr) {
+      // Non-fatal: scoring proceeds with the previous note (or none). The next
+      // Analyze retries because the stored verdict count still won't match.
+    }
+  }
+  var prefsNote = prefs ? prefs.note : '';
+
   if (!pending.length) {
-    return { success: true, done: true, analyzed: 0, remaining: 0, hasArticles: hasArticles };
+    if (aiCalls) scLogUsage_(ss, user.email, aiCalls, 0);
+    return { success: true, done: true, analyzed: 0, remaining: 0, hasArticles: hasArticles,
+             distilled: distilledCount };
   }
 
   var analyzed = 0;
-  var aiCalls = 0;
-  while (pending.length && aiCalls < SCRAPER_ANALYZE_CALLS_PER_INVOCATION) {
+  while (pending.length && aiCalls < SCRAPER_ANALYZE_CALLS_PER_INVOCATION + (distilledCount ? 1 : 0)) {
     var batch = pending.splice(0, SCRAPER_ANALYZE_ARTICLES_PER_CALL);
-    var results = scScoreBatch_(project, batch, feedback);
+    var results = scScoreBatch_(project, batch, feedback, prefsNote);
     aiCalls++;
     results.forEach(function(r) {
       var idx = Number(r.i) - 1;
@@ -1240,7 +1360,8 @@ function analyzeArticles(sessionToken, projectId) {
   scLogUsage_(ss, user.email, aiCalls, 0);
   var done = pending.length === 0;
   if (done) dataAuditLog(user.email, 'analyze', 'project', project.id, analyzed + ' articles scored');
-  return { success: true, done: done, analyzed: analyzed, remaining: pending.length };
+  return { success: true, done: done, analyzed: analyzed, remaining: pending.length,
+           distilled: distilledCount };
 }
 
 /** Executive brief synthesized from the top-scored relevant articles. */
@@ -1269,8 +1390,10 @@ function previewBrief(sessionToken, projectId) {
   var lines = relevant.map(function(a, idx) {
     return (idx + 1) + '. [' + a.score + '] ' + a.title + ' (' + a.source + '): ' + a.summary;
   });
+  var brPrefs = scGetPrefs_(ss, project.id);
   var prompt = 'You are writing an executive brief for a busy reader monitoring this scope:\n'
     + scScopePrompt_(project) + '\n\n'
+    + scPrefsPrompt_(brPrefs ? brPrefs.note : '')
     + 'Source articles (relevance-scored):\n' + lines.join('\n') + '\n\n'
     + 'Write a plain-text executive brief: one short overview paragraph, then 4-8 concise '
     + 'bullet points (start each with "• ") grouping the most important developments. '

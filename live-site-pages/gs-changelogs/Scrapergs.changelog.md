@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 12/50`
+`Sections: 13/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.13g] — 2026-08-03 11:33:05 PM EST — v01.60r
+
+### Added
+- Your article ratings are now periodically distilled into a learned preference profile — a summary of what you value plus suggested search phrases, visible in the Preferences tab of your spreadsheet
+- News gathering (both regular and historical) now also searches using phrases learned from your ratings, so it finds more of what you actually care about
+- Relevance scoring and executive briefs now consider your learned preference profile alongside your recent ratings
 
 ## [v01.12g] — 2026-08-03 10:06:55 PM EST — v01.58r
 
