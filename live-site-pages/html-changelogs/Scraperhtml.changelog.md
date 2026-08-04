@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15w] — 2026-08-03 11:57:41 PM EST — v01.61r
+
+### Added
+- New "Rating status" window appears beside the article list while you rate — it shows each step of saving a rating live (tap registered, send attempts, retries, waits, saved) with elapsed times, so you can see exactly where a slow save is spending its time. Close it anytime with ×; it reappears on your next rating
 
 ## [v01.14w] — 2026-08-03 11:33:05 PM EST — v01.60r
 

@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.14w">
+  <meta name="build-version" content="v01.15w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -453,6 +453,33 @@
     .sc-vbtn:disabled { opacity: .35; cursor: default; }
     .sc-vbtn.on { opacity: 1; border-color: #2456a8; background: #eaf1fb; }
     .sc-vbtn.down.on { border-color: #b3392f; background: #fbeeed; }
+    /* Rating status log — docked right of the articles card; shows each
+       verdict-save step with elapsed ms for debugging slow saves */
+    #sc-vlog {
+      position: fixed; top: 4vh; right: 12px; z-index: 51; width: 250px;
+      max-height: 70vh; overflow-y: auto; display: none; box-sizing: border-box;
+      background: #101826; color: #cfe0f5; border-radius: 10px;
+      padding: 10px 12px; font-size: 11px; line-height: 1.55;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    }
+    #sc-vlog-head {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 6px; color: #8fb2dd; font-weight: bold;
+    }
+    #sc-vlog-close {
+      background: none; border: none; color: #8fb2dd; font-size: 15px;
+      cursor: pointer; padding: 0 2px; line-height: 1;
+    }
+    .sc-vlog-line { margin: 0 0 3px; word-break: break-word; }
+    .sc-vlog-line .t { color: #6e83a1; }
+    .sc-vlog-line.hd { color: #8fb2dd; margin-top: 7px; }
+    .sc-vlog-line.ok { color: #7fd79a; }
+    .sc-vlog-line.err { color: #f0a49b; }
+    @media (max-width: 1240px) { #sc-vlog { width: 200px; font-size: 10px; } }
+    @media (max-width: 760px) {
+      #sc-vlog { top: auto; bottom: 60px; right: 8px; width: 180px; max-height: 34vh; }
+    }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -681,6 +708,10 @@
       <div id="sc-brief" style="display:none;"></div>
       <div id="sc-articles-list"></div>
     </div>
+  </div>
+  <div id="sc-vlog">
+    <div id="sc-vlog-head"><span>Rating status</span><button id="sc-vlog-close" type="button" title="Hide">&times;</button></div>
+    <div id="sc-vlog-lines"></div>
   </div>
   <div id="sc-status-msg"></div>
 <!-- ══════════════ -->
@@ -4453,9 +4484,13 @@
     });
     $sc('sc-articles-close').addEventListener('click', function() {
       $sc('sc-articles-overlay').style.display = 'none';
+      $sc('sc-vlog').style.display = 'none';  // rating log lives with the articles view
     });
     $sc('sc-articles-overlay').addEventListener('click', function(ev) {
-      if (ev.target === this) this.style.display = 'none';
+      if (ev.target === this) { this.style.display = 'none'; $sc('sc-vlog').style.display = 'none'; }
+    });
+    $sc('sc-vlog-close').addEventListener('click', function() {
+      $sc('sc-vlog').style.display = 'none';  // reappears on the next rating tap
     });
     $sc('sc-brief-btn').addEventListener('click', scShowBrief);
     $sc('sc-articles-list').addEventListener('click', scVerdictClick);  // delegated 👍/👎 handler
@@ -4685,20 +4720,72 @@
     return '<span class="sc-score ' + cls + '">' + score + '</span>';
   }
 
+  // Rating status log — the docked panel right of the articles card. Each
+  // rating opens a numbered session with its own clock; every step logs with
+  // elapsed ms so slow saves show exactly where the time went.
+  var _scVlogSeq = 0;
+  function scVlogLine_(msg, cls, stamp) {
+    var panel = $sc('sc-vlog'), lines = $sc('sc-vlog-lines');
+    if (!panel || !lines) return;
+    panel.style.display = 'block';
+    var line = document.createElement('p');
+    line.className = 'sc-vlog-line' + (cls ? ' ' + cls : '');
+    if (stamp) {
+      var t = document.createElement('span');
+      t.className = 't';
+      t.textContent = stamp + ' ';
+      line.appendChild(t);
+    }
+    line.appendChild(document.createTextNode(msg));
+    lines.appendChild(line);
+    while (lines.childNodes.length > 60) lines.removeChild(lines.firstChild);
+    panel.scrollTop = panel.scrollHeight;
+  }
+  function scVlogSession(label) {
+    var t0 = Date.now();
+    var n = ++_scVlogSeq;
+    scVlogLine_('#' + n + ' ' + label, 'hd', '');
+    return function(msg, cls) {
+      scVlogLine_('#' + n + ' ' + msg, cls, '+' + (Date.now() - t0) + 'ms');
+    };
+  }
+
   // Verdict-save transport: retries once on transport failure (like scRetryOnce)
   // and once more when the server answers unknown_op — after a GAS redeploy,
   // Google's /exec serving can briefly flap between deployment versions, and a
   // stale instance doesn't know newly added actions. A short delay + re-send
   // usually lands on a fresh instance. Server writes are absolute values, so
-  // retries are idempotent.
-  function scSendVerdict(params) {
-    function call() { return _gasPost(params); }
-    return scRetryOnce(call).then(function(data) {
-      if (data && !data.success && data.error === 'unknown_op') {
-        return new Promise(function(res) { setTimeout(res, 2500); }).then(call);
-      }
-      return data;
-    });
+  // retries are idempotent. Each attempt reports to the rating status log.
+  function scSendVerdict(params, log) {
+    log = log || function() {};
+    var an = 0;  // sequential attempt numbering across both retry paths
+    function attempt() {
+      var n = ++an;
+      log('attempt ' + n + ': sending to server…');
+      var t = Date.now();
+      return _gasPost(params).then(function(data) {
+        log('attempt ' + n + ': reply in ' + (Date.now() - t) + 'ms'
+          + (data && data.success ? '' : ' (server said: ' + ((data && data.error) || 'unknown') + ')'),
+          data && data.success ? '' : 'err');
+        return data;
+      }, function(err) {
+        log('attempt ' + n + ': no response after ' + (Date.now() - t) + 'ms ('
+          + String((err && err.message) || err) + ')', 'err');
+        throw err;
+      });
+    }
+    return attempt()
+      .catch(function() {
+        log('transport failed — waiting 2.5s, then retrying…');
+        return new Promise(function(res) { setTimeout(res, 2500); }).then(attempt);
+      })
+      .then(function(data) {
+        if (data && !data.success && data.error === 'unknown_op') {
+          log('server is mid-update — waiting 2.5s, then retrying…');
+          return new Promise(function(res) { setTimeout(res, 2500); }).then(attempt);
+        }
+        return data;
+      });
   }
 
   // 👍/👎 feedback: tapping records a verdict (tapping the active one clears it).
@@ -4710,23 +4797,39 @@
     var verdict = btn.classList.contains('on') ? '' : btn.getAttribute('data-v');
     var btns = wrap.querySelectorAll('.sc-vbtn');
     for (var i = 0; i < btns.length; i++) btns[i].disabled = true;
+    var art = wrap.closest ? wrap.closest('.sc-art') : null;
+    var h4a = art ? (art.querySelector('h4 a') || art.querySelector('h4')) : null;  // anchor skips the score pill
+    var title = scStr28_(h4a ? h4a.textContent : wrap.getAttribute('data-id'));
+    var log = scVlogSession((verdict === 'up' ? '👍' : verdict === 'down' ? '👎' : 'clear rating')
+      + ' "' + title + '"');
+    log('tap registered — buttons locked');
     scSendVerdict({ action: 'setArticleVerdict', token: scToken(), projectId: _scArticlesProjectId,
-                    articleId: wrap.getAttribute('data-id'), verdict: verdict })
+                    articleId: wrap.getAttribute('data-id'), verdict: verdict }, log)
       .then(function(data) {
         if (!(data && data.success)) {
+          log('NOT saved — server rejected (' + ((data && data.error) || 'unknown') + ')', 'err');
           scToast(scErrMsg(data && data.error), true);
           return;
         }
+        log('saved ✓ (' + (data.verdict ? 'verdict: ' + data.verdict : 'rating cleared') + ')', 'ok');
         for (var i = 0; i < btns.length; i++) {
           btns[i].classList.toggle('on', !!data.verdict && btns[i].getAttribute('data-v') === data.verdict);
         }
       })
       .catch(function(err) {
+        log('NOT saved — gave up after retries', 'err');
         scToast('Could not save feedback (' + String((err && err.message) || err) + ').', true);
       })
       .then(function() {
+        log('buttons unlocked');
         for (var i = 0; i < btns.length; i++) btns[i].disabled = false;
       });
+  }
+
+  /** First ~28 chars of a title for compact rating-log labels. */
+  function scStr28_(s) {
+    s = String(s || '').trim();
+    return s.length > 28 ? s.substring(0, 28) + '…' : s;
   }
 
   function scOpenArticles(id) {
