@@ -1,4 +1,4 @@
-var VERSION = "v01.19g";
+var VERSION = "v01.20g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1284,6 +1284,20 @@ function scEnrichChunk_(ss, email, project) {
               cursor: 1, total: empty, enriched: 0, failed: 0, done: false };
   }
 
+  // Poison-URL recovery. UrlFetchApp has no timeout, so a single hanging site
+  // can carry the execution into Google's hard 6-minute kill — which is not a
+  // catchable exception; the script just stops, and nothing after the fetch
+  // runs. State is therefore persisted BEFORE every fetch with an `attempting`
+  // row marker: a leftover marker here means the previous execution died
+  // mid-fetch on that row, so count it unavailable and skip past it instead of
+  // re-hanging on it forever (the stall this replaced re-tried the same batch
+  // — and the same poison URL — indefinitely).
+  if (state.attempting != null) {
+    state.failed++;
+    state.cursor = state.attempting + 1;
+    state.attempting = null;
+  }
+
   var t0 = Date.now();
   var fetches = 0;
   var i = state.cursor;
@@ -1296,6 +1310,9 @@ function scEnrichChunk_(ss, email, project) {
     var url = String(data[i][3] || '');
     if (!/^https?:\/\//i.test(url)) { state.failed++; continue; }
     fetches++;
+    state.attempting = i;
+    state.cursor = i;
+    props.setProperty(key, JSON.stringify(state));  // survives a mid-fetch kill
     try {
       var resp = UrlFetchApp.fetch(url, {
         muteHttpExceptions: true, followRedirects: true,
@@ -1311,6 +1328,7 @@ function scEnrichChunk_(ss, email, project) {
     } catch (fErr) {
       state.failed++;
     }
+    state.attempting = null;
   }
   state.cursor = i;
   state.done = i >= data.length;
