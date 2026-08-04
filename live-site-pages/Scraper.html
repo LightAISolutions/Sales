@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.11w">
+  <meta name="build-version" content="v01.12w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -444,6 +444,15 @@
       white-space: pre-wrap; word-break: break-word; color: #1f2733;
     }
     #sc-brief-btn { padding: 7px 12px; font-size: 12px; margin-right: 8px; }
+    .sc-art-verdict { margin-top: 6px; display: flex; gap: 6px; }
+    .sc-vbtn {
+      border: 1px solid #d3dae4; background: #fff; border-radius: 999px;
+      padding: 2px 11px; font-size: 13px; line-height: 1.5; cursor: pointer; opacity: .7;
+    }
+    .sc-vbtn:hover { opacity: 1; }
+    .sc-vbtn:disabled { opacity: .35; cursor: default; }
+    .sc-vbtn.on { opacity: 1; border-color: #2456a8; background: #eaf1fb; }
+    .sc-vbtn.down.on { border-color: #b3392f; background: #fbeeed; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -4448,6 +4457,7 @@
       if (ev.target === this) this.style.display = 'none';
     });
     $sc('sc-brief-btn').addEventListener('click', scShowBrief);
+    $sc('sc-articles-list').addEventListener('click', scVerdictClick);  // delegated 👍/👎 handler
 
     // Frequency checkboxes (built once; custom option reveals the custom field)
     var grid = $sc('scf-freqs');
@@ -4670,6 +4680,34 @@
     return '<span class="sc-score ' + cls + '">' + score + '</span>';
   }
 
+  // 👍/👎 feedback: tapping records a verdict (tapping the active one clears it).
+  // Verdicts feed exemplars into every future Analyze scoring prompt server-side.
+  function scVerdictClick(ev) {
+    var btn = ev.target && ev.target.closest ? ev.target.closest('.sc-vbtn') : null;
+    if (!btn || btn.disabled || !_scArticlesProjectId) return;
+    var wrap = btn.parentNode;
+    var verdict = btn.classList.contains('on') ? '' : btn.getAttribute('data-v');
+    var btns = wrap.querySelectorAll('.sc-vbtn');
+    for (var i = 0; i < btns.length; i++) btns[i].disabled = true;
+    _gasPost({ action: 'setArticleVerdict', token: scToken(), projectId: _scArticlesProjectId,
+               articleId: wrap.getAttribute('data-id'), verdict: verdict })
+      .then(function(data) {
+        if (!(data && data.success)) {
+          scToast(scErrMsg(data && data.error), true);
+          return;
+        }
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].classList.toggle('on', !!data.verdict && btns[i].getAttribute('data-v') === data.verdict);
+        }
+      })
+      .catch(function(err) {
+        scToast('Could not save feedback (' + String((err && err.message) || err) + ').', true);
+      })
+      .then(function() {
+        for (var i = 0; i < btns.length; i++) btns[i].disabled = false;
+      });
+  }
+
   function scOpenArticles(id) {
     var proj = null;
     _scProjects.forEach(function(p) { if (p.id === id) proj = p; });
@@ -4705,6 +4743,10 @@
             + '<h4>' + scScoreChip(a.score) + '<a href="' + scEsc(a.url) + '" target="_blank" rel="noopener noreferrer">' + scEsc(a.title || a.url) + '</a></h4>'
             + '<div class="sc-art-meta">' + scEsc(a.source || '') + (a.publishedAt ? ' · ' + scEsc(a.publishedAt) : '') + '</div>'
             + body
+            + '<div class="sc-art-verdict" data-id="' + scEsc(String(a.id)) + '">'
+            + '<button type="button" class="sc-vbtn up' + (a.verdict === 'up' ? ' on' : '') + '" data-v="up" title="Relevant — score articles like this higher">👍</button>'
+            + '<button type="button" class="sc-vbtn down' + (a.verdict === 'down' ? ' on' : '') + '" data-v="down" title="Not relevant — score articles like this lower">👎</button>'
+            + '</div>'
             + '</div>';
         });
         list.innerHTML = html;

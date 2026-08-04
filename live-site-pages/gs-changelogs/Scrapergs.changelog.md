@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12g] — 2026-08-03 10:06:55 PM EST — v01.58r
+
+### Added
+- Article ratings (👍/👎) are now saved with each article and used as examples in future relevance scoring, so results improve as you rate more articles
+
+### Changed
+- The article list is now selected by relevance score across your whole collection instead of by most recently gathered
 
 ## [v01.11g] — 2026-08-03 06:43:09 AM EST — v01.56r
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.11g";
+var VERSION = "v01.12g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -350,7 +350,8 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'updateProject', 'setProjectStatus',
                                'compileNow', 'getCompileStatus', 'listArticles',
                                'analyzeArticles', 'previewBrief',
-                               'backfillNow', 'getBackfillStatus'];
+                               'backfillNow', 'getBackfillStatus',
+                               'setArticleVerdict'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -368,6 +369,7 @@ var SCRAPER_ANALYZE_ARTICLES_PER_CALL = 10;    // articles per AI request
 var SCRAPER_ANALYZE_CALLS_PER_INVOCATION = 1;
 var SCRAPER_RELEVANT_THRESHOLD = 50;           // score >= this counts as relevant
 var SCRAPER_BRIEF_TOP_N = 30;                  // top-scored articles fed into the executive brief
+var SCRAPER_FEEDBACK_EXAMPLES_MAX = 8;         // 👍/👎 exemplar titles per side injected into the scoring prompt
 
 // ── Phase 2: compilation engine tuning ──
 var SCRAPER_COMPILE_BATCH_FETCHES = 6;    // max URL fetches per compileNow call (client loops until done)
@@ -946,7 +948,7 @@ function listArticles(sessionToken, projectId, limit) {
   var max = Math.min(Number(limit) || SCRAPER_LIST_ARTICLES_MAX, SCRAPER_LIST_ARTICLES_MAX);
   var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
   var out = [];
-  for (var i = data.length - 1; i >= 1 && out.length < max; i--) {
+  for (var i = data.length - 1; i >= 1; i--) {
     if (data[i][1] !== projectId) continue;
     if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
     out.push({ id: data[i][0], url: data[i][3], title: data[i][4], source: data[i][5],
@@ -954,7 +956,41 @@ function listArticles(sessionToken, projectId, limit) {
       snippet: data[i][8], summary: data[i][9], score: data[i][10] === '' ? null : Number(data[i][10]),
       verdict: data[i][11] });
   }
+  // Cap AFTER sorting so the overlay shows the top-scored articles of the whole
+  // corpus — capping the reverse walk returned the 100 most recently *fetched*
+  // rows, which a big low-relevance backfill filled with junk. Stable sort keeps
+  // newest-first (from the reverse walk) within ties; unscored rows sort last.
+  out.sort(function(a, b) {
+    var as = a.score == null ? -1 : a.score;
+    var bs = b.score == null ? -1 : b.score;
+    return bs - as;
+  });
+  out = out.slice(0, max);
   return { success: true, articles: out };
+}
+
+/** Record 👍/👎 feedback on an article ('up' | 'down' | '' clears). The verdict
+    column feeds exemplars into every future scoring prompt (see scScoreBatch_). */
+function setArticleVerdict(sessionToken, projectId, articleId, verdict) {
+  var user = validateSessionForData(sessionToken, 'setArticleVerdict');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var v = String(verdict || '').toLowerCase();
+  if (v !== 'up' && v !== 'down' && v !== '') return { success: false, error: 'bad_verdict' };
+  var sheet = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][0] !== articleId) continue;
+    if (data[i][1] !== projectId) continue;
+    if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    sheet.getRange(i + 1, 12).setValue(v);
+    dataAuditLog(user.email, 'verdict', 'article', String(articleId), v || 'cleared');
+    return { success: true, verdict: v };
+  }
+  return { success: false, error: 'not_found' };
 }
 
 // ── Phase 3: AI layer ───────────────────────────────────────────────────
@@ -1115,8 +1151,24 @@ function scScopePrompt_(project) {
   return lines.join('\n');
 }
 
+/** 👍/👎 exemplar titles as prompt lines — the immediate "learning" channel:
+    every scoring batch sees what the user personally confirmed or rejected. */
+function scFeedbackPrompt_(feedback) {
+  if (!feedback || (!feedback.ups.length && !feedback.downs.length)) return '';
+  var fb = 'USER FEEDBACK (articles this user personally rated in this project):\n';
+  if (feedback.ups.length) {
+    fb += 'Rated RELEVANT — score articles like these HIGH:\n'
+      + feedback.ups.map(function(t) { return '- ' + t; }).join('\n') + '\n';
+  }
+  if (feedback.downs.length) {
+    fb += 'Rated NOT RELEVANT — score articles like these LOW:\n'
+      + feedback.downs.map(function(t) { return '- ' + t; }).join('\n') + '\n';
+  }
+  return fb + '\n';
+}
+
 /** Score one batch of articles against the project scope. Returns parsed items. */
-function scScoreBatch_(project, batch) {
+function scScoreBatch_(project, batch, feedback) {
   var lines = [];
   batch.forEach(function(a, idx) {
     lines.push((idx + 1) + '. ' + a.title + ' — ' + a.source
@@ -1124,6 +1176,7 @@ function scScoreBatch_(project, batch) {
   });
   var prompt = 'You are a research analyst filtering news for a monitoring project.\n\n'
     + 'PROJECT SCOPE:\n' + scScopePrompt_(project) + '\n\n'
+    + scFeedbackPrompt_(feedback)
     + 'ARTICLES:\n' + lines.join('\n') + '\n\n'
     + 'For each article, rate its relevance to the project scope from 0 to 100 '
     + '(100 = squarely on-topic, 0 = unrelated; anything matching the "Exclude coverage of" list scores under 20). '
@@ -1149,14 +1202,22 @@ function analyzeArticles(sessionToken, projectId) {
   var data = sheet.getDataRange().getValues();
   var pending = [];
   var hasArticles = false;
-  for (var i = 1; i < data.length; i++) {
+  var feedback = { ups: [], downs: [] };
+  for (var i = data.length - 1; i >= 1; i--) {  // reverse: newest verdicts win the exemplar slots
     if (data[i][1] !== project.id) continue;
     if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
     hasArticles = true;
+    var vd = String(data[i][11] || '');
+    if (vd === 'up' && feedback.ups.length < SCRAPER_FEEDBACK_EXAMPLES_MAX) {
+      feedback.ups.push(String(data[i][4]));
+    } else if (vd === 'down' && feedback.downs.length < SCRAPER_FEEDBACK_EXAMPLES_MAX) {
+      feedback.downs.push(String(data[i][4]));
+    }
     if (data[i][10] !== '') continue;  // already scored
     pending.push({ row: i + 1, title: String(data[i][4]), source: String(data[i][5]),
                    snippet: String(data[i][8]) });
   }
+  pending.reverse();  // keep the original oldest-first scoring order
   if (!pending.length) {
     return { success: true, done: true, analyzed: 0, remaining: 0, hasArticles: hasArticles };
   }
@@ -1165,7 +1226,7 @@ function analyzeArticles(sessionToken, projectId) {
   var aiCalls = 0;
   while (pending.length && aiCalls < SCRAPER_ANALYZE_CALLS_PER_INVOCATION) {
     var batch = pending.splice(0, SCRAPER_ANALYZE_ARTICLES_PER_CALL);
-    var results = scScoreBatch_(project, batch);
+    var results = scScoreBatch_(project, batch, feedback);
     aiCalls++;
     results.forEach(function(r) {
       var idx = Number(r.i) - 1;
@@ -1234,6 +1295,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));
   if (op === 'backfillNow') return backfillNow(sessionToken, param('projectId'));
   if (op === 'getBackfillStatus') return getBackfillStatus(sessionToken, param('projectId'));
+  if (op === 'setArticleVerdict') return setArticleVerdict(sessionToken, param('projectId'), param('articleId'), param('verdict'));
   return { success: false, error: 'unknown_op' };
 }
 
