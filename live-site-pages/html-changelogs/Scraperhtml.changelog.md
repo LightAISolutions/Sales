@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 22/50`
+`Sections: 23/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.23w] — 2026-08-04 04:53:53 PM EST — v01.71r
+
+### Added
+- The Stats panel now shows, under each score band, how many articles had a preview versus title-only — so you can see whether missing previews explain low scores
+- The Stats footer now shows how many articles qualify for archiving and how many are already archived
+- New "Archive junk" button on each project card: shows the exact count first ("Archive 1781? Tap again"), then moves unrated articles scoring under 10 out of your collection with a progress panel and a result message
 
 ## [v01.22w] — 2026-08-04 04:01:42 PM EST — v01.70r
 

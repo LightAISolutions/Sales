@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.22w">
+  <meta name="build-version" content="v01.23w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -554,7 +554,8 @@
     .sc-stat-headline { text-align: center; margin: 4px 0 14px; }
     .sc-stat-headline b { font-size: 34px; color: #2456a8; }
     .sc-stat-headline span { display: block; color: #55606e; font-size: 12px; margin-top: 2px; }
-    .sc-stat-row { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; font-size: 12px; }
+    .sc-stat-row { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; font-size: 12px; }
+    .sc-stat-sub { text-align: right; color: #98a1b0; font-size: 10.5px; margin: 0 0 7px 0; }
     .sc-stat-label { width: 64px; color: #37455a; text-align: right; flex: none; }
     .sc-stat-track { flex: 1; background: #eef1f5; border-radius: 999px; height: 16px; overflow: hidden; }
     .sc-stat-fill { height: 100%; border-radius: 999px; min-width: 2px; }
@@ -4564,6 +4565,7 @@
         + '<button class="sc-btn" type="button" data-act="articles" data-id="' + scEsc(p.id) + '">Articles</button>'
         + '<button class="sc-btn" type="button" data-act="calibrate" data-id="' + scEsc(p.id) + '">Calibrate</button>'
         + '<button class="sc-btn" type="button" data-act="scorestats" data-id="' + scEsc(p.id) + '" title="Score distribution and corpus health">Stats</button>'
+        + '<button class="sc-btn" type="button" data-act="archivejunk" data-id="' + scEsc(p.id) + '" title="Move unrated articles scoring under 10 out of the collection (reversible — they move to the ArticlesArchive tab and are never re-imported)">Archive junk</button>'
         + '<button class="sc-btn" type="button" data-act="edit" data-id="' + scEsc(p.id) + '">Edit</button>'
         + '<button class="sc-btn" type="button" data-act="status" data-to="' + pauseTo + '" data-id="' + scEsc(p.id) + '">' + pauseLabel + '</button>'
         + '<button class="sc-btn subtle" type="button" data-act="archive" data-id="' + scEsc(p.id) + '">Archive</button>'
@@ -4679,6 +4681,8 @@
         scOpenCalibration(id);
       } else if (act === 'scorestats') {
         scOpenStats(id);
+      } else if (act === 'archivejunk') {
+        scRunArchiveJunk(id, btn);
       } else if (act === 'status') {
         scSetStatus(id, btn.getAttribute('data-to'), btn);
       } else if (act === 'archive') {
@@ -4892,11 +4896,11 @@
     }
     var over20Pct = Math.round((s.over20 / s.scored) * 1000) / 10;
     var bands = [
-      ['0–9', s.b0, '#b3392f', 'unrelated'],
-      ['10–29', s.b10, '#9a6b00', 'weak connection'],
-      ['30–49', s.b30, '#2f6fdb', 'adjacent context'],
-      ['50–79', s.b50, '#1e7b34', 'relevant subtopic'],
-      ['80–100', s.b80, '#0f5132', 'squarely on-topic']
+      ['0–9', s.b0, '#b3392f', 'unrelated', s.p0],
+      ['10–29', s.b10, '#9a6b00', 'weak connection', s.p10],
+      ['30–49', s.b30, '#2f6fdb', 'adjacent context', s.p30],
+      ['50–79', s.b50, '#1e7b34', 'relevant subtopic', s.p50],
+      ['80–100', s.b80, '#0f5132', 'squarely on-topic', s.p80]
     ];
     var max = 1;
     bands.forEach(function(b) { if (b[1] > max) max = b[1]; });
@@ -4904,18 +4908,106 @@
       + '<span>of scored articles score 20 or higher (' + s.over20 + ' of ' + s.scored + ')</span></div>';
     bands.forEach(function(b) {
       var pct = Math.round((b[1] / s.scored) * 1000) / 10;
+      var prev = typeof b[4] === 'number' ? b[4] : null;
       html += '<div class="sc-stat-row">'
         + '<div class="sc-stat-label" title="' + scEsc(b[3]) + '">' + b[0] + '</div>'
         + '<div class="sc-stat-track"><div class="sc-stat-fill" style="width:' + Math.max(1, (b[1] / max) * 100) + '%;background:' + b[2] + '"></div></div>'
         + '<div class="sc-stat-count">' + b[1] + ' (' + pct + '%)</div>'
-        + '</div>';
+        + '</div>'
+        + (prev !== null && b[1]
+            ? '<div class="sc-stat-sub">' + prev + ' with preview · ' + (b[1] - prev) + ' title-only</div>'
+            : '<div class="sc-stat-sub"></div>');
     });
     html += '<div class="sc-stat-foot">'
       + 'Scored: ' + s.scored + ' of ' + s.total + (s.unscored ? ' (' + s.unscored + ' unscored — run Analyze)' : '') + '<br>'
       + 'Article previews: ' + s.withSnippet + ' of ' + s.total + ' (' + Math.round((s.withSnippet / Math.max(1, s.total)) * 100) + '%)<br>'
       + 'Your ratings: ' + s.ups + ' 👍 · ' + s.downs + ' 👎 &nbsp;·&nbsp; Unrated articles worth calibrating: ' + s.ratablePool
+      + (typeof s.archivable === 'number' && s.archivable
+          ? '<br>Archivable junk (unrated, under 10): ' + s.archivable + ' — use <b>Archive junk</b> on the project card'
+          : '')
+      + (typeof s.archived === 'number' && s.archived
+          ? '<br>Already archived: ' + s.archived
+          : '')
       + '</div>';
     $sc('sc-stats-body').innerHTML = html;
+  }
+
+  // ── Archive junk: move unrated sub-10 articles out of the collection ──
+  // Two-tap confirm (no browser confirm() per coding guidelines): the first
+  // tap fetches the exact count so the user confirms a number, not a guess;
+  // the second tap runs the single-pass server move. Archived rows land in
+  // the ArticlesArchive tab and stay in the dedupe set, so Compile/Backfill
+  // can never re-import them.
+  var _scJunkTimer = null;
+  function scRunArchiveJunk(id, btn) {
+    if (btn.getAttribute('data-running') === '1') return;
+    if (btn.getAttribute('data-armed') === '1') {
+      if (_scJunkTimer) clearTimeout(_scJunkTimer);
+      btn.removeAttribute('data-armed');
+      btn.style.color = '';
+      btn.setAttribute('data-running', '1');
+      btn.disabled = true;
+      btn.textContent = 'Archiving…';
+      scProgUpdate(id, 'Archiving junk articles', null, 'Moving unrated articles scoring under 10…');
+      scRetryOnce(function() {
+        return _gasPost({ action: 'archiveJunk', token: scToken(), projectId: id });
+      })
+        .then(function(data) {
+          if (!(data && data.success)) {
+            var appErr = new Error('app'); appErr.appCode = (data && data.error) || 'unknown';
+            throw appErr;
+          }
+          scProgDone(id, data.archived + ' archived · ' + data.remaining + ' remain');
+          scToast(data.archived
+            ? 'Archived ' + data.archived + ' article' + (data.archived === 1 ? '' : 's')
+              + ' — ' + data.remaining + ' remain in your collection.'
+            : 'Nothing to archive — no unrated articles scoring under 10.');
+        })
+        .catch(function(err) {
+          scProgFail_(id, 'Archive did not finish — safe to retry');
+          scToast(err && err.appCode
+            ? scErrMsg(err.appCode)
+            : 'Could not reach the server (' + String((err && err.message) || err) + '). Safe to retry.', true);
+        })
+        .then(function() {
+          btn.disabled = false;
+          btn.removeAttribute('data-running');
+          btn.textContent = 'Archive junk';
+        });
+      return;
+    }
+    // First tap: fetch the count, then arm the button with it.
+    btn.disabled = true;
+    btn.textContent = 'Counting…';
+    _gasPost({ action: 'getScoreStats', token: scToken(), projectId: id })
+      .then(function(data) {
+        btn.disabled = false;
+        if (!(data && data.success)) {
+          btn.textContent = 'Archive junk';
+          scToast(scErrMsg(data && data.error), true);
+          return;
+        }
+        var n = data.stats.archivable || 0;
+        if (!n) {
+          btn.textContent = 'Archive junk';
+          scToast('Nothing to archive — no unrated articles scoring under 10.');
+          return;
+        }
+        btn.setAttribute('data-armed', '1');
+        btn.textContent = 'Archive ' + n + '? Tap again';
+        btn.style.color = '#b3261e';
+        if (_scJunkTimer) clearTimeout(_scJunkTimer);
+        _scJunkTimer = setTimeout(function() {
+          btn.removeAttribute('data-armed');
+          btn.textContent = 'Archive junk';
+          btn.style.color = '';
+        }, 6000);
+      })
+      .catch(function(err) {
+        btn.disabled = false;
+        btn.textContent = 'Archive junk';
+        scToast('Could not reach the server (' + scEsc(String((err && err.message) || err)) + ').', true);
+      });
   }
 
   // ── Enrich: harvest publisher abstracts for snippet-less articles ──

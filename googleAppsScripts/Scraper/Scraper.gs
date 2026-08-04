@@ -1,4 +1,4 @@
-var VERSION = "v01.21g";
+var VERSION = "v01.22g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -327,7 +327,8 @@ var SCRAPER_TABS = {
   REPORTS: 'Reports',
   PROFILES: 'Profiles',
   PREFERENCES: 'Preferences',
-  USAGE: 'UsageLog'
+  USAGE: 'UsageLog',
+  ARCHIVE: 'ArticlesArchive'
 };
 
 var SCRAPER_TAB_HEADERS = {
@@ -343,7 +344,10 @@ var SCRAPER_TAB_HEADERS = {
   Profiles: ['Email', 'Drive Folder ID', 'Display Name', 'Created At'],
   Preferences: ['Project ID', 'Owner', 'Learned Preferences', 'Suggested Keywords',
                 'Verdicts Used', 'Distilled At'],
-  UsageLog: ['Date', 'Owner', 'AI Calls', 'Fetch Calls', 'Notes']
+  UsageLog: ['Date', 'Owner', 'AI Calls', 'Fetch Calls', 'Notes'],
+  ArticlesArchive: ['Article ID', 'Project ID', 'Owner', 'URL', 'Title', 'Source',
+                    'Published At', 'Fetched At', 'Snippet', 'Summary', 'Relevance Score',
+                    'User Verdict', 'Report ID', 'Archived At']
 };
 
 var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual', 'annual', 'custom'];
@@ -355,7 +359,7 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'analyzeArticles', 'previewBrief',
                                'backfillNow', 'getBackfillStatus', 'enrichNow',
                                'setArticleVerdict', 'distillPreferences', 'resetScores',
-                               'getScoreStats'];
+                               'getScoreStats', 'archiveJunk'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -761,12 +765,22 @@ function scParseFeed_(xmlText, fallbackSource) {
   return items;
 }
 
-/** Existing article URLs for a project (dedupe set as an object map). */
+/** Existing article URLs for a project (dedupe set as an object map).
+    Includes the ArticlesArchive tab so Compile/Backfill can never re-import
+    an article the user archived as irrelevant — without this, the next
+    Backfill would resurrect the whole archived junk pile. */
 function scExistingArticleUrls_(ss, projectId) {
   var map = {};
   var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
   for (var i = 1; i < data.length; i++) {
     if (data[i][1] === projectId) map[String(data[i][3])] = true;
+  }
+  var archSheet = ss.getSheetByName(SCRAPER_TABS.ARCHIVE);
+  if (archSheet) {
+    var arch = archSheet.getDataRange().getValues();
+    for (var a = 1; a < arch.length; a++) {
+      if (arch[a][1] === projectId) map[String(arch[a][3])] = true;
+    }
   }
   return map;
 }
@@ -1239,12 +1253,14 @@ function getScoreStats(sessionToken, projectId) {
   var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
   var s = { total: 0, scored: 0, unscored: 0, withSnippet: 0, over20: 0,
             b0: 0, b10: 0, b30: 0, b50: 0, b80: 0,
-            ups: 0, downs: 0, ratablePool: 0 };
+            p0: 0, p10: 0, p30: 0, p50: 0, p80: 0,
+            ups: 0, downs: 0, ratablePool: 0, archivable: 0, archived: 0 };
   for (var i = 1; i < data.length; i++) {
     if (data[i][1] !== project.id) continue;
     if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
     s.total++;
-    if (data[i][8] !== '') s.withSnippet++;
+    var hasPrev = data[i][8] !== '';
+    if (hasPrev) s.withSnippet++;
     var vd = String(data[i][11] || '');
     if (vd === 'up') s.ups++;
     else if (vd === 'down') s.downs++;
@@ -1252,14 +1268,98 @@ function getScoreStats(sessionToken, projectId) {
     var sc = Number(data[i][10]);
     s.scored++;
     if (sc >= 20) s.over20++;
-    if (sc < 10) s.b0++;
-    else if (sc < 30) s.b10++;
-    else if (sc < 50) s.b30++;
-    else if (sc < 80) s.b50++;
-    else s.b80++;
+    if (sc < 10) { s.b0++; if (hasPrev) s.p0++; if (!vd) s.archivable++; }
+    else if (sc < 30) { s.b10++; if (hasPrev) s.p10++; }
+    else if (sc < 50) { s.b30++; if (hasPrev) s.p30++; }
+    else if (sc < 80) { s.b50++; if (hasPrev) s.p50++; }
+    else { s.b80++; if (hasPrev) s.p80++; }
     if (!vd && sc >= SCRAPER_CALIB_MIN_SCORE) s.ratablePool++;
   }
+  var archSheet = ss.getSheetByName(SCRAPER_TABS.ARCHIVE);
+  if (archSheet && archSheet.getLastRow() > 1) {
+    var arch = archSheet.getRange(2, 2, archSheet.getLastRow() - 1, 2).getValues();
+    for (var a = 0; a < arch.length; a++) {
+      if (arch[a][0] === project.id
+          && String(arch[a][1]).toLowerCase() === user.email.toLowerCase()) s.archived++;
+    }
+  }
   return { success: true, stats: s };
+}
+
+/** Archive the confidently-irrelevant articles: scored under 10 AND unrated.
+    User-rated articles are never archived (they are the training data), and
+    unscored articles are never archived (no judgment exists yet). Rows move
+    to the ArticlesArchive tab — physically shrinking the Articles tab so
+    every collection-wide pass (list, calibration, Enrich, Analyze, Re-score,
+    Stats, briefs) gets faster and cheaper. Archived URLs stay in the dedupe
+    set (scExistingArticleUrls_), so Compile/Backfill cannot re-import them.
+    Single-pass (read → append to archive → rewrite Articles), guarded by a
+    script lock; archive append is idempotent by Article ID so a rare
+    mid-operation death cannot duplicate rows on retry. */
+function archiveJunk(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'archiveJunk');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return { success: false, error: 'busy' };
+  try {
+    var sheet = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+    var arch = ss.getSheetByName(SCRAPER_TABS.ARCHIVE);
+    var data = sheet.getDataRange().getValues();
+    var keep = [], move = [];
+    var now = new Date().toISOString();
+    for (var i = 1; i < data.length; i++) {
+      var r = data[i];
+      var mine = r[1] === project.id
+        && String(r[2]).toLowerCase() === user.email.toLowerCase();
+      var unrated = !String(r[11] || '');
+      var scored = r[10] !== '';
+      if (mine && scored && unrated && Number(r[10]) < SCRAPER_CALIB_MIN_SCORE) {
+        move.push(r.slice(0, 13).concat([now]));
+      } else {
+        keep.push(r);
+      }
+    }
+    var remaining = 0;
+    for (var k = 0; k < keep.length; k++) {
+      if (keep[k][1] === project.id
+          && String(keep[k][2]).toLowerCase() === user.email.toLowerCase()) remaining++;
+    }
+    if (!move.length) return { success: true, archived: 0, remaining: remaining };
+
+    // Idempotent append: skip rows whose Article ID is already archived
+    // (crash-recovery — a prior run may have appended but died before the
+    // Articles rewrite below).
+    var have = {};
+    if (arch.getLastRow() > 1) {
+      var ids = arch.getRange(2, 1, arch.getLastRow() - 1, 1).getValues();
+      for (var d = 0; d < ids.length; d++) have[String(ids[d][0])] = true;
+    }
+    var fresh = move.filter(function(m) { return !have[String(m[0])]; });
+    if (fresh.length) {
+      arch.getRange(arch.getLastRow() + 1, 1, fresh.length, fresh[0].length).setValues(fresh);
+    }
+
+    // Rewrite the Articles tab: header + kept rows in one write.
+    var all = [data[0]].concat(keep);
+    sheet.clearContents();
+    sheet.getRange(1, 1, all.length, data[0].length).setValues(all);
+
+    // The Enrich cursor is a row index into the pre-archive layout — drop it
+    // so the next Enrich re-scans cleanly. (Analyze/Compile/Backfill state
+    // is not row-indexed and stays valid.)
+    PropertiesService.getScriptProperties()
+      .deleteProperty(SCRAPER_ENRICH_STATE_PREFIX + project.id);
+
+    return { success: true, archived: move.length, remaining: remaining };
+  } finally {
+    lock.releaseLock();
+  }
 }
 
 /** Publisher abstract from a news page's HTML head: og:description first,
@@ -1966,6 +2066,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'distillPreferences') return distillPreferences(sessionToken, param('projectId'));
   if (op === 'enrichNow') return enrichNow(sessionToken, param('projectId'));
   if (op === 'getScoreStats') return getScoreStats(sessionToken, param('projectId'));
+  if (op === 'archiveJunk') return archiveJunk(sessionToken, param('projectId'));
   if (op === 'resetScores') return resetScores(sessionToken, param('projectId'));
   if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));
   if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));
