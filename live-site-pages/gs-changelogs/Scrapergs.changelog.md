@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16g] — 2026-08-04 01:33:25 AM EST — v01.64r
+
+### Changed
+- Calibration no longer shows very low-scoring articles (under 10) — rating obvious junk teaches the scorer almost nothing
+- When the worthwhile articles run out, the calibration queue now ends instead of filling up with low-scoring leftovers — low scorers only ever appear as a small share of the mix
 
 ## [v01.15g] — 2026-08-04 01:17:17 AM EST — v01.63r
 

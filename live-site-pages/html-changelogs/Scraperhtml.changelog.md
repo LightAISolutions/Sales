@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 17/50`
+`Sections: 18/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.18w] — 2026-08-04 01:33:25 AM EST — v01.64r
+
+### Changed
+- Calibration now explains clearly when there's nothing worthwhile left to rate, and points to Compile + Analyze to bring in fresh articles
 
 ## [v01.17w] — 2026-08-04 01:17:17 AM EST — v01.63r
 

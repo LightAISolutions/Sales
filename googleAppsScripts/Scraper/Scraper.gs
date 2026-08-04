@@ -1,4 +1,4 @@
-var VERSION = "v01.15g";
+var VERSION = "v01.16g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -377,6 +377,7 @@ var SCRAPER_FEEDBACK_EXAMPLES_MAX = 8;         // 👍/👎 exemplar titles per 
 var SCRAPER_DISTILL_MIN_VERDICTS = 3;          // don't distill until at least this many total ratings exist
 var SCRAPER_DISTILL_TITLES_MAX = 40;           // rated titles per side fed into the distillation prompt
 var SCRAPER_PREFS_NOTE_MAX = 1500;             // stored learned-preferences note cap (chars)
+var SCRAPER_CALIB_MIN_SCORE = 10;              // calibration never serves scores below this floor
 var SCRAPER_PREFS_KEYWORDS_MAX = 12;           // stored suggested search keywords cap (incl. adjacent topics)
 
 // ── Phase 2: compilation engine tuning ──
@@ -994,6 +995,37 @@ function getBackfillStatus(sessionToken, projectId) {
     startedAt: state.startedAt, finishedAt: state.finishedAt || '' } };
 }
 
+/** Calibration band mixer (pure — unit-testable). Splits scored articles into
+    mid (30-70) / high (>70) / low (<30, already floored at
+    SCRAPER_CALIB_MIN_SCORE upstream) and interleaves ~60/20/20. The low band
+    NEVER substitutes for empty mid/high bands: once the informative bands run
+    dry the queue ends, instead of degrading into a junk-confirmation feed —
+    ratings on articles the scorer already dismissed teach it almost nothing.
+    Empty mid/high slots borrow from each other; empty low slots borrow from
+    mid/high. Input order (newest first) is preserved within bands. */
+function scCalibMix_(articles, max) {
+  var mid = [], hi = [], lo = [];
+  articles.forEach(function(a) {
+    if (a.score > 70) hi.push(a);
+    else if (a.score < 30) lo.push(a);
+    else mid.push(a);
+  });
+  var bands = { mid: mid, hi: hi, lo: lo };
+  var pattern = ['mid', 'mid', 'mid', 'hi', 'lo'];
+  var picked = [];
+  for (var pi = 0; picked.length < max && (mid.length || hi.length); pi++) {
+    var want = pattern[pi % pattern.length];
+    var b = bands[want];
+    if (!b.length) {
+      if (want === 'lo') b = mid.length ? mid : hi;
+      else b = want === 'mid' ? hi : mid;
+    }
+    if (!b.length) continue;  // informative bands dry mid-cycle — loop condition ends it
+    picked.push(b.shift());
+  }
+  return picked;
+}
+
 /** Articles for a project (owner only, capped).
     Standard mode: top-scored list with optional filters — minScore, days
     (fetched within N days), q (keyword needle over title/snippet/summary/source).
@@ -1021,6 +1053,9 @@ function listArticles(sessionToken, projectId, limit, mode, minScore, days, q) {
     if (calib) {
       if (data[i][11]) continue;         // calibration: unrated only
       if (data[i][10] === '') continue;  // calibration: needs a score for banding
+      // Sub-floor articles are excluded entirely: the scorer is already
+      // confident they're junk, so confirming with 👎 teaches almost nothing.
+      if (Number(data[i][10]) < SCRAPER_CALIB_MIN_SCORE) continue;
     } else {
       if (minS != null && (data[i][10] === '' || Number(data[i][10]) < minS)) continue;
       if (maxAgeMs && (!data[i][7] || Date.now() - new Date(data[i][7]).getTime() > maxAgeMs)) continue;
@@ -1033,22 +1068,8 @@ function listArticles(sessionToken, projectId, limit, mode, minScore, days, q) {
       verdict: data[i][11] });
   }
   if (calib) {
-    // Band split preserves the reverse walk's newest-first order within bands.
-    var mid = [], hi = [], lo = [];
-    out.forEach(function(a) {
-      if (a.score > 70) hi.push(a);
-      else if (a.score < 30) lo.push(a);
-      else mid.push(a);
-    });
-    var bands = { mid: mid, hi: hi, lo: lo };
-    var pattern = ['mid', 'mid', 'mid', 'hi', 'lo'];  // ~60/20/20 variety mix
-    var picked = [];
-    for (var pi = 0; picked.length < max && (mid.length || hi.length || lo.length); pi++) {
-      var b = bands[pattern[pi % pattern.length]];
-      if (!b.length) b = mid.length ? mid : (hi.length ? hi : lo);
-      picked.push(b.shift());
-    }
-    return { success: true, articles: picked, calibration: true, unratedTotal: out.length };
+    return { success: true, articles: scCalibMix_(out, max), calibration: true,
+             unratedTotal: out.length };
   }
   // Cap AFTER sorting so the overlay shows the top-scored articles of the whole
   // corpus — capping the reverse walk returned the 100 most recently *fetched*
