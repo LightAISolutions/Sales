@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.19w">
+  <meta name="build-version" content="v01.20w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -512,6 +512,32 @@
     .sc-sugg-chip.added { opacity: .55; }
     .sc-art.sc-art-out { opacity: 0; transition: opacity .25s; }
     .sc-chip-next { background: #eef7ee; color: #1e6b30; border-color: #cde5cf; }
+    .sc-sugg-undo {
+      border: none; background: none; color: #b3392f; font-weight: bold;
+      cursor: pointer; font-size: 12px; padding: 0 0 0 5px;
+    }
+    /* Action progress bars — fixed bottom-left stack, above the overlays so
+       Re-score progress stays visible from calibration mode */
+    #sc-prog-stack {
+      position: fixed; left: 12px; bottom: 44px; z-index: 60;  /* above the bottom-left version pill */
+      display: flex; flex-direction: column; gap: 8px; width: 270px;
+    }
+    .sc-progress {
+      background: #101826; color: #dbe7f7; border-radius: 10px; padding: 9px 12px;
+      font-size: 11px; box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    }
+    .sc-prog-head { display: flex; justify-content: space-between; margin-bottom: 5px; font-weight: bold; }
+    .sc-prog-time { color: #8fb2dd; font-weight: normal; }
+    .sc-prog-track { height: 6px; border-radius: 999px; background: #24324a; overflow: hidden; }
+    .sc-prog-fill {
+      height: 100%; border-radius: 999px; background: #4d8df0;
+      width: 0%; transition: width .4s;
+    }
+    .sc-prog-fill.indet { width: 40%; animation: scProgSlide 1.2s linear infinite; }
+    @keyframes scProgSlide { 0% { margin-left: -40%; } 100% { margin-left: 100%; } }
+    .sc-prog-stats { margin-top: 5px; color: #9fb3cd; }
+    .sc-progress.done .sc-prog-fill { background: #37b06a; }
+    @media (max-width: 760px) { #sc-prog-stack { width: 210px; left: 8px; bottom: 8px; } }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -764,6 +790,7 @@
     <div id="sc-vlog-head"><span>Rating status</span><button id="sc-vlog-close" type="button" title="Hide">&times;</button></div>
     <div id="sc-vlog-lines"></div>
   </div>
+  <div id="sc-prog-stack"></div>
   <div id="sc-status-msg"></div>
 <!-- ══════════════ -->
 <!-- PROJECT END -->
@@ -4570,8 +4597,9 @@
     });
     $sc('sc-cal-rescore-btn').addEventListener('click', function() { scCalRescore_(this); });
     $sc('sc-learned').addEventListener('click', function(ev) {
-      var add = ev.target && ev.target.closest ? ev.target.closest('.sc-sugg-add') : null;
-      if (add && !add.disabled) scCalAddSuggestion_(add);
+      var t = ev.target && ev.target.closest ? ev.target.closest('.sc-sugg-add, .sc-sugg-undo') : null;
+      if (!t || t.disabled) return;
+      scCalToggleSuggestion_(t, t.classList.contains('sc-sugg-add') ? 'add' : 'remove');
     });
 
     // Frequency checkboxes (built once; custom option reveals the custom field)
@@ -4638,6 +4666,65 @@
     });
   }
 
+  // ── Action progress bars ──
+  // One bar per project in the fixed bottom-left stack: label, fill bar
+  // (percent when the total is known, sliding stripe when not), stats line,
+  // and a live elapsed clock. scProgDone() turns it green and fades it out.
+  var _scProg = {};
+  function scProgShow(projId, label) {
+    var key = String(projId);
+    var p = _scProg[key];
+    if (!p) {
+      var el = document.createElement('div');
+      el.className = 'sc-progress';
+      el.innerHTML = '<div class="sc-prog-head"><span class="sc-prog-label"></span>'
+        + '<span class="sc-prog-time">0s</span></div>'
+        + '<div class="sc-prog-track"><div class="sc-prog-fill indet"></div></div>'
+        + '<div class="sc-prog-stats">Starting…</div>';
+      $sc('sc-prog-stack').appendChild(el);
+      p = _scProg[key] = { el: el, t0: Date.now(), timer: null };
+      p.timer = setInterval(function() {
+        var s = Math.floor((Date.now() - p.t0) / 1000);
+        p.el.querySelector('.sc-prog-time').textContent =
+          s >= 60 ? Math.floor(s / 60) + 'm ' + (s % 60) + 's' : s + 's';
+      }, 1000);
+    }
+    p.el.querySelector('.sc-prog-label').textContent = label;
+    return p;
+  }
+  function scProgUpdate(projId, label, pct, stats) {
+    var p = scProgShow(projId, label);
+    var fill = p.el.querySelector('.sc-prog-fill');
+    if (pct == null) fill.classList.add('indet');
+    else {
+      fill.classList.remove('indet');
+      fill.style.width = Math.max(2, Math.min(100, pct)) + '%';
+    }
+    if (stats) p.el.querySelector('.sc-prog-stats').textContent = stats;
+  }
+  function scProgDone(projId, stats) {
+    var key = String(projId);
+    var p = _scProg[key];
+    if (!p) return;
+    clearInterval(p.timer);
+    delete _scProg[key];
+    p.el.classList.add('done');
+    var fill = p.el.querySelector('.sc-prog-fill');
+    fill.classList.remove('indet');
+    fill.style.width = '100%';
+    if (stats) p.el.querySelector('.sc-prog-stats').textContent = stats;
+    setTimeout(function() { if (p.el.parentNode) p.el.parentNode.removeChild(p.el); }, 2500);
+  }
+  function scProgFail_(projId, msg) {  // failure: freeze the bar with the reason, no green
+    var key = String(projId);
+    var p = _scProg[key];
+    if (!p) return;
+    clearInterval(p.timer);
+    delete _scProg[key];
+    p.el.querySelector('.sc-prog-stats').textContent = msg;
+    setTimeout(function() { if (p.el.parentNode) p.el.parentNode.removeChild(p.el); }, 5000);
+  }
+
   // ── Compilation (Phase 2) ──
   // compileNow is chunked server-side: each call fetches a bounded batch and
   // reports progress, so the client loops until done.
@@ -4656,16 +4743,24 @@
             throw appErr;
           }
           btn.textContent = 'Compiling… ' + data.processed + '/' + data.total;
+          scProgUpdate(id, 'Compiling news',
+            data.total ? (data.processed / data.total) * 100 : null,
+            data.processed + '/' + data.total + ' feeds · ' + data.added + ' new'
+            + (data.errors ? ' · ' + data.errors + ' failed' : ''));
           return data.done ? data : step();
         });
     }
+    scProgUpdate(id, 'Compiling news', null, 'Building the fetch list…');
     step()
       .then(function(data) {
+        scProgDone(id, data.added + ' new articles gathered'
+          + (data.errors ? ' · ' + data.errors + ' failed' : ''));
         scToast('Compilation finished — ' + data.added + ' new article' + (data.added === 1 ? '' : 's')
           + (data.errors ? ' (' + data.errors + ' source' + (data.errors === 1 ? '' : 's') + ' failed)' : '') + '.');
         scOpenArticles(id);
       })
       .catch(function(err) {
+        scProgFail_(id, 'Stopped — will resume where it left off if you retry');
         scToast(err && err.appCode
           ? scErrMsg(err.appCode)
           : 'Could not reach the server (' + String((err && err.message) || err) + '). Compilation will resume where it left off if you retry.', true);
@@ -4697,16 +4792,24 @@
           btn.textContent = 'Backfilling… ' + data.processed + '/' + data.total
             + ' (' + data.added + ' found'
             + (data.errors ? ', ' + data.errors + ' failed' : '') + ')';
+          scProgUpdate(id, 'Backfilling 2 years of history',
+            data.total ? (data.processed / data.total) * 100 : null,
+            data.processed + '/' + data.total + ' history slices · ' + data.added + ' found'
+            + (data.errors ? ' · ' + data.errors + ' failed' : ''));
           return data.done ? data : step();
         });
     }
+    scProgUpdate(id, 'Backfilling 2 years of history', null, 'Building history queries…');
     step()
       .then(function(data) {
+        scProgDone(id, data.added + ' historical articles found'
+          + (data.errors ? ' · ' + data.errors + ' failed' : ''));
         scToast('Backfill finished — ' + data.added + ' historical article' + (data.added === 1 ? '' : 's')
           + (data.errors ? ' (' + data.errors + ' slice' + (data.errors === 1 ? '' : 's') + ' failed)' : '') + '.');
         scOpenArticles(id);
       })
       .catch(function(err) {
+        scProgFail_(id, 'Stopped — will resume where it left off if you retry');
         scToast(err && err.appCode
           ? scErrMsg(err.appCode)
           : 'Could not reach the server (' + String((err && err.message) || err) + '). Backfill will resume where it left off if you retry.', true);
@@ -4741,11 +4844,19 @@
           if (data.distilled) learnedFrom = data.distilled;
           totalScored += data.analyzed || 0;
           btn.textContent = 'Scoring… ' + (data.remaining ? data.remaining + ' left' : 'done');
+          var totalKnown = totalScored + (data.remaining || 0);
+          scProgUpdate(id, 'Scoring articles',
+            totalKnown ? (totalScored / totalKnown) * 100 : null,
+            totalScored + ' scored · ' + (data.remaining || 0) + ' left'
+            + (learnedFrom ? ' · 🧠 learned from ' + learnedFrom + ' ratings' : ''));
           return data.done ? data : step();
         });
     }
+    scProgUpdate(id, 'Scoring articles', null, 'Checking for unscored articles…');
     step()
       .then(function(data) {
+        scProgDone(id, totalScored + ' articles scored'
+          + (learnedFrom ? ' · 🧠 preferences updated' : ''));
         if (totalScored) {
           scToast('Analysis finished — ' + totalScored + ' article' + (totalScored === 1 ? '' : 's') + ' scored.'
             + (learnedFrom ? ' 🧠 Preferences updated from your ' + learnedFrom + ' ratings.' : ''));
@@ -4759,6 +4870,7 @@
         scOpenArticles(id);
       })
       .catch(function(err) {
+        scProgFail_(id, 'Stopped — will resume where it left off if you retry');
         scToast(err && err.appCode
           ? scErrMsg(err.appCode)
           : 'Could not reach the server (' + String((err && err.message) || err) + '). Analysis will resume where it left off if you retry.', true);
@@ -5097,7 +5209,9 @@
         data.keywords.forEach(function(k) {
           var added = have[String(k).toLowerCase()];
           html += '<span class="sc-sugg-chip' + (added ? ' added' : '') + '">' + scEsc(k)
-            + (added ? '' : '<button type="button" class="sc-sugg-add" data-kind="keyword" data-val="' + scEsc(k) + '" title="Add to project keywords">+</button>')
+            + (added
+              ? '<button type="button" class="sc-sugg-undo" data-kind="keyword" data-val="' + scEsc(k) + '" title="Undo — remove from project keywords">×</button>'
+              : '<button type="button" class="sc-sugg-add" data-kind="keyword" data-val="' + scEsc(k) + '" title="Add to project keywords">+</button>')
             + '</span>';
         });
       }
@@ -5107,7 +5221,9 @@
           var srcUrl = 'https://' + d;
           var added = have[srcUrl.toLowerCase()] || have[String(d).toLowerCase()];
           html += '<span class="sc-sugg-chip' + (added ? ' added' : '') + '">' + scEsc(d)
-            + (added ? '' : '<button type="button" class="sc-sugg-add" data-kind="source" data-val="' + scEsc(srcUrl) + '" title="Add to project sources">+</button>')
+            + (added
+              ? '<button type="button" class="sc-sugg-undo" data-kind="source" data-val="' + scEsc(srcUrl) + '" title="Undo — remove from project sources">×</button>'
+              : '<button type="button" class="sc-sugg-add" data-kind="source" data-val="' + scEsc(srcUrl) + '" title="Add to project sources">+</button>')
             + '</span>';
         });
       }
@@ -5128,12 +5244,25 @@
   var _scSuggTimer = null;
   var _scSuggInFlight = false;
 
-  function scCalAddSuggestion_(btn) {
+  /** The +/× button for a suggestion chip (add or undo state). */
+  function scSuggBtn_(op, kind, val) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = op === 'add' ? 'sc-sugg-add' : 'sc-sugg-undo';
+    b.setAttribute('data-kind', kind);
+    b.setAttribute('data-val', val);
+    b.title = op === 'add' ? 'Add to project' : 'Undo — remove from project';
+    b.textContent = op === 'add' ? '+' : '×';
+    return b;
+  }
+
+  function scCalToggleSuggestion_(btn, op) {
     var kind = btn.getAttribute('data-kind'), val = btn.getAttribute('data-val');
     var chip = btn.parentNode;
-    chip.classList.add('added');
-    chip.removeChild(btn);  // instant feedback — the save happens in the batch flush
-    _scSuggQueue.push({ kind: kind, val: val, chip: chip });
+    chip.classList.toggle('added', op === 'add');
+    chip.removeChild(btn);
+    chip.appendChild(scSuggBtn_(op === 'add' ? 'remove' : 'add', kind, val));  // instant flip; save happens in the flush
+    _scSuggQueue.push({ op: op, kind: kind, val: val, chip: chip });
     if (_scSuggTimer) clearTimeout(_scSuggTimer);
     _scSuggTimer = setTimeout(scCalFlushSuggestions_, 900);
   }
@@ -5154,8 +5283,15 @@
     };
     batch.forEach(function(s) {
       var target = s.kind === 'source' ? payload.sources : payload.keywords;
-      if (target.indexOf(s.val) === -1) target.push(s.val);
+      var idx = target.indexOf(s.val);
+      if (s.op === 'add' && idx === -1) target.push(s.val);
+      if (s.op === 'remove' && idx !== -1) target.splice(idx, 1);
     });
+    // Net-zero batch (e.g. an add undone before the flush) — nothing to save.
+    if (JSON.stringify(payload.keywords) === JSON.stringify(proj.keywords || []) &&
+        JSON.stringify(payload.sources) === JSON.stringify(proj.sources || [])) {
+      return;
+    }
     _scSuggInFlight = true;
     _gasPost({ action: 'updateProject', token: scToken(), projectId: proj.id,
                payload: JSON.stringify(payload) })
@@ -5166,24 +5302,24 @@
         }
         proj.keywords = payload.keywords;
         proj.sources = payload.sources;
-        scToast('Added ' + batch.length + ' suggestion' + (batch.length === 1 ? '' : 's')
-          + ' to the project — future Compile/Backfill runs will use them.');
+        var adds = batch.filter(function(s) { return s.op === 'add'; }).length;
+        var removes = batch.length - adds;
+        scToast('Project updated — '
+          + (adds ? adds + ' added' : '') + (adds && removes ? ', ' : '')
+          + (removes ? removes + ' removed' : '')
+          + '. Future Compile/Backfill runs will use the new scope.');
       })
       .catch(function(err) {
-        batch.forEach(function(s) {  // roll back so unsaved chips are tappable again
-          s.chip.classList.remove('added');
-          var b = document.createElement('button');
-          b.type = 'button';
-          b.className = 'sc-sugg-add';
-          b.setAttribute('data-kind', s.kind);
-          b.setAttribute('data-val', s.val);
-          b.title = 'Add to project';
-          b.textContent = '+';
-          s.chip.appendChild(b);
+        batch.forEach(function(s) {  // roll back each chip to its pre-tap state
+          var undone = s.op === 'add';
+          s.chip.classList.toggle('added', !undone);
+          var stale = s.chip.querySelector('.sc-sugg-add, .sc-sugg-undo');
+          if (stale) s.chip.removeChild(stale);
+          s.chip.appendChild(scSuggBtn_(s.op, s.kind, s.val));
         });
         scToast(err && err.appCode
           ? scErrMsg(err.appCode)
-          : 'Could not save the added suggestions — tap them again to retry.', true);
+          : 'Could not save the changes — tap them again to retry.', true);
       })
       .then(function() {
         _scSuggInFlight = false;
@@ -5199,17 +5335,22 @@
       _scRescoreArmed = null;
       btn.textContent = 'Re-scoring…';
       btn.disabled = true;
+      scProgUpdate(_scArticlesProjectId, 'Re-scoring collection', null, 'Clearing old scores…');
       _gasPost({ action: 'resetScores', token: scToken(), projectId: _scArticlesProjectId })
         .then(function(data) {
           if (!(data && data.success)) {
+            scProgFail_(_scArticlesProjectId, 'Could not clear scores');
             scToast(scErrMsg(data && data.error), true);
             return;
           }
+          scProgUpdate(_scArticlesProjectId, 'Re-scoring collection', null,
+            data.cleared + ' scores cleared — scoring with the learned profile…');
           scToast('Scores cleared for ' + data.cleared + ' articles — re-scoring with your learned profile now…');
           btn.disabled = false;
           scRunAnalyze(_scArticlesProjectId, btn);
         })
         .catch(function(err) {
+          scProgFail_(_scArticlesProjectId, 'Could not start the re-score');
           scToast('Could not start the re-score (' + String((err && err.message) || err) + ').', true);
         })
         .then(function() {

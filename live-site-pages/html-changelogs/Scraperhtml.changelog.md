@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 19/50`
+`Sections: 20/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.20w] — 2026-08-04 02:39:32 AM EST — v01.66r
+
+### Added
+- Added suggestions can now be undone — tap the × on an added keyword or source chip to remove it from your project (undo saves instantly and in the background, just like adding)
+- New progress bars for Compile, Backfill, Analyze, and Re-score: a panel in the bottom-left shows the action name, a live fill bar, detailed counts (processed, found, failed, scored, remaining), and a running clock — it stays visible even while the articles or calibration view is open, and turns green when finished
 
 ## [v01.19w] — 2026-08-04 01:46:24 AM EST — v01.65r
 
