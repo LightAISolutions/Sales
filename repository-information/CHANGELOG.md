@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 56/100`
+`Sections: 57/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.57r] — 2026-08-03 08:17:43 PM EST
+
+> **Prompt:** "16 minutes later, the backfill progress looks like this. Therefore, I don't think there's a need to "fix" the backfill. However, I do want you to show failures in the progress UI."
+
+### Changed
+
+#### `Scraper.html` — v01.11w
+
+##### Changed
+- Backfill progress button now appends the silent-error count from `backfillNow` responses (`, N failed`) when nonzero — failed GDELT slices (e.g. rate-limit rejections, which GDELT returns as HTTP-200 plain text) were previously invisible until the completion toast
 
 ## [v01.56r] — 2026-08-03 06:43:09 AM EST
 

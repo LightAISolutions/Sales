@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.11w] — 2026-08-03 08:17:43 PM EST — v01.57r
+
+### Changed
+- Backfill progress now also shows how many history batches failed (e.g. "10/96 (0 found, 8 failed)"), so a struggling run is visible right away instead of only in the final message
 
 ## [v01.10w] — 2026-08-03 06:43:09 AM EST — v01.56r
 
