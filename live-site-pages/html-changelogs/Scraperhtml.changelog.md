@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16w] — 2026-08-04 01:08:07 AM EST — v01.62r
+
+### Added
+- New Calibrate button on each project: a focused rating mode that feeds you a varied mix of articles — mostly borderline ones where your opinion teaches the most — and replaces each card as you rate it, with a running session counter
+- While calibrating, your preferences automatically re-learn after every 10 ratings, with a confirmation message each time
+- New "What I've learned" panel shows the current preference profile plus suggested search keywords and your most-liked news sources, each with a one-tap + to add it to your project permanently
+- New "Re-score collection" button re-scores all your gathered articles with the latest learned preferences (asks for confirmation first)
+- The Articles view now has filters: time window, minimum score, and keyword search
 
 ## [v01.15w] — 2026-08-03 11:57:41 PM EST — v01.61r
 

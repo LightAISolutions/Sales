@@ -1,4 +1,4 @@
-var VERSION = "v01.13g";
+var VERSION = "v01.14g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -354,7 +354,7 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'compileNow', 'getCompileStatus', 'listArticles',
                                'analyzeArticles', 'previewBrief',
                                'backfillNow', 'getBackfillStatus',
-                               'setArticleVerdict'];
+                               'setArticleVerdict', 'distillPreferences', 'resetScores'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -377,7 +377,7 @@ var SCRAPER_FEEDBACK_EXAMPLES_MAX = 8;         // 👍/👎 exemplar titles per 
 var SCRAPER_DISTILL_MIN_VERDICTS = 3;          // don't distill until at least this many total ratings exist
 var SCRAPER_DISTILL_TITLES_MAX = 40;           // rated titles per side fed into the distillation prompt
 var SCRAPER_PREFS_NOTE_MAX = 1500;             // stored learned-preferences note cap (chars)
-var SCRAPER_PREFS_KEYWORDS_MAX = 8;            // stored suggested search keywords cap
+var SCRAPER_PREFS_KEYWORDS_MAX = 12;           // stored suggested search keywords cap (incl. adjacent topics)
 
 // ── Phase 2: compilation engine tuning ──
 var SCRAPER_COMPILE_BATCH_FETCHES = 6;    // max URL fetches per compileNow call (client loops until done)
@@ -644,8 +644,9 @@ function scTopicTerms_(topic, n) {
 
 /** Build the ordered fetch queue (Google News RSS queries + user sources).
     learnedKeywords (from the distilled Preferences row) widen the net with
-    queries shaped by what the user actually rated relevant. */
-function scBuildFetchQueue_(project, learnedKeywords) {
+    queries shaped by what the user actually rated relevant; likedDomains adds
+    per-outlet queries for the domains behind their 👍-rated articles. */
+function scBuildFetchQueue_(project, learnedKeywords, likedDomains) {
   var queue = [];
   var excl = (project.exclusions || []).slice(0, 5).map(function(t) {
     return '-"' + t + '"';
@@ -665,10 +666,13 @@ function scBuildFetchQueue_(project, learnedKeywords) {
   (project.industries || []).slice(0, 3).forEach(function(ind) {
     gnews('"' + ind + '" ' + terms.slice(0, 2).join(' '), 'industry');
   });
-  var learned = (learnedKeywords || []).slice(0, 6);
+  var learned = (learnedKeywords || []).slice(0, 9);
   for (var j = 0; j < learned.length; j += 3) {
     gnews(learned.slice(j, j + 3).map(function(k) { return '"' + k + '"'; }).join(' OR '), 'learned');
   }
+  (likedDomains || []).slice(0, 3).forEach(function(d) {
+    gnews(terms.slice(0, 3).join(' ') + ' site:' + d, 'liked-source');
+  });
   (project.sources || []).slice(0, 20).forEach(function(src) {
     queue.push({ kind: 'source', label: 'source', url: src });
   });
@@ -766,7 +770,8 @@ function compileNow(sessionToken, projectId) {
   try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (stErr) { state = null; }
   if (!state || state.done || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
     var cPrefs = scGetPrefs_(ss, project.id);
-    var queue = scBuildFetchQueue_(project, cPrefs ? cPrefs.keywords : []);
+    var queue = scBuildFetchQueue_(project, cPrefs ? cPrefs.keywords : [],
+                                   scLikedDomains_(ss, project.id, user.email, 3));
     state = { owner: user.email, startedAt: new Date().toISOString(),
               urls: queue.map(function(q) { return q.url; }),
               labels: queue.map(function(q) { return q.label; }),
@@ -842,7 +847,7 @@ function getCompileStatus(sessionToken, projectId) {
 function scBackfillStateKey_(projectId) { return SCRAPER_BACKFILL_STATE_PREFIX + projectId; }
 
 /** GDELT query strings for a project (quoted phrases, OR groups in parens). */
-function scGdeltQueries_(project, learnedKeywords) {
+function scGdeltQueries_(project, learnedKeywords, likedDomains) {
   var queries = [];
   var terms = scTopicTerms_(project.topic, 4);
   if (terms.length) queries.push(terms.join(' '));
@@ -858,7 +863,13 @@ function scGdeltQueries_(project, learnedKeywords) {
   if (learned.length) {
     queries.push(learned.length > 1 ? '(' + learned.join(' OR ') + ')' : learned[0]);
   }
-  return queries.slice(0, 5);
+  // One liked-domain group: history from the outlets behind 👍-rated articles.
+  var doms = (likedDomains || []).slice(0, 3).map(function(d) { return 'domainis:' + d; });
+  if (doms.length) {
+    var base = terms.slice(0, 2).join(' ');
+    queries.push((base ? base + ' ' : '') + (doms.length > 1 ? '(' + doms.join(' OR ') + ')' : doms[0]));
+  }
+  return queries.slice(0, 6);
 }
 
 /** Task i for a backfill state: month slice × query, anchored to startedAt
@@ -890,7 +901,8 @@ function backfillNow(sessionToken, projectId) {
   if (!state || state.done || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
     var bPrefs = scGetPrefs_(ss, project.id);
     state = { owner: user.email, startedAt: new Date().toISOString(),
-              queries: scGdeltQueries_(project, bPrefs ? bPrefs.keywords : []),
+              queries: scGdeltQueries_(project, bPrefs ? bPrefs.keywords : [],
+                                       scLikedDomains_(ss, project.id, user.email, 3)),
               months: SCRAPER_BACKFILL_MONTHS,
               index: 0, added: 0, errors: 0, done: false };
   }
@@ -961,8 +973,14 @@ function getBackfillStatus(sessionToken, projectId) {
     startedAt: state.startedAt, finishedAt: state.finishedAt || '' } };
 }
 
-/** Newest articles for a project (owner only, capped). */
-function listArticles(sessionToken, projectId, limit) {
+/** Articles for a project (owner only, capped).
+    Standard mode: top-scored list with optional filters — minScore, days
+    (fetched within N days), q (keyword needle over title/snippet/summary/source).
+    Calibration mode: a stratified sample of UNRATED, scored articles mixed
+    ~60% mid-band (30-70) / 20% high (>70) / 20% low (<30), newest first within
+    each band — the mid band teaches the scorer the most per rating, the high
+    band verifies precision, and the low band surfaces wrongly buried articles. */
+function listArticles(sessionToken, projectId, limit, mode, minScore, days, q) {
   var user = validateSessionForData(sessionToken, 'listArticles');
   var ss = scraperSs_();
   ensureScraperTabs_(ss);
@@ -970,15 +988,46 @@ function listArticles(sessionToken, projectId, limit) {
   var rowNum = scFindProjectRow_(sheet, String(projectId || ''), user.email);
   if (!rowNum) return { success: false, error: 'not_found' };
   var max = Math.min(Number(limit) || SCRAPER_LIST_ARTICLES_MAX, SCRAPER_LIST_ARTICLES_MAX);
+  var calib = String(mode || '') === 'calibration';
+  var minS = (minScore === '' || minScore == null) ? null : Number(minScore);
+  var maxAgeMs = Number(days) > 0 ? Number(days) * 86400000 : 0;
+  var needle = String(q || '').toLowerCase().trim();
   var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
   var out = [];
   for (var i = data.length - 1; i >= 1; i--) {
     if (data[i][1] !== projectId) continue;
     if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    if (calib) {
+      if (data[i][11]) continue;         // calibration: unrated only
+      if (data[i][10] === '') continue;  // calibration: needs a score for banding
+    } else {
+      if (minS != null && (data[i][10] === '' || Number(data[i][10]) < minS)) continue;
+      if (maxAgeMs && (!data[i][7] || Date.now() - new Date(data[i][7]).getTime() > maxAgeMs)) continue;
+      if (needle && (String(data[i][4]) + ' ' + String(data[i][8]) + ' ' + String(data[i][9]) + ' '
+                     + String(data[i][5])).toLowerCase().indexOf(needle) === -1) continue;
+    }
     out.push({ id: data[i][0], url: data[i][3], title: data[i][4], source: data[i][5],
       publishedAt: String(data[i][6] || ''), fetchedAt: data[i][7] ? new Date(data[i][7]).toISOString() : '',
       snippet: data[i][8], summary: data[i][9], score: data[i][10] === '' ? null : Number(data[i][10]),
       verdict: data[i][11] });
+  }
+  if (calib) {
+    // Band split preserves the reverse walk's newest-first order within bands.
+    var mid = [], hi = [], lo = [];
+    out.forEach(function(a) {
+      if (a.score > 70) hi.push(a);
+      else if (a.score < 30) lo.push(a);
+      else mid.push(a);
+    });
+    var bands = { mid: mid, hi: hi, lo: lo };
+    var pattern = ['mid', 'mid', 'mid', 'hi', 'lo'];  // ~60/20/20 variety mix
+    var picked = [];
+    for (var pi = 0; picked.length < max && (mid.length || hi.length || lo.length); pi++) {
+      var b = bands[pattern[pi % pattern.length]];
+      if (!b.length) b = mid.length ? mid : (hi.length ? hi : lo);
+      picked.push(b.shift());
+    }
+    return { success: true, articles: picked, calibration: true, unratedTotal: out.length };
   }
   // Cap AFTER sorting so the overlay shows the top-scored articles of the whole
   // corpus — capping the reverse walk returned the 100 most recently *fetched*
@@ -1015,6 +1064,101 @@ function setArticleVerdict(sessionToken, projectId, articleId, verdict) {
     return { success: true, verdict: v };
   }
   return { success: false, error: 'not_found' };
+}
+
+/** Domains of a project's 👍-rated articles, most-liked first. A breadth
+    signal: Compile adds per-domain Google News queries and Backfill adds a
+    domainis: group for these, so fetching leans toward proven-good outlets.
+    Computed live from the Articles tab — no stored state to migrate. */
+function scLikedDomains_(ss, projectId, ownerEmail, max) {
+  var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
+  var counts = {};
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][1] !== projectId) continue;
+    if (String(data[i][2]).toLowerCase() !== ownerEmail.toLowerCase()) continue;
+    if (String(data[i][11]) !== 'up') continue;
+    var m = String(data[i][3] || '').match(/^https?:\/\/([^\/]+)/i);
+    if (!m) continue;
+    var d = m[1].toLowerCase().replace(/^www\./, '');
+    counts[d] = (counts[d] || 0) + 1;
+  }
+  return Object.keys(counts).sort(function(a, b) { return counts[b] - counts[a]; })
+    .slice(0, max || 3);
+}
+
+/** On-demand distillation for calibration mode: re-distills when the rating
+    count changed since the stored profile, otherwise returns the stored one.
+    Also returns liked domains so the UI can offer keyword AND source
+    suggestions for one-tap adding to the project scope. */
+function distillPreferences(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'distillPreferences');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+
+  var data = ss.getSheetByName(SCRAPER_TABS.ARTICLES).getDataRange().getValues();
+  var rated = { ups: [], downs: [] };
+  var totalVerdicts = 0;
+  for (var i = data.length - 1; i >= 1; i--) {  // newest first, same as analyzeArticles
+    if (data[i][1] !== project.id) continue;
+    if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    var vd = String(data[i][11] || '');
+    if (vd !== 'up' && vd !== 'down') continue;
+    totalVerdicts++;
+    var side = vd === 'up' ? 'ups' : 'downs';
+    if (rated[side].length < SCRAPER_DISTILL_TITLES_MAX) rated[side].push(String(data[i][4]));
+  }
+  var prefs = scGetPrefs_(ss, project.id);
+  var distilled = 0;
+  if (totalVerdicts >= SCRAPER_DISTILL_MIN_VERDICTS
+      && (!prefs || prefs.verdictsUsed !== totalVerdicts)) {
+    try {
+      var d = scDistillFeedback_(ss, user, project, rated, totalVerdicts);
+      scLogUsage_(ss, user.email, 1, 0);
+      prefs = { note: d.note, keywords: d.keywords, verdictsUsed: totalVerdicts };
+      distilled = totalVerdicts;
+    } catch (dpErr) {
+      return { success: false, error: scStr_(String((dpErr && dpErr.message) || 'ai_failed'), 60) };
+    }
+  }
+  return { success: true, distilled: distilled,
+           note: prefs ? prefs.note : '', keywords: prefs ? prefs.keywords : [],
+           verdictsUsed: prefs ? prefs.verdictsUsed : 0, totalVerdicts: totalVerdicts,
+           likedDomains: scLikedDomains_(ss, project.id, user.email, 6) };
+}
+
+/** "Re-score collection": clear Summary + Relevance Score for all of a
+    project's articles so the normal chunked Analyze loop re-scores everything
+    with the current learned profile. Verdicts are preserved. One batched
+    write for the whole column range — never per-row setValue. */
+function resetScores(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'resetScores');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+  var data = sheet.getDataRange().getValues();
+  var vals = [];
+  var cleared = 0;
+  for (var i = 1; i < data.length; i++) {
+    var mine = data[i][1] === project.id
+      && String(data[i][2]).toLowerCase() === user.email.toLowerCase();
+    if (mine && data[i][10] !== '') {
+      vals.push(['', '']);
+      cleared++;
+    } else {
+      vals.push([data[i][9], data[i][10]]);
+    }
+  }
+  if (vals.length) sheet.getRange(2, 10, vals.length, 2).setValues(vals);
+  dataAuditLog(user.email, 'rescore', 'project', project.id, cleared + ' scores cleared');
+  return { success: true, cleared: cleared };
 }
 
 // ── Phase 3: AI layer ───────────────────────────────────────────────────
@@ -1237,7 +1381,9 @@ function scDistillFeedback_(ss, user, project, rated, totalVerdicts) {
     + 'alone does not say.\n'
     + '2. "keywords": up to ' + SCRAPER_PREFS_KEYWORDS_MAX + ' short search phrases '
     + '(2-4 words each) likely to find MORE articles like the ones rated relevant — '
-    + 'concrete and searchable, no boolean operators.\n\n'
+    + 'concrete and searchable, no boolean operators. Go beyond literal phrases from '
+    + 'the titles: include adjacent topics, synonyms, related technologies, and '
+    + 'entities the relevant articles imply, to widen the search net.\n\n'
     + 'Respond with ONLY a JSON object, no markdown fences: '
     + '{"preferences":"...","keywords":["..."]}';
   var text = aiComplete_(prompt, 1024);
@@ -1413,7 +1559,9 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'setProjectStatus') return setProjectStatus(sessionToken, param('projectId'), param('status'));
   if (op === 'compileNow') return compileNow(sessionToken, param('projectId'));
   if (op === 'getCompileStatus') return getCompileStatus(sessionToken, param('projectId'));
-  if (op === 'listArticles') return listArticles(sessionToken, param('projectId'), param('limit'));
+  if (op === 'listArticles') return listArticles(sessionToken, param('projectId'), param('limit'), param('mode'), param('minScore'), param('days'), param('q'));
+  if (op === 'distillPreferences') return distillPreferences(sessionToken, param('projectId'));
+  if (op === 'resetScores') return resetScores(sessionToken, param('projectId'));
   if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));
   if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));
   if (op === 'backfillNow') return backfillNow(sessionToken, param('projectId'));

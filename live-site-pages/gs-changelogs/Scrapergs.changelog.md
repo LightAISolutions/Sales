@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 13/50`
+`Sections: 14/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.14g] — 2026-08-04 01:08:07 AM EST — v01.62r
+
+### Added
+- Calibration article feed: serves a varied mix of your unrated articles weighted toward the uncertain middle scores, where your ratings improve accuracy the most
+- Article filters: the article list can now be narrowed by time window, minimum score, and keyword
+- On-demand preference learning: your ratings can now be distilled into an updated profile during a rating session, not just during analysis
+- Re-score support: all articles in a project can be re-scored with your latest learned preferences
+- News gathering now also searches the outlets behind your thumbs-up ratings, and learned suggestions now include adjacent topics — both widen what gets found beyond your typed keywords
 
 ## [v01.13g] — 2026-08-03 11:33:05 PM EST — v01.60r
 
