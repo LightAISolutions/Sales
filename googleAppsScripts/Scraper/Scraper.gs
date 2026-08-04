@@ -1,4 +1,4 @@
-var VERSION = "v01.23g";
+var VERSION = "v01.24g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -362,7 +362,7 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'backfillNow', 'getBackfillStatus', 'enrichNow',
                                'setArticleVerdict', 'distillPreferences', 'resetScores',
                                'getScoreStats', 'archiveJunk',
-                               'planQueries', 'getQueryPlan', 'deepBackfillNow'];
+                               'planQueries', 'getQueryPlan', 'addPlanQuery', 'deepBackfillNow'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -409,8 +409,9 @@ var SCRAPER_BACKFILL_STATE_PREFIX = 'scBackfill_';
 
 // ── Query planner + fetch-time pre-filter + deep backfill tuning ──
 var SCRAPER_PLAN_QUERIES_MAX = 24;      // max query groups the AI planner may store
-var SCRAPER_PLAN_GDELT_MAX = 12;        // plan groups used by GDELT backfill (was 6 auto-built)
-var SCRAPER_PLAN_GNEWS_MAX = 10;        // plan groups added to the Compile queue
+var SCRAPER_PLAN_TOTAL_MAX = 40;        // hard cap incl. manually added groups
+var SCRAPER_PLAN_GDELT_MAX = 16;        // plan groups used by GDELT backfill (was 6 auto-built)
+var SCRAPER_PLAN_GNEWS_MAX = 24;        // plan groups added to the Compile queue (1 RSS fetch each)
 var SCRAPER_PREFILTER_BATCH = 40;       // headlines per pre-filter AI call
 var SCRAPER_DEEPBF_STATE_PREFIX = 'scDeepBF_';
 var SCRAPER_DEEPBF_MODEL = 'claude-haiku-4-5';  // cheapest web-search-capable model
@@ -1186,6 +1187,60 @@ function getQueryPlan(sessionToken, projectId) {
   if (!rowNum) return { success: false, error: 'not_found' };
   var plan = scGetPlan_(ss, String(projectId));
   return { success: true, plan: plan ? { queries: plan.queries, plannedAt: plan.plannedAt } : null };
+}
+
+/** Evaluate one user-supplied term into a plan query group and PREPEND it —
+    prepending guarantees the manual addition falls inside every consumer's
+    slice window (Compile, GDELT backfill, Deep backfill all read from the
+    front of the plan). One AI call shapes the group in the same style as the
+    existing plan ("Sinexcel" → "Sinexcel" data center project OR deal); if
+    the AI reply doesn't contain the term, a safe topic-terms fallback is
+    used instead so the add never silently misses the entity. */
+function addPlanQuery(sessionToken, projectId, term) {
+  var user = validateSessionForData(sessionToken, 'addPlanQuery');
+  var t = scStr_(String(term || ''), 80);
+  if (!t) return { success: false, error: 'term_missing' };
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+
+  var plan = scGetPlan_(ss, project.id);
+  var queries = plan ? plan.queries.slice() : [];
+  var lower = t.toLowerCase();
+  for (var i = 0; i < queries.length; i++) {
+    if (String(queries[i]).toLowerCase().indexOf(lower) !== -1) {
+      return { success: false, error: 'plan_duplicate', existing: queries[i] };
+    }
+  }
+  if (queries.length >= SCRAPER_PLAN_TOTAL_MAX) return { success: false, error: 'plan_full' };
+
+  var prompt = 'A user monitors this project:\n' + scStr_(String(project.topic || ''), 1000)
+    + '\n\nExisting search query groups (match this style):\n'
+    + queries.slice(0, 5).join('\n')
+    + '\n\nThe user wants to add search coverage for: "' + t + '"\n\n'
+    + 'Produce ONE search query string for it in the same style: the quoted term '
+    + '(plus ONE quoted common alias joined by OR, only if a well-known alias exists) '
+    + 'followed by 2-4 unquoted context words relevant to this project.\n'
+    + 'Reply ONLY with a JSON array containing exactly one string.';
+  var q = '';
+  try {
+    var arr = scJsonArray_(aiComplete_(prompt, 512));
+    q = (arr && arr.length) ? scStr_(String(arr[0] || ''), 200) : '';
+  } catch (apErr) {
+    return { success: false, error: String(apErr.message || apErr).split(' — ')[0] };
+  }
+  if (!q || q.toLowerCase().indexOf(lower) === -1) {
+    // AI drifted off the term — fall back to quoted term + topic context words.
+    q = '"' + t + '" ' + scTopicTerms_(project.topic, 3).join(' ');
+  }
+  queries.unshift(q);
+  scSavePlan_(ss, project.id, user.email, queries);
+  scLogUsage_(ss, user.email, 1, 0);
+  dataAuditLog(user.email, 'plan_add', 'project', project.id, q);
+  return { success: true, query: q, queries: queries, count: queries.length };
 }
 
 /** Batch keep/drop pre-filter over candidate items ({title, source} read).
@@ -2407,6 +2462,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'archiveJunk') return archiveJunk(sessionToken, param('projectId'));
   if (op === 'planQueries') return planQueries(sessionToken, param('projectId'));
   if (op === 'getQueryPlan') return getQueryPlan(sessionToken, param('projectId'));
+  if (op === 'addPlanQuery') return addPlanQuery(sessionToken, param('projectId'), param('term'));
   if (op === 'deepBackfillNow') return deepBackfillNow(sessionToken, param('projectId'));
   if (op === 'resetScores') return resetScores(sessionToken, param('projectId'));
   if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));

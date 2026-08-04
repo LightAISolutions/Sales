@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 23/50`
+`Sections: 24/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.24g] — 2026-08-04 06:41:08 PM EST — v01.73r
+
+### Added
+- You can now grow your search plan one company or term at a time: submit a name and the service instantly evaluates it, shapes it into a full search query group with relevant context added, and saves it to your plan — duplicates are detected and reported instead of added
+- Newly added terms are placed at the top of the plan, so they are always included in the very next gathering run
+
+### Changed
+- Opening the search plan now shows your saved plan instantly instead of rebuilding it, so manual additions are never lost — rebuilding is a separate, deliberate action
+- Gathering runs now use more of your search plan than before, widening coverage across both news sources
 
 ## [v01.23g] — 2026-08-04 06:01:06 PM EST — v01.72r
 

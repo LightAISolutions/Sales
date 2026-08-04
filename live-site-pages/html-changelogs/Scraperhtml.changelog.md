@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 24/50`
+`Sections: 25/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.25w] — 2026-08-04 06:41:08 PM EST — v01.73r
+
+### Added
+- The search plan panel now has an add-a-term box: type a company or keyword (and press Enter or tap Add) and a fully-shaped query group appears at the top of the list in real time, highlighted so you can see exactly what was added — no need to leave the panel
+- If a term is already covered by an existing query group, the panel tells you which one instead of adding a duplicate
+
+### Changed
+- The Plan button now opens your saved plan instantly (no waiting, no rebuild) — a separate Rebuild button inside the panel regenerates the plan from scratch, with a confirmation tap since it replaces the current list including your manual additions
 
 ## [v01.24w] — 2026-08-04 06:01:06 PM EST — v01.72r
 

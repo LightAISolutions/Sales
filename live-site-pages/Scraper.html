@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.24w">
+  <meta name="build-version" content="v01.25w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -4467,7 +4467,9 @@
     ai_model_not_found: 'No compatible AI model was found for this key — check that it is a Google AI Studio key.',
     no_relevant_articles: 'No relevant articles yet — run Analyze first (articles need a relevance score of 50+).',
     plan_parse_failed: 'The AI could not produce a usable search plan — please try again.',
-    deepbf_key_missing: 'Deep backfill needs an Anthropic API key — add ANTHROPIC_API_KEY in the server settings to enable AI web search.'
+    deepbf_key_missing: 'Deep backfill needs an Anthropic API key — add ANTHROPIC_API_KEY in the server settings to enable AI web search.',
+    term_missing: 'Type a company or term first.',
+    plan_full: 'The search plan is full (40 groups) — remove or rebuild the plan before adding more.'
   };
   var _scProjects = [];
   var _scWizStep = 0;
@@ -4878,37 +4880,96 @@
       });
   }
 
-  // ── AI query planner: one call, plan shown in the shared overlay ──
+  // ── AI query planner ──
+  // The Plan button opens the SAVED plan instantly when one exists (no AI
+  // call, and manual additions are preserved); the planner only runs when no
+  // plan is stored yet, or via the explicit two-tap Rebuild inside the panel.
   function scRunPlan(id, btn) {
     if (btn.getAttribute('data-running') === '1') return;
     btn.setAttribute('data-running', '1');
     btn.disabled = true;
-    btn.textContent = 'Planning…';
-    scProgUpdate(id, 'Building AI search plan', null,
-      'Reading your topic, keywords, and learned preferences…');
-    scRetryOnce(function() {
-      return _gasPost({ action: 'planQueries', token: scToken(), projectId: id });
-    })
+    btn.textContent = 'Plan…';
+    function finish() {
+      btn.disabled = false;
+      btn.removeAttribute('data-running');
+      btn.textContent = 'Plan';
+    }
+    _gasPost({ action: 'getQueryPlan', token: scToken(), projectId: id })
       .then(function(data) {
-        if (!(data && data.success)) {
-          var appErr = new Error('app'); appErr.appCode = (data && data.error) || 'unknown';
-          throw appErr;
+        if (data && data.success && data.plan && data.plan.queries && data.plan.queries.length) {
+          scShowPlan_(id, data.plan.queries);
+          finish();
+          return;
         }
-        scProgDone(id, data.count + ' search groups saved');
-        scToast('Search plan built — ' + data.count + ' query group'
-          + (data.count === 1 ? '' : 's') + ' now power Compile, Backfill, and Deep backfill.');
-        scShowPlan_(id, data.queries);
+        btn.textContent = 'Planning…';
+        scProgUpdate(id, 'Building AI search plan', null,
+          'Reading your topic, keywords, and learned preferences…');
+        return scRetryOnce(function() {
+          return _gasPost({ action: 'planQueries', token: scToken(), projectId: id });
+        })
+          .then(function(data2) {
+            if (!(data2 && data2.success)) {
+              var appErr = new Error('app'); appErr.appCode = (data2 && data2.error) || 'unknown';
+              throw appErr;
+            }
+            scProgDone(id, data2.count + ' search groups saved');
+            scToast('Search plan built — ' + data2.count + ' query group'
+              + (data2.count === 1 ? '' : 's') + ' now power Compile, Backfill, and Deep backfill.');
+            scShowPlan_(id, data2.queries);
+            finish();
+          });
       })
       .catch(function(err) {
         scProgFail_(id, 'Plan not saved');
         scToast(err && err.appCode
           ? scErrMsg(err.appCode)
           : 'Could not reach the server (' + scEsc(String((err && err.message) || err)) + ').', true);
+        finish();
+      });
+  }
+
+  // Two-tap full rebuild from inside the panel — it replaces the whole list,
+  // including manual additions, so it must never fire on a single tap.
+  function scPlanRebuild_(id) {
+    var rbBtn = $sc('sc-plan-rebuild-btn');
+    var status = $sc('sc-plan-status');
+    if (!rbBtn || rbBtn.disabled) return;
+    if (rbBtn.getAttribute('data-armed') !== '1') {
+      rbBtn.setAttribute('data-armed', '1');
+      rbBtn.textContent = 'Replaces list — tap again';
+      rbBtn.style.color = '#b3261e';
+      setTimeout(function() {
+        var b = $sc('sc-plan-rebuild-btn');
+        if (b && b.getAttribute('data-armed') === '1') {
+          b.removeAttribute('data-armed');
+          b.textContent = 'Rebuild';
+          b.style.color = '';
+        }
+      }, 5000);
+      return;
+    }
+    rbBtn.removeAttribute('data-armed');
+    rbBtn.textContent = 'Rebuild';
+    rbBtn.style.color = '';
+    rbBtn.disabled = true;
+    status.textContent = 'Rebuilding the full plan from your topic, keywords, and learned preferences…';
+    _gasPost({ action: 'planQueries', token: scToken(), projectId: id })
+      .then(function(data) {
+        if (!(data && data.success)) {
+          status.textContent = scErrMsg(data && data.error);
+          var b = $sc('sc-plan-rebuild-btn');
+          if (b) b.disabled = false;
+          return;
+        }
+        scShowPlan_(id, data.queries);  // fresh render rebinds all handlers
+        $sc('sc-plan-status').textContent = 'Plan rebuilt — ' + data.count + ' query groups.';
       })
-      .then(function() {
-        btn.disabled = false;
-        btn.removeAttribute('data-running');
-        btn.textContent = 'Plan';
+      .catch(function(err) {
+        var st = $sc('sc-plan-status');
+        if (st) st.textContent = 'Could not reach the server ('
+          + String((err && err.message) || err) + ') — the plan was not changed.';
+        var b2 = $sc('sc-plan-rebuild-btn');
+        if (b2) b2.disabled = false;
       });
   }
 
@@ -4919,13 +4980,71 @@
     $sc('sc-stats-title').textContent = (proj ? proj.name + ' — ' : '') + 'Search Plan';
     var html = '<p style="margin:0 0 8px 0;color:#55606e;font-size:12px;">These query groups now '
       + 'drive Compile, Backfill, and Deep backfill. Re-run Plan any time your topic, keywords, '
-      + 'or learned preferences change.</p><ol style="margin:0;padding-left:20px;font-size:12.5px;">';
+      + 'or learned preferences change.</p>'
+      + '<ol id="sc-plan-list" style="margin:0;padding-left:20px;font-size:12.5px;">';
     (queries || []).forEach(function(q) {
       html += '<li style="margin-bottom:4px;">' + scEsc(q) + '</li>';
     });
-    html += '</ol>';
+    html += '</ol>'
+      + '<div style="display:flex;gap:6px;margin-top:12px;">'
+      + '<input id="sc-plan-input" type="text" placeholder="Add a company or term (e.g. Sinexcel)"'
+      + ' style="flex:1;padding:6px 9px;border:1px solid #d5dae2;border-radius:6px;font-size:12.5px;">'
+      + '<button id="sc-plan-add-btn" class="sc-btn" type="button">Add</button>'
+      + '<button id="sc-plan-rebuild-btn" class="sc-btn subtle" type="button" title="Re-run the AI planner from scratch — replaces the whole list, including your manual additions">Rebuild</button>'
+      + '</div>'
+      + '<div id="sc-plan-status" style="margin-top:6px;font-size:11.5px;color:#55606e;min-height:15px;"></div>';
     $sc('sc-stats-body').innerHTML = html;
     $sc('sc-stats-overlay').style.display = 'flex';
+    $sc('sc-plan-add-btn').addEventListener('click', function() { scPlanAdd_(id); });
+    $sc('sc-plan-rebuild-btn').addEventListener('click', function() { scPlanRebuild_(id); });
+    $sc('sc-plan-input').addEventListener('keydown', function(ev) {
+      if (ev.key === 'Enter') scPlanAdd_(id);
+    });
+    $sc('sc-plan-input').focus();
+  }
+
+  // Add one term to the plan from inside the panel — the AI shapes it into a
+  // query group with relevant context adders and it appears at the top of the
+  // list, highlighted, without closing the window. No transport retry: the
+  // server dedupes, but a retry would still double-spend the AI call.
+  function scPlanAdd_(id) {
+    var input = $sc('sc-plan-input');
+    var addBtn = $sc('sc-plan-add-btn');
+    var status = $sc('sc-plan-status');
+    if (!input || input.disabled) return;
+    var term = (input.value || '').trim();
+    if (!term) { status.textContent = 'Type a company or term first.'; return; }
+    input.disabled = true;
+    addBtn.disabled = true;
+    status.textContent = 'Evaluating "' + term + '" and building its query group…';
+    _gasPost({ action: 'addPlanQuery', token: scToken(), projectId: id, term: term })
+      .then(function(data) {
+        if (!(data && data.success)) {
+          status.textContent = (data && data.error === 'plan_duplicate')
+            ? 'Already covered by: ' + (data.existing || 'an existing group')
+            : scErrMsg(data && data.error);
+          return;
+        }
+        var li = document.createElement('li');
+        li.style.marginBottom = '4px';
+        li.style.background = '#e6f4ea';
+        li.style.borderRadius = '4px';
+        li.textContent = data.query;
+        var list = $sc('sc-plan-list');
+        list.insertBefore(li, list.firstChild);
+        status.textContent = 'Added — ' + data.count + ' query groups now saved. '
+          + 'The next Compile, Backfill, and Deep backfill will use it.';
+        input.value = '';
+      })
+      .catch(function(err) {
+        status.textContent = 'Could not reach the server ('
+          + String((err && err.message) || err) + ') — the plan was not changed. Try again.';
+      })
+      .then(function() {
+        input.disabled = false;
+        addBtn.disabled = false;
+        input.focus();
+      });
   }
 
   // ── Deep backfill: AI web-search history, one task per server call ──
