@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.12w">
+  <meta name="build-version" content="v01.13w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -4314,6 +4314,7 @@
     frequency_required: 'Pick at least one report frequency.',
     bad_payload: 'The form data could not be read — please try again.',
     not_found: 'That project could not be found. It may have been removed.',
+    unknown_op: 'The server is finishing an update — wait a few seconds and try again.',
     invalid_session: 'Your session has expired — please sign in again.',
     session_expired: 'Your session has expired — please sign in again.',
     spreadsheet_not_configured: 'The server is not fully set up yet (no data store configured).',
@@ -4680,6 +4681,22 @@
     return '<span class="sc-score ' + cls + '">' + score + '</span>';
   }
 
+  // Verdict-save transport: retries once on transport failure (like scRetryOnce)
+  // and once more when the server answers unknown_op — after a GAS redeploy,
+  // Google's /exec serving can briefly flap between deployment versions, and a
+  // stale instance doesn't know newly added actions. A short delay + re-send
+  // usually lands on a fresh instance. Server writes are absolute values, so
+  // retries are idempotent.
+  function scSendVerdict(params) {
+    function call() { return _gasPost(params); }
+    return scRetryOnce(call).then(function(data) {
+      if (data && !data.success && data.error === 'unknown_op') {
+        return new Promise(function(res) { setTimeout(res, 2500); }).then(call);
+      }
+      return data;
+    });
+  }
+
   // 👍/👎 feedback: tapping records a verdict (tapping the active one clears it).
   // Verdicts feed exemplars into every future Analyze scoring prompt server-side.
   function scVerdictClick(ev) {
@@ -4689,8 +4706,8 @@
     var verdict = btn.classList.contains('on') ? '' : btn.getAttribute('data-v');
     var btns = wrap.querySelectorAll('.sc-vbtn');
     for (var i = 0; i < btns.length; i++) btns[i].disabled = true;
-    _gasPost({ action: 'setArticleVerdict', token: scToken(), projectId: _scArticlesProjectId,
-               articleId: wrap.getAttribute('data-id'), verdict: verdict })
+    scSendVerdict({ action: 'setArticleVerdict', token: scToken(), projectId: _scArticlesProjectId,
+                    articleId: wrap.getAttribute('data-id'), verdict: verdict })
       .then(function(data) {
         if (!(data && data.success)) {
           scToast(scErrMsg(data && data.error), true);
