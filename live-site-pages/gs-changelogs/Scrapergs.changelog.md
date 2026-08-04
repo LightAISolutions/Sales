@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 16/50`
+`Sections: 17/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.17g] — 2026-08-04 01:46:24 AM EST — v01.65r
+
+### Changed
+- Saving project changes is faster when the report schedule wasn't modified
+
+### Fixed
+- Editing a project's topic, keywords, or sources no longer resets its report schedule's next-run timing
 
 ## [v01.16g] — 2026-08-04 01:33:25 AM EST — v01.64r
 

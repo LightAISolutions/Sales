@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.18w">
+  <meta name="build-version" content="v01.19w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -5117,12 +5117,34 @@
     $sc('sc-learned').style.display = 'block';
   }
 
-  /** One-tap add of a suggested keyword/source into the project scope. */
+  // Suggestion adds are optimistic + batched: the chip flips to "added"
+  // instantly on tap, and every tap within a short window coalesces into ONE
+  // updateProject request. Each server round trip costs seconds (exec latency
+  // + sheet writes), so per-tap requests felt sluggish — and rapid taps could
+  // overwrite each other's payloads (each built from the pre-response project
+  // state), silently losing earlier additions. On failure the chips roll back
+  // with a retry hint.
+  var _scSuggQueue = [];
+  var _scSuggTimer = null;
+  var _scSuggInFlight = false;
+
   function scCalAddSuggestion_(btn) {
+    var kind = btn.getAttribute('data-kind'), val = btn.getAttribute('data-val');
+    var chip = btn.parentNode;
+    chip.classList.add('added');
+    chip.removeChild(btn);  // instant feedback — the save happens in the batch flush
+    _scSuggQueue.push({ kind: kind, val: val, chip: chip });
+    if (_scSuggTimer) clearTimeout(_scSuggTimer);
+    _scSuggTimer = setTimeout(scCalFlushSuggestions_, 900);
+  }
+
+  function scCalFlushSuggestions_() {
+    _scSuggTimer = null;
+    if (_scSuggInFlight || !_scSuggQueue.length) return;
     var proj = null;
     _scProjects.forEach(function(p) { if (p.id === _scArticlesProjectId) proj = p; });
-    if (!proj) return;
-    var kind = btn.getAttribute('data-kind'), val = btn.getAttribute('data-val');
+    if (!proj) { _scSuggQueue = []; return; }
+    var batch = _scSuggQueue.splice(0, _scSuggQueue.length);
     var payload = {
       name: proj.name, topic: proj.topic,
       industries: (proj.industries || []).slice(), keywords: (proj.keywords || []).slice(),
@@ -5130,27 +5152,42 @@
       regions: (proj.regions || []).slice(), frequencies: (proj.frequencies || []).slice(),
       delivery: proj.delivery || 'both', customConfig: proj.customConfig || ''
     };
-    var target = kind === 'source' ? payload.sources : payload.keywords;
-    if (target.indexOf(val) !== -1) return;
-    target.push(val);
-    btn.disabled = true;
+    batch.forEach(function(s) {
+      var target = s.kind === 'source' ? payload.sources : payload.keywords;
+      if (target.indexOf(s.val) === -1) target.push(s.val);
+    });
+    _scSuggInFlight = true;
     _gasPost({ action: 'updateProject', token: scToken(), projectId: proj.id,
                payload: JSON.stringify(payload) })
       .then(function(data) {
         if (!(data && data.success)) {
-          btn.disabled = false;
-          scToast(scErrMsg(data && data.error), true);
-          return;
+          var appErr = new Error('app'); appErr.appCode = (data && data.error) || 'unknown';
+          throw appErr;
         }
-        if (kind === 'source') proj.sources = payload.sources;
-        else proj.keywords = payload.keywords;
-        btn.parentNode.classList.add('added');
-        btn.parentNode.removeChild(btn);
-        scToast('Added to project ' + (kind === 'source' ? 'sources' : 'keywords') + ' — future Compile/Backfill runs will use it.');
+        proj.keywords = payload.keywords;
+        proj.sources = payload.sources;
+        scToast('Added ' + batch.length + ' suggestion' + (batch.length === 1 ? '' : 's')
+          + ' to the project — future Compile/Backfill runs will use them.');
       })
       .catch(function(err) {
-        btn.disabled = false;
-        scToast('Could not update the project (' + String((err && err.message) || err) + ').', true);
+        batch.forEach(function(s) {  // roll back so unsaved chips are tappable again
+          s.chip.classList.remove('added');
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'sc-sugg-add';
+          b.setAttribute('data-kind', s.kind);
+          b.setAttribute('data-val', s.val);
+          b.title = 'Add to project';
+          b.textContent = '+';
+          s.chip.appendChild(b);
+        });
+        scToast(err && err.appCode
+          ? scErrMsg(err.appCode)
+          : 'Could not save the added suggestions — tap them again to retry.', true);
+      })
+      .then(function() {
+        _scSuggInFlight = false;
+        if (_scSuggQueue.length) scCalFlushSuggestions_();  // taps that arrived mid-flight
       });
   }
 

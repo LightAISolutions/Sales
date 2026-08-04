@@ -1,4 +1,4 @@
-var VERSION = "v01.16g";
+var VERSION = "v01.17g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -490,12 +490,28 @@ function scFindProjectRow_(sheet, projectId, ownerEmail) {
   return 0;
 }
 
-/** Replace the schedule rows for a project (delete existing, append fresh). */
+/** Replace the schedule rows for a project (delete existing, append fresh).
+    Skips the rewrite when frequencies, delivery, and custom config are all
+    unchanged — schedule rows carry live scheduler state (Next Run / Last Run)
+    that a needless rewrite would wipe, and per-row deletes are the slowest
+    part of updateProject (they made scope-only edits like suggestion-adds
+    feel sluggish). */
 function scWriteSchedules_(ss, projectId, ownerEmail, norm) {
   var sheet = ss.getSheetByName(SCRAPER_TABS.SCHEDULES);
   var data = sheet.getDataRange().getValues();
-  for (var i = data.length - 1; i >= 1; i--) {
-    if (data[i][1] === projectId) sheet.deleteRow(i + 1);
+  var existing = [];
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][1] === projectId) existing.push(data[i]);
+  }
+  var unchanged = existing.length === norm.frequencies.length &&
+    existing.every(function(r) {
+      return norm.frequencies.indexOf(String(r[3])) !== -1 &&
+        String(r[5]) === norm.delivery &&
+        (String(r[3]) !== 'custom' || String(r[4]) === norm.customConfig);
+    });
+  if (unchanged) return;
+  for (var j = data.length - 1; j >= 1; j--) {
+    if (data[j][1] === projectId) sheet.deleteRow(j + 1);
   }
   norm.frequencies.forEach(function(freq) {
     sheet.appendRow([Utilities.getUuid(), projectId, ownerEmail, freq,
