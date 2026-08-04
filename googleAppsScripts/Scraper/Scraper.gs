@@ -1,4 +1,4 @@
-var VERSION = "v01.22g";
+var VERSION = "v01.23g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -328,7 +328,8 @@ var SCRAPER_TABS = {
   PROFILES: 'Profiles',
   PREFERENCES: 'Preferences',
   USAGE: 'UsageLog',
-  ARCHIVE: 'ArticlesArchive'
+  ARCHIVE: 'ArticlesArchive',
+  QUERYPLANS: 'QueryPlans'
 };
 
 var SCRAPER_TAB_HEADERS = {
@@ -347,7 +348,8 @@ var SCRAPER_TAB_HEADERS = {
   UsageLog: ['Date', 'Owner', 'AI Calls', 'Fetch Calls', 'Notes'],
   ArticlesArchive: ['Article ID', 'Project ID', 'Owner', 'URL', 'Title', 'Source',
                     'Published At', 'Fetched At', 'Snippet', 'Summary', 'Relevance Score',
-                    'User Verdict', 'Report ID', 'Archived At']
+                    'User Verdict', 'Report ID', 'Archived At'],
+  QueryPlans: ['Project ID', 'Owner', 'Queries', 'Planned At']
 };
 
 var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual', 'annual', 'custom'];
@@ -359,7 +361,8 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'analyzeArticles', 'previewBrief',
                                'backfillNow', 'getBackfillStatus', 'enrichNow',
                                'setArticleVerdict', 'distillPreferences', 'resetScores',
-                               'getScoreStats', 'archiveJunk'];
+                               'getScoreStats', 'archiveJunk',
+                               'planQueries', 'getQueryPlan', 'deepBackfillNow'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -403,6 +406,18 @@ var SCRAPER_BACKFILL_MONTHS = 24;              // GDELT history window (2 years)
 var SCRAPER_BACKFILL_BATCH_FETCHES = 6;        // GDELT slice fetches per backfillNow call
 var SCRAPER_BACKFILL_TIME_BUDGET_MS = 40000;   // wall-clock budget per backfillNow call
 var SCRAPER_BACKFILL_STATE_PREFIX = 'scBackfill_';
+
+// ── Query planner + fetch-time pre-filter + deep backfill tuning ──
+var SCRAPER_PLAN_QUERIES_MAX = 24;      // max query groups the AI planner may store
+var SCRAPER_PLAN_GDELT_MAX = 12;        // plan groups used by GDELT backfill (was 6 auto-built)
+var SCRAPER_PLAN_GNEWS_MAX = 10;        // plan groups added to the Compile queue
+var SCRAPER_PREFILTER_BATCH = 40;       // headlines per pre-filter AI call
+var SCRAPER_DEEPBF_STATE_PREFIX = 'scDeepBF_';
+var SCRAPER_DEEPBF_MODEL = 'claude-haiku-4-5';  // cheapest web-search-capable model
+var SCRAPER_DEEPBF_QUARTERS = 8;        // 2 years of history in quarter slices
+var SCRAPER_DEEPBF_GROUPS_MAX = 8;      // query groups per deep backfill run
+var SCRAPER_DEEPBF_SEARCHES_PER_CALL = 3;
+var SCRAPER_DEEPBF_ARTICLES_PER_CALL = 20;
 
 function scraperSs_() {
   if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
@@ -686,8 +701,9 @@ function scTopicTerms_(topic, n) {
 /** Build the ordered fetch queue (Google News RSS queries + user sources).
     learnedKeywords (from the distilled Preferences row) widen the net with
     queries shaped by what the user actually rated relevant; likedDomains adds
-    per-outlet queries for the domains behind their 👍-rated articles. */
-function scBuildFetchQueue_(project, learnedKeywords, likedDomains) {
+    per-outlet queries for the domains behind their 👍-rated articles;
+    planQueries (AI query plan, optional) adds entity-level query groups. */
+function scBuildFetchQueue_(project, learnedKeywords, likedDomains, planQueries) {
   var queue = [];
   var excl = (project.exclusions || []).slice(0, 5).map(function(t) {
     return '-"' + t + '"';
@@ -713,6 +729,10 @@ function scBuildFetchQueue_(project, learnedKeywords, likedDomains) {
   }
   (likedDomains || []).slice(0, 3).forEach(function(d) {
     gnews(terms.slice(0, 3).join(' ') + ' site:' + d, 'liked-source');
+  });
+  // AI query plan groups — entity-level queries the auto-built ones miss.
+  (planQueries || []).slice(0, SCRAPER_PLAN_GNEWS_MAX).forEach(function(pq) {
+    gnews(pq, 'plan');
   });
   (project.sources || []).slice(0, 20).forEach(function(src) {
     queue.push({ kind: 'source', label: 'source', url: src });
@@ -828,16 +848,21 @@ function scCompileChunk_(ss, email, project) {
   try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (stErr) { state = null; }
   if (!state || state.done || String(state.owner).toLowerCase() !== email.toLowerCase()) {
     var cPrefs = scGetPrefs_(ss, project.id);
+    var cPlan = scGetPlan_(ss, project.id);
     var queue = scBuildFetchQueue_(project, cPrefs ? cPrefs.keywords : [],
-                                   scLikedDomains_(ss, project.id, email, 3));
+                                   scLikedDomains_(ss, project.id, email, 3),
+                                   cPlan ? cPlan.queries : []);
     state = { owner: email, startedAt: new Date().toISOString(),
               urls: queue.map(function(q) { return q.url; }),
               labels: queue.map(function(q) { return q.label; }),
-              index: 0, added: 0, errors: 0, done: false };
+              index: 0, added: 0, errors: 0, filtered: 0, done: false };
   }
 
   var existing = scExistingArticleUrls_(ss, project.id);
   var articles = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+  var pfPrefs = scGetPrefs_(ss, project.id);
+  var pfNote = pfPrefs ? pfPrefs.note : '';
+  var aiCalls = 0;
   var t0 = Date.now();
   var fetches = 0;
   var now = new Date();
@@ -855,10 +880,18 @@ function scCompileChunk_(ss, email, project) {
       var host = (String(url).match(/^https?:\/\/([^\/]+)/) || [])[1] || '';
       var feedItems = scParseFeed_(resp.getContentText(),
         label === 'source' ? host : 'Google News');
+      var fresh = [];
       feedItems.forEach(function(item) {
         if (!item.url || existing[item.url]) return;
-        if (state.added >= SCRAPER_COMPILE_MAX_NEW) return;
         existing[item.url] = true;
+        fresh.push(item);
+      });
+      // AI pre-filter: keep the collection clean at the door (fails open).
+      var pf = scPrefilterItems_(project, pfNote, fresh);
+      aiCalls += pf.aiCalls;
+      state.filtered = (state.filtered || 0) + pf.dropped;
+      pf.kept.forEach(function(item) {
+        if (state.added >= SCRAPER_COMPILE_MAX_NEW) return;
         state.added++;
         articles.appendRow([Utilities.getUuid(), project.id, email, item.url,
           item.title, item.source, item.publishedAt, now, item.snippet, '', '', '', '']);
@@ -867,14 +900,16 @@ function scCompileChunk_(ss, email, project) {
       state.errors++;
     }
   }
-  scLogUsage_(ss, email, 0, fetches);
+  scLogUsage_(ss, email, aiCalls, fetches);
   state.done = state.index >= state.urls.length || state.added >= SCRAPER_COMPILE_MAX_NEW;
   if (state.done) state.finishedAt = new Date().toISOString();
   props.setProperty(key, JSON.stringify(state));
   if (state.done) dataAuditLog(email, 'compile', 'project', project.id,
-    state.added + ' new articles, ' + state.errors + ' errors');
+    state.added + ' new articles, ' + (state.filtered || 0) + ' filtered, '
+    + state.errors + ' errors');
   return { success: true, done: state.done, processed: state.index,
-           total: state.urls.length, added: state.added, errors: state.errors };
+           total: state.urls.length, added: state.added, errors: state.errors,
+           filtered: state.filtered || 0 };
 }
 
 /** Current compilation progress for a project (owner only). */
@@ -904,8 +939,22 @@ function getCompileStatus(sessionToken, projectId) {
 
 function scBackfillStateKey_(projectId) { return SCRAPER_BACKFILL_STATE_PREFIX + projectId; }
 
-/** GDELT query strings for a project (quoted phrases, OR groups in parens). */
-function scGdeltQueries_(project, learnedKeywords, likedDomains) {
+/** GDELT query strings for a project (quoted phrases, OR groups in parens).
+    When an AI query plan exists, its entity-level groups REPLACE the
+    auto-built topic/keyword queries (which only see the first words of the
+    topic) — the liked-domain group is still appended. */
+function scGdeltQueries_(project, learnedKeywords, likedDomains, planQueries) {
+  if (planQueries && planQueries.length) {
+    // GDELT requires OR groups wrapped in parens.
+    var pq = planQueries.slice(0, SCRAPER_PLAN_GDELT_MAX).map(function(q) {
+      return (/ OR /.test(q) && q.charAt(0) !== '(') ? '(' + q + ')' : q;
+    });
+    var pdoms = (likedDomains || []).slice(0, 3).map(function(d) { return 'domainis:' + d; });
+    if (pdoms.length) {
+      pq.push(pdoms.length > 1 ? '(' + pdoms.join(' OR ') + ')' : pdoms[0]);
+    }
+    return pq;
+  }
   var queries = [];
   var terms = scTopicTerms_(project.topic, 4);
   if (terms.length) queries.push(terms.join(' '));
@@ -958,16 +1007,21 @@ function backfillNow(sessionToken, projectId) {
   try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (bfErr) { state = null; }
   if (!state || state.done || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
     var bPrefs = scGetPrefs_(ss, project.id);
+    var bPlan = scGetPlan_(ss, project.id);
     state = { owner: user.email, startedAt: new Date().toISOString(),
               queries: scGdeltQueries_(project, bPrefs ? bPrefs.keywords : [],
-                                       scLikedDomains_(ss, project.id, user.email, 3)),
+                                       scLikedDomains_(ss, project.id, user.email, 3),
+                                       bPlan ? bPlan.queries : []),
               months: SCRAPER_BACKFILL_MONTHS,
-              index: 0, added: 0, errors: 0, done: false };
+              index: 0, added: 0, errors: 0, filtered: 0, done: false };
   }
   var total = state.queries.length * state.months;
 
   var existing = scExistingArticleUrls_(ss, project.id);
   var articles = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+  var bfPrefs = scGetPrefs_(ss, project.id);
+  var bfNote = bfPrefs ? bfPrefs.note : '';
+  var aiCalls = 0;
   var t0 = Date.now();
   var fetches = 0;
   var now = new Date();
@@ -988,14 +1042,22 @@ function backfillNow(sessionToken, projectId) {
       // GDELT reports query errors as plain text with HTTP 200 — treat unparseable as error
       try { list = (JSON.parse(resp.getContentText()) || {}).articles || []; }
       catch (parseErr) { state.errors++; continue; }
-      var rows = [];
+      var fresh = [];
       list.forEach(function(item) {
         var u = scStr_(String(item.url || ''), 500);
         if (!u || existing[u]) return;
         existing[u] = true;
-        rows.push([Utilities.getUuid(), project.id, user.email, u,
-          scStr_(String(item.title || ''), 300), scStr_(String(item.domain || ''), 120),
-          scStr_(String(item.seendate || ''), 60), now, '', '', '', '', '']);
+        fresh.push({ url: u, title: scStr_(String(item.title || ''), 300),
+          source: scStr_(String(item.domain || ''), 120),
+          seendate: scStr_(String(item.seendate || ''), 60) });
+      });
+      // AI pre-filter (fails open) — GDELT keyword matching is the junk firehose.
+      var pf = scPrefilterItems_(project, bfNote, fresh);
+      aiCalls += pf.aiCalls;
+      state.filtered = (state.filtered || 0) + pf.dropped;
+      var rows = pf.kept.map(function(item) {
+        return [Utilities.getUuid(), project.id, user.email, item.url,
+          item.title, item.source, item.seendate, now, '', '', '', '', ''];
       });
       if (rows.length) {
         articles.getRange(articles.getLastRow() + 1, 1, rows.length, 13).setValues(rows);
@@ -1005,14 +1067,16 @@ function backfillNow(sessionToken, projectId) {
       state.errors++;
     }
   }
-  scLogUsage_(ss, user.email, 0, fetches);
+  scLogUsage_(ss, user.email, aiCalls, fetches);
   state.done = state.index >= total;
   if (state.done) state.finishedAt = new Date().toISOString();
   props.setProperty(key, JSON.stringify(state));
   if (state.done) dataAuditLog(user.email, 'backfill', 'project', project.id,
-    state.added + ' historical articles, ' + state.errors + ' errors');
+    state.added + ' historical articles, ' + (state.filtered || 0) + ' filtered, '
+    + state.errors + ' errors');
   return { success: true, done: state.done, processed: state.index,
-           total: total, added: state.added, errors: state.errors };
+           total: total, added: state.added, errors: state.errors,
+           filtered: state.filtered || 0 };
 }
 
 /** Current backfill progress for a project (owner only). */
@@ -1029,6 +1093,280 @@ function getBackfillStatus(sessionToken, projectId) {
   return { success: true, state: { done: state.done, processed: state.index,
     total: state.queries.length * state.months, added: state.added, errors: state.errors,
     startedAt: state.startedAt, finishedAt: state.finishedAt || '' } };
+}
+
+// ── Phase 3.6: AI query planner, fetch-time pre-filter, deep backfill ──
+// The auto-built queries (scTopicTerms_ takes the FIRST 6 words of the topic)
+// were the root cause of an 84%-junk corpus: most entities named in a prose
+// topic were never queried. The planner turns the FULL topic + keywords +
+// learned preferences into entity-level query groups, stored per project in
+// the QueryPlans tab and consumed by Compile, Backfill, and Deep backfill.
+
+/** Stored query plan for a project, or null. */
+function scGetPlan_(ss, projectId) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.QUERYPLANS);
+  if (!sheet) return null;
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (data[i][0] !== projectId) continue;
+    var queries = [];
+    try { queries = JSON.parse(String(data[i][2] || '[]')) || []; } catch (qpErr) { queries = []; }
+    return { row: i + 1, queries: queries, plannedAt: String(data[i][3] || '') };
+  }
+  return null;
+}
+
+/** Upsert a project's query plan row. */
+function scSavePlan_(ss, projectId, owner, queries) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.QUERYPLANS);
+  var existing = scGetPlan_(ss, projectId);
+  var rowVals = [projectId, owner, JSON.stringify(queries), new Date().toISOString()];
+  if (existing) sheet.getRange(existing.row, 1, 1, 4).setValues([rowVals]);
+  else sheet.appendRow(rowVals);
+}
+
+/** First JSON array in an AI reply, or null. Tolerates prose around it. */
+function scJsonArray_(text) {
+  var s = String(text || '');
+  var a = s.indexOf('['), b = s.lastIndexOf(']');
+  if (a < 0 || b <= a) return null;
+  try { return JSON.parse(s.substring(a, b + 1)); } catch (jaErr) { return null; }
+}
+
+/** Build and store the AI query plan for a project (one AI call). */
+function planQueries(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'planQueries');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+  var prefs = scGetPrefs_(ss, project.id);
+
+  var prompt = 'You are building a news-search query plan for a monitoring project.\n\n'
+    + 'PROJECT TOPIC (full text — every entity mentioned here matters):\n'
+    + project.topic + '\n\n'
+    + 'KEYWORDS: ' + (project.keywords || []).join(', ') + '\n'
+    + 'INDUSTRIES: ' + (project.industries || []).join(', ') + '\n'
+    + 'EXCLUDED TERMS: ' + (project.exclusions || []).join(', ') + '\n\n'
+    + scPrefsPrompt_(prefs ? prefs.note : '')
+    + (prefs && prefs.keywords.length
+        ? 'LEARNED SEARCH PHRASES: ' + prefs.keywords.join(', ') + '\n\n' : '')
+    + 'Produce up to ' + SCRAPER_PLAN_QUERIES_MAX + ' search query strings that together '
+    + 'cover EVERY company, organization, technology, and policy area the project cares '
+    + 'about. Each query is a group of 1-3 quoted phrases joined by OR, focused on ONE '
+    + 'entity or theme, including common aliases and product names, e.g. '
+    + '"\\"Tesla Megapack\\" OR \\"Tesla Energy\\"". Prefer specific entity names over '
+    + 'generic terms; do not include the excluded terms.\n\n'
+    + 'Reply ONLY with a JSON array of query strings.';
+  var queries;
+  try {
+    var text = aiComplete_(prompt, 4096);
+    queries = scJsonArray_(text);
+  } catch (aiErr) {
+    return { success: false, error: String(aiErr.message || aiErr).split(' — ')[0] };
+  }
+  if (!queries || !queries.length) return { success: false, error: 'plan_parse_failed' };
+  queries = queries.map(function(q) { return scStr_(String(q || ''), 200); })
+    .filter(function(q) { return q; })
+    .slice(0, SCRAPER_PLAN_QUERIES_MAX);
+  scSavePlan_(ss, project.id, user.email, queries);
+  scLogUsage_(ss, user.email, 1, 0);
+  dataAuditLog(user.email, 'plan_queries', 'project', project.id, queries.length + ' query groups');
+  return { success: true, queries: queries, count: queries.length };
+}
+
+/** Read the stored query plan (owner-scoped via project lookup). */
+function getQueryPlan(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'getQueryPlan');
+  var ss = scraperSs_();
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var plan = scGetPlan_(ss, String(projectId));
+  return { success: true, plan: plan ? { queries: plan.queries, plannedAt: plan.plannedAt } : null };
+}
+
+/** Batch keep/drop pre-filter over candidate items ({title, source} read).
+    One AI call per SCRAPER_PREFILTER_BATCH headlines; drops only clear junk.
+    FAILS OPEN: any AI error keeps the whole batch — a rate-limited or broken
+    AI service must never cost the user articles. */
+function scPrefilterItems_(project, prefsNote, items) {
+  if (!items.length) return { kept: items, dropped: 0, aiCalls: 0 };
+  var kept = [], dropped = 0, aiCalls = 0;
+  for (var i = 0; i < items.length; i += SCRAPER_PREFILTER_BATCH) {
+    var batch = items.slice(i, i + SCRAPER_PREFILTER_BATCH);
+    var lines = batch.map(function(it, idx) {
+      return (idx + 1) + '. ' + it.title + (it.source ? ' (' + it.source + ')' : '');
+    }).join('\n');
+    var prompt = 'PROJECT SCOPE:\n' + scStr_(String(project.topic || ''), 1500) + '\n'
+      + 'KEYWORDS: ' + (project.keywords || []).join(', ') + '\n\n'
+      + scPrefsPrompt_(prefsNote)
+      + 'Below are candidate news headlines. Keep any headline that is plausibly relevant '
+      + 'to the project scope — on-topic, a subtopic, or adjacent context (corporate moves, '
+      + 'financing, policy, supply chain involving relevant players). Drop only headlines '
+      + 'that are clearly unrelated junk. When unsure, KEEP the headline.\n\n'
+      + lines + '\n\n'
+      + 'Reply ONLY with a JSON array of the numbers to KEEP, e.g. [1,3,4].';
+    try {
+      var nums = scJsonArray_(aiComplete_(prompt, 1024));
+      aiCalls++;
+      if (!nums) throw new Error('prefilter_parse');
+      var keep = {};
+      nums.forEach(function(n) { keep[Number(n)] = true; });
+      batch.forEach(function(it, idx) {
+        if (keep[idx + 1]) kept.push(it); else dropped++;
+      });
+    } catch (pfErr) {
+      kept = kept.concat(batch);  // fail open
+    }
+  }
+  return { kept: kept, dropped: dropped, aiCalls: aiCalls };
+}
+
+function scDeepBFStateKey_(projectId) { return SCRAPER_DEEPBF_STATE_PREFIX + projectId; }
+
+/** One Claude web-search call: articles about queryGroup during periodLabel.
+    Returns { articles: [{url,title,source,published,summary}], searches: n }.
+    Requires ANTHROPIC_API_KEY (independent of the AI_PROVIDER setting —
+    web search is an Anthropic server-side tool). */
+function scWebSearchArticles_(apiKey, project, queryGroup, periodLabel) {
+  var prompt = 'Search the web for news articles about ' + queryGroup
+    + ' published during ' + periodLabel + '.\n'
+    + 'Context — the user monitors: ' + scStr_(String(project.topic || ''), 600) + '\n\n'
+    + 'After searching, reply ONLY with a JSON array (max '
+    + SCRAPER_DEEPBF_ARTICLES_PER_CALL + ' entries) of the most relevant articles you '
+    + 'actually found in the search results:\n'
+    + '[{"url":"https://...","title":"...","source":"publisher name",'
+    + '"published":"YYYY-MM-DD","summary":"1-2 sentence factual summary"}]\n'
+    + 'Only include real articles from the search results. If nothing relevant was '
+    + 'found, reply [].';
+  var resp = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
+    method: 'post',
+    contentType: 'application/json',
+    headers: { 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
+    payload: JSON.stringify({
+      model: SCRAPER_DEEPBF_MODEL,
+      max_tokens: 4096,
+      tools: [{ type: 'web_search_20250305', name: 'web_search',
+                max_uses: SCRAPER_DEEPBF_SEARCHES_PER_CALL }],
+      messages: [{ role: 'user', content: prompt }]
+    }),
+    muteHttpExceptions: true
+  });
+  var code = resp.getResponseCode();
+  var body = resp.getContentText() || '';
+  if (code === 429) throw new Error('ai_rate_limited');
+  if (code < 200 || code >= 300) {
+    var apiMsg = '';
+    try { apiMsg = (JSON.parse(body).error || {}).message || ''; } catch (weErr) {}
+    throw new Error('ai_http_' + code + (apiMsg ? ' — ' + apiMsg.slice(0, 160) : ''));
+  }
+  var data;
+  try { data = JSON.parse(body); } catch (wpErr) { throw new Error('ai_bad_json'); }
+  var text = '';
+  ((data && data.content) || []).forEach(function(b) {
+    if (b && b.type === 'text') text += b.text || '';
+  });
+  var searches = Number(((data || {}).usage || {}).server_tool_use
+    ? data.usage.server_tool_use.web_search_requests : 0) || 0;
+  var articles = scJsonArray_(text) || [];
+  return { articles: articles, searches: searches };
+}
+
+/** Deep backfill: one quarter × query-group task per invocation (a web-search
+    turn can run 20-60s, so the client loops task by task). Same poison-safe
+    pre-call state save as Enrich — a killed execution counts the task failed
+    and moves on instead of re-hanging. Articles arrive WITH summaries, so
+    they skip Enrich entirely; the pre-filter is unnecessary (search relevance
+    already did that job). */
+function deepBackfillNow(sessionToken, projectId) {
+  var user = validateSessionForData(sessionToken, 'deepBackfillNow');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
+
+  var apiKey = PropertiesService.getScriptProperties().getProperty('ANTHROPIC_API_KEY') || '';
+  if (!apiKey) return { success: false, error: 'deepbf_key_missing' };
+
+  var props = PropertiesService.getScriptProperties();
+  var key = scDeepBFStateKey_(project.id);
+  var state = null;
+  try { state = JSON.parse(props.getProperty(key) || 'null'); } catch (dbErr) { state = null; }
+  if (!state || state.done || String(state.owner).toLowerCase() !== user.email.toLowerCase()) {
+    var plan = scGetPlan_(ss, project.id);
+    var dPrefs = scGetPrefs_(ss, project.id);
+    var groups = (plan && plan.queries.length
+      ? plan.queries
+      : scGdeltQueries_(project, dPrefs ? dPrefs.keywords : [],
+                        scLikedDomains_(ss, project.id, user.email, 3)))
+      .slice(0, SCRAPER_DEEPBF_GROUPS_MAX);
+    state = { owner: user.email, startedAt: new Date().toISOString(),
+              groups: groups, quarters: SCRAPER_DEEPBF_QUARTERS,
+              index: 0, added: 0, errors: 0, searches: 0, done: false };
+  }
+  var total = state.groups.length * state.quarters;
+
+  // Poison recovery: a leftover marker means the prior execution died
+  // mid-call (uncatchable 6-min kill) — count it failed and move past it.
+  if (state.attempting != null) {
+    state.errors++;
+    state.index = state.attempting + 1;
+    state.attempting = null;
+  }
+
+  if (state.index < total) {
+    var qIdx = state.index % state.groups.length;
+    var quarter = Math.floor(state.index / state.groups.length);
+    var anchor = new Date(state.startedAt);
+    var qStart = new Date(anchor.getFullYear(), anchor.getMonth() - 3 * (quarter + 1), 1);
+    var qEnd = (quarter === 0) ? anchor
+      : new Date(anchor.getFullYear(), anchor.getMonth() - 3 * quarter, 1);
+    var label = Utilities.formatDate(qStart, 'GMT', 'MMMM yyyy') + ' through '
+      + Utilities.formatDate(qEnd, 'GMT', 'MMMM yyyy');
+
+    state.attempting = state.index;
+    props.setProperty(key, JSON.stringify(state));  // survives a mid-call kill
+    try {
+      var result = scWebSearchArticles_(apiKey, project, state.groups[qIdx], label);
+      state.searches += result.searches;
+      var existing = scExistingArticleUrls_(ss, project.id);
+      var articles = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+      var now = new Date();
+      var rows = [];
+      result.articles.forEach(function(a) {
+        var u = scStr_(String((a && a.url) || ''), 500);
+        if (!u || !/^https?:\/\//i.test(u) || existing[u]) return;
+        existing[u] = true;
+        rows.push([Utilities.getUuid(), project.id, user.email, u,
+          scStr_(String(a.title || ''), 300), scStr_(String(a.source || ''), 120),
+          scStr_(String(a.published || ''), 60), now,
+          scStr_(String(a.summary || ''), SCRAPER_ARTICLE_SNIPPET_MAX), '', '', '', '']);
+      });
+      if (rows.length) {
+        articles.getRange(articles.getLastRow() + 1, 1, rows.length, 13).setValues(rows);
+        state.added += rows.length;
+      }
+    } catch (dbfErr) {
+      state.errors++;
+    }
+    state.attempting = null;
+    state.index++;
+    scLogUsage_(ss, user.email, 1, 0);
+  }
+
+  state.done = state.index >= total;
+  if (state.done) state.finishedAt = new Date().toISOString();
+  props.setProperty(key, JSON.stringify(state));
+  if (state.done) dataAuditLog(user.email, 'deep_backfill', 'project', project.id,
+    state.added + ' articles via ' + state.searches + ' web searches, '
+    + state.errors + ' failed tasks');
+  return { success: true, done: state.done, processed: state.index, total: total,
+           added: state.added, errors: state.errors, searches: state.searches };
 }
 
 /** Calibration band mixer (pure — unit-testable). Splits scored articles into
@@ -2067,6 +2405,9 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'enrichNow') return enrichNow(sessionToken, param('projectId'));
   if (op === 'getScoreStats') return getScoreStats(sessionToken, param('projectId'));
   if (op === 'archiveJunk') return archiveJunk(sessionToken, param('projectId'));
+  if (op === 'planQueries') return planQueries(sessionToken, param('projectId'));
+  if (op === 'getQueryPlan') return getQueryPlan(sessionToken, param('projectId'));
+  if (op === 'deepBackfillNow') return deepBackfillNow(sessionToken, param('projectId'));
   if (op === 'resetScores') return resetScores(sessionToken, param('projectId'));
   if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));
   if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));

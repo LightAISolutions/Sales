@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.23w">
+  <meta name="build-version" content="v01.24w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -4465,7 +4465,9 @@
     ai_bad_json: 'The AI service returned an unreadable answer — please try again.',
     ai_provider_not_configured: 'No AI provider is configured on the server.',
     ai_model_not_found: 'No compatible AI model was found for this key — check that it is a Google AI Studio key.',
-    no_relevant_articles: 'No relevant articles yet — run Analyze first (articles need a relevance score of 50+).'
+    no_relevant_articles: 'No relevant articles yet — run Analyze first (articles need a relevance score of 50+).',
+    plan_parse_failed: 'The AI could not produce a usable search plan — please try again.',
+    deepbf_key_missing: 'Deep backfill needs an Anthropic API key — add ANTHROPIC_API_KEY in the server settings to enable AI web search.'
   };
   var _scProjects = [];
   var _scWizStep = 0;
@@ -4559,7 +4561,9 @@
         + '<div class="sc-chips">' + scChipRow(p) + '</div>'
         + '<div class="sc-card-actions">'
         + '<button class="sc-btn primary" type="button" data-act="compile" data-id="' + scEsc(p.id) + '">Compile</button>'
+        + '<button class="sc-btn" type="button" data-act="plan" data-id="' + scEsc(p.id) + '" title="Build an AI search plan from your full topic, keywords, and learned preferences — used by Compile, Backfill, and Deep backfill">Plan</button>'
         + '<button class="sc-btn" type="button" data-act="backfill" data-id="' + scEsc(p.id) + '">Backfill</button>'
+        + '<button class="sc-btn" type="button" data-act="deepbackfill" data-id="' + scEsc(p.id) + '" title="AI web-search backfill: finds historical articles with summaries via paid web searches — higher precision than the free Backfill">Deep backfill</button>'
         + '<button class="sc-btn" type="button" data-act="enrich" data-id="' + scEsc(p.id) + '" title="Fetch missing article previews from the publishers">Enrich</button>'
         + '<button class="sc-btn" type="button" data-act="analyze" data-id="' + scEsc(p.id) + '">Analyze</button>'
         + '<button class="sc-btn" type="button" data-act="articles" data-id="' + scEsc(p.id) + '">Articles</button>'
@@ -4671,6 +4675,10 @@
         scRunCompile(id, btn);
       } else if (act === 'backfill') {
         scRunBackfill(id, btn);
+      } else if (act === 'plan') {
+        scRunPlan(id, btn);
+      } else if (act === 'deepbackfill') {
+        scRunDeepBackfill(id, btn);
       } else if (act === 'enrich') {
         scRunEnrich(id, btn);
       } else if (act === 'analyze') {
@@ -4793,6 +4801,7 @@
           scProgUpdate(id, 'Compiling news',
             data.total ? (data.processed / data.total) * 100 : null,
             data.processed + '/' + data.total + ' feeds · ' + data.added + ' new'
+            + (data.filtered ? ' · ' + data.filtered + ' junk filtered' : '')
             + (data.errors ? ' · ' + data.errors + ' failed' : ''));
           return data.done ? data : step();
         });
@@ -4842,6 +4851,7 @@
           scProgUpdate(id, 'Backfilling 2 years of history',
             data.total ? (data.processed / data.total) * 100 : null,
             data.processed + '/' + data.total + ' history slices · ' + data.added + ' found'
+            + (data.filtered ? ' · ' + data.filtered + ' junk filtered' : '')
             + (data.errors ? ' · ' + data.errors + ' failed' : ''));
           return data.done ? data : step();
         });
@@ -4865,6 +4875,120 @@
         btn.disabled = false;
         btn.removeAttribute('data-running');
         btn.textContent = orig;
+      });
+  }
+
+  // ── AI query planner: one call, plan shown in the shared overlay ──
+  function scRunPlan(id, btn) {
+    if (btn.getAttribute('data-running') === '1') return;
+    btn.setAttribute('data-running', '1');
+    btn.disabled = true;
+    btn.textContent = 'Planning…';
+    scProgUpdate(id, 'Building AI search plan', null,
+      'Reading your topic, keywords, and learned preferences…');
+    scRetryOnce(function() {
+      return _gasPost({ action: 'planQueries', token: scToken(), projectId: id });
+    })
+      .then(function(data) {
+        if (!(data && data.success)) {
+          var appErr = new Error('app'); appErr.appCode = (data && data.error) || 'unknown';
+          throw appErr;
+        }
+        scProgDone(id, data.count + ' search groups saved');
+        scToast('Search plan built — ' + data.count + ' query group'
+          + (data.count === 1 ? '' : 's') + ' now power Compile, Backfill, and Deep backfill.');
+        scShowPlan_(id, data.queries);
+      })
+      .catch(function(err) {
+        scProgFail_(id, 'Plan not saved');
+        scToast(err && err.appCode
+          ? scErrMsg(err.appCode)
+          : 'Could not reach the server (' + scEsc(String((err && err.message) || err)) + ').', true);
+      })
+      .then(function() {
+        btn.disabled = false;
+        btn.removeAttribute('data-running');
+        btn.textContent = 'Plan';
+      });
+  }
+
+  // Reuses the stats overlay shell — it is a generic title+body panel.
+  function scShowPlan_(id, queries) {
+    var proj = null;
+    _scProjects.forEach(function(p) { if (p.id === id) proj = p; });
+    $sc('sc-stats-title').textContent = (proj ? proj.name + ' — ' : '') + 'Search Plan';
+    var html = '<p style="margin:0 0 8px 0;color:#55606e;font-size:12px;">These query groups now '
+      + 'drive Compile, Backfill, and Deep backfill. Re-run Plan any time your topic, keywords, '
+      + 'or learned preferences change.</p><ol style="margin:0;padding-left:20px;font-size:12.5px;">';
+    (queries || []).forEach(function(q) {
+      html += '<li style="margin-bottom:4px;">' + scEsc(q) + '</li>';
+    });
+    html += '</ol>';
+    $sc('sc-stats-body').innerHTML = html;
+    $sc('sc-stats-overlay').style.display = 'flex';
+  }
+
+  // ── Deep backfill: AI web-search history, one task per server call ──
+  // Two-tap confirm because it uses paid web searches (cost is bounded by
+  // groups × quarters × searches-per-call on the server).
+  var _scDeepTimer = null;
+  function scRunDeepBackfill(id, btn) {
+    if (btn.getAttribute('data-running') === '1') return;
+    if (btn.getAttribute('data-armed') !== '1') {
+      btn.setAttribute('data-armed', '1');
+      btn.textContent = 'Uses paid AI search — tap again';
+      btn.style.color = '#b3261e';
+      if (_scDeepTimer) clearTimeout(_scDeepTimer);
+      _scDeepTimer = setTimeout(function() {
+        btn.removeAttribute('data-armed');
+        btn.textContent = 'Deep backfill';
+        btn.style.color = '';
+      }, 6000);
+      return;
+    }
+    if (_scDeepTimer) clearTimeout(_scDeepTimer);
+    btn.removeAttribute('data-armed');
+    btn.style.color = '';
+    btn.setAttribute('data-running', '1');
+    btn.disabled = true;
+    function step() {
+      return scRetryOnce(function() {
+        return _gasPost({ action: 'deepBackfillNow', token: scToken(), projectId: id });
+      })
+        .then(function(data) {
+          if (!(data && data.success)) {
+            var appErr = new Error('app'); appErr.appCode = (data && data.error) || 'unknown';
+            throw appErr;
+          }
+          btn.textContent = 'Deep backfill… ' + data.processed + '/' + data.total;
+          scProgUpdate(id, 'Deep backfill (AI web search)',
+            data.total ? (data.processed / data.total) * 100 : null,
+            data.processed + '/' + data.total + ' searches done · ' + data.added
+            + ' articles found · ' + data.searches + ' web searches used'
+            + (data.errors ? ' · ' + data.errors + ' failed' : ''));
+          return data.done ? data : step();
+        });
+    }
+    scProgUpdate(id, 'Deep backfill (AI web search)', null, 'Preparing search tasks…');
+    step()
+      .then(function(data) {
+        scProgDone(id, data.added + ' articles found via ' + data.searches + ' web searches');
+        scToast('Deep backfill finished — ' + data.added + ' article'
+          + (data.added === 1 ? '' : 's') + ' found (with summaries, ready to Analyze)'
+          + (data.errors ? ' · ' + data.errors + ' task' + (data.errors === 1 ? '' : 's') + ' failed' : '') + '.');
+        if (data.added) scOpenArticles(id);
+      })
+      .catch(function(err) {
+        scProgFail_(id, 'Stopped — will resume where it left off if you retry');
+        scToast(err && err.appCode
+          ? scErrMsg(err.appCode)
+          : 'Could not reach the server (' + scEsc(String((err && err.message) || err))
+            + '). Deep backfill will resume where it left off if you retry.', true);
+      })
+      .then(function() {
+        btn.disabled = false;
+        btn.removeAttribute('data-running');
+        btn.textContent = 'Deep backfill';
       });
   }
 

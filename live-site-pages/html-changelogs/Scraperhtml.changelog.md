@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 23/50`
+`Sections: 24/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.24w] — 2026-08-04 06:01:06 PM EST — v01.72r
+
+### Added
+- New Plan button on each project card: builds an AI search plan from your full topic, keywords, and learned preferences, and shows the resulting query groups in a panel — the plan then powers Compile, Backfill, and Deep backfill
+- New Deep backfill button: a premium history search that asks for confirmation before running (it uses paid AI web searches), shows live progress with articles found and searches used, and resumes where it left off if interrupted
+- Compile and Backfill progress now shows how many junk headlines were filtered out before entering your collection
 
 ## [v01.23w] — 2026-08-04 04:53:53 PM EST — v01.71r
 
