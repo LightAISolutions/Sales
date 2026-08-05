@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.30w">
+  <meta name="build-version" content="v01.31w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -707,6 +707,7 @@
       <div class="sc-header">
         <h1>📰 News Scraper</h1>
         <div>
+          <button class="sc-btn" id="sc-notif-btn" type="button" title="Notification history" style="position:relative;">🔔<span id="sc-notif-badge" style="display:none;position:absolute;top:-6px;right:-6px;background:#b3261e;color:#fff;border-radius:9px;font-size:10px;line-height:1;padding:3px 5px;min-width:10px;text-align:center;"></span></button>
           <button class="sc-btn" id="sc-refresh-btn" type="button">Refresh</button>
           <button class="sc-btn primary" id="sc-new-btn" type="button">+ New Project</button>
         </div>
@@ -2909,6 +2910,8 @@
       if (gclOverlay) gclOverlay.style.display = 'none';
       var tabWall = document.getElementById('tab-takeover-wall');
       if (tabWall) { tabWall.style.display = 'none'; _tabSurrendered = false; }
+      var notifPanel = document.getElementById('sc-notif-panel'); // PROJECT OVERRIDE: Scraper notification history panel
+      if (notifPanel) notifPanel.style.display = 'none';
       if (typeof stopCountdownTimers === 'function') stopCountdownTimers();
 
       // Always show sign-in UI (not reconnecting/signing-in) when showAuthWall is called
@@ -4510,7 +4513,87 @@
   function scErrMsg(code) {
     return SC_ERROR_MESSAGES[code] || ('Something went wrong (' + scEsc(code || 'unknown') + '). Please try again.');
   }
+  // ── Notification history ──
+  // Every toast (results, errors) and every long-operation start is logged to
+  // localStorage with a timestamp, so the user can walk away mid-Backfill,
+  // come back (even through a deploy auto-reload), and see definitively what
+  // finished, what failed — and what never completed: a "▶ started" entry
+  // with no matching finish means the run was interrupted (retrying resumes).
+  var SC_NOTIF_KEY = 'scraperNotifLog';
+  var SC_NOTIF_SEEN_KEY = 'scraperNotifSeen';
+  var SC_NOTIF_MAX = 100;
+  function scNotifLog_() {
+    try { return JSON.parse(localStorage.getItem(SC_NOTIF_KEY) || '[]') || []; }
+    catch (e) { return []; }
+  }
+  function scNotify_(msg, isError) {
+    try {
+      var log = scNotifLog_();
+      log.unshift({ t: Date.now(), msg: String(msg), err: !!isError });
+      if (log.length > SC_NOTIF_MAX) log.length = SC_NOTIF_MAX;
+      localStorage.setItem(SC_NOTIF_KEY, JSON.stringify(log));
+    } catch (e) { /* storage blocked/full — the live toast still shows */ }
+    scNotifBadge_();
+    var panel = document.getElementById('sc-notif-panel');
+    if (panel && panel.style.display !== 'none') scNotifRender_();
+  }
+  function scNotifBadge_() {
+    var badge = $sc('sc-notif-badge');
+    if (!badge) return;
+    var seen = 0;
+    try { seen = Number(localStorage.getItem(SC_NOTIF_SEEN_KEY)) || 0; } catch (e) {}
+    var unread = scNotifLog_().filter(function(n) { return n.t > seen; }).length;
+    badge.textContent = unread > 99 ? '99+' : String(unread);
+    badge.style.display = unread ? 'block' : 'none';
+  }
+  function scNotifRender_() {
+    var panel = document.getElementById('sc-notif-panel');
+    if (!panel) return;
+    var log = scNotifLog_();
+    var html = '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">'
+      + '<b style="font-size:13px;">Notifications</b>'
+      + '<span><button class="sc-btn subtle" id="sc-notif-clear" type="button" style="font-size:11px;">Clear</button> '
+      + '<button class="sc-btn subtle" id="sc-notif-close" type="button" style="font-size:11px;">✕</button></span></div>';
+    if (!log.length) {
+      html += '<p style="color:#55606e;font-size:12px;margin:6px 0;">No notifications yet — the result of '
+        + 'every Compile, Backfill, Enrich, Analyze, and other action is saved here with its timestamp.</p>';
+    } else {
+      log.forEach(function(n) {
+        html += '<div style="padding:6px 0;border-bottom:1px solid #eceff3;font-size:12px;line-height:1.45;'
+          + (n.err ? 'color:#8c201c;' : 'color:#1f2733;') + '">'
+          + '<span style="color:#8a93a0;font-size:10.5px;">' + scEsc(new Date(n.t).toLocaleString()) + '</span><br>'
+          + scEsc(n.msg) + '</div>';
+      });
+    }
+    panel.innerHTML = html;
+    $sc('sc-notif-clear').addEventListener('click', function() {
+      try { localStorage.removeItem(SC_NOTIF_KEY); } catch (e) {}
+      scNotifRender_(); scNotifBadge_();
+    });
+    $sc('sc-notif-close').addEventListener('click', scNotifToggle_);
+  }
+  function scNotifToggle_() {
+    var panel = document.getElementById('sc-notif-panel');
+    if (!panel) {
+      panel = document.createElement('div');
+      panel.id = 'sc-notif-panel';
+      panel.style.cssText = 'position:fixed;top:64px;right:16px;width:340px;max-width:calc(100vw - 32px);'
+        + 'max-height:60vh;overflow-y:auto;background:#fff;border:1px solid #d5dae2;border-radius:10px;'
+        + 'box-shadow:0 8px 28px rgba(20,28,40,0.18);padding:12px 14px;z-index:9000;display:none;';
+      document.body.appendChild(panel);
+    }
+    var opening = panel.style.display === 'none';
+    panel.style.display = opening ? 'block' : 'none';
+    if (opening) {
+      scNotifRender_();
+      // Opening marks everything read — the badge resets.
+      try { localStorage.setItem(SC_NOTIF_SEEN_KEY, String(Date.now())); } catch (e) {}
+      scNotifBadge_();
+    }
+  }
+
   function scToast(msg, isError, ms) {
+    scNotify_(msg, isError);  // every toast is also saved to the history log
     var el = $sc('sc-status-msg');
     if (!el) return;
     el.textContent = msg;
@@ -4666,6 +4749,8 @@
   }
 
   function scBindEvents() {
+    $sc('sc-notif-btn').addEventListener('click', scNotifToggle_);
+    scNotifBadge_();  // unread count from previous sessions shows immediately
     $sc('sc-refresh-btn').addEventListener('click', scLoadProjects);
     $sc('sc-new-btn').addEventListener('click', function() { scOpenWizard(null); });
     $sc('sc-wiz-close').addEventListener('click', scCloseWizard);
@@ -4803,6 +4888,9 @@
         + '<div class="sc-prog-stats">Starting…</div>';
       $sc('sc-prog-stack').appendChild(el);
       p = _scProg[key] = { el: el, t0: Date.now(), timer: null };
+      // Log the start so an interrupted run is detectable: a "▶ started"
+      // entry with no matching finish/error entry after it = never completed.
+      scNotify_('▶ ' + label + ' — started', false);
       p.timer = setInterval(function() {
         var s = Math.floor((Date.now() - p.t0) / 1000);
         p.el.querySelector('.sc-prog-time').textContent =

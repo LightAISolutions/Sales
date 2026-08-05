@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 30/50`
+`Sections: 31/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.31w] — 2026-08-05 03:35:45 AM EST — v01.79r
+
+### Added
+- New notification history: a 🔔 button in the header opens a floating panel that saves every result message with its timestamp — start an operation, walk away, and come back to see definitively whether it finished, failed, or was interrupted
+- Every long-running operation also logs a "started" entry, so a start with no matching finish tells you the run was cut short (retrying resumes where it left off)
+- The history survives page reloads and shows an unread-count badge on the bell; opening the panel marks everything read, and a Clear button wipes the history
 
 ## [v01.30w] — 2026-08-05 03:13:25 AM EST — v01.78r
 
