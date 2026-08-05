@@ -1,4 +1,4 @@
-var VERSION = "v01.27g";
+var VERSION = "v01.28g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1975,6 +1975,13 @@ function scNextRun_(freq, from, customConfig) {
 
 /** Hourly trigger entry point. */
 function scSchedulerTick() {
+  // Heartbeat FIRST (before the lock): proof-of-life for getSchedulerHealth.
+  // ScriptApp-based verification needs the script.scriptapp scope, which many
+  // deployments lack — a recent heartbeat proves the trigger fires without
+  // needing any permission at all.
+  try {
+    PropertiesService.getScriptProperties().setProperty('SCHEDULER_LAST_TICK', String(Date.now()));
+  } catch (hbErr) {}
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) return;  // a previous tick is still running
   try {
@@ -2008,14 +2015,29 @@ function scSchedulerTick() {
     This action surfaces the real error so the UI can show a fix-it banner. */
 function getSchedulerHealth(sessionToken) {
   validateSessionForData(sessionToken, 'getSchedulerHealth');
+  // Evidence first: a tick heartbeat within the last 2h proves the trigger is
+  // live — even when the script.scriptapp scope is missing, so a MANUALLY
+  // added trigger verifies correctly. (The previous version only trusted
+  // ScriptApp.getProjectTriggers(), which throws without the scope — it kept
+  // reporting "not installed" even after the user added the trigger by hand.)
+  var lastTick = 0;
+  try {
+    lastTick = Number(PropertiesService.getScriptProperties()
+      .getProperty('SCHEDULER_LAST_TICK')) || 0;
+  } catch (ltErr) {}
+  if (lastTick && (Date.now() - lastTick) < 7200000) {
+    return { success: true, installed: true, verifiedBy: 'heartbeat', lastTick: lastTick };
+  }
   try {
     scEnsureSchedulerTrigger_(true);
     var n = ScriptApp.getProjectTriggers().filter(function(t) {
       return t.getHandlerFunction() === 'scSchedulerTick';
     }).length;
-    return { success: true, installed: n > 0, triggers: n };
+    return { success: true, installed: n > 0, triggers: n, verifiedBy: 'scriptapp' };
   } catch (thErr) {
-    return { success: true, installed: false,
+    // Can't verify either way: no heartbeat yet AND no permission to look.
+    // A just-added manual trigger lands here until its first hourly run.
+    return { success: true, installed: false, unverified: true,
              error: String((thErr && thErr.message) || thErr).slice(0, 300) };
   }
 }
