@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.26w">
+  <meta name="build-version" content="v01.27w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -1790,19 +1790,29 @@
       for (var gk in params) { if (params.hasOwnProperty(gk)) getParams[gk] = params[gk]; }
       getParams.op = params.action;
       getParams.action = 'api';
-      function _getFallback() {
-        return fetch(baseUrlF + '?' + _qs(getParams), { method: 'GET', redirect: 'follow' })
-          .then(function(r2) {
-            if (!r2.ok) throw new Error('http_' + r2.status);
-            return r2.json();
-          });
-      }
-      if (_scGasGetOnly) return _getFallback();
-      return fetch(baseUrlF + '?' + _qs(params), { method: 'POST', redirect: 'follow' })
-        .then(function(r) {
+      // 90s watchdog on every request — without it a hung fetch never
+      // settles, the pressed button waits forever, and no error is shown
+      // ("sometimes it never loads"). On timeout the caller's .catch fires
+      // with a clear message and the button recovers.
+      function _fetchT(url, method) {
+        var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+        var opts = { method: method, redirect: 'follow' };
+        if (ctrl) opts.signal = ctrl.signal;
+        var tmr = ctrl ? setTimeout(function() { ctrl.abort(); }, 90000) : null;
+        return fetch(url, opts).then(function(r) {
+          if (tmr) clearTimeout(tmr);
           if (!r.ok) throw new Error('http_' + r.status);
           return r.json();
-        })
+        }, function(err) {
+          if (tmr) clearTimeout(tmr);
+          throw (ctrl && ctrl.signal && ctrl.signal.aborted) ? new Error('no reply after 90s') : err;
+        });
+      }
+      function _getFallback() {
+        return _fetchT(baseUrlF + '?' + _qs(getParams), 'GET');
+      }
+      if (_scGasGetOnly) return _getFallback();
+      return _fetchT(baseUrlF + '?' + _qs(params), 'POST')
         .catch(function() {
           // Only lock to GET after the fallback actually succeeds — a total
           // network outage must not permanently disable the POST path.
@@ -4499,14 +4509,16 @@
   function scErrMsg(code) {
     return SC_ERROR_MESSAGES[code] || ('Something went wrong (' + scEsc(code || 'unknown') + '). Please try again.');
   }
-  function scToast(msg, isError) {
+  function scToast(msg, isError, ms) {
     var el = $sc('sc-status-msg');
     if (!el) return;
     el.textContent = msg;
     el.style.background = isError ? 'rgba(140,32,28,0.95)' : 'rgba(31,39,51,0.92)';
     el.style.display = 'block';
     if (_scToastTimer) clearTimeout(_scToastTimer);
-    _scToastTimer = setTimeout(function() { el.style.display = 'none'; }, 4000);
+    // Errors and next-step completion messages need reading time — default
+    // 8s for errors, 4s for quick confirmations; callers can override.
+    _scToastTimer = setTimeout(function() { el.style.display = 'none'; }, ms || (isError ? 8000 : 4000));
   }
 
   window._scraperInit = function() {
@@ -4824,7 +4836,8 @@
         scProgDone(id, data.added + ' new articles gathered'
           + (data.errors ? ' · ' + data.errors + ' failed' : ''));
         scToast('Compilation finished — ' + data.added + ' new article' + (data.added === 1 ? '' : 's')
-          + (data.errors ? ' (' + data.errors + ' source' + (data.errors === 1 ? '' : 's') + ' failed)' : '') + '.');
+          + (data.errors ? ' (' + data.errors + ' source' + (data.errors === 1 ? '' : 's') + ' failed)' : '')
+          + (data.added ? '. Next: run Analyze to score them.' : '.'), false, 9000);
         scOpenArticles(id);
       })
       .catch(function(err) {
@@ -4874,7 +4887,8 @@
         scProgDone(id, data.added + ' historical articles found'
           + (data.errors ? ' · ' + data.errors + ' failed' : ''));
         scToast('Backfill finished — ' + data.added + ' historical article' + (data.added === 1 ? '' : 's')
-          + (data.errors ? ' (' + data.errors + ' slice' + (data.errors === 1 ? '' : 's') + ' failed)' : '') + '.');
+          + (data.errors ? ' (' + data.errors + ' slice' + (data.errors === 1 ? '' : 's') + ' failed)' : '')
+          + (data.added ? '. Next: run Enrich to fetch previews, then Analyze.' : '.'), false, 9000);
         scOpenArticles(id);
       })
       .catch(function(err) {
@@ -4907,7 +4921,7 @@
     _gasPost({ action: 'getQueryPlan', token: scToken(), projectId: id })
       .then(function(data) {
         if (data && data.success && data.plan && data.plan.queries && data.plan.queries.length) {
-          scShowPlan_(id, data.plan.queries);
+          scShowPlan_(id, data.plan.queries, data.plan.plannedAt);
           finish();
           return;
         }
@@ -4924,8 +4938,8 @@
             }
             scProgDone(id, data2.count + ' search groups saved');
             scToast('Search plan built — ' + data2.count + ' query group'
-              + (data2.count === 1 ? '' : 's') + ' now power Compile, Backfill, and Deep backfill.');
-            scShowPlan_(id, data2.queries);
+              + (data2.count === 1 ? '' : 's') + '. Next: run Compile or Backfill to use it.', false, 9000);
+            scShowPlan_(id, data2.queries, 'just now');
             finish();
           });
       })
@@ -4971,8 +4985,9 @@
           if (b) b.disabled = false;
           return;
         }
-        scShowPlan_(id, data.queries);  // fresh render rebinds all handlers
-        $sc('sc-plan-status').textContent = 'Plan rebuilt — ' + data.count + ' query groups.';
+        scShowPlan_(id, data.queries, 'just now');  // fresh render rebinds all handlers
+        $sc('sc-plan-status').textContent = 'Plan rebuilt — ' + data.count
+          + ' query groups. Next: run Compile or Backfill to use it.';
       })
       .catch(function(err) {
         var st = $sc('sc-plan-status');
@@ -4984,11 +4999,24 @@
   }
 
   // Reuses the stats overlay shell — it is a generic title+body panel.
-  function scShowPlan_(id, queries) {
+  function scShowPlan_(id, queries, plannedAt) {
     var proj = null;
     _scProjects.forEach(function(p) { if (p.id === id) proj = p; });
     $sc('sc-stats-title').textContent = (proj ? proj.name + ' — ' : '') + 'Search Plan';
-    var html = '<p style="margin:0 0 8px 0;color:#55606e;font-size:12px;">These query groups now '
+    // Provenance line — always shows when the plan was last saved, so the user
+    // can verify a Rebuild went through even if they missed the confirmation
+    // (e.g. the page auto-reloaded after a deploy while a rebuild was running).
+    var savedLabel = '';
+    if (plannedAt === 'just now') {
+      savedLabel = 'just now';
+    } else if (plannedAt) {
+      var pd = new Date(plannedAt);
+      savedLabel = isNaN(pd.getTime()) ? String(plannedAt) : pd.toLocaleString();
+    }
+    var html = '<p style="margin:0 0 2px 0;font-size:12px;color:#1f2733;"><b>'
+      + (queries || []).length + ' query group' + ((queries || []).length === 1 ? '' : 's')
+      + '</b>' + (savedLabel ? ' · saved ' + scEsc(savedLabel) : '') + '</p>'
+      + '<p style="margin:0 0 8px 0;color:#55606e;font-size:12px;">These query groups '
       + 'drive Compile, Backfill, and Deep backfill. Re-run Plan any time your topic, keywords, '
       + 'or learned preferences change.</p>'
       + '<ol id="sc-plan-list" style="margin:0;padding-left:20px;font-size:12.5px;">';
@@ -5103,8 +5131,9 @@
       .then(function(data) {
         scProgDone(id, data.added + ' articles found via ' + data.searches + ' web searches');
         scToast('Deep backfill finished — ' + data.added + ' article'
-          + (data.added === 1 ? '' : 's') + ' found (with summaries, ready to Analyze)'
-          + (data.errors ? ' · ' + data.errors + ' task' + (data.errors === 1 ? '' : 's') + ' failed' : '') + '.');
+          + (data.added === 1 ? '' : 's') + ' found with summaries'
+          + (data.errors ? ' · ' + data.errors + ' task' + (data.errors === 1 ? '' : 's') + ' failed' : '')
+          + (data.added ? '. Next: run Analyze to score them.' : '.'), false, 9000);
         if (data.added) scOpenArticles(id);
       })
       .catch(function(err) {
@@ -5182,6 +5211,20 @@
           ? '<br>Already archived: ' + s.archived
           : '')
       + '</div>';
+    // Data-driven recommendation — the single most valuable next action
+    var rec;
+    if (s.archivable) {
+      rec = 'Archive junk (' + s.archivable + ' articles are dragging down every collection-wide run)';
+    } else if (s.unscored) {
+      rec = 'Analyze (' + s.unscored + ' articles are still unscored)';
+    } else if (s.total && (s.withSnippet / s.total) < 0.8) {
+      rec = 'Enrich (previews are missing for ' + (s.total - s.withSnippet) + ' articles — scores improve with previews)';
+    } else if (s.ratablePool) {
+      rec = 'rate a few 👍/👎 in Articles to sharpen future scoring';
+    } else {
+      rec = 'Backfill or Deep backfill to grow the collection';
+    }
+    html += '<div class="sc-stat-foot" style="margin-top:6px;"><b>Recommended next:</b> ' + rec + '</div>';
     $sc('sc-stats-body').innerHTML = html;
   }
 
@@ -5214,7 +5257,8 @@
           scToast(data.archived
             ? 'Archived ' + data.archived + ' article' + (data.archived === 1 ? '' : 's')
               + ' — ' + data.remaining + ' remain in your collection.'
-            : 'Nothing to archive — no unrated articles scoring under 10.');
+              + ' Next: run Backfill or Deep backfill to refill with relevant articles.'
+            : 'Nothing to archive — no unrated articles scoring under 10.', false, 9000);
         })
         .catch(function(err) {
           scProgFail_(id, 'Archive did not finish — safe to retry');
@@ -5298,7 +5342,8 @@
           return;
         }
         scToast('Enrich finished — ' + data.enriched + ' article preview' + (data.enriched === 1 ? '' : 's')
-          + ' added' + (data.failed ? ' (' + data.failed + ' unavailable — paywalled or blocked)' : '') + '.');
+          + ' added' + (data.failed ? ' (' + data.failed + ' unavailable — paywalled or blocked)' : '')
+          + (data.enriched ? '. Next: run Analyze to re-score with the new previews.' : '.'), false, 9000);
       })
       .catch(function(err) {
         scProgFail_(id, 'Stopped — will resume where it left off if you retry');
@@ -5351,7 +5396,8 @@
           + (learnedFrom ? ' · 🧠 preferences updated' : ''));
         if (totalScored) {
           scToast('Analysis finished — ' + totalScored + ' article' + (totalScored === 1 ? '' : 's') + ' scored.'
-            + (learnedFrom ? ' 🧠 Preferences updated from your ' + learnedFrom + ' ratings.' : ''));
+            + (learnedFrom ? ' 🧠 Preferences updated from your ' + learnedFrom + ' ratings.' : '')
+            + ' Next: rate a few 👍/👎 in Articles, or open Stats to check the distribution.', false, 9000);
         } else if (data && data.hasArticles === false) {
           scToast('No articles to analyze yet — run Compile first to gather news.', true);
           return;  // nothing to show — skip opening the articles panel

@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 26/50`
+`Sections: 27/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.27w] — 2026-08-04 08:27:47 PM EST — v01.75r
+
+### Added
+- Every completed action now tells you the recommended next step (e.g. after gathering news: "Next: run Analyze to score them"), and result messages stay on screen longer so they're harder to miss
+- The search plan panel now always shows how many query groups are saved and when the plan was last saved — so you can verify a rebuild went through even if you looked away
+- The Stats panel footer now recommends the single most valuable next action based on your numbers
+
+### Fixed
+- Requests that hang no longer leave a button stuck forever — after 90 seconds the call fails visibly with a clear message and the button becomes usable again
 
 ## [v01.26w] — 2026-08-04 08:11:10 PM EST — v01.74r
 
