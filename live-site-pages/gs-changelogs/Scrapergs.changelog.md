@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 24/50`
+`Sections: 25/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.25g] — 2026-08-04 08:11:10 PM EST — v01.74r
+
+### Changed
+- Button actions respond much faster: the service no longer performs its full startup routine (directory registration and scheduling checks) before answering each request — that work now happens only when the page itself loads
+- Repeated actions skip redundant storage checks for several hours at a time, shaving additional time off every press
 
 ## [v01.24g] — 2026-08-04 06:41:08 PM EST — v01.73r
 

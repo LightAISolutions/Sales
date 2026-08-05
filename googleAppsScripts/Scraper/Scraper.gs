@@ -1,4 +1,4 @@
-var VERSION = "v01.24g";
+var VERSION = "v01.25g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -427,8 +427,21 @@ function scraperSs_() {
   return SpreadsheetApp.openById(SPREADSHEET_ID);
 }
 
-/** Create any missing Scraper tabs with their header rows (idempotent). */
+/** Create any missing Scraper tabs with their header rows (idempotent).
+    Guarded by an execution-global + a 6h script-cache flag so the ~10
+    getSheetByName probes run at most once per cache window instead of on
+    every button press. The cache key embeds the tab count, so adding a new
+    tab to SCRAPER_TAB_HEADERS auto-invalidates the flag and the new tab is
+    created on the next call. */
+var _scTabsChecked = false;
 function ensureScraperTabs_(ss) {
+  if (_scTabsChecked) return;
+  var tabsKey = 'scTabsReady_' + Object.keys(SCRAPER_TAB_HEADERS).length;
+  var tabsCache = null;
+  try {
+    tabsCache = CacheService.getScriptCache();
+    if (tabsCache.get(tabsKey)) { _scTabsChecked = true; return; }
+  } catch (cacheErr) { tabsCache = null; }
   Object.keys(SCRAPER_TAB_HEADERS).forEach(function(name) {
     var sheet = ss.getSheetByName(name);
     if (!sheet) {
@@ -437,6 +450,8 @@ function ensureScraperTabs_(ss) {
       sheet.setFrozenRows(1);
     }
   });
+  _scTabsChecked = true;
+  try { if (tabsCache) tabsCache.put(tabsKey, '1', 21600); } catch (putErr) {}
 }
 
 /** Trim a value to a bounded plain string. */
@@ -4219,14 +4234,13 @@ function doGet(e) {
   // }
   var clientIp = 'not-collected';
 
-  // Auto-initialize required Script Properties (HMAC_SECRET, CACHE_EPOCH) on first page load
-  ensureScriptProperties_();
-
-  // Auto-register this project in the Master ACL Projects sheet
-  registerSelfProject();
-
-  // Self-install the hourly scheduler trigger (idempotent; never blocks page load)
-  try { scEnsureSchedulerTrigger_(); } catch (trgErr) {}
+  // PROJECT OVERRIDE START: API-first routing. The page-boot work
+  // (ensureScriptProperties_ / registerSelfProject / scEnsureSchedulerTrigger_)
+  // used to run before action routing, so every GET api call paid the full
+  // boot cost — registerSelfProject alone opens the Master ACL spreadsheet
+  // (~1–2s). The api/deploy routes are matched first now; the boot work runs
+  // further down, only for page-shell and listener-page loads.
+  // PROJECT OVERRIDE END
 
   // ── Phase 7: postMessage-based action routes ──
   // These routes return lightweight listener pages that receive sensitive data
@@ -4271,6 +4285,14 @@ function doGet(e) {
     return ContentService.createTextOutput(JSON.stringify(apiResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
+
+  // Page-shell / listener-page boot (moved below the api routes — see the
+  // PROJECT OVERRIDE note above): auto-initialize required Script Properties,
+  // register this project in the Master ACL directory, and self-install the
+  // hourly scheduler trigger (idempotent; never blocks page load).
+  ensureScriptProperties_();
+  registerSelfProject();
+  try { scEnsureSchedulerTrigger_(); } catch (trgErr) {}
 
   // Heartbeat action — returns page that listens for token via postMessage
   if (action === 'heartbeat') {

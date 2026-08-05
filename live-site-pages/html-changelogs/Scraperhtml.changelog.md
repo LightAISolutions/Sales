@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 25/50`
+`Sections: 26/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.26w] — 2026-08-04 08:11:10 PM EST — v01.74r
+
+### Changed
+- Faster button responses: when the connection has to use its backup route, the page now remembers that and uses the working route directly — cutting each press's wait roughly in half in that situation
 
 ## [v01.25w] — 2026-08-04 06:41:08 PM EST — v01.73r
 

@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.25w">
+  <meta name="build-version" content="v01.26w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -1772,6 +1772,11 @@
     // tried first; when it fails (Google's serving can drop the POST body on its
     // redirect, and error pages come back without CORS headers) the same call is
     // retried on the GET api route (action=api&op=...), which remains reliable.
+    // Sticky transport: when the POST path fails and the GET fallback succeeds,
+    // remember it for the rest of the page session and go straight to GET — in
+    // environments where Google's serving drops POST bodies, this halves every
+    // call's latency (no wasted failed-POST round trip before each GET).
+    var _scGasGetOnly = false;
     function _gasPost(params) {
       var gasAppF = document.getElementById('gas-app');
       var baseUrlF = (gasAppF && gasAppF.dataset.baseUrl) || '';
@@ -1792,12 +1797,17 @@
             return r2.json();
           });
       }
+      if (_scGasGetOnly) return _getFallback();
       return fetch(baseUrlF + '?' + _qs(params), { method: 'POST', redirect: 'follow' })
         .then(function(r) {
           if (!r.ok) throw new Error('http_' + r.status);
           return r.json();
         })
-        .catch(function() { return _getFallback(); });
+        .catch(function() {
+          // Only lock to GET after the fallback actually succeeds — a total
+          // network outage must not permanently disable the POST path.
+          return _getFallback().then(function(res) { _scGasGetOnly = true; return res; });
+        });
     }
 
     function exchangeViaFetch(googleAccessToken) {
