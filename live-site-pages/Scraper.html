@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.28w">
+  <meta name="build-version" content="v01.29w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -4535,6 +4535,7 @@
         if (data && data.success) {
           _scProjects = data.projects || [];
           scRenderList();
+          if (_scProjects.length) scCheckSchedulerHealth_();
         } else {
           scToast(scErrMsg(data && data.error), true);
         }
@@ -4545,6 +4546,33 @@
       .then(function() {
         if (btn) { btn.disabled = false; btn.textContent = 'Refresh'; }
       });
+  }
+
+  // Verify the hourly scheduler timer actually exists server-side. Its
+  // auto-install swallows errors to protect page loads, which let a missing
+  // Google permission hide for weeks (no runs, no emails, no trace) — this
+  // check makes that state impossible to miss.
+  function scCheckSchedulerHealth_() {
+    _gasPost({ action: 'getSchedulerHealth', token: scToken() })
+      .then(function(h) {
+        var list = $sc('sc-list');
+        if (!list || !h || !h.success) return;
+        var warn = $sc('sc-sched-warn');
+        if (h.installed) { if (warn && warn.parentNode) warn.parentNode.removeChild(warn); return; }
+        if (!warn) {
+          warn = document.createElement('div');
+          warn.id = 'sc-sched-warn';
+          warn.style.cssText = 'margin:0 0 10px 0;padding:10px 12px;border:1px solid #e5b6b2;'
+            + 'background:#fdecea;color:#8c201c;border-radius:8px;font-size:12.5px;line-height:1.5;';
+          list.parentNode.insertBefore(warn, list);
+        }
+        warn.textContent = '⚠️ Scheduled briefs are NOT running — the hourly timer is not installed'
+          + (h.error ? ' (Google says: ' + h.error + ')' : '') + '. '
+          + 'Fix (2 min): open the Apps Script project (as the account that deployed it) → '
+          + 'Triggers (clock icon) → + Add Trigger → function "scSchedulerTick" → time-driven → '
+          + 'hour timer → every hour → Save. Briefs start on the next hourly pass.';
+      })
+      .catch(function() { /* health is best-effort — never block the app */ });
   }
 
   function scChipRow(p) {
@@ -4922,7 +4950,7 @@
     _gasPost({ action: 'getQueryPlan', token: scToken(), projectId: id })
       .then(function(data) {
         if (data && data.success && data.plan && data.plan.queries && data.plan.queries.length) {
-          scShowPlan_(id, data.plan.queries, data.plan.plannedAt);
+          scShowPlan_(id, data.plan.queries, data.plan.plannedAt, data.plan.manual);
           finish();
           return;
         }
@@ -4940,7 +4968,7 @@
             scProgDone(id, data2.count + ' search groups saved');
             scToast('Search plan built — ' + data2.count + ' query group'
               + (data2.count === 1 ? '' : 's') + '. Next: run Compile or Backfill to use it.', false, 9000);
-            scShowPlan_(id, data2.queries, 'just now');
+            scShowPlan_(id, data2.queries, 'just now', data2.manual);
             finish();
           });
       })
@@ -4986,9 +5014,11 @@
           if (b) b.disabled = false;
           return;
         }
-        scShowPlan_(id, data.queries, 'just now');  // fresh render rebinds all handlers
-        $sc('sc-plan-status').textContent = 'Plan rebuilt — ' + data.count
-          + ' query groups. Next: run Compile or Backfill to use it.';
+        scShowPlan_(id, data.queries, 'just now', data.manual);  // fresh render rebinds all handlers
+        var keptN = (data.manual || []).length;
+        $sc('sc-plan-status').textContent = 'Plan rebuilt — ' + data.count + ' query groups'
+          + (keptN ? ' (your ' + keptN + ' manual addition' + (keptN === 1 ? '' : 's') + ' kept)' : '')
+          + '. Next: run Compile or Backfill to use it.';
       })
       .catch(function(err) {
         var st = $sc('sc-plan-status');
@@ -5000,7 +5030,7 @@
   }
 
   // Reuses the stats overlay shell — it is a generic title+body panel.
-  function scShowPlan_(id, queries, plannedAt) {
+  function scShowPlan_(id, queries, plannedAt, manual) {
     var proj = null;
     _scProjects.forEach(function(p) { if (p.id === id) proj = p; });
     $sc('sc-stats-title').textContent = (proj ? proj.name + ' — ' : '') + 'Search Plan';
@@ -5021,15 +5051,19 @@
       + 'drive Compile, Backfill, and Deep backfill. Re-run Plan any time your topic, keywords, '
       + 'or learned preferences change.</p>'
       + '<ol id="sc-plan-list" style="margin:0;padding-left:20px;font-size:12.5px;">';
+    var manualLower = (manual || []).map(function(m) { return String(m).toLowerCase(); });
     (queries || []).forEach(function(q) {
-      html += '<li style="margin-bottom:4px;">' + scEsc(q) + '</li>';
+      var mine = manualLower.indexOf(String(q).toLowerCase()) !== -1;
+      html += '<li style="margin-bottom:4px;">' + scEsc(q)
+        + (mine ? '<span style="color:#1e7b34;font-size:11px;"> · added by you</span>' : '')
+        + '</li>';
     });
     html += '</ol>'
       + '<div style="display:flex;gap:6px;margin-top:12px;">'
       + '<input id="sc-plan-input" type="text" placeholder="Add a company or term (e.g. Sinexcel)"'
       + ' style="flex:1;padding:6px 9px;border:1px solid #d5dae2;border-radius:6px;font-size:12.5px;">'
       + '<button id="sc-plan-add-btn" class="sc-btn" type="button">Add</button>'
-      + '<button id="sc-plan-rebuild-btn" class="sc-btn subtle" type="button" title="Re-run the AI planner from scratch — replaces the whole list, including your manual additions">Rebuild</button>'
+      + '<button id="sc-plan-rebuild-btn" class="sc-btn subtle" type="button" title="Re-run the AI planner — regenerates the AI groups; your manual additions are kept at the top">Rebuild</button>'
       + '</div>'
       + '<div id="sc-plan-status" style="margin-top:6px;font-size:11.5px;color:#55606e;min-height:15px;"></div>';
     $sc('sc-stats-body').innerHTML = html;
@@ -5070,8 +5104,8 @@
     // Re-render the panel from the server's SAVED queries (the authoritative
     // list) and highlight the group containing the term — the list can never
     // silently disagree with what is actually stored.
-    function renderSaved(queries, msg) {
-      scShowPlan_(id, queries, 'just now');
+    function renderSaved(queries, manual, msg) {
+      scShowPlan_(id, queries, 'just now', manual);
       var lower = term.toLowerCase();
       var items = document.querySelectorAll('#sc-plan-list li');
       for (var i = 0; i < items.length; i++) {
@@ -5086,7 +5120,7 @@
     _gasPost({ action: 'addPlanQuery', token: scToken(), projectId: id, term: term })
       .then(function(data) {
         if (data && data.success) {
-          renderSaved(data.queries, 'Added — ' + data.count + ' query groups now saved. '
+          renderSaved(data.queries, data.manual, 'Added — ' + data.count + ' query groups now saved. '
             + 'The next Compile, Backfill, and Deep backfill will use it.');
           return;
         }
@@ -5106,7 +5140,8 @@
               return String(g).toLowerCase().indexOf(term.toLowerCase()) !== -1;
             });
             if (found) {
-              renderSaved(qs, 'Added — the confirmation was delayed, but "' + term + '" is saved in the plan.');
+              renderSaved(qs, (chk.plan && chk.plan.manual) || [],
+                'Added — the confirmation was delayed, but "' + term + '" is saved in the plan.');
             } else {
               dropPending();
               status.textContent = 'Could not reach the server — "' + term + '" was NOT added. Try again.';

@@ -68,10 +68,12 @@ Apps Script has a hard 200 version limit. The API does NOT support deleting vers
        "https://www.googleapis.com/auth/script.deployments",
        "https://www.googleapis.com/auth/spreadsheets",
        "https://www.googleapis.com/auth/script.send_mail",
+       "https://www.googleapis.com/auth/script.scriptapp",
        "https://www.googleapis.com/auth/drive"
      ]
    }
    ```
+   The `script.scriptapp` scope is required for the script to create its own time-driven triggers (`ScriptApp.newTrigger`) — without it, programmatic trigger installs (e.g. a self-installing hourly scheduler) fail with a permissions error. After adding a scope, re-run any function in the editor and re-consent
 3. Create or use a GCP project where you have Owner access
 4. Enable Apps Script API in GCP project (APIs & Services → Library)
 5. If using Google Drive (e.g. image uploads): enable **Google Drive API** in the same GCP project (APIs & Services → Library → search "Google Drive API" → Enable). Without this, `UrlFetchApp` calls to `googleapis.com/drive/v3/` fail with permission errors even when `oauthScopes` includes `drive`

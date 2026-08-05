@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 28/50`
+`Sections: 29/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.29w] — 2026-08-05 02:57:13 AM EST — v01.77r
+
+### Added
+- If scheduled briefs can't run because the hourly timer isn't installed, a red warning banner now appears above your projects with the exact reason and step-by-step fix — this failure used to be completely invisible
+- Keywords you added to the search plan are now labeled "added by you" in the plan panel, and the Rebuild confirmation tells you how many of your additions were kept
+
+### Changed
+- Rebuild's description now reflects that your manual additions are kept — only the automatically generated groups are replaced
 
 ## [v01.28w] — 2026-08-05 02:34:08 AM EST — v01.76r
 

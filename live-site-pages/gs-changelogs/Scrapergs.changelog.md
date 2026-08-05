@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 26/50`
+`Sections: 27/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.27g] — 2026-08-05 02:57:13 AM EST — v01.77r
+
+### Changed
+- Rebuilding the search plan now keeps the keywords you added by hand — they stay at the top of the list while the automatically generated groups are refreshed behind them
+- The saved plan now remembers which groups you added yourself, so they survive every rebuild
+
+### Added
+- New scheduler health check: the app can now verify that the hourly timer powering scheduled briefs actually exists, and report the exact reason when it can't be installed — this state was previously invisible
 
 ## [v01.26g] — 2026-08-05 02:34:08 AM EST — v01.76r
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.26g";
+var VERSION = "v01.27g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -349,7 +349,7 @@ var SCRAPER_TAB_HEADERS = {
   ArticlesArchive: ['Article ID', 'Project ID', 'Owner', 'URL', 'Title', 'Source',
                     'Published At', 'Fetched At', 'Snippet', 'Summary', 'Relevance Score',
                     'User Verdict', 'Report ID', 'Archived At'],
-  QueryPlans: ['Project ID', 'Owner', 'Queries', 'Planned At']
+  QueryPlans: ['Project ID', 'Owner', 'Queries', 'Planned At', 'Manual']
 };
 
 var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual', 'annual', 'custom'];
@@ -362,7 +362,8 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'backfillNow', 'getBackfillStatus', 'enrichNow',
                                'setArticleVerdict', 'distillPreferences', 'resetScores',
                                'getScoreStats', 'archiveJunk',
-                               'planQueries', 'getQueryPlan', 'addPlanQuery', 'deepBackfillNow'];
+                               'planQueries', 'getQueryPlan', 'addPlanQuery', 'deepBackfillNow',
+                               'getSchedulerHealth'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -1125,19 +1126,22 @@ function scGetPlan_(ss, projectId) {
   var data = sheet.getDataRange().getValues();
   for (var i = 1; i < data.length; i++) {
     if (data[i][0] !== projectId) continue;
-    var queries = [];
+    var queries = [], manual = [];
     try { queries = JSON.parse(String(data[i][2] || '[]')) || []; } catch (qpErr) { queries = []; }
-    return { row: i + 1, queries: queries, plannedAt: String(data[i][3] || '') };
+    try { manual = JSON.parse(String(data[i][4] || '[]')) || []; } catch (mErr) { manual = []; }
+    return { row: i + 1, queries: queries, plannedAt: String(data[i][3] || ''), manual: manual };
   }
   return null;
 }
 
-/** Upsert a project's query plan row. */
-function scSavePlan_(ss, projectId, owner, queries) {
+/** Upsert a project's query plan row. `manual` tracks which groups the user
+    added by hand, so Rebuild can regenerate the AI groups WITHOUT losing them. */
+function scSavePlan_(ss, projectId, owner, queries, manual) {
   var sheet = ss.getSheetByName(SCRAPER_TABS.QUERYPLANS);
   var existing = scGetPlan_(ss, projectId);
-  var rowVals = [projectId, owner, JSON.stringify(queries), new Date().toISOString()];
-  if (existing) sheet.getRange(existing.row, 1, 1, 4).setValues([rowVals]);
+  var rowVals = [projectId, owner, JSON.stringify(queries), new Date().toISOString(),
+                 JSON.stringify(manual || [])];
+  if (existing) sheet.getRange(existing.row, 1, 1, 5).setValues([rowVals]);
   else sheet.appendRow(rowVals);
 }
 
@@ -1187,10 +1191,21 @@ function planQueries(sessionToken, projectId) {
   queries = queries.map(function(q) { return scStr_(String(q || ''), 200); })
     .filter(function(q) { return q; })
     .slice(0, SCRAPER_PLAN_QUERIES_MAX);
-  scSavePlan_(ss, project.id, user.email, queries);
+  // Rebuild preserves the user's manual additions: they go FIRST (inside every
+  // consumer's slice window), then the fresh AI groups (minus exact dupes),
+  // capped at the hard total. Only the AI-generated portion is replaced.
+  var existingPlan = scGetPlan_(ss, project.id);
+  var manual = (existingPlan && existingPlan.manual) ? existingPlan.manual.slice() : [];
+  if (manual.length) {
+    var manualLower = manual.map(function(m) { return String(m).toLowerCase(); });
+    queries = manual.concat(queries.filter(function(q) {
+      return manualLower.indexOf(String(q).toLowerCase()) === -1;
+    })).slice(0, SCRAPER_PLAN_TOTAL_MAX);
+  }
+  scSavePlan_(ss, project.id, user.email, queries, manual);
   scLogUsage_(ss, user.email, 1, 0);
   dataAuditLog(user.email, 'plan_queries', 'project', project.id, queries.length + ' query groups');
-  return { success: true, queries: queries, count: queries.length };
+  return { success: true, queries: queries, count: queries.length, manual: manual };
 }
 
 /** Read the stored query plan (owner-scoped via project lookup). */
@@ -1201,7 +1216,9 @@ function getQueryPlan(sessionToken, projectId) {
   var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
   if (!rowNum) return { success: false, error: 'not_found' };
   var plan = scGetPlan_(ss, String(projectId));
-  return { success: true, plan: plan ? { queries: plan.queries, plannedAt: plan.plannedAt } : null };
+  return { success: true, plan: plan
+    ? { queries: plan.queries, plannedAt: plan.plannedAt, manual: plan.manual || [] }
+    : null };
 }
 
 /** Evaluate one user-supplied term into a plan query group and PREPEND it —
@@ -1258,10 +1275,12 @@ function addPlanQuery(sessionToken, projectId, term) {
       q = '"' + t + '" ' + scTopicTerms_(project.topic, 3).join(' ');
     }
     queries.unshift(q);
-    scSavePlan_(ss, project.id, user.email, queries);
+    var manual = (plan && plan.manual) ? plan.manual.slice() : [];
+    manual.unshift(q);  // remember this group is user-added — Rebuild keeps it
+    scSavePlan_(ss, project.id, user.email, queries, manual);
     scLogUsage_(ss, user.email, 1, 0);
     dataAuditLog(user.email, 'plan_add', 'project', project.id, q);
-    return { success: true, query: q, queries: queries, count: queries.length };
+    return { success: true, query: q, queries: queries, count: queries.length, manual: manual };
   } finally {
     addLock.releaseLock();
   }
@@ -1982,6 +2001,25 @@ function scSchedulerTick() {
   }
 }
 
+/** Report whether the hourly scheduler trigger actually exists — attempting a
+    (re)install first. The auto-install in doGet swallows errors to protect
+    page loads, which let a missing `script.scriptapp` OAuth scope hide for
+    weeks: every install attempt failed silently and no schedule ever ran.
+    This action surfaces the real error so the UI can show a fix-it banner. */
+function getSchedulerHealth(sessionToken) {
+  validateSessionForData(sessionToken, 'getSchedulerHealth');
+  try {
+    scEnsureSchedulerTrigger_(true);
+    var n = ScriptApp.getProjectTriggers().filter(function(t) {
+      return t.getHandlerFunction() === 'scSchedulerTick';
+    }).length;
+    return { success: true, installed: n > 0, triggers: n };
+  } catch (thErr) {
+    return { success: true, installed: false,
+             error: String((thErr && thErr.message) || thErr).slice(0, 300) };
+  }
+}
+
 /** Advance one schedule's run as far as the tick budget allows. */
 function scRunScheduleStep_(ss, sheet, rowNum, row, t0) {
   var scheduleId = String(row[0]);
@@ -2524,6 +2562,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'getQueryPlan') return getQueryPlan(sessionToken, param('projectId'));
   if (op === 'addPlanQuery') return addPlanQuery(sessionToken, param('projectId'), param('term'));
   if (op === 'deepBackfillNow') return deepBackfillNow(sessionToken, param('projectId'));
+  if (op === 'getSchedulerHealth') return getSchedulerHealth(sessionToken);
   if (op === 'resetScores') return resetScores(sessionToken, param('projectId'));
   if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));
   if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));
