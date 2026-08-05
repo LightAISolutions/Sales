@@ -1,4 +1,4 @@
-var VERSION = "v01.25g";
+var VERSION = "v01.26g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1222,40 +1222,49 @@ function addPlanQuery(sessionToken, projectId, term) {
   if (!rowNum) return { success: false, error: 'not_found' };
   var project = scProjectFromRow_(pSheet.getRange(rowNum, 1, 1, 12).getValues()[0]);
 
-  var plan = scGetPlan_(ss, project.id);
-  var queries = plan ? plan.queries.slice() : [];
-  var lower = t.toLowerCase();
-  for (var i = 0; i < queries.length; i++) {
-    if (String(queries[i]).toLowerCase().indexOf(lower) !== -1) {
-      return { success: false, error: 'plan_duplicate', existing: queries[i] };
-    }
-  }
-  if (queries.length >= SCRAPER_PLAN_TOTAL_MAX) return { success: false, error: 'plan_full' };
-
-  var prompt = 'A user monitors this project:\n' + scStr_(String(project.topic || ''), 1000)
-    + '\n\nExisting search query groups (match this style):\n'
-    + queries.slice(0, 5).join('\n')
-    + '\n\nThe user wants to add search coverage for: "' + t + '"\n\n'
-    + 'Produce ONE search query string for it in the same style: the quoted term '
-    + '(plus ONE quoted common alias joined by OR, only if a well-known alias exists) '
-    + 'followed by 2-4 unquoted context words relevant to this project.\n'
-    + 'Reply ONLY with a JSON array containing exactly one string.';
-  var q = '';
+  // Script lock around the whole read-AI-write sequence. Without it, a retry
+  // (or a second add) that overlaps a still-running first attempt reads the
+  // pre-add plan and its save silently DROPS the first keyword (lost update).
+  var addLock = LockService.getScriptLock();
+  if (!addLock.tryLock(15000)) return { success: false, error: 'plan_busy' };
   try {
-    var arr = scJsonArray_(aiComplete_(prompt, 512));
-    q = (arr && arr.length) ? scStr_(String(arr[0] || ''), 200) : '';
-  } catch (apErr) {
-    return { success: false, error: String(apErr.message || apErr).split(' — ')[0] };
+    var plan = scGetPlan_(ss, project.id);
+    var queries = plan ? plan.queries.slice() : [];
+    var lower = t.toLowerCase();
+    for (var i = 0; i < queries.length; i++) {
+      if (String(queries[i]).toLowerCase().indexOf(lower) !== -1) {
+        return { success: false, error: 'plan_duplicate', existing: queries[i], queries: queries };
+      }
+    }
+    if (queries.length >= SCRAPER_PLAN_TOTAL_MAX) return { success: false, error: 'plan_full' };
+
+    var prompt = 'A user monitors this project:\n' + scStr_(String(project.topic || ''), 1000)
+      + '\n\nExisting search query groups (match this style):\n'
+      + queries.slice(0, 5).join('\n')
+      + '\n\nThe user wants to add search coverage for: "' + t + '"\n\n'
+      + 'Produce ONE search query string for it in the same style: the quoted term '
+      + '(plus ONE quoted common alias joined by OR, only if a well-known alias exists) '
+      + 'followed by 2-4 unquoted context words relevant to this project.\n'
+      + 'Reply ONLY with a JSON array containing exactly one string.';
+    var q = '';
+    try {
+      var arr = scJsonArray_(aiComplete_(prompt, 512));
+      q = (arr && arr.length) ? scStr_(String(arr[0] || ''), 200) : '';
+    } catch (apErr) {
+      return { success: false, error: String(apErr.message || apErr).split(' — ')[0] };
+    }
+    if (!q || q.toLowerCase().indexOf(lower) === -1) {
+      // AI drifted off the term — fall back to quoted term + topic context words.
+      q = '"' + t + '" ' + scTopicTerms_(project.topic, 3).join(' ');
+    }
+    queries.unshift(q);
+    scSavePlan_(ss, project.id, user.email, queries);
+    scLogUsage_(ss, user.email, 1, 0);
+    dataAuditLog(user.email, 'plan_add', 'project', project.id, q);
+    return { success: true, query: q, queries: queries, count: queries.length };
+  } finally {
+    addLock.releaseLock();
   }
-  if (!q || q.toLowerCase().indexOf(lower) === -1) {
-    // AI drifted off the term — fall back to quoted term + topic context words.
-    q = '"' + t + '" ' + scTopicTerms_(project.topic, 3).join(' ');
-  }
-  queries.unshift(q);
-  scSavePlan_(ss, project.id, user.email, queries);
-  scLogUsage_(ss, user.email, 1, 0);
-  dataAuditLog(user.email, 'plan_add', 'project', project.id, q);
-  return { success: true, query: q, queries: queries, count: queries.length };
 }
 
 /** Batch keep/drop pre-filter over candidate items ({title, source} read).
@@ -1897,6 +1906,7 @@ function scEnrichChunk_(ss, email, project) {
 // setupSchedulerTrigger() in the Apps Script editor.
 
 var SCRAPER_SCHED_TICK_BUDGET_MS = 240000;  // wall-clock budget per tick (under the 6-min GAS limit)
+var SCRAPER_SCHED_MAX_FAILS = 6;            // consecutive failed ticks before a run is abandoned (+ failure email)
 var SCRAPER_SCHED_RUN_HOUR = 7;             // scheduled runs anchor at 7:00 AM ET
 var SCRAPER_SCHED_STATE_PREFIX = 'scSchedRun_';
 var SCRAPER_SCHED_AI_PAUSE_MS = 4000;       // pause between analyze chunks (free-tier RPM safety)
@@ -1910,12 +1920,18 @@ function setupSchedulerTrigger() {
     guard); delete the SCHEDULER_TRIGGER_SET Script Property to force a re-check. */
 function scEnsureSchedulerTrigger_(force) {
   var props = PropertiesService.getScriptProperties();
-  if (!force && props.getProperty('SCHEDULER_TRIGGER_SET')) return;
+  // The property stores the last VERIFICATION time, not a one-shot flag: a
+  // trigger can be deleted (manually, or by project re-authorization) after
+  // the flag was set, silently killing all scheduled runs. Re-verify against
+  // the real trigger list at most once per 24h (legacy value '1' counts as
+  // stale, so existing deployments re-verify on their next page load).
+  var last = Number(props.getProperty('SCHEDULER_TRIGGER_SET')) || 0;
+  if (!force && last && (Date.now() - last) < 86400000) return;
   var exists = ScriptApp.getProjectTriggers().some(function(t) {
     return t.getHandlerFunction() === 'scSchedulerTick';
   });
   if (!exists) ScriptApp.newTrigger('scSchedulerTick').timeBased().everyHours(1).create();
-  props.setProperty('SCHEDULER_TRIGGER_SET', '1');
+  props.setProperty('SCHEDULER_TRIGGER_SET', String(Date.now()));
 }
 
 /** Next run for a frequency, anchored at SCRAPER_SCHED_RUN_HOUR (project TZ),
@@ -2011,10 +2027,36 @@ function scRunScheduleStep_(ss, sheet, rowNum, row, t0) {
       }
     } catch (stepErr) {
       // Transient failure (AI hiccup, feed timeout): persist progress and let
-      // the next hourly tick resume this phase.
+      // the next hourly tick resume this phase. A consecutive-failure counter
+      // caps the retries — without it a persistent error (bad key, quota,
+      // malformed feed) leaves the run stuck in flight FOREVER: no brief, no
+      // email, no Next Run advance, and total silence toward the user.
+      run.fails = (run.fails || 0) + 1;
+      run.lastError = String((stepErr && stepErr.message) || stepErr).slice(0, 200);
+      if (run.fails >= SCRAPER_SCHED_MAX_FAILS) {
+        // Abandon this cycle: reschedule, clear state, and TELL the user.
+        sheet.getRange(rowNum, 8).setValue(scNextRun_(freq, new Date(), customConfig));
+        props.deleteProperty(key);
+        dataAuditLog(owner, 'scheduled-run-failed', 'project', project.id,
+          run.phase + ' failed ' + run.fails + 'x — ' + run.lastError);
+        if (delivery === 'email' || delivery === 'both') {
+          try {
+            MailApp.sendEmail({
+              to: owner,
+              subject: 'News brief FAILED — ' + project.name,
+              body: 'Your scheduled news brief for "' + project.name + '" could not be generated after '
+                + run.fails + ' attempts.\n\nLast error (' + run.phase + ' step): ' + run.lastError
+                + '\n\nThe schedule has moved to its next cycle and will try again automatically. '
+                + 'You can also run Compile / Analyze manually from the app.'
+            });
+          } catch (failMailErr) { /* email quota/permission — audit row above still records the failure */ }
+        }
+        return;
+      }
       props.setProperty(key, JSON.stringify(run));
       return;
     }
+    run.fails = 0;  // a phase step succeeded — reset the consecutive-failure counter
   }
   props.setProperty(key, JSON.stringify(run));  // budget exhausted — resume next tick
 }
@@ -2034,6 +2076,9 @@ function scDeliverBrief_(ss, owner, project, freq, delivery, b) {
       status = 'emailed';
     } catch (mailErr) {
       status = 'email_failed';
+      // Surface the reason — 'email_failed' alone gives the user nothing to act on.
+      dataAuditLog(owner, 'brief-email-failed', 'project', project.id,
+        String((mailErr && mailErr.message) || mailErr).slice(0, 200));
     }
   }
   ss.getSheetByName(SCRAPER_TABS.REPORTS).appendRow([

@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 27/50`
+`Sections: 28/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.28w] — 2026-08-05 02:34:08 AM EST — v01.76r
+
+### Changed
+- Adding a keyword to the search plan now shows instantly: a pending row appears at the top of the list the moment you press Add, then is replaced by the saved entry (highlighted) as soon as the service confirms
+- After every addition the panel re-displays the exact saved plan from the server, so the list on screen always matches what is actually stored
+- If the confirmation is lost to a slow connection, the panel now re-checks the saved plan and tells you definitively whether your keyword was added — no more guessing
 
 ## [v01.27w] — 2026-08-04 08:27:47 PM EST — v01.75r
 

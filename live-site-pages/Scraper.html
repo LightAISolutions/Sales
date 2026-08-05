@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.27w">
+  <meta name="build-version" content="v01.28w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -4489,7 +4489,8 @@
     plan_parse_failed: 'The AI could not produce a usable search plan — please try again.',
     deepbf_key_missing: 'Deep backfill needs an Anthropic API key — add ANTHROPIC_API_KEY in the server settings to enable AI web search.',
     term_missing: 'Type a company or term first.',
-    plan_full: 'The search plan is full (40 groups) — remove or rebuild the plan before adding more.'
+    plan_full: 'The search plan is full (40 groups) — remove or rebuild the plan before adding more.',
+    plan_busy: 'Another plan update is still saving — wait a few seconds and try again.'
   };
   var _scProjects = [];
   var _scWizStep = 0;
@@ -5054,34 +5055,75 @@
     if (!term) { status.textContent = 'Type a company or term first.'; return; }
     input.disabled = true;
     addBtn.disabled = true;
+    // Real-time feedback: a pending row appears at the TOP of the list the
+    // moment Add is pressed — the user sees their keyword immediately, then
+    // the row is replaced by the server's saved plan when the reply arrives.
+    var pending = document.createElement('li');
+    pending.style.marginBottom = '4px';
+    pending.style.color = '#8a93a0';
+    pending.style.fontStyle = 'italic';
+    pending.textContent = '"' + term + '" — evaluating and saving…';
+    var list = $sc('sc-plan-list');
+    if (list) list.insertBefore(pending, list.firstChild);
     status.textContent = 'Evaluating "' + term + '" and building its query group…';
+    function dropPending() { if (pending.parentNode) pending.parentNode.removeChild(pending); }
+    // Re-render the panel from the server's SAVED queries (the authoritative
+    // list) and highlight the group containing the term — the list can never
+    // silently disagree with what is actually stored.
+    function renderSaved(queries, msg) {
+      scShowPlan_(id, queries, 'just now');
+      var lower = term.toLowerCase();
+      var items = document.querySelectorAll('#sc-plan-list li');
+      for (var i = 0; i < items.length; i++) {
+        if (items[i].textContent.toLowerCase().indexOf(lower) !== -1) {
+          items[i].style.background = '#e6f4ea';
+          items[i].style.borderRadius = '4px';
+          break;
+        }
+      }
+      $sc('sc-plan-status').textContent = msg;
+    }
     _gasPost({ action: 'addPlanQuery', token: scToken(), projectId: id, term: term })
       .then(function(data) {
-        if (!(data && data.success)) {
-          status.textContent = (data && data.error === 'plan_duplicate')
-            ? 'Already covered by: ' + (data.existing || 'an existing group')
-            : scErrMsg(data && data.error);
+        if (data && data.success) {
+          renderSaved(data.queries, 'Added — ' + data.count + ' query groups now saved. '
+            + 'The next Compile, Backfill, and Deep backfill will use it.');
           return;
         }
-        var li = document.createElement('li');
-        li.style.marginBottom = '4px';
-        li.style.background = '#e6f4ea';
-        li.style.borderRadius = '4px';
-        li.textContent = data.query;
-        var list = $sc('sc-plan-list');
-        list.insertBefore(li, list.firstChild);
-        status.textContent = 'Added — ' + data.count + ' query groups now saved. '
-          + 'The next Compile, Backfill, and Deep backfill will use it.';
-        input.value = '';
+        dropPending();
+        status.textContent = (data && data.error === 'plan_duplicate')
+          ? 'Already covered by: ' + (data.existing || 'an existing group')
+          : scErrMsg(data && data.error);
       })
-      .catch(function(err) {
-        status.textContent = 'Could not reach the server ('
-          + String((err && err.message) || err) + ') — the plan was not changed. Try again.';
+      .catch(function() {
+        // The reply was lost (slow/hung request) — but the add may still have
+        // landed server-side. Check the saved plan and report the TRUTH
+        // instead of guessing.
+        return _gasPost({ action: 'getQueryPlan', token: scToken(), projectId: id })
+          .then(function(chk) {
+            var qs = (chk && chk.success && chk.plan && chk.plan.queries) || [];
+            var found = qs.some(function(g) {
+              return String(g).toLowerCase().indexOf(term.toLowerCase()) !== -1;
+            });
+            if (found) {
+              renderSaved(qs, 'Added — the confirmation was delayed, but "' + term + '" is saved in the plan.');
+            } else {
+              dropPending();
+              status.textContent = 'Could not reach the server — "' + term + '" was NOT added. Try again.';
+            }
+          })
+          .catch(function() {
+            dropPending();
+            status.textContent = 'Could not reach the server — "' + term
+              + '" is probably NOT saved. Close and reopen Plan to check.';
+          });
       })
       .then(function() {
-        input.disabled = false;
-        addBtn.disabled = false;
-        input.focus();
+        // Re-fetch by id — renderSaved() replaces the panel DOM, so the
+        // original input/button references may be detached.
+        var inp = $sc('sc-plan-input'), ab = $sc('sc-plan-add-btn');
+        if (inp) { inp.disabled = false; inp.focus(); }
+        if (ab) ab.disabled = false;
       });
   }
 
