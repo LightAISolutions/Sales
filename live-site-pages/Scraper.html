@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.31w">
+  <meta name="build-version" content="v01.32w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -4751,6 +4751,7 @@
   function scBindEvents() {
     $sc('sc-notif-btn').addEventListener('click', scNotifToggle_);
     scNotifBadge_();  // unread count from previous sessions shows immediately
+    scFlushVerdicts_();  // ratings still queued from a previous visit save now
     $sc('sc-refresh-btn').addEventListener('click', scLoadProjects);
     $sc('sc-new-btn').addEventListener('click', function() { scOpenWizard(null); });
     $sc('sc-wiz-close').addEventListener('click', scCloseWizard);
@@ -5658,81 +5659,97 @@
     };
   }
 
-  // Verdict-save transport: retries once on transport failure (like scRetryOnce)
-  // and once more when the server answers unknown_op — after a GAS redeploy,
-  // Google's /exec serving can briefly flap between deployment versions, and a
-  // stale instance doesn't know newly added actions. A short delay + re-send
-  // usually lands on a fresh instance. Server writes are absolute values, so
-  // retries are idempotent. Each attempt reports to the rating status log.
-  function scSendVerdict(params, log) {
-    log = log || function() {};
-    var an = 0;  // sequential attempt numbering across both retry paths
-    function attempt() {
-      var n = ++an;
-      log('attempt ' + n + ': sending to server…');
-      var t = Date.now();
-      return _gasPost(params).then(function(data) {
-        log('attempt ' + n + ': reply in ' + (Date.now() - t) + 'ms'
-          + (data && data.success ? '' : ' (server said: ' + ((data && data.error) || 'unknown') + ')'),
-          data && data.success ? '' : 'err');
-        return data;
-      }, function(err) {
-        log('attempt ' + n + ': no response after ' + (Date.now() - t) + 'ms ('
-          + String((err && err.message) || err) + ')', 'err');
-        throw err;
-      });
-    }
-    return attempt()
-      .catch(function() {
-        log('transport failed — waiting 2.5s, then retrying…');
-        return new Promise(function(res) { setTimeout(res, 2500); }).then(attempt);
-      })
+  // ── Rating queue: a rating can never be lost to Google's /exec 404 flaps ──
+  // Google's serving layer intermittently rejects /exec requests with 404
+  // (documented flapping after redeploys and under front-end hiccups). The old
+  // design sent one request per tap and gave up after two attempts. Now:
+  // tapping updates the UI instantly and saves the rating into a persisted
+  // localStorage queue; a background flusher batches EVERYTHING pending into
+  // one setArticleVerdicts call and retries with backoff forever (5s → 15s →
+  // 30s → 60s cap). The queue survives page reloads and flushes on the next
+  // load. Server values are absolute ('up'/'down'/'' ), so re-sends are safe.
+  var SC_VQUEUE_KEY = 'scraperVerdictQueue';
+  var _scVFlushing = false;
+  var _scVFlushTimer = null;
+  var _scVFlushDelay = 5000;
+  var _scVFlushWarned = false;
+  function scVQueue_() {
+    try { return JSON.parse(localStorage.getItem(SC_VQUEUE_KEY) || '[]') || []; }
+    catch (e) { return []; }
+  }
+  function scVQueueSave_(q) {
+    try { localStorage.setItem(SC_VQUEUE_KEY, JSON.stringify(q)); } catch (e) {}
+  }
+  function scEnqueueVerdict_(projectId, articleId, verdict) {
+    // Latest tap wins: replace any older queued verdict for the same article.
+    var q = scVQueue_().filter(function(it) { return it.articleId !== articleId; });
+    q.push({ projectId: projectId, articleId: articleId, verdict: verdict, t: Date.now() });
+    scVQueueSave_(q);
+    scFlushVerdicts_();
+  }
+  function scFlushVerdicts_() {
+    if (_scVFlushing) return;
+    var q = scVQueue_();
+    if (!q.length) { _scVFlushDelay = 5000; return; }
+    _scVFlushing = true;
+    var pid = q[0].projectId;
+    var batch = q.filter(function(it) { return it.projectId === pid; }).slice(0, 40);
+    _gasPost({ action: 'setArticleVerdicts', token: scToken(), projectId: pid,
+               payload: JSON.stringify(batch.map(function(it) {
+                 return { articleId: it.articleId, verdict: it.verdict };
+               })) })
       .then(function(data) {
-        if (data && !data.success && data.error === 'unknown_op') {
-          log('server is mid-update — waiting 2.5s, then retrying…');
-          return new Promise(function(res) { setTimeout(res, 2500); }).then(attempt);
+        if (!(data && data.success)) throw new Error((data && data.error) || 'save_failed');
+        var doneSet = {};
+        (data.saved || []).forEach(function(id) { doneSet[id] = 1; });
+        // Drop not-found ids too — the article was archived/removed; retrying forever is pointless.
+        (data.failed || []).forEach(function(id) { doneSet[id] = 1; });
+        var rest = scVQueue_().filter(function(it) {
+          return !(it.projectId === pid && doneSet[it.articleId]);
+        });
+        scVQueueSave_(rest);
+        _scVFlushDelay = 5000;
+        if (_scVFlushWarned || (data.saved || []).length > 1) {
+          scToast((data.saved || []).length + ' rating' + ((data.saved || []).length === 1 ? '' : 's')
+            + ' saved to the server.', false);
         }
-        return data;
+        _scVFlushWarned = false;
+        _scVFlushing = false;
+        if (rest.length) scFlushVerdicts_();  // more projects / overflow batches
+      })
+      .catch(function(err) {
+        _scVFlushing = false;
+        if (!_scVFlushWarned) {
+          _scVFlushWarned = true;
+          scToast('Ratings are queued locally — the server is temporarily unreachable ('
+            + String((err && err.message) || err) + '). They will keep saving automatically.', true);
+        }
+        if (_scVFlushTimer) clearTimeout(_scVFlushTimer);
+        _scVFlushTimer = setTimeout(scFlushVerdicts_, _scVFlushDelay);
+        _scVFlushDelay = Math.min(_scVFlushDelay * 2, 60000);
       });
   }
 
   // 👍/👎 feedback: tapping records a verdict (tapping the active one clears it).
   // Verdicts feed exemplars into every future Analyze scoring prompt server-side.
+  // UI is optimistic — the queue above guarantees the save eventually lands.
   function scVerdictClick(ev) {
     var btn = ev.target && ev.target.closest ? ev.target.closest('.sc-vbtn') : null;
-    if (!btn || btn.disabled || !_scArticlesProjectId) return;
+    if (!btn || !_scArticlesProjectId) return;
     var wrap = btn.parentNode;
     var verdict = btn.classList.contains('on') ? '' : btn.getAttribute('data-v');
     var btns = wrap.querySelectorAll('.sc-vbtn');
-    for (var i = 0; i < btns.length; i++) btns[i].disabled = true;
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].classList.toggle('on', !!verdict && btns[i].getAttribute('data-v') === verdict);
+    }
     var art = wrap.closest ? wrap.closest('.sc-art') : null;
     var h4a = art ? (art.querySelector('h4 a') || art.querySelector('h4')) : null;  // anchor skips the score pill
     var title = scStr28_(h4a ? h4a.textContent : wrap.getAttribute('data-id'));
     var log = scVlogSession((verdict === 'up' ? '👍' : verdict === 'down' ? '👎' : 'clear rating')
       + ' "' + title + '"');
-    log('tap registered — buttons locked');
-    scSendVerdict({ action: 'setArticleVerdict', token: scToken(), projectId: _scArticlesProjectId,
-                    articleId: wrap.getAttribute('data-id'), verdict: verdict }, log)
-      .then(function(data) {
-        if (!(data && data.success)) {
-          log('NOT saved — server rejected (' + ((data && data.error) || 'unknown') + ')', 'err');
-          scToast(scErrMsg(data && data.error), true);
-          return;
-        }
-        log('saved ✓ (' + (data.verdict ? 'verdict: ' + data.verdict : 'rating cleared') + ')', 'ok');
-        for (var i = 0; i < btns.length; i++) {
-          btns[i].classList.toggle('on', !!data.verdict && btns[i].getAttribute('data-v') === data.verdict);
-        }
-        if (_scArticlesMode === 'calibration' && data.verdict) scCalAfterRate_(art);
-      })
-      .catch(function(err) {
-        log('NOT saved — gave up after retries', 'err');
-        scToast('Could not save feedback (' + String((err && err.message) || err) + ').', true);
-      })
-      .then(function() {
-        log('buttons unlocked');
-        for (var i = 0; i < btns.length; i++) btns[i].disabled = false;
-      });
+    scEnqueueVerdict_(_scArticlesProjectId, wrap.getAttribute('data-id'), verdict);
+    log('queued (' + scVQueue_().length + ' pending) — saving in background', 'ok');
+    if (_scArticlesMode === 'calibration' && verdict) scCalAfterRate_(art);
   }
 
   /** First ~28 chars of a title for compact rating-log labels. */

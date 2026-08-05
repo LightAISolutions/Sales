@@ -1,4 +1,4 @@
-var VERSION = "v01.28g";
+var VERSION = "v01.29g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -363,7 +363,7 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'setArticleVerdict', 'distillPreferences', 'resetScores',
                                'getScoreStats', 'archiveJunk',
                                'planQueries', 'getQueryPlan', 'addPlanQuery', 'deepBackfillNow',
-                               'getSchedulerHealth'];
+                               'getSchedulerHealth', 'setArticleVerdicts'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -1580,6 +1580,48 @@ function setArticleVerdict(sessionToken, projectId, articleId, verdict) {
   return { success: false, error: 'not_found' };
 }
 
+/** Batch verdict save: applies up to SCRAPER_VERDICT_BATCH_MAX absolute
+    verdict values in ONE request + ONE Articles-tab scan. Exists because
+    Google's /exec front-end intermittently 404s individual requests (serving
+    flap) — the client queues ratings locally and flushes them here, so one
+    successful call saves everything pending. Idempotent: values are absolute
+    ('up' | 'down' | '' to clear), so re-sending after a lost reply is safe. */
+var SCRAPER_VERDICT_BATCH_MAX = 40;
+function setArticleVerdicts(sessionToken, projectId, payload) {
+  var user = validateSessionForData(sessionToken, 'setArticleVerdicts');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var pSheet = ss.getSheetByName(SCRAPER_TABS.PROJECTS);
+  var rowNum = scFindProjectRow_(pSheet, String(projectId || ''), user.email);
+  if (!rowNum) return { success: false, error: 'not_found' };
+  var items;
+  try { items = JSON.parse(String(payload || '[]')) || []; } catch (vbErr) { items = null; }
+  if (!items || !items.length) return { success: false, error: 'bad_payload' };
+  items = items.slice(0, SCRAPER_VERDICT_BATCH_MAX);
+  var wanted = {};
+  for (var k = 0; k < items.length; k++) {
+    var vv = String(items[k].verdict || '').toLowerCase();
+    if (vv !== 'up' && vv !== 'down' && vv !== '') continue;  // skip malformed
+    wanted[String(items[k].articleId || items[k].id || '')] = vv;
+  }
+  var sheet = ss.getSheetByName(SCRAPER_TABS.ARTICLES);
+  var data = sheet.getDataRange().getValues();
+  var saved = [], failed = [];
+  for (var i = 1; i < data.length; i++) {
+    var aid = String(data[i][0]);
+    if (!(aid in wanted)) continue;
+    if (data[i][1] !== projectId) continue;
+    if (String(data[i][2]).toLowerCase() !== user.email.toLowerCase()) continue;
+    sheet.getRange(i + 1, 12).setValue(wanted[aid]);
+    saved.push(aid);
+    delete wanted[aid];
+  }
+  for (var missId in wanted) { if (missId) failed.push(missId); }
+  dataAuditLog(user.email, 'verdict-batch', 'project', String(projectId),
+    saved.length + ' saved' + (failed.length ? ', ' + failed.length + ' not found' : ''));
+  return { success: true, saved: saved, failed: failed };
+}
+
 /** Domains of a project's 👍-rated articles, most-liked first. A breadth
     signal: Compile adds per-domain Google News queries and Backfill adds a
     domainis: group for these, so fetching leans toward proven-good outlets.
@@ -2591,6 +2633,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'backfillNow') return backfillNow(sessionToken, param('projectId'));
   if (op === 'getBackfillStatus') return getBackfillStatus(sessionToken, param('projectId'));
   if (op === 'setArticleVerdict') return setArticleVerdict(sessionToken, param('projectId'), param('articleId'), param('verdict'));
+  if (op === 'setArticleVerdicts') return setArticleVerdicts(sessionToken, param('projectId'), param('payload'));
   return { success: false, error: 'unknown_op' };
 }
 

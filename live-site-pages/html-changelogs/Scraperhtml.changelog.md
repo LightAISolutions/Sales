@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 31/50`
+`Sections: 32/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.32w] — 2026-08-05 05:26:52 AM EST — v01.80r
+
+### Fixed
+- Article ratings can no longer be lost: tapping 👍/👎 now registers instantly and the rating is kept safely on your device until the server confirms it — the "Could not save feedback" failures are gone
+- Queued ratings save automatically in the background (retrying as long as needed) and even finish saving after a page reload; if the server is temporarily unreachable you get one heads-up, then a confirmation once everything lands
+- Rating many articles in a row is now much faster — the buttons never lock while a save is in flight, and pending ratings are sent together in one request
 
 ## [v01.31w] — 2026-08-05 03:35:45 AM EST — v01.79r
 
