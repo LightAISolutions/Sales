@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.29w">
+  <meta name="build-version" content="v01.30w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -657,6 +657,15 @@
     }
     .rx-btns .rx-primary { background: var(--rc-ink); color: var(--rc-paper); }
     .rx-dots { text-align: center; color: var(--rc-muted); font-size: 12px; margin-top: 8px; letter-spacing: 4px; }
+    .rx-prev-wrap { overflow: auto; max-height: 44vh; border: 1px solid var(--rc-line); border-radius: 6px; }
+    table.rx-prev { border-collapse: collapse; font-size: 12px; min-width: 100%; }
+    .rx-prev th, .rx-prev td {
+      border: 1px solid #e3dbc8; padding: 3px 7px;
+      white-space: nowrap; text-align: right; font-variant-numeric: tabular-nums;
+    }
+    .rx-prev th { background: #f1ead9; position: sticky; top: 0; }
+    .rx-prev .rx-prev-lbl { text-align: left; font-weight: 600; }
+    .rx-prev .rx-prev-total td { font-weight: 700; border-top: 1.5px solid var(--rc-ink); }
     .rh-row {
       display: flex; gap: 8px; align-items: baseline; padding: 10px 2px;
       border-bottom: 1px solid #eae2d0; cursor: pointer;
@@ -4948,10 +4957,12 @@
         return attempt();
       }
 
-      // Downscale to max 1600px and re-encode as JPEG — keeps the base64
+      // Downscale to max 2000px and re-encode as JPEG — keeps the base64
       // payload comfortably under the GAS POST limit while staying sharp
-      // enough for Phase 2's AI extraction. createImageBitmap honors EXIF
-      // orientation in modern browsers; the Image() path is the fallback.
+      // enough for Phase 2's AI extraction, including the small print on
+      // dense letter-size commercial invoices (1600px was marginal there).
+      // createImageBitmap honors EXIF orientation in modern browsers; the
+      // Image() path is the fallback.
       function compressImage(file) {
         var loadBitmap = (window.createImageBitmap)
           ? createImageBitmap(file)
@@ -4964,7 +4975,7 @@
             });
         return loadBitmap.then(function(img) {
           var w = img.width, h = img.height;
-          var scale = Math.min(1, 1600 / Math.max(w, h));
+          var scale = Math.min(1, 2000 / Math.max(w, h));
           var canvas = document.createElement('canvas');
           canvas.width = Math.round(w * scale);
           canvas.height = Math.round(h * scale);
@@ -4976,7 +4987,7 @@
 
       // ── Review-before-save card ──────────────────────────────────────
       var CATEGORIES = ['Groceries', 'Dining', 'Transport', 'Health',
-        'Shopping', 'Entertainment', 'Utilities', 'Travel', 'Other'];
+        'Shopping', 'Entertainment', 'Utilities', 'Travel', 'Business', 'Other'];
       // Per-category subcategory taxonomy (modeled on Expensify / Smart
       // Receipts / ReceiptCamp buckets). Groceries keeps its supermarket
       // departments; every other category gets its own list, revealed only
@@ -5003,6 +5014,8 @@
         'Travel': ['Flights', 'Hotels & Lodging', 'Car Rental', 'Train & Bus',
           'Cruises', 'Baggage & Fees', 'Travel Insurance', 'Tours & Activities',
           'Visas & Documents', 'Other'],
+        'Business': ['Inventory & Resale', 'Supplies & Packaging', 'Equipment',
+          'Freight & Shipping', 'Deposits & CRV', 'Professional Services', 'Other'],
         'Other': ['General', 'Fees & Charges', 'Donations', 'Education', 'Pets',
           'Office & Business', 'Taxes', 'Other']
       };
@@ -6523,7 +6536,13 @@
         'Number of purchases': '购买次数',
         'Receipts sheet (all details)': '收据工作表（完整明细）',
         'Line Items sheet': '单项工作表', 'Monthly Summary sheet': '月度汇总工作表',
-        'Back': '上一步', 'Next': '下一步', 'Cancel': '取消', '⬇️ Export': '⬇️ 导出'
+        'Back': '上一步', 'Next': '下一步', 'Cancel': '取消', '⬇️ Export': '⬇️ 导出',
+        'Preview': '预览',
+        'This is the Summary table your export will contain. Go back to adjust, or export.':
+          '这就是导出文件中将包含的汇总表。可返回调整，或直接导出。',
+        'Loading preview…': '正在加载预览…', 'Preview failed': '预览失败',
+        'more rows not shown': '行未显示', 'more columns not shown': '列未显示',
+        'Week (from Sunday)': '周（周日起）', 'Value': '数值'
       };
       // Guarded against eval-time calls: fillReportCategories runs during
       // script evaluation, before the I18N_ZH var assignment executes. Those
@@ -6538,7 +6557,10 @@
       var I18N_CAT_ZH = {
         'Groceries': '食品杂货', 'Dining': '餐饮', 'Transport': '交通', 'Health': '健康',
         'Shopping': '购物', 'Entertainment': '娱乐', 'Utilities': '水电杂费', 'Travel': '旅行',
-        'Other': '其他', 'Uncategorized': '未分类',
+        'Business': '商业', 'Other': '其他', 'Uncategorized': '未分类',
+        'Inventory & Resale': '库存与转售', 'Supplies & Packaging': '用品与包装',
+        'Equipment': '设备', 'Freight & Shipping': '运费', 'Deposits & CRV': '押金与回收费',
+        'Professional Services': '专业服务',
         'Produce': '生鲜果蔬', 'Meat & Seafood': '肉类海鲜', 'Dairy & Eggs': '乳品蛋类',
         'Bakery': '烘焙', 'Deli & Prepared': '熟食即食', 'Frozen': '冷冻食品', 'Pantry': '粮油食品',
         'Snacks & Candy': '零食糖果', 'Beverages': '饮料', 'Alcohol': '酒类', 'Household': '家居用品',
@@ -6994,24 +7016,32 @@
           + (on ? ' checked' : '') + '><span>' + esc(t(label)) + '</span></label>';
       }
       function rxRender() {
-        var cur = _rxStep === 0 ? _rxCfg.rows : _rxStep === 1 ? _rxCfg.cols : _rxCfg.val;
-        var list = _rxStep === 0 ? RX_ROWS : _rxStep === 1 ? RX_COLS : RX_VALS;
-        var sub = _rxStep === 0 ? 'Rows (Y axis)' : _rxStep === 1 ? 'Columns (X axis)' : 'Values & sheets';
-        var note = _rxStep === 0 ? 'Pick what each row of the summary table represents.'
-          : _rxStep === 1 ? 'Pick how the columns are split. Your History filters still apply first.'
-          : 'Pick what fills the cells, and which detail sheets to include.';
-        var h = '<div class="rx-title">' + esc(t(sub)) + '</div>'
-          + '<div class="rx-note">' + esc(t(note)) + '</div>'
-          + list.map(function(k) {
-              return '<label class="rx-opt' + (k === cur ? ' rx-sel' : '') + '"><input type="radio" name="rx-dim"'
-                + (k === cur ? ' checked' : '') + ' value="' + k + '"><span>' + esc(t(RX_LBL[k])) + '</span></label>';
-            }).join('');
-        if (_rxStep === 2) {
-          h += '<div style="border-top:1.5px dashed var(--rc-line); margin-top:11px; padding-top:7px">'
-            + rxChk('receipts', 'Receipts sheet (all details)', !!_rxCfg.sheets.receipts)
-            + rxChk('items', 'Line Items sheet', !!_rxCfg.sheets.items)
-            + rxChk('monthly', 'Monthly Summary sheet', !!_rxCfg.sheets.monthly)
-            + '</div>';
+        var h;
+        if (_rxStep === 3) {
+          // Preview step — the grid is fetched by rxFetchPreview() into #rx-prev-body.
+          h = '<div class="rx-title">' + esc(t('Preview')) + '</div>'
+            + '<div class="rx-note">' + esc(t('This is the Summary table your export will contain. Go back to adjust, or export.')) + '</div>'
+            + '<div id="rx-prev-body"></div>';
+        } else {
+          var cur = _rxStep === 0 ? _rxCfg.rows : _rxStep === 1 ? _rxCfg.cols : _rxCfg.val;
+          var list = _rxStep === 0 ? RX_ROWS : _rxStep === 1 ? RX_COLS : RX_VALS;
+          var sub = _rxStep === 0 ? 'Rows (Y axis)' : _rxStep === 1 ? 'Columns (X axis)' : 'Values & sheets';
+          var note = _rxStep === 0 ? 'Pick what each row of the summary table represents.'
+            : _rxStep === 1 ? 'Pick how the columns are split. Your History filters still apply first.'
+            : 'Pick what fills the cells, and which detail sheets to include.';
+          h = '<div class="rx-title">' + esc(t(sub)) + '</div>'
+            + '<div class="rx-note">' + esc(t(note)) + '</div>'
+            + list.map(function(k) {
+                return '<label class="rx-opt' + (k === cur ? ' rx-sel' : '') + '"><input type="radio" name="rx-dim"'
+                  + (k === cur ? ' checked' : '') + ' value="' + k + '"><span>' + esc(t(RX_LBL[k])) + '</span></label>';
+              }).join('');
+          if (_rxStep === 2) {
+            h += '<div style="border-top:1.5px dashed var(--rc-line); margin-top:11px; padding-top:7px">'
+              + rxChk('receipts', 'Receipts sheet (all details)', !!_rxCfg.sheets.receipts)
+              + rxChk('items', 'Line Items sheet', !!_rxCfg.sheets.items)
+              + rxChk('monthly', 'Monthly Summary sheet', !!_rxCfg.sheets.monthly)
+              + '</div>';
+          }
         }
         h += '<div class="rx-btns">';
         h += _rxStep === 0
@@ -7019,12 +7049,64 @@
           : '<button type="button" id="rx-back">' + esc(t('Back')) + '</button>';
         h += _rxStep < 2
           ? '<button type="button" id="rx-next" class="rx-primary">' + esc(t('Next')) + '</button>'
+          : _rxStep === 2
+          ? '<button type="button" id="rx-preview" class="rx-primary">' + esc(t('Preview')) + '</button>'
           : '<button type="button" id="rx-go" class="rx-primary">' + esc(t('⬇️ Export')) + '</button>';
         h += '</div>';
-        var dots = ['○', '○', '○'];
+        var dots = ['○', '○', '○', '○'];
         dots[_rxStep] = '●';
         h += '<div class="rx-dots">' + dots.join(' ') + '</div>';
         document.getElementById('rx-modal').innerHTML = h;
+      }
+      // Row/column labels in the preview follow the app language: UI words
+      // via t(), category/subcategory names via tCat(); anything unknown
+      // (merchant names, months, item text) passes through unchanged.
+      function rxLbl(s) {
+        s = String(s);
+        var tv = t(s);
+        return tv !== s ? tv : tCat(s);
+      }
+      function rxFetchPreview() {
+        var session = loadSession();
+        var body = document.getElementById('rx-prev-body');
+        if (!body) return;
+        body.innerHTML = '<div class="rx-note">' + esc(t('Loading preview…')) + '</div>';
+        _gasPost({
+          action: 'exportPreview', token: session.token,
+          q: document.getElementById('rh-search').value || '',
+          from: document.getElementById('rh-from').value || '',
+          to: document.getElementById('rh-to').value || '',
+          cat: document.getElementById('rh-cat').value || '',
+          owner: rhOwner(),
+          pivot: JSON.stringify(_rxCfg)
+        }).then(function(res) {
+          if (_rxStep !== 3 || !body.isConnected) return; // user navigated away
+          if (!(res && res.success && res.grid && res.grid.length)) {
+            var errKey = (res && res.error === 'no_receipts_match') ? 'Nothing matches these filters' : 'Preview failed';
+            body.innerHTML = '<div class="rx-note">' + esc(t(errKey)) + '</div>';
+            return;
+          }
+          var last = res.grid.length - 1;
+          var ht = '<div class="rx-prev-wrap"><table class="rx-prev">';
+          res.grid.forEach(function(row, ri) {
+            var tag = ri === 0 ? 'th' : 'td';
+            ht += '<tr' + (ri === last && ri > 0 ? ' class="rx-prev-total"' : '') + '>';
+            row.forEach(function(cell, ci) {
+              var vtxt = (ri === 0 || ci === 0) ? rxLbl(cell) : String(cell);
+              ht += '<' + tag + (ci === 0 ? ' class="rx-prev-lbl"' : '') + '>' + esc(vtxt) + '</' + tag + '>';
+            });
+            ht += '</tr>';
+          });
+          ht += '</table></div>';
+          var notes = [];
+          if (res.truncatedRows) notes.push('… ' + res.truncatedRows + ' ' + t('more rows not shown'));
+          if (res.truncatedCols) notes.push('… ' + res.truncatedCols + ' ' + t('more columns not shown'));
+          if (notes.length) ht += '<div class="rx-note" style="margin:5px 0 0">' + esc(notes.join(' · ')) + '</div>';
+          body.innerHTML = ht;
+        }).catch(function() {
+          if (_rxStep !== 3 || !body.isConnected) return;
+          body.innerHTML = '<div class="rx-note">' + esc(t('Preview failed')) + '</div>';
+        });
       }
       function rxClose() { document.getElementById('rx-overlay').style.display = 'none'; }
       document.getElementById('rh-export').addEventListener('click', function() {
@@ -7056,6 +7138,7 @@
         if (b.id === 'rx-cancel') rxClose();
         else if (b.id === 'rx-back') { _rxStep--; rxRender(); }
         else if (b.id === 'rx-next') { _rxStep++; rxRender(); }
+        else if (b.id === 'rx-preview') { _rxStep = 3; rxRender(); rxFetchPreview(); }
         else if (b.id === 'rx-go') {
           try { localStorage.setItem('Receipts_export_cfg', JSON.stringify(_rxCfg)); } catch (rxSaveErr) { /* private mode */ }
           rxClose();

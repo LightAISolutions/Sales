@@ -1,4 +1,4 @@
-var VERSION = "v01.17g";
+var VERSION = "v01.18g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -343,7 +343,7 @@ var GEMINI_FALLBACK_MODEL = "gemini-3.5-flash";
 // screen — aligned with the category style used by Expensify / Smart Receipts
 // style expense apps (merchant-level buckets).
 var RECEIPT_CATEGORIES = ["Groceries", "Dining", "Transport", "Health",
-  "Shopping", "Entertainment", "Utilities", "Travel", "Other"];
+  "Shopping", "Entertainment", "Utilities", "Travel", "Business", "Other"];
 
 // Per-line-item subcategories assigned automatically during extraction —
 // the union of every receipt category's subcategory list (the client's
@@ -377,6 +377,9 @@ var ITEM_CATEGORIES = [
   // Travel
   "Flights", "Hotels & Lodging", "Train & Bus", "Cruises", "Baggage & Fees",
   "Travel Insurance", "Tours & Activities", "Visas & Documents",
+  // Business (commercial invoices — supplier/wholesale bills to a business)
+  "Inventory & Resale", "Supplies & Packaging", "Equipment",
+  "Freight & Shipping", "Deposits & CRV", "Professional Services",
   // Other
   "General", "Fees & Charges", "Donations", "Education", "Pets",
   "Office & Business", "Taxes", "Other"];
@@ -600,7 +603,7 @@ function geminiExtractFromBase64_(dataB64, mime) {
   var payload = {
     contents: [{
       parts: [
-        { text: "Extract the data from this receipt photo. Use an empty string or 0 for unreadable fields. Line items are the purchased products/services only — do not include subtotal, tax, or total rows as line items. Assign each line item the best-fitting subcategory from the schema's enum, matching the receipt's overall category (supermarket departments for grocery receipts, dining/transport/health/shopping/entertainment/utilities/travel buckets otherwise); use Other only when nothing fits." },
+        { text: "Extract the data from this document photo. The document is either a retail receipt or a commercial invoice (a supplier/wholesaler/distributor bill to a business — often titled INVOICE, with an invoice number, sold-to/ship-to blocks, and case quantities). For invoices: use the supplier/vendor company name as the merchant, the invoice date (not the due date, order date, or ship date) as the date, the invoice's grand total as the total, and set category to Business. Use an empty string or 0 for unreadable fields. Line items are the purchased products/services/charges only — never emit the subtotal, tax, or total summary rows as line items, but DO keep per-line charges printed as their own lines: bottle deposits/CRV, freight or delivery charges, and discounts or credits (use a negative amount for discount/credit lines). For lines sold by the case or pack, qty is the printed case/pack count, unitPrice the per-case price, and amount the line's extended total; when the extended amount is printed, copy it rather than recomputing. Capture every line even on long invoices. Assign each line item the best-fitting subcategory from the schema's enum, matching the document's overall category (supermarket departments for grocery receipts; dining/transport/health/shopping/entertainment/utilities/travel buckets otherwise; for Business invoices use Inventory & Resale for goods bought to resell, Supplies & Packaging, Equipment, Freight & Shipping, Deposits & CRV, or Professional Services); use Other only when nothing fits." },
         { inline_data: { mime_type: mime, data: dataB64 } }
       ]
     }],
@@ -896,70 +899,12 @@ function deleteReceipt(sessionToken, receiptId) {
 }
 
 /**
- * .xlsx export — builds a temporary spreadsheet from the same filters the
- * history browser uses, exports it as a real .xlsx via the Drive export
- * endpoint, trashes the temp file, and returns the workbook base64-encoded
- * for the browser to download. An optional pivot config (JSON string from
- * the export designer wizard) prepends a cross-tab Pivot sheet and controls
- * which raw sheets (Receipts / LineItems / Monthly Summary) are included.
- * No config (legacy callers) → the full three-sheet workbook, no Pivot.
+ * Cross-tab grid for the export designer — returns a 2-D array
+ * [header, ...data rows, totals row]. Used by both the export (written to
+ * the Pivot sheet) and the preview (returned as JSON), so what the user
+ * previews is exactly what the export contains.
  */
-function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, pivotJson) {
-  var user = validateSessionForData(sessionToken, 'exportReceipts');
-  var setRes = resolveOwnerSet_(user, forOwner); // validates single-owner grants; '*' always resolves
-  if (setRes.error) return { success: false, error: setRes.error };
-  var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded, '', category, forOwner);
-  if (!listed.success) return listed;
-  var receipts = listed.receipts || [];
-  if (!receipts.length) return { success: false, error: 'no_receipts_match' };
-  var ids = {};
-  receipts.forEach(function(rc) { ids[rc.id] = true; });
-
-  // Export designer config — absent or unparseable means legacy behavior.
-  var pivotCfg = null;
-  if (pivotJson) {
-    try { pivotCfg = JSON.parse(pivotJson); } catch (pjErr) { pivotCfg = null; }
-    if (pivotCfg && typeof pivotCfg !== 'object') pivotCfg = null;
-  }
-  var cfgSheets = (pivotCfg && pivotCfg.sheets) || {};
-  var wantReceipts = pivotCfg ? cfgSheets.receipts === true : true;
-  var wantItems = pivotCfg ? cfgSheets.items === true : true;
-  var wantMonthly = pivotCfg ? cfgSheets.monthly === true : true;
-
-  var src = ensureReceiptTabs_();
-
-  // Line items are read once up front — the Pivot sheet and the LineItems
-  // sheet both consume them.
-  var liByReceipt = {}, itemCount = 0;
-  var liSrcSheet = src.lineItems;
-  var liSrcLast = liSrcSheet.getLastRow();
-  if (liSrcLast > 1) {
-    liSrcSheet.getRange(2, 1, liSrcLast - 1, 7).getValues().forEach(function(v) {
-      var vid = String(v[0]);
-      if (!ids[vid]) return;
-      (liByReceipt[vid] = liByReceipt[vid] || []).push(v);
-      itemCount++;
-    });
-  }
-
-  var stamp = Utilities.formatDate(new Date(), 'America/New_York', 'yyyy-MM-dd_HHmm');
-  var temp = SpreadsheetApp.create('Receipts Export ' + stamp);
-  try {
-    // The temp spreadsheet starts with one sheet — the first section built
-    // renames it; later sections insert fresh sheets.
-    var firstSheetUsed = false;
-    function nextSheet_(name) {
-      if (!firstSheetUsed) {
-        firstSheetUsed = true;
-        var s0 = temp.getSheets()[0];
-        s0.setName(name);
-        return s0;
-      }
-      return temp.insertSheet(name);
-    }
-
-    // ── Pivot sheet (export designer) — rows × columns cross-tab ──
-    if (pivotCfg) {
+function buildReceiptPivot_(receipts, liByReceipt, pivotCfg) {
       var pvRows = String(pivotCfg.rows || 'category');
       var pvCols = String(pivotCfg.cols || 'none');
       var pvVal = String(pivotCfg.val || 'total');
@@ -1035,7 +980,91 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
       pvColKeys.forEach(function(ck) { totalsLine.push(pvRound_(pvColTotals[ck] || 0)); });
       totalsLine.push(pvRound_(pvGrand));
       pvOut.push(totalsLine);
+      return pvOut;
+}
 
+/**
+ * Shared gather for export + preview — validates the session, resolves the
+ * owner set, lists the matching receipts, and joins their line items so the
+ * preview and the real export always see identical data.
+ */
+function gatherExportData_(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner) {
+  var user = validateSessionForData(sessionToken, 'exportReceipts');
+  var setRes = resolveOwnerSet_(user, forOwner); // validates single-owner grants; '*' always resolves
+  if (setRes.error) return { error: setRes.error };
+  var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded, '', category, forOwner);
+  if (!listed.success) return { error: listed.error || 'list_failed' };
+  var receipts = listed.receipts || [];
+  if (!receipts.length) return { error: 'no_receipts_match' };
+  var ids = {};
+  receipts.forEach(function(rc) { ids[rc.id] = true; });
+  var src = ensureReceiptTabs_();
+  // Line items are read once up front — the Pivot grid and the LineItems
+  // sheet both consume them.
+  var liByReceipt = {}, itemCount = 0;
+  var liSrcSheet = src.lineItems;
+  var liSrcLast = liSrcSheet.getLastRow();
+  if (liSrcLast > 1) {
+    liSrcSheet.getRange(2, 1, liSrcLast - 1, 7).getValues().forEach(function(v) {
+      var vid = String(v[0]);
+      if (!ids[vid]) return;
+      (liByReceipt[vid] = liByReceipt[vid] || []).push(v);
+      itemCount++;
+    });
+  }
+  return { setRes: setRes, receipts: receipts, src: src, liByReceipt: liByReceipt, itemCount: itemCount };
+}
+
+// Export designer config — absent or unparseable means legacy behavior.
+function parsePivotCfg_(pivotJson) {
+  var pivotCfg = null;
+  if (pivotJson) {
+    try { pivotCfg = JSON.parse(pivotJson); } catch (pjErr) { pivotCfg = null; }
+    if (pivotCfg && typeof pivotCfg !== 'object') pivotCfg = null;
+  }
+  return pivotCfg;
+}
+
+/**
+ * .xlsx export — builds a temporary spreadsheet from the same filters the
+ * history browser uses, exports it as a real .xlsx via the Drive export
+ * endpoint, trashes the temp file, and returns the workbook base64-encoded
+ * for the browser to download. An optional pivot config (JSON string from
+ * the export designer wizard) prepends a cross-tab Pivot sheet and controls
+ * which raw sheets (Receipts / LineItems / Monthly Summary) are included.
+ * No config (legacy callers) → the full three-sheet workbook, no Pivot.
+ */
+function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, pivotJson) {
+  var gathered = gatherExportData_(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner);
+  if (gathered.error) return { success: false, error: gathered.error };
+  var setRes = gathered.setRes, receipts = gathered.receipts, src = gathered.src;
+  var liByReceipt = gathered.liByReceipt, itemCount = gathered.itemCount;
+
+  var pivotCfg = parsePivotCfg_(pivotJson);
+  var cfgSheets = (pivotCfg && pivotCfg.sheets) || {};
+  var wantReceipts = pivotCfg ? cfgSheets.receipts === true : true;
+  var wantItems = pivotCfg ? cfgSheets.items === true : true;
+  var wantMonthly = pivotCfg ? cfgSheets.monthly === true : true;
+
+  var stamp = Utilities.formatDate(new Date(), 'America/New_York', 'yyyy-MM-dd_HHmm');
+  var temp = SpreadsheetApp.create('Receipts Export ' + stamp);
+  try {
+    // The temp spreadsheet starts with one sheet — the first section built
+    // renames it; later sections insert fresh sheets.
+    var firstSheetUsed = false;
+    function nextSheet_(name) {
+      if (!firstSheetUsed) {
+        firstSheetUsed = true;
+        var s0 = temp.getSheets()[0];
+        s0.setName(name);
+        return s0;
+      }
+      return temp.insertSheet(name);
+    }
+
+    // ── Pivot sheet (export designer) — rows × columns cross-tab ──
+    if (pivotCfg) {
+      var pvOut = buildReceiptPivot_(receipts, liByReceipt, pivotCfg);
       var pvSheet = nextSheet_('Pivot');
       pvSheet.getRange(1, 1, pvOut.length, pvOut[0].length).setValues(pvOut);
       pvSheet.setFrozenRows(1);
@@ -1149,6 +1178,37 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
   } finally {
     try { DriveApp.getFileById(temp.getId()).setTrashed(true); } catch (delErr) { /* temp cleanup best-effort */ }
   }
+}
+
+/**
+ * Export preview — returns the exact Pivot grid the export would contain,
+ * as JSON, without creating any spreadsheet. Large grids are truncated for
+ * transport (header and totals row/column always kept; the real export is
+ * never truncated).
+ */
+function previewExportPivot(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, pivotJson) {
+  var pivotCfg = parsePivotCfg_(pivotJson);
+  if (!pivotCfg) return { success: false, error: 'no_pivot_config' };
+  var gathered = gatherExportData_(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner);
+  if (gathered.error) return { success: false, error: gathered.error };
+  var grid = buildReceiptPivot_(gathered.receipts, gathered.liByReceipt, pivotCfg);
+  var MAX_ROWS = 60, MAX_COLS = 13; // data rows / data columns sent to the client
+  var truncatedRows = 0, truncatedCols = 0;
+  if (grid.length > MAX_ROWS + 2) { // header + totals row are exempt
+    truncatedRows = grid.length - (MAX_ROWS + 2);
+    grid = [grid[0]].concat(grid.slice(1, MAX_ROWS + 1)).concat([grid[grid.length - 1]]);
+  }
+  if (grid[0].length > MAX_COLS + 1) { // trailing Total column is exempt
+    truncatedCols = grid[0].length - (MAX_COLS + 1);
+    grid = grid.map(function(row) {
+      return row.slice(0, MAX_COLS).concat([row[row.length - 1]]);
+    });
+  }
+  return {
+    success: true, grid: grid,
+    receipts: gathered.receipts.length, lineItems: gathered.itemCount,
+    truncatedRows: truncatedRows, truncatedCols: truncatedCols
+  };
 }
 
 /**
@@ -2340,6 +2400,26 @@ function doPost(e) {
       dlResult = { success: false, error: String((dlErr && dlErr.message) || dlErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(dlResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Export designer preview — pivot grid as JSON, no file built.
+  if (action === "exportPreview") {
+    var xvResult;
+    try {
+      xvResult = previewExportPivot(
+        (e && e.parameter && e.parameter.token) || "",
+        (e && e.parameter && e.parameter.q) || "",
+        (e && e.parameter && e.parameter.from) || "",
+        (e && e.parameter && e.parameter.to) || "",
+        (e && e.parameter && e.parameter.uploaded) || "",
+        (e && e.parameter && e.parameter.cat) || "",
+        (e && e.parameter && e.parameter.owner) || "",
+        (e && e.parameter && e.parameter.pivot) || "");
+    } catch (xvErr) {
+      xvResult = { success: false, error: String((xvErr && xvErr.message) || xvErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(xvResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -3684,6 +3764,16 @@ function doGet(e) {
       } else if (apiOp === 'deleteReceipt') {
         // PROJECT: Receipts record deletion (GET fallback)
         apiResult = deleteReceipt(apiToken, (e && e.parameter && e.parameter.receiptId) || '');
+      } else if (apiOp === 'exportPreview') {
+        // PROJECT: Export designer preview (GET fallback)
+        apiResult = previewExportPivot(apiToken,
+          (e && e.parameter && e.parameter.q) || '',
+          (e && e.parameter && e.parameter.from) || '',
+          (e && e.parameter && e.parameter.to) || '',
+          (e && e.parameter && e.parameter.uploaded) || '',
+          (e && e.parameter && e.parameter.cat) || '',
+          (e && e.parameter && e.parameter.owner) || '',
+          (e && e.parameter && e.parameter.pivot) || '');
       } else if (apiOp === 'exportReceipts') {
         // PROJECT: Receipts .xlsx export (GET fallback)
         apiResult = exportReceipts(apiToken,

@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 29/50`
+`Sections: 30/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.30w] — 2026-08-05 10:26:18 PM EST — v01.82r
+
+### Added
+- Preview step in the Export designer — after choosing rows, columns, and values, you now see the exact Summary table your export will contain, right in the app; go Back to adjust your choices or tap Export when it looks right
+- New "Business" category with subcategories made for commercial invoices (Inventory & Resale, Supplies & Packaging, Equipment, Freight & Shipping, Deposits & CRV, Professional Services) — available in the review screen, History and Reports filters, and fully translated in 简体中文 mode
+
+### Changed
+- Sharper photo uploads — dense, small-print documents like supplier invoices now stay legible for automatic reading
 
 ## [v01.29w] — 2026-08-05 10:12:22 PM EST — v01.81r
 

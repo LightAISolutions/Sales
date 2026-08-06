@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 17/50`
+`Sections: 18/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.18g] — 2026-08-05 10:26:18 PM EST — v01.82r
+
+### Added
+- Export previews — the app can now show you your export's Summary table before the file is built, and what you preview is exactly what gets exported
+
+### Changed
+- Smarter document reading — commercial invoices (supplier and wholesaler bills) are now recognized alongside regular receipts: the vendor, invoice date, and grand total are picked up correctly, case quantities and per-case prices are understood, and deposits, freight, and discounts are captured as their own line items
+- Invoice purchases are automatically filed under a new "Business" category with fitting subcategories
 
 ## [v01.17g] — 2026-08-05 10:12:22 PM EST — v01.81r
 
