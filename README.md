@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-05 05:26:52 AM EST` · Repo version: `v01.80r`
+Last updated: `2026-08-05 10:12:22 PM EST` · Repo version: `v01.81r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -56,7 +56,7 @@ Last updated: `2026-08-05 05:26:52 AM EST` · Repo version: `v01.80r`
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Scraper.html">Scraper.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Scraper.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/19U0Wu25eUXEHPVz4VWjKQIpnRozgFycNSjFCTB-umkk/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Scraper/Scraper.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog.md">v01.32w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Scrapergs.changelog.md">v01.29g</a> | [template] News Scraper page
 │   │
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Receipts.html">Receipts.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Receipts.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1SfVRsHm6pUn1bq633BSKiQ8c3IsQeVAs7H0265ckdDM/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Receipts/Receipts.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog.md">v01.28w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog.md">v01.16g</a> | [template] Receipts page
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Receipts.html">Receipts.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Receipts.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1SfVRsHm6pUn1bq633BSKiQ8c3IsQeVAs7H0265ckdDM/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Receipts/Receipts.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog.md">v01.29w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog.md">v01.17g</a> | [template] Receipts page
 │   │
 │   <b>│ ─ External Sites (Placeholder) ────────────────────────────────────────────</b>
 │   │   <i>(No external-site pages yet)</i>

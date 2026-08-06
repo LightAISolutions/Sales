@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.28w">
+  <meta name="build-version" content="v01.29w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -624,6 +624,39 @@
       white-space: nowrap; font-family: var(--rc-serif);
     }
     #rh-export:disabled { opacity: 0.5; cursor: default; }
+    /* Export designer — 3-step pivot wizard shown before the .xlsx export */
+    #rx-overlay {
+      position: fixed; inset: 0; z-index: 60; display: none;
+      background: rgba(35, 32, 25, 0.45);
+      align-items: center; justify-content: center; padding: 18px;
+    }
+    #rx-modal {
+      width: 100%; max-width: 360px; max-height: 84vh; overflow-y: auto;
+      background: var(--rc-paper); border: 1.5px solid var(--rc-ink);
+      border-radius: 8px; padding: 14px 16px 12px;
+      font-family: var(--rc-serif); color: var(--rc-ink);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+    .rx-title { font: 600 17px/1.3 var(--rc-serif); margin: 0 0 2px; }
+    .rx-note { color: var(--rc-muted); font-size: 12.5px; margin: 0 0 9px; }
+    .rx-opt {
+      display: flex; align-items: center; gap: 9px; padding: 8px 9px;
+      border: 1.5px solid var(--rc-line); border-radius: 6px;
+      margin: 6px 0; cursor: pointer; font-size: 14px;
+    }
+    .rx-opt input { margin: 0; flex: 0 0 auto; }
+    .rx-opt.rx-sel { border-color: var(--rc-accent); background: #f3e9d9; }
+    .rx-chk { display: flex; align-items: center; gap: 8px; font-size: 13.5px; margin: 6px 2px; cursor: pointer; }
+    .rx-chk input { margin: 0; }
+    .rx-sheets-hd { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--rc-muted); margin: 12px 0 4px; }
+    .rx-btns { display: flex; gap: 8px; margin-top: 13px; }
+    .rx-btns button {
+      flex: 1; padding: 9px 0; font: 600 14.5px var(--rc-serif);
+      border-radius: 6px; border: 1.5px solid var(--rc-ink);
+      background: var(--rc-paper); color: var(--rc-ink); cursor: pointer;
+    }
+    .rx-btns .rx-primary { background: var(--rc-ink); color: var(--rc-paper); }
+    .rx-dots { text-align: center; color: var(--rc-muted); font-size: 12px; margin-top: 8px; letter-spacing: 4px; }
     .rh-row {
       display: flex; gap: 8px; align-items: baseline; padding: 10px 2px;
       border-bottom: 1px solid #eae2d0; cursor: pointer;
@@ -1000,6 +1033,11 @@
       <button id="rsp-signout" type="button">Sign out</button>
       <button id="rsp-signout-all" type="button">Sign out everywhere</button>
     </div>
+  </div>
+  <!-- Export designer — pivot wizard shown when Export .xlsx is tapped.
+       Content is rendered by JS per step so labels follow the app language. -->
+  <div id="rx-overlay">
+    <div id="rx-modal"></div>
   </div>
   <!-- History browser — searchable list of past receipts with tap-to-expand
        details and a link to each photo. Read-only; z-index 7 overlays the
@@ -3206,6 +3244,8 @@
       var tabWall = document.getElementById('tab-takeover-wall');
       if (tabWall) { tabWall.style.display = 'none'; _tabSurrendered = false; }
       if (typeof stopCountdownTimers === 'function') stopCountdownTimers();
+      var rxOv = document.getElementById('rx-overlay'); // PROJECT: export designer wizard
+      if (rxOv) rxOv.style.display = 'none';
 
       // Always show sign-in UI (not reconnecting/signing-in) when showAuthWall is called
       signinEl.style.display = '';
@@ -6471,7 +6511,19 @@
         'Showing the 300 most recent.': '仅显示最近 300 条。',
         'Tap for price history': '点按查看价格历史',
         'Nothing matches these filters': '没有符合筛选条件的数据',
-        'Loading…': '加载中…', 'Sign in first': '请先登录', 'No receipts found': '未找到收据'
+        'Loading…': '加载中…', 'Sign in first': '请先登录', 'No receipts found': '未找到收据',
+        'Export designer': '导出设计器',
+        'Rows (Y axis)': '行（Y 轴）', 'Columns (X axis)': '列（X 轴）', 'Values & sheets': '数值与工作表',
+        'Pick what each row of the summary table represents.': '选择汇总表中每一行代表什么。',
+        'Pick how the columns are split. Your History filters still apply first.': '选择列的拆分方式。历史记录的筛选条件仍会先生效。',
+        'Pick what fills the cells, and which detail sheets to include.': '选择单元格中的数值，以及要包含哪些明细工作表。',
+        'Month': '月份', 'Week': '周', 'Line item': '单项商品', 'Subcategory': '子类别',
+        'None — one totals column': '不拆分 — 单一合计列',
+        'Sum of receipt totals': '收据总额求和', 'Sum of line-item costs': '单项金额求和',
+        'Number of purchases': '购买次数',
+        'Receipts sheet (all details)': '收据工作表（完整明细）',
+        'Line Items sheet': '单项工作表', 'Monthly Summary sheet': '月度汇总工作表',
+        'Back': '上一步', 'Next': '下一步', 'Cancel': '取消', '⬇️ Export': '⬇️ 导出'
       };
       // Guarded against eval-time calls: fillReportCategories runs during
       // script evaluation, before the I18N_ZH var assignment executes. Those
@@ -6911,22 +6963,122 @@
         });
       })();
 
-      // .xlsx export — server builds the workbook from the current filters and
-      // returns it base64; decoded here into a Blob download.
+      // .xlsx export — the Export button opens a 3-step "export designer"
+      // wizard (Rows × Columns × Values + sheet toggles). The chosen config
+      // travels with the export request; the server prepends a cross-tab
+      // Pivot sheet and includes only the selected raw sheets. The last-used
+      // config is remembered per device.
+      var RX_ROWS = ['category', 'subcategory', 'merchant', 'month', 'week', 'item'];
+      var RX_COLS = ['none', 'month', 'category', 'merchant'];
+      var RX_VALS = ['total', 'itemcost', 'count'];
+      var RX_LBL = {
+        category: 'Category', subcategory: 'Subcategory', merchant: 'Merchant',
+        month: 'Month', week: 'Week', item: 'Line item',
+        none: 'None — one totals column', total: 'Sum of receipt totals',
+        itemcost: 'Sum of line-item costs', count: 'Number of purchases'
+      };
+      var _rxStep = 0, _rxCfg = null;
+      function rxLoadCfg() {
+        try {
+          var raw = localStorage.getItem('Receipts_export_cfg');
+          if (raw) {
+            var c = JSON.parse(raw);
+            if (c && RX_ROWS.indexOf(c.rows) >= 0 && RX_COLS.indexOf(c.cols) >= 0
+                && RX_VALS.indexOf(c.val) >= 0 && c.sheets) return c;
+          }
+        } catch (rxErr) { /* corrupted stored config — fall through to default */ }
+        return { rows: 'category', cols: 'month', val: 'total', sheets: { receipts: true, items: true, monthly: true } };
+      }
+      function rxChk(key, label, on) {
+        return '<label class="rx-chk"><input type="checkbox" name="rx-sheet" value="' + key + '"'
+          + (on ? ' checked' : '') + '><span>' + esc(t(label)) + '</span></label>';
+      }
+      function rxRender() {
+        var cur = _rxStep === 0 ? _rxCfg.rows : _rxStep === 1 ? _rxCfg.cols : _rxCfg.val;
+        var list = _rxStep === 0 ? RX_ROWS : _rxStep === 1 ? RX_COLS : RX_VALS;
+        var sub = _rxStep === 0 ? 'Rows (Y axis)' : _rxStep === 1 ? 'Columns (X axis)' : 'Values & sheets';
+        var note = _rxStep === 0 ? 'Pick what each row of the summary table represents.'
+          : _rxStep === 1 ? 'Pick how the columns are split. Your History filters still apply first.'
+          : 'Pick what fills the cells, and which detail sheets to include.';
+        var h = '<div class="rx-title">' + esc(t(sub)) + '</div>'
+          + '<div class="rx-note">' + esc(t(note)) + '</div>'
+          + list.map(function(k) {
+              return '<label class="rx-opt' + (k === cur ? ' rx-sel' : '') + '"><input type="radio" name="rx-dim"'
+                + (k === cur ? ' checked' : '') + ' value="' + k + '"><span>' + esc(t(RX_LBL[k])) + '</span></label>';
+            }).join('');
+        if (_rxStep === 2) {
+          h += '<div style="border-top:1.5px dashed var(--rc-line); margin-top:11px; padding-top:7px">'
+            + rxChk('receipts', 'Receipts sheet (all details)', !!_rxCfg.sheets.receipts)
+            + rxChk('items', 'Line Items sheet', !!_rxCfg.sheets.items)
+            + rxChk('monthly', 'Monthly Summary sheet', !!_rxCfg.sheets.monthly)
+            + '</div>';
+        }
+        h += '<div class="rx-btns">';
+        h += _rxStep === 0
+          ? '<button type="button" id="rx-cancel">' + esc(t('Cancel')) + '</button>'
+          : '<button type="button" id="rx-back">' + esc(t('Back')) + '</button>';
+        h += _rxStep < 2
+          ? '<button type="button" id="rx-next" class="rx-primary">' + esc(t('Next')) + '</button>'
+          : '<button type="button" id="rx-go" class="rx-primary">' + esc(t('⬇️ Export')) + '</button>';
+        h += '</div>';
+        var dots = ['○', '○', '○'];
+        dots[_rxStep] = '●';
+        h += '<div class="rx-dots">' + dots.join(' ') + '</div>';
+        document.getElementById('rx-modal').innerHTML = h;
+      }
+      function rxClose() { document.getElementById('rx-overlay').style.display = 'none'; }
       document.getElementById('rh-export').addEventListener('click', function() {
+        var session = loadSession();
+        if (!session.token) { setStatus('Sign in first', false); return; }
+        _rxCfg = rxLoadCfg();
+        _rxStep = 0;
+        rxRender();
+        document.getElementById('rx-overlay').style.display = 'flex';
+      });
+      document.getElementById('rx-overlay').addEventListener('click', function(ev) {
+        if (ev.target === document.getElementById('rx-overlay')) rxClose();
+      });
+      document.getElementById('rx-modal').addEventListener('change', function(ev) {
+        var tgt = ev.target;
+        if (!tgt || !tgt.name) return;
+        if (tgt.name === 'rx-dim') {
+          if (_rxStep === 0) _rxCfg.rows = tgt.value;
+          else if (_rxStep === 1) _rxCfg.cols = tgt.value;
+          else _rxCfg.val = tgt.value;
+          rxRender();
+        } else if (tgt.name === 'rx-sheet') {
+          _rxCfg.sheets[tgt.value] = !!tgt.checked;
+        }
+      });
+      document.getElementById('rx-modal').addEventListener('click', function(ev) {
+        var b = ev.target && ev.target.closest ? ev.target.closest('button') : null;
+        if (!b) return;
+        if (b.id === 'rx-cancel') rxClose();
+        else if (b.id === 'rx-back') { _rxStep--; rxRender(); }
+        else if (b.id === 'rx-next') { _rxStep++; rxRender(); }
+        else if (b.id === 'rx-go') {
+          try { localStorage.setItem('Receipts_export_cfg', JSON.stringify(_rxCfg)); } catch (rxSaveErr) { /* private mode */ }
+          rxClose();
+          rxDoExport(JSON.stringify(_rxCfg));
+        }
+      });
+      // Server builds the workbook from the current filters + pivot config and
+      // returns it base64; decoded here into a Blob download.
+      function rxDoExport(pivotJson) {
         var session = loadSession();
         if (!session.token) { setStatus('Sign in first', false); return; }
         var xBtn = document.getElementById('rh-export');
         xBtn.disabled = true;
-        xBtn.textContent = 'Exporting…';
-        function done(label) { xBtn.disabled = false; xBtn.textContent = label || '⬇️ Export .xlsx'; }
+        xBtn.textContent = _zhOn() ? '导出中…' : 'Exporting…';
+        function done() { xBtn.disabled = false; xBtn.textContent = _zhOn() ? '⬇️ 导出 .xlsx' : '⬇️ Export .xlsx'; }
         _gasPost({
           action: 'exportReceipts', token: session.token,
           q: document.getElementById('rh-search').value || '',
           from: document.getElementById('rh-from').value || '',
           to: document.getElementById('rh-to').value || '',
           cat: document.getElementById('rh-cat').value || '',
-          owner: rhOwner()
+          owner: rhOwner(),
+          pivot: pivotJson || ''
         }).then(function(res) {
           if (!(res && res.success && res.base64)) {
             done();
@@ -6951,7 +7103,7 @@
           done();
           setStatus('Export failed (' + String((err && err.message) || err) + ')', false);
         });
-      });
+      }
     })();
 
 // PROJECT END

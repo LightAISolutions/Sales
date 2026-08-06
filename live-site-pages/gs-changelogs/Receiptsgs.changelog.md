@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 16/50`
+`Sections: 17/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.17g] — 2026-08-05 10:12:22 PM EST — v01.81r
+
+### Added
+- Spreadsheet exports can now include a customizable Summary table — its rows, columns, and numbers follow your choices in the new Export designer, and only the detail sheets you keep selected are included
+
+### Fixed
+- Fixed an issue where exports could fail whenever monthly summary data was present
 
 ## [v01.16g] — 2026-08-02 04:46:01 AM EST — v01.43r
 

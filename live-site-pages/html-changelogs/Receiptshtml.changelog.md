@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 28/50`
+`Sections: 29/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.29w] — 2026-08-05 10:12:22 PM EST — v01.81r
+
+### Added
+- Tapping "⬇️ Export .xlsx" now opens a short Export designer — pick what each row of the summary represents (category, subcategory, store, month, week, or individual items), how the columns split (months, categories, stores, or a single totals column), and what the numbers show (receipt totals, item costs, or purchase counts)
+- Exports now open with a Summary table built from those choices, and you decide which detail sheets come along with it
+- The designer remembers your last setup on each device, and it's fully translated in 简体中文 mode
 
 ## [v01.28w] — 2026-08-02 08:31:18 PM EST — v01.48r
 

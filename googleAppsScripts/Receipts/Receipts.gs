@@ -1,4 +1,4 @@
-var VERSION = "v01.16g";
+var VERSION = "v01.17g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -896,12 +896,15 @@ function deleteReceipt(sessionToken, receiptId) {
 }
 
 /**
- * .xlsx export — builds a temporary two-sheet spreadsheet (Receipts +
- * LineItems) from the same filters the history browser uses, exports it as a
- * real .xlsx via the Drive export endpoint, trashes the temp file, and
- * returns the workbook base64-encoded for the browser to download.
+ * .xlsx export — builds a temporary spreadsheet from the same filters the
+ * history browser uses, exports it as a real .xlsx via the Drive export
+ * endpoint, trashes the temp file, and returns the workbook base64-encoded
+ * for the browser to download. An optional pivot config (JSON string from
+ * the export designer wizard) prepends a cross-tab Pivot sheet and controls
+ * which raw sheets (Receipts / LineItems / Monthly Summary) are included.
+ * No config (legacy callers) → the full three-sheet workbook, no Pivot.
  */
-function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner) {
+function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, pivotJson) {
   var user = validateSessionForData(sessionToken, 'exportReceipts');
   var setRes = resolveOwnerSet_(user, forOwner); // validates single-owner grants; '*' always resolves
   if (setRes.error) return { success: false, error: setRes.error };
@@ -912,11 +915,137 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
   var ids = {};
   receipts.forEach(function(rc) { ids[rc.id] = true; });
 
+  // Export designer config — absent or unparseable means legacy behavior.
+  var pivotCfg = null;
+  if (pivotJson) {
+    try { pivotCfg = JSON.parse(pivotJson); } catch (pjErr) { pivotCfg = null; }
+    if (pivotCfg && typeof pivotCfg !== 'object') pivotCfg = null;
+  }
+  var cfgSheets = (pivotCfg && pivotCfg.sheets) || {};
+  var wantReceipts = pivotCfg ? cfgSheets.receipts === true : true;
+  var wantItems = pivotCfg ? cfgSheets.items === true : true;
+  var wantMonthly = pivotCfg ? cfgSheets.monthly === true : true;
+
+  var src = ensureReceiptTabs_();
+
+  // Line items are read once up front — the Pivot sheet and the LineItems
+  // sheet both consume them.
+  var liByReceipt = {}, itemCount = 0;
+  var liSrcSheet = src.lineItems;
+  var liSrcLast = liSrcSheet.getLastRow();
+  if (liSrcLast > 1) {
+    liSrcSheet.getRange(2, 1, liSrcLast - 1, 7).getValues().forEach(function(v) {
+      var vid = String(v[0]);
+      if (!ids[vid]) return;
+      (liByReceipt[vid] = liByReceipt[vid] || []).push(v);
+      itemCount++;
+    });
+  }
+
   var stamp = Utilities.formatDate(new Date(), 'America/New_York', 'yyyy-MM-dd_HHmm');
   var temp = SpreadsheetApp.create('Receipts Export ' + stamp);
   try {
-    var rSheet = temp.getSheets()[0];
-    rSheet.setName('Receipts');
+    // The temp spreadsheet starts with one sheet — the first section built
+    // renames it; later sections insert fresh sheets.
+    var firstSheetUsed = false;
+    function nextSheet_(name) {
+      if (!firstSheetUsed) {
+        firstSheetUsed = true;
+        var s0 = temp.getSheets()[0];
+        s0.setName(name);
+        return s0;
+      }
+      return temp.insertSheet(name);
+    }
+
+    // ── Pivot sheet (export designer) — rows × columns cross-tab ──
+    if (pivotCfg) {
+      var pvRows = String(pivotCfg.rows || 'category');
+      var pvCols = String(pivotCfg.cols || 'none');
+      var pvVal = String(pivotCfg.val || 'total');
+      // Row dims that only exist per line item, or the item-cost value,
+      // aggregate over line items; everything else aggregates over receipts.
+      var itemSource = (pvRows === 'subcategory' || pvRows === 'item' || pvVal === 'itemcost');
+
+      function pvMonthKey_(d) {
+        d = String(d || '');
+        return d.length >= 7 ? d.substring(0, 7) : '(no date)';
+      }
+      function pvWeekKey_(d) {
+        var wm = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(d || ''));
+        if (!wm) return '(no date)';
+        var dt = new Date(Number(wm[1]), Number(wm[2]) - 1, Number(wm[3]));
+        dt.setDate(dt.getDate() - dt.getDay()); // back to Sunday
+        var mm = ('0' + (dt.getMonth() + 1)).slice(-2);
+        var dd = ('0' + dt.getDate()).slice(-2);
+        return dt.getFullYear() + '-' + mm + '-' + dd;
+      }
+      function pvReceiptKey_(rc, dim) {
+        if (dim === 'month') return pvMonthKey_(rc.date);
+        if (dim === 'week') return pvWeekKey_(rc.date);
+        if (dim === 'merchant') return String(rc.merchant || '(no merchant)');
+        if (dim === 'category') return String(rc.category || '(uncategorized)');
+        return 'Value';
+      }
+
+      var pvGrid = {}, pvColSet = {};
+      function pvAdd_(rowKey, colKey, amount) {
+        var row = pvGrid[rowKey] = pvGrid[rowKey] || {};
+        row[colKey] = (row[colKey] || 0) + amount;
+        pvColSet[colKey] = true;
+      }
+      if (itemSource) {
+        receipts.forEach(function(rc) {
+          (liByReceipt[rc.id] || []).forEach(function(v) {
+            var rowKey =
+              pvRows === 'subcategory' ? String(v[6] || '(no subcategory)') :
+              pvRows === 'item' ? String(v[2] || '(no description)') :
+              pvReceiptKey_(rc, pvRows);
+            var colKey = pvCols === 'none' ? 'Value' : pvReceiptKey_(rc, pvCols);
+            pvAdd_(rowKey, colKey, pvVal === 'count' ? 1 : (Number(v[5]) || 0));
+          });
+        });
+      } else {
+        receipts.forEach(function(rc) {
+          var colKey = pvCols === 'none' ? 'Value' : pvReceiptKey_(rc, pvCols);
+          pvAdd_(pvReceiptKey_(rc, pvRows), colKey, pvVal === 'count' ? 1 : (Number(rc.total) || 0));
+        });
+      }
+
+      var pvRowKeys = Object.keys(pvGrid).sort();
+      var pvColKeys = Object.keys(pvColSet).sort();
+      var dimLabels = { category: 'Category', subcategory: 'Subcategory', merchant: 'Merchant',
+        month: 'Month', week: 'Week (from Sunday)', item: 'Line item' };
+      function pvRound_(n) { return Math.round(n * 100) / 100; }
+      var pvOut = [[dimLabels[pvRows] || 'Rows'].concat(pvColKeys).concat(['Total'])];
+      var pvColTotals = {}, pvGrand = 0;
+      pvRowKeys.forEach(function(rk) {
+        var line = [rk], rowTotal = 0;
+        pvColKeys.forEach(function(ck) {
+          var cell = pvGrid[rk][ck] || 0;
+          rowTotal += cell;
+          pvColTotals[ck] = (pvColTotals[ck] || 0) + cell;
+          line.push(cell ? pvRound_(cell) : '');
+        });
+        line.push(pvRound_(rowTotal));
+        pvGrand += rowTotal;
+        pvOut.push(line);
+      });
+      var totalsLine = ['Total'];
+      pvColKeys.forEach(function(ck) { totalsLine.push(pvRound_(pvColTotals[ck] || 0)); });
+      totalsLine.push(pvRound_(pvGrand));
+      pvOut.push(totalsLine);
+
+      var pvSheet = nextSheet_('Pivot');
+      pvSheet.getRange(1, 1, pvOut.length, pvOut[0].length).setValues(pvOut);
+      pvSheet.setFrozenRows(1);
+      pvSheet.setFrozenColumns(1);
+      pvSheet.getRange(1, 1, 1, pvOut[0].length).setFontWeight('bold');
+      pvSheet.getRange(pvOut.length, 1, 1, pvOut[0].length).setFontWeight('bold');
+    }
+
+    if (wantReceipts) {
+    var rSheet = nextSheet_('Receipts');
     var rRows = [['Receipt ID', 'Owner', 'Date', 'Merchant', 'Store Address', 'Currency',
       'Subtotal', 'Tax', 'Total', 'Category', 'Status', 'Image Link', 'Uploaded At']];
     receipts.forEach(function(rc) {
@@ -924,7 +1053,6 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
         '', '', '', rc.category, rc.status, rc.imageUrl, rc.uploadedAt]);
     });
     // Subtotal/Tax/Total/Address pulled from the sheet in one read.
-    var src = ensureReceiptTabs_();
     var byId = {};
     var srcLast = src.receipts.getLastRow();
     if (srcLast > 1) {
@@ -944,28 +1072,20 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
     rSheet.getRange(1, 1, rRows.length, rRows[0].length).setValues(rRows);
     rSheet.setFrozenRows(1);
     rSheet.getRange(1, 1, 1, rRows[0].length).setFontWeight('bold');
+    }
 
     // LineItems: grouped per receipt for readability — a bold banded header
     // row per receipt (store · date · total), item rows beneath, a blank
     // separator row, and alternating band colors per receipt block. The
     // Receipt ID column is still populated on every item row so the sheet
     // remains filterable/pivotable.
-    var liSheet = temp.insertSheet('LineItems');
+    if (wantItems) {
+    var liSheet = nextSheet_('LineItems');
     var liHeader = ['Receipt ID', 'Line #', 'Description', 'Qty', 'Unit Price', 'Amount', 'Category'];
     var liRows = [liHeader];
     var bandRanges = []; // {row (1-based in sheet), count, color}
     var BAND_COLORS = ['#dbe8f8', '#e6f2e2'];
-    var liByReceipt = {};
-    var liSrc = src.lineItems;
-    var liLast = liSrc.getLastRow();
-    if (liLast > 1) {
-      liSrc.getRange(2, 1, liLast - 1, 7).getValues().forEach(function(v) {
-        var vid = String(v[0]);
-        if (!ids[vid]) return;
-        (liByReceipt[vid] = liByReceipt[vid] || []).push(v);
-      });
-    }
-    var band = 0, liTotal = 0;
+    var band = 0;
     receipts.forEach(function(rc) {
       var headerRow = liRows.length + 1;
       liRows.push([rc.id,
@@ -973,7 +1093,7 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
         + ' · Total ' + (rc.total === '' ? '—' : rc.total) + ' ' + (rc.currency || ''),
         '', '', '', '', '']);
       var items = liByReceipt[rc.id] || [];
-      items.forEach(function(v) { liRows.push(v); liTotal++; });
+      items.forEach(function(v) { liRows.push(v); });
       bandRanges.push({ row: headerRow, count: items.length, color: BAND_COLORS[band % 2] });
       liRows.push(['', '', '', '', '', '', '']);
       band++;
@@ -985,26 +1105,31 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
       liSheet.getRange(b.row, 1, 1, 7).setFontWeight('bold').setBackground(b.color);
       if (b.count) liSheet.getRange(b.row + 1, 1, b.count, 7).setBackground(b.color);
     });
+    }
 
     // Monthly Summary — mirror the live tab (rebuild first so it's current),
-    // but only the requesting user's rows, with the Owner column dropped so
-    // the exported sheet keeps the familiar Month-first layout.
+    // filtered to the owners visible in this export's owner set, with the
+    // Owner column dropped so the exported sheet keeps the familiar
+    // Month-first layout.
+    if (wantMonthly) {
+    var msOwners = setRes.set || {};
     var msLive = rebuildMonthlySummary_(src);
     var msLastRow = msLive.getLastRow(), msLastCol = msLive.getLastColumn();
     if (msLastRow > 1 && msLastCol > 1) {
       var msAll = msLive.getRange(1, 1, msLastRow, msLastCol).getValues();
       var msOut = [msAll[0].slice(1)];
       for (var msI = 1; msI < msAll.length; msI++) {
-        if (String(msAll[msI][0] || '').toLowerCase() === ownerEmail) {
+        if (msOwners[String(msAll[msI][0] || '').toLowerCase()] !== undefined) {
           msOut.push(msAll[msI].slice(1));
         }
       }
       if (msOut.length > 1) {
-        var msSheet = temp.insertSheet('Monthly Summary');
+        var msSheet = nextSheet_('Monthly Summary');
         msSheet.getRange(1, 1, msOut.length, msOut[0].length).setValues(msOut);
         msSheet.setFrozenRows(1);
         msSheet.getRange(1, 1, 1, msOut[0].length).setFontWeight('bold');
       }
+    }
     }
     SpreadsheetApp.flush();
 
@@ -1018,7 +1143,7 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
       success: true,
       fileName: 'receipts-export-' + stamp + '.xlsx',
       receipts: receipts.length,
-      lineItems: liTotal,
+      lineItems: itemCount,
       base64: Utilities.base64Encode(xlsxResp.getBlob().getBytes())
     };
   } finally {
@@ -2229,7 +2354,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.to) || "",
         (e && e.parameter && e.parameter.uploaded) || "",
         (e && e.parameter && e.parameter.cat) || "",
-        (e && e.parameter && e.parameter.owner) || "");
+        (e && e.parameter && e.parameter.owner) || "",
+        (e && e.parameter && e.parameter.pivot) || "");
     } catch (xpErr) {
       xpResult = { success: false, error: String((xpErr && xpErr.message) || xpErr) };
     }
@@ -3566,7 +3692,8 @@ function doGet(e) {
           (e && e.parameter && e.parameter.to) || '',
           (e && e.parameter && e.parameter.uploaded) || '',
           (e && e.parameter && e.parameter.cat) || '',
-          (e && e.parameter && e.parameter.owner) || '');
+          (e && e.parameter && e.parameter.owner) || '',
+          (e && e.parameter && e.parameter.pivot) || '');
       } else if (apiOp === 'reportReceipts') {
         // PROJECT: Receipts reports dataset (GET fallback)
         apiResult = reportReceipts(apiToken,
