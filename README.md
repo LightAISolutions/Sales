@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-06 09:50:12 PM EST` · Repo version: `v01.84r`
+Last updated: `2026-08-06 10:09:14 PM EST` · Repo version: `v01.85r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -73,6 +73,7 @@ Last updated: `2026-08-06 09:50:12 PM EST` · Repo version: `v01.84r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/receipts.webmanifest">receipts.webmanifest</a>    — PWA manifest for the Receipts page (home-screen install)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/overview-data">overview-data/</a>           — Company dossier JSON data for the Overview app (schema: repository-information/OVERVIEW-SCHEMA.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/overview-companies.json">overview-companies.json</a> — Company registry (roster, categories, freshness)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/hithium.overview.json">hithium.overview.json</a>   — Hithium dossier profile
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/sinexcel.overview.json">sinexcel.overview.json</a>  — Sinexcel dossier profile
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/templates">templates/</a>               — [template] Template source files for creating new pages and GAS scripts
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-noauth.html.txt">HtmlAndGasTemplateAutoUpdate-noauth.html.txt</a> — [template] HTML page template without auth

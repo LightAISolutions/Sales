@@ -3,6 +3,15 @@
   "categories": ["supplier", "developer", "integrator", "investor", "hyperscaler", "advisor", "other"],
   "companies": [
     {
+      "slug": "hithium",
+      "name": "Hithium",
+      "categories": ["supplier"],
+      "tagline": "Stationary LFP battery cells and BESS systems — global Top-2 ESS cell shipments in 2025.",
+      "hq": "Xiamen, China",
+      "status": "active",
+      "lastUpdated": "2026-08-06"
+    },
+    {
       "slug": "sinexcel",
       "name": "Sinexcel",
       "categories": ["supplier"],
