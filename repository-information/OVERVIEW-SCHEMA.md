@@ -66,6 +66,7 @@ Top-level fields:
 ## Authoring rules
 
 - **Public sources only** — profiles deploy to public GitHub Pages. Company sites, filings, press releases, reputable financial media only. Never include deal notes, quoted pricing, NDA'd material, or anything learned privately
+- **Source priority** — the target company's own Investor Relations and press-release pages outrank trade news: scrape them fully **first** (they are ground truth for products, specs, leadership, and company-reported figures), then use trade press, filings, and consultancies for what the company cannot supply about itself — expectations/consensus, independent rankings, and critical context. List first-party sources first in `sources[]`
 - **No fabrication** — a number, name, spec, or URL that can't be sourced is omitted or marked as an estimate in the text; empty beats invented
 - **Expectations honesty** — `expected` values must be real published consensus/guidance figures; when none exists, leave it empty and say so in commentary rather than manufacturing a benchmark
 - **Photo policy** — only photos the company itself published (leadership page, press kit), downloaded into `live-site-pages/images/execs/` so the page never hotlinks. LinkedIn photos are never scraped (auth wall + ToS). No photo → the app renders an initials avatar automatically
