@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "categories": ["supplier", "developer", "integrator", "investor", "hyperscaler", "advisor", "other"],
+  "companies": [
+    {
+      "slug": "sinexcel",
+      "name": "Sinexcel",
+      "categories": ["supplier"],
+      "tagline": "Power electronics — energy storage PCS, EV charging, and power quality solutions.",
+      "hq": "Shenzhen, China",
+      "ticker": "SZSE: 300693",
+      "status": "active",
+      "lastUpdated": "2026-08-06"
+    }
+  ]
+}

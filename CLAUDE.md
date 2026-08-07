@@ -330,6 +330,13 @@ If the user says **"reconcile"** (or similar: "reconcile multi-session", "end mu
 > **--- END OF VISUAL TEST COMMAND ---**
 ---
 
+## Overview Command
+*If the user says **"overview \<Company Name\>"** (or similar: "add \<Company\> to Overview", "create an overview for \<Company\>", "generate a dossier for \<Company\>", "update the \<Company\> overview"): see `.claude/rules/overview-app.md` — auto-injects when working on the Overview app or its data (`live-site-pages/Overview.html`, `live-site-pages/overview-data/**`), and the full command body (research → profile JSON → registry → commit) is always available for on-demand invocation. Data schema single source of truth: `repository-information/OVERVIEW-SCHEMA.md`.*
+
+---
+> **--- END OF OVERVIEW COMMAND ---**
+---
+
 ## Behavioral Rules
 *Full rules in `.claude/rules/behavioral-rules.md` (always-loaded, no path scope). Covers: Execution Style, Plan Mode Visibility, AskUserQuestion Visibility, Page-Scope Commands, Think Before Asserting, Chesterton's Fence, Rule Placement Autonomy, Backups Before Major Changes, Incremental Writing, Confidence Disclosure, User-Perspective Reasoning, Section Placement Guide, Web Search Confidence, Provenance Markers.*
 
@@ -356,6 +363,7 @@ Path-scoped rules files — loaded automatically when working on matching files.
 | `.claude/rules/workflows.md` | Merge conflict prevention, commit SHA tracking | — |
 | `.claude/rules/init-scripts.md` | Phantom edits, line ending safety | — |
 | `.claude/rules/dead-code-detection.md` | Dead-code analysis methodology — 6-step trace, indicators-present checklist, resource-abuse exemptions (path-scoped to HTML/GAS/workflows + user-triggered by "check for dead code" phrasing) | — |
+| `.claude/rules/overview-app.md` | Overview Command (company dossier research + profile generation), data-vs-page versioning, recall design (path-scoped to Overview app files + user-triggered by "overview \<Company\>" phrasing) | — |
 
 ---
 > **--- END OF REFERENCE FILES ---**
