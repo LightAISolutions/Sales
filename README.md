@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-06 10:09:14 PM EST` · Repo version: `v01.85r`
+Last updated: `2026-08-06 10:51:29 PM EST` · Repo version: `v01.86r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -73,8 +73,15 @@ Last updated: `2026-08-06 10:09:14 PM EST` · Repo version: `v01.85r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/receipts.webmanifest">receipts.webmanifest</a>    — PWA manifest for the Receipts page (home-screen install)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/overview-data">overview-data/</a>           — Company dossier JSON data for the Overview app (schema: repository-information/OVERVIEW-SCHEMA.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/overview-companies.json">overview-companies.json</a> — Company registry (roster, categories, freshness)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/byd.overview.json">byd.overview.json</a>       — BYD dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/catl.overview.json">catl.overview.json</a>      — CATL dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/flexgen.overview.json">flexgen.overview.json</a>   — FlexGen dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/fluence.overview.json">fluence.overview.json</a>   — Fluence dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/hithium.overview.json">hithium.overview.json</a>   — Hithium dossier profile
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/sinexcel.overview.json">sinexcel.overview.json</a>  — Sinexcel dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/sinexcel.overview.json">sinexcel.overview.json</a>  — Sinexcel dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/sungrow.overview.json">sungrow.overview.json</a>   — Sungrow dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/tesla.overview.json">tesla.overview.json</a>     — Tesla dossier profile
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/wartsila.overview.json">wartsila.overview.json</a>  — Wärtsilä dossier profile
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/templates">templates/</a>               — [template] Template source files for creating new pages and GAS scripts
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-noauth.html.txt">HtmlAndGasTemplateAutoUpdate-noauth.html.txt</a> — [template] HTML page template without auth
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-auth.html.txt">HtmlAndGasTemplateAutoUpdate-auth.html.txt</a> — [template · modified] HTML page template with Google Authentication
@@ -130,6 +137,7 @@ Last updated: `2026-08-06 10:09:14 PM EST` · Repo version: `v01.85r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog.md">Receiptsgs.changelog.md</a>               — [template] Receipts GAS changelog
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog-archive.md">Receiptsgs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Company-published executive headshots for Overview dossiers (Fluence ×5, Wärtsilä ×4)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Code_Ready_Voice_1.mp3">Code_Ready_Voice_1.mp3</a>      — [template] "Code Ready" splash sound
