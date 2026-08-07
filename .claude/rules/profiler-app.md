@@ -47,7 +47,15 @@ Post-earnings dossier refreshes run on one-shot Routines (triggers) rather than 
 - **Convention** — a one-shot trigger named `Profiler refresh — <Company> (<period>)`, firing a **fresh session** the day after the company's scheduled report date, with a complete standalone prompt that invokes `profiler <Company>` and walks the full command (verify → research → archive → write → register → render check → commit/push)
 - **Verify before running** — the fired session first confirms the report actually published; if not, it re-schedules itself ~3 days out and stops
 - **Self-re-arming** — the final step of every scheduled refresh researches the company's next scheduled report date and creates the next one-shot trigger (report date +1 day). If trigger tooling is unavailable in the firing session, it instead adds an Active Reminder to `repository-information/REMINDERS.md` telling the developer to re-arm manually (including the expected date) and states this plainly in its summary
-- **Currently armed** — Sungrow (SZSE: 300274) post-H1-2026 refresh: fires 2026-08-30 13:00 UTC (H1 report scheduled 2026-08-29)
+- **Currently armed** (all fire fresh sessions; one-shots re-arm themselves):
+  - **Sinexcel** (SZSE ChiNext: 300693) — fires 2026-08-12 13:00 UTC (H1 report scheduled 2026-08-11)
+  - **Sungrow** (SZSE: 300274) — fires 2026-08-30 13:00 UTC (H1 report scheduled 2026-08-29)
+  - **BYD** (SZSE: 002594 · HKEX: 1211) — fires 2026-08-30 15:00 UTC (H1 results scheduled 2026-08-29; staggered 2h after Sungrow to avoid parallel-session conflicts)
+  - **Tesla** (NASDAQ: TSLA) — fires 2026-10-22 13:00 UTC (Q3 results estimated ~2026-10-21; the fired session confirms the real date and re-schedules if needed)
+  - **Wärtsilä** (HEL: WRT1V) — fires 2026-10-28 13:00 UTC (Jan–Sep interim report announced for 2026-10-27)
+  - **CATL** (SZSE: 300750 · HKEX: 3750) — fires 2026-11-01 13:00 UTC (Q3 report due by the 2026-10-31 disclosure deadline)
+  - **Fluence** (NASDAQ: FLNC) — fires 2026-11-25 14:00 UTC (Q4/FY2026 results estimated ~2026-11-24, FY ends Sep 30; the fired session confirms the real date and re-schedules if needed)
+  - **Hithium & FlexGen** (private, no earnings calendar) — recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC) that checks for material developments and refreshes only when warranted; recurs on its own, no re-arm
 
 ## Version & changelog interactions
 
