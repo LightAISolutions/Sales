@@ -6,6 +6,37 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-07 02:13:52 AM EST
+**Repo version:** v01.90r
+
+**What we worked on:**
+- **Overview → Profiler rename** (v01.89r): `Profiler.html` (v01.03w), `profiler-data/` with `<slug>.profile.json` + `profiler-companies.json`, `PROFILER-SCHEMA.md`, `.claude/rules/profiler-app.md`, CLAUDE.md "Profiler Command" (trigger phrase now "profiler \<Company\>"), README tree, REPO-ARCHITECTURE flowchart node `PROFILER_PAGE` with regenerated + decompression-verified pako URL
+- **Dossier archival system** (v01.89r): `profiler-data/archive/` + `archive-index.json` (currently `{}`); Archival Procedure in `profiler-app.md` — archive-before-edit as `<slug>.profile.v<N>.json`, index update, best-effort mirror to `lightaisolutions/bess-aidc-library`
+- **Scheduled refreshes armed for all 9 covered companies** (v01.90r): 7 self-re-arming one-shot triggers (post-earnings, fresh sessions) + 1 quarterly private-company cron; pre-existing Sinexcel trigger prompt upgraded to the improved template
+- Session recovered from a mid-flight context compaction (trigger creation was interrupted; state reconstructed from git + staged renames)
+
+**Where we left off:**
+- Everything committed, pushed, and auto-merged to `main` (v01.90r). Nothing in flight — the refresh system runs autonomously from here
+
+**Key decisions made:**
+- BYD trigger staggered +2h after Sungrow (both report 2026-08-29) so two fresh sessions don't collide on shared repo state files
+- Estimate-based triggers (Tesla, Fluence) verify publication first and re-schedule themselves to the confirmed date if the report isn't out
+- Trigger-fired sessions carry no MCP connectors → every prompt has fallbacks: in-repo archive alone is acceptable; if `create_trigger` is unavailable, leave a REMINDERS.md note for manual re-arming
+- `profiler-data/archive/` deploys publicly with the site — acceptable, profiles contain only public-sourced data
+
+**Active context:**
+- Branch `claude/corporate-overview-app-1i1fzb` (deleted from remote after each auto-merge; recreated per push)
+- Repo v01.90r · 9 tracked pages, all 🟢; Profiler at v01.03w
+- Armed triggers (all fire fresh sessions): Sinexcel 08-12 13:00Z (`trig_01KcsGWtyHTq5j4ySXZddg5b`) · Sungrow 08-30 13:00Z (`trig_01TJcC525KKrtVmm1bAdyoW3`) · BYD 08-30 15:00Z (`trig_015mXU6ModiBdHnuhuWmxA9K`) · Tesla 10-22 13:00Z (`trig_01Y3Pt7xQ8oHDppbwDUero5V`) · Wärtsilä 10-28 13:00Z (`trig_014VoHBq1JXCxtzBwieHL2oN`) · CATL 11-01 13:00Z (`trig_01JWQ7grg4QpT7tBmu7FR43J`) · Fluence 11-25 14:00Z (`trig_01LhRd2YGZNUi4AhBLrfYvFP`) · Hithium & FlexGen quarterly cron, next fire 2026-10-01 (`trig_01UVzjF6Y91Gb2MzKdDAznd9`)
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- No TODO items, no active reminders
+
+**Recommendation for next session:**
+- The first scheduled refresh (Sinexcel) fires 2026-08-12 in an autonomous fresh session — after it runs, review it end-to-end: the refreshed dossier's quality, the archival flow (`sinexcel.profile.v1.json` in `profiler-data/archive/` + `archive-index.json` entry + `bess-aidc-library` mirror), and that it re-armed the next Sinexcel trigger
+- **To continue:** type `verify the Sinexcel refresh`
+
+## Previous Sessions
+
 **Date:** 2026-08-06 09:17:38 PM EST
 **Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
 **Repo version:** v01.82r
@@ -28,34 +59,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - 8 tracked pages; Scraper at v01.32w · v01.29g, Receipts at v01.30w · v01.18g as of v01.82r
 - No TODO items, no active reminders
 - Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-
-## Previous Sessions
-
-**Date:** 2026-08-03 07:16:40 PM EST
-**Repo version:** v01.56r
-
-**What we worked on:**
-- **WIP recovery merge**: attached `lightaisolutions/bess-aidc-library` read-only, fetched its `sales-wip-backup` branch, and verified it was exactly Sales main (`147f5f0`) + the 2 backed-up Scraper WIP commits — `748bcab` (v01.55r, Claude/Anthropic AI provider with Gemini fallback) and `4e80170` (v01.56r, GDELT historical backfill engine, 2-year window)
-- Fast-forwarded the session branch to `4e80170` and pushed **as-is** (no new commits — version bumps and changelogs were already inside the WIP commits); auto-merge workflow run #63 merged to `main` (main tip `930495a`)
-- Prerequisite: ran `git fetch --unshallow` first — the session clone was shallow and the ancestry checks would have falsely failed
-- **Cleanup**: `sales-wip-backup` deleted from the library repo (manually by the developer in the GitHub UI — see decisions) and verified gone via `ls-remote`; library repo is back to `main` only
-
-**Where we left off:**
-- Fully complete and verified: both WIP commits live on Sales `main`, Scraper v01.10w · v01.11g deployed, repo v01.56r, library repo cleaned up. Working tree clean; this Remember Session commit is the only post-merge change
-
-**Key decisions made:**
-- **Session limitation discovered**: a repo attached read-only via `add_repo` does NOT get its credential upgraded by a later `access: push` re-attach in the same session — `git push` to it 403s at the git proxy (retried ~5× over 3 min). Workaround: developer deleted the branch in the GitHub UI. For future cross-repo pushes, attach with push access from the start
-- Skipped the stale-context auto-reconstruction commit (file was at v01.48r vs repo v01.54r) to honor the "push as-is with no new commits" instruction — this Remember Session write supersedes it
-- Pushing foreign-authored commits (created in a prior session, backed up to the library repo) was explicitly sanctioned by the developer; Pre-Push commit-audit flagged and waived on that basis
-
-**Active context:**
-- Branch: `claude/sales-wip-backup-merge-q80zrv` (auto-deleted from remote after merge; recreate by pushing)
-- Repo v01.56r · 8 tracked pages, all 🟢 — Scraper v01.10w·v01.11g freshly deployed; all other pages unchanged this session
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No reminders, no TODO items. The 2026-08-02 session's Chinese-translation review recommendation was never run and remains open (see Previous Sessions)
-
-**Recommendation for next session:**
-- The two recovered Scraper features (Claude AI provider with Gemini fallback, GDELT 2-year historical backfill) merged straight from a WIP backup and have never been exercised live — run the Scraper page end-to-end and trigger a backfill to confirm both work in production
-- **To continue:** type `test the recovered Scraper features`
 
 Developed by: ShadowAISolutions
