@@ -6,6 +6,31 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-06 09:17:38 PM EST
+**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
+**Repo version:** v01.82r
+
+**What was done:**
+- Scraper feedback loop: 👍/👎 article verdicts feeding scoring exemplars, deploy-flap-safe verdict saves, rating status log panel (v01.58r–v01.61r)
+- Scraper preference learning: AI distillation into learned notes + suggested keywords, calibration rating mode, re-score collection, learned-keyword fetch widening, optimistic batched suggestion adds with undo (v01.60r–v01.66r)
+- Scraper scoring quality: five-band rubric anchors, title-only fairness, feedback rebalance (v01.67r)
+- Scraper corpus tools: chunked Enrich abstract harvest + poison-URL stall fix, score-distribution stats panel, archive-junk flow (v01.68r–v01.71r)
+- Scraper fetch breadth: query planner, AI pre-filter at fetch time, Claude web-search deep backfill, real-time add-keyword-to-plan (lock-guarded, manual adds preserved on Rebuild) (v01.72r–v01.73r, v01.76r–v01.77r)
+- Scraper scheduler: hourly phase-stepped compile→analyze→brief→email pipeline; scriptapp-scope root cause, poison-loop abandon + failure email, heartbeat-based health with amber unverified banner (v01.63r, v01.76r–v01.78r)
+- Scraper robustness/perf: API-first doGet + cached tab ensures, sticky GET transport, 90s fetch watchdog, next-step guidance on every action, notification history panel with unread badge, offline-tolerant batched verdict queue fixing the http_404 storm (v01.74r–v01.75r, v01.79r–v01.80r)
+- Receipts: Pivot Builder export wizard (rows × columns × values + sheet include-toggles) with server-side Pivot sheet; latent ownerEmail export crash fixed (v01.81r)
+- Receipts: export Preview step, commercial-invoice extraction calibration, Business category + six subcategories (v01.82r)
+
+**Where we left off:**
+- All changes committed and merged to main
+
+**Active context:**
+- 8 tracked pages; Scraper at v01.32w · v01.29g, Receipts at v01.30w · v01.18g as of v01.82r
+- No TODO items, no active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+
+## Previous Sessions
+
 **Date:** 2026-08-03 07:16:40 PM EST
 **Repo version:** v01.56r
 
@@ -32,37 +57,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - The two recovered Scraper features (Claude AI provider with Gemini fallback, GDELT 2-year historical backfill) merged straight from a WIP backup and have never been exercised live — run the Scraper page end-to-end and trigger a backfill to confirm both work in production
 - **To continue:** type `test the recovered Scraper features`
-
-## Previous Sessions
-
-**Date:** 2026-08-02 08:36:01 PM EST
-**Repo version:** v01.48r
-
-**What we worked on:**
-- 12 feature pushes on the **Receipts app** (v01.37r → v01.48r, all merged + deployed; Receipts.html v01.28w · Receipts.gs v01.16g)
-- **Admin menu**: fixed the GAS admin dropdown (hidden behind the email row, then a first-tap no-op from the `=== 'none'` toggle) and restyled it as a solid blue ADMIN badge next to the status pills
-- **UI comfort**: collapsible Filters drawers in Reports and History (collapsed by default, "n active" hint), sort/Export/circle-graphs controls pinned outside the drawers, Clear buttons in both filter sets, removed the redundant saved checkmark in History, Settings ⚙️ cog panel (signed-in email + Sign out / Sign out everywhere), themed hand-drawn receipt SVG on the sign-in wall (`images/receipts-logo.svg`), affirmation cycle slowed to 14s
-- **Line Items drill-down**: Reports → category (+ optional subcategory) → searchable line-item list joined to receipts; "Group by item" collapses identical items with purchase count, price range, and total spend across purchases, with expandable per-purchase history
-- **Household combined view**: "Combined (mine + shared)" owner option in History/Reports backed by `resolveOwnerSet_` over the Shares tab; owner name chips on rows, seamless cross-owner open/edit, mutual delete rides the edit grant, Owner column added to exports
-- **Drive photo sharing**: granting view/edit auto-shares the owner's Drive "Receipts App" folder (reader permission) from the owner's browser; revoking unshares; a reconciliation pass on load covers pre-existing grants (localStorage `Receipts_folder_perms_synced`)
-- **Simplified Chinese**: Settings-cog language toggle (localStorage `Receipts_lang`); full chrome translation including all categories/subcategories (History + Reports filters, report breakdowns, review-screen dropdowns), month card, 周X daily / 2026年X月 monthly / 上半年·下半年 biannual period labels, statuses, and affirmations — stored receipt data stays English
-**Where we left off:**
-- All 12 pushes merged via the auto-merge workflow; working tree clean. User confirmed the combined view and cross-user photo access work on real devices. Receipts.html v01.28w · Receipts.gs v01.16g
-
-**Key decisions made:**
-- Translation is **display-only** — stored category values and AI extraction always write English (data is shared across users/languages); `tCat()` relabels dropdowns by option *value* so nothing is lost switching languages
-- Delete permission rides the edit grant (no separate delete scope); the month card stays personal in combined mode; a partner-deleted receipt leaves its photo in the owner's Drive (only the owner's browser can trash it)
-- Drive folder sharing must run in the **owner's browser** (drive.file token) — the server cannot touch user Drives; missed grants self-heal via the on-load reconciliation
-- `t()`/`tCat()` dictionary lookups are guarded with `typeof` checks because category builders run at script-eval before the dict assignments — an unguarded lookup killed the entire inline script (sign-in outage risk, caught by the zh-at-load Playwright test)
-
-**Active context:**
-- Branch: `claude/receipts-app-features-t0nbdq` (auto-deleted from remote after each merge; recreate by pushing)
-- Repo v01.48r · 9 tracked pages, all 🟢 — Receipts v01.28w·v01.16g; all other pages unchanged this session
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No reminders, no TODO items
-
-**Recommendation for next session:**
-- Run a full end-to-end 中文 pass on the phone — switch language in the ⚙️ cog, then walk scan → review → save → History → Reports → Line Items → sharing — and report any untranslated or awkward strings; the translation layer touched nearly every screen and a native-eye review is the one remaining verification
-- **To continue:** type `review the Chinese translations`
 
 Developed by: ShadowAISolutions
