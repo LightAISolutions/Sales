@@ -1,26 +1,26 @@
-# Overview App — Company Profile Schema
+# Profiler App — Company Profile Schema
 
-The **Overview** app (`live-site-pages/Overview.html`) renders standardized corporate dossiers for companies in the ecosystem (suppliers, developers, integrators, investors, hyperscalers, advisors). All data lives in `live-site-pages/overview-data/` and is fetched by the page at runtime via relative URLs (works with a private repo — GitHub Pages serves it publicly):
+The **Profiler** app (`live-site-pages/Profiler.html`) renders standardized corporate dossiers for companies in the ecosystem (suppliers, developers, integrators, investors, hyperscalers, advisors). All data lives in `live-site-pages/profiler-data/` and is fetched by the page at runtime via relative URLs (works with a private repo — GitHub Pages serves it publicly):
 
-- `overview-companies.json` — the **registry**: the roster the app lists and filters
-- `<slug>.overview.json` — one **profile** per company: the full dossier
+- `profiler-companies.json` — the **registry**: the roster the app lists and filters
+- `<slug>.profile.json` — one **profile** per company: the full dossier
 
-This file is the **single source of truth for the data schema**. Profiles are generated and revised by the **Overview Command** (see `.claude/rules/overview-app.md`), and every profile must conform to the structures below. The renderer only draws a section when its data is present, so optional sections can be omitted safely.
+This file is the **single source of truth for the data schema**. Profiles are generated and revised by the **Profiler Command** (see `.claude/rules/profiler-app.md`), and every profile must conform to the structures below. The renderer only draws a section when its data is present, so optional sections can be omitted safely.
 
 ## Slug rules
 
 - Lowercase, ASCII letters/digits/hyphens only (e.g. `sinexcel`, `sungrow`, `burns-mcdonnell`)
-- The slug is the company's **permanent identity**: it names the profile file (`<slug>.overview.json`), forms the page URL (`Overview.html#<slug>`), and keys the registry entry. Never change a slug once published — revise the profile in place instead
+- The slug is the company's **permanent identity**: it names the profile file (`<slug>.profile.json`), forms the page URL (`Profiler.html#<slug>`), and keys the registry entry. Never change a slug once published — revise the profile in place instead
 - One slug per corporate entity. Subsidiaries only get their own slug when they are genuinely distinct actors in the ecosystem
 
-## Registry schema — `overview-companies.json`
+## Registry schema — `profiler-companies.json`
 
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
 | `schemaVersion` | number | yes | Registry schema version (currently `1`) |
 | `categories` | string[] | yes | Canonical category order for the filter chips: `supplier`, `developer`, `integrator`, `investor`, `hyperscaler`, `advisor`, `other` |
 | `companies[]` | object[] | yes | One entry per covered company |
-| `companies[].slug` | string | yes | Per Slug rules; must have a matching `<slug>.overview.json` |
+| `companies[].slug` | string | yes | Per Slug rules; must have a matching `<slug>.profile.json` |
 | `companies[].name` | string | yes | Display name (short form, e.g. "Sinexcel") |
 | `companies[].categories` | string[] | yes | One or more canonical categories |
 | `companies[].tagline` | string | yes | One-line description shown on the roster card |
@@ -29,7 +29,7 @@ This file is the **single source of truth for the data schema**. Profiles are ge
 | `companies[].status` | string | yes | `active` (normal) or `archived` (kept but de-emphasized) |
 | `companies[].lastUpdated` | string | yes | `YYYY-MM-DD` of the profile's last revision — keep in sync with the profile's `lastUpdated` |
 
-## Profile schema — `<slug>.overview.json`
+## Profile schema — `<slug>.profile.json`
 
 Top-level fields:
 
@@ -82,7 +82,7 @@ Top-level fields:
 When a new section is needed ("potentially more later"):
 1. Add the field(s) here first — this file is the schema's single source of truth
 2. Bump `schemaVersion` in new/revised profiles; older profiles stay valid (the renderer skips absent sections)
-3. Extend the renderer in `Overview.html` (PROJECT block) to draw the new section when present — page version bump per [PC-HTML-VERSION] #2
+3. Extend the renderer in `Profiler.html` (PROJECT block) to draw the new section when present — page version bump per [PC-HTML-VERSION] #2
 4. Backfill existing profiles opportunistically on their next revision — no mass migration required
 
 Developed by: ShadowAISolutions

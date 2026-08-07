@@ -6,9 +6,9 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.02w">
+  <meta name="build-version" content="v01.03w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>Overview — Ecosystem Company Dossiers</title>
+  <title>Profiler — Ecosystem Company Dossiers</title>
   <style>
 /* ══════════════ */
 /* TEMPLATE START */
@@ -379,7 +379,7 @@
   <div id="ov-app">
     <header id="ov-header">
       <div class="ov-kicker">Corporate Intelligence &middot; Ecosystem Dossiers</div>
-      <h1 class="ov-title">Overview</h1>
+      <h1 class="ov-title">Profiler</h1>
       <p class="ov-sub">Standardized dossiers on the companies in our ecosystem &mdash; what they do, who decides, how they perform against expectations, and how their technology measures up.</p>
     </header>
     <main id="ov-main" aria-live="polite">
@@ -1006,10 +1006,10 @@
 // PROJECT START
 // ══════════════
 
-    // ── Overview app — client-side dossier viewer ──
-    // Data: overview-data/overview-companies.json (registry) + overview-data/<slug>.overview.json (profiles)
-    // Schema reference: repository-information/OVERVIEW-SCHEMA.md
-    var OV_BASE = 'overview-data/';
+    // ── Profiler app — client-side dossier viewer ──
+    // Data: profiler-data/profiler-companies.json (registry) + profiler-data/<slug>.profile.json (profiles)
+    // Schema reference: repository-information/PROFILER-SCHEMA.md
+    var OV_BASE = 'profiler-data/';
     var ovRegistry = null;
     var ovProfiles = {};
     var ovCat = 'all';
@@ -1052,7 +1052,7 @@
 
     // ── Roster ──
     function ovRenderRoster() {
-      document.title = 'Overview — Ecosystem Company Dossiers';
+      document.title = 'Profiler — Ecosystem Company Dossiers';
       var main = ovMain(); ovClear(main);
       var companies = (ovRegistry.companies || []).slice().sort(function(a, b) { return a.name.localeCompare(b.name); });
 
@@ -1117,7 +1117,7 @@
       main.appendChild(back);
       if (ovProfiles[slug]) { ovPaintCompany(main, ovProfiles[slug]); return; }
       main.appendChild(ovEl('p', 'ov-loading', 'Loading dossier…'));
-      ovFetchJson(slug + '.overview.json')
+      ovFetchJson(slug + '.profile.json')
         .then(function(p) {
           ovProfiles[slug] = p;
           if (decodeURIComponent((window.location.hash || '').replace(/^#/, '')) === slug) ovRenderCompany(slug);
@@ -1161,7 +1161,7 @@
     }
 
     function ovPaintCompany(main, p) {
-      document.title = (p.shortName || p.name) + ' — Overview';
+      document.title = (p.shortName || p.name) + ' — Profiler';
       var head = ovEl('div', 'ov-co-head');
       head.appendChild(ovEl('h2', null, p.shortName || p.name));
       if (p.name && p.name !== p.shortName) head.appendChild(ovEl('p', 'legal', p.name));
@@ -1477,7 +1477,7 @@
         doc.appendChild(ol);
       }
 
-      doc.appendChild(ovEl('p', 'd-foot', 'Generated from the Overview app · ' + new Date().toLocaleString()
+      doc.appendChild(ovEl('p', 'd-foot', 'Generated from the Profiler app · ' + new Date().toLocaleString()
         + (p.profileVersion ? ' · profile version ' + p.profileVersion : '')
         + (p.lastUpdated ? ' · data as of ' + p.lastUpdated : '')));
       return doc;
@@ -1531,23 +1531,23 @@
         + 'ol{font-size:9pt;color:#444035;} a{color:#305a8a;text-decoration:none;}';
       var safeTitle = String(p.shortName || p.slug || 'Company').replace(/[<>&"]/g, '');
       var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
-        + '<head><meta charset="utf-8"><title>' + safeTitle + ' — Overview</title><style>' + wordCss + '</style></head>'
+        + '<head><meta charset="utf-8"><title>' + safeTitle + ' — Profiler</title><style>' + wordCss + '</style></head>'
         + '<body>' + docEl.innerHTML + '</body></html>';
       // The Blob's first string begins with an invisible UTF-8 BOM (U+FEFF) — Word needs it to detect encoding
       var blob = new Blob(['﻿' + html], { type: 'application/msword' });
       var a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      a.download = (p.slug || 'company') + '-overview-' + (p.lastUpdated || 'export') + '.doc';
+      a.download = (p.slug || 'company') + '-profile-' + (p.lastUpdated || 'export') + '.doc';
       document.body.appendChild(a); a.click(); document.body.removeChild(a);
       setTimeout(function() { URL.revokeObjectURL(a.href); }, 4000);
     }
 
     // ── Init ──
-    ovFetchJson('overview-companies.json')
+    ovFetchJson('profiler-companies.json')
       .then(function(reg) { ovRegistry = reg; ovRoute(); })
       .catch(function() {
         var main = ovMain(); ovClear(main);
-        main.appendChild(ovEl('p', 'ov-empty', 'Could not load the company registry (overview-data/overview-companies.json).'));
+        main.appendChild(ovEl('p', 'ov-empty', 'Could not load the company registry (profiler-data/profiler-companies.json).'));
       });
     window.addEventListener('hashchange', ovRoute);
 

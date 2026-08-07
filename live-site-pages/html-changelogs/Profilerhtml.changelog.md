@@ -1,13 +1,18 @@
-# Changelog — Overview
+# Changelog — Profiler
 
 All notable user-facing changes to this page are documented here.
-Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Overviewhtml.changelog-archive.md](Overviewhtml.changelog-archive.md) when this file exceeds 50 version sections.
+Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 2/50`
+`Sections: 3/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.03w] — 2026-08-07 12:34:58 AM EST — v01.89r
+
+### Changed
+- The app has a new name: **Profiler** — the page title, header, and document exports now use the new name
 
 ## [v01.02w] — 2026-08-07 12:02:06 AM EST — v01.88r
 

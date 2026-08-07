@@ -330,11 +330,11 @@ If the user says **"reconcile"** (or similar: "reconcile multi-session", "end mu
 > **--- END OF VISUAL TEST COMMAND ---**
 ---
 
-## Overview Command
-*If the user says **"overview \<Company Name\>"** (or similar: "add \<Company\> to Overview", "create an overview for \<Company\>", "generate a dossier for \<Company\>", "update the \<Company\> overview"): see `.claude/rules/overview-app.md` — auto-injects when working on the Overview app or its data (`live-site-pages/Overview.html`, `live-site-pages/overview-data/**`), and the full command body (research → profile JSON → registry → commit) is always available for on-demand invocation. Data schema single source of truth: `repository-information/OVERVIEW-SCHEMA.md`.*
+## Profiler Command
+*If the user says **"profiler \<Company Name\>"** (or similar: "add \<Company\> to Profiler", "create a profile for \<Company\>", "generate a dossier for \<Company\>", "update the \<Company\> profile"): see `.claude/rules/profiler-app.md` — auto-injects when working on the Profiler app or its data (`live-site-pages/Profiler.html`, `live-site-pages/profiler-data/**`), and the full command body (research → profile JSON → registry → archival → commit) is always available for on-demand invocation. Data schema single source of truth: `repository-information/PROFILER-SCHEMA.md`.*
 
 ---
-> **--- END OF OVERVIEW COMMAND ---**
+> **--- END OF PROFILER COMMAND ---**
 ---
 
 ## Behavioral Rules
@@ -363,7 +363,7 @@ Path-scoped rules files — loaded automatically when working on matching files.
 | `.claude/rules/workflows.md` | Merge conflict prevention, commit SHA tracking | — |
 | `.claude/rules/init-scripts.md` | Phantom edits, line ending safety | — |
 | `.claude/rules/dead-code-detection.md` | Dead-code analysis methodology — 6-step trace, indicators-present checklist, resource-abuse exemptions (path-scoped to HTML/GAS/workflows + user-triggered by "check for dead code" phrasing) | — |
-| `.claude/rules/overview-app.md` | Overview Command (company dossier research + profile generation), data-vs-page versioning, recall design (path-scoped to Overview app files + user-triggered by "overview \<Company\>" phrasing) | — |
+| `.claude/rules/profiler-app.md` | Profiler Command (company dossier research + profile generation), archival procedure, scheduled refreshes, data-vs-page versioning, recall design (path-scoped to Profiler app files + user-triggered by "profiler \<Company\>" phrasing) | — |
 
 ---
 > **--- END OF REFERENCE FILES ---**

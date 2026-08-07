@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-07 12:02:06 AM EST` · Repo version: `v01.88r`
+Last updated: `2026-08-07 12:34:58 AM EST` · Repo version: `v01.89r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -49,7 +49,7 @@ Last updated: `2026-08-07 12:02:06 AM EST` · Repo version: `v01.88r`
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/globalacl.html">globalacl.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/globalacl.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Globalacl/globalacl.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/globalaclhtml.changelog.md">v01.02w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/globalaclgs.changelog.md">v01.01g</a> | [template] Global ACL page
 │   │
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Overview.html">Overview.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Overview.html">🌐</a>🟢 · 🔸 · ◽ · 🔻 · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Overviewhtml.changelog.md">v01.02w</a> · vNoGASg | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · 🔻 · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.03w</a> · vNoGASg | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs
 │   │
 │   <b>│ ─ Standalone Utilities ─────────────────────────────────────────────────────</b>
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/text-compare.html">text-compare.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/text-compare.html">🌐</a>  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/text-comparehtml.changelog.md">v01.00w</a> · vNoGASg | [template] Text comparison tool with side-by-side diff highlighting
@@ -71,17 +71,19 @@ Last updated: `2026-08-07 12:02:06 AM EST` · Repo version: `v01.88r`
 │   <b>│ ─ Supporting Files ──────────────────────────────────────────────────────</b>
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/.nojekyll">.nojekyll</a>               — [template] Disables Jekyll processing on GitHub Pages
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/receipts.webmanifest">receipts.webmanifest</a>    — PWA manifest for the Receipts page (home-screen install)
-│   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/overview-data">overview-data/</a>           — Company dossier JSON data for the Overview app (schema: repository-information/OVERVIEW-SCHEMA.md)
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/overview-companies.json">overview-companies.json</a> — Company registry (roster, categories, freshness)
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/byd.overview.json">byd.overview.json</a>       — BYD dossier profile
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/catl.overview.json">catl.overview.json</a>      — CATL dossier profile
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/flexgen.overview.json">flexgen.overview.json</a>   — FlexGen dossier profile
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/fluence.overview.json">fluence.overview.json</a>   — Fluence dossier profile
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/hithium.overview.json">hithium.overview.json</a>   — Hithium dossier profile
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/sinexcel.overview.json">sinexcel.overview.json</a>  — Sinexcel dossier profile
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/sungrow.overview.json">sungrow.overview.json</a>   — Sungrow dossier profile
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/tesla.overview.json">tesla.overview.json</a>     — Tesla dossier profile
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/overview-data/wartsila.overview.json">wartsila.overview.json</a>  — Wärtsilä dossier profile
+│   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data">profiler-data/</a>           — Company dossier JSON data for the Profiler app (schema: repository-information/PROFILER-SCHEMA.md)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-companies.json">profiler-companies.json</a> — Company registry (roster, categories, freshness)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/byd.profile.json">byd.profile.json</a>       — BYD dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/catl.profile.json">catl.profile.json</a>      — CATL dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flexgen.profile.json">flexgen.profile.json</a>   — FlexGen dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/fluence.profile.json">fluence.profile.json</a>   — Fluence dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hithium.profile.json">hithium.profile.json</a>   — Hithium dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.profile.json">sinexcel.profile.json</a>  — Sinexcel dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sungrow.profile.json">sungrow.profile.json</a>   — Sungrow dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.profile.json">tesla.profile.json</a>     — Tesla dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.profile.json">wartsila.profile.json</a>  — Wärtsilä dossier profile
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data/archive">archive/</a>                — Superseded dossier versions, archived on each profile revision
+│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/archive-index.json">archive-index.json</a>  — Index of archived profile versions per company
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/templates">templates/</a>               — [template] Template source files for creating new pages and GAS scripts
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-noauth.html.txt">HtmlAndGasTemplateAutoUpdate-noauth.html.txt</a> — [template] HTML page template without auth
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-auth.html.txt">HtmlAndGasTemplateAutoUpdate-auth.html.txt</a> — [template · modified] HTML page template with Google Authentication
@@ -92,7 +94,7 @@ Last updated: `2026-08-07 12:02:06 AM EST` · Repo version: `v01.88r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/testauthgas1html.version.txt">testauthgas1html.version.txt</a>          — [template]
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/testauthhtml1html.version.txt">testauthhtml1html.version.txt</a>          — [template]
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/globalaclhtml.version.txt">globalaclhtml.version.txt</a>          — [template]
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/Overviewhtml.version.txt">Overviewhtml.version.txt</a>           — Overview page version
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/Profilerhtml.version.txt">Profilerhtml.version.txt</a>           — Profiler page version
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/gs-versions">gs-versions/</a>             — [template] GAS version files for GAS version pill polling
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/testauthgas1gs.version.txt">testauthgas1gs.version.txt</a>            — [template]
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/testauthhtml1gs.version.txt">testauthhtml1gs.version.txt</a>            — [template]
@@ -121,8 +123,8 @@ Last updated: `2026-08-07 12:02:06 AM EST` · Repo version: `v01.88r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Scraperhtml.changelog-archive.md">Scraperhtml.changelog-archive.md</a>     — [template] Older sections (rotated)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog.md">Receiptshtml.changelog.md</a>             — [template] Receipts page changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog-archive.md">Receiptshtml.changelog-archive.md</a>     — [template] Older sections (rotated)
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Overviewhtml.changelog.md">Overviewhtml.changelog.md</a>             — Overview page changelog
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Overviewhtml.changelog-archive.md">Overviewhtml.changelog-archive.md</a>     — Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">Profilerhtml.changelog.md</a>             — Profiler page changelog
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog-archive.md">Profilerhtml.changelog-archive.md</a>     — Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/gs-changelogs">gs-changelogs/</a>           — [template] GAS changelogs (source of truth + deployed)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/testauthgas1gs.changelog.md">testauthgas1gs.changelog.md</a>               — [template] Testauthgas1 GAS changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/testauthgas1gs.changelog-archive.md">testauthgas1gs.changelog-archive.md</a>       — [template] Older sections (rotated)
@@ -137,7 +139,7 @@ Last updated: `2026-08-07 12:02:06 AM EST` · Repo version: `v01.88r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog.md">Receiptsgs.changelog.md</a>               — [template] Receipts GAS changelog
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog-archive.md">Receiptsgs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Company-published executive headshots for Overview dossiers (Fluence ×5, Wärtsilä ×4)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Company-published executive headshots for Profiler dossiers (Fluence ×5, Wärtsilä ×4)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Code_Ready_Voice_1.mp3">Code_Ready_Voice_1.mp3</a>      — [template] "Code Ready" splash sound
@@ -242,7 +244,7 @@ Last updated: `2026-08-07 12:02:06 AM EST` · Repo version: `v01.88r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/HIPAA-CODING-REQUIREMENTS.md">HIPAA-CODING-REQUIREMENTS.md</a> — Complete HIPAA regulatory reference for coding (Security Rule, Privacy Rule, Breach Notification, 2025 NPRM, implementation checklist)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/IMPROVEMENTS.md">IMPROVEMENTS.md</a>         — [template · initialized] Potential improvements
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/KNOWN-CONSTRAINTS-AND-FIXES.md">KNOWN-CONSTRAINTS-AND-FIXES.md</a>    — Architectural constraints &amp; resolved bug fixes (GAS double-iframe, postMessage, HMAC, deploy webhook)
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/OVERVIEW-SCHEMA.md">OVERVIEW-SCHEMA.md</a>      — Overview app company-profile data schema (single source of truth)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/RULE-COST-AUDIT.md">RULE-COST-AUDIT.md</a>       — Rule cost audit — ranked table, trim-recommendation checklist (T1–T9), progress tracking
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/TODO.md">TODO.md</a>                 — [template · initialized] Actionable to-do items
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/FUTURE-CONSIDERATIONS.md">FUTURE-CONSIDERATIONS.md</a> — [template] Deferred architectural ideas for scale
@@ -312,7 +314,7 @@ Last updated: `2026-08-07 12:02:06 AM EST` · Repo version: `v01.88r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/init-scripts.md">init-scripts.md</a>           — [template] Path-scoped — init script rules
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/mermaid-diagrams.md">mermaid-diagrams.md</a>        — [template · initialized] Path-scoped — deep mermaid reference (rendering + pako URL encoding)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/output-formatting.md">output-formatting.md</a>      — [template · modified] Always loaded — CLI styling quick rule, attribution, reminders format
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/overview-app.md">overview-app.md</a>            — Path-scoped — Overview Command (company dossier research + generation; triggers on Overview app files; user-invoked via "overview &lt;Company&gt;")
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/profiler-app.md">profiler-app.md</a>            — Path-scoped — Profiler Command (company dossier research + generation; triggers on Profiler app files; user-invoked via "profiler &lt;Company&gt;")
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/pre-commit-gates.md">pre-commit-gates.md</a>        — [template · initialized] Path-scoped — full TEMPLATE REPO / MULTI-SESSION gate logic
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/repo-docs.md">repo-docs.md</a>              — [template · initialized · modified] Path-scoped — documentation rules
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/rule-management.md">rule-management.md</a>         — Path-scoped — Rule Placement Autonomy + Rule Precedence + Section Placement Guide (triggers on CLAUDE.md + `.claude/rules/**`)
