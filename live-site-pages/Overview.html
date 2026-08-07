@@ -6,7 +6,7 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.00w">
+  <meta name="build-version" content="v01.01w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Overview — Ecosystem Company Dossiers</title>
   <style>
@@ -267,6 +267,72 @@
       #ov-app { padding-top: 28px; }
       .ov-exec { flex-direction: column; }
       table.ov-table { font-size: 12.5px; }
+    }
+    /* Export button + preview overlay */
+    .ov-btn {
+      background: var(--ov-paper); color: var(--ov-ink); border: 1px solid var(--ov-paper);
+      border-radius: 8px; padding: 9px 14px; font: 12px/1 var(--ov-mono); cursor: pointer;
+    }
+    .ov-btn:hover { background: #fff; }
+    .ov-btn.ghost { background: none; color: var(--ov-muted); border-color: var(--ov-line2); }
+    .ov-btn.ghost:hover { color: var(--ov-paper); border-color: var(--ov-paper); }
+    #ov-export-btn { margin-top: 14px; background: var(--ov-gold); border-color: var(--ov-gold); }
+    #ov-export-btn:hover { background: #e6c46e; }
+    #ov-prev-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(8,9,12,0.8); z-index: 10002; display: none;
+      overflow-y: auto; padding: 26px 14px; box-sizing: border-box;
+    }
+    #ov-prev-panel { width: min(880px, 96vw); margin: 0 auto; }
+    #ov-prev-toolbar {
+      position: sticky; top: 0; z-index: 2; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+      background: #101218; border: 1px solid var(--ov-line2); border-radius: 10px;
+      padding: 10px 12px; margin-bottom: 14px;
+    }
+    #ov-prev-toolbar .ttl {
+      font: 11px/1.4 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--ov-gold); margin-right: auto;
+    }
+    /* Paper document (preview + print source) */
+    #ov-prev-doc {
+      background: #f7f4ec; color: #23211c; border-radius: 4px;
+      padding: 48px 52px; font: 14px/1.6 var(--ov-serif);
+      box-shadow: 0 14px 50px rgba(0,0,0,0.5);
+    }
+    #ov-prev-doc h1 { font: 400 30px/1.15 var(--ov-serif); margin: 0 0 4px; }
+    #ov-prev-doc .d-legal { font-style: italic; color: #6d6758; margin: 0 0 6px; font-size: 13px; }
+    #ov-prev-doc .d-meta { font: 11px/1.7 var(--ov-mono); color: #6d6758; border-bottom: 2px solid #23211c; padding-bottom: 12px; margin: 0 0 6px; }
+    #ov-prev-doc h2 {
+      font: 11px/1 var(--ov-mono); letter-spacing: 0.22em; text-transform: uppercase;
+      color: #8a6d1f; border-bottom: 1px solid #cfc8b4; padding-bottom: 5px; margin: 26px 0 10px;
+    }
+    #ov-prev-doc h3 { font: 400 17px/1.3 var(--ov-serif); margin: 14px 0 3px; }
+    #ov-prev-doc p { margin: 7px 0; }
+    #ov-prev-doc ul { margin: 5px 0 9px; padding-left: 20px; }
+    #ov-prev-doc li { margin: 2px 0; }
+    #ov-prev-doc table { border-collapse: collapse; width: 100%; margin: 8px 0 14px; font-size: 12.5px; }
+    #ov-prev-doc th {
+      text-align: left; font: 10px/1.4 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase;
+      color: #6d6758; border-bottom: 1.5px solid #23211c; padding: 5px 10px 5px 0;
+    }
+    #ov-prev-doc td { border-bottom: 1px solid #d8d2c0; padding: 5px 10px 5px 0; vertical-align: top; }
+    #ov-prev-doc td.k { font: 11px/1.5 var(--ov-mono); color: #6d6758; white-space: nowrap; }
+    #ov-prev-doc .d-cat { font: 10px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: #8a6d1f; margin: 12px 0 2px; }
+    #ov-prev-doc .d-role { font: 10.5px/1.5 var(--ov-mono); color: #8a6d1f; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 3px; }
+    #ov-prev-doc .d-note { color: #6d6758; font-size: 12px; font-style: italic; }
+    #ov-prev-doc ol { padding-left: 20px; font-size: 11.5px; color: #444035; }
+    #ov-prev-doc a { color: #305a8a; text-decoration: none; word-break: break-all; }
+    #ov-prev-doc .d-foot { margin-top: 26px; border-top: 1px solid #cfc8b4; padding-top: 9px; font: 10px/1.6 var(--ov-mono); color: #6d6758; }
+    @media (max-width: 560px) { #ov-prev-doc { padding: 26px 20px; } }
+    /* Print pipeline — the PDF export path: only the preview document prints */
+    @media print {
+      body > *:not(#ov-prev-overlay) { display: none !important; }
+      #ov-prev-overlay { position: static !important; display: block !important; background: none !important; padding: 0 !important; overflow: visible !important; height: auto !important; }
+      #ov-prev-toolbar { display: none !important; }
+      #ov-prev-panel { width: auto !important; }
+      #ov-prev-doc { box-shadow: none !important; border-radius: 0 !important; padding: 0 !important; background: #fff !important; }
+      #ov-prev-doc h2 { page-break-after: avoid; }
+      #ov-prev-doc table { page-break-inside: avoid; }
     }
 /* ══════════════ */
 /* PROJECT END */
@@ -1088,6 +1154,11 @@
       meta.appendChild(document.createTextNode(bits.join('  ·  ') + (p.website ? '  ·  ' : '')));
       if (p.website) meta.appendChild(ovLink(p.website, null, p.website.replace(/^https?:\/\//, '').replace(/\/$/, '')));
       head.appendChild(meta);
+      var exportBtn = ovEl('button', 'ov-btn', 'Export dossier ⬇');
+      exportBtn.id = 'ov-export-btn'; exportBtn.type = 'button';
+      exportBtn.title = 'Preview the document, then export as Word or PDF';
+      exportBtn.addEventListener('click', function() { ovShowPreview(p); });
+      head.appendChild(exportBtn);
       main.appendChild(head);
 
       // Snapshot
@@ -1213,6 +1284,179 @@
         src.appendChild(wrapS);
         main.appendChild(src);
       }
+    }
+
+    // ── Export: document builder + preview + Word/PDF ──
+    function ovDocFacts(pairs) {
+      var t = ovEl('table');
+      pairs.forEach(function(pair) {
+        if (!pair[1]) return;
+        var tr = ovEl('tr');
+        tr.appendChild(ovEl('td', 'k', pair[0]));
+        tr.appendChild(ovEl('td', null, pair[1]));
+        t.appendChild(tr);
+      });
+      return t;
+    }
+
+    function ovBuildDoc(p) {
+      var doc = ovEl('div'); doc.id = 'ov-prev-doc';
+      doc.appendChild(ovEl('h1', null, p.shortName || p.name));
+      if (p.name && p.name !== p.shortName) doc.appendChild(ovEl('p', 'd-legal', p.name));
+      var metaBits = [];
+      if (p.ownership && p.ownership.ticker) metaBits.push(p.ownership.ticker);
+      if (p.headquarters) metaBits.push(p.headquarters);
+      if ((p.categories || []).length) metaBits.push((p.categories || []).join(', '));
+      if (p.website) metaBits.push(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''));
+      if (p.lastUpdated) metaBits.push('profile as of ' + p.lastUpdated);
+      doc.appendChild(ovEl('p', 'd-meta', metaBits.join('  ·  ')));
+
+      doc.appendChild(ovEl('h2', null, 'Snapshot'));
+      doc.appendChild(ovDocFacts([
+        ['Founded', p.founded ? String(p.founded) : ''],
+        ['Headquarters', p.headquarters || ''],
+        ['Ownership', p.ownership ? ((p.ownership.type || '') + (p.ownership.ticker ? ' · ' + p.ownership.ticker : '')) : ''],
+        ['Employees', p.employees || '']
+      ]));
+      if (p.summary) doc.appendChild(ovEl('p', null, p.summary));
+      if (p.ecosystemRole) doc.appendChild(ovEl('p', null, p.ecosystemRole));
+
+      if (p.productsAndServices && p.productsAndServices.length) {
+        doc.appendChild(ovEl('h2', null, 'Products & Services'));
+        p.productsAndServices.forEach(function(prod) {
+          if (prod.category) doc.appendChild(ovEl('p', 'd-cat', prod.category));
+          doc.appendChild(ovEl('h3', null, prod.name));
+          if (prod.description) doc.appendChild(ovEl('p', null, prod.description));
+          if (prod.highlights && prod.highlights.length) {
+            var ul = ovEl('ul');
+            prod.highlights.forEach(function(h) { ul.appendChild(ovEl('li', null, h)); });
+            doc.appendChild(ul);
+          }
+        });
+      }
+
+      if (p.technicalSpecs && p.technicalSpecs.length) {
+        doc.appendChild(ovEl('h2', null, 'Technical Specifications'));
+        p.technicalSpecs.forEach(function(spec) {
+          doc.appendChild(ovEl('h3', null, spec.product));
+          doc.appendChild(ovDocFacts((spec.specs || []).map(function(row) { return [row.label, row.value]; })));
+          if (spec.notes) doc.appendChild(ovEl('p', 'd-note', spec.notes));
+        });
+      }
+
+      if (p.decisionMakers && p.decisionMakers.length) {
+        doc.appendChild(ovEl('h2', null, 'Decision Makers'));
+        p.decisionMakers.forEach(function(x) {
+          doc.appendChild(ovEl('h3', null, x.name));
+          if (x.title) doc.appendChild(ovEl('p', 'd-role', x.title));
+          if (x.background && x.background.length) {
+            var bul = ovEl('ul');
+            x.background.forEach(function(b) { bul.appendChild(ovEl('li', null, b)); });
+            doc.appendChild(bul);
+          }
+          if (x.linkedin) { var lp = ovEl('p', 'd-note'); lp.appendChild(ovLink(x.linkedin, null, x.linkedin)); doc.appendChild(lp); }
+        });
+      }
+
+      if (p.financials && p.financials.periods && p.financials.periods.length) {
+        doc.appendChild(ovEl('h2', null, 'Financial Performance vs Expectations'));
+        if (p.financials.currency) doc.appendChild(ovEl('p', 'd-note', 'Figures in ' + p.financials.currency + '.'));
+        p.financials.periods.forEach(function(per) {
+          doc.appendChild(ovEl('h3', null, per.period));
+          var t = ovEl('table');
+          var hd = ovEl('tr');
+          ['Metric', 'Actual', 'Expectation', 'Result'].forEach(function(h) { hd.appendChild(ovEl('th', null, h)); });
+          t.appendChild(hd);
+          (per.metrics || []).forEach(function(m) {
+            var tr = ovEl('tr');
+            tr.appendChild(ovEl('td', 'k', m.name));
+            tr.appendChild(ovEl('td', null, m.actual || '—'));
+            tr.appendChild(ovEl('td', null, m.expected || '—'));
+            tr.appendChild(ovEl('td', null, m.result || (m.verdict ? m.verdict : '—')));
+            t.appendChild(tr);
+          });
+          doc.appendChild(t);
+          if (per.commentary) doc.appendChild(ovEl('p', 'd-note', per.commentary));
+        });
+        if (p.financials.commentary) doc.appendChild(ovEl('p', 'd-note', p.financials.commentary));
+      }
+
+      if (p.sources && p.sources.length) {
+        doc.appendChild(ovEl('h2', null, 'Sources'));
+        var ol = ovEl('ol');
+        p.sources.forEach(function(s) {
+          var li = ovEl('li');
+          li.appendChild(document.createTextNode((s.label ? s.label + ' — ' : '')));
+          li.appendChild(ovLink(s.url, null, s.url));
+          if (s.accessed) li.appendChild(document.createTextNode(' (accessed ' + s.accessed + ')'));
+          ol.appendChild(li);
+        });
+        doc.appendChild(ol);
+      }
+
+      doc.appendChild(ovEl('p', 'd-foot', 'Generated from the Overview app · ' + new Date().toLocaleString()
+        + (p.profileVersion ? ' · profile version ' + p.profileVersion : '')
+        + (p.lastUpdated ? ' · data as of ' + p.lastUpdated : '')));
+      return doc;
+    }
+
+    var ovPrevOverlay = null;
+    function ovHidePreview() { if (ovPrevOverlay) ovPrevOverlay.style.display = 'none'; }
+    function ovShowPreview(p) {
+      if (!ovPrevOverlay) {
+        ovPrevOverlay = ovEl('div'); ovPrevOverlay.id = 'ov-prev-overlay';
+        document.body.appendChild(ovPrevOverlay);
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && ovPrevOverlay.style.display === 'block') ovHidePreview();
+        });
+        ovPrevOverlay.addEventListener('click', function(e) { if (e.target === ovPrevOverlay) ovHidePreview(); });
+      }
+      ovClear(ovPrevOverlay);
+      var panel = ovEl('div'); panel.id = 'ov-prev-panel';
+      var bar = ovEl('div'); bar.id = 'ov-prev-toolbar';
+      bar.appendChild(ovEl('span', 'ttl', 'Export preview — check for mistakes before exporting'));
+      var pdfBtn = ovEl('button', 'ov-btn', 'Export PDF'); pdfBtn.type = 'button';
+      pdfBtn.title = 'Opens the print dialog — choose "Save as PDF"';
+      pdfBtn.addEventListener('click', function() { window.print(); });
+      var docBtn = ovEl('button', 'ov-btn', 'Export Word'); docBtn.type = 'button';
+      docBtn.title = 'Downloads a .doc file that opens in Microsoft Word';
+      docBtn.addEventListener('click', function() { ovWordExport(p); });
+      var closeBtn = ovEl('button', 'ov-btn ghost', 'Close'); closeBtn.type = 'button';
+      closeBtn.addEventListener('click', ovHidePreview);
+      bar.appendChild(pdfBtn); bar.appendChild(docBtn); bar.appendChild(closeBtn);
+      panel.appendChild(bar);
+      panel.appendChild(ovBuildDoc(p));
+      ovPrevOverlay.appendChild(panel);
+      ovPrevOverlay.style.display = 'block';
+      ovPrevOverlay.scrollTop = 0;
+    }
+
+    function ovWordExport(p) {
+      var docEl = ovPrevOverlay ? ovPrevOverlay.querySelector('#ov-prev-doc') : null;
+      if (!docEl) return;
+      var wordCss = 'body{font-family:Georgia,"Times New Roman",serif;font-size:11pt;color:#23211c;}'
+        + 'h1{font-size:22pt;margin:0 0 2pt;}'
+        + 'h2{font-size:10pt;letter-spacing:2px;text-transform:uppercase;color:#8a6d1f;border-bottom:1pt solid #cfc8b4;margin:16pt 0 6pt;padding-bottom:3pt;}'
+        + 'h3{font-size:13pt;margin:10pt 0 2pt;font-weight:normal;}'
+        + 'p{margin:5pt 0;} ul{margin:3pt 0 8pt;} li{margin:1pt 0;}'
+        + 'table{border-collapse:collapse;width:100%;margin:6pt 0 10pt;}'
+        + 'th{text-align:left;font-size:8pt;text-transform:uppercase;color:#6d6758;border-bottom:1.5pt solid #23211c;padding:3pt 8pt 3pt 0;}'
+        + 'td{border-bottom:0.5pt solid #d8d2c0;padding:3pt 8pt 3pt 0;vertical-align:top;font-size:10pt;}'
+        + '.d-legal,.d-note{font-style:italic;color:#6d6758;font-size:10pt;}'
+        + '.d-meta,.d-foot{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;}'
+        + '.d-role,.d-cat{font-family:Consolas,monospace;font-size:8pt;color:#8a6d1f;text-transform:uppercase;}'
+        + 'ol{font-size:9pt;color:#444035;} a{color:#305a8a;text-decoration:none;}';
+      var safeTitle = String(p.shortName || p.slug || 'Company').replace(/[<>&"]/g, '');
+      var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
+        + '<head><meta charset="utf-8"><title>' + safeTitle + ' — Overview</title><style>' + wordCss + '</style></head>'
+        + '<body>' + docEl.innerHTML + '</body></html>';
+      // The Blob's first string begins with an invisible UTF-8 BOM (U+FEFF) — Word needs it to detect encoding
+      var blob = new Blob(['﻿' + html], { type: 'application/msword' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = (p.slug || 'company') + '-overview-' + (p.lastUpdated || 'export') + '.doc';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function() { URL.revokeObjectURL(a.href); }, 4000);
     }
 
     // ── Init ──
