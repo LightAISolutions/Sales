@@ -35,7 +35,7 @@ Top-level fields:
 
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
-| `schemaVersion` | number | yes | Profile schema version (currently `1`) |
+| `schemaVersion` | number | yes | Profile schema version — currently `2` (v2 adds `recentDevelopments[]`, `strategyRead[]`, and the product depth fields). v1 profiles remain valid; the renderer skips absent sections. Write new/revised profiles at v2 |
 | `slug` / `name` / `shortName` | string | yes | Identity; `name` is the full legal name, `shortName` the display name |
 | `categories` | string[] | yes | Same values as the registry entry |
 | `website` | string | no | `https://` URL |
@@ -43,7 +43,9 @@ Top-level fields:
 | `ownership` | object | no | `{ "type": "public"\|"private"\|"subsidiary", "ticker": "EXCHANGE: SYMBOL" }` |
 | `summary` | string | yes | Neutral 2–4 sentence description of what the company does |
 | `ecosystemRole` | string | no | 1–3 sentences on how the company fits this ecosystem |
-| `productsAndServices[]` | object[] | yes | `{ "name", "category", "description", "highlights": string[] }` — one entry per product/service line |
+| `productsAndServices[]` | object[] | yes | `{ "name", "category", "description", "highlights": string[] }` — one entry per product/service line. **Optional depth fields (schema v2):** `positioning` (vs named competitors, differentiation), `soldThrough` (commercial model — direct / EPC / OEM-merchant / licensing), `targetSegments` (who it's sold to), `roadmap` (announced-not-yet-shipped items with dates) |
+| `recentDevelopments[]` | object[] | no (v2) | `{ "date": "YYYY-MM-DD", "category", "headline", "read", "source" }` — trailing 12–18 months of order wins, product launches, partnerships, leadership changes, capacity expansions, regulatory/financial events. `category` ∈ `order-win`, `product-launch`, `partnership`, `leadership`, `capacity`, `regulatory`, `financial`, `other`. `read` is the one-line strategy takeaway ("so what"); `source` is a label or URL. Newest first |
+| `strategyRead[]` | string[] | no (v2) | 3–5 analytical bullets synthesizing what the company's behavior says about its sales/product strategy (target segments & geographies, channel/commercial model, pricing posture, roadmap direction). **This is Claude's inference, not sourced fact** — the renderer labels it as analysis; never blend unsourced interpretation into other sections |
 | `technicalSpecs[]` | object[] | no | `{ "product", "specs": [{ "label", "value" }], "notes" }` — flagship products only, concrete figures |
 | `decisionMakers[]` | object[] | yes | See below |
 | `financials` | object | yes | See below |
@@ -71,6 +73,8 @@ Top-level fields:
 - **Expectations honesty** — `expected` values must be real published consensus/guidance figures; when none exists, leave it empty and say so in commentary rather than manufacturing a benchmark
 - **Photo policy** — only photos the company itself published (leadership page, press kit), downloaded into `live-site-pages/images/execs/` so the page never hotlinks. LinkedIn photos are never scraped (auth wall + ToS). No photo → the app renders an initials avatar automatically
 - **Standard treatment for every company** — every profile uses exactly these sections. No company-specific sections, no bespoke fields, no special emphasis for any one company (explicit developer rule)
+- **Analysis stays labeled** — `strategyRead[]` is the only section allowed to contain inference beyond the sources, and the renderer marks it as analysis; every other section states only what a cited source supports. A strategy read that a source directly supports belongs in `recentDevelopments[].read` instead
+- **Recent-developments window** — cover the trailing 12–18 months, newest first; prefer first-party press releases as the `source` per the source-priority rule, with trade press for events the company didn't announce itself
 - **Dates everywhere** — `lastUpdated`, per-source `accessed` dates, and period labels make staleness visible; a future revision session bumps `profileVersion` and `lastUpdated`
 
 ## Extending the schema

@@ -6,7 +6,7 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.01w">
+  <meta name="build-version" content="v01.02w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Overview — Ecosystem Company Dossiers</title>
   <style>
@@ -268,6 +268,26 @@
       .ov-exec { flex-direction: column; }
       table.ov-table { font-size: 12.5px; }
     }
+    /* Recent Developments + Strategy Read + product depth (schema v2) */
+    .ov-dev { display: flex; gap: 14px; border-left: 2px solid var(--ov-line2); padding: 4px 0 4px 18px; margin: 14px 0; }
+    .ov-dev .when { flex: 0 0 92px; font: 10.5px/1.8 var(--ov-mono); color: var(--ov-faint); }
+    .ov-dev .devcat {
+      display: inline-block; font: 9px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ov-gold); border: 1px solid var(--ov-line2); border-radius: 4px; padding: 3px 6px; margin-bottom: 5px;
+    }
+    .ov-dev h4 { font: 400 15.5px/1.35 var(--ov-serif); margin: 0 0 3px; }
+    .ov-dev .read { color: var(--ov-muted); font-size: 13px; font-style: italic; margin: 2px 0 0; }
+    .ov-dev .src { color: var(--ov-faint); font: 10px/1.6 var(--ov-mono); margin: 3px 0 0; }
+    .ov-strategy { background: var(--ov-card); border: 1px solid var(--ov-gold); border-radius: 12px; padding: 18px 20px; margin-top: 16px; }
+    .ov-strategy .tag {
+      font: 9.5px/1.4 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ov-ink); background: var(--ov-gold); border-radius: 4px; padding: 4px 8px; display: inline-block; margin-bottom: 10px;
+    }
+    .ov-strategy ul { margin: 0; padding-left: 18px; }
+    .ov-strategy li { margin: 6px 0; font-size: 14px; }
+    .ov-prod .kv { font-size: 13px; color: var(--ov-paper); margin: 4px 0; max-width: 720px; }
+    .ov-prod .kv .k { font: 10px/1.5 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-faint); margin-right: 8px; }
+    #ov-prev-doc .d-devdate { font: 10px/1.6 var(--ov-mono); color: #6d6758; margin: 10px 0 0; }
     /* Export button + preview overlay */
     .ov-btn {
       background: var(--ov-paper); color: var(--ov-ink); border: 1px solid var(--ov-paper);
@@ -1184,6 +1204,14 @@
           if (prod.category) d.appendChild(ovEl('div', 'cat', prod.category));
           d.appendChild(ovEl('h4', null, prod.name));
           if (prod.description) d.appendChild(ovEl('p', null, prod.description));
+          [['Positioning', prod.positioning], ['Sold through', prod.soldThrough],
+           ['Target segments', prod.targetSegments], ['Roadmap', prod.roadmap]].forEach(function(pair) {
+            if (!pair[1]) return;
+            var kv = ovEl('p', 'kv');
+            kv.appendChild(ovEl('span', 'k', pair[0]));
+            kv.appendChild(document.createTextNode(pair[1]));
+            d.appendChild(kv);
+          });
           if (prod.highlights && prod.highlights.length) {
             var ul = ovEl('ul');
             prod.highlights.forEach(function(h) { ul.appendChild(ovEl('li', null, h)); });
@@ -1192,6 +1220,40 @@
           ps.appendChild(d);
         });
         main.appendChild(ps);
+      }
+
+      // Recent developments (schema v2)
+      if (p.recentDevelopments && p.recentDevelopments.length) {
+        var rd = ovSection('Recent Developments', 'Trailing-year highlights, newest first, each with a one-line strategy takeaway.');
+        p.recentDevelopments.forEach(function(ev) {
+          var row = ovEl('div', 'ov-dev');
+          row.appendChild(ovEl('div', 'when', ev.date || ''));
+          var bodyE = ovEl('div');
+          if (ev.category) bodyE.appendChild(ovEl('span', 'devcat', ev.category));
+          bodyE.appendChild(ovEl('h4', null, ev.headline));
+          if (ev.read) bodyE.appendChild(ovEl('p', 'read', '→ ' + ev.read));
+          if (ev.source) {
+            var srcP = ovEl('p', 'src');
+            if (/^https?:\/\//i.test(ev.source)) srcP.appendChild(ovLink(ev.source, null, ev.source.replace(/^https?:\/\//, '').split('/')[0]));
+            else srcP.appendChild(document.createTextNode(ev.source));
+            bodyE.appendChild(srcP);
+          }
+          row.appendChild(bodyE);
+          rd.appendChild(row);
+        });
+        main.appendChild(rd);
+      }
+
+      // Strategy read — labeled analysis (schema v2)
+      if (p.strategyRead && p.strategyRead.length) {
+        var sr = ovSection('Strategy Read');
+        var box = ovEl('div', 'ov-strategy');
+        box.appendChild(ovEl('span', 'tag', 'Analysis — inference from the sourced facts, not company statements'));
+        var ulS = ovEl('ul');
+        p.strategyRead.forEach(function(b) { ulS.appendChild(ovEl('li', null, b)); });
+        box.appendChild(ulS);
+        sr.appendChild(box);
+        main.appendChild(sr);
       }
 
       // Technical specifications
@@ -1327,12 +1389,33 @@
           if (prod.category) doc.appendChild(ovEl('p', 'd-cat', prod.category));
           doc.appendChild(ovEl('h3', null, prod.name));
           if (prod.description) doc.appendChild(ovEl('p', null, prod.description));
+          [['Positioning', prod.positioning], ['Sold through', prod.soldThrough],
+           ['Target segments', prod.targetSegments], ['Roadmap', prod.roadmap]].forEach(function(pair) {
+            if (pair[1]) doc.appendChild(ovEl('p', 'd-note', pair[0] + ': ' + pair[1]));
+          });
           if (prod.highlights && prod.highlights.length) {
             var ul = ovEl('ul');
             prod.highlights.forEach(function(h) { ul.appendChild(ovEl('li', null, h)); });
             doc.appendChild(ul);
           }
         });
+      }
+
+      if (p.recentDevelopments && p.recentDevelopments.length) {
+        doc.appendChild(ovEl('h2', null, 'Recent Developments'));
+        p.recentDevelopments.forEach(function(ev) {
+          doc.appendChild(ovEl('p', 'd-devdate', (ev.date || '') + (ev.category ? '  ·  ' + ev.category : '')));
+          doc.appendChild(ovEl('h3', null, ev.headline));
+          if (ev.read) doc.appendChild(ovEl('p', 'd-note', '→ ' + ev.read));
+        });
+      }
+
+      if (p.strategyRead && p.strategyRead.length) {
+        doc.appendChild(ovEl('h2', null, 'Strategy Read'));
+        doc.appendChild(ovEl('p', 'd-note', 'Analysis — inference from the sourced facts, not company statements.'));
+        var ulSt = ovEl('ul');
+        p.strategyRead.forEach(function(b) { ulSt.appendChild(ovEl('li', null, b)); });
+        doc.appendChild(ulSt);
       }
 
       if (p.technicalSpecs && p.technicalSpecs.length) {
@@ -1443,7 +1526,7 @@
         + 'th{text-align:left;font-size:8pt;text-transform:uppercase;color:#6d6758;border-bottom:1.5pt solid #23211c;padding:3pt 8pt 3pt 0;}'
         + 'td{border-bottom:0.5pt solid #d8d2c0;padding:3pt 8pt 3pt 0;vertical-align:top;font-size:10pt;}'
         + '.d-legal,.d-note{font-style:italic;color:#6d6758;font-size:10pt;}'
-        + '.d-meta,.d-foot{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;}'
+        + '.d-meta,.d-foot,.d-devdate{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;}'
         + '.d-role,.d-cat{font-family:Consolas,monospace;font-size:8pt;color:#8a6d1f;text-transform:uppercase;}'
         + 'ol{font-size:9pt;color:#444035;} a{color:#305a8a;text-decoration:none;}';
       var safeTitle = String(p.shortName || p.slug || 'Company').replace(/[<>&"]/g, '');
