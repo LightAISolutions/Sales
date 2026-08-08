@@ -3,11 +3,19 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.93r] — 2026-08-07 09:58:47 PM EST
+
+> **Prompt:** "I reinstalled the Profiler app and it still opens a browser instead of looking like a standalone app"
+
+### Fixed
+
+- Profiler wouldn't install as a standalone PWA because the installed Receipts app claimed scope `./` (the whole site) — Chrome refuses to offer install for a page inside an installed PWA's scope (documented in w3c/manifest #1180/#1209). Narrowed both manifests to per-app scopes (`profiler.webmanifest` → `./Profiler.html`, `receipts.webmanifest` → `./Receipts.html`) and added distinct `id` fields to pin each app's identity. No page version bumps — no HTML files changed; manifests are fetched fresh at install time
 
 ## [v01.92r] — 2026-08-07 09:49:43 PM EST
 
