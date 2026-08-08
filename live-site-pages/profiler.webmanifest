@@ -1,0 +1,14 @@
+{
+  "name": "Profiler",
+  "short_name": "Profiler",
+  "description": "Standardized corporate dossiers on ecosystem companies",
+  "start_url": "./Profiler.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#13151c",
+  "theme_color": "#13151c",
+  "icons": [
+    { "src": "images/profiler-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "images/profiler-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
