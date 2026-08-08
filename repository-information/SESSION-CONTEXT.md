@@ -6,6 +6,35 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-07 10:21:51 PM EST
+**Repo version:** v01.93r
+
+**What we worked on:**
+- Verified the Sinexcel scheduled refresh pre-fire (v01.91r research portion): trigger `trig_01KcsGWtyHTq5j4ySXZddg5b` enabled for 2026-08-12 13:00 UTC with the full upgraded prompt; `sinexcel.profile.json` (profileVersion 1) in sync with the registry; empty `archive-index.json` ready for the first archival — no changes needed
+- Profiler logo (v01.91r, page v01.04w): created `images/profiler-logo.svg` (dossier-card emblem in the app's ink/paper/gold palette) and pointed `SPLASH_LOGO_URL` at it; Playwright-verified on all three splash screens
+- Made Profiler an installable PWA (v01.92r, page v01.05w): `profiler.webmanifest`, 192/512 icons (512 = `any maskable`, emblem at 80% on full-bleed ink), manifest/theme/Apple tags + `manifest-src 'self'` PROJECT OVERRIDE in `Profiler.html`
+- Fixed standalone install (v01.93r): the installed Receipts app claimed scope `./` (whole site), which per documented Chrome behavior blocks installing a second PWA in that scope — narrowed both manifests to per-app scopes (`./Profiler.html`, `./Receipts.html`) and added stable `id`s. Developer reinstalled both and confirmed they now run standalone
+
+**Where we left off:**
+- Everything committed, pushed, and auto-merged (v01.93r). Both PWAs verified working on the developer's phone. Nothing in flight
+
+**Key decisions made:**
+- Only `SPLASH_LOGO_URL` carries an app's logo — `DEVELOPER_LOGO_URL`/`YOUR_ORG_LOGO_URL` stay on the placeholder (they're developer/org branding, and the page doesn't consume them)
+- Multi-PWA-on-one-origin pattern: each installable page's manifest scopes to exactly its own page with a stable `id` — apply this to any future installable page
+- Maskable icon convention: composite the emblem at 80% on a full-bleed background so icon masks can't clip it
+
+**Active context:**
+- Branch `claude/profiler-sinexcel-logo-87ub0e` · Repo v01.93r · 9 tracked pages, all 🟢; Profiler at v01.05w
+- Armed refresh triggers unchanged from last session (Sinexcel 08-12 · Sungrow 08-30 · BYD 08-30 · Tesla 10-22 · Wärtsilä 10-28 · CATL 11-01 · Fluence 11-25 · Hithium/FlexGen quarterly)
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- No TODO items, no active reminders
+
+**Recommendation for next session:**
+- The Sinexcel refresh fires autonomously on 2026-08-12 13:00 UTC — after it runs, review it end-to-end: the refreshed dossier's quality, the archival flow (`sinexcel.profile.v1.json` in `profiler-data/archive/` + `archive-index.json` entry + `bess-aidc-library` mirror), and that it re-armed the next Sinexcel trigger
+- **To continue:** type `review the Sinexcel refresh results`
+
+## Previous Sessions
+
 **Date:** 2026-08-07 02:13:52 AM EST
 **Repo version:** v01.90r
 
@@ -34,30 +63,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - The first scheduled refresh (Sinexcel) fires 2026-08-12 in an autonomous fresh session — after it runs, review it end-to-end: the refreshed dossier's quality, the archival flow (`sinexcel.profile.v1.json` in `profiler-data/archive/` + `archive-index.json` entry + `bess-aidc-library` mirror), and that it re-armed the next Sinexcel trigger
 - **To continue:** type `verify the Sinexcel refresh`
-
-## Previous Sessions
-
-**Date:** 2026-08-06 09:17:38 PM EST
-**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
-**Repo version:** v01.82r
-
-**What was done:**
-- Scraper feedback loop: 👍/👎 article verdicts feeding scoring exemplars, deploy-flap-safe verdict saves, rating status log panel (v01.58r–v01.61r)
-- Scraper preference learning: AI distillation into learned notes + suggested keywords, calibration rating mode, re-score collection, learned-keyword fetch widening, optimistic batched suggestion adds with undo (v01.60r–v01.66r)
-- Scraper scoring quality: five-band rubric anchors, title-only fairness, feedback rebalance (v01.67r)
-- Scraper corpus tools: chunked Enrich abstract harvest + poison-URL stall fix, score-distribution stats panel, archive-junk flow (v01.68r–v01.71r)
-- Scraper fetch breadth: query planner, AI pre-filter at fetch time, Claude web-search deep backfill, real-time add-keyword-to-plan (lock-guarded, manual adds preserved on Rebuild) (v01.72r–v01.73r, v01.76r–v01.77r)
-- Scraper scheduler: hourly phase-stepped compile→analyze→brief→email pipeline; scriptapp-scope root cause, poison-loop abandon + failure email, heartbeat-based health with amber unverified banner (v01.63r, v01.76r–v01.78r)
-- Scraper robustness/perf: API-first doGet + cached tab ensures, sticky GET transport, 90s fetch watchdog, next-step guidance on every action, notification history panel with unread badge, offline-tolerant batched verdict queue fixing the http_404 storm (v01.74r–v01.75r, v01.79r–v01.80r)
-- Receipts: Pivot Builder export wizard (rows × columns × values + sheet include-toggles) with server-side Pivot sheet; latent ownerEmail export crash fixed (v01.81r)
-- Receipts: export Preview step, commercial-invoice extraction calibration, Business category + six subcategories (v01.82r)
-
-**Where we left off:**
-- All changes committed and merged to main
-
-**Active context:**
-- 8 tracked pages; Scraper at v01.32w · v01.29g, Receipts at v01.30w · v01.18g as of v01.82r
-- No TODO items, no active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
 
 Developed by: ShadowAISolutions
