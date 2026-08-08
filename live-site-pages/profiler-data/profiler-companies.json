@@ -51,6 +51,16 @@
       "lastUpdated": "2026-08-06"
     },
     {
+      "slug": "megmeet",
+      "name": "Megmeet",
+      "categories": ["supplier"],
+      "tagline": "Power electronics platform — AI data-center power (NVIDIA 800V HVDC ecosystem), appliance controls, EV components, welding.",
+      "hq": "Shenzhen, China",
+      "ticker": "SZSE: 002851",
+      "status": "active",
+      "lastUpdated": "2026-08-07"
+    },
+    {
       "slug": "sinexcel",
       "name": "Sinexcel",
       "categories": ["supplier"],

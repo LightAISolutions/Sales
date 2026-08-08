@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.05w">
+  <meta name="build-version" content="v01.06w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -353,6 +353,63 @@
     #ov-prev-doc a { color: #305a8a; text-decoration: none; word-break: break-all; }
     #ov-prev-doc .d-foot { margin-top: 26px; border-top: 1px solid #cfc8b4; padding-top: 9px; font: 10px/1.6 var(--ov-mono); color: #6d6758; }
     @media (max-width: 560px) { #ov-prev-doc { padding: 26px 20px; } }
+    /* Field notes — ⚙ cog (dashboard) + chronological changelog overlay */
+    #ov-notes-cog {
+      position: fixed; bottom: 42px; right: 22px; z-index: 9999;
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ov-line2);
+      background: var(--ov-card); color: var(--ov-muted); font-size: 19px; line-height: 1;
+      cursor: pointer; display: none; align-items: center; justify-content: center;
+      transition: color 0.15s ease, border-color 0.15s ease, transform 0.3s ease;
+    }
+    #ov-notes-cog:hover { color: var(--ov-gold); border-color: var(--ov-gold); transform: rotate(45deg); }
+    #ov-notes-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(8,9,12,0.8); z-index: 10002; display: none;
+      align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;
+    }
+    #ov-notes-panel {
+      background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 12px;
+      width: min(720px, 96vw); max-height: 84vh; display: flex; flex-direction: column;
+      box-shadow: 0 14px 50px rgba(0,0,0,0.5);
+    }
+    #ov-notes-head { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--ov-line); }
+    #ov-notes-head .ttl { font: 11px/1.4 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-gold); margin-right: auto; }
+    #ov-notes-close { background: none; border: none; color: var(--ov-muted); font-size: 24px; cursor: pointer; padding: 0 4px; line-height: 1; }
+    #ov-notes-close:hover { color: var(--ov-paper); }
+    #ov-notes-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px 20px 0; }
+    #ov-notes-body { padding: 4px 20px 18px; overflow-y: auto; }
+    .ov-note { border-left: 2px solid var(--ov-line2); padding: 4px 0 4px 16px; margin: 16px 0; }
+    .ov-note .nhead { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font: 10.5px/1.6 var(--ov-mono); color: var(--ov-faint); }
+    .ov-note .co { color: var(--ov-gold); background: none; border: none; padding: 0; font: inherit; cursor: pointer; }
+    .ov-note .co:hover { text-decoration: underline; }
+    .ov-note .badge { border: 1px solid var(--ov-line2); border-radius: 4px; padding: 2px 6px; letter-spacing: 0.1em; text-transform: uppercase; font-size: 9px; }
+    .ov-note .conf { border-radius: 4px; padding: 2px 6px; font-size: 9px; letter-spacing: 0.06em; color: var(--ov-ink); background: var(--ov-oth); }
+    .ov-note .conf.hi { background: var(--ov-dev); } .ov-note .conf.mid { background: var(--ov-gold); } .ov-note .conf.lo { background: var(--ov-adv); }
+    .ov-note p { margin: 6px 0 2px; font-size: 14px; }
+    .ov-note .tags { color: var(--ov-faint); font: 10px/1.6 var(--ov-mono); }
+    /* Study guide — dossier button + overlay */
+    #ov-study-btn { margin-top: 14px; margin-left: 8px; }
+    #ov-study-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(8,9,12,0.8); z-index: 10002; display: none;
+      overflow-y: auto; padding: 26px 14px; box-sizing: border-box;
+    }
+    #ov-study-panel {
+      width: min(760px, 100%); box-sizing: border-box; margin: 0 auto; background: var(--ov-card);
+      border: 1px solid var(--ov-line2); border-radius: 12px; padding: 24px 26px 30px;
+      box-shadow: 0 14px 50px rgba(0,0,0,0.5);
+    }
+    #ov-study-panel .s-head { display: flex; align-items: baseline; gap: 12px; border-bottom: 3px double var(--ov-line2); padding-bottom: 14px; margin-bottom: 6px; }
+    #ov-study-panel .s-head h2 { font: 400 clamp(24px, 4vw, 32px)/1.15 var(--ov-serif); margin: 0; }
+    #ov-study-panel .s-head .asof { margin-left: auto; color: var(--ov-faint); font: 10.5px/1.6 var(--ov-mono); white-space: nowrap; }
+    #ov-study-close { background: none; border: none; color: var(--ov-muted); font-size: 24px; cursor: pointer; padding: 0 0 0 6px; line-height: 1; }
+    #ov-study-close:hover { color: var(--ov-paper); }
+    .ov-flash { background: var(--ov-card2); border: 1px solid var(--ov-line2); border-radius: 10px; padding: 14px 18px; margin: 10px 0; cursor: pointer; }
+    .ov-flash .hint { font: 9px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-faint); margin-bottom: 7px; }
+    .ov-flash .q { font-size: 14.5px; }
+    .ov-flash .a { display: none; color: var(--ov-muted); font-size: 13.5px; margin-top: 9px; border-top: 1px dashed var(--ov-line2); padding-top: 9px; }
+    .ov-flash.open .a { display: block; }
+    .ov-flash.open .hint { color: var(--ov-gold); }
     /* Print pipeline — the PDF export path: only the preview document prints */
     @media print {
       body > *:not(#ov-prev-overlay) { display: none !important; }
@@ -1062,6 +1119,7 @@
     // ── Roster ──
     function ovRenderRoster() {
       document.title = 'Profiler — Ecosystem Company Dossiers';
+      ovNotesCogVisible(true);
       var main = ovMain(); ovClear(main);
       var companies = (ovRegistry.companies || []).slice().sort(function(a, b) { return a.name.localeCompare(b.name); });
 
@@ -1119,6 +1177,7 @@
 
     // ── Dossier detail ──
     function ovRenderCompany(slug) {
+      ovNotesCogVisible(false);
       var main = ovMain(); ovClear(main);
       var back = ovEl('button', 'ov-back', '← All companies');
       back.type = 'button';
@@ -1188,6 +1247,17 @@
       exportBtn.title = 'Preview the document, then export as Word or PDF';
       exportBtn.addEventListener('click', function() { ovShowPreview(p); });
       head.appendChild(exportBtn);
+      // Study guide button — appears only when this company's <slug>.study.json exists
+      ovFetchJson(p.slug + '.study.json')
+        .then(function(sg) {
+          if (document.getElementById('ov-study-btn')) return;
+          var sBtn = ovEl('button', 'ov-btn ghost', 'Study guide 📖');
+          sBtn.id = 'ov-study-btn'; sBtn.type = 'button';
+          sBtn.title = 'Open the study guide for this company';
+          sBtn.addEventListener('click', function() { ovShowStudy(sg); });
+          head.appendChild(sBtn);
+        })
+        .catch(function() { /* no study guide for this company — button stays hidden */ });
       main.appendChild(head);
 
       // Snapshot
@@ -1355,6 +1425,159 @@
         src.appendChild(wrapS);
         main.appendChild(src);
       }
+    }
+
+    // ── Field notes — ⚙ cog (dashboard) + chronological changelog overlay ──
+    // Data: profiler-data/profiler-notes.json (schema: PROFILER-SCHEMA.md, Field Notes)
+    var ovNotesData = null;
+    var ovNotesFilter = 'all';
+
+    function ovNotesCogVisible(show) {
+      var cog = document.getElementById('ov-notes-cog');
+      if (cog) cog.style.display = show ? 'flex' : 'none';
+    }
+
+    (function() {
+      var cog = ovEl('button', null, '⚙');
+      cog.id = 'ov-notes-cog'; cog.type = 'button';
+      cog.title = 'Field notes — chronological changelog';
+      cog.setAttribute('aria-label', 'Field notes changelog');
+      cog.addEventListener('click', ovShowNotes);
+      document.body.appendChild(cog);
+
+      var overlay = ovEl('div'); overlay.id = 'ov-notes-overlay';
+      overlay.addEventListener('click', function(e) { if (e.target === overlay) overlay.style.display = 'none'; });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.style.display === 'flex') overlay.style.display = 'none';
+      });
+      document.body.appendChild(overlay);
+    })();
+
+    function ovCompanyLabel(slug) {
+      if (slug === 'general') return 'General';
+      var hit = ((ovRegistry && ovRegistry.companies) || []).filter(function(c) { return c.slug === slug; })[0];
+      return hit ? hit.name : slug;
+    }
+    function ovConfClass(c) { return c >= 75 ? 'hi' : (c >= 40 ? 'mid' : 'lo'); }
+
+    function ovShowNotes() {
+      var overlay = document.getElementById('ov-notes-overlay');
+      overlay.style.display = 'flex';
+      ovClear(overlay);
+      var panel = ovEl('div'); panel.id = 'ov-notes-panel';
+      var head = ovEl('div'); head.id = 'ov-notes-head';
+      head.appendChild(ovEl('span', 'ttl', 'Field Notes — Chronological Log'));
+      var close = ovEl('button', null, '×'); close.id = 'ov-notes-close'; close.type = 'button';
+      close.setAttribute('aria-label', 'Close');
+      close.addEventListener('click', function() { overlay.style.display = 'none'; });
+      head.appendChild(close);
+      panel.appendChild(head);
+      var chips = ovEl('div'); chips.id = 'ov-notes-chips'; panel.appendChild(chips);
+      var body = ovEl('div'); body.id = 'ov-notes-body';
+      body.appendChild(ovEl('p', 'ov-loading', 'Loading field notes…'));
+      panel.appendChild(body);
+      overlay.appendChild(panel);
+      ovFetchJson('profiler-notes.json')
+        .then(function(d) { ovNotesData = d; ovPaintNotes(); })
+        .catch(function() {
+          ovClear(body);
+          body.appendChild(ovEl('p', 'ov-empty', 'Could not load field notes (profiler-data/profiler-notes.json).'));
+        });
+    }
+
+    function ovPaintNotes() {
+      var chips = document.getElementById('ov-notes-chips');
+      var body = document.getElementById('ov-notes-body');
+      if (!chips || !body || !ovNotesData) return;
+      var notes = ovNotesData.notes || [];
+      ovClear(chips); ovClear(body);
+
+      var counts = {};
+      notes.forEach(function(n) { counts[n.slug] = (counts[n.slug] || 0) + 1; });
+      var slugs = Object.keys(counts).sort(function(a, b) { return ovCompanyLabel(a).localeCompare(ovCompanyLabel(b)); });
+      if (slugs.length > 1) {
+        ['all'].concat(slugs).forEach(function(s) {
+          var chip = ovEl('button', 'ov-chip' + (ovNotesFilter === s ? ' on' : ''), s === 'all' ? 'All' : ovCompanyLabel(s));
+          chip.type = 'button';
+          chip.appendChild(ovEl('span', 'n', String(s === 'all' ? notes.length : counts[s])));
+          chip.addEventListener('click', function() { ovNotesFilter = s; ovPaintNotes(); });
+          chips.appendChild(chip);
+        });
+      }
+
+      var shown = notes.filter(function(n) { return ovNotesFilter === 'all' || n.slug === ovNotesFilter; });
+      if (!shown.length) {
+        body.appendChild(ovEl('p', 'ov-empty', notes.length
+          ? 'No notes for this filter.'
+          : 'No field notes yet. Capture one by telling Claude: “profiler note <Company>: <what you learned>”.'));
+        return;
+      }
+      shown.forEach(function(n) {
+        var row = ovEl('div', 'ov-note');
+        var nh = ovEl('div', 'nhead');
+        nh.appendChild(ovEl('span', null, n.date || ''));
+        var co = ovEl('button', 'co', ovCompanyLabel(n.slug));
+        co.type = 'button';
+        co.addEventListener('click', function() {
+          if (n.slug !== 'general') {
+            document.getElementById('ov-notes-overlay').style.display = 'none';
+            window.location.hash = n.slug;
+          }
+        });
+        nh.appendChild(co);
+        if (n.sourceType) nh.appendChild(ovEl('span', 'badge', n.sourceType));
+        if (typeof n.confidence === 'number') nh.appendChild(ovEl('span', 'conf ' + ovConfClass(n.confidence), 'confidence ' + n.confidence));
+        row.appendChild(nh);
+        row.appendChild(ovEl('p', null, n.note || ''));
+        if (n.tags && n.tags.length) row.appendChild(ovEl('div', 'tags', '# ' + n.tags.join('  # ')));
+        body.appendChild(row);
+      });
+    }
+
+    // ── Study guide — dossier button + overlay (data: <slug>.study.json) ──
+    var ovStudyOverlay = null;
+    function ovShowStudy(sg) {
+      if (!ovStudyOverlay) {
+        ovStudyOverlay = ovEl('div'); ovStudyOverlay.id = 'ov-study-overlay';
+        ovStudyOverlay.addEventListener('click', function(e) { if (e.target === ovStudyOverlay) ovStudyOverlay.style.display = 'none'; });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && ovStudyOverlay.style.display === 'block') ovStudyOverlay.style.display = 'none';
+        });
+        document.body.appendChild(ovStudyOverlay);
+      }
+      ovClear(ovStudyOverlay);
+      var panel = ovEl('div'); panel.id = 'ov-study-panel';
+      var head = ovEl('div', 's-head');
+      head.appendChild(ovEl('h2', null, sg.title || 'Study Guide'));
+      if (sg.lastUpdated) head.appendChild(ovEl('span', 'asof', 'as of ' + sg.lastUpdated));
+      var closeBtn = ovEl('button', null, '×'); closeBtn.id = 'ov-study-close'; closeBtn.type = 'button';
+      closeBtn.setAttribute('aria-label', 'Close');
+      closeBtn.addEventListener('click', function() { ovStudyOverlay.style.display = 'none'; });
+      head.appendChild(closeBtn);
+      panel.appendChild(head);
+      (sg.sections || []).forEach(function(sec) {
+        var s = ovSection(sec.heading || '');
+        var ul = ovEl('ul');
+        ul.style.cssText = 'margin:12px 0 0;padding-left:20px;font-size:14px;';
+        (sec.bullets || []).forEach(function(b) { var li = ovEl('li', null, b); li.style.margin = '5px 0'; ul.appendChild(li); });
+        s.appendChild(ul);
+        panel.appendChild(s);
+      });
+      if (sg.flashcards && sg.flashcards.length) {
+        var fs = ovSection('Flashcards', 'Tap a card to reveal the answer.');
+        sg.flashcards.forEach(function(fc) {
+          var card = ovEl('div', 'ov-flash');
+          card.appendChild(ovEl('div', 'hint', 'Tap to flip'));
+          card.appendChild(ovEl('div', 'q', fc.q));
+          card.appendChild(ovEl('div', 'a', fc.a));
+          card.addEventListener('click', function() { card.classList.toggle('open'); });
+          fs.appendChild(card);
+        });
+        panel.appendChild(fs);
+      }
+      ovStudyOverlay.appendChild(panel);
+      ovStudyOverlay.style.display = 'block';
+      ovStudyOverlay.scrollTop = 0;
     }
 
     // ── Export: document builder + preview + Word/PDF ──

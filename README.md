@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-07 09:58:47 PM EST` · Repo version: `v01.93r`
+Last updated: `2026-08-07 11:02:33 PM EST` · Repo version: `v01.94r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -49,7 +49,7 @@ Last updated: `2026-08-07 09:58:47 PM EST` · Repo version: `v01.93r`
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/globalacl.html">globalacl.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/globalacl.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Globalacl/globalacl.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/globalaclhtml.changelog.md">v01.02w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/globalaclgs.changelog.md">v01.01g</a> | [template] Global ACL page
 │   │
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · 🔻 · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.05w</a> · vNoGASg | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · 🔻 · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.06w</a> · vNoGASg | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs
 │   │
 │   <b>│ ─ Standalone Utilities ─────────────────────────────────────────────────────</b>
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/text-compare.html">text-compare.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/text-compare.html">🌐</a>  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/text-comparehtml.changelog.md">v01.00w</a> · vNoGASg | [template] Text comparison tool with side-by-side diff highlighting
@@ -74,11 +74,14 @@ Last updated: `2026-08-07 09:58:47 PM EST` · Repo version: `v01.93r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler.webmanifest">profiler.webmanifest</a>    — PWA manifest for the Profiler page (home-screen install)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data">profiler-data/</a>           — Company dossier JSON data for the Profiler app (schema: repository-information/PROFILER-SCHEMA.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-companies.json">profiler-companies.json</a> — Company registry (roster, categories, freshness)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-notes.json">profiler-notes.json</a>    — Field notes chronological log (⚙ changelog in the app; developer-rated confidence)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/byd.profile.json">byd.profile.json</a>       — BYD dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/catl.profile.json">catl.profile.json</a>      — CATL dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flexgen.profile.json">flexgen.profile.json</a>   — FlexGen dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/fluence.profile.json">fluence.profile.json</a>   — Fluence dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hithium.profile.json">hithium.profile.json</a>   — Hithium dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.profile.json">megmeet.profile.json</a>   — Megmeet dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.study.json">megmeet.study.json</a>     — Megmeet in-app study guide (sanitized subset of the prep pack)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.profile.json">sinexcel.profile.json</a>  — Sinexcel dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sungrow.profile.json">sungrow.profile.json</a>   — Sungrow dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.profile.json">tesla.profile.json</a>     — Tesla dossier profile
@@ -246,6 +249,12 @@ Last updated: `2026-08-07 09:58:47 PM EST` · Repo version: `v01.93r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/IMPROVEMENTS.md">IMPROVEMENTS.md</a>         — [template · initialized] Potential improvements
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/KNOWN-CONSTRAINTS-AND-FIXES.md">KNOWN-CONSTRAINTS-AND-FIXES.md</a>    — Architectural constraints &amp; resolved bug fixes (GAS double-iframe, postMessage, HMAC, deploy webhook)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/interview-prep">interview-prep/</a>       — Private prep packs from the Profiler Prep Command (not deployed)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/interview-prep/megmeet">megmeet/</a>            — Megmeet prep pack (study guide, schedule, flashcards, Q&amp;A prep)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/interview-prep/megmeet/megmeet-study-guide.md">megmeet-study-guide.md</a> — Need-to-know brief
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/interview-prep/megmeet/megmeet-schedule.md">megmeet-schedule.md</a>   — Day-by-day study schedule
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/interview-prep/megmeet/megmeet-flashcards.md">megmeet-flashcards.md</a> — Q&amp;A cram cards
+│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/interview-prep/megmeet/megmeet-qa-prep.md">megmeet-qa-prep.md</a>    — Likely questions &amp; talking points
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/RULE-COST-AUDIT.md">RULE-COST-AUDIT.md</a>       — Rule cost audit — ranked table, trim-recommendation checklist (T1–T9), progress tracking
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/TODO.md">TODO.md</a>                 — [template · initialized] Actionable to-do items
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/FUTURE-CONSIDERATIONS.md">FUTURE-CONSIDERATIONS.md</a> — [template] Deferred architectural ideas for scale

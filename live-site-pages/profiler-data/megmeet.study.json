@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "slug": "megmeet",
+  "title": "Megmeet — Study Guide",
+  "lastUpdated": "2026-08-07",
+  "sections": [
+    {
+      "heading": "The 30-Second Story",
+      "bullets": [
+        "Shenzhen power-electronics platform company (founded 2003, SZSE: 002851) built by Huawei Electric / Emerson Network Power alumni — chairman-founder Tong Yongsheng was VP at both",
+        "Six business groups: appliance electric controls (38% of revenue), power products (28.5%), EV & rail components (12%), industrial automation (9%), intelligent equipment/welding (6%), precision connection (5%)",
+        "FY2025: ¥9.40B revenue (+15%), ~40% overseas, 8,894 employees, R&D held at ~12% of revenue for a decade",
+        "The headline story: the only mainland-China power supplier NVIDIA named for GB200 NVL72 — betting the company on the AI data-center 800VDC power transition"
+      ]
+    },
+    {
+      "heading": "AI Data-Center Power — the Core Story",
+      "bullets": [
+        "Full grid-to-GPU chain: solid-state transformer (>98.5% efficient, 800VDC out) → 800V HVDC Sidecar (>1 MW/rack, for NVIDIA Kyber-class racks) → 33 kW & 110 kW power shelves (110 kW liquid-cooled, for GB300/Vera Rubin) → BBU/supercapacitor backup shelves → CRPS/M-CRPS PSUs (up to 5.5 kW Ruby-efficiency, >100 W/in³)",
+        "Member of NVIDIA's May 2025 800V HVDC ecosystem alliance (alongside Delta, Flex, Lite-On); showed co-developed 800VDC sidecar at OCP Global Summit Oct 2025",
+        "Market reality: Taiwanese vendors hold ~74% of server PSUs (Delta ~41% alone); Megmeet's wedge is moving first on the 800VDC architecture change, not price",
+        "Honesty check: company itself said AI-server orders were small-batch and immaterial through 2025; first volume deliveries began end-2025, domestic hyperscaler volume expected 2026",
+        "US footprint: Dallas, Texas power test lab opened June 2026 (360 kW, roadmap 1.5 MW); Thailand plant phase II funded for overseas supply"
+      ]
+    },
+    {
+      "heading": "Numbers That Matter",
+      "bullets": [
+        "FY2025: revenue ¥9.40B (+15%) but net profit ¥146M (−67%); ex-non-recurring only ¥26M (−93%); Q4 2025 was a net loss; operating cash flow negative for the first time (−¥139M)",
+        "Why profits collapsed: AI-power R&D spend, overseas base build-outs, appliance price wars, and FX losses (India ≈17% of revenue; INR/USD volatility)",
+        "Q1 2026 rebound: revenue ¥2.79B (+20%), all six segments growing, power products +67%",
+        "Segment gross margins tell the strategy: welding/equipment 38.5%, automation 28%, appliances/power ~22%, EV 15% (doubled revenue at the lowest margin), precision connection 5%",
+        "Capital: ¥2.66B placement completed Feb 2026 (star investor Ge Weidong subscribed); Hong Kong A+H listing filed June 2026; stock ran ~¥24 (2024) → ¥190 peak (Jun 2026) → sharp July 2026 correction (three limit-downs); H1 2026 results due ~Aug 27"
+      ]
+    },
+    {
+      "heading": "Beyond AI — the Other Five Legs",
+      "bullets": [
+        "Appliance controls (largest, declining −5%): inverter HVAC/heat-pump controllers + smart-bathroom units (Yihe Bathroom); customers include Xiaomi, Haier, Hisense; rivals Topband, H&T Intelligent",
+        "EV & rail (+109%): motor controllers, OBC/DC-DC (1M+ two-in-one units shipped 2025), thermal management, active suspension; customers Geely, BAIC, Leapmotor, Changan",
+        "Industrial automation (+40%): MV800/MV520 drives, M5 servos, MU-series PLCs; wind-pitch drives in batch supply",
+        "Welding (+31%, best margins): Artsen/Ehave2/Dex digital welders, robotic welding power (1,800-unit repeat order from Honglu Steel), new laser-welding line",
+        "Network power heritage: Ericsson, Cisco, Juniper, Arista among named customers — the credibility base for the server-power push"
+      ]
+    },
+    {
+      "heading": "People to Know",
+      "bullets": [
+        "Tong Yongsheng (童永胜) — founder, chairman & president; PhD NUAA, post-doc Zhejiang University; ex-VP Huawei Electric and Emerson Network Power; controls ~24% with spouse",
+        "Shen Chuchun (沈楚春) — CTO; ex-chief engineer at Huawei Electric primary power and Emerson DC-Global",
+        "Wang Tao (王涛) — CFO & board secretary; ex-Huawei Electric and Emerson finance",
+        "The pattern: the entire senior bench is Huawei Electric → Emerson Network Power power-supply lineage — the same lineage as much of China's power-electronics industry"
+      ]
+    },
+    {
+      "heading": "Watch Items",
+      "bullets": [
+        "H1 2026 report (~Aug 27) is the first hard evidence of whether AI-DC revenue is materializing — consensus expects a ~6x FY2026 profit rebound",
+        "800VDC/HVDC technology routes not fully settled industry-wide; volume adoption of 1MW racks projected from ~2027",
+        "Balance-sheet strain: inventory +32% and receivables +19% in Q1 2026; guarantee quota >¥6B; HK listing adds dilution",
+        "FX remains a swing factor (USD, INR) — hedging acknowledged as incomplete"
+      ]
+    }
+  ],
+  "flashcards": [
+    { "q": "What are Megmeet's six business groups, roughly by size?", "a": "Smart appliance electric controls (~38% of FY2025 revenue), power products (~28.5%), new energy vehicle & rail components (~12%), industrial automation (~9%), intelligent equipment/welding (~6%), precision connection (~5%)." },
+    { "q": "What makes Megmeet notable in the NVIDIA ecosystem?", "a": "It's the only mainland-China power supplier NVIDIA named for GB200 NVL72 power (Oct 2024), and a member of NVIDIA's 800V HVDC ecosystem alliance (May 2025) — supplying power shelves and pioneering the 800VDC sidecar architecture." },
+    { "q": "FY2025 headline numbers?", "a": "Revenue ¥9.40B (+15.1%); attributable net profit ¥146M (−66.6%); ex-non-recurring ¥26M (−93%); first negative operating cash flow (−¥139M); ~40% of revenue overseas." },
+    { "q": "Why did profit collapse in FY2025 despite growing revenue?", "a": "Heavy R&D on AI data-center power, overseas base build-out costs (Thailand, US, Hangzhou), appliance-sector price wars compressing gross margin (−2.9pp to 22.3%), and large FX losses (USD/INR)." },
+    { "q": "What is the 800V HVDC Sidecar?", "a": "An external 480/380VAC→800VDC power cabinet delivering >1 MW per rack for NVIDIA Kyber-class dense racks — Megmeet claims up to +5% end-to-end efficiency and −45% copper vs legacy in-rack AC power." },
+    { "q": "What's Megmeet's flagship server PSU spec?", "a": "CRPS/M-CRPS family from 800 W to 5.5 kW; the Ruby-efficiency M-CRPS 5.5 kW (launched Mar 2026) with power density >100 W/in³ — roughly double traditional PSU density." },
+    { "q": "Who founded Megmeet and what's his background?", "a": "Tong Yongsheng (童永胜), 2003. PhD from Nanjing University of Aeronautics & Astronautics, power-electronics post-doc at Zhejiang University; VP at Shenzhen Huawei Electric (1996–2001), then VP at Emerson Network Power (2001–2005)." },
+    { "q": "Who dominates the server power supply market Megmeet is attacking?", "a": "Taiwanese suppliers hold ~74% — Delta Electronics alone ~41%, plus Lite-On, AcBel, Chicony, Advanced Energy. Trade press reports Megmeet displacing Lite-On as the #2 NVIDIA power-shelf source behind Delta (unconfirmed by the company)." },
+    { "q": "Which appliance-brand customers does Megmeet name?", "a": "Xiaomi, Haier, Hisense, Changhong, Skyworth — plus the smart-bathroom business through subsidiary Yihe Bathroom." },
+    { "q": "Which EV customers does Megmeet name, and what did it ship 1M+ of in 2025?", "a": "Geely, BAIC New Energy, Leapmotor, Changan, Dongfeng, FAW; it shipped over 1 million two-in-one OBC+DC-DC onboard power units in 2025." },
+    { "q": "What happened to Megmeet's stock in 2025–2026?", "a": "Rode the AI-power narrative from ~¥24 (early 2024) to a ¥190 intraday peak / ~¥94.7B market cap (June 3, 2026), then crashed ~31% in 20 days in July 2026 with three 10% limit-downs; filed for a Hong Kong A+H listing June 29, 2026." },
+    { "q": "What's the single most important upcoming event for the company?", "a": "The H1 2026 report (~Aug 27, 2026) — the first hard test of whether AI data-center power revenue is actually ramping; consensus embeds a ~6x FY2026 profit rebound." },
+    { "q": "Where does Megmeet manufacture and test outside mainland China?", "a": "Thailand own-build plant (phase II funded), India local delivery, Germany and US presence — including a Dallas, Texas AI data-center power test lab opened June 2026 (360 kW, roadmap to 1.5 MW)." },
+    { "q": "What are Megmeet's welding flagships and its notable order win?", "a": "Artsen/Artsen Plus, Ehave2 CM, and Dex digital inverter welders plus the SMARC IoT welding cloud; repeat strategic orders from Honglu Steel Construction — 1,500 robot-welding power sources (2024) + 1,800 more (May 2025)." }
+  ]
+}

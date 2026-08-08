@@ -29,6 +29,38 @@ If the user says **"profiler \<Company Name\>"** (or similar: "add \<Company\> t
 8. **Standard treatment** — every company gets exactly the standard schema sections. No bespoke sections or special emphasis for any company (explicit developer rule; applies to Sinexcel like everyone else)
 9. **Commit/push** — normal Pre-Commit + Pre-Push checklists apply (repo CHANGELOG entry, repo version bump on the push commit, README timestamp). The auto-merge workflow deploys the new data to the live site
 
+## Profiler Note Command
+
+If the user says **"profiler note \<Company\>: \<text\>"** (or similar: "add a note to \<Company\>", "log this about \<Company\>", "I learned something about \<Company\>", or relays intel from a contact/event about a covered company):
+
+1. **Resolve the slug** — must exist in `profiler-companies.json`; if it doesn't, tell the user and offer to create the profile first (`profiler <Company>`). Ecosystem-wide intel not tied to one company uses slug `general`
+2. **Capture verbatim** — store the user's input text **unaltered** in `live-site-pages/profiler-data/profiler-notes.json` (schema: PROFILER-SCHEMA.md), prepended (newest first), with `id` (`note-YYYYMMDD-NN`), today's date, and a `sourceType` inferred from context (ask if genuinely unclear)
+3. **Ask for the confidence rating (0–100)** — always ask the user to rate how confident they feel about the information on a scale of 0–100 (via `AskUserQuestion` with ranges as options plus Other for an exact number, or accept a number stated in the prompt). Never invent or default this value — it is the developer's judgment (explicit developer directive, 2026-08-07)
+4. **Public-deployment awareness** — notes deploy verbatim to the public site (explicit developer decision, 2026-08-07: verbatim storage, no sanitization). If a note contains something that looks NDA'd, deal-sensitive, or personally identifying, flag it to the user **before** committing and let them decide — flag, don't block
+5. **Tags** — add 1–3 lowercase recall tags when obvious (`pricing`, `roadmap`, `hiring`, `org-change`, …)
+6. **Commit/push** — data-only change: no Profiler page version bump; the Profiler page is an **indirect affect** in AFFECTED URLS. Repo CHANGELOG entry (e.g. "Field note added for Megmeet (note-20260808-01)")
+
+**Confidence weighting (applies whenever notes are consumed)** — any session using field notes (dossier research, refreshes, reports, prep materials) weights each note by its `confidence`:
+- **75–100** — treat as reliable first-hand intel: use it to steer research and shape analysis (`strategyRead`, prep talking points), stated as the developer's observation
+- **40–74** — treat as a lead: worth investigating and corroborating against public sources before leaning on it
+- **0–39** — treat as rumor: mention only with explicit hedging, never as a basis for conclusions
+- In all cases, notes are **never** cited as profile sources and never blended into sourced profile sections (see "Notes are not sources" in PROFILER-SCHEMA.md)
+
+## Profiler Prep Command
+
+If the user says **"profiler prep \<Company\>"** (or similar: "prep me for \<Company\>", "teach me \<Company\>", "study plan for \<Company\>", "close my gaps on \<Company\>", optionally with an event + date, e.g. "interview Thursday 10am"):
+
+1. **Read everything first** — the company's `<slug>.profile.json`, its field notes from `profiler-notes.json` (confidence-weighted), and the archive index for revision history. If no profile exists, run the full Profiler Command first
+2. **Gap analysis** — score the dossier section-by-section against what someone must know cold to hold an informed conversation about the company: core business & revenue mix, flagship products + the handful of specs worth quoting, customers/segments, competitive position, recent strategic moves, leadership, financial trajectory. Identify thin/stale spots and fill them with targeted web research (small, focused searches — not a full re-research; refresh the whole profile first if it is broadly stale)
+3. **Write the private prep pack** — `repository-information/interview-prep/<slug>/` (NOT deployed — this directory must never move under `live-site-pages/`):
+   - `<slug>-study-guide.md` — the need-to-know brief: what they sell and to whom, revenue mix, flagship products + quotable specs, competitors, recent moves with "why it matters" reads, leadership, financial story
+   - `<slug>-schedule.md` — day-by-day plan backwards-planned from the event date (~20–30 min/day, spaced: core business first, specs/financials mid-window, story + talking points last)
+   - `<slug>-flashcards.md` — Q&A pairs for cramming
+   - `<slug>-qa-prep.md` — likely questions for the developer + suggested talking points/questions to ask that signal done-homework (weave in field notes per confidence weighting)
+4. **Write the sanitized in-app study guide** — `live-site-pages/profiler-data/<slug>.study.json` (schema: PROFILER-SCHEMA.md): the public-safe subset (need-to-know sections + flashcards). **No interview/job-hunt/recruiter references, no personal circumstances** — it must read as neutral company study material. Data-only change (no page version bump); the Profiler page is an indirect affect
+5. **Refresh on demand** — re-running the command regenerates both layers from the current dossier + notes; the private pack is overwritten in place (git history preserves prior versions — no archival ritual needed)
+6. **Commit/push** — normal checklists; repo CHANGELOG entry (private file names are fine in the repo CHANGELOG; keep them out of any public page changelog)
+
 ## Archival Procedure
 
 Every **revision** of an existing profile archives the outgoing version before it is overwritten, so no dossier state is ever lost:
@@ -70,6 +102,7 @@ Built so a future Claude session can reconstruct full context cheaply:
 
 - **One file read per company** — `profiler-data/<slug>.profile.json` holds the complete dossier; no cross-file joins needed
 - **The registry is the index** — `profiler-companies.json` answers "which companies are covered, how categorized, how fresh" in one read
+- **Field notes are one read too** — `profiler-notes.json` holds every first-hand note chronologically; filter by `slug` for one company's intel, weight by `confidence` (see the Profiler Note Command). Read it before any research, refresh, report, or prep task
 - **Schema doc defines meaning** — field semantics live in PROFILER-SCHEMA.md, not in Claude's memory
 - **Revisions are diffable** — `profileVersion` + `lastUpdated` + git history + repo CHANGELOG entries give a full revision trail per company
 - **Reports** — when generating a report that cites covered companies, read the relevant profiles and cite their `sources` rather than re-researching from scratch; refresh a profile first if it is stale for the report's purpose

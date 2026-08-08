@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.06w] — 2026-08-07 11:02:33 PM EST — v01.94r
+
+### Added
+- Field Notes changelog — a ⚙ button in the bottom-right of the dashboard opens a chronological log of first-hand notes, filterable by company, each showing its date, source type, and a 0–100 confidence rating
+- Study guides — companies with a published study guide now show a "Study guide 📖" button on their dossier, opening a need-to-know brief with tap-to-flip flashcards
 
 ## [v01.05w] — 2026-08-07 09:49:43 PM EST — v01.92r
 
