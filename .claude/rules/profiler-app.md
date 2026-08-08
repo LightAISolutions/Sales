@@ -46,19 +46,17 @@ If the user says **"profiler note \<Company\>: \<text\>"** (or similar: "add a n
 - **0–39** — treat as rumor: mention only with explicit hedging, never as a basis for conclusions
 - In all cases, notes are **never** cited as profile sources and never blended into sourced profile sections (see "Notes are not sources" in PROFILER-SCHEMA.md)
 
-## Profiler Prep Command
+## Profiler Prep Command — Technology Lesson Plans
 
-If the user says **"profiler prep \<Company\>"** (or similar: "prep me for \<Company\>", "teach me \<Company\>", "study plan for \<Company\>", "close my gaps on \<Company\>", optionally with an event + date, e.g. "interview Thursday 10am"):
+If the user says **"profiler prep \<Company\>"** (or similar: "prep me for \<Company\>", "teach me \<Company\>", "study plan for \<Company\>", "teach me their products"):
 
-1. **Read everything first** — the company's `<slug>.profile.json`, its field notes from `profiler-notes.json` (confidence-weighted), and the archive index for revision history. If no profile exists, run the full Profiler Command first
-2. **Gap analysis** — score the dossier section-by-section against what someone must know cold to hold an informed conversation about the company: core business & revenue mix, flagship products + the handful of specs worth quoting, customers/segments, competitive position, recent strategic moves, leadership, financial trajectory. Identify thin/stale spots and fill them with targeted web research (small, focused searches — not a full re-research; refresh the whole profile first if it is broadly stale)
-3. **Write the private prep pack** — `repository-information/interview-prep/<slug>/` (NOT deployed — this directory must never move under `live-site-pages/`):
-   - `<slug>-study-guide.md` — the need-to-know brief: what they sell and to whom, revenue mix, flagship products + quotable specs, competitors, recent moves with "why it matters" reads, leadership, financial story
-   - `<slug>-schedule.md` — day-by-day plan backwards-planned from the event date (~20–30 min/day, spaced: core business first, specs/financials mid-window, story + talking points last)
-   - `<slug>-flashcards.md` — Q&A pairs for cramming
-   - `<slug>-qa-prep.md` — likely questions for the developer + suggested talking points/questions to ask that signal done-homework (weave in field notes per confidence weighting)
-4. **Write the sanitized in-app study guide** — `live-site-pages/profiler-data/<slug>.study.json` (schema: PROFILER-SCHEMA.md): the public-safe subset (need-to-know sections + flashcards). **No interview/job-hunt/recruiter references, no personal circumstances** — it must read as neutral company study material. Data-only change (no page version bump); the Profiler page is an indirect affect
-5. **Refresh on demand** — re-running the command regenerates both layers from the current dossier + notes; the private pack is overwritten in place (git history preserves prior versions — no archival ritual needed)
+**What this command is (developer directive, 2026-08-07):** a **technology curriculum**, not company-trivia prep. It teaches the developer — assuming **high-school-level STEM knowledge** as the starting point — whatever underlying science, engineering, and industry context is needed to genuinely understand **what the company's products and services do in the grand scheme of their industry** (e.g. what an SST does in medium-voltage critical-power AIDC infrastructure). **Never quiz or drill company trivia** — founding dates, executive names, headquarters, share counts, and similar facts stay in the dossier for reference but are NOT lesson-plan or flashcard material.
+
+1. **Read everything first** — the company's `<slug>.profile.json` (its `productsAndServices` and `technicalSpecs` are the syllabus) and its field notes from `profiler-notes.json` (confidence-weighted). If no profile exists, run the full Profiler Command first
+2. **Concept-gap analysis** — for each product line, work backwards from the product to the concepts a high-school-STEM reader needs to understand it (e.g. power shelf → AC/DC conversion, rectification, redundancy N+1, efficiency-at-scale economics). Identify the concept chain, then fill any technical gaps with targeted web research on the *technology and industry architecture* (not the company)
+3. **Write the lesson plan** — `repository-information/study-prep/<slug>/<slug>-lesson-plan.md` (NOT deployed; the directory must never move under `live-site-pages/`). Structure: progressive modules from fundamentals → today's industry architecture → where each of the company's products slots in and what it displaces → the company's other product lines → the industry map (who buys, who competes, why the technology transition matters economically). Use plain-language analogies, define every acronym on first use, and include a suggested pacing section if the developer has a deadline
+4. **Write the in-app study guide** — `live-site-pages/profiler-data/<slug>.study.json` (schema: PROFILER-SCHEMA.md): the same curriculum in section-bullet form plus **concept flashcards** (Q&A on how the technology and products work — never company trivia). Public-safe: no personal circumstances or deal context. Data-only change (no page version bump); the Profiler page is an indirect affect
+5. **Refresh on demand** — re-running the command regenerates both layers from the current dossier + notes; files are overwritten in place (git history preserves prior versions)
 6. **Commit/push** — normal checklists; repo CHANGELOG entry (private file names are fine in the repo CHANGELOG; keep them out of any public page changelog)
 
 ## Archival Procedure

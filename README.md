@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-07 11:02:33 PM EST` · Repo version: `v01.94r`
+Last updated: `2026-08-07 11:19:48 PM EST` · Repo version: `v01.95r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -81,7 +81,7 @@ Last updated: `2026-08-07 11:02:33 PM EST` · Repo version: `v01.94r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/fluence.profile.json">fluence.profile.json</a>   — Fluence dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hithium.profile.json">hithium.profile.json</a>   — Hithium dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.profile.json">megmeet.profile.json</a>   — Megmeet dossier profile
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.study.json">megmeet.study.json</a>     — Megmeet in-app study guide (sanitized subset of the prep pack)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.study.json">megmeet.study.json</a>     — Megmeet in-app technology study guide (concept sections + flashcards)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.profile.json">sinexcel.profile.json</a>  — Sinexcel dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sungrow.profile.json">sungrow.profile.json</a>   — Sungrow dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.profile.json">tesla.profile.json</a>     — Tesla dossier profile
@@ -249,12 +249,9 @@ Last updated: `2026-08-07 11:02:33 PM EST` · Repo version: `v01.94r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/IMPROVEMENTS.md">IMPROVEMENTS.md</a>         — [template · initialized] Potential improvements
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/KNOWN-CONSTRAINTS-AND-FIXES.md">KNOWN-CONSTRAINTS-AND-FIXES.md</a>    — Architectural constraints &amp; resolved bug fixes (GAS double-iframe, postMessage, HMAC, deploy webhook)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
-│   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/interview-prep">interview-prep/</a>       — Private prep packs from the Profiler Prep Command (not deployed)
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/interview-prep/megmeet">megmeet/</a>            — Megmeet prep pack (study guide, schedule, flashcards, Q&amp;A prep)
-│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/interview-prep/megmeet/megmeet-study-guide.md">megmeet-study-guide.md</a> — Need-to-know brief
-│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/interview-prep/megmeet/megmeet-schedule.md">megmeet-schedule.md</a>   — Day-by-day study schedule
-│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/interview-prep/megmeet/megmeet-flashcards.md">megmeet-flashcards.md</a> — Q&amp;A cram cards
-│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/interview-prep/megmeet/megmeet-qa-prep.md">megmeet-qa-prep.md</a>    — Likely questions &amp; talking points
+│   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep">study-prep/</a>           — Technology lesson plans from the Profiler Prep Command (not deployed)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/megmeet">megmeet/</a>            — Megmeet curriculum (power electronics → AIDC 800VDC chain → product lines)
+│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-lesson-plan.md">megmeet-lesson-plan.md</a> — Full-depth technology lesson plan (5 modules)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/RULE-COST-AUDIT.md">RULE-COST-AUDIT.md</a>       — Rule cost audit — ranked table, trim-recommendation checklist (T1–T9), progress tracking
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/TODO.md">TODO.md</a>                 — [template · initialized] Actionable to-do items
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/FUTURE-CONSIDERATIONS.md">FUTURE-CONSIDERATIONS.md</a> — [template] Deferred architectural ideas for scale
