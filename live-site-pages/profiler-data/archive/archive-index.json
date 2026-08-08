@@ -1,1 +1,29 @@
-{}
+{
+  "byd": [
+    { "file": "byd.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+  ],
+  "catl": [
+    { "file": "catl.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+  ],
+  "flexgen": [
+    { "file": "flexgen.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+  ],
+  "fluence": [
+    { "file": "fluence.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+  ],
+  "hithium": [
+    { "file": "hithium.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+  ],
+  "sinexcel": [
+    { "file": "sinexcel.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+  ],
+  "sungrow": [
+    { "file": "sungrow.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+  ],
+  "tesla": [
+    { "file": "tesla.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+  ],
+  "wartsila": [
+    { "file": "wartsila.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+  ]
+}

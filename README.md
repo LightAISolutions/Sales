@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-07 11:19:48 PM EST` · Repo version: `v01.95r`
+Last updated: `2026-08-08 12:07:00 AM EST` · Repo version: `v01.96r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -76,18 +76,36 @@ Last updated: `2026-08-07 11:19:48 PM EST` · Repo version: `v01.95r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-companies.json">profiler-companies.json</a> — Company registry (roster, categories, freshness)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-notes.json">profiler-notes.json</a>    — Field notes chronological log (⚙ changelog in the app; developer-rated confidence)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/byd.profile.json">byd.profile.json</a>       — BYD dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/byd.study.json">byd.study.json</a>     — BYD in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/catl.profile.json">catl.profile.json</a>      — CATL dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/catl.study.json">catl.study.json</a>     — CATL in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flexgen.profile.json">flexgen.profile.json</a>   — FlexGen dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flexgen.study.json">flexgen.study.json</a>     — FlexGen in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/fluence.profile.json">fluence.profile.json</a>   — Fluence dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/fluence.study.json">fluence.study.json</a>     — Fluence in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hithium.profile.json">hithium.profile.json</a>   — Hithium dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hithium.study.json">hithium.study.json</a>     — Hithium in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.profile.json">megmeet.profile.json</a>   — Megmeet dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.study.json">megmeet.study.json</a>     — Megmeet in-app technology study guide (concept sections + flashcards)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.profile.json">sinexcel.profile.json</a>  — Sinexcel dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.study.json">sinexcel.study.json</a>     — Sinexcel in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sungrow.profile.json">sungrow.profile.json</a>   — Sungrow dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sungrow.study.json">sungrow.study.json</a>     — Sungrow in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.profile.json">tesla.profile.json</a>     — Tesla dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.study.json">tesla.study.json</a>     — Tesla in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.profile.json">wartsila.profile.json</a>  — Wärtsilä dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.study.json">wartsila.study.json</a>     — Wärtsilä in-app technology study guide
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data/archive">archive/</a>                — Superseded dossier versions, archived on each profile revision
-│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/archive-index.json">archive-index.json</a>  — Index of archived profile versions per company
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/archive-index.json">archive-index.json</a>  — Index of archived profile versions per company
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/byd.profile.v1.json">byd.profile.v1.json</a> — Archived v1 dossier (BYD)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/catl.profile.v1.json">catl.profile.v1.json</a> — Archived v1 dossier (CATL)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/flexgen.profile.v1.json">flexgen.profile.v1.json</a> — Archived v1 dossier (FlexGen)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/fluence.profile.v1.json">fluence.profile.v1.json</a> — Archived v1 dossier (Fluence)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v1.json">hithium.profile.v1.json</a> — Archived v1 dossier (Hithium)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sinexcel.profile.v1.json">sinexcel.profile.v1.json</a> — Archived v1 dossier (Sinexcel)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sungrow.profile.v1.json">sungrow.profile.v1.json</a> — Archived v1 dossier (Sungrow)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v1.json">tesla.profile.v1.json</a> — Archived v1 dossier (Tesla)
+│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/wartsila.profile.v1.json">wartsila.profile.v1.json</a> — Archived v1 dossier (Wärtsilä)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/templates">templates/</a>               — [template] Template source files for creating new pages and GAS scripts
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-noauth.html.txt">HtmlAndGasTemplateAutoUpdate-noauth.html.txt</a> — [template] HTML page template without auth
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-auth.html.txt">HtmlAndGasTemplateAutoUpdate-auth.html.txt</a> — [template · modified] HTML page template with Google Authentication
@@ -250,8 +268,26 @@ Last updated: `2026-08-07 11:19:48 PM EST` · Repo version: `v01.95r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/KNOWN-CONSTRAINTS-AND-FIXES.md">KNOWN-CONSTRAINTS-AND-FIXES.md</a>    — Architectural constraints &amp; resolved bug fixes (GAS double-iframe, postMessage, HMAC, deploy webhook)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep">study-prep/</a>           — Technology lesson plans from the Profiler Prep Command (not deployed)
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/megmeet">megmeet/</a>            — Megmeet curriculum (power electronics → AIDC 800VDC chain → product lines)
-│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-lesson-plan.md">megmeet-lesson-plan.md</a> — Full-depth technology lesson plan (5 modules)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/byd">byd/</a> — BYD technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/byd/byd-lesson-plan.md">byd-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/catl">catl/</a> — CATL technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/catl/catl-lesson-plan.md">catl-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/flexgen">flexgen/</a> — FlexGen technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/flexgen/flexgen-lesson-plan.md">flexgen-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/fluence">fluence/</a> — Fluence technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/fluence/fluence-lesson-plan.md">fluence-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/hithium">hithium/</a> — Hithium technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-lesson-plan.md">hithium-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/megmeet">megmeet/</a> — Megmeet technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-lesson-plan.md">megmeet-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sinexcel">sinexcel/</a> — Sinexcel technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/sinexcel/sinexcel-lesson-plan.md">sinexcel-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sungrow">sungrow/</a> — Sungrow technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/sungrow/sungrow-lesson-plan.md">sungrow-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/tesla">tesla/</a> — Tesla technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/tesla/tesla-lesson-plan.md">tesla-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/wartsila">wartsila/</a> — Wärtsilä technology curriculum
+│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/wartsila/wartsila-lesson-plan.md">wartsila-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/RULE-COST-AUDIT.md">RULE-COST-AUDIT.md</a>       — Rule cost audit — ranked table, trim-recommendation checklist (T1–T9), progress tracking
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/TODO.md">TODO.md</a>                 — [template · initialized] Actionable to-do items
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/FUTURE-CONSIDERATIONS.md">FUTURE-CONSIDERATIONS.md</a> — [template] Deferred architectural ideas for scale
