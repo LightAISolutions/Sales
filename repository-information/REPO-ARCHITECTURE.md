@@ -53,6 +53,7 @@ graph TB
             SCRAPER_PAGE["[template] Scraper.html\n(News Scraper)"]
             RECEIPTS_PAGE["[template] Receipts.html\n(Receipts)"]
             PROFILER_PAGE["Profiler.html\n(Company Dossiers)"]
+            PROFILERINTAKE_PAGE["[template] profiler-intake.html\n(Profiler Notes Intake)"]
         end
 
         subgraph "Google Apps Scripts [template]"
@@ -100,6 +101,7 @@ graph TB
             GAS_MASTERACL["[template] MasterACL.gs"]
             GAS_SCRAPER["[template] Scraper.gs"]
             GAS_RECEIPTS["[template] Receipts.gs"]
+            GAS_PROFILERINTAKE["[template] profiler-intake.gs"]
             INIT_SCRIPT -.->|"auto-detects org/repo\nreplaces 22 files"| CLAUDE_MD
         end
     end
@@ -110,12 +112,14 @@ graph TB
     TPL_AUTH -.->|"copy to create\nnew auth pages"| MASTERACL_PAGE
     TPL_AUTH -.->|"copy to create\nnew auth pages"| SCRAPER_PAGE
     TPL_AUTH -.->|"copy to create\nnew auth pages"| RECEIPTS_PAGE
+    TPL_AUTH -.->|"copy to create\nnew auth pages"| PROFILERINTAKE_PAGE
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_TESTAUTHGAS1
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_TESTAUTHHTML1
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_GLOBALACL
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_MASTERACL
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_SCRAPER
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_RECEIPTS
+    GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_PROFILERINTAKE
     TESTAUTHGAS1_PAGE -.->|"embeds via iframe"| GAS_TESTAUTHGAS1
     TESTAUTHHTML1_PAGE -.->|"embeds via iframe"| GAS_TESTAUTHHTML1
     LIVE -.->|"serves"| GASTPL_PAGE
@@ -127,12 +131,14 @@ graph TB
     LIVE -.->|"serves"| SCRAPER_PAGE
     LIVE -.->|"serves"| RECEIPTS_PAGE
     LIVE -.->|"serves"| PROFILER_PAGE
+    LIVE -.->|"serves"| PROFILERINTAKE_PAGE
     GAS_DEPLOY -.->|"triggers self-update"| GAS_TESTAUTHGAS1
     GAS_DEPLOY -.->|"triggers self-update"| GAS_TESTAUTHHTML1
     GAS_DEPLOY -.->|"triggers self-update"| GAS_GLOBALACL
     GAS_DEPLOY -.->|"triggers self-update"| GAS_MASTERACL
     GAS_DEPLOY -.->|"triggers self-update"| GAS_SCRAPER
     GAS_DEPLOY -.->|"triggers self-update"| GAS_RECEIPTS
+    GAS_DEPLOY -.->|"triggers self-update"| GAS_PROFILERINTAKE
     SHA_FILE -.->|"read by"| SHA_CHECK
     UPDATE_SHA -.->|"writes"| SHA_FILE
     HTML_VERS -.->|"version polling"| GASTPL_PAGE
@@ -144,6 +150,7 @@ graph TB
     HTML_VERS -.->|"version polling"| SCRAPER_PAGE
     HTML_VERS -.->|"version polling"| RECEIPTS_PAGE
     HTML_VERS -.->|"version polling"| PROFILER_PAGE
+    HTML_VERS -.->|"version polling"| PROFILERINTAKE_PAGE
     TPL_NOAUTH -.->|"copy to create\nnew noauth pages"| TEXTCOMPARE_PAGE
     TPL_NOAUTH -.->|"copy to create\nnew noauth pages"| PROFILER_PAGE
 
@@ -361,6 +368,7 @@ Environment-specific internals (page lifecycle states, maintenance mode, splash 
 | MasterACL | [`repository-information/diagrams/MasterACL-diagram.md`](diagrams/MasterACL-diagram.md) |
 | News Scraper | [`repository-information/diagrams/Scraper-diagram.md`](diagrams/Scraper-diagram.md) |
 | Receipts | [`repository-information/diagrams/Receipts-diagram.md`](diagrams/Receipts-diagram.md) |
+| Profiler Notes Intake | [`repository-information/diagrams/profiler-intake-diagram.md`](diagrams/profiler-intake-diagram.md) |
 
 
 ## 4. Git Graph — Branching Strategy
@@ -556,6 +564,7 @@ classDiagram
     MASTERACL_PAGE -.->|"embeds via iframe"| GAS_MASTERACL
     SCRAPER_PAGE -.->|"embeds via iframe"| GAS_SCRAPER
     RECEIPTS_PAGE -.->|"embeds via iframe"| GAS_RECEIPTS
+    PROFILERINTAKE_PAGE -.->|"embeds via iframe"| GAS_PROFILERINTAKE
     HTMLPage "1" --> "1" Changelog : html changelog
     HTMLPage "1" --> "1" EnvironmentDiagram : internals documented in
     GASScript "1" --> "1" VersionFile : gs.version.txt

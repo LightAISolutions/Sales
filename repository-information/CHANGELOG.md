@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.99r] — 2026-08-08 07:36:43 PM EST
+
+> **Prompt:** "Everything looks good so far. However, my goal is to eventually connect all my work related apps together such that Receipts is used for my reimbursement expenses, Profiler is used to build up and display corporate dossiers that can be updated with insights and trade news, and Scraper is used to discover relevant recent news and produce news digests. I would like to centralize all information in my bess-aidc-library repo, so make sure Profiler and Scraper store their information there. I want future reporting functions to draw from my entire pool of information. Correct me if my understanding is wrong or if there's a more efficient way to accomplish my goal.
+>
+> In the Profiler app specifically, I dont see where I can view previous versions of each company dossier - is that built in? Also, I want to have an option to input new information I learn about each company from trade shows and in person meetings and have the app efficiently store it and decide if it's important enough to include in the dossier."
+>
+> *(Via AskUserQuestion: centralization architecture — discuss more first; version-history viewer — build; note capture — GAS-backed in-app intake; Receipts in pool — not yet.)*
+
+### Added
+
+- **Dossier version-history viewer** (`Profiler.html` v01.07w) — "Versions 🕘" button on dossiers with archived versions; lists versions from `archive-index.json`, renders any archived dossier with an "Archived vN" banner and a one-tap return to current; study-guide probe skipped on archived snapshots; "＋ Add note" link added to the ⚙ Field Notes overlay
+- **`profiler-intake` environment** — new auth-gated GAS project scaffolded via `setup-gas-project.sh` (page, `ProfilerIntake/profiler-intake.gs` v01.01g, config, version files, changelogs, GAS Projects table row, per-environment diagram, workflow deploy step). PROJECT block implements the field-note form (company/source/note/0–100 confidence slider) and server-side `submitFieldNote` — session-validated, slug-validated against the registry, LockService-serialized, committing verbatim notes to `profiler-notes.json` on `main` via the GitHub Contents API with `triage: "pending"` + `submittedVia: "profiler-intake"`. Deployment ID pending (workflow step no-ops until set)
+- **Triage & promotion rules** (`.claude/rules/profiler-app.md`) — notes never edit dossiers directly; Claude evaluates pending notes at every refresh (or on "triage notes"), records `promoted (vN)` / `logged-only` outcomes, reports each decision. `triage`/`submittedVia` fields added to the Field Notes schema in `PROFILER-SCHEMA.md`
 
 ## [v01.98r] — 2026-08-08 12:14:10 AM EST
 

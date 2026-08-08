@@ -1,0 +1,11 @@
+{
+  "TITLE": "Profiler Notes Intake",
+  "DEPLOYMENT_ID": "YOUR_DEPLOYMENT_ID",
+  "SPREADSHEET_ID": "YOUR_SPREADSHEET_ID",
+  "SHEET_NAME": "YOUR_SHEET_NAME",
+  "MASTER_ACL_SPREADSHEET_ID": "YOUR_MASTER_ACL_SPREADSHEET_ID",
+  "ACL_SHEET_NAME": "Access",
+  "ACL_PAGE_NAME": "profiler-intake",
+  "PORTAL_ICON": "📝",
+  "PORTAL_DESCRIPTION": "Field-note intake for the Profiler dossiers"
+}

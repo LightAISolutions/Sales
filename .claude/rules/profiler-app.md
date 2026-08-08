@@ -40,6 +40,14 @@ If the user says **"profiler note \<Company\>: \<text\>"** (or similar: "add a n
 5. **Tags** — add 1–3 lowercase recall tags when obvious (`pricing`, `roadmap`, `hiring`, `org-change`, …)
 6. **Commit/push** — data-only change: no Profiler page version bump; the Profiler page is an **indirect affect** in AFFECTED URLS. Repo CHANGELOG entry (e.g. "Field note added for Megmeet (note-20260808-01)")
 
+**Second capture channel — the intake app.** Notes can also arrive via the `profiler-intake` page (auth-gated GAS app, `googleAppsScripts/ProfilerIntake/`): the GAS server validates the session, stores the note verbatim with the developer's confidence rating, marks it `triage: "pending"` + `submittedVia: "profiler-intake"`, and commits it straight to `profiler-notes.json` on `main` (a machine data commit — exempt from the version/changelog checklist, and its Pages deploy is what makes the note visible in the app). Claude-command captures and intake-app captures are equivalent inputs to everything below.
+
+**Triage & promotion (deciding what reaches the dossier)** — capturing a note never edits a dossier directly; promotion is a separate, Claude-made decision:
+1. **When**: during every dossier refresh/revision of the note's company (scheduled or manual), plus on demand when the user says "triage notes" (or "review pending notes")
+2. **How**: for each `triage: "pending"` note on the company (and untriaged Claude-command notes), weigh it — confidence score (below), materiality (would an analyst reading the dossier want this?), corroboration (does any public source now support it?)
+3. **Outcomes** (recorded by updating the note's `triage` field): `promoted (vN)` — the insight is folded into the dossier revision (typically `recentDevelopments` with the note as unsourced context, or `strategyRead`; never presented as sourced public fact per "Notes are not sources"); or `logged-only` — kept as recall context with no dossier change. Never delete or alter the note text itself
+4. **Report**: the response (or refresh summary) lists each triaged note and its outcome so the developer sees what was promoted and why
+
 **Confidence weighting (applies whenever notes are consumed)** — any session using field notes (dossier research, refreshes, reports, prep materials) weights each note by its `confidence`:
 - **75–100** — treat as reliable first-hand intel: use it to steer research and shape analysis (`strategyRead`, prep talking points), stated as the developer's observation
 - **40–74** — treat as a lead: worth investigating and corroborating against public sources before leaning on it

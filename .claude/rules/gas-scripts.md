@@ -41,6 +41,7 @@ Each GAS project has a code file and a corresponding embedding page. Register th
 | MasterACL | `googleAppsScripts/MasterACL/MasterACL.gs` | `googleAppsScripts/MasterACL/MasterACL.config.json` | `live-site-pages/MasterACL.html` |
 | Scraper | `googleAppsScripts/Scraper/Scraper.gs` | `googleAppsScripts/Scraper/Scraper.config.json` | `live-site-pages/Scraper.html` |
 | Receipts | `googleAppsScripts/Receipts/Receipts.gs` | `googleAppsScripts/Receipts/Receipts.config.json` | `live-site-pages/Receipts.html` |
+| ProfilerIntake | `googleAppsScripts/ProfilerIntake/profiler-intake.gs` | `googleAppsScripts/ProfilerIntake/profiler-intake.config.json` | `live-site-pages/profiler-intake.html` |
 
 
 ## GAS Project Config (config.json)

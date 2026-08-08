@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.06w">
+  <meta name="build-version" content="v01.07w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -387,6 +387,35 @@
     .ov-note .conf.hi { background: var(--ov-dev); } .ov-note .conf.mid { background: var(--ov-gold); } .ov-note .conf.lo { background: var(--ov-adv); }
     .ov-note p { margin: 6px 0 2px; font-size: 14px; }
     .ov-note .tags { color: var(--ov-faint); font: 10px/1.6 var(--ov-mono); }
+    /* Dossier version history — Versions button + list overlay + archived banner */
+    #ov-vers-btn { margin-top: 14px; margin-left: 8px; }
+    #ov-vers-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(8,9,12,0.8); z-index: 10002; display: none;
+      align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;
+    }
+    #ov-vers-panel {
+      background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 12px;
+      width: min(440px, 96vw); max-height: 70vh; overflow-y: auto; padding: 18px 20px 20px;
+      box-shadow: 0 14px 50px rgba(0,0,0,0.5);
+    }
+    #ov-vers-panel .ttl { font: 11px/1.4 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-gold); margin-bottom: 12px; }
+    .ov-vers-item {
+      display: flex; align-items: baseline; gap: 10px; width: 100%; text-align: left;
+      background: var(--ov-card2); border: 1px solid var(--ov-line); border-radius: 8px;
+      padding: 11px 14px; margin: 8px 0; cursor: pointer; color: var(--ov-paper); font: inherit;
+    }
+    .ov-vers-item:hover { border-color: var(--ov-gold); }
+    .ov-vers-item .v { font: 13px/1 var(--ov-mono); color: var(--ov-gold); }
+    .ov-vers-item .d { color: var(--ov-muted); font-size: 12.5px; }
+    .ov-vers-item.current .v { color: var(--ov-dev); }
+    .ov-vbanner {
+      background: rgba(216,180,90,0.12); border: 1px solid var(--ov-gold); border-radius: 10px;
+      padding: 12px 16px; margin: 0 0 22px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+      font-size: 13.5px;
+    }
+    .ov-vbanner .tag { font: 10px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-ink); background: var(--ov-gold); border-radius: 4px; padding: 4px 8px; }
+    .ov-vbanner button { margin-left: auto; }
     /* Study guide — dossier button + overlay */
     #ov-study-btn { margin-top: 14px; margin-left: 8px; }
     #ov-study-overlay {
@@ -1248,16 +1277,31 @@
       exportBtn.addEventListener('click', function() { ovShowPreview(p); });
       head.appendChild(exportBtn);
       // Study guide button — appears only when this company's <slug>.study.json exists
-      ovFetchJson(p.slug + '.study.json')
-        .then(function(sg) {
-          if (document.getElementById('ov-study-btn')) return;
-          var sBtn = ovEl('button', 'ov-btn ghost', 'Study guide 📖');
-          sBtn.id = 'ov-study-btn'; sBtn.type = 'button';
-          sBtn.title = 'Open the study guide for this company';
-          sBtn.addEventListener('click', function() { ovShowStudy(sg); });
-          head.appendChild(sBtn);
-        })
-        .catch(function() { /* no study guide for this company — button stays hidden */ });
+      // (skipped on archived snapshots — the guide reflects the current dossier)
+      if (!p._archived) {
+        ovFetchJson(p.slug + '.study.json')
+          .then(function(sg) {
+            if (document.getElementById('ov-study-btn')) return;
+            var sBtn = ovEl('button', 'ov-btn ghost', 'Study guide 📖');
+            sBtn.id = 'ov-study-btn'; sBtn.type = 'button';
+            sBtn.title = 'Open the study guide for this company';
+            sBtn.addEventListener('click', function() { ovShowStudy(sg); });
+            head.appendChild(sBtn);
+          })
+          .catch(function() { /* no study guide for this company — button stays hidden */ });
+        // Versions button — appears only when archived versions exist for this company
+        ovFetchJson('archive/archive-index.json')
+          .then(function(idx) {
+            var entries = idx && idx[p.slug];
+            if (!entries || !entries.length || document.getElementById('ov-vers-btn')) return;
+            var vBtn = ovEl('button', 'ov-btn ghost', 'Versions 🕘');
+            vBtn.id = 'ov-vers-btn'; vBtn.type = 'button';
+            vBtn.title = 'Browse previous versions of this dossier';
+            vBtn.addEventListener('click', function() { ovShowVersions(p, entries); });
+            head.appendChild(vBtn);
+          })
+          .catch(function() { /* no archive index — button stays hidden */ });
+      }
       main.appendChild(head);
 
       // Snapshot
@@ -1467,6 +1511,11 @@
       var panel = ovEl('div'); panel.id = 'ov-notes-panel';
       var head = ovEl('div'); head.id = 'ov-notes-head';
       head.appendChild(ovEl('span', 'ttl', 'Field Notes — Chronological Log'));
+      var addLink = ovEl('a', 'ov-btn ghost', '＋ Add note');
+      addLink.href = 'profiler-intake.html'; addLink.target = '_blank'; addLink.rel = 'noopener';
+      addLink.style.cssText = 'text-decoration:none;font-size:11px;padding:7px 11px;';
+      addLink.title = 'Open the field-note intake form (sign-in required)';
+      head.appendChild(addLink);
       var close = ovEl('button', null, '×'); close.id = 'ov-notes-close'; close.type = 'button';
       close.setAttribute('aria-label', 'Close');
       close.addEventListener('click', function() { overlay.style.display = 'none'; });
@@ -1532,6 +1581,67 @@
         if (n.tags && n.tags.length) row.appendChild(ovEl('div', 'tags', '# ' + n.tags.join('  # ')));
         body.appendChild(row);
       });
+    }
+
+    // ── Dossier version history — list overlay + archived rendering ──
+    // Data: profiler-data/archive/archive-index.json + archive/<slug>.profile.v<N>.json
+    var ovVersOverlay = null;
+    function ovShowVersions(p, entries) {
+      if (!ovVersOverlay) {
+        ovVersOverlay = ovEl('div'); ovVersOverlay.id = 'ov-vers-overlay';
+        ovVersOverlay.addEventListener('click', function(e) { if (e.target === ovVersOverlay) ovVersOverlay.style.display = 'none'; });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && ovVersOverlay.style.display === 'flex') ovVersOverlay.style.display = 'none';
+        });
+        document.body.appendChild(ovVersOverlay);
+      }
+      ovClear(ovVersOverlay);
+      var panel = ovEl('div'); panel.id = 'ov-vers-panel';
+      panel.appendChild(ovEl('div', 'ttl', 'Dossier Versions — ' + (p.shortName || p.name)));
+      var cur = ovEl('button', 'ov-vers-item current'); cur.type = 'button';
+      cur.appendChild(ovEl('span', 'v', 'v' + (p.profileVersion || '?')));
+      cur.appendChild(ovEl('span', 'd', 'current · as of ' + (p.lastUpdated || '—')));
+      cur.addEventListener('click', function() { ovVersOverlay.style.display = 'none'; });
+      panel.appendChild(cur);
+      entries.slice().sort(function(a, b) { return (b.profileVersion || 0) - (a.profileVersion || 0); }).forEach(function(en) {
+        var it = ovEl('button', 'ov-vers-item'); it.type = 'button';
+        it.appendChild(ovEl('span', 'v', 'v' + en.profileVersion));
+        it.appendChild(ovEl('span', 'd', 'archived ' + (en.archivedAt || '—') + ' · superseded by v' + (en.supersededBy || '?')));
+        it.addEventListener('click', function() {
+          ovVersOverlay.style.display = 'none';
+          ovRenderArchived(p.slug, en);
+        });
+        panel.appendChild(it);
+      });
+      ovVersOverlay.appendChild(panel);
+      ovVersOverlay.style.display = 'flex';
+    }
+
+    function ovRenderArchived(slug, en) {
+      var main = ovMain(); ovClear(main);
+      main.appendChild(ovEl('p', 'ov-loading', 'Loading archived dossier…'));
+      ovFetchJson('archive/' + en.file)
+        .then(function(ap) {
+          ap._archived = en;
+          ovClear(main);
+          var back = ovEl('button', 'ov-back', '← All companies');
+          back.type = 'button';
+          back.addEventListener('click', function() { window.location.hash = ''; });
+          main.appendChild(back);
+          var banner = ovEl('div', 'ov-vbanner');
+          banner.appendChild(ovEl('span', 'tag', 'Archived v' + en.profileVersion));
+          banner.appendChild(ovEl('span', null, 'Historical snapshot — superseded by v' + (en.supersededBy || '?') + ' on ' + (en.archivedAt || '—') + '.'));
+          var curBtn = ovEl('button', 'ov-btn', 'View current dossier');
+          curBtn.type = 'button';
+          curBtn.addEventListener('click', function() { ovRenderCompany(slug); window.scrollTo(0, 0); });
+          banner.appendChild(curBtn);
+          main.appendChild(banner);
+          ovPaintCompany(main, ap);
+        })
+        .catch(function() {
+          ovClear(main);
+          main.appendChild(ovEl('p', 'ov-empty', 'Could not load the archived version (' + en.file + ').'));
+        });
     }
 
     // ── Study guide — dossier button + overlay (data: <slug>.study.json) ──
