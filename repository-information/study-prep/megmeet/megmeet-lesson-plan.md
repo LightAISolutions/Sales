@@ -2,7 +2,7 @@
 
 **Purpose:** teach what Megmeet's products actually *do* in the grand scheme of their industries, starting from high-school STEM. No company trivia — this is about the technology. Generated 2026-08-07 from the Profiler dossier (profileVersion 1). Companion: the in-app guide (Profiler → Megmeet → Study guide 📖) has the condensed version + concept flashcards.
 
-**Suggested pacing (before Thu 8/14):** Module 1+2 on day one (~30 min), Module 3 across two days (~45 min — this is the core), Modules 4–5 in one sitting (~30 min), then flashcard passes in the app.
+**Suggested pacing (before the Fri 8/14 meeting; Thu 8/13 is blocked out):** Module 1+2 on day one (~30 min), Module 3 across two days (~45 min — this is the core), Modules 4–5 in one sitting (~30 min), then flashcard passes in the app.
 
 ## Module 1 — The physics you already know, applied
 
