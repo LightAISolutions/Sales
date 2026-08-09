@@ -1,8 +1,8 @@
 # Profiler.html — GAS Integration Sequence Diagram (Auth)
 
-Sequence diagram showing the dual polling systems (HTML + GAS) and the inline note-box iframe flow (PROJECT OVERRIDE — not the template’s full-screen iframe).
+Sequence diagram showing the dual polling systems (HTML + GAS) and the note-box fetch transport (PROJECT OVERRIDE — no iframe: document-loads of /exec fail in cookie-carrying browsers).
 
-> [Open in mermaid.live](https://mermaid.live/edit#pako:eNq1Vttu4zYQ_ZWBnmSsrW663Rehm8B1XNdAshtEjncfDAQ0OZKJUKRKUna8F6BP_YCiX7hfUowujq9pgKIviUHO5czMOUN9CbgRGMSBw99L1BwvJcssy2caAKBg1ksuC6Y9_GLNyqE9vPhtcn0FzMGNNalUaKOFz9URs-m2EdlES7ROGh35R39oP9qxz9y_WPcTMqd_H3EO_aL4eW7Pw35ROEi4lYXvHHEyJlNY-dW_PvRLvzi0G1T1DRZMZ6hM5ma6tnlvPIJZom2b06VexHDDMoQrw0Rt1lz2zs_ra7o51i263RhdIg0G7hG-__kXWKTqMWTezMNOpzqjWgUWyqxz1B7ubq-OhEk8cwsQVTBBNhCupBZmFd1nzFEBd1Z1dhxH_SSGS-OcRAuaSpybR5iXUgkHUiupEWRqWY4QXjhVZu-4yQum102YUT_p9c7Pm6pjGGvPHhBSY3OwqAVaCuOkQPAL3GQ43dR6OPHOkID-oPaSMy-N3i2gsR9r6SVT8jPCaJxA2PiPBfn5NSRol5Kja3FX171N68hHyblldg3KMIEnxnnn0AJXkj84SGSmYXwcjiWFOd_nHJ2bmAfU4eBqPHw_uR9fdsFxU5yEUvuAJyewyFEuWzTbQyuM89foHMswzJjrsdIvepVTt_bdmtATrilama6b4K8gQw8llSR1avbhVGmqgjFnUnVBsxx3gpLBYIH8ASi7sfJzNSAI-4PJeDq8v7kdJsMJcKNTme0ypq71aBEWXal8F1xZdeKHlEli7UkZTuN6LfVLb3q3mFp0CwhJRGs4e922WRlTwLA5BIfcaOHqq20hTWMYDScnV9fFPZ-_8zJH51lebLlPn4r6unx9Fn36tPoKxkLOpPaomea4OT_iz5Sn2VAa4NXuEU-Xh0JfmBXMgrtCMC91FkXRLIBX4NBDgVpInfWcKfXxEButNrtBmVpWkUViftjZ9dpXwG1lVS2lWfAR5056hFtkYj0LwBWKVtAr2EuPyiFcP7UCciPweXRVjcZSK7abWM1esfVe7IQ2VDOnZxo3MKX2wqw0CONjeBtFP0XRmyj6MYrOtiK20KsfJzcVUaWf7NHu7K0DgYqtu7TwNOzTsJXwdLOygJOCYhAGTz2BgI_S-YtGQFtUqxmVQVgZuGoqjhpHwAqp1HPkh5ClHi0QZNlgqaB3DmQx2pPFLrxTojiCdJfxhHL5YtbPArIvifQo4Psff0PN2FYB_zvbB_RIv4jqL6RjOyXg27x8KREpRsXCvvayl6w1p_l45AePZJ1tnNYJjVKwkn4hNbxxYNJ6e9Jxl76jmBDQkhi82ficVsKAlNV-MMGNKcrCHX8-B_Ry1vnauVP9O2Ap2q_o-WJ3CfM2QZQ3TRlcPdHrmtmHqn80qYJZh4KwN5UVZdGiP45om4gvAJS5_won6AY52pxJEcTBl1ngF5jjLIhngcCUlcrPgm9BN2ClNzTYIPa2xG5Qk7_5bK8Pv_0DMCrP8g)
+> [Open in mermaid.live](https://mermaid.live/edit#pako:eNq1V9tu20YQ_ZUBnyhYYuOmeREaB6rsOipsxzBtJQ8CjNVyRC683GF3l5KVC9CnfkDRL8yXFMOLLcmUa6Doi0js3M7MnJmlvgSSEgyGgcPfSzQSj5VIrchnBgCgENYrqQphPPxiaeXQPhW8vz4_A-Hg0tJCabRR5nPdoTbdVGKdaInWKTKRv_dP9U-39FP3L9qjmNX58RHnMCqKn-f2KBwVhYNYWlX4XocRUaqxsqvfPoxKnz3VG1f5jTNhUtSUupmpdS7II9ASbVucPtdiCJciRTgjkdRqjXBwdFSLWdJVLZY-KB0jNwZuEb7_-RdY5OwxFJ7mYa9XnXGuCRaa1jkaDzdXZx1uYi9cBknlLGEdCFfKJLSKblPhOIEbq3td8ck5hRYM5zine7BoErQOjPBqibAgm0N4OonBqdQMlAEyXDQ0ftvd6SgewpjoTuFAo3OwQC8z-P7H34D3sqrpNd2h6YPP0NTxqHAQCukVmbd80Hg8HcWDB4C_xR8uYKkEjMl4ND5Gu1QSIRSGzDqn0oHjI5NCIXzW29-0uvnDLRIA_6DxSgpGsZ1Roz8xyiuh1WcErkPY2E8StvNraBC5Fn0lfkyAbbSaW2HXoEkkuIcuNw4tSK3knYNYpQYm3XAsT7DzIynRuaqk4fhscnJxfTs57oOTVOyFUtuAZyOwKFEtWzSbXSzI-XN0TqQYpsINROmzgW-ax4-NPj3imqJVi3Xj_ABS9FBySsosaBdOFaZKGHOhdB-MyHHLacWmDOUdcHSy6nPVIAhH4-vJ9OT28uokPrkGSWah0i7edCZh0ZXa98GVVSV-WAiln2HM--mwXnuj0tPgChcWXQYhD-kaDl-1ZdZEBZw0h-BQkklcLdqct-kQTk-u967Gd7dy_tarHJ0XebFhPn1M6uvy1WH06dPqK5CFXCieCGEkPpx32AvtuTccBuo5TB6FTxdJRiuYBTdFIrwyaRRFswAOwKGHAk2iTDpwVJpuF03dhtDsHk31WEUWmflhb9tqdwKuKq1q6c2Cjzh3yiNcoUjWswBcoXnFHcBOeNQO4fyxFJBTgs-jq3Iky6XYLGLVey3WO75jkSM0fXqmcGMqjU9oZSAhP4Q3UfRTFL2Ooh-j6HDDYwu9etm7qZgqo3iHdodvHCSoxbpZobs0bEd4-rCyQPIEDSEh3HfFAt4r5981A7RBtZpRKYSVgqu64rhwDKxQWj9HfgjFwqMFhqwaLBX03pOxON0Zi214-4aiA-k24xnl8sWsnwWsXzLpManurJqx7QT872wf80fAi6j-Qjq2XQK5ycuXEpF9VCwcGa8G8dpI7o9H-eSSrKNNFnVA0hpWymfKwGsHtKi3Jx_3-TtNJAm0JAZPDzb7J2HMk9V-kMElFWXhuq_PMd-cdby275z_Flj29mv1WbK1hGUbIMqboozPHul1LuxdVT_uVCGsw4SxN5kVZdGi70a0ScQXAErdf4UT9IMcbS5UEgyDL7PAZ5jjLBjOggQXotR-FnwL-oEoPXFjg6G3JfaDmvzN34L68Ns_u7PwFg)
 
 ```mermaid
 sequenceDiagram
@@ -18,8 +18,9 @@ sequenceDiagram
     Browser->>HTML: Load Profiler.html
     HTML->>HTML: Decode _e → reverse(atob()) → GAS deployment URL
     HTML->>HTML: Stash decoded URL (window._gasNoteUrl)
-    HTML->>GAS: Dossier note box builds inline iframe (?slug=company)
-    GAS-->>Browser: Intake form renders inside the note box
+    HTML->>HTML: Dossier note box renders native form (GIS sign-in on parent)
+    HTML->>GAS: Cookie-less fetch — exchangeToken, then note ops (action=note)
+    GAS-->>HTML: JSON via ContentService (anonymous serving path)
 
     Note over Browser,Google: Google OAuth Authentication
     HTML->>Google: Initialize GIS (Google Identity Services)
@@ -78,7 +79,7 @@ sequenceDiagram
 
 ## Key Design Notes
 
-- **Inline note-box iframe (PROJECT OVERRIDE)** — the deployment URL is stored as a reversed+base64-encoded string in `_e`, but instead of the template’s full-screen iframe the decoded URL is stashed in `window._gasNoteUrl`; each dossier’s "Add a Field Note" section renders its own inline iframe with `?slug=<company>` so the form prefills the company. When `_e` is empty the box falls back to the GitHub-issue-form flow
+- **Native note box over fetch (PROJECT OVERRIDE)** — the deployment URL is stored reversed+base64 in `_e` and stashed in `window._gasNoteUrl`; the note box is native page UI (GIS sign-in popup on the parent, fleet CLIENT_ID), and all backend traffic — token exchange and the note ops — goes over cookie-less `fetch()` to `?action=note&nop=…` (POST with GET api-route fallback; file payloads POST-only). Document-loads of /exec (iframe or top-level) are avoided entirely: they fail in cookie-carrying browsers via Google's multi-account routing. When `_e` is empty the box falls back to the GitHub-issue-form flow
 - **Dual polling** — HTML and GAS versions are polled independently with anti-sync protection (if polls align within 3s, GAS poll gets a 5s delay to re-stagger them)
 - **Two splash screens** — green "Website Ready" for HTML version changes, blue "Code Ready" for GAS version changes
 - **Audio unlock** — the note-box iframe does not cover the page, so parent clicks reach the document normally; the standard template audio unlock applies

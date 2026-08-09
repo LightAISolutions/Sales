@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.12r] — 2026-08-09 02:37:16 AM EST
+
+> **Prompt:** "The embedded box and fallback link both fail and shows the same Google Drive "sorry" message as above"
+
+### Fixed
+- `live-site-pages/Profiler.html` (v01.13w) — the note box no longer loads the GAS app as a document at all. The top-level fallback failing too proved this isn't a framing problem: on the developer's phone, ANY cookie-carrying document-load of `/exec` (framed or top-level) dies in Google's multi-account routing, while anonymous requests serve fine — the exact conclusion the fleet already reached (Receipts' `TOKEN_EXCHANGE_METHOD: 'fetch'` comment: iframe transports "stop working when Google blocks framed /exec responses"). Rebuilt the note box as **native page UI**: GIS sign-in popup on the parent (fleet CLIENT_ID, `openid email profile`), token exchanged for a session via the existing fetch exchange route, then all note ops over cookie-less `fetch()` — typed notes, Word/PDF upload (POST body, 3 × 8 MB), and the full manage panel (list/inline edit/delete), all in place. CSP extended to the fleet's GIS + script.google.com allowances. Full flow verified headlessly with a stubbed backend (sign-in state, save, list, edit, delete — zero page errors)
+- `googleAppsScripts/Profiler/Profiler.gs` (v01.03g) — new `handleNoteOp_` fetch dispatcher: `doPost(action=note)` + GET api-route mirror (`action=api&op=note`), ops `bootstrap`/`submit`/`list`/`edit`/`delete` (param `nop`), session-validated via the existing machinery, JSON via ContentService (anonymous serving path)
+- `repository-information/diagrams/profiler-diagram.md` — updated to the fetch architecture (pako URL regenerated + decompression-verified)
 
 ## [v02.11r] — 2026-08-09 02:20:26 AM EST
 

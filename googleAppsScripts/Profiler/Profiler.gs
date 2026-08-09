@@ -1,4 +1,4 @@
-var VERSION = "v01.02g";
+var VERSION = "v01.03g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -811,6 +811,16 @@ function doPost(e) {
       soResult = { type: 'gas-signed-out', success: false, error: String((soErr && soErr.message) || soErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(soResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: field-note ops via fetch() — the note box in Profiler.html talks
+  // to this backend exclusively over cookie-less fetch (the fleet's reliable
+  // transport; document-loads of /exec break in cookie-carrying browsers).
+  // POST is the primary path (required for file payloads); the GET api route
+  // mirrors the no-file ops as a fallback.
+  if (action === "note") {
+    return ContentService.createTextOutput(JSON.stringify(handleNoteOp_(e)))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -2059,6 +2069,43 @@ function deleteFieldNote(sessionToken, id) {
     lock.releaseLock();
   }
 }
+
+// Fetch-transport dispatcher for the note ops. Session token in `session`;
+// op in `op`; payload fields as flat params (files as a JSON string, POST only).
+// Every branch returns a plain object; callers JSON-encode via ContentService.
+function handleNoteOp_(e) {
+  var p = (e && e.parameter) || {};
+  // `nop` (note-op) — the GET mirror already uses `op` for outer routing
+  var op = p.nop || '';
+  var session = p.session || '';
+  try {
+    if (op === 'bootstrap') {
+      return { success: true, data: getIntakeBootstrap(session) };
+    }
+    if (op === 'submit') {
+      var files = [];
+      if (p.files) {
+        try { files = JSON.parse(p.files); } catch (fe) { return { success: false, error: 'bad_files_payload' }; }
+      }
+      return submitFieldNote(session, {
+        slug: p.slug, sourceType: p.sourceType, note: p.note,
+        confidence: Number(p.confidence), files: files
+      });
+    }
+    if (op === 'list') {
+      return { success: true, notes: listFieldNotes(session) };
+    }
+    if (op === 'edit') {
+      return updateFieldNote(session, { id: p.id, note: p.note, confidence: Number(p.confidence) });
+    }
+    if (op === 'delete') {
+      return deleteFieldNote(session, p.id);
+    }
+    return { success: false, error: 'unknown_note_op' };
+  } catch (err) {
+    return { success: false, error: String((err && err.message) || err) };
+  }
+}
 // PROJECT END
 // =============================================
 // AUTH — Web App Entry Point (doGet)
@@ -2354,6 +2401,10 @@ function doGet(e) {
         apiResult = processSignOut(apiToken);
       } else if (apiOp === 'heartbeat') {
         apiResult = processHeartbeat(apiToken);
+      } else if (apiOp === 'note') {
+        // PROJECT: GET mirror of the doPost note ops (no-file calls only —
+        // file payloads exceed URL limits and must use the POST path)
+        apiResult = handleNoteOp_(e);
       } else {
         apiResult = { error: 'unknown_op' };
       }

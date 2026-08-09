@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 2/50`
+`Sections: 3/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.03g] — 2026-08-09 02:37:16 AM EST — v02.12r
+
+### Changed
+- The note service now talks to the app over a more reliable connection method, fixing load failures some phones experienced
 
 ## [v01.02g] — 2026-08-09 01:59:52 AM EST — v02.10r
 

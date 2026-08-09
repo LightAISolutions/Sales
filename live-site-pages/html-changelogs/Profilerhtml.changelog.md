@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 12/50`
+`Sections: 13/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.13w] — 2026-08-09 02:37:16 AM EST — v02.12r
+
+### Fixed
+- The field-note form now works on phones where it previously showed an "unable to open the file" error — the form is built into the page itself instead of loading an embedded frame
+
+### Changed
+- Sign in with Google directly in the note box (one time); then type notes, attach Word/PDF files, and manage existing notes — all in place
 
 ## [v01.12w] — 2026-08-09 02:20:26 AM EST — v02.11r
 

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="no-referrer">
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.12w">
+  <meta name="build-version" content="v01.13w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -429,6 +429,16 @@
       border-radius: 8px; padding: 8px 10px; font: 12px/1 var(--ov-mono);
     }
     #ov-qn .hint { color: var(--ov-faint); font-size: 11.5px; margin-top: 8px; }
+    #ov-qn-manage { margin-top: 22px; border-top: 1px solid var(--ov-line2); padding-top: 14px; }
+    .ov-qn-row { border: 1px solid var(--ov-line2); border-radius: 8px; padding: 10px 12px; margin-top: 10px; }
+    .ov-qn-row .meta { color: var(--ov-faint); font: 10.5px/1.5 var(--ov-mono); margin-bottom: 4px; overflow-wrap: break-word; }
+    .ov-qn-row .txt { font: 13.5px/1.5 var(--ov-serif); white-space: pre-wrap; overflow-wrap: break-word; }
+    .ov-qn-row .acts { display: flex; gap: 8px; margin-top: 8px; }
+    .ov-qn-row .acts button {
+      background: none; border: 1px solid var(--ov-line2); border-radius: 6px;
+      color: var(--ov-paper); font: 11px/1 var(--ov-mono); padding: 5px 12px; cursor: pointer;
+    }
+    .ov-qn-row .acts button.del { border-color: rgba(224,122,139,0.6); color: #e07a8b; }
     /* Study guide — dossier button + overlay */
     #ov-study-btn { margin-top: 14px; margin-left: 8px; }
     #ov-study-overlay {
@@ -1503,35 +1513,278 @@
 
     // ── Quick field note (in-dossier input → prefilled GitHub issue form) ──
     var OV_ISSUE_BASE = 'https://github.com/LightAISolutions/Sales/issues/new';
+
+    // ── GAS note backend — cookie-less fetch transport + GIS sign-in ──
+    // Document-loads of /exec (iframe or top-level) fail in cookie-carrying
+    // browsers (Google's multi-account routing serves a Drive error page), so
+    // the note box talks to the backend exclusively over fetch: cross-origin
+    // fetch carries no cookies and always reaches the anonymous serving path.
+    // Sign-in happens on THIS page via Google Identity Services (popup), then
+    // the access token is exchanged for a session token over the same fetch
+    // transport (the fleet's TOKEN_EXCHANGE_METHOD: 'fetch' pattern).
+    var OV_GIS_CLIENT_ID = '830735769637-ak3c73b4lnea004i8dge8kg6n53o36vl.apps.googleusercontent.com';
+    var OV_NOTE_SESSION_KEY = 'ov_note_session';
+    var ovGisLoading = null;
+
+    function ovNoteQs(o) {
+      return Object.keys(o).map(function(k) { return encodeURIComponent(k) + '=' + encodeURIComponent(o[k]); }).join('&');
+    }
+
+    // POST with params in the query string (survives Google's redirect); GET
+    // api-route fallback for no-file calls. File payloads ride in the POST
+    // body (form-encoded — a CORS "simple request", no preflight) and cannot
+    // use the GET fallback (URL length limits).
+    function ovNoteApi(nop, params, cb) {
+      var base = window._gasNoteUrl;
+      if (!base) { cb({ success: false, error: 'no_backend' }); return; }
+      var files = params.files;
+      var qp = { action: 'note', nop: nop, session: localStorage.getItem(OV_NOTE_SESSION_KEY) || '' };
+      for (var k in params) if (params.hasOwnProperty(k) && k !== 'files') qp[k] = params[k];
+      var postOpts = { method: 'POST', redirect: 'follow' };
+      if (files && files.length) {
+        postOpts.headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+        postOpts.body = 'files=' + encodeURIComponent(JSON.stringify(files));
+      }
+      fetch(base + '?' + ovNoteQs(qp), postOpts)
+        .then(function(r) { if (!r.ok) throw new Error('http_' + r.status); return r.json(); })
+        .then(cb)
+        .catch(function() {
+          if (files && files.length) { cb({ success: false, error: 'upload_transport_failed' }); return; }
+          qp.action = 'api'; qp.op = 'note';
+          fetch(base + '?' + ovNoteQs(qp), { method: 'GET', redirect: 'follow' })
+            .then(function(r2) { if (!r2.ok) throw new Error('http_' + r2.status); return r2.json(); })
+            .then(cb)
+            .catch(function() { cb({ success: false, error: 'network_failed' }); });
+        });
+    }
+
+    function ovLoadGis() {
+      if (window.google && window.google.accounts && window.google.accounts.oauth2) return Promise.resolve();
+      if (ovGisLoading) return ovGisLoading;
+      ovGisLoading = new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = 'https://accounts.google.com/gsi/client';
+        s.onload = function() { resolve(); };
+        s.onerror = function() { ovGisLoading = null; reject(new Error('gis_load_failed')); };
+        document.head.appendChild(s);
+      });
+      return ovGisLoading;
+    }
+
+    function ovNoteSignIn(cb) {
+      var base = window._gasNoteUrl;
+      ovLoadGis().then(function() {
+        var tc = window.google.accounts.oauth2.initTokenClient({
+          client_id: OV_GIS_CLIENT_ID,
+          scope: 'openid email profile',
+          callback: function(resp) {
+            if (!resp || !resp.access_token) { cb({ success: false, error: 'signin_cancelled' }); return; }
+            var xq = { action: 'exchangeToken', token: resp.access_token };
+            fetch(base + '?' + ovNoteQs(xq), { method: 'POST', redirect: 'follow' })
+              .then(function(r) { if (!r.ok) throw new Error('http_' + r.status); return r.json(); })
+              .catch(function() {
+                var gq = { action: 'api', op: 'exchangeToken', token: resp.access_token };
+                return fetch(base + '?' + ovNoteQs(gq), { method: 'GET', redirect: 'follow' })
+                  .then(function(r2) { if (!r2.ok) throw new Error('http_' + r2.status); return r2.json(); });
+              })
+              .then(function(data) {
+                if (data && data.success && data.sessionToken) {
+                  localStorage.setItem(OV_NOTE_SESSION_KEY, data.sessionToken);
+                  cb({ success: true, email: data.email || '' });
+                } else {
+                  cb({ success: false, error: (data && data.error) || 'exchange_failed' });
+                }
+              })
+              .catch(function() { cb({ success: false, error: 'exchange_network_failed' }); });
+          },
+          error_callback: function() { cb({ success: false, error: 'signin_failed' }); }
+        });
+        tc.requestAccessToken();
+      }).catch(function() { cb({ success: false, error: 'gis_load_failed' }); });
+    }
+
+    // Session-expiry handling: any op that fails with a session error clears
+    // the stored token and drops the box back to the sign-in state
+    function ovNoteSessionError(err) {
+      return /session|invalid|expired|auth/i.test(String(err || ''));
+    }
     function ovBuildQuickNote(slug) {
       // GAS-backed mode (deployment configured): the intake app renders inline —
       // type a note and/or attach a Word/PDF and save directly from the app.
       // Falls back to the GitHub-form flow below until the GAS is deployed.
       if (window._gasNoteUrl) {
-        var sg2 = ovSection('Add a Field Note', 'Type a note and/or attach a Word or PDF of your meeting notes — saved directly from the app (one-time Google sign-in). Notes are stored in the public field-note log; a triage pass decides dossier promotion.');
-        var qg = ovEl('div'); qg.id = 'ov-qn';
-        var noteUrl = window._gasNoteUrl + (window._gasNoteUrl.indexOf('?') >= 0 ? '&' : '?') + 'slug=' + encodeURIComponent(slug);
-        var fr = document.createElement('iframe');
-        // Credentialless (cookie-less) load — same fix as the template's
-        // full-screen iframe: Google serves framed /exec on the anonymous path,
-        // avoiding the multi-account /u/N cookie routing that otherwise fails
-        // with a Drive "unable to open the file" error. Unsupported browsers
-        // ignore the attribute.
-        try { fr.credentialless = true; } catch (x) {}
-        fr.setAttribute('credentialless', '');
-        fr.src = noteUrl;
-        fr.style.cssText = 'width:100%;height:640px;border:1px solid rgba(255,255,255,0.15);border-radius:10px;background:transparent;';
-        fr.setAttribute('title', 'Field note form');
-        qg.appendChild(fr);
-        // Guaranteed path — a top-level /exec visit never hits the framed-
-        // routing failure, so always offer the pop-out
-        var popLink = ovEl('a', null, 'Form not loading, or prefer full-screen? Open the note form in its own tab ↗');
-        popLink.href = noteUrl;
-        popLink.target = '_blank'; popLink.rel = 'noopener';
-        popLink.style.cssText = 'display:block;margin-top:8px;font-size:12px;color:var(--ov-gold);';
-        qg.appendChild(popLink);
-        sg2.appendChild(qg);
-        return sg2;
+        // Native form — no iframe, no document-load of /exec. Sign-in and all
+        // note operations go over the cookie-less fetch transport above.
+        var sgN = ovSection('Add a Field Note', 'Type a note and/or attach a Word or PDF of your meeting notes — saved directly in the app (one-time Google sign-in). Notes are stored in the public field-note log; a triage pass decides dossier promotion.');
+        var qn2 = ovEl('div'); qn2.id = 'ov-qn';
+        var nBody = ovEl('div');
+        var nStatus = ovEl('div', 'hint'); nStatus.setAttribute('role', 'status');
+        qn2.appendChild(nBody); qn2.appendChild(nStatus);
+        function say(msg, ok) {
+          nStatus.textContent = msg || '';
+          nStatus.style.color = ok === true ? '#82b56d' : (ok === false ? '#e07a8b' : '');
+        }
+        function renderSignin(msg) {
+          nBody.innerHTML = '';
+          if (msg) say(msg, false);
+          var sb = ovEl('button', 'ov-btn', 'Sign in with Google to add notes');
+          sb.type = 'button';
+          sb.addEventListener('click', function() {
+            sb.disabled = true; say('Signing in…');
+            ovNoteSignIn(function(r) {
+              sb.disabled = false;
+              if (r.success) { say('Signed in' + (r.email ? ' as ' + r.email : '') + '.', true); renderForm(); }
+              else say('Sign-in failed: ' + r.error, false);
+            });
+          });
+          nBody.appendChild(sb);
+        }
+        function sessionGuard(res, fallbackMsg) {
+          if (res && res.success) return true;
+          var err = (res && res.error) || fallbackMsg;
+          if (ovNoteSessionError(err)) {
+            localStorage.removeItem(OV_NOTE_SESSION_KEY);
+            renderSignin('Session expired — sign in again.');
+          } else {
+            say((fallbackMsg || 'Failed') + ': ' + err, false);
+          }
+          return false;
+        }
+        function renderForm() {
+          nBody.innerHTML = '';
+          var ta = ovEl('textarea');
+          ta.maxLength = 4000; ta.placeholder = 'What did you learn about this company?';
+          nBody.appendChild(ta);
+          var row = ovEl('div', 'row');
+          var srcSel = ovEl('select');
+          ['contact', 'event', 'call', 'news', 'other'].forEach(function(v) {
+            var o = ovEl('option', null, 'via ' + v); o.value = v; srcSel.appendChild(o);
+          });
+          row.appendChild(srcSel);
+          var confSel = ovEl('select');
+          for (var c = 100; c >= 0; c -= 5) {
+            var o2 = ovEl('option', null, 'confidence ' + c); o2.value = String(c); confSel.appendChild(o2);
+          }
+          confSel.value = '70';
+          row.appendChild(confSel);
+          var save = ovEl('button', 'ov-btn', 'Save note');
+          save.type = 'button';
+          row.appendChild(save);
+          nBody.appendChild(row);
+          var fileInput = document.createElement('input');
+          fileInput.type = 'file'; fileInput.multiple = true; fileInput.accept = '.pdf,.doc,.docx';
+          fileInput.style.cssText = 'display:block;width:100%;margin-top:10px;font-size:12.5px;color:inherit;';
+          nBody.appendChild(fileInput);
+          nBody.appendChild(ovEl('div', 'hint', 'Optionally attach Word/PDF meeting notes (up to 3, 8 MB each) — stored privately; the log gets a summary at the next triage.'));
+          function readFiles(cb) {
+            var fl = fileInput.files;
+            if (!fl.length) { cb([]); return; }
+            if (fl.length > 3) { say('Attach at most 3 files.', false); cb(null); return; }
+            var out = [], pending = fl.length, failed = false;
+            for (var i = 0; i < fl.length; i++) (function(f) {
+              if (!/\.(docx?|pdf)$/i.test(f.name)) { failed = true; say(f.name + ' is not a Word/PDF file.', false); cb(null); return; }
+              if (f.size > 8 * 1024 * 1024) { failed = true; say(f.name + ' is over 8 MB.', false); cb(null); return; }
+              var rd = new FileReader();
+              rd.onload = function() {
+                if (failed) return;
+                out.push({ name: f.name, base64: String(rd.result).split(',')[1] || '' });
+                if (--pending === 0) cb(out);
+              };
+              rd.onerror = function() { if (!failed) { failed = true; say('Could not read ' + f.name + '.', false); cb(null); } };
+              rd.readAsDataURL(f);
+            })(fl[i]);
+          }
+          save.addEventListener('click', function() {
+            var text = ta.value.trim();
+            if (!text && !fileInput.files.length) { say('Type a note or attach a file first.', false); ta.focus(); return; }
+            save.disabled = true;
+            say(fileInput.files.length ? 'Uploading…' : 'Saving…');
+            readFiles(function(files) {
+              if (files === null) { save.disabled = false; return; }
+              ovNoteApi('submit', { slug: slug, sourceType: srcSel.value, note: text, confidence: confSel.value, files: files }, function(res) {
+                save.disabled = false;
+                if (!sessionGuard(res, 'Save failed')) return;
+                ta.value = ''; fileInput.value = '';
+                say('Saved ' + res.id + ' (' + res.slug + ', confidence ' + res.confidence
+                  + (res.files ? ', ' + res.files + ' file' + (res.files > 1 ? 's' : '') : '')
+                  + '). Appears in the ⚙ changelog after the next deploy (~1–2 min).', true);
+              });
+            });
+          });
+          // ── Manage existing notes ──
+          var manage = ovEl('div'); manage.id = 'ov-qn-manage';
+          var mToggle = ovEl('button', 'ov-btn ghost', 'Manage existing notes ▸');
+          mToggle.type = 'button';
+          var mList = ovEl('div'); mList.style.display = 'none';
+          manage.appendChild(mToggle); manage.appendChild(mList);
+          nBody.appendChild(manage);
+          function renderRows(notes) {
+            mList.innerHTML = '';
+            if (!notes.length) { mList.appendChild(ovEl('div', 'hint', 'No notes in the log yet.')); return; }
+            notes.forEach(function(n) {
+              var rowEl = ovEl('div', 'ov-qn-row');
+              var meta = n.id + ' · ' + n.slug + ' · via ' + n.sourceType + ' · confidence ' + n.confidence + ' · ' + n.triage
+                + (n.sourceFile ? ' · 📎' : '') + (n.edited ? ' · edited ' + n.edited : '');
+              rowEl.appendChild(ovEl('div', 'meta', meta));
+              rowEl.appendChild(ovEl('div', 'txt', n.note));
+              var acts = ovEl('div', 'acts');
+              var eBtn = ovEl('button', null, 'Edit'); eBtn.type = 'button';
+              var dBtn = ovEl('button', 'del', 'Delete'); dBtn.type = 'button';
+              acts.appendChild(eBtn); acts.appendChild(dBtn);
+              rowEl.appendChild(acts);
+              var eArea = ovEl('div'); eArea.style.display = 'none';
+              rowEl.appendChild(eArea);
+              dBtn.addEventListener('click', function() {
+                if (!confirm('Delete ' + n.id + (n.sourceFile ? ' and its attached file' : '') + '? This cannot be undone.')) return;
+                say('Deleting ' + n.id + '…');
+                ovNoteApi('delete', { id: n.id }, function(res) {
+                  if (!sessionGuard(res, 'Delete failed')) return;
+                  say('Deleted ' + n.id + '. Log updates after the next deploy (~1–2 min).', true);
+                  loadRows();
+                });
+              });
+              eBtn.addEventListener('click', function() {
+                if (eArea.style.display !== 'none') { eArea.style.display = 'none'; eArea.innerHTML = ''; return; }
+                eArea.style.display = 'block';
+                var eTa = ovEl('textarea'); eTa.maxLength = 4000; eTa.value = n.note;
+                eTa.style.cssText = 'width:100%;box-sizing:border-box;margin-top:6px;min-height:70px;';
+                var eSel = ovEl('select');
+                for (var c2 = 100; c2 >= 0; c2 -= 5) { var o3 = ovEl('option', null, 'confidence ' + c2); o3.value = String(c2); eSel.appendChild(o3); }
+                eSel.value = String(Math.round(n.confidence / 5) * 5);
+                var eSave = ovEl('button', 'ov-btn', 'Save changes'); eSave.type = 'button';
+                eSave.style.cssText = 'display:block;margin-top:8px;';
+                eSave.addEventListener('click', function() {
+                  var newText = eTa.value.trim();
+                  if (!newText) { say('Note text cannot be empty — use Delete instead.', false); return; }
+                  say('Saving ' + n.id + '…');
+                  ovNoteApi('edit', { id: n.id, note: newText, confidence: eSel.value }, function(res) {
+                    if (!sessionGuard(res, 'Edit failed')) return;
+                    say('Updated ' + n.id + '. Log updates after the next deploy (~1–2 min).', true);
+                    loadRows();
+                  });
+                });
+                eArea.appendChild(eTa); eArea.appendChild(eSel); eArea.appendChild(eSave);
+              });
+              mList.appendChild(rowEl);
+            });
+          }
+          function loadRows() {
+            mList.innerHTML = ''; mList.appendChild(ovEl('div', 'hint', 'Loading…'));
+            ovNoteApi('list', {}, function(res) {
+              if (!res.success) { mList.innerHTML = ''; sessionGuard(res, 'Could not load notes'); return; }
+              renderRows(res.notes || []);
+            });
+          }
+          mToggle.addEventListener('click', function() {
+            var open = mList.style.display !== 'none';
+            mList.style.display = open ? 'none' : 'block';
+            mToggle.textContent = open ? 'Manage existing notes ▸' : 'Manage existing notes ▾';
+            if (!open) loadRows();
+          });
+        }
+        if (localStorage.getItem(OV_NOTE_SESSION_KEY)) renderForm(); else renderSignin();
+        sgN.appendChild(qn2);
+        return sgN;
       }
       var s = ovSection('Add a Field Note', 'Stored verbatim in the public field-note log; a triage pass decides dossier promotion. Saving opens a prefilled GitHub form — one tap to submit (GitHub sign-in required).');
       var qn = ovEl('div'); qn.id = 'ov-qn';
