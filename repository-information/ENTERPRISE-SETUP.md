@@ -50,8 +50,8 @@ Used by the `mirror-library` job in `.github/workflows/auto-merge-claude.yml` to
 | **Repository access** | Only select repositories: `LightAISolutions/bess-aidc-library` |
 | **Contents permission** | **Read and write** |
 | **Metadata permission** | Read-only (required, auto-populated) |
-| **Expiration** | 12 months recommended — set a calendar reminder to rotate |
-| **Stored as** | Repository secret `LIBRARY_SYNC_TOKEN` in `LightAISolutions/Sales` → Settings → Secrets and variables → Actions |
+| **Expiration** | **No expiration** (enterprise admin exemption, same as the GAS token) — rotate on suspected exposure or account changes; no scheduled renewal needed |
+| **Stored as** | Repository secret `LIBRARY_SYNC_TOKEN` in `LightAISolutions/Sales` → Settings → Secrets and variables → Actions (added 2026-08-08) |
 
 ### Creation steps
 1. GitHub (as the org-owning account) → profile photo → **Settings** → **Developer settings** → **Personal access tokens** → **Fine-grained tokens** → **Generate new token**
