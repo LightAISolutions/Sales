@@ -11,6 +11,18 @@
   ],
   "companies": [
     {
+      "slug": "amazon",
+      "name": "Amazon",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "~$220B capex and the #1 corporate clean-energy buyer — the Talen nuclear PPA set the FERC precedent; Trainium GW commitments anchor demand.",
+      "hq": "Seattle, WA, USA",
+      "ticker": "NASDAQ: AMZN",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
       "slug": "byd",
       "name": "BYD",
       "categories": [
@@ -58,6 +70,18 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "google",
+      "name": "Google",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "The most storage-forward hyperscaler — owns Intersect Power, backs Form Energy iron-air, runs 1 GW demand response; TPU v7 now sells externally.",
+      "hq": "Mountain View, CA, USA",
+      "ticker": "NASDAQ: GOOGL",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
       "slug": "hithium",
       "name": "Hithium",
       "categories": [
@@ -65,6 +89,30 @@
       ],
       "tagline": "Stationary-only LFP cell and BESS specialist — Top-2 2025 ESS cell shipments; we assess financing as the primary watch item.",
       "hq": "Xiamen, China",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "jinko",
+      "name": "Jinko",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "#1 module shipper absorbing its first loss in 12 years — storage (SunTera G3) is designated the second growth engine; ~246% US tariff exposure.",
+      "hq": "Shangrao, China",
+      "ticker": "NYSE: JKS · SSE: 688223",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "lg-energy-solution",
+      "name": "LG Energy Solution",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "ESS pivot underway — 140 GWh backlog and the Tesla Megapack LFP award; we assess AMPC dependence as the profitability watch item.",
+      "hq": "Seoul, South Korea",
+      "ticker": "KRX: 373220",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
@@ -77,6 +125,77 @@
       "tagline": "Power-electronics platform converting to AI data-center power — the only mainland vendor NVIDIA named for GB200; the H1 2026 report is the test.",
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 002851",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "meta",
+      "name": "Meta",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "$130–145B capex and multi-GW self-build (Hyperion 5 GW) — utility-side BESS posture via tolled projects; financing shifted to SPV debt.",
+      "hq": "Menlo Park, CA, USA",
+      "ticker": "NASDAQ: META",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "microsoft",
+      "name": "Microsoft",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "RPO $678B and a nuclear-heavy portfolio (TMI restart 2027) — we assess BESS as the notable gap; Fairwater designs drop UPS entirely.",
+      "hq": "Redmond, WA, USA",
+      "ticker": "NASDAQ: MSFT",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "nvidia",
+      "name": "NVIDIA",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The demand engine — sets rack-power architecture (800 VDC; 120 kW to 1 MW racks) and names its power-chain vendors; FY2026 revenue $215.9B.",
+      "hq": "Santa Clara, CA, USA",
+      "ticker": "NASDAQ: NVDA",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "panasonic",
+      "name": "Panasonic",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Incumbent BBU cell supplier converting EV capacity to data-center demand — ¥800B FY2029 energy target; Tesla concentration is the exposure.",
+      "hq": "Osaka, Japan",
+      "ticker": "TYO: 6752",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "rosendin",
+      "name": "Rosendin",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "#2 US electrical contractor (ESOP, $5.6B revenue) — 15+ GW of data-center power built; BESSUPS with FlexGen moves BESS inside the fence.",
+      "hq": "San Jose, CA, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "samsung-sdi",
+      "name": "Samsung SDI",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "First profit in seven quarters on UPS/BBU demand — SBB 2.0 and a world-first UL large-scale fire test; US LFP conversion lands October 2026.",
+      "hq": "Yongin-si, South Korea",
+      "ticker": "KRX: 006400",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
