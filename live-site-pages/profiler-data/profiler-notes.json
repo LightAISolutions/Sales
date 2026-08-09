@@ -2,6 +2,17 @@
   "schemaVersion": 1,
   "notes": [
     {
+      "id": "note-20260808-02",
+      "date": "2026-08-08",
+      "slug": "general",
+      "sourceType": "other",
+      "note": "Second intake pipeline test — verifying the note now deploys to the live site via the dispatched deploy workflow.",
+      "confidence": 100,
+      "tags": [],
+      "triage": "pending",
+      "submittedVia": "issue-form (#2)"
+    },
+    {
       "id": "note-20260808-01",
       "date": "2026-08-08",
       "slug": "general",
