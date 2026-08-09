@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 18/50`
+`Sections: 19/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.19g] — 2026-08-08 08:11:03 PM EST — v01.99r
+
+### Added
+- A diagnostic tool the administrator can run to pinpoint exactly why a sign-in is being denied, so access problems can be found and fixed quickly
 
 ## [v01.18g] — 2026-08-05 10:26:18 PM EST — v01.82r
 
