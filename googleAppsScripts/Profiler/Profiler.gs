@@ -1,4 +1,4 @@
-var VERSION = "v01.01g";
+var VERSION = "v01.02g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1949,6 +1949,116 @@ function submitFieldNote(sessionToken, payload) {
     lock.releaseLock();
   }
 }
+
+// ── Note management (list / edit / delete) — developer-owned content, so the
+// signed-in developer may edit or delete their own notes; Claude's triage
+// passes never alter note text (see profiler-app.md). Edits stamp an "edited"
+// date so the log stays honest about post-hoc changes.
+
+// Fetch just a file's blob sha (works for binary files — no content parse)
+function ghGetSha_(path) {
+  var token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
+  var url = "https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO
+    + "/contents/" + path + "?ref=" + GITHUB_BRANCH + "&t=" + new Date().getTime();
+  var res = UrlFetchApp.fetch(url, {
+    headers: { "Accept": "application/vnd.github.v3+json", "Authorization": "token " + token },
+    muteHttpExceptions: true
+  });
+  if (res.getResponseCode() !== 200) return null;
+  return JSON.parse(res.getContentText()).sha;
+}
+
+function ghPutNotes_(data, message, sha) {
+  var token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
+  var res = UrlFetchApp.fetch("https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO + "/contents/" + NOTES_FILE_PATH, {
+    method: "put",
+    contentType: "application/json",
+    headers: { "Authorization": "token " + token, "Accept": "application/vnd.github.v3+json" },
+    payload: JSON.stringify({
+      message: message,
+      content: Utilities.base64Encode(JSON.stringify(data, null, 2) + "\n", Utilities.Charset.UTF_8),
+      sha: sha,
+      branch: GITHUB_BRANCH
+    }),
+    muteHttpExceptions: true
+  });
+  if (res.getResponseCode() !== 200 && res.getResponseCode() !== 201) throw new Error('GITHUB_WRITE_FAILED');
+}
+
+function listFieldNotes(sessionToken) {
+  validateSessionForData(sessionToken, 'list_field_notes');
+  var notes = ghContentsGet_(NOTES_FILE_PATH).json.notes || [];
+  return notes.map(function(n) {
+    return { id: n.id, date: n.date, slug: n.slug, sourceType: n.sourceType, note: n.note,
+             confidence: n.confidence, triage: n.triage, submittedVia: n.submittedVia,
+             sourceFile: n.sourceFile || null, edited: n.edited || null };
+  });
+}
+
+function updateFieldNote(sessionToken, payload) {
+  var session = validateSessionForData(sessionToken, 'update_field_note');
+  if (!payload || typeof payload !== 'object') throw new Error('INVALID_INPUT');
+  var id = String(payload.id || '');
+  var text = String(payload.note || '').trim();
+  var confidence = Math.round(Number(payload.confidence));
+  if (!id || !text || text.length > 4000) throw new Error('INVALID_INPUT');
+  if (!(confidence >= 0 && confidence <= 100)) throw new Error('INVALID_INPUT');
+  var lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    var current = ghContentsGet_(NOTES_FILE_PATH);
+    var data = current.json;
+    var target = (data.notes || []).filter(function(n) { return n.id === id; })[0];
+    if (!target) throw new Error('NOT_FOUND');
+    target.note = text;
+    target.confidence = confidence;
+    target.edited = Utilities.formatDate(new Date(), "America/New_York", "yyyy-MM-dd");
+    ghPutNotes_(data, "Edit field note " + id + " via profiler-intake", current.sha);
+    ghDispatchDeploy_();
+    auditLog('data_write', session.email || 'unknown', 'field_note_edited', { id: id });
+    return { success: true, id: id };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function deleteFieldNote(sessionToken, id) {
+  var session = validateSessionForData(sessionToken, 'delete_field_note');
+  id = String(id || '');
+  if (!id) throw new Error('INVALID_INPUT');
+  var lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    var current = ghContentsGet_(NOTES_FILE_PATH);
+    var data = current.json;
+    var target = (data.notes || []).filter(function(n) { return n.id === id; })[0];
+    if (!target) throw new Error('NOT_FOUND');
+    data.notes = data.notes.filter(function(n) { return n.id !== id; });
+    ghPutNotes_(data, "Delete field note " + id + " via profiler-intake", current.sha);
+    // Best-effort removal of an attached note file — the log entry is the
+    // source of truth; a leftover file is harmless and can be cleaned later
+    if (target.sourceFile) {
+      try {
+        var fsha = ghGetSha_(target.sourceFile);
+        if (fsha) {
+          var token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
+          UrlFetchApp.fetch("https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO + "/contents/" + target.sourceFile, {
+            method: "delete",
+            contentType: "application/json",
+            headers: { "Authorization": "token " + token, "Accept": "application/vnd.github.v3+json" },
+            payload: JSON.stringify({ message: "Delete note file for " + id, sha: fsha, branch: GITHUB_BRANCH }),
+            muteHttpExceptions: true
+          });
+        }
+      } catch (err) { /* non-fatal */ }
+    }
+    ghDispatchDeploy_();
+    auditLog('data_write', session.email || 'unknown', 'field_note_deleted', { id: id });
+    return { success: true, id: id };
+  } finally {
+    lock.releaseLock();
+  }
+}
 // PROJECT END
 // =============================================
 // AUTH — Web App Entry Point (doGet)
@@ -2837,6 +2947,22 @@ function doGet(e) {
         #fi-status.ok { color: #82b56d; } #fi-status.err { color: #e07a8b; }
         #fi-files { width: 100%; box-sizing: border-box; font: inherit; font-size: 12.5px; padding: 8px 0 2px; color: inherit; }
         #fi-file-list { font-size: 12px; opacity: 0.75; margin: 4px 0 0; }
+        #fi-manage { margin-top: 26px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 14px; }
+        #fi-manage-toggle {
+          background: none; border: 1px solid rgba(255,255,255,0.25); border-radius: 8px;
+          color: inherit; font: inherit; font-size: 13px; padding: 8px 14px; cursor: pointer;
+        }
+        .fi-note-row { border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 10px 12px; margin-top: 10px; font-size: 13px; }
+        .fi-note-meta { font-size: 11px; opacity: 0.65; margin-bottom: 4px; }
+        .fi-note-text { white-space: pre-wrap; word-break: break-word; }
+        .fi-note-actions { margin-top: 8px; display: flex; gap: 8px; }
+        .fi-note-actions button {
+          background: none; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px;
+          color: inherit; font: inherit; font-size: 12px; padding: 5px 12px; cursor: pointer;
+        }
+        .fi-note-actions button.fi-del { border-color: rgba(224,122,139,0.6); color: #e07a8b; }
+        .fi-edit-area textarea { width: 100%; box-sizing: border-box; margin-top: 6px; padding: 8px 10px; font: inherit; font-size: 13px; background: rgba(255,255,255,0.06); color: inherit; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; }
+        .fi-edit-area select { margin-top: 6px; padding: 6px 8px; font: inherit; font-size: 12px; background: rgba(255,255,255,0.06); color: inherit; border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; }
         /* PROJECT END */
         /* App surface inset 30px top/bottom: the GAS layer spans the full screen, but the app
            UI/background lives between the bands — only overlay chrome (version pill, signed-in
@@ -2993,6 +3119,10 @@ function doGet(e) {
           <div class="fi-conf-hints"><span>0 · rumor</span><span>50 · plausible</span><span>100 · certain</span></div>
           <button id="fi-submit" type="button" disabled>Save note</button>
           <div id="fi-status" role="status"></div>
+          <div id="fi-manage">
+            <button id="fi-manage-toggle" type="button">Manage existing notes ▸</button>
+            <div id="fi-manage-list" style="display:none"></div>
+          </div>
         </div>
         <!-- PROJECT END -->
       </div>
@@ -3839,6 +3969,79 @@ function doGet(e) {
                 });
             });
           });
+
+          // ── Manage existing notes (list / edit / delete) ──
+          // try/catch so a fault here can never halt the auth flow that shares
+          // this script context
+          try {
+            var mToggle = document.getElementById('fi-manage-toggle');
+            var mList = document.getElementById('fi-manage-list');
+            var mLoaded = false;
+
+            function esc(s) { var d = document.createElement('div'); d.textContent = String(s); return d.innerHTML; }
+
+            function renderNotes(notes) {
+              mList.innerHTML = '';
+              if (!notes.length) { mList.innerHTML = '<div class="fi-note-meta" style="margin-top:10px">No notes in the log yet.</div>'; return; }
+              notes.forEach(function(n) {
+                var row = document.createElement('div');
+                row.className = 'fi-note-row';
+                row.innerHTML =
+                  '<div class="fi-note-meta">' + esc(n.id) + ' · ' + esc(n.slug) + ' · via ' + esc(n.sourceType)
+                  + ' · confidence ' + esc(n.confidence) + ' · ' + esc(n.triage)
+                  + (n.sourceFile ? ' · 📎' : '') + (n.edited ? ' · edited ' + esc(n.edited) : '') + '</div>'
+                  + '<div class="fi-note-text">' + esc(n.note) + '</div>'
+                  + '<div class="fi-note-actions"><button type="button" class="fi-edit">Edit</button>'
+                  + '<button type="button" class="fi-del">Delete</button></div>'
+                  + '<div class="fi-edit-area" style="display:none"></div>';
+                row.querySelector('.fi-del').addEventListener('click', function() {
+                  if (!confirm('Delete ' + n.id + (n.sourceFile ? ' and its attached file' : '') + '? This cannot be undone.')) return;
+                  setStatus('Deleting ' + n.id + '…');
+                  google.script.run
+                    .withSuccessHandler(function() { setStatus('Deleted ' + n.id + '. The public log updates after the next deploy (~1–2 min).', 'ok'); mLoaded = false; loadNotes(); })
+                    .withFailureHandler(function(e) { setStatus('Delete failed: ' + (e && e.message || e), 'err'); })
+                    .deleteFieldNote(_sessionToken, n.id);
+                });
+                row.querySelector('.fi-edit').addEventListener('click', function() {
+                  var area = row.querySelector('.fi-edit-area');
+                  if (area.style.display !== 'none') { area.style.display = 'none'; area.innerHTML = ''; return; }
+                  area.style.display = 'block';
+                  var ta = document.createElement('textarea'); ta.rows = 4; ta.maxLength = 4000; ta.value = n.note;
+                  var sel = document.createElement('select');
+                  for (var c = 100; c >= 0; c -= 5) { var o = document.createElement('option'); o.value = String(c); o.textContent = 'confidence ' + c; sel.appendChild(o); }
+                  sel.value = String(Math.round(n.confidence / 5) * 5);
+                  var saveB = document.createElement('button'); saveB.type = 'button'; saveB.textContent = 'Save changes';
+                  saveB.style.cssText = 'display:block;margin-top:8px;padding:6px 14px;font:inherit;font-size:12px;cursor:pointer;background:#d8b45a;color:#13151c;border:none;border-radius:6px;';
+                  saveB.addEventListener('click', function() {
+                    var newText = ta.value.trim();
+                    if (!newText) { setStatus('Note text cannot be empty — use Delete instead.', 'err'); return; }
+                    setStatus('Saving ' + n.id + '…');
+                    google.script.run
+                      .withSuccessHandler(function() { setStatus('Updated ' + n.id + '. The public log updates after the next deploy (~1–2 min).', 'ok'); mLoaded = false; loadNotes(); })
+                      .withFailureHandler(function(e) { setStatus('Edit failed: ' + (e && e.message || e), 'err'); })
+                      .updateFieldNote(_sessionToken, { id: n.id, note: newText, confidence: parseInt(sel.value, 10) });
+                  });
+                  area.appendChild(ta); area.appendChild(sel); area.appendChild(saveB);
+                });
+                mList.appendChild(row);
+              });
+            }
+
+            function loadNotes() {
+              mList.innerHTML = '<div class="fi-note-meta" style="margin-top:10px">Loading…</div>';
+              google.script.run
+                .withSuccessHandler(function(notes) { mLoaded = true; renderNotes(notes || []); })
+                .withFailureHandler(function(e) { mList.innerHTML = ''; setStatus('Could not load notes: ' + (e && e.message || e), 'err'); })
+                .listFieldNotes(_sessionToken);
+            }
+
+            mToggle.addEventListener('click', function() {
+              var open = mList.style.display !== 'none';
+              mList.style.display = open ? 'none' : 'block';
+              mToggle.textContent = open ? 'Manage existing notes ▸' : 'Manage existing notes ▾';
+              if (!open && !mLoaded) loadNotes();
+            });
+          } catch (mErr) { /* management UI is optional — never block the form or auth */ }
         })();
         // PROJECT END
       </script>

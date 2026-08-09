@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.10r] — 2026-08-09 01:59:52 AM EST
+
+> **Prompt:** "I plan to test with a fake field note, so build me a way to see, edit, and delete previously submitted field notes. Then, I'll test adding and deleting field notes. Also, explain to me how you will evaluate which field notes are relevant enough to display in the dossier vs which just get saved but not displayed."
+
+### Added
+- `googleAppsScripts/Profiler/Profiler.gs` (v01.02g) — note management: server functions `listFieldNotes` / `updateFieldNote` / `deleteFieldNote` (session-validated, lock-serialized; edits stamp `edited: YYYY-MM-DD`; deletes remove the log entry and best-effort delete the attached note file via a new `ghGetSha_` + contents DELETE; shared `ghPutNotes_` helper) and a "Manage existing notes" panel in the served form UI (list with metadata, inline edit textarea + confidence select, delete with confirm; wrapped in try/catch so a fault can never block the auth flow). Client logic verified via a stubbed-backend Playwright harness (list → edit → delete round-trip, zero page errors)
+- `repository-information/PROFILER-SCHEMA.md` — `notes[].edited` field; `submittedVia` now documents the `profiler-intake` value; clarified that the never-alter constraint binds Claude's triage, not developer edits
+- `.claude/rules/profiler-app.md` — note-management capability documented under the second capture channel
 
 ## [v02.09r] — 2026-08-09 01:30:51 AM EST
 
