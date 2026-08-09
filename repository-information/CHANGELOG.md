@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.08r] — 2026-08-09 01:11:29 AM EST
+
+> **Prompt:** "Can you modify the field note to be functional by itself without re-routing the user to the GitHub form? I'd like to be able to type some notes and/or upload meeting notes directly from the Profiler app."
+
+### Added
+- `googleAppsScripts/Profiler/Profiler.gs` (v01.00g) — Profiler GAS intake app (restored from the v02.04r-removed ProfilerIntake scaffold, renamed to page-convention naming and completed): Google-sign-in + Master-ACL gated form served in-app; `submitFieldNote` now accepts Word/PDF attachments (up to 3 × 8 MB, base64) alongside/instead of typed text — files commit to `repository-information/note-files/<slug>/` via the GitHub contents API (`ghPutFile_`), notes commit to `profiler-notes.json` (lock-serialized, `submittedVia: "profiler-intake"`), then `ghDispatchDeploy_` best-effort dispatches the deploy workflow. Served UI gains a file picker + `?slug=` dossier prefill (sanitized doGet interpolation)
+- `googleAppsScripts/Profiler/Profiler.config.json` — project config (real Master-ACL spreadsheet ID; `DEPLOYMENT_ID` placeholder until the one-time Apps Script deployment)
+- `live-site-pages/gs-versions/Profilergs.version.txt` (`|v01.00g|`), `live-site-pages/gs-changelogs/Profilergs.changelog.md` + archive — page-convention GAS tracking files (the GAS version pill on Profiler auto-activates)
+- `live-site-pages/Profiler.html` (v01.10w) — GAS-backed note box: the template's full-screen iframe injection is PROJECT-OVERRIDDEN to stash the decoded URL in `window._gasNoteUrl`; each dossier's "Add a Field Note" section renders an inline iframe (`?slug=<company>` prefill) where the developer types and/or uploads directly. GitHub-form flow remains as automatic fallback while `DEPLOYMENT_ID` is a placeholder
+- `.github/workflows/auto-merge-claude.yml` — "Deploy Profiler" GAS self-update step (placeholder-gated, standard POST + GET-fallback webhook)
+- `repository-information/diagrams/profiler-diagram.md` — per-environment diagram restored and corrected for the inline note-box iframe design (pako URL regenerated + decompression-verified)
+- `.claude/rules/gas-scripts.md` — Profiler row in the GAS Projects table + `Profiler.html` added to the path scope
+
+### Changed
+- `.claude/rules/profiler-app.md` — second capture channel rewritten: GAS-backed in-app intake is primary once deployed; GitHub issue form documented as the fallback mode
+- `repository-information/REPO-ARCHITECTURE.md` — `GAS_PROFILER` node + edges added to the flowchart and class diagram (both pako URLs regenerated + decompression-verified)
+- `README.md` — Profiler tree entry gains the ⛽ GAS link and v01.00g changelog link; new entries for the GAS project dir, gs version/changelog files, and per-environment diagram
 
 ## [v02.07r] — 2026-08-08 10:36:20 PM EST
 

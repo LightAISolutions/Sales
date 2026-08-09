@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.09w">
+  <meta name="build-version" content="v01.10w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -801,13 +801,13 @@
       if (!_e) return;
       var _u; try { _u = atob(_e).split('').reverse().join(''); } catch(x) { return; }
       if (!_u) return;
-      // cr34t3 1fr4m3
-      var f = document.createElement(atob('aWZyYW1l'));
-      f.id = 'gas-app';
-      f.style.cssText = 'width:100%;height:100%;border:none;position:fixed;top:0;left:0;z-index:1;';
-      f.dataset.baseUrl = _u;
-      f.src = _u;
-      document.body.appendChild(f);
+      // PROJECT OVERRIDE START: inline note-box embed — the Profiler GAS app is a
+      // per-dossier field-note form, not a full-screen app. Stash the URL for
+      // ovBuildQuickNote (which renders an inline iframe inside each dossier's
+      // note section) instead of injecting the template's fixed full-viewport
+      // iframe, which would cover the entire dossier UI.
+      window._gasNoteUrl = _u;
+      // PROJECT OVERRIDE END
     })();
 
     // GAS auto-refresh: poll <pagename>gs.version.txt for GAS version changes
@@ -1504,6 +1504,20 @@
     // ── Quick field note (in-dossier input → prefilled GitHub issue form) ──
     var OV_ISSUE_BASE = 'https://github.com/LightAISolutions/Sales/issues/new';
     function ovBuildQuickNote(slug) {
+      // GAS-backed mode (deployment configured): the intake app renders inline —
+      // type a note and/or attach a Word/PDF and save directly from the app.
+      // Falls back to the GitHub-form flow below until the GAS is deployed.
+      if (window._gasNoteUrl) {
+        var sg2 = ovSection('Add a Field Note', 'Type a note and/or attach a Word or PDF of your meeting notes — saved directly from the app (one-time Google sign-in). Notes are stored in the public field-note log; a triage pass decides dossier promotion.');
+        var qg = ovEl('div'); qg.id = 'ov-qn';
+        var fr = document.createElement('iframe');
+        fr.src = window._gasNoteUrl + (window._gasNoteUrl.indexOf('?') >= 0 ? '&' : '?') + 'slug=' + encodeURIComponent(slug);
+        fr.style.cssText = 'width:100%;height:640px;border:1px solid rgba(255,255,255,0.15);border-radius:10px;background:transparent;';
+        fr.setAttribute('title', 'Field note form');
+        qg.appendChild(fr);
+        sg2.appendChild(qg);
+        return sg2;
+      }
       var s = ovSection('Add a Field Note', 'Stored verbatim in the public field-note log; a triage pass decides dossier promotion. Saving opens a prefilled GitHub form — one tap to submit (GitHub sign-in required).');
       var qn = ovEl('div'); qn.id = 'ov-qn';
       var ta = ovEl('textarea');

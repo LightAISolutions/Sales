@@ -7,6 +7,7 @@ paths:
   - "live-site-pages/testauthhtml1.html"
   - "live-site-pages/globalacl.html"
   - "live-site-pages/MasterACL.html"
+  - "live-site-pages/Profiler.html"
   - "live-site-pages/*-code.js.txt"
 # Path scope rationale: GAS rules auto-inject for .gs / .config.json / gs-versions
 # edits (directly GAS-related), plus for edits to the 3 GAS-backed HTML pages
@@ -41,6 +42,7 @@ Each GAS project has a code file and a corresponding embedding page. Register th
 | MasterACL | `googleAppsScripts/MasterACL/MasterACL.gs` | `googleAppsScripts/MasterACL/MasterACL.config.json` | `live-site-pages/MasterACL.html` |
 | Scraper | `googleAppsScripts/Scraper/Scraper.gs` | `googleAppsScripts/Scraper/Scraper.config.json` | `live-site-pages/Scraper.html` |
 | Receipts | `googleAppsScripts/Receipts/Receipts.gs` | `googleAppsScripts/Receipts/Receipts.config.json` | `live-site-pages/Receipts.html` |
+| Profiler | `googleAppsScripts/Profiler/Profiler.gs` | `googleAppsScripts/Profiler/Profiler.config.json` | `live-site-pages/Profiler.html` (inline note-box iframe — PROJECT OVERRIDE, not full-screen) |
 
 
 ## GAS Project Config (config.json)
