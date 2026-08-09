@@ -9,7 +9,7 @@
   "founded": 2011,
   "employees": "~132,000 (2025, company-reported)",
   "ownership": { "type": "public", "ticker": "SZSE: 300750 · HKEX: 3750" },
-  "summary": "BOTTOM LINE UP FRONT: CATL holds both global #1 battery positions (EV and ESS) but its storage lead is narrowing; we assess the sodium-ion and battery-swap pushes are deliberate moves to open post-lithium and infrastructure revenue before rivals close the cell gap. BACKGROUND: CATL is the world's largest lithium-ion battery manufacturer, spun out of ATL in 2011 and listed in Shenzhen (June 2018) and Hong Kong (May 2025 — the HK$41B raise was the world's largest IPO of 2025, with ~90% of proceeds earmarked for the Debrecen, Hungary plant). It supplies EV batteries to most global automakers and utility/C&I energy storage systems worldwide, with the storage business (TENER line) now its fastest-growing segment: ESS revenue grew 87.5% YoY in H1 2026 to nearly 20% of total revenue.",
+  "summary": "CATL is the world's largest lithium-ion battery manufacturer, spun out of ATL in 2011 and listed in Shenzhen (June 2018) and Hong Kong (May 2025 — the HK$41B raise was the world's largest IPO of 2025, with ~90% of proceeds earmarked for the Debrecen, Hungary plant). It supplies EV batteries to most global automakers and utility/C&I energy storage systems worldwide, with the storage business (TENER line) now its fastest-growing segment: ESS revenue grew 87.5% YoY in H1 2026 to nearly 20% of total revenue.",
   "ecosystemRole": "No. 1 in global EV power batteries for nine consecutive years (39.2% of 1,187 GWh installed in 2025, SNE Research) and No. 1 in energy-storage batteries for five consecutive years — though the ESS lead narrowed in 2025 (company-reported ESS share 30.4%, down from 36.5%; Benchmark estimates ~20% with Hithium and EVE at ~12% each). ESS battery sales: 93 GWh (2024) → 121 GWh (2025). Anchor storage deployment: sole BESS supplier (19 GWh of TENER) for Masdar's US$6B 5.2 GW round-the-clock solar+storage project in Abu Dhabi — the largest single BESS order to date.",
   "productsAndServices": [
     {
@@ -133,7 +133,7 @@
     { "date": "2026-07-21", "category": "order-win", "headline": "Solarpro signs 2 GWh sodium-ion storage agreement for Eastern Europe", "read": "TENER Sodium converted from launch demo to commercial pipeline within a month.", "source": "https://www.catl.com/en/news/6916.html" },
     { "date": "2026-07-16", "category": "partnership", "headline": "Alfen and CATL reach 5 GWh sodium-ion storage partnership in Europe", "read": "European integrators become the sodium channel — CATL sells the chemistry transition, partners carry the projects.", "source": "https://www.catl.com/en/news/6900.html" },
     { "date": "2026-07-06", "category": "product-launch", "headline": "8C superfast-charging battery for light commercial vehicles (Tectrans II): 20–80% in 6 min 48 s", "read": "Refueling-time parity with gasoline aimed squarely at diesel fleet TCO in urban logistics.", "source": "https://www.catl.com/en/news/6925.html" },
-    { "date": "2026-07-02", "category": "order-win", "headline": "J&T Express partnership: battery-swap services for 5,000 heavy-duty trucks", "read": "Anchor fleets of this type underpin the economics of Qiji's 900-station 2026 build-out target.", "source": "https://cnevpost.com/2026/07/02/catl-jt-express-battery-swap-5000-heavy-trucks/" },
+    { "date": "2026-07-02", "category": "order-win", "headline": "J&T Express partnership: battery-swap services for 5,000 heavy-duty trucks", "read": "Anchor fleets like this are what make Qiji's 900-stations-in-2026 build-out pencil out.", "source": "https://cnevpost.com/2026/07/02/catl-jt-express-battery-swap-5000-heavy-trucks/" },
     { "date": "2026-06-30", "category": "capacity", "headline": "2,000th Choco-Swap station deployed — 180 cities across 31 provinces", "read": "Network doubled in six months; the 3,000-station/190-city end-2026 target looks credible.", "source": "https://carnewschina.com/2026/07/01/catls-battery-swap-network-hits-2000-stations-milestone/" },
     { "date": "2026-06-22", "category": "product-launch", "headline": "TENER Sodium launched in Munich — first field-validated sodium-ion BESS (30+ MWh, 15,000 cycles, 30-year warranty)", "read": "Opens a post-lithium cost/safety/longevity curve for grid storage that rivals must now answer.", "source": "https://www.catl.com/en/news/6861.html" },
     { "date": "2026-06-18", "category": "partnership", "headline": "Ford's BlueOval Battery Park Michigan hits LFP production and hiring milestones; market-ready CATL-licensed cells due before end-2026", "read": "The LRS model's first US proof point lands despite the 1260H listing and tariff wall.", "source": "https://www.electrive.com/2026/06/18/ford-to-produce-first-lfp-cells-this-year-thanks-to-catl/" },
@@ -143,12 +143,6 @@
     { "date": "2026-01-22", "category": "product-launch", "headline": "Tianxing II commercial-vehicle series launched, including the world's first mass-production sodium-ion CV battery", "read": "Sodium moves from launch-event promise into commercial-vehicle production reality.", "source": "https://carnewschina.com/2026/01/22/catl-unveils-worlds-first-mass-production-sodium-ion-battery-for-commercial-vehicles/" },
     { "date": "2025-12-30", "category": "capacity", "headline": "Choco-Swap reaches 1,020 stations in 45 cities; 2026 target raised to 3,000+ stations", "read": "Cleared the initial 1,000-station goal a month early — swap is now a scaling business, not a pilot.", "source": "https://cnevpost.com/2025/12/30/catl-reaches-1020-choco-swap-stations-raises-2026-target/" },
     { "date": "2025-09-08", "category": "product-launch", "headline": "Shenxing Pro LFP battery unveiled for Europe at IAA Mobility (758 km WLTP long-life and 12C superfast variants)", "read": "Localizing the LFP fast-charge pitch for European OEMs ahead of Debrecen plant output.", "source": "https://www.electrive.com/2025/09/08/catl-unveils-shenxing-pro-lfp-battery-for-europe/" }
-  ],
-  "strategyRead": [
-    "(High confidence) We assess CATL retains both global #1 positions (EV and ESS batteries) but the ESS lead is narrowing — company-reported share fell to 30.4% in 2025 from 36.5%, with Hithium and EVE at roughly 12% each per third-party estimates.",
-    "(Moderate confidence) We assess the sodium-ion line (Naxtra, TENER Sodium) is a post-lithium hedge competitors must now answer — launch-to-commercial-pipeline conversion took weeks, with European integrators carrying the projects while CATL sells the chemistry transition.",
-    "(Moderate confidence) We assess battery-swap (Qiji) has crossed from pilot to scaling network business — the 3,000-station/190-city end-2026 target appears credible given the network doubled in the first half of 2026.",
-    "(Moderate confidence) We assess the Hong Kong raise (~90% of proceeds to Debrecen) commits CATL to European localization ahead of EU content rules — supply-chain positioning rather than opportunistic financing."
   ],
   "technicalSpecs": [
     {
@@ -360,6 +354,6 @@
     { "label": "Energy-Storage.News — ESS nearly 20% of CATL H1 2026 revenue", "url": "https://www.energy-storage.news/energy-storage-generates-nearly-20-of-catls-revenues-in-first-half-of-2026/", "accessed": "2026-08-08" },
     { "label": "MarketMinute (syndicated) — Megapack 3 / SBB 1.5 / HaoHan container-class comparison", "url": "https://markets.financialcontent.com/stocks/article/marketminute-2025-9-11-tesla-unveils-megapack-3-and-megablock-reshaping-the-future-of-grid-scale-energy-storage", "accessed": "2026-08-08" }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-08",
+  "profileVersion": 2
 }

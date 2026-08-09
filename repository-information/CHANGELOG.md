@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 105/100`
+`Sections: 106/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.18r] — 2026-08-09 04:46:49 AM EST
+
+> **Prompt:** "Rewrite all dossiers, their home-page descriptions, and export styles in Style 4: Intel Briefing - IC Assessment."
+
+### Changed
+- **All 10 dossiers rewritten in the Intel Briefing style** (`live-site-pages/profiler-data/*.profile.json`) — facts unchanged, voice converted: every `summary` now opens with a BOTTOM LINE UP FRONT sentence followed by a BACKGROUND section; analytic `ecosystemRole` claims reframed as "We assess … Basis: …"; Megmeet's `strategyRead` converted to confidence-tagged judgments; and the nine dossiers that had no `strategyRead` each gained a new 4-bullet **Key Judgments** array — "(High/Moderate/Low confidence) We assess …" — synthesized strictly from each dossier's existing sourced facts (no new research). Colloquial development takeaways IC-ified (e.g. Megmeet's "self-deflation of the AI hype", CATL's "pencil out"). All `profileVersion` +1 (megmeet → 2, rest → 3), `lastUpdated` 2026-08-09
+- `live-site-pages/profiler-data/profiler-companies.json` — all 10 home-page roster taglines rewritten in IC-terse voice with attribution/watch-item framing
+- **Export styles**: no code change needed — exports already render through the intel-briefing skin shipped in v02.17r (v01.16w), so the rewritten prose flows into the app, Word, and PDF automatically
+- Archived all 10 outgoing versions per the Archival Procedure (`archive/megmeet.profile.v1.json`, `archive/<slug>.profile.v2.json` ×9; `archive-index.json` updated)
+- Render-verified headlessly: BYD dossier shows Background/Key Judgments/Technical Annex sections, BLUF lead, and 4 numbered confidence-tagged judgments with zero console errors
 
 ## [v02.17r] — 2026-08-09 04:30:58 AM EST
 

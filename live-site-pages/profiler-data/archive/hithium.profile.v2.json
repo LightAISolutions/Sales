@@ -9,7 +9,7 @@
   "founded": 2019,
   "employees": "~7,650 (FY2024, company ESG figure via aggregator); ~10,500 (Mar 2026, third-party workforce estimate)",
   "ownership": { "type": "private" },
-  "summary": "BOTTOM LINE UP FRONT: Hithium has reached top-two global ESS cell scale as a stationary-only specialist riding a large-cell, LDES-native product ladder; we assess financing — after three failed listing attempts — is the primary vulnerability. BACKGROUND: Hithium is a pure-play stationary energy-storage battery manufacturer founded in December 2019 by former CATL engineer Wu Zuyu. It mass-produces prismatic LFP cells purpose-built for storage (280Ah, 314Ah, 587Ah, 1175Ah, and 1300Ah classes), sodium-ion cells, and integrated battery energy storage systems (∞Block and ∞Power DC blocks up to 6.9 MWh) for utility-scale, C&I, and residential applications, selling to grid operators, developers, and integrators in 20+ countries. The company remains private as of August 2026: an A-share attempt was withdrawn in 2023 and two Hong Kong Main Board applications (March 2025, October 2025) both lapsed, the second in April 2026.",
+  "summary": "Hithium is a pure-play stationary energy-storage battery manufacturer founded in December 2019 by former CATL engineer Wu Zuyu. It mass-produces prismatic LFP cells purpose-built for storage (280Ah, 314Ah, 587Ah, 1175Ah, and 1300Ah classes), sodium-ion cells, and integrated battery energy storage systems (∞Block and ∞Power DC blocks up to 6.9 MWh) for utility-scale, C&I, and residential applications, selling to grid operators, developers, and integrators in 20+ countries. The company remains private as of August 2026: an A-share attempt was withdrawn in 2023 and two Hong Kong Main Board applications (March 2025, October 2025) both lapsed, the second in April 2026.",
   "ecosystemRole": "One of the world's largest ESS cell suppliers — No. 5 globally in 2023 (>15 GWh, InfoLink), No. 3 in 2024 (35.1 GWh, ~11% share, behind CATL and EVE), and Top 2 in both total and utility-scale ESS battery shipments for 2025 (InfoLink/SMM/ICC); cumulative shipments passed 100 GWh in August 2025. Manufacturing: Xiamen HQ, Chongqing (world's first WEF 'Lighthouse Factory' in energy-storage batteries, Jan 2026), Shandong, a 10 GWh/yr module + system plant in Mesquite, Texas (first shipments Aug 2025), and a committed €400M cell + BESS gigafactory in Navarre, Spain (target 2027).",
   "productsAndServices": [
     {
@@ -105,12 +105,6 @@
     { "date": "2026-02-09", "category": "other", "headline": "InfoLink 2025 rankings: global Top 2 in both total and utility-scale ESS cell shipments (market: 612.39 GWh, +94.6%)", "read": "The stationary-only specialist is now second only to CATL in its single product category — scale credibility for giga-tender shortlists.", "source": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/" },
     { "date": "2026-01-12", "category": "regulatory", "headline": "Reliance Industries halted its India cell-manufacturing plan after the Hithium technology-licensing deal collapsed under tightened Chinese export controls", "read": "Licensing as an expansion channel is closed for now — Beijing's export-control regime protects Hithium's technology moat but caps its India localization options; the relationship continues as BESS component supply per media reports.", "source": "https://www.indianchemicalnews.com/battery/reliance-pauses-lithium-ion-battery-push-amid-china-tech-hurdle-says-report-28931" },
     { "date": "2025-08-27", "category": "order-win", "headline": "4 GWh Saudi Electricity Company LDES projects (Tabuk + Hail) using ∞Cell 1175Ah in 6.25 MWh containers; commissioning targeted 2026", "read": "The kAh-class cell's flagship proof point — hot-climate LDES at national-utility scale, with long-term O&M attached.", "source": "https://www.hithium.com/newsroom/latest/details/80.html" }
-  ],
-  "strategyRead": [
-    "(High confidence) We assess Hithium has secured top-tier scale as a stationary-only specialist — Top 2 in 2025 ESS cell shipments behind CATL per InfoLink/SMM/ICC, with cumulative shipments past 100 GWh in August 2025.",
-    "(Moderate confidence) We assess the large-cell ladder (587→650→1175→1300Ah) feeding 6+ MWh blocks, with 8-hour-native LDES as the differentiated tier, is a deliberate policy fit — duration-mandating markets (NSW: 28 GWh by 2033) are the target.",
-    "(Moderate confidence) We assess the US (Mesquite, Texas) and EU (Navarre, Spain) plants insulate the order book against tariff and content rules; the €400M Spain commitment with a 2027 target is the pacing item.",
-    "(Moderate confidence) We assess financing capacity, not demand, is the constraint: three failed listing attempts (A-share 2023; two lapsed HKEX applications) against a capex-heavy expansion. Basis: prospectus filings and financial-media reporting."
   ],
   "technicalSpecs": [
     {
@@ -359,6 +353,6 @@
     { "label": "ESS News — Hithium & LG ES begin US BESS manufacturing; tariff context (Jun 2025)", "url": "https://www.ess-news.com/2025/06/06/hithium-lg-begin-us-battery-manufacture-in-tough-american-market/", "accessed": "2026-08-08" },
     { "label": "Indian Chemical News — Reliance pauses cell push after Hithium licensing collapse (Jan 2026)", "url": "https://www.indianchemicalnews.com/battery/reliance-pauses-lithium-ion-battery-push-amid-china-tech-hurdle-says-report-28931", "accessed": "2026-08-08" }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-08",
+  "profileVersion": 2
 }

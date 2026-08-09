@@ -9,8 +9,8 @@
   "founded": 1995,
   "employees": "~968,900 (end-2024, company-reported)",
   "ownership": { "type": "public", "ticker": "SZSE: 002594 · HKEX: 1211" },
-  "summary": "BOTTOM LINE UP FRONT: BYD pairs the world's largest NEV platform with gigascale storage — shared Blade LFP economics put it at or near the top of every 2025 storage ranking, and the 11.275 GWh Masdar HaoHan award is the delivery test through 2027. BACKGROUND: BYD is a Chinese conglomerate spanning batteries, new-energy vehicles, electronics, and rail transit, and one of the world's largest battery-energy-storage suppliers. Its storage arm — the Energy Storage & New-type Battery Business Division (BYD Energy Storage, est. 2008), supplied by cell subsidiary FinDreams Battery — makes LFP 'Blade' cells and integrated BESS products from grid-scale containers to home batteries. BYD is also China's largest NEV maker (4.60M NEVs sold in 2025, >1M exported), sharing the Blade LFP platform between vehicles and storage.",
-  "ecosystemRole": "We assess BYD as top-tier in every storage ranking, with scope-dependent placement: #2 global ESS battery shipper in 2023 (28.4 GWh, Fastmarkets), #3 ESS cell shipper in 2024 (SMM/InfoLink), and for 2025 Benchmark ranked BYD the #1 global BESS system integrator (~60 GWh, 13% share, overtaking Tesla) while InfoLink placed it #3 in systems — estimates differ by scope. Company-reported: >75 GWh in commercial operation across 360+ projects in 110+ countries by end-2024. FinDreams capacity expansion (incl. Chongqing blade-cell base and Wuwei, Gansu) took planned battery capacity above 500 GWh in 2025.",
+  "summary": "BYD is a Chinese conglomerate spanning batteries, new-energy vehicles, electronics, and rail transit, and one of the world's largest battery-energy-storage suppliers. Its storage arm — the Energy Storage & New-type Battery Business Division (BYD Energy Storage, est. 2008), supplied by cell subsidiary FinDreams Battery — makes LFP 'Blade' cells and integrated BESS products from grid-scale containers to home batteries. BYD is also China's largest NEV maker (4.60M NEVs sold in 2025, >1M exported), sharing the Blade LFP platform between vehicles and storage.",
+  "ecosystemRole": "Top-tier in every storage ranking, with scope-dependent placement: #2 global ESS battery shipper in 2023 (28.4 GWh, Fastmarkets), #3 ESS cell shipper in 2024 (SMM/InfoLink), and for 2025 Benchmark ranked BYD the #1 global BESS system integrator (~60 GWh, 13% share, overtaking Tesla) while InfoLink placed it #3 in systems — estimates differ by scope. Company-reported: >75 GWh in commercial operation across 360+ projects in 110+ countries by end-2024. FinDreams capacity expansion (incl. Chongqing blade-cell base and Wuwei, Gansu) took planned battery capacity above 500 GWh in 2025.",
   "productsAndServices": [
     {
       "name": "HaoHan utility-scale platform (浩瀚, flagship 2025–)",
@@ -96,12 +96,6 @@
     { "date": "2025-03-26", "category": "product-launch", "headline": "Chess Plus C&I cabinet launched (233 kWh/125 kW China; 350.1 kWh US version)", "read": "A serious C&I re-entry led by the blade-cell safety story — fire-resistant casing and aerosol suppression aimed at the segment's thermal-incident anxiety.", "source": "https://www.ess-news.com/2025/04/07/byd-launches-new-ci-highly-integrated-battery-storage-solution/" },
     { "date": "2025-03-17", "category": "product-launch", "headline": "Super e-Platform unveiled: 1,000 V architecture, 10C flash charging at up to 1 MW — 400 km of range in 5 minutes", "read": "Charging-speed leadership as the new EV battleground; the flash-charging station network (with storage buffering) creates captive demand for BYD's own BESS.", "source": "https://www.byd.com/en/news-list/BYD-Unveils-Super-e-Platform-Megawatt-Flash-Charging-Electric-Vehicles-Matching-Refueling-Speeds.html" },
     { "date": "2025-02-17", "category": "order-win", "headline": "12.5 GWh grid-scale BESS contract with Saudi Electricity Company (5 × 500 MW/2,500 MWh) — world's largest grid-side award at signing", "read": "Anchor reference for MC Cube-T at national-utility scale; lifts cumulative SEC cooperation to 15.1 GWh.", "source": "https://www.pv-magazine.com/2025/02/17/byd-to-supply-12-5-gwh-of-battery-storage-in-saudi-arabia/" }
-  ],
-  "strategyRead": [
-    "(High confidence) We assess BYD's storage cost position derives from vertical integration and the Blade LFP platform shared with its NEV business — planned cell capacity above 500 GWh amortizes across vehicles and storage. Basis: company capacity disclosures and filings.",
-    "(Moderate confidence) We assess the scale leadership is real but scope-dependent: Benchmark ranks BYD the #1 2025 BESS system integrator (~60 GWh) while InfoLink places it #3 in systems — single-ranking claims should be treated with caution.",
-    "(Moderate confidence) We assess the HaoHan/Masdar RTC award and three repeat MC Cube-T purchases from the same Chilean developer indicate field-performance credibility at gigascale; the 2027 delivery schedule is the verification point.",
-    "(Moderate confidence) We assess Latin America is the template for BYD's non-China storage growth — following tender demand with local assembly (Brazil) mirrors the Chile SEC/Grenergy sequence."
   ],
   "technicalSpecs": [
     {
@@ -284,6 +278,6 @@
     { "label": "CnEVPost — Q1 2026 profit -55% (Apr 2026)", "url": "https://cnevpost.com/2026/04/28/byd-reports-drop-in-q1-2026-net-profit/", "accessed": "2026-08-07" },
     { "label": "Eastmoney — storage leadership change: Yin Xueqin succeeds Yin Xiaoqiang (Aug 2025)", "url": "https://caifuhao.eastmoney.com/news/20250816221834817024760", "accessed": "2026-08-07" }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-08",
+  "profileVersion": 2
 }

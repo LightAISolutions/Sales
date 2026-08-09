@@ -16,11 +16,11 @@
       "categories": [
         "supplier"
       ],
-      "tagline": "Blade LFP cells and grid-scale BESS (HaoHan, MC Cube-T) — #1 in 2025 BESS system shipments per Benchmark.",
+      "tagline": "Blade LFP cells and gigascale BESS (HaoHan, MC Cube-T) — #1 in 2025 BESS system shipments per Benchmark; ranking scope-dependent.",
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 002594 · HKEX: 1211",
       "status": "active",
-      "lastUpdated": "2026-08-08"
+      "lastUpdated": "2026-08-09"
     },
     {
       "slug": "catl",
@@ -28,11 +28,11 @@
       "categories": [
         "supplier"
       ],
-      "tagline": "World's largest battery maker — TENER storage systems; #1 in ESS cells five years running.",
+      "tagline": "World's largest battery maker; TENER storage line — #1 in ESS cells five years running, with the lead narrowing per third-party estimates.",
       "hq": "Ningde, China",
       "ticker": "SZSE: 300750 · HKEX: 3750",
       "status": "active",
-      "lastUpdated": "2026-08-08"
+      "lastUpdated": "2026-08-09"
     },
     {
       "slug": "flexgen",
@@ -40,10 +40,10 @@
       "categories": [
         "integrator"
       ],
-      "tagline": "Software-first US BESS integrator — HybridOS EMS; acquired Powin's assets in 2025.",
+      "tagline": "Software-first US BESS integrator (HybridOS EMS) — assessed as a services-lane specialist after acquiring Powin's assets in 2025.",
       "hq": "Durham, NC, USA",
       "status": "active",
-      "lastUpdated": "2026-08-08"
+      "lastUpdated": "2026-08-09"
     },
     {
       "slug": "fluence",
@@ -51,11 +51,11 @@
       "categories": [
         "integrator"
       ],
-      "tagline": "Global storage integrator — Smartstack and Gridstack platforms with Mosaic/Nispera software.",
+      "tagline": "Global storage integrator — Smartstack/Gridstack with Mosaic/Nispera software; US domestic-content supply chain and a $6.4B backlog.",
       "hq": "Arlington, VA, USA",
       "ticker": "NASDAQ: FLNC",
       "status": "active",
-      "lastUpdated": "2026-08-08"
+      "lastUpdated": "2026-08-09"
     },
     {
       "slug": "hithium",
@@ -63,10 +63,10 @@
       "categories": [
         "supplier"
       ],
-      "tagline": "Stationary LFP battery cells and BESS systems — global Top-2 ESS cell shipments in 2025.",
+      "tagline": "Stationary-only LFP cell and BESS specialist — Top-2 2025 ESS cell shipments; we assess financing as the primary watch item.",
       "hq": "Xiamen, China",
       "status": "active",
-      "lastUpdated": "2026-08-08"
+      "lastUpdated": "2026-08-09"
     },
     {
       "slug": "megmeet",
@@ -74,11 +74,11 @@
       "categories": [
         "supplier"
       ],
-      "tagline": "Power electronics platform — AI data-center power (NVIDIA 800V HVDC ecosystem), appliance controls, EV components, welding.",
+      "tagline": "Power-electronics platform converting to AI data-center power — the only mainland vendor NVIDIA named for GB200; the H1 2026 report is the test.",
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 002851",
       "status": "active",
-      "lastUpdated": "2026-08-07"
+      "lastUpdated": "2026-08-09"
     },
     {
       "slug": "sinexcel",
@@ -86,11 +86,11 @@
       "categories": [
         "supplier"
       ],
-      "tagline": "Power electronics — energy storage PCS, EV charging, and power quality solutions.",
+      "tagline": "Modular power electronics — overseas storage PCS is the margin engine; EV charging and power quality lines; AIDC power pre-revenue.",
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 300693",
       "status": "active",
-      "lastUpdated": "2026-08-08"
+      "lastUpdated": "2026-08-09"
     },
     {
       "slug": "sungrow",
@@ -98,11 +98,11 @@
       "categories": [
         "supplier"
       ],
-      "tagline": "PV inverters and PowerTitan BESS — #1 in Wood Mackenzie's 2025 integrator and inverter rankings.",
+      "tagline": "PV inverters and PowerTitan BESS — holds both 2026 Wood Mackenzie #1 rankings; we assess ESS is now the profit center.",
       "hq": "Hefei, China",
       "ticker": "SZSE: 300274",
       "status": "active",
-      "lastUpdated": "2026-08-08"
+      "lastUpdated": "2026-08-09"
     },
     {
       "slug": "tesla",
@@ -110,11 +110,11 @@
       "categories": [
         "supplier"
       ],
-      "tagline": "Megapack utility BESS, Powerwall, and Autobidder — the leading Western storage player.",
+      "tagline": "Megapack, Powerwall, and Autobidder — leading Western integrator; Brookshire ramp and Megapack 3 deliveries are the watch items.",
       "hq": "Austin, TX, USA",
       "ticker": "NASDAQ: TSLA",
       "status": "active",
-      "lastUpdated": "2026-08-08"
+      "lastUpdated": "2026-08-09"
     },
     {
       "slug": "wartsila",
@@ -122,11 +122,11 @@
       "categories": [
         "integrator"
       ],
-      "tagline": "Quantum BESS and GEMS platform — storage moving into a 50/50 JV with RCT Solutions (2026).",
+      "tagline": "Quantum BESS and GEMS moving into a 50/50 RCT JV (Q3 2026); the retained engine business independently monetizes data-center power.",
       "hq": "Helsinki, Finland",
       "ticker": "HEL: WRT1V",
       "status": "active",
-      "lastUpdated": "2026-08-08"
+      "lastUpdated": "2026-08-09"
     }
   ]
 }

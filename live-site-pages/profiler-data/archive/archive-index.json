@@ -1,29 +1,136 @@
 {
   "byd": [
-    { "file": "byd.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+    {
+      "file": "byd.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-08",
+      "supersededBy": 2
+    },
+    {
+      "file": "byd.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 3
+    }
   ],
   "catl": [
-    { "file": "catl.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+    {
+      "file": "catl.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-08",
+      "supersededBy": 2
+    },
+    {
+      "file": "catl.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 3
+    }
   ],
   "flexgen": [
-    { "file": "flexgen.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+    {
+      "file": "flexgen.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-08",
+      "supersededBy": 2
+    },
+    {
+      "file": "flexgen.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 3
+    }
   ],
   "fluence": [
-    { "file": "fluence.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+    {
+      "file": "fluence.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-08",
+      "supersededBy": 2
+    },
+    {
+      "file": "fluence.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 3
+    }
   ],
   "hithium": [
-    { "file": "hithium.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+    {
+      "file": "hithium.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-08",
+      "supersededBy": 2
+    },
+    {
+      "file": "hithium.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 3
+    }
   ],
   "sinexcel": [
-    { "file": "sinexcel.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+    {
+      "file": "sinexcel.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-08",
+      "supersededBy": 2
+    },
+    {
+      "file": "sinexcel.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 3
+    }
   ],
   "sungrow": [
-    { "file": "sungrow.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+    {
+      "file": "sungrow.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-08",
+      "supersededBy": 2
+    },
+    {
+      "file": "sungrow.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 3
+    }
   ],
   "tesla": [
-    { "file": "tesla.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+    {
+      "file": "tesla.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-08",
+      "supersededBy": 2
+    },
+    {
+      "file": "tesla.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 3
+    }
   ],
   "wartsila": [
-    { "file": "wartsila.profile.v1.json", "profileVersion": 1, "archivedAt": "2026-08-08", "supersededBy": 2 }
+    {
+      "file": "wartsila.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-08",
+      "supersededBy": 2
+    },
+    {
+      "file": "wartsila.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 3
+    }
+  ],
+  "megmeet": [
+    {
+      "file": "megmeet.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 2
+    }
   ]
 }

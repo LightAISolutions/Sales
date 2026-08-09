@@ -9,7 +9,7 @@
   "founded": 2003,
   "employees": "134,785 (Dec 31, 2025, 10-K)",
   "ownership": { "type": "public", "ticker": "NASDAQ: TSLA" },
-  "summary": "BOTTOM LINE UP FRONT: Tesla Energy is the company's execution bright spot — record 46.7 GWh deployed in 2025 and the fastest factory ramp in company history at Brookshire — but Chinese integrators now hold roughly three-quarters of global share and Sungrow has taken the #1 ranking. BACKGROUND: Tesla is an EV, energy, and AI company whose energy storage division (Tesla Energy) has become its fastest-growing, highest-margin business line. The segment sells the utility-scale Megapack (and the new Megapack 3 / Megablock generation), the residential Powerwall 3, solar products, and the Autobidder trading/dispatch software. Energy generation & storage revenue reached $12.77B in 2025 (+27% YoY) on record deployments of 46.7 GWh (+49%), versus 31.4 GWh in 2024, while automotive remains the revenue core (1.64M vehicles delivered in 2025).",
+  "summary": "Tesla is an EV, energy, and AI company whose energy storage division (Tesla Energy) has become its fastest-growing, highest-margin business line. The segment sells the utility-scale Megapack (and the new Megapack 3 / Megablock generation), the residential Powerwall 3, solar products, and the Autobidder trading/dispatch software. Energy generation & storage revenue reached $12.77B in 2025 (+27% YoY) on record deployments of 46.7 GWh (+49%), versus 31.4 GWh in 2024, while automotive remains the revenue core (1.64M vehicles delivered in 2025).",
   "ecosystemRole": "The leading Western BESS integrator: #1 global storage-system integrator for 2024 (15% global share, 39% North America — Wood Mackenzie); #2 in the 2026 comprehensive ranking behind Sungrow as Chinese integrators captured ~76% of a >100 GW market. Megafactories: Lathrop, CA (~40 GWh/yr), Shanghai (producing since early 2025), and Brookshire, TX — 50 GWh/yr dedicated to Megapack 3, with production started August 2026, 16 months after groundbreaking.",
   "productsAndServices": [
     {
@@ -127,12 +127,6 @@
     { "date": "2025-07-31", "category": "other", "headline": "California VPPs delivered a record >535 MW during July 2025 events — Powerwall homes supplied nearly 500 MW", "read": "Residential fleets are now utility-scale resources; every Powerwall sale compounds the grid-services position.", "source": "https://electrek.co/guides/tesla-virtual-power-plant/" },
     { "date": "2025-07-03", "category": "other", "headline": "'Oasis' Supercharger opened at Lost Hills, CA — 168 stalls, fully off-grid on 11 MW solar + 39 MWh of Megapacks", "read": "A working showcase that storage can substitute for grid interconnection — sales collateral for microgrid-class Megapack deals.", "source": "https://electrek.co/2025/07/03/tesla-launches-oasis-supercharger-with-solar-farm-off-grid-batteries/" },
     { "date": "2025-03-21", "category": "capacity", "headline": "Megafactory Shanghai completed its first Megapack export shipment (Australia); 1,000th unit produced within ~6 months", "read": "The China plant gives Tesla tariff-advantaged supply for APAC/EMEA and freed Lathrop for the Americas backlog.", "source": "https://cnevpost.com/2025/03/21/tesla-china-ships-1st-megapacks-overseas/" }
-  ],
-  "strategyRead": [
-    "(High confidence) We assess Tesla Energy is the company's execution bright spot — record 46.7 GWh deployed in 2025 (+49%) at segment-leading margins, with the Brookshire bring-up (16 months from groundbreaking to production) the fastest in company history. Basis: shareholder updates and filings.",
-    "(Moderate confidence) We assess Tesla's response to Chinese density leadership is standardization plus software — integrated Megablock units winning on site-level cost and schedule, and the Autobidder/fleet-optimization layer deepening a software moat — rather than competing on container density alone.",
-    "(Moderate confidence) We assess onshored LFP cell production reduces but does not eliminate the structural dependence on CATL for storage cells; tariff hedging is the near-term driver of the onshoring sequence.",
-    "(Low confidence) The reported ~25 GWh NatPower agreement is third-party reporting the company has not confirmed — European volume should not be treated as locked."
   ],
   "technicalSpecs": [
     {
@@ -308,6 +302,6 @@
     { "label": "ESS News — Sungrow leads first global BESS integrator ranking (2026)", "url": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/", "accessed": "2026-08-07" },
     { "label": "Teslarati — Megapack exec promoted to VP Energy & Charging", "url": "https://www.teslarati.com/tesla-megapack-exec-promoted-vp-energy-charging/", "accessed": "2026-08-07" }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-08",
+  "profileVersion": 2
 }

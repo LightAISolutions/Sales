@@ -9,7 +9,7 @@
   "founded": 2009,
   "employees": "~300–500 (2026, conflicting third-party estimates; no company figure published)",
   "ownership": { "type": "private" },
-  "summary": "BOTTOM LINE UP FRONT: FlexGen has exited the hardware-integrator race to run the software and services layer on other vendors' hardware — the Powin asset purchase and the 2026 European entry are the proof points to watch. BACKGROUND: FlexGen is a software-first battery energy storage integrator providing the HybridOS energy management system, engineering/integration, and lifecycle services for grid-scale storage. Founded in 2009 as a military hybrid-power hardware company (founder Josh Prueher), it pivoted to utility-scale storage integration and, after 2023, to a software-and-services model. In August 2025 it acquired the assets of bankrupt rival Powin ($36M stalking-horse bid: hardware/software IP, IT systems, spare parts), in April 2026 it acquired commissioning firm Clean Energy Services, and in June 2026 it launched European operations. Backed by Apollo Global Management ($150M, 2021), Vitol (anchored the $100M Series C, 2022), and Altira Group.",
+  "summary": "FlexGen is a software-first battery energy storage integrator providing the HybridOS energy management system, engineering/integration, and lifecycle services for grid-scale storage. Founded in 2009 as a military hybrid-power hardware company (founder Josh Prueher), it pivoted to utility-scale storage integration and, after 2023, to a software-and-services model. In August 2025 it acquired the assets of bankrupt rival Powin ($36M stalking-horse bid: hardware/software IP, IT systems, spare parts), in April 2026 it acquired commissioning firm Clean Energy Services, and in June 2026 it launched European operations. Backed by Apollo Global Management ($150M, 2021), Vitol (anchored the $100M Series C, 2022), and Altira Group.",
   "ecosystemRole": "US-centric BESS integrator positioned around hardware-agnostic software and services rather than factory-built AC blocks: 25+ GWh across 200+ energy storage systems in 10+ countries under software and services after the Powin acquisition (company-reported). Historically claimed the #2 US storage-technology-provider spot and ~80% Texas share (2022, company claim, dated). Services the ex-Powin fleet and offers migration to HybridOS; European projects secured in the UK, Finland, and Sweden (2026).",
   "productsAndServices": [
     {
@@ -117,12 +117,6 @@
     { "date": "2026-02-19", "category": "product-launch", "headline": "HybridOS v13 released: unified real-time/historical UI, historian data API, fleet mobile app, market price access, predictive diagnostics with augmentation prediction, charge-limit handler, native CAN BMS support; solar PPC expanded", "read": "Moves the platform from control into prediction (diagnostics, augmentation forecasting) — the fleet-data moat argument for a software-first integrator.", "source": "https://www.businesswire.com/news/home/20260219177956/en/" },
     { "date": "2025-08-19", "category": "financial", "headline": "Completed $36M acquisition of Powin's assets out of Chapter 11 — Centipede/Pod hardware IP, StackOS and Kobold software IP, IT systems, spare parts; supported base now 25+ GWh / 200+ systems / 10+ countries", "read": "Fleet-in-a-box: an instant services annuity plus a captive EMS-retrofit pipeline, acquired without taking on a hardware manufacturing business.", "source": "https://www.businesswire.com/news/home/20250819895894/en/" },
     { "date": "2025-06-03", "category": "partnership", "headline": "Partnered with Rosendin Electric on BESSUPS — medium-voltage utility-scale battery storage replacing conventional UPS infrastructure for data centers", "read": "The data-center wedge: BESS as both power quality and grid services outside the data hall, aimed at AI campuses stuck in interconnection queues.", "source": "https://www.businesswire.com/news/home/20250603612484/en/" }
-  ],
-  "strategyRead": [
-    "(High confidence) We assess FlexGen has deliberately exited the hardware-integrator lane: its absence from Wood Mackenzie's AC-block top-10 is consistent with the chosen software/services position, not competitive failure.",
-    "(Moderate confidence) We assess the Powin asset purchase converted a rival's bankruptcy into a services annuity plus a captive EMS-retrofit pipeline — fleet under software (25+ GWh, company-reported) is now the KPI that matters.",
-    "(Moderate confidence) We assess the European entry tests whether software-and-services travels lighter than hardware; UL testing and VDE prototype certification are the pacing items.",
-    "(Low confidence) Collection gap: the company is private and key scale claims (#2 US provider, ~80% Texas share) date to 2022 company statements — treat as unverified until updated."
   ],
   "technicalSpecs": [
     {
@@ -282,6 +276,6 @@
     { "label": "Linxon — FlexGen–Linxon collaboration press release", "url": "https://linxon.com/press-release-flexgen-and-linxon-announce-collaboration-to-advance-energy-storage-solutions/", "accessed": "2026-08-08" },
     { "label": "Business Wire — Hithium–FlexGen cooperation agreement (Nov 2023)", "url": "https://www.businesswire.com/news/home/20231121630058/en/Hithium-and-FlexGen-Sign-Cooperation-Agreement", "accessed": "2026-08-08" }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-08",
+  "profileVersion": 2
 }

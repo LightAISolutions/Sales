@@ -9,7 +9,7 @@
   "founded": 1834,
   "employees": "~17,900 (end-2025, company-reported)",
   "ownership": { "type": "public", "ticker": "HEL: WRT1V" },
-  "summary": "BOTTOM LINE UP FRONT: We assess Wärtsilä is executing a managed exit from merchant storage integration — folding the business into a 50/50 JV with RCT Solutions after a 60% order collapse — while its retained engine business independently monetizes data-center power demand. BACKGROUND: Wärtsilä is a Finnish marine and energy technology group (founded 1834) supplying ship engines and propulsion, engine power plants for grid balancing, lifecycle services, and — through its Energy Storage & Optimisation business — utility-scale BESS (Quantum series) and the GEMS Digital Energy Platform. The storage business's ownership has moved in two stages: an 18-month strategic review concluded in March 2025 with retention (elevated to a standalone segment), but on 15 June 2026 Wärtsilä announced it will fold global Energy Storage into a 50/50 joint venture with Germany's RCT Solutions GmbH (RCT CEO Peter Fath to lead the JV; closing expected Q3 2026), reclassifying it as discontinued operations.",
+  "summary": "Wärtsilä is a Finnish marine and energy technology group (founded 1834) supplying ship engines and propulsion, engine power plants for grid balancing, lifecycle services, and — through its Energy Storage & Optimisation business — utility-scale BESS (Quantum series) and the GEMS Digital Energy Platform. The storage business's ownership has moved in two stages: an 18-month strategic review concluded in March 2025 with retention (elevated to a standalone segment), but on 15 June 2026 Wärtsilä announced it will fold global Energy Storage into a 50/50 joint venture with Germany's RCT Solutions GmbH (RCT CEO Peter Fath to lead the JV; closing expected Q3 2026), reclassifying it as discontinued operations.",
   "ecosystemRole": "One of the established Western storage integrators: >19 GWh deployed or contracted across 130+ sites worldwide (company-reported), a global top-ten placement in Wood Mackenzie's inaugural BESS integrator ranking (July 2026), and an early leader in storage cybersecurity (first-in-industry IEC 62443 certification for GEMS technology). The 2025 numbers show the strategic squeeze: segment order intake fell 60% to EUR 455M (2,677 MWh, -52%) on US tariffs, FEOC rules, and price competition — the backdrop to the JV decision.",
   "productsAndServices": [
     {
@@ -113,12 +113,6 @@
     { "date": "2026-01-29", "category": "order-win", "headline": "24 × Wärtsilä 50SG engines (429 MW) ordered for a US power plant serving data-centre demand; COD late 2028–early 2029", "read": "The retained engine business is monetising the US data-centre power squeeze — Q1 2026 booking on top of 2025's first two US data-centre projects (789 MW).", "source": "https://www.wartsila.com/media/news/29-01-2026-wartsila-chosen-for-a-major-u-s-power-plant-project-addressing-critical-energy-demand-driven-by-data-center-development-3711601" },
     { "date": "2025-12-19", "category": "order-win", "headline": "Wärtsilä to supply a 500 MWh BESS project in Texas (ERCOT)", "read": "US pipeline continuing despite the tariff/FEOC-driven 2025 order collapse — ERCOT remains a core market for the storage business entering the JV.", "source": "https://www.ess-news.com/2025/12/19/texas-bess-wartsila-to-supply-500-mwh-project-linea-energy-secures-financing-for-470-mwh-facility/" },
     { "date": "2025-10-14", "category": "product-launch", "headline": "GEMS Pulse launched — predictive cell-to-fleet analytics (SoH, SoC, cell imbalance, usable energy) built in-house on 9+ GWh of fleet data", "read": "Monetises the operational fleet's data exhaust as a revenue-uplift product, and deliberately in-house rather than via third-party battery-analytics vendors.", "source": "https://www.wartsila.com/media/news/14-10-2025-wartsila-debuts-gems-pulse-a-new-software-solution-to-enhance-revenue-for-bess-customers-through-cell-to-fleet-data-analytics-3668996" }
-  ],
-  "strategyRead": [
-    "(High confidence) We assess the JV decision is a managed retreat from merchant storage integration: the 2025 order collapse (intake −60% to EUR 455M; MWh −52%) on US tariffs, FEOC rules, and price competition made standalone scale uneconomic. Basis: company disclosures.",
-    "(Moderate confidence) We assess counterparty transition is the near-term operational risk: after closing (~Q3 2026) the sales counterpart may be the RCT-led JV rather than Wärtsilä — contract and service continuity is the item to watch.",
-    "(Moderate confidence) We assess the cybersecurity-first positioning (IEC 62443 heritage, SOC 2 attestation) is durable differentiation that survives the ownership change — an increasingly required procurement checkbox for utilities and data-center customers.",
-    "(High confidence) We assess Wärtsilä's data-center exposure continues regardless of the storage JV outcome: the retained engine business booked 789 MW of US data-center projects in 2025 plus further Q1 2026 orders."
   ],
   "technicalSpecs": [
     {
@@ -286,6 +280,6 @@
     { "label": "ESS News — Texas 500 MWh supply deal (19 Dec 2025)", "url": "https://www.ess-news.com/2025/12/19/texas-bess-wartsila-to-supply-500-mwh-project-linea-energy-secures-financing-for-470-mwh-facility/", "accessed": "2026-08-08" },
     { "label": "Energy-Storage.News — Bungama BESS completion coverage (Jul 2026)", "url": "https://www.energy-storage.news/wartsila-completes-300mwh-bungama-bess-for-revera-energy-in-south-australia/", "accessed": "2026-08-08" }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-08",
+  "profileVersion": 2
 }

@@ -9,7 +9,7 @@
   "founded": 1997,
   "employees": "~17,305 (Dec 31, 2024)",
   "ownership": { "type": "public", "ticker": "SZSE: 300274" },
-  "summary": "BOTTOM LINE UP FRONT: We assess Sungrow holds the strongest current competitive position among covered integrators — both Wood Mackenzie #1 rankings, with ESS now its largest and high-margin segment; the pending A+H listing and the ~10 GWh European PowerTitan 3.0 target are the 2026 checkpoints. BACKGROUND: Sungrow is one of the world's largest manufacturers of solar PV inverters and battery energy storage systems, founded in 1997 by Hefei University of Technology academic Cao Renxian, with additional businesses in wind power converters, EV drive/charging equipment, floating PV, hydrogen electrolyzers, and renewable plant development. Listed on Shenzhen's ChiNext since 2011; a Hong Kong H-share application was re-filed in April 2026 (the first, from October 2025, lapsed) — the A+H structure was pending as of August 2026.",
+  "summary": "Sungrow is one of the world's largest manufacturers of solar PV inverters and battery energy storage systems, founded in 1997 by Hefei University of Technology academic Cao Renxian, with additional businesses in wind power converters, EV drive/charging equipment, floating PV, hydrogen electrolyzers, and renewable plant development. Listed on Shenzhen's ChiNext since 2011; a Hong Kong H-share application was re-filed in April 2026 (the first, from October 2025, lapsed) — the A+H structure was pending as of August 2026.",
   "ecosystemRole": "Ranked No. 1 in BOTH Wood Mackenzie's Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (2026 edition, assessing 2025) — the first company to take the integrator top spot from Tesla. Company-reported 2025 shipments: 43 GWh of storage (+53.5%) and 143 GW of inverters. ESS revenue overtook inverters as the largest segment in FY2025 (41.8% of revenue at a 36.5% gross margin). BloombergNEF has named Sungrow the most bankable ESS and PCS brand.",
   "productsAndServices": [
     {
@@ -153,12 +153,6 @@
       "soldThrough": "Bundled with hardware; O&M service contracts for utility fleets",
       "targetSegments": "Plant owners, O&M providers, residential/C&I installers, storage operators"
     }
-  ],
-  "strategyRead": [
-    "(High confidence) We assess Sungrow holds the strongest competitive position in the covered set: first vendor to hold both Wood Mackenzie crowns (BESS integrator and PV inverter) simultaneously, and the first to take the integrator top spot from Tesla. Basis: Wood Mackenzie 2026 rankings.",
-    "(High confidence) We assess storage is now the profit center — ESS overtook inverters as the largest segment in FY2025 (41.8% of revenue at 36.5% gross margin), meaning storage execution rather than inverters drives the equity story. Basis: company filings.",
-    "(Moderate confidence) We assess vertical integration is deepening selectively: specifying its own large cell (rather than packaging suppliers' standard 314Ah units) gives spec control without full cell-fab capex.",
-    "(Moderate confidence) We assess the re-filed A+H listing mirrors peer offshore raises and would fund international expansion; the ~10 GWh European PowerTitan 3.0 delivery target for 2026 is the near-term proof point."
   ],
   "technicalSpecs": [
     {
@@ -397,6 +391,6 @@
     { "label": "tienda-solar — Huawei/Sungrow >55% combined inverter share (mid-2025)", "url": "https://tienda-solar.es/blog/en/top-3-pv-inverters-huawei-sungrow-sma/", "accessed": "2026-08-08" },
     { "label": "DNV — verification of Sungrow FPV anchoring & mooring design methodology", "url": "https://www.dnv.com/news/2021/dnv-verifies-sungrow-fpv-s-anchoring-and-mooring-design-methodology-using-new-floating-solar-recommended-practice-208492/", "accessed": "2026-08-08" }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-08",
+  "profileVersion": 2
 }

@@ -14,8 +14,8 @@
     "type": "public",
     "ticker": "SZSE ChiNext: 300693"
   },
-  "summary": "BOTTOM LINE UP FRONT: Sinexcel's high-margin overseas storage PCS line is the earnings engine over a commoditizing domestic base, with AI data-center power as pre-revenue optionality; the 11 August 2026 H1 report is the near-term checkpoint. BACKGROUND: Sinexcel is a Chinese power-electronics company built around modular power conversion technology, listed on the Shenzhen Stock Exchange ChiNext board since August 2017. It operates four reported business lines: EV charging and battery-swap equipment (its largest segment since 2024), new-energy power conversion (bi-directional energy storage PCS and containerized storage systems), industrial supporting power supplies (active harmonic filters, static var generators, UPS), and battery formation & test equipment. The company claims 5,000+ energy storage projects, 200,000+ EV charging systems, 20,000+ power quality projects, and 300,000+ battery test channels deployed, with manufacturing in Huizhou, Suzhou, California, and Malaysia and subsidiaries across the US, Europe, and Asia-Pacific.",
-  "ecosystemRole": "We assess Sinexcel as one of China's leading third-party PCS (power conversion system) suppliers for battery energy storage, with grid-forming capability and a fast-growing, high-margin overseas storage business (StellaON platform certified for multiple European grids). Also a merchant supplier of EV DC fast chargers and 20/40 kW charging modules, and a long-established power-quality vendor increasingly levered to AI data-center (AIDC) power demand.",
+  "summary": "Sinexcel is a Chinese power-electronics company built around modular power conversion technology, listed on the Shenzhen Stock Exchange ChiNext board since August 2017. It operates four reported business lines: EV charging and battery-swap equipment (its largest segment since 2024), new-energy power conversion (bi-directional energy storage PCS and containerized storage systems), industrial supporting power supplies (active harmonic filters, static var generators, UPS), and battery formation & test equipment. The company claims 5,000+ energy storage projects, 200,000+ EV charging systems, 20,000+ power quality projects, and 300,000+ battery test channels deployed, with manufacturing in Huizhou, Suzhou, California, and Malaysia and subsidiaries across the US, Europe, and Asia-Pacific.",
+  "ecosystemRole": "One of China's leading third-party PCS (power conversion system) suppliers for battery energy storage, with grid-forming capability and a fast-growing, high-margin overseas storage business (StellaON platform certified for multiple European grids). Also a merchant supplier of EV DC fast chargers and 20/40 kW charging modules, and a long-established power-quality vendor increasingly levered to AI data-center (AIDC) power demand.",
   "productsAndServices": [
     {
       "name": "Energy storage PCS & containerized systems",
@@ -193,12 +193,6 @@
       "read": "Building own-brand data-center power on the APF/SVG heritage — pre-revenue as of early 2026, while 36 kW HVDC modules are third-party-reported as already shipping to Vertiv.",
       "source": "https://www.haizhilicai.com/stock_selecter/newsDetail/20251009084653497788"
     }
-  ],
-  "strategyRead": [
-    "(High confidence) We assess overseas utility PCS is Sinexcel's margin engine — 61.3% FY2025 gross margin on the storage export line versus commoditized domestic pricing, with StellaON grid certifications (Poland, Nordics, Japan) functioning as queue-jumps into tender shortlists. Basis: filings as relayed by broker summaries.",
-    "(Moderate confidence) We assess the third-party PCS position benefits from integrator-versus-vertical dynamics: developers seeking non-captive conversion suppliers keep a durable lane open despite vertically integrated giants.",
-    "(Moderate confidence) We assess the AI data-center power line (built on the APF/SVG heritage; HVDC modules third-party-reported shipping to Vertiv) is optionality, pre-revenue as of early 2026 — treat AI-exposure claims as forward-looking until revenue is disclosed.",
-    "(Moderate confidence) We assess the EV-charging segment — largest since 2024 but lower-margin — is moving up the value chain toward fleet-infrastructure solutions to escape charger commoditization."
   ],
   "technicalSpecs": [
     {
@@ -964,6 +958,6 @@
       "accessed": "2026-08-08"
     }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-08",
+  "profileVersion": 2
 }
