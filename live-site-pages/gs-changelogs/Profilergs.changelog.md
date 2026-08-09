@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.05g] — 2026-08-09 03:03:41 AM EST — v02.14r
+
+### Added
+- Role-based access: saving, editing, and deleting notes is now owner-only; other signed-in team members can submit note suggestions (with attachments and a confidence rating) that are emailed to the owner for review
 
 ## [v01.04g] — 2026-08-09 02:41:47 AM EST — v02.13r
 

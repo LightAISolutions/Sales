@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.13w">
+  <meta name="build-version" content="v01.14w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1524,6 +1524,9 @@
     // transport (the fleet's TOKEN_EXCHANGE_METHOD: 'fetch' pattern).
     var OV_GIS_CLIENT_ID = '830735769637-ak3c73b4lnea004i8dge8kg6n53o36vl.apps.googleusercontent.com';
     var OV_NOTE_SESSION_KEY = 'ov_note_session';
+    // 'admin' (full write pipeline) or 'member' (suggest-only). UI convenience
+    // only — the backend enforces the real boundary per-op.
+    var OV_NOTE_ROLE_KEY = 'ov_note_role';
     var ovGisLoading = null;
 
     function ovNoteQs(o) {
@@ -1590,6 +1593,8 @@
               .then(function(data) {
                 if (data && data.success && data.sessionToken) {
                   localStorage.setItem(OV_NOTE_SESSION_KEY, data.sessionToken);
+                  var isAdmin = (data.permissions || []).indexOf('admin') >= 0;
+                  localStorage.setItem(OV_NOTE_ROLE_KEY, isAdmin ? 'admin' : 'member');
                   cb({ success: true, email: data.email || '' });
                 } else {
                   cb({ success: false, error: (data && data.error) || 'exchange_failed' });
@@ -1633,7 +1638,7 @@
             sb.disabled = true; say('Signing in…');
             ovNoteSignIn(function(r) {
               sb.disabled = false;
-              if (r.success) { say('Signed in' + (r.email ? ' as ' + r.email : '') + '.', true); renderForm(); }
+              if (r.success) { say('Signed in' + (r.email ? ' as ' + r.email : '') + '.', true); renderByRole(); }
               else say('Sign-in failed: ' + r.error, false);
             });
           });
@@ -1642,13 +1647,97 @@
         function sessionGuard(res, fallbackMsg) {
           if (res && res.success) return true;
           var err = (res && res.error) || fallbackMsg;
-          if (ovNoteSessionError(err)) {
+          if (err === 'ADMIN_ONLY') {
+            // Role downgraded (or stale role cache) — switch to suggest mode
+            localStorage.setItem(OV_NOTE_ROLE_KEY, 'member');
+            renderSuggest();
+            say('Your account can suggest notes but not save them directly.', false);
+          } else if (ovNoteSessionError(err)) {
             localStorage.removeItem(OV_NOTE_SESSION_KEY);
+            localStorage.removeItem(OV_NOTE_ROLE_KEY);
             renderSignin('Session expired — sign in again.');
           } else {
             say((fallbackMsg || 'Failed') + ': ' + err, false);
           }
           return false;
+        }
+        function renderByRole() {
+          var role = localStorage.getItem(OV_NOTE_ROLE_KEY);
+          if (!role) {
+            // Session predates role tracking — ask the backend once
+            say('Checking access…');
+            ovNoteApi('whoami', {}, function(res) {
+              if (!sessionGuard(res, 'Access check failed')) return;
+              localStorage.setItem(OV_NOTE_ROLE_KEY, res.isAdmin ? 'admin' : 'member');
+              say('');
+              renderByRole();
+            });
+            return;
+          }
+          if (role === 'admin') renderForm(); else renderSuggest();
+        }
+        // Suggest mode (non-admin): same inputs, but the note is emailed to
+        // the app owner for consideration — nothing is saved to the log
+        function renderSuggest() {
+          nBody.innerHTML = '';
+          nBody.appendChild(ovEl('div', 'hint', 'Suggest a field note for this company — it goes to Jon for review (nothing is published until he accepts it).'));
+          var ta = ovEl('textarea');
+          ta.maxLength = 4000; ta.placeholder = 'What did you learn about this company?';
+          nBody.appendChild(ta);
+          var row = ovEl('div', 'row');
+          var srcSel = ovEl('select');
+          ['contact', 'event', 'call', 'news', 'other'].forEach(function(v) {
+            var o = ovEl('option', null, 'via ' + v); o.value = v; srcSel.appendChild(o);
+          });
+          row.appendChild(srcSel);
+          var confSel = ovEl('select');
+          for (var c = 100; c >= 0; c -= 5) {
+            var o2 = ovEl('option', null, 'confidence ' + c); o2.value = String(c); confSel.appendChild(o2);
+          }
+          confSel.value = '70';
+          row.appendChild(confSel);
+          var send = ovEl('button', 'ov-btn', 'Send suggestion');
+          send.type = 'button';
+          row.appendChild(send);
+          nBody.appendChild(row);
+          var fileInput = document.createElement('input');
+          fileInput.type = 'file'; fileInput.multiple = true; fileInput.accept = '.pdf,.doc,.docx';
+          fileInput.style.cssText = 'display:block;width:100%;margin-top:10px;font-size:12.5px;color:inherit;';
+          nBody.appendChild(fileInput);
+          nBody.appendChild(ovEl('div', 'hint', 'Optionally attach Word/PDF notes (up to 3, 8 MB each) — they ride along with your suggestion.'));
+          function readFilesS(cb) {
+            var fl = fileInput.files;
+            if (!fl.length) { cb([]); return; }
+            if (fl.length > 3) { say('Attach at most 3 files.', false); cb(null); return; }
+            var out = [], pending = fl.length, failed = false;
+            for (var i = 0; i < fl.length; i++) (function(f) {
+              if (!/\.(docx?|pdf)$/i.test(f.name)) { failed = true; say(f.name + ' is not a Word/PDF file.', false); cb(null); return; }
+              if (f.size > 8 * 1024 * 1024) { failed = true; say(f.name + ' is over 8 MB.', false); cb(null); return; }
+              var rd = new FileReader();
+              rd.onload = function() {
+                if (failed) return;
+                out.push({ name: f.name, base64: String(rd.result).split(',')[1] || '' });
+                if (--pending === 0) cb(out);
+              };
+              rd.onerror = function() { if (!failed) { failed = true; say('Could not read ' + f.name + '.', false); cb(null); } };
+              rd.readAsDataURL(f);
+            })(fl[i]);
+          }
+          send.addEventListener('click', function() {
+            var text = ta.value.trim();
+            if (!text && !fileInput.files.length) { say('Type a note or attach a file first.', false); ta.focus(); return; }
+            send.disabled = true;
+            say('Sending…');
+            readFilesS(function(files) {
+              if (files === null) { send.disabled = false; return; }
+              ovNoteApi('suggest', { slug: slug, sourceType: srcSel.value, note: text, confidence: confSel.value, files: files }, function(res) {
+                send.disabled = false;
+                if (!sessionGuard(res, 'Send failed')) return;
+                ta.value = ''; fileInput.value = '';
+                say('Suggestion sent to Jon for consideration — thank you!', true);
+              });
+            });
+          });
         }
         function renderForm() {
           nBody.innerHTML = '';
@@ -1782,7 +1871,7 @@
             if (!open) loadRows();
           });
         }
-        if (localStorage.getItem(OV_NOTE_SESSION_KEY)) renderForm(); else renderSignin();
+        if (localStorage.getItem(OV_NOTE_SESSION_KEY)) renderByRole(); else renderSignin();
         sgN.appendChild(qn2);
         return sgN;
       }

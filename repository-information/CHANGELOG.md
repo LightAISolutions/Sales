@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.14r] — 2026-08-09 03:03:41 AM EST
+
+> **Prompt:** "I plan to share this Profiler app with my work friends later on, so copy Scraper and Receipt's Google sign-in and account structure. In the MasterACL spreadsheet, I want Profiler's sign-in application to be named "Profiler", so change the "In-dossier field-note intake for the Profiler app" name to "Profiler Field Notes". Also, I want other users besides me to only be able to view the dossiers and use the export and study guide features, as well as a limited-version field note feature. Limited version means that they can submit typed notes, attach documents, and add a confidence level, but it gets sent to "jonyang92@gmail.com" via email for consideration instead of being automatically saved into the Profiler app and bess-aidc-library database. Recommend the best way to accomplish the separation of power between me and other users above."
+
+### Added
+- `googleAppsScripts/Profiler/Profiler.gs` (v01.05g) — separation of power, enforced server-side: `submit`/`list`/`edit`/`delete` now require the `admin` permission (Master ACL role `admin`/`developer`); all other ACL-approved signed-in users get the new `suggest` op — same inputs (typed note, up to 3×8 MB Word/PDF attachments, source type, 0–100 confidence) but the suggestion is emailed to `NOTE_SUGGEST_EMAIL` (jonyang92@gmail.com) via MailApp with files as real attachments, and nothing is committed. New `whoami` op returns the session's role for UI branching. `PORTAL_DESCRIPTION` → "Profiler Field Notes" (Master ACL registration name; `ACL_PAGE_NAME` stays "Profiler" — the sheet column) + config sync
+- `live-site-pages/Profiler.html` (v01.14w) — role-aware note box: sign-in stores the role from the exchange (`admin` vs `member`); admins get the full form + Manage panel, members get the suggest form ("goes to Jon for review"); a `whoami` check covers sessions that predate role tracking, and an `ADMIN_ONLY` server response live-downgrades a stale admin UI to suggest mode. All three branches verified headlessly with a stubbed backend (member suggest send, admin regression, stale-admin downgrade)
+- `.claude/rules/profiler-app.md` — separation-of-power rules documented (server-side boundary, suggested-confidence-is-advisory, acceptance flow)
+
+### Changed
+- Sign-in/account structure note: Profiler already shares Scraper/Receipts' exact auth machinery (same GIS client, token exchange, session system, Master ACL spreadsheet) — this change wires the missing role layer through it; dossier viewing, export, and study guides remain public page features requiring no sign-in
 
 ## [v02.13r] — 2026-08-09 02:41:47 AM EST
 

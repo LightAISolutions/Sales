@@ -1,4 +1,4 @@
-var VERSION = "v01.04g";
+var VERSION = "v01.05g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -36,7 +36,7 @@ var MASTER_ACL_SPREADSHEET_ID = "1kG2KftqfKOeYwBCEkxRpw-QBh9s-1-Dvy31sH037UvE";
 var ACL_SHEET_NAME = "Access";
 var ACL_PAGE_NAME  = "Profiler";
 var PORTAL_ICON    = "📝";
-var PORTAL_DESCRIPTION = "In-dossier field-note intake for the Profiler app";
+var PORTAL_DESCRIPTION = "Profiler Field Notes";
 
 // Unified toggleable auth configuration (see 6-UNIFIED-TOGGLEABLE-AUTH-PATTERN.md)
 // Select a preset, then apply per-project overrides.
@@ -1816,6 +1816,9 @@ var NOTE_FILES_DIR = "repository-information/note-files";
 var NOTE_FILE_EXT_RE = /\.(docx?|pdf)$/i;
 var NOTE_FILE_MAX_COUNT = 3;
 var NOTE_FILE_MAX_B64 = 11000000;
+// Non-admin users suggest notes instead of writing them — suggestions are
+// emailed here (with any files as attachments) and nothing is committed
+var NOTE_SUGGEST_EMAIL = "jonyang92@gmail.com";
 
 // Commit a binary file (base64 content) to the repo via the contents API.
 // Returns the repo-relative path written.
@@ -2090,6 +2093,59 @@ function handleNoteOp_(e) {
   // ENABLE_DATA_OP_VALIDATION forced true in PROJECT_OVERRIDES)
   if (!session || session.length < 32) return { success: false, error: 'SESSION_EXPIRED' };
   try {
+    // Separation of power — the write pipeline (submit/list/edit/delete) is
+    // admin-only; every other ACL-approved user gets `suggest`, which emails
+    // the note to NOTE_SUGGEST_EMAIL for consideration and commits nothing.
+    // Enforced HERE (server-side): the page's role-aware UI is convenience,
+    // not the boundary.
+    var noteSess = validateSessionForData(session, 'note_' + op);
+    var noteIsAdmin = (noteSess.permissions || []).indexOf('admin') >= 0;
+    if (['submit', 'list', 'edit', 'delete'].indexOf(op) >= 0 && !noteIsAdmin) {
+      return { success: false, error: 'ADMIN_ONLY', role: noteSess.role || 'viewer' };
+    }
+    if (op === 'whoami') {
+      return { success: true, email: noteSess.email, role: noteSess.role || 'viewer', isAdmin: noteIsAdmin };
+    }
+    if (op === 'suggest') {
+      var sSlug = String(p.slug || '').toLowerCase().trim();
+      var sSource = String(p.sourceType || '').toLowerCase().trim();
+      var sText = String(p.note || '').trim();
+      var sConf = Math.round(Number(p.confidence));
+      var sFiles = [];
+      if (p.files) {
+        try { sFiles = JSON.parse(p.files); } catch (se) { return { success: false, error: 'bad_files_payload' }; }
+      }
+      if (!sText && !sFiles.length) return { success: false, error: 'INVALID_INPUT' };
+      if (sText.length > 4000 || sFiles.length > NOTE_FILE_MAX_COUNT) return { success: false, error: 'INVALID_INPUT' };
+      if (NOTE_SOURCE_TYPES.indexOf(sSource) < 0) return { success: false, error: 'INVALID_INPUT' };
+      if (!(sConf >= 0 && sConf <= 100)) return { success: false, error: 'INVALID_INPUT' };
+      var blobs = [];
+      for (var bi = 0; bi < sFiles.length; bi++) {
+        var sf = sFiles[bi];
+        if (!sf || typeof sf.name !== 'string' || typeof sf.base64 !== 'string') return { success: false, error: 'INVALID_INPUT' };
+        if (!NOTE_FILE_EXT_RE.test(sf.name)) return { success: false, error: 'FILE_TYPE_NOT_ALLOWED' };
+        if (!sf.base64.length || sf.base64.length > NOTE_FILE_MAX_B64) return { success: false, error: 'FILE_TOO_LARGE' };
+        var safeName = sf.name.replace(/[^A-Za-z0-9._-]/g, "_");
+        blobs.push(Utilities.newBlob(Utilities.base64Decode(sf.base64),
+          /pdf$/i.test(safeName) ? 'application/pdf' : 'application/octet-stream', safeName));
+      }
+      MailApp.sendEmail({
+        to: NOTE_SUGGEST_EMAIL,
+        subject: '[Profiler] Field note suggestion — ' + (sSlug || 'general') + ' (from ' + (noteSess.email || 'unknown') + ')',
+        body: 'A field note was suggested in the Profiler app.\n\n'
+          + 'From: ' + (noteSess.email || 'unknown') + ' (role: ' + (noteSess.role || 'viewer') + ')\n'
+          + 'Company: ' + (sSlug || 'general') + '\n'
+          + 'Source type: ' + sSource + '\n'
+          + 'Suggested confidence: ' + sConf + '/100\n'
+          + 'Attachments: ' + (blobs.length ? blobs.map(function(b2) { return b2.getName(); }).join(', ') : 'none') + '\n\n'
+          + 'Note:\n' + (sText || '(no typed text — see attachments)') + '\n\n'
+          + 'To accept it, add it yourself via the Profiler note box or tell Claude '
+          + '(e.g. "profiler note ' + (sSlug || 'general') + ': …") with your own confidence rating.',
+        attachments: blobs
+      });
+      auditLog('data_write', noteSess.email || 'unknown', 'field_note_suggested', { slug: sSlug, files: blobs.length });
+      return { success: true, suggested: true };
+    }
     if (op === 'bootstrap') {
       return { success: true, data: getIntakeBootstrap(session) };
     }
