@@ -1,4 +1,16 @@
 {
   "schemaVersion": 1,
-  "notes": []
+  "notes": [
+    {
+      "id": "note-20260808-01",
+      "date": "2026-08-08",
+      "slug": "general",
+      "sourceType": "other",
+      "note": "Intake pipeline test note — submitted by Claude to verify the field-note workflow end to end. Harmless to keep in the log.",
+      "confidence": 100,
+      "tags": [],
+      "triage": "pending",
+      "submittedVia": "issue-form (#1)"
+    }
+  ]
 }
