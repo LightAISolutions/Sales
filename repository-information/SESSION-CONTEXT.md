@@ -6,6 +6,39 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-08 10:30:31 PM EST
+**Repo version:** v02.06r
+
+**What we worked on:**
+- **Resolved the Receipts sign-in outage** (research + v01.99r diagnostic): `not_authorized` for all users wasn't ACL data — the script's Google authorization had lost the Sheets scope (`SpreadsheetApp.openById` → "Required permissions"). Added permanent owner-run `diagnoseAclAccess()` to `Receipts.gs` (logs the actual spreadsheet URL the code reads, duplicate-column detection, charCode dumps, cached + fresh verdicts, clears the access cache). Fix playbook: restore `oauthScopes` in appsscript.json → remove the app connection at myaccount.google.com/connections → re-run + approve ALL granular-consent checkboxes → GRANTED
+- **Built the full reimbursement plan (R1–R3, approved: one company · lazy folders · CSV · English names):**
+  - R1 (v02.01r, v01.31w·v01.20g): Personal/Business expense type at scan + review, Expense Type col 15, History 💼 badge, History/Reports/export filters (`etype` through all routes), 中文 translations
+  - R2 (v02.03r, v01.32w·v01.21g): renamed Reimbursement→Business everywhere (stored value too, legacy-read compat); toggle redesigned as bold segmented switch ("EXPENSE TYPE" caption, active side solid ink); Business saves convert the photo to a one-page PDF **in the browser** (hand-built JPEG-in-PDF, MuPDF-verified) and file it under `<Company>/<Year>/<Month>` in the user's own Drive via their `drive.file` credential; first Business save prompts for company name (Profiles col 5, editable in ⚙️ Settings); PDF Link col 16; deletes/flips clean up
+  - R3 (v02.06r, v01.33w): each month folder gets a self-maintaining `Line Items - <Month> <Year>.csv` (rows keyed by the receipt ID's YYYYMMDD suffix — edits move rows across months, deletes/flips remove them); PDF→ledger run sequentially to avoid folder-creation races
+- Two CHANGELOG archive rotations with SHA enrichment (2026-07-13 group, then the 11-section 2026-07-17 group; archive now 12 sections)
+
+**Where we left off:**
+- All three phases pushed and auto-merged; working tree clean. **The Business pipeline is deliberately untested end-to-end** — the developer has no real Business receipts until a new job starts, and explicitly deferred all Business testing ("I will bring problems up as they arise")
+- What IS verified: PDF builder rasterized by MuPDF from the page's exact code; CSV logic (escaping, row replacement, month filenames, ID-date parsing) run on real data in Node; all UI Playwright-checked; every Drive call reuses the app's proven own-Drive patterns
+
+**Key decisions made:**
+- Stored expense values are `Personal`/`Business` (blank legacy rows = Personal; brief `Reimbursement` era readable)
+- All Business filing is client-side with the user's own Drive credential — the server only stores links; receipt saves never fail because of filing failures (best-effort + re-save retries)
+- Company folder tree is created lazily at Drive root; folder/file names stay English even in 中文 mode
+- Sign-in outages: run `diagnoseAclAccess()` in the Receipts GAS editor first — it pinpoints ACL-data vs file-access vs OAuth-scope causes in one run
+
+**Active context:**
+- Branch `claude/receipts-gas-setup-o6rgh6` (deleted from remote after each auto-merge; recreate by pushing)
+- Repo v02.06r · Receipts v01.33w·v01.21g · 9 tracked pages all 🟢 (Profiler v01.08w — other sessions are actively developing Profiler/Scraper in parallel; expect rebases on every push)
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- No reminders, no TODO items
+
+**Recommendation for next session:**
+- Nothing is buildable until the developer's first real **Business** receipt exercises the new pipeline live (company prompt → `<Company>/<Year>/<Month>` PDF + ledger CSV). When they report that first run, verify the Drive tree and files match the design and fix anything that surfaces — start by reading the v02.01r–v02.06r CHANGELOG sections and the PROJECT-block PDF/ledger modules in `Receipts.html`
+- **To continue:** type `my first business receipt results`
+
+## Previous Sessions
+
 **Date:** 2026-08-07 10:21:51 PM EST
 **Repo version:** v01.93r
 
@@ -32,36 +65,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - The Sinexcel refresh fires autonomously on 2026-08-12 13:00 UTC — after it runs, review it end-to-end: the refreshed dossier's quality, the archival flow (`sinexcel.profile.v1.json` in `profiler-data/archive/` + `archive-index.json` entry + `bess-aidc-library` mirror), and that it re-armed the next Sinexcel trigger
 - **To continue:** type `review the Sinexcel refresh results`
-
-## Previous Sessions
-
-**Date:** 2026-08-07 02:13:52 AM EST
-**Repo version:** v01.90r
-
-**What we worked on:**
-- **Overview → Profiler rename** (v01.89r): `Profiler.html` (v01.03w), `profiler-data/` with `<slug>.profile.json` + `profiler-companies.json`, `PROFILER-SCHEMA.md`, `.claude/rules/profiler-app.md`, CLAUDE.md "Profiler Command" (trigger phrase now "profiler \<Company\>"), README tree, REPO-ARCHITECTURE flowchart node `PROFILER_PAGE` with regenerated + decompression-verified pako URL
-- **Dossier archival system** (v01.89r): `profiler-data/archive/` + `archive-index.json` (currently `{}`); Archival Procedure in `profiler-app.md` — archive-before-edit as `<slug>.profile.v<N>.json`, index update, best-effort mirror to `lightaisolutions/bess-aidc-library`
-- **Scheduled refreshes armed for all 9 covered companies** (v01.90r): 7 self-re-arming one-shot triggers (post-earnings, fresh sessions) + 1 quarterly private-company cron; pre-existing Sinexcel trigger prompt upgraded to the improved template
-- Session recovered from a mid-flight context compaction (trigger creation was interrupted; state reconstructed from git + staged renames)
-
-**Where we left off:**
-- Everything committed, pushed, and auto-merged to `main` (v01.90r). Nothing in flight — the refresh system runs autonomously from here
-
-**Key decisions made:**
-- BYD trigger staggered +2h after Sungrow (both report 2026-08-29) so two fresh sessions don't collide on shared repo state files
-- Estimate-based triggers (Tesla, Fluence) verify publication first and re-schedule themselves to the confirmed date if the report isn't out
-- Trigger-fired sessions carry no MCP connectors → every prompt has fallbacks: in-repo archive alone is acceptable; if `create_trigger` is unavailable, leave a REMINDERS.md note for manual re-arming
-- `profiler-data/archive/` deploys publicly with the site — acceptable, profiles contain only public-sourced data
-
-**Active context:**
-- Branch `claude/corporate-overview-app-1i1fzb` (deleted from remote after each auto-merge; recreated per push)
-- Repo v01.90r · 9 tracked pages, all 🟢; Profiler at v01.03w
-- Armed triggers (all fire fresh sessions): Sinexcel 08-12 13:00Z (`trig_01KcsGWtyHTq5j4ySXZddg5b`) · Sungrow 08-30 13:00Z (`trig_01TJcC525KKrtVmm1bAdyoW3`) · BYD 08-30 15:00Z (`trig_015mXU6ModiBdHnuhuWmxA9K`) · Tesla 10-22 13:00Z (`trig_01Y3Pt7xQ8oHDppbwDUero5V`) · Wärtsilä 10-28 13:00Z (`trig_014VoHBq1JXCxtzBwieHL2oN`) · CATL 11-01 13:00Z (`trig_01JWQ7grg4QpT7tBmu7FR43J`) · Fluence 11-25 14:00Z (`trig_01LhRd2YGZNUi4AhBLrfYvFP`) · Hithium & FlexGen quarterly cron, next fire 2026-10-01 (`trig_01UVzjF6Y91Gb2MzKdDAznd9`)
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No TODO items, no active reminders
-
-**Recommendation for next session:**
-- The first scheduled refresh (Sinexcel) fires 2026-08-12 in an autonomous fresh session — after it runs, review it end-to-end: the refreshed dossier's quality, the archival flow (`sinexcel.profile.v1.json` in `profiler-data/archive/` + `archive-index.json` entry + `bess-aidc-library` mirror), and that it re-armed the next Sinexcel trigger
-- **To continue:** type `verify the Sinexcel refresh`
 
 Developed by: ShadowAISolutions
