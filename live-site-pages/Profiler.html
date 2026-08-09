@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.11w">
+  <meta name="build-version" content="v01.12w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1510,11 +1510,26 @@
       if (window._gasNoteUrl) {
         var sg2 = ovSection('Add a Field Note', 'Type a note and/or attach a Word or PDF of your meeting notes — saved directly from the app (one-time Google sign-in). Notes are stored in the public field-note log; a triage pass decides dossier promotion.');
         var qg = ovEl('div'); qg.id = 'ov-qn';
+        var noteUrl = window._gasNoteUrl + (window._gasNoteUrl.indexOf('?') >= 0 ? '&' : '?') + 'slug=' + encodeURIComponent(slug);
         var fr = document.createElement('iframe');
-        fr.src = window._gasNoteUrl + (window._gasNoteUrl.indexOf('?') >= 0 ? '&' : '?') + 'slug=' + encodeURIComponent(slug);
+        // Credentialless (cookie-less) load — same fix as the template's
+        // full-screen iframe: Google serves framed /exec on the anonymous path,
+        // avoiding the multi-account /u/N cookie routing that otherwise fails
+        // with a Drive "unable to open the file" error. Unsupported browsers
+        // ignore the attribute.
+        try { fr.credentialless = true; } catch (x) {}
+        fr.setAttribute('credentialless', '');
+        fr.src = noteUrl;
         fr.style.cssText = 'width:100%;height:640px;border:1px solid rgba(255,255,255,0.15);border-radius:10px;background:transparent;';
         fr.setAttribute('title', 'Field note form');
         qg.appendChild(fr);
+        // Guaranteed path — a top-level /exec visit never hits the framed-
+        // routing failure, so always offer the pop-out
+        var popLink = ovEl('a', null, 'Form not loading, or prefer full-screen? Open the note form in its own tab ↗');
+        popLink.href = noteUrl;
+        popLink.target = '_blank'; popLink.rel = 'noopener';
+        popLink.style.cssText = 'display:block;margin-top:8px;font-size:12px;color:var(--ov-gold);';
+        qg.appendChild(popLink);
         sg2.appendChild(qg);
         return sg2;
       }

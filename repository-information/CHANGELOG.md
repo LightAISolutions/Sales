@@ -3,11 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.11r] — 2026-08-09 02:20:26 AM EST
+
+> **Prompt:** "I wanted to add a field note, but this is what I saw. Resolve it." *(screenshot: the note-box iframe showing Google Drive's "Sorry, unable to open the file at this time" error)*
+
+### Fixed
+- `live-site-pages/Profiler.html` (v01.12w) — the note-box iframe now loads **credentialless** (cookie-less), matching the current template pattern used by Receipts: cookie-carrying framed `/exec` requests hit Google's multi-account `/u/N` routing and fail with the Drive error the developer screenshotted; the anonymous path avoids it (sessions travel in the URL, not cookies). Root cause: the inline note-box iframe was written against the older template block still present in Profiler.html, which predates the credentialless fix
+
+### Added
+- `live-site-pages/Profiler.html` — "Open the note form in its own tab ↗" link under the note box: a top-level `/exec` visit never hits the framed-routing failure, so this fallback always works (also useful as a deliberate full-screen mode)
 
 ## [v02.10r] — 2026-08-09 01:59:52 AM EST
 
