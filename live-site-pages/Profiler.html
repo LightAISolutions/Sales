@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.08w">
+  <meta name="build-version" content="v01.09w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1292,6 +1292,19 @@
       // Study guide button — appears only when this company's <slug>.study.json exists
       // (skipped on archived snapshots — the guide reflects the current dossier)
       if (!p._archived) {
+        // Field note button — always visible; jumps to the note box at the
+        // bottom of the dossier (which is otherwise easy to miss on long pages)
+        var nBtn = ovEl('button', 'ov-btn ghost', 'Field note 📝');
+        nBtn.id = 'ov-note-btn'; nBtn.type = 'button';
+        nBtn.title = 'Type a note or upload a Word/PDF for this company';
+        nBtn.addEventListener('click', function() {
+          var qn = document.getElementById('ov-qn');
+          if (!qn) return;
+          qn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          var ta = qn.querySelector('textarea');
+          if (ta) setTimeout(function() { ta.focus(); }, 500);
+        });
+        head.appendChild(nBtn);
         ovFetchJson(p.slug + '.study.json')
           .then(function(sg) {
             if (document.getElementById('ov-study-btn')) return;
@@ -1523,8 +1536,15 @@
         window.open(url, '_blank', 'noopener');
       });
       row.appendChild(save);
+      var fileBtn = ovEl('button', 'ov-btn ghost', 'Upload Word/PDF 📎');
+      fileBtn.type = 'button';
+      fileBtn.title = 'Attach a .docx or .pdf of your notes via a GitHub form';
+      fileBtn.addEventListener('click', function() {
+        window.open(OV_ISSUE_BASE + '?template=field-note-file.yml&company=' + encodeURIComponent(slug), '_blank', 'noopener');
+      });
+      row.appendChild(fileBtn);
       qn.appendChild(row);
-      qn.appendChild(ovEl('div', 'hint', 'Have a Word doc or PDF instead? Send the file to Claude: “process this note file for ' + slug + '”.'));
+      qn.appendChild(ovEl('div', 'hint', 'Typed notes save instantly via the GitHub form. For a Word doc or PDF, tap Upload — then drag the file into the form’s notes box (or use its paperclip) and submit.'));
       s.appendChild(qn);
       return s;
     }
@@ -1575,6 +1595,12 @@
       addLink.style.cssText = 'text-decoration:none;font-size:11px;padding:7px 11px;';
       addLink.title = 'Open the field-note form (GitHub sign-in required)';
       head.appendChild(addLink);
+      var fileLink = ovEl('a', 'ov-btn ghost', '📎 File');
+      fileLink.href = OV_ISSUE_BASE + '?template=field-note-file.yml';
+      fileLink.target = '_blank'; fileLink.rel = 'noopener';
+      fileLink.style.cssText = 'text-decoration:none;font-size:11px;padding:7px 11px;';
+      fileLink.title = 'Upload a Word/PDF note file (GitHub sign-in required)';
+      head.appendChild(fileLink);
       var close = ovEl('button', null, '×'); close.id = 'ov-notes-close'; close.type = 'button';
       close.setAttribute('aria-label', 'Close');
       close.addEventListener('click', function() { overlay.style.display = 'none'; });

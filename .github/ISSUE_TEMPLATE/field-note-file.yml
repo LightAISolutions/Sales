@@ -1,13 +1,13 @@
-name: "📝 Field note"
-description: "Record something you learned about a covered company — auto-committed to the Profiler's field-note log."
-title: "Field note"
-labels: ["field-note"]
+name: "📎 Field note file"
+description: "Upload a Word doc or PDF of meeting/trade-show notes — the file is saved and logged automatically."
+title: "Field note file"
+labels: ["field-note-file"]
 body:
   - type: markdown
     attributes:
       value: |
-        Typed notes are stored **verbatim** in the Profiler's public field-note log and triaged into the dossier later.
-        **Have a Word/PDF file instead?** Use the [📎 Field note file form](?template=field-note-file.yml).
+        **Attach your .docx or .pdf in the notes box below** — drag it in, paste it, or tap the paperclip icon.
+        The file is saved to the knowledge library and a placeholder entry appears in the field-note log; Claude writes the summary at the next triage pass.
   - type: dropdown
     id: company
     attributes:
@@ -39,10 +39,11 @@ body:
     validations:
       required: true
   - type: textarea
-    id: note
+    id: filenote
     attributes:
-      label: What you learned
-      placeholder: "e.g. Met their NA sales lead at RE+ — pushing the new PSU line hard into data centers next quarter."
+      label: File and context
+      description: "Drag your Word/PDF here or use the paperclip. Optional typed context alongside the attachment is welcome."
+      placeholder: "Attach the file here…"
     validations:
       required: true
   - type: dropdown

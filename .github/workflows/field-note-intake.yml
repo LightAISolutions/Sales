@@ -130,4 +130,136 @@ jobs:
           gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} \
             --body "⚠️ Note NOT saved: ${{ steps.parse.outputs.reason }}. Edit nothing here — open a fresh Field note form and resubmit."
 
+  commit-file-note:
+    # 📎 Field note file issues — a Word/PDF attached via the form's textarea.
+    # The attachment is downloaded and stored under repository-information/
+    # note-files/<slug>/ (kept out of live-site-pages/ — the document itself is
+    # not deployed), and a placeholder entry lands in the public field-note log
+    # for Claude to summarize at the next triage pass.
+    if: >-
+      contains(github.event.issue.labels.*.name, 'field-note-file') &&
+      github.event.issue.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Parse issue, download attachment, log note
+        id: parse
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python3 - <<'PYEOF'
+          import json, os, re, sys, urllib.request
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          body = os.environ["ISSUE_BODY"]
+          def field(label):
+              m = re.search(r"### " + re.escape(label) + r"\s*\n+(.*?)(?=\n### |\Z)", body, re.S)
+              return m.group(1).strip() if m else ""
+
+          def reject(msg):
+              print("::error::File note rejected: " + msg)
+              open(os.environ["GITHUB_OUTPUT"], "a").write("result=rejected\nreason=" + msg + "\n")
+              sys.exit(0)
+
+          slug = field("Company").lower().strip()
+          source_type = field("How you learned it").lower().strip()
+          filenote = field("File and context")
+          conf_raw = field("Your confidence in this information (0–100)")
+          conf_m = re.match(r"(\d+)", conf_raw)
+
+          reg = json.load(open("live-site-pages/profiler-data/profiler-companies.json"))
+          valid_slugs = [c["slug"] for c in reg.get("companies", [])] + ["general"]
+          if slug not in valid_slugs: reject(f"unknown company '{slug}'")
+          if source_type not in ["contact", "event", "call", "news", "other"]: reject(f"unknown source type '{source_type}'")
+          if not conf_m or not (0 <= int(conf_m.group(1)) <= 100): reject(f"bad confidence '{conf_raw}'")
+
+          # Attachments render as markdown links to github.com/user-attachments/files/...
+          urls = re.findall(r"https://github\.com/user-attachments/files/\d+/[^\s\)\]>]+", filenote)
+          if not urls: reject("no attachment found — drag the .docx/.pdf into the notes box before submitting")
+
+          today = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+          os.makedirs(f"repository-information/note-files/{slug}", exist_ok=True)
+          saved = []
+          for u in urls[:3]:
+              raw = u.rsplit("/", 1)[-1]
+              name = re.sub(r"[^A-Za-z0-9._-]", "_", raw)
+              if not re.search(r"\.(docx?|pdf)$", name, re.I): reject(f"'{raw}' is not a Word/PDF file")
+              dest = f"repository-information/note-files/{slug}/{today}-{name}"
+              n = 2
+              while os.path.exists(dest):
+                  dest = f"repository-information/note-files/{slug}/{today}-{n}-{name}"; n += 1
+              req = urllib.request.Request(u, headers={"User-Agent": "field-note-intake"})
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as r, open(dest, "wb") as f:
+                      f.write(r.read())
+              except Exception as e:
+                  reject(f"could not download '{raw}': {e}")
+              saved.append(dest)
+
+          # Typed context = the textarea minus the attachment links
+          context = re.sub(r"\[[^\]]*\]\(https://github\.com/user-attachments/files/[^\)]+\)", "", filenote)
+          context = re.sub(r"https://github\.com/user-attachments/files/\S+", "", context).strip()
+          names = ", ".join(p.rsplit("/", 1)[-1] for p in saved)
+          note_text = ((context + " ") if context else "") + f"[file note: {names} — summary pending triage]"
+
+          path = "live-site-pages/profiler-data/profiler-notes.json"
+          data = json.load(open(path))
+          id_date = today.replace("-", "")
+          seq = 1
+          for n2 in data.get("notes", []):
+              m = re.match(r"note-" + id_date + r"-(\d+)", n2.get("id", ""))
+              if m and int(m.group(1)) >= seq: seq = int(m.group(1)) + 1
+          note = {
+              "id": f"note-{id_date}-{seq:02d}",
+              "date": today,
+              "slug": slug,
+              "sourceType": source_type,
+              "note": note_text,
+              "confidence": int(conf_m.group(1)),
+              "tags": [],
+              "triage": "pending",
+              "submittedVia": f"issue-form (#{os.environ['ISSUE_NUMBER']})",
+              "sourceFile": saved[0]
+          }
+          data["notes"] = [note] + data.get("notes", [])
+          with open(path, "w") as f:
+              json.dump(data, f, indent=2, ensure_ascii=False)
+              f.write("\n")
+          out = open(os.environ["GITHUB_OUTPUT"], "a")
+          out.write(f"result=ok\nnote_id={note['id']}\nslug={slug}\n")
+          PYEOF
+      - name: Commit and push
+        if: steps.parse.outputs.result == 'ok'
+        run: |
+          git config user.name "field-note-intake[bot]"
+          git config user.email "actions@github.com"
+          git add live-site-pages/profiler-data/profiler-notes.json repository-information/note-files/
+          git commit -m "Field note ${{ steps.parse.outputs.note_id }} (${{ steps.parse.outputs.slug }}, file) via issue #${{ github.event.issue.number }}"
+          git push || { git pull --rebase origin main && git push; }
+      - name: Trigger deploy and mirror
+        if: steps.parse.outputs.result == 'ok'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run auto-merge-claude.yml --ref main --repo ${{ github.repository }}
+      - name: Close issue with confirmation
+        if: steps.parse.outputs.result == 'ok'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }} \
+            --comment "✅ File saved and logged as \`${{ steps.parse.outputs.note_id }}\` (${{ steps.parse.outputs.slug }}). The document is stored in the knowledge library; Claude summarizes it into the note at the next triage pass."
+      - name: Comment rejection
+        if: steps.parse.outputs.result == 'rejected'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} \
+            --body "⚠️ File note NOT saved: ${{ steps.parse.outputs.reason }}. Open a fresh 📎 Field note file form and resubmit."
+
 # Developed by: ShadowAISolutions
