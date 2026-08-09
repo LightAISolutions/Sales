@@ -3,11 +3,18 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 106/100`
+`Sections: 107/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.19r] — 2026-08-09 05:09:33 AM EST
+
+> **Prompt:** "Voice approved. However, remove "Company Name - Profiler" from the top right and the URL from the bottom left of the export documents."
+
+### Fixed
+- `live-site-pages/Profiler.html` (v01.17w) — the "Company — Profiler" title (top right) and page URL (bottom left) on PDF exports were the **browser's own print header/footer**, drawn in the page margins during `window.print()`. Suppressed via `@page { margin: 0; }` in the print pipeline (no margin box → nothing for the browser to draw, per Chrome's documented behavior); `#ov-prev-doc` print padding changed from `0` to `12mm 14mm` so the document carries its own page margins. Verified via headless print-CSS PDF (9-page Megmeet export): page 1 clean with proper margins, no header/footer artifacts. Known tradeoff: continuation pages start near the paper edge (element padding doesn't repeat per page) — disclosed to the developer with a riskier `@page :first` alternative offered
 
 ## [v02.18r] — 2026-08-09 04:46:49 AM EST
 

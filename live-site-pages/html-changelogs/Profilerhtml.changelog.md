@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 16/50`
+`Sections: 17/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.17w] — 2026-08-09 05:09:33 AM EST — v02.19r
+
+### Fixed
+- PDF exports no longer show the page name in the top corner or the web address in the bottom corner — exported documents are now clean, with proper page margins built into the document itself
 
 ## [v01.16w] — 2026-08-09 04:30:58 AM EST — v02.17r
 

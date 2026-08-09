@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.16w">
+  <meta name="build-version" content="v01.17w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -548,7 +548,12 @@
       #ov-prev-overlay { position: static !important; display: block !important; background: none !important; padding: 0 !important; overflow: visible !important; height: auto !important; }
       #ov-prev-toolbar { display: none !important; }
       #ov-prev-panel { width: auto !important; }
-      #ov-prev-doc { box-shadow: none !important; border-radius: 0 !important; padding: 0 !important; background: #fff !important; }
+      /* Suppress the browser's own print header/footer ("Company — Profiler"
+         top-right, page URL bottom-left): with @page margin 0 there is no
+         margin box for the browser to draw them in. The document's own
+         padding restores the visual page margins in the exported PDF. */
+      @page { margin: 0; }
+      #ov-prev-doc { box-shadow: none !important; border-radius: 0 !important; padding: 12mm 14mm !important; background: #fff !important; }
       #ov-prev-doc h2 { page-break-after: avoid; }
       #ov-prev-doc table { page-break-inside: avoid; }
     }
