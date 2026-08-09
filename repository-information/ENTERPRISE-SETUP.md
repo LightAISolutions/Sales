@@ -38,6 +38,30 @@ PAT policy applies at **two layers**: enterprise-level (ceiling) and org-level (
 - **Active tokens:** https://github.com/organizations/LightAISolutions/settings/personal-access-tokens-active
 - Enterprise admins are **exempt** from the approval requirement — their tokens bypass the pending queue and become active immediately after minting
 
+## Library Mirror Token (`LIBRARY_SYNC_TOKEN`)
+
+Used by the `mirror-library` job in `.github/workflows/auto-merge-claude.yml` to push the knowledge files (dossiers, archives, field notes, study guides, future Scraper digests) into `LightAISolutions/bess-aidc-library` after every merge to `main`. Until this secret exists, the job skips with a notice — nothing fails.
+
+| Field | Value |
+|-------|-------|
+| **Token name** | `sales-library-mirror-writer` (suggested) |
+| **Token type** | Fine-grained personal access token |
+| **Resource owner** | `LightAISolutions` |
+| **Repository access** | Only select repositories: `LightAISolutions/bess-aidc-library` |
+| **Contents permission** | **Read and write** |
+| **Metadata permission** | Read-only (required, auto-populated) |
+| **Expiration** | 12 months recommended — set a calendar reminder to rotate |
+| **Stored as** | Repository secret `LIBRARY_SYNC_TOKEN` in `LightAISolutions/Sales` → Settings → Secrets and variables → Actions |
+
+### Creation steps
+1. GitHub (as the org-owning account) → profile photo → **Settings** → **Developer settings** → **Personal access tokens** → **Fine-grained tokens** → **Generate new token**
+2. Name it, set **Resource owner** to `LightAISolutions` (if the org requires approval for fine-grained PATs, the request lands in the org's token approval queue — see "Approval queue" above)
+3. **Repository access** → *Only select repositories* → `bess-aidc-library`
+4. **Permissions** → Repository permissions → **Contents: Read and write** (leave everything else at No access)
+5. Generate, copy the value (shown once)
+6. `Sales` repo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret** → name `LIBRARY_SYNC_TOKEN`, paste the value
+7. Trigger any merge (or re-run the last workflow) — the `mirror-library` job's log should show a mirror commit instead of the skip notice
+
 ## Current GAS Auto-Deploy Token
 
 The token used by the 5 GAS projects' `pullAndDeployFromGitHub()` function to fetch source from this repo.
