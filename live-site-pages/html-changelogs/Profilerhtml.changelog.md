@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15w] — 2026-08-09 03:29:35 AM EST — v02.15r
+
+### Added
+- Sign-in required — the app now asks for a one-time Google sign-in before anything is shown; access is limited to approved users
+
+### Changed
+- Previous dossier versions (the "Versions 🕘" browser) are now visible to the app owner only — everyone else sees the current version of each dossier
 
 ## [v01.14w] — 2026-08-09 03:03:41 AM EST — v02.14r
 

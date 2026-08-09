@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.15r] — 2026-08-09 03:29:35 AM EST
+
+> **Prompt:** "I'd rather have a sign-in wall on the whole app like the Receipts app in order to control who gets to view my valuable dossiers. Also, I want Admins to be the only ones that are able to view previous dossier versions (everyone else should only see the current version). Since I want my friends to be able to export documents and type field notes to me, shouldn't I give them "contributor" roles instead of just "viewer" roles?"
+
+### Added
+- `live-site-pages/Profiler.html` (v01.15w) — full-app sign-in wall (`#ov-authwall`, z-index 9000, app-branded): the UI is blocked until a session validates (`whoami` on load for stored sessions; GIS popup sign-in otherwise), reusing the note backend's session machinery — same account system as Receipts (its extra HIPAA/single-tab hardening intentionally not ported). Wall skips only when `_e` is empty (pre-deployment fallback). Non-ACL sign-ins are rejected by the exchange with a "ask Jon to add you" hint
+- **Versions 🕘 is now admin-only** — the previous-versions button renders only for admin sessions; the notes ⚙ cog dropped to z-index 8900 so it sits under the wall while signed out
+
+### Changed
+- `.claude/rules/profiler-app.md` — auth wall, admin-only versions, and the `contributor` role decision documented (role already existed in `RBAC_ROLES_FALLBACK` with no `admin` permission — no backend change needed; friends' ACL rows use Role = `contributor`)
+- **Data-privacy caveat re-disclosed**: the wall gates the app experience; the underlying data files (profiles, notes, archives) remain on public GitHub Pages and are fetchable by direct URL. True data privacy = GAS-served data or GitHub Enterprise Pages access control — both offered as follow-ups, neither built
 
 ## [v02.14r] — 2026-08-09 03:03:41 AM EST
 

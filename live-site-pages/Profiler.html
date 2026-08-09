@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.14w">
+  <meta name="build-version" content="v01.15w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -355,7 +355,7 @@
     @media (max-width: 560px) { #ov-prev-doc { padding: 26px 20px; } }
     /* Field notes — ⚙ cog (dashboard) + chronological changelog overlay */
     #ov-notes-cog {
-      position: fixed; bottom: 42px; right: 22px; z-index: 9999;
+      position: fixed; bottom: 42px; right: 22px; z-index: 8900; /* below the sign-in wall (9000) so it can't be used while signed out */
       width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ov-line2);
       background: var(--ov-card); color: var(--ov-muted); font-size: 19px; line-height: 1;
       cursor: pointer; display: none; align-items: center; justify-content: center;
@@ -439,6 +439,17 @@
       color: var(--ov-paper); font: 11px/1 var(--ov-mono); padding: 5px 12px; cursor: pointer;
     }
     .ov-qn-row .acts button.del { border-color: rgba(224,122,139,0.6); color: #e07a8b; }
+    /* App sign-in wall */
+    #ov-authwall {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: var(--ov-ink, #13151c); z-index: 9000;
+      display: flex; align-items: center; justify-content: center; padding: 24px;
+    }
+    #ov-authwall .aw-box { max-width: 380px; text-align: center; }
+    #ov-authwall .aw-kicker { font: 11px/1 var(--ov-mono); letter-spacing: 0.22em; color: var(--ov-gold); margin-bottom: 12px; }
+    #ov-authwall .aw-title { font: 400 44px/1.1 var(--ov-serif); color: var(--ov-paper); margin-bottom: 14px; }
+    #ov-authwall .aw-sub { font: 13.5px/1.6 var(--ov-serif); color: var(--ov-faint); margin-bottom: 26px; }
+    #ov-authwall .aw-status { margin-top: 14px; font-size: 12.5px; min-height: 1.4em; color: var(--ov-faint); }
     /* Study guide — dossier button + overlay */
     #ov-study-btn { margin-top: 14px; margin-left: 8px; }
     #ov-study-overlay {
@@ -1325,7 +1336,12 @@
             head.appendChild(sBtn);
           })
           .catch(function() { /* no study guide for this company — button stays hidden */ });
-        // Versions button — appears only when archived versions exist for this company
+        // Versions button — appears only when archived versions exist for this
+        // company AND the signed-in session is an admin (developer directive
+        // 2026-08-09: non-admin users see only the current dossier version).
+        // UI-level gate: the archive JSONs live on public Pages like all app
+        // data, so this controls the app experience, not raw-file access.
+        if (localStorage.getItem(OV_NOTE_ROLE_KEY) === 'admin')
         ovFetchJson('archive/archive-index.json')
           .then(function(idx) {
             var entries = idx && idx[p.slug];
@@ -2348,6 +2364,55 @@
         main.appendChild(ovEl('p', 'ov-empty', 'Could not load the company registry (profiler-data/profiler-companies.json).'));
       });
     window.addEventListener('hashchange', ovRoute);
+
+    // ── App sign-in wall (developer directive 2026-08-09) ──
+    // The whole app sits behind Google sign-in + the Master ACL, like Receipts.
+    // Reuses the note backend's session machinery (GIS popup + fetch exchange).
+    // Wall skips only when no backend is configured (_e empty — pre-deployment
+    // fallback state). UI-level gate: app data files are still served by
+    // public GitHub Pages — see profiler-app.md for the data-privacy caveat.
+    (function() {
+      if (!window._gasNoteUrl) return;
+      var wall = document.createElement('div');
+      wall.id = 'ov-authwall';
+      var box = document.createElement('div');
+      box.className = 'aw-box';
+      var t1 = document.createElement('div'); t1.className = 'aw-kicker'; t1.textContent = 'CORPORATE INTELLIGENCE';
+      var t2 = document.createElement('div'); t2.className = 'aw-title'; t2.textContent = 'Profiler';
+      var t3 = document.createElement('div'); t3.className = 'aw-sub'; t3.textContent = 'Sign in with your Google account to continue. Access is limited to approved users.';
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'ov-btn'; btn.textContent = 'Sign in with Google';
+      var st = document.createElement('div'); st.className = 'aw-status'; st.setAttribute('role', 'status');
+      box.appendChild(t1); box.appendChild(t2); box.appendChild(t3); box.appendChild(btn); box.appendChild(st);
+      wall.appendChild(box);
+      document.body.appendChild(wall);
+      function say(msg, bad) { st.textContent = msg || ''; st.style.color = bad ? '#e07a8b' : 'var(--ov-faint)'; }
+      function pass() { wall.style.display = 'none'; }
+      function fail(msg) {
+        localStorage.removeItem(OV_NOTE_SESSION_KEY);
+        localStorage.removeItem(OV_NOTE_ROLE_KEY);
+        say(msg, true);
+      }
+      btn.addEventListener('click', function() {
+        btn.disabled = true; say('Signing in…');
+        ovNoteSignIn(function(r) {
+          btn.disabled = false;
+          if (r.success) pass();
+          else say('Sign-in failed: ' + r.error + (r.error && /access|acl|denied|not_authorized/i.test(String(r.error)) ? ' — ask Jon to add you to the access list.' : ''), true);
+        });
+      });
+      var tok = localStorage.getItem(OV_NOTE_SESSION_KEY);
+      if (tok) {
+        say('Checking your session…');
+        ovNoteApi('whoami', {}, function(res) {
+          if (res && res.success) {
+            localStorage.setItem(OV_NOTE_ROLE_KEY, res.isAdmin ? 'admin' : 'member');
+            pass();
+          } else {
+            fail('Session expired — sign in again.');
+          }
+        });
+      }
+    })();
 
 // ══════════════
 // PROJECT END
