@@ -94,7 +94,8 @@ A single chronological log of first-hand intel the developer collects from indus
 | `notes[].confidence` | number | yes | **0–100, rated by the developer** at capture time — how confident they feel about the information. Claude always asks for this rating when a note is added and never invents it |
 | `notes[].tags[]` | string[] | no | Freeform lowercase tags for recall filtering (e.g. `pricing`, `roadmap`, `hiring`) |
 | `notes[].triage` | string | no | Dossier-promotion state: `pending` (not yet evaluated — default for app-submitted notes), `promoted (vN)` (folded into the dossier at profileVersion N), or `logged-only` (evaluated, kept as context only). Set by Claude during refresh/triage passes — never by the intake app |
-| `notes[].submittedVia` | string | no | `profiler-intake` when the note came from the in-app form; absent for Claude-command captures |
+| `notes[].submittedVia` | string | no | `issue-form (#N)` when the note came from the in-dossier quick-note box / GitHub issue form; absent for Claude-command and file-based captures |
+| `notes[].sourceFile` | string | no | For Word/PDF-derived notes: repo-relative path of the original document under `repository-information/note-files/<slug>/` (private — never deployed; the app cannot fetch it). The `note` text is a faithful summary, not verbatim, for file-based captures |
 
 **Notes are not sources.** Field notes deploy publicly with the site but are private intel, not public-sourced fact — they must **never** be cited in a profile's `sources[]` or blended into profile sections. They inform research direction, reports, and conversation prep only, weighted by `confidence` (see the Confidence weighting rule in `.claude/rules/profiler-app.md`).
 

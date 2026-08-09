@@ -1,0 +1,67 @@
+name: "📝 Field note"
+description: "Record something you learned about a covered company — auto-committed to the Profiler's field-note log."
+title: "Field note"
+labels: ["field-note"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Typed notes are stored **verbatim** in the Profiler's public field-note log and triaged into the dossier later.
+        **For Word/PDF notes, don't use this form** — send the file to Claude instead ("process this note file for <Company>").
+  - type: dropdown
+    id: company
+    attributes:
+      label: Company
+      options:
+        - byd
+        - catl
+        - flexgen
+        - fluence
+        - general
+        - hithium
+        - megmeet
+        - sinexcel
+        - sungrow
+        - tesla
+        - wartsila
+    validations:
+      required: true
+  - type: dropdown
+    id: sourcetype
+    attributes:
+      label: How you learned it
+      options:
+        - contact
+        - event
+        - call
+        - news
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: What you learned
+      placeholder: "e.g. Met their NA sales lead at RE+ — pushing the new PSU line hard into data centers next quarter."
+    validations:
+      required: true
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Your confidence in this information (0–100)
+      options:
+        - "100 — certain"
+        - "90"
+        - "80"
+        - "70"
+        - "60"
+        - "50 — plausible"
+        - "40"
+        - "30"
+        - "20"
+        - "10"
+        - "0 — rumor"
+    validations:
+      required: true
+
+# Developed by: ShadowAISolutions

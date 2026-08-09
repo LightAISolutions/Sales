@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.07w">
+  <meta name="build-version" content="v01.08w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -416,6 +416,19 @@
     }
     .ov-vbanner .tag { font: 10px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-ink); background: var(--ov-gold); border-radius: 4px; padding: 4px 8px; }
     .ov-vbanner button { margin-left: auto; }
+    /* In-dossier quick field note */
+    #ov-qn textarea {
+      width: 100%; box-sizing: border-box; margin-top: 12px; padding: 11px 13px;
+      background: var(--ov-card); color: var(--ov-paper); border: 1px solid var(--ov-line2);
+      border-radius: 8px; font: 14px/1.5 var(--ov-serif); resize: vertical; min-height: 76px;
+    }
+    #ov-qn textarea:focus { outline: none; border-color: var(--ov-gold); }
+    #ov-qn .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 10px; }
+    #ov-qn select {
+      background: var(--ov-card); color: var(--ov-paper); border: 1px solid var(--ov-line2);
+      border-radius: 8px; padding: 8px 10px; font: 12px/1 var(--ov-mono);
+    }
+    #ov-qn .hint { color: var(--ov-faint); font-size: 11.5px; margin-top: 8px; }
     /* Study guide — dossier button + overlay */
     #ov-study-btn { margin-top: 14px; margin-left: 8px; }
     #ov-study-overlay {
@@ -1469,6 +1482,51 @@
         src.appendChild(wrapS);
         main.appendChild(src);
       }
+
+      // Quick field note — typed here, submitted via the prefilled GitHub issue
+      // form; the intake workflow commits it. Skipped on archived snapshots.
+      if (!p._archived) main.appendChild(ovBuildQuickNote(p.slug));
+    }
+
+    // ── Quick field note (in-dossier input → prefilled GitHub issue form) ──
+    var OV_ISSUE_BASE = 'https://github.com/LightAISolutions/Sales/issues/new';
+    function ovBuildQuickNote(slug) {
+      var s = ovSection('Add a Field Note', 'Stored verbatim in the public field-note log; a triage pass decides dossier promotion. Saving opens a prefilled GitHub form — one tap to submit (GitHub sign-in required).');
+      var qn = ovEl('div'); qn.id = 'ov-qn';
+      var ta = ovEl('textarea');
+      ta.maxLength = 2000;
+      ta.placeholder = 'What did you learn about this company?';
+      qn.appendChild(ta);
+      var row = ovEl('div', 'row');
+      var srcSel = ovEl('select');
+      ['contact', 'event', 'call', 'news', 'other'].forEach(function(v) {
+        var o = ovEl('option', null, 'via ' + v); o.value = v; srcSel.appendChild(o);
+      });
+      row.appendChild(srcSel);
+      var confSel = ovEl('select');
+      ['100 — certain', '90', '80', '70', '60', '50 — plausible', '40', '30', '20', '10', '0 — rumor'].forEach(function(v) {
+        var o = ovEl('option', null, 'confidence ' + v); o.value = v; confSel.appendChild(o);
+      });
+      confSel.selectedIndex = 3;
+      row.appendChild(confSel);
+      var save = ovEl('button', 'ov-btn', 'Save via GitHub ↗');
+      save.type = 'button';
+      save.addEventListener('click', function() {
+        var text = ta.value.trim();
+        if (!text) { ta.focus(); return; }
+        var url = OV_ISSUE_BASE
+          + '?template=field-note.yml'
+          + '&company=' + encodeURIComponent(slug)
+          + '&sourcetype=' + encodeURIComponent(srcSel.value)
+          + '&confidence=' + encodeURIComponent(confSel.value)
+          + '&note=' + encodeURIComponent(text);
+        window.open(url, '_blank', 'noopener');
+      });
+      row.appendChild(save);
+      qn.appendChild(row);
+      qn.appendChild(ovEl('div', 'hint', 'Have a Word doc or PDF instead? Send the file to Claude: “process this note file for ' + slug + '”.'));
+      s.appendChild(qn);
+      return s;
     }
 
     // ── Field notes — ⚙ cog (dashboard) + chronological changelog overlay ──
@@ -1512,9 +1570,10 @@
       var head = ovEl('div'); head.id = 'ov-notes-head';
       head.appendChild(ovEl('span', 'ttl', 'Field Notes — Chronological Log'));
       var addLink = ovEl('a', 'ov-btn ghost', '＋ Add note');
-      addLink.href = 'profiler-intake.html'; addLink.target = '_blank'; addLink.rel = 'noopener';
+      addLink.href = OV_ISSUE_BASE + '?template=field-note.yml';
+      addLink.target = '_blank'; addLink.rel = 'noopener';
       addLink.style.cssText = 'text-decoration:none;font-size:11px;padding:7px 11px;';
-      addLink.title = 'Open the field-note intake form (sign-in required)';
+      addLink.title = 'Open the field-note form (GitHub sign-in required)';
       head.appendChild(addLink);
       var close = ovEl('button', null, '×'); close.id = 'ov-notes-close'; close.type = 'button';
       close.setAttribute('aria-label', 'Close');

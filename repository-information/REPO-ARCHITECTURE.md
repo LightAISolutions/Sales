@@ -4,7 +4,7 @@
 
 ## 1. Flowchart — System Overview
 
-> [Open in mermaid.live — Flowchart](https://mermaid.live/edit#pako:eNq1Wv9u47gRfhVCBxS715Wd3bvduwS4Foqs2G7k2LCcbRdRYNASLXFNiwJJJetuFuhD9F36fx-lT1KQ-mHZonxKus2f1Mw3M-TMxxk6X42Ahsi4MCIG0xgsLv0EAAB4tsoXfGOOUsqxoGx3ATxIEPeNXEb-hZihQGCaKM39ek1_gB4QoSli4K-UbdaEPtYB5N_A-XhXl-sDm8AsRMCmIfKN-0Np-_LONwIl0P8RrBhMgrghNHA-AtP805NvpBmPfeMJ2Jd7CZSELc7a4749AP_5xz8BzAQ1t4hFyMyN9XZbAu4E2qYECgT-_S-AEywwJPjvKLw_julwY-pfFvPxcOjMv_rGLOMxEBSUwfzZN74dxyqjKFW0OCrMT4g_AW9kLe2RY19_9Q2bbrdYyCXfT34DBHJhpowGiHMUNu1Uqnu0geM6C2fpLSzXUadDkEAAJzFiWKCw3Hg_ecU3OAVqp143zuEQ-IY-gY-WOx5YC-erb3iIPaAQ4CRBzOQBw6nw_YTvEgG_gAdIsMbTUr3Cu3Sn9vWdb1xBTADLEnV4K0KDje8nyivwBxCilNCddDZ3G6QMcWW96fKBBbUVE2c-lHswUWg4ERRsIU4amkpOHdjtTCIsvZF15xu3aQgF8v3k8BTMQJ1Rj8ewgbTXV3CD8dXVnW_YMQo2IMIChHi9bub8-OqqSHqCH5DJsUBmCiPE-yCIYRKhUBbCzBo63vLKtYZ3vqE-m8VX8BsQLEOngHsRr2MNLW85cGbu9JNKEbnJcg08YAiCjBEwm3qLBt5eK48uz7TLedtuVgL7PPy9-t8HWSBIa0u12l5FvjFQVQvSojDzU346ob53cjKez6fSwwlmjDKwSegjQWGEwBoTxIGgvp-sEOcmxGFgErxikO3Aq5RS0kzCTm7lJrvQ2hCLUbYCM3naID-nLUpEk4j3ce4PtJFMKpQ6ZMN9d_xRFoyLHxDwcJ78OIoFxJySTNIi70VYxNmqh2m_uFXu251ROyxBuwTrJA-Y0UQGyMEr5eDrdnp2543kXMxcZfbONyq-vwcR5LJ4P6NAmAFDUFDWi8WWSFaROT_LvwE7_6Y5U8dbWLeL0dDy3mrwBeICZiKOIH9bAS8QF8DKRAzetgOOFhP3FKIE00FKPR3u0J1eWq5la3eB0BUkMCD72NUKsGxX5-HfFvZ0MrPmjta_L0KyYAoZqrn3RQA7XwQLbXFMLG_hzPX-TSAXiFm2WwFWK5rbyZ5bM2eugfECBlO0P-Ab9MjLxSbO3LGd8WzhaYDmKEA4FbxCKheaKLP59Grs7t2ZMSqpY--E2pVkBwaUc4zYCYjxzcK61m15WmCaOBFws9_10ha4oQJxMFZfD_FPsAulEUHASlO1RzK6faN0_6zSW9aL5ER9RFx7qxxUxKliONJvj82LIUMhmCNOMxaglwV2M_2Lc_3JdQ896iX0M9rsCGnm5c3gUJTTLAl5vyEo41x-dObeobiM0XxAjEuibWoNPY1OxE9oKDu2q7GSNwOERno7xzoRb9VoP4PjC6iE4_3u_bjk9JupzI1Dh0ZiS6wkHEK-KNasTNC8ZTMTKjNGFUlPfJHN6SvFmZXRRyximgk5LMQa9pu5y2da7GAPFOWmt1lcX5PxjTZceYltcYK3kBTRmeVHUw6Cvc-8tCzvtPLbSTunrXS2kQfXjKo9L6oblyZrHJ2oTNu1bgfOcnJUVflybxtKV4qrHeCEC5apOtYQ7PzWdY4Kp1f0oiwjiPclFCSPcMdNQmGIQvBHkEIRmzygKQqBktLcRNdj120B5htMSI6Mkwe6gSuCwGMxS4P8q-5Omk1lmR9ismqY7xXVro6i2fFbw7k18dqUTZysKdtCuUv9EMOIwW3uYYqYifYNGIAsiLFAgcgYAqWkJn5nsRjfDNt2AAmBk4j3PnOaSCtyBvoxH9EhIfRRN8fJ0VNehkeQedvZb5_F1DYfTrkgyiALu6alLOcRFRu0O5GS1uhaFs40n_TqPkom29IQrzEK71WMOVh_TxM9GG_UNjCEkjVGJARpRoi5ghyF-bZkSpB19fn3r-3xzXix9Oz5eLY4upty1b5kX1OmSI-rZwGaIJPHVIA1ZZs9N6uc0fLJ0nMWtzM9OEciS81aC14YkQRSVq5sYIDqzLUWbG-2HFneSG9AtqGZJCiemjHkcYFvezOZSOa79x-AXAa53Ikgqua5rW9uaV2qpratn23RK3pYffvaolP2qy2taovWYXN5uq_UQNQSCJg9NdeqTA2RpAcOKIv6Mn18P2EoJVA2W-_e5dOzesArSfwon48Su7x0SxsBTXfqkU0mhhxEE_SobhmQ5qPrU3Mw-5-R9hPZi6EOh7AXwxzOSi-GqU9KLwY5GJNejKKZcXKso5akhKx4Ne_g1Yulhk1el-9Z9Wz4vwCr5PiuyFWufFfUKnW-K2qRSd8Vs0ys7wp6mGdFuh4zRQmOtisUcvXuidcMblF7NjU5ojNILXPkY1ipp16yeSFcPl6dEmshvNPCx5zW4oGGttpwD9-GTsnqWEwv2SQqvZyGi_SCB68yXQR1vFQ9dxepyHAUIcYBR2RdtGon6ecF-ocs8wyAJpk8Q7nJGc9QPqaGZ6g2GOAZurpCL4eHUp8hGILVTmVY-ZNWLln_qSaXfZSjAy9FJUouWT3WlILFBAZSSghOIm0Bd1FqKefnqB4XdydfNaXezaau8Lto6migi16TFLpoaSiii5qGMJ6j1qCP_cvVySYpf82pt6K6XX4h2FFMxf8IiB1B6pf2NSbk4oef4flZeP4moISyix_W63VdTHFmLvfhw2r1AbbIVYWXy6L1-5_en7XI1n-iruTP4XmFfXZ2VpdXPxV3Aa7tUi69XsNf3n1oga162A6ytfruIl7NPIVwgM5_Cn9tEVZvU10E88emLpL1mS0X_-XX87PzoLZvxhtji9gW4tC4ML76hoiRbFwufCNEa5gR4RvfjDdq1PN2SWBcyJ-Y3xg5BQ_yB6F88dt_AV3PuJY) — *interactive editor with pan, zoom, and export*
+> [Open in mermaid.live — Flowchart](https://mermaid.live/edit#pako:eNq1Wf9u47gRfhVCBxS715Wd3bvduwS4FoqsOG6UxLCcbRdRYNDSWOaGFgWSStbdLNCH6Lv0_z5Kn6Qg9cOyRfmcdOs_qZlvhpz5hjP0VytiMVgnVsJxtkTT0zBFCCGRz4uF0JpAxgSRjK9PUIApiNAqZNQvJhwiSViqNTfrDf0BPABlGXD0V8bvF5Q9NgHUb-B9vG3K9ZFLcR4DclkMoXW3Le2e3oZWpAX6P6I5x2m0bAkNvI_Itv_0FFpZLpah9YTc040EpHGHs-6o7w7Qf_7xT4RzyewV8ATswlhvvaLoVsIqo1gC-ve_EEmJJJiSv0N8t7un7YNpfplORsOhN_kaWuNcLJFkqNrMn0Pr2-5e1S4qFSOO3uYnEE8oOHdm7rnnXnwNLZetVkSqpTBMf0MUC2lnnEUgBMRtO7XqBm3g-d7UmwVTx_d0dChIQCRdAicS4urgw_SVuCcZ0if1uhWHbeAr9oQ-Ov5o4Ey9r6EVAH-AGJE0BW6LiJNMhmEq1qnEX9ADpsTgaaVe45361-7FbWidYUIRz1MdvDll0X0Yptor9AcUQ0bZWjlbuI0yDkJbb7u8ZUEfxaU3GaozuNRoJJUMrTBJW5paTgfsZqwQZsG5cxtaN1mMJYRhuh0FO9Ix6oklbiFt9DXcYHR2dhta7hKie5QQiWKyWLRzfnR2ViY9JQ9gCyLBznACoo-iJU4TiBURxs7QC2ZnvjO8DS392S6_ot-Q5DnsA-4look1dILZwBv71590iqhDVmvogWAU5Zyi8XUwbeFttIrdFZl2Ouk6zVpgk4e_x__NJksEZW2mV7tZFFoDzVqUlcQsovy0R33j5OVoMrlWHl4SzhlH9yl7pBAngBaEgkCShWE6ByFsTOLIpmTOMV-jVxljtJ2EB7lVmDykrA2JPM_naKyijYo4rSCV7UK82ecmoK1k0ltpQrbc90cfFWF88gAoIEXyk2QpMRGM5qosil5C5DKf9wjrl7fKXbcz-oQV6CGb9dIHwlmqNijQK-3g6-7y7E9ayTkd-9rsbWjV9f4OJVgo8n6GSNoRBywZ7y3liqqqonJ-XHxDbvHNEFMvmDo30_OhE7w14EsQEudymWDxtgaegpDIyeUSve0GPJ9e-vsQFZgJUumZcIf-9anjO67xFCibY4ojutm7XkGO65s8_NvUvb4cOxPP6N8Xqapghjk03PsikVssoqmRHJdOMPUmZv8usZDAHdevAesVw-3kTpyxNzHABBHHGWwCfAWPolps40w81xuNp4EBaAIRkEyKGqlaaKOMJ9dnI3_jzpgzVTo2TuhTSddowIQgwHcg9rCfsYQCcrJM70FZ3zQyd8-ixqyZxHvyNxHGqr-VsfuSdUe_e2_BEnOI0QQEy3kEL9vY1fVfvItPvr_tUS9ln-F-TWk7b64G26KC5Wks-i1Btc_ZR28SbIurPdoPwIUqhG2tYWDQScQeDW3H9Q1WisuassRsZ1cnEZ0a3THYvSAqONE_vF9WNffqWuXGtkPnckWdNB5iMS3XnFyyoqWyU6YyRvOjJ7-o5vGVrmm10UcilyyXqplfGqrT2J890-IB9lBJN7PN8nq5HF0Zt6sumRVJyQrTcnd29dFWg1rvs6gsqzun-rbXzn4rB9soNtfeVXde1DciSxck2cNM13duBt7scodVxXJvFStXyqsXkVRInmseG2ro5Mb3dojTK3tFnlMQfQWF6SNeC5syHEOM_ogyLJe2iFgGMdJShpviYuT7HcDinlBaIJP0gd3jOQX0WM66qPhqujPG14rm25i8HrZ7Jdt1KNoduTOcOJdBl7JN0gXjK6xOqR8TnHC8KjzMgNuwaZAQ5tGSSIhkzgFVkob9e9Pp6GrYdQIgJUkT0fssWKqsqBnlx2KExpSyR9OcpUZDdd_tQBZtYb97VtLHvD2FoiTHPD40LRWdz5m8h_WelHTOLxRxrotJrOmjqmQrFpMFgfhO77EA62_KRA8v7_UxcIB0QYDGKMsptedYQFwcS64F-aE-__61PboaTWeBOxmNpzt3U6HaV9XXVinSE3psZynYYskkWjB-v6nNOmeM9WQWeNObsRlcgMwzu9Eil0ZUAamYq5oZpDtnowU3GM_OneDcbEC1ibkqUCKzl1gsS3w3GKtEst-9_4DUMirk9myibm67-tqO1qVuOrv6zQ69ssc0t5cdOlU_2dFKGrQa0Ud2Tw-NOs1iUNwWiPGkr2IfhimHjGLVKb17V4ym-nWsqsA7ybiTldWNWdmIWLbWL1gqqmrKS-FRXxEoK-bCp_bU8z8jbcadF0NtTzgvhtkeRF4M0xxDXgyyNYMUKDs9QAVWF7KiZdZPeAb6vq4eeJoR_L8A64B-V-Q6vt8VtQ73d0Uto_9dMatkKLNpl4IVLKzmEAv9WkcWHK-gO-Rt8h0M0givesKp9PT7qyiFqyeXfWIdlWS_8G6x6PDAUA-6cLdfNPbJmsqDWbJdAcxyBpKbBbfeEurUql9dy6ziJEmACySALsqOZC_pX6C_ze1nALQp_AzlNlOfobxLyGeobvOu6nArTQ44RvO1Dnj1v0gh2XzvL2QfVX8rKlGFUkjWLwqVYDkmoIxRStLEyKdDlDrY9RzVXa4d5KuBeYfZNPHwEE0TKw_Ra3P0EC0DYw9RM_B380KytysoXg2aXZPpoF4ItuNW-V-xXFPQ_7guCKUnP_yMj4_i4zcRo4yf_LBYLJpiulwVch8-zOcfcIdczZ1CFhbvf3p_1CHb_Kuylj_GxzX20dFRU17_ZXgIcOOUCunFAv_y7kMHbN20HSDboOgh4nV7XgpHcPxT_GuHsH4DOUSweNQ4RLI5XhTiv_x6fHQcNc7NemOtgK8wia0T62toySWoVuAktGJY4JzK0PpmvdFTSbBOI-tE_dX4xirq56B4eCgWv_0XQyMaOA) — *interactive editor with pan, zoom, and export*
 
 ```mermaid
 graph TB
@@ -55,7 +55,6 @@ graph TB
             SCRAPER_PAGE["[template] Scraper.html\n(News Scraper)"]
             RECEIPTS_PAGE["[template] Receipts.html\n(Receipts)"]
             PROFILER_PAGE["Profiler.html\n(Company Dossiers)"]
-            PROFILERINTAKE_PAGE["[template] profiler-intake.html\n(Profiler Notes Intake)"]
         end
 
         subgraph "Google Apps Scripts [template]"
@@ -103,7 +102,6 @@ graph TB
             GAS_MASTERACL["[template] MasterACL.gs"]
             GAS_SCRAPER["[template] Scraper.gs"]
             GAS_RECEIPTS["[template] Receipts.gs"]
-            GAS_PROFILERINTAKE["[template] profiler-intake.gs"]
             INIT_SCRIPT -.->|"auto-detects org/repo\nreplaces 22 files"| CLAUDE_MD
         end
     end
@@ -114,14 +112,12 @@ graph TB
     TPL_AUTH -.->|"copy to create\nnew auth pages"| MASTERACL_PAGE
     TPL_AUTH -.->|"copy to create\nnew auth pages"| SCRAPER_PAGE
     TPL_AUTH -.->|"copy to create\nnew auth pages"| RECEIPTS_PAGE
-    TPL_AUTH -.->|"copy to create\nnew auth pages"| PROFILERINTAKE_PAGE
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_TESTAUTHGAS1
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_TESTAUTHHTML1
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_GLOBALACL
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_MASTERACL
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_SCRAPER
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_RECEIPTS
-    GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_PROFILERINTAKE
     TESTAUTHGAS1_PAGE -.->|"embeds via iframe"| GAS_TESTAUTHGAS1
     TESTAUTHHTML1_PAGE -.->|"embeds via iframe"| GAS_TESTAUTHHTML1
     LIVE -.->|"serves"| GASTPL_PAGE
@@ -133,14 +129,12 @@ graph TB
     LIVE -.->|"serves"| SCRAPER_PAGE
     LIVE -.->|"serves"| RECEIPTS_PAGE
     LIVE -.->|"serves"| PROFILER_PAGE
-    LIVE -.->|"serves"| PROFILERINTAKE_PAGE
     GAS_DEPLOY -.->|"triggers self-update"| GAS_TESTAUTHGAS1
     GAS_DEPLOY -.->|"triggers self-update"| GAS_TESTAUTHHTML1
     GAS_DEPLOY -.->|"triggers self-update"| GAS_GLOBALACL
     GAS_DEPLOY -.->|"triggers self-update"| GAS_MASTERACL
     GAS_DEPLOY -.->|"triggers self-update"| GAS_SCRAPER
     GAS_DEPLOY -.->|"triggers self-update"| GAS_RECEIPTS
-    GAS_DEPLOY -.->|"triggers self-update"| GAS_PROFILERINTAKE
     SHA_FILE -.->|"read by"| SHA_CHECK
     UPDATE_SHA -.->|"writes"| SHA_FILE
     HTML_VERS -.->|"version polling"| GASTPL_PAGE
@@ -152,7 +146,6 @@ graph TB
     HTML_VERS -.->|"version polling"| SCRAPER_PAGE
     HTML_VERS -.->|"version polling"| RECEIPTS_PAGE
     HTML_VERS -.->|"version polling"| PROFILER_PAGE
-    HTML_VERS -.->|"version polling"| PROFILERINTAKE_PAGE
     TPL_NOAUTH -.->|"copy to create\nnew noauth pages"| TEXTCOMPARE_PAGE
     TPL_NOAUTH -.->|"copy to create\nnew noauth pages"| PROFILER_PAGE
 
@@ -370,7 +363,6 @@ Environment-specific internals (page lifecycle states, maintenance mode, splash 
 | MasterACL | [`repository-information/diagrams/MasterACL-diagram.md`](diagrams/MasterACL-diagram.md) |
 | News Scraper | [`repository-information/diagrams/Scraper-diagram.md`](diagrams/Scraper-diagram.md) |
 | Receipts | [`repository-information/diagrams/Receipts-diagram.md`](diagrams/Receipts-diagram.md) |
-| Profiler Notes Intake | [`repository-information/diagrams/profiler-intake-diagram.md`](diagrams/profiler-intake-diagram.md) |
 
 
 ## 4. Git Graph — Branching Strategy
@@ -566,7 +558,6 @@ classDiagram
     MASTERACL_PAGE -.->|"embeds via iframe"| GAS_MASTERACL
     SCRAPER_PAGE -.->|"embeds via iframe"| GAS_SCRAPER
     RECEIPTS_PAGE -.->|"embeds via iframe"| GAS_RECEIPTS
-    PROFILERINTAKE_PAGE -.->|"embeds via iframe"| GAS_PROFILERINTAKE
     HTMLPage "1" --> "1" Changelog : html changelog
     HTMLPage "1" --> "1" EnvironmentDiagram : internals documented in
     GASScript "1" --> "1" VersionFile : gs.version.txt

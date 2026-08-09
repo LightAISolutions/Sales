@@ -1,0 +1,121 @@
+# ──────────────
+# field-note-intake.yml — Commits field notes submitted via the "📝 Field note"
+# issue form into live-site-pages/profiler-data/profiler-notes.json (schema:
+# repository-information/PROFILER-SCHEMA.md — Field Notes). Notes are stored
+# VERBATIM with the developer's confidence rating and triage "pending"; the
+# push to main triggers the auto-merge workflow's deploy (note becomes visible
+# in the Profiler ⚙ changelog) and the library mirror.
+# Runs on the built-in GITHUB_TOKEN — no extra secrets.
+# ──────────────
+name: Field note intake
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  commit-note:
+    # Only field-note issues, and only from the repo owner — the repo is private,
+    # but this guard also protects against future collaborators' submissions
+    # landing without review.
+    if: >-
+      contains(github.event.issue.labels.*.name, 'field-note') &&
+      github.event.issue.user.login == github.repository_owner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+      - name: Parse issue and append note
+        id: parse
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python3 - <<'PYEOF'
+          import json, os, re, sys
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+
+          body = os.environ["ISSUE_BODY"]
+          # Issue forms render as "### <Label>\n\n<value>" sections
+          def field(label):
+              m = re.search(r"### " + re.escape(label) + r"\s*\n+(.*?)(?=\n### |\Z)", body, re.S)
+              return m.group(1).strip() if m else ""
+
+          slug = field("Company").lower().strip()
+          source_type = field("How you learned it").lower().strip()
+          note_text = field("What you learned").strip()
+          conf_raw = field("Your confidence in this information (0–100)")
+          conf_m = re.match(r"(\d+)", conf_raw)
+
+          reg = json.load(open("live-site-pages/profiler-data/profiler-companies.json"))
+          valid_slugs = [c["slug"] for c in reg.get("companies", [])] + ["general"]
+
+          errors = []
+          if slug not in valid_slugs: errors.append(f"unknown company '{slug}'")
+          if source_type not in ["contact", "event", "call", "news", "other"]: errors.append(f"unknown source type '{source_type}'")
+          if not note_text or note_text == "_No response_": errors.append("empty note")
+          if not conf_m or not (0 <= int(conf_m.group(1)) <= 100): errors.append(f"bad confidence '{conf_raw}'")
+          if len(note_text) > 4000: errors.append("note exceeds 4000 characters")
+          if errors:
+              print("::error::Field note rejected: " + "; ".join(errors))
+              open(os.environ["GITHUB_OUTPUT"], "a").write("result=rejected\nreason=" + "; ".join(errors) + "\n")
+              sys.exit(0)
+
+          path = "live-site-pages/profiler-data/profiler-notes.json"
+          data = json.load(open(path))
+          today = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+          id_date = today.replace("-", "")
+          seq = 1
+          for n in data.get("notes", []):
+              m = re.match(r"note-" + id_date + r"-(\d+)", n.get("id", ""))
+              if m and int(m.group(1)) >= seq: seq = int(m.group(1)) + 1
+          note = {
+              "id": f"note-{id_date}-{seq:02d}",
+              "date": today,
+              "slug": slug,
+              "sourceType": source_type,
+              "note": note_text,
+              "confidence": int(conf_m.group(1)),
+              "tags": [],
+              "triage": "pending",
+              "submittedVia": f"issue-form (#{os.environ['ISSUE_NUMBER']})"
+          }
+          data["notes"] = [note] + data.get("notes", [])
+          with open(path, "w") as f:
+              json.dump(data, f, indent=2, ensure_ascii=False)
+              f.write("\n")
+          out = open(os.environ["GITHUB_OUTPUT"], "a")
+          out.write(f"result=ok\nnote_id={note['id']}\nslug={slug}\n")
+          PYEOF
+      - name: Commit and push
+        if: steps.parse.outputs.result == 'ok'
+        run: |
+          git config user.name "field-note-intake[bot]"
+          git config user.email "actions@github.com"
+          git add live-site-pages/profiler-data/profiler-notes.json
+          git commit -m "Field note ${{ steps.parse.outputs.note_id }} (${{ steps.parse.outputs.slug }}) via issue #${{ github.event.issue.number }}"
+          # Retry once if main advanced between checkout and push
+          git push || { git pull --rebase origin main && git push; }
+      - name: Close issue with confirmation
+        if: steps.parse.outputs.result == 'ok'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }} \
+            --comment "✅ Saved as \`${{ steps.parse.outputs.note_id }}\` (${{ steps.parse.outputs.slug }}). It appears in the Profiler ⚙ changelog after the deploy (~1–2 min) and mirrors to the library. Triage: pending — the next dossier refresh decides promotion."
+      - name: Comment rejection
+        if: steps.parse.outputs.result == 'rejected'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} \
+            --body "⚠️ Note NOT saved: ${{ steps.parse.outputs.reason }}. Edit nothing here — open a fresh Field note form and resubmit."
+
+# Developed by: ShadowAISolutions

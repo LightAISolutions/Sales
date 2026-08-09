@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08w] — 2026-08-08 10:11:17 PM EST — v02.04r
+
+### Added
+- "Add a Field Note" box at the bottom of every dossier — type what you learned, pick how you learned it and your 0–100 confidence, and save in one tap
+
+### Changed
+- The "＋ Add note" button in the Field Notes changelog now opens the same streamlined note form
 
 ## [v01.07w] — 2026-08-08 07:36:43 PM EST — v01.99r
 
