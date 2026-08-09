@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-09 03:29:35 AM EST` · Repo version: `v02.15r`
+Last updated: `2026-08-09 04:00:40 AM EST` · Repo version: `v02.16r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -275,6 +275,7 @@ Last updated: `2026-08-09 03:29:35 AM EST` · Repo version: `v02.15r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/IMPROVEMENTS.md">IMPROVEMENTS.md</a>         — [template · initialized] Potential improvements
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/KNOWN-CONSTRAINTS-AND-FIXES.md">KNOWN-CONSTRAINTS-AND-FIXES.md</a>    — Architectural constraints &amp; resolved bug fixes (GAS double-iframe, postMessage, HMAC, deploy webhook)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-STYLES.md">PROFILER-STYLES.md</a>      — Profiler dossier writing-style registry (active style + Default/Bloomberg/alternative styles with mock-ups)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep">study-prep/</a>           — Technology lesson plans from the Profiler Prep Command (not deployed)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/byd">byd/</a> — BYD technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/byd/byd-lesson-plan.md">byd-lesson-plan.md</a> — Full-depth 5-module lesson plan

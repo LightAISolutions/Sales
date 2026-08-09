@@ -22,7 +22,7 @@ If the user says **"profiler \<Company Name\>"** (or similar: "add \<Company\> t
    - **Citation order in `sources[]`:** company IR/PR/product pages first, then filings, then trade press — with aggregator-only figures marked as such per the schema rules
    - Research prompts sent to subagents must state this two-stage protocol explicitly
 3. **Archive the superseded dossier (revisions only)** — before editing an existing profile, follow the **Archival Procedure** below so the outgoing version is preserved. New profiles have nothing to archive — skip this step
-4. **Write the profile** — create or update `live-site-pages/profiler-data/<slug>.profile.json` conforming to PROFILER-SCHEMA.md. Set `lastUpdated` to today; set/increment `profileVersion`
+4. **Write the profile** — create or update `live-site-pages/profiler-data/<slug>.profile.json` conforming to PROFILER-SCHEMA.md, with all prose fields written in the **active writing style** from `repository-information/PROFILER-STYLES.md` (see "Dossier Writing Styles" below). Set `lastUpdated` to today; set/increment `profileVersion`
 5. **Register it** — add or update the company's entry in `profiler-companies.json` (keep `lastUpdated` in sync with the profile)
 6. **Photos** — if the company publishes leadership photos, download them to `live-site-pages/images/execs/<slug>-<lastname>.jpg` and reference via the profile's `photo` field; otherwise omit the field (initials avatar renders). Never scrape LinkedIn images
 7. **Batch requests** — when the user names multiple companies, run one research pass per company (parallel subagents where sensible) and land all profiles in the single interaction commit
@@ -73,6 +73,16 @@ If the user says **"profiler prep \<Company\>"** (or similar: "prep me for \<Com
 4. **Write the in-app study guide** — `live-site-pages/profiler-data/<slug>.study.json` (schema: PROFILER-SCHEMA.md): the same curriculum in section-bullet form plus **concept flashcards** (Q&A on how the technology and products work — never company trivia). Public-safe: no personal circumstances or deal context. Data-only change (no page version bump); the Profiler page is an indirect affect
 5. **Refresh on demand** — re-running the command regenerates both layers from the current dossier + notes; files are overwritten in place (git history preserves prior versions)
 6. **Commit/push** — normal checklists; repo CHANGELOG entry (private file names are fine in the repo CHANGELOG; keep them out of any public page changelog)
+
+## Dossier Writing Styles
+
+`repository-information/PROFILER-STYLES.md` is the named-styles registry and the single source of truth for **how dossier prose is written** — the schema says *what* fields exist; the active style says *how* their prose reads. Rules:
+
+- **Read the registry before authoring** — any session writing or revising dossier prose (Profiler Command, scheduled refreshes, note-triage promotions that add prose) checks the registry's **Active style** marker and follows that style's rules section
+- **Registered styles**: `default` (current analyst-prose house style), `bloomberg` (BloombergNEF research-report form, derived from the developer-supplied BNEF report), `equity-research` (sell-side note), `intel-briefing` (IC-style assessment with confidence-tagged judgments), `smart-brevity` (Axios form). Each has definition rules + a like-for-like Megmeet mock-up in the registry
+- **Switching** — the developer says "set profiler style to \<name\>"; Claude updates the Active style marker. Future authoring follows it; existing dossiers are not retro-rewritten unless explicitly requested (retro-rewrites are normal revisions: archive + `profileVersion` +1)
+- **Styles never override schema rules** — public sources only, expectations honesty, notes-are-not-sources, analysis-stays-labeled, and the speculation-flag discipline apply identically under every style
+- **New styles** must be added to the registry (rules + Megmeet mock-up) before activation
 
 ## Archival Procedure
 

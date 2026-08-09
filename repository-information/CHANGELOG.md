@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.16r] — 2026-08-09 04:00:40 AM EST
+
+> **Prompt:** "I tested both my admin jonyang92@gmail.com account and a test contributor jymiasole01@gmail.com account and Profiler works as intended. Only jonyang92@gmail.com could see the version history while jymiasole01@gmail.com could not. Regarding the dossier writing style, save it down as the default style and then let me see several mock-ups of what the dossier writing style would be after analyzing and integrating the attached Bloomberg report's writing style and formatting. Save that down as the Bloomberg style. If you have alternative reporting styles besides Bloomberg to show me, give me mock-up suggestions of those as well."
+
+### Added
+- `repository-information/PROFILER-STYLES.md` — dossier writing-style registry (single source of truth for how dossier prose is written; **Active style: `default`**). Codifies the current authoring conventions as the **Default style**; defines the **Bloomberg style** from a formatting/style analysis of the developer-supplied BloombergNEF "US Data Center Outlook — The Age of AI" report (exec-summary lead + Summary findings bullets, mandatory inline comparators, taxonomy/run-in-italic bullets, Figure captions with Source/Note lines, unhedged declarative voice, one dry aside per section); and adds three alternatives — `equity-research` (sell-side note: thesis banner, "we" voice, bull/bear key debates, dated catalysts), `intel-briefing` (IC assessment: BLUF, confidence-tagged key judgments mapped to the field-note 0–100 bands, indicators to watch), and `smart-brevity` (Axios form: one-line lede + fixed axioms). Every style carries a like-for-like Megmeet mock-up (summary → AI-DC positioning → FY2025 results development → strategy read)
+
+### Changed
+- `.claude/rules/profiler-app.md` — new "Dossier Writing Styles" section registering the styles file (read-before-authoring rule, switching procedure, styles-never-override-schema-rules); Profiler Command step 4 now requires prose in the active style
+- `CLAUDE.md` — Profiler Command section now points at the writing-style registry alongside the data schema
+- `README.md` — `PROFILER-STYLES.md` added to the repository tree
 
 ## [v02.15r] — 2026-08-09 03:29:35 AM EST
 
