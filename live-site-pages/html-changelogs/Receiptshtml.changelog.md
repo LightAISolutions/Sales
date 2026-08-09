@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 32/50`
+`Sections: 33/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.33w] — 2026-08-08 10:19:41 PM EST — v02.06r
+
+### Added
+- Each month's Business folder now carries a "Line Items" spreadsheet file (CSV — opens in Excel or Google Sheets) that the app maintains automatically: every Business save adds that receipt's items with date, store, quantities, prices, categories, receipt total, and receipt ID
+- The file stays accurate on its own: editing a Business receipt rewrites its lines (moving them to the right month if the date changed), deleting removes them, and switching a receipt back to Personal removes both its lines and its PDF
 
 ## [v01.32w] — 2026-08-08 09:56:18 PM EST — v02.03r
 

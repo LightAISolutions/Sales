@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.32w">
+  <meta name="build-version" content="v01.33w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -5345,11 +5345,12 @@
         saveBtn.disabled = true;
         setRrStatus('Saving…', true);
         setProgress(85);
-        // Captured before the save clears them — the PDF filing needs the
-        // photo source and any previous PDF to replace.
+        // Captured before the save clears them — the PDF/ledger filing needs
+        // the photo source, the pre-save ID, and any previous PDF to replace.
         var pdfPhotoId = _drivePhotoByReceipt[currentReceiptId] || null;
         var pdfImageUrl = currentImageUrl;
         var pdfOldUrl = currentPdfUrl;
+        var prevReceiptId = currentReceiptId;
         _gasPostBody({ action: 'saveReceipt', token: session.token, receiptId: currentReceiptId,
           data: JSON.stringify(payload), force: pendingForce ? '1' : '',
           owner: editingFromHistory ? editingOwner : '' })
@@ -5363,16 +5364,34 @@
                 driveRenameFile(dfid, r.receiptId + '.jpg');
                 delete _drivePhotoByReceipt[currentReceiptId];
               }
-              // Business receipts: file the PDF copy (async, best-effort —
-              // the receipt is saved regardless; failures only warn).
+              // Business receipts: file the PDF copy, then the monthly
+              // line-items ledger (sequential — they share the folder tree
+              // and racing find-or-create could duplicate folders). Async,
+              // best-effort: the receipt is saved regardless; failures warn.
               if (payload.expenseType === 'Business' && !(editingFromHistory && editingOwner)) {
                 saveBusinessPdf(r.receiptId, payload.date, pdfPhotoId, pdfImageUrl, pdfOldUrl)
-                  .then(function(filed) {
-                    if (filed && !batchActive) setStatus('Saved ✓ ' + (r.receiptId || '') + ' — PDF filed in your Drive', true);
+                  .then(function(f) { return { pdf: !!f }; }, function(pe) { return { pdf: false, err: pe }; })
+                  .then(function(pdfRes) {
+                    return syncBusinessLedger(r.receiptId, prevReceiptId, payload)
+                      .then(function(l) { pdfRes.ledger = !!l; return pdfRes; },
+                            function(le) { pdfRes.ledger = false; pdfRes.lerr = le; return pdfRes; });
                   })
-                  .catch(function(pe) {
-                    if (!batchActive) setStatus('Saved ✓ — but the PDF copy failed (' + String((pe && pe.message) || pe) + '). Edit + re-save to retry.', false);
+                  .then(function(res) {
+                    if (batchActive) return;
+                    if (res.pdf && res.ledger) {
+                      setStatus('Saved ✓ ' + (r.receiptId || '') + ' — PDF + ledger filed in your Drive', true);
+                    } else if (res.err || res.lerr) {
+                      var why = String(((res.err || res.lerr) && (res.err || res.lerr).message) || res.err || res.lerr);
+                      setStatus('Saved ✓ — but Drive filing was incomplete (' + why + '). Edit + re-save to retry.', false);
+                    }
                   });
+              } else if (pdfOldUrl && payload.expenseType === 'Personal' && !(editingFromHistory && editingOwner)) {
+                // Business → Personal flip: undo the filing — trash the PDF,
+                // clear its registered link, drop the ledger rows.
+                var fm2 = String(pdfOldUrl).match(/\/d\/([^\/?]+)/);
+                if (fm2 && fm2[1]) driveTrashFile(fm2[1]);
+                _gasPost({ action: 'registerReceiptPdf', token: session.token, receiptId: r.receiptId, pdfUrl: '' });
+                removeFromBusinessLedger([prevReceiptId, r.receiptId]).catch(function() { /* best-effort */ });
               }
               closeReviewCard();
               if (batchActive) {
@@ -5742,6 +5761,127 @@
                 .then(function() { return true; });
             });
         });
+      }
+
+      // ── Business-expense monthly ledger (CSV beside the PDFs) ────────
+      // Each month folder carries one "Line Items - <Month> <Year>.csv" the
+      // app creates and keeps in sync: saves (re)write the receipt's rows,
+      // deletes and Business→Personal flips remove them. The receipt ID's
+      // date suffix (Store_Name-YYYYMMDD) locates rows even after edits.
+      var BIZ_CSV_HEADER = 'Receipt Date,Merchant,Item,Qty,Unit Price,Amount,Category,Receipt Total,Receipt ID';
+
+      function _csvEscape(v) {
+        v = String(v == null ? '' : v);
+        return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+      }
+      function _dateFromReceiptId(id) {
+        var m = String(id || '').match(/-(\d{4})(\d{2})(\d{2})(?:-\d+)?$/);
+        return m ? m[1] + '-' + m[2] + '-' + m[3] : '';
+      }
+      function _bizCsvName(dateStr) {
+        return 'Line Items - ' + MONTHS_EN[(parseInt(String(dateStr).substring(5, 7), 10) || 1) - 1]
+          + ' ' + String(dateStr).substring(0, 4) + '.csv';
+      }
+      function _buildLedgerRows(receiptId, dateStr, payload) {
+        var items = (payload.lineItems && payload.lineItems.length) ? payload.lineItems : null;
+        var base = items || [{ description: '(no itemized lines)', qty: '', unitPrice: '', amount: payload.total, category: payload.category }];
+        return base.map(function(it) {
+          return [dateStr, payload.merchant, it.description, it.qty, it.unitPrice,
+            it.amount, it.category, payload.total, receiptId].map(_csvEscape).join(',');
+        });
+      }
+
+      // Read-modify-write of one month's CSV: drop rows belonging to the
+      // given receipt IDs, then append the fresh rows (empty for removals).
+      function _updateBizLedger(tok, dateStr, removeIds, appendRows) {
+        return _ensureBizPath(tok, dateStr).then(function(folderId) {
+          var name = _bizCsvName(dateStr);
+          var q = "name='" + name.replace(/'/g, "\\'") + "' and '" + folderId + "' in parents and trashed=false";
+          return _driveFetch(tok, 'https://www.googleapis.com/drive/v3/files?q='
+            + encodeURIComponent(q) + '&fields=files(id)', {}).then(function(fr) {
+            var fid = (fr.files && fr.files.length) ? fr.files[0].id : null;
+            var textP = fid
+              ? fetch('https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(fid) + '?alt=media',
+                  { headers: { 'Authorization': 'Bearer ' + tok } })
+                  .then(function(r) { if (!r.ok) throw new Error('csv_read_' + r.status); return r.text(); })
+              : Promise.resolve(BIZ_CSV_HEADER + '\n');
+            return textP.then(function(text) {
+              var lines = text.split('\n').filter(function(l) { return l.trim(); });
+              if (!lines.length) lines = [BIZ_CSV_HEADER];
+              var kept = [lines[0]].concat(lines.slice(1).filter(function(l) {
+                return !removeIds.some(function(id) { return id && l.slice(-(String(id).length + 1)) === ',' + id; });
+              }));
+              var out = kept.concat(appendRows).join('\n') + '\n';
+              if (!fid && !appendRows.length) return null; // pure removal + no file = nothing to do
+              if (fid) {
+                return fetch('https://www.googleapis.com/upload/drive/v3/files/' + encodeURIComponent(fid)
+                  + '?uploadType=media', {
+                  method: 'PATCH',
+                  headers: { 'Authorization': 'Bearer ' + tok, 'Content-Type': 'text/csv' },
+                  body: out
+                }).then(function(r) { if (!r.ok) throw new Error('csv_write_' + r.status); return true; });
+              }
+              var fd = new FormData();
+              fd.append('metadata', new Blob(
+                [JSON.stringify({ name: name, mimeType: 'text/csv', parents: [folderId] })],
+                { type: 'application/json' }));
+              fd.append('file', new Blob([out], { type: 'text/csv' }));
+              return fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id', {
+                method: 'POST', headers: { 'Authorization': 'Bearer ' + tok }, body: fd
+              }).then(function(r) { if (!r.ok) throw new Error('csv_create_' + r.status); return true; });
+            });
+          });
+        });
+      }
+
+      // Save-side sync: remove the receipt's rows from every month it may
+      // have lived in (old ID date, new ID date, printed date), append the
+      // fresh rows to the printed-date month.
+      function syncBusinessLedger(newId, oldId, payload) {
+        if (!_companyName) return Promise.resolve(false);
+        var targetDate = /^\d{4}-\d{2}/.test(String(payload.date || '')) ? payload.date : _dateFromReceiptId(newId);
+        if (!targetDate) return Promise.resolve(false);
+        var rows = _buildLedgerRows(newId, targetDate, payload);
+        return new Promise(function(res) { _getDriveToken(res); }).then(function(tok) {
+          if (!tok) throw new Error('no_drive_access');
+          var months = {};
+          [_dateFromReceiptId(oldId), _dateFromReceiptId(newId), targetDate].forEach(function(d) {
+            if (d) months[d.substring(0, 7)] = d;
+          });
+          var target = String(targetDate).substring(0, 7);
+          var chain = Promise.resolve();
+          Object.keys(months).forEach(function(mk) {
+            chain = chain.then(function() {
+              return _updateBizLedger(tok, months[mk], [oldId, newId], mk === target ? rows : []);
+            });
+          });
+          return chain.then(function() { return true; });
+        });
+      }
+
+      // Removal-only sync (delete, or a Business→Personal flip).
+      function removeFromBusinessLedger(ids) {
+        var run = function() {
+          if (!_companyName) return Promise.resolve(false);
+          var dates = ids.map(_dateFromReceiptId).filter(Boolean);
+          if (!dates.length) return Promise.resolve(false);
+          return new Promise(function(res) { _getDriveToken(res); }).then(function(tok) {
+            if (!tok) return false;
+            var seen = {};
+            var chain = Promise.resolve();
+            dates.forEach(function(d) {
+              var mk = d.substring(0, 7);
+              if (seen[mk]) return;
+              seen[mk] = 1;
+              chain = chain.then(function() { return _updateBizLedger(tok, d, ids, []); });
+            });
+            return chain.then(function() { return true; });
+          });
+        };
+        if (_companyName === null) {
+          return new Promise(function(res) { _fetchCompany(function() { res(run()); }); });
+        }
+        return run();
       }
 
       function driveTrashFile(fileId) {
@@ -6158,10 +6298,14 @@
                       if (dm && dm[1]) driveTrashFile(dm[1]);
                     }
                     // Business receipts: trash the PDF copy too (it lives in
-                    // the user's Drive — the server returns only the link).
+                    // the user's Drive — the server returns only the link),
+                    // and drop the receipt's rows from the monthly ledger.
                     if (dr.pdfUrl) {
                       var pm = String(dr.pdfUrl).match(/\/d\/([^\/?]+)/);
                       if (pm && pm[1]) driveTrashFile(pm[1]);
+                    }
+                    if (rec.expenseType === 'Business') {
+                      removeFromBusinessLedger([rec.id]).catch(function() { /* best-effort */ });
                     }
                     row.remove();
                     detail.remove();
