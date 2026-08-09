@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.31w">
+  <meta name="build-version" content="v01.32w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -414,13 +414,31 @@
     .rbtn:disabled { opacity: 0.45; cursor: default; }
     .rsp-row { display: flex; gap: 11px; align-items: center; }
     .rsp-row .rbtn { flex: 1 1 0; padding: 12px 8px; font-size: 14.5px; }
-    /* Expense-type toggle — which ledger the next scan belongs to */
-    .etbtn {
-      flex: 1 1 0; padding: 9px 6px; font-size: 13.5px; cursor: pointer;
-      border: 1px solid #c4c9d0; border-radius: 8px; background: #f6f7f9; color: #667;
+    /* Expense-type segmented switch — which ledger the next scan belongs to.
+       The active half is solid ink with white text so the current mode is
+       unmistakable at a glance. */
+    #etype-block { display: flex; flex-direction: column; gap: 4px; }
+    #etype-caption {
+      font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--rc-muted, #8a7f6a); text-align: center;
     }
-    .etbtn.et-on { background: #eef4fc; border-color: #4a90d9; color: #2c5d94; font-weight: 600; }
+    #etype-seg {
+      display: flex; border: 1.5px solid #2c2c2c; border-radius: 10px;
+      overflow: hidden; background: #fff;
+    }
+    .etbtn {
+      flex: 1 1 0; padding: 11px 6px; font-size: 14px; font-weight: 600;
+      border: none; background: transparent; color: #777; cursor: pointer;
+    }
+    .etbtn + .etbtn { border-left: 1.5px solid #2c2c2c; }
+    .etbtn.et-on { background: #2c2c2c; color: #fff; }
     .rh-et-tag { flex: 0 0 auto; margin-right: 2px; }
+    /* Settings-panel company editor */
+    #rsp-company-edit { display: none; gap: 6px; margin-top: 6px; }
+    #rsp-company-input {
+      flex: 1 1 0; min-width: 0; font-size: 14px; padding: 6px 8px;
+      border: 1px solid #c4c9d0; border-radius: 6px;
+    }
     .rsp-status-row { display: flex; gap: 10px; align-items: center; justify-content: center; min-height: 20px; }
     #receipt-scan-status {
       font-size: 12.5px; color: var(--rc-muted); font-style: italic; text-align: center;
@@ -1016,11 +1034,14 @@
       <div class="rm-dash"></div>
       <div id="rm-rows"></div>
     </div>
-    <!-- Expense-type toggle — chosen before scanning; sticky per device.
-         The review screen can still flip an individual receipt before save. -->
-    <div class="rsp-row">
-      <button id="etype-personal" class="etbtn" type="button">🏠&ensp;Personal</button>
-      <button id="etype-reimb" class="etbtn" type="button">💼&ensp;Reimbursement</button>
+    <!-- Expense-type segmented switch — chosen before scanning; sticky per
+         device. The review screen can still flip an individual receipt. -->
+    <div id="etype-block">
+      <div id="etype-caption">Expense type</div>
+      <div id="etype-seg">
+        <button id="etype-personal" class="etbtn" type="button">🏠&ensp;Personal</button>
+        <button id="etype-reimb" class="etbtn" type="button">💼&ensp;Business</button>
+      </div>
     </div>
     <button id="receipt-scan-btn" class="rbtn rbtn-primary" type="button">📷&ensp;Scan receipt</button>
     <div class="rsp-row">
@@ -1052,6 +1073,11 @@
     <div id="rsp-settings-panel">
       <span id="rsp-account-email"></span>
       <button id="rsp-lang" type="button">Language · 中文</button>
+      <button id="rsp-company" type="button">Company · —</button>
+      <div id="rsp-company-edit">
+        <input id="rsp-company-input" type="text" autocomplete="off" placeholder="Company name">
+        <button id="rsp-company-save" type="button">Save</button>
+      </div>
       <button id="rsp-signout" type="button">Sign out</button>
       <button id="rsp-signout-all" type="button">Sign out everywhere</button>
     </div>
@@ -1096,7 +1122,7 @@
         <select id="rh-etype" title="Filter by expense type">
           <option value="">All expense types</option>
           <option value="Personal">🏠 Personal</option>
-          <option value="Reimbursement">💼 Reimbursement</option>
+          <option value="Business">💼 Business</option>
         </select>
       </div>
       <div class="rh-filters rh-cat-row">
@@ -1136,7 +1162,7 @@
         <select id="rp-etype" title="Expense type">
           <option value="">All expense types</option>
           <option value="Personal">🏠 Personal</option>
-          <option value="Reimbursement">💼 Reimbursement</option>
+          <option value="Business">💼 Business</option>
         </select>
       </div>
       <div class="rp-filters">
@@ -1171,8 +1197,9 @@
       <label>Total<input id="rr-total" type="number" step="0.01" inputmode="decimal"></label>
       <label>Expense<select id="rr-etype">
         <option value="Personal">🏠 Personal</option>
-        <option value="Reimbursement">💼 Reimbursement</option>
+        <option value="Business">💼 Business</option>
       </select></label>
+      <label id="rr-company-row" style="grid-column: 1 / -1; display: none">Company<input id="rr-company" type="text" autocomplete="off" placeholder="For the folders in your Drive — e.g. AcmeCorp"></label>
     </div>
     <div class="rr-items">
       <div class="rr-row rr-head"><span>Item</span><span>Qty</span><span>Unit</span><span>Amount</span><span></span></div>
@@ -5159,17 +5186,19 @@
 
       // Expense-type mode — which ledger the next scan belongs to. Sticky per
       // device; the review screen can still flip an individual receipt.
-      var _expenseMode = (localStorage.getItem('rcpt_expense_mode') === 'Reimbursement') ? 'Reimbursement' : 'Personal';
+      // ('Reimbursement' was the pre-rename stored value — read as Business.)
+      var _emStored = localStorage.getItem('rcpt_expense_mode');
+      var _expenseMode = (_emStored === 'Business' || _emStored === 'Reimbursement') ? 'Business' : 'Personal';
       function setExpenseMode(m) {
-        _expenseMode = (m === 'Reimbursement') ? 'Reimbursement' : 'Personal';
+        _expenseMode = (m === 'Business' || m === 'Reimbursement') ? 'Business' : 'Personal';
         try { localStorage.setItem('rcpt_expense_mode', _expenseMode); } catch (lsErr) { /* private mode */ }
         var pB = document.getElementById('etype-personal');
         var rB = document.getElementById('etype-reimb');
         if (pB) pB.classList.toggle('et-on', _expenseMode === 'Personal');
-        if (rB) rB.classList.toggle('et-on', _expenseMode === 'Reimbursement');
+        if (rB) rB.classList.toggle('et-on', _expenseMode === 'Business');
       }
       document.getElementById('etype-personal').addEventListener('click', function() { setExpenseMode('Personal'); });
-      document.getElementById('etype-reimb').addEventListener('click', function() { setExpenseMode('Reimbursement'); });
+      document.getElementById('etype-reimb').addEventListener('click', function() { setExpenseMode('Business'); });
       setExpenseMode(_expenseMode);
 
       function openReviewCard(receiptId, data, note) {
@@ -5185,9 +5214,13 @@
         document.getElementById('rr-currency').value = d.currency || '';
         document.getElementById('rr-category').value = (CATEGORIES.indexOf(d.category) >= 0) ? d.category : '';
         // Stored type wins when editing an existing receipt; new scans inherit
-        // the scan panel's Personal/Reimbursement mode.
+        // the scan panel's Personal/Business mode (legacy 'Reimbursement' = Business).
+        var _oEt = d.expenseType || _expenseMode;
         document.getElementById('rr-etype').value =
-          ((d.expenseType || _expenseMode) === 'Reimbursement') ? 'Reimbursement' : 'Personal';
+          (_oEt === 'Business' || _oEt === 'Reimbursement') ? 'Business' : 'Personal';
+        currentImageUrl = d.imageUrl || '';
+        currentPdfUrl = d.pdfUrl || '';
+        _syncCompanyRow();
         document.getElementById('rr-subtotal').value = (d.subtotal || d.subtotal === 0) ? d.subtotal : '';
         document.getElementById('rr-tax').value = (d.tax || d.tax === 0) ? d.tax : '';
         document.getElementById('rr-total').value = (d.total || d.total === 0) ? d.total : '';
@@ -5285,11 +5318,40 @@
         if (!session.token) { setRrStatus('Sign in first', false); return; }
         if (!currentReceiptId) { setRrStatus('No receipt selected', false); return; }
         var saveBtn = document.getElementById('rr-save');
+        var payload = collectReview();
+        // Business receipts need a company name before the first save — it
+        // names the top-level folder for the PDF copies in the user's Drive.
+        if (payload.expenseType === 'Business' && !_companyName) {
+          var typedCompany = (document.getElementById('rr-company').value || '').trim();
+          if (!typedCompany) {
+            document.getElementById('rr-company-row').style.display = '';
+            setRrStatus(t('Enter your company name — it names the reimbursement folder in your Drive'), false);
+            return;
+          }
+          saveBtn.disabled = true;
+          _gasPost({ action: 'setCompanyName', token: session.token, name: typedCompany })
+            .then(function(cr) {
+              saveBtn.disabled = false;
+              if (cr && cr.success) {
+                _companyName = cr.company;
+                _syncCompanyUi(); _syncCompanyRow();
+                document.getElementById('rr-save').click(); // company set — re-run the save
+              } else {
+                setRrStatus('Could not save the company name (' + ((cr && cr.error) || 'unknown') + ')', false);
+              }
+            });
+          return;
+        }
         saveBtn.disabled = true;
         setRrStatus('Saving…', true);
         setProgress(85);
+        // Captured before the save clears them — the PDF filing needs the
+        // photo source and any previous PDF to replace.
+        var pdfPhotoId = _drivePhotoByReceipt[currentReceiptId] || null;
+        var pdfImageUrl = currentImageUrl;
+        var pdfOldUrl = currentPdfUrl;
         _gasPostBody({ action: 'saveReceipt', token: session.token, receiptId: currentReceiptId,
-          data: JSON.stringify(collectReview()), force: pendingForce ? '1' : '',
+          data: JSON.stringify(payload), force: pendingForce ? '1' : '',
           owner: editingFromHistory ? editingOwner : '' })
           .then(function(r) {
             saveBtn.disabled = false;
@@ -5300,6 +5362,17 @@
               if (dfid && r.receiptId) {
                 driveRenameFile(dfid, r.receiptId + '.jpg');
                 delete _drivePhotoByReceipt[currentReceiptId];
+              }
+              // Business receipts: file the PDF copy (async, best-effort —
+              // the receipt is saved regardless; failures only warn).
+              if (payload.expenseType === 'Business' && !(editingFromHistory && editingOwner)) {
+                saveBusinessPdf(r.receiptId, payload.date, pdfPhotoId, pdfImageUrl, pdfOldUrl)
+                  .then(function(filed) {
+                    if (filed && !batchActive) setStatus('Saved ✓ ' + (r.receiptId || '') + ' — PDF filed in your Drive', true);
+                  })
+                  .catch(function(pe) {
+                    if (!batchActive) setStatus('Saved ✓ — but the PDF copy failed (' + String((pe && pe.message) || pe) + '). Edit + re-save to retry.', false);
+                  });
               }
               closeReviewCard();
               if (batchActive) {
@@ -5467,6 +5540,207 @@
             method: 'PATCH', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: newName })
           }).catch(function() { /* cosmetic — save already succeeded */ });
+        });
+      }
+
+      // ── Business-expense PDF filing (<Company>/<Year>/<Month> in the
+      //    user's own Drive) ─────────────────────────────────────────────
+      // On every Business save the photo is converted to a one-page PDF in
+      // the browser (hand-built JPEG-in-PDF — no libraries) and uploaded to
+      // the lazily-created company/year/month folder tree, then the link is
+      // registered on the receipt row. All Drive work uses the signed-in
+      // user's own credential; the server never touches these files.
+      var MONTHS_EN = ['January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'];
+      var _companyName = null;   // null = not fetched yet; '' = none stored
+      var _bizFolderCache = {};  // 'Company/Year/Month' → folder id (session)
+      var currentImageUrl = '';  // photo link of the receipt open in review
+      var currentPdfUrl = '';    // existing PDF copy link (edits replace it)
+
+      function _syncCompanyUi() {
+        var b = document.getElementById('rsp-company');
+        if (b) b.textContent = (_zhOn() ? '公司 · ' : 'Company · ') + (_companyName || '—');
+      }
+      function _syncCompanyRow() {
+        var row = document.getElementById('rr-company-row');
+        if (!row) return;
+        var isBiz = document.getElementById('rr-etype').value === 'Business';
+        row.style.display = (isBiz && !_companyName) ? '' : 'none';
+        if (isBiz && _companyName === null) _fetchCompany();
+      }
+      function _fetchCompany(cb) {
+        var s = loadSession();
+        if (!s.token) { if (cb) cb(); return; }
+        _gasPost({ action: 'getProfile', token: s.token }).then(function(p) {
+          _companyName = (p && p.success) ? String(p.company || '') : '';
+          _syncCompanyUi(); _syncCompanyRow();
+          if (cb) cb();
+        }).catch(function() { if (cb) cb(); });
+      }
+      document.getElementById('rr-etype').addEventListener('change', _syncCompanyRow);
+
+      // Settings-panel company editor
+      document.getElementById('rsp-company').addEventListener('click', function() {
+        var open = function() {
+          var ed = document.getElementById('rsp-company-edit');
+          document.getElementById('rsp-company-input').value = _companyName || '';
+          ed.style.display = (ed.style.display === 'flex') ? 'none' : 'flex';
+        };
+        if (_companyName === null) _fetchCompany(open); else open();
+      });
+      document.getElementById('rsp-company-save').addEventListener('click', function() {
+        var name = (document.getElementById('rsp-company-input').value || '').trim();
+        if (!name) return;
+        var s = loadSession();
+        if (!s.token) return;
+        _gasPost({ action: 'setCompanyName', token: s.token, name: name }).then(function(r) {
+          if (r && r.success) {
+            _companyName = r.company;
+            _bizFolderCache = {}; // a new company name means a new folder tree
+            _syncCompanyUi(); _syncCompanyRow();
+            document.getElementById('rsp-company-edit').style.display = 'none';
+          }
+        });
+      });
+
+      // JPEG dimensions from the SOF0/1/2 marker (needed for the PDF page box)
+      function _jpegDims(u8) {
+        var i = 2;
+        while (i + 9 < u8.length) {
+          if (u8[i] !== 0xFF) { i++; continue; }
+          var m = u8[i + 1];
+          if (m >= 0xC0 && m <= 0xC2) {
+            return { h: (u8[i + 5] << 8) | u8[i + 6], w: (u8[i + 7] << 8) | u8[i + 8] };
+          }
+          if (m === 0xD8 || m === 0x01 || (m >= 0xD0 && m <= 0xD9)) { i += 2; continue; }
+          i += 2 + ((u8[i + 2] << 8) | u8[i + 3]);
+        }
+        return null;
+      }
+
+      // Minimal single-page PDF wrapping one JPEG (DCTDecode pass-through).
+      // Page box = image size in points, scaled to ≤612pt (US-Letter width).
+      function _buildJpegPdf(jpeg, w, h) {
+        var scale = Math.min(1, 612 / w);
+        var pw = (w * scale).toFixed(2), ph = (h * scale).toFixed(2);
+        var enc = function(s) { return new TextEncoder().encode(s); };
+        var content = 'q ' + pw + ' 0 0 ' + ph + ' 0 0 cm /Im1 Do Q';
+        var objs = [];
+        objs[1] = '<< /Type /Catalog /Pages 2 0 R >>';
+        objs[2] = '<< /Type /Pages /Kids [3 0 R] /Count 1 >>';
+        objs[3] = '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ' + pw + ' ' + ph
+          + '] /Contents 4 0 R /Resources << /XObject << /Im1 5 0 R >> >> >>';
+        objs[4] = '<< /Length ' + content.length + ' >>\nstream\n' + content + '\nendstream';
+        var parts = [enc('%PDF-1.4\n')];
+        var pos = parts[0].length;
+        var offsets = [0, 0, 0, 0, 0, 0];
+        function push(bytes) { parts.push(bytes); pos += bytes.length; }
+        for (var n = 1; n <= 4; n++) {
+          offsets[n] = pos;
+          push(enc(n + ' 0 obj\n' + objs[n] + '\nendobj\n'));
+        }
+        offsets[5] = pos;
+        push(enc('5 0 obj\n<< /Type /XObject /Subtype /Image /Width ' + w + ' /Height ' + h
+          + ' /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length '
+          + jpeg.length + ' >>\nstream\n'));
+        push(jpeg);
+        push(enc('\nendstream\nendobj\n'));
+        var xrefPos = pos;
+        var xref = 'xref\n0 6\n0000000000 65535 f \n';
+        for (var x = 1; x <= 5; x++) {
+          xref += ('0000000000' + offsets[x]).slice(-10) + ' 00000 n \n';
+        }
+        push(enc(xref + 'trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n' + xrefPos + '\n%%EOF'));
+        var total = 0;
+        parts.forEach(function(p) { total += p.length; });
+        var out = new Uint8Array(total);
+        var o = 0;
+        parts.forEach(function(p) { out.set(p, o); o += p.length; });
+        return out;
+      }
+
+      function _findOrCreateFolder(tok, name, parentId) {
+        var q = "name='" + name.replace(/'/g, "\\'") + "' and '" + parentId
+          + "' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false";
+        return _driveFetch(tok, 'https://www.googleapis.com/drive/v3/files?q='
+          + encodeURIComponent(q) + '&fields=files(id)', {})
+          .then(function(r) {
+            if (r.files && r.files.length) return r.files[0].id;
+            return _driveFetch(tok, 'https://www.googleapis.com/drive/v3/files?fields=id', {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name: name, mimeType: 'application/vnd.google-apps.folder', parents: [parentId] })
+            }).then(function(f) { return f.id; });
+          });
+      }
+
+      // Company → Year → Month, created on demand from the receipt's printed
+      // date (upload date when undated). Folder/file names stay English.
+      function _ensureBizPath(tok, dateStr) {
+        var d = /^\d{4}-\d{2}/.test(String(dateStr || '')) ? String(dateStr) : new Date().toISOString();
+        var year = d.substring(0, 4);
+        var month = MONTHS_EN[(parseInt(d.substring(5, 7), 10) || 1) - 1];
+        var key = _companyName + '/' + year + '/' + month;
+        if (_bizFolderCache[key]) return Promise.resolve(_bizFolderCache[key]);
+        return _findOrCreateFolder(tok, _companyName, 'root')
+          .then(function(cid) { return _findOrCreateFolder(tok, year, cid); })
+          .then(function(yid) { return _findOrCreateFolder(tok, month, yid); })
+          .then(function(mid) { _bizFolderCache[key] = mid; return mid; });
+      }
+
+      function _uploadPdfToFolder(tok, folderId, name, pdfU8) {
+        var fd = new FormData();
+        fd.append('metadata', new Blob(
+          [JSON.stringify({ name: name, mimeType: 'application/pdf', parents: [folderId] })],
+          { type: 'application/json' }));
+        fd.append('file', new Blob([pdfU8], { type: 'application/pdf' }));
+        return fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id', {
+          method: 'POST', headers: { 'Authorization': 'Bearer ' + tok }, body: fd
+        }).then(function(r) {
+          if (!r.ok) throw new Error('pdf_upload_' + r.status);
+          return r.json();
+        });
+      }
+
+      // Full pipeline: photo bytes → PDF → folder tree → upload → register.
+      // Resolves true on success, false when there is nothing to do; rejects
+      // on real failures (caller downgrades to a status warning — the receipt
+      // itself is already saved either way).
+      function saveBusinessPdf(receiptId, dateStr, photoFileId, imageUrl, oldPdfUrl) {
+        if (!_companyName) return Promise.resolve(false);
+        var pid = photoFileId;
+        if (!pid && imageUrl) {
+          var m = String(imageUrl).match(/\/d\/([^\/?]+)/);
+          if (m) pid = m[1];
+        }
+        if (!pid) return Promise.resolve(false);
+        return new Promise(function(res) { _getDriveToken(res); }).then(function(tok) {
+          if (!tok) throw new Error('no_drive_access');
+          return fetch('https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(pid)
+            + '?alt=media', { headers: { 'Authorization': 'Bearer ' + tok } })
+            .then(function(r) {
+              if (!r.ok) throw new Error('photo_read_' + r.status);
+              return r.arrayBuffer();
+            })
+            .then(function(buf) {
+              var jpeg = new Uint8Array(buf);
+              var dims = _jpegDims(jpeg);
+              if (!dims || !dims.w || !dims.h) throw new Error('not_a_jpeg');
+              var pdf = _buildJpegPdf(jpeg, dims.w, dims.h);
+              return _ensureBizPath(tok, dateStr).then(function(fid) {
+                return _uploadPdfToFolder(tok, fid, receiptId + '.pdf', pdf);
+              });
+            })
+            .then(function(f) {
+              // Replace, don't accumulate: a re-save trashes the previous PDF.
+              if (oldPdfUrl) {
+                var om = String(oldPdfUrl).match(/\/d\/([^\/?]+)/);
+                if (om && om[1] && om[1] !== f.id) driveTrashFile(om[1]);
+              }
+              var url = 'https://drive.google.com/file/d/' + f.id + '/view';
+              var s = loadSession();
+              return _gasPost({ action: 'registerReceiptPdf', token: s.token, receiptId: receiptId, pdfUrl: url })
+                .then(function() { return true; });
+            });
         });
       }
 
@@ -5747,6 +6021,9 @@
         if (r.imageUrl) {
           html += '<div><a href="' + esc(r.imageUrl) + '" target="_blank" rel="noopener">View photo ↗</a></div>';
         }
+        if (r.pdfUrl) {
+          html += '<div><a href="' + esc(r.pdfUrl) + '" target="_blank" rel="noopener">View PDF copy ↗</a></div>';
+        }
         var items = d.lineItems || [];
         if (items.length) {
           html += '<table>';
@@ -5836,8 +6113,8 @@
             // Combined view: tag each row with whose scan it is (name part only)
             var ownTag = (rhOwner() === '*' && rec.owner)
               ? '<span class="rh-owner-tag">' + esc(String(rec.owner).split('@')[0]) + '</span>' : '';
-            var etTag = (rec.expenseType === 'Reimbursement')
-              ? '<span class="rh-et-tag" title="Reimbursement">💼</span>' : '';
+            var etTag = (rec.expenseType === 'Business')
+              ? '<span class="rh-et-tag" title="Business">💼</span>' : '';
             row.innerHTML = '<span class="rh-date">' + esc(rec.date || '—') + '</span>'
               + etTag
               + '<span class="rh-merchant">' + esc(rec.merchant || '(no merchant)') + '</span>'
@@ -5879,6 +6156,12 @@
                     if (!dr.photoTrashed && !rhRowOwner(rec)) {
                       var dm = String(rec.imageUrl || '').match(/\/d\/([^\/?]+)/);
                       if (dm && dm[1]) driveTrashFile(dm[1]);
+                    }
+                    // Business receipts: trash the PDF copy too (it lives in
+                    // the user's Drive — the server returns only the link).
+                    if (dr.pdfUrl) {
+                      var pm = String(dr.pdfUrl).match(/\/d\/([^\/?]+)/);
+                      if (pm && pm[1]) driveTrashFile(pm[1]);
                     }
                     row.remove();
                     detail.remove();
@@ -6570,7 +6853,9 @@
         'Top merchants': '热门商家', '🧾 Line items': '🧾 明细项',
         'Total spend': '总支出', 'Receipts': '收据数', 'Line items': '明细项', 'Average': '平均',
         'Start Date': '开始日期', 'End Date': '结束日期', 'Min total': '最低总额', 'Max total': '最高总额',
-        'Expense': '费用类型',
+        'Expense': '费用类型', 'Company': '公司',
+        'Enter your company name — it names the reimbursement folder in your Drive':
+          '请输入公司名称 — 它将用作您云端硬盘中报销文件夹的名称',
         'Viewing': '查看', 'My receipts': '我的收据', 'Combined (mine + shared)': '合并（我的+共享）',
         ' (can edit)': '（可编辑）', ' (view only)': '（仅查看）',
         'All categories': '所有类别', 'All subcategories': '所有子类别',
@@ -6694,7 +6979,11 @@
         ['#rr-add-item', 'text', '+ Add item', '+ 添加商品'],
         ['#receipt-review-card h3', 'first', 'Review receipt ', '核对收据 '],
         ['#etype-personal', 'text', '🏠 Personal', '🏠 个人'],
-        ['#etype-reimb', 'text', '💼 Reimbursement', '💼 报销'],
+        ['#etype-reimb', 'text', '💼 Business', '💼 商务'],
+        ['#etype-caption', 'text', 'Expense type', '费用类型'],
+        ['#rsp-company-save', 'text', 'Save', '保存'],
+        ['#rr-company', 'ph', 'For the folders in your Drive — e.g. AcmeCorp', '用于您云端硬盘中的文件夹 — 例如 AcmeCorp'],
+        ['#rsp-company-input', 'ph', 'Company name', '公司名称'],
         ['#rh-search', 'ph', 'Search merchant…', '搜索商家…'],
         ['#rp-merchant', 'ph', 'Filter merchant…', '筛选商家…'],
         ['#sc-email', 'ph', 'their.email@gmail.com', '对方的邮箱@gmail.com'],
@@ -6754,8 +7043,9 @@
         document.querySelectorAll('#rh-etype option, #rp-etype option, #rr-etype option').forEach(function(op) {
           if (op.value === '') op.textContent = zh ? '所有费用类型' : 'All expense types';
           else if (op.value === 'Personal') op.textContent = zh ? '🏠 个人' : '🏠 Personal';
-          else if (op.value === 'Reimbursement') op.textContent = zh ? '💼 报销' : '💼 Reimbursement';
+          else if (op.value === 'Business') op.textContent = zh ? '💼 商务' : '💼 Business';
         });
+        _syncCompanyUi();
         var langBtn = document.getElementById('rsp-lang');
         if (langBtn) langBtn.textContent = zh ? '语言 · English' : 'Language · 中文';
         try {

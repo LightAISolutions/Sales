@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 31/50`
+`Sections: 32/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.32w] — 2026-08-08 09:56:18 PM EST — v02.03r
+
+### Added
+- Business receipts are now filed automatically: saving one creates a PDF copy of the receipt photo in your own Google Drive, organized into Company → Year → Month folders by the receipt's date
+- The first Business save asks once for your company name (it names the top-level folder); you can change it any time from ⚙️ Settings
+- Receipt details show a "View PDF copy" link for filed receipts, and deleting a Business receipt also removes its PDF
+
+### Changed
+- The expense toggle is renamed to 🏠 Personal | 💼 Business and redesigned as a bold two-sided switch under an "Expense type" caption — the selected side is now filled solid, so the active mode is obvious at a glance
 
 ## [v01.31w] — 2026-08-08 09:31:15 PM EST — v02.01r
 

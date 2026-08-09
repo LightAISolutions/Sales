@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 20/50`
+`Sections: 21/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.21g] — 2026-08-08 09:56:18 PM EST — v02.03r
+
+### Added
+- Business receipts can now carry a link to their PDF copy, your profile remembers your company name, and deleting a Business receipt cleans up its PDF too
+
+### Changed
+- The expense type is now recorded as "Business" instead of "Reimbursement" everywhere
 
 ## [v01.20g] — 2026-08-08 09:31:15 PM EST — v02.01r
 

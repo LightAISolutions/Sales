@@ -1,4 +1,4 @@
-var VERSION = "v01.20g";
+var VERSION = "v01.21g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -509,7 +509,7 @@ function ensureReceiptTabs_() {
     receipts: ensure(RECEIPTS_TAB, [
       "Receipt ID", "Uploaded At", "Uploaded By", "Receipt Date", "Merchant",
       "Currency", "Subtotal", "Tax", "Total", "Category", "Image Link",
-      "Status", "Raw Extraction", "Store Address", "Expense Type"
+      "Status", "Raw Extraction", "Store Address", "Expense Type", "PDF Link"
     ]),
     lineItems: ensure(LINEITEMS_TAB, [
       "Receipt ID", "Line #", "Description", "Qty", "Unit Price", "Amount", "Category"
@@ -518,17 +518,26 @@ function ensureReceiptTabs_() {
       "Owner", "Grantee", "Scope", "Created At"
     ]),
     profiles: ensure(PROFILES_TAB, [
-      "Email", "Drive Folder ID", "Display Name", "Created At"
+      "Email", "Drive Folder ID", "Display Name", "Created At", "Company Name"
     ])
   };
   // In-place header upgrades for sheets created before these columns existed.
   if (String(tabs.receipts.getRange(1, 14).getValue()) !== 'Store Address') {
     tabs.receipts.getRange(1, 14).setValue('Store Address');
   }
-  // Expense Type (col 15): Personal | Reimbursement — blank legacy rows are
-  // treated as Personal everywhere, so no data backfill is needed.
+  // Expense Type (col 15): Personal | Business — blank legacy rows are
+  // treated as Personal everywhere, so no data backfill is needed. ("Business"
+  // was briefly stored as "Reimbursement"; reads accept both.)
   if (String(tabs.receipts.getRange(1, 15).getValue()) !== 'Expense Type') {
     tabs.receipts.getRange(1, 15).setValue('Expense Type');
+  }
+  // PDF Link (col 16): Business receipts get a PDF copy in the owner's Drive;
+  // the browser registers the link here after uploading it.
+  if (String(tabs.receipts.getRange(1, 16).getValue()) !== 'PDF Link') {
+    tabs.receipts.getRange(1, 16).setValue('PDF Link');
+  }
+  if (String(tabs.profiles.getRange(1, 5).getValue()) !== 'Company Name') {
+    tabs.profiles.getRange(1, 5).setValue('Company Name');
   }
   if (String(tabs.lineItems.getRange(1, 7).getValue()) !== 'Category') {
     tabs.lineItems.getRange(1, 7).setValue('Category');
@@ -766,8 +775,9 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
     if (!showUploaded && String(r[11] || '') !== 'saved') continue;
     if (q && String(r[4] || '').toLowerCase().indexOf(q) === -1) continue;
     if (cat && String(r[9] || '') !== cat) continue;
-    // Blank legacy rows count as Personal.
-    var rEt = (String(r[14] || '') === 'Reimbursement') ? 'Reimbursement' : 'Personal';
+    // Blank legacy rows count as Personal; legacy 'Reimbursement' reads as Business.
+    var rawEt = String(r[14] || '');
+    var rEt = (rawEt === 'Business' || rawEt === 'Reimbursement') ? 'Business' : 'Personal';
     if (et && rEt !== et) continue;
     if ((from || to) && !rDate) continue;
     if (from && rDate < from) continue;
@@ -836,7 +846,8 @@ function getReceiptDetail(sessionToken, receiptId, forOwner) {
           imageUrl: String(r[10] || ''),
           status: String(r[11] || ''),
           address: String(r[13] || ''),
-          expenseType: (String(r[14] || '') === 'Reimbursement') ? 'Reimbursement' : 'Personal'
+          expenseType: (String(r[14] || '') === 'Business' || String(r[14] || '') === 'Reimbursement') ? 'Business' : 'Personal',
+          pdfUrl: String(r[15] || '')
         };
         break;
       }
@@ -900,8 +911,9 @@ function reportReceipts(sessionToken, dateFrom, dateTo, forOwner, etype) {
     if ((from || to) && !rDate) continue;
     if (from && rDate < from) continue;
     if (to && rDate > to) continue;
-    // Blank legacy rows count as Personal.
-    var rowEt = (String(r[14] || '') === 'Reimbursement') ? 'Reimbursement' : 'Personal';
+    // Blank legacy rows count as Personal; legacy 'Reimbursement' reads as Business.
+    var rawREt = String(r[14] || '');
+    var rowEt = (rawREt === 'Business' || rawREt === 'Reimbursement') ? 'Business' : 'Personal';
     if (rpEt && rowEt !== rpEt) continue;
     var id = String(r[0] || '');
     included[id] = true;
@@ -953,9 +965,9 @@ function deleteReceipt(sessionToken, receiptId) {
   var tabs = ensureReceiptTabs_();
   var sh = tabs.receipts;
   var last = sh.getLastRow();
-  var rowIdx = -1, imageUrl = '';
+  var rowIdx = -1, imageUrl = '', pdfUrl = '';
   if (last > 1) {
-    var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+    var vals = sh.getRange(2, 1, last - 1, 16).getValues();
     for (var i = 0; i < vals.length; i++) {
       if (String(vals[i][0]) === rid) {
         // Ownership gate — the owner can always delete; anyone else needs an
@@ -966,6 +978,7 @@ function deleteReceipt(sessionToken, receiptId) {
         if (delOwner !== delMe && getShareScope_(delOwner, delMe) !== 'edit') break;
         rowIdx = i + 2;
         imageUrl = String(vals[i][10] || '');
+        pdfUrl = String(vals[i][15] || '');
         break;
       }
     }
@@ -988,7 +1001,10 @@ function deleteReceipt(sessionToken, receiptId) {
     catch (tErr) { /* photo already gone or inaccessible — record deletion still succeeded */ }
   }
   rebuildMonthlySummary_(tabs);
-  return { success: true, receiptId: rid, lineItemsDeleted: itemsDeleted, photoTrashed: photoTrashed };
+  // The PDF copy lives in the OWNER'S Drive — the server can't touch it, so
+  // the link is returned for the browser to trash with the user's credential.
+  return { success: true, receiptId: rid, lineItemsDeleted: itemsDeleted,
+    photoTrashed: photoTrashed, pdfUrl: pdfUrl };
 }
 
 /**
@@ -1381,9 +1397,10 @@ function saveReceipt(sessionToken, receiptId, dataJson, force, forOwner) {
   ]]);
   sheet.getRange(rowIdx, 12, 1, 2).setValues([['saved', String(data.raw || '')]]);
   sheet.getRange(rowIdx, 14).setValue(String(data.address || ''));
-  // Expense Type — normalized to exactly 'Personal' or 'Reimbursement'.
+  // Expense Type — normalized to exactly 'Personal' or 'Business'.
+  var etLower = String(data.expenseType || '').toLowerCase();
   sheet.getRange(rowIdx, 15).setValue(
-    (String(data.expenseType || '').toLowerCase() === 'reimbursement') ? 'Reimbursement' : 'Personal');
+    (etLower === 'business' || etLower === 'reimbursement') ? 'Business' : 'Personal');
 
   // Rename the Drive photo to match the new ID.
   if (newId !== rid && imageUrl) {
@@ -1704,14 +1721,61 @@ function getProfile(sessionToken) {
   var sh = ensureReceiptTabs_().profiles;
   var last = sh.getLastRow();
   if (last > 1) {
-    var vals = sh.getRange(2, 1, last - 1, 2).getValues();
+    var vals = sh.getRange(2, 1, last - 1, 5).getValues();
     for (var i = 0; i < vals.length; i++) {
       if (String(vals[i][0] || '').toLowerCase() === me) {
-        return { success: true, folderId: String(vals[i][1] || '') };
+        return { success: true, folderId: String(vals[i][1] || ''), company: String(vals[i][4] || '') };
       }
     }
   }
-  return { success: true, folderId: '' };
+  return { success: true, folderId: '', company: '' };
+}
+
+// Company name for the Business-expense folder tree (<Company>/<Year>/<Month>
+// in the user's own Drive). Stored per user in the Profiles tab.
+function setCompanyName(sessionToken, name) {
+  var user = validateSessionForData(sessionToken, 'setCompanyName');
+  var me = String((user && user.email) || '').toLowerCase();
+  // Folder-name safety: strip characters Drive/exports choke on, cap length.
+  var company = String(name || '').replace(/[\/\\:*?"<>|]/g, ' ').replace(/\s+/g, ' ').trim().substring(0, 60);
+  if (!company) return { success: false, error: 'no_company_name' };
+  var sh = ensureReceiptTabs_().profiles;
+  var last = sh.getLastRow();
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 1).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      if (String(vals[i][0] || '').toLowerCase() === me) {
+        sh.getRange(i + 2, 5).setValue(company);
+        return { success: true, company: company };
+      }
+    }
+  }
+  sh.appendRow([me, '', String((user && user.name) || ''), new Date(), company]);
+  return { success: true, company: company };
+}
+
+// Records the Drive link of a Business receipt's PDF copy (col 16). Owner-only —
+// the PDF lives in the owner's Drive, so only the owner ever registers one.
+function registerReceiptPdf(sessionToken, receiptId, pdfUrl) {
+  var user = validateSessionForData(sessionToken, 'registerReceiptPdf');
+  var me = String((user && user.email) || '').toLowerCase();
+  var rid = String(receiptId || '').trim();
+  var url = String(pdfUrl || '').trim();
+  if (!rid) return { success: false, error: 'no_receipt_id' };
+  if (url && !/^https:\/\/drive\.google\.com\//.test(url)) return { success: false, error: 'bad_pdf_url' };
+  var sh = ensureReceiptTabs_().receipts;
+  var last = sh.getLastRow();
+  if (last > 1) {
+    var vals = sh.getRange(2, 1, last - 1, 3).getValues();
+    for (var i = 0; i < vals.length; i++) {
+      if (String(vals[i][0]) === rid) {
+        if (String(vals[i][2] || '').toLowerCase() !== me) return { success: false, error: 'receipt_not_found' };
+        sh.getRange(i + 2, 16).setValue(url);
+        return { success: true, receiptId: rid };
+      }
+    }
+  }
+  return { success: false, error: 'receipt_not_found' };
 }
 
 function setProfileFolder(sessionToken, folderId) {
@@ -2427,6 +2491,23 @@ function doPost(e) {
       pfResult = { success: false, error: String((pfErr && pfErr.message) || pfErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(pfResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Business-expense support — company name + PDF link registration.
+  if (action === "setCompanyName" || action === "registerReceiptPdf") {
+    var bzResult;
+    try {
+      var bzToken = (e && e.parameter && e.parameter.token) || "";
+      bzResult = (action === "setCompanyName")
+        ? setCompanyName(bzToken, (e && e.parameter && e.parameter.name) || "")
+        : registerReceiptPdf(bzToken,
+            (e && e.parameter && e.parameter.receiptId) || "",
+            (e && e.parameter && e.parameter.pdfUrl) || "");
+    } catch (bzErr) {
+      bzResult = { success: false, error: String((bzErr && bzErr.message) || bzErr) };
+    }
+    return ContentService.createTextOutput(JSON.stringify(bzResult))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -3912,6 +3993,14 @@ function doGet(e) {
         apiResult = completePhotoMigration(apiToken,
           (e && e.parameter && e.parameter.receiptId) || '',
           (e && e.parameter && e.parameter.newUrl) || '');
+      } else if (apiOp === 'setCompanyName') {
+        // PROJECT: Business-expense company name (GET fallback)
+        apiResult = setCompanyName(apiToken, (e && e.parameter && e.parameter.name) || '');
+      } else if (apiOp === 'registerReceiptPdf') {
+        // PROJECT: Business-expense PDF link registration (GET fallback)
+        apiResult = registerReceiptPdf(apiToken,
+          (e && e.parameter && e.parameter.receiptId) || '',
+          (e && e.parameter && e.parameter.pdfUrl) || '');
       } else if (apiOp === 'setProfileFolder') {
         // PROJECT: profile folder registration (GET fallback)
         apiResult = setProfileFolder(apiToken, (e && e.parameter && e.parameter.folderId) || '');
