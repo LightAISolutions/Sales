@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 30/50`
+`Sections: 31/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.31w] — 2026-08-08 09:31:15 PM EST — v02.01r
+
+### Added
+- New 🏠 Personal | 💼 Reimbursement toggle above the Scan button — pick which ledger your next scan belongs to; your choice is remembered on each device
+- The review screen shows the expense type and lets you flip an individual receipt before saving
+- Reimbursement receipts show a 💼 badge in History, and both History and Reports gain an expense-type filter
+- Spreadsheet exports include a new Expense Type column and follow the expense-type filter
+- Everything above is fully translated in 简体中文 mode
 
 ## [v01.30w] — 2026-08-05 10:26:18 PM EST — v01.82r
 

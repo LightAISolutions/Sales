@@ -9,6 +9,35 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 
 *(No changes yet)*
 
+## [v02.01r] — 2026-08-08 09:31:15 PM EST
+
+> **Prompt:** "1. One company. 2. Lazy folder creation. 3. CSV. 4. English folder/file names approved."
+
+### Added
+- **Phase R1 of the reimbursement plan — expense type at the point of scanning** (approved with: one company, lazy folders, CSV, English names — those choices land in Phases R2/R3)
+
+#### `Receipts.html` — v01.31w
+
+##### Added
+- 🏠 Personal | 💼 Reimbursement toggle (`.etbtn`) on the scan panel above the Scan button — sticky per device via `localStorage` `rcpt_expense_mode`; `_expenseMode`/`setExpenseMode()` in the PROJECT block
+- `rr-etype` select in the review grid (pairs with Total) — new scans inherit the scan-panel mode, editing an existing receipt shows its stored type; `collectReview()` sends `expenseType`
+- `rh-etype` filter in the History filter drawer + 💼 `rh-et-tag` badge on reimbursement rows; filter participates in the "n active" hint, Clear, and reload-on-change
+- `rp-etype` filter in Reports (client-side, consistent with the other instant Reports filters) — hint, Clear, and re-render wired
+- `etype` parameter sent on `listReceipts`, `exportReceipts`, and `exportPreview` calls; 中文 translations for the toggle, the three dropdowns, and the "Expense" label
+
+#### `Receipts.gs` — v01.20g
+
+##### Added
+- "Expense Type" column 15 on the Receipts tab (header array + in-place upgrade; blank legacy rows read as Personal everywhere — no backfill)
+- `saveReceipt` writes the normalized type; `listReceipts`/`reportReceipts`/`getReceiptDetail` return `expenseType`; `listReceipts` + `reportReceipts` accept an `etype` filter (applied before the row cap)
+- `etype` threaded through `gatherExportData_` → `exportReceipts`/`previewExportPivot`; export's Receipts sheet gains an "Expense Type" column; all six POST/GET transport routes pass `etype`
+
+### Changed
+- CHANGELOG archive rotation (first ever): section count hit 101 — moved the oldest date group (2026-07-13, `v01.01r`) to `CHANGELOG-archive.md` with SHA enrichment
+
+### Verified
+- `node --check` on the `.gs` and all inline scripts; Playwright at 390×844 — toggle state + localStorage persistence, filter options, 💼 badge, Expense select in the review grid, no horizontal scroll, zero page errors
+
 ## [v02.00r] — 2026-08-08 09:09:06 PM EST
 
 > **Prompt:** "Regarding the centralization discussion, go with the workflow mirror, walk me through how to create the PAT, and use your proposed library layout."
@@ -1588,20 +1617,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 ### Fixed
 - Setup script defect: the GAS Projects table row was inserted into the coding-guidelines pointer table in `.claude/rules/gas-scripts.md` — moved to the actual GAS Projects table
 - Added the missing "Open in mermaid.live" link to `MasterACL-diagram.md` and regenerated the REPO-ARCHITECTURE.md Flowchart mermaid.live URL to match the updated diagram code (both verified by decompression)
-
-## [v01.01r] — 2026-07-13 08:28:42 PM EST
-
-> **Prompt:** "continue with your recommendation"
-
-### Changed
-- Initialized repository identity: internal links, branding URLs, and live-site references updated from the template's `lightaisolutions` repo name to `Sales` across README.md, CITATION.cff, issue template config, REPO-ARCHITECTURE.md, index.html, sitemap.xml, and robots.txt (`bash scripts/init-repo.sh LightAISolutions Sales ShadowAISolutions` + manual follow-ups; developer branding `ShadowAISolutions` preserved)
-- GAS Project Creator page defaults now point to this repository — GitHub Repo field prefills `Sales` and the three logo URL fields prefill `https://lightaisolutions.github.io/Sales/images/logo-placeholder.svg` (v01.01w)
-- Regenerated `repository-information/readme-qr-code.png` to encode this repository's URL (`https://github.com/LightAISolutions/Sales`)
-- Updated CLAUDE.md Template Variables table: `YOUR_REPO_NAME` → `Sales`
-
-### Fixed
-- Corrected GitHub Pages hostnames mangled by the init script's global replace — the template's org and repo share the same lowercase string, so `lightaisolutions.github.io` became `Sales.github.io` in CITATION.cff, README.md, and REPO-ARCHITECTURE.md; restored to `lightaisolutions.github.io` (paths correctly remain `/Sales/`)
-- Removed the duplicate `main` push-trigger entry the init script inserted into `.github/workflows/auto-merge-claude.yml` (this copy already had `main` in the trigger)
-- Regenerated the REPO-ARCHITECTURE.md Flowchart mermaid.live URL to match the updated diagram code (verified decompression)
 
 Developed by: ShadowAISolutions

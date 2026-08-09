@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 19/50`
+`Sections: 20/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.20g] — 2026-08-08 09:31:15 PM EST — v02.01r
+
+### Added
+- Every saved receipt now records whether it's a Personal or Reimbursement expense — history, reports, and spreadsheet exports can all filter by it, and older receipts count as Personal automatically
 
 ## [v01.19g] — 2026-08-08 08:11:03 PM EST — v01.99r
 

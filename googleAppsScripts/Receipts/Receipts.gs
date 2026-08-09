@@ -1,4 +1,4 @@
-var VERSION = "v01.19g";
+var VERSION = "v01.20g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -509,7 +509,7 @@ function ensureReceiptTabs_() {
     receipts: ensure(RECEIPTS_TAB, [
       "Receipt ID", "Uploaded At", "Uploaded By", "Receipt Date", "Merchant",
       "Currency", "Subtotal", "Tax", "Total", "Category", "Image Link",
-      "Status", "Raw Extraction", "Store Address"
+      "Status", "Raw Extraction", "Store Address", "Expense Type"
     ]),
     lineItems: ensure(LINEITEMS_TAB, [
       "Receipt ID", "Line #", "Description", "Qty", "Unit Price", "Amount", "Category"
@@ -524,6 +524,11 @@ function ensureReceiptTabs_() {
   // In-place header upgrades for sheets created before these columns existed.
   if (String(tabs.receipts.getRange(1, 14).getValue()) !== 'Store Address') {
     tabs.receipts.getRange(1, 14).setValue('Store Address');
+  }
+  // Expense Type (col 15): Personal | Reimbursement — blank legacy rows are
+  // treated as Personal everywhere, so no data backfill is needed.
+  if (String(tabs.receipts.getRange(1, 15).getValue()) !== 'Expense Type') {
+    tabs.receipts.getRange(1, 15).setValue('Expense Type');
   }
   if (String(tabs.lineItems.getRange(1, 7).getValue()) !== 'Category') {
     tabs.lineItems.getRange(1, 7).setValue('Category');
@@ -728,7 +733,7 @@ function geminiExtractFromBase64_(dataB64, mime) {
  * Receipt Date may come back from Sheets as a Date object or the original
  * string — both are normalized.
  */
-function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded, sortBy, category, forOwner) {
+function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUploaded, sortBy, category, forOwner, etype) {
   var user = validateSessionForData(sessionToken, 'listReceipts');
   migrateReceiptIds_(); // one-time data migration; no-op after first run
   backfillReceiptOwners_(); // one-time owner backfill; no-op after first run
@@ -738,12 +743,13 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
   var sh = ensureReceiptTabs_().receipts;
   var last = sh.getLastRow();
   if (last < 2) return { success: true, receipts: [] };
-  var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+  var vals = sh.getRange(2, 1, last - 1, 15).getValues();
   var q = String(query || '').toLowerCase().trim();
   var from = String(dateFrom || '').trim();
   var to = String(dateTo || '').trim();
   var showUploaded = !!(includeUploaded && String(includeUploaded) !== '0' && String(includeUploaded) !== 'false');
   var cat = String(category || '').trim();
+  var et = String(etype || '').trim(); // '' | 'Personal' | 'Reimbursement'
   var cap = Math.max(1, Math.min(parseInt(maxRows, 10) || 100, 500));
   var out = [];
   for (var i = vals.length - 1; i >= 0 && out.length < cap; i--) {
@@ -760,11 +766,15 @@ function listReceipts(sessionToken, query, dateFrom, dateTo, maxRows, includeUpl
     if (!showUploaded && String(r[11] || '') !== 'saved') continue;
     if (q && String(r[4] || '').toLowerCase().indexOf(q) === -1) continue;
     if (cat && String(r[9] || '') !== cat) continue;
+    // Blank legacy rows count as Personal.
+    var rEt = (String(r[14] || '') === 'Reimbursement') ? 'Reimbursement' : 'Personal';
+    if (et && rEt !== et) continue;
     if ((from || to) && !rDate) continue;
     if (from && rDate < from) continue;
     if (to && rDate > to) continue;
     out.push({
       owner: rowOwner,
+      expenseType: rEt,
       canEdit: rowScope === 'own' || rowScope === 'edit',
       id: String(r[0] || ''),
       uploadedAt: (r[1] instanceof Date) ? r[1].toISOString() : String(r[1] || ''),
@@ -805,7 +815,7 @@ function getReceiptDetail(sessionToken, receiptId, forOwner) {
   var last = sh.getLastRow();
   var receipt = null;
   if (last > 1) {
-    var vals = sh.getRange(2, 1, last - 1, 14).getValues();
+    var vals = sh.getRange(2, 1, last - 1, 15).getValues();
     for (var i = 0; i < vals.length; i++) {
       if (String(vals[i][0]) === rid) {
         // Ownership gate — respond as not-found for other users' receipts so
@@ -825,7 +835,8 @@ function getReceiptDetail(sessionToken, receiptId, forOwner) {
           category: String(r[9] || ''),
           imageUrl: String(r[10] || ''),
           status: String(r[11] || ''),
-          address: String(r[13] || '')
+          address: String(r[13] || ''),
+          expenseType: (String(r[14] || '') === 'Reimbursement') ? 'Reimbursement' : 'Personal'
         };
         break;
       }
@@ -863,7 +874,7 @@ function getReceiptDetail(sessionToken, receiptId, forOwner) {
  * change is instant (no server round-trip per keystroke). Capped at 2000
  * receipts — far above personal-use volume, guards the JSON payload size.
  */
-function reportReceipts(sessionToken, dateFrom, dateTo, forOwner) {
+function reportReceipts(sessionToken, dateFrom, dateTo, forOwner, etype) {
   var user = validateSessionForData(sessionToken, 'reportReceipts');
   backfillReceiptOwners_(); // one-time owner backfill; no-op after first run
   var setRes = resolveOwnerSet_(user, forOwner);
@@ -873,9 +884,10 @@ function reportReceipts(sessionToken, dateFrom, dateTo, forOwner) {
   var sh = tabs.receipts;
   var last = sh.getLastRow();
   if (last < 2) return { success: true, receipts: [], lineItems: [] };
-  var vals = sh.getRange(2, 1, last - 1, 12).getValues();
+  var vals = sh.getRange(2, 1, last - 1, 15).getValues();
   var from = String(dateFrom || '').trim();
   var to = String(dateTo || '').trim();
+  var rpEt = String(etype || '').trim(); // '' | 'Personal' | 'Reimbursement'
   var receipts = [];
   var included = {};
   for (var i = 0; i < vals.length && receipts.length < 2000; i++) {
@@ -888,10 +900,14 @@ function reportReceipts(sessionToken, dateFrom, dateTo, forOwner) {
     if ((from || to) && !rDate) continue;
     if (from && rDate < from) continue;
     if (to && rDate > to) continue;
+    // Blank legacy rows count as Personal.
+    var rowEt = (String(r[14] || '') === 'Reimbursement') ? 'Reimbursement' : 'Personal';
+    if (rpEt && rowEt !== rpEt) continue;
     var id = String(r[0] || '');
     included[id] = true;
     receipts.push({
       owner: rowOwner,
+      expenseType: rowEt,
       id: id,
       date: rDate,
       merchant: String(r[4] || ''),
@@ -1065,11 +1081,11 @@ function buildReceiptPivot_(receipts, liByReceipt, pivotCfg) {
  * owner set, lists the matching receipts, and joins their line items so the
  * preview and the real export always see identical data.
  */
-function gatherExportData_(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner) {
+function gatherExportData_(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, etype) {
   var user = validateSessionForData(sessionToken, 'exportReceipts');
   var setRes = resolveOwnerSet_(user, forOwner); // validates single-owner grants; '*' always resolves
   if (setRes.error) return { error: setRes.error };
-  var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded, '', category, forOwner);
+  var listed = listReceipts(sessionToken, query, dateFrom, dateTo, 500, includeUploaded, '', category, forOwner, etype);
   if (!listed.success) return { error: listed.error || 'list_failed' };
   var receipts = listed.receipts || [];
   if (!receipts.length) return { error: 'no_receipts_match' };
@@ -1111,8 +1127,8 @@ function parsePivotCfg_(pivotJson) {
  * which raw sheets (Receipts / LineItems / Monthly Summary) are included.
  * No config (legacy callers) → the full three-sheet workbook, no Pivot.
  */
-function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, pivotJson) {
-  var gathered = gatherExportData_(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner);
+function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, pivotJson, etype) {
+  var gathered = gatherExportData_(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, etype);
   if (gathered.error) return { success: false, error: gathered.error };
   var setRes = gathered.setRes, receipts = gathered.receipts, src = gathered.src;
   var liByReceipt = gathered.liByReceipt, itemCount = gathered.itemCount;
@@ -1153,10 +1169,10 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
     if (wantReceipts) {
     var rSheet = nextSheet_('Receipts');
     var rRows = [['Receipt ID', 'Owner', 'Date', 'Merchant', 'Store Address', 'Currency',
-      'Subtotal', 'Tax', 'Total', 'Category', 'Status', 'Image Link', 'Uploaded At']];
+      'Subtotal', 'Tax', 'Total', 'Category', 'Expense Type', 'Status', 'Image Link', 'Uploaded At']];
     receipts.forEach(function(rc) {
       rRows.push([rc.id, rc.owner || '', rc.date, rc.merchant, '', rc.currency,
-        '', '', '', rc.category, rc.status, rc.imageUrl, rc.uploadedAt]);
+        '', '', '', rc.category, rc.expenseType || 'Personal', rc.status, rc.imageUrl, rc.uploadedAt]);
     });
     // Subtotal/Tax/Total/Address pulled from the sheet in one read.
     var byId = {};
@@ -1263,10 +1279,10 @@ function exportReceipts(sessionToken, query, dateFrom, dateTo, includeUploaded, 
  * transport (header and totals row/column always kept; the real export is
  * never truncated).
  */
-function previewExportPivot(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, pivotJson) {
+function previewExportPivot(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, pivotJson, etype) {
   var pivotCfg = parsePivotCfg_(pivotJson);
   if (!pivotCfg) return { success: false, error: 'no_pivot_config' };
-  var gathered = gatherExportData_(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner);
+  var gathered = gatherExportData_(sessionToken, query, dateFrom, dateTo, includeUploaded, category, forOwner, etype);
   if (gathered.error) return { success: false, error: gathered.error };
   var grid = buildReceiptPivot_(gathered.receipts, gathered.liByReceipt, pivotCfg);
   var MAX_ROWS = 60, MAX_COLS = 13; // data rows / data columns sent to the client
@@ -1365,6 +1381,9 @@ function saveReceipt(sessionToken, receiptId, dataJson, force, forOwner) {
   ]]);
   sheet.getRange(rowIdx, 12, 1, 2).setValues([['saved', String(data.raw || '')]]);
   sheet.getRange(rowIdx, 14).setValue(String(data.address || ''));
+  // Expense Type — normalized to exactly 'Personal' or 'Reimbursement'.
+  sheet.getRange(rowIdx, 15).setValue(
+    (String(data.expenseType || '').toLowerCase() === 'reimbursement') ? 'Reimbursement' : 'Personal');
 
   // Rename the Drive photo to match the new ID.
   if (newId !== rid && imageUrl) {
@@ -2442,7 +2461,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.uploaded) || "",
         (e && e.parameter && e.parameter.sort) || "",
         (e && e.parameter && e.parameter.cat) || "",
-        (e && e.parameter && e.parameter.owner) || "");
+        (e && e.parameter && e.parameter.owner) || "",
+        (e && e.parameter && e.parameter.etype) || "");
     } catch (lrErr) {
       lrResult = { success: false, error: String((lrErr && lrErr.message) || lrErr) };
     }
@@ -2492,7 +2512,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.uploaded) || "",
         (e && e.parameter && e.parameter.cat) || "",
         (e && e.parameter && e.parameter.owner) || "",
-        (e && e.parameter && e.parameter.pivot) || "");
+        (e && e.parameter && e.parameter.pivot) || "",
+        (e && e.parameter && e.parameter.etype) || "");
     } catch (xvErr) {
       xvResult = { success: false, error: String((xvErr && xvErr.message) || xvErr) };
     }
@@ -2512,7 +2533,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.uploaded) || "",
         (e && e.parameter && e.parameter.cat) || "",
         (e && e.parameter && e.parameter.owner) || "",
-        (e && e.parameter && e.parameter.pivot) || "");
+        (e && e.parameter && e.parameter.pivot) || "",
+        (e && e.parameter && e.parameter.etype) || "");
     } catch (xpErr) {
       xpResult = { success: false, error: String((xpErr && xpErr.message) || xpErr) };
     }
@@ -2528,7 +2550,8 @@ function doPost(e) {
         (e && e.parameter && e.parameter.token) || "",
         (e && e.parameter && e.parameter.from) || "",
         (e && e.parameter && e.parameter.to) || "",
-        (e && e.parameter && e.parameter.owner) || "");
+        (e && e.parameter && e.parameter.owner) || "",
+        (e && e.parameter && e.parameter.etype) || "");
     } catch (rpErr) {
       rpResult = { success: false, error: String((rpErr && rpErr.message) || rpErr) };
     }
@@ -3832,7 +3855,8 @@ function doGet(e) {
           (e && e.parameter && e.parameter.uploaded) || '',
           (e && e.parameter && e.parameter.sort) || '',
           (e && e.parameter && e.parameter.cat) || '',
-          (e && e.parameter && e.parameter.owner) || '');
+          (e && e.parameter && e.parameter.owner) || '',
+          (e && e.parameter && e.parameter.etype) || '');
       } else if (apiOp === 'getReceiptDetail') {
         // PROJECT: Receipts history detail (GET fallback)
         apiResult = getReceiptDetail(apiToken,
@@ -3850,7 +3874,8 @@ function doGet(e) {
           (e && e.parameter && e.parameter.uploaded) || '',
           (e && e.parameter && e.parameter.cat) || '',
           (e && e.parameter && e.parameter.owner) || '',
-          (e && e.parameter && e.parameter.pivot) || '');
+          (e && e.parameter && e.parameter.pivot) || '',
+          (e && e.parameter && e.parameter.etype) || '');
       } else if (apiOp === 'exportReceipts') {
         // PROJECT: Receipts .xlsx export (GET fallback)
         apiResult = exportReceipts(apiToken,
@@ -3860,13 +3885,15 @@ function doGet(e) {
           (e && e.parameter && e.parameter.uploaded) || '',
           (e && e.parameter && e.parameter.cat) || '',
           (e && e.parameter && e.parameter.owner) || '',
-          (e && e.parameter && e.parameter.pivot) || '');
+          (e && e.parameter && e.parameter.pivot) || '',
+          (e && e.parameter && e.parameter.etype) || '');
       } else if (apiOp === 'reportReceipts') {
         // PROJECT: Receipts reports dataset (GET fallback)
         apiResult = reportReceipts(apiToken,
           (e && e.parameter && e.parameter.from) || '',
           (e && e.parameter && e.parameter.to) || '',
-          (e && e.parameter && e.parameter.owner) || '');
+          (e && e.parameter && e.parameter.owner) || '',
+          (e && e.parameter && e.parameter.etype) || '');
       } else if (apiOp === 'uploadReceipt') {
         // PROJECT: own-Drive row registration (GET fallback — link only, no bytes)
         apiResult = uploadReceipt(apiToken, '', '', '',

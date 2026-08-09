@@ -12,7 +12,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.30w">
+  <meta name="build-version" content="v01.31w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -414,6 +414,13 @@
     .rbtn:disabled { opacity: 0.45; cursor: default; }
     .rsp-row { display: flex; gap: 11px; align-items: center; }
     .rsp-row .rbtn { flex: 1 1 0; padding: 12px 8px; font-size: 14.5px; }
+    /* Expense-type toggle — which ledger the next scan belongs to */
+    .etbtn {
+      flex: 1 1 0; padding: 9px 6px; font-size: 13.5px; cursor: pointer;
+      border: 1px solid #c4c9d0; border-radius: 8px; background: #f6f7f9; color: #667;
+    }
+    .etbtn.et-on { background: #eef4fc; border-color: #4a90d9; color: #2c5d94; font-weight: 600; }
+    .rh-et-tag { flex: 0 0 auto; margin-right: 2px; }
     .rsp-status-row { display: flex; gap: 10px; align-items: center; justify-content: center; min-height: 20px; }
     #receipt-scan-status {
       font-size: 12.5px; color: var(--rc-muted); font-style: italic; text-align: center;
@@ -592,7 +599,7 @@
       gap: 3px; font-size: 12px; color: var(--rc-muted);
     }
     .rh-field input { width: 100%; }
-    #rh-cat { flex: 1 1 100%; }
+    #rh-cat, #rh-etype { flex: 1 1 100%; }
     #rh-go {
       padding: 7px 14px; font-size: 14px; border: 1.5px solid var(--rc-ink); border-radius: 6px;
       background: var(--rc-ink); color: var(--rc-paper); cursor: pointer; font-family: var(--rc-serif);
@@ -730,7 +737,7 @@
       background: #fffdf8; color: inherit;
     }
     #rp-merchant { flex: 1 1 140px; min-width: 0; }
-    #rp-cat, #rp-subcat { flex: 1 1 0; min-width: 0; }
+    #rp-cat, #rp-subcat, #rp-etype { flex: 1 1 0; min-width: 0; }
     .rp-field {
       flex: 1 1 0; min-width: 0; display: flex; flex-direction: column;
       gap: 3px; font-size: 12px; color: var(--rc-muted);
@@ -1009,6 +1016,12 @@
       <div class="rm-dash"></div>
       <div id="rm-rows"></div>
     </div>
+    <!-- Expense-type toggle — chosen before scanning; sticky per device.
+         The review screen can still flip an individual receipt before save. -->
+    <div class="rsp-row">
+      <button id="etype-personal" class="etbtn" type="button">🏠&ensp;Personal</button>
+      <button id="etype-reimb" class="etbtn" type="button">💼&ensp;Reimbursement</button>
+    </div>
     <button id="receipt-scan-btn" class="rbtn rbtn-primary" type="button">📷&ensp;Scan receipt</button>
     <div class="rsp-row">
       <button id="receipt-upload-btn" class="rbtn" type="button">🖼️&ensp;Upload</button>
@@ -1080,6 +1093,13 @@
         <select id="rh-cat" title="Filter by category"></select>
       </div>
       <div class="rh-filters rh-cat-row">
+        <select id="rh-etype" title="Filter by expense type">
+          <option value="">All expense types</option>
+          <option value="Personal">🏠 Personal</option>
+          <option value="Reimbursement">💼 Reimbursement</option>
+        </select>
+      </div>
+      <div class="rh-filters rh-cat-row">
         <button id="rh-clear" type="button">Clear</button>
       </div>
     </div>
@@ -1113,6 +1133,13 @@
         <select id="rp-subcat" title="Minor category (line items)" style="display:none"></select>
       </div>
       <div class="rp-filters">
+        <select id="rp-etype" title="Expense type">
+          <option value="">All expense types</option>
+          <option value="Personal">🏠 Personal</option>
+          <option value="Reimbursement">💼 Reimbursement</option>
+        </select>
+      </div>
+      <div class="rp-filters">
         <label class="rp-field"><span>Start Date</span><input id="rp-from" type="date"></label>
         <label class="rp-field"><span>End Date</span><input id="rp-to" type="date"></label>
       </div>
@@ -1142,6 +1169,10 @@
       <label>Subtotal<input id="rr-subtotal" type="number" step="0.01" inputmode="decimal"></label>
       <label>Tax<input id="rr-tax" type="number" step="0.01" inputmode="decimal"></label>
       <label>Total<input id="rr-total" type="number" step="0.01" inputmode="decimal"></label>
+      <label>Expense<select id="rr-etype">
+        <option value="Personal">🏠 Personal</option>
+        <option value="Reimbursement">💼 Reimbursement</option>
+      </select></label>
     </div>
     <div class="rr-items">
       <div class="rr-row rr-head"><span>Item</span><span>Qty</span><span>Unit</span><span>Amount</span><span></span></div>
@@ -5126,6 +5157,21 @@
         });
       });
 
+      // Expense-type mode — which ledger the next scan belongs to. Sticky per
+      // device; the review screen can still flip an individual receipt.
+      var _expenseMode = (localStorage.getItem('rcpt_expense_mode') === 'Reimbursement') ? 'Reimbursement' : 'Personal';
+      function setExpenseMode(m) {
+        _expenseMode = (m === 'Reimbursement') ? 'Reimbursement' : 'Personal';
+        try { localStorage.setItem('rcpt_expense_mode', _expenseMode); } catch (lsErr) { /* private mode */ }
+        var pB = document.getElementById('etype-personal');
+        var rB = document.getElementById('etype-reimb');
+        if (pB) pB.classList.toggle('et-on', _expenseMode === 'Personal');
+        if (rB) rB.classList.toggle('et-on', _expenseMode === 'Reimbursement');
+      }
+      document.getElementById('etype-personal').addEventListener('click', function() { setExpenseMode('Personal'); });
+      document.getElementById('etype-reimb').addEventListener('click', function() { setExpenseMode('Reimbursement'); });
+      setExpenseMode(_expenseMode);
+
       function openReviewCard(receiptId, data, note) {
         currentReceiptId = receiptId;
         currentRaw = data ? JSON.stringify(data) : '';
@@ -5138,6 +5184,10 @@
         document.getElementById('rr-date').value = /^\d{4}-\d{2}-\d{2}$/.test(d.date || '') ? d.date : '';
         document.getElementById('rr-currency').value = d.currency || '';
         document.getElementById('rr-category').value = (CATEGORIES.indexOf(d.category) >= 0) ? d.category : '';
+        // Stored type wins when editing an existing receipt; new scans inherit
+        // the scan panel's Personal/Reimbursement mode.
+        document.getElementById('rr-etype').value =
+          ((d.expenseType || _expenseMode) === 'Reimbursement') ? 'Reimbursement' : 'Personal';
         document.getElementById('rr-subtotal').value = (d.subtotal || d.subtotal === 0) ? d.subtotal : '';
         document.getElementById('rr-tax').value = (d.tax || d.tax === 0) ? d.tax : '';
         document.getElementById('rr-total').value = (d.total || d.total === 0) ? d.total : '';
@@ -5178,6 +5228,7 @@
         return {
           merchant: (document.getElementById('rr-merchant').value || '').trim(),
           address: (document.getElementById('rr-address').value || '').trim(),
+          expenseType: document.getElementById('rr-etype').value || 'Personal',
           date: document.getElementById('rr-date').value || '',
           currency: (document.getElementById('rr-currency').value || '').trim().toUpperCase(),
           category: document.getElementById('rr-category').value || '',
@@ -5764,6 +5815,7 @@
           from: document.getElementById('rh-from').value || '',
           to: document.getElementById('rh-to').value || '',
           cat: document.getElementById('rh-cat').value || '',
+          etype: document.getElementById('rh-etype').value || '',
           max: '100',
           sort: document.getElementById('rh-sort-date').checked ? 'date' : '',
           owner: rhOwner()
@@ -5784,7 +5836,10 @@
             // Combined view: tag each row with whose scan it is (name part only)
             var ownTag = (rhOwner() === '*' && rec.owner)
               ? '<span class="rh-owner-tag">' + esc(String(rec.owner).split('@')[0]) + '</span>' : '';
+            var etTag = (rec.expenseType === 'Reimbursement')
+              ? '<span class="rh-et-tag" title="Reimbursement">💼</span>' : '';
             row.innerHTML = '<span class="rh-date">' + esc(rec.date || '—') + '</span>'
+              + etTag
               + '<span class="rh-merchant">' + esc(rec.merchant || '(no merchant)') + '</span>'
               + ownTag
               + '<span class="rh-total">' + fmtMoney(rec.total, rec.currency) + '</span>';
@@ -5887,6 +5942,7 @@
       });
       document.getElementById('rh-sort-date').addEventListener('change', loadHistory);
       document.getElementById('rh-cat').addEventListener('change', loadHistory);
+      document.getElementById('rh-etype').addEventListener('change', loadHistory);
       document.getElementById('rh-filter-head').addEventListener('click', function(ev) {
         // The Export button shares this row — its clicks must not toggle the drawer
         if (ev.target && ev.target.closest && ev.target.closest('#rh-export')) return;
@@ -5903,14 +5959,16 @@
         if (document.getElementById('rh-from').value) n++;
         if (document.getElementById('rh-to').value) n++;
         if (document.getElementById('rh-cat').value) n++;
+        if (document.getElementById('rh-etype').value) n++;
         document.getElementById('rh-filter-hint').textContent = n ? (_zhOn() ? n + ' 项生效' : n + ' active') : '';
       }
       ['rh-search', 'rh-from', 'rh-to'].forEach(function(id) {
         document.getElementById(id).addEventListener('input', rhFilterHint);
       });
       document.getElementById('rh-cat').addEventListener('change', rhFilterHint);
+      document.getElementById('rh-etype').addEventListener('change', rhFilterHint);
       document.getElementById('rh-clear').addEventListener('click', function() {
-        ['rh-search', 'rh-from', 'rh-to', 'rh-cat'].forEach(function(id) {
+        ['rh-search', 'rh-from', 'rh-to', 'rh-cat', 'rh-etype'].forEach(function(id) {
           document.getElementById(id).value = '';
         });
         rhFilterHint();
@@ -6167,6 +6225,7 @@
         if (document.getElementById('rp-to').value) n++;
         if (document.getElementById('rp-min').value) n++;
         if (document.getElementById('rp-max').value) n++;
+        if (document.getElementById('rp-etype').value) n++;
         document.getElementById('rp-filter-hint').textContent = n ? (_zhOn() ? n + ' 项生效' : n + ' active') : '';
       }
 
@@ -6183,10 +6242,12 @@
         var to = document.getElementById('rp-to').value || '';
         var minV = parseFloat(document.getElementById('rp-min').value);
         var maxV = parseFloat(document.getElementById('rp-max').value);
+        var rpEt = document.getElementById('rp-etype').value || '';
 
         var receipts = rpData.receipts.filter(function(r) {
           if (q && (r.merchant || '').toLowerCase().indexOf(q) === -1) return false;
           if (cat && r.category !== cat) return false;
+          if (rpEt && (r.expenseType || 'Personal') !== rpEt) return false;
           if ((from || to) && !r.date) return false;
           if (from && r.date < from) return false;
           if (to && r.date > to) return false;
@@ -6376,7 +6437,7 @@
       });
       document.getElementById('rp-circle').addEventListener('change', renderReport);
       document.getElementById('rp-clear').addEventListener('click', function() {
-        ['rp-merchant', 'rp-from', 'rp-to', 'rp-min', 'rp-max', 'rp-subcat'].forEach(function(id) {
+        ['rp-merchant', 'rp-from', 'rp-to', 'rp-min', 'rp-max', 'rp-subcat', 'rp-etype'].forEach(function(id) {
           document.getElementById(id).value = '';
         });
         var cat = document.getElementById('rp-cat');
@@ -6405,7 +6466,7 @@
       ['rp-merchant', 'rp-min', 'rp-max'].forEach(function(id) {
         document.getElementById(id).addEventListener('input', renderReport);
       });
-      ['rp-cat', 'rp-subcat', 'rp-from', 'rp-to'].forEach(function(id) {
+      ['rp-cat', 'rp-subcat', 'rp-from', 'rp-to', 'rp-etype'].forEach(function(id) {
         document.getElementById(id).addEventListener('change', renderReport);
       });
       // The subcategory dropdown appears only once a category is chosen, and
@@ -6509,6 +6570,7 @@
         'Top merchants': '热门商家', '🧾 Line items': '🧾 明细项',
         'Total spend': '总支出', 'Receipts': '收据数', 'Line items': '明细项', 'Average': '平均',
         'Start Date': '开始日期', 'End Date': '结束日期', 'Min total': '最低总额', 'Max total': '最高总额',
+        'Expense': '费用类型',
         'Viewing': '查看', 'My receipts': '我的收据', 'Combined (mine + shared)': '合并（我的+共享）',
         ' (can edit)': '（可编辑）', ' (view only)': '（仅查看）',
         'All categories': '所有类别', 'All subcategories': '所有子类别',
@@ -6631,6 +6693,8 @@
         ['#rr-retry', 'text', 'Retry extraction', '重试识别'],
         ['#rr-add-item', 'text', '+ Add item', '+ 添加商品'],
         ['#receipt-review-card h3', 'first', 'Review receipt ', '核对收据 '],
+        ['#etype-personal', 'text', '🏠 Personal', '🏠 个人'],
+        ['#etype-reimb', 'text', '💼 Reimbursement', '💼 报销'],
         ['#rh-search', 'ph', 'Search merchant…', '搜索商家…'],
         ['#rp-merchant', 'ph', 'Filter merchant…', '筛选商家…'],
         ['#sc-email', 'ph', 'their.email@gmail.com', '对方的邮箱@gmail.com'],
@@ -6684,6 +6748,13 @@
         });
         document.querySelectorAll('.rr-cat option[value=""]').forEach(function(op) {
           op.textContent = zh ? '子类别 —' : 'Subcategory —';
+        });
+        // Expense-type dropdowns — fixed three-value sets in History, Reports,
+        // and the review screen; option.value keeps the stored English value.
+        document.querySelectorAll('#rh-etype option, #rp-etype option, #rr-etype option').forEach(function(op) {
+          if (op.value === '') op.textContent = zh ? '所有费用类型' : 'All expense types';
+          else if (op.value === 'Personal') op.textContent = zh ? '🏠 个人' : '🏠 Personal';
+          else if (op.value === 'Reimbursement') op.textContent = zh ? '💼 报销' : '💼 Reimbursement';
         });
         var langBtn = document.getElementById('rsp-lang');
         if (langBtn) langBtn.textContent = zh ? '语言 · English' : 'Language · 中文';
@@ -7077,6 +7148,7 @@
           from: document.getElementById('rh-from').value || '',
           to: document.getElementById('rh-to').value || '',
           cat: document.getElementById('rh-cat').value || '',
+          etype: document.getElementById('rh-etype').value || '',
           owner: rhOwner(),
           pivot: JSON.stringify(_rxCfg)
         }).then(function(res) {
@@ -7160,6 +7232,7 @@
           from: document.getElementById('rh-from').value || '',
           to: document.getElementById('rh-to').value || '',
           cat: document.getElementById('rh-cat').value || '',
+          etype: document.getElementById('rh-etype').value || '',
           owner: rhOwner(),
           pivot: pivotJson || ''
         }).then(function(res) {
