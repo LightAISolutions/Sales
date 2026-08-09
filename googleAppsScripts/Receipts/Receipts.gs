@@ -1,4 +1,4 @@
-var VERSION = "v01.18g";
+var VERSION = "v01.19g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -316,6 +316,83 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 // script account; shared to the developer's personal account for viewing).
 // Mirrored in Receipts.config.json — keep both in sync.
 var DRIVE_FOLDER_ID = "1DHfXwzo0qXI_2H0Q2dDLKGn7EOtguI0A";
+
+// ── OWNER-RUN DIAGNOSTIC — sign-in access check ──────────────────────
+// Run diagnoseAclAccess from the Apps Script editor (check the execution
+// log) when a user gets "not_authorized" at sign-in even though the Access
+// tab looks correct. It executes the exact lookup the sign-in flow uses and
+// logs every step: which spreadsheet file the code actually reads (name +
+// URL — catches editing a different file than the code reads), the tab, the
+// header row with duplicate page-column detection (the code uses the FIRST
+// matching column; a ticked duplicate is ignored), the user row's exact
+// cell contents with character codes (catches invisible characters and
+// near-miss addresses), the cached verdict, and a fresh verdict from the
+// real checkSpreadsheetAccess after clearing the access cache.
+var DIAG_EMAIL = 'jonyang92@gmail.com'; // change to diagnose another account
+
+function diagnoseAclAccess() {
+  var email = String(DIAG_EMAIL).trim().toLowerCase();
+  Logger.log('== ACL diagnosis for: ' + email + ' ==');
+  var ss;
+  try {
+    ss = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID);
+  } catch (e) {
+    Logger.log('FAIL: cannot open the ACL spreadsheet (ID ' + MASTER_ACL_SPREADSHEET_ID + '): ' + e.message);
+    Logger.log('-> This alone makes sign-in deny EVERY user. Restore the script owner\'s access to that file.');
+    return;
+  }
+  Logger.log('Spreadsheet the CODE reads: "' + ss.getName() + '"');
+  Logger.log('URL: ' + ss.getUrl());
+  Logger.log('-> Compare this URL to the file you edited. If they differ, the edits went to a different file.');
+  var sheet = ss.getSheetByName(ACL_SHEET_NAME);
+  if (!sheet) {
+    Logger.log('FAIL: no tab named "' + ACL_SHEET_NAME + '". Tabs present: '
+      + ss.getSheets().map(function(s) { return s.getName(); }).join(', '));
+    return;
+  }
+  var data = sheet.getDataRange().getValues();
+  var headers = data[0] || [];
+  var pageCols = [];
+  for (var c = 0; c < headers.length; c++) {
+    if (String(headers[c]).trim().toLowerCase() === ACL_PAGE_NAME.toLowerCase()) pageCols.push(c);
+  }
+  Logger.log('Header row: ' + JSON.stringify(headers));
+  Logger.log('"' + ACL_PAGE_NAME + '" column position(s): '
+    + (pageCols.length ? pageCols.map(function(p) { return p + 1; }).join(', ') : 'NONE'));
+  if (!pageCols.length) {
+    Logger.log('FAIL: no "' + ACL_PAGE_NAME + '" column in row 1 — sign-in denies everyone on this app.');
+    return;
+  }
+  if (pageCols.length > 1) {
+    Logger.log('WARNING: duplicate "' + ACL_PAGE_NAME + '" columns — the code reads the FIRST (position '
+      + (pageCols[0] + 1) + '). A checkbox ticked in the later duplicate is ignored.');
+  }
+  var colIdx = pageCols[0];
+  var localPart = email.split('@')[0];
+  var found = 0;
+  for (var r = 1; r < data.length; r++) {
+    var cellA = String(data[r][0]);
+    if (cellA.toLowerCase().indexOf(localPart) === -1) continue;
+    found++;
+    var codes = cellA.split('').map(function(ch) { return ch.charCodeAt(0); }).join(',');
+    var val = data[r][colIdx];
+    Logger.log('Row ' + (r + 1) + ': colA="' + cellA + '" (charCodes: ' + codes + ') | "'
+      + ACL_PAGE_NAME + '" cell=' + JSON.stringify(val) + ' (type: ' + typeof val + ')');
+    Logger.log('-> exact match to target email: ' + (cellA.trim().toLowerCase() === email));
+  }
+  if (!found) {
+    Logger.log('FAIL: no row in column A resembling "' + email + '" — the user row is missing in THIS file.');
+  }
+  var cache = getEpochCache();
+  Logger.log('Cached verdict before clearing: ' + cache.get('access_' + email)
+    + ' (null = not cached, "1" = allow, "0" = deny; denials expire after 10 minutes)');
+  clearAllAccessCache();
+  var verdict = checkSpreadsheetAccess(email);
+  Logger.log('FRESH verdict from the real sign-in check (cache just cleared): ' + JSON.stringify(verdict));
+  Logger.log(verdict.hasAccess
+    ? 'RESULT: access GRANTED — sign-in should work right now. If the app still denies, confirm the failing device signs in with exactly this email.'
+    : 'RESULT: still DENIED — one of the FAIL/WARNING lines above is the cause.');
+}
 
 // Spreadsheet tabs for the structured receipt data. The wired SPREADSHEET_ID's
 // data lives in two normalized tabs so spending analysis can pivot/filter:
