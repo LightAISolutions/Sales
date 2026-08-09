@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 108/100`
+`Sections: 109/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.21r] — 2026-08-09 06:09:32 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Nine post-earnings refresh Routines armed** for the new public tickers, following the existing one-shot convention (fresh session, verify-then-refresh, self-re-arming): NVIDIA (fires 2026-08-27 — Q2 FY2027 company-confirmed for 08-26), Jinko (2026-08-28 — JKS Q2 est. 08-27 / A-share H1 deadline 08-31), Samsung SDI (2026-10-28 15:00 UTC — Q3 listed 10-27; staggered after Wärtsilä), Google (2026-10-28 17:00 UTC — Q3 confirmed 10-27), Microsoft (2026-10-28 19:00 UTC — FY2027 Q1 est. 10-27), Meta (2026-10-29 — Q3 est. 10-28), Amazon (2026-10-30 — Q3 est. 10-29), LG Energy Solution (2026-10-30 15:00 UTC — Q3 est. ~10-29; staggered after Amazon), Panasonic (2026-10-31 — FY2027 Q2 est. ~10-30). All report dates verified via web search on 2026-08-09; estimates are marked as such in each trigger prompt and the fired sessions confirm before refreshing
+
+### Changed
+- **Rosendin folded into the private-company quarterly sweep** — the recurring Routine (Jan/Apr/Jul/Oct 1) renamed "Profiler quarterly check — Hithium, FlexGen & Rosendin (private)" with Rosendin watch items added (data-center project awards, BESSUPS rollout with FlexGen, EPC storage wins, ESOP/leadership changes)
+- `.claude/rules/profiler-app.md` — "Currently armed" registry updated with the 9 new one-shot entries (chronological) and the expanded 3-company sweep line
 
 ## [v02.20r] — 2026-08-09 05:59:18 PM EST
 

@@ -105,13 +105,22 @@ Post-earnings dossier refreshes run on one-shot Routines (triggers) rather than 
 - **Self-re-arming** — the final step of every scheduled refresh researches the company's next scheduled report date and creates the next one-shot trigger (report date +1 day). If trigger tooling is unavailable in the firing session, it instead adds an Active Reminder to `repository-information/REMINDERS.md` telling the developer to re-arm manually (including the expected date) and states this plainly in its summary
 - **Currently armed** (all fire fresh sessions; one-shots re-arm themselves):
   - **Sinexcel** (SZSE ChiNext: 300693) — fires 2026-08-12 13:00 UTC (H1 report scheduled 2026-08-11)
+  - **NVIDIA** (NASDAQ: NVDA) — fires 2026-08-27 13:00 UTC (Q2 FY2027 results company-confirmed for 2026-08-26)
+  - **Jinko** (NYSE: JKS · SSE: 688223) — fires 2026-08-28 13:00 UTC (JKS Q2 results estimated ~2026-08-27; A-share H1 report due by the 2026-08-31 deadline; the fired session confirms and re-schedules if needed)
   - **Sungrow** (SZSE: 300274) — fires 2026-08-30 13:00 UTC (H1 report scheduled 2026-08-29)
   - **BYD** (SZSE: 002594 · HKEX: 1211) — fires 2026-08-30 15:00 UTC (H1 results scheduled 2026-08-29; staggered 2h after Sungrow to avoid parallel-session conflicts)
   - **Tesla** (NASDAQ: TSLA) — fires 2026-10-22 13:00 UTC (Q3 results estimated ~2026-10-21; the fired session confirms the real date and re-schedules if needed)
   - **Wärtsilä** (HEL: WRT1V) — fires 2026-10-28 13:00 UTC (Jan–Sep interim report announced for 2026-10-27)
+  - **Samsung SDI** (KRX: 006400) — fires 2026-10-28 15:00 UTC (Q3 results calendar-listed for 2026-10-27; staggered 2h after Wärtsilä to avoid parallel-session conflicts)
+  - **Google** (NASDAQ: GOOGL) — fires 2026-10-28 17:00 UTC (Q3 results listed as confirmed for 2026-10-27 after close; staggered after Samsung SDI)
+  - **Microsoft** (NASDAQ: MSFT) — fires 2026-10-28 19:00 UTC (FY2027 Q1 results estimated ~2026-10-27 after close; staggered after Google)
+  - **Meta** (NASDAQ: META) — fires 2026-10-29 13:00 UTC (Q3 results estimated ~2026-10-28 after close; the fired session confirms and re-schedules if needed)
+  - **Amazon** (NASDAQ: AMZN) — fires 2026-10-30 13:00 UTC (Q3 results estimated ~2026-10-29 after close; tracker estimates ranged 10-22 to 11-02; the fired session confirms and re-schedules if needed)
+  - **LG Energy Solution** (KRX: 373220) — fires 2026-10-30 15:00 UTC (Q3 full results estimated ~2026-10-29 from the prior-quarter pattern; staggered 2h after Amazon; the fired session confirms and re-schedules if needed)
+  - **Panasonic** (TYO: 6752) — fires 2026-10-31 13:00 UTC (FY2027 Q2 results estimated ~2026-10-30 from the prior-year pattern; the fired session confirms and re-schedules if needed)
   - **CATL** (SZSE: 300750 · HKEX: 3750) — fires 2026-11-01 13:00 UTC (Q3 report due by the 2026-10-31 disclosure deadline)
   - **Fluence** (NASDAQ: FLNC) — fires 2026-11-25 14:00 UTC (Q4/FY2026 results estimated ~2026-11-24, FY ends Sep 30; the fired session confirms the real date and re-schedules if needed)
-  - **Hithium & FlexGen** (private, no earnings calendar) — recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC) that checks for material developments and refreshes only when warranted; recurs on its own, no re-arm
+  - **Hithium, FlexGen & Rosendin** (private, no earnings calendar) — recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC) that checks for material developments and refreshes only when warranted; recurs on its own, no re-arm. Rosendin joined 2026-08-09 (dossier watch items: data-center project awards, BESSUPS rollout with FlexGen, EPC storage wins)
 
 ## Version & changelog interactions
 
