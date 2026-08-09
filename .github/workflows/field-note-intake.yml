@@ -2,9 +2,11 @@
 # field-note-intake.yml — Commits field notes submitted via the "📝 Field note"
 # issue form into live-site-pages/profiler-data/profiler-notes.json (schema:
 # repository-information/PROFILER-SCHEMA.md — Field Notes). Notes are stored
-# VERBATIM with the developer's confidence rating and triage "pending"; the
-# push to main triggers the auto-merge workflow's deploy (note becomes visible
-# in the Profiler ⚙ changelog) and the library mirror.
+# VERBATIM with the developer's confidence rating and triage "pending". Because
+# pushes made with GITHUB_TOKEN never trigger push-event workflows (GitHub's
+# recursion prevention), the final step explicitly dispatches the auto-merge
+# workflow (workflow_dispatch is exempt from that prevention) so the deploy and
+# library mirror run and the note becomes visible in the Profiler ⚙ changelog.
 # Runs on the built-in GITHUB_TOKEN — no extra secrets.
 # ──────────────
 name: Field note intake
@@ -16,6 +18,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write
 
 jobs:
   commit-note:
@@ -103,6 +106,15 @@ jobs:
           git commit -m "Field note ${{ steps.parse.outputs.note_id }} (${{ steps.parse.outputs.slug }}) via issue #${{ github.event.issue.number }}"
           # Retry once if main advanced between checkout and push
           git push || { git pull --rebase origin main && git push; }
+      - name: Trigger deploy and mirror
+        # GITHUB_TOKEN pushes don't fire push-event workflows, so dispatch the
+        # auto-merge workflow explicitly (its dispatch-on-main path runs deploy
+        # + mirror). Requires the actions: write permission above.
+        if: steps.parse.outputs.result == 'ok'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run auto-merge-claude.yml --ref main --repo ${{ github.repository }}
       - name: Close issue with confirmation
         if: steps.parse.outputs.result == 'ok'
         env:
