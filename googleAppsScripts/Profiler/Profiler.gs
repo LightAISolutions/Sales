@@ -1,10 +1,10 @@
-var VERSION = "v01.00g";
+var VERSION = "v01.01g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
 var GITHUB_BRANCH = "main";
 var FILE_PATH     = "googleAppsScripts/Profiler/Profiler.gs";
-var DEPLOYMENT_ID = "YOUR_DEPLOYMENT_ID";
+var DEPLOYMENT_ID = "AKfycbwnpv-PYXK_7Wvp5ZAtnhZawcTWgc-8Df_1qKKoLsg9gGawIukAzU7H14aw9DOrVSJ3Tw";
 var EMBED_PAGE_URL = "https://lightaisolutions.github.io/Sales/Profiler.html";
 
 // Derive the parent page's origin from EMBED_PAGE_URL for postMessage targeting.

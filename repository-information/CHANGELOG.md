@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.09r] — 2026-08-09 01:30:51 AM EST
+
+> **Prompt:** "Profiler deployment ID: <AKfycbwnpv-PYXK_7Wvp5ZAtnhZawcTWgc-8Df_1qKKoLsg9gGawIukAzU7H14aw9DOrVSJ3Tw>"
+
+### Changed
+- `googleAppsScripts/Profiler/Profiler.config.json` + `Profiler.gs` (v01.01g) — real `DEPLOYMENT_ID` synced in ([PC-GAS-CONFIG] #14); the "Deploy Profiler" workflow step now fires on `.gs` merges
+- `live-site-pages/Profiler.html` (v01.11w) — `var _e` set to the obfuscated deployment URL (reverse + base64, round-trip verified) — the in-dossier note box now renders the GAS intake form; GitHub-form fallback retired from the live path
+- `repository-information/ENTERPRISE-SETUP.md` — recorded the new `profiler-intake-writer` fine-grained PAT (Sales-scoped, Contents R/W + Actions R/W, no expiration, stored as the Profiler GAS project's `GITHUB_TOKEN` Script Property)
 
 ## [v02.08r] — 2026-08-09 01:11:29 AM EST
 

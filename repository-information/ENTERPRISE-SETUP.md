@@ -62,6 +62,22 @@ Used by the `mirror-library` job in `.github/workflows/auto-merge-claude.yml` to
 6. `Sales` repo → **Settings** → **Secrets and variables** → **Actions** → **New repository secret** → name `LIBRARY_SYNC_TOKEN`, paste the value
 7. Trigger any merge (or re-run the last workflow) — the `mirror-library` job's log should show a mirror commit instead of the skip notice
 
+## Profiler Intake Token
+
+The token used by the Profiler GAS project (`googleAppsScripts/Profiler/Profiler.gs`) to commit field notes / uploaded note files to this repo, dispatch deploys, and pull its own source for self-updates.
+
+| Field | Value |
+|-------|-------|
+| **Token name** | `profiler-intake-writer` |
+| **Token type** | Fine-grained personal access token |
+| **Resource owner** | `LightAISolutions` |
+| **Repository access** | Only select repositories: `LightAISolutions/Sales` |
+| **Contents permission** | **Read and write** (note/file commits + self-update pulls) |
+| **Actions permission** | Read and write (deploy dispatch — optional; PAT pushes trigger the workflow on their own) |
+| **Metadata permission** | Read-only (required, auto-populated) |
+| **Expiration** | No expiration (enterprise admin exemption, same as the other tokens) — rotate on suspected exposure |
+| **Stored as** | `GITHUB_TOKEN` Script Property of the Profiler Apps Script project (added 2026-08-09) |
+
 ## Current GAS Auto-Deploy Token
 
 The token used by the 5 GAS projects' `pullAndDeployFromGitHub()` function to fetch source from this repo.
