@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.13r] — 2026-08-09 02:41:47 AM EST
+
+> **Prompt:** *(same interaction — live API verification after the v02.12r deploy)* Curl probes against the deployed note API returned `{"success":true,...}` for a bogus session token, exposing that the standard preset's `ENABLE_DATA_OP_VALIDATION: false` made the fetch-exposed note ops effectively unauthenticated.
+
+### Security
+- `googleAppsScripts/Profiler/Profiler.gs` (v01.04g) — `PROJECT_OVERRIDES.ENABLE_DATA_OP_VALIDATION: true`: every note op now runs full session validation (the preset's `false` assumed `google.script.run` transport, only reachable from the signed-in served page — an assumption the public fetch route broke). Plus a defense-in-depth guard in `handleNoteOp_` rejecting missing/short tokens before dispatch, so a future toggle regression cannot silently reopen the ops. Live-verified post-deploy: bogus sessions now receive `SESSION_EXPIRED`
+
+### Fixed
+- Confirmed the POST transport is sound for browsers (302 → GET on the echo URL returns clean JSON) — the apparent POST failures during verification were a curl `-L -X POST` artifact, not a client bug
+
+*(Counter reads 101/100 legitimately: all 6 over-limit sections are dated today (EST) and today's sections are rotation-exempt; 95 non-exempt sections remain under the cap.)*
 
 ## [v02.12r] — 2026-08-09 02:37:16 AM EST
 

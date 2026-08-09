@@ -1,4 +1,4 @@
-var VERSION = "v01.03g";
+var VERSION = "v01.04g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -45,6 +45,12 @@ var PROJECT_OVERRIDES = {
   ENABLE_DOMAIN_RESTRICTION: false,
   ALLOWED_DOMAINS: [],
   SESSION_EXPIRATION: 7200,   // default new projects to a 2-hour rolling session (overrides the preset's shorter default; absolute ceiling stays at the preset's ABSOLUTE_SESSION_TIMEOUT). The client countdown derives from this via the heartbeat's expiresIn, so no second constant is needed.
+  // MANDATORY for this project: the note ops are exposed on the public fetch
+  // API (doPost action=note + GET api mirror), so every data op MUST fully
+  // validate its session token. The standard preset's false setting assumes
+  // google.script.run transport (only reachable from the signed-in served
+  // page) — that assumption does not hold for a public HTTP route.
+  ENABLE_DATA_OP_VALIDATION: true,
 };
 
 // ══════════════
@@ -2078,6 +2084,11 @@ function handleNoteOp_(e) {
   // `nop` (note-op) — the GET mirror already uses `op` for outer routing
   var op = p.nop || '';
   var session = p.session || '';
+  // Defense-in-depth: reject obviously invalid tokens before dispatch, so a
+  // future toggle regression can never silently reopen the ops (real
+  // validation happens in validateSessionForData with
+  // ENABLE_DATA_OP_VALIDATION forced true in PROJECT_OVERRIDES)
+  if (!session || session.length < 32) return { success: false, error: 'SESSION_EXPIRED' };
   try {
     if (op === 'bootstrap') {
       return { success: true, data: getIntakeBootstrap(session) };
