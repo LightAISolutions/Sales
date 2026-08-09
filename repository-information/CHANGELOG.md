@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 104/100`
+`Sections: 105/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.17r] — 2026-08-09 04:30:58 AM EST
+
+> **Prompt:** "Set profiler style to #4: intel-briefing. Also make sure that the export document (doc/pdf) has a formatting style and spacing that matches the writing style. Create a style button that is only visible to Admins that allows the user to change the Profiler app + export styles between these five styles."
+
+### Added
+- `live-site-pages/Profiler.html` (v01.16w) — dossier display-style engine: per-style section-label maps (`OV_SEC_LABELS`), app-side typography skins (`ov-sty-*` on `#ov-app`), export-document skins on `#ov-prev-doc` (preview + PDF print), and style-matched inline Word CSS in `ovWordExport` — Bloomberg (Arial, blue numbered headings, "Figure N:" captions on spec/financial tables), Equity Research (thesis banner with not-investment-advice note), Intel Briefing (Courier typewriter document, numbered KEY JUDGMENTS `<ol>`, COMPILED FROM OPEN SOURCES banner), Smart Brevity (bold sans axiom headers). Admin-only **🖋 style button** (z-index 8900, gated on `ov_note_role === 'admin'` like Versions 🕘, shown on wall pass) opens a picker overlay; choice persists per-device in localStorage `ov_style`; `OV_DEFAULT_STYLE = 'intel-briefing'` mirrors the registry's Active style. Verified headlessly: five app/export screenshots + admin/non-admin gating, zero console errors
+
+### Changed
+- `repository-information/PROFILER-STYLES.md` — **Active style: `intel-briefing`** (was `default`); new "Display layer" bullet documenting the `OV_DEFAULT_STYLE` sync rule and the admin 🖋 switcher
+- `.claude/rules/profiler-app.md` — switching procedure now includes the `OV_DEFAULT_STYLE` sync; display-layer architecture documented
+- `README.md` — Profiler tree entry version display → v01.16w
 
 ## [v02.16r] — 2026-08-09 04:00:40 AM EST
 

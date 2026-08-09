@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16w] — 2026-08-09 04:30:58 AM EST — v02.17r
+
+### Added
+- Dossier styles — five presentation styles (Default, Bloomberg, Equity Research, Intel Briefing, Smart Brevity) that change section titles, typography, and spacing throughout the app **and** in the exported Word/PDF documents, so the export always matches the on-screen style
+- Style switcher for the app owner — a 🖋 button opens a picker to change the style; the choice applies on that device
+
+### Changed
+- Dossiers now display in the **Intel Briefing** style by default — briefing-style section titles (Background, Key Judgments, Technical Annex), numbered analytical judgments, and a typewriter-style export document
 
 ## [v01.15w] — 2026-08-09 03:29:35 AM EST — v02.15r
 

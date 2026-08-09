@@ -2,7 +2,7 @@
 
 *Named-styles registry — the single source of truth for **how dossier prose is written**. The active style governs all future dossier authoring (new profiles, revisions, scheduled refreshes, and prep materials that quote dossier prose). Cross-referenced from `.claude/rules/profiler-app.md` ("Dossier Writing Styles" section) and CLAUDE.md ("Profiler Command").*
 
-**Active style:** `default`
+**Active style:** `intel-briefing` *(set by the developer 2026-08-09; was `default`)*
 
 ## How this registry works
 
@@ -10,6 +10,7 @@
 - **Switching** — the developer says "set profiler style to \<name\>" (or similar). Claude updates the **Active style** marker above; all *future* authoring follows the new style. Existing dossiers are **not** retro-rewritten unless the developer explicitly asks (a retro-rewrite is a normal revision: archive per the Archival Procedure, `profileVersion` +1)
 - **Mock-up basis** — every style below rewrites the **same Megmeet excerpt** (company summary → AI-DC power positioning → the FY2025 results development → strategy read) so the styles can be compared like-for-like. Mock-ups are illustrative excerpts, not full dossiers
 - **Adding styles** — new styles get a `## Style:` section here (definition rules + a Megmeet mock-up) before they can be activated
+- **Display layer (app + exports)** — `Profiler.html` carries a presentation twin of this registry: per-style section labels, typography/spacing skins, and matching Word/PDF export CSS. `OV_DEFAULT_STYLE` in the page's style-engine block **must be kept in sync with the Active style above** whenever it changes (both edits in the same commit). An admin-only 🖋 button (gated like Versions 🕘) lets the developer switch the app + export presentation between the five styles per-device (localStorage `ov_style`); non-admins always see the default. The display layer re-skins how structured dossier data is *presented* — the prose itself is authored in the Active style at research/refresh time, so switching the active style only fully lands in dossier text as profiles are next refreshed
 
 ## Style: `default` — Analyst Prose (current house style)
 

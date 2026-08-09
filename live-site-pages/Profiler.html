@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.15w">
+  <meta name="build-version" content="v01.16w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -473,6 +473,75 @@
     .ov-flash .a { display: none; color: var(--ov-muted); font-size: 13.5px; margin-top: 9px; border-top: 1px dashed var(--ov-line2); padding-top: 9px; }
     .ov-flash.open .a { display: block; }
     .ov-flash.open .hint { color: var(--ov-gold); }
+    /* Dossier display styles — admin 🖋 switcher + per-style skins
+       (style registry: repository-information/PROFILER-STYLES.md) */
+    #ov-style-btn {
+      position: fixed; bottom: 92px; right: 22px; z-index: 8900; /* below the sign-in wall (9000), like the notes cog */
+      width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ov-line2);
+      background: var(--ov-card); color: var(--ov-muted); font-size: 18px; line-height: 1;
+      cursor: pointer; display: none; align-items: center; justify-content: center;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    #ov-style-btn:hover { color: var(--ov-gold); border-color: var(--ov-gold); }
+    #ov-style-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(8,9,12,0.8); z-index: 10002; display: none;
+      align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;
+    }
+    #ov-style-panel {
+      background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 12px;
+      width: min(420px, 96vw); max-height: 84vh; overflow-y: auto; padding: 18px 20px 16px;
+      box-shadow: 0 14px 50px rgba(0,0,0,0.5);
+    }
+    #ov-style-panel .ttl { font: 11px/1.4 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-gold); margin-bottom: 12px; }
+    .ov-style-item {
+      display: flex; align-items: baseline; gap: 10px; width: 100%; text-align: left;
+      background: var(--ov-card2); border: 1px solid var(--ov-line); border-radius: 8px;
+      padding: 11px 14px; margin: 8px 0; cursor: pointer; color: var(--ov-paper); font: inherit;
+    }
+    .ov-style-item:hover { border-color: var(--ov-gold); }
+    .ov-style-item .v { font: 13px/1 var(--ov-mono); color: var(--ov-muted); }
+    .ov-style-item.current .v { color: var(--ov-dev); }
+    .ov-style-item .d { font-size: 13.5px; }
+    #ov-style-panel .hint { color: var(--ov-faint); font-size: 11px; margin: 10px 0 0; }
+    .ov-sty-banner {
+      font: 10.5px/1.6 var(--ov-mono); letter-spacing: 0.08em; color: var(--ov-faint);
+      border: 1px solid var(--ov-line2); border-radius: 6px; padding: 6px 10px;
+      margin: 10px 0 0; display: inline-block;
+    }
+    /* App-side skins — section headings echo the active writing style */
+    #ov-app.ov-sty-bloomberg .ov-section > h3 { color: #4da3ff; letter-spacing: 0.08em; }
+    #ov-app.ov-sty-bloomberg .ov-section > h3::after { background: #2b6ea8; }
+    #ov-app.ov-sty-equity-research .ov-section > h3 { color: #9fb6dd; }
+    #ov-app.ov-sty-intel-briefing .ov-section > h3 { letter-spacing: 0.34em; }
+    #ov-app.ov-sty-intel-briefing .ov-strategy ol { padding-left: 22px; }
+    #ov-app.ov-sty-intel-briefing .ov-strategy li { margin: 6px 0; }
+    #ov-app.ov-sty-smart-brevity .ov-section > h3 {
+      font: 800 15px/1.2 -apple-system, 'Segoe UI', Arial, sans-serif;
+      text-transform: none; letter-spacing: 0; color: var(--ov-paper);
+    }
+    #ov-app.ov-sty-smart-brevity .ov-section > h3::after { background: none; }
+    /* Export document skins — preview + PDF print inherit these; the Word
+       export mirrors them via matching inline CSS in ovWordExport */
+    #ov-prev-doc .ov-sty-banner { color: #6d6758; border-color: #cfc8b4; border-radius: 4px; margin: 8px 0 0; }
+    #ov-prev-doc.ov-sty-bloomberg { font-family: Arial, Helvetica, sans-serif; font-size: 13.5px; }
+    #ov-prev-doc.ov-sty-bloomberg h1 { font: 700 26px/1.2 Arial, Helvetica, sans-serif; }
+    #ov-prev-doc.ov-sty-bloomberg h2 { font: 700 15px/1.3 Arial, Helvetica, sans-serif; color: #0b62a4; text-transform: none; letter-spacing: 0; border-bottom: 2px solid #0b62a4; }
+    #ov-prev-doc.ov-sty-bloomberg h3 { font: 700 14.5px/1.3 Arial, Helvetica, sans-serif; }
+    #ov-prev-doc.ov-sty-bloomberg .d-cat { color: #0b62a4; }
+    #ov-prev-doc.ov-sty-equity-research h2 { color: #1f3d6d; border-bottom: 2px solid #1f3d6d; }
+    #ov-prev-doc.ov-sty-equity-research h3 { font-weight: 700; font-size: 15px; }
+    #ov-prev-doc.ov-sty-equity-research .ov-sty-banner { color: #1f3d6d; border-color: #1f3d6d; font-weight: 700; }
+    #ov-prev-doc.ov-sty-intel-briefing { font-family: 'Courier New', Courier, monospace; font-size: 13px; line-height: 1.55; }
+    #ov-prev-doc.ov-sty-intel-briefing h1 { font: 700 22px/1.2 'Courier New', Courier, monospace; text-transform: uppercase; letter-spacing: 0.06em; }
+    #ov-prev-doc.ov-sty-intel-briefing h2 { font-family: 'Courier New', Courier, monospace; color: #23211c; border-bottom: 2px solid #23211c; letter-spacing: 0.3em; }
+    #ov-prev-doc.ov-sty-intel-briefing h3 { font: 700 13.5px/1.3 'Courier New', Courier, monospace; text-transform: uppercase; }
+    #ov-prev-doc.ov-sty-intel-briefing .ov-sty-banner { border-left: none; border-right: none; border-radius: 0; letter-spacing: 0.18em; }
+    #ov-prev-doc.ov-sty-smart-brevity { font-family: -apple-system, 'Segoe UI', Arial, sans-serif; font-size: 14.5px; line-height: 1.5; }
+    #ov-prev-doc.ov-sty-smart-brevity h1 { font: 800 28px/1.15 -apple-system, 'Segoe UI', Arial, sans-serif; }
+    #ov-prev-doc.ov-sty-smart-brevity h2 { font: 800 16px/1.25 -apple-system, 'Segoe UI', Arial, sans-serif; text-transform: none; letter-spacing: 0; color: #111; border-bottom: none; margin-top: 24px; }
+    #ov-prev-doc.ov-sty-smart-brevity h3 { font: 700 15px/1.3 -apple-system, 'Segoe UI', Arial, sans-serif; }
+    #ov-prev-doc.ov-sty-smart-brevity li { margin: 4px 0; }
     /* Print pipeline — the PDF export path: only the preview document prints */
     @media print {
       body > *:not(#ov-prev-overlay) { display: none !important; }
@@ -1239,6 +1308,90 @@
     }
 
     // ── Dossier detail ──
+    // ── Dossier display styles (registry: repository-information/PROFILER-STYLES.md) ──
+    // Presentation layer only: re-skins section labels, typography, and export
+    // formatting per named writing style. The prose inside profile JSONs is
+    // authored in the registry's Active style; the 🖋 switcher (admin-only,
+    // gated like Versions 🕘) stores a per-device override in localStorage.
+    var OV_STYLE_KEY = 'ov_style';
+    var OV_DEFAULT_STYLE = 'intel-briefing'; // kept in sync with the registry's Active style
+    var OV_STYLE_LABELS = {
+      'default': 'Default — Analyst Prose',
+      'bloomberg': 'Bloomberg — Research Report',
+      'equity-research': 'Equity Research — Sell-Side Note',
+      'intel-briefing': 'Intel Briefing — IC Assessment',
+      'smart-brevity': 'Smart Brevity — Axios Form'
+    };
+    var OV_SEC_LABELS = {
+      'default':         { snapshot: 'Snapshot', products: 'Products & Services', devs: 'Recent Developments', strategy: 'Strategy Read', specs: 'Technical Specifications', people: 'Decision Makers', fin: 'Financial Performance vs Expectations', sources: 'Sources' },
+      'bloomberg':       { snapshot: '1. Executive Summary', products: '2. Products and Services', devs: '3. Recent Developments', strategy: '4. Strategy Read', specs: '5. Technical Specifications', people: '6. Leadership', fin: '7. Financials Versus Expectations', sources: '8. Sources' },
+      'equity-research': { snapshot: 'Company Overview', products: 'Business Segments', devs: 'Catalysts & News Flow', strategy: 'Investment Thesis — Analytical View', specs: 'Product Detail', people: 'Management', fin: 'Results vs Consensus', sources: 'Sources' },
+      'intel-briefing':  { snapshot: 'Background', products: 'Capabilities', devs: 'Recent Reporting', strategy: 'Key Judgments', specs: 'Technical Annex', people: 'Key Personnel', fin: 'Financial Reporting', sources: 'Source List' },
+      'smart-brevity':   { snapshot: 'The Big Picture', products: 'What They Sell', devs: "What's Happening", strategy: 'Between the Lines', specs: 'Zoom In', people: "Who's Who", fin: 'By the Numbers', sources: 'Go Deeper' }
+    };
+    var OV_STRAT_TAG = {
+      'default': 'Analysis — inference from the sourced facts, not company statements',
+      'bloomberg': 'Analysis — inference from the sourced facts, not company statements',
+      'equity-research': 'Our view — analytical framing from sourced facts; not investment advice',
+      'intel-briefing': 'We assess — analytic judgments from open sources, not company statements',
+      'smart-brevity': 'Our read — analysis, not company statements'
+    };
+    function ovStyle() { var s = localStorage.getItem(OV_STYLE_KEY); return OV_STYLE_LABELS[s] ? s : OV_DEFAULT_STYLE; }
+    function ovSecLabel(key) { return (OV_SEC_LABELS[ovStyle()] || OV_SEC_LABELS['default'])[key]; }
+    function ovStratTag() { return OV_STRAT_TAG[ovStyle()] || OV_STRAT_TAG['default']; }
+    function ovStyleBanner(p) {
+      var s = ovStyle();
+      if (s === 'equity-research') return ((p.ownership && p.ownership.ticker) ? p.ownership.ticker + ' · ' : '') + 'Positioning framework — analytical view, not investment advice';
+      if (s === 'intel-briefing') return 'COMPILED FROM OPEN SOURCES · ANALYTIC JUDGMENTS EXPLICITLY LABELED';
+      return '';
+    }
+    function ovStyleApply() {
+      var app = document.getElementById('ov-app');
+      if (app) app.className = app.className.replace(/\s*ov-sty-[\w-]+/g, '') + ' ov-sty-' + ovStyle();
+    }
+    // Admin-only style switcher — 🖋 button (fixed above the notes cog, below
+    // the sign-in wall) opens an overlay listing the five display styles.
+    function ovStyleBtnShow() {
+      if (localStorage.getItem(OV_NOTE_ROLE_KEY) !== 'admin') return;
+      var b = document.getElementById('ov-style-btn');
+      if (!b) {
+        b = ovEl('button', null, '🖋');
+        b.id = 'ov-style-btn'; b.type = 'button';
+        b.title = 'Dossier style (admin) — switch the app + export presentation between the five writing styles';
+        b.addEventListener('click', ovStylePicker);
+        document.body.appendChild(b);
+      }
+      b.style.display = 'flex';
+    }
+    var ovStyleOverlay = null;
+    function ovStylePicker() {
+      if (!ovStyleOverlay) {
+        ovStyleOverlay = ovEl('div'); ovStyleOverlay.id = 'ov-style-overlay';
+        ovStyleOverlay.addEventListener('click', function(e) { if (e.target === ovStyleOverlay) ovStyleOverlay.style.display = 'none'; });
+        document.body.appendChild(ovStyleOverlay);
+      }
+      ovClear(ovStyleOverlay);
+      var panel = ovEl('div'); panel.id = 'ov-style-panel';
+      panel.appendChild(ovEl('div', 'ttl', 'Dossier style — app + exports'));
+      Object.keys(OV_STYLE_LABELS).forEach(function(k) {
+        var it = ovEl('button', 'ov-style-item' + (k === ovStyle() ? ' current' : ''));
+        it.type = 'button';
+        it.appendChild(ovEl('span', 'v', k === ovStyle() ? '●' : '○'));
+        it.appendChild(ovEl('span', 'd', OV_STYLE_LABELS[k]));
+        it.addEventListener('click', function() {
+          localStorage.setItem(OV_STYLE_KEY, k);
+          ovStyleOverlay.style.display = 'none';
+          ovStyleApply();
+          ovRoute(); // repaint the current view (roster or dossier) in the new style
+        });
+        panel.appendChild(it);
+      });
+      panel.appendChild(ovEl('p', 'hint', 'Changes how dossiers are presented and exported on this device. Dossier text itself is authored in the registry’s active writing style.'));
+      ovStyleOverlay.appendChild(panel);
+      ovStyleOverlay.style.display = 'flex';
+    }
+    ovStyleApply();
+
     function ovRenderCompany(slug) {
       ovNotesCogVisible(false);
       var main = ovMain(); ovClear(main);
@@ -1305,6 +1458,9 @@
       meta.appendChild(document.createTextNode(bits.join('  ·  ') + (p.website ? '  ·  ' : '')));
       if (p.website) meta.appendChild(ovLink(p.website, null, p.website.replace(/^https?:\/\//, '').replace(/\/$/, '')));
       head.appendChild(meta);
+      var styBan = ovStyleBanner(p);
+      if (styBan) head.appendChild(ovEl('p', 'ov-sty-banner', styBan));
+      var figN = 0; // Bloomberg-style figure numbering (specs + financial tables)
       var exportBtn = ovEl('button', 'ov-btn', 'Export dossier ⬇');
       exportBtn.id = 'ov-export-btn'; exportBtn.type = 'button';
       exportBtn.title = 'Preview the document, then export as Word or PDF';
@@ -1357,7 +1513,7 @@
       main.appendChild(head);
 
       // Snapshot
-      var snap = ovSection('Snapshot');
+      var snap = ovSection(ovSecLabel('snapshot'));
       snap.appendChild(ovFactsGrid([
         ['Founded', p.founded ? String(p.founded) : ''],
         ['Headquarters', p.headquarters || ''],
@@ -1373,7 +1529,7 @@
 
       // Products & services
       if (p.productsAndServices && p.productsAndServices.length) {
-        var ps = ovSection('Products & Services');
+        var ps = ovSection(ovSecLabel('products'));
         p.productsAndServices.forEach(function(prod) {
           var d = ovEl('div', 'ov-prod');
           if (prod.category) d.appendChild(ovEl('div', 'cat', prod.category));
@@ -1399,7 +1555,7 @@
 
       // Recent developments (schema v2)
       if (p.recentDevelopments && p.recentDevelopments.length) {
-        var rd = ovSection('Recent Developments', 'Trailing-year highlights, newest first, each with a one-line strategy takeaway.');
+        var rd = ovSection(ovSecLabel('devs'), 'Trailing-year highlights, newest first, each with a one-line strategy takeaway.');
         p.recentDevelopments.forEach(function(ev) {
           var row = ovEl('div', 'ov-dev');
           row.appendChild(ovEl('div', 'when', ev.date || ''));
@@ -1421,10 +1577,10 @@
 
       // Strategy read — labeled analysis (schema v2)
       if (p.strategyRead && p.strategyRead.length) {
-        var sr = ovSection('Strategy Read');
+        var sr = ovSection(ovSecLabel('strategy'));
         var box = ovEl('div', 'ov-strategy');
-        box.appendChild(ovEl('span', 'tag', 'Analysis — inference from the sourced facts, not company statements'));
-        var ulS = ovEl('ul');
+        box.appendChild(ovEl('span', 'tag', ovStratTag()));
+        var ulS = ovEl(ovStyle() === 'intel-briefing' ? 'ol' : 'ul'); // IC form: numbered key judgments
         p.strategyRead.forEach(function(b) { ulS.appendChild(ovEl('li', null, b)); });
         box.appendChild(ulS);
         sr.appendChild(box);
@@ -1433,11 +1589,11 @@
 
       // Technical specifications
       if (p.technicalSpecs && p.technicalSpecs.length) {
-        var ts = ovSection('Technical Specifications');
+        var ts = ovSection(ovSecLabel('specs'));
         p.technicalSpecs.forEach(function(spec) {
           var wrap = ovEl('div', 'ov-table-wrap');
           var t = ovEl('table', 'ov-table');
-          t.appendChild(ovEl('caption', null, spec.product));
+          t.appendChild(ovEl('caption', null, (ovStyle() === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + spec.product));
           (spec.specs || []).forEach(function(row) {
             var tr = ovEl('tr');
             tr.appendChild(ovEl('td', 'k', row.label));
@@ -1453,7 +1609,7 @@
 
       // Decision makers
       if (p.decisionMakers && p.decisionMakers.length) {
-        var dm = ovSection('Decision Makers', 'Backgrounds compiled from public sources; links open LinkedIn where a public profile exists.');
+        var dm = ovSection(ovSecLabel('people'), 'Backgrounds compiled from public sources; links open LinkedIn where a public profile exists.');
         var gridE = ovEl('div', 'ov-execs');
         p.decisionMakers.forEach(function(x) {
           var card = ovEl('div', 'ov-exec');
@@ -1479,12 +1635,12 @@
 
       // Financial performance vs expectations
       if (p.financials && p.financials.periods && p.financials.periods.length) {
-        var fin = ovSection('Financial Performance vs Expectations',
+        var fin = ovSection(ovSecLabel('fin'),
           (p.financials.currency ? 'Figures in ' + p.financials.currency + '. ' : '') + 'Actuals compared against analyst consensus or company guidance where published.');
         p.financials.periods.forEach(function(per) {
           var wrap = ovEl('div', 'ov-table-wrap');
           var t = ovEl('table', 'ov-table');
-          t.appendChild(ovEl('caption', null, per.period));
+          t.appendChild(ovEl('caption', null, (ovStyle() === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + per.period));
           var hd = ovEl('tr');
           ['Metric', 'Actual', 'Expectation', 'Result'].forEach(function(h) { hd.appendChild(ovEl('th', null, h)); });
           t.appendChild(hd);
@@ -1507,7 +1663,7 @@
 
       // Sources
       if (p.sources && p.sources.length) {
-        var src = ovSection('Sources');
+        var src = ovSection(ovSecLabel('sources'));
         var wrapS = ovEl('div', 'ov-sources');
         var ol = ovEl('ol');
         p.sources.forEach(function(s) {
@@ -2176,7 +2332,9 @@
     }
 
     function ovBuildDoc(p) {
+      var sty = ovStyle(); var figN = 0;
       var doc = ovEl('div'); doc.id = 'ov-prev-doc';
+      doc.className = 'ov-sty-' + sty; // style skin — preview + PDF print inherit
       doc.appendChild(ovEl('h1', null, p.shortName || p.name));
       if (p.name && p.name !== p.shortName) doc.appendChild(ovEl('p', 'd-legal', p.name));
       var metaBits = [];
@@ -2186,8 +2344,10 @@
       if (p.website) metaBits.push(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''));
       if (p.lastUpdated) metaBits.push('profile as of ' + p.lastUpdated);
       doc.appendChild(ovEl('p', 'd-meta', metaBits.join('  ·  ')));
+      var dBan = ovStyleBanner(p);
+      if (dBan) doc.appendChild(ovEl('p', 'ov-sty-banner', dBan));
 
-      doc.appendChild(ovEl('h2', null, 'Snapshot'));
+      doc.appendChild(ovEl('h2', null, ovSecLabel('snapshot')));
       doc.appendChild(ovDocFacts([
         ['Founded', p.founded ? String(p.founded) : ''],
         ['Headquarters', p.headquarters || ''],
@@ -2198,7 +2358,7 @@
       if (p.ecosystemRole) doc.appendChild(ovEl('p', null, p.ecosystemRole));
 
       if (p.productsAndServices && p.productsAndServices.length) {
-        doc.appendChild(ovEl('h2', null, 'Products & Services'));
+        doc.appendChild(ovEl('h2', null, ovSecLabel('products')));
         p.productsAndServices.forEach(function(prod) {
           if (prod.category) doc.appendChild(ovEl('p', 'd-cat', prod.category));
           doc.appendChild(ovEl('h3', null, prod.name));
@@ -2216,7 +2376,7 @@
       }
 
       if (p.recentDevelopments && p.recentDevelopments.length) {
-        doc.appendChild(ovEl('h2', null, 'Recent Developments'));
+        doc.appendChild(ovEl('h2', null, ovSecLabel('devs')));
         p.recentDevelopments.forEach(function(ev) {
           doc.appendChild(ovEl('p', 'd-devdate', (ev.date || '') + (ev.category ? '  ·  ' + ev.category : '')));
           doc.appendChild(ovEl('h3', null, ev.headline));
@@ -2225,24 +2385,24 @@
       }
 
       if (p.strategyRead && p.strategyRead.length) {
-        doc.appendChild(ovEl('h2', null, 'Strategy Read'));
-        doc.appendChild(ovEl('p', 'd-note', 'Analysis — inference from the sourced facts, not company statements.'));
-        var ulSt = ovEl('ul');
+        doc.appendChild(ovEl('h2', null, ovSecLabel('strategy')));
+        doc.appendChild(ovEl('p', 'd-note', ovStratTag() + '.'));
+        var ulSt = ovEl(sty === 'intel-briefing' ? 'ol' : 'ul'); // IC form: numbered key judgments
         p.strategyRead.forEach(function(b) { ulSt.appendChild(ovEl('li', null, b)); });
         doc.appendChild(ulSt);
       }
 
       if (p.technicalSpecs && p.technicalSpecs.length) {
-        doc.appendChild(ovEl('h2', null, 'Technical Specifications'));
+        doc.appendChild(ovEl('h2', null, ovSecLabel('specs')));
         p.technicalSpecs.forEach(function(spec) {
-          doc.appendChild(ovEl('h3', null, spec.product));
+          doc.appendChild(ovEl('h3', null, (sty === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + spec.product));
           doc.appendChild(ovDocFacts((spec.specs || []).map(function(row) { return [row.label, row.value]; })));
           if (spec.notes) doc.appendChild(ovEl('p', 'd-note', spec.notes));
         });
       }
 
       if (p.decisionMakers && p.decisionMakers.length) {
-        doc.appendChild(ovEl('h2', null, 'Decision Makers'));
+        doc.appendChild(ovEl('h2', null, ovSecLabel('people')));
         p.decisionMakers.forEach(function(x) {
           doc.appendChild(ovEl('h3', null, x.name));
           if (x.title) doc.appendChild(ovEl('p', 'd-role', x.title));
@@ -2256,10 +2416,10 @@
       }
 
       if (p.financials && p.financials.periods && p.financials.periods.length) {
-        doc.appendChild(ovEl('h2', null, 'Financial Performance vs Expectations'));
+        doc.appendChild(ovEl('h2', null, ovSecLabel('fin')));
         if (p.financials.currency) doc.appendChild(ovEl('p', 'd-note', 'Figures in ' + p.financials.currency + '.'));
         p.financials.periods.forEach(function(per) {
-          doc.appendChild(ovEl('h3', null, per.period));
+          doc.appendChild(ovEl('h3', null, (sty === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + per.period));
           var t = ovEl('table');
           var hd = ovEl('tr');
           ['Metric', 'Actual', 'Expectation', 'Result'].forEach(function(h) { hd.appendChild(ovEl('th', null, h)); });
@@ -2279,7 +2439,7 @@
       }
 
       if (p.sources && p.sources.length) {
-        doc.appendChild(ovEl('h2', null, 'Sources'));
+        doc.appendChild(ovEl('h2', null, ovSecLabel('sources')));
         var ol = ovEl('ol');
         p.sources.forEach(function(s) {
           var li = ovEl('li');
@@ -2342,7 +2502,27 @@
         + '.d-legal,.d-note{font-style:italic;color:#6d6758;font-size:10pt;}'
         + '.d-meta,.d-foot,.d-devdate{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;}'
         + '.d-role,.d-cat{font-family:Consolas,monospace;font-size:8pt;color:#8a6d1f;text-transform:uppercase;}'
-        + 'ol{font-size:9pt;color:#444035;} a{color:#305a8a;text-decoration:none;}';
+        + 'ol{font-size:9pt;color:#444035;} a{color:#305a8a;text-decoration:none;}'
+        + '.ov-sty-banner{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;border:1pt solid #cfc8b4;padding:3pt 6pt;}';
+      // Style-matched Word formatting — mirrors the preview skins so the .doc
+      // reads in the same voice as the app (registry: PROFILER-STYLES.md)
+      var wordStyCss = {
+        'bloomberg': 'body{font-family:Arial,Helvetica,sans-serif;} h1{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:20pt;}'
+          + 'h2{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:12.5pt;color:#0b62a4;text-transform:none;letter-spacing:0;border-bottom:2pt solid #0b62a4;}'
+          + 'h3{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:11.5pt;} .d-cat{color:#0b62a4;}',
+        'equity-research': 'h2{color:#1f3d6d;border-bottom:2pt solid #1f3d6d;} h3{font-weight:bold;font-size:12pt;}'
+          + '.ov-sty-banner{color:#1f3d6d;border-color:#1f3d6d;font-weight:bold;}',
+        'intel-briefing': 'body{font-family:"Courier New",Courier,monospace;font-size:10pt;line-height:1.5;}'
+          + 'h1{font-family:"Courier New",Courier,monospace;font-weight:bold;font-size:15pt;text-transform:uppercase;letter-spacing:1pt;}'
+          + 'h2{font-family:"Courier New",Courier,monospace;color:#23211c;border-bottom:2pt solid #23211c;letter-spacing:3pt;}'
+          + 'h3{font-family:"Courier New",Courier,monospace;font-weight:bold;font-size:10.5pt;text-transform:uppercase;}'
+          + '.ov-sty-banner{border-left:none;border-right:none;letter-spacing:2pt;}',
+        'smart-brevity': 'body{font-family:Arial,Helvetica,sans-serif;font-size:11.5pt;line-height:1.5;}'
+          + 'h1{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:20pt;}'
+          + 'h2{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:13.5pt;color:#111;text-transform:none;letter-spacing:0;border-bottom:none;margin-top:18pt;}'
+          + 'h3{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:12pt;} li{margin:3pt 0;}'
+      }[ovStyle()] || '';
+      wordCss += wordStyCss;
       var safeTitle = String(p.shortName || p.slug || 'Company').replace(/[<>&"]/g, '');
       var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
         + '<head><meta charset="utf-8"><title>' + safeTitle + ' — Profiler</title><style>' + wordCss + '</style></head>'
@@ -2386,7 +2566,7 @@
       wall.appendChild(box);
       document.body.appendChild(wall);
       function say(msg, bad) { st.textContent = msg || ''; st.style.color = bad ? '#e07a8b' : 'var(--ov-faint)'; }
-      function pass() { wall.style.display = 'none'; }
+      function pass() { wall.style.display = 'none'; ovStyleBtnShow(); }
       function fail(msg) {
         localStorage.removeItem(OV_NOTE_SESSION_KEY);
         localStorage.removeItem(OV_NOTE_ROLE_KEY);
