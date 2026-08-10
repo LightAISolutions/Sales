@@ -84,16 +84,24 @@ A single chronological log of first-hand intel the developer collects from indus
 
 > **Storage moved to Google Drive (M3, 2026-08-10).** The log lives at `Profiler/profiler-notes.json` in the script owner's Drive — **not in this repo**. The repo is public, so a file committed here is readable via `raw.githubusercontent.com` and `git clone` no matter what the app's sign-in wall does; moving it out of `live-site-pages/` alone would have closed only the Pages vector. Attachments live under `Profiler/note-files/<slug>/`, and meeting audio under the uploading user's own Drive.
 >
-> **Drive layout** (all under `Profiler/` in the script owner's Drive):
+> **Drive layout — two owners, two trees.** This split is not cosmetic: `DriveApp` inside the script acts as the account that **deployed** the web app, while browser-side uploads act as the **signed-in user**. They are frequently different accounts, so anything the user is expected to browse must be created browser-side.
+>
+> Script owner's Drive (created by `DriveApp`, invisible to the user unless they own the deployment):
 > ```
 > Profiler/
 > ├── profiler-notes.json                 the log itself
-> ├── note-files/<slug>/                  Word/PDF/transcript attachments
+> └── note-files/<slug>/                  Word/PDF/transcript attachments
+> ```
+> Signed-in user's own Drive (created browser-side with `drive.file`, alongside `Receipts App/`):
+> ```
+> Profiler App/
 > └── meeting-recordings/
 >     ├── 1-awaiting-transcription/       uploaded audio, no transcript yet
 >     └── 2-transcribed/                  audio whose transcript is attached to its note
 > ```
-> Recording filenames are `<slug>--YYYY-MM-DD--<original name>`, so company and date read at a glance in the Drive UI; `unfiled` stands in for the slug when a stray is swept up. The numbered folders make the transcription queue visible without opening the app. Audio is uploaded browser-side with the `drive.file` scope, which can create files but cannot see the script's folders — so uploads land in My Drive root and the backend files them immediately afterwards (`filerec` op). A sweep of root-level audio runs once per admin page load, so a recording uploaded but never filed self-heals. The transcription pass reads its queue via `recpending` and calls `recdone` to move a file into `2-transcribed/`.
+> Recording filenames are `<slug>--YYYY-MM-DD--<original name>`, so company and date read at a glance in the Drive UI; `unfiled` stands in for the slug when a stray is swept up. The numbered folders make the transcription queue visible without opening the app, and the transcription pass — which also runs in the browser — reads them directly.
+>
+> `drive.file` cannot search for a folder it created in an earlier session, so the three folder IDs are parked on the backend (`recfolders` reads them, `setrecfolders` writes them, both admin-gated, stored in Script Properties). Uploads name the pending folder as their `parents` so a recording is never loose in My Drive. Audio uploaded before this tree existed is still reachable — `drive.file` grants persist per file for the app — so a sweep after each upload re-parents any root-level audio it can see.
 >
 > **Consequence for sessions:** an unattended Claude session can no longer read the log. The scheduled post-earnings refreshes, the quarterly sweep, reports, and prep tasks all run without note context unless the developer supplies it. The app's **📋 Copy pending** button (⚙ overlay) and the per-note **📋 Copy** button return the note plus its transcript formatted for pasting into a session — that is the intended replacement for the automated read.
 

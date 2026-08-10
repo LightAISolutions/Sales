@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08g] — 2026-08-10 04:42:24 AM EST — v02.30r
+
+### Fixed
+- The recordings folder is now created in **your own** Google Drive, next to your other app folders, instead of in the Drive of whichever account the app was published from — where you could not see it
 
 ## [v01.07g] — 2026-08-10 04:25:55 AM EST — v02.29r
 

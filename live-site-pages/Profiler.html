@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.23w">
+  <meta name="build-version" content="v01.24w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1799,16 +1799,118 @@
     var OV_DRIVE_CHUNK = 8 * 1024 * 1024;          // must be a multiple of 256 KB
     var OV_DRIVE_RESUMABLE_MIN = 6 * 1024 * 1024;
 
-    // Both upload paths hand back { link, id }. The id is what lets the
-    // backend file the recording afterwards — the browser's drive.file scope
-    // can create the file but cannot see the script's folders to put it in.
+    // ── Recordings folder tree (the user's OWN Drive) ────────────────────────
+    // Mirrors the Receipts app's "Receipts App" folder: created here in the
+    // browser with the signed-in user's drive.file credential, so it lands in
+    // THEIR Drive. The backend cannot do this — DriveApp there acts as the
+    // account that deployed the script, which is not necessarily the person
+    // using the app. drive.file also cannot search for a folder it created in
+    // an earlier session, so the IDs are parked on the backend and read back.
+    var OV_REC_ROOT = 'Profiler App';
+    var OV_REC_DIR = 'meeting-recordings';
+    var OV_REC_PENDING = '1-awaiting-transcription';
+    var OV_REC_DONE = '2-transcribed';
+    var _ovRecFolders = null;
+
+    function ovDriveApi(tok, url, opt) {
+      opt = opt || {};
+      opt.headers = opt.headers || {};
+      opt.headers.Authorization = 'Bearer ' + tok;
+      return fetch(url, opt).then(function(r) {
+        if (!r.ok) throw new Error('drive_http_' + r.status);
+        return r.json();
+      });
+    }
+
+    function ovDriveMkdir(tok, name, parentId) {
+      var body = { name: name, mimeType: 'application/vnd.google-apps.folder' };
+      if (parentId) body.parents = [parentId];
+      return ovDriveApi(tok, 'https://www.googleapis.com/drive/v3/files?fields=id', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      }).then(function(f) { return f.id; });
+    }
+
+    // cb(folders, err) where folders = { root, pending, done }
+    function ovRecFolders(cb) {
+      if (_ovRecFolders) { cb(_ovRecFolders); return; }
+      ovNoteApi('recfolders', {}, function(res) {
+        if (res && res.success && res.folders && res.folders.pending) {
+          _ovRecFolders = res.folders;
+          cb(_ovRecFolders);
+          return;
+        }
+        ovDriveToken(function(tok, err) {
+          if (!tok) { cb(null, err || 'no_token'); return; }
+          ovDriveMkdir(tok, OV_REC_ROOT, null)
+            .then(function(root) {
+              return ovDriveMkdir(tok, OV_REC_DIR, root).then(function(dir) {
+                return Promise.all([
+                  ovDriveMkdir(tok, OV_REC_PENDING, dir),
+                  ovDriveMkdir(tok, OV_REC_DONE, dir)
+                ]).then(function(kids) {
+                  return { root: root, pending: kids[0], done: kids[1] };
+                });
+              });
+            })
+            .then(function(ids) {
+              _ovRecFolders = ids;
+              ovNoteApi('setrecfolders', ids, function() { cb(ids); });
+            })
+            .catch(function(e) { cb(null, String(e && e.message || e)); });
+        });
+      });
+    }
+
+    function ovRecName(slug, name) {
+      var d = new Date();
+      var stamp = d.getFullYear() + '-'
+        + ('0' + (d.getMonth() + 1)).slice(-2) + '-'
+        + ('0' + d.getDate()).slice(-2);
+      var prefix = (slug || 'unfiled') + '--' + stamp + '--';
+      return name.indexOf(prefix) === 0 ? name : prefix + name;
+    }
+
+    // Recordings uploaded before this folder existed are still reachable:
+    // drive.file access is granted per file and persists for this app, so the
+    // app can list and re-parent its own past uploads even though it cannot
+    // see anything else in the user's Drive. cb(count)
+    function ovSweepLooseRecordings(cb) {
+      ovRecFolders(function(folders, ferr) {
+        if (!folders) { cb(0, ferr); return; }
+        ovDriveToken(function(tok, terr) {
+          if (!tok) { cb(0, terr); return; }
+          var q = "mimeType contains 'audio/' and 'root' in parents and trashed=false";
+          ovDriveApi(tok, 'https://www.googleapis.com/drive/v3/files?fields=files(id,name)&q='
+            + encodeURIComponent(q))
+            .then(function(list) {
+              var files = (list && list.files) || [];
+              if (!files.length) { cb(0); return; }
+              return Promise.all(files.map(function(f) {
+                return ovDriveApi(tok, 'https://www.googleapis.com/drive/v3/files/'
+                  + encodeURIComponent(f.id) + '?addParents=' + encodeURIComponent(folders.pending)
+                  + '&removeParents=root&fields=id', {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: ovRecName('unfiled', f.name) })
+                  });
+              })).then(function() { cb(files.length); });
+            })
+            .catch(function(e) { cb(0, String(e && e.message || e)); });
+        });
+      });
+    }
+
+    // Both upload paths hand back { link, id }.
     function ovDriveResult(d) {
       if (!d || !d.id) return d && d.webViewLink ? { link: d.webViewLink, id: null } : null;
       return { link: d.webViewLink || ('https://drive.google.com/file/d/' + d.id + '/view'), id: d.id };
     }
 
-    function ovDriveMultipart(file, tok, cb) {
-      var meta = { name: file.name, mimeType: file.type || 'audio/mpeg' };
+    function ovDriveMultipart(file, tok, name, parentId, cb) {
+      var meta = { name: name, mimeType: file.type || 'audio/mpeg' };
+      if (parentId) meta.parents = [parentId];
       var fd = new FormData();
       fd.append('metadata', new Blob([JSON.stringify(meta)], { type: 'application/json' }));
       fd.append('file', file);
@@ -1834,27 +1936,37 @@
         });
     }
 
-    function ovDriveUploadAudio(file, onProgress, cb) {
-      ovDriveToken(function(tok, err) {
-        if (!tok) { cb(null, err || 'no_token'); return; }
-        if (file.size < OV_DRIVE_RESUMABLE_MIN) { ovDriveMultipart(file, tok, cb); return; }
-        var type = file.type || 'audio/mpeg';
-        fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable&fields=id,webViewLink', {
-          method: 'POST',
-          headers: {
-            Authorization: 'Bearer ' + tok,
-            'Content-Type': 'application/json; charset=UTF-8',
-            'X-Upload-Content-Type': type,
-            'X-Upload-Content-Length': String(file.size)
-          },
-          body: JSON.stringify({ name: file.name, mimeType: type })
-        }).then(function(r) {
-          var loc = r.headers.get('Location');
-          // No session URL (non-OK, or the header is not CORS-exposed here) —
-          // fall back rather than fail; multipart still works, just fragile.
-          if (!r.ok || !loc) { ovDriveMultipart(file, tok, cb); return; }
-          ovDriveSendChunk(file, loc, 0, 0, onProgress, cb);
-        }).catch(function() { ovDriveMultipart(file, tok, cb); });
+    // Uploads straight into the user's own "Profiler App" recordings folder —
+    // no post-upload filing step, so a recording is never loose in My Drive.
+    function ovDriveUploadAudio(file, slug, onProgress, cb) {
+      ovRecFolders(function(folders, ferr) {
+        if (!folders) { cb(null, ferr || 'no_folder'); return; }
+        ovDriveToken(function(tok, err) {
+          if (!tok) { cb(null, err || 'no_token'); return; }
+          var name = ovRecName(slug, file.name);
+          var parent = folders.pending;
+          if (file.size < OV_DRIVE_RESUMABLE_MIN) {
+            ovDriveMultipart(file, tok, name, parent, cb);
+            return;
+          }
+          var type = file.type || 'audio/mpeg';
+          fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable&fields=id,webViewLink', {
+            method: 'POST',
+            headers: {
+              Authorization: 'Bearer ' + tok,
+              'Content-Type': 'application/json; charset=UTF-8',
+              'X-Upload-Content-Type': type,
+              'X-Upload-Content-Length': String(file.size)
+            },
+            body: JSON.stringify({ name: name, mimeType: type, parents: [parent] })
+          }).then(function(r) {
+            var loc = r.headers.get('Location');
+            // No session URL (non-OK, or the header is not CORS-exposed here) —
+            // fall back rather than fail; multipart still works, just fragile.
+            if (!r.ok || !loc) { ovDriveMultipart(file, tok, name, parent, cb); return; }
+            ovDriveSendChunk(file, loc, 0, 0, onProgress, cb);
+          }).catch(function() { ovDriveMultipart(file, tok, name, parent, cb); });
+        });
       });
     }
 
@@ -2043,18 +2155,6 @@
           // consent request can run synchronously off the tap later.
           if (role === 'admin') ovPreloadGis();
           if (role === 'admin') renderForm(); else renderSuggest();
-          // Self-healing sweep, once per page load: a recording uploaded but
-          // never filed (note abandoned, or uploaded before filing existed)
-          // sits loose in My Drive root. Silent unless something actually moved.
-          if (role === 'admin' && !window._ovRecSwept) {
-            window._ovRecSwept = true;
-            ovNoteApi('filerec', {}, function(fr) {
-              if (fr && fr.success && fr.swept && fr.swept.length) {
-                say('Filed ' + fr.swept.length + ' loose recording' + (fr.swept.length > 1 ? 's' : '')
-                  + ' into Profiler/' + fr.folder + '.', true);
-              }
-            });
-          }
         }
         // Suggest mode (non-admin): same inputs, but the note is emailed to
         // the app owner for consideration — nothing is saved to the log
@@ -2195,7 +2295,7 @@
             var mb = (f.size / (1024 * 1024)).toFixed(1);
             recStat.textContent = 'Uploading ' + f.name + ' (' + mb + ' MB)…';
             recBtn.disabled = true;
-            ovDriveUploadAudio(f, function(pct) {
+            ovDriveUploadAudio(f, slug, function(pct) {
               recStat.textContent = 'Uploading ' + f.name + ' (' + mb + ' MB) — ' + pct + '%';
             }, function(res, err) {
               recBtn.disabled = false;
@@ -2208,20 +2308,20 @@
                 return;
               }
               recLink = res.link;
-              recStat.textContent = '✓ ' + f.name + ' (' + mb + ' MB) attached — filing…';
-              // The upload lands in My Drive root because the browser's
-              // drive.file scope cannot see the script's folders. The backend
-              // owns the same Drive, so it does the filing.
-              ovNoteApi('filerec', { fileId: res.id || '', slug: slug }, function(fr) {
-                if (!fr || !fr.success) {
-                  recStat.textContent = '✓ ' + f.name + ' attached (still in My Drive — filing failed)';
-                  return;
-                }
-                var extra = (fr.swept && fr.swept.length)
-                  ? ' · also filed ' + fr.swept.length + ' earlier recording' + (fr.swept.length > 1 ? 's' : '')
-                  : '';
-                recStat.textContent = '✓ ' + f.name + ' → Profiler/' + fr.folder + extra;
-              });
+              var dest = OV_REC_ROOT + '/' + OV_REC_DIR + '/' + OV_REC_PENDING;
+              recStat.textContent = '✓ ' + f.name + ' (' + mb + ' MB) → ' + dest;
+              // Piggyback the stray sweep on the live token rather than firing
+              // it on page load, where no token exists yet and asking for one
+              // would pop a consent window nobody asked for.
+              if (!window._ovRecSwept) {
+                window._ovRecSwept = true;
+                ovSweepLooseRecordings(function(n) {
+                  if (n > 0) {
+                    recStat.textContent = '✓ ' + f.name + ' → ' + dest
+                      + ' · also moved ' + n + ' earlier recording' + (n > 1 ? 's' : '') + ' there';
+                  }
+                });
+              }
             });
           });
 

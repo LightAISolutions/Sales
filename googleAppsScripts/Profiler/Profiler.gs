@@ -1,4 +1,4 @@
-var VERSION = "v01.07g";
+var VERSION = "v01.08g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1925,79 +1925,30 @@ function driveNoteFileId_(ref) {
 }
 
 // ── Meeting recordings ──────────────────────────────────────────────────────
-// Audio is uploaded browser-side with the drive.file scope, which can only
-// create files — it cannot see this script's Profiler folder, so uploads land
-// in My Drive root. The script owns the same Drive with full scope, so filing
-// happens here afterwards. Two folders, numbered so Drive sorts them into
-// workflow order, and so a glance at the Drive UI answers "what still needs
-// transcribing?" without opening the app.
-var DRIVE_REC_DIR = "meeting-recordings";
-var DRIVE_REC_PENDING = "1-awaiting-transcription";
-var DRIVE_REC_DONE = "2-transcribed";
-var REC_SWEEP_MAX = 50;
+// The recordings folder tree is created BROWSER-side with the user's own
+// drive.file credential, exactly like the Receipts app's "Receipts App"
+// folder — so it appears in the signed-in user's Drive rather than in the
+// Drive of whichever account owns this script. (DriveApp here acts as the
+// deploying account, which is not necessarily the person using the app.)
+// The browser cannot reliably re-find a drive.file folder after the fact,
+// so the script only persists the folder IDs on the browser's behalf.
+var PROP_REC_FOLDERS = "REC_FOLDER_IDS";
 
-function driveRecFolder_(which) {
-  return driveChildFolder_(driveChildFolder_(driveRoot_(), DRIVE_REC_DIR), which);
+function recFoldersGet_() {
+  var raw = PropertiesService.getScriptProperties().getProperty(PROP_REC_FOLDERS);
+  if (!raw) return null;
+  try { return JSON.parse(raw); } catch (err) { return null; }
 }
 
-// "<slug>--YYYY-MM-DD--<original name>" — company and date readable at a
-// glance in Drive, original name kept so it still matches what the phone shows.
-function driveRecName_(slug, name) {
-  var stamp = Utilities.formatDate(new Date(), "America/New_York", "yyyy-MM-dd");
-  var prefix = (slug || "unfiled") + "--" + stamp + "--";
-  return name.indexOf(prefix) === 0 ? name : prefix + name;
-}
-
-function driveFileRecording_(fileId, slug) {
-  var file = DriveApp.getFileById(fileId);
-  file.setName(driveRecName_(slug, file.getName()));
-  file.moveTo(driveRecFolder_(DRIVE_REC_PENDING));
-  return file.getName();
-}
-
-// One-way sweep for recordings that landed in My Drive root before filing
-// existed (or when a note was abandoned after upload). Deliberately narrow:
-// root level only, audio MIME only, and every move is reported back to the
-// caller by name so nothing relocates invisibly. Moving inside the same Drive
-// loses no data and the user can drag anything back.
-function driveSweepRootRecordings_() {
-  var moved = [], dest = driveRecFolder_(DRIVE_REC_PENDING);
-  var it = DriveApp.getRootFolder().getFiles(), n = 0;
-  while (it.hasNext() && n < REC_SWEEP_MAX) {
-    n++;
-    var f = it.next();
-    if (String(f.getMimeType() || "").indexOf("audio/") !== 0) continue;
-    try {
-      f.setName(driveRecName_("unfiled", f.getName()));
-      f.moveTo(dest);
-      moved.push(f.getName());
-    } catch (err) { /* skip anything the script cannot move */ }
-  }
-  return moved;
-}
-
-// Queue for the transcription pass: everything still awaiting a transcript.
-function driveListPendingRecordings_() {
-  var out = [], it = driveRecFolder_(DRIVE_REC_PENDING).getFiles();
-  while (it.hasNext()) {
-    var f = it.next();
-    out.push({
-      id: f.getId(),
-      name: f.getName(),
-      sizeBytes: f.getSize(),
-      created: Utilities.formatDate(f.getDateCreated(), "America/New_York", "yyyy-MM-dd HH:mm:ss"),
-      link: f.getUrl()
-    });
-  }
-  out.sort(function(a, b) { return a.created < b.created ? 1 : -1; });
-  return out;
-}
-
-// Called once a transcript exists, so the queue folder only ever holds real work.
-function driveMarkRecordingTranscribed_(fileId) {
-  var file = DriveApp.getFileById(fileId);
-  file.moveTo(driveRecFolder_(DRIVE_REC_DONE));
-  return file.getName();
+function recFoldersSet_(ids) {
+  var clean = {
+    root: String(ids.root || ''),
+    pending: String(ids.pending || ''),
+    done: String(ids.done || '')
+  };
+  if (!clean.root || !clean.pending || !clean.done) throw new Error('INVALID_INPUT');
+  PropertiesService.getScriptProperties().setProperty(PROP_REC_FOLDERS, JSON.stringify(clean));
+  return clean;
 }
 
 function driveDeleteNoteFile_(ref) {
@@ -2246,7 +2197,7 @@ function handleNoteOp_(e) {
     var noteSess = validateSessionForData(session, 'note_' + op);
     var noteIsAdmin = (noteSess.permissions || []).indexOf('admin') >= 0;
     if (['submit', 'list', 'edit', 'delete', 'claudeone', 'claudepending',
-         'filerec', 'recpending', 'recdone'].indexOf(op) >= 0 && !noteIsAdmin) {
+         'recfolders', 'setrecfolders'].indexOf(op) >= 0 && !noteIsAdmin) {
       return { success: false, error: 'ADMIN_ONLY', role: noteSess.role || 'viewer' };
     }
     if (op === 'whoami') {
@@ -2323,28 +2274,18 @@ function handleNoteOp_(e) {
     if (op === 'claudepending') {
       return { success: true, payload: getPendingNotesForClaude(session) };
     }
-    // Files a just-uploaded recording (browser uploads land in My Drive root —
-    // the drive.file scope cannot reach this script's folders) and sweeps up
-    // any earlier strays in the same pass. Both are idempotent.
-    if (op === 'filerec') {
-      var recFiled = null;
-      if (p.fileId) {
-        try { recFiled = driveFileRecording_(String(p.fileId), String(p.slug || '')); }
-        catch (fr) { return { success: false, error: 'file_recording_failed' }; }
-      }
-      var recSwept = [];
-      try { recSwept = driveSweepRootRecordings_(); } catch (sw) { /* filing already succeeded */ }
-      auditLog('data_write', noteSess.email || 'unknown', 'recording_filed',
-        { filed: recFiled, swept: recSwept.length });
-      return { success: true, filed: recFiled, swept: recSwept, folder: DRIVE_REC_DIR + '/' + DRIVE_REC_PENDING };
+    // Folder-ID registry for the browser-owned recordings tree. The browser
+    // creates and reads the folders itself; it just cannot re-find them
+    // across devices, so the IDs are parked here.
+    if (op === 'recfolders') {
+      return { success: true, folders: recFoldersGet_() };
     }
-    // Queue for the transcription pass.
-    if (op === 'recpending') {
-      return { success: true, recordings: driveListPendingRecordings_() };
-    }
-    if (op === 'recdone') {
-      try { return { success: true, moved: driveMarkRecordingTranscribed_(String(p.fileId || '')) }; }
-      catch (rd) { return { success: false, error: 'mark_transcribed_failed' }; }
+    if (op === 'setrecfolders') {
+      try {
+        var savedFolders = recFoldersSet_({ root: p.root, pending: p.pending, done: p.done });
+        auditLog('data_write', noteSess.email || 'unknown', 'recording_folders_registered', savedFolders);
+        return { success: true, folders: savedFolders };
+      } catch (sf) { return { success: false, error: 'bad_folder_ids' }; }
     }
     return { success: false, error: 'unknown_note_op' };
   } catch (err) {
