@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="no-referrer">
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.19w">
+  <meta name="build-version" content="v01.20w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1719,19 +1719,24 @@
     var _ovDriveToken = null;
     function ovDriveToken(cb) {
       if (_ovDriveToken && _ovDriveToken.exp > Date.now() + 60000) { cb(_ovDriveToken.tok); return; }
-      if (!(window.google && google.accounts && google.accounts.oauth2)) { cb(null, 'google_sign_in_unavailable'); return; }
-      try {
-        google.accounts.oauth2.initTokenClient({
-          client_id: OV_GIS_CLIENT_ID,
-          scope: OV_DRIVE_SCOPE,
-          callback: function(resp) {
-            if (!resp || !resp.access_token) { cb(null, 'drive_permission_denied'); return; }
-            // expires_in is seconds; keep a small safety margin on reuse
-            _ovDriveToken = { tok: resp.access_token, exp: Date.now() + ((resp.expires_in || 3600) * 1000) };
-            cb(resp.access_token);
-          }
-        }).requestAccessToken();
-      } catch (err) { cb(null, 'drive_auth_failed'); }
+      // The GIS library is injected on demand by the sign-in flow. On a page
+      // load where the session is already in localStorage that flow never runs,
+      // so google.accounts is absent here even though the user is signed in —
+      // load it before asking for a token rather than assuming it is present.
+      ovLoadGis().then(function() {
+        try {
+          google.accounts.oauth2.initTokenClient({
+            client_id: OV_GIS_CLIENT_ID,
+            scope: OV_DRIVE_SCOPE,
+            callback: function(resp) {
+              if (!resp || !resp.access_token) { cb(null, 'drive_permission_denied'); return; }
+              // expires_in is seconds; keep a small safety margin on reuse
+              _ovDriveToken = { tok: resp.access_token, exp: Date.now() + ((resp.expires_in || 3600) * 1000) };
+              cb(resp.access_token);
+            }
+          }).requestAccessToken();
+        } catch (err) { cb(null, 'drive_auth_failed'); }
+      }).catch(function() { cb(null, 'google_sign_in_unavailable'); });
     }
     // Multipart upload — metadata part + binary part in one request. cb(link, err)
     function ovDriveUploadAudio(file, cb) {
@@ -2054,7 +2059,7 @@
                 ta.value = ''; fileInput.value = '';
                 say('Saved ' + res.id + ' (' + res.slug + ', confidence ' + res.confidence
                   + (res.files ? ', ' + res.files + ' file' + (res.files > 1 ? 's' : '') : '')
-                  + '). Appears in the ⚙ changelog after the next deploy (~1–2 min).', true);
+                  + '). Visible in the ⚙ log right away.', true);
               });
             });
           });
@@ -2086,7 +2091,7 @@
                 say('Deleting ' + n.id + '…');
                 ovNoteApi('delete', { id: n.id }, function(res) {
                   if (!sessionGuard(res, 'Delete failed')) return;
-                  say('Deleted ' + n.id + '. Log updates after the next deploy (~1–2 min).', true);
+                  say('Deleted ' + n.id + '.', true);
                   loadRows();
                 });
               });
@@ -2106,7 +2111,7 @@
                   say('Saving ' + n.id + '…');
                   ovNoteApi('edit', { id: n.id, note: newText, confidence: eSel.value }, function(res) {
                     if (!sessionGuard(res, 'Edit failed')) return;
-                    say('Updated ' + n.id + '. Log updates after the next deploy (~1–2 min).', true);
+                    say('Updated ' + n.id + '.', true);
                     loadRows();
                   });
                 });

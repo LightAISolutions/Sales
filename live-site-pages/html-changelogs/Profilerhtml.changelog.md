@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 19/50`
+`Sections: 20/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.20w] — 2026-08-10 03:38:54 AM EST — v02.26r
+
+### Fixed
+- Attaching a meeting recording failed for anyone already signed in — the upload now works without needing to sign in again
+- Note confirmations no longer say the log updates after a short delay; notes appear in the log immediately
 
 ## [v01.19w] — 2026-08-10 02:17:53 AM EST — v02.25r
 
