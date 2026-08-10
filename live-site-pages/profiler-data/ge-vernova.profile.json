@@ -206,19 +206,19 @@
     ]
   },
   "sources": [
-    {"label": "GE Vernova Q2 2026 press release", "url": "https://www.gevernova.com/sites/default/files/gev_webcast_pressrelease_07222026.pdf", "accessed": "2026-08-09"},
-    {"label": "GE Vernova FY2025 press release", "url": "https://www.gevernova.com/sites/default/files/gev_webcast_pressrelease_01282026.pdf", "accessed": "2026-08-09"},
-    {"label": "December 2025 Investor Update transcript", "url": "https://www.gevernova.com/sites/default/files/gev_webcast_transcript_12092025.pdf", "accessed": "2026-08-09"},
-    {"label": "7HA gas turbine product page", "url": "https://www.gevernova.com/gas-power/products/gas-turbines/7ha", "accessed": "2026-08-09"},
-    {"label": "Gas power for data centers", "url": "https://www.gevernova.com/gas-power/industries/data-centers", "accessed": "2026-08-09"},
-    {"label": "AI Factory 800 VDC reference designs whitepaper", "url": "https://library.grid.gevernova.com/white-papers-case-studies/ai-factory-800vdc-reference-designs", "accessed": "2026-08-09"},
-    {"label": "Prolec GE acquisition completion", "url": "https://www.gevernova.com/news/press-releases/ge-vernova-completes-prolec-ge-acquisition", "accessed": "2026-08-09"},
-    {"label": "Chevron data-center power partnership", "url": "https://www.gevernova.com/gas-power/resources/articles/2025/meeting-data-center-demand-with-chevron", "accessed": "2026-08-09"},
-    {"label": "Turbomachinery Magazine — 116 GW backlog", "url": "https://www.turbomachinerymag.com/view/ge-vernova-gas-turbine-backlog-hits-116-gw-as-power-orders-more-than-double", "accessed": "2026-08-09"},
-    {"label": "Wood Mackenzie — transformer lead times", "url": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transformer-lead-times/", "accessed": "2026-08-09"},
-    {"label": "Global Energy Monitor — turbine OEM concentration", "url": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbines-gas-fired-power-plants-under", "accessed": "2026-08-09"},
-    {"label": "Boston Globe — wind loss overshoot", "url": "https://www.bostonglobe.com/2026/01/28/business/ge-vernova-offshore-wind-losses/", "accessed": "2026-08-09"},
-    {"label": "Utility Dive — slot/backlog analysis", "url": "https://www.utilitydive.com/news/ge-vernova-gas-turbine-investor/807662/", "accessed": "2026-08-09"}
+    {"label": "GE Vernova Q2 2026 press release", "url": "https://www.gevernova.com/sites/default/files/gev_webcast_pressrelease_07222026.pdf", "date": "2026-07-22"},
+    {"label": "Turbomachinery Magazine — 116 GW backlog", "url": "https://www.turbomachinerymag.com/view/ge-vernova-gas-turbine-backlog-hits-116-gw-as-power-orders-more-than-double", "date": "2026-07"},
+    {"label": "Prolec GE acquisition completion", "url": "https://www.gevernova.com/news/press-releases/ge-vernova-completes-prolec-ge-acquisition", "date": "2026-02-02"},
+    {"label": "GE Vernova FY2025 press release", "url": "https://www.gevernova.com/sites/default/files/gev_webcast_pressrelease_01282026.pdf", "date": "2026-01-28"},
+    {"label": "Boston Globe — wind loss overshoot", "url": "https://www.bostonglobe.com/2026/01/28/business/ge-vernova-offshore-wind-losses/", "date": "2026-01-28"},
+    {"label": "December 2025 Investor Update transcript", "url": "https://www.gevernova.com/sites/default/files/gev_webcast_transcript_12092025.pdf", "date": "2025-12-09"},
+    {"label": "Utility Dive — slot/backlog analysis", "url": "https://www.utilitydive.com/news/ge-vernova-gas-turbine-investor/807662/", "date": "2025-12"},
+    {"label": "AI Factory 800 VDC reference designs whitepaper", "url": "https://library.grid.gevernova.com/white-papers-case-studies/ai-factory-800vdc-reference-designs", "date": "2025-10-24"},
+    {"label": "Chevron data-center power partnership", "url": "https://www.gevernova.com/gas-power/resources/articles/2025/meeting-data-center-demand-with-chevron", "date": "2025-06-15"},
+    {"label": "Global Energy Monitor — turbine OEM concentration", "url": "https://globalenergymonitor.org/research/leading-three-manufacturers-providing-two-thirds-turbines-gas-fired-power-plants-under", "date": "2025-02"},
+    {"label": "Wood Mackenzie — transformer lead times", "url": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transformer-lead-times/", "date": "2024-07"},
+    {"label": "7HA gas turbine product page", "url": "https://www.gevernova.com/gas-power/products/gas-turbines/7ha"},
+    {"label": "Gas power for data centers", "url": "https://www.gevernova.com/gas-power/industries/data-centers"}
   ],
   "lastUpdated": "2026-08-09",
   "profileVersion": 1

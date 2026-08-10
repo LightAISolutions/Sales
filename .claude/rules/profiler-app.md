@@ -105,22 +105,29 @@ Post-earnings dossier refreshes run on one-shot Routines (triggers) rather than 
 - **Self-re-arming** — the final step of every scheduled refresh researches the company's next scheduled report date and creates the next one-shot trigger (report date +1 day). If trigger tooling is unavailable in the firing session, it instead adds an Active Reminder to `repository-information/REMINDERS.md` telling the developer to re-arm manually (including the expected date) and states this plainly in its summary
 - **Currently armed** (all fire fresh sessions; one-shots re-arm themselves):
   - **Sinexcel** (SZSE ChiNext: 300693) — fires 2026-08-12 13:00 UTC (H1 report scheduled 2026-08-11)
+  - **EVE Energy** (SZSE ChiNext: 300014) — fires 2026-08-21 13:00 UTC (H1 report expected 2026-08-18 per TradingView or 2026-08-20 per StockAnalysis — sources conflicted at arming; the fired session verifies)
   - **NVIDIA** (NASDAQ: NVDA) — fires 2026-08-27 13:00 UTC (Q2 FY2027 results company-confirmed for 2026-08-26)
   - **Jinko** (NYSE: JKS · SSE: 688223) — fires 2026-08-28 13:00 UTC (JKS Q2 results estimated ~2026-08-27; A-share H1 report due by the 2026-08-31 deadline; the fired session confirms and re-schedules if needed)
   - **Sungrow** (SZSE: 300274) — fires 2026-08-30 13:00 UTC (H1 report scheduled 2026-08-29)
   - **BYD** (SZSE: 002594 · HKEX: 1211) — fires 2026-08-30 15:00 UTC (H1 results scheduled 2026-08-29; staggered 2h after Sungrow to avoid parallel-session conflicts)
+  - **ABB** (SIX: ABBN) — fires 2026-10-21 13:00 UTC (Q3 results scheduled 2026-10-20 per ABB's quarterly-results calendar)
   - **Tesla** (NASDAQ: TSLA) — fires 2026-10-22 13:00 UTC (Q3 results estimated ~2026-10-21; the fired session confirms the real date and re-schedules if needed)
+  - **Hitachi Energy** (parent Hitachi TYO: 6501) — fires 2026-10-24 13:00 UTC (parent Q2 FY2026 results expected 2026-10-23 per Investing.com estimate; Energy segment figures come from the parent's disclosure; the fired session confirms and re-schedules if needed)
   - **Wärtsilä** (HEL: WRT1V) — fires 2026-10-28 13:00 UTC (Jan–Sep interim report announced for 2026-10-27)
   - **Samsung SDI** (KRX: 006400) — fires 2026-10-28 15:00 UTC (Q3 results calendar-listed for 2026-10-27; staggered 2h after Wärtsilä to avoid parallel-session conflicts)
   - **Google** (NASDAQ: GOOGL) — fires 2026-10-28 17:00 UTC (Q3 results listed as confirmed for 2026-10-27 after close; staggered after Samsung SDI)
   - **Microsoft** (NASDAQ: MSFT) — fires 2026-10-28 19:00 UTC (FY2027 Q1 results estimated ~2026-10-27 after close; staggered after Google)
   - **Meta** (NASDAQ: META) — fires 2026-10-29 13:00 UTC (Q3 results estimated ~2026-10-28 after close; the fired session confirms and re-schedules if needed)
+  - **Equinix** (NASDAQ: EQIX) — fires 2026-10-29 15:00 UTC (Q3 results estimated ~2026-10-28 after close from the prior-year pattern; not company-confirmed at arming; staggered 2h after Meta; the fired session confirms and re-schedules if needed)
   - **Amazon** (NASDAQ: AMZN) — fires 2026-10-30 13:00 UTC (Q3 results estimated ~2026-10-29 after close; tracker estimates ranged 10-22 to 11-02; the fired session confirms and re-schedules if needed)
   - **LG Energy Solution** (KRX: 373220) — fires 2026-10-30 15:00 UTC (Q3 full results estimated ~2026-10-29 from the prior-quarter pattern; staggered 2h after Amazon; the fired session confirms and re-schedules if needed)
+  - **Quanta Services** (NYSE: PWR) — fires 2026-10-30 17:00 UTC (Q3 results expected 2026-10-29 per Investing.com/Nasdaq; staggered 2h after LG Energy Solution; the fired session confirms and re-schedules if needed)
   - **Panasonic** (TYO: 6752) — fires 2026-10-31 13:00 UTC (FY2027 Q2 results estimated ~2026-10-30 from the prior-year pattern; the fired session confirms and re-schedules if needed)
   - **CATL** (SZSE: 300750 · HKEX: 3750) — fires 2026-11-01 13:00 UTC (Q3 report due by the 2026-10-31 disclosure deadline)
+  - **Constellation Energy** (NASDAQ: CEG) — fires 2026-11-10 13:00 UTC (Q3 results confirmed for 2026-11-09 per Zacks/Nasdaq earnings calendar)
+  - **Siemens Energy** (ETR: ENR) — fires 2026-11-12 13:00 UTC (Q4/FY2026 extended results call company-announced for 2026-11-11; note the pending 'Omterra' rebrand — the fired session updates name/brand fields as needed)
   - **Fluence** (NASDAQ: FLNC) — fires 2026-11-25 14:00 UTC (Q4/FY2026 results estimated ~2026-11-24, FY ends Sep 30; the fired session confirms the real date and re-schedules if needed)
-  - **Hithium, FlexGen & Rosendin** (private, no earnings calendar) — recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC) that checks for material developments and refreshes only when warranted; recurs on its own, no re-arm. Rosendin joined 2026-08-09 (dossier watch items: data-center project awards, BESSUPS rollout with FlexGen, EPC storage wins)
+  - **Hithium, FlexGen, Rosendin, Crusoe, Huawei Digital Power & xAI** (private / unit-level, no earnings calendar) — recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC) that checks for material developments and refreshes only when warranted; recurs on its own, no re-arm. Rosendin joined 2026-08-09; Crusoe, Huawei Digital Power, and xAI joined 2026-08-09 (Crusoe watch items: campus/power contracts, funding/valuation, energy-stack partnerships, IPO signals; Huawei DP: annual/interim segment figures, US/EU regulatory actions, AIDC launches, Gulf/APAC wins; xAI: SpaceX IPO progress — if SpaceXAI begins quarterly reporting, the sweep recommends converting xAI to a post-earnings trigger — Colossus milestones, NAACP litigation, turbine/Megapack procurement, Anthropic agreements)
 
 ## Version & changelog interactions
 

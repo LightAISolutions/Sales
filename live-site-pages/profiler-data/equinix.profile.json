@@ -182,18 +182,18 @@
     ]
   },
   "sources": [
-    {"label": "Equinix Q2 2026 results release", "url": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results,-Raises-2026-Guidance-and-Long-Term-Outlook", "accessed": "2026-08-09"},
-    {"label": "Equinix FY2025 results (8-K)", "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000030/february112026pressrelease-.htm", "accessed": "2026-08-09"},
-    {"label": "US xScale >$15B JV announcement", "url": "https://newsroom.equinix.com/2024-10-01-Equinix-Agrees-to-Form-Greater-Than-15B-JV-to-Expand-Hyperscale-Data-Centers-in-the-U-S-and-Support-Growing-AI-and-Cloud-Innovation", "accessed": "2026-08-09"},
-    {"label": "atNorth acquisition", "url": "https://investor.equinix.com/news-events/press-releases/detail/1099/cpp-investments-and-equinix-to-acquire-atnorth-for-us4", "accessed": "2026-08-09"},
-    {"label": "Alternative-energy portfolio (Bloom + nuclear)", "url": "https://newsroom.equinix.com/2025-08-14-Equinix-Collaborates-with-Leading-Alternative-Energy-Providers-to-Power-AI-Ready-Data-Center-Growth", "accessed": "2026-08-09"},
-    {"label": "Central Georgia EMC ratepayer agreement", "url": "https://newsroom.equinix.com/2026-08-06-Equinix-Partners-with-Central-Georgia-Electric-Membership-Corporation-to-Protect-Ratepayers", "accessed": "2026-08-09"},
-    {"label": "Synergy Research — colocation share", "url": "https://www.srgresearch.com/articles/equinix-digital-realty-and-ntt-control-30-of-the-growing-worldwide-colocation-market", "accessed": "2026-08-09"},
-    {"label": "Motley Fool — analyst-day selloff", "url": "https://www.fool.com/investing/2025/06/26/why-shares-in-this-data-center-reit-slumped-today", "accessed": "2026-08-09"},
-    {"label": "DCD — SEC investigation closed", "url": "https://www.datacenterdynamics.com/en/news/sec-drops-investigation-into-equinix-following-short-seller-accusations-of-accounting-manipulation/", "accessed": "2026-08-09"},
-    {"label": "Hindenburg report (historical short thesis)", "url": "https://hindenburgresearch.com/equinix/", "accessed": "2026-08-09"},
-    {"label": "CBRE Global Data Center Trends 2026 (power constraints)", "url": "https://www.cbre.com/insights/reports/global-data-center-trends-2026", "accessed": "2026-08-09"},
-    {"label": "Bloom fuel-cell fleet expansion (DCD)", "url": "https://www.datacenterdynamics.com/en/news/bloom-extends-fuel-cell-supply-agreement-with-equinix/", "accessed": "2026-08-09"}
+    {"label": "Central Georgia EMC ratepayer agreement", "url": "https://newsroom.equinix.com/2026-08-06-Equinix-Partners-with-Central-Georgia-Electric-Membership-Corporation-to-Protect-Ratepayers", "date": "2026-08-06"},
+    {"label": "Equinix Q2 2026 results release", "url": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results,-Raises-2026-Guidance-and-Long-Term-Outlook", "date": "2026-07-29"},
+    {"label": "CBRE Global Data Center Trends 2026 (power constraints)", "url": "https://www.cbre.com/insights/reports/global-data-center-trends-2026", "date": "2026-06"},
+    {"label": "atNorth acquisition", "url": "https://investor.equinix.com/news-events/press-releases/detail/1099/cpp-investments-and-equinix-to-acquire-atnorth-for-us4", "date": "2026-02-27"},
+    {"label": "Equinix FY2025 results (8-K)", "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000030/february112026pressrelease-.htm", "date": "2026-02-11"},
+    {"label": "DCD — SEC investigation closed", "url": "https://www.datacenterdynamics.com/en/news/sec-drops-investigation-into-equinix-following-short-seller-accusations-of-accounting-manipulation/", "date": "2025-11-21"},
+    {"label": "Alternative-energy portfolio (Bloom + nuclear)", "url": "https://newsroom.equinix.com/2025-08-14-Equinix-Collaborates-with-Leading-Alternative-Energy-Providers-to-Power-AI-Ready-Data-Center-Growth", "date": "2025-08-14"},
+    {"label": "Motley Fool — analyst-day selloff", "url": "https://www.fool.com/investing/2025/06/26/why-shares-in-this-data-center-reit-slumped-today", "date": "2025-06-26"},
+    {"label": "US xScale >$15B JV announcement", "url": "https://newsroom.equinix.com/2024-10-01-Equinix-Agrees-to-Form-Greater-Than-15B-JV-to-Expand-Hyperscale-Data-Centers-in-the-U-S-and-Support-Growing-AI-and-Cloud-Innovation", "date": "2024-10-01"},
+    {"label": "Bloom fuel-cell fleet expansion (DCD)", "url": "https://www.datacenterdynamics.com/en/news/bloom-extends-fuel-cell-supply-agreement-with-equinix/", "date": "2024-06"},
+    {"label": "Hindenburg report (historical short thesis)", "url": "https://hindenburgresearch.com/equinix/", "date": "2024-03-20"},
+    {"label": "Synergy Research — colocation share", "url": "https://www.srgresearch.com/articles/equinix-digital-realty-and-ntt-control-30-of-the-growing-worldwide-colocation-market", "date": "2023-03"}
   ],
   "lastUpdated": "2026-08-09",
   "profileVersion": 1

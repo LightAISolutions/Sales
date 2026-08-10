@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.17w">
+  <meta name="build-version" content="v01.18w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1674,8 +1674,9 @@
         p.sources.forEach(function(s) {
           var li = ovEl('li');
           li.appendChild(ovLink(s.url, null, s.label || s.url));
-          if (s.accessed) li.appendChild(document.createTextNode(' — '));
-          if (s.accessed) li.appendChild(ovEl('span', 'ov-asof', 'accessed ' + s.accessed));
+          var srcDate = s.date ? s.date : (s.accessed ? 'accessed ' + s.accessed : null);
+          if (srcDate) li.appendChild(document.createTextNode(' — '));
+          if (srcDate) li.appendChild(ovEl('span', 'ov-asof', srcDate));
           ol.appendChild(li);
         });
         wrapS.appendChild(ol);
@@ -2450,7 +2451,8 @@
           var li = ovEl('li');
           li.appendChild(document.createTextNode((s.label ? s.label + ' — ' : '')));
           li.appendChild(ovLink(s.url, null, s.url));
-          if (s.accessed) li.appendChild(document.createTextNode(' (accessed ' + s.accessed + ')'));
+          if (s.date) li.appendChild(document.createTextNode(' (' + s.date + ')'));
+          else if (s.accessed) li.appendChild(document.createTextNode(' (accessed ' + s.accessed + ')'));
           ol.appendChild(li);
         });
         doc.appendChild(ol);

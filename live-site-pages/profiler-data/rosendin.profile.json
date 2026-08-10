@@ -135,18 +135,18 @@
     "commentary": "Private, employee-owned — no audited public financials or analyst consensus exist. Revenue figures are company-reported and corroborated by EC&M's independent Top 50 rankings; treat backlog and aggregate GWh claims as company statements."
   },
   "sources": [
-    { "label": "Rosendin — Who We Are / history", "url": "https://www.rosendin.com/who-we-are/", "accessed": "2026-08-09" },
-    { "label": "Rosendin — Data Centers sector page", "url": "https://www.rosendin.com/sectors/data-centers/", "accessed": "2026-08-09" },
-    { "label": "Rosendin — Renewable Energy sector page", "url": "https://www.rosendin.com/sectors/renewable-energy/", "accessed": "2026-08-09" },
-    { "label": "Rosendin Holdings — collaborative leadership structure PR (Jan 2026)", "url": "https://www.rosendin.com/news-updates/rosendin-holdings-announces-collaborative-leadership-structure-focused-on-purposeful-growth/", "accessed": "2026-08-09" },
-    { "label": "Rosendin Energy Group leadership PR (Feb 2026)", "url": "https://www.rosendin.com/news-updates/rosendin-energy-group-names-new-leadership-to-drive-strategic-growth/", "accessed": "2026-08-09" },
-    { "label": "Rosendin × FlexGen BESSUPS announcement (Business Wire, Jun 2025)", "url": "https://www.businesswire.com/news/home/20250603612484/en/", "accessed": "2026-08-09" },
-    { "label": "Rosendin × Phinergy aluminum-air backup PR (Aug 2025)", "url": "https://www.rosendin.com/news-updates/rosendin-partners-with-phinergy-to-rollout-aluminum-air-backup-for-us-data-center-market/", "accessed": "2026-08-09" },
-    { "label": "EC&M 2025 Top 50 Electrical Contractors rankings", "url": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-contractors-rankings", "accessed": "2026-08-09" },
-    { "label": "Construction Dive — co-president reorg amid data-center boom", "url": "https://www.constructiondive.com/news/rosendin-executive-president-data-center/811066/", "accessed": "2026-08-09" },
-    { "label": "Arevon — Townsite Solar+Storage completion", "url": "https://arevonenergy.com/news/releases/arevon-and-rosendin-complete-townsite-solar-storage-project-in-boulder-city-nevada/", "accessed": "2026-08-09" },
-    { "label": "Data Center Frontier — BESSUPS analysis", "url": "https://www.datacenterfrontier.com/energy/article/55296732/transforming-data-center-energy-the-innovative-flexgen-and-rosendin-bessups-collaboration", "accessed": "2026-08-09" },
-    { "label": "Electrical Wholesaling — Richmond expansion / $5.6B scale", "url": "https://www.ewweb.com/news/bulletin-board/article/55362919/rosendin-electric-to-expand-in-richmond-market", "accessed": "2026-08-09" }
+    { "label": "Rosendin Energy Group leadership PR (Feb 2026)", "url": "https://www.rosendin.com/news-updates/rosendin-energy-group-names-new-leadership-to-drive-strategic-growth/", "date": "2026-02-19" },
+    { "label": "Electrical Wholesaling — Richmond expansion / $5.6B scale", "url": "https://www.ewweb.com/news/bulletin-board/article/55362919/rosendin-electric-to-expand-in-richmond-market", "date": "2026-02" },
+    { "label": "Construction Dive — co-president reorg amid data-center boom", "url": "https://www.constructiondive.com/news/rosendin-executive-president-data-center/811066/", "date": "2026-01-28" },
+    { "label": "Rosendin Holdings — collaborative leadership structure PR (Jan 2026)", "url": "https://www.rosendin.com/news-updates/rosendin-holdings-announces-collaborative-leadership-structure-focused-on-purposeful-growth/", "date": "2026-01" },
+    { "label": "Rosendin × Phinergy aluminum-air backup PR (Aug 2025)", "url": "https://www.rosendin.com/news-updates/rosendin-partners-with-phinergy-to-rollout-aluminum-air-backup-for-us-data-center-market/", "date": "2025-08-12" },
+    { "label": "Rosendin × FlexGen BESSUPS announcement (Business Wire, Jun 2025)", "url": "https://www.businesswire.com/news/home/20250603612484/en/", "date": "2025-06-03" },
+    { "label": "EC&M 2025 Top 50 Electrical Contractors rankings", "url": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-contractors-rankings", "date": "2025-06" },
+    { "label": "Data Center Frontier — BESSUPS analysis", "url": "https://www.datacenterfrontier.com/energy/article/55296732/transforming-data-center-energy-the-innovative-flexgen-and-rosendin-bessups-collaboration", "date": "2025-06" },
+    { "label": "Arevon — Townsite Solar+Storage completion", "url": "https://arevonenergy.com/news/releases/arevon-and-rosendin-complete-townsite-solar-storage-project-in-boulder-city-nevada/", "date": "2022-04" },
+    { "label": "Rosendin — Who We Are / history", "url": "https://www.rosendin.com/who-we-are/" },
+    { "label": "Rosendin — Data Centers sector page", "url": "https://www.rosendin.com/sectors/data-centers/" },
+    { "label": "Rosendin — Renewable Energy sector page", "url": "https://www.rosendin.com/sectors/renewable-energy/" }
   ],
   "lastUpdated": "2026-08-09",
   "profileVersion": 1

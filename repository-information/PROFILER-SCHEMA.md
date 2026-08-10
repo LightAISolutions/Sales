@@ -49,7 +49,7 @@ Top-level fields:
 | `technicalSpecs[]` | object[] | no | `{ "product", "specs": [{ "label", "value" }], "notes" }` — flagship products only, concrete figures |
 | `decisionMakers[]` | object[] | yes | See below |
 | `financials` | object | yes | See below |
-| `sources[]` | object[] | yes | `{ "label", "url", "accessed": "YYYY-MM-DD" }` — every fact in the profile must be traceable to one of these |
+| `sources[]` | object[] | yes | `{ "label", "url", "date": "YYYY-MM-DD" }` — every fact in the profile must be traceable to one of these. `date` is the source's **publication/article date** (`YYYY-MM` when only the month is known); **omit the field** for undated evergreen pages (product pages, IR hubs, corporate about pages, market-report landing pages, aggregator quote pages). **Ordering: chronological, newest publication first; undated sources last** (developer directive, 2026-08-09 — replaced the accessed-date format and the first-party-first ordering). The renderer falls back to a legacy `accessed` field for archived pre-migration profiles |
 | `lastUpdated` | string | yes | `YYYY-MM-DD` of this revision |
 | `profileVersion` | number | yes | Starts at `1`, +1 on every revision — gives Claude a diffable revision marker |
 
@@ -69,14 +69,14 @@ Top-level fields:
 
 - **Products & services are the priority section** (developer directive, 2026-08-07) — `productsAndServices[]` and `technicalSpecs[]` carry the deepest research investment: enumerate every product line, name flagships, quote concrete specs, and fill all four depth fields per entry wherever the public record allows. Other sections stay standard-depth
 - **Public sources only** — profiles deploy to public GitHub Pages. Company sites, filings, press releases, reputable financial media only. Never include deal notes, quoted pricing, NDA'd material, or anything learned privately
-- **Source priority** — the target company's own Investor Relations and press-release pages outrank trade news: scrape them fully **first** (they are ground truth for products, specs, leadership, and company-reported figures), then use trade press, filings, and consultancies for what the company cannot supply about itself — expectations/consensus, independent rankings, and critical context. List first-party sources first in `sources[]`
+- **Source priority** — the target company's own Investor Relations and press-release pages outrank trade news: scrape them fully **first** (they are ground truth for products, specs, leadership, and company-reported figures), then use trade press, filings, and consultancies for what the company cannot supply about itself — expectations/consensus, independent rankings, and critical context. This priority governs **research order**, not citation order — `sources[]` itself is ordered chronologically, newest publication date first, undated evergreen pages last (developer directive, 2026-08-09)
 - **No fabrication** — a number, name, spec, or URL that can't be sourced is omitted or marked as an estimate in the text; empty beats invented
 - **Expectations honesty** — `expected` values must be real published consensus/guidance figures; when none exists, leave it empty and say so in commentary rather than manufacturing a benchmark
 - **Photo policy** — only photos the company itself published (leadership page, press kit), downloaded into `live-site-pages/images/execs/` so the page never hotlinks. LinkedIn photos are never scraped (auth wall + ToS). No photo → the app renders an initials avatar automatically
 - **Standard treatment for every company** — every profile uses exactly these sections. No company-specific sections, no bespoke fields, no special emphasis for any one company (explicit developer rule)
 - **Analysis stays labeled** — `strategyRead[]` is the only section allowed to contain inference beyond the sources, and the renderer marks it as analysis; every other section states only what a cited source supports. A strategy read that a source directly supports belongs in `recentDevelopments[].read` instead
 - **Recent-developments window** — cover the trailing 12–18 months, newest first; prefer first-party press releases as the `source` per the source-priority rule, with trade press for events the company didn't announce itself
-- **Dates everywhere** — `lastUpdated`, per-source `accessed` dates, and period labels make staleness visible; a future revision session bumps `profileVersion` and `lastUpdated`
+- **Dates everywhere** — `lastUpdated`, per-source publication `date` values, and period labels make staleness visible; a future revision session bumps `profileVersion` and `lastUpdated`
 
 ## Field Notes schema — `profiler-notes.json`
 

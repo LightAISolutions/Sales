@@ -236,19 +236,19 @@
     ]
   },
   "sources": [
-    {"label": "Eaton Q2 2026 results release", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-second-quarter-2026-results.html", "accessed": "2026-08-09"},
-    {"label": "Eaton FY2025 10-K", "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm", "accessed": "2026-08-09"},
-    {"label": "Eaton FY2025 results (8-K exhibit)", "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000002/etn12312025exhibit99.htm", "accessed": "2026-08-09"},
-    {"label": "Boyd Thermal acquisition announcement", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-signs-agreement-to-acquire-boyd-thermal--expandin-solutio.html", "accessed": "2026-08-09"},
-    {"label": "Boyd Thermal close", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-completes-acquisition-of-leading-liquid-cooling-solutions-provider-boyd-thermal.html", "accessed": "2026-08-09"},
-    {"label": "NVIDIA collaboration announcement", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-accelerates-data-center-infrastrructure-in-ai-era-with-nvidia.html", "accessed": "2026-08-09"},
-    {"label": "800 VDC reference architecture (OCP)", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-unveils-next-generation-architecture.html", "accessed": "2026-08-09"},
-    {"label": "Siemens Energy alliance", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-and-siemens-energy-join-forces-to-provide-power-and-technology.html", "accessed": "2026-08-09"},
-    {"label": "9395X UPS datasheet", "url": "https://www.eaton.com/content/dam/eaton/products/backup-power-ups-surge-it-power-distribution/backup-power-ups/power-xpert-9395/9395x/documents/eaton-9395x-ups-datasheet-product-specification-guides-ps153066-en-us.pdf", "accessed": "2026-08-09"},
-    {"label": "MarketsandMarkets — data-center power market share", "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp", "accessed": "2026-08-09"},
-    {"label": "Zacks/Yahoo Q2 2026 verdict", "url": "https://finance.yahoo.com/markets/stocks/articles/eatons-q2-earnings-beat-strong-145700229.html", "accessed": "2026-08-09"},
-    {"label": "MarketScreener — Boyd deal terms (22.5x EBITDA)", "url": "https://www.marketscreener.com/news/eaton-to-buy-boyd-thermal-for-9-5-billion-ce7d5cd9dd89f325", "accessed": "2026-08-09"},
-    {"label": "GuruFocus Q4 2024 verdict", "url": "https://www.gurufocus.com/news/2676015/eaton-corp-plc-reports-q4-2024-earnings-adjusted-eps-of-283-beats-estimates-revenue-at-624-billion-misses-expectations", "accessed": "2026-08-09"}
+    {"label": "Eaton Q2 2026 results release", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-second-quarter-2026-results.html", "date": "2026-07-31"},
+    {"label": "Zacks/Yahoo Q2 2026 verdict", "url": "https://finance.yahoo.com/markets/stocks/articles/eatons-q2-earnings-beat-strong-145700229.html", "date": "2026-07"},
+    {"label": "Boyd Thermal close", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-completes-acquisition-of-leading-liquid-cooling-solutions-provider-boyd-thermal.html", "date": "2026-03-12"},
+    {"label": "Eaton FY2025 10-K", "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm", "date": "2026-02"},
+    {"label": "Eaton FY2025 results (8-K exhibit)", "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000002/etn12312025exhibit99.htm", "date": "2026-02"},
+    {"label": "Boyd Thermal acquisition announcement", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-signs-agreement-to-acquire-boyd-thermal--expandin-solutio.html", "date": "2025-11"},
+    {"label": "MarketScreener — Boyd deal terms (22.5x EBITDA)", "url": "https://www.marketscreener.com/news/eaton-to-buy-boyd-thermal-for-9-5-billion-ce7d5cd9dd89f325", "date": "2025-11"},
+    {"label": "800 VDC reference architecture (OCP)", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-unveils-next-generation-architecture.html", "date": "2025-10-13"},
+    {"label": "NVIDIA collaboration announcement", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-accelerates-data-center-infrastrructure-in-ai-era-with-nvidia.html", "date": "2025-07-15"},
+    {"label": "Siemens Energy alliance", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-and-siemens-energy-join-forces-to-provide-power-and-technology.html", "date": "2025-06-03"},
+    {"label": "GuruFocus Q4 2024 verdict", "url": "https://www.gurufocus.com/news/2676015/eaton-corp-plc-reports-q4-2024-earnings-adjusted-eps-of-283-beats-estimates-revenue-at-624-billion-misses-expectations", "date": "2025-01"},
+    {"label": "9395X UPS datasheet", "url": "https://www.eaton.com/content/dam/eaton/products/backup-power-ups-surge-it-power-distribution/backup-power-ups/power-xpert-9395/9395x/documents/eaton-9395x-ups-datasheet-product-specification-guides-ps153066-en-us.pdf"},
+    {"label": "MarketsandMarkets — data-center power market share", "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp"}
   ],
   "lastUpdated": "2026-08-09",
   "profileVersion": 1

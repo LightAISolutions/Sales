@@ -754,214 +754,191 @@
   },
   "sources": [
     {
-      "label": "Sinexcel official site (EN) — products, installed-base claims",
-      "url": "https://en.sinexcel.com/",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "Sinexcel official — Senior Leadership page",
-      "url": "https://en.sinexcel.com/about/teams.html",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "Sinexcel official — SEC480 Distributed Charger",
-      "url": "https://en.sinexcel.com/evcharger/480kw.php",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "Sinexcel official — Active Harmonic Filter",
-      "url": "https://en.sinexcel.com/power/ahf.php",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "Sinexcel official — Energy Storage product listing",
-      "url": "https://en.sinexcel.com/energy-storage/",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — StellaON 1575K datasheet",
-      "url": "https://en.sinexcel.com/energy-storage/details.html?id=39",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — StellaON 1250K datasheet",
-      "url": "https://en.sinexcel.com/energy-storage/details.html?id=19",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — Sirius 135K (PWS1-135M) datasheet",
-      "url": "https://en.sinexcel.com/energy-storage/sirius135k.html",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — PWS1-500KTL modular PCS cabinet",
-      "url": "https://en.sinexcel.com/energy-storage/details.html?id=24",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — PWS1-1725KTL-H 215K cabinet",
-      "url": "https://en.sinexcel.com/energy-storage/details.html?id=18",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — PWS1-160M-H 160 kW microgrid module",
-      "url": "https://en.sinexcel.com/energy-storage/details.html?id=22",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — PWS2-30P 30 kW DC/AC module",
-      "url": "https://en.sinexcel.com/energy-storage/details.html?id=15",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — 40ft 10MW Centralized MV Station",
-      "url": "https://en.sinexcel.com/energy-storage/details.html?id=38",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — Power Quality product listing (incl. PRO series)",
-      "url": "https://en.sinexcel.com/power/",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — SVG family page",
-      "url": "https://en.sinexcel.com/power/svg.php",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — AVC-RTS page",
-      "url": "https://en.sinexcel.com/power/avc-rts.php",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — EV Charging product listing",
-      "url": "https://en.sinexcel.com/evcharger/",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — SEC1280 distributed charger",
-      "url": "https://en.sinexcel.com/evcharger/sh1280kw.php",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — SER 40 kW EV power module",
-      "url": "https://en.sinexcel.com/evcharger/40kW.php",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel official — news archive (2025–2026 releases)",
-      "url": "https://en.sinexcel.com/about/news.html",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel news — Sirius 135K UL 1741 & IEEE 1547 certification (2026-03-09)",
-      "url": "https://en.sinexcel.com/about/detail.html?id=5&bid=5250&cid=388",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel news — BloombergNEF Tier 1 inverter maker Q2 2026 (2026-06-16)",
-      "url": "https://en.sinexcel.com/about/detail.html?id=5&bid=5250&cid=406",
-      "accessed": "2026-08-08"
-    },
-    {
       "label": "Sinexcel news — Japan frequency-regulation market entry (2026-07-13)",
       "url": "https://en.sinexcel.com/about/detail.html?id=5&bid=5250&cid=411",
-      "accessed": "2026-08-08"
+      "date": "2026-07-13"
     },
     {
       "label": "Sinexcel news — ZEEKR/TPM Bangkok megawatt station (2026-07-13)",
       "url": "https://en.sinexcel.com/about/detail.html?id=5&bid=5250&cid=412",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "Sinexcel news — Shell Recharge joint innovation lab (2026-06-16)",
-      "url": "https://en.sinexcel.com/about/detail.html?id=5&bid=5250&cid=407",
-      "accessed": "2026-08-08"
-    },
-    {
-      "label": "PR Newswire — StellaON 1250K/1575K launch (specs)",
-      "url": "https://www.prnewswire.com/news-releases/sinexcel-launches-stellaon-1250k1575k-to-advance-utility-scale-energy-storage-in-europe-302818190.html",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "Energy-Storage.News — StellaON Poland grid certification",
-      "url": "https://www.energy-storage.news/industry-updates/sinexcel-stellaon-1250k-1575k-among-first-to-secure-poland-grid-certification/",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "证券之星 — FY2024 annual report analysis (300693)",
-      "url": "https://stock.stockstar.com/RB2025040400004454.shtml",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "证券之星 — FY2025 annual report analysis (300693)",
-      "url": "https://stock.stockstar.com/RB2026041100004297.shtml",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "Soochow Securities FY2024 review — \"results slightly beat expectations\" (via Sina)",
-      "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-04-06/doc-inesfyaa9098513.shtml",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "Everbright Securities H1 2025 note — storage pressured, AIDC upside (via Sina)",
-      "url": "https://finance.sina.com.cn/roll/2025-08-19/doc-infmqfes0797001.shtml",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "东方财富 — Q1 2026 results",
-      "url": "https://wap.eastmoney.com/a/202604233716404974.html",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "中商情报网 (askci) — executive/board biographies (300693)",
-      "url": "https://s.askci.com/stock/executives/300693/",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "读特/Shenzhen Press Group — founder profile of Fang Xing",
-      "url": "https://www.dutenews.com/n/article/7204616",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "同花顺 — FY2025 dividend implementation (RMB 5.00 per 10 shares)",
-      "url": "https://m.10jqka.com.cn/20260513/c676647694.shtml",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "36氪 — \"储能业务失速…能靠AIDC翻红吗\" (sector narrative)",
-      "url": "https://www.36kr.com/p/3470744802924681",
-      "accessed": "2026-08-07"
-    },
-    {
-      "label": "东方财富财富号 — FY2025 segment/overseas detail, 2026 estimates",
-      "url": "https://caifuhao2.eastmoney.com/news/20260624203928825563980",
-      "accessed": "2026-08-07"
+      "date": "2026-07-13"
     },
     {
       "label": "electrive — Sinexcel one-stop e-truck charging solution (2026-07-10)",
       "url": "https://www.electrive.com/2026/07/10/sinexcel-launches-one-stop-solution-for-e-truck-charging/",
-      "accessed": "2026-08-08"
+      "date": "2026-07-10"
     },
     {
-      "label": "PR Newswire — Tier 1 low-voltage power quality supplier recognition (2025-03)",
-      "url": "https://www.prnewswire.com/news-releases/sinexcel-recognized-as-a-tier-1-low-voltage-power-quality-supplier-302406928.html",
-      "accessed": "2026-08-08"
+      "label": "东方财富财富号 — FY2025 segment/overseas detail, 2026 estimates",
+      "url": "https://caifuhao2.eastmoney.com/news/20260624203928825563980",
+      "date": "2026-06-24"
     },
     {
-      "label": "Sohu — Sinexcel AIDC division focus on HVDC & SST (盛弘股份AIDC事业部)",
-      "url": "https://www.sohu.com/a/949181584_122362510",
-      "accessed": "2026-08-08"
+      "label": "Sinexcel news — BloombergNEF Tier 1 inverter maker Q2 2026 (2026-06-16)",
+      "url": "https://en.sinexcel.com/about/detail.html?id=5&bid=5250&cid=406",
+      "date": "2026-06-16"
+    },
+    {
+      "label": "Sinexcel news — Shell Recharge joint innovation lab (2026-06-16)",
+      "url": "https://en.sinexcel.com/about/detail.html?id=5&bid=5250&cid=407",
+      "date": "2026-06-16"
+    },
+    {
+      "label": "PR Newswire — StellaON 1250K/1575K launch (specs)",
+      "url": "https://www.prnewswire.com/news-releases/sinexcel-launches-stellaon-1250k1575k-to-advance-utility-scale-energy-storage-in-europe-302818190.html",
+      "date": "2026-06"
+    },
+    {
+      "label": "36氪 — \"储能业务失速…能靠AIDC翻红吗\" (sector narrative)",
+      "url": "https://www.36kr.com/p/3470744802924681",
+      "date": "2026-06"
+    },
+    {
+      "label": "同花顺 — FY2025 dividend implementation (RMB 5.00 per 10 shares)",
+      "url": "https://m.10jqka.com.cn/20260513/c676647694.shtml",
+      "date": "2026-05-13"
+    },
+    {
+      "label": "东方财富 — Q1 2026 results",
+      "url": "https://wap.eastmoney.com/a/202604233716404974.html",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "证券之星 — FY2025 annual report analysis (300693)",
+      "url": "https://stock.stockstar.com/RB2026041100004297.shtml",
+      "date": "2026-04-11"
+    },
+    {
+      "label": "Energy-Storage.News — StellaON Poland grid certification",
+      "url": "https://www.energy-storage.news/industry-updates/sinexcel-stellaon-1250k-1575k-among-first-to-secure-poland-grid-certification/",
+      "date": "2026-04"
+    },
+    {
+      "label": "Sinexcel news — Sirius 135K UL 1741 & IEEE 1547 certification (2026-03-09)",
+      "url": "https://en.sinexcel.com/about/detail.html?id=5&bid=5250&cid=388",
+      "date": "2026-03-09"
     },
     {
       "label": "海之理财 — AIDC division established, developing HVDC/SST (2025-10-09)",
       "url": "https://www.haizhilicai.com/stock_selecter/newsDetail/20251009084653497788",
-      "accessed": "2026-08-08"
+      "date": "2025-10-09"
+    },
+    {
+      "label": "Sohu — Sinexcel AIDC division focus on HVDC & SST (盛弘股份AIDC事业部)",
+      "url": "https://www.sohu.com/a/949181584_122362510",
+      "date": "2025-10"
+    },
+    {
+      "label": "Everbright Securities H1 2025 note — storage pressured, AIDC upside (via Sina)",
+      "url": "https://finance.sina.com.cn/roll/2025-08-19/doc-infmqfes0797001.shtml",
+      "date": "2025-08-19"
+    },
+    {
+      "label": "Soochow Securities FY2024 review — \"results slightly beat expectations\" (via Sina)",
+      "url": "https://finance.sina.com.cn/stock/relnews/cn/2025-04-06/doc-inesfyaa9098513.shtml",
+      "date": "2025-04-06"
+    },
+    {
+      "label": "证券之星 — FY2024 annual report analysis (300693)",
+      "url": "https://stock.stockstar.com/RB2025040400004454.shtml",
+      "date": "2025-04-04"
+    },
+    {
+      "label": "PR Newswire — Tier 1 low-voltage power quality supplier recognition (2025-03)",
+      "url": "https://www.prnewswire.com/news-releases/sinexcel-recognized-as-a-tier-1-low-voltage-power-quality-supplier-302406928.html",
+      "date": "2025-03"
+    },
+    {
+      "label": "Sinexcel official site (EN) — products, installed-base claims",
+      "url": "https://en.sinexcel.com/"
+    },
+    {
+      "label": "Sinexcel official — Senior Leadership page",
+      "url": "https://en.sinexcel.com/about/teams.html"
+    },
+    {
+      "label": "Sinexcel official — SEC480 Distributed Charger",
+      "url": "https://en.sinexcel.com/evcharger/480kw.php"
+    },
+    {
+      "label": "Sinexcel official — Active Harmonic Filter",
+      "url": "https://en.sinexcel.com/power/ahf.php"
+    },
+    {
+      "label": "Sinexcel official — Energy Storage product listing",
+      "url": "https://en.sinexcel.com/energy-storage/"
+    },
+    {
+      "label": "Sinexcel official — StellaON 1575K datasheet",
+      "url": "https://en.sinexcel.com/energy-storage/details.html?id=39"
+    },
+    {
+      "label": "Sinexcel official — StellaON 1250K datasheet",
+      "url": "https://en.sinexcel.com/energy-storage/details.html?id=19"
+    },
+    {
+      "label": "Sinexcel official — Sirius 135K (PWS1-135M) datasheet",
+      "url": "https://en.sinexcel.com/energy-storage/sirius135k.html"
+    },
+    {
+      "label": "Sinexcel official — PWS1-500KTL modular PCS cabinet",
+      "url": "https://en.sinexcel.com/energy-storage/details.html?id=24"
+    },
+    {
+      "label": "Sinexcel official — PWS1-1725KTL-H 215K cabinet",
+      "url": "https://en.sinexcel.com/energy-storage/details.html?id=18"
+    },
+    {
+      "label": "Sinexcel official — PWS1-160M-H 160 kW microgrid module",
+      "url": "https://en.sinexcel.com/energy-storage/details.html?id=22"
+    },
+    {
+      "label": "Sinexcel official — PWS2-30P 30 kW DC/AC module",
+      "url": "https://en.sinexcel.com/energy-storage/details.html?id=15"
+    },
+    {
+      "label": "Sinexcel official — 40ft 10MW Centralized MV Station",
+      "url": "https://en.sinexcel.com/energy-storage/details.html?id=38"
+    },
+    {
+      "label": "Sinexcel official — Power Quality product listing (incl. PRO series)",
+      "url": "https://en.sinexcel.com/power/"
+    },
+    {
+      "label": "Sinexcel official — SVG family page",
+      "url": "https://en.sinexcel.com/power/svg.php"
+    },
+    {
+      "label": "Sinexcel official — AVC-RTS page",
+      "url": "https://en.sinexcel.com/power/avc-rts.php"
+    },
+    {
+      "label": "Sinexcel official — EV Charging product listing",
+      "url": "https://en.sinexcel.com/evcharger/"
+    },
+    {
+      "label": "Sinexcel official — SEC1280 distributed charger",
+      "url": "https://en.sinexcel.com/evcharger/sh1280kw.php"
+    },
+    {
+      "label": "Sinexcel official — SER 40 kW EV power module",
+      "url": "https://en.sinexcel.com/evcharger/40kW.php"
+    },
+    {
+      "label": "Sinexcel official — news archive (2025–2026 releases)",
+      "url": "https://en.sinexcel.com/about/news.html"
+    },
+    {
+      "label": "中商情报网 (askci) — executive/board biographies (300693)",
+      "url": "https://s.askci.com/stock/executives/300693/"
+    },
+    {
+      "label": "读特/Shenzhen Press Group — founder profile of Fang Xing",
+      "url": "https://www.dutenews.com/n/article/7204616"
     },
     {
       "label": "CharIN — Sinexcel core membership announcement",
-      "url": "https://www.charin.global/news/sinexcel-becomes-a-core-member-of-charin-e-v/",
-      "accessed": "2026-08-08"
+      "url": "https://www.charin.global/news/sinexcel-becomes-a-core-member-of-charin-e-v/"
     }
   ],
   "lastUpdated": "2026-08-09",

@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 17/50`
+`Sections: 18/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.18w] — 2026-08-09 11:18:02 PM EST — v02.24r
+
+### Changed
+- Source citations now show each article's publication date instead of the date it was looked up, in the dossier view and in exported documents
+- Sources are now listed chronologically with the most recent news first; undated reference pages appear at the end
 
 ## [v01.17w] — 2026-08-09 05:09:33 AM EST — v02.19r
 

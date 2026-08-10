@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 111/100`
+`Sections: 112/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.24r] — 2026-08-09 11:18:02 PM EST
+
+> **Prompt:** "continue with your recommendation. Also, for all dossiers, change the source formatting to include the article date instead of the accessed date. Then, make sure to organize them chronologically with the most recent news first."
+
+### Added
+- **Seven post-earnings refresh Routines armed** for the batch-2 public tickers, following the existing one-shot convention (fresh session, verify-then-refresh, self-re-arming): EVE Energy (fires 2026-08-21 — H1 report expected 08-18/08-20, sources conflicted), ABB (2026-10-21 — Q3 scheduled 10-20 per ABB's calendar), Hitachi Energy (2026-10-24 — parent Hitachi Q2 FY26 expected 10-23), Equinix (2026-10-29 15:00 UTC — Q3 estimated ~10-28, staggered after Meta), Quanta Services (2026-10-30 17:00 UTC — Q3 expected 10-29, staggered after LG Energy Solution), Constellation Energy (2026-11-10 — Q3 confirmed 11-09), Siemens Energy (2026-11-12 — Q4 FY26 call company-announced 11-11; prompt carries the Omterra rebrand note). Report dates verified via web search on 2026-08-09; estimates marked as such in each trigger prompt
+
+### Changed
+- **Source format migrated across all 40 dossiers** (`live-site-pages/profiler-data/*.profile.json`): `sources[].accessed` (access date) replaced by `sources[].date` (publication/article date, `YYYY-MM-DD` or `YYYY-MM`; omitted for undated evergreen pages — product pages, IR hubs, market-report landing pages, aggregator quote pages), and every `sources[]` array reordered chronologically with the most recent publication first, undated entries last. Dates derived from URL paths, matching `recentDevelopments` entries, label text, and model knowledge — executed by 8 parallel subagents (5 profiles each), with low-confidence choices reported per batch; all 40 files JSON-validated and ordering-verified programmatically
+- `repository-information/PROFILER-SCHEMA.md` — `sources[]` definition updated to the `date` field with newest-first ordering; the "List first-party sources first" citation-order rule replaced (source priority now governs research order only); "Dates everywhere" rule updated
+- `live-site-pages/Profiler.html` (v01.17w → v01.18w) — source lists in the app and the Word/PDF export now render the publication date (with a legacy `accessed` fallback for archived pre-migration profiles); meta tag synced
+- **Quarterly private-company sweep expanded from 3 to 6 companies** — Crusoe, Huawei Digital Power, and xAI folded into the recurring Routine (renamed "Profiler quarterly check — Hithium, FlexGen, Rosendin, Crusoe, Huawei DP & xAI (private)") with per-company watch items; the xAI entry converts to a post-earnings trigger if the SpaceX IPO completes and quarterly reporting begins
+- `.claude/rules/profiler-app.md` — "Currently armed" registry updated with the 7 new one-shot entries (chronological) and the expanded 6-company sweep line
 
 ## [v02.23r] — 2026-08-09 11:02:49 PM EST
 
