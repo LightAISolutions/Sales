@@ -11,6 +11,18 @@
   ],
   "companies": [
     {
+      "slug": "abb",
+      "name": "ABB",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The medium-voltage innovator — HiPerGuard static MV UPS to 34.5 kV, 62 VoltaGrid flywheel condensers; Electrification orders +60% with triple-digit DC growth.",
+      "hq": "Zurich, Switzerland",
+      "ticker": "SIX: ABBN",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
       "slug": "amazon",
       "name": "Amazon",
       "categories": [
@@ -59,6 +71,18 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "constellation-energy",
+      "name": "Constellation Energy",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The nuclear-PPA franchise — TMI/Crane restart 2027 for Microsoft, Meta's 1,121 MW Clinton deal, Calpine's $16.4B merger → 55 GW; §45U floors the downside.",
+      "hq": "Baltimore, MD, USA",
+      "ticker": "NASDAQ: CEG",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
       "slug": "coreweave",
       "name": "CoreWeave",
       "categories": [
@@ -67,6 +91,17 @@
       "tagline": "The neocloud proxy — 1 GW+ active power, $99.4B backlog; GPU-backed debt repriced from 15% to investment grade; leased-power fragility on display.",
       "hq": "Livingston, NJ, USA",
       "ticker": "NASDAQ: CRWV",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "crusoe",
+      "name": "Crusoe",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The energy-first AI factory builder — Abilene 1.2 GW for OpenAI/Oracle, ~4.9 GW contracted of a 40+ GW pipeline; the deepest private-developer energy stack.",
+      "hq": "San Francisco, CA, USA",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
@@ -91,6 +126,30 @@
       "tagline": "Grid-to-chip by acquisition — ~$12.5B for Fibrebond, Boyd Thermal, Ultra PCS; DC orders +240%; we assess content-per-MW gain, not unit-share capture.",
       "hq": "Dublin, Ireland",
       "ticker": "NYSE: ETN",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "equinix",
+      "name": "Equinix",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "The interconnection incumbent building bolder — xScale >$15B JV for hyperscale, >100 MW of Bloom fuel cells, four nuclear agreements; Q2 2026 beat-and-raise.",
+      "hq": "Redwood City, CA, USA",
+      "ticker": "NASDAQ: EQIX",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "eve-energy",
+      "name": "EVE Energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "#3 global ESS cells and the 628Ah pioneer (Mr.Big/Mr.Giant) — first grid-connected 600Ah+ station; AI-rack BBU push; DoD listing and LG's ITC suit are the US clouds.",
+      "hq": "Huizhou, China",
+      "ticker": "SZSE: 300014",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
@@ -142,6 +201,17 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "hitachi-energy",
+      "name": "Hitachi Energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "World's largest transformer maker and HVDC leader — $57.9B backlog, 30-40 month lead times, $9B+ capacity program; its calendar is everyone's constraint.",
+      "hq": "Zurich, Switzerland",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
       "slug": "hithium",
       "name": "Hithium",
       "categories": [
@@ -149,6 +219,17 @@
       ],
       "tagline": "Stationary-only LFP cell and BESS specialist — Top-2 2025 ESS cell shipments; we assess financing as the primary watch item.",
       "hq": "Xiamen, China",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "huawei-digital-power",
+      "name": "Huawei Digital Power",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The excluded benchmark — #1 in prefab modular DCs and PV inverters, CNY 77.3B revenue; US-banned and EU-phasing-out, so its AIDC market is the Gulf and APAC.",
+      "hq": "Shenzhen, China",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
@@ -272,6 +353,18 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "quanta-services",
+      "name": "Quanta Services",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "#1 US electrical contractor at 3.7x the runner-up — $53.4B backlog, DC entry via Cupertino/Dynamic; doubling its own transformer capacity by 2028.",
+      "hq": "Houston, TX, USA",
+      "ticker": "NYSE: PWR",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
       "slug": "rosendin",
       "name": "Rosendin",
       "categories": [
@@ -303,6 +396,18 @@
       "tagline": "Shared #1 in DC physical infrastructure — the NVIDIA reference-design franchise; a two-speed portfolio carried by triple-digit data-center demand.",
       "hq": "Rueil-Malmaison, France",
       "ticker": "EPA: SU",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "siemens-energy",
+      "name": "Siemens Energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Turbines plus grid from one book — €162B backlog, Gas Services book-to-bill 2.65, the Eaton 500 MW SGT-800 block; rebranding to Omterra late 2026.",
+      "hq": "Munich, Germany",
+      "ticker": "ETR: ENR",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
@@ -363,6 +468,18 @@
       "tagline": "Quantum BESS and GEMS moving into a 50/50 RCT JV (Q3 2026); the retained engine business independently monetizes data-center power.",
       "hq": "Helsinki, Finland",
       "ticker": "HEL: WRT1V",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "xai",
+      "name": "xAI",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "The extreme case in behind-the-fence power — ~1 GW Colossus on self-built gas + the largest Megapack fleet; now inside SpaceX, monetized by Anthropic at $15B/yr.",
+      "hq": "Palo Alto, CA, USA",
+      "ticker": "private (inside SpaceX; IPO S-1 filed)",
       "status": "active",
       "lastUpdated": "2026-08-09"
     }

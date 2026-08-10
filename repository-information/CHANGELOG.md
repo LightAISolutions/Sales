@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 110/100`
+`Sections: 111/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.23r] — 2026-08-09 11:02:49 PM EST
+
+> **Prompt:** "profiler batch 2 as recommended"
+
+### Added
+- **Ten new Intel Briefing dossiers — Batch 2 of the AIDC market-report coverage expansion** (all profileVersion 1, in `live-site-pages/profiler-data/`): xAI (`xai.profile.json`), Crusoe (`crusoe.profile.json`), Equinix (`equinix.profile.json`), Constellation Energy (`constellation-energy.profile.json`), Siemens Energy (`siemens-energy.profile.json`), Hitachi Energy (`hitachi-energy.profile.json`), ABB (`abb.profile.json`), Huawei Digital Power (`huawei-digital-power.profile.json`), EVE Energy (`eve-energy.profile.json`), Quanta Services (`quanta-services.profile.json`). Researched via 20 parallel subagents — two per company (first-party IR/press/product + third-party filings/consensus/trade press per the Source Priority Protocol), all sources accessed 2026-08-09. Categories: supplier ×5 (Siemens Energy, Hitachi Energy, ABB, Huawei Digital Power, EVE Energy), hyperscaler ×2 (xAI, Equinix), developer ×2 (Crusoe, Constellation Energy), integrator ×1 (Quanta Services). Unconfirmed/press-only items flagged (Low confidence) throughout — e.g. xAI combined-fleet GPU/2 GW tracker figures, Crusoe valuation marks, Constellation PPA pricing (analyst estimates), the EVE DoD 1260H listing (Reuters-relayed), Huawei sub-segment claims, the Siemens Energy Omterra rebrand's ticker implications. Render-verified headlessly: 40 home cards, all 10 dossiers show BLUF summaries and Key Judgments with zero page errors
+- `live-site-pages/profiler-data/profiler-companies.json` — 10 new registry entries with IC-voice taglines; roster now 40 companies
+- `README.md` — tree entries for the 10 new profile JSONs
 
 ## [v02.22r] — 2026-08-09 10:24:17 PM EST
 
