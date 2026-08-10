@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.22w">
+  <meta name="build-version" content="v01.23w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1799,6 +1799,14 @@
     var OV_DRIVE_CHUNK = 8 * 1024 * 1024;          // must be a multiple of 256 KB
     var OV_DRIVE_RESUMABLE_MIN = 6 * 1024 * 1024;
 
+    // Both upload paths hand back { link, id }. The id is what lets the
+    // backend file the recording afterwards — the browser's drive.file scope
+    // can create the file but cannot see the script's folders to put it in.
+    function ovDriveResult(d) {
+      if (!d || !d.id) return d && d.webViewLink ? { link: d.webViewLink, id: null } : null;
+      return { link: d.webViewLink || ('https://drive.google.com/file/d/' + d.id + '/view'), id: d.id };
+    }
+
     function ovDriveMultipart(file, tok, cb) {
       var meta = { name: file.name, mimeType: file.type || 'audio/mpeg' };
       var fd = new FormData();
@@ -1818,8 +1826,7 @@
         .then(function(r) { if (!r.ok) throw new Error('http_' + r.status); return r.json(); })
         .then(function(d) {
           clearTimeout(timer);
-          cb(d && d.webViewLink ? d.webViewLink
-            : (d && d.id ? 'https://drive.google.com/file/d/' + d.id + '/view' : null));
+          cb(ovDriveResult(d));
         })
         .catch(function(e) {
           clearTimeout(timer);
@@ -1873,9 +1880,9 @@
         } else if (xhr.status === 200 || xhr.status === 201) {
           var d = {};
           try { d = JSON.parse(xhr.responseText || '{}'); } catch (e2) {}
-          var link = d.webViewLink || (d.id ? 'https://drive.google.com/file/d/' + d.id + '/view' : null);
+          var res = ovDriveResult(d);
           if (onProgress) onProgress(100);
-          cb(link, link ? null : 'no_file_id');
+          cb(res, res ? null : 'no_file_id');
         } else {
           ovDriveRetryChunk(file, url, start, tries, onProgress, cb, 'http_' + xhr.status);
         }
@@ -2036,6 +2043,18 @@
           // consent request can run synchronously off the tap later.
           if (role === 'admin') ovPreloadGis();
           if (role === 'admin') renderForm(); else renderSuggest();
+          // Self-healing sweep, once per page load: a recording uploaded but
+          // never filed (note abandoned, or uploaded before filing existed)
+          // sits loose in My Drive root. Silent unless something actually moved.
+          if (role === 'admin' && !window._ovRecSwept) {
+            window._ovRecSwept = true;
+            ovNoteApi('filerec', {}, function(fr) {
+              if (fr && fr.success && fr.swept && fr.swept.length) {
+                say('Filed ' + fr.swept.length + ' loose recording' + (fr.swept.length > 1 ? 's' : '')
+                  + ' into Profiler/' + fr.folder + '.', true);
+              }
+            });
+          }
         }
         // Suggest mode (non-admin): same inputs, but the note is emailed to
         // the app owner for consideration — nothing is saved to the log
@@ -2178,9 +2197,9 @@
             recBtn.disabled = true;
             ovDriveUploadAudio(f, function(pct) {
               recStat.textContent = 'Uploading ' + f.name + ' (' + mb + ' MB) — ' + pct + '%';
-            }, function(link, err) {
+            }, function(res, err) {
               recBtn.disabled = false;
-              if (!link) {
+              if (!res) {
                 recStat.textContent = (err === 'upload_timed_out')
                   ? 'Upload stalled and was cancelled — tap again to retry.'
                   : (/consent|permission|token|sign_in/.test(String(err || ''))
@@ -2188,8 +2207,21 @@
                       : 'Upload failed' + (err ? ' — ' + err : ''));
                 return;
               }
-              recLink = link;
-              recStat.textContent = '✓ ' + f.name + ' (' + mb + ' MB) attached';
+              recLink = res.link;
+              recStat.textContent = '✓ ' + f.name + ' (' + mb + ' MB) attached — filing…';
+              // The upload lands in My Drive root because the browser's
+              // drive.file scope cannot see the script's folders. The backend
+              // owns the same Drive, so it does the filing.
+              ovNoteApi('filerec', { fileId: res.id || '', slug: slug }, function(fr) {
+                if (!fr || !fr.success) {
+                  recStat.textContent = '✓ ' + f.name + ' attached (still in My Drive — filing failed)';
+                  return;
+                }
+                var extra = (fr.swept && fr.swept.length)
+                  ? ' · also filed ' + fr.swept.length + ' earlier recording' + (fr.swept.length > 1 ? 's' : '')
+                  : '';
+                recStat.textContent = '✓ ' + f.name + ' → Profiler/' + fr.folder + extra;
+              });
             });
           });
 

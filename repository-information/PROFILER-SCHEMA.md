@@ -84,6 +84,17 @@ A single chronological log of first-hand intel the developer collects from indus
 
 > **Storage moved to Google Drive (M3, 2026-08-10).** The log lives at `Profiler/profiler-notes.json` in the script owner's Drive — **not in this repo**. The repo is public, so a file committed here is readable via `raw.githubusercontent.com` and `git clone` no matter what the app's sign-in wall does; moving it out of `live-site-pages/` alone would have closed only the Pages vector. Attachments live under `Profiler/note-files/<slug>/`, and meeting audio under the uploading user's own Drive.
 >
+> **Drive layout** (all under `Profiler/` in the script owner's Drive):
+> ```
+> Profiler/
+> ├── profiler-notes.json                 the log itself
+> ├── note-files/<slug>/                  Word/PDF/transcript attachments
+> └── meeting-recordings/
+>     ├── 1-awaiting-transcription/       uploaded audio, no transcript yet
+>     └── 2-transcribed/                  audio whose transcript is attached to its note
+> ```
+> Recording filenames are `<slug>--YYYY-MM-DD--<original name>`, so company and date read at a glance in the Drive UI; `unfiled` stands in for the slug when a stray is swept up. The numbered folders make the transcription queue visible without opening the app. Audio is uploaded browser-side with the `drive.file` scope, which can create files but cannot see the script's folders — so uploads land in My Drive root and the backend files them immediately afterwards (`filerec` op). A sweep of root-level audio runs once per admin page load, so a recording uploaded but never filed self-heals. The transcription pass reads its queue via `recpending` and calls `recdone` to move a file into `2-transcribed/`.
+>
 > **Consequence for sessions:** an unattended Claude session can no longer read the log. The scheduled post-earnings refreshes, the quarterly sweep, reports, and prep tasks all run without note context unless the developer supplies it. The app's **📋 Copy pending** button (⚙ overlay) and the per-note **📋 Copy** button return the note plus its transcript formatted for pasting into a session — that is the intended replacement for the automated read.
 
 | Field | Type | Required | Meaning |

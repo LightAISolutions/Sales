@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 22/50`
+`Sections: 23/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.23w] — 2026-08-10 04:25:55 AM EST — v02.29r
+
+### Changed
+- After a recording uploads, the status line now tells you exactly where it was put away rather than just saying "attached"
+- Any recordings left loose from an earlier session are tidied away when you open the note box, and you are told how many were moved
 
 ## [v01.22w] — 2026-08-10 04:13:24 AM EST — v02.28r
 

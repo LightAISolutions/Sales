@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.07g] — 2026-08-10 04:25:55 AM EST — v02.29r
+
+### Added
+- Meeting recordings now have a home. Uploads are sorted into a dedicated recordings area with two folders — one for audio still waiting on a transcript, one for audio already transcribed — so a glance shows what is left to do
+- Each recording is renamed to lead with the company and the date, keeping its original name on the end, so files stay recognisable
+- A recording that was uploaded but never sorted is picked up and put away automatically the next time the app is opened
 
 ## [v01.06g] — 2026-08-10 02:17:53 AM EST — v02.25r
 
