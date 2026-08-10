@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 21/50`
+`Sections: 22/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.22w] — 2026-08-10 04:13:24 AM EST — v02.28r
+
+### Fixed
+- Attaching a recording could sit on "Uploading…" forever with no Drive permission prompt ever appearing. Permission is now requested the moment you tap the button, which is when your browser will actually allow the prompt to open
+- If the permission window is blocked, dismissed, or never comes back, the status line now says so and invites you to tap again — previously nothing was reported and the upload appeared to stall indefinitely
+- An upload that stops responding is now cancelled and reported instead of hanging
 
 ## [v01.21w] — 2026-08-10 04:01:03 AM EST — v02.27r
 

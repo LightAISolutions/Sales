@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.21w">
+  <meta name="build-version" content="v01.22w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1716,27 +1716,77 @@
     // Apps Script execution ceiling). drive.file only grants access to files
     // this app itself creates — it cannot read the rest of the user's Drive.
     var OV_DRIVE_SCOPE = 'https://www.googleapis.com/auth/drive.file';
+    var OV_DRIVE_CONSENT_MS = 120000;
     var _ovDriveToken = null;
+
+    function ovDriveHasToken() {
+      return !!(_ovDriveToken && _ovDriveToken.exp > Date.now() + 60000);
+    }
+
+    // Keep the GIS library warm. Requesting a Drive token opens a consent
+    // popup, and a popup asked for from an async continuation — after a
+    // script load, or after the file picker's change event — is blocked by
+    // mobile browsers. Loading the library ahead of time means the token
+    // request can run straight off the user's tap, while the gesture is live.
+    function ovPreloadGis() { try { ovLoadGis(); } catch (e) {} }
+
+    function ovDriveErrText(err) {
+      if (err === 'consent_popup_blocked')
+        return 'The Drive permission window was blocked — allow pop-ups for this site, then tap again.';
+      if (err === 'consent_timed_out')
+        return 'The Drive permission window never came back — tap again to retry.';
+      if (err === 'drive_permission_denied')
+        return 'Drive permission was not granted — tap again to allow it.';
+      if (err === 'google_sign_in_unavailable')
+        return 'Could not reach Google sign-in — check your connection and tap again.';
+      return 'Could not connect to Drive' + (err ? ' — ' + err : '') + '.';
+    }
+
+    // Call this from a user gesture the first time in a session. cb(token, err)
+    // is guaranteed to fire exactly once — see ovDriveRequest.
     function ovDriveToken(cb) {
-      if (_ovDriveToken && _ovDriveToken.exp > Date.now() + 60000) { cb(_ovDriveToken.tok); return; }
-      // The GIS library is injected on demand by the sign-in flow. On a page
-      // load where the session is already in localStorage that flow never runs,
-      // so google.accounts is absent here even though the user is signed in —
-      // load it before asking for a token rather than assuming it is present.
-      ovLoadGis().then(function() {
-        try {
-          google.accounts.oauth2.initTokenClient({
-            client_id: OV_GIS_CLIENT_ID,
-            scope: OV_DRIVE_SCOPE,
-            callback: function(resp) {
-              if (!resp || !resp.access_token) { cb(null, 'drive_permission_denied'); return; }
-              // expires_in is seconds; keep a small safety margin on reuse
-              _ovDriveToken = { tok: resp.access_token, exp: Date.now() + ((resp.expires_in || 3600) * 1000) };
-              cb(resp.access_token);
-            }
-          }).requestAccessToken();
-        } catch (err) { cb(null, 'drive_auth_failed'); }
-      }).catch(function() { cb(null, 'google_sign_in_unavailable'); });
+      if (ovDriveHasToken()) { cb(_ovDriveToken.tok); return; }
+      // Warm library: stay synchronous so the gesture still counts.
+      if (window.google && window.google.accounts && window.google.accounts.oauth2) {
+        ovDriveRequest(cb);
+        return;
+      }
+      ovLoadGis()
+        .then(function() { ovDriveRequest(cb); })
+        .catch(function() { cb(null, 'google_sign_in_unavailable'); });
+    }
+
+    function ovDriveRequest(cb) {
+      var done = false, timer;
+      function settle(tok, err) {
+        if (done) return;
+        done = true;
+        clearTimeout(timer);
+        cb(tok, err);
+      }
+      // Last-resort bound. Without it any silent failure leaves the caller
+      // waiting forever with no way to tell that nothing is happening.
+      timer = setTimeout(function() { settle(null, 'consent_timed_out'); }, OV_DRIVE_CONSENT_MS);
+      try {
+        google.accounts.oauth2.initTokenClient({
+          client_id: OV_GIS_CLIENT_ID,
+          scope: OV_DRIVE_SCOPE,
+          callback: function(resp) {
+            if (!resp || !resp.access_token) { settle(null, 'drive_permission_denied'); return; }
+            // expires_in is seconds; keep a small safety margin on reuse
+            _ovDriveToken = { tok: resp.access_token, exp: Date.now() + ((resp.expires_in || 3600) * 1000) };
+            settle(resp.access_token);
+          },
+          // Popup problems are reported here, never through callback. Without
+          // this handler a blocked or dismissed consent window reports
+          // nothing at all and the upload appears to hang mid-flight.
+          error_callback: function(e) {
+            var t = e && e.type;
+            settle(null, t === 'popup_failed_to_open' ? 'consent_popup_blocked'
+                       : (t === 'popup_closed' ? 'drive_permission_denied' : 'drive_auth_failed'));
+          }
+        }).requestAccessToken();
+      } catch (err) { settle(null, 'drive_auth_failed'); }
     }
     // Multipart upload — metadata part + binary part in one request. cb(link, err)
     // A 1-hour meeting is ~50 MB and a 2-hour one ~150 MB. A single multipart
@@ -1754,17 +1804,27 @@
       var fd = new FormData();
       fd.append('metadata', new Blob([JSON.stringify(meta)], { type: 'application/json' }));
       fd.append('file', file);
+      // Bounded: this path only ever carries small files, so a request still
+      // open after two minutes is stuck, not slow. Left unbounded it would
+      // sit on "Uploading…" indefinitely with nothing to tell the user.
+      var ctl = window.AbortController ? new AbortController() : null;
+      var timer = setTimeout(function() { if (ctl) ctl.abort(); }, 120000);
       fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,webViewLink', {
         method: 'POST',
         headers: { Authorization: 'Bearer ' + tok },
-        body: fd
+        body: fd,
+        signal: ctl ? ctl.signal : undefined
       })
         .then(function(r) { if (!r.ok) throw new Error('http_' + r.status); return r.json(); })
         .then(function(d) {
+          clearTimeout(timer);
           cb(d && d.webViewLink ? d.webViewLink
             : (d && d.id ? 'https://drive.google.com/file/d/' + d.id + '/view' : null));
         })
-        .catch(function(e) { cb(null, String(e && e.message || e)); });
+        .catch(function(e) {
+          clearTimeout(timer);
+          cb(null, (e && e.name === 'AbortError') ? 'upload_timed_out' : String(e && e.message || e));
+        });
     }
 
     function ovDriveUploadAudio(file, onProgress, cb) {
@@ -1972,6 +2032,9 @@
             });
             return;
           }
+          // Warm the sign-in library now so the recording button's Drive
+          // consent request can run synchronously off the tap later.
+          if (role === 'admin') ovPreloadGis();
           if (role === 'admin') renderForm(); else renderSuggest();
         }
         // Suggest mode (non-admin): same inputs, but the note is emailed to
@@ -2086,7 +2149,21 @@
           var recBtn = ovEl('button', 'ov-btn ghost', '🎙 Attach saved recording');
           recBtn.type = 'button';
           recBtn.style.cssText = 'font-size:11px;padding:6px 10px;';
-          recBtn.addEventListener('click', function() { recInput.click(); });
+          recBtn.addEventListener('click', function() {
+            // Drive consent is requested here, off the tap itself — not later
+            // from the picker's change event, where the gesture has expired
+            // and the popup is silently blocked. Once a token is cached this
+            // whole branch is skipped and the picker opens immediately.
+            if (ovDriveHasToken()) { recInput.click(); return; }
+            recStat.textContent = 'Connecting to Drive…';
+            recBtn.disabled = true;
+            ovDriveToken(function(tok, err) {
+              recBtn.disabled = false;
+              if (!tok) { recStat.textContent = ovDriveErrText(err); return; }
+              recStat.textContent = 'Drive connected — choose your recording (tap again if the file picker did not open).';
+              recInput.click();
+            });
+          });
           var recStat = ovEl('span', 'hint', '');
           recStat.style.cssText = 'font-size:11px;';
           recRow.appendChild(recBtn); recRow.appendChild(recInput); recRow.appendChild(recStat);
@@ -2103,7 +2180,14 @@
               recStat.textContent = 'Uploading ' + f.name + ' (' + mb + ' MB) — ' + pct + '%';
             }, function(link, err) {
               recBtn.disabled = false;
-              if (!link) { recStat.textContent = 'Upload failed' + (err ? ' — ' + err : ''); return; }
+              if (!link) {
+                recStat.textContent = (err === 'upload_timed_out')
+                  ? 'Upload stalled and was cancelled — tap again to retry.'
+                  : (/consent|permission|token|sign_in/.test(String(err || ''))
+                      ? ovDriveErrText(err)
+                      : 'Upload failed' + (err ? ' — ' + err : ''));
+                return;
+              }
               recLink = link;
               recStat.textContent = '✓ ' + f.name + ' (' + mb + ' MB) attached';
             });
