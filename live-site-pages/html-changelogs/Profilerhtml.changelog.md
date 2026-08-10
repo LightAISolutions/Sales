@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 20/50`
+`Sections: 21/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.21w] — 2026-08-10 04:01:03 AM EST — v02.27r
+
+### Changed
+- Long meeting recordings now upload reliably. A file of any length is sent in pieces, so a dropped signal costs only the piece in flight instead of restarting the whole upload, and the button now shows a percentage while it works
+- The recording button reads "Attach saved recording" and explains the flow: record in your phone's own voice recorder app, which has no length limit, then browse to the saved file. The record shortcut offered inside the file picker stops at about ten minutes and is not the way to capture a full meeting
 
 ## [v01.20w] — 2026-08-10 03:38:54 AM EST — v02.26r
 
