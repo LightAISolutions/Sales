@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 109/100`
+`Sections: 110/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.22r] — 2026-08-09 10:24:17 PM EST
+
+> **Prompt:** "profiler batch 1 as recommended"
+
+### Added
+- **Ten new Intel Briefing dossiers — Batch 1 of the AIDC market-report coverage expansion** (all profileVersion 1, in `live-site-pages/profiler-data/`): Vertiv (`vertiv.profile.json`), Delta Electronics (`delta-electronics.profile.json`), Eaton (`eaton.profile.json`), Schneider Electric (`schneider-electric.profile.json`), GE Vernova (`ge-vernova.profile.json`), LITEON (`liteon.profile.json`), Oracle (`oracle.profile.json`), OpenAI (`openai.profile.json`), CoreWeave (`coreweave.profile.json`), Bloom Energy (`bloom-energy.profile.json`). Researched via 20 parallel subagents — two per company (first-party IR/press/product + third-party filings/consensus/trade press per the Source Priority Protocol), all sources accessed 2026-08-09. Categories: supplier ×6 (Vertiv, Delta, Eaton, Schneider, GE Vernova, LITEON, Bloom), hyperscaler ×3 (Oracle, OpenAI, CoreWeave). Unconfirmed/press-only items flagged (Low confidence) throughout — e.g. the reported Goldman NT$4,500 Delta target, Megmeet power-shelf displacement reports, OpenAI press-reported financials (no audited statements exist), the reported $2B Delta–Infineon SiC deal. Render-verified headlessly: 30 home cards, GE Vernova and OpenAI dossiers show BLUF summaries and Key Judgments with zero page errors
+- `live-site-pages/profiler-data/profiler-companies.json` — 10 new registry entries with IC-voice taglines; roster now 30 companies
+- `README.md` — tree entries for the 10 new profile JSONs
 
 ## [v02.21r] — 2026-08-09 06:09:32 PM EST
 

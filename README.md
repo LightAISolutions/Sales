@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-09 06:09:32 PM EST` · Repo version: `v02.21r`
+Last updated: `2026-08-09 10:24:17 PM EST` · Repo version: `v02.22r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -77,33 +77,43 @@ Last updated: `2026-08-09 06:09:32 PM EST` · Repo version: `v02.21r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-companies.json">profiler-companies.json</a> — Company registry (roster, categories, freshness)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-notes.json">profiler-notes.json</a>    — Field notes chronological log (⚙ changelog in the app; developer-rated confidence)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/amazon.profile.json">amazon.profile.json</a>    — Amazon dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bloom-energy.profile.json">bloom-energy.profile.json</a> — Bloom Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/byd.profile.json">byd.profile.json</a>       — BYD dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/byd.study.json">byd.study.json</a>     — BYD in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/catl.profile.json">catl.profile.json</a>      — CATL dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/catl.study.json">catl.study.json</a>     — CATL in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/coreweave.profile.json">coreweave.profile.json</a> — CoreWeave dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/delta-electronics.profile.json">delta-electronics.profile.json</a> — Delta Electronics dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eaton.profile.json">eaton.profile.json</a>     — Eaton dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flexgen.profile.json">flexgen.profile.json</a>   — FlexGen dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/flexgen.study.json">flexgen.study.json</a>     — FlexGen in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/fluence.profile.json">fluence.profile.json</a>   — Fluence dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/fluence.study.json">fluence.study.json</a>     — Fluence in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/ge-vernova.profile.json">ge-vernova.profile.json</a> — GE Vernova dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/google.profile.json">google.profile.json</a>    — Google dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hithium.profile.json">hithium.profile.json</a>   — Hithium dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hithium.study.json">hithium.study.json</a>     — Hithium in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/jinko.profile.json">jinko.profile.json</a>     — Jinko dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/lg-energy-solution.profile.json">lg-energy-solution.profile.json</a> — LG Energy Solution dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/liteon.profile.json">liteon.profile.json</a>    — LITEON dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.profile.json">megmeet.profile.json</a>   — Megmeet dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.study.json">megmeet.study.json</a>     — Megmeet in-app technology study guide (concept sections + flashcards)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/meta.profile.json">meta.profile.json</a>      — Meta dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/microsoft.profile.json">microsoft.profile.json</a> — Microsoft dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nvidia.profile.json">nvidia.profile.json</a>    — NVIDIA dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/openai.profile.json">openai.profile.json</a>    — OpenAI dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/oracle.profile.json">oracle.profile.json</a>    — Oracle dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/panasonic.profile.json">panasonic.profile.json</a> — Panasonic dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rosendin.profile.json">rosendin.profile.json</a>  — Rosendin dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/samsung-sdi.profile.json">samsung-sdi.profile.json</a> — Samsung SDI dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/schneider-electric.profile.json">schneider-electric.profile.json</a> — Schneider Electric dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.profile.json">sinexcel.profile.json</a>  — Sinexcel dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.study.json">sinexcel.study.json</a>     — Sinexcel in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sungrow.profile.json">sungrow.profile.json</a>   — Sungrow dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sungrow.study.json">sungrow.study.json</a>     — Sungrow in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.profile.json">tesla.profile.json</a>     — Tesla dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.study.json">tesla.study.json</a>     — Tesla in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/vertiv.profile.json">vertiv.profile.json</a>    — Vertiv dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.profile.json">wartsila.profile.json</a>  — Wärtsilä dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.study.json">wartsila.study.json</a>     — Wärtsilä in-app technology study guide
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data/archive">archive/</a>                — Superseded dossier versions, archived on each profile revision

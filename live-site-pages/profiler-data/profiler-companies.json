@@ -23,6 +23,18 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "bloom-energy",
+      "name": "Bloom Energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Sells time, not electrons — 55-day fuel-cell deployments beat the grid queue; Oracle up to 2.8 GW, AEP 1 GW firm; the scandium question is unresolved.",
+      "hq": "San Jose, CA, USA",
+      "ticker": "NYSE: BE",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
       "slug": "byd",
       "name": "BYD",
       "categories": [
@@ -47,6 +59,42 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "coreweave",
+      "name": "CoreWeave",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "The neocloud proxy — 1 GW+ active power, $99.4B backlog; GPU-backed debt repriced from 15% to investment grade; leased-power fragility on display.",
+      "hq": "Livingston, NJ, USA",
+      "ticker": "NASDAQ: CRWV",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "delta-electronics",
+      "name": "Delta Electronics",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Volume leader in AI server power — AI data-center power and cooling crossed 50% of revenue; the deepest published 800 VDC stack; Megmeet contests the sidecar.",
+      "hq": "Taipei, Taiwan",
+      "ticker": "TWSE: 2308",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "eaton",
+      "name": "Eaton",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Grid-to-chip by acquisition — ~$12.5B for Fibrebond, Boyd Thermal, Ultra PCS; DC orders +240%; we assess content-per-MW gain, not unit-share capture.",
+      "hq": "Dublin, Ireland",
+      "ticker": "NYSE: ETN",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
       "slug": "flexgen",
       "name": "FlexGen",
       "categories": [
@@ -66,6 +114,18 @@
       "tagline": "Global storage integrator — Smartstack/Gridstack with Mosaic/Nispera software; US domestic-content supply chain and a $6.4B backlog.",
       "hq": "Arlington, VA, USA",
       "ticker": "NASDAQ: FLNC",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "ge-vernova",
+      "name": "GE Vernova",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Holds the scarcest assets — turbine slots selling for 2031 delivery, Prolec transformer capacity; the time-to-power toll booth; wind still subtracts.",
+      "hq": "Cambridge, MA, USA",
+      "ticker": "NYSE: GEV",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
@@ -113,6 +173,18 @@
       "tagline": "ESS pivot underway — 140 GWh backlog and the Tesla Megapack LFP award; we assess AMPC dependence as the profitability watch item.",
       "hq": "Seoul, South Korea",
       "ticker": "KRX: 373220",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "liteon",
+      "name": "LITEON",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "#2 in AI server power with the BBU franchise — shipments ~30x in 2025; 800V rack mass production Q1 2027, a step behind Delta, ASIC customers first.",
+      "hq": "Taipei, Taiwan",
+      "ticker": "TWSE: 2301",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
@@ -165,6 +237,29 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "openai",
+      "name": "OpenAI",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "Anchor demand — ~$1.4T / ~30 GW committed against ~0.3 GW operational; the circular-financing debate is, in large part, the OpenAI-solvency debate.",
+      "hq": "San Francisco, CA, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "oracle",
+      "name": "Oracle",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "The AI-compute landlord — RPO $638B, roughly half attributed to OpenAI; a per-site power menu from gensets to Bloom fuel cells; FCF -$23.7B, funded on credit.",
+      "hq": "Austin, TX, USA",
+      "ticker": "NYSE: ORCL",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
       "slug": "panasonic",
       "name": "Panasonic",
       "categories": [
@@ -196,6 +291,18 @@
       "tagline": "First profit in seven quarters on UPS/BBU demand — SBB 2.0 and a world-first UL large-scale fire test; US LFP conversion lands October 2026.",
       "hq": "Yongin-si, South Korea",
       "ticker": "KRX: 006400",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "schneider-electric",
+      "name": "Schneider Electric",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Shared #1 in DC physical infrastructure — the NVIDIA reference-design franchise; a two-speed portfolio carried by triple-digit data-center demand.",
+      "hq": "Rueil-Malmaison, France",
+      "ticker": "EPA: SU",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
@@ -232,6 +339,18 @@
       "tagline": "Megapack, Powerwall, and Autobidder — leading Western integrator; Brookshire ramp and Megapack 3 deliveries are the watch items.",
       "hq": "Austin, TX, USA",
       "ticker": "NASDAQ: TSLA",
+      "status": "active",
+      "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "vertiv",
+      "name": "Vertiv",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The pure-play AI-DC power and cooling benchmark — $15B backlog, Dell'Oro co-#1 with Schneider; the Q2 revenue miss made execution the live question.",
+      "hq": "Columbus, OH, USA",
+      "ticker": "NYSE: VRT",
       "status": "active",
       "lastUpdated": "2026-08-09"
     },
