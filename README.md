@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-09 11:18:02 PM EST` · Repo version: `v02.24r`
+Last updated: `2026-08-10 02:17:53 AM EST` · Repo version: `v02.25r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -49,7 +49,7 @@ Last updated: `2026-08-09 11:18:02 PM EST` · Repo version: `v02.24r`
 │   │
 │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/globalacl.html">globalacl.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/globalacl.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Globalacl/globalacl.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/globalaclhtml.changelog.md">v01.02w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/globalaclgs.changelog.md">v01.01g</a> | [template] Global ACL page
 │   │
-│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.17w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">v01.05g</a> | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs; in-dossier field-note intake
+│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.19w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">v01.06g</a> | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs; in-dossier field-note intake
 │   │
 │   <b>│ ─ Standalone Utilities ─────────────────────────────────────────────────────</b>
 │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/text-compare.html">text-compare.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/text-compare.html">🌐</a>  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/text-comparehtml.changelog.md">v01.00w</a> · vNoGASg | [template] Text comparison tool with side-by-side diff highlighting
@@ -75,7 +75,6 @@ Last updated: `2026-08-09 11:18:02 PM EST` · Repo version: `v02.24r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler.webmanifest">profiler.webmanifest</a>    — PWA manifest for the Profiler page (home-screen install)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data">profiler-data/</a>           — Company dossier JSON data for the Profiler app (schema: repository-information/PROFILER-SCHEMA.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-companies.json">profiler-companies.json</a> — Company registry (roster, categories, freshness)
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-notes.json">profiler-notes.json</a>    — Field notes chronological log (⚙ changelog in the app; developer-rated confidence)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/abb.profile.json">abb.profile.json</a>       — ABB dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/amazon.profile.json">amazon.profile.json</a>    — Amazon dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bloom-energy.profile.json">bloom-energy.profile.json</a> — Bloom Energy dossier profile
@@ -436,12 +435,9 @@ Last updated: `2026-08-09 11:18:02 PM EST` · Repo version: `v02.24r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/.github/workflows">workflows/</a>              — [template] CI/CD pipeline
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/workflows/auto-merge-claude.yml">auto-merge-claude.yml</a> — [template · initialized] Auto-merge, GAS deploy, Pages deploy, library mirror
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/workflows/clasp-deploy-pilot.yml">clasp-deploy-pilot.yml</a> — clasp push deployment pilot
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/workflows/field-note-intake.yml">field-note-intake.yml</a> — Commits 📝 Field note issues into the Profiler note log
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/.github/ISSUE_TEMPLATE">ISSUE_TEMPLATE/</a>         — [template] Bug report &amp; feature request forms
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/ISSUE_TEMPLATE/bug_report.yml">bug_report.yml</a> — [template · initialized] Bug report form
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/ISSUE_TEMPLATE/feature_request.yml">feature_request.yml</a> — [template · initialized] Feature request form
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/ISSUE_TEMPLATE/field-note.yml">field-note.yml</a> — 📝 Field note form (Profiler quick-note intake)
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/ISSUE_TEMPLATE/field-note-file.yml">field-note-file.yml</a> — 📎 Field note file form (Word/PDF upload intake)
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/ISSUE_TEMPLATE/config.yml">config.yml</a> — [template · initialized] Issue chooser config
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/PULL_REQUEST_TEMPLATE.md">PULL_REQUEST_TEMPLATE.md</a> — [template · initialized] PR checklist
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.github/FUNDING.yml">FUNDING.yml</a>             — [template · initialized] Sponsor button config

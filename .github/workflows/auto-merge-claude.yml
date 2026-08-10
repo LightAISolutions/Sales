@@ -826,20 +826,18 @@ jobs:
         run: |
           set -euo pipefail
           SRC=sales/live-site-pages/profiler-data
-          mkdir -p library/dossiers library/archive library/notes library/study
+          mkdir -p library/dossiers library/archive library/study
           cp "$SRC"/*.profile.json library/dossiers/ 2>/dev/null || true
           cp "$SRC/profiler-companies.json" library/dossiers/
           rsync -a "$SRC/archive/" library/archive/
-          cp "$SRC/profiler-notes.json" library/notes/profiler-notes.json
           cp "$SRC"/*.study.json library/study/ 2>/dev/null || true
           if [ -d sales/repository-information/study-prep ]; then
             mkdir -p library/study/study-prep
             rsync -a --delete sales/repository-information/study-prep/ library/study/study-prep/
           fi
-          if [ -d sales/repository-information/note-files ]; then
-            mkdir -p library/notes/files
-            rsync -a --delete sales/repository-information/note-files/ library/notes/files/
-          fi
+          # Field notes and note files are NOT mirrored — they moved to Drive in
+          # the M3 migration precisely so they never land in a git repo. Mirroring
+          # them here would recreate the exposure in a second repository.
           if [ -d sales/live-site-pages/scraper-data/digests ]; then
             mkdir -p library/digests
             rsync -a --delete sales/live-site-pages/scraper-data/digests/ library/digests/

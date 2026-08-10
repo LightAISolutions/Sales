@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.06g] — 2026-08-10 02:17:53 AM EST — v02.25r
+
+### Security
+- Notes and their attachments are held in private storage and released only to an approved signed-in account
+
+### Changed
+- Saving a note now takes effect immediately, with no publishing step
+- Meeting recordings are uploaded directly from your browser, so length is no longer limited by the app
 
 ## [v01.05g] — 2026-08-09 03:03:41 AM EST — v02.14r
 

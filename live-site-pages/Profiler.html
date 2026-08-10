@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.18w">
+  <meta name="build-version" content="v01.19w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1690,7 +1690,6 @@
     }
 
     // ── Quick field note (in-dossier input → prefilled GitHub issue form) ──
-    var OV_ISSUE_BASE = 'https://github.com/LightAISolutions/Sales/issues/new';
 
     // ── GAS note backend — cookie-less fetch transport + GIS sign-in ──
     // Document-loads of /exec (iframe or top-level) fail in cookie-carrying
@@ -1709,6 +1708,51 @@
 
     function ovNoteQs(o) {
       return Object.keys(o).map(function(k) { return encodeURIComponent(k) + '=' + encodeURIComponent(o[k]); }).join('&');
+    }
+
+    // PROJECT: M5 — browser-side Drive upload for meeting audio, using the
+    // user's OWN drive.file credential (same model as Receipts' photo filing:
+    // the bytes never touch GAS, so file size is bounded by Drive, not by the
+    // Apps Script execution ceiling). drive.file only grants access to files
+    // this app itself creates — it cannot read the rest of the user's Drive.
+    var OV_DRIVE_SCOPE = 'https://www.googleapis.com/auth/drive.file';
+    var _ovDriveToken = null;
+    function ovDriveToken(cb) {
+      if (_ovDriveToken && _ovDriveToken.exp > Date.now() + 60000) { cb(_ovDriveToken.tok); return; }
+      if (!(window.google && google.accounts && google.accounts.oauth2)) { cb(null, 'google_sign_in_unavailable'); return; }
+      try {
+        google.accounts.oauth2.initTokenClient({
+          client_id: OV_GIS_CLIENT_ID,
+          scope: OV_DRIVE_SCOPE,
+          callback: function(resp) {
+            if (!resp || !resp.access_token) { cb(null, 'drive_permission_denied'); return; }
+            // expires_in is seconds; keep a small safety margin on reuse
+            _ovDriveToken = { tok: resp.access_token, exp: Date.now() + ((resp.expires_in || 3600) * 1000) };
+            cb(resp.access_token);
+          }
+        }).requestAccessToken();
+      } catch (err) { cb(null, 'drive_auth_failed'); }
+    }
+    // Multipart upload — metadata part + binary part in one request. cb(link, err)
+    function ovDriveUploadAudio(file, cb) {
+      ovDriveToken(function(tok, err) {
+        if (!tok) { cb(null, err || 'no_token'); return; }
+        var meta = { name: file.name, mimeType: file.type || 'audio/mpeg' };
+        var fd = new FormData();
+        fd.append('metadata', new Blob([JSON.stringify(meta)], { type: 'application/json' }));
+        fd.append('file', file);
+        fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,webViewLink', {
+          method: 'POST',
+          headers: { Authorization: 'Bearer ' + tok },
+          body: fd
+        })
+          .then(function(r) { if (!r.ok) throw new Error('http_' + r.status); return r.json(); })
+          .then(function(d) {
+            cb(d && d.webViewLink ? d.webViewLink
+              : (d && d.id ? 'https://drive.google.com/file/d/' + d.id + '/view' : null));
+          })
+          .catch(function(e) { cb(null, String(e && e.message || e)); });
+      });
     }
 
     // POST with params in the query string (survives Google's redirect); GET
@@ -1798,7 +1842,7 @@
       if (window._gasNoteUrl) {
         // Native form — no iframe, no document-load of /exec. Sign-in and all
         // note operations go over the cookie-less fetch transport above.
-        var sgN = ovSection('Add a Field Note', 'Type a note and/or attach a Word or PDF of your meeting notes — saved directly in the app (one-time Google sign-in). Notes are stored in the public field-note log; a triage pass decides dossier promotion.');
+        var sgN = ovSection('Add a Field Note', 'Type a note and/or attach a Word or PDF of your meeting notes — saved directly in the app (one-time Google sign-in). Notes are stored privately in Drive (never in the repo); a triage pass decides dossier promotion.');
         var qn2 = ovEl('div'); qn2.id = 'ov-qn';
         var nBody = ovEl('div');
         var nStatus = ovEl('div', 'hint'); nStatus.setAttribute('role', 'status');
@@ -1879,17 +1923,17 @@
           row.appendChild(send);
           nBody.appendChild(row);
           var fileInput = document.createElement('input');
-          fileInput.type = 'file'; fileInput.multiple = true; fileInput.accept = '.pdf,.doc,.docx';
+          fileInput.type = 'file'; fileInput.multiple = true; fileInput.accept = '.pdf,.doc,.docx,.txt,.md,.vtt,.srt';
           fileInput.style.cssText = 'display:block;width:100%;margin-top:10px;font-size:12.5px;color:inherit;';
           nBody.appendChild(fileInput);
-          nBody.appendChild(ovEl('div', 'hint', 'Optionally attach Word/PDF notes (up to 3, 8 MB each) — they ride along with your suggestion.'));
+          nBody.appendChild(ovEl('div', 'hint', 'Optionally attach Word/PDF notes or a transcript (up to 3, 8 MB each) — they ride along with your suggestion.'));
           function readFilesS(cb) {
             var fl = fileInput.files;
             if (!fl.length) { cb([]); return; }
             if (fl.length > 3) { say('Attach at most 3 files.', false); cb(null); return; }
             var out = [], pending = fl.length, failed = false;
             for (var i = 0; i < fl.length; i++) (function(f) {
-              if (!/\.(docx?|pdf)$/i.test(f.name)) { failed = true; say(f.name + ' is not a Word/PDF file.', false); cb(null); return; }
+              if (!/\.(docx?|pdf|txt|md|vtt|srt)$/i.test(f.name)) { failed = true; say(f.name + ' is not a Word/PDF or transcript file.', false); cb(null); return; }
               if (f.size > 8 * 1024 * 1024) { failed = true; say(f.name + ' is over 8 MB.', false); cb(null); return; }
               var rd = new FileReader();
               rd.onload = function() {
@@ -1939,17 +1983,53 @@
           row.appendChild(save);
           nBody.appendChild(row);
           var fileInput = document.createElement('input');
-          fileInput.type = 'file'; fileInput.multiple = true; fileInput.accept = '.pdf,.doc,.docx';
+          fileInput.type = 'file'; fileInput.multiple = true; fileInput.accept = '.pdf,.doc,.docx,.txt,.md,.vtt,.srt';
           fileInput.style.cssText = 'display:block;width:100%;margin-top:10px;font-size:12.5px;color:inherit;';
           nBody.appendChild(fileInput);
-          nBody.appendChild(ovEl('div', 'hint', 'Optionally attach Word/PDF meeting notes (up to 3, 8 MB each) — stored privately; the log gets a summary at the next triage.'));
+          nBody.appendChild(ovEl('div', 'hint', 'Optionally attach Word/PDF notes or a meeting transcript (.txt/.md/.vtt/.srt) — up to 3, 8 MB each. Stored privately in Drive; the log gets a summary at the next triage.'));
+
+          // PROJECT: M5 — meeting recording. Audio is far too large for the
+          // 8 MB attachment path and for GAS to relay (6-minute execution
+          // ceiling, 50 MB UrlFetchApp cap), so it is uploaded browser-side
+          // straight to the signed-in user's own Drive with their drive.file
+          // credential; only the resulting link is sent to the backend. On a
+          // phone this opens the native file picker straight to the recordings.
+          var recLink = '';
+          var recRow = ovEl('div');
+          recRow.style.cssText = 'display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap;';
+          var recInput = document.createElement('input');
+          recInput.type = 'file'; recInput.accept = 'audio/*';
+          recInput.style.display = 'none';
+          var recBtn = ovEl('button', 'ov-btn ghost', '🎙 Attach meeting recording');
+          recBtn.type = 'button';
+          recBtn.style.cssText = 'font-size:11px;padding:6px 10px;';
+          recBtn.addEventListener('click', function() { recInput.click(); });
+          var recStat = ovEl('span', 'hint', '');
+          recStat.style.cssText = 'font-size:11px;';
+          recRow.appendChild(recBtn); recRow.appendChild(recInput); recRow.appendChild(recStat);
+          nBody.appendChild(recRow);
+          recInput.addEventListener('change', function() {
+            var f = recInput.files && recInput.files[0];
+            if (!f) return;
+            recLink = '';
+            var mb = (f.size / (1024 * 1024)).toFixed(1);
+            recStat.textContent = 'Uploading ' + f.name + ' (' + mb + ' MB)…';
+            recBtn.disabled = true;
+            ovDriveUploadAudio(f, function(link, err) {
+              recBtn.disabled = false;
+              if (!link) { recStat.textContent = 'Upload failed' + (err ? ' — ' + err : ''); return; }
+              recLink = link;
+              recStat.textContent = '✓ ' + f.name + ' (' + mb + ' MB) attached';
+            });
+          });
+
           function readFiles(cb) {
             var fl = fileInput.files;
             if (!fl.length) { cb([]); return; }
             if (fl.length > 3) { say('Attach at most 3 files.', false); cb(null); return; }
             var out = [], pending = fl.length, failed = false;
             for (var i = 0; i < fl.length; i++) (function(f) {
-              if (!/\.(docx?|pdf)$/i.test(f.name)) { failed = true; say(f.name + ' is not a Word/PDF file.', false); cb(null); return; }
+              if (!/\.(docx?|pdf|txt|md|vtt|srt)$/i.test(f.name)) { failed = true; say(f.name + ' is not a Word/PDF or transcript file.', false); cb(null); return; }
               if (f.size > 8 * 1024 * 1024) { failed = true; say(f.name + ' is over 8 MB.', false); cb(null); return; }
               var rd = new FileReader();
               rd.onload = function() {
@@ -1968,7 +2048,7 @@
             say(fileInput.files.length ? 'Uploading…' : 'Saving…');
             readFiles(function(files) {
               if (files === null) { save.disabled = false; return; }
-              ovNoteApi('submit', { slug: slug, sourceType: srcSel.value, note: text, confidence: confSel.value, files: files }, function(res) {
+              ovNoteApi('submit', { slug: slug, sourceType: srcSel.value, note: text, confidence: confSel.value, files: files, recordingLink: recLink }, function(res) {
                 save.disabled = false;
                 if (!sessionGuard(res, 'Save failed')) return;
                 ta.value = ''; fileInput.value = '';
@@ -2053,47 +2133,14 @@
         sgN.appendChild(qn2);
         return sgN;
       }
-      var s = ovSection('Add a Field Note', 'Stored verbatim in the public field-note log; a triage pass decides dossier promotion. Saving opens a prefilled GitHub form — one tap to submit (GitHub sign-in required).');
+      // PROJECT: the pre-deployment fallback used to open a prefilled GitHub
+      // issue form. That channel was deleted with the M3 Drive migration — it
+      // committed notes to the public repo, which is exactly what the move
+      // closed. With no backend reachable there is no private place to put a
+      // note, so the box explains that rather than offering a broken path.
+      var s = ovSection('Add a Field Note', 'Notes are stored privately in Drive and served only to a signed-in owner session.');
       var qn = ovEl('div'); qn.id = 'ov-qn';
-      var ta = ovEl('textarea');
-      ta.maxLength = 2000;
-      ta.placeholder = 'What did you learn about this company?';
-      qn.appendChild(ta);
-      var row = ovEl('div', 'row');
-      var srcSel = ovEl('select');
-      ['contact', 'event', 'call', 'news', 'other'].forEach(function(v) {
-        var o = ovEl('option', null, 'via ' + v); o.value = v; srcSel.appendChild(o);
-      });
-      row.appendChild(srcSel);
-      var confSel = ovEl('select');
-      ['100 — certain', '90', '80', '70', '60', '50 — plausible', '40', '30', '20', '10', '0 — rumor'].forEach(function(v) {
-        var o = ovEl('option', null, 'confidence ' + v); o.value = v; confSel.appendChild(o);
-      });
-      confSel.selectedIndex = 3;
-      row.appendChild(confSel);
-      var save = ovEl('button', 'ov-btn', 'Save via GitHub ↗');
-      save.type = 'button';
-      save.addEventListener('click', function() {
-        var text = ta.value.trim();
-        if (!text) { ta.focus(); return; }
-        var url = OV_ISSUE_BASE
-          + '?template=field-note.yml'
-          + '&company=' + encodeURIComponent(slug)
-          + '&sourcetype=' + encodeURIComponent(srcSel.value)
-          + '&confidence=' + encodeURIComponent(confSel.value)
-          + '&note=' + encodeURIComponent(text);
-        window.open(url, '_blank', 'noopener');
-      });
-      row.appendChild(save);
-      var fileBtn = ovEl('button', 'ov-btn ghost', 'Upload Word/PDF 📎');
-      fileBtn.type = 'button';
-      fileBtn.title = 'Attach a .docx or .pdf of your notes via a GitHub form';
-      fileBtn.addEventListener('click', function() {
-        window.open(OV_ISSUE_BASE + '?template=field-note-file.yml&company=' + encodeURIComponent(slug), '_blank', 'noopener');
-      });
-      row.appendChild(fileBtn);
-      qn.appendChild(row);
-      qn.appendChild(ovEl('div', 'hint', 'Typed notes save instantly via the GitHub form. For a Word doc or PDF, tap Upload — then drag the file into the form’s notes box (or use its paperclip) and submit.'));
+      qn.appendChild(ovEl('div', 'hint', 'The note backend is not reachable from this page yet. Once the Profiler app is deployed, the note box appears here — or capture the note in a Claude session with “profiler note ' + slug + ': …”.'));
       s.appendChild(qn);
       return s;
     }
@@ -2138,18 +2185,27 @@
       var panel = ovEl('div'); panel.id = 'ov-notes-panel';
       var head = ovEl('div'); head.id = 'ov-notes-head';
       head.appendChild(ovEl('span', 'ttl', 'Field Notes — Chronological Log'));
-      var addLink = ovEl('a', 'ov-btn ghost', '＋ Add note');
-      addLink.href = OV_ISSUE_BASE + '?template=field-note.yml';
-      addLink.target = '_blank'; addLink.rel = 'noopener';
-      addLink.style.cssText = 'text-decoration:none;font-size:11px;padding:7px 11px;';
-      addLink.title = 'Open the field-note form (GitHub sign-in required)';
-      head.appendChild(addLink);
-      var fileLink = ovEl('a', 'ov-btn ghost', '📎 File');
-      fileLink.href = OV_ISSUE_BASE + '?template=field-note-file.yml';
-      fileLink.target = '_blank'; fileLink.rel = 'noopener';
-      fileLink.style.cssText = 'text-decoration:none;font-size:11px;padding:7px 11px;';
-      fileLink.title = 'Upload a Word/PDF note file (GitHub sign-in required)';
-      head.appendChild(fileLink);
+      // PROJECT: notes moved to Drive (M3) — the GitHub issue-form channel that
+      // used to live here was deleted with the repo-backed store. Capture is the
+      // in-dossier note box; this button replaces the unattended triage sweep.
+      var pendBtn = ovEl('button', 'ov-btn ghost', '📋 Copy pending');
+      pendBtn.type = 'button';
+      pendBtn.style.cssText = 'font-size:11px;padding:7px 11px;';
+      pendBtn.title = 'Copy every pending note + transcript, ready to paste into Claude';
+      pendBtn.addEventListener('click', function() {
+        pendBtn.disabled = true;
+        var restore = function(label) {
+          pendBtn.textContent = label;
+          setTimeout(function() { pendBtn.textContent = '📋 Copy pending'; pendBtn.disabled = false; }, 1800);
+        };
+        ovNoteApi('claudepending', {}, function(r) {
+          if (!r || !r.success || !r.payload) { restore('✕ Failed'); return; }
+          ovCopyText(r.payload.text, function(ok) {
+            restore(ok ? '✓ ' + r.payload.count + ' copied' : '✕ Failed');
+          });
+        });
+      });
+      head.appendChild(pendBtn);
       var close = ovEl('button', null, '×'); close.id = 'ov-notes-close'; close.type = 'button';
       close.setAttribute('aria-label', 'Close');
       close.addEventListener('click', function() { overlay.style.display = 'none'; });
@@ -2160,12 +2216,40 @@
       body.appendChild(ovEl('p', 'ov-loading', 'Loading field notes…'));
       panel.appendChild(body);
       overlay.appendChild(panel);
-      ovFetchJson('profiler-notes.json')
-        .then(function(d) { ovNotesData = d; ovPaintNotes(); })
-        .catch(function() {
-          ovClear(body);
-          body.appendChild(ovEl('p', 'ov-empty', 'Could not load field notes (profiler-data/profiler-notes.json).'));
-        });
+      // PROJECT: notes are served by GAS from Drive, never fetched as a static
+      // file — that is the whole point of the M3 move. An unsigned or non-admin
+      // session gets nothing back, which is the intended behaviour.
+      ovNoteApi('list', {}, function(r) {
+        if (r && r.success && r.notes) { ovNotesData = { notes: r.notes }; ovPaintNotes(); return; }
+        ovClear(body);
+        body.appendChild(ovEl('p', 'ov-empty', (r && r.error === 'ADMIN_ONLY')
+          ? 'Field notes are visible to the owner account only.'
+          : 'Could not load field notes — sign in and try again.'));
+      });
+    }
+
+    // Clipboard with a document.execCommand fallback for browsers that refuse
+    // navigator.clipboard outside a secure/permitted context (older Android
+    // WebViews in particular). cb(true|false).
+    function ovCopyText(text, cb) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function() { cb(true); }, function() { cb(ovCopyFallback(text)); });
+        return;
+      }
+      cb(ovCopyFallback(text));
+    }
+    function ovCopyFallback(text) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;top:-1000px;opacity:0;';
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(ta);
+        return ok;
+      } catch (err) { return false; }
     }
 
     function ovPaintNotes() {
@@ -2213,6 +2297,34 @@
         row.appendChild(nh);
         row.appendChild(ovEl('p', null, n.note || ''));
         if (n.tags && n.tags.length) row.appendChild(ovEl('div', 'tags', '# ' + n.tags.join('  # ')));
+        // PROJECT: per-note actions — the manual replacement for automated
+        // triage now that notes live off-repo and unattended sessions can't
+        // read them. Copy pulls the note plus its transcript in one shot.
+        var acts = ovEl('div', 'tags');
+        acts.style.cssText = 'display:flex;gap:8px;align-items:center;margin-top:6px;';
+        var cp = ovEl('button', 'ov-btn ghost', n.hasTranscript ? '📋 Copy + transcript' : '📋 Copy');
+        cp.type = 'button';
+        cp.style.cssText = 'font-size:10px;padding:4px 8px;';
+        cp.addEventListener('click', function() {
+          cp.disabled = true;
+          var label = cp.textContent;
+          ovNoteApi('claudeone', { id: n.id }, function(r) {
+            var done = function(txt) {
+              cp.textContent = txt;
+              setTimeout(function() { cp.textContent = label; cp.disabled = false; }, 1500);
+            };
+            if (!r || !r.success || !r.payload) { done('✕ Failed'); return; }
+            ovCopyText(r.payload.text, function(ok) { done(ok ? '✓ Copied' : '✕ Failed'); });
+          });
+        });
+        acts.appendChild(cp);
+        if (n.recordingLink) {
+          var rec = ovEl('a', 'ov-btn ghost', '🎙 Recording');
+          rec.href = n.recordingLink; rec.target = '_blank'; rec.rel = 'noopener';
+          rec.style.cssText = 'font-size:10px;padding:4px 8px;text-decoration:none;';
+          acts.appendChild(rec);
+        }
+        row.appendChild(acts);
         body.appendChild(row);
       });
     }

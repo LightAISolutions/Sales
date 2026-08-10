@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 18/50`
+`Sections: 19/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.19w] — 2026-08-10 02:17:53 AM EST — v02.25r
+
+### Changed
+- Field notes are now private — they are kept in your own Google Drive and shown only after you sign in with an approved account
+
+### Added
+- Copy buttons on every note, plus a copy-all for untriaged notes, put a note and its transcript on your clipboard in one tap
+- Attach a meeting recording to a note straight from your phone or computer
+- Transcript files can be attached alongside Word and PDF notes
 
 ## [v01.18w] — 2026-08-09 11:18:02 PM EST — v02.24r
 

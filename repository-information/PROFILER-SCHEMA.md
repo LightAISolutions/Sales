@@ -80,7 +80,11 @@ Top-level fields:
 
 ## Field Notes schema — `profiler-notes.json`
 
-A single chronological log of first-hand intel the developer collects from industry contacts, in-person events, calls, and other channels. Captured via the **Profiler Note Command** (see `.claude/rules/profiler-app.md`). Rendered by the app's ⚙ (settings cog) changelog on the dashboard, and read by every future research/refresh/report session as recall context.
+A single chronological log of first-hand intel the developer collects from industry contacts, in-person events, calls, and other channels. Captured via the **Profiler Note Command** (see `.claude/rules/profiler-app.md`). Rendered by the app's ⚙ (settings cog) changelog on the dashboard.
+
+> **Storage moved to Google Drive (M3, 2026-08-10).** The log lives at `Profiler/profiler-notes.json` in the script owner's Drive — **not in this repo**. The repo is public, so a file committed here is readable via `raw.githubusercontent.com` and `git clone` no matter what the app's sign-in wall does; moving it out of `live-site-pages/` alone would have closed only the Pages vector. Attachments live under `Profiler/note-files/<slug>/`, and meeting audio under the uploading user's own Drive.
+>
+> **Consequence for sessions:** an unattended Claude session can no longer read the log. The scheduled post-earnings refreshes, the quarterly sweep, reports, and prep tasks all run without note context unless the developer supplies it. The app's **📋 Copy pending** button (⚙ overlay) and the per-note **📋 Copy** button return the note plus its transcript formatted for pasting into a session — that is the intended replacement for the automated read.
 
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
@@ -96,9 +100,10 @@ A single chronological log of first-hand intel the developer collects from indus
 | `notes[].triage` | string | no | Dossier-promotion state: `pending` (not yet evaluated — default for app-submitted notes), `promoted (vN)` (folded into the dossier at profileVersion N), or `logged-only` (evaluated, kept as context only). Set by Claude during refresh/triage passes — never by the intake app |
 | `notes[].submittedVia` | string | no | `profiler-intake` for notes saved via the in-app note box (GAS backend); `issue-form (#N)` for the GitHub-issue fallback; absent for Claude-command captures |
 | `notes[].edited` | string | no | `YYYY-MM-DD` of the developer's most recent in-app edit. Set by the intake app's Manage panel; absent when never edited. Only the **developer** edits notes (their own content) — Claude's triage passes never alter note text (exception: replacing a file-note's `summary pending` placeholder with the faithful summary) |
-| `notes[].sourceFile` | string | no | For Word/PDF-derived notes: repo-relative path of the original document under `repository-information/note-files/<slug>/` (private — never deployed; the app cannot fetch it). The `note` text is a faithful summary, not verbatim, for file-based captures |
+| `notes[].sourceFile` | string | no | For document- and transcript-derived notes: a `drive:<fileId>` reference to the original under `Profiler/note-files/<slug>/` in Drive. Text attachments (`.txt`/`.md`/`.vtt`/`.srt`) are readable back through the app's Copy buttons; Word/PDF are download-only. The `note` text is a faithful summary, not verbatim, for file-based captures |
+| `notes[].recordingLink` | string | no | Drive link to a meeting audio recording uploaded browser-side with the user's own `drive.file` credential (never relayed through GAS). Constrained server-side to `drive.google.com`/`docs.google.com` URLs |
 
-**Notes are not sources.** Field notes deploy publicly with the site but are private intel, not public-sourced fact — they must **never** be cited in a profile's `sources[]` or blended into profile sections. They inform research direction, reports, and conversation prep only, weighted by `confidence` (see the Confidence weighting rule in `.claude/rules/profiler-app.md`).
+**Notes are not sources.** Field notes are private intel, not public-sourced fact — they must **never** be cited in a profile's `sources[]` or blended into profile sections. They inform research direction, reports, and conversation prep only, weighted by `confidence` (see the Confidence weighting rule in `.claude/rules/profiler-app.md`).
 
 ## Study Guide schema — `<slug>.study.json`
 

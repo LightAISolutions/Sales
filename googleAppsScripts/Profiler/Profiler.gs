@@ -1,4 +1,4 @@
-var VERSION = "v01.05g";
+var VERSION = "v01.06g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1801,41 +1801,23 @@ function checkSpreadsheetAccess(email, opt_ss) {
 
 // PROJECT START — Add your project-specific code here
 // ── Profiler field-note intake ──
-// Commits developer field notes to profiler-notes.json in this repo (schema:
-// repository-information/PROFILER-SCHEMA.md — Field Notes). Notes are stored
-// VERBATIM with a developer-rated 0–100 confidence and triage "pending" so the
-// next Profiler refresh/triage session decides dossier promotion. These are
-// machine data commits to main (like the workflow's version-file commits) —
-// the Pages deploy they trigger is what makes the note visible in the app.
-var NOTES_FILE_PATH = "live-site-pages/profiler-data/profiler-notes.json";
+// Notes are stored VERBATIM with a developer-rated 0–100 confidence and triage
+// "pending" (schema: repository-information/PROFILER-SCHEMA.md — Field Notes).
+// Storage is the script owner's Drive, NOT this repo — see the Drive-backed
+// private store below for why. The repo-write helpers this module used to carry
+// were removed with the store: keeping a repo-write path for note data would
+// invite exactly the exposure the migration closed.
 var REGISTRY_FILE_PATH = "live-site-pages/profiler-data/profiler-companies.json";
 var NOTE_SOURCE_TYPES = ["contact", "event", "call", "news", "other"];
-// Word/PDF note files — stored under repository-information/ (NOT deployed;
-// the mirror job syncs them to the library). Base64 payload cap ~8MB binary.
-var NOTE_FILES_DIR = "repository-information/note-files";
-var NOTE_FILE_EXT_RE = /\.(docx?|pdf)$/i;
+// Attachment rules — transcripts (.txt/.md/.vtt/.srt) and Word/PDF note files.
+// Base64 payload cap ~8MB binary; large meeting AUDIO does not come through
+// here at all (M5 uploads it browser-side straight to Drive).
+var NOTE_FILE_EXT_RE = /\.(docx?|pdf|txt|md|vtt|srt)$/i;
 var NOTE_FILE_MAX_COUNT = 3;
 var NOTE_FILE_MAX_B64 = 11000000;
 // Non-admin users suggest notes instead of writing them — suggestions are
 // emailed here (with any files as attachments) and nothing is committed
 var NOTE_SUGGEST_EMAIL = "jonyang92@gmail.com";
-
-// Commit a binary file (base64 content) to the repo via the contents API.
-// Returns the repo-relative path written.
-function ghPutFile_(path, base64Content, message) {
-  var token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
-  var url = "https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO + "/contents/" + path;
-  var res = UrlFetchApp.fetch(url, {
-    method: "put",
-    contentType: "application/json",
-    headers: { "Authorization": "token " + token, "Accept": "application/vnd.github.v3+json" },
-    payload: JSON.stringify({ message: message, content: base64Content, branch: GITHUB_BRANCH }),
-    muteHttpExceptions: true
-  });
-  var code = res.getResponseCode();
-  if (code !== 200 && code !== 201) throw new Error("GITHUB_WRITE_FAILED");
-  return path;
-}
 
 // Best-effort deploy dispatch — pushes made via the contents API don't need it
 // (they trigger the push-event workflow directly since they're made with the
@@ -1871,6 +1853,95 @@ function ghContentsGet_(path) {
   return { sha: body.sha, json: JSON.parse(decoded) };
 }
 
+// ── Drive-backed private store (M3) ──
+// Notes and note files live in the script owner's Drive, NOT the repo. The repo
+// is public, so anything committed there is world-readable via raw.github-
+// usercontent.com and clone regardless of the app's sign-in wall — moving a
+// file out of live-site-pages/ only closes the Pages vector, not the git ones.
+// Drive + the Master-ACL check on every op is what actually makes them private.
+// Folder/file IDs are cached in Script Properties so a steady-state read costs
+// one getFileById rather than a name search.
+var DRIVE_ROOT_NAME = "Profiler";
+var DRIVE_NOTES_FILE = "profiler-notes.json";
+var DRIVE_FILES_DIR = "note-files";
+var PROP_DRIVE_ROOT_ID = "DRIVE_ROOT_FOLDER_ID";
+var PROP_DRIVE_NOTES_ID = "DRIVE_NOTES_FILE_ID";
+// Transcripts are plain text and read back for the "Copy for Claude" button;
+// Word/PDF stay binary and are download-only.
+var NOTE_FILE_TEXT_RE = /\.(txt|md|vtt|srt)$/i;
+
+function driveChildFolder_(parent, name) {
+  var it = parent.getFoldersByName(name);
+  return it.hasNext() ? it.next() : parent.createFolder(name);
+}
+
+function driveRoot_() {
+  var props = PropertiesService.getScriptProperties();
+  var id = props.getProperty(PROP_DRIVE_ROOT_ID);
+  if (id) { try { return DriveApp.getFolderById(id); } catch (err) { /* recreate below */ } }
+  var folder = driveChildFolder_(DriveApp.getRootFolder(), DRIVE_ROOT_NAME);
+  props.setProperty(PROP_DRIVE_ROOT_ID, folder.getId());
+  return folder;
+}
+
+function driveNotesFile_() {
+  var props = PropertiesService.getScriptProperties();
+  var id = props.getProperty(PROP_DRIVE_NOTES_ID);
+  if (id) { try { return DriveApp.getFileById(id); } catch (err) { /* recreate below */ } }
+  var root = driveRoot_();
+  var it = root.getFilesByName(DRIVE_NOTES_FILE);
+  var file = it.hasNext() ? it.next() : root.createFile(
+    DRIVE_NOTES_FILE, JSON.stringify({ schemaVersion: 1, notes: [] }, null, 2) + "\n", MimeType.PLAIN_TEXT);
+  props.setProperty(PROP_DRIVE_NOTES_ID, file.getId());
+  return file;
+}
+
+// Shape-compatible with the ghContentsGet_ call it replaces, minus `sha` —
+// Drive needs no optimistic-concurrency token because every writer already
+// runs inside the same LockService critical section.
+function driveNotesGet_() {
+  var json;
+  try { json = JSON.parse(driveNotesFile_().getBlob().getDataAsString("UTF-8")); }
+  catch (err) { throw new Error('DRIVE_READ_FAILED'); }
+  if (!json || typeof json !== 'object') throw new Error('DRIVE_READ_FAILED');
+  if (!Array.isArray(json.notes)) json.notes = [];
+  return { json: json };
+}
+
+function driveNotesPut_(data) {
+  driveNotesFile_().setContent(JSON.stringify(data, null, 2) + "\n");
+}
+
+// One folder per company slug. Returns a "drive:<fileId>" reference, stored as
+// the note's sourceFile in place of the old repo-relative path.
+function drivePutNoteFile_(slug, name, base64) {
+  var dir = driveChildFolder_(driveChildFolder_(driveRoot_(), DRIVE_FILES_DIR), slug);
+  var type = NOTE_FILE_TEXT_RE.test(name) ? MimeType.PLAIN_TEXT : "application/octet-stream";
+  return "drive:" + dir.createFile(Utilities.newBlob(Utilities.base64Decode(base64), type, name)).getId();
+}
+
+function driveNoteFileId_(ref) {
+  return (ref && ref.indexOf("drive:") === 0) ? ref.slice(6) : null;
+}
+
+function driveDeleteNoteFile_(ref) {
+  var id = driveNoteFileId_(ref);
+  if (!id) return;
+  try { DriveApp.getFileById(id).setTrashed(true); } catch (err) { /* non-fatal — log entry is source of truth */ }
+}
+
+// Text of an attached transcript, for the app's "Copy for Claude" button.
+// Binary attachments (Word/PDF) return null — nothing useful to put on a clipboard.
+function driveReadNoteFile_(ref) {
+  var id = driveNoteFileId_(ref);
+  if (!id) return null;
+  try {
+    var file = DriveApp.getFileById(id);
+    if (!NOTE_FILE_TEXT_RE.test(file.getName())) return null;
+    return file.getBlob().getDataAsString("UTF-8");
+  } catch (err) { return null; }
+}
+
 function getIntakeBootstrap(sessionToken) {
   validateSessionForData(sessionToken, 'intake_bootstrap');
   var reg = ghContentsGet_(REGISTRY_FILE_PATH).json;
@@ -1887,6 +1958,11 @@ function submitFieldNote(sessionToken, payload) {
   var text = String(payload.note || '').trim();
   var confidence = Math.round(Number(payload.confidence));
   var files = Array.isArray(payload.files) ? payload.files : [];
+  // M5 — Drive link to a browser-uploaded meeting recording. Constrained to
+  // Google's own hosts so the field can't be used to park an arbitrary URL.
+  var recordingLink = String(payload.recordingLink || '').trim();
+  if (recordingLink && !/^https:\/\/(drive|docs)\.google\.com\//.test(recordingLink)) throw new Error('INVALID_INPUT');
+  if (recordingLink.length > 500) throw new Error('INVALID_INPUT');
   // A submission needs typed text, attached files, or both
   if (!text && !files.length) throw new Error('INVALID_INPUT');
   if (text.length > 4000) throw new Error('INVALID_INPUT');
@@ -1905,21 +1981,21 @@ function submitFieldNote(sessionToken, payload) {
   if (validSlugs.indexOf(slug) < 0) throw new Error('INVALID_INPUT');
 
   var lock = LockService.getScriptLock();
-  lock.waitLock(20000);   // serialize submissions so the file sha can't race
+  lock.waitLock(20000);   // serialize submissions so concurrent writes can't clobber
   try {
-    var current = ghContentsGet_(NOTES_FILE_PATH);
+    var current = driveNotesGet_();
     var data = current.json;
     var today = Utilities.formatDate(new Date(), "America/New_York", "yyyy-MM-dd");
     var idDate = today.replace(/-/g, "");
 
-    // Commit attached Word/PDF files first — a timestamp in the name prevents
-    // path collisions, so no exists-check round trip is needed
-    var savedPaths = [];
+    // Store attached files in Drive first — a timestamp in the name keeps
+    // same-day uploads from colliding inside the slug folder
+    var savedFiles = [];
     var stamp = Utilities.formatDate(new Date(), "America/New_York", "HHmmss");
     files.forEach(function(f) {
       var safe = f.name.replace(/[^A-Za-z0-9._-]/g, "_");
-      var dest = NOTE_FILES_DIR + "/" + slug + "/" + today + "-" + stamp + "-" + safe;
-      savedPaths.push(ghPutFile_(dest, f.base64, "Field note file (" + slug + ") via profiler-intake"));
+      var name = today + "-" + stamp + "-" + safe;
+      savedFiles.push({ name: name, ref: drivePutNoteFile_(slug, name, f.base64) });
     });
     var seq = 1;
     (data.notes || []).forEach(function(n) {
@@ -1929,8 +2005,8 @@ function submitFieldNote(sessionToken, payload) {
       }
     });
     var noteText = text;
-    if (savedPaths.length) {
-      var names = savedPaths.map(function(p) { return p.split("/").pop(); }).join(", ");
+    if (savedFiles.length) {
+      var names = savedFiles.map(function(f) { return f.name; }).join(", ");
       noteText = (text ? text + " " : "") + "[file note: " + names + " — summary pending triage]";
     }
     var note = {
@@ -1944,26 +2020,18 @@ function submitFieldNote(sessionToken, payload) {
       triage: "pending",
       submittedVia: "profiler-intake"
     };
-    if (savedPaths.length) note.sourceFile = savedPaths[0];
+    if (savedFiles.length) note.sourceFile = savedFiles[0].ref;
+    // M5 — meeting audio is uploaded browser-side with the user's own
+    // drive.file credential (GAS never handles the bytes, so the 6-minute
+    // execution ceiling and the 50MB UrlFetchApp cap never come into play).
+    // Only the resulting Drive link is stored, and only if it IS a Drive link.
+    if (recordingLink) note.recordingLink = recordingLink;
     data.notes = [note].concat(data.notes || []);
-    var token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
-    var putUrl = "https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO + "/contents/" + NOTES_FILE_PATH;
-    var res = UrlFetchApp.fetch(putUrl, {
-      method: "put",
-      contentType: "application/json",
-      headers: { "Authorization": "token " + token, "Accept": "application/vnd.github.v3+json" },
-      payload: JSON.stringify({
-        message: "Field note " + note.id + " (" + slug + ") via profiler-intake",
-        content: Utilities.base64Encode(JSON.stringify(data, null, 2) + "\n", Utilities.Charset.UTF_8),
-        sha: current.sha,
-        branch: GITHUB_BRANCH
-      }),
-      muteHttpExceptions: true
-    });
-    if (res.getResponseCode() !== 200 && res.getResponseCode() !== 201) throw new Error('GITHUB_WRITE_FAILED');
-    ghDispatchDeploy_();
-    auditLog('data_write', session.email || 'unknown', 'field_note_submitted', { id: note.id, slug: slug, files: savedPaths.length });
-    return { success: true, id: note.id, slug: slug, confidence: confidence, files: savedPaths.length };
+    driveNotesPut_(data);
+    // No ghDispatchDeploy_ — notes no longer live in the repo, so a note write
+    // needs no site rebuild to become visible. Writes are now instant.
+    auditLog('data_write', session.email || 'unknown', 'field_note_submitted', { id: note.id, slug: slug, files: savedFiles.length });
+    return { success: true, id: note.id, slug: slug, confidence: confidence, files: savedFiles.length };
   } finally {
     lock.releaseLock();
   }
@@ -1974,44 +2042,61 @@ function submitFieldNote(sessionToken, payload) {
 // passes never alter note text (see profiler-app.md). Edits stamp an "edited"
 // date so the log stays honest about post-hoc changes.
 
-// Fetch just a file's blob sha (works for binary files — no content parse)
-function ghGetSha_(path) {
-  var token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
-  var url = "https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO
-    + "/contents/" + path + "?ref=" + GITHUB_BRANCH + "&t=" + new Date().getTime();
-  var res = UrlFetchApp.fetch(url, {
-    headers: { "Accept": "application/vnd.github.v3+json", "Authorization": "token " + token },
-    muteHttpExceptions: true
-  });
-  if (res.getResponseCode() !== 200) return null;
-  return JSON.parse(res.getContentText()).sha;
-}
-
-function ghPutNotes_(data, message, sha) {
-  var token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
-  var res = UrlFetchApp.fetch("https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO + "/contents/" + NOTES_FILE_PATH, {
-    method: "put",
-    contentType: "application/json",
-    headers: { "Authorization": "token " + token, "Accept": "application/vnd.github.v3+json" },
-    payload: JSON.stringify({
-      message: message,
-      content: Utilities.base64Encode(JSON.stringify(data, null, 2) + "\n", Utilities.Charset.UTF_8),
-      sha: sha,
-      branch: GITHUB_BRANCH
-    }),
-    muteHttpExceptions: true
-  });
-  if (res.getResponseCode() !== 200 && res.getResponseCode() !== 201) throw new Error('GITHUB_WRITE_FAILED');
-}
-
 function listFieldNotes(sessionToken) {
   validateSessionForData(sessionToken, 'list_field_notes');
-  var notes = ghContentsGet_(NOTES_FILE_PATH).json.notes || [];
+  var notes = driveNotesGet_().json.notes || [];
   return notes.map(function(n) {
     return { id: n.id, date: n.date, slug: n.slug, sourceType: n.sourceType, note: n.note,
              confidence: n.confidence, triage: n.triage, submittedVia: n.submittedVia,
-             sourceFile: n.sourceFile || null, edited: n.edited || null };
+             sourceFile: n.sourceFile || null, edited: n.edited || null,
+             recordingLink: n.recordingLink || null,
+             // Drives the "Copy for Claude" affordance — only text attachments
+             // can be put on a clipboard, so the app hides the button otherwise
+             hasTranscript: !!(n.sourceFile && driveNoteFileId_(n.sourceFile)) };
   });
+}
+
+// "Copy for Claude" — returns one note plus its transcript text, pre-formatted
+// for pasting into a session. Notes left the repo, so an unattended session can
+// no longer read them; this is the developer-present path that replaces it.
+function getNoteForClaude(sessionToken, id) {
+  validateSessionForData(sessionToken, 'get_note_for_claude');
+  id = String(id || '');
+  var notes = driveNotesGet_().json.notes || [];
+  var n = notes.filter(function(x) { return x.id === id; })[0];
+  if (!n) throw new Error('NOT_FOUND');
+  var body = [
+    "Field note " + n.id + " (" + n.slug + ")",
+    "Date: " + n.date + " · Source: " + n.sourceType + " · Confidence: " + n.confidence + "/100",
+    "Triage: " + (n.triage || "pending"),
+    "",
+    n.note
+  ];
+  var transcript = driveReadNoteFile_(n.sourceFile);
+  if (transcript) body.push("", "--- transcript ---", transcript);
+  return { id: n.id, slug: n.slug, text: body.join("\n") };
+}
+
+// Every pending note in one blob — the manual replacement for the weekly
+// unattended triage sweep the Drive move traded away.
+function getPendingNotesForClaude(sessionToken) {
+  validateSessionForData(sessionToken, 'get_pending_for_claude');
+  var notes = (driveNotesGet_().json.notes || []).filter(function(n) {
+    return (n.triage || 'pending') === 'pending';
+  });
+  if (!notes.length) return { count: 0, text: "No pending field notes." };
+  var parts = notes.map(function(n) {
+    var seg = [
+      "### " + n.id + " — " + n.slug,
+      "Date: " + n.date + " · Source: " + n.sourceType + " · Confidence: " + n.confidence + "/100",
+      "",
+      n.note
+    ];
+    var t = driveReadNoteFile_(n.sourceFile);
+    if (t) seg.push("", "--- transcript ---", t);
+    return seg.join("\n");
+  });
+  return { count: notes.length, text: "Triage these pending field notes:\n\n" + parts.join("\n\n") };
 }
 
 function updateFieldNote(sessionToken, payload) {
@@ -2025,15 +2110,14 @@ function updateFieldNote(sessionToken, payload) {
   var lock = LockService.getScriptLock();
   lock.waitLock(20000);
   try {
-    var current = ghContentsGet_(NOTES_FILE_PATH);
+    var current = driveNotesGet_();
     var data = current.json;
     var target = (data.notes || []).filter(function(n) { return n.id === id; })[0];
     if (!target) throw new Error('NOT_FOUND');
     target.note = text;
     target.confidence = confidence;
     target.edited = Utilities.formatDate(new Date(), "America/New_York", "yyyy-MM-dd");
-    ghPutNotes_(data, "Edit field note " + id + " via profiler-intake", current.sha);
-    ghDispatchDeploy_();
+    driveNotesPut_(data);
     auditLog('data_write', session.email || 'unknown', 'field_note_edited', { id: id });
     return { success: true, id: id };
   } finally {
@@ -2048,30 +2132,15 @@ function deleteFieldNote(sessionToken, id) {
   var lock = LockService.getScriptLock();
   lock.waitLock(20000);
   try {
-    var current = ghContentsGet_(NOTES_FILE_PATH);
+    var current = driveNotesGet_();
     var data = current.json;
     var target = (data.notes || []).filter(function(n) { return n.id === id; })[0];
     if (!target) throw new Error('NOT_FOUND');
     data.notes = data.notes.filter(function(n) { return n.id !== id; });
-    ghPutNotes_(data, "Delete field note " + id + " via profiler-intake", current.sha);
-    // Best-effort removal of an attached note file — the log entry is the
-    // source of truth; a leftover file is harmless and can be cleaned later
-    if (target.sourceFile) {
-      try {
-        var fsha = ghGetSha_(target.sourceFile);
-        if (fsha) {
-          var token = PropertiesService.getScriptProperties().getProperty("GITHUB_TOKEN");
-          UrlFetchApp.fetch("https://api.github.com/repos/" + GITHUB_OWNER + "/" + GITHUB_REPO + "/contents/" + target.sourceFile, {
-            method: "delete",
-            contentType: "application/json",
-            headers: { "Authorization": "token " + token, "Accept": "application/vnd.github.v3+json" },
-            payload: JSON.stringify({ message: "Delete note file for " + id, sha: fsha, branch: GITHUB_BRANCH }),
-            muteHttpExceptions: true
-          });
-        }
-      } catch (err) { /* non-fatal */ }
-    }
-    ghDispatchDeploy_();
+    driveNotesPut_(data);
+    // Best-effort trash of the attached file — the log entry is the source of
+    // truth; a leftover file is harmless and recoverable from Drive's bin
+    driveDeleteNoteFile_(target.sourceFile);
     auditLog('data_write', session.email || 'unknown', 'field_note_deleted', { id: id });
     return { success: true, id: id };
   } finally {
@@ -2100,7 +2169,7 @@ function handleNoteOp_(e) {
     // not the boundary.
     var noteSess = validateSessionForData(session, 'note_' + op);
     var noteIsAdmin = (noteSess.permissions || []).indexOf('admin') >= 0;
-    if (['submit', 'list', 'edit', 'delete'].indexOf(op) >= 0 && !noteIsAdmin) {
+    if (['submit', 'list', 'edit', 'delete', 'claudeone', 'claudepending'].indexOf(op) >= 0 && !noteIsAdmin) {
       return { success: false, error: 'ADMIN_ONLY', role: noteSess.role || 'viewer' };
     }
     if (op === 'whoami') {
@@ -2156,7 +2225,8 @@ function handleNoteOp_(e) {
       }
       return submitFieldNote(session, {
         slug: p.slug, sourceType: p.sourceType, note: p.note,
-        confidence: Number(p.confidence), files: files
+        confidence: Number(p.confidence), files: files,
+        recordingLink: p.recordingLink
       });
     }
     if (op === 'list') {
@@ -2167,6 +2237,14 @@ function handleNoteOp_(e) {
     }
     if (op === 'delete') {
       return deleteFieldNote(session, p.id);
+    }
+    // "Copy for Claude" — read-only but returns full note + transcript text,
+    // so it sits behind the same admin gate as `list`, not outside it
+    if (op === 'claudeone') {
+      return { success: true, payload: getNoteForClaude(session, p.id) };
+    }
+    if (op === 'claudepending') {
+      return { success: true, payload: getPendingNotesForClaude(session) };
     }
     return { success: false, error: 'unknown_note_op' };
   } catch (err) {
