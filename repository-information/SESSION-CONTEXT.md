@@ -6,6 +6,22 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-10 08:54:11 PM EST
+**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
+**Repo version:** v02.31r
+
+**What was done:**
+- Amazon dossier revised to profileVersion 2 — added the supply-chain read answering "which BESS OEM does AWS use?": three confidence-tagged `strategyRead` entries ((High) the three-layer storage-procurement distinction; (Low) the Samsung SDI BBU thread — ~$700M AWS UPS talks + Simplo-shipped BBU cells, neither company-confirmed; (Low) the Fluence-at-Bellefield untested inference from AES's ~28% Fluence stake); six new sources added chronologically; v1 archived per the Archival Procedure; registry `lastUpdated` synced (v02.31r)
+
+**Where we left off:** All changes committed and merged to main
+
+**Active context:**
+- No TODO items, no active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- Standing recommendation from the v02.24r session remains open: generate the AIDC market report from the 40-company dossier set
+
+## Previous Sessions
+
 **Date:** 2026-08-10 05:13:33 AM EST
 **Repo version:** v02.30r
 
@@ -45,34 +61,5 @@ The developer asked for a note-taker that transcribes meetings from phone audio,
 **Recommendation for next session:**
 - **Run the transcription spike before writing any Build A code** — load Whisper in the browser on the developer's computer, transcribe the saved 12m 30s clip, and time it. That one measurement decides the architecture: faster than real time means in-browser transcription is viable and the app stays free; several times slower means a 2-hour meeting becomes an overnight job and AssemblyAI's free tier (10 hrs/month + $50 credit, diarization +$0.02/hr) should be priced instead. Building UI before that result risks throwing it away
 - **To continue:** type `run the transcription spike`
-
-## Previous Sessions
-
-**Date:** 2026-08-09 11:47:52 PM EST
-**Repo version:** v02.24r
-
-**What we worked on (v02.20r → v02.24r — the Profiler coverage-expansion session):**
-- **20 new Intel Briefing dossiers** in two batches of 10 (each researched by 20 parallel subagents, two per company, Source Priority Protocol): v02.20r — LG Energy Solution, Panasonic, Samsung SDI, Jinko, NVIDIA, Meta, Google, Amazon, Microsoft, Rosendin; v02.22r — Vertiv, Delta Electronics, Eaton, Schneider Electric, GE Vernova, LITEON, Oracle, OpenAI, CoreWeave, Bloom Energy; v02.23r — xAI, Crusoe, Equinix, Constellation Energy, Siemens Energy, Hitachi Energy, ABB, Huawei Digital Power, EVE Energy, Quanta Services. **Roster now 40 companies** — the full coverage set recommended for the AIDC market report (a Workflow-driven segment analysis answered "what companies should Profiler research for a sales-strategy market report?")
-- **Post-earnings Routine grid completed** (v02.21r + v02.24r): all 27 public tickers on the roster now have one-shot verify-then-refresh-then-re-arm triggers (nearest: Sinexcel 08-12, EVE 08-21, NVIDIA 08-27); the private-company quarterly sweep expanded to 6 (Hithium, FlexGen, Rosendin + Crusoe, Huawei Digital Power, xAI — xAI converts to a post-earnings trigger if the SpaceX IPO brings quarterly reporting)
-- **Source format migrated across all 40 dossiers** (v02.24r): `sources[].accessed` → publication `date` (omitted for undated evergreen pages), every `sources[]` re-sorted newest-first with undated entries last; `PROFILER-SCHEMA.md` updated (chronological ordering replaces first-party-first citation order); `Profiler.html` v01.18w renders publication dates in app + Word/PDF export with a legacy `accessed` fallback for archived profiles. Executed by 8 parallel agents; all 40 files validated programmatically (JSON, date format, ordering)
-
-**Where we left off:**
-- Everything pushed and auto-merging (v02.24r); working tree clean; render checks passed (40 home cards, zero page errors). Note: sessions v02.07r–v02.19r were other parallel sessions' work (see CHANGELOG) — this file skipped from v02.06r
-- Some migrated publication dates are month-level estimates (agents flagged their low-confidence choices); they self-correct as future refreshes re-research sources under the new format. The `profiler-data/archive/` copies were intentionally NOT migrated (historical snapshots)
-
-**Key decisions made:**
-- Source citations use **publication dates, newest first, undated evergreen pages last** — developer directive 2026-08-09, now in PROFILER-SCHEMA.md; all refresh-trigger prompts carry the new format instructions
-- The source-format migration was treated as a format change, not a content revision — no profileVersion bumps, no archival, `lastUpdated` untouched on all 40 profiles
-- Batch-2 category calls: xAI + Equinix = hyperscaler, Crusoe + Constellation = developer, Quanta = integrator, the five equipment/cell vendors = supplier
-
-**Active context:**
-- Branch `claude/profiler-notes-interview-prep-s38384` (deleted from remote after each auto-merge; recreate by pushing)
-- Repo v02.24r · Profiler v01.18w·v01.05g · 9 tracked pages all 🟢 · CHANGELOG counter 112/100 (95 non-exempt — rotation will fire on the next push dated after 2026-08-09)
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No TODO items, no active reminders
-
-**Recommendation for next session:**
-- **Generate the AIDC market report** — the stated goal this 40-company expansion was built for. All dossiers are fresh (researched 2026-08-07/09), so the report can synthesize directly from the profiles and cite their sources without new research: turbine/transformer scarcity economics, behind-the-meter power (xAI/Crusoe as templates), the 800 VDC transition, BESS competitive dynamics, and the craft-labor bottleneck — shaped as the sales-strategy deliverable for Jon's AIDC power/storage pipeline
-- **To continue:** type `generate the AIDC market report`
 
 Developed by: ShadowAISolutions
