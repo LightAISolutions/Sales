@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AIDC Market Report — Power &amp; Storage Sales Strategy</title>
+<style>
+/* ==========================================================================
+   AIDC Market Report — print stylesheet
+   Typeset to the Profiler `bloomberg` export skin (PROFILER-STYLES.md):
+   Arial body, #0b62a4 section rules, mono meta/figure captions, paper document.
+   Chart palette validated with the dataviz skill's six checks (light, #fff):
+   adjacent CVD dE 8.6 / normal-vision dE 21.8 / contrast all >= 3:1 — ALL PASS.
+   ========================================================================== */
+:root {
+  --ink:#23211c; --paper:#ffffff; --blue:#0b62a4; --blue-deep:#08496f;
+  --gold:#8a6d1f; --muted:#6d6758; --faint:#8b8577;
+  --rule:#cfc8b4; --rule-soft:#d8d2c0; --link:#305a8a; --track:#e9e5da;
+  --s1:#0b62a4; --s2:#c2622a; --s3:#1b8a6b; --s4:#7a3f7d; --s5:#8a8f2a; --s6:#b03a34;
+  --sans:Arial,Helvetica,"Liberation Sans",sans-serif;
+  --mono:"DejaVu Sans Mono",Consolas,"Liberation Mono",Menlo,monospace;
+}
+@page { size:Letter; margin:15mm 14mm 15mm; }
+* { box-sizing:border-box; }
+html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+body {
+  margin:0; background:var(--paper); color:var(--ink);
+  font:10pt/1.5 var(--sans); text-rendering:optimizeLegibility;
+}
+
+/* ── Masthead ─────────────────────────────────────────────────────────── */
+.mast { border-top:6pt solid var(--blue); padding-top:10pt; }
+.mast .kick {
+  font:8pt/1.4 var(--mono); letter-spacing:.22em; text-transform:uppercase;
+  color:var(--blue); margin:0 0 14pt;
+}
+h1 { font:bold 30pt/1.08 var(--sans); margin:0 0 6pt; letter-spacing:-.015em; }
+.mast .sub { font:normal 15pt/1.3 var(--sans); color:var(--muted); margin:0 0 18pt; }
+.mast .meta {
+  font:8pt/1.75 var(--mono); color:var(--muted);
+  border-top:1pt solid var(--rule); border-bottom:2pt solid var(--ink);
+  padding:9pt 0; margin:0;
+}
+.mast .meta b { color:var(--ink); font-weight:bold; }
+
+/* ── Section hierarchy ────────────────────────────────────────────────── */
+h2 {
+  font:bold 13.5pt/1.25 var(--sans); color:var(--blue);
+  border-bottom:2pt solid var(--blue); padding-bottom:4pt;
+  margin:26pt 0 10pt; page-break-after:avoid;
+}
+h3 { font:bold 11pt/1.3 var(--sans); margin:16pt 0 4pt; page-break-after:avoid; }
+h4 {
+  font:8pt/1.4 var(--mono); letter-spacing:.13em; text-transform:uppercase;
+  color:var(--gold); margin:14pt 0 4pt; page-break-after:avoid;
+}
+p { margin:6pt 0; }
+ul,ol { margin:5pt 0 9pt; padding-left:15pt; }
+li { margin:3pt 0; }
+b,strong { font-weight:bold; }
+em,i { font-style:italic; }
+a { color:var(--link); text-decoration:none; }
+.lead { font-size:10.5pt; }
+.small { font-size:9pt; }
+.mut { color:var(--muted); }
+.cite { color:var(--muted); font-style:italic; font-size:8.5pt; }
+.an {
+  font:7.5pt/1 var(--mono); letter-spacing:.06em; text-transform:uppercase;
+  color:var(--gold); border:0.5pt solid var(--gold); border-radius:2pt;
+  padding:1pt 3pt; white-space:nowrap;
+}
+.pull {
+  border-left:3pt solid var(--blue); background:#f4f8fb;
+  padding:8pt 12pt; margin:12pt 0; page-break-inside:avoid;
+}
+.pull .lbl {
+  font:7.5pt/1.4 var(--mono); letter-spacing:.16em; text-transform:uppercase;
+  color:var(--blue); margin:0 0 3pt;
+}
+.pull p { margin:0; font-size:9.5pt; }
+.note {
+  border:0.5pt solid var(--rule); background:#faf8f3;
+  padding:8pt 12pt; margin:12pt 0; font-size:9pt; page-break-inside:avoid;
+}
+.note .lbl {
+  font:7.5pt/1.4 var(--mono); letter-spacing:.16em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 3pt;
+}
+.brk { page-break-before:always; }
+.keep { page-break-inside:avoid; }
+
+/* ── Tables ───────────────────────────────────────────────────────────── */
+table {
+  border-collapse:collapse; width:100%; margin:8pt 0 6pt;
+  font-size:8.5pt;
+  /* long tables span pages with a repeated header rather than jumping whole to
+     the next page and leaving half a sheet blank; rows stay intact instead */
+  page-break-inside:auto;
+  /* fixed layout is load-bearing: it holds the declared column widths so a long
+     unbreakable cell cannot push the table past the printable page width */
+  table-layout:fixed;
+}
+thead { display:table-header-group; }
+th, td { overflow-wrap:break-word; }
+th {
+  text-align:left; vertical-align:bottom;
+  font:7.5pt/1.35 var(--mono); letter-spacing:.09em; text-transform:uppercase;
+  color:var(--muted); border-bottom:1.5pt solid var(--ink); padding:4pt 7pt 4pt 0;
+}
+tr { page-break-inside:avoid; }
+td { border-bottom:0.5pt solid var(--rule-soft); padding:5pt 7pt 5pt 0; vertical-align:top; }
+td.num { font-family:var(--mono); font-size:8pt; }
+td.k { font-weight:bold; }
+tr.tot td { border-top:1pt solid var(--ink); border-bottom:none; font-weight:bold; }
+table.tight td, table.tight th { padding-right:5pt; font-size:8pt; }
+caption {
+  caption-side:top; text-align:left;
+  font:bold 9pt/1.35 var(--sans); color:var(--ink); padding:0 0 3pt;
+  page-break-after:avoid; break-after:avoid;
+}
+
+/* ── Figures ──────────────────────────────────────────────────────────── */
+.fig { margin:12pt 0 14pt; page-break-inside:avoid; }
+.fig .cap { font:bold 9pt/1.35 var(--sans); margin:0 0 7pt; }
+.fig .src { font:italic 7.5pt/1.45 var(--sans); color:var(--muted); margin:6pt 0 0; }
+.fig-2col { display:flex; gap:20pt; }
+.fig-2col > * { flex:1 1 0; min-width:0; }
+
+/* ── Bar charts (HTML/CSS marks — thin, rounded data-end) ─────────────── */
+.bars { margin:0; }
+.bar-row { display:flex; align-items:center; gap:7pt; margin:0 0 5pt; }
+.bar-lab { flex:0 0 118pt; font-size:8pt; line-height:1.25; text-align:right; }
+.bar-lab .sm { display:block; font:7pt/1.3 var(--mono); color:var(--muted); }
+.bar-track { flex:1 1 auto; background:var(--track); height:13pt; position:relative; }
+.bar-fill { height:100%; border-radius:0 2.5pt 2.5pt 0; }
+.bar-rng {
+  position:absolute; top:0; height:100%;
+  background:repeating-linear-gradient(45deg,#ffffff 0 2pt,transparent 2pt 4pt);
+  border-right:1pt solid var(--ink); opacity:.85;
+}
+.bar-val { flex:0 0 auto; font:bold 8pt/1 var(--mono); min-width:44pt; }
+.bar-row.thin .bar-track { height:9pt; }
+.bar-note { font:7.5pt/1.4 var(--mono); color:var(--muted); margin:5pt 0 0; }
+.axis {
+  display:flex; justify-content:space-between; margin:3pt 0 0 125pt;
+  font:7pt/1 var(--mono); color:var(--faint); border-top:0.5pt solid var(--rule-soft);
+  padding-top:2pt;
+}
+
+/* ── Column charts ────────────────────────────────────────────────────── */
+.cols { display:flex; align-items:flex-end; gap:10pt; height:96pt; margin:4pt 0 0;
+        border-bottom:1pt solid var(--ink); padding:0 2pt; }
+.col { flex:1 1 0; display:flex; flex-direction:column; justify-content:flex-end;
+       align-items:center; height:100%; }
+.col .v { font:bold 8pt/1.2 var(--mono); margin:0 0 2pt; }
+.col .bar { width:70%; border-radius:2.5pt 2.5pt 0 0; }
+.col-labs { display:flex; gap:10pt; margin:3pt 0 0; padding:0 2pt; }
+.col-labs > div { flex:1 1 0; text-align:center; font:7.5pt/1.3 var(--mono); color:var(--muted); }
+
+/* ── Legend ───────────────────────────────────────────────────────────── */
+.leg { display:flex; flex-wrap:wrap; gap:4pt 14pt; margin:7pt 0 0; font-size:8pt; }
+.leg span { display:inline-flex; align-items:center; gap:4pt; }
+.leg i { width:8pt; height:8pt; border-radius:1.5pt; display:inline-block; }
+
+/* ── Rings / donuts (SVG) ─────────────────────────────────────────────── */
+.rings { display:flex; gap:14pt; justify-content:space-between; }
+.ring { flex:1 1 0; text-align:center; }
+.ring svg { display:block; margin:0 auto; }
+.ring .rl { font:7.5pt/1.35 var(--sans); color:var(--muted); margin:4pt 0 0; }
+.donut-wrap { display:flex; align-items:center; gap:16pt; }
+.donut-key { flex:1 1 auto; font-size:8.5pt; }
+.donut-key .kr { display:flex; align-items:center; gap:6pt; margin:0 0 4pt; }
+.donut-key i { width:9pt; height:9pt; border-radius:1.5pt; flex:0 0 auto; }
+.donut-key .kv { margin-left:auto; font:bold 8.5pt/1 var(--mono); }
+
+/* ── Stat tiles ───────────────────────────────────────────────────────── */
+.tiles { display:flex; gap:9pt; margin:10pt 0; page-break-inside:avoid; }
+.tile { flex:1 1 0; border-top:2.5pt solid var(--blue); padding:6pt 8pt 7pt 0; }
+.tile .n { font:bold 17pt/1.05 var(--sans); letter-spacing:-.02em; }
+.tile .l { font:7.5pt/1.35 var(--sans); color:var(--muted); margin:3pt 0 0; }
+
+/* ── Timeline ─────────────────────────────────────────────────────────── */
+.tl { position:relative; margin:12pt 0 4pt; padding-bottom:4pt; }
+.tl-axis { height:2.5pt; background:var(--rule); position:relative; margin:0 0 4pt; }
+.tl-axis .seg { position:absolute; top:0; height:100%; background:var(--blue); }
+.tl-row { display:flex; align-items:flex-start; gap:6pt; margin:0 0 4pt; font-size:8pt; }
+.tl-row .d { flex:0 0 52pt; font:bold 7.5pt/1.4 var(--mono); color:var(--blue); }
+.tl-ticks { display:flex; font:7pt/1 var(--mono); color:var(--faint); margin:2pt 0 8pt; }
+.tl-ticks > div { flex:1 1 0; }
+
+/* ── Contents ─────────────────────────────────────────────────────────── */
+.toc { column-count:2; column-gap:22pt; font-size:9pt; margin:6pt 0 0; }
+.toc div { break-inside:avoid; margin:0 0 3pt; }
+.toc .n { font:bold 8pt/1 var(--mono); color:var(--blue); margin-right:5pt; }
+.toc .sub2 { padding-left:16pt; color:var(--muted); font-size:8.5pt; }
+
+/* ── Footer block ─────────────────────────────────────────────────────── */
+.foot {
+  margin-top:20pt; border-top:1pt solid var(--rule); padding-top:7pt;
+  font:7.5pt/1.6 var(--mono); color:var(--muted);
+}
+</style>
+</head>
+<body>
+<header class="mast">
+  <p class="kick">AI Data Center Research · Power &amp; Storage</p>
+  <h1>AIDC Market Report</h1>
+  <p class="sub">Power &amp; Storage Sales Strategy — the 40-company competitive map</p>
+  <p class="meta">
+    <b>Prepared</b> 10 August 2026 &nbsp;·&nbsp; <b>Corpus</b> 40 Profiler dossiers, researched 7–10 August 2026
+    &nbsp;·&nbsp; <b>Method</b> No new research — every citation is a source already catalogued in a dossier<br>
+    <b>Verification</b> 572 extracted claims · 353 report claims adversarially re-checked · 20 findings corrected pre-publication
+    &nbsp;·&nbsp; <b>Classification</b> Internal — sales strategy
+  </p>
+</header>
+
+<div class="note">
+  <p class="lbl">How to read this report</p>
+  <p>Facts cite their dossier source as <em>(Source label, date — Company dossier)</em>. Items marked
+  <span class="an">Analysis</span> come from dossier <em>strategy read</em> sections — labeled inference, carrying
+  (High)/(Moderate)/(Low) confidence tags where the dossier holds them — and are never blended with sourced fact.
+  Figures restate quantities already cited in the body text; each carries its own source line. Field notes are not
+  sources and none are cited here.</p>
+</div>
+
+<h2>Contents</h2>
+<div class="toc">
+  <div><span class="n">1</span>Key Judgments</div>
+  <div><span class="n">2</span>The Demand Backdrop — Why This Pipeline Exists</div>
+  <div><span class="n">3</span>Turbine &amp; Transformer Scarcity Economics</div>
+  <div><span class="n">4</span>Behind-the-Meter Power — the xAI / Crusoe Template</div>
+  <div class="sub2">4.1 The xAI template · 4.2 The Crusoe template · 4.3 The market that formed · 4.4 What&#39;s actually for sale · 4.5 Nuclear and the FERC line</div>
+  <div><span class="n">5</span>The 800 VDC Transition</div>
+  <div class="sub2">5.1 Architecture and clock · 5.2 The ODM tier · 5.3 The incumbents&#39; dilemma · 5.4 The long tail</div>
+  <div><span class="n">6</span>BESS Competitive Dynamics</div>
+  <div class="sub2">6.1 League table · 6.2 Hardware arms race · 6.3 Mega-orders · 6.4 The FEOC fault line · 6.5 Shakeout</div>
+  <div><span class="n">7</span>The Craft-Labor Bottleneck</div>
+  <div><span class="n">8</span>The Sales Playbook — Working the 40-Company Map</div>
+  <div class="sub2">8.1 Account map · 8.2 Entry points · 8.3 Timing triggers · 8.4 Risks to the pipeline</div>
+  <div><span class="n">9</span>Method &amp; Citation Notes</div>
+</div>
+
+<h2>1. Key Judgments</h2>
+
+<div class="tiles">
+  <div class="tile"><div class="n">12</div><div class="l">Key judgments, each confidence-tagged</div></div>
+  <div class="tile"><div class="n">9</div><div class="l">Rated High confidence</div></div>
+  <div class="tile"><div class="n">3</div><div class="l">Rated Moderate confidence</div></div>
+  <div class="tile"><div class="n">≈$735–760B</div><div class="l">Big-four 2026 capex underwriting the pipeline</div></div>
+</div>
+
+<ol class="lead">
+  <li><b>(High — report synthesis; the underlying Equinix dossier read is tagged Moderate)</b> Power — not demand,
+  capital, or chips — is the binding constraint on the AI buildout: ≈$130B of blocked or delayed US projects in
+  Q1 2026, 0.3% Northern Virginia vacancy, and buyers formally denominating demand in gigawatts, corroborated across
+  §2&#39;s sourced order books. Every account in this pipeline is paying for <em>time-to-power</em>; every product should
+  be sold as schedule compression. <span class="mut">(§2)</span></li>
+
+  <li><b>(High)</b> The demand base is enormous and partially pre-sold — Microsoft&#39;s $678B RPO grows faster than its
+  capex — but its financing is circular by construction (NVIDIA↔OpenAI↔Oracle↔Amazon). Sell into the urgency while
+  tracking the fragility through order books, which would show a pause first. <span class="mut">(§2, §8.4)</span></li>
+
+  <li><b>(High)</b> Turbine and transformer scarcity is now sold as a product: GE Vernova&#39;s deposit-backed slots price
+  10–20 points above backlog against 2031 delivery, and reservation fees are back at Siemens Energy for the first time
+  since the early 2000s. It is scarcity rent, not moat — relief lands 2027–30 — but transformers stay tight into the
+  2030s (≈30% US deficit, prices +77% since 2019). The queue prices every alternative a storage or power seller offers.
+  <span class="mut">(§3)</span></li>
+
+  <li><b>(High)</b> Behind-the-meter generation-plus-storage is the <em>proven</em> architecture for gigawatt AI campuses:
+  xAI ran ≈1.0 GW almost entirely off self-built gas buffered by the world&#39;s largest Megapack fleet, and Crusoe
+  productized the same model with the deepest published energy stack. Storage is embedded in every BTM variant — the
+  campus bill of materials is the account map. <span class="mut">(§4)</span></li>
+
+  <li><b>(High)</b> FERC&#39;s Talen precedent killed uncompensated behind-the-meter nuclear co-location and pushed
+  hyperscaler nuclear front-of-meter at premium prices (≈$112/MWh restart, ≈$70/MWh existing) — and nearly all
+  contracted nuclear delivers 2027–2030s. The gas-plus-storage bridge owns this decade. <span class="mut">(§4)</span></li>
+
+  <li><b>(High)</b> 800 VDC is a vendor-list reset on a published clock (first shipments 3Q26, Kyber racks 2027): Delta is
+  structurally ahead, ABB is winning the medium-voltage layer, no AC incumbent has a shipping 800 VDC switchboard, and
+  the architecture makes rack-level storage (BBU and supercapacitor, ≈$2.8B → ≈$7.1B by 2033) non-discretionary content.
+  Qualification is happening now, inside NVIDIA reference designs and digital twins — not in RFPs. <span class="mut">(§5)</span></li>
+
+  <li><b>(High)</b> The BESS league table reset in 2025–26: Sungrow took both Wood Mackenzie crowns, Chinese integrators
+  hold ≈76% of a &gt;100 GW market that flipped from glut to tightness, and storage became the profit center for Sungrow
+  and Tesla Energy — and the growth engine of CATL&#39;s ESS line. <span class="mut">(§6)</span></li>
+
+  <li><b>(High)</b> The FEOC, tariff and 1260H wall is the compliant lane&#39;s pricing umbrella: LGES, Samsung SDI,
+  Panasonic, Fluence and Tesla&#39;s onshoring convert regulation into share, while Chinese leaders route around it via
+  licensing (CATL–Ford), offshore cells and minority JVs. Domestic content, UL fire certification and cybersecurity
+  attestation are now qualifying criteria. <span class="mut">(§6)</span></li>
+
+  <li><b>(High)</b> AI-data-center storage demand arrives through four distinct doors — utility-scale via developer
+  counterparties, campus MV-BESS via energy-first developers and colos, UPS-replacement via electrical contractors, and
+  rack BBU/supercapacitor via the NVIDIA ODM chain. The hyperscalers split: Google is the most storage-forward (owns
+  Intersect, anchored 30 GWh iron-air), Microsoft structurally buys grid instead of batteries, Amazon and Meta buy
+  through counterparties. Qualifying <em>which door</em> an account opens is the first sales question.
+  <span class="mut">(§6, §8.1)</span></li>
+
+  <li><b>(High)</b> Craft labor is the scarcest input in the US buildout — four years to make a craftsman, ≈$13.5M/MW of
+  craft-led spend — and prefabrication is the industry&#39;s answer. Labor-per-MWh is now a spec: factory-integrated
+  blocks (Megablock, Fibrebond eHouses, Modular Power Solutions rooms) are winning on installed-MW lead time, not
+  component price. <span class="mut">(§7)</span></li>
+
+  <li><b>(Moderate)</b> Displacement windows are open in 2026: Wärtsilä&#39;s storage counterparty changes hands ≈Q3 2026,
+  Powin&#39;s orphaned 25+ GWh fleet is a services land-grab in progress, the AC incumbents&#39; 800 VDC gap is provable,
+  and Hitachi&#39;s own capacity relief does not land until 2027–28. The gap years are the selling window.
+  <span class="mut">(§8.2)</span></li>
+
+  <li><b>(Moderate)</b> The risk stack to monitor on a calendar, not a hunch: circular financing, ≈20% near-term
+  conversion of the 307 GW US pipeline, ratepayer and political backlash (PJM auctions at the cap; Meta&#39;s Louisiana
+  docket), the xAI permitting-litigation template, and scarcity-rent normalization as 2027–28 capacity lands. The armed
+  post-earnings Routines are the monitoring instrument. <span class="mut">(§8.3–8.4)</span></li>
+</ol>
+
+<h2 class="brk">2. The Demand Backdrop — Why This Pipeline Exists</h2>
+
+<p class="lead">The AIDC buildout is no longer sized in dollars alone. The buyers themselves now denominate demand in
+gigawatts, and every theme in this report flows from that.</p>
+
+<div class="fig">
+  <p class="cap">Figure 1: 2026 AI capital expenditure, the big four ($ billion, company guidance)</p>
+  <div class="bars">
+    <div class="bar-row"><div class="bar-lab">Amazon<span class="sm">up from ≈$200B</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:91.7%;background:var(--s1)"></div></div>
+      <div class="bar-val">≈$220B</div></div>
+    <div class="bar-row"><div class="bar-lab">Microsoft<span class="sm">vs $154.6B consensus</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:79.2%;background:var(--s1)"></div></div>
+      <div class="bar-val">≈$190B</div></div>
+    <div class="bar-row"><div class="bar-lab">Google<span class="sm">third raise of the year</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:81.3%;background:var(--s1)"></div>
+        <div class="bar-rng" style="left:81.3%;width:4.2%;background:repeating-linear-gradient(45deg,var(--s1) 0 1.6pt,#fff 1.6pt 3.2pt)"></div></div>
+      <div class="bar-val">$195–205B</div></div>
+    <div class="bar-row"><div class="bar-lab">Meta<span class="sm">floor lifted twice</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:54.2%;background:var(--s1)"></div>
+        <div class="bar-rng" style="left:54.2%;width:6.2%;background:repeating-linear-gradient(45deg,var(--s1) 0 1.6pt,#fff 1.6pt 3.2pt)"></div></div>
+      <div class="bar-val">$130–145B</div></div>
+  </div>
+  <div class="axis"><span>0</span><span>60</span><span>120</span><span>180</span><span>$240B</span></div>
+  <p class="src">Source: Amazon Q2 2026 earnings, 2026-07-30; CNBC Q3 FY2026, 2026-04-29; Alphabet Q2 2026 8-K, 2026-07-22;
+  CNBC Q2 2026 coverage, 2026-07-29 — Amazon, Microsoft, Google and Meta dossiers. Note: hatched extension marks a
+  guided range; solid marks a point estimate. Combined big-four 2026 capex ≈$735–760B.</p>
+</div>
+
+<table>
+  <caption>Table 1: The 2026 capex stack — the signal behind each number</caption>
+  <thead><tr><th style="width:13%">Buyer</th><th style="width:17%">2026 capex</th><th style="width:34%">Signal</th><th>Citation</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Amazon</td><td class="num">≈$220B</td><td>Largest single-company AI program; AWS backlog $244B, up 40%</td><td class="cite">Amazon Q2 2026 earnings, 2026-07-30; FY2025 8-K, 2026-02-05 — Amazon dossier</td></tr>
+    <tr><td class="k">Microsoft</td><td class="num">≈$190B</td><td>Commercial RPO $678B, up 84%; Azure crossed $100B/yr</td><td class="cite">CNBC Q3 FY2026, 2026-04-29; FY2026 Q4 results, 2026-07-29 — Microsoft dossier</td></tr>
+    <tr><td class="k">Google</td><td class="num">$195–205B</td><td>First $400B revenue year; quarterly FCF −$5.9B; 2027 guided to increase significantly</td><td class="cite">Alphabet Q2 2026 8-K, 2026-07-22; Q4/FY2025 8-K, 2026-02-04 — Google dossier</td></tr>
+    <tr><td class="k">Meta</td><td class="num">$130–145B</td><td>Hyperion at 5 GW design / $50B+; Q2 capex ate ≈98% of operating cash flow</td><td class="cite">CNBC Q2 2026 coverage, 2026-07-29; Richland Parish expansion, 2026-07-13 — Meta dossier</td></tr>
+  </tbody>
+</table>
+
+<h3>Demand is now stated in gigawatts, on the record</h3>
+<ul>
+  <li><b>OpenAI:</b> ≈$1.4T / ≈30 GW of acknowledged commitments. The 10 GW-by-2029 target was surpassed <em>in
+  commitments</em> by April 2026, with more than 3 GW added in one trailing 90-day window; planned compute spend through
+  2030 was raised to $750B <span class="cite">(Reuters factbox, 2025-10; Stargate scaling update, 2026-04; WSJ via Yahoo,
+  2026-07-22 — OpenAI dossier)</span>. Vendor by vendor: NVIDIA ≥10 GW, Broadcom 10 GW, AMD 6 GW, AWS ≈2 GW Trainium,
+  Cerebras 750 MW <span class="cite">(Tunguz commitment tally, 2025-10 — OpenAI dossier; the AWS ≈2 GW line also per
+  Amazon&#39;s Q1 2026 8-K, 2026-04-29)</span>.</li>
+  <li><b>Amazon</b> put gigawatts in an earnings filing: Anthropic up to 5 GW of Trainium, OpenAI ≈2 GW, 2.1M+ AI chips
+  deployed in 12 months <span class="cite">(Q1 2026 8-K exhibit, 2026-04-29 — Amazon dossier)</span>.</li>
+  <li><b>NVIDIA</b> — the demand engine — booked FY2026 revenue of $215.9B, up 65%, with data center at $193.7B, and
+  nearly doubled its own supply commitments quarter on quarter from $50.3B to $95.2B <span class="cite">(Q4/FY2026
+  results, 2026-02-25 — NVIDIA dossier)</span>. <span class="an">Analysis — High</span> Third-party projections of ≈233 GW
+  of cumulative new AI data-center power demand 2025–2030 rest heavily on NVIDIA&#39;s shipment cadence.</li>
+  <li><b>The neocloud tier is the marginal buyer:</b> CoreWeave crossed 1 GW active across 49 data centers with 3.5+ GW
+  contracted and a $99.4B backlog, up 284% <span class="cite">(Q1 2026 results, 2026-05-07 — CoreWeave dossier)</span>;
+  xAI went from 0 to 1.0 GW of nameplate compute draw in three years <span class="cite">(SpaceX Form S-1, 2026-05-20 —
+  xAI dossier)</span>.</li>
+</ul>
+
+<h3>How real is it? Pre-sold versus speculative</h3>
+<ul>
+  <li><span class="an">Analysis — High</span> Microsoft&#39;s demand case is the best-documented of the big four: a $678B
+  backlog growing faster (+84%) than capex means the buildout is substantially pre-sold — the OpenAI $250B Azure
+  commitment alone underwrites years of Fairwater capacity <span class="cite">(Microsoft dossier)</span>.</li>
+  <li><span class="an">Analysis — Moderate</span> Oracle&#39;s $638B RPO overstates firm demand: roughly half is
+  press-attributed to a single ≈$300B OpenAI contract starting 2027, $75B is GPU-prepayment structures, and ≈0.3 GW is
+  operational versus more than 9 GW projected by 2029 <span class="cite">(Oracle dossier)</span>. Oracle&#39;s FY2026 free
+  cash flow was −$23.7B, funded by $43B of debt plus $5B equity with ≈$40B more planned <span class="cite">(Q4 FY2026
+  earnings, 2026-06-10 — Oracle dossier)</span>.</li>
+  <li><span class="an">Analysis — High</span> The financing model is circular by construction: NVIDIA invests up to $100B
+  as OpenAI deploys NVIDIA systems; Amazon invests $50B while selling $138B of cloud; Oracle borrows (≈$96B reported)
+  against OpenAI receivables; Microsoft&#39;s $4.1B quarterly equity-method losses imply ≈$11.5B quarterly OpenAI losses
+  <span class="cite">(OpenAI dossier)</span>.</li>
+  <li>The debt market keeps repricing the risk downward anyway: CoreWeave&#39;s GPU-backed coupon went from ≈15% in 2023 to
+  investment-grade SOFR+225bps (DDTL 4.0, $8.5B, 2026) <span class="cite">(globaldatacenterhub, 2026-03-15 — CoreWeave
+  dossier)</span>.</li>
+</ul>
+
+<h3>Power is the gate — the fact this whole report monetizes</h3>
+
+<div class="tiles">
+  <div class="tile"><div class="n">≈$130B</div><div class="l">US projects blocked or delayed on power, Q1 2026 — a record</div></div>
+  <div class="tile"><div class="n">0.3%</div><div class="l">Northern Virginia data-center vacancy</div></div>
+  <div class="tile"><div class="n">&gt;70 MW</div><div class="l">Amsterdam connection moratorium threshold; Singapore rations releases</div></div>
+  <div class="tile"><div class="n">≈20%</div><div class="l">Of the 307 GW US pipeline converting near-term — the bulk is 2028+</div></div>
+</div>
+<p class="src" style="margin-top:-4pt"><em>Source: Equinix dossier (vacancy, moratoria, blocked-project total —
+<span class="an">Analysis — Moderate</span>); Eaton dossier (pipeline conversion — <span class="an">Analysis — Moderate</span>).</em></p>
+
+<div class="fig">
+  <p class="cap">Figure 2: The order books confirm it — GE Vernova data-center Electrification orders ($ billion)</p>
+  <div class="cols" style="max-width:300pt">
+    <div class="col"><div class="v">≈$0.7B</div><div class="bar" style="height:12.7%;background:var(--s1)"></div></div>
+    <div class="col"><div class="v">&gt;$2B</div><div class="bar" style="height:36.4%;background:var(--s1)"></div></div>
+    <div class="col"><div class="v">&gt;$5B</div><div class="bar" style="height:90.9%;background:var(--s1)"></div></div>
+  </div>
+  <div class="col-labs" style="max-width:300pt"><div>FY2024</div><div>FY2025</div><div>1H 2026 alone</div></div>
+  <p class="src">Source: GE Vernova Q2 2026 press release, 2026-07-22 — GE Vernova dossier. Note: the 1H 2026 column is a
+  half-year figure against two full years — the ramp is steeper than the bars show.</p>
+</div>
+
+<table class="tight">
+  <caption>Table 2: Corroborating order books across the supplier set</caption>
+  <thead><tr><th style="width:16%">Supplier</th><th style="width:30%">Order-book signal</th><th style="width:14%">Growth</th><th>Citation</th></tr></thead>
+  <tbody>
+    <tr><td class="k">ABB</td><td>First-ever $7B+ Electrification quarter; triple-digit DC growth</td><td class="num">+60%</td><td class="cite">Q2 2026 release, 2026-07-16 — ABB dossier</td></tr>
+    <tr><td class="k">Vertiv</td><td>Backlog $15.0B on ≈2.9x book-to-bill</td><td class="num">+109%</td><td class="cite">FY2025 8-K, 2026-02-11 — Vertiv dossier</td></tr>
+    <tr><td class="k">Siemens Energy</td><td>Q3 FY26 Gas Services orders €10.0B (73 turbines / 15 GW); record €162B group backlog</td><td class="num">2.65x b-t-b</td><td class="cite">Q3 FY26 earnings release, 2026-08-05 — Siemens Energy dossier</td></tr>
+    <tr><td class="k">Schneider</td><td>Data-center demand grew triple-digit</td><td class="num">triple-digit</td><td class="cite">H1 2026 release, 2026-07-30 — Schneider dossier</td></tr>
+    <tr><td class="k">Hitachi Energy</td><td>Q1 FY2026 orders; backlog above ¥10T (≈$68B)</td><td class="num">+87% YoY</td><td class="cite">Investing.com, 2026-07-29 — Hitachi Energy dossier</td></tr>
+  </tbody>
+</table>
+
+<div class="pull">
+  <p class="lbl">Sales translation</p>
+  <p>Every buyer in Table 1 is paying for <em>time-to-power</em>, not electrons. The pipeline&#39;s job is to position power
+  and storage products as schedule compression — that framing recurs in every section below.</p>
+</div>
+
+<h2 class="brk">3. Turbine &amp; Transformer Scarcity Economics</h2>
+
+<p class="lead">Scarcity in prime movers and grid equipment is the single most quantified phenomenon in the dossier set —
+and it is being <b>monetized as a product</b> (delivery slots), not just endured.</p>
+
+<div class="fig">
+  <p class="cap">Figure 3: The master clock — queue times versus what compression products promise (months)</p>
+  <div class="bars">
+    <div class="bar-row"><div class="bar-lab">Grid interconnection queue<span class="sm">4–8 years</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:50%;background:var(--s1)"></div>
+        <div class="bar-rng" style="left:50%;width:50%;background:repeating-linear-gradient(45deg,var(--s1) 0 1.6pt,#fff 1.6pt 3.2pt)"></div></div>
+      <div class="bar-val">48–96</div></div>
+    <div class="bar-row"><div class="bar-lab">GE Vernova gas-turbine slot<span class="sm">sold 2026, delivers 2031</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:62.5%;background:var(--s1)"></div></div>
+      <div class="bar-val">≈60</div></div>
+    <div class="bar-row"><div class="bar-lab">Transformer, no reservation<span class="sm">Hitachi Energy</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:50%;background:var(--s1)"></div></div>
+      <div class="bar-val">≈48</div></div>
+    <div class="bar-row"><div class="bar-lab">Power transformer, industry<span class="sm">Wood Mackenzie</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:31.3%;background:var(--s1)"></div>
+        <div class="bar-rng" style="left:31.3%;width:18.7%;background:repeating-linear-gradient(45deg,var(--s1) 0 1.6pt,#fff 1.6pt 3.2pt)"></div></div>
+      <div class="bar-val">30–48</div></div>
+    <div class="bar-row"><div class="bar-lab">Transformer, with reservation<span class="sm">Hitachi Energy</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:31.3%;background:var(--s1)"></div>
+        <div class="bar-rng" style="left:31.3%;width:10.4%;background:repeating-linear-gradient(45deg,var(--s1) 0 1.6pt,#fff 1.6pt 3.2pt)"></div></div>
+      <div class="bar-val">30–40</div></div>
+    <div class="bar-row"><div class="bar-lab">HV/EHV breakers<span class="sm">≈125 weeks</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:30.2%;background:var(--s1)"></div></div>
+      <div class="bar-val">≈29</div></div>
+    <div class="bar-row"><div class="bar-lab">Wärtsilä engine plant<span class="sm">to operational</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:12.5%;background:var(--s2)"></div></div>
+      <div class="bar-val">12</div></div>
+    <div class="bar-row"><div class="bar-lab">Huawei PowerPOD<span class="sm">18 weeks, from 28</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:4.3%;background:var(--s2)"></div></div>
+      <div class="bar-val">≈4.1</div></div>
+    <div class="bar-row"><div class="bar-lab">Bloom fuel cells<span class="sm">55 days at Oracle</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:1.9%;background:var(--s2)"></div></div>
+      <div class="bar-val">≈1.8</div></div>
+    <div class="bar-row"><div class="bar-lab">Tesla Megablock, 1 GWh<span class="sm">≈20 business days</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:1.1%;background:var(--s2)"></div></div>
+      <div class="bar-val">≈1</div></div>
+    <div class="bar-row"><div class="bar-lab">GE Vernova TM2500 mobile<span class="sm">installed in 11 days</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:0.5%;background:var(--s2)"></div></div>
+      <div class="bar-val">≈0.4</div></div>
+  </div>
+  <div class="axis"><span>0</span><span>24</span><span>48</span><span>72</span><span>96 mo</span></div>
+  <div class="leg">
+    <span><i style="background:var(--s1)"></i>The queue — what a buyer waits for</span>
+    <span><i style="background:var(--s2)"></i>The compression — what a seller can promise</span>
+    <span><i style="background:repeating-linear-gradient(45deg,var(--s1) 0 1.6pt,#fff 1.6pt 3.2pt);border:0.4pt solid var(--rule)"></i>Range</span>
+  </div>
+  <p class="src">Source: Hitachi Energy dossier (Nikkei Asia, 2024-05; Wood Mackenzie, 2024-07 / 2025-02); GE Vernova dossier
+  (Turbomachinery Magazine, 2026-07; gas-power product pages); Quanta dossier (Q2 2026 release, 2026-07-30); Wärtsilä,
+  Huawei, Bloom, Tesla dossiers as cited in the body text. Note: one shared axis in months — the sub-2-month bars are
+  drawn to true scale, which is the point. Bloom&#39;s own comparator is interconnect waits of up to ≈7 years.</p>
+</div>
+
+<h3>Turbines: the slot is the product</h3>
+<ul>
+  <li>GE Vernova holds <b>116 GW of committed gas capacity</b> — 53 GW of equipment backlog plus 63 GW of
+  <em>deposit-backed slot reservations</em> now selling against <b>2031 delivery</b> <span class="cite">(Turbomachinery
+  Magazine, 2026-07 — GE Vernova dossier)</span>. Reservations price 10–20 points <em>above</em> the existing backlog,
+  taken with ≈20% cash down that converts to orders — the clearest scarcity-rent evidence in the sector
+  <span class="cite">(December 2025 Investor Update transcript, 2025-12-09)</span>. Output ramps ≈20 GW/yr → 24 GW (2028)
+  → actions toward 30 GW (2030), and GE Vernova expects to be &ldquo;largely sold out of 2030 deliveries by end of
+  2026&rdquo; <span class="cite">(Utility Dive, 2025-12)</span>.</li>
+  <li><b>Siemens Energy:</b> large-frame slots nearly full through 2028, and slot-reservation <em>fees</em> are back for
+  the first time since the early-2000s gas boom <span class="cite">(POWER Magazine, 2025-02 — Siemens Energy
+  dossier)</span>. Unit sales nearly doubled in one year — 194 turbines in FY25 against 100 in FY24
+  <span class="cite">(Siemens Energy release, 2025-11-14)</span>.</li>
+  <li>The demand shock is documented from the buyer side too: xAI signed ≈$3.7B of turbine commitments in four months of
+  2026 — $805M plus $925M purchase agreements through 2029 plus a ≈$2.0B mobile-fleet acquisition
+  <span class="cite">(SpaceX Form S-1, 2026-05-20 — xAI dossier)</span>. <span class="an">Analysis</span> That makes it
+  one of the largest mobile-turbine buyers anywhere, in a market where every AIDC developer is chasing the same units.
+  Utilities are in the same queue: Xcel ordered 10 × SGT6-5000F (2,088 MW) for Texas — &ldquo;dispatchable power is no
+  longer optional&rdquo; <span class="cite">(Siemens Energy release, 2025-10-01)</span>.</li>
+  <li><span class="an">Analysis — High</span> GE Vernova&#39;s pricing power is real but it is <em>scarcity rent, not
+  durable moat</em>: reservations imply ≈$3,000/kW combined-cycle pricing, roughly 3x in three years, while Siemens
+  Energy doubled unit sales and Mitsubishi calls its own +30% capacity add &ldquo;not enough&rdquo; — competitor supply
+  lands in the same 2028–2030 windows GE Vernova is now selling <span class="cite">(GE Vernova dossier)</span>.</li>
+</ul>
+
+<h3>Transformers: the tighter, longer bottleneck — and the more defensible franchise</h3>
+
+<div class="fig keep">
+  <p class="cap">Figure 4: Transformer scarcity, in three ratios</p>
+  <div class="rings">
+    <div class="ring">
+      <svg width="88" height="88" viewBox="0 0 88 88" role="img" aria-label="About 30 percent US power transformer supply deficit">
+        <circle cx="44" cy="44" r="34" fill="none" stroke="#e9e5da" stroke-width="9"/>
+        <circle cx="44" cy="44" r="34" fill="none" stroke="#0b62a4" stroke-width="9"
+                stroke-dasharray="64.1 213.6" transform="rotate(-90 44 44)"/>
+        <text x="44" y="50" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+              font-size="19" font-weight="bold" fill="#23211c">≈30%</text>
+      </svg>
+      <p class="rl">Modelled US power-transformer supply deficit, 2025</p>
+    </div>
+    <div class="ring">
+      <svg width="88" height="88" viewBox="0 0 88 88" role="img" aria-label="About 80 percent of US large power transformers are imported">
+        <circle cx="44" cy="44" r="34" fill="none" stroke="#e9e5da" stroke-width="9"/>
+        <circle cx="44" cy="44" r="34" fill="none" stroke="#c2622a" stroke-width="9"
+                stroke-dasharray="170.9 213.6" transform="rotate(-90 44 44)"/>
+        <text x="44" y="50" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+              font-size="19" font-weight="bold" fill="#23211c">≈80%</text>
+      </svg>
+      <p class="rl">Of US large power transformers are imported</p>
+    </div>
+    <div class="ring">
+      <svg width="88" height="88" viewBox="0 0 88 88" role="img" aria-label="54 percent of GE Vernova committed gas capacity is slot reservations">
+        <circle cx="44" cy="44" r="34" fill="none" stroke="#e9e5da" stroke-width="9"/>
+        <circle cx="44" cy="44" r="34" fill="none" stroke="#1b8a6b" stroke-width="9"
+                stroke-dasharray="115.4 213.6" transform="rotate(-90 44 44)"/>
+        <text x="44" y="50" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+              font-size="19" font-weight="bold" fill="#23211c">54%</text>
+      </svg>
+      <p class="rl">Of GE Vernova&#39;s 116 GW committed gas capacity is slot reservations, not equipment backlog</p>
+    </div>
+  </div>
+  <p class="src">Source: Wood Mackenzie, 2025-02 (deficit) and Siemens Energy $1B US investment release, 2026-02-03
+  (import share) — Hitachi Energy and Siemens Energy dossiers; Turbomachinery Magazine, 2026-07 — GE Vernova dossier
+  (63 GW of 116 GW). Note: each ring is a share of a stated whole; growth rates are shown as tiles below, not rings.</p>
+</div>
+
+<div class="tiles">
+  <div class="tile"><div class="n">+77%</div><div class="l">US transformer prices since 2019; constraints modelled &ldquo;well into the 2030s&rdquo;</div></div>
+  <div class="tile"><div class="n">10–20 pts</div><div class="l">Premium GE Vernova charges on reserved slots over existing backlog</div></div>
+  <div class="tile"><div class="n">$57.9B</div><div class="l">Hitachi Energy backlog — ≈2.9x annual revenue, on FY2025 orders of $32.8B</div></div>
+  <div class="tile"><div class="n">13.4%</div><div class="l">Hitachi Energy adjusted EBITA margin, up from 6.1% in FY21</div></div>
+</div>
+
+<ul>
+  <li>Hitachi Energy — the world&#39;s largest transformer maker — quotes 30–40 month waits, up to four years without a
+  reservation, rationing access through reservation agreements <span class="cite">(Nikkei Asia, 2024-05 — Hitachi Energy
+  dossier)</span>. The E.ON framework — up to $700M, 20,000+ transformers under a capacity-reservation model — is
+  first-party proof that transformer capacity is now allocated years ahead by reservation <span class="cite">(Hitachi
+  Energy release, 2025-07-28)</span>.</li>
+  <li>Its financials show the scarcity monetization directly: FY2025 orders $32.8B (a 28% CAGR from $12.4B in FY21),
+  backlog $57.9B, adjusted EBITA margin 13.4% against 6.1% in FY21 <span class="cite">(Hitachi Ltd FY2025 annual results
+  presentation, 2026-04-27)</span>; Q1 FY2026 orders +87% year on year, backlog above ¥10T (≈$68B)
+  <span class="cite">(Investing.com, 2026-07-29)</span>.</li>
+  <li>GE Vernova paid $5.275B to consolidate Prolec GE — five US transformer plants, ≈10,000 employees — and is now the
+  most North America-weighted top-tier transformer maker <span class="cite">(Prolec completion, 2026-02-02)</span>.
+  <span class="an">Analysis — High</span> The transformer bottleneck is the more defensible franchise versus turbines:
+  2.5–4-year lead times modelled to persist toward 2030, and GE Vernova&#39;s data-center electrification orders
+  quintupled in 18 months.</li>
+  <li>Breakers are the third choke point: ≈125-week lead times are throttling load-center schedules — Quanta&#39;s Hyosung
+  HICO JV (HV/EHV breakers to 800 kV, Canonsburg PA) is aimed squarely at them <span class="cite">(Quanta Q2 2026
+  release, 2026-07-30 — Quanta dossier)</span>.</li>
+</ul>
+
+<table>
+  <caption>Table 3: The capacity response is real but back-loaded — and that is the selling window</caption>
+  <thead><tr><th style="width:19%">Supplier</th><th style="width:20%">Committed spend</th><th style="width:14%">Lands</th><th>Scope</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Hitachi Energy</td><td class="num">$9B+ global / $1B+ US</td><td class="num">2028</td><td>The $457M South Boston VA plant, billed as the largest US transformer factory <span class="cite">(release, 2025-09-04)</span></td></tr>
+    <tr><td class="k">Siemens Energy</td><td class="num">+30–50% capacity</td><td class="num">FY26–28</td><td>Transformer and turbine capacity expansion <span class="cite">(CMD 2025, 2025-11-20)</span></td></tr>
+    <tr><td class="k">Quanta Services</td><td class="num">$500–700M</td><td class="num">2028</td><td>Nearly doubles HV transformer capacity <span class="cite">(2026 Investor Day, 2026-03-31)</span></td></tr>
+    <tr><td class="k">Schneider Electric</td><td class="num">&gt;$700M</td><td class="num">through 2027</td><td>Eight US sites <span class="cite">(release, 2025-03-25)</span></td></tr>
+    <tr><td class="k">ABB</td><td class="num">$200M</td><td class="num">2026+</td><td>European medium-voltage capacity <span class="cite">(release, 2026-05-11)</span></td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em><span class="an">Analysis — Moderate</span> Cyclical risk is real but
+back-loaded: ≈$1.8B of announced US transformer investment across the industry all lands 2027–28, and pricing power
+(+60–80% transformer inflation since 2020) normalizes if utilities&#39; ordering behavior does (Hitachi Energy dossier).
+<span class="an">Analysis</span> Siemens Energy&#39;s &ldquo;measured expansion plus shareholder returns&rdquo; choice
+supports pricing power but <em>prolongs the bottleneck</em> (Siemens Energy dossier).</em></p>
+
+<div class="pull">
+  <p class="lbl">Sales translation</p>
+  <p>Scarcity is the master clock of this market, and it prices every alternative. Bloom&#39;s entire AEP positioning is
+  that fuel cells deploy in 6–9 months against ≈3 years for turbines <span class="an">Analysis — High</span> — the same
+  arithmetic sells BESS bridge power, prefab substations, and anything else that converts queue time into revenue time.
+  Prospects without reservation frameworks are queued four years at Hitachi&#39;s window; every one of them is a lead for
+  whoever can compress that schedule. The flip side: quotes priced off 2026 scarcity rents need re-validation for 2028+
+  delivery, when the announced capacity wave lands.</p>
+</div>
+
+<h2 class="brk">4. Behind-the-Meter Power — the xAI / Crusoe Template</h2>
+
+<p class="lead">Behind-the-meter (BTM) generation is the industry&#39;s answer to the interconnection queue, and the dossier
+set contains both templates: <b>xAI</b>, the extreme vertically self-built case, and <b>Crusoe</b>, the productized
+merchant-developer case. Everything else in this section is the market forming around what those two proved.</p>
+
+<h3>4.1 The xAI template — self-build at any cost</h3>
+
+<div class="fig">
+  <p class="cap">Figure 5: Colossus nameplate compute draw — 0 to 1.0 GW in three years (GW)</p>
+  <div class="cols" style="max-width:330pt">
+    <div class="col"><div class="v">0</div><div class="bar" style="height:0.8%;background:var(--s1)"></div></div>
+    <div class="col"><div class="v">0.3</div><div class="bar" style="height:27.3%;background:var(--s1)"></div></div>
+    <div class="col"><div class="v">0.8</div><div class="bar" style="height:72.7%;background:var(--s1)"></div></div>
+    <div class="col"><div class="v">1.0</div><div class="bar" style="height:90.9%;background:var(--s1)"></div></div>
+  </div>
+  <div class="col-labs" style="max-width:330pt"><div>2023</div><div>2024</div><div>2025</div><div>31 Mar 2026</div></div>
+  <p class="src">Source: SpaceX Form S-1, 2026-05-20 — xAI dossier. Note: powered &ldquo;almost entirely&rdquo; by
+  self-deployed behind-the-meter generation; the filing confirms the campus &ldquo;is capable of operating entirely&rdquo;
+  off self-built generation. The grid is the supplement, not the source.</p>
+</div>
+
+<ul>
+  <li><b>The hardware:</b> ≈460 MW of documented on-site gas across the two campuses — 12 SMT-130s at Memphis, 7 Titan
+  350s at Southaven <span class="cite">(SemiAnalysis, 2025-12)</span>; a permitted permanent 1.2 GW / 41-turbine plant
+  under construction, with 69 temporary mobile turbines exiting August 2026 – July 2027 under a Mississippi DEQ order
+  <span class="cite">(CNBC, 2026-03-10)</span>; more than 240 Megapacks at Colossus 1 alone — the S-1 claims the
+  world&#39;s largest Megapack deployment and the first gigawatt-scale Megapack installation, enabling full off-grid
+  operation during grid stress <span class="cite">(S-1, 2026-05-20)</span>.</li>
+  <li><b>The procurement velocity:</b> ≈$3.7B of turbine commitments in four months of 2026, plus Tesla Megapack purchases
+  of $191M (2024), $506M (2025) and $34M (Q1 2026) — ≈$731M through Q1 2026 — plus another ≈$269–295M by SpaceX in
+  Q2 2026, for ≈$731M–1B cumulative, figures varying by source <span class="cite">(S-1, 2026-05-20; xAI dossier)</span>.</li>
+  <li><span class="an">Analysis — High</span> Speed-to-power is the differentiator, not model quality: BTM gas plus
+  Megapack buffering bypasses the queue entirely; 64–91-day cluster bring-ups are the fastest independently corroborated;
+  TVA and MLGW grid allocations (≈300 MW) cover only a fraction of load <span class="cite">(xAI dossier)</span>.</li>
+  <li><b>The risk half of the template, equally documented:</b> the NAACP/SELC federal Clean Air Act suit, four different
+  turbine counts with different evidentiary statuses (35 documented, 15 permitted backup-only, 27 alleged, 41 permitted),
+  and a <b>$399M self-recorded litigation accrual</b> <span class="cite">(CNBC, 2026-04-14)</span>.
+  <span class="an">Analysis — Moderate</span> Related-party procurement is structural: vendors negotiating with SpaceXAI
+  should assume <b>Tesla gets first look at any storage scope</b> <span class="cite">(xAI dossier)</span>.</li>
+</ul>
+
+<h3>4.2 The Crusoe template — energy-first development as a product</h3>
+<ul>
+  <li>Crusoe&#39;s procurement list reads like this report&#39;s supplier index: 29 × GE Vernova LM2500XPRESS (≈1 GW, SCR,
+  5-minute start) <span class="cite">(Crusoe release, 2025-01)</span>; ≈750 MW of Bergen reciprocating engines (438 MW
+  firm plus 310 MW LOI) with Piller dynamic stabilization for GPU transients <span class="cite">(2026-06-03)</span>;
+  <b>5 GW of ON.energy medium-voltage &ldquo;AI UPS&rdquo; BESS</b> <span class="cite">(2026-07-21)</span>; 12 GWh of Form
+  Energy iron-air 100-hour storage from 2027 <span class="cite">(2026-03-24)</span>; and two nuclear plays — Aalo&#39;s
+  10 MWe INL pilot in 2027 scaling to 50 MWe plants by end-2029 <span class="cite">(2026-07-30)</span>, and Blue Energy&#39;s
+  gas-bridge-2028-to-nuclear-2031 path <span class="cite">(Crusoe dossier)</span>.</li>
+  <li><b>The proof case:</b> Stargate Abilene phase 1 live on OCI within one year of construction start
+  <span class="cite">(2025-09-30)</span>; the 900 MW Microsoft Campus 2 pairs two 336 MW-IT buildings with a 900 MW
+  on-site plant <b>plus medium-voltage battery storage</b> <span class="cite">(2026-03-27)</span>.
+  <span class="an">Analysis — High</span> Time-to-power execution at scale is the genuine edge: 200+ MW energized within
+  a year, a substation in under six months.</li>
+  <li><b>The caveats:</b> ≈4.9 GW contracted against a claimed 40+ GW pipeline <span class="cite">(2026-07)</span>;
+  single-customer decisions reshaped the company twice in 2026 (the Oracle/OpenAI expansion halt; Google&#39;s Wyoming
+  ejection); <span class="an">Analysis — Moderate</span> the gas fleet runs on minor &ldquo;permit by rule&rdquo;
+  instruments with a pending major permit that would rank among Texas&#39;s largest fossil plants.</li>
+</ul>
+
+<h3>4.3 The market that formed around the templates</h3>
+
+<table>
+  <caption>Table 4: Behind-the-meter posture by buyer — the same problem, five different answers</caption>
+  <thead><tr><th style="width:13%">Buyer</th><th style="width:30%">Architecture</th><th style="width:24%">Storage content</th><th>Citation</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Oracle</td><td>A per-site power menu: Project Jupiter (Doña Ana NM) up to 2.45 GW of Bloom fuel cells, <em>displacing planned gas turbines and diesel gensets</em>; Shackelford County fully off-grid on reciprocating gensets (115 MW live, 2.0 GW site); Abilene on ERCOT plus ≈360 MW of on-site GE Vernova turbines</td><td>Site-by-site; &ldquo;we pay our own way on energy&rdquo; policy — on-site generation or Oracle-funded upgrades, no ratepayer pass-through</td><td class="cite">Project Jupiter announcement, 2026-04-27; Oracle post, 2026-01-26 — Oracle and Bloom dossiers</td></tr>
+    <tr><td class="k">OpenAI</td><td>Stargate sites span the whole BTM menu: Shackelford 2.0 GW gas microgrid; Doña Ana 2.2 GW gas plus Bloom; Port Washington WI 1.3 GW at ≈70% solar/wind/battery; Saline Township MI 1.4 GW on DTE grid plus batteries</td><td>Battery-heavy at two of four named sites; LGES Vertech supplies the DTE program</td><td class="cite">Epoch AI Stargate tracking — OpenAI dossier</td></tr>
+    <tr><td class="k">Meta</td><td>Prometheus (≈1 GW, online 2026) on 200→400 MW of BTM gas plus AEP transmission; the Hyperion/Entergy package adds seven gas plants (≈2.3 GW approved, ≈5.2 GW proposed)</td><td>Three grid-scale batteries in the Entergy package; storage bought utility-side, not by Meta</td><td class="cite">Data Center Frontier; Meta, 2026-07-13 — Meta dossier</td></tr>
+    <tr><td class="k">Google</td><td>Bought the model outright — the ≈$4.75B Intersect Power acquisition brings ≈2.2 GW solar and 2.4 GWh BESS in-house for &ldquo;energy parks&rdquo;: data centers co-located with BTM solar-plus-storage to bypass queues. First park at Haskell County TX</td><td>640 MW solar + 1.3 GWh BESS at Haskell County; 1 GW of data-center demand response across five utilities</td><td class="cite">PV Tech, 2026-03; Google, 2026-03-19 — Google dossier</td></tr>
+    <tr><td class="k">Equinix</td><td>Proves the colo tier buys firm power too: the industry&#39;s largest colo fuel-cell fleet (Bloom, past 100 MW across 19+ sites), ≈1.25 GW of advanced-nuclear commitments and LOIs including Oklo 500 MW — the first colo-operator SMR deal</td><td>A 20-year take-or-pay with Central Georgia EMC where Equinix funds 100% of grid upgrades</td><td class="cite">Equinix dossier, 2025-08-14 / 2026-08-06</td></tr>
+    <tr><td class="k">Huawei<br><span class="cite">Red Sea</span></td><td>The off-grid ceiling: 400 MW PV plus 1.3 GWh BESS, 100% renewable, 21+ months at 99.9% critical-load reliability</td><td>1.3 GWh — the entire firming layer is storage</td><td class="cite">ESS News, 2024-09-18 — Huawei Digital Power dossier</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em><span class="an">Analysis — Moderate</span> The queue is the strategic enemy
+Google is engineering around — the playbook rivals will copy (Google dossier). <span class="an">Analysis — High</span>
+Equinix&#39;s choices function as procurement standards for the whole colo tier (Equinix dossier).</em></p>
+
+<h3>4.4 The productized supply response — what is actually for sale</h3>
+
+<table>
+  <caption>Table 5: Onsite-power products, compared on the claim that sells them</caption>
+  <thead><tr><th style="width:16%">Offering</th><th style="width:24%">What it is</th><th style="width:24%">The headline claim</th><th>Citation</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Siemens Energy × Eaton<br>500 MW block</td><td>Standardized SGT-800-based grid-independent campus power — redundant turbines plus battery storage, no diesel</td><td>99.99%+ availability; up to two years off time-to-power. <span class="an">Analysis — High</span> the most productized onsite-power offering from any major OEM</td><td class="cite">Siemens Energy release, 2025-06-03 — Siemens Energy dossier</td></tr>
+    <tr><td class="k">GE Vernova<br>aeroderivatives</td><td>LM6000, LM2500XPRESS and TM2500 mobile units</td><td>&ldquo;Two weeks to power generation&rdquo;: 5-minute starts, &gt;99.8% availability, TM2500 installed in 11 days; Chevron &ldquo;power foundries&rdquo; target up to 4 GW for data centers by 2027</td><td class="cite">GEV gas-power pages; Chevron partnership, 2025-06-15 — GE Vernova dossier</td></tr>
+    <tr><td class="k">Wärtsilä<br>engines</td><td>Reciprocating-engine power plants</td><td>789 MW of first US data-center projects booked in 2025; a 429 MW / 24-engine utility order (Jan 2026); large plants operational in 12 months; 20–35% lower fuel consumption than turbines (company claim); Pure DC Ireland as Europe&#39;s first off-grid DC microgrid</td><td class="cite">Wärtsilä FY2025 bulletin and product pages — Wärtsilä dossier</td></tr>
+    <tr><td class="k">Bloom Energy<br>fuel cells</td><td>Solid-oxide Energy Servers, now shipped &ldquo;800V DC ready&rdquo;</td><td>55-day Oracle deployment beat its own 90-day commitment; AEP firmed 1 GW at ≈$2.65B — <span class="an">Analysis</span> the best public pricing benchmark for fuel-cell prime power at ≈$2.65/W. First $1B+ revenue quarter in Q2 2026; the Brookfield partnership expanded fivefold to $25B</td><td class="cite">Bloom dossier, 2026-01-15 / 2026-04-13; 8-K, 2026-07-28; release, 2026-06-30</td></tr>
+    <tr><td class="k">ABB ×<br>VoltaGrid</td><td>62 flywheel synchronous condensers for BTM AI campuses, delivered as prefab eHouse packages</td><td><span class="an">Analysis — High</span> The strongest independent validation that AI load volatility is purchasable — stabilization is now its own product category</td><td class="cite">Engineering.com, 2026-03-25 — ABB dossier</td></tr>
+    <tr><td class="k">FlexGen</td><td>Campus BESS with grid-forming PCS</td><td>Millisecond response to AI swings, deployable in under a year against 4–8-year queues</td><td class="cite">FlexGen solutions page — FlexGen dossier</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em><span class="an">Analysis — High</span> Bloom&#39;s core sale is <em>time</em>:
+55–90 days against interconnect waits of up to ≈7 years — but the headline pipeline overstates firm demand (the Oracle
+2.8 GW figure is a ceiling with ≈1.2 GW contracted, and management disclaims more than ≈6 months of visibility).</em></p>
+
+<h3>4.5 The front-of-meter counterweight — nuclear and the FERC line</h3>
+
+<div class="fig">
+  <p class="cap">Figure 6: The nuclear price ladder — what a restart costs versus existing output ($/MWh, analyst estimates)</p>
+  <div class="bars">
+    <div class="bar-row"><div class="bar-lab">Microsoft / Crane (TMI)<span class="sm">restart, targeting 2027</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:93.3%;background:var(--s1)"></div></div>
+      <div class="bar-val">≈$112</div></div>
+    <div class="bar-row"><div class="bar-lab">Meta / Clinton<span class="sm">existing output</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:58.3%;background:var(--s1)"></div></div>
+      <div class="bar-val">≈$70</div></div>
+  </div>
+  <div class="axis"><span>0</span><span>30</span><span>60</span><span>90</span><span>$120</span></div>
+  <p class="src">Source: Jefferies via Energy Connects, 2024-09; Utility Dive, 2025-06 — Constellation dossier. Note:
+  analyst estimates, not disclosed contract prices. <span class="an">Analysis — High</span> Constellation&#39;s pricing
+  power — a $20–50/MWh premium band, 920 MW of PPAs in a single quarter — is the market-defining asset.</p>
+</div>
+
+<ul>
+  <li>FERC&#39;s November 2024 rejection of the Talen/Amazon BTM nuclear ISA, upheld April 2025, set the national
+  precedent: <b>behind-the-meter co-location without cost allocation is dead</b>. Amazon&#39;s restructured front-of-meter
+  PPA, ramping to 1,920 MW of Susquehanna through 2042, is the workaround template <span class="cite">(Utility Dive,
+  2024-11; Talen release, 2025-06-11 — Amazon dossier)</span>. <span class="an">Analysis — Moderate</span> That pushes
+  incremental firming demand toward grid-side assets — <em>including storage</em>. FERC later ordered PJM to write
+  transparent co-location and large-load tariff rules <span class="cite">(Utility Dive, 2025-12-18 — Constellation
+  dossier)</span>.</li>
+  <li>Meta&#39;s contracted nuclear now totals ≈7.7 GW across TerraPower, Oklo, Vistra and Clinton — the largest corporate
+  nuclear commitment <span class="cite">(Meta, 2026-01-09 / 2025-06-03)</span>; Amazon targets 5+ GW by 2039; Microsoft
+  holds TMI (2027) plus the world&#39;s first fusion PPA (Helion, ≥50 MW targeting 2028) <span class="cite">(Microsoft
+  dossier)</span>. But nearly all of it delivers <b>2027–2030s</b> — nothing nuclear firms AI load this decade at scale.</li>
+</ul>
+
+<div class="pull">
+  <p class="lbl">Sales translation</p>
+  <p>The BTM bill of materials is the account map. Every campus needs generation (turbines, engines, fuel cells),
+  stabilization (flywheels, Piller-class systems, grid-forming BESS), a medium-voltage storage buffer sized to GPU
+  transients, and increasingly long-duration storage as interconnection currency. Storage is embedded in <em>every</em>
+  variant: xAI&#39;s Megapack fleet, Crusoe&#39;s 5 GW ON.energy MV-BESS plus 12 GWh iron-air, Microsoft&#39;s Campus-2
+  MV storage, Google&#39;s energy parks, Stargate&#39;s battery-heavy sites, Meta&#39;s Entergy batteries. The gas-plus-storage
+  bridge owns 2026–2030 while nuclear matures; the objections to pre-handle are the xAI permitting record and Texas
+  permit-by-rule scrutiny, both now shaping every BTM procurement conversation.</p>
+</div>
+
+<h2 class="brk">5. The 800 VDC Transition</h2>
+
+<p class="lead">NVIDIA is not a power vendor, but it writes the spec everyone else must build to — and in May 2025 it rewrote
+the data-center power architecture around 800 VDC. This is the sector&#39;s vendor-list reset, and reset moments are when
+share moves.</p>
+
+<h3>5.1 The architecture and its clock</h3>
+
+<div class="tiles">
+  <div class="tile"><div class="n">+157%</div><div class="l">More power through the same copper versus 415 VAC</div></div>
+  <div class="tile"><div class="n">−45%</div><div class="l">Copper reduction — a legacy 1 MW rack carries up to 200 kg of busbar</div></div>
+  <div class="tile"><div class="n">+5 pts</div><div class="l">End-to-end efficiency, up to</div></div>
+  <div class="tile"><div class="n">−30%</div><div class="l">Total cost of ownership</div></div>
+</div>
+<p class="src" style="margin-top:-4pt"><em>Source: NVIDIA 800 VDC whitepaper, 2025-10-13 — NVIDIA dossier. Note:
+vendor-published figures; each measures a different quantity and they are not additive.</em></p>
+
+<p>The partner slate is the qualification list. Unveiled at Computex on 2025-05-20 with Delta, LITEON, Megmeet, Eaton,
+Schneider, Vertiv, Infineon and TI; expanded at OCP on 2025-10-13 to the <b>grid-equipment tier</b> — ABB, GE Vernova,
+Hitachi Energy, Siemens and Heron Power <span class="cite">(NVIDIA 800VDC blogs, 2025-05-20 / 2025-10-13 — NVIDIA
+dossier)</span>.</p>
+
+<div class="fig">
+  <p class="cap">Figure 7: The published clock — the qualification window is open now and closes with Kyber</p>
+  <div class="tl">
+    <div class="tl-axis"><div class="seg" style="left:8.3%;width:64.7%"></div></div>
+    <div class="tl-ticks"><div>2025</div><div>2026</div><div>2027</div><div style="text-align:right">2028</div></div>
+    <div class="tl-row"><div class="d">2025-05</div><div>Computex — 800 VDC architecture unveiled; ODM partner slate named. <b>Qualification window opens.</b></div></div>
+    <div class="tl-row"><div class="d">2025-10</div><div>OCP — slate expanded to the grid-equipment tier; two-tier storage hierarchy published (rack supercapacitors, facility BESS)</div></div>
+    <div class="tl-row"><div class="d">3Q 2026</div><div><b>First 800V HVDC shipments</b> — NVIDIA (Vera Rubin) and Google adopt first <span class="cite">(TrendForce, 2026-06-15)</span></div></div>
+    <div class="tl-row"><div class="d">Q3 2026</div><div>Delta ±400 VDC enters mass production</div></div>
+    <div class="tl-row"><div class="d">Q4 2026</div><div>Delta 800 VDC small-volume production</div></div>
+    <div class="tl-row"><div class="d">Q1 2027</div><div>LITEON 800V mass production — ASIC customers first; GPU clients &ldquo;potentially Q2 2027&rdquo;</div></div>
+    <div class="tl-row"><div class="d">2H 2027</div><div><b>Kyber racks</b> — 576 Rubin Ultra GPUs, ≈600 kW/rack; full-scale 800 VDC production coincides. <b>Window closes.</b></div></div>
+    <div class="tl-row"><div class="d">2027</div><div>GE Vernova&#39;s hyperscaler decision on 1,000 solid-state transformers, if spec is met</div></div>
+    <div class="tl-row"><div class="d">Feynman era</div><div>&ldquo;1 MW IT racks and beyond&rdquo;</div></div>
+  </div>
+  <p class="src">Source: TrendForce, 2026-06-15; Tom&#39;s Hardware GTC record, 2025-03-18; NVIDIA 800 VDC whitepaper;
+  GE Vernova December 2025 investor update — NVIDIA, Delta, LITEON and GE Vernova dossiers.</p>
+</div>
+
+<div class="note">
+  <p class="lbl">The architecture mandates storage</p>
+  <p>NVIDIA prescribes a two-tier energy-storage hierarchy — supercapacitors at the rack for millisecond transients,
+  facility-level BESS at the interconnection for second-to-minute smoothing <span class="cite">(NVIDIA whitepaper,
+  2025-10-13)</span> — and GB300 NVL72 already productizes rack-level smoothing (≈65 J/GPU in power shelves, up to −30%
+  peak grid demand) <span class="cite">(NVIDIA blog, 2025-10)</span>. Power-quality and storage content is becoming
+  <b>non-discretionary rack content</b>.</p>
+</div>
+
+<h3>5.2 The ODM tier — who is actually ahead</h3>
+
+<table>
+  <caption>Table 6: The three named power ODMs, compared</caption>
+  <thead><tr><th style="width:9%">Vendor</th><th style="width:20%">Position today</th><th style="width:25%">800 VDC stack</th><th style="width:16%">Volume timing</th><th style="width:30%">The catch</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Delta</td>
+      <td>#1 in NVIDIA&#39;s AI-server power ecosystem; first-qualified across GB200/GB300 shelf sets; ≈70% of Blackwell-platform PSUs; reported &gt;50–60% of AI-server AC/DC</td>
+      <td>The deepest published: 660 kW in-row power rack embedding <b>480 kW of BBU per rack</b>; SST converting MV AC to 800 VDC at 98.5%; SiC e-fuse with &lt;3 µs cutoff; claimed &gt;4% grid-to-chip gain to ≈92%</td>
+      <td class="num">±400 VDC MP Q3 2026; 800 VDC small volume Q4 2026; true volume 2027</td>
+      <td>AI data-center power and cooling crossed <b>50% of revenue</b> in Q2 2026 — concentration cuts both ways. <span class="an">Analysis — High</span> structurally advantaged into the 800V generation</td></tr>
+    <tr><td class="k">LITEON</td>
+      <td>#2 at ≈30% AI-server power share against Delta&#39;s 60%+</td>
+      <td>The <b>BBU franchise</b> is its structural edge: BBU shipments ran ≈30x in 2025 and moved from optional (GB200) to standard (GB300/Rubin); its 800V rack embeds BBU plus supercapacitor shelves</td>
+      <td class="num">800V MP Q1 2027 — ASIC customers first, GPU clients &ldquo;potentially Q2 2027&rdquo;</td>
+      <td>A step behind Delta on the clock. The $919M McKinney TX plant moves non-China capacity to 60% by end-2026. <span class="an">Analysis — High</span> its strongest products become non-discretionary content</td></tr>
+    <tr><td class="k">Megmeet</td>
+      <td>The only mainland-China power supplier NVIDIA named for GB200 NVL72</td>
+      <td>Kyber 800V sidecar first-mover (claims +5% efficiency, −45% copper, −30% TCO); full grid-to-GPU chain shown including a &gt;98.5% SST</td>
+      <td class="num">Claimed first-mover; no disclosed volume date</td>
+      <td>By its own statements AI orders were <b>immaterial through 2025</b>; FY2025 profit fell 66.6% funding the pivot; three limit-downs in four July sessions. <span class="an">Analysis — High</span> the 2026-08-27 H1 report is the first hard test</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em>Source: WAWT, 2026-04-20; KGI, 2025-07-01; CommonWealth; TrendForce, 2026-06-15;
+Delta Q2 results, 2026-07-29; LITEON release, 2026-07-13; SmBom, 2025-05-22; Megmeet releases 2025-05-21 / 2026-04-13 —
+Delta, LITEON, Megmeet and NVIDIA dossiers.</em></p>
+
+<p><b>The BBU cell layer beneath them.</b> Samsung SDI&#39;s ≈KRW 2T BBU chain runs via Simplo, with both Samsung SDI and
+Panasonic reported <b>supply-short in BBU cells</b> <span class="cite">(The Elec, 2026-07 — Samsung SDI dossier)</span>;
+Panasonic&#39;s BBU plus supercapacitor-CBU strategy matches the rack-side architecture <span class="cite">(Panasonic,
+2026-03-25)</span>; EVE showed a full-matrix 800V BBU portfolio at OCP China 2026 — <span class="an">Analysis —
+Moderate</span> real differentiation potential but no named wins, so 2027+ optionality <span class="cite">(EVE
+dossier)</span>.</p>
+
+<div class="fig">
+  <p class="cap">Figure 8: The rack-storage market the architecture creates — AI-server BBU ($ billion)</p>
+  <div class="cols" style="height:80pt;max-width:230pt">
+    <div class="col"><div class="v">≈$2.8B</div><div class="bar" style="height:35%;background:var(--s1)"></div></div>
+    <div class="col"><div class="v">≈$7.1B</div><div class="bar" style="height:88.8%;background:var(--s1)"></div></div>
+  </div>
+  <div class="col-labs" style="max-width:230pt"><div>2026</div><div>2033</div></div>
+  <p class="src">Source: TrendForce — NVIDIA dossier. Note: each GB300 cabinet uses ≈5 BBU modules plus more than 300
+  supercapacitors, and supercapacitor supply is a genuine bottleneck. <span class="an">Analysis — Moderate</span>
+  NVIDIA&#39;s rack storage legitimizes and expands the market faster than it cannibalizes it. Independent analysis
+  (SemiAnalysis) separately projects ≈$11B of power-rack and ≈$13B of solid-state-transformer markets forming alongside.</p>
+</div>
+
+<h3>5.3 The incumbents&#39; dilemma — and the grid-tier land grab</h3>
+
+<p><span class="an">Analysis — Moderate</span> The transition is a <em>net-content question</em> for the AC incumbents:
+independent analysis projects 800 VDC <b>contracts the centralized UPS market</b> — a core Vertiv, Eaton and Schneider
+franchise — while creating the power-rack and SST markets above. <b>No incumbent has yet named a shipping 800 VDC
+switchboard product</b> <span class="cite">(Vertiv and Eaton dossiers)</span>.</p>
+
+<table>
+  <caption>Table 7: Where each incumbent actually stands on 800 VDC</caption>
+  <thead><tr><th style="width:14%">Vendor</th><th style="width:36%">Shipping or announced</th><th style="width:13%">Commercial date</th><th>Read</th></tr></thead>
+  <tbody>
+    <tr><td class="k">ABB</td><td>HiPerGuard, the industry&#39;s first static MV UPS (2.5→25 MW, 98%, now a 34.5 kV class that removes a conversion stage); SACE Infinitus, the world&#39;s first IEC-certified solid-state circuit breaker</td><td class="num">Shipping</td><td><span class="an">Analysis — High</span> Winning the medium-voltage layer; the architecture incumbent for the next rack generation. Eaton, Schneider and Vertiv compete at low voltage</td></tr>
+    <tr><td class="k">Vertiv</td><td>Full 800 VDC portfolio — centralized rectifiers, DC busway, rack DC-DC, DC-compatible backup; PowerDirect Rack already in shelf/BBU territory</td><td class="num">2H 2026</td><td>Ahead of Kyber, but a portfolio release is not a switchboard. Binding risk is execution</td></tr>
+    <tr><td class="k">Eaton</td><td>OCP reference architecture staking supercapacitor fast-cycle backup plus ORv3 busbar, packaged as Beam Rubin DSX; market-first detection of GPU-induced subsynchronous oscillations</td><td class="num">Reference stage</td><td>Strong on the transient problem; the switchboard gap stands</td></tr>
+    <tr><td class="k">Schneider</td><td>800 VDC sidecar — racks to 1.2 MW with integrated energy storage</td><td class="num">No commercial date</td><td>The design layer is the real edge: NVIDIA co-developed designs pull hardware into projects <em>before</em> competitive bidding <span class="an">Analysis — High</span></td></tr>
+    <tr><td class="k">GE Vernova</td><td>Three AI-factory 800 VDC reference designs (grid-connected, islanded, bridging; 13.8 kV AC → 800 VDC via SSTs); R&amp;D cost-share with a hyperscaler committed to buy <b>1,000 SSTs from 2027</b> if spec is met</td><td class="num">SST 12–24 months out</td><td><span class="an">Analysis — Moderate</span> If the spec lands, GE Vernova leapfrogs the AC-switchboard incumbents; if it slips, the SST market forms around Heron Power-class challengers</td></tr>
+    <tr><td class="k">Hitachi Energy</td><td>Co-designed grid-to-rack conversion for 800 VDC racks from 3 MW to GW-class</td><td class="num">Co-design stage</td><td><span class="an">Analysis — Moderate</span> Its edge is owning the grid side of the interface; its gap is no UPS or rack installed base</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em>Source: ABB dossier, 2026-07-16 / 2025-10-13; Vertiv release, 2025-10-13 and
+2025-03-18; Eaton, 2025-10-13 / 2026-03-16 / 2025-09-09; Schneider, 2025-10-13; GE Vernova whitepaper, 2025-10-24 and
+December 2025 investor update; Hitachi dossier, 2025-10-13.</em></p>
+
+<div class="note">
+  <p class="lbl">Specification now happens in the digital twin</p>
+  <p>ABB&#39;s SimReady assets, Eaton&#39;s Beam Rubin DSX, Schneider&#39;s ETAP/AVEVA models and GE Vernova&#39;s reference
+  designs all live inside NVIDIA&#39;s Omniverse DSX Blueprint. Spec wins happen in the twin <b>before procurement
+  opens</b> <span class="cite">(ABB, 2026-06; Eaton, 2026-03-16; Schneider, 2026-03-16)</span>.</p>
+</div>
+
+<h3>5.4 The long tail — smaller entrants riding the reset</h3>
+<ul>
+  <li><b>Sinexcel</b> stood up a dedicated AIDC division in June 2025, developing HVDC systems and SSTs on its APF/SVG
+  power-electronics heritage. Current shipping exposure is a 36 kW HVDC rectifier module — third-party reporting says
+  supplied <b>to Vertiv</b>, giving indirect NVIDIA exposure — with claimed ≈100 W/in³ density against an ≈70 industry
+  average; HVDC and SST launches expected 2026. <span class="an">Analysis — Moderate</span> Pre-revenue optionality; the
+  H1 2026 report, due <b>2026-08-11</b>, is the checkpoint for first AIDC revenue disclosure <span class="cite">(海之理财,
+  2025-10-09 — Sinexcel dossier)</span>.</li>
+  <li><b>Bloom</b> now ships every Energy Server &ldquo;800V DC ready&rdquo; for direct DC integration
+  <span class="cite">(datasheet, 2026-02)</span>; <b>Jinko&#39;s</b> Sunny 365 AIDC edition claims 800V HVDC compatibility
+  for solar-plus-storage supply <span class="cite">(release, 2026-08-04)</span>.</li>
+</ul>
+
+<div class="pull">
+  <p class="lbl">Sales translation</p>
+  <p>800 VDC is a <b>vendor-list reset on a published clock</b> — qualification windows are open now through 2027, and the
+  spec is being won inside NVIDIA reference designs and the Omniverse twin, not in RFPs. For a power or storage seller:
+  (1) BBU, supercapacitor and rack-storage content is becoming mandatory — the storage conversation now starts
+  <em>inside</em> the rack; (2) any product not in a named ecosystem tier needs a route in through someone who is — the
+  Sinexcel-to-Vertiv module path is the template; (3) incumbents defending centralized-UPS revenue are the displacement
+  targets, and their own dossier reads concede the switchboard gap; (4) near-term calendar: Sinexcel H1 on 08-11 and
+  Megmeet H1 on 08-27 are both direct reads on whether the challenger tier is converting the reset into revenue.</p>
+</div>
+
+<h2 class="brk">6. BESS Competitive Dynamics</h2>
+
+<p class="lead">The storage market crossed 100 GW of annual installs in 2025 <span class="cite">(ESS News, 2026-07-14 —
+Fluence, Tesla and Wärtsilä dossiers)</span> and flipped from glut to tightness, with the ESS cell market up 94.6% to
+612 GWh <span class="cite">(InfoLink via ESS News, 2026-02-09 — Hithium and EVE dossiers)</span>. Five dynamics matter
+for the pipeline: the league-table reset, the hardware arms race, the geopolitical fault line, the integrator shakeout,
+and the convergence of BESS onto the data center itself.</p>
+
+<h3>6.1 The league table, post-reset</h3>
+
+<div class="fig">
+  <p class="cap">Figure 9: Chinese integrators took roughly three-quarters of a market above 100 GW</p>
+  <div class="donut-wrap">
+    <svg width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="Chinese integrators about 76 percent of the BESS integrator market">
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#e9e5da" stroke-width="15"/>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#0b62a4" stroke-width="15"
+              stroke-dasharray="208.1 68.4" stroke-dashoffset="0" transform="rotate(-90 60 60)"/>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#c2622a" stroke-width="15"
+              stroke-dasharray="64.4 212.1" stroke-dashoffset="-210.1" transform="rotate(-90 60 60)"/>
+      <text x="60" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+            font-size="20" font-weight="bold" fill="#23211c">≈76%</text>
+      <text x="60" y="72" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+            font-size="8" fill="#6d6758">Chinese</text>
+    </svg>
+    <div class="donut-key">
+      <div class="kr"><i style="background:var(--s1)"></i>Chinese integrators — Sungrow, CATL, BYD and peers<span class="kv">≈76%</span></div>
+      <div class="kr"><i style="background:var(--s2)"></i>All other integrators — Tesla, Fluence, Wärtsilä and peers<span class="kv">≈24%</span></div>
+      <p class="small mut" style="margin:7pt 0 0">Sungrow became the first vendor ever to hold both Wood Mackenzie crowns
+      — BESS integrator and PV inverter — and the first to take the integrator top spot from Tesla.</p>
+    </div>
+  </div>
+  <p class="src">Source: Wood Mackenzie inaugural Global BESS Integrator Comprehensive Ranking, July 2026, via ESS News,
+  2026-07-14 — Sungrow, Tesla, Fluence and Wärtsilä dossiers. Note: rankings are scope-dependent — Benchmark&#39;s
+  system-shipment cut has BYD #1 for 2025 (&gt;60 GWh, 13%) over Tesla (46.7 GWh). <span class="an">Analysis —
+  Moderate</span> Treat single-ranking claims with caution and always name the ranking body.</p>
+</div>
+
+<table class="tight">
+  <caption>Table 8: The 2026 integrator league table and what sits behind each position</caption>
+  <thead><tr><th style="width:7%">Rank</th><th style="width:15%">Integrator</th><th style="width:13%">Share signal</th><th>The load-bearing fact</th></tr></thead>
+  <tbody>
+    <tr><td class="num">1</td><td class="k">Sungrow</td><td class="num">Both crowns</td><td>ESS overtook inverters as its largest segment — 41.8% of revenue at 36.5% gross margin. <span class="an">Analysis — High</span> storage is now the profit center</td></tr>
+    <tr><td class="num">2</td><td class="k">Tesla</td><td class="num">46.7 GWh (2025)</td><td>Tesla Energy became Tesla&#39;s profit engine — deployments +49%, Q4 margin 28.7%</td></tr>
+    <tr><td class="num">3</td><td class="k">CATL</td><td class="num">27.1% of cells</td><td>ESS line hit RMB 53.26B in H1 2026, up 87.5%, ≈20% of group revenue</td></tr>
+    <tr><td class="num">4</td><td class="k">BYD</td><td class="num">&gt;60 GWh (2025)</td><td>#1 on Benchmark&#39;s system-shipment cut at 13% share — the ranking-scope caveat in one line</td></tr>
+    <tr><td class="num">7</td><td class="k">Fluence</td><td class="num">≈4%</td><td>Record $6.4B backlog including ≈$850M of data-center orders and master supply agreements with two hyperscalers</td></tr>
+    <tr><td class="num">top-10</td><td class="k">Wärtsilä</td><td class="num">EUR 719M book</td><td>The Western &ldquo;pure-play&rdquo; tier — now folding into a 50/50 JV with RCT Solutions</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em>Source: ESS News, 2026-07-14 (Wood Mackenzie ranking); Benchmark via BYD
+dossier; Sungrow, Tesla, CATL, Fluence and Wärtsilä dossiers; Teslarati, 2026-01; Energy-Storage.News, 2026-07;
+Fluence Q3 FY2026, 2026-08-05.</em></p>
+
+<div class="fig">
+  <p class="cap">Figure 10: The cell layer is consolidating more slowly — ESS cell share, H1 2026</p>
+  <div class="donut-wrap">
+    <svg width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="ESS cell share H1 2026: CATL 27.1 percent, Hithium about 12 percent, EVE about 12 percent, others about 49 percent">
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#e9e5da" stroke-width="15"/>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#0b62a4" stroke-width="15"
+              stroke-dasharray="72.9 203.6" stroke-dashoffset="0" transform="rotate(-90 60 60)"/>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#c2622a" stroke-width="15"
+              stroke-dasharray="31.2 245.3" stroke-dashoffset="-74.9" transform="rotate(-90 60 60)"/>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#1b8a6b" stroke-width="15"
+              stroke-dasharray="31.2 245.3" stroke-dashoffset="-108.1" transform="rotate(-90 60 60)"/>
+      <circle cx="60" cy="60" r="44" fill="none" stroke="#7a3f7d" stroke-width="15"
+              stroke-dasharray="133.2 143.3" stroke-dashoffset="-141.3" transform="rotate(-90 60 60)"/>
+      <text x="60" y="58" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+            font-size="20" font-weight="bold" fill="#23211c">27.1%</text>
+      <text x="60" y="72" text-anchor="middle" font-family="Arial,Helvetica,sans-serif"
+            font-size="8" fill="#6d6758">CATL</text>
+    </svg>
+    <div class="donut-key">
+      <div class="kr"><i style="background:var(--s1)"></i>CATL — 125 GWh<span class="kv">27.1%</span></div>
+      <div class="kr"><i style="background:var(--s2)"></i>Hithium — FY2025 Top-2<span class="kv">≈12%</span></div>
+      <div class="kr"><i style="background:var(--s3)"></i>EVE — FY2025 #3<span class="kv">≈12%</span></div>
+      <div class="kr"><i style="background:var(--s4)"></i>All others<span class="kv">≈49%</span></div>
+      <p class="small mut" style="margin:7pt 0 0">CATL is #1 but narrowing: company-reported ESS share fell from 36.5% to
+      30.4% across 2025 and to 27.1% in H1 2026. <span class="an">Analysis — High</span></p>
+    </div>
+  </div>
+  <p class="src">Source: CnEVPost, 2026-08-04 (H1 2026 CATL); CATL dossier (share trajectory, Hithium and EVE at roughly
+  12% each); InfoLink, 2026-02-09 — EVE dossier (FY2025 cell ranking: Hithium Top-2, EVE #3, displaced from #2 by
+  Hithium). Note: Hithium and EVE shares are approximate and every wedge is direct-labeled.</p>
+</div>
+
+<div class="tiles">
+  <div class="tile"><div class="n">+94.6%</div><div class="l">ESS cell market growth to 612 GWh — glut flipped to tightness</div></div>
+  <div class="tile"><div class="n">41.8%</div><div class="l">Sungrow revenue from ESS, at 36.5% gross margin — now its largest segment</div></div>
+  <div class="tile"><div class="n">+87.5%</div><div class="l">CATL ESS revenue growth, H1 2026, to RMB 53.26B</div></div>
+  <div class="tile"><div class="n">+95–110%</div><div class="l">EVE H1 2026 profit guidance as pricing power returned</div></div>
+</div>
+
+<h3>6.2 The hardware arms race — blocks, cells, safety</h3>
+
+<div class="fig">
+  <p class="cap">Figure 11: The block-size leapfrog — energy per factory-integrated block (MWh)</p>
+  <div class="bars">
+    <div class="bar-row"><div class="bar-lab">BYD HaoHan<span class="sm">2,710 Ah Blade cell</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:96.7%;background:var(--s1)"></div></div>
+      <div class="bar-val">14.5</div></div>
+    <div class="bar-row"><div class="bar-lab">Sungrow PowerTitan 3.0<span class="sm">684 Ah, 30-ft</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:83.3%;background:var(--s1)"></div></div>
+      <div class="bar-val">12.5</div></div>
+    <div class="bar-row"><div class="bar-lab">Fluence Smartstack<span class="sm">≈680 MWh/acre</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:66.7%;background:var(--s1)"></div></div>
+      <div class="bar-val">10.0</div></div>
+    <div class="bar-row"><div class="bar-lab">CATL TENER Stack<span class="sm">587 Ah, half-height</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:60%;background:var(--s1)"></div></div>
+      <div class="bar-val">9.0</div></div>
+    <div class="bar-row"><div class="bar-lab">Hithium 8-hour native<span class="sm">1,300 Ah, target Q4 2026</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:46%;background:var(--s1)"></div></div>
+      <div class="bar-val">6.9</div></div>
+    <div class="bar-row"><div class="bar-lab">Tesla Megapack 3<span class="sm">single-piece</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:33.3%;background:var(--s1)"></div></div>
+      <div class="bar-val">≈5.0</div></div>
+  </div>
+  <div class="axis"><span>0</span><span>5</span><span>10</span><span>15 MWh</span></div>
+  <p class="src">Source: pv magazine, 2025-09-19 (BYD), 2025-06-10 (Sungrow), 2025-05-08 (CATL), 2026-06-09 (Hithium);
+  Fluence, 2026-06-23; ESS News, 2025-09-09 (Tesla) — BYD, Sungrow, CATL, Hithium, Fluence and Tesla dossiers. Note:
+  block energy is one axis of the race; footprint, cell capacity and installed labor are the others — see Table 9.</p>
+</div>
+
+<table class="tight">
+  <caption>Table 9: The cell and block race, on the specifications each vendor leads with</caption>
+  <thead><tr><th style="width:13%">Vendor</th><th style="width:16%">Flagship block</th><th style="width:12%">Cell</th><th>The claim that sells it</th></tr></thead>
+  <tbody>
+    <tr><td class="k">BYD</td><td>HaoHan, 14.5 MWh</td><td class="num">2,710 Ah Blade</td><td>233 kWh/m³; lifecycle cost claim below CNY 0.1/kWh</td></tr>
+    <tr><td class="k">Sungrow</td><td>PowerTitan 3.0, 12.5 MWh</td><td class="num">684 Ah</td><td>First mass-producible 684 Ah cell; SiC PCS; 12.5 MWh in a 30-ft container. DNV-witnessed 20 MWh burn test with no propagation, suppression disabled</td></tr>
+    <tr><td class="k">Fluence</td><td>Smartstack, 10 MWh</td><td class="num">—</td><td>≈680 MWh/acre; up to 40% lower balance-of-plant</td></tr>
+    <tr><td class="k">CATL</td><td>TENER Stack, 9 MWh</td><td class="num">587 Ah</td><td>&ldquo;5-year zero degradation&rdquo;; road-legal half-height containers. TENER Sodium is the first field-validated sodium-ion BESS — 30+ MWh configurations, 15,000 cycles, 30-year warranty</td></tr>
+    <tr><td class="k">Hithium</td><td>6.9 MWh, 8-hour native</td><td class="num">1,175 → 1,300 Ah</td><td>∞Cell 1175Ah was the first mass-produced kAh-class cell; the 1,300 Ah system targets Q4 2026</td></tr>
+    <tr><td class="k">EVE</td><td>Grid station, Feb 2026</td><td class="num">628 Ah Mr.Big</td><td>First mass-produced 600 Ah+ prismatic; world&#39;s first 628 Ah grid station; more than 30 GWh of 2027 orders in hand; claims −50% installation workload versus 314 Ah systems</td></tr>
+    <tr><td class="k">Tesla</td><td>Megapack 3, ≈5 MWh</td><td class="num">LFP (Sparks / LGES)</td><td>Brookshire 50 GWh/yr line live 2026-08-06 — the fastest factory bring-up in company history. Megablock bundles four Megapack 3s with factory-integrated MV transformer and switchgear</td></tr>
+    <tr><td class="k">Samsung SDI</td><td>SBB 2.0</td><td class="num">LFP prismatic</td><td>World-first pass of UL&#39;s Indoor Large-Scale Fire Test for UPS batteries — framed explicitly as a hyperscaler procurement requirement</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em>Source: as Figure 11, plus CATL releases 2026-06/07 and Energy-Storage.News,
+2024-11 (sodium-ion); PR Newswire, 2025-06 and pv magazine, 2026-06-09 (Hithium); EVE releases 2024-12 / 2026-02-10 /
+2026-07; Electrek, 2026-08-06 (Brookshire); PR Newswire, 2024-11 (Sungrow burn test); Samsung SDI, 2026-07-14.
+<span class="an">Analysis — Moderate</span> Sodium-ion is a post-lithium transition competitors must now answer
+(CATL dossier). Safety is now a procurement gate, not a datasheet line.</em></p>
+
+<h3>6.3 Where the mega-orders are — and what AI adds</h3>
+
+<p><b>The Gulf giga-orders set the scale bar.</b> Masdar&#39;s 5.2 GW / 19 GWh round-the-clock project runs on CATL TENER
+— 19 GWh, the largest single BESS order <span class="cite">(ESS News, 2025-01-20)</span> — with BYD adding 11.275 GWh for
+EWEC and Sungrow winning 7.5 GWh plus 2.6 GW of inverters on the same program <span class="cite">(BYD, 2026-07-09; ESS
+News, 2026-05-22)</span>. BYD also took a 12.5 GWh SEC award, and Sungrow&#39;s 7.8 GWh Algihaz plant — the world&#39;s
+largest grid-forming BESS — was won next door to Huawei&#39;s Red Sea showcase <span class="cite">(pv magazine,
+2025-02-17 / 2024-07-16; ESS News counter-datapoint, 2025-12-18 — Huawei dossier)</span>.</p>
+
+<p><b>AI data centers are now a quantified storage demand channel</b> — not pipeline talk:</p>
+<ul>
+  <li><b>1.6 GWh</b> of Samsung SDI&#39;s H1 2026 ESS shipments went to AI data centers <span class="cite">(SNE via
+  CnEVPost, 2026-08-04)</span>.</li>
+  <li><b>Fluence</b> carries ≈$850M of data-center orders plus master supply agreements with <b>two hyperscalers</b> inside
+  its record $6.4B backlog — <span class="an">Analysis — High</span> a contracted channel <span class="cite">(Fluence
+  dossier; Q3 FY2026, 2026-08-05)</span>.</li>
+  <li><b>LGES Vertech&#39;s</b> 6 GWh / 1.5 GW DTE program exists to serve the Oracle-managed OpenAI campus at Saline
+  Township <span class="cite">(LGES, 2026-05-27)</span>.</li>
+  <li><b>Google</b> anchored the largest battery project by energy capacity announced anywhere — 300 MW / <b>30 GWh</b> of
+  Form Energy iron-air via Xcel — plus the largest US solar-plus-storage PPA (Steel River: full build 2.5 GW solar and
+  2.9 GWh BESS) <span class="cite">(Google, 2026-02-24; pv magazine, 2026-07-15)</span>.
+  <span class="an">Analysis — High</span> Google has chosen ownership over procurement — the hyperscaler most likely to
+  shape, not just consume, the storage market.</li>
+</ul>
+
+<table>
+  <caption>Table 10: Hyperscaler storage posture — who to sell to, and through whom</caption>
+  <thead><tr><th style="width:12%">Buyer</th><th style="width:15%">Posture</th><th style="width:33%">Evidence</th><th>Who actually holds the OEM decision</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Google</td><td class="k" style="color:var(--s3)">Owner</td><td>Bought Intersect Power (≈$4.75B, 2.2 GW solar + 2.4 GWh BESS); anchored 30 GWh Form Energy iron-air; largest US solar-plus-storage PPA</td><td><b>Google itself</b> — the only hyperscaler that has internalized development</td></tr>
+    <tr><td class="k">Amazon</td><td class="k" style="color:var(--s1)">Counterparty</td><td>Utility-scale OEM decisions sit with developer counterparties — AES at Bellefield, Primergy</td><td><span class="an">Analysis — High</span> The <b>developer</b>, not the hyperscaler — the most established hyperscaler-linked storage channel</td></tr>
+    <tr><td class="k">Meta</td><td class="k" style="color:var(--s1)">Counterparty</td><td>Buys utility-side via tolled projects (Enbridge Cowboy: 200 MW / 1,600 MWh on Tesla batteries); reserved up to 1 GW / 100 GWh of Noon long-duration storage</td><td><span class="an">Analysis — Moderate</span> Meta&#39;s <b>utility counterparties</b> — Entergy, Enbridge — not Meta</td></tr>
+    <tr><td class="k">Microsoft</td><td class="k" style="color:var(--s6)">Structural non-buyer</td><td>Runs Fairwater Atlanta with <em>no on-site generators or UPS</em> — 4x9 availability at 3x9 cost. No major 2025–26 standalone BESS procurement has surfaced</td><td><span class="an">Analysis — High</span> Has structurally chosen grid procurement over on-site storage. The Dublin grid-interactive UPS pilot with Eaton is the door still ajar</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em>Source: PV Tech, 2026-03 and Google releases 2026-02-24 / 2026-03-19;
+Amazon dossier; Utility Dive, 2026-05-21 and Meta, 2026-04-27; Microsoft dossier, 2025-11-12.</em></p>
+
+<h3>6.4 The geopolitical fault line — the FEOC and tariff umbrella</h3>
+
+<p>The wall is rising in layers. US tariffs on Chinese battery imports step from 7% to <b>26% in 2026</b>
+<span class="cite">(ESS News, 2025-06-06 — Hithium dossier)</span>. CATL sits on the DoD 1260H list with Pentagon
+procurement bars phasing in from June 2026 and a full bar in October 2027, pushing its US strategy to the
+License-Royalty-Service route — Ford&#39;s $3.5B BlueOval plant is the template <span class="cite">(CnEVPost, 2026-07-24;
+electrive, 2026-06-18 — CATL dossier)</span>. EVE was reportedly added to 1260H in June 2026 while the LG/Tulip ITC
+action threatens cylindrical imports — <span class="an">Analysis — High</span> the US market is closing on EVE from three
+directions, and minority stakes, licensing and offshore cells are the workaround template. A draft FCC rule would
+outright ban Chinese energy inverters, and the EU is phasing Huawei and Sungrow inverters out of funded projects by
+April 2027 <span class="cite">(Reuters via US News, 2026-06-30; Euronews, 2026-05-04 — Huawei dossier)</span>.</p>
+
+<table>
+  <caption>Table 11: The compliant lane — who is converting regulation into share, and how fast</caption>
+  <thead><tr><th style="width:14%">Vendor</th><th style="width:31%">The onshoring move</th><th style="width:16%">Milestone date</th><th>Read</th></tr></thead>
+  <tbody>
+    <tr><td class="k">LGES</td><td>140 GWh ESS backlog; the $4.3B Tesla Megapack 3 LFP cell award at Lansing; more than KRW 3T of new ESS contracts including AI-data-center deals</td><td class="num">Lansing cells from 2027</td><td>H1 2026 ESS shipments <b>+357%</b>, ≈86% North America. <span class="an">Analysis — High</span> converting EV overcapacity into an ESS franchise faster than any peer; <span class="an">Analysis — Moderate</span> ex-AMPC operating losses make credit-dependence the vulnerability</td></tr>
+    <tr><td class="k">Samsung SDI</td><td>Two billion-dollar-class US ESS deals in four months — KRW 1.5T prismatic, more than KRW 2T LFP as SBB 2.0</td><td class="num">US LFP cells from Oct 2026</td><td>Demand exceeding capacity from 2028. <span class="an">Analysis — Moderate</span> StarPlus conversion is the pivotal execution item</td></tr>
+    <tr><td class="k">Panasonic</td><td>¥800B FY2029 data-center storage target, described as &ldquo;a minimum commitment&rdquo;; Kansas EV lines physically repurposed to data-center cells</td><td class="num">FY2029 target</td><td>Claims ≈80% share in data-center distributed power — self-reported and unverified</td></tr>
+    <tr><td class="k">Fluence</td><td>First US domestic-content shipments; FEOC compliance expected on OBBBA deadlines</td><td class="num">Shipping since Sep 2025</td><td><span class="an">Analysis — Moderate</span> Constraint is execution, not demand — ≈$400M of Q3 revenue delayed by new US manufacturing</td></tr>
+    <tr><td class="k">Tesla</td><td>First Megapacks with US-made LFP cells at Sparks, built with CATL equipment</td><td class="num">Shipping 2026</td><td><span class="an">Analysis — Moderate</span> Onshoring reduces but does not eliminate CATL dependence</td></tr>
+    <tr><td class="k">Hithium</td><td>Mesquite TX assembly (10 GWh/yr) plus a €400M Spanish gigafactory</td><td class="num">First US shipments Aug 2025</td><td>Chinese-owned but building inside the wall — the hedge both ways</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em>Source: LGES dossier and release 2026-05-27; Samsung SDI dossier;
+Panasonic, 2026-03-25 / 2026-06-08; ESS News, 2025-09-05 and Energy-Storage.News, 2025-11 (Fluence); TeslaNorth,
+2026-07-31; Energy-Storage.News, 2025-08 and ESS News, 2026-03-11 (Hithium).</em></p>
+
+<h3>6.5 The integrator shakeout — and BESS converging on the data center</h3>
+
+<p><b>The Western pure-play tier is consolidating.</b> Powin&#39;s Chapter 11 in June 2025 vaporized 25+ GWh of EVE&#39;s
+contracted US demand <span class="cite">(ESS News, 2025-06-11)</span>; FlexGen bought Powin&#39;s hardware and software IP
+for $36M and <span class="an">Analysis — High</span> deliberately exited the hardware lane for software and services
+(HybridOS: 65+ configurations, 22 vendors) <span class="cite">(FlexGen dossier)</span>; Wärtsilä is folding its storage
+business (EUR 719M order book) into a 50/50 JV with RCT Solutions after a 60% order collapse —
+<span class="an">Analysis — High</span> a managed retreat, and <span class="an">Analysis — Moderate</span> the
+counterparty transition around the ≈Q3 2026 closing is a live displacement opening for rivals.</p>
+
+<table class="tight">
+  <caption>Table 12: BESS is walking into the data center through four doors</caption>
+  <thead><tr><th style="width:16%">Door</th><th style="width:30%">The proof case</th><th style="width:22%">Who you sell to</th><th>Size signal</th></tr></thead>
+  <tbody>
+    <tr><td class="k">UPS replacement</td><td>Rosendin + FlexGen BESSUPS — MV utility-scale battery UPS outside the data hall, patents combined</td><td>Electrical contractors</td><td>Displaces the centralized-UPS franchise 800 VDC is already contracting</td></tr>
+    <tr><td class="k">Campus MV-BESS</td><td>Crusoe&#39;s 5 GW ON.energy &ldquo;AI UPS&rdquo; commitment, ERCOT ride-through validated</td><td>Energy-first developers and colos</td><td>5 GW from a single developer commitment</td></tr>
+    <tr><td class="k">Reference-design embedding</td><td>Fluence Smartstack selected for Siemens&#39; NVIDIA AI-data-center reference architecture — load smoothing, black start, ride-through. Vertiv&#39;s EnergyCore Grid (1 MW–200+ MW) crosses from DC-power incumbency into the integrator lane <span class="an">Analysis — Moderate</span></td><td>The reference-architecture owner, before procurement opens</td><td>Wins the spec, not the bid</td></tr>
+    <tr><td class="k">Inside the rack</td><td>Each GB300 cabinet uses ≈5 BBU modules plus more than 300 supercapacitors; supercapacitor supply is a genuine bottleneck</td><td>The NVIDIA ODM chain — Delta, LITEON, Megmeet</td><td>≈$2.8B (2026) → ≈$7.1B (2033) — Figure 8</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em>Source: Business Wire, 2025-06-03 (BESSUPS); Crusoe, 2026-07-21;
+Energy-Storage.News, 2026-06-02 (Smartstack in the Siemens reference architecture); Vertiv dossier, 2025-12-03;
+TrendForce — NVIDIA dossier.</em></p>
+
+<div class="pull">
+  <p class="lbl">Sales translation</p>
+  <p>Know which of the four doors an account opens — utility-scale (sold to developers and IPPs, not hyperscalers; Amazon
+  proves it), campus MV-BESS (sold to developers like Crusoe and to colos), UPS-replacement (sold with electrical
+  contractors — the Rosendin/FlexGen pattern), or rack-level BBU and supercapacitor (sold through the NVIDIA ODM chain).
+  The FEOC and tariff umbrella is the compliant lane&#39;s pricing power — lead with domestic content, UL fire
+  certification and grid-forming references. Displacement windows open now: Wärtsilä&#39;s JV transition, Powin&#39;s
+  orphaned fleet (25+ GWh of supported base up for services), and every incumbent whose 800 VDC story is still a slide.</p>
+</div>
+
+<h2 class="brk">7. The Craft-Labor Bottleneck</h2>
+
+<p class="lead">The scarcest input in the US buildout is not silicon or steel — it is trained craft labor on a four-year
+development cycle. The dossiers quantify both the constraint and the industry&#39;s answer, prefabrication, and both are
+sales-relevant.</p>
+
+<div class="tiles">
+  <div class="tile"><div class="n">4 years</div><div class="l">To make a craftsman — the CEO&#39;s rule at the #1 US electrical contractor</div></div>
+  <div class="tile"><div class="n">≈$13.5M</div><div class="l">Craft-led spend per MW of data center, excluding outside-the-fence power</div></div>
+  <div class="tile"><div class="n">220–240%</div><div class="l">Guided 2026 growth in Quanta&#39;s Technology &amp; Load Centers end market</div></div>
+  <div class="tile"><div class="n">10–20 yrs</div><div class="l">How far out customers now give Rosendin work forecasts</div></div>
+</div>
+
+<div class="fig">
+  <p class="cap">Figure 12: The US electrical-contractor tier is a duopoly of scale — electrical revenue ($ billion)</p>
+  <div class="bars">
+    <div class="bar-row"><div class="bar-lab">Quanta Services<span class="sm">#1, EC&amp;M Top 50</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:90%;background:var(--s1)"></div></div>
+      <div class="bar-val">$13.5B</div></div>
+    <div class="bar-row"><div class="bar-lab">Rosendin<span class="sm">#2, ESOP-owned</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:24.3%;background:var(--s1)"></div></div>
+      <div class="bar-val">≈$3.7B</div></div>
+  </div>
+  <div class="axis"><span>0</span><span>5</span><span>10</span><span>$15B</span></div>
+  <p class="src">Source: EC&amp;M 2025 Top 50, 2025-06 — Quanta dossier. Note: Quanta is roughly <b>3.7x the #2</b> on
+  electrical revenue. Rosendin&#39;s total company revenue is ≈$5.6B across 12,000 employees.</p>
+</div>
+
+<h3>The constraint, quantified</h3>
+<ul>
+  <li><b>Quanta Services</b> is the #1 US electrical contractor at $13.5B of electrical revenue. Its platform: 69,500
+  employees including 50,000+ craft, more than 80% self-perform, +15,500 hires in a trailing year, a 2,300-acre lineman
+  college, and ≈$250M a year on training <span class="cite">(2026 Investor Day, 2026-03-31)</span>. Management prices
+  craft-led spend at ≈<b>$13.5M per MW</b> of data center, excluding outside-the-fence power, claiming 80–90%
+  balance-of-plant coverage. Q2 2026 revenue ran $9.56B, up 41%, on a record $53.4B backlog —
+  <span class="an">Analysis — High</span> which is <em>neither floor nor firm</em>: the NiSource ≈3 GW program is mostly
+  excluded and data-center MSA work runs book-and-burn outside backlog, while RPO is only $33.6B
+  <span class="cite">(Investor Day plus Q2 2026 call, 2026-07-30 — Quanta dossier)</span>.</li>
+  <li><b>Rosendin</b> (#2, ESOP, ≈$5.6B revenue across 12,000 employees) reports customers providing work forecasts
+  <b>10–20 years out</b> <span class="cite">(Construction Dive, 2026-01-28)</span>, with 4M+ electrician man-hours of
+  annual labor capacity <span class="cite">(Rosendin sector page)</span>. <span class="an">Analysis — High</span> Rosendin
+  is near-pure-play exposure to the AI electrical buildout — revenue roughly doubled in two years, timing matching the
+  hyperscaler capex cycle exactly.</li>
+  <li><span class="an">Analysis — High</span> Quanta owns the scarcest input — trained craft labor at scale — and every
+  AIDC power trend (transmission, substations, gas generation, BESS, inside-the-fence electrical) converges on that same
+  labor pool <span class="cite">(Quanta dossier)</span>.</li>
+</ul>
+
+<h3>The industry&#39;s answer — prefabrication converts electricians into factory throughput</h3>
+
+<table>
+  <caption>Table 13: Prefabrication offerings, compared on the schedule claim</caption>
+  <thead><tr><th style="width:14%">Vendor</th><th style="width:29%">The product</th><th style="width:22%">The schedule claim</th><th>Citation</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Rosendin</td><td>Modular Power Solutions — 7,000+ MW of annual fabrication capacity across 2M+ sq ft; a robotic solar trial running 350–400 modules per 8-hour shift with a 2-person crew, ≈3x manual</td><td>Project Goliath delivered 20 MW of electrical infrastructure in <b>26 weeks</b></td><td class="cite">Rosendin dossier, 2025-04-07; sector page</td></tr>
+    <tr><td class="k">Quanta</td><td>Prefab and modular through Cupertino and Dynamic Systems, plus vertical integration into equipment supply — HV transformer capacity nearly doubling by 2028, the Hyosung HICO breaker JV</td><td>Schedule acceleration &ldquo;in some cases by more than 12 months&rdquo;</td><td class="cite">2026 Investor Day, 2026-03-31</td></tr>
+    <tr><td class="k">Eaton</td><td>Fibrebond ($1.45B) — engineered-to-order modular power enclosures, installed and tested off-site; plus Flexnode turnkey prefab data halls, 3.5–35 MW</td><td>≈35% schedule compression — <b>moving competition from component price to installed-megawatt lead time</b></td><td class="cite">release, 2025-04-01; 2026-01-28</td></tr>
+    <tr><td class="k">Vertiv</td><td>SmartRun; four new or expanded Americas plants taking infrastructure-solutions capacity ≈7x</td><td>Installs at ≈1 MW+ per day — up to <b>85% faster</b> than stick-build</td><td class="cite">2025-03-18 / 2026-03-24</td></tr>
+    <tr><td class="k">Huawei</td><td>PowerPOD, shipped 90%+ prefabricated</td><td>Delivery cut from 28 to <b>18 weeks</b>, with 70% less onsite labor</td><td class="cite">Huawei summit, 2025-05-13</td></tr>
+    <tr><td class="k">Delta</td><td>Prefab AI modular data center</td><td>Cuts deployment by up to <b>60%</b></td><td class="cite">Computex, 2026-06-02</td></tr>
+    <tr><td class="k">Tesla</td><td>Megablock — four Megapack 3s plus factory-integrated MV transformer and switchgear</td><td>23% faster installation, up to 40% lower construction cost, <b>1 GWh deployable in ≈20 business days</b></td><td class="cite">ESS News, 2025-09-09</td></tr>
+    <tr><td class="k">FlexGen</td><td>Bought commissioning firm Clean Energy Services — 125+ field technicians, 15+ GWh commissioned</td><td><b>70% faster installations</b>; buying the field-service labor that makes availability guarantees deliverable</td><td class="cite">Business Wire, 2026-04-02</td></tr>
+    <tr><td class="k">ABB</td><td>VoltaGrid synchronous condensers delivered as prefab eHouse packages</td><td>Factory-integrated stabilization</td><td class="cite">Engineering.com, 2026-03-25</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em><span class="an">Analysis — Moderate</span> Prefab converts the binding
+constraint — skilled electricians — into factory throughput, and Rosendin&#39;s robotic solar trial extends the logic to
+field labor (Rosendin dossier). EVE makes the same argument at the cell level: its 628 Ah class claims −50% installation
+workload versus 314 Ah systems.</em></p>
+
+<div class="pull">
+  <p class="lbl">Sales translation</p>
+  <p>Labor-per-MWh is now a spec, not a footnote. Products win when they arrive as factory-tested blocks that scarce
+  electricians only connect — that is the actual meaning of the Megablock / HaoHan / Smartstack density race, and it is
+  why &ldquo;installed-MW lead time&rdquo; (Eaton&#39;s Fibrebond logic) is replacing component price as the competitive
+  unit. Treat the electrical contractors as both <b>channel and customer</b>: Rosendin co-developing BESSUPS with FlexGen
+  shows the #2 contractor productizing storage itself — the natural partner, or competitor, for any BESS or UPS offering
+  that touches the data hall.</p>
+</div>
+
+<h2 class="brk">8. The Sales Playbook — Working the 40-Company Map</h2>
+
+<h3>8.1 The account map — what each of the 40 is to this pipeline</h3>
+
+<table>
+  <caption>Table 14: The account map</caption>
+  <thead><tr><th style="width:16%">Role</th><th style="width:26%">Accounts</th><th>The load-bearing fact</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Spec-setter</td><td>NVIDIA</td>
+      <td>The 800 VDC partner slate <em>is</em> the qualification list for the 2027 generation; the grid tier joining it moved 800 VDC to where BESS lives <span class="an">Analysis</span> <span class="cite">(NVIDIA dossier)</span></td></tr>
+    <tr><td class="k">Direct power-buyer prospects</td><td>xAI, Crusoe, Oracle, OpenAI, Equinix, Google, CoreWeave</td>
+      <td>Oracle runs five simultaneously different site power architectures — <b>each campus is a fresh competitive power decision</b>, and its energy policy post is a de facto procurement spec <span class="an">Analysis — High</span>. OpenAI&#39;s SB Energy tie-up means power sellers can now face OpenAI as an end-buyer, not just its landlords <span class="an">Analysis</span>. Equinix&#39;s choices function as procurement standards for the whole colo tier <span class="an">Analysis — High</span>. Caveats: assume Tesla gets first look at xAI storage scope <span class="an">Analysis — Moderate</span>; CoreWeave&#39;s power decisions often sit with developer landlords — ≈$3.5B lease liabilities, and the Q3 2025 guidance cut came from one developer&#39;s delay <span class="an">Analysis — Moderate</span></td></tr>
+    <tr><td class="k">Channel accounts<br><span class="cite">they own the OEM decision</span></td><td>Constellation, Quanta, Rosendin, plus the hyperscalers&#39; developer and utility counterparties — AES, Primergy, Entergy, DTE, Xcel, Enbridge</td>
+      <td>Amazon&#39;s utility-scale OEM decisions sit with AES and Primergy — the most established hyperscaler-linked storage channel <span class="an">Analysis — High</span>. Meta&#39;s channel is its utility counterparties, not Meta <span class="an">Analysis — Moderate</span>. Microsoft&#39;s utilities and grid partners are the channel; the Dublin grid-interactive UPS pilot with Eaton is the door still ajar for direct storage sales <span class="an">Analysis — High</span>. Quanta and Rosendin are channel <em>and</em> customer — and, via BESSUPS and transformer self-supply, sometimes competitor</td></tr>
+  </tbody>
+</table>
+
+<table class="tight">
+  <caption>Table 15: Competitors by lane — and the dossier-documented weak point of each</caption>
+  <thead><tr><th style="width:15%">Lane</th><th style="width:40%">Who competes there</th><th>Known weak point to work</th></tr></thead>
+  <tbody>
+    <tr><td class="k">BESS</td><td>Sungrow, Tesla, CATL, BYD, Hithium, EVE, Fluence, FlexGen, Wärtsilä (→ RCT JV), LGES, Samsung SDI, Panasonic, Jinko, Huawei</td><td>Wärtsilä&#39;s counterparty transition (≈Q3 2026 close); Fluence&#39;s execution constraint, not demand; EVE and CATL closing out of the US market; Hithium&#39;s prospectus names its embedded accounts — Jupiter Power, Lightsource bp, Samsung C&amp;T — a map of where that competitor already sits <span class="cite">(HKEX prospectus, 2025-10-27)</span></td></tr>
+    <tr><td class="k">Rack &amp; DC power</td><td>Delta, LITEON, Megmeet, Vertiv, Eaton, Schneider, ABB</td><td><span class="an">Analysis — High</span> ABB has no transformer or HVDC scope and a three-time US bribery-settlement history. <span class="an">Analysis — Moderate/High</span> Vertiv&#39;s binding risk is execution, and its #1 position is a statistical tie hyperscalers deliberately multi-source around. No AC incumbent has named a shipping 800 VDC switchboard</td></tr>
+    <tr><td class="k">Prime movers</td><td>GE Vernova, Siemens Energy (→ &ldquo;Omterra&rdquo;), Wärtsilä engines, Bloom</td><td>GE Vernova&#39;s pricing is scarcity rent, not moat — competitor supply lands 2028–2030. Bloom&#39;s headline pipeline overstates firm demand; management disclaims visibility beyond ≈6 months</td></tr>
+    <tr><td class="k">Grid</td><td>Hitachi Energy</td><td>Capacity relief does not land until 2027–28 — the gap years are the selling window <span class="an">Analysis — Moderate</span></td></tr>
+  </tbody>
+</table>
+
+<h3>8.2 Entry points and talk tracks, by theme</h3>
+<ul>
+  <li><b>GPU transients are a named, productized problem — open with it.</b> Eaton shipped market-first detection of
+  subsynchronous oscillations <em>caused by AI GPU load bursting</em> <span class="cite">(release, 2025-09-09)</span>;
+  Hitachi&#39;s CEO warns AI loads spike &ldquo;up to 10 times&rdquo; normal draw, and August 2026 reporting says volatile
+  AI demand is physically damaging equipment <span class="cite">(Hitachi dossier, 2025-01 / 2026-08-06)</span>.
+  <span class="an">Analysis</span> Buffering batteries are the named remedy — a direct BESS and power-quality tailwind.
+  Every stabilization product (grid-forming PCS, supercapacitor conditioners, flywheels, BBU) hangs off this hook.</li>
+  <li><b>Sell the schedule, not the spec.</b> The queue is 4–8 years; turbine slots sell for 2031 (Figure 3). Quote the
+  compression numbers buyers already believe: Bloom 55 days, Wärtsilä 12-month plants, FlexGen under a year, Tesla
+  Megablock 1 GWh in ≈20 business days, Huawei&#39;s 18-week PowerPOD as the international bar
+  <span class="an">Analysis — High</span> — Huawei is the excluded benchmark Western vendors get measured against.</li>
+  <li><b>Price the wedge with Quanta&#39;s math.</b> HV transformers and substations are 10–15% of a load-center budget,
+  low-voltage electrical another 10–15%, at ≈$13.5M/MW of craft-led spend <span class="cite">(Quanta Investor Day,
+  2026-03-31)</span> — the cleanest public numbers for sizing any power or storage scope inside a campus budget.</li>
+  <li><b>Lead with the compliance stack in the US.</b> FEOC and domestic content (LGES: &ldquo;durable advantage is
+  regulatory, not technical&rdquo; <span class="an">Analysis — High</span>), UL large-scale fire certification (Samsung
+  SDI&#39;s deliberate premium strategy <span class="an">Analysis — Moderate</span>), and cybersecurity attestation
+  (Wärtsilä&#39;s IEC 62443 / SOC 2 as a procurement checkbox <span class="an">Analysis — Moderate</span>) are now
+  qualifying criteria, not differentiators.</li>
+  <li><b>Get specced upstream, in the twin.</b> Schneider&#39;s edge is the design layer — NVIDIA co-developed designs
+  pull hardware into projects <em>before competitive bidding starts</em> <span class="an">Analysis — High</span>; Fluence
+  got Smartstack into Siemens&#39; NVIDIA reference architecture. If the product is not in a reference design or an
+  Omniverse DSX asset library, someone else&#39;s is.</li>
+  <li><b>Work the displacement windows.</b> Wärtsilä&#39;s storage counterparty changes around Q3 2026 at the RCT JV close
+  — contract and service continuity anxiety is an opening <span class="an">Analysis — Moderate</span>; Powin&#39;s
+  bankruptcy shows integrator distress creates takeover paths for orphaned fleets, and FlexGen waived HybridOS fees to
+  capture them; and every AC incumbent&#39;s unshipped 800 VDC switchboard is a challenger&#39;s proof-gap argument.</li>
+</ul>
+
+<h3>8.3 Timing triggers — the pipeline calendar</h3>
+
+<table>
+  <caption>Table 16: Dated checkpoints, and what each one would confirm or refute</caption>
+  <thead><tr><th style="width:17%">Date</th><th style="width:26%">Event</th><th>What it tells the pipeline</th></tr></thead>
+  <tbody>
+    <tr><td class="num">2026-08-11</td><td class="k">Sinexcel H1</td><td>First AIDC revenue disclosure — whether the pre-revenue challenger tier is converting the 800 VDC reset into revenue</td></tr>
+    <tr><td class="num">≈2026-08-20</td><td class="k">EVE results</td><td>Whether pricing power held as the cell market tightened, against the three-direction US market closure</td></tr>
+    <tr><td class="num">2026-08-26</td><td class="k">NVIDIA <span class="cite">company-confirmed</span></td><td>The demand engine&#39;s shipment cadence — the input under every third-party power-demand projection</td></tr>
+    <tr><td class="num">2026-08-27</td><td class="k">Megmeet H1</td><td>The six-fold-rebound test — whether AI-DC power revenue materialized after being called immaterial through 2025</td></tr>
+    <tr><td class="num">≈2026-08-27</td><td class="k">Jinko <span class="cite">estimate</span></td><td>Solar-plus-storage supply into AIDC, including the 800V HVDC-compatible Sunny 365 line</td></tr>
+    <tr><td class="num">2026-08-29</td><td class="k">Sungrow + BYD</td><td>Whether the league-table reset holds — the #1 integrator and the #1 system shipper report the same day</td></tr>
+    <tr><td class="num">2026-10</td><td class="k">Samsung SDI StarPlus</td><td>US LFP cell production start — <span class="an">Analysis — Moderate</span> the pivotal execution item in the compliant lane</td></tr>
+    <tr><td class="num">2H 2026</td><td class="k">Tesla Megapack 3 deliveries</td><td>Whether Brookshire&#39;s 50 GWh/yr line converts to customer volume</td></tr>
+    <tr><td class="num">3Q 2026</td><td class="k">First 800 VDC shipments</td><td>The vendor-list reset becomes measurable in revenue, not slideware</td></tr>
+    <tr><td class="num">2027</td><td class="k">Kyber racks</td><td>The qualification window closes; rack storage becomes mandatory content</td></tr>
+    <tr><td class="num">2027</td><td class="k">GE Vernova 1,000-SST decision</td><td>Whether the grid tier leapfrogs the AC-switchboard incumbents or the SST market forms around challengers</td></tr>
+    <tr><td class="num">Undated</td><td class="k">PJM co-location rulemaking</td><td>Constellation management expects data-center deal flow to &ldquo;kick off with a bit of a bang&rdquo; once it lands — the starting gun for the next PPA wave and its firming and storage attach</td></tr>
+  </tbody>
+</table>
+<p class="src" style="margin-top:-2pt"><em>Note: near-dated earnings dates come from the repository&#39;s armed
+post-earnings refresh-Routine schedule — operational scheduling data, not dossier content; the fired sessions verify
+actual publication. <b>OpenAI&#39;s announcement cadence is the sector&#39;s primary timing trigger</b> —
+Oracle, CoreWeave, AMD and Broadcom order books repriced on its announcements <span class="an">Analysis — High</span>.
+<b>Housekeeping that prevents embarrassment:</b> Siemens Energy rebrands to &ldquo;Omterra&rdquo; from late 2026 — vendor
+names, branding and possibly tickers in proposals change within months <span class="cite">(release, 2026-07-14)</span>.</em></p>
+
+<h3>8.4 Risks to the pipeline — what could shrink the market</h3>
+
+<table>
+  <caption>Table 17: The risk stack, to monitor on a calendar rather than a hunch</caption>
+  <thead><tr><th style="width:20%">Risk</th><th style="width:12%">Confidence</th><th style="width:34%">The evidence</th><th>The leading indicator</th></tr></thead>
+  <tbody>
+    <tr><td class="k">Circular financing</td><td class="num">High</td><td>NVIDIA↔OpenAI↔Oracle↔Amazon; Microsoft&#39;s $4.1B quarterly equity-method losses imply ≈$11.5B quarterly OpenAI losses</td><td>Order books — they would show a pause before the announcements do</td></tr>
+    <tr><td class="k">Announced-to-operational gap</td><td class="num">Moderate</td><td>≈0.3 GW live against more than 9 GW projected by 2029 at Stargate — delivery risk concentrated in exactly the constrained resources this report covers</td><td>Energization milestones per site, not GW announcements</td></tr>
+    <tr><td class="k">Backlog duration</td><td class="num">Moderate</td><td>Only ≈20% of the 307 GW US pipeline converts near-term; the bulk is 2028+</td><td>A capex pause shows up in order books first <span class="cite">(Eaton dossier)</span></td></tr>
+    <tr><td class="k">Political and ratepayer backlash</td><td class="num">Moderate</td><td>Three PJM capacity auctions at the cap; a 13-governor affordability coalition; legislated clawback as a live scenario</td><td>Meta&#39;s Louisiana docket is the regulatory bellwether for how much firm generation versus storage gets built for AI load</td></tr>
+    <tr><td class="k">Permitting litigation</td><td class="num">Documented</td><td>The xAI NAACP case and Texas permit-by-rule scrutiny now shape every BTM procurement conversation</td><td>Permit status of comparable BTM gas fleets <span class="cite">(xAI, Crusoe, Oracle dossiers)</span></td></tr>
+    <tr><td class="k">Scarcity-rent normalization</td><td class="num">Moderate</td><td>The 2027–28 capacity wave — transformers, turbines, prefab plants — can deflate pricing assumptions baked into 2026-era proposals</td><td>Table 3&#39;s commissioning dates; re-validate any quote priced for 2028+ delivery</td></tr>
+    <tr><td class="k">Inverter-ban spillover</td><td class="num">Low</td><td>If the draft FCC ban on Chinese energy inverters extends to storage and UPS power electronics, second-order effects could touch the entire Chinese AIDC supply chain serving Western markets</td><td>Scope language in the final FCC rule <span class="cite">(Huawei dossier)</span></td></tr>
+  </tbody>
+</table>
+
+<h2 class="brk">9. Method &amp; Citation Notes</h2>
+
+<ul>
+  <li><b>Corpus.</b> The 40 Profiler dossiers in the repository&#39;s profiler data set, researched 2026-08-07 to
+  2026-08-09 under the Source Priority Protocol — first-party investor-relations and press material exhausted before
+  third-party — plus the Amazon revision of 2026-08-10 (profile version 2).</li>
+  <li><b>Method.</b> No new research was performed for this report. Eight parallel extraction agents read all 40 dossiers
+  in full and returned 572 themed, source-tagged claims with 40-of-40 coverage verified; the report was synthesized from
+  those claims plus direct reads of the xAI and Crusoe dossiers. Every factual claim traces to a dossier source entry or
+  recent-development source. A four-agent adversarial verification pass then checked 353 report claims against the
+  dossiers for figure fidelity, citation fidelity, analysis labeling and inventions; all 20 findings were corrected
+  before publication.</li>
+  <li><b>Citations.</b> <em>(Source label, date — Company dossier)</em>. The label matches the dossier&#39;s source entry,
+  whose URL field holds the link; dates are source publication dates — YYYY-MM when only the month is known, absent for
+  undated evergreen pages.</li>
+  <li><b><span class="an">Analysis</span> items</b> come from dossier strategy-read sections, or recent-development
+  takeaways, and are labeled inference with the dossier&#39;s own (High)/(Moderate)/(Low) confidence tags preserved. They
+  are never presented as sourced fact, and unverified press reports retain their hedges — for example the Samsung SDI–AWS
+  BBU talks, the Fluence-at-Bellefield inference, and the Tesla–Samsung LFP talks.</li>
+  <li><b>Field notes.</b> None used. The notes log lives in Drive behind Master-ACL gating and none were supplied to this
+  session; per the schema, notes are never citable sources.</li>
+  <li><b>Ranking caveat.</b> BESS rankings are scope-dependent — Wood Mackenzie comprehensive versus Benchmark system
+  shipments versus InfoLink cells versus SNE. This report names the ranking body on every ranking claim; do the same in
+  customer-facing use.</li>
+  <li><b>Figures.</b> Every figure restates quantities already cited in the body text and carries its own source line. The
+  chart palette was validated for colour-vision-deficiency separation and contrast against the page surface; ranges are
+  drawn as hatched extensions rather than separate marks, and every donut wedge is direct-labeled so identity is never
+  carried by colour alone.</li>
+  <li><b>Freshness.</b> Figures are as-published through ≈2026-08-10. The armed post-earnings Routines — 27 tickers plus
+  the private-company quarterly sweep — refresh the underlying dossiers; regenerate the affected report sections after
+  material refreshes. Near-dated: Sinexcel H1 (08-11), EVE, NVIDIA, Megmeet, Jinko, Sungrow and BYD, all late August 2026.</li>
+</ul>
+
+<p class="foot">
+  AIDC Market Report — Power &amp; Storage Sales Strategy · Prepared 10 August 2026 · Internal, sales strategy<br>
+  Source text: repository-information/AIDC-MARKET-REPORT.md · Typeset source: repository-information/aidc-market-report-print.html<br>
+  Rebuild this PDF with: node scripts/build-aidc-report-pdf.mjs<br>
+  Developed by: ShadowAISolutions
+</p>
+
+<!-- Developed by: ShadowAISolutions -->
+</body>
+</html>

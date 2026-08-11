@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.33r] — 2026-08-10 11:08:22 PM EST
+
+> **Prompt:** "You just created an AIDC Market Report at this location: https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.md. Convert it into a professionally-formatted market report (downloadable PDF) that matches the "Bloomberg - Research Report" style that is available on Profiler. Also, create a moderate amount of graphs (bars & circles) when applicable. If you are just listing competitors' products next to each other, display it in a table instead. I see some text that is crossed out, so remove them in the final version. If you need me to reupload the Bloomberg report for your reference, tell me and I will do so."
+
+### Added
+- **`repository-information/AIDC-MARKET-REPORT.pdf`** (new) — a 29-page typeset edition of the AIDC market report, styled to the Profiler `bloomberg` export skin defined in `PROFILER-STYLES.md` and `Profiler.html` (Arial body, `#0b62a4` section rules, monospace meta and figure captions, paper-document measure). Carries a running header, a `Page N of M` footer, a masthead with corpus/method/verification/classification metadata, and a two-column table of contents. Report text is unchanged in substance from the Markdown source — the PDF restates it with figures and comparison tables
+- **`repository-information/aidc-market-report-print.html`** (new) — the typeset source the PDF renders from. Fully self-contained: inline CSS, inline SVG figures, zero external requests. **12 figures**: 2026 big-four capex (ranged bars), GE Vernova order-book ramp (columns), the queue-versus-compression lead-time chart on one shared month axis (the report's centrepiece), transformer scarcity as three ring gauges, the Colossus 0→1.0 GW ramp, the nuclear price ladder, the 800 VDC milestone timeline, the AI-server BBU market, the Chinese-integrator share donut, the H1 2026 ESS cell-share donut, the BESS block-size leapfrog, and the electrical-contractor duopoly. **17 tables**, including new comparison tables that replace prose competitor lists: behind-the-meter posture by buyer, productized onsite-power offerings, the three named power ODMs, incumbent 800 VDC status, the cell-and-block race, hyperscaler storage posture, the compliant lane, the four BESS demand doors, prefabrication offerings, competitors by lane, the dated trigger calendar, and the risk stack
+- **`scripts/build-aidc-report-pdf.mjs`** (new) — renders the HTML to PDF via the pre-installed Chromium over the DevTools Protocol (Node 22's global `WebSocket`; no npm dependencies). `Page.printToPDF` is used rather than the `--print-to-pdf` CLI flag specifically because only the former accepts a custom running header and footer. A `--png` proof mode writes per-page previews for visual review
+- `*.pdf binary` added to `.gitattributes` so the committed PDF is never line-ending normalized
+
+### Fixed
+- **The crossed-out text in the rendered report** (`repository-information/AIDC-MARKET-REPORT.md`) — 117 single `~` characters were in use as "approximately". GitHub-Flavored Markdown treats a matching pair of single tildes on one line as strikethrough, so lines such as `≈$220B (raised from ≈$200B)` rendered with the span between them struck through. All 117 replaced with `≈`, which renders literally and reads correctly in both the Markdown and the PDF
+
+### Changed
+- `repository-information/AIDC-MARKET-REPORT.md` — added a "Formatted edition" pointer to the PDF and its typeset source directly under the metadata line, noting that the Markdown remains the canonical text
+- `README.md` — structure-tree entries for the three new files
+
+### Notes
+- Chart colours were validated with the `dataviz` skill's six checks against the white print surface before any figure was drawn (categorical palette `#0b62a4 · #c2622a · #1b8a6b · #7a3f7d · #8a8f2a · #b03a34` — worst adjacent colour-vision-deficiency ΔE 8.6, worst normal-vision ΔE 21.8, all six ≥3:1 contrast: all checks pass). Ranges are drawn as hatched extensions rather than separate marks, and every donut wedge is direct-labeled so identity is never carried by colour alone
+- Two layout defects were caught by rendering and inspecting the actual PDF pages rather than trusting the markup: Table 6 overflowed the printable width (fixed with `table-layout:fixed` plus `overflow-wrap:break-word`), and long tables were jumping whole to the next page (fixed by letting tables span pages with a repeated header while keeping rows intact)
+- `REPO-ARCHITECTURE.md` was deliberately **not** changed — its Scripts subgraph carries shared infrastructure scripts only and already omits `check-gas-inner-scripts.js` and `playwright-harness.py`; a single-purpose document-build script matches those, not the infrastructure tier
 
 ## [v02.32r] — 2026-08-10 10:17:55 PM EST
 

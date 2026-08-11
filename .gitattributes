@@ -4,6 +4,7 @@
 # Binary files — do not normalize
 *.png binary
 *.mp3 binary
+*.pdf binary
 
 # Developed by: ShadowAISolutions
 
