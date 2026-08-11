@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.34r] — 2026-08-11 02:25:14 AM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **The AIDC market report is now issued in all five Profiler writing styles.** `repository-information/aidc-market-report-print.html` carries five presentation skins selected by a `data-style` attribute on `<html>`, each translated from the print-calibrated export CSS in `Profiler.html` so a report handed to a customer reads in the same voice as the app that produced it. New downloadable editions: `AIDC-MARKET-REPORT-analyst-prose.pdf` (Analyst Prose, the Profiler house style), `AIDC-MARKET-REPORT-equity-research.pdf` (Sell-Side Research Note), `AIDC-MARKET-REPORT-intel-briefing.pdf` (Intelligence Community Briefing) and `AIDC-MARKET-REPORT-smart-brevity.pdf` (Axios Smart Brevity). `AIDC-MARKET-REPORT.pdf` keeps its unsuffixed name as the canonical BloombergNEF edition, so existing links do not break
+- **Per-style banner in the masthead** naming the active skin. All five ship in the markup and CSS reveals the matching one; each states that the skin changes typography and chrome only. The `equity-research` banner carries the "analytical framing, **not investment advice**" disclaimer that `PROFILER-STYLES.md` rule 1 requires on any dossier issued in that style
+- `scripts/build-aidc-report-pdf.mjs` gained `--style <slug>`. **A bare run now renders all five editions from a single page load**, swapping the attribute between `Page.printToPDF` calls — so the editions are structurally incapable of drifting apart in content
+- A "Presentation styles" note in the report's own Method & Citation section, stating plainly that the text is identical across the five editions
+
+### Changed
+- The print stylesheet was refactored onto style-scoped CSS custom properties (`--accent`, `--body-font`, `--h1-*`, `--h2-*`, `--h3-*`, `--sub-*`, `--mast-rule`, `--pull-bg`). Every rule now reads a slot rather than a raw family, size or colour, so a skin is ~10 lines of variable overrides instead of a duplicated rule block. Chrome that was hardcoded to the Bloomberg blue — section rules, kick line, pull-quote spine, stat-tile rules, timeline axis and dates, contents numbers — now follows `--accent`
+- SVG figure numerals follow the active skin's display face via `.fig svg text { font-family:var(--h1-font) }` (a presentation attribute loses to any CSS rule, so no per-figure markup changed)
+- `repository-information/AIDC-MARKET-REPORT.md` — the "Formatted edition" pointer became a linked list of all five editions. The brittle page count was dropped rather than re-stated: page counts differ per skin (28–33) and would go stale on any text edit
+- `repository-information/PROFILER-STYLES.md` — the report is registered as a **second display-layer consumer** alongside `Profiler.html`, with the standing instruction to mirror skin changes across both in the same commit
+- `README.md` — tree entries for the four new editions
+
+### Notes
+- **Chart colours are deliberately style-invariant.** The categorical palette was validated once with the `dataviz` six checks against the white print surface; re-tinting it per skin would mean re-validating five palettes and would put the data layer at the mercy of a typographic choice. This is stated in the report's Method section rather than left implicit
+- Editions verified by rasterizing and inspecting the actual rendered PDFs, not the markup: Analyst Prose reproduces the Georgia/gold paper document, Intelligence Community Briefing renders fully monospaced with letterspaced ink rules, and the ring-gauge numerals reskin correctly with the chart palette intact
 
 ## [v02.33r] — 2026-08-10 11:08:22 PM EST
 

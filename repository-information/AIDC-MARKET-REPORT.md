@@ -2,7 +2,15 @@
 
 *Prepared 2026-08-10 · Synthesized exclusively from the 40-company Profiler dossier set (`live-site-pages/profiler-data/`, researched 2026-08-07 → 2026-08-10) · **No new research** — every citation is a source already catalogued in a dossier's `sources[]`*
 
-**📄 Formatted edition —** [`AIDC-MARKET-REPORT.pdf`](AIDC-MARKET-REPORT.pdf): a 29-page typeset research report in the Profiler `bloomberg` house style, with 12 figures and 17 comparison tables. Typeset source: [`aidc-market-report-print.html`](aidc-market-report-print.html) — rebuild with `node scripts/build-aidc-report-pdf.mjs`. This Markdown file remains the canonical text; the PDF restates it with charts and tables.
+**📄 Formatted editions —** the report is typeset for download in all five writing styles registered in [`PROFILER-STYLES.md`](PROFILER-STYLES.md), each matching that style's export skin in the Profiler app. **The skins change typography and section chrome only — the report text is identical across all five.**
+
+&emsp;[`AIDC-MARKET-REPORT.pdf`](AIDC-MARKET-REPORT.pdf) — BloombergNEF Research Report *(canonical edition)*<br>
+&emsp;[`AIDC-MARKET-REPORT-analyst-prose.pdf`](AIDC-MARKET-REPORT-analyst-prose.pdf) — Analyst Prose, the Profiler house style<br>
+&emsp;[`AIDC-MARKET-REPORT-equity-research.pdf`](AIDC-MARKET-REPORT-equity-research.pdf) — Sell-Side Research Note<br>
+&emsp;[`AIDC-MARKET-REPORT-intel-briefing.pdf`](AIDC-MARKET-REPORT-intel-briefing.pdf) — Intelligence Community Briefing<br>
+&emsp;[`AIDC-MARKET-REPORT-smart-brevity.pdf`](AIDC-MARKET-REPORT-smart-brevity.pdf) — Axios Smart Brevity
+
+Each carries 12 figures and 17 comparison tables. Typeset source: [`aidc-market-report-print.html`](aidc-market-report-print.html) — rebuild every edition with `node scripts/build-aidc-report-pdf.mjs`, or one with `--style <slug>`. This Markdown file remains the canonical text; the PDFs restate it with charts and tables.
 
 > **How to read this report.** Facts cite their dossier source as *(Source label, date — Company dossier)*. Items marked **[Analysis]** come from dossier `strategyRead[]` sections — Claude's labeled inference, with (High)/(Moderate)/(Low) confidence tags where the dossier carries them — and are never blended with sourced fact. Field notes are not sources and none are cited here.
 

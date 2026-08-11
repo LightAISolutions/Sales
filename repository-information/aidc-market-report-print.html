@@ -1,15 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-style="bloomberg">
 <head>
 <meta charset="utf-8">
 <title>AIDC Market Report — Power &amp; Storage Sales Strategy</title>
 <style>
 /* ==========================================================================
    AIDC Market Report — print stylesheet
-   Typeset to the Profiler `bloomberg` export skin (PROFILER-STYLES.md):
-   Arial body, #0b62a4 section rules, mono meta/figure captions, paper document.
-   Chart palette validated with the dataviz skill's six checks (light, #fff):
-   adjacent CVD dE 8.6 / normal-vision dE 21.8 / contrast all >= 3:1 — ALL PASS.
+
+   FIVE SKINS, ONE DOCUMENT. The writing styles registered in
+   repository-information/PROFILER-STYLES.md each carry a presentation skin in
+   Profiler.html (app preview + PDF print + Word export). This stylesheet is a
+   third consumer of the same registry: every skin below is translated from
+   Profiler.html's print-calibrated export CSS so a report handed to a customer
+   reads in the same voice as the app.
+
+   Pick a skin with the data-style attribute on <html>; `bloomberg` is default:
+       <html data-style="intel-briefing">
+   scripts/build-aidc-report-pdf.mjs sets it per --style and renders all five.
+
+   Only chrome is style-scoped — the categorical CHART palette is deliberately
+   invariant across skins. It was validated once with the dataviz skill's six
+   checks against the white print surface (adjacent CVD dE 8.6 / normal-vision
+   dE 21.8 / all six >= 3:1 contrast — ALL PASS); re-tinting it per skin would
+   mean re-validating five palettes and would put the data layer at the mercy
+   of a typographic choice.
    ========================================================================== */
 :root {
   --ink:#23211c; --paper:#ffffff; --blue:#0b62a4; --blue-deep:#08496f;
@@ -18,23 +32,88 @@
   --s1:#0b62a4; --s2:#c2622a; --s3:#1b8a6b; --s4:#7a3f7d; --s5:#8a8f2a; --s6:#b03a34;
   --sans:Arial,Helvetica,"Liberation Sans",sans-serif;
   --mono:"DejaVu Sans Mono",Consolas,"Liberation Mono",Menlo,monospace;
+  --serif:Georgia,"Times New Roman","Liberation Serif",serif;
+
+  /* ── Skin slots — every rule below reads these, never a raw family/size ── */
+  --accent:var(--blue);          /* section rules, kick line, pull-quote spine */
+  --body-font:var(--sans);  --body-size:10pt;   --body-lh:1.5;
+  --h1-font:var(--sans);    --h1-size:30pt;     --h1-weight:bold;
+  --h1-case:none;           --h1-ls:-.015em;
+  --h2-font:var(--sans);    --h2-size:13.5pt;   --h2-weight:bold;
+  --h2-case:none;           --h2-ls:0;          --h2-rule:2pt solid var(--accent);
+  --h3-font:var(--sans);    --h3-size:11pt;     --h3-weight:bold;  --h3-case:none;
+  --sub-font:var(--sans);   --sub-size:15pt;    --sub-weight:normal;
+  --mast-rule:6pt solid var(--accent);
+  --pull-bg:#f4f8fb;
 }
+
+/* ── Skin: default — Analyst Prose (the Profiler house paper document) ──── */
+html[data-style="default"] {
+  --accent:var(--gold);  --pull-bg:#f9f7f1;
+  --body-font:var(--serif);  --body-size:10pt;    --body-lh:1.5;
+  --h1-font:var(--serif);    --h1-size:29pt;      --h1-weight:normal;  --h1-ls:0;
+  --h2-font:var(--mono);     --h2-size:10pt;      --h2-weight:normal;
+  --h2-case:uppercase;       --h2-ls:.22em;       --h2-rule:1pt solid var(--rule);
+  --h3-font:var(--serif);    --h3-size:12.5pt;    --h3-weight:normal;
+  --sub-font:var(--serif);   --sub-size:15pt;
+  --mast-rule:3pt solid var(--ink);
+}
+/* ── Skin: equity-research — Sell-Side Research Note ───────────────────── */
+html[data-style="equity-research"] {
+  --accent:#1f3d6d;  --pull-bg:#f3f5f9;
+  --body-font:var(--serif);  --body-size:10pt;
+  --h1-font:var(--serif);    --h1-size:29pt;      --h1-weight:bold;    --h1-ls:0;
+  --h2-font:var(--serif);    --h2-size:13pt;      --h2-weight:bold;
+  --h3-font:var(--serif);    --h3-size:11.5pt;
+  --sub-font:var(--serif);   --sub-size:15pt;
+}
+/* ── Skin: intel-briefing — Intelligence Community Briefing ────────────── */
+html[data-style="intel-briefing"] {
+  --accent:var(--ink);  --pull-bg:#f4f3f0;
+  --body-font:var(--mono);   --body-size:9pt;     --body-lh:1.55;
+  --h1-font:var(--mono);     --h1-size:21pt;      --h1-weight:bold;
+  --h1-case:uppercase;       --h1-ls:.06em;
+  --h2-font:var(--mono);     --h2-size:11pt;      --h2-weight:bold;
+  --h2-case:uppercase;       --h2-ls:.3em;        --h2-rule:2pt solid var(--ink);
+  --h3-font:var(--mono);     --h3-size:9.5pt;     --h3-case:uppercase;
+  --sub-font:var(--mono);    --sub-size:12pt;
+  --mast-rule:4pt solid var(--ink);
+}
+/* ── Skin: smart-brevity — Axios Smart Brevity ─────────────────────────── */
+html[data-style="smart-brevity"] {
+  --accent:#111111;  --pull-bg:#f4f4f2;
+  --body-font:var(--sans);   --body-size:10.5pt;  --body-lh:1.5;
+  --h1-font:var(--sans);     --h1-size:31pt;      --h1-weight:bold;    --h1-ls:-.02em;
+  --h2-font:var(--sans);     --h2-size:15pt;      --h2-weight:bold;
+  --h2-rule:none;
+  --h3-font:var(--sans);     --h3-size:12pt;
+  --sub-size:16pt;
+  --mast-rule:5pt solid #111111;
+}
+
 @page { size:Letter; margin:15mm 14mm 15mm; }
 * { box-sizing:border-box; }
 html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 body {
   margin:0; background:var(--paper); color:var(--ink);
-  font:10pt/1.5 var(--sans); text-rendering:optimizeLegibility;
+  font:var(--body-size)/var(--body-lh) var(--body-font);
+  text-rendering:optimizeLegibility;
 }
 
 /* ── Masthead ─────────────────────────────────────────────────────────── */
-.mast { border-top:6pt solid var(--blue); padding-top:10pt; }
+.mast { border-top:var(--mast-rule); padding-top:10pt; }
 .mast .kick {
   font:8pt/1.4 var(--mono); letter-spacing:.22em; text-transform:uppercase;
-  color:var(--blue); margin:0 0 14pt;
+  color:var(--accent); margin:0 0 14pt;
 }
-h1 { font:bold 30pt/1.08 var(--sans); margin:0 0 6pt; letter-spacing:-.015em; }
-.mast .sub { font:normal 15pt/1.3 var(--sans); color:var(--muted); margin:0 0 18pt; }
+h1 {
+  font:var(--h1-weight) var(--h1-size)/1.08 var(--h1-font);
+  text-transform:var(--h1-case); letter-spacing:var(--h1-ls); margin:0 0 6pt;
+}
+.mast .sub {
+  font:var(--sub-weight) var(--sub-size)/1.3 var(--sub-font);
+  color:var(--muted); margin:0 0 18pt;
+}
 .mast .meta {
   font:8pt/1.75 var(--mono); color:var(--muted);
   border-top:1pt solid var(--rule); border-bottom:2pt solid var(--ink);
@@ -42,13 +121,38 @@ h1 { font:bold 30pt/1.08 var(--sans); margin:0 0 6pt; letter-spacing:-.015em; }
 }
 .mast .meta b { color:var(--ink); font-weight:bold; }
 
+/* ── Style banner — names the active skin, mirroring Profiler's .ov-sty-banner.
+      All five ship in the markup; CSS reveals only the one that matches. ─── */
+.sty-banner { display:none; }
+html[data-style="bloomberg"]       .sty-banner.s-bloomberg,
+html[data-style="default"]         .sty-banner.s-default,
+html[data-style="equity-research"] .sty-banner.s-equity-research,
+html[data-style="intel-briefing"]  .sty-banner.s-intel-briefing,
+html[data-style="smart-brevity"]   .sty-banner.s-smart-brevity { display:block; }
+.sty-banner {
+  font:7.5pt/1.6 var(--mono); letter-spacing:.08em; color:var(--muted);
+  border:0.5pt solid var(--rule); border-radius:3pt;
+  padding:5pt 9pt; margin:9pt 0 0;
+}
+.sty-banner b { color:var(--accent); letter-spacing:.14em; text-transform:uppercase; }
+html[data-style="equity-research"] .sty-banner {
+  color:var(--accent); border-color:var(--accent); font-weight:bold;
+}
+html[data-style="intel-briefing"] .sty-banner {
+  border-left:none; border-right:none; border-radius:0; letter-spacing:.18em;
+}
+
 /* ── Section hierarchy ────────────────────────────────────────────────── */
 h2 {
-  font:bold 13.5pt/1.25 var(--sans); color:var(--blue);
-  border-bottom:2pt solid var(--blue); padding-bottom:4pt;
+  font:var(--h2-weight) var(--h2-size)/1.25 var(--h2-font); color:var(--accent);
+  text-transform:var(--h2-case); letter-spacing:var(--h2-ls);
+  border-bottom:var(--h2-rule); padding-bottom:4pt;
   margin:26pt 0 10pt; page-break-after:avoid;
 }
-h3 { font:bold 11pt/1.3 var(--sans); margin:16pt 0 4pt; page-break-after:avoid; }
+h3 {
+  font:var(--h3-weight) var(--h3-size)/1.3 var(--h3-font);
+  text-transform:var(--h3-case); margin:16pt 0 4pt; page-break-after:avoid;
+}
 h4 {
   font:8pt/1.4 var(--mono); letter-spacing:.13em; text-transform:uppercase;
   color:var(--gold); margin:14pt 0 4pt; page-break-after:avoid;
@@ -69,12 +173,12 @@ a { color:var(--link); text-decoration:none; }
   padding:1pt 3pt; white-space:nowrap;
 }
 .pull {
-  border-left:3pt solid var(--blue); background:#f4f8fb;
+  border-left:3pt solid var(--accent); background:var(--pull-bg);
   padding:8pt 12pt; margin:12pt 0; page-break-inside:avoid;
 }
 .pull .lbl {
   font:7.5pt/1.4 var(--mono); letter-spacing:.16em; text-transform:uppercase;
-  color:var(--blue); margin:0 0 3pt;
+  color:var(--accent); margin:0 0 3pt;
 }
 .pull p { margin:0; font-size:9.5pt; }
 .note {
@@ -114,14 +218,17 @@ tr.tot td { border-top:1pt solid var(--ink); border-bottom:none; font-weight:bol
 table.tight td, table.tight th { padding-right:5pt; font-size:8pt; }
 caption {
   caption-side:top; text-align:left;
-  font:bold 9pt/1.35 var(--sans); color:var(--ink); padding:0 0 3pt;
+  font:bold 9pt/1.35 var(--h3-font); color:var(--ink); padding:0 0 3pt;
   page-break-after:avoid; break-after:avoid;
 }
 
 /* ── Figures ──────────────────────────────────────────────────────────── */
 .fig { margin:12pt 0 14pt; page-break-inside:avoid; }
-.fig .cap { font:bold 9pt/1.35 var(--sans); margin:0 0 7pt; }
-.fig .src { font:italic 7.5pt/1.45 var(--sans); color:var(--muted); margin:6pt 0 0; }
+.fig .cap { font:bold 9pt/1.35 var(--h3-font); margin:0 0 7pt; }
+/* presentation attributes lose to any CSS rule, so this reskins the SVG
+   numerals without touching the markup in every figure */
+.fig svg text { font-family:var(--h1-font); }
+.fig .src { font:italic 7.5pt/1.45 var(--body-font); color:var(--muted); margin:6pt 0 0; }
 .fig-2col { display:flex; gap:20pt; }
 .fig-2col > * { flex:1 1 0; min-width:0; }
 
@@ -165,7 +272,7 @@ caption {
 .rings { display:flex; gap:14pt; justify-content:space-between; }
 .ring { flex:1 1 0; text-align:center; }
 .ring svg { display:block; margin:0 auto; }
-.ring .rl { font:7.5pt/1.35 var(--sans); color:var(--muted); margin:4pt 0 0; }
+.ring .rl { font:7.5pt/1.35 var(--body-font); color:var(--muted); margin:4pt 0 0; }
 .donut-wrap { display:flex; align-items:center; gap:16pt; }
 .donut-key { flex:1 1 auto; font-size:8.5pt; }
 .donut-key .kr { display:flex; align-items:center; gap:6pt; margin:0 0 4pt; }
@@ -174,23 +281,23 @@ caption {
 
 /* ── Stat tiles ───────────────────────────────────────────────────────── */
 .tiles { display:flex; gap:9pt; margin:10pt 0; page-break-inside:avoid; }
-.tile { flex:1 1 0; border-top:2.5pt solid var(--blue); padding:6pt 8pt 7pt 0; }
-.tile .n { font:bold 17pt/1.05 var(--sans); letter-spacing:-.02em; }
-.tile .l { font:7.5pt/1.35 var(--sans); color:var(--muted); margin:3pt 0 0; }
+.tile { flex:1 1 0; border-top:2.5pt solid var(--accent); padding:6pt 8pt 7pt 0; }
+.tile .n { font:var(--h1-weight) 17pt/1.05 var(--h1-font); letter-spacing:-.02em; }
+.tile .l { font:7.5pt/1.35 var(--body-font); color:var(--muted); margin:3pt 0 0; }
 
 /* ── Timeline ─────────────────────────────────────────────────────────── */
 .tl { position:relative; margin:12pt 0 4pt; padding-bottom:4pt; }
 .tl-axis { height:2.5pt; background:var(--rule); position:relative; margin:0 0 4pt; }
-.tl-axis .seg { position:absolute; top:0; height:100%; background:var(--blue); }
+.tl-axis .seg { position:absolute; top:0; height:100%; background:var(--accent); }
 .tl-row { display:flex; align-items:flex-start; gap:6pt; margin:0 0 4pt; font-size:8pt; }
-.tl-row .d { flex:0 0 52pt; font:bold 7.5pt/1.4 var(--mono); color:var(--blue); }
+.tl-row .d { flex:0 0 52pt; font:bold 7.5pt/1.4 var(--mono); color:var(--accent); }
 .tl-ticks { display:flex; font:7pt/1 var(--mono); color:var(--faint); margin:2pt 0 8pt; }
 .tl-ticks > div { flex:1 1 0; }
 
 /* ── Contents ─────────────────────────────────────────────────────────── */
 .toc { column-count:2; column-gap:22pt; font-size:9pt; margin:6pt 0 0; }
 .toc div { break-inside:avoid; margin:0 0 3pt; }
-.toc .n { font:bold 8pt/1 var(--mono); color:var(--blue); margin-right:5pt; }
+.toc .n { font:bold 8pt/1 var(--mono); color:var(--accent); margin-right:5pt; }
 .toc .sub2 { padding-left:16pt; color:var(--muted); font-size:8.5pt; }
 
 /* ── Footer block ─────────────────────────────────────────────────────── */
@@ -211,6 +318,16 @@ caption {
     <b>Verification</b> 572 extracted claims · 353 report claims adversarially re-checked · 20 findings corrected pre-publication
     &nbsp;·&nbsp; <b>Classification</b> Internal — sales strategy
   </p>
+  <p class="sty-banner s-bloomberg"><b>Presentation style</b> — BloombergNEF Research Report. Executive summary leads,
+  findings follow; every figure carries an inline comparator and its own source line.</p>
+  <p class="sty-banner s-default"><b>Presentation style</b> — Analyst Prose, the Profiler house style. Dense
+  third-person analysis; structure comes from the data, not from labels in the text.</p>
+  <p class="sty-banner s-equity-research"><b>Presentation style</b> — Sell-Side Research Note. Positioning language
+  throughout is analytical framing, <b>not investment advice</b>.</p>
+  <p class="sty-banner s-intel-briefing"><b>Presentation style</b> — Intelligence Community Briefing. Key judgments
+  carry explicit confidence levels; reported fact and labelled assessment never mix.</p>
+  <p class="sty-banner s-smart-brevity"><b>Presentation style</b> — Axios Smart Brevity. Built to be skimmed; the full
+  record lives in the tables and in the source Markdown.</p>
 </header>
 
 <div class="note">
@@ -1351,6 +1468,13 @@ names, branding and possibly tickers in proposals change within months <span cla
   chart palette was validated for colour-vision-deficiency separation and contrast against the page surface; ranges are
   drawn as hatched extensions rather than separate marks, and every donut wedge is direct-labeled so identity is never
   carried by colour alone.</li>
+  <li><b>Presentation styles.</b> This report is issued in the five writing styles registered in
+  <em>PROFILER-STYLES.md</em> — Analyst Prose, BloombergNEF Research Report, Sell-Side Research Note, Intelligence
+  Community Briefing, and Axios Smart Brevity — each typeset to the matching export skin in the Profiler app, so a
+  document handed to a customer reads in the same voice as the tool it came from. <b>The skins change typography and
+  section chrome only: the report text is identical across all five.</b> Chart colours are deliberately held constant
+  across skins — the palette was validated once against the white print surface, and re-tinting it per style would put
+  the data layer at the mercy of a typographic choice.</li>
   <li><b>Freshness.</b> Figures are as-published through ≈2026-08-10. The armed post-earnings Routines — 27 tickers plus
   the private-company quarterly sweep — refresh the underlying dossiers; regenerate the affected report sections after
   material refreshes. Near-dated: Sinexcel H1 (08-11), EVE, NVIDIA, Megmeet, Jinko, Sungrow and BYD, all late August 2026.</li>

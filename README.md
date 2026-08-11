@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-10 11:08:22 PM EST` · Repo version: `v02.33r`
+Last updated: `2026-08-11 02:25:14 AM EST` · Repo version: `v02.34r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -261,7 +261,7 @@ Last updated: `2026-08-10 11:08:22 PM EST` · Repo version: `v02.33r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/compute-csp-hash.sh">compute-csp-hash.sh</a>     — [template] CSP SHA-256 hash computation for inline scripts
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-gas-inner-scripts.js">check-gas-inner-scripts.js</a> — CI check: validates served inner &lt;script&gt; syntax in GAS files
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/playwright-harness.py">playwright-harness.py</a>   — Chromium smoke-test harness for all projects (load + console-error + screenshot)
-│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-aidc-report-pdf.mjs">build-aidc-report-pdf.mjs</a> — Renders the AIDC market report HTML to a paginated PDF (headless Chromium, DevTools Protocol)
+│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-aidc-report-pdf.mjs">build-aidc-report-pdf.mjs</a> — Renders the AIDC market report HTML to paginated PDFs, one per Profiler writing style (headless Chromium, DevTools Protocol)
 │
 <b>─── Tests ────────────────────────────────────────────────────────────────────</b>
 ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/tests">tests/</a>                     — [template] Security &amp; integration tests
@@ -295,8 +295,12 @@ Last updated: `2026-08-10 11:08:22 PM EST` · Repo version: `v02.33r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/Receipts-diagram.md">Receipts-diagram.md</a>         — [template] Receipts page GAS integration sequence
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/profiler-diagram.md">profiler-diagram.md</a>         — Profiler page GAS integration sequence (inline note-box iframe)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.md">AIDC-MARKET-REPORT.md</a>   — AIDC market report: power/storage sales strategy synthesized from the 40 Profiler dossiers
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.pdf">AIDC-MARKET-REPORT.pdf</a>  — Formatted 29-page edition of the market report (Profiler `bloomberg` style, 12 figures, 17 tables)
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/aidc-market-report-print.html">aidc-market-report-print.html</a> — Typeset source the PDF is rendered from (self-contained; inline CSS + SVG figures)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.pdf">AIDC-MARKET-REPORT.pdf</a>  — Formatted market report, BloombergNEF Research Report style (canonical edition; 12 figures, 17 tables)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-analyst-prose.pdf">AIDC-MARKET-REPORT-analyst-prose.pdf</a> — Same report, Analyst Prose style (the Profiler house style)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-equity-research.pdf">AIDC-MARKET-REPORT-equity-research.pdf</a> — Same report, Sell-Side Research Note style
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-intel-briefing.pdf">AIDC-MARKET-REPORT-intel-briefing.pdf</a> — Same report, Intelligence Community Briefing style
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-smart-brevity.pdf">AIDC-MARKET-REPORT-smart-brevity.pdf</a> — Same report, Axios Smart Brevity style
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/aidc-market-report-print.html">aidc-market-report-print.html</a> — Typeset source the PDFs are rendered from (self-contained; inline CSS + SVG figures; five style skins)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG.md">CHANGELOG.md</a>            — [template · initialized] Version history
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG-archive.md">CHANGELOG-archive.md</a>    — [template · initialized] Older changelog sections (rotated from CHANGELOG.md)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASP-PUSH-PILOT-SETUP.md">CLASP-PUSH-PILOT-SETUP.md</a> — Setup for the GitHub Actions → clasp push deployment pilot

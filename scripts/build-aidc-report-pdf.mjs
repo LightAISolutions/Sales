@@ -7,8 +7,16 @@
  * Protocol so Page.printToPDF can carry a custom running header/footer — the CLI
  * --print-to-pdf flag cannot. No npm dependencies: Node 22 ships a global WebSocket.
  *
- * Usage: node scripts/build-aidc-report-pdf.mjs [--png]
- *        --png also writes page-1..N previews to the scratchpad for visual review.
+ * Usage: node scripts/build-aidc-report-pdf.mjs [--style <slug>] [--png]
+ *        no --style   renders ALL five styles, so the editions can never drift
+ *        --style <slug>  renders one: bloomberg | default | equity-research |
+ *                        intel-briefing | smart-brevity
+ *        --png        also writes page previews of the rendered style to SCRATCH
+ *
+ * The styles are the writing styles registered in PROFILER-STYLES.md. Each has a
+ * presentation skin in Profiler.html and a matching skin in the report's own
+ * stylesheet, selected by the data-style attribute this script sets on <html>.
+ * The skins change typography and chrome only — the report text does not vary.
  */
 import { spawn } from 'node:child_process';
 import { writeFileSync, existsSync, readdirSync } from 'node:fs';
@@ -17,8 +25,25 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = resolve(ROOT, 'repository-information/aidc-market-report-print.html');
-const OUT = resolve(ROOT, 'repository-information/AIDC-MARKET-REPORT.pdf');
 const PORT = 9333;
+
+/** Registry slug -> output file. `bloomberg` is the canonical edition and keeps
+ *  the unsuffixed name, so existing links to it never break. */
+const STYLES = {
+  bloomberg: 'AIDC-MARKET-REPORT.pdf',
+  default: 'AIDC-MARKET-REPORT-analyst-prose.pdf',
+  'equity-research': 'AIDC-MARKET-REPORT-equity-research.pdf',
+  'intel-briefing': 'AIDC-MARKET-REPORT-intel-briefing.pdf',
+  'smart-brevity': 'AIDC-MARKET-REPORT-smart-brevity.pdf',
+};
+
+const styleFlag = process.argv.indexOf('--style');
+const requested = styleFlag !== -1 ? process.argv[styleFlag + 1] : null;
+if (requested && !(requested in STYLES)) {
+  console.error(`unknown style "${requested}" — expected one of: ${Object.keys(STYLES).join(', ')}`);
+  process.exit(2);
+}
+const buildList = requested ? [requested] : Object.keys(STYLES);
 
 function findChrome() {
   const base = process.env.PLAYWRIGHT_BROWSERS_PATH || '/opt/pw-browsers';
@@ -104,27 +129,36 @@ try {
   const loaded = c.once('Page.loadEventFired');
   await c.send('Page.navigate', { url: `file://${SRC}` });
   await loaded;
+  await c.send('Runtime.enable');
   await sleep(600); // let layout/fonts settle before capture
 
-  const { data } = await c.send('Page.printToPDF', {
-    printBackground: true,
-    preferCSSPageSize: true,
-    displayHeaderFooter: true,
-    headerTemplate: HEAD,
-    footerTemplate: FOOT,
-    marginTop: 0.62, marginBottom: 0.62, marginLeft: 0.55, marginRight: 0.55,
-  });
-  const buf = Buffer.from(data, 'base64');
-  writeFileSync(OUT, buf);
-  const counts = [...buf.toString('latin1').matchAll(/\/Count\s+(\d+)/g)].map((m) => +m[1]);
-  const pages = counts.length ? Math.max(...counts) : '?';
-  console.log(`wrote ${OUT} (${(buf.length / 1024).toFixed(0)} KB, ${pages} pages)`);
+  for (const style of buildList) {
+    // one page load, five renders: swapping the attribute reskins the document
+    // in place, so every edition is guaranteed to carry identical content
+    await c.send('Runtime.evaluate', {
+      expression: `document.documentElement.setAttribute('data-style', ${JSON.stringify(style)})`,
+    });
+    await sleep(120); // let the restyle settle before the paginator runs
+    const { data } = await c.send('Page.printToPDF', {
+      printBackground: true,
+      preferCSSPageSize: true,
+      displayHeaderFooter: true,
+      headerTemplate: HEAD,
+      footerTemplate: FOOT,
+      marginTop: 0.62, marginBottom: 0.62, marginLeft: 0.55, marginRight: 0.55,
+    });
+    const buf = Buffer.from(data, 'base64');
+    const out = resolve(ROOT, 'repository-information', STYLES[style]);
+    writeFileSync(out, buf);
+    const counts = [...buf.toString('latin1').matchAll(/\/Count\s+(\d+)/g)].map((m) => +m[1]);
+    const pages = counts.length ? Math.max(...counts) : '?';
+    console.log(`${style.padEnd(16)} -> ${STYLES[style].padEnd(40)} ${(buf.length / 1024).toFixed(0)} KB, ${pages} pages`);
+  }
 
   if (process.argv.includes('--png')) {
     const scratch = process.env.SCRATCH || '/tmp';
     // Proof mode: neutralize forced page breaks so the continuous-scroll capture
     // shows real content instead of the whitespace the paginator would absorb.
-    await c.send('Runtime.enable');
     await c.send('Runtime.evaluate', {
       expression: `document.head.insertAdjacentHTML('beforeend',
         '<style>.brk{page-break-before:auto!important}body{width:740px;margin:0 auto}</style>')`,
@@ -133,8 +167,8 @@ try {
       width: 816, height: 1056, deviceScaleFactor: 1.5, mobile: false,
     });
     const { contentSize } = await c.send('Page.getLayoutMetrics');
-    const pages = Math.min(Math.ceil(contentSize.height / 1056), 40);
-    for (let p = 0; p < pages; p++) {
+    const shots = Math.min(Math.ceil(contentSize.height / 1056), 40);
+    for (let p = 0; p < shots; p++) {
       const shot = await c.send('Page.captureScreenshot', {
         format: 'png', captureBeyondViewport: true,
         clip: { x: 0, y: p * 1056, width: 816, height: 1056, scale: 1.5 },
@@ -142,7 +176,7 @@ try {
       writeFileSync(`${scratch}/report-p${String(p + 1).padStart(2, '0')}.png`,
         Buffer.from(shot.data, 'base64'));
     }
-    console.log(`wrote ${pages} preview PNGs to ${scratch}`);
+    console.log(`wrote ${shots} preview PNGs to ${scratch}`);
   }
   c.close();
 } finally {
