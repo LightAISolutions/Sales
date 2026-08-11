@@ -3,11 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.31r] — 2026-08-10 08:28:24 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Changed
+- **Amazon dossier revised to profileVersion 2** (`live-site-pages/profiler-data/amazon.profile.json`) — added a supply-chain read answering "which BESS OEM does AWS use?", which the dossier previously could not support. Three new confidence-tagged `strategyRead` entries: (High) the three-layer storage-procurement distinction — Layer 1 utility-scale BESS where developers (AES, Primergy) own the OEM decision, Layer 2 behind-the-meter campus BESS where Amazon has no announced deployments (a structural contrast with xAI and Crusoe), Layer 3 rack-level BBU where AI-specific battery demand actually lands; (Low) the Samsung SDI BBU thread — April 2026 reports of final-stage AWS talks on a ~$700M BBU-based UPS supply agreement and July 2026 reports of BBU cells shipping via Taiwan's Simplo with Amazon among end customers, neither company-confirmed, both unnamed-source trade press, with Samsung SDI in parallel talks with Meta and Google; (Low) the Fluence-at-Bellefield inference flagged explicitly as an untested inference from AES's ~28% Fluence stake, with no press release, filing, or trade coverage naming the project's battery supplier
+- Six new sources added at their chronological positions (Digitimes, TechTimes, UPI, AsiaToday, AES 2025 annual report; the Bellefield Phase 1 source was already present), each labeled with its confirmation status
+- `live-site-pages/profiler-data/archive/amazon.profile.v1.json` + `archive-index.json` — v1 archived per the Archival Procedure before the revision
+- `live-site-pages/profiler-data/profiler-companies.json` — Amazon `lastUpdated` synced to 2026-08-10
 
 ## [v02.30r] — 2026-08-10 04:42:24 AM EST
 

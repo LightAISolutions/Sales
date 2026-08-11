@@ -67,10 +67,7 @@
     "(High confidence) We assess the dual-silicon strategy (Trainium for Anthropic, NVIDIA for OpenAI and general capacity) hedges the central technology risk of the cycle while the equity stake in Anthropic converts compute supply into balance-sheet gains ($16.8B + $53.4B marks in two quarters) — a structural advantage no other hyperscaler currently replicates at this scale.",
     "(Moderate confidence) We assess the FERC Susquehanna precedent Amazon triggered now defines US nuclear-for-data-center dealmaking: behind-the-meter co-location without cost allocation is dead, front-of-meter PPAs are the template — which pushes incremental firming demand toward grid-side assets, including storage.",
     "(Moderate confidence) We assess free-cash-flow inversion is the honest cost of the program: TTM FCF fell from +$38.2B to negative territory while capex guidance rose to ~$220B — the market has accepted it while AWS accelerates; a growth stumble would reprice the entire buildout.",
-    "(Low confidence) Reports of direct external Trainium sales and of adoption beyond Anthropic (OpenAI/Apple/Uber workloads) circulate on low-authority outlets only — unverified, and partly contradicted by the NVIDIA-based OpenAI deal.",
-    "(High confidence) We assess Amazon's storage procurement splits into three layers that must not be conflated when qualifying an opportunity. Layer 1 — utility-scale BESS: Amazon signs PPAs, developers own the assets and choose the cells, so the OEM decision sits with AES (Bellefield, 1 GW/4 GWh at completion) and Primergy (600 MW Nevada), not Amazon. Layer 2 — behind-the-meter BESS at the campus: no announced Amazon deployments, a genuine structural contrast with xAI (Megapack fleet) and Crusoe (integrated energy stack). Layer 3 — rack-level BBU inside the white space, which is where AI-specific battery demand actually lands. Basis: Amazon's own renewables disclosures name developers but never battery vendors; no first-party or trade source documents an Amazon on-site BESS installation. The practical consequence: 'does Amazon buy BESS?' has no single answer — the buying center, the decision criteria, and the vendor set differ per layer.",
-    "(Low confidence) Korean and Taiwanese trade press place Samsung SDI in the Layer-3 BBU position: an April 2026 report of final-stage talks with AWS on a battery supply agreement for BBU-based UPS (~$700M, pricing the last open term), and July 2026 reporting that Samsung SDI ships BBU cells through Taiwan's Simplo with Amazon among the end customers. Neither company has confirmed either arrangement, both rest on unnamed sources, and Samsung SDI is reported in parallel talks with Meta and Google — so this is a supplier winning a slot in a supply-short market, not an exclusive win. Treat as unverified reporting and attribute it as such in any external conversation.",
-    "(Low confidence) Fluence is the intuitive guess for the Bellefield battery supplier given AES owns roughly 28% of Fluence, but we found no press release, filing, or trade coverage naming the supplier for that project. This is an untested inference from a corporate relationship, not a sourced fact — do not repeat it as one; the AES project team is the only reliable path to confirmation."
+    "(Low confidence) Reports of direct external Trainium sales and of adoption beyond Anthropic (OpenAI/Apple/Uber workloads) circulate on low-authority outlets only — unverified, and partly contradicted by the NVIDIA-based OpenAI deal."
   ],
   "technicalSpecs": [
     {
@@ -110,14 +107,9 @@
   },
   "sources": [
     { "label": "Amazon — Q2 2026 earnings report", "url": "https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report", "date": "2026-07-30" },
-    { "label": "Digitimes — Samsung SDI BBU cells via Taiwan's Simplo, Amazon among end customers (unnamed sources)", "url": "https://www.digitimes.com/news/a20260707PD202/samsung-sdi-simplo-data-center-data-demand.html", "date": "2026-07-07" },
-    { "label": "TechTimes — Samsung SDI AI data-center BBU supply via Simplo (unnamed sources)", "url": "https://www.techtimes.com/articles/319635/20260706/samsung-sdi-supplies-ai-data-center-batteries-via-taiwans-simplo-sources-say.htm", "date": "2026-07-06" },
     { "label": "Amazon — AI chips business history (Trainium3/Rainier)", "url": "https://www.aboutamazon.com/news/aws/amazon-ai-chips-business-history", "date": "2026-07" },
     { "label": "Amazon — Q1 2026 earnings (8-K exhibit, GW commitments)", "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000012/amzn-20260331xex991.htm", "date": "2026-04-29" },
-    { "label": "UPI — Samsung SDI reported in final talks with AWS on BBU-based UPS battery supply (~$700M; unconfirmed)", "url": "https://www.upi.com/Top_News/World-News/2026/04/28/samsung-sdi-batterty-supply-agreement-amazon/1051777407238/", "date": "2026-04-28" },
-    { "label": "AsiaToday — Samsung SDI/AWS battery supply agreement reporting (unconfirmed)", "url": "https://en.asiatoday.co.kr/view.php?key=20260428001441373", "date": "2026-04-28" },
     { "label": "Amazon — FY2025 earnings (8-K exhibit)", "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000002/amzn-20251231xex991.htm", "date": "2026-02-05" },
-    { "label": "AES — 2025 annual report (Fluence ownership stake; Bellefield battery supplier not disclosed)", "url": "https://www.sec.gov/Archives/edgar/data/874761/000087476126000072/aes-2025annualreport.pdf", "date": "2026-02" },
     { "label": "CNBC — OpenAI $38B AWS agreement", "url": "https://www.cnbc.com/2025/11/03/open-ai-amazon-aws-cloud-deal.html", "date": "2025-11-03" },
     { "label": "CNBC — Project Rainier opening", "url": "https://www.cnbc.com/2025/10/29/amazon-opens-11-billion-ai-data-center-project-rainier-in-indiana.html", "date": "2025-10-29" },
     { "label": "AWS — us-east-1 outage post-event summary", "url": "https://aws.amazon.com/message/101925/", "date": "2025-10" },
@@ -130,6 +122,6 @@
     { "label": "Amazon — carbon-free energy leadership post (11 BESS projects)", "url": "https://www.aboutamazon.com/news/sustainability/amazon-leading-corporate-carbon-free-energy-purchaser" },
     { "label": "Amazon — renewables updates (Bellefield, Primergy NV, Zanskar)", "url": "https://www.aboutamazon.com/news/sustainability/amazon-renewable-energy-updates" }
   ],
-  "lastUpdated": "2026-08-10",
-  "profileVersion": 2
+  "lastUpdated": "2026-08-09",
+  "profileVersion": 1
 }

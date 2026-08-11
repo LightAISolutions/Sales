@@ -1,4 +1,12 @@
 {
+  "amazon": [
+    {
+      "file": "amazon.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-10",
+      "supersededBy": 2
+    }
+  ],
   "byd": [
     {
       "file": "byd.profile.v1.json",
