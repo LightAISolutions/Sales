@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.25w">
+  <meta name="build-version" content="v01.26w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -2465,9 +2465,23 @@
                 save.disabled = false;
                 if (!sessionGuard(res, 'Save failed')) return;
                 ta.value = ''; fileInput.value = '';
-                say('Saved ' + res.id + ' (' + res.slug + ', confidence ' + res.confidence
-                  + (res.files ? ', ' + res.files + ' file' + (res.files > 1 ? 's' : '') : '')
-                  + '). Visible in the ⚙ log right away.', true);
+                var saved = 'Saved ' + res.id + ' (' + res.slug + ', confidence ' + res.confidence
+                  + (res.files ? ', ' + res.files + ' file' + (res.files > 1 ? 's' : '') : '') + ')';
+                if (!res.canSummarize) { say(saved + '. Visible in the ⚙ log right away.', true); return; }
+                // A transcript came with it, so go straight from "filed" to
+                // "readable meeting notes" instead of waiting for a triage pass.
+                // The note already exists either way — a failure here costs the
+                // summary, not the note.
+                transcriptFile = null; trStat.textContent = '';
+                say(saved + '. Writing meeting notes from the transcript…');
+                ovNoteApi('summarize', { id: res.id }, function(sr) {
+                  if (sr && sr.success) {
+                    say(saved + '. Meeting notes written — open the ⚙ log to read or copy them.', true);
+                  } else {
+                    say(saved + ', but the notes step failed (' + ((sr && sr.error) || 'no response')
+                      + '). The transcript is filed — retry with ✨ Summarize in the ⚙ log.', true);
+                  }
+                });
               });
             });
           });
@@ -2484,9 +2498,12 @@
             notes.forEach(function(n) {
               var rowEl = ovEl('div', 'ov-qn-row');
               var meta = n.id + ' · ' + n.slug + ' · via ' + n.sourceType + ' · confidence ' + n.confidence + ' · ' + n.triage
-                + (n.sourceFile ? ' · 📎' : '') + (n.edited ? ' · edited ' + n.edited : '');
+                + (n.sourceFile ? ' · 📎' : '') + (n.summarized ? ' · summarized ' + n.summarized : '')
+                + (n.edited ? ' · edited ' + n.edited : '');
               rowEl.appendChild(ovEl('div', 'meta', meta));
-              rowEl.appendChild(ovEl('div', 'txt', n.note));
+              var txtEl = ovEl('div', 'txt', n.note);
+              if ((n.note || '').indexOf('\n') >= 0) txtEl.style.whiteSpace = 'pre-wrap';
+              rowEl.appendChild(txtEl);
               var acts = ovEl('div', 'acts');
               var eBtn = ovEl('button', null, 'Edit'); eBtn.type = 'button';
               var dBtn = ovEl('button', 'del', 'Delete'); dBtn.type = 'button';
@@ -2708,7 +2725,11 @@
         if (n.sourceType) nh.appendChild(ovEl('span', 'badge', n.sourceType));
         if (typeof n.confidence === 'number') nh.appendChild(ovEl('span', 'conf ' + ovConfClass(n.confidence), 'confidence ' + n.confidence));
         row.appendChild(nh);
-        row.appendChild(ovEl('p', null, n.note || ''));
+        // Generated meeting notes are multi-line; a plain <p> would collapse
+        // them into one run-on paragraph.
+        var np = ovEl('p', null, n.note || '');
+        if ((n.note || '').indexOf('\n') >= 0) np.style.whiteSpace = 'pre-wrap';
+        row.appendChild(np);
         if (n.tags && n.tags.length) row.appendChild(ovEl('div', 'tags', '# ' + n.tags.join('  # ')));
         // PROJECT: per-note actions — the manual replacement for automated
         // triage now that notes live off-repo and unattended sessions can't
@@ -2731,6 +2752,32 @@
           });
         });
         acts.appendChild(cp);
+        // Re-runnable on purpose: it retries a failed auto-summary, and it
+        // back-fills notes that were filed before summarization existed.
+        // Re-running never stacks — the server rebuilds the note from the
+        // developer's own typed text plus a fresh summary.
+        if (n.hasTranscript) {
+          var sm = ovEl('button', 'ov-btn ghost', '✨ Summarize');
+          sm.type = 'button';
+          sm.style.cssText = 'font-size:10px;padding:4px 8px;';
+          sm.addEventListener('click', function() {
+            sm.disabled = true;
+            var slabel = sm.textContent;
+            sm.textContent = '… writing';
+            ovNoteApi('summarize', { id: n.id }, function(r) {
+              if (r && r.success) {
+                n.note = r.note;
+                np.textContent = r.note;
+                np.style.whiteSpace = 'pre-wrap';
+                sm.textContent = '✓ Done';
+              } else {
+                sm.textContent = '✕ ' + ((r && r.error) || 'Failed');
+              }
+              setTimeout(function() { sm.textContent = slabel; sm.disabled = false; }, 2200);
+            });
+          });
+          acts.appendChild(sm);
+        }
         if (n.recordingLink) {
           var rec = ovEl('a', 'ov-btn ghost', '🎙 Recording');
           rec.href = n.recordingLink; rec.target = '_blank'; rec.rel = 'noopener';

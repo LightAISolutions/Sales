@@ -1,4 +1,4 @@
-var VERSION = "v01.08g";
+var VERSION = "v01.09g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1969,6 +1969,145 @@ function driveReadNoteFile_(ref) {
   } catch (err) { return null; }
 }
 
+// ── Meeting-notes summarization ─────────────────────────────────────────────
+// A transcript filed through the note box lands in Drive as plain text, and the
+// note itself carries a "[file note: … — summary pending triage]" placeholder
+// that a Claude session had to replace by hand at the next triage pass. This
+// turns that manual step into one API call, so a recording becomes shareable
+// meeting notes minutes after the meeting rather than at the next session.
+//
+// Deliberately a SEPARATE op rather than part of submitFieldNote: a submit must
+// never fail because the model was slow or the key was missing. The note is
+// written first with its placeholder, then summarization fills it in — and can
+// be re-run any time from the log, including on notes filed before this existed.
+var PROP_ANTHROPIC_KEY = "ANTHROPIC_API_KEY";
+var PROP_ANTHROPIC_MODEL = "ANTHROPIC_MODEL";
+// Haiku is the default because UrlFetchApp gives up around 60 seconds and a
+// slow response costs the whole op. Set ANTHROPIC_MODEL in Script Properties to
+// trade latency for depth (e.g. "claude-sonnet-5") without touching this file.
+var ANTHROPIC_DEFAULT_MODEL = "claude-haiku-4-5-20251001";
+var ANTHROPIC_MAX_TOKENS = 1600;
+// ~30k tokens of transcript, roughly a 2.5-hour meeting. Past this the tail is
+// dropped rather than the request failing, and the note says it was truncated.
+var TRANSCRIPT_MAX_CHARS = 120000;
+var NOTE_PLACEHOLDER_RE = /\[file note: [^\]]*? — summary pending triage\]/;
+
+// VTT is mostly timing scaffolding. Whisper also repeats a cue's text when a
+// segment spans a boundary, so identical consecutive lines are collapsed.
+function vttToPlainText_(raw) {
+  var lines = String(raw || '').split(/\r?\n/);
+  var out = [];
+  var last = null;
+  for (var i = 0; i < lines.length; i++) {
+    var l = lines[i].trim();
+    if (!l) continue;
+    if (/^WEBVTT/.test(l) || /^(NOTE|STYLE|REGION)\b/.test(l)) continue;
+    if (/^\d+$/.test(l)) continue;            // cue number
+    if (l.indexOf('-->') >= 0) continue;      // timing line
+    l = l.replace(/<[^>]*>/g, '').trim();     // inline cue tags
+    if (!l || l === last) continue;
+    out.push(l);
+    last = l;
+  }
+  return out.join(' ');
+}
+
+function meetingNotesPrompt_(company, date, sourceType, transcript, truncated) {
+  return [
+    'You are writing meeting notes for a salesperson who just met with ' + company + '.',
+    'The transcript below is machine-transcribed from an audio recording, so expect',
+    'garbled names, missing punctuation, and no speaker labels. Do not invent speakers.',
+    truncated ? 'NOTE: the transcript was truncated — the end of the meeting is missing.' : '',
+    '',
+    'Meeting date: ' + date + ' · Captured via: ' + sourceType,
+    '',
+    'Write notes the salesperson could paste into a follow-up email. Use exactly these',
+    'sections, in this order, omitting any section with nothing real to put in it:',
+    '',
+    'SUMMARY — 2-4 sentences on what the meeting was about and where it landed.',
+    'DISCUSSED — bullets of the substantive topics, with specifics (products, volumes,',
+    '  timelines, prices, sites) wherever the transcript states them.',
+    'CUSTOMER SIGNALS — bullets on what the customer wants, objects to, or is deciding.',
+    'ACTION ITEMS — bullets, each naming the owner if the transcript makes that clear,',
+    '  otherwise prefixed "Us:" or "Them:".',
+    'OPEN QUESTIONS — bullets of anything left unresolved.',
+    '',
+    'Rules: plain text, no markdown headers or bold. Never state a number, name, date or',
+    'commitment the transcript does not support — if something is unclear, write that it',
+    'is unclear rather than guessing. If the transcript is too garbled or too short to be',
+    'a real meeting, say so in one line and stop.',
+    '',
+    '--- TRANSCRIPT ---',
+    transcript
+  ].filter(function(l) { return l !== ''; }).join('\n');
+}
+
+function anthropicSummarize_(prompt) {
+  var props = PropertiesService.getScriptProperties();
+  var key = props.getProperty(PROP_ANTHROPIC_KEY);
+  if (!key) throw new Error('SUMMARY_NOT_CONFIGURED');
+  var model = props.getProperty(PROP_ANTHROPIC_MODEL) || ANTHROPIC_DEFAULT_MODEL;
+  var res = UrlFetchApp.fetch('https://api.anthropic.com/v1/messages', {
+    method: 'post',
+    contentType: 'application/json',
+    headers: { 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+    payload: JSON.stringify({
+      model: model,
+      max_tokens: ANTHROPIC_MAX_TOKENS,
+      messages: [{ role: 'user', content: prompt }]
+    }),
+    muteHttpExceptions: true
+  });
+  if (res.getResponseCode() !== 200) throw new Error('SUMMARY_API_FAILED_' + res.getResponseCode());
+  var body = JSON.parse(res.getContentText());
+  var text = (body.content || []).filter(function(b) { return b.type === 'text'; })
+    .map(function(b) { return b.text; }).join('\n').trim();
+  if (!text) throw new Error('SUMMARY_EMPTY');
+  return { text: text, model: model };
+}
+
+// Replaces the note's placeholder with generated meeting notes. The developer's
+// own typed text is never touched — it is captured once into `typedText` and
+// re-prepended on every run, so re-summarizing is idempotent rather than
+// stacking summaries or eating what they wrote.
+function summarizeNoteTranscript_(sessionToken, id) {
+  var session = validateSessionForData(sessionToken, 'summarize_note');
+  id = String(id || '');
+  if (!id) throw new Error('INVALID_INPUT');
+  var lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    var data = driveNotesGet_().json;
+    var note = (data.notes || []).filter(function(x) { return x.id === id; })[0];
+    if (!note) throw new Error('NOT_FOUND');
+    var transcript = driveReadNoteFile_(note.sourceFile);
+    if (!transcript) throw new Error('NO_TRANSCRIPT');
+    var plain = vttToPlainText_(transcript);
+    if (plain.length < 200) throw new Error('TRANSCRIPT_TOO_SHORT');
+    var truncated = plain.length > TRANSCRIPT_MAX_CHARS;
+    if (truncated) plain = plain.slice(0, TRANSCRIPT_MAX_CHARS);
+    var company = note.slug === 'general' ? 'an industry contact' : note.slug;
+    var result = anthropicSummarize_(
+      meetingNotesPrompt_(company, note.date, note.sourceType, plain, truncated));
+    // First run captures whatever the developer typed alongside the file, so it
+    // survives this run and every later re-run.
+    if (typeof note.typedText !== 'string') {
+      note.typedText = String(note.note || '').replace(NOTE_PLACEHOLDER_RE, '').trim();
+    }
+    var head = '[auto-summary · ' + result.model + (truncated ? ' · transcript truncated' : '') + ']';
+    note.note = (note.typedText ? note.typedText + '\n\n' : '') + head + '\n' + result.text;
+    note.summarized = Utilities.formatDate(new Date(), "America/New_York", "yyyy-MM-dd");
+    // triage stays "pending" on purpose — a machine summary is an input to
+    // promotion, not a decision to promote (see profiler-app.md).
+    driveNotesPut_(data);
+    auditLog('data_write', session.email || 'unknown', 'field_note_summarized',
+             { id: note.id, slug: note.slug, model: result.model, chars: plain.length });
+    return { success: true, id: note.id, note: note.note, model: result.model, truncated: truncated };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
 function getIntakeBootstrap(sessionToken) {
   validateSessionForData(sessionToken, 'intake_bootstrap');
   var reg = ghContentsGet_(REGISTRY_FILE_PATH).json;
@@ -2058,7 +2197,11 @@ function submitFieldNote(sessionToken, payload) {
     // No ghDispatchDeploy_ — notes no longer live in the repo, so a note write
     // needs no site rebuild to become visible. Writes are now instant.
     auditLog('data_write', session.email || 'unknown', 'field_note_submitted', { id: note.id, slug: slug, files: savedFiles.length });
-    return { success: true, id: note.id, slug: slug, confidence: confidence, files: savedFiles.length };
+    // Tells the page whether it is worth calling `summarize` straight after —
+    // only a text transcript can be summarized, Word/PDF attachments cannot.
+    var textFiles = savedFiles.filter(function(f) { return NOTE_FILE_TEXT_RE.test(f.name); });
+    return { success: true, id: note.id, slug: slug, confidence: confidence,
+             files: savedFiles.length, canSummarize: textFiles.length > 0 };
   } finally {
     lock.releaseLock();
   }
@@ -2076,6 +2219,7 @@ function listFieldNotes(sessionToken) {
     return { id: n.id, date: n.date, slug: n.slug, sourceType: n.sourceType, note: n.note,
              confidence: n.confidence, triage: n.triage, submittedVia: n.submittedVia,
              sourceFile: n.sourceFile || null, edited: n.edited || null,
+             summarized: n.summarized || null,
              recordingLink: n.recordingLink || null,
              // Drives the "Copy for Claude" affordance — only text attachments
              // can be put on a clipboard, so the app hides the button otherwise
@@ -2273,6 +2417,11 @@ function handleNoteOp_(e) {
     }
     if (op === 'claudepending') {
       return { success: true, payload: getPendingNotesForClaude(session) };
+    }
+    // Turns a filed transcript into meeting notes. Same admin gate as `edit`,
+    // since it rewrites the note body.
+    if (op === 'summarize') {
+      return summarizeNoteTranscript_(session, p.id);
     }
     // Folder-ID registry for the browser-owned recordings tree. The browser
     // creates and reads the folders itself; it just cannot re-find them

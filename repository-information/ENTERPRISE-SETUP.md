@@ -107,6 +107,25 @@ All three GAS projects in this repo:
 
 All read the token from the same Script Property key (`GITHUB_TOKEN`) on their respective Apps Script projects. Rotating the token means pasting the new value into all three Script Properties.
 
+## Other Script Properties — Profiler meeting-notes summarization
+
+**Not a GitHub credential and not part of the PAT rotation above.** Listed here because this is the repo's record of what lives in Script Properties.
+
+The Profiler Apps Script project turns a filed meeting transcript into written notes (added v01.09g / v02.37r). It reads two properties:
+
+| Key | Required | Value |
+|-----|----------|-------|
+| `ANTHROPIC_API_KEY` | **Yes** | An Anthropic API key (`sk-ant-…`) from https://console.anthropic.com → API Keys |
+| `ANTHROPIC_MODEL` | No | Model ID override. Unset uses `claude-haiku-4-5-20251001` |
+
+**Where:** Profiler Apps Script project → Project Settings → Script properties.
+
+**Until `ANTHROPIC_API_KEY` is set**, the feature is inert rather than broken: the `summarize` op returns `SUMMARY_NOT_CONFIGURED`, the note and its transcript are still saved, and the note keeps its `[file note: … — summary pending triage]` placeholder for a manual triage pass exactly as before. Setting the key later and pressing **✨ Summarize** back-fills any note that already has a transcript.
+
+**Why Haiku by default:** `UrlFetchApp` gives up on a request at roughly 60 seconds, and a response slower than that costs the whole op. Haiku returns comfortably inside that window on meeting-length transcripts. Set `ANTHROPIC_MODEL` to `claude-sonnet-5` to trade latency for depth — no code change, and the op is re-runnable if a slower model does time out.
+
+**Cost, for sizing:** a one-hour meeting transcript is roughly 12k input tokens and ~1.2k output tokens — cents per meeting at Haiku rates, well under a dollar a month at ordinary meeting volume. This is not a cost-managed dependency; it is a latency-managed one.
+
 ### Why we're not using a classic PAT
 
 Classic PATs grant blanket access to every repo the minting user can see. Fine-grained PATs are scoped to specific repos — `gas-self-update-reader-LAIS` can only read `lightaisolutions`, nothing else. Much smaller blast radius if the token leaks.

@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 8/50`
+`Sections: 9/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.09g] — 2026-08-13 04:34:03 AM EST — v02.37r
+
+### Added
+- Transcripts saved with a note are turned into written meeting notes automatically, covering the summary, discussion points, customer signals, action items and open questions
+- Writing a note up can be repeated at any time. Anything you typed yourself is kept and put back at the top each time, so repeating it never replaces your own words or stacks copies of the write-up
+- Very long recordings are shortened before being written up rather than failing, and the note says when that happened
+
+### Changed
+- Saving a note and writing it up are now separate steps, so a slow or unavailable write-up can no longer cost you the note itself — the note and its transcript are saved first
+- Notes stay marked as pending after being written up; a written-up note is still yours to review before anything reaches a dossier
 
 ## [v01.08g] — 2026-08-10 04:42:24 AM EST — v02.30r
 
