@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-13 03:01:32 AM EST` · Repo version: `v02.35r`
+Last updated: `2026-08-13 03:39:36 AM EST` · Repo version: `v02.36r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -261,7 +261,8 @@ Last updated: `2026-08-13 03:01:32 AM EST` · Repo version: `v02.35r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/compute-csp-hash.sh">compute-csp-hash.sh</a>     — [template] CSP SHA-256 hash computation for inline scripts
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-gas-inner-scripts.js">check-gas-inner-scripts.js</a> — CI check: validates served inner &lt;script&gt; syntax in GAS files
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/playwright-harness.py">playwright-harness.py</a>   — Chromium smoke-test harness for all projects (load + console-error + screenshot)
-│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-aidc-report-pdf.mjs">build-aidc-report-pdf.mjs</a> — Renders the AIDC market report HTML to paginated PDFs, one per Profiler writing style (headless Chromium, DevTools Protocol)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-aidc-report-pdf.mjs">build-aidc-report-pdf.mjs</a> — Renders the AIDC market report HTML to paginated PDFs, one per Profiler writing style (headless Chromium, DevTools Protocol)
+│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/transcribe.ps1">transcribe.ps1</a>          — Local Whisper launcher (large-v3-turbo on GPU) — copy to the transcribing PC; wraps venv, CUDA DLL path and output location
 │
 <b>─── Tests ────────────────────────────────────────────────────────────────────</b>
 ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/tests">tests/</a>                     — [template] Security &amp; integration tests

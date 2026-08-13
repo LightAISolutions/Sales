@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.36r] — 2026-08-13 03:39:36 AM EST
+
+> **Prompt:** "add transcribe.ps1 to the repo. What exactly does adding this launcher to the repo do for me?"
+
+### Added
+- `scripts/transcribe.ps1` — PowerShell launcher for local Whisper transcription (`large-v3-turbo`, `--device cuda --compute_type float16 --vad_filter True --language en`, VTT out). Wraps the three things the bare command gets wrong: it calls `whisper-ctranslate2.exe` by full path so the venv need not be activated, prepends every `site-packages\nvidia\**\bin` folder to `PATH` (Windows does not search site-packages, which is what produced `RuntimeError: Library cublas64_12.dll is not found`), and writes each transcript beside its own audio via `--output_dir` so the current directory is irrelevant. Accepts multiple paths via `ValueFromRemainingArguments`, so several files can be drag-dropped onto the window in one go; exits non-zero if any file failed
+- Not deployed and not executed by CI — it runs on the developer's own Windows machine against their RTX 4090. Versioning it makes the transcription settings reviewable and diffable, and gives future sessions the exact flag set to mirror when Build A absorbs transcription into the app
+
+### Changed
+- `README.md` — `scripts/` tree gains the new entry
 
 ## [v02.35r] — 2026-08-13 03:01:32 AM EST
 
