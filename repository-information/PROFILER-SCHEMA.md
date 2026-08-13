@@ -99,7 +99,9 @@ A single chronological log of first-hand intel the developer collects from indus
 >     ├── 1-awaiting-transcription/       uploaded audio, no transcript yet
 >     └── 2-transcribed/                  audio whose transcript is attached to its note
 > ```
-> Recording filenames are `<slug>--YYYY-MM-DD--<original name>`, so company and date read at a glance in the Drive UI; `unfiled` stands in for the slug when a stray is swept up. The numbered folders make the transcription queue visible without opening the app, and the transcription pass — which also runs in the browser — reads them directly.
+> Recording filenames are `<slug>--YYYY-MM-DD--<original name>`, so company and date read at a glance in the Drive UI; `unfiled` stands in for the slug when a stray is swept up. The numbered folders make the transcription queue visible without opening the app.
+>
+> **Transcripts** are produced outside the app (Whisper on the developer's own machine) and filed by the note box's **File transcript** control: the `.vtt` is uploaded to `2-transcribed/` and its recording is re-parented from `1-awaiting-transcription/` to join it, matched by filename stem (`…015240.vtt` claims `…015240.m4a`). The same pick is also attached to the note being written, so triage gets the text. A transcript with no matching recording in the queue still files — it just reports that nothing moved.
 >
 > `drive.file` cannot search for a folder it created in an earlier session, so the three folder IDs are parked on the backend (`recfolders` reads them, `setrecfolders` writes them, both admin-gated, stored in Script Properties). Uploads name the pending folder as their `parents` so a recording is never loose in My Drive. Audio uploaded before this tree existed is still reachable — `drive.file` grants persist per file for the app — so a sweep after each upload re-parents any root-level audio it can see.
 >

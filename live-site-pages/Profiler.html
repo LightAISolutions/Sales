@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.24w">
+  <meta name="build-version" content="v01.25w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1902,6 +1902,54 @@
       });
     }
 
+    function ovDriveList(tok, folderId) {
+      var q = "'" + folderId + "' in parents and trashed=false";
+      return ovDriveApi(tok, 'https://www.googleapis.com/drive/v3/files?fields=files(id,name)&q='
+        + encodeURIComponent(q)).then(function(r) { return (r && r.files) || []; });
+    }
+
+    function ovDriveMove(tok, fileId, addParent, removeParent) {
+      return ovDriveApi(tok, 'https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(fileId)
+        + '?addParents=' + encodeURIComponent(addParent)
+        + '&removeParents=' + encodeURIComponent(removeParent) + '&fields=id', { method: 'PATCH' });
+    }
+
+    // "catl--2026-08-10--Voice 260810_015240.vtt" → "catl--2026-08-10--Voice 260810_015240"
+    function ovBaseName(name) {
+      var i = name.lastIndexOf('.');
+      return i > 0 ? name.slice(0, i) : name;
+    }
+
+    // Files a transcript produced outside the app: the .vtt goes into
+    // 2-transcribed, and the recording it belongs to follows it out of the
+    // queue folder — otherwise 1-awaiting-transcription would keep claiming
+    // work that is already done. cb({ transcript, movedAudio }, err)
+    function ovFileTranscript(file, cb) {
+      ovRecFolders(function(folders, ferr) {
+        if (!folders) { cb(null, ferr || 'no_folder'); return; }
+        ovDriveToken(function(tok, terr) {
+          if (!tok) { cb(null, terr || 'no_token'); return; }
+          ovDriveMultipart(file, tok, file.name, folders.done, function(res, uerr) {
+            if (!res) { cb(null, uerr || 'transcript_upload_failed'); return; }
+            var base = ovBaseName(file.name);
+            ovDriveList(tok, folders.pending)
+              .then(function(files) {
+                var audio = null;
+                for (var i = 0; i < files.length; i++) {
+                  if (ovBaseName(files[i].name) === base) { audio = files[i]; break; }
+                }
+                if (!audio) { cb({ transcript: file.name, movedAudio: null }); return; }
+                return ovDriveMove(tok, audio.id, folders.done, folders.pending)
+                  .then(function() { cb({ transcript: file.name, movedAudio: audio.name }); });
+              })
+              // The transcript is already filed; a failed audio move is worth
+              // reporting but must not read as a failed transcript.
+              .catch(function() { cb({ transcript: file.name, movedAudio: null, partial: true }); });
+          });
+        });
+      });
+    }
+
     // Both upload paths hand back { link, id }.
     function ovDriveResult(d) {
       if (!d || !d.id) return d && d.webViewLink ? { link: d.webViewLink, id: null } : null;
@@ -2325,8 +2373,70 @@
             });
           });
 
+          // PROJECT: transcripts are produced outside the app (Whisper on the
+          // developer's own machine). One pick does both jobs — the .vtt is
+          // filed into 2-transcribed alongside its recording, and the same
+          // file rides along as a note attachment so triage can summarise it.
+          var transcriptFile = null;
+          var trRow = ovEl('div');
+          trRow.style.cssText = 'display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap;';
+          var trInput = document.createElement('input');
+          trInput.type = 'file'; trInput.accept = '.vtt,.srt,.txt,.md';
+          trInput.style.display = 'none';
+          var trBtn = ovEl('button', 'ov-btn ghost', '📄 File transcript');
+          trBtn.type = 'button';
+          trBtn.style.cssText = 'font-size:11px;padding:6px 10px;';
+          trBtn.addEventListener('click', function() {
+            if (ovDriveHasToken()) { trInput.click(); return; }
+            trStat.textContent = 'Connecting to Drive…';
+            trBtn.disabled = true;
+            ovDriveToken(function(tok, err) {
+              trBtn.disabled = false;
+              if (!tok) { trStat.textContent = ovDriveErrText(err); return; }
+              trInput.click();
+            });
+          });
+          var trStat = ovEl('span', 'hint', '');
+          trStat.style.cssText = 'font-size:11px;';
+          trRow.appendChild(trBtn); trRow.appendChild(trInput); trRow.appendChild(trStat);
+          nBody.appendChild(trRow);
+          nBody.appendChild(ovEl('div', 'hint', 'Transcribed the recording on your computer? Pick the .vtt here — it is filed into ' + OV_REC_DIR + '/' + OV_REC_DONE + ', its recording moves out of the queue folder to join it, and it attaches to this note.'));
+          trInput.addEventListener('change', function() {
+            var f = trInput.files && trInput.files[0];
+            if (!f) return;
+            if (f.size > 8 * 1024 * 1024) { trStat.textContent = f.name + ' is over 8 MB.'; return; }
+            transcriptFile = null;
+            trStat.textContent = 'Filing ' + f.name + '…';
+            trBtn.disabled = true;
+            ovFileTranscript(f, function(res, err) {
+              trBtn.disabled = false;
+              if (!res) {
+                trStat.textContent = /consent|permission|token|sign_in/.test(String(err || ''))
+                  ? ovDriveErrText(err)
+                  : 'Could not file the transcript' + (err ? ' — ' + err : '');
+                return;
+              }
+              transcriptFile = f;
+              trStat.textContent = '✓ ' + f.name + ' → ' + OV_REC_DONE
+                + (res.movedAudio ? ' · recording moved too'
+                   : (res.partial ? ' · recording could not be moved'
+                      : ' · no matching recording in the queue'));
+            });
+          });
+
+          // The picked transcript joins whatever is in the file input, unless
+          // the same file is already there — picking it in both places should
+          // not attach it twice.
+          function pendingFiles() {
+            var list = Array.prototype.slice.call(fileInput.files);
+            if (transcriptFile && !list.some(function(f) {
+              return f.name === transcriptFile.name && f.size === transcriptFile.size;
+            })) list.push(transcriptFile);
+            return list;
+          }
+
           function readFiles(cb) {
-            var fl = fileInput.files;
+            var fl = pendingFiles();
             if (!fl.length) { cb([]); return; }
             if (fl.length > 3) { say('Attach at most 3 files.', false); cb(null); return; }
             var out = [], pending = fl.length, failed = false;
@@ -2345,9 +2455,10 @@
           }
           save.addEventListener('click', function() {
             var text = ta.value.trim();
-            if (!text && !fileInput.files.length) { say('Type a note or attach a file first.', false); ta.focus(); return; }
+            var attached = pendingFiles().length;
+            if (!text && !attached) { say('Type a note or attach a file first.', false); ta.focus(); return; }
             save.disabled = true;
-            say(fileInput.files.length ? 'Uploading…' : 'Saving…');
+            say(attached ? 'Uploading…' : 'Saving…');
             readFiles(function(files) {
               if (files === null) { save.disabled = false; return; }
               ovNoteApi('submit', { slug: slug, sourceType: srcSel.value, note: text, confidence: confSel.value, files: files, recordingLink: recLink }, function(res) {
