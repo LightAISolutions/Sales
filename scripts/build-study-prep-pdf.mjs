@@ -202,6 +202,18 @@ function mdToHtml(md) {
     if (!line.trim()) { i++; continue; }
     if (/^Developed by:/.test(line)) { i++; continue; } // becomes the document footer
 
+    // Fenced code. These documents use fences for ASCII architecture diagrams,
+    // so the content is escaped and never inline-processed — a stray * or _ in
+    // a diagram must stay a stray * or _.
+    if (/^```/.test(line)) {
+      const buf = [];
+      i++;
+      while (i < lines.length && !/^```/.test(lines[i])) buf.push(lines[i++]);
+      i++;
+      out.push(`<pre><code>${esc(buf.join('\n'))}</code></pre>`);
+      continue;
+    }
+
     // <details> — Chromium prints a collapsed <details> as just its summary, so
     // the answers to a self-test would silently vanish from the PDF. Force open.
     if (/^<details/i.test(line)) {
@@ -318,6 +330,9 @@ h1 { font:bold 30pt/1.08 var(--sans); letter-spacing:-.015em; margin:0 0 6pt; }
   border-top:1pt solid var(--rule); padding-top:12pt;
 }
 .toc { column-count:2; column-gap:22pt; font-size:9pt; margin:0 0 4pt; }
+/* a short list balances badly across two columns — long labels wrap while the
+   second column sits half empty; below the threshold, one column reads better */
+.toc.one-col { column-count:1; }
 .toc div { break-inside:avoid; margin:0 0 3.5pt; }
 .toc .n { font:bold 8pt/1 var(--mono); color:var(--accent); margin-right:6pt; }
 .toc a { color:var(--ink); }
@@ -342,6 +357,18 @@ a { color:var(--link); text-decoration:none; }
 code {
   font:8.5pt var(--mono); background:#f2efe7; border-radius:2pt;
   padding:0.5pt 2.5pt; word-break:break-word;
+}
+/* Fenced blocks carry ASCII architecture diagrams, so they must not wrap —
+   a wrapped diagram is a destroyed diagram. 7.5pt mono fits ~118 columns in
+   the printable width, which covers every block in the current documents. */
+pre {
+  margin:10pt 0; padding:9pt 11pt; background:#f7f5ef;
+  border-left:3pt solid var(--rule); border-radius:0 2pt 2pt 0;
+  overflow:hidden; page-break-inside:avoid;
+}
+pre code {
+  display:block; font:7.5pt/1.5 var(--mono); background:none;
+  padding:0; border-radius:0; white-space:pre; word-break:normal; color:var(--ink);
 }
 
 /* ── Callouts ─────────────────────────────────────────────────────────── */
@@ -426,7 +453,7 @@ function buildHtml(doc, parsed) {
 ${lead}
 </div>
 <p class="toc-h">Contents</p>
-<nav class="toc">
+<nav class="toc${parsed.toc.length <= 6 ? ' one-col' : ''}">
 ${toc}
 </nav>
 ${rest}
