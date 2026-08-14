@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-14 02:12:33 AM EST` · Repo version: `v02.42r`
+Last updated: `2026-08-14 02:29:35 AM EST` · Repo version: `v02.43r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -328,6 +328,7 @@ Last updated: `2026-08-14 02:12:33 AM EST` · Repo version: `v02.42r`
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-lesson-plan.md">hithium-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/megmeet">megmeet/</a> — Megmeet technology curriculum
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-lesson-plan.md">megmeet-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf">MEGMEET-LESSON-PLAN.pdf</a> — The lesson plan typeset for print/download, BloombergNEF Research Report style (5 pages)
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-interview-brief.md">megmeet-interview-brief.md</a> — Sales-role interview layer: NA go-to-market, objection handling, questions to ask, self-test
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-INTERVIEW-BRIEF.pdf">MEGMEET-INTERVIEW-BRIEF.pdf</a> — The interview brief typeset for print/download, BloombergNEF Research Report style (13 pages)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sinexcel">sinexcel/</a> — Sinexcel technology curriculum

@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.43r] — 2026-08-14 02:29:35 AM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **`repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf`** — the companion lesson plan typeset to match the interview brief. 5 pages, 5 modules. The brief teaches the room, the lesson plan teaches the physics; both now travel in the same format
+- **Fenced code block support in `scripts/build-study-prep-pdf.mjs`** — the renderer previously had no `` ``` `` handling, which the interview brief never exercised but the lesson plan needed for its two ASCII architecture diagrams (the legacy power chain and the 800 VDC chain). Fenced content is escaped and never inline-processed, so a stray `*` inside a diagram stays a stray `*`. The print style sets `white-space:pre` at 7.5pt mono — **deliberately non-wrapping, because a wrapped ASCII diagram is a destroyed one**; that size fits ~118 columns in the printable width, comfortably clearing the widest block in either document (92 columns)
+
+### Changed
+- **Contents block collapses to one column at 6 sections or fewer** — the lesson plan's 5 long module titles balanced badly across two columns, wrapping in the first while the second sat half empty. The interview brief's 15 sections are unaffected and still render two-up
+- **README tree** — added `MEGMEET-LESSON-PLAN.pdf` under `study-prep/megmeet/`
+
+### Notes
+- **The interview brief PDF was rebuilt and then deliberately reverted.** It has no fenced code and 15 sections, so neither renderer change touches it — a byte comparison confirmed the rebuild differed in exactly 14 bytes, all of them the PDF `/CreationDate`. Re-committing a 350 KB blob to move a timestamp is pure history churn, so the committed file stands. Both PDFs are nonetheless verified against the current script
+- **Verified visually before committing** — the two ASCII diagrams render intact at full width with box-drawing characters and column alignment preserved, and the interview brief still reports 13 pages / 15 sections / identical size, confirming no regression
+- Today is **Friday 2026-08-14** (`date -d` confirmed), which is the meeting date the lesson plan's pacing section is written against
 
 ## [v02.42r] — 2026-08-14 02:12:33 AM EST
 
