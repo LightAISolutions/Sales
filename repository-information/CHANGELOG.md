@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.42r] — 2026-08-14 02:12:33 AM EST
+
+> **Prompt:** "Picking up from the last "AIDC Market Report PDF conversion" session, output the "Megmeet Interview Brief" in a downloadable PDF."
+
+### Added
+- **`repository-information/study-prep/megmeet/MEGMEET-INTERVIEW-BRIEF.pdf`** — the Megmeet interview brief typeset for print and download. 13 pages, 15 sections, letter format with a running header, a `Page N of M` footer, and an auto-generated two-column contents block. Presentation is the `bloomberg` export skin from `PROFILER-STYLES.md`, so it reads as the same product as the canonical AIDC report PDF
+- **`scripts/build-study-prep-pdf.mjs`** — a Markdown-driven PDF renderer for study-prep documents. Unlike `build-aidc-report-pdf.mjs`, whose source was authored as HTML, this parses the `.md` file directly, so **the Markdown stays the single source of truth and the PDF cannot drift from the document the developer actually edits**. Drives the pre-installed Chromium over the DevTools Protocol (only `Page.printToPDF` accepts a custom running header/footer — the `--print-to-pdf` CLI flag cannot). No npm dependencies. Usage: `node scripts/build-study-prep-pdf.mjs [<doc-key>] [--png] [--keep-html]`; a bare invocation builds every registered document
+
+### Changed
+- **README tree** — added `build-study-prep-pdf.mjs` under `scripts/` and `MEGMEET-INTERVIEW-BRIEF.pdf` under `study-prep/megmeet/`
+
+### Notes
+- **Three rendering decisions worth recording.** (1) **Proportional table columns** — the renderer weights each column by the average text length of its cells, clamped to 11–58%, because equal thirds under `table-layout:fixed` reads badly when one column holds a sentence and another holds a date. The five-objections table is the case that proves it. (2) **`<details>` is forced open** — Chromium prints a collapsed `<details>` as just its `<summary>`, so the self-test answers would have silently vanished from the PDF; they render as a ruled "Answers" block instead. (3) **Blockquotes are split by role** — a bolded lead-in becomes a boxed caution, a quoted line becomes a tinted "Say it like this" pull quote, because the brief uses `>` for both and they should not look alike
+- **Deliberately one skin, not five.** The AIDC report ships in all five registered writing styles and `PROFILER-STYLES.md` carries a standing instruction to mirror skin changes across its consumers. Registering a third consumer for a prep document would take on that maintenance obligation for no reader benefit, so this script hard-codes the canonical `bloomberg` skin and stays out of the registry
+- **The intermediate HTML is staged outside the repo** (a temp dir), not committed. A committed HTML twin is exactly the drift this design avoids; `--keep-html` writes it next to the PDF when it is wanted for inspection
+- **`megmeet-lesson-plan` is registered but not built** — the developer asked for the interview brief. It is one command away: `node scripts/build-study-prep-pdf.mjs megmeet-lesson-plan`
+- **`REPO-ARCHITECTURE.md` deliberately not updated**, following the precedent set in v02.33r: the Scripts subgraph carries shared infrastructure only and already omits `check-gas-inner-scripts.js`, `playwright-harness.py` and `build-aidc-report-pdf.mjs`
+- **Content gap flagged, not fixed** — the brief's self-test asks twelve questions but the answers block stops at ten. Questions 11 and 12 are both answered in the body. Left alone as developer-owned content
 
 ## [v02.41r] — 2026-08-14 01:54:33 AM EST
 
