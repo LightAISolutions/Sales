@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.38r] — 2026-08-14 01:06:30 AM EST
+
+> **Prompt:** "I want to further refine the AIDC market report, but save that task for later. I am going to interview with Megmeet tomorrow morning and want to quickly learn everything I need to seem like I understand their products, industry position, and recent activities. Organize the information in Megmeet's dossier and output it to me in whichever way you think will be best for me to learn what I need to learn."
+
+### Added
+- **`repository-information/study-prep/megmeet/megmeet-interview-brief.md`** (new) — an interview-facing companion to the existing technology lesson plan, organized from the Megmeet dossier (profileVersion 2). Where `megmeet-lesson-plan.md` teaches the physics, the brief covers what an interview actually tests: a 60-second "what do you know about us" answer, the five load-bearing facts, the product chain as the catalogue (grid to SST to sidecar to BBU/supercap to power shelves to M-CRPS to power brick), the competitive position against Delta and Lite-On inside the ~74% Taiwanese bloc, a reverse-chronological activity timeline, four hard questions with model answers, a say/don't-say table, six questions to ask them, a 17-term vocabulary table, and a ten-question self-test with collapsible answers
+- Published as a phone-readable artifact for review before the interview — serif and monospace typography with no sans face, a signal-teal accent on warm-neutral paper, both themes token-defined, and the grid-to-GPU power chain rendered as a one-line-diagram ladder with voltage annotations
+
+### Notes
+- **Sourcing discipline is explicit throughout.** The brief separates sourced fact from the dossier's labeled analytical reads, and flags the unverified Lite-On displacement report specifically — the company has never confirmed it and its own late-2025 statements contradict it, so asserting it in the room would be a credibility loss. The dossier's moderate-confidence "architecture timing" thesis is marked as an interpretation to be presented as one
+- The 27 August 2026 H1 report is surfaced as the central catalyst: the company itself called AI-DC revenue immaterial through 2025 while consensus embeds a roughly six-fold FY2026 profit rebound, so the half-year print is the first hard test
+- No dossier data was changed — this is a derived study artifact only. The developer's separate request to further refine the AIDC market report was deferred at their instruction and is **not** actioned here
 
 ## [v02.37r] — 2026-08-13 04:34:03 AM EST
 
