@@ -77,6 +77,22 @@
       "supersededBy": 3
     }
   ],
+  "huawei-digital-power": [
+    {
+      "file": "huawei-digital-power.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-14",
+      "supersededBy": 2
+    }
+  ],
+  "megmeet": [
+    {
+      "file": "megmeet.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-09",
+      "supersededBy": 2
+    }
+  ],
   "sinexcel": [
     {
       "file": "sinexcel.profile.v1.json",
@@ -131,14 +147,6 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-09",
       "supersededBy": 3
-    }
-  ],
-  "megmeet": [
-    {
-      "file": "megmeet.profile.v1.json",
-      "profileVersion": 1,
-      "archivedAt": "2026-08-09",
-      "supersededBy": 2
     }
   ]
 }

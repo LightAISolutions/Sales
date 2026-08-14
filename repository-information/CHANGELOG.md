@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.41r] — 2026-08-14 01:54:33 AM EST
+
+> **Prompt:** "refresh the Huawei dossier"
+
+### Changed
+- **Huawei Digital Power dossier refreshed to profileVersion 2** (`live-site-pages/profiler-data/huawei-digital-power.profile.json`), correcting the materially stale FCC record identified in v02.40r. v1 archived per the Archival Procedure; `archive-index.json` and `profiler-companies.json` synced
+- **`summary`** — the defining-constraint clause moved from "a pending FCC inverter ban being drafted" to the enacted 2026-07-28 Covered List prohibition on foreign-produced connected power inverters that blocks new equipment authorizations. `ecosystemRole` updated on the same point
+- **New `recentDevelopments` entry (2026-07-28)** — the Covered List action, with the read that matters analytically: the FCC fact sheet names no company or country, the test is the Buy American "domestic end product" standard at 48 CFR 25.101(a), so it is an **origin rule rather than a China rule** and catches Taiwanese, Korean and US-brand offshore production alike. Direct incremental effect on Huawei assessed as near zero (Entity List and NDAA 889 already closed the US); the competitive effect is the real story
+- **The 2026-06-30 draft-report entry was retained and marked SUPERSEDED** rather than deleted — it is the accurate record of what was trailed in advance, and the delta between the trailed China-specific framing and the adopted country-agnostic rule is itself analytically useful
+- **`strategyRead` #5 rewritten** — now carries the Sungrow market impact (roughly CNY 100B / $14.8B of market value shed over the following month, despite Sungrow retaining US access where Huawei never had it), the two load-bearing scope limits (prospective-only; the two-prong definition requiring both bi-directional conversion **and** remote connectivity), and Sungrow's public argument that it falls outside the connectivity prong because it restricts connection activity to wired links. Whether wired management satisfies "another similar connection" is flagged as unresolved and as the variable that determines how far the rule reaches into wired-managed power electronics, Megmeet rack power included. Collection gap stated explicitly: no source located addresses IT or data-center power supplies directly
+- **`strategyRead` #1** — "pending FCC inverter ban" corrected to the enacted prohibition
+- Five sources added at the head of `sources[]`: the FCC fact sheet (first-party), Cooley, Morgan Lewis, National Law Review, and Energy-Storage.News on the scope-clarity concerns
+
+### Notes
+- Data-only change: `Profiler.html` was not modified, so no page version bump and no page changelog entry ([PC-HTML-VERSION] #2 does not fire). The Profiler page is an **indirect affect**
+- All prose written in the registry's active `intel-briefing` style — confidence-tagged judgment, "We assess" construction, facts and assessments kept separate, collection gap stated
+- `AIDC-MARKET-REPORT.md` §6.4 and §8.4 still carry the stale framing. Left unchanged: the developer deferred report work, and the report should be regenerated from the refreshed dossier rather than hand-patched
 
 ## [v02.40r] — 2026-08-14 01:42:59 AM EST
 
