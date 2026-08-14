@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.39r] — 2026-08-14 01:18:13 AM EST
+
+> **Prompt:** "sales role, meeting Yuan Meng, head of NA Sales & Marketing."
+
+### Changed
+- **Retuned the Megmeet interview brief for a sales role** (`repository-information/study-prep/megmeet/megmeet-interview-brief.md`, and the published artifact at the same URL). The technology chain is retained — the brief now says explicitly that the bar is being credible with an engineer for twenty minutes, not designing a power shelf — and the weight moved to the commercial picture
+- **New section — who you're meeting.** Yuan Meng appears nowhere in the dossier or the repo, and the brief says so plainly rather than inventing a background. What it does supply is the *function*: the only US-facing leader on record is Roya Movahedi (CMO, US/international), the quoted spokesperson in every 2025–26 English release and absent from the China filings — evidence, flagged as inference, that the international commercial layer was built recently and separately
+- **New section — the North America picture.** Leads on the nuance most candidates will miss: the expected first hyperscaler volume delivery is **domestic**, so North America is greenfield with no reference win to point at. Then the sellable assets (NVIDIA ecosystem seat, the Dallas lab as a sales instrument, the existing Ericsson/Cisco/Juniper/Arista/Accton network-power relationships, full-chain quoting, spec leadership, financed capacity), the design-in sales motion, and the country-of-origin question
+- **New section — five field objections** with what each one is really asking and how to answer: Chinese supplier, unproven at scale, shaky financials, Delta owns the socket, and 800 VDC slipping
+- **Rewritten questions-to-ask** for a sales counterpart — territory questions, sale-mechanics questions, and a closing question that separates the equity story from the sales motion. **Two new hard questions** (cold account opening; first ninety days) and **two new self-test items**, bringing it to twelve
+
+### Notes
+- **The regulatory framing is deliberately fenced.** The brief warns against importing the battery world's 1260H listings, stepped cell tariffs and draft inverter rule into a Megmeet conversation — those are documented for battery and inverter suppliers, and Megmeet is not recorded as being on those lists. Carrying that framing into the room would describe someone else's problem
+- No dossier data changed; this remains a derived study artifact
 
 ## [v02.38r] — 2026-08-14 01:06:30 AM EST
 

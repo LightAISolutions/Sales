@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-14 01:06:30 AM EST` · Repo version: `v02.38r`
+Last updated: `2026-08-14 01:18:13 AM EST` · Repo version: `v02.39r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -327,7 +327,7 @@ Last updated: `2026-08-14 01:06:30 AM EST` · Repo version: `v02.38r`
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-lesson-plan.md">hithium-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/megmeet">megmeet/</a> — Megmeet technology curriculum
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-lesson-plan.md">megmeet-lesson-plan.md</a> — Full-depth 5-module lesson plan
-│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-interview-brief.md">megmeet-interview-brief.md</a> — Interview-facing layer: position, recent activity, hard questions, self-test
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-interview-brief.md">megmeet-interview-brief.md</a> — Sales-role interview layer: NA go-to-market, objection handling, questions to ask, self-test
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sinexcel">sinexcel/</a> — Sinexcel technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/sinexcel/sinexcel-lesson-plan.md">sinexcel-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sungrow">sungrow/</a> — Sungrow technology curriculum

@@ -1,4 +1,6 @@
-# Megmeet — Interview Brief
+# Megmeet — Interview Brief (Sales Role)
+
+**Tuned for:** a sales role, interviewing with **Yuan Meng, Head of NA Sales & Marketing**.
 
 *Built from `live-site-pages/profiler-data/megmeet.profile.json` (profileVersion 2, updated 2026-08-09). Companion to [`megmeet-lesson-plan.md`](megmeet-lesson-plan.md), which teaches the underlying physics — this file is the interview-facing layer: products, competitive position, recent activity, hard questions, and questions to ask.*
 
@@ -7,6 +9,18 @@
 ## The one sentence
 
 Megmeet is a Shenzhen power-electronics manufacturer with six business lines and ¥9.4B of revenue, deliberately burning its profit margin to get designed into the next generation of AI data-center power — the 800 VDC architecture NVIDIA is driving toward its 2027 megawatt racks. **The old appliance business is paying for the AI bet, and the bet has not paid off yet.**
+
+## Who you're meeting, and what that changes
+
+> **Yuan Meng does not appear anywhere in the dossier** — not in `decisionMakers`, not in the source set. Nothing below is a claim about them personally. Do not walk in with a manufactured sense of their background; if it comes up naturally, ask.
+
+What the dossier does tell you is about the **function**, and that is enough:
+
+- **The NA commercial organisation is young.** The only US-facing leader on record is **Roya Movahedi, CMO for US/international** — quoted spokesperson in every 2025–26 English release (NVIDIA HVDC sidecar, OCP, Dallas lab). She is not listed in the China filings, which says the international commercial layer was built recently and separately from the China corporate structure. A dedicated head of NA sales and marketing is consistent with that build-out continuing. *(Reasonable inference from the record, not a stated fact.)*
+- **You will be assessed on selling, not physics.** Nobody needs you to design a power shelf. They need to know you can run a **design-in** sale: long qualification cycles, technical buyers, a spec won upstream, and a brand carrying a real objection into every first meeting.
+- **Your value is what they cannot hire in Shenzhen.** A mainland manufacturer building a North American business is buying relationships, market access, and objection-handling in a market where its brand is unknown and its country of origin is a live procurement question.
+
+**If you have AIDC power/storage pipeline experience, lead with the map, not the résumé.** The asset is that you already carry the competitive landscape — who the hyperscalers and neoclouds are, which developers and contractors hold the decision, where power constraints bite, how a component vendor gets specified into a campus. A manager building an NA desk wants someone who arrives with the territory mapped, not someone who spends two quarters learning it.
 
 ## The five facts that carry the conversation
 
@@ -39,9 +53,57 @@ Why it works: it names the real identity (a conversion-technology platform, not 
 
 ~40% of revenue earned overseas. 8,894 employees at end-2025 (~3,100 in R&D). Ten R&D centres, eight manufacturing bases across China, Thailand, India, the US, Germany. Founded 2003; SZSE-listed 2017; HK A+H dual listing filed June 2026.
 
+## The North America picture — the actual job
+
+### The single most important nuance
+
+Megmeet's expected **first hyperscaler volume delivery is domestic — a Chinese hyperscaler, in 2026**. That means **North America is genuinely greenfield**: the hardest market, the strongest incumbent, the most sceptical procurement, and no reference win yet to point at. Whoever takes this desk builds the first NA proof case rather than managing an existing book.
+
+Most candidates read "first hyperscaler volume delivery expected 2026" and assume a US buyer. Catching that it says *domestic* shows you read the source rather than the summary — and it reframes the role honestly. Frame it as what it is: a build, and the reason the job exists.
+
+### What you have to sell with
+
+| Asset | Why it matters commercially |
+|---|---|
+| **The NVIDIA ecosystem seat** | Only mainland-China power vendor NVIDIA named for GB200 NVL72, plus a co-developed 800 VDC sidecar shown publicly at OCP. The spec is won inside reference designs before an RFP exists — that seat is the door, and it is the one thing a competitor cannot simply price against |
+| **The Dallas lab** | June 2026, 360 kW active, 1.5 MW roadmap. **A sales instrument, not a facility announcement** — validation on US soil shortens qualification cycles, lets customer engineers touch hardware without a Shenzhen trip, and answers "can you support us here?" with a place rather than a promise |
+| **Existing Western OEM relationships** | Named network-power customers include **Ericsson, Cisco, Juniper, Arista, Accton** — Western tier-ones that have already run the vendor-qualification gauntlet. The strongest available counter to "we've never heard of you" |
+| **Full-chain capability** | Grid-to-GPU rather than one box: SST, sidecar, shelves, BBU/supercap, PSUs, point-of-load. Lets you sell an architecture conversation instead of a line item |
+| **Spec leadership** | Ruby-grade 5.5 kW M-CRPS at >100 W/in³; the jump from 33 kW air to 110 kW liquid. In a standardised form-factor market, spec is the entry ticket — and standardisation is how a challenger takes a socket |
+| **Financed capacity** | The ¥2.66B placement (Feb 2026, chairman subscribing personally) and the pending HK listing fund Thailand phase II and the rest of the build-out. If a customer asks whether you can scale with them, the capital is identifiable |
+
+### The sales motion you would run
+
+Per the dossier, power products go to market through **direct and ODM design-ins with server OEMs, cloud providers, and the NVIDIA reference ecosystem**; network power sells direct to telecom/networking OEMs. In practice:
+
+- **Design-in selling, not transactional.** Long cycles, engineering buyers, qualification gates, a win that locks for a product generation. Revenue arrives quarters after the work
+- **The spec is won upstream.** Reference designs and the partner slate decide who gets to bid; by the time procurement opens the outcome is often set
+- **The buying centre is split.** Rack architecture, thermal, supply-chain risk, and cost are different people. The China-origin objection lives with supply-chain risk, not the architect — a different conversation with different evidence
+- **ODMs are both channel and gatekeeper.** A hyperscaler may set the spec while an ODM holds the PO. Knowing which door an account opens is the qualifying question
+
+### Country of origin — handle it precisely
+
+The dossier's read: the geographic build-out (Thailand phase II, India localisation, the Dallas lab, the HK listing) is **supply-chain de-risking aimed at US hyperscaler procurement** — a mainland company packaging itself to be buyable by American AI-infrastructure buyers despite tariff and geopolitical friction. *(Labeled analytical read, moderate confidence — not company guidance.)*
+
+> **Do not overclaim the regulatory picture.** The restricted-entity and tariff machinery from the battery world — 1260H listings, stepped tariffs on Chinese cells, the draft inverter rule — is documented for **battery and inverter suppliers, not for Megmeet**, which is not recorded as being on those lists. Importing that framing wholesale describes someone else's problem and an insider will know. The safe, honest framing: country of origin is a live procurement question for any mainland supplier into US AI infrastructure, and the company's answer is manufacturing and validation footprint outside China.
+
+## The five objections you would carry into every meeting
+
+A sales interview is really an audition for objection handling. The strongest move is to raise these yourself, unprompted, and show you already have answers.
+
+| What they say | What they're really asking | How you answer |
+|---|---|---|
+| "You're a Chinese supplier." | Will procurement or legal block this later and waste my qualification cycle? | Answer with footprint, not reassurance: manufacturing across Thailand, India, the US, Germany; Thailand phase II funded; a Dallas validation lab on US soil; an HK listing in progress. Then the proof that lands hardest — **Ericsson, Cisco, Juniper, Arista and Accton already buy Megmeet power** and have already run their supplier audits. Never promise regulatory outcomes |
+| "We've never deployed you at this scale." | Am I the guinea pig? | Concede the specific, redirect to the general: new to hyperscale AI racks, not new to high-volume power manufacturing — global top-three in OEM/embedded power supply sales for 2024, ~8,900 employees, ~3,100 in R&D, ¥9.4B revenue. Then the structural answer: standardised form factors let a buyer take a limited, low-risk slot first |
+| "Your financials look shaky." | Will you still be here in three years, mid-programme? | Don't flinch — it's public and they've read it. Profit fell two-thirds because the company chose to spend ahead of revenue; capex is financed by a ¥2.66B placement the chairman subscribed to personally plus a pending HK listing; Q1 2026 had all six segments growing with power products +67%. The diversified base is why the AI bet doesn't have to work on the first try |
+| "Delta already has this socket." | Why re-open a qualification that works? | Never attack Delta — they're good and the buyer knows it. Sell the second source: ~74% geographic concentration is a risk they already manage elsewhere in the BOM. Then sell timing — the architecture change forces re-qualification anyway, so the switching cost you're asking them to absorb is one they're already absorbing |
+| "What if 800 VDC slips?" | Am I buying a roadmap that may not arrive? | Point at the bridge. The sidecar exists because buildings on 480/380 VAC need megawatt racks *now*; the near-term catalogue (33 kW and 110 kW shelves, Ruby M-CRPS) sells into today's architecture regardless. The roadmap is upside, not the thesis |
+
+**The line that ties it together:** "The way I'd think about this territory is that we're not asking anyone to replace Delta. We're asking to be the qualified second source during a re-qualification they have to do anyway — and the Dallas lab exists so that costs them a lot less time than it sounds like."
+
 ## What they make — the product chain is the catalogue
 
-Megmeet's AI catalogue *is* the power chain, box by box. Learn the chain and you have learned the catalogue.
+You are not being hired to design this — you are being hired to sell it to people who do. The bar is being credible with an engineer for twenty minutes. The trick: Megmeet's AI catalogue *is* the power chain, box by box.
 
 | Stage | Product | What to know |
 |---|---|---|
@@ -103,6 +165,10 @@ In each case the winning move is the same: **acknowledge the real difficulty, th
 
 **"What worries you about us?"** — A real answer, calmly delivered, is a strength. The expectations-vs-disclosure gap is the honest one: the company said AI revenue was immaterial and consensus is priced for a 6x rebound — a lot of load on one half-year print. Second, the fastest-growing segment (EV/rail, +109%) runs at 15.3% gross margin, so growth is dilutive to mix. Third, negative operating cash flow means the build-out depends on capital markets, which is presumably part of why the HK listing exists. Frame these as things you'd want to understand better, not accusations.
 
+**"How would you open a hyperscaler or ODM account for us, cold?"** — The wrong answer is a pitch; the right answer is a sequence. Start where the spec is set, not where the PO is cut: the NVIDIA ecosystem seat and the reference-design layer are why a first meeting happens at all. Qualify which door the account opens — does this buyer set the rack architecture while an ODM holds the PO, or do they buy direct? Find the person who owns supply-chain risk, because that is where the real objection lives. Make the ask small: a standardised form factor lets you compete for one limited slot rather than the whole socket. And use the Dallas lab early — "come touch it in Texas" converts scepticism faster than any deck.
+
+**"What would your first ninety days look like?"** — Concrete and modest. Map which accounts are reachable through the existing Western OEM relationships versus genuinely cold. Get fluent enough on the chain to hold a technical call without pulling in Shenzhen. Understand what the Dallas lab can and cannot validate at 360 kW today, since that bounds what you can credibly promise. Find where qualification cycles have stalled before — in design-in selling the losses teach more than the wins. Then say the honest thing: with cycles this long the first ninety days builds qualified pipeline, not revenue, and you would want to agree upfront which leading indicators you will both judge it by.
+
 ### Say / don't say
 
 | Say | Don't say |
@@ -113,16 +179,22 @@ In each case the winning move is the same: **acknowledge the real difficulty, th
 
 ## Questions worth asking them
 
-Pick three or four; don't run the list.
+With a sales leader the bar is specific: ask about the **go-to-market**, not the company. Pick three or four; don't run the list.
 
-1. **"How much of the 800 VDC opportunity comes through the sidecar versus the SST?"** — retrofit versus purpose-built campus; two businesses on two timelines.
-2. **"Does NVIDIA ecosystem membership translate into ODM design-ins, or do you still win each one separately?"** — the real commercial question behind the thesis.
-3. **"Is the Dallas lab mostly about validation speed, or about being procurable by US buyers?"** — names the geopolitical strategy without saying anything awkward.
-4. **"The 110 kW liquid-cooled shelf is a big step from 33 kW air — how much of that engineering was thermal versus power conversion?"** — a genuine engineering question.
-5. **"How do you think about appliance controls over the next few years — cash engine to be managed, or reinvested in?"** — shows you looked at the whole company.
-6. **"Where does storage fit — is the BBU/supercap layer something you build or integrate?"** — opens the conversation you probably most want.
+**About the territory**
 
-**The one that will be remembered:** *"When the half-year numbers come out at the end of the month, what will you personally be looking at first?"* Warm rather than adversarial, proves you know the calendar, and almost nobody else will ask it.
+1. **"Am I building the first North American reference win, or is there one already that I'd be scaling?"** — The most important question, because the answer defines the job. You already suspect the former (first hyperscaler volume delivery is expected to be domestic), so asking shows you read the record and are walking in clear-eyed.
+2. **"Where does the North American number actually come from first — hyperscalers directly, the ODMs, or growing the network-power base at accounts like Cisco and Arista?"** — Names the three plausible paths and makes them tell you which is real.
+3. **"Does the ecosystem seat translate into ODM design-ins, or do you still win each one separately?"** — The real commercial question underneath the thesis.
+
+**About the sale itself**
+
+4. **"When a US customer raises country of origin, what's the answer that's actually been working?"** — The best question available. Respectful, assumes competence, gets them talking about what they think about most, and whatever they say is the most useful thing you could learn before day one.
+5. **"Is the Dallas lab a sales instrument or an engineering one right now, and who walks customers through it?"** — Treats their newest investment as a commercial asset, which is how a sales leader thinks about it.
+6. **"How is the desk structured — do I own accounts end to end, or is it a spec-in role that hands off to whoever holds the ODM relationship?"** — Practical, and shows you know design-in selling has that seam.
+7. **"What does pre-sales engineering support look like in-region?"** — In a technical design-in sale this is the difference between a workable territory and an impossible one.
+
+**The one that will be remembered:** *"When the half-year numbers land at the end of the month — does that change anything about how you sell here, or is it mostly a capital-markets event from where you sit?"* It proves you know the calendar, it is warm rather than adversarial, and it draws a line between the equity story and the sales motion that most candidates never see.
 
 ## Vocabulary
 
@@ -146,7 +218,7 @@ Pick three or four; don't run the list.
 | VFD | Variable-frequency drive — the industrial-automation product; controls motor speed by synthesizing AC at a chosen frequency |
 | PCS | Power conversion system — the inverter block in battery storage; the bridge to the storage world |
 
-## Ten-question self-test
+## Twelve-question self-test
 
 Answer out loud before checking. Recall is what makes it stick.
 
@@ -160,6 +232,8 @@ Answer out loud before checking. Recall is what makes it stick.
 8. What happened to FY2025 profit, and why?
 9. What is the single most encouraging recent number?
 10. What happens at the end of August, and why does it matter?
+11. Which market is the first hyperscaler volume delivery expected in, and why does that matter to you?
+12. Name the strongest single answer to "you're a Chinese supplier".
 
 <details><summary>Answers</summary>
 
