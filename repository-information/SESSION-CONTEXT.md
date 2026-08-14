@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-14 01:59:01 AM EST
+**Repo version:** v02.41r
+
+**What we worked on — the AIDC market report became a publishable document, then Megmeet interview prep took over:**
+
+Two distinct arcs in one session. The first turned the existing market report into a real deliverable; the second was triggered by the developer having a Megmeet interview the next morning and ran to a regulatory correction that fed back into the dossier set.
+
+**Arc 1 — the AIDC market report as a document (v02.33r, v02.34r)**
+- **v02.33r** — built `repository-information/aidc-market-report-print.html` and `repository-information/AIDC-MARKET-REPORT.pdf`: 29 pages, **12 figures, 17 tables**, typeset to the Profiler `bloomberg` export skin from `PROFILER-STYLES.md` + `Profiler.html`. Added `scripts/build-aidc-report-pdf.mjs`, which drives the pre-installed Chromium over the **DevTools Protocol** rather than the `--print-to-pdf` CLI flag — only `Page.printToPDF` accepts a custom running header/footer, which is how the report got `Page N of M`. Prose competitor lists became comparison tables per the developer's instruction
+- **Fixed the "crossed out text" the developer reported** — it was a real Markdown bug, not a rendering glitch: 117 single `~` characters were doing duty as "approximately", and GFM treats a matching pair of single tildes on one line as strikethrough. All replaced with `≈`
+- **v02.34r** — issued the report in **all five** registered writing styles. Refactored the stylesheet onto style-scoped CSS custom properties so a skin is ~10 lines of overrides; a bare `node scripts/build-aidc-report-pdf.mjs` renders all five editions **from a single page load**, so they cannot drift in content. Registered the report as a **second display-layer consumer** in `PROFILER-STYLES.md` with a standing instruction to mirror skin changes across both
+
+**Arc 2 — Megmeet interview prep (v02.38r–v02.41r)**
+- **v02.38r** — `repository-information/study-prep/megmeet/megmeet-interview-brief.md` plus a published artifact. Deliberately a *companion* to the existing `megmeet-lesson-plan.md`: the lesson plan teaches the physics, the brief teaches the room
+- **v02.39r** — retuned for a **sales role** interviewing with **Yuan Meng, Head of NA Sales & Marketing**. Added the NA go-to-market picture, five field objections with answers, and sales-shaped questions
+- **v02.40r** — the developer asked whether the FCC inverter ban hurts Megmeet. **The repo's data was stale and their premise was right.** Verified against current sources; added a full section. Also executed the **mandatory changelog archive rotation** (counter hit 101; the 2026-08-02 date group of 11 sections rotated out)
+- **v02.41r** — refreshed the **Huawei Digital Power dossier to profileVersion 2** to correct the same stale FCC record; v1 archived per the Archival Procedure
+
+**The FCC finding, because it matters beyond Megmeet:** the rule was adopted **2026-07-28** as an FCC Covered List addition — not the pending China-specific draft the dossiers still described. "Foreign-produced" is a **Buy American domestic-end-product test** (48 CFR 25.101(a); US manufacture + >65% domestic content through 2028, 75% from 2029), so it is an **origin rule, not a China rule** — Delta, Lite-On and US brands manufacturing offshore are caught alike. It is **prospective only** (pre-28-July authorizations survive), and there is a Conditional Approval route through the Department of War or DHS to 2028-01-01 requiring a time-bound US onshoring plan. The definition is a **two-prong test**: bi-directional DC↔AC conversion **AND** remote connectivity via "Wi-Fi, cellular, Bluetooth or another similar connection". Sungrow shed roughly **CNY 100B (~$14.8B)** of market value and is publicly arguing it falls outside the second prong because it restricts connection activity to **wired** links — which independently corroborates the read that wired-managed rack power (Megmeet PSUs, shelves, sidecars, SSTs) sits outside. That wired-vs-wireless question is unresolved and is the variable to watch.
+
+**Where we left off:**
+- Everything committed, pushed and auto-merged; working tree clean at v02.41r
+- The interview brief artifact is live and updated in place (same URL across all three revisions)
+- The developer's interview was imminent at session end — "tomorrow morning" said at ~01:00 EST on Friday 2026-08-14, so plausibly that morning
+
+**Key decisions made:**
+- **The report stays undeployed** in `repository-information/` — sales-sensitive, consistent with the prior session's call
+- **Chart palette is style-invariant across all five skins.** Validated once with the `dataviz` six checks against the white print surface; re-tinting per skin would mean re-validating five palettes and would put the data layer at the mercy of a typographic choice. Stated in the report's method section rather than left implicit
+- **The `bloomberg` edition keeps the unsuffixed filename** as canonical so existing links never break
+- **`REPO-ARCHITECTURE.md` deliberately not updated** for the build script — its Scripts subgraph carries shared infrastructure only and already omits `check-gas-inner-scripts.js` and `playwright-harness.py`. Flagged to the developer rather than skipped silently
+- **Yuan Meng is not in the dossier and no background was invented.** The brief says so on its face and supplies the *function* instead (Roya Movahedi, CMO US/international, is the only US-facing leader on record). Offered to research them; not taken up
+- **The 2026-06-30 FCC draft entry was retained and marked SUPERSEDED**, not deleted — the delta between what was trailed and what was adopted is itself analytically useful
+- **The Huawei refresh was a targeted correction, not a full 50–70 source re-research pass** — that is what the developer agreed to. A full sweep is still available
+
+**Active context:**
+- Branch `claude/aidc-market-report-pdf-ghbpsi` (deleted from remote after each auto-merge; recreate by pushing)
+- Repo **v02.41r** · Profiler v01.26w · 9 tracked pages all 🟢 · CHANGELOG counter **91/100** (headroom restored by this session's rotation)
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- No TODO items, no active reminders
+- **A parallel session is mid-project on the voice meeting-notes app** (see Previous Sessions) — Build B, speaker identification, is unstarted. Do not assume that work is finished
+- **The container clone is shallow.** SHA enrichment during changelog rotation failed on all 11 sections until `git fetch --deepen=250` recovered the history; all 50 archive headers now carry commit links. Deepen first next time rotation fires
+- **Open thread the developer deferred:** "further refine the AIDC market report" — explicitly saved for later
+
+**Recommendation for next session:**
+- **Refine the AIDC market report, starting with §6.4 and §8.4.** Those two sections still describe the FCC action as a pending China-specific draft, which now contradicts the refreshed Huawei dossier — and since the report claims in §9 that every fact traces to a dossier source, that is an integrity gap rather than a cosmetic one. It also folds directly into the refinement the developer deferred, so the correction and the improvement land together. Rebuild all five PDF editions afterwards with `node scripts/build-aidc-report-pdf.mjs`
+- **To continue:** type `refine the AIDC market report`
+
+## Previous Sessions
+
 **Date:** 2026-08-13 03:45:45 AM EST
 **Repo version:** v02.36r
 
@@ -53,36 +102,3 @@ This long session designed the app the developer asked for (transcribe meetings 
 **Recommendation for next session:**
 - **Build B — speaker identification.** It is the largest remaining gap and the one the developer will feel immediately: right now a meeting transcript is a single wall of text with no idea who said what, which makes the generated meeting notes in Build C impossible to attribute. Start by deciding where diarization runs — the same 4090 via `pyannote` bolted onto `scripts/transcribe.ps1` is the natural fit given transcription already lives there, and it can label the `.vtt` before it is ever uploaded. Then layer the five approved training accelerations on top
 - **To continue:** type `start build B — speaker identification`
-
-## Previous Sessions
-
-**Date:** 2026-08-10 10:25:20 PM EST
-**Repo version:** v02.32r
-
-**What we worked on (v02.32r — the AIDC market report):**
-- Generated **`repository-information/AIDC-MARKET-REPORT.md`** (251 lines, 9 sections) — the sales-strategy deliverable the 40-company Profiler expansion was built for, synthesized **exclusively from the dossiers with zero new research**
-- Method (documented in the report's §9): 8 parallel extraction agents read all 40 dossiers → 572 source-tagged themed claims (40/40 coverage) → single-author synthesis → 4 adversarial verifier agents checked 353 report claims against the dossiers (6 errors + 14 nitpicks, all fixed pre-commit)
-- Structure: 12 confidence-tagged Key Judgments; demand backdrop (~$735–760B big-four capex, GW-denominated demand, circular-financing risk); the five requested themes (turbine/transformer scarcity economics, behind-the-meter power with xAI/Crusoe as templates, the 800 VDC transition, BESS competitive dynamics, craft-labor bottleneck); a sales playbook (40-company account map, theme-keyed talk tracks, timing triggers wired to the armed refresh Routines, pipeline risks); method/citation notes. Every fact cites its dossier source label + publication date; `strategyRead`-derived items are labeled [Analysis] with dossier confidence tags preserved
-- Session start also auto-reconstructed stale session context (v02.30r → v02.31r) per the checklist
-
-**Where we left off:**
-- v02.32r pushed and auto-merged to main; working tree clean; the report is deliberately **not deployed** (lives in `repository-information/` like study-prep — sales-sensitive content)
-- Two container restarts hit mid-verification; the Workflow journal-cache resume recovered both times losslessly
-
-**Key decisions made:**
-- Report location: `repository-information/`, not the Profiler app — rendering it in-app would be a new feature decision (schema + renderer), not a file move
-- §8.3's earnings-calendar dates are labeled as coming from the armed Routine schedule (operational data), not dossier content — a verifier catch, kept as a standing convention
-- Ranking claims always name the ranking body (Wood Mackenzie vs Benchmark vs InfoLink vs SNE differ) — carried into the report's §9 as a customer-facing rule
-
-**Active context:**
-- Branch `claude/aidc-market-report-tdwz5g` (deleted from remote after each auto-merge; recreate by pushing)
-- Repo v02.32r · Profiler v01.24w · v01.08g · 9 tracked pages all 🟢 · CHANGELOG counter 93/100
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No TODO items, no active reminders
-- Near-dated: Sinexcel H1 report due 2026-08-11; its one-shot refresh Routine fires 2026-08-12 (fresh session); Megmeet H1 08-27 is the report's other big checkpoint
-
-**Recommendation for next session:**
-- **Update the report with Sinexcel H1** — after the 08-12 refresh Routine lands the H1 2026 disclosure in the Sinexcel dossier, fold the first-AIDC-revenue read into `AIDC-MARKET-REPORT.md` §5.4 and §8.3. It is the nearest-dated fact that materially changes the report, and it exercises the §9 maintenance loop for the first time
-- **To continue:** type `update the report with Sinexcel H1`
-
-Developed by: ShadowAISolutions
