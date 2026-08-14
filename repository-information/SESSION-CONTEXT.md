@@ -6,6 +6,53 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-14 02:42:25 AM EST
+**Repo version:** v02.43r
+
+**What we worked on — the Megmeet prep pack became downloadable PDFs, via a renderer built to not drift:**
+
+A short, narrow session picking up directly from the AIDC market report PDF work. The ask was one thing — "output the Megmeet Interview Brief in a downloadable PDF" — and the interesting part is the design call underneath it.
+
+**v02.42r — `scripts/build-study-prep-pdf.mjs` + `MEGMEET-INTERVIEW-BRIEF.pdf` (13 pages, 15 sections)**
+- **The renderer parses the Markdown directly rather than typesetting a hand-authored HTML twin.** This is the deliberate divergence from `build-aidc-report-pdf.mjs`, whose source *was* authored as HTML. `megmeet-interview-brief.md` already exists and is the file the developer edits, so an HTML copy would drift the moment they touched it. The `.md` stays the single source of truth
+- Same Chromium-over-DevTools-Protocol plumbing as the AIDC script (only `Page.printToPDF` accepts a custom running header/footer; the `--print-to-pdf` CLI flag cannot). No npm dependencies. The CDP client is duplicated between the two scripts rather than extracted — refactoring the working AIDC script as a side effect was judged out of scope
+- Small Markdown subset by design: headings, paragraphs, GFM pipe tables, blockquotes, lists, `<details>`, inline emphasis/code/links, and (added in v02.43r) fenced code
+- **Three rendering decisions that were bugs first.** (1) **Proportional table columns** — weighted by average cell text length, clamped 11–58%; equal thirds under `table-layout:fixed` made the five-objections table unreadable. (2) **`<details>` forced open** — Chromium prints a collapsed `<details>` as *only* its `<summary>`, which would have silently dropped the self-test answers. (3) **Blockquotes split by role** — a bolded lead-in renders as a boxed caution, a line opening with a quote mark renders as a tinted "Say it like this" pull quote, because the brief uses `>` for both
+- Reading order fix: whatever sits between the H1 and the first H2 is the document's own framing, so it is lifted above the contents block instead of being stranded after it
+
+**v02.43r — `MEGMEET-LESSON-PLAN.pdf` (5 pages) + fenced code support**
+- The lesson plan needed a capability the brief never exercised: **fenced code blocks**, for its two ASCII architecture diagrams. Content is escaped and never inline-processed. Print style is **non-wrapping 7.5pt mono — a wrapped ASCII diagram is a destroyed one**; that fits ~118 columns against a widest-block-in-repo of 92. A wider future block will clip rather than wrap, which is the correct failure mode but is a real limit
+- Contents block collapses to one column at ≤6 sections; the lesson plan's five long module titles balanced badly two-up
+- **The brief's PDF was rebuilt to check for regression, then reverted** — `cmp -l` found exactly 14 differing bytes, all of them the PDF `/CreationDate`. Re-committing a 350 KB blob to move a timestamp is history churn
+
+**Where we left off:**
+- Everything committed, pushed and auto-merged; working tree clean at v02.43r
+- Both PDFs delivered to the developer in chat as downloadable files
+- **The developer's Megmeet interview is today, Friday 2026-08-14** (`date -d` confirmed the weekday). Both halves of the prep pack are in hand
+
+**Key decisions made:**
+- **One skin, not five.** The AIDC report ships in all five registered writing styles and `PROFILER-STYLES.md` carries a standing instruction to mirror skin changes across its consumers. Registering a third consumer for a prep document would take on that maintenance obligation for no reader benefit, so the script hard-codes the canonical `bloomberg` skin and stays out of the registry. **Do not "helpfully" add the other four**
+- **The intermediate HTML is staged in a temp dir, not committed.** A committed HTML twin is exactly the drift the design avoids. `--keep-html` writes it beside the PDF when wanted for inspection
+- **`REPO-ARCHITECTURE.md` deliberately not updated**, following the v02.33r precedent — the Scripts subgraph carries shared infrastructure only and already omits `check-gas-inner-scripts.js`, `playwright-harness.py` and `build-aidc-report-pdf.mjs`
+- **The brief's self-test content gap was flagged, not fixed** — twelve questions, ten answers. Q11 and Q12 are both answered in the body, so it may be deliberate. Developer-owned content; do not write answers into it unasked
+- **Both prep documents are registered in the script's `DOCS` map**; a bare `node scripts/build-study-prep-pdf.mjs` rebuilds both. New prep docs are registered by adding a `DOCS` entry
+
+**Active context:**
+- Branch `claude/megmeet-interview-brief-pdf-0dn6an` (deleted from remote after each auto-merge; recreate by pushing)
+- Repo **v02.43r** · Profiler v01.26w · 9 tracked pages all 🟢 · CHANGELOG counter **93/100**
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- No TODO items, no active reminders
+- **Both PDFs are build artifacts.** Edit either `.md` and the PDF goes stale until `node scripts/build-study-prep-pdf.mjs` is re-run
+- **Carried forward from the dropped v02.36r entry (2-session cap):** a parallel session built the voice meeting-notes app — capture and transcription work end to end on real hardware (Whisper `large-v3-turbo` on the developer's RTX 4090 via `scripts/transcribe.ps1`), but **Build B (speaker identification) and Build C (meeting notes + export) are both unstarted**. Whisper does not diarize, so transcripts are one unlabeled run of text. Do not assume that work is finished
+- **The container clone is shallow** — `git fetch --deepen=250` first if changelog archive rotation fires and SHA enrichment fails
+- **Still open, unchanged from last session:** `AIDC-MARKET-REPORT.md` §6.4 and §8.4 describe the FCC action as a pending China-specific draft, contradicting the refreshed Huawei dossier. The report claims in §9 that every fact traces to a dossier source, so this is an integrity gap
+
+**Recommendation for next session:**
+- **Refine the AIDC market report, starting with §6.4 and §8.4.** Unchanged from last session and still the highest-value open item: the report contradicts its own sourcing claim on the FCC action, and correcting it folds directly into the refinement the developer explicitly deferred. Rebuild all five editions afterwards with `node scripts/build-aidc-report-pdf.mjs`
+- **To continue:** type `refine the AIDC market report`
+
+## Previous Sessions
+
 **Date:** 2026-08-14 01:59:01 AM EST
 **Repo version:** v02.41r
 
@@ -52,53 +99,3 @@ Two distinct arcs in one session. The first turned the existing market report in
 **Recommendation for next session:**
 - **Refine the AIDC market report, starting with §6.4 and §8.4.** Those two sections still describe the FCC action as a pending China-specific draft, which now contradicts the refreshed Huawei dossier — and since the report claims in §9 that every fact traces to a dossier source, that is an integrity gap rather than a cosmetic one. It also folds directly into the refinement the developer deferred, so the correction and the improvement land together. Rebuild all five PDF editions afterwards with `node scripts/build-aidc-report-pdf.mjs`
 - **To continue:** type `refine the AIDC market report`
-
-## Previous Sessions
-
-**Date:** 2026-08-13 03:45:45 AM EST
-**Repo version:** v02.36r
-
-**What we worked on — the voice meeting-notes app, capture + transcription now working end to end:**
-
-This long session designed the app the developer asked for (transcribe meetings from phone audio → identify speakers → generate exportable meeting notes → file into the Profiler field note of the company met with) and got the first two thirds of it **working on real hardware**.
-
-- **v02.25r–v02.30r (earlier in the session)** — field notes migrated from the public repo into Drive behind the Master ACL; the GitHub issue-form intake deleted; browser-side meeting-recording upload built and then debugged through four real-device failures: GIS not loaded on a resumed session, missing `googleapis.com` in CSP, the Android picker's ~10-minute inline-capture cap, a silent hang caused by requesting Drive consent from an async continuation (fixed by moving it onto the button's click handler + adding the missing `error_callback` + a watchdog), and finally a folder tree built in the **wrong Drive** — `DriveApp` acts as the account that *deployed* the web app, not the signed-in user, so the tree was rebuilt browser-side with `drive.file`, mirroring `Receipts App/`
-- **v02.35r** — **File transcript** control in the note box: one pick uploads the `.vtt` into `2-transcribed/`, moves its recording out of `1-awaiting-transcription/` to join it (matched by filename stem via `ovBaseName`), and attaches the same file to the note. New helpers `ovFileTranscript` / `ovDriveList` / `ovDriveMove`; `pendingFiles()` merges the transcript into the note's attachments, de-duplicated by name+size
-- **v02.36r** — `scripts/transcribe.ps1`, the local Whisper launcher. **Confirmed present on `main`** (67 lines, merged as `e21f497`)
-
-**Transcription resolved differently than planned.** The developer disclosed an **RTX 4090** mid-session, which killed the browser-vs-paid-API question the spike existed to answer — native is both free and much faster. So Whisper runs on their PC via `whisper-ctranslate2` (`large-v3-turbo`, `--device cuda --compute_type float16 --vad_filter True --language en`, VTT out) and the app just accepts the transcript. Build A shrank from "run Whisper in the app" to "already done".
-
-**Setup gotchas, all solved and encoded in the launcher** (worth not rediscovering): Python **3.12**, not 3.14 — ctranslate2 has no Windows wheel for 3.14; PowerShell execution policy needed `RemoteSigned` for the venv activator; and `RuntimeError: Library cublas64_12.dll is not found` because pip puts CUDA DLLs in `site-packages\nvidia\**\bin`, which Windows does not search — the launcher prepends those folders to `PATH`.
-
-**Where we left off — verified on real hardware:**
-- Record (phone) → attach → own-Drive folder → transcribe (4090) → **File transcript** → note. Run twice: the CATL clip (12m 30s, 11.7 MB) and the Hithium clip, the second one dragged onto the launcher window
-- The 11.7 MB upload crossed the 6 MB threshold and showed a **climbing percentage**, which proves the resumable chunked path works against real Drive: the session `Location` header is CORS-exposed, the 308 handshake parses, and chunk PUTs authorize off the session URL alone
-- Measured **131 kbps** → 1 hour ≈ 56 MB / 8 chunks, 2 hours ≈ 112 MB / 15 chunks; a dropped connection costs ≤8 MB
-- Everything pushed and auto-merged; working tree clean
-
-**Where this sits in the overall plan:**
-
-| Part | State |
-|---|---|
-| Capture (record → Drive) | **Done**, verified twice on hardware |
-| Build A — transcription | **Done**, natively rather than in-app |
-| Build B — speaker ID | **Not started.** Whisper does not diarize; transcripts are one unlabeled run of text |
-| Build C — meeting notes + export | **Not started.** No structured document, no Word/PDF export |
-
-**Key decisions made:**
-- **Native GPU transcription over in-browser** — the 4090 makes the browser path strictly worse for long meetings. In-app transcription stays possible later for machines without a GPU, but is not the primary path
-- **Two Drive trees, split by ownership** — notes stay in the deployer's Drive (the backend must read them server-side); recordings and transcripts live in the user's own Drive under `Profiler App/`, because those are what the developer browses
-- `scripts/transcribe.ps1` is versioned deliberately: it is the spec Build A must match if the app ever absorbs transcription, and it is readable by future sessions that cannot see the developer's PC. It is **not** auto-installed — copy it to `%USERPROFILE%\whisper\` after changes
-- Confidence, notes storage, and the five speaker-training accelerations (company scoping, confidence-gated auto-accept, skip enrollment, auto-detect self, self-tuning threshold) all still stand as approved earlier
-
-**Active context:**
-- Branch `claude/voice-meeting-notes-app-ddgbxb` (deleted from remote after each auto-merge; recreate by pushing)
-- Repo v02.36r · Profiler v01.25w · v01.08g · 9 tracked pages all 🟢 · CHANGELOG counter 97/100 — **rotation fires soon**
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No TODO items, no active reminders
-- **Open gaps, none blocking:** (a) the approved **one-tap 55/80 confidence question was never built** — the form still shows a 0–100 dropdown in steps of 5; (b) no resume across page reload for a long upload (session URL is in-memory only); (c) `ovDriveRetryChunk` never exercised against a real network error; (d) the Apps Script deployment runs as an account that is not jonyang92@gmail.com, which is why the notes log is not in their Drive
-- Parallel sessions are active on this repo (an AIDC market report landed mid-session). **Commit before rebasing, never `git stash pop` across a moved base** — a stash pop silently left conflict markers that got committed this session and had to be reset before pushing
-
-**Recommendation for next session:**
-- **Build B — speaker identification.** It is the largest remaining gap and the one the developer will feel immediately: right now a meeting transcript is a single wall of text with no idea who said what, which makes the generated meeting notes in Build C impossible to attribute. Start by deciding where diarization runs — the same 4090 via `pyannote` bolted onto `scripts/transcribe.ps1` is the natural fit given transcription already lives there, and it can label the `.vtt` before it is ever uploaded. Then layer the five approved training accelerations on top
-- **To continue:** type `start build B — speaker identification`
