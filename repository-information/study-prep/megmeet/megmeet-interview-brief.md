@@ -132,6 +132,43 @@ You are not being hired to design this — you are being hired to sell it to peo
 
 **The second half of the position:** Thailand phase II capacity, India localisation, the Dallas test lab, and the Hong Kong listing all point one way — a mainland company packaging itself to be procurable by American AI-infrastructure buyers despite tariff and geopolitical friction. Named network-power customers already include Ericsson, Cisco, Juniper, Arista, Accton, so the Western-OEM muscle exists and is being redirected.
 
+## The July 2026 FCC inverter rule — what it does and does not touch
+
+On **28 July 2026** the FCC added **foreign-produced connected power inverters** (and advanced robotic devices) to its Covered List, effective immediately. Covered-List products cannot receive FCC equipment authorization, which bars them from being imported, marketed or sold in the US.
+
+> **Note on sourcing:** this section was verified against current sources on 2026-08-14, *not* from the dossier — the Huawei dossier still records this as a **draft, China-specific rule** from the 30 June Reuters report and is stale. See the note at the end of this section.
+
+### The three things almost everyone gets wrong
+
+1. **It is not a China rule.** A device is "foreign-produced" if it fails the Buy American *domestic end product* test at 48 CFR § 25.101(a) — manufactured in the US with domestic component cost above 65% through 2028, rising to 75% in 2029. It turns on **where a product is made, not who makes it**. An American brand manufacturing offshore is caught. **So are Delta and Lite-On.**
+2. **It is prospective only.** Models authorized before 28 July keep their authorization and can still be imported and sold. This is a new-authorization freeze, not a market withdrawal.
+3. **There is a way out.** Conditional Approval from the Department of War or DHS, applications until 1 January 2028, requiring corporate-ownership disclosure, a full bill of materials and supply-chain map, and a **time-bound US onshoring plan** with capital commitments and milestones. No published review timeline, so approval is not guaranteed.
+
+### The definition is a two-part test — both prongs must be met
+
+| Prong | What it says |
+|---|---|
+| **Conversion** | A **bi-directional** power device or system converting DC→AC *or* AC→DC — enumerated as microinverters, string inverters, central inverters, and hybrid/battery-based inverters |
+| **Connectivity** | Contains components enabling remote communication, control, sensing, data collection or monitoring through **Wi-Fi, cellular, Bluetooth or another similar connection**. Stated rationale: remote firmware push by a foreign adversary |
+
+### Does it hit Megmeet? Three different answers
+
+| Product line | Exposure | Reasoning |
+|---|---|---|
+| **AI data-center power** (PSUs, shelves, sidecar, SST) | **Probably out — but unsettled** | These convert AC→DC, which is inside the conversion prong. But they are **unidirectional**, not bi-directional; none is a micro/string/central/hybrid inverter; and management is **wired** (PMBus on the PSU, IPMI/Redfish/SNMP over Ethernet on the shelf), not Wi-Fi/cellular/Bluetooth. On a plain reading of both prongs they fall outside. The live ambiguity is **"another similar connection"** — the industry is already flagging that wired-connected *central* inverters sit in a grey zone, and the FCC has told manufacturers not to assume devices are out of scope |
+| **PV / storage / EV-charging components** | **Genuinely exposed** | Where Megmeet actually intersects the rule. Hybrid and battery-based inverters are named categories, storage PCS is bi-directional by design, and EV charging equipment is within the reported scope. Note the timing: Megmeet launched a **40 kW AC-DC and DC-DC EV-charging module platform on 31 July 2026 — three days after the rule took effect** |
+| **Everything else** (appliance, industrial, welding, on-vehicle) | **Out** | Not power inverters within the definition; vehicles are among the excluded systems |
+
+### The answer that will land
+
+> "My read is it mostly misses the rack-power business. The definition is a two-part test — a bi-directional inverter *and* wireless connectivity — and a server PSU or power shelf is unidirectional AC-to-DC with wired management, so on a plain reading it's outside. Where it does bite is the PV, storage and EV-charging side, which is a much smaller slice. The part I find genuinely interesting is that it's an origin test, not a China test — Buy American domestic-end-product — which means Delta and Lite-On are foreign-produced too. If the interpretation ever stretches toward IT power, it doesn't hit us asymmetrically; it hits the incumbents who have far more US SKUs to re-authorize. And the conditional-approval route runs through a US onshoring commitment, which is a strategic question rather than a compliance one."
+
+### Where to hedge
+
+No source found addresses data-center or IT power supplies directly — **the read above is inference from the definition, not a sourced ruling**, and the FCC's own FAQ and determination PDF returned 403 and could not be read. Two further variables turn on facts not public: whether any specific Megmeet SKU carries a wireless module, and where each is manufactured. Say "my read", not "the rule says". If pushed hard, the correct answer is that this is a question for counsel and the certification body, not a salesperson — that answer is a strength, not a dodge.
+
+**Dossier staleness flagged:** `huawei-digital-power.profile.json` records the 2026-06-30 Reuters draft-rule report and a strategyRead judging the Megmeet spillover "unconfirmed and scope-dependent". Both predate the 28 July action and the country-agnostic scope. The Huawei dossier and `AIDC-MARKET-REPORT.md` §6.4/§8.4 should be refreshed.
+
 ## Recent activity (newest first)
 
 The pattern to notice: **the product and capacity news is relentlessly positive while the financial news is relentlessly hard** — and both are true at once. That tension *is* the company right now.
@@ -193,6 +230,7 @@ With a sales leader the bar is specific: ask about the **go-to-market**, not the
 5. **"Is the Dallas lab a sales instrument or an engineering one right now, and who walks customers through it?"** — Treats their newest investment as a commercial asset, which is how a sales leader thinks about it.
 6. **"How is the desk structured — do I own accounts end to end, or is it a spec-in role that hands off to whoever holds the ODM relationship?"** — Practical, and shows you know design-in selling has that seam.
 7. **"What does pre-sales engineering support look like in-region?"** — In a technical design-in sale this is the difference between a workable territory and an impossible one.
+8. **"Has the July FCC covered-list action changed anything about how you're planning US authorizations for the power-products line — and does it move the calculus on US manufacturing versus Thailand?"** — Current, specific, and it shows you understand the rule is an origin test with a US-onshoring escape hatch rather than a China ban.
 
 **The one that will be remembered:** *"When the half-year numbers land at the end of the month — does that change anything about how you sell here, or is it mostly a capital-markets event from where you sit?"* It proves you know the calendar, it is warm rather than adversarial, and it draws a line between the equity story and the sales motion that most candidates never see.
 

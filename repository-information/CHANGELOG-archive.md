@@ -77,7 +77,155 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
-## [v01.39r] — 2026-08-01 11:52:43 PM EST
+## [v01.50r] — 2026-08-02 09:42:54 PM EST — [b71d24e](https://github.com/LightAISolutions/Sales/commit/b71d24e87e61efca66ed241d5be799f73c567271)
+
+> **Prompt:** "Stick with Gmail sign-in as planned and kick off Phase 1 (data model + project intake wizard)."
+
+### Added
+
+#### `Scraper.gs` — v01.05g
+
+##### Added
+- News Scraper Phase 1 data model: `ensureScraperTabs_()` creates 6 spreadsheet tabs (Projects, Schedules, Articles, Reports, Profiles, UsageLog) with frozen header rows, idempotently
+- Session-gated project management routes `createProject`, `listProjects`, `getProject`, `updateProject`, `setProjectStatus` (active/paused/archived), all owner-scoped by email via `validateSessionForData` and reached through the iframe-free fetch transport (doPost actions + doGet `api` mirror via shared `handleProjectAction_` dispatcher)
+- Payload normalization/validation (`scNormalizeProjectPayload_`) with bounded strings/lists, frequency whitelist (daily/weekly/monthly/quarterly/biannual/annual/custom), delivery whitelist (inapp/email/both), URL-validated custom sources, and a 10-active-projects-per-user cap
+- Per-project schedule rows (one per frequency) written to the Schedules tab; audit entries via `dataAuditLog`
+
+#### `Scraper.html` — v01.05w
+
+##### Added
+- News Scraper app layer (`#scraper-app`): project dashboard with cards (status/frequency/delivery chips), Refresh, Edit, Pause/Resume, and two-step inline Archive confirm; activated from `showApp()` via `window._scraperInit` (inline `// PROJECT:` hook)
+- 5-step project intake wizard (basics → scope → sources → schedule → review) with per-step validation, custom-frequency reveal, review summary, and create/update submission through `_gasPost`
+- `scraper-app` registered in `_htmlLayerEls` (PROJECT OVERRIDE) so the HTML layer toggle hides/shows the dashboard
+
+### Fixed
+- README `Repo version:` display corrected (was showing v01.48r while the repo version file was at v01.49r)
+
+## [v01.49r] — 2026-08-02 08:37:29 PM EST — [0327874](https://github.com/LightAISolutions/Sales/commit/032787455cbe00851bd2d4ae6948d9dbf7c27be6)
+
+> **Prompt:** "Delete everything related to this "spain-argentina" page. It was just a test."
+
+### Removed
+- Deleted the spain-argentina test page and all its tracking files: `live-site-pages/spain-argentina.html`, `html-versions/spain-argentinahtml.version.txt`, `html-changelogs/spain-argentinahtml.changelog.md`, `html-changelogs/spain-argentinahtml.changelog-archive.md` (all added in v01.15r)
+- Removed its README tree entries (Standalone Utilities page entry + html-versions and html-changelogs subtree lines) and its REPO-ARCHITECTURE.md flowchart node `SPAINARG_PAGE` with its serves / version-polling / template-copy edges (flowchart pako URL regenerated and decompression-verified)
+- Historical mentions in CHANGELOG.md (v01.15r section) and SESSION-CONTEXT.md are records of past sessions and were intentionally left intact
+
+## [v01.48r] — 2026-08-02 08:31:18 PM EST — [ca4dd1c](https://github.com/LightAISolutions/Sales/commit/ca4dd1c754302ca5a8f07416763262f16c92ffc9)
+
+> **Prompt:** "Also translate the review screen's category and subcategory dropdowns."
+
+### Changed
+
+- `Receipts.html` (v01.28w) — the review screen's category select (`fillCategories`) and per-item subcategory selects (`fillSubcatSelect`, incl. the blank "Subcategory —"/"子类别 —" option and preserved off-list values) now label via `tCat()`; `applyAppLanguage`'s value-keyed option pass extended to `#rr-category` and `.rr-cat` so a language toggle relabels an open review card too. Stored values remain English
+
+## [v01.47r] — 2026-08-02 08:10:52 PM EST — [caa2275](https://github.com/LightAISolutions/Sales/commit/caa2275224c718b7afae411dae486ea81010674f)
+
+> **Prompt:** "I want the Simplified Chinese translation option to translate everything, including:
+>
+> * "0 receipts * August 2026" and "No receipts saved yet this month" at the top of the dashboard.
+> * All categories (Groceries, Dining, etc) in both History and Reports.
+> * All subcategories for all categories in Reports.
+> * In Daily Reports, change Mon-Sun to their Simplified Chinese equivalents while keeping the ", MM/DD/YY" latter half.
+> * In Monthly Reports, change the months to their Simplified Chinese equivalents.
+> * In Bi-annual Reports, change the "first/second half of 2026" into their Simplified Chinese equivalents."
+
+### Added
+
+- `Receipts.html` (v01.27w) — `I18N_CAT_ZH` (~90 entries) + `tCat()` for category/subcategory display names: History and Reports dropdown labels relabel via `option.value` (stored English values untouched — lossless both directions), report By-category / By-subcategory rows, the Line Items section title and note, and the month card's top-category rows all display 中文 in Chinese mode
+- `Receipts.html` (v01.27w) — localized period labels in `bucketLabel()`: daily `周三, 7/29/26` (RP_DAYS_ZH; date half unchanged), monthly `2026年7月`, bi-annual `2026年上半年/下半年`; weekly and annual stay numeric
+- `Receipts.html` (v01.27w) — month card fully localized: `N 张收据 · 2026年8月` (`zh-CN` locale month name), `本月还没有保存的收据` empty state, `其他项目` for the "Everything else" row; the language toggle now also calls `refreshMonthCard()` so the card flips immediately
+
+## [v01.46r] — 2026-08-02 05:44:59 AM EST — [ca13e7b](https://github.com/LightAISolutions/Sales/commit/ca13e7b49352d550e4fb2f8975ba5bb075275944)
+
+> **Prompt:** "In the Settings cog menu, include an option to change the app language from English to Simplified Chinese."
+
+### Added
+
+- `Receipts.html` (v01.26w) — app language toggle (English / 简体中文) in the Settings ⚙️ panel (`#rsp-lang`, persisted as `Receipts_lang` in localStorage). Chrome-level i18n layer: `I18N_ZH` dictionary + `t()` for dynamic strings; `applyAppLanguage()` swaps static elements via a config list (`L10N_ELS`) plus dataset-keyed walkers for field labels, checkbox tails, stamp labels, period tabs, and select options (original English remembered in `data-i18n-en` so toggling is lossless). Translated surfaces: landing buttons + stamp labels + month card + date locale, History card, Reports card (period tabs, chips, section titles, Line Items controls, hints, empty states), Sharing card, review-card labels/buttons, Settings panel, affirmations (13 zh equivalents), and a map of common status messages (`I18N_STATUS_ZH`). Receipt data (merchants, item descriptions, category values) intentionally stays as stored — categories are server-matched data values
+- `t()`/`setStatus` guarded with `typeof` checks — `fillReportCategories` runs at script-eval time before the dictionary vars are assigned, and an unguarded lookup killed the whole script when Chinese was active at page load (caught by the bilingual Playwright pass)
+
+## [v01.45r] — 2026-08-02 05:10:46 AM EST — [06ae13a](https://github.com/LightAISolutions/Sales/commit/06ae13aed12e666eff4712c69ca8fc58524c52f5)
+
+> **Prompt:** "In the Reports section -> Line Items (Subcategory) with "Group by item" checked, if an item has been purchased more than once, show the total amount across all purchases instead of individual prices. We can see the individual prices once we click the line item anyways."
+
+### Changed
+
+- `Receipts.html` (v01.25w) — grouped Line Items rows now show the group's summed spend (`gTot`) as the row amount instead of the latest purchase price; the ×count and low–high range stats are unchanged and per-purchase prices remain in the tap-to-expand history
+
+## [v01.44r] — 2026-08-02 05:05:19 AM EST — [40aec01](https://github.com/LightAISolutions/Sales/commit/40aec01f7c4f8d6d6315627d5e09ed570cd49c78)
+
+> **Prompt:** "The combined viewing works as intended. However, I realized that I cannot view a receipt photo that she uploaded without getting access to her Google Drive Receipt App folder. Make it so that when a user shares view and edit permissions with another user, it automatically gives the other user permission to view the original user's folder."
+
+### Added
+
+- `Receipts.html` (v01.24w) — Drive folder sharing rides along with app grants: `driveShareFolder()` (POST a `reader` permission on the owner's "Receipts App" folder via the owner's `drive.file` token, `sendNotificationEmail=false`) fires on successful `addShare`; `driveUnshareFolder()` (permissions.list → DELETE the grantee's permission, raw fetch since DELETE returns an empty 204) fires on successful `removeShare`
+- `Receipts.html` (v01.24w) — reconciliation in `loadShares()`: when the granted set differs from the `Receipts_folder_perms_synced` localStorage key, every granted email gets `driveShareFolder()` and the key advances only when all succeed — this retrofits folder access for grants made before this feature and self-heals failed Drive calls on the next app open. Must run client-side: the `drive.file` token can only manage permissions on folders the app created for that signed-in user; the server has no access to user Drives
+
+## [v01.43r] — 2026-08-02 04:46:01 AM EST — [cf725a4](https://github.com/LightAISolutions/Sales/commit/cf725a488e697defb840a2c59d5a06c8533625ba)
+
+> **Prompt:** "Approved, but also allow mutual delete."
+
+### Added
+
+#### `Receipts.gs` — v01.16g
+
+##### Added
+- `resolveOwnerSet_()` — combined-view owner resolution: `forOwner '*'` returns the session user plus every owner who granted them access as an ownerEmail → scope map; any other value defers to `resolveOwnerScope_` (single-entry map). Combining never widens access — every entry is backed by an existing Shares-tab grant
+- `listReceipts` / `reportReceipts` now filter rows against the resolved owner set and tag each returned row with `owner` (and `canEdit` in listReceipts); `exportReceipts` accepts `'*'` and the Receipts sheet gains an Owner column (backfill loop indexes shifted accordingly)
+
+##### Changed
+- `deleteReceipt` ownership gate extended for mutual delete: the owner can always delete; any other user needs an edit-scope grant from the row's owner (`getShareScope_ === 'edit'`); everything else still responds `receipt_not_found` (no existence leak)
+
+#### `Receipts.html` — v01.23w
+
+##### Added
+- "Combined (mine + shared)" option (`value '*'`) in the History and Reports "Viewing" pickers when received grants exist; `rhRowOwner()` normalizes each row's owner for detail/edit/photo routing (own rows → `''`); owner chip (`.rh-owner-tag`, name part of the email) on History rows in combined view
+- Delete visibility in combined view follows per-row `canEdit` (edit-grant rows deletable, view-only rows not); single shared views keep delete hidden as before; the client-side own-Drive photo trash now keys off `rhRowOwner` so only the row's owner attempts it
+
+## [v01.42r] — 2026-08-02 04:34:42 AM EST — [944d392](https://github.com/LightAISolutions/Sales/commit/944d392480661436ab3767fca7defd8967ce9896)
+
+> **Prompt:** "Approved - Implement your plan. 
+>
+> Also, I want it to be possible for me and another user to combine our receipts and look at everything together. The real scenario is: my girlfriend and I live together, so everything we buy is shared. Thus, I want all the receipts both of us scan to be visible and editable by both Gmail accounts. Recommend a plan of action to implement this for me to approve." *(Line Items drill-down implemented this version; the combined-receipts plan was presented for approval, not yet implemented)*
+
+### Added
+
+- `Receipts.html` (v01.22w) — "🧾 Line items" collapsible group in Reports, rendered when a category is chosen (title carries the subcategory when one is picked). Flat mode lists each matching line item `date · merchant · description · price` (newest first, 300-row display cap, count + total header); "Group by item" mode collapses normalized item names into rows showing ×count, low–high price range, and latest price, expanding on tap to the full dated per-merchant history. Item search box (`#rp-item-q`) filters descriptions live — keystrokes rebuild only `#rp-item-list` via `_rpItemCtx`, so the input keeps focus; search/group state persists across `renderReport()` rebuilds (search resets on each Reports open). All existing filters (owner, dates, merchant, min/max, subcategory) apply since the rows derive from the already-filtered receipt map; client-only feature over the existing `reportReceipts` payload — no GAS changes
+
+## [v01.41r] — 2026-08-02 12:31:41 AM EST — [e04d857](https://github.com/LightAISolutions/Sales/commit/e04d857dd1eaa42edacc85fde251d1f6fa5e292d)
+
+> **Prompt:** "Everything looks good. However, I can no longer see the "Admin" drop down menu in my HTML/GAS layers, which I need to approve new user sessions. Fix it."
+
+### Changed
+
+- `Receipts.gs` (v01.15g) — Admin badge restyled from a dim status-pill look (dark `rgba(0,0,0,0.55)` background, 60% opacity, 10px font — visually identical to the adjacent Live/presence pills, so after the v01.14g move into the `#user-email` row it read as "gone") to a solid accent button: `#90caf9` background, dark text, bold 11px, full opacity, hover lighten; `#admin-wrap` gets `flex: 0 0 auto` so the row can never shrink it. Diagnosis confirmed the menu was functionally present: run 44's deploy log shows "Updated to v01.14g (deployment 21)", and a full-stack Playwright reproduction (real host page + real rendered `doGet` HTML in the iframe, R-hotspot → HTML-layer-toggle flow) showed the badge visible and its dropdown opening — the regression was prominence, not function
+
+## [v01.40r] — 2026-08-02 12:11:48 AM EST — [7811523](https://github.com/LightAISolutions/Sales/commit/78115239120e5a7833214a7eb161e005e17195aa)
+
+> **Prompt:** "A few changes:
+>
+> * In the History section, move the "sort by receipt date" checkbox outside of the collapsible filter. 
+> * Add a "Clear" button in both the History and Reports sections' filters that clears all chosen filters back to default. 
+> * In the History section, remove the green checkbox that shows each receipt as saved. If it shows up in the History section, it must already be saved. 
+> * While logging in, there is an "icon placeholder" block. Replace this block with a relevant Icon that accurately represents what this app does.
+> * In the dashboard, create a "Settings" cog icon at the bottom right corner of the screen that contains the signed in email account (jonyang92@gmail.com), and the "Sign out" and "Sign out everywhere" options. 
+> * Slow down the speed at which the positive affirmations cycle by half."
+
+### Added
+
+- `Receipts.html` (v01.21w) — `#rh-clear` / `#rp-clear` buttons at the bottom of each filter drawer: History clears search/dates/category then `rhFilterHint()` + `loadHistory()`; Reports clears merchant/dates/min/max/subcat and dispatches `change` on `rp-cat` so the subcategory dropdown hides/resets through its normal listener
+- `Receipts.html` (v01.21w) — Settings cog (`#rsp-settings`, fixed bottom-right, z-index 9) opening `#rsp-settings-panel` with the signed-in email, "Sign out", and "Sign out everywhere"; replaces the inline account row under the status line (same `rsp-account`/`rsp-signout`/`rsp-signout-all` ids so the 2s session-sync interval and sign-out handlers are unchanged); closes on outside click
+- `live-site-pages/images/receipts-logo.svg` (created) — Paper Ledger-themed receipt icon (torn zigzag bottom, ink outline, accent `$`) shown on the auth wall and sign-out screen instead of the "LOGO" placeholder (`auth-wall-logo`/`signout-logo` src, PROJECT OVERRIDE)
+
+### Changed
+
+- `Receipts.html` (v01.21w) — "Sort by receipt date" moved out of the History filter drawer onto a pinned row under the Filters toggle; affirmation rotation slowed from 7s to 14s per message
+
+### Removed
+
+- `Receipts.html` (v01.21w) — the `rh-status` ✅/📤 emoji per History row (history only lists saved receipts) and its CSS rule
+
+## [v01.39r] — 2026-08-01 11:52:43 PM EST — [a6732a4](https://github.com/LightAISolutions/Sales/commit/a6732a4a1022f09d68ee3cef4e6ce62ada5637c0)
 
 > **Prompt:** "implement the same filter related changes to the Receipt History section. Also, in the Reports section, move the circle graph checkbox out of the collapsible filter area. I want to be able to easily switch between the bar and circle graphs."
 
@@ -86,7 +234,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 - `Receipts.html` (v01.20w) — History filters moved into a collapsible `#rh-filter-body` drawer (collapsed by default), mirroring the Reports pattern: sticky `.rh-head` now holds only the title, the "Viewing" shared-view row, and the `#rh-filter-head` toggle row (~89px vs ~250px pinned). The `⬇️ Export .xlsx` button stays on the pinned toggle row (action, not a filter) with a click guard so it doesn't toggle the drawer; new `rhFilterHint()` shows "n active" for search/dates/category (sort order not counted — it reorders, doesn't narrow)
 - `Receipts.html` (v01.20w) — Reports' Circle graphs checkbox moved out of the filter drawer onto the always-pinned `#rp-filter-head` row (new `#rp-circle-wrap` with a click guard in the drawer-toggle handler), so bar ↔ circle switching is one tap without opening filters
 
-## [v01.38r] — 2026-08-01 11:44:33 PM EST
+## [v01.38r] — 2026-08-01 11:44:33 PM EST — [04bbb0f](https://github.com/LightAISolutions/Sales/commit/04bbb0fe9514eeac922ebd1e886ac4736298856e)
 
 > **Prompt:** "in the Reports section, over half of the screen is freeze-paned, so it is not visually comfortable to use. Make the filters collapsible and start collapsed by default. Re-size as needed with focus on user comfort."
 
@@ -96,7 +244,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 - `Receipts.html` (v01.19w) — New `rpFilterHint()` shows an "n active" accent hint on the collapsed Filters row (merchant/category/subcategory/dates/min/max counted), called at the top of `renderReport()` before the `rpData` guard so it stays accurate even before data loads
 - `Receipts.html` (v01.19w) — Report card max-height increased from `calc(100dvh - 170px)` to `calc(100dvh - 120px)` for ~50px more visible report content
 
-## [v01.37r] — 2026-08-01 11:34:35 PM EST
+## [v01.37r] — 2026-08-01 11:34:35 PM EST — [fa9e4cf](https://github.com/LightAISolutions/Sales/commit/fa9e4cfad1ccddf9335eae1fc87e16f02c1b0ae3)
 
 > **Prompt:** "In order for me to approve new users via the admin panel, I need to be able to click it. Currently, it's being blocked by whichever layer my email (jonyang92@gmail.com) is on. Reformat things so that I can access the admin panel." *(with a desktop screenshot showing the GAS layer's ADMIN badge hidden behind the signed-in email display)*
 
@@ -106,7 +254,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 - Dropdown first-click no-op: the toggle compared `dd.style.display === 'none'`, but the initial inline style is `''` (CSS supplies the `none`), so the first click set `none` and did nothing visible. Toggle now checks `=== 'block'`, opening on the first click
 - Mobile safety: `#user-email` capped at `calc(100vw - 16px)` with ellipsis truncation on `#user-email-text`, so the email + Live/presence pills + ADMIN badge stay on one row inside the 30px top band at 390px widths
 
-## [v01.36r] — 2026-08-01 09:57:44 PM EST
+## [v01.36r] — 2026-08-01 09:57:44 PM EST — [c28adf3](https://github.com/LightAISolutions/Sales/commit/c28adf3e32a00f80e387186a97eb0a70891a6343)
 
 > **Prompt:** "I successfully added the ".../auth/drive.file" scope to the scopes list and made sure each family member's Gmail is in the test-users list. I also successfully completed your recommended next step - everything worked. 
 >
@@ -145,7 +293,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on the `.gs` and both inline scripts; Playwright: account row appears with the session email, Dining subcats populate and survive a Travel switch with value preserved, Reports shows the per-category dropdown + "By subcategory" section, the mocked 2-photo migration ran end-to-end (list → bytes → own-Drive upload → re-link) and set its completion flag, and the Stamp Card was driven through active → all-done → auto-hide by the real pipeline; zero page errors
 
-## [v01.35r] — 2026-08-01 08:11:26 PM EST
+## [v01.35r] — 2026-08-01 08:11:26 PM EST — [038a514](https://github.com/LightAISolutions/Sales/commit/038a5145e5249046e07e930d04f09db397630fd9)
 
 > **Prompt:** "I verified that the access granting functionality works both ways (giving and receiving permission). Continue with Phase 3."
 
@@ -171,7 +319,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on the `.gs` and both inline scripts; Playwright end-to-end with mocked Drive + GAS endpoints driving the real pipeline — own-Drive path (getProfile → folder create → setProfileFolder → multipart upload → link-mode uploadReceipt with no image bytes → extractReceiptData → review card → save → rename PATCH) and the fallback path (Drive failing → legacy base64 uploadReceipt → extractReceipt by file ID) both confirmed; zero page errors
 
-## [v01.34r] — 2026-08-01 07:51:32 PM EST
+## [v01.34r] — 2026-08-01 07:51:32 PM EST — [f6241f6](https://github.com/LightAISolutions/Sales/commit/f6241f6017d4aa626fc5e6e16ef9beffd78ac8cc)
 
 > **Prompt:** "I verified on my phone that History, Reports, and the month card still show all my receipts. Continue with Phase 2."
 
@@ -196,7 +344,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on the `.gs` and both inline scripts; Playwright interaction test at 390px with mocked share data through the real code paths — grant/revoke round-trip, "Viewing" selectors appear only with received grants, shared list hides delete, view-only shared detail suppresses Edit, and the wire calls carry `owner` exactly when a shared view is active; zero page errors
 
-## [v01.33r] — 2026-08-01 07:38:37 PM EST
+## [v01.33r] — 2026-08-01 07:38:37 PM EST — [04a3cc6](https://github.com/LightAISolutions/Sales/commit/04a3cc67239c790222bcafb46e008b8339fa4a04)
 
 > **Prompt:** "continue with your recommendation" *(executes Phase 1 — data isolation — of the approved multi-user action plan from the preceding research response)*
 
@@ -214,7 +362,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on the `.gs`; no remaining references to the removed sync function; server-side-only change (no UI modification, visual test not applicable per the trigger list)
 
-## [v01.32r] — 2026-08-01 07:04:39 PM EST
+## [v01.32r] — 2026-08-01 07:04:39 PM EST — [1737e9e](https://github.com/LightAISolutions/Sales/commit/1737e9e2775150ea8eacec2cd7c60a443a9d3572)
 
 > **Prompt:** "[screenshot attached] The hidden R button only hides the HTML and GAS buttons at the bottom. I want the hidden R button to also hide the sections I circled in red in the attached picture."
 
@@ -224,7 +372,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on both inline scripts; Playwright at 390px with the signed-in pill states simulated — all pills hidden by default, all revealed on "R" tap (user pill flex, timers/GAS pill block, both toggles block), all re-hidden on second tap; zero page errors. The HTML version pill is created only after a successful version fetch (impossible under `file://`) but is governed by the same ID-based CSS rule in production
 
-## [v01.31r] — 2026-08-01 06:53:29 PM EST
+## [v01.31r] — 2026-08-01 06:53:29 PM EST — [00a532a](https://github.com/LightAISolutions/Sales/commit/00a532a9e7d75a0b3b6f5b4846148f5e95bd8958)
 
 > **Prompt:** "One more change:
 >
@@ -239,7 +387,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on both inline scripts; Playwright at 390px — pills hidden on load, still hidden after the template's simulated post-sign-in `_showGasToggle()`, both revealed on "R" tap (HTML pill toggles the receipts layer correctly), both hidden again on second tap; heading renders with a uniform "Receipts" wordmark; zero page errors
 
-## [v01.30r] — 2026-08-01 06:08:39 PM EST
+## [v01.30r] — 2026-08-01 06:08:39 PM EST — [7481bec](https://github.com/LightAISolutions/Sales/commit/7481beced14f9cea20800f50139cbbd68f30ff85)
 
 > **Prompt:** "A few more changes: 
 >
@@ -256,7 +404,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on both inline scripts; Playwright at 390px with intercepted `reportReceipts` demo data (12 categories) — departments dropdown hidden on load, visible for Groceries, hidden + cleared on switch to Dining; 12 legend rows render without an "Other" fold; large donut renders above the legend
 
-## [v01.29r] — 2026-08-01 05:53:12 PM EST
+## [v01.29r] — 2026-08-01 05:53:12 PM EST — [3457be2](https://github.com/LightAISolutions/Sales/commit/3457be259474c3ef4f008ba7e643ce6763e3466d)
 
 > **Prompt:** "A few more changes:
 >
@@ -279,7 +427,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on both inline scripts; Playwright interaction test at 390×844 with intercepted `reportReceipts` demo data through the real renderer — verified all four label formats, department group appears only for Groceries (present with, absent without), groups start collapsed, `+`/`−` toggling, and 3 donut SVGs with percentage legends in circle mode; only expected `file://` console errors
 
-## [v01.28r] — 2026-08-01 05:18:59 PM EST
+## [v01.28r] — 2026-08-01 05:18:59 PM EST — [c850f48](https://github.com/LightAISolutions/Sales/commit/c850f48e3efa0045a510bf34d2526b5fc4c628bb)
 
 > **Prompt:** "In my Receipts app, I want to make the following changes:
 >
@@ -316,7 +464,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on the `.gs` and both inline page scripts; Playwright at 390×844 — landing, Reports, batch-position review card, and History detail with Edit button all render correctly in the new theme; only expected `file://` console errors
 
-## [v01.27r] — 2026-08-01 06:51:35 AM EST
+## [v01.27r] — 2026-08-01 06:51:35 AM EST — [b90dd37](https://github.com/LightAISolutions/Sales/commit/b90dd37187facddbbd3ef58fa809244979b1abf4)
 
 > **Prompt:** "In Receipt History, label the "Start Date" and "End Date" boxes in the same way as the "Search merchant" box is labeled. Also, keep the "Start Date" and "End Date" boxes side-by-side, but move them below the "Search merchant" box. Also, add a drop-down menu that filters between the major categories: Groceries, Dining, Transport, Health, Shopping, Entertainment, Utilities, Travel, and Other."
 
@@ -339,7 +487,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on the `.gs` and all inline scripts; Playwright at 390px — labels "Start Date"/"End Date" render above the side-by-side boxes, dropdown lists all 9 categories + "All categories", no horizontal scroll, zero page errors
 
-## [v01.26r] — 2026-08-01 06:36:33 AM EST
+## [v01.26r] — 2026-08-01 06:36:33 AM EST — [658cce8](https://github.com/LightAISolutions/Sales/commit/658cce8c1313516baaf5c159415a01f2146a6d40)
 
 > **Prompt:** "Everything works. Also, remove the checkbox for "Show unsaved uploads". I think it's redundant now that I will never upload a receipt without saving."
 
@@ -349,7 +497,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - Zero `rh-show-uploaded` references remain; `node --check` on all inline scripts; Playwright render — sort checkbox and export button intact, zero page errors
 
-## [v01.25r] — 2026-08-01 06:25:29 AM EST
+## [v01.25r] — 2026-08-01 06:25:29 AM EST — [526aa58](https://github.com/LightAISolutions/Sales/commit/526aa5850995b78c5259761c2f07e030f8297a3a)
 
 > **Prompt:** "I tested the 2 actions and both work as intended. 1. In the Receipt History, standardize merchant names to be: capitalize the first letter of each word with the rest lower-case (ie: Trader Joe's instead of TRADER JOE'S). 2. In the Receipt History, when I try to "view photo", it says that "jonyang92@gmail.com" doesnt have access to the file. I assume it's because the folder is on "LightAISolution@gmail.com"'s Drive. I would like for this folder's permissions to be synced to my MasterACL file's permissions. For example, if I give a new email Admin access to my Receipts app via the MasterACL spreadsheet, I want that email to automatically get access to this Receipt Pictures folder. Make the changes necessary so that this can happen." *(screenshots: history with mixed-case merchants; Drive "you need access" page for jonyang92@gmail.com)*
 
@@ -363,7 +511,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on the `.gs`; `titleCase_` behavior checked against real merchant strings (TRADER JOE'S → Trader Joe's, MEGA MART → Mega Mart, cvs/pharmacy #123 → Cvs/Pharmacy #123, seven-eleven → Seven-Eleven)
 
-## [v01.24r] — 2026-08-01 06:06:54 AM EST
+## [v01.24r] — 2026-08-01 06:06:54 AM EST — [5c15b04](https://github.com/LightAISolutions/Sales/commit/5c15b048d44b37016ad536a3848641f3e4e968fc)
 
 > **Prompt:** "I tested all 6 actions and they all worked as intended. Go with your suggested supermarket department taxonomy (16 departments). I want per-item editing in the review screen."
 
@@ -376,7 +524,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on all inline scripts; Playwright at 390×844 — three item blocks with departments Produce/Pantry/Beverages set via the real Add-item path, selects render under each row, no horizontal scroll, zero page errors. GAS untouched (v01.06g unchanged — `saveReceipt` already persisted `it.category`)
 
-## [v01.23r] — 2026-08-01 05:28:51 AM EST
+## [v01.23r] — 2026-08-01 05:28:51 AM EST — [3bcdf30](https://github.com/LightAISolutions/Sales/commit/3bcdf306b4d047f260dab9a14c095e76bc1a0a71)
 
 > **Prompt:** "I tested all three actions and everything works as intended. Currently, the receipt history shows the receipts based on upload order; Create a checkbox option to show the receipts chronologically based on the receipt dates instead of upload order. Also, reformat the default "Receipt ID"s to "Store_Name-YYYYMMDD"; Update the existing receipts' IDs to match. Also, currently, the status (uploading, extracting, saved, etc) window is to the right of the "History" button; Move the status window below the "Scan Receipt" and "History" buttons and add a progress bar that makes sense for this application. Also, when extracting, record the store address as well. Also, in the exported excel spreadsheet tab "LineItems", make it easy to distinguish and switch between the different receipts. After executing the above, continue with Phase 5: automatic spending categories (assigned during extraction), a monthly-summary tab, duplicate-receipt detection. Regarding the automatic spending categories, refer to existing apps like ReceiptCamp, Expensify, and Smart Receipts to figure out the best categories to use to cover the entirety of grocery store items."
 
@@ -396,7 +544,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on `.gs` + all inline scripts; Playwright at 390×844 and 390×700 — status+progress render below the buttons, review card (with address) no longer overlaps the taller panel, sticky Save still visible; zero page errors
 
-## [v01.22r] — 2026-08-01 04:38:48 AM EST
+## [v01.22r] — 2026-08-01 04:38:48 AM EST — [af6ca3e](https://github.com/LightAISolutions/Sales/commit/af6ca3ef0589340f9f07b1a65fc589b9391ae6a0)
 
 > **Prompt:** "History works, but I want you to only show "saved" receipts by default. Add a checkbox option to show uploaded but unsaved receipts. Also, give me an option to delete records as well. Meanwhile, continue with Phase 4."
 
@@ -412,7 +560,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on `.gs` + all inline scripts; Playwright render at 390×700 — checkbox, export button, idle 🗑 and armed "Delete?" states all visible, no horizontal scroll, zero page errors
 
-## [v01.21r] — 2026-08-01 04:12:06 AM EST
+## [v01.21r] — 2026-08-01 04:12:06 AM EST — [01c10e1](https://github.com/LightAISolutions/Sales/commit/01c10e1486534aefa5f65b4181ea1119726031d4)
 
 > **Prompt:** "I re-scanned the Trader Joe's receipt and it successfully saved. I then tried a long MegaMart receipt and it also succeeded, but the extraction took close to 10 minutes. Is there any way to speed up this process? Meanwhile, continue with Phase 3."
 
@@ -426,7 +574,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on `.gs` + all inline scripts; Playwright render of the history card with simulated rows + expanded detail at 390×700 (no horizontal scroll, zero page errors)
 
-## [v01.20r] — 2026-08-01 03:51:49 AM EST
+## [v01.20r] — 2026-08-01 03:51:49 AM EST — [a81c722](https://github.com/LightAISolutions/Sales/commit/a81c7221edc18a9bfd069ac763eee21eaff9a185)
 
 > **Prompt:** "it successfully extracted the information, but after scrolling to the bottom, I cannot see nor click "Save Receipt". Resize this UI to make it more user friendly and possible to save receipts." *(screenshot: 12-item extracted receipt, card scrolled to "+ Add item" with the action row cut off below the visible screen)*
 
@@ -439,7 +587,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - Playwright at 390×700 (short viewport simulating browser chrome) with a 12-item receipt: Save button inside the viewport and clickable via `document.elementFromPoint` both before and after scrolling the card's content; zero page errors
 
-## [v01.19r] — 2026-08-01 03:17:05 AM EST
+## [v01.19r] — 2026-08-01 03:17:05 AM EST — [faa2fe3](https://github.com/LightAISolutions/Sales/commit/faa2fe39fcd2049cd09660ec21b1bb2a7064eceb)
 
 > **Prompt:** "I got the attached error message" *(screenshot: review card open in manual-entry fallback with `Extraction failed (gemini_http_503: This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.)`)*
 
@@ -452,7 +600,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` on `.gs` + all inline scripts; Playwright render of the failed-extraction state at 390×844 (retry button visible, no horizontal scroll, zero page errors)
 
-## [v01.18r] — 2026-08-01 03:07:59 AM EST
+## [v01.18r] — 2026-08-01 03:07:59 AM EST — [4d2b91c](https://github.com/LightAISolutions/Sales/commit/4d2b91cb6596e5b661721265fd1f2c89be8048d5)
 
 > **Prompt:** "The receipt picture was successfully taken and uploaded. Start phase 2."
 
@@ -466,7 +614,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - Gemini model names verified against current documentation via web search (gemini-3.5-flash / gemini-3.6-flash, free tier); `node --check` on the `.gs` and all inline scripts; Playwright render of the populated review card at 390×844 and 1280×800 (no horizontal scroll, zero page errors)
 
-## [v01.17r] — 2026-08-01 02:26:53 AM EST
+## [v01.17r] — 2026-08-01 02:26:53 AM EST — [9f936c5](https://github.com/LightAISolutions/Sales/commit/9f936c5db38547c35bed3ee9eb3f2dbdd7709204)
 
 > **Prompt:** "I approve the plan to PWA-ify the web app. I have also granted Receipts ACL permission to "jonyang92@gmail.com" and confirmed that the live page loads. LightAISolution's Drive folder ID is "1DHfXwzo0qXI_2H0Q2dDLKGn7EOtguI0A"."
 
@@ -479,7 +627,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Verified
 - `node --check` passes on the full `.gs` and every inline HTML script block; Playwright render checks at 390×844 and 1280×800 — panel centered with no horizontal scroll, zero page errors
 
-## [v01.16r] — 2026-08-01 01:40:25 AM EST
+## [v01.16r] — 2026-08-01 01:40:25 AM EST — [d00c587](https://github.com/LightAISolutions/Sales/commit/d00c58788b9ece6a630558c97f13b0a93db2c3ac)
 
 > **Prompt:** "Set up a new GAS project. Run the script, then commit and push. `bash scripts/setup-gas-project.sh <<'CONFIG' { "PROJECT_ENVIRONMENT_NAME": "Receipts", "TITLE": "Receipts", "DEPLOYMENT_ID": "AKfycbwASoUFzqdy3Bb-NbsbG6Hh3-9fPz1aGJGi8AbUsBV0YBu85ockXXdWkLKB8kEtivrb", "SPREADSHEET_ID": "1SfVRsHm6pUn1bq633BSKiQ8c3IsQeVAs7H0265ckdDM", "SHEET_NAME": "Live_Sheet", "DEVELOPER_LOGO_URL": "https://lightaisolutions.github.io/Sales/images/logo-placeholder.svg", "YOUR_ORG_LOGO_URL": "https://lightaisolutions.github.io/Sales/images/logo-placeholder.svg", "SPLASH_LOGO_URL": "https://lightaisolutions.github.io/Sales/images/logo-placeholder.svg", "INCLUDE_AUTH": true, "CLIENT_ID": "830735769637-ak3c73b4lnea004i8dge8kg6n53o36vl.apps.googleusercontent.com", "AUTH_PRESET": "hipaa", "MASTER_ACL_SPREADSHEET_ID": "1kG2KftqfKOeYwBCEkxRpw-QBh9s-1-Dvy31sH037UvE", "ACL_SHEET_NAME": "Access" } CONFIG`"
 
@@ -491,7 +639,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 ### Changed
 - Regenerated the Flowchart and Class Diagram mermaid.live pako URLs in `repository-information/REPO-ARCHITECTURE.md` (both went stale when the setup script added the Receipts nodes) — decompression-verified, including the new `Receipts-diagram.md` link
 
-## [v01.15r] — 2026-07-18 03:15:05 AM EST
+## [v01.15r] — 2026-07-18 03:15:05 AM EST — [bd28564](https://github.com/LightAISolutions/Sales/commit/bd28564e0ba76ac0e3f3dc4002e1c17a57f14ac9)
 
 > **Prompt:** "Create a 5 second animation of Spain vs Argentina in the 2026 world cup and show it on repeat."
 
@@ -501,7 +649,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 - Registered the page in the README tree (Standalone Utilities group + html-versions/html-changelogs subtrees) and in REPO-ARCHITECTURE.md's flowchart (SPAINARG_PAGE node + serves/version-polling/template-copy edges; pako URL regenerated and decompression-verified)
 - Verified via Playwright at two loop timestamps (~1.8s mid-play, ~4.2s GOAL flash); fixed an invalid `font:` shorthand (`inherit` family) found during the check by switching to explicit font-size/weight properties
 
-## [v01.14r] — 2026-07-18 02:39:24 AM EST
+## [v01.14r] — 2026-07-18 02:39:24 AM EST — [cc86b54](https://github.com/LightAISolutions/Sales/commit/cc86b54bfa3e65e51730eddecb14fe439587fbfd)
 
 > **Prompt:** "In my Scraper project, remove the text box + submit button."
 
@@ -509,7 +657,7 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 - Scraper text-submission UI (`live-site-pages/Scraper.html` v01.04w): removed the text box + Submit button panel — the PROJECT-block CSS (`#text-submit-panel` and related rules), the panel markup, and the submit wiring JS (fetch `submitText` call, Enter-to-submit, inline status feedback). PROJECT START/END markers left in place (empty) for future page content. The GAS-side `submitText` route in `googleAppsScripts/Scraper/Scraper.gs` is intentionally retained unchanged (now unused) — removal not requested
 - Verified via Playwright render check: page renders cleanly with no leftover panel or layout artifacts (the 5 pre-existing `file://` CSP logo-image refusals reproduce identically on the unmodified page)
 
-## [v01.13r] — 2026-07-18 12:05:25 AM EST
+## [v01.13r] — 2026-07-18 12:05:25 AM EST — [50449c4](https://github.com/LightAISolutions/Sales/commit/50449c4ba2dbaf36d2029a1aa8464bcfdbdf1670)
 
 > **Prompt:** "In the Scraper project, create a text box with a submit button. When the user clicks submit, copy whatever they wrote in the text box into the spreadsheet."
 

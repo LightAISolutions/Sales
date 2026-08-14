@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.40r] — 2026-08-14 01:42:59 AM EST
+
+> **Prompt:** "Will the recent FCC ban on foreign-made inverters be a problem for Megmeet? Give me a detailed answer"
+
+### Added
+- **New section in the Megmeet interview brief — the July 2026 FCC inverter rule** (`repository-information/study-prep/megmeet/megmeet-interview-brief.md`, and the published artifact). Verified against current sources on 2026-08-14 rather than from the dossier, because the dossier is stale on this (see below). Covers: the mechanism (Covered List addition effective 2026-07-28, barring FCC equipment authorization); the two-part definition (bi-directional DC↔AC conversion **and** remote connectivity via Wi-Fi/cellular/Bluetooth "or another similar connection"); the "foreign-produced" test (Buy American *domestic end product*, 48 CFR § 25.101(a) — US manufacture plus >65% domestic component cost through 2028, 75% from 2029); prospective-only application with pre-28-July authorizations grandfathered; and the Conditional Approval pathway through the Department of War or DHS, open until 2026-01-01, requiring a time-bound US onshoring plan
+- **A three-bucket exposure assessment for Megmeet**: AI data-center power (PSUs, shelves, sidecar, SST) reads as **probably out of scope but unsettled** — unidirectional AC→DC, none of the enumerated inverter categories, wired management via PMBus and IPMI/Redfish/SNMP rather than wireless; PV/storage/EV-charging components are **genuinely exposed**, with the 40 kW EV-charging module platform launched 2026-07-31 landing three days after the rule took effect; everything else is out
+- **The competitive insight that matters commercially**: the rule is an **origin test, not a China test**, so Delta and Lite-On are equally foreign-produced. If the interpretation ever stretches toward IT power it does not hit Megmeet asymmetrically — it hits incumbents with far more US SKUs to re-authorize
+- An eighth question for the interviewer, on whether the covered-list action has changed US authorization planning or the US-versus-Thailand manufacturing calculus
+
+### Notes
+- **Confidence is explicitly bounded in the brief.** No source located addresses data-center or IT power supplies directly, so the in/out read is stated as inference from the definition rather than a sourced ruling. The FCC's own FAQ and determination PDF both returned HTTP 403 and could not be read; the analysis rests on law-firm alerts (Cooley, Morgan Lewis, Crowell, Covington) and trade press. The brief instructs the developer to say "my read", not "the rule says"
+- **Dossier staleness identified and flagged, not silently patched.** `live-site-pages/profiler-data/huawei-digital-power.profile.json` still records this as a **draft, China-specific** rule from the 2026-06-30 Reuters report, with a strategyRead calling the Megmeet spillover "unconfirmed and scope-dependent". Both predate the 2026-07-28 action and its country-agnostic scope. `AIDC-MARKET-REPORT.md` §6.4 and §8.4 carry the same stale framing. Refreshing the Huawei dossier is a Profiler revision (archive + profileVersion bump) and the report refresh was deferred by the developer, so neither was changed here
 
 ## [v02.39r] — 2026-08-14 01:18:13 AM EST
 
@@ -1431,152 +1445,4 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 
 ##### Fixed
 - Articles panel close button now shares the wizard close-button styling
-
-## [v01.50r] — 2026-08-02 09:42:54 PM EST
-
-> **Prompt:** "Stick with Gmail sign-in as planned and kick off Phase 1 (data model + project intake wizard)."
-
-### Added
-
-#### `Scraper.gs` — v01.05g
-
-##### Added
-- News Scraper Phase 1 data model: `ensureScraperTabs_()` creates 6 spreadsheet tabs (Projects, Schedules, Articles, Reports, Profiles, UsageLog) with frozen header rows, idempotently
-- Session-gated project management routes `createProject`, `listProjects`, `getProject`, `updateProject`, `setProjectStatus` (active/paused/archived), all owner-scoped by email via `validateSessionForData` and reached through the iframe-free fetch transport (doPost actions + doGet `api` mirror via shared `handleProjectAction_` dispatcher)
-- Payload normalization/validation (`scNormalizeProjectPayload_`) with bounded strings/lists, frequency whitelist (daily/weekly/monthly/quarterly/biannual/annual/custom), delivery whitelist (inapp/email/both), URL-validated custom sources, and a 10-active-projects-per-user cap
-- Per-project schedule rows (one per frequency) written to the Schedules tab; audit entries via `dataAuditLog`
-
-#### `Scraper.html` — v01.05w
-
-##### Added
-- News Scraper app layer (`#scraper-app`): project dashboard with cards (status/frequency/delivery chips), Refresh, Edit, Pause/Resume, and two-step inline Archive confirm; activated from `showApp()` via `window._scraperInit` (inline `// PROJECT:` hook)
-- 5-step project intake wizard (basics → scope → sources → schedule → review) with per-step validation, custom-frequency reveal, review summary, and create/update submission through `_gasPost`
-- `scraper-app` registered in `_htmlLayerEls` (PROJECT OVERRIDE) so the HTML layer toggle hides/shows the dashboard
-
-### Fixed
-- README `Repo version:` display corrected (was showing v01.48r while the repo version file was at v01.49r)
-
-## [v01.49r] — 2026-08-02 08:37:29 PM EST
-
-> **Prompt:** "Delete everything related to this "spain-argentina" page. It was just a test."
-
-### Removed
-- Deleted the spain-argentina test page and all its tracking files: `live-site-pages/spain-argentina.html`, `html-versions/spain-argentinahtml.version.txt`, `html-changelogs/spain-argentinahtml.changelog.md`, `html-changelogs/spain-argentinahtml.changelog-archive.md` (all added in v01.15r)
-- Removed its README tree entries (Standalone Utilities page entry + html-versions and html-changelogs subtree lines) and its REPO-ARCHITECTURE.md flowchart node `SPAINARG_PAGE` with its serves / version-polling / template-copy edges (flowchart pako URL regenerated and decompression-verified)
-- Historical mentions in CHANGELOG.md (v01.15r section) and SESSION-CONTEXT.md are records of past sessions and were intentionally left intact
-
-## [v01.48r] — 2026-08-02 08:31:18 PM EST
-
-> **Prompt:** "Also translate the review screen's category and subcategory dropdowns."
-
-### Changed
-
-- `Receipts.html` (v01.28w) — the review screen's category select (`fillCategories`) and per-item subcategory selects (`fillSubcatSelect`, incl. the blank "Subcategory —"/"子类别 —" option and preserved off-list values) now label via `tCat()`; `applyAppLanguage`'s value-keyed option pass extended to `#rr-category` and `.rr-cat` so a language toggle relabels an open review card too. Stored values remain English
-
-## [v01.47r] — 2026-08-02 08:10:52 PM EST
-
-> **Prompt:** "I want the Simplified Chinese translation option to translate everything, including:
->
-> * "0 receipts * August 2026" and "No receipts saved yet this month" at the top of the dashboard.
-> * All categories (Groceries, Dining, etc) in both History and Reports.
-> * All subcategories for all categories in Reports.
-> * In Daily Reports, change Mon-Sun to their Simplified Chinese equivalents while keeping the ", MM/DD/YY" latter half.
-> * In Monthly Reports, change the months to their Simplified Chinese equivalents.
-> * In Bi-annual Reports, change the "first/second half of 2026" into their Simplified Chinese equivalents."
-
-### Added
-
-- `Receipts.html` (v01.27w) — `I18N_CAT_ZH` (~90 entries) + `tCat()` for category/subcategory display names: History and Reports dropdown labels relabel via `option.value` (stored English values untouched — lossless both directions), report By-category / By-subcategory rows, the Line Items section title and note, and the month card's top-category rows all display 中文 in Chinese mode
-- `Receipts.html` (v01.27w) — localized period labels in `bucketLabel()`: daily `周三, 7/29/26` (RP_DAYS_ZH; date half unchanged), monthly `2026年7月`, bi-annual `2026年上半年/下半年`; weekly and annual stay numeric
-- `Receipts.html` (v01.27w) — month card fully localized: `N 张收据 · 2026年8月` (`zh-CN` locale month name), `本月还没有保存的收据` empty state, `其他项目` for the "Everything else" row; the language toggle now also calls `refreshMonthCard()` so the card flips immediately
-
-## [v01.46r] — 2026-08-02 05:44:59 AM EST
-
-> **Prompt:** "In the Settings cog menu, include an option to change the app language from English to Simplified Chinese."
-
-### Added
-
-- `Receipts.html` (v01.26w) — app language toggle (English / 简体中文) in the Settings ⚙️ panel (`#rsp-lang`, persisted as `Receipts_lang` in localStorage). Chrome-level i18n layer: `I18N_ZH` dictionary + `t()` for dynamic strings; `applyAppLanguage()` swaps static elements via a config list (`L10N_ELS`) plus dataset-keyed walkers for field labels, checkbox tails, stamp labels, period tabs, and select options (original English remembered in `data-i18n-en` so toggling is lossless). Translated surfaces: landing buttons + stamp labels + month card + date locale, History card, Reports card (period tabs, chips, section titles, Line Items controls, hints, empty states), Sharing card, review-card labels/buttons, Settings panel, affirmations (13 zh equivalents), and a map of common status messages (`I18N_STATUS_ZH`). Receipt data (merchants, item descriptions, category values) intentionally stays as stored — categories are server-matched data values
-- `t()`/`setStatus` guarded with `typeof` checks — `fillReportCategories` runs at script-eval time before the dictionary vars are assigned, and an unguarded lookup killed the whole script when Chinese was active at page load (caught by the bilingual Playwright pass)
-
-## [v01.45r] — 2026-08-02 05:10:46 AM EST
-
-> **Prompt:** "In the Reports section -> Line Items (Subcategory) with "Group by item" checked, if an item has been purchased more than once, show the total amount across all purchases instead of individual prices. We can see the individual prices once we click the line item anyways."
-
-### Changed
-
-- `Receipts.html` (v01.25w) — grouped Line Items rows now show the group's summed spend (`gTot`) as the row amount instead of the latest purchase price; the ×count and low–high range stats are unchanged and per-purchase prices remain in the tap-to-expand history
-
-## [v01.44r] — 2026-08-02 05:05:19 AM EST
-
-> **Prompt:** "The combined viewing works as intended. However, I realized that I cannot view a receipt photo that she uploaded without getting access to her Google Drive Receipt App folder. Make it so that when a user shares view and edit permissions with another user, it automatically gives the other user permission to view the original user's folder."
-
-### Added
-
-- `Receipts.html` (v01.24w) — Drive folder sharing rides along with app grants: `driveShareFolder()` (POST a `reader` permission on the owner's "Receipts App" folder via the owner's `drive.file` token, `sendNotificationEmail=false`) fires on successful `addShare`; `driveUnshareFolder()` (permissions.list → DELETE the grantee's permission, raw fetch since DELETE returns an empty 204) fires on successful `removeShare`
-- `Receipts.html` (v01.24w) — reconciliation in `loadShares()`: when the granted set differs from the `Receipts_folder_perms_synced` localStorage key, every granted email gets `driveShareFolder()` and the key advances only when all succeed — this retrofits folder access for grants made before this feature and self-heals failed Drive calls on the next app open. Must run client-side: the `drive.file` token can only manage permissions on folders the app created for that signed-in user; the server has no access to user Drives
-
-## [v01.43r] — 2026-08-02 04:46:01 AM EST
-
-> **Prompt:** "Approved, but also allow mutual delete."
-
-### Added
-
-#### `Receipts.gs` — v01.16g
-
-##### Added
-- `resolveOwnerSet_()` — combined-view owner resolution: `forOwner '*'` returns the session user plus every owner who granted them access as an ownerEmail → scope map; any other value defers to `resolveOwnerScope_` (single-entry map). Combining never widens access — every entry is backed by an existing Shares-tab grant
-- `listReceipts` / `reportReceipts` now filter rows against the resolved owner set and tag each returned row with `owner` (and `canEdit` in listReceipts); `exportReceipts` accepts `'*'` and the Receipts sheet gains an Owner column (backfill loop indexes shifted accordingly)
-
-##### Changed
-- `deleteReceipt` ownership gate extended for mutual delete: the owner can always delete; any other user needs an edit-scope grant from the row's owner (`getShareScope_ === 'edit'`); everything else still responds `receipt_not_found` (no existence leak)
-
-#### `Receipts.html` — v01.23w
-
-##### Added
-- "Combined (mine + shared)" option (`value '*'`) in the History and Reports "Viewing" pickers when received grants exist; `rhRowOwner()` normalizes each row's owner for detail/edit/photo routing (own rows → `''`); owner chip (`.rh-owner-tag`, name part of the email) on History rows in combined view
-- Delete visibility in combined view follows per-row `canEdit` (edit-grant rows deletable, view-only rows not); single shared views keep delete hidden as before; the client-side own-Drive photo trash now keys off `rhRowOwner` so only the row's owner attempts it
-
-## [v01.42r] — 2026-08-02 04:34:42 AM EST
-
-> **Prompt:** "Approved - Implement your plan. 
->
-> Also, I want it to be possible for me and another user to combine our receipts and look at everything together. The real scenario is: my girlfriend and I live together, so everything we buy is shared. Thus, I want all the receipts both of us scan to be visible and editable by both Gmail accounts. Recommend a plan of action to implement this for me to approve." *(Line Items drill-down implemented this version; the combined-receipts plan was presented for approval, not yet implemented)*
-
-### Added
-
-- `Receipts.html` (v01.22w) — "🧾 Line items" collapsible group in Reports, rendered when a category is chosen (title carries the subcategory when one is picked). Flat mode lists each matching line item `date · merchant · description · price` (newest first, 300-row display cap, count + total header); "Group by item" mode collapses normalized item names into rows showing ×count, low–high price range, and latest price, expanding on tap to the full dated per-merchant history. Item search box (`#rp-item-q`) filters descriptions live — keystrokes rebuild only `#rp-item-list` via `_rpItemCtx`, so the input keeps focus; search/group state persists across `renderReport()` rebuilds (search resets on each Reports open). All existing filters (owner, dates, merchant, min/max, subcategory) apply since the rows derive from the already-filtered receipt map; client-only feature over the existing `reportReceipts` payload — no GAS changes
-
-## [v01.41r] — 2026-08-02 12:31:41 AM EST
-
-> **Prompt:** "Everything looks good. However, I can no longer see the "Admin" drop down menu in my HTML/GAS layers, which I need to approve new user sessions. Fix it."
-
-### Changed
-
-- `Receipts.gs` (v01.15g) — Admin badge restyled from a dim status-pill look (dark `rgba(0,0,0,0.55)` background, 60% opacity, 10px font — visually identical to the adjacent Live/presence pills, so after the v01.14g move into the `#user-email` row it read as "gone") to a solid accent button: `#90caf9` background, dark text, bold 11px, full opacity, hover lighten; `#admin-wrap` gets `flex: 0 0 auto` so the row can never shrink it. Diagnosis confirmed the menu was functionally present: run 44's deploy log shows "Updated to v01.14g (deployment 21)", and a full-stack Playwright reproduction (real host page + real rendered `doGet` HTML in the iframe, R-hotspot → HTML-layer-toggle flow) showed the badge visible and its dropdown opening — the regression was prominence, not function
-
-## [v01.40r] — 2026-08-02 12:11:48 AM EST
-
-> **Prompt:** "A few changes:
->
-> * In the History section, move the "sort by receipt date" checkbox outside of the collapsible filter. 
-> * Add a "Clear" button in both the History and Reports sections' filters that clears all chosen filters back to default. 
-> * In the History section, remove the green checkbox that shows each receipt as saved. If it shows up in the History section, it must already be saved. 
-> * While logging in, there is an "icon placeholder" block. Replace this block with a relevant Icon that accurately represents what this app does.
-> * In the dashboard, create a "Settings" cog icon at the bottom right corner of the screen that contains the signed in email account (jonyang92@gmail.com), and the "Sign out" and "Sign out everywhere" options. 
-> * Slow down the speed at which the positive affirmations cycle by half."
-
-### Added
-
-- `Receipts.html` (v01.21w) — `#rh-clear` / `#rp-clear` buttons at the bottom of each filter drawer: History clears search/dates/category then `rhFilterHint()` + `loadHistory()`; Reports clears merchant/dates/min/max/subcat and dispatches `change` on `rp-cat` so the subcategory dropdown hides/resets through its normal listener
-- `Receipts.html` (v01.21w) — Settings cog (`#rsp-settings`, fixed bottom-right, z-index 9) opening `#rsp-settings-panel` with the signed-in email, "Sign out", and "Sign out everywhere"; replaces the inline account row under the status line (same `rsp-account`/`rsp-signout`/`rsp-signout-all` ids so the 2s session-sync interval and sign-out handlers are unchanged); closes on outside click
-- `live-site-pages/images/receipts-logo.svg` (created) — Paper Ledger-themed receipt icon (torn zigzag bottom, ink outline, accent `$`) shown on the auth wall and sign-out screen instead of the "LOGO" placeholder (`auth-wall-logo`/`signout-logo` src, PROJECT OVERRIDE)
-
-### Changed
-
-- `Receipts.html` (v01.21w) — "Sort by receipt date" moved out of the History filter drawer onto a pinned row under the Filters toggle; affirmation rotation slowed from 7s to 14s per message
-
-### Removed
-
-- `Receipts.html` (v01.21w) — the `rh-status` ✅/📤 emoji per History row (history only lists saved receipts) and its CSS rule
 
