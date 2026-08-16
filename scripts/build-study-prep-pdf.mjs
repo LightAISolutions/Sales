@@ -55,6 +55,23 @@ const DOCS = {
     runHead: 'Built from the Profiler dossier set · Prepared 14 August 2026',
     runFoot: 'Megmeet — Interview Brief (Sales Role) · Internal, interview preparation',
   },
+  'hithium-interview-brief': {
+    src: 'repository-information/study-prep/hithium/hithium-interview-brief.md',
+    out: 'repository-information/study-prep/hithium/HITHIUM-INTERVIEW-BRIEF.pdf',
+    kick: 'Profiler Study Prep · Interview Preparation',
+    sub: 'Round 3 — the room, the numbers, the regulatory stack, and what to ask',
+    meta: [
+      '<b>Prepared</b> 15 August 2026 &nbsp;·&nbsp; <b>Source</b> hithium.profile.json, profileVersion 3 '
+        + '(updated 2026-08-09), plus regulatory and biographical research verified 2026-08-15 '
+        + '&nbsp;·&nbsp; <b>Companion</b> hithium-lesson-plan.md, which teaches the electrochemistry',
+      '<b>Sourcing</b> Every claim traces to the dossier or a verified source; analytical reads are labelled as reads '
+        + '&nbsp;·&nbsp; <b>Classification</b> Internal — interview preparation',
+    ],
+    banner: '<b>Presentation style</b> — BloombergNEF Research Report, the canonical Profiler export skin. '
+      + 'Facts lead, labelled analysis follows, and the two never blur.',
+    runHead: 'Built from the Profiler dossier set · Prepared 15 August 2026',
+    runFoot: 'Hithium — Interview Brief (Sales Role, Round 3) · Internal, interview preparation',
+  },
   'megmeet-lesson-plan': {
     src: 'repository-information/study-prep/megmeet/megmeet-lesson-plan.md',
     out: 'repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf',

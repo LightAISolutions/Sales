@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.44r] — 2026-08-15 09:20:49 PM EST
+
+> **Prompt:** "Picking up from the last "Megmeet Interview Brief PDF" session, the Megmeet interview brief was very useful. I have a third round interview with Hithium's Mizhi Zhang in two days, so create me a similar interview brief for it. Output as a downloadable PDF."
+
+### Added
+- **`repository-information/study-prep/hithium/hithium-interview-brief.md`** — the Hithium counterpart to the Megmeet interview brief, tuned for the third-round on-site with Mizhi Zhang on 2026-08-17. 16 sections following the Megmeet structure, with three sections that have no Megmeet analogue because the subject demanded them: a **logistics** block (this round is an in-person visit, so time/address/room/coordinator are actionable), a consolidated **regulatory stack** section covering the three separate US actions that hit this company differently, and an expanded **"who you're meeting"** section — because unlike Megmeet's interviewer, this one is extensively documented
+- **`repository-information/study-prep/hithium/HITHIUM-INTERVIEW-BRIEF.pdf`** — 18 pages, 16 sections, same `bloomberg` export skin as the Megmeet pair
+
+### Changed
+- **`scripts/build-study-prep-pdf.mjs`** — registered `hithium-interview-brief` in the `DOCS` map. No renderer changes were needed; the brief exercises only Markdown features the Megmeet brief already covered (headings, pipe tables, blockquotes, lists, `<details>`), so the script itself is untouched below the registry
+- **README tree** — added `hithium-interview-brief.md` and `HITHIUM-INTERVIEW-BRIEF.pdf` under `study-prep/hithium/`, and changed the lesson plan's tree connector from `└──` to `├──`
+
+### Notes
+- **Research went well past the dossier, and it changed the brief's centre of gravity.** `hithium.profile.json` (profileVersion 3, 2026-08-09) supplied the company; two things it does not carry turned out to matter more:
+  - **Mizhi Zhang was CEO of Sungrow North America**, and before that managing director of the Americas energy-storage business at the Sungrow–Samsung SDI joint venture. He has already run the playbook this role exists to execute, at a company that is now ranked No. 1 globally among BESS integrators — and he crossed from the PCS/integrator side to the cell side. The brief is built around that rather than around a generic "sales interview" frame. Biography assembled from aggregator renderings of his LinkedIn profile, so the shape is treated as reliable and the exact title as approximate (three variants appear across sources)
+  - **The FEOC / prohibited-foreign-entity regime is the commercial crux of the job and postdates nothing in the dossier's framing.** Material assistance cost ratio, ≥55% non-PFE for 2026 construction starts, forfeiture of the entire 30–40% ITC on failure, IRS Notice 2026-15. Paired with the Section 301 step from 7.5% to 25% on non-EV lithium-ion effective 2026-01-01
+- **The FCC covered-list analysis is Hithium-specific, not inherited from the Megmeet brief.** The conclusion differs because the products differ: Hithium's utility products ship as **DC** blocks with the PCS supplied by someone else, so the rule's conversion prong is not met on a plain reading — whereas the residential line (integrated inverter + MPPT, wireless connectivity) is genuinely exposed. Flagged in the brief as a labelled read, not a sourced ruling; no source addresses DC-block-without-PCS supply directly
+- **Three places the brief deliberately withholds rather than asserts.** FY2025 financials do not publicly exist (the second HKEX application lapsed in April 2026 before they were filed), so the brief instructs citing shipment rankings instead of full-year revenue. The total tariff stack is given as a hedged range because the Supreme Court struck the IEEPA tariffs on 2026-02-20 and landed cost turns on HTS classification. And the CATL litigation carries an explicit do-not-raise instruction, including a specific instruction not to repeat the reported executive detention or the controlling-shareholder equity freeze — those surface only in hostile coverage, and organized opposition coverage of the listing exists whose backers could not be verified
+- **Verified visually before committing** — rendered the intermediate print HTML in Chromium and screenshotted the masthead/contents, the say-don't-say and questions sections, and the final page: all 16 contents entries resolve, no table overflows its column budget, and the `<details>` self-test block is force-opened so all ten answers print
+- The interview is **Monday 2026-08-17** (`date -d` confirmed the weekday), two days out from this session
+- **Only the Hithium brief was built.** A bare `node scripts/build-study-prep-pdf.mjs` rebuilds every registered document, which would rewrite the two Megmeet PDFs for nothing but a new `/CreationDate` — the same history churn declined in v02.43r. `hithium-lesson-plan.md` was deliberately **not** registered: the developer asked for the brief, and registering the lesson plan is a separate decision
 
 ## [v02.43r] — 2026-08-14 02:29:35 AM EST
 
