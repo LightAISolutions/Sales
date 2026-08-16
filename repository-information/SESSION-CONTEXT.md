@@ -6,6 +6,67 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-16 04:23:00 AM EST
+**Repo version:** v02.48r
+
+**What we worked on — a Hithium interview brief, then the AIDC report finally got its refinement:**
+
+A long session in two halves. The first built interview prep for a real third-round interview; the second executed the AIDC report refinement that had been the standing recommendation for three sessions.
+
+**v02.44r — `hithium-interview-brief.md` + `HITHIUM-INTERVIEW-BRIEF.pdf` (18 pages, 16 sections)**
+- The ask was "a brief like the Megmeet one" for Hithium. Structure mirrors Megmeet's, plus three sections it has no analogue for: a **logistics** block (this round is an on-site visit), a consolidated **regulatory stack**, and a much longer **who you're meeting**
+- **Two facts outside the dossier carried the whole brief.** `hithium.profile.json` (profileVersion 3) supplied the company; it does not contain either of these: **(1) Mizhi Zhang was CEO of Sungrow North America**, and before that managing director of the Americas storage business at the Sungrow–Samsung SDI JV — so he has already run the playbook the role exists to execute, and he crossed from the PCS/integrator side to the cell side. **(2) The FEOC / prohibited-foreign-entity regime is the commercial crux of the job** — material assistance cost ratio, ≥55% non-PFE for 2026 construction starts, forfeiture of the *entire* 30–40% ITC on failure
+- **Calendar and Gmail settled details the developer did not state:** round 3 is an in-person visit at 4046 Clipper Ct, Fremont, Monday 2026-08-17 11:30 AM PT (room "Muir Woods"; Chris Chung coordinating, 925-584-8408); round 2 was Rumman Kabir, Director of Sales, on 08-12; and the developer had already emailed Rumman about the FCC inverter action, so the brief assumes that thread may have been passed up
+- The FCC read is **Hithium-specific and reaches the opposite conclusion from Megmeet's for a different reason** — Hithium's utility products ship as **DC blocks with no PCS**, so the rule's conversion prong is not met on a plain reading; the residential line (integrated inverter + MPPT, wireless) genuinely is exposed
+
+**v02.45r — cycle-life economics explained** (chat only, no file change that push)
+
+**v02.46r — "Beijing's half of the squeeze" added to the brief (→ 21 pages)**
+- The Reliance licensing collapse had been a half-sentence in a hedging paragraph. Tracing it established that it is the mechanism making FEOC *structurally* hard: MOFCOM added LFP/LMFP cathode preparation technology to the restricted-technology catalogue **2025-07-15** while **lowering** the thresholds that define scope, then MOFCOM/Customs Announcement No. 58 (**2025-10-09**, effective **2025-11-08**) extended dual-use controls to batteries, cathode and graphite anodes. Technology is **restricted, not prohibited** — a discretionary permission
+- **The payload is the two-sided bind:** the workaround for the American material-assistance rule is a structure where a non-prohibited US entity owns production, and that is exactly the transfer Beijing made discretionary. Amara Raja/Gotion is the corroboration; Reliance publicly **denied** pausing, so the brief prescribes "the licensing route stalled under Chinese export controls" and forbids "Reliance halted its gigafactory"
+
+**v02.47r — `hithium-strategy-addendum.md` + PDF (3 pages)**
+- Answers "what strategies can I suggest, and how well-positioned is Hithium for US AIDC". Two strategies to lead with (**own the MACR arithmetic**; **sell to the grid, not to the data centre**), five held in reserve, the AIDC read, two questions, a do-not-say list
+- **The AIDC verdict is deliberately unflattering: weak.** Binding reason — Hithium has **no rack-layer product** (no BBU, supercap, UPS, PCS or rack form factor), so it cannot play in the storage layer specific to AI. The constructive half is the reframe: *Hithium doesn't need to be inside a data centre to be paid by data-centre demand growth*
+- **A hypothesis of mine was wrong and the correction is recorded in the document.** I assumed the Saudi relationship made the Gulf a soft landing for AIDC; Gulf AI investment with the US was conditioned on **divesting Chinese equivalent technology**, so Gulf *AI-data-centre* equipment is where Chinese content is squeezed out. Gulf **grid** storage is wide open (SPPC 3 GW/12 GWh, 27 prequalified)
+- Renderer gained two additive short-document options: `toc: false` and an omitted `banner`
+- **I promised one page and delivered three.** Trimming a quarter of the words moved the page count not at all — the driver is the letter format, base type and masthead. The document's own framing line was corrected rather than the content cut
+
+**v02.48r — the AIDC market report rewritten as investor education (31 → 155 pages, 9 → 14 chapters)**
+- Layout, the three explicit asks: contents is a **single-column index on its own page 2**, and **every chapter opens a fresh page** — both from `page-break-before` on `h2` plus `page-break-after` on `.toc` (Contents is itself an `h2`, so it lands alone on page 2 for free)
+- Reframed from sales-strategy to equity-research-desk-teaching-an-investor. Every chapter opens by teaching its subject, defines terms in place, and closes with *What this means for your capital* (23 such passages) plus a named falsifier. Ch1's 12 judgments each became a reasoned subsection; **new Ch2 is a primer**; **new Ch8 consolidates policy**; **Ch10–12 cover all 40 names individually** with a recommended strategy and its reasoning; new Ch14 states provenance
+- **The FCC integrity gap is closed** — the standing recommendation from two prior sessions
+- Produced by a **14-agent workflow** (13 chapter drafts + 1 adversarial critique), 3.35M subagent tokens, 112 minutes
+
+**Where we left off:**
+- Everything committed, pushed and auto-merged; working tree clean at v02.48r
+- **The developer has the report and needs time to review it** — that is why this context was saved
+- All four Hithium prep documents delivered: brief (21pp), strategy addendum (3pp), and the report (155pp canonical + four style editions)
+
+**Key decisions made:**
+- **The brief was closed at 21 pages deliberately.** Past that, additions cost absorption time rather than buying readiness. The strategy addendum was made a **separate artifact** for that reason
+- **The report now contains research the dossiers do not.** Policy, Chinese export controls and the FCC correction were verified against live sources 15–16 August. Ch14 **retracts the old blanket "no new research" claim** rather than repeating it. Company facts remain corpus-only
+- **The critique agent's findings were verified before being applied — and it was wrong once.** It flagged the ≥12,000-cycle CATL 587 Ah figure as invented; it is real, in the **Hithium** dossier's competitor-positioning field, not `catl.profile.json`. Applying it blind would have deleted a sourced fact
+- **`build-aidc-report-pdf.mjs` still renders from the hand-authored `aidc-market-report-print.html`, not the `.md`.** Both were regenerated from the same chapter set in one pass this session, so they are currently in sync — but the drift risk is structural and unfixed
+- Three passages that read as **security selection** were recast; a not-investment-advice disclaimer is in the masthead and Ch14
+
+**Active context:**
+- Branch `claude/hithium-interview-brief-pdf-uosx99` (deleted from remote after each auto-merge; recreate by pushing)
+- Repo **v02.48r** · Profiler v01.26w · 9 tracked pages all 🟢 · CHANGELOG counter **98/100 — archive rotation fires within two push commits**
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
+- No TODO items, no active reminders
+- **The container has 4 CPUs, so workflow concurrency caps at 2 agents.** A 13-agent fan-out took 112 minutes for that reason — size future workflows against a cap of 2, not 8–16
+- **All PDFs are build artifacts.** Edit any `.md` or the print HTML and the PDFs go stale until rebuilt
+- **The shallow clone bites on archive rotation** — `git fetch --deepen=250` first if SHA enrichment fails
+- **A bug of mine to remember:** a heading-normalisation regex with four capture groups but a three-group replacement prepended the heading-level digit to every heading *and deleted every closing tag* across 673KB. Recovery was `git checkout` + re-apply edits through a script that asserts each replacement applied. Every helper script in the scratchpad now asserts rather than silently no-opping
+- **Carried forward:** the voice meeting-notes app's **Build B (speaker identification) and Build C (meeting notes + export) are both unstarted**. Whisper does not diarize, so transcripts are one unlabeled run of text
+
+**Recommendation for next session:**
+- **Ask the developer for their read on Chapter 2 and Chapter 8 of the report, then calibrate the teaching level across all 14 chapters in one pass.** Ch2 is the primer everything else leans on and Ch8 is where mechanism-teaching is densest; if those two land at the right altitude the other twelve are calibrated correctly, and if they do not, it is a single dial to turn rather than a chapter-by-chapter guess. Rebuild all five editions afterwards with `node scripts/build-aidc-report-pdf.mjs`
+- **To continue:** type `calibrate the report's teaching level`
+
+## Previous Sessions
+
 **Date:** 2026-08-14 02:42:25 AM EST
 **Repo version:** v02.43r
 
@@ -49,53 +110,4 @@ A short, narrow session picking up directly from the AIDC market report PDF work
 
 **Recommendation for next session:**
 - **Refine the AIDC market report, starting with §6.4 and §8.4.** Unchanged from last session and still the highest-value open item: the report contradicts its own sourcing claim on the FCC action, and correcting it folds directly into the refinement the developer explicitly deferred. Rebuild all five editions afterwards with `node scripts/build-aidc-report-pdf.mjs`
-- **To continue:** type `refine the AIDC market report`
-
-## Previous Sessions
-
-**Date:** 2026-08-14 01:59:01 AM EST
-**Repo version:** v02.41r
-
-**What we worked on — the AIDC market report became a publishable document, then Megmeet interview prep took over:**
-
-Two distinct arcs in one session. The first turned the existing market report into a real deliverable; the second was triggered by the developer having a Megmeet interview the next morning and ran to a regulatory correction that fed back into the dossier set.
-
-**Arc 1 — the AIDC market report as a document (v02.33r, v02.34r)**
-- **v02.33r** — built `repository-information/aidc-market-report-print.html` and `repository-information/AIDC-MARKET-REPORT.pdf`: 29 pages, **12 figures, 17 tables**, typeset to the Profiler `bloomberg` export skin from `PROFILER-STYLES.md` + `Profiler.html`. Added `scripts/build-aidc-report-pdf.mjs`, which drives the pre-installed Chromium over the **DevTools Protocol** rather than the `--print-to-pdf` CLI flag — only `Page.printToPDF` accepts a custom running header/footer, which is how the report got `Page N of M`. Prose competitor lists became comparison tables per the developer's instruction
-- **Fixed the "crossed out text" the developer reported** — it was a real Markdown bug, not a rendering glitch: 117 single `~` characters were doing duty as "approximately", and GFM treats a matching pair of single tildes on one line as strikethrough. All replaced with `≈`
-- **v02.34r** — issued the report in **all five** registered writing styles. Refactored the stylesheet onto style-scoped CSS custom properties so a skin is ~10 lines of overrides; a bare `node scripts/build-aidc-report-pdf.mjs` renders all five editions **from a single page load**, so they cannot drift in content. Registered the report as a **second display-layer consumer** in `PROFILER-STYLES.md` with a standing instruction to mirror skin changes across both
-
-**Arc 2 — Megmeet interview prep (v02.38r–v02.41r)**
-- **v02.38r** — `repository-information/study-prep/megmeet/megmeet-interview-brief.md` plus a published artifact. Deliberately a *companion* to the existing `megmeet-lesson-plan.md`: the lesson plan teaches the physics, the brief teaches the room
-- **v02.39r** — retuned for a **sales role** interviewing with **Yuan Meng, Head of NA Sales & Marketing**. Added the NA go-to-market picture, five field objections with answers, and sales-shaped questions
-- **v02.40r** — the developer asked whether the FCC inverter ban hurts Megmeet. **The repo's data was stale and their premise was right.** Verified against current sources; added a full section. Also executed the **mandatory changelog archive rotation** (counter hit 101; the 2026-08-02 date group of 11 sections rotated out)
-- **v02.41r** — refreshed the **Huawei Digital Power dossier to profileVersion 2** to correct the same stale FCC record; v1 archived per the Archival Procedure
-
-**The FCC finding, because it matters beyond Megmeet:** the rule was adopted **2026-07-28** as an FCC Covered List addition — not the pending China-specific draft the dossiers still described. "Foreign-produced" is a **Buy American domestic-end-product test** (48 CFR 25.101(a); US manufacture + >65% domestic content through 2028, 75% from 2029), so it is an **origin rule, not a China rule** — Delta, Lite-On and US brands manufacturing offshore are caught alike. It is **prospective only** (pre-28-July authorizations survive), and there is a Conditional Approval route through the Department of War or DHS to 2028-01-01 requiring a time-bound US onshoring plan. The definition is a **two-prong test**: bi-directional DC↔AC conversion **AND** remote connectivity via "Wi-Fi, cellular, Bluetooth or another similar connection". Sungrow shed roughly **CNY 100B (~$14.8B)** of market value and is publicly arguing it falls outside the second prong because it restricts connection activity to **wired** links — which independently corroborates the read that wired-managed rack power (Megmeet PSUs, shelves, sidecars, SSTs) sits outside. That wired-vs-wireless question is unresolved and is the variable to watch.
-
-**Where we left off:**
-- Everything committed, pushed and auto-merged; working tree clean at v02.41r
-- The interview brief artifact is live and updated in place (same URL across all three revisions)
-- The developer's interview was imminent at session end — "tomorrow morning" said at ~01:00 EST on Friday 2026-08-14, so plausibly that morning
-
-**Key decisions made:**
-- **The report stays undeployed** in `repository-information/` — sales-sensitive, consistent with the prior session's call
-- **Chart palette is style-invariant across all five skins.** Validated once with the `dataviz` six checks against the white print surface; re-tinting per skin would mean re-validating five palettes and would put the data layer at the mercy of a typographic choice. Stated in the report's method section rather than left implicit
-- **The `bloomberg` edition keeps the unsuffixed filename** as canonical so existing links never break
-- **`REPO-ARCHITECTURE.md` deliberately not updated** for the build script — its Scripts subgraph carries shared infrastructure only and already omits `check-gas-inner-scripts.js` and `playwright-harness.py`. Flagged to the developer rather than skipped silently
-- **Yuan Meng is not in the dossier and no background was invented.** The brief says so on its face and supplies the *function* instead (Roya Movahedi, CMO US/international, is the only US-facing leader on record). Offered to research them; not taken up
-- **The 2026-06-30 FCC draft entry was retained and marked SUPERSEDED**, not deleted — the delta between what was trailed and what was adopted is itself analytically useful
-- **The Huawei refresh was a targeted correction, not a full 50–70 source re-research pass** — that is what the developer agreed to. A full sweep is still available
-
-**Active context:**
-- Branch `claude/aidc-market-report-pdf-ghbpsi` (deleted from remote after each auto-merge; recreate by pushing)
-- Repo **v02.41r** · Profiler v01.26w · 9 tracked pages all 🟢 · CHANGELOG counter **91/100** (headroom restored by this session's rotation)
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
-- No TODO items, no active reminders
-- **A parallel session is mid-project on the voice meeting-notes app** (see Previous Sessions) — Build B, speaker identification, is unstarted. Do not assume that work is finished
-- **The container clone is shallow.** SHA enrichment during changelog rotation failed on all 11 sections until `git fetch --deepen=250` recovered the history; all 50 archive headers now carry commit links. Deepen first next time rotation fires
-- **Open thread the developer deferred:** "further refine the AIDC market report" — explicitly saved for later
-
-**Recommendation for next session:**
-- **Refine the AIDC market report, starting with §6.4 and §8.4.** Those two sections still describe the FCC action as a pending China-specific draft, which now contradicts the refreshed Huawei dossier — and since the report claims in §9 that every fact traces to a dossier source, that is an integrity gap rather than a cosmetic one. It also folds directly into the refinement the developer deferred, so the correction and the improvement land together. Rebuild all five PDF editions afterwards with `node scripts/build-aidc-report-pdf.mjs`
 - **To continue:** type `refine the AIDC market report`
