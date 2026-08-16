@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.49r] — 2026-08-16 07:55:40 PM EST
+
+> **Prompt:** "Picking up from the recent "Hithium Interview brief PDF" session, I think the current iteration of AIDC market report is pretty good. I might have some clarification questions about certain parts of the reports, which I will ask you about, and you can decide if and how to integrate that information into the report. Speaking of which: • Give me a 1 sentence overview of what each of the following certifications cover: ○ UL 1973, UL 9540, UL 9540A, NFPA 855, IEC 62619/62477/63056"
+
+### Added
+- **A new subsection in the AIDC market report, §7.5 "Reading a certification claim — the stack in order"**, closing a teaching gap the previous edition left open: the section asserted that safety certification is a permitting gate rather than a badge, but defined only two of the gates (UL 9540A and NFPA 855) while naming none of the rest. The new passage teaches the whole ladder in dependency order — **UL 1973** at the component layer, **UL 9540** at the system layer (built on UL 1973 batteries and UL 1741 power conversion beneath it), **UL 9540A** as the fire test whose report feeds **NFPA 855** siting decisions, and the international ladder of **IEC 62619** (baseline industrial lithium safety), **IEC 63056** (the grid-storage layer on top of it) and **IEC 62477** (the converter side, to 1,000 V AC / 1,500 V DC)
+- **The investor-facing payload of that subsection is that "we are certified" is several non-interchangeable claims, not one.** Three discriminations are now stated explicitly: a vendor advertising itself as *UL 9540A certified* has made a category error because UL 9540A issues no certificate at all, only a test report; a vendor holding UL 1973 on a new large-format cell without a UL 9540 listing on the system built from it has cleared the component gate and not the system gate; and a vendor carrying the full UL *and* IEC stack avoids a re-test cycle when selling into both US and international procurement, which is a timing advantage when demand outruns laboratory scheduling. **Hithium** is cited as the corpus's clearest example of the complete stack *(Hithium dossier)*
+
+### Changed
+- **All five PDF editions rebuilt** from the amended source — canonical (Bloomberg) 155 pages, analyst-prose 148, equity-research 148, intel-briefing 178, smart-brevity 164. The addition absorbed into the existing page flow without changing the canonical page count
+- The standards scope statements were **verified against live sources before being written** rather than asserted from memory (UL/IEC/ANSI webstore scope text and standards summaries, retrieved 2026-08-16), consistent with the report's chapter 14 provenance statement. The Hithium certification attribution was checked against `hithium.profile.json` rather than carried over from the interview brief
 
 ## [v02.48r] — 2026-08-16 03:15:19 AM EST
 
