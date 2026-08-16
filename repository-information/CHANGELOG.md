@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.47r] — 2026-08-15 11:17:14 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **`repository-information/study-prep/hithium/hithium-strategy-addendum.md`** + **`HITHIUM-STRATEGY-ADDENDUM.pdf`** (3 pages) — a short companion to the 21-page interview brief, answering the developer's question about what sales strategies to propose and how well Hithium is positioned for US AI data centres. Five sections: the two strategies to lead with (own the material-assistance arithmetic; sell to the grid rather than to the data centre), five more held in reserve, the AIDC position, two questions it sets up, and a do-not-say list. Kept as a **separate artifact deliberately** so the brief stays closed at 21 pages
+
+### Changed
+- **`scripts/build-study-prep-pdf.mjs`** — registered `hithium-strategy-addendum`, and added two **purely additive** shell options for short documents: `toc: false` suppresses the contents block, and an omitted `banner` suppresses the style banner. Both default to the existing full treatment when the fields are absent, so the three previously registered documents are untouched — verified by rebuilding the interview brief and confirming a byte-identical size
+- **README tree** — added both addendum files under `study-prep/hithium/`, and corrected the interview-brief PDF's connector from `└──` to `├──` now that it has siblings
+
+### Notes
+- **I missed my own page target and the document says so.** The recommendation promised a one-page sheet; it came out at three. Trimming the body ~25% moved the page count not at all — the driver is the letter format, the ~10pt base type and the 258px masthead, not word count. The remaining ways to reach one page were to cut the reserve-strategies table (which is the substance the developer actually asked for) or to shrink type toward unreadable, so the content was kept and **the document's own framing line was rewritten from "One page." to "Three dense pages"** rather than shipping a false claim in the deliverable
+- **The AIDC verdict is deliberately unflattering: weak, and worse than for ordinary utility-scale storage.** Four reasons, of which the binding one is that Hithium has no product at the rack layer — no BBU, supercapacitor shelf, UPS, PCS or rack form factor — so it cannot participate in the storage layer specific to AI, and in the campus layer it sells DC blocks where data-centre EPCs buy integrated AC systems. The constructive half is the reframe: the buildout AI is actually causing is utility- and IPP-owned front-of-meter storage, which is ordinary Hithium territory
+- **One research finding reversed an initial hypothesis and the reversal is recorded in the document.** The Gulf looked like the soft landing for AIDC given the existing 4 GWh Saudi Electricity Company relationship. It is the opposite for AI-specific equipment: Gulf AI investment with the US was conditioned on divesting Chinese equivalent technology, with advanced-chip access as the lever. Gulf *grid* storage remains wide open — SPPC's 3 GW/12 GWh tender, 27 prequalified. Same country, opposite answer depending on where the electron goes; the addendum states it that way
+- **Sourcing discipline is carried in the masthead**, which states plainly that market facts are sourced while the layer analysis, the weak grading and the sell-to-the-grid reframe are labelled analysis
+- **Verified visually before committing** — contents block and style banner correctly absent, masthead compact at 258px, five H2s, no table overflow
+- **A no-op rebuild of the interview brief was reverted.** The script change does not affect it, and re-committing a 493 KB blob to move a `/CreationDate` is the same history churn declined in v02.43r and v02.44r
 
 ## [v02.46r] — 2026-08-15 10:40:56 PM EST
 

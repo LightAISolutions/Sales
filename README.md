@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-15 10:40:56 PM EST` · Repo version: `v02.46r`
+Last updated: `2026-08-15 11:17:14 PM EST` · Repo version: `v02.47r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -327,7 +327,9 @@ Last updated: `2026-08-15 10:40:56 PM EST` · Repo version: `v02.46r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/hithium">hithium/</a> — Hithium technology curriculum
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-lesson-plan.md">hithium-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-interview-brief.md">hithium-interview-brief.md</a> — Sales-role interview layer: the FEOC/tariff/FCC regulatory stack, objection handling, questions to ask, self-test
-│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/HITHIUM-INTERVIEW-BRIEF.pdf">HITHIUM-INTERVIEW-BRIEF.pdf</a> — The interview brief typeset for print/download, BloombergNEF Research Report style (21 pages)
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/HITHIUM-INTERVIEW-BRIEF.pdf">HITHIUM-INTERVIEW-BRIEF.pdf</a> — The interview brief typeset for print/download, BloombergNEF Research Report style (21 pages)
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-strategy-addendum.md">hithium-strategy-addendum.md</a> — Short companion to the brief: strategies to propose, the AI-data-centre position, questions to ask
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/HITHIUM-STRATEGY-ADDENDUM.pdf">HITHIUM-STRATEGY-ADDENDUM.pdf</a> — The addendum typeset for print/download, masthead-only shell with no contents block (3 pages)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/megmeet">megmeet/</a> — Megmeet technology curriculum
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-lesson-plan.md">megmeet-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf">MEGMEET-LESSON-PLAN.pdf</a> — The lesson plan typeset for print/download, BloombergNEF Research Report style (5 pages)

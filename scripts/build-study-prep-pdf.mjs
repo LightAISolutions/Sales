@@ -72,6 +72,21 @@ const DOCS = {
     runHead: 'Built from the Profiler dossier set · Prepared 15 August 2026',
     runFoot: 'Hithium — Interview Brief (Sales Role, Round 3) · Internal, interview preparation',
   },
+  'hithium-strategy-addendum': {
+    src: 'repository-information/study-prep/hithium/hithium-strategy-addendum.md',
+    out: 'repository-information/study-prep/hithium/HITHIUM-STRATEGY-ADDENDUM.pdf',
+    kick: 'Profiler Study Prep · Interview Preparation',
+    sub: 'What to propose, the honest AIDC read, and what to ask',
+    toc: false, // one-page reference sheet — a contents block costs more space than it returns
+    meta: [
+      '<b>Prepared</b> 15 August 2026 &nbsp;·&nbsp; <b>Companion</b> hithium-interview-brief.md, which is the full reference '
+        + '&nbsp;·&nbsp; <b>Classification</b> Internal — interview preparation',
+      '<b>Sourcing</b> Market facts are sourced; the layer analysis, the weak AIDC grading and the sell-to-the-grid '
+        + 'reframe are labelled analysis, not sourced conclusions',
+    ],
+    runHead: 'Strategy addendum to the Hithium interview brief · Prepared 15 August 2026',
+    runFoot: 'Hithium — Strategy Addendum (Sales Role, Round 3) · Internal, interview preparation',
+  },
   'megmeet-lesson-plan': {
     src: 'repository-information/study-prep/megmeet/megmeet-lesson-plan.md',
     out: 'repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf',
@@ -451,6 +466,14 @@ function buildHtml(doc, parsed) {
   const cut = parsed.html.indexOf('<h2');
   const lead = cut === -1 ? parsed.html : parsed.html.slice(0, cut);
   const rest = cut === -1 ? '' : parsed.html.slice(cut);
+  // Short documents set `toc: false` / omit `banner`: on a one-page reference
+  // sheet a contents block and a style banner cost more space than they return.
+  // Both default to the full treatment when the fields are absent.
+  const tocBlock = doc.toc === false ? '' : `<p class="toc-h">Contents</p>
+<nav class="toc${parsed.toc.length <= 6 ? ' one-col' : ''}">
+${toc}
+</nav>`;
+  const bannerBlock = doc.banner ? `<p class="sty-banner">${doc.banner}</p>` : '';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -464,15 +487,12 @@ function buildHtml(doc, parsed) {
   <h1>${esc(parsed.title || '')}</h1>
   <p class="sub">${doc.sub}</p>
   <p class="meta">${doc.meta.join('<br>')}</p>
-  <p class="sty-banner">${doc.banner}</p>
+  ${bannerBlock}
 </header>
 <div class="lead">
 ${lead}
 </div>
-<p class="toc-h">Contents</p>
-<nav class="toc${parsed.toc.length <= 6 ? ' one-col' : ''}">
-${toc}
-</nav>
+${tocBlock}
 ${rest}
 <p class="foot">${doc.runFoot} &nbsp;·&nbsp; Rendered from ${basename(doc.src)}, which remains the source of truth &nbsp;·&nbsp; Developed by: ShadowAISolutions</p>
 </body>
