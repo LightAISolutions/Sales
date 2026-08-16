@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.45r] — 2026-08-15 10:29:57 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **`### How cycle life converts into money`** in `hithium-interview-brief.md` — the brief's "What you have to sell with" table asserted that Hithium's cycle life is "augmentation capex avoided and a warranty-reserve line item" without explaining the mechanism. The developer asked what that meant, which identified the one place in the document that stated a conclusion and withheld the reasoning underneath it. The new subsection sits immediately after the table it explains and covers: the flat-obligation-versus-decaying-asset mechanism (70–80% LFP retention at ten years of daily cycling, 70%-at-year-ten warranty convention, 15–20% day-one oversizing as standard practice, Lazard-style augmentation reserve at ~3% of equipment cost per year); **two traps** — a cycle count is not a degradation curve, and cycles beyond what the duty cycle consumes are worth nothing; the two-sided warranty reserve (seller-side provision against gross margin, buyer-side IE haircut plus mitigant cost); a speakable compressed version; and a hedged note on how augmentation may interact with the FEOC regime
+- **Two vocabulary entries** — `Capacity guarantee` (the warranted year-by-year retention table, which is what a financial model actually consumes) and `Warranty provision / reserve` (both sides of it)
+- **Self-test question 11 + answer** — section retitled from "Ten-question self-test" to "Eleven-question self-test". A concept the brief now teaches is reinforced the way every other concept in it is, and the question/answer counts stay in parity
+
+### Changed
+- **`HITHIUM-INTERVIEW-BRIEF.pdf`** rebuilt — 18 → **20 pages**. Section count stays at 16 because the addition is an H3 inside the existing North America section, so the contents block is unchanged
+- **README tree** — the PDF's page count updated from 18 to 20
+
+### Notes
+- **The load-bearing point of the new subsection is that the two halves of the phrase are one argument, and only one of them is about the cell.** Cycle life moves the augmentation line; it does nothing for the warranty reserve, because a lender's independent engineer can haircut a warranty from a private supplier that has never published a full year of financials regardless of how good the cell is. That is why the brief already pairs cycle life with the warranty-backstop objection and the insurance-wrapper question — the subsection now makes the connection explicit rather than leaving it implicit across three sections
+- **Confidence discipline preserved.** The retention figures, warranty convention, oversizing norm and Lazard augmentation reserve are sourced. The FEOC/augmentation interaction is labelled as inference in the document itself, with an explicit instruction to raise it as a question for tax advisers rather than assert it — consistent with how the brief handles the material-assistance and FCC reads. No illustrative dollar figures were carried into the document; the worked NPV example used in chat was deliberately left out, since arbitrary numbers in a reference document invite being quoted
+- **Verified visually before committing** — the new subsection renders with its bulleted traps intact, the speakable version is correctly detected as a "SAY IT LIKE THIS" pull quote (it opens with a quote mark), the contents block still resolves 16 entries, no table overflows its column budget, and the force-opened self-test block prints all eleven answers
+- **Rebased onto `origin/main` before editing**, since v02.44r had already auto-merged; the branch was confirmed absent from the remote before pushing, per push-once enforcement
+- Only the Hithium document was rebuilt, so the two Megmeet PDFs are untouched
 
 ## [v02.44r] — 2026-08-15 09:20:49 PM EST
 
