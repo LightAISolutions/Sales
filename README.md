@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-15 11:17:14 PM EST` · Repo version: `v02.47r`
+Last updated: `2026-08-16 03:15:19 AM EST` · Repo version: `v02.48r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -296,8 +296,8 @@ Last updated: `2026-08-15 11:17:14 PM EST` · Repo version: `v02.47r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/Scraper-diagram.md">Scraper-diagram.md</a>         — [template] Scraper page GAS integration sequence
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/Receipts-diagram.md">Receipts-diagram.md</a>         — [template] Receipts page GAS integration sequence
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/profiler-diagram.md">profiler-diagram.md</a>         — Profiler page GAS integration sequence (inline note-box iframe)
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.md">AIDC-MARKET-REPORT.md</a>   — AIDC market report: power/storage sales strategy synthesized from the 40 Profiler dossiers
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.pdf">AIDC-MARKET-REPORT.pdf</a>  — Formatted market report, BloombergNEF Research Report style (canonical edition; 12 figures, 17 tables)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.md">AIDC-MARKET-REPORT.md</a>   — AIDC market report: an equity-research guide to the US AI data-center infrastructure market, written to teach it — 14 chapters, per-company coverage of all 40 Profiler names
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.pdf">AIDC-MARKET-REPORT.pdf</a>  — Formatted market report, BloombergNEF Research Report style (canonical edition; 155 pages, 17 figures, 23 tables, single-column contents on page 2, every chapter on a fresh page)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-analyst-prose.pdf">AIDC-MARKET-REPORT-analyst-prose.pdf</a> — Same report, Analyst Prose style (the Profiler house style)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-equity-research.pdf">AIDC-MARKET-REPORT-equity-research.pdf</a> — Same report, Sell-Side Research Note style
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-intel-briefing.pdf">AIDC-MARKET-REPORT-intel-briefing.pdf</a> — Same report, Intelligence Community Briefing style

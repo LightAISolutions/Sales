@@ -103,13 +103,13 @@ function cdp(wsUrl) {
 const FOOT = `
 <div style="width:100%;font:7pt/1.2 Arial,Helvetica,sans-serif;color:#6d6758;
             padding:0 14mm;display:flex;justify-content:space-between;">
-  <span>AIDC Market Report — Power &amp; Storage Sales Strategy · Internal, sales strategy</span>
+  <span>AIDC Market Report — the US AI Data-Center Infrastructure Market · Internal · Not investment advice</span>
   <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
 </div>`;
 const HEAD = `
 <div style="width:100%;font:6.5pt/1.2 Arial,Helvetica,sans-serif;color:#a8a294;
             padding:0 14mm;text-align:right;letter-spacing:.14em;text-transform:uppercase;">
-  Synthesized from the 40-company Profiler dossier set · 10 August 2026
+  Equity research · 40 companies under coverage · Profiler dossier set · 16 August 2026
 </div>`;
 
 const chrome = spawn(findChrome(), [
