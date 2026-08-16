@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.46r] — 2026-08-15 10:40:56 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **`#### Beijing's half of the squeeze`** in `hithium-interview-brief.md` — a sub-block inside the FEOC subsection of the regulatory stack. The brief previously carried the Reliance licensing collapse as a half-sentence inside a hedging paragraph; the developer asked for the story, and tracing it established that this is the mechanism making the FEOC problem *structurally* hard rather than merely expensive, which is too valuable to leave buried. Covers: the two Chinese export-control actions with dates and thresholds (MOFCOM/MOST catalogue amendment 2025-07-15 adding LFP/LMFP cathode preparation technology while **lowering** the technical thresholds that define scope; MOFCOM/Customs Announcement No. 58 of 2025-10-09, effective 2025-11-08, extending dual-use controls to batteries, cathode and graphite anodes); the **restricted-not-prohibited** licence-management mechanism and what the July → November → January sequencing implies; the Amara Raja/Gotion and Exide/SVOLT corroboration including the visa-denial lever; the two-sided bind; and why wholly-owned plants are the consequence
+- **A third question in the "About the compliance crux" group** — whether the export-control regime shapes the localization strategy, and whether it touches the Navarre cell plant. Carries an explicit ask-don't-assert instruction, since nothing published addresses intra-group technology transfers
+- **A two-part caution blockquote** — Reliance **publicly and categorically denied** pausing its battery plans (it owns Lithium Werks and Faradion as fallbacks), so the brief prescribes "the licensing route stalled under Chinese export controls" and forbids "Reliance halted its gigafactory"; and it warns against opening the topic as "what happened with Reliance?", which invites the interviewer to hear a probe about a failure
+
+### Changed
+- **`HITHIUM-INTERVIEW-BRIEF.pdf`** rebuilt — 20 → **21 pages**. Section count stays at 16: the addition is an H4 inside an existing H3 inside an existing H2, so the contents block is untouched
+- **README tree** — the PDF's page count updated from 20 to 21
+
+### Notes
+- **First use of an H4 in a study-prep document.** The renderer already handled it — it derives heading level from the `#` run length and emits `<h4>`, and the print stylesheet already carried an `h4` rule — so no script change was needed. Verified the computed style renders as a small-caps amber label, visually a clear level below the numbered H3s and not competing with the bold paragraph lead-ins around it
+- **The analytical payload is the two-sided bind**, and it is the strongest observation in the brief: the emerging workaround for the American material-assistance rules is a structure in which a non-prohibited US entity owns the production, and that is exactly the technology transfer Beijing converted into a discretionary permission. Hithium is constrained from both capitals at once, which is why its localization answer is wholly-owned plants (Mesquite, Navarre) rather than licensed local manufacture
+- **Confidence discipline preserved.** Both export-control actions, the Bloomberg report, Reliance's denial, and the Amara Raja and Exide details are sourced. Two items are labelled as inference in the document: the reading of *why* Hithium withdrew in January when the rules changed in July and November, and whether transferring restricted cathode technology to a wholly-owned overseas subsidiary escapes the regime — the latter is deliberately framed as a question to ask rather than a claim to make
+- **Verified visually before committing** — the new block's five bullets render intact, the cautions blockquote correctly picks up the boxed-caution treatment (bold lead-in) rather than the pull-quote treatment, contents still resolves 16 entries, and no table overflows its column budget
+- **Rebased onto `origin/main` before editing**, since v02.45r had already auto-merged; branch confirmed absent from the remote before pushing
+- **This is intended as the last content addition before the 2026-08-17 interview.** At 21 pages, further material costs the developer absorption time rather than buying readiness — stated as such in the response so the decision is visible rather than implicit
 
 ## [v02.45r] — 2026-08-15 10:29:57 PM EST
 
