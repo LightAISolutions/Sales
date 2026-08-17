@@ -1,4 +1,4 @@
-var VERSION = "v01.13g";
+var VERSION = "v01.14g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1834,7 +1834,8 @@ function diagnoseOauthScopes_() {
     }
     if (!missing.length) {
       Logger.log('   Every scope this app uses IS declared — so the declaration is not the problem. '
-        + 'Run diagnoseAuthorization to check whether it was actually GRANTED.');
+        + 'Compare this list against the GRANTED list printed above: if they match, the grant is '
+        + 'complete and a permissions error is coming from somewhere else (see the checks below).');
       return;
     }
     Logger.log('   MISSING ' + missing.length + ' declaration(s) — each one breaks the feature named after it:');

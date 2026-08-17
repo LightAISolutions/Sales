@@ -136,7 +136,16 @@ Google's consent screen supports **granular consent** (`enable_granular_consent=
 
 **What does NOT fix it:** editing `appsscript.json` (already correct), pushing, redeploying, or committing a canonical manifest. `pullAndDeployFromGitHub()` preserves the project's existing manifest by design — it reads the current `appsscript` file back and writes it unchanged alongside the new `Code` — but that is irrelevant here, because the manifest was never wrong. **Do not "fix" this by putting manifests under version control**; that addresses a declaration problem this is not.
 
-**Re-examine the v01.87r precedent before citing it.** That incident (self-installed triggers silently failing) was recorded as the manifest lacking `script.scriptapp`. `script.scriptapp` is also one of the two scopes missing from the confirmed partial grant here — so that earlier diagnosis may have been the same partial-grant mechanism misattributed to the manifest. Treat it as unconfirmed rather than as a second data point for the declaration theory.
+**Two distinct failures share this symptom — check which one you have before repairing.** A scope can be absent because it was never *declared*, or because it was declared and never *granted*. The runtime error is identical; the repairs are opposite. `diagnoseAuthorization` prints both lists, so read them against each other:
+
+| Missing from | Meaning | Repair |
+|---|---|---|
+| **Both lists** | The manifest under-declares it | Add to `oauthScopes`, save, run a function — **changing the declared set is what finally triggers the consent prompt** |
+| **Granted only** (present in declared) | Approved partially | An authorization URL will be printed; open it and tick everything |
+
+Confirmed instances of each: Receipts v02.59r was a partial grant (declared, not approved); Scraper v02.62r was a missing declaration.
+
+**The `script.scriptapp` gap is systemic, not incidental.** v01.82r added that scope to the manifest *template*, `sample-components/appsscript.json`, and the setup steps above — "so **new** projects can self-install time-driven triggers". Existing projects were never updated and **could not be**: live manifests are not version-controlled and `pullAndDeployFromGitHub()` preserves whatever manifest the project already has. So **every project created before v01.82r is still missing it** unless someone added it by hand, and its only symptom is that time-driven triggers silently never install. Scraper was confirmed missing it on 2026-08-17 (its `scSchedulerTick`, `enforceRetention` and `auditRetentionCompliance` triggers were all dead); Receipts had it. When touching any pre-v01.82r project, check this before assuming its triggers run. This also **supersedes the earlier reading of the v01.87r trigger incident as a possible partial grant** — the Scraper evidence shows it was a genuine declaration gap whose fix only reached the template.
 
 **Blast radius.** Each script project carries its own independent grant, so a partial consent on one says nothing about the others — but the same person clicking the same screens tends to produce the same gaps. When one project is found with a partial grant, run `diagnoseAuthorization()` on the rest (`Profiler`, `Scraper`, `MasterACL`) rather than assuming they are healthy.
 

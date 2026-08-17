@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [testauthhtml1gs.changelog-archive.md](testauthhtml1gs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.05g] — 2026-08-17 03:36:35 AM EST — v02.62r
+
+### Changed
+- Clearer wording when the permission check finds nothing wrong with what the app asked for: it now points you at the list of what was actually granted, printed just above, instead of telling you to run a check you are already inside
 
 ## [v01.04g] — 2026-08-17 03:23:38 AM EST — v02.61r
 

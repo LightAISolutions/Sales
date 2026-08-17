@@ -1,4 +1,4 @@
-var VERSION = "v01.26g";
+var VERSION = "v01.27g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -546,8 +546,9 @@ function diagnoseOauthScopes_() {
       if (REQUIRED.hasOwnProperty(need) && declared.indexOf(need) === -1) missing.push(need);
     }
     if (!missing.length) {
-      Logger.log('   Every scope this app uses IS declared. A permissions error despite that means the '
-        + 'saved OAuth grant is stale — run any function here and approve the consent screen.');
+      Logger.log('   Every scope this app uses IS declared — so the declaration is not the problem. '
+        + 'Compare this list against the GRANTED list printed above: if they match, the grant is '
+        + 'complete and a permissions error is coming from somewhere else (see the checks below).');
       return;
     }
     Logger.log('   MISSING ' + missing.length + ' scope(s) — each one breaks the feature named after it:');

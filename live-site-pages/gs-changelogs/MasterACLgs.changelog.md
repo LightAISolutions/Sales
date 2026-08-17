@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [MasterACLgs.changelog-archive.md](MasterACLgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12g] — 2026-08-17 03:36:35 AM EST — v02.62r
+
+### Changed
+- Clearer wording when the permission check finds nothing wrong with what the app asked for: it now points you at the list of what was actually granted, printed just above, instead of telling you to run a check you are already inside
 
 ## [v01.11g] — 2026-08-17 03:23:38 AM EST — v02.61r
 
