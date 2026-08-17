@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.55r] — 2026-08-17 02:24:25 AM EST
+
+> **Prompt:** "I tried to open Receipts in the Apps Script editor and this happened. What's going on? Fix it." *(with a screenshot of Google Drive's "Sorry, unable to open the file at this time.")*
+
+### Note
+- **The editor error is browser-side Google account routing and has no repo-side fix.** No code change can resolve it, and none was attempted. What the repo *could* contribute was proof of where the fault is not, plus documentation so it stops costing a session each time
+- **The live Receipts deployment was probed directly and answered `Already up to date (v01.22g)`.** That single response settles a great deal: the script project exists, the owning account still has access to it, and the v02.54r ACL fix from the previous push is **live in production**. The failure is therefore confined to the browser's account routing — a trashed project, revoked ownership, or a failed deploy are all ruled out
+- **Consequence for the previous session's recommendation: the editor is no longer required for the ACL diagnosis.** `diagnoseAclAccess()` was the only reason to open it, and v01.22g now names the failure reason (`acl_unreachable` / `acl_tab_missing` / `acl_empty` / `acl_column_missing`) on the sign-in screen itself
+- **The deploy webhook's green checkmark is not proof of deployment.** The workflow's deploy step exits 0 even when unconfirmed — it only emits a `::warning` — so the CI run passing and the GAS app actually updating are two different facts. The direct probe is what closes that gap
+
+### Added
+- **`.claude/rules/gas-scripts-reference.md` — "Checking the live GAS version without opening the editor".** Documents `?action=api&op=deploy` as the editor-free way to read the version a deployment is actually running. The route is unauthenticated and idempotent **by design** (the deploy handler's ⚠️ CRITICAL comment: it can only re-pull what GitHub already contains), so it is safe to call at any time. Also records that `globalacl`, `testauthgas1` and `testauthhtml1` carry placeholder deployment IDs and are never deployed — which is why their workflow deploy steps completed in 0 seconds on the v02.54r run while MasterACL, Scraper, Receipts and Profiler took real multi-second round trips
+- **`.claude/rules/gas-scripts-reference.md` — "Google Multi-Account Routing".** This exact Drive error has now hit the fleet **three times on three different surfaces**: the Profiler note-box iframe (v02.28r), the embedded `#gas-app` iframe after sign-in, and now the Apps Script editor. The mechanism is that Google resolves a URL with no `/u/N/` prefix against the browser's **default** account, and this fleet is unusually exposed because the GAS projects and their Drive folders are owned by a dedicated **script account** while day-to-day browsing happens as the developer's personal account — a split the `DRIVE_FOLDER_ID` comment in `Receipts.gs` states outright. Three ranked fixes are recorded (private window with only the owning account; `/u/N/` index forcing; changing the browser default), along with the note that the two **in-app** occurrences are already fixed structurally via credentialless iframes and cookie-less `fetch()`, so a reappearance inside a page means a transport lost its cookie-less property rather than a new Google bug
+
+### Changed
+- README tree description for `gas-scripts-reference.md` updated to cover the two new sections
 
 ## [v02.54r] — 2026-08-17 02:10:00 AM EST
 

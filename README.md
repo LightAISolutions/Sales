@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-17 02:10:00 AM EST` · Repo version: `v02.54r`
+Last updated: `2026-08-17 02:24:25 AM EST` · Repo version: `v02.55r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -412,7 +412,7 @@ Last updated: `2026-08-17 02:10:00 AM EST` · Repo version: `v02.54r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/cli-styling-reference.md">cli-styling-reference.md</a>   — Path-scoped — CLI accent styling tables + patterns (triggers on chat-bookends.md + output-formatting.md + CLAUDE.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/dead-code-detection.md">dead-code-detection.md</a>     — Path-scoped — dead-code analysis methodology (triggers on HTML pages + GAS files + workflow files; user-invoked via "check for dead code")
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/gas-scripts.md">gas-scripts.md</a>             — [template · modified] Path-scoped — GAS core rules (version, config, commit naming, Deploy Handler Protection)
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/gas-scripts-reference.md">gas-scripts-reference.md</a>   — Path-scoped — GAS reference material (architecture, setup, webhook, templates, UI, visual verification)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/gas-scripts-reference.md">gas-scripts-reference.md</a>   — Path-scoped — GAS reference material (architecture, setup, webhook, live version check, Google multi-account routing, templates, UI, visual verification)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/html-pages.md">html-pages.md</a>             — [template · modified] Path-scoped — HTML page core rules (build version, private repo, template propagation, test quality, auth wall)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/html-pages-reference.md">html-pages-reference.md</a>   — Path-scoped — HTML page reference (setup, rename, directory structure, Template vs Project Code Separation, visual verification)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/imported-skills.md">imported-skills.md</a>         — Path-scoped — "Imported Skills — Do Not Modify" rule (triggers on `.claude/skills/imported--*/**`)

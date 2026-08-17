@@ -96,6 +96,34 @@ When a `.gs` file is pushed and merged to `main`, the `auto-merge-claude.yml` wo
 - Each GAS project gets its own deploy step in the workflow (added by `setup-gas-project.sh` during project creation)
 - The webhook URL is constructed from the `DEPLOYMENT_ID` in each project's `.config.json`
 
+### Checking the live GAS version without opening the editor
+
+`?action=api&op=deploy` on a project's `/exec` URL returns the version the deployment is actually running — `Already up to date (vXX.XXg)` or `Updated to vXX.XXg`. It is unauthenticated **by design** (see the ⚠️ CRITICAL comment on the deploy handler: it can only re-pull what GitHub already contains) and idempotent, so it is safe to call at any time:
+
+```bash
+ID=$(jq -r .DEPLOYMENT_ID googleAppsScripts/Receipts/Receipts.config.json)
+curl -sL "https://script.google.com/macros/s/$ID/exec?action=api&op=deploy" --max-time 90
+```
+
+Use this instead of the editor to answer "did my push actually reach the live app?" — the workflow's deploy step **exits 0 even when the deploy is unconfirmed** (it only emits a `::warning`), so a green workflow run is not by itself proof the GAS side updated. A healthy version response also proves the script project exists and the owning account still has access to it, which is the fastest way to rule out a broken/trashed project when sign-in or the editor is misbehaving.
+
+Projects whose `DEPLOYMENT_ID` is still `YOUR_DEPLOYMENT_ID` (currently `globalacl`, `testauthgas1`, `testauthhtml1`) are never deployed — their workflow deploy steps exit immediately and their version bumps are repo-only bookkeeping.
+
+## Google Multi-Account Routing — the recurring "unable to open the file" failure
+
+> **Symptom:** Google Drive's *"Sorry, unable to open the file at this time."* This is **not** a repo defect and no code change fixes it. It has hit this fleet at least three times, on three different surfaces: the Profiler note-box iframe, the embedded `#gas-app` iframe after sign-in, and the Apps Script editor itself.
+
+**Mechanism.** Google resolves a URL with no `/u/N/` prefix against the browser's **default** account — the first one signed in. When the requested file is owned by a *different* signed-in account, Drive returns the error above rather than switching accounts. This fleet is especially exposed because the GAS projects and their Drive folders are owned by a dedicated **script account**, while day-to-day browsing happens as the developer's personal account (see the `DRIVE_FOLDER_ID` comment in `Receipts.gs`: *"owned by the script account; shared to the developer's personal account for viewing"*).
+
+**Fixes, in order of reliability:**
+1. **Private/incognito window signed into only the owning account** — deterministic, because there is no second account for the router to pick.
+2. **Force the account index in the URL** — `https://script.google.com/u/0/home/projects`, incrementing `/u/1/`, `/u/2/` until the project appears. The index is the order the accounts were signed in, not a stable identifier.
+3. **Make the owning account the browser default** — sign out of all Google accounts, then sign back in with the script account first.
+
+**In-app occurrences are already fixed structurally** and must not regress: embedded `/exec` iframes are created **credentialless** and the token exchange runs over cookie-less `fetch()`, both of which reach Google's anonymous serving path where account routing does not apply. If this error reappears *inside a page*, the cause is an iframe or transport that lost its cookie-less property — not a new Google bug.
+
+**Diagnostic order when the editor will not open:** probe the deployment first (previous section). A healthy version response proves the project is alive and owned, which narrows the problem to browser-side routing and rules out a trashed project or lost ownership.
+
 ## GAS Template Source File
 
 The GAS templates in `live-site-pages/templates/` are the **single source of truth** for GAS project scaffolding. Two variants exist:
