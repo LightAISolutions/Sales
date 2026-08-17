@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.60r] — 2026-08-17 03:15:36 AM EST
+
+> **Prompt:** "access GRANTED. We were both able to sign in. Do I need to propogate anything to my other apps?"
+
+### Note
+- **Receipts sign-in is confirmed working for both users — the four-session investigation is closed.** Root cause was a partial OAuth grant: `spreadsheets` and `script.scriptapp` declared but never approved. Fixed by re-approving with every granular-consent box ticked
+- **Nothing about the fix itself is propagatable.** The repair was an *approval* recorded against a Google account, per script project. It cannot be pushed, deployed, or committed — each project has its own independent grant and must be approved on its own
+- **The exposure is real on the other three deployed apps.** `MasterACL`, `Profiler` and `Scraper` are all deployed, all call `SpreadsheetApp` (21, 19 and 20 call sites) for the same Master-ACL sign-in, and all call `ScriptApp.newTrigger`. Same account, same consent screens, same era of setup — so the same two gaps are likely. `Globalacl`, `Testauthgas1` and `Testauthhtml1` carry placeholder deployment IDs and are not deployed, so they are exposed only if they are ever deployed
+- **A successful sign-in does not clear an app.** It proves `spreadsheets` is granted, and nothing else. `script.scriptapp` failing takes down self-installed triggers with **no user-visible symptom at all** — which is exactly how the v01.87r incident stayed hidden
+
+### Added
+- **`diagnoseAuthorization()` and `diagnoseOauthScopes_()` propagated to all six remaining auth projects and the GAS auth template** (`gas-minimal-auth-template-code.js.txt`), so every app can answer "is my permission actually granted?" instead of only Receipts. Both functions are fully self-contained — they touch only `ScriptApp`, `UrlFetchApp` and `Session`, never a project-specific constant — so they ported verbatim with no adaptation
+- **Placed in the TEMPLATE region rather than a PROJECT block**, immediately before `checkSpreadsheetAccess`. They diagnose shared auth infrastructure, not per-project features, so they belong to the template and travel with it under [PC-TEMPLATE-PROP] #19. New auth projects created from the template now inherit them at v01.00g
+- Verified one definition of each per file (no duplicates from a double-applied patch) and `node --check` clean across all nine `.gs` files plus the template
+
+### Changed
+- The propagated copies carry two wording improvements over the Receipts originals: the incomplete-grant branch now says to open the URL **signed in as the account named above** (the account trap that cost a round trip on Receipts), and each diagnostic now points at the other as the next step, since a permissions error can come from either the declaration or the grant and neither check alone is conclusive
 
 ## [v02.59r] — 2026-08-17 03:04:38 AM EST
 

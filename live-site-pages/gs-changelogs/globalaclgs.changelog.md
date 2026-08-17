@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [globalaclgs.changelog-archive.md](globalaclgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 3/50`
+`Sections: 4/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.04g] — 2026-08-17 03:15:36 AM EST — v02.60r
+
+### Added
+- The app can now report, on demand, whether its permission to use Google services is actually in force — as opposed to merely having been requested. The two are separate, and only the first one determines whether anything works
+- When permission is incomplete, it produces a direct link to re-approve it, and names which capability each missing permission takes down
 
 ## [v01.03g] — 2026-08-17 02:34:37 AM EST — v02.56r
 

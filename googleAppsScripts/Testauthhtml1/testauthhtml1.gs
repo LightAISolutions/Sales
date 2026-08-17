@@ -1,4 +1,4 @@
-var VERSION = "v01.02g";
+var VERSION = "v01.03g";
 var TITLE = "Testauthhtml1 Title";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "lightaisolutions";
@@ -1945,6 +1945,133 @@ function removeUserSession(email, sessionToken) {
 // checkSpreadsheetAccess returns an RBAC-aware result object:
 //   { hasAccess: true,  role: 'admin', isEmergencyAccess: false }
 //   { hasAccess: false, role: null,    isEmergencyAccess: false }
+// ── OWNER-RUN DIAGNOSTIC — authorization grant ───────────────────────
+// Run this from the editor's Run dropdown when a Google service call fails on
+// permissions even though appsscript.json already declares the scope.
+//
+// Declaring a scope and holding a grant for it are different things. The
+// manifest is only the REQUEST list; the grant is a separate record tied to the
+// account that authorized the script, and Google's granular consent lets a user
+// approve some permissions while leaving others unticked. Apps Script re-prompts
+// only when the requested set CHANGES or the grant is revoked — never on a
+// failure — so reading the manifest, finding it correct and changing nothing
+// cannot produce a consent screen, and a partial grant persists indefinitely.
+//
+// Deliberately has NO trailing underscore: underscore-suffixed functions are
+// hidden from the editor's Run dropdown, and this one must be runnable by hand.
+function diagnoseAuthorization() {
+  Logger.log('== Authorization diagnosis ==');
+  try {
+    Logger.log('Running as: ' + Session.getEffectiveUser().getEmail()
+      + '   (must be the account that owns / deploys this script)');
+  } catch (eU) {
+    Logger.log('Could not read the effective user: ' + eU.message);
+  }
+
+  var info;
+  try {
+    info = ScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL);
+  } catch (eI) {
+    Logger.log('Could not read authorization info: ' + eI.message);
+    return;
+  }
+  Logger.log('Authorization status: ' + String(info.getAuthorizationStatus()));
+
+  // Optional: not present on every runtime. When it is, it settles the question
+  // outright — this is what the grant actually covers, as against what the
+  // manifest merely asks for.
+  try {
+    var granted = info.getAuthorizedScopes();
+    if (granted && granted.length) {
+      Logger.log('Scopes actually GRANTED (' + granted.length + '):');
+      for (var g = 0; g < granted.length; g++) Logger.log('      ' + granted[g]);
+      Logger.log('   -> Anything the manifest declares that is NOT in this list is the gap.');
+    }
+  } catch (eS) { /* unavailable on this runtime — status + URL below still decide it */ }
+
+  var url = info.getAuthorizationUrl();
+  if (url) {
+    Logger.log('THE GRANT IS INCOMPLETE. Open this URL, approve, then re-run diagnoseAclAccess:');
+    Logger.log('   ' + url);
+    Logger.log('   Open it signed in as the account named above, and approve EVERY permission shown — '
+      + 'one unticked box reproduces this exact failure.');
+    return;
+  }
+
+  Logger.log('No authorization is outstanding — the grant already covers every declared scope.');
+  Logger.log('-> So the permissions error is NOT a stale grant. Check these, in order:');
+  Logger.log('   1. Project Settings -> Google Cloud Platform (GCP) Project. If this is a STANDARD project '
+    + 'rather than the default one, its OAuth consent screen must list the scope, and the app must not be '
+    + 'stuck in Testing with this account missing from the test users.');
+  Logger.log('   2. The account named above. A second signed-in Google account is the usual cause of '
+    + '"it works when I open the file but not when the script does".');
+  Logger.log('   3. Force a completely fresh consent: revoke this project at '
+    + 'https://myaccount.google.com/permissions, then run any function here again.');
+}
+
+// ── OWNER-RUN DIAGNOSTIC — OAuth scope report ────────────────────────
+// Prints the project's declared oauthScopes and names any this app needs but
+// does not declare. Pairs with diagnoseAuthorization: this one covers what is
+// REQUESTED, that one covers what is GRANTED, and a permissions error can come
+// from either — the two are indistinguishable from the error text alone.
+//
+// The manifest is not in the repo (the self-deploy preserves whatever manifest
+// the project already has), so reading it back at runtime is the only way to
+// see it without opening the editor.
+function diagnoseOauthScopes_() {
+  var REQUIRED = {
+    'https://www.googleapis.com/auth/spreadsheets': 'SpreadsheetApp — the Master ACL and every data sheet',
+    'https://www.googleapis.com/auth/drive': 'DriveApp / Drive REST — file storage',
+    'https://www.googleapis.com/auth/script.external_request': 'UrlFetchApp — GitHub pulls and self-deploy',
+    'https://www.googleapis.com/auth/script.projects': 'self-deploy — reads and rewrites its own source',
+    'https://www.googleapis.com/auth/script.deployments': 'self-deploy — creates versions and deployments',
+    'https://www.googleapis.com/auth/script.send_mail': 'MailApp — alerting',
+    'https://www.googleapis.com/auth/script.scriptapp': 'ScriptApp.newTrigger — self-installed triggers'
+  };
+  try {
+    var resp = UrlFetchApp.fetch(
+      'https://script.googleapis.com/v1/projects/' + ScriptApp.getScriptId() + '/content',
+      { muteHttpExceptions: true,
+        headers: { Authorization: 'Bearer ' + ScriptApp.getOAuthToken() } });
+    if (resp.getResponseCode() >= 300) {
+      Logger.log('   Could not read the manifest (HTTP ' + resp.getResponseCode() + '). Check by hand: '
+        + 'Project Settings -> tick "Show appsscript.json manifest file in editor".');
+      return;
+    }
+    var files = JSON.parse(resp.getContentText()).files || [];
+    var manifest = null;
+    for (var i = 0; i < files.length; i++) {
+      if (files[i].name === 'appsscript') manifest = files[i];
+    }
+    if (!manifest) { Logger.log('   No appsscript manifest was returned.'); return; }
+    var declared = JSON.parse(manifest.source).oauthScopes;
+    if (!declared || !declared.length) {
+      Logger.log('   The manifest declares NO explicit oauthScopes, so Apps Script derives them from the '
+        + 'code. A permissions error in that case means the grant is incomplete — run diagnoseAuthorization.');
+      return;
+    }
+    Logger.log('   Declared oauthScopes (' + declared.length + '):');
+    for (var d = 0; d < declared.length; d++) Logger.log('      ' + declared[d]);
+    var missing = [];
+    for (var need in REQUIRED) {
+      if (REQUIRED.hasOwnProperty(need) && declared.indexOf(need) === -1) missing.push(need);
+    }
+    if (!missing.length) {
+      Logger.log('   Every scope this app uses IS declared — so the declaration is not the problem. '
+        + 'Run diagnoseAuthorization to check whether it was actually GRANTED.');
+      return;
+    }
+    Logger.log('   MISSING ' + missing.length + ' declaration(s) — each one breaks the feature named after it:');
+    for (var m = 0; m < missing.length; m++) {
+      Logger.log('      ' + missing[m] + '   <- ' + REQUIRED[missing[m]]);
+    }
+    Logger.log('   -> Fix: Project Settings -> tick "Show appsscript.json manifest file in editor" -> add '
+      + 'the scope(s) to oauthScopes -> save -> run any function here and APPROVE the consent screen.');
+  } catch (e) {
+    Logger.log('   Scope check failed: ' + e.message);
+  }
+}
+
 // Legacy boolean callers: use checkSpreadsheetAccess(email).hasAccess
 function checkSpreadsheetAccess(email, opt_ss) {
   var denied = { hasAccess: false, role: null, isEmergencyAccess: false };
