@@ -1,4 +1,4 @@
-var VERSION = "v01.09g";
+var VERSION = "v01.10g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -362,6 +362,16 @@ function registerSelfProject() {
   if (_selfRegistered) return;
   _selfRegistered = true;
   try {
+    // Throttle. The five metadata cells this writes (#NAME/#URL/#AUTH/#ICON/#DESC)
+    // only change when the project is redeployed, but this ran on EVERY page load.
+    // With several projects sharing one Access tab, that is a constant stream of
+    // writes against the same sheet the sign-in check has to read — the contention
+    // that makes an ACL read fail in the first place. Keyed on VERSION so a new
+    // build always re-registers, and the deploy route clears the marker outright.
+    var regCache = getEpochCache();
+    var regKey = 'selfreg_' + ACL_PAGE_NAME;
+    if (regCache.get(regKey) === VERSION) return;
+
     var ss = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID);
     var sheet = ss.getSheetByName(ACL_SHEET_NAME);
     if (!sheet) return;
@@ -424,6 +434,9 @@ function registerSelfProject() {
     sheet.getRange(4, col).setValue(true);
     sheet.getRange(5, col).setValue(regIcon);
     sheet.getRange(6, col).setValue(regDesc);
+    // Only marked done after a fully successful pass, so a failed registration
+    // retries on the next page load instead of being suppressed for 6 hours.
+    regCache.put(regKey, VERSION, 21600);
   } catch (e) {
     Logger.log('registerSelfProject error: ' + e.message);
   }
@@ -767,6 +780,9 @@ function doPost(e) {
     var result = pullAndDeployFromGitHub();
     // Deploy-time self-registration — a brand-new project appears in the Master ACL
     // Access tab as soon as CI deploys it, without anyone having to open the app first.
+    // Clear the registration throttle first so a deploy always rewrites the metadata
+    // even when the cached marker is still fresh.
+    try { getEpochCache().remove('selfreg_' + ACL_PAGE_NAME); } catch (eReg) {}
     registerSelfProject();
     return ContentService.createTextOutput(result);
   }
@@ -1274,6 +1290,13 @@ function exchangeTokenForSession(accessToken) {
   var accessResult = { hasAccess: true, role: RBAC_DEFAULT_ROLE, isEmergencyAccess: false };
   if (hasAcl || hasSheet) {
     accessResult = checkSpreadsheetAccess(userInfo.email);
+    // The access list could not be read, so we do not know whether this user is
+    // authorized. Reported separately from a denial, and deliberately NOT counted
+    // as a failed attempt — otherwise a Sheets outage walks legitimate users up
+    // the lockout tiers while they retry.
+    if (accessResult.aclUnavailable) {
+      return { success: false, error: "acl_unavailable", reason: accessResult.reason };
+    }
     if (!accessResult.hasAccess) {
       auditLog('login_failed', userInfo.email, 'access_denied',
         { reason: 'No spreadsheet access' });
@@ -1719,52 +1742,84 @@ function checkSpreadsheetAccess(email, opt_ss) {
   // Method 1: Master ACL spreadsheet
   // Expected layout: col A = Email, col B = Role, cols C+ = page names (TRUE/FALSE)
   var hasAcl = MASTER_ACL_SPREADSHEET_ID && MASTER_ACL_SPREADSHEET_ID !== "YOUR_MASTER_ACL_SPREADSHEET_ID";
+  // aclReadOk records whether the list was actually READ. Without it, "the ACL
+  // says no" and "the ACL could not be opened" both fell through to the same
+  // cached denial at the bottom of this function, so a transient Sheets fault
+  // was reported to the user as `not_authorized` — indistinguishable from being
+  // genuinely off the list, and sticky for the full 10-minute cache TTL.
+  var aclReadOk = false;
+  var aclFailReason = '';
   if (hasAcl) {
-    try {
-      var aclSs = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID);
-      var aclSheet = aclSs.getSheetByName(ACL_SHEET_NAME);
-      if (aclSheet) {
+    // Every project rewrites its metadata columns on the shared Access tab, so
+    // read failures here are usually momentary contention. One retry absorbs
+    // that without materially slowing a genuine sign-in.
+    for (var attempt = 0; attempt < 2 && !aclReadOk; attempt++) {
+      if (attempt > 0) {
+        try { Utilities.sleep(400); } catch (eSleep) {}
+      }
+      try {
+        var aclSs = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID);
+        var aclSheet = aclSs.getSheetByName(ACL_SHEET_NAME);
+        if (!aclSheet) { aclFailReason = 'acl_tab_missing'; continue; }
         var data = aclSheet.getDataRange().getValues();
-        if (data.length >= 2) {
-          var headers = data[0];
-          // Find the page column index (page access TRUE/FALSE)
-          var colIdx = -1;
-          for (var c = 0; c < headers.length; c++) {
-            if (String(headers[c]).trim().toLowerCase() === ACL_PAGE_NAME.toLowerCase()) {
-              colIdx = c; break;
-            }
-          }
-          // Find the Role column index (expected col B, but search by header name for flexibility)
-          var roleColIdx = -1;
-          for (var rc = 0; rc < headers.length; rc++) {
-            if (String(headers[rc]).trim().toLowerCase() === 'role') {
-              roleColIdx = rc; break;
-            }
-          }
-          if (colIdx !== -1) {
-            for (var r = 1; r < data.length; r++) {
-              if (String(data[r][0]).trim().toLowerCase() === lowerEmail) {
-                var val = data[r][colIdx];
-                if (val === true || String(val).trim().toUpperCase() === 'TRUE') {
-                  // Read role from the Role column (default to RBAC_DEFAULT_ROLE if missing)
-                  var userRole = RBAC_DEFAULT_ROLE;
-                  if (roleColIdx !== -1 && data[r][roleColIdx]) {
-                    var rawRole = String(data[r][roleColIdx]).trim().toLowerCase();
-                    if (getRolesFromSpreadsheet()[rawRole]) {
-                      userRole = rawRole;
-                    }
-                  }
-                  cache.put(cacheKey, "1", 600);
-                  cache.put(roleCacheKey, userRole, 600);
-                  return { hasAccess: true, role: userRole, isEmergencyAccess: false };
-                }
-                break; // Found email but not granted — continue to method 2
-              }
-            }
+        if (data.length < 2) { aclFailReason = 'acl_empty'; continue; }
+        var headers = data[0];
+        // Find the page column index (page access TRUE/FALSE)
+        var colIdx = -1;
+        for (var c = 0; c < headers.length; c++) {
+          if (String(headers[c]).trim().toLowerCase() === ACL_PAGE_NAME.toLowerCase()) {
+            colIdx = c; break;
           }
         }
+        // A missing page column denies every user of this app at once. That is a
+        // broken ACL, not a per-user decision, so it must not be cached as one.
+        if (colIdx === -1) { aclFailReason = 'acl_column_missing'; continue; }
+        // Find the Role column index (expected col B, but search by header name for flexibility)
+        var roleColIdx = -1;
+        for (var rc = 0; rc < headers.length; rc++) {
+          if (String(headers[rc]).trim().toLowerCase() === 'role') {
+            roleColIdx = rc; break;
+          }
+        }
+        // Past this point the list was read and understood, so a "no" below is a
+        // real denial and is safe to cache.
+        aclReadOk = true;
+        aclFailReason = '';
+        for (var r = 1; r < data.length; r++) {
+          if (String(data[r][0]).trim().toLowerCase() === lowerEmail) {
+            var val = data[r][colIdx];
+            if (val === true || String(val).trim().toUpperCase() === 'TRUE') {
+              // Read role from the Role column (default to RBAC_DEFAULT_ROLE if missing)
+              var userRole = RBAC_DEFAULT_ROLE;
+              if (roleColIdx !== -1 && data[r][roleColIdx]) {
+                var rawRole = String(data[r][roleColIdx]).trim().toLowerCase();
+                if (getRolesFromSpreadsheet()[rawRole]) {
+                  userRole = rawRole;
+                }
+              }
+              cache.put(cacheKey, "1", 600);
+              cache.put(roleCacheKey, userRole, 600);
+              return { hasAccess: true, role: userRole, isEmergencyAccess: false };
+            }
+            break; // Found email but not granted — continue to method 2
+          }
+        }
+      } catch(e) {
+        aclFailReason = 'acl_unreachable';
+        Logger.log('checkSpreadsheetAccess: ACL read failed on attempt '
+          + (attempt + 1) + ' for ' + ACL_PAGE_NAME + ': ' + e.message);
       }
-    } catch(e) { /* ACL spreadsheet error — continue to method 2 */ }
+    }
+    // When an ACL is configured it is the sole authority — the sharing-list
+    // fallback below is deliberately skipped. So an unreadable ACL means the
+    // verdict is UNKNOWN, not "no". Return that uncached and let the caller
+    // present it as a retryable outage.
+    if (!aclReadOk) {
+      auditLog('security_alert', email, 'acl_unavailable',
+        { reason: aclFailReason || 'acl_unreachable', page: ACL_PAGE_NAME });
+      return { hasAccess: false, role: null, isEmergencyAccess: false,
+               aclUnavailable: true, reason: aclFailReason || 'acl_unreachable' };
+    }
   }
 
   // Method 2: Editor/viewer sharing-list check on SPREADSHEET_ID

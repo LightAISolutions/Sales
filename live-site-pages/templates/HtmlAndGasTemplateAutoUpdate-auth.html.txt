@@ -1483,6 +1483,8 @@
         authMsg = 'Setup required: Domain restriction is enabled but ALLOWED_DOMAINS is empty. Set ALLOWED_DOMAINS in the GAS preset config or disable ENABLE_DOMAIN_RESTRICTION.';
       } else if (authError === 'domain_not_allowed') {
         authMsg = 'Access denied: your email domain is not in the allowed list. Contact your administrator.';
+      } else if (authError === 'acl_unavailable') {
+        authMsg = 'The sign-in service could not reach the access list, so it could not confirm your account. This is a temporary service problem, not a change to your access \u2014 please try again in a moment.';
       } else if (authError === 'account_locked') {
         authMsg = 'Account temporarily locked due to too many failed attempts. Contact your administrator.';
       } else if (authError === 'rate_limited') {
@@ -2075,6 +2077,8 @@
               + 'Set ALLOWED_DOMAINS in the GAS preset config or disable ENABLE_DOMAIN_RESTRICTION via PROJECT_OVERRIDES.';
           } else if (authError === 'domain_not_allowed') {
             authMsg = 'Access denied: your email domain is not in the allowed list. Contact your administrator.';
+          } else if (authError === 'acl_unavailable') {
+            authMsg = 'The sign-in service could not reach the access list, so it could not confirm your account. This is a temporary service problem, not a change to your access \u2014 please try again in a moment.';
           } else if (authError === 'account_locked') {
             authMsg = 'Account temporarily locked due to too many failed attempts. Contact your administrator.';
           } else if (authError === 'rate_limited') {

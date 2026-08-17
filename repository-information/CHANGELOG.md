@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.54r] — 2026-08-17 02:10:00 AM EST
+
+> **Prompt:** "Picking up from my last "Receipts" related session, Mandy and I both tried to sign in and were denied per the attached screenshot. This is the second time this has happened now. What is going on? Is there any way to prevent this from happening in the future?" *(with a screenshot of the Receipts sign-in wall showing `Access denied. Contact your administrator. (code: not_authorized)`)*
+
+### Fixed
+- **`checkSpreadsheetAccess()` could not tell "this user is not on the list" apart from "I could not read the list" — and reported both as `not_authorized`.** The entire Master ACL read sat inside `try { … } catch(e) { /* continue to method 2 */ }`, but method 2 (the editor/viewer sharing-list fallback) is gated on `if (!hasAcl && hasSheet)` and is therefore **skipped whenever an ACL is configured**. So every exception — `SpreadsheetApp.openById` failing, a Sheets timeout, a lock/contention error, quota exhaustion — fell straight through to `cache.put(cacheKey, "0", 600); return denied;`. This is the defect that explains both reported incidents: a per-user data problem cannot deny two users at the same moment, but a failed read of the shared list denies **everyone at once**, and the 10-minute negative cache makes it persist well past the fault itself
+- **The same silent path swallowed three structural failures**, all of which deny 100% of an app's users while looking exactly like an individual denial: a missing `Access` tab, a sheet with fewer than two rows, and — most likely to occur in practice — **a missing or renamed page column** (`colIdx === -1`), which was simply skipped with no signal
+- **Error-path denials are no longer cached.** `aclReadOk` now records whether the list was actually read. Only a successful read that genuinely finds no grant caches `"0"`; an unreadable list returns a new uncached `aclUnavailable` verdict, so access is restored the moment the service recovers instead of up to 10 minutes later
+- **An unreadable ACL no longer counts as a failed login attempt.** `exchangeTokenForSession()` previously incremented the rate-limit counter on every `not_authorized`, and the `hipaa` preset (which Receipts runs) enables `ENABLE_ESCALATING_LOCKOUT` — 10 failures → 30 minutes, 20 → 6 hours. A user retrying through an outage could therefore convert a transient fault into a real lockout. The new `acl_unavailable` branch returns before the counter is touched
+- **The failure is now visible instead of silent.** Each failed read logs the attempt number, the page name and the exception message via `Logger.log`, and the unavailable verdict writes a `security_alert` / `acl_unavailable` audit entry with a specific reason (`acl_unreachable`, `acl_tab_missing`, `acl_empty`, `acl_column_missing`). Previously the `catch` block discarded the exception entirely, which is why the first investigation (v02.30r, which shipped the `diagnoseAclAccess()` diagnostic) could find no cause in the code
+
+### Added
+- **A bounded retry around the ACL read** — one retry after a 400 ms pause before concluding the list is unreachable, which absorbs momentary contention without materially slowing a genuine sign-in
+- **`acl_unavailable` client messaging** in all seven auth pages and the auth HTML template (13 mapping sites across the `fetch` and `postMessage` exchange branches): *"The sign-in service could not reach the access list… This is a temporary service problem, not a change to your access — please try again in a moment."* `Profiler.html` needed a dedicated branch because its catch-all `/access|acl|denied|not_authorized/i` test would otherwise have told the user to ask for access they already have
+
+### Changed
+- **`registerSelfProject()` is throttled to once per version (6 h cache TTL) instead of running on every `doGet`.** This is the contention source, not a side issue: the function writes five metadata cells (`#NAME`/`#URL`/`#AUTH`/`#ICON`/`#DESC`) into the **shared** `Access` tab on every page load, and **seven projects share that one tab** — so every page view of any app was writing to the exact sheet every sign-in must read. The marker is only set after a fully successful pass (a failed registration retries on the next load rather than being suppressed for six hours), and the `doPost(action=deploy)` route clears it outright so a redeploy always re-registers
+- **Propagated to all seven auth projects and both templates** per [PC-TEMPLATE-PROP] #19 — `Receipts`, `Profiler`, `Scraper`, `MasterACL`, `Globalacl`, `Testauthgas1`, `Testauthhtml1`, plus `gas-minimal-auth-template-code.js.txt` and `HtmlAndGasTemplateAutoUpdate-auth.html.txt`. The `checkSpreadsheetAccess` body was confirmed **byte-identical across all eight copies** (same 115-line md5) before patching, so a single scripted replacement was safe
+
+### Note
+- **The fix is fail-safe by construction: no path grants access to anyone who would previously have been denied.** A successful read that finds no grant behaves exactly as before. Only the *error* paths changed, and they still deny — they simply deny with a distinguishable code, without caching, and without counting against the lockout
+- **Which trigger fired on these two specific incidents is still unconfirmed** and cannot be determined from the repo — it needs the Apps Script execution log. Running `diagnoseAclAccess()` (added v02.30r) from the editor now discriminates it, and from this version on the execution log records the reason automatically. `acl_column_missing` and `acl_unreachable` are the two candidates consistent with two users being denied simultaneously
+- **`auditLog()` was verified safe to call from the new error path** — `_writeAuditLogEntry` wraps its own spreadsheet write in `try/catch` and swallows failures, so it cannot throw back into `checkSpreadsheetAccess` during the very outage being handled
+- All nine `.gs` files pass `node --check` after patching
 
 ## [v02.53r] — 2026-08-16 10:59:08 PM EST
 
