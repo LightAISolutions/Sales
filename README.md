@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-16 10:08:36 PM EST` · Repo version: `v02.51r`
+Last updated: `2026-08-16 10:23:10 PM EST` · Repo version: `v02.52r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -296,13 +296,20 @@ Last updated: `2026-08-16 10:08:36 PM EST` · Repo version: `v02.51r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/Scraper-diagram.md">Scraper-diagram.md</a>         — [template] Scraper page GAS integration sequence
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/Receipts-diagram.md">Receipts-diagram.md</a>         — [template] Receipts page GAS integration sequence
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/profiler-diagram.md">profiler-diagram.md</a>         — Profiler page GAS integration sequence (inline note-box iframe)
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.md">AIDC-MARKET-REPORT.md</a>   — AIDC market report: an equity-research guide to the US AI data-center infrastructure market, written to teach it — 14 chapters, per-company coverage of all 40 Profiler names
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.pdf">AIDC-MARKET-REPORT.pdf</a>  — Formatted market report, BloombergNEF Research Report style (canonical edition; 155 pages, 17 figures, 23 tables, single-column contents on page 2, every chapter on a fresh page)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.md">AIDC-MARKET-REPORT.md</a>   — AIDC market report: an equity-research guide to the US AI data-center infrastructure market, written to teach it — 11 chapters of argument; the 40 per-company entries live in the Coverage Universe companion
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.pdf">AIDC-MARKET-REPORT.pdf</a>  — Formatted market report, BloombergNEF Research Report style (canonical edition; 109 pages, single-column contents on page 2, every chapter on a fresh page)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-analyst-prose.pdf">AIDC-MARKET-REPORT-analyst-prose.pdf</a> — Same report, Analyst Prose style (the Profiler house style)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-equity-research.pdf">AIDC-MARKET-REPORT-equity-research.pdf</a> — Same report, Sell-Side Research Note style
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-intel-briefing.pdf">AIDC-MARKET-REPORT-intel-briefing.pdf</a> — Same report, Intelligence Community Briefing style
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-smart-brevity.pdf">AIDC-MARKET-REPORT-smart-brevity.pdf</a> — Same report, Axios Smart Brevity style
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-COVERAGE-UNIVERSE.md">AIDC-COVERAGE-UNIVERSE.md</a> — Coverage Universe companion: the 40 companies under coverage, one entry each — position, evidence, falsifier and recommended strategy. Reissued on earnings, a faster clock than the report
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-COVERAGE-UNIVERSE.pdf">AIDC-COVERAGE-UNIVERSE.pdf</a> — Formatted coverage companion, BloombergNEF Research Report style (canonical edition; 51 pages)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-COVERAGE-UNIVERSE-analyst-prose.pdf">AIDC-COVERAGE-UNIVERSE-analyst-prose.pdf</a> — Same companion, Analyst Prose style
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-COVERAGE-UNIVERSE-equity-research.pdf">AIDC-COVERAGE-UNIVERSE-equity-research.pdf</a> — Same companion, Sell-Side Research Note style
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-COVERAGE-UNIVERSE-intel-briefing.pdf">AIDC-COVERAGE-UNIVERSE-intel-briefing.pdf</a> — Same companion, Intelligence Community Briefing style
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-COVERAGE-UNIVERSE-smart-brevity.pdf">AIDC-COVERAGE-UNIVERSE-smart-brevity.pdf</a> — Same companion, Axios Smart Brevity style
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/aidc-market-report-print.html">aidc-market-report-print.html</a> — Typeset source the PDFs are rendered from (self-contained; inline CSS + SVG figures; five style skins)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/aidc-coverage-universe-print.html">aidc-coverage-universe-print.html</a> — Typeset source for the Coverage Universe companion (same five style skins; rendered by the same build script via --doc coverage)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG.md">CHANGELOG.md</a>            — [template · initialized] Version history
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG-archive.md">CHANGELOG-archive.md</a>    — [template · initialized] Older changelog sections (rotated from CHANGELOG.md)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASP-PUSH-PILOT-SETUP.md">CLASP-PUSH-PILOT-SETUP.md</a> — Setup for the GitHub Actions → clasp push deployment pilot

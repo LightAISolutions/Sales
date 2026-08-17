@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.52r] — 2026-08-16 10:23:10 PM EST
+
+> **Prompt:** "Continue with your recommendation. I want the coverage document to keep the "recommended strategy" per company."
+
+### Added
+- **`AIDC-COVERAGE-UNIVERSE.md` and `aidc-coverage-universe-print.html`** — a new standalone companion carrying the former chapters 10–12, renumbered 1–3, with its own masthead, contents index, standing disclaimer and colophon. Per the developer's explicit instruction the **per-company recommended strategy stays in the companion** — all **14 recommended-strategy passages** were verified present in the extracted block before anything was written, and again after
+- **Five PDF editions of the companion** — `AIDC-COVERAGE-UNIVERSE.pdf` (canonical, **51 pages**) plus analyst-prose (48), equity-research (48), intel-briefing (57) and smart-brevity (54)
+- **A `DOCS` registry in `scripts/build-aidc-report-pdf.mjs`** replacing the single `SRC` constant, plus a `--doc <report|coverage>` flag. With no flags the script now renders **both documents in all five styles**, so neither the editions nor the two documents can drift apart. The `--png` proof mode still works, capturing whichever document rendered last
+
+### Changed
+- **The market report is now 11 chapters and 109 pages, down from 14 and 158** — a 31% reduction with no argument removed. What left was reference, not insight: the coverage chapters were 32.9% of the report by word count while carrying per-company entries rather than market analysis
+- **Chapters 13 and 14 renumbered to 10 and 11**, and **122 subsection headings renumbered** across both documents (`13.x`→`10.x`, `14.x`→`11.x` in the report; `10.x`/`11.x`/`12.x`→`1.x`/`2.x`/`3.x` in the companion). The chapter-level rename did not touch subsections, which is exactly the kind of half-applied edit that reads as complete
+- **Both documents cross-reference each other** — the report's "How to read" note and Markdown preamble point to the companion; the companion points back for the primer and conventions
+- **The Method chapter's "Coverage expanded to three chapters" row rewritten** to describe the split and the reason for it (different refresh clocks: company facts move on earnings, the argument does not)
+- **README tree** gained 7 entries for the new files, and two stale figures were corrected — the report row still claimed 14 chapters and 155 pages
+
+### Fixed
+- **A stale `chapter 13` cross-reference in the print HTML** that the Markdown-only prose repair had missed. Caught by re-grepping both files rather than trusting that the two twins had received identical treatment — the same `.md`/print-HTML drift risk flagged in earlier sessions
+- The companion initially lost the standing disclaimer, colophon and developer-branding block, because the extracted chapter range ended before the document footer. Restored with companion-specific wording
 
 ## [v02.51r] — 2026-08-16 10:08:36 PM EST
 

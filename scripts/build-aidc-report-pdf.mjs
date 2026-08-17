@@ -7,11 +7,14 @@
  * Protocol so Page.printToPDF can carry a custom running header/footer — the CLI
  * --print-to-pdf flag cannot. No npm dependencies: Node 22 ships a global WebSocket.
  *
- * Usage: node scripts/build-aidc-report-pdf.mjs [--style <slug>] [--png]
- *        no --style   renders ALL five styles, so the editions can never drift
+ * Usage: node scripts/build-aidc-report-pdf.mjs [--doc <key>] [--style <slug>] [--png]
+ *        no flags     renders BOTH documents in ALL five styles, so neither the
+ *                     editions nor the two documents can drift apart
+ *        --doc <key>     renders one: report | coverage
  *        --style <slug>  renders one: bloomberg | default | equity-research |
  *                        intel-briefing | smart-brevity
- *        --png        also writes page previews of the rendered style to SCRATCH
+ *        --png        also writes page previews to SCRATCH (of whichever
+ *                     document rendered last)
  *
  * The styles are the writing styles registered in PROFILER-STYLES.md. Each has a
  * presentation skin in Profiler.html and a matching skin in the report's own
@@ -24,26 +27,54 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const SRC = resolve(ROOT, 'repository-information/aidc-market-report-print.html');
 const PORT = 9333;
 
-/** Registry slug -> output file. `bloomberg` is the canonical edition and keeps
- *  the unsuffixed name, so existing links to it never break. */
-const STYLES = {
-  bloomberg: 'AIDC-MARKET-REPORT.pdf',
-  default: 'AIDC-MARKET-REPORT-analyst-prose.pdf',
-  'equity-research': 'AIDC-MARKET-REPORT-equity-research.pdf',
-  'intel-briefing': 'AIDC-MARKET-REPORT-intel-briefing.pdf',
-  'smart-brevity': 'AIDC-MARKET-REPORT-smart-brevity.pdf',
+/** Document registry. Each document renders from its own print-HTML source into
+ *  its own set of style editions. `bloomberg` is canonical everywhere and keeps
+ *  the unsuffixed name, so existing links to it never break.
+ *
+ *  The two documents are deliberately separate artifacts on different refresh
+ *  clocks: `report` carries the market argument and moves slowly, while
+ *  `coverage` carries the 40 per-company entries and is reissued on earnings. */
+const DOCS = {
+  report: {
+    src: 'repository-information/aidc-market-report-print.html',
+    styles: {
+      bloomberg: 'AIDC-MARKET-REPORT.pdf',
+      default: 'AIDC-MARKET-REPORT-analyst-prose.pdf',
+      'equity-research': 'AIDC-MARKET-REPORT-equity-research.pdf',
+      'intel-briefing': 'AIDC-MARKET-REPORT-intel-briefing.pdf',
+      'smart-brevity': 'AIDC-MARKET-REPORT-smart-brevity.pdf',
+    },
+  },
+  coverage: {
+    src: 'repository-information/aidc-coverage-universe-print.html',
+    styles: {
+      bloomberg: 'AIDC-COVERAGE-UNIVERSE.pdf',
+      default: 'AIDC-COVERAGE-UNIVERSE-analyst-prose.pdf',
+      'equity-research': 'AIDC-COVERAGE-UNIVERSE-equity-research.pdf',
+      'intel-briefing': 'AIDC-COVERAGE-UNIVERSE-intel-briefing.pdf',
+      'smart-brevity': 'AIDC-COVERAGE-UNIVERSE-smart-brevity.pdf',
+    },
+  },
 };
+
+const STYLE_SLUGS = Object.keys(DOCS.report.styles);
 
 const styleFlag = process.argv.indexOf('--style');
 const requested = styleFlag !== -1 ? process.argv[styleFlag + 1] : null;
-if (requested && !(requested in STYLES)) {
-  console.error(`unknown style "${requested}" — expected one of: ${Object.keys(STYLES).join(', ')}`);
+if (requested && !STYLE_SLUGS.includes(requested)) {
+  console.error(`unknown style "${requested}" — expected one of: ${STYLE_SLUGS.join(', ')}`);
   process.exit(2);
 }
-const buildList = requested ? [requested] : Object.keys(STYLES);
+const docFlag = process.argv.indexOf('--doc');
+const reqDoc = docFlag !== -1 ? process.argv[docFlag + 1] : null;
+if (reqDoc && !(reqDoc in DOCS)) {
+  console.error(`unknown doc "${reqDoc}" — expected one of: ${Object.keys(DOCS).join(', ')}`);
+  process.exit(2);
+}
+const docList = reqDoc ? [reqDoc] : Object.keys(DOCS);
+const buildList = requested ? [requested] : STYLE_SLUGS;
 
 function findChrome() {
   const base = process.env.PLAYWRIGHT_BROWSERS_PATH || '/opt/pw-browsers';
@@ -120,39 +151,46 @@ const chrome = spawn(findChrome(), [
 
 try {
   await waitForDevTools();
-  const target = await (await fetch(
-    `http://127.0.0.1:${PORT}/json/new?file://${SRC}`, { method: 'PUT' },
-  )).json();
-  const c = cdp(target.webSocketDebuggerUrl);
-  await c.open;
-  await c.send('Page.enable');
-  const loaded = c.once('Page.loadEventFired');
-  await c.send('Page.navigate', { url: `file://${SRC}` });
-  await loaded;
-  await c.send('Runtime.enable');
-  await sleep(600); // let layout/fonts settle before capture
+  // `c` is declared outside the document loop so the --png proof mode below
+  // still has a live connection — it captures whichever document rendered last.
+  let c;
+  for (const docKey of docList) {
+    const SRC = resolve(ROOT, DOCS[docKey].src);
+    const STYLES = DOCS[docKey].styles;
+    const target = await (await fetch(
+      `http://127.0.0.1:${PORT}/json/new?file://${SRC}`, { method: 'PUT' },
+    )).json();
+    c = cdp(target.webSocketDebuggerUrl);
+    await c.open;
+    await c.send('Page.enable');
+    const loaded = c.once('Page.loadEventFired');
+    await c.send('Page.navigate', { url: `file://${SRC}` });
+    await loaded;
+    await c.send('Runtime.enable');
+    await sleep(600); // let layout/fonts settle before capture
 
-  for (const style of buildList) {
-    // one page load, five renders: swapping the attribute reskins the document
-    // in place, so every edition is guaranteed to carry identical content
-    await c.send('Runtime.evaluate', {
-      expression: `document.documentElement.setAttribute('data-style', ${JSON.stringify(style)})`,
-    });
-    await sleep(120); // let the restyle settle before the paginator runs
-    const { data } = await c.send('Page.printToPDF', {
-      printBackground: true,
-      preferCSSPageSize: true,
-      displayHeaderFooter: true,
-      headerTemplate: HEAD,
-      footerTemplate: FOOT,
-      marginTop: 0.62, marginBottom: 0.62, marginLeft: 0.55, marginRight: 0.55,
-    });
-    const buf = Buffer.from(data, 'base64');
-    const out = resolve(ROOT, 'repository-information', STYLES[style]);
-    writeFileSync(out, buf);
-    const counts = [...buf.toString('latin1').matchAll(/\/Count\s+(\d+)/g)].map((m) => +m[1]);
-    const pages = counts.length ? Math.max(...counts) : '?';
-    console.log(`${style.padEnd(16)} -> ${STYLES[style].padEnd(40)} ${(buf.length / 1024).toFixed(0)} KB, ${pages} pages`);
+    for (const style of buildList) {
+      // one page load, five renders: swapping the attribute reskins the document
+      // in place, so every edition is guaranteed to carry identical content
+      await c.send('Runtime.evaluate', {
+        expression: `document.documentElement.setAttribute('data-style', ${JSON.stringify(style)})`,
+      });
+      await sleep(120); // let the restyle settle before the paginator runs
+      const { data } = await c.send('Page.printToPDF', {
+        printBackground: true,
+        preferCSSPageSize: true,
+        displayHeaderFooter: true,
+        headerTemplate: HEAD,
+        footerTemplate: FOOT,
+        marginTop: 0.62, marginBottom: 0.62, marginLeft: 0.55, marginRight: 0.55,
+      });
+      const buf = Buffer.from(data, 'base64');
+      const out = resolve(ROOT, 'repository-information', STYLES[style]);
+      writeFileSync(out, buf);
+      const counts = [...buf.toString('latin1').matchAll(/\/Count\s+(\d+)/g)].map((m) => +m[1]);
+      const pages = counts.length ? Math.max(...counts) : '?';
+      console.log(`${docKey.padEnd(9)} ${style.padEnd(16)} -> ${STYLES[style].padEnd(44)} ${(buf.length / 1024).toFixed(0)} KB, ${pages} pages`);
+    }
   }
 
   if (process.argv.includes('--png')) {
