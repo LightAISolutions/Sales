@@ -1464,7 +1464,7 @@
           if (data && data.success) {
             _completeSignInFetch(data);
           } else {
-            showAuthWall(_mapExchangeError(data && data.error));
+            showAuthWall(_mapExchangeError(data && data.error, data && data.reason));
           }
         })
         .catch(function(err) {
@@ -1475,7 +1475,7 @@
 
     // Error-code mapping for the fetch exchange (mirrors the gas-session-created
     // failure branch; unmapped codes are appended so failures stay diagnosable).
-    function _mapExchangeError(authError) {
+    function _mapExchangeError(authError, authReason) {
       var authMsg = 'Access denied. Contact your administrator. (code: ' + (authError || 'unknown') + ')';
       if (authError === 'hmac_secret_missing') {
         authMsg = 'Setup required: HMAC_SECRET is not configured in Script Properties. This should auto-generate on first deploy — verify deployment completed, or set it manually in the GAS editor.';
@@ -1484,7 +1484,17 @@
       } else if (authError === 'domain_not_allowed') {
         authMsg = 'Access denied: your email domain is not in the allowed list. Contact your administrator.';
       } else if (authError === 'acl_unavailable') {
-        authMsg = 'The sign-in service could not reach the access list, so it could not confirm your account. This is a temporary service problem, not a change to your access \u2014 please try again in a moment.';
+        // The access list could not be READ. Surface WHICH of the four causes
+        // fired — without it they are indistinguishable — and only invite a
+        // retry for the one that is actually transient.
+        var aclR = authReason || 'acl_unreachable';
+        var aclMsgs = {
+          acl_unreachable:    'The sign-in service could not reach the access list, so it could not confirm your account. This is usually temporary \u2014 please try again in a moment.',
+          acl_column_missing: 'The access list has no column for this app, so nobody can be authorized. An administrator has to restore it \u2014 this will not clear on its own.',
+          acl_tab_missing:    'The access list is missing its Access tab. An administrator has to restore it \u2014 this will not clear on its own.',
+          acl_empty:          'The access list has no entries. An administrator has to restore it \u2014 this will not clear on its own.'
+        };
+        authMsg = (aclMsgs[aclR] || aclMsgs.acl_unreachable) + ' (code: acl_unavailable/' + aclR + ')';
       } else if (authError === 'account_locked') {
         authMsg = 'Account temporarily locked due to too many failed attempts. Contact your administrator.';
       } else if (authError === 'rate_limited') {
@@ -2078,7 +2088,17 @@
           } else if (authError === 'domain_not_allowed') {
             authMsg = 'Access denied: your email domain is not in the allowed list. Contact your administrator.';
           } else if (authError === 'acl_unavailable') {
-            authMsg = 'The sign-in service could not reach the access list, so it could not confirm your account. This is a temporary service problem, not a change to your access \u2014 please try again in a moment.';
+            // The access list could not be READ. Surface WHICH of the four causes
+            // fired — without it they are indistinguishable — and only invite a
+            // retry for the one that is actually transient.
+            var aclR = (data && data.reason) || 'acl_unreachable';
+            var aclMsgs = {
+              acl_unreachable:    'The sign-in service could not reach the access list, so it could not confirm your account. This is usually temporary \u2014 please try again in a moment.',
+              acl_column_missing: 'The access list has no column for this app, so nobody can be authorized. An administrator has to restore it \u2014 this will not clear on its own.',
+              acl_tab_missing:    'The access list is missing its Access tab. An administrator has to restore it \u2014 this will not clear on its own.',
+              acl_empty:          'The access list has no entries. An administrator has to restore it \u2014 this will not clear on its own.'
+            };
+            authMsg = (aclMsgs[aclR] || aclMsgs.acl_unreachable) + ' (code: acl_unavailable/' + aclR + ')';
           } else if (authError === 'account_locked') {
             authMsg = 'Account temporarily locked due to too many failed attempts. Contact your administrator.';
           } else if (authError === 'rate_limited') {

@@ -1,4 +1,4 @@
-var VERSION = "v01.10g";
+var VERSION = "v01.11g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3259,6 +3259,7 @@ function doGet(e) {
             email: result.email || "",
             displayName: result.displayName || "",
             error: result.error || "",
+            reason: result.reason || "",   // acl_unavailable sub-cause — dropped by the whitelist otherwise
             absoluteTimeout: result.absoluteTimeout || 0,
             messageKey: result.messageKey || "",
             role: result.role || "",
@@ -3291,6 +3292,7 @@ function doGet(e) {
       + '        email: result.email || "",'
       + '        displayName: result.displayName || "",'
       + '        error: result.error || "",'
+      + '        reason: result.reason || "",'
       + '        absoluteTimeout: result.absoluteTimeout || 0,'
       + '        messageKey: result.messageKey || "",'
       + '        role: result.role || "",'

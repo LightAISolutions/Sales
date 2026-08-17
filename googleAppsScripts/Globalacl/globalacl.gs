@@ -1,4 +1,4 @@
-var VERSION = "v01.02g";
+var VERSION = "v01.03g";
 var TITLE = "Global ACL";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "lightaisolutions";
@@ -3737,6 +3737,7 @@ function doGet(e) {
             email: result.email || "",
             displayName: result.displayName || "",
             error: result.error || "",
+            reason: result.reason || "",   // acl_unavailable sub-cause — dropped by the whitelist otherwise
             absoluteTimeout: result.absoluteTimeout || 0,
             messageKey: result.messageKey || "",
             role: result.role || "",
@@ -3769,6 +3770,7 @@ function doGet(e) {
       + '        email: result.email || "",'
       + '        displayName: result.displayName || "",'
       + '        error: result.error || "",'
+      + '        reason: result.reason || "",'
       + '        absoluteTimeout: result.absoluteTimeout || 0,'
       + '        messageKey: result.messageKey || "",'
       + '        role: result.role || "",'

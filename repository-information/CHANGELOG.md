@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.56r] — 2026-08-17 02:34:37 AM EST
+
+> **Prompt:** "Mandy failed to sign in and the error code is "acl_unavailable"."
+
+### Fixed
+- **v02.54r computed the specific ACL failure reason and then threw it away at the boundary — my own gap, and it is why `acl_unavailable` arrived with no detail.** `exchangeTokenForSession` returned `{ error: "acl_unavailable", reason: <specific> }`, but **no page ever read `reason`**: every client mapped `acl_unavailable` to one static sentence. The previous session's claim that the sign-in screen would "name the actual cause" was wrong — the server side was verified and the client display path was not
+- **A second, independent break in the same chain: the postMessage payload is an explicit field whitelist and silently dropped `reason`.** `gas-session-created` is assembled field-by-field in two places per project (the direct `JSON.stringify` payload and the string-built `google.script.run` listener), so a new server field never reaches pages using the `postMessage` transport regardless of what the client reads. Receipts runs `TOKEN_EXCHANGE_METHOD: 'fetch'` (raw JSON passthrough, unaffected), which is exactly why this would have stayed invisible on the app being debugged while quietly breaking MasterACL and Globalacl. `reason` added to both builders in all seven projects and the GAS template
+- **The message told users to retry faults that can never clear on their own.** `acl_column_missing`, `acl_tab_missing` and `acl_empty` are structural — retrying is futile — yet all three said "please try again in a moment". Each now states plainly that an administrator has to restore the list, and only `acl_unreachable` invites a retry
+
+### Changed
+- **Client error mapping is now reason-aware across 13 call sites** in the seven auth pages plus the auth HTML template — `_mapExchangeError` gained an `authReason` parameter (threaded from `data.reason` at every call site) and the `postMessage` branch reads `data.reason` directly. Every message ends with `(code: acl_unavailable/<reason>)` so the specific cause is quotable from a screenshot
+- `Profiler.html` needed its own branch again — its catch-all would otherwise have told a user to "ask Jon to add you to the access list" during a structural outage
+
+### Note
+- **Verified by calling the real function in a real browser**, not by inspecting the source: Playwright loaded `Receipts.html` and invoked `_mapExchangeError('acl_unavailable', …)` for all four reasons plus `undefined`, confirming each maps to its own message, the `undefined` fallback lands on `acl_unreachable`, and an unrelated code (`rate_limited`) still maps correctly — i.e. no regression in the surrounding chain
+- **The two harness FAILs on `Receipts` and `MasterACL` are pre-existing** — CSP image-load refusals under `file://`. Confirmed by stashing the change and re-running: byte-identical results (3 and 5 errors, same pass/fail), so nothing here introduced them
+- **What `acl_unavailable` already tells us** is that the v02.54r diagnosis was right — this is not a per-user denial. The ACL genuinely could not be READ, which is why Mandy and the developer were denied together. Which of the four causes fired still needs one more sign-in attempt on this build
+- The Master ACL and Receipts spreadsheets were probed through the Google Drive connector to try to settle the cause without another round trip; both returned "not found" while 15 other spreadsheets listed normally, so the connector is scoped to the personal account and cannot see the script account's files. Recorded as a dead end rather than as evidence about the spreadsheets' existence
+- All nine `.gs` files and all 15 inline page scripts pass `node --check`
 
 ## [v02.55r] — 2026-08-17 02:24:25 AM EST
 
