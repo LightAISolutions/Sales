@@ -109,6 +109,20 @@ Use this instead of the editor to answer "did my push actually reach the live ap
 
 Projects whose `DEPLOYMENT_ID` is still `YOUR_DEPLOYMENT_ID` (currently `globalacl`, `testauthgas1`, `testauthhtml1`) are never deployed — their workflow deploy steps exit immediately and their version bumps are repo-only bookkeeping.
 
+## OAuth Scope Regressions — invisible to git, and they look like broken data
+
+> **Symptom:** a Google service call fails at runtime with *"You do not have permission to call `X`. Required permissions: `<scope>`"* — **and no consent screen appears**. Seen twice: `ScriptApp.newTrigger` losing `script.scriptapp` (v01.87r), and `SpreadsheetApp.openById` losing `spreadsheets`, which took the whole Receipts sign-in down for every user (v02.57r).
+
+**Why no consent prompt.** When `appsscript.json` carries an **explicit** `oauthScopes` array, Apps Script requests exactly that list and does **not** auto-derive missing scopes from the code. A dropped entry therefore fails at call time rather than at authorization time — the scope was never asked for, so there is nothing to consent to. That absence is the tell: a stale *grant* prompts for re-consent, a missing *declaration* just fails.
+
+**Why the repo cannot see or fix it.** No live project's `appsscript.json` is in this repo, and `pullAndDeployFromGitHub()` deliberately **preserves** the project's existing manifest — it reads the current `appsscript` file back and writes it unchanged alongside the new `Code`. So a scope regression survives every push, every deploy, and every CI run, and no amount of committing fixes it. It has to be repaired in the Apps Script editor.
+
+**Diagnosis.** `diagnoseOauthScopes_()` in `Receipts.gs` reads the manifest back through the Apps Script API and prints the declared scopes plus any the app needs and lacks, each labelled with the feature it breaks. `diagnoseAclAccess()` calls it automatically when the ACL open fails with a permissions-shaped error, and distinguishes that from a file-level failure (wrong ID, trashed, unshared) — the two need opposite fixes.
+
+**Repair:** Project Settings → tick *"Show appsscript.json manifest file in editor"* → add the missing scope(s) to `oauthScopes` (canonical list in "Setup Steps" step 2 above) → save → **run any function in the editor and approve the consent screen**. The re-consent is mandatory, not optional: changing the scope list invalidates the existing grant, so the old token still lacks the new scope until it is re-approved.
+
+**Standing risk.** Because the manifest is unversioned, any future scope loss is equally silent. If this recurs a third time, the fix worth considering is committing a canonical `appsscript.json` per project and having the self-deploy write it — but that is a deliberate change to `pullAndDeployFromGitHub`'s manifest-preservation behavior and must be discussed, not slipped in: preserving the manifest is what keeps per-project webapp settings from being clobbered by a shared template.
+
 ## Google Multi-Account Routing — the recurring "unable to open the file" failure
 
 > **Symptom:** Google Drive's *"Sorry, unable to open the file at this time."* This is **not** a repo defect and no code change fixes it. It has hit this fleet at least three times, on three different surfaces: the Profiler note-box iframe, the embedded `#gas-app` iframe after sign-in, and the Apps Script editor itself.

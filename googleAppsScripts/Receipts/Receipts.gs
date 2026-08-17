@@ -1,4 +1,4 @@
-var VERSION = "v01.23g";
+var VERSION = "v01.24g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -338,7 +338,21 @@ function diagnoseAclAccess() {
     ss = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID);
   } catch (e) {
     Logger.log('FAIL: cannot open the ACL spreadsheet (ID ' + MASTER_ACL_SPREADSHEET_ID + '): ' + e.message);
-    Logger.log('-> This alone makes sign-in deny EVERY user. Restore the script owner\'s access to that file.');
+    Logger.log('-> This alone makes sign-in deny EVERY user (sign-in reports acl_unavailable/acl_unreachable).');
+    // Two very different causes land here and the wrong fix costs a session:
+    // an OAuth scope the script was never granted (so SpreadsheetApp cannot be
+    // called at all, and no consent screen appears because the scope is never
+    // requested) versus the file being unshared, trashed, or the ID being wrong.
+    // The old advice — "restore the script owner's access to that file" — only
+    // addressed the second and actively misdirected on the first.
+    if (/permission|authoriz|scope/i.test(String(e.message))) {
+      Logger.log('-> This is an AUTHORIZATION failure, not a sharing failure. The spreadsheet is almost '
+        + 'certainly fine — the script is not allowed to call SpreadsheetApp at all. Scope report:');
+      diagnoseOauthScopes_();
+    } else {
+      Logger.log('-> This looks like the file itself: confirm the ID is correct, the file is not in the '
+        + 'trash, and the script owner still has access to it.');
+    }
     return;
   }
   Logger.log('Spreadsheet the CODE reads: "' + ss.getName() + '"');
@@ -392,6 +406,77 @@ function diagnoseAclAccess() {
   Logger.log(verdict.hasAccess
     ? 'RESULT: access GRANTED — sign-in should work right now. If the app still denies, confirm the failing device signs in with exactly this email.'
     : 'RESULT: still DENIED — one of the FAIL/WARNING lines above is the cause.');
+}
+
+// ── OWNER-RUN DIAGNOSTIC — OAuth scope report ────────────────────────
+// Prints the project's declared oauthScopes and names any this app actually
+// needs but does not have. Called automatically when the ACL open fails with a
+// permissions error; safe to run on its own from the editor.
+//
+// Why this is worth a diagnostic at all: when appsscript.json carries an
+// EXPLICIT oauthScopes list, Apps Script requests exactly that list and nothing
+// more — it does not auto-derive missing scopes from the code. So a dropped
+// entry produces "You do not have permission to call X" at runtime with NO
+// consent screen (the scope was never asked for), which reads like a broken
+// file rather than a broken grant. The manifest is not in this repo — the
+// self-deploy deliberately preserves whatever manifest the project already has
+// (see pullAndDeployFromGitHub) — so a scope regression is invisible to git and
+// cannot be fixed by pushing. Reading it back at runtime is the only way to see
+// it without the editor.
+function diagnoseOauthScopes_() {
+  var REQUIRED = {
+    'https://www.googleapis.com/auth/spreadsheets': 'SpreadsheetApp — the Master ACL and every data sheet',
+    'https://www.googleapis.com/auth/drive': 'DriveApp / Drive REST — receipt photos and PDFs',
+    'https://www.googleapis.com/auth/script.external_request': 'UrlFetchApp — GitHub pulls and self-deploy',
+    'https://www.googleapis.com/auth/script.projects': 'self-deploy — reads and rewrites its own source',
+    'https://www.googleapis.com/auth/script.deployments': 'self-deploy — creates versions and deployments',
+    'https://www.googleapis.com/auth/script.send_mail': 'MailApp — alerting',
+    'https://www.googleapis.com/auth/script.scriptapp': 'ScriptApp.newTrigger — self-installed triggers'
+  };
+  try {
+    var resp = UrlFetchApp.fetch(
+      'https://script.googleapis.com/v1/projects/' + ScriptApp.getScriptId() + '/content',
+      { muteHttpExceptions: true,
+        headers: { Authorization: 'Bearer ' + ScriptApp.getOAuthToken() } });
+    if (resp.getResponseCode() >= 300) {
+      Logger.log('   Could not read the manifest (HTTP ' + resp.getResponseCode() + '). Check by hand: '
+        + 'Project Settings -> tick "Show appsscript.json manifest file in editor".');
+      return;
+    }
+    var files = JSON.parse(resp.getContentText()).files || [];
+    var manifest = null;
+    for (var i = 0; i < files.length; i++) {
+      if (files[i].name === 'appsscript') manifest = files[i];
+    }
+    if (!manifest) { Logger.log('   No appsscript manifest was returned.'); return; }
+    var declared = JSON.parse(manifest.source).oauthScopes;
+    if (!declared || !declared.length) {
+      Logger.log('   The manifest declares NO explicit oauthScopes, so Apps Script derives them from the '
+        + 'code. A permissions error in that case means the existing grant is stale — run any function '
+        + 'here and approve the consent screen.');
+      return;
+    }
+    Logger.log('   Declared oauthScopes (' + declared.length + '):');
+    for (var d = 0; d < declared.length; d++) Logger.log('      ' + declared[d]);
+    var missing = [];
+    for (var need in REQUIRED) {
+      if (REQUIRED.hasOwnProperty(need) && declared.indexOf(need) === -1) missing.push(need);
+    }
+    if (!missing.length) {
+      Logger.log('   Every scope this app uses IS declared. A permissions error despite that means the '
+        + 'saved OAuth grant is stale — run any function here and approve the consent screen.');
+      return;
+    }
+    Logger.log('   MISSING ' + missing.length + ' scope(s) — each one breaks the feature named after it:');
+    for (var m = 0; m < missing.length; m++) {
+      Logger.log('      ' + missing[m] + '   <- ' + REQUIRED[missing[m]]);
+    }
+    Logger.log('   -> Fix: Project Settings -> tick "Show appsscript.json manifest file in editor" -> add '
+      + 'the scope(s) to oauthScopes -> save -> run any function here and APPROVE the consent screen. '
+      + 'Changing scopes invalidates the old grant, so the re-consent step is mandatory.');
+  } catch (e) {
+    Logger.log('   Scope check failed: ' + e.message);
+  }
 }
 
 // Spreadsheet tabs for the structured receipt data. The wired SPREADSHEET_ID's

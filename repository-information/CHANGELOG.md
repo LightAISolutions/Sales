@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.57r] — 2026-08-17 02:45:40 AM EST
+
+> **Prompt:** "It failed again with the same "Access denied. Contact your administrator. (code: acl_unavailable)". Also, I was able to open Receipts in Apps Script and ran DiagnoseAclAccess. See attached screenshot." *(execution log showing `FAIL: cannot open the ACL spreadsheet … You do not have permission to call SpreadsheetApp.openById. Required permissions: https://www.googleapis.com/auth/spreadsheets`)*
+
+### Note
+- **ROOT CAUSE, three sessions in: the Receipts script lost the `https://www.googleapis.com/auth/spreadsheets` OAuth scope.** The Master ACL spreadsheet is intact and correctly populated. `SpreadsheetApp.openById` was throwing a **permissions** error, so `checkSpreadsheetAccess` took the `acl_unreachable` branch — every user of the app denied at once, exactly as the v02.54r analysis predicted the mechanism would look. The fix is manual and lives in Google, not this repo: add the scope to `appsscript.json` and re-approve the consent screen
+- **The prediction in the previous response was wrong.** `acl_column_missing` was called as the likely cause on the reasoning that only a structural fault persists across sessions. That reasoning held; the conclusion did not — a missing OAuth scope is equally persistent and equally global, and it was not in the candidate set at all because the four `checkSpreadsheetAccess` reasons describe what the ACL *contains*, not whether the script may read it
+- **Why no consent screen ever appeared**, which is the detail that makes this diagnosable: with an **explicit** `oauthScopes` array, Apps Script requests exactly that list and does not auto-derive missing scopes from the code. A dropped entry therefore fails at call time, not at authorization time — nothing prompts, because nothing was ever requested. A stale *grant* prompts for re-consent; a missing *declaration* just fails
+- **This class of fault is invisible to the repository and cannot be fixed by pushing.** No live project's `appsscript.json` is version-controlled, and `pullAndDeployFromGitHub()` deliberately preserves the project's existing manifest — it reads the current `appsscript` file back and writes it unchanged alongside the new `Code`. So the regression survives every push, deploy and CI run
+- Second occurrence of this exact class: v01.87r lost `script.scriptapp` and silently broke self-installed triggers the same way
+- **The live page was verified as current before concluding anything about the client** — `Receiptshtml.version.txt` served `|v01.35w|` and the deployed `Receipts.html` contains the new `aclMsgs` branch, so the generic "Access denied… (code: acl_unavailable)" wording the developer quoted came from a cached page, not from the shipped build
+
+### Changed
+- **`diagnoseAclAccess()` now distinguishes a permissions failure from a file failure.** Its ACL-open catch previously printed one line — *"Restore the script owner's access to that file"* — which describes the file-level cause only and actively misdirected on this incident. It now tests the error text and branches: authorization-shaped errors trigger the new scope report, file-shaped errors keep the ID/trash/sharing advice
+
+### Added
+- **`diagnoseOauthScopes_()` in `Receipts.gs`** — reads the project's manifest back through the Apps Script API (`/v1/projects/<id>/content`, already reachable since `script.projects` is granted and self-deploy works) and prints every declared scope, then names each scope the app needs but lacks **labelled with the feature it breaks** — `spreadsheets` → the ACL and all data sheets, `drive` → receipt photos and PDFs, `script.external_request` → GitHub pulls, and so on. Handles the no-explicit-`oauthScopes` case separately, since there a permissions error means a stale grant rather than a missing declaration, and the repair differs
+- **`.claude/rules/gas-scripts-reference.md` — "OAuth Scope Regressions"**: the no-consent-prompt tell, why git cannot see or repair it, the repair procedure with the mandatory re-consent step, and a standing note that if this recurs a third time the fix to weigh is committing a canonical per-project manifest and having the self-deploy write it — flagged explicitly as a change to `pullAndDeployFromGitHub`'s manifest-preservation behavior that must be discussed rather than slipped in, since preserving the manifest is what stops a shared template from clobbering per-project webapp settings
 
 ## [v02.56r] — 2026-08-17 02:34:37 AM EST
 

@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 23/50`
+`Sections: 24/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.24g] — 2026-08-17 02:45:40 AM EST — v02.57r
+
+### Changed
+- The built-in access check now tells apart two problems that produce the same failure but need opposite fixes: the app not being *allowed* to read the access list, versus the list itself being missing, moved, or no longer shared. It previously assumed the second and pointed at the wrong repair
+- When the cause is a permissions problem, the check now reports exactly which permissions the app has and which it is missing, naming the feature each one supports
 
 ## [v01.23g] — 2026-08-17 02:34:37 AM EST — v02.56r
 
