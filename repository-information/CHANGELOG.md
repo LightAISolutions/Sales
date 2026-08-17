@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.51r] — 2026-08-16 10:08:36 PM EST
+
+> **Prompt:** "Apply +1 patience to chapter 2 only.
+>
+> Aside from that change, evaluate the current structure and flow of the market report. I think 157 pages is too long for a market report; I think it should be closer to 70-90 pages (actual Bloomberg report length). Are there any sections that we could break out into separate, more targeted, reports? However, I do not want to sacrifice market insights for a shorter report length. If you think we need more pages, then feel free to push for it."
+
+### Changed
+- **Chapter 2 of the AIDC market report raised one notch in teaching patience**, per the dial framework agreed in the preceding turn — and **chapter 2 only**, verified by confirming all five diff hunks fall inside lines 192–257. Chapter 2 was already strong prose, so the pass added targeted scaffolding at the five points a non-specialist actually stumbles rather than rewriting passages that worked: (1) a chapter on-ramp stating that no prior electrical knowledge is assumed and mapping the seven subsections in reading order, (2) the volatility swing made concrete — a 336 MW-IT building moving by a third is a ~110 MW step change appearing and disappearing in under a second, which upstream equipment experiences as a power station cycling on and off, (3) the grid-to-chip chain walked once end to end with real voltages at each stage, 138,000 V down to roughly 1 V across seven conversions, (4) the square law worked with actual arithmetic — one megawatt at 400 V needs 2,500 amps against 1,250 amps at 800 V, and holding voltage flat while a rack goes 200 kW → 1 MW raises current fivefold and losses twenty-fivefold, and (5) a power-versus-energy on-ramp before the storage table
+- **Chapter 2 grew 5,710 → 6,281 words** (+10%); canonical edition **157 → 158 pages**, analyst-prose 150, equity-research 150, intel-briefing 181, smart-brevity 166
+- The square-law arithmetic was deliberately written in **pure DC terms** rather than as an 800 VDC-versus-415 VAC comparison. The three-phase AC case involves a √3 factor and power-factor effects that would have made a hand-computed comparison easy to state wrongly; NVIDIA's published 157%-more-power and 45%-less-copper figures remain in the text as their own cited claims
+
+### Fixed
+- **Archive rotation executed** — the active changelog reached 101 sections with this push, exceeding the 100-section threshold. The oldest non-exempt date group (**2026-08-03, 11 sections, v01.51r–v01.61r**) was rotated to `CHANGELOG-archive.md` as an indivisible unit with mandatory SHA enrichment on every header. The shallow clone was deepened to 352 commits first, since all 11 lookups would otherwise have failed silently — the failure mode recorded in the session notes
 
 ## [v02.50r] — 2026-08-16 09:09:12 PM EST
 
@@ -1450,197 +1464,4 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 - "What I've learned" box: profile note + suggested-keyword and liked-domain chips with one-tap add via `updateProject` (client-side payload merge); "Re-score collection" two-tap confirm → `resetScores` → reuses `scRunAnalyze`
 - Standard mode filter bar (days / min score / keyword) wired to the new `listArticles` params; card markup extracted into shared `scArtCard_`
 - Harness-verified end-to-end: 8-card open, remove+replace on rating, counter, distill at 10 ratings, learned box chips, suggestion add, min-score filter param; both-mode screenshots visually checked
-
-## [v01.61r] — 2026-08-03 11:57:41 PM EST
-
-> **Prompt:** "For a few article ratings, it took a long time before it captured and saved me ratings. When I am rating articles (thumbs up/down), create a status window to the right that shows the steps that it is going through, so that it is easier to debug in the future."
-
-### Added
-
-#### `Scraper.html` — v01.15w
-
-##### Added
-- Rating status panel `#sc-vlog`: fixed dark monospace log docked right of the articles card (z-index 51, responsive at ≤1240px/≤760px breakpoints). Each 👍/👎 tap opens a numbered `scVlogSession` with its own clock; every step logs with `+Xms` elapsed — tap registered, per-attempt send/reply (with per-request round-trip ms), transport-retry wait, `unknown_op` mid-update wait, saved ✓ / NOT saved, buttons unlocked. Sessions from concurrent taps interleave safely (per-session numbering + per-session t0); log capped at 60 lines; × hides it (reappears on next rating); hidden when the articles overlay closes
-- `scSendVerdict` restructured with sequential per-attempt instrumentation (inlining the former `scRetryOnce` wrapping so each attempt is individually visible); behavior unchanged — one transport retry + one `unknown_op` retry, 2.5s waits
-- Harness-verified: healthy tap (attempt 1 → saved), flapping server (unknown_op → wait → attempt 2 → saved), close button, and screenshot visual check
-
-## [v01.60r] — 2026-08-03 11:33:05 PM EST
-
-> **Prompt:** "build the distillation step while I continue to rate articles."
-
-### Added
-
-#### `Scraper.gs` — v01.13g
-
-##### Added
-- Feedback distillation: `scDistillFeedback_` sends ALL of a project's 👍/👎-rated titles (up to `SCRAPER_DISTILL_TITLES_MAX` = 40/side) to the AI and stores the result — a ≤150-word learned-preferences note plus up to 8 suggested search phrases — in a new user-visible `Preferences` sheet tab (`Project ID`, `Owner`, `Learned Preferences`, `Suggested Keywords`, `Verdicts Used`, `Distilled At`); auto-created by `ensureScraperTabs_`, upserted one row per project
-- Distillation runs automatically inside `analyzeArticles` when total verdicts ≥ `SCRAPER_DISTILL_MIN_VERDICTS` (3) AND the count changed since the last distillation — at most one extra AI call per Analyze cycle (the stored `Verdicts Used` count makes follow-up chunk invocations skip it); failures are non-fatal and retried on the next Analyze
-- Scoring prompts now include the learned note via `scPrefsPrompt_` (between PROJECT SCOPE and the raw exemplars); `previewBrief` includes it too so briefs reflect learned preferences
-- Learned keywords widen fetching: `scBuildFetchQueue_` adds up to 2 `learned`-labeled Google News queries (6 keywords, OR'd in 3s) and `scGdeltQueries_` adds one learned query group to Backfill (cap raised 4 → 5 groups)
-- `analyzeArticles` returns `distilled: N` (verdict count) when a distillation ran, and counts the distillation call in `UsageLog`
-
-#### `Scraper.html` — v01.14w
-
-##### Added
-- The Analyze loop watches for `data.distilled` and appends "🧠 Preferences updated from your N ratings." to the completion toast (both the "articles scored" and "already scored" paths)
-
-## [v01.59r] — 2026-08-03 11:21:17 PM EST
-
-> **Prompt:** "I opened Articles and started to rate them, but only the 1st article's thumbs-up rating went through. When I tried to thumbs-up the 2nd and 3rd articles, it would get grayed-out for a few seconds before resetting to default. Did I actually do anything by rating the 2nd and 3rd articles? Also, fix this issue."
-
-### Fixed
-
-#### `Scraper.html` — v01.13w
-
-##### Fixed
-- Verdict saves now go through `scSendVerdict`: retries once on transport failure (matching `scRetryOnce`) and once more with a 2.5s delay when the server answers `unknown_op` — the signature of Google's `/exec` serving briefly flapping to a stale deployment version after a GAS redeploy, which made taps land on code that didn't know `setArticleVerdict` yet. Server writes are absolute values, so retries are idempotent. Root cause confirmed by a full-fidelity Playwright harness (real page + handlers, stubbed GAS routes): the client path was correct in isolation; flap, healthy, and persistent-failure scenarios all verified post-fix
-- New `unknown_op` entry in `SC_ERROR_MESSAGES` ("The server is finishing an update — wait a few seconds and try again") replaces the generic fallback toast for all actions during deploy flaps
-
-## [v01.58r] — 2026-08-03 10:06:55 PM EST
-
-> **Prompt:** "fix articles and build the feedback loop. It is imperative that Scraper can learn about my preferences and can improve its article fetching and scoring capabilities to be realistically useful."
-
-### Added
-
-#### `Scraper.gs` — v01.12g
-
-##### Added
-- `setArticleVerdict` action records 👍/👎/clear into the existing User Verdict column (ownership-checked by project + owner, audit-logged)
-- Verdict exemplars feed the scoring prompt: `analyzeArticles` collects up to 8 newest 👍 and 8 newest 👎 titles per project and `scScoreBatch_` injects them as a USER FEEDBACK section between the project scope and the article list, so every future scoring batch calibrates to the user's confirmed preferences
-
-##### Fixed
-- `listArticles` now sorts the project's full corpus by score (unscored last, newest-first within ties) **before** applying the 100-row cap — the previous newest-fetched-first cap let a large low-relevance backfill crowd every relevant article out of the overlay
-
-#### `Scraper.html` — v01.12w
-
-##### Added
-- 👍/👎 verdict buttons on each article card (delegated click handler, active-state highlight, tap-again-to-clear, disabled while the save round-trips); verified via Playwright visual test
-
-#### `Scraper-diagram.md`
-
-##### Changed
-- Sequence diagram updated: top-scored `listArticles` selection, exemplar titles in the scoring step, and the new `setArticleVerdict` flow; mermaid.live pako URL regenerated and decompression-verified
-
-## [v01.57r] — 2026-08-03 08:17:43 PM EST
-
-> **Prompt:** "16 minutes later, the backfill progress looks like this. Therefore, I don't think there's a need to "fix" the backfill. However, I do want you to show failures in the progress UI."
-
-### Changed
-
-#### `Scraper.html` — v01.11w
-
-##### Changed
-- Backfill progress button now appends the silent-error count from `backfillNow` responses (`, N failed`) when nonzero — failed GDELT slices (e.g. rate-limit rejections, which GDELT returns as HTTP-200 plain text) were previously invisible until the completion toast
-
-## [v01.56r] — 2026-08-03 06:43:09 AM EST
-
-> **Prompt:** "Key added as "Scraper-GAS" with an expiry date of "never". Continue the build."
-
-### Added
-
-#### `Scraper.gs` — v01.11g
-
-##### Added
-- GDELT DOC 2.0 historical backfill engine: new `backfillNow`/`getBackfillStatus` actions slice the past 24 months per month × per query and pull date-ranged English article lists (≤250 per slice) into the Articles tab — deduped against existing URLs, batch-appended via `setValues` (not per-row `appendRow`), time-budgeted (40s / 6 fetches per call), with compact resumable state in Script Properties (slices are derived from `startedAt` + stored queries rather than stored, keeping state well under the 9KB property limit)
-
-#### `Scraper.html` — v01.10w
-
-##### Added
-- Backfill button on each project card runs the chunked backfill loop with live progress ("Backfilling… n/total (X found)") and a completion toast; transport failures auto-retry once and an interrupted run resumes where it left off
-
-## [v01.55r] — 2026-08-03 06:20:57 AM EST
-
-> **Prompt:** "Repo created per your instructions and I made sure Claude Github App has access to the bess-aidc-library repo. Also, I have created an Anthropic Console account under jonyang92@gmail.com and funded it with $200."
-
-### Added
-
-#### `Scraper.gs` — v01.10g
-
-##### Added
-- Claude (Anthropic) AI provider wired into the swappable `aiComplete_()` layer: new `scClaudeComplete_()` calls the Messages API with Sonnet 5 (`claude-sonnet-5` default, `ANTHROPIC_MODEL` Script Property overrides) using an `ANTHROPIC_API_KEY` Script Property, mapping responses/errors to the same `ai_*` taxonomy as Gemini (`ai_key_missing`, `ai_rate_limited`, `ai_http_<code>` with trimmed API message, `ai_bad_json`, `ai_empty_response`)
-- `AI_PROVIDER` Script Property now switches providers (`claude` | `gemini`) without a code change; Gemini remains the default and free-tier fallback
-
-##### External
-- Companion library repo `LightAISolutions/bess-aidc-library` seeded and pushed: 76-file skeleton inherited from this repo's template conventions (CLAUDE.md, rules, hooks, skills, trimmed auto-merge workflow), plus `library/news/<segment>/<year>/` archive structure, `library/specsheets/` placeholder, and the 55-company `WATCHLIST.md`
-
-## [v01.54r] — 2026-08-03 02:51:07 AM EST
-
-> **Prompt:** "Another error message. Resolve it."
-
-### Fixed
-
-#### `Scraper.gs` — v01.09g
-
-##### Fixed
-- Transport-level `http_404` on Analyze: live probes confirmed the deployment healthy (fast requests return 200 in 4–9s), isolating the failure to long-running exec requests dying at Google's HTTP front-end. `analyzeArticles` now makes exactly 1 AI call per invocation (was up to 3 + 2s sleeps), keeping each request compile-chunk-sized; the client loop provides continuation and free-tier RPM spacing. Removed the now-unused `SCRAPER_AI_CALL_SPACING_MS` intra-request sleep
-
-#### `Scraper.html` — v01.09w
-
-##### Fixed
-- Compile and Analyze loops now automatically retry a failed chunk once (2.5s pause) before surfacing a transport error — safe because server-side state is chunked/resumable
-
-## [v01.53r] — 2026-08-03 02:38:35 AM EST
-
-> **Prompt:** "I created the GEMINI_API_KEY on my jonyang92@gmail.com account. Then, I added the GEMINI_API_KEY to the Scraper app's Script Properties on lightaisolution@gmail.com's account (owner of the app). However, when I pressed Analyze with or without Compile first, both times ended in the same error (attached). Resolve this."
-
-### Fixed
-
-#### `Scraper.gs` — v01.08g
-
-##### Fixed
-- `ai_http_404` on Analyze: the hardcoded `gemini-2.5-flash-lite` model was retired by Google on 2026-07-09 (months before its announced Oct 16 shutdown). Replaced the hardcoded model with live discovery: `scGeminiDiscoverModel_()` queries the ListModels endpoint (paginated), filters to stable `generateContent`-capable Gemini models (excludes preview/exp/image/tts/live/audio/embed/thinking variants), prefers flash-lite → flash → any Gemini with newest version + shortest name, and caches the pick in the `GEMINI_MODEL_AUTO` Script Property. A 404 on a cached model triggers one automatic rediscover-and-retry, so future model retirements self-heal. Manual `GEMINI_MODEL` Script Property still overrides everything
-- Gemini API error bodies are now surfaced: non-200 responses throw `ai_http_<code> — <API error message>` instead of an opaque status code
-- `analyzeArticles` now reports `hasArticles` so the client can distinguish "no articles compiled yet" from "everything already scored"
-
-#### `Scraper.html` — v01.08w
-
-##### Fixed
-- Clicking Analyze on a project with no compiled articles now shows "No articles to analyze yet — run Compile first to gather news." instead of the misleading "All articles were already scored."
-- Added a user-facing message for the no-compatible-model case
-
-## [v01.52r] — 2026-08-03 02:15:55 AM EST
-
-> **Prompt:** "Deploy works and does give me a bunch of Google News that are questionably related to my topic. Continue with Phase 3."
-
-### Added
-
-#### `Scraper.gs` — v01.07g
-
-##### Added
-- Phase 3 AI layer: provider-agnostic `aiComplete_()` abstraction — Gemini free tier today (`scGeminiComplete_` via `generateContent` v1beta, default model `gemini-2.5-flash-lite` overridable with a `GEMINI_MODEL` Script Property; key from `GEMINI_API_KEY`), Claude slot ready as a future branch
-- `analyzeArticles` route: chunked AI relevance scoring — up to 3 AI calls per invocation × 10 articles per call, 2s spacing for free-tier RPM headroom; scores (0–100) and 1–2 sentence summaries (for scores ≥50) written back to the Articles tab; unscored articles are the natural resume state
-- `previewBrief` route: executive brief synthesized from the top 30 relevant articles (score ≥50), plain-text overview + bullets
-- `listArticles` now returns `summary` and `score`; `scLogUsage_` extended to track AI calls alongside fetch calls in UsageLog
-
-#### `Scraper.html` — v01.07w
-
-##### Added
-- Analyze button per project card driving the chunked scoring loop with progress ("Scoring… N left")
-- Articles panel: color-coded relevance score chips (green ≥70, amber ≥50, red <50), AI summaries shown in place of raw snippets, scored-first sort order
-- Brief button in the articles panel rendering the AI executive brief in a styled box
-- User-facing error messages for AI failure modes (missing key, rate limit, empty/unreadable response, no relevant articles)
-
-## [v01.51r] — 2026-08-03 01:23:34 AM EST
-
-> **Prompt:** "I signed into the live Scraper page and created a real project. Continue with Phase 2."
-
-### Added
-
-#### `Scraper.gs` — v01.06g
-
-##### Added
-- Phase 2 compilation engine: `scBuildFetchQueue_()` builds Google News RSS search queries from topic terms (stopword-filtered via `scTopicTerms_`), keyword OR-chunks, industry combinations, and exclusion negations, plus the project's user-specified feed URLs
-- `scParseFeed_()` parses both RSS 2.0 and Atom feeds via XmlService with HTML-stripped, length-bounded fields
-- `compileNow` route: chunked, resumable compilation — each call fetches ≤6 URLs within a 40s budget, persists progress in Script Properties (`scCompile_<projectId>`), dedupes against existing article URLs per project, caps runs at 200 new articles, appends rows to the Articles tab, and logs fetch counts to UsageLog; the client loops until `done`
-- `getCompileStatus` and `listArticles` routes (owner-scoped, newest-first, capped at 100)
-- Dispatcher/action-list extended with the three new ops (doPost + doGet api mirror route automatically)
-
-#### `Scraper.html` — v01.06w
-
-##### Added
-- Compile button per project card with live progress label ("Compiling… N/M") driving the chunked `compileNow` loop, finishing with a result toast and auto-opening the articles panel
-- Articles panel overlay listing fetched articles (linked title opening in a new tab, source · date meta line, snippet)
-
-##### Fixed
-- Articles panel close button now shares the wizard close-button styling
 
