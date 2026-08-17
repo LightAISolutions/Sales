@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.63r] — 2026-08-17 04:07:29 AM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Fixed
+- **Every truncated `… +N more` marker removed from both documents' contents pages** — the Coverage Universe's three chapter entries now list all 17, 11 and 17 subsections respectively, and a fourth marker found in the market report's chapter 10 was removed. Replacements were generated programmatically from the actual `### N.M` headings rather than transcribed, so no title could be mistyped or invented
+- **Two of the four markers were miscounted**, confirming the suspicion raised by the v02.53r `+4 more` error: companion chapter 2 claimed `+3 more` when only 2 subsections were missing, and market report chapter 10 claimed `+1 more` when its entry already listed all nine. The other two (`+8 more` twice) were correct — the counts were unreliable in both directions, not uniformly wrong
+- **Chapter 4's capital-implications closer was the only one in the report without a section number.** Every other chapter numbers it — 2.7, 3.6, 5.7, 6.8, 7.8, 9.7 — while chapter 4 carried a bare `### What this means for your capital` *and* listed it in the contents, which is what produced a genuine 8-versus-7 mismatch. Now numbered `4.8`. Chapters 1 and 10 also use unnumbered closers but exclude them from their contents entries, so they are internally consistent and were deliberately left alone
+
+### Changed
+- **All ten editions rebuilt.** Page counts are unchanged for the canonical editions — market report 109, coverage companion 51 — since the expanded contents absorbed into existing page flow
+
+### Note
+- A full contents-to-subsection parity check now passes across **all 14 chapters in both documents** (11 report + 3 companion, zero mismatches). This was the check that surfaced the chapter 4 defect, which no amount of reading the truncation markers would have found
 
 ## [v02.62r] — 2026-08-17 03:36:35 AM EST
 

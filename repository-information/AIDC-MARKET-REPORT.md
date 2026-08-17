@@ -684,7 +684,7 @@ Now the consequence that matters for valuation. Pricing power in this sector is 
 
 The same arithmetic runs through every product sold as schedule compression. Bloom Energy's entire AEP positioning is that fuel cells deploy in 6–9 months against ≈3 years for turbines **[Analysis — High]** *(Bloom Energy dossier)* — a premium justified entirely by the length of the queue it bypasses. Shorten the queue and you compress that premium too. Bridge power, prefabricated substations, battery-buffered microgrids and mobile turbines are all, economically, derivatives on the same scarcity.
 
-### What this means for your capital
+### 4.8 What this means for your capital
 
 **Treat the three incumbents as three different clocks, not one trade.**
 
