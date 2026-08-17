@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.50r] — 2026-08-16 09:09:12 PM EST
+
+> **Prompt:** "fix the term gaps"
+
+### Added
+- **Twenty-one acronym expansions inserted at first use** in the AIDC market report, closing the Tier A gaps found by the preceding sweep: **LFP** (lithium iron phosphate — expanded once at line 1027 previously, and never as a definition), **HVDC** (with an explicit note that it is unrelated to the 800 VDC rack architecture of chapter 6, which was the likeliest reader confusion), **BESS**, **OEM** (the report defined ODM carefully while leaning on a distinction it never stated), **IEC**, **PV**, **MOFCOM**, **SOFR**, **NFPA**, **IEEPA**, **NDAA**, **LMFP**, **OBBBA**, **AD/CVD**, **EPC**, **CAGR**, **SPV**, **PTC**, **ASIC**, **OCP**, and **EBITA**
+- **A new subsection in chapter 8, "Who actually enforces this — the two parties who can veto your supplier"**, closing the largest substantive gap: the chapter explained the FEOC material-assistance rule at length while never naming the **tax-equity investor** or the **independent engineer** — the two private parties who actually enforce it commercially. Neither phrase appeared anywhere in the report's 88,000 words. The passage also gives **bankability** a named enforcer by connecting it to the IE, and draws the consequence that a compliance claim is only as good as the tax counsel and independent engineer who must accept it
+- **Capacity factor** taught in section 5.6 — the report compared turbines, fuel cells, nuclear and storage on nameplate power throughout without ever introducing the metric that makes those numbers comparable, and specifically without noting that a fast-start aeroderivative bought for schedule runs at a low capacity factor by design
+- **Four further in-place definitions** for terms that were load-bearing but unexplained: **curtailment** (previously only "curtailability", used once inside a recommendation that depends on it), **ancillary-services markets** (which pay for the capability to respond rather than for energy delivered), **four-nines / three-nines** availability, and **book-and-burn** — which was being used to *explain* what backlog excludes while itself undefined
+
+### Changed
+- **The EBITA-versus-EBITDA trap is now flagged explicitly.** The report used **EBITA** six times for Hitachi Energy and **EBITDA** once for Eaton, expanded neither, and never signalled that they are different measures — leaving a 13.4% EBITA margin sitting near a 22.5× EBITDA multiple with nothing to warn the reader that the D is missing from one of them
+- **Chapter 1 gained a single forward-pointer sentence** directing readers to the section 2.6 vocabulary table, rather than back-defining thirteen terms inside the executive summary. Chapter 1 legitimately runs at summary speed before the chapter 2 primer arrives, so the Tier B ordering gaps (bps +1,719 lines, PJM +1,301, FERC +1,291, ESS +966, aeroderivative +666) were treated as a navigation problem rather than a definition problem
+- **All five PDF editions rebuilt** — canonical 155 → **157 pages**, analyst-prose 149, equity-research 149, intel-briefing 180, smart-brevity 165
+
+### Fixed
+- A stray `<em>` HTML tag introduced into the Markdown edition during the acronym pass was corrected to Markdown emphasis before commit
 
 ## [v02.49r] — 2026-08-16 07:55:40 PM EST
 
