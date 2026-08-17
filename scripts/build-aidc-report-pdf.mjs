@@ -39,6 +39,7 @@ const PORT = 9333;
 const DOCS = {
   report: {
     src: 'repository-information/aidc-market-report-print.html',
+    foot: 'AIDC Market Report — the US AI Data-Center Infrastructure Market',
     styles: {
       bloomberg: 'AIDC-MARKET-REPORT.pdf',
       default: 'AIDC-MARKET-REPORT-analyst-prose.pdf',
@@ -49,6 +50,7 @@ const DOCS = {
   },
   coverage: {
     src: 'repository-information/aidc-coverage-universe-print.html',
+    foot: 'AIDC Coverage Universe — the 40 Companies Under Coverage',
     styles: {
       bloomberg: 'AIDC-COVERAGE-UNIVERSE.pdf',
       default: 'AIDC-COVERAGE-UNIVERSE-analyst-prose.pdf',
@@ -131,16 +133,18 @@ function cdp(wsUrl) {
   };
 }
 
-const FOOT = `
+/** The running footer names the document it is printed on, so the companion does
+ *  not carry the report's title on all 51 of its pages. */
+const foot = (label) => `
 <div style="width:100%;font:7pt/1.2 Arial,Helvetica,sans-serif;color:#6d6758;
             padding:0 14mm;display:flex;justify-content:space-between;">
-  <span>AIDC Market Report — the US AI Data-Center Infrastructure Market · Internal · Not investment advice</span>
+  <span>${label} · Internal · Not investment advice</span>
   <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
 </div>`;
 const HEAD = `
 <div style="width:100%;font:6.5pt/1.2 Arial,Helvetica,sans-serif;color:#a8a294;
             padding:0 14mm;text-align:right;letter-spacing:.14em;text-transform:uppercase;">
-  Equity research · 40 companies under coverage · Profiler dossier set · 16 August 2026
+  Jon Yang Equity Research · 40 companies under coverage · 16 August 2026
 </div>`;
 
 const chrome = spawn(findChrome(), [
@@ -181,7 +185,7 @@ try {
         preferCSSPageSize: true,
         displayHeaderFooter: true,
         headerTemplate: HEAD,
-        footerTemplate: FOOT,
+        footerTemplate: foot(DOCS[docKey].foot),
         marginTop: 0.62, marginBottom: 0.62, marginLeft: 0.55, marginRight: 0.55,
       });
       const buf = Buffer.from(data, 'base64');

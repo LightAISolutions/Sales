@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.53r] — 2026-08-16 10:59:08 PM EST
+
+> **Prompt:** "Make the following changes:
+>
+> * In the header, remove "Profiler Dossier Set" and revise "Equity Research" to "Jon Yang Equity Research".
+> * In the Table of Contents, Key Judgments, type out the last four topics instead of "+4 more".
+>
+> Output both documents as downloadable PDFs."
+
+### Changed
+- **Header rebranded to "Jon Yang Equity Research" in both places it appears**, across both documents: the masthead kicker on page 1 of `aidc-market-report-print.html` and `aidc-coverage-universe-print.html`, and the running page header in `scripts/build-aidc-report-pdf.mjs` that prints on every page of every edition. **"Profiler dossier set" removed** from the running header, leaving `Jon Yang Equity Research · 40 companies under coverage · 16 August 2026`
+- **The Key Judgments contents entry now lists every judgment** — the truncated `… +4 more` marker was replaced with the three omitted titles: craft labor as the scarcest input, displacement windows open through 2026, and monitoring the risk stack on a calendar
+
+### Fixed
+- **The `+4 more` marker was itself wrong — only three judgments were omitted, not four.** The contents line listed nine of chapter 1's twelve judgments. Counted programmatically against the actual `### 1.x` headings rather than by eye, since the developer's instruction inherited the same miscount
+- **The Coverage Universe carried the market report's title in its running footer on all 51 pages** — a defect introduced when the companion was split out in v02.52r, because `FOOT` was a single hardcoded constant shared by both documents. Replaced with a `foot(label)` function and a per-document `foot` field in the `DOCS` registry, so each document's footer names itself
+
+### Note
+- `scripts/build-study-prep-pdf.mjs` also contains "Profiler dossier set" in three running headers, but those belong to the Hithium and Megmeet study-prep documents rather than the market report, and were left unchanged as out of scope
 
 ## [v02.52r] — 2026-08-16 10:23:10 PM EST
 

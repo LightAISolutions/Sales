@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-16 10:23:10 PM EST` · Repo version: `v02.52r`
+Last updated: `2026-08-16 10:59:08 PM EST` · Repo version: `v02.53r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
