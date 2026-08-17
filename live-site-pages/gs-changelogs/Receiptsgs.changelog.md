@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 24/50`
+`Sections: 25/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.25g] — 2026-08-17 02:52:34 AM EST — v02.58r
+
+### Added
+- A new built-in check reports whether the app's permission to use Google services is actually in force, as opposed to merely being requested. The two are separate, and only the first one determines whether anything works
+- When permission is incomplete, the check now produces a direct link to re-approve it, so the fix no longer depends on hunting through account settings
 
 ## [v01.24g] — 2026-08-17 02:45:40 AM EST — v02.57r
 

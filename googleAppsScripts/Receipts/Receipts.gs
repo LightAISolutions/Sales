@@ -1,4 +1,4 @@
-var VERSION = "v01.24g";
+var VERSION = "v01.25g";
 var TITLE = "Receipts";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -349,6 +349,9 @@ function diagnoseAclAccess() {
       Logger.log('-> This is an AUTHORIZATION failure, not a sharing failure. The spreadsheet is almost '
         + 'certainly fine — the script is not allowed to call SpreadsheetApp at all. Scope report:');
       diagnoseOauthScopes_();
+      // Declared-but-denied is the common case, and only the grant check can
+      // tell it apart from declared-and-genuinely-missing. Run both, always.
+      diagnoseAuthorization();
     } else {
       Logger.log('-> This looks like the file itself: confirm the ID is correct, the file is not in the '
         + 'trash, and the script owner still has access to it.');
@@ -406,6 +409,70 @@ function diagnoseAclAccess() {
   Logger.log(verdict.hasAccess
     ? 'RESULT: access GRANTED — sign-in should work right now. If the app still denies, confirm the failing device signs in with exactly this email.'
     : 'RESULT: still DENIED — one of the FAIL/WARNING lines above is the cause.');
+}
+
+// ── OWNER-RUN DIAGNOSTIC — authorization grant ───────────────────────
+// Run this from the editor's Run dropdown when a Google service call fails on
+// permissions even though appsscript.json already declares the scope.
+//
+// Declaring a scope and holding a grant for it are different things. The
+// manifest is only the REQUEST list; the grant is a separate record tied to the
+// account that authorized the script. Apps Script re-prompts only when the
+// requested set changes or the grant is revoked — so if the manifest already
+// looked correct and nothing was edited, nothing re-prompts, and a stale or
+// partial grant persists indefinitely. That is exactly the state that reads as
+// "the scope is declared but the call is still denied", and no amount of
+// re-reading the manifest will reveal it.
+//
+// Deliberately has NO trailing underscore: underscore-suffixed functions are
+// hidden from the editor's Run dropdown, and this one has to be runnable by hand.
+function diagnoseAuthorization() {
+  Logger.log('== Authorization diagnosis ==');
+  try {
+    Logger.log('Running as: ' + Session.getEffectiveUser().getEmail()
+      + '   (must be the account that owns / deploys this script)');
+  } catch (eU) {
+    Logger.log('Could not read the effective user: ' + eU.message);
+  }
+
+  var info;
+  try {
+    info = ScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL);
+  } catch (eI) {
+    Logger.log('Could not read authorization info: ' + eI.message);
+    return;
+  }
+  Logger.log('Authorization status: ' + String(info.getAuthorizationStatus()));
+
+  // Optional: not present on every runtime. When it is, it settles the question
+  // outright — this is what the grant actually covers, as against what the
+  // manifest merely asks for.
+  try {
+    var granted = info.getAuthorizedScopes();
+    if (granted && granted.length) {
+      Logger.log('Scopes actually GRANTED (' + granted.length + '):');
+      for (var g = 0; g < granted.length; g++) Logger.log('      ' + granted[g]);
+      Logger.log('   -> Anything the manifest declares that is NOT in this list is the gap.');
+    }
+  } catch (eS) { /* unavailable on this runtime — status + URL below still decide it */ }
+
+  var url = info.getAuthorizationUrl();
+  if (url) {
+    Logger.log('THE GRANT IS INCOMPLETE. Open this URL, approve, then re-run diagnoseAclAccess:');
+    Logger.log('   ' + url);
+    Logger.log('   Approve EVERY permission shown — leaving one unchecked reproduces this exact failure.');
+    return;
+  }
+
+  Logger.log('No authorization is outstanding — the grant already covers every declared scope.');
+  Logger.log('-> So the permissions error is NOT a stale grant. Check these, in order:');
+  Logger.log('   1. Project Settings -> Google Cloud Platform (GCP) Project. If this is a STANDARD project '
+    + 'rather than the default one, its OAuth consent screen must list the scope, and the app must not be '
+    + 'stuck in Testing with this account missing from the test users.');
+  Logger.log('   2. The account named above. A second signed-in Google account is the usual cause of '
+    + '"it works when I open the file but not when the script does".');
+  Logger.log('   3. Force a completely fresh consent: revoke this project at '
+    + 'https://myaccount.google.com/permissions, then run any function here again.');
 }
 
 // ── OWNER-RUN DIAGNOSTIC — OAuth scope report ────────────────────────

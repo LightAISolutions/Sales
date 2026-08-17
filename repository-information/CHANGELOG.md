@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.58r] — 2026-08-17 02:52:34 AM EST
+
+> **Prompt:** "I opened "appscript.json" and all seven oauthScopes were there. When I ran diagnoseAclAccess again, it showed the same error."
+
+### Note
+- **All seven scopes declared and the call still denied narrows this to the grant, not the manifest.** Declaring a scope and holding a grant for it are separate things: `appsscript.json` is only the **request list**, while the grant is a distinct record tied to the authorizing account. Apps Script re-prompts **only** when the requested set changes or the grant is revoked — so inspecting the manifest and changing nothing cannot produce a consent screen, and a stale or partially-approved grant survives untouched. That is precisely the state that reads as "declared but denied"
+- **This also explains the missing consent screen from the previous session without contradicting it.** v02.57r attributed it to a scope never being *requested*; with the manifest confirmed complete, the same silence is explained by the request set being *unchanged*. Both are the same underlying rule — Apps Script prompts on a delta, not on a failure
+- **`Updated to v01.24g (deployment 34) | 34/200`** — v02.57r's code had merged but the GAS project had **not** pulled it; the direct probe is what completed the deploy. A second concrete instance of the standing caveat that a green CI run is not proof the GAS side updated. Version headroom is comfortable at 34/200
+- **The `getAuthorizationInfo` contract was verified against Google's reference docs before being built on**, rather than asserted from memory: `getAuthorizationUrl()` returns `null` when no authorization is outstanding, which is what makes it a clean discriminator rather than just a convenience link
+
+### Added
+- **`diagnoseAuthorization()` in `Receipts.gs`** — reports the effective user, the authorization status, and (where the runtime exposes `getAuthorizedScopes()`) the scopes the grant **actually covers**, so the declared list and the granted list can be compared directly. Its verdict is binary and actionable: a non-null authorization URL means the grant is incomplete and the URL re-approves it; a null URL means the grant is *not* the problem, and the log then names the three remaining candidates in order — a standard GCP project whose consent screen lacks the scope or is stuck in Testing, a second signed-in account, or a grant needing full revocation at `myaccount.google.com/permissions`
+- **Named without a trailing underscore deliberately** — underscore-suffixed functions are hidden from the Apps Script editor's Run dropdown, and this one has to be runnable by hand. (`diagnoseOauthScopes_` keeps its underscore because it is only ever called programmatically.)
+
+### Changed
+- `diagnoseAclAccess()`'s permissions branch now runs **both** the scope report and the grant check. Either alone is ambiguous — declared-but-not-granted and genuinely-undeclared produce the identical runtime error, and only the pair separates them
 
 ## [v02.57r] — 2026-08-17 02:45:40 AM EST
 
