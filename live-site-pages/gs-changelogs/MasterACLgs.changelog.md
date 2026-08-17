@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [MasterACLgs.changelog-archive.md](MasterACLgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.11g] — 2026-08-17 03:23:38 AM EST — v02.61r
+
+### Changed
+- The permission check now shows what the app **asked for** alongside what it was **actually given**, in one run. A capability can be missing for two opposite reasons — it was never requested, or it was requested and never approved — and the fix differs, so seeing only one of the two lists could point at the wrong repair
+- The guidance that follows now reads those two lists against each other and names the specific repair, rather than listing general things to check
 
 ## [v01.10g] — 2026-08-17 03:15:36 AM EST — v02.60r
 

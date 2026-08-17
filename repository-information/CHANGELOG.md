@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.61r] — 2026-08-17 03:23:38 AM EST
+
+> **Prompt:** "I found it and ran diagnostics. Here is the log." *(Scraper execution log: `Authorization status: NOT_REQUIRED`, 6 granted scopes, `No authorization is outstanding`, plus `Could not read the effective user: … Required permissions: …/auth/userinfo.email`)*
+
+### Note
+- **Scraper's sign-in is healthy — its grant DOES include `spreadsheets`.** So the Receipts failure was not fleet-wide, and Scraper needs no sign-in repair
+- **But Scraper is missing `script.scriptapp`, so all three of its self-installed triggers are dead**: the hourly `scSchedulerTick`, the daily `enforceRetention`, and `auditRetentionCompliance`. None of them produces a user-visible symptom — the scheduler simply never runs. This is the silent failure mode that made the v01.87r incident so hard to spot
+- **Scraper's problem is the mirror image of Receipts'.** Receipts declared the scope and never had it granted; Scraper's `NOT_REQUIRED` verdict with no authorization URL means the grant already covers everything the manifest declares — so the scope is missing from the **declaration**, not the approval. Same symptom, opposite repair: Receipts needed a re-consent, Scraper needs a manifest edit *then* a consent
+- `Session.getEffectiveUser()` also failed on Scraper (`userinfo.email` not granted), which is why the log shows no effective user. The call is deliberately wrapped in `try/catch`, so the diagnostic degraded gracefully instead of dying — the design held under a case it was not written for
+
+### Fixed
+- **Two defects in the diagnostics shipped one version earlier, both exposed by this very log:**
+- **`diagnoseAuthorization` never printed the DECLARED list, so its `NOT_REQUIRED` branch could not answer the question it fires on.** That branch is precisely the one that triggers when the manifest under-declares — the grant matches the declaration, so nothing is "outstanding" — yet it sent the reader to GCP consent-screen settings instead of showing the one list that identifies the gap. It now prints declared and granted side by side on every run, before the verdict
+- **`diagnoseOauthScopes_` was unreachable dead code in six of seven projects.** Only Receipts called it (from `diagnoseAclAccess`, and only on an ACL-open failure), and its trailing underscore hides it from the editor's Run dropdown by design — so in `Globalacl`, `MasterACL`, `Profiler`, `Scraper`, `Testauthgas1` and `Testauthhtml1` it could not be invoked at all. Calling it unconditionally from `diagnoseAuthorization` gives it a caller everywhere (verified: 2 call sites per project, 3 in Receipts)
+- **The `NOT_REQUIRED` guidance was rewritten to read the two lists against each other** and name the specific repair — missing from *both* lists means the manifest under-declares and needs a scope added, which is also what makes Apps Script finally prompt; missing from the granted list alone would have produced an authorization URL, so its absence rules that out. The previous text opened with GCP project settings, which is the least likely cause and the most expensive to investigate
+
+### Changed
+- Propagated to all seven auth projects and the GAS auth template; `node --check` clean across all nine `.gs` files
+- **CHANGELOG capacity is now exactly 100/100** — the next push commit exceeds the threshold and must perform archive rotation per [PC-CHANGELOG] #6
 
 ## [v02.60r] — 2026-08-17 03:15:36 AM EST
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.10g";
+var VERSION = "v01.11g";
 var TITLE = "MasterACL";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1954,6 +1954,16 @@ function diagnoseAuthorization() {
     }
   } catch (eS) { /* unavailable on this runtime — status + URL below still decide it */ }
 
+  // Always report the DECLARED list too. A scope can be absent from the grant
+  // for two opposite reasons — the manifest never asked for it, or the manifest
+  // asked and the user did not approve it — and the granted list alone cannot
+  // tell them apart. Printing both side by side makes the gap self-evident and,
+  // importantly, gives diagnoseOauthScopes_ a caller: it is hidden from the Run
+  // dropdown by its trailing underscore, so without this it is unreachable in
+  // every project that lacks diagnoseAclAccess.
+  Logger.log('Declared in the manifest:');
+  diagnoseOauthScopes_();
+
   var url = info.getAuthorizationUrl();
   if (url) {
     Logger.log('THE GRANT IS INCOMPLETE. Open this URL, approve, then re-run diagnoseAclAccess:');
@@ -1963,8 +1973,14 @@ function diagnoseAuthorization() {
     return;
   }
 
-  Logger.log('No authorization is outstanding — the grant already covers every declared scope.');
-  Logger.log('-> So the permissions error is NOT a stale grant. Check these, in order:');
+  Logger.log('No authorization is outstanding — the grant already covers every scope the manifest DECLARES.');
+  Logger.log('-> Read the two lists above against each other before anything else:');
+  Logger.log('   * A scope this app uses that is missing from BOTH lists = the manifest under-declares it. '
+    + 'Add it to oauthScopes (Project Settings -> "Show appsscript.json"), save, then run this again — '
+    + 'changing the declared set is what makes Apps Script finally prompt for consent.');
+  Logger.log('   * A scope in the DECLARED list but not the GRANTED list would have produced an '
+    + 'authorization URL above, so if none appeared, that is not what is happening here.');
+  Logger.log('-> If both lists already cover everything and a call still fails, check these, in order:');
   Logger.log('   1. Project Settings -> Google Cloud Platform (GCP) Project. If this is a STANDARD project '
     + 'rather than the default one, its OAuth consent screen must list the scope, and the app must not be '
     + 'stuck in Testing with this account missing from the test users.');
