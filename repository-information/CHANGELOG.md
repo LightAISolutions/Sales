@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.59r] — 2026-08-17 03:04:38 AM EST
+
+> **Prompt:** "I ran diagnoseAuthorization, here's the log." *(execution log: `Authorization status: REQUIRED`; 8 granted scopes listed; `THE GRANT IS INCOMPLETE` plus an `…/authorize?enable_granular_consent=true` URL)*
+
+### Note
+- **CONFIRMED ROOT CAUSE — a partial OAuth grant, not a manifest problem.** The grant covers 8 scopes (`drive`, `script.deployments`, `script.external_request`, `script.projects`, `script.send_mail`, plus `userinfo.email` / `userinfo.profile` / `openid`) while the manifest declares **`spreadsheets`** and **`script.scriptapp`** that the grant does not. `spreadsheets` is the one that makes `SpreadsheetApp.openById` throw, which denies every user of the app at once. Four sessions of narrowing end here
+- **The `enable_granular_consent=true` parameter on the authorization URL names the mechanism.** Google's granular consent presents a checkbox per permission and lets a user approve some while leaving others unticked — each unticked box becomes a declared-but-not-granted scope that fails at call time. `diagnoseAuthorization` returning a **non-null** URL is positive proof of this, per the documented contract that `getAuthorizationUrl()` returns `null` when nothing is outstanding
+- **`script.scriptapp` is missing too, so self-installed triggers are broken as well** — a second, quieter casualty that produces no user-visible error at all
+- **The script runs as `lightaisolution@gmail.com`**, confirming the two-account structure inferred in v02.55r from the `DRIVE_FOLDER_ID` comment. The authorization URL must be opened under **that** account; opening it under the personal Gmail grants to the wrong account, and this fleet is already exposed to multi-account routing
+
+### Changed
+- **Rewrote `.claude/rules/gas-scripts-reference.md`'s OAuth section, which v02.57r got wrong.** It was titled "OAuth Scope Regressions — invisible to git" and led with a **missing declaration** as the mechanism, having been written before the manifest was confirmed complete. Now titled "Partial OAuth Grants — the manifest is fine and the call is still denied", with a declaration-vs-grant table, granular consent named as the cause, and the delta-not-failure prompting rule that explains why nothing ever re-prompts
+- **Deleted the recommendation that would have wasted the most time.** The old section advised that if this recurred a third time, the fix to weigh was committing a canonical `appsscript.json` per project and having the self-deploy write it. That addresses a declaration problem this is not — the manifest was already correct, so version-controlling it would have changed nothing while looking like a fix. Replaced with an explicit **"What does NOT fix it"** list (editing the manifest, pushing, redeploying, committing manifests)
+- **Downgraded the v01.87r precedent from evidence to an open question.** It was recorded as the manifest lacking `script.scriptapp` — the very scope also missing from this confirmed partial grant — so that earlier diagnosis may have been the same mechanism misattributed. The section now says to treat it as unconfirmed rather than as a second data point for the declaration theory
+- Added the two repair traps (approve as the **script account**, tick **every** box) and a blast-radius note: grants are per-project, so `Profiler`, `Scraper` and `MasterACL` need checking rather than assuming
 
 ## [v02.58r] — 2026-08-17 02:52:34 AM EST
 

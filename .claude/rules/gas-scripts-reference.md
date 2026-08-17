@@ -109,19 +109,36 @@ Use this instead of the editor to answer "did my push actually reach the live ap
 
 Projects whose `DEPLOYMENT_ID` is still `YOUR_DEPLOYMENT_ID` (currently `globalacl`, `testauthgas1`, `testauthhtml1`) are never deployed — their workflow deploy steps exit immediately and their version bumps are repo-only bookkeeping.
 
-## OAuth Scope Regressions — invisible to git, and they look like broken data
+## Partial OAuth Grants — the manifest is fine and the call is still denied
 
-> **Symptom:** a Google service call fails at runtime with *"You do not have permission to call `X`. Required permissions: `<scope>`"* — **and no consent screen appears**. Seen twice: `ScriptApp.newTrigger` losing `script.scriptapp` (v01.87r), and `SpreadsheetApp.openById` losing `spreadsheets`, which took the whole Receipts sign-in down for every user (v02.57r).
+> **Symptom:** a Google service call fails at runtime with *"You do not have permission to call `X`. Required permissions: `<scope>`"* — the scope **is** declared in `appsscript.json`, and **no consent screen appears**. Confirmed on Receipts v02.59r: `SpreadsheetApp.openById` denied, which took sign-in down for every user of the app at once.
 
-**Why no consent prompt.** When `appsscript.json` carries an **explicit** `oauthScopes` array, Apps Script requests exactly that list and does **not** auto-derive missing scopes from the code. A dropped entry therefore fails at call time rather than at authorization time — the scope was never asked for, so there is nothing to consent to. That absence is the tell: a stale *grant* prompts for re-consent, a missing *declaration* just fails.
+**The mechanism is a partial grant, not a missing declaration.** These are two independent things and only the second one makes code work:
 
-**Why the repo cannot see or fix it.** No live project's `appsscript.json` is in this repo, and `pullAndDeployFromGitHub()` deliberately **preserves** the project's existing manifest — it reads the current `appsscript` file back and writes it unchanged alongside the new `Code`. So a scope regression survives every push, every deploy, and every CI run, and no amount of committing fixes it. It has to be repaired in the Apps Script editor.
+| | What it is | Where it lives |
+|---|---|---|
+| **Declaration** | `oauthScopes` in `appsscript.json` — the *request* list | The script project |
+| **Grant** | What the authorizing account actually approved | Google account permissions |
 
-**Diagnosis.** `diagnoseOauthScopes_()` in `Receipts.gs` reads the manifest back through the Apps Script API and prints the declared scopes plus any the app needs and lacks, each labelled with the feature it breaks. `diagnoseAclAccess()` calls it automatically when the ACL open fails with a permissions-shaped error, and distinguishes that from a file-level failure (wrong ID, trashed, unshared) — the two need opposite fixes.
+Google's consent screen supports **granular consent** (`enable_granular_consent=true` on the authorization URL): the user gets a checkbox per permission and can approve some while leaving others unticked. Every unticked box becomes a declared-but-not-granted scope that fails at call time. On the confirmed incident the grant held 8 scopes — `drive`, `script.deployments`, `script.external_request`, `script.projects`, `script.send_mail`, plus the three identity scopes — while the manifest declared `spreadsheets` and `script.scriptapp` that the grant did not cover.
 
-**Repair:** Project Settings → tick *"Show appsscript.json manifest file in editor"* → add the missing scope(s) to `oauthScopes` (canonical list in "Setup Steps" step 2 above) → save → **run any function in the editor and approve the consent screen**. The re-consent is mandatory, not optional: changing the scope list invalidates the existing grant, so the old token still lacks the new scope until it is re-approved.
+**Why nothing ever re-prompts.** Apps Script prompts on a **delta** in the requested scope set, never on a failure. So inspecting the manifest, confirming it looks right and changing nothing cannot produce a consent screen — the request set is unchanged, so there is nothing to re-ask. The partial grant then persists indefinitely. This is why the failure reads as permanent and inexplicable: the obvious check (read the manifest) confirms the manifest, and the obvious remedy (run it again) is a no-op.
 
-**Standing risk.** Because the manifest is unversioned, any future scope loss is equally silent. If this recurs a third time, the fix worth considering is committing a canonical `appsscript.json` per project and having the self-deploy write it — but that is a deliberate change to `pullAndDeployFromGitHub`'s manifest-preservation behavior and must be discussed, not slipped in: preserving the manifest is what keeps per-project webapp settings from being clobbered by a shared template.
+**Diagnosis — `diagnoseAuthorization()` in `Receipts.gs`, run from the editor's Run dropdown.** It prints the effective user, the authorization status, and the scopes the grant **actually covers**, then gives a binary verdict:
+- **non-null authorization URL** → the grant is incomplete. Open it, approve **every** checkbox, done. This branch is definitive.
+- **null URL** (`No authorization is outstanding`) → the grant is fine and the cause is elsewhere; the log names the remaining candidates (standard GCP project whose consent screen lacks the scope or is stuck in Testing, wrong signed-in account, grant needing full revocation).
+
+`diagnoseOauthScopes_()` covers the other half — reading the manifest back through the Apps Script API to show what is *declared*. `diagnoseAclAccess()` runs both on a permissions-shaped ACL failure, because declared-but-not-granted and genuinely-undeclared throw the identical error and only the pair separates them.
+
+**Repair.** Run `diagnoseAuthorization()`, open the URL it prints, approve every permission. **Two traps:**
+1. **Approve as the script account.** These projects run as a dedicated account (`Running as:` in the log names it), not the personal Gmail used for everyday browsing. Opening the authorization URL under the wrong default account grants to the wrong account — and this fleet is already exposed to multi-account routing (next section). Use a private window signed into the script account only.
+2. **Tick everything.** One unticked box reproduces the failure exactly, and the next diagnosis starts from scratch.
+
+**What does NOT fix it:** editing `appsscript.json` (already correct), pushing, redeploying, or committing a canonical manifest. `pullAndDeployFromGitHub()` preserves the project's existing manifest by design — it reads the current `appsscript` file back and writes it unchanged alongside the new `Code` — but that is irrelevant here, because the manifest was never wrong. **Do not "fix" this by putting manifests under version control**; that addresses a declaration problem this is not.
+
+**Re-examine the v01.87r precedent before citing it.** That incident (self-installed triggers silently failing) was recorded as the manifest lacking `script.scriptapp`. `script.scriptapp` is also one of the two scopes missing from the confirmed partial grant here — so that earlier diagnosis may have been the same partial-grant mechanism misattributed to the manifest. Treat it as unconfirmed rather than as a second data point for the declaration theory.
+
+**Blast radius.** Each script project carries its own independent grant, so a partial consent on one says nothing about the others — but the same person clicking the same screens tends to produce the same gaps. When one project is found with a partial grant, run `diagnoseAuthorization()` on the rest (`Profiler`, `Scraper`, `MasterACL`) rather than assuming they are healthy.
 
 ## Google Multi-Account Routing — the recurring "unable to open the file" failure
 
