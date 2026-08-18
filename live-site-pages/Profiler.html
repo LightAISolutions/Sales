@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.30w">
+  <meta name="build-version" content="v01.31w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -614,6 +614,30 @@
 
 // ══════════════
 // TEMPLATE START
+
+// PROJECT OVERRIDE START: cache-busting reload
+// window.location.reload() is permitted to reuse the cached document. The
+// version pill is fetched separately with cache:'no-store' plus a cache-bust
+// param, so it can report a new version while the page around it is still the
+// old HTML — which is exactly how v01.30w's import bar stayed invisible on a
+// device whose pill already read v01.30w. Navigating to a URL that differs by
+// one query param forces a real fetch. The hash is preserved because dossier
+// routing lives there.
+// Split out so the URL rule is testable without stubbing window.location,
+// whose properties are non-configurable and cannot be replaced.
+function ovFreshUrl(href, stamp) {
+  try {
+    var u = new URL(href);
+    u.searchParams.set('_v', String(stamp));
+    return u.toString();
+  } catch (e) { return null; }
+}
+function ovReloadFresh() {
+  var u = ovFreshUrl(window.location.href, Date.now());
+  if (u) window.location.replace(u); else window.location.reload();
+}
+// PROJECT OVERRIDE END
+
 // ══════════════
 
     // Set splash logo from config variable
@@ -850,7 +874,7 @@
                 if (dot) dot.className = 'dot found';
                 if (indicator) indicator.querySelector('.label').textContent = 'Updating...';
                 if (sessionStorage.getItem('maint-bypassed')) sessionStorage.setItem('web-pending-sound', '1');
-                setTimeout(function() { window.location.reload(); }, 2000);
+                setTimeout(function() { ovReloadFresh(); }, 2000);
                 return;
               }
               // Keep version pill showing maintenance prefix
@@ -864,7 +888,7 @@
               if (dot) dot.className = 'dot found';
               if (indicator) indicator.querySelector('.label').textContent = 'Updating...';
               sessionStorage.setItem('web-pending-sound', '1');
-              setTimeout(function() { window.location.reload(); }, 2000);
+              setTimeout(function() { ovReloadFresh(); }, 2000);
             } else {
               // Same version, no maintenance — fade out maintenance if it was showing
               sessionStorage.removeItem('maint-bypassed');
@@ -956,7 +980,7 @@
               if (dot) dot.className = 'dot found';
               if (pillLabel) pillLabel.textContent = 'GAS updated — reloading...';
               sessionStorage.setItem('gas-pending-sound', '1');
-              setTimeout(function() { window.location.reload(); }, 1500);
+              setTimeout(function() { ovReloadFresh(); }, 1500);
               return;
             }
             if (dot) setTimeout(function() { dot.className = 'dot'; }, 800);

@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.66r] — 2026-08-18 06:09:59 AM EST
+
+> **Prompt:** "I still cannot see the import transcript option. Fix this." *(with a screenshot of the notes log on v01.30w / v01.16g showing only the Sinexcel note and no import bar)*
+
+### Fixed
+- `Profiler.html` (v01.31w) — **the page was running stale HTML.** The v01.30w import bar is correct: driven against the developer's exact case (one note, PDF attachment, `hasTranscript: false`) it renders `display:block`, visible, three children, zero page errors. What their device was executing was older HTML. The three auto-refresh paths all called plain `window.location.reload()`, which is permitted to reuse the cached document; the version pill is a separate 8-byte fetch with `cache:'no-store'` plus a cache-bust param, so it reported v01.30w while the surrounding page was not. The **server-side** fix from the same push (no ✨ Summarize on a PDF note) *was* visible in the screenshot, which is the tell: GAS updated, HTML did not
+- New `ovFreshUrl` / `ovReloadFresh` replace all three `reload()` calls with a navigation to a URL carrying a fresh `_v` param, which forces a real document fetch. `PROJECT OVERRIDE` markers, since this modifies template polling logic
+
+### Notes
+- **This does not fix the copy already in the developer's browser** — only a hard refresh clears that. The change stops it recurring
+- `ovFreshUrl` is split from `ovReloadFresh` specifically so the URL rule is testable: `window.location`'s properties are non-configurable, so an earlier attempt to stub `location.replace` silently no-opped and produced a meaningless pass. Verified instead against controlled inputs — `_v` added, `#catl` hash preserved, `_v` replaced rather than accumulated across calls, unrelated params kept, successive calls differing, malformed input returning null
+- **Fleet-wide finding, not acted on:** all nine pages carry the same three `window.location.reload()` calls, inherited from both HTML templates. Every page can therefore serve stale HTML after a version bump. Fixing it properly means the templates plus nine pages under [PC-TEMPLATE-PROP] #19 — nine version bumps and nine changelog entries — so it is left as a deliberate decision rather than folded into this fix
 
 ## [v02.65r] — 2026-08-18 05:56:47 AM EST
 

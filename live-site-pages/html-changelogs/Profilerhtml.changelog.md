@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 30/50`
+`Sections: 31/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.31w] — 2026-08-18 06:09:59 AM EST — v02.66r
+
+### Fixed
+- **Updates could be announced without arriving.** The page checks for a new version and reloads itself, but that reload was allowed to reuse the copy already stored on your device — so the version shown at the bottom could move forward while the page around it stayed on the previous build, and new features appeared to be missing. Reloads now always fetch a fresh copy
+- This does not repair a copy already stored on your device. If a feature seems missing right after an update, fully close the tab and reopen it once; from this version on it corrects itself
 
 ## [v01.30w] — 2026-08-18 05:56:47 AM EST — v02.65r
 
