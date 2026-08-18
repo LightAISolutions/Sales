@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.67r] — 2026-08-18 06:16:45 AM EST
+
+> **Prompt:** "I closed Profiler completely and reopened it with the ?fresh=1 addition and this is the result. I already signed in." *(with a screenshot on v01.31w / v01.16g showing the notes log reading "Could not load field notes — sign in and try again.")*
+
+### Fixed
+- `Profiler.html` (v01.32w) — **the notes-log load failure was a dead end.** Its `list` handler collapsed every cause into one sentence, printed no error code, and offered no way to act. The note box beside it has had a working recovery path since v01.02g (`sessionGuard` → `renderSignin`); the ⚙ panel never used it. Same defect class as the sign-in wall before v01.11g, where four distinct causes produced one indistinguishable message
+- The handler is now `loadNotes()`, re-callable, and branches by cause: session errors say "Your sign-in has expired", `no_backend` says the service is not reachable, anything else is generic. **All non-`ADMIN_ONLY` failures print `Reason: <code>`** so a failure can be reported precisely instead of described
+- A **Sign in and retry** button appears on every recoverable failure. It clears the stored session and role, calls the existing `ovNoteSignIn`, and on success re-runs `loadNotes()` in place. Suppressed for `no_backend`, which signing in cannot fix — the page never decoded a deployment URL, so there is nothing to sign in to
+- The import bar is no longer hidden when the list fails. It only dedups against the notes; hiding it left no path forward at all
+
+### Notes
+- `ADMIN_ONLY` deliberately prints no reason code and no button — it is a definitive answer about the account, not a fault to recover from
+- Verified across all four branches plus the retry: session and network failures show the code, the button and the import bar; `no_backend` shows the code and neither; `ADMIN_ONLY` shows neither; and pressing the button calls `ovNoteSignIn` exactly once, reloads clean and reveals the bar. Zero page errors at 390×844
+- **v01.31w's cache fix is confirmed working** — the developer's screenshot shows v01.31w live and the panel now reaching the backend and receiving a real answer, where before it was rendering stale HTML
 
 ## [v02.66r] — 2026-08-18 06:09:59 AM EST
 

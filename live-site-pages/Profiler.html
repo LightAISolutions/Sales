@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.31w">
+  <meta name="build-version" content="v01.32w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -2781,15 +2781,58 @@ function ovReloadFresh() {
       // PROJECT: notes are served by GAS from Drive, never fetched as a static
       // file — that is the whole point of the M3 move. An unsigned or non-admin
       // session gets nothing back, which is the intended behaviour.
-      ovNoteApi('list', {}, function(r) {
-        // The scan runs only after the notes are in hand — it dedups against
-        // them, so scanning first would offer to re-import everything.
-        if (r && r.success && r.notes) { ovNotesData = { notes: r.notes }; ovPaintNotes(); ovRenderImportBar(imp); return; }
-        ovClear(body);
-        body.appendChild(ovEl('p', 'ov-empty', (r && r.error === 'ADMIN_ONLY')
-          ? 'Field notes are visible to the owner account only.'
-          : 'Could not load field notes — sign in and try again.'));
-      });
+      // PROJECT OVERRIDE START: recoverable, self-describing load failure
+      // This used to collapse every cause into one sentence with no error code
+      // and no way to act on it, while the note box beside it already had a
+      // working recovery path (sessionGuard -> renderSignin). Same defect class
+      // as the sign-in wall before v01.11g: four causes, one indistinguishable
+      // message. The code is shown so a failure can be reported precisely, and a
+      // session error now offers the sign-in that fixes it.
+      function loadNotes() {
+        ovNoteApi('list', {}, function(r) {
+          // The scan runs only after the notes are in hand — it dedups against
+          // them, so scanning first would offer to re-import everything.
+          if (r && r.success && r.notes) { ovNotesData = { notes: r.notes }; ovPaintNotes(); ovRenderImportBar(imp); return; }
+          ovClear(body);
+          var err = (r && r.error) || 'no_response';
+          if (err === 'ADMIN_ONLY') {
+            body.appendChild(ovEl('p', 'ov-empty', 'Field notes are visible to the owner account only.'));
+            return;
+          }
+          var msg = ovNoteSessionError(err) ? 'Your sign-in has expired.'
+            : (err === 'no_backend' ? 'The note service is not reachable from this page yet.'
+                                    : 'Could not load field notes.');
+          var p1 = ovEl('p', 'ov-empty', msg);
+          body.appendChild(p1);
+          var code = ovEl('div', 'hint', 'Reason: ' + err);
+          code.style.cssText = 'font-size:11px;margin-top:6px;';
+          body.appendChild(code);
+          // no_backend is the one cause signing in cannot fix — the page never
+          // decoded a deployment URL, so there is nothing to sign in to.
+          if (err === 'no_backend') return;
+          var again = ovEl('button', 'ov-btn', 'Sign in and retry');
+          again.type = 'button';
+          again.style.cssText = 'font-size:11px;padding:6px 10px;margin-top:9px;';
+          again.addEventListener('click', function() {
+            again.disabled = true;
+            again.textContent = 'Signing in...';
+            localStorage.removeItem(OV_NOTE_SESSION_KEY);
+            localStorage.removeItem(OV_NOTE_ROLE_KEY);
+            ovNoteSignIn(function(res) {
+              if (res && res.success) { ovClear(body); body.appendChild(ovEl('p', 'ov-loading', 'Loading field notes…')); loadNotes(); return; }
+              again.disabled = false;
+              again.textContent = 'Sign in and retry';
+              code.textContent = 'Reason: ' + ((res && res.error) || 'signin_failed');
+            });
+          });
+          body.appendChild(again);
+          // The import bar does not need the notes list to exist — it only dedups
+          // against it. Hiding it here left the developer with no path at all.
+          ovRenderImportBar(imp);
+        });
+      }
+      loadNotes();
+      // PROJECT OVERRIDE END
     }
 
     // The bar renders WITHOUT scanning. ovDriveToken asks GIS for Drive consent,

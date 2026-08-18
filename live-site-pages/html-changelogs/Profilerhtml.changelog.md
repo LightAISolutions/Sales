@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 31/50`
+`Sections: 32/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.32w] — 2026-08-18 06:16:45 AM EST — v02.67r
+
+### Fixed
+- **A note log that would not load left you with nowhere to go.** Every possible cause showed the same sentence, with nothing to press. It now says which kind of problem it is, shows a short reason code you can quote, and offers a **Sign in and retry** button that signs you back in and reloads the log in place
+- An expired sign-in is now named as such, rather than described the same way as a network problem
+- The transcript import panel stays available when the log itself fails to load. It never depended on the log, and hiding it removed the only remaining option
 
 ## [v01.31w] — 2026-08-18 06:09:59 AM EST — v02.66r
 
