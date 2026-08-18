@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16g] — 2026-08-18 05:56:47 AM EST — v02.65r
+
+### Added
+- **Transcripts can now be written up without opening the app at all.** Once you share your recordings folder with the account the app runs as, a background check every 15 minutes files and writes up anything new on its own. A few are handled per run so a long backlog is worked through steadily rather than being cut off part way
+- A way to look up which account to share the folder with, since that address was not otherwise reportable
+- The background check will not start until you have chosen a confidence rating for it to use. That rating is yours to set, so nothing is imported on a value picked for you
+
+### Changed
+- The summary heading on a written-up note now reads `Auto-summary (model)` rather than the bracketed form
 
 ## [v01.15g] — 2026-08-17 08:36:32 PM EST — v02.64r
 

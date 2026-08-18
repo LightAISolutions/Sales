@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 29/50`
+`Sections: 30/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.30w] — 2026-08-18 05:56:47 AM EST — v02.65r
+
+### Fixed
+- **The import panel never appeared.** Checking the transcribed folder needs Google's permission prompt, and that prompt only opens while you are actually pressing something. The check was running on its own a moment after the log opened, so the prompt could never appear and nothing was shown. The panel now appears straight away and the check happens when you press the button
+
+### Changed
+- Recordings and transcripts are named more readably: `Catl 2026-08-10 Voice 260810_015240.m4a` rather than the previous run-together form. Files saved under the old naming are still recognised, so nothing already in your folders needs renaming
+- The summary heading on a written-up note now reads `Auto-summary (model)` instead of the bracketed form
 
 ## [v01.29w] — 2026-08-17 08:36:32 PM EST — v02.64r
 

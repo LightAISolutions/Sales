@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.29w">
+  <meta name="build-version" content="v01.30w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1868,7 +1868,12 @@
       var stamp = d.getFullYear() + '-'
         + ('0' + (d.getMonth() + 1)).slice(-2) + '-'
         + ('0' + d.getDate()).slice(-2);
-      var prefix = (slug || 'unfiled') + '--' + stamp + '--';
+      // "Catl 2026-08-10 Voice 260810_015240.m4a". The earlier form put a double
+      // dash between every field, which reads as machine output in a Drive
+      // listing. ovSlugFromTranscript still parses that older form, so files
+      // uploaded before this change keep routing correctly.
+      var s = String(slug || 'unfiled');
+      var prefix = s.charAt(0).toUpperCase() + s.slice(1) + ' ' + stamp + ' ';
       return name.indexOf(prefix) === 0 ? name : prefix + name;
     }
 
@@ -1945,7 +1950,10 @@
     // prefix falls back to 'general' rather than being skipped, so a mis-named
     // file still reaches the log instead of vanishing silently.
     function ovSlugFromTranscript(name) {
-      var head = String(name || '').split('--')[0].trim().toLowerCase();
+      var s = String(name || '');
+      // Space-separated is the current form; the double dash is what earlier
+      // uploads used, and those files are still sitting in 2-transcribed/.
+      var head = (s.indexOf('--') >= 0 ? s.split('--')[0] : s.split(' ')[0]).trim().toLowerCase();
       if (!head) return 'general';
       var known = ((ovRegistry && ovRegistry.companies) || []).some(function(c) { return c.slug === head; });
       return known ? head : 'general';
@@ -2760,84 +2768,71 @@
       });
     }
 
-    // Runs on every notes-log open. Finding nothing is the common case and stays
-    // silent — the bar appears only when there is something to import, or when
-    // the check itself failed (a Drive or consent problem must not look like
-    // "no new transcripts").
+    // The bar renders WITHOUT scanning. ovDriveToken asks GIS for Drive consent,
+    // and GIS only opens that prompt inside a live user gesture — its own comment
+    // says "stay synchronous so the gesture still counts". Scanning from the
+    // notes-list callback (v01.29w) meant the gesture was already gone, so the
+    // request hung and nothing rendered at all. Every Drive-touching step now
+    // happens inside the click, which is the same fix the recording upload needed.
     function ovRenderImportBar(imp) {
       if (!imp || _ovImportBusy) return;
-      ovClear(imp); imp.style.display = 'none';
-      ovScanTranscripts(function(scan, err) {
-        if (!scan) {
-          imp.style.display = 'block';
-          var e = ovEl('div', 'hint', 'Could not check ' + OV_REC_DONE + ' for new transcripts'
-            + (err ? ' (' + err + ')' : '') + '.');
-          e.style.cssText = 'font-size:11px;';
-          imp.appendChild(e);
-          return;
-        }
-        var items = scan.items;
-        if (!items.length) return;
-        imp.style.display = 'block';
-        var line = ovEl('div', null, items.length === 1
-          ? '1 transcript in ' + OV_REC_DONE + ' has not been written up yet.'
-          : items.length + ' transcripts in ' + OV_REC_DONE + ' have not been written up yet.');
-        line.style.cssText = 'margin-bottom:8px;color:var(--ov-text);';
-        imp.appendChild(line);
-        var names = ovEl('div', null, items.map(function(x) {
-          return ovCompanyLabel(x.slug) + ' · ' + x.name;
-        }).join('\n'));
-        names.style.cssText = 'white-space:pre-wrap;color:var(--ov-muted);font-size:11px;margin-bottom:9px;';
-        imp.appendChild(names);
-        var row = ovEl('div');
-        row.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
-        var lbl = ovEl('span', null, 'Confidence');
-        lbl.style.cssText = 'color:var(--ov-muted);font-size:11px;';
-        // The rating stays the developer's call — the app never picks it. 100 is
-        // pre-selected because a recording is first-hand, not because Claude
-        // decided the value.
-        var sel = ovEl('select');
-        sel.style.cssText = 'background:rgba(255,255,255,0.06);border:1px solid var(--ov-line2);'
-          + 'color:var(--ov-text);font:inherit;font-size:11px;padding:4px 6px;border-radius:4px;';
-        for (var c = 100; c >= 0; c -= 5) {
-          var o = ovEl('option', null, String(c)); o.value = String(c);
-          sel.appendChild(o);
-        }
-        var go = ovEl('button', 'ov-btn', '✨ Import & summarize');
-        go.type = 'button';
-        go.style.cssText = 'font-size:11px;padding:6px 10px;';
-        var stat = ovEl('span', 'hint', '');
-        stat.style.cssText = 'font-size:11px;';
-        go.addEventListener('click', function() {
-          if (_ovImportBusy) return;
-          _ovImportBusy = true;
-          go.disabled = true; sel.disabled = true;
-          ovImportTranscripts(items, scan.tok, Number(sel.value),
-            function(n, total, name, stage) {
-              stat.textContent = '(' + n + '/' + total + ') ' + stage + ' — ' + name;
-            },
+      ovClear(imp);
+      imp.style.display = 'block';
+      var line = ovEl('div', null, 'Transcribed a recording on your computer? Import whatever is waiting in '
+        + OV_REC_DONE + ' and it gets written up.');
+      line.style.cssText = 'margin-bottom:8px;color:var(--ov-muted);';
+      imp.appendChild(line);
+      var row = ovEl('div');
+      row.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
+      var lbl = ovEl('span', null, 'Confidence');
+      lbl.style.cssText = 'color:var(--ov-muted);font-size:11px;';
+      // The rating stays the developer's call. 100 is pre-selected because a
+      // recording is first-hand, not because the app decided the value.
+      var sel = ovEl('select');
+      sel.style.cssText = 'background:rgba(255,255,255,0.06);border:1px solid var(--ov-line2);'
+        + 'color:var(--ov-text);font:inherit;font-size:11px;padding:4px 6px;border-radius:4px;';
+      for (var c = 100; c >= 0; c -= 5) {
+        var o = ovEl('option', null, String(c)); o.value = String(c);
+        sel.appendChild(o);
+      }
+      var go = ovEl('button', 'ov-btn', 'Import new transcripts');
+      go.type = 'button';
+      go.style.cssText = 'font-size:11px;padding:6px 10px;';
+      var stat = ovEl('div', 'hint', '');
+      stat.style.cssText = 'font-size:11px;margin-top:7px;white-space:pre-wrap;';
+      function release(msg) {
+        _ovImportBusy = false; go.disabled = false; sel.disabled = false;
+        stat.textContent = msg;
+      }
+      go.addEventListener('click', function() {
+        if (_ovImportBusy) return;
+        _ovImportBusy = true;
+        go.disabled = true; sel.disabled = true;
+        stat.textContent = 'Checking ' + OV_REC_DONE + '...';
+        var conf = Number(sel.value);
+        // Inside the gesture. This is what lets the Drive consent prompt open.
+        ovScanTranscripts(function(scan, err) {
+          if (!scan) { release('Could not check ' + OV_REC_DONE + (err ? ' (' + err + ')' : '') + '.'); return; }
+          if (!scan.items.length) {
+            release('Nothing new. Every transcript in ' + OV_REC_DONE + ' is already written up.');
+            return;
+          }
+          var items = scan.items;
+          ovImportTranscripts(items, scan.tok, conf,
+            function(n, total, name, stage) { stat.textContent = '(' + n + '/' + total + ') ' + stage + ': ' + name; },
             function(okCount, failures) {
-              _ovImportBusy = false;
-              // Reload from the server rather than patching in place — the notes
+              // Reload from the server rather than patching in place. The notes
               // just written are the whole point, and a stale list would hide them.
               ovNoteApi('list', {}, function(r2) {
                 if (r2 && r2.success && r2.notes) { ovNotesData = { notes: r2.notes }; ovPaintNotes(); }
-                ovClear(imp);
-                var done = ovEl('div', null, okCount + ' of ' + items.length + ' written up.'
-                  + (failures.length ? ' ' + failures.length + ' had a problem:' : ''));
-                done.style.cssText = 'color:var(--ov-text);';
-                imp.appendChild(done);
-                if (failures.length) {
-                  var f = ovEl('div', null, failures.join('\n'));
-                  f.style.cssText = 'white-space:pre-wrap;color:var(--ov-muted);font-size:11px;margin-top:6px;';
-                  imp.appendChild(f);
-                }
+                release(okCount + ' of ' + items.length + ' written up.'
+                  + (failures.length ? '\n' + failures.join('\n') : ''));
               });
             });
         });
-        row.appendChild(lbl); row.appendChild(sel); row.appendChild(go); row.appendChild(stat);
-        imp.appendChild(row);
       });
+      row.appendChild(lbl); row.appendChild(sel); row.appendChild(go);
+      imp.appendChild(row); imp.appendChild(stat);
     }
 
     // Clipboard with a document.execCommand fallback for browsers that refuse

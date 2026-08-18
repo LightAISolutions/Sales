@@ -1,4 +1,4 @@
-var VERSION = "v01.15g";
+var VERSION = "v01.16g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -2313,7 +2313,7 @@ function summarizeNoteTranscript_(sessionToken, id) {
     if (typeof note.typedText !== 'string') {
       note.typedText = String(note.note || '').replace(NOTE_PLACEHOLDER_RE, '').trim();
     }
-    var head = '[auto-summary · ' + result.model + (truncated ? ' · transcript truncated' : '') + ']';
+    var head = 'Auto-summary (' + result.model + (truncated ? ', transcript truncated' : '') + ')';
     note.note = (note.typedText ? note.typedText + '\n\n' : '') + head + '\n' + result.text;
     note.summarized = Utilities.formatDate(new Date(), "America/New_York", "yyyy-MM-dd");
     // triage stays "pending" on purpose — a machine summary is an input to
@@ -2325,6 +2325,145 @@ function summarizeNoteTranscript_(sessionToken, id) {
   } finally {
     lock.releaseLock();
   }
+}
+
+// ── Unattended transcript watcher (zero-click path) ─────────────────────────
+// The browser import needs the developer to open the app. This does the same
+// work on a timer instead, but it can only see 2-transcribed/ if that folder is
+// SHARED with the account this script runs as — the folder lives in the
+// developer's Drive, and DriveApp here acts as the deploying account. Sharing is
+// the whole authorisation story: no new credential, no new endpoint.
+var PROP_AUTO_CONFIDENCE = "TRANSCRIPT_AUTO_CONFIDENCE";
+var WATCHER_TRIGGER_FN = "transcriptWatcherTick";
+// Apps Script kills an execution at six minutes and each file costs a Drive read
+// plus a model call, so a backlog is drained a few per tick rather than risking a
+// mid-file kill that leaves a note filed but never written up.
+var WATCHER_MAX_PER_RUN = 3;
+
+// Which account to share the folder with. diagnoseAuthorization cannot print
+// this — Session.getEffectiveUser needs userinfo.email, which this project's
+// grant does not include. The notes file is owned by the script account by
+// construction, so its owner is the answer, and reading it needs only `drive`.
+function whoIsTheScriptAccount() {
+  var email = null;
+  try { email = driveNotesFile_().getOwner().getEmail(); } catch (err) { /* fall through */ }
+  if (!email) { try { email = DriveApp.getRootFolder().getOwner().getEmail(); } catch (err2) { /* give up */ } }
+  Logger.log(email
+    ? 'Share your "Profiler App" Drive folder with this account (Editor):\n\n    ' + email + '\n'
+    : 'Could not read the owning account. Check that the drive scope is granted.');
+  return email;
+}
+
+function slugFromTranscriptName_(name) {
+  var s = String(name || '');
+  var head = (s.indexOf('--') >= 0 ? s.split('--')[0] : s.split(' ')[0]).trim().toLowerCase();
+  if (!head) return 'general';
+  var reg = ghContentsGet_(REGISTRY_FILE_PATH).json;
+  var known = (reg.companies || []).some(function(c) { return c.slug === head; });
+  return known ? head : 'general';
+}
+
+// Mirrors submitFieldNote's write, minus the session check — a trigger has no
+// request to validate. Returns the new note id.
+function createTranscriptNote_(slug, fileName, text, confidence) {
+  var today = Utilities.formatDate(new Date(), "America/New_York", "yyyy-MM-dd");
+  var stamp = Utilities.formatDate(new Date(), "America/New_York", "HHmmss");
+  var idDate = today.replace(/-/g, "");
+  var safe = fileName.replace(/[^A-Za-z0-9._ -]/g, "_");
+  var stored = today + "-" + stamp + "-" + safe;
+  var ref = drivePutNoteFile_(slug, stored, Utilities.base64Encode(text, Utilities.Charset.UTF_8));
+  var data = driveNotesGet_().json;
+  var seq = 1;
+  (data.notes || []).forEach(function(n) {
+    if (n.id && n.id.indexOf("note-" + idDate + "-") === 0) {
+      var num = parseInt(n.id.split("-")[2], 10);
+      if (num >= seq) seq = num + 1;
+    }
+  });
+  var note = {
+    id: "note-" + idDate + "-" + (seq < 10 ? "0" + seq : String(seq)),
+    date: today, slug: slug, sourceType: "contact",
+    note: "[file note: " + stored + " — summary pending triage]",
+    confidence: confidence, tags: [], triage: "pending",
+    submittedVia: "transcript-watcher",
+    sourceFile: ref, sourceName: fileName
+  };
+  data.notes = [note].concat(data.notes || []);
+  driveNotesPut_(data);
+  return note.id;
+}
+
+// One pass over the shared folder. Safe to run by hand from the editor — that is
+// the only way to see its log, and the fastest way to tell a sharing problem
+// from an empty queue.
+function transcriptWatcherTick() {
+  var props = PropertiesService.getScriptProperties();
+  var conf = props.getProperty(PROP_AUTO_CONFIDENCE);
+  if (conf === null || conf === '' || isNaN(Number(conf))) {
+    Logger.log('Set ' + PROP_AUTO_CONFIDENCE + ' (0-100) in Script Properties first. '
+      + 'The confidence rating is yours to choose, so nothing is imported until it is set.');
+    return 0;
+  }
+  conf = Math.round(Number(conf));
+  var folders = recFoldersGet_();
+  if (!folders || !folders.done) { Logger.log('No recording folders registered yet. Open the app once first.'); return 0; }
+  var dir;
+  try { dir = DriveApp.getFolderById(folders.done); }
+  catch (err) {
+    Logger.log('Cannot open the transcribed folder. Share it with ' + (whoIsTheScriptAccount() || 'the script account')
+      + ' as Editor, then run this again.');
+    return 0;
+  }
+  var claimed = {};
+  (driveNotesGet_().json.notes || []).forEach(function(n) { if (n.sourceName) claimed[n.sourceName] = true; });
+  var done = 0, it = dir.getFiles();
+  while (it.hasNext() && done < WATCHER_MAX_PER_RUN) {
+    var f = it.next();
+    var name = f.getName();
+    if (!NOTE_FILE_TEXT_RE.test(name) || claimed[name]) continue;
+    try {
+      var text = f.getBlob().getDataAsString("UTF-8");
+      var plain = vttToPlainText_(text);
+      if (plain.length < 200) { Logger.log('Skipped ' + name + ' (too short to be a meeting).'); continue; }
+      var slug = slugFromTranscriptName_(name);
+      var id = createTranscriptNote_(slug, name, text, conf);
+      var truncated = plain.length > TRANSCRIPT_MAX_CHARS;
+      if (truncated) plain = plain.slice(0, TRANSCRIPT_MAX_CHARS);
+      var result = anthropicSummarize_(meetingNotesPrompt_(slug, Utilities.formatDate(new Date(), "America/New_York", "yyyy-MM-dd"), 'contact', plain, truncated));
+      var data = driveNotesGet_().json;
+      var note = (data.notes || []).filter(function(x) { return x.id === id; })[0];
+      if (note) {
+        note.typedText = '';
+        note.note = 'Auto-summary (' + result.model + (truncated ? ', transcript truncated' : '') + ')\n' + result.text;
+        note.summarized = Utilities.formatDate(new Date(), "America/New_York", "yyyy-MM-dd");
+        driveNotesPut_(data);
+      }
+      auditLog('data_write', 'transcript-watcher', 'field_note_summarized', { id: id, slug: slug, model: result.model });
+      Logger.log('Wrote up ' + name + ' as ' + id + ' (' + slug + ').');
+      done++;
+    } catch (e) {
+      Logger.log('Failed on ' + name + ': ' + ((e && e.message) || e));
+    }
+  }
+  Logger.log(done ? done + ' transcript(s) written up this run.' : 'Nothing new to write up.');
+  return done;
+}
+
+// Run once from the editor to arm the watcher. Removes any previous copy first
+// so repeated runs cannot stack duplicate triggers.
+function installTranscriptWatcher() {
+  removeTranscriptWatcher();
+  ScriptApp.newTrigger(WATCHER_TRIGGER_FN).timeBased().everyMinutes(15).create();
+  Logger.log('Watcher armed. It checks the transcribed folder every 15 minutes.');
+}
+
+function removeTranscriptWatcher() {
+  var n = 0;
+  ScriptApp.getProjectTriggers().forEach(function(t) {
+    if (t.getHandlerFunction() === WATCHER_TRIGGER_FN) { ScriptApp.deleteTrigger(t); n++; }
+  });
+  Logger.log(n ? 'Removed ' + n + ' existing watcher trigger(s).' : 'No watcher trigger was installed.');
+  return n;
 }
 
 function getIntakeBootstrap(sessionToken) {

@@ -3,11 +3,44 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.65r] — 2026-08-18 05:56:47 AM EST
+
+> **Prompt:** "I'm seeing v01.29w, but I still cannot see the CATL .vtt file anywhere. When I click the cog button, I still see the SInexcel FCC Inverter Ban Exposure Report.
+>
+> Also, I want to achieve zero-click; How do I share my Drive folder with the script account? Do it for me if possible. Otherwise, give me step-by-step instructions. Also, can you change the naming rules to not be so obviously AI-created (dont use the em-dash and capitalize the first letter of the first word)?"
+
+#### `Profiler.html` — v01.30w
+
+##### Fixed
+- **The import bar never appeared, and the cause was a bug this repo had already fixed once.** `ovScanTranscripts` reaches `ovDriveToken`, which asks GIS for Drive consent — and GIS only opens that prompt inside a live user gesture. Its own comment says so: *"Warm library: stay synchronous so the gesture still counts."* v01.29w called the scan from the `ovNoteApi('list')` **callback**, by which point the gesture was long gone, so the consent request hung and nothing rendered at all. Identical in shape to the v02.28r recording-upload hang, whose fix was to move consent onto the button's click handler
+- The bar now renders immediately with no Drive contact, and every Drive-touching step runs inside the click. Verified: **zero** scan calls on open, exactly one on click
+
+##### Changed
+- Recording and transcript filenames drop the double-dash separator and capitalise the leading slug: `catl--2026-08-10--Voice 260810_015240.m4a` becomes `Catl 2026-08-10 Voice 260810_015240.m4a` (developer directive — the old form read as machine output in a Drive listing)
+- `ovSlugFromTranscript` parses **both** forms. The two transcripts already sitting in `2-transcribed/` use the old naming and still route to CATL and Hithium correctly — verified against those exact filenames, plus a hyphenated slug (`Siemens-energy`) to confirm the space-split does not truncate multi-word slugs
+- One click still covers a whole batch: scan, file, and summarise all run from the single button press
+
+#### `Profiler.gs` — v01.16g
+
+##### Added
+- **Unattended watcher for the zero-click path.** `transcriptWatcherTick` scans the transcribed folder, files each new transcript and writes it up with no app open; `installTranscriptWatcher` / `removeTranscriptWatcher` arm and disarm a 15-minute time-driven trigger. Capped at `WATCHER_MAX_PER_RUN` (3) per tick — Apps Script kills an execution at six minutes and each file costs a Drive read plus a model call, so a backlog drains across ticks rather than risking a mid-file kill
+- `whoIsTheScriptAccount()` — reads the owner of the notes file (which the script account owns by construction) to print the address the developer must share their Drive folder with. `diagnoseAuthorization` cannot supply this: `Session.getEffectiveUser` needs `userinfo.email`, which this project's grant does not include, and that is exactly the line that failed in the 2026-08-17 log
+- `slugFromTranscriptName_` and `createTranscriptNote_` — server-side counterparts of the browser path, both accepting old and new filename forms
+- **The watcher refuses to run until `TRANSCRIPT_AUTO_CONFIDENCE` is set** in Script Properties. A trigger has nobody to ask, and the 2026-08-07 directive says the confidence rating is never invented — so the developer states it once and the watcher uses it, rather than a default being chosen for them
+
+##### Changed
+- The generated note header is now `Auto-summary (model)` instead of `[auto-summary · model]`, matching the same developer directive about machine-looking output
+
+### Notes
+- **Sharing cannot be done from a session** — it requires access to the developer's Google Drive. Step-by-step supplied in the response instead
+- `script.scriptapp` was confirmed granted on Profiler in the 2026-08-17 diagnostic, which is what makes the trigger path viable here; the same code on Scraper would silently never install
+- The watcher is **untested** — it cannot run until the folder is shared and the trigger armed. Failure mode is contained: it logs and returns rather than throwing, and the browser import remains the working path either way
 
 ## [v02.64r] — 2026-08-17 08:36:32 PM EST
 
