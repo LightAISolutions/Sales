@@ -1,4 +1,4 @@
-var VERSION = "v01.14g";
+var VERSION = "v01.15g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -2168,6 +2168,26 @@ function driveReadNoteFile_(ref) {
   } catch (err) { return null; }
 }
 
+// Name of an attached note file, for extension tests that must not pay for a
+// full content read. Notes written before sourceName existed fall back to Drive.
+function driveNoteFileName_(ref) {
+  var id = driveNoteFileId_(ref);
+  if (!id) return null;
+  try { return DriveApp.getFileById(id).getName(); } catch (err) { return null; }
+}
+
+// True only when the note's attachment is something driveReadNoteFile_ can
+// actually return text for. A Word/PDF attachment sets sourceFile just the same,
+// so testing sourceFile alone offered Copy-with-transcript and Summarize on notes
+// where both were guaranteed to fail.
+function noteHasTextTranscript_(n) {
+  if (!n || !n.sourceFile || !driveNoteFileId_(n.sourceFile)) return false;
+  var name = (typeof n.sourceName === 'string' && n.sourceName)
+    ? n.sourceName
+    : driveNoteFileName_(n.sourceFile);
+  return !!name && NOTE_FILE_TEXT_RE.test(name);
+}
+
 // ── Meeting-notes summarization ─────────────────────────────────────────────
 // A transcript filed through the note box lands in Drive as plain text, and the
 // note itself carries a "[file note: … — summary pending triage]" placeholder
@@ -2360,7 +2380,10 @@ function submitFieldNote(sessionToken, payload) {
     files.forEach(function(f) {
       var safe = f.name.replace(/[^A-Za-z0-9._-]/g, "_");
       var name = today + "-" + stamp + "-" + safe;
-      savedFiles.push({ name: name, ref: drivePutNoteFile_(slug, name, f.base64) });
+      // `orig` is the name as the developer's Drive knows it, kept so the app can
+      // tell which transcripts in 2-transcribed/ have already been imported.
+      // `name` carries a date+time prefix and would never match.
+      savedFiles.push({ name: name, orig: f.name, ref: drivePutNoteFile_(slug, name, f.base64) });
     });
     var seq = 1;
     (data.notes || []).forEach(function(n) {
@@ -2385,7 +2408,7 @@ function submitFieldNote(sessionToken, payload) {
       triage: "pending",
       submittedVia: "profiler-intake"
     };
-    if (savedFiles.length) note.sourceFile = savedFiles[0].ref;
+    if (savedFiles.length) { note.sourceFile = savedFiles[0].ref; note.sourceName = savedFiles[0].orig; }
     // M5 — meeting audio is uploaded browser-side with the user's own
     // drive.file credential (GAS never handles the bytes, so the 6-minute
     // execution ceiling and the 50MB UrlFetchApp cap never come into play).
@@ -2420,9 +2443,12 @@ function listFieldNotes(sessionToken) {
              sourceFile: n.sourceFile || null, edited: n.edited || null,
              summarized: n.summarized || null,
              recordingLink: n.recordingLink || null,
-             // Drives the "Copy for Claude" affordance — only text attachments
-             // can be put on a clipboard, so the app hides the button otherwise
-             hasTranscript: !!(n.sourceFile && driveNoteFileId_(n.sourceFile)) };
+             sourceName: n.sourceName || null,
+             // Drives the "Copy for Claude" and "Summarize" affordances. Only a
+             // TEXT attachment qualifies — a Word/PDF note has a sourceFile too,
+             // but driveReadNoteFile_ returns null for it, so offering either
+             // button on one produced a guaranteed NO_TRANSCRIPT failure.
+             hasTranscript: noteHasTextTranscript_(n) };
   });
 }
 

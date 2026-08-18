@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15g] — 2026-08-17 08:36:32 PM EST — v02.64r
+
+### Fixed
+- A note whose attachment is a Word or PDF document is no longer reported as carrying a readable transcript. It never did, so the app was offering actions on those notes that could only ever fail
+
+### Added
+- A note now remembers the original name of the file attached to it. That is what lets the app tell which of your transcripts have already been written up and which are still waiting, so nothing gets imported twice
 
 ## [v01.14g] — 2026-08-17 03:36:35 AM EST — v02.62r
 

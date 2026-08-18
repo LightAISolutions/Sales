@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.64r] — 2026-08-17 08:36:32 PM EST
+
+> **Prompt:** "I could not find my notes in the Profiler app - I could only see Sinexcel's FCC Inverter Exposure Report. However, I see my transcribed .vtt meeting notes in my Drive's Profiler App folder -> Meeting Recordings folder -> 2-transcribed folder. Make it easier for me to summarize my transcribed .vtt files. Ideally, make it so I don't have to press anything and my .vtt files automatically get summarized. If that isn't possible, then make it as close as possible to a one-click solution. Then, give me step by step instructions to continue."
+
+#### `Profiler.html` — v01.29w
+
+##### Added
+- **Transcript auto-import.** Opening the ⚙ notes log now scans `2-transcribed/` browser-side and surfaces any transcript no note has claimed. New `ovScanTranscripts` / `ovImportTranscripts` / `ovDriveText` / `ovSlugFromTranscript`, plus the `#ov-notes-import` bar between the filter chips and the log
+- Import is **sequential by design** — `submit` → `summarize` per file, never a parallel batch. Each pass is a Drive write plus a model call, and firing N of those at once is how the one path that must not be flaky becomes flaky
+- The slug comes from the filename: uploads are already named `<slug>--YYYY-MM-DD--<original>`, so `catl--2026-08-10--Voice 260810_015240.vtt` routes to the CATL dossier with no lookup. An unrecognised prefix falls back to `general` rather than being skipped, so a mis-named file still reaches the log
+- Verified against the developer's two real transcripts: slug derivation, the rendered bar, and the full click-through produced `submit:catl → summarize → submit:hithium → summarize → list` in order with zero page errors, at 390×844
+
+##### Changed
+- The scan runs **after** the notes list returns, never before — it dedups against `sourceName`, so scanning first would offer to re-import everything
+- A failed scan renders an explicit message. Silence is reserved for "scan succeeded, nothing new"; a Drive or consent failure that rendered as silence would be indistinguishable from having no work to do
+- `btoa` is fed through `unescape(encodeURIComponent(...))` — it rejects multi-byte characters outright, and transcripts routinely carry smart quotes
+
+#### `Profiler.gs` — v01.15g
+
+##### Fixed
+- **`hasTranscript` counted any attachment, not just a readable one.** `!!(n.sourceFile && driveNoteFileId_(n.sourceFile))` is true for a Word/PDF note, but `driveReadNoteFile_` returns null for those — so the app offered **Copy + transcript** and **✨ Summarize** on notes where both were guaranteed to fail with `NO_TRANSCRIPT`. This is exactly what the developer's Sinexcel PDF note showed. Replaced with `noteHasTextTranscript_`, which tests the name against `NOTE_FILE_TEXT_RE`. Verified across 8 note shapes including both legacy (no `sourceName`) variants
+
+##### Added
+- `note.sourceName` records the attachment's **original** Drive filename on submit. The stored name carries a date+time prefix and could never match what the developer's Drive shows, so without this the import has no way to tell which transcripts are already filed
+- `driveNoteFileName_` resolves a name without paying for a full content read, for legacy notes predating `sourceName`
+
+### Notes
+- **This corrects an inaccurate claim from the prior response**, which told the developer that a `📋 Copy + transcript` label proved the server saw a readable transcript. It did not — the label was driven by the same over-broad check fixed here
+- Source type for imported transcripts is `contact`, the closest of the five valid values (`contact`/`event`/`call`/`news`/`other`). Adding a `meeting` type would touch the schema and the intake dropdown, so it was left out of scope
+- The confidence rating is **still the developer's** — the bar presents a selector pre-set to 100 rather than defaulting one silently, per the 2026-08-07 directive that Claude never invents this value. One selection covers the batch, which is what keeps it to a single click
 
 ## [v02.63r] — 2026-08-17 04:07:29 AM EST
 

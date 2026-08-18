@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.28w">
+  <meta name="build-version" content="v01.29w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1920,6 +1920,99 @@
       return i > 0 ? name.slice(0, i) : name;
     }
 
+    // ── Transcript auto-import ──────────────────────────────────────────────
+    // Every recording is uploaded as "<slug>--YYYY-MM-DD--<original>", so a
+    // transcript sitting in 2-transcribed/ already states which dossier it
+    // belongs to. Nothing has to be matched or guessed — that is what makes an
+    // unattended import possible at all. The scan runs browser-side on the same
+    // drive.file credential that created those folders, so it needs no new
+    // permission and no sharing of the developer's Drive with the script account.
+    var OV_TRANSCRIPT_RE = /\.(vtt|srt|txt|md)$/i;
+    var _ovImportBusy = false;
+
+    // Drive's alt=media returns raw bytes, not JSON, so this cannot go through
+    // ovDriveApi — that helper parses every response as JSON.
+    function ovDriveText(tok, fileId) {
+      return fetch('https://www.googleapis.com/drive/v3/files/' + encodeURIComponent(fileId) + '?alt=media',
+        { headers: { Authorization: 'Bearer ' + tok } })
+        .then(function(r) {
+          if (!r.ok) throw new Error('drive_http_' + r.status);
+          return r.text();
+        });
+    }
+
+    // "catl--2026-08-10--Voice 260810_015240.vtt" -> "catl". An unrecognised
+    // prefix falls back to 'general' rather than being skipped, so a mis-named
+    // file still reaches the log instead of vanishing silently.
+    function ovSlugFromTranscript(name) {
+      var head = String(name || '').split('--')[0].trim().toLowerCase();
+      if (!head) return 'general';
+      var known = ((ovRegistry && ovRegistry.companies) || []).some(function(c) { return c.slug === head; });
+      return known ? head : 'general';
+    }
+
+    // Transcripts in 2-transcribed/ that no note has claimed yet. Dedup is by
+    // sourceName — the original Drive filename, which submitFieldNote records
+    // precisely so this comparison is possible. cb({items, tok}, err).
+    function ovScanTranscripts(cb) {
+      var claimed = {};
+      ((ovNotesData && ovNotesData.notes) || []).forEach(function(n) {
+        if (n.sourceName) claimed[n.sourceName] = true;
+      });
+      ovRecFolders(function(folders, ferr) {
+        if (!folders) { cb(null, ferr || 'no_folder'); return; }
+        ovDriveToken(function(tok, terr) {
+          if (!tok) { cb(null, terr || 'no_token'); return; }
+          ovDriveList(tok, folders.done)
+            .then(function(files) {
+              cb({
+                tok: tok,
+                items: files.filter(function(f) {
+                  return OV_TRANSCRIPT_RE.test(f.name) && !claimed[f.name];
+                }).map(function(f) {
+                  return { id: f.id, name: f.name, slug: ovSlugFromTranscript(f.name) };
+                })
+              }, null);
+            })
+            .catch(function(e) { cb(null, String((e && e.message) || e)); });
+        });
+      });
+    }
+
+    // Downloads each transcript, files it against the slug its filename names,
+    // then summarises it. Deliberately sequential: submit takes a Drive write
+    // and summarize takes a model call, and firing a batch of those at once is
+    // how the one path that must not be flaky becomes flaky.
+    // onStep(index, total, name, stage). done(okCount, failures[]).
+    function ovImportTranscripts(items, tok, confidence, onStep, done) {
+      var i = 0, ok = 0, failed = [];
+      function next() {
+        if (i >= items.length) { done(ok, failed); return; }
+        var it = items[i];
+        var fail = function(msg) { failed.push(it.name + ' — ' + msg); i++; next(); };
+        onStep(i + 1, items.length, it.name, 'reading');
+        ovDriveText(tok, it.id).then(function(text) {
+          if (!text || !text.trim()) throw new Error('the file is empty');
+          // btoa rejects multi-byte characters outright; transcripts routinely
+          // carry smart quotes and non-ASCII names.
+          var b64 = btoa(unescape(encodeURIComponent(text)));
+          onStep(i + 1, items.length, it.name, 'filing');
+          ovNoteApi('submit', {
+            slug: it.slug, sourceType: 'contact', note: '', confidence: confidence,
+            files: [{ name: it.name, base64: b64 }]
+          }, function(res) {
+            if (!res || !res.success) { fail((res && res.error) || 'could not be filed'); return; }
+            onStep(i + 1, items.length, it.name, 'writing notes');
+            ovNoteApi('summarize', { id: res.id }, function(sr) {
+              if (sr && sr.success) { ok++; i++; next(); return; }
+              fail('filed, but the notes step failed (' + ((sr && sr.error) || 'no response') + ')');
+            });
+          });
+        }).catch(function(e) { fail(String((e && e.message) || e)); });
+      }
+      next();
+    }
+
     // Files a transcript produced outside the app: the .vtt goes into
     // 2-transcribed, and the recording it belongs to follows it out of the
     // queue folder — otherwise 1-awaiting-transcription would keep claiming
@@ -2642,6 +2735,13 @@
       head.appendChild(close);
       panel.appendChild(head);
       var chips = ovEl('div'); chips.id = 'ov-notes-chips'; panel.appendChild(chips);
+      // PROJECT: transcript auto-import bar — sits between the filter chips and
+      // the log because it describes work about to enter the log. Hidden unless
+      // the scan actually finds something.
+      var imp = ovEl('div'); imp.id = 'ov-notes-import';
+      imp.style.cssText = 'display:none;margin:0 0 10px;padding:10px 12px;border:1px solid var(--ov-line2);'
+        + 'border-radius:8px;background:rgba(255,255,255,0.03);font-size:12px;';
+      panel.appendChild(imp);
       var body = ovEl('div'); body.id = 'ov-notes-body';
       body.appendChild(ovEl('p', 'ov-loading', 'Loading field notes…'));
       panel.appendChild(body);
@@ -2650,11 +2750,93 @@
       // file — that is the whole point of the M3 move. An unsigned or non-admin
       // session gets nothing back, which is the intended behaviour.
       ovNoteApi('list', {}, function(r) {
-        if (r && r.success && r.notes) { ovNotesData = { notes: r.notes }; ovPaintNotes(); return; }
+        // The scan runs only after the notes are in hand — it dedups against
+        // them, so scanning first would offer to re-import everything.
+        if (r && r.success && r.notes) { ovNotesData = { notes: r.notes }; ovPaintNotes(); ovRenderImportBar(imp); return; }
         ovClear(body);
         body.appendChild(ovEl('p', 'ov-empty', (r && r.error === 'ADMIN_ONLY')
           ? 'Field notes are visible to the owner account only.'
           : 'Could not load field notes — sign in and try again.'));
+      });
+    }
+
+    // Runs on every notes-log open. Finding nothing is the common case and stays
+    // silent — the bar appears only when there is something to import, or when
+    // the check itself failed (a Drive or consent problem must not look like
+    // "no new transcripts").
+    function ovRenderImportBar(imp) {
+      if (!imp || _ovImportBusy) return;
+      ovClear(imp); imp.style.display = 'none';
+      ovScanTranscripts(function(scan, err) {
+        if (!scan) {
+          imp.style.display = 'block';
+          var e = ovEl('div', 'hint', 'Could not check ' + OV_REC_DONE + ' for new transcripts'
+            + (err ? ' (' + err + ')' : '') + '.');
+          e.style.cssText = 'font-size:11px;';
+          imp.appendChild(e);
+          return;
+        }
+        var items = scan.items;
+        if (!items.length) return;
+        imp.style.display = 'block';
+        var line = ovEl('div', null, items.length === 1
+          ? '1 transcript in ' + OV_REC_DONE + ' has not been written up yet.'
+          : items.length + ' transcripts in ' + OV_REC_DONE + ' have not been written up yet.');
+        line.style.cssText = 'margin-bottom:8px;color:var(--ov-text);';
+        imp.appendChild(line);
+        var names = ovEl('div', null, items.map(function(x) {
+          return ovCompanyLabel(x.slug) + ' · ' + x.name;
+        }).join('\n'));
+        names.style.cssText = 'white-space:pre-wrap;color:var(--ov-muted);font-size:11px;margin-bottom:9px;';
+        imp.appendChild(names);
+        var row = ovEl('div');
+        row.style.cssText = 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;';
+        var lbl = ovEl('span', null, 'Confidence');
+        lbl.style.cssText = 'color:var(--ov-muted);font-size:11px;';
+        // The rating stays the developer's call — the app never picks it. 100 is
+        // pre-selected because a recording is first-hand, not because Claude
+        // decided the value.
+        var sel = ovEl('select');
+        sel.style.cssText = 'background:rgba(255,255,255,0.06);border:1px solid var(--ov-line2);'
+          + 'color:var(--ov-text);font:inherit;font-size:11px;padding:4px 6px;border-radius:4px;';
+        for (var c = 100; c >= 0; c -= 5) {
+          var o = ovEl('option', null, String(c)); o.value = String(c);
+          sel.appendChild(o);
+        }
+        var go = ovEl('button', 'ov-btn', '✨ Import & summarize');
+        go.type = 'button';
+        go.style.cssText = 'font-size:11px;padding:6px 10px;';
+        var stat = ovEl('span', 'hint', '');
+        stat.style.cssText = 'font-size:11px;';
+        go.addEventListener('click', function() {
+          if (_ovImportBusy) return;
+          _ovImportBusy = true;
+          go.disabled = true; sel.disabled = true;
+          ovImportTranscripts(items, scan.tok, Number(sel.value),
+            function(n, total, name, stage) {
+              stat.textContent = '(' + n + '/' + total + ') ' + stage + ' — ' + name;
+            },
+            function(okCount, failures) {
+              _ovImportBusy = false;
+              // Reload from the server rather than patching in place — the notes
+              // just written are the whole point, and a stale list would hide them.
+              ovNoteApi('list', {}, function(r2) {
+                if (r2 && r2.success && r2.notes) { ovNotesData = { notes: r2.notes }; ovPaintNotes(); }
+                ovClear(imp);
+                var done = ovEl('div', null, okCount + ' of ' + items.length + ' written up.'
+                  + (failures.length ? ' ' + failures.length + ' had a problem:' : ''));
+                done.style.cssText = 'color:var(--ov-text);';
+                imp.appendChild(done);
+                if (failures.length) {
+                  var f = ovEl('div', null, failures.join('\n'));
+                  f.style.cssText = 'white-space:pre-wrap;color:var(--ov-muted);font-size:11px;margin-top:6px;';
+                  imp.appendChild(f);
+                }
+              });
+            });
+        });
+        row.appendChild(lbl); row.appendChild(sel); row.appendChild(go); row.appendChild(stat);
+        imp.appendChild(row);
       });
     }
 
