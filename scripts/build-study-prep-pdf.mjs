@@ -103,6 +103,20 @@ const DOCS = {
     runHead: 'Built from the Profiler dossier set · Prepared 18 August 2026',
     runFoot: 'Zhonhen Electric — Interview Brief (Director of BD, First Round) · Internal, interview preparation',
   },
+  'zhonhen-lesson-plan': {
+    src: 'repository-information/study-prep/zhonhen/zhonhen-lesson-plan.md',
+    out: 'repository-information/study-prep/zhonhen/ZHONHEN-LESSON-PLAN.pdf',
+    kick: 'Profiler Study Prep · Technology Lesson Plan',
+    sub: 'Data-center power architectures: the Western AC chain vs China’s HVDC (240V/336V/800Vdc)',
+    meta: [
+      '<b>Prepared</b> 19 August 2026 &nbsp;·&nbsp; <b>Source</b> zhonhen.profile.json plus the AIDC market report corpus '
+        + '&nbsp;·&nbsp; <b>Companion</b> zhonhen-interview-brief.md, which teaches the room',
+      '<b>Classification</b> Internal — interview preparation',
+    ],
+    banner: '<b>Presentation style</b> — BloombergNEF Research Report, the canonical Profiler export skin.',
+    runHead: 'Built from the Profiler dossier set · Prepared 19 August 2026',
+    runFoot: 'Zhonhen Electric — Technology Lesson Plan · Internal, interview preparation',
+  },
   'megmeet-lesson-plan': {
     src: 'repository-information/study-prep/megmeet/megmeet-lesson-plan.md',
     out: 'repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf',
