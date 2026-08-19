@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-18 06:16:45 AM EST` · Repo version: `v02.67r`
+Last updated: `2026-08-18 10:05:58 PM EST` · Repo version: `v02.68r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -125,6 +125,7 @@ Last updated: `2026-08-18 06:16:45 AM EST` · Repo version: `v02.67r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.profile.json">wartsila.profile.json</a>  — Wärtsilä dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.study.json">wartsila.study.json</a>     — Wärtsilä in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/xai.profile.json">xai.profile.json</a>       — xAI dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/zhonhen.profile.json">zhonhen.profile.json</a>   — Zhonhen Electric dossier profile
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data/archive">archive/</a>                — Superseded dossier versions, archived on each profile revision
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/archive-index.json">archive-index.json</a>  — Index of archived profile versions per company
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/byd.profile.v1.json">byd.profile.v1.json</a> — Archived v1 dossier (BYD)
@@ -348,8 +349,11 @@ Last updated: `2026-08-18 06:16:45 AM EST` · Repo version: `v02.67r`
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/sungrow/sungrow-lesson-plan.md">sungrow-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/tesla">tesla/</a> — Tesla technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/tesla/tesla-lesson-plan.md">tesla-lesson-plan.md</a> — Full-depth 5-module lesson plan
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/wartsila">wartsila/</a> — Wärtsilä technology curriculum
-│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/wartsila/wartsila-lesson-plan.md">wartsila-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/wartsila">wartsila/</a> — Wärtsilä technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/wartsila/wartsila-lesson-plan.md">wartsila-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/zhonhen">zhonhen/</a> — Zhonhen Electric interview preparation
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/zhonhen-interview-brief.md">zhonhen-interview-brief.md</a> — First-round interview layer: the interviewer read, the HVDC/Panama architecture story, the US entry problem, regulatory stack, questions to ask, self-test
+│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/ZHONHEN-INTERVIEW-BRIEF.pdf">ZHONHEN-INTERVIEW-BRIEF.pdf</a> — The interview brief typeset for print/download, BloombergNEF Research Report style (11 pages)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/RULE-COST-AUDIT.md">RULE-COST-AUDIT.md</a>       — Rule cost audit — ranked table, trim-recommendation checklist (T1–T9), progress tracking
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/TODO.md">TODO.md</a>                 — [template · initialized] Actionable to-do items
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/FUTURE-CONSIDERATIONS.md">FUTURE-CONSIDERATIONS.md</a> — [template] Deferred architectural ideas for scale

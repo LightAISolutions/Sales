@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.68r] — 2026-08-18 10:05:58 PM EST
+
+> **Prompt:** "Profiler Zhonhen Electric. Then, create an interview prep guide for an AIDC Sales Director position with Jacky Zhu, son of the current chairman. Output as a download able PDF file."
+
+### Added
+- **New Profiler dossier: `zhonhen.profile.json` (profileVersion 1)** — Hangzhou Zhonhen Electric Co., Ltd. (SZSE: 002364), China's #1 data-center HVDC power vendor, researched via the standard two-agent protocol (~105 evaluated sources across first-party IR/PR/product channels and third-party filings, consultancy data and trade press) and authored in the active `intel-briefing` style: BLUF summary, five confidence-tagged key judgments, 6 product lines with full v2 depth fields, 4 technical-spec blocks, 13 recent developments, 8 decision makers, 3 financial periods, 41 sources. Registered in `profiler-companies.json` (roster now **41 companies**)
+- **The research corrected the tasking's framing in three places, all documented in the dossier**: the current chairman is **Bao Xiaoru** — the interviewer's mother — not father Zhu Guoding, who is actual controller with no board seat and a December 2025 securities-manipulation conviction; the recruiter's "~50% HVDC share" is **31%** per the one named consultancy (still #1, CR3 72%); and CATL's RMB 4.1B investment (definitive agreements 14 August 2026) buys **49% of the controlling holdco**, not a direct listed-company stake
+- **New interview brief: `repository-information/study-prep/zhonhen/zhonhen-interview-brief.md` + `ZHONHEN-INTERVIEW-BRIEF.pdf`** (11 pages, 17 sections, BloombergNEF skin) for the 19 August first-round interview with Zhu Yikun (朱一鲲, "Jacky Zhu" per the recruiting channel), co-head of overseas business with a personal 10% stake in the SuperX Digital Power JV. Structure follows the Hithium/Megmeet briefs: logistics (from the calendar invite — including the Teams one-hour cutoff), the interviewer read, the recruiter's three published probe areas as a prep syllabus, a recruiter-claims-vs-public-record table, the HVDC/Panama architecture story, a US entry thesis built on the market report's time-to-power and craft-labor arguments, the FCC/tariff/FEOC regulatory read for a Chinese HVDC vendor ([Analysis]-labelled), objection handling, questions to ask, a do-not-say list, vocabulary, and a ten-question self-test
+- **`scripts/build-study-prep-pdf.mjs`** gained the `zhonhen-interview-brief` registry entry
+
+### Changed
+- **README tree**: added `zhonhen.profile.json` to the profiler-data listing and a `zhonhen/` block to study-prep (wartsila's tree-terminator characters adjusted since it is no longer the last entry)
 
 ## [v02.67r] — 2026-08-18 06:16:45 AM EST
 

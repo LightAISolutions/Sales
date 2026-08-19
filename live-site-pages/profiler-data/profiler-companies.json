@@ -482,6 +482,18 @@
       "ticker": "private (inside SpaceX; IPO S-1 filed)",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "zhonhen",
+      "name": "Zhonhen Electric",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "China's data-center HVDC leader — #1 at 31% share, Alibaba's Panama co-developer, now pushing 800V overseas via Enervell/SuperX while CATL buys 49% of its holdco.",
+      "hq": "Hangzhou, China",
+      "ticker": "SZSE: 002364",
+      "status": "active",
+      "lastUpdated": "2026-08-18"
     }
   ]
 }

@@ -87,6 +87,22 @@ const DOCS = {
     runHead: 'Strategy addendum to the Hithium interview brief · Prepared 15 August 2026',
     runFoot: 'Hithium — Strategy Addendum (Sales Role, Round 3) · Internal, interview preparation',
   },
+  'zhonhen-interview-brief': {
+    src: 'repository-information/study-prep/zhonhen/zhonhen-interview-brief.md',
+    out: 'repository-information/study-prep/zhonhen/ZHONHEN-INTERVIEW-BRIEF.pdf',
+    kick: 'Profiler Study Prep · Interview Preparation',
+    sub: 'First round — the interviewer, the architecture story, the US entry problem, and what to ask',
+    meta: [
+      '<b>Prepared</b> 18 August 2026 &nbsp;·&nbsp; <b>Source</b> zhonhen.profile.json, profileVersion 1 '
+        + '(researched 2026-08-18, ~105 evaluated sources) plus the recruiting channel',
+      '<b>Sourcing</b> Every claim traces to the dossier or the recruiting email; analytical reads are labelled as reads '
+        + '&nbsp;·&nbsp; <b>Classification</b> Internal — interview preparation',
+    ],
+    banner: '<b>Presentation style</b> — BloombergNEF Research Report, the canonical Profiler export skin. '
+      + 'Facts lead, labelled analysis follows, and the two never blur.',
+    runHead: 'Built from the Profiler dossier set · Prepared 18 August 2026',
+    runFoot: 'Zhonhen Electric — Interview Brief (Director of BD, First Round) · Internal, interview preparation',
+  },
   'megmeet-lesson-plan': {
     src: 'repository-information/study-prep/megmeet/megmeet-lesson-plan.md',
     out: 'repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf',
