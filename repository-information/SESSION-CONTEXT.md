@@ -6,6 +6,40 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-21 05:02:40 PM EST
+**Repo version:** v02.70r
+**Branch:** `claude/aidc-market-report-clarify-sruhbn`
+
+**What we worked on (v02.49r–v02.53r and v02.63r–v02.70r — AIDC research platform + Zhonhen campaign):**
+
+- **Two-document restructure of the AIDC market report:** `AIDC-MARKET-REPORT.md` is now an 11-chapter / 109pp report; former chapters 10–12 became the standalone `AIDC-COVERAGE-UNIVERSE.md` (3 chapters, 40 companies, 51pp — every per-company "recommended strategy" passage kept per the developer's instruction). Both rebranded **"Jon Yang Equity Research"**, TOCs fully expanded, certification stack (§7.5) added, 21 acronym gaps closed, chapter 2 at +1 teaching patience. `scripts/build-aidc-report-pdf.mjs` has a DOCS registry (`--doc report|coverage`, `--style <slug>`)
+- **Zhonhen Electric dossier** (`zhonhen.profile.json`, 41 sources) — Profiler registry now at **41 companies**. Load-bearing corrections vs the recruiter's framing: the chairman is **Bao Xiaoru** (the mother), not the founder; **31%** is overall China HVDC share (Kezhi 2025) while "70%+" is per-account share within named customers; CATL is taking 49% of the **holding company**, not the listco (definitive agreement 2026-08-14)
+- **Zhonhen interview campaign — the developer PASSED round 1** (AIDC Sales Director; interviewer "Jacky Zhu" = **Zhu Yikun**, son of founder Zhu Guoding and chairman Bao Xiaoru). Prep set in `repository-information/study-prep/zhonhen/`: interview brief (11pp), power-architecture lesson plan (6pp — US AC chain vs China 240/336/800Vdc), and an absorption summary of the company's confidential intro deck (4pp) — all with PDFs via `scripts/build-study-prep-pdf.mjs`
+- **Approved the Profiler roster-expansion plan** with the study-guide amendment — full plan in the Recommendation below
+
+**Where we left off:**
+- Everything committed, merged, and verified at **v02.70r**; working tree clean. No in-flight work — this save exists specifically so the roster expansion runs on a clean session
+
+**Key decisions made:**
+- **Model usage for the expansion:** Fable 5 within included weekly limits, fall back to Opus 5 when exhausted. **No "Fable 5 Extra"** (usage-credit billing) and **no ultracode** — the Profiler protocol already supplies the orchestration, and the 4-CPU container caps useful concurrency at ~2 agents
+- **Study-guide effort stays at default High** — guides are derivative of already-deep dossier research; raising effort would spend budget on the cheapest step of the pipeline
+- **Confidentiality (standing, non-negotiable):** the Zhonhen intro deck is marked CONFIDENTIAL — never committed to the repo, never cited into the public dossier; its summary lives only in non-deployed `study-prep/`. Recruiting-channel information (the English name "Jacky Zhu", meeting logistics, recruiter claims) never enters public profiles — public sources only per PROFILER-SCHEMA.md. Never raise Zhu Guoding's Dec 2025 conviction with the interviewer. `study.json` files are public-safe: concept/technology flashcards only — no company trivia, no personal or interview context
+- One deck inconsistency to sidestep in conversation: say "the 100-kilowatt power shelf" (slide 6 says 108kW, slide 15 says 100kW)
+
+**Active context:**
+- CHANGELOG counter **95/100** — the next few pushes will trip archive rotation (rotate whole date-groups, SHA-enrich every moved header, run the post-rotation grep verification)
+- MULTI_SESSION_MODE is Off but parallel sessions have been landing on main all week — rebase before every push cycle and bump from whatever version main is actually at
+- No TODO items, no active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+
+**Recommendation for next session:**
+- Execute the approved Profiler roster expansion: **Batch A — neoclouds** (Nebius, Lambda, Applied Digital, IREN, TeraWulf, Core Scientific — two-agent Profiler runs each), then **Batch B — general contractors** (Turner, Holder, DPR, HITT, Mortenson — single-agent), then **Batch C — EPCs** (Bechtel, Kiewit, Burns & McDonnell, Black & Veatch, Primoris — single-agent). Every new dossier ships with its `<slug>.study.json` in the same batch commit; one commit per batch. After the batches, run the **retroactive study-guide backfill**: compute the gap list by diffing `ls live-site-pages/profiler-data/*.study.json` against the registry (only hithium, sinexcel, sungrow, tesla, wartsila, and zhonhen have guides as of this save) and create the missing ones at default High effort. New listed companies get post-earnings refresh triggers; private ones join the quarterly sweep. Optional future Batch D (colos): Vantage, Aligned, QTS, Switch, STACK
+- **To continue:** type `approved — run batch A`
+
+## Previous Sessions
+
+### Session — 2026-08-17 (v02.62r)
+
 **Date:** 2026-08-17 03:59:21 AM EST
 **Repo version:** v02.62r
 **Branch:** `claude/receipts-signin-denials-f5893i`
@@ -53,25 +87,3 @@ The developer and Mandy were both denied sign-in with `Access denied … (code: 
 - Investigate `Scraper`'s 19.74% `scSchedulerTick` error rate — open Scraper's Executions panel, filter to Failed, and diagnose from the actual error text. It is the only known-unhealthy thing left in the fleet and is unrelated to tonight's OAuth work.
 - **To continue:** type `look into Scraper's scheduler error rate`
 
-## Previous Sessions
-
-### Session — 2026-08-17 (v02.54r, auto-reconstructed)
-
-**Date:** 2026-08-17 02:10:00 AM EST
-**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
-**Repo version:** v02.54r
-
-**What was done (v02.49r → v02.53r, all AIDC-report work):**
-- Added §7.5 "Reading a certification claim" to the AIDC market report — UL 1973 / 9540 / 9540A, NFPA 855, IEC 62619/63056/62477 taught in dependency order (v02.49r)
-- Closed 21 acronym gaps at first use, added a chapter-8 subsection naming the tax-equity investor and independent engineer as the real FEOC enforcers, and taught capacity factor / curtailment / ancillary services / book-and-burn (v02.50r)
-- Raised chapter 2 one notch in teaching patience; **CHANGELOG archive rotation fired** — 2026-08-03 (11 sections, v01.51r–v01.61r) moved to the archive (v02.51r)
-- **Split the coverage chapters into a standalone companion** — `AIDC-COVERAGE-UNIVERSE.md` + 5 PDF editions; the report dropped 14 chapters/158 pages → 11 chapters/109 pages with no argument removed. `scripts/build-aidc-report-pdf.mjs` gained a `DOCS` registry and a `--doc` flag (v02.52r)
-- Rebranded both mastheads and running headers to "Jon Yang Equity Research"; fixed the companion carrying the report's title in its footer on all 51 pages (v02.53r)
-
-**Where we left off:**
-- All committed and merged; working tree clean at v02.53r before this session began
-
-**Active context:**
-- CHANGELOG counter at 92/100 after the v02.51r rotation
-- No TODO items, no active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On · MULTI_SESSION_MODE Off
