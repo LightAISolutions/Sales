@@ -117,6 +117,21 @@ const DOCS = {
     runHead: 'Built from the Profiler dossier set · Prepared 19 August 2026',
     runFoot: 'Zhonhen Electric — Technology Lesson Plan · Internal, interview preparation',
   },
+  'zhonhen-deck-summary': {
+    src: 'repository-information/study-prep/zhonhen/zhonhen-deck-summary.md',
+    out: 'repository-information/study-prep/zhonhen/ZHONHEN-DECK-SUMMARY.pdf',
+    kick: 'Profiler Study Prep · Interview Preparation',
+    sub: 'Absorption summary of the official Zhonhen AIDC introduction deck (v1.35, 24 slides)',
+    toc: false, // short reference sheet — the section flow reads better without a contents block
+    meta: [
+      '<b>Prepared</b> 21 August 2026 &nbsp;·&nbsp; <b>Source</b> company-provided introduction deck, received after round 1 '
+        + '&nbsp;·&nbsp; <b>Companions</b> zhonhen-interview-brief.md · zhonhen-lesson-plan.md',
+      '<b>Handling</b> The source deck is marked confidential — this summary is for personal preparation only '
+        + '&nbsp;·&nbsp; <b>Classification</b> Internal — interview preparation',
+    ],
+    runHead: 'Built from the company-provided deck · Prepared 21 August 2026',
+    runFoot: 'Zhonhen Electric — Deck Absorption Summary · Internal, interview preparation',
+  },
   'megmeet-lesson-plan': {
     src: 'repository-information/study-prep/megmeet/megmeet-lesson-plan.md',
     out: 'repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf',

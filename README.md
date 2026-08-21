@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-19 03:21:20 PM EST` · Repo version: `v02.69r`
+Last updated: `2026-08-21 04:08:51 PM EST` · Repo version: `v02.70r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -353,6 +353,8 @@ Last updated: `2026-08-19 03:21:20 PM EST` · Repo version: `v02.69r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/wartsila">wartsila/</a> — Wärtsilä technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/wartsila/wartsila-lesson-plan.md">wartsila-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/zhonhen">zhonhen/</a> — Zhonhen Electric interview preparation
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/zhonhen-deck-summary.md">zhonhen-deck-summary.md</a> — Absorption summary of the company-provided AIDC introduction deck (confidential source; summary for personal prep only)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/ZHONHEN-DECK-SUMMARY.pdf">ZHONHEN-DECK-SUMMARY.pdf</a> — The deck summary typeset for print/download (4 pages)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/zhonhen-lesson-plan.md">zhonhen-lesson-plan.md</a> — Technology lesson plan: the Western AC chain vs China's HVDC (240V/336V/800Vdc), five modules ending in interview scripts
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/ZHONHEN-LESSON-PLAN.pdf">ZHONHEN-LESSON-PLAN.pdf</a> — The lesson plan typeset for print/download, BloombergNEF Research Report style (6 pages)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/zhonhen-interview-brief.md">zhonhen-interview-brief.md</a> — First-round interview layer: the interviewer read, the HVDC/Panama architecture story, the US entry problem, regulatory stack, questions to ask, self-test

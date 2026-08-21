@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.70r] — 2026-08-21 04:08:51 PM EST
+
+> **Prompt:** "Output the deck summary in a downloadable PDF."
+
+### Added
+- **`repository-information/study-prep/zhonhen/zhonhen-deck-summary.md` + `ZHONHEN-DECK-SUMMARY.pdf`** (4 pages, no contents block) — the absorption summary of the company-provided "Zhonhen AIDC Introduction EN" deck (v1.35, 24 slides, received after the passed first-round interview), restructured for print: the deck's five-move argument, the MVR-vs-traditional comparison table (98.5% vs 94%, 720kW–3.6MW, one-stage 10–35kV→DC), the rack-side product table (1MW sidecar at 473kW/m³, 100kW shelf, 18kW PSU), the JLL prefab-market table ($68.57B US of $94.86B global), the container portfolio table, the NVIDIA 2025/2026 whitepaper citations including the 2026 paper naming the "Panama Architecture", the deltas-vs-public-record section, five absorbed-signal talking points, and the 70%-per-account vs 31%-overall share reconciliation
+- **`scripts/build-study-prep-pdf.mjs`** gained the `zhonhen-deck-summary` registry entry (toc disabled — short reference sheet)
+
+### Changed
+- **README tree**: two rows added to the study-prep zhonhen block
+
+### Note
+- The source deck is marked confidential on every slide. The summary lives in `repository-information/study-prep/` — the non-deployed prep directory that already carries recruiting-channel details — with an explicit handling note at the top; the deck itself was NOT added to the repo, and nothing deck-sourced enters the public Profiler dossier
 
 ## [v02.69r] — 2026-08-19 03:21:20 PM EST
 
