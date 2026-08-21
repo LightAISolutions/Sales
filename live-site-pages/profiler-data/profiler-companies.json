@@ -35,6 +35,18 @@
       "lastUpdated": "2026-08-10"
     },
     {
+      "slug": "applied-digital",
+      "name": "Applied Digital",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The AI-factory landlord — 1.4 GW / ~$36B leased to CoreWeave and one unnamed IG hyperscaler; PUE 1.18 waterless North Dakota design; 12.75% Macquarie preferred funds the build.",
+      "hq": "Dallas, TX, USA",
+      "ticker": "NASDAQ: APLD",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
+    },
+    {
       "slug": "bloom-energy",
       "name": "Bloom Energy",
       "categories": [
@@ -81,6 +93,18 @@
       "ticker": "NASDAQ: CEG",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "core-scientific",
+      "name": "Core Scientific",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The shareholder-revolt vindication — rejected CoreWeave's $9B, then signed AMD for ~530 MW / $14B+; first miner-pivot with two 500 MW-class anchors, $24B+ backlog.",
+      "hq": "Austin, TX, USA",
+      "ticker": "NASDAQ: CORZ",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
     },
     {
       "slug": "coreweave",
@@ -234,6 +258,19 @@
       "lastUpdated": "2026-08-14"
     },
     {
+      "slug": "iren",
+      "name": "IREN",
+      "categories": [
+        "hyperscaler",
+        "developer"
+      ],
+      "tagline": "The vertically integrated pivot — 5 GW secured power, Microsoft's $9.7B GB300 contract delivered on time, NVIDIA $3.4B + 5 GW DSX; ClusterMAX says Underperforming, the Street says $80.",
+      "hq": "Sydney, Australia",
+      "ticker": "NASDAQ: IREN",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
+    },
+    {
       "slug": "jinko",
       "name": "Jinko",
       "categories": [
@@ -244,6 +281,17 @@
       "ticker": "NYSE: JKS · SSE: 688223",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "lambda",
+      "name": "Lambda",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "The Superintelligence Cloud — Microsoft multibillion + NVIDIA leaseback anchors, $5.9B Series E, first IG-rated private-neocloud term loan; H2 2026 IPO window.",
+      "hq": "San Francisco, CA, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
     },
     {
       "slug": "lg-energy-solution",
@@ -304,6 +352,18 @@
       "ticker": "NASDAQ: MSFT",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "nebius",
+      "name": "Nebius",
+      "categories": [
+        "hyperscaler"
+      ],
+      "tagline": "CoreWeave's most direct challenger — ARR $3B (+56% QoQ), >$40B Microsoft/Meta backlog, 5 GW contracted-power target; ClusterMAX Gold; Vineland permits are the live risk.",
+      "hq": "Amsterdam, Netherlands",
+      "ticker": "NASDAQ: NBIS",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
     },
     {
       "slug": "nvidia",
@@ -434,6 +494,18 @@
       "ticker": "SZSE: 300274",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "terawulf",
+      "name": "TeraWulf",
+      "categories": [
+        "developer"
+      ],
+      "tagline": "The power landlord of AI — 839 MW leased / ~$27B contracted incl. the 401 MW Anthropic lease; Google backstops $4.5B of Fluidstack paper for ~14% of the equity.",
+      "hq": "Easton, MD, USA",
+      "ticker": "NASDAQ: WULF",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
     },
     {
       "slug": "tesla",

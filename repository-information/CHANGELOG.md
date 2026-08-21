@@ -3,11 +3,35 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.71r] — 2026-08-21 06:11:48 PM EST
+
+> **Prompt:** "Picking up from my last "AIDC market report clarifications" session, I approve you to follow the action plan and run batch A."
+
+### Added
+- **Profiler Batch A — six neocloud dossiers** (registry now **47 companies**), each researched via the two-agent Source Priority Protocol (~85–110 sources evaluated per company across first-party and third-party stages), authored in the active `intel-briefing` style at schema v2, profileVersion 1:
+  - **`live-site-pages/profiler-data/nebius.profile.json`** — Nebius Group (NASDAQ: NBIS): Q2 2026 revenue $582.3M (+454%), ARR $3.0B, >$40B Microsoft/Meta backlog, 5 GW contracted-power target; Vineland stop-work orders flagged as the live risk on the Microsoft contract
+  - **`live-site-pages/profiler-data/lambda.profile.json`** — Lambda (private): Microsoft multibillion agreement, NVIDIA $1.5B leaseback (reportedly its largest customer), $5.9B Series E, first investment-grade-rated private-neocloud Term Loan B ($926M, Baa2), H2 2026 IPO window; the Aug 10 Bloomberg "$917M loan" and Aug 12 "$926M TLB" reconciled as one instrument
+  - **`live-site-pages/profiler-data/applied-digital.profile.json`** — Applied Digital (NASDAQ: APLD): 1.4 GW / ~$36B base-term backlog (largest disclosed in the cohort), CoreWeave + one unnamed high-IG hyperscaler (~69% of backlog), 12.75% Macquarie perpetual preferred, NVIDIA's full stake exit (Q4 2025 13F)
+  - **`live-site-pages/profiler-data/iren.profile.json`** — IREN (NASDAQ: IREN): 5 GW secured power, $9.7B Microsoft GB300 contract with Horizon 1 delivered/accepted 2026-08-13, NVIDIA $3.4B contract + 5 GW DSX partnership, ClusterMAX "Underperforming" vs NVIDIA Exemplar Cloud tension; FY2026 results land 2026-08-27
+  - **`live-site-pages/profiler-data/terawulf.profile.json`** — TeraWulf (NASDAQ: WULF): 839 MW leased / ~$27B contracted incl. the 401 MW / ~$19B Anthropic lease at Hawesville KY; Google's ~$4.5B Fluidstack backstops for ~14% pro forma equity; warrant mark-to-market GAAP distortion documented
+  - **`live-site-pages/profiler-data/core-scientific.profile.json`** — Core Scientific (NASDAQ: CORZ): the CoreWeave-merger no-vote (Oct 2025) → AMD ~530 MW / $14B+ second anchor (Jul 2026) vindication arc; $24B+ backlog; Feb 2026 restatement covered
+- **Six `<slug>.study.json` technology study guides** (same batch, per the roster-expansion plan): `nebius.study.json`, `lambda.study.json`, `applied-digital.study.json`, `iren.study.json`, `terawulf.study.json`, `core-scientific.study.json` — complementary concept curricula (service ladders & rack-scale systems; brownfield conversion & credit enhancement; ARR/backlog/power-funnel literacy; GPU-collateralized finance; Chapter 11 warrants & M&A governance; vendor-circularity detection), 6 sections + 12 flashcards each, public-safe per the prep-command contract
+- **25 company-published executive headshots** in `live-site-pages/images/execs/` (Lambda ×4, TeraWulf ×5, Nebius ×5, Applied Digital ×4, IREN ×4, Core Scientific ×3), referenced from the new dossiers' `decisionMakers[].photo` fields
+- **Five post-earnings refresh Routines armed** (fresh-session one-shots, staggered to avoid parallel-session conflicts): IREN 2026-08-28 15:00 UTC (results confirmed 08-27), Applied Digital 2026-10-15 13:00 UTC (Q1 FY27 scheduled 10-14), Core Scientific 2026-10-24 15:00 UTC (est. 10-23), TeraWulf 2026-11-10 15:00 UTC (est. 11-09), Nebius 2026-11-11 13:00 UTC (expected ~11-10, unconfirmed)
+
+### Changed
+- **`live-site-pages/profiler-data/profiler-companies.json`** — six registry entries added alphabetically with taglines/HQ/tickers; roster 41 → 47
+- **`.claude/rules/profiler-app.md`** — "Currently armed" list gains the five new one-shots; the private quarterly sweep entry and its live Routine prompt now cover **seven** companies with Lambda's watch items (IPO progress incl. the Mubadala no-IPO penalty clock, funding/debt terms, Microsoft execution, NVIDIA leaseback, Kansas City scaling, Combes-era leadership changes)
+- **`README.md`** — 12 new tree rows for the batch's profile/study files; `images/execs/` count line updated to eight companies
+
+### Note
+- Data-only change: `Profiler.html` untouched, no page version bump per the Profiler version-interaction rules; all six dossiers + study guides Playwright render-checked locally (roster cards, full dossier render, study-guide buttons, zero console errors) before commit
 
 ## [v02.70r] — 2026-08-21 04:08:51 PM EST
 
