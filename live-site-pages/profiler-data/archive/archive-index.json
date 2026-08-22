@@ -148,5 +148,13 @@
       "archivedAt": "2026-08-09",
       "supersededBy": 3
     }
+  ],
+  "zhonhen": [
+    {
+      "file": "zhonhen.profile.v1.json",
+      "profileVersion": 1,
+      "archivedAt": "2026-08-22",
+      "supersededBy": 2
+    }
   ]
 }

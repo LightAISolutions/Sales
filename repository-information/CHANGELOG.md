@@ -3,11 +3,18 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.78r] — 2026-08-22 02:53:44 AM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Fixed
+- Zhonhen dossier revised to profileVersion 2 (v1 archived per the Archival Procedure): corrected the claim that NVIDIA's published 800VDC partner roster "names Delta, Megmeet and Hopewind" — verification against NVIDIA's own May and October 2025 partner posts shows Hopewind appears on neither list (it was sourced from Chinese trade coverage that lumped it in). Fixed in `ecosystemRole`, a product highlight, and `strategyRead`; the Sina-roll source replaced with NVIDIA's two primary blog posts in `zhonhen.profile.json`; registry `lastUpdated` synced; `archive-index.json` updated. Playwright render check passed
 
 ## [v02.77r] — 2026-08-22 02:47:09 AM EST
 

@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-22 02:47:09 AM EST` · Repo version: `v02.77r`
+Last updated: `2026-08-22 02:53:44 AM EST` · Repo version: `v02.78r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -221,7 +221,8 @@ Last updated: `2026-08-22 02:47:09 AM EST` · Repo version: `v02.77r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v1.json">tesla.profile.v1.json</a> — Archived v1 dossier (Tesla)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v2.json">tesla.profile.v2.json</a> — Archived v2 dossier (Tesla)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/wartsila.profile.v1.json">wartsila.profile.v1.json</a> — Archived v1 dossier (Wärtsilä)
-│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/wartsila.profile.v2.json">wartsila.profile.v2.json</a> — Archived v2 dossier (Wärtsilä)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/wartsila.profile.v2.json">wartsila.profile.v2.json</a> — Archived v2 dossier (Wärtsilä)
+│   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v1.json">zhonhen.profile.v1.json</a> — Archived v1 dossier (Zhonhen Electric)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/templates">templates/</a>               — [template] Template source files for creating new pages and GAS scripts
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-noauth.html.txt">HtmlAndGasTemplateAutoUpdate-noauth.html.txt</a> — [template] HTML page template without auth
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/templates/HtmlAndGasTemplateAutoUpdate-auth.html.txt">HtmlAndGasTemplateAutoUpdate-auth.html.txt</a> — [template · modified] HTML page template with Google Authentication
