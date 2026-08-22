@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.75r] — 2026-08-21 11:01:38 PM EST
+
+> **Prompt:** "Evaluate all the companies under my coverage and recategorize them accordingly. I want to see EPCs and General Contractors added to the category list."
+
+### Added
+- New `epc` and `gc` roster categories (displayed as "EPC" / "General Contractor" via a new `ovCatLabel` map) with dedicated tag colors (`--ov-epc` yellow, `--ov-gc` tan) in `live-site-pages/Profiler.html` v01.34w, registered in `profiler-companies.json` and documented in `repository-information/PROFILER-SCHEMA.md`
+
+### Changed
+- Roster-wide recategorization after evaluating all 57 covered companies (registry + profile JSONs): Bechtel, Black & Veatch, Burns & McDonnell, Kiewit, Primoris, Quanta Services, and Rosendin moved `integrator` → `epc`; DPR, HITT, Holder Construction, and Turner Construction moved `integrator` → `gc`; Mortenson dual-tagged `gc` + `epc` (data-center shell GC plus utility-scale renewables EPC); Equinix moved `hyperscaler` → `developer` (colo/data-center operator-landlord, not a cloud provider) — leaving `integrator` as the clean BESS-integrator set (FlexGen, Fluence, Wärtsilä)
+- Category display sites (roster tags, filter chips, dossier "Ecosystem role" fact, Word-export meta line) now render labels through `ovCatLabel` (`live-site-pages/Profiler.html`)
 
 ## [v02.74r] — 2026-08-21 10:49:24 PM EST
 

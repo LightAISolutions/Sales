@@ -4,6 +4,8 @@
     "supplier",
     "developer",
     "integrator",
+    "epc",
+    "gc",
     "investor",
     "hyperscaler",
     "neocloud",
@@ -51,7 +53,7 @@
       "slug": "bechtel",
       "name": "Bechtel",
       "categories": [
-        "integrator"
+        "epc"
       ],
       "tagline": "The megaproject dynasty — ENR #2 at $19.5B with a $58.2B backlog; the only EPC to bring 21st-century US nuclear online, three concurrent LNG megatrains, and NVIDIA's partner for modularized gigawatt AI factories.",
       "hq": "Reston, VA, USA",
@@ -62,7 +64,7 @@
       "slug": "black-veatch",
       "name": "Black & Veatch",
       "categories": [
-        "integrator"
+        "epc"
       ],
       "tagline": "The interconnection specialist — client-owned substations that halve hyperscale grid timelines; ENR #6 Power + #8 Water + #1 Hydrogen (ACES Delta), and an equal seat in one of the first US SMR design-build JVs.",
       "hq": "Overland Park, KS, USA",
@@ -85,7 +87,7 @@
       "slug": "burns-mcdonnell",
       "name": "Burns & McDonnell",
       "categories": [
-        "integrator"
+        "epc"
       ],
       "tagline": "ENR's #1 power design firm eleven years running — the largest US substation design group and a claimed >50% RICE share, fused to Tier-3 data-center design-build under a 100% ESOP.",
       "hq": "Kansas City, MO, USA",
@@ -180,7 +182,7 @@
       "slug": "dpr",
       "name": "DPR Construction",
       "categories": [
-        "integrator"
+        "gc"
       ],
       "tagline": "The technical builder of Stargate Abilene — self-performing GC with ~6,000 craft workers and prefab on 90%+ of new work; ENR #7 at $14.0B with $26.1B of new contracts booked.",
       "hq": "Redwood City, CA, USA",
@@ -203,7 +205,7 @@
       "slug": "equinix",
       "name": "Equinix",
       "categories": [
-        "hyperscaler"
+        "developer"
       ],
       "tagline": "The interconnection incumbent building bolder — xScale >$15B JV for hyperscale, >100 MW of Bloom fuel cells, four nuclear agreements; Q2 2026 beat-and-raise.",
       "hq": "Redwood City, CA, USA",
@@ -296,7 +298,7 @@
       "slug": "hitt",
       "name": "HITT Contracting",
       "categories": [
-        "integrator"
+        "gc"
       ],
       "tagline": "America's #1 data-center builder by revenue — $13B on an 82% mission-critical mix, 2+ GW commissioned; the 180-day 22.5 MW speed benchmark from Data Center Alley's home team.",
       "hq": "Falls Church, VA, USA",
@@ -307,7 +309,7 @@
       "slug": "holder-construction",
       "name": "Holder Construction",
       "categories": [
-        "integrator"
+        "gc"
       ],
       "tagline": "The quiet giant of hyperscale construction — BD+C's #1 data-center contractor in 2023-24; Google's $2B Fort Wayne campus and EdgeCore's 450 MW Mesa build behind an NDA-heavy low profile.",
       "hq": "Atlanta, GA, USA",
@@ -354,7 +356,7 @@
       "slug": "kiewit",
       "name": "Kiewit",
       "categories": [
-        "integrator"
+        "epc"
       ],
       "tagline": "The power picks-and-shovels of the AI boom — ~11 GW of gas EPC (Homer City 4.5 GW), completed HVDC (CHPE), and the Oklo SMR constructor seat; employee-owned at ENR #4.",
       "hq": "Omaha, NE, USA",
@@ -436,7 +438,8 @@
       "slug": "mortenson",
       "name": "Mortenson",
       "categories": [
-        "integrator"
+        "gc",
+        "epc"
       ],
       "tagline": "The power-and-shell contractor — top-10 ENR builder pairing 11 GW of data centers with 47.8 GW wind / 17 GW solar / 45 GWh storage EPC and gigawatt-class substations.",
       "hq": "Minneapolis, MN, USA",
@@ -506,7 +509,7 @@
       "slug": "primoris",
       "name": "Primoris",
       "categories": [
-        "integrator"
+        "epc"
       ],
       "tagline": "The 'outside-the-walls' AI contractor — #4 US solar EPC, Meta Nebraska and Crusoe gas power, record $13.9B backlog; 2026's guidance collapse made it a project-controls turnaround story.",
       "hq": "Dallas, TX, USA",
@@ -518,7 +521,7 @@
       "slug": "quanta-services",
       "name": "Quanta Services",
       "categories": [
-        "integrator"
+        "epc"
       ],
       "tagline": "#1 US electrical contractor at 3.7x the runner-up — $53.4B backlog, DC entry via Cupertino/Dynamic; doubling its own transformer capacity by 2028.",
       "hq": "Houston, TX, USA",
@@ -530,7 +533,7 @@
       "slug": "rosendin",
       "name": "Rosendin",
       "categories": [
-        "integrator"
+        "epc"
       ],
       "tagline": "#2 US electrical contractor (ESOP, $5.6B revenue) — 15+ GW of data-center power built; BESSUPS with FlexGen moves BESS inside the fence.",
       "hq": "San Jose, CA, USA",
@@ -625,7 +628,7 @@
       "slug": "turner-construction",
       "name": "Turner Construction",
       "categories": [
-        "integrator"
+        "gc"
       ],
       "tagline": "ENR's #1 US contractor six years running — data-center revenue tripling toward a $20B-by-2030 target on Meta, CoreWeave, and Stargate mega-campuses; SourceBlue buys the gear.",
       "hq": "New York, NY, USA",

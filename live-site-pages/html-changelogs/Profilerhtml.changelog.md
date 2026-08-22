@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 33/50`
+`Sections: 34/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.34w] — 2026-08-21 11:01:38 PM EST — v02.75r
+
+### Added
+- Two new roster categories: EPC and General Contractor, each with its own tag color and filter
+
+### Changed
+- Construction and engineering companies are now grouped under the new categories, so filtering the roster by company type is more precise
+- Category names now display with proper formatting throughout the app
 
 ## [v01.33w] — 2026-08-21 10:49:24 PM EST — v02.74r
 
