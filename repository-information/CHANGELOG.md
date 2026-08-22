@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 101/100`
+`Sections: 102/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.84r] — 2026-08-22 04:42:58 PM EST
+
+> **Prompt:** "Continue with your recommendation.
+
+A few questions:
+
+* What is the difference between a Medium Voltage Rectifier like Zhonhen's Panama system and a true Solid State Transformer?
+* "473 kilowatts per cubic meter on the 1MW sidecar — with the capacitor and battery options inside the same cabinet — is the spec I'd lead with for neocloud buyers." This quote is from the "Zhonhen Deck Summary" pdf. Explain why you would lead with this spec for neocloud buyers. Tell me what they care the most about and why."
+
+### Fixed
+- **`zhonhen-lesson-plan.md` corrected a factual error that would have cost credibility in the interview.** The plan told the developer to describe Panama as a "solid-state transformer / MV rectifier sidecar" and to say so "in exactly those words". Panama is a **transformer-rectifier unit** — a line-frequency transformer feeding a rectifier — whereas a true SST switches MV-rated SiC at kilohertz and takes isolation through a high-frequency core. Both fill the same MV-to-DC block slot (Schneider's 800VDC paper: "by SST or TRU"), but they are different device classes and a power-electronics buyer would catch the conflation. Both the Module 3 passage and the Module 5 Q&A row now say TRU explicitly, and explain why the TRU framing is the stronger card. `ZHONHEN-LESSON-PLAN.pdf` regenerated from the corrected Markdown
+
+### Changed
+- `scripts/harvest-exec-photos.py` environment notes now record the **full Chromium/proxy diagnosis** so no future session re-derives it: Chromium does honour the proxy (a deliberately wrong port yields `ERR_PROXY_CONNECTION_FAILED`); its NSS trust store starts empty, which is fixable with `libnss3-tools` + `certutil` and is why the failure first appears as `ERR_CERT_AUTHORITY_INVALID`; after that fix github.com returns a real HTTP status but all other hosts still reset, with nothing in the proxy's `recentRelayFailures` and no change from `--disable-quic`/`--disable-http2`. That residue is upstream egress policy, to be reported rather than routed around. The notes also record that regulatory filings carry no exec photos while designed ESG reports show boards rather than executive teams
+
+### Notes on scope
+- **No photos were harvested this push.** The recommendation was to determine whether the browser path could be unblocked; it cannot be, from inside the session. Two genuine client-side defects were found and fixed along the way (missing proxy CA in the browser trust store, and the untested assumption that Chromium was ignoring the proxy), but the remaining reset is policy-side. Unblocking it is an administrator action
 
 ## [v02.83r] — 2026-08-22 04:05:21 PM EST
 

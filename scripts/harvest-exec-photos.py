@@ -20,11 +20,26 @@ sweeps have staged company logos, blog banners and group shots that passed
 name scoring cleanly.
 
 Environment notes (verified 2026-08-22, Claude Code web sandbox):
-  * Playwright/Chromium cannot reach corporate sites through the proxy
-    (net::ERR_CONNECTION_RESET) -- JS-rendered leadership pages are therefore
-    unreachable. curl/requests do work, so only server-rendered pages harvest.
+  * Playwright/Chromium cannot reach general internet hosts through the agent
+    proxy; curl/requests reach the same hosts fine. JS-rendered leadership pages
+    are therefore unreachable and only server-rendered pages harvest. This was
+    diagnosed properly rather than assumed -- do not spend another session on it:
+      - Chromium DOES honour the proxy: launching with a deliberately wrong
+        proxy port yields ERR_PROXY_CONNECTION_FAILED, the real port does not.
+      - Its NSS trust store starts EMPTY, so the proxy's re-terminated TLS fails
+        as ERR_CERT_AUTHORITY_INVALID. Fixable, and worth fixing before any
+        retest:  apt-get install -y libnss3-tools && certutil -d sql:$HOME/.pki/nssdb \
+          -A -t "C,," -n ccr-agent-proxy -i /root/.ccr/agent-proxy-ca.crt
+      - After that fix github.com returns a real HTTP status, but every other
+        host still resets, with nothing logged in the proxy's recentRelayFailures
+        and with --disable-quic/--disable-http2 making no difference. That is an
+        upstream egress-policy behaviour, not a client bug: per /root/.ccr/README.md
+        it must be reported to an administrator, never routed around.
   * Wikimedia's action API (/w/api.php) is blanket-HTTP-429 from here. The REST
     summary endpoint, Commons File: page HTML and Special:FilePath all work.
+  * Regulatory filings (A-share/HKEX annual reports) carry no executive photos;
+    only designed ESG/annual reports do, and those show boards rather than full
+    executive teams. See the pdf track below.
 
 Usage:
   python3 scripts/harvest-exec-photos.py gaps /tmp/gaps.json
