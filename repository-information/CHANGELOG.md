@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 102/100`
+`Sections: 103/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.85r] — 2026-08-22 05:05:29 PM EST
+
+> **Prompt:** "continue with your recommendation. I want the one-pager output as a downloadable PDF."
+>
+> *(mid-turn)* "It is ok to go over 1 page as long as the information is good and complete."
+
+### Added
+- **`zhonhen-one-pager.md` + `ZHONHEN-ONE-PAGER.pdf`** — an interview-day scan sheet compressing the strategy report, lesson plan and deck summary into what the developer can hold five minutes before the call: the opening line, the TRU-vs-SST table (with the correction landed in v02.84r), ERCOT's binding NOGRR282 numbers, the 473 kW/m³ argument **segmented by buyer type**, a landmines table, numbers cold, and the Schneider question to close on. Registered in `scripts/build-study-prep-pdf.mjs` so the Markdown stays the source of truth
+- **`dense: true` option in `scripts/build-study-prep-pdf.mjs`** — a scan-sheet variant of the BloombergNEF skin. A sheet read standing up is a different document class from a report: the masthead stops behaving like a cover (h1 30pt → 17pt, sub 15pt → 9.5pt), and vertical rhythm tightens throughout. Opt-in per document; every existing document renders unchanged
+
+### Changed
+- README structure tree: the two new Zhonhen prep files registered under `study-prep/zhonhen/`
+
+### Notes on scope
+- The document is **2 pages, not 1**. It was cut to fit a single page first — that version lost the buyer segmentation, half the landmines and most of the numbers block, which is the material actually worth carrying into the room. The developer confirmed mid-turn that length was fine if the content was complete, so the full version was restored and the dense type backed off from 8.05pt to 8.7pt for readability. The name is kept as the developer's own term for the artefact
 
 ## [v02.84r] — 2026-08-22 04:42:58 PM EST
 

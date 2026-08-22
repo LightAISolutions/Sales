@@ -103,6 +103,21 @@ const DOCS = {
     runHead: 'Built from the Profiler dossier set · Prepared 18 August 2026',
     runFoot: 'Zhonhen Electric — Interview Brief (Director of BD, First Round) · Internal, interview preparation',
   },
+  'zhonhen-one-pager': {
+    src: 'repository-information/study-prep/zhonhen/zhonhen-one-pager.md',
+    out: 'repository-information/study-prep/zhonhen/ZHONHEN-ONE-PAGER.pdf',
+    kick: 'Profiler Study Prep · Interview Day',
+    sub: 'The five-minute scan: TRU vs SST, the density argument by buyer, ERCOT, and the landmines',
+    toc: false, // one-page scan sheet — a contents block would cost the page
+    dense: true, // retuned masthead + rhythm so the sheet actually lands on one page
+    meta: [
+      '<b>Prepared</b> 22 August 2026 &nbsp;·&nbsp; <b>Compressed from</b> zhonhen-strategy-report.md · '
+        + 'zhonhen-lesson-plan.md · zhonhen-deck-summary.md &nbsp;·&nbsp; <b>Classification</b> Internal — interview preparation',
+      '<b>Handling</b> The Schneider Electric relationship is a confidential disclosure — raise it only with Zhonhen, never elsewhere',
+    ],
+    runHead: 'Interview-day scan sheet · Prepared 22 August 2026',
+    runFoot: 'Zhonhen Electric — Interview Day One-Pager · Internal, interview preparation',
+  },
   'zhonhen-lesson-plan': {
     src: 'repository-information/study-prep/zhonhen/zhonhen-lesson-plan.md',
     out: 'repository-information/study-prep/zhonhen/ZHONHEN-LESSON-PLAN.pdf',
@@ -517,6 +532,34 @@ td:last-child, th:last-child { padding-right:0; }
   font:7.5pt/1.6 var(--mono); color:var(--muted);
 }
 `;
+// A scan sheet is a different document class from a report: it is read standing
+// up, five minutes before a call, and its whole value is fitting on one page.
+// `dense: true` keeps the same skin but retunes it for that job — the masthead
+// stops behaving like a cover and vertical rhythm tightens, without shrinking the
+// type to the point where a sheet read standing up stops being readable.
+const DENSE_CSS = `
+@page { size:Letter; margin:11mm 11mm 11mm; }
+body { font-size:8.7pt; line-height:1.4; }
+.mast { border-top:3pt solid var(--accent); padding-top:5pt; }
+.mast .kick { font-size:6.8pt; margin:0 0 5pt; }
+h1 { font:bold 17pt/1.06 var(--sans); margin:0 0 3pt; }
+.mast .sub { font:9.5pt/1.25 var(--sans); margin:0 0 6pt; }
+.mast .meta { font-size:6.6pt; line-height:1.4; padding:4pt 0; }
+.lead { margin:6pt 0 0; }
+h2 {
+  font:bold 10.5pt/1.2 var(--sans); border-bottom:1.25pt solid var(--accent);
+  padding-bottom:2pt; margin:10pt 0 4pt;
+}
+h3 { font:bold 9pt/1.25 var(--sans); margin:6pt 0 2pt; }
+p { margin:3pt 0; }
+ul,ol { margin:3pt 0 4pt; padding-left:12pt; }
+li { margin:1.8pt 0; }
+blockquote { margin:6pt 0; padding:5pt 8pt; }
+table { font-size:7.5pt; margin:5pt 0 6pt; }
+th { font-size:6.6pt; padding:2pt 6pt 2pt 0; }
+td { padding:3pt 6pt 3pt 0; line-height:1.36; }
+.foot { margin-top:8pt; padding-top:4pt; font-size:6.6pt; line-height:1.45; }
+`;
 // ── Page shell ─────────────────────────────────────────────────────────────
 function buildHtml(doc, parsed) {
   const toc = parsed.toc.map((t, n) =>
@@ -540,7 +583,7 @@ ${toc}
 <head>
 <meta charset="utf-8">
 <title>${esc(parsed.title || doc.sub)}</title>
-<style>${CSS}</style>
+<style>${CSS}${doc.dense ? DENSE_CSS : ''}</style>
 </head>
 <body>
 <header class="mast">
