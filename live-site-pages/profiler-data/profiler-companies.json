@@ -142,6 +142,17 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "dpr",
+      "name": "DPR Construction",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "The technical builder of Stargate Abilene — self-performing GC with ~6,000 craft workers and prefab on 90%+ of new work; ENR #7 at $14.0B with $26.1B of new contracts booked.",
+      "hq": "Redwood City, CA, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
+    },
+    {
       "slug": "eaton",
       "name": "Eaton",
       "categories": [
@@ -245,6 +256,28 @@
       "hq": "Xiamen, China",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "hitt",
+      "name": "HITT Contracting",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "America's #1 data-center builder by revenue — $13B on an 82% mission-critical mix, 2+ GW commissioned; the 180-day 22.5 MW speed benchmark from Data Center Alley's home team.",
+      "hq": "Falls Church, VA, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
+    },
+    {
+      "slug": "holder-construction",
+      "name": "Holder Construction",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "The quiet giant of hyperscale construction — BD+C's #1 data-center contractor in 2023-24; Google's $2B Fort Wayne campus and EdgeCore's 450 MW Mesa build behind an NDA-heavy low profile.",
+      "hq": "Atlanta, GA, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
     },
     {
       "slug": "huawei-digital-power",
@@ -352,6 +385,17 @@
       "ticker": "NASDAQ: MSFT",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "mortenson",
+      "name": "Mortenson",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "The power-and-shell contractor — top-10 ENR builder pairing 11 GW of data centers with 47.8 GW wind / 17 GW solar / 45 GWh storage EPC and gigawatt-class substations.",
+      "hq": "Minneapolis, MN, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
     },
     {
       "slug": "nebius",
@@ -518,6 +562,17 @@
       "ticker": "NASDAQ: TSLA",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "turner-construction",
+      "name": "Turner Construction",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "ENR's #1 US contractor six years running — data-center revenue tripling toward a $20B-by-2030 target on Meta, CoreWeave, and Stargate mega-campuses; SourceBlue buys the gear.",
+      "hq": "New York, NY, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
     },
     {
       "slug": "vertiv",

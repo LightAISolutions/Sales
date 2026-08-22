@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.72r] — 2026-08-21 09:00:04 PM EST
+
+> **Prompt:** "run batch B"
+
+### Added
+- **Profiler Batch B — five general-contractor dossiers** (registry now **52 companies**), each researched via a single-agent run under the Source Priority Protocol (~35–52 sources evaluated per company), authored in the active `intel-briefing` style at schema v2, profileVersion 1, all categorized `integrator`:
+  - **`live-site-pages/profiler-data/turner-construction.profile.json`** — Turner Construction (Hochtief/ACS subsidiary): ENR #1 six straight years at $28.3B; data-center revenue tripling toward a $20B-by-2030 target (~42% of the $48.9B backlog); SourceBlue ~$1B/yr procurement arm; Meta Richland Parish/Lebanon IN, CoreWeave Lancaster, Stargate WI
+  - **`live-site-pages/profiler-data/mortenson.profile.json`** — Mortenson (family-owned): ENR #10 on $10.85B (+12 spots — largest top-10 move); the only US contractor pairing an 11 GW data-center fleet with 47.8 GW wind / 17+ GW solar / 45 GWh storage EPC; 1 GW / 345 kV Abilene substation; Meta concentration and Hermantown MN entitlement litigation flagged
+  - **`live-site-pages/profiler-data/hitt.profile.json`** — HITT Contracting (family-owned): #1 US data-center builder by revenue (ENR 2025 telecom list; BD+C 2025 first) at $13.0B, 82% mission-critical mix; Sterling II 22.5 MW in 180 days; the $51M Glenstone settlement's ~$24M uninsured layer (affirmed on appeal 2026-08-04) and the April 2025 Vantage Ashburn trench-collapse fatality documented
+  - **`live-site-pages/profiler-data/holder-construction.profile.json`** — Holder Construction (family-owned): BD+C's #1 data-center contractor 2023–24 (#2 2025); Google Fort Wayne $2B campus, EdgeCore Mesa $1.9B / ≥450 MW; a reported ~$10.2B 2025 revenue behind a deliberately NDA-heavy zero-publicity posture (no leadership page — no exec photos exist to publish)
+  - **`live-site-pages/profiler-data/dpr.profile.json`** — DPR Construction (employee-owned): lead builder of Stargate Abilene (8 buildings, ~4M sq ft, 1.2 GW; buildings in <1 year); ENR #7 at $14.0B with $26.1B booked; ~6,000 self-perform craft workers, prefab >90% of new work; the June 2026 TIME safety investigation and CalSTRS lawsuit documented as watch items
+- **Five in-app study guides** (`turner-construction.study.json`, `mortenson.study.json`, `hitt.study.json`, `holder-construction.study.json`, `dpr.study.json`) — complementary construction-industry curricula (6 sections + 12 concept flashcards each): Turner covers GC/CM-at-risk economics and reading contractor financials; Mortenson covers power EPC, substations, and MW/MWh literacy; HITT covers data-center anatomy, commissioning, and speed economics; Holder covers the NDA award market, cooling/water trade-offs, JVs, and labor law; DPR covers employee ownership, DfMA/prefab, VDC, AI data-hall internals, and schedule science
+- **22 executive photos** in `live-site-pages/images/execs/` (Turner ×4, Mortenson ×1, HITT ×3, DPR ×5 — company-published only; Holder publishes none) — directory now 47 photos across 12 companies
+
+### Changed
+- **`live-site-pages/profiler-data/profiler-companies.json`** — registry 47 → 52 companies (all five GCs inserted alphabetically as `integrator`, no tickers, status active)
+- **`README.md`** — structure tree +10 rows for the new profile/study JSONs; execs photo-count line updated
+- **`.claude/rules/profiler-app.md`** — quarterly private-company sweep expanded from 7 to 12 companies: Turner, HITT, Holder, DPR, and Mortenson joined 2026-08-21 with per-company watch items (Turner financials via Hochtief quarterly disclosures; HITT Glenstone/trench-collapse follow-ups; Holder mega-campus lineup appearances; DPR TIME-investigation and CalSTRS fallout; Mortenson Hermantown review and Meta program). The sweep Routine (`trig_01UVzjF6Y91Gb2MzKdDAznd9`) was renamed and its prompt updated to match — next fire 2026-10-01 13:00 UTC
+- Render check: Playwright verified all five dossiers render from the roster and by direct `#slug` navigation with study-guide buttons present and zero console errors
 
 ## [v02.71r] — 2026-08-21 06:11:48 PM EST
 

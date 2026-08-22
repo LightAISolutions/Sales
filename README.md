@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-21 06:11:48 PM EST` · Repo version: `v02.71r`
+Last updated: `2026-08-21 09:00:04 PM EST` · Repo version: `v02.72r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -90,6 +90,8 @@ Last updated: `2026-08-21 06:11:48 PM EST` · Repo version: `v02.71r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/coreweave.profile.json">coreweave.profile.json</a> — CoreWeave dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/crusoe.profile.json">crusoe.profile.json</a>    — Crusoe dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/delta-electronics.profile.json">delta-electronics.profile.json</a> — Delta Electronics dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/dpr.profile.json">dpr.profile.json</a>       — DPR Construction dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/dpr.study.json">dpr.study.json</a>     — DPR Construction in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eaton.profile.json">eaton.profile.json</a>     — Eaton dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/equinix.profile.json">equinix.profile.json</a>   — Equinix dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eve-energy.profile.json">eve-energy.profile.json</a> — EVE Energy dossier profile
@@ -102,6 +104,10 @@ Last updated: `2026-08-21 06:11:48 PM EST` · Repo version: `v02.71r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hitachi-energy.profile.json">hitachi-energy.profile.json</a> — Hitachi Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hithium.profile.json">hithium.profile.json</a>   — Hithium dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hithium.study.json">hithium.study.json</a>     — Hithium in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hitt.profile.json">hitt.profile.json</a>      — HITT Contracting dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/hitt.study.json">hitt.study.json</a>     — HITT Contracting in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/holder-construction.profile.json">holder-construction.profile.json</a> — Holder Construction dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/holder-construction.study.json">holder-construction.study.json</a> — Holder Construction in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/huawei-digital-power.profile.json">huawei-digital-power.profile.json</a> — Huawei Digital Power dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/iren.profile.json">iren.profile.json</a> — IREN dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/iren.study.json">iren.study.json</a> — IREN in-app technology study guide
@@ -114,6 +120,8 @@ Last updated: `2026-08-21 06:11:48 PM EST` · Repo version: `v02.71r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.study.json">megmeet.study.json</a>     — Megmeet in-app technology study guide (concept sections + flashcards)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/meta.profile.json">meta.profile.json</a>      — Meta dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/microsoft.profile.json">microsoft.profile.json</a> — Microsoft dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/mortenson.profile.json">mortenson.profile.json</a> — Mortenson dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/mortenson.study.json">mortenson.study.json</a>   — Mortenson in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nebius.profile.json">nebius.profile.json</a> — Nebius dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nebius.study.json">nebius.study.json</a> — Nebius in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nvidia.profile.json">nvidia.profile.json</a>    — NVIDIA dossier profile
@@ -133,6 +141,8 @@ Last updated: `2026-08-21 06:11:48 PM EST` · Repo version: `v02.71r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.study.json">tesla.study.json</a>     — Tesla in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/terawulf.profile.json">terawulf.profile.json</a> — TeraWulf dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/terawulf.study.json">terawulf.study.json</a> — TeraWulf in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/turner-construction.profile.json">turner-construction.profile.json</a> — Turner Construction dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/turner-construction.study.json">turner-construction.study.json</a> — Turner Construction in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/vertiv.profile.json">vertiv.profile.json</a>    — Vertiv dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.profile.json">wartsila.profile.json</a>  — Wärtsilä dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.study.json">wartsila.study.json</a>     — Wärtsilä in-app technology study guide
@@ -207,7 +217,7 @@ Last updated: `2026-08-21 06:11:48 PM EST` · Repo version: `v02.71r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">Profilergs.changelog.md</a>               — Profiler GAS changelog
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog-archive.md">Profilergs.changelog-archive.md</a>       — Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Company-published executive headshots for Profiler dossiers (Applied Digital ×4, Core Scientific ×3, Fluence ×5, IREN ×4, Lambda ×4, Nebius ×5, TeraWulf ×5, Wärtsilä ×4)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Company-published executive headshots for Profiler dossiers (Applied Digital ×4, Core Scientific ×3, DPR ×5, Fluence ×5, HITT ×3, IREN ×4, Lambda ×4, Mortenson ×1, Nebius ×5, TeraWulf ×5, Turner ×4, Wärtsilä ×4)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Code_Ready_Voice_1.mp3">Code_Ready_Voice_1.mp3</a>      — [template] "Code Ready" splash sound
