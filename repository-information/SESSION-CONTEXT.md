@@ -6,6 +6,46 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-22 07:35:46 PM EST
+**Repo version:** v02.87r
+**Branch:** `claude/aidc-photo-backfill-g8ujeg`
+
+**What we worked on (v02.82r–v02.87r — photo backfill passes 2–3, Zhonhen Q&A + prep corrections, and the Industry Guidance hub):**
+
+- **Exec-photo backfill pass 2 (v02.82r):** 34 verified headshots across 19 dossiers (coverage 126 → 160 of 320). Root-caused the prior sweep's misses: blind URL-path guessing, not blocked hosts — replaced with a two-level crawl of each site's own navigation, alias-aware name matching, Wikipedia-biography lead images for Commons (7 photos), and same-surname collision fixes. Method consolidated into `scripts/harvest-exec-photos.py` (gaps/firstparty/commons/sheet/wire subcommands)
+- **PDF track (v02.83r):** +4 headshots from ESG/annual reports via a new `pdfs` subcommand (caption-band matching, clip-region rendering) — Samsung SDI, LG Energy Solution ×2, Huawei Digital Power, all previously zero-photo. Coverage **164/320, 46 dossiers**. Empirically bounded: regulatory filings are text-only; ESG reports show boards, not exec teams
+- **Browser-path diagnosis (v02.84r):** Chromium *does* honor the proxy (bogus-port test proves it); its NSS store starts empty (fixable via `certutil` + the proxy CA — commands recorded in the harvester's env notes); the residual reset on non-github hosts is **upstream egress policy — an administrator action, not another session's debugging**. Photo backfill is at its practical ceiling (~156 remain, mostly JS-rendered sites + no-Wikipedia-article execs)
+- **Zhonhen TRU/SST correction (v02.84r):** the lesson plan told the developer to call Panama a "solid-state transformer" — corrected to TRU in Module 3 + Q&A, PDF rebuilt. Answered in chat: TRU-vs-SST device classes, and why 473 kW/m³ leads for tenant neoclouds (density = revenue) while self-builders get schedule/ERCOT and Crusoe gets generator protection
+- **Interview-day one-pager (v02.85r):** `zhonhen-one-pager.md` + PDF (2 pages after the developer okayed length over the 1-page cut); new `dense: true` scan-sheet mode in `build-study-prep-pdf.mjs`
+- **Industry Guidance hub (v02.86r, Profiler v01.38w · GAS v01.17g):** admin-only "✦ Industry Guidance" masthead button → full-screen overlay rendering study modules from JSON served by a new admin-gated `action=guidance` API in Profiler.gs (PROJECT-marked additions on the note-ops transport; content never on public Pages). Renderer widgets: glossary tooltips, tables, pros/cons, lane-colored timeline (CVD-validated gold/blue/rose), bars, flashcards, scored quiz, claims ledger, reading progress. First module: **NVIDIA's Aug 2026 800 VDC white paper** — read all 36 pages, every number verified by two extraction agents; source PDF + `nvidia-800vdc-analysis.md` committed under `repository-information/industry-guidance/`. New repeatable command in `.claude/rules/industry-guidance.md`
+- **Zhonhen docs amended from the paper (v02.86r):** the "simpler and highly familiar" quote **verified at p22** (which names the "Panama Architecture" as a canonical TRU implementation) — retired the strategy report's "appears in no NVIDIA document" claim; quote now customer-usable (cite + paraphrase). Window refined: 2029 attaches to next-gen SST; TRU 4.8 MW blocks specified now; Option B Q3 2027
+- **Block-composition story (v02.87r):** `zhonhen-block-composition.md` + PDF — the current-ladder derivation (6000 A = 4.8 MW ÷ 800 V), NVIDIA's own blessing of paralleled rectifier modules, the arithmetic (2 × 2.5 MW = the drawn 5 MVA block; **8 × 2.5 = a 20 MW DU exactly**; 5 MW MVR container = the block 1:1), eight-row interface scorecard, ten engineering questions
+
+**Where we left off:**
+- Everything committed, pushed and merged through **v02.87r**; working tree clean; Profiler at v01.38w / GAS v01.17g (webhook redeploys on merge). The developer has the one-pager, block-composition PDF, and the in-app module pending their first sign-in test
+
+**Key decisions made (developer-approved):**
+- Industry Guidance architecture: **in-app renderer + admin-gated GAS data op** (chosen over GAS-iframe and all-on-Pages); **Q&A skipped for v1** (revisit path documented — `anthropicSummarize_` precedent + `ANTHROPIC_API_KEY`); **source PDFs committed** to `repository-information/industry-guidance/sources/`; **Zhonhen docs updated** in the same push
+- Public changelog entries for guidance stay generic — never name analyzed documents publicly
+- NVIDIA-side claims only from the verified ledger; deck-only Zhonhen figures (container table, 10 GW fleet) stay inside Zhonhen conversations; Schneider relationship never leaves study-prep; the developer confirmed both field notes are now in the app
+- Estimate calibration: anchor on deliverable count (~20–40m per multi-file feature), not phase count
+
+**Active context:**
+- **CHANGELOG counter reads 105/100** — twelve of today's sections are current-day exempt (non-exempt = 93). The **next push after midnight EST trips archive rotation** (rotate whole date-groups, SHA-enrich, post-rotation grep check)
+- Also pending from earlier: the two changelog-rotation rules (step-2 "count all" vs Scenario A "non-exempt only") genuinely conflict — was flagged to the developer 08/22; Scenario A followed in practice
+- Photo backfill: done at 164/320 unless the egress policy changes (then `scripts/harvest-exec-photos.py` env notes has the exact Chromium recipe)
+- Playwright: proxy CA now needs importing per-container (`apt-get install -y libnss3-tools` + `certutil` line in the harvester notes); PyMuPDF + poppler-utils installed this container only
+- No TODO items, no active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+
+**Recommendation for next session:**
+- **Triage the developer's Zhonhen field notes and any answers to the ten block-composition questions into a dossier revision** (`profiler zhonhen`): the notes are in the app's Drive log now, the composition brief will generate engineering answers worth folding in, and the dossier's v2 pre-dates the white-paper verification — one revision pass aligns dossier, notes, and the new primary source
+- **To continue:** type `triage zhonhen notes and refresh the dossier`
+
+## Previous Sessions
+
+### Session — 2026-08-22 (v02.81r)
+
 **Date:** 2026-08-22 05:10:05 AM EST
 **Repo version:** v02.81r
 **Branch:** `claude/aidc-market-report-batch-d-tgat0t`
@@ -41,38 +81,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - Extend the **executive-photo backfill to the remaining ~194 execs** using the proven curl-based first-party harvester: widen the URL-pattern probe (only 8 of 33 domains resolved last time — most misses were wrong path guesses, not blocked sites), run per-company, and contact-sheet verify before wiring. This is the one piece of completed work with a defined method and a large remaining gap
 - **To continue:** type `continue the photo backfill`
-
-## Previous Sessions
-
-### Session — 2026-08-21 (v02.75r)
-
-**Date:** 2026-08-21 11:07:23 PM EST
-**Repo version:** v02.75r
-**Branch:** `claude/aidc-market-report-batch-a-r6d7iq`
-
-**What we worked on (v02.71r–v02.75r — the full Profiler roster expansion, plan complete):**
-
-- **Batch A — neoclouds/developers (v02.71r):** Nebius, Lambda, Applied Digital, IREN, TeraWulf, Core Scientific — 6 dossiers via two-agent Profiler runs. **Batch B — general contractors (v02.72r):** Turner, HITT, Holder, DPR, Mortenson — single-agent runs (recovered fully from mid-write agent deaths and usage-limit breaks). **Batch C — EPCs (v02.73r):** Bechtel, Kiewit, Burns & McDonnell, Black & Veatch, Primoris. Registry grew **41 → 57 companies**; every new dossier shipped with its `.study.json` and company-published exec photos (never LinkedIn)
-- **Study-guide backfill (v02.74r):** 30 new concept-curriculum guides via 5 themed agents (hyperscalers, neoclouds/DC-ops, power electronics, batteries/solar, grid OEMs) — **every covered company now has a study guide**. Same push: new `neocloud` category (CoreWeave, Lambda, Nebius; IREN + Crusoe dual with `developer`), BLUF/Background paragraph split + snapshot capitalization (screenshot request), dual-shape renderer fix (newer profiles' HQ/Ownership/ticker/legalName no longer blank), 9 dossiers' "BLUF:" → "BOTTOM LINE UP FRONT:" (Profiler v01.33w)
-- **EPC/GC recategorization (v02.75r):** evaluated all 57 companies; new `epc` + `gc` categories (render "EPC"/"General Contractor" via new `ovCatLabel`, colors `--ov-epc` yellow / `--ov-gc` tan). Bechtel, B&V, Burns & McDonnell, Kiewit, Primoris, Quanta, Rosendin → `epc`; Turner, HITT, Holder, DPR → `gc`; Mortenson `gc`+`epc`; Equinix `hyperscaler` → `developer`. `integrator` is now the clean BESS set (FlexGen, Fluence, Wärtsilä). Profiler v01.34w
-- **Triggers:** post-earnings one-shots armed through the batches (incl. Primoris 2026-11-03); the private-company quarterly sweep expanded to 16 companies — full armed list in `.claude/rules/profiler-app.md`
-
-**Where we left off:**
-- Everything committed, merged, and Playwright-verified at **v02.75r** / Profiler **v01.34w**; working tree clean. The approved roster-expansion plan (A/B/C + backfill) is **fully complete**
-
-**Key decisions made:**
-- Category taxonomy: values stay short lowercase slugs (`epc`, `gc`) with display labels mapped in the renderer (`ovCatLabel`) — schema documented in PROFILER-SCHEMA.md
-- Judgment calls the developer may want to eyeball: **Rosendin → EPC** (trade electrical contractor at core, but genuine renewables EPC arm; clearly not a GC or BESS integrator) and **Equinix → developer** (colo operator-landlord alongside Applied Digital/TeraWulf/Core Scientific, not a cloud provider)
-- Older-vintage profile JSONs use compact arrays — edit them with surgical text edits, never JSON round-trips (a re-dump produces ~800 lines of reformat noise)
-- **Confidentiality (standing, non-negotiable):** the Zhonhen intro deck is CONFIDENTIAL — never committed to the repo, never cited into the public dossier; its summary lives only in non-deployed `study-prep/`. Recruiting-channel information (the English name "Jacky Zhu", meeting logistics, recruiter claims) never enters public profiles — public sources only per PROFILER-SCHEMA.md. Never raise Zhu Guoding's Dec 2025 conviction with the interviewer. `study.json` files are public-safe: concept/technology flashcards only — no company trivia, no personal or interview context
-- No ultracode; single-agent research suffices for private construction firms; photos company-published only
-
-**Active context:**
-- **CHANGELOG counter is at exactly 100/100 — the NEXT push commit trips archive rotation** (rotate whole date-groups, SHA-enrich every moved header, post-rotation grep verification per changelogs.md)
-- Parallel sessions have been landing on main all week — restart the branch from `origin/main` before every push cycle and bump from whatever version main is actually at
-- No TODO items, no active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-
-**Recommendation for next session:**
-- Run **Batch D — colocation providers** (Vantage, Aligned, QTS, Switch, STACK), the optional final tranche from the approved expansion plan: single-agent Profiler runs with study guides in the same batch commit, private companies join the quarterly sweep. Note: this push's CHANGELOG section will trip the archive rotation — budget a few extra minutes
-- **To continue:** type `run batch D`
