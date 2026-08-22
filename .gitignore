@@ -33,3 +33,7 @@ autoHotkey/AutoUpdate.manual-targets.ini
 # auto-promotion when an intent matches a manifest entry, plus by the
 # "Edit Path…" button on the status table
 autoHotkey/AutoUpdate.localpaths.ini
+
+# Python bytecode from scripts/ tooling
+__pycache__/
+*.pyc

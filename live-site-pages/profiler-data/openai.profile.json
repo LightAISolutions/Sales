@@ -135,6 +135,8 @@
     {
       "name": "Sam Altman",
       "title": "Chief Executive Officer (co-founder)",
+      "photo": "images/execs/openai-altman.jpg",
+      "photoCredit": "首相官邸ホームページ / Office of the Prime Minister of Japan Official Website, CC BY 4.0, via Wikimedia Commons",
       "background": [
         "The financing machine's public face — press treats him as irreplaceable to the commitment structure",
         "Acknowledged the ~$1.4T/~30 GW figure; stated goal of $1T/year infrastructure spend"
@@ -151,6 +153,8 @@
     {
       "name": "Greg Brockman",
       "title": "President (co-founder)",
+      "photo": "images/execs/openai-brockman.jpg",
+      "photoCredit": "TechCrunch, CC BY 2.0, via Wikimedia Commons",
       "background": [
         "Infrastructure and compute-partnership lead across the NVIDIA/AMD/Broadcom deals"
       ]

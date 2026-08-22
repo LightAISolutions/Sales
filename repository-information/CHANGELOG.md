@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.82r] — 2026-08-22 03:18:46 PM EST
+
+> **Prompt:** "Picking up from my recent "AIDC market report batch D" session, continue the photo backfill."
+
+### Added
+- Executive-photo backfill, second pass: **34 verified headshots across 19 dossiers** (exec photo coverage 126 → 160 of 320; dossiers with at least one photo 38 → 43). **First-party (27)**: Aligned, Applied Digital, Bloom Energy, Core Scientific, CoreWeave, Fluence, IREN, QTS, Quanta Services, Siemens Energy, STACK Infrastructure, Switch, Vantage and Wärtsilä leadership pages. **Wikimedia Commons (7)**: BYD (Wang Chuanfu, Stella Li), Google (Demis Hassabis), Meta (Andrew Bosworth), OpenAI (Sam Altman, Greg Brockman) and Oracle (Safra Catz), each carrying a `photoCredit` attribution
+- `scripts/harvest-exec-photos.py` — the harvest method captured as reusable tooling with five subcommands (`gaps` / `firstparty` / `commons` / `sheet` / `wire`), replacing the ad-hoc scripts rebuilt each session
+
+### Changed
+- First-party discovery now **crawls the site's own navigation** (homepage → about/company/investor hubs → leadership leaves) instead of guessing common URL paths. Path-guessing was the prior sweep's main failure: `global.abb`, `byd.com` and `jinkosolar.com` all serve HTTP 200 but place leadership outside every common pattern
+- Exec-name matching expands each name to its alias forms before scoring, so `James (Jim) Moos`, `Wu Zuyu (吴祖钰) — "Jeff Wu"` and `Thomas M. 'Tommy' Holder` can match a page that prints only one of those forms
+- Commons lookups resolve a person's **Wikipedia biography lead image** rather than searching Commons filenames — a biography's lead image depicts its subject, which removes the failure mode that matched a cottage window to "Olivier Blum" last sweep
+- `photoCredit` license strings normalised to Wikimedia's spaced attribution style (`CC BY-SA 4.0`, not `CC-BY-SA-4.0`) across `meta`, `byd`, `google` and `openai`, and the generator now emits that form
+
+### Fixed
+- Exec objects packed onto a single line in older-vintage profiles (`google`, `meta`) are now wired in place rather than reported as "name line not found"
+- Two execs sharing a surname within one company no longer overwrite each other's image file — the collision was silently discarding one photo (caught on Delta Electronics: `Ping Cheng` and `Victor Cheng` both resolved to `delta-electronics-cheng.jpg`)
+
+### Security
+- Every candidate was inspected on a rendered contact sheet before wiring; **5 first-party candidates were rejected** — a Core Scientific company logo, a Lambda blog banner group shot, a generic "Headshot-Template" file, and both Delta Electronics images (generic `alt` text plus the filename collision above). **2 Commons candidates** were rejected at the license check
 
 ## [v02.81r] — 2026-08-22 04:39:06 AM EST
 

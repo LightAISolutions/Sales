@@ -96,7 +96,7 @@
     { "name": "Susan Li", "title": "CFO", "background": ["Owns capex guidance and the Blue Owl/BlackRock JV financing structures"] },
     { "name": "Alexandr Wang", "photo": "images/execs/meta-wang.jpg", "photoCredit": "Meta Platforms, Inc, CC BY-SA 4.0, via Wikimedia Commons", "title": "Chief AI Officer — Meta Superintelligence Labs", "background": ["Founder/CEO — Scale AI (joined Meta 2025 with the $14B-class Scale deal)", "Consolidated MSL leadership; unit ~3,000 people after cuts"] },
     { "name": "Santosh Janardhan", "title": "Head of Infrastructure", "background": ["Oversees global data centers and compute — the key counterpart for power/BESS suppliers"] },
-    { "name": "Andrew Bosworth", "title": "CTO (Reality Labs)", "background": ["Leads Reality Labs through its restructuring"] }
+    { "name": "Andrew Bosworth", "title": "CTO (Reality Labs)", "photo": "images/execs/meta-bosworth.jpg", "photoCredit": "UK Home Office, CC BY 2.0, via Wikimedia Commons", "background": ["Leads Reality Labs through its restructuring"] }
   ],
   "financials": {
     "currency": "USD",

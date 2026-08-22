@@ -128,6 +128,7 @@
     {
       "name": "KR Sridhar",
       "title": "Founder, Chairman & CEO",
+      "photo": "images/execs/bloom-energy-sridhar.jpg",
       "background": [
         "Founded Bloom 2001 from NASA Mars oxygen-generator work; PhD",
         "Public framing: 'bring-your-own-power has shifted from slogan to business necessity' — all major US hyperscalers plus a dozen neoclouds/AI labs have validated Bloom's solutions"
@@ -136,6 +137,7 @@
     {
       "name": "Simon Edwards",
       "title": "Chief Financial Officer",
+      "photo": "images/execs/bloom-energy-edwards.jpg",
       "background": [
         "Appointed March 2026 for the scale-up phase",
         "Inherits $2.67B cash, the convertible stack, and the ramp-financing question"
@@ -144,6 +146,7 @@
     {
       "name": "Aman Joshi",
       "title": "Chief Commercial Officer",
+      "photo": "images/execs/bloom-energy-joshi.jpg",
       "background": [
         "Public face of the Oracle, Brookfield, and MiTAC deals",
         "Quantified the AI ramp: ~250 MW across ~24 AI infrastructure customers 'from nearly zero two years ago'"
@@ -152,6 +155,7 @@
     {
       "name": "Satish Chitoori",
       "title": "Chief Operations Officer",
+      "photo": "images/execs/bloom-energy-chitoori.jpg",
       "background": [
         "Owns the Fremont 1→2 GW capacity doubling",
         "Delivered the scandium rebuttal: sourced 'from industrial tailings,' supply supports '25 GW'"

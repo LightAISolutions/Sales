@@ -153,6 +153,7 @@
     {
       "name": "Mike Intrator",
       "title": "CEO & Co-founder",
+      "photo": "images/execs/coreweave-intrator.avif",
       "background": [
         "Ex-hedge-fund manager (Hudson Ridge/Natsource); led the crypto-to-GPU pivot",
         "Public rebuttal of circular-financing critiques (January 2026): NVIDIA's original $300M stake 'de minimis' vs $25B raised"
@@ -161,6 +162,7 @@
     {
       "name": "Nitin Agrawal",
       "title": "Chief Financial Officer",
+      "photo": "images/execs/coreweave-agrawal.avif",
       "background": [
         "Ex-Google Cloud finance; owns the DDTL ladder and the investment-grade transition",
         "Faces the depreciation-life question on every earnings call"
@@ -169,6 +171,7 @@
     {
       "name": "Brian Venturo",
       "title": "Chief Strategy Officer & Co-founder",
+      "photo": "images/execs/coreweave-venturo.avif",
       "background": [
         "Architect of the anchor-tenant contract strategy (Microsoft, OpenAI, Meta)"
       ]
@@ -176,6 +179,7 @@
     {
       "name": "Peter Salanki",
       "title": "CTO & Co-founder",
+      "photo": "images/execs/coreweave-salanki.avif",
       "background": [
         "Runs the platform engineering behind the ClusterMAX Platinum rating and the first-to-silicon record"
       ]

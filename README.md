@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-22 05:12:00 AM EST` · Repo version: `v02.81r`
+Last updated: `2026-08-22 03:18:46 PM EST` · Repo version: `v02.82r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -350,6 +350,7 @@ Last updated: `2026-08-22 05:12:00 AM EST` · Repo version: `v02.81r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/playwright-harness.py">playwright-harness.py</a>   — Chromium smoke-test harness for all projects (load + console-error + screenshot)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-aidc-report-pdf.mjs">build-aidc-report-pdf.mjs</a> — Renders the AIDC market report HTML to paginated PDFs, one per Profiler writing style (headless Chromium, DevTools Protocol)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-study-prep-pdf.mjs">build-study-prep-pdf.mjs</a> — Typesets a study-prep Markdown brief to PDF; the Markdown stays the source of truth so the PDF cannot drift
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/harvest-exec-photos.py">harvest-exec-photos.py</a> — Executive-headshot harvester for Profiler dossiers (first-party leadership pages + license-verified Wikimedia Commons, contact-sheet verification, surgical JSON wiring)
 │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/transcribe.ps1">transcribe.ps1</a>          — Local Whisper launcher (large-v3-turbo on GPU) — copy to the transcribing PC; wraps venv, CUDA DLL path and output location
 │
 <b>─── Tests ────────────────────────────────────────────────────────────────────</b>
