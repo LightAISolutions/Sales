@@ -105,26 +105,11 @@
     }
   ],
   "strategyRead": [
-    {
-      "confidence": "High",
-      "judgment": "Siemens Energy (with GE Vernova and Mitsubishi Power) effectively sets the AIDC sector's time-to-power floor: large-frame slots nearly full through 2028, reservation fees back for the first time since the early-2000s boom, and a deliberate +30-50% (not maximal) capacity expansion. Anyone selling into gas-powered AIDC campuses is planning around this company's delivery calendar. Basis: company CMD disclosures, POWER/Bloomberg supply-crunch reporting, Q3 FY26 book-to-bill 2.65."
-    },
-    {
-      "confidence": "High",
-      "judgment": "The Eaton alliance's 500 MW SGT-800 block is the most productized onsite-power offering from any major OEM — a standardized, diesel-free, hydrogen-ready package aimed squarely at the behind-the-meter demand xAI, Crusoe, and the hyperscalers have validated. Basis: company-published alliance specification; Q3 FY26 US data-center orders confirm commercial traction."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "The grid side (Grid Technologies, €51B backlog, 19.9% margin) is the more durable franchise than gas turbines: transformer scarcity outlasts any single generation cycle, ~80% of installed transformer capacity in advanced economies reaches age limits by 2035, and Siemens Energy is one of only a handful of vendors localizing US production. Basis: company capacity disclosures and third-party lead-time data; the 2035 aging claim is company market framing."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "Valuation is the principal risk to reading momentum as strength: ~70x earnings, DCF fair-value estimates as low as €29 vs a ~€150-190 price, an €84-vs-€175 sell-side target chasm, and a stock that fell on a 21% earnings beat. If AIDC buildout pace slows, today's book-to-bill and capacity expansion become cyclical exposure — the same dynamic that burned turbine OEMs after the early-2000s gas boom. Basis: third-party analyst coverage; explicitly a market judgment, not an operational one."
-    },
-    {
-      "confidence": "Low",
-      "judgment": "Wind remains the fragility: one profitable quarter after 15 straight losses, still-negative segment cash flow, and a defect history (15-30% of newest onshore fleets) that argues for caution on execution claims until several clean quarters accumulate. A wind relapse would not threaten the company as in 2023 (the guarantee structure is now private), but it would dent the FY28 margin path."
-    }
+    "(High confidence) Siemens Energy (with GE Vernova and Mitsubishi Power) effectively sets the AIDC sector's time-to-power floor: large-frame slots nearly full through 2028, reservation fees back for the first time since the early-2000s boom, and a deliberate +30-50% (not maximal) capacity expansion. Anyone selling into gas-powered AIDC campuses is planning around this company's delivery calendar. Basis: company CMD disclosures, POWER/Bloomberg supply-crunch reporting, Q3 FY26 book-to-bill 2.65.",
+    "(High confidence) The Eaton alliance's 500 MW SGT-800 block is the most productized onsite-power offering from any major OEM — a standardized, diesel-free, hydrogen-ready package aimed squarely at the behind-the-meter demand xAI, Crusoe, and the hyperscalers have validated. Basis: company-published alliance specification; Q3 FY26 US data-center orders confirm commercial traction.",
+    "(Moderate confidence) The grid side (Grid Technologies, €51B backlog, 19.9% margin) is the more durable franchise than gas turbines: transformer scarcity outlasts any single generation cycle, ~80% of installed transformer capacity in advanced economies reaches age limits by 2035, and Siemens Energy is one of only a handful of vendors localizing US production. Basis: company capacity disclosures and third-party lead-time data; the 2035 aging claim is company market framing.",
+    "(Moderate confidence) Valuation is the principal risk to reading momentum as strength: ~70x earnings, DCF fair-value estimates as low as €29 vs a ~€150-190 price, an €84-vs-€175 sell-side target chasm, and a stock that fell on a 21% earnings beat. If AIDC buildout pace slows, today's book-to-bill and capacity expansion become cyclical exposure — the same dynamic that burned turbine OEMs after the early-2000s gas boom. Basis: third-party analyst coverage; explicitly a market judgment, not an operational one.",
+    "(Low confidence) Wind remains the fragility: one profitable quarter after 15 straight losses, still-negative segment cash flow, and a defect history (15-30% of newest onshore fleets) that argues for caution on execution claims until several clean quarters accumulate. A wind relapse would not threaten the company as in 2023 (the guarantee structure is now private), but it would dent the FY28 margin path."
   ],
   "technicalSpecs": [
     {

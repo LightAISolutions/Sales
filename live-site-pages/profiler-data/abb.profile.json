@@ -112,26 +112,11 @@
     }
   ],
   "strategyRead": [
-    {
-      "confidence": "High",
-      "judgment": "ABB is winning the medium-voltage layer of AI power: HiPerGuard has no direct static-MV-UPS competitor at scale, the 34.5 kV class removes a conversion stage entirely, and reference deployments (Applied Digital, 25 MW blocks) plus the NVIDIA 800 VDC role make it the architecture incumbent for the next rack generation. Basis: company-published product specs and deployment announcements, corroborated by trade press; the 'no direct competitor' read is ours — Eaton/Schneider/Vertiv compete at LV."
-    },
-    {
-      "confidence": "High",
-      "judgment": "The VoltaGrid synchronous-condenser franchise (62 units) is the strongest independent validation that AI load volatility — the problem Hitachi's CEO warned about and Bloomberg confirmed is damaging equipment — is now a purchasable product category. ABB's flywheel-condenser-plus-eHouse package is the de facto standard in US behind-the-meter AI microgrids. Basis: two verified orders across two years; dollar values undisclosed, so revenue materiality is unproven."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "ABB is a strong top-5, not the leader: Schneider leads data-center power overall, and in UPS ABB trails Schneider, Vertiv, Eaton, and Huawei. Its bet is that the MV/800 VDC transition resets the leaderboard in its favor — plausible but unproven, since hyperscaler electrical architectures change slowly and Vertiv/Eaton have deeper US hyperscale UPS incumbency. Basis: MarketsandMarkets/Mordor rankings; the reset thesis is our inference."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "Capital allocation is now the biggest swing factor in the equity story: Robotics proceeds recycled into Rotork at a price the market disliked, ~$14B of stated firepower creating deal-risk overhang, consensus Neutral with the average target below spot, P/E ~37. Operationally excellent, fully priced, and one more expensive deal from a de-rating. Basis: third-party analyst coverage and share-price reactions."
-    },
-    {
-      "confidence": "High",
-      "judgment": "Two structural facts warrant standing awareness in any counterparty relationship: ABB sold its grid/transmission business to Hitachi before the supercycle (its AIDC story is distribution-side only — it cannot supply the transformers and HVDC its campuses' grid connections need), and it is a three-time US bribery settler (2004, 2010, 2022 Kusile/$315M) — procurement and compliance teams at large customers know this history. Basis: DOJ resolution documents and deal record."
-    }
+    "(High confidence) ABB is winning the medium-voltage layer of AI power: HiPerGuard has no direct static-MV-UPS competitor at scale, the 34.5 kV class removes a conversion stage entirely, and reference deployments (Applied Digital, 25 MW blocks) plus the NVIDIA 800 VDC role make it the architecture incumbent for the next rack generation. Basis: company-published product specs and deployment announcements, corroborated by trade press; the 'no direct competitor' read is ours — Eaton/Schneider/Vertiv compete at LV.",
+    "(High confidence) The VoltaGrid synchronous-condenser franchise (62 units) is the strongest independent validation that AI load volatility — the problem Hitachi's CEO warned about and Bloomberg confirmed is damaging equipment — is now a purchasable product category. ABB's flywheel-condenser-plus-eHouse package is the de facto standard in US behind-the-meter AI microgrids. Basis: two verified orders across two years; dollar values undisclosed, so revenue materiality is unproven.",
+    "(Moderate confidence) ABB is a strong top-5, not the leader: Schneider leads data-center power overall, and in UPS ABB trails Schneider, Vertiv, Eaton, and Huawei. Its bet is that the MV/800 VDC transition resets the leaderboard in its favor — plausible but unproven, since hyperscaler electrical architectures change slowly and Vertiv/Eaton have deeper US hyperscale UPS incumbency. Basis: MarketsandMarkets/Mordor rankings; the reset thesis is our inference.",
+    "(Moderate confidence) Capital allocation is now the biggest swing factor in the equity story: Robotics proceeds recycled into Rotork at a price the market disliked, ~$14B of stated firepower creating deal-risk overhang, consensus Neutral with the average target below spot, P/E ~37. Operationally excellent, fully priced, and one more expensive deal from a de-rating. Basis: third-party analyst coverage and share-price reactions.",
+    "(High confidence) Two structural facts warrant standing awareness in any counterparty relationship: ABB sold its grid/transmission business to Hitachi before the supercycle (its AIDC story is distribution-side only — it cannot supply the transformers and HVDC its campuses' grid connections need), and it is a three-time US bribery settler (2004, 2010, 2022 Kusile/$315M) — procurement and compliance teams at large customers know this history. Basis: DOJ resolution documents and deal record."
   ],
   "technicalSpecs": [
     {

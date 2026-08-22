@@ -111,26 +111,11 @@
     }
   ],
   "strategyRead": [
-    {
-      "confidence": "High",
-      "judgment": "xAI's core differentiator is speed-to-power, not model quality — behind-the-meter gas plus Megapack buffering lets it bypass multi-year interconnection queues entirely, and its 64-91-day cluster bring-ups are the fastest independently corroborated in the industry. Basis: S-1 KPI disclosures (0→1.0 GW nameplate compute draw in 3 years), SemiAnalysis technical verification of the gigawatt-scale coherent cluster, and TVA/MLGW grid allocations (~300 MW) covering only a fraction of campus load."
-    },
-    {
-      "confidence": "High",
-      "judgment": "For power and storage vendors, xAI is simultaneously the best demand signal and the worst-risk template in AIDC. Basis: ~$3.7B of 2026 turbine commitments and ~$1B cumulative Megapack purchases prove procurement velocity; the NAACP federal suit, four different turbine counts with different evidentiary statuses, and a $399M self-recorded accrual prove the permitting and community-relations downside of the same playbook."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "The Anthropic deal (~$15B/yr) converts Colossus into a merchant cloud and roughly quintuples segment revenue run-rate — but concentration and the 90-day termination right make it fragile. We assess xAI's economics remain IPO-dependent: even at full Anthropic ramp, capex (+$9.6B in 2025, +$6.0B in Q1 2026 alone) outruns contracted revenue. Basis: S-1 figures; the ~$75B raise target is press-reported."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "Related-party procurement is structural, not incidental: Tesla Megapacks (~$731M-1B cumulative, figures vary by source), Tesla's equity stake, X data feeding Grok, and the common-control SpaceX merger with no publicly detailed fairness process. Vendors negotiating with SpaceXAI should assume Tesla gets first look at any storage scope. Basis: S-1 related-party disclosures, Tesla filings, CNBC/Electrek reporting."
-    },
-    {
-      "confidence": "Low",
-      "judgment": "Combined-fleet claims beyond verified figures — 555,000+ GPUs / ~2 GW combined (Introl tracker), 1M GPUs at Memphis by end-2026, 50M H100-equivalents in 5 years, orbital gigawatts, and the 'Terafab' 1 TW/yr chip fab with Tesla and Intel — rest on Musk statements and industry trackers, not tier-1 verification. Treat as directional ambition, not plan-of-record."
-    }
+    "(High confidence) xAI's core differentiator is speed-to-power, not model quality — behind-the-meter gas plus Megapack buffering lets it bypass multi-year interconnection queues entirely, and its 64-91-day cluster bring-ups are the fastest independently corroborated in the industry. Basis: S-1 KPI disclosures (0→1.0 GW nameplate compute draw in 3 years), SemiAnalysis technical verification of the gigawatt-scale coherent cluster, and TVA/MLGW grid allocations (~300 MW) covering only a fraction of campus load.",
+    "(High confidence) For power and storage vendors, xAI is simultaneously the best demand signal and the worst-risk template in AIDC. Basis: ~$3.7B of 2026 turbine commitments and ~$1B cumulative Megapack purchases prove procurement velocity; the NAACP federal suit, four different turbine counts with different evidentiary statuses, and a $399M self-recorded accrual prove the permitting and community-relations downside of the same playbook.",
+    "(Moderate confidence) The Anthropic deal (~$15B/yr) converts Colossus into a merchant cloud and roughly quintuples segment revenue run-rate — but concentration and the 90-day termination right make it fragile. We assess xAI's economics remain IPO-dependent: even at full Anthropic ramp, capex (+$9.6B in 2025, +$6.0B in Q1 2026 alone) outruns contracted revenue. Basis: S-1 figures; the ~$75B raise target is press-reported.",
+    "(Moderate confidence) Related-party procurement is structural, not incidental: Tesla Megapacks (~$731M-1B cumulative, figures vary by source), Tesla's equity stake, X data feeding Grok, and the common-control SpaceX merger with no publicly detailed fairness process. Vendors negotiating with SpaceXAI should assume Tesla gets first look at any storage scope. Basis: S-1 related-party disclosures, Tesla filings, CNBC/Electrek reporting.",
+    "(Low confidence) Combined-fleet claims beyond verified figures — 555,000+ GPUs / ~2 GW combined (Introl tracker), 1M GPUs at Memphis by end-2026, 50M H100-equivalents in 5 years, orbital gigawatts, and the 'Terafab' 1 TW/yr chip fab with Tesla and Intel — rest on Musk statements and industry trackers, not tier-1 verification. Treat as directional ambition, not plan-of-record."
   ],
   "technicalSpecs": [
     {

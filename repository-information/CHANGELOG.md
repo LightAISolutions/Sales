@@ -3,11 +3,18 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.80r] — 2026-08-22 03:25:08 AM EST
+
+> **Prompt:** "Some of the dossiers don't have any Key Judgments (ie: ABB) - Why not? Go through all the dossiers and create some. Also, most dossiers' Key Personnel section don't have any pictures, while some others do - Why? Can you think of new ways to get some pictures of the executive leadership team?"
+
+### Fixed
+- Key Judgments visibility: all 62 dossiers already carried `strategyRead` data, but seven older profiles (abb, eve-energy, hitachi-energy, huawei-digital-power, quanta-services, siemens-energy, xai) stored entries as `{confidence, judgment}` objects that `ovEl` rendered as "[object Object]" — added an `ovStratText` dual-shape helper to both the app renderer and the export builder in `live-site-pages/Profiler.html` v01.36w (archived snapshots keep the old shape, so renderer tolerance is required), and normalized the seven live profiles to the schema's canonical string form ("(High confidence) …") via bracket-matched surgical edits — no content changed, no profileVersion bumps (format normalization per the v02.74r precedent)
 
 ## [v02.79r] — 2026-08-22 03:15:24 AM EST
 

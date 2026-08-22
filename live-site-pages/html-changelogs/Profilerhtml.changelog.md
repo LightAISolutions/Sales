@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 35/50`
+`Sections: 36/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.36w] — 2026-08-22 03:25:08 AM EST — v02.80r
+
+### Fixed
+- Key Judgments now display correctly on every dossier — seven company profiles (and their archived versions) previously showed their analytical judgments as unreadable placeholders or appeared to have none
 
 ## [v01.35w] — 2026-08-22 03:15:24 AM EST — v02.79r
 

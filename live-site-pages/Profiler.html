@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.35w">
+  <meta name="build-version" content="v01.36w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1453,6 +1453,13 @@ function ovReloadFresh() {
     function ovStyle() { var s = localStorage.getItem(OV_STYLE_KEY); return OV_STYLE_LABELS[s] ? s : OV_DEFAULT_STYLE; }
     function ovSecLabel(key) { return (OV_SEC_LABELS[ovStyle()] || OV_SEC_LABELS['default'])[key]; }
     function ovStratTag() { return OV_STRAT_TAG[ovStyle()] || OV_STRAT_TAG['default']; }
+    function ovStratText(b) {
+      // Dual-shape (v01.36w): older dossiers stored strategyRead entries as
+      // {confidence, judgment} objects; the schema's canonical form is a string.
+      // Archived snapshots keep the old shape forever, so render both.
+      if (b && typeof b === 'object') return (b.confidence ? '(' + b.confidence + ' confidence) ' : '') + (b.judgment || '');
+      return String(b || '');
+    }
     function ovStyleBanner(p) {
       var s = ovStyle();
       if (s === 'equity-research') return (ovTicker(p) ? ovTicker(p) + ' · ' : '') + 'Positioning framework — analytical view, not investment advice';
@@ -1724,7 +1731,7 @@ function ovReloadFresh() {
         var box = ovEl('div', 'ov-strategy');
         box.appendChild(ovEl('span', 'tag', ovStratTag()));
         var ulS = ovEl(ovStyle() === 'intel-briefing' ? 'ol' : 'ul'); // IC form: numbered key judgments
-        p.strategyRead.forEach(function(b) { ulS.appendChild(ovEl('li', null, b)); });
+        p.strategyRead.forEach(function(b) { ulS.appendChild(ovEl('li', null, ovStratText(b))); });
         box.appendChild(ulS);
         sr.appendChild(box);
         paneFor('strategy').appendChild(sr);
@@ -3347,7 +3354,7 @@ function ovReloadFresh() {
         dCh('strategy');
         doc.appendChild(ovEl('p', 'd-note', ovStratTag() + '.'));
         var ulSt = ovEl(sty === 'intel-briefing' ? 'ol' : 'ul'); // IC form: numbered key judgments
-        p.strategyRead.forEach(function(b) { ulSt.appendChild(ovEl('li', null, b)); });
+        p.strategyRead.forEach(function(b) { ulSt.appendChild(ovEl('li', null, ovStratText(b))); });
         doc.appendChild(ulSt);
       }
 

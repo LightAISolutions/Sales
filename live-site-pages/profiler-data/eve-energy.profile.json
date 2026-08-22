@@ -112,26 +112,11 @@
     }
   ],
   "strategyRead": [
-    {
-      "confidence": "High",
-      "judgment": "EVE's large-cell bet is working technically and commercially: first to mass-produce the 600Ah+ class, first grid-connected 628Ah station, >30 GWh of 2027 orders — forcing the system-economics transition (fewer components, less installation labor) that CATL and Hithium are now following. Basis: company-published milestones corroborated by deployment coverage; order books are company-stated."
-    },
-    {
-      "confidence": "High",
-      "judgment": "The US market is closing on EVE from three directions at once — DoD 1260H listing (procurement screening), the LG/Tulip ITC action (cylindrical import exclusion risk), and the broader Chinese-energy-hardware compliance wall (pending FCC inverter ban) — making its Malaysia plants and the 10%-stake Amplify JV structure the template for how Chinese cell makers will serve US demand: minority stakes, licensing, offshore cells. Basis: documented regulatory/litigation record; direct US exports are already <4% of revenue on FOB terms."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "Profit quality is the bear case the 2026 surge conceals: FY2025 profit grew 1.4% on 26% revenue growth, utilization hit a four-year low (69.2%) while planned capacity doubles, and leverage is high (¥31.5B interest-bearing debt, 62.6% asset-liability ratio). The H1 2026 doubling is cycle-driven (glut→tightness); if the tightness fades before the HK listing lands, the debt-funded expansion critique returns. Basis: third-party financial analysis (Tiger Brokers) and filed results."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "The BBU/AIDC push is a logical adjacency with real differentiation potential (pouch float-life tuning, three-layer coverage) but is unproven commercially — no named AIDC customer wins have surfaced, and incumbent BBU suppliers (LG, Samsung SDI, Panasonic) own the server-OEM relationships. Treat as a 2027+ optionality, not current revenue. Basis: OCP showcase materials only."
-    },
-    {
-      "confidence": "Low",
-      "judgment": "Ranking claims require care in any customer-facing use: 'global top-2 ESS supplier' (company), #2 (InfoLink Q1 2025), #3 (InfoLink FY2025), and SNE's unpublished EVE figure all circulate simultaneously — methodology differences let every vendor cherry-pick. Use InfoLink FY2025 (#3) as the defensible current rank."
-    }
+    "(High confidence) EVE's large-cell bet is working technically and commercially: first to mass-produce the 600Ah+ class, first grid-connected 628Ah station, >30 GWh of 2027 orders — forcing the system-economics transition (fewer components, less installation labor) that CATL and Hithium are now following. Basis: company-published milestones corroborated by deployment coverage; order books are company-stated.",
+    "(High confidence) The US market is closing on EVE from three directions at once — DoD 1260H listing (procurement screening), the LG/Tulip ITC action (cylindrical import exclusion risk), and the broader Chinese-energy-hardware compliance wall (pending FCC inverter ban) — making its Malaysia plants and the 10%-stake Amplify JV structure the template for how Chinese cell makers will serve US demand: minority stakes, licensing, offshore cells. Basis: documented regulatory/litigation record; direct US exports are already <4% of revenue on FOB terms.",
+    "(Moderate confidence) Profit quality is the bear case the 2026 surge conceals: FY2025 profit grew 1.4% on 26% revenue growth, utilization hit a four-year low (69.2%) while planned capacity doubles, and leverage is high (¥31.5B interest-bearing debt, 62.6% asset-liability ratio). The H1 2026 doubling is cycle-driven (glut→tightness); if the tightness fades before the HK listing lands, the debt-funded expansion critique returns. Basis: third-party financial analysis (Tiger Brokers) and filed results.",
+    "(Moderate confidence) The BBU/AIDC push is a logical adjacency with real differentiation potential (pouch float-life tuning, three-layer coverage) but is unproven commercially — no named AIDC customer wins have surfaced, and incumbent BBU suppliers (LG, Samsung SDI, Panasonic) own the server-OEM relationships. Treat as a 2027+ optionality, not current revenue. Basis: OCP showcase materials only.",
+    "(Low confidence) Ranking claims require care in any customer-facing use: 'global top-2 ESS supplier' (company), #2 (InfoLink Q1 2025), #3 (InfoLink FY2025), and SNE's unpublished EVE figure all circulate simultaneously — methodology differences let every vendor cherry-pick. Use InfoLink FY2025 (#3) as the defensible current rank."
   ],
   "technicalSpecs": [
     {

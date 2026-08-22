@@ -105,26 +105,11 @@
     }
   ],
   "strategyRead": [
-    {
-      "confidence": "High",
-      "judgment": "Hitachi Energy is the binding constraint on AIDC energization timelines more than any other single vendor: its own lead times run 30-40 months, its reservation system rations access, and Wood Mackenzie models the transformer shortage persisting 'well into the 2030s' (US power-transformer deficit ~30% in 2025, easing only to ~5% by 2030). Anyone selling power equipment into this market is selling into — or around — Hitachi's calendar. Basis: Nikkei/DCD lead-time reporting, WoodMac modeling, the E.ON reservation framework."
-    },
-    {
-      "confidence": "High",
-      "judgment": "The financial trajectory is scarcity monetization executed cleanly: orders $12.4B→$32.8B and margin 6.1%→13.4% in four years, backlog at ~2.9x revenue, no major project-loss charges in the press record (a pointed contrast with Siemens Energy's wind history). Basis: Hitachi IR FY25 disclosures; absence-of-charges is press-record-based, not audited."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "The NVIDIA 800 VDC collaboration signals grid-to-chip ambition that will increasingly collide with ABB, Eaton, Vertiv, and Delta inside the data center — Hitachi's edge is owning the grid side of the interface; its gap is no UPS/rack-power installed base. Basis: company-published architecture claims (the 15x figure is unverified); competitive overlap is our inference from the vendor announcements in the same NVIDIA ecosystem."
-    },
-    {
-      "confidence": "Moderate",
-      "judgment": "Cyclical/overcapacity risk is real but back-loaded: ~$1.8B of announced US transformer investment across the industry (Hitachi, Siemens Energy, GE Vernova, Eaton, Prolec, WEG, ERMCO) all lands 2027-28, WoodMac sees the deficit shrinking by 2030, and a contrarian narrative (POWER: 'there is not a shortage' — procurement inefficiency) already exists. Pricing power (+60-80% transformer inflation since 2020) normalizes if utilities' ordering behavior does. Basis: third-party capacity tracking and shortage modeling."
-    },
-    {
-      "confidence": "Low",
-      "judgment": "The listed India subsidiary's valuation (116x FY27 earnings, +107.7% in a year, above consensus targets, two-thirds of backlog HVDC-dependent with named delay scenarios) is the clearest warning that grid-scarcity pure-plays are priced for flawless execution. Whether the parent-level franchise carries similar embedded expectations could not be verified — the Hitachi Ltd share-price series was not retrievable in this research pass."
-    }
+    "(High confidence) Hitachi Energy is the binding constraint on AIDC energization timelines more than any other single vendor: its own lead times run 30-40 months, its reservation system rations access, and Wood Mackenzie models the transformer shortage persisting 'well into the 2030s' (US power-transformer deficit ~30% in 2025, easing only to ~5% by 2030). Anyone selling power equipment into this market is selling into — or around — Hitachi's calendar. Basis: Nikkei/DCD lead-time reporting, WoodMac modeling, the E.ON reservation framework.",
+    "(High confidence) The financial trajectory is scarcity monetization executed cleanly: orders $12.4B→$32.8B and margin 6.1%→13.4% in four years, backlog at ~2.9x revenue, no major project-loss charges in the press record (a pointed contrast with Siemens Energy's wind history). Basis: Hitachi IR FY25 disclosures; absence-of-charges is press-record-based, not audited.",
+    "(Moderate confidence) The NVIDIA 800 VDC collaboration signals grid-to-chip ambition that will increasingly collide with ABB, Eaton, Vertiv, and Delta inside the data center — Hitachi's edge is owning the grid side of the interface; its gap is no UPS/rack-power installed base. Basis: company-published architecture claims (the 15x figure is unverified); competitive overlap is our inference from the vendor announcements in the same NVIDIA ecosystem.",
+    "(Moderate confidence) Cyclical/overcapacity risk is real but back-loaded: ~$1.8B of announced US transformer investment across the industry (Hitachi, Siemens Energy, GE Vernova, Eaton, Prolec, WEG, ERMCO) all lands 2027-28, WoodMac sees the deficit shrinking by 2030, and a contrarian narrative (POWER: 'there is not a shortage' — procurement inefficiency) already exists. Pricing power (+60-80% transformer inflation since 2020) normalizes if utilities' ordering behavior does. Basis: third-party capacity tracking and shortage modeling.",
+    "(Low confidence) The listed India subsidiary's valuation (116x FY27 earnings, +107.7% in a year, above consensus targets, two-thirds of backlog HVDC-dependent with named delay scenarios) is the clearest warning that grid-scarcity pure-plays are priced for flawless execution. Whether the parent-level franchise carries similar embedded expectations could not be verified — the Hitachi Ltd share-price series was not retrievable in this research pass."
   ],
   "technicalSpecs": [
     {
