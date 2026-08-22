@@ -103,6 +103,21 @@ const DOCS = {
     runHead: 'Built from the Profiler dossier set · Prepared 18 August 2026',
     runFoot: 'Zhonhen Electric — Interview Brief (Director of BD, First Round) · Internal, interview preparation',
   },
+  'zhonhen-block-composition': {
+    src: 'repository-information/study-prep/zhonhen/zhonhen-block-composition.md',
+    out: 'repository-information/study-prep/zhonhen/ZHONHEN-BLOCK-COMPOSITION.pdf',
+    kick: 'Profiler Study Prep · Technical-Sales Argument',
+    sub: 'How the 2.5 MW Panama / 3.6 MW SuperX / 5 MW container lineup answers NVIDIA\u2019s 4.8 MW block standard',
+    toc: false, // short working brief — six sections, reads straight through
+    meta: [
+      '<b>Prepared</b> 22 August 2026 &nbsp;·&nbsp; <b>NVIDIA-side numbers</b> verified against the Aug 2026 white paper '
+        + '(repository-information/industry-guidance/) &nbsp;·&nbsp; <b>Companion</b> zhonhen-strategy-report.md',
+      '<b>Handling</b> Deck-only figures (container table, fleet size) stay inside Zhonhen conversations '
+        + '&nbsp;·&nbsp; <b>Classification</b> Internal — interview preparation',
+    ],
+    runHead: 'Block-composition argument · Prepared 22 August 2026',
+    runFoot: 'Zhonhen Electric — 4.8 MW Block Composition Story · Internal, interview preparation',
+  },
   'zhonhen-one-pager': {
     src: 'repository-information/study-prep/zhonhen/zhonhen-one-pager.md',
     out: 'repository-information/study-prep/zhonhen/ZHONHEN-ONE-PAGER.pdf',

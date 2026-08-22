@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-22 07:05:31 PM EST` · Repo version: `v02.86r`
+Last updated: `2026-08-22 07:32:39 PM EST` · Repo version: `v02.87r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -451,6 +451,8 @@ Last updated: `2026-08-22 07:05:31 PM EST` · Repo version: `v02.86r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/ZHONHEN-INTERVIEW-BRIEF.pdf">ZHONHEN-INTERVIEW-BRIEF.pdf</a> — The interview brief typeset for print/download, BloombergNEF Research Report style (11 pages)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/zhonhen-strategy-report.md">zhonhen-strategy-report.md</a> — US AIDC market-entry strategy report: SST/MV positioning, the ERCOT ride-through &amp; GPU-flicker sale, relationship leverage, verified neocloud targets (confidential — contains first-hand relationship intel)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/ZHONHEN-STRATEGY-REPORT.pdf">ZHONHEN-STRATEGY-REPORT.pdf</a> — The strategy report typeset for print/download, BloombergNEF Research Report style (15 pages)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/zhonhen-block-composition.md">zhonhen-block-composition.md</a> — Technical-sales argument: how the Panama/SuperX/container lineup composes into NVIDIA&#39;s 4.8 MW block standard, with the interface scorecard and ten engineering questions
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/ZHONHEN-BLOCK-COMPOSITION.pdf">ZHONHEN-BLOCK-COMPOSITION.pdf</a> — The composition story typeset for print/download (4 pages)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/zhonhen-one-pager.md">zhonhen-one-pager.md</a> — Interview-day scan sheet: the opener, TRU-vs-SST, ERCOT&#39;s binding numbers, the 473 kW/m³ argument segmented by buyer, landmines, and the Schneider question
 │   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/ZHONHEN-ONE-PAGER.pdf">ZHONHEN-ONE-PAGER.pdf</a> — The scan sheet typeset for print/download, dense variant of the BloombergNEF skin (2 pages)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/RULE-COST-AUDIT.md">RULE-COST-AUDIT.md</a>       — Rule cost audit — ranked table, trim-recommendation checklist (T1–T9), progress tracking

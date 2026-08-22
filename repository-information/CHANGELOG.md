@@ -3,11 +3,19 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 104/100`
+`Sections: 105/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.87r] — 2026-08-22 07:32:39 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **`zhonhen-block-composition.md` + `ZHONHEN-BLOCK-COMPOSITION.pdf`** — the technical-sales argument answering NVIDIA's standardized 4.8 MW power block from Zhonhen's lineup. Contents: the current-ladder derivation (6000 A = 4.8 MW ÷ 800 V; 1250 A = 1 MW; 125 A = 100 kW), the legitimacy argument (the paper's TRU section canonizes "multiple rectifier modules operating in parallel", p22 — composition is a named implementation family, not a workaround), the composition arithmetic (2 × 2.5 MW Panama = the drawn 5 MVA block; **8 × 2.5 MW = a 20 MW Deployment Unit exactly**; the 5 MW MVR container equals the drawn block 1:1; the future 8 MW cluster fits only via 2 × 4 MW), an eight-row interface scorecard (switchboard, tap cans, catcher STS — rehearsed by the delivered Alibaba STS/ATS fleet — DR four-bus mapping, fault-current envelope, grounding, current sharing, certification), ten engineering questions, and the closing lines for the room. Registered in `scripts/build-study-prep-pdf.mjs`
+- One deliberate caution carried prominently: the deck's MVR container table lists 270/400 Vdc output — **which MW ratings ship at 800 VDC is question #1**, not an assumption
 
 ## [v02.86r] — 2026-08-22 07:05:31 PM EST
 
