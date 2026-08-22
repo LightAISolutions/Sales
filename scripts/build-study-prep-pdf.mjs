@@ -132,6 +132,22 @@ const DOCS = {
     runHead: 'Built from the company-provided deck · Prepared 21 August 2026',
     runFoot: 'Zhonhen Electric — Deck Absorption Summary · Internal, interview preparation',
   },
+  'zhonhen-strategy-report': {
+    src: 'repository-information/study-prep/zhonhen/zhonhen-strategy-report.md',
+    out: 'repository-information/study-prep/zhonhen/ZHONHEN-STRATEGY-REPORT.pdf',
+    kick: 'Profiler Study Prep · Strategy Report',
+    sub: 'Positioning among SST/MV providers, the ride-through and flicker sale, the two relationships, and the neocloud targets',
+    meta: [
+      '<b>Prepared</b> 22 August 2026 &nbsp;·&nbsp; <b>Sources</b> zhonhen.profile.json (41 public sources) · the company deck '
+        + '· fresh web research, cited inline &nbsp;·&nbsp; <b>Companions</b> zhonhen-interview-brief.md · zhonhen-deck-summary.md',
+      '<b>Handling</b> Contains confidential relationship intel relayed by the company — do not circulate '
+        + '&nbsp;·&nbsp; <b>Classification</b> Internal — strategy preparation',
+    ],
+    banner: '<b>Sourcing discipline</b> — crux market facts carry numbered citations; first-hand intel from the company is '
+      + 'labelled as such and never blended with sourced fact; strategy synthesis is labelled analysis.',
+    runHead: 'Built from the Profiler dossier set + fresh research · Prepared 22 August 2026',
+    runFoot: 'Zhonhen Electric — US AIDC Strategy Report · Internal & confidential, strategy preparation',
+  },
   'megmeet-lesson-plan': {
     src: 'repository-information/study-prep/megmeet/megmeet-lesson-plan.md',
     out: 'repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf',

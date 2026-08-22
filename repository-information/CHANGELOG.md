@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.77r] — 2026-08-22 02:47:09 AM EST
+
+> **Prompt:** "I want to impress Jacky Zhu from Zhonghen in our next call, so I need to fully understand how Zhonhen is positioned to amongst other SST and medium-voltage (MV) solution providers. I want you to create a strategy report from Zhonhen Electric's perspective. I know that AIDC projects currently care a lot about the MV solution's ability to endure voltage ride-through from the grid(led by the EROCT market) and voltage flickers from fluctuating GPU usage from the server chips. Also, Jacky has told me that he has a relationship with Schneider Electric (confidential) and CATL (public). Analyze how Zhonhen should leverage these relationships to penetrate the US AIDC market. Jacky also said that they are targeting neoclouds due to their willingness to procure power solutions (priority is speed and technical capability); Check if that information is true, and if so, tell me which neocloud(s) I should target, why, and how. Make sure to properly source information that form the crux of the strategy. Output the report as a downloadable PDF. \
+If you hit the end of my weekly Fable limit before this task is done, switch to Opus 5 Xhigh effort and continue."
+
+### Added
+- Zhonhen US AIDC market-entry strategy report (`repository-information/study-prep/zhonhen/zhonhen-strategy-report.md` + `ZHONHEN-STRATEGY-REPORT.pdf`, 15 pages): SST/MV competitive positioning against the verified NVIDIA 800VDC rosters and productization ladder (MV-to-DC power blocks are NVIDIA's 2029 rung — Zhonhen ships one-stage MV-to-DC today), the ERCOT ride-through sales narrative (NOGRR282/NPRR1308 Large Computational Load rule, effective 2026-08-01; FERC-ordered national NERC standards due Dec 2026) and GPU-flicker narrative (Microsoft/OpenAI/NVIDIA arXiv 2508.14318; the proposed 10 MW / 5-second ERCOT variation limit), CATL (public) and Schneider Electric (confidential first-hand intel) leverage analysis, verified neocloud targeting (IREN and Crusoe ranked first; xAI deprioritized on security politics; tenant neoclouds routed to the rack-side product motion), risk stack, and a call playbook — ~45 crux sources cited with URLs, unverifiable claims explicitly flagged
+- New `zhonhen-strategy-report` entry in the `scripts/build-study-prep-pdf.mjs` DOCS registry (Strategy Report masthead, confidential-handling banner)
 
 ## [v02.76r] — 2026-08-22 02:04:25 AM EST
 
