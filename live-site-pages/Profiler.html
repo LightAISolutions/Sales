@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.34w">
+  <meta name="build-version" content="v01.35w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -231,6 +231,26 @@
     }
     .ov-section > h3::after { content: ''; flex: 1; height: 1px; background: var(--ov-line2); }
     .ov-section .sec-note { color: var(--ov-faint); font-size: 12px; font-style: italic; margin: 2px 0 14px; }
+    /* Dossier tabs (v01.35w) — sticky, style-aware section navigation */
+    .ov-tabs {
+      position: sticky; top: 0; z-index: 60;
+      display: flex; flex-wrap: wrap; gap: 8px;
+      padding: 14px 0 12px; margin: 10px 0 4px;
+      background: var(--ov-ink);
+      border-bottom: 1px solid var(--ov-line2);
+    }
+    .ov-tab {
+      font: 11px/1 var(--ov-mono); letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--ov-muted); background: transparent;
+      border: 1px solid var(--ov-line2); border-radius: 999px;
+      padding: 9px 15px; cursor: pointer;
+      transition: color .15s, border-color .15s, background .15s;
+    }
+    .ov-tab:hover { color: var(--ov-paper); border-color: var(--ov-gold); }
+    .ov-tab.on { color: #13151c; background: var(--ov-gold); border-color: var(--ov-gold); font-weight: 700; }
+    .ov-tabpane { display: none; }
+    .ov-tabpane.on { display: block; }
+    .ov-tabpane .ov-section:first-child { margin-top: 22px; }
     .ov-prose { max-width: 760px; }
     .ov-prose p { margin: 12px 0; }
     /* Snapshot facts */
@@ -356,6 +376,11 @@
     #ov-prev-doc ol { padding-left: 20px; font-size: 11.5px; color: #444035; }
     #ov-prev-doc a { color: #305a8a; text-decoration: none; word-break: break-all; }
     #ov-prev-doc .d-foot { margin-top: 26px; border-top: 1px solid #cfc8b4; padding-top: 9px; font: 10px/1.6 var(--ov-mono); color: #6d6758; }
+    /* Contents block (v01.35w) — page 2 of the paginated export */
+    #ov-prev-doc .d-toc { margin: 22px 0 8px; }
+    #ov-prev-doc .d-toc ol { margin: 8px 0 0; padding-left: 22px; }
+    #ov-prev-doc .d-toc li { margin: 5px 0; font-size: 13px; }
+    #ov-prev-doc .d-toc a { color: #305a8a; word-break: normal; }
     @media (max-width: 560px) { #ov-prev-doc { padding: 26px 20px; } }
     /* Field notes — ⚙ cog (dashboard) + chronological changelog overlay */
     #ov-notes-cog {
@@ -560,6 +585,10 @@
       #ov-prev-doc { box-shadow: none !important; border-radius: 0 !important; padding: 12mm 14mm !important; background: #fff !important; }
       #ov-prev-doc h2 { page-break-after: avoid; }
       #ov-prev-doc table { page-break-inside: avoid; }
+      /* Paginated export (v01.35w): cover = page 1, Contents = page 2, then
+         every chapter opens a fresh page. */
+      #ov-prev-doc .d-toc { page-break-before: always; }
+      #ov-prev-doc h2.d-ch { page-break-before: always; }
     }
 /* ══════════════ */
 /* PROJECT END */
@@ -1277,9 +1306,16 @@ function ovReloadFresh() {
       return t + (k ? ' · ' + k : '');
     }
     function ovAppendSummary(container, text) {
+      // Paragraph the summary at its signposts — BACKGROUND (colon or period
+      // authoring form), Watch items and Collection gap(s) — so every dossier
+      // renders as spaced paragraphs whichever shape it was written in.
       var s = String(text || '');
-      var idx = s.indexOf('BACKGROUND:');
-      var chunks = idx > 0 ? [s.slice(0, idx).trim(), s.slice(idx).trim()] : [s];
+      var re = /(BACKGROUND[:.]\s|Watch items:\s|Collection gaps?:\s)/g;
+      var cuts = []; var m;
+      while ((m = re.exec(s))) { if (m.index > 0) cuts.push(m.index); }
+      var chunks = []; var prev = 0;
+      cuts.forEach(function(i) { chunks.push(s.slice(prev, i).trim()); prev = i; });
+      chunks.push(s.slice(prev).trim());
       chunks.forEach(function(c) { if (c) container.appendChild(ovEl('p', null, c)); });
     }
     function ovTagRow(cats) {
@@ -1295,11 +1331,35 @@ function ovReloadFresh() {
         .then(function(res) { if (!res.ok) throw new Error('http_' + res.status); return res.json(); });
     }
 
+    // Deep-linkable tabs (v01.35w): the hash is either "#slug" or "#slug/tab".
+    var ovWantedTab = 'overview';
     function ovRoute() {
       if (!ovRegistry) return;
-      var slug = decodeURIComponent((window.location.hash || '').replace(/^#/, ''));
+      var raw = decodeURIComponent((window.location.hash || '').replace(/^#/, ''));
+      var parts = raw.split('/');
+      var slug = parts[0];
+      ovWantedTab = parts[1] || 'overview';
       if (slug) { ovRenderCompany(slug); } else { ovRenderRoster(); }
       window.scrollTo(0, 0);
+    }
+    function ovShowTab(slug, key, fromClick) {
+      if (!document.getElementById('ov-pane-' + key)) key = 'overview';
+      var wrap = document.querySelector('.ov-panes');
+      if (!wrap) return;
+      for (var i = 0; i < wrap.children.length; i++)
+        wrap.children[i].classList.toggle('on', wrap.children[i].id === 'ov-pane-' + key);
+      var tabs = document.querySelectorAll('.ov-tabs .ov-tab');
+      for (var j = 0; j < tabs.length; j++) {
+        var on = tabs[j].id === 'ov-tab-' + key;
+        tabs[j].classList.toggle('on', on);
+        tabs[j].setAttribute('aria-selected', on ? 'true' : 'false');
+      }
+      if (fromClick) {
+        // replaceState keeps the tab shareable without firing hashchange
+        // (a hashchange would re-render the whole dossier for nothing)
+        try { history.replaceState(null, '', '#' + slug + (key !== 'overview' ? '/' + key : '')); } catch (e) {}
+        window.scrollTo(0, 0);
+      }
     }
 
     // ── Roster ──
@@ -1458,7 +1518,7 @@ function ovReloadFresh() {
       ovFetchJson(slug + '.profile.json')
         .then(function(p) {
           ovProfiles[slug] = p;
-          if (decodeURIComponent((window.location.hash || '').replace(/^#/, '')) === slug) ovRenderCompany(slug);
+          if (decodeURIComponent((window.location.hash || '').replace(/^#/, '')).split('/')[0] === slug) ovRenderCompany(slug);
         })
         .catch(function() {
           var loading = main.querySelector('.ov-loading'); if (loading) loading.parentNode.removeChild(loading);
@@ -1567,6 +1627,34 @@ function ovReloadFresh() {
       }
       main.appendChild(head);
 
+      // Tabbed dossier layout (v01.35w) — sections land in per-tab panes so the
+      // reader navigates by section instead of scrolling one long document.
+      // Specs are merged into the products tab (they are flagship-product tables).
+      var tabDefs = [
+        ['overview', ovSecLabel('snapshot')],
+        ['products', ovSecLabel('products')],
+        ['devs', ovSecLabel('devs')],
+        ['strategy', ovSecLabel('strategy')],
+        ['people', ovSecLabel('people')],
+        ['fin', ovSecLabel('fin')],
+        ['sources', ovSecLabel('sources')]
+      ];
+      var tabBar = ovEl('div', 'ov-tabs');
+      tabBar.id = 'ov-tabs'; tabBar.setAttribute('role', 'tablist');
+      main.appendChild(tabBar);
+      var paneWrap = ovEl('div', 'ov-panes');
+      main.appendChild(paneWrap);
+      var panes = {};
+      function paneFor(key) {
+        if (!panes[key]) {
+          panes[key] = ovEl('div', 'ov-tabpane');
+          panes[key].id = 'ov-pane-' + key;
+          panes[key].setAttribute('role', 'tabpanel');
+          paneWrap.appendChild(panes[key]);
+        }
+        return panes[key];
+      }
+
       // Snapshot
       var snap = ovSection(ovSecLabel('snapshot'));
       snap.appendChild(ovFactsGrid([
@@ -1580,7 +1668,7 @@ function ovReloadFresh() {
       if (p.summary) ovAppendSummary(prose, p.summary);
       if (p.ecosystemRole) prose.appendChild(ovEl('p', null, p.ecosystemRole));
       snap.appendChild(prose);
-      main.appendChild(snap);
+      paneFor('overview').appendChild(snap);
 
       // Products & services
       if (p.productsAndServices && p.productsAndServices.length) {
@@ -1605,7 +1693,7 @@ function ovReloadFresh() {
           }
           ps.appendChild(d);
         });
-        main.appendChild(ps);
+        paneFor('products').appendChild(ps);
       }
 
       // Recent developments (schema v2)
@@ -1627,7 +1715,7 @@ function ovReloadFresh() {
           row.appendChild(bodyE);
           rd.appendChild(row);
         });
-        main.appendChild(rd);
+        paneFor('devs').appendChild(rd);
       }
 
       // Strategy read — labeled analysis (schema v2)
@@ -1639,7 +1727,7 @@ function ovReloadFresh() {
         p.strategyRead.forEach(function(b) { ulS.appendChild(ovEl('li', null, b)); });
         box.appendChild(ulS);
         sr.appendChild(box);
-        main.appendChild(sr);
+        paneFor('strategy').appendChild(sr);
       }
 
       // Technical specifications
@@ -1659,7 +1747,7 @@ function ovReloadFresh() {
           ts.appendChild(wrap);
           if (spec.notes) ts.appendChild(ovEl('p', 'sec-note', spec.notes));
         });
-        main.appendChild(ts);
+        paneFor('products').appendChild(ts); // specs live inside the products tab
       }
 
       // Decision makers
@@ -1685,7 +1773,7 @@ function ovReloadFresh() {
           gridE.appendChild(card);
         });
         dm.appendChild(gridE);
-        main.appendChild(dm);
+        paneFor('people').appendChild(dm);
       }
 
       // Financial performance vs expectations
@@ -1713,7 +1801,7 @@ function ovReloadFresh() {
           if (per.commentary) fin.appendChild(ovEl('p', 'ov-fin-comment', per.commentary));
         });
         if (p.financials.commentary) fin.appendChild(ovEl('p', 'ov-fin-comment', p.financials.commentary));
-        main.appendChild(fin);
+        paneFor('fin').appendChild(fin);
       }
 
       // Sources
@@ -1731,11 +1819,23 @@ function ovReloadFresh() {
         });
         wrapS.appendChild(ol);
         src.appendChild(wrapS);
-        main.appendChild(src);
+        paneFor('sources').appendChild(src);
       }
+
+      // Build the tab row from the panes that actually exist, then activate the
+      // routed tab (falls back to overview when the hash names an absent tab).
+      tabDefs.forEach(function(d) {
+        if (!panes[d[0]]) return;
+        var b = ovEl('button', 'ov-tab', d[1]);
+        b.type = 'button'; b.id = 'ov-tab-' + d[0]; b.setAttribute('role', 'tab');
+        b.addEventListener('click', function() { ovShowTab(p.slug, d[0], true); });
+        tabBar.appendChild(b);
+      });
+      ovShowTab(p.slug, ovWantedTab, false);
 
       // Quick field note — typed here, submitted via the prefilled GitHub issue
       // form; the intake workflow commits it. Skipped on archived snapshots.
+      // Stays below the tabbed region so the Field note button always reaches it.
       if (!p._archived) main.appendChild(ovBuildQuickNote(p.slug));
     }
 
@@ -3183,6 +3283,16 @@ function ovReloadFresh() {
       var sty = ovStyle(); var figN = 0;
       var doc = ovEl('div'); doc.id = 'ov-prev-doc';
       doc.className = 'ov-sty-' + sty; // style skin — preview + PDF print inherit
+      // Chapter helper (v01.35w): every section h2 becomes an anchored chapter
+      // that starts on a fresh printed page; the collected list feeds the ToC.
+      var chapters = [];
+      function dCh(key) {
+        var h = ovEl('h2', 'd-ch', ovSecLabel(key));
+        h.id = 'd-ch-' + key;
+        chapters.push([key, ovSecLabel(key)]);
+        doc.appendChild(h);
+        return h;
+      }
       doc.appendChild(ovEl('h1', null, p.shortName || p.name));
       var dLegal = p.legalName || (p.shortName && p.name !== p.shortName ? p.name : '');
       if (dLegal) doc.appendChild(ovEl('p', 'd-legal', dLegal));
@@ -3196,7 +3306,7 @@ function ovReloadFresh() {
       var dBan = ovStyleBanner(p);
       if (dBan) doc.appendChild(ovEl('p', 'ov-sty-banner', dBan));
 
-      doc.appendChild(ovEl('h2', null, ovSecLabel('snapshot')));
+      dCh('snapshot');
       doc.appendChild(ovDocFacts([
         ['Founded', p.founded ? String(p.founded) : ''],
         ['Headquarters', ovHq(p)],
@@ -3207,7 +3317,7 @@ function ovReloadFresh() {
       if (p.ecosystemRole) doc.appendChild(ovEl('p', null, p.ecosystemRole));
 
       if (p.productsAndServices && p.productsAndServices.length) {
-        doc.appendChild(ovEl('h2', null, ovSecLabel('products')));
+        dCh('products');
         p.productsAndServices.forEach(function(prod) {
           if (prod.category) doc.appendChild(ovEl('p', 'd-cat', prod.category));
           doc.appendChild(ovEl('h3', null, prod.name));
@@ -3225,7 +3335,7 @@ function ovReloadFresh() {
       }
 
       if (p.recentDevelopments && p.recentDevelopments.length) {
-        doc.appendChild(ovEl('h2', null, ovSecLabel('devs')));
+        dCh('devs');
         p.recentDevelopments.forEach(function(ev) {
           doc.appendChild(ovEl('p', 'd-devdate', (ev.date || '') + (ev.category ? '  ·  ' + ev.category : '')));
           doc.appendChild(ovEl('h3', null, ev.headline));
@@ -3234,7 +3344,7 @@ function ovReloadFresh() {
       }
 
       if (p.strategyRead && p.strategyRead.length) {
-        doc.appendChild(ovEl('h2', null, ovSecLabel('strategy')));
+        dCh('strategy');
         doc.appendChild(ovEl('p', 'd-note', ovStratTag() + '.'));
         var ulSt = ovEl(sty === 'intel-briefing' ? 'ol' : 'ul'); // IC form: numbered key judgments
         p.strategyRead.forEach(function(b) { ulSt.appendChild(ovEl('li', null, b)); });
@@ -3242,7 +3352,7 @@ function ovReloadFresh() {
       }
 
       if (p.technicalSpecs && p.technicalSpecs.length) {
-        doc.appendChild(ovEl('h2', null, ovSecLabel('specs')));
+        dCh('specs');
         p.technicalSpecs.forEach(function(spec) {
           doc.appendChild(ovEl('h3', null, (sty === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + spec.product));
           doc.appendChild(ovDocFacts((spec.specs || []).map(function(row) { return [row.label, row.value]; })));
@@ -3251,7 +3361,7 @@ function ovReloadFresh() {
       }
 
       if (p.decisionMakers && p.decisionMakers.length) {
-        doc.appendChild(ovEl('h2', null, ovSecLabel('people')));
+        dCh('people');
         p.decisionMakers.forEach(function(x) {
           doc.appendChild(ovEl('h3', null, x.name));
           if (x.title) doc.appendChild(ovEl('p', 'd-role', x.title));
@@ -3265,7 +3375,7 @@ function ovReloadFresh() {
       }
 
       if (p.financials && p.financials.periods && p.financials.periods.length) {
-        doc.appendChild(ovEl('h2', null, ovSecLabel('fin')));
+        dCh('fin');
         if (p.financials.currency) doc.appendChild(ovEl('p', 'd-note', 'Figures in ' + p.financials.currency + '.'));
         p.financials.periods.forEach(function(per) {
           doc.appendChild(ovEl('h3', null, (sty === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + per.period));
@@ -3288,7 +3398,7 @@ function ovReloadFresh() {
       }
 
       if (p.sources && p.sources.length) {
-        doc.appendChild(ovEl('h2', null, ovSecLabel('sources')));
+        dCh('sources');
         var ol = ovEl('ol');
         p.sources.forEach(function(s) {
           var li = ovEl('li');
@@ -3304,6 +3414,28 @@ function ovReloadFresh() {
       doc.appendChild(ovEl('p', 'd-foot', 'Generated from the Profiler app · ' + new Date().toLocaleString()
         + (p.profileVersion ? ' · profile version ' + p.profileVersion : '')
         + (p.lastUpdated ? ' · data as of ' + p.lastUpdated : '')));
+
+      // Contents — page 2 of the export (cover is page 1, every chapter starts
+      // its own page). Preview clicks scroll inside the overlay via the handler;
+      // the serialized href survives into the PDF/Word file as a live internal
+      // link that jumps to the chapter's page.
+      var toc = ovEl('div', 'd-toc');
+      toc.appendChild(ovEl('h2', 'd-toc-title', 'Contents'));
+      var tol = ovEl('ol');
+      chapters.forEach(function(c) {
+        var li = ovEl('li');
+        var a = document.createElement('a');
+        a.href = '#d-ch-' + c[0]; a.textContent = c[1];
+        a.addEventListener('click', function(e) {
+          e.preventDefault(); // a raw hash jump would collide with the app's #slug routing
+          var t = document.getElementById('d-ch-' + c[0]);
+          if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        li.appendChild(a); tol.appendChild(li);
+      });
+      toc.appendChild(tol);
+      var firstCh = doc.querySelector('h2.d-ch');
+      if (firstCh) doc.insertBefore(toc, firstCh);
       return doc;
     }
 
@@ -3353,7 +3485,10 @@ function ovReloadFresh() {
         + '.d-meta,.d-foot,.d-devdate{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;}'
         + '.d-role,.d-cat{font-family:Consolas,monospace;font-size:8pt;color:#8a6d1f;text-transform:uppercase;}'
         + 'ol{font-size:9pt;color:#444035;} a{color:#305a8a;text-decoration:none;}'
-        + '.ov-sty-banner{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;border:1pt solid #cfc8b4;padding:3pt 6pt;}';
+        + '.ov-sty-banner{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;border:1pt solid #cfc8b4;padding:3pt 6pt;}'
+        // Paginated export (v01.35w): chapters and the ToC each open a fresh
+        // page in Word, mirroring the PDF path's print CSS
+        + 'h2.d-ch{page-break-before:always;} .d-toc{page-break-before:always;}';
       // Style-matched Word formatting — mirrors the preview skins so the .doc
       // reads in the same voice as the app (registry: PROFILER-STYLES.md)
       var wordStyCss = {
@@ -3374,9 +3509,22 @@ function ovReloadFresh() {
       }[ovStyle()] || '';
       wordCss += wordStyCss;
       var safeTitle = String(p.shortName || p.slug || 'Company').replace(/[<>&"]/g, '');
+      // Word gets a REAL TOC field in place of the static link list (v01.35w):
+      // page numbers populate when Word updates fields (open prompt, or Ctrl+A
+      // then F9). The static hyperlinked ToC remains the preview/PDF form.
+      var wordRoot = docEl.cloneNode(true);
+      var tocEl = wordRoot.querySelector('.d-toc');
+      if (tocEl) {
+        tocEl.innerHTML = '<p style="font-size:10pt;letter-spacing:2px;text-transform:uppercase;color:#8a6d1f;'
+          + 'border-bottom:1pt solid #cfc8b4;padding-bottom:3pt;font-weight:bold;">Contents</p>'
+          + '<p><!--[if supportFields]><span style="mso-element:field-begin"></span> TOC \\o "2-2" \\h '
+          + '<span style="mso-element:field-separator"></span><![endif]-->'
+          + 'Table of contents — right-click and choose "Update Field" (or select all and press F9) to fill in chapter page numbers.'
+          + '<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]--></p>';
+      }
       var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
         + '<head><meta charset="utf-8"><title>' + safeTitle + ' — Profiler</title><style>' + wordCss + '</style></head>'
-        + '<body>' + docEl.innerHTML + '</body></html>';
+        + '<body>' + wordRoot.innerHTML + '</body></html>';
       // The Blob's first string begins with an invisible UTF-8 BOM (U+FEFF) — Word needs it to detect encoding
       var blob = new Blob(['﻿' + html], { type: 'application/msword' });
       var a = document.createElement('a');

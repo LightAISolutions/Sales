@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.79r] — 2026-08-22 03:15:24 AM EST
+
+> **Prompt:** "Fix Zhonhen Electric's "BOTTOM LINE UP FRONT" and "BACKGROUND" sections. I want there to be a space between them like all other dossiers. Do a sweeping check on all dossiers to make sure this format is congruent. Also, see the first attached screenshot - Is that a typo? It doesn't make sense to me. Fix it. \
+Then, for all dossiers, analyze and identify different sections and display them as labeled tabs in the red circled area in the second attached screenshot. Make sure to space things out properly for ease of use. I don't want users to have to scroll down such a long sweeping document to find the information they are looking for. I also want each dossier to look professionally prepared. When a dossier gets exported, recombine all the tabs into one comprehensive document/PDF, but make sure each tab starts on a separate page instead of where the last tab left off. Also, for exports specifically, make a Table of Contents on page 2 with each chapter hyperlinked to the page that the chapter starts on. If you have any suggestions regarding my formatting, let me know before you begin."
+
+### Added
+- Tabbed dossier layout in `live-site-pages/Profiler.html` v01.35w: seven style-aware tabs (Overview, Products & Specs merged, Developments, Key Judgments, Leadership, Financials, Sources) rendered as a sticky pill bar between the dossier header and content; per-tab panes replace the single long document; tabs appear only when a dossier has that section; deep-linkable `#slug/tab` URLs via `history.replaceState` (developer-selected design: 7 tabs / sticky + deep links / Word-only real page numbers)
+- Paginated exports: `ovBuildDoc` now emits anchored `h2.d-ch` chapters with `page-break-before` (cover = page 1, hyperlinked Contents = page 2, each chapter on a fresh page — verified 15-page print PDF with live internal links); the Word export swaps the static ToC for a real Word `TOC \o "2-2" \h` field that populates page numbers on field update
+
+### Fixed
+- Summary paragraphing: `ovAppendSummary` now splits on `BACKGROUND:`/`BACKGROUND.`, `Watch items:` and `Collection gap(s):` signposts, so all 62 dossiers render spaced paragraphs (the nine batch-B/C single-block summaries included); Zhonhen's data normalized `BACKGROUND.` → `BACKGROUND:` (the renderer split only on the colon form — the reported bug)
+- Zhonhen summary readability: bare "10jqka" consensus attribution expanded to "Tonghuashun (the Chinese financial-data platform 10jqka.com.cn)" — not a typo, an unexplained platform name (`zhonhen.profile.json`)
 
 ## [v02.78r] — 2026-08-22 02:53:44 AM EST
 

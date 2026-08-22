@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 34/50`
+`Sections: 35/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.35w] — 2026-08-22 03:15:24 AM EST — v02.79r
+
+### Added
+- Dossiers are now organized into labeled tabs (Overview, Products, Developments, Key Judgments, Leadership, Financials, Sources) with a pinned tab bar — no more scrolling one long page to find a section
+- Tab views are shareable: the page address updates as you switch tabs, so a saved link opens directly on that tab
+- Exported documents now open with a cover page and a hyperlinked table of contents, and every section starts on its own page; Word exports can fill in real page numbers via "Update Field"
+
+### Fixed
+- Company overviews now display as properly spaced paragraphs on every dossier (one dossier previously ran its opening sections together)
 
 ## [v01.34w] — 2026-08-21 11:01:38 PM EST — v02.75r
 
