@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 103/100`
+`Sections: 104/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.86r] — 2026-08-22 07:05:31 PM EST
+
+> **Prompt:** "I want you to create an \"Industry Guidance\" button (located where the red circle is in the attached screenshot) that is only visible to \"admin\" level users. This section will be where I send you impactful industry-wide documents to analyze and create whatever you think is best for me to deeply understand them. I would expect to see overviews and study guides, as well as interactive widgets or modules whenever applicable. Maybe even a chatbox where I can ask you questions and have you respond in-app if you can link to this Claude account. Be creative.
+>
+> For my first entry, this is the NVIDIA white paper that came out recently that Zhonhen's deck refers to. I need to deeply understand it as it is most likely going to be the primary form of industry guidance for the next year or so. Analyze it, then create a detailed overview and study guide of it that is custom-tailored to me. I want you to consider what I know and what I don't know, and explain technical content as needed. Display graphs and tables whenever possible to make it easier for me to digest information. Also, generate a timeline for me to visually see how NVIDIA maps different generations of solutions whenever applicable. Also, pay attention to comparisons and clearly state advantages/disadvantages whenever applicable.
+>
+> Create an action plan for me to approve before starting work." *(Plan approved via structured questions: in-app renderer + gated op architecture; Q&A skipped for v1; source PDF committed; Zhonhen docs updated.)*
+
+### Added
+- **Industry Guidance hub (Profiler v01.38w · GAS v01.17g)** — admin-only "✦ Industry Guidance" button on the Profiler masthead (created only after a validated admin session by the auth wall's `pass()`) opening a full-screen overlay that renders document-analysis study modules. The renderer (`gdRenderDoc` + widget engine in `Profiler.html`) draws everything from module JSON — prose with `{{term}}` glossary tooltips, callouts, tables, pros/cons cards, a lane-colored vertical timeline, magnitude bars, click-to-flip flashcards, a scored self-test, a page-referenced claims ledger, per-section "For the Zhonhen conversation" notes, and per-section reading-progress ticks (localStorage) — so future documents need no page changes. Timeline/lane colors CVD-validated with the dataviz six-checks against the card surface (gold `#b18f35` / blue `#4f83e6` / rose `#cc5f75`)
+- **Guidance API in `Profiler.gs`** — `action=guidance` (`gop=index|doc`) on the existing cookie-less fetch transport (POST + GET api-route mirror), admin-gated server-side in `handleGuidanceOp_` via `validateSessionForData` + the `admin` permission; pure `// PROJECT:`-marked additions (deploy handler untouched, no template overrides). Module content ships inside the PROJECT block — repo + GAS project only, never on public Pages. Behaviorally tested: index/doc/unknown-doc/non-admin paths
+- **First module: NVIDIA 800 VDC white paper (Aug 2026)** — 14 sections, 30-term glossary, 16 flashcards, 10-question quiz, 34-row claims ledger; every quantitative claim verified by two independent extraction passes over the source PDF. Source committed at `repository-information/industry-guidance/sources/nvidia-800vdc-white-paper-2026-08.pdf` with the full analysis in `nvidia-800vdc-analysis.md` (the module's source of truth)
+- **`.claude/rules/industry-guidance.md`** — the "industry guidance: \<document\>" command (ingest → verified deep-read → analysis markdown → in-app module → admin-gated serving → versioning); CLAUDE.md gains the command pointer section + Reference Files row
+
+### Changed
+- **Zhonhen prep docs amended from the now-in-hand paper** (`zhonhen-strategy-report.md`, `zhonhen-deck-summary.md`, `zhonhen-lesson-plan.md` + regenerated PDFs): the "simpler and highly familiar design philosophy" quote is **verified at p22**, which also names the "Panama Architecture" as one of three canonical TRU implementations — retiring the strategy report's claim that Panama "appears in no accessible NVIDIA or OCP document" and flipping the quote from Zhonhen-conversations-only to customer-usable (cited + paraphrased). A dated update block also records the window refinement: 2029 attaches to next-gen SST specifically, while TRU-based 4.8 MW blocks are specified now and Option B deploys as soon as Q3 2027
+- `repository-information/diagrams/profiler-diagram.md` prose notes document the guidance ops on the shared fetch transport
+- README structure tree: `industry-guidance/` directory + rules file registered; Profiler tree entry now shows v01.38w · v01.17g
 
 ## [v02.85r] — 2026-08-22 05:05:29 PM EST
 

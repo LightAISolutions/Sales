@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.37w">
+  <meta name="build-version" content="v01.38w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -594,6 +594,135 @@
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
+
+    /* ── Industry Guidance (admin-only, v01.38w) ─────────────────────────
+       Masthead button + full-screen overlay rendering document-analysis
+       modules fetched from the admin-gated GAS guidance ops. Colors for the
+       timeline lanes are CVD-validated against the card surface (dataviz
+       six-checks, 2026-08-22): gold #b18f35 / blue #4f83e6 / rose #cc5f75. */
+    #ov-header { position: relative; }
+    #ov-guide-btn {
+      position: absolute; top: 4px; right: 0; display: none;
+      background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
+      border-radius: 999px; padding: 8px 16px; cursor: pointer;
+      font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    #ov-guide-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
+    #ov-guide-overlay {
+      position: fixed; inset: 0; background: rgba(8,9,12,0.92); z-index: 10002;
+      display: none; overflow-y: auto;
+    }
+    .gd-shell { max-width: 1180px; margin: 0 auto; padding: 28px 20px 60px; }
+    .gd-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+      border-bottom: 3px double var(--ov-line2); padding-bottom: 18px; margin-bottom: 6px; }
+    .gd-kicker { font: 600 11px/1 var(--ov-mono); letter-spacing: 0.28em; color: var(--ov-gold);
+      text-transform: uppercase; margin-bottom: 10px; }
+    .gd-title { font: 700 clamp(26px,4vw,38px)/1.15 var(--ov-serif); color: var(--ov-paper); margin: 0 0 8px; }
+    .gd-srcline { font: 12px/1.6 var(--ov-mono); color: var(--ov-muted); }
+    .gd-close { background: transparent; border: 1px solid var(--ov-line2); color: var(--ov-muted);
+      border-radius: 8px; padding: 8px 14px; cursor: pointer; font: 13px var(--ov-mono); flex: 0 0 auto; }
+    .gd-close:hover { color: var(--ov-paper); border-color: var(--ov-paper); }
+    .gd-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px,1fr)); gap: 10px; margin: 16px 0 6px; }
+    .gd-tile { background: var(--ov-card); border: 1px solid var(--ov-line); border-radius: 10px; padding: 12px 14px; }
+    .gd-tile .k { font: 700 15px/1.25 var(--ov-serif); color: var(--ov-gold); }
+    .gd-tile .v { font: 600 11px/1.4 var(--ov-mono); letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--ov-paper); margin-top: 3px; }
+    .gd-tile .s { font: 11.5px/1.45 var(--ov-mono); color: var(--ov-muted); margin-top: 5px; }
+    .gd-body { display: grid; grid-template-columns: 225px 1fr; gap: 26px; margin-top: 18px; }
+    @media (max-width: 860px) { .gd-body { grid-template-columns: 1fr; } .gd-nav { position: static !important; } }
+    .gd-nav { position: sticky; top: 14px; align-self: start; }
+    .gd-nav .hd { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.2em; color: var(--ov-faint);
+      text-transform: uppercase; margin: 0 0 8px 2px; }
+    .gd-nav a { display: flex; align-items: baseline; gap: 8px; padding: 6px 8px; border-radius: 7px;
+      color: var(--ov-muted); text-decoration: none; font: 12.5px/1.35 var(--ov-mono); }
+    .gd-nav a:hover { background: var(--ov-card); color: var(--ov-paper); }
+    .gd-nav a.done .nm { color: var(--ov-faint); text-decoration: line-through; }
+    .gd-nav .tick { flex: 0 0 auto; width: 14px; height: 14px; border: 1px solid var(--ov-line2);
+      border-radius: 4px; display: inline-block; position: relative; top: 2px; }
+    .gd-nav a.done .tick { background: var(--ov-gold); border-color: var(--ov-gold); }
+    .gd-sec { background: var(--ov-card); border: 1px solid var(--ov-line); border-radius: 12px;
+      padding: 20px 22px; margin: 0 0 18px; }
+    .gd-sec h3 { font: 700 21px/1.25 var(--ov-serif); color: var(--ov-paper); margin: 0 0 4px; }
+    .gd-read { font: 10.5px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ov-faint); margin-bottom: 12px; }
+    .gd-sec p { font: 14.5px/1.75 var(--ov-serif); color: var(--ov-paper); margin: 9px 0; }
+    .gd-sec p strong { color: var(--ov-gold); font-weight: 700; }
+    .gd-done-btn { margin-top: 12px; background: transparent; border: 1px solid var(--ov-line2);
+      color: var(--ov-muted); border-radius: 7px; padding: 6px 12px; cursor: pointer; font: 11.5px var(--ov-mono); }
+    .gd-done-btn.on { color: var(--ov-ink); background: var(--ov-gold); border-color: var(--ov-gold); }
+    .gd-zh { border-left: 3px solid var(--ov-gold); background: rgba(216,180,90,0.07);
+      border-radius: 0 9px 9px 0; padding: 10px 14px; margin-top: 14px; }
+    .gd-zh .lb { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.18em; color: var(--ov-gold);
+      text-transform: uppercase; margin-bottom: 5px; }
+    .gd-zh .tx { font: 13px/1.65 var(--ov-serif); color: var(--ov-paper); }
+    .gd-callout { border: 1px solid rgba(216,180,90,0.4); border-radius: 10px; padding: 4px 16px 10px; }
+    .gd-callout.warn { border-color: rgba(224,122,139,0.45); }
+    .gd-note { font: 12.5px/1.6 var(--ov-mono); color: var(--ov-muted); margin-top: 10px;
+      border-top: 1px solid var(--ov-line); padding-top: 9px; }
+    .gd-tblwrap { overflow-x: auto; margin: 12px 0 4px; }
+    .gd-tbl { border-collapse: collapse; width: 100%; font: 13px/1.55 var(--ov-serif); }
+    .gd-tbl th { font: 600 10.5px/1.4 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ov-muted); text-align: left; border-bottom: 2px solid var(--ov-line2); padding: 7px 12px 7px 0; }
+    .gd-tbl td { border-bottom: 1px solid var(--ov-line); padding: 8px 12px 8px 0;
+      vertical-align: top; color: var(--ov-paper); }
+    .gd-tbl td strong { color: var(--ov-gold); }
+    .gd-pc { border: 1px solid var(--ov-line); border-radius: 10px; padding: 14px 16px; margin: 12px 0; background: var(--ov-card2); }
+    .gd-pc .t { font: 700 16.5px/1.3 var(--ov-serif); color: var(--ov-paper); }
+    .gd-pc .m { font: 11.5px/1.5 var(--ov-mono); color: var(--ov-gold); margin: 3px 0 10px; }
+    .gd-pc .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 700px) { .gd-pc .cols { grid-template-columns: 1fr; } }
+    .gd-pc .hd { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 6px; }
+    .gd-pc .adv .hd { color: #8fbd7a; } .gd-pc .dis .hd { color: #e07a8b; }
+    .gd-pc li { font: 13px/1.6 var(--ov-serif); color: var(--ov-paper); margin: 4px 0 4px 16px; }
+    .gd-tl { position: relative; margin: 14px 0 4px; padding-left: 84px; }
+    .gd-tl::before { content: ''; position: absolute; left: 64px; top: 6px; bottom: 6px; width: 2px; background: var(--ov-line2); }
+    .gd-tl-it { position: relative; margin: 0 0 16px; }
+    .gd-tl-it .yr { position: absolute; left: -84px; top: 0; width: 52px; text-align: right;
+      font: 600 12px/1.5 var(--ov-mono); color: var(--ov-faint); }
+    .gd-tl-it .dot { position: absolute; left: -26px; top: 4px; width: 12px; height: 12px; border-radius: 50%; }
+    .gd-tl-it .lb2 { font: 600 14.5px/1.4 var(--ov-serif); color: var(--ov-paper); }
+    .gd-tl-it .sb { font: 12px/1.55 var(--ov-mono); color: var(--ov-muted); margin-top: 2px; }
+    .gd-legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 4px 0 10px; }
+    .gd-legend span { font: 11px/1 var(--ov-mono); color: var(--ov-muted); display: inline-flex; align-items: center; gap: 6px; }
+    .gd-legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .gd-bars { margin: 14px 0 4px; }
+    .gd-bar { display: grid; grid-template-columns: 175px 1fr 88px; gap: 10px; align-items: center; margin: 7px 0; }
+    .gd-bar .lb { font: 12px/1.35 var(--ov-mono); color: var(--ov-paper); text-align: right; }
+    .gd-bar .lb small { display: block; color: var(--ov-faint); }
+    .gd-bar .track { background: var(--ov-ink); border-radius: 5px; height: 22px; position: relative; }
+    .gd-bar .fill { position: absolute; inset: 2px auto 2px 2px; background: #b18f35; border-radius: 4px; min-width: 3px; }
+    .gd-bar .val { font: 600 12.5px/1 var(--ov-mono); color: var(--ov-paper); }
+    .gd-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px,1fr)); gap: 12px; margin-top: 12px; }
+    .gd-card { background: var(--ov-card2); border: 1px solid var(--ov-line); border-radius: 10px;
+      padding: 14px 15px; cursor: pointer; min-height: 92px; }
+    .gd-card .q { font: 600 13.5px/1.5 var(--ov-serif); color: var(--ov-paper); }
+    .gd-card .a { display: none; font: 13px/1.6 var(--ov-serif); color: var(--ov-gold); margin-top: 9px;
+      border-top: 1px solid var(--ov-line); padding-top: 9px; }
+    .gd-card.flip .a { display: block; }
+    .gd-card .hint { font: 10px/1 var(--ov-mono); letter-spacing: 0.12em; color: var(--ov-faint);
+      text-transform: uppercase; margin-top: 8px; }
+    .gd-quiz-it { border: 1px solid var(--ov-line); border-radius: 10px; padding: 13px 15px; margin: 11px 0; background: var(--ov-card2); }
+    .gd-quiz-it .q { font: 600 14px/1.55 var(--ov-serif); color: var(--ov-paper); margin-bottom: 9px; }
+    .gd-quiz-it button.ch { display: block; width: 100%; text-align: left; margin: 5px 0;
+      background: var(--ov-ink); border: 1px solid var(--ov-line2); color: var(--ov-paper);
+      border-radius: 7px; padding: 8px 12px; cursor: pointer; font: 13px/1.5 var(--ov-serif); }
+    .gd-quiz-it button.ch:hover:not(:disabled) { border-color: var(--ov-gold); }
+    .gd-quiz-it button.ch.right { border-color: #8fbd7a; color: #8fbd7a; }
+    .gd-quiz-it button.ch.wrong { border-color: #e07a8b; color: #e07a8b; }
+    .gd-quiz-it .why { display: none; font: 12.5px/1.6 var(--ov-serif); color: var(--ov-muted);
+      margin-top: 8px; border-top: 1px solid var(--ov-line); padding-top: 8px; }
+    .gd-score { font: 600 13px/1 var(--ov-mono); color: var(--ov-gold); margin-top: 10px; }
+    .gd-term { border-bottom: 1px dotted var(--ov-gold); cursor: help; }
+    #gd-tip { position: fixed; z-index: 10005; max-width: 330px; background: var(--ov-ink);
+      border: 1px solid var(--ov-gold); border-radius: 9px; padding: 10px 13px; display: none;
+      font: 12.5px/1.55 var(--ov-serif); color: var(--ov-paper); box-shadow: 0 8px 28px rgba(0,0,0,0.5); }
+    #gd-tip .tt { font: 600 11px/1 var(--ov-mono); letter-spacing: 0.1em; color: var(--ov-gold);
+      text-transform: uppercase; margin-bottom: 5px; }
+    .gd-gloss { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px,1fr)); gap: 10px; margin-top: 12px; }
+    .gd-gl { background: var(--ov-card2); border: 1px solid var(--ov-line); border-radius: 9px; padding: 10px 13px; }
+    .gd-gl .t { font: 700 12px/1.4 var(--ov-mono); color: var(--ov-gold); }
+    .gd-gl .d { font: 12.5px/1.55 var(--ov-serif); color: var(--ov-paper); margin-top: 3px; }
+
   </style>
 </head>
 <body>
@@ -3553,6 +3682,453 @@ function ovReloadFresh() {
       });
     window.addEventListener('hashchange', ovRoute);
 
+
+    // ── Industry Guidance (admin-only, v01.38w) ─────────────────────────
+    // Masthead button → full-screen overlay rendering document-analysis
+    // modules served by the GAS guidance ops (action=guidance, admin-gated
+    // server-side — the role check on the button is UI convenience only).
+    // Content arrives as structured JSON; every widget below renders from
+    // it, so future documents need no page changes.
+    var GD_PROGRESS_KEY = 'ov_guide_progress';
+    var gdGlossMap = {};
+
+    function ovGuideApi(gop, params, cb) {
+      var base = window._gasNoteUrl;
+      if (!base) { cb({ success: false, error: 'no_backend' }); return; }
+      var qp = { action: 'guidance', gop: gop, session: localStorage.getItem(OV_NOTE_SESSION_KEY) || '' };
+      for (var k in params) if (params.hasOwnProperty(k)) qp[k] = params[k];
+      fetch(base + '?' + ovNoteQs(qp), { method: 'POST', redirect: 'follow' })
+        .then(function(r) { if (!r.ok) throw new Error('http_' + r.status); return r.json(); })
+        .then(cb)
+        .catch(function() {
+          qp.action = 'api'; qp.op = 'guidance';
+          fetch(base + '?' + ovNoteQs(qp), { method: 'GET', redirect: 'follow' })
+            .then(function(r2) { if (!r2.ok) throw new Error('http_' + r2.status); return r2.json(); })
+            .then(cb)
+            .catch(function() { cb({ success: false, error: 'network_failed' }); });
+        });
+    }
+
+    // Admin-gated masthead button — created only after a validated admin
+    // session (called from the auth wall's pass()), so signed-out visitors
+    // and non-admin users never see it in the DOM at all.
+    function ovGuideBtnShow() {
+      if (localStorage.getItem(OV_NOTE_ROLE_KEY) !== 'admin') return;
+      if (document.getElementById('ov-guide-btn')) return;
+      var head = document.getElementById('ov-header');
+      if (!head) return;
+      var b = document.createElement('button');
+      b.id = 'ov-guide-btn'; b.type = 'button';
+      b.textContent = '✦ Industry Guidance';
+      b.title = 'Document-analysis study modules (admin)';
+      b.addEventListener('click', ovGuideOpen);
+      head.appendChild(b);
+      b.style.display = 'inline-block';
+    }
+
+    function ovGuideOpen() {
+      var ov = document.getElementById('ov-guide-overlay');
+      if (!ov) {
+        ov = document.createElement('div');
+        ov.id = 'ov-guide-overlay';
+        document.body.appendChild(ov);
+      }
+      ov.style.display = 'block';
+      ov.innerHTML = '';
+      var shell = ovEl('div', 'gd-shell');
+      shell.appendChild(ovEl('p', 'ov-loading', 'Loading guidance library…'));
+      ov.appendChild(shell);
+      ovGuideApi('index', {}, function(res) {
+        if (!res || !res.success) {
+          shell.innerHTML = '';
+          shell.appendChild(ovEl('p', 'ov-loading', 'Could not load the guidance library ('
+            + ((res && res.error) || 'unknown') + '). Sign in as an admin and try again.'));
+          shell.appendChild(gdCloseBtn());
+          return;
+        }
+        if (res.docs.length === 1) { ovGuideLoadDoc(res.docs[0].id, shell); return; }
+        shell.innerHTML = '';
+        shell.appendChild(gdCloseBtn());
+        shell.appendChild(ovEl('div', 'gd-kicker', 'Industry Guidance · Library'));
+        for (var i = 0; i < res.docs.length; i++) (function(d) {
+          var card = ovEl('div', 'gd-sec');
+          var h = ovEl('h3', null, d.title);
+          card.appendChild(h);
+          card.appendChild(ovEl('div', 'gd-read', (d.date || '') + ' · ' + d.sections + ' sections'));
+          card.appendChild(ovEl('p', null, d.short || ''));
+          card.style.cursor = 'pointer';
+          card.addEventListener('click', function() { ovGuideLoadDoc(d.id, shell); });
+          shell.appendChild(card);
+        })(res.docs[i]);
+      });
+    }
+
+    function gdCloseBtn() {
+      var c = ovEl('button', 'gd-close', '✕ Close');
+      c.type = 'button';
+      c.addEventListener('click', function() {
+        var ov = document.getElementById('ov-guide-overlay');
+        if (ov) ov.style.display = 'none';
+      });
+      return c;
+    }
+
+    function ovGuideLoadDoc(id, shell) {
+      shell.innerHTML = '';
+      shell.appendChild(ovEl('p', 'ov-loading', 'Loading module…'));
+      ovGuideApi('doc', { id: id }, function(res) {
+        if (!res || !res.success) {
+          shell.innerHTML = '';
+          shell.appendChild(ovEl('p', 'ov-loading', 'Could not load the module ('
+            + ((res && res.error) || 'unknown') + ').'));
+          shell.appendChild(gdCloseBtn());
+          return;
+        }
+        gdRenderDoc(res.doc, shell);
+      });
+    }
+
+    // Escape, then apply the module micro-markup: **bold**, *italic*,
+    // {{term}} → glossary tooltip span. Content is our own admin-gated
+    // backend's, but it is still escaped before markup insertion.
+    function gdFmt(s) {
+      var t = String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      t = t.replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
+      t = t.replace(/\{\{([^}]+)\}\}/g, function(m, term) {
+        return '<span class="gd-term" data-term="' + term + '">' + term + '</span>';
+      });
+      return t;
+    }
+
+    function gdP(html) { var p = document.createElement('p'); p.innerHTML = html; return p; }
+
+    function gdProgress(docId) {
+      try { return JSON.parse(localStorage.getItem(GD_PROGRESS_KEY + '_' + docId) || '{}'); }
+      catch (e) { return {}; }
+    }
+    function gdSetProgress(docId, secId, done) {
+      try {
+        var pr = gdProgress(docId); pr[secId] = !!done;
+        localStorage.setItem(GD_PROGRESS_KEY + '_' + docId, JSON.stringify(pr));
+      } catch (e) { /* private mode — progress just not persisted */ }
+    }
+
+    function gdRenderDoc(doc, shell) {
+      gdGlossMap = {};
+      var gi;
+      for (gi = 0; gi < (doc.glossary || []).length; gi++) gdGlossMap[doc.glossary[gi].t.toLowerCase()] = doc.glossary[gi].d;
+      shell.innerHTML = '';
+
+      var top = ovEl('div', 'gd-top');
+      var tl = ovEl('div');
+      tl.appendChild(ovEl('div', 'gd-kicker', 'Industry Guidance · Study Module'));
+      tl.appendChild(ovEl('h2', 'gd-title', doc.title));
+      var src = doc.source || {};
+      tl.appendChild(ovEl('div', 'gd-srcline', (src.doc || '') + ' — ' + (src.publisher || '') + ', '
+        + (src.date || '') + ' · ' + (src.pages || '?') + ' pp · ' + (src.series || '')
+        + ' · analyzed ' + (doc.updated || '')));
+      top.appendChild(tl);
+      top.appendChild(gdCloseBtn());
+      shell.appendChild(top);
+
+      if (doc.tiles && doc.tiles.length) {
+        var tiles = ovEl('div', 'gd-tiles');
+        for (var ti = 0; ti < doc.tiles.length; ti++) {
+          var t = doc.tiles[ti], tile = ovEl('div', 'gd-tile');
+          tile.appendChild(ovEl('div', 'k', t.k));
+          tile.appendChild(ovEl('div', 'v', t.v));
+          tile.appendChild(ovEl('div', 's', t.sub));
+          tiles.appendChild(tile);
+        }
+        shell.appendChild(tiles);
+      }
+
+      var body = ovEl('div', 'gd-body');
+      var nav = ovEl('nav', 'gd-nav');
+      nav.appendChild(ovEl('div', 'hd', 'Sections'));
+      var main = ovEl('div');
+      body.appendChild(nav); body.appendChild(main);
+      shell.appendChild(body);
+
+      var prog = gdProgress(doc.id);
+      var secs = doc.sections || [];
+      for (var si = 0; si < secs.length; si++) (function(sec) {
+        var el = gdRenderSection(doc, sec);
+        main.appendChild(el);
+        var a = document.createElement('a');
+        a.href = '#gd-' + sec.id;
+        a.id = 'gdnav-' + sec.id;
+        if (prog[sec.id]) a.className = 'done';
+        var tick = ovEl('span', 'tick'); a.appendChild(tick);
+        var nm = ovEl('span', 'nm', sec.title); a.appendChild(nm);
+        a.addEventListener('click', function(ev) {
+          ev.preventDefault();
+          var target = document.getElementById('gd-' + sec.id);
+          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        nav.appendChild(a);
+      })(secs[si]);
+
+      if (doc.glossary && doc.glossary.length) {
+        var gsec = ovEl('section', 'gd-sec');
+        gsec.id = 'gd-glossary';
+        gsec.appendChild(ovEl('h3', null, 'Glossary'));
+        gsec.appendChild(ovEl('div', 'gd-read', doc.glossary.length + ' terms — dotted terms anywhere in the module show these on hover'));
+        var grid = ovEl('div', 'gd-gloss');
+        for (var gj = 0; gj < doc.glossary.length; gj++) {
+          var g = doc.glossary[gj], cell = ovEl('div', 'gd-gl');
+          cell.appendChild(ovEl('div', 't', g.t));
+          cell.appendChild(ovEl('div', 'd', g.d));
+          grid.appendChild(cell);
+        }
+        gsec.appendChild(grid);
+        main.appendChild(gsec);
+        var ga = document.createElement('a');
+        ga.href = '#gd-glossary';
+        ga.appendChild(ovEl('span', 'tick')); ga.appendChild(ovEl('span', 'nm', 'Glossary'));
+        ga.addEventListener('click', function(ev) {
+          ev.preventDefault();
+          var tg = document.getElementById('gd-glossary');
+          if (tg) tg.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        nav.appendChild(ga);
+      }
+      gdBindTermTips(shell);
+    }
+
+    function gdRenderSection(doc, sec) {
+      var el = ovEl('section', 'gd-sec');
+      el.id = 'gd-' + sec.id;
+      el.appendChild(ovEl('h3', null, sec.title));
+      if (sec.read) el.appendChild(ovEl('div', 'gd-read', sec.read));
+      var host = el, wrap = null, pi;
+      if (sec.kind === 'callout') {
+        wrap = ovEl('div', 'gd-callout' + (sec.tone === 'warn' ? ' warn' : ''));
+        el.appendChild(wrap); host = wrap;
+      }
+      if (sec.intro) host.appendChild(gdP(gdFmt(sec.intro)));
+      if (sec.kind === 'prose' || sec.kind === 'callout') {
+        for (pi = 0; pi < (sec.ps || []).length; pi++) host.appendChild(gdP(gdFmt(sec.ps[pi])));
+      } else if (sec.kind === 'table') {
+        el.appendChild(gdTable(sec.cols, sec.rows));
+      } else if (sec.kind === 'proscons') {
+        for (pi = 0; pi < (sec.cards || []).length; pi++) el.appendChild(gdProsCons(sec.cards[pi]));
+      } else if (sec.kind === 'timeline') {
+        el.appendChild(gdTimeline(sec));
+      } else if (sec.kind === 'bars') {
+        el.appendChild(gdBars(sec));
+      } else if (sec.kind === 'flashcards') {
+        el.appendChild(gdFlashcards(sec.cards || []));
+      } else if (sec.kind === 'quiz') {
+        el.appendChild(gdQuiz(sec.items || []));
+      } else if (sec.kind === 'ledger') {
+        el.appendChild(gdTable(['#', 'Claim', 'Page'], (sec.rows || []).map(function(r, n) {
+          return [String(n + 1), r[0], r[1]];
+        })));
+      }
+      if (sec.note) { var nt = ovEl('div', 'gd-note'); nt.innerHTML = gdFmt(sec.note); el.appendChild(nt); }
+      if (sec.zh) {
+        var zh = ovEl('div', 'gd-zh');
+        zh.appendChild(ovEl('div', 'lb', 'For the Zhonhen conversation'));
+        var zt = ovEl('div', 'tx'); zt.innerHTML = gdFmt(sec.zh); zh.appendChild(zt);
+        el.appendChild(zh);
+      }
+      var done = ovEl('button', 'gd-done-btn' + (gdProgress(doc.id)[sec.id] ? ' on' : ''));
+      done.type = 'button';
+      done.textContent = gdProgress(doc.id)[sec.id] ? '✓ Understood' : 'Mark as understood';
+      done.addEventListener('click', function() {
+        var now = !done.classList.contains('on');
+        done.classList.toggle('on', now);
+        done.textContent = now ? '✓ Understood' : 'Mark as understood';
+        gdSetProgress(doc.id, sec.id, now);
+        var na = document.getElementById('gdnav-' + sec.id);
+        if (na) na.classList.toggle('done', now);
+      });
+      el.appendChild(done);
+      return el;
+    }
+
+    function gdTable(cols, rows) {
+      var wrap = ovEl('div', 'gd-tblwrap');
+      var tb = document.createElement('table'); tb.className = 'gd-tbl';
+      var thead = document.createElement('thead'), trh = document.createElement('tr');
+      for (var c = 0; c < (cols || []).length; c++) {
+        var th = document.createElement('th'); th.innerHTML = gdFmt(cols[c]); trh.appendChild(th);
+      }
+      thead.appendChild(trh); tb.appendChild(thead);
+      var tbody = document.createElement('tbody');
+      for (var r = 0; r < (rows || []).length; r++) {
+        var tr = document.createElement('tr');
+        for (var d = 0; d < rows[r].length; d++) {
+          var td = document.createElement('td'); td.innerHTML = gdFmt(rows[r][d]); tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+      }
+      tb.appendChild(tbody); wrap.appendChild(tb);
+      return wrap;
+    }
+
+    function gdProsCons(card) {
+      var el = ovEl('div', 'gd-pc');
+      el.appendChild(ovEl('div', 't', card.t));
+      if (card.meta) el.appendChild(ovEl('div', 'm', card.meta));
+      var cols = ovEl('div', 'cols');
+      var mk = function(cls, hd, items) {
+        var box = ovEl('div', cls);
+        box.appendChild(ovEl('div', 'hd', hd));
+        var ul = document.createElement('ul');
+        for (var i = 0; i < (items || []).length; i++) {
+          var li = document.createElement('li'); li.innerHTML = gdFmt(items[i]); ul.appendChild(li);
+        }
+        box.appendChild(ul);
+        return box;
+      };
+      cols.appendChild(mk('adv', 'Advantages', card.adv));
+      cols.appendChild(mk('dis', 'Disadvantages / costs', card.dis));
+      el.appendChild(cols);
+      return el;
+    }
+
+    // Vertical timeline — entries sorted by x (fractional year), colored by
+    // lane. Lane colors are the CVD-validated trio (see the CSS block note).
+    var GD_LANE_COLORS = { gen: '#b18f35', deploy: '#4f83e6', eco: '#cc5f75' };
+
+    function gdTimeline(sec) {
+      var box = ovEl('div');
+      var lg = ovEl('div', 'gd-legend');
+      for (var k in (sec.lanes || {})) if (sec.lanes.hasOwnProperty(k)) {
+        var s = document.createElement('span');
+        var i = document.createElement('i'); i.style.background = GD_LANE_COLORS[k] || 'var(--ov-muted)';
+        s.appendChild(i); s.appendChild(document.createTextNode(sec.lanes[k]));
+        lg.appendChild(s);
+      }
+      box.appendChild(lg);
+      var tl = ovEl('div', 'gd-tl');
+      var items = (sec.items || []).slice().sort(function(a, b) { return a.x - b.x; });
+      var lastYear = null;
+      for (var n = 0; n < items.length; n++) {
+        var it = items[n], row = ovEl('div', 'gd-tl-it');
+        var yr = Math.floor(it.x);
+        row.appendChild(ovEl('div', 'yr', yr === lastYear ? '' : String(yr)));
+        lastYear = yr;
+        var dot = ovEl('span', 'dot');
+        dot.style.background = GD_LANE_COLORS[it.lane] || 'var(--ov-muted)';
+        dot.title = (sec.lanes && sec.lanes[it.lane]) || it.lane;
+        row.appendChild(dot);
+        var lb = ovEl('div', 'lb2'); lb.innerHTML = gdFmt(it.label); row.appendChild(lb);
+        var sb = ovEl('div', 'sb'); sb.innerHTML = gdFmt(it.sub); row.appendChild(sb);
+        tl.appendChild(row);
+      }
+      box.appendChild(tl);
+      return box;
+    }
+
+    // Horizontal magnitude bars — one measure, one hue, direct labels
+    // (single series: no legend needed per the chart rules).
+    function gdBars(sec) {
+      var box = ovEl('div', 'gd-bars');
+      var max = 0, i;
+      for (i = 0; i < (sec.items || []).length; i++) if (sec.items[i].v > max) max = sec.items[i].v;
+      for (i = 0; i < (sec.items || []).length; i++) {
+        var it = sec.items[i], row = ovEl('div', 'gd-bar');
+        var lb = ovEl('div', 'lb');
+        lb.appendChild(document.createTextNode(it.label));
+        var sm = document.createElement('small'); sm.textContent = it.sub || ''; lb.appendChild(sm);
+        row.appendChild(lb);
+        var track = ovEl('div', 'track');
+        var fill = ovEl('div', 'fill');
+        fill.style.width = 'calc(' + Math.max(2, Math.round(it.v / max * 100)) + '% - 4px)';
+        track.title = it.label + ' — ' + it.v + ' ' + (sec.unit || '');
+        track.appendChild(fill);
+        row.appendChild(track);
+        row.appendChild(ovEl('div', 'val', String(it.v) + (sec.unit ? ' ' + sec.unit.split(' ')[0] : '')));
+        box.appendChild(row);
+      }
+      return box;
+    }
+
+    function gdFlashcards(cards) {
+      var grid = ovEl('div', 'gd-cards');
+      for (var i = 0; i < cards.length; i++) (function(c) {
+        var el = ovEl('div', 'gd-card');
+        var q = ovEl('div', 'q'); q.innerHTML = gdFmt(c.q); el.appendChild(q);
+        var a = ovEl('div', 'a'); a.innerHTML = gdFmt(c.a); el.appendChild(a);
+        el.appendChild(ovEl('div', 'hint', 'click to flip'));
+        el.addEventListener('click', function() { el.classList.toggle('flip'); });
+        grid.appendChild(el);
+      })(cards[i]);
+      return grid;
+    }
+
+    function gdQuiz(items) {
+      var box = ovEl('div');
+      var score = { right: 0, answered: 0 };
+      var scoreLine = ovEl('div', 'gd-score', '');
+      for (var i = 0; i < items.length; i++) (function(it, n) {
+        var el = ovEl('div', 'gd-quiz-it');
+        var q = ovEl('div', 'q'); q.innerHTML = (n + 1) + '. ' + gdFmt(it.q); el.appendChild(q);
+        var why = ovEl('div', 'why'); why.innerHTML = gdFmt(it.why || '');
+        var btns = [];
+        for (var c = 0; c < it.c.length; c++) (function(ci) {
+          var b = document.createElement('button');
+          b.type = 'button'; b.className = 'ch'; b.innerHTML = gdFmt(it.c[ci]);
+          b.addEventListener('click', function() {
+            if (b.disabled) return;
+            score.answered++;
+            if (ci === it.a) { b.classList.add('right'); score.right++; }
+            else { b.classList.add('wrong'); btns[it.a].classList.add('right'); }
+            for (var x = 0; x < btns.length; x++) btns[x].disabled = true;
+            why.style.display = 'block';
+            scoreLine.textContent = 'Score: ' + score.right + ' / ' + score.answered
+              + (score.answered === items.length ? ' — complete' : '');
+          });
+          btns.push(b); el.appendChild(b);
+        })(c);
+        el.appendChild(why);
+        box.appendChild(el);
+      })(items[i], i);
+      box.appendChild(scoreLine);
+      return box;
+    }
+
+    // Glossary tooltips — one floating tip element, positioned near the
+    // hovered/tapped term; hidden on leave/scroll/second tap.
+    function gdBindTermTips(root) {
+      var tip = document.getElementById('gd-tip');
+      if (!tip) {
+        tip = document.createElement('div'); tip.id = 'gd-tip';
+        document.body.appendChild(tip);
+      }
+      function show(span) {
+        var term = span.getAttribute('data-term') || '';
+        var def = gdGlossMap[term.toLowerCase()];
+        if (!def) return;
+        tip.innerHTML = '';
+        tip.appendChild(ovEl('div', 'tt', term));
+        tip.appendChild(document.createTextNode(def));
+        tip.style.display = 'block';
+        var r = span.getBoundingClientRect();
+        var top = r.bottom + 8, left = Math.min(r.left, window.innerWidth - 350);
+        if (top + 140 > window.innerHeight) top = Math.max(8, r.top - tip.offsetHeight - 8);
+        tip.style.top = top + 'px'; tip.style.left = Math.max(8, left) + 'px';
+      }
+      function hide() { tip.style.display = 'none'; }
+      root.addEventListener('mouseover', function(ev) {
+        var t = ev.target;
+        if (t && t.classList && t.classList.contains('gd-term')) show(t); else hide();
+      });
+      root.addEventListener('click', function(ev) {
+        var t = ev.target;
+        if (t && t.classList && t.classList.contains('gd-term')) {
+          if (tip.style.display === 'block') hide(); else show(t);
+        }
+      });
+      var ovl = document.getElementById('ov-guide-overlay');
+      if (ovl) ovl.addEventListener('scroll', hide);
+    }
+
     // ── App sign-in wall (developer directive 2026-08-09) ──
     // The whole app sits behind Google sign-in + the Master ACL, like Receipts.
     // Reuses the note backend's session machinery (GIS popup + fetch exchange).
@@ -3574,7 +4150,7 @@ function ovReloadFresh() {
       wall.appendChild(box);
       document.body.appendChild(wall);
       function say(msg, bad) { st.textContent = msg || ''; st.style.color = bad ? '#e07a8b' : 'var(--ov-faint)'; }
-      function pass() { wall.style.display = 'none'; ovStyleBtnShow(); }
+      function pass() { wall.style.display = 'none'; ovStyleBtnShow(); ovGuideBtnShow(); }
       function fail(msg) {
         localStorage.removeItem(OV_NOTE_SESSION_KEY);
         localStorage.removeItem(OV_NOTE_ROLE_KEY);

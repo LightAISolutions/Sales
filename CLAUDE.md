@@ -337,6 +337,13 @@ If the user says **"reconcile"** (or similar: "reconcile multi-session", "end mu
 > **--- END OF PROFILER COMMAND ---**
 ---
 
+## Industry Guidance Command
+*If the user says **"industry guidance: \<document\>"** (or similar: "add this to Industry Guidance", "analyze this document for the guidance hub", or uploads an industry-wide document with that intent): see `.claude/rules/industry-guidance.md` — auto-injects when working on the guidance data or the Profiler app, and the full command body (source ingest → verified deep-read → analysis markdown → in-app module in Profiler.gs → admin-gated serving → versioning) is always available for on-demand invocation. The in-app hub is the admin-only "✦ Industry Guidance" button on the Profiler masthead.*
+
+---
+> **--- END OF INDUSTRY GUIDANCE COMMAND ---**
+---
+
 ## Behavioral Rules
 *Full rules in `.claude/rules/behavioral-rules.md` (always-loaded, no path scope). Covers: Execution Style, Plan Mode Visibility, AskUserQuestion Visibility, Page-Scope Commands, Think Before Asserting, Chesterton's Fence, Rule Placement Autonomy, Backups Before Major Changes, Incremental Writing, Confidence Disclosure, User-Perspective Reasoning, Section Placement Guide, Web Search Confidence, Provenance Markers.*
 
@@ -363,6 +370,7 @@ Path-scoped rules files — loaded automatically when working on matching files.
 | `.claude/rules/workflows.md` | Merge conflict prevention, commit SHA tracking | — |
 | `.claude/rules/init-scripts.md` | Phantom edits, line ending safety | — |
 | `.claude/rules/dead-code-detection.md` | Dead-code analysis methodology — 6-step trace, indicators-present checklist, resource-abuse exemptions (path-scoped to HTML/GAS/workflows + user-triggered by "check for dead code" phrasing) | — |
+| `.claude/rules/industry-guidance.md` | Industry Guidance Command (document ingest → verified analysis → admin-gated in-app study module), module JSON section kinds, access model, versioning (path-scoped to guidance data + Profiler app + user-triggered by "industry guidance: \<document\>" phrasing) | #1, #2 |
 | `.claude/rules/profiler-app.md` | Profiler Command (company dossier research + profile generation), archival procedure, scheduled refreshes, data-vs-page versioning, recall design (path-scoped to Profiler app files + user-triggered by "profiler \<Company\>" phrasing) | — |
 
 ---

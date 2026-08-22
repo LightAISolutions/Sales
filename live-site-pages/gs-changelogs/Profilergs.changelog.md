@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 16/50`
+`Sections: 17/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.17g] — 2026-08-22 07:05:31 PM EST — v02.86r
+
+### Added
+- Serves the new administrator-only Industry Guidance study modules, with access checked on every request
 
 ## [v01.16g] — 2026-08-18 05:56:47 AM EST — v02.65r
 

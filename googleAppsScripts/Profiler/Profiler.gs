@@ -1,4 +1,4 @@
-var VERSION = "v01.16g";
+var VERSION = "v01.17g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -316,6 +316,964 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 
 // ══════════════
 // PROJECT START — Add your project-specific code here
+
+// PROJECT: ── Industry Guidance ───────────────────────────────────────────
+// Admin-gated document-analysis modules rendered by the Profiler page's
+// Industry Guidance overlay (v01.38w). Content is authored from
+// repository-information/industry-guidance/*.md (the source of truth) and
+// served only after a server-side admin check — the page's role-gated
+// button is UI convenience; this boundary is the real one. The module JSON
+// never lands on public Pages.
+function handleGuidanceOp_(e) {
+  var p = (e && e.parameter) || {};
+  var op = p.gop || '';
+  var session = p.session || '';
+  if (!session || session.length < 32) return { success: false, error: 'SESSION_EXPIRED' };
+  try {
+    var sess = validateSessionForData(session, 'guidance_' + op);
+    var isAdmin = (sess.permissions || []).indexOf('admin') >= 0;
+    if (!isAdmin) return { success: false, error: 'ADMIN_ONLY', role: sess.role || 'viewer' };
+    if (op === 'index') return { success: true, docs: guidanceIndex_() };
+    if (op === 'doc') {
+      var doc = guidanceDoc_(String(p.id || ''));
+      if (!doc) return { success: false, error: 'UNKNOWN_DOC' };
+      return { success: true, doc: doc };
+    }
+    return { success: false, error: 'unknown_gop' };
+  } catch (gErr) {
+    var gMsg = String((gErr && gErr.message) || gErr);
+    if (gMsg.indexOf('SESSION_EXPIRED') >= 0) return { success: false, error: 'SESSION_EXPIRED' };
+    return { success: false, error: gMsg };
+  }
+}
+
+function guidanceDocs_() {
+  return [guidanceDocNvidia800_()];
+}
+
+function guidanceIndex_() {
+  var docs = guidanceDocs_();
+  var out = [];
+  for (var i = 0; i < docs.length; i++) {
+    out.push({ id: docs[i].id, title: docs[i].title, short: docs[i].short,
+               date: docs[i].source && docs[i].source.date, updated: docs[i].updated,
+               sections: (docs[i].sections || []).length });
+  }
+  return out;
+}
+
+function guidanceDoc_(id) {
+  var docs = guidanceDocs_();
+  for (var i = 0; i < docs.length; i++) if (docs[i].id === id) return docs[i];
+  return null;
+}
+
+// Content: NVIDIA 800 VDC white paper (Aug 2026) analysis module.
+// Derived from repository-information/industry-guidance/nvidia-800vdc-analysis.md;
+// every quantitative claim verified against the source PDF by two independent
+// extraction passes (2026-08-22).
+function guidanceDocNvidia800_() {
+  return {
+ "id": "nvidia-800vdc-2026-08",
+ "title": "NVIDIA 800 VDC: Industry Alignment & Execution",
+ "short": "The industry's steering document for AI-factory power, 2026-2027 - analyzed and tailored.",
+ "source": {
+  "doc": "800 VDC Architecture: Industry Alignment & Execution (White Paper)",
+  "publisher": "NVIDIA",
+  "authors": "Jared Huntington & Mike Tu",
+  "date": "August 2026",
+  "pages": 36,
+  "series": "2nd paper - follows the October 2025 feasibility paper",
+  "repo": "repository-information/industry-guidance/ (source PDF + full analysis)"
+ },
+ "updated": "2026-08-22",
+ "tiles": [
+  {
+   "k": "800 VDC",
+   "v": "the converged voltage",
+   "sub": "coexists with 415/480 VAC - not a replacement (p4)"
+  },
+  {
+   "k": "145 → 330 → 570 → ~1,000 kW",
+   "v": "rack power, Gen 1→4",
+   "sub": "the number line to memorize (p7)"
+  },
+  {
+   "k": "4.8 MW",
+   "v": "the standardized power block",
+   "sub": "Option B cluster = Option C block (p19)"
+  },
+  {
+   "k": "Q3 2026 / Q3 2027 / ~2029",
+   "v": "Power Rack / Power Center / next-gen SST",
+   "sub": "the execution calendar (p11, p17, p23)"
+  }
+ ],
+ "sections": [
+  {
+   "id": "what",
+   "title": "What this document is",
+   "read": "3 min",
+   "kind": "prose",
+   "ps": [
+    "The second paper in NVIDIA's 800 VDC series. The first (October 2025) argued **feasibility** - why 800 VDC beats 415/480 VAC as racks pass 200 kW. This one declares that settled and pivots to **execution**: converged deployment architectures with real ratings and dates, engineering design rules ({{grounding}}, protection, fault control), a certification strategy built with UL Solutions, and a 12-month industry work plan. Its own closing words: the work is \"no longer about proving the feasibility of 800 VDC. It is about executing together.\"",
+    "Three structural signals make it the steering document: **CSP alignment is explicit** - a joint Google / Microsoft / NVIDIA position from GTC Taipei 2026 covering the converged direction, phased AC/DC coexistence, common power-block sizing and redundancy philosophy, open OEM development, {{power smoothing}} requirements, and {{OCP}}-hosted standards work. **The equipment scope is bounded** - a deliberately limited set of deployable configurations so OEMs stop spreading engineering across incompatible designs. **Coexistence is doctrine** - 800 VDC \"is not intended to replace existing 415/480 VAC systems\"; every option overlays existing AC facilities, and the {{DSX}} reference design gains 800 VDC options rather than being replaced.",
+    "Equally important is what is *absent*: no efficiency percentages, no copper-savings claims, no TCO math. The sales numbers you know (+157% power through the same copper, -45% copper, ~+5% efficiency) come from the **October 2025 paper** - this one is engineering execution, and its business-value study is explicitly future work (p34)."
+   ],
+   "zh": "When a counterpart cites efficiency numbers, know which paper they came from. This paper's authority is architectural: it defines the slots, the ratings, and the calendar."
+  },
+  {
+   "id": "roadmap",
+   "title": "The rack power roadmap (Gen 1 → 4)",
+   "read": "4 min",
+   "kind": "timeline",
+   "intro": "Figure 3 (\"800 VDC Imperative\", p7) maps rack generations against an approximate 2024-2032 axis with 72-GPU and 144-GPU trendlines. Positions below are approximate per that figure; ratings and dates in gold/blue are stated in the text.",
+   "lanes": {
+    "gen": "Rack generations",
+    "deploy": "Deployment milestones",
+    "eco": "Ecosystem"
+   },
+   "items": [
+    {
+     "x": 2024.6,
+     "lane": "gen",
+     "label": "Gen 1 - GB200/GB300",
+     "sub": "145 kW - 54 VDC in-rack, 60 A whips, 8-to-make-6 (p7)"
+    },
+    {
+     "x": 2026.0,
+     "lane": "gen",
+     "label": "Gen 2 - Vera Rubin NVL72",
+     "sub": "330 kW - AC and DC input options: the hinge generation (p7)"
+    },
+    {
+     "x": 2027.6,
+     "lane": "gen",
+     "label": "Gen 3",
+     "sub": "570 kW - 100% liquid-cooled shelves, 800 VDC into the PSUs (p7)"
+    },
+    {
+     "x": 2029.6,
+     "lane": "gen",
+     "label": "Gen 4 - native 800 VDC",
+     "sub": "~1 MW-class; facility power down-converted at point of load (p7)"
+    },
+    {
+     "x": 2026.6,
+     "lane": "deploy",
+     "label": "Option A Power Rack production",
+     "sub": "Q3 2026 - ~660 kW rack-level conversion (p11)"
+    },
+    {
+     "x": 2027.6,
+     "lane": "deploy",
+     "label": "Option B Power Center deployment",
+     "sub": "as soon as Q3 2027 - 1.6 MW units, 4.8 MW clusters (p17, p19)"
+    },
+    {
+     "x": 2028.3,
+     "lane": "deploy",
+     "label": "Option C DC Power Blocks",
+     "sub": "4.8 MW TRU/SST blocks, containerized; 20 MW Deployment Units (p18-20)"
+    },
+    {
+     "x": 2025.75,
+     "lane": "eco",
+     "label": "First 800 VDC white paper",
+     "sub": "October 2025 - the feasibility argument (p4)"
+    },
+    {
+     "x": 2026.35,
+     "lane": "eco",
+     "label": "GTC Taipei: Google + Microsoft + NVIDIA",
+     "sub": "joint alignment on 800 VDC for AI factories (p6)"
+    },
+    {
+     "x": 2026.62,
+     "lane": "eco",
+     "label": "This paper - shift to execution",
+     "sub": "August 2026 - architectures, engineering, certification (p4)"
+    },
+    {
+     "x": 2029.2,
+     "lane": "eco",
+     "label": "Next-gen SST target",
+     "sub": "\"expected to be launched toward 2029\" - unlocks 34.5 kV MV-direct (p23)"
+    }
+   ],
+   "zh": "The 2029 date belongs to next-gen SST specifically. TRU-based power blocks are being specified now - the competitive window for a shipping TRU fleet is real but tighter than 'nothing until 2029.'"
+  },
+  {
+   "id": "power",
+   "title": "Rack power by generation",
+   "read": "1 min",
+   "kind": "bars",
+   "unit": "kW per rack",
+   "items": [
+    {
+     "label": "Gen 1 - GB200/GB300",
+     "v": 145,
+     "sub": "54 VDC"
+    },
+    {
+     "label": "Gen 2 - VR NVL72",
+     "v": 330,
+     "sub": "54 VDC, AC+DC input"
+    },
+    {
+     "label": "Gen 3",
+     "v": 570,
+     "sub": "800 VDC into PSUs"
+    },
+    {
+     "label": "Gen 4 - native 800 VDC",
+     "v": 1000,
+     "sub": "~1 MW-class (planned)"
+    }
+   ],
+   "note": "Gen 4 plotted at the ~1,000 kVA band shown in Figure 3; the text says \"megawatt-class\" (p7). Why voltage must rise: NVLink packs GPUs within copper reach, density outruns 54 VDC current practicality, and 800 VDC \"significantly reduces current and shrinks the power distribution footprint\" (p7)."
+  },
+  {
+   "id": "options",
+   "title": "The four deployment architectures",
+   "read": "7 min",
+   "kind": "proscons",
+   "intro": "The paper's core claim (p8): these are \"not sequential requirements, but flexible deployment options.\" All coexist inside the {{DSX}} reference design, and the 800 VDC scope is deliberately confined to the GPU-compute slice of the electrical plan so upstream facility design survives. Pick by facility, timeline, and density.",
+   "cards": [
+    {
+     "t": "Existing - AC baseline",
+     "meta": "480 VAC to the rack · today's default",
+     "adv": [
+      "Fully supported; the coexistence anchor",
+      "No new certification or grounding work",
+      "Known supply chain, known electricians"
+     ],
+     "dis": [
+      "100 A AC whips, 4-to-make-3 feeds - interface complexity grows with density",
+      "Conversion to low-voltage DC inside every rack",
+      "Runs out of road as racks pass the hundreds-of-kW mark"
+     ]
+    },
+    {
+     "t": "Option A - Power Rack (rack-level)",
+     "meta": "~660 kW · production Q3 2026 · UL 62368-1 certifiable now",
+     "adv": [
+      "Fastest path - zero upstream facility change",
+      "Standard 19-inch rack; point-to-point 125 A interlocked DC whips (no busbar)",
+      "BBU option: 4 x 20 kW = 80 kW for 60 s, N+1",
+      "Any {{MGX}}-form-factor rack becomes 800 VDC-capable via the 800→54 V shelf (6 x 15 kW)"
+     ],
+     "dis": [
+      "Consumes row footprint next to compute",
+      "12-24 x 100 A AC whips per Power Rack to manage",
+      "Existing row-level AC capacity may need validation",
+      "Density ceiling - explicitly a bridge, not the destination"
+     ]
+    },
+    {
+     "t": "Option B - Power Center (cluster-level)",
+     "meta": "up to 2 MW; deployed ~1.6 MW in 4-to-make-3 = 4.8 MW clusters · as soon as Q3 2027",
+     "adv": [
+      "Eliminates side Power Racks - white space back",
+      "Selective row-by-row 800 VDC inside an AC hall; retrofit without touching upstream electrical rooms",
+      "Mature rectifier families: aggregated SiC shelves or IGBT UPS-derived",
+      "Controlled 800 VDC exposure zones; overhead busway + 125 A {{tap can}}s"
+     ],
+     "dis": [
+      "New certification chain: busway, tap cans, DC breakers, connectors",
+      "Facility-grade grounding and protection coordination now required",
+      "MCCB clearing at the 125 A branch can reach ~20 ms - SSCBs not assumed Day 1",
+      "Depends on the OEM ecosystem delivering (multiple OEMs actively developing)"
+     ]
+    },
+    {
+     "t": "Option C - DC Power Block (data-hall level)",
+     "meta": "~4.8 MW blocks (5 MVA/4.8 MW) · 6000 A switchboard · 20 MW Deployment Units",
+     "adv": [
+      "Fewest conversion stages; MV AC → transformer → rectification → DC switchboard → 1250 A busways",
+      "Block-redundant 4+1 catcher via DC {{STS}} - DC needs no phase synchronization",
+      "Modularized outdoor containerized packages: prefab, factory-tested, less indoor electrical room",
+      "Scales as 20 MW DUs (4 Scalable Units) toward gigawatt campuses; ready for ~1 MW native racks and 8 MW clusters at 1+1",
+      "Future flexibility: DC UPS with batteries, BESS, renewables, DC microgrid"
+     ],
+     "dis": [
+      "Biggest certification and {{AHJ}} lift of the three",
+      "TRU/SST supply chain still forming",
+      "Whole-hall architectural commitment rather than incremental adoption"
+     ]
+    },
+    {
+     "t": "Option C next-gen - MV direct conversion",
+     "meta": "34.5 kV AC → 800 VDC · ~10 MW blocks · future roadmap",
+     "adv": [
+      "Eliminates intermediate LV stages entirely",
+      "Named enabler: matured SSTs - high density, compact, integrated control",
+      "Simplified expansion for multi-hundred-MW and GW-scale factories"
+     ],
+     "dis": [
+      "Explicitly \"beyond the deployment horizons of current 800 VDC architectures\"",
+      "Gated on next-gen SST (~2029) and 34.5 kV-class development"
+     ]
+    }
+   ],
+   "zh": "Option C initial implementation is TRU-or-SST - and its containerized-prefab definition is exactly the form Zhonhen ships. The competitive question a buyer will ask: how does a 2.5-3.6 MW Panama/SuperX lineup compose into NVIDIA's standardized 4.8 MW blocks, 1250 A busways and tap-can interfaces?"
+  },
+  {
+   "id": "trusst",
+   "title": "TRU vs SST - and the Panama name-check",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "The paper's own device-class framing (p21-23) - which matches the TRU-vs-SST distinction in your Zhonhen prep exactly. Three TRU implementation families are named: IGBT UPS-derived conversion; aggregated SiC power shelves behind front-end transformers; and **the \"Panama Architecture\"** - a line-frequency phase-shifting transformer at the MV entry feeding centralized rectification, relying \"more heavily on passive magnetic components, offering a simpler and highly familiar design philosophy\" (p22).",
+   "cols": [
+    "",
+    "TRU - the near-term block",
+    "SST - the 2029 device"
+   ],
+   "rows": [
+    [
+     "Conversion",
+     "Line-frequency transformer + centralized rectification",
+     "High-frequency switching + high-frequency isolation transformer"
+    ],
+    [
+     "Maturity",
+     "\"Mature transformer technologies\" - utility/industrial precedent",
+     "\"Actively evaluated as a potential future implementation path\""
+    ],
+    [
+     "Fault behavior",
+     "\"Strong fault isolation capability\"",
+     "Integrated control; current-limiting by design"
+    ],
+    [
+     "MV compatibility",
+     "\"Improved compatibility with existing 34.5 kV utility distribution\"",
+     "Today ~15 kV-class; 34.5 kV needs insulation, protection, thermal, interconnection work"
+    ],
+    [
+     "Practical scale",
+     "\"Highly practical for approximately 5 MW-class power block deployment\"",
+     "Future blocks toward ~10 MW as the tech matures"
+    ],
+    [
+     "Timing",
+     "Initial Option C implementation - now",
+     "\"Next generation SST is expected to be launched toward 2029\""
+    ]
+   ],
+   "note": "Analysis: NVIDIA has formally blessed the TRU path - naming Panama as one of its three canonical implementations - for the first-deployed power-block slot. \"Mature magnetics, shipping today\" is now the reference document's own logic, not just a vendor pitch.",
+   "zh": "The strategy-report flag is resolved: the 'simpler and highly familiar' phrase is verified at p22, and the document is in the repo. Cite it as 'NVIDIA's August 2026 white paper' and paraphrase in customer settings - the notice bars verbatim reproduction, and the paper names an architecture, not a company."
+  },
+  {
+   "id": "faults",
+   "title": "AC vs DC fault behavior (Table 1)",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "The genuinely new technical territory. The counter-intuitive teaching point: DC's weakness (no zero crossing) is paired with a structural strength - **converter-fed systems can limit fault current at the source**, which a stiff AC utility feed cannot. The paper's whole arc-flash strategy stands on that: reduce available current (I) via current-limited sources, reduce clearing time (t) via {{SSCB}}s (p32).",
+   "cols": [
+    "Topic",
+    "AC behavior",
+    "DC behavior",
+    "Key consideration"
+   ],
+   "rows": [
+    [
+     "Fault current",
+     "Natural zero-crossings every cycle",
+     "**Continuous - no zero-crossing**",
+     "Faster interruption, current limiting, arc-fault detection"
+    ],
+    [
+     "Fault energy",
+     "Higher contribution from utility and rotating machines",
+     "**Often lower in converter-limited systems**",
+     "Depends on source type and control architecture"
+    ],
+    [
+     "Shock hazard",
+     "Can cause muscle lock-on",
+     "Often a single muscle contraction",
+     "Strict personnel protection either way"
+    ],
+    [
+     "Protection devices",
+     "Mechanical breakers widely used",
+     "**SSCBs and hybrid breakers - ultra-fast clearing**",
+     "Faster clearing = less fault energy"
+    ],
+    [
+     "Ground-fault detection",
+     "Overcurrent + ground-fault relays",
+     "**{{IMD}} and/or {{RCM}} commonly required**",
+     "Depends on grounding architecture"
+    ],
+    [
+     "Series arcing",
+     "Periodically weakened; easier to self-extinguish",
+     "**Can sustain; harder to extinguish**",
+     "Connector design + arc detection critical"
+    ],
+    [
+     "Parallel arcing / arc flash",
+     "High fault current, significant arc-flash energy",
+     "Converter-limited systems may reduce incident energy",
+     "Current limiting + rapid isolation"
+    ]
+   ],
+   "note": "Row labels verified against p24. This table is the vocabulary of every 800 VDC engineering conversation for the next two years."
+  },
+  {
+   "id": "grounding",
+   "title": "Grounding: four schemes under evaluation",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "800 VDC distribution is **two-wire** - positive and return conductors - so grounding architecture decides both personnel safety and fault detectability (p24-26). Four candidates:",
+   "cols": [
+    "Scheme",
+    "Mechanism",
+    "Strengths",
+    "Weaknesses"
+   ],
+   "rows": [
+    [
+     "**HRMG** - high-resistance midpoint",
+     "Midpoint resistor network grounds both conductors symmetrically",
+     "Balanced conductor-to-ground voltages; better EMC; **uniform detection on both conductors**; keeps operating after a first fault",
+     "More components; resistor sizing discipline"
+    ],
+    [
+     "**HRRG** - high-resistance return",
+     "Return conductor grounded through resistance",
+     "Same current-limiting benefit; simpler",
+     "**Delayed detection of return-conductor faults**"
+    ],
+    [
+     "Floating / ungrounded",
+     "No intentional ground",
+     "Near-zero first-fault current; rides through one fault",
+     "Leakage and capacitance still create paths; **detection and location are hard** - needs IMD + locator systems"
+    ],
+    [
+     "Solid",
+     "Return bonded to ground",
+     "Simplest; **fast, sensitive detection**; may suit future native racks",
+     "**Highest fault current** - needs fast devices and minimal ground-bond impedance"
+    ]
+   ],
+   "note": "The paper's lean, reading p25: HRMG \"provides a more uniform fault monitoring, earlier fault identification, and improved system reliability while maintaining low ground-fault current levels.\" The final choice is deferred to system-level studies - so in conversation, say 'under evaluation, HRMG favored on balance.'"
+  },
+  {
+   "id": "zones",
+   "title": "Protection zones, the interlock, and SSCBs",
+   "read": "5 min",
+   "kind": "prose",
+   "ps": [
+    "**Two protection zones (p26-27).** The *Facility Distribution Zone* (TRU/SST output → tap-can input) is qualified-personnel territory: continuous {{IMD}}/IRM insulation monitoring, alarms **without** immediate shutdown to preserve service, and protective relays that coordinate fast source shutdown through the rectifiers on real overcurrent. The *Rack Interface Zone* (tap can → compute rack) sees the most human hands, so it gets {{RCM}} for fast leakage detection and the strictest hardware discipline.",
+    "**The interlock sequence (p27)** is EV-charging lineage made explicit: the 125 A DC whip is hardwired to the tap can behind a normally-open contactor and **stays de-energized during installation and removal**. The rack-side connector's mechanical lock must engage before an enable signal closes the upstream contactor; on release, the contactor opens *before* the connector unlocks. Nothing is hot in a human hand.",
+    "**SSCBs (p27-29)** interrupt electronically before fault current peaks - sub-millisecond isolation versus several milliseconds - slashing let-through energy (I²t), damage and arc-flash risk. NVIDIA's two target ratings: **125 A air-cooled** for the 800→54 V shelves inside compute racks, and **1250 A, likely liquid-cooled**, for future native-800 VDC rack interfaces; the practical ceiling of air-cooled SSCB current is under evaluation. The sober counterweight: **MCCBs remain the primary Day-1 branch device** (availability, supply chain, certification familiarity) with ~20 ms clearing at 125 A branches. Figure 15 (Siemens data, 200 A/µs rise) shows the shape: a fuse peaks near 9.4 kA around 3 ms; a thermal-mag breaker near 5.7 kA clearing in ~6-7 ms; a hybrid in ~2.5 ms; the SSCB holds current near zero inside a millisecond. *(Chart values read from an image - treat as shape, not datasheet.)*",
+    "**Power smoothing moves rack-side (p4).** AI training's synchronized swings are tamed *at the compute rack*: \"localized peak shaving, power smoothing, and slew rate control using minimal energy storage (e.g., electrolytic capacitors)\" so the grid sees a stable rack interface; facility/BTM storage is optional for interconnection needs. The 1,200 J per PSU (p12) is that philosophy in hardware."
+   ],
+   "zh": "Grid-code compliance is where your ERCOT knowledge composes with this: NVIDIA specifies the rack-interface behavior; NOGRR282/FERC govern the facility's behavior at the meter. Deep storage on the DC bus remains the compliance-by-construction story for ride-through - and off-grid, generator protection."
+  },
+  {
+   "id": "cert",
+   "title": "Certification, regulation, and the 12-month plan",
+   "read": "3 min",
+   "kind": "prose",
+   "ps": [
+    "**System-level requirements first (p31).** The stated lesson of the alignment year: \"equipment certification alone is insufficient.\" Eight workstreams define the system contract - power quality, voltage regulation and transient limits, {{power smoothing}} expectations, grounding methodologies, protection coordination, fault-current management, rack interface requirements, and end-to-end stability criteria. Simulation comes before hardware: frequency-domain stability, source output impedance and module sharing, distribution inductance restrictions, ripple limits - so multi-OEM interoperability is designed in, not discovered.",
+    "**The regulatory strategy is reuse, not invention (p31, p33).** Work with UL Solutions, OEMs and operators; lean on existing frameworks (the Power Rack is already certifiable under UL 62368-1 for UL and IEC regions); engage UL, NFPA, IEEE and IEC on the targeted gaps - DC grounding and protection methods, arc-flash evaluation methodology, busway/connector/breaker qualification, installation safety. {{AHJ}} enablement gets its own workstream: installation best practices, inspection guidelines, commissioning procedures and training so local inspectors can approve these builds.",
+    "**The next 12 months (p4, p32-34):** accelerate equipment development, validate system-level performance, run pilot deployments, and advance standards - plus, explicitly future work, FAT/SAT operational procedures and a **business value and reliability assessment**. The TCO case is promised, not delivered, in this paper."
+   ]
+  },
+  {
+   "id": "zhpanel",
+   "title": "For the Zhonhen conversation",
+   "read": "4 min",
+   "kind": "callout",
+   "ps": [
+    "**1 - The quote is verified, in hand.** Page 22 names the \"Panama Architecture\" as a TRU implementation with the exact phrase - *\"a simpler and highly familiar design philosophy.\"* Cite it as NVIDIA's August 2026 white paper; paraphrase in customer settings (the notice bars verbatim reproduction) and remember it names an architecture, not any company - it puts nobody on a roster.",
+    "**2 - The window holds but tightens.** The 2029 date attaches to **next-gen SST** and MV-direct conversion specifically. TRU-based ~4.8 MW blocks are being specified now, containerized, with OEMs converging - and Option B hits deployment as soon as Q3 2027. The defensible claim: *the industry's own reference document says the near-term block is a TRU - the device class Zhonhen has productized since 2019 - while the SST future arrives ~2029.* Zhonhen's edge is a shipping fleet and prefab maturity, not an empty Western calendar.",
+    "**3 - 4.8 MW is the block to answer for.** NVIDIA standardizes 4.8 MW blocks, 4+1 catcher STS, 6000 A switchboards, 1250 A busways, tap-can interfaces, 20 MW Deployment Units. Panama modules are 2.5 MW; SuperX is 3.6 MW. Prepare the composition story: paralleling to 4.8 MW, busway and tap-can interface compatibility, catcher participation.",
+    "**4 - Prefab containers are now table stakes.** Option C is *defined* as modularized, factory-tested, containerized delivery. The differentiator shifts to delivered fleet history at these voltages and speed-to-power - 'shipping the 2027 slot today.'",
+    "**5 - Vocabulary upgrade.** HRMG/HRRG grounding, IMD/RCM monitoring, the two protection zones, interlocked 125 A whips, SSCB ratings (125 A air / 1250 A liquid), 4+1 catcher STS. Fluency here is what 'knows the space' sounds like in late 2026."
+   ]
+  },
+  {
+   "id": "ledger",
+   "title": "Claims ledger - every number, page-referenced",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "Independently verified by two extraction passes over the source PDF. Use these as citations in dossier work.",
+   "rows": [
+    [
+     "Gen 1 (GB200/GB300): 145 kW, 54 VDC, 60 A whips, 8-to-make-6",
+     "p7"
+    ],
+    [
+     "Gen 2 (Vera Rubin NVL72): 330 kW, AC and DC input options",
+     "p7"
+    ],
+    [
+     "Gen 3: 570 kW, 100% liquid-cooled shelves, 800 VDC into PSUs",
+     "p7"
+    ],
+    [
+     "Gen 4: native 800 VDC, ~1 MW-class (Fig 3 band ~1,000 kVA), axis 2024-2032",
+     "p7"
+    ],
+    [
+     "Existing baseline: 480 VAC, 100 A whips, 4-to-make-3",
+     "p9"
+    ],
+    [
+     "Option A Power Rack: ~660 kW; production Q3 2026",
+     "p10-11"
+    ],
+    [
+     "Power Rack input: 12 x 100 A whips, IEC 60309, 415-480 VAC 3-phase, no neutral",
+     "p12"
+    ],
+    [
+     "Power Rack shelves: 6 x 18.3 kW PSUs, air-cooled, 1,200 J each",
+     "p12"
+    ],
+    [
+     "BBU option: 4 x 20 kW = 80 kW for 60 s, N+1; 125 A 800 VDC cross cables",
+     "p12-13"
+    ],
+    [
+     "Compute-rack DC shelf: 800→54 V, 6 x 15 kW PSUs (MGX); ~90 kW 1RU",
+     "p13-14"
+    ],
+    [
+     "Power Rack certified under UL 62368-1; UL + IEC regions",
+     "p14"
+    ],
+    [
+     "Next-gen Power Rack: 100% liquid-cooled; 55 kW/RU shelves",
+     "p14"
+    ],
+    [
+     "Option B Power Center: adjustable to 2 MW; ~1.6 MW x 4-to-make-3 = 4.8 MW cluster",
+     "p15, p19"
+    ],
+    [
+     "Option B distribution: 1250 A feeders, overhead busway, 125 A tap cans (MCCB/SSCB)",
+     "p15"
+    ],
+    [
+     "MCCB clearing at 125 A branch: up to ~20 ms",
+     "p16"
+    ],
+    [
+     "Option B deployment as soon as Q3 2027; multiple OEMs developing",
+     "p17"
+    ],
+    [
+     "Option C: ~4.8 MW blocks (5 MVA/4.8 MW), 6000 A switchboard, parallel 1250 A busways",
+     "p18-21"
+    ],
+    [
+     "Option C redundancy: 4+1 catcher via DC STS - no phase-sync needed on DC",
+     "p19"
+    ],
+    [
+     "20 MW Deployment Unit = 4 Scalable Units; ~1 MW native racks; 8 MW clusters 1+1",
+     "p20"
+    ],
+    [
+     "Option C delivery: modularized outdoor containerized packages, factory-tested",
+     "p18"
+    ],
+    [
+     "TRU: mature, strong fault isolation, 34.5 kV-compatible, practical at ~5 MW-class",
+     "p21-22"
+    ],
+    [
+     "TRU approaches: IGBT UPS-derived; aggregated SiC shelves; \"Panama Architecture\" (\"simpler and highly familiar\")",
+     "p22"
+    ],
+    [
+     "SST: ~15 kV-class today; 34.5 kV needs development; next-gen toward 2029",
+     "p22-23"
+    ],
+    [
+     "MV direct: 34.5 kV AC → 800 VDC, ~10 MW blocks, future roadmap",
+     "p23"
+    ],
+    [
+     "800 VDC is two-wire; grounding candidates HRMG / HRRG / floating / solid",
+     "p24-25"
+    ],
+    [
+     "Two protection zones: facility (IMD/IRM) and rack interface (RCM); whip de-energized until locked",
+     "p26-27"
+    ],
+    [
+     "SSCB targets: 125 A air-cooled and 1250 A liquid-cooled; MCCB primary Day 1",
+     "p28-29"
+    ],
+    [
+     "Fig 15 (Siemens, 200 A/µs): fuse ~9.4 kA peak; thermal-mag ~5.7 kA ~6-7 ms; hybrid ~2.5 ms; SSCB sub-ms (approx, read from image)",
+     "p29-30"
+    ],
+    [
+     "Google/Microsoft/NVIDIA alignment at GTC Taipei 2026; OCP is the standards forum",
+     "p5-6"
+    ],
+    [
+     "Power smoothing at the rack with minimal storage; facility/BTM storage optional",
+     "p4"
+    ],
+    [
+     "Certification: system-level requirements first; UL Solutions collaboration; AHJ enablement",
+     "p30-33"
+    ],
+    [
+     "Future work: FAT/SAT practices; business-value/TCO study still to come",
+     "p34"
+    ],
+    [
+     "Coexistence doctrine: 800 VDC complements 415/480 VAC - no replacement",
+     "p4, p35"
+    ],
+    [
+     "Next 12 months: equipment development, validation, pilots, standards/regulatory",
+     "p4"
+    ]
+   ]
+  },
+  {
+   "id": "guardrails",
+   "title": "What the paper does NOT say",
+   "read": "1 min",
+   "kind": "callout",
+   "tone": "warn",
+   "ps": [
+    "**No efficiency percentages, copper-savings figures, or TCO numbers** - those live in the October 2025 paper and vendor decks. Do not attribute them to this document.",
+    "**No power-equipment vendor names** beyond the Siemens chart credit and UL Solutions. \"Panama\" names an architecture, not a company - it is not a roster.",
+    "**No TRU-vs-SST efficiency comparison** - only qualitative attributes.",
+    "**No AC retirement** - coexistence \"for the foreseeable future\" (p35)."
+   ]
+  },
+  {
+   "id": "cards",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Rack power by generation, Gen 1 → 4?",
+     "a": "145 kW (GB200/GB300) → 330 kW (Vera Rubin NVL72) → 570 kW → ~1 MW-class native 800 VDC. (p7)"
+    },
+    {
+     "q": "Which generation is the hinge, and why?",
+     "a": "Gen 2 (VR NVL72, 330 kW): the first with both AC and DC input options - the coexistence pivot in hardware. (p7)"
+    },
+    {
+     "q": "Option A in one line?",
+     "a": "Power Rack: ~660 kW of rack-level AC→800 VDC conversion in a 19-inch rack, 125 A interlocked DC whips, production Q3 2026, UL 62368-1. (p10-14)"
+    },
+    {
+     "q": "Option B in one line?",
+     "a": "Power Center: end-of-row rectification, ~1.6 MW units in 4-to-make-3 for 4.8 MW clusters, overhead 800 VDC busway + 125 A tap cans, deployment as soon as Q3 2027. (p14-17)"
+    },
+    {
+     "q": "Option C in one line?",
+     "a": "DC Power Block: ~4.8 MW TRU/SST blocks at the hall edge, 6000 A switchboard, 1250 A busways, 4+1 catcher via DC STS, 20 MW Deployment Units, containerized delivery. (p17-21)"
+    },
+    {
+     "q": "The two Power Rack storage numbers?",
+     "a": "1,200 J per PSU for input-current shaping; BBU option 4 x 20 kW = 80 kW for 60 seconds. (p12)"
+    },
+    {
+     "q": "Why can DC sources be *safer* than AC on fault energy?",
+     "a": "Converter-fed systems can current-limit at the source (rectifiers, DC/DCs, batteries), so available fault current - and arc-flash incident energy - can be engineered down. AC utility feeds cannot do this. (p24, p32)"
+    },
+    {
+     "q": "The four grounding candidates - and the paper's lean?",
+     "a": "HRMG, HRRG, floating, solid. HRMG favored on balance: symmetric grounding, uniform detection on both conductors, operation continues after a first fault. Final choice deferred to system studies. (p24-26)"
+    },
+    {
+     "q": "The two protection zones?",
+     "a": "Facility Distribution Zone (TRU/SST output → tap cans): IMD/IRM monitoring, alarm-before-shutdown. Rack Interface Zone (tap can → rack): RCM, interlocked de-energized whips. (p26-27)"
+    },
+    {
+     "q": "Recite the interlock sequence.",
+     "a": "Whip hardwired to tap can behind a normally-open contactor → connector mechanically locks at the rack → enable signal closes the contactor → power flows. Release: contactor opens BEFORE the lock releases. (p27)"
+    },
+    {
+     "q": "NVIDIA's two SSCB target ratings?",
+     "a": "125 A air-cooled (800→54 V shelves inside compute racks) and 1250 A likely liquid-cooled (future native-800 VDC rack interfaces). MCCBs remain the Day-1 device (~20 ms at 125 A). (p16, p28-29)"
+    },
+    {
+     "q": "TRU vs SST in two lines?",
+     "a": "TRU: line-frequency transformer + rectification - mature, strong fault isolation, 34.5 kV-compatible, practical at ~5 MW-class. SST: kHz switching + HF isolation - denser and controllable, but ~15 kV-class today; next-gen toward 2029. (p21-23)"
+    },
+    {
+     "q": "What exactly does the paper say about 'Panama'?",
+     "a": "One of three TRU implementation approaches: a line-frequency phase-shifting transformer at the MV entry feeding centralized rectification - passive magnetics, 'a simpler and highly familiar design philosophy.' (p22)"
+    },
+    {
+     "q": "The standardized building blocks of Option C scale-out?",
+     "a": "4.8 MW power blocks → 20 MW Deployment Unit (4 Scalable Units) → replicate toward hundreds of MW and GW-scale factories. (p19-20)"
+    },
+    {
+     "q": "Who aligned publicly, where, and in what forum does the standards work live?",
+     "a": "Google, Microsoft and NVIDIA at GTC Taipei 2026; open standards work hosted at OCP. (p5-6)"
+    },
+    {
+     "q": "What business question does this paper explicitly NOT answer yet?",
+     "a": "TCO / business value - a 'Business Value and Reliability Assessment' is listed as future work. Efficiency percentages live in the October 2025 paper. (p34)"
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "title": "Self-test",
+   "read": "10 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A colleague says 'NVIDIA's roadmap replaces AC with 800 VDC.' The paper's actual position?",
+     "c": [
+      "Correct - AC is deprecated at Gen 4",
+      "800 VDC complements and coexists with 415/480 VAC; adoption is incremental by option",
+      "AC remains only for network/support racks",
+      "Undefined - left to operators"
+     ],
+     "a": 1,
+     "why": "Coexistence is doctrine (p4, p35): options overlay existing AC facilities; DSX keeps AC-based pods fully supported."
+    },
+    {
+     "q": "Which statement about Gen 3 racks is right?",
+     "c": [
+      "330 kW with AC input only",
+      "570 kW, 100% liquid-cooled shelves, 800 VDC into the PSUs",
+      "145 kW on 60 A whips",
+      "Native 800 VDC in-rack distribution"
+     ],
+     "a": 1,
+     "why": "Gen 3 = 570 kW, liquid-cooled shelves, 800 VDC into the PSUs; native 800 VDC in-rack is Gen 4 (p7)."
+    },
+    {
+     "q": "Option B's cluster math is…",
+     "c": [
+      "2 MW x 2 = 4 MW",
+      "1.6 MW x 4-to-make-3 = 4.8 MW effective",
+      "4.8 MW x 4+1 catcher",
+      "660 kW x 8"
+     ],
+     "a": 1,
+     "why": "~1.6 MW Power Centers in 4-to-make-3 redundancy give 4.8 MW effective cluster capacity (p19). 4+1 catcher belongs to Option C."
+    },
+    {
+     "q": "Why does Option C's DC STS catcher work more simply than an AC transfer switch?",
+     "c": [
+      "DC contacts are smaller",
+      "DC sources need no phase synchronization to parallel or transfer",
+      "It uses fuses instead of breakers",
+      "The catcher is never loaded"
+     ],
+     "a": 1,
+     "why": "Unlike AC, DC sources parallel/transfer through voltage regulation and current sharing - no phase sync (p19)."
+    },
+    {
+     "q": "The whip you can touch during install is safe because…",
+     "c": [
+      "It is only 54 V",
+      "Rubber shrouds",
+      "It is de-energized until the connector locks and an enable signal closes the upstream contactor",
+      "Current is limited to 5 A"
+     ],
+     "a": 2,
+     "why": "Normally-open contactor + mechanical lock + enable signal; on release the contactor opens before unlock (p27)."
+    },
+    {
+     "q": "Which grounding scheme detects faults uniformly on BOTH conductors and keeps operating after a first fault?",
+     "c": [
+      "Solid",
+      "Floating",
+      "HRRG",
+      "HRMG"
+     ],
+     "a": 3,
+     "why": "HRMG's midpoint resistor network grounds both conductors symmetrically - uniform monitoring, earlier identification, continued operation (p25)."
+    },
+    {
+     "q": "Day 1 at a 125 A tap can, the branch protection is most likely…",
+     "c": [
+      "A 1250 A SSCB",
+      "An MCCB with clearing up to ~20 ms",
+      "A fuse only",
+      "A hybrid breaker mandated by UL"
+     ],
+     "a": 1,
+     "why": "MCCBs are the practical Day-1 device on availability and certification grounds; SSCBs are the long-term preference (p16, p29)."
+    },
+    {
+     "q": "DC arc-flash strategy in the paper reduces incident energy by…",
+     "c": [
+      "Bigger enclosures",
+      "Reducing available fault current at sources AND clearing time via SSCBs",
+      "PPE requirements only",
+      "Lowering the bus to 400 V"
+     ],
+     "a": 1,
+     "why": "Incident energy is I and t: current-limited sources cut I; SSCB-class interruption cuts t (p32)."
+    },
+    {
+     "q": "What does the paper say about SST readiness for hyperscale MV?",
+     "c": [
+      "Ready now at 34.5 kV",
+      "Most platforms are ~15 kV-class; 34.5 kV needs development; next-gen toward 2029",
+      "SST is rejected in favor of TRU permanently",
+      "SSTs are only for EV charging"
+     ],
+     "a": 1,
+     "why": "p22-23: 15 kV-class today, 34.5 kV work needed, next-gen SST expected toward 2029 - the future path, not the present one."
+    },
+    {
+     "q": "Which claim should you NOT attribute to this paper?",
+     "c": [
+      "4.8 MW standardized power blocks",
+      "'~+5% end-to-end efficiency vs AC'",
+      "125 A / 1250 A SSCB targets",
+      "Power Rack production Q3 2026"
+     ],
+     "a": 1,
+     "why": "Efficiency and copper numbers come from the October 2025 paper; this one deliberately omits the sales math (analysis section 11)."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "DSX",
+   "d": "NVIDIA's reference design framework for AI-factory deployment - pod architecture, rack methodology, power/cooling integration. Today standardizes AC-based (480 VAC) GPU pods; gaining 800 VDC options."
+  },
+  {
+   "t": "OCP",
+   "d": "Open Compute Project - the open-standards forum where the 800 VDC data-hall architecture work and lessons-learned sharing are hosted."
+  },
+  {
+   "t": "Power Rack",
+   "d": "Option A's 19-inch rack of AC→800 VDC power shelves placed beside compute racks; ~660 kW initially; production Q3 2026."
+  },
+  {
+   "t": "Power Center",
+   "d": "Option B's end-of-row rectification unit - adjustable to 2 MW, deployed ~1.6 MW in 4-to-make-3 for 4.8 MW clusters."
+  },
+  {
+   "t": "DC Power Block",
+   "d": "Option C's hall-edge conversion block (~4.8 MW, drawn 5 MVA/4.8 MW): MV in, transformer, rectification, 6000 A DC switchboard, 1250 A busways out."
+  },
+  {
+   "t": "TRU",
+   "d": "Transformer Rectifier Unit - line-frequency transformer plus centralized rectification. Mature, strong fault isolation, 34.5 kV-compatible, practical at ~5 MW-class."
+  },
+  {
+   "t": "SST",
+   "d": "Solid-State Transformer - high-frequency switching with high-frequency isolation. Denser and controllable; ~15 kV-class today; next-gen expected toward 2029."
+  },
+  {
+   "t": "Panama Architecture",
+   "d": "A TRU approach named in the paper: line-frequency phase-shifting transformer at the MV entry, multiple phase-shifted AC outputs, centralized rectification - passive magnetics, 'simpler and highly familiar.'"
+  },
+  {
+   "t": "BBU",
+   "d": "Battery Backup Unit - in Option A: 4 x 20 kW shelves giving 80 kW for 60 seconds, N+1."
+  },
+  {
+   "t": "PSU",
+   "d": "Power Supply Unit. Power Rack shelves use 6 x 18.3 kW (AC→800 V, 1,200 J each); compute racks use 6 x 15 kW (800→54 V)."
+  },
+  {
+   "t": "MGX",
+   "d": "NVIDIA's modular rack/server form factor; any MGX rack gains 800 VDC capability via the 800→54 V power shelf."
+  },
+  {
+   "t": "tap can",
+   "d": "The 125 A branch take-off box on the 800 VDC busway - houses branch protection (MCCB or SSCB) and feeds the interlocked power whip."
+  },
+  {
+   "t": "power whip",
+   "d": "The flexible branch cable from tap can (or facility) to a rack. AC: 100 A whips. DC: 125 A interlocked, de-energized until locked."
+  },
+  {
+   "t": "busway",
+   "d": "Overhead prefabricated power distribution bus. Option B/C row-level: 1250 A, 800 VDC."
+  },
+  {
+   "t": "STS",
+   "d": "Static Transfer Switch - solid-state source transfer. Option C uses a DC STS for 4+1 block-catcher redundancy; DC needs no phase synchronization."
+  },
+  {
+   "t": "catcher",
+   "d": "A spare power block standing behind N active blocks (4+1), picking up load on block failure via the STS."
+  },
+  {
+   "t": "Deployment Unit",
+   "d": "Option C's 20 MW replication unit - four 4.8 MW Scalable Units - the building block toward GW-scale campuses."
+  },
+  {
+   "t": "SSCB",
+   "d": "Solid-State Circuit Breaker - interrupts electronically in sub-milliseconds, before fault current peaks, cutting I²t. NVIDIA targets 125 A air-cooled and 1250 A liquid-cooled."
+  },
+  {
+   "t": "MCCB",
+   "d": "Molded-Case Circuit Breaker - the mature mechanical device; Day-1 branch protection at ~20 ms clearing."
+  },
+  {
+   "t": "IMD",
+   "d": "Insulation Monitoring Device - continuously watches insulation resistance in the facility zone; degradation alarms before shutdown."
+  },
+  {
+   "t": "RCM",
+   "d": "Residual Current Monitoring - compares positive vs return current at tap cans to catch leakage/ground faults fast; preferred in the rack-interface zone."
+  },
+  {
+   "t": "HRMG",
+   "d": "High-Resistance Midpoint Grounding - both conductors grounded symmetrically through a midpoint resistor network. The paper's favored balance of safety and detectability."
+  },
+  {
+   "t": "HRRG",
+   "d": "High-Resistance Return Grounding - return conductor grounded through resistance; simpler than HRMG but slower to see return-side faults."
+  },
+  {
+   "t": "AHJ",
+   "d": "Authority Having Jurisdiction - the local electrical inspector/approver. The paper funds training and guidelines so AHJs can approve 800 VDC builds."
+  },
+  {
+   "t": "grounding",
+   "d": "How the DC system references earth - decides fault current magnitude, detection method, and personnel safety. Four schemes under evaluation."
+  },
+  {
+   "t": "power smoothing",
+   "d": "Taming AI training's synchronized load swings at the rack interface with minimal storage (electrolytic caps) - peak shaving and slew-rate control - so the grid sees a stable load."
+  },
+  {
+   "t": "4-to-make-3",
+   "d": "Redundancy scheme: four feeds/units sized so any three carry the load - one can fail with no capacity loss."
+  },
+  {
+   "t": "I²t",
+   "d": "Let-through energy - the integral of fault current squared over clearing time. What SSCBs minimize and equipment damage scales with."
+  },
+  {
+   "t": "UL 62368-1",
+   "d": "The IT/AV equipment safety standard the Option A Power Rack certifies under today - the reuse-existing-frameworks strategy in action."
+  },
+  {
+   "t": "IEC 60309",
+   "d": "The industrial connector family used for the Power Rack's 100 A AC input whips (4100P6W/P7W, 3-phase, no neutral)."
+  }
+ ]
+};
+}
+// PROJECT: ── end Industry Guidance ───────────────────────────────────────
+
 // PROJECT END
 // ══════════════
 
@@ -843,6 +1801,13 @@ function doPost(e) {
   // mirrors the no-file ops as a fallback.
   if (action === "note") {
     return ContentService.createTextOutput(JSON.stringify(handleNoteOp_(e)))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Industry Guidance ops via fetch() — same transport rationale as
+  // the note ops above; admin-gated server-side in handleGuidanceOp_.
+  if (action === "guidance") {
+    return ContentService.createTextOutput(JSON.stringify(handleGuidanceOp_(e)))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -3104,6 +4069,9 @@ function doGet(e) {
         // PROJECT: GET mirror of the doPost note ops (no-file calls only —
         // file payloads exceed URL limits and must use the POST path)
         apiResult = handleNoteOp_(e);
+      } else if (apiOp === 'guidance') {
+        // PROJECT: GET mirror of the guidance ops (read-only, no payloads)
+        apiResult = handleGuidanceOp_(e);
       } else {
         apiResult = { error: 'unknown_op' };
       }

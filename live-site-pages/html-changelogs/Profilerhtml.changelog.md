@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 37/50`
+`Sections: 38/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.38w] — 2026-08-22 07:05:31 PM EST — v02.86r
+
+### Added
+- New Industry Guidance area for administrators — a reading-room button in the page header opens a library of interactive study modules with section navigation, reading-progress tracking, timelines, comparison tables, flashcards, self-tests and a hoverable glossary
 
 ## [v01.37w] — 2026-08-22 04:39:06 AM EST — v02.81r
 
