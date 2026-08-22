@@ -93,8 +93,8 @@
     }
   ],
   "decisionMakers": [
-    { "name": "Kim Dong-Myung (김동명)", "title": "Executive President & CEO", "background": ["CEO — LG Energy Solution (term Mar 2024–Mar 2027)", "Former Head of the Advanced Automotive Battery Division"] },
-    { "name": "Lee Chang Sil", "title": "Executive Vice President & CFO", "background": ["CFO — LG Energy Solution (board term Dec 2020–Mar 2028)", "Former Senior Vice President — LG Chem"] },
+    { "name": "Kim Dong-Myung (김동명)", "title": "Executive President & CEO", "photo": "images/execs/lg-energy-solution-myung.png", "background": ["CEO — LG Energy Solution (term Mar 2024–Mar 2027)", "Former Head of the Advanced Automotive Battery Division"] },
+    { "name": "Lee Chang Sil", "title": "Executive Vice President & CFO", "photo": "images/execs/lg-energy-solution-sil.png", "background": ["CFO — LG Energy Solution (board term Dec 2020–Mar 2028)", "Former Senior Vice President — LG Chem"] },
     { "name": "Hyung Kim", "title": "Head of ESS Battery Division", "background": ["Leads the ESS business through the AI-DC pivot; quoted on the PGE and ESS strategy announcements"] },
     { "name": "Jaehong Park", "title": "CEO & President, LG Energy Solution Vertech", "background": ["Runs the US turnkey BESS integration subsidiary (ex-NEC Energy Solutions)"] }
   ],

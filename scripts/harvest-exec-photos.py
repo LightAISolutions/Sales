@@ -500,6 +500,133 @@ def build_sheets(cands, outdir, per=16, cols=4):
     return made
 
 
+# ------------------------------------------------------------ pdf track ----
+# Regulatory filings (A-share / HKEX annual reports) are text-only -- verified
+# on CATL's 2025 annual report: every page naming multiple executives carried
+# zero images. Designed ESG/sustainability reports DO carry portraits, usually
+# a CEO-message photo plus a board-of-directors grid. PDFs have no alt text, so
+# an image is matched to a person by the caption printed directly beneath it.
+
+PDF_MIN_PT = 28          # ignore rules, bullets and icons
+PDF_ZOOM = 3.0           # render clip regions rather than extracting the raw
+                         # xref, so masks/alpha composite as a reader sees them
+
+
+def pdf_captions(page, rect):
+    """Candidate caption strings around an image, one per layout convention.
+
+    Two layouts both occur in practice: a name printed under a grid portrait
+    (Samsung SDI's board page) and a name printed to the right of a small
+    portrait heading a bio block (Huawei's director pages). Both are returned
+    and scored -- checking only one silently misses the other.
+    """
+    words = page.get_text("words")
+    out = []
+
+    below = [w for w in words
+             if w[1] >= rect.y1 - 6 and w[1] <= rect.y1 + 46
+             and not (w[2] < rect.x0 - 26 or w[0] > rect.x1 + 26)]
+    if below:
+        below.sort(key=lambda w: (round(w[1]), w[0]))
+        out.append(" ".join(w[4] for w in below[:14]))
+
+    right = [w for w in words
+             if w[0] >= rect.x1 - 4 and w[0] <= rect.x1 + 220
+             and w[3] >= rect.y0 - 12 and w[1] <= rect.y1 + 12]
+    if right:
+        right.sort(key=lambda w: (round(w[1]), w[0]))
+        # only the first line or two -- bio prose below often names other people
+        out.append(" ".join(w[4] for w in right[:10]))
+
+    above = [w for w in words
+             if w[3] <= rect.y0 + 6 and w[3] >= rect.y0 - 34
+             and not (w[2] < rect.x0 - 26 or w[0] > rect.x1 + 26)]
+    if above:
+        above.sort(key=lambda w: (round(w[1]), w[0]))
+        out.append(" ".join(w[4] for w in above[-10:]))
+    return out
+
+
+def caption_match(caption, forms):
+    """Confidence that a caption names the person described by `forms`."""
+    n = norm(caption)
+    best = 0
+    for full, first, last in forms:
+        if full and full in n:
+            best = max(best, 100)
+        elif first in n.split() and last in n.split():
+            best = max(best, 88)
+    return best
+
+
+def run_pdfs(gaps, outdir, manifest):
+    """Harvest headshots out of company-published PDF reports."""
+    import pymupdf
+    os.makedirs(outdir, exist_ok=True)
+    cache = os.path.join(outdir, "_pdfcache")
+    os.makedirs(cache, exist_ok=True)
+    by_slug = {c["slug"]: c for c in gaps}
+    flat = []
+    for slug, urls in manifest.items():
+        co = by_slug.get(slug)
+        if not co:
+            print(f"  --   {slug}: no remaining gaps, skipped", flush=True)
+            continue
+        targets = {p["name"]: aliases(p["name"]) for p in co["missing"]}
+        used, found = set(), 0
+        for url in urls:
+            local = os.path.join(cache, re.sub(r"[^A-Za-z0-9.]+", "_", url)[-90:])
+            if not os.path.exists(local):
+                r = get(url, tries=2)
+                if r is None or not r.ok or "pdf" not in r.headers.get(
+                        "content-type", "application/pdf"):
+                    print(f"  !!   {slug}: unreachable {url[:70]}", flush=True)
+                    continue
+                open(local, "wb").write(r.content)
+            try:
+                doc = pymupdf.open(local)
+            except Exception as e:
+                print(f"  !!   {slug}: unreadable pdf ({e})", flush=True)
+                continue
+            for pno in range(len(doc)):
+                page = doc[pno]
+                images = page.get_images(full=True)
+                if not images:
+                    continue
+                for info in images:
+                    for rect in page.get_image_rects(info[0]):
+                        if rect.width < PDF_MIN_PT or rect.height < PDF_MIN_PT:
+                            continue
+                        caps = pdf_captions(page, rect)
+                        if not caps:
+                            continue
+                        for ename, forms in targets.items():
+                            sc = max((caption_match(c, forms) for c in caps),
+                                     default=0)
+                            cap = next((c for c in caps
+                                        if caption_match(c, forms) == sc), "")
+                            if sc < 88 or ename in used:
+                                continue
+                            stem = filestem(ename)
+                            pix = page.get_pixmap(
+                                clip=rect, matrix=pymupdf.Matrix(PDF_ZOOM, PDF_ZOOM))
+                            path = os.path.join(outdir, f"{slug}-{stem}.png")
+                            pix.save(path)
+                            used.add(ename)
+                            found += 1
+                            flat.append({"exec": ename, "slug": slug, "score": sc,
+                                         "file": path, "img": f"{url}#page={pno+1}",
+                                         "page": url, "alt": cap[:90]})
+                            print(f"  OK   {slug:20s} {ename[:24]:24s} "
+                                  f"p{pno+1} cap={cap[:34]!r}", flush=True)
+            doc.close()
+        if not found:
+            print(f"  --   {slug:20s} no caption matches", flush=True)
+    json.dump(flat, open(os.path.join(outdir, "_candidates.json"), "w"), indent=1)
+    print(f"\npdf staged: {len(flat)}")
+    return flat
+
+
 # ----------------------------------------------------------------- wire ----
 def wire(entries, apply=True):
     """Insert "photo"/"photoCredit" after the exec's "title" line.
@@ -575,6 +702,9 @@ def main():
         have, tot = coverage()
         print(f"coverage {have}/{tot} execs; {sum(len(c['missing']) for c in g)} "
               f"missing across {len(g)} companies -> {dest}")
+    elif cmd == "pdfs":
+        gaps = json.load(open(sys.argv[2]))
+        run_pdfs(gaps, sys.argv[3], json.load(open(sys.argv[4])))
     elif cmd in ("firstparty", "commons"):
         gaps = json.load(open(sys.argv[2]))
         if len(sys.argv) > 4:

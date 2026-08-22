@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.83r] — 2026-08-22 04:05:21 PM EST
+
+> **Prompt:** "continue with your recommendation. Also, I have already added the two field notes to Profiler."
+
+### Added
+- New **PDF track** in `scripts/harvest-exec-photos.py` (`pdfs` subcommand) — harvests headshots out of company-published PDF reports by matching each embedded image to the caption printed beside it, since PDFs carry no alt text. Two caption layouts are scored (name below a grid portrait, name to the right of a bio-block portrait) and images are captured by rendering the clip region rather than extracting the raw xref, so masks and alpha composite as a reader sees them
+- 4 verified headshots from company ESG/annual reports (exec photo coverage 160 → 164 of 320; dossiers with at least one photo 43 → 46): **Samsung SDI** (Joo Sun Choi), **LG Energy Solution** (Kim Dong-Myung, Lee Chang Sil) and **Huawei Digital Power** (Hou Jinlong). All three companies previously had zero photos
+
+### Changed
+- README structure tree: exec-image directory description now reflects 164 images across 46 companies and names PDF reports as a photo source
+
+### Fixed
+- PDF caption matching evaluated only the text *below* an image, so layouts that print the name to the *right* of a bio-block portrait never matched — Huawei's director pages were silently missed until both bands were scored
+
+### Security
+- Every PDF candidate was inspected on a rendered contact sheet before wiring. A re-run of the first-party track re-surfaced the Core Scientific "Yadin Rozov" image (alt text scores 100) and it was **rejected again** — the file at that URL is the company logo, not a person
+
+### Notes on scope
+- **The recommendation this push acted on was only partly borne out.** Regulatory filings — A-share and HKEX annual reports — are text-only: verified directly on CATL's 2025 annual report, where every page naming multiple executives carried zero images. Only *designed* ESG/sustainability reports and corporate annual reports contain portraits, and those show **boards**, not full executive teams, so most named directors are not the operating executives the dossiers track. Yield was 4 photos, not the ~60 the channel was proposed to reach
+- Playwright still cannot reach corporate sites through the proxy (`ERR_CONNECTION_RESET`, re-tested), so JS-rendered leadership pages — the largest remaining block — stay out of reach
 
 ## [v02.82r] — 2026-08-22 03:18:46 PM EST
 

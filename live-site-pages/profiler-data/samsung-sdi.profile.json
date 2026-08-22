@@ -100,7 +100,7 @@
     }
   ],
   "decisionMakers": [
-    { "name": "Joo Sun Choi (최주선)", "title": "President & CEO (since November 2024)", "background": ["President & CEO — Samsung Display (2020–2024)", "Samsung Electronics: Head of DRAM Development Center; Head of Memory Sales & Marketing; Head of America Office (DS)", "Ph.D. Electronics Engineering, KAIST"] },
+    { "name": "Joo Sun Choi (최주선)", "title": "President & CEO (since November 2024)", "photo": "images/execs/samsung-sdi-choi.png", "background": ["President & CEO — Samsung Display (2020–2024)", "Samsung Electronics: Head of DRAM Development Center; Head of Memory Sales & Marketing; Head of America Office (DS)", "Ph.D. Electronics Engineering, KAIST"] },
     { "name": "Han Jae Cho", "title": "EVP, Head of Global Sales", "background": ["Led the Mercedes-Benz first-supply signing (April 2026)"] },
     { "name": "Yong Lak Joo", "title": "EVP, Head of R&D Center", "background": ["Fronted the lithium-metal/gel-polymer research published in Joule with Columbia University (2026)"] },
     { "name": "Hyunwook Kim", "title": "VP, ESS Sales Group", "background": ["Runs ESS commercial relationships (Tesvolt and European channel)"] }
