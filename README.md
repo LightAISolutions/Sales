@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-21 09:00:04 PM EST` · Repo version: `v02.72r`
+Last updated: `2026-08-21 09:47:30 PM EST` · Repo version: `v02.73r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -79,7 +79,13 @@ Last updated: `2026-08-21 09:00:04 PM EST` · Repo version: `v02.72r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/amazon.profile.json">amazon.profile.json</a>    — Amazon dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/applied-digital.profile.json">applied-digital.profile.json</a> — Applied Digital dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/applied-digital.study.json">applied-digital.study.json</a> — Applied Digital in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bechtel.profile.json">bechtel.profile.json</a>   — Bechtel dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bechtel.study.json">bechtel.study.json</a>     — Bechtel in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/black-veatch.profile.json">black-veatch.profile.json</a> — Black &amp; Veatch dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/black-veatch.study.json">black-veatch.study.json</a> — Black &amp; Veatch in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bloom-energy.profile.json">bloom-energy.profile.json</a> — Bloom Energy dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/burns-mcdonnell.profile.json">burns-mcdonnell.profile.json</a> — Burns &amp; McDonnell dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/burns-mcdonnell.study.json">burns-mcdonnell.study.json</a> — Burns &amp; McDonnell in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/byd.profile.json">byd.profile.json</a>       — BYD dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/byd.study.json">byd.study.json</a>     — BYD in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/catl.profile.json">catl.profile.json</a>      — CATL dossier profile
@@ -112,6 +118,8 @@ Last updated: `2026-08-21 09:00:04 PM EST` · Repo version: `v02.72r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/iren.profile.json">iren.profile.json</a> — IREN dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/iren.study.json">iren.study.json</a> — IREN in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/jinko.profile.json">jinko.profile.json</a>     — Jinko dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/kiewit.profile.json">kiewit.profile.json</a>    — Kiewit dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/kiewit.study.json">kiewit.study.json</a>     — Kiewit in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/lambda.profile.json">lambda.profile.json</a> — Lambda dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/lambda.study.json">lambda.study.json</a> — Lambda in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/lg-energy-solution.profile.json">lg-energy-solution.profile.json</a> — LG Energy Solution dossier profile
@@ -128,6 +136,8 @@ Last updated: `2026-08-21 09:00:04 PM EST` · Repo version: `v02.72r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/openai.profile.json">openai.profile.json</a>    — OpenAI dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/oracle.profile.json">oracle.profile.json</a>    — Oracle dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/panasonic.profile.json">panasonic.profile.json</a> — Panasonic dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/primoris.profile.json">primoris.profile.json</a>  — Primoris dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/primoris.study.json">primoris.study.json</a>   — Primoris in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/quanta-services.profile.json">quanta-services.profile.json</a> — Quanta Services dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rosendin.profile.json">rosendin.profile.json</a>  — Rosendin dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/samsung-sdi.profile.json">samsung-sdi.profile.json</a> — Samsung SDI dossier profile
@@ -217,7 +227,7 @@ Last updated: `2026-08-21 09:00:04 PM EST` · Repo version: `v02.72r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">Profilergs.changelog.md</a>               — Profiler GAS changelog
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog-archive.md">Profilergs.changelog-archive.md</a>       — Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Company-published executive headshots for Profiler dossiers (Applied Digital ×4, Core Scientific ×3, DPR ×5, Fluence ×5, HITT ×3, IREN ×4, Lambda ×4, Mortenson ×1, Nebius ×5, TeraWulf ×5, Turner ×4, Wärtsilä ×4)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Company-published executive headshots for Profiler dossiers (Applied Digital ×4, Bechtel ×5, Black &amp; Veatch ×4, Burns &amp; McDonnell ×3, Core Scientific ×3, DPR ×5, Fluence ×5, HITT ×3, IREN ×4, Lambda ×4, Mortenson ×1, Nebius ×5, Primoris ×3, TeraWulf ×5, Turner ×4, Wärtsilä ×4)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Code_Ready_Voice_1.mp3">Code_Ready_Voice_1.mp3</a>      — [template] "Code Ready" splash sound

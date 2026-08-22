@@ -47,6 +47,28 @@
       "lastUpdated": "2026-08-21"
     },
     {
+      "slug": "bechtel",
+      "name": "Bechtel",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "The megaproject dynasty — ENR #2 at $19.5B with a $58.2B backlog; the only EPC to bring 21st-century US nuclear online, three concurrent LNG megatrains, and NVIDIA's partner for modularized gigawatt AI factories.",
+      "hq": "Reston, VA, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
+    },
+    {
+      "slug": "black-veatch",
+      "name": "Black & Veatch",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "The interconnection specialist — client-owned substations that halve hyperscale grid timelines; ENR #6 Power + #8 Water + #1 Hydrogen (ACES Delta), and an equal seat in one of the first US SMR design-build JVs.",
+      "hq": "Overland Park, KS, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
+    },
+    {
       "slug": "bloom-energy",
       "name": "Bloom Energy",
       "categories": [
@@ -57,6 +79,17 @@
       "ticker": "NYSE: BE",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "burns-mcdonnell",
+      "name": "Burns & McDonnell",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "ENR's #1 power design firm eleven years running — the largest US substation design group and a claimed >50% RICE share, fused to Tier-3 data-center design-build under a 100% ESOP.",
+      "hq": "Kansas City, MO, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
     },
     {
       "slug": "byd",
@@ -316,6 +349,17 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "kiewit",
+      "name": "Kiewit",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "The power picks-and-shovels of the AI boom — ~11 GW of gas EPC (Homer City 4.5 GW), completed HVDC (CHPE), and the Oklo SMR constructor seat; employee-owned at ENR #4.",
+      "hq": "Omaha, NE, USA",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
+    },
+    {
       "slug": "lambda",
       "name": "Lambda",
       "categories": [
@@ -455,6 +499,18 @@
       "ticker": "TYO: 6752",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "primoris",
+      "name": "Primoris",
+      "categories": [
+        "integrator"
+      ],
+      "tagline": "The 'outside-the-walls' AI contractor — #4 US solar EPC, Meta Nebraska and Crusoe gas power, record $13.9B backlog; 2026's guidance collapse made it a project-controls turnaround story.",
+      "hq": "Dallas, TX, USA",
+      "ticker": "NYSE: PRIM",
+      "status": "active",
+      "lastUpdated": "2026-08-21"
     },
     {
       "slug": "quanta-services",

@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.73r] — 2026-08-21 09:47:30 PM EST
+
+> **Prompt:** "run batch C"
+
+### Added
+- **Profiler Batch C — five EPC/engineering dossiers** (registry now **57 companies**), each researched via a single-agent run under the Source Priority Protocol (~44–63 sources evaluated per company), authored in the active `intel-briefing` style at schema v2, profileVersion 1, all categorized `integrator`:
+  - **`live-site-pages/profiler-data/bechtel.profile.json`** — Bechtel (family-held, 5th generation): ENR #2 at $19.5B, $58.2B backlog; only EPC to complete 21st-century US nuclear (Vogtle), Natrium construction start, Poland AP1000 site takeover, three concurrent LNG megatrains, NVIDIA Omniverse DSX AI-factory modularization partner; the circulating Microsoft-Fairwater association did NOT substantiate (Walsh builds Mount Pleasant) — recorded as a verification result
+  - **`live-site-pages/profiler-data/kiewit.profile.json`** — Kiewit (employee-owned): ENR #4; ~11 GW AI-driven gas-EPC stack (Homer City 4.5 GW — largest US gas plant under construction — NRG/GE Vernova ~5.4 GW venture, Oglethorpe 1.4 GW), Oklo Aurora SMR lead constructor, CHPE HVDC completed, US-Japan $550B framework naming; Key Bridge Phase 2 off-ramp documented
+  - **`live-site-pages/profiler-data/burns-mcdonnell.profile.json`** — Burns & McDonnell (100% ESOP): ENR #1 Power design 11 straight years, largest US substation design group claim, >50% claimed RICE share; record $8.6B 2025 revenue; the Santee Cooper data-center transmission EPC as the utility-side capture template; Certus/1898 & Co. MWBE lawsuit flagged
+  - **`live-site-pages/profiler-data/black-veatch.profile.json`** — Black & Veatch (100% ESOP): the client-owned-substation specialist (six-site colocation program; two 300 MW hyperscale units); ENR #6 Power + #8 Water + #1 Hydrogen (ACES Delta EPC); equal seat in the Aecon-Kiewit-B&V Cascade SMR JV; Dycom wireless divestiture and the adverse Boldt litigation turn documented
+  - **`live-site-pages/profiler-data/primoris.profile.json`** — Primoris (NYSE: PRIM — the batch's only listed company): #4 US solar contractor, Meta Nebraska $250M+ and Crusoe off-grid gas data-center work, PayneCrest acquisition; full actual-vs-consensus financials covering the 2024-25 beat streak and the 2026 guidance collapse (-57%), securities class action, and record $13.9B backlog
+- **Five in-app study guides** (`bechtel.study.json`, `kiewit.study.json`, `burns-mcdonnell.study.json`, `black-veatch.study.json`, `primoris.study.json`) — complementary curricula (6 sections + 12 concept flashcards each): Bechtel covers LNG liquefaction, lump-sum risk, nuclear FOAK economics, and gigawatt modularization; Kiewit covers combined-cycle plants, HVDC, advanced reactors, coal-site conversion, and the turbine queue; Burns & McDonnell covers the AEC industry map, transmission lines, interconnection, offshore engineering, OT security, and public procurement; Black & Veatch covers green hydrogen, grid stability/synchronous condensers, water engineering, the Owner's Engineer role, private networks, and construction disputes; Primoris covers solar-farm construction, public-contractor earnings mechanics, backlog quality, percentage-of-completion accounting, and behind-the-meter gas
+- **15 executive photos** in `live-site-pages/images/execs/` (Bechtel ×5, Black & Veatch ×4, Burns & McDonnell ×3, Primoris ×3 — company-published only, WebP sources converted to JPEG; Kiewit publishes no leadership page, so its decision makers have no photos by protocol) — directory now 62 photos across 16 companies
+- **Post-earnings Routine armed for Primoris** (`trig_01QfYxVDmk3bHUqgvr3czAmT`): one-shot 2026-11-03 13:00 UTC (Q3 results estimated ~11-02; the fired session verifies, refreshes, and re-arms for Q4)
+
+### Changed
+- **`live-site-pages/profiler-data/profiler-companies.json`** — registry 52 → 57 companies (five EPCs inserted alphabetically as `integrator`; Primoris carries ticker NYSE: PRIM)
+- **`README.md`** — structure tree +10 rows for the new profile/study JSONs; execs photo-count line updated to 16 companies / 62 photos
+- **`.claude/rules/profiler-app.md`** — quarterly private-company sweep expanded from 12 to 16 companies (Bechtel, Kiewit, Burns & McDonnell, Black & Veatch joined 2026-08-21 with per-company watch items; Primoris noted as public with its own trigger); the sweep Routine (`trig_01UVzjF6Y91Gb2MzKdDAznd9`) renamed and re-prompted to match; Primoris one-shot added to the Currently armed list
+- Render check: Playwright verified all five dossiers render from the roster and by direct `#slug` navigation with study-guide buttons present and zero console errors
 
 ## [v02.72r] — 2026-08-21 09:00:04 PM EST
 
