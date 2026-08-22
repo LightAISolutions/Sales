@@ -3,13 +3,15 @@
   "slug": "hitt",
   "name": "HITT Contracting",
   "legalName": "HITT Contracting, Inc.",
-  "categories": ["integrator"],
+  "categories": [
+    "integrator"
+  ],
   "hq": "Falls Church, VA, USA (new 270,000 sq ft net-zero HQ delivering early 2027)",
   "founded": "1937 (Warren & Myrtle Hitt, as W.A. HITT Decorating Co., Arlington VA; renamed HITT Contracting 1989)",
   "ownership": "private",
   "employees": "3,300+ (company, 2026; up from ~1,600 in March 2024)",
   "website": "https://www.hitt.com",
-  "summary": "BLUF: HITT is America's #1-ranked data-center builder by revenue (ENR 2025 telecom/data-center list; listed first on BD+C's 2025 ranking) — a family-owned Falls Church, VA contractor that converted a high-velocity DC-metro interiors business into the fastest-compounding mission-critical franchise in the industry. Revenue ran $5.6B (2023) → $8.7B (2024, first ENR top-10) → $13.0B (2025, ENR #8), with ENR survey data attributing 82% of 2025 revenue to the data-center category, delivered 100% CM-at-risk. The franchise is anchored inside Northern Virginia's Data Center Alley (the world's largest market: 4,900 MW built, 5,500 MW planned) with QTS (7M+ sq ft delivered together), Vantage, Corscale, Microsoft (48 MW Alviso campus, groundbroke June 2026), and federal/GSA work; its calling card is speed — a 22.5 MW facility in a record 180 days (Sterling II), a 250,000 sq ft Vantage building pad-to-ribbon in seven months. Two 2025-26 acquisitions (Central Consulting — tri-state healthcare; Brycon — Intel/Samsung cleanroom builder) extend the book into healthcare and semiconductors. Watch items: a ~$24M uninsured layer from the $51M Glenstone settlement (Virginia Court of Appeals affirmed the insurer's late-notice denial 2026-08-04), an April 2025 fatal trench collapse at the Vantage Ashburn campus still without a published citation outcome, and 82% single-sector concentration. Collection gap: fully private — no margins, backlog, or balance-sheet disclosure; revenue is self-reported to rankers.",
+  "summary": "BOTTOM LINE UP FRONT: HITT is America's #1-ranked data-center builder by revenue (ENR 2025 telecom/data-center list; listed first on BD+C's 2025 ranking) — a family-owned Falls Church, VA contractor that converted a high-velocity DC-metro interiors business into the fastest-compounding mission-critical franchise in the industry. Revenue ran $5.6B (2023) → $8.7B (2024, first ENR top-10) → $13.0B (2025, ENR #8), with ENR survey data attributing 82% of 2025 revenue to the data-center category, delivered 100% CM-at-risk. The franchise is anchored inside Northern Virginia's Data Center Alley (the world's largest market: 4,900 MW built, 5,500 MW planned) with QTS (7M+ sq ft delivered together), Vantage, Corscale, Microsoft (48 MW Alviso campus, groundbroke June 2026), and federal/GSA work; its calling card is speed — a 22.5 MW facility in a record 180 days (Sterling II), a 250,000 sq ft Vantage building pad-to-ribbon in seven months. Two 2025-26 acquisitions (Central Consulting — tri-state healthcare; Brycon — Intel/Samsung cleanroom builder) extend the book into healthcare and semiconductors. Watch items: a ~$24M uninsured layer from the $51M Glenstone settlement (Virginia Court of Appeals affirmed the insurer's late-notice denial 2026-08-04), an April 2025 fatal trench collapse at the Vantage Ashburn campus still without a published citation outcome, and 82% single-sector concentration. Collection gap: fully private — no margins, backlog, or balance-sheet disclosure; revenue is self-reported to rankers.",
   "ecosystemRole": "The AI buildout's speed specialist: the #1 US data-center GC by revenue, converting hyperscaler and colocation capex into commissioned megawatts faster than any ranked peer, from a home base inside the world's largest data-center market.",
   "productsAndServices": [
     {
@@ -25,7 +27,12 @@
       ],
       "positioning": "#1 ENR 2025 Telecommunications/Data Center Contractor and listed first on BD+C's 2025 data-center ranking, ahead of Holder, DPR, Clayco, Turner, Whiting-Turner, Fortis, JE Dunn, and Mortenson. Differentiation is velocity culture inherited from interiors work plus home-market depth in NoVA subcontractor networks — not self-performed power (contrast Mortenson) or global scale (contrast Turner).",
       "soldThrough": "Repeat-relationship CM-at-risk contracts with colocation operators and hyperscalers; 83% repeat clients company-wide",
-      "targetSegments": ["Colocation operators (QTS, Vantage, Corscale)", "Hyperscalers (Microsoft)", "Federal agencies (GSA)", "Telecom"],
+      "targetSegments": [
+        "Colocation operators (QTS, Vantage, Corscale)",
+        "Hyperscalers (Microsoft)",
+        "Federal agencies (GSA)",
+        "Telecom"
+      ],
       "roadmap": "Microsoft Alviso to 2028; continued NoVA pipeline against a market >90% pre-committed through 2026-27; trades-pipeline investment via the NOVA community-college partnership"
     },
     {
@@ -39,7 +46,11 @@
       ],
       "positioning": "The client-relationship flywheel: tenant-side work seeds relationships that graduate into base-building and mission-critical awards",
       "soldThrough": "Negotiated and competitively bid CM contracts across 16 US offices",
-      "targetSegments": ["Corporate tenants", "Law firms", "Developers/landlords"],
+      "targetSegments": [
+        "Corporate tenants",
+        "Law firms",
+        "Developers/landlords"
+      ],
       "roadmap": "Steady-state volume engine funding national expansion"
     },
     {
@@ -53,7 +64,12 @@
       ],
       "positioning": "Mid-tier federal player with intelligence-community credentials; complements rather than rivals the data-center book",
       "soldThrough": "Federal IDIQ/multiple-award vehicles and JV structures",
-      "targetSegments": ["Intelligence community", "NASA", "GSA", "Cleared corporate tenants"],
+      "targetSegments": [
+        "Intelligence community",
+        "NASA",
+        "GSA",
+        "Cleared corporate tenants"
+      ],
       "roadmap": "JSC task orders through the IDIQ period"
     },
     {
@@ -67,7 +83,11 @@
       ],
       "positioning": "Cleanroom capability (Brycon) is the strategic piece — semiconductor fabs and data centers draw on the same technical-construction talent pool and the same capex supercycle",
       "soldThrough": "Acquired-entity brands operating within HITT's national platform",
-      "targetSegments": ["Health systems (tri-state)", "Semiconductor manufacturers", "Aerospace/EV manufacturers"],
+      "targetSegments": [
+        "Health systems (tri-state)",
+        "Semiconductor manufacturers",
+        "Aerospace/EV manufacturers"
+      ],
       "roadmap": "Integrate Brycon; scale healthcare beyond the tri-state base"
     },
     {
@@ -81,7 +101,9 @@
       ],
       "positioning": "Long-horizon differentiation bets a two-owner private structure can fund without quarterly pressure — brand value with sustainability-minded hyperscaler clients",
       "soldThrough": "Internal capability embedded in project delivery",
-      "targetSegments": ["All HITT markets; hyperscalers with net-zero commitments"],
+      "targetSegments": [
+        "All HITT markets; hyperscalers with net-zero commitments"
+      ],
       "roadmap": "New HQ delivery early 2027 with 20+ on-site research projects planned"
     }
   ],
@@ -288,62 +310,217 @@
       {
         "period": "2025 (ENR 2026 list)",
         "metrics": [
-          { "name": "Revenue", "actual": "$13.04B (ENR); $13.1B (company)", "expected": "", "verdict": "inline", "result": "ENR Top 400 rank #8, up from #10 — ahead of Fluor and Mortenson; ~+50% YoY" },
-          { "name": "Revenue mix", "actual": "82% telecom (data centers); 100% CM-at-risk", "expected": "", "verdict": "inline", "result": "ENR 2026 survey data — implies ~$10.7B of data-center revenue (derivation, unaudited)" },
-          { "name": "Volume", "actual": "1,131 projects; ~$2M average project size", "expected": "", "verdict": "inline", "result": "The interiors/mission-critical barbell in company Year-in-Review figures" }
+          {
+            "name": "Revenue",
+            "actual": "$13.04B (ENR); $13.1B (company)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR Top 400 rank #8, up from #10 — ahead of Fluor and Mortenson; ~+50% YoY"
+          },
+          {
+            "name": "Revenue mix",
+            "actual": "82% telecom (data centers); 100% CM-at-risk",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR 2026 survey data — implies ~$10.7B of data-center revenue (derivation, unaudited)"
+          },
+          {
+            "name": "Volume",
+            "actual": "1,131 projects; ~$2M average project size",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The interiors/mission-critical barbell in company Year-in-Review figures"
+          }
         ],
         "commentary": "Second consecutive ~50%+ growth year, driven almost entirely by data-center work. No margin, backlog, or balance-sheet disclosure exists; the ~$24M uninsured Glenstone layer (affirmed August 2026) lands against this undisclosed base."
       },
       {
         "period": "2024 (ENR 2025 list)",
         "metrics": [
-          { "name": "Revenue", "actual": "$8.7B (+55% YoY)", "expected": "", "verdict": "inline", "result": "ENR Top 400 rank #10 — first-ever top-10 finish; #1 on ENR's 2025 Telecommunications/Data Center Contractors list" }
+          {
+            "name": "Revenue",
+            "actual": "$8.7B (+55% YoY)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR Top 400 rank #10 — first-ever top-10 finish; #1 on ENR's 2025 Telecommunications/Data Center Contractors list"
+          }
         ],
         "commentary": "The breakout year: from ~#22 to the top 10 in a single list cycle, and the year the #1 data-center-contractor rank was first claimed."
       },
       {
         "period": "2023 (ENR 2024 list)",
         "metrics": [
-          { "name": "Revenue", "actual": "$5.6B", "expected": "", "verdict": "inline", "result": "ENR rank ~#22 — the pre-breakout baseline; revenue would rise ~2.3x in the following two years" }
+          {
+            "name": "Revenue",
+            "actual": "$5.6B",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR rank ~#22 — the pre-breakout baseline; revenue would rise ~2.3x in the following two years"
+          }
         ],
         "commentary": "Historical markers: first $100K year 1939; first $1M project 1977; ENR Top 100 debut 2001; Top 50 debut (#43) 2018 — the 2023-25 data-center surge is unprecedented in the company's 89-year history."
       }
     ]
   },
   "sources": [
-    { "label": "Virginia Lawyers Weekly — Insurance: late notice obviates duty to indemnify (VA Ct. App. affirms St. Paul vs HITT, 2026-08-04)", "url": "https://valawyersweekly.com/2026/08/17/insurance-late-notice-obviates-duty-to-indemnify/", "date": "2026-08-17" },
-    { "label": "HITT — JetZero Greensboro groundbreaking", "url": "https://www.hitt.com/news-hub/jetzero-greensboro-groundbreaking/", "date": "2026-06-22" },
-    { "label": "HITT — Breaks ground on Microsoft Alviso datacenter campus (48 MW, San Jose)", "url": "https://www.hitt.com/news-hub/hitt-breaks-ground-microsoft-alviso-datacenter/", "date": "2026-06-10" },
-    { "label": "HITT — Awarded NASA Johnson Space Center contract (up to $300M)", "url": "https://www.hitt.com/news-hub/hitt-awarded-nasa-johnson-space-center-contract/", "date": "2026-06-03" },
-    { "label": "The Job Walk — ENR 2026 Top 400 top-10 data analysis (HITT #8, $13.0B; 82% telecom; 100% CM-at-risk)", "url": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10", "date": "2026-05-27" },
-    { "label": "Construction Dive — The top commercial contractors of 2026 (ENR)", "url": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/", "date": "2026-05-22" },
-    { "label": "HITT — NOVA Manassas skilled-trades center partnership (HITT Energy & Innovation Lab)", "url": "https://www.hitt.com/news-hub/northern-virginia-community-college-manassas-skilled-trade-center-hitt-energy-innovation-lab/", "date": "2026-05-05" },
-    { "label": "HITT — New headquarters tops out (270,000 sq ft, net-zero target)", "url": "https://www.hitt.com/news-hub/hitt-new-hq-topping-out/", "date": "2026-03-19" },
-    { "label": "Albuquerque Journal — New Mexico's Brycon Corp joins $13 billion national contractor HITT", "url": "https://www.abqjournal.com/business/new-mexicos-brycon-corp-joins-13-billion-national-contractor-hitt/2987942", "date": "2026-02-24" },
-    { "label": "HITT — McCarthy HITT and NGA celebrate Next NGA West completion", "url": "https://www.hitt.com/news-hub/mccarthy-hitt-celebrate-next-nga-west-completion/", "date": "2026-01-26" },
-    { "label": "HITT — 2025 Year in Review ($13.1B, 1,131 projects)", "url": "https://www.hittyearinreview.com/", "date": "2026-01" },
-    { "label": "BD+C Giants 400 — Top data center construction firms for 2025 (HITT listed first)", "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025", "date": "2025-10-07" },
-    { "label": "WTOP/JLL — Northern Virginia data centers top 4,900 MW", "url": "https://wtop.com/business-finance/2025/06/northern-virginia-data-centers-have-topped-4900-megawatts-what-does-that-mean/", "date": "2025-06-23" },
-    { "label": "HITT — Named ENR #10 top general contractor; #1 data-center contractor (2025)", "url": "https://www.hitt.com/news-hub/hitt-enr-top-general-contractor-2025/", "date": "2025-05-27" },
-    { "label": "Loudoun Times-Mirror — Worker killed in Ashburn trench collapse (Vantage campus; HITT GC)", "url": "https://www.loudountimes.com/0local-or-not/worker-killed-in-ashburn-trench-collapse/article_efbc9df1-a3ca-456e-9f27-7a6a165c6ddb.html", "date": "2025-04" },
-    { "label": "Construction Dive — HITT acquires Central Consulting & Contracting (tri-state healthcare)", "url": "https://www.constructiondive.com/news/hitt-acquires-central-consulting-contracting/742924/", "date": "2025-03-19" },
-    { "label": "FFXnow — Groundbreaking kicks off HITT HQ redevelopment near West Falls Church Metro", "url": "https://www.ffxnow.com/2025/01/24/groundbreaking-kicks-off-hitt-hq-redevelopment-near-west-falls-church-metro/", "date": "2025-01-24" },
-    { "label": "Woods Rogers — Contractor's $25M insurance claim waived because of untimely notice (Glenstone)", "url": "https://www.woodsrogers.com/insights/publications/contractors-25m-insurance-claim-waived-because-of-untimely-notice-to-insurer", "date": "2025-01-02" },
-    { "label": "Virginia Business — HITT Contracting promotes senior leadership (Antonides co-president; Bardin retirement)", "url": "https://virginiabusiness.com/hitt-contracting-promotes-senior-leadership/", "date": "2024-03-01" },
-    { "label": "QTS — Construction update: Q&A with HITT Contracting (7M+ sq ft together; 26 states)", "url": "https://q.com/resources/qts-construction-update-qa-with-hitt-contracting/", "date": "2024-01-30" },
-    { "label": "Construction Dive — HITT unveils plans for high-tech HQ in Falls Church", "url": "https://www.constructiondive.com/news/hitt-new-headquarters-falls-church/701675/", "date": "2023-12-06" },
-    { "label": "HITT — Topping out mission critical projects coast-to-coast (QTS Richmond/NoVA/Portland; Corscale)", "url": "https://www.hitt.com/news-hub/topping-out-mission-critical-projects/", "date": "2023-02-08" },
-    { "label": "HITT — Expanding mission critical services in the Southeast (700 MW commissioned as of 2020)", "url": "https://hitt.com/hitt-expanding-mission-critical-services-southeast", "date": "2020-07-01" },
-    { "label": "Construction Dive — HITT, Fluor, Turner rise to the challenges of data center construction (Vantage speed figures)", "url": "https://www.constructiondive.com/news/hitt-fluor-turner-rise-to-the-challenges-of-data-center-construction/570536/", "date": "2020-01-22" },
-    { "label": "HITT — Next era of leadership (2017 succession: Roy CEO, Hitt/Millar co-chairmen)", "url": "https://hitt.com/next-era-leadership", "date": "2018-02-19" },
-    { "label": "Artnet News — Glenstone Museum contractor lawsuit", "url": "https://news.artnet.com/art-world/glenstone-museum-lawsuit-1344704", "date": "2018" },
-    { "label": "HITT — Mission Critical / data center contractor (2+ GW, 20M+ sq ft, rankings)", "url": "https://www.hitt.com/mission-critical/" },
-    { "label": "HITT — Who we are (history timeline, ownership)", "url": "https://www.hitt.com/who-we-are/" },
-    { "label": "HITT — Sterling II data center project page (22.5 MW in 180 days)", "url": "https://www.hitt.com/projects/northern-virginia-sterling-ii-data-center/" },
-    { "label": "HITT — Co|Lab R&D facility (first commercial mass timber in VA/DC area)", "url": "https://www.hitt.com/research-and-development/colab/" },
-    { "label": "HITT — Sustainability (410+ LEED projects; ENR #11 green contractor)", "url": "https://www.hitt.com/sustainability/" },
-    { "label": "HITT — Kim Roy bio", "url": "https://www.hitt.com/leadership/kim-roy/" },
-    { "label": "HITT — Principal leadership team", "url": "https://www.hitt.com/leadership/" }
+    {
+      "label": "Virginia Lawyers Weekly — Insurance: late notice obviates duty to indemnify (VA Ct. App. affirms St. Paul vs HITT, 2026-08-04)",
+      "url": "https://valawyersweekly.com/2026/08/17/insurance-late-notice-obviates-duty-to-indemnify/",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "HITT — JetZero Greensboro groundbreaking",
+      "url": "https://www.hitt.com/news-hub/jetzero-greensboro-groundbreaking/",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "HITT — Breaks ground on Microsoft Alviso datacenter campus (48 MW, San Jose)",
+      "url": "https://www.hitt.com/news-hub/hitt-breaks-ground-microsoft-alviso-datacenter/",
+      "date": "2026-06-10"
+    },
+    {
+      "label": "HITT — Awarded NASA Johnson Space Center contract (up to $300M)",
+      "url": "https://www.hitt.com/news-hub/hitt-awarded-nasa-johnson-space-center-contract/",
+      "date": "2026-06-03"
+    },
+    {
+      "label": "The Job Walk — ENR 2026 Top 400 top-10 data analysis (HITT #8, $13.0B; 82% telecom; 100% CM-at-risk)",
+      "url": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "Construction Dive — The top commercial contractors of 2026 (ENR)",
+      "url": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "HITT — NOVA Manassas skilled-trades center partnership (HITT Energy & Innovation Lab)",
+      "url": "https://www.hitt.com/news-hub/northern-virginia-community-college-manassas-skilled-trade-center-hitt-energy-innovation-lab/",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "HITT — New headquarters tops out (270,000 sq ft, net-zero target)",
+      "url": "https://www.hitt.com/news-hub/hitt-new-hq-topping-out/",
+      "date": "2026-03-19"
+    },
+    {
+      "label": "Albuquerque Journal — New Mexico's Brycon Corp joins $13 billion national contractor HITT",
+      "url": "https://www.abqjournal.com/business/new-mexicos-brycon-corp-joins-13-billion-national-contractor-hitt/2987942",
+      "date": "2026-02-24"
+    },
+    {
+      "label": "HITT — McCarthy HITT and NGA celebrate Next NGA West completion",
+      "url": "https://www.hitt.com/news-hub/mccarthy-hitt-celebrate-next-nga-west-completion/",
+      "date": "2026-01-26"
+    },
+    {
+      "label": "HITT — 2025 Year in Review ($13.1B, 1,131 projects)",
+      "url": "https://www.hittyearinreview.com/",
+      "date": "2026-01"
+    },
+    {
+      "label": "BD+C Giants 400 — Top data center construction firms for 2025 (HITT listed first)",
+      "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "date": "2025-10-07"
+    },
+    {
+      "label": "WTOP/JLL — Northern Virginia data centers top 4,900 MW",
+      "url": "https://wtop.com/business-finance/2025/06/northern-virginia-data-centers-have-topped-4900-megawatts-what-does-that-mean/",
+      "date": "2025-06-23"
+    },
+    {
+      "label": "HITT — Named ENR #10 top general contractor; #1 data-center contractor (2025)",
+      "url": "https://www.hitt.com/news-hub/hitt-enr-top-general-contractor-2025/",
+      "date": "2025-05-27"
+    },
+    {
+      "label": "Loudoun Times-Mirror — Worker killed in Ashburn trench collapse (Vantage campus; HITT GC)",
+      "url": "https://www.loudountimes.com/0local-or-not/worker-killed-in-ashburn-trench-collapse/article_efbc9df1-a3ca-456e-9f27-7a6a165c6ddb.html",
+      "date": "2025-04"
+    },
+    {
+      "label": "Construction Dive — HITT acquires Central Consulting & Contracting (tri-state healthcare)",
+      "url": "https://www.constructiondive.com/news/hitt-acquires-central-consulting-contracting/742924/",
+      "date": "2025-03-19"
+    },
+    {
+      "label": "FFXnow — Groundbreaking kicks off HITT HQ redevelopment near West Falls Church Metro",
+      "url": "https://www.ffxnow.com/2025/01/24/groundbreaking-kicks-off-hitt-hq-redevelopment-near-west-falls-church-metro/",
+      "date": "2025-01-24"
+    },
+    {
+      "label": "Woods Rogers — Contractor's $25M insurance claim waived because of untimely notice (Glenstone)",
+      "url": "https://www.woodsrogers.com/insights/publications/contractors-25m-insurance-claim-waived-because-of-untimely-notice-to-insurer",
+      "date": "2025-01-02"
+    },
+    {
+      "label": "Virginia Business — HITT Contracting promotes senior leadership (Antonides co-president; Bardin retirement)",
+      "url": "https://virginiabusiness.com/hitt-contracting-promotes-senior-leadership/",
+      "date": "2024-03-01"
+    },
+    {
+      "label": "QTS — Construction update: Q&A with HITT Contracting (7M+ sq ft together; 26 states)",
+      "url": "https://q.com/resources/qts-construction-update-qa-with-hitt-contracting/",
+      "date": "2024-01-30"
+    },
+    {
+      "label": "Construction Dive — HITT unveils plans for high-tech HQ in Falls Church",
+      "url": "https://www.constructiondive.com/news/hitt-new-headquarters-falls-church/701675/",
+      "date": "2023-12-06"
+    },
+    {
+      "label": "HITT — Topping out mission critical projects coast-to-coast (QTS Richmond/NoVA/Portland; Corscale)",
+      "url": "https://www.hitt.com/news-hub/topping-out-mission-critical-projects/",
+      "date": "2023-02-08"
+    },
+    {
+      "label": "HITT — Expanding mission critical services in the Southeast (700 MW commissioned as of 2020)",
+      "url": "https://hitt.com/hitt-expanding-mission-critical-services-southeast",
+      "date": "2020-07-01"
+    },
+    {
+      "label": "Construction Dive — HITT, Fluor, Turner rise to the challenges of data center construction (Vantage speed figures)",
+      "url": "https://www.constructiondive.com/news/hitt-fluor-turner-rise-to-the-challenges-of-data-center-construction/570536/",
+      "date": "2020-01-22"
+    },
+    {
+      "label": "HITT — Next era of leadership (2017 succession: Roy CEO, Hitt/Millar co-chairmen)",
+      "url": "https://hitt.com/next-era-leadership",
+      "date": "2018-02-19"
+    },
+    {
+      "label": "Artnet News — Glenstone Museum contractor lawsuit",
+      "url": "https://news.artnet.com/art-world/glenstone-museum-lawsuit-1344704",
+      "date": "2018"
+    },
+    {
+      "label": "HITT — Mission Critical / data center contractor (2+ GW, 20M+ sq ft, rankings)",
+      "url": "https://www.hitt.com/mission-critical/"
+    },
+    {
+      "label": "HITT — Who we are (history timeline, ownership)",
+      "url": "https://www.hitt.com/who-we-are/"
+    },
+    {
+      "label": "HITT — Sterling II data center project page (22.5 MW in 180 days)",
+      "url": "https://www.hitt.com/projects/northern-virginia-sterling-ii-data-center/"
+    },
+    {
+      "label": "HITT — Co|Lab R&D facility (first commercial mass timber in VA/DC area)",
+      "url": "https://www.hitt.com/research-and-development/colab/"
+    },
+    {
+      "label": "HITT — Sustainability (410+ LEED projects; ENR #11 green contractor)",
+      "url": "https://www.hitt.com/sustainability/"
+    },
+    {
+      "label": "HITT — Kim Roy bio",
+      "url": "https://www.hitt.com/leadership/kim-roy/"
+    },
+    {
+      "label": "HITT — Principal leadership team",
+      "url": "https://www.hitt.com/leadership/"
+    }
   ],
   "lastUpdated": "2026-08-21",
   "profileVersion": 1

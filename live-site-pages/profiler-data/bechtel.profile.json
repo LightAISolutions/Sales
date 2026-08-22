@@ -3,13 +3,15 @@
   "slug": "bechtel",
   "name": "Bechtel",
   "legalName": "Bechtel Group, Inc. (principal operating company Bechtel Corporation)",
-  "categories": ["integrator"],
+  "categories": [
+    "integrator"
+  ],
   "hq": "Reston, VA, USA",
   "founded": "1898 (Warren A. Bechtel; fifth generation of family leadership today)",
   "ownership": "private",
   "employees": "~30,000-50,000 (third-party counts conflict: Forbes ~50k, GlobalData 43k, Revelio ~30k; careers site says 50,000)",
   "website": "https://www.bechtel.com",
-  "summary": "BLUF: Bechtel is the West's megaproject house — ENR's #2 US contractor ($19.5B ENR-counted 2025 revenue; $20.6B company-stated 2024 with a $58.2B backlog that has more than doubled since 2020) — and it holds a near-monopoly on the 'electrons' side of the AI economy without being an incumbent hyperscale data-center GC. Its verifiable AI wedge is the October 2025 NVIDIA partnership to modularize the Omniverse DSX blueprint for gigawatt-scale AI factories (plus an offsite-manufacturing study for a confidential multi-country data-center customer); a circulating claim that Bechtel builds Microsoft's Fairwater campuses did NOT substantiate — Walsh Construction is the reported Mount Pleasant WI contractor. What Bechtel does own: the only EPC to bring 21st-century nuclear online in the US (Vogtle 3&4), construction start at TerraPower's Natrium (the first utility-scale advanced reactor with an NRC construction permit, April 2026), site takeover for Poland's first nuclear plant (3x AP1000, August 2026), three concurrent US LNG megaprojects (Rio Grande, Port Arthur, Louisiana LNG), the Micron Clay NY megafab, and Sentinel ICBM launch infrastructure (~450 silos). Watch items: a triple fatality at Port Arthur LNG (April 2025; Bechtel published a 7-factor internal report and overhauled safety practices), Sentinel's 81% cost breach concentrated in Bechtel's command-and-launch scope, and the Hanford legacy ($125M False Claims settlement, 2016 — vitrification finally began October 2025). Fifth-generation family control; no audited public financials; employee counts conflict by ~2x across trackers.",
+  "summary": "BOTTOM LINE UP FRONT: Bechtel is the West's megaproject house — ENR's #2 US contractor ($19.5B ENR-counted 2025 revenue; $20.6B company-stated 2024 with a $58.2B backlog that has more than doubled since 2020) — and it holds a near-monopoly on the 'electrons' side of the AI economy without being an incumbent hyperscale data-center GC. Its verifiable AI wedge is the October 2025 NVIDIA partnership to modularize the Omniverse DSX blueprint for gigawatt-scale AI factories (plus an offsite-manufacturing study for a confidential multi-country data-center customer); a circulating claim that Bechtel builds Microsoft's Fairwater campuses did NOT substantiate — Walsh Construction is the reported Mount Pleasant WI contractor. What Bechtel does own: the only EPC to bring 21st-century nuclear online in the US (Vogtle 3&4), construction start at TerraPower's Natrium (the first utility-scale advanced reactor with an NRC construction permit, April 2026), site takeover for Poland's first nuclear plant (3x AP1000, August 2026), three concurrent US LNG megaprojects (Rio Grande, Port Arthur, Louisiana LNG), the Micron Clay NY megafab, and Sentinel ICBM launch infrastructure (~450 silos). Watch items: a triple fatality at Port Arthur LNG (April 2025; Bechtel published a 7-factor internal report and overhauled safety practices), Sentinel's 81% cost breach concentrated in Bechtel's command-and-launch scope, and the Hanford legacy ($125M False Claims settlement, 2016 — vitrification finally began October 2025). Fifth-generation family control; no audited public financials; employee counts conflict by ~2x across trackers.",
   "ecosystemRole": "The megaproject EPC of the AI economy's foundations: not the GC building hyperscale shells today, but the firm building the nuclear plants, LNG trains, semiconductor megafabs, and — via the NVIDIA DSX partnership — the modularized gigawatt AI factories of the next phase, with the deepest first-of-a-kind execution bench in Western construction.",
   "productsAndServices": [
     {
@@ -23,7 +25,11 @@
       ],
       "positioning": "Positioned for the phase where AI campuses stop looking like buildings and start looking like energy megaprojects — power, cooling, and site scale in gigawatts, delivered as factory-built modules",
       "soldThrough": "EPC and partnership structures with technology owners (NVIDIA, Micron) and confidential hyperscale customers",
-      "targetSegments": ["AI-factory developers", "Semiconductor manufacturers", "EV/battery manufacturers"],
+      "targetSegments": [
+        "AI-factory developers",
+        "Semiconductor manufacturers",
+        "EV/battery manufacturers"
+      ],
       "roadmap": "DSX module deployment at partner sites; scaling offsite manufacturing for AI-DC delivery"
     },
     {
@@ -37,7 +43,11 @@
       ],
       "positioning": "The execution incumbent in the reactor classes AI hyperscalers are underwriting for clean firm power — no US rival has completed a 21st-century large reactor",
       "soldThrough": "EPC contracts with utilities, advanced-reactor developers, and sovereign programs",
-      "targetSegments": ["Utilities (Southern, PacifiCorp)", "Advanced-reactor developers (TerraPower)", "Sovereign nuclear programs (Poland/PEJ)"],
+      "targetSegments": [
+        "Utilities (Southern, PacifiCorp)",
+        "Advanced-reactor developers (TerraPower)",
+        "Sovereign nuclear programs (Poland/PEJ)"
+      ],
       "roadmap": "Natrium Unit 1 execution; Poland construction ramp; follow-on AP1000 export prospects"
     },
     {
@@ -51,7 +61,10 @@
       ],
       "positioning": "Lump-sum turnkey appetite at a scale public rivals (Fluor) have retreated from — margin opportunity and pricing risk in equal measure",
       "soldThrough": "Lump-sum turnkey EPC with LNG developers",
-      "targetSegments": ["LNG developers (NextDecade, Sempra, Woodside)", "Gas/energy owners"],
+      "targetSegments": [
+        "LNG developers (NextDecade, Sempra, Woodside)",
+        "Gas/energy owners"
+      ],
       "roadmap": "Trains delivering through 2029+; LNG demand underwritten partly by the same gas-hungry AI-power complex"
     },
     {
@@ -64,7 +77,11 @@
       ],
       "positioning": "One of the few constructors with nuclear-weapons-complex and strategic-infrastructure credentials at national scale",
       "soldThrough": "Subcontract to Northrop Grumman and direct DoD/NNSA vehicles",
-      "targetSegments": ["US Air Force / DoD", "Missile Defense Agency", "NNSA"],
+      "targetSegments": [
+        "US Air Force / DoD",
+        "Missile Defense Agency",
+        "NNSA"
+      ],
       "roadmap": "Sentinel EMD through re-baselining; silo construction waves into the 2030s"
     },
     {
@@ -77,7 +94,11 @@
       ],
       "positioning": "The diversified megaproject base that smooths the energy/defense cycles",
       "soldThrough": "Sovereign and DOE program contracts, JVs (ENKA)",
-      "targetSegments": ["Governments", "DOE/NNSA", "Mining majors (Teck)"],
+      "targetSegments": [
+        "Governments",
+        "DOE/NNSA",
+        "Mining majors (Teck)"
+      ],
       "roadmap": "Hanford DFLAW ramp toward ~5,300 gallons of tank waste per day"
     }
   ],
@@ -269,60 +290,204 @@
       {
         "period": "2025 (ENR 2026 list)",
         "metrics": [
-          { "name": "Revenue (ENR-counted)", "actual": "$19.5B — ENR Top 400 #2", "expected": "", "verdict": "inline", "result": "+23% from $15.9B; behind only Turner ($28.3B, 6th straight year at #1)" }
+          {
+            "name": "Revenue (ENR-counted)",
+            "actual": "$19.5B — ENR Top 400 #2",
+            "expected": "",
+            "verdict": "inline",
+            "result": "+23% from $15.9B; behind only Turner ($28.3B, 6th straight year at #1)"
+          }
         ],
         "commentary": "ENR notes the Top 400's aggregate 11.8% growth was 'propelled by a surge of data center projects' — Bechtel grew faster than the aggregate without hyperscale-GC exposure, on LNG, nuclear, and defense."
       },
       {
         "period": "2024 (company Impact Report)",
         "metrics": [
-          { "name": "Revenue (company total)", "actual": "$20.6B (+25% — second consecutive year of double-digit growth)", "expected": "", "verdict": "inline", "result": "Implies ~$16.5B in 2023 on the company's definition (vs ENR's $12.9B — methodology gap, both faithful)" },
-          { "name": "New work booked", "actual": "$17B", "expected": "", "verdict": "inline", "result": "Plus company-claimed 2025 awards of ~$8.7B LNG and ~$6.2B defense (unverified)" },
-          { "name": "Backlog", "actual": "$58.2B", "expected": "", "verdict": "inline", "result": "More than doubled since 2020 — the megaproject book's forward visibility" }
+          {
+            "name": "Revenue (company total)",
+            "actual": "$20.6B (+25% — second consecutive year of double-digit growth)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Implies ~$16.5B in 2023 on the company's definition (vs ENR's $12.9B — methodology gap, both faithful)"
+          },
+          {
+            "name": "New work booked",
+            "actual": "$17B",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Plus company-claimed 2025 awards of ~$8.7B LNG and ~$6.2B defense (unverified)"
+          },
+          {
+            "name": "Backlog",
+            "actual": "$58.2B",
+            "expected": "",
+            "verdict": "inline",
+            "result": "More than doubled since 2020 — the megaproject book's forward visibility"
+          }
         ],
         "commentary": "ENR rank history: #3 in 2024 (Kiewit overtook), #2 reclaimed in 2025, #2 held in 2026. Bechtel had held #1 for 20+ years until Turner passed it on the 2021 list."
       },
       {
         "period": "2018-2020 (the trough)",
         "metrics": [
-          { "name": "US revenue", "actual": "$21.8B (2018) → $12.2B (2020)", "expected": "", "verdict": "inline", "result": "The commodity-cycle collapse that cost the two-decade #1 rank — context for the current re-concentration in LNG/nuclear/defense" }
+          {
+            "name": "US revenue",
+            "actual": "$21.8B (2018) → $12.2B (2020)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The commodity-cycle collapse that cost the two-decade #1 rank — context for the current re-concentration in LNG/nuclear/defense"
+          }
         ],
         "commentary": "Employee counts conflict by ~2x across trackers (Forbes ~50k; GlobalData 43k; Revelio ~30k) — a measure of how little hard data escapes a fifth-generation family-controlled private company."
       }
     ]
   },
   "sources": [
-    { "label": "Bechtel — Takes over project site for Poland's first nuclear power plant (3x AP1000)", "url": "https://www.bechtel.com/press-releases/bechtel-takes-over-project-site-for-polands-first-nuclear-power-plant/", "date": "2026-08-07" },
-    { "label": "WTMJ — Microsoft completes first Mount Pleasant data center (contractor: Walsh Construction — Bechtel-Fairwater negative check)", "url": "https://wtmj.com/news/2026/06/23/microsoft-completes-first-mount-pleasant-data-center-announces-facility-is-operational/", "date": "2026-06-23" },
-    { "label": "Bechtel — Micron selects Bechtel as construction partner for historic New York semiconductor project", "url": "https://www.bechtel.com/press-releases/micron-selects-bechtel-as-construction-partner-for-historic-new-york-semiconductor-project/", "date": "2026-06-10" },
-    { "label": "Construction Dive — The top commercial contractors of 2026 (ENR: Bechtel #2, $19.5B)", "url": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/", "date": "2026-05-22" },
-    { "label": "Bechtel — Bechtel and TerraPower begin construction at Natrium Kemmerer Unit 1", "url": "https://www.bechtel.com/press-releases/bechtel-and-terrapower-begin-construction-at-natrium-kemmerer-unit-1/", "date": "2026-04-23" },
-    { "label": "Stars and Stripes — Air Force breaks ground on prototype Sentinel missile silo (450 all-new silos)", "url": "https://www.stripes.com/branches/air_force/2026-03-30/air-force-prototype-sentinel-missile-silo-21229831.html", "date": "2026-03-30" },
-    { "label": "Bechtel — To accelerate AI data center construction with NVIDIA (Omniverse DSX modularization)", "url": "https://www.bechtel.com/press-releases/bechtel-to-accelerate-ai-data-center-construction-with-nvidia/", "date": "2025-10-28" },
-    { "label": "ANS Nuclear Newswire — After decades, Hanford's WTP begins vitrifying tank waste", "url": "https://www.ans.org/news/2025-10-17/article-7465/after-decades-hanfords-wtp-begins-vitrifying-tank-waste/", "date": "2025-10-17" },
-    { "label": "Bechtel — Begins nuclear vitrification at Hanford site", "url": "https://www.bechtel.com/press-releases/bechtel-begins-nuclear-vitrification-at-hanford-site/", "date": "2025-10-15" },
-    { "label": "ENR — Bechtel overhauls safety practices after Texas LNG project deaths (internal report findings)", "url": "https://www.enr.com/articles/61585", "date": "2025-10" },
-    { "label": "KFDM — Bechtel releases internal report after death of three workers at Port Arthur LNG", "url": "https://kfdm.com/news/local/bechtel-releases-internal-report-after-death-of-three-workers-at-port-arthur-lng-10-08-2025", "date": "2025-10-08" },
-    { "label": "Businesswire/Woodside — 'Full steam ahead' for Louisiana LNG (Train 1 >22%, ~900 workers)", "url": "https://www.businesswire.com/news/home/20250915769336/en/Full-Steam-Ahead-for-Woodside-Louisiana-LNG", "date": "2025-09-15" },
-    { "label": "Construction Dive — The top commercial contractors of 2025 (Bechtel reclaims #2 at $15.9B)", "url": "https://www.constructiondive.com/news/top-commercial-contractors-2025-revenue-enr/749244/", "date": "2025-05-29" },
-    { "label": "Austin American-Statesman — Port Arthur scaffold collapse kills three Bechtel-site workers", "url": "https://www.statesman.com/story/news/accident/2025/04/30/port-arthur-scaffold-collapse-accident-dead-died-injured-construction-site-texas-bechtel-employees/83366310007/", "date": "2025-04-30" },
-    { "label": "gasworld — Woodside advances Louisiana LNG with revised EPC contract (Bechtel)", "url": "https://www.gasworld.com/story/woodside-advances-louisiana-lng-with-revised-epc-contract/2147696.article/", "date": "2024-12" },
-    { "label": "Stars and Stripes — Sentinel survives Nunn-McCurdy review at ~$140.9B (+81%)", "url": "https://www.stripes.com/branches/air_force/2024-07-08/", "date": "2024-07-08" },
-    { "label": "FAS — The critical Sentinel overrun (command-and-launch segment as driver)", "url": "https://fas.org/publication/critical-sentinel-overrun/", "date": "2024" },
-    { "label": "Bechtel — Plant Vogtle Unit 4 achieves commercial operation", "url": "https://www.bechtel.com/press-releases/plant-vogtle-unit-4-achieves-commercial-operation/", "date": "2024" },
-    { "label": "ENR — This firm beat Bechtel as No. 1 (Turner takes the 2021 rank; 2018-20 revenue collapse)", "url": "https://www.enr.com/articles/51838", "date": "2021-06-01" },
-    { "label": "DOJ (E.D. Wash.) — BNI and URS pay $125M resolving False Claims allegations at Hanford WTP", "url": "https://www.justice.gov/usao-edwa/pr/bni-and-urs-pay-125-million-resolving-alleged-false-claims-regarding-deficient-nuclear", "date": "2016-11-23" },
-    { "label": "Insurance Journal — Big Dig contractors' $458M settlement (Bechtel/Parsons Brinckerhoff)", "url": "https://www.insurancejournal.com/news/east/2008/01/25/86715.htm", "date": "2008-01-25" },
-    { "label": "Bechtel — About (markets; safety rates; 33+ countries)", "url": "https://www.bechtel.com/about/" },
-    { "label": "Bechtel — Impact report financials (2024: $20.6B revenue, $17B booked, $58.2B backlog)", "url": "https://www.bechtel.com/impact/financials/" },
-    { "label": "Bechtel — Data centers (Manufacturing & Technology market page)", "url": "https://www.bechtel.com/markets/manufacturing-and-technology/data-centers/" },
-    { "label": "Bechtel — Offsite manufacturing for AI data centers (confidential-customer study)", "url": "https://www.bechtel.com/projects/offsite-manufacturing-for-ai-data-centers/" },
-    { "label": "Bechtel — Rio Grande LNG project page", "url": "https://www.bechtel.com/projects/rio-grande-lng/" },
-    { "label": "Bechtel — Port Arthur LNG project page", "url": "https://www.bechtel.com/projects/port-arthur-lng/" },
-    { "label": "Bechtel — Sentinel project page (~450 silos; 2036 target)", "url": "https://www.bechtel.com/projects/sentinel/" },
-    { "label": "Bechtel — Vogtle Units 3 and 4 project page", "url": "https://www.bechtel.com/projects/vogtle-units-3-and-4/" },
-    { "label": "Bechtel — Brendan Bechtel leadership bio", "url": "https://www.bechtel.com/people/leadership/brendan-bechtel/" },
-    { "label": "Bechtel — Leadership directory", "url": "https://www.bechtel.com/about/leadership/" }
+    {
+      "label": "Bechtel — Takes over project site for Poland's first nuclear power plant (3x AP1000)",
+      "url": "https://www.bechtel.com/press-releases/bechtel-takes-over-project-site-for-polands-first-nuclear-power-plant/",
+      "date": "2026-08-07"
+    },
+    {
+      "label": "WTMJ — Microsoft completes first Mount Pleasant data center (contractor: Walsh Construction — Bechtel-Fairwater negative check)",
+      "url": "https://wtmj.com/news/2026/06/23/microsoft-completes-first-mount-pleasant-data-center-announces-facility-is-operational/",
+      "date": "2026-06-23"
+    },
+    {
+      "label": "Bechtel — Micron selects Bechtel as construction partner for historic New York semiconductor project",
+      "url": "https://www.bechtel.com/press-releases/micron-selects-bechtel-as-construction-partner-for-historic-new-york-semiconductor-project/",
+      "date": "2026-06-10"
+    },
+    {
+      "label": "Construction Dive — The top commercial contractors of 2026 (ENR: Bechtel #2, $19.5B)",
+      "url": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "Bechtel — Bechtel and TerraPower begin construction at Natrium Kemmerer Unit 1",
+      "url": "https://www.bechtel.com/press-releases/bechtel-and-terrapower-begin-construction-at-natrium-kemmerer-unit-1/",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "Stars and Stripes — Air Force breaks ground on prototype Sentinel missile silo (450 all-new silos)",
+      "url": "https://www.stripes.com/branches/air_force/2026-03-30/air-force-prototype-sentinel-missile-silo-21229831.html",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "Bechtel — To accelerate AI data center construction with NVIDIA (Omniverse DSX modularization)",
+      "url": "https://www.bechtel.com/press-releases/bechtel-to-accelerate-ai-data-center-construction-with-nvidia/",
+      "date": "2025-10-28"
+    },
+    {
+      "label": "ANS Nuclear Newswire — After decades, Hanford's WTP begins vitrifying tank waste",
+      "url": "https://www.ans.org/news/2025-10-17/article-7465/after-decades-hanfords-wtp-begins-vitrifying-tank-waste/",
+      "date": "2025-10-17"
+    },
+    {
+      "label": "Bechtel — Begins nuclear vitrification at Hanford site",
+      "url": "https://www.bechtel.com/press-releases/bechtel-begins-nuclear-vitrification-at-hanford-site/",
+      "date": "2025-10-15"
+    },
+    {
+      "label": "ENR — Bechtel overhauls safety practices after Texas LNG project deaths (internal report findings)",
+      "url": "https://www.enr.com/articles/61585",
+      "date": "2025-10"
+    },
+    {
+      "label": "KFDM — Bechtel releases internal report after death of three workers at Port Arthur LNG",
+      "url": "https://kfdm.com/news/local/bechtel-releases-internal-report-after-death-of-three-workers-at-port-arthur-lng-10-08-2025",
+      "date": "2025-10-08"
+    },
+    {
+      "label": "Businesswire/Woodside — 'Full steam ahead' for Louisiana LNG (Train 1 >22%, ~900 workers)",
+      "url": "https://www.businesswire.com/news/home/20250915769336/en/Full-Steam-Ahead-for-Woodside-Louisiana-LNG",
+      "date": "2025-09-15"
+    },
+    {
+      "label": "Construction Dive — The top commercial contractors of 2025 (Bechtel reclaims #2 at $15.9B)",
+      "url": "https://www.constructiondive.com/news/top-commercial-contractors-2025-revenue-enr/749244/",
+      "date": "2025-05-29"
+    },
+    {
+      "label": "Austin American-Statesman — Port Arthur scaffold collapse kills three Bechtel-site workers",
+      "url": "https://www.statesman.com/story/news/accident/2025/04/30/port-arthur-scaffold-collapse-accident-dead-died-injured-construction-site-texas-bechtel-employees/83366310007/",
+      "date": "2025-04-30"
+    },
+    {
+      "label": "gasworld — Woodside advances Louisiana LNG with revised EPC contract (Bechtel)",
+      "url": "https://www.gasworld.com/story/woodside-advances-louisiana-lng-with-revised-epc-contract/2147696.article/",
+      "date": "2024-12"
+    },
+    {
+      "label": "Stars and Stripes — Sentinel survives Nunn-McCurdy review at ~$140.9B (+81%)",
+      "url": "https://www.stripes.com/branches/air_force/2024-07-08/",
+      "date": "2024-07-08"
+    },
+    {
+      "label": "FAS — The critical Sentinel overrun (command-and-launch segment as driver)",
+      "url": "https://fas.org/publication/critical-sentinel-overrun/",
+      "date": "2024"
+    },
+    {
+      "label": "Bechtel — Plant Vogtle Unit 4 achieves commercial operation",
+      "url": "https://www.bechtel.com/press-releases/plant-vogtle-unit-4-achieves-commercial-operation/",
+      "date": "2024"
+    },
+    {
+      "label": "ENR — This firm beat Bechtel as No. 1 (Turner takes the 2021 rank; 2018-20 revenue collapse)",
+      "url": "https://www.enr.com/articles/51838",
+      "date": "2021-06-01"
+    },
+    {
+      "label": "DOJ (E.D. Wash.) — BNI and URS pay $125M resolving False Claims allegations at Hanford WTP",
+      "url": "https://www.justice.gov/usao-edwa/pr/bni-and-urs-pay-125-million-resolving-alleged-false-claims-regarding-deficient-nuclear",
+      "date": "2016-11-23"
+    },
+    {
+      "label": "Insurance Journal — Big Dig contractors' $458M settlement (Bechtel/Parsons Brinckerhoff)",
+      "url": "https://www.insurancejournal.com/news/east/2008/01/25/86715.htm",
+      "date": "2008-01-25"
+    },
+    {
+      "label": "Bechtel — About (markets; safety rates; 33+ countries)",
+      "url": "https://www.bechtel.com/about/"
+    },
+    {
+      "label": "Bechtel — Impact report financials (2024: $20.6B revenue, $17B booked, $58.2B backlog)",
+      "url": "https://www.bechtel.com/impact/financials/"
+    },
+    {
+      "label": "Bechtel — Data centers (Manufacturing & Technology market page)",
+      "url": "https://www.bechtel.com/markets/manufacturing-and-technology/data-centers/"
+    },
+    {
+      "label": "Bechtel — Offsite manufacturing for AI data centers (confidential-customer study)",
+      "url": "https://www.bechtel.com/projects/offsite-manufacturing-for-ai-data-centers/"
+    },
+    {
+      "label": "Bechtel — Rio Grande LNG project page",
+      "url": "https://www.bechtel.com/projects/rio-grande-lng/"
+    },
+    {
+      "label": "Bechtel — Port Arthur LNG project page",
+      "url": "https://www.bechtel.com/projects/port-arthur-lng/"
+    },
+    {
+      "label": "Bechtel — Sentinel project page (~450 silos; 2036 target)",
+      "url": "https://www.bechtel.com/projects/sentinel/"
+    },
+    {
+      "label": "Bechtel — Vogtle Units 3 and 4 project page",
+      "url": "https://www.bechtel.com/projects/vogtle-units-3-and-4/"
+    },
+    {
+      "label": "Bechtel — Brendan Bechtel leadership bio",
+      "url": "https://www.bechtel.com/people/leadership/brendan-bechtel/"
+    },
+    {
+      "label": "Bechtel — Leadership directory",
+      "url": "https://www.bechtel.com/about/leadership/"
+    }
   ],
   "lastUpdated": "2026-08-21",
   "profileVersion": 1

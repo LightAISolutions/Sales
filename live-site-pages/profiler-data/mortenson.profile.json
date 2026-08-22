@@ -3,13 +3,15 @@
   "slug": "mortenson",
   "name": "Mortenson",
   "legalName": "M. A. Mortenson Company",
-  "categories": ["integrator"],
+  "categories": [
+    "integrator"
+  ],
   "hq": "Minneapolis (Golden Valley), MN, USA",
   "founded": "1954 (M.A. Mortenson Sr., Richfield, Minnesota)",
   "ownership": "private",
   "employees": "~7,000 (Dec 2025, third-party workforce-data estimate; ZoomInfo band 5,000-10,000)",
   "website": "https://www.mortenson.com",
-  "summary": "BLUF: Mortenson is the only US contractor at scale that holds both a hyperscale data-center building franchise and a fleet-scale renewable-power EPC franchise — and the AI buildout is fusing the two into one product. The family-owned Minneapolis builder jumped 12 spots to #10 on ENR's 2026 Top 400 on $10.85B of 2025 revenue (up from $4.9B in 2023 — more than doubling in two years), with ENR data showing ~45% of revenue in data centers and ~33% in power. It claims 11 GW of data centers delivered or underway, 47.8+ GW of wind, 17+ GW of solar, and 45,000+ MWh of storage, and it self-performs the gigawatt-class substations and medium-voltage distribution that pure building GCs must subcontract — visible at Lancium's Abilene AI campus (1 GW, 345 kV greenfield substation, all five main transformers energized by March 2026) and on Meta's Richland Parish campus, where Mortenson holds the sitework, MV-power, substation, water, and fiber scopes alongside Turner and DPR. Meta concentration is now the defining exposure: Richland Parish LA (~$50B deepened regional commitment), Lebanon IN (>$10B, 1 GW, co-delivered with Turner), and Beaver Dam WI ($1B) are all live Mortenson engagements. Collection gap: the company is 100% private and discloses no profitability, backlog, or balance-sheet data; revenue figures are self-reported ENR survey data.",
+  "summary": "BOTTOM LINE UP FRONT: Mortenson is the only US contractor at scale that holds both a hyperscale data-center building franchise and a fleet-scale renewable-power EPC franchise — and the AI buildout is fusing the two into one product. The family-owned Minneapolis builder jumped 12 spots to #10 on ENR's 2026 Top 400 on $10.85B of 2025 revenue (up from $4.9B in 2023 — more than doubling in two years), with ENR data showing ~45% of revenue in data centers and ~33% in power. It claims 11 GW of data centers delivered or underway, 47.8+ GW of wind, 17+ GW of solar, and 45,000+ MWh of storage, and it self-performs the gigawatt-class substations and medium-voltage distribution that pure building GCs must subcontract — visible at Lancium's Abilene AI campus (1 GW, 345 kV greenfield substation, all five main transformers energized by March 2026) and on Meta's Richland Parish campus, where Mortenson holds the sitework, MV-power, substation, water, and fiber scopes alongside Turner and DPR. Meta concentration is now the defining exposure: Richland Parish LA (~$50B deepened regional commitment), Lebanon IN (>$10B, 1 GW, co-delivered with Turner), and Beaver Dam WI ($1B) are all live Mortenson engagements. Collection gap: the company is 100% private and discloses no profitability, backlog, or balance-sheet data; revenue figures are self-reported ENR survey data.",
   "ecosystemRole": "Power-and-shell contractor to the AI buildout: top-10 US general contractor and historical #1 US wind builder that delivers hyperscale data-center campuses together with their substations, medium-voltage distribution, and onsite renewable/storage generation — the integration layer between the building and the grid that most building GCs cannot self-perform.",
   "productsAndServices": [
     {
@@ -25,7 +27,11 @@
       ],
       "positioning": "Alongside Turner and DPR on the largest Meta campuses rather than subordinate to them — differentiated by self-performed power scope (substations to 345 kV/1 GW class) that Turner, Holder, HITT, and DPR largely subcontract. Independent analysis pegs Mortenson's data-center revenue at an estimated $2-3B/yr and calls it a top-three GC in the space, concentrated in the Midwest/Mountain West (analyst estimate, not company-confirmed).",
       "soldThrough": "Direct negotiated contracts and framework relationships with hyperscalers and data-center developers; repeat-client model",
-      "targetSegments": ["Hyperscalers (Meta, Google via development arm)", "AI-campus power developers (Lancium)", "Colocation operators"],
+      "targetSegments": [
+        "Hyperscalers (Meta, Google via development arm)",
+        "AI-campus power developers (Lancium)",
+        "Colocation operators"
+      ],
       "roadmap": "Deepening Meta program execution through 2028 (Richland Parish phases, Lebanon IN first phase early 2028, Beaver Dam 2027); Hermantown MN ~700 MW Google-anchored campus in re-entitlement with an updated environmental review (~7 months from March 2026)"
     },
     {
@@ -40,7 +46,12 @@
       ],
       "positioning": "Post-consolidation renewables peer set is Blattner (Quanta), Primoris, IEA (MasTec), SOLV, Sterling & Wilson — none of which hold a hyperscale building franchise. Building-GC rivals hold no comparable power franchise. The combination is Mortenson's structural differentiator.",
       "soldThrough": "EPC and BOP contracts with utilities, IPPs, and clean-energy developers; strong OEM turbine relationships; repowering programs",
-      "targetSegments": ["Independent power producers", "Utilities", "Clean-energy developers (Terra-Gen, Intersect Power, Calpine)", "AI-campus operators needing dedicated generation"],
+      "targetSegments": [
+        "Independent power producers",
+        "Utilities",
+        "Clean-energy developers (Terra-Gen, Intersect Power, Calpine)",
+        "AI-campus operators needing dedicated generation"
+      ],
       "roadmap": "Darden through 2028; storage pipeline compounding on the #1 ENR storage rank; wind repowering as the installed-fleet ages"
     },
     {
@@ -55,7 +66,11 @@
       ],
       "positioning": "The scope that turns a building GC into a power-and-shell integrator; competes with specialty T&D firms (Quanta, MasTec) inside a building-GC wrapper they lack",
       "soldThrough": "EPC contracts within campus programs and standalone power-delivery awards",
-      "targetSegments": ["AI-campus developers", "Hyperscalers", "Utilities and IPPs"],
+      "targetSegments": [
+        "AI-campus developers",
+        "Hyperscalers",
+        "Utilities and IPPs"
+      ],
       "roadmap": "Integrating Nor-Cal Controls; scaling substation EPC with the AI-campus pipeline"
     },
     {
@@ -69,7 +84,9 @@
       ],
       "positioning": "In-house answer to the craft-labor ceiling, structurally similar to Turner's xPL Offsite and DPR's prefab investments; mobile-factory model distinguishes it from fixed-plant prefabbers",
       "soldThrough": "Internal to Mortenson projects; capacity follows the data-center and power pipeline",
-      "targetSegments": ["Mortenson data-center and renewables projects"],
+      "targetSegments": [
+        "Mortenson data-center and renewables projects"
+      ],
       "roadmap": "Scaling mobile factories with the Meta program and Midwest campus fleet"
     },
     {
@@ -83,7 +100,12 @@
       ],
       "positioning": "Diversification ballast (~20% general building per ENR 2026 mix) plus a developer channel that can originate data-center work rather than only bid it",
       "soldThrough": "CM/GC contracts; development deals via Mortenson Properties",
-      "targetSegments": ["Pro sports franchises", "Health systems", "Federal agencies", "Data-center end users via land development"],
+      "targetSegments": [
+        "Pro sports franchises",
+        "Health systems",
+        "Federal agencies",
+        "Data-center end users via land development"
+      ],
       "roadmap": "Athletics ballpark to 2028 opening; Hermantown re-entitlement decision after the ~7-month updated environmental review"
     }
   ],
@@ -276,61 +298,210 @@
       {
         "period": "2025 (ENR 2026 list)",
         "metrics": [
-          { "name": "Revenue", "actual": "$10.85B", "expected": "", "verdict": "inline", "result": "ENR Top 400 rank #10 — largest single-year move in the top 10 (+12 spots from #22)" },
-          { "name": "New contracts", "actual": "$13.85B", "expected": "", "verdict": "inline", "result": "Book-to-bill ~1.28 on ENR figures — the order book still outruns work-in-place" },
-          { "name": "Revenue mix", "actual": "~45% telecom (data centers) / ~33% power / ~20% general building", "expected": "", "verdict": "inline", "result": "ENR 2026 mix data — nearly four-fifths of the book is AI-and-power work" }
+          {
+            "name": "Revenue",
+            "actual": "$10.85B",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR Top 400 rank #10 — largest single-year move in the top 10 (+12 spots from #22)"
+          },
+          {
+            "name": "New contracts",
+            "actual": "$13.85B",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Book-to-bill ~1.28 on ENR figures — the order book still outruns work-in-place"
+          },
+          {
+            "name": "Revenue mix",
+            "actual": "~45% telecom (data centers) / ~33% power / ~20% general building",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR 2026 mix data — nearly four-fifths of the book is AI-and-power work"
+          }
         ],
         "commentary": "Growth of +62% YoY on top of +37% the prior year, overwhelmingly attributable to AI data-center and power work. No profitability, backlog (beyond new-contract flow), or balance-sheet data is disclosed — an explicit collection gap."
       },
       {
         "period": "2024 (ENR 2025 list)",
         "metrics": [
-          { "name": "Revenue", "actual": "$6.7B", "expected": "", "verdict": "inline", "result": "ENR Top 400 rank #22 (up 5 spots); matches the Forbes America's-Largest-Private-Companies figure (#93)" }
+          {
+            "name": "Revenue",
+            "actual": "$6.7B",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR Top 400 rank #22 (up 5 spots); matches the Forbes America's-Largest-Private-Companies figure (#93)"
+          }
         ],
         "commentary": "The Richland Parish award (December 2024) landed at the tail of this year — 2024 revenue barely reflects the Meta program that drove 2025."
       },
       {
         "period": "2023 (ENR 2024 list)",
         "metrics": [
-          { "name": "Revenue", "actual": "$4.9B", "expected": "", "verdict": "inline", "result": "ENR Top 400 rank #27 — the pre-AI-cycle baseline" }
+          {
+            "name": "Revenue",
+            "actual": "$4.9B",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR Top 400 rank #27 — the pre-AI-cycle baseline"
+          }
         ],
         "commentary": "Two years later revenue had more than doubled; the 2023-2025 trajectory ($4.9B → $6.7B → $10.85B) is the cleanest public evidence of how hard the AI buildout is pulling on power-capable GCs."
       }
     ]
   },
   "sources": [
-    { "label": "Construction Owners Assn — Mortenson #7 in 2026 US solar contractor rankings (~2 GW in 2025)", "url": "https://www.constructionowners.com/news/mortenson-earns-top-10-position-in-2026-u-s-solar-contractor-rankings", "date": "2026-07-22" },
-    { "label": "Meta — Deepening our investment in Richland Parish, Louisiana (~$50B regional commitment)", "url": "https://datacenters.atmeta.com/2026/07/deepening-our-investment-in-richland-parish-louisiana/", "date": "2026-07" },
-    { "label": "IndexBox — ENR 2026 Top 400: Turner holds #1, Mortenson breaks top 10 ($10.85B, +12 spots)", "url": "https://www.indexbox.io/blog/enr-2026-top-400-commercial-contractors-turner-holds-1-mortenson-breaks-top-10/", "date": "2026-05-22" },
-    { "label": "The Job Walk — ENR 2026 Top 400 top-10 data analysis (Mortenson mix ~45% telecom / ~33% power; DC revenue est. $2-3B)", "url": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10", "date": "2026-05" },
-    { "label": "Mortenson — Acquires Nor-Cal Controls (SCADA/EMS for solar, BESS, microgrids)", "url": "https://www.mortenson.com/news-insights/mortenson-acquires-nor-cal-controls", "date": "2026-04-08" },
-    { "label": "KAXE — Public comments open on updated review of proposed Hermantown data center (Google revealed as end user)", "url": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-data-center", "date": "2026-03-31" },
-    { "label": "Mortenson — Begins Indiana data center construction (Meta Lebanon, IN)", "url": "https://www.mortenson.com/news-insights/mortenson-begins-indiana-data-center-construction", "date": "2026-02-16" },
-    { "label": "Construction Dive — Mortenson, Turner win $10B Meta data center in Indiana", "url": "https://www.constructiondive.com/news/mortenson-turner-win-meta-data-center-indiana/812139/", "date": "2026-02-12" },
-    { "label": "Construction Dive — Meta taps Mortenson for $1B Beaver Dam, WI data center", "url": "https://www.constructiondive.com/news/meta-mortenson-beaver-dam-wisconsin-data-center/806211/", "date": "2025-11-21" },
-    { "label": "KAXE — Environmental groups sue over Hermantown data center review", "url": "https://www.kaxe.org/local-news/2025-11-05/environmental-groups-sue-hermantown-data-center-review", "date": "2025-11-05" },
-    { "label": "BD+C Giants 400 — Top data center construction firms for 2025", "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025", "date": "2025-10-07" },
-    { "label": "California Energy Commission — Approves world's largest solar + battery storage project (Darden; Mortenson EPC)", "url": "https://www.energy.ca.gov/news/2025-06/cec-approves-worlds-largest-solar-battery-storage-project-fresno-county-under", "date": "2025-06-12" },
-    { "label": "Construction Equipment Guide — A's break ground on $1.75B Vegas ballpark due in 2028 (Mortenson-McCarthy)", "url": "https://www.constructionequipmentguide.com/as-break-ground-on-175b-vegas-ballpark-due-in-2028/68478", "date": "2025-06" },
-    { "label": "ENR — 2025 Top 400 Contractors (Mortenson #22, $6.7B)", "url": "https://www.enr.com/toplists/2025-Top-400-Contractors-1-preview", "date": "2025-05" },
-    { "label": "Construction Dive — New year, new CEO at Mortenson (Derek Cunz takes over)", "url": "https://www.constructiondive.com/news/mortenson-new-ceo-outlook-construction/735417/", "date": "2025-01" },
-    { "label": "Construction Dive — Meta taps Turner, DPR, Mortenson for $10B Louisiana data center", "url": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/", "date": "2024-12-04" },
-    { "label": "Mortenson — Executive leadership transition: Dan Johnson retires, Derek Cunz named CEO", "url": "https://www.mortenson.com/newsroom/ceo-announcement", "date": "2024-09-05" },
-    { "label": "ENR — 2024 Top 400 Contractors (Mortenson #27, $4.9B)", "url": "https://www.enr.com/toplists/2024-Top-400-Contractors-1-preview", "date": "2024-05" },
-    { "label": "Solar Power World — The largest US solar + storage project is complete (Edwards & Sanborn)", "url": "https://www.solarpowerworldonline.com/2024/01/the-largest-us-solar-storage-project-is-complete/", "date": "2024-01" },
-    { "label": "ENR — Succession boosts David Mortenson, 49, to chairman", "url": "https://www.enr.com/articles/7939-succession-boosts-david-mortenson-49-to-chairman-of-mortenson-construction", "date": "2015-02-04" },
-    { "label": "Wind Systems — Company profile: Mortenson Construction (24% of US wind capacity by 2010)", "url": "https://www.windsystemsmag.com/company-profile-mortenson-construction/", "date": "2010-04-03" },
-    { "label": "Colorado AG — Bid-rigging settlement, Colorado Convention Center ($650K + $650K services)", "url": "https://coag.gov/press-releases/4-13-20/", "date": "2020-04-13" },
-    { "label": "Star Tribune — U.S. Bank Stadium contractors face OSHA fines in roofing worker's death", "url": "https://www.startribune.com/u-s-bank-stadium-contractor-mortenson-subcontractor-face-fines-of-173-000-in-death-injury-of-roof-wo/383200841", "date": "2016" },
-    { "label": "Mortenson — Data center construction (11 GW claim; scope; project fleet)", "url": "https://www.mortenson.com/industries/data-centers" },
-    { "label": "Mortenson — Wind energy construction (47.8+ GW, 290+ projects)", "url": "https://www.mortenson.com/industries/wind" },
-    { "label": "Mortenson — Solar EPC (17+ GW, 120+ projects)", "url": "https://www.mortenson.com/industries/solar" },
-    { "label": "Mortenson — Energy & battery storage EPC (45,000+ MWh, 60 projects)", "url": "https://www.mortenson.com/industries/energy-storage" },
-    { "label": "Mortenson — Abilene data center development (1 GW / 345 kV substation timeline)", "url": "https://www.mortenson.com/projects/abilene-data-center-development" },
-    { "label": "Mortenson — Richland Parish data center project page (scope; 7,500+ craft workers)", "url": "https://www.mortenson.com/projects/richland-parish-data-center" },
-    { "label": "Mortenson — Derek Cunz bio", "url": "https://www.mortenson.com/team/derek-cunz" },
-    { "label": "Mortenson — Prefab / BLUvera offsite manufacturing", "url": "https://www.mortenson.com/prefab" },
-    { "label": "Mortenson — Mortenson Properties (development arm)", "url": "https://www.mortenson.com/services/mortenson-properties" }
+    {
+      "label": "Construction Owners Assn — Mortenson #7 in 2026 US solar contractor rankings (~2 GW in 2025)",
+      "url": "https://www.constructionowners.com/news/mortenson-earns-top-10-position-in-2026-u-s-solar-contractor-rankings",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "Meta — Deepening our investment in Richland Parish, Louisiana (~$50B regional commitment)",
+      "url": "https://datacenters.atmeta.com/2026/07/deepening-our-investment-in-richland-parish-louisiana/",
+      "date": "2026-07"
+    },
+    {
+      "label": "IndexBox — ENR 2026 Top 400: Turner holds #1, Mortenson breaks top 10 ($10.85B, +12 spots)",
+      "url": "https://www.indexbox.io/blog/enr-2026-top-400-commercial-contractors-turner-holds-1-mortenson-breaks-top-10/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "The Job Walk — ENR 2026 Top 400 top-10 data analysis (Mortenson mix ~45% telecom / ~33% power; DC revenue est. $2-3B)",
+      "url": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10",
+      "date": "2026-05"
+    },
+    {
+      "label": "Mortenson — Acquires Nor-Cal Controls (SCADA/EMS for solar, BESS, microgrids)",
+      "url": "https://www.mortenson.com/news-insights/mortenson-acquires-nor-cal-controls",
+      "date": "2026-04-08"
+    },
+    {
+      "label": "KAXE — Public comments open on updated review of proposed Hermantown data center (Google revealed as end user)",
+      "url": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-data-center",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "Mortenson — Begins Indiana data center construction (Meta Lebanon, IN)",
+      "url": "https://www.mortenson.com/news-insights/mortenson-begins-indiana-data-center-construction",
+      "date": "2026-02-16"
+    },
+    {
+      "label": "Construction Dive — Mortenson, Turner win $10B Meta data center in Indiana",
+      "url": "https://www.constructiondive.com/news/mortenson-turner-win-meta-data-center-indiana/812139/",
+      "date": "2026-02-12"
+    },
+    {
+      "label": "Construction Dive — Meta taps Mortenson for $1B Beaver Dam, WI data center",
+      "url": "https://www.constructiondive.com/news/meta-mortenson-beaver-dam-wisconsin-data-center/806211/",
+      "date": "2025-11-21"
+    },
+    {
+      "label": "KAXE — Environmental groups sue over Hermantown data center review",
+      "url": "https://www.kaxe.org/local-news/2025-11-05/environmental-groups-sue-hermantown-data-center-review",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "BD+C Giants 400 — Top data center construction firms for 2025",
+      "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "date": "2025-10-07"
+    },
+    {
+      "label": "California Energy Commission — Approves world's largest solar + battery storage project (Darden; Mortenson EPC)",
+      "url": "https://www.energy.ca.gov/news/2025-06/cec-approves-worlds-largest-solar-battery-storage-project-fresno-county-under",
+      "date": "2025-06-12"
+    },
+    {
+      "label": "Construction Equipment Guide — A's break ground on $1.75B Vegas ballpark due in 2028 (Mortenson-McCarthy)",
+      "url": "https://www.constructionequipmentguide.com/as-break-ground-on-175b-vegas-ballpark-due-in-2028/68478",
+      "date": "2025-06"
+    },
+    {
+      "label": "ENR — 2025 Top 400 Contractors (Mortenson #22, $6.7B)",
+      "url": "https://www.enr.com/toplists/2025-Top-400-Contractors-1-preview",
+      "date": "2025-05"
+    },
+    {
+      "label": "Construction Dive — New year, new CEO at Mortenson (Derek Cunz takes over)",
+      "url": "https://www.constructiondive.com/news/mortenson-new-ceo-outlook-construction/735417/",
+      "date": "2025-01"
+    },
+    {
+      "label": "Construction Dive — Meta taps Turner, DPR, Mortenson for $10B Louisiana data center",
+      "url": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/",
+      "date": "2024-12-04"
+    },
+    {
+      "label": "Mortenson — Executive leadership transition: Dan Johnson retires, Derek Cunz named CEO",
+      "url": "https://www.mortenson.com/newsroom/ceo-announcement",
+      "date": "2024-09-05"
+    },
+    {
+      "label": "ENR — 2024 Top 400 Contractors (Mortenson #27, $4.9B)",
+      "url": "https://www.enr.com/toplists/2024-Top-400-Contractors-1-preview",
+      "date": "2024-05"
+    },
+    {
+      "label": "Solar Power World — The largest US solar + storage project is complete (Edwards & Sanborn)",
+      "url": "https://www.solarpowerworldonline.com/2024/01/the-largest-us-solar-storage-project-is-complete/",
+      "date": "2024-01"
+    },
+    {
+      "label": "ENR — Succession boosts David Mortenson, 49, to chairman",
+      "url": "https://www.enr.com/articles/7939-succession-boosts-david-mortenson-49-to-chairman-of-mortenson-construction",
+      "date": "2015-02-04"
+    },
+    {
+      "label": "Wind Systems — Company profile: Mortenson Construction (24% of US wind capacity by 2010)",
+      "url": "https://www.windsystemsmag.com/company-profile-mortenson-construction/",
+      "date": "2010-04-03"
+    },
+    {
+      "label": "Colorado AG — Bid-rigging settlement, Colorado Convention Center ($650K + $650K services)",
+      "url": "https://coag.gov/press-releases/4-13-20/",
+      "date": "2020-04-13"
+    },
+    {
+      "label": "Star Tribune — U.S. Bank Stadium contractors face OSHA fines in roofing worker's death",
+      "url": "https://www.startribune.com/u-s-bank-stadium-contractor-mortenson-subcontractor-face-fines-of-173-000-in-death-injury-of-roof-wo/383200841",
+      "date": "2016"
+    },
+    {
+      "label": "Mortenson — Data center construction (11 GW claim; scope; project fleet)",
+      "url": "https://www.mortenson.com/industries/data-centers"
+    },
+    {
+      "label": "Mortenson — Wind energy construction (47.8+ GW, 290+ projects)",
+      "url": "https://www.mortenson.com/industries/wind"
+    },
+    {
+      "label": "Mortenson — Solar EPC (17+ GW, 120+ projects)",
+      "url": "https://www.mortenson.com/industries/solar"
+    },
+    {
+      "label": "Mortenson — Energy & battery storage EPC (45,000+ MWh, 60 projects)",
+      "url": "https://www.mortenson.com/industries/energy-storage"
+    },
+    {
+      "label": "Mortenson — Abilene data center development (1 GW / 345 kV substation timeline)",
+      "url": "https://www.mortenson.com/projects/abilene-data-center-development"
+    },
+    {
+      "label": "Mortenson — Richland Parish data center project page (scope; 7,500+ craft workers)",
+      "url": "https://www.mortenson.com/projects/richland-parish-data-center"
+    },
+    {
+      "label": "Mortenson — Derek Cunz bio",
+      "url": "https://www.mortenson.com/team/derek-cunz"
+    },
+    {
+      "label": "Mortenson — Prefab / BLUvera offsite manufacturing",
+      "url": "https://www.mortenson.com/prefab"
+    },
+    {
+      "label": "Mortenson — Mortenson Properties (development arm)",
+      "url": "https://www.mortenson.com/services/mortenson-properties"
+    }
   ],
   "lastUpdated": "2026-08-21",
   "profileVersion": 1

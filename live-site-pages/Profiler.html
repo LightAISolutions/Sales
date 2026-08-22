@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.32w">
+  <meta name="build-version" content="v01.33w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -156,7 +156,7 @@
       --ov-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, 'Times New Roman', serif;
       --ov-mono: 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
       --ov-sup: #e0a458; --ov-dev: #82b56d; --ov-int: #4fc1b4; --ov-inv: #b18cf2;
-      --ov-hyp: #6ea8fe; --ov-adv: #e07a8b; --ov-oth: #9aa3af;
+      --ov-hyp: #6ea8fe; --ov-neo: #59c2e6; --ov-adv: #e07a8b; --ov-oth: #9aa3af;
     }
     body {
       background: radial-gradient(1100px 620px at 72% -8%, #1e2233 0%, var(--ov-ink) 58%) fixed;
@@ -208,6 +208,7 @@
     .ov-tag.supplier { background: var(--ov-sup); } .ov-tag.developer { background: var(--ov-dev); }
     .ov-tag.integrator { background: var(--ov-int); } .ov-tag.investor { background: var(--ov-inv); }
     .ov-tag.hyperscaler { background: var(--ov-hyp); } .ov-tag.advisor { background: var(--ov-adv); }
+    .ov-tag.neocloud { background: var(--ov-neo); }
     /* Detail view */
     .ov-back {
       display: inline-block; margin-bottom: 22px; color: var(--ov-gold); text-decoration: none;
@@ -235,6 +236,7 @@
     .ov-fact { background: var(--ov-card); padding: 13px 15px; }
     .ov-fact .k { font: 9.5px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-faint); margin-bottom: 7px; }
     .ov-fact .v { font-size: 14.5px; }
+    .ov-fact .v, td.fv { text-transform: capitalize; }
     /* Products */
     .ov-prod { border-left: 2px solid var(--ov-line2); padding: 2px 0 2px 18px; margin: 18px 0; }
     .ov-prod h4 { font: 400 19px/1.3 var(--ov-serif); margin: 0 0 6px; }
@@ -1254,8 +1256,24 @@ function ovReloadFresh() {
       return a;
     }
     function ovSafeCat(cat) {
-      var known = ['supplier', 'developer', 'integrator', 'investor', 'hyperscaler', 'advisor'];
+      var known = ['supplier', 'developer', 'integrator', 'investor', 'hyperscaler', 'neocloud', 'advisor'];
       return known.indexOf(cat) >= 0 ? cat : 'other';
+    }
+    // Profiles exist in two data shapes: legacy ({headquarters, ownership:{type,ticker}, shortName})
+    // and schema-v2 cohort ({hq, ownership:"string", ticker, legalName}). Read both.
+    function ovHq(p) { return p.headquarters || p.hq || ''; }
+    function ovTicker(p) { return (p.ownership && p.ownership.ticker) || p.ticker || ''; }
+    function ovOwnership(p) {
+      if (!p.ownership) return '';
+      var t = (typeof p.ownership === 'string') ? p.ownership : (p.ownership.type || '');
+      var k = ovTicker(p);
+      return t + (k ? ' · ' + k : '');
+    }
+    function ovAppendSummary(container, text) {
+      var s = String(text || '');
+      var idx = s.indexOf('BACKGROUND:');
+      var chunks = idx > 0 ? [s.slice(0, idx).trim(), s.slice(idx).trim()] : [s];
+      chunks.forEach(function(c) { if (c) container.appendChild(ovEl('p', null, c)); });
     }
     function ovTagRow(cats) {
       var row = ovEl('div', 'tag-row');
@@ -1370,7 +1388,7 @@ function ovReloadFresh() {
     function ovStratTag() { return OV_STRAT_TAG[ovStyle()] || OV_STRAT_TAG['default']; }
     function ovStyleBanner(p) {
       var s = ovStyle();
-      if (s === 'equity-research') return ((p.ownership && p.ownership.ticker) ? p.ownership.ticker + ' · ' : '') + 'Positioning framework — analytical view, not investment advice';
+      if (s === 'equity-research') return (ovTicker(p) ? ovTicker(p) + ' · ' : '') + 'Positioning framework — analytical view, not investment advice';
       if (s === 'intel-briefing') return 'COMPILED FROM OPEN SOURCES · ANALYTIC JUDGMENTS EXPLICITLY LABELED';
       return '';
     }
@@ -1477,12 +1495,13 @@ function ovReloadFresh() {
       document.title = (p.shortName || p.name) + ' — Profiler';
       var head = ovEl('div', 'ov-co-head');
       head.appendChild(ovEl('h2', null, p.shortName || p.name));
-      if (p.name && p.name !== p.shortName) head.appendChild(ovEl('p', 'legal', p.name));
+      var legalLine = p.legalName || (p.shortName && p.name !== p.shortName ? p.name : '');
+      if (legalLine) head.appendChild(ovEl('p', 'legal', legalLine));
       head.appendChild(ovTagRow(p.categories));
       var meta = ovEl('div', 'ov-co-meta');
       var bits = [];
-      if (p.ownership && p.ownership.ticker) bits.push(p.ownership.ticker);
-      if (p.headquarters) bits.push(p.headquarters);
+      if (ovTicker(p)) bits.push(ovTicker(p));
+      if (ovHq(p)) bits.push(ovHq(p));
       if (p.lastUpdated) bits.push('profile as of ' + p.lastUpdated);
       meta.appendChild(document.createTextNode(bits.join('  ·  ') + (p.website ? '  ·  ' : '')));
       if (p.website) meta.appendChild(ovLink(p.website, null, p.website.replace(/^https?:\/\//, '').replace(/\/$/, '')));
@@ -1545,13 +1564,13 @@ function ovReloadFresh() {
       var snap = ovSection(ovSecLabel('snapshot'));
       snap.appendChild(ovFactsGrid([
         ['Founded', p.founded ? String(p.founded) : ''],
-        ['Headquarters', p.headquarters || ''],
-        ['Ownership', p.ownership ? ((p.ownership.type || '') + (p.ownership.ticker ? ' · ' + p.ownership.ticker : '')) : ''],
+        ['Headquarters', ovHq(p)],
+        ['Ownership', ovOwnership(p)],
         ['Employees', p.employees || ''],
         ['Ecosystem role', (p.categories || []).join(', ')]
       ]));
       var prose = ovEl('div', 'ov-prose');
-      if (p.summary) prose.appendChild(ovEl('p', null, p.summary));
+      if (p.summary) ovAppendSummary(prose, p.summary);
       if (p.ecosystemRole) prose.appendChild(ovEl('p', null, p.ecosystemRole));
       snap.appendChild(prose);
       main.appendChild(snap);
@@ -3147,7 +3166,7 @@ function ovReloadFresh() {
         if (!pair[1]) return;
         var tr = ovEl('tr');
         tr.appendChild(ovEl('td', 'k', pair[0]));
-        tr.appendChild(ovEl('td', null, pair[1]));
+        tr.appendChild(ovEl('td', 'fv', pair[1]));
         t.appendChild(tr);
       });
       return t;
@@ -3158,10 +3177,11 @@ function ovReloadFresh() {
       var doc = ovEl('div'); doc.id = 'ov-prev-doc';
       doc.className = 'ov-sty-' + sty; // style skin — preview + PDF print inherit
       doc.appendChild(ovEl('h1', null, p.shortName || p.name));
-      if (p.name && p.name !== p.shortName) doc.appendChild(ovEl('p', 'd-legal', p.name));
+      var dLegal = p.legalName || (p.shortName && p.name !== p.shortName ? p.name : '');
+      if (dLegal) doc.appendChild(ovEl('p', 'd-legal', dLegal));
       var metaBits = [];
-      if (p.ownership && p.ownership.ticker) metaBits.push(p.ownership.ticker);
-      if (p.headquarters) metaBits.push(p.headquarters);
+      if (ovTicker(p)) metaBits.push(ovTicker(p));
+      if (ovHq(p)) metaBits.push(ovHq(p));
       if ((p.categories || []).length) metaBits.push((p.categories || []).join(', '));
       if (p.website) metaBits.push(p.website.replace(/^https?:\/\//, '').replace(/\/$/, ''));
       if (p.lastUpdated) metaBits.push('profile as of ' + p.lastUpdated);
@@ -3172,11 +3192,11 @@ function ovReloadFresh() {
       doc.appendChild(ovEl('h2', null, ovSecLabel('snapshot')));
       doc.appendChild(ovDocFacts([
         ['Founded', p.founded ? String(p.founded) : ''],
-        ['Headquarters', p.headquarters || ''],
-        ['Ownership', p.ownership ? ((p.ownership.type || '') + (p.ownership.ticker ? ' · ' + p.ownership.ticker : '')) : ''],
+        ['Headquarters', ovHq(p)],
+        ['Ownership', ovOwnership(p)],
         ['Employees', p.employees || '']
       ]));
-      if (p.summary) doc.appendChild(ovEl('p', null, p.summary));
+      if (p.summary) ovAppendSummary(doc, p.summary);
       if (p.ecosystemRole) doc.appendChild(ovEl('p', null, p.ecosystemRole));
 
       if (p.productsAndServices && p.productsAndServices.length) {

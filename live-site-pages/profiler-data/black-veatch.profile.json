@@ -3,13 +3,15 @@
   "slug": "black-veatch",
   "name": "Black & Veatch",
   "legalName": "Black & Veatch (100% employee-owned via ESOP since 2015; employee-owned corporation since 1999)",
-  "categories": ["integrator"],
+  "categories": [
+    "integrator"
+  ],
   "hq": "Overland Park, KS, USA",
   "founded": "1915 (Ernest Bateman Black & Nathan Thomas Veatch, Kansas City)",
   "ownership": "private",
   "employees": "~13,000 (2025); among the largest 100% employee-owned US companies (top-10, rank drifting upward)",
   "website": "https://www.bv.com",
-  "summary": "BLUF: Black & Veatch is the grid-and-water engineer betting its AI-era franchise on client-owned substations — building hyperscalers' and colocation operators' own transmission-connected substations (a six-site global program for a leading colocation company; two 300 MW units for a confidential US hyperscale campus, the first completed September 2025) to cut interconnection timelines 'by one-half or more' versus waiting 5+ years for utility build-out. The ~13,000-person, 100% ESOP-owned Overland Park firm posted record ~$5.0-5.1B 2025 revenue (from $4.3B in 2022) and holds a nearly unique ENR breadth: #6 Power AND #8 Water simultaneously, plus #1 in Hydrogen (EPC of the ACES Delta green-hydrogen hub: 220 MW of electrolyzers, 100 t/day, two salt caverns), #1 in O&M, and a seat in one of the first US SMR design-build contracts (the equal Aecon-Kiewit-B&V 'Cascade Nuclear Partners' JV for the first four X-energy Xe-100s at Energy Northwest's Amazon-backed facility). Two strategic retreats mark the modern shape: exit from new coal (2020) and the $150M sale of its public-carrier wireless business to Dycom (August 2024, ~$1B backlog transferred). Watch items: no named behind-the-meter AI-campus gas plant (rivals Kiewit, B&W, and Gemma hold those awards — B&V plays owner's engineer and substations instead); the Boldt wind-farm litigation turned adverse (a $1 nominal award on B&V's $29.4M claim, affirmed July 2026, with a new trial ordered on Boldt's wrongful-termination claim); and two restructurings in 22 months with unconfirmed January 2026 layoff reports.",
+  "summary": "BOTTOM LINE UP FRONT: Black & Veatch is the grid-and-water engineer betting its AI-era franchise on client-owned substations — building hyperscalers' and colocation operators' own transmission-connected substations (a six-site global program for a leading colocation company; two 300 MW units for a confidential US hyperscale campus, the first completed September 2025) to cut interconnection timelines 'by one-half or more' versus waiting 5+ years for utility build-out. The ~13,000-person, 100% ESOP-owned Overland Park firm posted record ~$5.0-5.1B 2025 revenue (from $4.3B in 2022) and holds a nearly unique ENR breadth: #6 Power AND #8 Water simultaneously, plus #1 in Hydrogen (EPC of the ACES Delta green-hydrogen hub: 220 MW of electrolyzers, 100 t/day, two salt caverns), #1 in O&M, and a seat in one of the first US SMR design-build contracts (the equal Aecon-Kiewit-B&V 'Cascade Nuclear Partners' JV for the first four X-energy Xe-100s at Energy Northwest's Amazon-backed facility). Two strategic retreats mark the modern shape: exit from new coal (2020) and the $150M sale of its public-carrier wireless business to Dycom (August 2024, ~$1B backlog transferred). Watch items: no named behind-the-meter AI-campus gas plant (rivals Kiewit, B&W, and Gemma hold those awards — B&V plays owner's engineer and substations instead); the Boldt wind-farm litigation turned adverse (a $1 nominal award on B&V's $29.4M claim, affirmed July 2026, with a new trial ordered on Boldt's wrongful-termination claim); and two restructurings in 22 months with unconfirmed January 2026 layoff reports.",
   "ecosystemRole": "The interconnection specialist of the AI buildout: engineer-builder of the client-owned substations, grid infrastructure, cooling water systems, hydrogen hubs, and first SMRs that connect gigawatt campuses to power — selling speed around the utility queue rather than competing for the buildings themselves.",
   "productsAndServices": [
     {
@@ -24,7 +26,11 @@
       ],
       "positioning": "The picks-and-shovels grid specialist of the DC boom — not competing with shell GCs (HITT, Holder, Turner) but selling the interconnection speed every campus needs; rival Burns & McDonnell sells a similar utility-side thesis from across town",
       "soldThrough": "Progressive design-build and EPC contracts directly with data-center operators, plus utility frameworks",
-      "targetSegments": ["Colocation operators", "Hyperscalers/neoclouds", "Utilities serving DC load"],
+      "targetSegments": [
+        "Colocation operators",
+        "Hyperscalers/neoclouds",
+        "Utilities serving DC load"
+      ],
       "roadmap": "Scaling the client-owned substation model as interconnection queues lengthen"
     },
     {
@@ -38,7 +44,12 @@
       ],
       "positioning": "Deep gas/hydrogen engineering with lighter hard-dollar mega-EPC exposure than Bechtel/Kiewit — notably, no named behind-the-meter AI-campus gas plant yet (that niche is held by Kiewit, B&W, and Gemma); B&V's power monetization of AI runs through substations, OE roles, and design",
       "soldThrough": "EPC, owner's-engineer, and progressive design-build contracts",
-      "targetSegments": ["Municipal power agencies (IPA)", "IPPs and utilities", "Hydrogen developers (Mitsubishi Power/ACES)", "International LNG-to-power owners"],
+      "targetSegments": [
+        "Municipal power agencies (IPA)",
+        "IPPs and utilities",
+        "Hydrogen developers (Mitsubishi Power/ACES)",
+        "International LNG-to-power owners"
+      ],
       "roadmap": "Hydrogen-hub replication; gas fleet advisory as AI load drives new CCGT demand"
     },
     {
@@ -52,7 +63,11 @@
       ],
       "positioning": "Smaller than Quanta/MasTec in field T&D but pairs construction with top-6 power design authority — the engineer-builder hybrid in the grid lane",
       "soldThrough": "Utility EPC and framework agreements; direct DC-operator contracts",
-      "targetSegments": ["Investor-owned utilities (AEP, Duke, Georgia Power)", "Municipal utilities", "Data-center operators"],
+      "targetSegments": [
+        "Investor-owned utilities (AEP, Duke, Georgia Power)",
+        "Municipal utilities",
+        "Data-center operators"
+      ],
       "roadmap": "Data-center-driven utility capex; storage integration"
     },
     {
@@ -65,7 +80,11 @@
       ],
       "positioning": "Early execution position in the hyperscaler-underwritten SMR class, at JV scale that fits its balance sheet",
       "soldThrough": "Progressive design-build JV with a public power agency",
-      "targetSegments": ["Public power (Energy Northwest)", "SMR developers (X-energy)", "Hyperscaler-backed nuclear programs (Amazon)"],
+      "targetSegments": [
+        "Public power (Energy Northwest)",
+        "SMR developers (X-energy)",
+        "Hyperscaler-backed nuclear programs (Amazon)"
+      ],
       "roadmap": "First-four-unit execution; option scope to 12 units"
     },
     {
@@ -79,7 +98,11 @@
       ],
       "positioning": "Water breadth differentiates against power-only rivals; the wireless exit traded scale for focus",
       "soldThrough": "Municipal procurement, industrial contracts, spectrum agency arrangement",
-      "targetSegments": ["Municipal water utilities", "Industrial owners", "Utilities (private networks)"],
+      "targetSegments": [
+        "Municipal water utilities",
+        "Industrial owners",
+        "Utilities (private networks)"
+      ],
       "roadmap": "Data-center water/cooling demand; utility private-network buildout"
     }
   ],
@@ -269,56 +292,179 @@
       {
         "period": "2025",
         "metrics": [
-          { "name": "Revenue", "actual": "~$5.0-5.1B (record; sources conflict slightly — Wikipedia $5.1B vs a Forbes-derived '$5.0B, up 5%')", "expected": "", "verdict": "inline", "result": "ENR 2026: #14 Top 500 Design Firms, #6 Power, #8 Water, #49 Top 400 Contractors, #33 by New Contracts" }
+          {
+            "name": "Revenue",
+            "actual": "~$5.0-5.1B (record; sources conflict slightly — Wikipedia $5.1B vs a Forbes-derived '$5.0B, up 5%')",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR 2026: #14 Top 500 Design Firms, #6 Power, #8 Water, #49 Top 400 Contractors, #33 by New Contracts"
+          }
         ],
         "commentary": "Revenue per employee ≈ $390-400K (~$5.05B / ~13,000) — a design-weighted profile versus the ~$610K of EPC-heavier Burns & McDonnell (analyst computation)."
       },
       {
         "period": "2023-2024",
         "metrics": [
-          { "name": "Revenue", "actual": "$4.735B (2023) → ~$4.7-4.76B (2024, flat; minor source conflict)", "expected": "", "verdict": "inline", "result": "Forbes America's Top Private Companies #143 (2024 list)" }
+          {
+            "name": "Revenue",
+            "actual": "$4.735B (2023) → ~$4.7-4.76B (2024, flat; minor source conflict)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Forbes America's Top Private Companies #143 (2024 list)"
+          }
         ],
         "commentary": "The 2024 flat year preceded the 2025 record — mirroring the AI-cycle inflection its cross-town rival also showed. Workforce grew 17% to >12,000 in the same period on 'historic levels of project backlog' (company language; no dollar figure)."
       },
       {
         "period": "2022 (baseline)",
         "metrics": [
-          { "name": "Revenue", "actual": "$4.3B", "expected": "", "verdict": "inline", "result": "~+16% cumulative growth 2022→2025" }
+          {
+            "name": "Revenue",
+            "actual": "$4.3B",
+            "expected": "",
+            "verdict": "inline",
+            "result": "~+16% cumulative growth 2022→2025"
+          }
         ],
         "commentary": "ESOP economics: shares granted from year one at no employee cost, no external investors — conservative self-funded posture, with repurchase obligations growing as the workforce expands and ages. Among the largest 100% employee-owned US companies (top-10; NCEO-cited rank has drifted from #8-9 toward #6)."
       }
     ]
   },
   "sources": [
-    { "label": "Morningstar/Yahoo (B&V release) — Duke Energy names B&V 2026 Corporate Responsibility Supplier of the Year", "url": "https://www.bv.com/en-US/news", "date": "2026-07-28" },
-    { "label": "National Law Review — Seventh Circuit orders new trial in wind farm dispute (Boldt v. B&V Construction)", "url": "https://natlawreview.com/article/case-update-seventh-circuit-orders-new-trial-wind-farm-dispute", "date": "2026-07-16" },
-    { "label": "Justia — Boldt v. Black & Veatch, CA7 No. 25-2070 (decided 2026-07-08)", "url": "https://law.justia.com/cases/federal/appellate-courts/ca7/25-2070/25-2070-2026-07-08.html", "date": "2026-07-08" },
-    { "label": "Businesswire — B&V annual growth release (three-sector structure; AI demand framing)", "url": "https://www.businesswire.com/news/home/20260323255420/en/", "date": "2026-03-23" },
-    { "label": "American Public Power Association — B&V report details top utility obstacles getting data centers online (2025 Electric Report)", "url": "https://www.publicpower.org/periodical/article/black-veatch-report-details-top-utility-obstacles-getting-data-centers-online", "date": "2025-11" },
-    { "label": "GlobeNewswire/Aecon — Joint venture selected to deliver Cascade SMR facility (Aecon-Kiewit-B&V; X-energy Xe-100)", "url": "https://www.aecon.com/press-room/news/2025/10/23/Aecon-Northwest-Energy", "date": "2025-10-23" },
-    { "label": "World Nuclear News — Joint venture selected to deliver Cascade SMR facility", "url": "https://www.world-nuclear-news.org/articles/joint-venture-selected-to-deliver-cascade-smr-facility", "date": "2025-10" },
-    { "label": "Utah News Dispatch — Intermountain Power Plant coal-fired units no longer operating (IPP Renewed COD)", "url": "https://utahnewsdispatch.com/2025/12/05/intermountain-power-plant-coal-fired-units-no-longer-operating/", "date": "2025-12-05" },
-    { "label": "Power Magazine — J-class gas turbines arrive at IPP Renewed (contractor roles: Mitsubishi Power / Kiewit TIC; B&V Owner's Engineer)", "url": "https://www.powermag.com/j-class-gas-turbines-arrive-at-ipp-renewed-milestone-for-giant-utah-cavern-hydrogen-hub-project/", "date": "2025" },
-    { "label": "B&V — Grain Management / T-Mobile 800 MHz spectrum exclusive-agent arrangement", "url": "https://www.bv.com/en-US/news/grain-management-enters-exclusive-arrangement-to-acquire-800-mhz-spectrum-portfolio-from-t-mobile-with-plan-to-support-critical-utility-communications", "date": "2025-03" },
-    { "label": "ENR — Surprising $1 damage award pushes Boldt v. Black & Veatch into overtime", "url": "https://www.enr.com/articles/60122-surprising-1-damage-award-pushes-boldt-v-black-and-veatch-into-overtime", "date": "2024-11" },
-    { "label": "Dycom IR — Dycom acquires Black & Veatch's public-carrier wireless business ($150M; ~$1B backlog)", "url": "https://ir.dycomind.com/news-releases/news-release-details/dycom-industries-inc-acquires-black-veatchs-public-carrier", "date": "2024-08-21" },
-    { "label": "Construction Dive — Dycom/Black & Veatch wireless acquisition", "url": "https://www.constructiondive.com/news/dycom-black-veatch-acquisition-wireless-infrastructure-construction/725464/", "date": "2024-08" },
-    { "label": "Businesswire — B&V restructures into five client-facing areas (workforce +17% to >12,000; 'historic backlog')", "url": "https://www.businesswire.com/news/home/20240529304090/en/", "date": "2024-05-29" },
-    { "label": "CourtListener — Cabrera v. Black & Veatch Special Projects Corp. (D.D.C. 1:19-cv-03833, Anti-Terrorism Act suit; SAC allowed 2024-03-28)", "url": "https://www.courtlistener.com/docket/16631739/cabrera-v-black-veatch-special-projects-corporation/", "date": "2024-03" },
-    { "label": "B&V — World's largest green hydrogen hub selects Black & Veatch as EPC provider (ACES Delta)", "url": "https://www.bv.com/en-US/news/worlds-largest-green-hydrogen-hub-selects-black-and-veatch-as-epc-provider", "date": "2022-04-26" },
-    { "label": "B&V — Selects Mario Azar as new Chairman and CEO", "url": "https://www.bv.com/en-US/news/black-and-veatch-selects-mario-azar-as-new-chairman-and-ceo", "date": "2022" },
-    { "label": "B&V — Supporting western power agency on first hydrogen-capable gas turbines (IPP Renewed OE role)", "url": "https://www.bv.com/en-US/news/black-and-veatch-supporting-western-power-agency-on-first-hydrogen-capable", "date": "2020-06-03" },
-    { "label": "B&V — Data centers (who-we-serve page: one-partner model, hyperscale/colocation/neocloud)", "url": "https://www.bv.com/en-US/who-we-serve/technology-and-data-centers/data-centers" },
-    { "label": "B&V — Leading data-center provider turns to substations to solve fast expansion needs (six-site program; 400 MW-2 GW frame)", "url": "https://www.bv.com/en-US/projects/leading-data-center-provider-turns-to-substations-to-solve-fast-expansion-needs" },
-    { "label": "B&V — Powering hyperscale data centers (two 300 MW substations; breaker lead times)", "url": "https://www.bv.com/en-US/projects/powering-hyperscale-data-centers" },
-    { "label": "B&V — Delivering the Philippines' first LNG-to-power project (1,275 MW)", "url": "https://www.bv.com/en-US/projects/delivering-the-philippines-first-lng-to-power-project" },
-    { "label": "B&V — Power delivery (75+ years grid; 1,400+ workforce; 2,600+ projects)", "url": "https://www.bv.com/en-US/what-we-do/power-delivery" },
-    { "label": "B&V — Employee ownership (ESOP since 1999; 100% since 2015; shares granted year one)", "url": "https://www.bv.com/en-US/about-us/employee-ownership" },
-    { "label": "B&V — Awards and rankings (ENR 2026: #14 design, #6 Power, #8 Water, #1 Hydrogen/O&M)", "url": "https://www.bv.com/en-US/about-us/awards-and-rankings" },
-    { "label": "B&V — Leadership (executive roster)", "url": "https://www.bv.com/en-US/about-us/leadership" },
-    { "label": "B&V — Mario Azar bio", "url": "https://www.bv.com/en-US/about-us/leadership/mario-azar" },
-    { "label": "Wikipedia — Black & Veatch (history; revenue; subsidiaries; NCEO employee-owned rank)", "url": "https://en.wikipedia.org/wiki/Black_%26_Veatch" },
-    { "label": "Forbes — Black & Veatch private-company profile (#143, 2024 list)", "url": "https://www.forbes.com/companies/black-veatch/" }
+    {
+      "label": "Morningstar/Yahoo (B&V release) — Duke Energy names B&V 2026 Corporate Responsibility Supplier of the Year",
+      "url": "https://www.bv.com/en-US/news",
+      "date": "2026-07-28"
+    },
+    {
+      "label": "National Law Review — Seventh Circuit orders new trial in wind farm dispute (Boldt v. B&V Construction)",
+      "url": "https://natlawreview.com/article/case-update-seventh-circuit-orders-new-trial-wind-farm-dispute",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "Justia — Boldt v. Black & Veatch, CA7 No. 25-2070 (decided 2026-07-08)",
+      "url": "https://law.justia.com/cases/federal/appellate-courts/ca7/25-2070/25-2070-2026-07-08.html",
+      "date": "2026-07-08"
+    },
+    {
+      "label": "Businesswire — B&V annual growth release (three-sector structure; AI demand framing)",
+      "url": "https://www.businesswire.com/news/home/20260323255420/en/",
+      "date": "2026-03-23"
+    },
+    {
+      "label": "American Public Power Association — B&V report details top utility obstacles getting data centers online (2025 Electric Report)",
+      "url": "https://www.publicpower.org/periodical/article/black-veatch-report-details-top-utility-obstacles-getting-data-centers-online",
+      "date": "2025-11"
+    },
+    {
+      "label": "GlobeNewswire/Aecon — Joint venture selected to deliver Cascade SMR facility (Aecon-Kiewit-B&V; X-energy Xe-100)",
+      "url": "https://www.aecon.com/press-room/news/2025/10/23/Aecon-Northwest-Energy",
+      "date": "2025-10-23"
+    },
+    {
+      "label": "World Nuclear News — Joint venture selected to deliver Cascade SMR facility",
+      "url": "https://www.world-nuclear-news.org/articles/joint-venture-selected-to-deliver-cascade-smr-facility",
+      "date": "2025-10"
+    },
+    {
+      "label": "Utah News Dispatch — Intermountain Power Plant coal-fired units no longer operating (IPP Renewed COD)",
+      "url": "https://utahnewsdispatch.com/2025/12/05/intermountain-power-plant-coal-fired-units-no-longer-operating/",
+      "date": "2025-12-05"
+    },
+    {
+      "label": "Power Magazine — J-class gas turbines arrive at IPP Renewed (contractor roles: Mitsubishi Power / Kiewit TIC; B&V Owner's Engineer)",
+      "url": "https://www.powermag.com/j-class-gas-turbines-arrive-at-ipp-renewed-milestone-for-giant-utah-cavern-hydrogen-hub-project/",
+      "date": "2025"
+    },
+    {
+      "label": "B&V — Grain Management / T-Mobile 800 MHz spectrum exclusive-agent arrangement",
+      "url": "https://www.bv.com/en-US/news/grain-management-enters-exclusive-arrangement-to-acquire-800-mhz-spectrum-portfolio-from-t-mobile-with-plan-to-support-critical-utility-communications",
+      "date": "2025-03"
+    },
+    {
+      "label": "ENR — Surprising $1 damage award pushes Boldt v. Black & Veatch into overtime",
+      "url": "https://www.enr.com/articles/60122-surprising-1-damage-award-pushes-boldt-v-black-and-veatch-into-overtime",
+      "date": "2024-11"
+    },
+    {
+      "label": "Dycom IR — Dycom acquires Black & Veatch's public-carrier wireless business ($150M; ~$1B backlog)",
+      "url": "https://ir.dycomind.com/news-releases/news-release-details/dycom-industries-inc-acquires-black-veatchs-public-carrier",
+      "date": "2024-08-21"
+    },
+    {
+      "label": "Construction Dive — Dycom/Black & Veatch wireless acquisition",
+      "url": "https://www.constructiondive.com/news/dycom-black-veatch-acquisition-wireless-infrastructure-construction/725464/",
+      "date": "2024-08"
+    },
+    {
+      "label": "Businesswire — B&V restructures into five client-facing areas (workforce +17% to >12,000; 'historic backlog')",
+      "url": "https://www.businesswire.com/news/home/20240529304090/en/",
+      "date": "2024-05-29"
+    },
+    {
+      "label": "CourtListener — Cabrera v. Black & Veatch Special Projects Corp. (D.D.C. 1:19-cv-03833, Anti-Terrorism Act suit; SAC allowed 2024-03-28)",
+      "url": "https://www.courtlistener.com/docket/16631739/cabrera-v-black-veatch-special-projects-corporation/",
+      "date": "2024-03"
+    },
+    {
+      "label": "B&V — World's largest green hydrogen hub selects Black & Veatch as EPC provider (ACES Delta)",
+      "url": "https://www.bv.com/en-US/news/worlds-largest-green-hydrogen-hub-selects-black-and-veatch-as-epc-provider",
+      "date": "2022-04-26"
+    },
+    {
+      "label": "B&V — Selects Mario Azar as new Chairman and CEO",
+      "url": "https://www.bv.com/en-US/news/black-and-veatch-selects-mario-azar-as-new-chairman-and-ceo",
+      "date": "2022"
+    },
+    {
+      "label": "B&V — Supporting western power agency on first hydrogen-capable gas turbines (IPP Renewed OE role)",
+      "url": "https://www.bv.com/en-US/news/black-and-veatch-supporting-western-power-agency-on-first-hydrogen-capable",
+      "date": "2020-06-03"
+    },
+    {
+      "label": "B&V — Data centers (who-we-serve page: one-partner model, hyperscale/colocation/neocloud)",
+      "url": "https://www.bv.com/en-US/who-we-serve/technology-and-data-centers/data-centers"
+    },
+    {
+      "label": "B&V — Leading data-center provider turns to substations to solve fast expansion needs (six-site program; 400 MW-2 GW frame)",
+      "url": "https://www.bv.com/en-US/projects/leading-data-center-provider-turns-to-substations-to-solve-fast-expansion-needs"
+    },
+    {
+      "label": "B&V — Powering hyperscale data centers (two 300 MW substations; breaker lead times)",
+      "url": "https://www.bv.com/en-US/projects/powering-hyperscale-data-centers"
+    },
+    {
+      "label": "B&V — Delivering the Philippines' first LNG-to-power project (1,275 MW)",
+      "url": "https://www.bv.com/en-US/projects/delivering-the-philippines-first-lng-to-power-project"
+    },
+    {
+      "label": "B&V — Power delivery (75+ years grid; 1,400+ workforce; 2,600+ projects)",
+      "url": "https://www.bv.com/en-US/what-we-do/power-delivery"
+    },
+    {
+      "label": "B&V — Employee ownership (ESOP since 1999; 100% since 2015; shares granted year one)",
+      "url": "https://www.bv.com/en-US/about-us/employee-ownership"
+    },
+    {
+      "label": "B&V — Awards and rankings (ENR 2026: #14 design, #6 Power, #8 Water, #1 Hydrogen/O&M)",
+      "url": "https://www.bv.com/en-US/about-us/awards-and-rankings"
+    },
+    {
+      "label": "B&V — Leadership (executive roster)",
+      "url": "https://www.bv.com/en-US/about-us/leadership"
+    },
+    {
+      "label": "B&V — Mario Azar bio",
+      "url": "https://www.bv.com/en-US/about-us/leadership/mario-azar"
+    },
+    {
+      "label": "Wikipedia — Black & Veatch (history; revenue; subsidiaries; NCEO employee-owned rank)",
+      "url": "https://en.wikipedia.org/wiki/Black_%26_Veatch"
+    },
+    {
+      "label": "Forbes — Black & Veatch private-company profile (#143, 2024 list)",
+      "url": "https://www.forbes.com/companies/black-veatch/"
+    }
   ],
   "lastUpdated": "2026-08-21",
   "profileVersion": 1

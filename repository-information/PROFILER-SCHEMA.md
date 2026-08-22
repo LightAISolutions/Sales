@@ -1,6 +1,6 @@
 # Profiler App — Company Profile Schema
 
-The **Profiler** app (`live-site-pages/Profiler.html`) renders standardized corporate dossiers for companies in the ecosystem (suppliers, developers, integrators, investors, hyperscalers, advisors). All data lives in `live-site-pages/profiler-data/` and is fetched by the page at runtime via relative URLs (works with a private repo — GitHub Pages serves it publicly):
+The **Profiler** app (`live-site-pages/Profiler.html`) renders standardized corporate dossiers for companies in the ecosystem (suppliers, developers, integrators, investors, hyperscalers, neoclouds, advisors). All data lives in `live-site-pages/profiler-data/` and is fetched by the page at runtime via relative URLs (works with a private repo — GitHub Pages serves it publicly):
 
 - `profiler-companies.json` — the **registry**: the roster the app lists and filters
 - `<slug>.profile.json` — one **profile** per company: the full dossier
@@ -18,7 +18,7 @@ This file is the **single source of truth for the data schema**. Profiles are ge
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
 | `schemaVersion` | number | yes | Registry schema version (currently `1`) |
-| `categories` | string[] | yes | Canonical category order for the filter chips: `supplier`, `developer`, `integrator`, `investor`, `hyperscaler`, `advisor`, `other` |
+| `categories` | string[] | yes | Canonical category order for the filter chips: `supplier`, `developer`, `integrator`, `investor`, `hyperscaler`, `neocloud`, `advisor`, `other` |
 | `companies[]` | object[] | yes | One entry per covered company |
 | `companies[].slug` | string | yes | Per Slug rules; must have a matching `<slug>.profile.json` |
 | `companies[].name` | string | yes | Display name (short form, e.g. "Sinexcel") |

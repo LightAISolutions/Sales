@@ -6,6 +6,7 @@
     "integrator",
     "investor",
     "hyperscaler",
+    "neocloud",
     "advisor",
     "other"
   ],
@@ -143,7 +144,7 @@
       "slug": "coreweave",
       "name": "CoreWeave",
       "categories": [
-        "hyperscaler"
+        "neocloud"
       ],
       "tagline": "The neocloud proxy — 1 GW+ active power, $99.4B backlog; GPU-backed debt repriced from 15% to investment grade; leased-power fragility on display.",
       "hq": "Livingston, NJ, USA",
@@ -155,6 +156,7 @@
       "slug": "crusoe",
       "name": "Crusoe",
       "categories": [
+        "neocloud",
         "developer"
       ],
       "tagline": "The energy-first AI factory builder — Abilene 1.2 GW for OpenAI/Oracle, ~4.9 GW contracted of a 40+ GW pipeline; the deepest private-developer energy stack.",
@@ -327,7 +329,7 @@
       "slug": "iren",
       "name": "IREN",
       "categories": [
-        "hyperscaler",
+        "neocloud",
         "developer"
       ],
       "tagline": "The vertically integrated pivot — 5 GW secured power, Microsoft's $9.7B GB300 contract delivered on time, NVIDIA $3.4B + 5 GW DSX; ClusterMAX says Underperforming, the Street says $80.",
@@ -363,7 +365,7 @@
       "slug": "lambda",
       "name": "Lambda",
       "categories": [
-        "hyperscaler"
+        "neocloud"
       ],
       "tagline": "The Superintelligence Cloud — Microsoft multibillion + NVIDIA leaseback anchors, $5.9B Series E, first IG-rated private-neocloud term loan; H2 2026 IPO window.",
       "hq": "San Francisco, CA, USA",
@@ -445,7 +447,7 @@
       "slug": "nebius",
       "name": "Nebius",
       "categories": [
-        "hyperscaler"
+        "neocloud"
       ],
       "tagline": "CoreWeave's most direct challenger — ARR $3B (+56% QoQ), >$40B Microsoft/Meta backlog, 5 GW contracted-power target; ClusterMAX Gold; Vineland permits are the live risk.",
       "hq": "Amsterdam, Netherlands",

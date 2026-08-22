@@ -3,11 +3,24 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 32/50`
+`Sections: 33/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.33w] — 2026-08-21 10:49:24 PM EST — v02.74r
+
+### Added
+- New "Neocloud" company category with its own color tag — GPU-cloud providers now appear under their own label instead of "Hyperscaler"
+- Every company now has an in-app study guide — 30 new technology study guides were added, completing coverage across the full roster
+
+### Changed
+- Dossier summaries now display "Bottom Line Up Front" and "Background" as separate paragraphs for easier reading
+- Snapshot facts (ownership, ecosystem role, and other background fields) now display with capitalized words
+
+### Fixed
+- Newer dossiers now show their Headquarters, Ownership, stock ticker, and legal-name details correctly — these fields could previously appear blank on some companies
 
 ## [v01.32w] — 2026-08-18 06:16:45 AM EST — v02.67r
 

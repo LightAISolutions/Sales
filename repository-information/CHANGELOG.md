@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.74r] — 2026-08-21 10:49:24 PM EST
+
+> **Prompt:** "Run the study-guide backfill. Also, split the neocloud companies out of the "Hyperscaler" category into their own "Neocloud" category. Also, see the attached screenshot - Capitalize the first letter of words in the Background section for all dossiers and separate out the "Bottom Line Up Front" section from the "Background" section into their own paragraphs."
+
+### Added
+- 30 new study guides completing roster-wide study coverage (`live-site-pages/profiler-data/*.study.json`): hyperscalers/AI labs (Amazon, Google, Meta, Microsoft, NVIDIA, OpenAI, Oracle, xAI), neoclouds & DC operators (CoreWeave, Crusoe, Equinix), power electronics & electrical OEMs (ABB, Delta Electronics, Eaton, Schneider Electric, Vertiv, LiteOn, Huawei Digital Power, Bloom Energy), batteries & solar (EVE Energy, Jinko Solar, LG Energy Solution, Panasonic Energy, Samsung SDI), and grid OEMs & integrators (Constellation Energy, GE Vernova, Hitachi Energy, Quanta Services, Rosendin, Siemens Energy) — concept-curriculum format, cross-checked against adjacent existing guides to avoid overlap
+- New `neocloud` roster category with its own tag color in the Profiler app (`live-site-pages/Profiler.html`, `live-site-pages/profiler-data/profiler-companies.json`, `repository-information/PROFILER-SCHEMA.md`)
+
+### Changed
+- CoreWeave, Lambda, and Nebius recategorized from `hyperscaler` to `neocloud`; IREN and Crusoe now `neocloud` + `developer` (`live-site-pages/profiler-data/*.profile.json`, `profiler-companies.json`)
+- Dossier summaries now render "Bottom Line Up Front" and "Background" as separate paragraphs, and snapshot fact values (ownership, category, etc.) display with capitalized first letters (`live-site-pages/Profiler.html` v01.33w)
+- Summary label normalization: 9 recent dossiers' "BLUF:" prefix expanded to the house-standard "BOTTOM LINE UP FRONT:" (Bechtel, Black & Veatch, Burns & McDonnell, DPR, Hitt, Holder, Kiewit, Mortenson, Primoris profile JSONs)
+
+### Fixed
+- Profiler renderer now reads both legacy and schema-v2 profile field shapes (`hq`/`headquarters`, string/object `ownership`, top-level `ticker`, `legalName`/`shortName`) — newer dossiers no longer show blank Headquarters/Ownership snapshot cells or a duplicated company name in the header (`live-site-pages/Profiler.html`)
 
 ## [v02.73r] — 2026-08-21 09:47:30 PM EST
 

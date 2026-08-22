@@ -3,13 +3,15 @@
   "slug": "holder-construction",
   "name": "Holder Construction",
   "legalName": "Holder Construction Company",
-  "categories": ["integrator"],
+  "categories": [
+    "integrator"
+  ],
   "hq": "Atlanta, GA, USA",
   "founded": "1960 (Robert M. Holder Jr., Georgia Tech civil engineer, Atlanta)",
   "ownership": "private",
   "employees": "~2,000 (Forbes profile, accessed 2026; company publishes no count)",
   "website": "https://www.holderconstruction.com",
-  "summary": "BLUF: Holder is the quiet giant of hyperscale data-center construction — a private, family-owned Atlanta CM/design-builder that BD+C ranked the #1 US data-center contractor in its 2023 and 2024 reports (#2 in 2025, behind HITT), with trade analysis crediting it with more hyperscale square footage built than any other North American GC. Revenue roughly doubled in two years on the AI boom: $5.0B (2023, ENR #30) → $7.7B (2024, ENR #15) → a reported $10.2B (2025, reported ENR #12). CEO Beth Lowry says 60-70% of current projects are data centers; confirmed hyperscale work skews to Google (the ~$2B Fort Wayne IN campus; the New Albany OH 'Mustang Project') plus the $1.9B, ≥450 MW EdgeCore Mesa AZ campus and legacy Meta/Apple credits (Holder finished Apple Park). The company is strikingly low-publicity — no leadership page, no press room, no disclosed backlog — consistent with an NDA-heavy hyperscaler client base, which cuts both ways: its absence from the publicly named GC lineups of the newest 2025-26 mega-campuses (Stargate sites, Meta Hyperion/Prometheus) could be undisclosed private awards or share loss to Turner/DPR/Mortenson/HITT; public sources cannot distinguish. Collection gaps: no financial statements, no ownership statement (Forbes classifies it family-owned at #65 with $8.5B; aggregator ESOP claims are unverified and treated as unreliable), and the 2025 ENR figure comes from a secondary aggregator against a paywalled original.",
+  "summary": "BOTTOM LINE UP FRONT: Holder is the quiet giant of hyperscale data-center construction — a private, family-owned Atlanta CM/design-builder that BD+C ranked the #1 US data-center contractor in its 2023 and 2024 reports (#2 in 2025, behind HITT), with trade analysis crediting it with more hyperscale square footage built than any other North American GC. Revenue roughly doubled in two years on the AI boom: $5.0B (2023, ENR #30) → $7.7B (2024, ENR #15) → a reported $10.2B (2025, reported ENR #12). CEO Beth Lowry says 60-70% of current projects are data centers; confirmed hyperscale work skews to Google (the ~$2B Fort Wayne IN campus; the New Albany OH 'Mustang Project') plus the $1.9B, ≥450 MW EdgeCore Mesa AZ campus and legacy Meta/Apple credits (Holder finished Apple Park). The company is strikingly low-publicity — no leadership page, no press room, no disclosed backlog — consistent with an NDA-heavy hyperscaler client base, which cuts both ways: its absence from the publicly named GC lineups of the newest 2025-26 mega-campuses (Stargate sites, Meta Hyperion/Prometheus) could be undisclosed private awards or share loss to Turner/DPR/Mortenson/HITT; public sources cannot distinguish. Collection gaps: no financial statements, no ownership statement (Forbes classifies it family-owned at #65 with $8.5B; aggregator ESOP claims are unverified and treated as unreliable), and the 2025 ENR figure comes from a secondary aggregator against a paywalled original.",
   "ecosystemRole": "The low-profile incumbent of hyperscale data-center general contracting: a repeat-relationship (>90%) CM/design-builder that has quietly delivered more hyperscale square footage than any named peer, anchoring Google's and EdgeCore's build programs while avoiding nearly all public visibility.",
   "productsAndServices": [
     {
@@ -25,7 +27,11 @@
       ],
       "positioning": "BD+C #1 data-center contractor 2023 and 2024, #2 in 2025 behind HITT; 'when a hyperscaler needs a 100 MW campus built in 18 months, Holder is typically on the short list' (trade analysis). Differentiators cited by third parties: deep mission-critical PM/superintendent bench, MEP coordination with embedded commissioning, and a >90% repeat-client model.",
       "soldThrough": "Privately negotiated, largely unannounced repeat-relationship contracts with hyperscalers and data-center developers",
-      "targetSegments": ["Hyperscalers (Google; legacy Meta, Apple, Microsoft)", "Data-center developers (EdgeCore)", "Enterprise/financial (Bank of America testimonial)"],
+      "targetSegments": [
+        "Hyperscalers (Google; legacy Meta, Apple, Microsoft)",
+        "Data-center developers (EdgeCore)",
+        "Enterprise/financial (Bank of America testimonial)"
+      ],
       "roadmap": "EdgeCore Mesa buildout; Google program continuation; public sources cannot see the NDA'd pipeline — the central collection gap"
     },
     {
@@ -39,7 +45,10 @@
       ],
       "positioning": "Top-tier airport CM in JV-heavy public work — the diversification ballast against data-center cyclicality",
       "soldThrough": "Public CM-at-risk awards, typically in JVs with MBE partners",
-      "targetSegments": ["Airport authorities", "Municipal owners"],
+      "targetSegments": [
+        "Airport authorities",
+        "Municipal owners"
+      ],
       "roadmap": "Concourse D to 2029; Omaha to 2028"
     },
     {
@@ -53,7 +62,11 @@
       ],
       "positioning": "Blue-chip repeat-client roster concentrated in the Southeast, with Atlanta civic depth (Georgia Tech, Georgia Power board seats across two generations of leadership)",
       "soldThrough": "Negotiated CM contracts and JVs",
-      "targetSegments": ["Corporates", "Universities", "Sports franchises"],
+      "targetSegments": [
+        "Corporates",
+        "Universities",
+        "Sports franchises"
+      ],
       "roadmap": "Steady-state; data centers absorb the growth capital"
     },
     {
@@ -67,7 +80,9 @@
       ],
       "positioning": "Capability depth without publicity — no trade-press tech features exist because the firm doesn't court them; the OSHA partnership document is the rare primary artifact of how it actually runs sites",
       "soldThrough": "Embedded in CM/design-build delivery",
-      "targetSegments": ["All Holder markets"],
+      "targetSegments": [
+        "All Holder markets"
+      ],
       "roadmap": "Not publicly articulated"
     }
   ],
@@ -238,56 +253,185 @@
       {
         "period": "2025 (reported)",
         "metrics": [
-          { "name": "Revenue", "actual": "$10.23B (reported; ENR 2026 rank #12)", "expected": "", "verdict": "inline", "result": "Via a secondary aggregator against a paywalled ENR original — treat as indicative; Forbes' 2026 family-owned list shows $8.5B, likely a fiscal-cutoff difference" },
-          { "name": "Data-center share", "actual": "60-70% of projects (CEO statement); est. $3-4B/yr DC revenue (trade analysis)", "expected": "", "verdict": "inline", "result": "No segment disclosure exists; the CEO figure is the best public anchor" }
+          {
+            "name": "Revenue",
+            "actual": "$10.23B (reported; ENR 2026 rank #12)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Via a secondary aggregator against a paywalled ENR original — treat as indicative; Forbes' 2026 family-owned list shows $8.5B, likely a fiscal-cutoff difference"
+          },
+          {
+            "name": "Data-center share",
+            "actual": "60-70% of projects (CEO statement); est. $3-4B/yr DC revenue (trade analysis)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No segment disclosure exists; the CEO figure is the best public anchor"
+          }
         ],
         "commentary": "The company describes itself as a '$10 billion construction services firm' in the CEO's May 2026 Georgia Power board announcement — corroborating the aggregator's ENR figure over the lagging Forbes number."
       },
       {
         "period": "2024 (ENR 2025 list)",
         "metrics": [
-          { "name": "Revenue", "actual": "$7.7B (+54% YoY)", "expected": "", "verdict": "inline", "result": "ENR Top 400 #15, up from #30 — the largest jump in the upper table that year, 'mostly powered by work in data center projects'" }
+          {
+            "name": "Revenue",
+            "actual": "$7.7B (+54% YoY)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR Top 400 #15, up from #30 — the largest jump in the upper table that year, 'mostly powered by work in data center projects'"
+          }
         ],
         "commentary": "ENR's telecom (data-center) category grew 59.7% YoY in the same list — Holder rode the category's beta with above-category growth."
       },
       {
         "period": "2023 (ENR 2024 list)",
         "metrics": [
-          { "name": "Revenue", "actual": "$5.0B", "expected": "", "verdict": "inline", "result": "ENR Top 400 #30 — the pre-breakout baseline; roughly doubled within two years" }
+          {
+            "name": "Revenue",
+            "actual": "$5.0B",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR Top 400 #30 — the pre-breakout baseline; roughly doubled within two years"
+          }
         ],
         "commentary": "Long-run arc: $2.1B (2016, Forbes trend), $1.4B of data-center-only revenue in 2017 (then #1 DC contractor), $250M in 1989 when Tommy Holder became CEO."
       }
     ]
   },
   "sources": [
-    { "label": "ConstructionPlacements — Top 25 data center construction companies in the US (Holder #2; $10.23B / ENR #12 reported)", "url": "https://www.constructionplacements.com/data-center-construction-companies-us/", "date": "2026-08-04" },
-    { "label": "PRNewswire — Beth Lowry named to Georgia Power board of directors ('$10 billion construction services firm')", "url": "https://www.prnewswire.com/news-releases/beth-lowry-named-to-georgia-power-board-of-directors-302781925.html", "date": "2026-05-26" },
-    { "label": "Construction Dive — Bechtel, HITT among largest family-owned businesses in US: Forbes (Holder #65, $8.5B)", "url": "https://www.constructiondive.com/news/bechtel-hitt-family-owned-large-construction-firms/820693/", "date": "2026-05-21" },
-    { "label": "The Job Walk — ENR 2026 Top 400 top-10 data analysis (peer context)", "url": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10", "date": "2026-05-27" },
-    { "label": "Buildermuse — Top 20 data center construction contractors in 2026 (Holder #1 Tier-1; est. $3-4B DC revenue)", "url": "https://buildermuse.com/commercial/the-top-20-data-center-construction-contractors/", "date": "2026-04-10" },
-    { "label": "BD+C Giants 400 — Top data center construction firms for 2025 (Holder #2, behind HITT)", "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025", "date": "2025-10-07" },
-    { "label": "Council for Quality Growth — Tommy Holder receives CQG's 36th Four Pillar Award ($250M 1989 → $8B+)", "url": "https://www.councilforqualitygrowth.org/press-release-tommy-holder-receives-cqgs-36th-four-pillar-award/", "date": "2025-10" },
-    { "label": "Georgia Tech Scheller — Tech Talks Business: Beth Lowry (60-70% of projects are data centers; ~$10B planned)", "url": "https://www.scheller.gatech.edu/news/2025/tech-talks-business-beth-lowry.html", "date": "2025-09-04" },
-    { "label": "Construction Dive — The top commercial contractors of 2025 (Holder #30→#15, $7.7B)", "url": "https://www.constructiondive.com/news/top-commercial-contractors-2025-revenue-enr/749244/", "date": "2025-05-29" },
-    { "label": "Construction Dive — Multibillion-dollar data center projects to watch (Google Fort Wayne, $2B, Holder GC)", "url": "https://www.constructiondive.com/news/data-center-projects-construction-2025/738160/", "date": "2025-01-28" },
-    { "label": "BD+C — Top 50 data center construction firms for 2024 (Holder #1)", "url": "https://www.bdcnetwork.com/home/news/55246343/top-50-data-center-construction-firms-for-2024", "date": "2024-11-27" },
-    { "label": "Metro Atlanta CEO — Hartsfield-Jackson sets new standard with aviation-first modular unit installation", "url": "https://metroatlantaceo.com/features/2024/04/hartsfield-jackson-sets-new-standard-aviation-first-modular-unit-installation/", "date": "2024-04-30" },
-    { "label": "Construction Dive — Holder Construction to manage $950M Nebraska airport expansion", "url": "https://www.constructiondive.com/news/omaha-eppley-airfield-holder-construction/706030/", "date": "2024-01-30" },
-    { "label": "Construction Dive — Holder Construction gets $1.9B Arizona data center job (EdgeCore Mesa, ≥450 MW)", "url": "https://www.constructiondive.com/news/holder-construction-arizona-data-center/704098/", "date": "2024-01-10" },
-    { "label": "OSHA — Strategic Partnership agreement, Google 'Mustang Project' New Albany OH (Holder GC signatory)", "url": "https://www.osha.gov/sites/default/files/2023-10/1247-agreement-20231017.pdf", "date": "2023-10-17" },
-    { "label": "Georgia Power — Tommy Holder board bio (career timeline; client roster)", "url": "https://www.georgiapower.com/content/dam/georgia-power/pdfs/company-pdfs/about-us/board-of-directors/bio_tommy-holder.pdf", "date": "2023-10-27" },
-    { "label": "DCD — Construction company at Google Ohio data center refused to hire union workers, broke federal labor law (Bernhard MCC; Holder not respondent)", "url": "https://www.datacenterdynamics.com/en/news/construction-company-at-google-ohio-data-center-refused-to-hire-union-workers-broke-federal-labor-law/", "date": "2022-09" },
-    { "label": "ENR — Massive airport concourse expansion in Atlanta passes halfway mark (ATL Concourse D, HMBS JV)", "url": "https://www.enr.com/articles/60476-massive-airport-concourse-expansion-in-atlanta-passes-halfway-mark", "date": "2025" },
-    { "label": "Construction Dive — Apple announces April opening of $5B 'spaceship' campus (Holder replaced Skanska/DPR)", "url": "https://www.constructiondive.com/news/apple-announces-april-opening-of-5b-spaceship-campus/436750/", "date": "2017" },
-    { "label": "Construction Dive — Big-D/Holder JV awarded Salt Lake City International redevelopment", "url": "https://www.constructiondive.com/press-release/20131101-big-d-constructionholder-construction-hd-awarded-salt-lake-city-internat/", "date": "2013-11-01" },
-    { "label": "Justia — Holder Construction Group v. Georgia Tech Facilities (Ga. Ct. App.)", "url": "https://law.justia.com/cases/georgia/court-of-appeals/2006/a06a1386-0.html", "date": "2006-10-03" },
-    { "label": "Forbes — Holder Construction private-company profile (~2,000 employees; revenue trend)", "url": "https://www.forbes.com/companies/holder-construction/" },
-    { "label": "Holder — Data & Telecom (610+ projects; $76B; 12.9 GW claim)", "url": "https://www.holderconstruction.com/data-telecom" },
-    { "label": "Holder — About (founded 1960; >90% repeat clients; 30+ states)", "url": "https://www.holderconstruction.com/about" },
-    { "label": "Holder — Expertise (self-perform trades incl. hot-aisle containment; VDC; prefabrication)", "url": "https://www.holderconstruction.com/expertise" },
-    { "label": "Holder — Aviation & Transportation (66 projects, $13.8B, 20 airports)", "url": "https://www.holderconstruction.com/aviation-transportation" },
-    { "label": "Georgia Research Alliance — Beth Lowry bio", "url": "https://gra.org/staff/160/Beth_Lowry.html" },
-    { "label": "World Construction Network — Mercedes-Benz Stadium (HHRM JV)", "url": "https://www.worldconstructionnetwork.com/projects/mercedes-benz-stadium-atlanta-georgia/" }
+    {
+      "label": "ConstructionPlacements — Top 25 data center construction companies in the US (Holder #2; $10.23B / ENR #12 reported)",
+      "url": "https://www.constructionplacements.com/data-center-construction-companies-us/",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "PRNewswire — Beth Lowry named to Georgia Power board of directors ('$10 billion construction services firm')",
+      "url": "https://www.prnewswire.com/news-releases/beth-lowry-named-to-georgia-power-board-of-directors-302781925.html",
+      "date": "2026-05-26"
+    },
+    {
+      "label": "Construction Dive — Bechtel, HITT among largest family-owned businesses in US: Forbes (Holder #65, $8.5B)",
+      "url": "https://www.constructiondive.com/news/bechtel-hitt-family-owned-large-construction-firms/820693/",
+      "date": "2026-05-21"
+    },
+    {
+      "label": "The Job Walk — ENR 2026 Top 400 top-10 data analysis (peer context)",
+      "url": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "Buildermuse — Top 20 data center construction contractors in 2026 (Holder #1 Tier-1; est. $3-4B DC revenue)",
+      "url": "https://buildermuse.com/commercial/the-top-20-data-center-construction-contractors/",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "BD+C Giants 400 — Top data center construction firms for 2025 (Holder #2, behind HITT)",
+      "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "date": "2025-10-07"
+    },
+    {
+      "label": "Council for Quality Growth — Tommy Holder receives CQG's 36th Four Pillar Award ($250M 1989 → $8B+)",
+      "url": "https://www.councilforqualitygrowth.org/press-release-tommy-holder-receives-cqgs-36th-four-pillar-award/",
+      "date": "2025-10"
+    },
+    {
+      "label": "Georgia Tech Scheller — Tech Talks Business: Beth Lowry (60-70% of projects are data centers; ~$10B planned)",
+      "url": "https://www.scheller.gatech.edu/news/2025/tech-talks-business-beth-lowry.html",
+      "date": "2025-09-04"
+    },
+    {
+      "label": "Construction Dive — The top commercial contractors of 2025 (Holder #30→#15, $7.7B)",
+      "url": "https://www.constructiondive.com/news/top-commercial-contractors-2025-revenue-enr/749244/",
+      "date": "2025-05-29"
+    },
+    {
+      "label": "Construction Dive — Multibillion-dollar data center projects to watch (Google Fort Wayne, $2B, Holder GC)",
+      "url": "https://www.constructiondive.com/news/data-center-projects-construction-2025/738160/",
+      "date": "2025-01-28"
+    },
+    {
+      "label": "BD+C — Top 50 data center construction firms for 2024 (Holder #1)",
+      "url": "https://www.bdcnetwork.com/home/news/55246343/top-50-data-center-construction-firms-for-2024",
+      "date": "2024-11-27"
+    },
+    {
+      "label": "Metro Atlanta CEO — Hartsfield-Jackson sets new standard with aviation-first modular unit installation",
+      "url": "https://metroatlantaceo.com/features/2024/04/hartsfield-jackson-sets-new-standard-aviation-first-modular-unit-installation/",
+      "date": "2024-04-30"
+    },
+    {
+      "label": "Construction Dive — Holder Construction to manage $950M Nebraska airport expansion",
+      "url": "https://www.constructiondive.com/news/omaha-eppley-airfield-holder-construction/706030/",
+      "date": "2024-01-30"
+    },
+    {
+      "label": "Construction Dive — Holder Construction gets $1.9B Arizona data center job (EdgeCore Mesa, ≥450 MW)",
+      "url": "https://www.constructiondive.com/news/holder-construction-arizona-data-center/704098/",
+      "date": "2024-01-10"
+    },
+    {
+      "label": "OSHA — Strategic Partnership agreement, Google 'Mustang Project' New Albany OH (Holder GC signatory)",
+      "url": "https://www.osha.gov/sites/default/files/2023-10/1247-agreement-20231017.pdf",
+      "date": "2023-10-17"
+    },
+    {
+      "label": "Georgia Power — Tommy Holder board bio (career timeline; client roster)",
+      "url": "https://www.georgiapower.com/content/dam/georgia-power/pdfs/company-pdfs/about-us/board-of-directors/bio_tommy-holder.pdf",
+      "date": "2023-10-27"
+    },
+    {
+      "label": "DCD — Construction company at Google Ohio data center refused to hire union workers, broke federal labor law (Bernhard MCC; Holder not respondent)",
+      "url": "https://www.datacenterdynamics.com/en/news/construction-company-at-google-ohio-data-center-refused-to-hire-union-workers-broke-federal-labor-law/",
+      "date": "2022-09"
+    },
+    {
+      "label": "ENR — Massive airport concourse expansion in Atlanta passes halfway mark (ATL Concourse D, HMBS JV)",
+      "url": "https://www.enr.com/articles/60476-massive-airport-concourse-expansion-in-atlanta-passes-halfway-mark",
+      "date": "2025"
+    },
+    {
+      "label": "Construction Dive — Apple announces April opening of $5B 'spaceship' campus (Holder replaced Skanska/DPR)",
+      "url": "https://www.constructiondive.com/news/apple-announces-april-opening-of-5b-spaceship-campus/436750/",
+      "date": "2017"
+    },
+    {
+      "label": "Construction Dive — Big-D/Holder JV awarded Salt Lake City International redevelopment",
+      "url": "https://www.constructiondive.com/press-release/20131101-big-d-constructionholder-construction-hd-awarded-salt-lake-city-internat/",
+      "date": "2013-11-01"
+    },
+    {
+      "label": "Justia — Holder Construction Group v. Georgia Tech Facilities (Ga. Ct. App.)",
+      "url": "https://law.justia.com/cases/georgia/court-of-appeals/2006/a06a1386-0.html",
+      "date": "2006-10-03"
+    },
+    {
+      "label": "Forbes — Holder Construction private-company profile (~2,000 employees; revenue trend)",
+      "url": "https://www.forbes.com/companies/holder-construction/"
+    },
+    {
+      "label": "Holder — Data & Telecom (610+ projects; $76B; 12.9 GW claim)",
+      "url": "https://www.holderconstruction.com/data-telecom"
+    },
+    {
+      "label": "Holder — About (founded 1960; >90% repeat clients; 30+ states)",
+      "url": "https://www.holderconstruction.com/about"
+    },
+    {
+      "label": "Holder — Expertise (self-perform trades incl. hot-aisle containment; VDC; prefabrication)",
+      "url": "https://www.holderconstruction.com/expertise"
+    },
+    {
+      "label": "Holder — Aviation & Transportation (66 projects, $13.8B, 20 airports)",
+      "url": "https://www.holderconstruction.com/aviation-transportation"
+    },
+    {
+      "label": "Georgia Research Alliance — Beth Lowry bio",
+      "url": "https://gra.org/staff/160/Beth_Lowry.html"
+    },
+    {
+      "label": "World Construction Network — Mercedes-Benz Stadium (HHRM JV)",
+      "url": "https://www.worldconstructionnetwork.com/projects/mercedes-benz-stadium-atlanta-georgia/"
+    }
   ],
   "lastUpdated": "2026-08-21",
   "profileVersion": 1
