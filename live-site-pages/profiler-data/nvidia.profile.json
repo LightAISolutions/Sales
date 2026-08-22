@@ -94,8 +94,8 @@
     }
   ],
   "decisionMakers": [
-    { "name": "Jensen Huang", "title": "Founder, President & CEO (since 1993)", "background": ["Founder & CEO — NVIDIA (1993–present)", "LSI Logic (1985–1993); AMD (1984–1985)", "BSEE Oregon State; MSEE Stanford", "Personally fronts the AI-factory and 800VDC narrative at GTC/OCP keynotes"] },
-    { "name": "Colette Kress", "title": "EVP & CFO (since 2013)", "background": ["CFO — NVIDIA (2013–present)", "SVP/CFO Business Technology & Operations Finance — Cisco", "~13 years at Microsoft; earlier Texas Instruments"] },
+    { "name": "Jensen Huang", "photo": "images/execs/nvidia-huang.jpg", "photoCredit": "Photographer: Peter Dasilva, CC BY 4.0, via Wikimedia Commons", "title": "Founder, President & CEO (since 1993)", "background": ["Founder & CEO — NVIDIA (1993–present)", "LSI Logic (1985–1993); AMD (1984–1985)", "BSEE Oregon State; MSEE Stanford", "Personally fronts the AI-factory and 800VDC narrative at GTC/OCP keynotes"] },
+    { "name": "Colette Kress", "photo": "images/execs/nvidia-kress.png", "photoCredit": "SiliconANGLE theCUBE, CC BY 3.0, via Wikimedia Commons", "title": "EVP & CFO (since 2013)", "background": ["CFO — NVIDIA (2013–present)", "SVP/CFO Business Technology & Operations Finance — Cisco", "~13 years at Microsoft; earlier Texas Instruments"] },
     { "name": "Jay Puri", "title": "EVP, Worldwide Field Operations", "background": ["Runs global go-to-market including hyperscaler and sovereign-AI accounts", "Formerly Sun Microsystems"] },
     { "name": "Debora Shoquist", "title": "EVP, Operations", "background": ["Supply chain and manufacturing operations — the CoWoS/HBM constraint owner"] }
   ],

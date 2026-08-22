@@ -93,7 +93,7 @@
     }
   ],
   "decisionMakers": [
-    { "name": "Andy Jassy", "title": "President & CEO (since July 2021)", "background": ["Founded and led AWS from 2003; at Amazon since 1997", "Owns the ~$200B→$220B capex commitment publicly"] },
+    { "name": "Andy Jassy", "photo": "images/execs/amazon-jassy.jpg", "photoCredit": "JD Lasica, CC BY 2.0, via Wikimedia Commons", "title": "President & CEO (since July 2021)", "background": ["Founded and led AWS from 2003; at Amazon since 1997", "Owns the ~$200B→$220B capex commitment publicly"] },
     { "name": "Matt Garman", "title": "CEO, AWS (since June 2024)", "background": ["One of AWS's first product managers (2006); previously led AWS sales & marketing"] },
     { "name": "Brian Olsavsky", "title": "SVP & CFO (since 2015)", "background": ["At Amazon since 2002"] },
     { "name": "Kara Hurst", "title": "Chief Sustainability Officer", "background": ["Public face of the 40+ GW energy portfolio and the carbon-free-energy announcements"] }

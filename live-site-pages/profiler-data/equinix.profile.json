@@ -127,7 +127,7 @@
   ],
   "decisionMakers": [
     {
-      "name": "Adaire Fox-Martin",
+      "name": "Adaire Fox-Martin", "photo": "images/execs/equinix-foxmartin.png",
       "title": "CEO & President",
       "background": [
         "CEO since 2024; ex-President Go-to-Market at Google Cloud, senior SAP/Oracle executive",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "name": "Olivier Leonetti",
+      "name": "Olivier Leonetti", "photo": "images/execs/equinix-leonetti.png",
       "title": "Chief Financial Officer",
       "background": [
         "CFO since March 2026; previously CFO of Eaton, Johnson Controls, Zebra, Western Digital — a cross-file connection to the electrical incumbents",
@@ -143,7 +143,7 @@
       ]
     },
     {
-      "name": "Raouf Abdel",
+      "name": "Raouf Abdel", "photo": "images/execs/equinix-abdel.png",
       "title": "EVP Global Operations",
       "background": [
         "Runs design, construction, procurement, energy, and IBX operations",

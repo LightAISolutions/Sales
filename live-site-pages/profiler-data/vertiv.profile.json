@@ -150,7 +150,7 @@
   ],
   "decisionMakers": [
     {
-      "name": "Giordano Albertazzi",
+      "name": "Giordano Albertazzi", "photo": "images/execs/vertiv-albertazzi.jpg",
       "title": "Chief Executive Officer",
       "background": [
         "Career Vertiv/Emerson Network Power executive; led EMEA before the CEO role",
@@ -166,7 +166,7 @@
       ]
     },
     {
-      "name": "Craig Chamberlin",
+      "name": "Craig Chamberlin", "photo": "images/execs/vertiv-chamberlin.png",
       "title": "Chief Financial Officer",
       "background": [
         "CFO since November 2025; previously Wabtec Transit segment CFO (~$3B), 14 years at GE",
@@ -174,7 +174,7 @@
       ]
     },
     {
-      "name": "Scott Armul",
+      "name": "Scott Armul", "photo": "images/execs/vertiv-armul.jpg",
       "title": "Chief Product & Technology Officer",
       "background": [
         "Formerly EVP Global Portfolio; public voice of the 800 VDC strategy",

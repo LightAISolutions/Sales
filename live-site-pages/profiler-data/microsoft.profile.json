@@ -88,12 +88,12 @@
     }
   ],
   "decisionMakers": [
-    { "name": "Satya Nadella", "title": "Chairman & CEO (CEO since 2014)", "background": ["Drove the cloud-first, then AI-first transformation; at Microsoft since 1992"] },
-    { "name": "Amy Hood", "title": "EVP & CFO (since 2013)", "background": ["Sets the capex guidance cadence the whole sector trades on"] },
+    { "name": "Satya Nadella", "photo": "images/execs/microsoft-nadella.jpg", "photoCredit": "Brian Smale and Microsoft, CC BY-SA 4.0, via Wikimedia Commons", "title": "Chairman & CEO (CEO since 2014)", "background": ["Drove the cloud-first, then AI-first transformation; at Microsoft since 1992"] },
+    { "name": "Amy Hood", "photo": "images/execs/microsoft-hood.jpg", "title": "EVP & CFO (since 2013)", "background": ["Sets the capex guidance cadence the whole sector trades on"] },
     { "name": "Scott Guthrie", "title": "EVP, Cloud + AI", "background": ["Owns Azure infrastructure; authored the Fairwater and AI-superfactory announcements"] },
-    { "name": "Brad Smith", "title": "Vice Chair & President", "background": ["Policy/energy advocacy; authored the $80B FY2025 capex post; fronts grid and ratepayer commitments"] },
+    { "name": "Brad Smith", "photo": "images/execs/microsoft-smith.jpg", "photoCredit": "Web Summit, CC BY 2.0, via Wikimedia Commons", "title": "Vice Chair & President", "background": ["Policy/energy advocacy; authored the $80B FY2025 capex post; fronts grid and ratepayer commitments"] },
     { "name": "Bobby Hollis", "title": "VP of Energy", "background": ["Microsoft's named executive on the Constellation/TMI deal — the key contact point for power suppliers"] },
-    { "name": "Mustafa Suleyman", "title": "CEO, Microsoft AI", "background": ["Consumer AI/Copilot; DeepMind and Inflection co-founder"] }
+    { "name": "Mustafa Suleyman", "photo": "images/execs/microsoft-suleyman.jpg", "photoCredit": "Christopher Wilson, CC BY-SA 4.0, via Wikimedia Commons", "title": "CEO, Microsoft AI", "background": ["Consumer AI/Copilot; DeepMind and Inflection co-founder"] }
   ],
   "financials": {
     "currency": "USD",

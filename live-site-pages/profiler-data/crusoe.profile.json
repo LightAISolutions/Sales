@@ -156,7 +156,7 @@
   ],
   "decisionMakers": [
     {
-      "name": "Chase Lochmiller",
+      "name": "Chase Lochmiller", "photo": "images/execs/crusoe-lochmiller.avif",
       "title": "Co-founder, CEO & Chairman",
       "background": [
         "Ex-quant at Jump Trading and GETCO; MIT math/physics, Stanford MS CS",
@@ -164,7 +164,7 @@
       ]
     },
     {
-      "name": "Cully Cavness",
+      "name": "Cully Cavness", "photo": "images/execs/crusoe-cavness.avif",
       "title": "Co-founder, President & Chief Strategy Officer",
       "background": [
         "Upstream oil & gas and geothermal background — the energy half of the founding thesis",
@@ -172,14 +172,14 @@
       ]
     },
     {
-      "name": "Michael Gordon",
+      "name": "Michael Gordon", "photo": "images/execs/crusoe-gordon.avif",
       "title": "COO & CFO",
       "background": [
         "Ex-MongoDB COO/CFO, hired December 2025 — widely read as IPO preparation"
       ]
     },
     {
-      "name": "John Adams",
+      "name": "John Adams", "photo": "images/execs/crusoe-adams.avif",
       "title": "SVP, Power Infrastructure",
       "background": [
         "Owns the generation fleet build-out (turbines, engines, BESS, nuclear partnerships)"

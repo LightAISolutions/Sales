@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.81r] — 2026-08-22 04:39:06 AM EST
+
+> **Prompt:** "run the photo backfill"
+
+### Added
+- Executive-photo backfill: 40 verified headshots added across 17 dossiers (exec photo coverage 86 → 126 of 320; dossiers with at least one photo 21 → 38). Two tracks — **first-party (23)**: official leadership pages for Vertiv, GE Vernova, Equinix, Constellation Energy, Rosendin, Crusoe and Microsoft, harvested by matching exec names against image filenames/alt text; **Wikimedia Commons (17)**: license-verified free images (CC BY / CC BY-SA / public domain only) for Amazon, Google, Meta, Microsoft, NVIDIA, OpenAI, Oracle, Tesla, xAI, ABB and Schneider Electric, each carrying a `photoCredit` attribution
+- New `photoCredit` schema field (`repository-information/PROFILER-SCHEMA.md`) rendered as a caption on exec cards in the app and as a credit line in Word/PDF exports (`live-site-pages/Profiler.html` v01.37w)
+
+### Changed
+- Photo policy extended per developer approval (`PROFILER-SCHEMA.md`, `.claude/rules/profiler-app.md`): company-published photos now joined by verified free-licensed Wikimedia Commons images of public figures; LinkedIn scraping, news-agency/wire photos and video frame-grabs remain prohibited
+
+### Fixed
+- 4 of 21 Commons candidates were rejected at visual verification before wiring (a French cottage window matched for "Olivier Blum", a 19th-century painting for "Christian Bruch", plus two unusable group shots) — every accepted photo was inspected on a rendered contact sheet, not trusted from search scoring alone
 
 ## [v02.80r] — 2026-08-22 03:25:08 AM EST
 

@@ -196,7 +196,7 @@
   ],
   "decisionMakers": [
     {
-      "name": "Elon Musk",
+      "name": "Elon Musk", "photo": "images/execs/tesla-musk.jpg", "photoCredit": "U.S. Air Force / Trevor Cokley, Public domain, via Wikimedia Commons",
       "title": "Chief Executive Officer (since 2008; joined 2004 as chairman/lead investor)",
       "background": [
         "Co-founder of X.com/PayPal; CEO of SpaceX; founder of xAI",
@@ -228,7 +228,7 @@
       ]
     },
     {
-      "name": "Robyn Denholm",
+      "name": "Robyn Denholm", "photo": "images/execs/tesla-denholm.jpg", "photoCredit": "CeBIT Australia, CC BY 2.0, via Wikimedia Commons",
       "title": "Board Chair (since November 2018; director since 2014)",
       "background": [
         "Former CFO / Head of Strategy at Telstra; CFO of Juniper Networks; earlier Sun Microsystems, Toyota Australia",

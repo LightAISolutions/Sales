@@ -119,7 +119,7 @@
   ],
   "decisionMakers": [
     {
-      "name": "Joseph Dominguez",
+      "name": "Joseph Dominguez", "photo": "images/execs/constellation-energy-dominguez.png",
       "title": "Chairman, President & CEO",
       "background": [
         "Led the Exelon spin, the Calpine acquisition, and the Crane restart decision",
@@ -127,21 +127,21 @@
       ]
     },
     {
-      "name": "Daniel L. Eggers",
+      "name": "Daniel L. Eggers", "photo": "images/execs/constellation-energy-eggers.png",
       "title": "Senior EVP, Finance and Data Economy",
       "background": [
         "Former CFO moved to a purpose-built 'Data Economy' remit — the clearest org-chart evidence of the data-center strategy's centrality"
       ]
     },
     {
-      "name": "Shane Smith",
+      "name": "Shane Smith", "photo": "images/execs/constellation-energy-smith.png",
       "title": "EVP & Chief Financial Officer",
       "background": [
         "Owns the raised $11.50-12.50 guidance and the $2.2B-deployed buyback ($2.8B authorization remaining)"
       ]
     },
     {
-      "name": "Andrew Novotny",
+      "name": "Andrew Novotny", "photo": "images/execs/constellation-energy-novotny.png",
       "title": "President & CEO, Calpine; Senior EVP, Constellation Power Operations",
       "background": [
         "Runs the gas/geothermal fleet and the CyrusOne-style site-adjacent data-center product"

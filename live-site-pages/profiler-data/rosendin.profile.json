@@ -118,10 +118,10 @@
     }
   ],
   "decisionMakers": [
-    { "name": "Keith Douglas", "title": "CEO, Rosendin Holdings (since January 2024)", "background": ["CEO — Rosendin Holdings (2024–present)", "COO Eastern Region — Rosendin (2020–2023; 9 offices across AZ/NV/TX/TN/NC/VA/MD)", "Joined 2012 as Division Manager, established Mid-Atlantic operations", "30+ years in the electrical industry"] },
-    { "name": "Paolo Degrassi", "title": "President — core markets (data centers, semiconductor, commercial, healthcare, transportation)", "background": ["Co-president under the January 2026 collaborative leadership structure"] },
-    { "name": "Justin Tinoco", "title": "President — high-growth (national programs, energy, AI, data centers, Modular Power Solutions)", "background": ["Co-president under the January 2026 structure — the portfolio that fuses power/BESS with data-center delivery"] },
-    { "name": "Matt Hisaka", "title": "CFO (since January 2024)", "background": ["Appointed in the 2024 executive succession alongside Keith Douglas"] },
+    { "name": "Keith Douglas", "photo": "images/execs/rosendin-douglas.jpg", "title": "CEO, Rosendin Holdings (since January 2024)", "background": ["CEO — Rosendin Holdings (2024–present)", "COO Eastern Region — Rosendin (2020–2023; 9 offices across AZ/NV/TX/TN/NC/VA/MD)", "Joined 2012 as Division Manager, established Mid-Atlantic operations", "30+ years in the electrical industry"] },
+    { "name": "Paolo Degrassi", "photo": "images/execs/rosendin-degrassi.jpg", "title": "President — core markets (data centers, semiconductor, commercial, healthcare, transportation)", "background": ["Co-president under the January 2026 collaborative leadership structure"] },
+    { "name": "Justin Tinoco", "photo": "images/execs/rosendin-tinoco.jpg", "title": "President — high-growth (national programs, energy, AI, data centers, Modular Power Solutions)", "background": ["Co-president under the January 2026 structure — the portfolio that fuses power/BESS with data-center delivery"] },
+    { "name": "Matt Hisaka", "photo": "images/execs/rosendin-hisaka.jpg", "title": "CFO (since January 2024)", "background": ["Appointed in the 2024 executive succession alongside Keith Douglas"] },
     { "name": "Bill Mazzetti", "title": "Senior Vice President (data-center power)", "background": ["Company spokesperson on data-center power strategy (Phinergy partnership)", "Quoted: 'Our clients simply need more power, and without it, development stops'"] }
   ],
   "financials": {

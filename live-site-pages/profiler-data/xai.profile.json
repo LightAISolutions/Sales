@@ -141,7 +141,7 @@
   ],
   "decisionMakers": [
     {
-      "name": "Elon Musk",
+      "name": "Elon Musk", "photo": "images/execs/xai-musk.jpg", "photoCredit": "U.S. Air Force / Trevor Cokley, Public domain, via Wikimedia Commons",
       "title": "CEO, CTO & Chairman, SpaceX (founder of xAI)",
       "background": [
         "Founded xAI March 2023; drove the X acquisition (2025) and the SpaceX merger (2026) — controls both sides of every related-party transaction",

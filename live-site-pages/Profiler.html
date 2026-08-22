@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.36w">
+  <meta name="build-version" content="v01.37w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -284,6 +284,7 @@
     .ov-exec .face { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 50%; overflow: hidden; background: var(--ov-card2); }
     .ov-exec .face img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .ov-exec .face .initials { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font: 400 20px/1 var(--ov-serif); color: var(--ov-ink); }
+    .ov-exec .photo-credit { color: var(--ov-faint); font: 9.5px/1.4 var(--ov-mono); margin-top: 6px; } /* CC attribution (v01.37w) */
     .ov-exec h4 { font: 400 17px/1.25 var(--ov-serif); margin: 0 0 2px; }
     .ov-exec .role { color: var(--ov-gold); font: 10px/1.5 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 7px; }
     .ov-exec ul { margin: 0; padding-left: 16px; color: var(--ov-muted); font-size: 12.5px; }
@@ -1776,6 +1777,7 @@ function ovReloadFresh() {
             body.appendChild(bul);
           }
           if (x.linkedin) body.appendChild(ovLink(x.linkedin, 'li-link', 'LinkedIn ↗'));
+          if (x.photoCredit) body.appendChild(ovEl('div', 'photo-credit', 'Photo: ' + x.photoCredit)); // CC attribution (v01.37w)
           card.appendChild(body);
           gridE.appendChild(card);
         });
@@ -3378,6 +3380,7 @@ function ovReloadFresh() {
             doc.appendChild(bul);
           }
           if (x.linkedin) { var lp = ovEl('p', 'd-note'); lp.appendChild(ovLink(x.linkedin, null, x.linkedin)); doc.appendChild(lp); }
+          if (x.photoCredit) doc.appendChild(ovEl('p', 'd-note', 'Photo: ' + x.photoCredit)); // CC attribution (v01.37w)
         });
       }
 

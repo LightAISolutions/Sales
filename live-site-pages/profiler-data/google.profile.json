@@ -97,9 +97,9 @@
     }
   ],
   "decisionMakers": [
-    { "name": "Sundar Pichai", "title": "CEO — Alphabet & Google", "background": ["CEO Google since 2015, Alphabet since 2019; previously led Chrome/Android", "Personally quotes the capex guidance each quarter"] },
+    { "name": "Sundar Pichai", "photo": "images/execs/google-pichai.jpg", "photoCredit": "Maurizio Pesce from Milan, Italy, CC BY 2.0, via Wikimedia Commons", "title": "CEO — Alphabet & Google", "background": ["CEO Google since 2015, Alphabet since 2019; previously led Chrome/Android", "Personally quotes the capex guidance each quarter"] },
     { "name": "Anat Ashkenazi", "title": "SVP & CFO — Alphabet/Google (since mid-2024)", "background": ["Former CFO — Eli Lilly", "Owns the thrice-raised 2026 capex guidance and the 2026 capital raises"] },
-    { "name": "Thomas Kurian", "title": "CEO — Google Cloud (since 2019)", "background": ["22 years at Oracle, ex-President of Product Development"] },
+    { "name": "Thomas Kurian", "photo": "images/execs/google-kurian.jpg", "photoCredit": "Eric Dietrich, Public domain, via Wikimedia Commons", "title": "CEO — Google Cloud (since 2019)", "background": ["22 years at Oracle, ex-President of Product Development"] },
     { "name": "Demis Hassabis", "title": "CEO & co-founder — Google DeepMind", "background": ["2024 Nobel laureate (Chemistry); leads the Gemini model program"] },
     { "name": "Amin Vahdat", "title": "VP/GM, AI & Infrastructure — Google Cloud", "background": ["Public face of TPU and data-center systems announcements (Ironwood)"] }
   ],

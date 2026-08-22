@@ -143,7 +143,7 @@
   ],
   "decisionMakers": [
     {
-      "name": "Scott Strazik",
+      "name": "Scott Strazik", "photo": "images/execs/ge-vernova-strazik.jpg",
       "title": "Chief Executive Officer",
       "background": [
         "20+ years GE finance/operations; CEO of GE Gas Power from 2018, led all GE Power businesses from 2021",
@@ -152,7 +152,7 @@
       ]
     },
     {
-      "name": "Kenneth Parks",
+      "name": "Kenneth Parks", "photo": "images/execs/ge-vernova-parks.jpg",
       "title": "Chief Financial Officer",
       "background": [
         "CFO since October 2023; 38 years of finance experience",
@@ -160,14 +160,14 @@
       ]
     },
     {
-      "name": "Eric Gray",
+      "name": "Eric Gray", "photo": "images/execs/ge-vernova-gray.jpg",
       "title": "CEO, Power segment",
       "background": [
         "Runs the gas turbine franchise: 116 GW committed, 18.8% segment EBITDA margin in Q2 2026"
       ]
     },
     {
-      "name": "Philippe Piron",
+      "name": "Philippe Piron", "photo": "images/execs/ge-vernova-piron.jpg",
       "title": "CEO, Electrification segment",
       "background": [
         "Runs grid equipment through the realignment (Grid Systems Integration / Power Transmission / Power Conversion & Storage)",
