@@ -2,7 +2,9 @@
   "schemaVersion": 2,
   "slug": "qts",
   "name": "QTS Data Centers (QTS Realty Trust, LLC)",
-  "categories": ["developer"],
+  "categories": [
+    "developer"
+  ],
   "hq": "Sterling, VA, USA",
   "founded": "Founded by Chad Williams out of his family's Quality Group of Companies (Overland Park, Kansas; the company cites a 20+ year history); NYSE-listed as QTS Realty Trust 2013-2021; taken private by Blackstone August 2021",
   "ownership": "private (Blackstone — acquired 31 August 2021 for ~$10B including debt by Blackstone Infrastructure Partners, Blackstone Real Estate Income Trust (BREIT) and Blackstone Property Partners perpetual-capital vehicles)",
@@ -15,60 +17,107 @@
       "name": "Hyperscale build-to-suit & wholesale mega-campuses (core business)",
       "category": "Data centers",
       "description": "Build-own-operate campuses leased wholesale to hyperscalers and AI platforms across ~45 named US sites plus Europe. Operational anchors (per q.com location pages): Atlanta 1 (278MW+, 99 acres), Richmond 1 (240MW+, 100 acres, the former Qimonda fab), Manassas (190MW+, 105 acres), Hillsboro 2 (180MW+), Irving, TX (165MW+), Denver/Aurora (160MW+), Chicago (95MW+), San Antonio (90MW+), three Ashburn campuses (55/75/80MW+), Fort Worth and East Windsor (70MW+ each), Piscataway (65MW+), Suwanee (50MW+). The development book is the story: Fayetteville, GA (13 buildings, ~6.2M sq ft, up to 16 at buildout — plus an ATL2 East filing for ~2M sq ft on ~313 acres), Cedar Rapids, IA ($10B, 612 acres, 7 buildings), Bessemer, AL ('Project Marvel' — up to 1.2GW, 18 buildings, 1,600 acres, $14.5B initial), Blakely, GA (1,400MW planned — the largest planned data center in Georgia per state project trackers), Hall County, TX with Lancium ($10B+), Van Wert, OH ($10B), South Dallas/Wilmer (DC1-DC3, ~118MW of filed critical capacity), Eagle Mountain, UT, two New Albany, OH sites, Richmond 2/3/5, Phoenix 2-4, Hillsboro 3, Augusta, GA and York County, SC — with Clinton, IA, Howard County, TX and Salem Township, PA in consideration.",
-      "highlights": ["Leased capacity up 14x since the 2021 take-private; $30B+ development pipeline pre-leased on 15-20-year leases with contractual escalators (BREIT FY2025 annual report)", "Richmond RIC5 became the first data center ever covered by the federal FAST-41 permitting program (April 2026)", "Fayetteville houses at least one Microsoft 'AI superfactory' building per trade reporting; Bloomberg tied the April 2026 bond collateral to Microsoft leases"],
+      "highlights": [
+        "Leased capacity up 14x since the 2021 take-private; $30B+ development pipeline pre-leased on 15-20-year leases with contractual escalators (BREIT FY2025 annual report)",
+        "Richmond RIC5 became the first data center ever covered by the federal FAST-41 permitting program (April 2026)",
+        "Fayetteville houses at least one Microsoft 'AI superfactory' building per trade reporting; Bloomberg tied the April 2026 bond collateral to Microsoft leases"
+      ],
       "positioning": "Against Vantage, Aligned, STACK and CloudHQ, QTS pairs what Blackstone calls one of the largest data-center pipelines in the world with a 3,000+ acre power-ready land bank and an in-house construction-management organization billed as among North America's largest; unlike public REITs Digital Realty and Equinix, perpetual private capital lets it buy land and power years ahead of leases. Site Selection Group (2026) ranks it the largest independent US operator at 70+ facilities / 3GW+.",
       "soldThrough": "Direct long-term wholesale and build-to-suit leases (15-20 years, escalators) with hyperscalers; campus debt recycled through ABS/CMBS securitizations and, since April 2026, investment-grade green bonds.",
-      "targetSegments": ["Hyperscalers (Microsoft linked by Bloomberg to Fayetteville collateral; other tenants unnamed)", "AI platforms and cloud majors", "Investment-grade technology companies (BREIT's characterization)"],
+      "targetSegments": [
+        "Hyperscalers (Microsoft linked by Bloomberg to Fayetteville collateral; other tenants unnamed)",
+        "AI platforms and cloud majors",
+        "Investment-grade technology companies (BREIT's characterization)"
+      ],
       "roadmap": "South Dallas DC2 completes ~June 2026 and DC3 ~January 2027 per filings; Blakely pre-construction community payments run December 2026 onward with construction to follow; Bessemer, Hall County and Van Wert in entitlement; Dane County campus abandoned January 2026."
     },
     {
       "name": "Federal & government colocation",
       "category": "Data centers",
       "description": "A dedicated federal business built on purpose-built, federal-only data centers using a 'Federal Freedom Design' — the standard building adapted to government security and operational requirements — sited with geographic separation and multiple energy grids. Staffed by a federal assurance team of former government accrediting officials and security directors; 20%+ of the US workforce are veterans. The company advertises facilities built 'to safeguard sensitive and classified information' but names no agency customers; compliance documentation (SOC 2 Type 2 and other audited certifications) is delivered to customers through the SDP dashboard, and QTS has historically pursued FedRAMP readiness.",
-      "highlights": ["One of the few wholesale developers with a productized federal offering rather than ad-hoc government deals", "Northern Virginia (Ashburn x3, Manassas) and Richmond concentration sits adjacent to federal demand", "Named a Top Veteran Employer 2026 by US Veterans Magazine"],
+      "highlights": [
+        "One of the few wholesale developers with a productized federal offering rather than ad-hoc government deals",
+        "Northern Virginia (Ashburn x3, Manassas) and Richmond concentration sits adjacent to federal demand",
+        "Named a Top Veteran Employer 2026 by US Veterans Magazine"
+      ],
       "positioning": "Versus Vantage/Aligned/STACK (no dedicated federal product) and Equinix (retail federal via interconnection), QTS sells federal isolation at wholesale scale; the trade-off is opacity — no public certification inventory or customer names, which we assess reflects classified-adjacent work rather than absence of it (analytic judgment, low confidence).",
       "soldThrough": "Direct with agencies and through federal cloud and systems-integrator intermediaries (company does not disclose the mix).",
-      "targetSegments": ["US federal civilian and defense agencies", "Government cloud regions", "Federal systems integrators"],
+      "targetSegments": [
+        "US federal civilian and defense agencies",
+        "Government cloud regions",
+        "Federal systems integrators"
+      ],
       "roadmap": "None disclosed. Collection gap: QTS publishes no federal pipeline, certification roadmap or contract vehicle details."
     },
     {
       "name": "Enterprise colocation & connectivity",
       "category": "Data centers / Network",
       "description": "The heritage retail/enterprise colocation business across the operational fleet — data halls, cages and cabinets with carrier-neutral meet-me rooms — now wrapped in a software-defined connectivity layer: the Switchboard SDN fabric, powered by Lumen as premier NaaS/SDN provider under an October 2025 partnership that also puts high-capacity (400G+) diverse fiber routes across 16 new QTS campuses in Arizona, Georgia, Ohio, Texas, Virginia and Oregon, deploys Lumen Connectivity Fabric into QTS multi-tenant environments, and rides Lumen's 340,000-route-mile backbone. In Europe, Zayo Europe was contracted (March 2026) to deliver network infrastructure for the Cambois campus.",
-      "highlights": ["Lumen deal covers automated connectivity to clouds, data centers and edge from inside QTS halls", "Enterprise colocation is the legacy layer that maintains ecosystem credibility while wholesale drives growth", "1,000+ customers historically claimed across the fleet"],
+      "highlights": [
+        "Lumen deal covers automated connectivity to clouds, data centers and edge from inside QTS halls",
+        "Enterprise colocation is the legacy layer that maintains ecosystem credibility while wholesale drives growth",
+        "1,000+ customers historically claimed across the fleet"
+      ],
       "positioning": "QTS does not compete with Equinix/Digital Realty on internet-exchange density; it competes on campus-scale interconnection plus SDP transparency, and buys backbone reach through partners rather than owning fiber.",
       "soldThrough": "Direct enterprise sales and channel; services ordered and managed through the Service Delivery Platform.",
-      "targetSegments": ["Enterprises with hybrid/compliance workloads", "Federal integrators", "Network operators and carriers"],
+      "targetSegments": [
+        "Enterprises with hybrid/compliance workloads",
+        "Federal integrators",
+        "Network operators and carriers"
+      ],
       "roadmap": "Lumen fiber reaches the 16 new campuses as they energize (from 2026); no further connectivity roadmap disclosed."
     },
     {
       "name": "Freedom design platform (the standardized building product)",
       "category": "Design / Delivery platform",
       "description": "QTS's productized data center: a standardized greenfield building specification — 36MW to 72MW of critical capacity per building, 285,000-570,000 sq ft gross, two to three stories, four or more data halls, power density up to 350W/sq ft — that standardizes architecture, critical equipment and logistics so builds are repeatable and fast ('quickest speed-to-market in the industry', company claim). Cooling is the differentiator: a low-pressure pumped-refrigerant, water-free system with indirect-air economization that consumes zero water for operational cooling — the company claims 48M+ gallons saved annually per data center and bills itself the global leader in water-free cooling. Liquid cooling for AI densities is integrated flexibly ('deployment-timing and methodology flexible'). A Federal Freedom variant layers on government security requirements; Cambois exports the design as ten three-story ~54,000 sqm halls of ~72MW each.",
-      "highlights": ["The basis of all new greenfield builds — one SKU replicated across every campus", "Zero-water cooling is aimed squarely at the sector's #1 community objection", "Designed to LEED standards with ENERGY STAR certification pursued; FSC wood, low-VOC materials, EV charging standard"],
+      "highlights": [
+        "The basis of all new greenfield builds — one SKU replicated across every campus",
+        "Zero-water cooling is aimed squarely at the sector's #1 community objection",
+        "Designed to LEED standards with ENERGY STAR certification pursued; FSC wood, low-VOC materials, EV charging standard"
+      ],
       "positioning": "The direct analogue to Vantage's global blueprint and Aligned's Delta³ — QTS's differentiation is making water-free operation the fleet-wide default rather than a market-by-market option, which doubles as its permitting and community-consent argument.",
       "soldThrough": "Not sold externally — the internal delivery vehicle for every QTS build-to-suit and speculative building.",
-      "targetSegments": ["Internal development program", "Hyperscale build-to-suit customers who inherit the specification"],
+      "targetSegments": [
+        "Internal development program",
+        "Hyperscale build-to-suit customers who inherit the specification"
+      ],
       "roadmap": "Higher-density liquid-cooled variants for AI workloads per company statements; no dated public specification. Collection gap: QTS publishes no PUE/WUE fleet figures."
     },
     {
       "name": "Service Delivery Platform (SDP) software",
       "category": "Software",
       "description": "An API-driven orchestration and visibility platform the company calls the industry's first fully digitized data-center service layer: RESTful APIs and real-time applications aggregating power, connectivity, security-access and environment data into self-service dashboards ('360° digital control'). Additions over time: the 'Smart Family' of AI/ML remote-management tools (2021), an updated API-driven dashboard, and 'Intelligent Applications' (February 2023) including QTS Live Power (live raw power data to the sub-minute level) and a customer-tailored sustainability dashboard. Compliance documents (SOC 2 Type 2 and other audits) are served through the SDP Compliance Widget.",
-      "highlights": ["Sub-minute live power telemetry exposed directly to customers — unusual transparency for a wholesale landlord", "Sustainability dashboard gives tenants per-deployment energy/carbon data for their own ESG reporting", "Claims to be among the first providers to completely digitize systems and physical environments"],
+      "highlights": [
+        "Sub-minute live power telemetry exposed directly to customers — unusual transparency for a wholesale landlord",
+        "Sustainability dashboard gives tenants per-deployment energy/carbon data for their own ESG reporting",
+        "Claims to be among the first providers to completely digitize systems and physical environments"
+      ],
       "positioning": "Versus Equinix Fabric (network-centric marketplace), SDP is facility-data-centric — the sales pitch is operational transparency and API access rather than ecosystem density. We assess it functions primarily as a retention/differentiation layer for enterprise and federal tenants rather than a revenue line (analytic judgment).",
       "soldThrough": "Bundled with colocation and wholesale contracts; not sold standalone.",
-      "targetSegments": ["All tenant segments", "Federal compliance teams", "Enterprise ESG reporting functions"],
+      "targetSegments": [
+        "All tenant segments",
+        "Federal compliance teams",
+        "Enterprise ESG reporting functions"
+      ],
       "roadmap": "None disclosed since the 2023 Intelligent Apps release. Collection gap: no public SDP roadmap under Blackstone ownership."
     },
     {
       "name": "Capital-markets & energy franchise",
       "category": "Financing / Power",
       "description": "The funding engine behind the pipeline. Securitization: no data-center issuer has matched QTS's pace in the public 144A market over the past two years (GlobalCapital) — ~$600M Phoenix ABS (September 2025; single 36MW hyperscale-tenant building, S&P A-), a $1.5B CMBS on Atlanta/Richmond facilities (2025), the record $3.46B CMBS (November 2025 — the largest data-center securitization of 2025, refinancing 10 stabilized data centers across six markets including Atlanta, Dallas and Norfolk), a $750M ABS (January 2026), a $1.95B CMBS (February 2026), and the April 2026 $4.6B green bond — a 10-year 5.700% deal maturing 2036, rated Baa2 by Moody's (QTS's first investment-grade corporate-style rating), drawing ~$12.5B of peak demand to fund two Fayetteville buildings. Energy: a Chief Energy Strategy Officer hire (2025), an Alliant Energy partnership to enable 750MW of new Wisconsin renewable generation (October 2025), an ENGIE/ABEI Lubio Solar PPA (48MWac of a 61MWac Kaufman County, TX project serving Irving operations, August 2026), a 120MWac Oregon solar build with Avangrid, PGE and Meta (December 2024), and a stated policy of funding 100% of the energy infrastructure its campuses require.",
-      "highlights": ["From ABS/CMBS to investment-grade project-style bonds in one cycle — the full capital stack now open", "'We pay 100% of our energy costs' is deployed as both policy and marketing (Ratepayer-protection positioning)", "AEP Ohio bill-assistance funding joined with other data-center developers (August 2026)"],
+      "highlights": [
+        "From ABS/CMBS to investment-grade project-style bonds in one cycle — the full capital stack now open",
+        "'We pay 100% of our energy costs' is deployed as both policy and marketing (Ratepayer-protection positioning)",
+        "AEP Ohio bill-assistance funding joined with other data-center developers (August 2026)"
+      ],
       "positioning": "Vantage invented the data-center ABS; QTS is the current volume leader in issuance cadence, and Blackstone sponsorship gives it simultaneous access to ABS, CMBS and IG bond markets that few private developers can match. On power, QTS is utility-first (Alliant, AEP, Dominion, Georgia Power relationships) rather than microgrid-first like Vantage/Crusoe — the Lancium partnership is its first campus where a power developer owns the site.",
       "soldThrough": "144A securitized notes, single-borrower CMBS, investment-grade green bonds; renewable PPAs executed with utilities and IPPs (ENGIE as intermediary).",
-      "targetSegments": ["ABS/CMBS investors", "Investment-grade bond funds", "Utilities and renewable developers"],
+      "targetSegments": [
+        "ABS/CMBS investors",
+        "Investment-grade bond funds",
+        "Utilities and renewable developers"
+      ],
       "roadmap": "The April 2026 green bond was described as the start of a ~$4.6B raise program (DCD); further issues expected as campuses stabilize."
     }
   ],
@@ -211,40 +260,104 @@
     {
       "product": "Freedom design — standardized building (fleet-wide)",
       "specs": [
-        "36MW to 72MW of critical capacity per building; 285,000-570,000 sq ft gross building area; two to three stories; four or more data halls per building",
-        "Power density up to 350W per sq ft; liquid cooling integrated flexibly for AI workloads (timing and methodology per customer)",
-        "Water-free cooling: low-pressure pumped-refrigerant heat rejection with indirect-air economization — zero water consumed for operational cooling; company claims 48M+ gallons saved annually per data center",
-        "Designed to LEED standards with ENERGY STAR certification pursued; FSC-certified wood, low-VOC materials, LED lighting, EV charging standard; a 'Federal Freedom' variant adds government security requirements"
+        {
+          "band": "Capacity",
+          "label": "Per building",
+          "value": "36MW to 72MW of critical capacity per building; 285,000-570,000 sq ft gross building area; two to three stories; four or more data halls per building"
+        },
+        {
+          "band": "Density",
+          "label": "Power & cooling",
+          "value": "Power density up to 350W per sq ft; liquid cooling integrated flexibly for AI workloads (timing and methodology per customer)"
+        },
+        {
+          "band": "Water",
+          "label": "Cooling method",
+          "value": "low-pressure pumped-refrigerant heat rejection with indirect-air economization — zero water consumed for operational cooling; company claims 48M+ gallons saved annually per data center"
+        },
+        {
+          "band": "Certification",
+          "label": "Standards",
+          "value": "Designed to LEED standards with ENERGY STAR certification pursued; FSC-certified wood, low-VOC materials, LED lighting, EV charging standard; a 'Federal Freedom' variant adds government security requirements"
+        }
       ],
       "notes": "The basis of all greenfield builds — standardization of architecture, critical equipment and logistics is the speed and supply-chain argument ('quickest speed-to-market in the industry', company claim). All figures company-reported; QTS discloses no fleet PUE/WUE numbers."
     },
     {
       "product": "Fayetteville, GA campus (ATL2) — flagship",
       "specs": [
-        "13 buildings and ~6.2M sq ft currently, with up to 16 buildings at full buildout — among the largest data-center campuses in the US (trade press, July 2026)",
-        "Houses at least one Microsoft 'AI superfactory' building per trade reporting; ~8,000 construction workers on site at peak (The Citizen, May 2026)",
-        "ATL2 East expansion filed: ~2M sq ft on an ~313-acre site west of Veterans Parkway (Development of Regional Impact application, per DCD)",
-        "Two campus buildings funded/refinanced by the April 2026 $4.6B green bond (Baa2, 10-year, 5.700%)"
+        {
+          "band": "Scale",
+          "label": "Buildings",
+          "value": "13 buildings and ~6.2M sq ft currently, with up to 16 buildings at full buildout — among the largest data-center campuses in the US (trade press, July 2026)"
+        },
+        {
+          "band": "Tenancy",
+          "label": "Occupants & workforce",
+          "value": "Houses at least one Microsoft 'AI superfactory' building per trade reporting; ~8,000 construction workers on site at peak (The Citizen, May 2026)"
+        },
+        {
+          "band": "Expansion",
+          "label": "ATL2 East",
+          "value": "~2M sq ft on an ~313-acre site west of Veterans Parkway (Development of Regional Impact application, per DCD)"
+        },
+        {
+          "band": "Financing",
+          "label": "Green bond",
+          "value": "Two campus buildings funded/refinanced by the April 2026 $4.6B green bond (Baa2, 10-year, 5.700%)"
+        }
       ],
       "notes": "The July 2026 water-use controversy concerned construction-period metering (county cites a missed smart-meter reading), not operational cooling — the campus standard remains closed-loop/water-free. QTS built a 3,000-ft public multi-use path and funds Southern Conservation Trust land-preservation work locally."
     },
     {
       "product": "Cambois campus — Blyth, Northumberland, UK",
       "specs": [
-        "Up to 720MW combined IT capacity across ten data-centre halls; ~540,000 sqm internal area on the ~100-hectare former Blyth Power Station site",
-        "Each hall ~54,000 sqm across three stories delivering ~72MW — the Freedom building exported to the UK",
-        "Up to £10B investment — repeatedly cited as the UK's largest data-centre project; planning approved March 2025; enabling/site-preparation works from autumn 2025",
-        "Zayo Europe contracted (March 2026) for the campus's high-capacity network infrastructure"
+        {
+          "band": "Capacity",
+          "label": "Site total",
+          "value": "Up to 720MW combined IT capacity across ten data-centre halls; ~540,000 sqm internal area on the ~100-hectare former Blyth Power Station site"
+        },
+        {
+          "band": "Capacity",
+          "label": "Per hall",
+          "value": "Each hall ~54,000 sqm across three stories delivering ~72MW — the Freedom building exported to the UK"
+        },
+        {
+          "band": "Investment",
+          "label": "Programme",
+          "value": "Up to £10B investment — repeatedly cited as the UK's largest data-centre project; planning approved March 2025; enabling/site-preparation works from autumn 2025"
+        },
+        {
+          "band": "Network",
+          "label": "Contracted",
+          "value": "Zayo Europe contracted (March 2026) for the campus's high-capacity network infrastructure"
+        }
       ],
       "notes": "QTS's first ground-up European campus, alongside operational Netherlands sites (Eemshaven 20MW, Groningen 4MW) and sites in consideration at Calatorao (Spain), Forssa (Finland) and Vimercate (Italy)."
     },
     {
       "product": "Operational US fleet — flagship campuses",
       "specs": [
-        "Atlanta 1: 278MW+ on 99 acres; Richmond 1: 240MW+ on 100 acres (former Qimonda semiconductor fab); Manassas: 190MW+ on 105 acres; Hillsboro 2: 180MW+; Irving, TX: 165MW+; Denver/Aurora: 160MW+",
-        "Chicago 95MW+, San Antonio 90MW+, Ashburn 1/2/3 at 55/75/80MW+, Fort Worth 70MW+, East Windsor 70MW+, Piscataway 65MW+, Suwanee 50MW+, Colorado Springs 14MW+",
-        "2GW of critical power operating (company release, March 2025); 3GW+ across 70+ facilities per 2026 trade rankings; 3,000+ acres of power-ready land banked",
-        "Richmond RIC5 is the first data center covered by the federal FAST-41 permitting program (April 2026)"
+        {
+          "band": "Largest campuses",
+          "label": "Top sites",
+          "value": "Atlanta 1: 278MW+ on 99 acres; Richmond 1: 240MW+ on 100 acres (former Qimonda semiconductor fab); Manassas: 190MW+ on 105 acres; Hillsboro 2: 180MW+; Irving, TX: 165MW+; Denver/Aurora: 160MW+"
+        },
+        {
+          "band": "Other campuses",
+          "label": "Remainder",
+          "value": "Chicago 95MW+, San Antonio 90MW+, Ashburn 1/2/3 at 55/75/80MW+, Fort Worth 70MW+, East Windsor 70MW+, Piscataway 65MW+, Suwanee 50MW+, Colorado Springs 14MW+"
+        },
+        {
+          "band": "Totals",
+          "label": "Critical power",
+          "value": "2GW of critical power operating (company release, March 2025); 3GW+ across 70+ facilities per 2026 trade rankings; 3,000+ acres of power-ready land banked"
+        },
+        {
+          "band": "Permitting",
+          "label": "FAST-41",
+          "value": "Richmond RIC5 is the first data center covered by the federal FAST-41 permitting program (April 2026)"
+        }
       ],
       "notes": "Site figures from q.com location pages ('+' denotes expandable capacity). The development book adds ~20 named US campuses across 15 states, including gigawatt-class sites at Bessemer, AL (up to 1.2GW) and Blakely, GA (1,400MW planned per state project trackers)."
     }
@@ -324,28 +437,88 @@
       {
         "period": "Take-private & valuation marks (2021-2026)",
         "metrics": [
-          {"name": "Take-private", "actual": "$78.00/share all-cash, ~$10B including debt — announced June 7, 2021; completed August 31, 2021 by Blackstone Infrastructure Partners, BREIT and Blackstone Property Partners (all perpetual-capital vehicles)", "expected": "", "verdict": "inline", "result": "A 21% premium to the prior close at announcement; QTS was then a ~$540M-revenue REIT"},
-          {"name": "Value mark", "actual": "'A $60 billion global industry leader' — the company's own March 2025 CEO-transition release; roughly a 6x mark versus the $10B entry in under four years", "expected": "", "verdict": "inline", "result": "Company/Blackstone characterization, not a market transaction"},
-          {"name": "BREIT weighting", "actual": "QTS represents 20.4% of BREIT's real-estate value per the FY2025 annual report; leased capacity up 14x since the 2021 acquisition", "expected": "", "verdict": "inline", "result": "The single largest position in BREIT's portfolio"},
-          {"name": "Platform context", "actual": "Blackstone's overall data-center business was internally valued at ~$185B at Q2 2026, up from ~$130B at the start of 2026 (earnings coverage) — a figure that includes QTS alongside other holdings", "expected": "", "verdict": "inline", "result": "Schwarzman called data centers 'the largest development business in the world'"}
+          {
+            "name": "Take-private",
+            "actual": "$78.00/share all-cash, ~$10B including debt — announced June 7, 2021; completed August 31, 2021 by Blackstone Infrastructure Partners, BREIT and Blackstone Property Partners (all perpetual-capital vehicles)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "A 21% premium to the prior close at announcement; QTS was then a ~$540M-revenue REIT"
+          },
+          {
+            "name": "Value mark",
+            "actual": "'A $60 billion global industry leader' — the company's own March 2025 CEO-transition release; roughly a 6x mark versus the $10B entry in under four years",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company/Blackstone characterization, not a market transaction"
+          },
+          {
+            "name": "BREIT weighting",
+            "actual": "QTS represents 20.4% of BREIT's real-estate value per the FY2025 annual report; leased capacity up 14x since the 2021 acquisition",
+            "expected": "",
+            "verdict": "inline",
+            "result": "The single largest position in BREIT's portfolio"
+          },
+          {
+            "name": "Platform context",
+            "actual": "Blackstone's overall data-center business was internally valued at ~$185B at Q2 2026, up from ~$130B at the start of 2026 (earnings coverage) — a figure that includes QTS alongside other holdings",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Schwarzman called data centers 'the largest development business in the world'"
+          }
         ],
         "commentary": "Ownership split between Blackstone Infrastructure Partners and BREIT (with Blackstone Property Partners) is not disclosed in percentage terms. No QTS-specific standalone valuation has been marked publicly beyond the March 2025 '$60 billion' characterization."
       },
       {
         "period": "Debt & securitization program (2025-2026)",
         "metrics": [
-          {"name": "Securitization cadence", "actual": "No public-144A data-center issuer has matched QTS's pace over the past two years (GlobalCapital): ~$600M Phoenix ABS (Sep 2025; single 36MW hyperscale-leased building, S&P A-), $1.5B CMBS on Atlanta/Richmond assets (2025), record $3.46B CMBS (Nov 2025 — largest data-center securitization of 2025; 10 stabilized data centers across six markets), $750M ABS (Jan 2026), $1.95B CMBS (Feb 2026)", "expected": "", "verdict": "inline", "result": "Stabilized, hyperscale-leased assets recycled into rated paper to fund the development pipeline"},
-          {"name": "Green bond (IG debut)", "actual": "$4.6B, 10-year, 5.700% coupon, maturing 2036 — April 2026; first-time Baa2 rating from Moody's; ~$12.5B peak demand; issued by two subsidiaries tied to two Fayetteville, GA buildings, with Bloomberg reporting the collateral is Microsoft-leased", "expected": "", "verdict": "inline", "result": "Opens the investment-grade market on top of ABS/CMBS; described by DCD as the start of a ~$4.6B raise program"},
-          {"name": "Development funding base", "actual": "$30B+ development pipeline pre-leased to large, investment-grade global technology companies on 15-20-year leases with contractual rent escalators (BREIT FY2025 annual report)", "expected": "", "verdict": "inline", "result": "Pre-leasing is the credit story: construction risk with contracted takeout"}
+          {
+            "name": "Securitization cadence",
+            "actual": "No public-144A data-center issuer has matched QTS's pace over the past two years (GlobalCapital): ~$600M Phoenix ABS (Sep 2025; single 36MW hyperscale-leased building, S&P A-), $1.5B CMBS on Atlanta/Richmond assets (2025), record $3.46B CMBS (Nov 2025 — largest data-center securitization of 2025; 10 stabilized data centers across six markets), $750M ABS (Jan 2026), $1.95B CMBS (Feb 2026)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Stabilized, hyperscale-leased assets recycled into rated paper to fund the development pipeline"
+          },
+          {
+            "name": "Green bond (IG debut)",
+            "actual": "$4.6B, 10-year, 5.700% coupon, maturing 2036 — April 2026; first-time Baa2 rating from Moody's; ~$12.5B peak demand; issued by two subsidiaries tied to two Fayetteville, GA buildings, with Bloomberg reporting the collateral is Microsoft-leased",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Opens the investment-grade market on top of ABS/CMBS; described by DCD as the start of a ~$4.6B raise program"
+          },
+          {
+            "name": "Development funding base",
+            "actual": "$30B+ development pipeline pre-leased to large, investment-grade global technology companies on 15-20-year leases with contractual rent escalators (BREIT FY2025 annual report)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Pre-leasing is the credit story: construction risk with contracted takeout"
+          }
         ],
         "commentary": "Collection gap: aggregate program size, leverage and cost-of-debt figures are not disclosed — the deal list above is assembled from ratings coverage and trade press, not any company capital-markets summary."
       },
       {
         "period": "Operating scale (latest disclosed)",
         "metrics": [
-          {"name": "Capacity", "actual": "2GW of critical power operating and 1,600+ employees (company release, March 2025); 3GW+ across 70+ facilities per Site Selection Group's 2026 ranking — the largest independent US data-center operator", "expected": "", "verdict": "inline", "result": "Company disclosures stopped at the March 2025 release; third-party trackers carry the 2026 figures"},
-          {"name": "Land bank", "actual": "3,000+ acres of power-ready sites (company hyperscale page); ~45 named US locations plus 6 European sites as of August 2026", "expected": "", "verdict": "inline", "result": "Land/power banking years ahead of leases is the stated strategy"},
-          {"name": "Last public financials", "actual": "~$540M revenue in FY2020, the final full year as a public REIT (trade-press context at the take-private)", "expected": "", "verdict": "inline", "result": "Illustrates the scale multiple since: leased capacity 14x, valuation ~6x"}
+          {
+            "name": "Capacity",
+            "actual": "2GW of critical power operating and 1,600+ employees (company release, March 2025); 3GW+ across 70+ facilities per Site Selection Group's 2026 ranking — the largest independent US data-center operator",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Company disclosures stopped at the March 2025 release; third-party trackers carry the 2026 figures"
+          },
+          {
+            "name": "Land bank",
+            "actual": "3,000+ acres of power-ready sites (company hyperscale page); ~45 named US locations plus 6 European sites as of August 2026",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Land/power banking years ahead of leases is the stated strategy"
+          },
+          {
+            "name": "Last public financials",
+            "actual": "~$540M revenue in FY2020, the final full year as a public REIT (trade-press context at the take-private)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Illustrates the scale multiple since: leased capacity 14x, valuation ~6x"
+          }
         ],
         "commentary": "Collection gap: QTS has disclosed no revenue, EBITDA, leverage or consolidated balance-sheet figures since going private in 2021, and no analyst consensus exists — every 'expected' field is left empty rather than reconstructed. Employee count (1,600+) is stale as of March 2025. Tenant names are never confirmed by the company; the Microsoft association rests on Bloomberg and trade reporting."
       }
@@ -353,51 +526,217 @@
     "commentary": "Collection gap: QTS has published no revenue, EBITDA, leverage or balance-sheet figures since the August 2021 take-private. Scale must be read through sponsor disclosures (BREIT annual reports, Blackstone earnings commentary), securitization collateral data and rating-agency reports; the '$60B industry leader' and '14x leased capacity' figures are company/sponsor-attributed and independently unverified. No analyst consensus exists for any period — every 'expected' field is left empty rather than reconstructed."
   },
   "sources": [
-    {"label": "QTS — ENGIE partnership on ABEI Energy's Lubio Solar project (48MWac PPA, Irving)", "url": "https://q.com/news/engie-and-qts-strengthen-renewable-energy-partnership-in-texas-with-abei-energys-lubio-solar-project/", "date": "2026-08-18"},
-    {"label": "QTS — transformative community investment in Blakely and Early County, GA", "url": "https://q.com/news/qts-announces-transformative-community-investment-in-blakely-and-early-county/", "date": "2026-08-13"},
-    {"label": "Virginia Business — QTS to establish headquarters at Reston Station (77,000 sq ft)", "url": "https://virginiabusiness.com/qts-data-centers-to-establish-headquarters-in-reston/", "date": "2026-08-04"},
-    {"label": "Yahoo Finance — Blackstone Q2 2026: data-center platform marked ~$185B, QTS a key strategic investment", "url": "https://finance.yahoo.com/real-estate/articles/blackstone-leans-ai-data-centers-062747180.html", "date": "2026-07"},
-    {"label": "Atlanta News First — records raise questions about Georgia's largest data center and its water use (Fayetteville)", "url": "https://www.atlantanewsfirst.com/2026/07/13/records-raise-questions-about-georgias-largest-data-center-its-water-use/", "date": "2026-07-13"},
-    {"label": "QTS/Lancium — data center campus in Hall County, Texas ($10B+)", "url": "https://q.com/news/qts-and-lancium-announce-data-center-campus-in-hall-county-texas/", "date": "2026-07-13"},
-    {"label": "WBRC — QTS confirms plans for the Bessemer, AL 'Project Marvel' campus", "url": "https://www.wbrc.com/2026/07/02/qts-confirms-plans-proposed-data-center-campus-bessemer/", "date": "2026-07-02"},
-    {"label": "City of Van Wert/QTS — $10B data center campus in Northwest Ohio", "url": "https://q.com/news/city-of-van-wert-and-qts-announce-data-center-campus-in-northwest-ohio/", "date": "2026-05-29"},
-    {"label": "The Citizen — behind Fayette's QTS water controversy: a missed meter, 8,000 workers", "url": "https://thecitizen.com/2026/05/11/behind-fayettes-qts-water-controversy-a-missed-meter-8000-workers-and-a-massive-construction-project/", "date": "2026-05-11"},
-    {"label": "Layton Construction/QTS — Eagle Mountain, UT campus topping-out", "url": "https://q.com/news/layton-construction-and-qts-data-centers-celebrate-topping-out-of-data-center-campus-in-eagle-mountain/", "date": "2026-04-17"},
-    {"label": "Bloomberg — Microsoft-tied QTS bond sale draws $12.5B demand ($4.6B green bond kickoff)", "url": "https://www.bloomberg.com/news/articles/2026-04-06/blackstone-backed-data-center-firm-qts-kicks-off-bond-sale", "date": "2026-04-06"},
-    {"label": "Federal Permitting Council — first data center project (QTS RIC5) gains FAST-41 coverage", "url": "https://www.permitting.gov/newsroom/press-releases/first-data-center-project-gains-permitting-councils-fast-41-coverage", "date": "2026-04-02"},
-    {"label": "BREIT FY2025 Annual Report (SEC Form ARS) — QTS 20.4% of real-estate value; $30B+ pre-leased pipeline; 14x leased-capacity growth", "url": "https://www.sec.gov/Archives/edgar/data/1662972/000166297226000046/breit_2025xannualreportxv13.pdf", "date": "2026-04"},
-    {"label": "DCD — QTS looks to raise $4.6bn starting with 10-year investment-grade green bond", "url": "https://www.datacenterdynamics.com/en/news/blackstone-owned-qts-data-centers-looks-to-raise-46bn-starting-with-10-year-investment-grade-green-bond-sale/", "date": "2026-04"},
-    {"label": "QTS/Zayo Europe — network infrastructure for the UK's largest AI data centre (Cambois)", "url": "https://q.com/news/zayo-europe-to-power-uks-largest-ai-data-centre/", "date": "2026-03-23"},
-    {"label": "QTS — Introducing Q.com (rebrand; domain acquired from Quantum Fiber)", "url": "https://q.com/resources/introducing-q-com-the-new-online-address-for-qts/", "date": "2026-03"},
-    {"label": "GlobalCapital — rapid QTS dealmaking: $750M ABS (Jan 2026), $1.95B CMBS (Feb 2026) after the $3.46B November CMBS", "url": "https://www.globalcapital.com/securitization/article/2gjesb8eq6leue42qud4w/people-and-markets/gc-view/rapid-qts-data-center-deal-both-a-warning-and-a-sign-of-success", "date": "2026-02"},
-    {"label": "WTMJ — QTS withdraws the DeForest/Dane County, WI data center project", "url": "https://wtmj.com/news/2026/01/28/update-qts-withdraws-data-center-project-in-village-of-deforest/", "date": "2026-01-28"},
-    {"label": "Wisconsin Watch — DeForest won't move forward with the $12B data center", "url": "https://wisconsinwatch.org/2026/01/deforest-wisconsin-data-center-project-village-board-government/", "date": "2026-01"},
-    {"label": "CRE Daily — $3.46B QTS CMBS refinance, 2025's largest data-center securitization (10 data centers, six markets)", "url": "https://www.credaily.com/briefs/data-centers-drive-3-5b-blackstone-cmbs-refinance-deal/", "date": "2025-11-11"},
-    {"label": "QTS — Dane County campus plans and $50M community commitment", "url": "https://q.com/news/qts-advances-plans-for-state-of-the-art-data-center-campus-and-announces-50-million-community-commitment-for-dane-county/", "date": "2025-10-30"},
-    {"label": "Alliant Energy/QTS — enabling 750MW of renewable generation in Wisconsin", "url": "https://q.com/news/alliant-energy-qts-data-centers-to-enable-750mw-of-renewable-generation-in-wisconsin/", "date": "2025-10-30"},
-    {"label": "QTS — Lumen partnership to connect the next generation of AI data centers (16 campuses, 400G+)", "url": "https://q.com/news/qts-taps-lumen-to-connect-the-next-generation-of-ai-data-centers/", "date": "2025-10-28"},
-    {"label": "QTS — Cambois enabling-works celebration and Social Value Programme launch", "url": "https://q.com/news/qts-launches-social-value-programme-during-cambois-data-centre-enabling-works-celebration/", "date": "2025-10-07"},
-    {"label": "Crane Frontier — data center ABS by the numbers (Sep 2025 QTS Phoenix ABS: ~$600M, 36MW single tenant, S&P A-)", "url": "https://cranefrontier.substack.com/p/data-center-abs-by-the-numbers", "date": "2025-09"},
-    {"label": "Construction News — site preparation greenlit for the £10bn Northumberland data centre", "url": "https://www.constructionnews.co.uk/buildings/site-preparation-greenlit-for-10bn-northumberland-data-centre-27-08-2025/", "date": "2025-08-27"},
-    {"label": "QTS — new world-class data center campus in Cedar Rapids ($10B, 612 acres, 7 buildings)", "url": "https://q.com/news/qts-announces-new-world-class-data-center-campus-in-cedar-rapids/", "date": "2025-08-08"},
-    {"label": "Dallas Morning News — $650M of QTS data centers filed in southern Dallas County (Wilmer DC2/DC3)", "url": "https://www.dallasnews.com/business/real-estate/2025/04/16/firm-to-build-650m-data-centers-in-southern-dallas-county/", "date": "2025-04-16"},
-    {"label": "QTS — CEO Chad Williams to step down; Robey and Greason appointed co-CEOs ('$60B global industry leader'; 2GW; 1,600+ employees)", "url": "https://q.com/news/qts-ceo-chad-williams-to-step-down-after-founding-and-leading-qts-over-20-year-career/", "date": "2025-03-25"},
-    {"label": "Northumberland County Council — multi-billion pound Cambois data centre milestone (planning approval)", "url": "https://www.northumberland.gov.uk/news/new-milestone-reached-multi-billion-pound-data-centre-project", "date": "2025-03"},
-    {"label": "Avangrid/PGE/QTS/Meta — 120MWac solar project in Oregon", "url": "https://q.com/news/avangrid-and-portland-general-electric-collaborate-with-qts-and-meta-to-build-120-mwac-solar-project-in-oregon/", "date": "2024-12-02"},
-    {"label": "PR Newswire — QTS SDP adds industry-first Intelligent Applications (Live Power, sustainability dashboard)", "url": "https://www.prnewswire.com/news-releases/qts-service-delivery-platform-sdp-adds-industry-first-intelligent-applications-301751725.html", "date": "2023-02-21"},
-    {"label": "PR Newswire — Blackstone funds complete acquisition of QTS Realty Trust (~$10B)", "url": "https://www.prnewswire.com/news-releases/blackstone-funds-complete-acquisition-of-qts-realty-trust-301366364.html", "date": "2021-08-31"},
-    {"label": "QTS — QTS Realty Trust to be acquired by Blackstone funds in $10B transaction ($78.00/share)", "url": "https://q.com/news/qts-realty-trust-to-be-acquired-by-blackstone-funds-in-10-billion-transaction/", "date": "2021-06-07"},
-    {"label": "QTS — US locations directory (per-campus acres/MW/status)", "url": "https://q.com/us-locations/"},
-    {"label": "QTS — Europe locations directory", "url": "https://q.com/europe-locations/"},
-    {"label": "QTS — leadership page (executive roster and photos)", "url": "https://q.com/our-leadership/"},
-    {"label": "QTS — hyperscale solutions page (3,000+ acres power-ready; HITT 7M+ sq ft; Freedom design)", "url": "https://q.com/solutions/hyperscale/"},
-    {"label": "QTS — federal solutions page (Federal Freedom Design; federal assurance team; 20%+ veterans)", "url": "https://q.com/solutions/federal/"},
-    {"label": "QTS — Freedom design / construction guidelines page (36-72MW, 285k-570k sq ft, 350W/sq ft specs)", "url": "https://qtsdatacenters.com/data-centers/freedom-design"},
-    {"label": "QTS — Service Delivery Platform page", "url": "https://q.com/solutions/service-delivery-platform/"},
-    {"label": "Corgan — QTS Cambois campus project page (hall configuration)", "url": "https://www.corgan.com/projects/qts-data-center-campus-cambois"},
-    {"label": "Cleanview — Georgia data-center project tracker (QTS Blakely 1,400MW planned)", "url": "https://cleanview.co/data-centers/georgia"},
-    {"label": "Site Selection Group — the largest US data center operators in 2026 (QTS: 70+ facilities, 3GW+, largest independent)", "url": "https://info.siteselectiongroup.com/blog/the-largest-u-s-data-center-operators-in-2026"}
+    {
+      "label": "QTS — ENGIE partnership on ABEI Energy's Lubio Solar project (48MWac PPA, Irving)",
+      "url": "https://q.com/news/engie-and-qts-strengthen-renewable-energy-partnership-in-texas-with-abei-energys-lubio-solar-project/",
+      "date": "2026-08-18"
+    },
+    {
+      "label": "QTS — transformative community investment in Blakely and Early County, GA",
+      "url": "https://q.com/news/qts-announces-transformative-community-investment-in-blakely-and-early-county/",
+      "date": "2026-08-13"
+    },
+    {
+      "label": "Virginia Business — QTS to establish headquarters at Reston Station (77,000 sq ft)",
+      "url": "https://virginiabusiness.com/qts-data-centers-to-establish-headquarters-in-reston/",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "Yahoo Finance — Blackstone Q2 2026: data-center platform marked ~$185B, QTS a key strategic investment",
+      "url": "https://finance.yahoo.com/real-estate/articles/blackstone-leans-ai-data-centers-062747180.html",
+      "date": "2026-07"
+    },
+    {
+      "label": "Atlanta News First — records raise questions about Georgia's largest data center and its water use (Fayetteville)",
+      "url": "https://www.atlantanewsfirst.com/2026/07/13/records-raise-questions-about-georgias-largest-data-center-its-water-use/",
+      "date": "2026-07-13"
+    },
+    {
+      "label": "QTS/Lancium — data center campus in Hall County, Texas ($10B+)",
+      "url": "https://q.com/news/qts-and-lancium-announce-data-center-campus-in-hall-county-texas/",
+      "date": "2026-07-13"
+    },
+    {
+      "label": "WBRC — QTS confirms plans for the Bessemer, AL 'Project Marvel' campus",
+      "url": "https://www.wbrc.com/2026/07/02/qts-confirms-plans-proposed-data-center-campus-bessemer/",
+      "date": "2026-07-02"
+    },
+    {
+      "label": "City of Van Wert/QTS — $10B data center campus in Northwest Ohio",
+      "url": "https://q.com/news/city-of-van-wert-and-qts-announce-data-center-campus-in-northwest-ohio/",
+      "date": "2026-05-29"
+    },
+    {
+      "label": "The Citizen — behind Fayette's QTS water controversy: a missed meter, 8,000 workers",
+      "url": "https://thecitizen.com/2026/05/11/behind-fayettes-qts-water-controversy-a-missed-meter-8000-workers-and-a-massive-construction-project/",
+      "date": "2026-05-11"
+    },
+    {
+      "label": "Layton Construction/QTS — Eagle Mountain, UT campus topping-out",
+      "url": "https://q.com/news/layton-construction-and-qts-data-centers-celebrate-topping-out-of-data-center-campus-in-eagle-mountain/",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "Bloomberg — Microsoft-tied QTS bond sale draws $12.5B demand ($4.6B green bond kickoff)",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-06/blackstone-backed-data-center-firm-qts-kicks-off-bond-sale",
+      "date": "2026-04-06"
+    },
+    {
+      "label": "Federal Permitting Council — first data center project (QTS RIC5) gains FAST-41 coverage",
+      "url": "https://www.permitting.gov/newsroom/press-releases/first-data-center-project-gains-permitting-councils-fast-41-coverage",
+      "date": "2026-04-02"
+    },
+    {
+      "label": "BREIT FY2025 Annual Report (SEC Form ARS) — QTS 20.4% of real-estate value; $30B+ pre-leased pipeline; 14x leased-capacity growth",
+      "url": "https://www.sec.gov/Archives/edgar/data/1662972/000166297226000046/breit_2025xannualreportxv13.pdf",
+      "date": "2026-04"
+    },
+    {
+      "label": "DCD — QTS looks to raise $4.6bn starting with 10-year investment-grade green bond",
+      "url": "https://www.datacenterdynamics.com/en/news/blackstone-owned-qts-data-centers-looks-to-raise-46bn-starting-with-10-year-investment-grade-green-bond-sale/",
+      "date": "2026-04"
+    },
+    {
+      "label": "QTS/Zayo Europe — network infrastructure for the UK's largest AI data centre (Cambois)",
+      "url": "https://q.com/news/zayo-europe-to-power-uks-largest-ai-data-centre/",
+      "date": "2026-03-23"
+    },
+    {
+      "label": "QTS — Introducing Q.com (rebrand; domain acquired from Quantum Fiber)",
+      "url": "https://q.com/resources/introducing-q-com-the-new-online-address-for-qts/",
+      "date": "2026-03"
+    },
+    {
+      "label": "GlobalCapital — rapid QTS dealmaking: $750M ABS (Jan 2026), $1.95B CMBS (Feb 2026) after the $3.46B November CMBS",
+      "url": "https://www.globalcapital.com/securitization/article/2gjesb8eq6leue42qud4w/people-and-markets/gc-view/rapid-qts-data-center-deal-both-a-warning-and-a-sign-of-success",
+      "date": "2026-02"
+    },
+    {
+      "label": "WTMJ — QTS withdraws the DeForest/Dane County, WI data center project",
+      "url": "https://wtmj.com/news/2026/01/28/update-qts-withdraws-data-center-project-in-village-of-deforest/",
+      "date": "2026-01-28"
+    },
+    {
+      "label": "Wisconsin Watch — DeForest won't move forward with the $12B data center",
+      "url": "https://wisconsinwatch.org/2026/01/deforest-wisconsin-data-center-project-village-board-government/",
+      "date": "2026-01"
+    },
+    {
+      "label": "CRE Daily — $3.46B QTS CMBS refinance, 2025's largest data-center securitization (10 data centers, six markets)",
+      "url": "https://www.credaily.com/briefs/data-centers-drive-3-5b-blackstone-cmbs-refinance-deal/",
+      "date": "2025-11-11"
+    },
+    {
+      "label": "QTS — Dane County campus plans and $50M community commitment",
+      "url": "https://q.com/news/qts-advances-plans-for-state-of-the-art-data-center-campus-and-announces-50-million-community-commitment-for-dane-county/",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "Alliant Energy/QTS — enabling 750MW of renewable generation in Wisconsin",
+      "url": "https://q.com/news/alliant-energy-qts-data-centers-to-enable-750mw-of-renewable-generation-in-wisconsin/",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "QTS — Lumen partnership to connect the next generation of AI data centers (16 campuses, 400G+)",
+      "url": "https://q.com/news/qts-taps-lumen-to-connect-the-next-generation-of-ai-data-centers/",
+      "date": "2025-10-28"
+    },
+    {
+      "label": "QTS — Cambois enabling-works celebration and Social Value Programme launch",
+      "url": "https://q.com/news/qts-launches-social-value-programme-during-cambois-data-centre-enabling-works-celebration/",
+      "date": "2025-10-07"
+    },
+    {
+      "label": "Crane Frontier — data center ABS by the numbers (Sep 2025 QTS Phoenix ABS: ~$600M, 36MW single tenant, S&P A-)",
+      "url": "https://cranefrontier.substack.com/p/data-center-abs-by-the-numbers",
+      "date": "2025-09"
+    },
+    {
+      "label": "Construction News — site preparation greenlit for the £10bn Northumberland data centre",
+      "url": "https://www.constructionnews.co.uk/buildings/site-preparation-greenlit-for-10bn-northumberland-data-centre-27-08-2025/",
+      "date": "2025-08-27"
+    },
+    {
+      "label": "QTS — new world-class data center campus in Cedar Rapids ($10B, 612 acres, 7 buildings)",
+      "url": "https://q.com/news/qts-announces-new-world-class-data-center-campus-in-cedar-rapids/",
+      "date": "2025-08-08"
+    },
+    {
+      "label": "Dallas Morning News — $650M of QTS data centers filed in southern Dallas County (Wilmer DC2/DC3)",
+      "url": "https://www.dallasnews.com/business/real-estate/2025/04/16/firm-to-build-650m-data-centers-in-southern-dallas-county/",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "QTS — CEO Chad Williams to step down; Robey and Greason appointed co-CEOs ('$60B global industry leader'; 2GW; 1,600+ employees)",
+      "url": "https://q.com/news/qts-ceo-chad-williams-to-step-down-after-founding-and-leading-qts-over-20-year-career/",
+      "date": "2025-03-25"
+    },
+    {
+      "label": "Northumberland County Council — multi-billion pound Cambois data centre milestone (planning approval)",
+      "url": "https://www.northumberland.gov.uk/news/new-milestone-reached-multi-billion-pound-data-centre-project",
+      "date": "2025-03"
+    },
+    {
+      "label": "Avangrid/PGE/QTS/Meta — 120MWac solar project in Oregon",
+      "url": "https://q.com/news/avangrid-and-portland-general-electric-collaborate-with-qts-and-meta-to-build-120-mwac-solar-project-in-oregon/",
+      "date": "2024-12-02"
+    },
+    {
+      "label": "PR Newswire — QTS SDP adds industry-first Intelligent Applications (Live Power, sustainability dashboard)",
+      "url": "https://www.prnewswire.com/news-releases/qts-service-delivery-platform-sdp-adds-industry-first-intelligent-applications-301751725.html",
+      "date": "2023-02-21"
+    },
+    {
+      "label": "PR Newswire — Blackstone funds complete acquisition of QTS Realty Trust (~$10B)",
+      "url": "https://www.prnewswire.com/news-releases/blackstone-funds-complete-acquisition-of-qts-realty-trust-301366364.html",
+      "date": "2021-08-31"
+    },
+    {
+      "label": "QTS — QTS Realty Trust to be acquired by Blackstone funds in $10B transaction ($78.00/share)",
+      "url": "https://q.com/news/qts-realty-trust-to-be-acquired-by-blackstone-funds-in-10-billion-transaction/",
+      "date": "2021-06-07"
+    },
+    {
+      "label": "QTS — US locations directory (per-campus acres/MW/status)",
+      "url": "https://q.com/us-locations/"
+    },
+    {
+      "label": "QTS — Europe locations directory",
+      "url": "https://q.com/europe-locations/"
+    },
+    {
+      "label": "QTS — leadership page (executive roster and photos)",
+      "url": "https://q.com/our-leadership/"
+    },
+    {
+      "label": "QTS — hyperscale solutions page (3,000+ acres power-ready; HITT 7M+ sq ft; Freedom design)",
+      "url": "https://q.com/solutions/hyperscale/"
+    },
+    {
+      "label": "QTS — federal solutions page (Federal Freedom Design; federal assurance team; 20%+ veterans)",
+      "url": "https://q.com/solutions/federal/"
+    },
+    {
+      "label": "QTS — Freedom design / construction guidelines page (36-72MW, 285k-570k sq ft, 350W/sq ft specs)",
+      "url": "https://qtsdatacenters.com/data-centers/freedom-design"
+    },
+    {
+      "label": "QTS — Service Delivery Platform page",
+      "url": "https://q.com/solutions/service-delivery-platform/"
+    },
+    {
+      "label": "Corgan — QTS Cambois campus project page (hall configuration)",
+      "url": "https://www.corgan.com/projects/qts-data-center-campus-cambois"
+    },
+    {
+      "label": "Cleanview — Georgia data-center project tracker (QTS Blakely 1,400MW planned)",
+      "url": "https://cleanview.co/data-centers/georgia"
+    },
+    {
+      "label": "Site Selection Group — the largest US data center operators in 2026 (QTS: 70+ facilities, 3GW+, largest independent)",
+      "url": "https://info.siteselectiongroup.com/blog/the-largest-u-s-data-center-operators-in-2026"
+    }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

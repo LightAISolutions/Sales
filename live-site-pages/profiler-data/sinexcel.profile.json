@@ -205,42 +205,52 @@
       "product": "StellaON 1575K — utility-scale grid-forming PCS (flagship; European launch Intersolar Europe 2026)",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Rated AC power",
           "value": "1,575 kVA (max DC power 1,732 kW; rated DC current 1,515 A)"
         },
         {
+          "band": "Electrical",
           "label": "AC / DC voltage",
           "value": "690 Vac (-15%/+10%) · DC 1,040–1,500 V"
         },
         {
+          "band": "Performance",
           "label": "Efficiency",
           "value": "99% max (98.4% at rated power)"
         },
         {
+          "band": "Performance",
           "label": "Overload",
           "value": "1.1× continuous; 1.5× for 10 s (marketing claims 1.5× for 60 s vs 1.2× industry typical)"
         },
         {
+          "band": "Grid",
           "label": "Grid-forming",
           "value": "VSG/PQ/VF modes; 100+ MW off-grid parallel; black start; GW-scale grid-forming claimed"
         },
         {
+          "band": "Grid",
           "label": "Power quality",
           "value": "THDi ≤3%; regulation accuracy ≤±1%; PF 0.99 (-1 to 1)"
         },
         {
-          "label": "Environment",
+          "band": "Environment",
+          "label": "Range & rating",
           "value": "-40 to 60°C (derate >45°C); 0–100% RH; 3,000 m; IP65; C5; air-cooled"
         },
         {
-          "label": "Physical",
+          "band": "Physical",
+          "label": "Envelope",
           "value": "720×2,300×1,600 mm; 1,400 kg"
         },
         {
+          "band": "Serviceability",
           "label": "Reliability",
           "value": "MTBF >300,000 h; key-component swap <1 h; full PCS swap <2 h (company claims)"
         },
         {
+          "band": "Compliance",
           "label": "Comms / certs",
           "value": "RS-485, Ethernet, CAN; Modbus TCP/RTU, IEC 104, IEC 61850 · EN 50549-2/-10, EN 61000, IEC/EN 62477, RfG+PTPIREE, CQC 34120"
         }
@@ -251,27 +261,33 @@
       "product": "StellaON 1250K — utility-scale grid-forming PCS",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Rated AC power",
           "value": "1,250 kVA (max DC power 1,375 kW)"
         },
         {
+          "band": "Electrical",
           "label": "AC / DC voltage",
           "value": "690 Vac (-15%/+10%) · DC 1,040–1,500 V"
         },
         {
+          "band": "Performance",
           "label": "Efficiency",
           "value": "99% max (98.5% at rated power)"
         },
         {
+          "band": "Performance",
           "label": "Overload",
           "value": "1.1× continuous; 1.8× for 10 s"
         },
         {
+          "band": "Grid",
           "label": "Grid support",
           "value": "VSG/PQ/VF; 100+ MW grid-forming; LVRT & HVRT"
         },
         {
-          "label": "Environment / physical",
+          "band": "Environment",
+          "label": "Range & physical",
           "value": "-40 to 60°C (derate >55°C); IP65; air-cooled; 720×2,300×1,600 mm; 1,400 kg"
         }
       ],
@@ -281,26 +297,32 @@
       "product": "Sirius 135K (PWS1-135M) — C&I / microgrid PCS",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Rated power",
           "value": "135 kW (DC current 193 A)"
         },
         {
+          "band": "Electrical",
           "label": "AC / DC voltage",
           "value": "400/480 Vac (±15%), 3P4W · DC 600–1,000 V @400 Vac; 720–1,000 V @480 Vac"
         },
         {
+          "band": "Performance",
           "label": "Efficiency",
           "value": "98% nominal (>98% full-load per certification PR)"
         },
         {
+          "band": "Grid",
           "label": "Microgrid",
           "value": "Grid-forming; 100+ units off-grid parallel via proprietary comms; 100% unbalanced load; transformerless"
         },
         {
-          "label": "Environment",
+          "band": "Environment",
+          "label": "Range & rating",
           "value": "-40 to 60°C (derate ≥55°C); IP65 (IP66 + C5 per cert PR); 720×265×960 mm"
         },
         {
+          "band": "Compliance",
           "label": "Certifications",
           "value": "UL 1741 & IEEE 1547 (March 2026) + IEC/EN, JET, VDE; markets incl. Europe, Australia, Thailand, North America"
         }
@@ -311,26 +333,32 @@
       "product": "PWS1-500KTL — 500 kVA modular PCS cabinet",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Rated power",
           "value": "500 kVA (550 kVA max), scaling 62.5→500 kW via 1–8 power modules"
         },
         {
+          "band": "Electrical",
           "label": "AC / DC voltage",
           "value": "400 Vac ±15% (380/400/480/690 with external transformer) · DC 600–900 V"
         },
         {
+          "band": "Performance",
           "label": "Efficiency",
           "value": "98.2% peak; 97% CEC (NA model, w/o transformer)"
         },
         {
+          "band": "Grid",
           "label": "Modes",
           "value": "Utility-interactive and stand-alone (on/off-grid)"
         },
         {
-          "label": "Physical",
+          "band": "Physical",
+          "label": "Envelope & cooling",
           "value": "1,100×2,160×800 mm; forced-air; <75 dB"
         },
         {
+          "band": "Compliance",
           "label": "Certifications",
           "value": "EX: CE LVD/EMC, EN 50549-1/2, G99, AS4777.2, VDE 4110 · NA: UL 1741, IEEE 1547, CSA 22.2, FCC, CPUC Rule 21, HECO Rule 14"
         }
@@ -341,22 +369,27 @@
       "product": "PWS1-1725KTL-H — 215 kVA-module utility cabinet",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Rated power",
           "value": "215–1,725 kVA in 215 kVA steps (up to 8 modules)"
         },
         {
+          "band": "Electrical",
           "label": "AC / DC voltage",
           "value": "690 Vac (-15%/+10%) direct interconnection · DC 1,000–1,500 V (full-power charge), 1,070–1,500 V (full-power discharge)"
         },
         {
+          "band": "Performance",
           "label": "Efficiency",
           "value": "98.5% peak @ DC 1,070 V"
         },
         {
-          "label": "Physical",
+          "band": "Physical",
+          "label": "Envelope",
           "value": "2,200×2,160×1,300 mm; 1,549–2,200 kg; air-cooled"
         },
         {
+          "band": "Applications",
           "label": "Functions",
           "value": "Front-of-meter: peak shaving, renewables integration, frequency regulation, black start"
         }
@@ -367,26 +400,32 @@
       "product": "PWS1-160M-H — 160 kVA microgrid HVAC module",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Rated power",
           "value": "160 kVA (176 kVA at 1.1× continuous; 1.5× for 10 s)"
         },
         {
+          "band": "Electrical",
           "label": "AC / DC voltage",
           "value": "400 Vac ±15% (EX) / 480 Vac ±15% (NA) · DC 720–1,500 V (derate to 90% above 1,200 V)"
         },
         {
+          "band": "Performance",
           "label": "Efficiency",
           "value": "98.5% max (external auxiliary source)"
         },
         {
+          "band": "Grid",
           "label": "Microgrid",
           "value": "VSG grid-forming; seamless on/off-grid with collaborative external switch; FFR/FCR/FCAS; dispatch response ≤15 ms"
         },
         {
-          "label": "Environment",
+          "band": "Environment",
+          "label": "Rating & mounting",
           "value": "IP66; forced-air; flat/vertical/wall mounting"
         },
         {
+          "band": "Compliance",
           "label": "Certifications",
           "value": "Finland SJV2024 (May 2026) among others"
         }
@@ -397,26 +436,32 @@
       "product": "40ft 10MW Centralized MV Station — containerized medium-voltage skid",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Rated power",
           "value": "10,000 kVA; 4 or 8 DC branches (2,404 A / 1,202 A max per branch)"
         },
         {
+          "band": "Electrical",
           "label": "Voltage",
           "value": "MV 22–33 kV (24/36 kV transformer, Dy11y11, ONAN, oil-immersed, 690 V LV) · DC 1,040–1,500 V"
         },
         {
-          "label": "Efficiency / PQ",
+          "band": "Performance",
+          "label": "Efficiency / power quality",
           "value": "PCS max 98.5%; THDi/THDu <3%; regulation ≤±1%"
         },
         {
-          "label": "Environment",
+          "band": "Environment",
+          "label": "Range & rating",
           "value": "-40 to 60°C (derate >45°C); IP55 overall (IP68 transformer, IP65 PCS); C5"
         },
         {
-          "label": "Physical",
+          "band": "Physical",
+          "label": "Envelope",
           "value": "12,192×2,896×2,438 mm (40-ft); ≤45 t"
         },
         {
+          "band": "Compliance",
           "label": "Certifications",
           "value": "IEC 62477, IEC 61000, G99, VDE 4110, EN 50549-2, IEC 60076, IEC 62271"
         }
@@ -427,22 +472,27 @@
       "product": "SEC1280 — distributed megawatt charging system",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Power",
           "value": "960 kW or 1,280 kW power stacks; up to 16 connectors"
         },
         {
-          "label": "Output",
+          "band": "Output",
+          "label": "Voltage & connectors",
           "value": "200–1,000 V DC; standard dispenser dual liquid-cooled connectors 500 A (boost 600 A; combos 350+350/500+500/500+350 A); suspended dispenser 200 A; 700 A liquid-cooled supercharging dispenser in Thailand deployment"
         },
         {
-          "label": "Input / efficiency",
+          "band": "Input",
+          "label": "Supply & efficiency",
           "value": "400 Vac ±10%, 50 Hz; 96.3% peak, ~95% average; PF 0.99"
         },
         {
+          "band": "Interfaces",
           "label": "Protocols",
           "value": "OCPP 1.6J (2.0.1 from 2025); DIN 70121, ISO 15118; Ethernet/GSM/4G"
         },
         {
+          "band": "Compliance",
           "label": "Certifications",
           "value": "CE, RCM, Eichrecht (first megawatt charger so certified), MID"
         }
@@ -453,30 +503,37 @@
       "product": "SEC480 — distributed DC fast charging system",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Power",
           "value": "360–480 kW power cabinet (24 × 20 kW modules); architecture upgradeable toward 960 kW"
         },
         {
-          "label": "Output voltage",
+          "band": "Output",
+          "label": "Voltage",
           "value": "200–1,000 V DC (constant-power band 300–1,000 V per distributor sheet; 330–750 V per project page)"
         },
         {
-          "label": "Output current",
+          "band": "Output",
+          "label": "Current",
           "value": "Up to 500 A at 800 V (≈400 kW) with liquid-cooled cables; ~200 A standard air-cooled dispensers"
         },
         {
+          "band": "Performance",
           "label": "Efficiency",
           "value": "Module peak 96.5%; system ~96%"
         },
         {
-          "label": "Architecture",
+          "band": "Architecture",
+          "label": "Distribution",
           "value": "Distributed power bank + up to 6 dispensers; dynamic module-level power allocation; module-level redundancy"
         },
         {
+          "band": "Environment",
           "label": "Cooling / noise",
           "value": "Liquid-cooled dispenser <55 dB; air-cooled dispenser near-silent (claimed)"
         },
         {
+          "band": "Compliance",
           "label": "Protocols / certs",
           "value": "OCPP 1.6J / 2.0 · CE, UL, UKCA, TR25, RCM, KC, Eichrecht"
         }
@@ -487,22 +544,27 @@
       "product": "SER 40 kW EV charging module (SER100040K3B)",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Power / output",
           "value": "40 kW; 50–1,000 V output (constant power 300–1,000 V); max current 133.3 A"
         },
         {
+          "band": "Electrical",
           "label": "Input",
           "value": "285–525 Vac wide-range three-phase"
         },
         {
+          "band": "Performance",
           "label": "Efficiency",
           "value": "97.03% peak"
         },
         {
+          "band": "Architecture",
           "label": "Topology",
           "value": "3rd-generation SiC MOSFETs; interleaved parallel LLC; high-frequency-transformer galvanic isolation; hot-pluggable"
         },
         {
+          "band": "Compliance",
           "label": "Standards support",
           "value": "CCS1, CCS2, CHAdeMO, GB/T; also usable in storage systems"
         }
@@ -513,26 +575,32 @@
       "product": "Active harmonic filter family (BLADE / standard / PRO / Ultra AHF)",
       "specs": [
         {
+          "band": "Product line",
           "label": "BLADE AHF",
           "value": "5/10/15 A wall/rack units; SiC MOSFET; ~50 kHz avg switching (up to 90 kHz); 2nd–61st harmonics; 410×340×45 mm, 4.98 kg; Wi-Fi monitoring"
         },
         {
+          "band": "Product line",
           "label": "Standard AHF",
           "value": "25–300 A modules; 220/400/480/600/690 V; 2nd–50th harmonics; ≥97% efficiency; ~20 kHz avg; unlimited parallel"
         },
         {
+          "band": "Product line",
           "label": "PRO AHF",
           "value": "150 A; 98.5% peak efficiency; ~33% less heat vs legacy; 500×550×190 mm, 40 kg"
         },
         {
+          "band": "Product line",
           "label": "Ultra AHF",
           "value": "SiC-based; average switching ~40 kHz (claimed up to 95 kHz)"
         },
         {
+          "band": "Performance",
           "label": "Filtering result",
           "value": "Auto-tuning to THDi <5%"
         },
         {
+          "band": "Compliance",
           "label": "Certifications",
           "value": "CE, UL/ETL; marine: DNV, RINA, CCS, BV"
         }
@@ -543,22 +611,27 @@
       "product": "Static var generator family (SVG / PRO / hot-plug)",
       "specs": [
         {
+          "band": "Product line",
           "label": "Standard SVG",
           "value": "30–120 kvar modules across 200/400/480/600/690 V classes; 200 kvar cabinet unit; ≥97% efficiency"
         },
         {
+          "band": "Performance",
           "label": "Response",
           "value": "15 ms full power-factor correction; PF to 0.99; three-phase balancing and voltage regulation"
         },
         {
+          "band": "Product line",
           "label": "PRO SVG",
           "value": "100 kvar; 98.5% peak; <56 dB; 35 kg; 500×550×190 mm"
         },
         {
+          "band": "Product line",
           "label": "Hot-plug units",
           "value": "50/100 kvar, 'no wiring' slide-in installation"
         },
         {
+          "band": "Product line",
           "label": "Variants",
           "value": "Ultra SVG, ASVG, HSVG for higher-voltage/special applications (specs not published on retrieved pages)"
         }
@@ -569,22 +642,27 @@
       "product": "AVC-RTS — active voltage conditioner (sag ride-through)",
       "specs": [
         {
-          "label": "Ratings",
+          "band": "Ratings",
+          "label": "Range",
           "value": "30–2,400 kVA (30/50/60 … 1,200/1,500/1,800/2,400); 208/380/480/600 V; 3P3W/3P4W"
         },
         {
+          "band": "Performance",
           "label": "Response",
           "value": "2 ms typical (within 5 ms); off-line topology (inverter on standby)"
         },
         {
+          "band": "Performance",
           "label": "Compensation",
           "value": "0–130% of nominal voltage — supports 100% rated voltage even at zero-volt sags; three- or single-phase"
         },
         {
+          "band": "Storage",
           "label": "Energy storage",
           "value": "Supercapacitors; 3 s standard backup (customizable)"
         },
         {
+          "band": "Availability",
           "label": "Efficiency / redundancy",
           "value": "~99% (off-line); N+1 inverters <1,200 kVA, N+2 ≥1,200 kVA; optional maintenance bypass"
         }
@@ -941,6 +1019,6 @@
       "url": "https://www.charin.global/news/sinexcel-becomes-a-core-member-of-charin-e-v/"
     }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 4
 }

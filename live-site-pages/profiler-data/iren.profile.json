@@ -188,30 +188,78 @@
     {
       "product": "Site portfolio (5 GW secured, 4,900 acres)",
       "specs": [
-        "Childress, TX: 750 MW on 576 freehold acres; IREN-owned ERCOT substations; Horizon 1–4 = 4 × 50 MW-IT liquid-cooled buildings (130–200 kW racks, 100 MW superclusters, Tier 3-equivalent); ~60 MW air-cooled allocated to the NVIDIA contract",
-        "Sweetwater, TX: 2 GW hub — SW1 1.4 GW (substation energized May 2026), SW2 600 MW (2027); >700,000 liquid-cooled GPU capability; <10 ms to nearest hyperscaler regions",
-        "British Columbia: Prince George 50 MW + Mackenzie 80 MW + Canal Flats 30 MW — air-cooled PUE 1.1, 70 kW racks, BC Hydro via owned substations; >60k Blackwell GPU capacity estimate",
-        "Development: Oklahoma 1.6 GW (2028, first non-ERCOT), Bundey South Australia 800 MW (2028, four 330 kV feeders, submarine fiber to Asia), Spain ~490 MW (Nostrum)"
+        {
+          "band": "Texas",
+          "label": "Childress",
+          "value": "750 MW on 576 freehold acres; IREN-owned ERCOT substations; Horizon 1–4 = 4 × 50 MW-IT liquid-cooled buildings (130–200 kW racks, 100 MW superclusters, Tier 3-equivalent); ~60 MW air-cooled allocated to the NVIDIA contract"
+        },
+        {
+          "band": "Texas",
+          "label": "Sweetwater",
+          "value": "2 GW hub — SW1 1.4 GW (substation energized May 2026), SW2 600 MW (2027); >700,000 liquid-cooled GPU capability; <10 ms to nearest hyperscaler regions"
+        },
+        {
+          "band": "Canada",
+          "label": "British Columbia",
+          "value": "Prince George 50 MW + Mackenzie 80 MW + Canal Flats 30 MW — air-cooled PUE 1.1, 70 kW racks, BC Hydro via owned substations; >60k Blackwell GPU capacity estimate"
+        },
+        {
+          "band": "Pipeline",
+          "label": "Development",
+          "value": "Oklahoma 1.6 GW (2028, first non-ERCOT), Bundey South Australia 800 MW (2028, four 330 kV feeders, submarine fiber to Asia), Spain ~490 MW (Nostrum)"
+        }
       ],
       "notes": "810 MW operational / 2,100 MW under construction / 1,600 MW in development; 100% renewable via clean grids or REC purchase (location- vs market-based accounting contested by Culper in 2024)."
     },
     {
       "product": "GPU fleet & contracts",
       "specs": [
-        "Fleet path: 1.9k GPUs (Jun 2025) → 23k (Sep 2025: 1.9k H100/H200 + 19.1k B200/B300 + 1.2k GB300 + 1.1k AMD MI350X) → 150,000 target (>50k additional B300s, Mar 2026)",
-        "Microsoft: ~76,000 GB300s (third-party estimate), ~$5.8B Dell hardware purchase, $1.9B prepayment, ~$1.9B expected ARR",
-        "NVIDIA: $3.4B managed cloud (with Mirantis k0rdent orchestration), ~$1.6B Dell air-cooled Blackwell purchase, early-2027 commissioning",
-        "Non-blocking 3.2 Tb/s InfiniBand per NVIDIA reference architecture; bare metal and managed"
+        {
+          "band": "Fleet",
+          "label": "Trajectory",
+          "value": "1.9k GPUs (Jun 2025) → 23k (Sep 2025: 1.9k H100/H200 + 19.1k B200/B300 + 1.2k GB300 + 1.1k AMD MI350X) → 150,000 target (>50k additional B300s, Mar 2026)"
+        },
+        {
+          "band": "Contracts",
+          "label": "Microsoft",
+          "value": "~76,000 GB300s (third-party estimate), ~$5.8B Dell hardware purchase, $1.9B prepayment, ~$1.9B expected ARR"
+        },
+        {
+          "band": "Contracts",
+          "label": "NVIDIA",
+          "value": "$3.4B managed cloud (with Mirantis k0rdent orchestration), ~$1.6B Dell air-cooled Blackwell purchase, early-2027 commissioning"
+        },
+        {
+          "band": "Networking",
+          "label": "Fabric",
+          "value": "Non-blocking 3.2 Tb/s InfiniBand per NVIDIA reference architecture; bare metal and managed"
+        }
       ],
       "notes": "ARR defined as GPU-hour pricing × 8,760 + annualized storage/ancillaries — an operating metric, not GAAP revenue."
     },
     {
       "product": "Capital & financing stack",
       "specs": [
-        "Converts: $440M (2024) + $550M (Jun 2025) + $1.0B 0% 2031 (Oct 2025) + $2.3B (Dec 2025, incl. 2029/2030 repurchases) + $3.0B 1% 2033 (May 2026) — ~$6.3B outstanding (derived)",
-        "$3.65B investment-grade GPU financing (Fitch A / DBRS A-low), blended 6.00%, June 2026",
-        "NVIDIA right to purchase 30M shares at $70 (~$2.1B); ATM program; ~12.6M Mirantis shares; 18.2M co-CEO RSUs (~$687M at grant)",
-        "Cash ~$7.6B at Jun 30, 2026 (preliminary; incl. $1.7B restricted for Horizon GPU financing)"
+        {
+          "band": "Debt",
+          "label": "Converts",
+          "value": "$440M (2024) + $550M (Jun 2025) + $1.0B 0% 2031 (Oct 2025) + $2.3B (Dec 2025, incl. 2029/2030 repurchases) + $3.0B 1% 2033 (May 2026) — ~$6.3B outstanding (derived)"
+        },
+        {
+          "band": "Debt",
+          "label": "GPU financing",
+          "value": "$3.65B investment-grade GPU financing (Fitch A / DBRS A-low), blended 6.00%, June 2026"
+        },
+        {
+          "band": "Equity",
+          "label": "Instruments",
+          "value": "NVIDIA right to purchase 30M shares at $70 (~$2.1B); ATM program; ~12.6M Mirantis shares; 18.2M co-CEO RSUs (~$687M at grant)"
+        },
+        {
+          "band": "Liquidity",
+          "label": "Cash",
+          "value": "~$7.6B at Jun 30, 2026 (preliminary; incl. $1.7B restricted for Horizon GPU financing)"
+        }
       ],
       "notes": "Quarterly FCF ran ~-$874M in fiscal Q3 2026 — the funding machine is the business until the ARR ladder converts."
     }
@@ -496,6 +544,6 @@
       "url": "https://stockanalysis.com/stocks/iren/forecast/"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

@@ -191,30 +191,78 @@
     {
       "product": "Capacity trajectory (company definitions)",
       "specs": [
-        "Contracted power (land + power secured): >2 GW Feb 2026 → >3.5 GW May 2026 → 5 GW target YE2026; >1 GW/year deployment planned from 2027",
-        "Connected power (built, equipped DCs): 25 MW YE2024 → ~220 MW YE2025 → 800 MW–1 GW target YE2026",
-        "Active power (revenue-generating IT load): ~170 MW at YE2025 — asset productivity ≈ $0.94M ARR per active MW (MVC Investing)",
-        "Sites: 2 (2024) → 7 (2025) → 16+ locations; seven sites >100 MW as of May 2026"
+        {
+          "band": "Contracted",
+          "label": "Land + power secured",
+          "value": ">2 GW Feb 2026 → >3.5 GW May 2026 → 5 GW target YE2026; >1 GW/year deployment planned from 2027"
+        },
+        {
+          "band": "Connected",
+          "label": "Built, equipped DCs",
+          "value": "25 MW YE2024 → ~220 MW YE2025 → 800 MW–1 GW target YE2026"
+        },
+        {
+          "band": "Active",
+          "label": "Revenue-generating IT load",
+          "value": "~170 MW at YE2025 — asset productivity ≈ $0.94M ARR per active MW (MVC Investing)"
+        },
+        {
+          "band": "Footprint",
+          "label": "Sites",
+          "value": "2 (2024) → 7 (2025) → 16+ locations; seven sites >100 MW as of May 2026"
+        }
       ],
       "notes": "The three-tier definition matters: the 5 GW headline is contracted, not operating — the contracted→active conversion is the entire execution story."
     },
     {
       "product": "Published cloud pricing & fleet (August 2026)",
       "specs": [
-        "On-demand $/GPU-hr: HGX B300 $7.85 (preemptible $4.30), B200 $7.15/$3.95, H200 $4.50/$2.45, H100 $3.85/$2.15; GB300/GB200 NVL72 sales-quoted; reserved clusters up to 35% off",
-        "Fabric: non-blocking Quantum-2 and Quantum-X800 InfiniBand; first European production HGX B300 deployment",
-        "Storage: shared filesystem >500 GB/s aggregate read; WEKA tier ~20 GB/s read per cluster",
-        "Vera Rubin NVL72: first systems received, full-stack validation underway (Aug 2026)"
+        {
+          "band": "Pricing",
+          "label": "On-demand $/GPU-hr",
+          "value": "HGX B300 $7.85 (preemptible $4.30), B200 $7.15/$3.95, H200 $4.50/$2.45, H100 $3.85/$2.15; GB300/GB200 NVL72 sales-quoted; reserved clusters up to 35% off"
+        },
+        {
+          "band": "Networking",
+          "label": "Fabric",
+          "value": "non-blocking Quantum-2 and Quantum-X800 InfiniBand; first European production HGX B300 deployment"
+        },
+        {
+          "band": "Storage",
+          "label": "Throughput",
+          "value": "shared filesystem >500 GB/s aggregate read; WEKA tier ~20 GB/s read per cluster"
+        },
+        {
+          "band": "Roadmap",
+          "label": "Vera Rubin NVL72",
+          "value": "first systems received, full-stack validation underway (Aug 2026)"
+        }
       ],
       "notes": "MLPerf Inference v5.1: peak GB200 NVL72 results; ClusterMAX praises 'realistic pricing right on the homepage.'"
     },
     {
       "product": "Owned AI factories & power strategy",
       "specs": [
-        "Independence, MO: 1.2 GW campus on ~400 acres, groundbroken May 2026, operational target 2027",
-        "Pennsylvania: up to 1.2 GW secured (May 2026), phased from 2027; Finland second owned site: 310 MW; Alabama/Minnesota/Oklahoma owned sites in construction/planning",
-        "Vineland, NJ (Microsoft-dedicated, built-to-suit): ~300–350 MW, Bloom fuel cells 328 MW first deployment, Phase 2 approved Aug 2026",
-        "Efficiency: portfolio PUE 1.25 (vs 1.54 global average); WUE 0.018 L/kWh at the owned liquid-cooled site; 19.5 GWh of recovered heat exported to Finnish district heating in 2025 (>250 GWh/yr at full capacity)"
+        {
+          "band": "Owned sites",
+          "label": "Independence, MO",
+          "value": "1.2 GW campus on ~400 acres, groundbroken May 2026, operational target 2027"
+        },
+        {
+          "band": "Owned sites",
+          "label": "Other",
+          "value": "Pennsylvania: up to 1.2 GW secured (May 2026), phased from 2027; Finland second owned site: 310 MW; Alabama/Minnesota/Oklahoma owned sites in construction/planning"
+        },
+        {
+          "band": "Built-to-suit",
+          "label": "Vineland, NJ (Microsoft-dedicated)",
+          "value": "~300–350 MW, Bloom fuel cells 328 MW first deployment, Phase 2 approved Aug 2026"
+        },
+        {
+          "band": "Efficiency",
+          "label": "Portfolio",
+          "value": "PUE 1.25 (vs 1.54 global average); WUE 0.018 L/kWh at the owned liquid-cooled site; 19.5 GWh of recovered heat exported to Finnish district heating in 2025 (>250 GWh/yr at full capacity)"
+        }
       ],
       "notes": "Owned share of contracted power >75% as of mid-2026 — Nebius is becoming its own landlord faster than Lambda or the miner-pivots."
     }
@@ -505,6 +553,6 @@
       "url": "https://public.com/stocks/nbis/earnings"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

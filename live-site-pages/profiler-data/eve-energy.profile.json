@@ -3,7 +3,9 @@
   "slug": "eve-energy",
   "name": "EVE Energy",
   "legalName": "EVE Energy Co., Ltd. (亿纬锂能)",
-  "categories": ["supplier"],
+  "categories": [
+    "supplier"
+  ],
   "hq": "Huizhou, Guangdong, China",
   "ticker": "SZSE ChiNext: 300014 (HKEX H-share listing twice-filed, unconsummated as of Aug 2026)",
   "founded": "2001",
@@ -18,7 +20,11 @@
       "description": "Mr.Big (LF560K → MB56): industry's first mass-produced 600Ah+ LFP prismatic cell — 628Ah, 3.2V, ~2.009 kWh/cell, cycle life up to ~12,000, 96% energy efficiency, third-gen high-speed stacking. Produced at the Jingmen 60 GWh 'Super Energy Storage Plant' (single line >15 GWh, 1.5 cells/second, PPB defect level — billed as the industry's largest single ESS factory). Legacy 280/306Ah lines continue; sodium-ion cells (155/175/355Ah) with megawatt-scale overseas projects; AEM hydrogen electrolysis scaled kW→MW.",
       "positioning": "#3 global ESS cell maker (InfoLink FY2025; #3 in non-China markets too); the 628Ah class claims -50% system components, -50% installation workload, -30% lifecycle maintenance vs 314Ah systems — economics the whole industry is now chasing.",
       "soldThrough": "Direct to integrators, developers, and OEMs; strategic multi-GWh frameworks (ARCTECH 12 GWh, Beijing Guowang 10 GWh, EVO Power 2.2 GWh, CEGASA 1 GWh, Vimab 1.48 GWh).",
-      "targetSegments": ["Utility-scale storage", "System integrators", "International developers"],
+      "targetSegments": [
+        "Utility-scale storage",
+        "System integrators",
+        "International developers"
+      ],
       "roadmap": "628Ah shipments >10 GWh guided 2026 with >30 GWh of 2027 orders in hand; >1,000Ah cell class flagged in AI-era positioning."
     },
     {
@@ -26,7 +32,11 @@
       "description": "Mr.Giant: 5 MWh DC in a standard 20-ft container on 628Ah cells (4-unit parallel, <65 dB, multi-level fire protection; Australian-standards version launched Nov 2025); deployed 80-up in the 400 MWh Lingshou station — the world's first 628Ah grid-connected project (Jan 2026). Next-gen 6.9 MWh system (CTP integration, modular split liquid cooling, thermal-electric separation); 836 kWh modular cabinet; 261 kWh C&I outdoor cabinet (>8,000 cycles, >94% efficiency); 1P high-rate ESS (110 MWh Turkey shipment).",
       "positioning": "System-level products that pull cell demand; KLIA airport 10 MW/36 MWh (with Cenergi SEA, operational 2027) is the flagship international reference.",
       "soldThrough": "Direct and via regional partners; EVE Energy Storage subsidiary (CEO Steven Chen) runs the vertical.",
-      "targetSegments": ["Grid-scale projects", "C&I", "Airports/infrastructure"],
+      "targetSegments": [
+        "Grid-scale projects",
+        "C&I",
+        "Airports/infrastructure"
+      ],
       "roadmap": "Power Electronics Lab (Feb 2026) anchors a push into grid-forming storage; Malaysia ESS plant operational 2026, Hungary 2027."
     },
     {
@@ -34,7 +44,11 @@
       "description": "Full-matrix backup power for AI data centers on 800V HVDC architecture, three layers: rack-level BBU smoothing GPU power fluctuation during training; distribution-level 'Panun Series' 6C/10C high-rate backup cabinets (-30°C to 80°C); grid-level Mr.Big-family long-duration storage. Laminated pouch cells tuned for float-charge life; millisecond seamless takeover; liquid-cooled BBU in development (extreme-load tested).",
       "positioning": "Directly targets the AI load-volatility problem (the same physics behind xAI's Megapack buffering and ABB's synchronous condensers) at the cell/cabinet level — competing with LG, Samsung SDI, and Panasonic BBU lines in the NVIDIA 800 VDC ecosystem.",
       "soldThrough": "OEM/ODM channels into server and power-shelf makers; direct to hyperscale/neocloud operators.",
-      "targetSegments": ["AI data centers", "Server OEMs", "800V HVDC rack deployments"],
+      "targetSegments": [
+        "AI data centers",
+        "Server OEMs",
+        "800V HVDC rack deployments"
+      ],
       "roadmap": "Cell performance, high-density power electronics, liquid cooling, and intelligent active control named as the four development axes."
     },
     {
@@ -42,7 +56,12 @@
       "description": "EV power batteries (prismatic LFP/NCM, pouch, 46-series large cylindrical for BMW Neue Klasse iX3; 50.15 GWh shipped FY2025, +66%), #2 globally in commercial-vehicle batteries, #1 primary lithium exporter for 9 years, consumer cells; Malaysia Kulim cylindrical plant (680M cells/year) producing since February 2025.",
       "positioning": "EV is a distant #8 globally (2.7% share, SNE Jan-Nov 2025) — the niches (commercial vehicles, cylindrical, primary) are the profitable base; commercial-vehicle battery growth guided >100% YoY.",
       "soldThrough": "OEM design-ins (BMW, Bosch/Chervon power tools via cylindrical) and the Amplify JV (10% stake) for US commercial-vehicle LFP.",
-      "targetSegments": ["Auto OEMs", "Commercial vehicles", "Power tools", "Consumer electronics"],
+      "targetSegments": [
+        "Auto OEMs",
+        "Commercial vehicles",
+        "Power tools",
+        "Consumer electronics"
+      ],
       "roadmap": "New 60 GWh power battery project announced with FY2025 results; LG/Tulip ITC action threatens the US cylindrical channel."
     }
   ],
@@ -122,27 +141,71 @@
     {
       "product": "Mr.Big 628Ah cell (MB56)",
       "specs": [
-        "LFP prismatic, stacked (laminated) construction; 628Ah, 3.2V nominal, ~2.009 kWh per cell",
-        "Cycle life up to ~12,000; 96% energy efficiency; third-generation high-speed stacking",
-        "Channel-datasheet figures (verify): 352.3×71.7×205 mm, ≤0.10 mΩ ACR, charge 0-60°C / discharge -30-60°C",
-        "Production: Jingmen 60 GWh plant — single line >15 GWh, 1.5 cells/second, PPB defect level"
+        {
+          "band": "Cell",
+          "label": "Chemistry & format",
+          "value": "LFP prismatic, stacked (laminated) construction; 628Ah, 3.2V nominal, ~2.009 kWh per cell"
+        },
+        {
+          "band": "Performance",
+          "label": "Life & efficiency",
+          "value": "Cycle life up to ~12,000; 96% energy efficiency; third-generation high-speed stacking"
+        },
+        {
+          "band": "Datasheet (verify)",
+          "label": "Dimensions & limits",
+          "value": "352.3×71.7×205 mm, ≤0.10 mΩ ACR, charge 0-60°C / discharge -30-60°C"
+        },
+        {
+          "band": "Manufacturing",
+          "label": "Jingmen 60 GWh plant",
+          "value": "single line >15 GWh, 1.5 cells/second, PPB defect level"
+        }
       ]
     },
     {
       "product": "Mr.Giant 5 MWh & successor systems",
       "specs": [
-        "5 MWh DC per standard 20-ft container on 628Ah cells; 4-unit parallel; <65 dB; multi-level fire protection",
-        "6.9 MWh next-gen system: CTP integration, modular split liquid cooling, thermal-electric separation",
-        "Claimed vs 314Ah-class systems: -50% components, -50% installation workload, -30% lifecycle maintenance cost",
-        "261 kWh C&I cabinet: >8,000 cycles, >94% system efficiency, 10-unit parallel, plug-and-play"
+        {
+          "band": "Utility systems",
+          "label": "5 MWh container",
+          "value": "5 MWh DC per standard 20-ft container on 628Ah cells; 4-unit parallel; <65 dB; multi-level fire protection"
+        },
+        {
+          "band": "Utility systems",
+          "label": "6.9 MWh next-gen",
+          "value": "CTP integration, modular split liquid cooling, thermal-electric separation"
+        },
+        {
+          "band": "Comparison",
+          "label": "vs 314Ah-class systems",
+          "value": "-50% components, -50% installation workload, -30% lifecycle maintenance cost"
+        },
+        {
+          "band": "C&I",
+          "label": "261 kWh cabinet",
+          "value": ">8,000 cycles, >94% system efficiency, 10-unit parallel, plug-and-play"
+        }
       ]
     },
     {
       "product": "AI data-center BBU stack",
       "specs": [
-        "Rack-level BBU: GPU transient smoothing during model training; millisecond seamless takeover; laminated pouch cells optimized for float-charge life",
-        "Panun Series distribution cabinets: 6C/10C discharge, -30°C to 80°C operating range",
-        "800V HVDC architecture alignment; liquid-cooled BBU in development (extreme-load tested)"
+        {
+          "band": "BBU",
+          "label": "Rack-level",
+          "value": "GPU transient smoothing during model training; millisecond seamless takeover; laminated pouch cells optimized for float-charge life"
+        },
+        {
+          "band": "Distribution",
+          "label": "Panun Series cabinets",
+          "value": "6C/10C discharge, -30°C to 80°C operating range"
+        },
+        {
+          "band": "Roadmap",
+          "label": "800V HVDC",
+          "value": "architecture alignment; liquid-cooled BBU in development (extreme-load tested)"
+        }
       ]
     }
   ],
@@ -195,49 +258,159 @@
       {
         "period": "FY2024",
         "metrics": [
-          { "name": "Revenue", "actual": "¥48.615B (-0.35%)", "expected": "n/a", "verdict": "miss", "result": "First flat/declining top line in years — the LFP price-war trough" },
-          { "name": "Net profit (attributable)", "actual": "~¥4.08B (+0.63%)", "expected": "n/a", "verdict": "inline", "result": "ESS shipments ~50.45 GWh (+~92%) — volume without profit" }
+          {
+            "name": "Revenue",
+            "actual": "¥48.615B (-0.35%)",
+            "expected": "n/a",
+            "verdict": "miss",
+            "result": "First flat/declining top line in years — the LFP price-war trough"
+          },
+          {
+            "name": "Net profit (attributable)",
+            "actual": "~¥4.08B (+0.63%)",
+            "expected": "n/a",
+            "verdict": "inline",
+            "result": "ESS shipments ~50.45 GWh (+~92%) — volume without profit"
+          }
         ],
         "commentary": "The glut year: ESS shipments nearly doubled while revenue and profit went nowhere. Capacity utilization fell to 69.2% (four-year low) even as planned capacity headed toward ~210 GWh."
       },
       {
         "period": "FY2025 (reported 2026-03-30)",
         "metrics": [
-          { "name": "Revenue", "actual": "¥61.47B (+26.44%)", "expected": "n/a", "verdict": "beat", "result": "ESS shipments 71.05 GWh (+40.84%); power 50.15 GWh (+65.56%)" },
-          { "name": "Net profit (attributable)", "actual": "¥4.134B (+1.44%)", "expected": "n/a", "verdict": "miss", "result": "Profit badly lagged revenue; H1 2025 profit fell -24.9%; ESS gross margin ~12% at the trough. Ex-stock-comp: ¥5.0B (+24.76%)" },
-          { "name": "Operating cash flow", "actual": "¥7.492B (+68.98%)", "expected": "n/a", "verdict": "beat", "result": "Cash generation recovered ahead of profit" }
+          {
+            "name": "Revenue",
+            "actual": "¥61.47B (+26.44%)",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "ESS shipments 71.05 GWh (+40.84%); power 50.15 GWh (+65.56%)"
+          },
+          {
+            "name": "Net profit (attributable)",
+            "actual": "¥4.134B (+1.44%)",
+            "expected": "n/a",
+            "verdict": "miss",
+            "result": "Profit badly lagged revenue; H1 2025 profit fell -24.9%; ESS gross margin ~12% at the trough. Ex-stock-comp: ¥5.0B (+24.76%)"
+          },
+          {
+            "name": "Operating cash flow",
+            "actual": "¥7.492B (+68.98%)",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "Cash generation recovered ahead of profit"
+          }
         ],
         "commentary": "A back-loaded recovery year: H1 profit collapse, strong H2 as InfoLink's documented glut-to-tightness flip (Q2→Q3 2025) restored pricing power. A new 60 GWh power battery project was announced with the results."
       },
       {
         "period": "Q1 2026 + H1 2026 guidance",
         "metrics": [
-          { "name": "Q1 revenue", "actual": "¥20.68B (+61.61%)", "expected": "n/a", "verdict": "beat", "result": "Record Q1; ESS shipments 20.38 GWh (+60.82%)" },
-          { "name": "Q1 net profit", "actual": "¥1.45B (+31.35%)", "expected": "Within own 25-35% pre-announced range", "verdict": "inline", "result": "Record Q1 profit" },
-          { "name": "H1 2026 net profit (guided)", "actual": "¥3.13-3.37B (+95-110%)", "expected": "n/a", "verdict": "beat", "result": "Ex-non-recurring +110-125%; H1 report due 2026-08-20" }
+          {
+            "name": "Q1 revenue",
+            "actual": "¥20.68B (+61.61%)",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "Record Q1; ESS shipments 20.38 GWh (+60.82%)"
+          },
+          {
+            "name": "Q1 net profit",
+            "actual": "¥1.45B (+31.35%)",
+            "expected": "Within own 25-35% pre-announced range",
+            "verdict": "inline",
+            "result": "Record Q1 profit"
+          },
+          {
+            "name": "H1 2026 net profit (guided)",
+            "actual": "¥3.13-3.37B (+95-110%)",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "Ex-non-recurring +110-125%; H1 report due 2026-08-20"
+          }
         ],
         "commentary": "The cycle turn in full: H1 2026 profit alone approaches FY2024's full year. Sell-side consensus (Aug 2026): Buy (16 analysts), target ¥82.81 vs ~¥55 price; PE 26.1, forward 15.7."
       }
     ]
   },
   "sources": [
-    { "label": "ESS News — LG/Tulip patent suit and ITC Section 337 complaint", "url": "https://www.ess-news.com/2026/07/27/lg-takes-eve-energy-patent-fight-to-us-court-trade-commission/", "date": "2026-07-27" },
-    { "label": "EVE Energy — OCP China 2026 AI data-center BBU portfolio", "url": "https://www.evebattery.com/news-1101", "date": "2026-07-24" },
-    { "label": "EVE Energy — July 2026 strategy update (>200 GWh cumulative, 2027 orders)", "url": "https://www.evebattery.com/news-1099", "date": "2026-07" },
-    { "label": "EnergyTrend — H1 2026 profit alert (+95-110%)", "url": "https://www.energytrend.com/news/20260616-51606.html", "date": "2026-06-16" },
-    { "label": "Mysteel — FY2025 results flash (+26.4% revenue, 60 GWh new project)", "url": "https://www.mysteel.net/news/5117927-flash-eve-energy-announces-60-gwh-power-battery-project-reports-2025-annual-results-with-264-revenue-growth", "date": "2026-03-30" },
-    { "label": "EVE Energy — world's first 628Ah grid-scale station + Beijing Guowang 10 GWh order", "url": "https://www.evebattery.com/en/news-1894", "date": "2026-02-10" },
-    { "label": "InfoLink via ESS News — FY2025 ESS cell ranking (EVE #3; market +95% to 612 GWh)", "url": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/", "date": "2026-02-09" },
-    { "label": "EVE Energy — KLIA 10 MW/36 MWh airport BESS", "url": "https://www.evebattery.com/en/news-1893", "date": "2026-02" },
-    { "label": "CnEVPost — SNE Jan-Nov 2025 EV battery share (EVE #8, 2.7%)", "url": "https://cnevpost.com/2026/01/07/global-ev-battery-market-share-jan-nov-2025/", "date": "2026-01-07" },
-    { "label": "Gasgoo — HK prospectus lapse and re-filing", "url": "https://autonews.gasgoo.com/articles/news/eve-energy-responds-to-lapsed-hong-kong-prospectus-no-impact-on-ipo-timeline-2007794871366852609", "date": "2026-01-02" },
-    { "label": "EVE Energy — Mr.Giant Australia launch", "url": "https://www.evebattery.com/en/news-1878", "date": "2025-11" },
-    { "label": "ESS News — Powin Chapter 11 filing", "url": "https://www.ess-news.com/2025/06/11/us-battery-supplier-powin-files-for-bankruptcy/", "date": "2025-06-11" },
-    { "label": "Tiger Brokers — capacity-utilization and leverage critique", "url": "https://www.itiger.com/news/1183012593", "date": "2025-06" },
-    { "label": "EVE Energy — Jingmen 60 GWh super storage plant / Mr.Big production start", "url": "https://www.evebattery.com/en/news-1855", "date": "2024-12" },
-    { "label": "EVE Energy — about page (three pillars, positioning claims)", "url": "https://www.evebattery.com/en/about" },
-    { "label": "StockAnalysis — EVE 300014 consensus, valuation, TTM figures", "url": "https://stockanalysis.com/quote/she/300014/" }
+    {
+      "label": "ESS News — LG/Tulip patent suit and ITC Section 337 complaint",
+      "url": "https://www.ess-news.com/2026/07/27/lg-takes-eve-energy-patent-fight-to-us-court-trade-commission/",
+      "date": "2026-07-27"
+    },
+    {
+      "label": "EVE Energy — OCP China 2026 AI data-center BBU portfolio",
+      "url": "https://www.evebattery.com/news-1101",
+      "date": "2026-07-24"
+    },
+    {
+      "label": "EVE Energy — July 2026 strategy update (>200 GWh cumulative, 2027 orders)",
+      "url": "https://www.evebattery.com/news-1099",
+      "date": "2026-07"
+    },
+    {
+      "label": "EnergyTrend — H1 2026 profit alert (+95-110%)",
+      "url": "https://www.energytrend.com/news/20260616-51606.html",
+      "date": "2026-06-16"
+    },
+    {
+      "label": "Mysteel — FY2025 results flash (+26.4% revenue, 60 GWh new project)",
+      "url": "https://www.mysteel.net/news/5117927-flash-eve-energy-announces-60-gwh-power-battery-project-reports-2025-annual-results-with-264-revenue-growth",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "EVE Energy — world's first 628Ah grid-scale station + Beijing Guowang 10 GWh order",
+      "url": "https://www.evebattery.com/en/news-1894",
+      "date": "2026-02-10"
+    },
+    {
+      "label": "InfoLink via ESS News — FY2025 ESS cell ranking (EVE #3; market +95% to 612 GWh)",
+      "url": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "EVE Energy — KLIA 10 MW/36 MWh airport BESS",
+      "url": "https://www.evebattery.com/en/news-1893",
+      "date": "2026-02"
+    },
+    {
+      "label": "CnEVPost — SNE Jan-Nov 2025 EV battery share (EVE #8, 2.7%)",
+      "url": "https://cnevpost.com/2026/01/07/global-ev-battery-market-share-jan-nov-2025/",
+      "date": "2026-01-07"
+    },
+    {
+      "label": "Gasgoo — HK prospectus lapse and re-filing",
+      "url": "https://autonews.gasgoo.com/articles/news/eve-energy-responds-to-lapsed-hong-kong-prospectus-no-impact-on-ipo-timeline-2007794871366852609",
+      "date": "2026-01-02"
+    },
+    {
+      "label": "EVE Energy — Mr.Giant Australia launch",
+      "url": "https://www.evebattery.com/en/news-1878",
+      "date": "2025-11"
+    },
+    {
+      "label": "ESS News — Powin Chapter 11 filing",
+      "url": "https://www.ess-news.com/2025/06/11/us-battery-supplier-powin-files-for-bankruptcy/",
+      "date": "2025-06-11"
+    },
+    {
+      "label": "Tiger Brokers — capacity-utilization and leverage critique",
+      "url": "https://www.itiger.com/news/1183012593",
+      "date": "2025-06"
+    },
+    {
+      "label": "EVE Energy — Jingmen 60 GWh super storage plant / Mr.Big production start",
+      "url": "https://www.evebattery.com/en/news-1855",
+      "date": "2024-12"
+    },
+    {
+      "label": "EVE Energy — about page (three pillars, positioning claims)",
+      "url": "https://www.evebattery.com/en/about"
+    },
+    {
+      "label": "StockAnalysis — EVE 300014 consensus, valuation, TTM figures",
+      "url": "https://stockanalysis.com/quote/she/300014/"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

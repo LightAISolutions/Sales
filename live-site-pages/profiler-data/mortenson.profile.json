@@ -215,32 +215,88 @@
     {
       "product": "Data-center delivery fleet",
       "specs": [
-        "11 GW of data centers completed or under construction (company claim)",
-        "1,000+ dedicated data-center staff; 20+ years in mission-critical construction (company)",
-        "Meta Richland Parish scope: site prep/grading, underground utilities, MV distribution & substations, water/wastewater treatment, fiber; 7,500+ craft workers at peak (company)",
-        "Lebanon IN campus: ~4M sq ft, 1 GW, ~4,000 peak construction jobs, first phase early 2028",
-        "VDC toolset: BIM coordination, live digital underground-utility mapping, drone capture, robotic layout, VR design reviews"
+        {
+          "band": "Install base",
+          "label": "Capacity",
+          "value": "11 GW of data centers completed or under construction (company claim)"
+        },
+        {
+          "band": "Bench",
+          "label": "Staff",
+          "value": "1,000+ dedicated data-center staff; 20+ years in mission-critical construction (company)"
+        },
+        {
+          "band": "Reference projects",
+          "label": "Meta Richland Parish",
+          "value": "site prep/grading, underground utilities, MV distribution & substations, water/wastewater treatment, fiber; 7,500+ craft workers at peak (company)"
+        },
+        {
+          "band": "Reference projects",
+          "label": "Lebanon IN campus",
+          "value": "~4M sq ft, 1 GW, ~4,000 peak construction jobs, first phase early 2028"
+        },
+        {
+          "band": "Technology",
+          "label": "VDC toolset",
+          "value": "BIM coordination, live digital underground-utility mapping, drone capture, robotic layout, VR design reviews"
+        }
       ],
       "notes": "Fleet spans hyperscale (Meta), AI-campus power developers (Lancium), colocation (Stream), and confidential Midwest campuses; geographic center of gravity in the Midwest/Mountain West"
     },
     {
       "product": "Power & renewables EPC fleet",
       "specs": [
-        "Wind: 47.8+ GW installed, 290+ projects, 30+ years; ENR wind rank #2 (company-cited); 24% of all US wind capacity installed as of 2010 (third-party)",
-        "Solar: 17+ GW, 120+ projects, 19 states, 100% self-perform EPC; ~2 GW installed in 2025 alone (Solar Power World #7, 2026)",
-        "Storage: 45,000+ MWh across 60 projects in 11 years; ENR energy-storage rank #1 (company-cited); vendor experience: Tesla, Samsung, BYD, LG, Fluence, Powin, Wärtsilä",
-        "Substation EPC to 345 kV / 1 GW class: Abilene Phase 2 — 12.5 acres, five main transformers, first energized nine months into construction, all five by month ~12",
-        "Record projects: Edwards & Sanborn 875 MWdc + 3,287 MWh (2024); Nova Power Bank 680 MW / 2,720 MWh (2025); Darden ~1,500 MWdc + 4,600 MWh (2028 target)"
+        {
+          "band": "Generation",
+          "label": "Wind",
+          "value": "47.8+ GW installed, 290+ projects, 30+ years; ENR wind rank #2 (company-cited); 24% of all US wind capacity installed as of 2010 (third-party)"
+        },
+        {
+          "band": "Generation",
+          "label": "Solar",
+          "value": "17+ GW, 120+ projects, 19 states, 100% self-perform EPC; ~2 GW installed in 2025 alone (Solar Power World #7, 2026)"
+        },
+        {
+          "band": "Storage",
+          "label": "Fleet",
+          "value": "45,000+ MWh across 60 projects in 11 years; ENR energy-storage rank #1 (company-cited); vendor experience: Tesla, Samsung, BYD, LG, Fluence, Powin, Wärtsilä"
+        },
+        {
+          "band": "Transmission",
+          "label": "Substation EPC",
+          "value": "to 345 kV / 1 GW class: Abilene Phase 2 — 12.5 acres, five main transformers, first energized nine months into construction, all five by month ~12"
+        },
+        {
+          "band": "Records",
+          "label": "Largest projects",
+          "value": "Edwards & Sanborn 875 MWdc + 3,287 MWh (2024); Nova Power Bank 680 MW / 2,720 MWh (2025); Darden ~1,500 MWdc + 4,600 MWh (2028 target)"
+        }
       ],
       "notes": "The same self-perform crews and OEM relationships serve both standalone renewables and the power layer of AI campuses"
     },
     {
       "product": "BLUvera industrialized construction",
       "specs": [
-        "Modular precast duct-bank sections: 20 ft, 17,000 lb per module",
-        "56% reduction in onsite work hours on precast scopes (2024 internal tracking via ENR)",
-        "87% reduction in safety incidents on those scopes (same tracking)",
-        "Mobile factories deployed adjacent to data-center sites (e.g., DeKalb IL); steel-frame wall panels and hot-aisle containment product lines"
+        {
+          "band": "Products",
+          "label": "Modular precast duct-bank",
+          "value": "20 ft, 17,000 lb per module"
+        },
+        {
+          "band": "Outcomes",
+          "label": "Labour",
+          "value": "56% reduction in onsite work hours on precast scopes (2024 internal tracking via ENR)"
+        },
+        {
+          "band": "Outcomes",
+          "label": "Safety",
+          "value": "87% reduction in safety incidents on those scopes (same tracking)"
+        },
+        {
+          "band": "Delivery",
+          "label": "Mobile factories",
+          "value": "deployed adjacent to data-center sites (e.g., DeKalb IL); steel-frame wall panels and hot-aisle containment product lines"
+        }
       ],
       "notes": "DfMA lineage traces to Mortenson's pioneering VDC work on Walt Disney Concert Hall (2003)"
     }
@@ -504,6 +560,6 @@
       "url": "https://www.mortenson.com/services/mortenson-properties"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

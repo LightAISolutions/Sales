@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 40/50`
+`Sections: 41/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.41w] — 2026-08-22 10:57:17 PM EST — v02.90r
+
+### Changed
+- Technical Annex rebuilt in a clearer format across every company dossier. Long run-on spec lines are now separated into individual attributes, each with its own name, and grouped under category headings such as Power, Electrical and Design — so a specific figure can be found by heading instead of by reading the whole block
+- Every product table in a dossier now shares the same column alignment, and the same format carries through to exported documents
+- Spec wording is unchanged — the figures read exactly as they did before; only the grouping and labelling are new
 
 ## [v01.40w] — 2026-08-22 10:24:05 PM EST — v02.89r
 

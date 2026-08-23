@@ -3,7 +3,9 @@
   "slug": "equinix",
   "name": "Equinix",
   "legalName": "Equinix, Inc.",
-  "categories": ["developer"],
+  "categories": [
+    "developer"
+  ],
   "hq": "Redwood City, CA, USA",
   "ticker": "NASDAQ: EQIX",
   "founded": "1998 (REIT since 2015)",
@@ -18,7 +20,10 @@
       "description": "The core franchise: 281 IBX data centers, 513,000 interconnections (surpassed 500k in 2025), the largest carrier-neutral peering ecosystem, and Equinix Fabric software-defined interconnection (Fabric Intelligence launched April 2026; Fabric Geo Zones data-sovereignty controls in May 2026). MRR per cabinet $2,524 (+7%) with quarterly churn guided 2-2.5%.",
       "positioning": "Retail-segment leader (~17% per Synergy; leader in 16 of the top 25 metros); #2 North America behind Digital Realty, #3 APAC behind NTT. Interconnection density is the moat pure capacity players lack.",
       "soldThrough": "Direct enterprise/carrier sales; recurring monthly revenue model (REIT).",
-      "targetSegments": ["Enterprises, networks, clouds", "AI inference at the edge of ecosystems"],
+      "targetSegments": [
+        "Enterprises, networks, clouds",
+        "AI inference at the edge of ecosystems"
+      ],
       "roadmap": "Renewal price increases in a landlord-favorable market (CBRE: NA colo rates +6.6-12.5% YoY) carry revenue momentum."
     },
     {
@@ -26,7 +31,10 @@
       "description": "The AI-capacity vehicle: a >$15B US JV (CPP Investments 37.5% / GIC 37.5% / Equinix 25%) building >1.5 GW across >100 MW campuses — nearly tripling the program's capital; >725 MW at full buildout pre-2024 plus the new US wave; Hampton, GA contributed January 2026. atNorth (February 2026, $4B EV with CPP): ~800 MW installed Nordic high-density platform with 1 GW secured power, liquid-cooling-enabled with heat reuse.",
       "positioning": "Keeps hyperscale AI expansion largely off Equinix's balance sheet while competing for the wholesale capacity Digital Realty leads — the answer to 'colo missed the AI training wave.'",
       "soldThrough": "JV-financed build-to-lease to hyperscalers.",
-      "targetSegments": ["Hyperscaler and frontier-lab capacity", "Nordic sustainable compute (atNorth)"],
+      "targetSegments": [
+        "Hyperscaler and frontier-lab capacity",
+        "Nordic sustainable compute (atNorth)"
+      ],
       "roadmap": "52 major expansion projects across 33 markets underway; ~1 GW of powered land acquired in 2025; capex guided $5.0-7.0B/yr through 2029."
     },
     {
@@ -34,7 +42,10 @@
       "description": "Direct-to-chip liquid cooling supported in 100+ IBX facilities across 45+ metros; 'more than 270 AI-ready data centers' claimed; Distributed AI Hub framework (March 2026); Cisco/NVIDIA Secure AI Factory blueprints deploying across the footprint (June 2026); managed NVIDIA DGX service; AI Solutions Lab in 20 locations.",
       "positioning": "The colo tier's broadest liquid-cooling footprint — but density figures are unpublished; the claim is breadth, not per-rack extremes.",
       "soldThrough": "Colocation contracts plus managed AI services.",
-      "targetSegments": ["Enterprise AI inference and private AI", "Distributed/sovereign AI deployments"],
+      "targetSegments": [
+        "Enterprise AI inference and private AI",
+        "Distributed/sovereign AI deployments"
+      ],
       "roadmap": "~60% of the largest Q4 2025 deals were AI-driven; record $1.6B annualized gross bookings (+27%) in 2025."
     },
     {
@@ -42,7 +53,10 @@
       "description": "The most diversified colo power stack: Bloom solid-oxide fuel cells >100 MW across 19+ US sites (from a 1 MW 2015 pilot; ~75 MW operating); advanced nuclear — Oklo 500 MW (first colo SMR deal), Radiant 20 Kaleidos microreactor preorder, ULC-Energy/Rolls-Royce 250 MWe LOI, Stellaria 500 MWe pre-order; a Dublin hydrogen-generator trial (June 2026); 96% renewable coverage with a 2030 100% goal; the Central Georgia EMC 20-year take-or-pay with Equinix funding all grid upgrades and overruns.",
       "positioning": "The reference customer for behind-the-fence firm power in the colo tier — every vendor in this file's generation segment (Bloom, SMR developers, fuel-cell rivals) sells against the Equinix template.",
       "soldThrough": "PPAs, on-site generation agreements, utility special contracts.",
-      "targetSegments": ["Power-constrained metros", "Sustainability-gated markets (Singapore roadmap)"],
+      "targetSegments": [
+        "Power-constrained metros",
+        "Sustainability-gated markets (Singapore roadmap)"
+      ],
       "roadmap": "Nuclear commitments deliver 2030s; fuel cells and take-or-pay structures carry the near term."
     }
   ],
@@ -114,20 +128,64 @@
   "technicalSpecs": [
     {
       "product": "Footprint",
-      "specs": ["281 data centers, 70+ metros, 6 continents; 513,000 interconnections", "100+ facilities with direct-to-chip liquid cooling across 45+ metros", "xScale: >100 MW US campuses; data halls >250 cabinets; multi-MW power increments"]
+      "specs": [
+        {
+          "band": "Estate",
+          "label": "Sites & interconnection",
+          "value": "281 data centers, 70+ metros, 6 continents; 513,000 interconnections"
+        },
+        {
+          "band": "Cooling",
+          "label": "Liquid cooling",
+          "value": "100+ facilities with direct-to-chip liquid cooling across 45+ metros"
+        },
+        {
+          "band": "Hyperscale",
+          "label": "xScale",
+          "value": ">100 MW US campuses; data halls >250 cabinets; multi-MW power increments"
+        }
+      ]
     },
     {
       "product": "Firm-power portfolio",
-      "specs": ["Bloom SOFC fleet: >100 MW across 19+ US sites (~75 MW operating)", "Nuclear: Oklo 500 MW; Radiant 20 Kaleidos microreactors; Rolls-Royce SMR 250 MWe LOI; Stellaria 500 MWe pre-order", "96% renewable coverage; 100% clean/renewable goal by 2030"]
+      "specs": [
+        {
+          "band": "Fuel cells",
+          "label": "Bloom SOFC fleet",
+          "value": ">100 MW across 19+ US sites (~75 MW operating)"
+        },
+        {
+          "band": "Nuclear",
+          "label": "Agreements",
+          "value": "Oklo 500 MW; Radiant 20 Kaleidos microreactors; Rolls-Royce SMR 250 MWe LOI; Stellaria 500 MWe pre-order"
+        },
+        {
+          "band": "Renewables",
+          "label": "Coverage",
+          "value": "96% renewable coverage; 100% clean/renewable goal by 2030"
+        }
+      ]
     },
     {
       "product": "atNorth platform (acquired with CPP)",
-      "specs": ["8 Nordic data centers; ~800 MW installed + development pipeline", "1 GW secured power; liquid-cooling-enabled; heat reuse"]
+      "specs": [
+        {
+          "band": "Estate",
+          "label": "Sites",
+          "value": "8 Nordic data centers; ~800 MW installed + development pipeline"
+        },
+        {
+          "band": "Power & cooling",
+          "label": "Capability",
+          "value": "1 GW secured power; liquid-cooling-enabled; heat reuse"
+        }
+      ]
     }
   ],
   "decisionMakers": [
     {
-      "name": "Adaire Fox-Martin", "photo": "images/execs/equinix-foxmartin.png",
+      "name": "Adaire Fox-Martin",
+      "photo": "images/execs/equinix-foxmartin.png",
       "title": "CEO & President",
       "background": [
         "CEO since 2024; ex-President Go-to-Market at Google Cloud, senior SAP/Oracle executive",
@@ -135,7 +193,8 @@
       ]
     },
     {
-      "name": "Olivier Leonetti", "photo": "images/execs/equinix-leonetti.png",
+      "name": "Olivier Leonetti",
+      "photo": "images/execs/equinix-leonetti.png",
       "title": "Chief Financial Officer",
       "background": [
         "CFO since March 2026; previously CFO of Eaton, Johnson Controls, Zebra, Western Digital — a cross-file connection to the electrical incumbents",
@@ -143,7 +202,8 @@
       ]
     },
     {
-      "name": "Raouf Abdel", "photo": "images/execs/equinix-abdel.png",
+      "name": "Raouf Abdel",
+      "photo": "images/execs/equinix-abdel.png",
       "title": "EVP Global Operations",
       "background": [
         "Runs design, construction, procurement, energy, and IBX operations",
@@ -158,43 +218,127 @@
       {
         "period": "FY2024",
         "metrics": [
-          {"name": "Revenue", "actual": "$8.748B (+7%)", "expected": "Q4 missed marginally", "verdict": "miss", "result": "Q4 AFFO/share $7.92 vs $8.11 consensus"},
-          {"name": "AFFO/share", "actual": "$35.02 (+9.1%)", "expected": "missed Zacks consensus; initial 2025 guide below consensus", "verdict": "miss", "result": "Dividend raised 10% (10th straight year); capex $3.07B"}
+          {
+            "name": "Revenue",
+            "actual": "$8.748B (+7%)",
+            "expected": "Q4 missed marginally",
+            "verdict": "miss",
+            "result": "Q4 AFFO/share $7.92 vs $8.11 consensus"
+          },
+          {
+            "name": "AFFO/share",
+            "actual": "$35.02 (+9.1%)",
+            "expected": "missed Zacks consensus; initial 2025 guide below consensus",
+            "verdict": "miss",
+            "result": "Dividend raised 10% (10th straight year); capex $3.07B"
+          }
         ],
         "commentary": "The first of two consecutive miss years — the retail-colo growth model was decelerating just as AI demand exploded, setting up the strategic pivot."
       },
       {
         "period": "FY2025",
         "metrics": [
-          {"name": "Revenue", "actual": "$9.217B (+5.4%)", "expected": "$9.26B (consensus)", "verdict": "miss", "result": "Q4 revenue and AFFO both light; full-year AFFO/share $38.33 vs $38.48 consensus"},
-          {"name": "Bookings", "actual": "record $1.6B annualized gross (+27%)", "expected": "—", "verdict": "beat", "result": "~60% of largest Q4 deals AI-driven; 500,000+ interconnections; initial 2026 AFFO guide (+9-11.5%) landed above consensus"}
+          {
+            "name": "Revenue",
+            "actual": "$9.217B (+5.4%)",
+            "expected": "$9.26B (consensus)",
+            "verdict": "miss",
+            "result": "Q4 revenue and AFFO both light; full-year AFFO/share $38.33 vs $38.48 consensus"
+          },
+          {
+            "name": "Bookings",
+            "actual": "record $1.6B annualized gross (+27%)",
+            "expected": "—",
+            "verdict": "beat",
+            "result": "~60% of largest Q4 deals AI-driven; 500,000+ interconnections; initial 2026 AFFO guide (+9-11.5%) landed above consensus"
+          }
         ],
         "commentary": "Miss on the print, inflection under the surface: record bookings and an above-consensus 2026 guide marked the turn. Capex stepped to $4.3B."
       },
       {
         "period": "Q2 2026 (latest interim)",
         "metrics": [
-          {"name": "Revenue", "actual": "$2.625B (+16.4%)", "expected": "~$2.59B (consensus)", "verdict": "beat", "result": "MRR +11%; record 9,700 net interconnection adds"},
-          {"name": "AFFO/share", "actual": "$11.78 (+~19%)", "expected": "~$11.25 (consensus)", "verdict": "beat", "result": "FY2026 raised to $42.69-43.29/share; 2027-29 outlook lifted (revenue +10-13%/yr, capex $5-7B/yr, AFFO/share +9-12%/yr)"}
+          {
+            "name": "Revenue",
+            "actual": "$2.625B (+16.4%)",
+            "expected": "~$2.59B (consensus)",
+            "verdict": "beat",
+            "result": "MRR +11%; record 9,700 net interconnection adds"
+          },
+          {
+            "name": "AFFO/share",
+            "actual": "$11.78 (+~19%)",
+            "expected": "~$11.25 (consensus)",
+            "verdict": "beat",
+            "result": "FY2026 raised to $42.69-43.29/share; 2027-29 outlook lifted (revenue +10-13%/yr, capex $5-7B/yr, AFFO/share +9-12%/yr)"
+          }
         ],
         "commentary": "The largest guidance raise in company history, per management. The market now values Equinix as an AI-growth compounder (~1.8% yield, less than half the REIT average) — post-print targets: JPMorgan $1,300, TD Cowen $1,166."
       }
     ]
   },
   "sources": [
-    {"label": "Central Georgia EMC ratepayer agreement", "url": "https://newsroom.equinix.com/2026-08-06-Equinix-Partners-with-Central-Georgia-Electric-Membership-Corporation-to-Protect-Ratepayers", "date": "2026-08-06"},
-    {"label": "Equinix Q2 2026 results release", "url": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results,-Raises-2026-Guidance-and-Long-Term-Outlook", "date": "2026-07-29"},
-    {"label": "CBRE Global Data Center Trends 2026 (power constraints)", "url": "https://www.cbre.com/insights/reports/global-data-center-trends-2026", "date": "2026-06"},
-    {"label": "atNorth acquisition", "url": "https://investor.equinix.com/news-events/press-releases/detail/1099/cpp-investments-and-equinix-to-acquire-atnorth-for-us4", "date": "2026-02-27"},
-    {"label": "Equinix FY2025 results (8-K)", "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000030/february112026pressrelease-.htm", "date": "2026-02-11"},
-    {"label": "DCD — SEC investigation closed", "url": "https://www.datacenterdynamics.com/en/news/sec-drops-investigation-into-equinix-following-short-seller-accusations-of-accounting-manipulation/", "date": "2025-11-21"},
-    {"label": "Alternative-energy portfolio (Bloom + nuclear)", "url": "https://newsroom.equinix.com/2025-08-14-Equinix-Collaborates-with-Leading-Alternative-Energy-Providers-to-Power-AI-Ready-Data-Center-Growth", "date": "2025-08-14"},
-    {"label": "Motley Fool — analyst-day selloff", "url": "https://www.fool.com/investing/2025/06/26/why-shares-in-this-data-center-reit-slumped-today", "date": "2025-06-26"},
-    {"label": "US xScale >$15B JV announcement", "url": "https://newsroom.equinix.com/2024-10-01-Equinix-Agrees-to-Form-Greater-Than-15B-JV-to-Expand-Hyperscale-Data-Centers-in-the-U-S-and-Support-Growing-AI-and-Cloud-Innovation", "date": "2024-10-01"},
-    {"label": "Bloom fuel-cell fleet expansion (DCD)", "url": "https://www.datacenterdynamics.com/en/news/bloom-extends-fuel-cell-supply-agreement-with-equinix/", "date": "2024-06"},
-    {"label": "Hindenburg report (historical short thesis)", "url": "https://hindenburgresearch.com/equinix/", "date": "2024-03-20"},
-    {"label": "Synergy Research — colocation share", "url": "https://www.srgresearch.com/articles/equinix-digital-realty-and-ntt-control-30-of-the-growing-worldwide-colocation-market", "date": "2023-03"}
+    {
+      "label": "Central Georgia EMC ratepayer agreement",
+      "url": "https://newsroom.equinix.com/2026-08-06-Equinix-Partners-with-Central-Georgia-Electric-Membership-Corporation-to-Protect-Ratepayers",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Equinix Q2 2026 results release",
+      "url": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results,-Raises-2026-Guidance-and-Long-Term-Outlook",
+      "date": "2026-07-29"
+    },
+    {
+      "label": "CBRE Global Data Center Trends 2026 (power constraints)",
+      "url": "https://www.cbre.com/insights/reports/global-data-center-trends-2026",
+      "date": "2026-06"
+    },
+    {
+      "label": "atNorth acquisition",
+      "url": "https://investor.equinix.com/news-events/press-releases/detail/1099/cpp-investments-and-equinix-to-acquire-atnorth-for-us4",
+      "date": "2026-02-27"
+    },
+    {
+      "label": "Equinix FY2025 results (8-K)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1101239/000110123926000030/february112026pressrelease-.htm",
+      "date": "2026-02-11"
+    },
+    {
+      "label": "DCD — SEC investigation closed",
+      "url": "https://www.datacenterdynamics.com/en/news/sec-drops-investigation-into-equinix-following-short-seller-accusations-of-accounting-manipulation/",
+      "date": "2025-11-21"
+    },
+    {
+      "label": "Alternative-energy portfolio (Bloom + nuclear)",
+      "url": "https://newsroom.equinix.com/2025-08-14-Equinix-Collaborates-with-Leading-Alternative-Energy-Providers-to-Power-AI-Ready-Data-Center-Growth",
+      "date": "2025-08-14"
+    },
+    {
+      "label": "Motley Fool — analyst-day selloff",
+      "url": "https://www.fool.com/investing/2025/06/26/why-shares-in-this-data-center-reit-slumped-today",
+      "date": "2025-06-26"
+    },
+    {
+      "label": "US xScale >$15B JV announcement",
+      "url": "https://newsroom.equinix.com/2024-10-01-Equinix-Agrees-to-Form-Greater-Than-15B-JV-to-Expand-Hyperscale-Data-Centers-in-the-U-S-and-Support-Growing-AI-and-Cloud-Innovation",
+      "date": "2024-10-01"
+    },
+    {
+      "label": "Bloom fuel-cell fleet expansion (DCD)",
+      "url": "https://www.datacenterdynamics.com/en/news/bloom-extends-fuel-cell-supply-agreement-with-equinix/",
+      "date": "2024-06"
+    },
+    {
+      "label": "Hindenburg report (historical short thesis)",
+      "url": "https://hindenburgresearch.com/equinix/",
+      "date": "2024-03-20"
+    },
+    {
+      "label": "Synergy Research — colocation share",
+      "url": "https://www.srgresearch.com/articles/equinix-digital-realty-and-ntt-control-30-of-the-growing-worldwide-colocation-market",
+      "date": "2023-03"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

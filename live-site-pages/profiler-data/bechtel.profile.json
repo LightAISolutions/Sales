@@ -207,29 +207,73 @@
     {
       "product": "LNG megaproject fleet (concurrent)",
       "specs": [
-        "Rio Grande LNG (NextDecade, Brownsville TX): lump-sum turnkey EPC; Phase 1 = Trains 1-3 + 2 tanks + 1 berth (NTP 2023-07-12); Train 4 EPC Aug 2024; full build 5 trains / 27 mtpa on 984 acres; ~5,000 peak workers",
-        "Port Arthur LNG (Sempra, TX): Phase 1 = 2 trains ~13.5 mtpa; final NTP March 2023; ~5,000 peak workers; >4M cubic yards of earthworks, >10,000 piles",
-        "Louisiana LNG (Woodside, ex-Driftwood): revised lump-sum turnkey EPC Dec 2024; FID 2025-04-29; 3 foundation trains / 16.5 mtpa; first LNG target 2029; Train 1 >22% complete with ~900 workers (Sept 2025); cost reported $17.9B-$27B depending on scope definition"
+        {
+          "band": "Gulf Coast LNG",
+          "label": "Rio Grande LNG (NextDecade, Brownsville TX)",
+          "value": "lump-sum turnkey EPC; Phase 1 = Trains 1-3 + 2 tanks + 1 berth (NTP 2023-07-12); Train 4 EPC Aug 2024; full build 5 trains / 27 mtpa on 984 acres; ~5,000 peak workers"
+        },
+        {
+          "band": "Gulf Coast LNG",
+          "label": "Port Arthur LNG (Sempra, TX)",
+          "value": "Phase 1 = 2 trains ~13.5 mtpa; final NTP March 2023; ~5,000 peak workers; >4M cubic yards of earthworks, >10,000 piles"
+        },
+        {
+          "band": "Gulf Coast LNG",
+          "label": "Louisiana LNG (Woodside, ex-Driftwood)",
+          "value": "revised lump-sum turnkey EPC Dec 2024; FID 2025-04-29; 3 foundation trains / 16.5 mtpa; first LNG target 2029; Train 1 >22% complete with ~900 workers (Sept 2025); cost reported $17.9B-$27B depending on scope definition"
+        }
       ],
       "notes": "Bechtel built most existing US liquefaction capacity (Sabine Pass, Corpus Christi for Cheniere) — three concurrent megatrains extends a near-monopoly"
     },
     {
       "product": "Nuclear fleet",
       "specs": [
-        "Vogtle 3 & 4 (Georgia): 2x AP1000 completed — Unit 3 COD 2023, Unit 4 COD April 2024; each unit powers ~500,000 homes; site is the largest US clean-energy generator",
-        "Natrium Kemmerer Unit 1 (Wyoming): 345 MWe sodium fast reactor with molten-salt storage boostable to 500 MWe (TerraPower/GE Hitachi); construction start April 2026 — first utility-scale advanced reactor with an NRC construction permit",
-        "Poland Choczewo: 3x AP1000, ~3 GW on a 300-hectare site; Bechtel site takeover 2026-08-07; 400+ on site",
-        "Aggregate company claims: 70+ years nuclear, 76 GW delivered, largest US nuclear talent pool"
+        {
+          "band": "Operating plants",
+          "label": "Vogtle 3 & 4 (Georgia)",
+          "value": "2x AP1000 completed — Unit 3 COD 2023, Unit 4 COD April 2024; each unit powers ~500,000 homes; site is the largest US clean-energy generator"
+        },
+        {
+          "band": "Advanced reactors",
+          "label": "Natrium Kemmerer Unit 1 (Wyoming)",
+          "value": "345 MWe sodium fast reactor with molten-salt storage boostable to 500 MWe (TerraPower/GE Hitachi); construction start April 2026 — first utility-scale advanced reactor with an NRC construction permit"
+        },
+        {
+          "band": "International",
+          "label": "Poland Choczewo",
+          "value": "3x AP1000, ~3 GW on a 300-hectare site; Bechtel site takeover 2026-08-07; 400+ on site"
+        },
+        {
+          "band": "Track record",
+          "label": "Aggregate company claims",
+          "value": "70+ years nuclear, 76 GW delivered, largest US nuclear talent pool"
+        }
       ],
       "notes": "Hanford WTP (DOE cleanup): two 300-ton melters at 2,100°F; first vitrification October 2025; target ~5,300 gallons of tank waste/day against 53M gallons in scope"
     },
     {
       "product": "Defense & AI-factory delivery",
       "specs": [
-        "Sentinel (LGM-35A): launch-infrastructure design-build on Northrop's team — ~450 all-new silos across 8 states; EMD phase; operational target 2036, adaptable through 2075; program engages 10,000+ workers",
-        "NVIDIA Omniverse DSX: modularizing the 1 GW AI-factory reference architecture into deployable modules; offsite-manufacturing feasibility delivered for a confidential multi-country data-center customer",
-        "Micron Clay NY megafab: EPC partner; 4,500+ peak construction jobs",
-        "Company-claimed 2023 safety rates: LTIR 0.014, TRIR 0.163 — read against the April 2025 Port Arthur triple fatality"
+        {
+          "band": "Defense",
+          "label": "Sentinel (LGM-35A)",
+          "value": "launch-infrastructure design-build on Northrop's team — ~450 all-new silos across 8 states; EMD phase; operational target 2036, adaptable through 2075; program engages 10,000+ workers"
+        },
+        {
+          "band": "AI factories",
+          "label": "NVIDIA Omniverse DSX",
+          "value": "modularizing the 1 GW AI-factory reference architecture into deployable modules; offsite-manufacturing feasibility delivered for a confidential multi-country data-center customer"
+        },
+        {
+          "band": "Semiconductors",
+          "label": "Micron Clay NY megafab",
+          "value": "EPC partner; 4,500+ peak construction jobs"
+        },
+        {
+          "band": "Safety",
+          "label": "Reported rates",
+          "value": "Company-claimed 2023 safety rates: LTIR 0.014, TRIR 0.163 — read against the April 2025 Port Arthur triple fatality"
+        }
       ],
       "notes": "Footprint: operating in 33+ countries; 25,000+ projects across 160 countries historically"
     }
@@ -489,6 +533,6 @@
       "url": "https://www.bechtel.com/about/leadership/"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

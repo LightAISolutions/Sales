@@ -195,29 +195,73 @@
     {
       "product": "Gas-generation EPC fleet",
       "specs": [
-        "TIC (The Industrial Company): >82,000 MW of gas-fired capacity delivered over the past decade, including 35 combined-cycle projects (company claim)",
-        "Homer City: up to 4.5 GW — 7x GE Vernova 7HA.02 hydrogen-enabled turbines; first turbine deliveries 2026, power targeted 2027; >1,000 workers on site; largest US gas plant under construction",
-        "NRG/GEV venture: ~5.4 GW of CCGTs in ERCOT/PJM — 1.2 GW by 2029, 1.2 GW by 2030, ~3 GW 2030-32; reserved turbine slots",
-        "Reference CCGTs: TVA Cumberland 1,450 MW, Three Rivers (IL) 1,250 MW, Magnolia Unit 1 (LA) 705 MW, plus Cass County Solar 195 MW with 34.5/138 kV substation"
+        {
+          "band": "Install base",
+          "label": "TIC (The Industrial Company)",
+          "value": ">82,000 MW of gas-fired capacity delivered over the past decade, including 35 combined-cycle projects (company claim)"
+        },
+        {
+          "band": "Flagship projects",
+          "label": "Homer City",
+          "value": "up to 4.5 GW — 7x GE Vernova 7HA.02 hydrogen-enabled turbines; first turbine deliveries 2026, power targeted 2027; >1,000 workers on site; largest US gas plant under construction"
+        },
+        {
+          "band": "Flagship projects",
+          "label": "NRG/GEV venture",
+          "value": "~5.4 GW of CCGTs in ERCOT/PJM — 1.2 GW by 2029, 1.2 GW by 2030, ~3 GW 2030-32; reserved turbine slots"
+        },
+        {
+          "band": "References",
+          "label": "CCGTs",
+          "value": "TVA Cumberland 1,450 MW, Three Rivers (IL) 1,250 MW, Magnolia Unit 1 (LA) 705 MW, plus Cass County Solar 195 MW with 34.5/138 kV substation"
+        }
       ],
       "notes": "Oglethorpe's 1,425 MW 7HA.03 plant (COD 2029) is co-op load-growth driven rather than explicitly data-center — the same delivery machine either way"
     },
     {
       "product": "Operating model and self-perform capability",
       "specs": [
-        ">80% of work self-performed (company claim — unusually high; underpins the schedule-control pitch)",
-        "Decentralized subsidiary network: Kiewit Infrastructure Co./West, Kiewit Power Constructors, Kiewit Energy Group, Kiewit Nuclear Solutions, Kiewit Engineering Group (in-house design), TIC, Mass. Electric Construction, Weeks Marine/Healy Tibbitts/McNally (marine)",
-        "~34,500 employees (2025); Kiewit University training center (Omaha, 65,000 sq ft, opened 2017) trains >3,000 learners/year",
-        "~$5B equipment fleet (third-party credit-research estimate; low confidence — company does not publish fleet value)"
+        {
+          "band": "Self-perform",
+          "label": "Share",
+          "value": ">80% of work self-performed (company claim — unusually high; underpins the schedule-control pitch)"
+        },
+        {
+          "band": "Structure",
+          "label": "Subsidiaries",
+          "value": "Kiewit Infrastructure Co./West, Kiewit Power Constructors, Kiewit Energy Group, Kiewit Nuclear Solutions, Kiewit Engineering Group (in-house design), TIC, Mass. Electric Construction, Weeks Marine/Healy Tibbitts/McNally (marine)"
+        },
+        {
+          "band": "Workforce",
+          "label": "Headcount & training",
+          "value": "~34,500 employees (2025); Kiewit University training center (Omaha, 65,000 sq ft, opened 2017) trains >3,000 learners/year"
+        },
+        {
+          "band": "Assets",
+          "label": "Equipment fleet",
+          "value": "~$5B equipment fleet (third-party credit-research estimate; low confidence — company does not publish fleet value)"
+        }
       ],
       "notes": "Employee ownership via direct stock purchase by selected employees with book-value-formula buy-back on departure — not a conventional ESOP; Peter Kiewit's 1979 will cemented the structure"
     },
     {
       "product": "Transmission & HVDC delivery",
       "specs": [
-        "CHPE: 339-mile, 1,250 MW HVDC (Québec-NYC) — Kiewit lead designer/GC on ~146 terrestrial miles + the Astoria converter station; completed June 2026; 2025 Trenchless Technology Project of the Year",
-        "Grain Belt Express: ~$1.7B Quanta/Kiewit award for the 800-mile, 5,000 MW HVDC line (Phase 1 targeted from 2026; financing status fluid)",
-        "PacifiCorp program: ≥350 miles of distribution line per year over five years"
+        {
+          "band": "HVDC",
+          "label": "CHPE",
+          "value": "339-mile, 1,250 MW HVDC (Québec-NYC) — Kiewit lead designer/GC on ~146 terrestrial miles + the Astoria converter station; completed June 2026; 2025 Trenchless Technology Project of the Year"
+        },
+        {
+          "band": "HVDC",
+          "label": "Grain Belt Express",
+          "value": "~$1.7B Quanta/Kiewit award for the 800-mile, 5,000 MW HVDC line (Phase 1 targeted from 2026; financing status fluid)"
+        },
+        {
+          "band": "Distribution",
+          "label": "PacifiCorp program",
+          "value": "≥350 miles of distribution line per year over five years"
+        }
       ],
       "notes": "HVDC converter-station experience is rare among US contractors — the differentiating credential for the coming long-distance transmission cycle"
     }
@@ -443,6 +487,6 @@
       "url": "https://www.datacenterdynamics.com/en/news/homer-city-and-kiewit-unveil-plans-for-45gw-natural-gas-powered-ai-data-center-in-pennsylvania/"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

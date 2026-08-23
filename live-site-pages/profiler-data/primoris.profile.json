@@ -173,21 +173,57 @@
     {
       "product": "Delivery fleet and contract-risk profile",
       "specs": [
-        "Solar installed: ~3.22 GW in calendar 2025 (Solar Power World #4 US contractor); 2.9 GW in 2024 (top-5)",
-        "Backlog at 2026-06-30: $13.9B total — Utilities $7.7B, Energy $6.2B; MSA backlog $8.2B; next-12-month fixed: $2.3B Utilities + $3.5B Energy",
-        "Contract mix: average project size <$3M; fixed-price contracts <15% of the portfolio — yet the 2026 overruns came from the fixed-price renewables EPC slice",
-        "18,500+ employees across the US and Canada; PayneCrest adds 600+ electrical workers; R.B. Hinkle executes Virginia duct-bank/manhole scope",
-        "Data-center geographies: Nebraska (Meta), Northern Virginia (IAD corridor), West Texas (Crusoe off-grid gas)"
+        {
+          "band": "Install base",
+          "label": "Solar",
+          "value": "~3.22 GW in calendar 2025 (Solar Power World #4 US contractor); 2.9 GW in 2024 (top-5)"
+        },
+        {
+          "band": "Backlog",
+          "label": "At 2026-06-30",
+          "value": "$13.9B total — Utilities $7.7B, Energy $6.2B; MSA backlog $8.2B; next-12-month fixed: $2.3B Utilities + $3.5B Energy"
+        },
+        {
+          "band": "Risk profile",
+          "label": "Contract mix",
+          "value": "average project size <$3M; fixed-price contracts <15% of the portfolio — yet the 2026 overruns came from the fixed-price renewables EPC slice"
+        },
+        {
+          "band": "Workforce",
+          "label": "Headcount",
+          "value": "18,500+ employees across the US and Canada; PayneCrest adds 600+ electrical workers; R.B. Hinkle executes Virginia duct-bank/manhole scope"
+        },
+        {
+          "band": "Markets",
+          "label": "Data-center geographies",
+          "value": "Nebraska (Meta), Northern Virginia (IAD corridor), West Texas (Crusoe off-grid gas)"
+        }
       ],
       "notes": "Crew counts are not publicly disclosed; cumulative solar install base not independently captured (multi-GW, low confidence)"
     },
     {
       "product": "2026 margin and liquidity picture",
       "specs": [
-        "Q2 2026 gross margin 4.9% vs 12.3% in Q2 2025 (renewables overruns); H2 2026 targets: Utilities 10-12%, Energy 6-8%",
-        "H1 2026: revenue $3.25B (-8.2%), net loss $(6.7)M, adjusted EPS $0.32 vs $2.66 prior-year H1",
-        "Liquidity at 2026-06-30: $218.2M cash + $740.7M revolver capacity = $958.9M; ~$400M borrowed for PayneCrest",
-        "Capital returns: $0.08/quarter dividend maintained; $50M of Q2 2026 buybacks at average $111.29 (vs ~$77 August price); $100M authorization through 2028-04-30"
+        {
+          "band": "Margins",
+          "label": "Q2 2026",
+          "value": "gross margin 4.9% vs 12.3% in Q2 2025 (renewables overruns); H2 2026 targets: Utilities 10-12%, Energy 6-8%"
+        },
+        {
+          "band": "Results",
+          "label": "H1 2026",
+          "value": "revenue $3.25B (-8.2%), net loss $(6.7)M, adjusted EPS $0.32 vs $2.66 prior-year H1"
+        },
+        {
+          "band": "Liquidity",
+          "label": "At 2026-06-30",
+          "value": "$218.2M cash + $740.7M revolver capacity = $958.9M; ~$400M borrowed for PayneCrest"
+        },
+        {
+          "band": "Capital returns",
+          "label": "Programme",
+          "value": "$0.08/quarter dividend maintained; $50M of Q2 2026 buybacks at average $111.29 (vs ~$77 August price); $100M authorization through 2028-04-30"
+        }
       ],
       "notes": "FY2024 operating cash flow was a record $508.3M — the pre-crisis cash machine the turnaround is meant to restore"
     }
@@ -468,6 +504,6 @@
       "url": "https://seekingalpha.com/article/4846646-prim-an-emerging-data-center-infrastructure-play"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

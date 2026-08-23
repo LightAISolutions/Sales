@@ -3,7 +3,9 @@
   "slug": "eaton",
   "name": "Eaton",
   "legalName": "Eaton Corporation plc",
-  "categories": ["supplier"],
+  "categories": [
+    "supplier"
+  ],
   "hq": "Dublin, Ireland (operational HQ: Cleveland, OH, USA)",
   "ticker": "NYSE: ETN",
   "founded": "1911",
@@ -18,7 +20,11 @@
       "description": "Flagship 9395X three-phase data-center UPS: up to 1,700 kVA per unit, 97.5% double-conversion efficiency on silicon-carbide converters, ~30% smaller footprint and cooling load than comparable units. EnergyAware grid-interactive UPS (co-developed with Microsoft) lets data-center UPS fleets sell frequency regulation while protecting load — deployed at Bahnhof in Sweden. XLM supercapacitor modules provide fast-cycle bridge power and are a named element of Eaton's 800 VDC architecture.",
       "positioning": "Top-tier UPS incumbent behind Schneider and alongside Vertiv/ABB/Huawei (top five hold ~40-42% of data-center UPS per MarketsandMarkets). The grid-interactive angle differentiates against pure backup vendors.",
       "soldThrough": "Direct and distribution; services attach via remote monitoring and predictive-analytics subscriptions.",
-      "targetSegments": ["Hyperscale and colocation data centers", "Enterprise/edge IT", "Industrial critical power"],
+      "targetSegments": [
+        "Hyperscale and colocation data centers",
+        "Enterprise/edge IT",
+        "Industrial critical power"
+      ],
       "roadmap": "800 VDC-era backup shifts toward supercapacitor fast-cycle bridging plus rack-level DC distribution; Eaton's reference architecture (OCP, October 2025) embeds both."
     },
     {
@@ -26,7 +32,11 @@
       "description": "PowerWave 2 and Pow-R-Way III busway spanning 225 A to 6,250 A rated up to 600 Vdc with 85 kA SCCR; floor PDUs up to the 1.25 MVA PowerHub 2; rack PDUs, static transfer switches, and remote power panels; medium-voltage switchgear (new Bellevue, NE plant) and three-phase transformers (third US transformer site in Jonesville, SC, hiring from 2027). The PXQ event-analysis system added market-first detection of subsynchronous oscillations caused by AI GPU load bursting, delivered to the installed base by remote firmware update in September 2025.",
       "positioning": "Core of the Electrical Americas franchise (FY2025 revenue $13.3B at ~30% segment margin). The 600 Vdc busway ratings and AI-burst detection are early adaptations to DC architectures and GPU load dynamics.",
       "soldThrough": "Direct, distribution, and engineered-to-order projects.",
-      "targetSegments": ["Data centers", "Utilities and grid", "Commercial and industrial"],
+      "targetSegments": [
+        "Data centers",
+        "Utilities and grid",
+        "Commercial and industrial"
+      ],
       "roadmap": "US capacity race: >$1B invested in North American electrical manufacturing since 2023 (Nebraska switchgear, South Carolina transformers, Virginia PDU/STS expansion)."
     },
     {
@@ -34,7 +44,11 @@
       "description": "Fibrebond builds engineered-to-order, pre-integrated modular power enclosures (eHouse-class) with equipment installed and tested off-site. The January 2026 Flexnode collaboration extends this to turnkey prefabricated data halls of 3.5-35 MW supporting rack densities above 1 MW, with ~35% average schedule compression versus stick-build.",
       "positioning": "The delivery-speed play: moves Eaton's competition from component price to installed-megawatt lead time. Schneider and Vertiv sell competing prefab modules, so the edge is manufacturing capacity and scope breadth, not exclusivity.",
       "soldThrough": "Engineered-to-order project contracts (reported in Electrical Americas).",
-      "targetSegments": ["Hyperscale and multi-tenant data centers", "Utilities", "Industrial and communications"],
+      "targetSegments": [
+        "Hyperscale and multi-tenant data centers",
+        "Utilities",
+        "Industrial and communications"
+      ],
       "roadmap": "Fibrebond anchors the Beam Rubin DSX platform announced at GTC 2026 — Eaton's productized AI-factory buildout aligned to NVIDIA's Vera Rubin DSX reference design."
     },
     {
@@ -42,7 +56,9 @@
       "description": "Boyd Thermal, acquired from Goldman Sachs Asset Management for $9.5B (closed March 12, 2026), brings ~$1.7B of forecast 2026 sales — about $1.5B of it liquid cooling: cold plates, coolant distribution, and thermal systems for AI racks. Reported in Electrical Global; 6,000+ employees.",
       "positioning": "Analyst read (RBC): Eaton went 'all-in' on liquid cooling rather than dipping a toe like other players — at 22.5x forward EBITDA, the price demands execution. Puts Eaton in direct thermal competition with Vertiv (which counter-acquired Strategic Thermal Labs, ThermoKey, BMarko) and Schneider's Motivair.",
       "soldThrough": "OEM and direct-to-hyperscaler thermal programs.",
-      "targetSegments": ["AI/HPC rack thermal management"],
+      "targetSegments": [
+        "AI/HPC rack thermal management"
+      ],
       "roadmap": "Accretive to adjusted EPS in year two per company; Q2 2026 Electrical Global growth already carried ~25 points from Boyd."
     },
     {
@@ -50,7 +66,10 @@
       "description": "July 2025 NVIDIA collaboration covering reference architectures and power management for Kyber rack systems with Rubin Ultra GPUs (1 MW racks and beyond). October 2025 OCP reveal of the 800 VDC reference architecture: supercapacitor fast-cycle backup, ORV3 busbar distribution, DC connectors. March 2026 Beam Rubin DSX platform: end-to-end power plus cooling aligned to NVIDIA's Omniverse DSX blueprint with digital-twin assets, scaling from megawatts to hundreds of megawatts.",
       "positioning": "One of three named NVIDIA 800 VDC 'data center power systems' partners alongside Vertiv and Schneider. The architecture cannibalizes some centralized UPS content — Eaton's hedge is owning the replacement content (supercaps, DC busway, solid-state conversion via Resilient Power).",
       "soldThrough": "Reference-design-led selling into hyperscaler and AI-factory programs.",
-      "targetSegments": ["Gigawatt-scale AI factories", "NVIDIA-ecosystem builders"],
+      "targetSegments": [
+        "Gigawatt-scale AI factories",
+        "NVIDIA-ecosystem builders"
+      ],
       "roadmap": "Volume 800 VDC deployments track NVIDIA's Kyber/Rubin Ultra cadence into 2027."
     },
     {
@@ -58,7 +77,10 @@
       "description": "June 2025 alliance with Siemens Energy: standardized ~500 MW modular on-site power plants for data centers (SGT-800 gas turbines plus battery storage), grid-independent, claiming up to two years faster time-to-market with no diesel backup. xStorage containerized BESS (250-1,000 kWh blocks, building and grid-scale variants) for backup, demand response, and grid-revenue participation.",
       "positioning": "Answers the time-to-power bottleneck inside Eaton's own scope rather than ceding it to turbine OEMs — the alliance packages generation with Eaton's electrical balance of plant.",
       "soldThrough": "Alliance project contracts; xStorage via direct and channel.",
-      "targetSegments": ["Data centers facing interconnection queues", "C&I energy management"],
+      "targetSegments": [
+        "Data centers facing interconnection queues",
+        "C&I energy management"
+      ],
       "roadmap": "Positions Eaton to sell the electrical scope of behind-the-fence campuses regardless of which generation vendor wins."
     }
   ],
@@ -144,23 +166,103 @@
   "technicalSpecs": [
     {
       "product": "9395X UPS",
-      "specs": ["Up to 1,700 kVA per unit", "97.5% double-conversion efficiency (silicon-carbide converters)", "~30% smaller footprint and cooling load vs comparable units", "UL 1778 / IEC 62040 certified"]
+      "specs": [
+        {
+          "band": "Power",
+          "label": "Unit rating",
+          "value": "Up to 1,700 kVA per unit"
+        },
+        {
+          "band": "Power",
+          "label": "Efficiency",
+          "value": "97.5% double-conversion efficiency (silicon-carbide converters)"
+        },
+        {
+          "band": "Physical",
+          "label": "Footprint",
+          "value": "~30% smaller footprint and cooling load vs comparable units"
+        },
+        {
+          "band": "Compliance",
+          "label": "Certification",
+          "value": "UL 1778 / IEC 62040 certified"
+        }
+      ]
     },
     {
       "product": "Busway & PDU line",
-      "specs": ["PowerWave 2 / Pow-R-Way III: 225 A - 6,250 A, rated to 600 Vdc, 85 kA SCCR", "Floor PDUs to 1.25 MVA (PowerHub 2)", "Static transfer switches and remote power panels (US production expanding in Richmond, VA)"]
+      "specs": [
+        {
+          "band": "Busway",
+          "label": "PowerWave 2 / Pow-R-Way III",
+          "value": "225 A - 6,250 A, rated to 600 Vdc, 85 kA SCCR"
+        },
+        {
+          "band": "Distribution",
+          "label": "Floor PDUs",
+          "value": "to 1.25 MVA (PowerHub 2)"
+        },
+        {
+          "band": "Distribution",
+          "label": "Switching",
+          "value": "Static transfer switches and remote power panels (US production expanding in Richmond, VA)"
+        }
+      ]
     },
     {
       "product": "Prefab modular data halls (Fibrebond + Flexnode)",
-      "specs": ["3.5-35 MW per data hall, multi-hall sites", "Rack densities above 1 MW supported", "~35% average deployment-schedule reduction vs stick-build"]
+      "specs": [
+        {
+          "band": "Capacity",
+          "label": "Per data hall",
+          "value": "3.5-35 MW per data hall, multi-hall sites"
+        },
+        {
+          "band": "Capacity",
+          "label": "Rack density",
+          "value": "Rack densities above 1 MW supported"
+        },
+        {
+          "band": "Schedule",
+          "label": "Versus stick-build",
+          "value": "~35% average deployment-schedule reduction vs stick-build"
+        }
+      ]
     },
     {
       "product": "800 VDC reference architecture (OCP, Oct 2025)",
-      "specs": ["Supercapacitor fast-cycle backup (XLM modules, ~20-year life)", "ORV3 busbar power distribution and DC connectors", "Targets NVIDIA Kyber racks with Rubin Ultra GPUs at 1 MW+ per rack"]
+      "specs": [
+        {
+          "band": "Backup",
+          "label": "Supercapacitor",
+          "value": "fast-cycle backup (XLM modules, ~20-year life)"
+        },
+        {
+          "band": "Distribution",
+          "label": "ORV3",
+          "value": "busbar power distribution and DC connectors"
+        },
+        {
+          "band": "Target platform",
+          "label": "NVIDIA",
+          "value": "Targets NVIDIA Kyber racks with Rubin Ultra GPUs at 1 MW+ per rack"
+        }
+      ]
     },
     {
       "product": "Siemens Energy on-site power block",
-      "specs": ["Standardized ~500 MW modular plants: SGT-800 gas turbines + battery storage", "Grid-independent; no diesel backup; claimed up to 2 years faster time-to-market"]
+      "specs": [
+        {
+          "band": "Plant",
+          "label": "Configuration",
+          "value": "Standardized ~500 MW modular plants: SGT-800 gas turbines + battery storage"
+        },
+        {
+          "band": "Operation",
+          "label": "Grid independence",
+          "value": "Grid-independent; no diesel backup; claimed up to 2 years faster time-to-market"
+        }
+      ]
     }
   ],
   "decisionMakers": [
@@ -212,44 +314,130 @@
       {
         "period": "FY2024",
         "metrics": [
-          {"name": "Revenue", "actual": "$24.9B (+7%)", "expected": "Q4: $6.33B (consensus)", "verdict": "miss", "result": "Q4 revenue $6.24B missed; adjusted EPS $2.83 beat, GAAP EPS $2.45 missed the $2.58 estimate"},
-          {"name": "Adjusted EPS", "actual": "$10.80 (+18%)", "expected": "—", "verdict": "inline", "result": "Record year; segment margin 24.0%"}
+          {
+            "name": "Revenue",
+            "actual": "$24.9B (+7%)",
+            "expected": "Q4: $6.33B (consensus)",
+            "verdict": "miss",
+            "result": "Q4 revenue $6.24B missed; adjusted EPS $2.83 beat, GAAP EPS $2.45 missed the $2.58 estimate"
+          },
+          {
+            "name": "Adjusted EPS",
+            "actual": "$10.80 (+18%)",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Record year; segment margin 24.0%"
+          }
         ],
         "commentary": "Record sales and margins, but the Q4 print set the pattern: adjusted-EPS beats with revenue misses, and a market that sells off on anything short of perfection."
       },
       {
         "period": "FY2025",
         "metrics": [
-          {"name": "Revenue", "actual": "$27.4B (+10%)", "expected": "Q3 $7.07B / Q4 $7.1B (consensus)", "verdict": "miss", "result": "Q3 and Q4 revenue both came in slightly under consensus; Q4 adjusted EPS $3.33 exactly matched"},
-          {"name": "Adjusted EPS", "actual": "$12.07 (+12%)", "expected": "small beats each quarter", "verdict": "beat", "result": "Beats of 0.3-2.3% per quarter; electrical backlog ended +29% at $19.6B"}
+          {
+            "name": "Revenue",
+            "actual": "$27.4B (+10%)",
+            "expected": "Q3 $7.07B / Q4 $7.1B (consensus)",
+            "verdict": "miss",
+            "result": "Q3 and Q4 revenue both came in slightly under consensus; Q4 adjusted EPS $3.33 exactly matched"
+          },
+          {
+            "name": "Adjusted EPS",
+            "actual": "$12.07 (+12%)",
+            "expected": "small beats each quarter",
+            "verdict": "beat",
+            "result": "Beats of 0.3-2.3% per quarter; electrical backlog ended +29% at $19.6B"
+          }
         ],
         "commentary": "Tariffs drove a Q3 guidance miss (shares fell >7%); data-center orders grew 200% in Q4. Growth was real but the stock repeatedly sold off on good prints — priced for perfection."
       },
       {
         "period": "Q2 2026 (latest interim)",
         "metrics": [
-          {"name": "Revenue", "actual": "$8.53B (+21.4%)", "expected": "$8.01B (Zacks consensus)", "verdict": "beat", "result": "+6.6% surprise; organic +14%, acquisitions +7%"},
-          {"name": "Adjusted EPS", "actual": "$3.15 (+6.8%)", "expected": "$3.08 (Zacks consensus)", "verdict": "beat", "result": "FY2026 guidance raised to $13.40-13.60 adjusted EPS, organic growth 11-13%"}
+          {
+            "name": "Revenue",
+            "actual": "$8.53B (+21.4%)",
+            "expected": "$8.01B (Zacks consensus)",
+            "verdict": "beat",
+            "result": "+6.6% surprise; organic +14%, acquisitions +7%"
+          },
+          {
+            "name": "Adjusted EPS",
+            "actual": "$3.15 (+6.8%)",
+            "expected": "$3.08 (Zacks consensus)",
+            "verdict": "beat",
+            "result": "FY2026 guidance raised to $13.40-13.60 adjusted EPS, organic growth 11-13%"
+          }
         ],
         "commentary": "The strongest print of the run — but one-third of headline growth was acquired, the Q3 GAAP guide sits below consensus as acquisition amortization widens the GAAP/adjusted gap, and Electrical Global backlog +103% carries the Boyd integration bet."
       }
     ]
   },
   "sources": [
-    {"label": "Eaton Q2 2026 results release", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-second-quarter-2026-results.html", "date": "2026-07-31"},
-    {"label": "Zacks/Yahoo Q2 2026 verdict", "url": "https://finance.yahoo.com/markets/stocks/articles/eatons-q2-earnings-beat-strong-145700229.html", "date": "2026-07"},
-    {"label": "Boyd Thermal close", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-completes-acquisition-of-leading-liquid-cooling-solutions-provider-boyd-thermal.html", "date": "2026-03-12"},
-    {"label": "Eaton FY2025 10-K", "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm", "date": "2026-02"},
-    {"label": "Eaton FY2025 results (8-K exhibit)", "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000002/etn12312025exhibit99.htm", "date": "2026-02"},
-    {"label": "Boyd Thermal acquisition announcement", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-signs-agreement-to-acquire-boyd-thermal--expandin-solutio.html", "date": "2025-11"},
-    {"label": "MarketScreener — Boyd deal terms (22.5x EBITDA)", "url": "https://www.marketscreener.com/news/eaton-to-buy-boyd-thermal-for-9-5-billion-ce7d5cd9dd89f325", "date": "2025-11"},
-    {"label": "800 VDC reference architecture (OCP)", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-unveils-next-generation-architecture.html", "date": "2025-10-13"},
-    {"label": "NVIDIA collaboration announcement", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-accelerates-data-center-infrastrructure-in-ai-era-with-nvidia.html", "date": "2025-07-15"},
-    {"label": "Siemens Energy alliance", "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-and-siemens-energy-join-forces-to-provide-power-and-technology.html", "date": "2025-06-03"},
-    {"label": "GuruFocus Q4 2024 verdict", "url": "https://www.gurufocus.com/news/2676015/eaton-corp-plc-reports-q4-2024-earnings-adjusted-eps-of-283-beats-estimates-revenue-at-624-billion-misses-expectations", "date": "2025-01"},
-    {"label": "9395X UPS datasheet", "url": "https://www.eaton.com/content/dam/eaton/products/backup-power-ups-surge-it-power-distribution/backup-power-ups/power-xpert-9395/9395x/documents/eaton-9395x-ups-datasheet-product-specification-guides-ps153066-en-us.pdf"},
-    {"label": "MarketsandMarkets — data-center power market share", "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp"}
+    {
+      "label": "Eaton Q2 2026 results release",
+      "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-reports-record-second-quarter-2026-results.html",
+      "date": "2026-07-31"
+    },
+    {
+      "label": "Zacks/Yahoo Q2 2026 verdict",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/eatons-q2-earnings-beat-strong-145700229.html",
+      "date": "2026-07"
+    },
+    {
+      "label": "Boyd Thermal close",
+      "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2026/eaton-completes-acquisition-of-leading-liquid-cooling-solutions-provider-boyd-thermal.html",
+      "date": "2026-03-12"
+    },
+    {
+      "label": "Eaton FY2025 10-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000007/etn-20251231.htm",
+      "date": "2026-02"
+    },
+    {
+      "label": "Eaton FY2025 results (8-K exhibit)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000002/etn12312025exhibit99.htm",
+      "date": "2026-02"
+    },
+    {
+      "label": "Boyd Thermal acquisition announcement",
+      "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-signs-agreement-to-acquire-boyd-thermal--expandin-solutio.html",
+      "date": "2025-11"
+    },
+    {
+      "label": "MarketScreener — Boyd deal terms (22.5x EBITDA)",
+      "url": "https://www.marketscreener.com/news/eaton-to-buy-boyd-thermal-for-9-5-billion-ce7d5cd9dd89f325",
+      "date": "2025-11"
+    },
+    {
+      "label": "800 VDC reference architecture (OCP)",
+      "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-unveils-next-generation-architecture.html",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "NVIDIA collaboration announcement",
+      "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-accelerates-data-center-infrastrructure-in-ai-era-with-nvidia.html",
+      "date": "2025-07-15"
+    },
+    {
+      "label": "Siemens Energy alliance",
+      "url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-and-siemens-energy-join-forces-to-provide-power-and-technology.html",
+      "date": "2025-06-03"
+    },
+    {
+      "label": "GuruFocus Q4 2024 verdict",
+      "url": "https://www.gurufocus.com/news/2676015/eaton-corp-plc-reports-q4-2024-earnings-adjusted-eps-of-283-beats-estimates-revenue-at-624-billion-misses-expectations",
+      "date": "2025-01"
+    },
+    {
+      "label": "9395X UPS datasheet",
+      "url": "https://www.eaton.com/content/dam/eaton/products/backup-power-ups-surge-it-power-distribution/backup-power-ups/power-xpert-9395/9395x/documents/eaton-9395x-ups-datasheet-product-specification-guides-ps153066-en-us.pdf"
+    },
+    {
+      "label": "MarketsandMarkets — data-center power market share",
+      "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

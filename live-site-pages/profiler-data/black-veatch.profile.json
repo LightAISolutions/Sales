@@ -211,30 +211,83 @@
     {
       "product": "Data-center power delivery capability",
       "specs": [
-        "Client-owned substation model: direct transmission connection cutting interconnection timelines 'by one-half or more' vs 5+ year utility build-out; 24/7 remote monitoring/diagnostics",
-        "Hyperscale campus sizing frame: 400 MW-2 GW; two 300 MW substations delivered/underway for one confidential US hyperscale campus (first completed Sept 2025)",
-        "Supply-chain compression: circuit breakers in 48-65 weeks vs ~85-week market lead times via early procurement and staggered deliveries",
-        "Delivery models: progressive design-build with open-to-closed-book pricing, EPC, owner's engineer, O&M (ENR #1 O&M 2026)"
+        {
+          "band": "Interconnection",
+          "label": "Client-owned substation model",
+          "value": "direct transmission connection cutting interconnection timelines 'by one-half or more' vs 5+ year utility build-out; 24/7 remote monitoring/diagnostics"
+        },
+        {
+          "band": "Scale",
+          "label": "Hyperscale campus sizing frame",
+          "value": "400 MW-2 GW; two 300 MW substations delivered/underway for one confidential US hyperscale campus (first completed Sept 2025)"
+        },
+        {
+          "band": "Procurement",
+          "label": "Supply-chain compression",
+          "value": "circuit breakers in 48-65 weeks vs ~85-week market lead times via early procurement and staggered deliveries"
+        },
+        {
+          "band": "Commercial",
+          "label": "Delivery models",
+          "value": "progressive design-build with open-to-closed-book pricing, EPC, owner's engineer, O&M (ENR #1 O&M 2026)"
+        }
       ],
       "notes": "Grid practice: 75+ years, 1,400+ grid workforce, 2,600+ active grid projects; Bird Electric (2023) adds ~600 self-perform T&D field staff"
     },
     {
       "product": "Generation & hydrogen fleet",
       "specs": [
-        "IPP Renewed (Owner's Engineer): 840 MW hydrogen-capable CCGT (30% green H2 at startup → 100% by 2045), HVDC converter stations, coal units converted to synchronous condensers; COD Jul-Oct 2025",
-        "ACES Delta (EPC): 220 MW electrolyzers, 100 metric tons H2/day, two salt caverns — the world's first industrial-scale green hydrogen hub",
-        "Philippines LNG-to-power (topline EPC): 1,275 MW net H-class (3x425 MW) + substation, commissioned early 2025",
-        "Cascade SMR JV: first 4 of 12 X-energy Xe-100s, 320 MW initial phase, progressive design-build (equal JV with Aecon and Kiewit Nuclear Solutions)"
+        {
+          "band": "Thermal generation",
+          "label": "IPP Renewed (Owner's Engineer)",
+          "value": "840 MW hydrogen-capable CCGT (30% green H2 at startup → 100% by 2045), HVDC converter stations, coal units converted to synchronous condensers; COD Jul-Oct 2025"
+        },
+        {
+          "band": "Thermal generation",
+          "label": "Philippines LNG-to-power (topline EPC)",
+          "value": "1,275 MW net H-class (3x425 MW) + substation, commissioned early 2025"
+        },
+        {
+          "band": "Hydrogen",
+          "label": "ACES Delta (EPC)",
+          "value": "220 MW electrolyzers, 100 metric tons H2/day, two salt caverns — the world's first industrial-scale green hydrogen hub"
+        },
+        {
+          "band": "Nuclear",
+          "label": "Cascade SMR JV",
+          "value": "first 4 of 12 X-energy Xe-100s, 320 MW initial phase, progressive design-build (equal JV with Aecon and Kiewit Nuclear Solutions)"
+        }
       ],
       "notes": "ENR 2026 sector ranks: #1 Hydrogen, #1 O&M, #1 Offshore/Underwater, #2 Co-Generation, #3 Solar, #6 Power, #8 Water"
     },
     {
       "product": "Scale and operating footprint",
       "specs": [
-        "~13,000 employees; 100+ offices; projects in 100+ countries; record 24.5M craft construction hours in 2023 (+~8M YoY)",
-        "ENR 2026: #14 Top 500 Design Firms; #49 Top 400 Contractors; #33 Top 100 by New Contracts",
-        "Construction subsidiaries: Black & Veatch Construction (1991), Overland Contracting (1996), Bird Electric (2023)",
-        "2025 net-zero (scope 1 & 2) goal announced 2021; exited new coal 2020"
+        {
+          "band": "Footprint",
+          "label": "Headcount and reach",
+          "value": "~13,000 employees; 100+ offices; projects in 100+ countries"
+        },
+        {
+          "band": "Footprint",
+          "label": "Craft hours",
+          "value": "record 24.5M craft construction hours in 2023 (+~8M YoY)"
+        },
+        {
+          "band": "Rankings",
+          "label": "ENR 2026",
+          "value": "#14 Top 500 Design Firms; #49 Top 400 Contractors; #33 Top 100 by New Contracts"
+        },
+        {
+          "band": "Structure",
+          "label": "Construction subsidiaries",
+          "value": "Black & Veatch Construction (1991), Overland Contracting (1996), Bird Electric (2023)"
+        },
+        {
+          "band": "Sustainability",
+          "label": "Commitments",
+          "value": "2025 net-zero (scope 1 & 2) goal announced 2021; exited new coal 2020"
+        }
       ],
       "notes": "ESOP shares are granted (not purchased) from an employee's first year, at no cost, globally — no external investors since the 2015 completion of the 100% transition"
     }
@@ -466,6 +519,6 @@
       "url": "https://www.forbes.com/companies/black-veatch/"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

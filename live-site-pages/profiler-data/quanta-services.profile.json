@@ -3,7 +3,9 @@
   "slug": "quanta-services",
   "name": "Quanta Services",
   "legalName": "Quanta Services, Inc.",
-  "categories": ["epc"],
+  "categories": [
+    "epc"
+  ],
   "hq": "Houston, TX, USA",
   "ticker": "NYSE: PWR",
   "founded": "1997",
@@ -18,7 +20,11 @@
       "description": "The core franchise: utility transmission and distribution, substations, grid hardening, interconnection — 82% of revenue ($7.84B in Q2 2026 alone, 11.5% operating margin, record $43.79B segment backlog). Flagship projects: SunZia (turnkey, 'largest renewable infrastructure project in US history') and Gateway South (416 miles of 500 kV). Electric Grid & Gas Utility is ~50% of revenue growing 20-25%; 765 kV transmission expansion named as a demand driver through 2035+.",
       "positioning": "#1 US electrical contractor (EC&M 2025: $13.5B, 3.7x the #2); the self-perform craft model (>80%) plus training infrastructure is the moat — labor, not equipment, is the binding constraint in US grid construction.",
       "soldThrough": "Utility MSAs and project awards; long-term alliance agreements.",
-      "targetSegments": ["Investor-owned utilities", "Co-ops/municipals", "Transmission developers"],
+      "targetSegments": [
+        "Investor-owned utilities",
+        "Co-ops/municipals",
+        "Transmission developers"
+      ],
       "roadmap": "Larger high-voltage programs 'stack more meaningfully in 2H 2027' with field work beyond 2030; management sees Electric margins of 10-12% under optimal conditions."
     },
     {
@@ -26,7 +32,11 @@
       "description": "The bought-and-built AIDC platform: Cupertino Electric (electrical systems + custom modular electrical manufacturing for large-scale DCs; 25+ years with hyperscalers), Dynamic Systems (turnkey mechanical/process — ~60% of facility construction cost; modularization, 3D modeling), Tri-City (inside-electrical & fabrication), Phalcon (Northeast/Mid-Atlantic DC electrical), Enerfab (fabrication/mechanical for power gen + DCs). End-market at ~10% of revenue guided to grow 220-240% in 2026; management puts total tech/DC work at 15-20% of the business.",
       "positioning": "Balance-of-plant coverage of '80-90% of a data center build'; much DC work runs book-and-burn through MSAs and never appears in backlog — reported backlog understates DC demand. Direct head-to-head with Rosendin, MYR, IES.",
       "soldThrough": "Hyperscaler and developer MSAs; design-build; modular/prefab delivery.",
-      "targetSegments": ["Hyperscalers", "Data-center developers/neoclouds", "Semiconductor fabs"],
+      "targetSegments": [
+        "Hyperscalers",
+        "Data-center developers/neoclouds",
+        "Semiconductor fabs"
+      ],
       "roadmap": "'Large multi-year build programs for large load facilities are meaningfully expanding Quanta's addressable market' — company claims a selective, margin-first approach."
     },
     {
@@ -34,7 +44,11 @@
       "description": "Renewables/storage: >29 GW of solar completed 2021-25 (~740,000 tracker rows, ~8M piles, ~7,000 inverters supplied/installed), 6,100+ MW of domestic solar in 2025 alone, Solar Power World's Top US Solar Solutions Provider 2026; storage EPC bundled with solar and standalone. New gas platform (Oct 2025): selected by NiSource for ~3 GW of combined-cycle gas generation plus grid infrastructure for 'a large load customer' via a JV with Zachry Group — execution from 2026, phased delivery through 2032. Power Generation & Energy Storage is ~25% of revenue growing 10-15%.",
       "positioning": "One of the largest US renewables EPCs (Blattner legacy) now crossing into gas — the 'all forms of power generation' pitch matches where AIDC demand actually is. The NiSource program's 'significant majority' is NOT in reported backlog — pure upside.",
       "soldThrough": "EPC and balance-of-plant contracts with utilities, developers, and large-load customers.",
-      "targetSegments": ["Utilities adding dispatchable capacity", "Solar/BESS developers", "Data-center campus power"],
+      "targetSegments": [
+        "Utilities adding dispatchable capacity",
+        "Solar/BESS developers",
+        "Data-center campus power"
+      ],
       "roadmap": "Investor-day case study: expanded a <$100M/year customer into a multi-billion-dollar CCGT+BESS+transmission+substation solution — the template it wants to repeat."
     },
     {
@@ -42,7 +56,11 @@
       "description": "$500-700M investment to nearly double HV transformer manufacturing capacity by 2028; Hyosung HICO Breaker JV (June 2026) manufacturing HV/EHV gas circuit breakers up to 800 kV in Canonsburg, PA for utility, industrial, and load-center markets; equipment procurement ~20% and supply chain ~10% of typical project capex now in-house; claims schedule acceleration 'in some cases by >12 months.'",
       "positioning": "The contractor becoming its own equipment supplier — a direct response to the transformer/breaker bottleneck that turns Quanta into a partial competitor of Hitachi Energy, Siemens Energy, and GE Vernova on critical-path gear.",
       "soldThrough": "Internal to Quanta projects plus merchant sales to the market.",
-      "targetSegments": ["Own project pipeline", "Utilities", "Load-center customers"],
+      "targetSegments": [
+        "Own project pipeline",
+        "Utilities",
+        "Load-center customers"
+      ],
       "roadmap": "Transformer capacity doubling lands 2028 — timed to the WoodMac-modeled shortage tail."
     }
   ],
@@ -115,19 +133,51 @@
     {
       "product": "Craft-labor and delivery platform",
       "specs": [
-        ">80% self-perform craft execution (management cites 80-85%); craft execution >40% of typical project capex; engineering/design, procurement (~10%), and equipment manufacturing (~20%) also in-house",
-        "69,500 employees / 50,000+ craft laborers; +15,500 in trailing year (~7,000 organic); 2,300-acre Lazy Q Ranch lineman college; ~$250M/yr training",
-        "Data-center craft spend: ~$13.5M per MW (excl. outside-the-fence power); balance-of-plant coverage '80-90% of a DC build'",
-        "Prefab/modular: CEI custom modular electrical systems; Dynamic Systems modular fabrication + 3D modeling; Tri-City/Enerfab fabrication"
+        {
+          "band": "Self-perform",
+          "label": "Share",
+          "value": ">80% self-perform craft execution (management cites 80-85%); craft execution >40% of typical project capex; engineering/design, procurement (~10%), and equipment manufacturing (~20%) also in-house"
+        },
+        {
+          "band": "Workforce",
+          "label": "Headcount & training",
+          "value": "69,500 employees / 50,000+ craft laborers; +15,500 in trailing year (~7,000 organic); 2,300-acre Lazy Q Ranch lineman college; ~$250M/yr training"
+        },
+        {
+          "band": "Data centers",
+          "label": "Craft spend",
+          "value": "~$13.5M per MW (excl. outside-the-fence power); balance-of-plant coverage '80-90% of a DC build'"
+        },
+        {
+          "band": "Prefabrication",
+          "label": "Capability",
+          "value": "CEI custom modular electrical systems; Dynamic Systems modular fabrication + 3D modeling; Tri-City/Enerfab fabrication"
+        }
       ]
     },
     {
       "product": "Project scale references",
       "specs": [
-        "Gateway South: 416 miles single-circuit 500 kV AC, ~28,500 tons steel, ~1,600 structures, ~$175M Quanta-managed material spend",
-        "Quanta Solar 2021-25: >29 GW completed, ~740,000 tracker rows, ~8M piles, ~7,000 inverters supplied/installed, $6.6B+ managed material spend; 6,100+ MW domestic solar in 2025",
-        "NiSource program: ~3 GW CCGT + grid infrastructure, phased delivery through 2032 (Zachry JV)",
-        "Supply chain: HV transformer capacity to nearly double by 2028 ($500-700M); Hyosung HICO JV breakers to 800 kV; claimed schedule acceleration >12 months in some cases"
+        {
+          "band": "Transmission",
+          "label": "Gateway South",
+          "value": "416 miles single-circuit 500 kV AC, ~28,500 tons steel, ~1,600 structures, ~$175M Quanta-managed material spend"
+        },
+        {
+          "band": "Solar",
+          "label": "Quanta Solar 2021-25",
+          "value": ">29 GW completed, ~740,000 tracker rows, ~8M piles, ~7,000 inverters supplied/installed, $6.6B+ managed material spend; 6,100+ MW domestic solar in 2025"
+        },
+        {
+          "band": "Generation",
+          "label": "NiSource program",
+          "value": "~3 GW CCGT + grid infrastructure, phased delivery through 2032 (Zachry JV)"
+        },
+        {
+          "band": "Supply chain",
+          "label": "Equipment",
+          "value": "HV transformer capacity to nearly double by 2028 ($500-700M); Hyosung HICO JV breakers to 800 kV; claimed schedule acceleration >12 months in some cases"
+        }
       ]
     }
   ],
@@ -183,48 +233,157 @@
       {
         "period": "FY2024",
         "metrics": [
-          { "name": "Revenue", "actual": "$23.67B (+13%)", "expected": "In line; Q4 missed by -1.2%", "verdict": "inline", "result": "Old segmentation: Electric Power $11.17B (11.6% margin), Renewables $7.85B, Underground $4.66B" },
-          { "name": "Adjusted EPS", "actual": "$8.97 (statutory $6.16)", "expected": "Statutory beat consensus by 2.7%; Q4 adj. $2.94 vs $2.64 (+11.4%)", "verdict": "beat", "result": "Shares fell ~3.3% in the week after full-year results despite the beat" },
-          { "name": "Free cash flow", "actual": "$1.55B (record)", "expected": "n/a", "verdict": "beat", "result": "Backlog $34.5B (+15%)" }
+          {
+            "name": "Revenue",
+            "actual": "$23.67B (+13%)",
+            "expected": "In line; Q4 missed by -1.2%",
+            "verdict": "inline",
+            "result": "Old segmentation: Electric Power $11.17B (11.6% margin), Renewables $7.85B, Underground $4.66B"
+          },
+          {
+            "name": "Adjusted EPS",
+            "actual": "$8.97 (statutory $6.16)",
+            "expected": "Statutory beat consensus by 2.7%; Q4 adj. $2.94 vs $2.64 (+11.4%)",
+            "verdict": "beat",
+            "result": "Shares fell ~3.3% in the week after full-year results despite the beat"
+          },
+          {
+            "name": "Free cash flow",
+            "actual": "$1.55B (record)",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "Backlog $34.5B (+15%)"
+          }
         ],
         "commentary": "The Cupertino year — the ~$1.54B deal closed July 2024 and put Quanta in the data-center market. Segments were recast into two (Electric / Underground & Infrastructure) effective Q1 2025, breaking direct comparability."
       },
       {
         "period": "FY2025",
         "metrics": [
-          { "name": "Revenue", "actual": "$28.48B (+20%)", "expected": "Q4: $7.8B vs $7.37B (+6.4% beat)", "verdict": "beat", "result": "Electric segment $23.0B (10.3% op margin)" },
-          { "name": "Adjusted EPS", "actual": "$10.75 (+20%; GAAP $6.80)", "expected": "Q4: $3.16 vs $3.02 (+4.6% beat)", "verdict": "beat", "result": "Stock +5.9% to then-record ~$550 on results" },
-          { "name": "Backlog", "actual": "$43.98B (record)", "expected": "n/a", "verdict": "beat", "result": "Record adjusted EBITDA $2.88B and FCF $1.67B" }
+          {
+            "name": "Revenue",
+            "actual": "$28.48B (+20%)",
+            "expected": "Q4: $7.8B vs $7.37B (+6.4% beat)",
+            "verdict": "beat",
+            "result": "Electric segment $23.0B (10.3% op margin)"
+          },
+          {
+            "name": "Adjusted EPS",
+            "actual": "$10.75 (+20%; GAAP $6.80)",
+            "expected": "Q4: $3.16 vs $3.02 (+4.6% beat)",
+            "verdict": "beat",
+            "result": "Stock +5.9% to then-record ~$550 on results"
+          },
+          {
+            "name": "Backlog",
+            "actual": "$43.98B (record)",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "Record adjusted EBITDA $2.88B and FCF $1.67B"
+          }
         ],
         "commentary": "Eight acquisitions in the year (+~11,100 employees) incl. Dynamic Systems, Tri-City, Wilson. Zacks: consensus beaten on both lines in all four trailing quarters through Q2 2026."
       },
       {
         "period": "Q2 2026 (reported 2026-07-30)",
         "metrics": [
-          { "name": "Revenue", "actual": "$9.557B (+41.1%; organic +27.4%)", "expected": "$8.61B Zacks consensus", "verdict": "beat", "result": "+11% beat; Electric segment $7.84B vs $6.88B est" },
-          { "name": "Adjusted EPS", "actual": "$4.24 (GAAP $2.96)", "expected": "$3.29 Zacks consensus", "verdict": "beat", "result": "~29% beat; stock +13.5% to ~$637-650" },
-          { "name": "Adjusted EBITDA", "actual": "~$1.07B (11.2% margin)", "expected": "~$879M estimate", "verdict": "beat", "result": "+21% beat; operating margin 7.3% vs 5.5% prior year" }
+          {
+            "name": "Revenue",
+            "actual": "$9.557B (+41.1%; organic +27.4%)",
+            "expected": "$8.61B Zacks consensus",
+            "verdict": "beat",
+            "result": "+11% beat; Electric segment $7.84B vs $6.88B est"
+          },
+          {
+            "name": "Adjusted EPS",
+            "actual": "$4.24 (GAAP $2.96)",
+            "expected": "$3.29 Zacks consensus",
+            "verdict": "beat",
+            "result": "~29% beat; stock +13.5% to ~$637-650"
+          },
+          {
+            "name": "Adjusted EBITDA",
+            "actual": "~$1.07B (11.2% margin)",
+            "expected": "~$879M estimate",
+            "verdict": "beat",
+            "result": "+21% beat; operating margin 7.3% vs 5.5% prior year"
+          }
         ],
         "commentary": "Backlog record $53.4B (RPO $33.6B). FY2026 guidance raised sharply: revenue $39.3-39.7B (from $34.95B midpoint), adjusted EPS $16.45-16.95, FCF $2.0-2.5B. Moody's upgraded to Baa2; $1B buyback authorized May 2026. Watch items: corporate cost overrun, heavy M&A contribution, ~89x trailing P/E."
       }
     ]
   },
   "sources": [
-    { "label": "Quanta — Q2 2026 results press release", "url": "https://investors.quantaservices.com/news-events/press-releases/detail/402/quanta-services-reports-second-quarter-2026-results", "date": "2026-07-30" },
-    { "label": "Quanta — Q2 2026 operational & financial commentary (end-market mix, backlog build)", "url": "https://investors.quantaservices.com/_assets/_9546050958577210325d4e87129a40ac/quantaservices/db/894/10545/pdf/PWR+06-30-2026+ER+Operational+and+Financial+Summary+vF.pdf", "date": "2026-07-30" },
-    { "label": "Zacks via Yahoo — Q2 2026 beat detail and four-quarter streak", "url": "https://finance.yahoo.com/markets/stocks/articles/quanta-services-pwr-q2-earnings-123509201.html", "date": "2026-07-30" },
-    { "label": "Zacks via Yahoo — Q2 2026 segment metrics vs estimates", "url": "https://finance.yahoo.com/markets/stocks/articles/compared-estimates-quanta-services-pwr-133010954.html", "date": "2026-07-30" },
-    { "label": "Investing.com — Q2 2026 earnings call transcript (DC 15-20%, book-and-burn, labor)", "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-quanta-services-posts-big-q2-2026-beat-lifts-outlook-93CH-4825090", "date": "2026-07-30" },
-    { "label": "StockTitan — Q2 2026 10-Q analysis (GAAP gap, goodwill, RPO)", "url": "https://www.stocktitan.net/sec-filings/PWR/10-q-quanta-services-inc-quarterly-earnings-report-052e9d20ca80.html", "date": "2026-07" },
-    { "label": "Quanta — 2026 Investor Day presentation ($2.4T TAM, 2030 targets, $13.5M/MW)", "url": "https://investors.quantaservices.com/_assets/_9546050958577210325d4e87129a40ac/quantaservices/db/894/10451/pdf/Quanta+Services+2026+Investor+Day+Presentation+vF+for+Website.pdf", "date": "2026-03-31" },
-    { "label": "Quanta — FY2025 results press release", "url": "https://investors.quantaservices.com/news-events/press-releases/detail/390/", "date": "2026-02-19" },
-    { "label": "Quanta — NiSource ~3 GW generation award / Power Generation Solutions launch", "url": "https://investors.quantaservices.com/news-events/press-releases/detail/386/", "date": "2025-10-30" },
-    { "label": "Quanta — Dynamic Systems acquisition press release", "url": "https://investors.quantaservices.com/news-events/press-releases/detail/380/quanta-services-acquires-dynamic-systems-a-premier-turnkey-mechanical-and-process-infrastructure-solutions-provider", "date": "2025-07-25" },
-    { "label": "EC&M — 2025 Top 50 Electrical Contractors (Quanta #1, $13.5B)", "url": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-contractors-rankings", "date": "2025-06" },
-    { "label": "Quanta — Cupertino Electric acquisition press release", "url": "https://investors.quantaservices.com/news-events/press-releases/detail/360/quanta-services-acquires-cupertino-electric-inc-a-premier-electrical-infrastructure-solutions-provider-to-the-technology-and-renewable-energy-industries", "date": "2024-07-17" },
-    { "label": "Electrical Wholesaling — Cupertino deal economics (top-6 contractor, ~9-10x EBITDA)", "url": "https://www.ewweb.com/news/mergers-acquisitions/article/55127284/quanta-buys-cupertino-electric-in-blockbuster-contractor-deal-for-154-billion", "date": "2024-07" },
-    { "label": "Wikipedia — LUMA Energy (blackouts, regulatory and political record)", "url": "https://en.wikipedia.org/wiki/LUMA_Energy" }
+    {
+      "label": "Quanta — Q2 2026 results press release",
+      "url": "https://investors.quantaservices.com/news-events/press-releases/detail/402/quanta-services-reports-second-quarter-2026-results",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Quanta — Q2 2026 operational & financial commentary (end-market mix, backlog build)",
+      "url": "https://investors.quantaservices.com/_assets/_9546050958577210325d4e87129a40ac/quantaservices/db/894/10545/pdf/PWR+06-30-2026+ER+Operational+and+Financial+Summary+vF.pdf",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Zacks via Yahoo — Q2 2026 beat detail and four-quarter streak",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/quanta-services-pwr-q2-earnings-123509201.html",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Zacks via Yahoo — Q2 2026 segment metrics vs estimates",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/compared-estimates-quanta-services-pwr-133010954.html",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Investing.com — Q2 2026 earnings call transcript (DC 15-20%, book-and-burn, labor)",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-quanta-services-posts-big-q2-2026-beat-lifts-outlook-93CH-4825090",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "StockTitan — Q2 2026 10-Q analysis (GAAP gap, goodwill, RPO)",
+      "url": "https://www.stocktitan.net/sec-filings/PWR/10-q-quanta-services-inc-quarterly-earnings-report-052e9d20ca80.html",
+      "date": "2026-07"
+    },
+    {
+      "label": "Quanta — 2026 Investor Day presentation ($2.4T TAM, 2030 targets, $13.5M/MW)",
+      "url": "https://investors.quantaservices.com/_assets/_9546050958577210325d4e87129a40ac/quantaservices/db/894/10451/pdf/Quanta+Services+2026+Investor+Day+Presentation+vF+for+Website.pdf",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "Quanta — FY2025 results press release",
+      "url": "https://investors.quantaservices.com/news-events/press-releases/detail/390/",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "Quanta — NiSource ~3 GW generation award / Power Generation Solutions launch",
+      "url": "https://investors.quantaservices.com/news-events/press-releases/detail/386/",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "Quanta — Dynamic Systems acquisition press release",
+      "url": "https://investors.quantaservices.com/news-events/press-releases/detail/380/quanta-services-acquires-dynamic-systems-a-premier-turnkey-mechanical-and-process-infrastructure-solutions-provider",
+      "date": "2025-07-25"
+    },
+    {
+      "label": "EC&M — 2025 Top 50 Electrical Contractors (Quanta #1, $13.5B)",
+      "url": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-contractors-rankings",
+      "date": "2025-06"
+    },
+    {
+      "label": "Quanta — Cupertino Electric acquisition press release",
+      "url": "https://investors.quantaservices.com/news-events/press-releases/detail/360/quanta-services-acquires-cupertino-electric-inc-a-premier-electrical-infrastructure-solutions-provider-to-the-technology-and-renewable-energy-industries",
+      "date": "2024-07-17"
+    },
+    {
+      "label": "Electrical Wholesaling — Cupertino deal economics (top-6 contractor, ~9-10x EBITDA)",
+      "url": "https://www.ewweb.com/news/mergers-acquisitions/article/55127284/quanta-buys-cupertino-electric-in-blockbuster-contractor-deal-for-154-billion",
+      "date": "2024-07"
+    },
+    {
+      "label": "Wikipedia — LUMA Energy (blackouts, regulatory and political record)",
+      "url": "https://en.wikipedia.org/wiki/LUMA_Energy"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

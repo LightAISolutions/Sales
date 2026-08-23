@@ -131,32 +131,83 @@
     {
       "product": "Abilene campuses",
       "specs": [
-        "Campus 1: 1.2 GW, 8 buildings, ~4M sq ft; each building up to 50,000 GB200 NVL72s; ERCOT grid + on-site plant + BESS/solar; GE Vernova SCR turbine backup (no diesel)",
-        "Campus 2 (Microsoft): 900 MW; two 336 MW critical-IT-load buildings; 900 MW on-site plant + MV BESS; first building mid-2027",
-        "Closed-loop non-evaporative liquid cooling: ~1M gal initial fill/building, ~50,000 gal/yr maintenance"
+        {
+          "band": "Campus 1",
+          "label": "Configuration",
+          "value": "1.2 GW, 8 buildings, ~4M sq ft; each building up to 50,000 GB200 NVL72s"
+        },
+        {
+          "band": "Campus 1",
+          "label": "Power",
+          "value": "ERCOT grid + on-site plant + BESS/solar; GE Vernova SCR turbine backup (no diesel)"
+        },
+        {
+          "band": "Campus 2 (Microsoft)",
+          "label": "Configuration",
+          "value": "900 MW; two 336 MW critical-IT-load buildings"
+        },
+        {
+          "band": "Campus 2 (Microsoft)",
+          "label": "Power & schedule",
+          "value": "900 MW on-site plant + MV BESS; first building mid-2027"
+        },
+        {
+          "band": "Cooling",
+          "label": "Water use",
+          "value": "Closed-loop non-evaporative liquid cooling: ~1M gal initial fill/building, ~50,000 gal/yr maintenance"
+        }
       ]
     },
     {
       "product": "Energy fleet",
       "specs": [
-        "29× GE Vernova LM2500XPRESS (~35 MW each, ~1 GW, 5-min start, SCR)",
-        "Bergen engines: 27× 12.5 MWe + 20× 5 MWe (~750 MW), Piller SHIELD-X stabilization",
-        "ON.energy AI UPS: 5 GW MV-BESS, ERCOT NOGRR 282/LLVRT validated, campus-duration ride-through",
-        "Form Energy: 12 GWh iron-air, up to 100-hour duration, from 2027"
+        {
+          "band": "Turbines",
+          "label": "GE Vernova",
+          "value": "29× GE Vernova LM2500XPRESS (~35 MW each, ~1 GW, 5-min start, SCR)"
+        },
+        {
+          "band": "Reciprocating engines",
+          "label": "Bergen",
+          "value": "27× 12.5 MWe + 20× 5 MWe (~750 MW), Piller SHIELD-X stabilization"
+        },
+        {
+          "band": "Storage",
+          "label": "ON.energy AI UPS",
+          "value": "5 GW MV-BESS, ERCOT NOGRR 282/LLVRT validated, campus-duration ride-through"
+        },
+        {
+          "band": "Storage",
+          "label": "Form Energy",
+          "value": "12 GWh iron-air, up to 100-hour duration, from 2027"
+        }
       ]
     },
     {
       "product": "Modular (Crusoe Spark / Edge Zones)",
       "specs": [
-        "Factory-built modular DCs from Arvada CO and Tulsa OK; Brighton CO factory ramping",
-        "Edge Zones: new cloud zones in ~3 months; MemoryAlloy claims up to 9.9x faster time-to-first-token",
-        "Redwood microgrid: 20 MW / second-life EV batteries + solar; 99.2% availability over first 7 months"
+        {
+          "band": "Manufacturing",
+          "label": "Factories",
+          "value": "Factory-built modular DCs from Arvada CO and Tulsa OK; Brighton CO factory ramping"
+        },
+        {
+          "band": "Deployment",
+          "label": "Edge Zones",
+          "value": "new cloud zones in ~3 months; MemoryAlloy claims up to 9.9x faster time-to-first-token"
+        },
+        {
+          "band": "Microgrid",
+          "label": "Redwood",
+          "value": "20 MW / second-life EV batteries + solar; 99.2% availability over first 7 months"
+        }
       ]
     }
   ],
   "decisionMakers": [
     {
-      "name": "Chase Lochmiller", "photo": "images/execs/crusoe-lochmiller.avif",
+      "name": "Chase Lochmiller",
+      "photo": "images/execs/crusoe-lochmiller.avif",
       "title": "Co-founder, CEO & Chairman",
       "background": [
         "Ex-quant at Jump Trading and GETCO; MIT math/physics, Stanford MS CS",
@@ -164,7 +215,8 @@
       ]
     },
     {
-      "name": "Cully Cavness", "photo": "images/execs/crusoe-cavness.avif",
+      "name": "Cully Cavness",
+      "photo": "images/execs/crusoe-cavness.avif",
       "title": "Co-founder, President & Chief Strategy Officer",
       "background": [
         "Upstream oil & gas and geothermal background — the energy half of the founding thesis",
@@ -172,14 +224,16 @@
       ]
     },
     {
-      "name": "Michael Gordon", "photo": "images/execs/crusoe-gordon.avif",
+      "name": "Michael Gordon",
+      "photo": "images/execs/crusoe-gordon.avif",
       "title": "COO & CFO",
       "background": [
         "Ex-MongoDB COO/CFO, hired December 2025 — widely read as IPO preparation"
       ]
     },
     {
-      "name": "John Adams", "photo": "images/execs/crusoe-adams.avif",
+      "name": "John Adams",
+      "photo": "images/execs/crusoe-adams.avif",
       "title": "SVP, Power Infrastructure",
       "background": [
         "Owns the generation fleet build-out (turbines, engines, BESS, nuclear partnerships)"
@@ -294,6 +348,6 @@
       "url": "https://sacra.com/c/crusoe/"
     }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

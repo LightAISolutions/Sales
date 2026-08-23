@@ -130,19 +130,51 @@
     {
       "product": "PowerPOD / UPS5000 / SmartLi (critical power)",
       "specs": [
-        "PowerPOD (2025 AI-DC spec): 40-ft container, 2.4 MW standard / 3.2 MW customized, 90%+ prefabrication, 28→18-week delivery, outdoor-deployable",
-        "UPS5000-H: 97.5% single-unit / 97.3% parallel efficiency; 99.1% in S-ECO mode",
-        "SmartLi 3.0 BBU: LFP, 6C discharge, 153 Ah, 10-15 min backup, up to 10 cabinets parallel, pack-level fire extinguishing, 70% smaller footprint vs lead-acid",
-        "FusionModule2000 6.0: annual PUE to 1.111, 7-day deployment; FusionCol600-L450MA liquid-cooling TMU for high-density AI compute"
+        {
+          "band": "Prefabricated power",
+          "label": "PowerPOD (2025 AI-DC spec)",
+          "value": "40-ft container, 2.4 MW standard / 3.2 MW customized, 90%+ prefabrication, 28→18-week delivery, outdoor-deployable"
+        },
+        {
+          "band": "UPS",
+          "label": "UPS5000-H",
+          "value": "97.5% single-unit / 97.3% parallel efficiency; 99.1% in S-ECO mode"
+        },
+        {
+          "band": "Battery backup",
+          "label": "SmartLi 3.0 BBU",
+          "value": "LFP, 6C discharge, 153 Ah, 10-15 min backup, up to 10 cabinets parallel, pack-level fire extinguishing, 70% smaller footprint vs lead-acid"
+        },
+        {
+          "band": "Modular DC & cooling",
+          "label": "FusionModule2000 6.0",
+          "value": "annual PUE to 1.111, 7-day deployment; FusionCol600-L450MA liquid-cooling TMU for high-density AI compute"
+        }
       ]
     },
     {
       "product": "LUTERRA grid-forming ESS platform",
       "specs": [
-        "1,000 Vac smart string architecture; in-house SiC modules; through-busbar design; optimal array 12.5 MW / 50 MWh",
-        "Plant-level grid forming: short-circuit support 1-6x, inertia 0-20 s time constant at 5 ms response, primary frequency regulation <200 ms, oscillation damping 0.1-100 Hz, minute-level black start of GWh plants, seamless VSG on/off-grid switching",
-        "Claimed grid forming at any SOC/any SCR/any time; +10% lifetime energy vs central-PCS designs; C2G safety (<1-in-1-million Zone C risk claim)",
-        "Reference: Red Sea 400 MW PV + 1.3 GWh, 21+ months off-grid, 99.9% critical-load reliability"
+        {
+          "band": "Architecture",
+          "label": "String design",
+          "value": "1,000 Vac smart string architecture; in-house SiC modules; through-busbar design; optimal array 12.5 MW / 50 MWh"
+        },
+        {
+          "band": "Grid forming",
+          "label": "Plant-level capability",
+          "value": "short-circuit support 1-6x, inertia 0-20 s time constant at 5 ms response, primary frequency regulation <200 ms, oscillation damping 0.1-100 Hz, minute-level black start of GWh plants, seamless VSG on/off-grid switching"
+        },
+        {
+          "band": "Claims",
+          "label": "Performance & safety",
+          "value": "Claimed grid forming at any SOC/any SCR/any time; +10% lifetime energy vs central-PCS designs; C2G safety (<1-in-1-million Zone C risk claim)"
+        },
+        {
+          "band": "References",
+          "label": "Red Sea",
+          "value": "400 MW PV + 1.3 GWh, 21+ months off-grid, 99.9% critical-load reliability"
+        }
       ]
     }
   ],
@@ -324,6 +356,6 @@
       "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-ups-market.asp"
     }
   ],
-  "lastUpdated": "2026-08-14",
-  "profileVersion": 2
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 3
 }

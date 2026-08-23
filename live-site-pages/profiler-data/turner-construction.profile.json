@@ -3,7 +3,9 @@
   "slug": "turner-construction",
   "name": "Turner Construction",
   "legalName": "Turner Construction Company (wholly-owned subsidiary of Hochtief AG; Hochtief is ~79-80% controlled by Grupo ACS)",
-  "categories": ["gc"],
+  "categories": [
+    "gc"
+  ],
   "hq": "New York, NY, USA",
   "founded": "1902 (Henry Chandlee Turner; acquired by Hochtief in 1999 for $370M)",
   "ownership": "subsidiary",
@@ -16,40 +18,72 @@
       "name": "Critical Facilities / data-center construction",
       "category": "Construction services",
       "description": "Construction management and GC delivery for edge, enterprise, hyperscale, and colocation facilities. Company-referenced clients include Meta (Louisiana, Indiana, Jeffersonville), CoreWeave (Lancaster PA), Vantage (Ohio; the OpenAI/Oracle 'Stargate' Wisconsin campus), Aligned, Equinix, QTS, and NTT (Berlin, via Hochtief) — spanning ten-plus US states plus Turkey and Malaysia. Turner brands itself 'the largest data center builder'; independent sector tables (BD+C 2025) still ranked HITT/Holder/DPR ahead on trailing dedicated DC revenue, while Blackridge (May 2026) puts Turner #4 globally at ~3 GW delivered.",
-      "highlights": ["Data-center revenue $3.6B (2024) → ~$9B expected (2025); ~37-42% of backlog through 2025-26", "Hochtief-reported Turner data-center orders: €18.1B in FY2025, €21.6B trailing-twelve-month at H1 2026", "Target: >$20B annual data-center revenue by 2030"],
+      "highlights": [
+        "Data-center revenue $3.6B (2024) → ~$9B expected (2025); ~37-42% of backlog through 2025-26",
+        "Hochtief-reported Turner data-center orders: €18.1B in FY2025, €21.6B trailing-twelve-month at H1 2026",
+        "Target: >$20B annual data-center revenue by 2030"
+      ],
       "positioning": "The scale play: no specialist matches the forward order intake, and megacampus owners (Meta, Vantage) hire Turner alongside rivals rather than instead of them.",
       "soldThrough": "CM/GC and design-build contracts, frequently in JVs (Turner-Wohlsen for CoreWeave, Turner-McCarthy for Stargate WI) — a capacity-sharing pattern hyperscalers now impose.",
-      "targetSegments": ["Hyperscalers (Meta)", "Neoclouds (CoreWeave)", "Developers/colos (Vantage, Aligned, QTS, Equinix)"],
+      "targetSegments": [
+        "Hyperscalers (Meta)",
+        "Neoclouds (CoreWeave)",
+        "Developers/colos (Vantage, Aligned, QTS, Equinix)"
+      ],
       "roadmap": "Advanced technology projected to reach 40% of the total portfolio (company statement); Europe expansion through Dornan."
     },
     {
       "name": "SourceBlue (supply-chain & equipment procurement)",
       "category": "Procurement",
       "description": "Wholly-owned procurement subsidiary (ex-Turner Logistics, rebranded 2021): strategic sourcing of long-lead equipment with direct OEM relationships and open-book pricing — engaged at preconstruction to 'identify long-lead equipment, alternate products, and schedule risk before it reaches the field,' then expediting, delivery tracking, and warranty coordination.",
-      "highlights": ["~$1B annual product volume; 1,300+ supplier relationships; 250+ procurement specialists; 600+ projects supported", "Claims up to 15% project-timeline acceleration", "Presented inside the Critical Facilities offer as 'Equipment Supply Chain Management'"],
+      "highlights": [
+        "~$1B annual product volume; 1,300+ supplier relationships; 250+ procurement specialists; 600+ projects supported",
+        "Claims up to 15% project-timeline acceleration",
+        "Presented inside the Critical Facilities offer as 'Equipment Supply Chain Management'"
+      ],
       "positioning": "The de-risking arm that turns transformer/switchgear/generator/chiller lead times — the industry's binding constraint — into a managed service; for equipment vendors, SourceBlue is the buying desk behind a ~$20B/yr data-center order book.",
       "soldThrough": "Bundled with Turner projects and offered to outside clients.",
-      "targetSegments": ["Data centers", "Healthcare/pharma", "Utilities and advanced manufacturing"],
+      "targetSegments": [
+        "Data centers",
+        "Healthcare/pharma",
+        "Utilities and advanced manufacturing"
+      ],
       "roadmap": "Named by the President of Enterprise Services as a designated expansion vector."
     },
     {
       "name": "Turner Engineering Group, self-perform & offsite manufacturing",
       "category": "Engineering & delivery",
       "description": "TEG provides commissioning-grade reliability engineering for uptime environments 'measured in milliseconds (6/9s) to microseconds (9/9s)'; Turner's Sustainability + TEG bench counts 750+ credentialed staff. 'xPL Offsite' prefabrication cuts onsite data-center labor 10%+ (company claim). Self-Perform Operations, VDC, and a fabrication shop round out delivery control.",
-      "highlights": ["Dornan Engineering acquisition (closed early 2025): ~1,000-person Irish M&E/commissioning firm, €700M output, €1.1B backlog ~85% advanced-technology — self-perform M&E for Europe's data-center market", "Turner cited '$20B of advanced technology project opportunities in Europe' as the Dornan rationale"],
+      "highlights": [
+        "Dornan Engineering acquisition (closed early 2025): ~1,000-person Irish M&E/commissioning firm, €700M output, €1.1B backlog ~85% advanced-technology — self-perform M&E for Europe's data-center market",
+        "Turner cited '$20B of advanced technology project opportunities in Europe' as the Dornan rationale"
+      ],
       "positioning": "Vertical capability creep toward EPC-like control of the highest-value packages — the same direction the whole GC tier is moving as electrical/mechanical scope dominates AI-factory cost.",
       "soldThrough": "Integrated into CM/GC contracts; Dornan operates across Ireland/UK/Continental Europe/Nordics.",
-      "targetSegments": ["Mission-critical owners requiring reliability engineering", "European advanced-technology projects"],
+      "targetSegments": [
+        "Mission-critical owners requiring reliability engineering",
+        "European advanced-technology projects"
+      ],
       "roadmap": "TEG and Self-Perform named strategic expansion priorities (Nov 2024 reorganization)."
     },
     {
       "name": "Diversified building portfolio",
       "category": "Construction services",
       "description": "The non-DC base that made Turner #1 before AI: healthcare (300+ projects/year), aviation & transportation (1,200+ projects), sports (Buffalo Bills, Tennessee Titans, Cleveland Browns' $2.4B domed stadium), education, pharma/biotech, federal — plus megaprojects like the ~$10B NYC Midtown Bus Terminal replacement (JV with STV) and One Beverly Hills. ENR's #1 Green Builder 18 consecutive years (company claim); an active mass-timber practice.",
-      "highlights": ["H1 2025 backlog mix beyond DC: healthcare $6.6B, education $4.1B, sports $3.5B", "150 projects with revenue >$100M as of Nov 2024", "Operates in ~30 countries via Turner International"],
+      "highlights": [
+        "H1 2025 backlog mix beyond DC: healthcare $6.6B, education $4.1B, sports $3.5B",
+        "150 projects with revenue >$100M as of Nov 2024",
+        "Operates in ~30 countries via Turner International"
+      ],
       "positioning": "The diversification that hedges the AI-capex cycle — the analyst-flagged 'tale of two markets' risk cuts both ways.",
       "soldThrough": "CM/GC, design-build, and program management.",
-      "targetSegments": ["Healthcare systems", "Airports/transit authorities", "Sports franchises", "Universities", "Federal agencies"],
+      "targetSegments": [
+        "Healthcare systems",
+        "Airports/transit authorities",
+        "Sports franchises",
+        "Universities",
+        "Federal agencies"
+      ],
       "roadmap": "Sports and transit megaprojects run through the late 2020s alongside the DC ramp."
     }
   ],
@@ -143,27 +177,63 @@
     {
       "product": "Data-center delivery scale",
       "specs": [
-        "~3,000 MW (3 GW) delivered per Blackridge Research's May 2026 global ranking (Turner #4 worldwide, behind AECOM, Holder, Jacobs)",
-        "Active flagships: Meta Richland Parish LA ($50B, 5 GW, ~10M sq ft, ~7,500 peak workers); Meta Lebanon IN ($10B, 1 GW, ~4M sq ft); CoreWeave Lancaster PA ($6B, 100→300 MW); Stargate Port Washington WI ($15B campus, 1.3 GW, phase 1 $8B); Vantage New Albany OH ($2B, 192 MW)",
-        "'xPL Offsite' prefab: 10%+ onsite-labor reduction on data centers (company claim); TEG reliability engineering to 6-9s/9-9s uptime regimes"
+        {
+          "band": "Install base",
+          "label": "Delivered",
+          "value": "~3,000 MW (3 GW) delivered per Blackridge Research's May 2026 global ranking (Turner #4 worldwide, behind AECOM, Holder, Jacobs)"
+        },
+        {
+          "band": "Active projects",
+          "label": "Flagships",
+          "value": "Meta Richland Parish LA ($50B, 5 GW, ~10M sq ft, ~7,500 peak workers); Meta Lebanon IN ($10B, 1 GW, ~4M sq ft); CoreWeave Lancaster PA ($6B, 100→300 MW); Stargate Port Washington WI ($15B campus, 1.3 GW, phase 1 $8B); Vantage New Albany OH ($2B, 192 MW)"
+        },
+        {
+          "band": "Delivery model",
+          "label": "Prefab & reliability",
+          "value": "'xPL Offsite' prefab: 10%+ onsite-labor reduction on data centers (company claim); TEG reliability engineering to 6-9s/9-9s uptime regimes"
+        }
       ],
       "notes": "Turner publishes no MW-delivered total itself — capacity figures are third-party estimates."
     },
     {
       "product": "Backlog trajectory (Hochtief reporting)",
       "specs": [
-        ">$33B (Nov 2024) → $39B (H1 2025, +21%) → $40.3B (9M 2025, 40% DC) → $44.3B (YE2025, +34%, ~37% DC) → $48.9B (Q1 2026, +34%, DC ~42% at H1)",
-        "H1 2025 mix beyond DC: healthcare $6.6B, education $4.1B, sports $3.5B",
-        "Q1 2026 order intake $12.1B (+48%); 10 megaprojects ≥$1B awarded in the year to date"
+        {
+          "band": "Backlog",
+          "label": "Progression",
+          "value": ">$33B (Nov 2024) → $39B (H1 2025, +21%) → $40.3B (9M 2025, 40% DC) → $44.3B (YE2025, +34%, ~37% DC) → $48.9B (Q1 2026, +34%, DC ~42% at H1)"
+        },
+        {
+          "band": "Mix",
+          "label": "Beyond data centers",
+          "value": "H1 2025 mix beyond DC: healthcare $6.6B, education $4.1B, sports $3.5B"
+        },
+        {
+          "band": "Orders",
+          "label": "Intake",
+          "value": "Q1 2026 order intake $12.1B (+48%); 10 megaprojects ≥$1B awarded in the year to date"
+        }
       ],
       "notes": "Data-center new orders: €18.1B FY2025; €21.6B LTM at H1 2026."
     },
     {
       "product": "Technology & safety programs",
       "specs": [
-        "Enterprise OpenAI deployment (ChatGPT Enterprise to all ~16,000 employees, two-year deal, Nov 2025); 100+ custom AI agents; AI investment 'tripled or quadrupled'",
-        "SafeT Coach AI safety-training tool shared industry-wide after tens of thousands of jobsite interactions",
-        "Building L.I.F.E.® safety program; CURT 2023 Safety Excellence Award — against the adverse record documented under risks"
+        {
+          "band": "Technology",
+          "label": "AI deployment",
+          "value": "Enterprise OpenAI deployment (ChatGPT Enterprise to all ~16,000 employees, two-year deal, Nov 2025); 100+ custom AI agents; AI investment 'tripled or quadrupled'"
+        },
+        {
+          "band": "Safety",
+          "label": "Tools",
+          "value": "SafeT Coach AI safety-training tool shared industry-wide after tens of thousands of jobsite interactions"
+        },
+        {
+          "band": "Safety",
+          "label": "Programme",
+          "value": "Building L.I.F.E.® safety program; CURT 2023 Safety Excellence Award — against the adverse record documented under risks"
+        }
       ],
       "notes": "BIM/VDC baseline plus autonomous drones and photo-analysis tooling across projects."
     }
@@ -221,56 +291,190 @@
       {
         "period": "FY2024",
         "metrics": [
-          {"name": "Revenue", "actual": "$20.2B (ENR 2025 list)", "expected": "", "verdict": "inline", "result": "ENR Top 400 #1 (fifth straight year); backlog >$33B by Nov 2024; data-center revenue $3.6B"}
+          {
+            "name": "Revenue",
+            "actual": "$20.2B (ENR 2025 list)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "ENR Top 400 #1 (fifth straight year); backlog >$33B by Nov 2024; data-center revenue $3.6B"
+          }
         ],
         "commentary": "The pre-ramp baseline: data centers were a large sector among many, not yet the growth engine."
       },
       {
         "period": "FY2025",
         "metrics": [
-          {"name": "Revenue", "actual": "$29.2B company-reported (+40%); $28.3B on the ENR 2026 list", "expected": "", "verdict": "beat", "result": "Data-center revenue ~tripled toward ~$9B; DC new orders €18.1B (Hochtief)"},
-          {"name": "Operational PBT (Hochtief basis)", "actual": "€921M (+62%), 3.6% margin", "expected": "", "verdict": "beat", "result": "Turner characterized as >40% of Hochtief group output in FY2025 coverage"},
-          {"name": "Backlog", "actual": "$44.3B at YE (+34%), ~37% data centers", "expected": "", "verdict": "beat", "result": "Analysts probed capacity limits on the results call; management denied a ceiling"}
+          {
+            "name": "Revenue",
+            "actual": "$29.2B company-reported (+40%); $28.3B on the ENR 2026 list",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Data-center revenue ~tripled toward ~$9B; DC new orders €18.1B (Hochtief)"
+          },
+          {
+            "name": "Operational PBT (Hochtief basis)",
+            "actual": "€921M (+62%), 3.6% margin",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Turner characterized as >40% of Hochtief group output in FY2025 coverage"
+          },
+          {
+            "name": "Backlog",
+            "actual": "$44.3B at YE (+34%), ~37% data centers",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Analysts probed capacity limits on the results call; management denied a ceiling"
+          }
         ],
         "commentary": "Expectations honesty: Turner files no standalone statements and no consensus exists at the subsidiary level — all figures are Hochtief/ACS disclosures, ENR self-reported revenue, or trade-press reporting, as cited."
       },
       {
         "period": "H1 2026 (Hochtief reporting, Jul 27, 2026)",
         "metrics": [
-          {"name": "Sales", "actual": "$14.1B (+23% fx-adjusted)", "expected": "", "verdict": "beat", "result": "Turner = ~68% of Hochtief group sales and ~67% of operational net profit"},
-          {"name": "Operational PBT", "actual": "$551M (+49%), 3.9% margin", "expected": "", "verdict": "beat", "result": "FY2026 guidance raised to $1.40-1.46B (from $1.30-1.35B) — 35-40% growth"},
-          {"name": "Backlog & orders", "actual": "$48.9B at Q1 2026 (+34%); Q1 order intake $12.1B (+48%); DC ~42% of backlog; LTM DC orders €21.6B", "expected": "", "verdict": "beat", "result": "Ten megaprojects ≥$1B awarded in the year to date"}
+          {
+            "name": "Sales",
+            "actual": "$14.1B (+23% fx-adjusted)",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Turner = ~68% of Hochtief group sales and ~67% of operational net profit"
+          },
+          {
+            "name": "Operational PBT",
+            "actual": "$551M (+49%), 3.9% margin",
+            "expected": "",
+            "verdict": "beat",
+            "result": "FY2026 guidance raised to $1.40-1.46B (from $1.30-1.35B) — 35-40% growth"
+          },
+          {
+            "name": "Backlog & orders",
+            "actual": "$48.9B at Q1 2026 (+34%); Q1 order intake $12.1B (+48%); DC ~42% of backlog; LTM DC orders €21.6B",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Ten megaprojects ≥$1B awarded in the year to date"
+          }
         ],
         "commentary": "The margin arc (3.6% → 3.9% PBT) is the quiet story: AI-infrastructure work is lifting profitability, not just volume, and Hochtief's group guidance raise leans on it."
       }
     ]
   },
   "sources": [
-    {"label": "Investing.com — Hochtief H1 2026 slides (Turner sales/PBT/guidance/backlog mix)", "url": "https://www.investing.com/news/company-news/hochtief-h1-2026-slides-profit-surges-35-guidance-raised-on-record-backlog-93CH-4814737", "date": "2026-07-27"},
-    {"label": "Turner — Meta Richland Parish expansion ($50B / 5 GW)", "url": "https://www.turnerconstruction.com/insights/expanded-meta-data-center-creates-more-jobs-and-opportunity-in-richland-parish-louisiana", "date": "2026-07-16"},
-    {"label": "Construction Dive — Meta commits $50B to Louisiana campus", "url": "https://www.constructiondive.com/news/meta-commits-50b-louisiana-data-center-richland-parish/825329/", "date": "2026-07"},
-    {"label": "Construction Digital — Q1 2026: $48.9B backlog, data-centre demand", "url": "https://constructiondigital.com/news/turner-construction-data-centre-demand-driving-growth", "date": "2026-05-29"},
-    {"label": "Construction Dive — ENR 2026 Top 400 (Turner #1, sixth year)", "url": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/", "date": "2026-05-22"},
-    {"label": "Blackridge Research — top data-center builders (Turner #4, ~3 GW)", "url": "https://www.blackridgeresearch.com/blog/latest-top-largest-data-center-construction-epc-builders-firms-companies-in-the-world", "date": "2026-05-04"},
-    {"label": "Construction Dive — Turner 2025 annual report ($29.2B, $44.3B backlog, 2030 DC target)", "url": "https://www.constructiondive.com/news/turner-2025-annual-report-data-centers/813694/", "date": "2026-03-03"},
-    {"label": "ACS pressroom — Hochtief FY2025 results (Turner PBT €921M, DC orders €18.1B)", "url": "https://pressroom.grupoacs.com/en/news/hochtief-2025-operational-net-profit-up-26-to-eur-789-million", "date": "2026-02-19"},
-    {"label": "Turner — Meta Lebanon, Indiana $10B campus", "url": "https://www.turnerconstruction.com/insights/turner-selected-as-one-of-the-contractors-for-10-billion-meta-data-center-campus-in-indiana", "date": "2026-02-13"},
-    {"label": "Construction Dive — Turner 'wall to wall' OpenAI partnership", "url": "https://www.constructiondive.com/news/turner-partnership-openai-startups-tech/804765/", "date": "2025-11-05"},
-    {"label": "ENR — construction team for the $15B Wisconsin Stargate campus", "url": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus", "date": "2025-09"},
-    {"label": "Construction Dive — H1 2025: record $39B backlog; Dornan closed", "url": "https://www.constructiondive.com/news/turner-earnings-backlog-data-center-work/756796/", "date": "2025-08-05"},
-    {"label": "Construction Dive — Turner-Wohlsen JV for CoreWeave's $6B Lancaster campus", "url": "https://www.constructiondive.com/news/turner-wohlsen-pennsylvania-data-center-coreweave/753877/", "date": "2025-07-24"},
-    {"label": "BD+C Giants 400 — top data-center construction firms 2025 (sector-revenue ranking)", "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025", "date": "2025"},
-    {"label": "ENR — $23.5M settlement in UChicago scaffold-collapse death", "url": "https://www.enr.com/articles/60889-turner-subcontractor-reach-235m-settlement-in-worker-death-on-chicago-project", "date": "2025"},
-    {"label": "ENR — Meta picks Turner-DPR-Mortenson for $10B Louisiana campus", "url": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-center", "date": "2024-12"},
-    {"label": "Turner — leadership promotions for growth (Reilly/Sheriff presidencies)", "url": "https://www.turnerconstruction.com/insights/turner-construction-company-promotes-leaders-to-support-ambitious-growth", "date": "2024-11-18"},
-    {"label": "Turner — Vantage $2B New Albany, Ohio expansion", "url": "https://www.turnerconstruction.com/insights/turner-selected-for-2-billion-expansion-project-for-vantage-data-centers", "date": "2024-11-04"},
-    {"label": "BusinessWire — Turner to acquire Dornan Engineering Group", "url": "https://www.businesswire.com/news/home/20240723631128/en/Turner-Construction-Company-to-Acquire-Dornan-Engineering-Group", "date": "2024-07-24"},
-    {"label": "ENR — former Turner/Bloomberg managers plead guilty in $15M scheme", "url": "https://www.enr.com/articles/50286-former-turner-bloomberg-managers-plead-guilty-in-15m-bribery-scheme", "date": "2020-10-07"},
-    {"label": "Turner — Critical Facilities market page (clients, SourceBlue, TEG, xPL Offsite)", "url": "https://www.turnerconstruction.com/pages/critical-facilities-market"},
-    {"label": "SourceBlue — procurement subsidiary site", "url": "https://www.sourceblue.com/"},
-    {"label": "Turner — leadership page", "url": "https://www.turnerconstruction.com/leadership"},
-    {"label": "Turner — services", "url": "https://www.turnerconstruction.com/services"}
+    {
+      "label": "Investing.com — Hochtief H1 2026 slides (Turner sales/PBT/guidance/backlog mix)",
+      "url": "https://www.investing.com/news/company-news/hochtief-h1-2026-slides-profit-surges-35-guidance-raised-on-record-backlog-93CH-4814737",
+      "date": "2026-07-27"
+    },
+    {
+      "label": "Turner — Meta Richland Parish expansion ($50B / 5 GW)",
+      "url": "https://www.turnerconstruction.com/insights/expanded-meta-data-center-creates-more-jobs-and-opportunity-in-richland-parish-louisiana",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "Construction Dive — Meta commits $50B to Louisiana campus",
+      "url": "https://www.constructiondive.com/news/meta-commits-50b-louisiana-data-center-richland-parish/825329/",
+      "date": "2026-07"
+    },
+    {
+      "label": "Construction Digital — Q1 2026: $48.9B backlog, data-centre demand",
+      "url": "https://constructiondigital.com/news/turner-construction-data-centre-demand-driving-growth",
+      "date": "2026-05-29"
+    },
+    {
+      "label": "Construction Dive — ENR 2026 Top 400 (Turner #1, sixth year)",
+      "url": "https://www.constructiondive.com/news/top-commercial-contractors-revenue-2026-enr/820930/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "Blackridge Research — top data-center builders (Turner #4, ~3 GW)",
+      "url": "https://www.blackridgeresearch.com/blog/latest-top-largest-data-center-construction-epc-builders-firms-companies-in-the-world",
+      "date": "2026-05-04"
+    },
+    {
+      "label": "Construction Dive — Turner 2025 annual report ($29.2B, $44.3B backlog, 2030 DC target)",
+      "url": "https://www.constructiondive.com/news/turner-2025-annual-report-data-centers/813694/",
+      "date": "2026-03-03"
+    },
+    {
+      "label": "ACS pressroom — Hochtief FY2025 results (Turner PBT €921M, DC orders €18.1B)",
+      "url": "https://pressroom.grupoacs.com/en/news/hochtief-2025-operational-net-profit-up-26-to-eur-789-million",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "Turner — Meta Lebanon, Indiana $10B campus",
+      "url": "https://www.turnerconstruction.com/insights/turner-selected-as-one-of-the-contractors-for-10-billion-meta-data-center-campus-in-indiana",
+      "date": "2026-02-13"
+    },
+    {
+      "label": "Construction Dive — Turner 'wall to wall' OpenAI partnership",
+      "url": "https://www.constructiondive.com/news/turner-partnership-openai-startups-tech/804765/",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "ENR — construction team for the $15B Wisconsin Stargate campus",
+      "url": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-data-center-campus",
+      "date": "2025-09"
+    },
+    {
+      "label": "Construction Dive — H1 2025: record $39B backlog; Dornan closed",
+      "url": "https://www.constructiondive.com/news/turner-earnings-backlog-data-center-work/756796/",
+      "date": "2025-08-05"
+    },
+    {
+      "label": "Construction Dive — Turner-Wohlsen JV for CoreWeave's $6B Lancaster campus",
+      "url": "https://www.constructiondive.com/news/turner-wohlsen-pennsylvania-data-center-coreweave/753877/",
+      "date": "2025-07-24"
+    },
+    {
+      "label": "BD+C Giants 400 — top data-center construction firms 2025 (sector-revenue ranking)",
+      "url": "https://www.bdcnetwork.com/giants-400/news/55321777/top-data-center-construction-firms-for-2025",
+      "date": "2025"
+    },
+    {
+      "label": "ENR — $23.5M settlement in UChicago scaffold-collapse death",
+      "url": "https://www.enr.com/articles/60889-turner-subcontractor-reach-235m-settlement-in-worker-death-on-chicago-project",
+      "date": "2025"
+    },
+    {
+      "label": "ENR — Meta picks Turner-DPR-Mortenson for $10B Louisiana campus",
+      "url": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-center",
+      "date": "2024-12"
+    },
+    {
+      "label": "Turner — leadership promotions for growth (Reilly/Sheriff presidencies)",
+      "url": "https://www.turnerconstruction.com/insights/turner-construction-company-promotes-leaders-to-support-ambitious-growth",
+      "date": "2024-11-18"
+    },
+    {
+      "label": "Turner — Vantage $2B New Albany, Ohio expansion",
+      "url": "https://www.turnerconstruction.com/insights/turner-selected-for-2-billion-expansion-project-for-vantage-data-centers",
+      "date": "2024-11-04"
+    },
+    {
+      "label": "BusinessWire — Turner to acquire Dornan Engineering Group",
+      "url": "https://www.businesswire.com/news/home/20240723631128/en/Turner-Construction-Company-to-Acquire-Dornan-Engineering-Group",
+      "date": "2024-07-24"
+    },
+    {
+      "label": "ENR — former Turner/Bloomberg managers plead guilty in $15M scheme",
+      "url": "https://www.enr.com/articles/50286-former-turner-bloomberg-managers-plead-guilty-in-15m-bribery-scheme",
+      "date": "2020-10-07"
+    },
+    {
+      "label": "Turner — Critical Facilities market page (clients, SourceBlue, TEG, xPL Offsite)",
+      "url": "https://www.turnerconstruction.com/pages/critical-facilities-market"
+    },
+    {
+      "label": "SourceBlue — procurement subsidiary site",
+      "url": "https://www.sourceblue.com/"
+    },
+    {
+      "label": "Turner — leadership page",
+      "url": "https://www.turnerconstruction.com/leadership"
+    },
+    {
+      "label": "Turner — services",
+      "url": "https://www.turnerconstruction.com/services"
+    }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 107/100`
+`Sections: 108/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.90r] — 2026-08-22 10:57:17 PM EST
+
+> **Prompt:** "I can see the Technical Annex details now, but the format is very loose. I want the format to be more professional and intuitive to read. Give me some mockups of different formats to choose from. Then, revise all dossiers to match my chosen format." *(Four formats mocked against real ABB data — labelled rows, datasheet grid, banded table, inline definition list. Developer chose **C · Banded table** with **preserve wording exactly**.)*
+
+### Added
+- **Banded spec format across all 62 dossiers (`Profiler.html` v01.41w)** — `technicalSpecs[].specs` entries gain an optional `band`, and consecutive entries sharing one render under a gold category header inside the product table. Bands live on the rows themselves rather than in a nested structure, so a profile written before banding — and every archived snapshot — simply has no bands and renders flat. `ovSpecRow` carries the field through, `ovSpecBandOpens` decides where a header is emitted, and both the app renderer and the export/preview builder emit them (`ovDocFacts` takes an optional third tuple element for the band). Styling added for the app, the preview/PDF skin and the Word export's inline CSS
+- **Fixed label column on banded tables** — a `colgroup` sets a 208px first column under `table-layout: fixed`, so every product table in a section shares one value-column edge. The colgroup is required rather than a `td` width: the first row of a banded table is a `colspan=2` band header, from which fixed layout would otherwise derive a 50/50 split
+- **`scripts/apply-bands` migration guard (scratchpad, not committed)** — validated every migrated value against a punctuation-insensitive digest of its product's source text before writing, so a re-cut that reworded a value failed the run instead of shipping. It caught one (a hitachi-energy value that had a parenthetical lifted out of its middle) and was hardened mid-run to validate all slugs before writing any, after an abort left four dossiers migrated with the archive index unsaved (repaired in the same pass)
+
+### Changed
+- **All 62 dossiers migrated to the banded format** — 926 spec entries (476 unlabelled statement strings + 450 label/value pairs) re-cut into **983 banded rows across 817 product/band groups**; zero plain-string specs remain. Every value is verbatim source text split on its own punctuation; labels and bands are new authoring. Each dossier's outgoing version was archived and indexed per the Archival Procedure, and `profileVersion` incremented
+- **`PROFILER-SCHEMA.md`** — `technicalSpecs[].specs` now documents the banded entry as the authoring format, states that values are copied verbatim while labels and bands are authored, and records that both legacy shapes (unbanded pair, plain string) must keep rendering because archived snapshots hold them permanently
+
+### Notes
+- Format chosen from four mockups rendered against the Profiler's real stylesheet with real ABB data (a short product and a dense one, to show scaling): A labelled rows, B datasheet grid, C banded table, D inline definition list
+- The 62 archived snapshots add 62 entries to the admin-only Versions overlay for a format-only revision. Following the Archival Procedure as written, since the protection is worth having across a 926-entry restructure — but it is the one debatable cost of doing this as a versioned revision rather than an in-place reformat
 
 ## [v02.89r] — 2026-08-22 10:24:05 PM EST
 

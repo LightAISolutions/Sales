@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.40w">
+  <meta name="build-version" content="v01.41w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -271,6 +271,12 @@
     table.ov-table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
     table.ov-table caption { text-align: left; font: 400 17px/1.4 var(--ov-serif); padding-bottom: 8px; }
     .ov-spec-hd { text-align: left; font: 400 17px/1.4 var(--ov-serif); margin: 14px 0 8px; }
+    table.ov-table tr.ov-band td { border-bottom: none; padding: 14px 0 5px; font: 10px/1.5 var(--ov-mono);
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--ov-gold); }
+    table.ov-table tr.ov-band:first-child td { padding-top: 4px; }
+    table.ov-table.banded { table-layout: fixed; }
+    table.ov-table.banded td.k { white-space: normal; }
+    table.ov-table td.k.banded { padding-left: 14px; }
     table.ov-table th {
       text-align: left; font: 10px/1.3 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--ov-faint); border-bottom: 1px solid var(--ov-line2); padding: 8px 14px 8px 0;
@@ -375,6 +381,9 @@
     #ov-prev-doc .d-cat { font: 10px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: #8a6d1f; margin: 12px 0 2px; }
     #ov-prev-doc .d-role { font: 10.5px/1.5 var(--ov-mono); color: #8a6d1f; text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 3px; }
     #ov-prev-doc .d-note { color: #6d6758; font-size: 12px; font-style: italic; }
+    #ov-prev-doc tr.d-band td { border-bottom: none; padding: 9px 0 2px; font: 9px/1.5 var(--ov-mono);
+      letter-spacing: 0.13em; text-transform: uppercase; color: #8a6d1f; }
+    #ov-prev-doc tr.d-band td:first-child { white-space: normal; }
     #ov-prev-doc ol { padding-left: 20px; font-size: 11.5px; color: #444035; }
     #ov-prev-doc a { color: #305a8a; text-decoration: none; word-break: break-all; }
     #ov-prev-doc .d-foot { margin-top: 26px; border-top: 1px solid #cfc8b4; padding-top: 9px; font: 10px/1.6 var(--ov-mono); color: #6d6758; }
@@ -1603,14 +1612,23 @@ function ovReloadFresh() {
       if (row && typeof row === 'object') {
         var l = String(row.label == null ? '' : row.label).trim();
         var v = String(row.value == null ? '' : row.value).trim();
-        return (l || v) ? { label: l, value: v } : null;
+        var b = String(row.band == null ? '' : row.band).trim();
+        return (l || v) ? { band: b, label: l, value: v } : null;
       }
       var t = String(row == null ? '' : row).trim();
-      return t ? { label: '', value: t } : null;
+      return t ? { band: '', label: '', value: t } : null;
     }
     // Spec groups reduced to what will actually render. A group survives only if
     // it has at least one row with text or a note; when nothing survives, callers
     // omit the section heading rather than printing an empty one.
+    // True when this row opens a new band (v01.41w). Bands are carried on the
+    // rows themselves rather than nested, so a profile written before banding —
+    // or any archived snapshot — simply has no bands and renders flat.
+    function ovSpecBandOpens(rows, i) {
+      var b = rows[i].band;
+      if (!b) return false;
+      return i === 0 || rows[i - 1].band !== b;
+    }
     function ovSpecGroups(p) {
       return ((p && p.technicalSpecs) || []).map(function(g) {
         var rows = ((g && g.specs) || []).map(ovSpecRow).filter(Boolean);
@@ -1908,12 +1926,32 @@ function ovReloadFresh() {
         specGroups.forEach(function(spec) {
           if (spec.rows.length) {
             var wrap = ovEl('div', 'ov-table-wrap');
-            var t = ovEl('table', 'ov-table');
+            // A banded table gets a fixed label column so every product table in
+            // the section shares one value-column edge; without it each table
+            // sizes its own label column and the values step in and out.
+            var anyBand = spec.rows.some(function(r) { return !!r.band; });
+            var t = ovEl('table', 'ov-table' + (anyBand ? ' banded' : ''));
             if (spec.product) t.appendChild(ovEl('caption', null, (ovStyle() === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + spec.product));
-            spec.rows.forEach(function(row) {
+            if (anyBand) {
+              // The column widths come from a colgroup, not the first row —
+              // under table-layout:fixed the first row is a colspan=2 band
+              // header, which would otherwise split the table 50/50.
+              var cg = ovEl('colgroup');
+              var c1 = ovEl('col'); c1.style.width = '208px';
+              cg.appendChild(c1); cg.appendChild(ovEl('col'));
+              t.appendChild(cg);
+            }
+            spec.rows.forEach(function(row, ri) {
+              if (ovSpecBandOpens(spec.rows, ri)) {
+                var btr = ovEl('tr', 'ov-band');
+                var btd = ovEl('td', null, row.band);
+                btd.colSpan = 2;
+                btr.appendChild(btd);
+                t.appendChild(btr);
+              }
               var tr = ovEl('tr');
               if (row.label) {
-                tr.appendChild(ovEl('td', 'k', row.label));
+                tr.appendChild(ovEl('td', 'k' + (row.band ? ' banded' : ''), row.label));
                 tr.appendChild(ovEl('td', null, row.value));
               } else {
                 // Statement row — no label to pair it with, so it spans the table
@@ -3519,6 +3557,14 @@ function ovReloadFresh() {
       var t = ovEl('table');
       pairs.forEach(function(pair) {
         if (!pair[1]) return;
+        // pair[2], when present, opens a new category band above this row
+        if (pair[2]) {
+          var btr = ovEl('tr', 'd-band');
+          var btd = ovEl('td', null, pair[2]);
+          btd.colSpan = 2;
+          btr.appendChild(btd);
+          t.appendChild(btr);
+        }
         var tr = ovEl('tr');
         if (pair[0]) {
           tr.appendChild(ovEl('td', 'k', pair[0]));
@@ -3612,7 +3658,9 @@ function ovReloadFresh() {
         docSpecGroups.forEach(function(spec) {
           if (spec.product) doc.appendChild(ovEl('h3', null, (sty === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + spec.product));
           if (spec.rows.length) {
-            doc.appendChild(ovDocFacts(spec.rows.map(function(row) { return [row.label, row.value]; })));
+            doc.appendChild(ovDocFacts(spec.rows.map(function(row, ri) {
+              return [row.label, row.value, ovSpecBandOpens(spec.rows, ri) ? row.band : ''];
+            })));
           }
           if (spec.notes) doc.appendChild(ovEl('p', 'd-note', spec.notes));
         });
@@ -3743,6 +3791,7 @@ function ovReloadFresh() {
         + '.d-legal,.d-note{font-style:italic;color:#6d6758;font-size:10pt;}'
         + '.d-meta,.d-foot,.d-devdate{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;}'
         + '.d-role,.d-cat{font-family:Consolas,monospace;font-size:8pt;color:#8a6d1f;text-transform:uppercase;}'
+        + 'tr.d-band td{border-bottom:none;padding:6pt 0 1pt;font-family:Consolas,monospace;font-size:8pt;letter-spacing:1pt;text-transform:uppercase;color:#8a6d1f;}'
         + 'ol{font-size:9pt;color:#444035;} a{color:#305a8a;text-decoration:none;}'
         + '.ov-sty-banner{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;border:1pt solid #cfc8b4;padding:3pt 6pt;}'
         // Paginated export (v01.35w): chapters and the ToC each open a fresh

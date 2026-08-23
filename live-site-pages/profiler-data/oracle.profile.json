@@ -3,7 +3,9 @@
   "slug": "oracle",
   "name": "Oracle",
   "legalName": "Oracle Corporation",
-  "categories": ["hyperscaler"],
+  "categories": [
+    "hyperscaler"
+  ],
   "hq": "Austin, TX, USA",
   "ticker": "NYSE: ORCL",
   "founded": "1977",
@@ -18,7 +20,10 @@
       "description": "GPU superclusters up to 131,072 NVIDIA B200 or >100,000 GB200 superchips per cluster; OCI Zettascale10 (announced October 2025) scales to 800,000 NVIDIA GPUs and 16 zettaFLOPS peak at multi-gigawatt power, with GPUs clustered within a two-kilometer radius and Oracle's Acceleron RoCE networking (400G/800G). Launch partner for AMD Instinct MI450 superclusters (initial 50,000 GPUs from Q3 CY2026 on Helios racks).",
       "positioning": "A ~3-4% share cloud by general-purpose measures (Synergy-derived), but the #1 external AI-compute landlord — competing with CoreWeave-class neoclouds for frontier-lab workloads more than with AWS/Azure/GCP platform businesses.",
       "soldThrough": "Multi-year committed cloud contracts; increasingly structured with customer GPU prepayment or customer-supplied GPUs ($75B of RPO).",
-      "targetSegments": ["Frontier AI labs (OpenAI, Meta, NVIDIA, xAI commitments named)", "Enterprises via multicloud (database on AWS/Azure/GCP)"],
+      "targetSegments": [
+        "Frontier AI labs (OpenAI, Meta, NVIDIA, xAI commitments named)",
+        "Enterprises via multicloud (database on AWS/Azure/GCP)"
+      ],
       "roadmap": "Company-published OCI revenue plan: $18B (FY2026) → $32B → $73B → $114B → $144B (FY2030). Zettascale10 availability 2H CY2026."
     },
     {
@@ -26,7 +31,10 @@
       "description": "Oracle-partnered Stargate sites: Abilene TX (flagship — 8 buildings, 1,100 acres; ~42% of capacity delivered as of June 2026; ~0.3 GW live per independent tracking, building to 1.2 GW by Q4 2026), Shackelford County TX (2.0 GW, off-grid genset microgrid, delivery from 1H 2027), Doña Ana County NM (2.2 GW, Bloom fuel-cell microgrids), Port Washington WI (1.3 GW with Vantage, ~70% zero-emission), Saline Township MI (1.4 GW, DTE grid + BESS, Related Digital/Blackstone/PIMCO financing). Oracle owns the hardware at all US Stargate sites except the two SoftBank-led ones.",
       "positioning": "Operational responsibility sits with OpenAI, build execution with developers (Crusoe, Vantage, STACK, Related), power with utilities and on-site vendors — Oracle is the contracting hub that turns OpenAI demand into physical campuses.",
       "soldThrough": "Long-term cloud contracts backed by project-financed campuses (~$38B of adjacent Vantage debt reported).",
-      "targetSegments": ["OpenAI/Stargate", "Multi-tenant AI capacity"],
+      "targetSegments": [
+        "OpenAI/Stargate",
+        "Multi-tenant AI capacity"
+      ],
       "roadmap": "~7 GW planned across announced sites toward the $500B/10 GW Stargate envelope; independent tracking shows ~0.3 GW operational today — the delivery gap is the central execution question."
     },
     {
@@ -34,7 +42,9 @@
       "description": "The legacy franchise: Oracle Database (MultiCloud AI Database growing 404-531% off a small base as it deploys inside AWS/Azure/GCP datacenters), Fusion/NetSuite SaaS ($15.9B FY2026, +11%), and 211 live-and-planned cloud regions. This ~70%-gross-margin business funds and collateralizes the AI infrastructure expansion.",
       "positioning": "The cash cow whose margin profile the AI buildout dilutes — leaked internals put GPU-rental gross margins at ~14-16% versus ~70% for the legacy stack.",
       "soldThrough": "Enterprise licensing, SaaS subscriptions, multicloud partnerships.",
-      "targetSegments": ["Enterprise IT globally"],
+      "targetSegments": [
+        "Enterprise IT globally"
+      ],
       "roadmap": "FY2027 guidance ~$90B total revenue (+27-29%) with cloud growing 57-64%; CFO guided gross margin to step down on data-center ramp mix."
     }
   ],
@@ -113,15 +123,68 @@
   "technicalSpecs": [
     {
       "product": "OCI Zettascale10",
-      "specs": ["Up to 800,000 NVIDIA GPUs; 16 zettaFLOPS peak", "Multi-gigawatt power scale; GPUs within a 2 km radius", "Oracle Acceleron RoCE networking (RoCEv2, 400G/800G, LPO/LRO optics)"]
+      "specs": [
+        {
+          "band": "Scale",
+          "label": "GPUs & throughput",
+          "value": "Up to 800,000 NVIDIA GPUs; 16 zettaFLOPS peak"
+        },
+        {
+          "band": "Physical",
+          "label": "Power & topology",
+          "value": "Multi-gigawatt power scale; GPUs within a 2 km radius"
+        },
+        {
+          "band": "Networking",
+          "label": "Fabric",
+          "value": "Oracle Acceleron RoCE networking (RoCEv2, 400G/800G, LPO/LRO optics)"
+        }
+      ]
     },
     {
       "product": "OCI Supercluster (current generation)",
-      "specs": ["Up to 131,072 B200 / >100,000 GB200 superchips / 16,384 MI300X", "RDMA latency 2.5-9.1 µs; up to 3,200 Gb/s cluster bandwidth", "GB200 NVL72 racks at Abilene; AMD Helios racks for MI450"]
+      "specs": [
+        {
+          "band": "Scale",
+          "label": "Cluster sizes",
+          "value": "Up to 131,072 B200 / >100,000 GB200 superchips / 16,384 MI300X"
+        },
+        {
+          "band": "Networking",
+          "label": "Latency & bandwidth",
+          "value": "RDMA latency 2.5-9.1 µs; up to 3,200 Gb/s cluster bandwidth"
+        },
+        {
+          "band": "Deployments",
+          "label": "Racks",
+          "value": "GB200 NVL72 racks at Abilene; AMD Helios racks for MI450"
+        }
+      ]
     },
     {
       "product": "Stargate campus power architectures (as disclosed)",
-      "specs": ["Abilene: ERCOT grid + GE Vernova gas turbines with SCR (~360 MW on-site per independent reporting)", "Shackelford: fully off-grid reciprocating-engine microgrid, 115 MW live pre-delivery", "Doña Ana: Bloom SOFC microgrids up to 2.45 GW, grid-independent", "Saline Township: DTE grid + ~$300M new battery storage; Port Washington: ~70% wind/solar/battery (~2,000 MW zero-emission additions)"]
+      "specs": [
+        {
+          "band": "Grid + on-site",
+          "label": "Abilene",
+          "value": "ERCOT grid + GE Vernova gas turbines with SCR (~360 MW on-site per independent reporting)"
+        },
+        {
+          "band": "Off-grid",
+          "label": "Shackelford",
+          "value": "fully off-grid reciprocating-engine microgrid, 115 MW live pre-delivery"
+        },
+        {
+          "band": "Off-grid",
+          "label": "Doña Ana",
+          "value": "Bloom SOFC microgrids up to 2.45 GW, grid-independent"
+        },
+        {
+          "band": "Grid + storage",
+          "label": "Saline Township and Port Washington",
+          "value": "DTE grid + ~$300M new battery storage; Port Washington: ~70% wind/solar/battery (~2,000 MW zero-emission additions)"
+        }
+      ]
     }
   ],
   "decisionMakers": [
@@ -160,7 +223,9 @@
       ]
     },
     {
-      "name": "Lawrence J. Ellison", "photo": "images/execs/oracle-ellison.png", "photoCredit": "Oracle PR Hartmann Studios, CC BY 2.0, via Wikimedia Commons",
+      "name": "Lawrence J. Ellison",
+      "photo": "images/execs/oracle-ellison.png",
+      "photoCredit": "Oracle PR Hartmann Studios, CC BY 2.0, via Wikimedia Commons",
       "title": "Executive Chairman & CTO (co-founder)",
       "background": [
         "Remains the controlling personality and largest shareholder; the Stargate bet carries his imprimatur"
@@ -174,44 +239,130 @@
       {
         "period": "FY2025 (ended 5/31/2025)",
         "metrics": [
-          {"name": "Revenue", "actual": "$57.4B (+8%)", "expected": "Q2/Q3 missed, Q1/Q4 beat", "verdict": "inline", "result": "A coin-flip year: 2 beats, 2 misses, all small; Q4 RPO $138B (+41%) was the early signal"},
-          {"name": "RPO", "actual": "$138B (+41%)", "expected": "—", "verdict": "beat", "result": "Pre-Stargate baseline for the backlog explosion that followed"}
+          {
+            "name": "Revenue",
+            "actual": "$57.4B (+8%)",
+            "expected": "Q2/Q3 missed, Q1/Q4 beat",
+            "verdict": "inline",
+            "result": "A coin-flip year: 2 beats, 2 misses, all small; Q4 RPO $138B (+41%) was the early signal"
+          },
+          {
+            "name": "RPO",
+            "actual": "$138B (+41%)",
+            "expected": "—",
+            "verdict": "beat",
+            "result": "Pre-Stargate baseline for the backlog explosion that followed"
+          }
         ],
         "commentary": "The last conventionally-judged year. From FY2026 the stock traded on RPO, capex, and financing — not beat/miss."
       },
       {
         "period": "FY2026 (ended 5/31/2026)",
         "metrics": [
-          {"name": "Revenue", "actual": "$67.4B (+17%)", "expected": "Q1 missed both lines; Q2 EPS beat/revenue miss; Q3-Q4 beat both", "verdict": "beat", "result": "Q4: $19.2B (+21%) vs $19.1B expected; OCI $18.1B (+77%) for the year"},
-          {"name": "RPO", "actual": "$638B (+363%)", "expected": "consensus ~$502B at Q2", "verdict": "beat", "result": "$455B → $523B → $553B → $638B through the year; $75B from GPU prepayment/customer-supplied structures"},
-          {"name": "Free cash flow", "actual": "-$23.7B", "expected": "—", "verdict": "miss", "result": "Capex $55.7B (+162%) vs $50B guided in March; $43B debt + $5B equity raised"}
+          {
+            "name": "Revenue",
+            "actual": "$67.4B (+17%)",
+            "expected": "Q1 missed both lines; Q2 EPS beat/revenue miss; Q3-Q4 beat both",
+            "verdict": "beat",
+            "result": "Q4: $19.2B (+21%) vs $19.1B expected; OCI $18.1B (+77%) for the year"
+          },
+          {
+            "name": "RPO",
+            "actual": "$638B (+363%)",
+            "expected": "consensus ~$502B at Q2",
+            "verdict": "beat",
+            "result": "$455B → $523B → $553B → $638B through the year; $75B from GPU prepayment/customer-supplied structures"
+          },
+          {
+            "name": "Free cash flow",
+            "actual": "-$23.7B",
+            "expected": "—",
+            "verdict": "miss",
+            "result": "Capex $55.7B (+162%) vs $50B guided in March; $43B debt + $5B equity raised"
+          }
         ],
         "commentary": "Backlog quadrupled while free cash flow went deeply negative. Q1's RPO shock added 30-36% in a day; Q2's capex disclosure erased ~$67B of market cap in a day; Q4's financing plans cut ~10%. Oracle became the market's live experiment in debt-funded AI landlording."
       },
       {
         "period": "FY2027 guidance",
         "metrics": [
-          {"name": "Revenue", "actual": "~$90B guided (+27-29%)", "expected": "cloud +57-64%", "verdict": "inline", "result": "Non-GAAP EPS ~$8.05; ~$40B additional financing planned including a $20B ATM equity program"}
+          {
+            "name": "Revenue",
+            "actual": "~$90B guided (+27-29%)",
+            "expected": "cloud +57-64%",
+            "verdict": "inline",
+            "result": "Non-GAAP EPS ~$8.05; ~$40B additional financing planned including a $20B ATM equity program"
+          }
         ],
         "commentary": "S&P models FY2027 capex of $90-95B and an FCF deficit widening to ~$42B. The OpenAI contract begins contributing revenue in 2027 — the collectability question converts from theoretical to observable."
       }
     ]
   },
   "sources": [
-    {"label": "Oracle Q4 FY2026 earnings release", "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10/", "date": "2026-06-10"},
-    {"label": "Project Jupiter — Bloom fuel-cell announcement", "url": "https://www.oracle.com/news/announcement/oracle-borderplex-and-bloom-energy-to-power-project-jupiter-with-fuel-cell-technology-2026-04-27/", "date": "2026-04-27"},
-    {"label": "CY2026 financing plan", "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-announces-Equity-and-Debt-Financing-Plan-for-Calendar-Year-2026/default.aspx", "date": "2026-02-02"},
-    {"label": "CNBC — CDS recovery after financing plan", "url": "https://www.cnbc.com/2026/02/02/oracles-credit-default-swaps-are-plummeting-after-financing-plans.html", "date": "2026-02-02"},
-    {"label": "Oracle energy/community commitments post", "url": "https://www.oracle.com/news/announcement/blog/oracle-ai-infrastructure-in-2026-and-our-commitment-to-local-communities-2026-01-26/", "date": "2026-01-26"},
-    {"label": "Yahoo/analysts — $300B OpenAI bet coverage", "url": "https://finance.yahoo.com/news/oracle-made-a-300-billion-bet-on-openai-its-paying-the-price-205441863.html", "date": "2025-12"},
-    {"label": "OCI Zettascale10 announcement", "url": "https://www.oracle.com/news/announcement/ai-world-oracle-unveils-next-generation-oci-zettascale10-cluster-for-ai-2025-10-14/", "date": "2025-10-14"},
-    {"label": "CNBC — leaked GPU-rental margins", "url": "https://www.cnbc.com/2025/10/07/oracle-stock-nvidia-chip-margins.html", "date": "2025-10-07"},
-    {"label": "OpenAI — five new Stargate sites", "url": "https://openai.com/index/five-new-stargate-sites/", "date": "2025-09-23"},
-    {"label": "Oracle Q1 FY2026 earnings release (RPO $455B + OCI plan)", "url": "https://www.oracle.com/news/announcement/q1fy26-earnings-release-2025-09-09/", "date": "2025-09-09"},
-    {"label": "Floodlight — Abilene permitting investigation", "url": "https://floodlightnews.org/ai-data-centers-texas-pollution-loophole/", "date": "2025-07"},
-    {"label": "Oracle data-center hub (site power detail)", "url": "https://www.oracle.com/data-centers/"},
-    {"label": "Epoch AI — Stargate site tracking", "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"}
+    {
+      "label": "Oracle Q4 FY2026 earnings release",
+      "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10/",
+      "date": "2026-06-10"
+    },
+    {
+      "label": "Project Jupiter — Bloom fuel-cell announcement",
+      "url": "https://www.oracle.com/news/announcement/oracle-borderplex-and-bloom-energy-to-power-project-jupiter-with-fuel-cell-technology-2026-04-27/",
+      "date": "2026-04-27"
+    },
+    {
+      "label": "CY2026 financing plan",
+      "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-announces-Equity-and-Debt-Financing-Plan-for-Calendar-Year-2026/default.aspx",
+      "date": "2026-02-02"
+    },
+    {
+      "label": "CNBC — CDS recovery after financing plan",
+      "url": "https://www.cnbc.com/2026/02/02/oracles-credit-default-swaps-are-plummeting-after-financing-plans.html",
+      "date": "2026-02-02"
+    },
+    {
+      "label": "Oracle energy/community commitments post",
+      "url": "https://www.oracle.com/news/announcement/blog/oracle-ai-infrastructure-in-2026-and-our-commitment-to-local-communities-2026-01-26/",
+      "date": "2026-01-26"
+    },
+    {
+      "label": "Yahoo/analysts — $300B OpenAI bet coverage",
+      "url": "https://finance.yahoo.com/news/oracle-made-a-300-billion-bet-on-openai-its-paying-the-price-205441863.html",
+      "date": "2025-12"
+    },
+    {
+      "label": "OCI Zettascale10 announcement",
+      "url": "https://www.oracle.com/news/announcement/ai-world-oracle-unveils-next-generation-oci-zettascale10-cluster-for-ai-2025-10-14/",
+      "date": "2025-10-14"
+    },
+    {
+      "label": "CNBC — leaked GPU-rental margins",
+      "url": "https://www.cnbc.com/2025/10/07/oracle-stock-nvidia-chip-margins.html",
+      "date": "2025-10-07"
+    },
+    {
+      "label": "OpenAI — five new Stargate sites",
+      "url": "https://openai.com/index/five-new-stargate-sites/",
+      "date": "2025-09-23"
+    },
+    {
+      "label": "Oracle Q1 FY2026 earnings release (RPO $455B + OCI plan)",
+      "url": "https://www.oracle.com/news/announcement/q1fy26-earnings-release-2025-09-09/",
+      "date": "2025-09-09"
+    },
+    {
+      "label": "Floodlight — Abilene permitting investigation",
+      "url": "https://floodlightnews.org/ai-data-centers-texas-pollution-loophole/",
+      "date": "2025-07"
+    },
+    {
+      "label": "Oracle data-center hub (site power detail)",
+      "url": "https://www.oracle.com/data-centers/"
+    },
+    {
+      "label": "Epoch AI — Stargate site tracking",
+      "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

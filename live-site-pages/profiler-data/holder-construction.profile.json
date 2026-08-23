@@ -191,20 +191,52 @@
     {
       "product": "Data-center delivery fleet",
       "specs": [
-        "610+ data & telecom projects; $76B volume; 12.9 GW delivered per current site copy — with '6.4 GW+ across the US' cited on the same page (internal inconsistency; treat 6.4 GW US-delivered as the conservative figure)",
-        "EdgeCore Mesa AZ: 3.1M sq ft, ≥450 MW critical load, water-neutral air-cooled design, $1.9B award",
-        "Google Fort Wayne IN: ~$2B, 700+ acres; Google Mustang (New Albany OH) run under a formal OSHA Strategic Partnership — TCIR target 10% below the 1.9 BLS construction baseline, DART 1.1, site-wide 6-ft fall protection, OSHA-30 supervisors, daily audits, union trades signatory",
-        "Independent estimates: more hyperscale sq ft built than any North American GC; $3-4B/yr data-center revenue; $1.4B of data-center revenue as far back as 2017 (then #1)",
-        "Projects in 30+ states (company); current projects in 15+ states (2026)"
+        {
+          "band": "Install base",
+          "label": "Delivered",
+          "value": "610+ data & telecom projects; $76B volume; 12.9 GW delivered per current site copy — with '6.4 GW+ across the US' cited on the same page (internal inconsistency; treat 6.4 GW US-delivered as the conservative figure)"
+        },
+        {
+          "band": "Reference projects",
+          "label": "EdgeCore Mesa AZ",
+          "value": "3.1M sq ft, ≥450 MW critical load, water-neutral air-cooled design, $1.9B award"
+        },
+        {
+          "band": "Reference projects",
+          "label": "Google Fort Wayne IN",
+          "value": "~$2B, 700+ acres; Google Mustang (New Albany OH) run under a formal OSHA Strategic Partnership — TCIR target 10% below the 1.9 BLS construction baseline, DART 1.1, site-wide 6-ft fall protection, OSHA-30 supervisors, daily audits, union trades signatory"
+        },
+        {
+          "band": "Market position",
+          "label": "Independent estimates",
+          "value": "more hyperscale sq ft built than any North American GC; $3-4B/yr data-center revenue; $1.4B of data-center revenue as far back as 2017 (then #1)"
+        },
+        {
+          "band": "Footprint",
+          "label": "States",
+          "value": "Projects in 30+ states (company); current projects in 15+ states (2026)"
+        }
       ],
       "notes": "Confirmed data-center geographies: Mesa AZ, Fort Wayne IN, New Albany OH, Fort Worth TX, Huntsville AL; Aurora CO (QTS DEN1) and Northern Virginia (CloudHQ) are low-confidence associations"
     },
     {
       "product": "Self-perform trades and prefabrication",
       "specs": [
-        "Self-perform scope: structural concrete, rough carpentry, hot-aisle containment, modular wall systems, site maintenance, site safety systems",
-        "ATL Concourse D modular program: 19 prefab modules built off-site, transported ~1 mile across an active airfield; widens the concourse from 60 ft to ~100 ft; first module set April 2024, completion 2029, 34 widened gates",
-        "VDC/BIM coordination and preconstruction are listed core services; no independent trade-press tech features exist — the firm does not court coverage"
+        {
+          "band": "Self-perform",
+          "label": "Scope",
+          "value": "structural concrete, rough carpentry, hot-aisle containment, modular wall systems, site maintenance, site safety systems"
+        },
+        {
+          "band": "Prefabrication",
+          "label": "ATL Concourse D modular program",
+          "value": "19 prefab modules built off-site, transported ~1 mile across an active airfield; widens the concourse from 60 ft to ~100 ft; first module set April 2024, completion 2029, 34 widened gates"
+        },
+        {
+          "band": "Technology",
+          "label": "VDC/BIM",
+          "value": "coordination and preconstruction are listed core services; no independent trade-press tech features exist — the firm does not court coverage"
+        }
       ],
       "notes": "Hot-aisle containment as an in-house trade is a data-center-specific vertical-integration marker few GCs share"
     }
@@ -433,6 +465,6 @@
       "url": "https://www.worldconstructionnetwork.com/projects/mercedes-benz-stadium-atlanta-georgia/"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

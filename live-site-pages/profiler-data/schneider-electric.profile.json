@@ -3,7 +3,9 @@
   "slug": "schneider-electric",
   "name": "Schneider Electric",
   "legalName": "Schneider Electric SE",
-  "categories": ["supplier"],
+  "categories": [
+    "supplier"
+  ],
   "hq": "Rueil-Malmaison, France",
   "ticker": "EPA: SU",
   "founded": "1836",
@@ -18,7 +20,10 @@
       "description": "Galaxy VXL flagship (December 2024): 500-1,250 kW per 3-phase modular frame using 125 kW/3U power modules — 1.25 MW in 1.2 m² (claimed 52% footprint improvement), parallelable to 5 MW, up to 99% efficiency in eConversion mode, touch-safe Live Swap module replacement, IEC 62443-4-2 cybersecurity certification. APC Smart-UPS anchors the single-phase/edge base.",
       "positioning": "Company-claimed 'industry's most compact, high-density power protection'; top-5 UPS oligopoly member (with Vertiv, Eaton, Huawei, ABB holding ~40-42% of data-center UPS).",
       "soldThrough": "Direct plus ~1 million channel partners; EcoStruxure IT monitoring attach.",
-      "targetSegments": ["AI, colocation, hyperscale", "Large critical infrastructure"],
+      "targetSegments": [
+        "AI, colocation, hyperscale",
+        "Large critical infrastructure"
+      ],
       "roadmap": "800 VDC 'sidecar' power system in development: AC-to-800VDC conversion for racks up to 1.2 MW with modular shelves and integrated energy storage for backup and load smoothing — no commercial date disclosed."
     },
     {
@@ -26,7 +31,10 @@
       "description": "CDUs from 105 kW to 2.5 MW (NVIDIA-certified; company states its cooling backs 6 of the world's top-10 supercomputers), ChilledDoor rear-door heat exchangers to 75 kW/rack, liquid-to-air HDUs (100 kW in a 600 mm footprint), dynamic cold plates, chillers, and EcoStruxure thermal software. Manufacturing tripled via a new Buffalo NY plant plus Italy and India expansions; 600+ cooling field techs in training.",
       "positioning": "Company claims the 'largest installed base of high-density liquid cooling' and the only silicon-level NVIDIA collaboration among cooling providers — contested ground, with Vertiv assembling equivalent scope and Eaton buying Boyd for $9.5B.",
       "soldThrough": "Direct and OEM; acquired 75% for $850M (option on the remaining 25% by 2028).",
-      "targetSegments": ["HPC/AI direct-to-chip cooling", "Hyperscale, colo, edge retrofits"],
+      "targetSegments": [
+        "HPC/AI direct-to-chip cooling",
+        "Hyperscale, colo, edge retrofits"
+      ],
       "roadmap": "MCDU-45/55 corridor-installed CDUs ramping production early 2026."
     },
     {
@@ -34,7 +42,10 @@
       "description": "The design franchise: GB200 NVL72 design (132 kW racks, December 2024), GB300 NVL72 design (142 kW racks, up to 1,152 GPUs per hall, ANSI + IEC variants, September 2025), the industry-first integrated power-management + liquid-cooling controls design interoperable with NVIDIA Mission Control, and gigawatt-scale AI-factory blueprints (March 2026 GTC) with ETAP electrical models and AVEVA software embedded in NVIDIA's Omniverse DSX Blueprint — including Vera Rubin NVL72 (480 VAC, 45°C TCS loop) and tokens-per-MW operating-point optimization.",
       "positioning": "The most complete design-led sales machine among incumbents; conversion to orders is inferred rather than disclosed (no design-linked bookings published), but triple-digit DC demand growth and the $373M Digital Realty agreement are consistent with it working.",
       "soldThrough": "Reference designs de-risk engineered project sales across the portfolio.",
-      "targetSegments": ["NVIDIA-ecosystem AI factories", "Colo/hyperscale design teams"],
+      "targetSegments": [
+        "NVIDIA-ecosystem AI factories",
+        "Colo/hyperscale design teams"
+      ],
       "roadmap": "Omniverse-integrated digital twins position Schneider for simulation-first campus procurement."
     },
     {
@@ -42,7 +53,10 @@
       "description": "EcoStruxure Pod (8-12 rack increments) with a prefabricated modular architecture and an OCP-inspired rack system supporting GB200 NVL72 (June 2025, GTC Paris); micro/row/all-in-one builds; MV/LV switchgear, busway, and panels called out as strong data-center sellers. US expansion: >$700M through 2027 across eight sites (El Paso switchgear, Fairfield OH, Houston, Raleigh, Columbia MO).",
       "positioning": "Prefab strength cited in Q4 2025 systems growth; competes directly with Eaton-Fibrebond and Vertiv OneCore/SmartRun.",
       "soldThrough": "Engineered systems projects (34% of FY2025 revenue was Systems).",
-      "targetSegments": ["Hyperscale and colo buildouts", "EU sovereign AI programs"],
+      "targetSegments": [
+        "Hyperscale and colo buildouts",
+        "EU sovereign AI programs"
+      ],
       "roadmap": "Energy Management year-end backlog €21.3B (+21%) with the largest increase in North America systems on data-center demand."
     },
     {
@@ -50,7 +64,10 @@
       "description": "AVEVA industrial software (ARR +11%), ETAP electrical digital twin (the model layer inside the NVIDIA blueprints), RIB construction software; pending: Cognite ($3.1B, industrial DataOps) and ~90% of AiDASH (~$350M, satellite+AI grid risk) joining the One Digital Grid platform. AlphaStruxure delivers energy-as-a-service microgrids.",
       "positioning": "The software layer differentiates the design-led model — electrical simulation, industrial data, and grid analytics under one roof; no direct equivalent at Vertiv or Eaton.",
       "soldThrough": "Subscription/SaaS; 19% of FY2025 revenue was Software & Services.",
-      "targetSegments": ["Data-center design and operations", "Utilities and industry"],
+      "targetSegments": [
+        "Data-center design and operations",
+        "Utilities and industry"
+      ],
       "roadmap": "Cognite closes into the AVEVA orbit; agentic-AI operations (NVIDIA Nemotron alarm-management pilots) in testing."
     }
   ],
@@ -129,19 +146,83 @@
   "technicalSpecs": [
     {
       "product": "Galaxy VXL UPS",
-      "specs": ["500-1,250 kW per frame (400V); 125 kW per 3U module", "1,042 kW/m² power density; up to 5 MW with 4 paralleled units", "Up to 99% efficiency (eConversion); Live Swap; IEC 62443-4-2 certified"]
+      "specs": [
+        {
+          "band": "Power",
+          "label": "Ratings",
+          "value": "500-1,250 kW per frame (400V); 125 kW per 3U module"
+        },
+        {
+          "band": "Power",
+          "label": "Density & scaling",
+          "value": "1,042 kW/m² power density; up to 5 MW with 4 paralleled units"
+        },
+        {
+          "band": "Performance",
+          "label": "Efficiency & serviceability",
+          "value": "Up to 99% efficiency (eConversion); Live Swap; IEC 62443-4-2 certified"
+        }
+      ]
     },
     {
       "product": "Motivair liquid cooling",
-      "specs": ["CDUs 105 kW - 2.5 MW; NVIDIA-certified", "ChilledDoor RDHx to 75 kW/rack; HDU 100 kW in 600 mm width", "Claims 6 of world's top-10 supercomputers cooled"]
+      "specs": [
+        {
+          "band": "CDUs",
+          "label": "Range",
+          "value": "CDUs 105 kW - 2.5 MW; NVIDIA-certified"
+        },
+        {
+          "band": "Rack cooling",
+          "label": "Doors & units",
+          "value": "ChilledDoor RDHx to 75 kW/rack; HDU 100 kW in 600 mm width"
+        },
+        {
+          "band": "Install base",
+          "label": "Claim",
+          "value": "Claims 6 of world's top-10 supercomputers cooled"
+        }
+      ]
     },
     {
       "product": "NVIDIA reference designs",
-      "specs": ["GB200 NVL72: 132 kW/rack (Dec 2024); GB300 NVL72: 142 kW/rack, 1,152 GPUs per hall (Sep 2025)", "Vera Rubin NVL72: 480 VAC supply, 45°C TCS loop (Mar 2026)", "Integrated power + cooling controls design interoperable with NVIDIA Mission Control (MQTT OT/IT bridge)"]
+      "specs": [
+        {
+          "band": "Blackwell",
+          "label": "Rack designs",
+          "value": "GB200 NVL72: 132 kW/rack (Dec 2024); GB300 NVL72: 142 kW/rack, 1,152 GPUs per hall (Sep 2025)"
+        },
+        {
+          "band": "Rubin",
+          "label": "Vera Rubin NVL72",
+          "value": "480 VAC supply, 45°C TCS loop (Mar 2026)"
+        },
+        {
+          "band": "Controls",
+          "label": "Integration",
+          "value": "Integrated power + cooling controls design interoperable with NVIDIA Mission Control (MQTT OT/IT bridge)"
+        }
+      ]
     },
     {
       "product": "800 VDC sidecar (roadmap)",
-      "specs": ["AC → 800 VDC conversion for racks up to 1.2 MW", "Modular power-conversion shelves; integrated energy storage for backup and load smoothing", "Live Swap maintenance; no commercial date disclosed"]
+      "specs": [
+        {
+          "band": "Conversion",
+          "label": "Topology",
+          "value": "AC → 800 VDC conversion for racks up to 1.2 MW"
+        },
+        {
+          "band": "Build",
+          "label": "Modules",
+          "value": "Modular power-conversion shelves; integrated energy storage for backup and load smoothing"
+        },
+        {
+          "band": "Status",
+          "label": "Availability",
+          "value": "Live Swap maintenance; no commercial date disclosed"
+        }
+      ]
     }
   ],
   "decisionMakers": [
@@ -178,7 +259,9 @@
       ]
     },
     {
-      "name": "Jean-Pascal Tricoire", "photo": "images/execs/schneider-electric-tricoire.jpg", "photoCredit": "Richter Frank-Jurgen, CC BY-SA 2.0, via Wikimedia Commons",
+      "name": "Jean-Pascal Tricoire",
+      "photo": "images/execs/schneider-electric-tricoire.jpg",
+      "photoCredit": "Richter Frank-Jurgen, CC BY-SA 2.0, via Wikimedia Commons",
       "title": "Chairman",
       "background": [
         "Long-time CEO (2006-2023) turned chairman; presided over both the Herweck removal and the Blum appointment"
@@ -192,44 +275,132 @@
       {
         "period": "FY2024",
         "metrics": [
-          {"name": "Revenue", "actual": "€38.15B (+8.4% organic)", "expected": "Q4 organic consensus +7.9%", "verdict": "beat", "result": "Q4 organic +12.5%; ~5% total revenue beat"},
-          {"name": "Adjusted EBITA", "actual": "€7.08B (18.6% margin)", "expected": "H2 margin consensus 18.1%", "verdict": "beat", "result": "H2 margin 18.5%; adjusted EPS ~6% beat; FCF >€4B; shares +5% on the print"}
+          {
+            "name": "Revenue",
+            "actual": "€38.15B (+8.4% organic)",
+            "expected": "Q4 organic consensus +7.9%",
+            "verdict": "beat",
+            "result": "Q4 organic +12.5%; ~5% total revenue beat"
+          },
+          {
+            "name": "Adjusted EBITA",
+            "actual": "€7.08B (18.6% margin)",
+            "expected": "H2 margin consensus 18.1%",
+            "verdict": "beat",
+            "result": "H2 margin 18.5%; adjusted EPS ~6% beat; FCF >€4B; shares +5% on the print"
+          }
         ],
         "commentary": "A clean beat year. RBC's lone Underperform rested purely on the ~40% sector premium — the valuation, not the delivery."
       },
       {
         "period": "FY2025",
         "metrics": [
-          {"name": "Revenue", "actual": "€40.15B (+8.9% organic)", "expected": "Q1 missed (€9.33B vs €9.47B); Q4 beat by ~2%", "verdict": "beat", "result": "Q4 organic +10.7% with North America Energy Management +19.4%"},
-          {"name": "Adjusted EBITA", "actual": "€7.52B (18.7%, +50bps)", "expected": "in line at group level", "verdict": "inline", "result": "Both divisions missed divisional expectations by 2-3%; group rescued by central costs. FCF record €4.64B beat (consensus €4.22B)"}
+          {
+            "name": "Revenue",
+            "actual": "€40.15B (+8.9% organic)",
+            "expected": "Q1 missed (€9.33B vs €9.47B); Q4 beat by ~2%",
+            "verdict": "beat",
+            "result": "Q4 organic +10.7% with North America Energy Management +19.4%"
+          },
+          {
+            "name": "Adjusted EBITA",
+            "actual": "€7.52B (18.7%, +50bps)",
+            "expected": "in line at group level",
+            "verdict": "inline",
+            "result": "Both divisions missed divisional expectations by 2-3%; group rescued by central costs. FCF record €4.64B beat (consensus €4.22B)"
+          }
         ],
         "commentary": "A bumpy path to a record: the April margin cut (-50bps within two months of guidance) and tariff-driven H1 gross-margin pressure gave way to a strong Q4 on triple-digit data-center demand. Initial 2026 guidance was below consensus at midpoint — later cured."
       },
       {
         "period": "H1 2026 (latest interim)",
         "metrics": [
-          {"name": "Revenue", "actual": "€21.23B (+14.0% organic; Q2 +16.5%)", "expected": "above expectations", "verdict": "beat", "result": "Q2 record €11.46B; North America +23% organic; data-center and semis demand both triple-digit"},
-          {"name": "Adjusted EBITA", "actual": "€4.09B (+22.1% organic; 19.3% margin, +120bps)", "expected": "~€3.8B", "verdict": "beat", "result": "Net income +30%; FY2026 guidance raised to +14-19% organic EBITA on +10-13% revenue"}
+          {
+            "name": "Revenue",
+            "actual": "€21.23B (+14.0% organic; Q2 +16.5%)",
+            "expected": "above expectations",
+            "verdict": "beat",
+            "result": "Q2 record €11.46B; North America +23% organic; data-center and semis demand both triple-digit"
+          },
+          {
+            "name": "Adjusted EBITA",
+            "actual": "€4.09B (+22.1% organic; 19.3% margin, +120bps)",
+            "expected": "~€3.8B",
+            "verdict": "beat",
+            "result": "Net income +30%; FY2026 guidance raised to +14-19% organic EBITA on +10-13% revenue"
+          }
         ],
         "commentary": "The strongest half in company history, with the margin expansion proving the pricing-versus-tariffs argument. The raise implies ~19.4-19.7% full-year margin — delivery against a premium multiple."
       }
     ]
   },
   "sources": [
-    {"label": "Schneider H1 2026 results release", "url": "https://www.se.com/ww/en/assets/pdf/release-hy-results-2026", "date": "2026-07-30"},
-    {"label": "Dell'Oro — DCPI market and shared #1", "url": "https://www.delloro.com/news/data-center-physical-infrastructure-market-expands-28-percent-y-y-in-1q-2026/", "date": "2026-06"},
-    {"label": "Gigawatt AI-factory blueprints (GTC 2026)", "url": "https://www.globenewswire.com/news-release/2026/03/16/3256775/0/en/schneider-electric-teams-with-nvidia-to-develop-validated-blueprints-to-design-simulate-build-operate-and-maintain-gigawatt-scale-ai-factories.html", "date": "2026-03-16"},
-    {"label": "Schneider FY2025 results release", "url": "https://www.se.com/ww/en/assets/564/document/528237/release-fy-results-2025.pdf", "date": "2026-02-26"},
-    {"label": "FY2025 vs consensus analysis (Investing.com)", "url": "https://www.investing.com/news/earnings/schneider-electric-fy25-tops-40-bln-revenue-sets-doubledigit-2026-profit-target-4526608", "date": "2026-02"},
-    {"label": "800 VDC sidecar announcement", "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-highlights-innovation-in-800-vdc-power-systems-in-support-of-nvidia%E2%80%99s-next-generation-gpus-68ecb631098fd4ea49024353/", "date": "2025-10-13"},
-    {"label": "Motivair liquid-cooling portfolio launch", "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-unveils-liquid-cooling-portfolio-with-motivair-featuring-dedicated-solutions-and-services-for-hpc-and-ai-workloads-68d69e595c9dbb622505caf3/", "date": "2025-09-26"},
-    {"label": "GB300 NVL72 + Mission Control reference designs", "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-announces-new-reference-designs-featuring-integrated-power-management-and-liquid-cooling-controls-supporting-nvidia-mission-control-and-nvidia-gb300-nvl72-68ca8fdd5e6c6f9d3a096133/", "date": "2025-09-18"},
-    {"label": "US $700M investment plan", "url": "https://www.se.com/us/en/about-us/newsroom/news/press-releases/schneider-electric-plans-to-invest-over-700-million-in-the-u-s-supporting-energy-ai-sectors-and-job-growth-67bdeb3ee4475a5955011b6a/", "date": "2025-03-25"},
-    {"label": "Galaxy VXL launch", "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-announces-galaxy-vxl-ups-the-industrys-most-compact-high-density-power-protection-system-for-ai-data-center-and-large-scale-electrical-workloads-674d295fa5833dcbf5002c43/", "date": "2024-12-02"},
-    {"label": "Utility Dive — CEO removal coverage", "url": "https://www.utilitydive.com/news/schneider-electric-replaces-ceo-peter-herweck-amid-strategic-execution-issue/732175/", "date": "2024-11-04"},
-    {"label": "Motivair acquisition announcement", "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-strengthens-its-leading-position-in-data-centers-by-acquiring-motivair-corporation-a-key-global-provider-of-advanced-liquid-cooling-solutions-6703da89b2c991087e04a56b/", "date": "2024-10-07"},
-    {"label": "Autorité de la concurrence — €207M fine", "url": "https://www.autoritedelaconcurrence.fr/en/press-release/electrical-equipment-autorite-imposes-fines-eu470-million-manufacturers-schneider", "date": "2024-10"}
+    {
+      "label": "Schneider H1 2026 results release",
+      "url": "https://www.se.com/ww/en/assets/pdf/release-hy-results-2026",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Dell'Oro — DCPI market and shared #1",
+      "url": "https://www.delloro.com/news/data-center-physical-infrastructure-market-expands-28-percent-y-y-in-1q-2026/",
+      "date": "2026-06"
+    },
+    {
+      "label": "Gigawatt AI-factory blueprints (GTC 2026)",
+      "url": "https://www.globenewswire.com/news-release/2026/03/16/3256775/0/en/schneider-electric-teams-with-nvidia-to-develop-validated-blueprints-to-design-simulate-build-operate-and-maintain-gigawatt-scale-ai-factories.html",
+      "date": "2026-03-16"
+    },
+    {
+      "label": "Schneider FY2025 results release",
+      "url": "https://www.se.com/ww/en/assets/564/document/528237/release-fy-results-2025.pdf",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "FY2025 vs consensus analysis (Investing.com)",
+      "url": "https://www.investing.com/news/earnings/schneider-electric-fy25-tops-40-bln-revenue-sets-doubledigit-2026-profit-target-4526608",
+      "date": "2026-02"
+    },
+    {
+      "label": "800 VDC sidecar announcement",
+      "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-highlights-innovation-in-800-vdc-power-systems-in-support-of-nvidia%E2%80%99s-next-generation-gpus-68ecb631098fd4ea49024353/",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "Motivair liquid-cooling portfolio launch",
+      "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-unveils-liquid-cooling-portfolio-with-motivair-featuring-dedicated-solutions-and-services-for-hpc-and-ai-workloads-68d69e595c9dbb622505caf3/",
+      "date": "2025-09-26"
+    },
+    {
+      "label": "GB300 NVL72 + Mission Control reference designs",
+      "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-announces-new-reference-designs-featuring-integrated-power-management-and-liquid-cooling-controls-supporting-nvidia-mission-control-and-nvidia-gb300-nvl72-68ca8fdd5e6c6f9d3a096133/",
+      "date": "2025-09-18"
+    },
+    {
+      "label": "US $700M investment plan",
+      "url": "https://www.se.com/us/en/about-us/newsroom/news/press-releases/schneider-electric-plans-to-invest-over-700-million-in-the-u-s-supporting-energy-ai-sectors-and-job-growth-67bdeb3ee4475a5955011b6a/",
+      "date": "2025-03-25"
+    },
+    {
+      "label": "Galaxy VXL launch",
+      "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-announces-galaxy-vxl-ups-the-industrys-most-compact-high-density-power-protection-system-for-ai-data-center-and-large-scale-electrical-workloads-674d295fa5833dcbf5002c43/",
+      "date": "2024-12-02"
+    },
+    {
+      "label": "Utility Dive — CEO removal coverage",
+      "url": "https://www.utilitydive.com/news/schneider-electric-replaces-ceo-peter-herweck-amid-strategic-execution-issue/732175/",
+      "date": "2024-11-04"
+    },
+    {
+      "label": "Motivair acquisition announcement",
+      "url": "https://www.se.com/ww/en/about-us/newsroom/news/press-releases/schneider-electric-strengthens-its-leading-position-in-data-centers-by-acquiring-motivair-corporation-a-key-global-provider-of-advanced-liquid-cooling-solutions-6703da89b2c991087e04a56b/",
+      "date": "2024-10-07"
+    },
+    {
+      "label": "Autorité de la concurrence — €207M fine",
+      "url": "https://www.autoritedelaconcurrence.fr/en/press-release/electrical-equipment-autorite-imposes-fines-eu470-million-manufacturers-schneider",
+      "date": "2024-10"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

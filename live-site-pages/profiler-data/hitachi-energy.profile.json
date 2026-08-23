@@ -3,7 +3,9 @@
   "slug": "hitachi-energy",
   "name": "Hitachi Energy",
   "legalName": "Hitachi Energy Ltd (wholly-owned subsidiary of Hitachi, Ltd., TYO: 6501; formed from ABB Power Grids acquisition)",
-  "categories": ["supplier"],
+  "categories": [
+    "supplier"
+  ],
   "hq": "Zurich, Switzerland",
   "ticker": "private (parent Hitachi TYO: 6501; listed sub Hitachi Energy India NSE: POWERINDIA)",
   "founded": "2020 (as Hitachi ABB Power Grids; full Hitachi ownership 2022)",
@@ -18,7 +20,12 @@
       "description": "Large power transformers (track record: 20+ units at 800 kV UHVDC, 500+ at 735-765 kV AC), HVDC converter transformers, distribution/traction/dry-type (CompactCool hybrid cooling marketed for data centers), special transformers, shunt reactors, and the claimed 'world's most comprehensive' component portfolio (bushings, tap changers, insulation). TXpert digital ecosystem for monitoring/predictive maintenance. 60+ transformer factories and service centers.",
       "positioning": "#1 by installed base and footprint (Blackridge, Nikkei); Siemens Energy contests on power-transformer revenue share. The scarcity is the product: lead times 30-40 months (up to 4 years without a reservation), capacity allocated via reservation agreements — the E.ON framework (up to $700M, 20,000+ transformers) is the template.",
       "soldThrough": "Direct to utilities, grid operators, industrials, and data-center developers; long-term capacity-reservation frameworks.",
-      "targetSegments": ["Transmission/distribution utilities", "Data centers", "Renewables interconnection", "Industrial"],
+      "targetSegments": [
+        "Transmission/distribution utilities",
+        "Data centers",
+        "Renewables interconnection",
+        "Industrial"
+      ],
       "roadmap": "$9B+ global capacity program: $457M South Boston VA LPT plant (2028, largest in US), Alamo TN $106M, Varennes Québec +CAD 270M, Ludvika Sweden, Zaragoza Spain, Thailand — plus $250M components (>40% to US)."
     },
     {
@@ -26,7 +33,12 @@
       "description": "HVDC Light (VSC) and HVDC Classic (LCC, to 800 kV UHVDC), MACH control platform ('the brain'), AxoniQ multi-terminal DC grids, plus FACTS: STATCOM (SVC Light), synchronous condensers (incl. hybrid units combining reactive power, short-circuit strength, and inertia). Flagship projects: 6 GW/950 km Bhadla-Fatehpur (India), 1 GW Mumbai city infeed (with Adani, commissioned March 2026), €770M Elmed Europe-North Africa link, >€2B Amprion German corridors.",
       "positioning": "~15.3% share in HVDC converter stations (#1 per Mordor); Hitachi + Siemens Energy + GE Vernova took ~60-65% of 2025 HVDC order intake. Supplied roughly half the world's HVDC projects since pioneering the technology.",
       "soldThrough": "Direct EPC-scale contracts with TSOs and developers; consortium structures.",
-      "targetSegments": ["Transmission system operators", "Offshore wind", "Interconnectors", "City infeeds"],
+      "targetSegments": [
+        "Transmission system operators",
+        "Offshore wind",
+        "Interconnectors",
+        "City infeeds"
+      ],
       "roadmap": "Energy segment orders +87% YoY in Q1 FY26 on large European HVDC awards; HVDC concentration is also the named execution risk (two-thirds of the India sub's backlog)."
     },
     {
@@ -34,7 +46,12 @@
       "description": "Grid-eXpand prefabricated modular grid-connection substations (deployed for Kauri CAB's urban Frankfurt AI data center at 110 kV), PASS hybrid switchgear (72.5-420 kV), IGA modular GIS, and the NVIDIA-collaboration grid-to-rack power conversion architecture supporting 800 VDC racks (3 MW to GW-class). e-mesh Energy Storage: skidded, pre-engineered BESS with PS1000 or eks converters — 10+ GW delivered, 350+ references. DC-HAAS standardized automation architecture; HMAX Energy AI service suite (CERAWeek 2026); NVIDIA Omniverse digital twins and DSX AI-factory blueprint work aimed at making AI facilities grid-stabilizing assets.",
       "positioning": "The speed-to-power play: prefab substations compress grid-connection timelines; the NVIDIA 800 VDC tie-up (claimed 15x power-supply increase, less conversion waste) plants Hitachi in the rack-power territory of ABB, Eaton, Vertiv, and Delta.",
       "soldThrough": "Direct to hyperscalers/colos and via utility interconnection projects; NVIDIA ecosystem co-design.",
-      "targetSegments": ["Hyperscalers", "Colocation", "AI factories", "Utilities serving DC load"],
+      "targetSegments": [
+        "Hyperscalers",
+        "Colocation",
+        "AI factories",
+        "Utilities serving DC load"
+      ],
       "roadmap": "Company frames up to 125 GW of global AI data-center capacity 2025-2030; India management targets ~30% of Indian DC electrical spend."
     },
     {
@@ -42,7 +59,11 @@
       "description": "MicroSCADA X, Network Manager SCADA/EMS, protection & control IEDs, digital substations, cybersecurity, EnCompass service agreements; Lumada portfolio incl. Ellipse EAM (reinvented with Microsoft AI); IDC 'Leader' in utility Asset Performance Management. Minority stake in Shermco (North American electrical services).",
       "positioning": "The recurring-revenue and digital layer on top of the hardware franchise; smaller than the equipment businesses but strategically sticky.",
       "soldThrough": "Direct and via the Hitachi Ltd / Microsoft alliance.",
-      "targetSegments": ["Utilities", "Data centers", "Industrial asset owners"],
+      "targetSegments": [
+        "Utilities",
+        "Data centers",
+        "Industrial asset owners"
+      ],
       "roadmap": "HMAX Energy (Plan/Predict/Prevent) launched CERAWeek 2026 for asset-life extension across utilities, renewables, and data centers."
     }
   ],
@@ -115,26 +136,66 @@
     {
       "product": "Transformer portfolio",
       "specs": [
-        "Large power: proven fleet incl. 20+ units at 800 kV UHVDC, 500+ units at 735-765 kV AC; HVDC converter transformers",
-        "Dry-type incl. CompactCool hybrid dry/liquid cooling (data-center marketed); TVP transient-voltage-protection transformers for frequently-switched networks",
-        "TXpert digital ecosystem: monitoring + predictive maintenance across power and distribution units",
-        "Lead-time reality: products convert to revenue in ~1-2 years; industry averages ~128 weeks (power) / 144 weeks (GSU); Hitachi large units >30-40 months"
+        {
+          "band": "Large power",
+          "label": "Fleet",
+          "value": "proven fleet incl. 20+ units at 800 kV UHVDC, 500+ units at 735-765 kV AC; HVDC converter transformers"
+        },
+        {
+          "band": "Dry-type",
+          "label": "Products",
+          "value": "CompactCool hybrid dry/liquid cooling (data-center marketed); TVP transient-voltage-protection transformers for frequently-switched networks"
+        },
+        {
+          "band": "Digital",
+          "label": "TXpert ecosystem",
+          "value": "monitoring + predictive maintenance across power and distribution units"
+        },
+        {
+          "band": "Supply",
+          "label": "Lead times",
+          "value": "products convert to revenue in ~1-2 years; industry averages ~128 weeks (power) / 144 weeks (GSU); Hitachi large units >30-40 months"
+        }
       ]
     },
     {
       "product": "HVDC & grid stability",
       "specs": [
-        "HVDC Light (VSC) compact converter stations; HVDC Classic (LCC) to 800 kV UHVDC; MACH control & protection platform; AxoniQ multi-terminal DC",
-        "Project scale points: 6,000 MW / 950 km (Bhadla-Fatehpur), 1,000 MW city infeed (Mumbai), 600 MW / ~220 km submarine (Elmed), 2 GW-class German corridors (Amprion)",
-        "FACTS: STATCOM (SVC Light), SVCs, synchronous condensers incl. hybrid units (reactive power + short-circuit strength + inertia), series compensation"
+        {
+          "band": "HVDC",
+          "label": "Platforms",
+          "value": "HVDC Light (VSC) compact converter stations; HVDC Classic (LCC) to 800 kV UHVDC; MACH control & protection platform; AxoniQ multi-terminal DC"
+        },
+        {
+          "band": "HVDC",
+          "label": "Project scale points",
+          "value": "6,000 MW / 950 km (Bhadla-Fatehpur), 1,000 MW city infeed (Mumbai), 600 MW / ~220 km submarine (Elmed), 2 GW-class German corridors (Amprion)"
+        },
+        {
+          "band": "FACTS",
+          "label": "Portfolio",
+          "value": "STATCOM (SVC Light), SVCs, synchronous condensers incl. hybrid units (reactive power + short-circuit strength + inertia), series compensation"
+        }
       ]
     },
     {
       "product": "Data-center power & storage",
       "specs": [
-        "Grid-eXpand prefab modular grid-connection substations; PASS hybrid switchgear 72.5-420 kV; IGA modular GIS 72-420 kV",
-        "800 VDC grid-to-rack power conversion (NVIDIA collaboration): 3 MW to GW-class; claimed 15x power-supply increase, reduced conversion losses and cooling load; battery PCS, PV inverters, plant controllers",
-        "e-mesh Energy Storage: skidded pre-engineered BESS (PS1000 or eks converters), e-mesh Manager automation; 10+ GW delivered, 350+ references, 30+ years field experience"
+        {
+          "band": "Connection",
+          "label": "Prefab & switchgear",
+          "value": "Grid-eXpand prefab modular grid-connection substations; PASS hybrid switchgear 72.5-420 kV; IGA modular GIS 72-420 kV"
+        },
+        {
+          "band": "800 VDC",
+          "label": "Grid-to-rack conversion (NVIDIA collaboration)",
+          "value": "3 MW to GW-class; claimed 15x power-supply increase, reduced conversion losses and cooling load; battery PCS, PV inverters, plant controllers"
+        },
+        {
+          "band": "Storage",
+          "label": "e-mesh Energy Storage",
+          "value": "skidded pre-engineered BESS (PS1000 or eks converters), e-mesh Manager automation; 10+ GW delivered, 350+ references, 30+ years field experience"
+        }
       ]
     }
   ],
@@ -188,40 +249,131 @@
       {
         "period": "FY2025 (ended 2026-03-31, Hitachi Energy business)",
         "metrics": [
-          { "name": "Revenue", "actual": "$19.8B (+26% nominal)", "expected": "n/a (subsidiary; no standalone consensus)", "verdict": "inline", "result": "20% revenue CAGR FY21-25; strongest growth in Europe and North America" },
-          { "name": "Orders", "actual": "$32.8B", "expected": "n/a", "verdict": "beat", "result": "Up from $12.4B in FY21 (28% total-order CAGR); backlog $57.9B (~2.9x revenue)" },
-          { "name": "Adjusted EBITA margin", "actual": "13.4%", "expected": "vs 6.1% in FY21", "verdict": "beat", "result": "Energy segment adj. EBITA ¥416.0B (+¥164.0B YoY); backlog margin improving" }
+          {
+            "name": "Revenue",
+            "actual": "$19.8B (+26% nominal)",
+            "expected": "n/a (subsidiary; no standalone consensus)",
+            "verdict": "inline",
+            "result": "20% revenue CAGR FY21-25; strongest growth in Europe and North America"
+          },
+          {
+            "name": "Orders",
+            "actual": "$32.8B",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "Up from $12.4B in FY21 (28% total-order CAGR); backlog $57.9B (~2.9x revenue)"
+          },
+          {
+            "name": "Adjusted EBITA margin",
+            "actual": "13.4%",
+            "expected": "vs 6.1% in FY21",
+            "verdict": "beat",
+            "result": "Energy segment adj. EBITA ¥416.0B (+¥164.0B YoY); backlog margin improving"
+          }
         ],
         "commentary": "Parent-level FY2025 was a record year (revenue ¥10,586.7B) with Energy the primary driver — though the Q4 call showed an EPS miss on a revenue beat at group level. Hitachi Energy capex FY23-25: $2.6B; market outlook 13-15% CAGR (FY24-FY30)."
       },
       {
         "period": "Q1 FY2026 (Apr-Jun 2026, Energy segment)",
         "metrics": [
-          { "name": "Segment revenue", "actual": "¥911.9B (+37% YoY; organic +24%)", "expected": "n/a", "verdict": "beat", "result": "Record group Q1; adjusted EBITA margin 14.2% (+240bp)" },
-          { "name": "Segment orders", "actual": "¥1,906.3B (+87% YoY)", "expected": "n/a", "verdict": "beat", "result": "Driven by large European HVDC awards; segment backlog >¥10 trillion (~$68B)" }
+          {
+            "name": "Segment revenue",
+            "actual": "¥911.9B (+37% YoY; organic +24%)",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "Record group Q1; adjusted EBITA margin 14.2% (+240bp)"
+          },
+          {
+            "name": "Segment orders",
+            "actual": "¥1,906.3B (+87% YoY)",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "Driven by large European HVDC awards; segment backlog >¥10 trillion (~$68B)"
+          }
         ],
         "commentary": "Hitachi raised full-year guidance on every metric (Energy-specific: +¥360B revenue, +¥76B adjusted EBIT) and pointed group capex growth (+¥170B YoY) at Power Grids capacity. FY2026 Energy forecast: revenue ¥3,700B (+15%), adjusted EBITA ¥500B."
       }
     ]
   },
   "sources": [
-    { "label": "Bloomberg — AI's volatile power demand damaging data-center equipment (Aug 2026)", "url": "https://www.bloomberg.com/news/articles/2026-08-06/data-centers-are-being-damaged-by-ai-s-volatile-power-demand", "date": "2026-08-06" },
-    { "label": "Investing.com — Hitachi Q1 FY2026 record results and guidance raise", "url": "https://www.investing.com/news/company-news/hitachi-q1-fy2026-slides-record-results-drive-guidance-raise-93CH-4819021", "date": "2026-07-29" },
-    { "label": "MarketScreener — Hitachi Energy India valuation and HVDC concentration", "url": "https://www.marketscreener.com/news/hitachi-energy-rides-grid-boom-cautiously-ce7f5ddad98dff2d", "date": "2026-07" },
-    { "label": "Hitachi Energy — Elmed €770M converter-stations contract", "url": "https://www.hitachienergy.com/uk-ie/en/news-and-events/press-releases/2026/06/terna-steg-and-hitachi-energy-770-million-contract-for-elmed-converter-stations-the-first-direct-current-interconnection-between-europe-and-north-africa", "date": "2026-06" },
-    { "label": "Hitachi Ltd — FY2025 annual results presentation (Hitachi Energy figures, p.8)", "url": "https://www.hitachi.com/content/dam/hitachi/global/en/press/files/2026/04/260427/2025_Anpre.pdf", "date": "2026-04-27" },
-    { "label": "Hitachi Energy — CERAWeek 2026 (HMAX Energy, NVIDIA Omniverse/DSX)", "url": "https://www.hitachienergy.com/news-and-events/press-releases/2026/03/hitachi-at-ceraweek-2026", "date": "2026-03-23" },
-    { "label": "POWER Magazine — transformers in 2026: shortage or self-inflicted crisis (contrarian view)", "url": "https://www.powermag.com/transformers-in-2026-shortage-scramble-or-self-inflicted-crisis/", "date": "2026-01" },
-    { "label": "Hitachi Energy — NVIDIA 800 VDC collaboration press release", "url": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/nvidia-800-vdc-collaboration", "date": "2025-10-13" },
-    { "label": "Hitachi Energy — $1B US manufacturing investment ($457M South Boston VA plant)", "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2025/09/hitachi-announces-historic-1-billion-usd-manufacturing-investment-to-power-america-s-energy-future-through-production-of-critical-grid-infrastructure", "date": "2025-09-04" },
-    { "label": "Hitachi Energy — E.ON up-to-$700M capacity-reservation framework", "url": "https://www.hitachienergy.com/news-and-events/press-releases/2025/07/hitachi-energy-and-e-on-sign-deal-worth-up-to-700-million-usd-for-critical-grid-infrastructure-to-bolster-energy-security-and-resilience-in-germany", "date": "2025-07-28" },
-    { "label": "Wood Mackenzie — transformer supply deficits (30% power / 10% distribution in 2025)", "url": "https://www.woodmac.com/press-releases/power-transformers-and-distribution-transformers-will-face-supply-deficits-of-30-and-10-in-2025/", "date": "2025-02" },
-    { "label": "The Logic — Schierenbeck AI power-spike warnings (FT-syndicated)", "url": "https://thelogic.co/briefing/ais-sudden-electricity-binges-threaten-power-grids-hitachi-energy-ceo-warns/", "date": "2025-01" },
-    { "label": "Nikkei Asia — Hitachi Energy transformer wait times exceed 30 months", "url": "https://asia.nikkei.com/business/energy/wait-times-for-hitachi-energy-transformers-hit-more-than-30-months", "date": "2024-05" },
-    { "label": "Hitachi Energy — transformers portfolio page", "url": "https://www.hitachienergy.com/products-and-solutions/transformers" },
-    { "label": "Hitachi Energy — data-centers market page (Grid-eXpand, TXpert, power conversion)", "url": "https://www.hitachienergy.com/us/en/markets/data-centers" },
-    { "label": "Mordor Intelligence — HVDC converter station market (Hitachi ~15.3% share, #1)", "url": "https://www.mordorintelligence.com/industry-reports/global-hvdc-converter-station-market-industry" }
+    {
+      "label": "Bloomberg — AI's volatile power demand damaging data-center equipment (Aug 2026)",
+      "url": "https://www.bloomberg.com/news/articles/2026-08-06/data-centers-are-being-damaged-by-ai-s-volatile-power-demand",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Investing.com — Hitachi Q1 FY2026 record results and guidance raise",
+      "url": "https://www.investing.com/news/company-news/hitachi-q1-fy2026-slides-record-results-drive-guidance-raise-93CH-4819021",
+      "date": "2026-07-29"
+    },
+    {
+      "label": "MarketScreener — Hitachi Energy India valuation and HVDC concentration",
+      "url": "https://www.marketscreener.com/news/hitachi-energy-rides-grid-boom-cautiously-ce7f5ddad98dff2d",
+      "date": "2026-07"
+    },
+    {
+      "label": "Hitachi Energy — Elmed €770M converter-stations contract",
+      "url": "https://www.hitachienergy.com/uk-ie/en/news-and-events/press-releases/2026/06/terna-steg-and-hitachi-energy-770-million-contract-for-elmed-converter-stations-the-first-direct-current-interconnection-between-europe-and-north-africa",
+      "date": "2026-06"
+    },
+    {
+      "label": "Hitachi Ltd — FY2025 annual results presentation (Hitachi Energy figures, p.8)",
+      "url": "https://www.hitachi.com/content/dam/hitachi/global/en/press/files/2026/04/260427/2025_Anpre.pdf",
+      "date": "2026-04-27"
+    },
+    {
+      "label": "Hitachi Energy — CERAWeek 2026 (HMAX Energy, NVIDIA Omniverse/DSX)",
+      "url": "https://www.hitachienergy.com/news-and-events/press-releases/2026/03/hitachi-at-ceraweek-2026",
+      "date": "2026-03-23"
+    },
+    {
+      "label": "POWER Magazine — transformers in 2026: shortage or self-inflicted crisis (contrarian view)",
+      "url": "https://www.powermag.com/transformers-in-2026-shortage-scramble-or-self-inflicted-crisis/",
+      "date": "2026-01"
+    },
+    {
+      "label": "Hitachi Energy — NVIDIA 800 VDC collaboration press release",
+      "url": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/nvidia-800-vdc-collaboration",
+      "date": "2025-10-13"
+    },
+    {
+      "label": "Hitachi Energy — $1B US manufacturing investment ($457M South Boston VA plant)",
+      "url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2025/09/hitachi-announces-historic-1-billion-usd-manufacturing-investment-to-power-america-s-energy-future-through-production-of-critical-grid-infrastructure",
+      "date": "2025-09-04"
+    },
+    {
+      "label": "Hitachi Energy — E.ON up-to-$700M capacity-reservation framework",
+      "url": "https://www.hitachienergy.com/news-and-events/press-releases/2025/07/hitachi-energy-and-e-on-sign-deal-worth-up-to-700-million-usd-for-critical-grid-infrastructure-to-bolster-energy-security-and-resilience-in-germany",
+      "date": "2025-07-28"
+    },
+    {
+      "label": "Wood Mackenzie — transformer supply deficits (30% power / 10% distribution in 2025)",
+      "url": "https://www.woodmac.com/press-releases/power-transformers-and-distribution-transformers-will-face-supply-deficits-of-30-and-10-in-2025/",
+      "date": "2025-02"
+    },
+    {
+      "label": "The Logic — Schierenbeck AI power-spike warnings (FT-syndicated)",
+      "url": "https://thelogic.co/briefing/ais-sudden-electricity-binges-threaten-power-grids-hitachi-energy-ceo-warns/",
+      "date": "2025-01"
+    },
+    {
+      "label": "Nikkei Asia — Hitachi Energy transformer wait times exceed 30 months",
+      "url": "https://asia.nikkei.com/business/energy/wait-times-for-hitachi-energy-transformers-hit-more-than-30-months",
+      "date": "2024-05"
+    },
+    {
+      "label": "Hitachi Energy — transformers portfolio page",
+      "url": "https://www.hitachienergy.com/products-and-solutions/transformers"
+    },
+    {
+      "label": "Hitachi Energy — data-centers market page (Grid-eXpand, TXpert, power conversion)",
+      "url": "https://www.hitachienergy.com/us/en/markets/data-centers"
+    },
+    {
+      "label": "Mordor Intelligence — HVDC converter station market (Hitachi ~15.3% share, #1)",
+      "url": "https://www.mordorintelligence.com/industry-reports/global-hvdc-converter-station-market-industry"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

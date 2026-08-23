@@ -191,30 +191,103 @@
     {
       "product": "Data-center delivery capability",
       "specs": [
-        "Tier 3 / TIA-942 baseline, no-single-point-of-failure designs; liquid cooling for AI density; modular construction and prefabrication",
-        "Phased EPC substation delivery matched to load ramp; on-site and bridging power incl. reciprocating engines and BESS; long-lead equipment procurement",
-        "Independent delivered datapoint: Temple, TX — >$100M, 150,000 sq ft on 1,200 concrete piers, 20 acres, up to 185 MW draw (completed summer 2023)",
-        "Design-build practice rebuilt from 2021 under mission-critical leader David Bals (design-build, modular, prefab lineage)"
+        {
+          "band": "Design standards",
+          "label": "Baseline",
+          "value": "Tier 3 / TIA-942 baseline, no-single-point-of-failure designs"
+        },
+        {
+          "band": "Design standards",
+          "label": "Density & construction",
+          "value": "liquid cooling for AI density; modular construction and prefabrication"
+        },
+        {
+          "band": "Power delivery",
+          "label": "Substations",
+          "value": "Phased EPC substation delivery matched to load ramp"
+        },
+        {
+          "band": "Power delivery",
+          "label": "Bridging power",
+          "value": "on-site and bridging power incl. reciprocating engines and BESS; long-lead equipment procurement"
+        },
+        {
+          "band": "Delivered example",
+          "label": "Temple, TX",
+          "value": ">$100M, 150,000 sq ft on 1,200 concrete piers, 20 acres, up to 185 MW draw (completed summer 2023)"
+        },
+        {
+          "band": "Practice",
+          "label": "Design-build",
+          "value": "Design-build practice rebuilt from 2021 under mission-critical leader David Bals (design-build, modular, prefab lineage)"
+        }
       ],
       "notes": "Hyperscaler client names are not disclosed on company pages — NDA norms; Wyoming Hyperscale is the named exception"
     },
     {
       "product": "Power design & T&D franchise",
       "specs": [
-        "ENR #1 Power design revenue — 11 consecutive years (2016-2026 lists); #7 overall ENR Top 500 Design Firms (9th straight top-10); #35 ENR Top 400 Contractors (up 7)",
-        "Company-claimed largest substation design group in the US; full-scope AC/DC transmission incl. underground and undersea; gas-insulated substations; grid modernization",
-        "Santee Cooper data-center transmission EPC: ~16 mi 115 kV rebuild + two 230 kV lines + one new 230 kV substation for a single Aiken County, SC campus",
-        "India engineering base: 1,900+ professionals (Mumbai 2013, Bengaluru 2023, doubled to 116,000 sq ft); India T&D group of 400+ engineers supports 70 global client teams"
+        {
+          "band": "Rankings",
+          "label": "ENR Power design",
+          "value": "ENR #1 Power design revenue — 11 consecutive years (2016-2026 lists)"
+        },
+        {
+          "band": "Rankings",
+          "label": "ENR overall",
+          "value": "#7 overall ENR Top 500 Design Firms (9th straight top-10); #35 ENR Top 400 Contractors (up 7)"
+        },
+        {
+          "band": "Capability",
+          "label": "Substation design",
+          "value": "Company-claimed largest substation design group in the US"
+        },
+        {
+          "band": "Capability",
+          "label": "Transmission scope",
+          "value": "full-scope AC/DC transmission incl. underground and undersea; gas-insulated substations; grid modernization"
+        },
+        {
+          "band": "Reference project",
+          "label": "Santee Cooper data-center transmission EPC",
+          "value": "~16 mi 115 kV rebuild + two 230 kV lines + one new 230 kV substation for a single Aiken County, SC campus"
+        },
+        {
+          "band": "Engineering base",
+          "label": "India",
+          "value": "1,900+ professionals (Mumbai 2013, Bengaluru 2023, doubled to 116,000 sq ft); India T&D group of 400+ engineers supports 70 global client teams"
+        }
       ],
       "notes": "The Asset Health Center equipment-testing/analytics lab at the KC HQ supports the T&D practice; 1898 & Co. layers grid analytics and OT cybersecurity on top"
     },
     {
       "product": "Generation EPC bench",
       "specs": [
-        "1,200+ natural-gas generation staff; 28 RICE projects in 15 years — company-claimed >50% US market share in reciprocating-engine plants (unverified)",
-        "Basin Electric Pioneer Phase IV: 600 MW = 2x Siemens STG6-5000F simple-cycle turbines + 6x Wärtsilä W18V50SG recips (Bakken; 2025 target)",
-        "Vistra Moss Landing BESS expansion: 350 MW / 1,400 MWh (ENR Best Project 2024); SaskPower Chinook: 353 MW",
-        "Single-contract EPC across solar, wind, storage, hydrogen, offshore-wind integration"
+        {
+          "band": "Bench",
+          "label": "Gas generation staff",
+          "value": "1,200+ natural-gas generation staff"
+        },
+        {
+          "band": "Bench",
+          "label": "Reciprocating engines",
+          "value": "28 RICE projects in 15 years — company-claimed >50% US market share in reciprocating-engine plants (unverified)"
+        },
+        {
+          "band": "Reference projects",
+          "label": "Basin Electric Pioneer Phase IV",
+          "value": "600 MW = 2x Siemens STG6-5000F simple-cycle turbines + 6x Wärtsilä W18V50SG recips (Bakken; 2025 target)"
+        },
+        {
+          "band": "Reference projects",
+          "label": "Storage",
+          "value": "Vistra Moss Landing BESS expansion: 350 MW / 1,400 MWh (ENR Best Project 2024); SaskPower Chinook: 353 MW"
+        },
+        {
+          "band": "Commercial",
+          "label": "Contracting",
+          "value": "Single-contract EPC across solar, wind, storage, hydrogen, offshore-wind integration"
+        }
       ],
       "notes": "The RICE fleet capability doubles as the data-center bridge-power product line the firm's white papers now market"
     }
@@ -437,6 +510,6 @@
       "url": "https://www.tdworld.com/home/contact/21140190/keegan-odle"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

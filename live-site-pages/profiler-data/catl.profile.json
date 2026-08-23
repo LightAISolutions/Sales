@@ -3,12 +3,17 @@
   "slug": "catl",
   "name": "Contemporary Amperex Technology Co., Limited (宁德时代新能源科技股份有限公司)",
   "shortName": "CATL",
-  "categories": ["supplier"],
+  "categories": [
+    "supplier"
+  ],
   "website": "https://www.catl.com",
   "headquarters": "Ningde, Fujian, China",
   "founded": 2011,
   "employees": "~132,000 (2025, company-reported)",
-  "ownership": { "type": "public", "ticker": "SZSE: 300750 · HKEX: 3750" },
+  "ownership": {
+    "type": "public",
+    "ticker": "SZSE: 300750 · HKEX: 3750"
+  },
   "summary": "BOTTOM LINE UP FRONT: CATL holds both global #1 battery positions (EV and ESS) but its storage lead is narrowing; we assess the sodium-ion and battery-swap pushes are deliberate moves to open post-lithium and infrastructure revenue before rivals close the cell gap. BACKGROUND: CATL is the world's largest lithium-ion battery manufacturer, spun out of ATL in 2011 and listed in Shenzhen (June 2018) and Hong Kong (May 2025 — the HK$41B raise was the world's largest IPO of 2025, with ~90% of proceeds earmarked for the Debrecen, Hungary plant). It supplies EV batteries to most global automakers and utility/C&I energy storage systems worldwide, with the storage business (TENER line) now its fastest-growing segment: ESS revenue grew 87.5% YoY in H1 2026 to nearly 20% of total revenue.",
   "ecosystemRole": "No. 1 in global EV power batteries for nine consecutive years (39.2% of 1,187 GWh installed in 2025, SNE Research) and No. 1 in energy-storage batteries for five consecutive years — though the ESS lead narrowed in 2025 (company-reported ESS share 30.4%, down from 36.5%; Benchmark estimates ~20% with Hithium and EVE at ~12% each). ESS battery sales: 93 GWh (2024) → 121 GWh (2025). Anchor storage deployment: sole BESS supplier (19 GWh of TENER) for Masdar's US$6B 5.2 GW round-the-clock solar+storage project in Abu Dhabi — the largest single BESS order to date.",
   "productsAndServices": [
@@ -129,20 +134,104 @@
     }
   ],
   "recentDevelopments": [
-    { "date": "2026-08-04", "category": "other", "headline": "H1 2026 shares: 27.1% of global ESS batteries (125 GWh) and 39.9% of global EV batteries (SNE/InfoLink data)", "read": "Both No. 1 positions held — and the ESS share actually rose YoY even as Hithium/EVE close in and non-China demand overtakes China.", "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/" },
-    { "date": "2026-07-21", "category": "order-win", "headline": "Solarpro signs 2 GWh sodium-ion storage agreement for Eastern Europe", "read": "TENER Sodium converted from launch demo to commercial pipeline within a month.", "source": "https://www.catl.com/en/news/6916.html" },
-    { "date": "2026-07-16", "category": "partnership", "headline": "Alfen and CATL reach 5 GWh sodium-ion storage partnership in Europe", "read": "European integrators become the sodium channel — CATL sells the chemistry transition, partners carry the projects.", "source": "https://www.catl.com/en/news/6900.html" },
-    { "date": "2026-07-06", "category": "product-launch", "headline": "8C superfast-charging battery for light commercial vehicles (Tectrans II): 20–80% in 6 min 48 s", "read": "Refueling-time parity with gasoline aimed squarely at diesel fleet TCO in urban logistics.", "source": "https://www.catl.com/en/news/6925.html" },
-    { "date": "2026-07-02", "category": "order-win", "headline": "J&T Express partnership: battery-swap services for 5,000 heavy-duty trucks", "read": "Anchor fleets of this type underpin the economics of Qiji's 900-station 2026 build-out target.", "source": "https://cnevpost.com/2026/07/02/catl-jt-express-battery-swap-5000-heavy-trucks/" },
-    { "date": "2026-06-30", "category": "capacity", "headline": "2,000th Choco-Swap station deployed — 180 cities across 31 provinces", "read": "Network doubled in six months; the 3,000-station/190-city end-2026 target looks credible.", "source": "https://carnewschina.com/2026/07/01/catls-battery-swap-network-hits-2000-stations-milestone/" },
-    { "date": "2026-06-22", "category": "product-launch", "headline": "TENER Sodium launched in Munich — first field-validated sodium-ion BESS (30+ MWh, 15,000 cycles, 30-year warranty)", "read": "Opens a post-lithium cost/safety/longevity curve for grid storage that rivals must now answer.", "source": "https://www.catl.com/en/news/6861.html" },
-    { "date": "2026-06-18", "category": "partnership", "headline": "Ford's BlueOval Battery Park Michigan hits LFP production and hiring milestones; market-ready CATL-licensed cells due before end-2026", "read": "The LRS model's first US proof point lands despite the 1260H listing and tariff wall.", "source": "https://www.electrive.com/2026/06/18/ford-to-produce-first-lfp-cells-this-year-thanks-to-catl/" },
-    { "date": "2026-05-25", "category": "product-launch", "headline": "China's first standardized light-truck battery-swap ecosystem launched", "read": "Extends block standardization from passenger cars and heavy trucks into the logistics middle.", "source": "https://cnevpost.com/2026/05/25/catl-launches-chinas-first-standardized-light-truck-battery-swap-ecosystem/" },
-    { "date": "2026-05-07", "category": "partnership", "headline": "Togg signs Bedrock chassis mass-production deal — three B-segment models, first from 2027", "read": "First overseas passenger-car win for the chassis platform play — CATL now sells the whole floor of the car.", "source": "https://cnevpost.com/2026/05/07/catl-strikes-bedrock-chassis-deal-with-turkey-togg/" },
-    { "date": "2026-04-21", "category": "product-launch", "headline": "2026 Super Tech Day: 3rd-gen Qilin & Shenxing (10C equivalent/15C peak), Qilin Condensed (350 Wh/kg), 2nd-gen Freevoy, Naxtra updates, #26 800V swap block", "read": "Spec leadership refreshed at every price point simultaneously — multi-chemistry breadth is the moat message to defend share.", "source": "https://www.catl.com/en/news/6811.html" },
-    { "date": "2026-01-22", "category": "product-launch", "headline": "Tianxing II commercial-vehicle series launched, including the world's first mass-production sodium-ion CV battery", "read": "Sodium moves from launch-event promise into commercial-vehicle production reality.", "source": "https://carnewschina.com/2026/01/22/catl-unveils-worlds-first-mass-production-sodium-ion-battery-for-commercial-vehicles/" },
-    { "date": "2025-12-30", "category": "capacity", "headline": "Choco-Swap reaches 1,020 stations in 45 cities; 2026 target raised to 3,000+ stations", "read": "Cleared the initial 1,000-station goal a month early — swap is now a scaling business, not a pilot.", "source": "https://cnevpost.com/2025/12/30/catl-reaches-1020-choco-swap-stations-raises-2026-target/" },
-    { "date": "2025-09-08", "category": "product-launch", "headline": "Shenxing Pro LFP battery unveiled for Europe at IAA Mobility (758 km WLTP long-life and 12C superfast variants)", "read": "Localizing the LFP fast-charge pitch for European OEMs ahead of Debrecen plant output.", "source": "https://www.electrive.com/2025/09/08/catl-unveils-shenxing-pro-lfp-battery-for-europe/" }
+    {
+      "date": "2026-08-04",
+      "category": "other",
+      "headline": "H1 2026 shares: 27.1% of global ESS batteries (125 GWh) and 39.9% of global EV batteries (SNE/InfoLink data)",
+      "read": "Both No. 1 positions held — and the ESS share actually rose YoY even as Hithium/EVE close in and non-China demand overtakes China.",
+      "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/"
+    },
+    {
+      "date": "2026-07-21",
+      "category": "order-win",
+      "headline": "Solarpro signs 2 GWh sodium-ion storage agreement for Eastern Europe",
+      "read": "TENER Sodium converted from launch demo to commercial pipeline within a month.",
+      "source": "https://www.catl.com/en/news/6916.html"
+    },
+    {
+      "date": "2026-07-16",
+      "category": "partnership",
+      "headline": "Alfen and CATL reach 5 GWh sodium-ion storage partnership in Europe",
+      "read": "European integrators become the sodium channel — CATL sells the chemistry transition, partners carry the projects.",
+      "source": "https://www.catl.com/en/news/6900.html"
+    },
+    {
+      "date": "2026-07-06",
+      "category": "product-launch",
+      "headline": "8C superfast-charging battery for light commercial vehicles (Tectrans II): 20–80% in 6 min 48 s",
+      "read": "Refueling-time parity with gasoline aimed squarely at diesel fleet TCO in urban logistics.",
+      "source": "https://www.catl.com/en/news/6925.html"
+    },
+    {
+      "date": "2026-07-02",
+      "category": "order-win",
+      "headline": "J&T Express partnership: battery-swap services for 5,000 heavy-duty trucks",
+      "read": "Anchor fleets of this type underpin the economics of Qiji's 900-station 2026 build-out target.",
+      "source": "https://cnevpost.com/2026/07/02/catl-jt-express-battery-swap-5000-heavy-trucks/"
+    },
+    {
+      "date": "2026-06-30",
+      "category": "capacity",
+      "headline": "2,000th Choco-Swap station deployed — 180 cities across 31 provinces",
+      "read": "Network doubled in six months; the 3,000-station/190-city end-2026 target looks credible.",
+      "source": "https://carnewschina.com/2026/07/01/catls-battery-swap-network-hits-2000-stations-milestone/"
+    },
+    {
+      "date": "2026-06-22",
+      "category": "product-launch",
+      "headline": "TENER Sodium launched in Munich — first field-validated sodium-ion BESS (30+ MWh, 15,000 cycles, 30-year warranty)",
+      "read": "Opens a post-lithium cost/safety/longevity curve for grid storage that rivals must now answer.",
+      "source": "https://www.catl.com/en/news/6861.html"
+    },
+    {
+      "date": "2026-06-18",
+      "category": "partnership",
+      "headline": "Ford's BlueOval Battery Park Michigan hits LFP production and hiring milestones; market-ready CATL-licensed cells due before end-2026",
+      "read": "The LRS model's first US proof point lands despite the 1260H listing and tariff wall.",
+      "source": "https://www.electrive.com/2026/06/18/ford-to-produce-first-lfp-cells-this-year-thanks-to-catl/"
+    },
+    {
+      "date": "2026-05-25",
+      "category": "product-launch",
+      "headline": "China's first standardized light-truck battery-swap ecosystem launched",
+      "read": "Extends block standardization from passenger cars and heavy trucks into the logistics middle.",
+      "source": "https://cnevpost.com/2026/05/25/catl-launches-chinas-first-standardized-light-truck-battery-swap-ecosystem/"
+    },
+    {
+      "date": "2026-05-07",
+      "category": "partnership",
+      "headline": "Togg signs Bedrock chassis mass-production deal — three B-segment models, first from 2027",
+      "read": "First overseas passenger-car win for the chassis platform play — CATL now sells the whole floor of the car.",
+      "source": "https://cnevpost.com/2026/05/07/catl-strikes-bedrock-chassis-deal-with-turkey-togg/"
+    },
+    {
+      "date": "2026-04-21",
+      "category": "product-launch",
+      "headline": "2026 Super Tech Day: 3rd-gen Qilin & Shenxing (10C equivalent/15C peak), Qilin Condensed (350 Wh/kg), 2nd-gen Freevoy, Naxtra updates, #26 800V swap block",
+      "read": "Spec leadership refreshed at every price point simultaneously — multi-chemistry breadth is the moat message to defend share.",
+      "source": "https://www.catl.com/en/news/6811.html"
+    },
+    {
+      "date": "2026-01-22",
+      "category": "product-launch",
+      "headline": "Tianxing II commercial-vehicle series launched, including the world's first mass-production sodium-ion CV battery",
+      "read": "Sodium moves from launch-event promise into commercial-vehicle production reality.",
+      "source": "https://carnewschina.com/2026/01/22/catl-unveils-worlds-first-mass-production-sodium-ion-battery-for-commercial-vehicles/"
+    },
+    {
+      "date": "2025-12-30",
+      "category": "capacity",
+      "headline": "Choco-Swap reaches 1,020 stations in 45 cities; 2026 target raised to 3,000+ stations",
+      "read": "Cleared the initial 1,000-station goal a month early — swap is now a scaling business, not a pilot.",
+      "source": "https://cnevpost.com/2025/12/30/catl-reaches-1020-choco-swap-stations-raises-2026-target/"
+    },
+    {
+      "date": "2025-09-08",
+      "category": "product-launch",
+      "headline": "Shenxing Pro LFP battery unveiled for Europe at IAA Mobility (758 km WLTP long-life and 12C superfast variants)",
+      "read": "Localizing the LFP fast-charge pitch for European OEMs ahead of Debrecen plant output.",
+      "source": "https://www.electrive.com/2025/09/08/catl-unveils-shenxing-pro-lfp-battery-for-europe/"
+    }
   ],
   "strategyRead": [
     "(High confidence) We assess CATL retains both global #1 positions (EV and ESS batteries) but the ESS lead is narrowing — company-reported share fell to 30.4% in 2025 from 36.5%, with Hithium and EVE at roughly 12% each per third-party estimates.",
@@ -154,86 +243,226 @@
     {
       "product": "TENER Stack — 9 MWh dual-stack utility BESS (flagship, May 2025)",
       "specs": [
-        { "label": "Energy per system", "value": "9 MWh — two stackable half-height containers, each <36 t" },
-        { "label": "Cell", "value": "587Ah LFP, '5-year zero degradation' claim" },
-        { "label": "Volume utilization", "value": "+45% vs a standard 20-ft container; ~+50% projected energy density" },
-        { "label": "Transport", "value": "Compliant in ~99% of markets via the two-in-one modular design" }
+        {
+          "band": "Energy",
+          "label": "Energy per system",
+          "value": "9 MWh — two stackable half-height containers, each <36 t"
+        },
+        {
+          "band": "Cell",
+          "label": "Cell",
+          "value": "587Ah LFP, '5-year zero degradation' claim"
+        },
+        {
+          "band": "Packaging",
+          "label": "Volume utilization",
+          "value": "+45% vs a standard 20-ft container; ~+50% projected energy density"
+        },
+        {
+          "band": "Packaging",
+          "label": "Transport",
+          "value": "Compliant in ~99% of markets via the two-in-one modular design"
+        }
       ],
       "notes": "Original TENER (April 2024): 6.25 MWh per 20-ft container, 430 Wh/L, >15,000 cycles, zero capacity/power degradation claimed for the first 5 years."
     },
     {
       "product": "TENER Sodium — first field-validated sodium-ion BESS (June 2026)",
       "specs": [
-        { "label": "Configuration", "value": "30+ MWh per configuration (8 × 3.75 MWh modules, 42 t each); LFP variant of the same architecture reaches 50 MWh" },
-        { "label": "Cells", "value": "Naxtra-family sodium cells (chemistry undisclosed, likely NFPP; cell window 1.5–4.3 V)" },
-        { "label": "Cycle life", "value": "15,000 cycles @25°C; >10,000 @45°C (to 70% SOH); 25–30-year service life with a 30-year warranty" },
-        { "label": "Cold performance", "value": ">92% capacity retention at -20°C with no active heating" },
-        { "label": "Safety", "value": "Thermal-runaway onset ~200°C; ~1% auxiliary power draw" },
-        { "label": "Timeline", "value": "First China deliveries Sept 2026 (~1 GWh in 2026); global from June 2027" }
+        {
+          "band": "Configuration",
+          "label": "System",
+          "value": "30+ MWh per configuration (8 × 3.75 MWh modules, 42 t each); LFP variant of the same architecture reaches 50 MWh"
+        },
+        {
+          "band": "Cell",
+          "label": "Chemistry",
+          "value": "Naxtra-family sodium cells (chemistry undisclosed, likely NFPP; cell window 1.5–4.3 V)"
+        },
+        {
+          "band": "Life",
+          "label": "Cycle life",
+          "value": "15,000 cycles @25°C; >10,000 @45°C (to 70% SOH); 25–30-year service life with a 30-year warranty"
+        },
+        {
+          "band": "Environment",
+          "label": "Cold performance",
+          "value": ">92% capacity retention at -20°C with no active heating"
+        },
+        {
+          "band": "Safety",
+          "label": "Thermal & auxiliary",
+          "value": "Thermal-runaway onset ~200°C; ~1% auxiliary power draw"
+        },
+        {
+          "band": "Availability",
+          "label": "Timeline",
+          "value": "First China deliveries Sept 2026 (~1 GWh in 2026); global from June 2027"
+        }
       ],
       "notes": "Figures mix company claims with Energy-Storage.News teardown analysis."
     },
     {
       "product": "3rd-generation Qilin Battery — NMC passenger flagship (April 2026)",
       "specs": [
-        { "label": "Charging", "value": "Equivalent 10C, 15C peak" },
-        { "label": "Energy density", "value": "600 Wh/L volumetric · 280 Wh/kg gravimetric" },
-        { "label": "Pack", "value": "125 kWh pack >1,000 km range; 625 kg — 255 kg lighter and 112 L smaller than a comparable LFP pack" },
-        { "label": "Performance", "value": "0–100 km/h 0.6 s faster; 100 km/h braking distance −1.44 m; track version peaks at 3,000 kW discharge" }
+        {
+          "band": "Charging",
+          "label": "Rate",
+          "value": "Equivalent 10C, 15C peak"
+        },
+        {
+          "band": "Energy density",
+          "label": "Cell",
+          "value": "600 Wh/L volumetric · 280 Wh/kg gravimetric"
+        },
+        {
+          "band": "Pack",
+          "label": "Configuration",
+          "value": "125 kWh pack >1,000 km range; 625 kg — 255 kg lighter and 112 L smaller than a comparable LFP pack"
+        },
+        {
+          "band": "Performance",
+          "label": "Vehicle",
+          "value": "0–100 km/h 0.6 s faster; 100 km/h braking distance −1.44 m; track version peaks at 3,000 kW discharge"
+        }
       ],
       "notes": "Company-published figures from the April 21, 2026 Super Tech Day."
     },
     {
       "product": "Qilin Condensed Battery — semi-solid-state pack (April 2026)",
       "specs": [
-        { "label": "Energy density", "value": "350 Wh/kg gravimetric · 760 Wh/L volumetric (pack <650 kg)" },
-        { "label": "Range", "value": "~1,500 km for executive sedans; ~1,000 km for full-size SUVs" },
-        { "label": "Chemistry lineage", "value": "Derived from the 500 Wh/kg condensed-matter cell (2023) that completed maiden-flight validation on a 4-tonne aircraft" }
+        {
+          "band": "Energy density",
+          "label": "Pack",
+          "value": "350 Wh/kg gravimetric · 760 Wh/L volumetric (pack <650 kg)"
+        },
+        {
+          "band": "Range",
+          "label": "Vehicle classes",
+          "value": "~1,500 km for executive sedans; ~1,000 km for full-size SUVs"
+        },
+        {
+          "band": "Lineage",
+          "label": "Chemistry",
+          "value": "Derived from the 500 Wh/kg condensed-matter cell (2023) that completed maiden-flight validation on a 4-tonne aircraft"
+        }
       ],
       "notes": "Condensed-matter = semi-solid (condensed) electrolyte with new anode/separator materials; aviation 8-tonne application targeted 2027–28."
     },
     {
       "product": "3rd-generation Shenxing Superfast Charging Battery — LFP (April 2026)",
       "specs": [
-        { "label": "Charging", "value": "Equivalent 10C, 15C peak — 10–35% in 1 min; 10–80% in 3 min 44 s; 10–98% in 6 min 27 s" },
-        { "label": "Cold charging", "value": "20–98% in ~9 min at −30°C" },
-        { "label": "Cycle retention", "value": ">90% capacity after 1,000 full cycles" }
+        {
+          "band": "Charging",
+          "label": "Rate",
+          "value": "Equivalent 10C, 15C peak — 10–35% in 1 min; 10–80% in 3 min 44 s; 10–98% in 6 min 27 s"
+        },
+        {
+          "band": "Environment",
+          "label": "Cold charging",
+          "value": "20–98% in ~9 min at −30°C"
+        },
+        {
+          "band": "Life",
+          "label": "Cycle retention",
+          "value": ">90% capacity after 1,000 full cycles"
+        }
       ]
     },
     {
       "product": "2nd-generation Shenxing / Shenxing Pro — superfast LFP (2025)",
       "specs": [
-        { "label": "2nd-gen (China, Apr 2025)", "value": "World-first LFP with 800 km range + 12C peak; 1.3 MW peak charging power (~2.5 km of range per second); 5–80% in 15 min at −10°C" },
-        { "label": "Shenxing Pro long-life (Europe, Sept 2025)", "value": "758 km WLTP; 12-year / 1,000,000 km service life" },
-        { "label": "Shenxing Pro superfast (Europe)", "value": "683 km WLTP; 12C peak; 478 km WLTP added in 10 min" },
-        { "label": "Safety", "value": "NP 3.0 — maintains high-voltage supply >1 h in thermal runaway, no smoke or open fire (company claim)" }
+        {
+          "band": "Generations",
+          "label": "2nd-gen (China, Apr 2025)",
+          "value": "World-first LFP with 800 km range + 12C peak; 1.3 MW peak charging power (~2.5 km of range per second); 5–80% in 15 min at −10°C"
+        },
+        {
+          "band": "Generations",
+          "label": "Shenxing Pro long-life (Europe, Sept 2025)",
+          "value": "758 km WLTP; 12-year / 1,000,000 km service life"
+        },
+        {
+          "band": "Generations",
+          "label": "Shenxing Pro superfast (Europe)",
+          "value": "683 km WLTP; 12C peak; 478 km WLTP added in 10 min"
+        },
+        {
+          "band": "Safety",
+          "label": "NP 3.0",
+          "value": "maintains high-voltage supply >1 h in thermal runaway, no smoke or open fire (company claim)"
+        }
       ]
     },
     {
       "product": "Naxtra sodium-ion passenger EV battery (mass production Dec 2025)",
       "specs": [
-        { "label": "Energy density", "value": "175 Wh/kg — highest of any sodium-ion battery; comparable to LFP" },
-        { "label": "Cycle life", "value": ">10,000 cycles" },
-        { "label": "Temperature window", "value": "−40°C to +70°C; 90% usable power at −40°C" },
-        { "label": "Range / safety", "value": "~500 km; first sodium-ion battery to pass GB 38031-2025; intrinsic-safety material design" },
-        { "label": "24V heavy-truck variant", "value": "Start-stop battery, 8+ year life, ~61% lifecycle cost reduction vs lead-acid; in production since June 2025" }
+        {
+          "band": "Energy density",
+          "label": "Cell",
+          "value": "175 Wh/kg — highest of any sodium-ion battery; comparable to LFP"
+        },
+        {
+          "band": "Life",
+          "label": "Cycle life",
+          "value": ">10,000 cycles"
+        },
+        {
+          "band": "Environment",
+          "label": "Temperature window",
+          "value": "−40°C to +70°C; 90% usable power at −40°C"
+        },
+        {
+          "band": "Range & safety",
+          "label": "Vehicle",
+          "value": "~500 km; first sodium-ion battery to pass GB 38031-2025; intrinsic-safety material design"
+        },
+        {
+          "band": "Variants",
+          "label": "24V heavy-truck",
+          "value": "Start-stop battery, 8+ year life, ~61% lifecycle cost reduction vs lead-acid; in production since June 2025"
+        }
       ],
       "notes": "Powers the Changan Nevo A06 — the world's first mass-production sodium-ion passenger car."
     },
     {
       "product": "Tianxing II 8C battery — light commercial vehicles (July 2026)",
       "specs": [
-        { "label": "Charging", "value": "8C peak — first in its class; 20–80% in 6 min 48 s; full charge in 8 min 56 s" },
-        { "label": "Warranty", "value": "Million-kilometre warranty (company claim)" },
-        { "label": "Infrastructure", "value": "Pairs with 4,000 planned integrated charge-and-swap stations across ~190 cities by end-2026" }
+        {
+          "band": "Charging",
+          "label": "Rate",
+          "value": "8C peak — first in its class; 20–80% in 6 min 48 s; full charge in 8 min 56 s"
+        },
+        {
+          "band": "Warranty",
+          "label": "Coverage",
+          "value": "Million-kilometre warranty (company claim)"
+        },
+        {
+          "band": "Infrastructure",
+          "label": "Network",
+          "value": "Pairs with 4,000 planned integrated charge-and-swap stations across ~190 cities by end-2026"
+        }
       ]
     },
     {
       "product": "Choco-SEB #26 standardized swap block (announced April 2026)",
       "specs": [
-        { "label": "Architecture", "value": "800 V platform; launches at 75 kWh with larger capacities planned" },
-        { "label": "Vehicle coverage", "value": "A0- through C-segment vehicles" },
-        { "label": "Ecosystem adoption", "value": "Choco-Swap standard adopted by 11 automakers, 18 brands, 25 models" }
+        {
+          "band": "Architecture",
+          "label": "Platform",
+          "value": "800 V platform; launches at 75 kWh with larger capacities planned"
+        },
+        {
+          "band": "Coverage",
+          "label": "Vehicle segments",
+          "value": "A0- through C-segment vehicles"
+        },
+        {
+          "band": "Ecosystem",
+          "label": "Adoption",
+          "value": "Choco-Swap standard adopted by 11 automakers, 18 brands, 25 models"
+        }
       ],
       "notes": "Heavy-duty sibling: the 75# standardized swap block (May 2025) underpins the Qiji Energy truck network (~305 stations, ~900 planned in 2026)."
     }
@@ -259,12 +488,16 @@
     {
       "name": "Zhou Jia (周佳)",
       "title": "Vice Chairman (General Manager/President until the August 2022 reshuffle)",
-      "background": ["Long-time CATL executive"]
+      "background": [
+        "Long-time CATL executive"
+      ]
     },
     {
       "name": "Zheng Shu (郑舒)",
       "title": "Chief Financial Officer",
-      "background": ["Directs financial operations, reporting, and investor relations; appointment year not published"]
+      "background": [
+        "Directs financial operations, reporting, and investor relations; appointment year not published"
+      ]
     },
     {
       "name": "Dr. Wu Kai (吴凯)",
@@ -277,7 +510,9 @@
     {
       "name": "Jiang Li (蒋理)",
       "title": "Vice President & Board Secretary (since June 2017)",
-      "background": ["Responsible for board affairs, capital markets, and corporate governance"]
+      "background": [
+        "Responsible for board affairs, capital markets, and corporate governance"
+      ]
     }
   ],
   "financials": {
@@ -287,27 +522,81 @@
       {
         "period": "FY2024 (reported March 2025)",
         "metrics": [
-          { "name": "Revenue", "actual": "RMB 362.0B (-9.7% YoY — first annual decline, on falling lithium prices)", "expected": "~RMB 372B (consensus)", "verdict": "miss", "result": "Below consensus" },
-          { "name": "Net profit (attributable)", "actual": "RMB 50.75B (+15.0% — slowest growth in six years)", "expected": "~RMB 51.5B (consensus)", "verdict": "miss", "result": "Slight miss" },
-          { "name": "ESS segment revenue", "actual": "RMB 57.29B (15.8% of total); 93 GWh sold (+34.3%)", "expected": "~RMB 64.7B (consensus)", "verdict": "miss", "result": "Power-battery gross margin 23.9% vs 28.2% expected" }
+          {
+            "name": "Revenue",
+            "actual": "RMB 362.0B (-9.7% YoY — first annual decline, on falling lithium prices)",
+            "expected": "~RMB 372B (consensus)",
+            "verdict": "miss",
+            "result": "Below consensus"
+          },
+          {
+            "name": "Net profit (attributable)",
+            "actual": "RMB 50.75B (+15.0% — slowest growth in six years)",
+            "expected": "~RMB 51.5B (consensus)",
+            "verdict": "miss",
+            "result": "Slight miss"
+          },
+          {
+            "name": "ESS segment revenue",
+            "actual": "RMB 57.29B (15.8% of total); 93 GWh sold (+34.3%)",
+            "expected": "~RMB 64.7B (consensus)",
+            "verdict": "miss",
+            "result": "Power-battery gross margin 23.9% vs 28.2% expected"
+          }
         ],
         "commentary": "Announced a ~US$2.8B dividend plan alongside the results."
       },
       {
         "period": "FY2025 (reported March 2026)",
         "metrics": [
-          { "name": "Revenue", "actual": "RMB 423.7B (+17.0%)", "expected": "", "verdict": "beat", "result": "Shares surged on the 'upbeat' results — HK +9.2%, Shenzhen +6%" },
-          { "name": "Net profit (attributable)", "actual": "RMB 72.2B (+42.3%, ~US$10B); operating cash flow RMB 133.2B", "expected": "", "verdict": "beat", "result": "Final dividend RMB 21.78 + special dividend RMB 47.79 per 10 shares" },
-          { "name": "Segments", "actual": "Power batteries RMB 316.5B (+25.1%, GM 23.8%, 541 GWh); energy storage RMB 62.4B (+9.0%, GM 26.7%, 121 GWh)", "expected": "", "verdict": "inline", "result": "—" }
+          {
+            "name": "Revenue",
+            "actual": "RMB 423.7B (+17.0%)",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Shares surged on the 'upbeat' results — HK +9.2%, Shenzhen +6%"
+          },
+          {
+            "name": "Net profit (attributable)",
+            "actual": "RMB 72.2B (+42.3%, ~US$10B); operating cash flow RMB 133.2B",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Final dividend RMB 21.78 + special dividend RMB 47.79 per 10 shares"
+          },
+          {
+            "name": "Segments",
+            "actual": "Power batteries RMB 316.5B (+25.1%, GM 23.8%, 541 GWh); energy storage RMB 62.4B (+9.0%, GM 26.7%, 121 GWh)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "—"
+          }
         ],
         "commentary": "R&D spend RMB 22.1B; storage growth lagged the group in FY2025 before re-accelerating sharply in 2026."
       },
       {
         "period": "H1 2026 (reported July 2026)",
         "metrics": [
-          { "name": "Revenue", "actual": "RMB 276.9B (+54.8%); Q2 alone RMB 147.8B (+57%)", "expected": "Q2 consensus ~RMB 148.6B", "verdict": "inline", "result": "Q2 revenue in line" },
-          { "name": "Net profit (attributable)", "actual": "RMB 43.28B (+42.0%); Q2 RMB 22.5B (+36.5%)", "expected": "Q2 ~RMB 23.4B (consensus); growth expectation ~29.7%", "verdict": "inline", "result": "Growth beat expectations; absolute Q2 profit marginally below consensus. Large buyback announced" },
-          { "name": "Energy storage segment", "actual": "RMB 53.26B (+87.5%, GM 24.0%) — nearly 20% of revenue, now the growth engine", "expected": "", "verdict": "beat", "result": "—" }
+          {
+            "name": "Revenue",
+            "actual": "RMB 276.9B (+54.8%); Q2 alone RMB 147.8B (+57%)",
+            "expected": "Q2 consensus ~RMB 148.6B",
+            "verdict": "inline",
+            "result": "Q2 revenue in line"
+          },
+          {
+            "name": "Net profit (attributable)",
+            "actual": "RMB 43.28B (+42.0%); Q2 RMB 22.5B (+36.5%)",
+            "expected": "Q2 ~RMB 23.4B (consensus); growth expectation ~29.7%",
+            "verdict": "inline",
+            "result": "Growth beat expectations; absolute Q2 profit marginally below consensus. Large buyback announced"
+          },
+          {
+            "name": "Energy storage segment",
+            "actual": "RMB 53.26B (+87.5%, GM 24.0%) — nearly 20% of revenue, now the growth engine",
+            "expected": "",
+            "verdict": "beat",
+            "result": "—"
+          }
         ],
         "commentary": "US headwinds: added to the US DoD 1260H list (Jan 2025, disputed); Pentagon direct contracting bans phase in from June 2026 and DoD procurement of CATL batteries is barred from October 2027 — pushing US strategy toward the LRS licensing route."
       }
@@ -315,51 +604,227 @@
     "commentary": "Figures company-reported (annual reports / exchange filings) as relayed by cited outlets; consensus numbers are analyst estimates and marked per period."
   },
   "sources": [
-    { "label": "CnEVPost — H1 2026 global EV battery market share", "url": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/", "date": "2026-08-07" },
-    { "label": "CnEVPost — H1 2026 global ESS battery market share", "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/", "date": "2026-08-04" },
-    { "label": "CnEVPost — H1 2026 results + buyback", "url": "https://cnevpost.com/2026/07/24/catl-h1-profit-share-buyback/", "date": "2026-07-24" },
-    { "label": "CATL — Solarpro 2 GWh sodium-ion storage agreement", "url": "https://www.catl.com/en/news/6916.html", "date": "2026-07-21" },
-    { "label": "CATL — Alfen 5 GWh sodium-ion storage partnership", "url": "https://www.catl.com/en/news/6900.html", "date": "2026-07-16" },
-    { "label": "CATL — 8C superfast charging battery for light commercial vehicles", "url": "https://www.catl.com/en/news/6925.html", "date": "2026-07-06" },
-    { "label": "CnEVPost — Tectrans II 8C light-commercial battery", "url": "https://cnevpost.com/2026/07/06/catl-unveils-tectrans-ii-battery/", "date": "2026-07-06" },
-    { "label": "CATL — J&T Express heavy-truck battery-swap cooperation", "url": "https://www.catl.com/en/news/6922.html", "date": "2026-07-02" },
-    { "label": "CnEVPost — J&T Express 5,000-truck swap partnership", "url": "https://cnevpost.com/2026/07/02/catl-jt-express-battery-swap-5000-heavy-trucks/", "date": "2026-07-02" },
-    { "label": "IndexBox — Q2 2026 record results vs expectations", "url": "https://www.indexbox.io/blog/catl-reports-record-q2-2026-revenue-and-profit-misses-market-expectations/", "date": "2026-07" },
-    { "label": "CarNewsChina — 2,000th battery-swap station milestone", "url": "https://carnewschina.com/2026/07/01/catls-battery-swap-network-hits-2000-stations-milestone/", "date": "2026-07-01" },
-    { "label": "Energy-Storage.News — ESS nearly 20% of CATL H1 2026 revenue", "url": "https://www.energy-storage.news/energy-storage-generates-nearly-20-of-catls-revenues-in-first-half-of-2026/", "date": "2026-07" },
-    { "label": "CATL — TENER Sodium debut, first field-validated sodium-ion BESS", "url": "https://www.catl.com/en/news/6861.html", "date": "2026-06-22" },
-    { "label": "CnEVPost — TENER Sodium market launch", "url": "https://cnevpost.com/2026/06/22/catl-unveils-tener-sodium/", "date": "2026-06-22" },
-    { "label": "electrive — Ford to produce first LFP cells in 2026 under CATL license", "url": "https://www.electrive.com/2026/06/18/ford-to-produce-first-lfp-cells-this-year-thanks-to-catl/", "date": "2026-06-18" },
-    { "label": "Energy-Storage.News — TENER Sodium teardown", "url": "https://www.energy-storage.news/inside-the-container-looking-at-catls-sodium-ion-teners-specs/", "date": "2026-06" },
-    { "label": "Ford — BlueOval Battery Park Michigan LFP production & hiring milestones", "url": "https://www.fromtheroad.ford.com/us/en/articles/2026/blueoval-battery-park-michigan-hiring-and-lfp-production", "date": "2026-06" },
-    { "label": "CnEVPost — standardized light-truck swap ecosystem", "url": "https://cnevpost.com/2026/05/25/catl-launches-chinas-first-standardized-light-truck-battery-swap-ecosystem/", "date": "2026-05-25" },
-    { "label": "CnEVPost — Togg Bedrock chassis deal", "url": "https://cnevpost.com/2026/05/07/catl-strikes-bedrock-chassis-deal-with-turkey-togg/", "date": "2026-05-07" },
-    { "label": "Benchmark Source — top ESS cell suppliers and integrators 2025", "url": "https://source.benchmarkminerals.com/article/the-top-energy-storage-cell-suppliers-and-system-integrators-in-2025", "date": "2026-05" },
-    { "label": "CATL — Six Major Innovations, 2026 Super Tech Day", "url": "https://www.catl.com/en/news/6811.html", "date": "2026-04-21" },
-    { "label": "CnEVPost — 2026 Tech Day product rundown", "url": "https://cnevpost.com/2026/04/21/catl-unveils-new-battery-products-2026-tech-day/", "date": "2026-04-21" },
-    { "label": "CarNewsChina — 3rd-gen Qilin & 350 Wh/kg condensed battery", "url": "https://carnewschina.com/2026/04/21/catl-unveils-3rd-gen-qilin-with-3000kw-output-and-condensed-matter-battery-at-350wh-kg/", "date": "2026-04-21" },
-    { "label": "CATL — 2025 annual report release", "url": "https://www.catl.com/en/news/6773.html", "date": "2026-03" },
-    { "label": "Investing.com — FY2025 results stock reaction, special dividend", "url": "https://www.investing.com/news/stock-market-news/catl-shares-surge-on-upbeat-fy-results-special-dividend-4551081", "date": "2026-03" },
-    { "label": "ESS News — InfoLink 2025 ESS cell shipment rankings", "url": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/", "date": "2026-02-09" },
-    { "label": "CnEVPost — 2025 global EV battery market share", "url": "https://cnevpost.com/2026/02/04/global-ev-battery-market-share-2025/", "date": "2026-02-04" },
-    { "label": "CarNewsChina — world's first mass-production sodium-ion CV battery", "url": "https://carnewschina.com/2026/01/22/catl-unveils-worlds-first-mass-production-sodium-ion-battery-for-commercial-vehicles/", "date": "2026-01-22" },
-    { "label": "CnEVPost — 1,020 Choco stations, raised 2026 target", "url": "https://cnevpost.com/2025/12/30/catl-reaches-1020-choco-swap-stations-raises-2026-target/", "date": "2025-12-30" },
-    { "label": "CATL & Changan — world's first mass-production sodium-ion passenger vehicle", "url": "https://www.catl.com/en/news/6720.html", "date": "2025-12" },
-    { "label": "MarketMinute (syndicated) — Megapack 3 / SBB 1.5 / HaoHan container-class comparison", "url": "https://markets.financialcontent.com/stocks/article/marketminute-2025-9-11-tesla-unveils-megapack-3-and-megablock-reshaping-the-future-of-grid-scale-energy-storage", "date": "2025-09-11" },
-    { "label": "electrive — Shenxing Pro LFP battery for Europe (IAA 2025)", "url": "https://www.electrive.com/2025/09/08/catl-unveils-shenxing-pro-lfp-battery-for-europe/", "date": "2025-09-08" },
-    { "label": "CNBC — HKEX debut, biggest IPO of 2025", "url": "https://www.cnbc.com/2025/05/20/china-catl-hongkong-debut.html", "date": "2025-05-20" },
-    { "label": "pv magazine — TENER Stack 9 MWh unveiling", "url": "https://www.pv-magazine.com/2025/05/08/catl-unveils-9-mwh-utility-scale-battery/", "date": "2025-05-08" },
-    { "label": "CATL — TENER Stack 9 MWh launch", "url": "https://www.catl.com/en/news/6410.html", "date": "2025-05" },
-    { "label": "CATL — 75# standardized battery swap block & truck swap network", "url": "https://www.catl.com/en/news/6473.html", "date": "2025-05" },
-    { "label": "CATL — Naxtra launch & multi-power architecture (Apr 2025)", "url": "https://www.catl.com/en/news/6401.html", "date": "2025-04-21" },
-    { "label": "ESS News — 587 Ah storage cell unveiling", "url": "https://www.ess-news.com/2025/04/16/catl-unveils-587-ah-battery-energy-storage-cell/", "date": "2025-04-16" },
-    { "label": "Bloomberg — FY2024 profit +15%", "url": "https://www.bloomberg.com/news/articles/2025-03-14/catl-2024-profit-climbs-15-on-strong-ev-battery-demand", "date": "2025-03-14" },
-    { "label": "ESS News — 19 GWh Masdar Abu Dhabi BESS order", "url": "https://www.ess-news.com/2025/01/20/catl-to-supply-19-gwh-bess-for-masdars-round-the-clock-abu-dhabi-project/", "date": "2025-01-20" },
-    { "label": "CATL — Tectrans (Tianxing) commercial-vehicle battery brand launch", "url": "https://www.catl.com/en/news/6267.html", "date": "2024-07" },
-    { "label": "CnEVPost — LRS licensing talks with ~a dozen automakers", "url": "https://cnevpost.com/2024/05/05/catl-has-talked-with-dozen-automakers-for-tech-licensing/", "date": "2024-05-05" },
-    { "label": "CATL — QIJI Energy heavy-duty truck swap solution launch", "url": "https://www.catl.com/en/news/6041.html", "date": "2023-06" },
-    { "label": "CATL — 500 Wh/kg condensed battery launch (2023)", "url": "https://www.catl.com/en/news/6015.html", "date": "2023-04-19" }
+    {
+      "label": "CnEVPost — H1 2026 global EV battery market share",
+      "url": "https://cnevpost.com/2026/08/07/global-ev-battery-market-share-h1-2026/",
+      "date": "2026-08-07"
+    },
+    {
+      "label": "CnEVPost — H1 2026 global ESS battery market share",
+      "url": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
+      "date": "2026-08-04"
+    },
+    {
+      "label": "CnEVPost — H1 2026 results + buyback",
+      "url": "https://cnevpost.com/2026/07/24/catl-h1-profit-share-buyback/",
+      "date": "2026-07-24"
+    },
+    {
+      "label": "CATL — Solarpro 2 GWh sodium-ion storage agreement",
+      "url": "https://www.catl.com/en/news/6916.html",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "CATL — Alfen 5 GWh sodium-ion storage partnership",
+      "url": "https://www.catl.com/en/news/6900.html",
+      "date": "2026-07-16"
+    },
+    {
+      "label": "CATL — 8C superfast charging battery for light commercial vehicles",
+      "url": "https://www.catl.com/en/news/6925.html",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "CnEVPost — Tectrans II 8C light-commercial battery",
+      "url": "https://cnevpost.com/2026/07/06/catl-unveils-tectrans-ii-battery/",
+      "date": "2026-07-06"
+    },
+    {
+      "label": "CATL — J&T Express heavy-truck battery-swap cooperation",
+      "url": "https://www.catl.com/en/news/6922.html",
+      "date": "2026-07-02"
+    },
+    {
+      "label": "CnEVPost — J&T Express 5,000-truck swap partnership",
+      "url": "https://cnevpost.com/2026/07/02/catl-jt-express-battery-swap-5000-heavy-trucks/",
+      "date": "2026-07-02"
+    },
+    {
+      "label": "IndexBox — Q2 2026 record results vs expectations",
+      "url": "https://www.indexbox.io/blog/catl-reports-record-q2-2026-revenue-and-profit-misses-market-expectations/",
+      "date": "2026-07"
+    },
+    {
+      "label": "CarNewsChina — 2,000th battery-swap station milestone",
+      "url": "https://carnewschina.com/2026/07/01/catls-battery-swap-network-hits-2000-stations-milestone/",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "Energy-Storage.News — ESS nearly 20% of CATL H1 2026 revenue",
+      "url": "https://www.energy-storage.news/energy-storage-generates-nearly-20-of-catls-revenues-in-first-half-of-2026/",
+      "date": "2026-07"
+    },
+    {
+      "label": "CATL — TENER Sodium debut, first field-validated sodium-ion BESS",
+      "url": "https://www.catl.com/en/news/6861.html",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "CnEVPost — TENER Sodium market launch",
+      "url": "https://cnevpost.com/2026/06/22/catl-unveils-tener-sodium/",
+      "date": "2026-06-22"
+    },
+    {
+      "label": "electrive — Ford to produce first LFP cells in 2026 under CATL license",
+      "url": "https://www.electrive.com/2026/06/18/ford-to-produce-first-lfp-cells-this-year-thanks-to-catl/",
+      "date": "2026-06-18"
+    },
+    {
+      "label": "Energy-Storage.News — TENER Sodium teardown",
+      "url": "https://www.energy-storage.news/inside-the-container-looking-at-catls-sodium-ion-teners-specs/",
+      "date": "2026-06"
+    },
+    {
+      "label": "Ford — BlueOval Battery Park Michigan LFP production & hiring milestones",
+      "url": "https://www.fromtheroad.ford.com/us/en/articles/2026/blueoval-battery-park-michigan-hiring-and-lfp-production",
+      "date": "2026-06"
+    },
+    {
+      "label": "CnEVPost — standardized light-truck swap ecosystem",
+      "url": "https://cnevpost.com/2026/05/25/catl-launches-chinas-first-standardized-light-truck-battery-swap-ecosystem/",
+      "date": "2026-05-25"
+    },
+    {
+      "label": "CnEVPost — Togg Bedrock chassis deal",
+      "url": "https://cnevpost.com/2026/05/07/catl-strikes-bedrock-chassis-deal-with-turkey-togg/",
+      "date": "2026-05-07"
+    },
+    {
+      "label": "Benchmark Source — top ESS cell suppliers and integrators 2025",
+      "url": "https://source.benchmarkminerals.com/article/the-top-energy-storage-cell-suppliers-and-system-integrators-in-2025",
+      "date": "2026-05"
+    },
+    {
+      "label": "CATL — Six Major Innovations, 2026 Super Tech Day",
+      "url": "https://www.catl.com/en/news/6811.html",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "CnEVPost — 2026 Tech Day product rundown",
+      "url": "https://cnevpost.com/2026/04/21/catl-unveils-new-battery-products-2026-tech-day/",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "CarNewsChina — 3rd-gen Qilin & 350 Wh/kg condensed battery",
+      "url": "https://carnewschina.com/2026/04/21/catl-unveils-3rd-gen-qilin-with-3000kw-output-and-condensed-matter-battery-at-350wh-kg/",
+      "date": "2026-04-21"
+    },
+    {
+      "label": "CATL — 2025 annual report release",
+      "url": "https://www.catl.com/en/news/6773.html",
+      "date": "2026-03"
+    },
+    {
+      "label": "Investing.com — FY2025 results stock reaction, special dividend",
+      "url": "https://www.investing.com/news/stock-market-news/catl-shares-surge-on-upbeat-fy-results-special-dividend-4551081",
+      "date": "2026-03"
+    },
+    {
+      "label": "ESS News — InfoLink 2025 ESS cell shipment rankings",
+      "url": "https://www.ess-news.com/2026/02/09/infolink-2025-energy-storage-cell-shipments-jump-95-to-612-gwh-as-market-flips-from-glut-to-tightness/",
+      "date": "2026-02-09"
+    },
+    {
+      "label": "CnEVPost — 2025 global EV battery market share",
+      "url": "https://cnevpost.com/2026/02/04/global-ev-battery-market-share-2025/",
+      "date": "2026-02-04"
+    },
+    {
+      "label": "CarNewsChina — world's first mass-production sodium-ion CV battery",
+      "url": "https://carnewschina.com/2026/01/22/catl-unveils-worlds-first-mass-production-sodium-ion-battery-for-commercial-vehicles/",
+      "date": "2026-01-22"
+    },
+    {
+      "label": "CnEVPost — 1,020 Choco stations, raised 2026 target",
+      "url": "https://cnevpost.com/2025/12/30/catl-reaches-1020-choco-swap-stations-raises-2026-target/",
+      "date": "2025-12-30"
+    },
+    {
+      "label": "CATL & Changan — world's first mass-production sodium-ion passenger vehicle",
+      "url": "https://www.catl.com/en/news/6720.html",
+      "date": "2025-12"
+    },
+    {
+      "label": "MarketMinute (syndicated) — Megapack 3 / SBB 1.5 / HaoHan container-class comparison",
+      "url": "https://markets.financialcontent.com/stocks/article/marketminute-2025-9-11-tesla-unveils-megapack-3-and-megablock-reshaping-the-future-of-grid-scale-energy-storage",
+      "date": "2025-09-11"
+    },
+    {
+      "label": "electrive — Shenxing Pro LFP battery for Europe (IAA 2025)",
+      "url": "https://www.electrive.com/2025/09/08/catl-unveils-shenxing-pro-lfp-battery-for-europe/",
+      "date": "2025-09-08"
+    },
+    {
+      "label": "CNBC — HKEX debut, biggest IPO of 2025",
+      "url": "https://www.cnbc.com/2025/05/20/china-catl-hongkong-debut.html",
+      "date": "2025-05-20"
+    },
+    {
+      "label": "pv magazine — TENER Stack 9 MWh unveiling",
+      "url": "https://www.pv-magazine.com/2025/05/08/catl-unveils-9-mwh-utility-scale-battery/",
+      "date": "2025-05-08"
+    },
+    {
+      "label": "CATL — TENER Stack 9 MWh launch",
+      "url": "https://www.catl.com/en/news/6410.html",
+      "date": "2025-05"
+    },
+    {
+      "label": "CATL — 75# standardized battery swap block & truck swap network",
+      "url": "https://www.catl.com/en/news/6473.html",
+      "date": "2025-05"
+    },
+    {
+      "label": "CATL — Naxtra launch & multi-power architecture (Apr 2025)",
+      "url": "https://www.catl.com/en/news/6401.html",
+      "date": "2025-04-21"
+    },
+    {
+      "label": "ESS News — 587 Ah storage cell unveiling",
+      "url": "https://www.ess-news.com/2025/04/16/catl-unveils-587-ah-battery-energy-storage-cell/",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "Bloomberg — FY2024 profit +15%",
+      "url": "https://www.bloomberg.com/news/articles/2025-03-14/catl-2024-profit-climbs-15-on-strong-ev-battery-demand",
+      "date": "2025-03-14"
+    },
+    {
+      "label": "ESS News — 19 GWh Masdar Abu Dhabi BESS order",
+      "url": "https://www.ess-news.com/2025/01/20/catl-to-supply-19-gwh-bess-for-masdars-round-the-clock-abu-dhabi-project/",
+      "date": "2025-01-20"
+    },
+    {
+      "label": "CATL — Tectrans (Tianxing) commercial-vehicle battery brand launch",
+      "url": "https://www.catl.com/en/news/6267.html",
+      "date": "2024-07"
+    },
+    {
+      "label": "CnEVPost — LRS licensing talks with ~a dozen automakers",
+      "url": "https://cnevpost.com/2024/05/05/catl-has-talked-with-dozen-automakers-for-tech-licensing/",
+      "date": "2024-05-05"
+    },
+    {
+      "label": "CATL — QIJI Energy heavy-duty truck swap solution launch",
+      "url": "https://www.catl.com/en/news/6041.html",
+      "date": "2023-06"
+    },
+    {
+      "label": "CATL — 500 Wh/kg condensed battery launch (2023)",
+      "url": "https://www.catl.com/en/news/6015.html",
+      "date": "2023-04-19"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 4
 }

@@ -3,12 +3,17 @@
   "slug": "wartsila",
   "name": "Wärtsilä Oyj Abp (Wärtsilä Corporation)",
   "shortName": "Wärtsilä",
-  "categories": ["integrator"],
+  "categories": [
+    "integrator"
+  ],
   "website": "https://www.wartsila.com",
   "headquarters": "Helsinki, Finland",
   "founded": 1834,
   "employees": "~17,900 (end-2025, company-reported)",
-  "ownership": { "type": "public", "ticker": "HEL: WRT1V" },
+  "ownership": {
+    "type": "public",
+    "ticker": "HEL: WRT1V"
+  },
   "summary": "BOTTOM LINE UP FRONT: We assess Wärtsilä is executing a managed exit from merchant storage integration — folding the business into a 50/50 JV with RCT Solutions after a 60% order collapse — while its retained engine business independently monetizes data-center power demand. BACKGROUND: Wärtsilä is a Finnish marine and energy technology group (founded 1834) supplying ship engines and propulsion, engine power plants for grid balancing, lifecycle services, and — through its Energy Storage & Optimisation business — utility-scale BESS (Quantum series) and the GEMS Digital Energy Platform. The storage business's ownership has moved in two stages: an 18-month strategic review concluded in March 2025 with retention (elevated to a standalone segment), but on 15 June 2026 Wärtsilä announced it will fold global Energy Storage into a 50/50 joint venture with Germany's RCT Solutions GmbH (RCT CEO Peter Fath to lead the JV; closing expected Q3 2026), reclassifying it as discontinued operations.",
   "ecosystemRole": "One of the established Western storage integrators: >19 GWh deployed or contracted across 130+ sites worldwide (company-reported), a global top-ten placement in Wood Mackenzie's inaugural BESS integrator ranking (July 2026), and an early leader in storage cybersecurity (first-in-industry IEC 62443 certification for GEMS technology). The 2025 numbers show the strategic squeeze: segment order intake fell 60% to EUR 455M (2,677 MWh, -52%) on US tariffs, FEOC rules, and price competition — the backdrop to the JV decision.",
   "productsAndServices": [
@@ -104,15 +109,69 @@
     }
   ],
   "recentDevelopments": [
-    { "date": "2026-07-14", "category": "other", "headline": "Wood Mackenzie's inaugural global BESS integrator ranking places Wärtsilä in the global top ten (Sungrow #1, Tesla #2, CATL #3)", "read": "Independent validation of integrator relevance even as the market tops 100 GW/yr and Chinese vertically integrated players dominate — Wärtsilä is bucketed with Fluence and Powin as a 'pure-play' integrator.", "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/" },
-    { "date": "2026-06-30", "category": "order-win", "headline": "150 MW / 300 MWh Bungama BESS (Revera Energy, South Australia) reaches commercial operation — fourth operational Australian storage project", "read": "Quantum High Energy + GEMS delivering in the showcase NEM market; stage one of a multi-stage site keeps follow-on capacity in view for the JV's order book.", "source": "https://www.wartsila.com/media/news/30-06-2026-now-operational-wartsila-delivers-150-mw---300-mwh-energy-storage-system-for-revera-energy-in-south-australia-supporting-energy-stability-and-reliability-3767607" },
-    { "date": "2026-06-15", "category": "partnership", "headline": "50/50 JV with RCT Solutions GmbH announced for the global Energy Storage business; storage reclassified as discontinued operations", "read": "The whole product stack researched here — Quantum, GEMS, lifecycle services, ~480 staff, EUR 719M order book — moves to a JV led by RCT's Peter Fath; closing expected Q3 2026, so the sales counterpart may soon be the JV, not Wärtsilä.", "source": "https://www.wartsila.com/media/news/15-06-2026-inside-information-wartsila-to-establish-a-joint-venture-for-its-global-energy-storage-business-with-rct-solutions-gmbh-and-discontinue-energy-storage-as-a-separate-reporting-segment-3763438" },
-    { "date": "2026-04-10", "category": "other", "headline": "GEMS Pulse wins the 'CleanTech Analytics Innovation Award' in the 2026 CleanTech Breakthrough Awards", "read": "Third-party recognition for the analytics layer six months after launch — supports the software-differentiation pitch during JV transition uncertainty.", "source": "https://www.wartsila.com/media/news/10-04-2026-wartsila-s-gems-pulse-winner-of-cleantech-analytics-innovation-award-in-2026-cleantech-breakthrough-awards-program-3738236" },
-    { "date": "2026-02-19", "category": "regulatory", "headline": "GEMS Cloud Connect (ex-Fleet Director) achieves SOC 2 Type 1 compliance; Type 2 audit underway", "read": "Extends the cybersecurity-first positioning (IEC 62443 heritage) into enterprise cloud attestation — a procurement checkbox utilities and data-centre customers increasingly require.", "source": "https://www.wartsila.com/media/news/19-02-2026-wartsila-achieves-soc-2-type-1-compliance-for-gems-cloud-connect-3719063" },
-    { "date": "2026-02-16", "category": "order-win", "headline": "Construction starts on 50 MW / 100 MWh Gramme Storage 1 BESS in Belgium (Quantum2 + GEMS); completion expected Q2 2027", "read": "Keeps European grid-stability deliveries flowing through the JV transition — and shows Quantum2 DC blocks still winning alongside the newer Quantum3.", "source": "https://www.wartsila.com/media/news/16-02-2026-wartsila-begins-construction-of-a-50-mw-100-mwh-energy-storage-system-to-bolster-grid-stability-in-belgium-3716355" },
-    { "date": "2026-01-29", "category": "order-win", "headline": "24 × Wärtsilä 50SG engines (429 MW) ordered for a US power plant serving data-centre demand; COD late 2028–early 2029", "read": "The retained engine business is monetising the US data-centre power squeeze — Q1 2026 booking on top of 2025's first two US data-centre projects (789 MW).", "source": "https://www.wartsila.com/media/news/29-01-2026-wartsila-chosen-for-a-major-u-s-power-plant-project-addressing-critical-energy-demand-driven-by-data-center-development-3711601" },
-    { "date": "2025-12-19", "category": "order-win", "headline": "Wärtsilä to supply a 500 MWh BESS project in Texas (ERCOT)", "read": "US pipeline continuing despite the tariff/FEOC-driven 2025 order collapse — ERCOT remains a core market for the storage business entering the JV.", "source": "https://www.ess-news.com/2025/12/19/texas-bess-wartsila-to-supply-500-mwh-project-linea-energy-secures-financing-for-470-mwh-facility/" },
-    { "date": "2025-10-14", "category": "product-launch", "headline": "GEMS Pulse launched — predictive cell-to-fleet analytics (SoH, SoC, cell imbalance, usable energy) built in-house on 9+ GWh of fleet data", "read": "Monetises the operational fleet's data exhaust as a revenue-uplift product, and deliberately in-house rather than via third-party battery-analytics vendors.", "source": "https://www.wartsila.com/media/news/14-10-2025-wartsila-debuts-gems-pulse-a-new-software-solution-to-enhance-revenue-for-bess-customers-through-cell-to-fleet-data-analytics-3668996" }
+    {
+      "date": "2026-07-14",
+      "category": "other",
+      "headline": "Wood Mackenzie's inaugural global BESS integrator ranking places Wärtsilä in the global top ten (Sungrow #1, Tesla #2, CATL #3)",
+      "read": "Independent validation of integrator relevance even as the market tops 100 GW/yr and Chinese vertically integrated players dominate — Wärtsilä is bucketed with Fluence and Powin as a 'pure-play' integrator.",
+      "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/"
+    },
+    {
+      "date": "2026-06-30",
+      "category": "order-win",
+      "headline": "150 MW / 300 MWh Bungama BESS (Revera Energy, South Australia) reaches commercial operation — fourth operational Australian storage project",
+      "read": "Quantum High Energy + GEMS delivering in the showcase NEM market; stage one of a multi-stage site keeps follow-on capacity in view for the JV's order book.",
+      "source": "https://www.wartsila.com/media/news/30-06-2026-now-operational-wartsila-delivers-150-mw---300-mwh-energy-storage-system-for-revera-energy-in-south-australia-supporting-energy-stability-and-reliability-3767607"
+    },
+    {
+      "date": "2026-06-15",
+      "category": "partnership",
+      "headline": "50/50 JV with RCT Solutions GmbH announced for the global Energy Storage business; storage reclassified as discontinued operations",
+      "read": "The whole product stack researched here — Quantum, GEMS, lifecycle services, ~480 staff, EUR 719M order book — moves to a JV led by RCT's Peter Fath; closing expected Q3 2026, so the sales counterpart may soon be the JV, not Wärtsilä.",
+      "source": "https://www.wartsila.com/media/news/15-06-2026-inside-information-wartsila-to-establish-a-joint-venture-for-its-global-energy-storage-business-with-rct-solutions-gmbh-and-discontinue-energy-storage-as-a-separate-reporting-segment-3763438"
+    },
+    {
+      "date": "2026-04-10",
+      "category": "other",
+      "headline": "GEMS Pulse wins the 'CleanTech Analytics Innovation Award' in the 2026 CleanTech Breakthrough Awards",
+      "read": "Third-party recognition for the analytics layer six months after launch — supports the software-differentiation pitch during JV transition uncertainty.",
+      "source": "https://www.wartsila.com/media/news/10-04-2026-wartsila-s-gems-pulse-winner-of-cleantech-analytics-innovation-award-in-2026-cleantech-breakthrough-awards-program-3738236"
+    },
+    {
+      "date": "2026-02-19",
+      "category": "regulatory",
+      "headline": "GEMS Cloud Connect (ex-Fleet Director) achieves SOC 2 Type 1 compliance; Type 2 audit underway",
+      "read": "Extends the cybersecurity-first positioning (IEC 62443 heritage) into enterprise cloud attestation — a procurement checkbox utilities and data-centre customers increasingly require.",
+      "source": "https://www.wartsila.com/media/news/19-02-2026-wartsila-achieves-soc-2-type-1-compliance-for-gems-cloud-connect-3719063"
+    },
+    {
+      "date": "2026-02-16",
+      "category": "order-win",
+      "headline": "Construction starts on 50 MW / 100 MWh Gramme Storage 1 BESS in Belgium (Quantum2 + GEMS); completion expected Q2 2027",
+      "read": "Keeps European grid-stability deliveries flowing through the JV transition — and shows Quantum2 DC blocks still winning alongside the newer Quantum3.",
+      "source": "https://www.wartsila.com/media/news/16-02-2026-wartsila-begins-construction-of-a-50-mw-100-mwh-energy-storage-system-to-bolster-grid-stability-in-belgium-3716355"
+    },
+    {
+      "date": "2026-01-29",
+      "category": "order-win",
+      "headline": "24 × Wärtsilä 50SG engines (429 MW) ordered for a US power plant serving data-centre demand; COD late 2028–early 2029",
+      "read": "The retained engine business is monetising the US data-centre power squeeze — Q1 2026 booking on top of 2025's first two US data-centre projects (789 MW).",
+      "source": "https://www.wartsila.com/media/news/29-01-2026-wartsila-chosen-for-a-major-u-s-power-plant-project-addressing-critical-energy-demand-driven-by-data-center-development-3711601"
+    },
+    {
+      "date": "2025-12-19",
+      "category": "order-win",
+      "headline": "Wärtsilä to supply a 500 MWh BESS project in Texas (ERCOT)",
+      "read": "US pipeline continuing despite the tariff/FEOC-driven 2025 order collapse — ERCOT remains a core market for the storage business entering the JV.",
+      "source": "https://www.ess-news.com/2025/12/19/texas-bess-wartsila-to-supply-500-mwh-project-linea-energy-secures-financing-for-470-mwh-facility/"
+    },
+    {
+      "date": "2025-10-14",
+      "category": "product-launch",
+      "headline": "GEMS Pulse launched — predictive cell-to-fleet analytics (SoH, SoC, cell imbalance, usable energy) built in-house on 9+ GWh of fleet data",
+      "read": "Monetises the operational fleet's data exhaust as a revenue-uplift product, and deliberately in-house rather than via third-party battery-analytics vendors.",
+      "source": "https://www.wartsila.com/media/news/14-10-2025-wartsila-debuts-gems-pulse-a-new-software-solution-to-enhance-revenue-for-bess-customers-through-cell-to-fleet-data-analytics-3668996"
+    }
   ],
   "strategyRead": [
     "(High confidence) We assess the JV decision is a managed retreat from merchant storage integration: the 2025 order collapse (intake −60% to EUR 455M; MWh −52%) on US tariffs, FEOC rules, and price competition made standalone scale uneconomic. Basis: company disclosures.",
@@ -124,55 +183,155 @@
     {
       "product": "Quantum3 (flagship AC block)",
       "specs": [
-        { "label": "Energy", "value": "5 MWh per 20-ft ISO container (AC block)" },
-        { "label": "PCS", "value": "String-based PCS fully integrated (decentralised control); MW rating not published" },
-        { "label": "BMS / controls", "value": "Proprietary BMS designed and engineered in the US; rack-level optimisation; GEMS-native" },
-        { "label": "Enclosure", "value": "Aluminum housing, single-side access, back-to-back siting" },
-        { "label": "Cooling", "value": "Advanced thermal management with low-GWP refrigerant; low noise" },
-        { "label": "Safety / cyber", "value": "Fire safety 'exceeding current global regulations'; enhanced cybersecurity; cell supplier and full certification list not published" }
+        {
+          "band": "Ratings",
+          "label": "Energy",
+          "value": "5 MWh per 20-ft ISO container (AC block)"
+        },
+        {
+          "band": "Power conversion",
+          "label": "PCS",
+          "value": "String-based PCS fully integrated (decentralised control); MW rating not published"
+        },
+        {
+          "band": "Controls",
+          "label": "BMS / controls",
+          "value": "Proprietary BMS designed and engineered in the US; rack-level optimisation; GEMS-native"
+        },
+        {
+          "band": "Physical",
+          "label": "Enclosure",
+          "value": "Aluminum housing, single-side access, back-to-back siting"
+        },
+        {
+          "band": "Thermal",
+          "label": "Cooling",
+          "value": "Advanced thermal management with low-GWP refrigerant; low noise"
+        },
+        {
+          "band": "Safety",
+          "label": "Fire & cyber",
+          "value": "Fire safety 'exceeding current global regulations'; enhanced cybersecurity; cell supplier and full certification list not published"
+        }
       ],
       "notes": "Launched September 2024; Energy-Storage.News notes the 5 MWh capacity matches the contemporary grid-scale class while deliberately trading peak density for road-transportable weight."
     },
     {
       "product": "Quantum2 (DC block)",
       "specs": [
-        { "label": "Energy / duration", "value": "4 MWh per CSC/ISO 20-ft enclosure; 2–8-hour applications" },
-        { "label": "Modules", "value": "IP67 liquid-cooled Li-ion modules (supplier undisclosed); configurable hybrid cooling" },
-        { "label": "Architecture", "value": "Integrated DC connections; scalable building blocks; pre-installed for rapid deployment" },
-        { "label": "Certifications", "value": "UL 9540A, NFPA 855, IEC 62443-4 (cyber)" }
+        {
+          "band": "Ratings",
+          "label": "Energy / duration",
+          "value": "4 MWh per CSC/ISO 20-ft enclosure; 2–8-hour applications"
+        },
+        {
+          "band": "Modules",
+          "label": "Construction",
+          "value": "IP67 liquid-cooled Li-ion modules (supplier undisclosed); configurable hybrid cooling"
+        },
+        {
+          "band": "Architecture",
+          "label": "Scaling",
+          "value": "Integrated DC connections; scalable building blocks; pre-installed for rapid deployment"
+        },
+        {
+          "band": "Compliance",
+          "label": "Certifications",
+          "value": "UL 9540A, NFPA 855, IEC 62443-4 (cyber)"
+        }
       ],
       "notes": "Deployed at Gramme Storage 1, Belgium (50 MW / 100 MWh, construction from February 2026, completion expected Q2 2027)."
     },
     {
       "product": "Quantum High Energy (high-density enclosure)",
       "specs": [
-        { "label": "Cells", "value": "306 Ah lithium-ion; per-enclosure MWh not published" },
-        { "label": "Density gain", "value": "+9% energy density vs prior generation; up to 15% lower land requirement" },
-        { "label": "Fire safety", "value": "Active dehumidification, prefabricated fire walls between units, dual sprinkler systems, gas-detection ports, external door latches for first responders" },
-        { "label": "Leakage protection", "value": "Coolant, electrolyte and low-GWP refrigerant leakage protection" },
-        { "label": "Grid functions (via GEMS)", "value": "Black start, island operation, virtual synchronous generator" }
+        {
+          "band": "Cells",
+          "label": "Format",
+          "value": "306 Ah lithium-ion; per-enclosure MWh not published"
+        },
+        {
+          "band": "Density",
+          "label": "Gain",
+          "value": "+9% energy density vs prior generation; up to 15% lower land requirement"
+        },
+        {
+          "band": "Safety",
+          "label": "Fire",
+          "value": "Active dehumidification, prefabricated fire walls between units, dual sprinkler systems, gas-detection ports, external door latches for first responders"
+        },
+        {
+          "band": "Safety",
+          "label": "Leakage protection",
+          "value": "Coolant, electrolyte and low-GWP refrigerant leakage protection"
+        },
+        {
+          "band": "Grid",
+          "label": "Functions (via GEMS)",
+          "value": "Black start, island operation, virtual synchronous generator"
+        }
       ],
       "notes": "Reference fleet: 1,038 units / 1,400 MWh at EnergyAustralia's Wooreen BESS (Victoria); 150 MW / 300 MWh Bungama BESS (South Australia) operational June 2026. Wärtsilä claims a 100% fire-safety record across the Quantum fleet."
     },
     {
       "product": "GEMS Digital Energy Platform (incl. Pulse / Cloud Connect)",
       "specs": [
-        { "label": "Scope", "value": "Cell-to-fleet monitoring, control and optimisation of storage and hybrid (engine + renewable + BESS) assets; 100+ projects" },
-        { "label": "Gen 7 control", "value": "Autonomous multi-GWh site control 'within a fraction of a second' (Aug 2024); millisecond-level frequency response cited at Bungama" },
-        { "label": "GEMS Pulse analytics", "value": "SoH / SoC / cell-imbalance / usable-energy estimation, anomaly detection, scenario tools; >1 million data points per second across 9+ GWh operational fleet" },
-        { "label": "Cybersecurity", "value": "First-in-industry IEC 62443 certification (62443-4-1 ML2 / 62443-4-2 SL1, company-reported 2020); GEMS Cloud Connect SOC 2 Type 1 (Feb 2026), Type 2 in progress" }
+        {
+          "band": "Scope",
+          "label": "Coverage",
+          "value": "Cell-to-fleet monitoring, control and optimisation of storage and hybrid (engine + renewable + BESS) assets; 100+ projects"
+        },
+        {
+          "band": "Control",
+          "label": "Gen 7",
+          "value": "Autonomous multi-GWh site control 'within a fraction of a second' (Aug 2024); millisecond-level frequency response cited at Bungama"
+        },
+        {
+          "band": "Analytics",
+          "label": "GEMS Pulse",
+          "value": "SoH / SoC / cell-imbalance / usable-energy estimation, anomaly detection, scenario tools; >1 million data points per second across 9+ GWh operational fleet"
+        },
+        {
+          "band": "Compliance",
+          "label": "Cybersecurity",
+          "value": "First-in-industry IEC 62443 certification (62443-4-1 ML2 / 62443-4-2 SL1, company-reported 2020); GEMS Cloud Connect SOC 2 Type 1 (Feb 2026), Type 2 in progress"
+        }
       ],
       "notes": "Data-centre variant claims: layered redundancy targeting 99.999% uptime, seamless grid-connected ↔ islanded transitions, real-time coordination of engines, batteries, UPS and renewables."
     },
     {
       "product": "Engine power plant portfolio (retained business)",
       "specs": [
-        { "label": "Wärtsilä 31SG (gas)", "value": "10.8–12.4 MW per set; up to 52.1% electrical efficiency (efficiency-optimised variant); Balancer variant optimised for renewables balancing" },
-        { "label": "Wärtsilä 46TS-SG / 46TS-DF", "value": "20.4–22.9 MW per set; 51.3% / 50.7% electrical efficiency; 2-minute start-up" },
-        { "label": "Wärtsilä 50SG / 50DF", "value": "18.4 / 17.6 MW per set; 49.9% / 49.4% efficiency; 30-second grid connection" },
-        { "label": "Plant scale", "value": ">450 MW from 10–23 MW modular units; large plants operational in 12 months" },
-        { "label": "Environment / resources", "value": "Full output −45°C to +50°C and above 1,200 m altitude; <5 litres water per hour; claimed 20–35% less fuel than gas turbines; CHP >80% total efficiency" },
-        { "label": "Hydrogen path", "value": "31SG-H2 hydrogen-ready (natural gas with up to 25 vol-% H2 blends before conversion) and 31H2 pure-hydrogen engine — launched June 2024, deliveries from 2026; 100% hydrogen large-scale engine demonstrated on Spain's grid (Bermeo, shown to customers June 2026)" }
+        {
+          "band": "Engines",
+          "label": "Wärtsilä 31SG (gas)",
+          "value": "10.8–12.4 MW per set; up to 52.1% electrical efficiency (efficiency-optimised variant); Balancer variant optimised for renewables balancing"
+        },
+        {
+          "band": "Engines",
+          "label": "Wärtsilä 46TS-SG / 46TS-DF",
+          "value": "20.4–22.9 MW per set; 51.3% / 50.7% electrical efficiency; 2-minute start-up"
+        },
+        {
+          "band": "Engines",
+          "label": "Wärtsilä 50SG / 50DF",
+          "value": "18.4 / 17.6 MW per set; 49.9% / 49.4% efficiency; 30-second grid connection"
+        },
+        {
+          "band": "Plant",
+          "label": "Scale",
+          "value": ">450 MW from 10–23 MW modular units; large plants operational in 12 months"
+        },
+        {
+          "band": "Environment",
+          "label": "Range & resources",
+          "value": "Full output −45°C to +50°C and above 1,200 m altitude; <5 litres water per hour; claimed 20–35% less fuel than gas turbines; CHP >80% total efficiency"
+        },
+        {
+          "band": "Fuel roadmap",
+          "label": "Hydrogen path",
+          "value": "31SG-H2 hydrogen-ready (natural gas with up to 25 vol-% H2 blends before conversion) and 31H2 pure-hydrogen engine — launched June 2024, deliveries from 2026; 100% hydrogen large-scale engine demonstrated on Spain's grid (Bermeo, shown to customers June 2026)"
+        }
       ],
       "notes": "Dual-fuel (DF) variants run gas or liquid fuels for energy security; conversion packages planned for hydrogen with ammonia/methanol conversion capability to follow."
     }
@@ -191,7 +350,9 @@
       "name": "Arjen Berends",
       "title": "EVP & CFO (CFO since 2018; joined Wärtsilä 1988)",
       "photo": "images/execs/wartsila-berends.png",
-      "background": ["Career in Wärtsilä finance and business control; MBA"]
+      "background": [
+        "Career in Wärtsilä finance and business control; MBA"
+      ]
     },
     {
       "name": "Tamara de Gruyter",
@@ -213,13 +374,17 @@
       "name": "Anders Lindberg",
       "title": "President, Wärtsilä Energy & EVP (since 2023)",
       "photo": "images/execs/wartsila-lindberg.png",
-      "background": ["CEO Dellner Couplers; EVP EPC & QHSE at Ørsted; Bombardier; M.Sc. Eng., MBA"]
+      "background": [
+        "CEO Dellner Couplers; EVP EPC & QHSE at Ørsted; Bombardier; M.Sc. Eng., MBA"
+      ]
     },
     {
       "name": "Roger Holm",
       "title": "President, Wärtsilä Marine & EVP (joined 1997)",
       "photo": "images/execs/wartsila-holm.png",
-      "background": ["Earlier President Marine Power; M.Sc. (Econ.)"]
+      "background": [
+        "Earlier President Marine Power; M.Sc. (Econ.)"
+      ]
     }
   ],
   "financials": {
@@ -229,26 +394,74 @@
       {
         "period": "Group FY2024",
         "metrics": [
-          { "name": "Net sales", "actual": "EUR 6,449M (+7%); order intake EUR 8,072M (+14%)", "expected": "", "verdict": "inline", "result": "Consensus comparison not found" },
-          { "name": "Operating result", "actual": "EUR 716M (11.1%); comparable EUR 694M (10.8%); EPS 0.85; dividend 0.44", "expected": "", "verdict": "inline", "result": "—" },
-          { "name": "Energy Storage segment (restated)", "actual": "Order intake EUR 1,128M (5,550 MWh); net sales EUR 794M; comparable operating result EUR 33M (4.2%)", "expected": "", "verdict": "inline", "result": "—" }
+          {
+            "name": "Net sales",
+            "actual": "EUR 6,449M (+7%); order intake EUR 8,072M (+14%)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Consensus comparison not found"
+          },
+          {
+            "name": "Operating result",
+            "actual": "EUR 716M (11.1%); comparable EUR 694M (10.8%); EPS 0.85; dividend 0.44",
+            "expected": "",
+            "verdict": "inline",
+            "result": "—"
+          },
+          {
+            "name": "Energy Storage segment (restated)",
+            "actual": "Order intake EUR 1,128M (5,550 MWh); net sales EUR 794M; comparable operating result EUR 33M (4.2%)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "—"
+          }
         ],
         "commentary": ""
       },
       {
         "period": "Group FY2025",
         "metrics": [
-          { "name": "Net sales", "actual": "EUR 6,914M (+7%) — all-time-high sales, operating result, and cash flow", "expected": "", "verdict": "inline", "result": "—" },
-          { "name": "Operating result", "actual": "EUR 833M (12.1%); comparable EUR 829M (+20%); EPS 1.06; proposed dividend 1.06 (0.54 base + 0.52 extraordinary)", "expected": "", "verdict": "inline", "result": "Q4 order intake EUR 2,220M (-11%) was described in press coverage as below analyst forecasts on US battery tariffs and storage competition" },
-          { "name": "Energy Storage segment", "actual": "Order intake EUR 455M (-60%); 2,677 MWh (-52%); net sales EUR 694M (-13%); comparable operating result EUR 24M (3.4%); order book EUR 719M", "expected": "Segment targets set April 2025: low double-digit organic growth, 3–5% operating margin", "verdict": "miss", "result": "Quarterly orders collapsed to EUR 31/50/11M in Q1–Q3 before a EUR 364M Q4 revival" }
+          {
+            "name": "Net sales",
+            "actual": "EUR 6,914M (+7%) — all-time-high sales, operating result, and cash flow",
+            "expected": "",
+            "verdict": "inline",
+            "result": "—"
+          },
+          {
+            "name": "Operating result",
+            "actual": "EUR 833M (12.1%); comparable EUR 829M (+20%); EPS 1.06; proposed dividend 1.06 (0.54 base + 0.52 extraordinary)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Q4 order intake EUR 2,220M (-11%) was described in press coverage as below analyst forecasts on US battery tariffs and storage competition"
+          },
+          {
+            "name": "Energy Storage segment",
+            "actual": "Order intake EUR 455M (-60%); 2,677 MWh (-52%); net sales EUR 694M (-13%); comparable operating result EUR 24M (3.4%); order book EUR 719M",
+            "expected": "Segment targets set April 2025: low double-digit organic growth, 3–5% operating margin",
+            "verdict": "miss",
+            "result": "Quarterly orders collapsed to EUR 31/50/11M in Q1–Q3 before a EUR 364M Q4 revival"
+          }
         ],
         "commentary": "Storage headwinds: US tariffs, FEOC rules, and price competition — the backdrop to the June 2026 JV decision."
       },
       {
         "period": "H1 2026 (reported July 2026) + the storage JV",
         "metrics": [
-          { "name": "Group H1", "actual": "Order intake EUR 4,934M (+23%, all-time high); net sales EUR 3,004M (-1%); comparable operating result EUR 411M (13.7%); EPS 0.50; order book EUR 8,976M (+13%)", "expected": "", "verdict": "inline", "result": "Energy Storage restated into discontinued operations — no separate interim figures" },
-          { "name": "Storage JV impact", "actual": "Guided EUR -40 to -50M impact on 2026 operating result (write-downs/transformation costs); JV loss-making in 2026, positive results expected late 2027", "expected": "", "verdict": "miss", "result": "Shares fell on both the March 2025 retention decision (>5%) and the June 2026 JV announcement; analysts cited weak profitability, 'very limited' engine–storage synergies, and no disclosed proceeds" }
+          {
+            "name": "Group H1",
+            "actual": "Order intake EUR 4,934M (+23%, all-time high); net sales EUR 3,004M (-1%); comparable operating result EUR 411M (13.7%); EPS 0.50; order book EUR 8,976M (+13%)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "Energy Storage restated into discontinued operations — no separate interim figures"
+          },
+          {
+            "name": "Storage JV impact",
+            "actual": "Guided EUR -40 to -50M impact on 2026 operating result (write-downs/transformation costs); JV loss-making in 2026, positive results expected late 2027",
+            "expected": "",
+            "verdict": "miss",
+            "result": "Shares fell on both the March 2025 retention decision (>5%) and the June 2026 JV announcement; analysts cited weak profitability, 'very limited' engine–storage synergies, and no disclosed proceeds"
+          }
         ],
         "commentary": "JV structure: 50/50 with RCT Solutions GmbH; consideration undisclosed; storage net assets <5% of Wärtsilä's total; ~480–588 personnel transfer; new investors may join later."
       }
@@ -256,37 +469,149 @@
     "commentary": "Company-reported EUR figures from financial statement bulletins; consensus comparisons were largely not found in sources used — press characterizations of beats/misses are noted where they exist."
   },
   "sources": [
-    { "label": "Wärtsilä — Half-year Financial Report Jan–Jun 2026", "url": "https://www.wartsila.com/media/news/21-07-2026-wartsila-s-half-year-financial-report-january-june-2026-3773763", "date": "2026-07-21" },
-    { "label": "ESS News — Wood Mackenzie integrator ranking (Jul 2026)", "url": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/", "date": "2026-07-14" },
-    { "label": "pv magazine USA — Tesla/Fluence in top ten; pure-play vs vertically integrated framing (14 Jul 2026)", "url": "https://pv-magazine-usa.com/2026/07/14/tesla-and-fluence-rank-in-top-ten-global-battery-integrators-as-china-dominates/", "date": "2026-07-14" },
-    { "label": "Energy-Storage.News — Bungama BESS completion coverage (Jul 2026)", "url": "https://www.energy-storage.news/wartsila-completes-300mwh-bungama-bess-for-revera-energy-in-south-australia/", "date": "2026-07" },
-    { "label": "Wärtsilä — Bungama BESS operational for Revera Energy (30 Jun 2026)", "url": "https://www.wartsila.com/media/news/30-06-2026-now-operational-wartsila-delivers-150-mw---300-mwh-energy-storage-system-for-revera-energy-in-south-australia-supporting-energy-stability-and-reliability-3767607", "date": "2026-06-30" },
-    { "label": "Wärtsilä — Energy Storage JV with RCT Solutions (15 Jun 2026)", "url": "https://www.wartsila.com/media/news/15-06-2026-inside-information-wartsila-to-establish-a-joint-venture-for-its-global-energy-storage-business-with-rct-solutions-gmbh-and-discontinue-energy-storage-as-a-separate-reporting-segment-3763438", "date": "2026-06-15" },
-    { "label": "Energy-Storage.News — analyst reaction to the JV (Jun 2026)", "url": "https://www.energy-storage.news/limited-synergies-and-profitability-drive-wartsilas-energy-storage-divestment/", "date": "2026-06" },
-    { "label": "Wärtsilä — GEMS Pulse CleanTech Analytics Innovation Award (10 Apr 2026)", "url": "https://www.wartsila.com/media/news/10-04-2026-wartsila-s-gems-pulse-winner-of-cleantech-analytics-innovation-award-in-2026-cleantech-breakthrough-awards-program-3738236", "date": "2026-04-10" },
-    { "label": "Wärtsilä — GEMS Cloud Connect SOC 2 Type 1 (19 Feb 2026)", "url": "https://www.wartsila.com/media/news/19-02-2026-wartsila-achieves-soc-2-type-1-compliance-for-gems-cloud-connect-3719063", "date": "2026-02-19" },
-    { "label": "Wärtsilä — Gramme Storage 1 Belgium construction start (16 Feb 2026)", "url": "https://www.wartsila.com/media/news/16-02-2026-wartsila-begins-construction-of-a-50-mw-100-mwh-energy-storage-system-to-bolster-grid-stability-in-belgium-3716355", "date": "2026-02-16" },
-    { "label": "Wärtsilä — 429 MW US data-centre power plant order (29 Jan 2026)", "url": "https://www.wartsila.com/media/news/29-01-2026-wartsila-chosen-for-a-major-u-s-power-plant-project-addressing-critical-energy-demand-driven-by-data-center-development-3711601", "date": "2026-01-29" },
-    { "label": "Wärtsilä — Financial Statements Bulletin 2025 (segment tables)", "url": "https://www.wartsila.com/docs/default-source/investors/financial-materials/interim-reports/w%C3%A4rtsil%C3%A4-financial-statements-bulletin-2025.pdf", "date": "2026-01" },
-    { "label": "ESS News — Texas 500 MWh supply deal (19 Dec 2025)", "url": "https://www.ess-news.com/2025/12/19/texas-bess-wartsila-to-supply-500-mwh-project-linea-energy-secures-financing-for-470-mwh-facility/", "date": "2025-12-19" },
-    { "label": "Energy-Storage.News — Wooreen 1,400 MWh delivery complete (1,038 Quantum HE units)", "url": "https://www.energy-storage.news/wartsila-completes-delivery-of-1038-quantum-units-to-1400mwh-wooreen-bess-in-australia/", "date": "2025-12" },
-    { "label": "Wärtsilä — GEMS Pulse debut (14 Oct 2025)", "url": "https://www.wartsila.com/media/news/14-10-2025-wartsila-debuts-gems-pulse-a-new-software-solution-to-enhance-revenue-for-bess-customers-through-cell-to-fleet-data-analytics-3668996", "date": "2025-10-14" },
-    { "label": "Energy-Storage.News — in-house battery analytics decision (GEMS Pulse)", "url": "https://www.energy-storage.news/wartsila-opts-for-in-house-control-over-battery-storage-data-analytics/", "date": "2025-10" },
-    { "label": "ESS News — strategic review ends in retention (Mar 2025)", "url": "https://www.ess-news.com/2025/03/31/wartsila-gives-up-on-energy-storage-business-divestment/", "date": "2025-03-31" },
-    { "label": "Wärtsilä — Quantum3 launch (Sep 2024)", "url": "https://www.wartsila.com/media/news/04-09-2024-wartsila-introduces-quantum3-a-complete-high-density-ac-block-energy-storage-system-with-industry-leading-features-and-controls-3489850", "date": "2024-09-04" },
-    { "label": "Energy-Storage.News — 'Wärtsilä joins 5MWh club' (Quantum3 vs peers)", "url": "https://www.energy-storage.news/wartsila-joins-5mwh-club-with-latest-bess-product/", "date": "2024-09" },
-    { "label": "Wärtsilä — GEMS 7th generation release (Aug 2024)", "url": "https://www.wartsila.com/media/news/06-08-2024-wartsila-s-seventh-generation-gems-digital-energy-platform-supports-rapid-pace-of-scale-and-change-in-global-energy-storage-industry-3480027", "date": "2024-08-06" },
-    { "label": "Wärtsilä — World's first 100% hydrogen-ready engine power plant (18 Jun 2024)", "url": "https://www.wartsila.com/media/news/18-06-2024-wartsila-launches-world-s-first-large-scale-100-hydrogen-ready-engine-power-plant-3464281", "date": "2024-06-18" },
-    { "label": "Wärtsilä — Quantum High Energy launch (27 Nov 2023)", "url": "https://www.wartsila.com/media/news/27-11-2023-wartsila-launches-quantum-high-energy-storage-system-with-advanced-safety-features-and-energy-density-3364385", "date": "2023-11-27" },
-    { "label": "Wärtsilä — GridSolve BESS portfolio page", "url": "https://www.wartsila.com/energy/energy-storage/technology/GridSolve-bess" },
-    { "label": "Wärtsilä — Quantum2 solution sheet (PDF)", "url": "https://www.wartsila.com/docs/default-source/energy-docs/energy-storage/solution-sheets/quantum2-solution-sheet.pdf" },
-    { "label": "Wärtsilä — Energy Storage webpage (>19 GWh, 130+ sites)", "url": "https://www.wartsila.com/energy/energy-storage" },
-    { "label": "Wärtsilä — Board of Management (headshot source)", "url": "https://www.wartsila.com/about/organisation-management/board-of-management" },
-    { "label": "Wärtsilä — Data centre power solutions (engine specs & claims)", "url": "https://www.wartsila.com/energy/engine-power-plant-solutions/flexible-baseload-power-plants/data-center-power-solutions" },
-    { "label": "Wärtsilä — Energy storage for data centres", "url": "https://www.wartsila.com/energy/energy-storage/technology/energy-storage-for-data-centres" },
-    { "label": "Wärtsilä — Engine power plant products", "url": "https://www.wartsila.com/energy/engine-power-plant-solutions/engine-power-plant-products" },
-    { "label": "Wärtsilä Energy Storage — Service+ lifecycle tiers (Base / Prime / GAP)", "url": "https://storage.wartsila.com/solutions/service/" }
+    {
+      "label": "Wärtsilä — Half-year Financial Report Jan–Jun 2026",
+      "url": "https://www.wartsila.com/media/news/21-07-2026-wartsila-s-half-year-financial-report-january-june-2026-3773763",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "ESS News — Wood Mackenzie integrator ranking (Jul 2026)",
+      "url": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "pv magazine USA — Tesla/Fluence in top ten; pure-play vs vertically integrated framing (14 Jul 2026)",
+      "url": "https://pv-magazine-usa.com/2026/07/14/tesla-and-fluence-rank-in-top-ten-global-battery-integrators-as-china-dominates/",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "Energy-Storage.News — Bungama BESS completion coverage (Jul 2026)",
+      "url": "https://www.energy-storage.news/wartsila-completes-300mwh-bungama-bess-for-revera-energy-in-south-australia/",
+      "date": "2026-07"
+    },
+    {
+      "label": "Wärtsilä — Bungama BESS operational for Revera Energy (30 Jun 2026)",
+      "url": "https://www.wartsila.com/media/news/30-06-2026-now-operational-wartsila-delivers-150-mw---300-mwh-energy-storage-system-for-revera-energy-in-south-australia-supporting-energy-stability-and-reliability-3767607",
+      "date": "2026-06-30"
+    },
+    {
+      "label": "Wärtsilä — Energy Storage JV with RCT Solutions (15 Jun 2026)",
+      "url": "https://www.wartsila.com/media/news/15-06-2026-inside-information-wartsila-to-establish-a-joint-venture-for-its-global-energy-storage-business-with-rct-solutions-gmbh-and-discontinue-energy-storage-as-a-separate-reporting-segment-3763438",
+      "date": "2026-06-15"
+    },
+    {
+      "label": "Energy-Storage.News — analyst reaction to the JV (Jun 2026)",
+      "url": "https://www.energy-storage.news/limited-synergies-and-profitability-drive-wartsilas-energy-storage-divestment/",
+      "date": "2026-06"
+    },
+    {
+      "label": "Wärtsilä — GEMS Pulse CleanTech Analytics Innovation Award (10 Apr 2026)",
+      "url": "https://www.wartsila.com/media/news/10-04-2026-wartsila-s-gems-pulse-winner-of-cleantech-analytics-innovation-award-in-2026-cleantech-breakthrough-awards-program-3738236",
+      "date": "2026-04-10"
+    },
+    {
+      "label": "Wärtsilä — GEMS Cloud Connect SOC 2 Type 1 (19 Feb 2026)",
+      "url": "https://www.wartsila.com/media/news/19-02-2026-wartsila-achieves-soc-2-type-1-compliance-for-gems-cloud-connect-3719063",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "Wärtsilä — Gramme Storage 1 Belgium construction start (16 Feb 2026)",
+      "url": "https://www.wartsila.com/media/news/16-02-2026-wartsila-begins-construction-of-a-50-mw-100-mwh-energy-storage-system-to-bolster-grid-stability-in-belgium-3716355",
+      "date": "2026-02-16"
+    },
+    {
+      "label": "Wärtsilä — 429 MW US data-centre power plant order (29 Jan 2026)",
+      "url": "https://www.wartsila.com/media/news/29-01-2026-wartsila-chosen-for-a-major-u-s-power-plant-project-addressing-critical-energy-demand-driven-by-data-center-development-3711601",
+      "date": "2026-01-29"
+    },
+    {
+      "label": "Wärtsilä — Financial Statements Bulletin 2025 (segment tables)",
+      "url": "https://www.wartsila.com/docs/default-source/investors/financial-materials/interim-reports/w%C3%A4rtsil%C3%A4-financial-statements-bulletin-2025.pdf",
+      "date": "2026-01"
+    },
+    {
+      "label": "ESS News — Texas 500 MWh supply deal (19 Dec 2025)",
+      "url": "https://www.ess-news.com/2025/12/19/texas-bess-wartsila-to-supply-500-mwh-project-linea-energy-secures-financing-for-470-mwh-facility/",
+      "date": "2025-12-19"
+    },
+    {
+      "label": "Energy-Storage.News — Wooreen 1,400 MWh delivery complete (1,038 Quantum HE units)",
+      "url": "https://www.energy-storage.news/wartsila-completes-delivery-of-1038-quantum-units-to-1400mwh-wooreen-bess-in-australia/",
+      "date": "2025-12"
+    },
+    {
+      "label": "Wärtsilä — GEMS Pulse debut (14 Oct 2025)",
+      "url": "https://www.wartsila.com/media/news/14-10-2025-wartsila-debuts-gems-pulse-a-new-software-solution-to-enhance-revenue-for-bess-customers-through-cell-to-fleet-data-analytics-3668996",
+      "date": "2025-10-14"
+    },
+    {
+      "label": "Energy-Storage.News — in-house battery analytics decision (GEMS Pulse)",
+      "url": "https://www.energy-storage.news/wartsila-opts-for-in-house-control-over-battery-storage-data-analytics/",
+      "date": "2025-10"
+    },
+    {
+      "label": "ESS News — strategic review ends in retention (Mar 2025)",
+      "url": "https://www.ess-news.com/2025/03/31/wartsila-gives-up-on-energy-storage-business-divestment/",
+      "date": "2025-03-31"
+    },
+    {
+      "label": "Wärtsilä — Quantum3 launch (Sep 2024)",
+      "url": "https://www.wartsila.com/media/news/04-09-2024-wartsila-introduces-quantum3-a-complete-high-density-ac-block-energy-storage-system-with-industry-leading-features-and-controls-3489850",
+      "date": "2024-09-04"
+    },
+    {
+      "label": "Energy-Storage.News — 'Wärtsilä joins 5MWh club' (Quantum3 vs peers)",
+      "url": "https://www.energy-storage.news/wartsila-joins-5mwh-club-with-latest-bess-product/",
+      "date": "2024-09"
+    },
+    {
+      "label": "Wärtsilä — GEMS 7th generation release (Aug 2024)",
+      "url": "https://www.wartsila.com/media/news/06-08-2024-wartsila-s-seventh-generation-gems-digital-energy-platform-supports-rapid-pace-of-scale-and-change-in-global-energy-storage-industry-3480027",
+      "date": "2024-08-06"
+    },
+    {
+      "label": "Wärtsilä — World's first 100% hydrogen-ready engine power plant (18 Jun 2024)",
+      "url": "https://www.wartsila.com/media/news/18-06-2024-wartsila-launches-world-s-first-large-scale-100-hydrogen-ready-engine-power-plant-3464281",
+      "date": "2024-06-18"
+    },
+    {
+      "label": "Wärtsilä — Quantum High Energy launch (27 Nov 2023)",
+      "url": "https://www.wartsila.com/media/news/27-11-2023-wartsila-launches-quantum-high-energy-storage-system-with-advanced-safety-features-and-energy-density-3364385",
+      "date": "2023-11-27"
+    },
+    {
+      "label": "Wärtsilä — GridSolve BESS portfolio page",
+      "url": "https://www.wartsila.com/energy/energy-storage/technology/GridSolve-bess"
+    },
+    {
+      "label": "Wärtsilä — Quantum2 solution sheet (PDF)",
+      "url": "https://www.wartsila.com/docs/default-source/energy-docs/energy-storage/solution-sheets/quantum2-solution-sheet.pdf"
+    },
+    {
+      "label": "Wärtsilä — Energy Storage webpage (>19 GWh, 130+ sites)",
+      "url": "https://www.wartsila.com/energy/energy-storage"
+    },
+    {
+      "label": "Wärtsilä — Board of Management (headshot source)",
+      "url": "https://www.wartsila.com/about/organisation-management/board-of-management"
+    },
+    {
+      "label": "Wärtsilä — Data centre power solutions (engine specs & claims)",
+      "url": "https://www.wartsila.com/energy/engine-power-plant-solutions/flexible-baseload-power-plants/data-center-power-solutions"
+    },
+    {
+      "label": "Wärtsilä — Energy storage for data centres",
+      "url": "https://www.wartsila.com/energy/energy-storage/technology/energy-storage-for-data-centres"
+    },
+    {
+      "label": "Wärtsilä — Engine power plant products",
+      "url": "https://www.wartsila.com/energy/engine-power-plant-solutions/engine-power-plant-products"
+    },
+    {
+      "label": "Wärtsilä Energy Storage — Service+ lifecycle tiers (Base / Prime / GAP)",
+      "url": "https://storage.wartsila.com/solutions/service/"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 4
 }

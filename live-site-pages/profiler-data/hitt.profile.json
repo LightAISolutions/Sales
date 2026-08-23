@@ -226,30 +226,78 @@
     {
       "product": "Data-center delivery fleet",
       "specs": [
-        "2+ GW critical power commissioned across 26 states; 20M+ sq ft delivered; $8B of mission-critical work; largest single project 2.7M sq ft (company claims)",
-        "Sterling II, Sterling VA: ~252,000 sq ft, two stories, four data halls, 22.5 MW greenfield delivered in a record-setting 180 days — concurrent design/construction, off-site prefabricated modular power & cooling, temporary power for early commissioning, double shifts + 24/7 fit-out",
-        "Vantage Ashburn: 250,000+ sq ft building in ~7 months pad-to-ribbon; 115 miles of wire for the first 6 MW phase, ~2,700 miles projected for the 142 MW campus",
-        "ENR 2026 survey mix: 82% of 2025 revenue in the telecom/data-center category; 100% CM-at-risk delivery",
-        "Commissioned-capacity trajectory: 700 MW (2020, since 2005) → 2+ GW (2026) — roughly 3x in five years"
+        {
+          "band": "Install base",
+          "label": "Delivered",
+          "value": "2+ GW critical power commissioned across 26 states; 20M+ sq ft delivered; $8B of mission-critical work; largest single project 2.7M sq ft (company claims)"
+        },
+        {
+          "band": "Reference projects",
+          "label": "Sterling II, Sterling VA",
+          "value": "~252,000 sq ft, two stories, four data halls, 22.5 MW greenfield delivered in a record-setting 180 days — concurrent design/construction, off-site prefabricated modular power & cooling, temporary power for early commissioning, double shifts + 24/7 fit-out"
+        },
+        {
+          "band": "Reference projects",
+          "label": "Vantage Ashburn",
+          "value": "250,000+ sq ft building in ~7 months pad-to-ribbon; 115 miles of wire for the first 6 MW phase, ~2,700 miles projected for the 142 MW campus"
+        },
+        {
+          "band": "Business mix",
+          "label": "ENR 2026 survey",
+          "value": "82% of 2025 revenue in the telecom/data-center category; 100% CM-at-risk delivery"
+        },
+        {
+          "band": "Growth",
+          "label": "Commissioned capacity",
+          "value": "700 MW (2020, since 2005) → 2+ GW (2026) — roughly 3x in five years"
+        }
       ],
       "notes": "Anchored in Northern Virginia Data Center Alley: 4,900 MW built (~50M sq ft) at end-Q1 2025, 1,100 MW under construction, 5,500 MW planned, >90% of inventory pre-committed through 2026-27 (JLL via WTOP)"
     },
     {
       "product": "New headquarters (7125 West Falls Station Blvd, Falls Church)",
       "specs": [
-        "270,000 sq ft, six stories; architect Gensler; groundbreaking 2025-01-24, topped out Feb 2026, delivery early 2027",
-        "Net-zero energy target + LEED Platinum: 100,000 sq ft photovoltaic solar canopy sized to generate all building energy; wind turbines; Power-over-Ethernet lighting; patented HyperWall prefab envelope",
-        "Structure: 30,000 cu yd concrete, 2,400 t rebar, 1,400 t structural steel (steel/concrete — the mass-timber flagship is Co|Lab, not the HQ); 32,250 crane picks; 5 prefabricated elevators",
-        "40,000 sq ft ground-floor lease to Virginia Tech's Coalition for Smart Construction; houses 900+ local employees"
+        {
+          "band": "Building",
+          "label": "Programme",
+          "value": "270,000 sq ft, six stories; architect Gensler; groundbreaking 2025-01-24, topped out Feb 2026, delivery early 2027"
+        },
+        {
+          "band": "Sustainability",
+          "label": "Targets",
+          "value": "Net-zero energy target + LEED Platinum: 100,000 sq ft photovoltaic solar canopy sized to generate all building energy; wind turbines; Power-over-Ethernet lighting; patented HyperWall prefab envelope"
+        },
+        {
+          "band": "Structure",
+          "label": "Quantities",
+          "value": "30,000 cu yd concrete, 2,400 t rebar, 1,400 t structural steel (steel/concrete — the mass-timber flagship is Co|Lab, not the HQ); 32,250 crane picks; 5 prefabricated elevators"
+        },
+        {
+          "band": "Occupancy",
+          "label": "Tenants",
+          "value": "40,000 sq ft ground-floor lease to Virginia Tech's Coalition for Smart Construction; houses 900+ local employees"
+        }
       ],
       "notes": "Doubles as an R&D showcase: 20+ on-site research projects planned, first US Caracol Heron robotic-arm 3D printer installation"
     },
     {
       "product": "Co|Lab R&D facility and sustainability record",
       "specs": [
-        "Co|Lab: 8,600 sq ft, two floors, $8.6M, completed 2019; cross-laminated timber — first commercial mass-timber building in the Virginia/DC area; LEED v4 Platinum + ILFI Petal; prefab panels assembled by 8 workers in 9 working days; rooftop PV generated 35,329 kWh in 2024",
-        "410+ LEED-certified projects delivered; first LEED v4 Platinum building in the DC area; 86% project recycling rate; ENR #11 Top Green Contractor (2025)",
-        "Safety: published external H&S manual (updated Aug 2025); 3,100+ safety observations logged in 2025; one jobsite fatality April 2025 (Vantage Ashburn trench collapse — investigation outcome not yet published)"
+        {
+          "band": "Co|Lab",
+          "label": "Building",
+          "value": "8,600 sq ft, two floors, $8.6M, completed 2019; cross-laminated timber — first commercial mass-timber building in the Virginia/DC area; LEED v4 Platinum + ILFI Petal; prefab panels assembled by 8 workers in 9 working days; rooftop PV generated 35,329 kWh in 2024"
+        },
+        {
+          "band": "Sustainability record",
+          "label": "Portfolio",
+          "value": "410+ LEED-certified projects delivered; first LEED v4 Platinum building in the DC area; 86% project recycling rate; ENR #11 Top Green Contractor (2025)"
+        },
+        {
+          "band": "Safety",
+          "label": "Programme & record",
+          "value": "published external H&S manual (updated Aug 2025); 3,100+ safety observations logged in 2025; one jobsite fatality April 2025 (Vantage Ashburn trench collapse — investigation outcome not yet published)"
+        }
       ],
       "notes": "R&D led by VP Megan Lantz; program explicitly positioned against the industry's <1%-of-revenue R&D norm"
     }
@@ -522,6 +570,6 @@
       "url": "https://www.hitt.com/leadership/"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }

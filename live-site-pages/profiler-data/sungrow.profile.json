@@ -3,12 +3,17 @@
   "slug": "sungrow",
   "name": "Sungrow Power Supply Co., Ltd. (阳光电源股份有限公司)",
   "shortName": "Sungrow",
-  "categories": ["supplier"],
+  "categories": [
+    "supplier"
+  ],
   "website": "https://en.sungrowpower.com",
   "headquarters": "Hefei, Anhui, China",
   "founded": 1997,
   "employees": "~17,305 (Dec 31, 2024)",
-  "ownership": { "type": "public", "ticker": "SZSE: 300274" },
+  "ownership": {
+    "type": "public",
+    "ticker": "SZSE: 300274"
+  },
   "summary": "BOTTOM LINE UP FRONT: We assess Sungrow holds the strongest current competitive position among covered integrators — both Wood Mackenzie #1 rankings, with ESS now its largest and high-margin segment; the pending A+H listing and the ~10 GWh European PowerTitan 3.0 target are the 2026 checkpoints. BACKGROUND: Sungrow is one of the world's largest manufacturers of solar PV inverters and battery energy storage systems, founded in 1997 by Hefei University of Technology academic Cao Renxian, with additional businesses in wind power converters, EV drive/charging equipment, floating PV, hydrogen electrolyzers, and renewable plant development. Listed on Shenzhen's ChiNext since 2011; a Hong Kong H-share application was re-filed in April 2026 (the first, from October 2025, lapsed) — the A+H structure was pending as of August 2026.",
   "ecosystemRole": "Ranked No. 1 in BOTH Wood Mackenzie's Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (2026 edition, assessing 2025) — the first company to take the integrator top spot from Tesla. Company-reported 2025 shipments: 43 GWh of storage (+53.5%) and 143 GW of inverters. ESS revenue overtook inverters as the largest segment in FY2025 (41.8% of revenue at a 36.5% gross margin). BloombergNEF has named Sungrow the most bankable ESS and PCS brand.",
   "productsAndServices": [
@@ -164,119 +169,355 @@
     {
       "product": "PowerTitan 3.0 (June 2025)",
       "specs": [
-        { "label": "Cell", "value": "684 Ah LFP (first mass-producible), 448 Wh/L, >15,000 cycles to 80%" },
-        { "label": "Versions", "value": "Flex 3.45 MWh · Class 6.9 MWh (20-ft) · Plus 12.5 MWh / up to 3.125 MW (30-ft)" },
-        { "label": "Energy density", "value": ">500 kWh/m² (Plus variant)" },
-        { "label": "PCS", "value": "Integrated silicon-carbide PCS, fully liquid-cooled; grid-forming; 99.3% conversion efficiency (company figure)" },
-        { "label": "Round-trip efficiency", "value": "92% (company figure)" },
-        { "label": "Environment", "value": "-40°C to +55°C; up to 5,000 m altitude; 2–12 hour configurations" },
-        { "label": "European 4-hour variant (Jan 2026)", "value": "1.78 MW PCS + 7.14 MWh per 20-ft container; one block 7.2 MW / 28.5 MWh" }
+        {
+          "band": "Cell",
+          "label": "Chemistry",
+          "value": "684 Ah LFP (first mass-producible), 448 Wh/L, >15,000 cycles to 80%"
+        },
+        {
+          "band": "Configurations",
+          "label": "Versions",
+          "value": "Flex 3.45 MWh · Class 6.9 MWh (20-ft) · Plus 12.5 MWh / up to 3.125 MW (30-ft)"
+        },
+        {
+          "band": "Configurations",
+          "label": "Energy density",
+          "value": ">500 kWh/m² (Plus variant)"
+        },
+        {
+          "band": "Power conversion",
+          "label": "PCS",
+          "value": "Integrated silicon-carbide PCS, fully liquid-cooled; grid-forming; 99.3% conversion efficiency (company figure)"
+        },
+        {
+          "band": "Performance",
+          "label": "Round-trip efficiency",
+          "value": "92% (company figure)"
+        },
+        {
+          "band": "Environment",
+          "label": "Range & durations",
+          "value": "-40°C to +55°C; up to 5,000 m altitude; 2–12 hour configurations"
+        },
+        {
+          "band": "Regional variant",
+          "label": "European 4-hour (Jan 2026)",
+          "value": "1.78 MW PCS + 7.14 MWh per 20-ft container; one block 7.2 MW / 28.5 MWh"
+        }
       ],
       "notes": "Winner, The smarter E AWARD 2026 (Energy Storage). Scales to 27.6 MWh per four-block configuration."
     },
     {
       "product": "PowerTitan 2.0 (workhorse AC block)",
       "specs": [
-        { "label": "Capacity / power", "value": "5,015 kWh with up to 2.5 MW PCS in one 20-ft container" },
-        { "label": "Cooling", "value": "Fully liquid-cooled packs and PCS (12 modular PCS units per container)" },
-        { "label": "Scaling", "value": "10 MWh / 5 MW block incl. MV transformer, scalable to GWh class" },
-        { "label": "Track record", "value": "1,500+ units in the Saudi 7.8 GWh fleet" }
+        {
+          "band": "Ratings",
+          "label": "Capacity / power",
+          "value": "5,015 kWh with up to 2.5 MW PCS in one 20-ft container"
+        },
+        {
+          "band": "Thermal",
+          "label": "Cooling",
+          "value": "Fully liquid-cooled packs and PCS (12 modular PCS units per container)"
+        },
+        {
+          "band": "Scaling",
+          "label": "Blocks",
+          "value": "10 MWh / 5 MW block incl. MV transformer, scalable to GWh class"
+        },
+        {
+          "band": "References",
+          "label": "Track record",
+          "value": "1,500+ units in the Saudi 7.8 GWh fleet"
+        }
       ],
       "notes": "Cell Ah and certification list not confirmed in the sources used."
     },
     {
       "product": "1+X 2.0 modular inverter (April 2025)",
       "specs": [
-        { "label": "Unit power", "value": "800 kW per module; parallels up to 9.6 MW (12 units)" },
-        { "label": "Max efficiency", "value": "99%" },
-        { "label": "Thermal", "value": "No derating up to 52°C (MEA-focused variant)" },
-        { "label": "Protection", "value": "Arc-fault isolation in 40 ms; AI fault detection; grid-forming" }
+        {
+          "band": "Ratings",
+          "label": "Unit power",
+          "value": "800 kW per module; parallels up to 9.6 MW (12 units)"
+        },
+        {
+          "band": "Performance",
+          "label": "Max efficiency",
+          "value": "99%"
+        },
+        {
+          "band": "Environment",
+          "label": "Thermal",
+          "value": "No derating up to 52°C (MEA-focused variant)"
+        },
+        {
+          "band": "Safety & grid",
+          "label": "Protection",
+          "value": "Arc-fault isolation in 40 ms; AI fault detection; grid-forming"
+        }
       ],
       "notes": ""
     },
     {
       "product": "SG350HX utility string inverter",
       "specs": [
-        { "label": "Output / input", "value": "352 kVA AC; 1,500 Vdc max PV input; 800 V AC" },
-        { "label": "MPPTs", "value": "Up to 16 MPPTs, 2 strings each, 20 A per string (500 Wp+ module compatible)" },
-        { "label": "Max efficiency", "value": "99%" },
-        { "label": "Safety / grid", "value": "Integrated DC switch; 24-hour AC/DC insulation monitoring; reactive-power response <30 ms" },
-        { "label": "Build", "value": "IP66; ~111 kg" }
+        {
+          "band": "Ratings",
+          "label": "Output / input",
+          "value": "352 kVA AC; 1,500 Vdc max PV input; 800 V AC"
+        },
+        {
+          "band": "PV interface",
+          "label": "MPPTs",
+          "value": "Up to 16 MPPTs, 2 strings each, 20 A per string (500 Wp+ module compatible)"
+        },
+        {
+          "band": "Performance",
+          "label": "Max efficiency",
+          "value": "99%"
+        },
+        {
+          "band": "Safety & grid",
+          "label": "Protection",
+          "value": "Integrated DC switch; 24-hour AC/DC insulation monitoring; reactive-power response <30 ms"
+        },
+        {
+          "band": "Physical",
+          "label": "Build",
+          "value": "IP66; ~111 kg"
+        }
       ],
       "notes": ""
     },
     {
       "product": "SG510HX / SG465HX utility string inverter (Jan 2026, WFES)",
       "specs": [
-        { "label": "Output", "value": "465 kW AC (SG465HX MEA variant) at AC 1,000 V; 1,500 Vdc input" },
-        { "label": "MPPTs / efficiency", "value": "Up to 6 MPPTs; 99% max efficiency" },
-        { "label": "Subarray", "value": "9.84 MW per AC-1000V subarray" },
-        { "label": "Grid support", "value": "PV-GFM grid-forming capability" },
-        { "label": "Safety", "value": "Redundant DC-side shutdown, full-coverage temperature sensing, MPPT-level fault localization; validated at a 4,200 m altitude plant" }
+        {
+          "band": "Ratings",
+          "label": "Output",
+          "value": "465 kW AC (SG465HX MEA variant) at AC 1,000 V; 1,500 Vdc input"
+        },
+        {
+          "band": "PV interface",
+          "label": "MPPTs / efficiency",
+          "value": "Up to 6 MPPTs; 99% max efficiency"
+        },
+        {
+          "band": "Scaling",
+          "label": "Subarray",
+          "value": "9.84 MW per AC-1000V subarray"
+        },
+        {
+          "band": "Grid",
+          "label": "Support",
+          "value": "PV-GFM grid-forming capability"
+        },
+        {
+          "band": "Safety",
+          "label": "Protection",
+          "value": "Redundant DC-side shutdown, full-coverage temperature sensing, MPPT-level fault localization; validated at a 4,200 m altitude plant"
+        }
       ],
       "notes": "SG465HX is the Middle East regional version of the SG510HX with equivalent performance."
     },
     {
       "product": "PowerStack 255CS C&I ESS (Apr 2025)",
       "specs": [
-        { "label": "Capacity / power", "value": "257 kWh (2-hour) or 514 kWh (4-hour) per cabinet; 125 kW PCS; 314 Ah LFP cells" },
-        { "label": "Efficiency", "value": ">90% system round-trip; PCS up to 98.5%" },
-        { "label": "Thermal", "value": "AI-controlled liquid cooling — auxiliary consumption −33%, cell ΔT ≤2.5°C" },
-        { "label": "Safety / certs", "value": "UL9540, NFPA855/69/68; gas detectors, aerosol suppression, explosion vents, 2-hour fire-resistant cabinet" },
-        { "label": "Design life", "value": "Up to 20 years" }
+        {
+          "band": "Ratings",
+          "label": "Capacity / power",
+          "value": "257 kWh (2-hour) or 514 kWh (4-hour) per cabinet; 125 kW PCS; 314 Ah LFP cells"
+        },
+        {
+          "band": "Performance",
+          "label": "Efficiency",
+          "value": ">90% system round-trip; PCS up to 98.5%"
+        },
+        {
+          "band": "Thermal",
+          "label": "Cooling",
+          "value": "AI-controlled liquid cooling — auxiliary consumption −33%, cell ΔT ≤2.5°C"
+        },
+        {
+          "band": "Safety",
+          "label": "Certifications & protection",
+          "value": "UL9540, NFPA855/69/68; gas detectors, aerosol suppression, explosion vents, 2-hour fire-resistant cabinet"
+        },
+        {
+          "band": "Lifecycle",
+          "label": "Design life",
+          "value": "Up to 20 years"
+        }
       ],
       "notes": ""
     },
     {
       "product": "SH25T three-phase hybrid inverter + SBH battery (residential/small C&I)",
       "specs": [
-        { "label": "Inverter", "value": "25 kW AC nominal (SH15/20/25T range); 3 MPPTs; 1,000 Vdc; Euro efficiency 97.8%; IP65" },
-        { "label": "Backup", "value": "EPS switchover <10 ms; 100% unbalanced load capability" },
-        { "label": "SBH battery", "value": "5 kWh LFP modules — 25 to 40 kWh per stack; up to 4 stacks in parallel (160 kWh); 352 V nominal, 50 A continuous" },
-        { "label": "SBR battery (alt.)", "value": "3.2 kWh modules — 9.6 to 25.6 kWh per stack" }
+        {
+          "band": "Inverter",
+          "label": "Ratings",
+          "value": "25 kW AC nominal (SH15/20/25T range); 3 MPPTs; 1,000 Vdc; Euro efficiency 97.8%; IP65"
+        },
+        {
+          "band": "Inverter",
+          "label": "Backup",
+          "value": "EPS switchover <10 ms; 100% unbalanced load capability"
+        },
+        {
+          "band": "Battery",
+          "label": "SBH",
+          "value": "5 kWh LFP modules — 25 to 40 kWh per stack; up to 4 stacks in parallel (160 kWh); 352 V nominal, 50 A continuous"
+        },
+        {
+          "band": "Battery",
+          "label": "SBR (alternative)",
+          "value": "3.2 kWh modules — 9.6 to 25.6 kWh per stack"
+        }
       ],
       "notes": "Sungrow batteries pair only with Sungrow hybrid inverters (closed ecosystem)."
     },
     {
       "product": "IDC480E-C ultra-fast EV charger (May 2025)",
       "specs": [
-        { "label": "Power", "value": "480 kW compact DC charger; 40 kW proprietary power modules" },
-        { "label": "Module efficiency", "value": ">97%" },
-        { "label": "Cooling / build", "value": "Isolated air cooling, fully sealed dust-free chamber, 3D airflow; IP65, C5 anti-corrosion" },
-        { "label": "Lifecycle", "value": "10+ year design life, AI-supported lifecycle management" }
+        {
+          "band": "Ratings",
+          "label": "Power",
+          "value": "480 kW compact DC charger; 40 kW proprietary power modules"
+        },
+        {
+          "band": "Performance",
+          "label": "Module efficiency",
+          "value": ">97%"
+        },
+        {
+          "band": "Environment",
+          "label": "Cooling / build",
+          "value": "Isolated air cooling, fully sealed dust-free chamber, 3D airflow; IP65, C5 anti-corrosion"
+        },
+        {
+          "band": "Lifecycle",
+          "label": "Design life",
+          "value": "10+ year design life, AI-supported lifecycle management"
+        }
       ],
       "notes": "Portfolio spans 11 kW AC to 480 kW DC."
     },
     {
       "product": "Water electrolyzers (Sungrow Hydrogen)",
       "specs": [
-        { "label": "Alkaline (ALK)", "value": "Up to 2,000 Nm³/h single unit (released 2024)" },
-        { "label": "PEM", "value": "300 Nm³/h single unit (launched May 2025)" },
-        { "label": "Manufacturing", "value": "~3 GW annual electrolyzer production capacity" }
+        {
+          "band": "Product line",
+          "label": "Alkaline (ALK)",
+          "value": "Up to 2,000 Nm³/h single unit (released 2024)"
+        },
+        {
+          "band": "Product line",
+          "label": "PEM",
+          "value": "300 Nm³/h single unit (launched May 2025)"
+        },
+        {
+          "band": "Manufacturing",
+          "label": "Capacity",
+          "value": "~3 GW annual electrolyzer production capacity"
+        }
       ],
       "notes": "Deployed in hybrid ALK+PEM configurations for variable renewable input."
     },
     {
       "product": "Wind power converters",
       "specs": [
-        { "label": "Full-power converters", "value": "2–8 MW single units" },
-        { "label": "Doubly-fed converters", "value": "1.5–6.25 MW single units; line addresses 1.5–26 MW turbines" },
-        { "label": "Voltage grades", "value": "690 V / 1,140 V / 1,800 V / 3,300 V; IP54; air- or liquid-cooled" }
+        {
+          "band": "Product line",
+          "label": "Full-power converters",
+          "value": "2–8 MW single units"
+        },
+        {
+          "band": "Product line",
+          "label": "Doubly-fed converters",
+          "value": "1.5–6.25 MW single units; line addresses 1.5–26 MW turbines"
+        },
+        {
+          "band": "Electrical",
+          "label": "Voltage grades",
+          "value": "690 V / 1,140 V / 1,800 V / 3,300 V; IP54; air- or liquid-cooled"
+        }
       ],
       "notes": "Includes 1,800 V ultra-high-power platform, wind grid-forming, low-frequency transmission."
     }
   ],
   "recentDevelopments": [
-    { "date": "2026-07-14", "category": "other", "headline": "Ranked No. 1 in BOTH Wood Mackenzie's inaugural Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (assessing 2025)", "read": "First vendor ever to hold both crowns — and the first to take the BESS integrator top spot from Tesla — as annual global BESS installations passed 100 GW.", "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/" },
-    { "date": "2026-07-01", "category": "other", "headline": "PowerTitan 3.0 won The smarter E AWARD 2026 (Energy Storage category) at Intersolar Europe", "read": "European third-party validation landing just as Sungrow targets ~10 GWh of PowerTitan 3.0 deliveries in Europe in 2026.", "source": "https://www.prnewswire.com/news-releases/sungrows-powertitan-3-0-wins-the-smarter-e-award-2026--302815432.html" },
-    { "date": "2026-05-22", "category": "order-win", "headline": "7.5 GWh of PowerTitan 3.0 plus 2.6 GW of inverters for Masdar's 5.2 GW / 19 GWh round-the-clock solar+storage project in Abu Dhabi (COD 2027)", "read": "~40% of the battery capacity of the world's first giga-scale 24/7 solar-storage plant — the anchor reference for PowerTitan 3.0.", "source": "https://www.ess-news.com/2026/05/22/" },
-    { "date": "2026-01-27", "category": "product-launch", "headline": "European grid-forming PowerTitan 3.0 variant launched in Madrid — 1.78 MW / 7.14 MWh per 20-ft container, 4-hour duration, 7.2 MW / 28.5 MWh per block", "read": "A duration-optimized, grid-code-ready European configuration aimed at low-PPA-price markets; company claims €16M extra lifetime returns per 1 GWh project.", "source": "https://www.prnewswire.com/news-releases/more-than-powering-today-sungrow-launches-grid-forming-utility-ess-powertitan-3-0-in-madrid-302678906.html" },
-    { "date": "2026-01-15", "category": "product-launch", "headline": "SG465HX utility string inverter (AC 1,000 V, 465 kW, PV grid-forming) and PowerStack ST255CS unveiled at WFES 2026, Abu Dhabi", "read": "The AC-1000V string generation and C&I storage land first in MEA — the region where Sungrow's harsh-climate engineering wins giga-orders.", "source": "https://www.prnewswire.com/ae/news-releases/sungrow-unveils-next-generation-utility-scale-and-integrated-ci-energy-solutions-at-wfes-2026-302662765.html" },
-    { "date": "2025-11-20", "category": "partnership", "headline": "2026 distribution agreements signed with Australian distributors Raystech, Supply Partners, and Tradezone — Raystech alone to move 1 GWh of Sungrow BESS in 2026 (600 MWh residential)", "read": "Storage attach through distribution is becoming a volume channel, not just utility direct sales.", "source": "https://www.pv-magazine.com/2025/11/21/australias-raystech-to-supply-1-gwh-of-sungrow-battery-storage-in-2026/" },
-    { "date": "2025-06-06", "category": "product-launch", "headline": "PowerTitan 3.0 unveiled in Hefei — first mass-producible 684 Ah LFP cell, fully liquid-cooled silicon-carbide PCS, up to 12.5 MWh per 30-ft container", "read": "Cell-to-system vertical integration deepens: Sungrow now specifies its own giant cell rather than packaging suppliers' standard 314 Ah units.", "source": "https://www.pv-magazine.com/2025/06/10/sungrow-unveils-powertitan-3-0-bess-with-684-ah-cell-liquid-cooling/" },
-    { "date": "2025-05-07", "category": "product-launch", "headline": "IDC480E-C 480 kW ultra-fast compact EV charger launched at Power2Drive Munich, built on 40 kW proprietary modules", "read": "Extends the shared power-module platform into charging and completes the 'Beyond Charging' PV+ESS+EVC bundle.", "source": "https://en.sungrowpower.com/newsDetail/6398/modularity-meets-smart-charging-sungrow-unveils-ultra-fast-ev-charger-idc480e-c-at-power2drive" },
-    { "date": "2025-05-05", "category": "product-launch", "headline": "Sungrow Hydrogen launched a 300 Nm³/h PEM water electrolyzer; world's largest dual-technology (ALK+PEM) green hydrogen plant started production the same week", "read": "Hydrogen line matures from ALK-only toward flexible hybrid plants suited to variable renewable input.", "source": "https://en.sungrowpower.com/newsDetail/4774/sungrow-hydrogen-launches-the-300nm%C2%B3-h-pem-water-electrolyzer" },
-    { "date": "2025-04-16", "category": "product-launch", "headline": "1+X 2.0 modular inverter (800 kW modules to 9.6 MW) and PowerStack 255CS C&I ESS launched at the Global Renewable Energy Summit 2025", "read": "Finer modular granularity chases LCOE in utility PV while the C&I cabinet refresh defends the distributed storage flank.", "source": "https://en.sungrowpower.com/newsDetail/6333/sungrow-redefines-utility-scale-solar-solutions-with-launch-of-1-x-2-0-modular-inverter" }
+    {
+      "date": "2026-07-14",
+      "category": "other",
+      "headline": "Ranked No. 1 in BOTH Wood Mackenzie's inaugural Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (assessing 2025)",
+      "read": "First vendor ever to hold both crowns — and the first to take the BESS integrator top spot from Tesla — as annual global BESS installations passed 100 GW.",
+      "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/"
+    },
+    {
+      "date": "2026-07-01",
+      "category": "other",
+      "headline": "PowerTitan 3.0 won The smarter E AWARD 2026 (Energy Storage category) at Intersolar Europe",
+      "read": "European third-party validation landing just as Sungrow targets ~10 GWh of PowerTitan 3.0 deliveries in Europe in 2026.",
+      "source": "https://www.prnewswire.com/news-releases/sungrows-powertitan-3-0-wins-the-smarter-e-award-2026--302815432.html"
+    },
+    {
+      "date": "2026-05-22",
+      "category": "order-win",
+      "headline": "7.5 GWh of PowerTitan 3.0 plus 2.6 GW of inverters for Masdar's 5.2 GW / 19 GWh round-the-clock solar+storage project in Abu Dhabi (COD 2027)",
+      "read": "~40% of the battery capacity of the world's first giga-scale 24/7 solar-storage plant — the anchor reference for PowerTitan 3.0.",
+      "source": "https://www.ess-news.com/2026/05/22/"
+    },
+    {
+      "date": "2026-01-27",
+      "category": "product-launch",
+      "headline": "European grid-forming PowerTitan 3.0 variant launched in Madrid — 1.78 MW / 7.14 MWh per 20-ft container, 4-hour duration, 7.2 MW / 28.5 MWh per block",
+      "read": "A duration-optimized, grid-code-ready European configuration aimed at low-PPA-price markets; company claims €16M extra lifetime returns per 1 GWh project.",
+      "source": "https://www.prnewswire.com/news-releases/more-than-powering-today-sungrow-launches-grid-forming-utility-ess-powertitan-3-0-in-madrid-302678906.html"
+    },
+    {
+      "date": "2026-01-15",
+      "category": "product-launch",
+      "headline": "SG465HX utility string inverter (AC 1,000 V, 465 kW, PV grid-forming) and PowerStack ST255CS unveiled at WFES 2026, Abu Dhabi",
+      "read": "The AC-1000V string generation and C&I storage land first in MEA — the region where Sungrow's harsh-climate engineering wins giga-orders.",
+      "source": "https://www.prnewswire.com/ae/news-releases/sungrow-unveils-next-generation-utility-scale-and-integrated-ci-energy-solutions-at-wfes-2026-302662765.html"
+    },
+    {
+      "date": "2025-11-20",
+      "category": "partnership",
+      "headline": "2026 distribution agreements signed with Australian distributors Raystech, Supply Partners, and Tradezone — Raystech alone to move 1 GWh of Sungrow BESS in 2026 (600 MWh residential)",
+      "read": "Storage attach through distribution is becoming a volume channel, not just utility direct sales.",
+      "source": "https://www.pv-magazine.com/2025/11/21/australias-raystech-to-supply-1-gwh-of-sungrow-battery-storage-in-2026/"
+    },
+    {
+      "date": "2025-06-06",
+      "category": "product-launch",
+      "headline": "PowerTitan 3.0 unveiled in Hefei — first mass-producible 684 Ah LFP cell, fully liquid-cooled silicon-carbide PCS, up to 12.5 MWh per 30-ft container",
+      "read": "Cell-to-system vertical integration deepens: Sungrow now specifies its own giant cell rather than packaging suppliers' standard 314 Ah units.",
+      "source": "https://www.pv-magazine.com/2025/06/10/sungrow-unveils-powertitan-3-0-bess-with-684-ah-cell-liquid-cooling/"
+    },
+    {
+      "date": "2025-05-07",
+      "category": "product-launch",
+      "headline": "IDC480E-C 480 kW ultra-fast compact EV charger launched at Power2Drive Munich, built on 40 kW proprietary modules",
+      "read": "Extends the shared power-module platform into charging and completes the 'Beyond Charging' PV+ESS+EVC bundle.",
+      "source": "https://en.sungrowpower.com/newsDetail/6398/modularity-meets-smart-charging-sungrow-unveils-ultra-fast-ev-charger-idc480e-c-at-power2drive"
+    },
+    {
+      "date": "2025-05-05",
+      "category": "product-launch",
+      "headline": "Sungrow Hydrogen launched a 300 Nm³/h PEM water electrolyzer; world's largest dual-technology (ALK+PEM) green hydrogen plant started production the same week",
+      "read": "Hydrogen line matures from ALK-only toward flexible hybrid plants suited to variable renewable input.",
+      "source": "https://en.sungrowpower.com/newsDetail/4774/sungrow-hydrogen-launches-the-300nm%C2%B3-h-pem-water-electrolyzer"
+    },
+    {
+      "date": "2025-04-16",
+      "category": "product-launch",
+      "headline": "1+X 2.0 modular inverter (800 kW modules to 9.6 MW) and PowerStack 255CS C&I ESS launched at the Global Renewable Energy Summit 2025",
+      "read": "Finer modular granularity chases LCOE in utility PV while the C&I cabinet refresh defends the distributed storage flank.",
+      "source": "https://en.sungrowpower.com/newsDetail/6333/sungrow-redefines-utility-scale-solar-solutions-with-launch-of-1-x-2-0-modular-inverter"
+    }
   ],
   "decisionMakers": [
     {
@@ -298,27 +539,37 @@
     {
       "name": "Wu Jiamao (吴家貌)",
       "title": "Director, Senior VP & Global Marketing President, PV & ESS Group",
-      "background": ["Joined 2005; formerly sales manager and Shanghai branch GM; master's degree"]
+      "background": [
+        "Joined 2005; formerly sales manager and Shanghai branch GM; master's degree"
+      ]
     },
     {
       "name": "Zhao Wei (赵为)",
       "title": "Employee-representative Director, Senior VP & Group Chief Scientist",
-      "background": ["Former deputy head of the R&D center; PhD, senior engineer"]
+      "background": [
+        "Former deputy head of the R&D center; PhD, senior engineer"
+      ]
     },
     {
       "name": "Zhang Xucheng (张许成)",
       "title": "Director; Chairman & President of Sungrow Renewables (plant development)",
-      "background": ["Director since May 2023; master's degree"]
+      "background": [
+        "Director since May 2023; master's degree"
+      ]
     },
     {
       "name": "Tian Shuai (田帅)",
       "title": "VP & CFO (since June 2022)",
-      "background": ["Joined Sungrow 2021; ex-Sany Heavy Industry and Huawei; CMA"]
+      "background": [
+        "Joined Sungrow 2021; ex-Sany Heavy Industry and Huawei; CMA"
+      ]
     },
     {
       "name": "Lu Yang (陆阳)",
       "title": "VP, Board Secretary & GM of the Strategy Center",
-      "background": ["Joined August 2016"]
+      "background": [
+        "Joined August 2016"
+      ]
     }
   ],
   "financials": {
@@ -328,26 +579,74 @@
       {
         "period": "FY2024",
         "metrics": [
-          { "name": "Revenue", "actual": "RMB 77.86B (+7.8%)", "expected": "", "verdict": "inline", "result": "—" },
-          { "name": "Net profit (attributable)", "actual": "RMB 11.04B (+16.9%)", "expected": "", "verdict": "inline", "result": "No explicit consensus comparison found" },
-          { "name": "Shipments", "actual": "Inverters 147 GW; storage ~28 GWh (derived from 2025's 43 GWh at +53.5%)", "expected": "", "verdict": "inline", "result": "—" }
+          {
+            "name": "Revenue",
+            "actual": "RMB 77.86B (+7.8%)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "—"
+          },
+          {
+            "name": "Net profit (attributable)",
+            "actual": "RMB 11.04B (+16.9%)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No explicit consensus comparison found"
+          },
+          {
+            "name": "Shipments",
+            "actual": "Inverters 147 GW; storage ~28 GWh (derived from 2025's 43 GWh at +53.5%)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "—"
+          }
         ],
         "commentary": ""
       },
       {
         "period": "FY2025 (reported April 2026)",
         "metrics": [
-          { "name": "Revenue", "actual": "RMB 89.18B (+14.6%)", "expected": "", "verdict": "inline", "result": "No explicit consensus comparison found; Q4 momentum decelerated" },
-          { "name": "Net profit (attributable)", "actual": "RMB 13.46B (+22.0%); operating cash flow RMB 16.92B (+40.2%)", "expected": "", "verdict": "inline", "result": "—" },
-          { "name": "Segments", "actual": "ESS RMB 37.29B (+49.4%, 41.8% of revenue, GM 36.5%) overtook inverters (RMB 31.14B, +6.9%); storage 43 GWh (+53.5%); inverters 143 GW; overseas ~60.5% of revenue (+48.8%)", "expected": "", "verdict": "beat", "result": "Storage became the largest and highest-margin segment" }
+          {
+            "name": "Revenue",
+            "actual": "RMB 89.18B (+14.6%)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "No explicit consensus comparison found; Q4 momentum decelerated"
+          },
+          {
+            "name": "Net profit (attributable)",
+            "actual": "RMB 13.46B (+22.0%); operating cash flow RMB 16.92B (+40.2%)",
+            "expected": "",
+            "verdict": "inline",
+            "result": "—"
+          },
+          {
+            "name": "Segments",
+            "actual": "ESS RMB 37.29B (+49.4%, 41.8% of revenue, GM 36.5%) overtook inverters (RMB 31.14B, +6.9%); storage 43 GWh (+53.5%); inverters 143 GW; overseas ~60.5% of revenue (+48.8%)",
+            "expected": "",
+            "verdict": "beat",
+            "result": "Storage became the largest and highest-margin segment"
+          }
         ],
         "commentary": "Dividends: FY2025 final RMB 6.90 per 10 shares plus an H1 2025 interim of RMB 9.50 per 10 shares; ~RMB 300M of buybacks in 2025. Shares hit a record (~RMB 413.5B market cap) in Nov 2025 after the first >RMB 4B quarterly profit."
       },
       {
         "period": "Q1 2026 (reported April 2026; H1 2026 due late August)",
         "metrics": [
-          { "name": "Revenue", "actual": "RMB 15.56B (-18.3%)", "expected": "", "verdict": "miss", "result": "China's post-'531' residential PV contraction" },
-          { "name": "Net profit", "actual": "RMB 2.29B (-40.1%); gross margin 33.3% (-1.8 pp) on falling storage prices", "expected": "Analyst estimates (missed)", "verdict": "miss", "result": "Institutions cut target prices; market cap ~RMB 277B by late April, >10% down YTD" }
+          {
+            "name": "Revenue",
+            "actual": "RMB 15.56B (-18.3%)",
+            "expected": "",
+            "verdict": "miss",
+            "result": "China's post-'531' residential PV contraction"
+          },
+          {
+            "name": "Net profit",
+            "actual": "RMB 2.29B (-40.1%); gross margin 33.3% (-1.8 pp) on falling storage prices",
+            "expected": "Analyst estimates (missed)",
+            "verdict": "miss",
+            "result": "Institutions cut target prices; market cap ~RMB 277B by late April, >10% down YTD"
+          }
         ],
         "commentary": "2026 management operating targets circulating from investor-briefing recaps (unverified against a filing): revenue RMB 110–120B, net profit RMB 17–19B, storage shipments ≥60 GWh."
       }
@@ -355,48 +654,205 @@
     "commentary": "Company-reported figures from annual/quarterly disclosures as relayed by cited outlets; the FY2024 storage GWh is derived, and the 2026 targets are investor-recap numbers, both flagged as such."
   },
   "sources": [
-    { "label": "ESS News — Wood Mackenzie inaugural global BESS integrator ranking (Jul 2026)", "url": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/", "date": "2026-07-14" },
-    { "label": "PR Newswire — PowerTitan 3.0 wins The smarter E AWARD 2026", "url": "https://www.prnewswire.com/news-releases/sungrows-powertitan-3-0-wins-the-smarter-e-award-2026--302815432.html", "date": "2026-07-01" },
-    { "label": "PR Newswire — #1 in Wood Mackenzie BESS integrator + PV inverter rankings", "url": "https://www.prnewswire.com/news-releases/sungrow-ranks-no1-in-wood-mackenzies-global-bess-integrator-and-pv-inverter-manufacturer-ranking-302842097.html", "date": "2026-07" },
-    { "label": "PR Newswire — SG510HX 4,200 m extreme safety test", "url": "http://www.prnewswire.com/news-releases/dc-side-safety-protection-upgrade-sungrow-sg510hx-completes-extreme-test-at-4-200-m-302797440.html", "date": "2026-06" },
-    { "label": "Energy-Storage.News — Delta Capacity 1 GWh European framework agreement", "url": "https://www.energy-storage.news/sungrow-and-delta-capacity-sign-1gwh-european-framework-bess-supply-deal/", "date": "2026-06" },
-    { "label": "Energy-Storage.News — 1.7 GWh UK BESS supply deal", "url": "https://www.energy-storage.news/sungrow-signs-supply-deal-with-uk-developers-for-1-7gwh-bess-project/", "date": "2026-06" },
-    { "label": "ESS News — 7.5 GWh Masdar Abu Dhabi order (May 2026)", "url": "https://www.ess-news.com/2026/05/22/", "date": "2026-05-22" },
-    { "label": "Energy-Storage.News — Zelestra energizes 1 GWh Aurora BESS in Chile (May 2026)", "url": "https://www.energy-storage.news/zelestra-energises-1gwh-hybrid-bess-project-in-chile/", "date": "2026-05" },
-    { "label": "EnergyTrend — FY2025 revenue RMB 89.18B, segment detail", "url": "https://www.energytrend.com/news/20260401-51176.html", "date": "2026-04-01" },
-    { "label": "新浪财经 — FY2025 results + dividend", "url": "https://finance.sina.com.cn/jjxw/2026-04-01/doc-inhsyfvi5066947.shtml", "date": "2026-04-01" },
-    { "label": "TaiyangNews — FY2025 results, ESS growth surge", "url": "https://taiyangnews.info/business/sungrow-fy-2025-financial-results", "date": "2026-04" },
-    { "label": "Smartkarma — Q1 2026 net income -40%, misses estimates", "url": "https://www.smartkarma.com/home/newswire/earnings-alerts/sungrow-power-supply-300274-earnings-q1-net-income-falls-40-misses-estimates/", "date": "2026-04" },
-    { "label": "Sungrow — grid-forming utility ESS for Europe launch (Jan 2026)", "url": "https://www.sungrowpower.com/en/sungrow-launches-grid-forming-utility-ess-for-europe-energy-transition", "date": "2026-01-27" },
-    { "label": "PR Newswire — PowerTitan 3.0 grid-forming launch, Madrid (Jan 2026)", "url": "https://www.prnewswire.com/news-releases/more-than-powering-today-sungrow-launches-grid-forming-utility-ess-powertitan-3-0-in-madrid-302678906.html", "date": "2026-01-27" },
-    { "label": "pv magazine — new inverters & C&I storage for 2026 (SG510HX/SG465HX)", "url": "https://www.pv-magazine.com/2026/01/22/sungrow-releases-new-inverters-storage-system-for-utility-and-ci-solar/", "date": "2026-01-22" },
-    { "label": "PR Newswire — WFES 2026: SG465HX + PowerStack ST255CS unveiled (Jan 2026)", "url": "https://www.prnewswire.com/ae/news-releases/sungrow-unveils-next-generation-utility-scale-and-integrated-ci-energy-solutions-at-wfes-2026-302662765.html", "date": "2026-01-15" },
-    { "label": "pv magazine — Raystech to supply 1 GWh of Sungrow BESS in Australia in 2026", "url": "https://www.pv-magazine.com/2025/11/21/australias-raystech-to-supply-1-gwh-of-sungrow-battery-storage-in-2026/", "date": "2025-11-21" },
-    { "label": "Solar Power World — PowerTitan 3.0 reaches 6.9 MWh in 20-ft container", "url": "https://www.solarpowerworldonline.com/2025/09/sungrow-powertitan-3-0-bess-reaches-6-9-mwh-in-20-ft-container/", "date": "2025-09" },
-    { "label": "tienda-solar — Huawei/Sungrow >55% combined inverter share (mid-2025)", "url": "https://tienda-solar.es/blog/en/top-3-pv-inverters-huawei-sungrow-sma/", "date": "2025-07" },
-    { "label": "pv magazine — PowerTitan 3.0 launch, 684 Ah cell (Jun 2025)", "url": "https://www.pv-magazine.com/2025/06/10/", "date": "2025-06-10" },
-    { "label": "Sungrow — Zelestra Aurora 1 GWh BESS agreement release", "url": "https://en.sungrowpower.com/newsDetail/6455/zelestra-signs-major-bess-agreement-with-sungrow-for-1-gwh-of-energy-storage-at-the-aurora-hybrid-project-in-chile", "date": "2025-06" },
-    { "label": "pv magazine — Sungrow starts world's largest dual-tech green hydrogen plant (May 2025)", "url": "https://www.pv-magazine.com/2025/05/08/the-hydrogen-stream-sungrow-starts-worlds-largest-dual-tech-green-hydrogen-plant/", "date": "2025-05-08" },
-    { "label": "Sungrow — IDC480E-C EV charger launch release (May 2025)", "url": "https://en.sungrowpower.com/newsDetail/6398/modularity-meets-smart-charging-sungrow-unveils-ultra-fast-ev-charger-idc480e-c-at-power2drive", "date": "2025-05-07" },
-    { "label": "Sungrow Hydrogen — 300 Nm³/h PEM electrolyzer launch", "url": "https://en.sungrowpower.com/newsDetail/4774/sungrow-hydrogen-launches-the-300nm%C2%B3-h-pem-water-electrolyzer", "date": "2025-05-05" },
-    { "label": "PR Newswire — Sungrow FPV new floating PV solutions at Intersolar (May 2025)", "url": "https://www.prnewswire.com/news-releases/sungrow-fpv-unveils-new-floating-pv-system-solutions-at-intersolar-europe-302449990.html", "date": "2025-05" },
-    { "label": "Sungrow — 1+X 2.0 modular inverter launch release (Apr 2025)", "url": "https://en.sungrowpower.com/newsDetail/6333/sungrow-redefines-utility-scale-solar-solutions-with-launch-of-1-x-2-0-modular-inverter", "date": "2025-04-16" },
-    { "label": "Sungrow — PowerStack 255CS launch release (Apr 2025)", "url": "https://en.sungrowpower.com/newsDetail/6334/sungrow-launches-powerstack-255cs-a-next-gen-c-amp-i-energy-storage-system-redefining-efficiency-safety-and-convenience", "date": "2025-04-16" },
-    { "label": "pv magazine — 1+X 2.0 modular inverter (Apr 2025)", "url": "https://www.pv-magazine.com/2025/04/16/", "date": "2025-04-16" },
-    { "label": "hydrogentechworld — Sungrow Hydrogen electrolyzers for ACME Oman 320 MW green ammonia", "url": "https://hydrogentechworld.com/sungrow-hydrogen-to-supply-electrolyzers-for-320-mw-green-ammonia-project-in-oman", "date": "2025-03" },
-    { "label": "PR Newswire — world's largest BESS burn test, 20 MWh PowerTitan 2.0 (Nov 2024)", "url": "https://www.prnewswire.com/news-releases/setting-a-new-safety-benchmark-for-the-industry-sungrow-achieves-success-in-the-worlds-largest-bess-fire-test-302308027.html", "date": "2024-11" },
-    { "label": "pv magazine — 7.8 GWh Saudi Algihaz order (Jul 2024)", "url": "https://www.pv-magazine.com/2024/07/16/", "date": "2024-07-16" },
-    { "label": "Sungrow — Full Power Wind Converter datasheet (2–8 MW)", "url": "https://info-support.sungrowpower.com/application/pdf/2024/04/02/Full%20Power%20Wind%20Converter.pdf", "date": "2024-04-02" },
-    { "label": "Eastmoney — executive biographies (300274)", "url": "https://caifuhao.eastmoney.com/news/20230824080507759283230", "date": "2023-08-24" },
-    { "label": "DNV — verification of Sungrow FPV anchoring & mooring design methodology", "url": "https://www.dnv.com/news/2021/dnv-verifies-sungrow-fpv-s-anchoring-and-mooring-design-methodology-using-new-floating-solar-recommended-practice-208492/", "date": "2021-06" },
-    { "label": "Sungrow — SG350HX string inverter product page", "url": "https://en.sungrowpower.com/productDetail/2305/string-inverter-sg350hx" },
-    { "label": "Sungrow — PowerTitan 2.0 product page", "url": "https://www.sungrowpower.com/en/products/utility-energy-storage-system/powertitan2" },
-    { "label": "Sungrow — ALK water electrolysis product page", "url": "https://www.sungrowpower.com/en/products/hydrogen/alk-water-electrolysis-equipment" },
-    { "label": "Sungrow — doubly-fed/full-power wind converter page", "url": "https://www.sungrowpower.com/en/products/wind-convetrer/doubly-fed-full-power-convetrer" },
-    { "label": "Sungrow — iSolarCloud product page", "url": "https://en.sungrowpower.com/productDetail/987/cloud-platform-isolarcloud" },
-    { "label": "Sungrow AU — SH15/20/25T three-phase hybrid inverter page", "url": "https://aus.sungrowpower.com/productDetail/3158/mv-power-converter-hybrid-inverter-sh15-20-25t" },
-    { "label": "StockAnalysis — company profile (300274)", "url": "https://stockanalysis.com/quote/she/300274/company/" }
+    {
+      "label": "ESS News — Wood Mackenzie inaugural global BESS integrator ranking (Jul 2026)",
+      "url": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
+      "date": "2026-07-14"
+    },
+    {
+      "label": "PR Newswire — PowerTitan 3.0 wins The smarter E AWARD 2026",
+      "url": "https://www.prnewswire.com/news-releases/sungrows-powertitan-3-0-wins-the-smarter-e-award-2026--302815432.html",
+      "date": "2026-07-01"
+    },
+    {
+      "label": "PR Newswire — #1 in Wood Mackenzie BESS integrator + PV inverter rankings",
+      "url": "https://www.prnewswire.com/news-releases/sungrow-ranks-no1-in-wood-mackenzies-global-bess-integrator-and-pv-inverter-manufacturer-ranking-302842097.html",
+      "date": "2026-07"
+    },
+    {
+      "label": "PR Newswire — SG510HX 4,200 m extreme safety test",
+      "url": "http://www.prnewswire.com/news-releases/dc-side-safety-protection-upgrade-sungrow-sg510hx-completes-extreme-test-at-4-200-m-302797440.html",
+      "date": "2026-06"
+    },
+    {
+      "label": "Energy-Storage.News — Delta Capacity 1 GWh European framework agreement",
+      "url": "https://www.energy-storage.news/sungrow-and-delta-capacity-sign-1gwh-european-framework-bess-supply-deal/",
+      "date": "2026-06"
+    },
+    {
+      "label": "Energy-Storage.News — 1.7 GWh UK BESS supply deal",
+      "url": "https://www.energy-storage.news/sungrow-signs-supply-deal-with-uk-developers-for-1-7gwh-bess-project/",
+      "date": "2026-06"
+    },
+    {
+      "label": "ESS News — 7.5 GWh Masdar Abu Dhabi order (May 2026)",
+      "url": "https://www.ess-news.com/2026/05/22/",
+      "date": "2026-05-22"
+    },
+    {
+      "label": "Energy-Storage.News — Zelestra energizes 1 GWh Aurora BESS in Chile (May 2026)",
+      "url": "https://www.energy-storage.news/zelestra-energises-1gwh-hybrid-bess-project-in-chile/",
+      "date": "2026-05"
+    },
+    {
+      "label": "EnergyTrend — FY2025 revenue RMB 89.18B, segment detail",
+      "url": "https://www.energytrend.com/news/20260401-51176.html",
+      "date": "2026-04-01"
+    },
+    {
+      "label": "新浪财经 — FY2025 results + dividend",
+      "url": "https://finance.sina.com.cn/jjxw/2026-04-01/doc-inhsyfvi5066947.shtml",
+      "date": "2026-04-01"
+    },
+    {
+      "label": "TaiyangNews — FY2025 results, ESS growth surge",
+      "url": "https://taiyangnews.info/business/sungrow-fy-2025-financial-results",
+      "date": "2026-04"
+    },
+    {
+      "label": "Smartkarma — Q1 2026 net income -40%, misses estimates",
+      "url": "https://www.smartkarma.com/home/newswire/earnings-alerts/sungrow-power-supply-300274-earnings-q1-net-income-falls-40-misses-estimates/",
+      "date": "2026-04"
+    },
+    {
+      "label": "Sungrow — grid-forming utility ESS for Europe launch (Jan 2026)",
+      "url": "https://www.sungrowpower.com/en/sungrow-launches-grid-forming-utility-ess-for-europe-energy-transition",
+      "date": "2026-01-27"
+    },
+    {
+      "label": "PR Newswire — PowerTitan 3.0 grid-forming launch, Madrid (Jan 2026)",
+      "url": "https://www.prnewswire.com/news-releases/more-than-powering-today-sungrow-launches-grid-forming-utility-ess-powertitan-3-0-in-madrid-302678906.html",
+      "date": "2026-01-27"
+    },
+    {
+      "label": "pv magazine — new inverters & C&I storage for 2026 (SG510HX/SG465HX)",
+      "url": "https://www.pv-magazine.com/2026/01/22/sungrow-releases-new-inverters-storage-system-for-utility-and-ci-solar/",
+      "date": "2026-01-22"
+    },
+    {
+      "label": "PR Newswire — WFES 2026: SG465HX + PowerStack ST255CS unveiled (Jan 2026)",
+      "url": "https://www.prnewswire.com/ae/news-releases/sungrow-unveils-next-generation-utility-scale-and-integrated-ci-energy-solutions-at-wfes-2026-302662765.html",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "pv magazine — Raystech to supply 1 GWh of Sungrow BESS in Australia in 2026",
+      "url": "https://www.pv-magazine.com/2025/11/21/australias-raystech-to-supply-1-gwh-of-sungrow-battery-storage-in-2026/",
+      "date": "2025-11-21"
+    },
+    {
+      "label": "Solar Power World — PowerTitan 3.0 reaches 6.9 MWh in 20-ft container",
+      "url": "https://www.solarpowerworldonline.com/2025/09/sungrow-powertitan-3-0-bess-reaches-6-9-mwh-in-20-ft-container/",
+      "date": "2025-09"
+    },
+    {
+      "label": "tienda-solar — Huawei/Sungrow >55% combined inverter share (mid-2025)",
+      "url": "https://tienda-solar.es/blog/en/top-3-pv-inverters-huawei-sungrow-sma/",
+      "date": "2025-07"
+    },
+    {
+      "label": "pv magazine — PowerTitan 3.0 launch, 684 Ah cell (Jun 2025)",
+      "url": "https://www.pv-magazine.com/2025/06/10/",
+      "date": "2025-06-10"
+    },
+    {
+      "label": "Sungrow — Zelestra Aurora 1 GWh BESS agreement release",
+      "url": "https://en.sungrowpower.com/newsDetail/6455/zelestra-signs-major-bess-agreement-with-sungrow-for-1-gwh-of-energy-storage-at-the-aurora-hybrid-project-in-chile",
+      "date": "2025-06"
+    },
+    {
+      "label": "pv magazine — Sungrow starts world's largest dual-tech green hydrogen plant (May 2025)",
+      "url": "https://www.pv-magazine.com/2025/05/08/the-hydrogen-stream-sungrow-starts-worlds-largest-dual-tech-green-hydrogen-plant/",
+      "date": "2025-05-08"
+    },
+    {
+      "label": "Sungrow — IDC480E-C EV charger launch release (May 2025)",
+      "url": "https://en.sungrowpower.com/newsDetail/6398/modularity-meets-smart-charging-sungrow-unveils-ultra-fast-ev-charger-idc480e-c-at-power2drive",
+      "date": "2025-05-07"
+    },
+    {
+      "label": "Sungrow Hydrogen — 300 Nm³/h PEM electrolyzer launch",
+      "url": "https://en.sungrowpower.com/newsDetail/4774/sungrow-hydrogen-launches-the-300nm%C2%B3-h-pem-water-electrolyzer",
+      "date": "2025-05-05"
+    },
+    {
+      "label": "PR Newswire — Sungrow FPV new floating PV solutions at Intersolar (May 2025)",
+      "url": "https://www.prnewswire.com/news-releases/sungrow-fpv-unveils-new-floating-pv-system-solutions-at-intersolar-europe-302449990.html",
+      "date": "2025-05"
+    },
+    {
+      "label": "Sungrow — 1+X 2.0 modular inverter launch release (Apr 2025)",
+      "url": "https://en.sungrowpower.com/newsDetail/6333/sungrow-redefines-utility-scale-solar-solutions-with-launch-of-1-x-2-0-modular-inverter",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "Sungrow — PowerStack 255CS launch release (Apr 2025)",
+      "url": "https://en.sungrowpower.com/newsDetail/6334/sungrow-launches-powerstack-255cs-a-next-gen-c-amp-i-energy-storage-system-redefining-efficiency-safety-and-convenience",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "pv magazine — 1+X 2.0 modular inverter (Apr 2025)",
+      "url": "https://www.pv-magazine.com/2025/04/16/",
+      "date": "2025-04-16"
+    },
+    {
+      "label": "hydrogentechworld — Sungrow Hydrogen electrolyzers for ACME Oman 320 MW green ammonia",
+      "url": "https://hydrogentechworld.com/sungrow-hydrogen-to-supply-electrolyzers-for-320-mw-green-ammonia-project-in-oman",
+      "date": "2025-03"
+    },
+    {
+      "label": "PR Newswire — world's largest BESS burn test, 20 MWh PowerTitan 2.0 (Nov 2024)",
+      "url": "https://www.prnewswire.com/news-releases/setting-a-new-safety-benchmark-for-the-industry-sungrow-achieves-success-in-the-worlds-largest-bess-fire-test-302308027.html",
+      "date": "2024-11"
+    },
+    {
+      "label": "pv magazine — 7.8 GWh Saudi Algihaz order (Jul 2024)",
+      "url": "https://www.pv-magazine.com/2024/07/16/",
+      "date": "2024-07-16"
+    },
+    {
+      "label": "Sungrow — Full Power Wind Converter datasheet (2–8 MW)",
+      "url": "https://info-support.sungrowpower.com/application/pdf/2024/04/02/Full%20Power%20Wind%20Converter.pdf",
+      "date": "2024-04-02"
+    },
+    {
+      "label": "Eastmoney — executive biographies (300274)",
+      "url": "https://caifuhao.eastmoney.com/news/20230824080507759283230",
+      "date": "2023-08-24"
+    },
+    {
+      "label": "DNV — verification of Sungrow FPV anchoring & mooring design methodology",
+      "url": "https://www.dnv.com/news/2021/dnv-verifies-sungrow-fpv-s-anchoring-and-mooring-design-methodology-using-new-floating-solar-recommended-practice-208492/",
+      "date": "2021-06"
+    },
+    {
+      "label": "Sungrow — SG350HX string inverter product page",
+      "url": "https://en.sungrowpower.com/productDetail/2305/string-inverter-sg350hx"
+    },
+    {
+      "label": "Sungrow — PowerTitan 2.0 product page",
+      "url": "https://www.sungrowpower.com/en/products/utility-energy-storage-system/powertitan2"
+    },
+    {
+      "label": "Sungrow — ALK water electrolysis product page",
+      "url": "https://www.sungrowpower.com/en/products/hydrogen/alk-water-electrolysis-equipment"
+    },
+    {
+      "label": "Sungrow — doubly-fed/full-power wind converter page",
+      "url": "https://www.sungrowpower.com/en/products/wind-convetrer/doubly-fed-full-power-convetrer"
+    },
+    {
+      "label": "Sungrow — iSolarCloud product page",
+      "url": "https://en.sungrowpower.com/productDetail/987/cloud-platform-isolarcloud"
+    },
+    {
+      "label": "Sungrow AU — SH15/20/25T three-phase hybrid inverter page",
+      "url": "https://aus.sungrowpower.com/productDetail/3158/mv-power-converter-hybrid-inverter-sh15-20-25t"
+    },
+    {
+      "label": "StockAnalysis — company profile (300274)",
+      "url": "https://stockanalysis.com/quote/she/300274/company/"
+    }
   ],
-  "lastUpdated": "2026-08-09",
-  "profileVersion": 3
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 4
 }

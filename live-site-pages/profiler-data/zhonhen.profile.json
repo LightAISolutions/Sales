@@ -90,22 +90,27 @@
       "product": "SuperX Panama-800VDC (JV flagship)",
       "specs": [
         {
+          "band": "Ratings",
           "label": "Capacity",
           "value": "Up to 3.6MW per system"
         },
         {
+          "band": "Performance",
           "label": "Peak efficiency",
           "value": "98.5% (company-stated)"
         },
         {
+          "band": "Architecture",
           "label": "Conversion stages",
           "value": "1–2, vs 4–5 in legacy AC architecture"
         },
         {
+          "band": "Architecture",
           "label": "Copper use",
           "value": "−45% vs equivalent AC distribution (company-stated)"
         },
         {
+          "band": "Rack interface",
           "label": "Rack support",
           "value": "1MW+ single cabinets; 250kW+ GPU racks; stated NVIDIA Kyber compatibility"
         }
@@ -116,23 +121,28 @@
       "product": "Panama prefabricated power modules (P/H/AC series)",
       "specs": [
         {
+          "band": "Electrical",
           "label": "Input",
           "value": "10kV medium voltage, converted in one stage"
         },
         {
+          "band": "Electrical",
           "label": "Output",
           "value": "240V/400V/800V DC"
         },
         {
+          "band": "Ratings",
           "label": "IT load",
           "value": "2.5MW per system (current series; earlier series 2.4MW)"
         },
         {
+          "band": "Performance",
           "label": "System efficiency",
           "value": ">97.5% (company-stated; earlier marketing claims 98%)"
         },
         {
-          "label": "Delivery",
+          "band": "Delivery",
+          "label": "Prefabrication",
           "value": "Factory pre-integrated and pre-tested skid: 10kV distribution + transformer + UPS + output distribution"
         }
       ],
@@ -142,18 +152,22 @@
       "product": "HVDC power system (240V/336V/800V)",
       "specs": [
         {
+          "band": "Electrical",
           "label": "Input",
           "value": "380VAC mains"
         },
         {
+          "band": "Electrical",
           "label": "Output",
           "value": "240V or 336V DC (China standard), 800V DC (new line)"
         },
         {
+          "band": "Performance",
           "label": "Efficiency",
           "value": "≥97.5% (company-stated)"
         },
         {
+          "band": "Backup",
           "label": "Ride-through",
           "value": "Battery strings sit directly on the DC output busbar — zero-transfer-time backup"
         }
@@ -164,14 +178,17 @@
       "product": "EV charging stacks",
       "specs": [
         {
+          "band": "Product line",
           "label": "Split stacks",
           "value": "360–2500kW ACDC, dynamic power-pool allocation"
         },
         {
+          "band": "Product line",
           "label": "Supercharge terminals",
           "value": "800A liquid-cooled option"
         },
         {
+          "band": "Product line",
           "label": "DC-bus variants",
           "value": "Panama DCDC 320–480kW integrated; 1200–2400kW split"
         }
@@ -647,5 +664,5 @@
     }
   ],
   "lastUpdated": "2026-08-22",
-  "profileVersion": 3
+  "profileVersion": 4
 }

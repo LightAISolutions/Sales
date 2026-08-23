@@ -209,31 +209,88 @@
     {
       "product": "Stargate Abilene delivery system (Crusoe / OpenAI-Oracle)",
       "specs": [
-        "Per building: one central utility hall + four data halls, 35,000 sq ft white space, 500 racks and 25 MW IT per hall = 100 MW IT per building; operable with up to 100,000 GPUs / 50,000 NVIDIA GB200 NVL72 racks on one network fabric",
-        "Campus: 8 buildings, ~4M sq ft, 1.2 GW total power; expanded from 2 to 8 buildings within ~6 months of groundbreaking; energization completing mid-2026",
-        "Speed: each 474,000 sq ft building delivered in <1 year; each 106,000 sq ft data hall ~10 months start-to-energization; 672 prefabricated IMP exterior panels per building installed at 15-20/day — enclosed in <8 weeks",
-        "Structural steel mill-orders designed in 2 weeks, full fabrication models in <6 weeks; prefabricated anchor-bolt template system; reverse-osmosis flushing projected to cut chilled-water flushing use 75%",
-        "Workforce: ~2,000 rising toward ~5,000 daily (2,785 in July 2025; ~7,000 at final topping-out); ~2.75M workhours on the first two buildings through May 2025; DPR manages 60 subs (30 more under primes Rosendin and Southland Brandt)"
+        {
+          "band": "Building",
+          "label": "Per building",
+          "value": "one central utility hall + four data halls, 35,000 sq ft white space, 500 racks and 25 MW IT per hall = 100 MW IT per building; operable with up to 100,000 GPUs / 50,000 NVIDIA GB200 NVL72 racks on one network fabric"
+        },
+        {
+          "band": "Campus",
+          "label": "Scale",
+          "value": "8 buildings, ~4M sq ft, 1.2 GW total power; expanded from 2 to 8 buildings within ~6 months of groundbreaking; energization completing mid-2026"
+        },
+        {
+          "band": "Schedule",
+          "label": "Speed",
+          "value": "each 474,000 sq ft building delivered in <1 year; each 106,000 sq ft data hall ~10 months start-to-energization; 672 prefabricated IMP exterior panels per building installed at 15-20/day — enclosed in <8 weeks"
+        },
+        {
+          "band": "Engineering",
+          "label": "Steel & water",
+          "value": "Structural steel mill-orders designed in 2 weeks, full fabrication models in <6 weeks; prefabricated anchor-bolt template system; reverse-osmosis flushing projected to cut chilled-water flushing use 75%"
+        },
+        {
+          "band": "Workforce",
+          "label": "Craft & subcontractors",
+          "value": "~2,000 rising toward ~5,000 daily (2,785 in July 2025; ~7,000 at final topping-out); ~2.75M workhours on the first two buildings through May 2025; DPR manages 60 subs (30 more under primes Rosendin and Southland Brandt)"
+        }
       ],
       "notes": "DCD's 2025 North American Data Center Project of the Year; the most-documented AI-campus delivery method in the public record (ENR feature, 2025-08-04)"
     },
     {
       "product": "Mission-critical install base and delivery model",
       "specs": [
-        ">1.5 GW of data-center critical load installed since 1997 (first DC project 1997); 2,716 mission-critical projects since 1990; 575+ in the last five years; $12.1B of mission-critical work in ten years; 202 design-build mission-critical projects",
-        "96% of mission-critical work in the past five years with repeat customers",
-        "~90% of revenue CM-at-risk (ENR 2026 survey); in-house mechanical/electrical/controls through commissioning; Special Services Group for live-environment retrofits",
-        "31% of 2024 company revenue from mission-critical (company claim) vs 57% of 2025 revenue in ENR's telecom category — the Stargate ramp in one contrast"
+        {
+          "band": "Install base",
+          "label": "Critical load",
+          "value": ">1.5 GW of data-center critical load installed since 1997 (first DC project 1997)"
+        },
+        {
+          "band": "Install base",
+          "label": "Project count",
+          "value": "2,716 mission-critical projects since 1990; 575+ in the last five years; $12.1B of mission-critical work in ten years; 202 design-build mission-critical projects"
+        },
+        {
+          "band": "Client base",
+          "label": "Repeat work",
+          "value": "96% of mission-critical work in the past five years with repeat customers"
+        },
+        {
+          "band": "Delivery model",
+          "label": "Contracting",
+          "value": "~90% of revenue CM-at-risk (ENR 2026 survey); in-house mechanical/electrical/controls through commissioning; Special Services Group for live-environment retrofits"
+        },
+        {
+          "band": "Revenue mix",
+          "label": "Sector share",
+          "value": "31% of 2024 company revenue from mission-critical (company claim) vs 57% of 2025 revenue in ENR's telecom category — the Stargate ramp in one contrast"
+        }
       ],
       "notes": "The trailing 1.5 GW install-base figure understates current in-flight capacity: Abilene alone is a 1.2 GW campus"
     },
     {
       "product": "Prefabrication & Family of Companies platform",
       "specs": [
-        "Prefabrication on >90% of new work; schedule reductions up to 50% vs field assembly (company claims); two decades of engineered-to-order experience; Revit-model-to-digital-fabrication workflow",
-        "Digital Building Components (founded 2016): panelized exterior wall systems, load-bearing cold-formed metal framing, interior partitions manufactured direct from Revit models",
-        "SurePods: largest US bathroom-pod manufacturer (healthcare, hospitality, multi-living; Marriott/Hilton/Hyatt lineage since 2006), consolidating eight trades per pod",
-        "vConstruct (Pune): scaled VDC, project controls, software and data services; VueOps: facility-operations/digital-twin software; 70 patents company-wide"
+        {
+          "band": "Prefabrication",
+          "label": "Coverage",
+          "value": ">90% of new work; schedule reductions up to 50% vs field assembly (company claims); two decades of engineered-to-order experience; Revit-model-to-digital-fabrication workflow"
+        },
+        {
+          "band": "Operating companies",
+          "label": "Digital Building Components (founded 2016)",
+          "value": "panelized exterior wall systems, load-bearing cold-formed metal framing, interior partitions manufactured direct from Revit models"
+        },
+        {
+          "band": "Operating companies",
+          "label": "SurePods",
+          "value": "largest US bathroom-pod manufacturer (healthcare, hospitality, multi-living; Marriott/Hilton/Hyatt lineage since 2006), consolidating eight trades per pod"
+        },
+        {
+          "band": "Operating companies",
+          "label": "vConstruct (Pune) & VueOps",
+          "value": "scaled VDC, project controls, software and data services; VueOps: facility-operations/digital-twin software; 70 patents company-wide"
+        }
       ],
       "notes": "Family-of-companies employees participate in the same ownership and profit-sharing programs as DPR proper — one labor market, one equity system"
     }
@@ -490,6 +547,6 @@
       "url": "https://en.wikipedia.org/wiki/DPR_Construction"
     }
   ],
-  "lastUpdated": "2026-08-21",
-  "profileVersion": 1
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 2
 }
