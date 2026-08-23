@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-22 08:01:32 PM EST` · Repo version: `v02.88r`
+Last updated: `2026-08-22 10:24:05 PM EST` · Repo version: `v02.89r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -348,7 +348,7 @@ Last updated: `2026-08-22 08:01:32 PM EST` · Repo version: `v02.88r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/compute-csp-hash.sh">compute-csp-hash.sh</a>     — [template] CSP SHA-256 hash computation for inline scripts
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-gas-inner-scripts.js">check-gas-inner-scripts.js</a> — CI check: validates served inner &lt;script&gt; syntax in GAS files
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/playwright-harness.py">playwright-harness.py</a>   — Chromium smoke-test harness for all projects (load + console-error + screenshot)
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/verify-profiler-roles.py">verify-profiler-roles.py</a> — Profiler Role + Access matrix verifier (stubbed GAS sign-in per tier, surface assertions, per-role screenshots)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/verify-profiler-roles.py">verify-profiler-roles.py</a> — Profiler app verifier (Role + Access matrix with per-tier screenshots, per-account guidance-progress isolation, Technical Annex render audit across all dossiers)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-aidc-report-pdf.mjs">build-aidc-report-pdf.mjs</a> — Renders the AIDC market report HTML to paginated PDFs, one per Profiler writing style (headless Chromium, DevTools Protocol)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-study-prep-pdf.mjs">build-study-prep-pdf.mjs</a> — Typesets a study-prep Markdown brief to PDF; the Markdown stays the source of truth so the PDF cannot drift
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/harvest-exec-photos.py">harvest-exec-photos.py</a> — Executive-headshot harvester for Profiler dossiers (first-party leadership pages + license-verified Wikimedia Commons, contact-sheet verification, surgical JSON wiring)

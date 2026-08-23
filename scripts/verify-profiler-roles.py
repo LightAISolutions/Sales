@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
-"""Verify the Profiler app's Role + Access matrix and capture a screenshot per tier.
+"""Verify the Profiler app's access matrix, per-account isolation and specs rendering.
+
+Three checks run in one pass:
+  1. Role + Access matrix — which surfaces each ACL tier sees (screenshot per tier)
+  2. Guidance progress isolation — reading progress must not carry between accounts
+     sharing a browser
+  3. Technical Annex render audit — every dossier shows a populated specs section
+     or none at all; no blank rows, no lone headings
+
 
 Serves live-site-pages/ over localhost, stubs the Profiler GAS backend (whoami +
 guidance ops), signs the page in as each ACL tier in turn, and asserts which of
@@ -62,13 +70,20 @@ def serve(directory):
     return httpd, httpd.server_address[1]
 
 
-def gas_stub(role):
-    """Stand in for the deployed GAS: whoami reports the tier, guidance enforces it."""
+def gas_stub(state):
+    """Stand in for the deployed GAS: whoami reports the tier, guidance enforces it.
+
+    `state` may be a tier name or a mutable {'role', 'email'} dict, so a single
+    browser context can switch accounts between page loads.
+    """
     def handle(route, request):
+        st = state if isinstance(state, dict) else {'role': state}
+        role = st['role']
+        email = st.get('email') or (role + '@example.com')
         url = request.url
         body = {'success': False, 'error': 'unsupported_in_test'}
         if 'nop=whoami' in url:
-            body = {'success': True, 'email': role + '@example.com',
+            body = {'success': True, 'email': email,
                     'role': role, 'isAdmin': role == 'admin'}
         elif 'action=guidance' in url or 'op=guidance' in url:
             if role in GUIDANCE_ALLOWED:
@@ -101,6 +116,121 @@ def probe(page):
         role:      localStorage.getItem('ov_note_role')
       };
     }""")
+
+
+def check_progress_isolation(browser, base):
+    """Industry Guidance reading progress must not carry between accounts.
+
+    One browser, one localStorage: sign in as an admin, tick a section understood,
+    then sign a second account into the same browser and assert it starts clean —
+    and that returning to the first account still finds its own ticks.
+    """
+    fails = []
+    state = {'role': 'admin', 'email': 'admin@example.com'}
+    ctx = browser.new_context(viewport={'width': 1280, 'height': 900})
+    ctx.route('**://script.google.com/**', gas_stub(state))
+    ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
+    ctx.add_init_script("localStorage.setItem('ov_note_session','%s');" % ('t' * 48))
+    page = ctx.new_page()
+
+    def load(email, first=False):
+        # Re-navigating to an identical URL is a same-document fragment move, so
+        # the page would never re-run whoami. Reload explicitly, then wait for the
+        # account the stub is now reporting rather than for any account at all.
+        if first:
+            page.goto(base + '#', wait_until='networkidle')
+        else:
+            page.reload(wait_until='networkidle')
+        page.wait_for_function("e => localStorage.getItem('ov_note_email') === e",
+                               arg=email, timeout=15000)
+        page.wait_for_timeout(300)
+
+    load('admin@example.com', first=True)
+    page.evaluate("() => gdSetProgress('nvidia-800vdc', 'sec-exec-read', true)")
+    admin_acct = page.evaluate("() => ovAcctKey()")
+    if page.evaluate("() => gdProgress('nvidia-800vdc')['sec-exec-read']") is not True:
+        fails.append('progress: admin tick did not persist')
+
+    state.update(role='contributor', email='contributor@example.com')
+    load('contributor@example.com')
+    contrib_acct = page.evaluate("() => ovAcctKey()")
+    if contrib_acct == admin_acct:
+        fails.append('progress: both accounts resolve to the same namespace %r' % contrib_acct)
+    if page.evaluate("() => Object.keys(gdProgress('nvidia-800vdc')).length") != 0:
+        fails.append('progress: contributor inherited the admin account\'s progress')
+    page.evaluate("() => gdSetProgress('nvidia-800vdc', 'sec-protection', true)")
+
+    state.update(role='admin', email='admin@example.com')
+    load('admin@example.com')
+    back = page.evaluate("() => gdProgress('nvidia-800vdc')")
+    if back.get('sec-exec-read') is not True:
+        fails.append('progress: admin lost its own progress after the other account signed in')
+    if 'sec-protection' in back:
+        fails.append('progress: admin picked up the contributor account\'s progress')
+
+    print('\nGuidance progress isolation')
+    print('  admin namespace       %s' % admin_acct)
+    print('  contributor namespace %s' % contrib_acct)
+    print('  contributor start     %s' % ('clean' if not fails else 'CONTAMINATED'))
+    ctx.close()
+    return fails
+
+
+def check_spec_sections(browser, base, slugs):
+    """Every dossier must show a populated specs section or none at all.
+
+    Spec entries come in two shapes ({label, value} and plain string); the second
+    used to render as blank rows. Walk every dossier and assert no rendered row is
+    empty and no specs heading stands alone.
+    """
+    fails = []
+    ctx = browser.new_context(viewport={'width': 1280, 'height': 900})
+    ctx.route('**://script.google.com/**', gas_stub({'role': 'admin', 'email': 'admin@example.com'}))
+    ctx.route('**://accounts.google.com/**', lambda r, q: r.abort())
+    ctx.add_init_script("localStorage.setItem('ov_note_session','%s');" % ('t' * 48))
+    page = ctx.new_page()
+    page.goto(base + '#', wait_until='networkidle')
+    page.wait_for_function("() => !!localStorage.getItem('ov_note_role')", timeout=15000)
+
+    with_specs = without = 0
+    for slug in slugs:
+        page.evaluate("s => { location.hash = '#' + s; }", slug)
+        page.wait_for_function("s => document.querySelector('.ov-co-head h2') && location.hash.indexOf(s) === 1",
+                               arg=slug, timeout=10000)
+        page.wait_for_timeout(120)
+        got = page.evaluate("""() => {
+          const heads = [...document.querySelectorAll('.ov-sec-hd, .sec-hd, h2, h3')]
+            .filter(e => /technical annex|technical specifications|product detail|zoom in/i.test(e.textContent||''));
+          const rows = [...document.querySelectorAll('table.ov-table tr')];
+          const blank = rows.filter(tr => !(tr.textContent||'').trim()).length;
+          return { heads: heads.length, rows: rows.length, blank: blank };
+        }""")
+        if got['blank']:
+            fails.append('%s: %d blank spec row(s) rendered' % (slug, got['blank']))
+        if got['heads'] and not got['rows']:
+            fails.append('%s: specs heading rendered with no rows' % slug)
+        if got['heads']:
+            with_specs += 1
+        else:
+            without += 1
+
+    print('\nTechnical Annex render audit')
+    print('  dossiers checked      %d' % len(slugs))
+    print('  with a specs section  %d' % with_specs)
+    print('  without one          %d' % without)
+    print('  blank rows found      %d' % sum(1 for f in fails if 'blank' in f))
+    ctx.close()
+    return fails
+
+
+def all_slugs():
+    import json as _json
+    out = []
+    reg = LIVE / 'profiler-data' / 'profiler-companies.json'
+    for c in _json.load(open(reg, encoding='utf-8')).get('companies', []):
+        if c.get('slug'):
+            out.append(c['slug'])
+    return sorted(out)
 
 
 def run():
@@ -151,10 +281,14 @@ def run():
 
             rows.append((role, got))
             ctx.close()
+
+        failures += check_progress_isolation(browser, base)
+        failures += check_spec_sections(browser, base, all_slugs())
         browser.close()
     httpd.shutdown()
 
     mark = lambda b: 'shown ' if b else 'hidden'
+    print('\nRole + Access matrix')
     print('\n%-12s %-8s %-8s %-8s %-8s %-8s %-8s' %
           ('ROLE', 'NoteBtn', 'NoteBox', 'Cog', 'Versions', 'Guidance', 'Export'))
     print('-' * 66)
@@ -164,11 +298,11 @@ def run():
             mark(g['versions']), mark(g['guidance']), mark(g['export'])))
     print()
     if failures:
-        print('MATRIX MISMATCHES (%d):' % len(failures))
+        print('FAILURES (%d):' % len(failures))
         for f in failures:
             print('  ✗', f)
         return 1
-    print('MATRIX VERIFIED — all four tiers match the directive.')
+    print('ALL CHECKS PASSED — access matrix, per-account isolation, specs rendering.')
     return 0
 
 

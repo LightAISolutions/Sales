@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.39w">
+  <meta name="build-version" content="v01.40w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -270,6 +270,7 @@
     .ov-table-wrap { overflow-x: auto; margin: 14px 0; }
     table.ov-table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
     table.ov-table caption { text-align: left; font: 400 17px/1.4 var(--ov-serif); padding-bottom: 8px; }
+    .ov-spec-hd { text-align: left; font: 400 17px/1.4 var(--ov-serif); margin: 14px 0 8px; }
     table.ov-table th {
       text-align: left; font: 10px/1.3 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
       color: var(--ov-faint); border-bottom: 1px solid var(--ov-line2); padding: 8px 14px 8px 0;
@@ -1590,6 +1591,34 @@ function ovReloadFresh() {
       if (b && typeof b === 'object') return (b.confidence ? '(' + b.confidence + ' confidence) ' : '') + (b.judgment || '');
       return String(b || '');
     }
+    // Dual-shape (v01.40w): technicalSpecs[].specs entries are written either as
+    // {label, value} pairs or as plain statement strings — 41 of 62 dossiers use
+    // the string form. Both renderers previously read .label/.value only, so
+    // string entries produced rows of two undefined cells (blank Technical
+    // Annex) and were dropped outright from exports. Archived snapshots keep
+    // whichever shape they were authored with, so both render permanently.
+    // Returns {label, value} with an empty label for statement rows, or null
+    // when the entry carries no text at all.
+    function ovSpecRow(row) {
+      if (row && typeof row === 'object') {
+        var l = String(row.label == null ? '' : row.label).trim();
+        var v = String(row.value == null ? '' : row.value).trim();
+        return (l || v) ? { label: l, value: v } : null;
+      }
+      var t = String(row == null ? '' : row).trim();
+      return t ? { label: '', value: t } : null;
+    }
+    // Spec groups reduced to what will actually render. A group survives only if
+    // it has at least one row with text or a note; when nothing survives, callers
+    // omit the section heading rather than printing an empty one.
+    function ovSpecGroups(p) {
+      return ((p && p.technicalSpecs) || []).map(function(g) {
+        var rows = ((g && g.specs) || []).map(ovSpecRow).filter(Boolean);
+        var note = g && g.notes ? String(g.notes).trim() : '';
+        return { product: (g && g.product) || '', rows: rows, notes: note };
+      }).filter(function(g) { return g.rows.length || g.notes; });
+    }
+
     function ovStyleBanner(p) {
       var s = ovStyle();
       if (s === 'equity-research') return (ovTicker(p) ? ovTicker(p) + ' · ' : '') + 'Positioning framework — analytical view, not investment advice';
@@ -1872,21 +1901,33 @@ function ovReloadFresh() {
         paneFor('strategy').appendChild(sr);
       }
 
-      // Technical specifications
-      if (p.technicalSpecs && p.technicalSpecs.length) {
+      // Technical specifications — rendered only when something will show
+      var specGroups = ovSpecGroups(p);
+      if (specGroups.length) {
         var ts = ovSection(ovSecLabel('specs'));
-        p.technicalSpecs.forEach(function(spec) {
-          var wrap = ovEl('div', 'ov-table-wrap');
-          var t = ovEl('table', 'ov-table');
-          t.appendChild(ovEl('caption', null, (ovStyle() === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + spec.product));
-          (spec.specs || []).forEach(function(row) {
-            var tr = ovEl('tr');
-            tr.appendChild(ovEl('td', 'k', row.label));
-            tr.appendChild(ovEl('td', null, row.value));
-            t.appendChild(tr);
-          });
-          wrap.appendChild(t);
-          ts.appendChild(wrap);
+        specGroups.forEach(function(spec) {
+          if (spec.rows.length) {
+            var wrap = ovEl('div', 'ov-table-wrap');
+            var t = ovEl('table', 'ov-table');
+            if (spec.product) t.appendChild(ovEl('caption', null, (ovStyle() === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + spec.product));
+            spec.rows.forEach(function(row) {
+              var tr = ovEl('tr');
+              if (row.label) {
+                tr.appendChild(ovEl('td', 'k', row.label));
+                tr.appendChild(ovEl('td', null, row.value));
+              } else {
+                // Statement row — no label to pair it with, so it spans the table
+                var td = ovEl('td', null, row.value);
+                td.colSpan = 2;
+                tr.appendChild(td);
+              }
+              t.appendChild(tr);
+            });
+            wrap.appendChild(t);
+            ts.appendChild(wrap);
+          } else if (spec.product) {
+            ts.appendChild(ovEl('h3', 'ov-spec-hd', spec.product));
+          }
           if (spec.notes) ts.appendChild(ovEl('p', 'sec-note', spec.notes));
         });
         paneFor('products').appendChild(ts); // specs live inside the products tab
@@ -2001,7 +2042,21 @@ function ovReloadFresh() {
     // recognize collapses to 'viewer', so an unmapped ACL role can only lose
     // access, never gain it. Replaces the old binary admin/member split.
     var OV_NOTE_ROLE_KEY = 'ov_note_role';
+    // The signed-in account, recorded so per-user state on this device (Industry
+    // Guidance reading progress) can be kept separate. Two people sharing a
+    // browser must not inherit each other's progress.
+    var OV_NOTE_EMAIL_KEY = 'ov_note_email';
     var OV_DEFAULT_ROLE = 'viewer';
+    // Short stable digest of the account, used to namespace per-user localStorage
+    // keys. A digest rather than the raw address so the key list stays clean;
+    // the address itself already lives in OV_NOTE_EMAIL_KEY.
+    function ovAcctKey() {
+      var e = String(localStorage.getItem(OV_NOTE_EMAIL_KEY) || '').trim().toLowerCase();
+      if (!e) return 'anon';
+      var h = 5381;
+      for (var i = 0; i < e.length; i++) h = ((h << 5) + h + e.charCodeAt(i)) >>> 0;
+      return 'u' + h.toString(36);
+    }
     // The access matrix. Capabilities name UI surfaces, not backend permissions:
     //   fieldNote — 'Field note' button, the note box below the dossier, and the
     //               field-notes log behind the roster's settings cog
@@ -2558,6 +2613,7 @@ function ovReloadFresh() {
                   localStorage.setItem(OV_NOTE_SESSION_KEY, data.sessionToken);
                   var isAdmin = (data.permissions || []).indexOf('admin') >= 0;
                   localStorage.setItem(OV_NOTE_ROLE_KEY, ovNormalizeRole(data.role, isAdmin));
+                  localStorage.setItem(OV_NOTE_EMAIL_KEY, String(data.email || ''));
                   cb({ success: true, email: data.email || '' });
                 } else {
                   cb({ success: false, error: (data && data.error) || 'exchange_failed' });
@@ -2620,6 +2676,7 @@ function ovReloadFresh() {
           } else if (ovNoteSessionError(err)) {
             localStorage.removeItem(OV_NOTE_SESSION_KEY);
             localStorage.removeItem(OV_NOTE_ROLE_KEY);
+            localStorage.removeItem(OV_NOTE_EMAIL_KEY);
             renderSignin('Session expired — sign in again.');
           } else {
             say((fallbackMsg || 'Failed') + ': ' + err, false);
@@ -2634,6 +2691,7 @@ function ovReloadFresh() {
             ovNoteApi('whoami', {}, function(res) {
               if (!sessionGuard(res, 'Access check failed')) return;
               localStorage.setItem(OV_NOTE_ROLE_KEY, ovNormalizeRole(res.role, res.isAdmin));
+              localStorage.setItem(OV_NOTE_EMAIL_KEY, String(res.email || ''));
               say('');
               renderByRole();
             });
@@ -3133,6 +3191,7 @@ function ovReloadFresh() {
             again.textContent = 'Signing in...';
             localStorage.removeItem(OV_NOTE_SESSION_KEY);
             localStorage.removeItem(OV_NOTE_ROLE_KEY);
+            localStorage.removeItem(OV_NOTE_EMAIL_KEY);
             ovNoteSignIn(function(res) {
               if (res && res.success) { ovClear(body); body.appendChild(ovEl('p', 'ov-loading', 'Loading field notes…')); loadNotes(); return; }
               again.disabled = false;
@@ -3461,8 +3520,15 @@ function ovReloadFresh() {
       pairs.forEach(function(pair) {
         if (!pair[1]) return;
         var tr = ovEl('tr');
-        tr.appendChild(ovEl('td', 'k', pair[0]));
-        tr.appendChild(ovEl('td', 'fv', pair[1]));
+        if (pair[0]) {
+          tr.appendChild(ovEl('td', 'k', pair[0]));
+          tr.appendChild(ovEl('td', 'fv', pair[1]));
+        } else {
+          // Unlabelled statement (see ovSpecRow) — nothing to pair it with
+          var td = ovEl('td', 'fv', pair[1]);
+          td.colSpan = 2;
+          tr.appendChild(td);
+        }
         t.appendChild(tr);
       });
       return t;
@@ -3540,11 +3606,14 @@ function ovReloadFresh() {
         doc.appendChild(ulSt);
       }
 
-      if (p.technicalSpecs && p.technicalSpecs.length) {
+      var docSpecGroups = ovSpecGroups(p);
+      if (docSpecGroups.length) {
         dCh('specs');
-        p.technicalSpecs.forEach(function(spec) {
-          doc.appendChild(ovEl('h3', null, (sty === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + spec.product));
-          doc.appendChild(ovDocFacts((spec.specs || []).map(function(row) { return [row.label, row.value]; })));
+        docSpecGroups.forEach(function(spec) {
+          if (spec.product) doc.appendChild(ovEl('h3', null, (sty === 'bloomberg' ? 'Figure ' + (++figN) + ': ' : '') + spec.product));
+          if (spec.rows.length) {
+            doc.appendChild(ovDocFacts(spec.rows.map(function(row) { return [row.label, row.value]; })));
+          }
           if (spec.notes) doc.appendChild(ovEl('p', 'd-note', spec.notes));
         });
       }
@@ -3855,16 +3924,41 @@ function ovReloadFresh() {
 
     function gdP(html) { var p = document.createElement('p'); p.innerHTML = html; return p; }
 
+    // Reading progress is per account per device (v01.40w). Before this the key
+    // was shared, so signing a second account into the same browser inherited
+    // the first account's ticks. The account digest is part of the key, so each
+    // account keeps its own progress and a new one starts clean.
+    function gdProgressKey(docId) {
+      return GD_PROGRESS_KEY + '_' + ovAcctKey() + '_' + docId;
+    }
     function gdProgress(docId) {
-      try { return JSON.parse(localStorage.getItem(GD_PROGRESS_KEY + '_' + docId) || '{}'); }
+      try { return JSON.parse(localStorage.getItem(gdProgressKey(docId)) || '{}'); }
       catch (e) { return {}; }
     }
     function gdSetProgress(docId, secId, done) {
       try {
         var pr = gdProgress(docId); pr[secId] = !!done;
-        localStorage.setItem(GD_PROGRESS_KEY + '_' + docId, JSON.stringify(pr));
+        localStorage.setItem(gdProgressKey(docId), JSON.stringify(pr));
       } catch (e) { /* private mode — progress just not persisted */ }
     }
+    // One-time cleanup of the pre-v01.40w shared keys. They cannot be migrated
+    // safely — there is no record of which account earned them — so they are
+    // dropped rather than silently credited to whoever signs in first.
+    (function gdPurgeSharedProgress() {
+      try {
+        var stale = [];
+        for (var i = 0; i < localStorage.length; i++) {
+          var k = localStorage.key(i);
+          // Shared keys are GD_PROGRESS_KEY + '_' + docId; namespaced ones carry
+          // the 'u<digest>'/'anon' segment, so only the former match here.
+          if (k && k.indexOf(GD_PROGRESS_KEY + '_') === 0) {
+            var seg = k.slice(GD_PROGRESS_KEY.length + 1);
+            if (seg !== 'anon' && !/^u[0-9a-z]+_/.test(seg) && seg.indexOf('anon_') !== 0) stale.push(k);
+          }
+        }
+        for (var j = 0; j < stale.length; j++) localStorage.removeItem(stale[j]);
+      } catch (e) { /* private mode — nothing persisted to clean */ }
+    })();
 
     function gdRenderDoc(doc, shell) {
       gdGlossMap = {};
@@ -4211,6 +4305,7 @@ function ovReloadFresh() {
       function fail(msg) {
         localStorage.removeItem(OV_NOTE_SESSION_KEY);
         localStorage.removeItem(OV_NOTE_ROLE_KEY);
+        localStorage.removeItem(OV_NOTE_EMAIL_KEY);
         say(msg, true);
       }
       btn.addEventListener('click', function() {
@@ -4242,6 +4337,7 @@ function ovReloadFresh() {
         ovNoteApi('whoami', {}, function(res) {
           if (res && res.success) {
             localStorage.setItem(OV_NOTE_ROLE_KEY, ovNormalizeRole(res.role, res.isAdmin));
+            localStorage.setItem(OV_NOTE_EMAIL_KEY, String(res.email || ''));
             pass();
           } else {
             fail('Session expired — sign in again.');

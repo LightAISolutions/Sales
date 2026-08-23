@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 39/50`
+`Sections: 40/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.40w] — 2026-08-22 10:24:05 PM EST — v02.89r
+
+### Fixed
+- Technical Annex sections that appeared as headings with empty rows now show their content. Around two thirds of dossiers were affected; the same content was also missing from exported documents, which are fixed with them
+- A dossier with no technical detail to show now omits the Technical Annex entirely instead of printing an empty heading
+- Reading progress in Industry Guidance is now kept separately for each signed-in account, so signing a second account into the same browser starts it with a clean module instead of inheriting the first account's ticked sections. Progress recorded before this change is cleared once, since there is no record of which account earned it
 
 ## [v01.39w] — 2026-08-22 08:01:32 PM EST — v02.88r
 

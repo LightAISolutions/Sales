@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 106/100`
+`Sections: 107/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.89r] — 2026-08-22 10:24:05 PM EST
+
+> **Prompt:** "The only issue between the admin and contributor accounts is that when I logged into the contributor account after using the Industry Guidance module on the admin account, it saved the progress from the admin account instead of giving the contributor account a clean version of the module. Fix that.
+>
+> Also, several dossiers show nothing under the Technical Annex (see attached screenshot). Why is that? Make sure every dossiers' Technical Annex shows some information or doesn't show a Technical Annex at all." *(Screenshot: ABB dossier, Technical Annex showing three product headings over empty table rows.)*
+
+### Fixed
+- **Industry Guidance progress leaked between accounts on a shared browser (`Profiler.html` v01.40w)** — `gdProgress`/`gdSetProgress` keyed on `ov_guide_progress_<docId>`, which is device-scoped, so a second account signing into the same browser inherited the first account's ticked sections. Progress is now keyed `ov_guide_progress_<acct>_<docId>` via `gdProgressKey`, where `<acct>` is a djb2 digest of the signed-in address from the new `ov_note_email` key (`ovAcctKey`). The address is recorded at all three sign-in sites (token exchange + both `whoami` paths) and cleared at all three sign-out sites. Each account keeps its own progress on the device; a new account starts clean. A one-time `gdPurgeSharedProgress` drops the pre-v01.40w shared keys — they cannot be attributed to an account, so crediting them to whoever signs in first would reproduce the bug
+- **Technical Annex rendered blank for 41 of 62 dossiers (`Profiler.html` v01.40w)** — `technicalSpecs[].specs` entries exist in two authored shapes: 450 label/value objects and 476 plain strings (no dossier mixes them). Both renderers read `.label`/`.value` only, so string entries produced rows of two `undefined` cells in the app, and were dropped entirely by `ovDocFacts`'s falsy-value guard in exports — headings over empty tables in both. Added `ovSpecRow` (dual-shape normalizer; string becomes a statement row with an empty label) and `ovSpecGroups` (drops rows with no text, then groups with no rows and no notes), used by the app renderer, the export/preview builder and `ovDocFacts`, which now spans unlabelled rows across both columns. Affected: abb, aligned, applied-digital, bechtel, black-veatch, bloom-energy, burns-mcdonnell, constellation-energy, core-scientific, coreweave, crusoe, delta-electronics, dpr, eaton, equinix, eve-energy, ge-vernova, hitachi-energy, hitt, holder-construction, huawei-digital-power, iren, kiewit, lambda, liteon, mortenson, nebius, openai, oracle, primoris, qts, quanta-services, schneider-electric, siemens-energy, stack-infrastructure, switch, terawulf, turner-construction, vantage, vertiv, xai
+- **Empty specs sections are no longer emitted** — a profile whose spec groups all reduce to nothing renders no specs heading at all, in the app and in exports
+
+### Changed
+- **`scripts/verify-profiler-roles.py` widened to three checks** — the access matrix (unchanged, still screenshots per tier) plus `check_progress_isolation` (signs two accounts into one browser context and asserts progress namespaces differ, the second starts clean, and the first keeps its own) and `check_spec_sections` (walks all 62 dossiers via hash routing and asserts no blank spec row and no lone specs heading). The backend stub now reads a mutable role/email state so one context can switch accounts. Result: 62/62 dossiers clean, 0 blank rows, progress isolated
+- **`PROFILER-SCHEMA.md`** — `technicalSpecs[].specs` now documents both accepted entry shapes, names the labelled pair as preferred for new authoring while explicitly permitting a plain string where a spec is naturally one sentence, and records the drop rules for empty rows, groups and sections
+
+### Notes
+- The `<td colspan="2">` statement row and the matching `.ov-spec-hd` heading style are new; the labelled two-column form is untouched, verified against a labelled dossier (amazon) alongside a string-spec one (abb)
+- Renderer tolerance rather than data normalization, per the standing rule: archived snapshots keep whichever shape they were authored with, and converting 476 statement strings into labelled pairs would mean inventing 476 labels
+- The first run of the new progress check failed on a test bug, not a product bug — re-navigating to an identical URL is a same-document fragment move, so the page never re-ran `whoami` and the stale account was still in `localStorage`. The helper now reloads explicitly and waits for the account the stub is reporting
 
 ## [v02.88r] — 2026-08-22 08:01:32 PM EST
 
