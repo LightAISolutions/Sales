@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 38/50`
+`Sections: 39/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.39w] — 2026-08-22 08:01:32 PM EST — v02.88r
+
+### Changed
+- The app now tailors what it shows to each signed-in account's access level. Administrators continue to see every feature; other access levels see a reduced set, with anything they are not entitled to hidden rather than shown and refused
+- Access levels can be previewed from the address bar (add `?as=viewer` to the page URL) to check how the app looks to another level. Previewing can only ever show less than the account already has, never more
 
 ## [v01.38w] — 2026-08-22 07:05:31 PM EST — v02.86r
 

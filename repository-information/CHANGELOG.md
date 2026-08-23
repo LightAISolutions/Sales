@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 105/100`
+`Sections: 106/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.88r] — 2026-08-22 08:01:32 PM EST
+
+> **Prompt:** "Picking up from my recent \"AIDC market report photo backfill\" session, triage zhonhen notes and refresh the dossier.
+>
+> Also, make it so that my Profiler app follows the following Role + Access structure:
+>
+> * \"admin\" level users can see all features the app has.
+> * \"contributor\" level users cannot see \"Field Note\" (button and section below) and \"Versions\".
+> * \"analyst\" level users cannot see \"Field Note\", \"Versions\", nor \"Industry Guidance\".
+> * \"viewer\" level users cannot see \"Field Note\", \"Versions\", \"Industry Guidance\", nor \"Export dossier\"
+>
+> Do a check to verify that these Role + Access permissions are correct and show me screenshots taken from different Roles."
+
+### Added
+- **Role + Access matrix in the Profiler app (`Profiler.html` v01.39w)** — replaces the binary `admin`/`member` split with a four-tier capability model. `OV_ROLE_CAPS` maps each ACL tier to UI capabilities (`fieldNote`, `versions`, `guidance`, `export`, `style`); `ovCan(cap)` is the single gate consulted by all seven call sites (style switcher, Industry Guidance button, Versions button, Export button, Field note button, the note box below the dossier, and the field-notes log cog on the roster). `ovNormalizeRole(role, isAdmin)` collapses whatever the backend reports into one of the four known tiers — roles carrying the `admin` permission (`admin`, `developer`) normalize to `admin`, and any unmapped tier (`editor`, `medical_director`, a stale `member` value) collapses to `viewer`, so an unrecognized ACL role can only lose access, never gain it
+- **Preview-as-role (`?as=<tier>`)** — narrows the current session to another tier's surface for verification from a single account. `ovCan` intersects the real capabilities with the previewed ones, so the parameter can only ever subtract: a viewer requesting `?as=admin` still gets viewer
+- **`scripts/verify-profiler-roles.py`** — Playwright harness that serves `live-site-pages/` locally, stubs the Profiler GAS backend (`whoami` + `guidance` ops), signs in as each tier through the real `ovNormalizeRole` path (the tier is never written to localStorage directly), asserts the rendered surfaces against the matrix, and writes `.playwright-screenshots/profiler-role-<tier>.png`. Non-zero exit on any mismatch. All four tiers verified: admin 6/6 surfaces, contributor guidance+export, analyst export only, viewer none
+- **Zhonhen dossier v3** — the NVIDIA August 2026 execution paper naming the Panama Architecture as a TRU implementation of its data-hall DC power block (pp. 21–23) added to `recentDevelopments`, `ecosystemRole` and `strategyRead[1]`, with the paper cited in `sources[]`; a new `strategyRead` entry promoting the field note on neocloud targeting as labeled analysis; an interface note on the JV flagship spec (a 3.6 MW Panama-800VDC system is a sub-block element against NVIDIA's ~4.8 MW block, not a one-for-one substitute); collection-gap date advanced to 2026-08-22. v2 archived to `archive/zhonhen.profile.v2.json` and registered in `archive-index.json`
+
+### Changed
+- **Server-side guidance gate widened (`Profiler.gs` v01.18g)** — `handleGuidanceOp_`'s inline admin check replaced with `guidanceAllowed_(sess)` (`GUIDANCE_ROLES = ['contributor']` plus anything carrying the `admin` permission), returning `ROLE_DENIED` instead of `ADMIN_ONLY`. Unit-tested across nine role/permission shapes including case variance and missing fields. The note write pipeline (`submit`/`list`/`edit`/`delete`) stays admin-only in `handleNoteOp_` — unchanged
+- **Mid-session downgrade handling** — a server `ADMIN_ONLY` on a note op now stores the least-privileged tier and repaints the view (removing the note surface) instead of falling back to the suggest form, which the matrix no longer exposes
+- **Post-auth repaint** — the sign-in wall's `pass()` now re-runs `ovRoute()` so role-gated controls built during a render that raced `whoami` are rebuilt against the resolved tier
+
+### Notes
+- The `suggest` note op and the page's `renderSuggest()` form are both retained but no longer reachable through the UI: under the matrix no non-admin tier renders the note box at all. Left in place deliberately rather than removed — if a suggest-capable tier is wanted later, both halves already exist
+- Field-note triage this pass: the neocloud-targeting note was **promoted** into `strategyRead` as labeled analysis; the Schneider Electric note remains **logged-only** under the standing confidentiality rule. The Drive-hosted note log is not readable from a session, so both were triaged from the recorded session context rather than from the log, and neither developer confidence rating was available — the promoted entry is hedged at moderate confidence pending the developer's rating
 
 ## [v02.87r] — 2026-08-22 07:32:39 PM EST
 

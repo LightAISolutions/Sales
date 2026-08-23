@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.38w">
+  <meta name="build-version" content="v01.39w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1495,7 +1495,7 @@ function ovReloadFresh() {
     // ── Roster ──
     function ovRenderRoster() {
       document.title = 'Profiler — Ecosystem Company Dossiers';
-      ovNotesCogVisible(true);
+      ovNotesCogVisible(ovCan('fieldNote'));
       var main = ovMain(); ovClear(main);
       var companies = (ovRegistry.companies || []).slice().sort(function(a, b) { return a.name.localeCompare(b.name); });
 
@@ -1603,7 +1603,7 @@ function ovReloadFresh() {
     // Admin-only style switcher — 🖋 button (fixed above the notes cog, below
     // the sign-in wall) opens an overlay listing the five display styles.
     function ovStyleBtnShow() {
-      if (localStorage.getItem(OV_NOTE_ROLE_KEY) !== 'admin') return;
+      if (!ovCan('style')) return;
       var b = document.getElementById('ov-style-btn');
       if (!b) {
         b = ovEl('button', null, '🖋');
@@ -1713,27 +1713,32 @@ function ovReloadFresh() {
       var styBan = ovStyleBanner(p);
       if (styBan) head.appendChild(ovEl('p', 'ov-sty-banner', styBan));
       var figN = 0; // Bloomberg-style figure numbering (specs + financial tables)
-      var exportBtn = ovEl('button', 'ov-btn', 'Export dossier ⬇');
-      exportBtn.id = 'ov-export-btn'; exportBtn.type = 'button';
-      exportBtn.title = 'Preview the document, then export as Word or PDF';
-      exportBtn.addEventListener('click', function() { ovShowPreview(p); });
-      head.appendChild(exportBtn);
+      if (ovCan('export')) {
+        var exportBtn = ovEl('button', 'ov-btn', 'Export dossier ⬇');
+        exportBtn.id = 'ov-export-btn'; exportBtn.type = 'button';
+        exportBtn.title = 'Preview the document, then export as Word or PDF';
+        exportBtn.addEventListener('click', function() { ovShowPreview(p); });
+        head.appendChild(exportBtn);
+      }
       // Study guide button — appears only when this company's <slug>.study.json exists
       // (skipped on archived snapshots — the guide reflects the current dossier)
       if (!p._archived) {
-        // Field note button — always visible; jumps to the note box at the
-        // bottom of the dossier (which is otherwise easy to miss on long pages)
-        var nBtn = ovEl('button', 'ov-btn ghost', 'Field note 📝');
-        nBtn.id = 'ov-note-btn'; nBtn.type = 'button';
-        nBtn.title = 'Type a note or upload a Word/PDF for this company';
-        nBtn.addEventListener('click', function() {
-          var qn = document.getElementById('ov-qn');
-          if (!qn) return;
-          qn.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          var ta = qn.querySelector('textarea');
-          if (ta) setTimeout(function() { ta.focus(); }, 500);
-        });
-        head.appendChild(nBtn);
+        // Field note button — jumps to the note box at the bottom of the
+        // dossier (otherwise easy to miss on long pages). Gated with the box
+        // itself, so a tier without fieldNote sees neither.
+        if (ovCan('fieldNote')) {
+          var nBtn = ovEl('button', 'ov-btn ghost', 'Field note 📝');
+          nBtn.id = 'ov-note-btn'; nBtn.type = 'button';
+          nBtn.title = 'Type a note or upload a Word/PDF for this company';
+          nBtn.addEventListener('click', function() {
+            var qn = document.getElementById('ov-qn');
+            if (!qn) return;
+            qn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            var ta = qn.querySelector('textarea');
+            if (ta) setTimeout(function() { ta.focus(); }, 500);
+          });
+          head.appendChild(nBtn);
+        }
         ovFetchJson(p.slug + '.study.json')
           .then(function(sg) {
             if (document.getElementById('ov-study-btn')) return;
@@ -1749,7 +1754,7 @@ function ovReloadFresh() {
         // 2026-08-09: non-admin users see only the current dossier version).
         // UI-level gate: the archive JSONs live on public Pages like all app
         // data, so this controls the app experience, not raw-file access.
-        if (localStorage.getItem(OV_NOTE_ROLE_KEY) === 'admin')
+        if (ovCan('versions'))
         ovFetchJson('archive/archive-index.json')
           .then(function(idx) {
             var entries = idx && idx[p.slug];
@@ -1974,7 +1979,7 @@ function ovReloadFresh() {
       // Quick field note — typed here, submitted via the prefilled GitHub issue
       // form; the intake workflow commits it. Skipped on archived snapshots.
       // Stays below the tabbed region so the Field note button always reaches it.
-      if (!p._archived) main.appendChild(ovBuildQuickNote(p.slug));
+      if (!p._archived && ovCan('fieldNote')) main.appendChild(ovBuildQuickNote(p.slug));
     }
 
     // ── Quick field note (in-dossier input → prefilled GitHub issue form) ──
@@ -1989,9 +1994,53 @@ function ovReloadFresh() {
     // transport (the fleet's TOKEN_EXCHANGE_METHOD: 'fetch' pattern).
     var OV_GIS_CLIENT_ID = '830735769637-ak3c73b4lnea004i8dge8kg6n53o36vl.apps.googleusercontent.com';
     var OV_NOTE_SESSION_KEY = 'ov_note_session';
-    // 'admin' (full write pipeline) or 'member' (suggest-only). UI convenience
-    // only — the backend enforces the real boundary per-op.
+    // PROJECT: Role + Access control (developer directive, 2026-08-22).
+    // ov_note_role stores the user's ACL tier verbatim — 'admin', 'contributor',
+    // 'analyst' or 'viewer'. Roles carrying the backend's `admin` permission
+    // (admin, developer) normalize to 'admin'; any tier the app does not
+    // recognize collapses to 'viewer', so an unmapped ACL role can only lose
+    // access, never gain it. Replaces the old binary admin/member split.
     var OV_NOTE_ROLE_KEY = 'ov_note_role';
+    var OV_DEFAULT_ROLE = 'viewer';
+    // The access matrix. Capabilities name UI surfaces, not backend permissions:
+    //   fieldNote — 'Field note' button, the note box below the dossier, and the
+    //               field-notes log behind the roster's settings cog
+    //   versions  — 'Versions' button + the archived-version overlay
+    //   guidance  — 'Industry Guidance' masthead button + overlay
+    //   export    — 'Export dossier' button + the preview/Word/PDF pipeline
+    //   style     — dossier display-style switcher (admin tooling)
+    // Every backend op behind these surfaces is independently gated server-side
+    // in Profiler.gs; this map governs what the app shows, not what it may do.
+    var OV_ROLE_CAPS = {
+      admin:       ['fieldNote', 'versions', 'guidance', 'export', 'style'],
+      contributor: ['guidance', 'export'],
+      analyst:     ['export'],
+      viewer:      []
+    };
+    // Preview-as-role (?as=viewer) narrows the current session to another tier's
+    // surface so the matrix can be checked from one account. It only ever
+    // intersects with the real capabilities, so it cannot grant anything —
+    // a viewer requesting ?as=admin still gets viewer.
+    function ovPreviewRole() {
+      var m = /[?&]as=([a-zA-Z]+)/.exec(window.location.search || '');
+      return m ? String(m[1]).toLowerCase() : '';
+    }
+    function ovRole() {
+      var r = String(localStorage.getItem(OV_NOTE_ROLE_KEY) || '').toLowerCase();
+      return OV_ROLE_CAPS[r] ? r : OV_DEFAULT_ROLE;
+    }
+    // Collapse whatever the backend reports into one of the four known tiers.
+    function ovNormalizeRole(role, isAdmin) {
+      if (isAdmin) return 'admin';
+      var r = String(role || '').toLowerCase().trim();
+      return OV_ROLE_CAPS[r] ? r : OV_DEFAULT_ROLE;
+    }
+    function ovCan(cap) {
+      if ((OV_ROLE_CAPS[ovRole()] || []).indexOf(cap) < 0) return false;
+      var pv = ovPreviewRole();
+      if (pv && OV_ROLE_CAPS[pv]) return OV_ROLE_CAPS[pv].indexOf(cap) >= 0;
+      return true;
+    }
     var ovGisLoading = null;
 
     function ovNoteQs(o) {
@@ -2508,7 +2557,7 @@ function ovReloadFresh() {
                 if (data && data.success && data.sessionToken) {
                   localStorage.setItem(OV_NOTE_SESSION_KEY, data.sessionToken);
                   var isAdmin = (data.permissions || []).indexOf('admin') >= 0;
-                  localStorage.setItem(OV_NOTE_ROLE_KEY, isAdmin ? 'admin' : 'member');
+                  localStorage.setItem(OV_NOTE_ROLE_KEY, ovNormalizeRole(data.role, isAdmin));
                   cb({ success: true, email: data.email || '' });
                 } else {
                   cb({ success: false, error: (data && data.error) || 'exchange_failed' });
@@ -2562,10 +2611,12 @@ function ovReloadFresh() {
           if (res && res.success) return true;
           var err = (res && res.error) || fallbackMsg;
           if (err === 'ADMIN_ONLY') {
-            // Role downgraded (or stale role cache) — switch to suggest mode
-            localStorage.setItem(OV_NOTE_ROLE_KEY, 'member');
-            renderSuggest();
-            say('Your account can suggest notes but not save them directly.', false);
+            // Role downgraded (or a stale role cache) — the note surface is
+            // admin-only under the access matrix, so repaint the view without
+            // it rather than dropping back to the suggest form.
+            localStorage.setItem(OV_NOTE_ROLE_KEY, OV_DEFAULT_ROLE);
+            say('This account no longer has access to field notes.', false);
+            try { if (ovRegistry) ovRoute(); } catch (rErr) {}
           } else if (ovNoteSessionError(err)) {
             localStorage.removeItem(OV_NOTE_SESSION_KEY);
             localStorage.removeItem(OV_NOTE_ROLE_KEY);
@@ -2582,7 +2633,7 @@ function ovReloadFresh() {
             say('Checking access…');
             ovNoteApi('whoami', {}, function(res) {
               if (!sessionGuard(res, 'Access check failed')) return;
-              localStorage.setItem(OV_NOTE_ROLE_KEY, res.isAdmin ? 'admin' : 'member');
+              localStorage.setItem(OV_NOTE_ROLE_KEY, ovNormalizeRole(res.role, res.isAdmin));
               say('');
               renderByRole();
             });
@@ -3713,7 +3764,7 @@ function ovReloadFresh() {
     // session (called from the auth wall's pass()), so signed-out visitors
     // and non-admin users never see it in the DOM at all.
     function ovGuideBtnShow() {
-      if (localStorage.getItem(OV_NOTE_ROLE_KEY) !== 'admin') return;
+      if (!ovCan('guidance')) return;
       if (document.getElementById('ov-guide-btn')) return;
       var head = document.getElementById('ov-header');
       if (!head) return;
@@ -4150,7 +4201,13 @@ function ovReloadFresh() {
       wall.appendChild(box);
       document.body.appendChild(wall);
       function say(msg, bad) { st.textContent = msg || ''; st.style.color = bad ? '#e07a8b' : 'var(--ov-faint)'; }
-      function pass() { wall.style.display = 'none'; ovStyleBtnShow(); ovGuideBtnShow(); }
+      function pass() {
+        wall.style.display = 'none';
+        ovStyleBtnShow(); ovGuideBtnShow();
+        // The first render can run before whoami resolves, so the role-gated
+        // controls in it were decided without a tier. Repaint now that we have one.
+        try { if (ovRegistry) ovRoute(); } catch (rErr) {}
+      }
       function fail(msg) {
         localStorage.removeItem(OV_NOTE_SESSION_KEY);
         localStorage.removeItem(OV_NOTE_ROLE_KEY);
@@ -4184,7 +4241,7 @@ function ovReloadFresh() {
         say('Checking your session…');
         ovNoteApi('whoami', {}, function(res) {
           if (res && res.success) {
-            localStorage.setItem(OV_NOTE_ROLE_KEY, res.isAdmin ? 'admin' : 'member');
+            localStorage.setItem(OV_NOTE_ROLE_KEY, ovNormalizeRole(res.role, res.isAdmin));
             pass();
           } else {
             fail('Session expired — sign in again.');

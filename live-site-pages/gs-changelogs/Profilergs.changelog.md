@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 17/50`
+`Sections: 18/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.18g] — 2026-08-22 08:01:32 PM EST — v02.88r
+
+### Changed
+- Industry Guidance is now available to a second access level as well as administrators; the entitlement is still checked on the server for every request, so hiding a feature in the app is never the only thing standing in front of it
 
 ## [v01.17g] — 2026-08-22 07:05:31 PM EST — v02.86r
 

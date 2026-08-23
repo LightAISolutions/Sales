@@ -1,4 +1,4 @@
-var VERSION = "v01.17g";
+var VERSION = "v01.18g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -317,11 +317,28 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 // ══════════════
 // PROJECT START — Add your project-specific code here
 
+// PROJECT: ── Role + Access matrix (developer directive, 2026-08-22) ──────
+// The server half of the Profiler page's access matrix. The page hides UI per
+// tier (OV_ROLE_CAPS in Profiler.html); these checks are the boundary:
+//   admin / developer — every feature
+//   contributor       — Industry Guidance, dossier export
+//   analyst           — dossier export
+//   viewer            — dossiers only
+// Field notes (submit/list/edit/delete) stay admin-only and are gated in
+// handleNoteOp_. Dossier versions are static archive JSONs on Pages, so their
+// gate is the page's alone. Keep GUIDANCE_ROLES in sync with OV_ROLE_CAPS.
+var GUIDANCE_ROLES = ['contributor'];
+function guidanceAllowed_(sess) {
+  if ((sess && sess.permissions || []).indexOf('admin') >= 0) return true;
+  var gr = String((sess && sess.role) || '').toLowerCase().trim();
+  return GUIDANCE_ROLES.indexOf(gr) >= 0;
+}
+
 // PROJECT: ── Industry Guidance ───────────────────────────────────────────
-// Admin-gated document-analysis modules rendered by the Profiler page's
-// Industry Guidance overlay (v01.38w). Content is authored from
+// Document-analysis modules rendered by the Profiler page's Industry Guidance
+// overlay (v01.38w). Content is authored from
 // repository-information/industry-guidance/*.md (the source of truth) and
-// served only after a server-side admin check — the page's role-gated
+// served only after the server-side role check above — the page's role-gated
 // button is UI convenience; this boundary is the real one. The module JSON
 // never lands on public Pages.
 function handleGuidanceOp_(e) {
@@ -331,8 +348,9 @@ function handleGuidanceOp_(e) {
   if (!session || session.length < 32) return { success: false, error: 'SESSION_EXPIRED' };
   try {
     var sess = validateSessionForData(session, 'guidance_' + op);
-    var isAdmin = (sess.permissions || []).indexOf('admin') >= 0;
-    if (!isAdmin) return { success: false, error: 'ADMIN_ONLY', role: sess.role || 'viewer' };
+    if (!guidanceAllowed_(sess)) {
+      return { success: false, error: 'ROLE_DENIED', role: sess.role || RBAC_DEFAULT_ROLE };
+    }
     if (op === 'index') return { success: true, docs: guidanceIndex_() };
     if (op === 'doc') {
       var doc = guidanceDoc_(String(p.id || ''));
