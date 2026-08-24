@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 19/50`
+`Sections: 20/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.20g] — 2026-08-24 05:13:40 PM EST — v02.99r
+
+### Added
+- Two new training modules added to the study library, teaching the technology and the power-infrastructure fundamentals from the ground up, each with interactive study aids and self-tests
 
 ## [v01.19g] — 2026-08-24 01:51:27 PM EST — v02.96r
 

@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.99r] — 2026-08-24 05:13:40 PM EST
+
+> **Prompt:** "Output both reports as downloadable PDFs, then continue with Phase 5." *(Both Phase 4 playbook PDFs were delivered to the developer as downloadable attachments, then Phase 5 — the team training curriculum, the final phase of the v02.91r plan ("training materials to teach core technical, power infrastructure, policy … to newer teammates") — executed. Policy/procurement/bankability teaching already existed as three guidance modules; the two gaps (core technical, power infrastructure) were filled the same in-app way, and a curriculum document sequences all assets into a four-week onboarding program.)*
+
+### Added
+- **Two training modules in the Industry Guidance library** (PROJECT block of `googleAppsScripts/Profiler/Profiler.gs`, registered in `guidanceDocs_()` — library now 6 documents): `guidanceDocBessTech_()` — *BESS Technology Fundamentals for the Sales Team* (LFP in plain terms, the spec sheet decoded, the 280→1300Ah cell ladder as bars, cell-to-container integration, sodium-ion claim discipline, duration-class proscons, safety/certification vocabulary, flashcards + self-test + pointer-form claims ledger + 13-term glossary); `guidanceDocPowerInfra_()` — *Power Infrastructure & the AIDC Power Chain* (grid organization and MW-vs-MWh, the two market designs, the battery revenue stack, the grid-to-GPU chain with NOGRR 282/SB 6, the three BESS sockets, the 2026-28 gates timeline in three lanes, vocabulary callout, flashcards + self-test + ledger + 12-term glossary). Teaching syntheses only — no new external claims; ledgers point to the internal sources carrying the citations
+- **Two analysis markdowns** (source of truth, never deployed) in `repository-information/industry-guidance/`: `bess-technology-fundamentals-analysis.md`, `power-infrastructure-aidc-analysis.md` — provenance, teaching sequence, pointer-form claims ledgers, flagged teaching simplifications, scope notes
+- **The team training curriculum** — `repository-information/study-prep/hithium/hithium-team-training-curriculum.md` + `HITHIUM-TEAM-TRAINING-CURRICULUM.pdf` (5 pages): the four-week onboarding program (the machine → the grid and the buildout → the policy stack → the motion), each week with study assets, dossier rotations, exercises, and a pass/fail competency gate (G1-G4, consolidated with failure handling); before-day-one setup (contributor-tier grant, playbook timing, day-one standards); the post-week-4 cadence; and the trainer's notes (gate-don't-lecture, the week-3 shortcut trap, concede-then-structure as the house pattern)
+
+### Changed
+- **`Profiler.gs`** VERSION v01.19g → v01.20g; `Profilergs.version.txt` synced; generic public entry added to the GAS changelog (counter 19 → 20)
+- **`scripts/build-study-prep-pdf.mjs`** — curriculum registered in the DOCS registry (kick `Profiler Study Prep · Team Training`)
+- **README tree** — two analysis entries inserted into the `industry-guidance/` block and the curriculum md/PDF pair added under `study-prep/hithium/`, all in filename order
+
+### Notes
+- Verification before push: `node --check` on a `.js` copy of Profiler.gs; `scripts/check-gas-inner-scripts.js` (75 inner blocks clean); JSON/tooltip/quiz validation of both module objects (all `{{term}}` tooltips resolve, quiz indices in range); Playwright render of both modules via direct `gdRenderDoc()` invocation (screenshots inspected — tiles, nav, tooltips, ledger, glossary all correct); standard harness smoke test (Profiler PASS)
+- Guidance content ships inside `Profiler.gs` (repo + GAS project only, never on public Pages); access remains role-gated server-side; `Profiler.html` stays at v01.42w — the renderer needed no page changes
+- Both Phase 4 playbook PDFs were also delivered to the developer as chat attachments this interaction
+- **The v02.91r plan is complete** — Phases 1-5 all delivered (88-dossier base, guidance modules, Hithium v5 + relationship web, the two playbooks, the training curriculum)
 
 ## [v02.98r] — 2026-08-24 04:53:57 PM EST
 

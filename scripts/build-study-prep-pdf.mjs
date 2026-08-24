@@ -121,6 +121,23 @@ const DOCS = {
     runHead: 'Built from the Profiler dossier set · Prepared 24 August 2026',
     runFoot: 'Hithium — Team-Lead Playbook · Internal, sales strategy',
   },
+  'hithium-team-training-curriculum': {
+    src: 'repository-information/study-prep/hithium/hithium-team-training-curriculum.md',
+    out: 'repository-information/study-prep/hithium/HITHIUM-TEAM-TRAINING-CURRICULUM.pdf',
+    kick: 'Profiler Study Prep · Team Training',
+    sub: 'The four-week onboarding program: modules, dossier rotations, competency gates, and the trainer’s manual',
+    meta: [
+      '<b>Prepared</b> 24 August 2026 &nbsp;·&nbsp; <b>Sequences</b> the six in-app Industry Guidance modules · the two Phase 4 '
+        + 'playbooks · the 88-dossier base · the relationship web &nbsp;·&nbsp; <b>Companions</b> hithium-ic-playbook.md · '
+        + 'hithium-team-lead-playbook.md',
+      '<b>Audience</b> The team lead as trainer’s manual; the new teammate as syllabus '
+        + '&nbsp;·&nbsp; <b>Classification</b> Internal — team training',
+    ],
+    banner: '<b>Presentation style</b> — BloombergNEF Research Report, the canonical Profiler export skin. '
+      + 'Facts lead, labelled analysis follows, and the two never blur.',
+    runHead: 'Built from the Profiler asset base · Prepared 24 August 2026',
+    runFoot: 'Hithium — Team Training Curriculum · Internal, team training',
+  },
   'zhonhen-interview-brief': {
     src: 'repository-information/study-prep/zhonhen/zhonhen-interview-brief.md',
     out: 'repository-information/study-prep/zhonhen/ZHONHEN-INTERVIEW-BRIEF.pdf',

@@ -1,4 +1,4 @@
-var VERSION = "v01.19g";
+var VERSION = "v01.20g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -366,7 +366,8 @@ function handleGuidanceOp_(e) {
 }
 
 function guidanceDocs_() {
-  return [guidanceDocNvidia800_(), guidanceDocChinaPolicy_(), guidanceDocUtilityAidc_(), guidanceDocBankability_()];
+  return [guidanceDocNvidia800_(), guidanceDocChinaPolicy_(), guidanceDocUtilityAidc_(), guidanceDocBankability_(),
+          guidanceDocBessTech_(), guidanceDocPowerInfra_()];
 }
 
 function guidanceIndex_() {
@@ -3000,6 +3001,906 @@ function guidanceDocBankability_() {
   {
    "t": "MACR",
    "d": "The FEOC material-assistance cost ratio from the companion China-policy module - the 55% (2026) → 75% (2030+) non-PFE cost floor for storage ITC eligibility. Now a standard RFP documentation item."
+  }
+ ]
+};
+}
+// Content: BESS Technology Fundamentals for the Sales Team (teaching synthesis, 2026-08-24).
+// Derived from repository-information/industry-guidance/bess-technology-fundamentals-analysis.md;
+// no new external claims - specs are company-published figures via hithium.profile.json v5,
+// safety/certification claims via the bankability analysis. Phase 5 (team training) module 1 of 2.
+function guidanceDocBessTech_() {
+  return {
+ "id": "bess-tech-fundamentals-2026-08",
+ "title": "BESS Technology Fundamentals for the Sales Team",
+ "short": "The machine we sell - cells, containers, the spec sheet, sodium, and the safety vocabulary - taught from zero.",
+ "source": {
+  "doc": "Teaching synthesis - hithium.profile.json v5 + the bankability analysis + the Hithium lesson plan",
+  "publisher": "Internal analysis",
+  "date": "August 2026",
+  "pages": 4,
+  "series": "Industry Guidance - training module 1 of 2 (Phase 5)",
+  "repo": "repository-information/industry-guidance/bess-technology-fundamentals-analysis.md"
+ },
+ "updated": "2026-08-24",
+ "tiles": [
+  {
+   "k": "LFP",
+   "v": "the storage chemistry",
+   "sub": "cycle life and safety over energy density - the stationary tradeoff"
+  },
+  {
+   "k": "280 → 1300 Ah",
+   "v": "the cell ladder",
+   "sub": "larger cells, fewer parts - the company's founding bet"
+  },
+  {
+   "k": "≥10-13k cycles",
+   "v": "the second-decade sale",
+   "sub": "the warranty curve plus augmentation is where deals are won"
+  },
+  {
+   "k": "2h · 4h · 8h",
+   "v": "duration classes",
+   "sub": "8h-native LDES is the tier with no mass-produced like-for-like rival"
+  }
+ ],
+ "sections": [
+  {
+   "id": "what",
+   "title": "What this module is",
+   "read": "2 min",
+   "kind": "prose",
+   "ps": [
+    "The core-technical half of your onboarding: what a storage cell is, how cells become the containers we actually sell, what every line on a spec sheet means and why a buyer cares, where sodium-ion honestly stands, and the safety vocabulary you must not fumble in front of a technical audience. After this module you can hold a products conversation without a spec sheet in your hand; its companion (Power Infrastructure & the AIDC Power Chain) teaches the grid those products plug into.",
+    "Sourcing discipline: every product figure here is the company's own published specification, carried with its citations in the Hithium dossier (profileVersion 5). Safety and certification facts come from the bankability research module. Where a teaching simplification is used, it is flagged in place - never repeat a simplification as a fact in a customer room."
+   ]
+  },
+  {
+   "id": "cell",
+   "title": "The cell - LFP in plain terms",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "A battery cell stores energy chemically. Charging pushes lithium ions from one electrode into the other and holds them there; discharging lets them flow back, releasing energy as electric current. The two electrode materials define the chemistry: our cells are {{LFP}} (lithium iron phosphate); the EV world leans {{NMC}} (nickel manganese cobalt). That single choice drives almost everything a buyer experiences.",
+    "Why stationary storage chose LFP: it is thermally stable (harder to push into dangerous overheating), it cycles for longer, and it is cheaper per kWh - at the cost of energy density, which a parked container barely cares about. Hithium's founding premise sharpens this: its cells are purpose-built for storage rather than repurposed from EV lines - {{prismatic cell}} formats sized for containers, tuned for cycle count over weight.",
+    "Four words carry most spec conversations. {{cycle life}}: how many full charge-discharge round trips before capacity falls to the warranty floor (distinct from calendar life - degradation that happens with time regardless of use). {{DoD}}: how much of the stored energy each cycle actually uses. {{C-rate}}: how fast energy moves relative to capacity - a 0.25C system empties in four hours, a 1C system in one. {{RTE}}: energy out divided by energy in - every lost percentage point is paid for twice, once buying the charge and once in forgone discharge revenue.",
+    "**Field note:** buyers rarely ask how the chemistry works - they ask what happens in year 12. The chemistry answer is the setup; the warranty-curve-plus-augmentation answer is the sale."
+   ]
+  },
+  {
+   "id": "specsheet",
+   "title": "The spec sheet decoded",
+   "read": "4 min",
+   "kind": "table",
+   "cols": [
+    "Spec",
+    "Plain meaning",
+    "Why the buyer cares"
+   ],
+   "rows": [
+    [
+     "Cycle life",
+     "Full round trips before capacity hits the warranty floor",
+     "Sets project life and augmentation cadence - the Hithium ladder runs ≥10,000-13,000 by cell class"
+    ],
+    [
+     "Energy density (Wh/kg · Wh/L)",
+     "Energy per unit weight / volume",
+     "In stationary it is footprint economics, not vehicle range - never lead with Wh/kg to a developer; lead with kWh per square meter of site"
+    ],
+    [
+     "Round-trip efficiency",
+     "Energy out ÷ energy in",
+     "Every lost percent is bought twice; current systems run ≥95% DC-side"
+    ],
+    [
+     "Degradation / SoH curve",
+     "Capacity remaining, year by year",
+     "The pro forma is built on it - independent engineers test the revenue model against the warranty envelope"
+    ],
+    [
+     "Duration class",
+     "Hours of discharge at rated power",
+     "Maps to the revenue duty (see the power-infrastructure module) - 2h/4h/8h are different products, not one product throttled"
+    ],
+    [
+     "Operating window",
+     "Temperatures without derating",
+     "Siting reach - the hardened Desert Eagle variant is rated -30°C to 60°C; sodium reaches -40°C"
+    ],
+    [
+     "Footprint density",
+     "kWh per square meter of site",
+     "Land is a cost line - the 10-ft modular Flexsso is cited at ~423 kWh/m²"
+    ],
+    [
+     "Augmentation path",
+     "Adding modules/containers later to restore capacity",
+     "Space, power, and controls headroom must exist on day one - it cannot be retrofitted into a full site"
+    ]
+   ]
+  },
+  {
+   "id": "ladder",
+   "title": "The Hithium cell ladder",
+   "read": "2 min",
+   "kind": "bars",
+   "unit": "Ah per cell",
+   "items": [
+    {
+     "label": "280Ah",
+     "v": 280,
+     "sub": "≥7,000 cycles - the original catalog cell"
+    },
+    {
+     "label": "314Ah",
+     "v": 314,
+     "sub": "≥13,000 cycles - the volume workhorse inside ∞Block"
+    },
+    {
+     "label": "587Ah",
+     "v": 587,
+     "sub": "≥11,000 cycles - mass production and first deliveries since 2025"
+    },
+    {
+     "label": "650Ah",
+     "v": 650,
+     "sub": "SNEC 2026 debut - deliveries expected 2027, detailed specs unpublished"
+    },
+    {
+     "label": "1175Ah",
+     "v": 1175,
+     "sub": "the first mass-produced kAh-class cell (Chongqing, Jun 2025)"
+    },
+    {
+     "label": "1300Ah",
+     "v": 1300,
+     "sub": "8h LDES-native - mass delivery targeted Q4 2026"
+    }
+   ]
+  },
+  {
+   "id": "stack",
+   "title": "From cell to container - the integration stack",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "The chain: cell → module → liquid-cooled DC block (the container) → {{PCS}} → AC block → site. We sell DC blocks; the {{BMS}} rides inside them; the PCS that converts DC to grid AC is usually another vendor's scope. Keeping the layers straight tells you what our spec sheet does and does not answer for.",
+    "The container catalog, by duty: ∞Block 4.180 and 5.016 MWh in a standard 20-ft frame (314Ah cells - the Jupiter fleet's building block); ∞Power 6.25 MWh in 2h (587Ah) and 4h (1175Ah) builds; the ∞Power 6.9 MWh 8-hour LDES unit (1300Ah cells - 55.2 MWh per 8-unit block, mass delivery from Q4 2026); the transport-optimized 10-ft Flexsso (3.125/6.25 MWh, under 26 t per unit, first deliveries Q2 2026); and the hardened Desert Eagle variant for extreme sites.",
+    "The large-cell logic, and its honest tradeoff: fewer cells per container means fewer welds, fewer connections, fewer failure points, and lower integration cost - a directional argument, not a costed bill-of-materials claim. The tradeoffs are thermal management and propagation behavior, which is exactly why the fire-test file (next sections) must keep pace with the ladder: a bigger cell without matching test data is a harder bankability story, not an easier one.",
+    "**Field note:** the owner-furnished norm - project owners pick the cell brand; EPCs install what the owner supplies. If you find yourself explaining this stack to an EPC, you are collecting approved-vendor intel, not closing a sale."
+   ]
+  },
+  {
+   "id": "sodium",
+   "title": "Sodium-ion, honestly",
+   "read": "3 min",
+   "kind": "prose",
+   "ps": [
+    "Same shuttle idea, different ion: sodium instead of lithium, an NFPP (sodium iron pyrophosphate) cathode with a hard-carbon anode. The shipping product is the ∞Cell N162Ah - 2.82 V nominal, ≥95.2 Wh/kg, a ≥20,000-cycle class rating, and a -40°C to 60°C operating window - paired with the ∞Power N 2.28 MWh one-hour containerized system.",
+    "What sodium is for: power duty (short, hard, frequent cycling), brutal cold, and extreme cycle counts. What it is not for: energy duty - at roughly ≥95 Wh/kg against LFP's ≥173 Wh/kg (314Ah class), a sodium container carries far less energy per footprint, so it is the wrong tool for 4h+ shifting today. Sell it as the specialist, not the successor.",
+    "The claim discipline (this is enforced, not stylistic): the sodium SKU inside the AIDC product line has **unconfirmed mass production** - the approved line is *\"we ship sodium today in one utility SKU; here is the roadmap, and here is what we will commit to in writing.\"* Context that makes this matter: a domestic sodium supplier (Peak Energy) is being groomed inside our anchor US account precisely on the sodium story - overclaiming sodium is how that account is lost. The IC playbook's Jupiter-defense section owns the account motion."
+   ]
+  },
+  {
+   "id": "durations",
+   "title": "Duration classes - which cell serves which duty",
+   "read": "4 min",
+   "kind": "proscons",
+   "intro": "Four duration classes, four different products. The duty descriptions are functional teaching shorthand - actual compensation varies by market (the power-infrastructure module).",
+   "cards": [
+    {
+     "t": "1h - power duty",
+     "meta": "served by sodium (∞Power N 2.28 MWh)",
+     "adv": [
+      "Millisecond-to-minutes smoothing and frequency work",
+      "Cold-climate reach (-40°C) and extreme cycle tolerance"
+     ],
+     "dis": [
+      "Weakest economics per MWh of energy delivered",
+      "A specialist niche today, not volume"
+     ]
+    },
+    {
+     "t": "2h - ancillary + peaks",
+     "meta": "served by the 587Ah (∞Power 6.25 MWh 2h)",
+     "adv": [
+      "The classic ERCOT merchant duty - ancillary services plus peak arbitrage",
+      "Fast payback where price volatility is high"
+     ],
+     "dis": [
+      "The most crowded field - commodity pricing pressure",
+      "Ancillary markets saturate as fleets grow"
+     ]
+    },
+    {
+     "t": "4h - the capacity workhorse",
+     "meta": "served by the 1175Ah (∞Power 6.25 MWh 4h)",
+     "adv": [
+      "Where most US RFP volume sits - the capacity-market standard",
+      "The volume SKU every serious buyer benchmarks"
+     ],
+     "dis": [
+      "Every OEM's core product - differentiation shifts to bankability, warranty, and augmentation terms",
+      "ITC-driven 4h demand is exactly where the policy fence bites hardest"
+     ]
+    },
+    {
+     "t": "8h - LDES-native",
+     "meta": "served by the 1300Ah (∞Power 6.9 MWh)",
+     "adv": [
+      "Native 8-hour design rather than two 4h systems stacked - no mass-produced like-for-like above 1,000 Ah",
+      "Policy tailwinds in duration-mandating markets; policy risk is lowest where technical substitutability is lowest"
+     ],
+     "dis": [
+      "Mass delivery starts Q4 2026 - the operating record is ahead of us; sell the design, commit conservatively",
+      "Long-duration revenue models are less standardized - expect heavier IE scrutiny"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "safety",
+   "title": "Safety and the certification words",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "{{thermal runaway}} is the failure that matters: a cell overheats past the point of self-acceleration and its neighbors follow - propagation. Everything in modern container design (liquid cooling, cell spacing, venting, gas detection, suppression) exists to prevent the first event and contain it if it happens. LFP's thermal stability is the chemistry-level head start.",
+    "The vocabulary, precisely: **UL 1973** covers cells, modules, and racks (a certification listing); **UL 9540** covers the complete integrated system (the umbrella listing AHJs require); **UL 9540A is a test method with no pass/fail** - it produces propagation data at cell, module, and unit level. Never say \"9540A certified\" - say *\"tested at cell, module, and unit level; reports available.\"* **NFPA 855 (2026 edition)** is the installation standard that makes Large-Scale Fire Testing - one unit fully alight, suppression off, no propagation - effectively mandatory as states adopt it.",
+    "The track record, framed honestly: the Moss Landing fire (Jan 2025) was NMC chemistry in a legacy *indoor* facility with suppression deactivated - a different device class from a modern outdoor LFP container, and the insurance market priced it exactly that way (\"not a market-moving event\"). Industry failure rates per deployed GWh fell roughly 97-99% from 2018 to 2025 per EPRI's database - which is media-derived, a caveat you state whenever you use the number.",
+    "**Field note:** this section is vocabulary only. The full approval gauntlet - grid interconnection standards, IE diligence, warranty structures, the RFP checklist - lives in the bankability module, which is week-3 material in the training sequence."
+   ]
+  },
+  {
+   "id": "cards",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Why LFP for storage when EVs use NMC?",
+     "a": "LFP trades energy density for thermal stability, cycle life, and cost - the exact trade a parked container wants. NMC's density advantage buys vehicle range, which stationary storage doesn't need."
+    },
+    {
+     "q": "A developer asks about energy density. What do you answer with instead?",
+     "a": "Footprint economics - kWh per square meter of site (e.g. Flexsso ~423 kWh/m²). Wh/kg is a vehicle metric; land cost is the stationary equivalent."
+    },
+    {
+     "q": "The 314Ah cell's headline numbers?",
+     "a": "≥13,000 cycles, ≥173.2 Wh/kg - the volume workhorse inside ∞Block 4.180/5.016 MWh containers, and the cell in the delivered Jupiter fleet."
+    },
+    {
+     "q": "The large-cell argument - and its tradeoff?",
+     "a": "Fewer cells means fewer welds, connections, and failure points, and lower integration cost (directional claim). The tradeoff: thermal management and propagation test data must keep pace - a bigger cell without matching 9540A/LSFT data is a harder bankability story."
+    },
+    {
+     "q": "Why does a 1-point RTE difference matter commercially?",
+     "a": "Energy lost in the round trip is paid for twice - once purchased at charge, once as forgone discharge revenue. Over thousands of cycles it compounds into real money; current systems run ≥95% DC-side."
+    },
+    {
+     "q": "What is sodium-ion for - and not for?",
+     "a": "For: power duty (1h), extreme cold (-40°C), extreme cycle counts (≥20,000 class). Not for: energy duty - ~95 Wh/kg vs LFP's ~173, so far less energy per footprint. The specialist, not the successor."
+    },
+    {
+     "q": "The approved sodium sales line?",
+     "a": "\"We ship sodium today in one utility SKU; here is the roadmap, and here is what we will commit to in writing.\" The AIDC sodium SKU's mass production is unconfirmed - overclaiming sodium hands ammunition to a domestic sodium rival inside our anchor account."
+    },
+    {
+     "q": "What makes the 8h product different from two 4h systems?",
+     "a": "It is LDES-native on the 1300Ah cell (6.9 MWh per container, 55.2 MWh per 8-unit block) rather than doubled-up 4h hardware - and no rival mass-produces a like-for-like cell above 1,000 Ah. Caveat honestly: mass delivery starts Q4 2026."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "title": "Self-test",
+   "read": "5 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A buyer asks: \"What happens to this system in year 12?\" The strongest answer leads with:",
+     "c": [
+      "LFP chemistry fundamentals",
+      "The warranty SoH curve plus the augmentation plan designed in on day one",
+      "Our shipment rankings",
+      "A price discount for the out-years"
+     ],
+     "a": 1,
+     "why": "Year-12 questions are degradation-economics questions. The warranty envelope and augmentation headroom are the substantive answer; chemistry is only the setup."
+    },
+    {
+     "q": "Which cell serves the ∞Power 6.25 MWh 4h container?",
+     "c": [
+      "314Ah",
+      "587Ah",
+      "1175Ah",
+      "1300Ah"
+     ],
+     "a": 2,
+     "why": "The 4h build runs the 1175Ah kAh-class cell; the 2h build runs the 587Ah. The 314Ah serves ∞Block; the 1300Ah serves the 8h LDES unit."
+    },
+    {
+     "q": "A prospect asks: \"Is your container UL 9540A certified?\" You say:",
+     "c": [
+      "Yes, fully certified",
+      "9540A is a test method with no pass/fail - we provide reports at cell, module, and unit level; the certification listings are UL 1973 and UL 9540",
+      "No, but we're working on it",
+      "That standard doesn't apply to LFP"
+     ],
+     "a": 1,
+     "why": "Saying \"9540A certified\" marks you as imprecise in front of any technical audience. The distinction between the test method and the listings is a credibility signal."
+    },
+    {
+     "q": "Moss Landing comes up in a safety objection. The accurate frame is:",
+     "c": [
+      "An overblown media story",
+      "Proof all batteries are dangerous",
+      "NMC chemistry in a legacy indoor design with suppression deactivated - a different device class from modern outdoor LFP containers, and insurers priced it that way",
+      "Irrelevant because it was a competitor"
+     ],
+     "a": 2,
+     "why": "Concede the true part, then answer with structure: device-class distinction, the insurance market's read, the improving EPRI failure data (with its media-derived caveat), then your test reports."
+    },
+    {
+     "q": "A colleague's deck claims the AIDC sodium system is in mass production. You:",
+     "c": [
+      "Let it ship - it's roughly true",
+      "Correct it - sodium mass production is confirmed only for the utility N162Ah SKU; the AIDC sodium SKU is unconfirmed, and the approved line commits only to what we ship today plus a written roadmap",
+      "Add a footnote",
+      "Escalate to legal"
+     ],
+     "a": 1,
+     "why": "Claim discipline is enforced. The overclaim is exactly the opening a domestic sodium rival needs inside our anchor account."
+    }
+   ]
+  },
+  {
+   "id": "ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "Pointer form - this module introduces no new external claims. Each row names the internal source that carries the original citations.",
+   "rows": [
+    [
+     "All cell and container specs, dates, and product claims (company-published figures)",
+     "hithium.profile.json v5 - productsAndServices + technicalSpecs (51 sources)"
+    ],
+    [
+     "Shipment rankings; Mesquite and Navarre plants",
+     "hithium.profile.json v5 - ecosystemRole (InfoLink/SMM/ICC per dossier)"
+    ],
+    [
+     "9540A / NFPA 855 / LSFT mechanics; certification stack",
+     "bess-bankability-certification-analysis.md - certification table"
+    ],
+    [
+     "Moss Landing framing; insurer read; EPRI failure-rate decline (with caveat)",
+     "bess-bankability-certification-analysis.md - claims ledger"
+    ],
+    [
+     "AIDC sodium SKU mass production unconfirmed; zero named AIDC customers",
+     "hithium.profile.json v5 - strategyRead (high-confidence read)"
+    ],
+    [
+     "Peak Energy sodium wedge inside the anchor account",
+     "hithium.profile.json v5 + hithium-relationship-web.md §3"
+    ]
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "LFP",
+   "d": "Lithium iron phosphate - the storage chemistry: thermally stable, long-cycling, cheaper per kWh, lower energy density than NMC. All Hithium lithium cells are LFP."
+  },
+  {
+   "t": "NMC",
+   "d": "Nickel manganese cobalt - the energy-dense chemistry EVs favor. Higher fire severity when it fails (Moss Landing was NMC); largely displaced by LFP in new US grid storage."
+  },
+  {
+   "t": "prismatic cell",
+   "d": "A flat rectangular cell format that packs efficiently into modules and containers - the stationary-storage norm, vs the cylindrical cells of some EV lines."
+  },
+  {
+   "t": "cycle life",
+   "d": "Full charge-discharge round trips before capacity falls to the warranty floor. Distinct from calendar life (time-driven degradation regardless of use)."
+  },
+  {
+   "t": "DoD",
+   "d": "Depth of discharge - how much of the stored energy each cycle uses. Cycle-life ratings assume a stated DoD; comparing ratings across different DoD assumptions is apples to oranges."
+  },
+  {
+   "t": "C-rate",
+   "d": "Charge/discharge speed relative to capacity: 1C empties in one hour, 0.25C in four. Duration class and C-rate are two views of the same design choice."
+  },
+  {
+   "t": "RTE",
+   "d": "Round-trip efficiency - energy out divided by energy in. Losses are paid twice (bought at charge, lost at discharge); current systems run ≥95% DC-side."
+  },
+  {
+   "t": "SoH",
+   "d": "State of health - remaining capacity as a share of nameplate. The warranty carries an annual SoH table; the pro forma is financed against it."
+  },
+  {
+   "t": "augmentation",
+   "d": "Planned later addition of modules/containers to restore degraded capacity. Requires day-one space, power, and controls headroom - and is a structural incumbent advantage at renewal time."
+  },
+  {
+   "t": "LDES",
+   "d": "Long-duration energy storage - 8+ hour discharge. The 1300Ah cell and ∞Power 6.9 MWh unit are 8h-native rather than doubled-up 4h hardware."
+  },
+  {
+   "t": "BMS",
+   "d": "Battery management system - the electronics inside the container watching every cell's voltage and temperature. In Texas conversations, the no-remote-access BMS architecture is the lead, not the concession."
+  },
+  {
+   "t": "PCS",
+   "d": "Power conversion system - the inverter layer converting the container's DC to grid AC. Usually another vendor's scope; certification of the PCS (UL 1741 SB / IEEE 2800) is part of the project's file, not the cell maker's."
+  },
+  {
+   "t": "thermal runaway",
+   "d": "Self-accelerating overheating of a cell; propagation is its spread to neighbors. The failure mode all container design and all fire testing is organized around."
+  }
+ ]
+};
+}
+// Content: Power Infrastructure & the AIDC Power Chain (teaching synthesis, 2026-08-24).
+// Derived from repository-information/industry-guidance/power-infrastructure-aidc-analysis.md;
+// no new external claims - grid/market facts via the utility-AIDC and bankability analyses,
+// chain/socket structure via the relationship web and the ON.energy dossier. Phase 5 module 2 of 2.
+function guidanceDocPowerInfra_() {
+  return {
+ "id": "power-infra-aidc-2026-08",
+ "title": "Power Infrastructure & the AIDC Power Chain",
+ "short": "The grid we sell into, what a battery earns, and the data-center power chain - with the three BESS sockets.",
+ "source": {
+  "doc": "Teaching synthesis - the utility-AIDC, bankability, China-policy and NVIDIA analyses + the relationship web + the ON.energy dossier",
+  "publisher": "Internal analysis",
+  "date": "August 2026",
+  "pages": 4,
+  "series": "Industry Guidance - training module 2 of 2 (Phase 5)",
+  "repo": "repository-information/industry-guidance/power-infrastructure-aidc-analysis.md"
+ },
+ "updated": "2026-08-24",
+ "tiles": [
+  {
+   "k": "MW vs MWh",
+   "v": "power vs energy",
+   "sub": "rate vs amount - the first confusion to kill in week one"
+  },
+  {
+   "k": "~474 GW asked",
+   "v": "queue ≠ demand",
+   "sub": "AEP Ohio's tariff filter: a 30 GW pipeline became ~5.6 GW of signed load"
+  },
+  {
+   "k": "85% minimum take",
+   "v": "the tariff norm",
+   "sub": "how utilities convert AI hype into bankable, financeable load"
+  },
+  {
+   "k": "3 sockets",
+   "v": "where BESS earns",
+   "sub": "grid-side (ours) · campus BtM (contested) · in-rack (not our layer)"
+  }
+ ],
+ "sections": [
+  {
+   "id": "what",
+   "title": "What this module is",
+   "read": "2 min",
+   "kind": "prose",
+   "ps": [
+    "The infrastructure half of your onboarding: how the US grid is organized and paid, the two market designs a BESS is sold into, what a grid battery actually earns money doing, the power chain between a utility substation and a GPU rack, and the three sockets where batteries plug into the AI buildout. Its companion (BESS Technology Fundamentals) teaches the machine; this module teaches the world the machine is sold into.",
+    "Sourcing discipline: this module introduces no new external claims. Market figures come from the utility-procurement research module, grid rules from the bankability research, chain structure from the relationship-web analysis and the ON.energy dossier - each carries the original citations. Teaching simplifications are flagged in place."
+   ]
+  },
+  {
+   "id": "grid",
+   "title": "How the grid is organized - and paid",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "Three stages: generation makes power, transmission moves it at high voltage across distances, distribution steps it down and delivers it. A grid-scale BESS interconnects like a small power plant - {{FOM}}, in front of the customer's meter, paid by markets or contracts. Equipment on a customer's own site - {{BTM}} - is a different business with different buyers, which is why the distinction opens nearly every qualification call.",
+    "MW versus MWh, the week-one confusion: **MW is a rate** (how fast energy flows - the pipe's width); **MWh is an amount** (how much is stored - the tank's size). Duration is simply MWh ÷ MW: a 100 MW / 400 MWh battery is a \"4-hour\" system. Misusing these in a technical room is the fastest credibility loss available to a new seller.",
+    "Interconnection queues have detached from reality: ERCOT carries ~474 GW of large-load requests (about five times its all-time peak); AEP has fielded ~190 GW of inquiries against a 37 GW system. The filter that separates real from vapor is the **large-load tariff**: AEP Ohio's terms (12-year contracts, ramp schedule, then {{minimum take}} at 85%, exit fees, collateral) collapsed a 30 GW pipeline to ~5.6 GW of signed, financially committed load. That is the single number pair to remember when someone quotes a queue.",
+    "**Field note:** certified and contracted MW are purchase orders on a 12-36-month fuse; queue GW are press releases. Track IRP dockets and certification orders, not headlines - the team-lead playbook builds the forecast rules on exactly this."
+   ]
+  },
+  {
+   "id": "markets",
+   "title": "The two market designs",
+   "read": "4 min",
+   "kind": "table",
+   "cols": [
+    "",
+    "ERCOT merchant",
+    "Regulated states"
+   ],
+   "rows": [
+    [
+     "Who buys the BESS",
+     "The developer/IPP/fund - procurement teams buying on economics",
+     "The utility via IRP → RFP: either self-build (utility + EPC approved-vendor list signs the OEM) or a PPA whose bidding developer picks the cell brand"
+    ],
+    [
+     "What wins the deal",
+     "Cost, availability, speed, augmentation terms",
+     "Bankability - the certification file, IE-defensible warranty, prudence-proof supply chain"
+    ],
+    [
+     "Contract flavor",
+     "Merchant revenue, tolls, hedges - tax-indifferent capital common",
+     "Rate-based recovery; the 85% minimum-take world; PUC oversight"
+    ],
+    [
+     "Our fit",
+     "The core lane - ~16.3 GW ERCOT fleet (Jul 2026), buyers without ITC exposure",
+     "Effectively fenced for Chinese cells (Georgia → Tesla; Dominion → EVLO) - a relationship long game, not a quota lane"
+    ],
+    [
+     "The watch item",
+     "The Texas queue audit - Batch Zero target Dec 10, 2026",
+     "RFP calendars: Georgia's 500 MW ESS RFP, Entergy Louisiana's first BESS RFP, PSO/SWEPCO 4.5 GW all-source, Dominion's annual cycle"
+    ]
+   ]
+  },
+  {
+   "id": "revenue",
+   "title": "What a grid battery earns",
+   "read": "3 min",
+   "kind": "prose",
+   "ps": [
+    "Five jobs, in plain terms. **Arbitrage**: buy energy cheap, sell it expensive - the spread is the revenue. **{{ancillary services}}**: get paid to stand ready to stabilize frequency at seconds' notice - a power job, not an energy job. **Capacity**: get paid for existing and being available at the system peak. **T&D deferral**: a well-placed battery postpones a wires upgrade, and the utility pays for the postponement. **Renewable firming**: soak up midday solar, deliver it into the evening.",
+    "Duration maps to duty: 1h systems live on power jobs, 2h on ancillary-plus-peaks, 4h is the capacity workhorse where most US RFP volume sits, 8h does bulk shifting. *(Teaching simplification, flagged: this is a functional taxonomy - actual compensation rules differ by market and change; the revenue stack is modeled per project, never quoted from this table.)*",
+    "Augmentation extends the earning life - and it is bought in year one: the space, power, and controls headroom either exists on day one or the second decade's economics don't. This is the same augmentation story as the technology module, seen from the revenue side - and it is a structural incumbent advantage at every renewal conversation."
+   ]
+  },
+  {
+   "id": "chain",
+   "title": "The AIDC power chain - grid to GPU",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "The walk from fence to silicon: utility interconnection → campus substation → medium-voltage distribution → transformers and switchgear → the {{UPS}} layer → power distribution units → racks. *(Teaching simplification, flagged: real campuses run redundancy topologies - N+1, catcher/reserve buses - compressed here into \"the UPS layer.\")* Our containers live at or outside the fence line; nothing we ship today sits past the substation.",
+    "The buffering problem that created a product category: GPU fleets swing between roughly 30% and 100% of load in milliseconds to seconds - a load profile the grid has never served at this scale. The rules answered: {{NOGRR 282}} requires new ≥75 MW electronic loads in ERCOT to ride through grid disturbances (grandfathered if energized or studied by Nov 14, 2025), effectively mandating a buffer - UPS, BESS, or on-site generation - between grid and GPUs. Texas's SB 6 adds curtailment protocols and a co-location kill switch for big loads: **storage converts curtailable interconnection into firm compute**, which is the cleanest sentence in the BtM pitch.",
+    "**Field note:** the NVIDIA 800 VDC module teaches the inside-the-rack half of this chain - it is advanced material, not week-one material. A seller needs the fence-line view first: know where our product stops, and whose problem each layer is."
+   ]
+  },
+  {
+   "id": "sockets",
+   "title": "The three BESS sockets in the AI buildout",
+   "read": "4 min",
+   "kind": "proscons",
+   "intro": "Where batteries plug into the AI story - and our honest position in each. The orienting rule across all three: sell to the grid, not to the data centre.",
+   "cards": [
+    {
+     "t": "Grid-side FOM storage",
+     "meta": "our lane",
+     "adv": [
+      "Judged on duration, cycle life, and price - exactly our criteria",
+      "AI load growth drives utility and IPP storage procurement regardless of what happens inside any campus",
+      "The Jupiter pattern lives here: merchant and safe-harbored owners buying on economics"
+     ],
+     "dis": [
+      "Not \"AI-branded\" revenue - it is ordinary FOM storage (which is precisely the point)",
+      "The regulated half of this lane is fenced by bankability-plus-FEOC (see the policy module)"
+     ]
+    },
+    {
+     "t": "Campus / BtM buffering",
+     "meta": "contested",
+     "adv": [
+      "New, code-driven demand (NOGRR 282 ride-through, SB 6 curtailment) at every large campus",
+      "Decided in quarters by developers and power partners, not in rate-case years"
+     ],
+     "dis": [
+      "ON.energy defines the US category: a medium-voltage AI UPS, ride-through-certified, FEOC-clean by design, anchored by a 5 GW Crusoe deployment",
+      "FEOC optics dominate hyperscale specs - realistic wins are non-US campuses and operators without ITC/FEOC exposure; qualify hard before spending pipeline time"
+     ]
+    },
+    {
+     "t": "Inside the data hall",
+     "meta": "not our layer",
+     "adv": [
+      "Worth tracking: enormous category spend, and its specs cascade outward to the campus level",
+      "The honest no is itself credibility - knowing your layer is a technical-audience signal"
+     ],
+     "dis": [
+      "No rack form factor, no UPS or BBU product in the line today",
+      "The most China-averse buyer class in the market, served by entrenched incumbents (Vertiv, Eaton, Schneider)"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calendar",
+   "title": "The 2026-28 gates",
+   "read": "4 min",
+   "kind": "timeline",
+   "intro": "The dated events a seller navigates, in three lanes. Positions are approximate on the axis; dates in the labels are exact. The team-lead playbook carries the per-gate team actions.",
+   "lanes": {
+    "rules": "Grid rules",
+    "proc": "Procurement",
+    "tx": "Texas"
+   },
+   "items": [
+    {
+     "x": 2025.5,
+     "lane": "tx",
+     "label": "SB 6 signed (Jun 20, 2025)",
+     "sub": "≥75 MW loads: study fees, curtailment protocols, co-location kill-switch review"
+    },
+    {
+     "x": 2025.87,
+     "lane": "rules",
+     "label": "NOGRR 282 grandfather line (Nov 14, 2025)",
+     "sub": "new ≥75 MW electronic loads must ride through disturbances"
+    },
+    {
+     "x": 2025.97,
+     "lane": "proc",
+     "label": "Georgia certification (Dec 19, 2025)",
+     "sub": "9,885 MW approved incl. 3,022.5 MW company-owned BESS"
+    },
+    {
+     "x": 2026.0,
+     "lane": "rules",
+     "label": "NOGRR 245 maximization deadline passed (Dec 31, 2025)",
+     "sub": "ERCOT storage/IBR ride-through obligations in force"
+    },
+    {
+     "x": 2026.17,
+     "lane": "proc",
+     "label": "Entergy Louisiana first BESS RFP (final docs Mar 3, 2026)",
+     "sub": "the greenest vendor field among the five utility case studies"
+    },
+    {
+     "x": 2026.6,
+     "lane": "tx",
+     "label": "Queue audit - Batch Zero paused (Aug 3, 2026)",
+     "sub": "~49.8 GW / up to $15B at risk per BNEF"
+    },
+    {
+     "x": 2026.75,
+     "lane": "rules",
+     "label": "PRC-029-1 enforceable (~Oct 1, 2026)",
+     "sub": "mandatory IBR ride-through incl. BESS - FERC Order 909"
+    },
+    {
+     "x": 2026.94,
+     "lane": "tx",
+     "label": "Batch Zero target (Dec 10, 2026)",
+     "sub": "Texas queue repricing lands - re-verify TX-dependent forecasts"
+    },
+    {
+     "x": 2027.0,
+     "lane": "proc",
+     "label": "Dominion GS-5 effective (Jan 1, 2027)",
+     "sub": "≥25 MW loads: 14-yr contracts, 85%/60% minimums"
+    },
+    {
+     "x": 2027.3,
+     "lane": "proc",
+     "label": "Georgia 500 MW ESS RFP cycle",
+     "sub": "third-party storage, independent evaluator; ~1,000 MW more signaled"
+    },
+    {
+     "x": 2028.0,
+     "lane": "rules",
+     "label": "NFPA 855-2026 adoption spreads",
+     "sub": "Large-Scale Fire Testing effectively mandatory as states adopt"
+    }
+   ]
+  },
+  {
+   "id": "vocab",
+   "title": "The seller's vocabulary discipline",
+   "read": "2 min",
+   "kind": "callout",
+   "ps": [
+    "**MW is a rate, MWh is an amount** - duration is MWh ÷ MW. Misuse is the fastest credibility loss available.",
+    "**NOGRR 245 is storage/IBR ride-through; NOGRR 282 is large electronic loads** (data centers). Mixing them in an ERCOT room costs you the technical audience.",
+    "**Certified MW, not queue GW** - queues are ~5x reality; tariff-committed and certification-order MW are the real pipeline.",
+    "**Minimum take** (85% is the national norm) is how a utility makes AI load bankable - and a bankability world is a certification-file world.",
+    "**Sell to the grid, not to the data centre** - the largest storage buildout AI causes is ordinary FOM storage judged on our criteria.",
+    "**In Texas, lead with the no-remote-access architecture** (LSIPA / NPRR1199) before it is asked for - it converts an objection into a spec you wrote."
+   ]
+  },
+  {
+   "id": "cards",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "A 200 MW / 800 MWh battery - the duration, and which number is 'power'?",
+     "a": "4 hours (800 ÷ 200). MW is the power (rate); MWh is the energy (amount)."
+    },
+    {
+     "q": "Why do interconnection queues mislead, and what filters them?",
+     "a": "Speculative and duplicated requests - ERCOT's ~474 GW is ~5x its peak. The large-load tariff is the filter: AEP Ohio's terms collapsed 30 GW of pipeline to ~5.6 GW of signed load."
+    },
+    {
+     "q": "Who signs the cell PO in a regulated utility's PPA procurement?",
+     "a": "The developer who bid the RFP - the utility never picks the cell brand except in self-build, where the utility and its EPC's approved-vendor list decide."
+    },
+    {
+     "q": "NOGRR 245 vs NOGRR 282?",
+     "a": "245: ride-through for storage and other inverter-based resources. 282: ride-through for ≥75 MW electronic loads (data centers). Different rules, different parties, never interchangeable."
+    },
+    {
+     "q": "What does SB 6 do to big Texas loads - and the pitch sentence it enables?",
+     "a": "Study fees, mandatory curtailment protocols, co-location kill-switch review for ≥75 MW loads. The pitch: storage converts curtailable interconnection into firm compute."
+    },
+    {
+     "q": "The three BESS sockets and our position in each?",
+     "a": "Grid-side FOM (our lane - judged on duration, cycle life, price); campus BtM buffering (contested - ON.energy's FEOC-clean AI UPS defines the US category); inside the data hall (not our layer - no rack or UPS product)."
+    },
+    {
+     "q": "What is ON.energy's AI UPS in one sentence?",
+     "a": "A medium-voltage, BESS-based UPS sitting inline between grid and AI campus - ride-through-certified, FEOC-clean by design, anchored by a 5 GW Crusoe deployment - the product defining the US BtM buffering category."
+    },
+    {
+     "q": "Five things a grid battery gets paid to do?",
+     "a": "Arbitrage, ancillary/frequency services, capacity, T&D deferral, renewable firming - with duration class deciding which jobs a system can hold."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "title": "Self-test",
+   "read": "5 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A prospect brags their project is '2 GW in the ERCOT queue.' Your internal read:",
+     "c": [
+      "A strong buying signal - prioritize the account",
+      "Queue position is weak evidence - qualify for tariff commitment, site control, and certification status before it enters the pipeline",
+      "Disqualify immediately",
+      "Ask for the queue number to verify"
+     ],
+     "a": 1,
+     "why": "Queues run ~5x reality. The tariff filter (minimum take, collateral, exit fees) separates committed load from vapor - S1 lane verification in the pipeline gates."
+    },
+    {
+     "q": "A regulated Southeast utility announces a self-build BESS program. The realistic Hithium motion is:",
+     "c": [
+      "Bid aggressively on price",
+      "Relationship coverage - EPC approved-vendor lists and the IE ecosystem - because self-build is effectively closed to Chinese cells on prudence/FEOC grounds",
+      "Offer the ITC adder",
+      "Wait for the RFP"
+     ],
+     "a": 1,
+     "why": "Georgia went Tesla, Dominion went EVLO. Self-build is the long game; the addressable regulated entry is the developer bidding a PPA on a safe-harbored or non-ITC structure."
+    },
+    {
+     "q": "A data-center developer in ERCOT asks how to satisfy NOGRR 282. The correct frame:",
+     "c": [
+      "Our containers are 282-certified",
+      "282 requires their ≥75 MW load to ride through disturbances - a buffering layer (UPS, BESS, or generation) between grid and GPUs; our fit depends on their FEOC/ITC posture, and the US category leader is a FEOC-clean MV AI UPS",
+      "282 doesn't apply to data centers",
+      "Storage is exempt under SB 6"
+     ],
+     "a": 1,
+     "why": "Honest qualification: the socket is real, code-driven - and contested. Claiming '282-certified containers' would also repeat the 245/282 vocabulary error."
+    },
+    {
+     "q": "Which pairing is correct?",
+     "c": [
+      "MW = amount, MWh = rate",
+      "NOGRR 245 = data-center loads, 282 = storage",
+      "MW = rate, MWh = amount; 245 = storage/IBR, 282 = large electronic loads",
+      "Duration = MW ÷ MWh"
+     ],
+     "a": 2,
+     "why": "The two vocabulary pairs this module exists to make automatic."
+    },
+    {
+     "q": "Why does 'sell to the grid, not to the data centre' hold even in the AI boom?",
+     "c": [
+      "Data centers don't buy batteries",
+      "The largest storage buildout AI causes is utility- and IPP-owned FOM storage judged on duration, cycle life, and price - our criteria - while the inside-the-fence sockets are FEOC-contested or not our layer",
+      "Grid sales close faster",
+      "Utilities pay more per MWh"
+     ],
+     "a": 1,
+     "why": "The orienting rule of the whole program: Hithium does not need to be inside a data centre to be paid by data-centre demand growth."
+    }
+   ]
+  },
+  {
+   "id": "ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "Pointer form - this module introduces no new external claims. Each row names the internal source that carries the original citations.",
+   "rows": [
+    [
+     "Queue figures (ERCOT ~474 GW; AEP ~190 GW); AEP Ohio tariff terms and 30 GW → 5.6 GW; 85% norm",
+     "utility-aidc-procurement-analysis.md - executive read + AEP case study"
+    ],
+    [
+     "SB 6 provisions; NOGRR 282 mechanics and grandfather date; Batch Zero audit",
+     "utility-aidc-procurement-analysis.md - Oncor case study + ledger"
+    ],
+    [
+     "Georgia certification (9,885 MW / 3,022.5 MW BESS); ELL RFP; GS-5; ERCOT fleet ~16.3 GW",
+     "utility-aidc-procurement-analysis.md - case studies + ledger"
+    ],
+    [
+     "PRC-029-1 and NOGRR 245 dates and scope",
+     "bess-bankability-certification-analysis.md - grid-gauntlet rows"
+    ],
+    [
+     "The buyer map (self-build vs PPA vs merchant); owner-furnished norm; the three sockets",
+     "utility-aidc-procurement-analysis.md buyer map + hithium-relationship-web.md §2/§4/§6"
+    ],
+    [
+     "AI UPS category facts (MV, ride-through, FEOC-clean, 5 GW Crusoe)",
+     "on-energy.profile.json - summary + strategy reads"
+    ],
+    [
+     "GPU transient behavior (30→100% in ms-s)",
+     "nvidia-800vdc-analysis.md + on-energy.profile.json (paraphrased; page cites there)"
+    ],
+    [
+     "Texas LSIPA / NPRR1199 no-remote-access overlay",
+     "china-policy-stack-analysis.md - Texas overlay"
+    ]
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "FOM",
+   "d": "Front-of-meter - interconnected to the grid like a power plant, paid by markets or contracts. Grid-scale BESS is FOM; it is our core business."
+  },
+  {
+   "t": "BTM",
+   "d": "Behind-the-meter - on the customer's side of the meter, offsetting their load or protecting their operations. The campus buffering socket is BTM."
+  },
+  {
+   "t": "minimum take",
+   "d": "The share of contracted capacity a large-load customer must pay for whether or not they use it - 85% is the national norm (AEP Ohio's template). What makes AI load bankable."
+  },
+  {
+   "t": "ancillary services",
+   "d": "Grid-stability products - chiefly frequency response - paid for readiness at seconds' notice. A power (MW) job that favors short-duration, fast-cycling systems."
+  },
+  {
+   "t": "IRP",
+   "d": "Integrated Resource Plan - the regulated utility's filed roadmap of future needs. IRP dockets and certification orders are the true pipeline signal; certified MW become POs on a 12-36-month fuse."
+  },
+  {
+   "t": "IBR",
+   "d": "Inverter-based resource - anything grid-connected through power electronics (solar, wind, BESS). The ride-through rules (IEEE 2800, PRC-029-1, NOGRR 245) attach to IBRs."
+  },
+  {
+   "t": "ride-through",
+   "d": "Staying connected and behaving predictably through a grid disturbance instead of tripping offline. Required of storage (NOGRR 245, PRC-029-1) and now of big data-center loads (NOGRR 282)."
+  },
+  {
+   "t": "curtailment",
+   "d": "Reducing a load or resource on grid instruction. SB 6 makes curtailment capability a condition of big-load interconnection in Texas - which is what makes buffering storage valuable."
+  },
+  {
+   "t": "UPS",
+   "d": "Uninterruptible power supply - the layer keeping IT load alive through disturbances. The BESS-based medium-voltage AI UPS (ON.energy's category) moves this function to the campus scale."
+  },
+  {
+   "t": "NOGRR 282",
+   "d": "ERCOT's ride-through rule for ≥75 MW electronic loads (data centers), grandfather line Nov 14, 2025. Not a storage rule - storage is NOGRR 245."
+  },
+  {
+   "t": "PPA",
+   "d": "Power purchase agreement - a long-term contract for a project's output. In regulated RFPs won via PPA, the developer holding the PPA picks the cell brand."
+  },
+  {
+   "t": "ESA",
+   "d": "Energy services agreement - the contract structure behind utility-built capacity funded by a specific customer (e.g. Meta funding Entergy's gas plants). How anchor tenants cascade procurement norms downstream."
   }
  ]
 };
