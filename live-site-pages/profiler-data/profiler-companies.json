@@ -297,6 +297,18 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "enchanted-rock",
+      "name": "ERock (Enchanted Rock)",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Public gas-microgrid platform (NYSE: EROC) — Microsoft, Meta/EPE, and a 470 MW Anthropic order; the archetype FEOC-immune AIDC bridge/backup vendor with no BESS in the product",
+      "hq": "Houston, Texas, United States",
+      "ticker": "NYSE: EROC",
+      "status": "active",
+      "lastUpdated": "2026-08-24"
+    },
+    {
       "slug": "eve-energy",
       "name": "EVE Energy",
       "categories": [
@@ -541,6 +553,17 @@
       "lastUpdated": "2026-08-23"
     },
     {
+      "slug": "mainspring-energy",
+      "name": "Mainspring Energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Linear-generator maker (250 kW units, 46% LHV, <1.5 ppm NOx no SCR) — OBBBA's flat 30% ITC winner, ~$1B AIDC pipeline, exploring IPO under ex-Cummins CEO Linebarger",
+      "hq": "Menlo Park, California, United States",
+      "status": "active",
+      "lastUpdated": "2026-08-24"
+    },
+    {
       "slug": "mastec",
       "name": "MasTec",
       "categories": [
@@ -650,6 +673,18 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "on-energy",
+      "name": "ON.energy",
+      "categories": [
+        "supplier",
+        "integrator"
+      ],
+      "tagline": "BESS-based medium-voltage AI UPS™ pioneer — 5 GW Crusoe deployment, FEOC-clean US stack (cells unnamed); direct category competitor to Hithium's ∞Power AIDC line",
+      "hq": "Miami, Florida, United States",
+      "status": "active",
+      "lastUpdated": "2026-08-24"
+    },
+    {
       "slug": "openai",
       "name": "OpenAI",
       "categories": [
@@ -718,6 +753,17 @@
       "ticker": "NYSE: PRIM",
       "status": "active",
       "lastUpdated": "2026-08-21"
+    },
+    {
+      "slug": "proenergy",
+      "name": "ProEnergy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Refurb-jet-core aeroderivative supplier (PE6000, 48 MW) — >1.65 GW of AIDC turbine orders incl. Crusoe 650 MW on 2027 delivery; ECP-owned, no BESS offering",
+      "hq": "Sedalia, Missouri, United States",
+      "status": "active",
+      "lastUpdated": "2026-08-24"
     },
     {
       "slug": "qts",
@@ -952,6 +998,17 @@
       "ticker": "NYSE: VRT",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "voltagrid",
+      "name": "VoltaGrid",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Volume leader of behind-the-meter AIDC gas power — 2.3 GW Oracle/OpenAI, >1 GW Vantage; Blackstone/Halliburton $1B equity, $5B debt; the defining FEOC-immune adjacent competitor",
+      "hq": "Houston, Texas, United States",
+      "status": "active",
+      "lastUpdated": "2026-08-24"
     },
     {
       "slug": "wartsila",

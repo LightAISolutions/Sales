@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-24 12:41:29 AM EST` · Repo version: `v02.94r`
+Last updated: `2026-08-24 01:27:35 AM EST` · Repo version: `v02.95r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -113,6 +113,7 @@ Last updated: `2026-08-24 12:41:29 AM EST` · Repo version: `v02.94r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/dpr.study.json">dpr.study.json</a>     — DPR Construction in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eaton.profile.json">eaton.profile.json</a>     — Eaton dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eaton.study.json">eaton.study.json</a> — Eaton in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/enchanted-rock.profile.json">enchanted-rock.profile.json</a> — ERock (Enchanted Rock) dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/envision-energy.profile.json">envision-energy.profile.json</a> — Envision Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eolian.profile.json">eolian.profile.json</a> — Eolian dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/equinix.profile.json">equinix.profile.json</a>   — Equinix dossier profile
@@ -154,6 +155,7 @@ Last updated: `2026-08-24 12:41:29 AM EST` · Repo version: `v02.94r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/liteon.profile.json">liteon.profile.json</a>    — LITEON dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/liteon.study.json">liteon.study.json</a> — LITEON in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/ls-energy-solutions.profile.json">ls-energy-solutions.profile.json</a> — LS Energy Solutions dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/mainspring-energy.profile.json">mainspring-energy.profile.json</a> — Mainspring Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/mastec.profile.json">mastec.profile.json</a> — MasTec dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.profile.json">megmeet.profile.json</a>   — Megmeet dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.study.json">megmeet.study.json</a>     — Megmeet in-app technology study guide (concept sections + flashcards)
@@ -169,6 +171,7 @@ Last updated: `2026-08-24 12:41:29 AM EST` · Repo version: `v02.94r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nextera-energy-resources.profile.json">nextera-energy-resources.profile.json</a> — NextEra Energy Resources dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nvidia.profile.json">nvidia.profile.json</a>    — NVIDIA dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nvidia.study.json">nvidia.study.json</a> — NVIDIA in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/on-energy.profile.json">on-energy.profile.json</a> — ON.energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/openai.profile.json">openai.profile.json</a>    — OpenAI dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/openai.study.json">openai.study.json</a> — OpenAI in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/oracle.profile.json">oracle.profile.json</a>    — Oracle dossier profile
@@ -179,6 +182,7 @@ Last updated: `2026-08-24 12:41:29 AM EST` · Repo version: `v02.94r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/prevalon.profile.json">prevalon.profile.json</a> — Prevalon Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/primoris.profile.json">primoris.profile.json</a>  — Primoris dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/primoris.study.json">primoris.study.json</a>   — Primoris in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/proenergy.profile.json">proenergy.profile.json</a> — ProEnergy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/qts.profile.json">qts.profile.json</a> — QTS Data Centers dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/qts.study.json">qts.study.json</a> — QTS Data Centers in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/quanta-services.profile.json">quanta-services.profile.json</a> — Quanta Services dossier profile
@@ -214,6 +218,7 @@ Last updated: `2026-08-24 12:41:29 AM EST` · Repo version: `v02.94r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/vantage.study.json">vantage.study.json</a> — Vantage Data Centers in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/vertiv.profile.json">vertiv.profile.json</a>    — Vertiv dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/vertiv.study.json">vertiv.study.json</a> — Vertiv in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/voltagrid.profile.json">voltagrid.profile.json</a> — VoltaGrid dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.profile.json">wartsila.profile.json</a>  — Wärtsilä dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.study.json">wartsila.study.json</a>     — Wärtsilä in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/xai.profile.json">xai.profile.json</a>       — xAI dossier profile

@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.95r] — 2026-08-24 01:27:35 AM EST
+
+> **Prompt:** "continue with Batch D" *(Executes Batch D of the plan approved under v02.91r — the behind-the-meter power packagers that are not Hithium BESS competitors but map the FEOC-immune gas/hybrid adjacent competition for AIDC energy dollars. Research ran as five parallel background agents; the VoltaGrid agent died mid-run on a server error and was resumed via SendMessage to completion. The ON.energy evaluation sweep returned a FULL DOSSIER verdict — its 2025 pivot to a BESS-based medium-voltage AI UPS with a 5 GW Crusoe deployment makes it a direct product-category competitor to Hithium's ∞Power AIDC line — so Batch D landed five dossiers instead of four.)*
+
+### Added
+- **Five Batch D BtM-power dossiers** (`live-site-pages/profiler-data/`) — `voltagrid`, `enchanted-rock`, `proenergy`, `mainspring-energy` (all `supplier`), and `on-energy` (`supplier`+`integrator`) `.profile.json`, all schemaVersion 2 with banded contracted-book/platform annexes, labeled strategy reads with an explicit Hithium lens, and chronological sources. The through-line: the four gas/linear players (VoltaGrid 2.3 GW Oracle/OpenAI + >1 GW Vantage; ERock's Microsoft/Meta-EPE/Anthropic ~936 MW book post-NYSE-IPO; ProEnergy's >1.65 GW refurb-jet-core turbine orders; Mainspring's OBBBA flat-30%-ITC linear generators) carry zero BESS in their product lines — every campus they win defers a containerized-storage purchase while leaving an open storage-attach socket — and ON.energy is productizing BESS itself into that chain as a FEOC-clean MV AI UPS with the cell supplier still unnamed
+- **Registry** — `profiler-companies.json` grows 83 → 88 companies
+
+### Changed
+- **README tree** — five `*.profile.json` entries inserted into the `profiler-data/` block in filename order
+
+### Notes
+- Data-only change: `Profiler.html` stays at v01.42w
+- Phase 1 (dossier coverage) is complete; Phase 2 (Industry Guidance modules) and Phase 3 (Hithium dossier v5 + relationship-web deliverable) follow
+- Capacity counter reaches 100/100 — the next push commit triggers mandatory archive rotation with SHA enrichment
 
 ## [v02.94r] — 2026-08-24 12:41:29 AM EST
 
