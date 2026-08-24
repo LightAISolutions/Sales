@@ -95,6 +95,18 @@
       "lastUpdated": "2026-08-21"
     },
     {
+      "slug": "blattner",
+      "name": "Blattner",
+      "categories": [
+        "epc"
+      ],
+      "tagline": "The invisible fifth of US renewables — 75,000+ MW, 3,300+ storage containers and 5.4+ GWh built with near-zero disclosure; Quanta's renewables engine, owner-furnished batteries, and the Slate precedent of installing China-linked BESS.",
+      "hq": "Avon, MN, US",
+      "ticker": "NYSE: PWR (parent Quanta)",
+      "status": "active",
+      "lastUpdated": "2026-08-24"
+    },
+    {
       "slug": "bloom-energy",
       "name": "Bloom Energy",
       "categories": [
@@ -529,6 +541,18 @@
       "lastUpdated": "2026-08-23"
     },
     {
+      "slug": "mastec",
+      "name": "MasTec",
+      "categories": [
+        "epc"
+      ],
+      "tagline": "The AIDC-committed diversifier — #1-class wind constructor (Wanzek/IEA), record $21.4B backlog, twice-documented Sungrow pairings, and a full data-center pivot: turnkey CM, $1.65B Superior electrical buy, >$1B hyperscaler pursuits.",
+      "hq": "Coral Gables, FL, US",
+      "ticker": "NYSE: MTZ",
+      "status": "active",
+      "lastUpdated": "2026-08-24"
+    },
+    {
       "slug": "megmeet",
       "name": "Megmeet",
       "categories": [
@@ -730,6 +754,18 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "samsung-ct",
+      "name": "Samsung C&T",
+      "categories": [
+        "epc"
+      ],
+      "tagline": "The third Hithium prospectus reference — a ~10 GWh E&C cooperation agreement still unconverted after 19 months, a 20 GW US develop-and-sell platform whose buyers pick the batteries, and a fast-compounding AIDC axis (Stargate Korea, floating DCs).",
+      "hq": "Seoul, South Korea",
+      "ticker": "KRX: 028260",
+      "status": "active",
+      "lastUpdated": "2026-08-24"
+    },
+    {
       "slug": "samsung-sdi",
       "name": "Samsung SDI",
       "categories": [
@@ -776,6 +812,18 @@
       "ticker": "SZSE: 300693",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "solv-energy",
+      "name": "SOLV Energy",
+      "categories": [
+        "epc"
+      ],
+      "tagline": "The pure-play benchmark — #2 US BESS builder 2024 (4.6 GWh), >21 GW built, the largest solar O&M fleet (~22 GW), a Feb 2026 Nasdaq IPO (MWH), and owner-furnished Tesla on every flagship; 'actively exploring storage for data centers.'",
+      "hq": "San Diego, CA, US",
+      "ticker": "NASDAQ: MWH",
+      "status": "active",
+      "lastUpdated": "2026-08-24"
     },
     {
       "slug": "stack-infrastructure",

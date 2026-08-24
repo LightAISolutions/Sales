@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.94r] — 2026-08-24 12:41:29 AM EST
+
+> **Prompt:** "continue with Batch C" *(Executes Batch C of the plan approved under v02.91r — the four EPC dossiers, the last unmapped link between the Batch A suppliers and Batch B buyers. Research ran as five parallel background agents: a two-stage first-party/third-party sweep for Samsung C&T (the third Hithium prospectus reference) and single combined sweeps for SOLV Energy, Blattner, and MasTec.)*
+
+### Added
+- **Four Batch C EPC dossiers** (`live-site-pages/profiler-data/`) — `solv-energy`, `blattner`, `mastec`, `samsung-ct` `.profile.json`, all schemaVersion 2 under the existing `epc` category with banded construction-record/interface annexes, labeled strategy reads with an explicit Hithium lens, and chronological sources. Key verifications: the Samsung C&T-Hithium relationship is a real, prospectus-cited ~10 GWh E&C cooperation agreement (Jan 2025) that remains publicly unconverted 19 months on, and its US develop-and-sell arm hands battery procurement to buyers (Sunraycer chose e-STORAGE for the ex-Samsung Texas pipeline); the owner-furnished procurement norm is documented across SOLV (Tesla on every flagship), Blattner (Fluence/e-STORAGE, owner-selected — including the Slate precedent of installing China-linked BESS), and MasTec (twice-documented Sungrow pairings, both owner-selected)
+- **Registry** — `profiler-companies.json` grows 79 → 83 companies (EPC category now 12)
+
+### Changed
+- **README tree** — four `*.profile.json` entries inserted into the `profiler-data/` block in filename order
+
+### Notes
+- Data-only change: `Profiler.html` stays at v01.42w
+- Phase 1 concludes with Batch D (BtM packagers: VoltaGrid, Enchanted Rock, ProEnergy, Mainspring; ON.energy evaluated during the batch)
 
 ## [v02.93r] — 2026-08-24 12:15:30 AM EST
 

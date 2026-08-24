@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-24 12:15:30 AM EST` · Repo version: `v02.93r`
+Last updated: `2026-08-24 12:41:29 AM EST` · Repo version: `v02.94r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -88,6 +88,7 @@ Last updated: `2026-08-24 12:15:30 AM EST` · Repo version: `v02.93r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bechtel.study.json">bechtel.study.json</a>     — Bechtel in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/black-veatch.profile.json">black-veatch.profile.json</a> — Black &amp; Veatch dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/black-veatch.study.json">black-veatch.study.json</a> — Black &amp; Veatch in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/blattner.profile.json">blattner.profile.json</a> — Blattner dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bloom-energy.profile.json">bloom-energy.profile.json</a> — Bloom Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bloom-energy.study.json">bloom-energy.study.json</a> — Bloom Energy in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/burns-mcdonnell.profile.json">burns-mcdonnell.profile.json</a> — Burns &amp; McDonnell dossier profile
@@ -153,6 +154,7 @@ Last updated: `2026-08-24 12:15:30 AM EST` · Repo version: `v02.93r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/liteon.profile.json">liteon.profile.json</a>    — LITEON dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/liteon.study.json">liteon.study.json</a> — LITEON in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/ls-energy-solutions.profile.json">ls-energy-solutions.profile.json</a> — LS Energy Solutions dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/mastec.profile.json">mastec.profile.json</a> — MasTec dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.profile.json">megmeet.profile.json</a>   — Megmeet dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/megmeet.study.json">megmeet.study.json</a>     — Megmeet in-app technology study guide (concept sections + flashcards)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/meta.profile.json">meta.profile.json</a>      — Meta dossier profile
@@ -183,6 +185,7 @@ Last updated: `2026-08-24 12:15:30 AM EST` · Repo version: `v02.93r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/quanta-services.study.json">quanta-services.study.json</a> — Quanta Services in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rosendin.profile.json">rosendin.profile.json</a>  — Rosendin dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/rosendin.study.json">rosendin.study.json</a> — Rosendin in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/samsung-ct.profile.json">samsung-ct.profile.json</a> — Samsung C&T dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/samsung-sdi.profile.json">samsung-sdi.profile.json</a> — Samsung SDI dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/samsung-sdi.study.json">samsung-sdi.study.json</a> — Samsung SDI in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/schneider-electric.profile.json">schneider-electric.profile.json</a> — Schneider Electric dossier profile
@@ -191,6 +194,7 @@ Last updated: `2026-08-24 12:15:30 AM EST` · Repo version: `v02.93r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/siemens-energy.study.json">siemens-energy.study.json</a> — Siemens Energy in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.profile.json">sinexcel.profile.json</a>  — Sinexcel dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.study.json">sinexcel.study.json</a>     — Sinexcel in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/solv-energy.profile.json">solv-energy.profile.json</a> — SOLV Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/stack-infrastructure.profile.json">stack-infrastructure.profile.json</a> — STACK Infrastructure dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/stack-infrastructure.study.json">stack-infrastructure.study.json</a> — STACK Infrastructure in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sungrow.profile.json">sungrow.profile.json</a>   — Sungrow dossier profile
