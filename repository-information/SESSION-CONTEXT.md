@@ -6,6 +6,43 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-24 03:12:54 PM EST
+**Repo version:** v02.97r
+**Branch:** `claude/profiler-role-access-control-mwyky3`
+
+**What we worked on (v02.92r-v02.97r — the full AIDC understanding phase, Phases 1-3 of the plan approved under v02.91r):**
+
+- **Batch A (v02.92r):** nine BESS-competitor dossiers (Prevalon, Canadian Solar e-STORAGE, Trina Storage, HyperStrong, LS Energy Solutions, CRRC Zhuzhou, Sunwoda, Narada, Envision). Registry 62 → 71
+- **Batch B (v02.93r):** eight IPP/developer dossiers (Jupiter Power, Lightsource bp, NextEra Energy Resources, Plus Power, Arevon, Eolian, Key Capture, Terra-Gen) under a new `ipp` category (registry + page-side color/label support, Profiler v01.42w). Registry 71 → 79. Verified the three Hithium prospectus references: Jupiter strong (3 GWh + Trimount), Lightsource bp Australia-only and fading, Samsung C&T MOU-grade and unconverted
+- **Batch C (v02.94r):** four EPC dossiers (SOLV, Blattner, MasTec, Samsung C&T). Registry 79 → 83. Established the owner-furnished procurement norm — EPCs install, owners choose the cells
+- **Batch D (v02.95r):** five BtM-power dossiers — VoltaGrid, ERock, ProEnergy, Mainspring (FEOC-immune gas/linear demand-shapers, all with zero BESS in-product = open attach sockets) and ON.energy (evaluation returned a FULL DOSSIER verdict: its MV AI UPS + 5 GW Crusoe deal is a direct category competitor to Hithium's ∞Power AIDC line). Registry 83 → 88
+- **Phase 2 (v02.96r, GAS v01.19g):** three Industry Guidance modules in `Profiler.gs` (library now 4): the China policy stack (FEOC/MACR 55→75%, the ~40.9% current tariff stack after the SCOTUS IEEPA ruling, NDAA phases, five compliant lanes), utility procurement meets AIDC load (Oncor/AEP/Entergy/Dominion/Georgia Power; the 85% minimum-take norm; the two-lane buyer map), and BESS bankability & certification (UL/NFPA-855-2026 stack, IE mechanics, the Hithium counterparty file, 10-item RFP checklist) + three analysis markdowns in `industry-guidance/`. This push also ran the CHANGELOG archive rotation (2026-08-08 group, 12 sections, SHA-enriched)
+- **Phase 3 (v02.97r):** Hithium dossier revised to **profileVersion 5 (AIDC lens)** — new ∞Power AIDC product entry (four-SKU lithium-sodium line; energy-backbone-not-UPS positioning, zero named customers 8 months post-launch), AIDC/US-book spec annex, the Jupiter-Peak Energy sodium wedge flagged, 3 new strategy reads, 51 sources; v4 archived. Plus **the relationship-web deliverable** `study-prep/hithium/hithium-relationship-web.md` — the eight-layer AIDC value chain, graded Hithium relationships, the cell-brand decision map per channel, two Mermaid diagrams, six 2026-28 demand pools
+
+**Where we left off:**
+- Everything committed and pushed through v02.97r (auto-merge deploys; GAS webhook pulls v01.19g); working tree clean. **The understanding phase is complete** — 88 dossiers, 4 guidance modules, Hithium v5, the relationship web. The developer wants Phase 4 started in a fresh session
+
+**Key decisions made (developer-approved or established this session):**
+- Coverage scope: Tiers 1+2 minus Powin; utilities/standards bodies as guidance modules, not dossiers; ON.energy promoted to a full dossier on the evaluation verdict
+- Phase 4 (next) = the **sales strategy report as two documents** in `repository-information/study-prep/hithium/` — an IC playbook and a team-lead playbook, PDF'd (register in `build-study-prep-pdf.mjs`); Phase 5 (after) = team training curriculum
+- Hithium's framing: competes in **containerized BESS**, not sidecar/backup-unit/electrical-room products
+- Guidance renderer detail: per-section `zh` notes render under a hard-coded "For the Zhonhen conversation" label — non-Zhonhen modules use closing `**Field note:**` prose lines instead (making the label doc-configurable = small page bump, offered to the developer)
+- CHANGELOG rotation follows the step-1-7 procedure (mandatory first rotation when total >100), which contradicts Scenarios A/D (non-exempt-only threshold) — the stricter reading was applied 08-24
+
+**Active context:**
+- CHANGELOG counter 90/100; archive 107 sections all SHA-linked; Profiler v01.42w / GAS v01.19g; 88 registry companies; no TODO items or active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+- **Report-ready findings a Phase 4 session should read first:** the relationship web (`study-prep/hithium/hithium-relationship-web.md` — demand pools + decision map), the Hithium v5 dossier (Jupiter anchor + the Peak Energy sodium wedge = the top account-defense priority), the three guidance analyses in `repository-information/industry-guidance/` (policy lanes, the two-lane buyer motion, the bankability toolkit), and the ON.energy dossier (the AI UPS category contest)
+- Standing sensitivities: the Zhonhen/Schneider disclosure stays in Zhonhen contexts only; never raise Zhu Guoding's conviction unprompted in customer-facing material; NVIDIA white-paper quotes are paraphrased with page cites on public surfaces; field notes are never cited as profile sources
+
+**Recommendation for next session:**
+- **Execute Phase 4 — the two-document Hithium sales strategy report** (`study-prep/hithium/`): the IC playbook (account targeting from the decision map, the safe-harbored/merchant qualification script, objection handling from the bankability checklist, Jupiter account defense vs the Peak wedge) and the team-lead playbook (territory/segment strategy across the six demand pools, the policy calendar, competitive posture vs ON.energy and the gas cohort, pipeline metrics) — both PDF'd via `build-study-prep-pdf.mjs`
+- **To continue:** type `continue with Phase 4`
+
+## Previous Sessions
+
+### Session — 2026-08-22 (v02.87r)
+
 **Date:** 2026-08-22 07:35:46 PM EST
 **Repo version:** v02.87r
 **Branch:** `claude/aidc-photo-backfill-g8ujeg`
@@ -41,43 +78,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - **Triage the developer's Zhonhen field notes and any answers to the ten block-composition questions into a dossier revision** (`profiler zhonhen`): the notes are in the app's Drive log now, the composition brief will generate engineering answers worth folding in, and the dossier's v2 pre-dates the white-paper verification — one revision pass aligns dossier, notes, and the new primary source
 - **To continue:** type `triage zhonhen notes and refresh the dossier`
-
-## Previous Sessions
-
-### Session — 2026-08-22 (v02.81r)
-
-**Date:** 2026-08-22 05:10:05 AM EST
-**Repo version:** v02.81r
-**Branch:** `claude/aidc-market-report-batch-d-tgat0t`
-
-**What we worked on (v02.76r–v02.81r — Batch D, the Zhonhen strategy report, and a Profiler UX overhaul):**
-
-- **Batch D — colocation providers (v02.76r):** Vantage, Aligned, QTS, Switch, STACK Infrastructure. Registry **57 → 62**; each with `.study.json` + exec photos (24). Highlights the research surfaced: Aligned's ~$40B AIP/MGX/GIP acquisition **closed 2026-07-21** (buyers include Microsoft/NVIDIA/xAI); Switch has a **confidential S-1 filed** at a reported $50–80B; Vantage is exploring a ~$100B IPO; STACK owns all three campuses of Amazon's $18B Louisiana program plus Stargate's Project Jupiter. All five joined the quarterly sweep (**now 21 companies** — trigger prompt + `.claude/rules/profiler-app.md` both updated). This push also tripped the **CHANGELOG archive rotation** (2026-08-05 date group, 7 sections, SHA-enriched, 100 → 94) and caught the README tree up on **42 entries** prior sessions had missed
-- **Zhonhen US AIDC strategy report (v02.77r):** 15-page confidential report + PDF in `study-prep/zhonhen/` (`zhonhen-strategy-report.md`, registered in `build-study-prep-pdf.mjs`). Six confidence-tagged key judgments; the core thesis is that **NVIDIA's own ladder reaches MV-to-DC power blocks only in 2029** (power racks 2H 2026 → row centers 2027 → SST/DC power blocks 2029), so Zhonhen's shipping one-stage MV rectifier has a **2026–2029 window**. Two regulatory tailwinds verified: ERCOT's LCL ride-through rule (NOGRR282/NPRR1308) became **binding 2026-08-01**, and FERC ordered national computational-load standards on 2026-07-16. Neocloud thesis verified true **only for self-builders** → target **IREN first, Crusoe second**; CoreWeave/Lambda/Nebius are tenants (rack-side motion only); xAI deprioritized (inside SpaceX = security hard stop)
-- **Zhonhen dossier v2 (v02.78r):** corrected the claim that NVIDIA's 800VDC roster "names Delta, Megmeet and Hopewind" — **Hopewind is on neither NVIDIA list** (it came from a Chinese aggregator; only trade press ties it to Vertiv as a subcontractor). Fixed in three prose sites, aggregator source replaced with NVIDIA's two primary blog posts, v1 archived
-- **Tabbed dossiers + paginated exports (v02.79r, Profiler v01.35w):** 7 sticky style-aware tabs (specs merged into Products) with shareable `#slug/tab` deep links; exports rebuilt with a cover page, **hyperlinked Contents on page 2**, and every chapter starting a fresh page (verified: a real print-to-PDF gave 15 pages, 84 live link annotations). Word gets a true TOC field for page numbers. Also fixed the BLUF/BACKGROUND run-together by splitting summaries on signposts (`BACKGROUND:`/`BACKGROUND.`, `Watch items:`, `Collection gap:`) so all 62 render congruently without rewriting prose
-- **Key Judgments fix (v02.80r, v01.36w):** they were never missing — 7 older profiles stored `strategyRead` as `{confidence, judgment}` objects rendering as "[object Object]". Added `ovStratText` dual-shape handling (archived snapshots keep the old shape forever) **and** normalized the 7 live profiles to canonical strings
-- **Executive-photo backfill (v02.81r, v01.37w):** **40 verified headshots across 17 dossiers** — 23 first-party from official leadership pages + 17 license-verified Wikimedia Commons portraits, each with a new **`photoCredit`** field rendered as a card caption and export credit line. Coverage **86 → 126 of 320 execs**; dossiers with photos **21 → 38**
-
-**Where we left off:**
-- Everything committed, pushed and Playwright-verified at **v02.81r** / Profiler **v01.37w**; working tree clean. Batch D completed the entire approved roster-expansion plan (A/B/C/backfill/D)
-
-**Key decisions made:**
-- **Photo policy extended (developer-approved):** company-published photos **plus** verified free-licensed Wikimedia Commons portraits (CC BY / CC BY-SA / CC0 / public domain only), attribution stored in `photoCredit`. LinkedIn scraping, news-agency/wire photos and video frame-grabs remain prohibited. Documented in PROFILER-SCHEMA.md + profiler-app.md
-- **Visual verification of every photo is mandatory** — 4 of 21 Commons candidates were wrong despite passing license + name-match scoring (a French cottage window matched "Olivier Blum"; a 19th-century painting matched "Christian Bruch"; two unusable group shots). The working method: build an HTML contact sheet with "WHO IT SHOULD BE" labels, screenshot it, read it, wire in only confirmed matches
-- **Tab/export choices:** 7 tabs with specs merged into Products; sticky bar + `#slug/tab` deep links; PDF ToC = hyperlinks only (Chromium print cannot compute page numbers), Word = real TOC field
-- **Renderer tolerance over data-only fixes** — when a data shape changes, fix the renderer too, because archived snapshots keep old shapes permanently
-- **"10jqka" is not a typo** — it is Tonghuashun (同花顺, 10jqka.com.cn), a major Chinese retail-finance data platform; now written out in the dossier
-- **Zhonhen confidentiality (standing):** the Schneider Electric relationship is Jacky's **confidential** disclosure — discuss only with Zhonhen, never name it elsewhere. The intro deck stays out of the repo/public dossier; never raise Zhu Guoding's conviction; the gated NVIDIA whitepaper quote ("simpler and highly familiar design") is **publicly unverifiable** — never put it in front of a customer
-
-**Active context:**
-- **CHANGELOG counter is at 99/100** — the next push commit that adds a version section trips archive rotation again (rotate whole date-groups, SHA-enrich, post-rotation grep verification)
-- **Two field notes are waiting on the developer** (a session cannot write the Drive log): *"Jacky: Schneider Electric relationship (confidential)"* and *"Jacky: targeting neoclouds — speed + technical capability priority"* — paste into the app's note box with your own 0–100 confidence ratings
-- **~194 execs still have no photo.** Method that works and is ready to re-run: probe common leadership-page URL patterns → **curl + HTML parsing** (Playwright cannot reach corporate sites through the proxy: `ERR_CONNECTION_RESET`), match exec names against image filenames/alt text, contact-sheet verify. Wikimedia rate-limits hard (HTTP 429) — any further Commons sweep must run serially with backoff as a long background job
-- Model note: this session ran Fable 5, exhausted the weekly limit, and finished on **Opus 5**. Two subagents died mid-task on credit exhaustion; work was completed directly in the main session
-- No TODO items, no active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-
-**Recommendation for next session:**
-- Extend the **executive-photo backfill to the remaining ~194 execs** using the proven curl-based first-party harvester: widen the URL-pattern probe (only 8 of 33 domains resolved last time — most misses were wrong path guesses, not blocked sites), run per-company, and contact-sheet verify before wiring. This is the one piece of completed work with a defined method and a large remaining gap
-- **To continue:** type `continue the photo backfill`
