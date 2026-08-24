@@ -13,8 +13,8 @@
   "ownership": {
     "type": "private"
   },
-  "summary": "BOTTOM LINE UP FRONT: Hithium has reached top-two global ESS cell scale as a stationary-only specialist riding a large-cell, LDES-native product ladder; we assess financing — after three failed listing attempts — is the primary vulnerability. BACKGROUND: Hithium is a pure-play stationary energy-storage battery manufacturer founded in December 2019 by former CATL engineer Wu Zuyu. It mass-produces prismatic LFP cells purpose-built for storage (280Ah, 314Ah, 587Ah, 1175Ah, and 1300Ah classes), sodium-ion cells, and integrated battery energy storage systems (∞Block and ∞Power DC blocks up to 6.9 MWh) for utility-scale, C&I, and residential applications, selling to grid operators, developers, and integrators in 20+ countries. The company remains private as of August 2026: an A-share attempt was withdrawn in 2023 and two Hong Kong Main Board applications (March 2025, October 2025) both lapsed, the second in April 2026. AIDC LENS (v5): Hithium entered the AI-data-center race with '∞Power Solutions for AI Data Center' — a four-SKU lithium-sodium 'full-duration' portfolio soft-launched for the US at RE+ 2025 (Sep 2025) and formally launched at its Third Eco-Day (Dec 12, 2025) — positioned as a full-duration energy backbone (millisecond sodium buffering, 2h/4h diesel-replacement backup, 8h renewable pairing) rather than a compliance-grade UPS: no NOGRR 282/LVRT claims, no use of the word UPS, and, eight months on, zero named AIDC customers, pilots, or UPS-integrator partnerships anywhere. The US socket it targets is being defined by ON.energy's FEOC-clean medium-voltage AI UPS (5 GW Crusoe deployment) while the FEOC/tariff stack fences Hithium out of ITC-driven and hyperscale-visible procurement — leaving safe-harbored, merchant, and non-US channels as the line's realistic landing zones.",
-  "ecosystemRole": "One of the world's largest ESS cell suppliers — No. 5 globally in 2023 (>15 GWh, InfoLink), No. 3 in 2024 (35.1 GWh, ~11% share, behind CATL and EVE), and Top 2 in both total and utility-scale ESS battery shipments for 2025 (InfoLink/SMM/ICC); cumulative shipments passed 100 GWh in August 2025. Manufacturing: Xiamen HQ, Chongqing (world's first WEF 'Lighthouse Factory' in energy-storage batteries, Jan 2026), Shandong, a 10 GWh/yr module + system plant in Mesquite, Texas (first shipments Aug 2025), and a committed €400M cell + BESS gigafactory in Navarre, Spain (target 2027). In the US AIDC web (see the relationship-web deliverable), Hithium's access runs through battery-buying owners — the anchor is Jupiter Power (3 GWh supply + the 2.8 GWh Trimount design win, EFSB-approved Feb 2026), with Microgrid Networks NYC (55 MW/290 MWh) the second-largest named US relationship — while EPCs install owner-furnished systems and utility self-build remains effectively closed to Chinese cells.",
+  "summary": "BOTTOM LINE UP FRONT: Hithium has reached top-two global ESS cell scale as a stationary-only specialist riding a large-cell, LDES-native product ladder; we assess financing — after three failed listing attempts — is the primary vulnerability. BACKGROUND: Hithium is a pure-play stationary energy-storage battery manufacturer founded in December 2019 by former CATL engineer Wu Zuyu. It mass-produces prismatic LFP cells purpose-built for storage (280Ah, 314Ah, 587Ah, 1175Ah, and 1300Ah classes), sodium-ion cells, and integrated battery energy storage systems (∞Block and ∞Power DC blocks up to 6.9 MWh) for utility-scale, C&I, and residential applications, selling to grid operators, developers, and integrators in 20+ countries. The company remains private as of August 2026: an A-share attempt was withdrawn in 2023 and two Hong Kong Main Board applications (March 2025, October 2025) both lapsed, the second in April 2026.",
+  "ecosystemRole": "One of the world's largest ESS cell suppliers — No. 5 globally in 2023 (>15 GWh, InfoLink), No. 3 in 2024 (35.1 GWh, ~11% share, behind CATL and EVE), and Top 2 in both total and utility-scale ESS battery shipments for 2025 (InfoLink/SMM/ICC); cumulative shipments passed 100 GWh in August 2025. Manufacturing: Xiamen HQ, Chongqing (world's first WEF 'Lighthouse Factory' in energy-storage batteries, Jan 2026), Shandong, a 10 GWh/yr module + system plant in Mesquite, Texas (first shipments Aug 2025), and a committed €400M cell + BESS gigafactory in Navarre, Spain (target 2027).",
   "productsAndServices": [
     {
       "name": "Utility-scale LFP storage cells (∞Cell line)",
@@ -46,14 +46,6 @@
       "soldThrough": "DC blocks direct to developers, EPCs, and IPPs (Alfanar, KNESS, Solarpro, Statkraft, Turbo Energy, Brawn Capital), typically with the buyer or a partner supplying PCS/EMS integration; long-term O&M attached on flagship projects (Saudi SEC); US deliveries assembled at Mesquite, Texas",
       "targetSegments": "Utility-scale developers and grid operators (Middle East, Europe incl. Ukraine reconstruction, Australia, Southeast Asia, North America); markets with LDES mandates or duration-linked tenders; transport-constrained sites (Flexsso)",
       "roadmap": "∞Power 6.9 MWh 8h mass delivery Q4 2026; ∞Power 10+ MWh class productization (SNEC 2026 debut, deliveries expected with the 650Ah cell from 2027); Flexsso rollout across APAC (Brawn) and Europe from Q2 2026"
-    },
-    {
-      "name": "∞Power Solutions for AI Data Center (the AIDC line)",
-      "description": "Four-SKU lithium-sodium portfolio formally launched at the Third Eco-Day, Xiamen (Dec 12, 2025) as the 'world's first lithium-sodium full-duration AIDC energy storage solution', after a US soft-launch at RE+ 2025 (Sep 10, 2025): ∞Power N2.28MWh 1h sodium-ion (the 'first line of defense' — millisecond-scale smoothing of GPU load swings claimed at up to 70% within tens of milliseconds, sub-10ms PCS response, >25-year service life), ∞Power 6.25MWh 2h and 4h lithium units (silent zero-carbon diesel-genset replacement, claimed >20% lower lifecycle cost for backup up to 4 hours), and the ∞Power 6.9MWh 8h unit (generation-side renewable pairing targeting 80%+ renewable penetration; claimed to compress data-center power buildout 'from five-to-ten years to one-to-two'). Trade press adds 240V/400V compatibility today with 800V HVDC anticipated. The 8h SKU migrated from the 6.25 MWh design (Sep 2025) to the 1300Ah-based 6.9 MWh container (Dec 2025).",
-      "positioning": "A full-duration energy backbone, deliberately NOT a compliance-grade UPS: Hithium makes no ERCOT NOGRR 282/LVRT ride-through claims and avoids the word UPS — the substantive contrast with ON.energy's AI UPS (medium-voltage, ride-through-certified, 5 GW Crusoe anchor, FEOC-clean stack), the category benchmark. Against Chinese peers: CATL's TENER Stack 9 MWh is 'engineered for AI-driven data centres' and TENER Sodium delivers from Sep 2026; EVE goes deeper into the rack (BBU/UPS cells); Sungrow fields the most architecturally complete grid-to-chip offer (PCS + storage + SST); Tesla's Megapack 3/Megablock carries the US-made advantage; Vertiv's EnergyCore Grid validates BESS-UPS convergence from the incumbent side. Hithium's unique angle is the lithium+sodium 1h-8h breadth under one brand and 8h-native duration; its gap is zero anchor customers and the NDAA/FEOC fence on US campuses.",
-      "soldThrough": "Direct and via developers/integrators; no AIDC-specific channel, UPS-maker partnership, or named customer disclosed as of Aug 2026",
-      "targetSegments": "AI data centers and campuses — grid-side buffering, backup replacement, and renewable-paired generation-side storage; realistically non-US and merchant/safe-harbored US buyers under the current policy stack",
-      "roadmap": "∞Power8 (6.9 MW/55.2 MWh block) mass delivery Q4 2026; scale volumes from 2027 (Chongqing + Heze, 70+ GWh planned); sodium N162Ah 'GWh mass production' was planned for Q4 2025 but remains unconfirmed — the sodium SKU's commercial availability is unproven"
     },
     {
       "name": "Sodium-ion products (∞Cell N162Ah / ∞Power N)",
@@ -108,20 +100,6 @@
   ],
   "recentDevelopments": [
     {
-      "date": "2026-08-12",
-      "category": "contract",
-      "headline": "Fraser Coast, Queensland: 421 MWh (84 grid-forming liquid-cooled units) for Global Power Generation (Naturgy)",
-      "read": "Australia keeps compounding as the flagship unfenced market; grid-forming spec signals the product keeping pace with advanced-grid-support requirements.",
-      "source": "PRNewswire / Energy-Storage.News"
-    },
-    {
-      "date": "2026-08-07",
-      "category": "operations",
-      "headline": "Heze (Shandong) LDES industrial park begins production rollout — claimed first 15 GWh single production line",
-      "read": "The designated manufacturing base for the 8-hour products; with Chongqing, the 70+ GWh 2027 capacity plan behind the ∞Power8 ramp.",
-      "source": "ess-news"
-    },
-    {
       "date": "2026-07-28",
       "category": "partnership",
       "headline": "Statkraft agreement — 6× ∞Block 5.016 MWh (30.1 MWh) for the Montes de Cierzo wind farm, Navarre, Spain",
@@ -143,6 +121,13 @@
       "source": "https://www.hithium.com/newsroom/latest/details/339.html"
     },
     {
+      "date": "2026-05-25",
+      "category": "product-launch",
+      "headline": "Australian debut of the ∞Power 6.9 MWh 8-hour system at 'Powering the Long Game' in Sydney",
+      "read": "Targeting the first market with regulated 8-hour duration mandates (NSW: 28 GWh by 2033) — LDES-native product meets LDES-mandating policy.",
+      "source": "https://www.prnewswire.com/apac/news-releases/hithium-accelerates-ldes-strategy-with-australia-debut-of-8-hour-energy-storage-system-302781032.html"
+    },
+    {
       "date": "2026-03-31",
       "category": "order-win",
       "headline": "3 GWh long-duration storage framework with Brawn Capital for Asia-Pacific by 2030, including 10-ft Flexsso units (first 300 MWh in 2027)",
@@ -155,13 +140,6 @@
       "headline": "€400M cell + BESS gigafactory committed in Navarre, Spain (JV with Sodena; €81M Spanish grant; target 2027)",
       "read": "First European cell production commitment — EU Battery Regulation alignment and tariff/content-rule insulation for the European book.",
       "source": "https://www.ess-news.com/2026/03/11/hithium-to-invest-e400-million-in-spanish-mega-battery-factory/"
-    },
-    {
-      "date": "2026-02-27",
-      "category": "project",
-      "headline": "Trimount (Everett, MA): Jupiter's 700 MW/2,800 MWh project on Hithium 5.015 MWh units wins final EFSB siting approval",
-      "read": "The largest named Hithium design win in the US advances — but construction awaits brownfield remediation and revenue sits in the latter half of the decade.",
-      "source": "Energy-Storage.News / trimountenergy.com"
     },
     {
       "date": "2026-02-10",
@@ -185,27 +163,6 @@
       "source": "https://www.indianchemicalnews.com/battery/reliance-pauses-lithium-ion-battery-push-amid-china-tech-hurdle-says-report-28931"
     },
     {
-      "date": "2025-12-12",
-      "category": "product",
-      "headline": "Third Eco-Day: '∞Power Solutions for AI Data Center' formally launched — four-SKU lithium-sodium 'full-duration' AIDC portfolio, alongside the ∞Cell 1300Ah and ∞Power8",
-      "read": "The AIDC entry, positioned as an energy backbone rather than a compliance-grade UPS — no ride-through claims, no named customers since. It contests the socket ON.energy's AI UPS is defining with a FEOC-clean stack.",
-      "source": "Hithium PR / ess-news"
-    },
-    {
-      "date": "2025-11-18",
-      "category": "market",
-      "headline": "Jupiter Power signs sodium-ion supply with US maker Peak Energy — 720 MWh for 2027 + up to 4 GWh reserved 2028-30",
-      "read": "A supply-chain diversification move by the anchor US account, planting a domestic competing supplier inside it — the single most important account-level warning light in the US book.",
-      "source": "Utility Dive"
-    },
-    {
-      "date": "2025-09-09",
-      "category": "contract",
-      "headline": "Microgrid Networks (NYC): strategic agreement for 10 urban BESS projects — 55 MW/290 MWh, ∞Block 5 MWh full-AC, FDNY TM-2 certified",
-      "read": "The second-largest named US relationship, and proof the product can clear the hardest urban fire-code bar in the country.",
-      "source": "Hithium PR / Solarbe Global"
-    },
-    {
       "date": "2025-08-27",
       "category": "order-win",
       "headline": "4 GWh Saudi Electricity Company LDES projects (Tabuk + Hail) using ∞Cell 1175Ah in 6.25 MWh containers; commissioning targeted 2026",
@@ -217,10 +174,7 @@
     "(High confidence) We assess Hithium has secured top-tier scale as a stationary-only specialist — Top 2 in 2025 ESS cell shipments behind CATL per InfoLink/SMM/ICC, with cumulative shipments past 100 GWh in August 2025.",
     "(Moderate confidence) We assess the large-cell ladder (587→650→1175→1300Ah) feeding 6+ MWh blocks, with 8-hour-native LDES as the differentiated tier, is a deliberate policy fit — duration-mandating markets (NSW: 28 GWh by 2033) are the target.",
     "(Moderate confidence) We assess the US (Mesquite, Texas) and EU (Navarre, Spain) plants insulate the order book against tariff and content rules; the €400M Spain commitment with a 2027 target is the pacing item.",
-    "(Moderate confidence) We assess financing capacity, not demand, is the constraint: three failed listing attempts (A-share 2023; two lapsed HKEX applications) against a capex-heavy expansion. Basis: prospectus filings and financial-media reporting.",
-    "(High confidence) We assess the AIDC line as a product-marketing position rather than a business as of Aug 2026: two launches, four SKUs, and specific engineering claims — but zero named customers, pilots, or UPS-integrator partnerships in any geography eight months after launch, a sodium SKU whose mass production remains unconfirmed, and a flagship 8h block whose deliveries begin only in Q4 2026. Its US path is additionally fenced by the policy stack; its realistic near-term landing zones are non-US campuses and merchant/tax-indifferent US buyers.",
-    "(High confidence) We assess the AIDC category's US terms are being set by ON.energy, not Hithium: the AI UPS is medium-voltage, ride-through-certified (NOGRR 282/LVRT), FEOC-clean by design, and anchored by a 5 GW Crusoe deployment — every attribute the ∞Power AIDC line lacks for US hyperscale buyers. Hithium's differentiators (lithium+sodium breadth, 8h-native duration, cost) matter most where the policy fence does not apply.",
-    "(Moderate confidence) We assess the Jupiter relationship — the US anchor — as strong but no longer exclusive-trending: the 3 GWh deal's completion is unconfirmed publicly, Trimount revenue sits years out behind remediation, and Jupiter's Nov 2025 Peak Energy sodium deal (720 MWh + up to 4 GWh reserved) plants a domestic supplier inside the account precisely on the chemistry Hithium markets as its next act. Defending the account on economics, delivery record, and augmentation terms is the highest-leverage US sales action available."
+    "(Moderate confidence) We assess financing capacity, not demand, is the constraint: three failed listing attempts (A-share 2023; two lapsed HKEX applications) against a capex-heavy expansion. Basis: prospectus filings and financial-media reporting."
   ],
   "technicalSpecs": [
     {
@@ -541,37 +495,6 @@
         }
       ],
       "notes": ""
-    },
-    {
-      "product": "AIDC portfolio & US relationship book",
-      "specs": [
-        {
-          "band": "∞Power N2.28MWh 1h",
-          "label": "sodium-ion surge layer",
-          "value": "N162Ah cells (~20,000 cycles claimed); millisecond load smoothing for GPU swings; >25-yr service life; >3% claimed system-efficiency gain; commercial availability unproven (mass-production start unconfirmed)"
-        },
-        {
-          "band": "∞Power 6.25MWh 2h/4h",
-          "label": "backup layer",
-          "value": "587Ah-based; positioned as diesel-genset replacement with claimed >20% lower lifecycle cost for backup up to 4 hours"
-        },
-        {
-          "band": "∞Power8",
-          "label": "6.9 MW / 55.2 MWh (8h)",
-          "value": "One MV module + eight 6.9 MWh containers (4×1P416S, liquid-cooled); 1300Ah LFP cells ≥190 Wh/kg / ≥406 Wh/L; system ≥135 Wh/kg; NFPA 855; claimed first 'open-door combustion' test pass; mass delivery Q4 2026, scale from 2027"
-        },
-        {
-          "band": "Jupiter Power",
-          "label": "3 GWh + Trimount 2.8 GWh",
-          "value": "3 GWh supply (2024; ∞Block 5 MWh, 314Ah; delivery targeted end-2025 — completion unconfirmed publicly); Trimount (Everett, MA — 700 MW/2,800 MWh on Hithium 5.015 MWh units) won final EFSB approval Feb 27, 2026, construction after site remediation; watch item: Jupiter's Nov 2025 sodium-ion deal with US maker Peak Energy (720 MWh 2027 + up to 4 GWh 2028-30) plants a competing supplier inside the anchor account"
-        },
-        {
-          "band": "Other US",
-          "label": "MGN NYC · Perfect Power · Mesquite",
-          "value": "Microgrid Networks NYC: 10 urban BESS projects, 55 MW/290 MWh, ∞Block 5 MWh full-AC, FDNY TM-2 certified (Sep 2025); Perfect Power 1 GWh MOU silent since Nov 2023 (conversion unverified); Mesquite TX ~60% utilization / 160 employees reported Nov 2025"
-        }
-      ],
-      "notes": "Zero named AIDC customers in any geography as of Aug 2026 — the line is a product-marketing position, not yet a revenue line. GGII projects global AIDC lithium BESS shipments >300 GWh by 2030 (12 GWh in 2025); Hithium is trade press's exemplar Chinese AIDC offering, with no deals cited."
     }
   ],
   "decisionMakers": [
@@ -749,71 +672,6 @@
     "commentary": "Private company — figures from HKEX prospectus filings and media summaries; no analyst consensus exists. Funding: Series B ~RMB 2.0B+ (Oct 2022), Series C >RMB 4.5B (~US$622M, Jul 2023); media valuation estimates RMB 25–30B (2025). Risk context flagged by financial media: three failed listing attempts (A-share withdrawn 2023; HKEX applications lapsed Sep 2025 and Apr 2026), 10+ CATL lawsuits claiming >RMB 240M, a partial equity freeze on the controlling shareholder's vehicle (Feb 2026, until Feb 2029), and FY2024 profitability's dependence on subsidies."
   },
   "sources": [
-    {
-      "label": "GlobeNewswire — TÜV Rheinland EU Battery Regulation 2023/1542 conformity certificate (C&I)",
-      "url": "https://www.globenewswire.com/de/news-release/2026/08/19/3347813/0/en/",
-      "date": "2026-08-19"
-    },
-    {
-      "label": "PRNewswire — Fraser Coast 421 MWh for GPG (Naturgy), Queensland",
-      "url": "https://www.prnewswire.com/apac/news-releases/hithium-to-supply-421mwh-battery-energy-storage-system-for-gpgs-fraser-coast-project-in-australia-302849413.html",
-      "date": "2026-08-12"
-    },
-    {
-      "label": "ess-news — Heze LDES industrial park production rollout (15 GWh single line)",
-      "url": "https://www.ess-news.com/2026/08/10/hithium-opens-new-long-duration-energy-storage-industrial-park-in-china/",
-      "date": "2026-08-10"
-    },
-    {
-      "label": "DCD / Crusoe — ON.energy AI UPS 5 GW deployment (AIDC competitive benchmark)",
-      "url": "https://www.datacenterdynamics.com/en/news/crusoe-to-deploy-5gw-of-onenergys-ai-ups-systems-across-data-center-portfolio/",
-      "date": "2026-07-22"
-    },
-    {
-      "label": "CnEVPost — CATL TENER Sodium (first deliveries Sep 2026; AIDC-sodium competitive context)",
-      "url": "https://cnevpost.com/2026/06/22/catl-unveils-tener-sodium/",
-      "date": "2026-06-22"
-    },
-    {
-      "label": "Tencent News — ~10 pending CATL-Hithium suits >RMB 240M; controlling-shareholder equity freeze (Feb 2026 - Feb 2029)",
-      "url": "https://news.qq.com/rain/a/20260508A03FXV00",
-      "date": "2026-05-08"
-    },
-    {
-      "label": "Sina Tech / CLS — second HKEX prospectus lapsed Apr 27, 2026 (third failed listing attempt); no re-filing observed",
-      "url": "https://finance.sina.com.cn/tech/roll/2026-05-12/doc-inhxrshk9966609.shtml",
-      "date": "2026-05-12"
-    },
-    {
-      "label": "Energy-Storage.News — Jupiter's Trimount 2.8 GWh wins Massachusetts EFSB approval (Hithium 5.015 MWh units)",
-      "url": "https://www.energy-storage.news/jupiter-power-receives-approval-for-2-8gwh-massachusetts-bess/",
-      "date": "2026-02-27"
-    },
-    {
-      "label": "Energy-Storage.News — who's driving the 300 GWh AIDC BESS boom (GGII forecast; Hithium AIDC line profiled, no deals cited)",
-      "url": "https://www.energy-storage.news/whos-driving-the-300gwh-boom-in-demand-for-ai-data-centre-battery-storage/",
-      "date": "2026-01-14"
-    },
-    {
-      "label": "Hithium PR — '∞Power Solutions for AI Data Center' formal launch, Third Eco-Day",
-      "url": "https://en.hithium.com/newsroom/latest/details/103.html",
-      "date": "2025-12-12"
-    },
-    {
-      "label": "Utility Dive — Jupiter Power signs sodium-ion supply with Peak Energy (720 MWh + up to 4 GWh reservation)",
-      "url": "https://www.utilitydive.com/news/peak-energy-jupiter-sodium-ion-batteries/805784/",
-      "date": "2025-11-18"
-    },
-    {
-      "label": "Hithium PR — AIDC solution US soft-launch at RE+ 2025 (8h + sodium 1h + AIDC lifespan model)",
-      "url": "https://en.hithium.com/newsroom/latest/details/86.html",
-      "date": "2025-09-10"
-    },
-    {
-      "label": "Hithium PR — Microgrid Networks NYC strategic agreement (55 MW/290 MWh, FDNY TM-2)",
-      "url": "https://en.hithium.com/newsroom/latest/details/88.html",
-      "date": "2025-09-09"
-    },
     {
       "label": "EnergyTrend — overseas order updates incl. Statkraft Montes de Cierzo 30.1 MWh (Jul 2026)",
       "url": "https://www.energytrend.com/news/20260731-51854.html",
@@ -1001,6 +859,6 @@
       "url": "https://en.hithium.com/products/residential.html"
     }
   ],
-  "lastUpdated": "2026-08-24",
-  "profileVersion": 5
+  "lastUpdated": "2026-08-22",
+  "profileVersion": 4
 }

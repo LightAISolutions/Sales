@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.97r] — 2026-08-24 02:47:41 PM EST
+
+> **Prompt:** "continue with Phase 3" *(Executes Phase 3 of the plan approved under v02.91r — the Hithium dossier v5 revision through the AIDC lens plus the relationship-web deliverable, completing the understanding phase. Research ran as one focused delta-sweep background agent (~44 tool uses); its digest arrived while the stop-hook-prompted interim commit was being prepared, so the whole phase landed as this single push after all.)*
+
+### Added
+- **The relationship-web deliverable** — `repository-information/study-prep/hithium/hithium-relationship-web.md`: the US AIDC containerized-BESS web from Hithium's seat, synthesized from the 88-dossier base — the eight-layer value chain (anchor tenants → neoclouds → colos → power developers/IPPs → EPCs/GCs → BESS OEMs → FEOC-immune BtM adjacents → utilities/grid rules), Hithium's verified-relationship grades, the cell-brand decision map per channel, two Mermaid diagrams (full web + Hithium ego-network), and the six 2026-2028 demand pools
+
+### Changed
+- **Hithium dossier revised to profileVersion 5 (AIDC lens)** — `hithium.profile.json`: new `∞Power Solutions for AI Data Center` product entry (four-SKU lithium-sodium portfolio; positioned as a full-duration energy backbone, NOT a compliance-grade UPS — no NOGRR 282/LVRT claims, zero named customers eight months post-launch) with an AIDC/US-book spec annex (∞Power8 6.9 MW/55.2 MWh, Q4 2026 mass delivery; Jupiter 3 GWh + Trimount EFSB approval Feb 2026; MGN NYC 55 MW/290 MWh; the Jupiter-Peak Energy sodium wedge); six new recentDevelopments (Fraser Coast 421 MWh, Heze park, Trimount, the Dec 2025 AIDC launch, Jupiter-Peak, MGN); three new AIDC-lens strategy reads (marketing-position-not-yet-business; ON.energy sets the US category terms; the anchor account is strong but no longer exclusive-trending); 13 new sources (51 total); v4 archived to `archive/hithium.profile.v4.json` + `archive-index.json` entry
+- **Registry** — hithium `lastUpdated` synced to 2026-08-24 (was stale at 08-09) and tagline refreshed with the AIDC line
+- **README tree** — relationship-web entry added under `study-prep/hithium/`; archive entries added for `hithium.profile.v4.json` **and** `hithium.profile.v3.json` (drift fix — the v3 entry had been missed in the v3→v4 revision push)
+
+### Notes
+- Data-only change: `Profiler.html` stays at v01.42w
+- Phase 1-3 (the understanding phase) is complete; the sales-strategy report (Phase 4) and training curriculum (Phase 5) await the developer's go
 
 ## [v02.96r] — 2026-08-24 01:51:27 PM EST
 

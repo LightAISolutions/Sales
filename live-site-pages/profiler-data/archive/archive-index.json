@@ -111,6 +111,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-22",
       "supersededBy": 4
+    },
+    {
+      "file": "hithium.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-24",
+      "supersededBy": 5
     }
   ],
   "huawei-digital-power": [
