@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-24 02:47:41 PM EST` · Repo version: `v02.97r`
+Last updated: `2026-08-24 04:53:57 PM EST` · Repo version: `v02.98r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -461,7 +461,11 @@ Last updated: `2026-08-24 02:47:41 PM EST` · Repo version: `v02.97r`
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/HITHIUM-INTERVIEW-BRIEF.pdf">HITHIUM-INTERVIEW-BRIEF.pdf</a> — The interview brief typeset for print/download, BloombergNEF Research Report style (21 pages)
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-strategy-addendum.md">hithium-strategy-addendum.md</a> — Short companion to the brief: strategies to propose, the AI-data-centre position, questions to ask
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/HITHIUM-STRATEGY-ADDENDUM.pdf">HITHIUM-STRATEGY-ADDENDUM.pdf</a> — The addendum typeset for print/download, masthead-only shell with no contents block (3 pages)
-│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-relationship-web.md">hithium-relationship-web.md</a> — The US AIDC containerized-BESS relationship web from Hithium's seat: the eight-layer value chain, verified-relationship grades, the cell-brand decision map, and Mermaid diagrams (synthesized from the 88-dossier base)
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-relationship-web.md">hithium-relationship-web.md</a> — The US AIDC containerized-BESS relationship web from Hithium's seat: the eight-layer value chain, verified-relationship grades, the cell-brand decision map, and Mermaid diagrams (synthesized from the 88-dossier base)
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-ic-playbook.md">hithium-ic-playbook.md</a> — Phase 4 sales strategy, IC layer: the channel map &amp; account targeting, the one-call qualification script, the MACR-as-a-service play, objection handling, the Jupiter account defense, and the red-lines list
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/HITHIUM-IC-PLAYBOOK.pdf">HITHIUM-IC-PLAYBOOK.pdf</a> — The IC playbook typeset for print/download, BloombergNEF Research Report style (7 pages)
+│   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/hithium-team-lead-playbook.md">hithium-team-lead-playbook.md</a> — Phase 4 sales strategy, leadership layer: demand-pool coverage plan, the dated policy calendar, competitive rules of engagement, pipeline/forecast discipline, and the 2026-28 play
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/hithium/HITHIUM-TEAM-LEAD-PLAYBOOK.pdf">HITHIUM-TEAM-LEAD-PLAYBOOK.pdf</a> — The team-lead playbook typeset for print/download, BloombergNEF Research Report style (6 pages)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/megmeet">megmeet/</a> — Megmeet technology curriculum
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-lesson-plan.md">megmeet-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf">MEGMEET-LESSON-PLAN.pdf</a> — The lesson plan typeset for print/download, BloombergNEF Research Report style (5 pages)

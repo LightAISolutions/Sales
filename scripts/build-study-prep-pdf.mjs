@@ -87,6 +87,40 @@ const DOCS = {
     runHead: 'Strategy addendum to the Hithium interview brief · Prepared 15 August 2026',
     runFoot: 'Hithium — Strategy Addendum (Sales Role, Round 3) · Internal, interview preparation',
   },
+  'hithium-ic-playbook': {
+    src: 'repository-information/study-prep/hithium/hithium-ic-playbook.md',
+    out: 'repository-information/study-prep/hithium/HITHIUM-IC-PLAYBOOK.pdf',
+    kick: 'Profiler Study Prep · Sales Strategy',
+    sub: 'The account executive’s working document: where to hunt, the one-call qualification, the objection table, and the Jupiter defense',
+    meta: [
+      '<b>Prepared</b> 24 August 2026 &nbsp;·&nbsp; <b>Sources</b> hithium.profile.json profileVersion 5 · the relationship-web '
+        + 'deliverable · the three Industry Guidance analyses &nbsp;·&nbsp; <b>Companion</b> hithium-team-lead-playbook.md, '
+        + 'which sets the territory strategy',
+      '<b>Sourcing</b> Market facts trace to the dossier base and the guidance claims ledgers; analytical reads are labelled as reads '
+        + '&nbsp;·&nbsp; <b>Classification</b> Internal — sales strategy',
+    ],
+    banner: '<b>Presentation style</b> — BloombergNEF Research Report, the canonical Profiler export skin. '
+      + 'Facts lead, labelled analysis follows, and the two never blur.',
+    runHead: 'Built from the Profiler dossier set · Prepared 24 August 2026',
+    runFoot: 'Hithium — IC Sales Playbook · Internal, sales strategy',
+  },
+  'hithium-team-lead-playbook': {
+    src: 'repository-information/study-prep/hithium/hithium-team-lead-playbook.md',
+    out: 'repository-information/study-prep/hithium/HITHIUM-TEAM-LEAD-PLAYBOOK.pdf',
+    kick: 'Profiler Study Prep · Sales Strategy',
+    sub: 'The sales leader’s working document: demand-pool coverage, the policy calendar, competitive rules of engagement, and forecast discipline',
+    meta: [
+      '<b>Prepared</b> 24 August 2026 &nbsp;·&nbsp; <b>Sources</b> hithium.profile.json profileVersion 5 · the relationship-web '
+        + 'deliverable · the three Industry Guidance analyses &nbsp;·&nbsp; <b>Companion</b> hithium-ic-playbook.md, '
+        + 'which carries the account-level motions',
+      '<b>Sourcing</b> Market facts trace to the dossier base and the guidance claims ledgers; analytical reads are labelled as reads '
+        + '&nbsp;·&nbsp; <b>Classification</b> Internal — sales strategy',
+    ],
+    banner: '<b>Presentation style</b> — BloombergNEF Research Report, the canonical Profiler export skin. '
+      + 'Facts lead, labelled analysis follows, and the two never blur.',
+    runHead: 'Built from the Profiler dossier set · Prepared 24 August 2026',
+    runFoot: 'Hithium — Team-Lead Playbook · Internal, sales strategy',
+  },
   'zhonhen-interview-brief': {
     src: 'repository-information/study-prep/zhonhen/zhonhen-interview-brief.md',
     out: 'repository-information/study-prep/zhonhen/ZHONHEN-INTERVIEW-BRIEF.pdf',

@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.98r] — 2026-08-24 04:53:57 PM EST
+
+> **Prompt:** "Picking up from my recent "Profiler app role-based access control" session, continue with Phase 4." *(Executes Phase 4 of the plan approved under v02.91r — the Hithium sales strategy report as two documents, per the developer decision recorded in the v02.97r session context. Both documents synthesize the completed understanding phase: the 88-dossier base, the Hithium v5 AIDC-lens dossier, the relationship-web deliverable, and the three Industry Guidance analyses.)*
+
+### Added
+- **The IC sales playbook** — `repository-information/study-prep/hithium/hithium-ic-playbook.md` + `HITHIUM-IC-PLAYBOOK.pdf` (7 pages): the account executive's working document — the one-page market fence (the four federal machines, three open lanes, four closed doors), the six-channel hunt map with the Jupiter-pattern account profile, a seven-question first-call qualification script with a disqualifier table, the MACR-arithmetic-as-a-service play, a seven-row objection-handling table (FEOC listing, tariffs, the lapsed IPO, the CATL suit, Moss Landing, domestic content, BMS security), the five-play Jupiter account defense against the Peak Energy sodium wedge with early-warning indicators, the 10-item proof pack, and the red-lines/vocabulary-discipline list
+- **The team-lead playbook** — `repository-information/study-prep/hithium/hithium-team-lead-playbook.md` + `HITHIUM-TEAM-LEAD-PLAYBOOK.pdf` (6 pages): the sales leader's working document — the three-judgment market thesis (certified MW over queue GW; the fence's lane concentration; the low-drama-book imperative), the six-demand-pool coverage plan with staffing allocation, the dated 2026-28 policy calendar with per-gate team actions, competitive rules of engagement (ON.energy, the gas cohort, CATL, the FEOC-compliant tier, Peak Energy), five-stage pipeline gates with enforced counting rules (MOUs at zero; the safe-harbor pool as a depletion asset), team standards, and the 2026-28 play
+
+### Changed
+- **`scripts/build-study-prep-pdf.mjs`** — both playbooks registered in the DOCS registry (kick `Profiler Study Prep · Sales Strategy`, classification Internal — sales strategy)
+- **README tree** — four entries added under `study-prep/hithium/` (both markdown sources and both typeset PDFs)
+
+### Notes
+- Data/documentation-only change: no HTML page or GAS script touched (`Profiler.html` stays at v01.42w, `Profiler.gs` at v01.19g)
+- Phase 5 (the team training curriculum) is the remaining phase of the v02.91r plan
 
 ## [v02.97r] — 2026-08-24 02:47:41 PM EST
 
