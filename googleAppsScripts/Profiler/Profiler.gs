@@ -1,4 +1,4 @@
-var VERSION = "v01.20g";
+var VERSION = "v01.21g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -6403,6 +6403,57 @@ function handleNoteOp_(e) {
     return { success: false, error: String((err && err.message) || err) };
   }
 }
+
+// Unauthenticated ACL health probe backing GET ?action=api&op=aclhealth (see the
+// dispatch in doGet). Runs the exact read sequence checkSpreadsheetAccess performs
+// before it trusts the list — openById, Access-tab lookup, data read, page-column
+// scan — and reports which stage failed. Exists because an `acl_unreachable`
+// sign-in outage is otherwise diagnosable only from the Apps Script editor's
+// execution log, which costs a developer round-trip per incident.
+// Safe without auth: it returns only reason codes the sign-in screen already
+// shows to any visitor, plus the caught exception's message with the spreadsheet
+// ID redacted — never emails, row data, or ACL contents. A 60-second result
+// cache keeps unauthenticated callers from burning Sheets quota.
+function aclHealthProbe_() {
+  var out = { probe: 'aclhealth', page: ACL_PAGE_NAME, gasVersion: VERSION,
+              ok: false, stage: 'config', reason: '', detail: '' };
+  var hasAcl = MASTER_ACL_SPREADSHEET_ID && MASTER_ACL_SPREADSHEET_ID !== "YOUR_MASTER_ACL_SPREADSHEET_ID";
+  if (!hasAcl) { out.reason = 'acl_not_configured'; return out; }
+  var cache = getEpochCache();
+  var cached = cache.get('aclhealth_probe');
+  if (cached) { try { return JSON.parse(cached); } catch (eCache) {} }
+  try {
+    out.stage = 'open';
+    var ss = SpreadsheetApp.openById(MASTER_ACL_SPREADSHEET_ID);
+    out.stage = 'tab';
+    var sheet = ss.getSheetByName(ACL_SHEET_NAME);
+    if (!sheet) {
+      out.reason = 'acl_tab_missing';
+    } else {
+      out.stage = 'read';
+      var data = sheet.getDataRange().getValues();
+      if (data.length < 2) {
+        out.reason = 'acl_empty';
+      } else {
+        out.stage = 'column';
+        var headers = data[0], colIdx = -1;
+        for (var c = 0; c < headers.length; c++) {
+          if (String(headers[c]).trim().toLowerCase() === ACL_PAGE_NAME.toLowerCase()) { colIdx = c; break; }
+        }
+        if (colIdx === -1) {
+          out.reason = 'acl_column_missing';
+        } else {
+          out.ok = true; out.stage = 'done'; out.reason = 'acl_ok';
+        }
+      }
+    }
+  } catch (e) {
+    out.reason = 'acl_unreachable';
+    out.detail = String((e && e.message) || e).split(MASTER_ACL_SPREADSHEET_ID).join('[ACL_ID]').slice(0, 200);
+  }
+  try { cache.put('aclhealth_probe', JSON.stringify(out), 60); } catch (ePut) {}
+  return out;
+}
 // PROJECT END
 // =============================================
 // AUTH — Web App Entry Point (doGet)
@@ -6680,6 +6731,16 @@ function doGet(e) {
   // re-pull what GitHub already contains. Do NOT add guards, secrets, or auth here.
   if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'deploy') {
     return ContentService.createTextOutput(pullAndDeployFromGitHub());
+  }
+
+  // PROJECT: unauthenticated ACL health probe — GET ?action=api&op=aclhealth.
+  // Same trust model as the deploy fallback above: it exposes only reason codes
+  // the sign-in screen already shows to anyone, never ACL contents (details on
+  // aclHealthProbe_). Lets an acl_unavailable sign-in outage be diagnosed
+  // remotely instead of from the editor's execution log.
+  if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'aclhealth') {
+    return ContentService.createTextOutput(JSON.stringify(aclHealthProbe_()))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 
   // GET API fallback for the fetch transport — Google's serving can drop POST

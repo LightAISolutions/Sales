@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 20/50`
+`Sections: 21/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.21g] — 2026-08-24 06:16:16 PM EST — v03.00r
+
+### Added
+- Added a self-check that reports whether the sign-in access list is reachable, so sign-in outages can be diagnosed and resolved faster
 
 ## [v01.20g] — 2026-08-24 05:13:40 PM EST — v02.99r
 

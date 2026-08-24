@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.00r] — 2026-08-24 06:16:16 PM EST
+
+> **Prompt:** "Picking up from my recent "Profiler app role-based access control" session, I suddenly cannot sign into my Profiler app as jonyang92@gmail.com with the following error message. What's going on? Fix it." *(with a screenshot of the Profiler sign-in screen showing "Sign-in could not reach the access list, so it could not confirm your account. This is usually temporary — please try again in a moment. (code: acl_unavailable/acl_unreachable)")*
+
+### Added
+- **Remote ACL health probe in `Profiler.gs`** — `aclHealthProbe_()` (PROJECT block), dispatched as unauthenticated `GET ?action=api&op=aclhealth` (inline `// PROJECT:` branch beside the deploy fallback in `doGet`). It runs the exact Access-tab read sequence sign-in performs before trusting the list — `openById` → tab lookup → data read → page-column scan — and reports the failing stage plus the caught exception message (spreadsheet ID redacted, 200-char cap, 60-second result cache so unauthenticated callers cannot burn Sheets quota). Same trust model as the deliberately-unauthenticated deploy fallback: it returns only reason codes the sign-in screen already shows any visitor, never emails, rows, or ACL contents. Turns an `acl_unavailable` outage from an Apps-Script-editor-log round-trip into a one-curl diagnosis
+
+### Changed
+- **`Profiler.gs`** VERSION v01.20g → v01.21g; `Profilergs.version.txt` synced; generic public entry added to the GAS changelog (counter 20 → 21)
+- **README tree** — Profiler version display corrected from the stale `v01.38w · v01.17g` to the current `v01.42w · v01.21g` (drift left by earlier pushes)
+
+### Notes
+- Investigation established before the probe was written: the reported code (`acl_unavailable/acl_unreachable`) is produced only when the deployed script **throws while opening/reading the Master ACL spreadsheet**; the entire auth/ACL code path is unchanged across the recent GAS versions (v01.19g/v01.20g appended guidance-module content only), and all four live deployments (Profiler v01.20g, Receipts, Scraper, MasterACL) answered the unauthenticated version check as healthy and current — so the cause is environment-side (grant/spreadsheet/transient), not a repo regression. The probe exists to name which one
+- `node --check` clean on a `.js` copy of Profiler.gs; `scripts/check-gas-inner-scripts.js` clean (75 inner blocks)
 
 ## [v02.99r] — 2026-08-24 05:13:40 PM EST
 
