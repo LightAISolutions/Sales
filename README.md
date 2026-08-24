@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-23 11:37:09 PM EST` · Repo version: `v02.92r`
+Last updated: `2026-08-24 12:15:30 AM EST` · Repo version: `v02.93r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -83,6 +83,7 @@ Last updated: `2026-08-23 11:37:09 PM EST` · Repo version: `v02.92r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/amazon.study.json">amazon.study.json</a> — Amazon in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/applied-digital.profile.json">applied-digital.profile.json</a> — Applied Digital dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/applied-digital.study.json">applied-digital.study.json</a> — Applied Digital in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/arevon.profile.json">arevon.profile.json</a> — Arevon Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bechtel.profile.json">bechtel.profile.json</a>   — Bechtel dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/bechtel.study.json">bechtel.study.json</a>     — Bechtel in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/black-veatch.profile.json">black-veatch.profile.json</a> — Black &amp; Veatch dossier profile
@@ -112,6 +113,7 @@ Last updated: `2026-08-23 11:37:09 PM EST` · Repo version: `v02.92r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eaton.profile.json">eaton.profile.json</a>     — Eaton dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eaton.study.json">eaton.study.json</a> — Eaton in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/envision-energy.profile.json">envision-energy.profile.json</a> — Envision Energy dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eolian.profile.json">eolian.profile.json</a> — Eolian dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/equinix.profile.json">equinix.profile.json</a>   — Equinix dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/equinix.study.json">equinix.study.json</a> — Equinix in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eve-energy.profile.json">eve-energy.profile.json</a> — EVE Energy dossier profile
@@ -139,12 +141,15 @@ Last updated: `2026-08-23 11:37:09 PM EST` · Repo version: `v02.92r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/iren.study.json">iren.study.json</a> — IREN in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/jinko.profile.json">jinko.profile.json</a>     — Jinko dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/jinko.study.json">jinko.study.json</a> — Jinko in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/jupiter-power.profile.json">jupiter-power.profile.json</a> — Jupiter Power dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/key-capture-energy.profile.json">key-capture-energy.profile.json</a> — Key Capture Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/kiewit.profile.json">kiewit.profile.json</a>    — Kiewit dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/kiewit.study.json">kiewit.study.json</a>     — Kiewit in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/lambda.profile.json">lambda.profile.json</a> — Lambda dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/lambda.study.json">lambda.study.json</a> — Lambda in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/lg-energy-solution.profile.json">lg-energy-solution.profile.json</a> — LG Energy Solution dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/lg-energy-solution.study.json">lg-energy-solution.study.json</a> — LG Energy Solution in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/lightsource-bp.profile.json">lightsource-bp.profile.json</a> — Lightsource bp dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/liteon.profile.json">liteon.profile.json</a>    — LITEON dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/liteon.study.json">liteon.study.json</a> — LITEON in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/ls-energy-solutions.profile.json">ls-energy-solutions.profile.json</a> — LS Energy Solutions dossier profile
@@ -159,6 +164,7 @@ Last updated: `2026-08-23 11:37:09 PM EST` · Repo version: `v02.92r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/narada.profile.json">narada.profile.json</a> — Narada Power dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nebius.profile.json">nebius.profile.json</a> — Nebius dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nebius.study.json">nebius.study.json</a> — Nebius in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nextera-energy-resources.profile.json">nextera-energy-resources.profile.json</a> — NextEra Energy Resources dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nvidia.profile.json">nvidia.profile.json</a>    — NVIDIA dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nvidia.study.json">nvidia.study.json</a> — NVIDIA in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/openai.profile.json">openai.profile.json</a>    — OpenAI dossier profile
@@ -167,6 +173,7 @@ Last updated: `2026-08-23 11:37:09 PM EST` · Repo version: `v02.92r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/oracle.study.json">oracle.study.json</a> — Oracle in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/panasonic.profile.json">panasonic.profile.json</a> — Panasonic dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/panasonic.study.json">panasonic.study.json</a> — Panasonic in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/plus-power.profile.json">plus-power.profile.json</a> — Plus Power dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/prevalon.profile.json">prevalon.profile.json</a> — Prevalon Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/primoris.profile.json">primoris.profile.json</a>  — Primoris dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/primoris.study.json">primoris.study.json</a>   — Primoris in-app technology study guide
@@ -193,6 +200,7 @@ Last updated: `2026-08-23 11:37:09 PM EST` · Repo version: `v02.92r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/switch.study.json">switch.study.json</a> — Switch in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/terawulf.profile.json">terawulf.profile.json</a> — TeraWulf dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/terawulf.study.json">terawulf.study.json</a> — TeraWulf in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/terra-gen.profile.json">terra-gen.profile.json</a> — Terra-Gen dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.profile.json">tesla.profile.json</a>     — Tesla dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/tesla.study.json">tesla.study.json</a>     — Tesla in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/trina-storage.profile.json">trina-storage.profile.json</a> — Trina Storage dossier profile

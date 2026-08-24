@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 41/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.42w] — 2026-08-24 12:15:30 AM EST — v02.93r
+
+### Added
+- New "IPP" company category — power producers that buy and operate battery systems now have their own colored tag and roster filter, alongside eight new company profiles in that category
 
 ## [v01.41w] — 2026-08-22 10:57:17 PM EST — v02.90r
 

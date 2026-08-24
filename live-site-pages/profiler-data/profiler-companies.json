@@ -6,6 +6,7 @@
     "integrator",
     "epc",
     "gc",
+    "ipp",
     "investor",
     "hyperscaler",
     "neocloud",
@@ -59,6 +60,17 @@
       "ticker": "NASDAQ: APLD",
       "status": "active",
       "lastUpdated": "2026-08-21"
+    },
+    {
+      "slug": "arevon",
+      "name": "Arevon Energy",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The Tesla-locked CAISO machine — seven-for-seven Megapack across ~5.6 GWh, pension-owned (APG/CalSTRS), transferability pioneer ($191M JPMorgan first), and an on-record domestic-supply doctrine.",
+      "hq": "Scottsdale, AZ, US",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
     },
     {
       "slug": "bechtel",
@@ -250,6 +262,17 @@
       "lastUpdated": "2026-08-23"
     },
     {
+      "slug": "eolian",
+      "name": "Eolian",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The American-built ideologue and energy-plus-load pioneer — CyrusOne DFW7 monetizes a BESS interconnection, Flint Grid is PJM's largest battery in the Columbus AI corridor, and both GWh-class supplier slots are open (to FEOC-clean vendors).",
+      "hq": "Burlingame, CA, US",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
       "slug": "equinix",
       "name": "Equinix",
       "categories": [
@@ -414,6 +437,28 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "jupiter-power",
+      "name": "Jupiter Power",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "Hithium's biggest disclosed US customer — 3 GWh safe-harbored (2024), prospectus-named, and the 2.8 GWh Trimount design win — while its own channels stay silent and message domestic content. BlackRock-owned, ~8.8 GWh op/UC/contracted.",
+      "hq": "Austin, TX, US",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
+      "slug": "key-capture-energy",
+      "name": "Key Capture Energy",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The NYISO first-mover in play — Sungrow-built fleet, Powin scar tissue, zero Korean cells despite SK ownership, open LIPA/NYSERDA/Michigan procurement windows, and an unresolved sale process (Nomura).",
+      "hq": "Albany, NY, US",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
       "slug": "kiewit",
       "name": "Kiewit",
       "categories": [
@@ -446,6 +491,17 @@
       "ticker": "KRX: 373220",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "lightsource-bp",
+      "name": "Lightsource bp",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The second verified Hithium customer — 640 MWh at Woolooga, Australia only; FEOC-clean First Solar in the US, Gotion won the next battery, and bp is reportedly selling the whole platform to a Kuwait-backed consortium.",
+      "hq": "London, UK",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
     },
     {
       "slug": "liteon",
@@ -546,6 +602,18 @@
       "lastUpdated": "2026-08-21"
     },
     {
+      "slug": "nextera-energy-resources",
+      "name": "NextEra Energy Resources",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The market-maker — ~5.2 GW operating storage, a 95 GW storage pipeline, domestic supply locked through 2029 at 1.5x, and the defining AIDC franchise (Google campuses, Meta ESAs, Duane Arnold, the $67B Dominion merger).",
+      "hq": "Juno Beach, FL, US",
+      "ticker": "NYSE: NEE",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
       "slug": "nvidia",
       "name": "NVIDIA",
       "categories": [
@@ -591,6 +659,17 @@
       "ticker": "TYO: 6752",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "plus-power",
+      "name": "Plus Power",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The tolling franchise — 1,650 MW/4,150 MWh across 5 states, dual-sourced Tesla + Sungrow (330+ PowerTitan containers), no public FEOC posture, and Sierra Estrella marketed as grid support for a 240 MW hyperscale campus.",
+      "hq": "The Woodlands, TX, US",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
     },
     {
       "slug": "prevalon",
@@ -756,6 +835,17 @@
       "ticker": "NASDAQ: WULF",
       "status": "active",
       "lastUpdated": "2026-08-21"
+    },
+    {
+      "slug": "terra-gen",
+      "name": "Terra-Gen",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "The FEOC pivot case study — world's largest single BESS site (E&S, 3.3 GWh on LG/Samsung/BYD) then an 8 GWh, ~$1.43B US-made LG Vertech lock through 2029; Masdar/Igneo-owned with a 1 GWh NY build ahead.",
+      "hq": "San Diego, CA, US",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
     },
     {
       "slug": "tesla",

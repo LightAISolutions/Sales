@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v02.93r] — 2026-08-24 12:15:30 AM EST
+
+> **Prompt:** "continue with Batch B" *(Executes Batch B of the plan approved under v02.91r — the eight IPP/developer dossiers covering the buyer side of the containerized-BESS web. Research ran as ten parallel background agents: two-stage first-party/third-party sweeps for the two Hithium prospectus references (Jupiter Power, Lightsource bp) and single combined sweeps for the other six.)*
+
+### Added
+- **Eight Batch B IPP dossiers** (`live-site-pages/profiler-data/`) — `nextera-energy-resources`, `jupiter-power`, `plus-power`, `arevon`, `lightsource-bp`, `key-capture-energy`, `eolian`, `terra-gen` `.profile.json`, all schemaVersion 2 with banded fleet/supplier Technical Annexes, labeled strategy reads with an explicit Hithium lens, and chronological sources. The batch verifies both Hithium prospectus references at trade-press level: Jupiter (3 GWh 2024 supply deal + the 2.8 GWh Trimount design win with 5.015 MWh units) and Lightsource bp (640 MWh Woolooga, Australia — 128 × 5 MWh containers); documents each buyer's FEOC posture (NextEra's domestic lock through 2029, Terra-Gen's 8 GWh LG Vertech pivot, Eolian's American-built coalition stance, Arevon's Tesla monogamy, Plus Power's dual-source Tesla/Sungrow split, KCE's open windows); and corrects two tasking premises (Big Rock belongs to Gore Street, not Arevon; ECP fully exited Terra-Gen in Oct 2024)
+- **`ipp` registry category** — `profiler-companies.json` gains `ipp` in its category list and grows 71 → 79 companies; `Profiler.html` (v01.42w) adds the category to `ovSafeCat`'s known list, an `IPP` display label in `ovCatLabel`, and an `--ov-ipp` tag color, so roster chips and tags render the new category natively
+
+### Changed
+- **README tree** — eight `*.profile.json` entries inserted into the `profiler-data/` block in filename order
+
+### Notes
+- `Profiler.html` v01.41w → v01.42w (page-side `ipp` support is a renderer change; dossier data remains data-only)
+- Batches C (EPCs) and D (BtM packagers) follow per the approved plan; Phase 2 Industry Guidance modules and the Hithium dossier v5 revision come after
 
 ## [v02.92r] — 2026-08-23 11:37:09 PM EST
 
