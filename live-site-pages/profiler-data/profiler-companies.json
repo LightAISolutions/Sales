@@ -118,6 +118,18 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "canadian-solar",
+      "name": "Canadian Solar (e-STORAGE)",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "e-STORAGE's SolBank maker — NASDAQ-listed with a 75.1%-restructured CS PowerTech for FEOC compliance, a 2.5 GWh US data-center-demand order, and the unconfirmed Shelbyville KY ramp as the biggest swing factor.",
+      "hq": "Guelph, Canada",
+      "ticker": "NASDAQ: CSIQ",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
       "slug": "catl",
       "name": "CATL",
       "categories": [
@@ -166,6 +178,19 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "crrc-zhuzhou",
+      "name": "CRRC Zhuzhou Institute",
+      "categories": [
+        "supplier",
+        "integrator"
+      ],
+      "tagline": "The rail SOE that became a top-tier BESS integrator — 1260H-listed, Hithium's ≥120 GWh anchor customer, and the CNY 0.46-0.53/Wh price-benchmark setter of Chinese grid tenders.",
+      "hq": "Zhuzhou, China",
+      "ticker": "SHA: 601766 (parent CRRC)",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
       "slug": "crusoe",
       "name": "Crusoe",
       "categories": [
@@ -211,6 +236,18 @@
       "ticker": "NYSE: ETN",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "envision-energy",
+      "name": "Envision Energy",
+      "categories": [
+        "supplier",
+        "integrator"
+      ],
+      "tagline": "The other NDAA §154-named major — WoodMac tied-#5 integrator whose AESC cells arm Fluence and Prevalon via the Fixx template, with the strongest (China-proven) AIDC storyline in the field.",
+      "hq": "Shanghai, China",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
     },
     {
       "slug": "equinix",
@@ -339,6 +376,19 @@
       "lastUpdated": "2026-08-14"
     },
     {
+      "slug": "hyperstrong",
+      "name": "HyperStrong",
+      "categories": [
+        "supplier",
+        "integrator"
+      ],
+      "tagline": "China's grid-side integration specialist — HyperBlock M 12.8 MWh, a ≥200 GWh CATL pact plus 60 GWh sodium, and ~10 GWh of 2026 overseas orders with the Americas slice described as data-center storage.",
+      "hq": "Beijing, China",
+      "ticker": "SSE STAR: 688411",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
       "slug": "iren",
       "name": "IREN",
       "categories": [
@@ -410,6 +460,19 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "ls-energy-solutions",
+      "name": "LS Energy Solutions",
+      "categories": [
+        "supplier",
+        "integrator"
+      ],
+      "tagline": "The quiet Korean-owned option — ex-Parker Hannifin PCS heritage, Korean tier-1 cells, the Big Rock 200 MW/400 MWh flagship, and the cleanest FEOC story in the US mid-tier that nobody markets.",
+      "hq": "Charlotte, NC, US",
+      "ticker": "KRX: 010120 (parent LS ELECTRIC)",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
       "slug": "megmeet",
       "name": "Megmeet",
       "categories": [
@@ -456,6 +519,19 @@
       "hq": "Minneapolis, MN, USA",
       "status": "active",
       "lastUpdated": "2026-08-21"
+    },
+    {
+      "slug": "narada",
+      "name": "Narada Power",
+      "categories": [
+        "supplier",
+        "integrator"
+      ],
+      "tagline": "The distressed backup-power incumbent — #2 in DC/base-station batteries with GWh-scale semi-solid firsts, now under ST designation and a creditor reorganization petition; counterparty risk is the headline.",
+      "hq": "Hangzhou, China",
+      "ticker": "SZSE: 300068 (ST Nandu)",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
     },
     {
       "slug": "nebius",
@@ -515,6 +591,18 @@
       "ticker": "TYO: 6752",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "prevalon",
+      "name": "Prevalon Energy",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Mitsubishi Power's storage spin-out turned Nextpower subsidiary — HD5 blocks and the Hybrid Power Stabilizer behind a claimed 1.3 GW of hyperscaler contracts, FEOC-armored by a 10 GWh AESC/Fixx domestic-cell deal.",
+      "hq": "Heathrow, FL, US",
+      "ticker": "NASDAQ: NXT (parent Nextpower)",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
     },
     {
       "slug": "primoris",
@@ -634,6 +722,19 @@
       "lastUpdated": "2026-08-09"
     },
     {
+      "slug": "sunwoda",
+      "name": "Sunwoda",
+      "categories": [
+        "supplier",
+        "integrator"
+      ],
+      "tagline": "The fastest riser of the Chinese top ten — first to a million 684 Ah cells, ~#9 integrator at 25.6 GWh (+188%), US-relevant only through its AIDC backup/BBU lane.",
+      "hq": "Shenzhen, China",
+      "ticker": "SZSE: 300207",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
+    },
+    {
       "slug": "switch",
       "name": "Switch",
       "categories": [
@@ -667,6 +768,18 @@
       "ticker": "NASDAQ: TSLA",
       "status": "active",
       "lastUpdated": "2026-08-09"
+    },
+    {
+      "slug": "trina-storage",
+      "name": "Trina Storage",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Elementa 2 Pro/3 and grid-forming Electra from the solar major — exited T1 Energy to ~10%, no US manufacturing, betting bankability over volume in Europe and Asia.",
+      "hq": "Changzhou, China",
+      "ticker": "SHA: 688599 (Trina Solar)",
+      "status": "active",
+      "lastUpdated": "2026-08-23"
     },
     {
       "slug": "turner-construction",
