@@ -6,6 +6,38 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-24 05:19:27 PM EST
+**Repo version:** v02.99r
+**Branch:** `claude/profiler-rbac-phase-4-mph0s9`
+
+**What we worked on (v02.98r-v02.99r — Phases 4 and 5, completing the v02.91r AIDC program):**
+
+- **Phase 4 (v02.98r):** the two-document Hithium sales strategy report in `study-prep/hithium/` — the **IC playbook** (`hithium-ic-playbook.md` + 7-page PDF: the market-fence one-pager, the six-channel hunt map + Jupiter-pattern account profile, the seven-question qualification script + disqualifier table, MACR-arithmetic-as-a-service, the seven-row objection table, the five-play Jupiter defense vs the Peak Energy sodium wedge with early-warning indicators, the 10-item proof pack, the red-lines list) and the **team-lead playbook** (`hithium-team-lead-playbook.md` + 6-page PDF: the certified-MW-over-queue-GW thesis, the six-demand-pool coverage plan with 4:1 staffing guidance, the dated 2026-28 policy calendar, rules of engagement vs ON.energy / the gas cohort / CATL / the FEOC-compliant tier / Peak Energy, five-stage pipeline gates with MOU-at-zero counting rules, team standards, the 2026-28 play). Both registered in `build-study-prep-pdf.mjs`
+- **Phase 5 (v02.99r, GAS v01.20g):** the team training curriculum — two new Industry Guidance training modules in `Profiler.gs` (library now 6): `guidanceDocBessTech_()` (*BESS Technology Fundamentals for the Sales Team* — LFP in plain terms, the spec sheet decoded, the 280→1300Ah cell ladder, cell-to-container, sodium claim discipline, duration-class proscons, safety/certification vocabulary) and `guidanceDocPowerInfra_()` (*Power Infrastructure & the AIDC Power Chain* — grid basics and MW-vs-MWh, the two market designs, the battery revenue stack, the grid-to-GPU chain with NOGRR 282/SB 6, the three BESS sockets, the 2026-28 gates timeline); their two analysis markdowns in `industry-guidance/`; and the four-week onboarding curriculum (`hithium-team-training-curriculum.md` + 5-page PDF) with pass/fail competency gates G1-G4, before-day-one setup, and trainer's notes. Verified via node --check, inner-scripts check, JSON/tooltip/quiz validation, Playwright `gdRenderDoc()` renders, and the harness smoke test
+- All five PDFs (both playbooks + the curriculum) delivered to the developer as chat downloads
+
+**Where we left off:**
+- Everything committed, pushed, and merged through v02.99r (workflow deployed; GAS webhook pulls v01.20g); working tree clean. **The v02.91r plan is fully complete — Phases 1-5 all delivered** (the 88-dossier base, 6 guidance modules, Hithium v5 + the relationship web, the two playbooks, the training curriculum)
+- Developer-side only: review the two new training modules in-app (admin/contributor tiers, the ✦ Industry Guidance button) now that v01.20g is live
+
+**Key decisions made (established this session):**
+- Phase 5 landed as **in-app guidance modules + a curriculum document** — the two teaching gaps (core technical, power infrastructure) filled the same way as the Phase 2 policy modules, and the curriculum sequences all assets into four gated weeks (G3, the red-lines recital, is the hard floor — no customer contact until it passes)
+- Training modules are **teaching syntheses with pointer-form claims ledgers** — no new external claims; every figure traces to the dossier or a prior verified analysis
+- Concede-then-structure is the house objection-answer pattern (playbooks + curriculum enforce it)
+- Sodium claim discipline in writing: the AIDC sodium SKU's mass production is unconfirmed — the approved line commits only to the shipping utility SKU plus a written roadmap
+
+**Active context:**
+- CHANGELOG counter 92/100; Profiler v01.42w / GAS v01.20g; registry 88 companies; no TODO items or active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+- Standing sensitivities unchanged: the Zhonhen/Schneider disclosure stays in Zhonhen contexts; never raise Zhu Guoding's conviction unprompted in customer-facing material; NVIDIA quotes paraphrased with page cites; field notes never cited as profile sources; the reported Hithium executive arrest stays do-not-quote
+
+**Recommendation for next session:**
+- The v02.91r AIDC program is fully complete (Phases 1-5) — no deferred work; future sessions can pick any new task. (Developer-side only: review the two new training modules in-app.)
+
+## Previous Sessions
+
+### Session — 2026-08-24 (v02.97r)
+
 **Date:** 2026-08-24 03:12:54 PM EST
 **Repo version:** v02.97r
 **Branch:** `claude/profiler-role-access-control-mwyky3`
@@ -38,43 +70,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - **Execute Phase 4 — the two-document Hithium sales strategy report** (`study-prep/hithium/`): the IC playbook (account targeting from the decision map, the safe-harbored/merchant qualification script, objection handling from the bankability checklist, Jupiter account defense vs the Peak wedge) and the team-lead playbook (territory/segment strategy across the six demand pools, the policy calendar, competitive posture vs ON.energy and the gas cohort, pipeline metrics) — both PDF'd via `build-study-prep-pdf.mjs`
 - **To continue:** type `continue with Phase 4`
-
-## Previous Sessions
-
-### Session — 2026-08-22 (v02.87r)
-
-**Date:** 2026-08-22 07:35:46 PM EST
-**Repo version:** v02.87r
-**Branch:** `claude/aidc-photo-backfill-g8ujeg`
-
-**What we worked on (v02.82r–v02.87r — photo backfill passes 2–3, Zhonhen Q&A + prep corrections, and the Industry Guidance hub):**
-
-- **Exec-photo backfill pass 2 (v02.82r):** 34 verified headshots across 19 dossiers (coverage 126 → 160 of 320). Root-caused the prior sweep's misses: blind URL-path guessing, not blocked hosts — replaced with a two-level crawl of each site's own navigation, alias-aware name matching, Wikipedia-biography lead images for Commons (7 photos), and same-surname collision fixes. Method consolidated into `scripts/harvest-exec-photos.py` (gaps/firstparty/commons/sheet/wire subcommands)
-- **PDF track (v02.83r):** +4 headshots from ESG/annual reports via a new `pdfs` subcommand (caption-band matching, clip-region rendering) — Samsung SDI, LG Energy Solution ×2, Huawei Digital Power, all previously zero-photo. Coverage **164/320, 46 dossiers**. Empirically bounded: regulatory filings are text-only; ESG reports show boards, not exec teams
-- **Browser-path diagnosis (v02.84r):** Chromium *does* honor the proxy (bogus-port test proves it); its NSS store starts empty (fixable via `certutil` + the proxy CA — commands recorded in the harvester's env notes); the residual reset on non-github hosts is **upstream egress policy — an administrator action, not another session's debugging**. Photo backfill is at its practical ceiling (~156 remain, mostly JS-rendered sites + no-Wikipedia-article execs)
-- **Zhonhen TRU/SST correction (v02.84r):** the lesson plan told the developer to call Panama a "solid-state transformer" — corrected to TRU in Module 3 + Q&A, PDF rebuilt. Answered in chat: TRU-vs-SST device classes, and why 473 kW/m³ leads for tenant neoclouds (density = revenue) while self-builders get schedule/ERCOT and Crusoe gets generator protection
-- **Interview-day one-pager (v02.85r):** `zhonhen-one-pager.md` + PDF (2 pages after the developer okayed length over the 1-page cut); new `dense: true` scan-sheet mode in `build-study-prep-pdf.mjs`
-- **Industry Guidance hub (v02.86r, Profiler v01.38w · GAS v01.17g):** admin-only "✦ Industry Guidance" masthead button → full-screen overlay rendering study modules from JSON served by a new admin-gated `action=guidance` API in Profiler.gs (PROJECT-marked additions on the note-ops transport; content never on public Pages). Renderer widgets: glossary tooltips, tables, pros/cons, lane-colored timeline (CVD-validated gold/blue/rose), bars, flashcards, scored quiz, claims ledger, reading progress. First module: **NVIDIA's Aug 2026 800 VDC white paper** — read all 36 pages, every number verified by two extraction agents; source PDF + `nvidia-800vdc-analysis.md` committed under `repository-information/industry-guidance/`. New repeatable command in `.claude/rules/industry-guidance.md`
-- **Zhonhen docs amended from the paper (v02.86r):** the "simpler and highly familiar" quote **verified at p22** (which names the "Panama Architecture" as a canonical TRU implementation) — retired the strategy report's "appears in no NVIDIA document" claim; quote now customer-usable (cite + paraphrase). Window refined: 2029 attaches to next-gen SST; TRU 4.8 MW blocks specified now; Option B Q3 2027
-- **Block-composition story (v02.87r):** `zhonhen-block-composition.md` + PDF — the current-ladder derivation (6000 A = 4.8 MW ÷ 800 V), NVIDIA's own blessing of paralleled rectifier modules, the arithmetic (2 × 2.5 MW = the drawn 5 MVA block; **8 × 2.5 = a 20 MW DU exactly**; 5 MW MVR container = the block 1:1), eight-row interface scorecard, ten engineering questions
-
-**Where we left off:**
-- Everything committed, pushed and merged through **v02.87r**; working tree clean; Profiler at v01.38w / GAS v01.17g (webhook redeploys on merge). The developer has the one-pager, block-composition PDF, and the in-app module pending their first sign-in test
-
-**Key decisions made (developer-approved):**
-- Industry Guidance architecture: **in-app renderer + admin-gated GAS data op** (chosen over GAS-iframe and all-on-Pages); **Q&A skipped for v1** (revisit path documented — `anthropicSummarize_` precedent + `ANTHROPIC_API_KEY`); **source PDFs committed** to `repository-information/industry-guidance/sources/`; **Zhonhen docs updated** in the same push
-- Public changelog entries for guidance stay generic — never name analyzed documents publicly
-- NVIDIA-side claims only from the verified ledger; deck-only Zhonhen figures (container table, 10 GW fleet) stay inside Zhonhen conversations; Schneider relationship never leaves study-prep; the developer confirmed both field notes are now in the app
-- Estimate calibration: anchor on deliverable count (~20–40m per multi-file feature), not phase count
-
-**Active context:**
-- **CHANGELOG counter reads 105/100** — twelve of today's sections are current-day exempt (non-exempt = 93). The **next push after midnight EST trips archive rotation** (rotate whole date-groups, SHA-enrich, post-rotation grep check)
-- Also pending from earlier: the two changelog-rotation rules (step-2 "count all" vs Scenario A "non-exempt only") genuinely conflict — was flagged to the developer 08/22; Scenario A followed in practice
-- Photo backfill: done at 164/320 unless the egress policy changes (then `scripts/harvest-exec-photos.py` env notes has the exact Chromium recipe)
-- Playwright: proxy CA now needs importing per-container (`apt-get install -y libnss3-tools` + `certutil` line in the harvester notes); PyMuPDF + poppler-utils installed this container only
-- No TODO items, no active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-
-**Recommendation for next session:**
-- **Triage the developer's Zhonhen field notes and any answers to the ten block-composition questions into a dossier revision** (`profiler zhonhen`): the notes are in the app's Drive log now, the composition brief will generate engineering answers worth folding in, and the dossier's v2 pre-dates the white-paper verification — one revision pass aligns dossier, notes, and the new primary source
-- **To continue:** type `triage zhonhen notes and refresh the dossier`
