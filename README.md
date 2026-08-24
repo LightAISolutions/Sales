@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-24 01:27:35 AM EST` · Repo version: `v02.95r`
+Last updated: `2026-08-24 01:51:27 PM EST` · Repo version: `v02.96r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -438,7 +438,10 @@ Last updated: `2026-08-24 01:27:35 AM EST` · Repo version: `v02.95r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-STYLES.md">PROFILER-STYLES.md</a>      — Profiler dossier writing-style registry (active style + Default/Bloomberg/alternative styles with mock-ups)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/industry-guidance">industry-guidance/</a>   — Analyses of industry-wide documents feeding the Profiler app's admin-only Industry Guidance modules (not deployed)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/bess-bankability-certification-analysis.md">bess-bankability-certification-analysis.md</a> — Bankability &amp; certification for grid-scale BESS (research synthesis; source of truth for the in-app module)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/china-policy-stack-analysis.md">china-policy-stack-analysis.md</a> — The China policy stack for a BESS seller (research synthesis; source of truth for the in-app module)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/nvidia-800vdc-analysis.md">nvidia-800vdc-analysis.md</a> — Full analysis + study guide of NVIDIA's Aug 2026 800 VDC white paper (source of truth for the in-app module; claims ledger verified by two extraction passes)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/utility-aidc-procurement-analysis.md">utility-aidc-procurement-analysis.md</a> — Utility procurement meets AIDC load, five case studies (research synthesis; source of truth for the in-app module)
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/industry-guidance/sources">sources/</a> — Committed source documents
 │   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/sources/nvidia-800vdc-white-paper-2026-08.pdf">nvidia-800vdc-white-paper-2026-08.pdf</a> — NVIDIA, 800 VDC Architecture: Industry Alignment &amp; Execution (36 pp, image-only PDF)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep">study-prep/</a>           — Technology lesson plans from the Profiler Prep Command (not deployed)

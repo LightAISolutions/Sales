@@ -77,6 +77,196 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v02.07r] — 2026-08-08 10:36:20 PM EST — [58d0d4e](https://github.com/LightAISolutions/Sales/commit/58d0d4eebd8a5c1c375bca27fc11636924928b87)
+
+> **Prompt:** "Purge the test notes. Also, I don't see a "Add a Field Note" option, much less an option to upload meeting notes in word doc or pdf format. Resolve these issues."
+
+### Added
+- `live-site-pages/Profiler.html` (v01.09w) — "Field note 📝" button in the dossier header (next to Export) that scrolls to the note box and focuses it; the box was rendering correctly but sat below every dossier section (33 sources deep on BYD), making it effectively invisible — root cause of "I don't see it"
+- `live-site-pages/Profiler.html` — "Upload Word/PDF 📎" button in the note box and a "📎 File" shortcut in the ⚙ Field Notes overlay header, both opening the new file-upload issue form prefilled with the company
+- `.github/ISSUE_TEMPLATE/field-note-file.yml` — 📎 Field note file form: company/source/confidence dropdowns + a textarea where the developer attaches the .docx/.pdf (GitHub issue textareas accept file attachments natively)
+- `.github/workflows/field-note-intake.yml` — new `commit-file-note` job for `field-note-file` issues: validates fields, extracts `user-attachments` URLs, downloads the document(s) to `repository-information/note-files/<slug>/YYYY-MM-DD-<name>` (never deployed; mirrored to the library), logs a placeholder note with `sourceFile` set (`[file note: <name> — summary pending triage]`), commits, dispatches the deploy, and closes the issue. Parser rejection paths (no attachment, non-Word/PDF, download failure) tested locally against the real regexes
+- `.claude/rules/profiler-app.md` — documented the in-app upload variant of the third capture channel; triage passes must replace placeholder file notes with faithful summaries
+
+### Changed
+- `.github/ISSUE_TEMPLATE/field-note.yml` — intro now points to the file form instead of "send the file to Claude"
+
+### Removed
+- The two intake-pipeline test notes (`note-20260808-01`, `note-20260808-02`) from `live-site-pages/profiler-data/profiler-notes.json`
+
+## [v02.06r] — 2026-08-08 10:19:41 PM EST — [5893c6e](https://github.com/LightAISolutions/Sales/commit/5893c6e8514bf9654200efb122ecee94a3e2bab6)
+
+> **Prompt:** "start phase R3"
+
+### Added
+- **Phase R3 — Business monthly line-items ledger** (`live-site-pages/Receipts.html` v01.33w, client-side only — no GAS change): each `<Company>/<Year>/<Month>` folder gains a `Line Items - <Month> <Year>.csv` maintained via the user's `drive.file` credential. New PROJECT-block module: `_csvEscape`/`_dateFromReceiptId` (ID's `YYYYMMDD` suffix locates rows across edits)/`_bizCsvName`/`_buildLedgerRows` (no-items receipts get a single `(no itemized lines)` row), `_updateBizLedger` (read-modify-write: drop rows by trailing `,ReceiptID` match, append, PATCH-media update or multipart create), `syncBusinessLedger` (removes from old-ID/new-ID/printed-date months, appends to the printed-date month — handles date edits moving a receipt across months), `removeFromBusinessLedger`
+- Save hook runs PDF → ledger **sequentially** (they share the folder tree; racing find-or-create could duplicate folders) with a combined status; delete hook drops ledger rows; a Business→Personal flip now trashes the PDF, clears its registered link, and removes ledger rows
+
+### Verified
+- `node --check` on inline scripts; the page's exact CSV functions run in Node on real data — quote/comma escaping, row removal by receipt ID, month filenames, date-from-ID incl. collision suffixes, no-items fallback; Playwright smoke load with zero page errors
+
+## [v02.05r] — 2026-08-08 10:18:39 PM EST — [dcf6414](https://github.com/LightAISolutions/Sales/commit/dcf64142e90323afa95653954f6067909ed2b100)
+
+> **Prompt:** *(follow-up within the same interaction — end-to-end intake test)* The first live test of the field-note pipeline (issue #1) committed the note to `main` correctly, but the deploy never ran: pushes made with the built-in `GITHUB_TOKEN` do not trigger `push`-event workflows (GitHub recursion prevention), so the note was invisible on the live site.
+
+### Fixed
+- `.github/workflows/field-note-intake.yml` — after committing a note, the workflow now explicitly dispatches `auto-merge-claude.yml` on `main` (`gh workflow run`); `workflow_dispatch` events are exempt from GITHUB_TOKEN recursion prevention, so the deploy + library mirror run and the note appears in the Profiler ⚙ changelog. Added the required `actions: write` permission and corrected the header comment that wrongly claimed the push alone would trigger the deploy
+
+## [v02.04r] — 2026-08-08 10:11:17 PM EST — [baf1388](https://github.com/LightAISolutions/Sales/commit/baf1388004f57a040e536afbd684b813dbef5b81)
+
+> **Prompt:** "What is the purpose of this new Profiler Intake project? Is there any way to accomplish my goal without creating a new project?" *(followed by the form answer: "I would like the option to either type small amounts of information in an input box in a target company's dossier and also the option to upload notes via a word doc or PDF.")*
+
+### Added
+- `.github/ISSUE_TEMPLATE/field-note.yml` — "📝 Field note" GitHub issue form: company dropdown (all 10 covered slugs + general), source-type dropdown, verbatim note textarea, 0–100 confidence dropdown
+- `.github/workflows/field-note-intake.yml` — workflow fires on `field-note`-labeled issues opened by the repo owner: parses the issue body (injection-safe via env), validates slug/source/confidence/length, prepends the note to `live-site-pages/profiler-data/profiler-notes.json` with id `note-YYYYMMDD-NN`, commits (no `[skip ci]` so Pages redeploys), closes the issue with a confirmation comment
+- `live-site-pages/Profiler.html` (v01.08w) — "Add a Field Note" quick-note box at the bottom of every non-archived dossier: textarea + source select + confidence select; Save opens a prefilled GitHub issue form (`?template=field-note.yml&company=…&sourcetype=…&confidence=…&note=…`); hint directs Word/PDF files to Claude
+- `.claude/rules/profiler-app.md` — documented the second capture channel (in-dossier quick-note → issue intake) and third capture channel (Word/PDF files via Claude, originals stored privately under `repository-information/note-files/<slug>/`, note text = faithful summary, `sourceFile` set)
+- `.github/workflows/auto-merge-claude.yml` — mirror job now syncs `repository-information/note-files/` → `library/notes/files/`
+
+### Changed
+- `live-site-pages/Profiler.html` — "＋ Add note" button in the Field Notes changelog overlay now opens the issue form instead of the removed intake page
+- `repository-information/PROFILER-SCHEMA.md` — Field Notes schema: `submittedVia` now documents the `issue-form (#N)` format; added `sourceFile` field for Word/PDF-sourced notes
+
+### Removed
+- ProfilerIntake GAS scaffold (superseded by the issue-form intake before it was ever deployed): `googleAppsScripts/ProfilerIntake/` (`.gs` + config), `live-site-pages/profiler-intake.html`, its 4 changelog files and 2 version files, `repository-information/diagrams/profiler-intake-diagram.md`, its GAS Projects table row in `.claude/rules/gas-scripts.md`, its deploy step in `auto-merge-claude.yml`, and its nodes in `REPO-ARCHITECTURE.md` (flowchart pako URL regenerated and decompression-verified)
+- README tree entries for all removed profiler-intake files (connector characters repaired)
+
+## [v02.03r] — 2026-08-08 09:56:18 PM EST — [9bce979](https://github.com/LightAISolutions/Sales/commit/9bce97994df40a824a47f21329a626374d04a114)
+
+> **Prompt:** "Change the "Reimbursement" toggle name to "Business". The toggle between Personal and Reimbursement/Business is not obvious enough - Make it more obvious. All of my current scanned receipts are all Personal; I won't have any real Reimbursement/Business receipts until I get a new job, so skip the tests related to Reimbursement/Business for now. I will bring problems up as they arise later. Start Phase 2"
+
+### Added
+- **Phase R2 — Business-expense PDF filing**: on every Business save the browser converts the receipt photo to a one-page PDF (hand-built JPEG-in-PDF, no libraries — CSP-safe) and files it under `<Company>/<Year>/<Month>` in the user's own Drive (lazy folder creation from the receipt's printed date, English names); first Business save prompts inline for the company name
+
+#### `Receipts.html` — v01.32w
+
+##### Added
+- PDF pipeline in the PROJECT block: `_jpegDims` (SOF parse), `_buildJpegPdf` (verified against a real JPEG with MuPDF rasterization), `_findOrCreateFolder`/`_ensureBizPath` (lazy `<Company>/<Year>/<Month>` via the user's `drive.file` token), `_uploadPdfToFolder` (multipart), `saveBusinessPdf` orchestrator (photo bytes → PDF → upload → `registerReceiptPdf`; re-saves trash the previous PDF)
+- Company plumbing: `rr-company-row` inline prompt in the review grid (shown for Business with no stored company; save blocks until provided), ⚙️ Settings "Company · X" row with inline editor, `_companyName`/`_fetchCompany` state
+- Delete flow trashes the receipt's PDF copy (server returns the link — the file lives in the user's Drive); history detail shows "View PDF copy ↗"
+
+##### Changed
+- **Reimbursement → Business** rename across toggle, review select, History/Reports filters, badge tooltip, 中文 strings (报销 → 商务); stored/localStorage values renamed with legacy-value compatibility
+- Scan-panel toggle redesigned as an obvious segmented switch: "EXPENSE TYPE" caption + joined two-half pill, active half solid ink with white text
+
+#### `Receipts.gs` — v01.21g
+
+##### Added
+- "PDF Link" column 16 + Profiles "Company Name" column 5 (in-place upgrades); `setCompanyName` (sanitized for folder names) + `registerReceiptPdf` (owner-only) with POST + GET-fallback routes; `getProfile` returns `company`; `getReceiptDetail` returns `pdfUrl`; `deleteReceipt` returns `pdfUrl` for browser-side trashing
+
+##### Changed
+- Stored expense-type value renamed to `Business` (save normalization + read compatibility for the briefly-stored `Reimbursement` value) across list/report/detail/export
+
+### Changed
+- CHANGELOG archive rotation: count reached 102 (v02.02r had pushed past the cap) — moved the oldest date group (2026-07-17, 11 sections `v01.02r`–`v01.12r`) to `CHANGELOG-archive.md` with SHA enrichment
+
+### Verified
+- `node --check` on the `.gs` + inline scripts; the page's exact `_buildJpegPdf` run in Node on a real 1200×1600 JPEG and the output rasterized by MuPDF (1 page, 612×816pt, embedded image intact); Playwright at 390×844 — segmented switch states, company row reveal, options, zero page errors
+
+## [v02.02r] — 2026-08-08 09:40:27 PM EST — [c98e251](https://github.com/LightAISolutions/Sales/commit/c98e251a027da245ea0378d19b3f5624e1be3a42)
+
+> **Prompt:** "secret added. Confirm there are no mistakes."
+
+### Changed
+
+- `ENTERPRISE-SETUP.md` Library Mirror Token table — Expiration row updated to record the actual choice: **No expiration** (enterprise admin exemption, matching the GAS token); secret noted as added 2026-08-08
+- No rotation move this push: 101 total sections but only 94 are non-exempt (today's are exempt per rotation logic — Scenario F pattern); counter reads over-capacity until older date groups age out
+
+### Fixed
+
+- Resolved the parallel-session rotation collision: this session and the concurrent Receipts session (v02.01r) both rotated `v01.01r` to the archive identically — kept the upstream full-SHA header, no content lost
+
+## [v02.01r] — 2026-08-08 09:31:15 PM EST — [9f2955b](https://github.com/LightAISolutions/Sales/commit/9f2955b0662ae458616bd36e2a11a5c9590472cd)
+
+> **Prompt:** "1. One company. 2. Lazy folder creation. 3. CSV. 4. English folder/file names approved."
+
+### Added
+- **Phase R1 of the reimbursement plan — expense type at the point of scanning** (approved with: one company, lazy folders, CSV, English names — those choices land in Phases R2/R3)
+
+#### `Receipts.html` — v01.31w
+
+##### Added
+- 🏠 Personal | 💼 Reimbursement toggle (`.etbtn`) on the scan panel above the Scan button — sticky per device via `localStorage` `rcpt_expense_mode`; `_expenseMode`/`setExpenseMode()` in the PROJECT block
+- `rr-etype` select in the review grid (pairs with Total) — new scans inherit the scan-panel mode, editing an existing receipt shows its stored type; `collectReview()` sends `expenseType`
+- `rh-etype` filter in the History filter drawer + 💼 `rh-et-tag` badge on reimbursement rows; filter participates in the "n active" hint, Clear, and reload-on-change
+- `rp-etype` filter in Reports (client-side, consistent with the other instant Reports filters) — hint, Clear, and re-render wired
+- `etype` parameter sent on `listReceipts`, `exportReceipts`, and `exportPreview` calls; 中文 translations for the toggle, the three dropdowns, and the "Expense" label
+
+#### `Receipts.gs` — v01.20g
+
+##### Added
+- "Expense Type" column 15 on the Receipts tab (header array + in-place upgrade; blank legacy rows read as Personal everywhere — no backfill)
+- `saveReceipt` writes the normalized type; `listReceipts`/`reportReceipts`/`getReceiptDetail` return `expenseType`; `listReceipts` + `reportReceipts` accept an `etype` filter (applied before the row cap)
+- `etype` threaded through `gatherExportData_` → `exportReceipts`/`previewExportPivot`; export's Receipts sheet gains an "Expense Type" column; all six POST/GET transport routes pass `etype`
+
+### Changed
+- CHANGELOG archive rotation (first ever): section count hit 101 — moved the oldest date group (2026-07-13, `v01.01r`) to `CHANGELOG-archive.md` with SHA enrichment
+
+### Verified
+- `node --check` on the `.gs` and all inline scripts; Playwright at 390×844 — toggle state + localStorage persistence, filter options, 💼 badge, Expense select in the review grid, no horizontal scroll, zero page errors
+
+## [v02.00r] — 2026-08-08 09:09:06 PM EST — [72bce7d](https://github.com/LightAISolutions/Sales/commit/72bce7d3d9a88e36c96bd8d7f8261f90217da14a)
+
+> **Prompt:** "Regarding the centralization discussion, go with the workflow mirror, walk me through how to create the PAT, and use your proposed library layout."
+
+### Added
+
+- **`mirror-library` workflow job** (`.github/workflows/auto-merge-claude.yml`) — after every auto-merge (and on direct `main` pushes, so intake-app note commits mirror too), syncs knowledge files into `LightAISolutions/bess-aidc-library` using the approved layout: `dossiers/` (profiles + registry), `archive/`, `notes/`, `study/` (+`study-prep/` lesson plans), `digests/` (activates when the Scraper export ships), `reports/` and `receipts/` (session-written, never mirrored). Generates the library README once; commits only when content changed; skips with a notice until the `LIBRARY_SYNC_TOKEN` secret exists
+- **"Library Mirror Token" section** in `repository-information/ENTERPRISE-SETUP.md` — fine-grained PAT spec (Contents read/write on `bess-aidc-library` only) + 7-step creation walkthrough
+
+### Changed
+
+- Profiler **Archival Procedure step 3** (`.claude/rules/profiler-app.md`) — off-repo mirroring is now automatic via the workflow; sessions no longer attach the library repo
+- REPO-ARCHITECTURE.md CI/CD flowchart — added the mirror node (fed by merge and direct-main-push paths); mermaid.live URL regenerated and decompression-verified
+
+## [v01.99r] — 2026-08-08 08:11:03 PM EST — [bd4fc5c](https://github.com/LightAISolutions/Sales/commit/bd4fc5c555c35176e268efe121f29997e9bd9033)
+
+> **Prompt:** "I logged into lightaisolution and opened the MasterACL spreadsheet. All users were TRUE, but I unchecked and rechecked to TRUE. However, jonyang92@gmail.com still cannot login."
+
+### Added
+- `diagnoseAclAccess()` owner-run diagnostic in `googleAppsScripts/Receipts/Receipts.gs` (v01.19g, PROJECT block): sign-in shows `not_authorized` although the Access tab shows TRUE and the entire auth path (`exchangeTokenForSession`, `checkSpreadsheetAccess`, `getRolesFromSpreadsheet`, epoch cache) is byte-identical to the last-known-good version — so the mismatch is between what the owner edits and what the code reads. The diagnostic runs the real lookup and logs: the ACL spreadsheet's name + URL as opened by `MASTER_ACL_SPREADSHEET_ID` (catches editing a different file), tab presence, header row with duplicate `Receipts`-column detection (code uses the first match), matching col-A rows with charCode dumps (catches invisible characters / near-miss addresses), the raw page-column cell value + type, the cached verdict, then `clearAllAccessCache()` + a fresh `checkSpreadsheetAccess()` verdict
+
+### Verified
+- `node --check` on the full `.gs`; auth functions diffed byte-for-byte between dee4da1 (last confirmed working sign-in) and origin/main before concluding no code regression exists
+
+## [v01.98r] — 2026-08-08 12:14:10 AM EST — [e1a7f1a](https://github.com/LightAISolutions/Sales/commit/e1a7f1a7771bd3d6e1e970faafd7d2b38534a23a)
+
+> **Prompt:** "add the date check rule"
+
+### Added
+
+- New Think Before Asserting extension in `.claude/rules/behavioral-rules.md`: day-of-week + date pairs must be verified with `date -d YYYY-MM-DD +%A` before being asserted — including day names supplied by the user; on conflict, the date is authoritative and the discrepancy is surfaced. Prevents the day-name drift that put "Thursday 8/14" (actually Friday) into a trigger prompt and prep documents
+
+## [v01.97r] — 2026-08-08 12:12:16 AM EST — [5db593e](https://github.com/LightAISolutions/Sales/commit/5db593e0038fddc309c1d13f31cb1e0adecf4561)
+
+> **Prompt:** "The meeting is actually Friday, 8/14, and I am busy on Thursday, 8/13, so schedule this for Wednesday, 8/12."
+
+### Fixed
+
+- Meeting day-name corrected to **Friday 2026-08-14** in the refresher trigger prompt (`trig_01DBojuiEhM4ps3VEsZEvySv` — fire time was already Wednesday 2026-08-12 22:00 UTC and is unchanged) and in the `megmeet-lesson-plan.md` pacing line (now also notes Thursday 8/13 is blocked out). Root cause: the prior session inferred day names from conversational text instead of verifying with `date -d` — 8/12 was always Wednesday and 8/14 is Friday
+
+## [v01.96r] — 2026-08-08 12:07:00 AM EST — [1973941](https://github.com/LightAISolutions/Sales/commit/1973941dd4e329a7e6fa8f1de9ec6a3cb9aec1eb)
+
+> **Prompt:** "Change my Megmeet trigger from Thursday, 8/13, to Wednesday, 8/12.
+>
+> Then, update all the company dossier to reflect my increased priority on company products and services.
+>
+> Then, profiler prep the remaining companies the same way you did gor Megmeet.
+>
+> If you use 100% of my Fable usage and 100% of my usage credits, then pause and save your progress, then restart after my weekly fable limit resets. At that point, let me know how far you've gotten."
+
+### Changed
+
+- **Megmeet refresher trigger moved** to 2026-08-12 22:00 UTC (6 PM EST) — renamed "Megmeet product-tech refresher (2026-08-12)", prompt dates adjusted (`trig_01DBojuiEhM4ps3VEsZEvySv`)
+- **Products-and-services priority encoded** as a standing rule: Profiler Command research step in `.claude/rules/profiler-app.md` and a new authoring rule in `repository-information/PROFILER-SCHEMA.md` — `productsAndServices[]`/`technicalSpecs[]` carry the deepest research investment
+- **All 9 remaining dossiers revised to profileVersion 2** (product-focused research sweeps, ~20–35 sources each, first-party datasheets first; schemaVersion → 2; lastUpdated 2026-08-08): `byd` (7 lines, HaoHan/MC Cube/Blade, 6 spec tables), `catl` (10 lines, TENER/Qilin/Shenxing/Naxtra, 9 spec tables), `flexgen` (8 lines, HybridOS stack + Powin transition, 5 capability tables), `fluence` (8 lines, Smartstack/Gridstack Pro/Mosaic, 5 spec tables), `hithium` (6 lines, 280→1300Ah cell ladder + ∞Block, 9 spec tables), `sinexcel` (6 lines incl. new AIDC/HVDC division, 13 spec tables), `sungrow` (11 lines, SG-HX/1+X/PowerTitan 3.0, 10 spec tables), `tesla` (8 lines, Megapack 2XL/3/Megablock/Autobidder, 5 spec tables), `wartsila` (7 lines, Quantum 2/3/HE + GEMS + engines, 5 spec tables); registry `lastUpdated` synced
+
+### Added
+
+- **Archival system first use** — all 9 v1 dossiers archived to `live-site-pages/profiler-data/archive/<slug>.profile.v1.json` with `archive-index.json` populated (9 slugs, supersededBy 2)
+- **Technology curricula for all 9 companies** (Megmeet-style, high-school-STEM baseline, concept-only flashcards, zero company trivia): in-app `<slug>.study.json` (5 sections + 15 flashcards each) and full-depth `repository-information/study-prep/<slug>/<slug>-lesson-plan.md` (5 modules, worked examples, self-tests) — every covered company now has a Study guide 📖 in the Profiler app
+- README tree: 9 study.json entries, 9 archive entries, 9 study-prep directories
+
 ## [v01.95r] — 2026-08-07 11:19:48 PM EST — [50b831f](https://github.com/LightAISolutions/Sales/commit/50b831ff74e83091c21d5a6017e9b79d8272de2d)
 
 > **Prompt:** "I don't actually want interview prep. I want the study prep to assume I have high school level STEM knowledge and teach me whatever I need to know to understand what their products do in the grand scheme of their industry (ie: what do SSTs do in the medium voltage critical power AIDC infrastructure). Don't quiz me on company info like founding date, executive team, or headquarters location. I want to focus on each company's products and services."

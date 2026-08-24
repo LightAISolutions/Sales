@@ -1,4 +1,4 @@
-var VERSION = "v01.18g";
+var VERSION = "v01.19g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -366,7 +366,7 @@ function handleGuidanceOp_(e) {
 }
 
 function guidanceDocs_() {
-  return [guidanceDocNvidia800_()];
+  return [guidanceDocNvidia800_(), guidanceDocChinaPolicy_(), guidanceDocUtilityAidc_(), guidanceDocBankability_()];
 }
 
 function guidanceIndex_() {
@@ -1286,6 +1286,1720 @@ function guidanceDocNvidia800_() {
   {
    "t": "IEC 60309",
    "d": "The industrial connector family used for the Power Rack's 100 A AC input whips (4100P6W/P7W, 3-phase, no neutral)."
+  }
+ ]
+};
+}
+// Content: The China Policy Stack for a BESS Seller (research synthesis, 2026-08-24).
+// Derived from repository-information/industry-guidance/china-policy-stack-analysis.md;
+// claims verified against statute text, IRS notices, USTR determinations, and law-firm analyses.
+function guidanceDocChinaPolicy_() {
+  return {
+ "id": "china-policy-stack-2026-08",
+ "title": "The China Policy Stack for a BESS Seller",
+ "short": "The four federal machines constraining Chinese battery storage in the US - and the lanes that remain.",
+ "source": {
+  "doc": "Research synthesis - ~55 sources (statute text, IRS notices, USTR, Federal Register, law-firm analyses)",
+  "publisher": "Internal analysis",
+  "date": "August 2026",
+  "pages": 6,
+  "series": "Industry Guidance - policy module 1 of 3",
+  "repo": "repository-information/industry-guidance/china-policy-stack-analysis.md"
+ },
+ "updated": "2026-08-24",
+ "tiles": [
+  {
+   "k": "55% → 75%",
+   "v": "the storage MACR ladder",
+   "sub": "non-PFE cost floor, 2026 → 2030+ construction starts"
+  },
+  {
+   "k": "~40.9%",
+   "v": "the current tariff stack",
+   "sub": "3.4 MFN + 25 §301 + 12.5 §301 forced-labor (Aug 2026)"
+  },
+  {
+   "k": "Dec 31, 2025",
+   "v": "the safe-harbor line",
+   "sub": "begin construction by then → exempt from the MACR test"
+  },
+  {
+   "k": "Oct 1, 2027",
+   "v": "the DoD ban",
+   "sub": "§154 names Hithium; FY2026 NDAA phases FEOC-free 2028-31"
+  }
+ ],
+ "sections": [
+  {
+   "id": "what",
+   "title": "The four levers",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "Four separate federal machines constrain Chinese battery storage in the US, on four different legal levers: **tax law** (the OBBBA {{PFE}} rules attached to the §48E storage ITC), **trade law** (tariffs), **defense procurement law** (NDAA bans), and the **domestic-content adder**. They have different dates, different tests, and different remedies - conflating them is the most common seller error.",
+    "The tax lever is the decisive one. Since July 4, 2025 the tax code disqualifies projects tied to prohibited foreign entities from the storage ITC - worth ~30%+ of a buyer's capex. Hithium is a statutory {{SFE}} **by name**: the code incorporates the FY2024 NDAA §154(b) list (CATL, BYD, Envision, EVE, Gotion, Hithium) directly, and Hithium qualifies a second time as a Chinese-organized company. This is statute, not agency discretion - no delisting process short of Congress.",
+    "The consequence chain to memorize: a 2026-construction-start BESS needs a {{MACR}} of at least 55% non-PFE manufactured-product cost. The battery pack is ~65.6% of that cost under the IRS tables - so a Hithium-cell system lands around 34% and loses the **entire ITC**, not a bonus. The escape: projects that began construction (tax rules) by **December 31, 2025** are exempt from the MACR test entirely.",
+    "**Field note:** When a buyer says 'the FEOC thing', find out which lever they actually mean - tax eligibility, tariff cost, defense scope, or the adder. Each has a different answer and a different date."
+   ]
+  },
+  {
+   "id": "levers",
+   "title": "The four machines side by side",
+   "read": "3 min",
+   "kind": "table",
+   "cols": [
+    "",
+    "What it does",
+    "Key dates",
+    "Severity for Hithium"
+   ],
+   "rows": [
+    [
+     "Tax (OBBBA FEOC/PFE)",
+     "Kills the §48E ITC for projects failing the MACR test; entity-level bans on SFE/FIE taxpayers",
+     "Enacted Jul 4, 2025; MACR applies to post-2025 construction starts; 55% floor in 2026",
+     "Decisive - full ITC loss on 2026+ starts with Hithium cells"
+    ],
+    [
+     "Trade (tariffs)",
+     "~40.9% stacked duty on Chinese lithium-ion (HTS 8507.60.00) - cells and containers alike",
+     "§301 25% from Jan 1, 2026; forced-labor 12.5% from Jul 24, 2026",
+     "Real but survivable - a cost, not a prohibition; no exclusion process"
+    ],
+    [
+     "Defense (NDAA)",
+     "DoD cannot buy batteries from the six named makers; FEOC-free phase-in for defense batteries",
+     "§154 ban Oct 1, 2027; FY2026 NDAA phases 2028-2031",
+     "Narrow - commercial sales untouched, but §154 listing wrote Hithium into the tax code"
+    ],
+    [
+     "Domestic content (+10% adder)",
+     "Bonus requires 50% (2026) / 55% (2027+) US manufactured-product content",
+     "Notice 2025-08 tables: BESS maxes ~40% without a US-made cell",
+     "Already lost - and moot once the base credit fails"
+    ]
+   ]
+  },
+  {
+   "id": "macr",
+   "title": "The storage MACR ladder",
+   "read": "1 min",
+   "kind": "bars",
+   "unit": "% non-PFE manufactured-product cost required (§48E storage)",
+   "items": [
+    {
+     "label": "2026 construction start",
+     "v": 55,
+     "sub": "current floor"
+    },
+    {
+     "label": "2027",
+     "v": 60,
+     "sub": ""
+    },
+    {
+     "label": "2028",
+     "v": 65,
+     "sub": ""
+    },
+    {
+     "label": "2029",
+     "v": 70,
+     "sub": ""
+    },
+    {
+     "label": "2030 and later",
+     "v": 75,
+     "sub": "steepest ladder in the statute"
+    }
+   ],
+   "note": "Storage was deliberately given the steepest facility-level ladder (non-storage facilities run 40-60%). A Hithium-cell system computes to ~34% - the pack/module is ~65.6% of manufactured-product cost under the IRS tables, and any Hithium entity's output (including Mesquite, TX assembly) counts as PFE-made."
+  },
+  {
+   "id": "mechanics",
+   "title": "Entity tests, MACR math, and the paper trail",
+   "read": "6 min",
+   "kind": "prose",
+   "ps": [
+    "**Who is a PFE.** Two routes: a **Specified Foreign Entity** ({{SFE}} - the §154(b) six by name, DoD §1260H companies, UFLPA-listed entities, and any company organized in or majority-owned from China/Russia/Iran/North Korea) or a **Foreign-Influenced Entity** ({{FIE}} - an SFE can appoint a board member or executive; a single SFE owns ≥25%; SFEs aggregate ≥40%; SFEs hold ≥15% of debt; or payments under a contract giving an SFE 'effective control'). Hithium US is ≥25% owned by an SFE → it is an FIE → its Texas-assembled product is PFE-made for tax purposes. **US soil does not cleanse the product.**",
+    "**The licensing kill-switch.** For IP-license deals signed on or after July 4, 2025, 'effective control' includes: licensor rights to specify component sources, direct operations, or limit IP use; royalties beyond year 10; service agreements longer than 2 years; or any license that fails to transfer all know-how needed to operate independently. Outright bona fide IP purchase is carved out. Ford's CATL-license plant proceeds under this standard (Ford owns site and equipment) - but every indicium is a diligence item tax counsel will run against a Hithium license structure.",
+    "**The paper trail.** IRS Notice 2026-15 (Feb 12, 2026) provides three interim safe harbors - Identification, Cost Percentage (use the Notice 2025-08 tables), and supplier Certification. Certifications must carry the supplier's EIN, be signed under penalties of perjury, and be retained six years; you cannot rely on one you have reason to doubt. Enforcement: a supplier penalty of the greater of 10% of the underpayment or $5,000 for false certifications; the substantial-understatement penalty trigger drops to 1% for energy-credit disallowances; and the IRS gets a 6-year statute of limitations. **A Hithium entity cannot sign a non-PFE certification for its own product - and no one on our side should ever facilitate one.**",
+    "**Timing traps.** The taxpayer-level prohibition (no credit for an SFE/FIE claimant) applies to tax years beginning after July 4, 2025 regardless of construction date. The 10-year recapture rule (tax years beginning after July 4, 2027) claws back the full ITC if the owner makes an effective-control payment to an SFE post-COD - which is why buyers will keep post-COD service contracts with us short and non-exclusive, and why we should structure for that rather than fight it."
+   ]
+  },
+  {
+   "id": "timeline",
+   "title": "The policy timeline, 2023-2031",
+   "read": "4 min",
+   "kind": "timeline",
+   "intro": "Three lanes: tax (gold), trade (blue), defense (rose). The 2026 tariff story is a genuine rollercoaster - four different stacked rates in eight months.",
+   "lanes": {
+    "tax": "Tax lever",
+    "trade": "Trade lever",
+    "def": "Defense lever"
+   },
+   "items": [
+    {
+     "x": 2023.98,
+     "lane": "def",
+     "label": "FY2024 NDAA §154",
+     "sub": "six makers named incl. Hithium; DoD ban set for Oct 1, 2027"
+    },
+    {
+     "x": 2024.75,
+     "lane": "trade",
+     "label": "§301 EV batteries → 25%",
+     "sub": "Sep 27, 2024; non-EV increase scheduled for 2026"
+    },
+    {
+     "x": 2025.05,
+     "lane": "tax",
+     "label": "Notice 2025-08 tables",
+     "sub": "BESS: pack/module 65.6%, container 29.8% of MP cost"
+    },
+    {
+     "x": 2025.5,
+     "lane": "tax",
+     "label": "OBBBA enacted (Jul 4)",
+     "sub": "PFE regime created; §154 list imported into the tax code"
+    },
+    {
+     "x": 2025.97,
+     "lane": "def",
+     "label": "FY2026 NDAA (Dec 18)",
+     "sub": "FEOC-free defense batteries phased 2028-2031; no-FEOC-license exception"
+    },
+    {
+     "x": 2026.0,
+     "lane": "tax",
+     "label": "MACR era begins (Jan 1)",
+     "sub": "55% storage floor; Dec 31, 2025 was the safe-harbor line"
+    },
+    {
+     "x": 2026.0,
+     "lane": "trade",
+     "label": "§301 non-EV → 25%",
+     "sub": "stack 48.4%"
+    },
+    {
+     "x": 2026.13,
+     "lane": "trade",
+     "label": "SCOTUS strikes IEEPA (Feb 20)",
+     "sub": "6-3; both IEEPA layers die; §122 10% bridge → stack 38.4%"
+    },
+    {
+     "x": 2026.12,
+     "lane": "tax",
+     "label": "Notice 2026-15 (Feb 12)",
+     "sub": "interim MACR safe harbors; PFE tables due Dec 31, 2026"
+    },
+    {
+     "x": 2026.23,
+     "lane": "trade",
+     "label": "Graphite case dies (Mar 31)",
+     "sub": "ITC negative injury - no AD/CVD orders on finished batteries"
+    },
+    {
+     "x": 2026.56,
+     "lane": "trade",
+     "label": "Current stack ~40.9% (Jul 24)",
+     "sub": "§122 expires; §301 forced-labor 12.5% begins"
+    },
+    {
+     "x": 2027.75,
+     "lane": "def",
+     "label": "§154 ban live (Oct 1, 2027)",
+     "sub": "DoD funds cannot buy the six makers' batteries"
+    },
+    {
+     "x": 2028.0,
+     "lane": "tax",
+     "label": "MACR 65% (2028) → 75% (2030+)",
+     "sub": "the ladder keeps climbing"
+    },
+    {
+     "x": 2029.0,
+     "lane": "def",
+     "label": "FY2026 NDAA phases",
+     "sub": "standard batteries FEOC-free 2029; existing acquisitions Jan 30, 2031"
+    }
+   ]
+  },
+  {
+   "id": "interaction",
+   "title": "A developer buying Hithium in 2026 - the interaction map",
+   "read": "4 min",
+   "kind": "table",
+   "intro": "Standalone 200 MWh grid-scale project, evaluated August 2026. The layers stack; the ITC layer decides.",
+   "cols": [
+    "Layer",
+    "Safe-harbored 2025 start",
+    "2026 construction start"
+   ],
+   "rows": [
+    [
+     "§48E ITC (~30%+ of capex)",
+     "Survives - MACR test does not apply. Conditions: claimant not itself a PFE/FIE; no effective-control contracts; post-2027, no effective-control payments in the 10-yr recapture window",
+     "Lost entirely - ~34% computed MACR vs 55% floor. Transferability value gone; tax equity walks"
+    ],
+    [
+     "Domestic-content adder (+10%)",
+     "Unavailable (~40% max without a US cell) but moot - base credit survives",
+     "Moot - base credit already lost"
+    ],
+    [
+     "Tariff",
+     "~40.9% on imported customs value; cells-into-Mesquite roughly halves the base vs a finished container",
+     "Same"
+    ],
+    [
+     "Defense adjacency",
+     "Any DoD-funded offtake blocked from Oct 1, 2027; FEOC-free phases from 2028",
+     "Same"
+    ],
+    [
+     "Texas overlay",
+     "LSIPA no-remote-access architecture; NPRR1199 attestations; Paxton CATL precedent (Nov 2025)",
+     "Same"
+    ],
+    [
+     "Financeability",
+     "Diligence-heavy but bankable; BOC documentation is the package to bring",
+     "Merchant/tax-indifferent buyers only - must beat FEOC-compliant rivals net of their ITC"
+    ]
+   ]
+  },
+  {
+   "id": "pathways",
+   "title": "What remains possible - the compliant lanes",
+   "read": "6 min",
+   "kind": "proscons",
+   "intro": "Five lanes, in priority order. The first is where Chinese vendors are actually still shipping in 2026-27.",
+   "cards": [
+    {
+     "t": "Safe-harbored 2025 pipeline",
+     "meta": "the primary 2026-27 lane",
+     "adv": [
+      "Full ITC preserved through completion",
+      "Physical-work or 5% test under the pre-2025 notices, with ~4-yr continuity",
+      "Pre-Jun-16-2025 binding contracts get their own cost exclusion"
+     ],
+     "dis": [
+      "Finite and shrinking inventory of projects",
+      "Effective-control contracting discipline required (services ≤2 yrs, no exclusivity, full data access)",
+      "Recapture rule looms after Jul 2027"
+     ]
+    },
+    {
+     "t": "Merchant / tax-indifferent buyers",
+     "meta": "nothing prohibits the sale",
+     "adv": [
+      "No ITC to lose - ERCOT merchant, industrial BtM, buyers without tax appetite",
+      "Wins where speed, availability, or cycle-life economics dominate"
+     ],
+     "dis": [
+      "Must absorb ~40.9% duty on imported content",
+      "Competitively must beat a FEOC-clean rival minus its ITC - roughly a 40-50% capex gap to close"
+     ]
+    },
+    {
+     "t": "Tariff engineering via Mesquite",
+     "meta": "cost lever, not a tax fix",
+     "adv": [
+      "Duty applies to cell customs value only - roughly halves the tariff burden vs finished containers",
+      "US logistics, delivery speed, and optics"
+     ],
+     "dis": [
+      "Fixes nothing on FEOC or the adder - Mesquite output is still PFE-made",
+      "Overpromising tax outcomes on 'Made in Texas' is the fastest way to lose a customer"
+     ]
+    },
+    {
+     "t": "Outright IP sale (not a royalty license)",
+     "meta": "the structurally available play",
+     "adv": [
+      "Bona fide IP purchase is carved out of effective control",
+      "Puts Hithium technology inside someone else's compliant supply chain"
+     ],
+     "dis": [
+      "A royalty-bearing license is the dangerous version - every indicium was written for it",
+      "FY2026 NDAA already closed the license door in the defense channel; Treasury regs may tighten further"
+     ]
+    },
+    {
+     "t": "Non-US markets",
+     "meta": "none of this stack applies",
+     "adv": [
+      "LatAm, Middle East, Australia, Southeast Asia fully open",
+      "Same containerized product, no tariff or tax penalty"
+     ],
+     "dis": [
+      "Different bankability and certification regimes",
+      "Does not build the US reference fleet"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "redlines",
+   "title": "Compliance red lines for the sales team",
+   "read": "2 min",
+   "kind": "callout",
+   "ps": [
+    "**1 - Never assert ITC eligibility** for a 2026+ construction-start project using Hithium content. It is not supportable under current law.",
+    "**2 - Never sign or facilitate a non-PFE certification** for Hithium product - certifications are penalties-of-perjury documents with supplier penalties attached.",
+    "**3 - Route all begin-construction and safe-harbor representations through counsel.** We support the buyer's documentation; we do not opine on their tax position.",
+    "**4 - Disclose the ~40.9% duty stack in TCO models** - and date-stamp it: the rate changed four times in 2026 and must be re-verified at quote time.",
+    "**5 - In Texas, lead with the no-remote-access security architecture** (LSIPA / NPRR1199) before it is asked for."
+   ]
+  },
+  {
+   "id": "ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "Every load-bearing figure with its source. Full ledger with links: the analysis file in the repo.",
+   "rows": [
+    [
+     "Storage MACR ladder 55/60/65/70/75 (2026→2030+)",
+     "26 USC 7701(a)(52)(B); Notice 2026-15 example"
+    ],
+    [
+     "SFE includes the §154(b) six by name; FIE tests (25%/40%/15%/officer/control)",
+     "Notice 2026-15 §2"
+    ],
+    [
+     "Effective-control licensing indicia (royalties >10 yr, services >2 yr, know-how transfer)",
+     "Notice 2026-15; §7701(a)(51)(D)(ii)(III)"
+    ],
+    [
+     "BOC exemption before Jan 1, 2026 under Notices 2013-29/2018-59 (as of Jan 1, 2025)",
+     "Notice 2026-15 fn. 11/14"
+    ],
+    [
+     "Certification mechanics; §6695B penalty; 1% understatement trigger; 6-yr SOL",
+     "Notice 2026-15 §2"
+    ],
+    [
+     "10-yr recapture, tax years beginning after Jul 4, 2027",
+     "Bracewell; Stoel Rives"
+    ],
+    [
+     "§301 non-EV 7.5→25% Jan 1, 2026; no exclusion process",
+     "USTR Sept 2024 determination"
+    ],
+    [
+     "2026 stack: 48.4 → 38.4 (Feb 24) → 40.9 (Jul 24, current)",
+     "Pacific Battery / Gateway Lines / TariffsTool layer math"
+    ],
+    [
+     "SCOTUS strikes IEEPA tariffs 6-3 (Feb 20, 2026); refund claims live",
+     "WilmerHale; K&L Gates; SCOTUSblog"
+    ],
+    [
+     "Graphite AAM: no AD/CVD orders - ITC negative injury Mar 31, 2026; scope excluded finished batteries",
+     "Federal Register; USITC"
+    ],
+    [
+     "§154: DoD ban Oct 1, 2027; 'produced' = final assembly or majority of components",
+     "OpenSanctions; Bloomberg"
+    ],
+    [
+     "FY2026 NDAA (Dec 18, 2025): FEOC-free 2028/2029/2031; >95% + no-FEOC-license exception",
+     "Pillsbury; White & Case"
+    ],
+    [
+     "Domestic content: 50% (2026) / 55% (2027+); BESS ~40% max without US cell (pack 65.6% of MP cost)",
+     "Stoel Rives; Notice 2025-08; Energy-Storage.News"
+    ],
+    [
+     "Mesquite TX: ~10 GWh/yr module+system assembly, no cell lines, mass production Aug 2025",
+     "Hithium PR; Dallas Innovates"
+    ],
+    [
+     "Storage ITC: 100% through 2033 starts, then 75/50/0 - exempt from the wind/solar 2027 cliff",
+     "Stoel Rives; pv magazine USA"
+    ],
+    [
+     "Texas: LSIPA access ban; NPRR1199 attestations; Paxton CATL/Mabank investigation (Nov 2025)",
+     "Norton Rose Fulbright; Texas AG"
+    ]
+   ]
+  },
+  {
+   "id": "cards",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Why is Hithium a Specified Foreign Entity?",
+     "a": "Twice over: the tax code incorporates the FY2024 NDAA §154(b) list by name (CATL, BYD, Envision, EVE, Gotion, Hithium), and Hithium is a Chinese-organized company. Statutory - no delisting short of Congress."
+    },
+    {
+     "q": "The storage MACR floor for a 2026 construction start - and what a Hithium-cell system computes to?",
+     "a": "55% non-PFE manufactured-product cost required; a Hithium-cell system lands ~34% because the pack/module is ~65.6% of MP cost - the entire ITC is lost."
+    },
+    {
+     "q": "What escapes the MACR test entirely?",
+     "a": "Projects that began construction (physical-work test or 5% safe harbor, per Notices 2013-29/2018-59 as of Jan 1, 2025) by December 31, 2025 - plus a cost exclusion for pre-Jun-16-2025 binding contracts."
+    },
+    {
+     "q": "Does Mesquite TX assembly fix the tax problem?",
+     "a": "No. Hithium US is ≥25% SFE-owned, so it is a Foreign-Influenced Entity and its output is PFE-made. Mesquite is a tariff lever (duty on cell value only, not the full container) - never a tax fix."
+    },
+    {
+     "q": "The current tariff stack on Chinese BESS, and its 2026 path?",
+     "a": "~40.9% as of Aug 2026 (3.4 MFN + 25 §301 + 12.5 §301 forced-labor). Path: 48.4% Jan 1 → 38.4% after SCOTUS struck the IEEPA layers Feb 20 → 40.9% from Jul 24. Re-verify at quote time."
+    },
+    {
+     "q": "What does NDAA §154 actually prohibit?",
+     "a": "DoD obligating funds to procure batteries produced by the six named makers, from Oct 1, 2027. 'Produced' = final assembly or majority of components. Commercial sales are untouched."
+    },
+    {
+     "q": "Why is a royalty license to a US partner dangerous but an IP sale workable?",
+     "a": "Effective-control indicia target licenses: royalties beyond year 10, services >2 years, source-specification rights, incomplete know-how transfer. A bona fide outright IP purchase is carved out."
+    },
+    {
+     "q": "The two ratios people confuse?",
+     "a": "The FEOC material-assistance cost ratio (a disqualifier - failure kills the whole ITC; 55→75% for storage) vs the domestic-content adjusted percentage (a +10% bonus - 50%/55%; failure only forfeits the adder)."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "title": "Self-test",
+   "read": "6 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A developer's project began construction in November 2025 (documented 5% spend). They buy Hithium DC blocks in 2026. The ITC?",
+     "c": [
+      "Lost - Hithium is an SFE",
+      "Survives - the MACR test doesn't apply to pre-2026 starts, provided the owner avoids effective-control contracts",
+      "Reduced to 50%",
+      "Survives only if assembled at Mesquite"
+     ],
+     "a": 1,
+     "why": "The begin-construction exemption is the primary 2026-27 sales lane. Entity-level rules still apply to the claimant, and effective-control contracting discipline matters."
+    },
+    {
+     "q": "A colleague drafts a proposal claiming the +10% domestic-content adder because the system ships from Texas. What's wrong?",
+     "c": [
+      "Nothing - US assembly qualifies",
+      "The adder needs 50%+ US manufactured-product content and a BESS maxes ~40% without a US-made cell - and for 2026 starts the base credit is already lost anyway",
+      "The adder was repealed",
+      "Only solar gets the adder"
+     ],
+     "a": 1,
+     "why": "Notice 2025-08's table puts the pack/module at 65.6% of MP cost. Chinese cells cap the ratio near 40% - below every threshold."
+    },
+    {
+     "q": "Which statement about the August 2026 tariff position is correct?",
+     "c": [
+      "58.4% including IEEPA layers",
+      "25% flat",
+      "~40.9%: MFN 3.4 + §301 25 + §301 forced-labor 12.5; the IEEPA layers died at the Supreme Court in February",
+      "Zero - tariffs were struck down entirely"
+     ],
+     "a": 2,
+     "why": "SCOTUS struck only the IEEPA-based layers (Feb 20, 2026). Section 301 rests on different authority and stands; the 12.5% forced-labor action began Jul 24."
+    },
+    {
+     "q": "A DoD contractor wants Hithium batteries inside a 2028 deliverable. The cleanest answer?",
+     "c": [
+      "Fine - §154 only covers direct DoD purchases forever",
+      "Blocked or at severe risk: the §154 funds ban runs from Oct 1, 2027 and FY2026 NDAA FEOC-free phases begin Jan 1, 2028; scope details await DFARS",
+      "Fine if assembled in Texas",
+      "Fine with a supplier certification"
+     ],
+     "a": 1,
+     "why": "The defense channel closes hardest. Contractor-embedded gray zones exist but the trajectory is unambiguous - do not build a defense-adjacent pipeline."
+    },
+    {
+     "q": "A buyer asks Hithium to sign a certification that its product is not PFE-made, 'just paperwork.' You:",
+     "c": [
+      "Sign it - it speeds the deal",
+      "Decline: Hithium product is PFE-made by statute; the certification is penalties-of-perjury with §6695B supplier penalties",
+      "Sign it only for Mesquite product",
+      "Refer to marketing"
+     ],
+     "a": 1,
+     "why": "Red line #2. A false certification exposes the supplier to the greater of 10% of the underpayment or $5,000 - and destroys the relationship."
+    },
+    {
+     "q": "Where does a Hithium license-to-US-partner model stand?",
+     "c": [
+      "Prohibited outright",
+      "Safe - Ford proved it",
+      "A tightrope: viable only if the license transfers complete know-how, royalties ≤10 yrs, services ≤2 yrs, no source-specification - and the defense channel already bans FEOC-licensed tech",
+      "Only allowed for sodium-ion"
+     ],
+     "a": 2,
+     "why": "The Ford/CATL precedent survives the indicia so far; Treasury's year-end 2026 regs may tighten. Flag every licensing pitch as contingent on forthcoming regulations."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "PFE",
+   "d": "Prohibited Foreign Entity - the OBBBA umbrella term: any Specified Foreign Entity or Foreign-Influenced Entity. PFE ties disqualify projects and taxpayers from §45Y/48E/45X credits."
+  },
+  {
+   "t": "SFE",
+   "d": "Specified Foreign Entity - includes the FY2024 NDAA §154(b) six by name (Hithium among them), DoD §1260H companies, UFLPA-listed entities, and Chinese/Russian/Iranian/North Korean-organized or majority-owned companies."
+  },
+  {
+   "t": "FIE",
+   "d": "Foreign-Influenced Entity - an entity an SFE can influence: covered-officer appointment rights, ≥25% single-SFE ownership, ≥40% aggregate SFE ownership, ≥15% SFE-held debt, or effective-control payments. Hithium's US subsidiaries are FIEs."
+  },
+  {
+   "t": "MACR",
+   "d": "Material Assistance Cost Ratio - share of a project's manufactured-product cost NOT attributable to PFE suppliers. Storage floor: 55% (2026) rising to 75% (2030+). Below the floor = entire ITC lost."
+  },
+  {
+   "t": "BOC",
+   "d": "Begin(ning) of construction - the tax-law trigger date, established by the Physical Work Test or the 5% Safe Harbor under Notices 2013-29/2018-59 (as in effect Jan 1, 2025), with ~4-year continuity."
+  },
+  {
+   "t": "effective control",
+   "d": "Contractual rights that make a counterparty an SFE's instrument: production/offtake control, data or site-access restrictions, exclusive O&M - and for licenses: royalties >10 yrs, services >2 yrs, source-specification, incomplete know-how transfer."
+  },
+  {
+   "t": "§154",
+   "d": "FY2024 NDAA §154 - names CATL, BYD, Envision, EVE, Gotion, Hithium; bans DoD battery procurement from them starting Oct 1, 2027. OBBBA imported this list into the tax code's SFE definition."
+  },
+  {
+   "t": "§301",
+   "d": "Section 301 of the Trade Act of 1974 - the statutory basis for the China tariffs that survived 2026: 25% on non-EV lithium-ion from Jan 1, 2026, plus the 12.5% forced-labor action from Jul 24, 2026."
+  },
+  {
+   "t": "IEEPA",
+   "d": "International Emergency Economic Powers Act - basis for the 2025 fentanyl/reciprocal tariff layers, struck down 6-3 by the Supreme Court on Feb 20, 2026 (Learning Resources v. Trump). Refund claims for duties paid are live."
+  },
+  {
+   "t": "domestic content adder",
+   "d": "The +10-percentage-point ITC bonus for meeting the US manufactured-product threshold (50% for 2026 starts, 55% after). A grid-scale BESS cannot reach it without a US-made cell."
+  },
+  {
+   "t": "Notice 2026-15",
+   "d": "IRS guidance (Feb 12, 2026) implementing the material-assistance rules: three interim safe harbors (Identification, Cost Percentage, Certification), certification mechanics, and penalties. Proposed regs and PFE tables due by end-2026."
+  },
+  {
+   "t": "LSIPA",
+   "d": "Texas Lone Star Infrastructure Protection Act (2021, strengthened 2025) - bars agreements giving Chinese-controlled entities remote access to or control of grid-connected infrastructure."
+  }
+ ]
+};
+}
+// Content: When Utility Procurement Meets AI Data-Center Load (research synthesis, 2026-08-24).
+// Derived from repository-information/industry-guidance/utility-aidc-procurement-analysis.md;
+// claims verified against utility releases, commission orders, ERCOT dockets, and trade press.
+function guidanceDocUtilityAidc_() {
+  return {
+ "id": "utility-aidc-procurement-2026-08",
+ "title": "When Utility Procurement Meets AI Data-Center Load",
+ "short": "How five gatekeeping utilities are answering the AI load wave - and where BESS actually enters their procurement.",
+ "source": {
+  "doc": "Research synthesis - ~60 sources (utility releases and RFPs, PUC/PSC/SCC orders, ERCOT dockets, PJM reports, trade press)",
+  "publisher": "Internal analysis",
+  "date": "August 2026",
+  "pages": 5,
+  "series": "Industry Guidance - policy module 2 of 3",
+  "repo": "repository-information/industry-guidance/utility-aidc-procurement-analysis.md"
+ },
+ "updated": "2026-08-24",
+ "tiles": [
+  {
+   "k": "~474 GW",
+   "v": "ERCOT's large-load queue",
+   "sub": "~5x its all-time peak; ~87% data centers (Aug 2026)"
+  },
+  {
+   "k": "85%",
+   "v": "the minimum-take norm",
+   "sub": "AEP Ohio set it; Dominion GS-5 echoed it - contracted capacity billed whether used or not"
+  },
+  {
+   "k": "30 GW → 5.6 GW",
+   "v": "what a real tariff does",
+   "sub": "AEP Ohio's pipeline once financial commitment was required"
+  },
+  {
+   "k": "3,022.5 MW",
+   "v": "Georgia Power's owned-BESS certification",
+   "sub": "approved unanimously Dec 19, 2025 - the AIDC storage proof-point"
+  }
+ ],
+ "sections": [
+  {
+   "id": "what",
+   "title": "The gatekeeper thesis",
+   "read": "3 min",
+   "kind": "prose",
+   "ps": [
+    "The AI buildout made utilities the gatekeepers of compute. Interconnection queues detached from reality - ERCOT fields ~474 GW of large-load requests against a system that has never peaked above ~86 GW; AEP holds ~190 GW of inquiries against a 37 GW system; Dominion has ~70 GW of requests against a 24.7 GW peak. Most of it will never be built - the question every utility answered in 2024-2026 was how to find the real demand and make someone else carry the risk of the rest.",
+    "The answer converged on a four-move playbook: **large-load tariff classes** (minimum take, long terms, exit fees, collateral), **massive gas procurement** as the firm-capacity anchor, **storage procurement growth** as the fast certifiable companion, and **flexibility/curtailment as interconnection currency**. The proof that tariffs work: AEP Ohio's 30 GW of requests collapsed to ~5.6 GW of signed, financially committed load once real money was required.",
+    "For a BESS OEM the playbook generates three distinct demand streams with three different buyers: rate-based utility procurement (RFPs and self-build), merchant ERCOT storage monetizing AIDC-driven volatility, and a new code-driven buffering market at the data centers themselves ({{NOGRR 282}} ride-through). Selling into each requires knowing who actually signs the purchase order - Section 'The buyer map' below.",
+    "**Field note:** The queue numbers are conversation openers, not demand. Certified IRP megawatts are demand. Track commission dockets, not press releases."
+   ]
+  },
+  {
+   "id": "playbook",
+   "title": "The four-move playbook",
+   "read": "3 min",
+   "kind": "table",
+   "cols": [
+    "Response",
+    "Mechanism",
+    "Flagship examples"
+   ],
+   "rows": [
+    [
+     "1. Large-load tariff classes",
+     "Minimum take (85% norm), 12-15 yr terms, ramp schedules, exit fees, collateral, customized contracts",
+     "AEP Ohio (85%/12 yr, Jul 2025); Dominion GS-5 (85%/60%, 14 yr, Nov 2025); Georgia ≥100 MW rules (Jan 2025); Entergy 15-yr Meta ESA; Texas SB 6 commitment standards"
+    ],
+    [
+     "2. Massive gas procurement",
+     "Expedited CCGT/CT certification, often customer-funded",
+     "Entergy: ten plants ~7.5 GW for Meta; Georgia Power 3,692 MW of CCs; Dominion Chesterfield + 5.9 GW gas plan"
+    ],
+    [
+     "3. Storage procurement growth",
+     "IRP-certified self-build, storage-specific RFPs, all-source RFPs where BESS wins, statutory mandates",
+     "Georgia Power ~3.8 GW owned + 500 MW RFP; Dominion 2.7 GW VCEA mandate / 4.5 GW plan; Entergy's first BESS RFP (2026); PSO/SWEPCO 4.5 GW all-source"
+    ],
+    [
+     "4. Flexible / curtailable interconnection",
+     "Curtailment as a condition of faster connection; DR in PPAs; ride-through rules",
+     "SB 6 curtailment + ERCOT kill switch; Batch Zero; Google's 1 GW DR across five utilities; NOGRR 282"
+    ]
+   ]
+  },
+  {
+   "id": "texas",
+   "title": "Texas: SB 6, Batch Zero, and the audit",
+   "read": "5 min",
+   "kind": "prose",
+   "ps": [
+    "**Oncor** (wires-only, Sempra-majority) carries the biggest queue in the country: ~271 GW of data-center requests plus ~18 GW industrial across 697 requests (Q1 2026), a $47.5B 2026-2030 capital plan, and the Permian Basin Reliability Plan bringing Texas its first 765 kV network. It builds wires, not generation - its AIDC role is interconnection, and it is the lightning rod for Texas large-load policy.",
+    "**SB 6** (signed Jun 20, 2025; loads ≥75 MW) is the national template for large-load law: $100k+ screening-study fees and proof of site control; mandatory curtailment protocols for post-2025 interconnections during firm load-shed; disclosure of on-site backup ≥50% of demand (deployable on ERCOT order); co-location review with an **ERCOT-controlled kill switch** for behind-the-meter arrangements; competitively procured emergency demand response; and a re-examination of {{4CP}} cost allocation so large loads cannot ride free while driving buildout.",
+    "**{{NOGRR 282}}** requires new ≥75 MW electronic loads (grandfathered if energized or study-complete by Nov 14, 2025) to ride through voltage and frequency disturbances rather than mass-tripping - which practically mandates buffering between grid and GPUs: grid-forming UPS, on-site generation, or BESS. This is a code-driven product category at the data center itself; competitors are already positioned (a BESS-based medium-voltage 'AI UPS' demonstrated zero-voltage ride-through in independent testing in May 2026).",
+    "**The live wildcard:** on Aug 3, 2026 Gov. Abbott ordered a comprehensive audit of the data-center queue and ERCOT paused the Batch Zero schedule (completion target Dec 10, 2026). BNEF estimates ~49.8 GW could slip with up to $15B of project cost at risk. Texas AIDC timelines are in flux - which raises the value of anything that de-risks grid timing, storage included."
+   ]
+  },
+  {
+   "id": "tariffs",
+   "title": "The large-load tariffs compared",
+   "read": "3 min",
+   "kind": "table",
+   "intro": "The 85% minimum-take is now the national norm. These terms are what converts a hyperscaler's press release into bankable demand - and they are why regulated buyers scrutinize supplier bankability so hard.",
+   "cols": [
+    "",
+    "AEP Ohio (Jul 2025)",
+    "Dominion GS-5 (Nov 2025)",
+    "Georgia Power (Jan 2025)",
+    "Entergy/Meta ESA"
+   ],
+   "rows": [
+    [
+     "Threshold",
+     ">25 MW data centers",
+     "≥25 MW all large loads",
+     "≥100 MW",
+     "Single-customer contract"
+    ],
+    [
+     "Term",
+     "12 years (incl. 4-yr ramp)",
+     "14 years",
+     "Customized contracts",
+     "15 years (plants live 30-40)"
+    ],
+    [
+     "Minimum take",
+     "85% of subscribed capacity (ramp 50→90%)",
+     "85% of T&D demand / 60% of generation",
+     "Minimum-bill protections",
+     "Full cost of dedicated infrastructure"
+    ],
+    [
+     "Exit",
+     "~3 years of minimum charges",
+     "Exit fees apply",
+     "Contractual",
+     "Stranded-cost fight post-year-15"
+    ],
+    [
+     "Effect",
+     "30 GW → 5,642 MW signed; on appeal (Ohio S.Ct. 2025-1458)",
+     "Effective Jan 1, 2027",
+     "Rate freeze through 2028; shareholder backstop (Dec 2025)",
+     "LPSC approved 4-1; ten plants now Meta-funded"
+    ]
+   ]
+  },
+  {
+   "id": "southeast",
+   "title": "The Southeast machine: Entergy, Georgia, Dominion",
+   "read": "6 min",
+   "kind": "prose",
+   "ps": [
+    "**Entergy** is the most aggressive gas-for-AI builder: a $57B four-year plan against a 7-12 GW data-center pipeline. The Meta Hyperion deal (Richland Parish, LA) is the biggest single-customer utility arrangement in US history - three CCGTs (~2.26 GW, ~$3.2B) approved Aug 2025, then seven more Meta-funded plants (~5.2 GW; ten total) in Mar 2026, as Hyperion scaled to 5 GW and >$50B. Storage is Entergy's newest muscle: its **first standalone BESS RFP** posted final documents Mar 3, 2026 (MISO Zone 9 only) - the least storage-mature of the five utilities, which makes it the least crowded vendor field.",
+    "**Georgia Power** is the cleanest case of AIDC load transforming a resource plan - and of BESS riding the wave. Its ~7-year capacity need went 400 MW (2022) → 6,600 MW (2023 - the famous '17x') → 8,500 MW (2025). On Dec 19, 2025 the PSC unanimously certified **9,885 MW / ~$16.3B**: 3,692 MW of gas CCs, **3,022.5 MW of company-owned BESS across ten facilities** (Bowen, Thomson, Wansley at 500 MW each; Yates 570 MW), 350 MW of BESS+solar, and 2,821 MW of PPAs - with shareholders backstopping the build if data-center demand fails. Already operating/building: Mossy Branch (65 MW, Tesla Megapack 2 XL, COD 2024) and 765 MW under construction under a ~2 GWh Tesla master supply agreement. Open now: a 500 MW third-party ESS RFP (≥2-hr, Ascend Analytics evaluating) with ~1,000 MW more signaled.",
+    "**Dominion** serves the world's largest data-center cluster and pairs the GS-5 tariff with a statutory storage machine: the VCEA mandates 2.7 GW of Dominion storage by 2035, the 2024 IRP plans ~4.5 GW of BESS by 2039 (alongside 5.9 GW of gas), and an annual RFP cycle executes it - the Nov 2025 filing was its largest yet (845 MW solar, 155 MW owned storage, 439 MW of PPAs, ~$2.9B). EVLO (Hydro-Québec) is delivering >300 MWh across three Dominion projects. PJM context: the 2026/27 capacity auction cleared at its $329.17/MW-day cap, and PJM approved $11.8B of transmission with Dominion winning ~$4.8B including a 185-mile 525 kV HVDC line into Loudoun."
+   ]
+  },
+  {
+   "id": "channels",
+   "title": "Where BESS enters - the five channels",
+   "read": "6 min",
+   "kind": "proscons",
+   "intro": "Same hardware, five different buyers and sales motions. The first two are the regulated growth story; the last is the new code-driven category.",
+   "cards": [
+    {
+     "t": "Storage-specific RFPs",
+     "meta": "the purest channel",
+     "adv": [
+      "Named MW with commission certification behind them (Georgia 500 MW; Entergy ELL; Dominion annual)",
+      "Independent evaluators run clean processes",
+      "12-36-month fuse from award to PO"
+     ],
+     "dis": [
+      "Slow cycles (IRP → RFP → certification runs 2-4 years)",
+      "Bankability scrutiny at PUC-prudence level"
+     ]
+    },
+    {
+     "t": "All-source RFPs where BESS wins",
+     "meta": "storage beats peakers on winter/peak economics",
+     "adv": [
+      "Georgia's all-source produced 3,022.5 MW of owned BESS",
+      "PSO (1,500 MW) and SWEPCO (3,000 MW) explicitly include standalone BESS"
+     ],
+     "dis": [
+      "Competing against gas on firm-capacity accreditation",
+      "Winner selection sits with the developer or utility, not the OEM"
+     ]
+    },
+    {
+     "t": "Utility self-build supply agreements",
+     "meta": "the OEM sells to the utility directly",
+     "adv": [
+      "Master supply agreements are real: Georgia Power-Tesla ~2 GWh; Dominion-EVLO >300 MWh",
+      "Entry point is the EPC (Burns & McDonnell, Crowder) and the approved-vendor process"
+     ],
+     "dis": [
+      "Incumbency and domestic-supply narratives won every self-build award to date",
+      "Vendor qualification must happen before the RFP cycle, not during"
+     ]
+    },
+    {
+     "t": "ERCOT merchant",
+     "meta": "the volume channel, maturing",
+     "adv": [
+      "~16.3 GW fleet (Jul 2026); AIDC volatility is a named revenue force",
+      "Buyer is the developer/IPP - fast decisions, cost- and availability-driven (Hithium's existing lane: Perfect Power 1 GWh MOU)"
+     ],
+     "dis": [
+      "Growth decelerating - queue entries fell ~50% in H2 2025",
+      "Saturation pressure on ancillary revenues"
+     ]
+    },
+    {
+     "t": "Ride-through buffering at the data center",
+     "meta": "the new code-driven category",
+     "adv": [
+      "NOGRR 282 effectively mandates buffering for new ≥75 MW electronic loads",
+      "SB 6 curtailment strengthens the pitch: storage converts curtailable interconnection into firm compute",
+      "Buyer moves in quarters, not regulatory years"
+     ],
+     "dis": [
+      "First-mover competitors already positioned (BESS-based MV 'AI UPS' with a 5 GW deployment agreement)",
+      "FEOC-clean supply chains are being specified from day one"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "buyermap",
+   "title": "The buyer map - who signs the PO",
+   "read": "3 min",
+   "kind": "callout",
+   "ps": [
+    "**Regulated chain:** IRP (need certified) → RFP (independent evaluator) → one of two outcomes. **Self-build:** the utility signs an EPC contract and a direct OEM master supply agreement - the sale is to the utility, specified through the EPC. **PPA/acquisition:** the developer or IPP who bid the RFP picks the OEM - the utility never sees the cell brand except in technical review.",
+    "**The two-lane motion that follows:** Lane A - design-win with the developer/IPP community bidding the RFPs, early, because bid-stage pricing locks the BOM. Lane B - get onto utility and EPC approved-vendor lists before the next self-build cycle (Georgia's next ~1,000 MW; Dominion's mandate ramp; Entergy's second RFP).",
+    "**ERCOT merchant:** the buyer is always the developer/IPP/fund. **Ride-through buffering:** the buyer is the data-center developer or its power-infrastructure partner - a different call sheet entirely.",
+    "**The bankability throughline:** an 85%-minimum-take world is a bankability world. Regulated buyers answer to commissions and consumer advocates; their supplier diligence mirrors that scrutiny. A container that cannot survive an SCC or PSC prudence review is unsellable in these markets regardless of price."
+   ]
+  },
+  {
+   "id": "ercotreg",
+   "title": "ERCOT merchant vs regulated states",
+   "read": "2 min",
+   "kind": "table",
+   "cols": [
+    "",
+    "ERCOT (merchant)",
+    "Regulated Southeast / PJM states"
+   ],
+   "rows": [
+    [
+     "Revenue",
+     "Energy arbitrage + ancillary services; AIDC volatility a named force",
+     "Rate-based recovery or 10-20 yr PPAs certified in IRP dockets"
+    ],
+    [
+     "Contract",
+     "Tolling/merchant/hedges; developer takes market risk",
+     "PUC-approved; Georgia shifted demand risk to shareholders (Dec 2025)"
+    ],
+    [
+     "Speed",
+     "Months to NTP - but SB 6, Batch Zero, and the audit add load-side friction",
+     "2-4 years IRP-to-certification, then bankable, large-lot POs"
+    ],
+    [
+     "Cycle risk",
+     "Saturation: additions decelerating, queue entries -50% H2 2025",
+     "Backlog building: GA ~3.5 GW certified + RFPs; VA 2.7 GW mandated; LA/MS first cycles; SPP 4.5 GW open"
+    ],
+    [
+     "What wins",
+     "Cost, availability, augmentation strategy",
+     "Bankability: UL 9540A data, NFPA 855, domestic content, PUC-defensible supply chains"
+    ]
+   ]
+  },
+  {
+   "id": "awards",
+   "title": "Concrete AIDC-driven BESS procurements",
+   "read": "3 min",
+   "kind": "table",
+   "cols": [
+    "Utility / market",
+    "Program",
+    "Size",
+    "OEM / EPC",
+    "Status (Aug 2026)"
+   ],
+   "rows": [
+    [
+     "Georgia Power",
+     "2022 IRP first own BESS (Mossy Branch)",
+     "65 MW / 260 MWh",
+     "Tesla Megapack 2 XL; Burns & McDonnell",
+     "COD late 2024"
+    ],
+    [
+     "Georgia Power",
+     "IRP-authorized portfolio (McGrau Ford I+II, Robins, Moody, Hammond)",
+     "765 MW",
+     "Tesla Megapack 2 XL (~2 GWh master supply); B&M, Crowder",
+     "Under construction, CODs 2026"
+    ],
+    [
+     "Georgia Power",
+     "Dec 19, 2025 certification (all-source)",
+     "3,022.5 MW owned + 350 MW hybrid + BESS in 2,821 MW PPAs",
+     "OEMs TBD - procurement underway",
+     "Certified; CODs 2029-2031"
+    ],
+    [
+     "Georgia Power",
+     "2025 ESS RFP",
+     "500 MW ≥2-hr",
+     "Developer-selected",
+     "Bids in evaluation (Ascend Analytics)"
+    ],
+    [
+     "Dominion (VA)",
+     "VCEA mandate + annual RFP",
+     "2.7 GW by 2035 mandated; ~4.5 GW planned; Nov 2025: 155 MW owned + PPAs",
+     "EVLO >300 MWh delivered; others TBD",
+     "Rolling annual cycle"
+    ],
+    [
+     "Entergy Louisiana",
+     "2025 ELL BESS RFP (first standalone)",
+     "Size unconfirmed",
+     "Developer-selected",
+     "Final docs Mar 3, 2026; MISO Zone 9"
+    ],
+    [
+     "AEP PSO / SWEPCO (SPP)",
+     "2026 all-source RFPs",
+     "1,500 MW + up to 3,000 MW incl. BESS",
+     "Developer-selected",
+     "Issued Feb 2026 / 2026"
+    ],
+    [
+     "ERCOT merchant",
+     "Market-driven",
+     "~16.3 GW fleet",
+     "Full OEM spectrum incl. Hithium (Mesquite shipping since Aug 2025; Perfect Power 1 GWh MOU)",
+     "Continuous, decelerating"
+    ]
+   ]
+  },
+  {
+   "id": "sales",
+   "title": "Sales implications",
+   "read": "3 min",
+   "kind": "callout",
+   "ps": [
+    "**1 - Sell where the money is certified, not where the queue is loud.** 474 GW of ERCOT requests will not get built; 9,885 MW of Georgia PSC-certified resources will. IRP dockets and certification orders are the true pipeline - certified BESS MW are purchase orders on a 12-36-month fuse.",
+    "**2 - Run the two-lane motion.** Lane A: the developers/IPPs bidding Georgia's 500 MW, Entergy's ELL RFP, Dominion's annual cycle, PSO/SWEPCO - engage at bid stage, when pricing locks the BOM. Lane B: utility/EPC approved-vendor qualification before the next self-build cycle.",
+    "**3 - Bankability is the product in regulated markets.** Lead with the complete safety dossier, warranty/augmentation economics, and a commission-defensible supply-chain story (the FEOC/tariff math lives in the companion China-policy module).",
+    "**4 - NOGRR 282 + SB 6 opened a buffering category at the data center itself** - sold to developers and power partners in quarters, not years. First movers are ahead; the counter is speed, containerized delivery record, and ride-through test data.",
+    "**5 - Build account plans around regulatory calendars:** the Texas audit (Dec 10, 2026), Dominion GS-5 effectiveness (Jan 1, 2027), Georgia's 2028 rate case, the Ohio Supreme Court appeal, Louisiana's stranded-cost fight."
+   ]
+  },
+  {
+   "id": "ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "Load-bearing figures with sources. Full linked ledger: the analysis file in the repo.",
+   "rows": [
+    [
+     "ERCOT queue ~474 GW (Aug 2026); ~410 GW / 87% data centers (spring)",
+     "Utility Dive; RTO Insider"
+    ],
+    [
+     "Oncor: 697 requests, ~271 GW DC + 18 GW industrial; $47.5B 2026-30 plan",
+     "Oncor Q1 2026 / Feb 2026 releases"
+    ],
+    [
+     "SB 6 (Jun 20, 2025): ≥75 MW; fees; curtailment; kill switch; DR; 4CP review",
+     "Pillsbury; McGuireWoods; Mayer Brown"
+    ],
+    [
+     "Abbott audit Aug 3, 2026; Batch Zero paused; ~49.8 GW / $15B at risk (BNEF)",
+     "Texas Tribune; Utility Dive; POWER"
+    ],
+    [
+     "NOGRR 282: ≥75 MW electronic-load ride-through; grandfather Nov 14, 2025",
+     "ERCOT docket; vendor guidance"
+    ],
+    [
+     "AEP: 69 GW contracted through 2030; ~190 GW inquiries; ~$70B capex",
+     "AEP Q1/Q2 2026"
+    ],
+    [
+     "AEP Ohio tariff (PUCO Jul 9, 2025): 85% min, 12-yr, 3-yr exit fee; 30 GW → 5,642 MW",
+     "PUCO; KJK; mgrid; DCD"
+    ],
+    [
+     "Entergy/Meta: 3 CCGTs ~2.26 GW/$3.2B (Aug 2025); +7 plants (Mar 2026); Hyperion 5 GW/>$50B (Jul 2026)",
+     "Entergy; UCS; Data Center Knowledge; Tom's Hardware"
+    ],
+    [
+     "Entergy ELL BESS RFP final docs Mar 3, 2026 (MISO Zone 9)",
+     "Entergy RFP site"
+    ],
+    [
+     "Dominion: ~70 GW requests (Feb 2026); GS-5 (SCC Nov 25, 2025): 14-yr, 85%/60% minimums, eff. Jan 1, 2027",
+     "Virginia Business; Virginia Mercury; SCC"
+    ],
+    [
+     "Dominion storage: 2.7 GW VCEA mandate; ~4.5 GW by 2039; EVLO >300 MWh",
+     "Utility Dive; WHRO; Electric Energy Online"
+    ],
+    [
+     "PJM: $11.8B RTEP ($4.8B Dominion HVDC); 2026/27 capacity at $329.17/MW-day cap",
+     "Utility Dive; IEEFA"
+    ],
+    [
+     "Georgia: need 400 → 6,600 ('17x') → 8,500 MW; ≥100 MW rules Jan 2025; rate freeze to 2028",
+     "GA PSC fact sheet; Georgia Power"
+    ],
+    [
+     "Georgia Dec 19, 2025: 9,885 MW/$16.3B - 3,692 MW gas, 3,022.5 MW owned BESS, 350 MW hybrid, 2,821 MW PPAs; shareholder backstop",
+     "Georgia Power; GA PSC; AJC"
+    ],
+    [
+     "Georgia BESS: Mossy Branch 65 MW (Tesla, COD 2024); 765 MW building; ~2 GWh Tesla supply; 500 MW ESS RFP",
+     "Georgia Power; Energy-Storage.News; PR Newswire"
+    ],
+    [
+     "ERCOT BESS ~16.3 GW (Jul 2026); queue entries -50% H2 2025",
+     "Modo Energy; ess-news"
+    ],
+    [
+     "Google 1 GW of contracted DR across five utilities",
+     "Renewable Energy World; DCD (Mar 2026)"
+    ]
+   ]
+  },
+  {
+   "id": "cards",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "The four-move utility playbook for AIDC load?",
+     "a": "1) Large-load tariff classes (85% minimum take, long terms, exit fees); 2) massive gas procurement; 3) storage procurement growth; 4) flexibility/curtailment as interconnection currency."
+    },
+    {
+     "q": "What did AEP Ohio's tariff prove?",
+     "a": "Tariffs, not engineering, separate real demand from vapor: 30 GW of requests collapsed to ~5,642 MW of signed, financially committed load once minimum-take money was required."
+    },
+    {
+     "q": "The two lanes of the regulated BESS sales motion?",
+     "a": "Lane A: design-win with developers/IPPs bidding utility RFPs (bid-stage pricing locks the BOM). Lane B: utility/EPC approved-vendor qualification before the next self-build cycle (the Tesla and EVLO precedent)."
+    },
+    {
+     "q": "Georgia Power's Dec 19, 2025 certification - the storage numbers?",
+     "a": "9,885 MW / ~$16.3B total: 3,022.5 MW company-owned BESS across ten facilities + 350 MW BESS+solar + BESS inside 2,821 MW of PPAs; CODs 2029-2031; shareholders backstop demand risk."
+    },
+    {
+     "q": "What does NOGRR 282 require, and of whom?",
+     "a": "New ≥75 MW large electronic loads (data centers/crypto; grandfathered if energized/studied by Nov 14, 2025) must ride through voltage and frequency disturbances - practically mandating buffering (UPS, BESS, or generation) between grid and GPUs. It is a LOAD rule, not a storage standard."
+    },
+    {
+     "q": "ERCOT merchant vs regulated Southeast - what wins each?",
+     "a": "ERCOT: cost, availability, augmentation strategy - buyer is the developer/IPP; fleet ~16.3 GW and decelerating. Regulated: bankability - safety data, domestic content, PUC-defensible supply chains; backlog building across GA/VA/LA/SPP."
+    },
+    {
+     "q": "The minimum-take norms at AEP Ohio and Dominion?",
+     "a": "AEP Ohio: 85% of subscribed capacity after a 4-year ramp, 12-year contracts, ~3-year exit fee. Dominion GS-5: 85% of T&D demand / 60% of generation, 14-year contracts, effective Jan 1, 2027."
+    },
+    {
+     "q": "The live Texas wildcard as of Aug 2026?",
+     "a": "Abbott's Aug 3 audit of the data-center queue paused ERCOT's Batch Zero (target Dec 10, 2026); BNEF estimates ~49.8 GW could slip with up to $15B at risk - raising the value of anything that de-risks grid timing."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "title": "Self-test",
+   "read": "6 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A prospect cites ERCOT's 474 GW queue as proof of demand. Your read?",
+     "c": [
+      "Agree - 474 GW of batteries will follow",
+      "Queue numbers are conversation openers; certified IRP megawatts are demand - track commission dockets",
+      "ERCOT demand is fake",
+      "The queue only contains crypto"
+     ],
+     "a": 1,
+     "why": "AEP Ohio's 30 GW → 5.6 GW collapse under a real tariff is the proof-point. Sell where the money is certified."
+    },
+    {
+     "q": "Who picked the battery OEM for Georgia Power's Mossy Branch and 765 MW portfolio?",
+     "c": [
+      "The Georgia PSC",
+      "The data-center customers",
+      "Georgia Power itself, with its EPCs - a direct ~2 GWh master supply agreement (Tesla)",
+      "ERCOT"
+     ],
+     "a": 2,
+     "why": "Self-build means the utility+EPC sign the OEM supply agreement. That is Lane B: approved-vendor qualification before the cycle."
+    },
+    {
+     "q": "Which is TRUE about NOGRR 282?",
+     "c": [
+      "It is ERCOT's BESS ride-through standard",
+      "It requires large electronic LOADS (≥75 MW) to ride through disturbances - storage rules are NOGRR 245 / 272",
+      "It bans batteries at data centers",
+      "It applies only to crypto"
+     ],
+     "a": 1,
+     "why": "A vocabulary trap that separates credible sellers from tourists. 282 = loads; 245/272 = storage resources."
+    },
+    {
+     "q": "Where is the least crowded regulated BESS vendor field among the five case studies?",
+     "c": [
+      "Georgia (Tesla incumbent)",
+      "Virginia (EVLO delivering)",
+      "Entergy Louisiana/Mississippi - first standalone BESS RFP cycle just opening",
+      "AEP Ohio (wires-only)"
+     ],
+     "a": 2,
+     "why": "Entergy is the least storage-mature of the five; its first RFP posted final docs Mar 2026. AEP Ohio buys no generation at all."
+    },
+    {
+     "q": "The 2026/27 PJM capacity price and its relevance?",
+     "c": [
+      "$28.92/MW-day - capacity is cheap",
+      "$329.17/MW-day at the cap - AIDC-driven scarcity pricing that improves storage economics in PJM",
+      "Zero - PJM abolished the auction",
+      "It only affects gas"
+     ],
+     "a": 1,
+     "why": "The price ran $28.92 → $269.92 → the $329.17 cap in three auctions; the IMM attributes ~40% of capacity cost to data centers."
+    },
+    {
+     "q": "A developer bidding Georgia's 500 MW ESS RFP asks when to lock battery pricing. Your answer?",
+     "c": [
+      "After the award",
+      "At COD",
+      "At bid stage - bid pricing locks the BOM, so the design-win happens before submission",
+      "Whenever Tesla raises prices"
+     ],
+     "a": 2,
+     "why": "Lane A's whole logic: the OEM decision is effectively made when the bid is priced. Engage early or lose silently."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "IRP",
+   "d": "Integrated Resource Plan - the regulated utility's commission-approved forecast and procurement roadmap. Certified IRP megawatts are the true demand pipeline for a BESS OEM."
+  },
+  {
+   "t": "all-source RFP",
+   "d": "A competitive solicitation open to any technology (gas, storage, renewables, PPAs). Georgia's produced 3,022.5 MW of owned BESS; PSO and SWEPCO run 4.5 GW of them in SPP."
+  },
+  {
+   "t": "minimum take",
+   "d": "Contracted-capacity billing whether or not the energy is used - 85% is the national norm (AEP Ohio, Dominion GS-5). Converts speculative load into bankable demand."
+  },
+  {
+   "t": "4CP",
+   "d": "Four Coincident Peak - ERCOT's transmission cost allocation method, based on demand during the four summer system peaks. SB 6 ordered its re-examination so large loads cannot avoid their share."
+  },
+  {
+   "t": "Batch Zero",
+   "d": "ERCOT's one-time transitional batch study of the large-load queue (approved Jun 2026), replacing serial studies - paused Aug 2026 by the Abbott audit."
+  },
+  {
+   "t": "NOGRR 282",
+   "d": "ERCOT rule requiring new ≥75 MW Large Electronic Loads to ride through grid disturbances (grandfather cutoff Nov 14, 2025). A load rule that creates buffering demand - not a storage standard (those are NOGRR 245/272)."
+  },
+  {
+   "t": "VCEA",
+   "d": "Virginia Clean Economy Act - mandates 2.7 GW of Dominion energy storage by 2035 (interim: 1.2 GW by 2030), executed through annual RFP filings."
+  },
+  {
+   "t": "GS-5",
+   "d": "Dominion's new rate class for ≥25 MW loads (SCC, Nov 2025; effective Jan 2027): 14-year contracts, 85% T&D / 60% generation minimums, exit fees."
+  },
+  {
+   "t": "self-build",
+   "d": "The utility owns the asset and signs the EPC + OEM supply agreements directly (Georgia Power-Tesla, Dominion-EVLO). The OEM's entry point is the EPC and the approved-vendor list."
+  },
+  {
+   "t": "kill switch",
+   "d": "SB 6's requirement that ERCOT be able to isolate co-located (behind-the-meter) load in emergencies - a condition of the co-location review for ≥75 MW arrangements."
+  }
+ ]
+};
+}
+// Content: Bankability & Certification for Grid-Scale BESS (research synthesis, 2026-08-24).
+// Derived from repository-information/industry-guidance/bess-bankability-certification-analysis.md;
+// claims verified against standards bodies, regulator dockets, the WECC Moss Landing report, and IE/insurer publications.
+function guidanceDocBankability_() {
+  return {
+ "id": "bess-bankability-2026-08",
+ "title": "Bankability & Certification for Grid-Scale BESS",
+ "short": "The three approval gauntlets - safety code, grid, and money - and what 'bankable' concretely means in 2026.",
+ "source": {
+  "doc": "Research synthesis - ~50 sources (UL, NFPA/CSA analyses, FERC/NERC/ERCOT dockets, WECC's Moss Landing report, EPRI, DNV/CEA/BNEF, insurer and IE publications)",
+  "publisher": "Internal analysis",
+  "date": "August 2026",
+  "pages": 6,
+  "series": "Industry Guidance - policy module 3 of 3",
+  "repo": "repository-information/industry-guidance/bess-bankability-certification-analysis.md"
+ },
+ "updated": "2026-08-24",
+ "tiles": [
+  {
+   "k": "UL 9540A",
+   "v": "a test, not a cert",
+   "sub": "no pass/fail - it produces design data; never say '9540A certified'"
+  },
+  {
+   "k": "NFPA 855-2026",
+   "v": "the inflection edition",
+   "sub": "large-scale fire testing goes from best practice to effectively mandatory"
+  },
+  {
+   "k": "~97-99%",
+   "v": "failure-rate decline",
+   "sub": "per deployed GWh, 2018 → 2025 (EPRI database - state the caveat)"
+  },
+  {
+   "k": "72%",
+   "v": "of defects are system-level",
+   "sub": "CEA factory data: fire detection 28%, aux panels 19%, thermal 15%"
+  }
+ ],
+ "sections": [
+  {
+   "id": "what",
+   "title": "The three gauntlets",
+   "read": "3 min",
+   "kind": "prose",
+   "ps": [
+    "Selling grid-scale BESS in the US means clearing **three overlapping approval gauntlets at once**: the **safety/code gauntlet** (UL listings + fire-test data + {{NFPA 855}}, enforced by fire marshals and {{AHJ}}s), the **grid gauntlet** (UL 1741/IEEE 1547 at distribution; IEEE 2800, NERC {{PRC-029-1}}, and ERCOT NOGRR 245 at transmission), and the **money gauntlet** ({{IE}} due diligence, warranty/{{LTSA}} structures, insurance underwriting, and - dominant in 2026 - FEOC/tariff compliance for tax-credit eligibility).",
+    "The core thesis: **a product can be certified and still not be bankable.** Bankability is the lender's judgment that the *supplier* (balance sheet, factory quality, field record, warranty capacity, service network) and the *project paperwork* (test reports, guarantees, FEOC certifications) together de-risk twenty years of cash flow. Certifications are necessary inputs; the IE report is the gate.",
+    "Vocabulary discipline is a sales skill in this domain. Three traps that instantly mark a seller as a tourist: saying 'UL 9540A **certified**' (it is a test method with no pass/fail); confusing **NOGRR 282** (data-center load ride-through) with the storage rules (NOGRR 245, NOGRR 272/PGRR 121); and treating '**BNEF Tier 1**' as a quality award (it is a bank-financeability screen: ≥6 projects ≥10 MW/10 MWh in two years, to ≥3 independent buyers, with non-recourse financing).",
+    "**Field note:** Completeness is differentiation: buyers have been burned by cell-level-only 9540A submissions. Handing over the full stack unprompted - cell, module, AND unit reports plus LSFT - is the cheapest credibility win available."
+   ]
+  },
+  {
+   "id": "stack",
+   "title": "The certification stack",
+   "read": "5 min",
+   "kind": "table",
+   "intro": "Teach from this table. The 'nature' column matters as much as the coverage - a listing, a test method, and an installation code are three different things demanded by three different authorities.",
+   "cols": [
+    "Standard",
+    "What it covers",
+    "Nature",
+    "Who demands it"
+   ],
+   "rows": [
+    [
+     "UN 38.3",
+     "8 transport abuse tests on cells/batteries",
+     "Test regime + Test Summary (manufacturer responsibility)",
+     "Carriers, customs; buyers ask for the summary"
+    ],
+    [
+     "UL 1973",
+     "Cell/module/rack safety, stationary applications",
+     "Certification (listing)",
+     "Integrators, AHJs, lenders"
+    ],
+    [
+     "UL 9540",
+     "The complete ESS as an integrated assembly",
+     "Certification (listing) - the umbrella mark",
+     "AHJs (NFPA 855/IFC require listed ESS), utilities, lenders, insurers"
+    ],
+    [
+     "UL 9540A (5th ed., Mar 2025)",
+     "Thermal-runaway propagation: cell → module → unit → installation",
+     "TEST METHOD - no pass/fail; produces the data AHJs use for spacing/venting/suppression design",
+     "AHJs, insurers, lenders, nearly every RFP"
+    ],
+    [
+     "CSA TS-800:24 / C800:25",
+     "Large-Scale Fire Test: one unit fully alight, suppression off, no propagation",
+     "Standardized test procedure",
+     "AHJs and developers under NFPA 855-2026; RFPs"
+    ],
+    [
+     "NFPA 855 (2026 ed.) / IFC §1207",
+     "Siting, spacing, hazard mitigation analysis, detection, explosion control, emergency planning",
+     "Installation standard / adopted fire code",
+     "Fire marshals/AHJs; insurers; lenders check compliance"
+    ],
+    [
+     "UL 1741 SB + IEEE 1547/1547.1",
+     "Inverter grid-support functions, anti-islanding ≤2 s, interoperability",
+     "Certification to the interconnection standard",
+     "Distribution utilities, state rules"
+    ],
+    [
+     "IEEE 2800-2022",
+     "Transmission-level inverter-based-resource performance",
+     "Performance standard flowing into enforceable rules",
+     "Transmission interconnection"
+    ],
+    [
+     "NERC PRC-029-1",
+     "Mandatory IBR ride-through, explicitly including BESS",
+     "Enforceable NERC standard (FERC Order 909, Jul 2025; effective ~Oct 1, 2026)",
+     "NERC/FERC; generator owners"
+    ],
+    [
+     "ERCOT NOGRR 245 (+272/PGRR 121)",
+     "ERCOT IBR ride-through; advanced grid support / grid-forming expectations",
+     "Nodal Operating Guide revisions (245 maximization deadline: Dec 31, 2025)",
+     "ERCOT resource entities"
+    ]
+   ]
+  },
+  {
+   "id": "ninefortya",
+   "title": "UL 9540A and NFPA 855-2026, precisely",
+   "read": "5 min",
+   "kind": "prose",
+   "ps": [
+    "**What the 9540A test actually does:** the lab forces a cell into thermal runaway and observes, at four escalating levels (cell → module → unit → installation), whether runaway propagates, what gases vent and how flammable they are, flame extension, heat release, and whether deflagration occurs. **There is no 'pass.'** The output is a data report that a fire-protection engineer and the AHJ use to design and approve the installation - spacing deviations, deflagration venting or prevention, suppression. The correct sales claim: *'UL 9540A tested at cell, module and unit level, with reports available.'* A 5th edition published March 12, 2025, aligned to NFPA 855-2026's large-scale fire-testing expectations.",
+    "**NFPA 855-2026 - the changes that matter:** (1) **Large-Scale Fire Testing elevated from best practice to a central, effectively mandatory requirement** for lithium-ion installations - one unit fully involved, suppression and detection disabled, demonstrating no spread to neighbors; CSA TS-800:24 is the standardized procedure the industry uses to satisfy it. (2) **Hazard Mitigation Analysis becomes the default requirement.** (3) Fire-detection options broadened. (4) **Explosion-control philosophy shifts: NFPA 68 deflagration venting is no longer accepted as the primary strategy** - the push is toward gas-accumulation prevention and management. (5) Spacing, outdoor-exemption and listing requirements updated.",
+    "**The grid gauntlet hardens on Oct 1, 2026:** FERC Order 909 (Jul 24, 2025) approved NERC PRC-029-1 - mandatory ride-through for inverter-based resources *explicitly including BESS*, banning momentary cessation in must-ride-through zones, aligned with IEEE 2800. In ERCOT, NOGRR 245's firmware/settings maximization deadline passed Dec 31, 2025, and the advanced-grid-support rules (NOGRR 272 / PGRR 121) push grid-forming expectations for storage. Offer IEEE 2800-conformant PCS/controls documentation as part of the package, unprompted."
+   ]
+  },
+  {
+   "id": "fires",
+   "title": "The fire record and what it costs",
+   "read": "5 min",
+   "kind": "prose",
+   "ps": [
+    "**Moss Landing (Jan 16, 2025)** defined 2025-26 perception: Vistra's Phase 1 (300 MW) - **LG Energy Solution NMC batteries in a legacy indoor design** (a repurposed turbine hall) with an earlier-standards water-suppression scheme - burned, forcing evacuation of ~1,200-1,500 residents, with a Feb 18 flare-up. Vistra wrote off ~$400M; toxic-plume litigation followed; San Luis Obispo and Orange counties imposed moratoria. Policy outcome: the 3,200-ft-setback bill (AB 303) **died in committee** April 2025; the CPUC instead advanced maintenance/operation standards (SB 1383) and emergency-response oversight (SB 38) and opened an investigation. The honest sales framing, which insurers themselves reached: indoor, NMC, early-2020s vintage - **a categorically different risk object from modern outdoor containerized LFP** with unit-level propagation data.",
+    "**The legacy incident behind the rules:** APS McMicken (Apr 2019) - internal cell failure, cascading runaway, flammable-gas accumulation, and an explosion that injured firefighters. DNV's investigation (missing thermal barriers, suppression that could not stop runaway, gas accumulation, responder-coordination gaps) is why 9540A data, deflagration management, and emergency-response planning are now table stakes.",
+    "**The statistics are the good news:** analyses of EPRI's BESS Failure Incident Database show the failure rate per deployed GWh fell on the order of **~97-99% between 2018 and 2025** as early-generation lessons were designed out. State the caveat honestly - the database is media/report-derived and may undercount minor events - and the number still lands.",
+    "**How incidents price:** brokers' consensus was that Moss Landing was *'not a market-moving event'* precisely because underwriters distinguish legacy indoor NMC from modern outdoor LFP; NMC-vs-LFP claims severity is now priced; premium softening continues but slower in 2026; the best deductibles go to operators demonstrating granular monitoring and disciplined O&M. Complete 9540A documentation is effectively an insurance prerequisite."
+   ]
+  },
+  {
+   "id": "bankability",
+   "title": "What 'bankable' concretely means",
+   "read": "6 min",
+   "kind": "prose",
+   "ps": [
+    "**The Independent Engineer report is the gate.** Lenders and tax equity will not close without one (DNV, Sargent & Lundy, Black & Veatch, Leidos, ICF, UL Solutions and peers). The IE tests: the revenue model against the equipment's real capability (cycling regime vs warranty limits - a two-cycles-per-day contract against a one-cycle warranty voids coverage, and IEs check for exactly this); technology and integration quality; **degradation and warranty terms** (do the guaranteed retention curves support the pro forma? is {{augmentation}} costed and physically provided for?); grid compliance; commercial agreements; and **supplier counterparty strength** - financial health, factory-audit results, field record, spares and service network.",
+    "**The contractual skeleton:** commissioning guarantees (capacity + round-trip efficiency at COD); long-term energy-retention warranties conditioned on an operating envelope; **availability guarantees delivered through the LTSA** with liquidated damages - and suppliers generally will not give long-term warranties without holding the LTSA, since the LTSA controls the conditions the warranty depends on. Lenders now expect availability-anchored LTSA structures as standard.",
+    "**The scorecards buyers consult:** the {{BNEF Tier 1}} storage list (a financeability screen - Chinese firms held ~85% of the Q2 2026 list; Hithium listed since at least 2Q 2024); DNV's annual Battery Performance Scorecard (independent lab degradation/safety testing); and CEA's factory-audit reporting - whose headline finding reframed diligence: **72% of BESS manufacturing defects are now found at system level** (fire detection & suppression 28% of system-level findings, auxiliary circuit panels 19%, thermal management 15%). Cell quality is no longer where most defects live - which is why factory-audit rights are in every serious RFP. (No dedicated PVEL/Kiwa BESS scorecard was confirmed - their famous scorecard is PV modules; do not cite one.)",
+    "**The China overlay:** lenders cannot avoid Chinese content (90-100% of US BESS carries some), so they price and paper it - MACR documentation, FEOC certifications, ITC-eligibility representations, recapture indemnities (mechanics in the companion China-policy module). The FCC moved mid-2026 to ban **new** equipment authorizations for Chinese-made inverters (prospective; DOE's January 2026 inspection of 30 units found no malicious hardware). The practical pairing: Chinese DC blocks with **non-Chinese PCS/EMS**, plus unprompted cybersecurity documentation (SBOM, firmware provenance, remote-access policy)."
+   ]
+  },
+  {
+   "id": "hithium",
+   "title": "Hithium's file - what an IE will say",
+   "read": "4 min",
+   "kind": "proscons",
+   "intro": "Know both columns cold. The tailwinds are real and quantified; the headwinds will be raised in every diligence process, and the sales team should raise them first, with the structural answers attached.",
+   "cards": [
+    {
+     "t": "Tailwinds",
+     "meta": "the proof points to quantify in every proposal",
+     "adv": [
+      "#2 global ESS cell shipper in 2025 (InfoLink; 35.1 GWh / #3 in 2024)",
+      "BNEF Tier 1 listed since at least 2Q 2024",
+      "Real US operating record: Jupiter Power 3 GWh (∞Block 5 MWh, 314 Ah cells rated to 11,000 cycles); Perfect Power 1 GWh MOU",
+      "Mesquite, TX assembly (~10 GWh/yr) shipping since Aug 28, 2025"
+     ],
+     "dis": []
+    },
+    {
+     "t": "Headwinds",
+     "meta": "raise them first, with answers",
+     "adv": [],
+     "dis": [
+      "HKEX IPO: filed Mar 2025, lapsed Sep 25, 2025, refiled Oct 2025, unclosed as of Aug 2026 - an IE reads an unclosed IPO as a financing-dependency flag against a 20-year warranty",
+      "Gross margin compression: 17.9% (2024) → 13.1% (H1 2025) despite +224.6% revenue growth",
+      "CATL unfair-competition suit (Ningde court, confirmed Jun 2025; 587 Ah cell allegations) - injunction and reputational tail risk",
+      "The FEOC/tariff overlay per the companion module"
+     ]
+    },
+    {
+     "t": "Structural answers that work in project finance",
+     "meta": "the counterparty-risk toolkit",
+     "adv": [
+      "Parent guarantees and warranty insurance/bonding",
+      "Escrowed spare parts; availability-LD LTSAs backed by the US entity",
+      "Named bank references; quantified US fleet performance (GWh delivered, availability achieved)",
+      "Factory-audit invitations before they are demanded"
+     ],
+     "dis": []
+    }
+   ]
+  },
+  {
+   "id": "checklist",
+   "title": "The RFP diligence checklist",
+   "read": "3 min",
+   "kind": "table",
+   "intro": "A composite of 2025-26 utility-scale RFP and IE data requests. Arriving with all ten assembled is the differentiation.",
+   "cols": [
+    "#",
+    "What the buyer asks for"
+   ],
+   "rows": [
+    [
+     "1",
+     "UL 1973 + UL 9540 listings (NRTL); PCS certs - UL 1741 SB / IEEE 1547 (distribution) or IEEE 2800 / PRC-029 conformance evidence (transmission)"
+    ],
+    [
+     "2",
+     "COMPLETE UL 9540A reports - cell, module, AND unit level (cell-only submissions are a known dodge) + large-scale fire test results (CSA TS-800 basis) + deflagration-management design data"
+    ],
+    [
+     "3",
+     "NFPA 855 package: hazard mitigation analysis support, spacing drawings, gas detection design, emergency response plan template, first-responder training offer"
+    ],
+    [
+     "4",
+     "UN 38.3 Test Summaries + dangerous-goods shipping documentation"
+    ],
+    [
+     "5",
+     "Cycle-life, degradation, and round-trip-efficiency data with independent-lab validation"
+    ],
+    [
+     "6",
+     "Capacity warranty (term, annual state-of-health table, operating envelope), availability guarantee, throughput terms, liquidated damages, LTSA scope, augmentation plan"
+    ],
+    [
+     "7",
+     "Counterparty proof: audited financials, parent guarantees or warranty insurance, bank references, US fleet references"
+    ],
+    [
+     "8",
+     "Trade/tax: country-of-origin + HTS documentation, domestic-content declarations, FEOC/MACR certifications with cost breakdowns, recapture indemnities"
+    ],
+    [
+     "9",
+     "Quality: pre-shipment inspection and in-line factory audit rights, FAT/SAT protocols, non-conformance reporting"
+    ],
+    [
+     "10",
+     "Cybersecurity: EMS/BMS architecture, SBOM, firmware chain of custody, remote-access policy, FCC equipment-authorization status"
+    ]
+   ]
+  },
+  {
+   "id": "sales",
+   "title": "Implications for the sales motion",
+   "read": "2 min",
+   "kind": "callout",
+   "ps": [
+    "**1 - Lead with the complete safety dossier** - full 9540A stack (cell + module + unit, 5th-edition testing), LSFT results, listings, UN 38.3 summaries, NFPA 855-2026 package. Completeness IS differentiation.",
+    "**2 - Reframe Moss Landing proactively** - indoor, NMC, legacy design; cite the insurers' own 'not a market-moving event' verdict and the EPRI ~97-99% decline with its caveat stated honestly.",
+    "**3 - Own the FEOC/tariff conversation before diligence raises it** - the MACR narrative, certifications we can and cannot sign, and the indemnity/recapture structure on offer (companion module).",
+    "**4 - Neutralize the counterparty file with structure** - guarantees, bonding, escrowed spares, US-entity-backed LTSAs, bank references, quantified Jupiter fleet performance.",
+    "**5 - Bundle for the grid gauntlet** - IEEE 2800-conformant PCS documentation, non-Chinese PCS/EMS pairing options, and cybersecurity documentation, all unprompted.",
+    "**6 - Enforce the vocabulary** - 9540A is a test, not a cert; NOGRR 282 is a load rule; Tier 1 is a financeability screen. Precision is credibility."
+   ]
+  },
+  {
+   "id": "ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "Load-bearing claims with sources. Full 30-row linked ledger: the analysis file in the repo.",
+   "rows": [
+    [
+     "UL 9540A: test method, no pass/fail, 4 levels; 5th edition Mar 12, 2025",
+     "UL Solutions; ShopULStandards; Mayfield"
+    ],
+    [
+     "NFPA 855-2026: LSFT effectively mandatory; HMA default; NFPA 68 venting no longer primary",
+     "Telgian; Energy-Storage.News; EnergyTech"
+    ],
+    [
+     "CSA TS-800:24 LSFT procedure (one unit fully alight, no propagation)",
+     "CSA Group; ACP; Jensen Hughes"
+    ],
+    [
+     "PRC-029-1 approved by FERC Order 909 (Jul 24, 2025); effective ~Oct 1, 2026; includes BESS",
+     "Federal Register; Keentel"
+    ],
+    [
+     "NOGRR 245 eff. Oct 1, 2024 (maximization Dec 31, 2025); NOGRR 282 = large electronic loads, not storage",
+     "ERCOT notices and dockets"
+    ],
+    [
+     "Moss Landing: Jan 16, 2025; LG NMC, legacy indoor design; ~$400M Vistra write-off; SLO/Orange moratoria",
+     "WECC report (Dec 2025); Energy-Storage.News; Canary Media"
+    ],
+    [
+     "AB 303 died Apr 2025; CPUC advanced SB 1383/SB 38 rules + investigation",
+     "Brownstein; Energy-Storage.News"
+    ],
+    [
+     "McMicken 2019: runaway → explosion; DNV findings drove the modern rules",
+     "Utility Dive; NFPA"
+    ],
+    [
+     "EPRI database: failure rate down ~97-99% per GWh, 2018 → 2025 (media-derived; caveat required)",
+     "EPRI wiki/white paper; Battery Design"
+    ],
+    [
+     "Insurers: Moss Landing 'not a market-moving event'; NMC>LFP severity priced; softening slows in 2026",
+     "Energy-Storage.News (Lockton); kWh Analytics; NARDAC"
+    ],
+    [
+     "IE scope and role as the financial-close gatekeeper",
+     "Sargent & Lundy; DNV; Sunraise"
+    ],
+    [
+     "BNEF Tier 1 criteria (≥6 projects ≥10 MW/MWh, 2 yrs, ≥3 buyers); ~85% Chinese Q2 2026; Hithium listed since ≥2Q24",
+     "BNEF methodology; EnergyTrend; Hithium PR"
+    ],
+    [
+     "CEA: 72% of defects at system level - fire detection 28%, aux panels 19%, thermal 15% (680+ inspections)",
+     "ess-news; CEA report"
+    ],
+    [
+     "Warranty/LTSA norms: suppliers won't warranty without the LTSA; availability-anchored structures lender-standard",
+     "Foot Anstey; TWAICE"
+    ],
+    [
+     "FCC ban on new Chinese-inverter authorizations (mid-2026, prospective); DOE found no malicious hardware (Jan 2026)",
+     "pv magazine USA; Reuters/US News; Canary Media"
+    ],
+    [
+     "Hithium: #2 2025 ESS cell shipments; Jupiter 3 GWh (∞Block, 314 Ah, ≤11,000 cycles); Mesquite shipping Aug 2025",
+     "InfoLink; SolarbeGlobal; Energy-Storage.News"
+    ],
+    [
+     "Hithium IPO lapsed Sep 25, 2025 → refiled Oct 2025; margin 17.9 → 13.1%; CATL suit Jun 2025",
+     "Energy-Storage.News; Bamboo Works; ess-news; pv magazine"
+    ]
+   ]
+  },
+  {
+   "id": "cards",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "What does UL 9540A produce, and what may you never call it?",
+     "a": "A data report on thermal-runaway propagation at four levels (cell → module → unit → installation) used by fire-protection engineers and AHJs to design spacing, venting, and suppression. It has no pass/fail - never say '9540A certified'; say 'tested at cell, module and unit level, reports available.'"
+    },
+    {
+     "q": "The three biggest changes in NFPA 855-2026?",
+     "a": "Large-scale fire testing becomes effectively mandatory (CSA TS-800 procedure); hazard mitigation analysis becomes the default; NFPA 68 deflagration venting is no longer accepted as the primary explosion-control strategy."
+    },
+    {
+     "q": "NOGRR 282 vs NOGRR 245 - who does each bind?",
+     "a": "282 binds large electronic LOADS (≥75 MW data centers/crypto) to ride through disturbances. 245 (plus 272/PGRR 121) binds STORAGE and other inverter-based resources. Confusing them marks you as a tourist."
+    },
+    {
+     "q": "Why was Moss Landing 'not a market-moving event' for insurers?",
+     "a": "Underwriters distinguish legacy indoor NMC designs (which Moss Landing Phase 1 was - LG NMC in a repurposed turbine hall) from modern outdoor containerized LFP with unit-level propagation data. The distinction is priced."
+    },
+    {
+     "q": "CEA's headline factory-quality finding?",
+     "a": "72% of BESS manufacturing defects are now found at SYSTEM level - fire detection & suppression 28%, auxiliary circuit panels 19%, thermal management 15%. Cell quality is no longer where most defects live; hence factory-audit rights in every serious RFP."
+    },
+    {
+     "q": "What is BNEF Tier 1, precisely?",
+     "a": "A bank-financeability screen: supply to ≥6 projects of ≥10 MW/10 MWh in the past two years, to ≥3 independent buyers, with tracked non-recourse financing. Not a quality award. Hithium: listed since at least 2Q 2024."
+    },
+    {
+     "q": "Why won't a supplier give a long-term warranty without holding the LTSA?",
+     "a": "The LTSA controls the operating conditions the warranty depends on (cycling regime, maintenance, envelope). Lenders now expect availability-anchored LTSA structures as standard - and IEs check for warranty-vs-revenue-contract mismatches."
+    },
+    {
+     "q": "What hardens on October 1, 2026?",
+     "a": "NERC PRC-029-1 (FERC Order 909) - mandatory ride-through for inverter-based resources explicitly including BESS, banning momentary cessation, aligned with IEEE 2800. Bring conformant PCS documentation unprompted."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "title": "Self-test",
+   "read": "6 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A proposal draft says 'our system is UL 9540A certified.' You:",
+     "c": [
+      "Ship it - sounds strong",
+      "Correct it: 9540A is a test method with no pass/fail - claim 'tested at cell, module and unit level, reports available' and attach them",
+      "Change it to 'UL 9540B certified'",
+      "Delete all certification claims"
+     ],
+     "a": 1,
+     "why": "The mislabel is a credibility tell that IEs and AHJs notice immediately. The real differentiation is report completeness."
+    },
+    {
+     "q": "An AHJ asks how the design handles explosion control under NFPA 855-2026. The strongest answer leads with:",
+     "c": [
+      "NFPA 68 deflagration vents",
+      "Gas-accumulation prevention/management, backed by unit-level 9540A gas data and LSFT results",
+      "Bigger sprinklers",
+      "A letter from the OEM"
+     ],
+     "a": 1,
+     "why": "The 2026 edition shifted philosophy: venting is no longer accepted as the primary strategy. Prevention/management backed by test data is the compliant posture."
+    },
+    {
+     "q": "A lender's IE asks about a project cycling twice daily against a warranty covering 365 cycles/year. This is:",
+     "c": [
+      "Fine - warranties are flexible",
+      "The classic warranty-mismatch trap: the revenue contract would void coverage; restructure the warranty/LTSA or the dispatch",
+      "Only a problem after year 10",
+      "The developer's issue, not the OEM's"
+     ],
+     "a": 1,
+     "why": "IEs check for exactly this. Warranty envelope vs revenue model is a standard kill-item in diligence."
+    },
+    {
+     "q": "Which is a TRUE statement about the fire-safety statistics?",
+     "c": [
+      "Failure rates are rising with deployment",
+      "EPRI-database analyses show failure rates per deployed GWh fell ~97-99% from 2018 to 2025 - with the caveat that the database is media-derived",
+      "There is no failure data",
+      "Only NMC systems fail"
+     ],
+     "a": 1,
+     "why": "The number lands hardest when the caveat is stated honestly - that discipline is also what separates our materials from vendor puff."
+    },
+    {
+     "q": "A buyer asks why they should trust a 20-year warranty from a company whose IPO hasn't closed. The professional answer:",
+     "c": [
+      "The IPO will close soon",
+      "Acknowledge the flag and answer with structure: parent guarantees, warranty insurance/bonding, escrowed spares, a US-entity-backed availability-LD LTSA, bank references, and quantified Jupiter fleet performance",
+      "Point to revenue growth (+224.6%)",
+      "Change the subject to price"
+     ],
+     "a": 1,
+     "why": "IEs score counterparty risk structurally. Raising the headwind first with the toolkit attached converts a weakness into a professionalism signal."
+    },
+    {
+     "q": "The FCC's mid-2026 inverter action means:",
+     "c": [
+      "All Chinese BESS is banned",
+      "New equipment authorizations for Chinese-made inverters are barred prospectively - pair Chinese DC blocks with non-Chinese PCS/EMS and bring cyber documentation unprompted",
+      "Existing systems must be removed",
+      "Nothing - DOE found no malicious hardware"
+     ],
+     "a": 1,
+     "why": "Prospective scope; existing authorized models unaffected. The pairing strategy simultaneously helps MACR, the FCC issue, and utility cyber reviews."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "AHJ",
+   "d": "Authority Having Jurisdiction - the fire marshal or local official who approves an ESS installation under NFPA 855 / the fire code. The consumer of UL 9540A data and LSFT results."
+  },
+  {
+   "t": "NFPA 855",
+   "d": "The installation standard for stationary energy storage - siting, spacing, hazard mitigation analysis, detection, explosion control, emergency planning. The 2026 edition makes large-scale fire testing effectively mandatory."
+  },
+  {
+   "t": "LSFT",
+   "d": "Large-Scale Fire Test - one full BESS unit set fully alight with suppression disabled, demonstrating no propagation to adjacent units. CSA TS-800:24 is the standardized procedure."
+  },
+  {
+   "t": "HMA",
+   "d": "Hazard Mitigation Analysis - the engineered risk assessment NFPA 855-2026 makes the default requirement for most installations."
+  },
+  {
+   "t": "IE",
+   "d": "Independent Engineer - the lender's technical diligence firm (DNV, Sargent & Lundy, Black & Veatch, Leidos, ICF...). The IE report is the definitive gatekeeper for financial close."
+  },
+  {
+   "t": "LTSA",
+   "d": "Long-Term Service Agreement - the O&M contract through which availability guarantees are delivered. Suppliers generally will not give long-term warranties without holding it."
+  },
+  {
+   "t": "augmentation",
+   "d": "Planned addition of modules/containers in later years to restore capacity lost to degradation. IEs verify it is both costed in the pro forma and physically provided for (space, power, controls headroom)."
+  },
+  {
+   "t": "BNEF Tier 1",
+   "d": "BloombergNEF's quarterly energy-storage financeability screen: ≥6 projects ≥10 MW/10 MWh in two years, ≥3 independent buyers, non-recourse financing. A screen, not a quality award."
+  },
+  {
+   "t": "PRC-029-1",
+   "d": "NERC's mandatory ride-through standard for inverter-based resources including BESS (FERC Order 909, Jul 2025; effective ~Oct 1, 2026). The transmission-level teeth behind IEEE 2800."
+  },
+  {
+   "t": "UN 38.3",
+   "d": "The UN transport test regime for lithium batteries - eight abuse tests plus a Test Summary the manufacturer must supply. No third-party certification, but buyers routinely request the summary."
+  },
+  {
+   "t": "MACR",
+   "d": "The FEOC material-assistance cost ratio from the companion China-policy module - the 55% (2026) → 75% (2030+) non-PFE cost floor for storage ITC eligibility. Now a standard RFP documentation item."
   }
  ]
 };
