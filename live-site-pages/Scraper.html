@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.37w">
+  <meta name="build-version" content="v01.38w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -920,6 +920,13 @@
           <input id="wd-co-search" type="text" placeholder="Filter companies…" autocomplete="off">
           <div class="wd-tog-list" id="wd-co-list"><span class="wd-loading">Loading interests…</span></div>
           <button class="wd-link" id="wd-co-more" type="button" style="display:none;">Show all</button>
+        </div>
+        <div class="wd-sect">
+          <div class="wd-sect-head">
+            <span class="wd-lbl" title="Business-segment lenses: turn a segment off and covered-company news that only touches that segment (e.g. an automaker's vehicle recall) is excluded from digests">Segments</span>
+            <span class="wd-count" id="wd-sg-count"></span>
+          </div>
+          <div class="wd-tog-list" id="wd-sg-list"><span class="wd-loading">Seeded by the daily sync</span></div>
         </div>
         <div class="wd-sect">
           <div class="wd-sect-head">
@@ -6571,10 +6578,12 @@
     if (syncBtn) syncBtn.addEventListener('click', wdSyncNow_);
     var rubricBtn = $sc('wd-rubric-btn');
     if (rubricBtn) rubricBtn.addEventListener('click', wdRubricScore_);
-    var coList = $sc('wd-co-list'), tpList = $sc('wd-tp-list'), srcList = $sc('wd-src-list');
+    var coList = $sc('wd-co-list'), tpList = $sc('wd-tp-list'), srcList = $sc('wd-src-list'),
+        sgList = $sc('wd-sg-list');
     if (coList) coList.addEventListener('click', wdToggleClick_);
     if (tpList) tpList.addEventListener('click', wdToggleClick_);
     if (srcList) srcList.addEventListener('click', wdToggleClick_);
+    if (sgList) sgList.addEventListener('click', wdToggleClick_);
     var dgBtn = $sc('wd-digest-btn');
     if (dgBtn) dgBtn.addEventListener('click', wdDigestOpen_);
     var dgClose = $sc('wd-digest-close');
@@ -6621,7 +6630,21 @@
       });
   }
 
-  function wdRenderInterests_() { wdRenderSources_(); wdRenderCompanies_(); wdRenderTopics_(); wdRenderSync_(); }
+  function wdRenderInterests_() { wdRenderSources_(); wdRenderCompanies_(); wdRenderSegments_(); wdRenderTopics_(); wdRenderSync_(); }
+
+  /** Segments section: business-segment lenses gating covered-company news.
+      OFF = company articles touching only that segment are excluded. */
+  function wdRenderSegments_() {
+    var el = $sc('wd-sg-list');
+    if (!el) return;
+    var sgs = _wdInterests.filter(function(i) { return i.type === 'segment'; });
+    var on = sgs.filter(function(i) { return i.enabled && i.status === 'active'; }).length;
+    var cnt = $sc('wd-sg-count');
+    if (cnt) cnt.textContent = sgs.length ? (on + '/' + sgs.length + ' on') : '';
+    el.innerHTML = sgs.length
+      ? sgs.map(wdIntRow_).join('')
+      : '<span class="wd-loading">Seeded by the daily sync</span>';
+  }
 
   /** Sources section (Phase 3): the D1 roster rows, seeded by the daily sync
       in roster order (tier-1 outlets first). Toggles reuse the interest path. */
@@ -6798,10 +6821,18 @@
             + '<span class="wd-sig-track"><span class="wd-sig-fill" style="width:' + pct + '%;"></span></span>'
             + '<span class="wd-sig-val">' + v + '/' + maxes[k] + '</span></div>';
         }).join('');
-        var m = (data.matchedCompanies || []).concat(data.matchedTopics || []);
-        $sc('wd-rubric-matches').textContent = m.length
+        var m = (data.matchedCompanies || []).concat(data.matchedTopics || [])
+          .concat(data.matchedSegments || []);
+        var note = m.length
           ? 'Matched: ' + m.join(', ')
           : 'No interest matches — likely below the relevance bar';
+        if (data.gated) {
+          note = 'Excluded by segment gate — only matches toggled-off segment'
+            + ((data.excludedSegments || []).length === 1 ? '' : 's') + ': '
+            + (data.excludedSegments || []).join(', ')
+            + (m.length ? '. Also matched: ' + m.join(', ') : '');
+        }
+        $sc('wd-rubric-matches').textContent = note;
         $sc('wd-rubric-result').style.display = 'flex';
       })
       .catch(function(err) {

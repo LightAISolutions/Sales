@@ -1,4 +1,4 @@
-var VERSION = "v01.39g";
+var VERSION = "v01.40g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -492,6 +492,47 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     source: 'market' }
 ];
 
+// Business-segment lenses (developer feedback 2026-08-27): covered companies
+// span many segments (CATL/BYD sell EVs and chargers, Tesla sells cars, ABB
+// sells robotics) but the digest should follow only the segments the
+// developer cares about. Each seed becomes a toggleable 'segment' row in the
+// Interests tab (default ON, insert-only — in-sheet term edits win). The
+// rubric's segment gate: an article that matches a covered company but whose
+// only segment hits are toggled-OFF segments loses its company + emphasis
+// signals, so off-segment company news falls below the relevance bar.
+// Articles with no segment-term hits at all are unaffected (neutral).
+var SCRAPER_INTEREST_FLAG_NEWSEG = 'New segment';
+var SCRAPER_SEGMENT_SEEDS = [
+  { key: 'seg-bess', label: 'BESS & grid-scale storage',
+    terms: ['bess', 'battery storage', 'energy storage', 'grid-scale battery', 'storage system', 'battery cell', 'lfp', 'sodium-ion', 'megawatt-hour'] },
+  { key: 'seg-aidc', label: 'Data centers & AI infrastructure',
+    terms: ['data center', 'datacenter', 'ai infrastructure', 'hyperscale', 'colocation', 'ai factory', 'compute campus'] },
+  { key: 'seg-grid-equipment', label: 'Transformers & grid equipment',
+    terms: ['transformer', 'switchgear', 'substation', 'hvdc', 'grid equipment', 'transmission line'] },
+  { key: 'seg-power-electronics', label: 'Power electronics & UPS',
+    terms: ['inverter', 'uninterruptible power', 'power conversion system', 'rectifier', 'busway', 'medium-voltage'] },
+  { key: 'seg-solar', label: 'Solar',
+    terms: ['solar', 'photovoltaic', 'pv module', 'solar panel', 'solar farm'] },
+  { key: 'seg-wind', label: 'Wind',
+    terms: ['wind turbine', 'wind farm', 'offshore wind', 'onshore wind'] },
+  { key: 'seg-nuclear', label: 'Nuclear & SMRs',
+    terms: ['nuclear', 'reactor', 'small modular reactor', 'uranium'] },
+  { key: 'seg-gas-turbines', label: 'Gas & turbines',
+    terms: ['gas turbine', 'natural gas plant', 'combined cycle', 'aeroderivative', 'peaker'] },
+  { key: 'seg-fuel-cells', label: 'Fuel cells & hydrogen',
+    terms: ['fuel cell', 'hydrogen', 'electrolyzer'] },
+  { key: 'seg-ev', label: 'EVs & automotive',
+    terms: ['electric vehicle', 'electric vehicles', 'automaker', 'vehicle recall', 'car sales', 'autonomous driving', 'robotaxi', 'ev sales', 'ev market', 'sedan', 'suv'] },
+  { key: 'seg-ev-charging', label: 'EV charging',
+    terms: ['charger', 'chargers', 'charging station', 'charging network', 'supercharger', 'fast charging'] },
+  { key: 'seg-semiconductors', label: 'Semiconductors & AI hardware',
+    terms: ['semiconductor', 'chip', 'chips', 'foundry', 'wafer', 'accelerator'] },
+  { key: 'seg-consumer', label: 'Consumer electronics & appliances',
+    terms: ['smartphone', 'consumer electronics', 'appliance', 'laptop', 'tablet', 'wearable'] },
+  { key: 'seg-industrial', label: 'Industrial automation & robotics',
+    terms: ['robotics', 'robot', 'factory automation', 'industrial automation', 'humanoid'] }
+];
+
 // Four-signal scoring rubric (decision D3, 2026-08-27) — replaces 👍/👎
 // feedback as the relevance model. Signals sum to a 0-100 score aligned
 // with SCRAPER_RELEVANT_THRESHOLD. Phase 1 ships the deterministic
@@ -521,7 +562,8 @@ var SCRAPER_DIGEST_BACKSTOP_PER_RUN = 12;        // D2: company-name queries per
 var SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY = 'scDigestBackstopCursor';
 var SCRAPER_DIGEST_BACKSTOP_PENALTY = 0.85;      // D2: backstop items are down-weighted
 var SCRAPER_DIGEST_SUMMARIZE_TOP_N = 14;         // AI key-point summaries for the top-scored items
-var SCRAPER_DIGEST_ITEMS_PER_AI_CALL = 7;        // items per summarize request
+var SCRAPER_DIGEST_ITEMS_PER_AI_CALL = 5;        // items per summarize request (smaller batches → room for longer summaries)
+var SCRAPER_DIGEST_SUMMARY_MAX = 900;            // stored summary cap (chars) — generous; quality set by the prompt, not a hard length limit
 var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limit is 50k chars)
 var SCRAPER_DIGEST_KEEP = 60;                    // Digests tab retention (rows)
 var SCRAPER_DIGEST_SECTION_CAPS = { companies: 6, market: 6, incidents: 4 };
@@ -2220,6 +2262,15 @@ function scSyncInterests_(force) {
       appendRows.push(['src-' + rsrc.key, 'source', rsrc.name, true, 'active', '',
         'tier ' + rsrc.tier, '', 1, 'roster', '', now, now, '']);
     }
+    // Segment seeds (developer feedback 2026-08-27) — insert-only, default
+    // ON. Aliases hold the default match terms; in-sheet edits win.
+    for (var sg = 0; sg < SCRAPER_SEGMENT_SEEDS.length; sg++) {
+      var sgs = SCRAPER_SEGMENT_SEEDS[sg];
+      if (byKey[sgs.key] !== undefined) continue;
+      appendRows.push([sgs.key, 'segment', sgs.label, true, 'active',
+        SCRAPER_INTEREST_FLAG_NEWSEG, '', sgs.terms.join(', '), 1, 'segments',
+        '', now, now, '']);
+    }
     if (dirty && data.length > 1) {
       sheet.getRange(2, 1, data.length - 1, width).setValues(
         data.slice(1).map(function(dr) { return dr.slice(0, width); }));
@@ -2237,31 +2288,42 @@ function scSyncInterests_(force) {
   }
 }
 
-/** Load the enabled, active interest model from the Interests tab
-    (per-execution cache). Lower-cased match terms are precomputed; the
-    row's Label is always included as a term. */
+/** Load the interest model from the Interests tab (per-execution cache).
+    Companies and topics load only when enabled + active (they add signal).
+    Segments load in BOTH states — a disabled segment must stay in the model
+    so the rubric's segment gate can subtract with it. Lower-cased match
+    terms are precomputed; company/topic rows include their Label as a term
+    (segment labels are category names, not match terms). */
 var _scInterestModel = null;
 function scLoadInterestModel_(ss) {
   if (_scInterestModel) return _scInterestModel;
-  var model = { companies: [], topics: [] };
+  var model = { companies: [], topics: [], segments: [] };
   var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
   if (sheet) {
     var data = sheet.getDataRange().getValues();
     for (var i = 1; i < data.length && i < SCRAPER_INTERESTS_MAX_ROWS; i++) {
       var r = data[i];
+      var type = String(r[1]);
       var on = r[3] === true || String(r[3]).toLowerCase() === 'true';
-      if (!on || String(r[4]) !== 'active') continue;
+      var active = String(r[4]) === 'active';
       var label = String(r[2] || '').trim();
       var terms = String(r[7] || '').split(/[\n,]/).map(function(t) {
         return t.trim().toLowerCase();
       }).filter(function(t) { return t.length >= 3; });
+      if (type === 'segment') {
+        if (!active) continue;
+        model.segments.push({ key: String(r[0]), label: label, terms: terms, enabled: on });
+        continue;
+      }
+      if (type !== 'company' && type !== 'topic') continue;
+      if (!on || !active) continue;
       if (label.length >= 3 && terms.indexOf(label.toLowerCase()) === -1) {
         terms.push(label.toLowerCase());
       }
       var entry = { key: String(r[0]), label: label, terms: terms,
                     weight: Math.max(0, Math.min(3, Number(r[8]) || 1)),
                     profilerUpdated: String(r[10] || '') };
-      (String(r[1]) === 'company' ? model.companies : model.topics).push(entry);
+      (type === 'company' ? model.companies : model.topics).push(entry);
     }
   }
   _scInterestModel = model;
@@ -2324,8 +2386,23 @@ function scRubricScore_(title, snippet, model) {
     topic = w.topic * Math.min(1, bestTopicWeight);
     topic = Math.min(w.topic, topic + w.topic * 0.2 * (matchedTopics.length - 1));
   }
+  // Segment gate (developer feedback 2026-08-27): classify the article
+  // against ALL segment lenses. If its only segment hits are toggled-off
+  // segments, the company + emphasis signals are zeroed — a covered
+  // company's off-segment news (e.g. an automaker's vehicle recall when
+  // "EVs & automotive" is off) no longer rides the company match over the
+  // relevance bar. Enabled hits, or no segment hits at all, change nothing.
+  var matchedSegments = [], excludedSegments = [];
+  var segs = model.segments || [];
+  for (var g = 0; g < segs.length; g++) {
+    if (scTermsHit_(text, segs[g].terms)) {
+      (segs[g].enabled ? matchedSegments : excludedSegments).push(segs[g].label);
+    }
+  }
+  var gated = excludedSegments.length > 0 && matchedSegments.length === 0;
+  if (gated) company = 0;
   var emphasis = 0;
-  if (matchedCompanies.length) {
+  if (matchedCompanies.length && !gated) {
     var freshest = 0;
     for (var k = 0; k < model.companies.length; k++) {
       var e = model.companies[k];
@@ -2351,7 +2428,9 @@ function scRubricScore_(title, snippet, model) {
     score: Math.round(Math.min(100, company + topic + emphasis + substance)),
     signals: { company: round1(company), topic: round1(topic),
                emphasis: round1(emphasis), substance: substance },
-    matchedCompanies: matchedCompanies, matchedTopics: matchedTopics
+    matchedCompanies: matchedCompanies, matchedTopics: matchedTopics,
+    matchedSegments: matchedSegments, excludedSegments: excludedSegments,
+    gated: gated
   };
 }
 
@@ -2536,7 +2615,8 @@ function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen
     seen[it.url] = true;
     out.push([state.id, it.url, it.title, sourceLabel || it.source,
       it.publishedAt, it.snippet, score,
-      JSON.stringify({ s: r.signals, mc: r.matchedCompanies, mt: r.matchedTopics }).slice(0, 900),
+      JSON.stringify({ s: r.signals, mc: r.matchedCompanies, mt: r.matchedTopics,
+        ms: r.matchedSegments, xs: r.excludedSegments, g: r.gated ? 1 : 0 }).slice(0, 1200),
       '', scDigestSectionFor_(r), isBackstop ? 'yes' : '']);
   }
   if (out.length) {
@@ -2648,19 +2728,26 @@ function scDigestSummarizeStep_(ss, state, t0) {
   var pending = top.filter(function(it) { return !it.summary; });
   while (pending.length && (Date.now() - t0) < SCRAPER_DIGEST_TIME_BUDGET_MS && !state.aiNote) {
     var batch = pending.slice(0, SCRAPER_DIGEST_ITEMS_PER_AI_CALL);
-    var prompt = 'You are writing 1-2 sentence news summaries for a battery-storage/data-center '
-      + 'industry reader. For each item, state what happened and keep every concrete figure '
-      + '(MW, MWh, $, %, dates). Reply ONLY with a JSON array like '
-      + '[{"i":0,"summary":"..."}] covering every item.\n\nItems:\n'
+    // Longer summaries (developer feedback 2026-08-27): substance over
+    // brevity — no hard sentence cap, the prompt sets the quality bar.
+    var prompt = 'You are writing news summaries for a morning digest read by a US grid-scale '
+      + 'battery (BESS) seller who tracks the AI data-center buildout. For each item write a '
+      + 'substantial summary — typically 3-5 sentences (~60-120 words): what happened and who '
+      + 'is involved; every concrete figure (MW/MWh/GW, $, %, dates, locations, counterparties); '
+      + 'the mechanics of the deal, policy, or incident; and one concluding line on why it '
+      + 'matters to that reader. No filler, no restating the headline. Reply ONLY with a JSON '
+      + 'array like [{"i":0,"summary":"..."}] covering every item.\n\nItems:\n'
       + JSON.stringify(batch.map(function(it, n) {
-          return { i: n, title: it.title, snippet: it.snippet.slice(0, 260), source: it.source };
+          return { i: n, title: it.title, snippet: it.snippet.slice(0, 280), source: it.source };
         }));
     try {
-      var parsed = scParseJsonArray_(aiComplete_(prompt, 1200)) || [];
+      var parsed = scParseJsonArray_(aiComplete_(prompt, 3000)) || [];
       var byIdx = {};
-      parsed.forEach(function(p) { if (p && typeof p.i === 'number') byIdx[p.i] = scStr_(p.summary, 400); });
+      parsed.forEach(function(p) {
+        if (p && typeof p.i === 'number') byIdx[p.i] = scStr_(p.summary, SCRAPER_DIGEST_SUMMARY_MAX);
+      });
       batch.forEach(function(it, n) {
-        var s = byIdx[n] || it.snippet.slice(0, 300);
+        var s = byIdx[n] || it.snippet;
         intake.getRange(it.row, 9).setValue(s);
         it.summary = s;
       });
@@ -2678,16 +2765,17 @@ function scDigestSummarizeStep_(ss, state, t0) {
     if (!state.aiNote && top.length) {
       try {
         var lp = 'From these scored industry items, pick the single most consequential as "the lead" '
-          + 'and write a 2-3 sentence lead paragraph for a morning digest (what happened, the key '
-          + 'number, why it matters to a US battery-storage seller). Reply ONLY with a JSON array: '
+          + 'and write a 3-5 sentence lead paragraph for a morning digest: what happened, the key '
+          + 'figures, the mechanism behind it, and why it matters to a US grid-scale battery seller '
+          + 'tracking the AI data-center buildout. Reply ONLY with a JSON array: '
           + '[{"lead": <item index>, "text": "..."}].\n\nItems:\n'
           + JSON.stringify(top.slice(0, 6).map(function(it, n) {
               return { i: n, title: it.title, summary: it.summary || it.snippet.slice(0, 200) };
             }));
-        var lr = scParseJsonArray_(aiComplete_(lp, 500)) || [];
+        var lr = scParseJsonArray_(aiComplete_(lp, 1200)) || [];
         if (lr[0]) {
           state.leadIdx = Math.max(0, Math.min(5, Number(lr[0].lead) || 0));
-          state.leadText = scStr_(lr[0].text, 600);
+          state.leadText = scStr_(lr[0].text, 1200);
         }
         scLogUsage_(ss, 'digest', 1, 0);
       } catch (leadErr) { /* fallback below */ }

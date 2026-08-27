@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.07r] — 2026-08-27 06:20:46 PM EST
+
+> **Prompt:** "Before starting phase 4, walk me through the current Scraper workflow, including details on how many articles it searches through from the 30 sources, how it searches through them, how it summarizes and scores them, why the current digest only shows 8 article summaries instead of more, and what parts of the workflow cost real money via Anthropic's API & how much. My current feedback is: I like the design and, while the 8 articles Scraper found for today's digest are related to my covered companies, some of them cover topics from my covered companies that are not directly related to BESS or AIDC (ie: CATL's EV, BYD's EV chargers, or Tesla's vehicle recall). I would like Scraper to analyze my covered companies' business segments (ie: BESS, EV, chargers, transformers, etc.) and create another toggle-able subsection on the left called "Segments" that includes the list of segments Scraper identifies. That will allow me to have direct control on which segments I want to include/exclude from actively covered companies. Also, I want the article summaries to be longer. I'm not sure if I want to set a hard limit; I just want more information in each summary. Use your best judgment."
+
+### Added
+- **Segment lenses + rubric segment gate in `Scraper.gs`** — 14-entry business-segment taxonomy (`SCRAPER_SEGMENT_SEEDS`: BESS, AIDC, transformers/grid equipment, power electronics, solar, wind, nuclear, gas/turbines, fuel cells, EVs & automotive, EV charging, semiconductors, consumer electronics, industrial automation) seeded into the Interests tab as toggleable `segment` rows (default ON, flag "New segment", insert-only — in-sheet term edits win). `scLoadInterestModel_` now loads segments in both enabled and disabled states; `scRubricScore_` classifies each article against all lenses and applies the gate: a company-matched article whose only segment hits are toggled-off segments has its company + emphasis signals zeroed (topics unaffected; no segment hits = neutral). Rubric results and intake signals now carry `matchedSegments` / `excludedSegments` / `gated`. Functional tests: the developer's three examples (CATL EV deal, BYD chargers, Tesla recall) drop to 2–5 points with "EVs & automotive"/"EV charging" off, while a CATL grid-storage order (62), a mixed EV+BESS story (59), and a no-segment-terms company story (56) pass through ungated
+- **Segments panel in `Scraper.html`** — new toggleable subsection between Companies and Topics (reusing the interest toggle/route path); the rubric tester now reports segment matches and prints an "Excluded by segment gate — only matches toggled-off segment: …" explanation when the gate fires
+
+### Changed
+- **Longer digest summaries** — summarize prompt rewritten (what happened + parties, all figures, deal/policy/incident mechanics, why-it-matters close; typically 3–5 sentences / 60–120 words, no hard cap), batches 7 → 5 items with maxTokens 1200 → 3000, stored-summary cap 400 → 900 chars, lead paragraph 2-3 → 3-5 sentences (maxTokens 500 → 1200, cap 600 → 1200); AI-unavailable fallback now keeps the full snippet
+- **`Scraper.gs`** VERSION v01.39g → v01.40g and **`Scraper.html`** v01.37w → v01.38w; version files + meta synced; public entries added (counters 40/50, 38/50); README tree updated
+- **`repository-information/diagrams/Scraper-diagram.md`** — sync seed line now includes topic/segment/source seeds, interests-rail flow lists all four sections, rubric line notes the segment gate; URL regenerated and decompression-verified
+
+### Notes
+- The workflow walkthrough and Anthropic cost map (Sonnet 5 $2/$10 per MTok, Haiku 4.5 $1/$5, web search $10 per 1,000 searches — verified against current pricing docs) were delivered in-chat; the digest's summarize/lead calls bill to Anthropic only when the `AI_PROVIDER=claude` Script Property is set, and the scheduled pipeline remains paused
+- Playwright verified the Segments section and the gated rubric-tester note; `node --check` clean on the `.gs` and both inline blocks
+- CHANGELOG counter is now exactly at capacity (100/100) — the next push triggers archive rotation with SHA enrichment
 
 ## [v03.06r] — 2026-08-27 05:48:26 PM EST
 

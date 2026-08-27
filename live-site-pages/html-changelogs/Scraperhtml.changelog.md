@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 37/50`
+`Sections: 38/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.38w] — 2026-08-27 06:20:46 PM EST — v03.07r
+
+### Added
+- A Segments panel on the main screen: the business areas your followed companies work in, each with its own on/off switch — turn one off and news touching only that area stays out of your digests
+- The relevance tester now explains when a headline was excluded by a switched-off segment, so you can see exactly why something didn't make the cut
 
 ## [v01.37w] — 2026-08-27 05:48:26 PM EST — v03.06r
 
