@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.01r] — 2026-08-27 01:54:03 AM EST
+
+> **Prompt:** "Picking up from my "Receipts sign-in denials" session, make Scraper stop emailing jonyang92@gmail.com any daily, weekly, monthly, bi-annual, and annual digests for now. I have been refining my Profiler app to conduct, organize, and analyze deep research of companies' 1st-party sources (prioritizing public earnings reports, investor relations articles, and press releases by the companies themselves). I want my Scraper app to be differentiated from Profiler in that its role is to conduct, organize, and analyze deep research of companies' 3rd-party trade news sites and automatically send me daily digests in the morning that go over the past 24 hours of news related to my covered companies and US AIDC market as a whole (geopolitical policies, public protests, battery fire incidents, etc). If possible, I want you to develop a way for Scraper to analyze Profiler and learn which companies and topics I care about, then use that information to scrape highly reputable and highly trafficked trade news sites for relevant articles. Then, use Claude AI to summarize the key points and figures from these articles that would matter to me, Jon Yang, and send me a daily weekday (Mon-Fri) digest that will allow me to quickly understand what happened since the last digest and stay on top of industry information. Since my Profiler app currently has 88 companies (and growing) and I would obviously want Scraper to care about Profiler's covered companies, I would like Scraper to give me a way to see all relevant keywords I care about and give me the ability to toggle them on/off for Scraper's digests. That way, I will be able to customize my digests to focus on the companies and topics that matter to me most in the moment. I would also like Scraper to be able to see newly added companies and industry guidances on Profiler and automatically refine its search algorithm to update along with Profiler. Recommend me an action plan to approve."
+
+### Changed
+- **`Scraper.gs`** — added the `SCRAPER_SCHED_EMAIL_ENABLED` master kill switch (set `false`), gating both scheduler email call sites: the brief-delivery email in `scDeliverBrief_()` and the run-failure notice in `scRunScheduleStep_()`. Every scheduled cadence (daily/weekly/monthly/quarterly/biannual/annual/custom) delivers through these two sites, so all digest emails stop once the auto-merge workflow's GAS self-update webhook deploys this version. Scheduled runs still execute and briefs still land in the Reports tab (row status stays `generated`); flipping the flag back to `true` and merging resumes email delivery with no other change. VERSION v01.34g → v01.35g; `Scrapergs.version.txt` synced; public entry added to the GAS changelog (counter 34 → 35)
+- **README tree** — Scraper version display v01.34g → v01.35g
+
+### Notes
+- The Scraper↔Profiler integration action plan (Profiler-derived interest model, keyword on/off toggles, Claude-summarized Mon–Fri morning digests, auto-refinement as Profiler grows) was presented in-chat for developer approval — no implementation this push
+- Session start reconstructed the stale `SESSION-CONTEXT.md` (recorded v02.99r vs actual v03.00r) as an intermediate commit bundled with this push
 
 ## [v03.00r] — 2026-08-24 06:16:16 PM EST
 

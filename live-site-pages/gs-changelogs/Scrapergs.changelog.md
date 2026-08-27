@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 34/50`
+`Sections: 35/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.35g] — 2026-08-27 01:54:03 AM EST — v03.01r
+
+### Changed
+- Scheduled news brief emails are paused for now, ahead of a digest redesign. Scheduled runs still happen and briefs still appear inside the app — email delivery will return with the redesigned daily digest
 
 ## [v01.34g] — 2026-08-17 03:36:35 AM EST — v02.62r
 

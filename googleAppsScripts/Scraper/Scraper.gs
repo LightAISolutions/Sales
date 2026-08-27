@@ -1,4 +1,4 @@
-var VERSION = "v01.34g";
+var VERSION = "v01.35g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1971,6 +1971,12 @@ var SCRAPER_SCHED_MAX_FAILS = 6;            // consecutive failed ticks before a
 var SCRAPER_SCHED_RUN_HOUR = 7;             // scheduled runs anchor at 7:00 AM ET
 var SCRAPER_SCHED_STATE_PREFIX = 'scSchedRun_';
 var SCRAPER_SCHED_AI_PAUSE_MS = 4000;       // pause between analyze chunks (free-tier RPM safety)
+// Master kill switch for ALL scheduled-run email delivery, every frequency
+// (daily/weekly/monthly/quarterly/biannual/annual/custom) — both the brief
+// email and the run-failure notice. false = runs still execute and briefs
+// still land in the Reports tab, but nothing is emailed. Deploys with the
+// code: flip back to true and merge to resume email delivery.
+var SCRAPER_SCHED_EMAIL_ENABLED = false;
 
 /** Manual fallback: run once from the Apps Script editor to install the trigger. */
 function setupSchedulerTrigger() {
@@ -2141,7 +2147,7 @@ function scRunScheduleStep_(ss, sheet, rowNum, row, t0) {
         props.deleteProperty(key);
         dataAuditLog(owner, 'scheduled-run-failed', 'project', project.id,
           run.phase + ' failed ' + run.fails + 'x — ' + run.lastError);
-        if (delivery === 'email' || delivery === 'both') {
+        if ((delivery === 'email' || delivery === 'both') && SCRAPER_SCHED_EMAIL_ENABLED) {
           try {
             MailApp.sendEmail({
               to: owner,
@@ -2167,7 +2173,7 @@ function scRunScheduleStep_(ss, sheet, rowNum, row, t0) {
 function scDeliverBrief_(ss, owner, project, freq, delivery, b) {
   var periodLabel = Utilities.formatDate(new Date(), 'America/New_York', 'MMM d, yyyy');
   var status = 'generated';
-  if (delivery === 'email' || delivery === 'both') {
+  if ((delivery === 'email' || delivery === 'both') && SCRAPER_SCHED_EMAIL_ENABLED) {
     try {
       MailApp.sendEmail({
         to: owner,
