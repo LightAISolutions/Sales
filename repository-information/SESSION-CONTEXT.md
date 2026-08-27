@@ -6,6 +6,43 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-27 04:19:08 PM EST
+**Repo version:** v03.03r
+**Branch:** `claude/scraper-profiler-integration-2z8ghm`
+
+**What we worked on (v03.01r-v03.03r — Scraper pause + Scraper↔Profiler rebuild planning + developer rebrand):**
+
+- **v03.01r (GAS v01.35g):** `SCRAPER_SCHED_EMAIL_ENABLED` kill switch — all scheduled digest emails (every cadence) stopped
+- **v03.02r (GAS v01.36g):** full scheduled-pipeline pause — scheduled runs skip compile/analyze/brief entirely, so no Anthropic/Gemini token spend and no email while paused; manual in-app actions still work. Re-enable = flip both flags in Phase 4
+- **Scraper rebuild planned and fully decided:** 4-phase plan approved (Phase 1 Interests tab + Profiler registry sync + rubric scaffolding; Phase 2 Interests panel UI; Phase 3 digest engine; Phase 4 go-live re-enabling delivery). Design locked via the "Scraper Redesign Mockups" canvas (https://claude.ai/code/artifact/4fb0367c-a82f-4e5e-b6c3-0d117c0f7b2f): **App = Wire Desk** (dark, IBM Plex Sans/Mono, #15171c charcoal + #f2a33c amber), **Digest = Morning Edition in the Night Ink dark variant** (Newsreader serif masthead on the app palette)
+- **D1–D3 recorded (full detail in the v03.03r CHANGELOG section):** D1 = 30-source free trade-press roster (no paywalled sources; RTO Insider et al. excluded — known partial gap on ERCOT/PJM market-rule minutiae); D2 = Google News kept only as a covered-company-name backstop (down-weighted, labeled); D3 = four-signal Profiler-derived scoring rubric (company / topic / Profiler-emphasis / substance) replaces 👍/👎 — feedback UI turned off and hidden but code + historical votes preserved
+- **v03.03r:** `DEVELOPER_NAME` rebrand ShadowAISolutions → LightAISolutions across 242 files; every page (w), GAS (g), and AHK (a) version bumped with changelog entries; all 23 tracked PDFs regenerated; the 13 study-prep PDFs re-delivered as chat downloads
+
+**Where we left off:**
+- Everything committed and merged through v03.03r; working tree clean. Scraper is fully paused (no emails, no scheduled AI spend). **The rebuild has NOT started** — the developer wants the buildout in a fresh session, beginning with Phase 1
+
+**Key decisions made:**
+- Scraper = 3rd-party trade news only; Profiler = 1st-party sources. Company-owned domains (IR/newsrooms) excluded from Scraper's sources
+- Weekday digest Mon–Fri 7:00 AM ET; Monday edition covers 72h (the weekend)
+- Interest model: an Interests tab in Scraper's spreadsheet synced daily from the public `profiler-data/profiler-companies.json`; new Profiler companies default-ON flagged "New coverage"; removed ones marked stale, never deleted
+- Guidance topic sync happens at authoring time (extend the Industry Guidance Command rule), not via a runtime Profiler API probe
+- Night Ink production email needs dark-mode client-proofing (Outlook/Gmail recoloring) + a real-inbox test before Phase 4 go-live
+- Rebrand preserved 4 occurrences intentionally: the Provenance Markers rule, the init-history archive entry, and two archived incident docs where the literal old string is load-bearing; hidden provenance markers untouched
+
+**Active context:**
+- CHANGELOG counter 96/100; Profiler v01.43w/v01.22g; Scraper v01.35w/v01.37g; registry 88 companies; no TODO items or active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+- Developer-side: replace the stale Google Drive PDF copies with the regenerated ones delivered in chat
+- Standing sensitivities unchanged from prior sessions (Zhonhen/Schneider disclosure scoping, Zhu Guoding conviction, NVIDIA quote paraphrasing, field notes never cited, Hithium executive arrest do-not-quote)
+
+**Recommendation for next session:**
+- **Execute Phase 1 of the approved Scraper rebuild** — the Interests tab + daily Profiler registry sync + four-signal rubric scaffolding in `Scraper.gs`, per the approved 4-phase plan and the D1–D3 decisions recorded in the v03.03r CHANGELOG section (30-source roster, company-name Google News backstop, feedback-off rubric)
+- **To continue:** type `start Phase 1`
+
+## Previous Sessions
+
+### Session — 2026-08-27 (v03.00r)
+
 **Date:** 2026-08-27 01:48:08 AM EST
 **Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
 **Repo version:** v03.00r
@@ -20,35 +57,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Active context:**
 - No TODO items; no active reminders; CHANGELOG counter 93/100
 - Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-
-## Previous Sessions
-
-### Session — 2026-08-24 (v02.99r)
-
-**Date:** 2026-08-24 05:19:27 PM EST
-**Repo version:** v02.99r
-**Branch:** `claude/profiler-rbac-phase-4-mph0s9`
-
-**What we worked on (v02.98r-v02.99r — Phases 4 and 5, completing the v02.91r AIDC program):**
-
-- **Phase 4 (v02.98r):** the two-document Hithium sales strategy report in `study-prep/hithium/` — the **IC playbook** (`hithium-ic-playbook.md` + 7-page PDF: the market-fence one-pager, the six-channel hunt map + Jupiter-pattern account profile, the seven-question qualification script + disqualifier table, MACR-arithmetic-as-a-service, the seven-row objection table, the five-play Jupiter defense vs the Peak Energy sodium wedge with early-warning indicators, the 10-item proof pack, the red-lines list) and the **team-lead playbook** (`hithium-team-lead-playbook.md` + 6-page PDF: the certified-MW-over-queue-GW thesis, the six-demand-pool coverage plan with 4:1 staffing guidance, the dated 2026-28 policy calendar, rules of engagement vs ON.energy / the gas cohort / CATL / the FEOC-compliant tier / Peak Energy, five-stage pipeline gates with MOU-at-zero counting rules, team standards, the 2026-28 play). Both registered in `build-study-prep-pdf.mjs`
-- **Phase 5 (v02.99r, GAS v01.20g):** the team training curriculum — two new Industry Guidance training modules in `Profiler.gs` (library now 6): `guidanceDocBessTech_()` (*BESS Technology Fundamentals for the Sales Team* — LFP in plain terms, the spec sheet decoded, the 280→1300Ah cell ladder, cell-to-container, sodium claim discipline, duration-class proscons, safety/certification vocabulary) and `guidanceDocPowerInfra_()` (*Power Infrastructure & the AIDC Power Chain* — grid basics and MW-vs-MWh, the two market designs, the battery revenue stack, the grid-to-GPU chain with NOGRR 282/SB 6, the three BESS sockets, the 2026-28 gates timeline); their two analysis markdowns in `industry-guidance/`; and the four-week onboarding curriculum (`hithium-team-training-curriculum.md` + 5-page PDF) with pass/fail competency gates G1-G4, before-day-one setup, and trainer's notes. Verified via node --check, inner-scripts check, JSON/tooltip/quiz validation, Playwright `gdRenderDoc()` renders, and the harness smoke test
-- All five PDFs (both playbooks + the curriculum) delivered to the developer as chat downloads
-
-**Where we left off:**
-- Everything committed, pushed, and merged through v02.99r (workflow deployed; GAS webhook pulls v01.20g); working tree clean. **The v02.91r plan is fully complete — Phases 1-5 all delivered** (the 88-dossier base, 6 guidance modules, Hithium v5 + the relationship web, the two playbooks, the training curriculum)
-- Developer-side only: review the two new training modules in-app (admin/contributor tiers, the ✦ Industry Guidance button) now that v01.20g is live
-
-**Key decisions made (established this session):**
-- Phase 5 landed as **in-app guidance modules + a curriculum document** — the two teaching gaps (core technical, power infrastructure) filled the same way as the Phase 2 policy modules, and the curriculum sequences all assets into four gated weeks (G3, the red-lines recital, is the hard floor — no customer contact until it passes)
-- Training modules are **teaching syntheses with pointer-form claims ledgers** — no new external claims; every figure traces to the dossier or a prior verified analysis
-- Concede-then-structure is the house objection-answer pattern (playbooks + curriculum enforce it)
-- Sodium claim discipline in writing: the AIDC sodium SKU's mass production is unconfirmed — the approved line commits only to the shipping utility SKU plus a written roadmap
-
-**Active context:**
-- CHANGELOG counter 92/100; Profiler v01.42w / GAS v01.20g; registry 88 companies; no TODO items or active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-- Standing sensitivities unchanged: the Zhonhen/Schneider disclosure stays in Zhonhen contexts; never raise Zhu Guoding's conviction unprompted in customer-facing material; NVIDIA quotes paraphrased with page cites; field notes never cited as profile sources; the reported Hithium executive arrest stays do-not-quote
-
-**Recommendation for next session:**
-- The v02.91r AIDC program is fully complete (Phases 1-5) — no deferred work; future sessions can pick any new task. (Developer-side only: review the two new training modules in-app.)
