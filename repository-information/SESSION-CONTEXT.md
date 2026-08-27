@@ -6,6 +6,25 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-27 01:48:08 AM EST
+**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
+**Repo version:** v03.00r
+
+**What was done:**
+- Remote ACL health probe added to `Profiler.gs` — `aclHealthProbe_()`, dispatched as unauthenticated `GET ?action=api&op=aclhealth`; runs the exact Access-tab read sequence sign-in performs and reports the failing stage (spreadsheet ID redacted, 200-char cap, 60s result cache), turning an `acl_unavailable` sign-in outage into a one-curl diagnosis (v03.00r)
+- Profiler GAS v01.20g → v01.21g; `Profilergs.version.txt` synced; generic public entry added to the GAS changelog; README tree Profiler version display corrected from stale `v01.38w · v01.17g` to `v01.42w · v01.21g` (v03.00r)
+- Investigation established the reported `acl_unavailable/acl_unreachable` sign-in error is environment-side (Master ACL spreadsheet grant/transient), not a repo regression — all four live deployments answered unauthenticated version checks healthy and current (v03.00r)
+
+**Where we left off:** All changes committed and merged to main
+
+**Active context:**
+- No TODO items; no active reminders; CHANGELOG counter 93/100
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+
+## Previous Sessions
+
+### Session — 2026-08-24 (v02.99r)
+
 **Date:** 2026-08-24 05:19:27 PM EST
 **Repo version:** v02.99r
 **Branch:** `claude/profiler-rbac-phase-4-mph0s9`
@@ -33,40 +52,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **Recommendation for next session:**
 - The v02.91r AIDC program is fully complete (Phases 1-5) — no deferred work; future sessions can pick any new task. (Developer-side only: review the two new training modules in-app.)
-
-## Previous Sessions
-
-### Session — 2026-08-24 (v02.97r)
-
-**Date:** 2026-08-24 03:12:54 PM EST
-**Repo version:** v02.97r
-**Branch:** `claude/profiler-role-access-control-mwyky3`
-
-**What we worked on (v02.92r-v02.97r — the full AIDC understanding phase, Phases 1-3 of the plan approved under v02.91r):**
-
-- **Batch A (v02.92r):** nine BESS-competitor dossiers (Prevalon, Canadian Solar e-STORAGE, Trina Storage, HyperStrong, LS Energy Solutions, CRRC Zhuzhou, Sunwoda, Narada, Envision). Registry 62 → 71
-- **Batch B (v02.93r):** eight IPP/developer dossiers (Jupiter Power, Lightsource bp, NextEra Energy Resources, Plus Power, Arevon, Eolian, Key Capture, Terra-Gen) under a new `ipp` category (registry + page-side color/label support, Profiler v01.42w). Registry 71 → 79. Verified the three Hithium prospectus references: Jupiter strong (3 GWh + Trimount), Lightsource bp Australia-only and fading, Samsung C&T MOU-grade and unconverted
-- **Batch C (v02.94r):** four EPC dossiers (SOLV, Blattner, MasTec, Samsung C&T). Registry 79 → 83. Established the owner-furnished procurement norm — EPCs install, owners choose the cells
-- **Batch D (v02.95r):** five BtM-power dossiers — VoltaGrid, ERock, ProEnergy, Mainspring (FEOC-immune gas/linear demand-shapers, all with zero BESS in-product = open attach sockets) and ON.energy (evaluation returned a FULL DOSSIER verdict: its MV AI UPS + 5 GW Crusoe deal is a direct category competitor to Hithium's ∞Power AIDC line). Registry 83 → 88
-- **Phase 2 (v02.96r, GAS v01.19g):** three Industry Guidance modules in `Profiler.gs` (library now 4): the China policy stack (FEOC/MACR 55→75%, the ~40.9% current tariff stack after the SCOTUS IEEPA ruling, NDAA phases, five compliant lanes), utility procurement meets AIDC load (Oncor/AEP/Entergy/Dominion/Georgia Power; the 85% minimum-take norm; the two-lane buyer map), and BESS bankability & certification (UL/NFPA-855-2026 stack, IE mechanics, the Hithium counterparty file, 10-item RFP checklist) + three analysis markdowns in `industry-guidance/`. This push also ran the CHANGELOG archive rotation (2026-08-08 group, 12 sections, SHA-enriched)
-- **Phase 3 (v02.97r):** Hithium dossier revised to **profileVersion 5 (AIDC lens)** — new ∞Power AIDC product entry (four-SKU lithium-sodium line; energy-backbone-not-UPS positioning, zero named customers 8 months post-launch), AIDC/US-book spec annex, the Jupiter-Peak Energy sodium wedge flagged, 3 new strategy reads, 51 sources; v4 archived. Plus **the relationship-web deliverable** `study-prep/hithium/hithium-relationship-web.md` — the eight-layer AIDC value chain, graded Hithium relationships, the cell-brand decision map per channel, two Mermaid diagrams, six 2026-28 demand pools
-
-**Where we left off:**
-- Everything committed and pushed through v02.97r (auto-merge deploys; GAS webhook pulls v01.19g); working tree clean. **The understanding phase is complete** — 88 dossiers, 4 guidance modules, Hithium v5, the relationship web. The developer wants Phase 4 started in a fresh session
-
-**Key decisions made (developer-approved or established this session):**
-- Coverage scope: Tiers 1+2 minus Powin; utilities/standards bodies as guidance modules, not dossiers; ON.energy promoted to a full dossier on the evaluation verdict
-- Phase 4 (next) = the **sales strategy report as two documents** in `repository-information/study-prep/hithium/` — an IC playbook and a team-lead playbook, PDF'd (register in `build-study-prep-pdf.mjs`); Phase 5 (after) = team training curriculum
-- Hithium's framing: competes in **containerized BESS**, not sidecar/backup-unit/electrical-room products
-- Guidance renderer detail: per-section `zh` notes render under a hard-coded "For the Zhonhen conversation" label — non-Zhonhen modules use closing `**Field note:**` prose lines instead (making the label doc-configurable = small page bump, offered to the developer)
-- CHANGELOG rotation follows the step-1-7 procedure (mandatory first rotation when total >100), which contradicts Scenarios A/D (non-exempt-only threshold) — the stricter reading was applied 08-24
-
-**Active context:**
-- CHANGELOG counter 90/100; archive 107 sections all SHA-linked; Profiler v01.42w / GAS v01.19g; 88 registry companies; no TODO items or active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-- **Report-ready findings a Phase 4 session should read first:** the relationship web (`study-prep/hithium/hithium-relationship-web.md` — demand pools + decision map), the Hithium v5 dossier (Jupiter anchor + the Peak Energy sodium wedge = the top account-defense priority), the three guidance analyses in `repository-information/industry-guidance/` (policy lanes, the two-lane buyer motion, the bankability toolkit), and the ON.energy dossier (the AI UPS category contest)
-- Standing sensitivities: the Zhonhen/Schneider disclosure stays in Zhonhen contexts only; never raise Zhu Guoding's conviction unprompted in customer-facing material; NVIDIA white-paper quotes are paraphrased with page cites on public surfaces; field notes are never cited as profile sources
-
-**Recommendation for next session:**
-- **Execute Phase 4 — the two-document Hithium sales strategy report** (`study-prep/hithium/`): the IC playbook (account targeting from the decision map, the safe-harbored/merchant qualification script, objection handling from the bankability checklist, Jupiter account defense vs the Peak wedge) and the team-lead playbook (territory/segment strategy across the six demand pools, the policy calendar, competitive posture vs ON.energy and the gas cohort, pipeline metrics) — both PDF'd via `build-study-prep-pdf.mjs`
-- **To continue:** type `continue with Phase 4`
