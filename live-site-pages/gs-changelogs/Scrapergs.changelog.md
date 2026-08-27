@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 38/50`
+`Sections: 39/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.39g] — 2026-08-27 05:48:26 PM EST — v03.06r
+
+### Added
+- The weekday morning digest engine: every weekday edition gathers the last 24 hours of industry news (Monday covers the whole weekend) from 30 hand-picked free trade publications, with an extra safety net that checks general news for each covered company by name
+- Stories are ranked by how well they match your interests, the top items get short AI-written summaries that keep the key figures, and everything is assembled into a newspaper-style edition grouped by covered companies, market & policy, and incidents & community
+- Your source list is now visible and adjustable: each of the 30 publications can be switched on or off, and your choices are respected on the very next run
+- Recent editions are kept so you can revisit past days
+- Scheduled delivery remains paused — editions can be built on demand from inside the app, and nothing is emailed until the launch step
 
 ## [v01.38g] — 2026-08-27 04:39:36 PM EST — v03.04r
 

@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.06r] — 2026-08-27 05:48:26 PM EST
+
+> **Prompt:** "Execute Phase 3"
+
+### Added
+- **Weekday digest engine in `Scraper.gs` (rebuild Phase 3)** — chunked, resumable state machine (`scDigestStep_`: start → fetch → backstop → summarize → render; state in Script Properties, intake sheet-backed in the new `DigestIntake` tab, editions stored in the new `Digests` tab with 60-row retention): fetches the enabled D1 roster feeds (≤6/step, 40s budget, broken feeds tolerated), windows to 24h (72h Monday editions via ET ISO-day), dedupes by URL, scores every item with the D3 rubric on intake (floor 25 to enter; relevance bar 50), adds the **D2 Google News company-name backstop** (12 enabled companies per run, round-robin cursor, labeled `(backstop)`, score ×0.85), AI-summarizes the top 14 (batches of 7 via `aiComplete_`, figures preserved; one more call picks the lead + writes the lead paragraph) with a **deterministic snippet fallback when no AI key is configured** — the digest always builds — then groups sections (incident/opposition topics win over company matches → Incidents & community; company matches → Covered companies; rest → Market & policy) and renders the **Night Ink** edition (`scRenderDigestNightInk_`: Newsreader serif masthead, double rules, amber-bolded figures, red incidents rule, Newly-covered box, email-ready inline styles)
+- **30-source D1 roster** (`SCRAPER_SOURCE_ROSTER`) — free 3rd-party trade press only, tier 1 core AIDC/BESS/grid + tier 2 adjacent; seeded into the Interests tab as toggleable `source` rows by the daily sync (insert-only, default ON; the sheet toggle wins, the constant owns name + feed URL). The approved in-chat list wasn't persisted to the repo, so the roster reconstructs it to D1's recorded constraints (no paywalls — RTO Insider et al. stay excluded; no company-owned newsrooms)
+- **Scheduled hook + dormant delivery** — `scDigestScheduledTick_()` inside `scSchedulerTick` after the pipeline pause gate (weekday ≥7:00 AM ET, one step/tick, stops once today's edition exists; `SCRAPER_SCHED_RUNS_ENABLED` still `false` so no unattended AI spend); the email site requires both `SCRAPER_SCHED_EMAIL_ENABLED` and a `DIGEST_RECIPIENT` Script Property — both unset until Phase 4's client-proofing + go-live
+- **Four session-gated routes** — `runDigestNow` (client-looped steps), `getDigestStatus`, `listDigests`, `getDigest` — registered in `SCRAPER_PROJECT_ACTIONS` + `handleProjectAction_`
+- **App wiring in `Scraper.html`** — Sources section atop the interests rail (30 outlets with toggles, reusing the interest toggle path) and the topbar **Digest** button → edition overlay (edition chips via `listDigests`, Night Ink render via `getDigest`, "Run intake now" loop with live phase/kept/fetched progress); IBM Plex font link extended with Newsreader for in-app edition fidelity
+
+#### `Scraper.gs` — v01.39g
+
+##### Added
+- Digest pipeline, roster, backstop, scheduled hook, routes (detail above); `Scrapergs.version.txt` synced; public entry added (counter 38 → 39)
+
+#### `Scraper.html` — v01.37w
+
+##### Added
+- Sources panel + Digest overlay (detail above); meta tag synced; public entry added (counter 36 → 37)
+
+### Changed
+- **`repository-information/diagrams/Scraper-diagram.md`** — new "The Morning Edition (Rebuild Phase 3)" flow (Trade-press RSS + Google News participant, chunked build loop, dormant-email note, edition viewer ops); mermaid.live URL regenerated and decompression-verified
+
+### Notes
+- Functional node tests: section grouping (incident-over-company precedence, opposition routing), figure-bolding regex (fixed a `\b`-after-`%` boundary miss found by the test), full renderer output (masthead, No. 001, escaped XSS probe, amber figures, red incidents rule, newly-covered box)
+- Playwright: full "Run intake now" loop driven through all four phases against stubbed routes; sources rail and the rendered Night Ink edition verified on screenshot; no unexpected console errors; `node --check` clean on the `.gs` and both inline script blocks
 
 ## [v03.05r] — 2026-08-27 05:08:03 PM EST
 

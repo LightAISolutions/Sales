@@ -1,4 +1,4 @@
-var VERSION = "v01.38g";
+var VERSION = "v01.39g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -330,7 +330,9 @@ var SCRAPER_TABS = {
   USAGE: 'UsageLog',
   ARCHIVE: 'ArticlesArchive',
   QUERYPLANS: 'QueryPlans',
-  INTERESTS: 'Interests'
+  INTERESTS: 'Interests',
+  DIGESTS: 'Digests',
+  DIGEST_INTAKE: 'DigestIntake'
 };
 
 var SCRAPER_TAB_HEADERS = {
@@ -353,7 +355,11 @@ var SCRAPER_TAB_HEADERS = {
   QueryPlans: ['Project ID', 'Owner', 'Queries', 'Planned At', 'Manual'],
   Interests: ['Key', 'Type', 'Label', 'Enabled', 'Status', 'Flag', 'Categories',
               'Aliases', 'Weight', 'Source', 'Profiler Updated', 'First Seen',
-              'Last Synced', 'Notes']
+              'Last Synced', 'Notes'],
+  Digests: ['Digest ID', 'Date', 'Generated At', 'Status', 'Item Count',
+            'Relevant Count', 'Sections', 'HTML', 'Notes'],
+  DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
+                 'Score', 'Signals', 'Summary', 'Section', 'Backstop']
 };
 
 var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual', 'annual', 'custom'];
@@ -369,7 +375,8 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'planQueries', 'getQueryPlan', 'addPlanQuery', 'deepBackfillNow',
                                'getSchedulerHealth', 'setArticleVerdicts',
                                'listInterests', 'setInterestEnabled', 'syncInterestsNow',
-                               'rubricPreview'];
+                               'rubricPreview',
+                               'runDigestNow', 'getDigestStatus', 'listDigests', 'getDigest'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -493,6 +500,72 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
 // off and hidden, historical votes preserved).
 var SCRAPER_RUBRIC_WEIGHTS = { company: 40, topic: 25, emphasis: 15, substance: 20 };
 var SCRAPER_RUBRIC_RECENT_DAYS = 45;  // Profiler lastUpdated within this window earns the full emphasis recency
+
+// ── Rebuild Phase 3: weekday digest engine ──
+// One interest-driven morning digest (Mon–Fri 7:00 AM ET; the Monday edition
+// covers 72h) built from the D1 source roster + the D2 Google News
+// company-name backstop, scored by the D3 rubric, AI-summarized, rendered as
+// the approved "Night Ink" edition, and stored in the Digests tab. The
+// scheduled path is gated by SCRAPER_SCHED_RUNS_ENABLED (still false — no
+// unattended AI spend) and the email site by SCRAPER_SCHED_EMAIL_ENABLED;
+// the manual runDigestNow route works while paused.
+var SCRAPER_DIGEST_RUN_DAYS = [1, 2, 3, 4, 5];   // ISO day-of-week, ET (Mon–Fri)
+var SCRAPER_DIGEST_RUN_HOUR = 7;                 // scheduled build not before 7:00 AM ET
+var SCRAPER_DIGEST_WINDOW_H = 24;                // Monday edition uses 72 (the weekend)
+var SCRAPER_DIGEST_FETCHES_PER_STEP = 6;         // feed fetches per chunked step
+var SCRAPER_DIGEST_TIME_BUDGET_MS = 40000;       // wall-clock budget per step
+var SCRAPER_DIGEST_STATE_KEY = 'scDigestRun';    // Script Property: current run state
+var SCRAPER_DIGEST_ITEMS_PER_SOURCE = 15;        // intake cap per source per run
+var SCRAPER_DIGEST_MIN_INTAKE_SCORE = 25;        // rubric floor to enter the intake tab
+var SCRAPER_DIGEST_BACKSTOP_PER_RUN = 12;        // D2: company-name queries per run (round-robin)
+var SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY = 'scDigestBackstopCursor';
+var SCRAPER_DIGEST_BACKSTOP_PENALTY = 0.85;      // D2: backstop items are down-weighted
+var SCRAPER_DIGEST_SUMMARIZE_TOP_N = 14;         // AI key-point summaries for the top-scored items
+var SCRAPER_DIGEST_ITEMS_PER_AI_CALL = 7;        // items per summarize request
+var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limit is 50k chars)
+var SCRAPER_DIGEST_KEEP = 60;                    // Digests tab retention (rows)
+var SCRAPER_DIGEST_SECTION_CAPS = { companies: 6, market: 6, incidents: 4 };
+
+// D1 (2026-08-27): 30-source free trade-press roster — 3rd-party outlets only
+// (no paywalls, no company-owned newsrooms; RTO Insider et al. excluded as
+// paywalled, leaving a known partial gap on ERCOT/PJM market-rule minutiae).
+// The approved in-chat list was not persisted, so this roster reconstructs it
+// to those recorded constraints. Each source seeds an Interests row
+// ('src-<key>', default ON) via the daily sync — the sheet/panel toggle is the
+// on/off switch; this constant remains the source of truth for name + feed.
+// tier 1 = core AIDC/BESS/grid trade press · tier 2 = adjacent coverage.
+var SCRAPER_SOURCE_ROSTER = [
+  { key: 'utility-dive', name: 'Utility Dive', tier: 1, rss: 'https://www.utilitydive.com/feeds/news/' },
+  { key: 'dcd', name: 'Data Center Dynamics', tier: 1, rss: 'https://www.datacenterdynamics.com/rss/' },
+  { key: 'energy-storage-news', name: 'Energy-Storage.news', tier: 1, rss: 'https://www.energy-storage.news/feed/' },
+  { key: 'ess-news', name: 'ESS News', tier: 1, rss: 'https://www.ess-news.com/feed/' },
+  { key: 'canary-media', name: 'Canary Media', tier: 1, rss: 'https://www.canarymedia.com/rss.xml' },
+  { key: 'power-magazine', name: 'POWER Magazine', tier: 1, rss: 'https://www.powermag.com/feed/' },
+  { key: 'dc-knowledge', name: 'Data Center Knowledge', tier: 1, rss: 'https://www.datacenterknowledge.com/rss.xml' },
+  { key: 'dc-frontier', name: 'Data Center Frontier', tier: 1, rss: 'https://www.datacenterfrontier.com/rss.xml' },
+  { key: 'pv-magazine-usa', name: 'pv magazine USA', tier: 1, rss: 'https://pv-magazine-usa.com/feed/' },
+  { key: 'microgrid-knowledge', name: 'Microgrid Knowledge', tier: 1, rss: 'https://www.microgridknowledge.com/rss.xml' },
+  { key: 'td-world', name: 'T&D World', tier: 1, rss: 'https://www.tdworld.com/rss.xml' },
+  { key: 'battery-technology', name: 'Battery Technology', tier: 1, rss: 'https://www.batterytechonline.com/rss.xml' },
+  { key: 'cleantechnica', name: 'CleanTechnica', tier: 2, rss: 'https://cleantechnica.com/feed/' },
+  { key: 'renewable-energy-world', name: 'Renewable Energy World', tier: 2, rss: 'https://www.renewableenergyworld.com/feed/' },
+  { key: 'power-engineering', name: 'Power Engineering', tier: 2, rss: 'https://www.power-eng.com/feed/' },
+  { key: 'electrek', name: 'Electrek', tier: 2, rss: 'https://electrek.co/feed/' },
+  { key: 'register-dc', name: 'The Register — Datacenters', tier: 2, rss: 'https://www.theregister.com/data_centre/headlines.atom' },
+  { key: 'trellis', name: 'Trellis (ex-GreenBiz)', tier: 2, rss: 'https://trellis.net/feed/' },
+  { key: 'latitude-media', name: 'Latitude Media', tier: 2, rss: 'https://www.latitudemedia.com/feed' },
+  { key: 'facilities-dive', name: 'Facilities Dive', tier: 2, rss: 'https://www.facilitiesdive.com/feeds/news/' },
+  { key: 'construction-dive', name: 'Construction Dive', tier: 2, rss: 'https://www.constructiondive.com/feeds/news/' },
+  { key: 'solar-power-world', name: 'Solar Power World', tier: 2, rss: 'https://www.solarpowerworldonline.com/feed/' },
+  { key: 'toms-hardware', name: "Tom's Hardware", tier: 2, rss: 'https://www.tomshardware.com/feeds/all' },
+  { key: 'power-grid-intl', name: 'Power Grid International', tier: 2, rss: 'https://www.power-grid.com/feed/' },
+  { key: 'electrive', name: 'Electrive', tier: 2, rss: 'https://www.electrive.com/feed/' },
+  { key: 'solar-industry', name: 'Solar Industry', tier: 2, rss: 'https://solarindustrymag.com/feed' },
+  { key: 'inside-climate-news', name: 'Inside Climate News', tier: 2, rss: 'https://insideclimatenews.org/feed/' },
+  { key: 'ieee-spectrum', name: 'IEEE Spectrum', tier: 2, rss: 'https://spectrum.ieee.org/feeds/feed.rss' },
+  { key: 'smart-energy-intl', name: 'Smart Energy International', tier: 2, rss: 'https://www.smart-energy.com/feed/' },
+  { key: 'dc-magazine', name: 'Data Centre Magazine', tier: 2, rss: 'https://datacentremagazine.com/rss' }
+];
 
 function scraperSs_() {
   if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
@@ -2138,6 +2211,15 @@ function scSyncInterests_(force) {
         '', now, now, '']);
       addedTopics++;
     }
+    // Source roster seeds (Phase 3, D1) — insert-only, default ON. The sheet
+    // toggle is the on/off switch; SCRAPER_SOURCE_ROSTER stays the source of
+    // truth for the outlet name + feed URL.
+    for (var sr = 0; sr < SCRAPER_SOURCE_ROSTER.length; sr++) {
+      var rsrc = SCRAPER_SOURCE_ROSTER[sr];
+      if (byKey['src-' + rsrc.key] !== undefined) continue;
+      appendRows.push(['src-' + rsrc.key, 'source', rsrc.name, true, 'active', '',
+        'tier ' + rsrc.tier, '', 1, 'roster', '', now, now, '']);
+    }
     if (dirty && data.length > 1) {
       sheet.getRange(2, 1, data.length - 1, width).setValues(
         data.slice(1).map(function(dr) { return dr.slice(0, width); }));
@@ -2346,6 +2428,529 @@ function rubricPreview(sessionToken, payloadJson) {
   return out;
 }
 
+// ── Rebuild Phase 3: digest engine ──────────────────────────────────────
+// Chunked, resumable pipeline: start → fetch (roster feeds) → backstop
+// (Google News company queries, D2) → summarize (AI key points, with a
+// deterministic snippet fallback when no AI key is configured) → render
+// (Night Ink HTML + section JSON into the Digests tab). Intake items live in
+// the DigestIntake tab so every step is sheet-backed and inspectable.
+
+/** ET clock facts for the digest scheduler (pure given a Date). */
+function scDigestClock_(now) {
+  var d = now || new Date();
+  var iso = Number(Utilities.formatDate(d, 'America/New_York', 'u'));   // 1=Mon … 7=Sun
+  return {
+    isoDay: iso,
+    hour: Number(Utilities.formatDate(d, 'America/New_York', 'H')),
+    date: Utilities.formatDate(d, 'America/New_York', 'yyyy-MM-dd'),
+    windowH: iso === 1 ? 72 : SCRAPER_DIGEST_WINDOW_H   // Monday edition covers the weekend
+  };
+}
+
+/** Section for a scored intake item — pure, node-testable.
+    incidents: safety/community topic match wins (even with a company match);
+    companies: any covered-company match; market: everything else. */
+function scDigestSectionFor_(item) {
+  var topics = item.matchedTopics || [];
+  for (var i = 0; i < topics.length; i++) {
+    if (/incident|opposition|fire|safety|siting/i.test(String(topics[i]))) return 'incidents';
+  }
+  if ((item.matchedCompanies || []).length) return 'companies';
+  return 'market';
+}
+
+/** Wrap concrete figures in an already-HTML-escaped string with the Night
+    Ink amber bold — pure, node-testable. */
+function scNiBoldFigures_(escaped) {
+  return String(escaped || '').replace(
+    /((?:[\$€£]\s?)?\d[\d,]*(?:\.\d+)?\s?(?:(?:GWh?|MWh?|kWh?|GW|MW|kW|billion|million|bn)\b|%)|[\$€£]\s?\d[\d,]*(?:\.\d+)?)/g,
+    '<b style="color:#f2a33c;">$1</b>');
+}
+
+/** Enabled-state map for roster sources from the Interests tab
+    ('src-<key>' rows). A source with no row yet defaults to ON. */
+function scEnabledSources_(ss) {
+  var enabled = {};
+  SCRAPER_SOURCE_ROSTER.forEach(function(s) { enabled[s.key] = true; });
+  var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+  if (!sheet) return enabled;
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][1]) !== 'source') continue;
+    var key = String(data[i][0]).replace(/^src-/, '');
+    if (enabled[key] === undefined) continue;
+    enabled[key] = data[i][3] === true || String(data[i][3]).toLowerCase() === 'true';
+  }
+  return enabled;
+}
+
+function scDigestState_() {
+  try {
+    return JSON.parse(PropertiesService.getScriptProperties()
+      .getProperty(SCRAPER_DIGEST_STATE_KEY) || 'null');
+  } catch (e) { return null; }
+}
+function scDigestSaveState_(state) {
+  PropertiesService.getScriptProperties()
+    .setProperty(SCRAPER_DIGEST_STATE_KEY, JSON.stringify(state));
+}
+
+/** Existing intake URLs for the current digest (dedupe set). */
+function scDigestIntakeUrls_(sheet, digestId) {
+  var seen = {};
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][0]) === digestId) seen[String(data[i][1])] = true;
+  }
+  return seen;
+}
+
+/** Start a fresh run: clear the intake tab and initialize state. */
+function scDigestStart_(ss) {
+  var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var rows = intake.getLastRow();
+  if (rows > 1) intake.deleteRows(2, rows - 1);
+  var clock = scDigestClock_(new Date());
+  var state = {
+    id: 'dg-' + clock.date + '-' + Utilities.getUuid().slice(0, 8),
+    date: clock.date, windowH: clock.windowH,
+    phase: 'fetch', srcCursor: 0, bsCursor: 0, bsList: null,
+    fetched: 0, kept: 0, startedAt: Date.now()
+  };
+  scDigestSaveState_(state);
+  return state;
+}
+
+/** Score + append parsed feed items to the intake tab (shared by fetch and
+    backstop). Returns the number kept. */
+function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen, model, cutoffMs) {
+  var out = [];
+  for (var i = 0; i < items.length && out.length < SCRAPER_DIGEST_ITEMS_PER_SOURCE; i++) {
+    var it = items[i];
+    if (!it.url || seen[it.url]) continue;
+    var ts = new Date(it.publishedAt || '').getTime();
+    if (ts && ts < cutoffMs) continue;   // undated items pass; the window filters dated ones
+    var r = scRubricScore_(it.title, it.snippet, model);
+    var score = isBackstop ? Math.round(r.score * SCRAPER_DIGEST_BACKSTOP_PENALTY) : r.score;
+    if (score < SCRAPER_DIGEST_MIN_INTAKE_SCORE) continue;
+    seen[it.url] = true;
+    out.push([state.id, it.url, it.title, sourceLabel || it.source,
+      it.publishedAt, it.snippet, score,
+      JSON.stringify({ s: r.signals, mc: r.matchedCompanies, mt: r.matchedTopics }).slice(0, 900),
+      '', scDigestSectionFor_(r), isBackstop ? 'yes' : '']);
+  }
+  if (out.length) {
+    intake.getRange(intake.getLastRow() + 1, 1, out.length, out[0].length).setValues(out);
+  }
+  return out.length;
+}
+
+/** Fetch phase: walk enabled roster sources, a few feeds per step. */
+function scDigestFetchStep_(ss, state, t0) {
+  var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var enabled = scEnabledSources_(ss);
+  var model = scLoadInterestModel_(ss);
+  var seen = scDigestIntakeUrls_(intake, state.id);
+  var cutoffMs = Date.now() - state.windowH * 3600000;
+  var fetches = 0;
+  while (state.srcCursor < SCRAPER_SOURCE_ROSTER.length &&
+         fetches < SCRAPER_DIGEST_FETCHES_PER_STEP &&
+         (Date.now() - t0) < SCRAPER_DIGEST_TIME_BUDGET_MS) {
+    var src = SCRAPER_SOURCE_ROSTER[state.srcCursor];
+    state.srcCursor++;
+    if (!enabled[src.key]) continue;
+    fetches++;
+    try {
+      var resp = UrlFetchApp.fetch(src.rss, { muteHttpExceptions: true, followRedirects: true });
+      if (resp.getResponseCode() !== 200) continue;
+      var items = scParseFeed_(resp.getContentText(), src.name);
+      state.fetched += items.length;
+      state.kept += scDigestIngest_(ss, intake, state, items, src.name, false, seen, model, cutoffMs);
+    } catch (feedErr) { /* a broken feed never breaks the run */ }
+  }
+  if (state.srcCursor >= SCRAPER_SOURCE_ROSTER.length) state.phase = 'backstop';
+  scDigestSaveState_(state);
+  return { phase: state.phase, cursor: state.srcCursor, total: SCRAPER_SOURCE_ROSTER.length };
+}
+
+/** Backstop phase (D2): rotating Google News company-name queries —
+    down-weighted, labeled, capped per run. Kept only as a covered-company
+    safety net, never a primary source. */
+function scDigestBackstopStep_(ss, state, t0) {
+  var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var model = scLoadInterestModel_(ss);
+  var props = PropertiesService.getScriptProperties();
+  if (!state.bsList) {
+    var names = model.companies.map(function(c) { return c.label; }).sort();
+    var start = Number(props.getProperty(SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY)) || 0;
+    var pick = [];
+    for (var i = 0; i < Math.min(SCRAPER_DIGEST_BACKSTOP_PER_RUN, names.length); i++) {
+      pick.push(names[(start + i) % names.length]);
+    }
+    props.setProperty(SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY,
+      String(names.length ? (start + pick.length) % names.length : 0));
+    state.bsList = pick;
+    state.bsCursor = 0;
+  }
+  var seen = scDigestIntakeUrls_(intake, state.id);
+  var cutoffMs = Date.now() - state.windowH * 3600000;
+  var when = state.windowH > 24 ? '3d' : '1d';
+  var fetches = 0;
+  while (state.bsCursor < state.bsList.length &&
+         fetches < SCRAPER_DIGEST_FETCHES_PER_STEP &&
+         (Date.now() - t0) < SCRAPER_DIGEST_TIME_BUDGET_MS) {
+    var name = state.bsList[state.bsCursor];
+    state.bsCursor++;
+    fetches++;
+    try {
+      var url = 'https://news.google.com/rss/search?q=' +
+        encodeURIComponent('"' + name + '" when:' + when) + '&hl=en-US&gl=US&ceid=US:en';
+      var resp = UrlFetchApp.fetch(url, { muteHttpExceptions: true, followRedirects: true });
+      if (resp.getResponseCode() !== 200) continue;
+      var items = scParseFeed_(resp.getContentText(), 'Google News');
+      state.fetched += items.length;
+      state.kept += scDigestIngest_(ss, intake, state, items,
+        'Google News · ' + name + ' (backstop)', true, seen, model, cutoffMs);
+    } catch (bsErr) { /* tolerated */ }
+  }
+  if (state.bsCursor >= state.bsList.length) state.phase = 'summarize';
+  scDigestSaveState_(state);
+  return { phase: state.phase, cursor: state.bsCursor, total: state.bsList.length };
+}
+
+/** Intake rows for a digest as objects, sorted by score (desc). */
+function scDigestItems_(ss, digestId) {
+  var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var data = intake.getDataRange().getValues();
+  var items = [];
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][0]) !== digestId) continue;
+    var sig = {};
+    try { sig = JSON.parse(data[i][7] || '{}'); } catch (e) {}
+    items.push({ row: i + 1, url: String(data[i][1]), title: String(data[i][2]),
+      source: String(data[i][3]), publishedAt: String(data[i][4]),
+      snippet: String(data[i][5]), score: Number(data[i][6]) || 0,
+      matchedCompanies: sig.mc || [], matchedTopics: sig.mt || [],
+      summary: String(data[i][8] || ''), section: String(data[i][9] || 'market'),
+      backstop: String(data[i][10]) === 'yes' });
+  }
+  items.sort(function(a, b) { return b.score - a.score; });
+  return items;
+}
+
+/** Summarize phase: AI key-point summaries for the top items, then the lead.
+    No AI key / AI failure → deterministic fallback (snippets serve as
+    summaries, top item becomes the lead) so the digest always builds. */
+function scDigestSummarizeStep_(ss, state, t0) {
+  var items = scDigestItems_(ss, state.id);
+  var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var top = items.slice(0, SCRAPER_DIGEST_SUMMARIZE_TOP_N);
+  var pending = top.filter(function(it) { return !it.summary; });
+  while (pending.length && (Date.now() - t0) < SCRAPER_DIGEST_TIME_BUDGET_MS && !state.aiNote) {
+    var batch = pending.slice(0, SCRAPER_DIGEST_ITEMS_PER_AI_CALL);
+    var prompt = 'You are writing 1-2 sentence news summaries for a battery-storage/data-center '
+      + 'industry reader. For each item, state what happened and keep every concrete figure '
+      + '(MW, MWh, $, %, dates). Reply ONLY with a JSON array like '
+      + '[{"i":0,"summary":"..."}] covering every item.\n\nItems:\n'
+      + JSON.stringify(batch.map(function(it, n) {
+          return { i: n, title: it.title, snippet: it.snippet.slice(0, 260), source: it.source };
+        }));
+    try {
+      var parsed = scParseJsonArray_(aiComplete_(prompt, 1200)) || [];
+      var byIdx = {};
+      parsed.forEach(function(p) { if (p && typeof p.i === 'number') byIdx[p.i] = scStr_(p.summary, 400); });
+      batch.forEach(function(it, n) {
+        var s = byIdx[n] || it.snippet.slice(0, 300);
+        intake.getRange(it.row, 9).setValue(s);
+        it.summary = s;
+      });
+      scLogUsage_(ss, 'digest', 1, 0);
+    } catch (aiErr) {
+      state.aiNote = 'ai_unavailable: ' + String((aiErr && aiErr.message) || aiErr).slice(0, 120);
+      break;
+    }
+    pending = pending.filter(function(it) { return !it.summary; });
+  }
+  var stillPending = top.some(function(it) { return !it.summary; });
+  if ((!stillPending || state.aiNote) && !state.leadDone) {
+    state.leadIdx = 0;
+    state.leadText = '';
+    if (!state.aiNote && top.length) {
+      try {
+        var lp = 'From these scored industry items, pick the single most consequential as "the lead" '
+          + 'and write a 2-3 sentence lead paragraph for a morning digest (what happened, the key '
+          + 'number, why it matters to a US battery-storage seller). Reply ONLY with a JSON array: '
+          + '[{"lead": <item index>, "text": "..."}].\n\nItems:\n'
+          + JSON.stringify(top.slice(0, 6).map(function(it, n) {
+              return { i: n, title: it.title, summary: it.summary || it.snippet.slice(0, 200) };
+            }));
+        var lr = scParseJsonArray_(aiComplete_(lp, 500)) || [];
+        if (lr[0]) {
+          state.leadIdx = Math.max(0, Math.min(5, Number(lr[0].lead) || 0));
+          state.leadText = scStr_(lr[0].text, 600);
+        }
+        scLogUsage_(ss, 'digest', 1, 0);
+      } catch (leadErr) { /* fallback below */ }
+    }
+    state.leadDone = true;
+  }
+  if (state.leadDone) state.phase = 'render';
+  scDigestSaveState_(state);
+  return { phase: state.phase, summarized: top.length - pending.length, top: top.length };
+}
+
+/** Render phase: section grouping → Night Ink HTML → Digests row. */
+function scDigestRenderStep_(ss, state) {
+  var items = scDigestItems_(ss, state.id);
+  var relevant = items.filter(function(it) { return it.score >= SCRAPER_RELEVANT_THRESHOLD; });
+  var top = items.slice(0, SCRAPER_DIGEST_SUMMARIZE_TOP_N);
+  var lead = top.length ? top[Math.min(state.leadIdx || 0, top.length - 1)] : null;
+  var sections = { companies: [], market: [], incidents: [] };
+  items.forEach(function(it) {
+    if (lead && it.url === lead.url) return;
+    if (it.score < SCRAPER_RELEVANT_THRESHOLD) return;
+    var sec = it.section || 'market';
+    if (sections[sec] && sections[sec].length < SCRAPER_DIGEST_SECTION_CAPS[sec]) {
+      sections[sec].push(it);
+    }
+  });
+  // "Newly covered this week" box — companies still carrying the sync flag.
+  var newNames = [];
+  var interests = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+  if (interests) {
+    var idata = interests.getDataRange().getValues();
+    for (var i = 1; i < idata.length && newNames.length < 6; i++) {
+      if (String(idata[i][1]) === 'company' && String(idata[i][4]) === 'active' &&
+          String(idata[i][5]) === SCRAPER_INTEREST_FLAG_NEW) newNames.push(String(idata[i][2]));
+    }
+  }
+  var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var no = digests.getLastRow();   // header row makes the first edition No. 001
+  var clock = scDigestClock_(new Date());
+  var d = {
+    id: state.id, date: state.date, no: no, windowH: state.windowH,
+    generatedAt: new Date().toISOString(), aiNote: state.aiNote || '',
+    lead: lead ? { title: lead.title, source: lead.source, publishedAt: lead.publishedAt,
+                   url: lead.url, score: lead.score,
+                   text: state.leadText || lead.summary || lead.snippet } : null,
+    sections: {
+      companies: sections.companies.map(scDigestItemOut_),
+      market: sections.market.map(scDigestItemOut_),
+      incidents: sections.incidents.map(scDigestItemOut_)
+    },
+    newCoverage: { count: newNames.length, names: newNames },
+    counts: { intake: items.length, relevant: relevant.length }
+  };
+  var html = scRenderDigestNightInk_(d);
+  digests.appendRow([state.id, state.date, new Date(), 'generated',
+    items.length, relevant.length,
+    JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX),
+    html.slice(0, SCRAPER_DIGEST_CELL_MAX),
+    state.aiNote || '']);
+  var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
+  if (extra > 0) digests.deleteRows(2, extra);
+  var props = PropertiesService.getScriptProperties();
+  props.setProperty('DIGEST_LAST_DATE', state.date);
+  // Phase 4 go-live site: dormant until SCRAPER_SCHED_EMAIL_ENABLED flips and
+  // a DIGEST_RECIPIENT Script Property is set. Night Ink still needs dark-mode
+  // client-proofing + a real-inbox test before that flip (recorded decision).
+  var recipient = props.getProperty('DIGEST_RECIPIENT') || '';
+  if (recipient && SCRAPER_SCHED_EMAIL_ENABLED) {
+    try {
+      MailApp.sendEmail({ to: recipient,
+        subject: 'The Morning Edition — ' + state.date + ' (No. ' + scDigestNo_(no) + ')',
+        htmlBody: html });
+    } catch (mailErr) {}
+  }
+  state.phase = 'done';
+  scDigestSaveState_(state);
+  return { phase: 'done', relevant: relevant.length, sectionsBuilt: true };
+}
+
+function scDigestItemOut_(it) {
+  return { title: it.title, source: it.source, publishedAt: it.publishedAt,
+           url: it.url, score: it.score, backstop: it.backstop,
+           summary: it.summary || it.snippet };
+}
+
+function scDigestNo_(n) { return ('000' + Math.max(1, n)).slice(-3); }
+
+/** Night Ink edition renderer (approved digest design: the Morning Edition's
+    ceremony on the Wire Desk palette — Newsreader serif masthead, double
+    rules, charcoal #15171c + amber #f2a33c). Inline styles only: this HTML is
+    the email body. Dark-mode client-proofing happens at Phase 4 go-live. */
+function scRenderDigestNightInk_(d) {
+  function esc(s) { return escapeHtml(String(s == null ? '' : s)); }
+  function longDate(iso) {
+    try {
+      return new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York',
+        weekday: 'long', month: 'long', day: 'numeric', year: 'numeric'
+      }).format(new Date(iso + 'T12:00:00Z'));
+    } catch (e) { return iso; }
+  }
+  function timeOf(pub) {
+    var t = new Date(pub || '').getTime();
+    if (!t) return '';
+    try {
+      return new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York',
+        hour: 'numeric', minute: '2-digit' }).format(new Date(t));
+    } catch (e) { return ''; }
+  }
+  var serif = "font-family:'Newsreader',Georgia,'Times New Roman',serif;";
+  var sans = "font-family:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;";
+  var mono = "font-family:'IBM Plex Mono',Consolas,monospace;";
+  var caps = 'font-size:10px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;';
+  function srcLine(it) {
+    var t = timeOf(it.publishedAt);
+    return '<div style="' + mono + caps + 'color:#7b828e;margin-top:2px;">'
+      + esc(it.source) + (t ? ' · ' + esc(t) : '') + '</div>';
+  }
+  function itemHtml(it) {
+    return '<div style="margin:0 0 14px;">'
+      + '<div style="' + serif + 'font-size:18px;font-weight:600;line-height:1.3;color:#eceae4;">'
+      + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
+      + '<div style="' + sans + 'font-size:13px;line-height:1.55;color:#b6bcc6;margin-top:3px;">'
+      + scNiBoldFigures_(esc(it.summary)) + '</div>'
+      + srcLine(it) + '</div>';
+  }
+  function sectionHtml(label, items, color, ruleColor) {
+    if (!items.length) return '';
+    return '<div style="margin:0 0 6px;">'
+      + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 10px;"><tr>'
+      + '<td style="' + sans + caps + 'color:' + color + ';white-space:nowrap;padding-right:12px;">' + label + '</td>'
+      + '<td width="100%" style="border-top:1px solid ' + ruleColor + ';font-size:0;line-height:0;">&nbsp;</td>'
+      + '</tr></table>'
+      + items.map(itemHtml).join('') + '</div>';
+  }
+  var html = '<div style="max-width:640px;margin:0 auto;background:#15171c;color:#e6e4de;'
+    + 'padding:36px 44px 30px;' + sans + '">'
+    // Masthead
+    + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:16px;margin-bottom:18px;">'
+    + '<div style="' + serif + 'font-size:36px;font-weight:700;line-height:1;color:#f0eee8;">The Morning Edition</div>'
+    + '<div style="' + caps + 'color:#f2a33c;margin-top:6px;">Scraper · Trade news, distilled daily</div>'
+    + '<div style="font-size:12px;color:#9aa0ab;margin-top:4px;">' + esc(longDate(d.date))
+    + ' · No. ' + scDigestNo_(d.no) + ' · covering the last ' + Number(d.windowH) + ' hours</div>'
+    + '</div>';
+  if (d.lead) {
+    html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:18px;margin-bottom:18px;">'
+      + '<div style="' + caps + 'color:#f2a33c;">The lead</div>'
+      + '<div style="' + serif + 'font-size:26px;font-weight:600;line-height:1.2;color:#f0eee8;margin-top:6px;">'
+      + '<a href="' + esc(d.lead.url) + '" style="color:#f0eee8;text-decoration:none;">' + esc(d.lead.title) + '</a></div>'
+      + '<div style="font-size:14px;line-height:1.6;color:#b6bcc6;margin-top:6px;">'
+      + scNiBoldFigures_(esc(d.lead.text)) + '</div>'
+      + srcLine(d.lead) + '</div>';
+  }
+  html += sectionHtml('Covered companies', d.sections.companies, '#e6e4de', '#2c313a')
+    + sectionHtml('US AIDC market &amp; policy', d.sections.market, '#e6e4de', '#2c313a')
+    + sectionHtml('Incidents &amp; community', d.sections.incidents, '#e05d5d', '#4a2c2c');
+  if (d.newCoverage && d.newCoverage.count) {
+    html += '<div style="border:1px solid #363c45;background:#1b1e24;border-radius:4px;'
+      + 'padding:12px 16px;margin:6px 0 14px;">'
+      + '<div style="' + caps + 'color:#e6e4de;">Newly covered</div>'
+      + '<div style="font-size:13px;line-height:1.55;color:#b6bcc6;margin-top:3px;">Profiler added '
+      + '<b style="color:#f2a33c;">' + Number(d.newCoverage.count) + ' compan'
+      + (d.newCoverage.count === 1 ? 'y' : 'ies') + '</b>'
+      + (d.newCoverage.names.length ? ' — ' + esc(d.newCoverage.names.join(', ')) : '')
+      + '; folded into this edition automatically. Review them from the Interests panel.</div></div>';
+  }
+  html += '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
+    + 'style="border-top:3px double #d8dbe1;margin-top:10px;"><tr>'
+    + '<td style="font-size:11px;color:#8a919d;padding-top:12px;">Published by your Scraper desk · '
+    + Number(d.counts.relevant) + ' relevant of ' + Number(d.counts.intake) + ' scanned'
+    + (d.aiNote ? ' · summaries in fallback mode' : '') + '</td>'
+    + '<td align="right" style="padding-top:12px;"><a href="' + esc(EMBED_PAGE_URL)
+    + '" style="font-size:11px;color:#f2a33c;text-decoration:none;">Tune tomorrow\'s edition →</a></td>'
+    + '</tr></table></div>';
+  return html;
+}
+
+/** One budget-bounded step of the digest state machine. A run left over
+    from a previous day is abandoned and a fresh one starts. */
+function scDigestStep_() {
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var t0 = Date.now();
+  var today = scDigestClock_(new Date()).date;
+  var state = scDigestState_();
+  if (!state || state.phase === 'done' || state.date !== today) state = scDigestStart_(ss);
+  var info = null;
+  if (state.phase === 'fetch') info = scDigestFetchStep_(ss, state, t0);
+  else if (state.phase === 'backstop') info = scDigestBackstopStep_(ss, state, t0);
+  else if (state.phase === 'summarize') info = scDigestSummarizeStep_(ss, state, t0);
+  else if (state.phase === 'render') info = scDigestRenderStep_(ss, state);
+  state = scDigestState_();
+  return { success: true, id: state.id, date: state.date, phase: state.phase,
+           done: state.phase === 'done', fetched: state.fetched || 0,
+           kept: state.kept || 0, aiNote: state.aiNote || '', detail: info };
+}
+
+/** Scheduled entry (called from scSchedulerTick AFTER the pipeline pause
+    gate): weekday mornings only, one step per tick, stops once today's
+    edition exists. Never throws into the tick. */
+function scDigestScheduledTick_() {
+  var clock = scDigestClock_(new Date());
+  if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) return;
+  if (clock.hour < SCRAPER_DIGEST_RUN_HOUR) return;
+  var props = PropertiesService.getScriptProperties();
+  var state = scDigestState_();
+  var inFlight = state && state.phase !== 'done' && state.date === clock.date;
+  if (!inFlight && props.getProperty('DIGEST_LAST_DATE') === clock.date) return;
+  try { scDigestStep_(); } catch (dgErr) {}
+}
+
+/** Advance the digest build one step (the app loops until done). */
+function runDigestNow(sessionToken) {
+  validateSessionForData(sessionToken, 'runDigestNow');
+  return scDigestStep_();
+}
+
+/** Current run state, if any. */
+function getDigestStatus(sessionToken) {
+  validateSessionForData(sessionToken, 'getDigestStatus');
+  var state = scDigestState_();
+  return { success: true, state: state ? {
+    id: state.id, date: state.date, phase: state.phase, done: state.phase === 'done',
+    fetched: state.fetched || 0, kept: state.kept || 0, aiNote: state.aiNote || '' } : null };
+}
+
+/** Recent editions (newest first, metadata only — no HTML). */
+function listDigests(sessionToken, limit) {
+  validateSessionForData(sessionToken, 'listDigests');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var data = ss.getSheetByName(SCRAPER_TABS.DIGESTS).getDataRange().getValues();
+  var max = Math.max(1, Math.min(30, Number(limit) || 10));
+  var out = [];
+  for (var i = data.length - 1; i >= 1 && out.length < max; i--) {
+    out.push({
+      id: String(data[i][0]),
+      date: data[i][1] instanceof Date
+        ? Utilities.formatDate(data[i][1], 'America/New_York', 'yyyy-MM-dd') : String(data[i][1]),
+      generatedAt: data[i][2] ? new Date(data[i][2]).toISOString() : '',
+      status: String(data[i][3]), itemCount: Number(data[i][4]) || 0,
+      relevantCount: Number(data[i][5]) || 0, notes: String(data[i][8] || '')
+    });
+  }
+  return { success: true, digests: out };
+}
+
+/** One edition: parsed section JSON + the Night Ink HTML. Empty id = latest. */
+function getDigest(sessionToken, digestId) {
+  validateSessionForData(sessionToken, 'getDigest');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var data = ss.getSheetByName(SCRAPER_TABS.DIGESTS).getDataRange().getValues();
+  var want = scStr_(digestId, 60);
+  for (var i = data.length - 1; i >= 1; i--) {
+    if (want && String(data[i][0]) !== want) continue;
+    var sections = null;
+    try { sections = JSON.parse(String(data[i][6] || 'null')); } catch (e) {}
+    return { success: true, id: String(data[i][0]), digest: sections,
+             html: String(data[i][7] || '') };
+  }
+  return { success: false, error: 'not_found' };
+}
+
 // ── Scheduler ───────────────────────────────────────────────────────────
 // An hourly time-driven trigger walks the Schedules tab and drives each due
 // schedule through the same chunked pipeline the UI buttons use:
@@ -2439,6 +3044,10 @@ function scSchedulerTick() {
   try {
     var ss = scraperSs_();
     ensureScraperTabs_(ss);
+    // Rebuild Phase 3: the weekday Morning Edition — one budget-bounded step
+    // per tick (weekday-morning + built-today checks live inside). Sits after
+    // the pipeline pause gate, so it cannot spend AI tokens while paused.
+    scDigestScheduledTick_();
     var t0 = Date.now();
     var sheet = ss.getSheetByName(SCRAPER_TABS.SCHEDULES);
     var data = sheet.getDataRange().getValues();
@@ -3048,6 +3657,10 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'setInterestEnabled') return setInterestEnabled(sessionToken, param('key'), param('enabled'));
   if (op === 'syncInterestsNow') return syncInterestsNow(sessionToken);
   if (op === 'rubricPreview') return rubricPreview(sessionToken, param('payload'));
+  if (op === 'runDigestNow') return runDigestNow(sessionToken);
+  if (op === 'getDigestStatus') return getDigestStatus(sessionToken);
+  if (op === 'listDigests') return listDigests(sessionToken, param('limit'));
+  if (op === 'getDigest') return getDigest(sessionToken, param('digestId'));
   return { success: false, error: 'unknown_op' };
 }
 

@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.36w">
+  <meta name="build-version" content="v01.37w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -488,6 +488,30 @@
     .wd-sig-fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--wd-accent); }
     .wd-sig-val { width: 34px; flex: none; text-align: right; font-family: var(--wd-mono); }
     #wd-rubric-score { font-family: var(--wd-mono); font-size: 20px; font-weight: 600; color: var(--wd-accent); }
+    /* Digest overlay — the Night Ink edition viewer (rebuild Phase 3) */
+    #wd-digest-overlay {
+      position: fixed; inset: 0; z-index: 52; background: rgba(8,10,13,0.72);
+      display: none; align-items: flex-start; justify-content: center;
+      overflow-y: auto; padding: 4vh 12px;
+    }
+    #wd-digest-panel {
+      background: var(--wd-panel); border: 1px solid var(--wd-line-soft);
+      border-radius: 8px; width: 100%; max-width: 760px;
+      padding: 20px 22px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      box-sizing: border-box; margin-bottom: 4vh; color: var(--wd-ink); font-family: var(--wd-sans);
+    }
+    #wd-digest-status { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); min-height: 15px; margin: 2px 0 6px; }
+    #wd-digest-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+    .wd-dg-chip {
+      border: 1px solid var(--wd-line-soft); background: var(--wd-bg-deep); border-radius: 4px;
+      padding: 4px 10px; font-size: 11px; color: var(--wd-ink2); cursor: pointer;
+      font-family: var(--wd-mono);
+    }
+    .wd-dg-chip.on { border-color: var(--wd-accent); color: var(--wd-accent); }
+    #wd-digest-view {
+      border: 1px solid var(--wd-line); border-radius: 6px; overflow-x: auto;
+      background: #15171c;
+    }
     /* Buttons */
     .sc-btn {
       border: 1px solid var(--wd-line-soft); border-radius: 4px; padding: 8px 14px;
@@ -862,7 +886,7 @@
        Invisible before sign-in — the full-screen auth wall covers it.
        IBM Plex loads from the body (a mid-stylesheet @import would be ignored
        per spec since template CSS precedes the PROJECT block). -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&amp;display=swap">
   <div id="scraper-app">
     <div class="wd-topbar">
       <div class="wd-brand"><b>SCRAPER</b><span class="wd-lbl">News Desk</span></div>
@@ -872,6 +896,7 @@
       <span class="wd-paused-pill" id="wd-paused-pill" title="Scheduled digests are paused during the rebuild — manual actions still work. Delivery resumes at Phase 4 go-live.">⏸ DIGEST PAUSED</span>
       <div class="wd-spacer"></div>
       <div style="display:flex;gap:8px;align-items:center;">
+        <button class="sc-btn" id="wd-digest-btn" type="button" title="View editions or run the intake now">Digest</button>
         <button class="sc-btn" id="sc-notif-btn" type="button" title="Notification history" style="position:relative;">🔔<span id="sc-notif-badge" style="display:none;position:absolute;top:-6px;right:-6px;background:#b3392f;color:#fff;border-radius:9px;font-size:10px;line-height:1;padding:3px 5px;min-width:10px;text-align:center;"></span></button>
         <button class="sc-btn" id="sc-refresh-btn" type="button">Refresh</button>
         <button class="sc-btn primary" id="sc-new-btn" type="button">+ New Project</button>
@@ -879,6 +904,13 @@
     </div>
     <div class="wd-desk">
       <aside class="wd-rail wd-rail-left" id="wd-interests">
+        <div class="wd-sect">
+          <div class="wd-sect-head">
+            <span class="wd-lbl">Sources</span>
+            <span class="wd-count" id="wd-src-count"></span>
+          </div>
+          <div class="wd-tog-list" id="wd-src-list"><span class="wd-loading">Seeded by the daily sync — 30 trade outlets</span></div>
+        </div>
         <div class="wd-sect">
           <div class="wd-sect-head">
             <span class="wd-lbl">Companies</span>
@@ -939,6 +971,20 @@
           </div>
         </div>
       </aside>
+    </div>
+  </div>
+  <div id="wd-digest-overlay">
+    <div id="wd-digest-panel">
+      <div class="sc-wiz-head">
+        <h2>The Morning Edition</h2>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <button class="sc-btn" id="wd-digest-run" type="button" title="Build (or rebuild) today's edition now — runs the fetch → score → summarize → render pipeline">Run intake now</button>
+          <button id="wd-digest-close" type="button" title="Close" style="background:none;border:none;font-size:24px;color:var(--wd-faint);cursor:pointer;line-height:1;">&times;</button>
+        </div>
+      </div>
+      <div id="wd-digest-status"></div>
+      <div id="wd-digest-list"></div>
+      <div id="wd-digest-view"><span class="wd-loading" style="display:block;padding:16px;">No editions yet — tap "Run intake now" to build the first one.</span></div>
     </div>
   </div>
   <div id="sc-wizard-overlay">
@@ -6525,9 +6571,23 @@
     if (syncBtn) syncBtn.addEventListener('click', wdSyncNow_);
     var rubricBtn = $sc('wd-rubric-btn');
     if (rubricBtn) rubricBtn.addEventListener('click', wdRubricScore_);
-    var coList = $sc('wd-co-list'), tpList = $sc('wd-tp-list');
+    var coList = $sc('wd-co-list'), tpList = $sc('wd-tp-list'), srcList = $sc('wd-src-list');
     if (coList) coList.addEventListener('click', wdToggleClick_);
     if (tpList) tpList.addEventListener('click', wdToggleClick_);
+    if (srcList) srcList.addEventListener('click', wdToggleClick_);
+    var dgBtn = $sc('wd-digest-btn');
+    if (dgBtn) dgBtn.addEventListener('click', wdDigestOpen_);
+    var dgClose = $sc('wd-digest-close');
+    if (dgClose) dgClose.addEventListener('click', function() {
+      $sc('wd-digest-overlay').style.display = 'none';
+    });
+    var dgRun = $sc('wd-digest-run');
+    if (dgRun) dgRun.addEventListener('click', wdDigestRun_);
+    var dgList = $sc('wd-digest-list');
+    if (dgList) dgList.addEventListener('click', function(ev) {
+      var chip = ev.target.closest ? ev.target.closest('button.wd-dg-chip') : null;
+      if (chip) wdDigestShow_(chip.getAttribute('data-id'));
+    });
   }
 
   function wdClockTick_() {
@@ -6561,7 +6621,21 @@
       });
   }
 
-  function wdRenderInterests_() { wdRenderCompanies_(); wdRenderTopics_(); wdRenderSync_(); }
+  function wdRenderInterests_() { wdRenderSources_(); wdRenderCompanies_(); wdRenderTopics_(); wdRenderSync_(); }
+
+  /** Sources section (Phase 3): the D1 roster rows, seeded by the daily sync
+      in roster order (tier-1 outlets first). Toggles reuse the interest path. */
+  function wdRenderSources_() {
+    var el = $sc('wd-src-list');
+    if (!el) return;
+    var srcs = _wdInterests.filter(function(i) { return i.type === 'source'; });
+    var on = srcs.filter(function(i) { return i.enabled; }).length;
+    var cnt = $sc('wd-src-count');
+    if (cnt) cnt.textContent = srcs.length ? (on + '/' + srcs.length + ' on') : '';
+    el.innerHTML = srcs.length
+      ? srcs.map(wdIntRow_).join('')
+      : '<span class="wd-loading">Seeded by the daily sync — 30 trade outlets</span>';
+  }
 
   /** One interest row: name · flag chip · toggle. Stale rows are dimmed,
       struck through, and read-only (the sync never deletes coverage). */
@@ -6734,6 +6808,92 @@
         scToast('Could not score (' + scEsc((err && err.message) || err) + '). Please try again.', true);
       })
       .then(function() { if (btn) { btn.disabled = false; btn.textContent = 'Score it'; } });
+  }
+
+  // ── Rebuild Phase 3 — digest overlay (edition list, viewer, run loop) ──
+  var _wdDigestRunning = false;
+
+  function wdDigestOpen_() {
+    $sc('wd-digest-overlay').style.display = 'flex';
+    wdDigestRefresh_();
+  }
+
+  function wdDigestRefresh_() {
+    _gasPost({ action: 'listDigests', token: scToken(), limit: '10' })
+      .then(function(data) {
+        if (!data || !data.success) return;
+        var list = $sc('wd-digest-list');
+        var ds = data.digests || [];
+        list.innerHTML = ds.length
+          ? ds.map(function(dg) {
+              return '<button type="button" class="wd-dg-chip" data-id="' + scEsc(dg.id) + '">'
+                + scEsc(dg.date) + ' · ' + Number(dg.relevantCount) + ' relevant</button>';
+            }).join('')
+          : '';
+        if (ds.length) wdDigestShow_(ds[0].id);
+      })
+      .catch(function() { /* overlay stays usable; Run intake still works */ });
+  }
+
+  function wdDigestShow_(id) {
+    var chips = $sc('wd-digest-list').querySelectorAll('.wd-dg-chip');
+    for (var i = 0; i < chips.length; i++) {
+      chips[i].classList.toggle('on', chips[i].getAttribute('data-id') === id);
+    }
+    $sc('wd-digest-view').innerHTML =
+      '<span class="wd-loading" style="display:block;padding:16px;">Loading edition…</span>';
+    _gasPost({ action: 'getDigest', token: scToken(), digestId: id })
+      .then(function(data) {
+        // The stored HTML is server-rendered from escaped content only.
+        if (data && data.success && data.html) $sc('wd-digest-view').innerHTML = data.html;
+        else $sc('wd-digest-view').innerHTML =
+          '<span class="wd-loading" style="display:block;padding:16px;">'
+          + scEsc(scErrMsg(data && data.error)) + '</span>';
+      })
+      .catch(function(err) {
+        $sc('wd-digest-view').innerHTML =
+          '<span class="wd-loading" style="display:block;padding:16px;">Could not load ('
+          + scEsc((err && err.message) || err) + ')</span>';
+      });
+  }
+
+  /** "Run intake now": loop runDigestNow steps (fetch → backstop → summarize
+      → render) until the server reports done — same chunked pattern as
+      Compile. Works while the scheduled pipeline is paused. */
+  function wdDigestRun_() {
+    if (_wdDigestRunning) return;
+    _wdDigestRunning = true;
+    var btn = $sc('wd-digest-run');
+    var status = $sc('wd-digest-status');
+    if (btn) { btn.disabled = true; btn.textContent = 'Building…'; }
+    function fail(msg) {
+      _wdDigestRunning = false;
+      if (btn) { btn.disabled = false; btn.textContent = 'Run intake now'; }
+      status.textContent = '';
+      scToast('Digest build failed (' + scEsc(msg) + '). Please try again.', true);
+    }
+    function stepLoop() {
+      _gasPost({ action: 'runDigestNow', token: scToken() })
+        .then(function(data) {
+          if (!data || !data.success) { fail(scErrMsg(data && data.error)); return; }
+          status.textContent = 'Phase: ' + data.phase + ' · kept ' + data.kept
+            + ' of ' + data.fetched + ' scanned'
+            + (data.aiNote ? ' · summaries in fallback mode' : '');
+          if (data.done) {
+            _wdDigestRunning = false;
+            if (btn) { btn.disabled = false; btn.textContent = 'Run intake now'; }
+            status.textContent = 'Edition built — ' + data.kept + ' items taken in.';
+            scNotify_('Morning Edition built (' + data.date + ').');
+            wdDigestRefresh_();
+          } else {
+            setTimeout(stepLoop, 600);
+          }
+        })
+        .catch(function(err) { fail(String((err && err.message) || err)); });
+    }
+    scNotify_('▶ started: Morning Edition build');
+    status.textContent = 'Starting the intake…';
+    stepLoop();
   }
 })();
 
