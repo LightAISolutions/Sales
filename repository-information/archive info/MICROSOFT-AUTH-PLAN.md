@@ -773,4 +773,4 @@ These systems work identically for both providers — no modifications needed:
 3. **Button layout**: When `AUTH_PROVIDER = 'both'`, should buttons stack vertically (Google on top, Microsoft below) or use a different layout? Recommend: vertical stack with a subtle "or" separator.
 4. **Microsoft token in URL**: Should we warn or block URL-parameter token exchange for Microsoft (tokens are 2-3 KB)? Recommend: warn in console, allow (most URLs handle up to 8KB).
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

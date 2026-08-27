@@ -214,4 +214,4 @@ The 2025 HIPAA Security Rule NPRM (expected final May 2026) eliminates "addressa
 - [Secure Browser Storage — Auth0](https://auth0.com/blog/secure-browser-storage-the-facts/)
 - [Harden-Runner Detects Anomalous api.ipify.org Traffic — StepSecurity](https://www.stepsecurity.io/blog/harden-runner-detects-anomalous-traffic-to-api-ipify-org-across-multiple-customers)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

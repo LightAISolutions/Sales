@@ -1259,4 +1259,4 @@ Before deploying this system for EMR use, the administrator must set `ACTIVE_PRE
 - [ ] **Review audit log** — confirm session events and data access events are being written to the correct sheets
 - [ ] **Remove test UI elements** — remove the "Save Note" test button, "Force Heartbeat" button, "Security Tests" button, and debug marker ("1") from the production deployment
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

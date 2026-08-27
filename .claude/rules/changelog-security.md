@@ -59,4 +59,4 @@ The repo CHANGELOG (`repository-information/CHANGELOG.md`) is **exempt** — it 
 
 **The general rule:** describe **what the user experiences**, not **how the system works**. A changelog reader should learn "what changed for me" without learning anything about the technical implementation, data model, or security posture of the application.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

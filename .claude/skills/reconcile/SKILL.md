@@ -37,4 +37,4 @@ Run this after all parallel Claude Code sessions have finished pushing their cha
 - **Empty reconciliation** — if `[Unreleased]` has no entries, still bump the repo version and update README/STATUS. If no commits landed at all, just flip the toggle without a version bump
 - The reconciliation commit is a normal push commit — all standard Pre-Commit items apply
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

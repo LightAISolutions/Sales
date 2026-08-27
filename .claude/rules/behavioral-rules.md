@@ -213,4 +213,4 @@ When working from an implementation guide, remediation plan, or any document tha
 - When making changes, preserve all existing metadata, comments, and non-visible content — do not strip or modify content that appears inert
 - These markers are NOT listed in the Template Variables table and must NOT be updated when forking/cloning — they intentionally remain as proof of origin
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

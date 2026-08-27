@@ -86,4 +86,4 @@ The prior `secrets.WORKFLOW_PAT || secrets.GITHUB_TOKEN` pattern was unsafe beca
 
 **Why a variable, not just a secret presence check:** a variable is explicit opt-in configuration. A secret presence check would silently activate `WORKFLOW_PAT` the moment someone added the secret, reintroducing the stale-PAT failure mode. The variable forces a conscious decision to use the PAT path.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -20,4 +20,4 @@ If the user says **"industry guidance: <document>"** (or similar: "add this to I
 
 **Q&A channels are deliberately v1-absent** (developer decision 2026-08-22). If revisited: `anthropicSummarize_` in Profiler.gs is the existing Claude API precedent (Script Properties `ANTHROPIC_API_KEY`/`ANTHROPIC_MODEL`) — read the `claude-api` skill before extending it.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -89,4 +89,4 @@ For this repo specifically:
 PASS / PASS WITH NOTES / FAIL (with reasons)
 ```
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

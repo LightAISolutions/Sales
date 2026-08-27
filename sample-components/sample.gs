@@ -147,4 +147,4 @@ function pullAndDeployFromGitHub() {
 // ══════════════
 // TEMPLATE END
 // ══════════════
-// Developed by: ShadowAISolutions
+// Developed by: LightAISolutions

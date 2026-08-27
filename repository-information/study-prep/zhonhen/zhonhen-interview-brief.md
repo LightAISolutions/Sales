@@ -196,4 +196,4 @@ Ranked — the first three do interview work (they demonstrate judgment while ex
 9. What are the ESOP-3 revenue hurdles, and what do they tell you about management's ambition?
 10. What are your first two questions for Jacky Zhu, and what does each extract?
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

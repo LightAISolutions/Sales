@@ -173,4 +173,4 @@ The dossier compressed into axiom-led scannable form: one-line lede, bolded stan
 >
 > **The bottom line:** Strong architecture bet, unproven revenue.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

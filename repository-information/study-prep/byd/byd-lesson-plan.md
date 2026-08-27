@@ -113,4 +113,4 @@ CELL ──► MODULE ──► RACK (+BMS) ──► CONTAINER (+cooling, +fire
 
 **Self-test (concepts, not trivia):** explain to an imaginary colleague — (1) why grid storage chose LFP over NMC even though NMC is denser, (2) the full chain from cell to grid and what a grid-forming PCS adds, (3) how blade-cell geometry deletes the module layer and why a 14.5 MWh block beats three 5 MWh containers economically, (4) why megawatt EV charging needs 1,000 V *and* a battery inside the station, (5) how cycle-life warranties make a battery plant bankable. If you can do those five out loud, you understand this catalog. The in-app flashcards drill the same list.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

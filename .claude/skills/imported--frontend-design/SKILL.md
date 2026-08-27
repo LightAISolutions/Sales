@@ -44,4 +44,4 @@ Never use generic AI-generated aesthetics:
 
 When building new pages in `live-site-pages/`, use the appropriate HTML template from `live-site-pages/templates/` (`HtmlAndGasTemplateAutoUpdate-noauth.html.txt` or `HtmlAndGasTemplateAutoUpdate-auth.html.txt`) as a starting point, then apply these design principles to create a distinctive page that still includes the required version polling, splash overlay, and auto-refresh infrastructure.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -90,4 +90,4 @@ Take the Module 1 org chart and stamp FlexGen's catalog onto it — every produc
 **Self-test (concepts, not trivia):** explain to an imaginary colleague — (1) what the EMS, BMS, and PCS each do and why a battery earns nothing without the software layer; (2) how a battery site makes money and why the warranty makes the EMS a compliance officer; (3) what an EMS retrofit is and why integrator bankruptcies create demand for it; (4) why a grid-forming battery can replace a data center's UPS and beat the interconnection queue; (5) why "GWh under software and services" and "GWh of blocks shipped" are different scoreboards, and why the margin logic favors the first. If you can do those five out loud, you understand this company's catalog. The in-app flashcards drill the same list.
 
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

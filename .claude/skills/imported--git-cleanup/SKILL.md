@@ -82,4 +82,4 @@ git ls-remote --heads origin 'claude/*'
 - **Dry-run first** — always show what will be deleted before doing it
 - **No remote pushes** — this skill only cleans local state. Remote branch deletion requires separate approval
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

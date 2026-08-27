@@ -1544,4 +1544,4 @@ The audit log shows an `hmac_mismatch` event.
 
 ---
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

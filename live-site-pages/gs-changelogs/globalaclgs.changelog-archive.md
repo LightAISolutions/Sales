@@ -4,4 +4,4 @@ Older version sections rotated from [globalaclgs.changelog.md](globalaclgs.chang
 
 *(No archived sections yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

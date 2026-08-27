@@ -489,4 +489,4 @@ These implementations go beyond HIPAA minimum requirements and demonstrate defen
 
 ---
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

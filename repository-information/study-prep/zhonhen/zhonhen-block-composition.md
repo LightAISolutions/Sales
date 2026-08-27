@@ -81,4 +81,4 @@ Two supporting lines, if probed:
 - On paralleling: *"NVIDIA's own TRU section canonizes aggregated parallel rectifier modules — composition isn't a compromise, it's one of their three named implementation families. The proof burden is current sharing and protection coordination, and that's an engineering package, not a product gap."*
 - On the honest gap: *"The one thing I'd put on the roadmap slide is the future 8-megawatt cluster — two 4-megawatt containers cover it if the 4 MW rating ships at 800 volts. That's the question I'd want answered before a hyperscaler asks it."*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

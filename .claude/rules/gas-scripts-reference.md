@@ -235,4 +235,4 @@ GAS UI elements (iframe panels, toggle buttons, status indicators, overlays) are
 
 *See `.claude/rules/html-pages-reference.md` — section "Visual Verification After UI Changes" — for the full rule and procedure. The rule already covers `.gs` file triggers and explains how to find the embedding page for a GAS change. On-demand command: see CLAUDE.md — "Visual Test Command".*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

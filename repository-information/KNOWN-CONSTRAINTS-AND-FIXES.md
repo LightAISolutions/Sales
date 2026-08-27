@@ -336,4 +336,4 @@ User clicks link → app-page.html reads master token from localStorage
 - `testauthgas1.html` — `_sendDataPoll()`, `sendHeartbeat()`, CSP `connect-src`
 - `testauthgas1.gs` — `doPost()` function (getData and heartbeat actions)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

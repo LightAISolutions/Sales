@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptsgs.changelog-archive.md](Receiptsgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 27/50`
+`Sections: 28/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.28g] — 2026-08-27 04:09:00 PM EST — v03.03r
+
+### Changed
+- Minor internal improvements
 
 ## [v01.27g] — 2026-08-17 03:36:35 AM EST — v02.62r
 
@@ -186,4 +191,4 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - Uploaded receipt photos are now saved securely to a Google Drive folder
 - Every upload is recorded in the receipts spreadsheet, ready for future browsing and analysis
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

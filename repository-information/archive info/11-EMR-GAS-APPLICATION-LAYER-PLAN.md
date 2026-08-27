@@ -809,4 +809,4 @@ These items are outside the scope of the GAS application layer and belong to org
 | **Incident response plan** | Organization compliance | Documented procedures for breach notification (§ 164.408) |
 | **Risk assessment** | Organization compliance | Annual HIPAA risk assessment required (§ 164.308(a)(1)) |
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

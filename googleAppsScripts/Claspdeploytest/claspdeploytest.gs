@@ -1,4 +1,4 @@
-var VERSION = "v01.00g";
+var VERSION = "v01.01g";
 var TITLE = "Clasp Deploy Test";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -22,4 +22,4 @@ function doGet() {
   );
 }
 
-// Developed by: ShadowAISolutions
+// Developed by: LightAISolutions

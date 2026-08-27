@@ -357,4 +357,4 @@ This way, anyone with Sheet access sees hashes instead of raw passwords. The res
 > - ~~**HTML wrapper**: `live-site-pages/dchrcalendar.html`~~ (removed)
 > - ~~**GAS script**: `googleAppsScripts/dchrcalendar.gs`~~ (removed)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

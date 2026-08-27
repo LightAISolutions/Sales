@@ -4,4 +4,4 @@ Older sections rotated out of [Profilergs.changelog.md](Profilergs.changelog.md)
 
 *(No archived sections yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

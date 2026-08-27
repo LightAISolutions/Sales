@@ -4251,4 +4251,4 @@
   <!-- PROJECT END: sign-in / sign-out dog sprite animations -->
 </body>
 </html>
-<!-- Developed by: ShadowAISolutions -->
+<!-- Developed by: LightAISolutions -->

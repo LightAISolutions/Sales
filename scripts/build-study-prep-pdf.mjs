@@ -664,7 +664,7 @@ ${lead}
 </div>
 ${tocBlock}
 ${rest}
-<p class="foot">${doc.runFoot} &nbsp;·&nbsp; Rendered from ${basename(doc.src)}, which remains the source of truth &nbsp;·&nbsp; Developed by: ShadowAISolutions</p>
+<p class="foot">${doc.runFoot} &nbsp;·&nbsp; Rendered from ${basename(doc.src)}, which remains the source of truth &nbsp;·&nbsp; Developed by: LightAISolutions</p>
 </body>
 </html>`;
 }
@@ -762,4 +762,4 @@ try {
 } finally {
   chrome.kill('SIGKILL');
 }
-// Developed by: ShadowAISolutions
+// Developed by: LightAISolutions

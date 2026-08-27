@@ -130,4 +130,4 @@ Three ideas carry the whole lesson:
 
 **Self-test (concepts, not trivia):** explain to an imaginary colleague — (1) why a battery's cost scales with MWh but an engine plant's duration is nearly free, and what that means for who wins at 2 hours vs 2 weeks; (2) what thermal runaway is and how a containerized BESS layers prevention, containment and responder assistance against it; (3) what an EMS does from cell to fleet, and why state-of-health analytics make performance *guarantees* commercially possible; (4) why a modular reciprocating-engine plant beats a single large gas turbine for renewables-balancing duty; (5) what "hydrogen-ready" means technically and why fuel flexibility protects a flexible power plant from stranding. If you can do those five out loud, you understand this portfolio. The in-app flashcards drill the same list.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

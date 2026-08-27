@@ -286,4 +286,4 @@ When **both** of these are true, do NOT deploy the change as-is:
 ### Full command reference
 *For on-demand visual testing (user-triggered), see CLAUDE.md — "Visual Test Command"*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

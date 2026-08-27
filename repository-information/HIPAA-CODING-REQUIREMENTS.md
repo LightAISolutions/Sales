@@ -950,4 +950,4 @@ Quick-reference mapping of CFR section numbers to this document's sections:
 
 > **Disclaimer:** This document is a reference compilation of HIPAA requirements for software development purposes. It is not legal advice. For definitive compliance guidance, consult the [official CFR text](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164), [HHS guidance](https://www.hhs.gov/hipaa/for-professionals/security/index.html), and qualified legal counsel. HIPAA requirements are interpreted in the context of each entity's specific risk analysis — this document provides the regulatory baseline, not entity-specific compliance determinations.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

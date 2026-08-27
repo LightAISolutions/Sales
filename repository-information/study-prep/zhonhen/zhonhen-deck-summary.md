@@ -84,4 +84,4 @@ Common platform specs across all containers: **IP55** ingress protection · **C5
 
 **One inconsistency to avoid repeating:** slide 6 says "108kW power shelf," slide 15 says 100kW (6× 18kW hardware = 108kW nameplate, 100kW rated). Say "the 100-kilowatt shelf" and you're safe either way.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -145,4 +145,4 @@ Explain to an imaginary colleague — out loud:
 If you can do those five out loud, you understand this company's catalog. The in-app flashcards drill the same list.
 
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

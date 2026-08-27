@@ -777,4 +777,4 @@ The implementation is architecturally sound with defense-in-depth (HMAC integrit
 
 ---
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

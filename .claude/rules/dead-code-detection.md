@@ -27,4 +27,4 @@ When the user asks to identify dead code or clean up unused code paths, apply th
 
 **Exempt from the resource-abuse check:** static-file fetches (CDN version polling, changelogs, sounds — no app quota) and same-origin-only channels (BroadcastChannel is XSS-prerequisite and local-only).
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

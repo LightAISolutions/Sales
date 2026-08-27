@@ -574,4 +574,4 @@ classDiagram
     AutoMergeWorkflow ..> GASScript : triggers update
 ```
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

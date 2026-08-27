@@ -155,4 +155,4 @@ Confirm the project number in the error matches the GCP project your script is a
 
 **Client-side image rendering:** images are NOT hot-linked from `drive.google.com/thumbnail` (Google blocks that endpoint from third-party origins → broken images). Instead the page fetches image bytes through the authenticated `getImageThumbnail` GAS RPC and renders them as `data:` URIs. No public/anyone-with-link sharing is relied on for display, so this keeps working on private Drive files.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -10,4 +10,4 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 *(No archived sections yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

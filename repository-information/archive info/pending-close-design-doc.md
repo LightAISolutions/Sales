@@ -147,4 +147,4 @@ The pending close shortens the **cache TTL** (how long CacheService keeps the en
 6. Sign in on two tabs → close one → other tab should remain authenticated
 7. On sign-in page → close tab → nothing should fire (`_authState` guard blocks it)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

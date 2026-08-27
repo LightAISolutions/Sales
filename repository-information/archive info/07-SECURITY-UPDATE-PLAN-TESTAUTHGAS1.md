@@ -982,4 +982,4 @@ After all phases are implemented and pushed:
 - [ ] Console clean: no `[AUTH DEBUG]` or `[GAS DEBUG]` messages in browser console
 - [ ] Spoofed message: `postMessage({type:'gas-auth-ok'}, '*')` from console → ignored
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

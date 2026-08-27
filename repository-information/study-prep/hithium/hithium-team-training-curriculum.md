@@ -79,6 +79,6 @@ The gates are pass/fail, not scored. G3 is the hard floor: a teammate who cannot
 - **Keep the curriculum pointed at living assets.** This document names modules and playbooks, not page numbers — the assets version independently (`updated` fields in-app; the playbooks via the repo). When an asset materially changes, the change lands here as an adjusted gate or reading item, not as duplicated content.
 - **Time-sensitive content decays on a schedule.** The tariff stack, the MACR floor, and the policy calendar all move on dated gates — any gate exercise using a number must use the number *as of the exercise date*, and catching a stale number in the trainer's own materials is a legitimate way for a trainee to pass part of G3.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -93,4 +93,4 @@ Megmeet's other five segments are the *same physics* pointed at different indust
 
 **Self-test (concepts, not trivia):** explain to an imaginary colleague — (1) why 800 V DC beats 415 V AC for a 1 MW rack, (2) what an SST replaces and why that lifts PUE, (3) why supercaps AND batteries both live in the rack, (4) what a VFD does in a factory and an air conditioner, (5) why an architecture transition lets a challenger attack a 41%-share incumbent. If you can do those five out loud, you understand this company's catalog. The in-app flashcards drill the same list.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

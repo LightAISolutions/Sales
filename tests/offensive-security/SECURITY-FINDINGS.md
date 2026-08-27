@@ -478,4 +478,4 @@ The testauthgas1 system uses multiple overlapping defense layers:
 2. Google OAuth verification (delegated to Google's infrastructure)
 3. First-write-wins + signature verification (double gate on all message processing)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

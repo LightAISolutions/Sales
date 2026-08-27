@@ -139,4 +139,4 @@ Running Playwright tests is like hiring a locksmith to test your home security b
 | Can a real attacker use Playwright on our site? | No — they'd need physical access to the user's browser or XSS to achieve equivalent access |
 | Why run these tests then? | To verify that defense-in-depth holds even in the worst case — that server-side validation catches everything the client-side misses |
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

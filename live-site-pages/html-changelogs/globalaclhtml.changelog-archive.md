@@ -4,4 +4,4 @@ Older version sections rotated from [globalaclhtml.changelog.md](globalaclhtml.c
 
 *(No archived sections yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -34,4 +34,4 @@ The power-infrastructure training module for new Hithium US sales teammates, tau
 
 800 VDC architecture depth (the NVIDIA module owns it); policy/tariff mechanics (China-policy module); certification detail (bankability module); battery device physics (the BESS-technology module).
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

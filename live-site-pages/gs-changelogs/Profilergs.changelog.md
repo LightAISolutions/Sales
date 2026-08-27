@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 21/50`
+`Sections: 22/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.22g] — 2026-08-27 04:09:00 PM EST — v03.03r
+
+### Changed
+- Minor internal improvements
 
 ## [v01.21g] — 2026-08-24 06:16:16 PM EST — v03.00r
 
@@ -141,4 +146,4 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 ### Added
 - The field-note service is connected — sign in once with Google, then save notes and upload Word/PDF meeting files straight from any dossier
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

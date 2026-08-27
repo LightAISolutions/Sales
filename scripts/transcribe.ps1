@@ -64,4 +64,4 @@ if ($failed -gt 0) {
 }
 Write-Host "`nDone. Transcripts are beside their audio — attach them with Profiler's 'File transcript' button." -ForegroundColor Green
 
-# Developed by: ShadowAISolutions
+# Developed by: LightAISolutions

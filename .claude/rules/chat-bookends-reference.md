@@ -449,4 +449,4 @@ SHA: [abc1234](https://github.com/ORG/REPO/commit/abc1234...) — Add feature X
 
 Note: `ESTIMATED TIME` appears standalone at the top of the response (no `CODING START` to attach to — that's under `START_OF_RESPONSE_BLOCK`, which is Off here). `ACTUAL TOTAL COMPLETION TIME` appears at the bottom, with the parenthetical `(estimated 2m)` referencing the top line the user saw. This is the "minimal-with-timing" mode — the top estimate and bottom total travel together under `TIMING_ESTIMATES`, so the parenthetical always has a visible sibling at the top.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

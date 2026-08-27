@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 36/50`
+`Sections: 37/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.37g] — 2026-08-27 04:09:00 PM EST — v03.03r
+
+### Changed
+- Minor internal improvements
 
 ## [v01.36g] — 2026-08-27 02:20:49 AM EST — v03.02r
 
@@ -239,4 +244,4 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 ### Fixed
 - Sign-in no longer times out with a "service isn't responding" message
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

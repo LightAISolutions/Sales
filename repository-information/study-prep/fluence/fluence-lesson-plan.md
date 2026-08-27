@@ -130,4 +130,4 @@ Ultrastack      (transmission-grade)     Nispera     (fleet health monitor)
 
 **Self-test (concepts, not trivia):** explain to an imaginary colleague — (1) the difference between a DC block and an AC block, and who carries the integration burden in each; (2) what the Smart Skid + swappable pod split accomplishes that a sealed container can't (upgrades, multi-vendor cells, serviceability); (3) how guaranteeing an 8% state-of-charge buffer instead of ~15% creates revenue from identical hardware; (4) why a battery can substitute for a transmission line, and what synthetic inertia replaces; (5) why record orders and a guidance cut can be true at the same time. If you can do those five out loud, you understand this company's catalog. The in-app flashcards drill the same list.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

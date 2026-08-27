@@ -78,4 +78,4 @@ with sync_playwright() as p:
 - Add appropriate waits: `page.wait_for_selector()` or `page.wait_for_timeout()`
 - Install Playwright if needed: `pip install playwright && python -m playwright install chromium`
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

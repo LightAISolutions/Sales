@@ -79,7 +79,7 @@ When creating skills for this repo:
 - Place in `.claude/skills/` for project scope
 - Use `imported--` prefix for skills adapted from external sources
 - Use plain names for repo-specific custom skills
-- Add `Developed by: ShadowAISolutions` as the last line (Pre-Commit #10)
+- Add `Developed by: LightAISolutions` as the last line (Pre-Commit #10)
 - Update REPO-ARCHITECTURE.md and README.md tree when adding new skill directories
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

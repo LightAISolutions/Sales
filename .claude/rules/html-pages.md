@@ -143,4 +143,4 @@ When `showAuthWall()` is called (whether from sign-out, session expiry, or any o
 
 *Rule: see `.claude/rules/gas-scripts.md` — section "GAS UI Layout Awareness". GAS elements are guests in the host HTML page and must defer to its layout.*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

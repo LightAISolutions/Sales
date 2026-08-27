@@ -68,4 +68,4 @@ Neoclouds convert capital into GPU-hours, and that ranks everything: **① time-
 
 The answer determines the entire shape of the US go-to-market — and asking it separates someone who read the deck from someone who understands the business.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

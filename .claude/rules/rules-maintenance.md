@@ -154,4 +154,4 @@ After all subagents complete, compile the results into a single report:
 - If the user approves fixes, implement them in a single commit following normal Pre-Commit/Pre-Push rules
 - The audit itself is a **research-only response** — it ends with `🔬🔬RESEARCH COMPLETE🔬🔬`, not `✅✅CODING COMPLETE✅✅`. Only the follow-up fix response (if any) ends with `✅✅CODING COMPLETE✅✅`
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

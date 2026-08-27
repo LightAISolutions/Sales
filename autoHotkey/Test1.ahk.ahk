@@ -11,7 +11,7 @@
 ; the ReloadHandler message.
 ; ═══════════════════════════════════════════════════════════════════════════
 
-VERSION := "v01.00a"
+VERSION := "v01.01a"
 
 #Include ReloadHandler.ahk
 
@@ -20,4 +20,4 @@ Persistent()
 
 A_IconTip := "Test1 " VERSION " — pipeline-test placeholder"
 
-; Developed by: ShadowAISolutions
+; Developed by: LightAISolutions

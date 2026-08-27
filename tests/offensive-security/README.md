@@ -63,4 +63,4 @@ See **[SECURITY-FINDINGS.md](SECURITY-FINDINGS.md)** for:
 - **Incident response procedure** for DDoS / resource exhaustion attacks
 - Defense-in-depth summary showing all protection layers
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

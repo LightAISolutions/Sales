@@ -56,4 +56,4 @@ The gate logic above describes what happens when toggles are flipped. On the vas
 
 By moving the prologues to a path-scoped file that only injects when `CLAUDE.md` is being edited (the only way to change the toggles), everyday commit responses get the short "Active Gate State" summary instead. The per-item caveats in the checklist (e.g. "Skip on template repo when `TEMPLATE_DEPLOY` = `Off`") remain as the enforceable contract — they're short tags at the end of each affected item and preserve the precise skip behavior. This file is the full decision-tree, consulted only when the toggle state might change.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

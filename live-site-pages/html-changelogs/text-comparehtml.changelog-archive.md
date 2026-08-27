@@ -4,4 +4,4 @@ Archived changelog sections rotated from [text-comparehtml.changelog.md](text-co
 
 *(No archived sections yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

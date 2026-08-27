@@ -143,4 +143,4 @@ The `doPost(action=deploy)` handler is the critical link in the auto-update pipe
 
 *Full architecture context (the auto-update pipeline, Dynamic Loader pattern, Auto-Deploy Flow step-by-step, Version Limit Management): see `.claude/rules/gas-scripts-reference.md` — section "GAS Architecture Overview".*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

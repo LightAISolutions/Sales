@@ -1,4 +1,4 @@
-var VERSION = "v01.12g";
+var VERSION = "v01.13g";
 var TITLE = "MasterACL";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -12,7 +12,7 @@ var EMBED_PAGE_URL = "https://lightaisolutions.github.io/Sales/MasterACL.html";
 // to restrict who can receive the messages. This is safer than "*" because it ensures
 // only the intended embedding page can intercept session tokens and auth state.
 // CRITICAL: .toLowerCase() is MANDATORY — browsers normalize origins to lowercase,
-// but EMBED_PAGE_URL may contain mixed-case (e.g. "ShadowAISolutions"). Without
+// but EMBED_PAGE_URL may contain mixed-case (e.g. "LightAISolutions"). Without
 // toLowerCase(), the browser silently drops ALL postMessages because the targetOrigin
 // doesn't match the actual lowercase origin. This exact bug (missing toLowerCase)
 // broke sign-in in v02.79r and was never fixed live (the v02.80r fix never deployed
@@ -7678,4 +7678,4 @@ function getRetentionRelevantDate(headers, row) {
 // ══════════════
 // AUTH END
 // ══════════════
-// Developed by: ShadowAISolutions
+// Developed by: LightAISolutions

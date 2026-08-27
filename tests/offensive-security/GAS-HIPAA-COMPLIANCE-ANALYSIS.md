@@ -211,4 +211,4 @@ Google Sheets is also BAA-covered, but if you put PHI in a Sheet and shared it p
 *Analysis conducted: 2026-03-17*
 *Last verified against Google's HIPAA Included Functionality page: September 30, 2025 revision*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

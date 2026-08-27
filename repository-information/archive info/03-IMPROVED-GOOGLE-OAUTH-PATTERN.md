@@ -1133,4 +1133,4 @@ Update the inline JavaScript inside GAS's HTML output:
 - Check that the `needsReauth` flag is included in `gas-auth-ok` messages
 - Verify the wrapper's `silentReauth()` function is wired to the `gas-needs-reauth` message
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

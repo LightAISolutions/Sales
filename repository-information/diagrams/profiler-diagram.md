@@ -85,4 +85,4 @@ sequenceDiagram
 - **Two splash screens** — green "Website Ready" for HTML version changes, blue "Code Ready" for GAS version changes
 - **Audio unlock** — the note-box iframe does not cover the page, so parent clicks reach the document normally; the standard template audio unlock applies
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

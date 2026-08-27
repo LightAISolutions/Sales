@@ -135,4 +135,4 @@ Absolute — these are enforced standards, not style preferences:
 - **Quiet-buyer discretion is absolute** — no account names in any external material without written consent
 - **Keep post-COD service contracts short and non-exclusive** — recapture protection for the customer is relationship protection for us
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

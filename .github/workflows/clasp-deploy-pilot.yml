@@ -49,4 +49,4 @@ jobs:
             npx --yes @google/clasp@2 deploy --description "GitHub Actions ${GITHUB_SHA::7}"
           fi
 
-# Developed by: ShadowAISolutions
+# Developed by: LightAISolutions

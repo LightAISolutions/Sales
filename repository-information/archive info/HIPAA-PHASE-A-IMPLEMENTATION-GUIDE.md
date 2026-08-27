@@ -2430,4 +2430,4 @@ Beyond-spec routes also registered (grouped disclosures, representatives, notifi
 | 2026-03-30 | 1.3 | Claude Code | Fresh independent audit of Section 16: verified every function against source code (ignored prior status claims), added "Items NOT Implemented" section (7 items), documented DisclosureLog header mismatch in `getGroupedDisclosureAccounting()`/`getDisclosureRecipientsForRecord()`, expanded beyond-spec table to 13 entries, updated executive summary to reflect honest status |
 | 2026-03-30 | 1.4 | Claude Code | Implemented all non-code future-proof items: `requestAccessExtension()`, `requestAmendmentExtension()`, `generateDenialNotice()`, HITECH EHR dual-mode in `getDisclosureAccounting()`, `Source` column in DisclosureLog (12 cols). Fixed DisclosureLog header mismatch across all 5 consuming functions. Added route handlers and HTML UI panels (Extensions, Denial Notice, EHR Disclosures). Updated Section 16 and executive summary |
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

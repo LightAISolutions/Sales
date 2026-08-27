@@ -294,4 +294,4 @@ In January 2025, HHS published a [Notice of Proposed Rulemaking](https://www.fed
 4. **The commonly cited "15 minutes"** is an industry convention (adopted by CMS internally), not a legal mandate
 5. **Most of HIPAA is organizational, not technical** — only 7 of the 42 implementation specifications are things our code can directly enforce. The other 35 are policies, procedures, training, physical security, and contracts
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -191,4 +191,4 @@ sequenceDiagram
     GAS-->>HTML: The sharer's receipts (detail carries canEdit for the UI)
 ```
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

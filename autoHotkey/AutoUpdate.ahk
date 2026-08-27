@@ -6,7 +6,7 @@
 ; on version mismatch; writes to configured target paths. Self-updating.
 ; ═══════════════════════════════════════════════════════════════════════════
 
-VERSION := "v01.00a"
+VERSION := "v01.01a"
 
 ; === GitHub configuration ===
 GITHUB_OWNER  := "LightAISolutions"
@@ -1357,4 +1357,4 @@ UriEncode(str) {
     return encoded
 }
 
-; Developed by: ShadowAISolutions
+; Developed by: LightAISolutions

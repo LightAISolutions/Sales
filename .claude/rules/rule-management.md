@@ -65,4 +65,4 @@ When adding, moving, or reorganizing `##` sections in CLAUDE.md, follow the atte
 - **Within-section ordering** (e.g. the order of items inside Pre-Commit Checklist) is governed by the section's own logic, not by attention zones
 - **Content extraction to reference files** is governed by the "Content placement" rule in "Maintaining these checklists" — this section only governs where `##` sections appear in CLAUDE.md itself
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

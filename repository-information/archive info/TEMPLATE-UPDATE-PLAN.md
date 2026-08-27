@@ -302,4 +302,4 @@ All phases can be done in a single session.
 4. **Preserve PROJECT OVERRIDE markers** — any overrides in existing pages must be respected during propagation
 5. **Diff check** — after each phase, diff the new template against testauthgas1 to confirm only the intended changes were made
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

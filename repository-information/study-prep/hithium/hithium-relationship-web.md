@@ -141,4 +141,4 @@ flowchart LR
 5. **The gas-bridge attach (later)** — VoltaGrid/ERock/ProEnergy/Mainspring campuses all carry open storage sockets that fill post-bridge (~2029+); FEOC optics point those at non-Chinese cells unless the policy stack moves.
 6. **Non-US** — where the product ladder (587→1300Ah, 8-hour LDES, sodium) competes unfenced; the current order book (Saudi, Ukraine, APAC, EU) already lives here.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

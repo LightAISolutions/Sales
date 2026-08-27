@@ -1255,4 +1255,4 @@ Exact list of changes from `03-IMPROVED-GOOGLE-OAUTH-PATTERN.md` and the rationa
 - Check that the `needsReauth` flag is included in `gas-auth-ok` messages from the GAS inline HTML
 - Verify the wrapper's `attemptReauth()` function is wired to both the `gas-needs-reauth` message and the `gas-auth-ok` `needsReauth` flag
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -47,4 +47,4 @@ He knows the product gaps precisely, so the honest answer beats the bullish one.
 - *"The Gulf is our way into AI data centres."* Backwards, and he will know it.
 - Any precise total tariff figure. The 301 line went 7.5% → 25% in January; the rest moved when the Supreme Court struck the IEEPA tariffs in February.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

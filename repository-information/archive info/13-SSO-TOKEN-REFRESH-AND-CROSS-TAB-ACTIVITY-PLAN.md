@@ -319,4 +319,4 @@ Both features are toggle-gated and best-effort, so reverting is low-risk:
 4. **Pre-build gate:** confirm live sign-in works on all three auth pages first (the stack has been dormant ~2 months, and `globalacl.gs` carries a comment about a past sign-out fix that "never deployed").
 
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

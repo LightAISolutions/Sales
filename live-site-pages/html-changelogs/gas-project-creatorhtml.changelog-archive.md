@@ -4,4 +4,4 @@ Older version sections rotated from [gas-project-creatorhtml.changelog.md](gas-p
 
 *(No archived sections yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

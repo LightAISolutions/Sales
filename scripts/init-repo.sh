@@ -131,7 +131,7 @@ for f in "${REPLACE_FILES[@]}"; do
 done
 
 # If DEVELOPER_NAME differs from ORG_NAME, fix "Developed by:" lines
-# (Phase 1 replaced "ShadowAISolutions" -> ORG_NAME in footers;
+# (Phase 1 replaced "LightAISolutions" -> ORG_NAME in footers;
 #  now correct them to DEVELOPER_NAME)
 if [ "$DEVELOPER_NAME" != "$ORG_NAME" ]; then
   echo "[Phase 1b] Correcting 'Developed by:' lines to use DEVELOPER_NAME..."
@@ -176,7 +176,7 @@ if [ -f "$CLAUDE_FILE" ]; then
   sed -i "s/| \`YOUR_ORG_NAME\` | YourOrgName/| \`YOUR_ORG_NAME\` | ${ORG_NAME}/" "$CLAUDE_FILE"
   # YOUR_REPO_NAME: YourRepoName -> new repo
   sed -i "s/| \`YOUR_REPO_NAME\` | YourRepoName/| \`YOUR_REPO_NAME\` | ${REPO_NAME}/" "$CLAUDE_FILE"
-  # DEVELOPER_NAME: ShadowAISolutions -> developer name
+  # DEVELOPER_NAME: LightAISolutions -> developer name
   sed -i "s/| \`DEVELOPER_NAME\` | ${OLD_ORG}/| \`DEVELOPER_NAME\` | ${DEVELOPER_NAME}/" "$CLAUDE_FILE"
   # TEMPLATE_DEPLOY: On -> Off (template-only toggle, forks should start with Off)
   sed -i "s/| \`TEMPLATE_DEPLOY\` | On/| \`TEMPLATE_DEPLOY\` | Off/" "$CLAUDE_FILE"
@@ -387,5 +387,5 @@ echo ""
 echo "  Next step: commit and push to deploy."
 echo "══════════════"
 
-# Developed by: ShadowAISolutions
+# Developed by: LightAISolutions
 

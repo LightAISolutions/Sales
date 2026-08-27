@@ -141,4 +141,4 @@ Since we can't eliminate the iframe from the auth flow due to CORS, the next bes
 3. **Is the GAS app code exposure the concern?** The "hidden auth iframe" approach addresses this but adds complexity.
 4. **Priority:** Is this security hardening urgent, or can it be deferred to a future session?
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

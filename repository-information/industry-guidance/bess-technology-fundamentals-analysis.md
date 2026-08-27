@@ -32,4 +32,4 @@ The core-technical training module for new Hithium US sales teammates, taught fr
 
 PCS/inverter internals (the power-infrastructure module owns the electrical chain); policy and tariff content (the China-policy module); bankability mechanics beyond vocabulary (the bankability module); competitor spec tables (the Profiler dossiers own those).
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

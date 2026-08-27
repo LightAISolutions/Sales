@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [globalaclgs.changelog-archive.md](globalaclgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.07g] — 2026-08-27 04:09:00 PM EST — v03.03r
+
+### Changed
+- Minor internal improvements
 
 ## [v01.06g] — 2026-08-17 03:36:35 AM EST — v02.62r
 
@@ -46,4 +51,4 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 ### Fixed
 - Sign-in now works reliably in any browser, including when multiple Google accounts are signed in
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

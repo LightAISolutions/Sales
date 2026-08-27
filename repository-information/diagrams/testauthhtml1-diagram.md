@@ -82,4 +82,4 @@ sequenceDiagram
 - **Two splash screens** — green "Website Ready" for HTML version changes, blue "Code Ready" for GAS version changes
 - **Audio unlock via UAv2** — since the GAS iframe covers the entire page, click events don't reach the parent document. The UAv2 poll detects `navigator.userActivation.hasBeenActive` (propagated from cross-origin iframe clicks) and unlocks AudioContext without needing a direct click on the parent
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

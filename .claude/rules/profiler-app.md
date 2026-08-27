@@ -153,4 +153,4 @@ Built so a future Claude session can reconstruct full context cheaply:
 - **Revisions are diffable** — `profileVersion` + `lastUpdated` + git history + repo CHANGELOG entries give a full revision trail per company
 - **Reports** — when generating a report that cites covered companies, read the relevant profiles and cite their `sources` rather than re-researching from scratch; refresh a profile first if it is stale for the report's purpose
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

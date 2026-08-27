@@ -48,4 +48,4 @@ The refresh token in `CLASPRC_JSON` can expire or rotate; if deploys start faili
 
 This pilot intentionally skips the live-site machinery (no embedding page, no `gs-versions/`/`gs-changelogs/` entry, not in the GAS Projects table) because nothing polls it — it is a standalone CI-deploy experiment, not a hosted page. `appsscript.json` carries no `Developed by:` line because JSON has no comment syntax.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

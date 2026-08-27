@@ -19,7 +19,7 @@ Before running, the user should have:
 
 1. **Session Start Checklist runs first** — the drift checks detect this is an uninitialized fork and run `scripts/init-repo.sh`, which handles:
    - Deleting inherited `claude/*` branches
-   - Replacing `ShadowAISolutions` → new org name across 23+ files
+   - Replacing `LightAISolutions` → new org name across 23+ files
    - Replacing `lightaisolutions` → new repo name
    - Updating CLAUDE.md Template Variables
 
@@ -38,4 +38,4 @@ Before running, the user should have:
 - All pages in `live-site-pages/` are treated as **affected** (marked with `✏️`) because deployment makes them live for the first time
 - The push triggers the auto-merge workflow, which merges into `main` and deploys to GitHub Pages
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

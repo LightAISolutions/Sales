@@ -59,4 +59,4 @@ Create a new HTML embedding page with all the required files and boilerplate.
 - GAS changelog archives: `live-site-pages/gs-changelogs/<page-name>gs.changelog-archive.md`
 - No two files in the repo may share the same basename (Pre-Commit #18)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

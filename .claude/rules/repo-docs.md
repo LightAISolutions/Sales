@@ -151,4 +151,4 @@ Each live-site page entry in the README tree groups its action icons together af
 
 When `setup-gas-project.sh` creates a new project, it should add the icon cluster with 📋 if the spreadsheet ID is not a placeholder, or `✕` if it is. Use `◇` for the folder position until a folder ID is provided.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

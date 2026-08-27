@@ -442,7 +442,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 *(No changes yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions
 CLEOF
 ok "Created $HTML_CL"
 
@@ -460,7 +460,7 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 *(No archived sections yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions
 CLEOF
 ok "Created $HTML_CL_ARCHIVE"
 
@@ -477,7 +477,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 *(No changes yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions
 CLEOF
 ok "Created $GAS_CL"
 
@@ -495,7 +495,7 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 *(No archived sections yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions
 CLEOF
 ok "Created $GAS_CL_ARCHIVE"
 
@@ -601,7 +601,7 @@ ${AUTH_SECTION}
 - **Two splash screens** — green "Website Ready" for HTML version changes, blue "Code Ready" for GAS version changes
 - **Audio unlock via UAv2** — since the GAS iframe covers the entire page, click events don't reach the parent document. The UAv2 poll detects \`navigator.userActivation.hasBeenActive\` (propagated from cross-origin iframe clicks) and unlocks AudioContext without needing a direct click on the parent
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions
 DIAGEOF
     ok "Created $DIAGRAM_FILE"
 
@@ -1024,4 +1024,4 @@ echo "Claude just needs to: commit and push (Pre-Commit checklist applies)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
 exit "$ERRORS"
-# Developed by: ShadowAISolutions
+# Developed by: LightAISolutions

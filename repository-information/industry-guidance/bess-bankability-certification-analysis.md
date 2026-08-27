@@ -79,4 +79,4 @@ A teaching document for Hithium's US sales team on the three approval gauntlets 
 
 State-by-state fire-code adoption timing; specific insurer terms; the IEC/international certification track beyond passing mentions; augmentation contract structures in detail; cybersecurity standards specifics beyond the FCC action and NERC CIP direction.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

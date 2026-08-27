@@ -10,4 +10,4 @@ Notes and reminders the developer wants surfaced at the start of the next sessio
 
 *(none)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

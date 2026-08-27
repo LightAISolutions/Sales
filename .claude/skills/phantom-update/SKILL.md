@@ -26,4 +26,4 @@ Touch every file in the repo with a no-op change so all files share the same com
 - Line ending safety has been verified for all file types in this repo (see `.claude/rules/init-scripts.md` — "Line Ending Safety")
 - The `.gitattributes` file enforces `* text=auto eol=lf` repo-wide
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

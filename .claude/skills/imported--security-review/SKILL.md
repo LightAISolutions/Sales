@@ -69,4 +69,4 @@ Severity levels: `CRITICAL`, `HIGH`, `MEDIUM`, `LOW`, `INFO`
 3. Report findings grouped by severity
 4. Provide a summary with total findings count per severity
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -66,4 +66,4 @@ ERCOT merchant (~16.3 GW fleet Jul 2026; queue entries −50% H2 2025; growth de
 
 MISO/SPP market design changes beyond the named RFPs; co-op and muni procurement outside CPS/STEC; the hyperscalers' own PPA storage procurement (covered by their dossiers); non-US utility responses.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

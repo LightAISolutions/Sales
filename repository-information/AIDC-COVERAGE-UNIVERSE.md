@@ -749,4 +749,4 @@ Three conclusions follow from sorting this tier by layer rather than by flag.
 
 *This chapter is analysis for understanding commercial position; it is not a recommendation to buy or sell any security.*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -301,4 +301,4 @@ DATA_POLL_INTERVAL: 15000,    // 15s — continuous lightweight data poll
 | `googleAppsScripts/Testauthgas1/testauthgas1.gs` | `processHeartbeat()` (line ~2422), `processDataPoll()` (line ~2501), `getCachedData()` (line ~575), `doGet()` getData handler (line ~2686) |
 | `live-site-pages/testauthgas1.html` | `sendHeartbeat()` (line ~3129), `_sendDataPoll()` (line ~3096), `_startDataPoll()` (line ~3079), `_stopDataPoll()` (line ~3085), `live-data` handler (line ~4006), timer display logic (line ~2984) |
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

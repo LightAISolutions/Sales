@@ -504,4 +504,4 @@ function showAuthWall(d) {
 > - ~~**HTML wrapper**: `live-site-pages/testaed.html`~~ (removed)
 > - ~~**GAS script**: `googleAppsScripts/testaed.gs`~~ (removed)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

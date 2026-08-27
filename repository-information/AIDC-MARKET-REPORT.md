@@ -1924,4 +1924,4 @@ Company figures are as published through approximately 10 August 2026; policy is
 
 > **Standing disclaimer.** This document is analysis prepared for internal education. It explains commercial position and strategy for companies under coverage. **It is not investment advice, and nothing in it — including the "what this means for your capital" passages — is a recommendation to buy or sell any security.**
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

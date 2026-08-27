@@ -179,4 +179,4 @@ AI training's synchronized swings are to be tamed **at the compute rack**: "loca
 - **No efficiency comparison between TRU and SST** — only qualitative attributes.
 - **No retirement of AC** — coexistence "for the foreseeable future" (p35).
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

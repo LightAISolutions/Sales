@@ -150,4 +150,4 @@ When a new section is needed ("potentially more later"):
 3. Extend the renderer in `Profiler.html` (PROJECT block) to draw the new section when present — page version bump per [PC-HTML-VERSION] #2
 4. Backfill existing profiles opportunistically on their next revision — no mass migration required
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

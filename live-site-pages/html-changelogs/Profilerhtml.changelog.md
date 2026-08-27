@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.43w] — 2026-08-27 04:09:00 PM EST — v03.03r
+
+### Changed
+- Minor internal improvements
 
 ## [v01.42w] — 2026-08-24 12:15:30 AM EST — v02.93r
 
@@ -306,4 +311,4 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - Document-style preview screen so you can check for mistakes before exporting
 - Export to Word (downloads a .doc file) or PDF (opens the print dialog — choose "Save as PDF")
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

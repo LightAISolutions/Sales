@@ -955,4 +955,4 @@ After each phase, run this full regression test:
 - [MDN: Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP)
 - [MDN: Window.postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

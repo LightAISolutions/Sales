@@ -199,4 +199,4 @@ Fine-grained PATs are bound to the minting user's ongoing access to the resource
 
 Mitigation: mint the PAT under a dedicated **machine/service GitHub account** (e.g. `pfc-automation-bot`) that's a standalone member of LightAISolutions. Then no human's lifecycle affects the token. Credentials for the bot account live in a team password manager. Worth doing once the GAS automation becomes load-bearing.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

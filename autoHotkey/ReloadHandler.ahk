@@ -17,4 +17,4 @@ _OnReloadMessage(wParam, lParam, msg, hwnd) {
     return 0
 }
 
-; Developed by: ShadowAISolutions
+; Developed by: LightAISolutions

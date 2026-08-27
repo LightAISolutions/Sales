@@ -80,4 +80,4 @@ flowchart TB
 - **GAS Panel** — a collapsible bottom drawer that loads the GAS deployment in an iframe for testing the connection without leaving the page. Resizable via drag handle
 - **Dashboard is a developer tool** — unlike end-user facing pages, this page is used by the developer during project setup. It generates config and code, not content
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

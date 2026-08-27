@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.03r] — 2026-08-27 04:09:00 PM EST
+
+> **Prompt:** "D1: I like the 12 sources you provided, but I think this source pool is too small. Expand the source list to 30 sources (if possible). If you can only get to 30 sources by including low-value entries, then don't include them, but let me know which sources they are and why you aren't including them. I do not want any sources that require paid subscriptions. D2: Go with your recommended option B. D3: Go with your recommended option A. Also: (See attached screenshot) For all outputs, do not say "Developed by: ShadowAISolutions"; Instead, say "Developed by: LightAISolutions"." *(with a screenshot of HITHIUM-INTERVIEW-BRIEF.pdf in Google Drive, its footer line "Developed by: ShadowAISolutions" circled in red)*
+
+### Changed
+- **Developer rebrand** — `DEVELOPER_NAME` changed from `ShadowAISolutions` to `LightAISolutions` in the Template Variables table and propagated across 242 files (footers, LICENSE.md copyright, CITATION.cff, FUNDING.yml, GOVERNANCE.md, CONTRIBUTING.md, PR template, workflow comments, SVG logo comments, templates, scripts, tests, `archive info/` doc footers). Intentionally preserved occurrences: the Provenance Markers rule in `.claude/rules/behavioral-rules.md` (documents the original author; hidden provenance markers remain untouched per that rule), the init history entry in `CHANGELOG-archive.md`, and the historical technical content in `archive info/07-SECURITY-UPDATE-PLAN-TESTAUTHGAS1.md` and `archive info/TEMPLATE-UPDATE-PLAN.md` (the literal old string is load-bearing in those incident records — e.g. the v02.79r origin case-mismatch bug)
+- **Version bumps for every deployed file the footer swap touched** — pages: MasterACL v01.05w, Profiler v01.43w, Receipts v01.36w, Scraper v01.35w, gas-project-creator v01.03w, globalacl v01.05w, testauthgas1 v01.03w, testauthhtml1 v01.03w, text-compare v01.01w (version files + meta tags); GAS: MasterACL v01.13g, Profiler v01.22g, Receipts v01.28g, Scraper v01.37g, globalacl v01.07g, testauthgas1 v01.06g, testauthhtml1 v01.06g (VERSION constants + version files), Claspdeploytest v01.01g (constant only — pilot has no version file); AHK: AutoUpdate v01.01a, Test1 v01.01a (constants only — CI regenerates version files). All 18 page/GAS/AHK changelogs received a "Minor internal improvements" section; README tree version displays updated
+- **Study-prep and AIDC report PDFs regenerated** from their corrected sources so no delivered PDF still carries the old attribution footer
+
+### Notes
+- Scraper digest build decisions recorded: **D1** = 30-source free roster approved in-chat (paywalled and low-value exclusions named); **D2** = option B (Google News retained only as a covered-company-name backstop, down-weighted and labeled); **D3** = option A (four-signal Profiler-derived scoring rubric approved; 👍/👎 feedback turned off and hidden but code and historical votes preserved, not deleted)
 
 ## [v03.02r] — 2026-08-27 02:20:49 AM EST
 

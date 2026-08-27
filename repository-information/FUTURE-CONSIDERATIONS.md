@@ -19,4 +19,4 @@ Ideas and architectural considerations for when the project scales. These are no
 - Workspace account: 100,000 script executions/day (5×)
 - Source: [Google Apps Script Quotas](https://developers.google.com/apps-script/guides/services/quotas)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

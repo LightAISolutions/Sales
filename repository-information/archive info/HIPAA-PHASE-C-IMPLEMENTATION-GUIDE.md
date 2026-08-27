@@ -2830,4 +2830,4 @@ HIPAA-TESTAUTHGAS1-IMPLEMENTATION-FOLLOWUP.md   ← Master roadmap (40 items acr
 
 ---
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

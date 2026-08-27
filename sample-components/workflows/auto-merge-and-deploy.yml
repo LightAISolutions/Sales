@@ -11,7 +11,7 @@
 # repo. Replace the GAS_DEPLOYMENT_URL value (or set it as a repo variable) and
 # you're done.
 #
-# Developed by: ShadowAISolutions
+# Developed by: LightAISolutions
 # =============================================================================
 
 name: Auto-merge claude branches and deploy GAS

@@ -74,4 +74,4 @@ Every arrow above the substation is field work: trenching, cabling, terminations
 
 **Self-test (concepts, not trivia):** explain to an imaginary colleague — (1) the difference between MW and MWh and why "duration" decides a battery's job; (2) what an integrated AC-coupled block like a Megapack contains and what field work it displaces; (3) why a pre-integrated medium-voltage block (Megablock) attacks balance-of-plant cost and interconnection-to-revenue time rather than chemistry cost; (4) how merchant bidding software and a VPP each turn batteries into market actors, and why fleet data compounds; (5) why integration and software margins are structurally fatter than cell margins, and what that predicts about how cell makers and system vendors each move. If you can do those five out loud, you understand this catalog. The in-app flashcards drill the same list.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

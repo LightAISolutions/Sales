@@ -95,4 +95,4 @@ Also on the watchlist with unscheduled timing: the Ohio Supreme Court appeal of 
 
 **We assess (moderate confidence):** if the team executes pools 1-2 with discipline and keeps the Jupiter reference intact, the 2026-28 US book is defensible without a single policy break going our way — and every policy break that does come (a tariff-stack cut, a MACR table surprise, a FEOC amendment) lands on an organization already positioned at the front of the affected lane.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -722,4 +722,4 @@ Once SSO is proven on portal + testauthgas1:
 - Other pages can request a fresh token via BroadcastChannel
 - Prevents multiple pages from independently prompting Google for token refresh
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

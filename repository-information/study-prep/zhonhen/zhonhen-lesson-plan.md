@@ -108,4 +108,4 @@ Count: roughly **five stages against seven-plus**. The UPS's two conversions are
 
 **What you are not claiming.** You're not claiming DC is free (arc management is real engineering), not claiming the US chain is incompetent (it's inherited and improving), and not claiming Zhonhen owns the 800V idea (NVIDIA's roster lists others). The expertise you're displaying is knowing *exactly where each claim ends* — that's what sounds knowledgeable.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

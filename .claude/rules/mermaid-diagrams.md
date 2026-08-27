@@ -195,4 +195,4 @@ When adding a new diagram to REPO-ARCHITECTURE.md:
 7. Always verify the URL decompresses correctly before committing
 8. Always include the collapsible `<details>` raw code section below the diagram (for GitHub-renderable types)
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -13,4 +13,4 @@ paths:
 - If an imported skill needs behavioral changes, create a **custom skill** with the desired behavior instead — or add a `.claude/rules/` file that layers repo-specific guidance on top of the imported skill's base behavior
 - This rule applies regardless of who requests the change — even if the user asks to "fix" or "improve" an imported skill, flag that it's imported and recommend the alternatives above. Only proceed with direct behavioral modification if the user explicitly overrides after understanding the tradeoff
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

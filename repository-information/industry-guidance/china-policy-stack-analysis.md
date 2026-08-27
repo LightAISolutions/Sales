@@ -91,4 +91,4 @@ LSIPA (2021, strengthened Sept 2025) bars Chinese-controlled remote access/contr
 
 State-level procurement preferences outside Texas; CFIUS review mechanics for Chinese battery investments (Gotion's failed CFIUS motion noted only in passing); the §45X credit mechanics from the manufacturer side; export-control rules on the China side (China's own graphite/technology export licensing); and any non-public enforcement activity.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

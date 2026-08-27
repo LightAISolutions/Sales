@@ -4,4 +4,4 @@ Archived changelog sections rotated from [Profilerhtml.changelog.md](Profilerhtm
 
 *(No archived sections yet)*
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

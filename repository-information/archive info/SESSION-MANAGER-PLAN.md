@@ -58,4 +58,4 @@ The following was added to `globalacl.html` and has been reverted:
 - **Hooks**: `_smShowForAdmin()` call added to `showApp()`, cleanup added to `performSignOut()`
 - **Existing handler modifications**: `_isSmIframeSource` guard and return-early logic added to `gas-admin-sessions-ready/list/error/signout` handlers
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

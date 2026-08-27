@@ -14,7 +14,7 @@ The init script automates all fork/clone initialization. It is run by the Templa
 ### What it does
 - Auto-detects org and repo name from `git remote -v`
 - Deletes inherited `claude/*` branches (local and remote)
-- Replaces `ShadowAISolutions` → new org name across 23 target files
+- Replaces `LightAISolutions` → new org name across 23 target files
 - Replaces `lightaisolutions` → new repo name across the same files
 - Updates CLAUDE.md Template Variables table (`IS_TEMPLATE_REPO` → `No`)
 
@@ -59,4 +59,4 @@ bash scripts/init-repo.sh ORG REPO DEVELOPER_NAME
 ### When to re-audit
 Only if a **new file type** is added to the repo that might use `\r` intentionally (e.g. Windows batch files `.bat`, or binary formats with `.txt` extension). Standard web files (HTML, CSS, JS, YAML, Markdown) are always safe to normalize.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

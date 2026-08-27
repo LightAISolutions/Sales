@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Receiptshtml.changelog-archive.md](Receiptshtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 35/50`
+`Sections: 36/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.36w] — 2026-08-27 04:09:00 PM EST — v03.03r
+
+### Changed
+- Minor internal improvements
 
 ## [v01.35w] — 2026-08-17 02:34:37 AM EST — v02.56r
 
@@ -282,4 +287,4 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - Photos are compressed on your device before uploading, so saving is fast even on mobile data
 - The app can now be installed to your phone's home screen and launched full-screen like a regular app (use your browser's "Add to Home Screen")
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

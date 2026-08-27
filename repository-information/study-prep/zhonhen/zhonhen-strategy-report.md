@@ -244,4 +244,4 @@ Since he raised it, engage it at the strategy level: *"Schneider's own 800VDC pa
 - **[CORZ-VOTE]** — Core Scientific shareholders reject CoreWeave's $9B acquisition; merger terminated, 2025-10-30 (CNBC) — https://www.cnbc.com/2025/10/30/core-scientific-shareholders-reject-9-billion-coreweave-offer-deal-terminated.html
 - **[LAMBDA-KC]** — Lambda's first self-developed AI factory (Kansas City, 24 MW → 100 MW+), 2025-10-28 — https://www.businesswire.com/news/home/20251028473000/en/Lambda-Doubles-Down-on-Midwest-Expansion-To-Build-AI-Factory-in-Kansas-City-MO
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -216,4 +216,4 @@ Also removed all the workarounds (unsigned `gas-auth-ok`, sig-exempt exceptions)
 | v05.69r | **Root cause found: CacheService eventual consistency.** Reverted sign-in to `?session=`, kept nonces for other paths |
 | v05.70r | **postMessage handshake guard — the actual fix for direct URL access** |
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

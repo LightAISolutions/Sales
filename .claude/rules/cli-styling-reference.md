@@ -92,4 +92,4 @@ These don't trigger color styling, but provide distinct visual structure in the 
 
 **Image alt text (`![text](url)`)** — as of 2026-02-25, the Claude Code CLI does **not** render inline images. The `![alt](url)` syntax renders as a "Show image" clickable button that opens the URL in an external browser when clicked. The alt text itself is not visually displayed in the terminal. This is a known limitation — open feature requests exist (GitHub issues #2266 and #6389) for terminal graphics protocol support (Sixel, Kitty, iTerm2), but none have been implemented. The underlying `ink` (React for CLIs) framework does not natively support image rendering. **Do not use `![alt](url)` for styling purposes** unless the CLI adds inline image support in the future — check the feature requests for status updates before relying on this construct
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

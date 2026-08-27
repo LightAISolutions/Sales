@@ -50,4 +50,4 @@ Users can provide a custom message instead of the default timestamp:
 
 After editing the version file(s), commit and push. Standard Pre-Commit and Pre-Push checklists apply. No version bump needed for standalone maintenance toggles.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

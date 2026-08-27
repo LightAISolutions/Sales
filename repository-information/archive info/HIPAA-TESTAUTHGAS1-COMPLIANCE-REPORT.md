@@ -575,4 +575,4 @@ The following values are set to test values (`⚡ TEST VALUE`) and MUST be chang
 |------|---------|--------|
 | 2026-03-19 | 1.0 | Initial compliance assessment — all 40 checklist items evaluated against testauthgas1 codebase |
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

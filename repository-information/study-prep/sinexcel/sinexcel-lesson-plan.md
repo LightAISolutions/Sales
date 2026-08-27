@@ -107,4 +107,4 @@ The utility flagship (StellaON class, 1,250–1,575 kVA per unit) is a mastercla
 
 **Self-test (concepts, not trivia):** explain to an imaginary colleague — (1) what a PCS does in a BESS and why grid operators care about its millisecond behavior, (2) the surfer-vs-metronome difference between grid-following and grid-forming, and what VSG fakes, (3) how an active harmonic filter cancels distortion and why an SVG beats a capacitor bank, (4) why voltage-sag protection uses supercapacitors and ~2 ms response, (5) why distributed charging architecture + liquid-cooled cables enable 10-minute charging, and why modular converter architecture is the thread tying all of it together. If you can do those five out loud, you understand this company's catalog. The in-app flashcards drill the same list.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

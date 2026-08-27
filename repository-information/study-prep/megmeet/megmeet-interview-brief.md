@@ -288,4 +288,4 @@ Answer out loud before checking. Recall is what makes it stick.
 
 </details>
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

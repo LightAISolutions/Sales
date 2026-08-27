@@ -57,4 +57,4 @@ This does NOT replace real-device testing — it catches layout bugs, z-index is
 ## Automatic mode
 Visual verification also runs automatically after UI changes per the rule in `.claude/rules/html-pages-reference.md` — see "Visual Verification After UI Changes". The user can disable automatic mode by saying "skip visual test" for a specific change, or by asking to remove the rule.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

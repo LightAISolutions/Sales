@@ -353,4 +353,4 @@ The original T1 from Session 1 had three sub-claims bundled together. Applying R
 
 Start with **T11** — lowest risk (pure duplication removal), smallest surface (5 phrase deletions), clearest win (the canonical rule at line 152 already exists). Landing T11 cleanly validates the Session 2 approach before tackling higher-risk items. Then **T10** (consolidation with content preservation — moderate risk), then **T1-v2** (multi-file refactor — higher complexity), and last **T12** (regression risk flagged — only implement after verifying the compressed form addresses the original failure modes).
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

@@ -187,4 +187,4 @@ function fetchGitHubQuotaAndLimits() {
 
 ---
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

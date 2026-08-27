@@ -2126,4 +2126,4 @@ var PROJECT_OVERRIDES = {
 
 > **Warning**: never deploy with `SESSION_EXPIRATION` set to testing values. The HIPAA preset validation will catch this (warns if >900s), but the standard preset has no such guard. Add your own validation if needed.
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

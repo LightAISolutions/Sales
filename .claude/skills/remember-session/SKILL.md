@@ -33,4 +33,4 @@ Save the current session's context so a future Claude Code session can continue 
 - If a session ends without "remember session", the next session auto-reconstructs from CHANGELOG.md
 - The 2-session cap keeps the file compact — older history is in CHANGELOG.md
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions

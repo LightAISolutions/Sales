@@ -70,4 +70,4 @@ The filenames (`sample.html`, `sample.gs`, `samplehtml.version.txt`, `samplegs.v
 
 These belong to the full template in this repo (`live-site-pages/templates/`). The sample-components folder is the **minimum** that makes the auto-update loop work; layer features on after that.
 
-<!-- Developed by: ShadowAISolutions -->
+<!-- Developed by: LightAISolutions -->

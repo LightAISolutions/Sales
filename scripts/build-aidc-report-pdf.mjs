@@ -224,4 +224,4 @@ try {
 } finally {
   chrome.kill('SIGKILL');
 }
-// Developed by: ShadowAISolutions
+// Developed by: LightAISolutions

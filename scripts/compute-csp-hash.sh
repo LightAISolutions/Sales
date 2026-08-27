@@ -53,4 +53,4 @@ else
   echo "  script-src 'self' '$COMPUTED_HASH' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com;"
 fi
 
-# Developed by: ShadowAISolutions
+# Developed by: LightAISolutions

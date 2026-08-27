@@ -55,4 +55,4 @@ The developer's own notes and reminders, surfaced at the start of every session.
 - ~~`YYYY-MM-DD HH:MM:SS AM/PM EST` — **Brief title** — description~~ — completed `YYYY-MM-DD HH:MM:SS AM/PM EST`
 ```
 
-Developed by: ShadowAISolutions
+Developed by: LightAISolutions
