@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.05r] — 2026-08-27 05:08:03 PM EST
+
+> **Prompt:** "Execute Phase 2"
+
+### Added
+- **Wire Desk reskin of `Scraper.html` (rebuild Phase 2)** — the approved dark monitoring-desk design from the "Scraper Redesign Mockups" canvas applied to the whole app layer: CSS-token system (`--wd-*`: charcoal #15171c, panels #1b1e24, lines #262b33, amber accent #f2a33c, IBM Plex Sans/Mono), sticky top bar (SCRAPER · News Desk wordmark, live ET clock, DIGEST PAUSED pill tied to the v03.02r pipeline pause, notification/refresh/new-project actions), and a 280px · 1fr · 300px desk grid that collapses to a single column under 1100px. Every existing surface restyled onto the tokens with selectors unchanged (project cards, 5-step wizard, articles overlay, filter bar, stats panel, learned panel, progress stack, rating log, notification panel)
+- **Interests rail (left)** — live from the Phase 1 routes: Companies section (`listInterests` on sign-in; category-count chips + "+N new" chip; search filter; first 12 with "All N companies" expander; "New coverage" flags float to top; stale rows dimmed/struck-through as "Coverage ended" with a read-only toggle) and Topics section ("New topic" flags); per-row on/off toggles post `setInterestEnabled` optimistically with revert-on-failure, and toggling clears the attention flag
+- **Digest-controls rail (right)** — Schedule card (Mon–Fri 7:00 AM ET display, weekend-coverage note; editable at Phase 3), Profiler sync card (last-sync status from the sync summary + "Sync now" → `syncInterestsNow`), and a rubric tester (headline/snippet → `rubricPreview` → 0–100 score with per-signal bars for company/topic/emphasis/substance and matched-interest list)
+- **CSP `style-src` extension** — `https://fonts.googleapis.com` added to both the active and the commented hardened CSP tags (PROJECT OVERRIDE-marked) so the IBM Plex stylesheet loads in production; font files were already allowed via `fonts.gstatic.com`
+
+### Changed
+- **👍/👎 feedback UI retired per decision D3** — `SCRAPER_FEEDBACK_UI_ENABLED = false` gates the verdict buttons, the Calibrate card action, and the rating-coaching copy (Stats recommendation, post-Analyze toast); all verdict/calibration code paths, routes, and historical votes are preserved and the flag restores them
+- **`Scraper.html`** version v01.35w → v01.36w (`Scraperhtml.version.txt` + meta tag); public entry added to the page changelog (counter 35 → 36)
+- **`repository-information/diagrams/Scraper-diagram.md`** — interest-ops block rewritten as the wired "Wire Desk Interests Rail (Rebuild Phase 2)" flow; the 👍/👎 tap flow replaced with a retirement note (server-side routes preserved); mermaid.live URL regenerated and decompression-verified
+- **README tree** — Scraper version display v01.35w → v01.36w
+
+### Notes
+- Playwright visual verification passed on 1440×900 and 390×844 (fixture-fed signed-in state): interests rows/flags/stale render, rubric result renders, zero verdict/calibrate buttons, no unexpected console errors; screenshots reviewed
+- Inline `<script>` blocks pass `node --check`
 
 ## [v03.04r] — 2026-08-27 04:39:36 PM EST
 

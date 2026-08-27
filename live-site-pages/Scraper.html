@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="referrer" content="no-referrer">
   <!-- CSP: CURRENT (unsafe-inline) — Remove this tag when enabling hash-based CSP below -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;"> <!-- PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (font files already allowed via fonts.gstatic.com) -->
   <!-- CSP: HARDENED (hash-based) — Phase 8: Uncomment this tag and replace HASH_HERE after running: bash scripts/compute-csp-hash.sh
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
+  PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.35w">
+  <meta name="build-version" content="v01.36w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -339,136 +340,290 @@
     .html-layer-hidden { display: none !important; }
     /* ── News Scraper app layer — covers the GAS iframe (z-index 1) and sits
        below every overlay wall (10002+), so the auth wall hides it until
-       sign-in. Toggleable via the HTML layer button. ── */
+       sign-in. Toggleable via the HTML layer button.
+       Rebuild Phase 2 (2026-08-27): "Wire Desk" theme from the approved
+       Scraper Redesign Mockups canvas — dark monitoring desk, IBM Plex
+       Sans/Mono, charcoal #15171c with amber #f2a33c accent. ── */
+    :root {
+      --wd-bg: #15171c; --wd-bg-deep: #101216; --wd-rail: #171a20;
+      --wd-panel: #1b1e24; --wd-line: #262b33; --wd-line-soft: #363c45;
+      --wd-ink: #e6e4de; --wd-ink2: #c9cdd4; --wd-mut: #9aa0ab;
+      --wd-mut2: #8a919d; --wd-faint: #6b7280; --wd-dim: #7b828e;
+      --wd-accent: #f2a33c; --wd-accent-hi: #ffc36b; --wd-on-accent: #15171c;
+      --wd-green: #4cc38a; --wd-green-ink: #7fd7ae; --wd-green-bg: #14201b; --wd-green-line: #24503c;
+      --wd-warn: #e8b45a; --wd-warn-bg: #221d13; --wd-warn-line: #4a3c22;
+      --wd-chip-bg: #232833; --wd-chip-ink: #aeb4bf;
+      --wd-sans: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
+      --wd-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+    }
     #scraper-app {
       position: fixed; inset: 0; z-index: 5; overflow-y: auto;
-      background: #f2f4f7; color: #1f2733;
-      font-family: Arial, Helvetica, sans-serif;
-      padding: 24px 20px 96px; box-sizing: border-box;
+      background: var(--wd-bg); color: var(--wd-ink);
+      font-family: var(--wd-sans);
+      padding: 0 0 96px; box-sizing: border-box;
     }
-    .sc-shell { max-width: 900px; margin: 0 auto; }
-    .sc-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
-    .sc-header h1 { font-size: 22px; margin: 0; }
+    .wd-mono { font-family: var(--wd-mono); }
+    .wd-lbl {
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--wd-mut2); font-weight: 600;
+    }
+    /* Top bar — SCRAPER wordmark, clock, paused pill, actions */
+    .wd-topbar {
+      position: sticky; top: 0; z-index: 6; min-height: 56px;
+      display: flex; align-items: center; gap: 14px; padding: 8px 20px;
+      background: var(--wd-bg); border-bottom: 1px solid var(--wd-line);
+      flex-wrap: wrap;
+    }
+    .wd-brand { display: flex; align-items: baseline; gap: 10px; }
+    .wd-brand b { font-weight: 700; font-size: 17px; letter-spacing: 0.04em; color: var(--wd-ink); }
+    .wd-brand .wd-lbl { color: var(--wd-accent); }
+    #wd-clock { font-family: var(--wd-mono); font-size: 12px; color: var(--wd-mut2); }
+    .wd-paused-pill {
+      display: inline-flex; align-items: center; gap: 7px; padding: 4px 10px;
+      border: 1px solid var(--wd-warn-line); border-radius: 4px;
+      background: var(--wd-warn-bg); font-size: 11px; color: var(--wd-warn);
+      font-weight: 600; letter-spacing: 0.06em;
+    }
+    .wd-spacer { flex: 1; }
+    /* Desk grid — interests rail · projects · digest controls rail */
+    .wd-desk {
+      display: grid; grid-template-columns: 280px minmax(0, 1fr) 300px;
+      align-items: start; min-height: calc(100vh - 120px);
+    }
+    .wd-rail { padding: 16px 14px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+    .wd-rail-left { border-right: 1px solid var(--wd-line); }
+    .wd-rail-right { border-left: 1px solid var(--wd-line); background: var(--wd-rail); min-height: 100%; }
+    .wd-main { padding: 16px 18px; min-width: 0; }
+    .wd-main-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+    .wd-main-head .wd-title { font-size: 15px; font-weight: 700; }
+    .wd-main-head .wd-sub { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); }
+    @media (max-width: 1100px) {
+      .wd-desk { display: block; }
+      .wd-rail-left, .wd-rail-right { border-left: none; border-right: none; border-top: 1px solid var(--wd-line); }
+    }
+    /* Interests panel (left rail) */
+    .wd-sect { display: flex; flex-direction: column; gap: 8px; }
+    .wd-sect-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .wd-count { font-family: var(--wd-mono); font-size: 10px; color: var(--wd-faint); }
+    #wd-co-search {
+      box-sizing: border-box; width: 100%; padding: 6px 9px; font-size: 12px;
+      background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft);
+      border-radius: 4px; color: var(--wd-ink); font-family: var(--wd-sans);
+    }
+    #wd-co-search:focus { border-color: var(--wd-accent); outline: none; }
+    #wd-co-search::placeholder { color: var(--wd-faint); }
+    .wd-tog-list { display: flex; flex-direction: column; gap: 4px; }
+    .wd-int-row {
+      display: flex; align-items: center; gap: 8px; font-size: 12px;
+      color: var(--wd-ink2); padding: 2px 0; min-width: 0;
+    }
+    .wd-int-row .wd-int-name {
+      flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+    .wd-int-row.off { color: var(--wd-dim); }
+    .wd-int-row.stale { color: var(--wd-faint); }
+    .wd-int-row.stale .wd-int-name { text-decoration: line-through; text-decoration-color: rgba(123,130,142,0.5); }
+    .wd-int-flag {
+      flex: none; padding: 1px 6px; border-radius: 3px; font-size: 9px;
+      font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+      border: 1px solid var(--wd-accent); color: var(--wd-accent);
+    }
+    .wd-int-flag.ended { border-color: var(--wd-line-soft); color: var(--wd-faint); }
+    .wd-tg {
+      flex: none; width: 30px; height: 17px; border-radius: 9px;
+      background: var(--wd-line-soft); position: relative; border: none;
+      cursor: pointer; padding: 0; transition: background .15s;
+    }
+    .wd-tg::after {
+      content: ""; position: absolute; top: 2px; left: 2px; width: 13px; height: 13px;
+      border-radius: 50%; background: #808896; transition: left .15s, background .15s;
+    }
+    .wd-tg.on { background: #2e5d47; }
+    .wd-tg.on::after { left: 15px; background: var(--wd-green); }
+    .wd-tg:disabled { opacity: .45; cursor: default; }
+    .wd-link {
+      background: none; border: none; padding: 0; font-size: 11px;
+      color: var(--wd-accent); cursor: pointer; text-align: left; font-family: var(--wd-sans);
+    }
+    .wd-link:hover { color: var(--wd-accent-hi); }
+    .wd-cat-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+    .wd-cat-chip {
+      padding: 3px 9px; border: 1px solid var(--wd-line-soft); border-radius: 3px;
+      font-size: 11px; color: var(--wd-ink2);
+    }
+    .wd-cat-chip.new { border-color: var(--wd-accent); color: var(--wd-accent); }
+    .wd-loading { color: var(--wd-faint); font-size: 12px; }
+    /* Right rail cards — digest controls, Profiler sync, rubric tester */
+    .wd-card {
+      background: var(--wd-panel); border: 1px solid var(--wd-line);
+      border-radius: 6px; padding: 12px; display: flex; flex-direction: column; gap: 8px;
+    }
+    .wd-card .wd-card-title { font-size: 12px; font-weight: 600; color: var(--wd-ink); }
+    .wd-card .wd-note { font-family: var(--wd-mono); font-size: 10px; color: var(--wd-mut2); }
+    .wd-days { display: flex; gap: 5px; }
+    .wd-day {
+      width: 26px; height: 26px; border-radius: 4px; font-size: 11px; font-weight: 700;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--wd-accent); color: var(--wd-on-accent);
+    }
+    .wd-day.off {
+      background: none; border: 1px solid var(--wd-line-soft);
+      color: var(--wd-faint); font-weight: 600;
+    }
+    .wd-card.wd-sync-card { background: var(--wd-green-bg); border-color: var(--wd-green-line); }
+    .wd-sync-card .wd-card-title { color: var(--wd-green-ink); }
+    .wd-sync-card .wd-note { color: #8fb8a5; }
+    .wd-sync-card .wd-link { color: var(--wd-green-ink); }
+    .wd-rubric-input {
+      box-sizing: border-box; width: 100%; padding: 7px 9px; font-size: 12px;
+      background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft);
+      border-radius: 4px; color: var(--wd-ink); font-family: var(--wd-sans); resize: vertical;
+    }
+    .wd-rubric-input:focus { border-color: var(--wd-accent); outline: none; }
+    .wd-rubric-input::placeholder { color: var(--wd-faint); }
+    #wd-rubric-result { display: none; flex-direction: column; gap: 5px; }
+    .wd-sig-row { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--wd-mut); }
+    .wd-sig-row .wd-sig-name { width: 76px; flex: none; }
+    .wd-sig-track { flex: 1; height: 3px; border-radius: 2px; background: #2a2f38; position: relative; overflow: hidden; }
+    .wd-sig-fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--wd-accent); }
+    .wd-sig-val { width: 34px; flex: none; text-align: right; font-family: var(--wd-mono); }
+    #wd-rubric-score { font-family: var(--wd-mono); font-size: 20px; font-weight: 600; color: var(--wd-accent); }
+    /* Buttons */
     .sc-btn {
-      border: none; border-radius: 8px; padding: 10px 16px; font-size: 14px;
-      cursor: pointer; background: #e2e6ec; color: #1f2733;
+      border: 1px solid var(--wd-line-soft); border-radius: 4px; padding: 8px 14px;
+      font-size: 12px; font-weight: 600; cursor: pointer;
+      background: var(--wd-panel); color: var(--wd-ink2); font-family: var(--wd-sans);
     }
-    .sc-btn.primary { background: #2f6fdb; color: #fff; }
-    .sc-btn.subtle { background: transparent; color: #55606e; }
+    .sc-btn:hover { border-color: var(--wd-faint); }
+    .sc-btn.primary { background: var(--wd-accent); border-color: var(--wd-accent); color: var(--wd-on-accent); font-weight: 700; }
+    .sc-btn.primary:hover { background: var(--wd-accent-hi); border-color: var(--wd-accent-hi); }
+    .sc-btn.subtle { background: transparent; border-color: transparent; color: var(--wd-mut2); }
     .sc-btn:disabled { opacity: 0.55; cursor: default; }
+    /* Project cards */
     .sc-card {
-      background: #fff; border: 1px solid #e0e4ea; border-radius: 12px;
-      padding: 16px 18px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(16,24,40,0.06);
+      background: var(--wd-panel); border: 1px solid var(--wd-line); border-radius: 6px;
+      padding: 14px 16px; margin-bottom: 10px;
     }
-    .sc-card h3 { margin: 0 0 4px; font-size: 16px; word-break: break-word; }
-    .sc-card .sc-topic { color: #55606e; font-size: 13px; margin: 0 0 10px; word-break: break-word; }
+    .sc-card h3 { margin: 0 0 4px; font-size: 15px; word-break: break-word; color: var(--wd-ink); }
+    .sc-card .sc-topic { color: var(--wd-mut); font-size: 13px; margin: 0 0 10px; word-break: break-word; }
     .sc-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
-    .sc-chip { background: #eef2f8; color: #37455a; border-radius: 999px; padding: 3px 10px; font-size: 11px; }
-    .sc-chip.status-active { background: #e6f4ea; color: #1e7b34; }
-    .sc-chip.status-paused { background: #fff4e0; color: #9a6b00; }
-    .sc-chip.status-archived { background: #ececec; color: #666; }
-    .sc-card-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-    .sc-card-actions .sc-btn { padding: 7px 12px; font-size: 12px; }
-    .sc-empty { text-align: center; color: #667085; padding: 48px 12px; line-height: 1.6; }
+    .sc-chip { background: var(--wd-chip-bg); color: var(--wd-chip-ink); border-radius: 3px; padding: 2px 8px; font-size: 10.5px; }
+    .sc-chip.status-active { background: var(--wd-green-bg); color: var(--wd-green-ink); border: 1px solid var(--wd-green-line); }
+    .sc-chip.status-paused { background: var(--wd-warn-bg); color: var(--wd-warn); border: 1px solid var(--wd-warn-line); }
+    .sc-chip.status-archived { background: #20232a; color: var(--wd-dim); }
+    .sc-card-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+    .sc-card-actions .sc-btn { padding: 6px 11px; font-size: 11px; }
+    .sc-empty { text-align: center; color: var(--wd-faint); padding: 48px 12px; line-height: 1.6; }
     #sc-status-msg {
       position: fixed; bottom: 44px; left: 50%; transform: translateX(-50%);
-      background: rgba(31,39,51,0.92); color: #fff; padding: 10px 18px;
-      border-radius: 10px; font-size: 13px; display: none; z-index: 60;
+      background: rgba(16,18,22,0.95); border: 1px solid var(--wd-line-soft);
+      color: var(--wd-ink); padding: 10px 18px;
+      border-radius: 6px; font-size: 13px; display: none; z-index: 60;
       max-width: 84vw; text-align: center;
     }
     #sc-wizard-overlay {
-      position: fixed; inset: 0; z-index: 50; background: rgba(15,23,42,0.55);
+      position: fixed; inset: 0; z-index: 50; background: rgba(8,10,13,0.72);
       display: none; align-items: flex-start; justify-content: center;
       overflow-y: auto; padding: 4vh 12px;
     }
     #sc-wizard {
-      background: #fff; border-radius: 14px; width: 100%; max-width: 640px;
-      padding: 22px 24px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-      box-sizing: border-box;
+      background: var(--wd-panel); border: 1px solid var(--wd-line-soft);
+      border-radius: 8px; width: 100%; max-width: 640px;
+      padding: 22px 24px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      box-sizing: border-box; color: var(--wd-ink); font-family: var(--wd-sans);
     }
     .sc-wiz-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
-    .sc-wiz-head h2 { margin: 0; font-size: 18px; }
-    #sc-wiz-close, #sc-articles-close { background: none; border: none; font-size: 24px; color: #98a2b3; cursor: pointer; line-height: 1; }
-    #sc-wiz-close:hover, #sc-articles-close:hover { color: #1f2733; }
+    .sc-wiz-head h2 { margin: 0; font-size: 16px; font-weight: 700; }
+    #sc-wiz-close, #sc-articles-close { background: none; border: none; font-size: 24px; color: var(--wd-faint); cursor: pointer; line-height: 1; }
+    #sc-wiz-close:hover, #sc-articles-close:hover { color: var(--wd-ink); }
     #sc-wiz-progress { display: flex; gap: 6px; margin-bottom: 16px; }
-    #sc-wiz-progress .dot { flex: 1; height: 4px; border-radius: 2px; background: #e0e4ea; }
-    #sc-wiz-progress .dot.done { background: #2f6fdb; }
+    #sc-wiz-progress .dot { flex: 1; height: 4px; border-radius: 2px; background: var(--wd-line-soft); }
+    #sc-wiz-progress .dot.done { background: var(--wd-accent); }
     .sc-step { display: none; }
     .sc-step.active { display: block; }
-    .sc-step label { display: block; font-size: 13px; font-weight: bold; margin: 12px 0 4px; }
+    .sc-step label { display: block; font-size: 13px; font-weight: 600; margin: 12px 0 4px; color: var(--wd-ink2); }
     .sc-step input[type="text"], .sc-step textarea, .sc-step select {
       width: 100%; box-sizing: border-box; padding: 9px 11px; font-size: 14px;
-      border: 1px solid #c8cfd8; border-radius: 8px; font-family: inherit;
+      border: 1px solid var(--wd-line-soft); border-radius: 4px; font-family: inherit;
       font-weight: normal; margin-top: 4px;
+      background: var(--wd-bg-deep); color: var(--wd-ink);
     }
-    .sc-step input:focus, .sc-step textarea:focus { border-color: #2f6fdb; outline: none; }
-    .sc-hint { color: #7a8494; font-size: 12px; font-weight: normal; }
+    .sc-step input:focus, .sc-step textarea:focus { border-color: var(--wd-accent); outline: none; }
+    .sc-step input::placeholder, .sc-step textarea::placeholder { color: var(--wd-faint); }
+    .sc-hint { color: var(--wd-mut2); font-size: 12px; font-weight: normal; }
     .sc-freq-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 6px; margin-top: 6px; }
     .sc-freq-grid label {
       display: flex; align-items: center; gap: 7px; font-weight: normal;
-      font-size: 13px; margin: 0; border: 1px solid #dde2e9; border-radius: 8px;
-      padding: 8px 10px; cursor: pointer;
+      font-size: 13px; margin: 0; border: 1px solid var(--wd-line-soft); border-radius: 4px;
+      padding: 8px 10px; cursor: pointer; color: var(--wd-ink2);
     }
-    .sc-freq-grid input { accent-color: #2f6fdb; }
-    #sc-review { font-size: 13px; line-height: 1.65; }
+    .sc-freq-grid input { accent-color: var(--wd-accent); }
+    #sc-review { font-size: 13px; line-height: 1.65; color: var(--wd-ink2); }
     #sc-review .rv-row { margin-bottom: 8px; }
-    #sc-review .rv-label { font-weight: bold; color: #37455a; }
-    .sc-wiz-err { color: #b3261e; font-size: 12px; min-height: 16px; margin-top: 10px; }
+    #sc-review .rv-label { font-weight: 600; color: var(--wd-ink); }
+    .sc-wiz-err { color: #e08a84; font-size: 12px; min-height: 16px; margin-top: 10px; }
     .sc-wiz-nav { display: flex; justify-content: space-between; margin-top: 8px; }
     #sc-articles-overlay {
-      position: fixed; inset: 0; z-index: 50; background: rgba(15,23,42,0.55);
+      position: fixed; inset: 0; z-index: 50; background: rgba(8,10,13,0.72);
       display: none; align-items: flex-start; justify-content: center;
       overflow-y: auto; padding: 4vh 12px;
     }
     #sc-articles {
-      background: #fff; border-radius: 14px; width: 100%; max-width: 720px;
-      padding: 22px 24px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-      box-sizing: border-box; margin-bottom: 4vh;
+      background: var(--wd-panel); border: 1px solid var(--wd-line-soft);
+      border-radius: 8px; width: 100%; max-width: 720px;
+      padding: 22px 24px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      box-sizing: border-box; margin-bottom: 4vh; color: var(--wd-ink); font-family: var(--wd-sans);
     }
-    .sc-art { border-bottom: 1px solid #eef1f5; padding: 12px 0; }
+    .sc-art { border-bottom: 1px solid var(--wd-line); padding: 12px 0; }
     .sc-art:last-child { border-bottom: none; }
-    .sc-art h4 { margin: 0 0 3px; font-size: 14px; line-height: 1.4; word-break: break-word; }
-    .sc-art h4 a { color: #2456a8; text-decoration: none; }
-    .sc-art h4 a:hover { text-decoration: underline; }
-    .sc-art-meta { color: #7a8494; font-size: 11px; margin-bottom: 4px; }
-    .sc-art p { margin: 0; color: #55606e; font-size: 12px; line-height: 1.5; word-break: break-word; }
-    .sc-art-loading { color: #667085; font-size: 13px; text-align: center; padding: 24px 0; }
-    .sc-score { display: inline-block; border-radius: 999px; padding: 1px 8px; font-size: 10px; font-weight: bold; margin-right: 6px; vertical-align: 1px; }
-    .sc-score.hi { background: #e6f4ea; color: #1e7b34; }
-    .sc-score.mid { background: #fff4e0; color: #9a6b00; }
-    .sc-score.lo { background: #f3e8e8; color: #8c201c; }
-    .sc-art-sum { font-style: italic; color: #37455a !important; }
+    .sc-art h4 { margin: 0 0 3px; font-size: 14px; line-height: 1.4; word-break: break-word; font-weight: 600; }
+    .sc-art h4 a { color: var(--wd-ink); text-decoration: none; }
+    .sc-art h4 a:hover { color: var(--wd-accent-hi); text-decoration: underline; }
+    .sc-art-meta { color: var(--wd-mut2); font-size: 11px; margin-bottom: 4px; font-family: var(--wd-mono); }
+    .sc-art p { margin: 0; color: var(--wd-mut); font-size: 12px; line-height: 1.5; word-break: break-word; }
+    .sc-art-loading { color: var(--wd-faint); font-size: 13px; text-align: center; padding: 24px 0; }
+    .sc-score {
+      display: inline-block; border-radius: 3px; padding: 1px 8px; font-size: 10px;
+      font-weight: 600; margin-right: 6px; vertical-align: 1px; font-family: var(--wd-mono);
+    }
+    .sc-score.hi { background: #2b2314; color: var(--wd-accent); }
+    .sc-score.mid { background: var(--wd-chip-bg); color: var(--wd-chip-ink); }
+    .sc-score.lo { background: #2a1c1a; color: #d98a84; }
+    .sc-art-sum { font-style: italic; color: var(--wd-ink2) !important; }
     #sc-brief {
-      background: #f4f7fc; border: 1px solid #d9e4f5; border-radius: 10px;
+      background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft); border-radius: 6px;
       padding: 14px 16px; margin: 8px 0 12px; font-size: 13px; line-height: 1.6;
-      white-space: pre-wrap; word-break: break-word; color: #1f2733;
+      white-space: pre-wrap; word-break: break-word; color: var(--wd-ink2);
     }
     #sc-brief-btn { padding: 7px 12px; font-size: 12px; margin-right: 8px; }
-    .sc-art-verdict { margin-top: 6px; display: flex; gap: 6px; }
+    /* 👍/👎 feedback controls — retired from the UI by decision D3 (2026-08-27):
+       the Profiler-derived rubric replaces personal feedback. Styles kept so
+       historical markup (and a future re-enable) still renders correctly. */
+    .sc-art-verdict { margin-top: 6px; display: none; gap: 6px; }
     .sc-vbtn {
-      border: 1px solid #d3dae4; background: #fff; border-radius: 999px;
-      padding: 2px 11px; font-size: 13px; line-height: 1.5; cursor: pointer; opacity: .7;
+      border: 1px solid var(--wd-line-soft); background: var(--wd-bg-deep); border-radius: 999px;
+      padding: 2px 11px; font-size: 13px; line-height: 1.5; cursor: pointer; opacity: .7; color: var(--wd-ink2);
     }
     .sc-vbtn:hover { opacity: 1; }
     .sc-vbtn:disabled { opacity: .35; cursor: default; }
-    .sc-vbtn.on { opacity: 1; border-color: #2456a8; background: #eaf1fb; }
-    .sc-vbtn.down.on { border-color: #b3392f; background: #fbeeed; }
+    .sc-vbtn.on { opacity: 1; border-color: var(--wd-accent); background: #2b2314; }
+    .sc-vbtn.down.on { border-color: #b3392f; background: #2a1c1a; }
     /* Rating status log — docked right of the articles card; shows each
        verdict-save step with elapsed ms for debugging slow saves */
     #sc-vlog {
       position: fixed; top: 4vh; right: 12px; z-index: 51; width: 250px;
       max-height: 70vh; overflow-y: auto; display: none; box-sizing: border-box;
-      background: #101826; color: #cfe0f5; border-radius: 10px;
-      padding: 10px 12px; font-size: 11px; line-height: 1.55;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+      background: var(--wd-bg-deep); color: var(--wd-ink2); border-radius: 6px;
+      border: 1px solid var(--wd-line); padding: 10px 12px; font-size: 11px; line-height: 1.55;
+      font-family: var(--wd-mono);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
     }
     #sc-vlog-head {
       display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 6px; color: #8fb2dd; font-weight: bold;
+      margin-bottom: 6px; color: var(--wd-mut2); font-weight: bold;
     }
     #sc-vlog-close {
-      background: none; border: none; color: #8fb2dd; font-size: 15px;
+      background: none; border: none; color: var(--wd-mut2); font-size: 15px;
       cursor: pointer; padding: 0 2px; line-height: 1;
     }
     .sc-vlog-line { margin: 0 0 3px; word-break: break-word; }
@@ -483,37 +638,38 @@
     /* Standard-mode filter bar + calibration-mode controls */
     #sc-filter-bar { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
     #sc-filter-bar select, #sc-filter-bar input {
-      border: 1px solid #d3dae4; border-radius: 8px; padding: 5px 8px;
-      font-size: 12px; background: #fff; color: #1f2733;
+      border: 1px solid var(--wd-line-soft); border-radius: 4px; padding: 5px 8px;
+      font-size: 12px; background: var(--wd-bg-deep); color: var(--wd-ink);
     }
     #sc-filter-bar input { flex: 1; min-width: 120px; }
+    #sc-filter-bar input::placeholder { color: var(--wd-faint); }
     #scfb-apply { padding: 5px 12px; font-size: 12px; }
     #sc-cal-controls {
       display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 4px 0 10px;
     }
     #sc-cal-count {
-      font-size: 12px; font-weight: bold; color: #2456a8; background: #eaf1fb;
-      border-radius: 999px; padding: 3px 10px;
+      font-size: 12px; font-weight: 600; color: var(--wd-accent); background: #2b2314;
+      border-radius: 999px; padding: 3px 10px; font-family: var(--wd-mono);
     }
     #sc-cal-controls .sc-btn { padding: 5px 10px; font-size: 12px; }
     #sc-learned {
-      background: #f2f0fa; border: 1px solid #ddd6f0; border-radius: 10px;
-      padding: 12px 14px; margin: 0 0 12px; font-size: 12px; line-height: 1.55; color: #1f2733;
+      background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft); border-radius: 6px;
+      padding: 12px 14px; margin: 0 0 12px; font-size: 12px; line-height: 1.55; color: var(--wd-ink2);
     }
-    #sc-learned h5 { margin: 8px 0 4px; font-size: 11px; color: #5b4d8a; text-transform: uppercase; }
+    #sc-learned h5 { margin: 8px 0 4px; font-size: 11px; color: #b7a7e6; text-transform: uppercase; }
     .sc-sugg-chip {
-      display: inline-block; border: 1px solid #c9bfe6; background: #fff; border-radius: 999px;
-      padding: 2px 9px; margin: 0 5px 5px 0; font-size: 11px; color: #3d3364;
+      display: inline-block; border: 1px solid var(--wd-line-soft); background: var(--wd-panel); border-radius: 999px;
+      padding: 2px 9px; margin: 0 5px 5px 0; font-size: 11px; color: var(--wd-ink2);
     }
     .sc-sugg-add {
-      border: none; background: none; color: #2456a8; font-weight: bold;
+      border: none; background: none; color: var(--wd-accent); font-weight: bold;
       cursor: pointer; font-size: 12px; padding: 0 0 0 5px;
     }
     .sc-sugg-chip.added { opacity: .55; }
     .sc-art.sc-art-out { opacity: 0; transition: opacity .25s; }
-    .sc-chip-next { background: #eef7ee; color: #1e6b30; border-color: #cde5cf; }
+    .sc-chip-next { background: var(--wd-green-bg); color: var(--wd-green-ink); border-color: var(--wd-green-line); }
     .sc-sugg-undo {
-      border: none; background: none; color: #b3392f; font-weight: bold;
+      border: none; background: none; color: #e08a84; font-weight: bold;
       cursor: pointer; font-size: 12px; padding: 0 0 0 5px;
     }
     /* Action progress bars — fixed bottom-left stack, above the overlays so
@@ -523,44 +679,46 @@
       display: flex; flex-direction: column; gap: 8px; width: 270px;
     }
     .sc-progress {
-      background: #101826; color: #dbe7f7; border-radius: 10px; padding: 9px 12px;
-      font-size: 11px; box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+      background: var(--wd-bg-deep); color: var(--wd-ink2); border-radius: 6px; padding: 9px 12px;
+      font-size: 11px; border: 1px solid var(--wd-line); box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      font-family: var(--wd-mono);
     }
     .sc-prog-head { display: flex; justify-content: space-between; margin-bottom: 5px; font-weight: bold; }
-    .sc-prog-time { color: #8fb2dd; font-weight: normal; }
-    .sc-prog-track { height: 6px; border-radius: 999px; background: #24324a; overflow: hidden; }
+    .sc-prog-time { color: var(--wd-mut2); font-weight: normal; }
+    .sc-prog-track { height: 6px; border-radius: 999px; background: #2a2f38; overflow: hidden; }
     .sc-prog-fill {
-      height: 100%; border-radius: 999px; background: #4d8df0;
+      height: 100%; border-radius: 999px; background: var(--wd-accent);
       width: 0%; transition: width .4s;
     }
     .sc-prog-fill.indet { width: 40%; animation: scProgSlide 1.2s linear infinite; }
     @keyframes scProgSlide { 0% { margin-left: -40%; } 100% { margin-left: 100%; } }
-    .sc-prog-stats { margin-top: 5px; color: #9fb3cd; }
-    .sc-progress.done .sc-prog-fill { background: #37b06a; }
+    .sc-prog-stats { margin-top: 5px; color: var(--wd-mut); }
+    .sc-progress.done .sc-prog-fill { background: var(--wd-green); }
     @media (max-width: 760px) { #sc-prog-stack { width: 210px; left: 8px; bottom: 8px; } }
     /* Score distribution panel */
     #sc-stats-overlay {
-      position: fixed; inset: 0; z-index: 52; background: rgba(15,23,42,0.55);
+      position: fixed; inset: 0; z-index: 52; background: rgba(8,10,13,0.72);
       display: none; align-items: flex-start; justify-content: center;
       overflow-y: auto; padding: 6vh 12px;
     }
     #sc-stats {
-      background: #fff; border-radius: 14px; width: 100%; max-width: 520px;
-      padding: 22px 24px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-      box-sizing: border-box; margin-bottom: 6vh;
+      background: var(--wd-panel); border: 1px solid var(--wd-line-soft);
+      border-radius: 8px; width: 100%; max-width: 520px;
+      padding: 22px 24px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+      box-sizing: border-box; margin-bottom: 6vh; color: var(--wd-ink); font-family: var(--wd-sans);
     }
-    #sc-stats-close { background: none; border: none; font-size: 24px; color: #98a2b3; cursor: pointer; line-height: 1; }
-    #sc-stats-close:hover { color: #1f2733; }
+    #sc-stats-close { background: none; border: none; font-size: 24px; color: var(--wd-faint); cursor: pointer; line-height: 1; }
+    #sc-stats-close:hover { color: var(--wd-ink); }
     .sc-stat-headline { text-align: center; margin: 4px 0 14px; }
-    .sc-stat-headline b { font-size: 34px; color: #2456a8; }
-    .sc-stat-headline span { display: block; color: #55606e; font-size: 12px; margin-top: 2px; }
+    .sc-stat-headline b { font-size: 34px; color: var(--wd-accent); font-family: var(--wd-mono); }
+    .sc-stat-headline span { display: block; color: var(--wd-mut); font-size: 12px; margin-top: 2px; }
     .sc-stat-row { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; font-size: 12px; }
-    .sc-stat-sub { text-align: right; color: #98a1b0; font-size: 10.5px; margin: 0 0 7px 0; }
-    .sc-stat-label { width: 64px; color: #37455a; text-align: right; flex: none; }
-    .sc-stat-track { flex: 1; background: #eef1f5; border-radius: 999px; height: 16px; overflow: hidden; }
+    .sc-stat-sub { text-align: right; color: var(--wd-faint); font-size: 10.5px; margin: 0 0 7px 0; }
+    .sc-stat-label { width: 64px; color: var(--wd-ink2); text-align: right; flex: none; }
+    .sc-stat-track { flex: 1; background: #2a2f38; border-radius: 999px; height: 16px; overflow: hidden; }
     .sc-stat-fill { height: 100%; border-radius: 999px; min-width: 2px; }
-    .sc-stat-count { width: 96px; color: #55606e; flex: none; }
-    .sc-stat-foot { margin-top: 14px; border-top: 1px solid #eef1f5; padding-top: 10px; color: #55606e; font-size: 12px; line-height: 1.7; }
+    .sc-stat-count { width: 96px; color: var(--wd-mut); flex: none; }
+    .sc-stat-foot { margin-top: 14px; border-top: 1px solid var(--wd-line); padding-top: 10px; color: var(--wd-mut); font-size: 12px; line-height: 1.7; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -700,24 +858,87 @@
 <!-- PROJECT START -->
 <!-- ══════════════ -->
   <!-- YOUR PAGE CONTENT HERE -->
-  <!-- News Scraper app layer (Phase 1: project dashboard + intake wizard).
-       Invisible before sign-in — the full-screen auth wall covers it. -->
+  <!-- News Scraper app layer — Wire Desk shell (rebuild Phase 2).
+       Invisible before sign-in — the full-screen auth wall covers it.
+       IBM Plex loads from the body (a mid-stylesheet @import would be ignored
+       per spec since template CSS precedes the PROJECT block). -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
   <div id="scraper-app">
-    <div class="sc-shell">
-      <div class="sc-header">
-        <h1>📰 News Scraper</h1>
-        <div>
-          <button class="sc-btn" id="sc-notif-btn" type="button" title="Notification history" style="position:relative;">🔔<span id="sc-notif-badge" style="display:none;position:absolute;top:-6px;right:-6px;background:#b3261e;color:#fff;border-radius:9px;font-size:10px;line-height:1;padding:3px 5px;min-width:10px;text-align:center;"></span></button>
-          <button class="sc-btn" id="sc-refresh-btn" type="button">Refresh</button>
-          <button class="sc-btn primary" id="sc-new-btn" type="button">+ New Project</button>
+    <div class="wd-topbar">
+      <div class="wd-brand"><b>SCRAPER</b><span class="wd-lbl">News Desk</span></div>
+      <span id="wd-clock"></span>
+      <!-- Static while the scheduled pipeline is paused (both GAS pause flags
+           false since v03.02r). Phase 4 go-live removes or wires this pill. -->
+      <span class="wd-paused-pill" id="wd-paused-pill" title="Scheduled digests are paused during the rebuild — manual actions still work. Delivery resumes at Phase 4 go-live.">⏸ DIGEST PAUSED</span>
+      <div class="wd-spacer"></div>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button class="sc-btn" id="sc-notif-btn" type="button" title="Notification history" style="position:relative;">🔔<span id="sc-notif-badge" style="display:none;position:absolute;top:-6px;right:-6px;background:#b3392f;color:#fff;border-radius:9px;font-size:10px;line-height:1;padding:3px 5px;min-width:10px;text-align:center;"></span></button>
+        <button class="sc-btn" id="sc-refresh-btn" type="button">Refresh</button>
+        <button class="sc-btn primary" id="sc-new-btn" type="button">+ New Project</button>
+      </div>
+    </div>
+    <div class="wd-desk">
+      <aside class="wd-rail wd-rail-left" id="wd-interests">
+        <div class="wd-sect">
+          <div class="wd-sect-head">
+            <span class="wd-lbl">Companies</span>
+            <span class="wd-count" id="wd-co-count"></span>
+          </div>
+          <div class="wd-cat-chips" id="wd-co-cats" style="display:none;"></div>
+          <input id="wd-co-search" type="text" placeholder="Filter companies…" autocomplete="off">
+          <div class="wd-tog-list" id="wd-co-list"><span class="wd-loading">Loading interests…</span></div>
+          <button class="wd-link" id="wd-co-more" type="button" style="display:none;">Show all</button>
         </div>
-      </div>
-      <div id="sc-list"></div>
-      <div class="sc-empty" id="sc-empty" style="display:none;">
-        <p><b>No projects yet.</b></p>
-        <p>A Project is one research topic the scraper tracks for you —<br>
-        click <b>+ New Project</b> and answer a few questions to scope it.</p>
-      </div>
+        <div class="wd-sect">
+          <div class="wd-sect-head">
+            <span class="wd-lbl">Topics</span>
+            <span class="wd-count" id="wd-tp-count"></span>
+          </div>
+          <div class="wd-tog-list" id="wd-tp-list"></div>
+        </div>
+      </aside>
+      <main class="wd-main">
+        <div class="wd-main-head">
+          <span class="wd-title">Projects</span>
+          <span class="wd-sub" id="wd-proj-sub"></span>
+        </div>
+        <div id="sc-list"></div>
+        <div class="sc-empty" id="sc-empty" style="display:none;">
+          <p><b>No projects yet.</b></p>
+          <p>A Project is one research topic the scraper tracks for you —<br>
+          click <b>+ New Project</b> and answer a few questions to scope it.</p>
+        </div>
+      </main>
+      <aside class="wd-rail wd-rail-right">
+        <span class="wd-lbl">Digest controls</span>
+        <div class="wd-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <span class="wd-card-title">Schedule</span>
+            <span class="wd-note">7:00 AM ET</span>
+          </div>
+          <div class="wd-days">
+            <span class="wd-day">M</span><span class="wd-day">T</span><span class="wd-day">W</span><span class="wd-day">T</span><span class="wd-day">F</span><span class="wd-day off">S</span><span class="wd-day off">S</span>
+          </div>
+          <span class="wd-note">Monday edition covers the weekend (72h). Editable at Phase 3.</span>
+        </div>
+        <div class="wd-card wd-sync-card">
+          <span class="wd-card-title">⟳ Profiler sync</span>
+          <span class="wd-note" id="wd-sync-status">No sync data yet</span>
+          <button class="wd-link" id="wd-sync-now" type="button">Sync now</button>
+        </div>
+        <div class="wd-card">
+          <span class="wd-card-title">Rubric tester</span>
+          <span class="wd-note">Score a headline against your interests (company · topic · emphasis · substance)</span>
+          <input class="wd-rubric-input" id="wd-rubric-title" type="text" placeholder="Headline…" maxlength="300" autocomplete="off">
+          <textarea class="wd-rubric-input" id="wd-rubric-snippet" rows="3" placeholder="Snippet or first paragraph (optional)…" maxlength="2000"></textarea>
+          <button class="sc-btn" id="wd-rubric-btn" type="button" style="align-self:flex-start;">Score it</button>
+          <div id="wd-rubric-result">
+            <span id="wd-rubric-score"></span>
+            <div id="wd-rubric-sigs"></div>
+            <span class="wd-note" id="wd-rubric-matches"></span>
+          </div>
+        </div>
+      </aside>
     </div>
   </div>
   <div id="sc-wizard-overlay">
@@ -4519,6 +4740,11 @@
     plan_full: 'The search plan is full (40 groups) — remove or rebuild the plan before adding more.',
     plan_busy: 'Another plan update is still saving — wait a few seconds and try again.'
   };
+  // D3 (2026-08-27): the Profiler-derived scoring rubric replaces 👍/👎
+  // feedback. The feedback code paths and historical votes are preserved —
+  // only the UI is retired. Flip to true to restore the rating buttons,
+  // the Calibrate mode entry, and the rating-related coaching copy.
+  var SCRAPER_FEEDBACK_UI_ENABLED = false;
   var _scProjects = [];
   var _scWizStep = 0;
   var _scEditingId = null;   // null = create mode, otherwise project being edited
@@ -4579,13 +4805,13 @@
       + '<span><button class="sc-btn subtle" id="sc-notif-clear" type="button" style="font-size:11px;">Clear</button> '
       + '<button class="sc-btn subtle" id="sc-notif-close" type="button" style="font-size:11px;">✕</button></span></div>';
     if (!log.length) {
-      html += '<p style="color:#55606e;font-size:12px;margin:6px 0;">No notifications yet — the result of '
+      html += '<p style="color:#8a919d;font-size:12px;margin:6px 0;">No notifications yet — the result of '
         + 'every Compile, Backfill, Enrich, Analyze, and other action is saved here with its timestamp.</p>';
     } else {
       log.forEach(function(n) {
-        html += '<div style="padding:6px 0;border-bottom:1px solid #eceff3;font-size:12px;line-height:1.45;'
-          + (n.err ? 'color:#8c201c;' : 'color:#1f2733;') + '">'
-          + '<span style="color:#8a93a0;font-size:10.5px;">' + scEsc(new Date(n.t).toLocaleString()) + '</span><br>'
+        html += '<div style="padding:6px 0;border-bottom:1px solid #262b33;font-size:12px;line-height:1.45;'
+          + (n.err ? 'color:#e08a84;' : 'color:#c9cdd4;') + '">'
+          + '<span style="color:#6b7280;font-size:10.5px;">' + scEsc(new Date(n.t).toLocaleString()) + '</span><br>'
           + scEsc(n.msg) + '</div>';
       });
     }
@@ -4602,8 +4828,8 @@
       panel = document.createElement('div');
       panel.id = 'sc-notif-panel';
       panel.style.cssText = 'position:fixed;top:64px;right:16px;width:340px;max-width:calc(100vw - 32px);'
-        + 'max-height:60vh;overflow-y:auto;background:#fff;border:1px solid #d5dae2;border-radius:10px;'
-        + 'box-shadow:0 8px 28px rgba(20,28,40,0.18);padding:12px 14px;z-index:9000;display:none;';
+        + 'max-height:60vh;overflow-y:auto;background:#1b1e24;color:#e6e4de;border:1px solid #363c45;border-radius:6px;'
+        + 'box-shadow:0 8px 28px rgba(0,0,0,0.5);padding:12px 14px;z-index:9000;display:none;';
       document.body.appendChild(panel);
     }
     var opening = panel.style.display === 'none';
@@ -4630,8 +4856,9 @@
   }
 
   window._scraperInit = function() {
-    if (!_scInited) { scBindEvents(); _scInited = true; }
+    if (!_scInited) { scBindEvents(); wdInit_(); _scInited = true; }
     scLoadProjects();
+    wdInterestsLoad_();   // Wire Desk interests rail (rebuild Phase 2)
   };
 
   function scLoadProjects() {
@@ -4717,6 +4944,9 @@
     var list = $sc('sc-list');
     var empty = $sc('sc-empty');
     if (!list || !empty) return;
+    var sub = $sc('wd-proj-sub');
+    if (sub) sub.textContent = _scProjects.length
+      ? _scProjects.length + ' project' + (_scProjects.length === 1 ? '' : 's') : '';
     if (!_scProjects.length) {
       list.innerHTML = '';
       empty.style.display = 'block';
@@ -4739,7 +4969,7 @@
         + '<button class="sc-btn" type="button" data-act="enrich" data-id="' + scEsc(p.id) + '" title="Fetch missing article previews from the publishers">Enrich</button>'
         + '<button class="sc-btn" type="button" data-act="analyze" data-id="' + scEsc(p.id) + '">Analyze</button>'
         + '<button class="sc-btn" type="button" data-act="articles" data-id="' + scEsc(p.id) + '">Articles</button>'
-        + '<button class="sc-btn" type="button" data-act="calibrate" data-id="' + scEsc(p.id) + '">Calibrate</button>'
+        + (SCRAPER_FEEDBACK_UI_ENABLED ? '<button class="sc-btn" type="button" data-act="calibrate" data-id="' + scEsc(p.id) + '">Calibrate</button>' : '')
         + '<button class="sc-btn" type="button" data-act="scorestats" data-id="' + scEsc(p.id) + '" title="Score distribution and corpus health">Stats</button>'
         + '<button class="sc-btn" type="button" data-act="archivejunk" data-id="' + scEsc(p.id) + '" title="Move unrated articles scoring under 10 out of the collection (reversible — they move to the ArticlesArchive tab and are never re-imported)">Archive junk</button>'
         + '<button class="sc-btn" type="button" data-act="edit" data-id="' + scEsc(p.id) + '">Edit</button>'
@@ -5421,7 +5651,7 @@
       rec = 'Analyze (' + s.unscored + ' articles are still unscored)';
     } else if (s.total && (s.withSnippet / s.total) < 0.8) {
       rec = 'Enrich (previews are missing for ' + (s.total - s.withSnippet) + ' articles — scores improve with previews)';
-    } else if (s.ratablePool) {
+    } else if (s.ratablePool && SCRAPER_FEEDBACK_UI_ENABLED) {
       rec = 'rate a few 👍/👎 in Articles to sharpen future scoring';
     } else {
       rec = 'Backfill or Deep backfill to grow the collection';
@@ -5599,7 +5829,9 @@
         if (totalScored) {
           scToast('Analysis finished — ' + totalScored + ' article' + (totalScored === 1 ? '' : 's') + ' scored.'
             + (learnedFrom ? ' 🧠 Preferences updated from your ' + learnedFrom + ' ratings.' : '')
-            + ' Next: rate a few 👍/👎 in Articles, or open Stats to check the distribution.', false, 9000);
+            + (SCRAPER_FEEDBACK_UI_ENABLED
+              ? ' Next: rate a few 👍/👎 in Articles, or open Stats to check the distribution.'
+              : ' Next: open Articles to read, or Stats to check the distribution.'), false, 9000);
         } else if (data && data.hasArticles === false) {
           scToast('No articles to analyze yet — run Compile first to gather news.', true);
           return;  // nothing to show — skip opening the articles panel
@@ -5793,10 +6025,12 @@
       + '<h4>' + scScoreChip(a.score) + '<a href="' + scEsc(a.url) + '" target="_blank" rel="noopener noreferrer">' + scEsc(a.title || a.url) + '</a></h4>'
       + '<div class="sc-art-meta">' + scEsc(a.source || '') + (a.publishedAt ? ' · ' + scEsc(a.publishedAt) : '') + '</div>'
       + body
-      + '<div class="sc-art-verdict" data-id="' + scEsc(String(a.id)) + '">'
-      + '<button type="button" class="sc-vbtn up' + (a.verdict === 'up' ? ' on' : '') + '" data-v="up" title="Relevant — score articles like this higher">👍</button>'
-      + '<button type="button" class="sc-vbtn down' + (a.verdict === 'down' ? ' on' : '') + '" data-v="down" title="Not relevant — score articles like this lower">👎</button>'
-      + '</div>'
+      + (SCRAPER_FEEDBACK_UI_ENABLED
+        ? '<div class="sc-art-verdict" style="display:flex;" data-id="' + scEsc(String(a.id)) + '">'
+          + '<button type="button" class="sc-vbtn up' + (a.verdict === 'up' ? ' on' : '') + '" data-v="up" title="Relevant — score articles like this higher">👍</button>'
+          + '<button type="button" class="sc-vbtn down' + (a.verdict === 'down' ? ' on' : '') + '" data-v="down" title="Not relevant — score articles like this lower">👎</button>'
+          + '</div>'
+        : '')
       + '</div>';
   }
 
@@ -6259,6 +6493,247 @@
         nextBtn.disabled = false;
         scShowStep();  // restores the Next/Create label
       });
+  }
+
+  // ── Rebuild Phase 2 — Wire Desk interests rail + rubric tester ──
+  // Data source: the Phase 1 GAS routes (listInterests / setInterestEnabled /
+  // syncInterestsNow / rubricPreview). Companies mirror Profiler's registry
+  // via the daily server-side sync; topics are the guidance/market seeds.
+  var _wdInterests = [];
+  var _wdLastSync = null;
+  var _wdCoShowAll = false;
+  var _wdCoFilter = '';
+  var WD_CO_PREVIEW = 12;   // companies shown before "All N companies"
+  var _wdInited = false;
+
+  function wdInit_() {
+    if (_wdInited) return;
+    _wdInited = true;
+    wdClockTick_();
+    setInterval(wdClockTick_, 30000);
+    var search = $sc('wd-co-search');
+    if (search) search.addEventListener('input', function() {
+      _wdCoFilter = search.value.trim().toLowerCase();
+      wdRenderCompanies_();
+    });
+    var more = $sc('wd-co-more');
+    if (more) more.addEventListener('click', function() {
+      _wdCoShowAll = !_wdCoShowAll;
+      wdRenderCompanies_();
+    });
+    var syncBtn = $sc('wd-sync-now');
+    if (syncBtn) syncBtn.addEventListener('click', wdSyncNow_);
+    var rubricBtn = $sc('wd-rubric-btn');
+    if (rubricBtn) rubricBtn.addEventListener('click', wdRubricScore_);
+    var coList = $sc('wd-co-list'), tpList = $sc('wd-tp-list');
+    if (coList) coList.addEventListener('click', wdToggleClick_);
+    if (tpList) tpList.addEventListener('click', wdToggleClick_);
+  }
+
+  function wdClockTick_() {
+    var el = $sc('wd-clock');
+    if (!el) return;
+    try {
+      var p = {};
+      new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York',
+        weekday: 'short', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', hour12: false
+      }).formatToParts(new Date()).forEach(function(x) { p[x.type] = x.value; });
+      el.textContent = p.weekday + ' ' + p.month + '/' + p.day + ' · ' + p.hour + ':' + p.minute + ' ET';
+    } catch (e) { el.textContent = ''; }
+  }
+
+  function wdInterestsLoad_() {
+    _gasPost({ action: 'listInterests', token: scToken() })
+      .then(function(data) {
+        if (!data || !data.success) {
+          var el = $sc('wd-co-list');
+          if (el) el.innerHTML = '<span class="wd-loading">' + scEsc(scErrMsg(data && data.error)) + '</span>';
+          return;
+        }
+        _wdInterests = data.interests || [];
+        _wdLastSync = data.lastSync || null;
+        wdRenderInterests_();
+      })
+      .catch(function(err) {
+        var el = $sc('wd-co-list');
+        if (el) el.innerHTML = '<span class="wd-loading">Interests unavailable (' + scEsc((err && err.message) || err) + ')</span>';
+      });
+  }
+
+  function wdRenderInterests_() { wdRenderCompanies_(); wdRenderTopics_(); wdRenderSync_(); }
+
+  /** One interest row: name · flag chip · toggle. Stale rows are dimmed,
+      struck through, and read-only (the sync never deletes coverage). */
+  function wdIntRow_(it) {
+    var stale = it.status === 'stale';
+    var cls = 'wd-int-row' + (stale ? ' stale' : (it.enabled ? '' : ' off'));
+    var flag = it.flag
+      ? '<span class="wd-int-flag' + (stale ? ' ended' : '') + '">' + scEsc(it.flag) + '</span>'
+      : '';
+    return '<div class="' + cls + '">'
+      + '<span class="wd-int-name" title="' + scEsc(it.label + (it.categories ? ' · ' + it.categories : '')) + '">' + scEsc(it.label) + '</span>'
+      + flag
+      + '<button type="button" class="wd-tg' + (it.enabled ? ' on' : '') + '" data-key="' + scEsc(it.key) + '"'
+      + (stale
+        ? ' disabled title="No longer covered by Profiler — kept for history"'
+        : ' title="' + (it.enabled ? 'On — counts toward digest relevance' : 'Off — excluded from digests') + '"')
+      + '></button></div>';
+  }
+
+  function wdRenderCompanies_() {
+    var el = $sc('wd-co-list');
+    if (!el) return;
+    var cos = _wdInterests.filter(function(i) { return i.type === 'company'; });
+    var active = cos.filter(function(i) { return i.status === 'active'; });
+    var on = active.filter(function(i) { return i.enabled; }).length;
+    var cnt = $sc('wd-co-count');
+    if (cnt) cnt.textContent = cos.length ? (on + '/' + active.length + ' on') : '';
+    var cats = {};
+    active.forEach(function(i) {
+      String(i.categories || '').split(/,\s*/).forEach(function(c) { if (c) cats[c] = (cats[c] || 0) + 1; });
+    });
+    var newCount = active.filter(function(i) { return i.flag; }).length;
+    var catEl = $sc('wd-co-cats');
+    if (catEl) {
+      var chips = Object.keys(cats).sort(function(a, b) { return cats[b] - cats[a]; })
+        .slice(0, 4).map(function(c) {
+          return '<span class="wd-cat-chip">' + scEsc(c.charAt(0).toUpperCase() + c.slice(1)) + ' · ' + cats[c] + '</span>';
+        });
+      if (newCount) chips.push('<span class="wd-cat-chip new">+' + newCount + ' new</span>');
+      catEl.innerHTML = chips.join('');
+      catEl.style.display = chips.length ? 'flex' : 'none';
+    }
+    var list = _wdCoFilter
+      ? cos.filter(function(i) {
+          return (i.label + ' ' + i.categories + ' ' + i.aliases).toLowerCase().indexOf(_wdCoFilter) !== -1;
+        })
+      : cos;
+    // Flagged (new coverage) rows float to the top; stale rows sink.
+    list = list.slice().sort(function(a, b) {
+      function rank(x) { return x.status === 'stale' ? 2 : (x.flag ? 0 : 1); }
+      return (rank(a) - rank(b)) || a.label.localeCompare(b.label);
+    });
+    var shown = (_wdCoShowAll || _wdCoFilter) ? list : list.slice(0, WD_CO_PREVIEW);
+    el.innerHTML = shown.length
+      ? shown.map(wdIntRow_).join('')
+      : '<span class="wd-loading">' + (cos.length
+          ? 'No companies match the filter'
+          : 'No companies yet — the daily Profiler sync fills this list') + '</span>';
+    var more = $sc('wd-co-more');
+    if (more) {
+      if (!_wdCoFilter && list.length > WD_CO_PREVIEW) {
+        more.style.display = '';
+        more.textContent = _wdCoShowAll ? 'Show fewer' : 'All ' + list.length + ' companies';
+      } else more.style.display = 'none';
+    }
+  }
+
+  function wdRenderTopics_() {
+    var el = $sc('wd-tp-list');
+    if (!el) return;
+    var tps = _wdInterests.filter(function(i) { return i.type === 'topic'; });
+    var on = tps.filter(function(i) { return i.enabled && i.status === 'active'; }).length;
+    var cnt = $sc('wd-tp-count');
+    if (cnt) cnt.textContent = tps.length ? (on + '/' + tps.length + ' on') : '';
+    el.innerHTML = tps.length
+      ? tps.map(wdIntRow_).join('')
+      : '<span class="wd-loading">No topics yet — seeded by the daily sync</span>';
+  }
+
+  function wdRenderSync_() {
+    var el = $sc('wd-sync-status');
+    if (!el) return;
+    if (_wdLastSync && _wdLastSync.at) {
+      var when = new Date(_wdLastSync.at).toLocaleString();
+      el.textContent = _wdLastSync.ok === false
+        ? 'Last sync failed (' + (_wdLastSync.error || 'error') + ') · ' + when
+        : (_wdLastSync.total || 0) + ' interests · synced ' + when
+          + (_wdLastSync.added ? ' · +' + _wdLastSync.added + ' new' : '');
+    } else {
+      el.textContent = 'No sync yet — runs daily, or tap Sync now';
+    }
+  }
+
+  function wdToggleClick_(ev) {
+    var btn = ev.target.closest ? ev.target.closest('button.wd-tg') : null;
+    if (!btn || btn.disabled) return;
+    var key = btn.getAttribute('data-key');
+    var it = null;
+    _wdInterests.forEach(function(i) { if (i.key === key) it = i; });
+    if (!it) return;
+    var to = !it.enabled;
+    it.enabled = to;
+    it.flag = '';   // optimistic — toggling acknowledges the "new" flag (server clears it too)
+    wdRenderInterests_();
+    _gasPost({ action: 'setInterestEnabled', token: scToken(), key: key, enabled: to ? '1' : '0' })
+      .then(function(data) {
+        if (!data || !data.success) {
+          it.enabled = !to;
+          wdRenderInterests_();
+          scToast(scErrMsg(data && data.error), true);
+        }
+      })
+      .catch(function(err) {
+        it.enabled = !to;
+        wdRenderInterests_();
+        scToast('Could not save the toggle (' + scEsc((err && err.message) || err) + '). Please try again.', true);
+      });
+  }
+
+  function wdSyncNow_() {
+    var btn = $sc('wd-sync-now');
+    if (btn) { btn.disabled = true; btn.textContent = 'Syncing…'; }
+    _gasPost({ action: 'syncInterestsNow', token: scToken() })
+      .then(function(data) {
+        if (data && data.success) {
+          var r = data.result || {};
+          scToast(r.skipped
+            ? 'Sync skipped (' + r.skipped + ').'
+            : 'Interests synced — ' + (r.added || 0) + ' new compan' + ((r.added || 0) === 1 ? 'y' : 'ies')
+              + ', ' + (r.updated || 0) + ' updated' + (r.stale ? ', ' + r.stale + ' coverage ended' : '') + '.');
+          wdInterestsLoad_();
+        } else {
+          scToast(scErrMsg(data && data.error), true);
+        }
+      })
+      .catch(function(err) {
+        scToast('Sync failed (' + scEsc((err && err.message) || err) + '). Please try again.', true);
+      })
+      .then(function() { if (btn) { btn.disabled = false; btn.textContent = 'Sync now'; } });
+  }
+
+  function wdRubricScore_() {
+    var title = ($sc('wd-rubric-title').value || '').trim();
+    var snippet = ($sc('wd-rubric-snippet').value || '').trim();
+    if (!title && !snippet) { scToast('Type a headline (or snippet) to score first.', true); return; }
+    var btn = $sc('wd-rubric-btn');
+    if (btn) { btn.disabled = true; btn.textContent = 'Scoring…'; }
+    _gasPost({ action: 'rubricPreview', token: scToken(),
+               payload: JSON.stringify({ title: title, snippet: snippet }) })
+      .then(function(data) {
+        if (!data || !data.success) { scToast(scErrMsg(data && data.error), true); return; }
+        var sig = data.signals || {};
+        var maxes = { company: 40, topic: 25, emphasis: 15, substance: 20 };
+        var names = { company: 'Company', topic: 'Topic', emphasis: 'Emphasis', substance: 'Substance' };
+        $sc('wd-rubric-score').textContent = (data.score || 0) + ' / 100';
+        $sc('wd-rubric-sigs').innerHTML = ['company', 'topic', 'emphasis', 'substance'].map(function(k) {
+          var v = Number(sig[k]) || 0;
+          var pct = Math.max(0, Math.min(100, Math.round(v / maxes[k] * 100)));
+          return '<div class="wd-sig-row"><span class="wd-sig-name">' + names[k] + '</span>'
+            + '<span class="wd-sig-track"><span class="wd-sig-fill" style="width:' + pct + '%;"></span></span>'
+            + '<span class="wd-sig-val">' + v + '/' + maxes[k] + '</span></div>';
+        }).join('');
+        var m = (data.matchedCompanies || []).concat(data.matchedTopics || []);
+        $sc('wd-rubric-matches').textContent = m.length
+          ? 'Matched: ' + m.join(', ')
+          : 'No interest matches — likely below the relevance bar';
+        $sc('wd-rubric-result').style.display = 'flex';
+      })
+      .catch(function(err) {
+        scToast('Could not score (' + scEsc((err && err.message) || err) + '). Please try again.', true);
+      })
+      .then(function() { if (btn) { btn.disabled = false; btn.textContent = 'Score it'; } });
   }
 })();
 

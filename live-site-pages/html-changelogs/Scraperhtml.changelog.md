@@ -3,11 +3,23 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 35/50`
+`Sections: 36/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.36w] — 2026-08-27 05:08:03 PM EST — v03.05r
+
+### Added
+- A brand-new dark "news desk" look for the whole app — charcoal panels, amber highlights, and a newsroom typeface for faster scanning
+- Your interests now live on the main screen: every covered company and industry topic appears with its own on/off switch, so you control exactly what counts toward your digests
+- Newly covered companies are highlighted as new, and companies no longer covered are kept visible but marked — nothing disappears without you seeing it
+- A "Sync now" control to refresh the company list on demand, with the last sync time always shown
+- A relevance tester: paste any headline to see how it would score against your current interests, with a breakdown of why
+
+### Changed
+- Thumbs-up/down article rating is retired — relevance now follows the companies and topics you research, with no manual training needed. Past ratings are preserved
 
 ## [v01.35w] — 2026-08-27 04:09:00 PM EST — v03.03r
 
