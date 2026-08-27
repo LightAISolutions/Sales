@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.04r] — 2026-08-27 04:39:36 PM EST
+
+> **Prompt:** "Picking up from my recent "Scraper digest customization and Profiler Integration" session, execute Phase 1 of the approved Scraper rebuild"
+
+### Added
+- **Interests tab + daily Profiler-registry sync in `Scraper.gs` (rebuild Phase 1)** — new `Interests` tab (Key / Type / Label / Enabled / Status / Flag / Categories / Aliases / Weight / Source / Profiler Updated / First Seen / Last Synced / Notes) synced from the public GitHub Pages `profiler-data/profiler-companies.json` by `scSyncInterests_()`: new active registry companies upsert default-ON flagged "New coverage"; companies that leave the registry are marked stale ("Coverage ended"), never deleted; registry-owned fields refresh on sync while developer-owned fields (Enabled / Aliases / Weight / Notes / Flag) are never overwritten (a stale→active return re-flags as new coverage). Driven by the hourly `scSchedulerTick` ahead of the pipeline pause gate (no AI tokens, no email; throttled to ~once/day; serialized under the script lock; a failed fetch is recorded and never stale-flags real coverage). Manual editor fallback `syncProfilerInterests()`
+- **Ten topic-interest seeds** (`SCRAPER_INTEREST_TOPIC_SEEDS`) — six mapped 1:1 to the Industry Guidance modules (800 VDC, China policy, utility procurement, BESS bankability, BESS technology, grid infrastructure) and four standing market topics from the original rebuild request (AIDC geopolitics, community opposition, battery fire incidents, US buildout/capex). Insert-only: once a seed lands in the tab, in-sheet developer edits win
+- **Four-signal scoring rubric scaffolding (decision D3)** — `scRubricScore_()` + `scLoadInterestModel_()` + word-boundary matcher `scTermsHit_()`: company (0–40, developer Weight scales it), topic (0–25), Profiler-emphasis (0–15: coverage base + dossier recency over 45 days + weight boost), substance (0–20: deterministic snippet heuristics — length, figures, quotes, hard-news verbs). 0–100 output aligned with `SCRAPER_RELEVANT_THRESHOLD`; Phase 3 wires it into the digest scoring path (feedback code + historical votes preserved per D3). Node-based functional tests verified the scoring shape and the word-boundary guard (short names like ABB cannot match inside longer words)
+- **Four session-gated routes for the Phase 2 panel** — `listInterests`, `setInterestEnabled` (toggling clears the attention flag), `syncInterestsNow`, `rubricPreview` — registered in `SCRAPER_PROJECT_ACTIONS` and `handleProjectAction_` (served by both doPost and the doGet api mirror)
+
+### Changed
+- **`Scraper.gs`** VERSION v01.37g → v01.38g; `Scrapergs.version.txt` synced; public entry added to the GAS changelog (counter 37 → 38)
+- **`.claude/rules/industry-guidance.md`** — new step 9: authoring a guidance module now also adds a matching topic seed to `SCRAPER_INTEREST_TOPIC_SEEDS` (the approved authoring-time sync — no runtime Profiler probe)
+- **`repository-information/diagrams/Scraper-diagram.md`** — added the Interest Model Sync flow (registry participant, daily sync loop before the pause gate, the new session-gated ops); mermaid.live URL regenerated and decompression-verified
+- **README tree** — Scraper version display v01.37g → v01.38g
 
 ## [v03.03r] — 2026-08-27 04:09:00 PM EST
 

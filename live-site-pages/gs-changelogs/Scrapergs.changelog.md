@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 37/50`
+`Sections: 38/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.38g] — 2026-08-27 04:39:36 PM EST — v03.04r
+
+### Added
+- Your news interests now build themselves: the companies you research in the company-profile app flow into a new interest list automatically, refreshed daily. Newly covered companies join enabled and flagged as new coverage; companies no longer covered are kept but marked — nothing is ever deleted
+- A starter set of industry topic interests (policy, grid, safety incidents, market buildout, and more), each of which can be switched on or off
+- Groundwork for smarter article relevance that learns from your research focus instead of requiring thumbs-up/down feedback
 
 ## [v01.37g] — 2026-08-27 04:09:00 PM EST — v03.03r
 

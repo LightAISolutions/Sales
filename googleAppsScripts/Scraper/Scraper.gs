@@ -1,4 +1,4 @@
-var VERSION = "v01.37g";
+var VERSION = "v01.38g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -329,7 +329,8 @@ var SCRAPER_TABS = {
   PREFERENCES: 'Preferences',
   USAGE: 'UsageLog',
   ARCHIVE: 'ArticlesArchive',
-  QUERYPLANS: 'QueryPlans'
+  QUERYPLANS: 'QueryPlans',
+  INTERESTS: 'Interests'
 };
 
 var SCRAPER_TAB_HEADERS = {
@@ -349,7 +350,10 @@ var SCRAPER_TAB_HEADERS = {
   ArticlesArchive: ['Article ID', 'Project ID', 'Owner', 'URL', 'Title', 'Source',
                     'Published At', 'Fetched At', 'Snippet', 'Summary', 'Relevance Score',
                     'User Verdict', 'Report ID', 'Archived At'],
-  QueryPlans: ['Project ID', 'Owner', 'Queries', 'Planned At', 'Manual']
+  QueryPlans: ['Project ID', 'Owner', 'Queries', 'Planned At', 'Manual'],
+  Interests: ['Key', 'Type', 'Label', 'Enabled', 'Status', 'Flag', 'Categories',
+              'Aliases', 'Weight', 'Source', 'Profiler Updated', 'First Seen',
+              'Last Synced', 'Notes']
 };
 
 var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual', 'annual', 'custom'];
@@ -363,7 +367,9 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'setArticleVerdict', 'distillPreferences', 'resetScores',
                                'getScoreStats', 'archiveJunk',
                                'planQueries', 'getQueryPlan', 'addPlanQuery', 'deepBackfillNow',
-                               'getSchedulerHealth', 'setArticleVerdicts'];
+                               'getSchedulerHealth', 'setArticleVerdicts',
+                               'listInterests', 'setInterestEnabled', 'syncInterestsNow',
+                               'rubricPreview'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -420,6 +426,73 @@ var SCRAPER_DEEPBF_QUARTERS = 8;        // 2 years of history in quarter slices
 var SCRAPER_DEEPBF_GROUPS_MAX = 8;      // query groups per deep backfill run
 var SCRAPER_DEEPBF_SEARCHES_PER_CALL = 3;
 var SCRAPER_DEEPBF_ARTICLES_PER_CALL = 20;
+
+// ── Rebuild Phase 1: Profiler-derived interest model ──
+// The Interests tab mirrors Profiler's public company registry plus a seeded
+// topic list. It is the store the Phase 3 digest engine scores against and
+// the Phase 2 Interests panel edits. Sync design (approved 2026-08-27):
+// a daily pull of the public GitHub Pages registry JSON — new companies
+// arrive default-ON flagged "New coverage"; companies that leave the registry
+// are marked stale, never deleted. Guidance topics sync at authoring time
+// (the Industry Guidance Command adds a seed below), NOT via a runtime
+// Profiler API probe.
+var SCRAPER_INTERESTS_SYNC_ENABLED = true;   // registry-sync switch, independent of the pipeline pause
+var SCRAPER_PROFILER_REGISTRY_URL =
+  'https://lightaisolutions.github.io/Sales/profiler-data/profiler-companies.json';
+var SCRAPER_INTERESTS_SYNC_MIN_MS = 20 * 3600 * 1000;  // hourly tick syncs at most ~once/day
+var SCRAPER_INTERESTS_MAX_ROWS = 2000;       // read cap (registry is ~90 companies today)
+var SCRAPER_INTEREST_FLAG_NEW = 'New coverage';
+var SCRAPER_INTEREST_FLAG_STALE = 'Coverage ended';
+var SCRAPER_INTEREST_FLAG_NEWTOPIC = 'New topic';
+
+// Topic seeds — the source of truth for non-company interests. 'guidance:'
+// seeds map 1:1 to Industry Guidance modules in Profiler.gs (authoring a new
+// module adds a seed here per .claude/rules/industry-guidance.md); 'market'
+// seeds are the standing US-AIDC-wide topics from the original rebuild
+// request (geopolitical policy, public opposition, battery fire incidents).
+// Terms are the default search/match aliases; once a seed lands in the
+// Interests tab the developer's in-sheet edits win and are never overwritten.
+var SCRAPER_INTEREST_TOPIC_SEEDS = [
+  { key: 'topic-800vdc-power', label: '800 VDC & AI-factory power architecture',
+    terms: ['800 VDC', '800V DC', 'sidecar power rack', 'solid-state transformer', 'power architecture'],
+    source: 'guidance:nvidia-800vdc-2026-08' },
+  { key: 'topic-china-policy', label: 'China trade policy & BESS supply chain',
+    terms: ['tariff', 'export control', 'FEOC', 'Section 301', 'supply chain', 'decoupling'],
+    source: 'guidance:china-policy-stack-2026-08' },
+  { key: 'topic-utility-procurement', label: 'Utility procurement & large-load interconnection',
+    terms: ['interconnection', 'large load', 'tariff filing', 'ERCOT', 'PJM', 'co-location', 'behind-the-meter'],
+    source: 'guidance:utility-aidc-procurement-2026-08' },
+  { key: 'topic-bess-bankability', label: 'BESS bankability, certification & safety standards',
+    terms: ['UL 9540A', 'NFPA 855', 'bankability', 'certification', 'warranty'],
+    source: 'guidance:bess-bankability-2026-08' },
+  { key: 'topic-bess-technology', label: 'BESS technology & battery cell supply',
+    terms: ['LFP', 'battery cell', 'sodium-ion', 'grid-scale battery', 'energy storage system'],
+    source: 'guidance:bess-tech-fundamentals-2026-08' },
+  { key: 'topic-grid-infrastructure', label: 'Grid infrastructure & the AIDC power chain',
+    terms: ['grid capacity', 'transformer shortage', 'gas turbine', 'transmission', 'NOGRR 282', 'SB 6'],
+    source: 'guidance:power-infra-aidc-2026-08' },
+  { key: 'topic-aidc-geopolitics', label: 'Geopolitical & federal policy affecting AIDC',
+    terms: ['executive order', 'permitting reform', 'national security', 'chip export', 'energy policy'],
+    source: 'market' },
+  { key: 'topic-community-opposition', label: 'Data-center siting & public opposition',
+    terms: ['moratorium', 'zoning', 'protest', 'opposition', 'noise complaint', 'water use'],
+    source: 'market' },
+  { key: 'topic-battery-incidents', label: 'Battery fire & safety incidents',
+    terms: ['battery fire', 'thermal runaway', 'ESS fire', 'storage facility fire', 'recall'],
+    source: 'market' },
+  { key: 'topic-aidc-buildout', label: 'US data-center buildout, power deals & capex',
+    terms: ['data center', 'gigawatt', 'capex', 'hyperscaler', 'power purchase', 'nuclear'],
+    source: 'market' }
+];
+
+// Four-signal scoring rubric (decision D3, 2026-08-27) — replaces 👍/👎
+// feedback as the relevance model. Signals sum to a 0-100 score aligned
+// with SCRAPER_RELEVANT_THRESHOLD. Phase 1 ships the deterministic
+// scaffolding; Phase 3 wires it into the digest engine's scoring path
+// (the legacy feedback-exemplar path stays in code per D3 — feedback is
+// off and hidden, historical votes preserved).
+var SCRAPER_RUBRIC_WEIGHTS = { company: 40, topic: 25, emphasis: 15, substance: 20 };
+var SCRAPER_RUBRIC_RECENT_DAYS = 45;  // Profiler lastUpdated within this window earns the full emphasis recency
 
 function scraperSs_() {
   if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
@@ -1957,6 +2030,322 @@ function scEnrichChunk_(ss, email, project) {
            total: state.total, enriched: state.enriched, failed: state.failed };
 }
 
+// ── Rebuild Phase 1: Profiler-registry → Interests sync ─────────────────
+// Daily upsert of Profiler's public company registry (plus the topic seeds)
+// into the Interests tab. Driven by the hourly scheduler tick ahead of the
+// pipeline pause gate — the sync spends no AI tokens and sends no email.
+
+/** Fetch + parse the public Profiler company registry (GitHub Pages). */
+function scFetchProfilerRegistry_() {
+  var resp = UrlFetchApp.fetch(SCRAPER_PROFILER_REGISTRY_URL + '?_cb=' + Date.now(),
+                               { muteHttpExceptions: true, followRedirects: true });
+  if (resp.getResponseCode() !== 200) throw new Error('registry_http_' + resp.getResponseCode());
+  var parsed = JSON.parse(resp.getContentText());
+  if (!parsed || !Array.isArray(parsed.companies)) throw new Error('registry_shape');
+  return parsed;
+}
+
+/** Manual fallback: run from the Apps Script editor to force a sync now. */
+function syncProfilerInterests() {
+  Logger.log(JSON.stringify(scSyncInterests_(true)));
+}
+
+/** Core registry → Interests upsert. Idempotent; never deletes a row.
+    - New active registry company → row appended, Enabled=TRUE, flagged
+      "New coverage" (default-ON per the approved interest model).
+    - Existing row → only registry-owned fields refresh (Label, Categories,
+      Profiler Updated, Status, Last Synced). Developer-owned fields
+      (Enabled, Aliases, Weight, Notes, Flag) are never overwritten — except
+      a stale→active return, which re-flags as new coverage.
+    - Registry-sourced company no longer active in the registry → Status
+      "stale" + "Coverage ended" flag; the row (and its toggle) stays.
+    - Topic seeds upsert the same way (insert-only; in-sheet edits win).
+    A failed fetch records the error and leaves the tab untouched — a bad
+    pull must never stale-flag real coverage. Throttled to ~once/day unless
+    forced; serialized under the script lock. */
+function scSyncInterests_(force) {
+  if (!SCRAPER_INTERESTS_SYNC_ENABLED) return { skipped: 'disabled' };
+  var props = PropertiesService.getScriptProperties();
+  var last = Number(props.getProperty('INTERESTS_LAST_SYNC')) || 0;
+  if (!force && (Date.now() - last) < SCRAPER_INTERESTS_SYNC_MIN_MS) {
+    return { skipped: 'fresh', lastSync: last };
+  }
+  var registry;
+  try {
+    registry = scFetchProfilerRegistry_();
+  } catch (fetchErr) {
+    try {
+      props.setProperty('INTERESTS_LAST_SYNC_RESULT', JSON.stringify({
+        ok: false, error: String((fetchErr && fetchErr.message) || fetchErr).slice(0, 200),
+        at: Date.now() }));
+    } catch (recErr) {}
+    return { skipped: 'fetch_failed' };
+  }
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return { skipped: 'locked' };
+  try {
+    var ss = scraperSs_();
+    ensureScraperTabs_(ss);
+    var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+    var width = SCRAPER_TAB_HEADERS.Interests.length;
+    var data = sheet.getDataRange().getValues();
+    var byKey = {};  // Key → 0-based index into data
+    for (var i = 1; i < data.length && i < SCRAPER_INTERESTS_MAX_ROWS; i++) {
+      var k = String(data[i][0]).trim();
+      if (k) byKey[k] = i;
+    }
+    var now = new Date();
+    var added = 0, addedTopics = 0, updated = 0, stale = 0, dirty = false;
+    var appendRows = [];
+    var seen = {};
+    var companies = registry.companies || [];
+    for (var c = 0; c < companies.length; c++) {
+      var co = companies[c];
+      var slug = String(co.slug || '').trim();
+      if (!slug || String(co.status || 'active') !== 'active') continue;
+      seen[slug] = true;
+      var name = String(co.name || slug);
+      var cats = (co.categories || []).join(', ');
+      var pUpdated = String(co.lastUpdated || '');
+      if (byKey[slug] === undefined) {
+        appendRows.push([slug, 'company', name, true, 'active',
+          SCRAPER_INTEREST_FLAG_NEW, cats, name, 1, 'profiler-registry',
+          pUpdated, now, now, '']);
+        added++;
+      } else {
+        var r = data[byKey[slug]];
+        var wasStale = String(r[4]) === 'stale';
+        r[2] = name; r[4] = 'active'; r[6] = cats; r[10] = pUpdated; r[12] = now;
+        if (wasStale) r[5] = SCRAPER_INTEREST_FLAG_NEW;
+        updated++; dirty = true;
+      }
+    }
+    // Stale pass — registry-sourced companies that left the active registry.
+    for (var s = 1; s < data.length; s++) {
+      var row = data[s];
+      if (String(row[1]) !== 'company' || String(row[9]) !== 'profiler-registry') continue;
+      var key = String(row[0]).trim();
+      if (!key || seen[key] || String(row[4]) === 'stale') continue;
+      row[4] = 'stale'; row[5] = SCRAPER_INTEREST_FLAG_STALE; row[12] = now;
+      stale++; dirty = true;
+    }
+    // Topic seeds — insert-only; existing topic rows are developer territory.
+    for (var t = 0; t < SCRAPER_INTEREST_TOPIC_SEEDS.length; t++) {
+      var seed = SCRAPER_INTEREST_TOPIC_SEEDS[t];
+      if (byKey[seed.key] !== undefined) continue;
+      appendRows.push([seed.key, 'topic', seed.label, true, 'active',
+        SCRAPER_INTEREST_FLAG_NEWTOPIC, '', seed.terms.join(', '), 1, seed.source,
+        '', now, now, '']);
+      addedTopics++;
+    }
+    if (dirty && data.length > 1) {
+      sheet.getRange(2, 1, data.length - 1, width).setValues(
+        data.slice(1).map(function(dr) { return dr.slice(0, width); }));
+    }
+    if (appendRows.length) {
+      sheet.getRange(data.length + 1, 1, appendRows.length, width).setValues(appendRows);
+    }
+    var summary = { ok: true, added: added, addedTopics: addedTopics, updated: updated,
+                    stale: stale, total: data.length - 1 + appendRows.length, at: Date.now() };
+    props.setProperty('INTERESTS_LAST_SYNC', String(Date.now()));
+    props.setProperty('INTERESTS_LAST_SYNC_RESULT', JSON.stringify(summary));
+    return summary;
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+/** Load the enabled, active interest model from the Interests tab
+    (per-execution cache). Lower-cased match terms are precomputed; the
+    row's Label is always included as a term. */
+var _scInterestModel = null;
+function scLoadInterestModel_(ss) {
+  if (_scInterestModel) return _scInterestModel;
+  var model = { companies: [], topics: [] };
+  var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+  if (sheet) {
+    var data = sheet.getDataRange().getValues();
+    for (var i = 1; i < data.length && i < SCRAPER_INTERESTS_MAX_ROWS; i++) {
+      var r = data[i];
+      var on = r[3] === true || String(r[3]).toLowerCase() === 'true';
+      if (!on || String(r[4]) !== 'active') continue;
+      var label = String(r[2] || '').trim();
+      var terms = String(r[7] || '').split(/[\n,]/).map(function(t) {
+        return t.trim().toLowerCase();
+      }).filter(function(t) { return t.length >= 3; });
+      if (label.length >= 3 && terms.indexOf(label.toLowerCase()) === -1) {
+        terms.push(label.toLowerCase());
+      }
+      var entry = { key: String(r[0]), label: label, terms: terms,
+                    weight: Math.max(0, Math.min(3, Number(r[8]) || 1)),
+                    profilerUpdated: String(r[10] || '') };
+      (String(r[1]) === 'company' ? model.companies : model.topics).push(entry);
+    }
+  }
+  _scInterestModel = model;
+  return model;
+}
+
+/** True when any term hits the text on a word boundary (protects short
+    company names like ABB/BYD from substring false-positives). */
+function scTermsHit_(text, terms) {
+  for (var i = 0; i < terms.length; i++) {
+    var t = terms[i];
+    if (!t) continue;
+    var idx = text.indexOf(t);
+    while (idx !== -1) {
+      var before = idx === 0 ? '' : text.charAt(idx - 1);
+      var after = idx + t.length >= text.length ? '' : text.charAt(idx + t.length);
+      if (!/[a-z0-9]/.test(before) && !/[a-z0-9]/.test(after)) return true;
+      idx = text.indexOf(t, idx + 1);
+    }
+  }
+  return false;
+}
+
+/** Four-signal relevance rubric (decision D3) — deterministic scaffolding.
+    company (0-40): strongest matched company (developer Weight scales it),
+      +15% of the band per extra matched company, capped at the band.
+    topic (0-25): same shape over topic interests (+20% per extra match).
+    emphasis (0-15): Profiler's emphasis on the matched companies — 0.3 base
+      for being covered at all, +0.5 × dossier recency (linear falloff over
+      SCRAPER_RUBRIC_RECENT_DAYS), +0.2 when the developer boosted Weight.
+    substance (0-20): snippet-quality heuristics (length, figures, quotes,
+      hard-news verbs) — the Phase 3 AI pass refines this signal.
+    Returns { score, signals, matchedCompanies, matchedTopics }. */
+function scRubricScore_(title, snippet, model) {
+  var text = (String(title || '') + ' ' + String(snippet || '')).toLowerCase();
+  var w = SCRAPER_RUBRIC_WEIGHTS;
+  var matchedCompanies = [], bestCoWeight = 0;
+  for (var i = 0; i < model.companies.length; i++) {
+    var co = model.companies[i];
+    if (scTermsHit_(text, co.terms)) {
+      matchedCompanies.push(co.label);
+      if (co.weight > bestCoWeight) bestCoWeight = co.weight;
+    }
+  }
+  var company = 0;
+  if (matchedCompanies.length) {
+    company = w.company * Math.min(1, bestCoWeight);
+    company = Math.min(w.company, company + w.company * 0.15 * (matchedCompanies.length - 1));
+  }
+  var matchedTopics = [], bestTopicWeight = 0;
+  for (var j = 0; j < model.topics.length; j++) {
+    var tp = model.topics[j];
+    if (scTermsHit_(text, tp.terms)) {
+      matchedTopics.push(tp.label);
+      if (tp.weight > bestTopicWeight) bestTopicWeight = tp.weight;
+    }
+  }
+  var topic = 0;
+  if (matchedTopics.length) {
+    topic = w.topic * Math.min(1, bestTopicWeight);
+    topic = Math.min(w.topic, topic + w.topic * 0.2 * (matchedTopics.length - 1));
+  }
+  var emphasis = 0;
+  if (matchedCompanies.length) {
+    var freshest = 0;
+    for (var k = 0; k < model.companies.length; k++) {
+      var e = model.companies[k];
+      if (matchedCompanies.indexOf(e.label) === -1 || !e.profilerUpdated) continue;
+      var ts = new Date(e.profilerUpdated).getTime();
+      if (ts && ts > freshest) freshest = ts;
+    }
+    var recency = freshest ?
+      Math.max(0, 1 - (Date.now() - freshest) / (SCRAPER_RUBRIC_RECENT_DAYS * 86400000)) : 0;
+    emphasis = w.emphasis * Math.min(1, 0.3 + 0.5 * recency + (bestCoWeight > 1 ? 0.2 : 0));
+  }
+  var substance = 0;
+  var body = String(snippet || '');
+  if (body.length >= 400) substance += 8;
+  else if (body.length >= 150) substance += 5;
+  else if (body.length >= 60) substance += 2;
+  if (/[\$€£]\s?\d|\d+(\.\d+)?\s?(mw|gw|mwh|gwh|percent|%)|\b\d{4}\b/i.test(body)) substance += 6;
+  if (/["“”].{10,}["“”]/.test(body)) substance += 3;
+  if (/\b(announced|filed|signed|awarded|commissioned|acquired|ordered)\b/i.test(body)) substance += 3;
+  substance = Math.min(w.substance, substance);
+  var round1 = function(n) { return Math.round(n * 10) / 10; };
+  return {
+    score: Math.round(Math.min(100, company + topic + emphasis + substance)),
+    signals: { company: round1(company), topic: round1(topic),
+               emphasis: round1(emphasis), substance: substance },
+    matchedCompanies: matchedCompanies, matchedTopics: matchedTopics
+  };
+}
+
+/** List the interest model (Phase 2 panel data source). */
+function listInterests(sessionToken) {
+  validateSessionForData(sessionToken, 'listInterests');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+  var data = sheet.getDataRange().getValues();
+  var items = [];
+  for (var i = 1; i < data.length && i < SCRAPER_INTERESTS_MAX_ROWS; i++) {
+    var r = data[i];
+    if (!String(r[0]).trim()) continue;
+    items.push({
+      key: String(r[0]), type: String(r[1]), label: String(r[2]),
+      enabled: r[3] === true || String(r[3]).toLowerCase() === 'true',
+      status: String(r[4]), flag: String(r[5]), categories: String(r[6]),
+      aliases: String(r[7]), weight: Number(r[8]) || 1, source: String(r[9]),
+      profilerUpdated: String(r[10]),
+      firstSeen: r[11] ? new Date(r[11]).toISOString() : '',
+      lastSynced: r[12] ? new Date(r[12]).toISOString() : '',
+      notes: String(r[13] || '')
+    });
+  }
+  var lastSync = null;
+  try {
+    lastSync = JSON.parse(PropertiesService.getScriptProperties()
+      .getProperty('INTERESTS_LAST_SYNC_RESULT') || 'null');
+  } catch (lsErr) {}
+  return { success: true, interests: items, lastSync: lastSync };
+}
+
+/** Toggle one interest on/off. Clears its attention flag — toggling is the
+    developer acknowledging the "New coverage"/"New topic" notice. */
+function setInterestEnabled(sessionToken, key, enabled) {
+  validateSessionForData(sessionToken, 'setInterestEnabled');
+  var k = scStr_(key, 120);
+  if (!k) return { success: false, error: 'key_required' };
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][0]).trim() !== k) continue;
+    var on = enabled === true || String(enabled) === '1' ||
+             String(enabled).toLowerCase() === 'true';
+    sheet.getRange(i + 1, 4).setValue(on);
+    if (String(data[i][5])) sheet.getRange(i + 1, 6).setValue('');
+    return { success: true, key: k, enabled: on };
+  }
+  return { success: false, error: 'not_found' };
+}
+
+/** Force a registry sync now (Phase 2 "Sync now" button). */
+function syncInterestsNow(sessionToken) {
+  validateSessionForData(sessionToken, 'syncInterestsNow');
+  return { success: true, result: scSyncInterests_(true) };
+}
+
+/** Score an ad-hoc title/snippet against the current interest model — the
+    rubric's test surface until Phase 3 wires it into the digest engine. */
+function rubricPreview(sessionToken, payloadJson) {
+  validateSessionForData(sessionToken, 'rubricPreview');
+  var p;
+  try { p = JSON.parse(String(payloadJson || '{}')); }
+  catch (parseErr) { return { success: false, error: 'bad_payload' }; }
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var model = scLoadInterestModel_(ss);
+  var out = scRubricScore_(scStr_(p.title, 300), scStr_(p.snippet, 2000), model);
+  out.success = true;
+  out.modelCounts = { companies: model.companies.length, topics: model.topics.length };
+  return out;
+}
+
 // ── Scheduler ───────────────────────────────────────────────────────────
 // An hourly time-driven trigger walks the Schedules tab and drives each due
 // schedule through the same chunked pipeline the UI buttons use:
@@ -2037,6 +2426,13 @@ function scSchedulerTick() {
   try {
     PropertiesService.getScriptProperties().setProperty('SCHEDULER_LAST_TICK', String(Date.now()));
   } catch (hbErr) {}
+  // Rebuild Phase 1: daily Profiler-registry → Interests sync. Deliberately
+  // BEFORE the pipeline pause gate — the sync spends no AI tokens and sends
+  // no email (one static GitHub Pages fetch + sheet writes), and keeping the
+  // Interests tab current while the digest pipeline is paused is what lets
+  // the Phase 2 panel and the Phase 4 go-live start from live data. It
+  // throttles itself to ~once/day and must never break the tick.
+  try { scSyncInterests_(false); } catch (interestsErr) {}
   if (!SCRAPER_SCHED_RUNS_ENABLED) return;  // pipeline paused — heartbeat only
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) return;  // a previous tick is still running
@@ -2648,6 +3044,10 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'getBackfillStatus') return getBackfillStatus(sessionToken, param('projectId'));
   if (op === 'setArticleVerdict') return setArticleVerdict(sessionToken, param('projectId'), param('articleId'), param('verdict'));
   if (op === 'setArticleVerdicts') return setArticleVerdicts(sessionToken, param('projectId'), param('payload'));
+  if (op === 'listInterests') return listInterests(sessionToken);
+  if (op === 'setInterestEnabled') return setInterestEnabled(sessionToken, param('key'), param('enabled'));
+  if (op === 'syncInterestsNow') return syncInterestsNow(sessionToken);
+  if (op === 'rubricPreview') return rubricPreview(sessionToken, param('payload'));
   return { success: false, error: 'unknown_op' };
 }
 
