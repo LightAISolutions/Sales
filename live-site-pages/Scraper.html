@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.38w">
+  <meta name="build-version" content="v01.39w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -503,11 +503,22 @@
     #wd-digest-status { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); min-height: 15px; margin: 2px 0 6px; }
     #wd-digest-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
     .wd-dg-chip {
+      display: inline-flex; align-items: stretch;
       border: 1px solid var(--wd-line-soft); background: var(--wd-bg-deep); border-radius: 4px;
-      padding: 4px 10px; font-size: 11px; color: var(--wd-ink2); cursor: pointer;
-      font-family: var(--wd-mono);
+      font-size: 11px; color: var(--wd-ink2); font-family: var(--wd-mono); overflow: hidden;
     }
-    .wd-dg-chip.on { border-color: var(--wd-accent); color: var(--wd-accent); }
+    .wd-dg-chip.on { border-color: var(--wd-accent); }
+    .wd-dg-chip.on .wd-dg-open { color: var(--wd-accent); }
+    .wd-dg-open {
+      border: none; background: none; padding: 4px 8px 4px 10px; font: inherit;
+      color: inherit; cursor: pointer;
+    }
+    .wd-dg-del {
+      border: none; border-left: 1px solid var(--wd-line); background: none;
+      padding: 4px 8px; font: inherit; color: var(--wd-faint); cursor: pointer;
+    }
+    .wd-dg-del:hover { color: #e08a84; }
+    .wd-dg-del.arm { background: #2a1c1a; color: #e08a84; font-family: var(--wd-sans); font-weight: 600; }
     #wd-digest-view {
       border: 1px solid var(--wd-line); border-radius: 6px; overflow-x: auto;
       background: #15171c;
@@ -6594,8 +6605,11 @@
     if (dgRun) dgRun.addEventListener('click', wdDigestRun_);
     var dgList = $sc('wd-digest-list');
     if (dgList) dgList.addEventListener('click', function(ev) {
-      var chip = ev.target.closest ? ev.target.closest('button.wd-dg-chip') : null;
-      if (chip) wdDigestShow_(chip.getAttribute('data-id'));
+      var chip = ev.target.closest ? ev.target.closest('.wd-dg-chip') : null;
+      if (!chip) return;
+      var del = ev.target.closest('button.wd-dg-del');
+      if (del) { wdDigestDelete_(chip, del); return; }
+      if (ev.target.closest('button.wd-dg-open')) wdDigestShow_(chip.getAttribute('data-id'));
     });
   }
 
@@ -6850,20 +6864,65 @@
   }
 
   function wdDigestRefresh_() {
-    _gasPost({ action: 'listDigests', token: scToken(), limit: '10' })
+    _gasPost({ action: 'listDigests', token: scToken(), limit: '30' })
       .then(function(data) {
         if (!data || !data.success) return;
         var list = $sc('wd-digest-list');
         var ds = data.digests || [];
         list.innerHTML = ds.length
           ? ds.map(function(dg) {
-              return '<button type="button" class="wd-dg-chip" data-id="' + scEsc(dg.id) + '">'
-                + scEsc(dg.date) + ' · ' + Number(dg.relevantCount) + ' relevant</button>';
+              var when = dg.generatedAt ? new Date(dg.generatedAt).toLocaleString() : '';
+              return '<span class="wd-dg-chip" data-id="' + scEsc(dg.id) + '">'
+                + '<button type="button" class="wd-dg-open" title="'
+                + scEsc('Generated ' + when + (dg.notes ? ' · ' + dg.notes : '')) + '">'
+                + scEsc(dg.date) + ' · ' + Number(dg.relevantCount) + ' relevant</button>'
+                + '<button type="button" class="wd-dg-del" title="Delete this edition (asks once to confirm)">×</button>'
+                + '</span>';
             }).join('')
           : '';
-        if (ds.length) wdDigestShow_(ds[0].id);
+        if (ds.length) {
+          wdDigestShow_(ds[0].id);
+          // Surface why summaries fell back (e.g. an AI key/config error) —
+          // the exact reason is stored with the edition.
+          if (!_wdDigestRunning && ds[0].notes) {
+            $sc('wd-digest-status').textContent = 'Latest edition note: ' + ds[0].notes;
+          }
+        }
       })
       .catch(function() { /* overlay stays usable; Run intake still works */ });
+  }
+
+  /** Two-step delete: first tap arms the × into "Delete?", second tap within
+      4s deletes the edition permanently (server removes its intake too). */
+  var _wdDgDelTimer = null;
+  function wdDigestDelete_(chip, btn) {
+    if (!btn.classList.contains('arm')) {
+      btn.classList.add('arm');
+      btn.textContent = 'Delete?';
+      if (_wdDgDelTimer) clearTimeout(_wdDgDelTimer);
+      _wdDgDelTimer = setTimeout(function() {
+        btn.classList.remove('arm');
+        btn.textContent = '×';
+      }, 4000);
+      return;
+    }
+    if (_wdDgDelTimer) clearTimeout(_wdDgDelTimer);
+    var id = chip.getAttribute('data-id');
+    btn.disabled = true;
+    _gasPost({ action: 'deleteDigest', token: scToken(), digestId: id })
+      .then(function(data) {
+        if (data && data.success) {
+          scToast('Edition deleted.');
+          wdDigestRefresh_();
+        } else {
+          btn.disabled = false;
+          scToast(scErrMsg(data && data.error), true);
+        }
+      })
+      .catch(function(err) {
+        btn.disabled = false;
+        scToast('Could not delete (' + scEsc((err && err.message) || err) + ').', true);
+      });
   }
 
   function wdDigestShow_(id) {

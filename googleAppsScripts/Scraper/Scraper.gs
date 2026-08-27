@@ -1,4 +1,4 @@
-var VERSION = "v01.40g";
+var VERSION = "v01.41g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -376,7 +376,8 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'getSchedulerHealth', 'setArticleVerdicts',
                                'listInterests', 'setInterestEnabled', 'syncInterestsNow',
                                'rubricPreview',
-                               'runDigestNow', 'getDigestStatus', 'listDigests', 'getDigest'];
+                               'runDigestNow', 'getDigestStatus', 'listDigests', 'getDigest',
+                               'deleteDigest'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -521,10 +522,22 @@ var SCRAPER_SEGMENT_SEEDS = [
     terms: ['gas turbine', 'natural gas plant', 'combined cycle', 'aeroderivative', 'peaker'] },
   { key: 'seg-fuel-cells', label: 'Fuel cells & hydrogen',
     terms: ['fuel cell', 'hydrogen', 'electrolyzer'] },
-  { key: 'seg-ev', label: 'EVs & automotive',
-    terms: ['electric vehicle', 'electric vehicles', 'automaker', 'vehicle recall', 'car sales', 'autonomous driving', 'robotaxi', 'ev sales', 'ev market', 'sedan', 'suv'] },
-  { key: 'seg-ev-charging', label: 'EV charging',
-    terms: ['charger', 'chargers', 'charging station', 'charging network', 'supercharger', 'fast charging'] },
+  // tv (terms version): bump when a segment's default vocabulary improves —
+  // the sync upgrades rows still carrying the auto marker (see scSyncInterests_).
+  // tv 2 (2026-08-27): the launch vocabulary missed real automotive coverage
+  // ("Full Self Driving", "Model Y", "recall campaign") — two Tesla stories
+  // rode the company signal past toggled-off EV segments.
+  { key: 'seg-ev', label: 'EVs & automotive', tv: 2,
+    terms: ['electric vehicle', 'electric vehicles', 'electric car', 'electric cars',
+      'automaker', 'carmaker', 'car maker', 'ev maker', 'vehicle recall', 'recall campaign',
+      'vehicles recalled', 'million vehicles', 'nhtsa', 'car sales', 'autonomous driving',
+      'self-driving', 'full self-driving', 'full self driving', 'driver assistance', 'fsd',
+      'robotaxi', 'ev sales', 'ev market', 'sedan', 'suv', 'pickup truck', 'cybertruck',
+      'model y', 'model 3', 'plug-in hybrid', 'dealership', 'test drive'] },
+  { key: 'seg-ev-charging', label: 'EV charging', tv: 2,
+    terms: ['charger', 'chargers', 'charging station', 'charging network', 'supercharger',
+      'fast charging', 'ev charging', 'charging infrastructure', 'charge point',
+      'chargepoint', 'wallbox', 'megawatt charging', 'nacs'] },
   { key: 'seg-semiconductors', label: 'Semiconductors & AI hardware',
     terms: ['semiconductor', 'chip', 'chips', 'foundry', 'wafer', 'accelerator'] },
   { key: 'seg-consumer', label: 'Consumer electronics & appliances',
@@ -950,8 +963,24 @@ function scParseFeed_(xmlText, fallbackSource) {
   var items = [];
   var doc = XmlService.parse(xmlText);
   var root = doc.getRootElement();
+  // Strip tags, then decode the HTML entities feeds routinely double-encode
+  // (Google News descriptions are full of &nbsp;/&amp;) so stored titles and
+  // snippets are plain text. Rendering re-escapes via escapeHtml, so decoding
+  // here is safe.
   function clean(s, max) {
-    return scStr_(String(s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' '), max);
+    return scStr_(String(s || '')
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/&nbsp;/gi, ' ')
+      .replace(/&quot;/gi, '"')
+      .replace(/&#0?39;|&apos;/gi, "'")
+      .replace(/&lt;/gi, '<')
+      .replace(/&gt;/gi, '>')
+      .replace(/&#(\d+);/g, function(mm, n) {
+        var c = Number(n);
+        return (c >= 32 && c < 65536) ? String.fromCharCode(c) : ' ';
+      })
+      .replace(/&amp;/gi, '&')
+      .replace(/\s+/g, ' '), max);
   }
   if (root.getName().toLowerCase() === 'rss') {
     var channel = root.getChild('channel');
@@ -960,7 +989,10 @@ function scParseFeed_(xmlText, fallbackSource) {
       function ch(name) { var c = it.getChild(name); return c ? c.getText() : ''; }
       var srcEl = it.getChild('source');
       items.push({
-        url: scStr_(ch('link'), 500),
+        // 1500-char cap: Google News redirect URLs regularly exceed 500 chars
+        // (live sample: 498 on a small query) — the old 500 cap truncated the
+        // encoded article token and every click 400'd at Google.
+        url: scStr_(ch('link'), 1500),
         title: clean(ch('title'), 300),
         source: clean(srcEl ? srcEl.getText() : fallbackSource, 120),
         publishedAt: scStr_(ch('pubDate'), 60),
@@ -979,7 +1011,7 @@ function scParseFeed_(xmlText, fallbackSource) {
         }
       });
       items.push({
-        url: scStr_(linkUrl, 500),
+        url: scStr_(linkUrl, 1500),   // same 1500-char cap as the RSS branch
         title: clean(ch('title'), 300),
         source: clean(fallbackSource, 120),
         publishedAt: scStr_(ch('published') || ch('updated'), 60),
@@ -2262,14 +2294,32 @@ function scSyncInterests_(force) {
       appendRows.push(['src-' + rsrc.key, 'source', rsrc.name, true, 'active', '',
         'tier ' + rsrc.tier, '', 1, 'roster', '', now, now, '']);
     }
-    // Segment seeds (developer feedback 2026-08-27) — insert-only, default
-    // ON. Aliases hold the default match terms; in-sheet edits win.
+    // Segment seeds (developer feedback 2026-08-27) — default ON. New rows
+    // insert with a seed-terms version marker in Notes. When code ships an
+    // improved default vocabulary (a higher tv), the sync upgrades rows that
+    // still carry the auto marker (or the pre-versioning empty Notes) —
+    // Enabled/Weight are never touched. To keep custom terms permanently,
+    // put anything else in the row's Notes (e.g. "custom") and the sync
+    // will never rewrite that row's terms again.
     for (var sg = 0; sg < SCRAPER_SEGMENT_SEEDS.length; sg++) {
       var sgs = SCRAPER_SEGMENT_SEEDS[sg];
-      if (byKey[sgs.key] !== undefined) continue;
-      appendRows.push([sgs.key, 'segment', sgs.label, true, 'active',
-        SCRAPER_INTEREST_FLAG_NEWSEG, '', sgs.terms.join(', '), 1, 'segments',
-        '', now, now, '']);
+      var sgTv = sgs.tv || 1;
+      var sgIdx = byKey[sgs.key];
+      if (sgIdx === undefined) {
+        appendRows.push([sgs.key, 'segment', sgs.label, true, 'active',
+          SCRAPER_INTEREST_FLAG_NEWSEG, '', sgs.terms.join(', '), 1, 'segments',
+          '', now, now, 'seed-terms-v' + sgTv]);
+        continue;
+      }
+      var sgRow = data[sgIdx];
+      var sgNotes = String(sgRow[13] || '').trim();
+      var sgM = /^seed-terms-v(\d+)$/.exec(sgNotes);
+      if (sgNotes === '' || (sgM && Number(sgM[1]) < sgTv)) {
+        sgRow[7] = sgs.terms.join(', ');
+        sgRow[13] = 'seed-terms-v' + sgTv;
+        sgRow[12] = now;
+        dirty = true;
+      }
     }
     if (dirty && data.length > 1) {
       sheet.getRange(2, 1, data.length - 1, width).setValues(
@@ -2609,12 +2659,24 @@ function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen
     if (!it.url || seen[it.url]) continue;
     var ts = new Date(it.publishedAt || '').getTime();
     if (ts && ts < cutoffMs) continue;   // undated items pass; the window filters dated ones
-    var r = scRubricScore_(it.title, it.snippet, model);
+    var title = it.title;
+    var snippet = it.snippet;
+    if (isBackstop) {
+      // Google News titles carry a trailing " - Publisher"; the source label
+      // already names the outlet, so drop it from the headline.
+      title = title.replace(/\s+-\s+[^-]{2,60}$/, '');
+    }
+    // A snippet that just restates the headline (the usual Google News
+    // description) adds nothing and inflates the substance signal — blank it.
+    var normT = title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    var normS = snippet.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    if (normS && normT && (normS === normT || normS.indexOf(normT) === 0)) snippet = '';
+    var r = scRubricScore_(title, snippet, model);
     var score = isBackstop ? Math.round(r.score * SCRAPER_DIGEST_BACKSTOP_PENALTY) : r.score;
     if (score < SCRAPER_DIGEST_MIN_INTAKE_SCORE) continue;
     seen[it.url] = true;
-    out.push([state.id, it.url, it.title, sourceLabel || it.source,
-      it.publishedAt, it.snippet, score,
+    out.push([state.id, it.url, title, sourceLabel || it.source,
+      it.publishedAt, snippet, score,
       JSON.stringify({ s: r.signals, mc: r.matchedCompanies, mt: r.matchedTopics,
         ms: r.matchedSegments, xs: r.excludedSegments, g: r.gated ? 1 : 0 }).slice(0, 1200),
       '', scDigestSectionFor_(r), isBackstop ? 'yes' : '']);
@@ -3037,6 +3099,36 @@ function getDigest(sessionToken, digestId) {
              html: String(data[i][7] || '') };
   }
   return { success: false, error: 'not_found' };
+}
+
+/** Delete one edition (Digests row + its DigestIntake rows). The developer
+    curates which Morning Editions to keep; deletion is permanent. */
+function deleteDigest(sessionToken, digestId) {
+  var user = validateSessionForData(sessionToken, 'deleteDigest');
+  var id = scStr_(digestId, 60);
+  if (!id) return { success: false, error: 'digest_id_required' };
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return { success: false, error: 'busy' };
+  try {
+    var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+    var data = digests.getDataRange().getValues();
+    var found = false;
+    for (var i = data.length - 1; i >= 1; i--) {
+      if (String(data[i][0]) === id) { digests.deleteRow(i + 1); found = true; }
+    }
+    if (!found) return { success: false, error: 'not_found' };
+    var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+    var idata = intake.getDataRange().getValues();
+    for (var j = idata.length - 1; j >= 1; j--) {
+      if (String(idata[j][0]) === id) intake.deleteRow(j + 1);
+    }
+    dataAuditLog((user && user.email) || 'unknown', 'delete', 'digest', id, 'edition removed');
+    return { success: true, id: id };
+  } finally {
+    lock.releaseLock();
+  }
 }
 
 // ── Scheduler ───────────────────────────────────────────────────────────
@@ -3749,6 +3841,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'getDigestStatus') return getDigestStatus(sessionToken);
   if (op === 'listDigests') return listDigests(sessionToken, param('limit'));
   if (op === 'getDigest') return getDigest(sessionToken, param('digestId'));
+  if (op === 'deleteDigest') return deleteDigest(sessionToken, param('digestId'));
   return { success: false, error: 'unknown_op' };
 }
 

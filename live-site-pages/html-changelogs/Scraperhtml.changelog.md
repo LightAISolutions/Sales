@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 38/50`
+`Sections: 39/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.39w] — 2026-08-27 06:49:49 PM EST — v03.08r
+
+### Added
+- An edition manager in the Digest view: past editions are listed newest-first, switching between them is one click, and each edition now has its own delete control — with a quick "Delete?" confirmation step so a stray click can't remove anything
+- When the newest edition was built without AI summaries, the Digest view now says so and shows the reason, instead of leaving you to guess why the summaries look short
 
 ## [v01.38w] — 2026-08-27 06:20:46 PM EST — v03.07r
 
