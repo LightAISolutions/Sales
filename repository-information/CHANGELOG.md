@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.02r] — 2026-08-27 02:20:49 AM EST
+
+> **Prompt:** "A few things: • I want to temporarily stop all emails to jonyang92@gmail.com that cost me tokens through Anthropic API, in case "digests" does not provide enough context. • Explain to me the difference between a runtime Profiler-API probe vs the rule-based sync. Then, let me choose. • I wasn't very happy with having to provide so much "thumbs up/down" feedback in order to train Scraper to learn which articles I would be interested in. Therefore, I want Scraper to be able to analyze and learn from Profiler so that I don't have to provide personal feedback anymore. Is this possible? If so, I would like to abolish the feedback system or at least temporarily turn it off. • I wasn't very satisfied with the depth of information provided by Google News RSS queries. I would prefer you analyze and identify between 12-20 reputable and trafficked trade news sites that would serve as a good source of news instead. If you think there is still value provided by Google News RSS queries, then explain what the value is and let me decide afterwards. • Scraper's html looks very rough and unprofessional. Don't copy Profiler's aesthetic, but remake Scraper in a way that is equally professional, but with a more news-friendly theme. I want Scraper to be designed in a way that makes it easy for me to see and adjust sources, keywords, topics, summary formats, and anything else you think would help me stay on top of my industry's news. Recommend a couple styles and let me see mockups of what they would look like before I decide. Do the same with the outputted digest as well - let me see what they would look like and let me adjust things before we set things in stone."
+
+### Changed
+- **`Scraper.gs`** — added the `SCRAPER_SCHED_RUNS_ENABLED` pipeline pause (set `false`): `scSchedulerTick()` now exits immediately after its heartbeat, so no scheduled compile/analyze/brief phase executes — closing the gap left by v03.01r, which stopped emails but let scheduled runs keep spending AI tokens generating briefs into the Reports tab. The heartbeat still updates, so `getSchedulerHealth` correctly reports the trigger alive; Next Run does not advance while paused (due schedules run once on resume); manual in-app actions are unaffected. The v03.01r `SCRAPER_SCHED_EMAIL_ENABLED` switch remains as delivery-layer defense in depth. VERSION v01.35g → v01.36g; `Scrapergs.version.txt` synced; public entry added to the GAS changelog (counter 35 → 36)
+- **README tree** — Scraper version display v01.35g → v01.36g
+
+### Notes
+- Repo-wide token-cost audit of email/automation paths: Profiler's field-note suggestion email is human-typed (no AI); Receipts uses Gemini only (free tier) and its emails are compliance alerts; Profiler's 15-minute transcript watcher DOES spend Anthropic tokens when new transcripts appear but sends no email — left untouched and flagged to the developer
+- Trade-news source list verification, Profiler-taught relevance design, and app/digest style mockups were delivered in-chat for developer decisions — no further repo changes this push
 
 ## [v03.01r] — 2026-08-27 01:54:03 AM EST
 

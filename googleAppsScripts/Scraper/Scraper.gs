@@ -1,4 +1,4 @@
-var VERSION = "v01.35g";
+var VERSION = "v01.36g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1977,6 +1977,13 @@ var SCRAPER_SCHED_AI_PAUSE_MS = 4000;       // pause between analyze chunks (fre
 // still land in the Reports tab, but nothing is emailed. Deploys with the
 // code: flip back to true and merge to resume email delivery.
 var SCRAPER_SCHED_EMAIL_ENABLED = false;
+// Master pause for the ENTIRE scheduled pipeline. false = scSchedulerTick
+// exits right after its heartbeat: no compile/analyze/brief phase runs, so
+// no AI tokens are spent and nothing is emailed unattended. Manual actions
+// in the app (Compile / Analyze / Brief buttons) are unaffected. Next Run
+// does not advance while paused — due schedules run once on resume. Flip to
+// true and merge to resume scheduled runs.
+var SCRAPER_SCHED_RUNS_ENABLED = false;
 
 /** Manual fallback: run once from the Apps Script editor to install the trigger. */
 function setupSchedulerTrigger() {
@@ -2030,6 +2037,7 @@ function scSchedulerTick() {
   try {
     PropertiesService.getScriptProperties().setProperty('SCHEDULER_LAST_TICK', String(Date.now()));
   } catch (hbErr) {}
+  if (!SCRAPER_SCHED_RUNS_ENABLED) return;  // pipeline paused — heartbeat only
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) return;  // a previous tick is still running
   try {
