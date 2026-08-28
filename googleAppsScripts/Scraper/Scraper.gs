@@ -1,4 +1,4 @@
-var VERSION = "v01.47g";
+var VERSION = "v01.48g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -360,7 +360,7 @@ var SCRAPER_TAB_HEADERS = {
               'Aliases', 'Weight', 'Source', 'Profiler Updated', 'First Seen',
               'Last Synced', 'Notes'],
   Digests: ['Digest ID', 'Date', 'Generated At', 'Status', 'Item Count',
-            'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition'],
+            'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI'],
   DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
                  'Score', 'Signals', 'Summary', 'Section', 'Backstop'],
   Editions: ['Edition ID', 'Name', 'Cadence', 'Anchor', 'Window Hours', 'Enabled',
@@ -592,6 +592,13 @@ var SCRAPER_DIGEST_SUMMARIZE_TOP_N = 30;         // AI key-point summaries for t
 // every printed item is one the AI actually summarized (TOP_N), rather
 // than falling through to a raw feed snippet.
 var SCRAPER_DIGEST_ITEMS_PER_AI_CALL = 5;        // items per summarize request (smaller batches → room for longer summaries)
+// Free-tier pacing. At TOP_N=30 an edition fires ~7 AI calls back to back
+// (6 summarize batches + 1 lead). Gemini's free tier enforces per-minute AND
+// per-day request caps that are model-specific and have tightened over time,
+// so an unpaced burst can trip a 429 — and before this, a single 429 aborted
+// summarization for the WHOLE edition (no retry, no resume, no AI lead).
+var SCRAPER_DIGEST_AI_PAUSE_MS = 1200;           // gap between consecutive AI calls
+var SCRAPER_AI_RETRY_BACKOFF_MS = [2000, 6000];  // waits before retry 1 and retry 2 on a rate limit
 var SCRAPER_DIGEST_SUMMARY_MAX = 900;            // stored summary cap (chars) — generous; quality set by the prompt, not a hard length limit
 var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limit is 50k chars)
 var SCRAPER_DIGEST_KEEP = 60;                    // Digests tab retention (rows)
@@ -2923,6 +2930,38 @@ function scDigestItems_(ss, digestId) {
   return items;
 }
 
+/** The provider/model an edition was actually built with. Recorded on every
+    edition so "was this one free?" is answerable after the fact — previously
+    a Gemini-built and a Claude-built edition were indistinguishable once
+    stored, because only failures wrote anything to the Notes column. */
+function scActiveAiLabel_() {
+  var props = PropertiesService.getScriptProperties();
+  var provider = (props.getProperty('AI_PROVIDER') || SCRAPER_AI_PROVIDER).toLowerCase();
+  var model = provider === 'claude'
+    ? (props.getProperty('ANTHROPIC_MODEL') || SCRAPER_CLAUDE_MODEL)
+    : (props.getProperty('GEMINI_MODEL') || props.getProperty('GEMINI_MODEL_AUTO') || 'auto');
+  return provider + '/' + model;
+}
+
+/** aiComplete_ with bounded retry on rate limiting. A free-tier 429 is a
+    transient, self-clearing condition — treating it as terminal dropped the
+    entire remainder of an edition to raw snippets and skipped the AI lead.
+    Other errors (bad key, HTTP 400) are NOT retried: they will not fix
+    themselves and retrying just burns quota. */
+function scAiWithRetry_(prompt, maxTokens) {
+  var attempt = 0;
+  for (;;) {
+    try {
+      return aiComplete_(prompt, maxTokens);
+    } catch (err) {
+      var msg = String((err && err.message) || err);
+      if (msg.indexOf('ai_rate_limited') === -1 || attempt >= SCRAPER_AI_RETRY_BACKOFF_MS.length) throw err;
+      try { Utilities.sleep(SCRAPER_AI_RETRY_BACKOFF_MS[attempt]); } catch (sleepErr) {}
+      attempt++;
+    }
+  }
+}
+
 /** Summarize phase: AI key-point summaries for the top items, then the lead.
     No AI key / AI failure → deterministic fallback (snippets serve as
     summaries, top item becomes the lead) so the digest always builds. */
@@ -2946,7 +2985,7 @@ function scDigestSummarizeStep_(ss, state, t0) {
           return { i: n, title: it.title, snippet: it.snippet.slice(0, 280), source: it.source };
         }));
     try {
-      var parsed = scParseJsonArray_(aiComplete_(prompt, 3000)) || [];
+      var parsed = scParseJsonArray_(scAiWithRetry_(prompt, 3000)) || [];
       var byIdx = {};
       parsed.forEach(function(p) {
         if (p && typeof p.i === 'number') byIdx[p.i] = scStr_(p.summary, SCRAPER_DIGEST_SUMMARY_MAX);
@@ -2957,11 +2996,15 @@ function scDigestSummarizeStep_(ss, state, t0) {
         it.summary = s;
       });
       scLogUsage_(ss, 'digest', 1, 0);
+      if (!state.aiLabel) state.aiLabel = scActiveAiLabel_();
     } catch (aiErr) {
       state.aiNote = 'ai_unavailable: ' + String((aiErr && aiErr.message) || aiErr).slice(0, 120);
       break;
     }
     pending = pending.filter(function(it) { return !it.summary; });
+    // Space out consecutive calls so a 30-item edition doesn't burst ~7
+    // requests at the free tier's per-minute cap.
+    if (pending.length) { try { Utilities.sleep(SCRAPER_DIGEST_AI_PAUSE_MS); } catch (pErr) {} }
   }
   var stillPending = top.some(function(it) { return !it.summary; });
   if ((!stillPending || state.aiNote) && !state.leadDone) {
@@ -2977,7 +3020,7 @@ function scDigestSummarizeStep_(ss, state, t0) {
           + JSON.stringify(top.slice(0, 6).map(function(it, n) {
               return { i: n, title: it.title, summary: it.summary || it.snippet.slice(0, 200) };
             }));
-        var lr = scParseJsonArray_(aiComplete_(lp, 1200)) || [];
+        var lr = scParseJsonArray_(scAiWithRetry_(lp, 1200)) || [];
         if (lr[0]) {
           state.leadIdx = Math.max(0, Math.min(5, Number(lr[0].lead) || 0));
           state.leadText = scStr_(lr[0].text, 1200);
@@ -3023,6 +3066,7 @@ function scDigestRenderStep_(ss, state) {
   var d = {
     id: state.id, date: state.date, no: no, windowH: state.windowH,
     generatedAt: new Date().toISOString(), aiNote: state.aiNote || '',
+    aiLabel: state.aiLabel || '',
     lead: lead ? { title: lead.title, source: lead.source, publishedAt: lead.publishedAt,
                    url: lead.url, score: lead.score,
                    text: state.leadText || lead.summary || lead.snippet } : null,
@@ -3049,7 +3093,7 @@ function scDigestRenderStep_(ss, state) {
     items.length, relevant.length,
     JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX),
     html.slice(0, SCRAPER_DIGEST_CELL_MAX),
-    state.aiNote || '', d.editionId]);
+    state.aiNote || '', d.editionId, state.aiLabel || (state.aiNote ? 'none (fallback)' : '')]);
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
@@ -3190,7 +3234,8 @@ function scRenderDigestNightInk_(d) {
     + (Number(d.counts.relevant) > Number(d.counts.shown || 0)
         ? ' · ' + (Number(d.counts.relevant) - Number(d.counts.shown || 0))
           + ' more held back by the per-section caps' : '')
-    + (d.aiNote ? ' · summaries in fallback mode' : '') + '</td>'
+    + (d.aiNote ? ' · summaries in fallback mode'
+        : (d.aiLabel ? ' · summarized by ' + esc(d.aiLabel) : '')) + '</td>'
     + '<td align="right" style="padding-top:12px;"><a href="' + esc(EMBED_PAGE_URL)
     + '" style="font-size:11px;color:#f2a33c;text-decoration:none;">Tune tomorrow\'s edition →</a></td>'
     + '</tr></table>'
@@ -3276,7 +3321,8 @@ function listDigests(sessionToken, limit) {
         ? Utilities.formatDate(data[i][1], 'America/New_York', 'yyyy-MM-dd') : String(data[i][1]),
       generatedAt: data[i][2] ? new Date(data[i][2]).toISOString() : '',
       status: String(data[i][3]), itemCount: Number(data[i][4]) || 0,
-      relevantCount: Number(data[i][5]) || 0, notes: String(data[i][8] || '')
+      relevantCount: Number(data[i][5]) || 0, notes: String(data[i][8] || ''),
+      ai: String(data[i][10] || '')
     });
   }
   return { success: true, digests: out };

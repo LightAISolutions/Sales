@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.15r] — 2026-08-27 10:18:03 PM EST
+
+> **Prompt:** "I currently have the Scraper AI model set to Gemini for the free summaries - Can you confirm that the previous two digests were summarized for free with Gemini? Also, make Scraper's default AI model Gemini's free tier. In this case, it doesn't matter that we raised the article caps right?"
+
+### Added
+- **Per-edition AI provenance.** New `AI` column on the `Digests` tab plus `scActiveAiLabel_()` (provider + resolved model, e.g. `gemini/gemini-2.5-flash`), captured on the first successful summarize call, persisted with the edition, returned by `listDigests`, and printed in the Night Ink footer as `· summarized by <provider>/<model>`. **This was written because the developer's question could not be answered:** nothing recorded which provider produced an edition — `Notes` is only populated on *failure*, so a Gemini-built and a Claude-built edition were byte-identical once stored. A fallback edition now stores `none (fallback)` and the footer keeps saying `summaries in fallback mode` rather than naming an engine that did no work
+
+### Fixed
+- **A single rate-limit response no longer degrades a whole edition.** `scDigestSummarizeStep_` caught every AI error into a terminal `state.aiNote`, and the loop guard `!state.aiNote` then blocked any retry on subsequent ticks — so one 429 dropped every remaining item to a raw feed snippet **and** skipped the AI lead paragraph, permanently, for that edition. Added `scAiWithRetry_` (bounded retry on `ai_rate_limited` with `[2000, 6000]` ms backoff) around both the summarize and lead calls, plus a `SCRAPER_DIGEST_AI_PAUSE_MS = 1200` gap between consecutive summarize batches. **Non-transient errors are deliberately not retried** — a bad/missing key or HTTP 400 will not fix itself and retrying only burns free-tier quota
+
+### Notes
+- **Direct answers to the three questions.** (1) *Confirm the last two digests were free?* — **Not confirmable**, and the repo is the reason: no provider was recorded per edition (now fixed going forward). The developer's own screenshots point the other way — the Go-live panel read `claude · claude-sonnet-5` with `✓ claude replied: READY` at ~8:47 PM and only read `gemini` by ~9:07 PM, so at least one of the two editions may have been billed to Anthropic. Ground truth is the Anthropic Console usage page for the day; everything else is inference. (2) *Make Gemini the default* — **already was**: `SCRAPER_AI_PROVIDER = 'gemini'` has been the code default since the provider switch shipped; Claude ran only because the `AI_PROVIDER` Script Property was explicitly set to `claude`, and the in-app toggle has since written `gemini`. No change required. (3) *Do the raised caps not matter now?* — **correct on cost** ($0 on the free tier regardless), **but not on consequences**: `TOP_N = 30` fires ~7 AI calls per edition (6 summarize batches + 1 lead) versus ~4 before, previously unpaced, against a free tier whose per-minute and per-day caps are model-specific and have been reduced over time — and every manual *Run intake now* spends another ~7 requests against the daily cap. Hence the pacing and retry work above
+- Free-tier limit characteristics verified against Google's published rate-limit documentation rather than asserted from memory; exact per-model numbers are dynamic and are best read from Google AI Studio for the model actually in use
+- Verification: `node --check` clean; **13 assertions** pass — provider labelling across unset/claude/gemini property states, recovery after two rate limits, exact attempt counts and backoff sequence, bounded give-up on a persistent limit, immediate surfacing of a non-retryable `ai_http_400` with **no** retry, and footer stamping in both the summarized and fallback cases
+- **`Scraper.gs`** VERSION v01.47g → v01.48g; version file synced; public entry added (counter 48/50). No HTML change — renderer and routes are server-side
 
 ## [v03.14r] — 2026-08-27 10:06:57 PM EST
 
