@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.36r] — 2026-08-28 07:28:57 PM EST
+
+> **Prompt:** "I deleted my old Editions and tried to build a new one. I pressed "run intake now", waited longer than before, and suddenly, the Scraper app created 9 copies of Your Morning Digest. What happened? Fix it."
+
+### Fixed
+
+`Scraper.gs` (v01.69g) — **a regression I introduced in v01.68g.** Moving the build state to per-edition Script Properties updated the WRITER (`scDigestSaveState_`) but left the READER in `scDigestStep_` calling `scDigestState_()` with no argument. The no-arg form fell back to the legacy `scDigestRun` key — which nothing writes any more, but which still held a stale state from before the deploy.
+
+Read and write therefore pointed at different properties. The loop set `phase: 'done'` on the per-edition slot, read a stale non-done state back from the legacy one, reported `done: false`, and the client called `runDigestNow` again 600 ms later — re-entering the render step and appending another Digests row every pass. **Measured against the shipped code: 25 calls produced 25 rows and never terminated.** The developer saw nine because that is how long they waited before closing it.
+
+- `scDigestStep_` now reads `scDigestState_(wantEd)` — the same slot the steps write — on both its reads, so the two can no longer diverge
+- `scDigestMigrateLegacyState_` moves the legacy single key into its per-edition slot once and **deletes it**, removing the possibility of a pre-v01.68g state being resurrected and resumed. It never overwrites a live slot
+- The no-arg form no longer returns null for a finished build: it reports the most recently started state when nothing is in flight
+- **Defence in depth:** `scDigestDropSameDayRows_` removes any existing row for the same (edition, date) immediately before the render appends. Rebuilding is idempotent now, so the worst any repeat render can do is rewrite one row rather than file another copy — and the nine duplicates already on the sheet are collapsed the next time that edition is built. Scoped tight: same edition AND same date, so another masthead or another day is never touched
+- The drop carries the prior row's `Delivered` stamp onto the replacement. Without that, rebuilding an edition that had already been emailed would clear the stamp and the next delivery pass would send it a second time — the opposite of what the v03.35r build/send split is for
+
+### Notes
+
+- 229 assertions pass. 15 are new and drive `scDigestStep_` through the **real client loop** — call until `done`, capped — from the exact starting condition that caused this: a stale non-done legacy state for today's morning edition. They assert the loop terminates, that one row exists rather than nine, that the legacy key is gone afterwards, that a rebuild replaces rather than appends, that the delivery stamp survives, and that neither another edition nor another day is touched
+- **The test was verified against the broken version**, not just the fixed one: run against `HEAD`, four of its assertions fail and the harness reports 25 rows from 25 calls. A regression test that has never been seen to fail is not evidence of anything
+- The failure was invisible to the previous push's 214 assertions because every one of them tested a step, a state accessor or a delivery pass in isolation. None drove the loop the client actually runs — which is precisely where a read/write key mismatch shows up
 
 ## [v03.35r] — 2026-08-28 06:57:56 PM EST
 

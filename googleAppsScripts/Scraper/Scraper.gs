@@ -1,4 +1,4 @@
-var VERSION = "v01.68g";
+var VERSION = "v01.69g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3232,21 +3232,43 @@ function scDigestStateKey_(editionId) {
 function scDigestState_(editionId) {
   var props = PropertiesService.getScriptProperties();
   try {
+    scDigestMigrateLegacyState_(props);
     if (editionId) {
       return JSON.parse(props.getProperty(scDigestStateKey_(editionId)) || 'null');
     }
-    // No edition named: return whichever slot is still mid-build today, so the
-    // legacy callers that ask "is anything running?" keep working.
+    // No edition named — "is anything running?". Prefer a slot still mid-build;
+    // otherwise report the most recently started one so a finished run still
+    // has a final state to report.
     var eds = [SCRAPER_EDITION_DEFAULT.id];
     SCRAPER_EDITION_SEEDS.forEach(function(sd) { eds.push(sd.id); });
+    var newest = null;
     for (var i = 0; i < eds.length; i++) {
       var st = JSON.parse(props.getProperty(scDigestStateKey_(eds[i])) || 'null');
-      if (st && st.phase !== 'done') return st;
+      if (!st) continue;
+      if (st.phase !== 'done') return st;
+      if (!newest || (st.startedAt || 0) > (newest.startedAt || 0)) newest = st;
     }
-    // Nothing in flight — fall back to the legacy single slot so a run started
-    // before this version still reports its final state.
-    return JSON.parse(props.getProperty(SCRAPER_DIGEST_STATE_KEY) || 'null');
+    return newest;
   } catch (e) { return null; }
+}
+
+/** Move the pre-per-edition single state property into its own slot, once.
+
+    The legacy key is never written any more, so leaving it readable meant a
+    stale state from before that change could still be picked up and RESUMED —
+    which is how a completed build was re-rendered on every poll. Migrating it
+    into the slot it belongs to and deleting it removes the possibility. */
+function scDigestMigrateLegacyState_(props) {
+  var raw = props.getProperty(SCRAPER_DIGEST_STATE_KEY);
+  if (!raw) return;
+  props.deleteProperty(SCRAPER_DIGEST_STATE_KEY);
+  try {
+    var st = JSON.parse(raw);
+    if (!st || !st.editionId) return;
+    var key = scDigestStateKey_(st.editionId);
+    // Never overwrite a live per-edition slot with the older single one.
+    if (!props.getProperty(key)) props.setProperty(key, raw);
+  } catch (e) {}
 }
 function scDigestSaveState_(state) {
   PropertiesService.getScriptProperties()
@@ -3677,6 +3699,13 @@ function scDigestRenderStep_(ss, state) {
     }
   }
   var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  // Rebuilding an edition REPLACES that day's row rather than adding another.
+  // Defence in depth: a bug that re-entered the render step used to leave one
+  // visible copy of the edition per pass (nine, in the case that prompted
+  // this), and the developer then had to delete them by hand. With this, the
+  // worst a repeat render can do is rewrite the same row.
+  var priorRow = scDigestDropSameDayRows_(digests,
+    state.editionId || SCRAPER_EDITION_DEFAULT.id, state.date);
   // Numbered against the editions that actually exist for THIS masthead —
   // see scIssueNumbers_ for why the old getLastRow() counter was wrong.
   var no = scNextIssueNo_(ss, state.editionId || SCRAPER_EDITION_DEFAULT.id, state.date);
@@ -3735,7 +3764,8 @@ function scDigestRenderStep_(ss, state) {
     html.slice(0, SCRAPER_DIGEST_CELL_MAX),
     state.aiNote || state.aiSoftNote || '', d.editionId,
     state.aiLabel || (state.aiNote ? 'none (fallback)' : ''),
-    lead ? scStr_(lead.title, 300) : '', no, '']);   // '' = built, not yet delivered
+    lead ? scStr_(lead.title, 300) : '', no,
+    priorRow.delivered || '']);   // '' = built, not yet delivered
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
@@ -3762,6 +3792,41 @@ function scDigestRenderStep_(ss, state) {
   return { phase: 'done', relevant: relevant.length, sectionsBuilt: true };
 }
 
+
+/** Remove any existing rows for one edition on one date, newest-first so the
+    indices stay valid as they go. Called immediately before a render appends,
+    which is what makes rebuilding idempotent — and what collapses duplicates a
+    previous bug already created, the next time that edition is built.
+
+    Returns the delivery stamp carried by any row it removed, so the caller can
+    put it back on the replacement. Without that, rebuilding an edition that had
+    already been emailed would clear its Delivered cell and the next delivery
+    pass would send it a second time — the opposite of what the split between
+    building and sending is for.
+
+    Scoped deliberately tight: same edition AND same date only. It will never
+    touch another masthead or another day. */
+function scDigestDropSameDayRows_(digests, editionId, date) {
+  var n = digests.getLastRow() - 1;
+  if (n < 1) return { dropped: 0, delivered: '' };
+  var dates = digests.getRange(2, 2, n, 1).getValues();
+  var eds = digests.getRange(2, 10, n, 1).getValues();
+  var wide = digests.getMaxColumns() >= 14;
+  var deliv = wide ? digests.getRange(2, 14, n, 1).getValues() : null;
+  var dropped = 0, delivered = '';
+  for (var i = n - 1; i >= 0; i--) {
+    var ed = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
+    if (ed !== editionId) continue;
+    if (scIssueDateKey_(dates[i][0]) !== date) continue;
+    if (deliv && !delivered) {
+      var d = deliv[i][0];
+      if (d instanceof Date || String(d || '').trim()) delivered = d;
+    }
+    digests.deleteRow(i + 2);
+    dropped++;
+  }
+  return { dropped: dropped, delivered: delivered };
+}
 
 function scDigestItemOut_(it) {
   return { title: it.title, source: it.source, publishedAt: it.publishedAt,
@@ -4073,7 +4138,13 @@ function scDigestStep_(editionId) {
   var t0 = Date.now();
   var today = scDigestClock_(new Date()).date;
   var wantEd = editionId || SCRAPER_EDITION_DEFAULT.id;
-  var state = scDigestState_();
+  // Read the SAME slot the steps write. This read used to be the no-argument
+  // form, which falls back to the legacy single key — a key nothing writes any
+  // more. Read and write then pointed at different properties: the loop set
+  // phase 'done' on the per-edition slot, read a stale non-done state back from
+  // the legacy one, reported done:false, and the client called again 600ms
+  // later — re-running render and appending another Digests row every pass.
+  var state = scDigestState_(wantEd);
   if (!state || state.phase === 'done' || state.date !== today ||
       (state.editionId || SCRAPER_EDITION_DEFAULT.id) !== wantEd) {
     state = scDigestStart_(ss, wantEd);
@@ -4083,7 +4154,7 @@ function scDigestStep_(editionId) {
   else if (state.phase === 'backstop') info = scDigestBackstopStep_(ss, state, t0);
   else if (state.phase === 'summarize') info = scDigestSummarizeStep_(ss, state, t0);
   else if (state.phase === 'render') info = scDigestRenderStep_(ss, state);
-  state = scDigestState_();
+  state = scDigestState_(wantEd) || state;
   return { success: true, id: state.id, date: state.date, phase: state.phase,
            edition: state.editionId || SCRAPER_EDITION_DEFAULT.id,
            done: state.phase === 'done', fetched: state.fetched || 0,
