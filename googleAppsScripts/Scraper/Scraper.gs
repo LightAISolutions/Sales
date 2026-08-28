@@ -1,4 +1,4 @@
-var VERSION = "v01.61g";
+var VERSION = "v01.62g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3765,8 +3765,11 @@ function getDigest(sessionToken, digestId) {
   var heavy = sheet.getRange(row, 7, 1, 2).getValues()[0];
   var sections = null;
   try { sections = JSON.parse(String(heavy[0] || 'null')); } catch (e) {}
+  // Editions built before the click-link fix carry direct /exec links, which
+  // hit Google's account routing. Upgrade them on read so the whole archive
+  // works in the app, not just editions built from here on.
   return { success: true, id: String(sheet.getRange(row, 1).getValue()),
-           digest: sections, html: String(heavy[1] || '') };
+           digest: sections, html: scRewriteLegacyClickUrls_(String(heavy[1] || '')) };
 }
 
 /** Delete one edition (Digests row + its DigestIntake rows). The developer
@@ -5324,6 +5327,12 @@ function scHandleClickRedirect_(e) {
     }
   } catch (clkErr) { /* logging must never block the redirect */ }
   var safe = (target && /^https?:\/\//i.test(target)) ? target : EMBED_PAGE_URL;
+  // JSON mode: what the embedding page asks for over its cookie-less fetch.
+  // Same resolution, same fallback — only the envelope differs.
+  if (String((e && e.parameter && e.parameter.fmt) || '') === 'json') {
+    return ContentService.createTextOutput(JSON.stringify({
+      success: !!target, url: safe })).setMimeType(ContentService.MimeType.JSON);
+  }
   return HtmlService.createHtmlOutput(
     '<!doctype html><meta http-equiv="refresh" content="0;url=' + scAttr_(safe) + '">'
     + '<script>location.replace(' + JSON.stringify(safe) + ');</script>'
@@ -5343,10 +5352,49 @@ function scAttr_(s) { return String(s || '').replace(/"/g, '&quot;').replace(/</
 
 /** Build the tracking redirect URL for one item — the app's own /exec
     endpoint with action=go, which scHandleClickRedirect_ resolves and logs. */
+/** The click-tracking link for one article.
+
+    Points at the EMBEDDING PAGE, not at the /exec endpoint directly. A plain
+    <a href> to script.google.com is a cookie-carrying top-level navigation, so
+    Google resolves it against the browser's DEFAULT signed-in account — and
+    when that is not the account owning the script, it serves an account
+    chooser or "unable to open the file" instead of the app. That is the same
+    multi-account routing failure the embedded iframe already dodges by being
+    credentialless, and the same reason every data call uses a cookie-less
+    fetch. Article links were the one path still going direct.
+
+    The embedding page resolves the destination over that same cookie-less
+    fetch and replaces the location. It is not an open redirect: the URL still
+    carries only (digest id, item key) and the destination is still looked up
+    server-side from the stored intake rows. */
 function scClickUrl_(digestId, url) {
-  var exec = 'https://script.google.com/macros/s/' + DEPLOYMENT_ID + '/exec';
-  return exec + '?action=go&d=' + encodeURIComponent(digestId)
-             + '&i=' + encodeURIComponent(scClickKey_(url));
+  return EMBED_PAGE_URL + '?go=' + encodeURIComponent(digestId)
+       + '&i=' + encodeURIComponent(scClickKey_(url));
+}
+
+/** The legacy direct-to-/exec form. Kept because every already-delivered email
+    contains links in this shape — they still resolve, they just route through
+    Google's authenticated host. scRewriteLegacyClickUrls_ upgrades them when a
+    stored edition is re-read in the app. */
+function scLegacyClickPrefix_() {
+  return 'https://script.google.com/macros/s/' + DEPLOYMENT_ID + '/exec?action=go&';
+}
+
+/** Rewrite legacy click links in stored edition HTML to the embedding-page
+    form, so editions built before this fix stop hitting account routing the
+    moment they are opened in the app. Handles both the raw and the
+    HTML-escaped ampersand, since the stored body is escaped markup. */
+function scRewriteLegacyClickUrls_(html) {
+  if (!html) return html;
+  var exec = 'https://script.google.com/macros/s/' + DEPLOYMENT_ID + '/exec?action=go&';
+  var out = html;
+  ['&amp;', '&'].forEach(function(amp) {
+    var from = exec.slice(0, -1) + amp + 'd=';
+    while (out.indexOf(from) !== -1) {
+      out = out.replace(from, EMBED_PAGE_URL + '?go=');
+    }
+  });
+  return out;
 }
 
 /** Engagement boost map: label(lower) → points, from clicks in the window.

@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.29r] — 2026-08-28 06:28:13 AM EST
+
+> **Prompt:** "I built one new session and tested the links - They are all still broken. Fix it."
+
+### Fixed
+
+- **Article links pointed directly at `script.google.com/macros/s/<id>/exec`.** That is a cookie-carrying top-level navigation, so Google resolves it against the browser's **default** signed-in account and serves an account chooser — or "unable to open the file" — when that is not the account owning the script. `scClickUrl_` now emits `EMBED_PAGE_URL?go=<digestId>&i=<key>`, and the embedding page resolves the destination over the same **cookie-less `fetch()`** the app already uses for every data call, then replaces the location. This is the identical structural remedy already applied to the `#gas-app` iframe (`credentialless`) and the token exchange — click links were the one surface still going direct
+- `scHandleClickRedirect_` gained a `fmt=json` mode returning `{success, url}`. Same resolution and same fallback as the HTML redirect, which is retained so links in already-delivered email keep working
+- `getDigest` runs stored HTML through `scRewriteLegacyClickUrls_`, upgrading direct-`/exec` links to the embedding-page form on read — so the whole existing archive is fixed in the app, not only editions built from here on
+- The `?go=` handler runs **before** anything auth-related, because a subscriber opening a link from email has no session and needs none; it paints an "Opening article…" cover and falls back to the app on any failure rather than stranding the reader
+
+### Changed
+
+- `.claude/rules/gas-scripts-reference.md` — the multi-account routing section said "no code change fixes it" and listed only the iframe and token exchange as structurally fixed. That framing is correct for opening Drive files and the Apps Script editor, and wrong for links this app emits. Added click links as the third fixed surface and a blockquote stating plainly that a direct `/exec` link for a user to click is a defect in the link. Without that correction a future session would re-derive this from scratch
+
+### Notes
+
+- **My previous diagnosis (v03.28r) was wrong and I should have caught it before shipping.** The intake wipe explained why *older* editions broke; it never explained the newest one, and the developer said "all" from the first message. The wipe was a genuine bug — Archive search, the company timeline and source stats were all reduced to the latest run by it — but it was not this bug. v03.28r stands on its own merits; it just did not fix what was asked
+- **What finally identified it:** the developer confirmed the symptom was a Google error/sign-in page, not a wrong destination. That reconciled the one piece of evidence that never fit — an anonymous `curl` to the same endpoint returned 200 while a signed-in browser failed. Anonymous works, cookied does not, which is account routing by definition
+- **Ruled out first, with evidence rather than reasoning:** the live deployment was on `v01.61g` (so the prior fix *was* deployed); the real `scDigestRenderStep_` emitted correct hrefs whose click keys matched the intake rows exactly; the real `scHandleClickRedirect_` resolved them to the real article; a realistic 30-item edition rendered to 36,293 characters against the 45,000 cell cap, so no truncation; `DEPLOYMENT_ID` matched between config and `.gs`; the CSP carries no `navigate-to`
+- **Verified**: 16 assertions against the real render-and-resolve path, including that the emitted link carries no destination URL (still not an open redirect), that JSON mode fails closed to the app, that the legacy HTML redirect still resolves for delivered email, and that the legacy rewrite handles both the escaped and unescaped ampersand while leaving unrelated markup untouched. A Playwright run drove the real `?go=` hop end to end — resolution fetch issued, navigation landing on the article, and no overlay or fetch on a plain page load
 
 ## [v03.28r] — 2026-08-28 06:02:57 AM EST
 

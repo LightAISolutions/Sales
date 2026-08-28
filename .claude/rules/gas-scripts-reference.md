@@ -160,7 +160,14 @@ Confirmed instances of each: Receipts v02.59r was a partial grant (declared, not
 2. **Force the account index in the URL** — `https://script.google.com/u/0/home/projects`, incrementing `/u/1/`, `/u/2/` until the project appears. The index is the order the accounts were signed in, not a stable identifier.
 3. **Make the owning account the browser default** — sign out of all Google accounts, then sign back in with the script account first.
 
-**In-app occurrences are already fixed structurally** and must not regress: embedded `/exec` iframes are created **credentialless** and the token exchange runs over cookie-less `fetch()`, both of which reach Google's anonymous serving path where account routing does not apply. If this error reappears *inside a page*, the cause is an iframe or transport that lost its cookie-less property — not a new Google bug.
+**In-app occurrences are already fixed structurally** and must not regress. Three surfaces reach Google's anonymous serving path, where account routing does not apply:
+1. embedded `/exec` iframes are created **credentialless**;
+2. the token exchange runs over cookie-less `fetch()`;
+3. **article click links** (`scClickUrl_`) point at the **embedding page** — `EMBED_PAGE_URL?go=<digestId>&i=<key>` — which resolves the destination over that same cookie-less `fetch()` and then replaces the location.
+
+If this error reappears *inside a page*, the cause is an iframe or transport that lost its cookie-less property — not a new Google bug.
+
+> **The "no code change fixes it" line above applies to opening Drive files and the Apps Script editor, NOT to links this app emits.** A plain `<a href>` to `script.google.com/macros/s/.../exec` is a cookie-carrying top-level navigation and *will* hit account routing — that is a defect in the link, and it is fixable. Confirmed 2026-08-28 (v01.62g): every article link in the app and in email hit an account chooser for a developer signed into more than one Google account, while an anonymous `curl` to the same endpoint returned 200. **Never emit a direct `/exec` link for a user to click.** Route it through the embedding page.
 
 **Diagnostic order when the editor will not open:** probe the deployment first (previous section). A healthy version response proves the project is alive and owned, which narrows the problem to browser-side routing and rules out a trashed project or lost ownership.
 

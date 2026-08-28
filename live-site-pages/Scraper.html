@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.53w">
+  <meta name="build-version" content="v01.54w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -1816,6 +1816,11 @@
       checkForUpdate();
     })();
 
+    // The app's own URL with no query string — the safe landing spot if a
+    // click link cannot be resolved. Stripping the query is what stops the
+    // fallback re-entering the ?go= handler in a loop.
+    var EMBED_SELF_URL = location.origin + location.pathname;
+
     (function() {
       var _e = 'Y2V4ZS9nSVVqblh6MURydHRYZE1FZGl3aTdqNjBDbWUwdDVOdERCbzhscko5Ujg0WW5JSVdkOVhUcmNQWmxEc0xxQTBST244eWJjeWZLQS9zL3NvcmNhbS9tb2MuZWxnb29nLnRwaXJjcy8vOnNwdHRo';
       if (!_e) return;
@@ -1834,6 +1839,43 @@
       f.style.cssText = 'width:100%;height:100%;border:none;position:fixed;top:0;left:0;z-index:1;';
       f.dataset.baseUrl = _u;
       document.body.appendChild(f);
+
+      // PROJECT: article-link hop (?go=<digestId>&i=<key>).
+      //
+      // Article links used to point straight at the /exec endpoint. That is a
+      // cookie-carrying top-level navigation, so Google resolves it against
+      // the browser's DEFAULT signed-in account and serves an account chooser
+      // or "unable to open the file" when that is not the account owning the
+      // script — the same multi-account routing failure the iframe above is
+      // credentialless to avoid. Links now land here instead and the
+      // destination is fetched over the same cookie-less path, which Google
+      // serves anonymously.
+      //
+      // Runs before anything auth-related on purpose: a subscriber opening a
+      // link from their email has no session and needs none, because the
+      // resolution endpoint is unauthenticated by design.
+      try {
+        var _gm = /[?&]go=([^&]+)/.exec(location.search);
+        var _im = /[?&]i=([^&]+)/.exec(location.search);
+        if (_gm && _im) {
+          var _d = decodeURIComponent(_gm[1]), _k = decodeURIComponent(_im[1]);
+          var _fin = function(url) { location.replace(url); };
+          var _wall = document.createElement('div');
+          _wall.style.cssText = 'position:fixed;inset:0;z-index:100000;background:#15171c;'
+            + 'color:#c9cdd4;display:flex;align-items:center;justify-content:center;'
+            + 'font-family:system-ui,sans-serif;font-size:15px;';
+          _wall.textContent = 'Opening article…';
+          document.body.appendChild(_wall);
+          // No credentials — this is the whole point.
+          fetch(_u + '?action=go&fmt=json&d=' + encodeURIComponent(_d)
+                   + '&i=' + encodeURIComponent(_k), { redirect: 'follow' })
+            .then(function(r) { return r.json(); })
+            .then(function(j) { _fin((j && j.url) || EMBED_SELF_URL); })
+            // Any failure still gets the reader somewhere real rather than
+            // stranding them on a blank page.
+            .catch(function() { _fin(EMBED_SELF_URL); });
+        }
+      } catch (goErr) {}
     })();
 
     // Changelog HTML sanitizer — strips dangerous elements and event handlers
