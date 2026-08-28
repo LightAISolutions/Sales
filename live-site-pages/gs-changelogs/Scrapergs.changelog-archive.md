@@ -8,6 +8,13 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.05g] — 2026-08-02 09:42:54 PM EST — v01.50r — [b71d24e](https://github.com/LightAISolutions/Sales/commit/b71d24e)
+
+### Added
+- Research projects can now be created, edited, paused, resumed, and archived — each saved privately to your own account
+- Report schedules (daily through annual, plus custom dates) are stored with each project
+- Up to 10 active projects per account
+
 ## [v01.04g] — 2026-07-18 12:05:25 AM EST — v01.13r — [50449c4](https://github.com/LightAISolutions/Sales/commit/50449c4)
 
 ### Added

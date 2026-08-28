@@ -1,4 +1,4 @@
-var VERSION = "v01.54g";
+var VERSION = "v01.55g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -364,7 +364,7 @@ var SCRAPER_TAB_HEADERS = {
   DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
                  'Score', 'Signals', 'Summary', 'Section', 'Backstop'],
   Editions: ['Edition ID', 'Name', 'Cadence', 'Anchor', 'Window Hours', 'Enabled',
-             'Last Built Date', 'Created', 'Notes', 'Tuning'],
+             'Last Built Date', 'Created', 'Notes', 'Tuning', 'Preset'],
   Subscribers: ['Email', 'Name', 'Editions', 'Status', 'Admin', 'Token',
                 'Added', 'Updated'],
   ClickLog: ['Timestamp', 'Digest ID', 'Item Key', 'URL', 'Title', 'Source',
@@ -387,7 +387,7 @@ var SCRAPER_PROJECT_ACTIONS = ['getSchedulerHealth',
                                'goLiveStatus', 'testAi', 'emailLatestDigest',
                                'setAiProvider', 'addDigestRecipient', 'removeDigestRecipient',
                                'listEditions', 'saveEdition', 'deleteEdition',
-                               'setEditionTuning',
+                               'setEditionTuning', 'resetEditionTuning',
                                'listSubscribers', 'saveSubscriber', 'removeSubscriber',
                                'searchArchive', 'companyTimeline', 'sourceStats',
                                'previewEdition', 'sendHeldBackRollup'];
@@ -718,32 +718,59 @@ var SCRAPER_EDITION_DEFAULT = { id: 'morning', name: 'The Morning Edition',
 // on top of the global Tune. An edition that stores nothing behaves exactly
 // like the global model, which is why 'morning' carries no overrides at all
 // and its digests are byte-identical to before per-edition tuning existed.
-var SCRAPER_EDITION_SEEDS_KEY = 'EDITION_SEEDS_V1';
+var SCRAPER_EDITION_SEEDS_KEY = 'EDITION_SEEDS_V2';
+
+// A preset is a RECOMMENDATION, expanded at edition-creation time into a FULL
+// explicit map over every segment and topic. Materialising matters: with a
+// sparse map an edition silently tracked whatever the global baseline did, so
+// a new edition was really just "the Morning Edition until told otherwise" —
+// which is exactly what the developer did not want. A materialised edition is
+// independent from birth, and `presetOff` is kept so the UI can show which
+// switches the developer has since changed FROM the recommendation.
+//
+// 'global' is the one non-materialising preset: it means "inherit", and it is
+// what 'morning' uses, which is why the Morning Edition is unchanged.
+var SCRAPER_TUNING_PRESETS = {
+  global: { label: 'Follow the global baseline', off: null },
+  all:    { label: 'Everything on', off: [] },
+  bess:   { label: 'Utility-scale storage (BESS)', off: [
+    'seg-bess-residential', 'seg-bess-ci',
+    'seg-solar', 'seg-wind', 'seg-nuclear', 'seg-fuel-cells',
+    'seg-ev', 'seg-ev-charging', 'seg-consumer', 'seg-industrial',
+    'seg-semiconductors', 'seg-gpu-silicon', 'seg-cooling', 'seg-psu', 'seg-rack-power',
+    'topic-aidc-buildout', 'topic-community-opposition', 'topic-dc-cooling'
+  ] },
+  aidc:   { label: 'Data-center power chain (AIDC)', off: [
+    // Storage as a beat in its own right is out; storage SITED at a data
+    // center stays in, because it is part of this power chain.
+    'seg-bess', 'seg-bess-utility', 'seg-bess-residential', 'seg-bess-ci',
+    'seg-bess-longduration',
+    'seg-solar', 'seg-wind', 'seg-ev', 'seg-ev-charging', 'seg-consumer',
+    'topic-bess-technology', 'topic-bess-bankability', 'topic-battery-incidents',
+    'topic-china-policy', 'topic-storage-offtake', 'topic-storage-degradation'
+  ] }
+};
+
 var SCRAPER_EDITION_SEEDS = [
   { id: 'bess', name: 'The Morning Edition (BESS)', cadence: 'daily', anchor: 0, windowH: 0,
-    notes: 'Utility-scale storage focus',
-    tuning: {
-      // Off: the storage segments this reader does not sell into.
-      'seg-bess-residential': false, 'seg-bess-ci': false,
-      // Off: adjacent generation beats that dilute a storage edition.
-      'seg-solar': false, 'seg-wind': false, 'seg-nuclear': false,
-      'seg-fuel-cells': false, 'seg-ev': false, 'seg-ev-charging': false,
-      'seg-consumer': false, 'seg-industrial': false,
-      'topic-aidc-buildout': false, 'topic-community-opposition': false
-    } },
+    notes: 'Utility-scale storage focus', preset: 'bess' },
   { id: 'aidc', name: 'The Morning Edition (AIDC)', cadence: 'daily', anchor: 0, windowH: 0,
-    notes: 'Data-center power chain focus',
-    tuning: {
-      // Off: storage as a beat in its own right. Data-center-sited storage
-      // stays ON — it is part of the power chain this edition follows.
-      'seg-bess-utility': false, 'seg-bess-residential': false, 'seg-bess-ci': false,
-      'seg-bess-longduration': false,
-      'seg-solar': false, 'seg-wind': false, 'seg-ev': false, 'seg-ev-charging': false,
-      'seg-consumer': false,
-      'topic-bess-technology': false, 'topic-bess-bankability': false,
-      'topic-battery-incidents': false, 'topic-china-policy': false
-    } }
+    notes: 'Data-center power chain focus', preset: 'aidc' }
 ];
+
+/** Expand a preset into a full explicit map over every seeded segment + topic.
+    Returns null for 'global' — the caller stores {} and the edition inherits. */
+function scPresetMap_(preset) {
+  var def = SCRAPER_TUNING_PRESETS[String(preset || 'all')];
+  if (!def) def = SCRAPER_TUNING_PRESETS.all;
+  if (!def.off) return null;
+  var off = {};
+  def.off.forEach(function(k) { off[k] = true; });
+  var map = {};
+  SCRAPER_SEGMENT_SEEDS.forEach(function(x) { map[x.key] = !off[x.key]; });
+  SCRAPER_INTEREST_TOPIC_SEEDS.forEach(function(x) { map[x.key] = !off[x.key]; });
+  return map;
+}
 var SCRAPER_CLICK_BOOST_CAP = 5;       // max rubric points from engagement (clicks)
 var SCRAPER_CLICK_WINDOW_DAYS = 30;    // clicks older than this stop influencing scores
 var SCRAPER_CORROB_CAP = 6;            // max score boost from multi-source corroboration
@@ -4436,15 +4463,15 @@ function scEditions_(ss) {
       windowH: Number(data[i][4]) || 0,
       enabled: data[i][5] === true || String(data[i][5]).toLowerCase() === 'true',
       lastBuilt: String(data[i][6] || ''), created: data[i][7], notes: String(data[i][8] || ''),
-      tuning: scParseTuning_(data[i][9])
+      tuning: scParseTuning_(data[i][9]), preset: String(data[i][10] || 'global')
     });
   }
   if (!out.length) {
     var d = SCRAPER_EDITION_DEFAULT;
-    sheet.appendRow([d.id, d.name, d.cadence, d.anchor, d.windowH, true, '', new Date(), '', '{}']);
+    sheet.appendRow([d.id, d.name, d.cadence, d.anchor, d.windowH, true, '', new Date(), '', '{}', 'global']);
     out.push({ id: d.id, name: d.name, cadence: d.cadence, anchor: d.anchor,
                windowH: d.windowH, enabled: true, lastBuilt: '', created: new Date(),
-               notes: '', tuning: {} });
+               notes: '', tuning: {}, preset: 'global' });
   }
   // Seeded ONCE, tracked by a Script Property rather than by absence: seeding
   // on absence would resurrect an edition the developer deliberately deleted.
@@ -4453,15 +4480,51 @@ function scEditions_(ss) {
     var have = {};
     out.forEach(function(e) { have[e.id] = true; });
     SCRAPER_EDITION_SEEDS.forEach(function(sd) {
-      if (have[sd.id]) return;
+      var map = scPresetMap_(sd.preset) || {};
+      if (have[sd.id]) {
+        // Already created by an earlier seed pass with a sparse map — upgrade
+        // it in place rather than skipping, otherwise the edition keeps
+        // silently inheriting for every key the old map did not mention.
+        for (var h = 0; h < out.length; h++) {
+          if (out[h].id !== sd.id) continue;
+          out[h].tuning = map; out[h].preset = sd.preset;
+          for (var hr = 1; hr < data.length; hr++) {
+            if (String(data[hr][0]) !== sd.id) continue;
+            sheet.getRange(hr + 1, 10, 1, 2).setValues([[JSON.stringify(map), sd.preset]]);
+            break;
+          }
+          break;
+        }
+        return;
+      }
       sheet.appendRow([sd.id, sd.name, sd.cadence, sd.anchor, sd.windowH, true, '',
-                       new Date(), sd.notes || '', JSON.stringify(sd.tuning || {})]);
+                       new Date(), sd.notes || '', JSON.stringify(map), sd.preset]);
       out.push({ id: sd.id, name: sd.name, cadence: sd.cadence, anchor: sd.anchor,
                  windowH: sd.windowH, enabled: true, lastBuilt: '', created: new Date(),
-                 notes: sd.notes || '', tuning: sd.tuning || {} });
+                 notes: sd.notes || '', tuning: map, preset: sd.preset });
     });
     props.setProperty(SCRAPER_EDITION_SEEDS_KEY, 'done');
   }
+
+  // Self-healing top-up: a materialised edition must carry an explicit value
+  // for EVERY seeded interest. Without this, a segment shipped after the
+  // edition was created would be absent from its map and quietly inherit the
+  // global toggle — reintroducing the very coupling materialising removes.
+  out.forEach(function(e) {
+    if (e.preset === 'global') return;
+    var full = scPresetMap_(e.preset);
+    if (!full) return;
+    var added = 0;
+    for (var k in full) {
+      if (!Object.prototype.hasOwnProperty.call(e.tuning, k)) { e.tuning[k] = full[k]; added++; }
+    }
+    if (!added) return;
+    for (var r2 = 1; r2 < data.length; r2++) {
+      if (String(data[r2][0]) !== e.id) continue;
+      sheet.getRange(r2 + 1, 10).setValue(JSON.stringify(e.tuning));
+      break;
+    }
+  });
   return out;
 }
 
@@ -4505,7 +4568,17 @@ function scEditionDue_(ed, clock) {
 function listEditions(sessionToken) {
   validateSessionForData(sessionToken, 'listEditions');
   var ss = scraperSs_(); ensureScraperTabs_(ss);
-  return { success: true, editions: scEditions_(ss) };
+  var eds = scEditions_(ss);
+  // Ship each edition's RECOMMENDED map alongside its current one so the UI
+  // can mark the switches the developer has changed from the recommendation —
+  // the client must not re-derive a recommendation, or the two definitions
+  // drift and the markers start lying.
+  eds.forEach(function(e) { e.recommended = scPresetMap_(e.preset) || {}; });
+  var presets = [];
+  for (var k in SCRAPER_TUNING_PRESETS) {
+    presets.push({ key: k, label: SCRAPER_TUNING_PRESETS[k].label });
+  }
+  return { success: true, editions: eds, presets: presets };
 }
 
 function saveEdition(sessionToken, payload) {
@@ -4532,10 +4605,16 @@ function saveEdition(sessionToken, payload) {
       }
     }
   }
+  // A NEW edition is materialised from its preset, never left to inherit —
+  // "start as a copy of the Morning Edition until told otherwise" is precisely
+  // the behaviour the developer rejected. Default 'all' rather than 'global'.
+  var preset = SCRAPER_TUNING_PRESETS[String(p.preset)] ? String(p.preset) : 'all';
+  var map = scPresetMap_(preset) || {};
   id = 'ed-' + Utilities.getUuid().slice(0, 8);
-  sheet.appendRow([id, name, cadence, anchor, Number(p.windowH) || 0, enabled, '', new Date(), '']);
+  sheet.appendRow([id, name, cadence, anchor, Number(p.windowH) || 0, enabled, '', new Date(), '',
+                   JSON.stringify(map), preset]);
   dataAuditLog(user.email, 'create', 'edition', id, name);
-  return { success: true, id: id };
+  return { success: true, id: id, preset: preset };
 }
 
 /** Set (or clear) one interest override on one edition.
@@ -4564,6 +4643,30 @@ function setEditionTuning(sessionToken, editionId, key, enabled) {
     sheet.getRange(i + 1, 10).setValue(JSON.stringify(tuning));
     _scInterestModel = {};   // the cached model for this edition is now stale
     return { success: true, editionId: want, tuning: tuning };
+  }
+  return { success: false, error: 'not_found' };
+}
+
+/** Re-apply an edition's preset, discarding every change made since. Also
+    accepts a NEW preset, which is how the developer re-bases an edition onto
+    a different recommendation without deleting and recreating it. */
+function resetEditionTuning(sessionToken, editionId, preset) {
+  var user = validateSessionForData(sessionToken, 'resetEditionTuning');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_permitted' };
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.EDITIONS);
+  var data = sheet.getDataRange().getValues();
+  var want = String(editionId || '');
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][0]) !== want) continue;
+    var pk = SCRAPER_TUNING_PRESETS[String(preset)] ? String(preset)
+                                                    : String(data[i][10] || 'all');
+    var map = scPresetMap_(pk) || {};
+    sheet.getRange(i + 1, 10, 1, 2).setValues([[JSON.stringify(map), pk]]);
+    _scInterestModel = {};
+    dataAuditLog(user.email, 'update', 'edition-tuning', want, pk);
+    return { success: true, editionId: want, preset: pk, tuning: map };
   }
   return { success: false, error: 'not_found' };
 }
@@ -5300,6 +5403,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'saveEdition') return saveEdition(sessionToken, param('payload'));
   if (op === 'deleteEdition') return deleteEdition(sessionToken, param('editionId'));
   if (op === 'setEditionTuning') return setEditionTuning(sessionToken, param('editionId'), param('key'), param('enabled'));
+  if (op === 'resetEditionTuning') return resetEditionTuning(sessionToken, param('editionId'), param('preset'));
   if (op === 'listSubscribers') return listSubscribers(sessionToken);
   if (op === 'saveSubscriber') return saveSubscriber(sessionToken, param('payload'));
   if (op === 'removeSubscriber') return removeSubscriber(sessionToken, param('email'));

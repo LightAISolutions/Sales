@@ -9,6 +9,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 *(No changes yet)*
 
+## [v01.55g] — 2026-08-28 12:36:36 AM EST — v03.22r
+
+### Changed
+- **A new edition no longer starts out following your main edition's settings.** When you create one you pick the starting point you want, and every segment and topic is written into that edition immediately — so it is its own publication from the moment it exists, and changing your main edition never quietly changes it
+- Your two focused editions were rebuilt on the same footing, so every switch in them is now theirs rather than borrowed
+- Choices you have not yet made are no longer left undecided: if a new segment or topic is added later, each edition is given its own answer for it straight away instead of falling back to the shared setting
+
+### Added
+- **Starting points to choose from** when creating an edition — everything on, a utility-scale storage focus, a data-center power-chain focus, or follow the shared settings
+- **Reset to recommended** — put an edition back to its starting point, or move it onto a different one, without deleting and rebuilding it
+
 ## [v01.54g] — 2026-08-28 12:02:02 AM EST — v03.21r
 
 ### Added
@@ -377,12 +388,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 ### Added
 - News gathering is now live: each project searches Google News plus any feeds you added, guided by your topic, keywords, industries, and excluded terms
 - Duplicate stories are automatically skipped, and long searches resume where they left off if interrupted
-
-## [v01.05g] — 2026-08-02 09:42:54 PM EST — v01.50r
-
-### Added
-- Research projects can now be created, edited, paused, resumed, and archived — each saved privately to your own account
-- Report schedules (daily through annual, plus custom dates) are stored with each project
-- Up to 10 active projects per account
 
 Developed by: LightAISolutions

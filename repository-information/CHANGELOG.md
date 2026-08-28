@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.22r] — 2026-08-28 12:36:36 AM EST
+
+> **Prompt:** "I switched the Tuning scope to BESS and see the amber dots that signify "The Morning Report (BESS)" which segments/topics are toggled on. However, I want to be able to easily modify the segments/topics that are toggled on for each unique Edition. When I switch to a new Edition for the first time, I would like each new Edition to come pre-loaded with your recommended topics/segments toggled on, but give me the ability to easily override your recommendations by toggling them on/off too. I don't want each new Edition to stay on the default "Morning Report" settings."
+
+### Changed
+- **Sparse inheritance replaced with materialised presets — this reverses a v03.21r design decision at the developer's direction.** v03.21r stored only what an edition *differed* on, so an edition was really "the Morning Edition until told otherwise": every key it did not mention tracked the global baseline, and editing the baseline silently moved every edition with it. `SCRAPER_TUNING_PRESETS` now expands a named recommendation into a **full explicit map over every seeded segment and topic** (`scPresetMap_`), written at creation time. A materialised edition inherits **nothing**
+- **The amber dot changed meaning, because the old one became useless.** It marked "stores an override vs global" — true of *every* key on a materialised edition, and a marker on everything marks nothing. It now marks **"you changed this from the recommendation"**, computed against the `recommended` map `listEditions` ships alongside `tuning`. The client deliberately does **not** re-derive the recommendation; two definitions would drift and the markers would start lying
+- **The scope note counts deviations, not stored keys** — a raw key count is now always the full vocabulary. It reads `N of M on` plus `K changed from the recommendation`, or `matching the recommendation`
+- **A materialised edition never clears a key back to inherit.** The v03.21r clear-on-match rule now applies only to a `global`-preset edition; on a materialised one it would silently re-couple that key to the baseline
+
+### Added
+- **`Preset` column** on the Editions tab, and `preset` on every edition record. `global` is the one non-materialising preset — it is what `morning` uses, which is why the Morning Edition is still byte-identical
+- **`resetEditionTuning`** — re-applies an edition's preset, or **re-bases it onto a different one**, without delete-and-recreate. Surfaced as a preset picker + *Reset to recommended* in the tuning scope, and a preset picker on the add-edition form
+- **Self-healing top-up in `scEditions_`.** A materialised edition must carry an explicit value for *every* seeded interest; without this, a segment shipped after the edition was created would be absent from its map and quietly inherit — reintroducing the exact coupling this push removes. Verified it **never overwrites a value the developer changed**
+- In-place upgrade of the two editions seeded sparsely by v03.21r (`EDITION_SEEDS_V1` → `V2`), rather than skipping them as already-present
+
+### Fixed
+- **The scope note could contradict the switches.** After a save the client adopted the server's authoritative `tuning` map but only called `wdScopeNote_()`, leaving the toggles painted from the optimistic pre-save state. Now it re-renders as well. **Found because a test stub returned an unrealistic empty map** — the stub was wrong (the real endpoint returns the full map, so this never fired in production), but the divergence it produced was a genuine consistency gap and is fixed rather than papered over
+
+### Notes
+- Presets are recommendations, not policy: BESS drops residential/C&I storage and the server-side AIDC hardware beats; AIDC drops storage as its own beat **but keeps data-center-sited storage**, because that is part of the power chain it follows. Both asymmetries are asserted
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **28 assertions**, plus all four earlier suites re-run clean. *Server* (15): a preset covers every segment and topic explicitly (so a new edition inherits nothing), `global` alone stays null, an unknown preset falls back to `all` rather than throwing, no preset references a non-existent interest, the two recommendations genuinely differ, and the self-healing top-up both fills later-added keys and leaves developer changes alone. *Playwright* (13): residential storage reads ON globally and OFF inside the edition **at the same moment** — the coupling is gone; a fresh edition shows no change markers; changing one switch marks exactly that row and the note counts one deviation; the write is explicit rather than a clear; reset restores the recommendation and clears the markers
+- **`Scrapergs.changelog.md` rotated** — the 2026-08-02 section archived with SHA `b71d24e`; counter held at 50/50
+- **`Scraper.gs`** VERSION v01.54g → v01.55g; **`Scraper.html`** v01.48w → v01.49w; version files synced
 
 ## [v03.21r] — 2026-08-28 12:02:02 AM EST
 

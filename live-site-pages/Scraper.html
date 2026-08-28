@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.48w">
+  <meta name="build-version" content="v01.49w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -565,6 +565,8 @@
     .wd-tune-scope select { width: 100%; background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft);
       border-radius: 4px; color: var(--wd-ink); font: inherit; font-size: 12px; padding: 5px 7px; }
     .wd-tune-scope.scoped select { border-color: var(--wd-amber, #f2a33c); }
+    #wd-scope-preset { display: flex; flex-direction: column; gap: 5px; margin-top: 7px; }
+    #wd-scope-preset select { width: 100%; }
     .wd-int-row.overridden .wd-int-name::after { content: '•'; color: var(--wd-amber, #f2a33c);
       margin-left: 5px; font-weight: 700; }
     .wd-sync-card .wd-diag { color: var(--wd-mut2); font-size: 12px; padding: 0; letter-spacing: 0; }
@@ -1017,6 +1019,11 @@
             <option value="">Global (all editions)</option>
           </select>
           <span class="wd-note" id="wd-scope-note">Editing the shared baseline.</span>
+          <div id="wd-scope-preset" style="display:none;">
+            <select id="wd-preset-sel" title="The recommendation this edition started from"></select>
+            <button class="wd-link" id="wd-preset-reset" type="button"
+              title="Discard your changes and re-apply the recommendation">Reset to recommended</button>
+          </div>
         </div>
         <div class="wd-sect">
           <div class="wd-sect-head">
@@ -1161,7 +1168,7 @@
         <div class="wd-tune-pane on" id="wd-pane-interests"><div id="wd-tune-interests-host"></div></div>
 
         <div class="wd-tune-pane" id="wd-pane-editions">
-          <p class="wd-hint">Each edition has its own cadence and subscriber list. The Morning Edition is built in.</p>
+          <p class="wd-hint">Each edition has its own cadence, subscriber list and segment/topic settings. A new edition starts from the recommendation you pick — not from the Morning Edition — and every switch stays yours to change.</p>
           <div id="wd-ed-list"></div>
           <div class="wd-form-row">
             <input type="text" id="wd-ed-name" placeholder="Edition name (e.g. The Week in Storage)">
@@ -1171,6 +1178,7 @@
               <option value="monthly">Monthly</option>
             </select>
             <input type="number" id="wd-ed-anchor" min="0" max="31" placeholder="Day" title="Weekly: 1=Mon…7=Sun. Monthly: day of month.">
+            <select id="wd-ed-preset" title="What this edition starts out following. You can change any switch afterwards."></select>
             <button class="sc-btn primary" id="wd-ed-add" type="button">Add edition</button>
           </div>
           <div id="wd-ed-note" class="wd-hint"></div>
@@ -5040,6 +5048,7 @@
       var dg = res[0], gl = res[1], ed = res[2];
       _wdDigests = (dg && dg.success && dg.digests) ? dg.digests : [];
       _wdEditions = (ed && ed.success && ed.editions) ? ed.editions : [];
+      if (ed && ed.presets) { _wdPresets = ed.presets; wdPresetFill_('wd-ed-preset', 'all'); }
       wdScopeFill_();
       wdRenderStatusStrip_(gl && gl.success ? gl : null);
       wdRenderRecentStrip_();
@@ -5182,6 +5191,7 @@
       .then(function(d) {
         if (!d || !d.success) { host.textContent = scErrMsg(d && d.error); return; }
         _wdEditions = d.editions || [];
+        if (d.presets) { _wdPresets = d.presets; wdPresetFill_('wd-ed-preset', 'all'); }
         wdScopeFill_();
         host.innerHTML = _wdEditions.map(function(e) {
           var when = e.cadence === 'weekly' ? 'weekly (day ' + e.anchor + ')'
@@ -5200,7 +5210,8 @@
     var note = $sc('wd-ed-note');
     var payload = JSON.stringify({
       name: $sc('wd-ed-name').value, cadence: $sc('wd-ed-cadence').value,
-      anchor: Number($sc('wd-ed-anchor').value) || 0
+      anchor: Number($sc('wd-ed-anchor').value) || 0,
+      preset: ($sc('wd-ed-preset') || {}).value || 'all'
     });
     note.textContent = 'Saving…';
     _gasPost({ action: 'saveEdition', token: scToken(), payload: payload })
@@ -6953,6 +6964,24 @@
       wdScopeNote_();
       wdRenderInterests_();   // repaint every toggle against the new scope
     });
+    var presetReset = $sc('wd-preset-reset');
+    if (presetReset) presetReset.addEventListener('click', function() {
+      var ed = wdScopedEdition_();
+      if (!ed) return;
+      var want = ($sc('wd-preset-sel') || {}).value || ed.preset;
+      var btn = presetReset;
+      btn.disabled = true; btn.textContent = 'Resetting…';
+      _gasPost({ action: 'resetEditionTuning', token: scToken(), editionId: ed.id, preset: want })
+        .then(function(d) {
+          if (d && d.success) {
+            ed.tuning = d.tuning || {}; ed.preset = d.preset; ed.recommended = d.tuning || {};
+            wdRenderInterests_(); wdScopeNote_();
+            scToast(ed.name + ' reset to the recommended settings.');
+          } else scToast(scErrMsg(d && d.error), true);
+        })
+        .catch(function(err) { scToast('Reset failed (' + scEsc((err && err.message) || err) + ').', true); })
+        .then(function() { btn.disabled = false; btn.textContent = 'Reset to recommended'; });
+    });
     var diagBtn = $sc('wd-diag-toggle');
     if (diagBtn) diagBtn.addEventListener('click', function() {
       _wdDiagForced = !_wdDiagForced;
@@ -7206,9 +7235,19 @@
     return !!it.enabled;
   }
 
+  /** Marks a switch the developer has changed FROM the recommendation.
+      Previously this meant "differs from global", which on a materialised
+      edition is every single key — a marker on everything marks nothing. */
   function wdIsOverridden_(it) {
     var ed = wdScopedEdition_();
-    return !!(ed && ed.tuning && Object.prototype.hasOwnProperty.call(ed.tuning, it.key));
+    if (!ed || !ed.tuning) return false;
+    var rec = ed.recommended || {};
+    if (Object.prototype.hasOwnProperty.call(rec, it.key)) {
+      return wdEffectiveOn_(it) !== (rec[it.key] === true);
+    }
+    // No recommendation for this key (a 'global' edition): fall back to the
+    // old meaning — it stores an override where it would otherwise inherit.
+    return Object.prototype.hasOwnProperty.call(ed.tuning, it.key);
   }
 
   function wdScopeFill_() {
@@ -7224,16 +7263,47 @@
     wdScopeNote_();
   }
 
+  var _wdPresets = [];
+
+  function wdPresetFill_(sel, value) {
+    var el = $sc(sel);
+    if (!el) return;
+    el.innerHTML = _wdPresets.map(function(p) {
+      return '<option value="' + scEsc(p.key) + '">' + scEsc(p.label) + '</option>';
+    }).join('');
+    if (value) el.value = value;
+  }
+
   function wdScopeNote_() {
     var note = $sc('wd-scope-note');
     var wrap = document.querySelector('.wd-tune-scope');
     var ed = wdScopedEdition_();
     if (wrap) wrap.className = 'wd-sect wd-tune-scope' + (ed ? ' scoped' : '');
     if (!note) return;
-    if (!ed) { note.textContent = 'Editing the shared baseline. Every edition inherits this.'; return; }
-    var n = ed.tuning ? Object.keys(ed.tuning).length : 0;
-    note.textContent = 'Editing ' + ed.name + ' only — ' + n + ' override'
-      + (n === 1 ? '' : 's') + '. Others are unaffected.';
+    var prow = $sc('wd-scope-preset');
+    if (!ed) {
+      if (prow) prow.style.display = 'none';
+      note.textContent = 'Editing the shared baseline. Every edition inherits this.';
+      return;
+    }
+    if (prow) prow.style.display = '';
+    wdPresetFill_('wd-preset-sel', ed.preset || 'all');
+    // Count what the developer changed, not how many keys are stored — on a
+    // materialised edition every key is stored, so a raw count says nothing.
+    var rec = ed.recommended || {}, changed = 0;
+    _wdInterests.forEach(function(it) {
+      if (it.type !== 'segment' && it.type !== 'topic') return;
+      if (!Object.prototype.hasOwnProperty.call(rec, it.key)) return;
+      if (wdEffectiveOn_(it) !== (rec[it.key] === true)) changed++;
+    });
+    var on = 0, tot = 0;
+    _wdInterests.forEach(function(it) {
+      if (it.type !== 'segment' && it.type !== 'topic') return;
+      tot++; if (wdEffectiveOn_(it)) on++;
+    });
+    note.textContent = 'Editing ' + ed.name + ' only — ' + on + ' of ' + tot + ' on'
+      + (changed ? ', ' + changed + ' changed from the recommendation' : ', matching the recommendation')
+      + '. Other editions are unaffected.';
   }
 
   function wdToggleClick_(ev) {
@@ -7253,10 +7323,11 @@
       var was = wdEffectiveOn_(it);
       var next = !was;
       ed.tuning = ed.tuning || {};
-      // Matching the baseline again means the edition has nothing to say about
-      // this key — clear it rather than storing a redundant override, so the
-      // map only ever holds real differences.
-      var clearing = (next === !!it.enabled);
+      // Only a 'global' edition clears back to inherit. A materialised edition
+      // is explicit by definition — clearing a key there would silently
+      // re-couple it to the baseline, which is the coupling the developer
+      // asked to remove.
+      var clearing = (ed.preset === 'global') && (next === !!it.enabled);
       if (clearing) delete ed.tuning[it.key]; else ed.tuning[it.key] = next;
       wdRenderInterests_();
       wdScopeNote_();
@@ -7267,7 +7338,13 @@
             if (clearing) ed.tuning[it.key] = was; else delete ed.tuning[it.key];
             wdRenderInterests_(); wdScopeNote_();
             scToast(scErrMsg(data && data.error), true);
-          } else { ed.tuning = data.tuning || ed.tuning; wdScopeNote_(); }
+          } else {
+            // Adopt the server's authoritative map AND repaint the switches.
+            // Updating the note alone let the summary line disagree with the
+            // toggles whenever the stored map differed from the optimistic one.
+            ed.tuning = data.tuning || ed.tuning;
+            wdRenderInterests_(); wdScopeNote_();
+          }
         })
         .catch(function(err) {
           if (clearing) ed.tuning[it.key] = was; else delete ed.tuning[it.key];

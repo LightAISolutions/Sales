@@ -3,11 +3,24 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.49w] — 2026-08-28 12:36:36 AM EST — v03.22r
+
+### Changed
+- **The dot next to a setting now means "you changed this from the recommendation"** rather than "this differs from the shared settings". On an edition that has its own full set of settings the old meaning marked every single row, which told you nothing
+- The line under the Tuning selector now says how many settings are on out of the total, and how many you have changed from the recommendation — or that it still matches
+
+### Added
+- **A starting-point menu and a "Reset to recommended" button** appear when you pick an edition, so you can see what it was built from and put it back at any time
+- The new-edition form asks which starting point to use
+
+### Fixed
+- After saving a change, the switches are redrawn from what was actually stored, so the summary line and the switches can no longer disagree
 
 ## [v01.48w] — 2026-08-28 12:02:02 AM EST — v03.21r
 
