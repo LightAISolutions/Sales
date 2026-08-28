@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.32r] — 2026-08-28 05:34:27 PM EST
+
+> **Prompt:** "I am deleting all my old Editions (with their old problems) to keep things organized, but I noticed that the issue number keeps going up. When you give a Digest an issue number, make sure to check the current repository of digests and keep the issue number congruent."
+>
+> **Prompt (follow-up, mid-turn):** "On the Scraper app, before emailing digests out, I want you to be flexible and update issue numbers for surviving issues if I delete an issue. Make sure all issues are properly chronologically ordered at all times on the app."
+
+### Fixed
+
+- `Scraper.gs` (v01.65g) — **the issue number was `digests.getLastRow()`**, a row-position counter over the whole Digests tab. Wrong three separate ways, all of which the developer was hitting at once:
+  1. **Shared across mastheads.** A first-ever BESS issue inherited the count of every morning issue ever built, so it opened at No. 004 instead of No. 001
+  2. **Counted builds, not issues.** `appendRow` adds a row per render, so pressing *Run intake now* twice in a day made the same day's edition claim two numbers and pushed the next issue up by two
+  3. **Moved with unrelated rows.** Deleting issues of one edition shifted every other edition's next number
+- Replaced with `scIssueNumbers_` / `scNextIssueNo_`: an issue's number is the rank of its **date** among the distinct dates stored for its **own** edition, oldest first. One rule fixes all three — per-masthead sequences, a rebuild keeps its day's number, and deletions reflow the survivors so the sequence stays contiguous
+- **Renumbering happens on read as well as at build time** (`getDigest` and `scHandleSharedEdition_`, via `scRewriteIssueNo_`). Build-time-only numbering is not enough and would have shipped a new bug: delete No. 2 of 5, and the next build computes 4+1 = 5, colliding with the stored No. 5. Recomputing on read is what makes "congruent" hold over time rather than only at the moment of sending
+- `scRewriteIssueNo_` anchors on the full `· No. NNN · covering the last` phrase rather than the digits alone, so a headline or summary containing something like "Order No. 007" is never rewritten — covered by an assertion
+- `scIssueDateKey_` normalises the Digests `Date` cell, which Sheets types as a string on some rows and a `Date` on others depending on how it was written
+- **`scRenumberIssues_` persists the reflow** rather than only correcting it on read, and runs after every `deleteDigest` and again immediately before an edition is emailed. Read-time correction alone left the stored row stale, and the stored row is what gets mailed — so a delete could still have put a wrong number in someone's inbox. The email is the one copy that can never be corrected afterwards, which is why it is the copy that gets the freshest numbering
+- **`listDigests` was ordering by sheet row, not by date.** Rows are appended in build order, so rebuilding an older day pushed it to the top of the News Stand ahead of newer issues. Now sorted by date descending, tie-broken on `generatedAt` then id so the order is total and a redraw never reshuffles equal rows. Each row also carries its `no`
+- New denormalised `No` column on the Digests tab, for the same reason `Lead` was denormalised: the News Stand shows it on every card and the renumber pass compares it on every stored issue, and reading it out of the Sections JSON would mean pulling a 45,000-character cell to answer a question about one small number. Only rows whose number actually moved pay for a stored-HTML rewrite
+- `ensureScraperTabs_`'s cache key was `'scTabsReady_' + <tab count>`, so **adding a column to an existing tab did not bust it** — a warm cache would have skipped the widening for up to six hours after deploy and the new column silently would not have existed. Now keyed on the total column count across all tabs as well
+
+### Notes
+
+- **Numbers are now positional, not permanent serials.** An edition emailed as No. 007 will show as No. 005 in the app if two earlier issues are later deleted. That is what "congruent with the current repository" requires, and it matches the developer's stated pruning workflow — surfaced to them before the change was made
+- 87 assertions pass: 22 covering numbering (per-edition sequencing, same-day rebuilds, mid-sequence and full-edition deletion, mixed `Date`/string cells, the masthead-vs-headline rewrite guard, and a regression test naming the old `getLastRow()` behaviour), 8 covering the `getDigest` read path end to end, 21 covering the persisted renumber pass and the ordering fix (including that an untouched row is never rewritten, that a second run is a no-op, and that the edition/date/pagination filters still hold after the sort change), plus the 22 renderer and 14 route assertions from v03.30r–v03.31r
+- Reads columns 1, 2 and 10 only — the numbering pass never touches the two 45,000-character cells, so it does not undo the read-path work from v03.26r
 
 ## [v03.31r] — 2026-08-28 05:22:01 PM EST
 

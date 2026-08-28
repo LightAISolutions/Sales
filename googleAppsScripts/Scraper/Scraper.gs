@@ -1,4 +1,4 @@
-var VERSION = "v01.64g";
+var VERSION = "v01.65g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -363,8 +363,13 @@ var SCRAPER_TAB_HEADERS = {
   // 'Lead' is denormalised out of the Sections JSON on purpose: the News Stand
   // shows each issue's lead headline on its card, and parsing Sections to get it
   // would mean reading the one column the whole read-path fix exists to avoid.
+  // 'No' is denormalised for the same reason 'Lead' is: the News Stand shows it
+  // on every card and the renumber pass compares it on every stored issue, and
+  // reading it out of the Sections JSON would mean pulling the heavy column to
+  // answer a question about one small number.
   Digests: ['Digest ID', 'Date', 'Generated At', 'Status', 'Item Count',
-            'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI', 'Lead'],
+            'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI', 'Lead',
+            'No'],
   DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
                  'Score', 'Signals', 'Summary', 'Section', 'Backstop'],
   // 'Parent' makes an edition a variant of another one ("Your Morning Digest
@@ -938,7 +943,15 @@ function scraperSs_() {
 var _scTabsChecked = false;
 function ensureScraperTabs_(ss) {
   if (_scTabsChecked) return;
-  var tabsKey = 'scTabsReady_' + Object.keys(SCRAPER_TAB_HEADERS).length;
+  // Keyed on the column count as well as the tab count. Keyed on tabs alone,
+  // adding a column to an existing tab (Digests gaining 'No') left the key
+  // unchanged, so a warm cache skipped the widening for up to six hours after
+  // deploy and the new column silently did not exist.
+  var tabsCols = 0;
+  Object.keys(SCRAPER_TAB_HEADERS).forEach(function(t) {
+    tabsCols += SCRAPER_TAB_HEADERS[t].length;
+  });
+  var tabsKey = 'scTabsReady_' + Object.keys(SCRAPER_TAB_HEADERS).length + '_' + tabsCols;
   var tabsCache = null;
   try {
     tabsCache = CacheService.getScriptCache();
@@ -3420,7 +3433,9 @@ function scDigestRenderStep_(ss, state) {
     }
   }
   var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
-  var no = digests.getLastRow();   // header row makes the first edition No. 001
+  // Numbered against the editions that actually exist for THIS masthead —
+  // see scIssueNumbers_ for why the old getLastRow() counter was wrong.
+  var no = scNextIssueNo_(ss, state.editionId || SCRAPER_EDITION_DEFAULT.id, state.date);
   var clock = scDigestClock_(new Date());
   // Held-back = cleared the relevance bar, did not fit a section cap. Computed
   // here rather than after the render (where the weekly-rollup stash still
@@ -3474,7 +3489,7 @@ function scDigestRenderStep_(ss, state) {
     JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX),
     html.slice(0, SCRAPER_DIGEST_CELL_MAX),
     state.aiNote || '', d.editionId, state.aiLabel || (state.aiNote ? 'none (fallback)' : ''),
-    lead ? scStr_(lead.title, 300) : '']);
+    lead ? scStr_(lead.title, 300) : '', no]);
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
@@ -3494,10 +3509,21 @@ function scDigestRenderStep_(ss, state) {
   // entries were migrated into Subscribers on first read.
   var recipient = scEditionRecipients_(ss, d.editionId).join(',');
   if (recipient && SCRAPER_SCHED_EMAIL_ENABLED) {
+    // Renumber the whole archive first. If issues were deleted since the last
+    // build, the surviving ones have moved, and the email is the one copy that
+    // can never be corrected afterwards — so it is the copy that most needs the
+    // numbering to be right at the moment it is sent.
+    var sendNo = no, sendHtml = html;
+    try {
+      if (scRenumberIssues_(ss)) {
+        sendNo = scIssueNumbers_(ss)[state.id] || no;
+        sendHtml = scRewriteIssueNo_(html, sendNo);
+      }
+    } catch (renErr) { /* never let numbering stop delivery */ }
     try {
       MailApp.sendEmail({ to: recipient,
-        subject: d.editionName + ' — ' + state.date + ' (No. ' + scDigestNo_(no) + ')',
-        htmlBody: html });
+        subject: d.editionName + ' — ' + state.date + ' (No. ' + scDigestNo_(sendNo) + ')',
+        htmlBody: sendHtml });
     } catch (mailErr) {}
   }
   state.phase = 'done';
@@ -3513,6 +3539,144 @@ function scDigestItemOut_(it) {
 }
 
 function scDigestNo_(n) { return ('000' + Math.max(1, n)).slice(-3); }
+
+/** ---- Issue numbering ------------------------------------------------- */
+
+/** Issue number for every stored edition, as { digestId: n }.
+
+    The number used to be `digests.getLastRow()` — a row-position counter over
+    the whole tab, which is wrong three separate ways: it is shared across every
+    masthead (a first-ever BESS issue inherited the count of every morning one),
+    it counts builds rather than issues (rebuilding a day appends a row, so the
+    number climbed for the same edition), and it moves when an unrelated
+    edition's rows are deleted.
+
+    The rule here instead: an issue's number is the rank of its DATE among the
+    distinct dates stored for its OWN edition, oldest first. So each masthead
+    counts its own issues from 001, a rebuild of a day keeps that day's number,
+    and deleting issues reflows the rest to stay contiguous.
+
+    Reads columns 1, 2 and 10 only — never the two 45,000-character cells. */
+function scIssueNumbers_(ss) {
+  var out = {};
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var n = sheet ? sheet.getLastRow() - 1 : 0;
+  if (n < 1) return out;
+  var ids = sheet.getRange(2, 1, n, 2).getValues();     // id, date
+  var eds = sheet.getRange(2, 10, n, 1).getValues();    // edition
+  var byEd = {};
+  for (var i = 0; i < n; i++) {
+    var id = String(ids[i][0] || '').trim();
+    if (!id) continue;
+    var ed = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
+    var date = scIssueDateKey_(ids[i][1]);
+    if (!byEd[ed]) byEd[ed] = { dates: {}, rows: [] };
+    byEd[ed].dates[date] = true;
+    byEd[ed].rows.push({ id: id, date: date });
+  }
+  for (var edId in byEd) {
+    if (!Object.prototype.hasOwnProperty.call(byEd, edId)) continue;
+    var order = Object.keys(byEd[edId].dates).sort();   // ISO dates sort lexically
+    var rank = {};
+    for (var k = 0; k < order.length; k++) { rank[order[k]] = k + 1; }
+    byEd[edId].rows.forEach(function(r) { out[r.id] = rank[r.date] || 1; });
+  }
+  return out;
+}
+
+/** The number the NEXT issue of `editionId` takes, for a build on `date`.
+    A rebuild of a date this edition already has keeps that date's number
+    rather than claiming a new one. */
+function scNextIssueNo_(ss, editionId, date) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var n = sheet ? sheet.getLastRow() - 1 : 0;
+  var want = String(editionId || SCRAPER_EDITION_DEFAULT.id);
+  var key = scIssueDateKey_(date);
+  if (n < 1) return 1;
+  var meta = sheet.getRange(2, 2, n, 1).getValues();    // date
+  var eds = sheet.getRange(2, 10, n, 1).getValues();    // edition
+  var dates = {};
+  for (var i = 0; i < n; i++) {
+    var ed = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
+    if (ed !== want) continue;
+    var d = scIssueDateKey_(meta[i][0]);
+    if (d) dates[d] = true;
+  }
+  if (key && dates[key]) {
+    // Same-day rebuild: this date already has a number — reuse it.
+    var order = Object.keys(dates).sort();
+    return order.indexOf(key) + 1;
+  }
+  return Object.keys(dates).length + 1;
+}
+
+/** Normalise a Digests 'Date' cell (a string on some rows, a Date on others,
+    depending on how Sheets typed it) to a sortable YYYY-MM-DD key. */
+function scIssueDateKey_(v) {
+  if (v instanceof Date) {
+    return Utilities.formatDate(v, 'America/New_York', 'yyyy-MM-dd');
+  }
+  var s = String(v == null ? '' : v).trim();
+  var m = /^(\d{4}-\d{2}-\d{2})/.exec(s);
+  return m ? m[1] : s;
+}
+
+/** Renumber every stored issue so the archive is congruent with itself.
+
+    Called after a deletion and again before an edition is emailed. The read
+    path (getDigest / the share route) already corrects the number it serves,
+    but that leaves the stored row stale — and the row is what gets emailed, so
+    without this a delete could still put a wrong number in someone's inbox.
+
+    Cheap in the common case: the numbers live in their own narrow column, so
+    the comparison never reads the two 45,000-character cells. Only rows whose
+    number actually moved pay for a stored-HTML rewrite. Returns how many
+    changed, so callers can skip work when nothing did. */
+function scRenumberIssues_(ss) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var n = sheet ? sheet.getLastRow() - 1 : 0;
+  if (n < 1) return 0;
+  var want = scIssueNumbers_(ss);
+  var ids = sheet.getRange(2, 1, n, 1).getValues();
+  var hasNoCol = sheet.getMaxColumns() >= 13;
+  var stored = hasNoCol ? sheet.getRange(2, 13, n, 1).getValues() : null;
+  var changed = 0;
+  for (var i = 0; i < n; i++) {
+    var id = String(ids[i][0] || '').trim();
+    if (!id) continue;
+    var target = want[id] || 0;
+    if (!target) continue;
+    var current = stored ? Number(stored[i][0]) || 0 : 0;
+    if (current === target) continue;
+    var row = i + 2;
+    if (hasNoCol) sheet.getRange(row, 13).setValue(target);
+    // Only now is the heavy pair worth reading.
+    try {
+      var cells = sheet.getRange(row, 7, 1, 2).getValues()[0];
+      var d = null;
+      try { d = JSON.parse(String(cells[0] || 'null')); } catch (pe) {}
+      if (d) { d.no = target; sheet.getRange(row, 7).setValue(
+        JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX)); }
+      var html = String(cells[1] || '');
+      if (html) sheet.getRange(row, 8).setValue(
+        scRewriteIssueNo_(html, target).slice(0, SCRAPER_DIGEST_CELL_MAX));
+    } catch (hErr) { /* the narrow column is already correct; do not fail the caller */ }
+    changed++;
+  }
+  return changed;
+}
+
+/** Rewrite the issue number baked into a stored edition's masthead.
+
+    The number is rendered into the HTML at build time, so an edition stored
+    before an earlier issue was deleted keeps a number that no longer matches
+    the archive. Anchored on the full surrounding phrase rather than the digits
+    alone, so it cannot match a number inside a headline or a summary. */
+function scRewriteIssueNo_(html, no) {
+  if (!html || !no) return html;
+  return String(html).replace(/(\u00b7 No\. )\d{3,}( \u00b7 covering the last )/,
+                              '$1' + scDigestNo_(no) + '$2');
+}
 
 /** Night Ink edition renderer (approved digest design: Your Morning Digest's
     ceremony on the Wire Desk palette — Newsreader serif masthead, double
@@ -3764,7 +3928,7 @@ function listDigests(sessionToken, limit, payload) {
   // Lead (column 12) may not exist yet on a sheet created before it was added.
   // ensureScraperTabs_ widens the header, but the grid itself can still be
   // narrower, so clamp and pad rather than throwing.
-  var tailW = Math.max(1, Math.min(4, sheet.getMaxColumns() - 8));
+  var tailW = Math.max(1, Math.min(5, sheet.getMaxColumns() - 8));
   var tail = sheet.getRange(2, 9, n, tailW).getValues();
 
   var edNames = {}, edParent = {};
@@ -3775,12 +3939,18 @@ function listDigests(sessionToken, limit, payload) {
     });
   } catch (edErr) {}
 
+  // Numbers computed here rather than trusted from the sheet, so the list is
+  // right even between a deletion and the renumber pass that follows it.
+  var issueNos = {};
+  try { issueNos = scIssueNumbers_(ss); } catch (noErr) {}
+
   var rows = [];
-  for (var i = n - 1; i >= 0; i--) {
+  for (var i = 0; i < n; i++) {
     var t = tail[i] || [];
     var edId = String(t[1] || SCRAPER_EDITION_DEFAULT.id);
+    var id = String(meta[i][0]);
     rows.push({
-      id: String(meta[i][0]),
+      id: id,
       date: meta[i][1] instanceof Date
         ? Utilities.formatDate(meta[i][1], 'America/New_York', 'yyyy-MM-dd') : String(meta[i][1]),
       generatedAt: meta[i][2] ? new Date(meta[i][2]).toISOString() : '',
@@ -3789,9 +3959,20 @@ function listDigests(sessionToken, limit, payload) {
       relevantCount: Number(meta[i][5]) || 0,
       notes: String(t[0] || ''),
       edition: edId, editionName: edNames[edId] || edId,
-      ai: String(t[2] || ''), lead: String(t[3] || '')
+      ai: String(t[2] || ''), lead: String(t[3] || ''),
+      no: issueNos[id] || Number(t[4]) || 0
     });
   }
+  // Sort by the edition's own date, newest first — NOT by sheet row order.
+  // Rows are appended in build order, so a rebuilt older day used to jump to
+  // the top of the News Stand ahead of newer issues. Ties (two builds of one
+  // day) fall back to which was generated later, then to the id so the order is
+  // total and a redraw never reshuffles equal rows.
+  rows.sort(function(a, b) {
+    if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+    if (a.generatedAt !== b.generatedAt) return a.generatedAt < b.generatedAt ? 1 : -1;
+    return a.id < b.id ? 1 : (a.id > b.id ? -1 : 0);
+  });
 
   // Selecting a parent masthead includes its variants; selecting a variant does
   // not reach back up to the parent.
@@ -3864,9 +4045,15 @@ function getDigest(sessionToken, digestId) {
   if (sections && sections.editionName) {
     sections.editionName = scRewriteLegacyNames_(sections.editionName);
   }
-  return { success: true, id: String(sheet.getRange(row, 1).getValue()),
-           digest: sections,
-           html: scRewriteLegacyNames_(scRewriteLegacyClickUrls_(String(heavy[1] || ''))) };
+  // Issue numbers are congruent with the archive as it stands now, not as it
+  // stood when the edition was built: deleting an issue reflows the rest, so
+  // the stored number has to be recomputed rather than trusted.
+  var thisId = String(sheet.getRange(row, 1).getValue());
+  var issueNo = scIssueNumbers_(ss)[thisId] || 0;
+  if (sections && issueNo) sections.no = issueNo;
+  var body = scRewriteLegacyNames_(scRewriteLegacyClickUrls_(String(heavy[1] || '')));
+  return { success: true, id: thisId, no: issueNo || null,
+           digest: sections, html: scRewriteIssueNo_(body, issueNo) };
 }
 
 /** Delete one edition (Digests row + its DigestIntake rows). The developer
@@ -3896,8 +4083,14 @@ function deleteDigest(sessionToken, digestId) {
     for (var j = idata.length - 1; j >= 1; j--) {
       if (String(idata[j][0]) === id) intake.deleteRow(j + 1);
     }
-    dataAuditLog((user && user.email) || 'unknown', 'delete', 'digest', id, 'edition removed');
-    return { success: true, id: id };
+    // Deleting an issue moves every later issue of the same masthead up one.
+    // Persist that now rather than leaving the stored rows disagreeing with
+    // what the app shows.
+    var renumbered = 0;
+    try { renumbered = scRenumberIssues_(ss); } catch (renErr) {}
+    dataAuditLog((user && user.email) || 'unknown', 'delete', 'digest', id,
+                 'edition removed' + (renumbered ? '; ' + renumbered + ' renumbered' : ''));
+    return { success: true, id: id, renumbered: renumbered };
   } finally {
     lock.releaseLock();
   }
@@ -5394,6 +5587,7 @@ function scHandleSharedEdition_(e) {
   // recipient is the least likely of all readers to be signed into the right
   // Google account, so this one matters here more than anywhere.
   html = scRewriteLegacyNames_(scRewriteLegacyClickUrls_(html));
+  html = scRewriteIssueNo_(html, scIssueNumbers_(ss)[hit.digestId] || 0);
 
   try {
     var sh = ss.getSheetByName(SCRAPER_TABS.SHARES);
