@@ -3,11 +3,24 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.51g] — 2026-08-27 11:05:42 PM EST — v03.18r
+
+### Fixed
+- **The real reason company briefings stopped being read.** Just over half of the covered companies describe who a product is sold to as one written-out phrase rather than a list, and the reader only accepted the list form — it stopped on the first company written the other way and moved on without reading it, every time. Both forms are now understood, so every covered company can be read
+- **Flagship product names were never picked up.** The reader was looking for those names in the wrong place, so it always found nothing. They now feed into the terms used to spot a company in the news, which should surface stories that mention a product without naming the company
+- A written-out phrase is split sensibly rather than chopped at every comma, so a grouping like "labs (A, B)" stays whole, and long prose is left out of the segment list instead of being treated as a segment
+
+### Changed
+- **"Read all dossiers" now re-reads every covered company**, not only the ones never read before — so companies read under the old, partly-broken reader are brought up to date too. It still works through them automatically and stops when finished
+
+### Removed
+- Older entries moved to the archive
 
 ## [v01.50g] — 2026-08-27 10:55:12 PM EST — v03.17r
 
@@ -353,20 +366,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 ### Added
 - Submitted text entries are now saved to the spreadsheet with a timestamp
-
-## [v01.03g] — 2026-07-17 10:05:56 PM EST — v01.11r
-
-### Fixed
-- Sign-in now works reliably in any browser, including when multiple Google accounts are signed in
-
-## [v01.02g] — 2026-07-17 09:22:12 PM EST — v01.10r
-
-### Changed
-- Security and session settings aligned with the proven production configuration, including session activity logging
-
-## [v01.01g] — 2026-07-17 08:36:54 PM EST — v01.09r
-
-### Fixed
-- Sign-in no longer times out with a "service isn't responding" message
 
 Developed by: LightAISolutions

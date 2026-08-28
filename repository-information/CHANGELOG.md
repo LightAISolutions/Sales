@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.18r] — 2026-08-27 11:05:42 PM EST
+
+> **Prompt:** "It read 14 dossiers and increased the "Dossiers read" number from 27 to 41. Here is the error message (attached). Fix it."
+
+### Fixed
+- **Root cause of the stall, finally identified: `(p.targetSegments || []).forEach is not a function` in `scMineDossier_`.** `|| []` only rescues `null`/`undefined`, so a field that arrived as a **string** threw — and the throw aborted the whole dossier, not just that product. `targetSegments` is schema-legal as **both** `string[]` and a comma-joined string, and the string form is actually the majority: across the 88 live dossiers there are **205 string** occurrences vs **174 array** ones, spread over **exactly 47 files**. 47 is precisely the developer's `47 failed`, and 41 + 47 = 88. Replaced with `scAsList_` / `scSegmentList_`, which normalise either shape. **Confirmed by regression guard**: the pre-fix expression was reconstructed verbatim and run against the real corpus — it throws on exactly 47 dossiers, first `amazon.profile.json`, with the identical message
+- **`technicalSpecs[].name` matched nothing in any dossier — all 286 entries are keyed `product`.** `add(t.name)` had therefore been a silent no-op since the function was written, so flagship product names were never mined as alias terms despite the code comment saying that was the intent. Now reads `t.product || t.name`; **81 of 88** dossiers contribute product terms that were previously lost
+- Comma splitting is bracket-aware (`scSplitTopLevel_`), so `"Enterprises, frontier labs (Anthropic, OpenAI), governments"` yields **three** segments rather than four with a severed `"(Anthropic"` — 60 of the 205 string values contain parentheses. Prose is filtered out (`SCRAPER_SEGMENT_MAX_CHARS` 60 / `SCRAPER_SEGMENT_MAX_WORDS` 6) because a sentence is inert as a segment key and would only dilute the gate; per-company segments capped at 24
+
+### Changed
+- **`scMineDossiersAll_` takes a server-issued epoch instead of a force flag**, and `mineAllDossiers` now re-reads **every** covered company. Without this the 41 already stamped would keep the alias terms produced by the broken reader — they are not in the "never mined" queue, so no amount of pressing would refresh them. A boolean force cannot converge (each round rebuilds the identical full queue); anchoring on `Date.now()` **at the server** when the run starts means a row leaves the queue the moment this run stamps it. The epoch is deliberately server-side — a browser-supplied timestamp would drift and could either loop or skip rows. Client round cap raised 12 → 20 to cover a full 88-company re-read
+
+### Notes
+- **This is the bug the previous two pushes could not see.** v03.14r fixed a real clobber and v03.16r a real tile-repaint failure, but neither could surface a per-company exception — `catch (mErr) {}` made an unreadable dossier indistinguishable from one never reached. The error reporting added in v03.17r produced the exact message within one press, which is what made this diagnosable at all
+- **Data was deliberately not rewritten.** Normalising the 47 dossiers to arrays was considered and rejected: the schema never pinned the type, and `PROFILER-SCHEMA.md` already establishes the opposite convention for `specs[]` ("Two legacy shapes still render and must keep rendering, because archived snapshots hold them forever"). Archived snapshots would carry the string form regardless, so the consumer is the correct place to fix. `PROFILER-SCHEMA.md` now states both shapes are accepted
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **21 assertions** across three suites. *Unit + corpus* (11): the exact crash input parses, array form unchanged, prose dropped, non-array/non-string shapes degrade rather than throw, all **88** real dossiers mine with **0** crashes, every one yields ≥1 segment, cap respected, 81 gain spec-product terms. *Drain* (6): 88 re-read across **3** rounds (30+30+28), round 1 sends no epoch, rounds 2+ echo it back, tile repaints with no Refresh. *Stuck queue* (4): stops after one round, names the count, surfaces real error text, re-enables the button
+- **`Scrapergs.changelog.md` rotated** — 3 sections of the 2026-07-17 date group moved to the archive with commit-SHA enrichment (first rotation for this file); counter 50/50 → 48/50 after the new entry. `Scraper.html` unchanged this push, so no page version bump
+- **`Scraper.gs`** VERSION v01.50g → v01.51g; version file synced
 
 ## [v03.17r] — 2026-08-27 10:55:12 PM EST
 
