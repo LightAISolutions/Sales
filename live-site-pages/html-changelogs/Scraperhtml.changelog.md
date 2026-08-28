@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.43w] — 2026-08-27 09:53:19 PM EST — v03.13r
+
+### Added
+- A "Dossiers read" tile on the main screen showing how many of your covered companies have had their research read into your interests, and how many are still queued — so the automatic background pass is visible instead of silent
 
 ## [v01.42w] — 2026-08-27 09:42:55 PM EST — v03.12r
 

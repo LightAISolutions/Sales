@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.42w">
+  <meta name="build-version" content="v01.43w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -5051,6 +5051,14 @@
       html += tile('AI provider', gl.provider + (keyOk ? '' : ' (no key)'), keyOk ? 'ok' : 'warn');
       html += tile('Scheduler', gl.trigger === 'installed' ? 'Healthy' : 'Check',
                    gl.trigger === 'installed' ? 'ok' : 'warn');
+      // Dossier mining runs itself daily; this makes the backfill visible
+      // instead of silent, so progress is obvious without opening the sheet.
+      var mn = gl.mining;
+      if (mn && mn.total) {
+        html += tile('Dossiers read', mn.mined + '/' + mn.total
+          + (mn.pending ? ' (+' + mn.pending + ')' : ''),
+          mn.pending ? 'warn' : 'ok');
+      }
     }
     html += tile('Editions kept', String(_wdDigests.length));
     strip.innerHTML = html;

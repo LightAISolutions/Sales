@@ -1,4 +1,4 @@
-var VERSION = "v01.45g";
+var VERSION = "v01.46g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -601,7 +601,9 @@ var SCRAPER_EDITION_DEFAULT = { id: 'morning', name: 'The Morning Edition',
 var SCRAPER_CLICK_BOOST_CAP = 5;       // max rubric points from engagement (clicks)
 var SCRAPER_CLICK_WINDOW_DAYS = 30;    // clicks older than this stop influencing scores
 var SCRAPER_CORROB_CAP = 6;            // max score boost from multi-source corroboration
-var SCRAPER_DOSSIER_MINE_PER_SYNC = 8; // Profiler dossiers mined per daily sync (round-robin)
+var SCRAPER_DOSSIER_MINE_PRIORITY_MAX = 30;  // dossiers per sync while new/changed ones are queued
+var SCRAPER_DOSSIER_MINE_IDLE = 5;           // slow refresh trickle once the fleet is current
+var SCRAPER_DOSSIER_MINE_BUDGET_MS = 60000;  // wall-clock guard — keeps the pass inside the tick
 var SCRAPER_HELD_BACK_MAX = 25;        // held-back items stored per edition (rollup feed)
 
 // D1 (2026-08-27): 30-source free trade-press roster — 3rd-party outlets only
@@ -3377,6 +3379,8 @@ function goLiveStatus(sessionToken) {
   var lastTick = Number(props.getProperty('SCHEDULER_LAST_TICK')) || 0;
   var canManage = scCanManageDigest_(user);
   var recipients = scDigestRecipients_();
+  var mining = { total: 0, mined: 0, pending: 0, lastMined: 0 };
+  try { mining = scDossierMiningStats_(scraperSs_()); } catch (mnErr) {}
   return { success: true,
     provider: provider, model: model,
     hasGeminiKey: !!props.getProperty('GEMINI_API_KEY'),
@@ -3390,7 +3394,8 @@ function goLiveStatus(sessionToken) {
     emailEnabled: SCRAPER_SCHED_EMAIL_ENABLED,
     trigger: trigger,
     lastTickAgeMin: lastTick ? Math.round((Date.now() - lastTick) / 60000) : null,
-    lastEditionDate: props.getProperty('DIGEST_LAST_DATE') || '' };
+    lastEditionDate: props.getProperty('DIGEST_LAST_DATE') || '',
+    mining: mining };
 }
 
 /** Switch the AI provider between the free Gemini tier and Claude (Sonnet).
@@ -4486,47 +4491,108 @@ function scMineDossier_(profile) {
   return { terms: Object.keys(terms).map(function(k){return terms[k];}), segments: Object.keys(segs) };
 }
 
-/** Daily dossier-mining pass: round-robin a handful of covered companies,
-    fetch each dossier, merge mined alias terms into that company's Interests
-    Aliases (add-only; never removes the developer's edits). Throttled and
-    failure-tolerant — never breaks the sync. */
+/** Notes-tag helpers. Company rows carry machine tags alongside any free text
+    the developer typed. Tags are ';'-terminated because segment labels legally
+    contain spaces ("data centers") — a whitespace-delimited tag silently
+    truncated them, losing every segment after the first multi-word one. */
+function scNotesGetTag_(notes, name) {
+  var m = new RegExp('\\b' + name + ':([^;]*);').exec(String(notes || ''));
+  return m ? m[1] : null;
+}
+function scNotesSetTag_(notes, name, value) {
+  var stripped = String(notes || '').replace(new RegExp('\\b' + name + ':[^;]*;\\s*', 'g'), '').trim();
+  return (stripped ? stripped + ' ' : '') + name + ':' + value + ';';
+}
+
+/** Dossier-mining pass. Runs inside the daily interests sync, so it repeats
+    forever with no manual action — the developer never has to trigger it.
+
+    Selection is PRIORITY-ordered, not round-robin, because the dossiers that
+    matter most are the ones that just changed:
+      1. never mined            — a newly covered company, mined next sync
+      2. changed since mined    — Profiler refreshed it (e.g. post-earnings)
+      3. oldest mined           — slow background refresh of everything else
+    Budget adapts: a bigger allowance while there is priority work (so the
+    initial backfill of every company completes in a few days on its own),
+    a small trickle once the fleet is current. A wall-clock guard keeps the
+    pass well inside the scheduler tick's budget. */
 function scMineDossiersStep_(ss) {
-  var props = PropertiesService.getScriptProperties();
   var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
-  if (!sheet) return;
+  if (!sheet) return null;
   var data = sheet.getDataRange().getValues();
-  var companyRows = [];
+  var never = [], changed = [], aged = [];
   for (var i = 1; i < data.length; i++) {
-    if (String(data[i][1]) === 'company' && String(data[i][4]) === 'active') companyRows.push(i);
+    if (String(data[i][1]) !== 'company' || String(data[i][4]) !== 'active') continue;
+    var minedAt = Number(scNotesGetTag_(data[i][13], 'mined')) || 0;
+    if (!minedAt) { never.push(i); continue; }
+    var pUpd = new Date(String(data[i][10] || '')).getTime();
+    if (pUpd && pUpd > minedAt) changed.push(i);
+    else aged.push({ row: i, at: minedAt });
   }
-  if (!companyRows.length) return;
-  var start = Number(props.getProperty('DOSSIER_MINE_CURSOR')) || 0;
-  var dirty = false;
-  for (var n = 0; n < Math.min(SCRAPER_DOSSIER_MINE_PER_SYNC, companyRows.length); n++) {
-    var ri = companyRows[(start + n) % companyRows.length];
+  aged.sort(function(a, b) { return a.at - b.at; });
+  var queue = never.concat(changed, aged.map(function(x) { return x.row; }));
+  if (!queue.length) return { mined: 0, pending: 0 };
+  var priority = never.length + changed.length;
+  // The idle trickle is a FLOOR, not an alternative: capping the budget at the
+  // priority count starved the background refresh whenever one or two new
+  // companies were queued, so aged dossiers would never be re-read.
+  var budget = Math.max(SCRAPER_DOSSIER_MINE_IDLE,
+                        Math.min(SCRAPER_DOSSIER_MINE_PRIORITY_MAX, priority));
+  var t0 = Date.now();
+  var done = 0;
+  for (var n = 0; n < Math.min(budget, queue.length); n++) {
+    if (Date.now() - t0 > SCRAPER_DOSSIER_MINE_BUDGET_MS) break;
+    var ri = queue[n];
     var slug = String(data[ri][0]);
+    var notes = String(data[ri][13] || '');
     try {
       var resp = UrlFetchApp.fetch(SCRAPER_DOSSIER_BASE + slug + '.profile.json?_cb=' + Date.now(),
         { muteHttpExceptions: true });
-      if (resp.getResponseCode() !== 200) continue;
+      if (resp.getResponseCode() !== 200) {
+        // No dossier published for this slug — stamp it so the queue moves on
+        // instead of retrying the same 404 every single sync forever.
+        sheet.getRange(ri + 1, 14).setValue(scNotesSetTag_(notes, 'mined', String(Date.now())));
+        continue;
+      }
       var profile = JSON.parse(resp.getContentText());
       var mined = scMineDossier_(profile);
-      var existing = String(data[ri][7] || '').split(/[\n,]/).map(function(t){return t.trim();}).filter(Boolean);
-      var lower = {}; existing.forEach(function(t){ lower[t.toLowerCase()] = true; });
-      var addedAny = false;
-      mined.terms.forEach(function(t) { if (!lower[t.toLowerCase()]) { existing.push(t); lower[t.toLowerCase()] = true; addedAny = true; } });
-      if (addedAny) {
-        sheet.getRange(ri + 1, 8).setValue(existing.slice(0, 40).join(', '));
-        // stamp mined segments into Notes as seg:<...> without clobbering user notes
-        var notes = String(data[ri][13] || '');
-        var segTag = 'seg:' + mined.segments.join('|');
-        notes = notes.replace(/\bseg:[^;]*/, '').trim();
-        sheet.getRange(ri + 1, 14).setValue((notes ? notes + ' ' : '') + segTag);
-        dirty = true;
-      }
+      var existing = String(data[ri][7] || '').split(/[\n,]/).map(function(t) { return t.trim(); }).filter(Boolean);
+      var lower = {};
+      existing.forEach(function(t) { lower[t.toLowerCase()] = true; });
+      mined.terms.forEach(function(t) {
+        if (!lower[t.toLowerCase()]) { existing.push(t); lower[t.toLowerCase()] = true; }
+      });
+      sheet.getRange(ri + 1, 8).setValue(existing.slice(0, 40).join(', '));
+      // Stamp segments AND the mine time on every successful read — the old
+      // code only wrote when new terms appeared, which left no way to tell a
+      // mined company from an unmined one.
+      notes = scNotesSetTag_(notes, 'seg', mined.segments.join('|'));
+      notes = scNotesSetTag_(notes, 'mined', String(Date.now()));
+      sheet.getRange(ri + 1, 14).setValue(notes);
+      done++;
     } catch (mErr) { /* one bad dossier never breaks the pass */ }
   }
-  props.setProperty('DOSSIER_MINE_CURSOR', String((start + SCRAPER_DOSSIER_MINE_PER_SYNC) % companyRows.length));
+  return { mined: done, pending: Math.max(0, priority - done) };
+}
+
+/** Mining coverage for the status strip: how many covered companies have been
+    read, how many are queued, and when the fleet was last touched. */
+function scDossierMiningStats_(ss) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+  var out = { total: 0, mined: 0, pending: 0, lastMined: 0 };
+  if (!sheet) return out;
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][1]) !== 'company' || String(data[i][4]) !== 'active') continue;
+    out.total++;
+    var minedAt = Number(scNotesGetTag_(data[i][13], 'mined')) || 0;
+    if (!minedAt) { out.pending++; continue; }
+    out.mined++;
+    if (minedAt > out.lastMined) out.lastMined = minedAt;
+    var pUpd = new Date(String(data[i][10] || '')).getTime();
+    if (pUpd && pUpd > minedAt) out.pending++;   // refreshed since we read it
+  }
+  return out;
 }
 
 /** Per-company operating segments mined from dossiers: company label(lower) →
@@ -4538,8 +4604,9 @@ function scCompanySegments_(ss) {
   var data = sheet.getDataRange().getValues();
   for (var i = 1; i < data.length; i++) {
     if (String(data[i][1]) !== 'company') continue;
-    var m = /\bseg:([^\s;]*)/.exec(String(data[i][13] || ''));
-    if (!m || !m[1]) continue;
+    var raw = scNotesGetTag_(data[i][13], 'seg');
+    if (!raw) continue;
+    var m = [null, raw];
     var set = {};
     m[1].split('|').forEach(function(s){ if (s) set[s.trim().toLowerCase()] = true; });
     out[String(data[i][2] || '').trim().toLowerCase()] = set;

@@ -3,11 +3,25 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.46g] — 2026-08-27 09:53:19 PM EST — v03.13r
+
+### Fixed
+- Company research with multi-word market names (for example "data centers") was being recorded incorrectly — everything after the first such name was dropped, which weakened the market-based filtering for those companies. All of it is now stored and read back correctly
+- A company whose dossier could not be read was retried on every single refresh forever; it is now marked and the queue moves on
+
+### Changed
+- The daily company-research pass now prioritises what changed: companies newly added to your coverage are read first, then companies whose dossier was refreshed since it was last read, and only then a slow background re-read of everything else. Previously it worked through the list in fixed order, so a brand-new company could wait a week and a half before its product names were recognised
+- The pass reads more companies per day while there is a backlog and settles to a light trickle once everything is current, so the first full read of your whole coverage list completes on its own within a few days — no manual refreshing needed
+- Every read is now recorded even when it finds nothing new, so coverage progress can be reported accurately
+
+### Added
+- Research coverage is now reported to the app, so you can see how many of your covered companies have been read and how many are still queued
 
 ## [v01.45g] — 2026-08-27 09:42:55 PM EST — v03.12r
 

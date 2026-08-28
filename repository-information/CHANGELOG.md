@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.13r] — 2026-08-27 09:53:19 PM EST
+
+> **Prompt:** "How often would Scraper need to do dossier mining after the first full pass of 88 dossiers? I can manually press "Sync now" 11 times to do the first pass, but would I have to ever do this again? If so, can you figure out a way to automate it?"
+
+### Fixed
+- **Multi-word segment labels were silently corrupted** (introduced v03.12r). `scCompanySegments_` parsed the Notes tag with `/\bseg:([^\s;]*)/`, which stops at the first space — so `seg:bess|data centers|evs & automotive` read back as `['bess','data']`, dropping every segment after the first multi-word one and weakening the per-company segment gate for those companies. Reproduced in isolation before fixing. Notes tags are now `;`-terminated (`seg:…;`, `mined:…;`) with `scNotesGetTag_` / `scNotesSetTag_` helpers that preserve the developer's free text, replace rather than duplicate a tag, and tolerate spaces
+- **A 404 dossier was retried on every sync forever** — a covered company with no published profile JSON re-fetched indefinitely. It is now stamped `mined:` on a non-200 so the queue advances
+- **The mine stamp was only written when new terms were found**, so a company that was read but yielded nothing new was indistinguishable from one never read — making coverage unanswerable. Every successful read now stamps
+
+### Changed
+- **Dossier mining is priority-ordered, not round-robin.** `scMineDossiersStep_` now builds its queue as: (1) never mined, (2) `Profiler Updated` newer than the `mined:` stamp — i.e. the dossier was refreshed, typically post-earnings — then (3) oldest-mined first as a background refresh. Answering the developer's question: mining already repeated forever with no manual action (the daily `scSyncInterests_` throttled at ~20h drove a wrap-around cursor), so nothing was ever *required* of them; what round-robin cost was **latency** — a newly covered company or a freshly refreshed dossier could wait the full ~11-day cycle before its product names and tickers were recognised. Priority ordering cuts that to the next daily sync
+- **Adaptive budget with a wall-clock guard** — `SCRAPER_DOSSIER_MINE_PER_SYNC = 8` is replaced by `PRIORITY_MAX = 30` / `IDLE = 5` / `BUDGET_MS = 60000`. The idle value is a **floor**, not an alternative: an early revision capped the budget at the priority count, which a test caught as starving the background refresh whenever only one or two companies were queued. Net effect — the initial backfill of all 88 dossiers now completes **automatically in ~3 daily passes** with zero presses (previously ~11 days, or 11 manual presses), and steady state is a light 5/day refresh
+- **Coverage is now visible** — new `scDossierMiningStats_` (total / mined / pending / lastMined) rides on `goLiveStatus`, and the landing status strip gains a **"Dossiers read"** tile (`34/88 (+12)`, amber while work is queued, green when current) so the background pass is observable rather than silent
+- **`Scraper.gs`** VERSION v01.45g → v01.46g and **`Scraper.html`** v01.42w → v01.43w; version files + meta synced; public entries added (counters 46/50, 43/50)
+
+#### `Scraper.gs` — v01.46g
+
+##### Fixed
+- Multi-word segment corruption, 404 retry loop, missing mine stamp (detail above); `Scrapergs.version.txt` synced; public entry added (counter 45 → 46)
+
+#### `Scraper.html` — v01.43w
+
+##### Added
+- "Dossiers read" coverage tile on the landing status strip; meta tag synced; public entry added (counter 42 → 43)
+
+### Notes
+- Verification: `node --check` clean on the `.gs` and both inline blocks. **16 pure-logic assertions** pass — tag round-trip with multi-word segments, two tags coexisting without eating each other, user free text preserved, update-not-duplicate, null on absent/empty, priority ordering (never → changed → oldest-aged) driven through `scMineDossiersStep_` against a stubbed sheet and fetcher, the idle-floor fix, the 30/pass cap under an 88-company backlog, and the resulting 3-pass completion. Playwright re-run confirms the new tile renders `34/88 (+12)` with zero page errors
+- The spaces bug was **reproduced in isolation first** rather than assumed — the current parse was run against a realistic tag and shown to return `['bess','data']`
 
 ## [v03.12r] — 2026-08-27 09:42:55 PM EST
 
