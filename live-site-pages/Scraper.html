@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.46w">
+  <meta name="build-version" content="v01.47w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -561,6 +561,9 @@
       color: var(--wd-ink); font: inherit; font-size: 12.5px; padding: 6px 9px; min-width: 0; }
     .wd-form-row input[type=text], .wd-form-row input[type=email] { flex: 1 1 160px; }
     .wd-form-row input[type=number] { width: 76px; }
+    .wd-form-row select[multiple] { flex: 1 1 180px; padding: 4px 6px; line-height: 1.5; }
+    .wd-sync-card .wd-diag { color: var(--wd-mut2); font-size: 12px; padding: 0; letter-spacing: 0; }
+    .wd-sync-card .wd-diag:hover { color: var(--wd-green-ink); }
     .wd-check { font-size: 12px; color: var(--wd-mut); display: inline-flex; align-items: center; gap: 5px; }
     .wd-listrow { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--wd-line); font-size: 12.5px; }
     .wd-listrow .wd-grow { flex: 1; min-width: 0; }
@@ -1067,7 +1070,8 @@
           <span class="wd-card-title">⟳ Profiler sync</span>
           <span class="wd-note" id="wd-sync-status">No sync data yet</span>
           <button class="wd-link" id="wd-sync-now" type="button">Sync now</button>
-          <button class="wd-link" id="wd-mine-all" type="button">Read all dossiers</button>
+          <button class="wd-link" id="wd-mine-all" type="button" style="display:none;">Read all dossiers</button>
+          <button class="wd-link wd-diag" id="wd-diag-toggle" type="button" title="Show diagnostic actions">⚙</button>
           <span class="wd-note" id="wd-mine-status"></span>
         </div>
         <div class="wd-card">
@@ -1159,12 +1163,14 @@
         </div>
 
         <div class="wd-tune-pane" id="wd-pane-subs">
-          <p class="wd-hint">Subscribers receive finished editions by email. "all" means every edition.</p>
+          <p class="wd-hint">Subscribers receive finished editions by email. Pick which ones below — ctrl/⌘-click to choose more than one.</p>
           <div id="wd-sub-list"></div>
           <div class="wd-form-row">
             <input type="email" id="wd-sub-email" placeholder="name@example.com">
             <input type="text" id="wd-sub-name" placeholder="Name (optional)">
-            <input type="text" id="wd-sub-eds" placeholder="all" title="Comma-separated edition ids, or 'all'">
+            <select id="wd-sub-eds" multiple size="3" title="Which editions this subscriber receives (ctrl/⌘-click for more than one)">
+              <option value="all" selected>All editions</option>
+            </select>
             <label class="wd-check"><input type="checkbox" id="wd-sub-admin"> Admin</label>
             <button class="sc-btn primary" id="wd-sub-add" type="button">Add</button>
           </div>
@@ -5037,6 +5043,23 @@
     });
   }
 
+  var _wdDiagForced = false;   // ⚙ pressed this session — keep diagnostics visible
+
+  /** "Read all dossiers" is a repair tool, not routine. It appears on its own
+      while coverage is incomplete or the last run reported failures, and is
+      otherwise reachable only via the ⚙ — at 88/88 there is nothing for the
+      developer to do with it and a permanently visible button invites a
+      needless full re-read of every dossier. */
+  function wdSyncDiagShow_(mining) {
+    var btn = $sc('wd-mine-all');
+    var gear = $sc('wd-diag-toggle');
+    if (!btn) return;
+    var incomplete = !!(mining && mining.total && mining.pending);
+    var show = incomplete || _wdDiagForced;
+    btn.style.display = show ? '' : 'none';
+    if (gear) gear.style.display = incomplete ? 'none' : '';   // redundant while it self-shows
+  }
+
   function wdRenderStatusStrip_(gl) {
     var strip = $sc('wd-status-strip');
     if (!strip) return;
@@ -5056,6 +5079,7 @@
       // Dossier mining runs itself daily; this makes the backfill visible
       // instead of silent, so progress is obvious without opening the sheet.
       var mn = gl.mining;
+      wdSyncDiagShow_(mn);
       if (mn && mn.total) {
         html += tile('Dossiers read', mn.mined + '/' + mn.total
           + (mn.pending ? ' (+' + mn.pending + ')' : ''),
@@ -5181,7 +5205,30 @@
       .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
   }
 
+  /** Fill the subscriber edition picker from the real editions. Previously a
+      free-text box that required knowing an edition's internal id — with more
+      than one edition that is a guessing game, and a typo silently produced a
+      subscriber assigned to an edition that does not exist. */
+  function wdSubEditionsFill_() {
+    var sel = $sc('wd-sub-eds');
+    if (!sel) return;
+    var keep = {};
+    Array.prototype.forEach.call(sel.selectedOptions || [], function(o) { keep[o.value] = true; });
+    var html = '<option value="all">All editions</option>';
+    (_wdEditions || []).forEach(function(e) {
+      html += '<option value="' + scEsc(e.id) + '">' + scEsc(e.name) + '</option>';
+    });
+    sel.innerHTML = html;
+    var any = false;
+    Array.prototype.forEach.call(sel.options, function(o) {
+      if (keep[o.value]) { o.selected = true; any = true; }
+    });
+    if (!any) sel.options[0].selected = true;   // default to "All editions"
+    sel.size = Math.min(6, Math.max(3, sel.options.length));
+  }
+
   function wdSubscribersLoad_() {
+    wdSubEditionsFill_();
     var host = $sc('wd-sub-list');
     host.innerHTML = '<span class="wd-loading">Loading…</span>';
     _gasPost({ action: 'listSubscribers', token: scToken() })
@@ -5193,7 +5240,7 @@
         host.innerHTML = (d.subscribers || []).map(function(sb) {
           return '<div class="wd-listrow"><span class="wd-grow">' + scEsc(sb.email)
             + (sb.name ? ' <span class="wd-meta">(' + scEsc(sb.name) + ')</span>' : '')
-            + '</span><span class="wd-meta">' + scEsc((sb.editions || []).join(', '))
+            + '</span><span class="wd-meta">' + scEsc(wdSubEdNames_(sb.editions))
             + (sb.admin ? ' · admin' : '') + ' · ' + scEsc(sb.status) + '</span>'
             + (can ? '<button type="button" data-sub="' + scEsc(sb.email) + '">Remove</button>' : '')
             + '</div>';
@@ -5202,9 +5249,27 @@
       .catch(function(err) { host.textContent = 'Could not load (' + ((err && err.message) || err) + ')'; });
   }
 
+  /** Render stored edition ids as their display names. An id that no longer
+      resolves is shown verbatim rather than dropped, so a stale assignment is
+      visible instead of silently vanishing. */
+  function wdSubEdNames_(ids) {
+    var list = ids || [];
+    if (!list.length || list.indexOf('all') !== -1) return 'All editions';
+    return list.map(function(id) {
+      for (var i = 0; i < (_wdEditions || []).length; i++) {
+        if (_wdEditions[i].id === id) return _wdEditions[i].name;
+      }
+      return id;
+    }).join(', ');
+  }
+
   function wdSubscriberAdd_() {
     var note = $sc('wd-sub-note');
-    var eds = ($sc('wd-sub-eds').value || 'all').split(',').map(function(x){ return x.trim(); }).filter(Boolean);
+    var sel = $sc('wd-sub-eds');
+    var eds = Array.prototype.map.call(sel.selectedOptions || [], function(o) { return o.value; });
+    // "All editions" is absolute — pairing it with a specific edition is
+    // contradictory, so it wins and the rest are discarded.
+    if (!eds.length || eds.indexOf('all') !== -1) eds = ['all'];
     var payload = JSON.stringify({
       email: $sc('wd-sub-email').value, name: $sc('wd-sub-name').value,
       editions: eds, admin: $sc('wd-sub-admin').checked
@@ -6866,6 +6931,12 @@
     if (syncBtn) syncBtn.addEventListener('click', wdSyncNow_);
     var mineBtn = $sc('wd-mine-all');
     if (mineBtn) mineBtn.addEventListener('click', wdMineAll_);
+    var diagBtn = $sc('wd-diag-toggle');
+    if (diagBtn) diagBtn.addEventListener('click', function() {
+      _wdDiagForced = !_wdDiagForced;
+      var b = $sc('wd-mine-all');
+      if (b) b.style.display = _wdDiagForced ? '' : 'none';
+    });
     var rubricBtn = $sc('wd-rubric-btn');
     if (rubricBtn) rubricBtn.addEventListener('click', wdRubricScore_);
     var coList = $sc('wd-co-list'), tpList = $sc('wd-tp-list'), srcList = $sc('wd-src-list'),
@@ -6968,8 +7039,14 @@
   function wdRenderSources_() {
     var el = $sc('wd-src-list');
     if (!el) return;
-    var srcs = _wdInterests.filter(function(i) { return i.type === 'source'; });
-    var on = srcs.filter(function(i) { return i.enabled; }).length;
+    // Blocked outlets sink to the bottom: they are permanent context, not a
+    // filter the developer can act on, and they should not sit between two
+    // live sources in roster order. Offline outlets never arrive at all.
+    var srcs = _wdInterests.filter(function(i) { return i.type === 'source'; })
+      .slice().sort(function(a, b) {
+        return (a.status === 'stale' ? 1 : 0) - (b.status === 'stale' ? 1 : 0);
+      });
+    var on = srcs.filter(function(i) { return i.enabled && i.status !== 'stale'; }).length;
     var cnt = $sc('wd-src-count');
     if (cnt) cnt.textContent = srcs.length ? (on + '/' + srcs.length + ' on') : '';
     el.innerHTML = srcs.length
@@ -6998,7 +7075,10 @@
     return '<div class="' + cls + '">'
       + '<span class="wd-int-name" title="' + scEsc(it.label + (it.categories ? ' · ' + it.categories : '')) + '">' + scEsc(it.label) + '</span>'
       + flag
-      + '<button type="button" class="wd-tg' + (it.enabled ? ' on' : '') + '" data-key="' + scEsc(it.key) + '"'
+      // A retired row's stored Enabled is still TRUE from when it was seeded,
+      // so rendering it from `enabled` drew a live-looking ON switch on an
+      // outlet that contributes nothing. Retired always reads OFF.
+      + '<button type="button" class="wd-tg' + (it.enabled && !stale ? ' on' : '') + '" data-key="' + scEsc(it.key) + '"'
       + (stale
         ? ' disabled title="' + scEsc(offTitle) + '"'
         : ' title="' + (it.enabled ? 'On — counts toward digest relevance' : 'Off — excluded from digests') + '"')
@@ -7204,6 +7284,7 @@
       wdLandingLoad_();
     }).catch(function(err) {
       var m = (err && err.message) || String(err);
+      _wdDiagForced = true;   // a failed run is exactly when this must stay reachable
       say('Stopped: ' + m);
       scToast('Dossier read stopped — ' + scEsc(m), true);
       wdLandingLoad_();   // show whatever progress did commit

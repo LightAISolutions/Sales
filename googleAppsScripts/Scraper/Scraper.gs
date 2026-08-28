@@ -1,4 +1,4 @@
-var VERSION = "v01.52g";
+var VERSION = "v01.53g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -474,24 +474,34 @@ var SCRAPER_INTEREST_FLAG_STALE = 'Coverage ended';
 var SCRAPER_SOURCE_FLAG_RETIRED = 'Dropped from roster';
 
 // Why each dropped outlet was dropped, kept next to the roster so the reason
-// survives in the UI instead of only in a changelog. `label` is what Tune
+// survives in the UI instead of only in a changelog.
+//   status 'blocked' — the publication is LIVE but refuses automated readers.
+//                      Kept visible in Tune (frozen off, sorted last) so the
+//                      developer can see the beat is intentionally uncovered.
+//   status 'offline' — the publication is gone. Hidden from Tune entirely;
+//                      the sheet row is kept for history but never rendered.
+// Both are permanent "do not re-propose" records — see
+// .claude/rules/scraper-sources.md before suggesting any new outlet. `label` is what Tune
 // shows on the chip; `detail` is the hover text. Re-verified 2026-08-27 —
 // none of these can be fixed by changing the feed URL, so this also stops a
 // future pass from "restoring" a feed that provably cannot be fetched.
 var SCRAPER_RETIRED_SOURCES = {
   'src-dc-magazine': {
+    status: 'blocked',
     label: 'Blocked to automated readers',
     detail: 'Data Centre Magazine is live and publishing. Its pages sit behind a '
           + 'Cloudflare browser challenge (a JavaScript test no server-side reader can '
           + 'pass) and the site advertises no feed at any address. Re-checked 2026-08-27.'
   },
   'src-battery-technology': {
+    status: 'blocked',
     label: 'Blocked to automated readers',
     detail: 'Battery Technology is live and publishing. The whole domain refuses '
           + 'automated readers, including with browser identification. Battery and '
           + 'storage stay covered by Energy-Storage.news and ESS News. Re-checked 2026-08-27.'
   },
   'src-solar-industry': {
+    status: 'offline',
     label: 'Site offline',
     detail: 'The publication\'s site is gone — the address now serves a domain-parking '
           + 'page rather than articles. This is the one outlet of the three that genuinely '
@@ -2686,8 +2696,14 @@ function listInterests(sessionToken) {
     });
     var ret = SCRAPER_RETIRED_SOURCES[String(r[0])];
     if (ret && String(r[4]) === 'stale') {
+      // An outlet whose site is gone is not a filter the developer can act on,
+      // so it is dropped from the payload rather than dimmed in the list. The
+      // sheet row is deliberately left in place — nothing is destroyed, and
+      // re-adding the key to the roster still reactivates it.
+      if (ret.status === 'offline') { items.pop(); continue; }
       items[items.length - 1].retiredLabel = ret.label;
       items[items.length - 1].retiredNote = ret.detail;
+      items[items.length - 1].retiredStatus = ret.status || 'blocked';
     }
   }
   var lastSync = null;

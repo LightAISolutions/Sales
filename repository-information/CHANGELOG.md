@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.20r] — 2026-08-27 11:51:21 PM EST
+
+> **Prompt:** "I approve the plan. Your assumption about my "Subscribers sentence" is also correct. Push A."
+
+### Added
+- **`.claude/rules/scraper-sources.md`** — the part of "remember this source is unavailable" that is actually durable. A changelog entry does not survive a future session reasoning from an outlet's topical fit and re-proposing it; a path-scoped gate does. The file blocks adding anything to `SCRAPER_SOURCE_ROSTER` without first checking the unavailable table, mandates a live feed probe rather than adopting a URL from memory, and gives the exact HTTP signatures that separate **blocked** (`cf-mitigated: challenge`, `Just a moment…`, `Attention Required!`) from **offline** (200 with a `/lander` redirect and a `_trfd` / `ap:"parking"` marker) — they are visually identical in a browser and are opposite facts. It also records the rejected Google News workaround with its measurements so it is not re-tried
+- **`status: 'blocked' | 'offline'` on `SCRAPER_RETIRED_SOURCES`**, surfaced to the client as `retiredStatus`
+- **`⚙` diagnostics reveal** on the sync card, plus `wdSyncDiagShow_` — *Read all dossiers* is hidden at full coverage, reappears by itself when `pending > 0`, and is force-shown after a failed run (`_wdDiagForced`), which is precisely when it must stay reachable
+
+### Changed
+- **`offline` sources are dropped from the `listInterests` payload** rather than dimmed. The sheet row is deliberately left in place — nothing is destroyed and re-adding the key to the roster still reactivates it — but an outlet that no longer exists is not a filter the developer can act on
+- **`blocked` sources sort to the bottom** of the Tune source list and their toggle renders **off**. Their stored `Enabled` is still `TRUE` from seeding, so rendering from `enabled` drew a live-looking ON switch on an outlet contributing nothing; the "N on" count now excludes them too
+- **Subscribers: the free-text edition-ids input became a real multi-select** (`wdSubEditionsFill_`) fed from `_wdEditions`, with an *All editions* option, and the roster row renders edition **names** via `wdSubEdNames_` instead of raw ids. Previously the field required knowing an edition's internal id and a typo silently produced a subscriber bound to an edition that does not exist — which mattered little with one edition and would matter a lot with three. `all` takes precedence over specific picks, since pairing them is contradictory. An id that no longer resolves renders verbatim rather than being dropped, so a stale assignment stays visible
+
+### Notes
+- This is **Push A** of the approved two-push plan (items 1, 2 and 6). Push B — editions becoming first-class with per-edition segment/topic tuning and the new BESS/AIDC filters — is unstarted
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **20 assertions**. *Playwright* (10), driving the page twice at different coverage levels: the button is hidden at 88/88 with the gear offered instead, it returns unaided at 61 pending, the offline source never reaches the list, the blocked source sorts last with its toggle off while live sources stay on, the count reads `2/3`, the dropdown renders `All editions` + both editions in order, and the subscriber row shows `The Morning Edition (BESS)` rather than `bess`. *Server* (10): every retired source carries a valid status, exactly one is `offline`, the payload filter is surgical (drops one row, leaves a stale **company** untouched), and the `all`-wins rule plus the removal of the old text input are asserted against the shipped source
+- GAS changelog is at **50/50** — at the cap but not over it, so no rotation this push; the next section triggers one
+- **`Scraper.gs`** VERSION v01.52g → v01.53g; **`Scraper.html`** v01.46w → v01.47w; version files synced
 
 ## [v03.19r] — 2026-08-27 11:21:39 PM EST
 

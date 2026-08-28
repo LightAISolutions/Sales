@@ -371,6 +371,7 @@ Path-scoped rules files — loaded automatically when working on matching files.
 | `.claude/rules/init-scripts.md` | Phantom edits, line ending safety | — |
 | `.claude/rules/dead-code-detection.md` | Dead-code analysis methodology — 6-step trace, indicators-present checklist, resource-abuse exemptions (path-scoped to HTML/GAS/workflows + user-triggered by "check for dead code" phrasing) | — |
 | `.claude/rules/industry-guidance.md` | Industry Guidance Command (document ingest → verified analysis → role-gated in-app study module), module JSON section kinds, access model, versioning (path-scoped to guidance data + Profiler app + user-triggered by "industry guidance: \<document\>" phrasing) | #1, #2 |
+| `.claude/rules/scraper-sources.md` | Scraper source roster — unavailable-outlet memory (blocked vs offline), mandatory live feed probe before adding any outlet, rejected workarounds (path-scoped to `Scraper.gs` / `Scraper.html`) | — |
 | `.claude/rules/profiler-app.md` | Profiler Command (company dossier research + profile generation), archival procedure, scheduled refreshes, data-vs-page versioning, recall design (path-scoped to Profiler app files + user-triggered by "profiler \<Company\>" phrasing) | — |
 
 ---

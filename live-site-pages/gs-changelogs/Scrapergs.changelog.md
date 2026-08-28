@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.53g] — 2026-08-27 11:51:21 PM EST — v03.20r
+
+### Changed
+- **An outlet whose site is gone is no longer listed at all.** It cannot be turned on or off, so showing it was only clutter. Its history is kept behind the scenes, and putting the outlet back on the roster still brings it back
+- An outlet that is still publishing but refuses automated readers stays listed, so it is clear the beat is uncovered on purpose
 
 ## [v01.52g] — 2026-08-27 11:21:39 PM EST — v03.19r
 

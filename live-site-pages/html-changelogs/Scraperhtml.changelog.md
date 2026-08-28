@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.47w] — 2026-08-27 11:51:21 PM EST — v03.20r
+
+### Changed
+- **"Read all dossiers" is now hidden once every company has been read.** It reappears on its own if any are outstanding or a run reports a problem, and a small ⚙ next to the sync card brings it back whenever you want it
+- **Unavailable outlets no longer sit in the middle of the source list.** Ones that are still publishing but unreachable are grouped at the bottom, and their switch now correctly shows as off rather than on — previously it looked active while contributing nothing. The "on" count no longer counts them
+- **Subscribers now pick editions from a menu** instead of typing edition names by hand, and the list shows each subscriber's edition by its proper name. Choosing "All editions" now clearly overrides any individual picks
 
 ## [v01.46w] — 2026-08-27 11:21:39 PM EST — v03.19r
 
