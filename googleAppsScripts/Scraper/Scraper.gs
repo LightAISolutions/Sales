@@ -1,4 +1,4 @@
-var VERSION = "v01.46g";
+var VERSION = "v01.47g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -585,12 +585,17 @@ var SCRAPER_DIGEST_MIN_INTAKE_SCORE = 25;        // rubric floor to enter the in
 var SCRAPER_DIGEST_BACKSTOP_PER_RUN = 12;        // D2: company-name queries per run (round-robin)
 var SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY = 'scDigestBackstopCursor';
 var SCRAPER_DIGEST_BACKSTOP_PENALTY = 0.85;      // D2: backstop items are down-weighted
-var SCRAPER_DIGEST_SUMMARIZE_TOP_N = 14;         // AI key-point summaries for the top-scored items
+var SCRAPER_DIGEST_SUMMARIZE_TOP_N = 30;         // AI key-point summaries for the top-scored items
+// Caps raised 6/6/4 -> 12/10/8 (developer directive 2026-08-27): a daily
+// digest of skimmable summaries should err toward completeness, since a
+// missed story costs more than a longer scroll. Section caps sum to 30 so
+// every printed item is one the AI actually summarized (TOP_N), rather
+// than falling through to a raw feed snippet.
 var SCRAPER_DIGEST_ITEMS_PER_AI_CALL = 5;        // items per summarize request (smaller batches → room for longer summaries)
 var SCRAPER_DIGEST_SUMMARY_MAX = 900;            // stored summary cap (chars) — generous; quality set by the prompt, not a hard length limit
 var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limit is 50k chars)
 var SCRAPER_DIGEST_KEEP = 60;                    // Digests tab retention (rows)
-var SCRAPER_DIGEST_SECTION_CAPS = { companies: 6, market: 6, incidents: 4 };
+var SCRAPER_DIGEST_SECTION_CAPS = { companies: 12, market: 10, incidents: 8 };
 // Editions (Phase 5): named digest products with their own cadence and
 // subscriber lists. 'morning' is the built-in default (the weekday Morning
 // Edition); more are added from the app. Cadences: daily (weekdays, 24h
@@ -2380,9 +2385,6 @@ function scSyncInterests_(force) {
         dirty = true;
       }
     }
-    // T1b/T1c — mine a few Profiler dossiers each sync for alias terms and
-    // per-company operating segments (add-only; never overwrites your edits).
-    try { scMineDossiersStep_(ss); } catch (mineErr) {}
     if (dirty && data.length > 1) {
       sheet.getRange(2, 1, data.length - 1, width).setValues(
         data.slice(1).map(function(dr) { return dr.slice(0, width); }));
@@ -2390,6 +2392,19 @@ function scSyncInterests_(force) {
     if (appendRows.length) {
       sheet.getRange(data.length + 1, 1, appendRows.length, width).setValues(appendRows);
     }
+    // T1b/T1c — mine a few Profiler dossiers each sync for alias terms and
+    // per-company operating segments (add-only; never overwrites your edits).
+    //
+    // ORDER IS LOAD-BEARING: this MUST run after the bulk write-back above.
+    // `data` is a snapshot taken at the top of the sync; mining does its own
+    // read and writes Aliases + the `mined:` tag straight to the sheet. When
+    // mining ran first, the `setValues(data...)` write-back immediately
+    // overwrote those cells with the pre-mining snapshot — so every mined
+    // alias and stamp was silently erased and coverage never left 0/88, no
+    // matter how many times the sync was run. Running last also means mining
+    // sees companies appended by THIS sync, which is exactly the priority
+    // case (newly covered companies mined on the very next pass).
+    try { scMineDossiersStep_(ss); } catch (mineErr) {}
     var summary = { ok: true, added: added, addedTopics: addedTopics, updated: updated,
                     stale: stale, total: data.length - 1 + appendRows.length, at: Date.now() };
     props.setProperty('INTERESTS_LAST_SYNC', String(Date.now()));
@@ -3112,9 +3127,9 @@ function scRenderDigestNightInk_(d) {
   }
   function itemHtml(it) {
     return '<div style="margin:0 0 20px;">'
-      + '<div style="' + serif + 'font-size:21px;font-weight:600;line-height:1.32;color:#eceae4;">'
+      + '<div style="' + serif + 'font-size:22px;font-weight:600;line-height:1.3;color:#eceae4;">'
       + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
-      + '<div style="' + sans + 'font-size:15px;line-height:1.65;color:#c2c8d2;margin-top:5px;">'
+      + '<div style="' + sans + 'font-size:16px;line-height:1.62;color:#c2c8d2;margin-top:5px;">'
       + scNiBoldFigures_(esc(it.summary)) + '</div>'
       + srcLine(it) + '</div>';
   }
@@ -3134,13 +3149,13 @@ function scRenderDigestNightInk_(d) {
   // dark-mode-inverting clients (Gmail) have nothing transparent to repaint.
   var html = '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
     + 'bgcolor="#101216" style="background:#101216;margin:0;padding:0;border-collapse:collapse;">'
-    + '<tr><td align="center" style="padding:20px 10px;">'
-    + '<table role="presentation" width="720" cellpadding="0" cellspacing="0" border="0" '
-    + 'bgcolor="#15171c" style="background:#15171c;width:720px;max-width:100%;border-collapse:collapse;">'
-    + '<tr><td style="color:#e6e4de;padding:34px 34px 28px;' + sans + '">'
+    + '<tr><td align="center" style="padding:16px 8px;">'
+    + '<table role="presentation" width="860" cellpadding="0" cellspacing="0" border="0" '
+    + 'bgcolor="#15171c" style="background:#15171c;width:860px;max-width:100%;border-collapse:collapse;">'
+    + '<tr><td style="color:#e6e4de;padding:32px 30px 26px;' + sans + '">'
     // Masthead
     + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:16px;margin-bottom:18px;">'
-    + '<div style="' + serif + 'font-size:40px;font-weight:700;line-height:1;color:#f0eee8;">The Morning Edition</div>'
+    + '<div style="' + serif + 'font-size:44px;font-weight:700;line-height:1;color:#f0eee8;">The Morning Edition</div>'
     + '<div style="' + caps + 'color:#f2a33c;margin-top:6px;">Scraper · Trade news, distilled daily</div>'
     + '<div style="font-size:13px;color:#9aa0ab;margin-top:5px;">' + esc(longDate(d.date))
     + ' · No. ' + scDigestNo_(d.no) + ' · covering the last ' + Number(d.windowH) + ' hours</div>'
@@ -3148,9 +3163,9 @@ function scRenderDigestNightInk_(d) {
   if (d.lead) {
     html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:18px;margin-bottom:18px;">'
       + '<div style="' + caps + 'color:#f2a33c;">The lead</div>'
-      + '<div style="' + serif + 'font-size:30px;font-weight:600;line-height:1.2;color:#f0eee8;margin-top:6px;">'
+      + '<div style="' + serif + 'font-size:32px;font-weight:600;line-height:1.18;color:#f0eee8;margin-top:6px;">'
       + '<a href="' + esc(d.lead.url) + '" style="color:#f0eee8;text-decoration:none;">' + esc(d.lead.title) + '</a></div>'
-      + '<div style="font-size:16px;line-height:1.65;color:#c2c8d2;margin-top:8px;">'
+      + '<div style="font-size:17px;line-height:1.62;color:#c2c8d2;margin-top:8px;">'
       + scNiBoldFigures_(esc(d.lead.text)) + '</div>'
       + srcLine(d.lead) + '</div>';
   }
@@ -3161,7 +3176,7 @@ function scRenderDigestNightInk_(d) {
     html += '<div style="border:1px solid #363c45;background:#1b1e24;border-radius:4px;'
       + 'padding:12px 16px;margin:6px 0 14px;">'
       + '<div style="' + caps + 'color:#e6e4de;">Newly covered</div>'
-      + '<div style="font-size:15px;line-height:1.65;color:#c2c8d2;margin-top:5px;">Profiler added '
+      + '<div style="font-size:16px;line-height:1.62;color:#c2c8d2;margin-top:5px;">Profiler added '
       + '<b style="color:#f2a33c;">' + Number(d.newCoverage.count) + ' compan'
       + (d.newCoverage.count === 1 ? 'y' : 'ies') + '</b>'
       + (d.newCoverage.names.length ? ' — ' + esc(d.newCoverage.names.join(', ')) : '')

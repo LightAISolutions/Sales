@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.14r] — 2026-08-27 10:06:57 PM EST
+
+> **Prompt:** "I just pressed "Sync now" four times and the "Dossiers read" tile never updated past "0/88 (+88)". What's wrong? Fix it. 
+>
+> Also, the email (attached) still looks very narrow. Can you widen it more and also increase the caps on articles in the Digest? Considering it's a digest full of summaries that the reader may or may not click into and it only happens once a day, I think it's reasonable to include more summaries in order to make sure no articles (or at least fewer) get missed rather than decrease the amount of scanning the reader has to do."
+
+### Fixed
+- **Dossier mining was silently clobbered by the sync's own write-back — coverage could never leave `0/88`.** `scSyncInterests_` snapshots the Interests sheet into `data` at the top, then called `scMineDossiersStep_(ss)` — which does its **own** read and writes Aliases + the `mined:`/`seg:` tags directly to the sheet — and **on the very next line** wrote its stale snapshot back with `setValues(data…)`, overwriting every mined cell milliseconds after it landed. The company loop sets `dirty = true` for every existing company on every sync, so the clobbering write always fired. Mining ran correctly all four times the developer pressed Sync now; the results were erased each time. Fixed by moving the mining call **after** the bulk write-back and the append block, which also means mining now sees companies appended by the same sync — exactly the priority case. The ordering is documented in-code as load-bearing so it is not re-inverted
+
+### Changed
+- **Digest caps raised (developer directive)** — `SCRAPER_DIGEST_SUMMARIZE_TOP_N` 14 → **30** and `SCRAPER_DIGEST_SECTION_CAPS` `{6,6,4}` → **`{companies:12, market:10, incidents:8}`**, taking a printed edition from at most 16 items + lead to **30 + lead**. The section caps deliberately **sum to exactly `TOP_N`** so every printed item is one the AI actually summarized rather than falling through to a raw feed snippet. Rationale accepted as stated: for a once-daily digest of skimmable summaries, a missed story costs more than a longer scroll
+- **Night Ink widened again** — container 720px → **860px**, outer padding 20/10 → 16/8 and inner 34 → 30 (text column ~652px → **~800px**); summary copy 15 → 16px, item headlines 21 → 22px, lead paragraph 16 → 17px, lead headline 30 → 32px, masthead 40 → 44px. Nested-table structure, `bgcolor` attributes and `max-width:100%` mobile fluidity all unchanged, so the Outlook and dark-mode-client proofing still holds
+- **`Scraper.gs`** VERSION v01.46g → v01.47g; version file synced; public entry added (counter 47/50). No HTML change — the renderer is entirely server-side and the in-app viewer shows the same stored HTML
+
+### Notes
+- **The regression test is the important artifact here.** A unit test of `scMineDossiersStep_` alone passes against the broken code — the bug lives in the *interaction* between mining and its caller. `scripts`-free harness `sync-clobber-test.js` stubs PropertiesService / LockService / CacheService / Utilities / UrlFetchApp and a mutable 2-D-array-backed Sheet, then runs the **real `scSyncInterests_`** end to end and asserts the `mined:` stamp, `seg:` tag and mined aliases survive. It was then run against a reconstructed pre-fix ordering and **fails there** (`notes=` empty, `aliases=ABB` — the pre-mining value restored), confirming it actually catches the defect rather than merely passing
+- Stubbing note for future harnesses: `eval()`'d declarations land in **module** scope, so a `global.scraperSs_` override is invisible to the eval'd code. Stub `SpreadsheetApp.openById` instead and let the real `scraperSs_` run
+- Render fixture re-verified at the new width with all 30 section items: container 860, 16/22/17px type, balanced tables, `31 of 41 relevant … 10 more held back`, plus a Chromium screenshot at a 1250px reading pane
+- **Cost note:** doubling summarized items roughly doubles per-edition AI spend on the Claude path (~5–11¢ → ~10–22¢/edition, ~$2–5/month for 22 weekday editions). Free on the Gemini tier
 
 ## [v03.13r] — 2026-08-27 09:53:19 PM EST
 
