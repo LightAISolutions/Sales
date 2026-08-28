@@ -7147,6 +7147,7 @@
     var totals = { read: 0, noDossier: 0, failed: 0 };
     var errors = [];
     var rounds = 0;
+    var epoch = 0;   // server-issued; echoed back so the run converges
     if (btn) { btn.disabled = true; btn.textContent = 'Reading…'; }
 
     function say(t) { if (out) out.textContent = t; }
@@ -7154,7 +7155,9 @@
     function round() {
       rounds++;
       say('Reading dossiers… ' + totals.read + ' done so far (round ' + rounds + ')');
-      return _gasPost({ action: 'mineAllDossiers', token: scToken() }).then(function(data) {
+      var req = { action: 'mineAllDossiers', token: scToken() };
+      if (epoch) req.since = epoch;
+      return _gasPost(req).then(function(data) {
         if (!data || !data.success) {
           if (data && data.error === 'busy') {
             throw new Error('Another sync is still running — try again in a minute.');
@@ -7162,12 +7165,13 @@
           throw new Error(scErrMsg(data && data.error));
         }
         var r = data.result || {};
+        if (r.epoch) epoch = r.epoch;
         totals.read += r.read || 0;
         totals.noDossier += r.noDossier || 0;
         totals.failed += r.failed || 0;
         (r.errors || []).forEach(function(e) { if (errors.length < 8) errors.push(e); });
         var progressed = (r.read || 0) + (r.noDossier || 0) > 0;
-        if (r.remaining > 0 && progressed && rounds < 12) return round();
+        if (r.remaining > 0 && progressed && rounds < 20) return round();
         if (r.remaining > 0 && !progressed) {
           // Every remaining company threw. Surfacing this is the whole point of
           // the change — previously it looked like the button did nothing.

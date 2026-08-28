@@ -1,4 +1,4 @@
-var VERSION = "v01.50g";
+var VERSION = "v01.51g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -628,6 +628,15 @@ var SCRAPER_DOSSIER_MINE_BUDGET_INTERACTIVE_MS = 25000;
 // simply calls again. Unlike the paced passes above this ignores the
 // per-pass company cap entirely: the point is to finish, not to trickle.
 var SCRAPER_DOSSIER_DRAIN_BUDGET_MS = 240000;
+
+// Segment hygiene. `targetSegments` is schema-legal as BOTH a string[] and a
+// comma-joined string (see PROFILER-SCHEMA.md), and the string form is often
+// a full sentence rather than a list of segments. A sentence is useless as a
+// segment key — the gate matches short vocabulary — so anything sentence-
+// shaped is dropped rather than poisoning the per-company vocabulary.
+var SCRAPER_SEGMENT_MAX_CHARS = 60;
+var SCRAPER_SEGMENT_MAX_WORDS = 6;
+var SCRAPER_SEGMENT_MAX_PER_COMPANY = 24;
 var SCRAPER_HELD_BACK_MAX = 25;        // held-back items stored per edition (rollup feed)
 
 // D1 (2026-08-27): 30-source free trade-press roster — 3rd-party outlets only
@@ -4548,26 +4557,81 @@ function scClickBoosts_(ss) {
 /** ---- Dossier mining (T1b / T1c) -------------------------------------- */
 
 /** Extract alias terms + operating segments from one dossier JSON (pure). */
+/** Coerce a schema field to an array. `(x || []).forEach` is NOT a safe guard:
+    it only rescues null/undefined, so a field that arrived as a string threw
+    "forEach is not a function" and took the whole dossier read down with it. */
+function scAsList_(v) {
+  if (Array.isArray(v)) return v;
+  if (v === null || v === undefined || v === '') return [];
+  return [v];
+}
+
+/** Split on commas/semicolons that sit OUTSIDE brackets, so a parenthetical
+    list stays whole: "Enterprises, frontier labs (Anthropic, OpenAI), gov"
+    yields three segments, not four with a severed "(Anthropic". */
+function scSplitTopLevel_(str) {
+  var out = [], buf = '', depth = 0;
+  for (var i = 0; i < str.length; i++) {
+    var ch = str.charAt(i);
+    if (ch === '(' || ch === '[') depth++;
+    else if (ch === ')' || ch === ']') { if (depth > 0) depth--; }
+    if ((ch === ',' || ch === ';') && depth === 0) { out.push(buf); buf = ''; continue; }
+    buf += ch;
+  }
+  out.push(buf);
+  return out;
+}
+
+/** Normalise a segment-ish value (string[] OR comma-joined string) into short
+    segment keys, discarding prose. */
+function scSegmentList_(v) {
+  var raw;
+  if (Array.isArray(v)) {
+    raw = v.map(function(x) { return String(x === null || x === undefined ? '' : x); });
+  } else if (typeof v === 'string') {
+    raw = scSplitTopLevel_(v);
+  } else {
+    return [];
+  }
+  var out = [];
+  raw.forEach(function(x) {
+    var t = String(x).replace(/\s+/g, ' ').trim().replace(/[.;,]+$/, '').trim();
+    if (!t) return;
+    if (t.length > SCRAPER_SEGMENT_MAX_CHARS) return;          // a sentence, not a segment
+    if (t.split(' ').length > SCRAPER_SEGMENT_MAX_WORDS) return;
+    out.push(t);
+  });
+  return out;
+}
+
 function scMineDossier_(profile) {
   var terms = {}, segs = {};
   function add(t) {
-    var v = String(t || '').trim();
+    var v = String(t === null || t === undefined ? '' : t).trim();
     if (v.length >= 3 && v.length <= 40 && !/^https?:/i.test(v)) terms[v.toLowerCase()] = v;
   }
+  if (!profile || typeof profile !== 'object') return { terms: [], segments: [] };
   add(profile.name); add(profile.legalName);
   // ticker symbol tail (e.g. "SIX: ABBN" -> "ABBN", "NASDAQ: NVDA" -> "NVDA")
   var tk = String(profile.ticker || '');
   var tm = /([A-Za-z]{2,6})\s*$/.exec(tk.split(':').pop() || tk);
   if (tm) add(tm[1]);
   // product + tech names (flagship signal per schema)
-  (profile.productsAndServices || []).forEach(function(p) {
+  scAsList_(profile.productsAndServices).forEach(function(p) {
+    if (!p || typeof p !== 'object') return;
     add(p.name);
-    (p.targetSegments || []).forEach(function(seg) { segs[String(seg).toLowerCase()] = true; });
+    scSegmentList_(p.targetSegments).forEach(function(seg) { segs[seg.toLowerCase()] = true; });
   });
-  (profile.technicalSpecs || []).forEach(function(t) { add(t.name); });
+  // technicalSpecs entries are keyed `product`, never `name` — reading `.name`
+  // matched nothing in any dossier, so flagship product names were silently
+  // never mined. `name` is kept as a fallback in case a future shape uses it.
+  scAsList_(profile.technicalSpecs).forEach(function(t) {
+    if (t && typeof t === 'object') add(t.product || t.name);
+  });
   // decision-maker surnames are too noisy — skip. categories → segment hints
-  (profile.categories || []).forEach(function(c) { segs[String(c).toLowerCase()] = true; });
-  return { terms: Object.keys(terms).map(function(k){return terms[k];}), segments: Object.keys(segs) };
+  scSegmentList_(profile.categories).forEach(function(c) { segs[c.toLowerCase()] = true; });
+  return { terms: Object.keys(terms).map(function(k){return terms[k];}),
+           segments: Object.keys(segs).slice(0, SCRAPER_SEGMENT_MAX_PER_COMPANY) };
 }
 
 /** Notes-tag helpers. Company rows carry machine tags alongside any free text
@@ -4674,18 +4738,25 @@ function scMineDossiersStep_(ss, budgetMs) {
     Partial progress is ALWAYS persisted: the write-back is in a finally, so a
     timeout, a bad dossier or a thrown fetch still commits everything read up
     to that point. `remaining > 0` means call again. */
-function scMineDossiersAll_(ss) {
+function scMineDossiersAll_(ss, sinceMs) {
   var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
   if (!sheet) return { ok: false, error: 'no_interests_tab' };
   var data = sheet.getDataRange().getValues();
   var rows = data.length - 1;
   if (rows < 1) return { ok: true, read: 0, noDossier: 0, failed: 0, remaining: 0, errors: [] };
 
+  // EPOCH, not a boolean "force": the button means "re-read everything", but a
+  // plain force flag cannot converge — each round would rebuild the same full
+  // queue and the client would loop until its round cap. Anchoring on the
+  // server clock at the start of the run makes a row leave the queue as soon
+  // as THIS run stamps it, so successive rounds shrink and terminate. The
+  // epoch is server-side on purpose; a browser-supplied timestamp would drift.
+  var epoch = Number(sinceMs) || Date.now();
   var queue = [];
   for (var i = 1; i < data.length; i++) {
     if (String(data[i][1]) !== 'company' || String(data[i][4]) !== 'active') continue;
     var minedAt = Number(scNotesGetTag_(data[i][13], 'mined')) || 0;
-    if (!minedAt) { queue.push(i); continue; }
+    if (minedAt < epoch) { queue.push(i); continue; }
     var pUpd = new Date(String(data[i][10] || '')).getTime();
     if (pUpd && pUpd > minedAt) queue.push(i);
   }
@@ -4743,7 +4814,7 @@ function scMineDossiersAll_(ss) {
   }
   return { ok: true, read: read, noDossier: noDossier, failed: failed,
            errors: errors, remaining: Math.max(0, queue.length - n),
-           queued: queue.length, elapsedMs: Date.now() - t0 };
+           queued: queue.length, epoch: epoch, elapsedMs: Date.now() - t0 };
 }
 
 /** "Read all dossiers" — drain the mining queue in one call.
@@ -4752,14 +4823,16 @@ function scMineDossiersAll_(ss) {
     developer hit was pressing a button whose previous run still held the
     5-second lock, so the press returned `skipped: locked` and nothing moved.
     Waiting is the correct behaviour for an explicit "do it now" action. */
-function mineAllDossiers(sessionToken) {
+function mineAllDossiers(sessionToken, sinceMs) {
   validateSessionForData(sessionToken, 'mineAllDossiers');
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(45000)) return { success: false, error: 'busy' };
   try {
     var ss = scraperSs_();
     ensureScraperTabs_(ss);
-    return { success: true, result: scMineDossiersAll_(ss) };
+    // No `since` = first round: re-read every covered company. The client
+    // echoes the returned epoch back on later rounds so the run converges.
+    return { success: true, result: scMineDossiersAll_(ss, sinceMs) };
   } finally {
     lock.releaseLock();
   }
@@ -4990,7 +5063,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'listInterests') return listInterests(sessionToken);
   if (op === 'setInterestEnabled') return setInterestEnabled(sessionToken, param('key'), param('enabled'));
   if (op === 'syncInterestsNow') return syncInterestsNow(sessionToken);
-  if (op === 'mineAllDossiers') return mineAllDossiers(sessionToken);
+  if (op === 'mineAllDossiers') return mineAllDossiers(sessionToken, param('since'));
   if (op === 'rubricPreview') return rubricPreview(sessionToken, param('payload'));
   if (op === 'runDigestNow') return runDigestNow(sessionToken, param('editionId'));
   if (op === 'getDigestStatus') return getDigestStatus(sessionToken);
