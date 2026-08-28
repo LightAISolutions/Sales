@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.28r] — 2026-08-28 06:02:57 AM EST
+
+> **Prompt:** "I just noticed that all the hyperlinks in the Scraper app and the emailed Digests are broken. What happened? Fix it."
+
+### Fixed
+
+- **`scDigestStart_` deleted every `DigestIntake` row at the start of each build.** `scHandleClickRedirect_` resolves a link's real destination from the intake rows of the digest it belongs to, so the moment a second edition was built, every article link in every earlier edition stopped resolving and fell back to `EMBED_PAGE_URL` — landing the reader on the app instead of the article, in the page and in already-delivered email alike. Replaced with `scDigestPruneOrphanIntake_`, which removes only rows whose digest has no Digests row (exactly what an aborted run or a retention trim leaves behind) and deletes contiguous blocks rather than row-by-row
+- **Three more features were silently reduced to the latest run** by the same wipe and are fixed by the same change: `searchArchive` ("search every story Scraper has stored, across all editions"), `companyTimeline`, and `sourceStats` all scan the intake tab and could only ever see the run in progress
+- `scHandleClickRedirect_` and `scDigestIntakeUrls_` read narrow column ranges instead of `getDataRange()`. Retaining intake makes the tab large, and the redirect is unauthenticated and hot — this is the same read-path class fixed for Digests in v03.26r
+
+### Added
+
+- `SCRAPER_INTAKE_KEEP_EDITIONS = 240` bounds how far back intake is retained (~16 weeks at three editions a day, ~36k rows). Beyond the window an edition stays readable but its links fall back to opening the app — the behaviour every link had before this fix. Added deliberately rather than leaving retention unbounded: without a cap this fix would have traded a correctness bug for the growth cliff v03.26r had just removed
+
+### Notes
+
+- **Not caused by v03.25r–v03.27r, but exposed by them.** The wipe is long-standing. Raising `SCRAPER_DIGEST_KEEP` 60 → 400 and shipping the News Stand made many old editions browsable for the first time, and the developer had built three editions in one day — so two of the three had dead links the moment the third was built. The correlation with the last three pushes was real even though the defect was not new
+- **Diagnosis was evidence-led, not inferred.** Probed the live deployment (`v01.60g`, `action=go` returning its designed fallback), rendered an edition through the real Night Ink renderer to confirm the emitted hrefs and click keys were correct, and confirmed `DEPLOYMENT_ID` parity and that the CSP does not restrict navigation — which ruled out link construction and left resolution as the only candidate
+- **Regression test proves it is not vacuous**: 18 assertions against the real `scHandleClickRedirect_`, including a case that reproduces the old blanket wipe and asserts links resolve to `EMBED_PAGE_URL` (broken), alongside the fixed case asserting all three same-day editions resolve to their real articles. Also asserts the redirect never reads a range wider than four columns
+- **Known limit:** resolution is still a scan. The permanent answer is a `(digest id, item key) → URL` index, which would remove the retention cap entirely — not built here
 
 ## [v03.27r] — 2026-08-28 05:44:48 AM EST
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.60g";
+var VERSION = "v01.61g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -737,6 +737,17 @@ var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limi
 // cold storage (move the HTML of old issues to Drive, keep the metadata row)
 // rather than a bigger number here — a Sheets cell still caps at 50k characters.
 var SCRAPER_DIGEST_KEEP = 400;
+
+// How many editions keep their DigestIntake rows. Intake is what resolves an
+// article link to its real destination, so this is really "how far back do
+// links keep working" — and it has to be bounded, because several code paths
+// scan the tab and ~150 intake rows per edition adds up fast. Beyond this
+// window an edition stays readable but its links fall back to opening the app,
+// which is the behaviour every edition had before this was fixed. 240 is about
+// sixteen weeks at three editions a day (~36k rows). The permanent answer is a
+// (digest id, item key) → URL index rather than a scan; until that exists,
+// raising this trades link lifetime against the cost of every scan.
+var SCRAPER_INTAKE_KEEP_EDITIONS = 240;
 var SCRAPER_DIGEST_SECTION_CAPS = { companies: 12, market: 10, incidents: 8 };
 // Editions (Phase 5): named digest products with their own cadence and
 // subscriber lists. 'morning' is the built-in default (the weekday Morning
@@ -3000,21 +3011,64 @@ function scDigestSaveState_(state) {
     .setProperty(SCRAPER_DIGEST_STATE_KEY, JSON.stringify(state));
 }
 
-/** Existing intake URLs for the current digest (dedupe set). */
+/** Existing intake URLs for the current digest (dedupe set). Reads the two
+    columns it needs — this runs on every fetch step, and the tab now holds
+    every edition rather than just the run in progress. */
 function scDigestIntakeUrls_(sheet, digestId) {
   var seen = {};
-  var data = sheet.getDataRange().getValues();
-  for (var i = 1; i < data.length; i++) {
+  var n = sheet.getLastRow() - 1;
+  if (n < 1) return seen;
+  var data = sheet.getRange(2, 1, n, 2).getValues();
+  for (var i = 0; i < n; i++) {
     if (String(data[i][0]) === digestId) seen[String(data[i][1])] = true;
   }
   return seen;
 }
 
-/** Start a fresh run: clear the intake tab and initialize state. */
+/** Drop intake rows whose digest no longer has a Digests row — exactly what an
+    aborted run, or a retention trim, leaves behind. Completed editions keep
+    their rows, which is what makes their links resolvable for as long as the
+    edition itself exists. Deletes contiguous blocks rather than row-by-row so
+    a large first cleanup does not burn the execution budget. */
+function scDigestPruneOrphanIntake_(ss) {
+  var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var n = intake.getLastRow() - 1;
+  if (n < 1) return 0;
+  var live = {};
+  var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var dn = digests.getLastRow() - 1;
+  if (dn > 0) {
+    // Newest-last in the sheet, so the most recent editions are the tail.
+    var start = Math.max(0, dn - SCRAPER_INTAKE_KEEP_EDITIONS);
+    digests.getRange(2 + start, 1, dn - start, 1).getValues()
+      .forEach(function(r) { live[String(r[0])] = true; });
+  }
+  var ids = intake.getRange(2, 1, n, 1).getValues();
+  var removed = 0, i = n - 1;
+  while (i >= 0) {
+    if (live[String(ids[i][0])]) { i--; continue; }
+    var end = i;
+    while (i >= 0 && !live[String(ids[i][0])]) i--;
+    intake.deleteRows(i + 3, end - i);   // sheet rows (i+3)…(end+2)
+    removed += end - i;
+  }
+  return removed;
+}
+
+/** Start a fresh run: clear stale intake and initialize state.
+
+    This used to delete EVERY intake row. That was the bug behind "all the
+    hyperlinks are broken": scHandleClickRedirect_ resolves a link's real
+    destination from the intake rows of the digest it belongs to, so the moment
+    the next edition was built, every article link in every earlier edition —
+    in the app AND in already-delivered email — stopped resolving and fell back
+    to EMBED_PAGE_URL, landing the reader on the app instead of the article.
+    Three other features read the same rows and were silently reduced to the
+    latest run only: Archive search, the company timeline, and source stats.
+    Only orphans are cleared now. */
 function scDigestStart_(ss, editionId) {
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
-  var rows = intake.getLastRow();
-  if (rows > 1) intake.deleteRows(2, rows - 1);
+  scDigestPruneOrphanIntake_(ss);
   var clock = scDigestClock_(new Date());
   var ed = scEditionById_(ss, editionId || SCRAPER_EDITION_DEFAULT.id);
   var state = {
@@ -5246,14 +5300,19 @@ function scHandleClickRedirect_(e) {
   try {
     var ss = scraperSs_();
     var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
-    if (intake) {
-      var data = intake.getDataRange().getValues();
-      for (var i = 1; i < data.length; i++) {
-        if (String(data[i][0]) !== digestId) continue;
-        if (scClickKey_(String(data[i][1])) !== itemKey) continue;
-        target = String(data[i][1]); title = String(data[i][2]); source = String(data[i][3]);
+    var rows = intake ? intake.getLastRow() - 1 : 0;
+    if (rows > 0) {
+      // Narrow reads. The intake tab now retains every edition's rows rather
+      // than only the last run's, so pulling all eleven columns — Snippet and
+      // Summary included — would make one click cost the whole archive.
+      var head = intake.getRange(2, 1, rows, 4).getValues();   // id, url, title, source
+      var sigs = intake.getRange(2, 8, rows, 1).getValues();   // signals
+      for (var i = rows - 1; i >= 0; i--) {
+        if (String(head[i][0]) !== digestId) continue;
+        if (scClickKey_(String(head[i][1])) !== itemKey) continue;
+        target = String(head[i][1]); title = String(head[i][2]); source = String(head[i][3]);
         var sig = {};
-        try { sig = JSON.parse(String(data[i][7] || '{}')); } catch (se) {}
+        try { sig = JSON.parse(String(sigs[i][0] || '{}')); } catch (se) {}
         companies = (sig.mc || []).join('|'); topics = (sig.mt || []).join('|');
         segments = (sig.ms || []).join('|');
         break;
