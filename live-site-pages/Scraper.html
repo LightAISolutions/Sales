@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.56w">
+  <meta name="build-version" content="v01.57w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -8912,6 +8912,15 @@
             + (regions ? ' — ' + regions : '')
             + (data.geoUsLinked ? '; softened because it also names the US market' : '')
             + '. ' + note;
+        }
+        // Evidence vs support is the thing that most often explains a low
+        // score: company, topic and segment say the article is ABOUT something
+        // covered; everything else only describes an article already
+        // established as relevant, and is capped in proportion to the evidence.
+        if (data.supportCapped) {
+          note = 'Thin evidence — company/topic/segment scored ' + (data.evidence || 0)
+            + ', so the supporting signals were capped at ' + (data.support || 0)
+            + ' (writing quality cannot carry an article on its own). ' + note;
         }
         if (data.gated) {
           note = 'Excluded by segment gate — only matches toggled-off segment'

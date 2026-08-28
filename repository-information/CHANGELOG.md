@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.37r] — 2026-08-28 07:42:36 PM EST
+
+> **Prompt:** "Ok, "run intake now" did delete the 9 copies and rebuilt a Morning Digest. After my new geography rules, I was expecting the number of relevant articles to go down. However, somehow it went from 20-30 something relevant articles to 55 relevant articles. What happened? I would like to strengthen the criteria to increase accuracy on which articles are relevant."
+
+### Changed
+
+**Why the count rose: the denominator moved, not the criteria.** 30 sources at `SCRAPER_DIGEST_ITEMS_PER_SOURCE = 15` plus 12 backstop queries is ~520 items — a *complete* fetch. The earlier "116 scanned" builds were being cut short by the one-step-per-hourly-tick scheduler and the v01.68g loop bug. The geography rules did work: the pass RATE went from 30/116 (26 per cent) to 55/520 (10.6 per cent). The absolute count rose only because the pipeline ran end to end for the first time.
+
+**The real accuracy leak**, found while checking that: an article matching **zero** covered companies could reach `topic 25 + substance 20 + corroboration 6 = 51` — one point over the old bar of 50. Confirmed numerically in the tests, which print the old flat total for the exact case. `substance` scores *writing* (length, a figure, a quotation, an action verb); any well-written article about anything earns it. It was carrying 20 of the 50 needed.
+
+#### `Scraper.gs` — v01.70g
+
+- **Evidence gate.** `company`, `topic` and (new) `segment` are the signals that say an article is ABOUT something covered. `emphasis`, `substance`, `engagement` and `corroboration` describe an article already established as relevant. The supporting group is now capped at `SCRAPER_SUPPORT_RATIO = 0.6` of the evidence group, so it can amplify a real match but never manufacture one. The leaking article drops 51 → 40
+- **Enabled segment matches became evidence** (`SCRAPER_RUBRIC_SEGMENT_EVIDENCE = 12`) rather than only ever gating. Without this the gate reduces to "name a covered company or you are out", which would drop a FERC interconnection order naming no vendor — exactly what this digest exists to surface. Keyed to `independentOn`, so a parent segment that only matched via its own disabled child still counts for nothing. Binary by design: matching a second segment does not make "this is about your segment" more true
+- `SCRAPER_RELEVANT_THRESHOLD` 50 → 55. Margin only — one covered-company match is worth 40 on its own, so a genuinely relevant article clears 55 comfortably
+- `evidence`, `support`, `segment` and `supportCapped` are returned for diagnosis
+
+#### `Scraper.html` — v01.57w
+
+- The rubric tester states when an article was held back for thin evidence and shows both numbers, so a low score explains itself rather than looking arbitrary
+
+### Notes
+
+- 255 assertions pass; 26 are new. Measured outcomes: the topic-plus-good-writing article **51 → 40** (excluded); a covered-company story **99** (unchanged, saturated); a segment-plus-topic policy story **57** (passes, correctly ranked below the company story and above the topic-only one); an article matching neither company nor topic **0**
+- **Two errors of my own, caught by the tests rather than shipped.** The first draft of the comment claimed a strong match "still carries its full substance and corroboration" — false: at evidence 65 the cap binds at 39 against an uncapped 34, and the assertion checking it failed. Corrected to state what actually happens. The second: segment evidence was initially scaled to 60 per cent on a single match for no principled reason, leaving the policy story at 52 against a bar of 55; made binary
+- **A test-authoring note:** one assertion demanded the policy story clear the bar by at least 3 points. It clears by 2. Rather than tune the constants to satisfy a margin I had invented, the assertion was rewritten to check what actually matters — that it ranks below a covered-company story and above a topic-only one. A marginal case should sit near the bar
 
 ## [v03.36r] — 2026-08-28 07:28:57 PM EST
 

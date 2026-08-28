@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 44/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.70g] — 2026-08-28 07:42:36 PM EST — v03.37r
+
+### Changed
+- **An article now has to be about something you cover, not merely well written.** Length, a figure, a quotation and an action verb are marks of good writing, not of relevance, and an article that had all four could reach the relevance bar on those alone. Those supporting marks are now limited in proportion to how strongly the article actually matches your companies, topics and segments
+- **Matching one of your segments now counts in an article's favour**, rather than only ever being used to rule articles out. A market or policy story that names no covered company can still earn its place; a story that matches only a loose topic no longer can
+- The relevance bar was raised slightly. A story naming one of your covered companies clears it comfortably, so this only affects borderline items
+- The rubric tester now says when an article was held back for thin evidence, and what its evidence and supporting scores were
 
 ## [v01.69g] — 2026-08-28 07:28:57 PM EST — v03.36r
 

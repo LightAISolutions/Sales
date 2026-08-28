@@ -1,4 +1,4 @@
-var VERSION = "v01.69g";
+var VERSION = "v01.70g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -430,7 +430,12 @@ var SCRAPER_ANALYZE_ARTICLES_PER_CALL = 10;    // articles per AI request
 // same deployment return 200). One Gemini call keeps each invocation compile-chunk-sized;
 // the client loop provides both continuation and free-tier RPM spacing.
 var SCRAPER_ANALYZE_CALLS_PER_INVOCATION = 1;
-var SCRAPER_RELEVANT_THRESHOLD = 50;           // score >= this counts as relevant
+// Raised 50 -> 55 alongside the evidence gate in scRubricScore_. The gate
+// alone already excludes the topic-and-good-writing case that prompted this;
+// the extra five points are margin, and cost nothing real because a single
+// covered-company match is worth 40 on its own, so a genuinely relevant
+// article clears 55 comfortably.
+var SCRAPER_RELEVANT_THRESHOLD = 55;           // score >= this counts as relevant
 var SCRAPER_BRIEF_TOP_N = 30;                  // top-scored articles fed into the executive brief
 var SCRAPER_FEEDBACK_EXAMPLES_MAX = 8;         // 👍/👎 exemplar titles per side injected into the scoring prompt
 // ── Feedback distillation: all ratings → a learned-preferences note + search keywords ──
@@ -971,6 +976,17 @@ function scPresetMap_(preset) {
 var SCRAPER_CLICK_BOOST_CAP = 5;       // max rubric points from engagement (clicks)
 var SCRAPER_CLICK_WINDOW_DAYS = 30;    // clicks older than this stop influencing scores
 var SCRAPER_CORROB_CAP = 6;            // max score boost from multi-source corroboration
+// How much the supporting signals (emphasis + substance + engagement +
+// corroboration) may add, as a fraction of the evidence signals (company +
+// topic) already earned. 0.5 keeps a strong match's full supporting score
+// while denying an article with no covered match a route over the bar on
+// writing quality alone. See the evidence gate in scRubricScore_.
+var SCRAPER_SUPPORT_RATIO = 0.6;
+// What an article earns for matching enabled segments, as evidence rather than
+// as a gate. Sized so that a segment match plus a topic match clears the bar
+// on its own (a policy or market story naming no covered company), while a
+// topic match alone still cannot.
+var SCRAPER_RUBRIC_SEGMENT_EVIDENCE = 12;
 var SCRAPER_DOSSIER_MINE_PRIORITY_MAX = 30;  // dossiers per sync while new/changed ones are queued
 var SCRAPER_DOSSIER_MINE_IDLE = 5;           // slow refresh trickle once the fleet is current
 var SCRAPER_DOSSIER_MINE_BUDGET_MS = 60000;  // wall-clock guard for the SCHEDULED tick
@@ -3057,7 +3073,44 @@ function scRubricScore_(title, snippet, model, ctx) {
   var round1 = function(n) { return Math.round(n * 10) / 10; };
   if (gated) clickBoost = 0;
   var corrob = Math.min(SCRAPER_CORROB_CAP, Number(ctx.corrob) || 0);
-  var raw = Math.min(100, company + topic + emphasis + substance + clickBoost + corrob);
+
+  // ── Evidence gate (developer 2026-08-28: "strengthen the criteria to
+  //    increase accuracy on which articles are relevant") ──────────────────
+  //
+  // company and topic are the only two signals that say an article is ABOUT
+  // something covered. emphasis, substance, corroboration and engagement all
+  // describe an article that has already been established as relevant —
+  // substance in particular scores writing (length, a figure, a quotation, an
+  // action verb), which a well-written piece about anything at all will earn.
+  //
+  // Summed flat, they let an article matching ZERO covered companies reach
+  // topic 25 + substance 20 + corroboration 6 = 51, one point over the old
+  // bar of 50. That is the leak: an article that merely brushed two topics and
+  // was written well cleared the same bar as one naming a covered company.
+  //
+  // So the supporting signals are capped in PROPORTION to the evidence already
+  // earned. They can amplify a real match; they can no longer manufacture one.
+  // The topic-only article above tops out at 25 + 15 = 40 and is correctly
+  // excluded. A company match (40) plus a topic (25) gives an evidence base of
+  // 65 and a support allowance of 39 — the cap does still bind there, by a few
+  // points, but at that level the total saturates near 100 either way, so it
+  // changes the score of a clearly relevant article by nothing that matters.
+  // An enabled SEGMENT match is evidence too, and it was previously only ever
+  // used to gate. Without it the gate below reduces to "name a covered company
+  // or you are out", which would drop genuinely relevant market and policy
+  // stories — a FERC interconnection order naming no vendor is exactly the kind
+  // of piece this digest exists to surface. `independentOn` is used rather than
+  // matchedSegments.length so a segment that only matched via its own disabled
+  // child still counts for nothing.
+  // Binary on purpose. "This article is about one of your segments" is either
+  // true or it is not; matching a second segment does not make it more true,
+  // and scaling the first match down below full value left a policy story
+  // short of the bar for no principled reason.
+  var segment = (!gated && independentOn) ? SCRAPER_RUBRIC_SEGMENT_EVIDENCE : 0;
+  var evidence = company + topic + segment;
+  var supportCap = evidence * SCRAPER_SUPPORT_RATIO;
+  var support = Math.min(emphasis + substance + clickBoost + corrob, supportCap);
+  var raw = Math.min(100, evidence + support);
   // Geography multiplies the finished judgement rather than adding a band of
   // its own. An additive penalty would leave a strong company match on a
   // foreign story above the bar, which is exactly the case the developer
@@ -3069,6 +3122,8 @@ function scRubricScore_(title, snippet, model, ctx) {
                emphasis: round1(emphasis), substance: substance,
                engagement: round1(clickBoost), corroboration: round1(corrob),
                geo: geo.factor },
+    evidence: round1(evidence), support: round1(support), segment: round1(segment),
+    supportCapped: (emphasis + substance + clickBoost + corrob) > supportCap + 0.05,
     matchedCompanies: matchedCompanies, matchedTopics: matchedTopics,
     matchedSegments: matchedSegments, excludedSegments: excludedSegments,
     geoTier: geo.tier, geoRegions: geo.regions, geoUsLinked: geo.usLinked,

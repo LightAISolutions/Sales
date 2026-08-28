@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 41/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.57w] — 2026-08-28 07:42:36 PM EST — v03.37r
+
+### Changed
+- The rubric tester now explains when a headline was held back for thin evidence, showing how much it scored for actually matching your companies, topics and segments versus how much its supporting signals were allowed to add
 
 ## [v01.56w] — 2026-08-28 05:58:49 PM EST — v03.34r
 
