@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.47w">
+  <meta name="build-version" content="v01.48w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -562,6 +562,11 @@
     .wd-form-row input[type=text], .wd-form-row input[type=email] { flex: 1 1 160px; }
     .wd-form-row input[type=number] { width: 76px; }
     .wd-form-row select[multiple] { flex: 1 1 180px; padding: 4px 6px; line-height: 1.5; }
+    .wd-tune-scope select { width: 100%; background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft);
+      border-radius: 4px; color: var(--wd-ink); font: inherit; font-size: 12px; padding: 5px 7px; }
+    .wd-tune-scope.scoped select { border-color: var(--wd-amber, #f2a33c); }
+    .wd-int-row.overridden .wd-int-name::after { content: '•'; color: var(--wd-amber, #f2a33c);
+      margin-left: 5px; font-weight: 700; }
     .wd-sync-card .wd-diag { color: var(--wd-mut2); font-size: 12px; padding: 0; letter-spacing: 0; }
     .wd-sync-card .wd-diag:hover { color: var(--wd-green-ink); }
     .wd-check { font-size: 12px; color: var(--wd-mut); display: inline-flex; align-items: center; gap: 5px; }
@@ -1004,6 +1009,15 @@
     </div>
     <div class="wd-desk">
       <aside class="wd-rail wd-rail-left" id="wd-interests">
+        <div class="wd-sect wd-tune-scope">
+          <div class="wd-sect-head">
+            <span class="wd-lbl" title="Choose what these toggles edit: the shared baseline, or one edition's overrides">Tuning</span>
+          </div>
+          <select id="wd-scope-sel" title="Global edits the baseline every edition inherits. Choosing an edition edits only that edition.">
+            <option value="">Global (all editions)</option>
+          </select>
+          <span class="wd-note" id="wd-scope-note">Editing the shared baseline.</span>
+        </div>
         <div class="wd-sect">
           <div class="wd-sect-head">
             <span class="wd-lbl">Sources</span>
@@ -5026,6 +5040,7 @@
       var dg = res[0], gl = res[1], ed = res[2];
       _wdDigests = (dg && dg.success && dg.digests) ? dg.digests : [];
       _wdEditions = (ed && ed.success && ed.editions) ? ed.editions : [];
+      wdScopeFill_();
       wdRenderStatusStrip_(gl && gl.success ? gl : null);
       wdRenderRecentStrip_();
       var empty = $sc('sc-empty');
@@ -5167,6 +5182,7 @@
       .then(function(d) {
         if (!d || !d.success) { host.textContent = scErrMsg(d && d.error); return; }
         _wdEditions = d.editions || [];
+        wdScopeFill_();
         host.innerHTML = _wdEditions.map(function(e) {
           var when = e.cadence === 'weekly' ? 'weekly (day ' + e.anchor + ')'
                    : e.cadence === 'monthly' ? 'monthly (day ' + e.anchor + ')' : 'weekdays';
@@ -6931,6 +6947,12 @@
     if (syncBtn) syncBtn.addEventListener('click', wdSyncNow_);
     var mineBtn = $sc('wd-mine-all');
     if (mineBtn) mineBtn.addEventListener('click', wdMineAll_);
+    var scopeSel = $sc('wd-scope-sel');
+    if (scopeSel) scopeSel.addEventListener('change', function() {
+      _wdScope = scopeSel.value || '';
+      wdScopeNote_();
+      wdRenderInterests_();   // repaint every toggle against the new scope
+    });
     var diagBtn = $sc('wd-diag-toggle');
     if (diagBtn) diagBtn.addEventListener('click', function() {
       _wdDiagForced = !_wdDiagForced;
@@ -7058,7 +7080,13 @@
       struck through, and read-only (the sync never deletes coverage). */
   function wdIntRow_(it) {
     var stale = it.status === 'stale';
-    var cls = 'wd-int-row' + (stale ? ' stale' : (it.enabled ? '' : ' off'));
+    // Under an edition scope the switch shows that EDITION's answer, not the
+    // baseline — otherwise the developer would toggle against a state the
+    // digest never uses. A dot marks keys this edition actually overrides.
+    var scopable = (it.type === 'segment' || it.type === 'topic');
+    var eff = scopable ? wdEffectiveOn_(it) : !!it.enabled;
+    var over = scopable && wdIsOverridden_(it);
+    var cls = 'wd-int-row' + (stale ? ' stale' : (eff ? '' : ' off')) + (over ? ' overridden' : '');
     // A retired SOURCE says why it was dropped. Falling back to the generic
     // flag here is what made Scraper claim a live magazine had stopped
     // publishing — the chip is the only text most people read.
@@ -7078,7 +7106,7 @@
       // A retired row's stored Enabled is still TRUE from when it was seeded,
       // so rendering it from `enabled` drew a live-looking ON switch on an
       // outlet that contributes nothing. Retired always reads OFF.
-      + '<button type="button" class="wd-tg' + (it.enabled && !stale ? ' on' : '') + '" data-key="' + scEsc(it.key) + '"'
+      + '<button type="button" class="wd-tg' + (eff && !stale ? ' on' : '') + '" data-key="' + scEsc(it.key) + '"'
       + (stale
         ? ' disabled title="' + scEsc(offTitle) + '"'
         : ' title="' + (it.enabled ? 'On — counts toward digest relevance' : 'Off — excluded from digests') + '"')
@@ -7159,6 +7187,55 @@
     }
   }
 
+  var _wdScope = '';   // '' = global baseline; otherwise an edition id
+
+  function wdScopedEdition_() {
+    if (!_wdScope) return null;
+    for (var i = 0; i < (_wdEditions || []).length; i++) {
+      if (_wdEditions[i].id === _wdScope) return _wdEditions[i];
+    }
+    return null;
+  }
+
+  /** Effective state of one interest under the current scope: an edition's
+      override when it stores one, otherwise the global value it inherits. */
+  function wdEffectiveOn_(it) {
+    var ed = wdScopedEdition_();
+    var t = ed && ed.tuning;
+    if (t && Object.prototype.hasOwnProperty.call(t, it.key)) return t[it.key] === true;
+    return !!it.enabled;
+  }
+
+  function wdIsOverridden_(it) {
+    var ed = wdScopedEdition_();
+    return !!(ed && ed.tuning && Object.prototype.hasOwnProperty.call(ed.tuning, it.key));
+  }
+
+  function wdScopeFill_() {
+    var sel = $sc('wd-scope-sel');
+    if (!sel) return;
+    var html = '<option value="">Global (all editions)</option>';
+    (_wdEditions || []).forEach(function(e) {
+      html += '<option value="' + scEsc(e.id) + '">' + scEsc(e.name) + '</option>';
+    });
+    sel.innerHTML = html;
+    sel.value = _wdScope;
+    if (sel.value !== _wdScope) { _wdScope = ''; sel.value = ''; }  // scoped edition was deleted
+    wdScopeNote_();
+  }
+
+  function wdScopeNote_() {
+    var note = $sc('wd-scope-note');
+    var wrap = document.querySelector('.wd-tune-scope');
+    var ed = wdScopedEdition_();
+    if (wrap) wrap.className = 'wd-sect wd-tune-scope' + (ed ? ' scoped' : '');
+    if (!note) return;
+    if (!ed) { note.textContent = 'Editing the shared baseline. Every edition inherits this.'; return; }
+    var n = ed.tuning ? Object.keys(ed.tuning).length : 0;
+    note.textContent = 'Editing ' + ed.name + ' only — ' + n + ' override'
+      + (n === 1 ? '' : 's') + '. Others are unaffected.';
+  }
+
   function wdToggleClick_(ev) {
     var btn = ev.target.closest ? ev.target.closest('button.wd-tg') : null;
     if (!btn || btn.disabled) return;
@@ -7166,6 +7243,40 @@
     var it = null;
     _wdInterests.forEach(function(i) { if (i.key === key) it = i; });
     if (!it) return;
+    var ed = wdScopedEdition_();
+    var scopable = (it.type === 'segment' || it.type === 'topic');
+
+    // Scoped edit: write an override on this edition only. Companies and
+    // sources stay global by design — an edition narrows WHAT it cares about,
+    // it does not maintain its own roster.
+    if (ed && scopable) {
+      var was = wdEffectiveOn_(it);
+      var next = !was;
+      ed.tuning = ed.tuning || {};
+      // Matching the baseline again means the edition has nothing to say about
+      // this key — clear it rather than storing a redundant override, so the
+      // map only ever holds real differences.
+      var clearing = (next === !!it.enabled);
+      if (clearing) delete ed.tuning[it.key]; else ed.tuning[it.key] = next;
+      wdRenderInterests_();
+      wdScopeNote_();
+      _gasPost({ action: 'setEditionTuning', token: scToken(), editionId: ed.id,
+                 key: key, enabled: clearing ? '' : (next ? '1' : '0') })
+        .then(function(data) {
+          if (!data || !data.success) {
+            if (clearing) ed.tuning[it.key] = was; else delete ed.tuning[it.key];
+            wdRenderInterests_(); wdScopeNote_();
+            scToast(scErrMsg(data && data.error), true);
+          } else { ed.tuning = data.tuning || ed.tuning; wdScopeNote_(); }
+        })
+        .catch(function(err) {
+          if (clearing) ed.tuning[it.key] = was; else delete ed.tuning[it.key];
+          wdRenderInterests_(); wdScopeNote_();
+          scToast('Could not save the override (' + scEsc((err && err.message) || err) + ').', true);
+        });
+      return;
+    }
+
     var to = !it.enabled;
     it.enabled = to;
     it.flag = '';   // optimistic — toggling acknowledges the "new" flag (server clears it too)

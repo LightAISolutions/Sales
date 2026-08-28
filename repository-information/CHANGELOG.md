@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.21r] — 2026-08-28 12:02:02 AM EST
+
+> **Prompt:** "start Push B"
+
+### Added
+- **Per-edition tuning.** New `Tuning` column on the Editions tab holding a **sparse** JSON override map (interest key → boolean). `scLoadInterestModel_(ss, edition)` applies it over the global model; an absent key inherits the global toggle, so **an edition with an empty map is indistinguishable from no tuning at all** — which is why `morning` stores nothing and its digests are byte-identical to before this existed. `scParseTuning_` never throws: a hand-mangled cell degrades to "no overrides" rather than breaking every digest
+- **`setEditionTuning`** — writes one key on one edition's row. Passing an empty `enabled` **clears** the override (delete the key) rather than setting it false; cleared means "inherit", which is what keeps a map holding only real differences. Invalidates `_scInterestModel`
+- **Two seeded editions** — `bess` and `aidc`, seeded **once** behind the `EDITION_SEEDS_V1` Script Property rather than on absence, so deleting an edition sticks instead of it reappearing next call
+- **15 new segment seeds and 4 new topic seeds.** Storage split by scale (`seg-bess-utility`, `-datacenter`, `-residential`, `-ci`, `-longduration`) because `seg-bess` alone could not express "utility-scale yes, residential no" — the exact distinction a BESS-supplier edition needs. The AIDC power chain split out of the `power-electronics` / `grid-equipment` catch-alls into MV conversion, inverters, transformers, gensets, gas engines, sidecar/skid, rack PDU, server PSUs, GPU silicon and cooling. All default **ON**, so the Morning Edition's behaviour is unchanged until deliberately tuned
+- **Tuning-scope selector** in the left rail (`wd-scope-sel`) with `wdEffectiveOn_` / `wdIsOverridden_` / `wdScopeFill_` / `wdScopeNote_`. Selecting an edition repaints every toggle to **that edition's** answers — otherwise the developer would be toggling against a state the digest never uses — and an amber dot marks the keys it overrides
+
+### Changed
+- **`_scInterestModel` is now keyed by edition**, not a single global. Two editions can build in one execution during a multi-edition tick, and a shared cache would have handed the second one the first one's tuning
+- **`scDigestFetchStep_` and `scDigestBackstopStep_` build their model from `state.editionId`.** `rubricPreview` deliberately stays on the global model — it is a baseline test surface, not an edition
+- **The masthead and the inbox-test subject read the edition name.** The masthead was the literal string `The Morning Edition`; the subject now resolves the name from the stored row's `Edition` column via `scEditionById_`
+- **A scoped toggle that returns a key to the baseline clears the override** instead of storing a duplicate, so an edition's difference list stays short and honest
+- Per the approved scope, **companies and sources stay global** — an edition narrows what it cares about, it does not maintain its own roster
+
+### Notes
+- Deliberately **not** duplicating `topic-utility-procurement` with a second large-load-interconnection topic: two near-identical topics would double-count the same article in the rubric's topic band
+- **Storage sited at a data centre stays ON in the AIDC edition** — it is part of that power chain — while storage as a beat in its own right is off. That asymmetry is the point of the edition, and is asserted in the tests
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **30 assertions**, plus all four earlier suites re-run with no regressions. *Server* (18): the tuning parser degrades safely on garbage/arrays, seed keys are unique, **no edition override points at a non-existent interest** (a dangling key would be a silently dead setting), the BESS edition excludes residential and C&I while keeping utility-scale and data-center storage, the AIDC edition is not BESS-led but still follows data-center storage, unset keys inherit in **both** directions, and `morning` carries no overrides. *Playwright* (12) proving the isolation guarantee end-to-end: the scope selector lists Global + all three, switching to BESS shows its own answers with the override dot, a scoped toggle calls `setEditionTuning` for that edition and **never** the global endpoint, and after the edit both AIDC and the global baseline are provably unchanged
+- **`Scrapergs.changelog.md` rotated** — the 2026-07-18 section moved to the archive with SHA enrichment (`50449c4`); counter held at 50/50 after the new entry
+- **`Scraper.gs`** VERSION v01.53g → v01.54g; **`Scraper.html`** v01.47w → v01.48w; version files synced
 
 ## [v03.20r] — 2026-08-27 11:51:21 PM EST
 

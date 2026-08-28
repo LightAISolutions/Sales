@@ -1,4 +1,4 @@
-var VERSION = "v01.53g";
+var VERSION = "v01.54g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -364,7 +364,7 @@ var SCRAPER_TAB_HEADERS = {
   DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
                  'Score', 'Signals', 'Summary', 'Section', 'Backstop'],
   Editions: ['Edition ID', 'Name', 'Cadence', 'Anchor', 'Window Hours', 'Enabled',
-             'Last Built Date', 'Created', 'Notes'],
+             'Last Built Date', 'Created', 'Notes', 'Tuning'],
   Subscribers: ['Email', 'Name', 'Editions', 'Status', 'Admin', 'Token',
                 'Added', 'Updated'],
   ClickLog: ['Timestamp', 'Digest ID', 'Item Key', 'URL', 'Title', 'Source',
@@ -387,6 +387,7 @@ var SCRAPER_PROJECT_ACTIONS = ['getSchedulerHealth',
                                'goLiveStatus', 'testAi', 'emailLatestDigest',
                                'setAiProvider', 'addDigestRecipient', 'removeDigestRecipient',
                                'listEditions', 'saveEdition', 'deleteEdition',
+                               'setEditionTuning',
                                'listSubscribers', 'saveSubscriber', 'removeSubscriber',
                                'searchArchive', 'companyTimeline', 'sourceStats',
                                'previewEdition', 'sendHeldBackRollup'];
@@ -548,6 +549,22 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     source: 'market' },
   { key: 'topic-aidc-buildout', label: 'US data-center buildout, power deals & capex',
     terms: ['data center', 'gigawatt', 'capex', 'hyperscaler', 'power purchase', 'nuclear'],
+    source: 'market' },
+  // Supporting topics for the BESS and AIDC editions (v03.21r). Deliberately
+  // NOT duplicating 'topic-utility-procurement', which already covers large-
+  // load interconnection — a second near-identical topic would double-count
+  // the same article in the rubric's topic band.
+  { key: 'topic-storage-offtake', label: 'Storage EPC, offtake & tolling',
+    terms: ['tolling agreement', 'offtake', 'epc contract', 'storage contract', 'capacity contract', 'ppa', 'resource adequacy'],
+    source: 'market' },
+  { key: 'topic-storage-degradation', label: 'Storage degradation, augmentation & warranties',
+    terms: ['degradation', 'augmentation', 'warranty', 'capacity guarantee', 'state of health', 'round-trip efficiency', 'cycle life'],
+    source: 'market' },
+  { key: 'topic-capacity-markets', label: 'Interconnection queues & capacity markets',
+    terms: ['interconnection queue', 'capacity market', 'capacity auction', 'pjm', 'ercot', 'caiso', 'miso', 'queue reform'],
+    source: 'market' },
+  { key: 'topic-dc-cooling', label: 'Data-center cooling & power density',
+    terms: ['liquid cooling', 'power density', 'rack density', 'kilowatt per rack', 'thermal design', 'pue'],
     source: 'market' }
 ];
 
@@ -564,6 +581,44 @@ var SCRAPER_INTEREST_FLAG_NEWSEG = 'New segment';
 var SCRAPER_SEGMENT_SEEDS = [
   { key: 'seg-bess', label: 'BESS & grid-scale storage',
     terms: ['bess', 'battery storage', 'energy storage', 'grid-scale battery', 'storage system', 'battery cell', 'lfp', 'sodium-ion', 'megawatt-hour'] },
+  // --- Storage split by scale (v03.21r) -----------------------------------
+  // `seg-bess` alone could not express "utility-scale yes, residential no",
+  // which is exactly the distinction a BESS-supplier edition needs. The
+  // parent stays for continuity; these narrow it.
+  { key: 'seg-bess-utility', label: 'Utility-scale BESS', tv: 1,
+    terms: ['utility-scale storage', 'utility-scale battery', 'grid-scale storage', 'grid-scale battery', 'standalone storage', 'front-of-meter', 'transmission-connected', 'iso queue', 'merchant storage'] },
+  { key: 'seg-bess-datacenter', label: 'Data-center & behind-the-meter storage', tv: 1,
+    terms: ['behind-the-meter storage', 'data center battery', 'data center storage', 'ups battery', 'bridging power', 'on-site storage', 'microgrid storage'] },
+  { key: 'seg-bess-residential', label: 'Residential storage', tv: 1,
+    terms: ['home battery', 'residential storage', 'residential battery', 'powerwall', 'home energy storage', 'rooftop storage'] },
+  { key: 'seg-bess-ci', label: 'C&I storage', tv: 1,
+    terms: ['commercial and industrial storage', 'c&i storage', 'c&i battery', 'peak shaving', 'demand charge', 'behind-the-meter commercial'] },
+  { key: 'seg-bess-longduration', label: 'Long-duration storage', tv: 1,
+    terms: ['long-duration', 'long duration energy storage', 'ldes', 'flow battery', 'iron-air', 'compressed air storage', 'thermal storage', 'eight-hour storage'] },
+  // --- Data-center power chain, split (v03.21r) ---------------------------
+  // `power-electronics` and `grid-equipment` squashed the whole AIDC power
+  // chain into two buckets; an AIDC-supplier edition needs to follow the
+  // pieces separately.
+  { key: 'seg-mv-power-conversion', label: 'Medium-voltage power conversion', tv: 1,
+    terms: ['medium-voltage', 'medium voltage', 'mv ups', 'solid-state transformer', 'power conversion system', 'pcs', 'static ups', '34.5 kv', '13.8 kv'] },
+  { key: 'seg-inverters', label: 'Inverters & converters', tv: 1,
+    terms: ['inverter', 'converter', 'rectifier', 'bidirectional converter', 'dc-dc', 'grid-forming', 'string inverter', 'central inverter'] },
+  { key: 'seg-transformers', label: 'Transformers & switchgear', tv: 1,
+    terms: ['transformer', 'switchgear', 'substation', 'circuit breaker', 'ring main unit', 'gis switchgear', 'padmount', 'tap changer'] },
+  { key: 'seg-gensets', label: 'Diesel gensets & backup power', tv: 1,
+    terms: ['diesel generator', 'genset', 'standby generator', 'backup generator', 'emergency power', 'prime power', 'generator set'] },
+  { key: 'seg-gas-engines', label: 'Gas turbines & reciprocating engines', tv: 1,
+    terms: ['gas turbine', 'reciprocating engine', 'gas engine', 'aeroderivative', 'combined cycle', 'simple cycle', 'turbine order', 'linear generator'] },
+  { key: 'seg-sidecar-power', label: 'Sidecar & skid power solutions', tv: 1,
+    terms: ['sidecar', 'skid-mounted', 'power skid', 'containerized power', 'modular power block', 'prefabricated power', 'power module'] },
+  { key: 'seg-rack-power', label: 'Rack PDU & busway', tv: 1,
+    terms: ['rack pdu', 'busway', 'bus bar', 'busbar', 'power distribution unit', 'remote power panel', 'starline', 'whip'] },
+  { key: 'seg-psu', label: 'Server PSUs & power shelves', tv: 1,
+    terms: ['power supply unit', 'psu', 'power shelf', 'rectifier shelf', 'ors', 'open rack', 'bbu', 'battery backup unit'] },
+  { key: 'seg-gpu-silicon', label: 'GPU & accelerator silicon', tv: 1,
+    terms: ['gpu', 'accelerator', 'blackwell', 'rubin', 'hbm', 'tpu', 'ai chip', 'xpu', 'nvlink'] },
+  { key: 'seg-cooling', label: 'Data-center cooling & thermal', tv: 1,
+    terms: ['liquid cooling', 'direct-to-chip', 'immersion cooling', 'cdu', 'coolant distribution', 'rear-door heat exchanger', 'chiller', 'thermal management'] },
   { key: 'seg-aidc', label: 'Data centers & AI infrastructure',
     terms: ['data center', 'datacenter', 'ai infrastructure', 'hyperscale', 'colocation', 'ai factory', 'compute campus'] },
   { key: 'seg-grid-equipment', label: 'Transformers & grid equipment',
@@ -657,6 +712,38 @@ var SCRAPER_DIGEST_SECTION_CAPS = { companies: 12, market: 10, incidents: 8 };
 // day-of-month, 720h).
 var SCRAPER_EDITION_DEFAULT = { id: 'morning', name: 'The Morning Edition',
   cadence: 'daily', anchor: 0, windowH: 0 };  // windowH 0 = cadence default
+
+// Editions seeded once (marker below), never re-seeded — deleting one has to
+// stick. `tuning` is a SPARSE override map of interest key -> boolean applied
+// on top of the global Tune. An edition that stores nothing behaves exactly
+// like the global model, which is why 'morning' carries no overrides at all
+// and its digests are byte-identical to before per-edition tuning existed.
+var SCRAPER_EDITION_SEEDS_KEY = 'EDITION_SEEDS_V1';
+var SCRAPER_EDITION_SEEDS = [
+  { id: 'bess', name: 'The Morning Edition (BESS)', cadence: 'daily', anchor: 0, windowH: 0,
+    notes: 'Utility-scale storage focus',
+    tuning: {
+      // Off: the storage segments this reader does not sell into.
+      'seg-bess-residential': false, 'seg-bess-ci': false,
+      // Off: adjacent generation beats that dilute a storage edition.
+      'seg-solar': false, 'seg-wind': false, 'seg-nuclear': false,
+      'seg-fuel-cells': false, 'seg-ev': false, 'seg-ev-charging': false,
+      'seg-consumer': false, 'seg-industrial': false,
+      'topic-aidc-buildout': false, 'topic-community-opposition': false
+    } },
+  { id: 'aidc', name: 'The Morning Edition (AIDC)', cadence: 'daily', anchor: 0, windowH: 0,
+    notes: 'Data-center power chain focus',
+    tuning: {
+      // Off: storage as a beat in its own right. Data-center-sited storage
+      // stays ON — it is part of the power chain this edition follows.
+      'seg-bess-utility': false, 'seg-bess-residential': false, 'seg-bess-ci': false,
+      'seg-bess-longduration': false,
+      'seg-solar': false, 'seg-wind': false, 'seg-ev': false, 'seg-ev-charging': false,
+      'seg-consumer': false,
+      'topic-bess-technology': false, 'topic-bess-bankability': false,
+      'topic-battery-incidents': false, 'topic-china-policy': false
+    } }
+];
 var SCRAPER_CLICK_BOOST_CAP = 5;       // max rubric points from engagement (clicks)
 var SCRAPER_CLICK_WINDOW_DAYS = 30;    // clicks older than this stop influencing scores
 var SCRAPER_CORROB_CAP = 6;            // max score boost from multi-source corroboration
@@ -2506,9 +2593,14 @@ function scSyncInterests_(force, mineBudgetMs) {
     so the rubric's segment gate can subtract with it. Lower-cased match
     terms are precomputed; company/topic rows include their Label as a term
     (segment labels are category names, not match terms). */
-var _scInterestModel = null;
-function scLoadInterestModel_(ss) {
-  if (_scInterestModel) return _scInterestModel;
+var _scInterestModel = {};
+function scLoadInterestModel_(ss, edition) {
+  // Cache per edition, not globally: two editions build in the same execution
+  // during a multi-edition tick, and a single shared cache would hand the
+  // second one the first one's tuning.
+  var tuning = (edition && edition.tuning) || {};
+  var cacheKey = (edition && edition.id) || '__global';
+  if (_scInterestModel[cacheKey]) return _scInterestModel[cacheKey];
   var model = { companies: [], topics: [], segments: [] };
   var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
   if (sheet) {
@@ -2522,9 +2614,14 @@ function scLoadInterestModel_(ss) {
       var terms = String(r[7] || '').split(/[\n,]/).map(function(t) {
         return t.trim().toLowerCase();
       }).filter(function(t) { return t.length >= 3; });
+      // Per-edition override, when the edition stores one for this key. An
+      // absent key inherits the global toggle — which is why an edition with
+      // an empty map is indistinguishable from no tuning at all.
+      var key = String(r[0]);
+      if (Object.prototype.hasOwnProperty.call(tuning, key)) on = tuning[key] === true;
       if (type === 'segment') {
         if (!active) continue;
-        model.segments.push({ key: String(r[0]), label: label, terms: terms, enabled: on });
+        model.segments.push({ key: key, label: label, terms: terms, enabled: on });
         continue;
       }
       if (type !== 'company' && type !== 'topic') continue;
@@ -2532,13 +2629,13 @@ function scLoadInterestModel_(ss) {
       if (label.length >= 3 && terms.indexOf(label.toLowerCase()) === -1) {
         terms.push(label.toLowerCase());
       }
-      var entry = { key: String(r[0]), label: label, terms: terms,
+      var entry = { key: key, label: label, terms: terms,
                     weight: Math.max(0, Math.min(3, Number(r[8]) || 1)),
                     profilerUpdated: String(r[10] || '') };
       (type === 'company' ? model.companies : model.topics).push(entry);
     }
   }
-  _scInterestModel = model;
+  _scInterestModel[cacheKey] = model;
   return model;
 }
 
@@ -2913,7 +3010,7 @@ function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen
 function scDigestFetchStep_(ss, state, t0) {
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
   var enabled = scEnabledSources_(ss);
-  var model = scLoadInterestModel_(ss);
+  var model = scLoadInterestModel_(ss, scEditionById_(ss, state.editionId));
   var seen = scDigestIntakeUrls_(intake, state.id);
   var cutoffMs = Date.now() - state.windowH * 3600000;
   var fetches = 0;
@@ -2942,7 +3039,7 @@ function scDigestFetchStep_(ss, state, t0) {
     safety net, never a primary source. */
 function scDigestBackstopStep_(ss, state, t0) {
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
-  var model = scLoadInterestModel_(ss);
+  var model = scLoadInterestModel_(ss, scEditionById_(ss, state.editionId));
   var props = PropertiesService.getScriptProperties();
   if (!state.bsList) {
     var names = model.companies.map(function(c) { return c.label; }).sort();
@@ -3289,7 +3386,8 @@ function scRenderDigestNightInk_(d) {
     + '<tr><td style="color:#e6e4de;padding:32px 30px 26px;' + sans + '">'
     // Masthead
     + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:16px;margin-bottom:18px;">'
-    + '<div style="' + serif + 'font-size:44px;font-weight:700;line-height:1;color:#f0eee8;">The Morning Edition</div>'
+    + '<div style="' + serif + 'font-size:44px;font-weight:700;line-height:1;color:#f0eee8;">'
+    + esc(d.editionName || SCRAPER_EDITION_DEFAULT.name) + '</div>'
     + '<div style="' + caps + 'color:#f2a33c;margin-top:6px;">Scraper · Trade news, distilled daily</div>'
     + '<div style="font-size:13px;color:#9aa0ab;margin-top:5px;">' + esc(longDate(d.date))
     + ' · No. ' + scDigestNo_(d.no) + ' · covering the last ' + Number(d.windowH) + ' hours</div>'
@@ -3624,7 +3722,7 @@ function emailLatestDigest(sessionToken) {
   var date = row[1] instanceof Date
     ? Utilities.formatDate(row[1], 'America/New_York', 'yyyy-MM-dd') : String(row[1]);
   MailApp.sendEmail({ to: to,
-    subject: 'The Morning Edition — ' + date + ' (inbox test)',
+    subject: scEditionById_(ss, String(row[9] || '')).name + ' — ' + date + ' (inbox test)',
     htmlBody: html });
   dataAuditLog(to, 'email', 'digest', String(row[0]), 'inbox test sent');
   return { success: true, to: scMaskEmail_(to),
@@ -4337,16 +4435,45 @@ function scEditions_(ss) {
       cadence: String(data[i][2] || 'daily'), anchor: Number(data[i][3]) || 0,
       windowH: Number(data[i][4]) || 0,
       enabled: data[i][5] === true || String(data[i][5]).toLowerCase() === 'true',
-      lastBuilt: String(data[i][6] || ''), created: data[i][7], notes: String(data[i][8] || '')
+      lastBuilt: String(data[i][6] || ''), created: data[i][7], notes: String(data[i][8] || ''),
+      tuning: scParseTuning_(data[i][9])
     });
   }
   if (!out.length) {
     var d = SCRAPER_EDITION_DEFAULT;
-    sheet.appendRow([d.id, d.name, d.cadence, d.anchor, d.windowH, true, '', new Date(), 'built-in default']);
+    sheet.appendRow([d.id, d.name, d.cadence, d.anchor, d.windowH, true, '', new Date(), '', '{}']);
     out.push({ id: d.id, name: d.name, cadence: d.cadence, anchor: d.anchor,
-               windowH: d.windowH, enabled: true, lastBuilt: '', created: new Date(), notes: '' });
+               windowH: d.windowH, enabled: true, lastBuilt: '', created: new Date(),
+               notes: '', tuning: {} });
+  }
+  // Seeded ONCE, tracked by a Script Property rather than by absence: seeding
+  // on absence would resurrect an edition the developer deliberately deleted.
+  var props = PropertiesService.getScriptProperties();
+  if (props.getProperty(SCRAPER_EDITION_SEEDS_KEY) !== 'done') {
+    var have = {};
+    out.forEach(function(e) { have[e.id] = true; });
+    SCRAPER_EDITION_SEEDS.forEach(function(sd) {
+      if (have[sd.id]) return;
+      sheet.appendRow([sd.id, sd.name, sd.cadence, sd.anchor, sd.windowH, true, '',
+                       new Date(), sd.notes || '', JSON.stringify(sd.tuning || {})]);
+      out.push({ id: sd.id, name: sd.name, cadence: sd.cadence, anchor: sd.anchor,
+                 windowH: sd.windowH, enabled: true, lastBuilt: '', created: new Date(),
+                 notes: sd.notes || '', tuning: sd.tuning || {} });
+    });
+    props.setProperty(SCRAPER_EDITION_SEEDS_KEY, 'done');
   }
   return out;
+}
+
+/** Tuning cell -> override map. Never throws: a hand-mangled cell degrades to
+    "no overrides" (i.e. the global model) rather than breaking every digest. */
+function scParseTuning_(cell) {
+  var raw = String(cell || '').trim();
+  if (!raw) return {};
+  try {
+    var o = JSON.parse(raw);
+    return (o && typeof o === 'object' && !Array.isArray(o)) ? o : {};
+  } catch (e) { return {}; }
 }
 
 function scEditionById_(ss, id) {
@@ -4409,6 +4536,36 @@ function saveEdition(sessionToken, payload) {
   sheet.appendRow([id, name, cadence, anchor, Number(p.windowH) || 0, enabled, '', new Date(), '']);
   dataAuditLog(user.email, 'create', 'edition', id, name);
   return { success: true, id: id };
+}
+
+/** Set (or clear) one interest override on one edition.
+
+    `enabled` null/'' CLEARS the override, which is not the same as setting it
+    false: cleared means "inherit the global toggle" and the key is removed
+    from the map entirely, so an edition only ever stores what it actually
+    changes. Writes only this edition's row, so tuning one edition can never
+    disturb another — that isolation is the whole reason tuning lives on the
+    edition row rather than as extra columns on the Interests sheet. */
+function setEditionTuning(sessionToken, editionId, key, enabled) {
+  var user = validateSessionForData(sessionToken, 'setEditionTuning');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_permitted' };
+  var k = String(key || '').trim();
+  if (!k) return { success: false, error: 'bad_key' };
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.EDITIONS);
+  var data = sheet.getDataRange().getValues();
+  var want = String(editionId || '');
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][0]) !== want) continue;
+    var tuning = scParseTuning_(data[i][9]);
+    if (enabled === null || enabled === undefined || enabled === '') delete tuning[k];
+    else tuning[k] = (enabled === true || String(enabled).toLowerCase() === 'true');
+    sheet.getRange(i + 1, 10).setValue(JSON.stringify(tuning));
+    _scInterestModel = {};   // the cached model for this edition is now stale
+    return { success: true, editionId: want, tuning: tuning };
+  }
+  return { success: false, error: 'not_found' };
 }
 
 function deleteEdition(sessionToken, editionId) {
@@ -5142,6 +5299,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'listEditions') return listEditions(sessionToken);
   if (op === 'saveEdition') return saveEdition(sessionToken, param('payload'));
   if (op === 'deleteEdition') return deleteEdition(sessionToken, param('editionId'));
+  if (op === 'setEditionTuning') return setEditionTuning(sessionToken, param('editionId'), param('key'), param('enabled'));
   if (op === 'listSubscribers') return listSubscribers(sessionToken);
   if (op === 'saveSubscriber') return saveSubscriber(sessionToken, param('payload'));
   if (op === 'removeSubscriber') return removeSubscriber(sessionToken, param('email'));

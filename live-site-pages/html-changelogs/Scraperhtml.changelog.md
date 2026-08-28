@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.48w] — 2026-08-28 12:02:02 AM EST — v03.21r
+
+### Added
+- **A "Tuning" selector at the top of the left column.** Leave it on *Global* to edit the shared settings every edition inherits, or pick an edition to edit only that one. The switches redraw to show the chosen edition's own answers, and a dot marks each setting that edition deliberately does differently
+- A line under the selector always says what you are editing and how many settings that edition changes, so it is never ambiguous which one a switch belongs to
+
+### Changed
+- Turning a setting back to match the shared value clears the difference rather than storing a duplicate, so an edition's list of differences stays honest and short
+- Companies and sources are still shared by every edition — an edition narrows what it cares about, it does not keep its own separate company list
 
 ## [v01.47w] — 2026-08-27 11:51:21 PM EST — v03.20r
 

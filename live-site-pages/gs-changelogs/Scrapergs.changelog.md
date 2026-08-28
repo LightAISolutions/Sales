@@ -9,6 +9,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 *(No changes yet)*
 
+## [v01.54g] — 2026-08-28 12:02:02 AM EST — v03.21r
+
+### Added
+- **Editions can now differ from one another.** Each edition keeps its own answers for which business segments and topics it follows, layered on top of your shared settings. An edition only stores what it actually changes, so anything you have not adjusted follows the shared setting and keeps following it when you change your mind later
+- **Two new editions** alongside the original: one focused on utility-scale storage, and one focused on the data-center power chain. The original is untouched and reads exactly as it did
+- **Many more filters to choose from.** Storage is now separated by scale — utility-scale, data-center, residential, commercial, and long-duration — and the data-center power chain is separated into medium-voltage conversion, inverters, transformers, backup generators, turbines and engines, skid-mounted power, rack power, server power supplies, accelerator chips, and cooling. New topics cover storage contracting, warranties and degradation, interconnection queues, and power density. All start switched on, so nothing changes until you decide otherwise
+
+### Changed
+- The edition's own name now appears on the emailed edition, so the three read as distinct publications rather than three copies of one
+- Older entries moved to the archive
+
 ## [v01.53g] — 2026-08-27 11:51:21 PM EST — v03.20r
 
 ### Changed
@@ -373,10 +384,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - Research projects can now be created, edited, paused, resumed, and archived — each saved privately to your own account
 - Report schedules (daily through annual, plus custom dates) are stored with each project
 - Up to 10 active projects per account
-
-## [v01.04g] — 2026-07-18 12:05:25 AM EST — v01.13r
-
-### Added
-- Submitted text entries are now saved to the spreadsheet with a timestamp
 
 Developed by: LightAISolutions

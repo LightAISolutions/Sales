@@ -8,6 +8,11 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.04g] — 2026-07-18 12:05:25 AM EST — v01.13r — [50449c4](https://github.com/LightAISolutions/Sales/commit/50449c4)
+
+### Added
+- Submitted text entries are now saved to the spreadsheet with a timestamp
+
 ## [v01.03g] — 2026-07-17 10:05:56 PM EST — v01.11r — [c4d1bd3](https://github.com/LightAISolutions/Sales/commit/c4d1bd3)
 
 ### Fixed
