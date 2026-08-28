@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.39w">
+  <meta name="build-version" content="v01.40w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -378,6 +378,9 @@
     .wd-brand b { font-weight: 700; font-size: 17px; letter-spacing: 0.04em; color: var(--wd-ink); }
     .wd-brand .wd-lbl { color: var(--wd-accent); }
     #wd-clock { font-family: var(--wd-mono); font-size: 12px; color: var(--wd-mut2); }
+    .wd-paused-pill.wd-live {
+      border-color: var(--wd-green-line); background: var(--wd-green-bg); color: var(--wd-green-ink);
+    }
     .wd-paused-pill {
       display: inline-flex; align-items: center; gap: 7px; padding: 4px 10px;
       border: 1px solid var(--wd-warn-line); border-radius: 4px;
@@ -501,6 +504,12 @@
       box-sizing: border-box; margin-bottom: 4vh; color: var(--wd-ink); font-family: var(--wd-sans);
     }
     #wd-digest-status { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); min-height: 15px; margin: 2px 0 6px; }
+    #wd-golive-panel { border: 1px solid var(--wd-line-soft); background: var(--wd-panel); border-radius: 4px; padding: 10px 12px; margin: 0 0 10px; }
+    #wd-golive-body { font-family: var(--wd-mono); font-size: 11px; line-height: 1.8; color: var(--wd-mut); }
+    #wd-golive-body .gl-ok { color: var(--wd-green-ink); }
+    #wd-golive-body .gl-bad { color: var(--wd-warn); }
+    #wd-golive-body .gl-lbl { color: var(--wd-mut2); }
+    #wd-golive-note { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); }
     #wd-digest-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
     .wd-dg-chip {
       display: inline-flex; align-items: stretch;
@@ -904,7 +913,7 @@
       <span id="wd-clock"></span>
       <!-- Static while the scheduled pipeline is paused (both GAS pause flags
            false since v03.02r). Phase 4 go-live removes or wires this pill. -->
-      <span class="wd-paused-pill" id="wd-paused-pill" title="Scheduled digests are paused during the rebuild — manual actions still work. Delivery resumes at Phase 4 go-live.">⏸ DIGEST PAUSED</span>
+      <span class="wd-paused-pill wd-live" id="wd-paused-pill" title="Scheduled weekday editions are on (from 7:00 AM ET). Email delivery starts once a recipient is configured — check Digest → Go-live.">▶ DIGEST LIVE</span>
       <div class="wd-spacer"></div>
       <div style="display:flex;gap:8px;align-items:center;">
         <button class="sc-btn" id="wd-digest-btn" type="button" title="View editions or run the intake now">Digest</button>
@@ -996,11 +1005,20 @@
       <div class="sc-wiz-head">
         <h2>The Morning Edition</h2>
         <div style="display:flex;gap:8px;align-items:center;">
+          <button class="sc-btn" id="wd-digest-golive" type="button" title="Go-live readiness: AI provider, delivery config, and scheduler health at a glance">Go-live</button>
           <button class="sc-btn" id="wd-digest-run" type="button" title="Build (or rebuild) today's edition now — runs the fetch → score → summarize → render pipeline">Run intake now</button>
           <button id="wd-digest-close" type="button" title="Close" style="background:none;border:none;font-size:24px;color:var(--wd-faint);cursor:pointer;line-height:1;">&times;</button>
         </div>
       </div>
       <div id="wd-digest-status"></div>
+      <div id="wd-golive-panel" style="display:none;">
+        <div id="wd-golive-body"><span class="wd-loading">Checking readiness…</span></div>
+        <div style="margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+          <button class="sc-btn" id="wd-golive-testai" type="button" title="One tiny AI call through the configured provider — proves the whole summarize path (free on Gemini's tier; well under a cent on Claude)">Test AI</button>
+          <button class="sc-btn" id="wd-golive-email" type="button" title="Send the latest edition to your own inbox to check how your mail app renders it">Email me latest</button>
+          <span id="wd-golive-note"></span>
+        </div>
+      </div>
       <div id="wd-digest-list"></div>
       <div id="wd-digest-view"><span class="wd-loading" style="display:block;padding:16px;">No editions yet — tap "Run intake now" to build the first one.</span></div>
     </div>
@@ -6603,6 +6621,12 @@
     });
     var dgRun = $sc('wd-digest-run');
     if (dgRun) dgRun.addEventListener('click', wdDigestRun_);
+    var glBtn = $sc('wd-digest-golive');
+    if (glBtn) glBtn.addEventListener('click', wdGoLiveToggle_);
+    var glTest = $sc('wd-golive-testai');
+    if (glTest) glTest.addEventListener('click', wdGoLiveTestAi_);
+    var glMail = $sc('wd-golive-email');
+    if (glMail) glMail.addEventListener('click', wdGoLiveEmail_);
     var dgList = $sc('wd-digest-list');
     if (dgList) dgList.addEventListener('click', function(ev) {
       var chip = ev.target.closest ? ev.target.closest('.wd-dg-chip') : null;
@@ -6861,6 +6885,87 @@
   function wdDigestOpen_() {
     $sc('wd-digest-overlay').style.display = 'flex';
     wdDigestRefresh_();
+  }
+
+  /** Go-live readiness panel (Phase 4): provider, keys, delivery, trigger
+      health — all read-only server state, no AI call, no secrets. */
+  function wdGoLiveToggle_() {
+    var p = $sc('wd-golive-panel');
+    var show = !p.style.display || p.style.display === 'none';
+    p.style.display = show ? 'block' : 'none';
+    if (show) wdGoLiveRefresh_();
+  }
+
+  function wdGoLiveRefresh_() {
+    var body = $sc('wd-golive-body');
+    body.innerHTML = '<span class="wd-loading">Checking readiness…</span>';
+    _gasPost({ action: 'goLiveStatus', token: scToken() })
+      .then(function(d) {
+        if (!d || !d.success) { body.textContent = scErrMsg(d && d.error); return; }
+        function row(label, value, good) {
+          var cls = good === undefined ? '' : good ? ' class="gl-ok"' : ' class="gl-bad"';
+          return '<div><span class="gl-lbl">' + scEsc(label) + ':</span> <span' + cls + '>'
+            + scEsc(value) + '</span></div>';
+        }
+        var keyOk = d.provider === 'claude' ? d.hasAnthropicKey : d.hasGeminiKey;
+        body.innerHTML =
+          row('AI provider', d.provider + ' · ' + d.model)
+          + row('API key', keyOk ? 'set' : 'missing — summaries run in $0 fallback mode', keyOk)
+          + row('Scheduled runs', d.runsEnabled ? 'on — weekdays from 7:00 AM ET' : 'paused', d.runsEnabled)
+          + row('Email delivery', !d.emailEnabled ? 'off'
+                : d.recipient ? 'armed → ' + d.recipient
+                : 'waiting on a recipient — set the DIGEST_RECIPIENT script property to start delivery',
+                d.emailEnabled && !!d.recipient)
+          + row('Hourly trigger', d.trigger + (d.lastTickAgeMin != null
+                ? ' · last tick ' + d.lastTickAgeMin + 'm ago'
+                : ' · no tick recorded yet'),
+                d.trigger === 'installed' && d.lastTickAgeMin != null && d.lastTickAgeMin <= 90)
+          + (d.lastEditionDate ? row('Last edition', d.lastEditionDate) : '');
+      })
+      .catch(function(err) {
+        body.textContent = 'Could not check (' + ((err && err.message) || err) + ')';
+      });
+  }
+
+  function wdGoLiveTestAi_() {
+    var btn = $sc('wd-golive-testai');
+    var note = $sc('wd-golive-note');
+    btn.disabled = true;
+    note.textContent = 'Calling the AI provider…';
+    _gasPost({ action: 'testAi', token: scToken() })
+      .then(function(d) {
+        btn.disabled = false;
+        if (d && d.success && d.ok) {
+          note.textContent = '✓ ' + d.provider + ' replied: ' + (d.reply || '').trim();
+        } else {
+          note.textContent = '✗ ' + ((d && d.error) || 'AI test failed');
+        }
+      })
+      .catch(function(err) {
+        btn.disabled = false;
+        note.textContent = '✗ ' + ((err && err.message) || err);
+      });
+  }
+
+  function wdGoLiveEmail_() {
+    var btn = $sc('wd-golive-email');
+    var note = $sc('wd-golive-note');
+    btn.disabled = true;
+    note.textContent = 'Sending the latest edition to your inbox…';
+    _gasPost({ action: 'emailLatestDigest', token: scToken() })
+      .then(function(d) {
+        btn.disabled = false;
+        if (d && d.success) {
+          note.textContent = '✓ Sent to ' + d.to + ' — check how your mail app renders it'
+            + (d.truncated ? ' (very large edition — the stored copy was trimmed)' : '');
+        } else {
+          note.textContent = '✗ ' + scErrMsg(d && d.error);
+        }
+      })
+      .catch(function(err) {
+        btn.disabled = false;
+        note.textContent = '✗ ' + ((err && err.message) || err);
+      });
   }
 
   function wdDigestRefresh_() {

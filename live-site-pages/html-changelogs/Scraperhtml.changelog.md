@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 39/50`
+`Sections: 40/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.40w] — 2026-08-27 08:12:11 PM EST — v03.09r
+
+### Added
+- A "Go-live" panel in the Digest view: see at a glance which AI service is configured, whether scheduled runs and email delivery are on, and whether the hourly schedule is checking in — with each line coloured green when it's ready and amber when it still needs something from you
+- Two test buttons in that panel — one makes a single tiny AI call to prove summaries will work (and shows the exact reason if they won't), the other emails you the latest edition so you can see how your own mail app renders it
+
+### Changed
+- The status pill in the header now reads "DIGEST LIVE" in green — scheduled weekday editions are running
 
 ## [v01.39w] — 2026-08-27 06:49:49 PM EST — v03.08r
 

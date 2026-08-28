@@ -1,4 +1,4 @@
-var VERSION = "v01.41g";
+var VERSION = "v01.42g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -377,7 +377,8 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'listInterests', 'setInterestEnabled', 'syncInterestsNow',
                                'rubricPreview',
                                'runDigestNow', 'getDigestStatus', 'listDigests', 'getDigest',
-                               'deleteDigest'];
+                               'deleteDigest',
+                               'goLiveStatus', 'testAi', 'emailLatestDigest'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -597,16 +598,21 @@ var SCRAPER_SOURCE_ROSTER = [
   { key: 'canary-media', name: 'Canary Media', tier: 1, rss: 'https://www.canarymedia.com/rss.xml' },
   { key: 'power-magazine', name: 'POWER Magazine', tier: 1, rss: 'https://www.powermag.com/feed/' },
   { key: 'dc-knowledge', name: 'Data Center Knowledge', tier: 1, rss: 'https://www.datacenterknowledge.com/rss.xml' },
-  { key: 'dc-frontier', name: 'Data Center Frontier', tier: 1, rss: 'https://www.datacenterfrontier.com/rss.xml' },
+  // Feed path verified live 2026-08-27 (site moved to a Nuxt platform; old /rss.xml is 404)
+  { key: 'dc-frontier', name: 'Data Center Frontier', tier: 1, rss: 'https://www.datacenterfrontier.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22%3A%22home%22%7D' },
   { key: 'pv-magazine-usa', name: 'pv magazine USA', tier: 1, rss: 'https://pv-magazine-usa.com/feed/' },
-  { key: 'microgrid-knowledge', name: 'Microgrid Knowledge', tier: 1, rss: 'https://www.microgridknowledge.com/rss.xml' },
+  // Same platform move as Data Center Frontier — path verified live 2026-08-27
+  { key: 'microgrid-knowledge', name: 'Microgrid Knowledge', tier: 1, rss: 'https://www.microgridknowledge.com/__rss/website-scheduled-content.xml?input=%7B%22sectionAlias%22%3A%22home%22%7D' },
   { key: 'td-world', name: 'T&D World', tier: 1, rss: 'https://www.tdworld.com/rss.xml' },
-  { key: 'battery-technology', name: 'Battery Technology', tier: 1, rss: 'https://www.batterytechonline.com/rss.xml' },
+  // Replaced Battery Technology (Informa bot-wall 403s even browser UAs; battery
+  // coverage continues via Energy-Storage.news + ESS News) — go-live shakeout 2026-08-27
+  { key: 'next-platform', name: 'The Next Platform', tier: 1, rss: 'https://www.nextplatform.com/feed/' },
   { key: 'cleantechnica', name: 'CleanTechnica', tier: 2, rss: 'https://cleantechnica.com/feed/' },
   { key: 'renewable-energy-world', name: 'Renewable Energy World', tier: 2, rss: 'https://www.renewableenergyworld.com/feed/' },
   { key: 'power-engineering', name: 'Power Engineering', tier: 2, rss: 'https://www.power-eng.com/feed/' },
   { key: 'electrek', name: 'Electrek', tier: 2, rss: 'https://electrek.co/feed/' },
-  { key: 'register-dc', name: 'The Register — Datacenters', tier: 2, rss: 'https://www.theregister.com/data_centre/headlines.atom' },
+  // Section slug corrected (data_centre → on_prem, their datacenter desk) — verified live 2026-08-27
+  { key: 'register-dc', name: 'The Register — Datacenters', tier: 2, rss: 'https://www.theregister.com/on_prem/headlines.atom' },
   { key: 'trellis', name: 'Trellis (ex-GreenBiz)', tier: 2, rss: 'https://trellis.net/feed/' },
   { key: 'latitude-media', name: 'Latitude Media', tier: 2, rss: 'https://www.latitudemedia.com/feed' },
   { key: 'facilities-dive', name: 'Facilities Dive', tier: 2, rss: 'https://www.facilitiesdive.com/feeds/news/' },
@@ -615,11 +621,16 @@ var SCRAPER_SOURCE_ROSTER = [
   { key: 'toms-hardware', name: "Tom's Hardware", tier: 2, rss: 'https://www.tomshardware.com/feeds/all' },
   { key: 'power-grid-intl', name: 'Power Grid International', tier: 2, rss: 'https://www.power-grid.com/feed/' },
   { key: 'electrive', name: 'Electrive', tier: 2, rss: 'https://www.electrive.com/feed/' },
-  { key: 'solar-industry', name: 'Solar Industry', tier: 2, rss: 'https://solarindustrymag.com/feed' },
+  // Replaced Solar Industry (domain now parked/dead; solar coverage continues via
+  // pv magazine USA + Solar Power World). RenewEconomy adds strong global BESS market
+  // coverage — go-live shakeout 2026-08-27
+  { key: 'reneweconomy', name: 'RenewEconomy', tier: 2, rss: 'https://reneweconomy.com.au/feed/' },
   { key: 'inside-climate-news', name: 'Inside Climate News', tier: 2, rss: 'https://insideclimatenews.org/feed/' },
   { key: 'ieee-spectrum', name: 'IEEE Spectrum', tier: 2, rss: 'https://spectrum.ieee.org/feeds/feed.rss' },
   { key: 'smart-energy-intl', name: 'Smart Energy International', tier: 2, rss: 'https://www.smart-energy.com/feed/' },
-  { key: 'dc-magazine', name: 'Data Centre Magazine', tier: 2, rss: 'https://datacentremagazine.com/rss' }
+  // Replaced Data Centre Magazine (BizClik bot-wall 403s even browser UAs).
+  // HPCwire covers the AI/HPC data-center hardware beat — go-live shakeout 2026-08-27
+  { key: 'hpcwire', name: 'HPCwire', tier: 2, rss: 'https://www.hpcwire.com/feed/' }
 ];
 
 function scraperSs_() {
@@ -2294,6 +2305,24 @@ function scSyncInterests_(force) {
       appendRows.push(['src-' + rsrc.key, 'source', rsrc.name, true, 'active', '',
         'tier ' + rsrc.tier, '', 1, 'roster', '', now, now, '']);
     }
+    // Retired-outlet marking (Phase 4 shakeout): a source row whose key left the
+    // roster has no feed URL any more — the fetch loop iterates the roster, so
+    // the row is inert. Mark it stale so the Sources panel shows the retirement
+    // honestly. Row is kept (never deleted); re-adding the key to the roster
+    // reactivates it below.
+    var rosterKeys = {};
+    SCRAPER_SOURCE_ROSTER.forEach(function(r0) { rosterKeys['src-' + r0.key] = true; });
+    for (var dr = 1; dr < data.length; dr++) {
+      if (String(data[dr][1]) !== 'source') continue;
+      var srcKey = String(data[dr][0]);
+      if (!rosterKeys[srcKey] && String(data[dr][4]) === 'active') {
+        data[dr][4] = 'stale'; data[dr][5] = SCRAPER_INTEREST_FLAG_STALE; data[dr][12] = now;
+        dirty = true;
+      } else if (rosterKeys[srcKey] && String(data[dr][4]) === 'stale') {
+        data[dr][4] = 'active'; data[dr][5] = ''; data[dr][12] = now;
+        dirty = true;
+      }
+    }
     // Segment seeds (developer feedback 2026-08-27) — default ON. New rows
     // insert with a seed-terms version marker in Notes. When code ships an
     // improved default vocabulary (a higher tv), the sync upgrades rows that
@@ -2901,9 +2930,9 @@ function scDigestRenderStep_(ss, state) {
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
   props.setProperty('DIGEST_LAST_DATE', state.date);
-  // Phase 4 go-live site: dormant until SCRAPER_SCHED_EMAIL_ENABLED flips and
-  // a DIGEST_RECIPIENT Script Property is set. Night Ink still needs dark-mode
-  // client-proofing + a real-inbox test before that flip (recorded decision).
+  // Phase 4 go-live (2026-08-27): SCRAPER_SCHED_EMAIL_ENABLED is now true, so
+  // delivery is armed the moment a DIGEST_RECIPIENT Script Property is set.
+  // Use the app's "Email me latest" button for a real-inbox test first.
   var recipient = props.getProperty('DIGEST_RECIPIENT') || '';
   if (recipient && SCRAPER_SCHED_EMAIL_ENABLED) {
     try {
@@ -2972,8 +3001,17 @@ function scRenderDigestNightInk_(d) {
       + '</tr></table>'
       + items.map(itemHtml).join('') + '</div>';
   }
-  var html = '<div style="max-width:640px;margin:0 auto;background:#15171c;color:#e6e4de;'
-    + 'padding:36px 44px 30px;' + sans + '">'
+  // Email-client proofing (Phase 4): nested tables instead of a margin-auto div
+  // (Outlook's Word engine ignores max-width/margin centering), bgcolor
+  // attributes alongside inline background styles (attributes survive the
+  // aggressive sanitizers), and solid inline colors on every element so
+  // dark-mode-inverting clients (Gmail) have nothing transparent to repaint.
+  var html = '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
+    + 'bgcolor="#101216" style="background:#101216;margin:0;padding:0;border-collapse:collapse;">'
+    + '<tr><td align="center" style="padding:18px 8px;">'
+    + '<table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" '
+    + 'bgcolor="#15171c" style="background:#15171c;width:640px;max-width:100%;border-collapse:collapse;">'
+    + '<tr><td style="color:#e6e4de;padding:36px 44px 30px;' + sans + '">'
     // Masthead
     + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:16px;margin-bottom:18px;">'
     + '<div style="' + serif + 'font-size:36px;font-weight:700;line-height:1;color:#f0eee8;">The Morning Edition</div>'
@@ -3010,7 +3048,8 @@ function scRenderDigestNightInk_(d) {
     + (d.aiNote ? ' · summaries in fallback mode' : '') + '</td>'
     + '<td align="right" style="padding-top:12px;"><a href="' + esc(EMBED_PAGE_URL)
     + '" style="font-size:11px;color:#f2a33c;text-decoration:none;">Tune tomorrow\'s edition →</a></td>'
-    + '</tr></table></div>';
+    + '</tr></table>'
+    + '</td></tr></table></td></tr></table>';
   return html;
 }
 
@@ -3131,6 +3170,87 @@ function deleteDigest(sessionToken, digestId) {
   }
 }
 
+/** Masked email for status display — never returns the full address. */
+function scMaskEmail_(addr) {
+  var m = /^(.)[^@]*(@.+)$/.exec(String(addr || ''));
+  return m ? m[1] + '***' + m[2] : '';
+}
+
+/** Go-live readiness snapshot (Phase 4): provider config, delivery config,
+    trigger health. Reads state only — makes no AI call (testAi does that)
+    and never returns secret values, only presence booleans. */
+function goLiveStatus(sessionToken) {
+  validateSessionForData(sessionToken, 'goLiveStatus');
+  var props = PropertiesService.getScriptProperties();
+  var provider = (props.getProperty('AI_PROVIDER') || SCRAPER_AI_PROVIDER).toLowerCase();
+  var model;
+  if (provider === 'claude') {
+    model = props.getProperty('ANTHROPIC_MODEL') || SCRAPER_CLAUDE_MODEL;
+  } else {
+    model = props.getProperty('GEMINI_MODEL') || props.getProperty('GEMINI_MODEL_AUTO')
+            || '(auto-discovers on first call)';
+  }
+  var trigger = 'unknown';
+  try {
+    trigger = ScriptApp.getProjectTriggers().some(function(t) {
+      return t.getHandlerFunction() === 'scSchedulerTick';
+    }) ? 'installed' : 'missing';
+  } catch (trigErr) {
+    trigger = 'unverifiable — authorize the script.scriptapp permission to check';
+  }
+  var lastTick = Number(props.getProperty('SCHEDULER_LAST_TICK')) || 0;
+  return { success: true,
+    provider: provider, model: model,
+    hasGeminiKey: !!props.getProperty('GEMINI_API_KEY'),
+    hasAnthropicKey: !!props.getProperty('ANTHROPIC_API_KEY'),
+    recipient: scMaskEmail_(props.getProperty('DIGEST_RECIPIENT')),
+    runsEnabled: SCRAPER_SCHED_RUNS_ENABLED,
+    emailEnabled: SCRAPER_SCHED_EMAIL_ENABLED,
+    trigger: trigger,
+    lastTickAgeMin: lastTick ? Math.round((Date.now() - lastTick) / 60000) : null,
+    lastEditionDate: props.getProperty('DIGEST_LAST_DATE') || '' };
+}
+
+/** One tiny live call through the configured provider (~30 tokens — free on
+    Gemini's tier, well under a cent on Claude). Proves the whole AI path
+    end-to-end and surfaces the exact failure when it is broken. */
+function testAi(sessionToken) {
+  validateSessionForData(sessionToken, 'testAi');
+  var props = PropertiesService.getScriptProperties();
+  var provider = (props.getProperty('AI_PROVIDER') || SCRAPER_AI_PROVIDER).toLowerCase();
+  try {
+    var reply = aiComplete_('Reply with exactly one word: READY', 16);
+    return { success: true, ok: true, provider: provider, reply: scStr_(reply, 80) };
+  } catch (aiErr) {
+    return { success: true, ok: false, provider: provider,
+             error: scStr_(String((aiErr && aiErr.message) || aiErr), 200) };
+  }
+}
+
+/** Real-inbox test: mail the latest stored edition to the signed-in user.
+    Deliberately independent of DIGEST_RECIPIENT — this is the pre-go-live
+    rendering check, sent only to whoever pressed the button. */
+function emailLatestDigest(sessionToken) {
+  var user = validateSessionForData(sessionToken, 'emailLatestDigest');
+  var to = (user && user.email) || '';
+  if (!to) return { success: false, error: 'no_session_email' };
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var data = ss.getSheetByName(SCRAPER_TABS.DIGESTS).getDataRange().getValues();
+  if (data.length < 2) return { success: false, error: 'no_editions' };
+  var row = data[data.length - 1];
+  var html = String(row[7] || '');
+  if (!html) return { success: false, error: 'edition_has_no_html' };
+  var date = row[1] instanceof Date
+    ? Utilities.formatDate(row[1], 'America/New_York', 'yyyy-MM-dd') : String(row[1]);
+  MailApp.sendEmail({ to: to,
+    subject: 'The Morning Edition — ' + date + ' (inbox test)',
+    htmlBody: html });
+  dataAuditLog(to, 'email', 'digest', String(row[0]), 'inbox test sent');
+  return { success: true, to: scMaskEmail_(to),
+           truncated: html.length >= SCRAPER_DIGEST_CELL_MAX };
+}
+
 // ── Scheduler ───────────────────────────────────────────────────────────
 // An hourly time-driven trigger walks the Schedules tab and drives each due
 // schedule through the same chunked pipeline the UI buttons use:
@@ -3145,19 +3265,24 @@ var SCRAPER_SCHED_MAX_FAILS = 6;            // consecutive failed ticks before a
 var SCRAPER_SCHED_RUN_HOUR = 7;             // scheduled runs anchor at 7:00 AM ET
 var SCRAPER_SCHED_STATE_PREFIX = 'scSchedRun_';
 var SCRAPER_SCHED_AI_PAUSE_MS = 4000;       // pause between analyze chunks (free-tier RPM safety)
-// Master kill switch for ALL scheduled-run email delivery, every frequency
-// (daily/weekly/monthly/quarterly/biannual/annual/custom) — both the brief
-// email and the run-failure notice. false = runs still execute and briefs
-// still land in the Reports tab, but nothing is emailed. Deploys with the
-// code: flip back to true and merge to resume email delivery.
-var SCRAPER_SCHED_EMAIL_ENABLED = false;
-// Master pause for the ENTIRE scheduled pipeline. false = scSchedulerTick
-// exits right after its heartbeat: no compile/analyze/brief phase runs, so
-// no AI tokens are spent and nothing is emailed unattended. Manual actions
-// in the app (Compile / Analyze / Brief buttons) are unaffected. Next Run
-// does not advance while paused — due schedules run once on resume. Flip to
-// true and merge to resume scheduled runs.
-var SCRAPER_SCHED_RUNS_ENABLED = false;
+// Master kill switch for ALL scheduled email delivery — the Morning Edition
+// send and (when the legacy pipeline is enabled) the brief email + failure
+// notice. Phase 4 go-live (2026-08-27): flipped to true. The Morning Edition
+// send additionally requires a DIGEST_RECIPIENT Script Property — with the
+// property unset, nothing is emailed even though this flag is on.
+var SCRAPER_SCHED_EMAIL_ENABLED = true;
+// Master pause for the scheduled pipeline. Phase 4 go-live (2026-08-27):
+// flipped to true — the hourly tick now advances the weekday Morning Edition
+// build (weekday ≥7:00 AM ET, one budget-bounded step per tick). AI tokens
+// are spent only if an AI provider key is configured; without one the
+// edition builds in $0 fallback mode. Flip to false and merge to re-pause.
+var SCRAPER_SCHED_RUNS_ENABLED = true;
+// The pre-rebuild schedule-based pipeline (Schedules tab → compile/analyze/
+// brief → per-schedule brief emails) stays OFF at go-live: the Morning
+// Edition replaces it, and reviving old Schedules rows unattended would
+// double-email and double-spend. The code path is preserved — flip to true
+// and merge to run legacy schedules again alongside the Morning Edition.
+var SCRAPER_LEGACY_SCHEDULES_ENABLED = false;
 
 /** Manual fallback: run once from the Apps Script editor to install the trigger. */
 function setupSchedulerTrigger() {
@@ -3228,6 +3353,9 @@ function scSchedulerTick() {
     // per tick (weekday-morning + built-today checks live inside). Sits after
     // the pipeline pause gate, so it cannot spend AI tokens while paused.
     scDigestScheduledTick_();
+    // Phase 4 go-live: the legacy Schedules-tab pipeline below stays gated off
+    // (the Morning Edition replaces it) — see SCRAPER_LEGACY_SCHEDULES_ENABLED.
+    if (!SCRAPER_LEGACY_SCHEDULES_ENABLED) return;
     var t0 = Date.now();
     var sheet = ss.getSheetByName(SCRAPER_TABS.SCHEDULES);
     var data = sheet.getDataRange().getValues();
@@ -3842,6 +3970,9 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'listDigests') return listDigests(sessionToken, param('limit'));
   if (op === 'getDigest') return getDigest(sessionToken, param('digestId'));
   if (op === 'deleteDigest') return deleteDigest(sessionToken, param('digestId'));
+  if (op === 'goLiveStatus') return goLiveStatus(sessionToken);
+  if (op === 'testAi') return testAi(sessionToken);
+  if (op === 'emailLatestDigest') return emailLatestDigest(sessionToken);
   return { success: false, error: 'unknown_op' };
 }
 

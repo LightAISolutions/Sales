@@ -3,11 +3,46 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 84/100`
+`Sections: 85/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.09r] — 2026-08-27 08:12:11 PM EST
+
+> **Prompt:** "Start phase 4"
+
+### Added
+- **Go-live routes in `Scraper.gs`** — `goLiveStatus` (provider/model, key-presence booleans, masked recipient, both pause flags, trigger install + last-tick age, last edition date — no secret values ever returned), `testAi` (one ~30-token `aiComplete_` probe that returns the exact `ai_*` error when the path is broken), `emailLatestDigest` (mails the newest stored edition to the **signed-in user only**, deliberately independent of `DIGEST_RECIPIENT`, audit-logged). Registered in `SCRAPER_PROJECT_ACTIONS` + `handleProjectAction_`; helper `scMaskEmail_`
+- **Go-live panel in `Scraper.html`** — new Digest-overlay section (toggled from a topbar "Go-live" button) rendering the five readiness rows green/amber, plus Test AI and "Email me latest" buttons that surface the server's exact result inline
+- **Retired-source marking in `scSyncInterests_`** — a `source` row whose key has left `SCRAPER_SOURCE_ROSTER` is flipped to `stale` + "Coverage ended" (row kept, never deleted); re-adding the key reactivates it. Previously such rows sat "active" while being inert (the fetch loop iterates the roster, not the sheet)
+
+### Changed
+- **Pause flags flipped for go-live** — `SCRAPER_SCHED_RUNS_ENABLED` and `SCRAPER_SCHED_EMAIL_ENABLED` both `false` → `true`. The Morning Edition now advances one budget-bounded step per hourly tick on weekday mornings ≥7:00 AM ET; the email site still additionally requires a `DIGEST_RECIPIENT` Script Property, so nothing is sent until the developer sets it
+- **New `SCRAPER_LEGACY_SCHEDULES_ENABLED` gate (`false`)** — flipping the master pause would otherwise have revived the pre-rebuild Schedules-tab pipeline (compile → analyze → brief → per-schedule emails) unattended alongside the Morning Edition, double-spending AI and double-emailing. `scSchedulerTick` now returns after `scDigestScheduledTick_()` unless this is explicitly turned on. The legacy code path is preserved intact
+- **Night Ink email-client proofing** — the renderer's outer `max-width`/`margin:auto` div is replaced by nested `<table>`s (Outlook's Word engine ignores both), with `bgcolor` attributes alongside the inline `background` styles (attributes survive aggressive sanitizers) and solid inline colors throughout so dark-mode-inverting clients have nothing transparent to repaint. Body content unchanged
+- **Roster shakeout (all 30 feeds probed live)** — 5 were fetching nothing. Fixed: `dc-frontier` and `microgrid-knowledge` (both moved to a Nuxt platform — real paths discovered from their homepage `<link rel="alternate">` tags), `register-dc` (section slug `data_centre` → `on_prem`). Replaced: `battery-technology` (Informa bot-wall 403s even with browser UAs) → **The Next Platform**, `dc-magazine` (BizClik bot-wall 403) → **HPCwire**, `solar-industry` (domain parked/dead, serves a `/lander` redirect) → **RenewEconomy**. Roster is back to 30 live feeds; battery and solar beats stay covered by Energy-Storage.news / ESS News and pv magazine USA / Solar Power World
+- **`Scraper.gs`** VERSION v01.41g → v01.42g and **`Scraper.html`** v01.39w → v01.40w (topbar pill now green "▶ DIGEST LIVE"); version files + meta synced; public entries added (counters 42/50, 40/50)
+- **`repository-information/diagrams/Scraper-diagram.md`** — scheduled path no longer labeled "paused until Phase 4", email note rewritten to the recipient-gated form, route line extended with the three go-live actions; pako URL regenerated and decompression-verified against the file's code
+
+#### `Scraper.gs` — v01.42g
+
+##### Added
+- Go-live routes + retired-source marking (detail above); `Scrapergs.version.txt` synced; public entry added (counter 41 → 42)
+
+##### Changed
+- Pause flags, legacy-schedules gate, email-proofed renderer, roster shakeout (detail above)
+
+#### `Scraper.html` — v01.40w
+
+##### Added
+- Go-live panel with Test AI + inbox-test buttons (detail above); meta tag synced; public entry added (counter 39 → 40)
+
+### Notes
+- Verification: all 30 roster feeds probed with `curl` (status, item count, latest `pubDate`); replacement candidates probed before adoption. Renderer fixture test — 10 structural assertions (outer/inner table nesting, `bgcolor` attributes, balanced tags, masthead, lead, sections, figure bolding, newly-covered box) all pass. Playwright: go-live panel rows render correctly from stubbed state, Test AI surfaces `ai_key_missing`, inbox test surfaces the masked address, panel collapses; no page errors. `node --check` clean on the `.gs` and both inline blocks
+- **Still developer-side to finish go-live**: set an AI key (`GEMINI_API_KEY` for the free tier, or `ANTHROPIC_API_KEY` + `AI_PROVIDER=claude`) — without one, editions build in $0 fallback mode; and set `DIGEST_RECIPIENT` to start email delivery. The go-live panel reports both
+- The `script.scriptapp` scope gap (documented in `gas-scripts-reference.md`) is what would keep the hourly trigger from installing — the panel's trigger row now makes that visible instead of silent
 
 ## [v03.08r] — 2026-08-27 06:49:49 PM EST
 
