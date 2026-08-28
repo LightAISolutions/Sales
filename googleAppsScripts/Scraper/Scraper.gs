@@ -1,4 +1,4 @@
-var VERSION = "v01.55g";
+var VERSION = "v01.56g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -2850,8 +2850,7 @@ function setInterestEnabled(sessionToken, key, enabled) {
   var data = sheet.getDataRange().getValues();
   for (var i = 1; i < data.length; i++) {
     if (String(data[i][0]).trim() !== k) continue;
-    var on = enabled === true || String(enabled) === '1' ||
-             String(enabled).toLowerCase() === 'true';
+    var on = scParamBool_(enabled);
     sheet.getRange(i + 1, 4).setValue(on);
     if (String(data[i][5])) sheet.getRange(i + 1, 6).setValue('');
     return { success: true, key: k, enabled: on };
@@ -4528,6 +4527,24 @@ function scEditions_(ss) {
   return out;
 }
 
+/** Parse a boolean that arrived over the wire.
+
+    Values reach the server as STRINGS: the client sends '1' / '0'. Checking
+    only for 'true' silently reads '1' as false, which is exactly how a
+    per-edition toggle came back flipped — the write "succeeded", stored the
+    opposite, and the client adopted the server's answer a second later.
+    `setInterestEnabled` had always handled '1'; the newer endpoint retyped
+    the check and dropped that case. One helper so a third endpoint cannot
+    drift again.
+
+    NOTE: this is for PARAMS only. The sheet-cell readers elsewhere parse
+    stored booleans (`true` / 'TRUE'), never '1', and are correct as they are. */
+function scParamBool_(v) {
+  if (v === true) return true;
+  var s = String(v).toLowerCase();
+  return s === '1' || s === 'true' || s === 'yes' || s === 'on';
+}
+
 /** Tuning cell -> override map. Never throws: a hand-mangled cell degrades to
     "no overrides" (i.e. the global model) rather than breaking every digest. */
 function scParseTuning_(cell) {
@@ -4639,7 +4656,7 @@ function setEditionTuning(sessionToken, editionId, key, enabled) {
     if (String(data[i][0]) !== want) continue;
     var tuning = scParseTuning_(data[i][9]);
     if (enabled === null || enabled === undefined || enabled === '') delete tuning[k];
-    else tuning[k] = (enabled === true || String(enabled).toLowerCase() === 'true');
+    else tuning[k] = scParamBool_(enabled);
     sheet.getRange(i + 1, 10).setValue(JSON.stringify(tuning));
     _scInterestModel = {};   // the cached model for this edition is now stale
     return { success: true, editionId: want, tuning: tuning };

@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.23r] — 2026-08-28 12:53:40 AM EST
+
+> **Prompt:** "I see each separate Edition template now. However, the new problem is that when I toggle a segment/topic on/off, it automatically returns to its original setting after a couple seconds. What's going on? Fix it."
+
+### Fixed
+- **`setEditionTuning` read the client's ON value as `false`.** Params arrive as **strings**: the client sends `'1'` / `'0'`, but the check was `enabled === true || String(enabled).toLowerCase() === 'true'`, so `'1'` fell through to false. The write "succeeded", stored the **opposite** of what was asked, returned the stored map, and the client — correctly — adopted the server's answer, which is what flipped the switch back a second later. Turning something **off** sent `'0'` and stored false, i.e. was accidentally correct, which is exactly why the fault looked intermittent rather than total
+- The optimistic-then-revert flicker was therefore not a UI bug at all: the UI was faithfully showing a bad write
+
+### Changed
+- **Extracted `scParamBool_`** and pointed both param-parsing endpoints at it. `setInterestEnabled` had handled `'1'` since it was written; `setEditionTuning` retyped the check from scratch and dropped that case — the same convention expressed twice, and the second copy was wrong. One helper so a third endpoint cannot drift again
+- **Deliberately left the eight sheet-cell readers alone.** They parse values *stored* by `setValue(true/false)` and render as `true` / `'TRUE'` — `'1'` cannot occur there, so widening them would be change without cause
+
+### Notes
+- Verification: `node --check` clean; **15 assertions**, plus all five earlier suites re-run clean. *Unit* (11): `'1'`→true, `'0'`→false, booleans and `'true'`/`'false'` still work, case-insensitive, junk is false rather than a throw, an empty value still **clears** the key instead of storing false, and a single write leaves sibling keys untouched. A **regression guard** reconstructs the pre-fix expression and asserts it really did read `'1'` as false. *Playwright* (4): the same page is driven twice against a stub applying the old and new server rules — with the old rule the switch flips on and reverts within ~2s while the store holds the **wrong** value, with the new rule it stays on and stores the right one
+- The stub was given a **600 ms round-trip delay**, without which the optimistic state resolves too fast to observe and the reproduction silently passes for the wrong reason. The flicker only exists because the server answers later
+- **`Scrapergs.changelog.md` rotated** — the whole 2026-08-03 date group (8 sections) archived with per-section SHA enrichment; counter 50/50 → 43/50. `Scraper.html` unchanged this push, so no page version bump
+- **`Scraper.gs`** VERSION v01.55g → v01.56g; version file synced
 
 ## [v03.22r] — 2026-08-28 12:36:36 AM EST
 
