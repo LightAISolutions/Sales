@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.50w] — 2026-08-28 01:38:29 AM EST — v03.24r
+
+### Added
+- **Choose which edition to build.** The Digest window now has an edition menu next to "Run intake now", so you decide which edition — and therefore which segment and topic settings — the run uses. The finished message names the edition it built
+- The chosen edition is locked in when the build starts, so a build that runs in several steps can never end up split across two editions
 
 ## [v01.49w] — 2026-08-28 12:36:36 AM EST — v03.22r
 

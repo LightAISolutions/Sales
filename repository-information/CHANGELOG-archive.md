@@ -77,6 +77,160 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v02.33r] — 2026-08-10 11:08:22 PM EST — [5150fe2](https://github.com/LightAISolutions/Sales/commit/5150fe2)
+
+> **Prompt:** "You just created an AIDC Market Report at this location: https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.md. Convert it into a professionally-formatted market report (downloadable PDF) that matches the "Bloomberg - Research Report" style that is available on Profiler. Also, create a moderate amount of graphs (bars & circles) when applicable. If you are just listing competitors' products next to each other, display it in a table instead. I see some text that is crossed out, so remove them in the final version. If you need me to reupload the Bloomberg report for your reference, tell me and I will do so."
+
+### Added
+- **`repository-information/AIDC-MARKET-REPORT.pdf`** (new) — a 29-page typeset edition of the AIDC market report, styled to the Profiler `bloomberg` export skin defined in `PROFILER-STYLES.md` and `Profiler.html` (Arial body, `#0b62a4` section rules, monospace meta and figure captions, paper-document measure). Carries a running header, a `Page N of M` footer, a masthead with corpus/method/verification/classification metadata, and a two-column table of contents. Report text is unchanged in substance from the Markdown source — the PDF restates it with figures and comparison tables
+- **`repository-information/aidc-market-report-print.html`** (new) — the typeset source the PDF renders from. Fully self-contained: inline CSS, inline SVG figures, zero external requests. **12 figures**: 2026 big-four capex (ranged bars), GE Vernova order-book ramp (columns), the queue-versus-compression lead-time chart on one shared month axis (the report's centrepiece), transformer scarcity as three ring gauges, the Colossus 0→1.0 GW ramp, the nuclear price ladder, the 800 VDC milestone timeline, the AI-server BBU market, the Chinese-integrator share donut, the H1 2026 ESS cell-share donut, the BESS block-size leapfrog, and the electrical-contractor duopoly. **17 tables**, including new comparison tables that replace prose competitor lists: behind-the-meter posture by buyer, productized onsite-power offerings, the three named power ODMs, incumbent 800 VDC status, the cell-and-block race, hyperscaler storage posture, the compliant lane, the four BESS demand doors, prefabrication offerings, competitors by lane, the dated trigger calendar, and the risk stack
+- **`scripts/build-aidc-report-pdf.mjs`** (new) — renders the HTML to PDF via the pre-installed Chromium over the DevTools Protocol (Node 22's global `WebSocket`; no npm dependencies). `Page.printToPDF` is used rather than the `--print-to-pdf` CLI flag specifically because only the former accepts a custom running header and footer. A `--png` proof mode writes per-page previews for visual review
+- `*.pdf binary` added to `.gitattributes` so the committed PDF is never line-ending normalized
+
+### Fixed
+- **The crossed-out text in the rendered report** (`repository-information/AIDC-MARKET-REPORT.md`) — 117 single `~` characters were in use as "approximately". GitHub-Flavored Markdown treats a matching pair of single tildes on one line as strikethrough, so lines such as `≈$220B (raised from ≈$200B)` rendered with the span between them struck through. All 117 replaced with `≈`, which renders literally and reads correctly in both the Markdown and the PDF
+
+### Changed
+- `repository-information/AIDC-MARKET-REPORT.md` — added a "Formatted edition" pointer to the PDF and its typeset source directly under the metadata line, noting that the Markdown remains the canonical text
+- `README.md` — structure-tree entries for the three new files
+
+### Notes
+- Chart colours were validated with the `dataviz` skill's six checks against the white print surface before any figure was drawn (categorical palette `#0b62a4 · #c2622a · #1b8a6b · #7a3f7d · #8a8f2a · #b03a34` — worst adjacent colour-vision-deficiency ΔE 8.6, worst normal-vision ΔE 21.8, all six ≥3:1 contrast: all checks pass). Ranges are drawn as hatched extensions rather than separate marks, and every donut wedge is direct-labeled so identity is never carried by colour alone
+- Two layout defects were caught by rendering and inspecting the actual PDF pages rather than trusting the markup: Table 6 overflowed the printable width (fixed with `table-layout:fixed` plus `overflow-wrap:break-word`), and long tables were jumping whole to the next page (fixed by letting tables span pages with a repeated header while keeping rows intact)
+- `REPO-ARCHITECTURE.md` was deliberately **not** changed — its Scripts subgraph carries shared infrastructure scripts only and already omits `check-gas-inner-scripts.js` and `playwright-harness.py`; a single-purpose document-build script matches those, not the infrastructure tier
+
+## [v02.32r] — 2026-08-10 10:17:55 PM EST — [16463a3](https://github.com/LightAISolutions/Sales/commit/16463a3)
+
+> **Prompt:** "Re-focus back to when you finished compiling all 40 AIDC industry company dossiers and were about to generate the AIDC market report. Do so now. Synthesize directly from the profiles and cite their sources without new research: turbine/transformer scarcity economics, behind-the-meter power (xAI/Crusoe as templates), the 800 VDC transition, BESS competitive dynamics, and the craft-labor bottleneck — shaped as the sales-strategy deliverable for Jon's AIDC power/storage pipeline."
+
+### Added
+- **AIDC Market Report** (`repository-information/AIDC-MARKET-REPORT.md`, new) — the sales-strategy deliverable the 40-company Profiler expansion was built for. Synthesized exclusively from the 40 dossiers with no new research: 8 parallel extraction agents returned 572 themed, source-tagged claims (40/40 company coverage), then a 4-agent adversarial verification pass checked 353 report claims against the dossiers (6 errors + 14 nitpicks found, all corrected). Nine sections: 12 confidence-tagged Key Judgments; the demand backdrop; the five requested themes (turbine/transformer scarcity economics, behind-the-meter power with xAI/Crusoe as templates, the 800 VDC transition, BESS competitive dynamics, the craft-labor bottleneck); a sales playbook (40-company account map, entry points/talk tracks, timing triggers keyed to the armed refresh Routines, pipeline risks); and method/citation notes. Every factual claim carries its dossier source label + publication date; `strategyRead`-derived items are labeled [Analysis] with the dossiers' confidence tags preserved
+- README structure tree entry for the new report file (`README.md`)
+
+### Changed
+- Session context auto-reconstructed at session start (stale v02.30r → v02.31r) from the CHANGELOG per the Session Start Checklist; the v02.24r Previous Sessions entry was removed under the 2-session cap (`repository-information/SESSION-CONTEXT.md`, intermediate commit)
+
+## [v02.31r] — 2026-08-10 08:28:24 PM EST — [476bc71](https://github.com/LightAISolutions/Sales/commit/476bc71)
+
+> **Prompt:** "continue with your recommendation"
+
+### Changed
+- **Amazon dossier revised to profileVersion 2** (`live-site-pages/profiler-data/amazon.profile.json`) — added a supply-chain read answering "which BESS OEM does AWS use?", which the dossier previously could not support. Three new confidence-tagged `strategyRead` entries: (High) the three-layer storage-procurement distinction — Layer 1 utility-scale BESS where developers (AES, Primergy) own the OEM decision, Layer 2 behind-the-meter campus BESS where Amazon has no announced deployments (a structural contrast with xAI and Crusoe), Layer 3 rack-level BBU where AI-specific battery demand actually lands; (Low) the Samsung SDI BBU thread — April 2026 reports of final-stage AWS talks on a ~$700M BBU-based UPS supply agreement and July 2026 reports of BBU cells shipping via Taiwan's Simplo with Amazon among end customers, neither company-confirmed, both unnamed-source trade press, with Samsung SDI in parallel talks with Meta and Google; (Low) the Fluence-at-Bellefield inference flagged explicitly as an untested inference from AES's ~28% Fluence stake, with no press release, filing, or trade coverage naming the project's battery supplier
+- Six new sources added at their chronological positions (Digitimes, TechTimes, UPI, AsiaToday, AES 2025 annual report; the Bellefield Phase 1 source was already present), each labeled with its confirmation status
+- `live-site-pages/profiler-data/archive/amazon.profile.v1.json` + `archive-index.json` — v1 archived per the Archival Procedure before the revision
+- `live-site-pages/profiler-data/profiler-companies.json` — Amazon `lastUpdated` synced to 2026-08-10
+
+## [v02.30r] — 2026-08-10 04:42:24 AM EST — [ecaf52f](https://github.com/LightAISolutions/Sales/commit/ecaf52f)
+
+> **Prompt:** "I do not see a "Profiler" folder in jonyang92@gmail.com's Google Drive. I would like to see a "Profiler App" folder to mirror my "Receipts App" folder nomenclature. What happened?"
+
+### Fixed
+
+**Root cause.** A Drive search of jonyang92@gmail.com's account confirmed no `Profiler` folder exists (owned or shared) and no `profiler-notes.json` — while `Receipts App` and the loose `Voice 260810_000737.m4a` both sit in that account's root. `DriveApp` inside a GAS web app acts as the account that **deployed** the app, not the signed-in user, so v01.07g's `driveRecFolder_` created its tree in the deployer's Drive. `Receipts App` is visible precisely because it is created **browser-side** with the user's own `drive.file` credential. The v01.07g design was architecturally incapable of producing a folder the user could see; renaming the constant alone would not have fixed it.
+
+#### `Profiler.gs` — v01.08g
+
+##### Removed
+- `driveRecFolder_`, `driveRecName_`, `driveFileRecording_`, `driveSweepRootRecordings_`, `driveListPendingRecordings_`, `driveMarkRecordingTranscribed_`, and the `filerec`/`recpending`/`recdone` ops — all operated on the wrong Drive. (Added earlier in this same session; not pre-existing code.)
+
+##### Added
+- `recFoldersGet_`/`recFoldersSet_` and the `recfolders`/`setrecfolders` ops — the script's only remaining role is parking the browser's three folder IDs in Script Properties, because `drive.file` cannot re-find a folder it created in an earlier session. Both admin-gated
+
+#### `Profiler.html` — v01.24w
+
+##### Added
+- `ovRecFolders`, `ovDriveMkdir`, `ovDriveApi`, `ovRecName`, and `ovSweepLooseRecordings` — the `Profiler App/meeting-recordings/{1-awaiting-transcription,2-transcribed}` tree is now created browser-side with `drive.file`, so it lands in the signed-in user's Drive alongside `Receipts App/`
+
+##### Changed
+- `ovDriveUploadAudio(file, slug, onProgress, cb)` resolves the folder tree first and passes `parents: [pendingId]` plus the `<slug>--YYYY-MM-DD--<original>` name on both the multipart and resumable paths, so a recording is never loose in My Drive and needs no post-upload filing step
+- The stray sweep moved from note-form render to just after a successful upload. On page load no Drive token exists, so the render-time version could only have worked by provoking a consent popup nobody asked for; after an upload the token is already live. It re-parents root-level audio the app itself created — `drive.file` grants persist per file — which is what relocates the recording uploaded before the folder existed
+
+#### Documentation
+
+##### Changed
+- `PROFILER-SCHEMA.md` — Field Notes now documents both Drive trees and why ownership splits them
+- `.claude/rules/profiler-app.md` — meeting-audio bullet rewritten for the browser-side tree
+
+## [v02.29r] — 2026-08-10 04:25:55 AM EST — [5d41ecb](https://github.com/LightAISolutions/Sales/commit/5d41ecb)
+
+> **Prompt:** "The audio file just got dropped in My Drive without any thought. Create a suitable folder infrastructure to store these in that will make it easy for the user to understand and for the future Transcription function to interact with. Move the most recently uploaded audio file into its folder after the structure is created."
+
+### Added
+
+#### `Profiler.gs` — v01.07g
+
+##### Added
+- `Profiler/meeting-recordings/` with `1-awaiting-transcription/` and `2-transcribed/` subfolders, created lazily via the existing `driveChildFolder_` helper. Numeric prefixes force workflow order in the Drive UI so the transcription queue is legible without opening the app. Recordings live under the same `Profiler/` root as `profiler-notes.json` and `note-files/` rather than a parallel tree — the browser's `drive.file` scope cannot see the script-created root, so a browser-side folder would have produced a second, duplicate `Profiler` folder in My Drive
+- `driveFileRecording_(fileId, slug)` renames to `<slug>--YYYY-MM-DD--<original>` and moves into the pending folder; `driveRecName_` is idempotent so a re-file does not stack prefixes
+- `driveSweepRootRecordings_()` relocates loose audio from My Drive root — root level only, `audio/*` MIME only, capped at `REC_SWEEP_MAX` (50) to stay inside the execution budget, and every move is returned by name so nothing relocates invisibly
+- `driveListPendingRecordings_()` and `driveMarkRecordingTranscribed_(fileId)` — the queue read and the pending→transcribed move the transcription pass will need
+- Note ops `filerec`, `recpending`, `recdone`, all added to the admin permission gate alongside `submit`/`list`/`edit`/`delete`
+
+#### `Profiler.html` — v01.23w
+
+##### Changed
+- `ovDriveUploadAudio` now yields `{ link, id }` via the shared `ovDriveResult` normaliser instead of a bare link — the file ID is what lets the backend file a recording the browser cannot reach
+- The upload completion handler calls `filerec` with the file ID and the dossier slug, and reports the destination path in the status line
+- A one-shot `filerec` sweep (no file ID) fires when the admin note form renders, guarded by `window._ovRecSwept`, so a recording uploaded before filing existed — or one whose note was abandoned — is put away on the next page load. Silent unless something actually moved
+
+#### Documentation
+
+##### Changed
+- `PROFILER-SCHEMA.md` — Field Notes section gains the full Drive tree, the recording filename convention, and the `filerec`/`recpending`/`recdone` contract
+- `.claude/rules/profiler-app.md` — meeting-audio bullet documents the filing step and the transcription-pass ops
+
+## [v02.28r] — 2026-08-10 04:13:24 AM EST — [157fc95](https://github.com/LightAISolutions/Sales/commit/157fc95)
+
+> **Prompt:** "I tried to attach a 30 second voice recorder memo via browser files and it stayed "uploading" for many minutes without any Google consent screens popping up. What's wrong? Fix it."
+
+### Fixed
+- `Profiler.html` (v01.22w) — The Drive consent popup never opened, so `ovDriveToken`'s callback never fired and the upload hung on "Uploading…" indefinitely. `requestAccessToken()` was being called from an async continuation — inside `ovLoadGis().then(...)`, itself inside the file input's `change` handler — by which point the transient user activation from the tap is gone and mobile browsers silently block the popup. Consent is now requested from the button's `click` handler while the gesture is live, and the file picker opens only after a token is in hand. `ovPreloadGis()` warms the GIS library when the admin form renders so the tap path stays synchronous
+- `Profiler.html` (v01.22w) — `initTokenClient` had no `error_callback`. GIS reports `popup_failed_to_open` and `popup_closed` exclusively through that handler, so a blocked or dismissed consent window produced total silence. Added it, mapped to distinct error codes, with `ovDriveErrText` rendering each as an actionable sentence
+- `Profiler.html` (v01.22w) — Added a 120 s watchdog around the token request (`ovDriveRequest` settles exactly once via a `done` guard) and an `AbortController` timeout on the multipart upload, so no failure mode can leave the UI waiting forever
+
+## [v02.27r] — 2026-08-10 04:01:03 AM EST — [37ac866](https://github.com/LightAISolutions/Sales/commit/37ac866)
+
+> **Prompt:** "When I attach meeting recording and click voice recorder, it shows that I can only record up to 10 minutes and 27 seconds. Why is that? I want to be able to comfortably record 1-hour long meeting audio, up to 2-hours per meeting even."
+
+### Changed
+- `Profiler.html` (v01.21w) — Meeting audio over 6 MB now uploads through Drive's resumable protocol in 8 MB chunks (`ovDriveSendChunk`, XHR so the 308 "Resume Incomplete" responses are readable and `upload.onprogress` gives byte-level progress) with three retries per chunk on exponential backoff. A 1-hour recording is ~50 MB and a 2-hour one ~150 MB — the previous single-shot multipart POST restarted from zero on any connection blip at that size. The multipart path is retained as `ovDriveMultipart` for small files and as the fallback when the resumable session's `Location` header is not readable
+- `Profiler.html` (v01.21w) — The upload status line now reports a percentage instead of a static "Uploading…"
+- `Profiler.html` (v01.21w) — The recording button is relabelled "🎙 Attach saved recording" and carries a hint directing the developer to record in the phone's own recorder app first and browse to the saved file. The record-now shortcut Android offers inside the file picker is a short-clip capture path (~10 min on a Galaxy A54) and is the wrong entry point for a meeting. `accept` stays `audio/*` on purpose — narrowing to an extension list would grey out any container the list missed, which is a hard block, whereas the picker shortcut is only a wrong turn the hint steers around
+
+## [v02.26r] — 2026-08-10 03:38:54 AM EST — [7404577](https://github.com/LightAISolutions/Sales/commit/7404577)
+
+> **Prompt:** "I confirm that Profiler's oauthScopes include https://www.googleapis.com/auth/drive. I then ran _getCacheEpoch and it executed, but I didnt see the consent screen pop up. \n\nStep 0:\n1. I saved a typed note successfully. \n2. I failed to attach the recorded voice recorder clip. See 2nd attached picture. \n3. The log and its copy function works for the typed note. To be tested for the voice recorder clip."
+
+### Fixed
+- Meeting-recording upload failed with `google_sign_in_unavailable`. `ovDriveToken` checked for `window.google` directly, but the GIS library is injected on demand by the sign-in flow — on a page load with an existing session that flow never runs, so the library was absent even though the user was signed in. The Drive token request now goes through `ovLoadGis()` first
+- CSP `connect-src` did not include `https://www.googleapis.com`, so the Drive multipart upload would have been blocked even once GIS loaded. Added it, matching `Receipts.html` which performs the same upload
+- Three note-box status messages still promised the log would update "after the next deploy (~1–2 min)". Notes write straight to Drive with no deploy since v02.25r — the messages now say the note is visible immediately
+
+## [v02.25r] — 2026-08-10 02:17:53 AM EST — [ebd7804](https://github.com/LightAISolutions/Sales/commit/ebd7804)
+
+> **Prompt:** "all three recommendations, build M3 and M5."
+
+### Security
+- Field notes, note attachments, and meeting transcripts moved out of the public repository into the script owner's Google Drive (`Profiler/profiler-notes.json`, `Profiler/note-files/<slug>/`), served only through the GAS backend behind the Master ACL. Previously the log was committed to `live-site-pages/profiler-data/` and was readable unauthenticated via `raw.githubusercontent.com` and `git clone` regardless of the app's sign-in wall
+- Deleted the GitHub-issue intake channel (`field-note-intake.yml`, `field-note.yml`, `field-note-file.yml`) — it committed note text into the public repo, recreating the exposure the migration closed
+- Removed the `library/` mirror of `profiler-notes.json` and `note-files/` from `auto-merge-claude.yml` so notes are not republished into the second repository
+- `claudeone` / `claudepending` read ops gated behind the same server-side `admin` check as `list` — they return full note and transcript text
+
+### Added
+- `Profiler.gs` Drive storage layer (`driveNotesGet_`/`driveNotesPut_`/`drivePutNoteFile_`/`driveReadNoteFile_`/`driveDeleteNoteFile_`), folder + file IDs cached in Script Properties; `LockService` serialization retained
+- "Copy for Claude" — per-note **📋 Copy** and header **📋 Copy pending** buttons in the ⚙ notes overlay, returning note metadata plus transcript text formatted for pasting into a session. Replaces the automated note read that unattended sessions lose
+- M5 meeting-recording upload — browser-side multipart upload to the user's own Drive via `drive.file` (`ovDriveUploadAudio`), storing only the resulting link as `recordingLink`; audio bytes never traverse GAS, so the 6-minute execution ceiling and 50 MB `UrlFetchApp` cap do not apply
+- Transcript attachments (`.txt`/`.md`/`.vtt`/`.srt`) accepted alongside Word/PDF in both note forms
+
+### Changed
+- Note writes no longer dispatch a deploy — notes are not repo data, so writes are immediate
+- `sourceFile` is now a `drive:<fileId>` reference rather than a repo-relative path
+- `PROFILER-SCHEMA.md` and `.claude/rules/profiler-app.md` rewritten for Drive storage, including the explicit consequence that scheduled refreshes and the quarterly sweep now run without note context
+- Pre-deployment note-box fallback explains the backend is unreachable instead of offering the deleted GitHub form
+
+### Removed
+- `live-site-pages/profiler-data/profiler-notes.json` and the repo-write helpers `ghPutFile_`, `ghPutNotes_`, `ghGetSha_`, plus the `NOTES_FILE_PATH`/`NOTE_FILES_DIR` constants
+
 ## [v02.24r] — 2026-08-09 11:18:02 PM EST — [a288645](https://github.com/LightAISolutions/Sales/commit/a288645799c20d80924396004fd6c47b6b357506)
 
 > **Prompt:** "continue with your recommendation. Also, for all dossiers, change the source formatting to include the article date instead of the accessed date. Then, make sure to organize them chronologically with the most recent news first."

@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.49w">
+  <meta name="build-version" content="v01.50w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -497,6 +497,8 @@
     .wd-sig-val { width: 34px; flex: none; text-align: right; font-family: var(--wd-mono); }
     #wd-rubric-score { font-family: var(--wd-mono); font-size: 20px; font-weight: 600; color: var(--wd-accent); }
     /* Digest overlay — the Night Ink edition viewer (rebuild Phase 3) */
+    #wd-digest-edition { background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft);
+      border-radius: 4px; color: var(--wd-ink); font: inherit; font-size: 12px; padding: 5px 8px; max-width: 230px; }
     #wd-digest-overlay {
       position: fixed; inset: 0; z-index: 52; background: rgba(8,10,13,0.72);
       display: none; align-items: flex-start; justify-content: center;
@@ -1116,6 +1118,7 @@
         <h2>The Morning Edition</h2>
         <div style="display:flex;gap:8px;align-items:center;">
           <button class="sc-btn" id="wd-digest-golive" type="button" title="Go-live readiness: AI provider, delivery config, and scheduler health at a glance">Go-live</button>
+          <select id="wd-digest-edition" title="Which edition to build — each uses its own segment and topic settings"></select>
           <button class="sc-btn" id="wd-digest-run" type="button" title="Build (or rebuild) today's edition now — runs the fetch → score → summarize → render pipeline">Run intake now</button>
           <button id="wd-digest-close" type="button" title="Close" style="background:none;border:none;font-size:24px;color:var(--wd-faint);cursor:pointer;line-height:1;">&times;</button>
         </div>
@@ -5049,7 +5052,7 @@
       _wdDigests = (dg && dg.success && dg.digests) ? dg.digests : [];
       _wdEditions = (ed && ed.success && ed.editions) ? ed.editions : [];
       if (ed && ed.presets) { _wdPresets = ed.presets; wdPresetFill_('wd-ed-preset', 'all'); }
-      wdScopeFill_();
+      wdScopeFill_(); wdDigestEditionsFill_();
       wdRenderStatusStrip_(gl && gl.success ? gl : null);
       wdRenderRecentStrip_();
       var empty = $sc('sc-empty');
@@ -5192,7 +5195,7 @@
         if (!d || !d.success) { host.textContent = scErrMsg(d && d.error); return; }
         _wdEditions = d.editions || [];
         if (d.presets) { _wdPresets = d.presets; wdPresetFill_('wd-ed-preset', 'all'); }
-        wdScopeFill_();
+        wdScopeFill_(); wdDigestEditionsFill_();
         host.innerHTML = _wdEditions.map(function(e) {
           var when = e.cadence === 'weekly' ? 'weekly (day ' + e.anchor + ')'
                    : e.cadence === 'monthly' ? 'monthly (day ' + e.anchor + ')' : 'weekdays';
@@ -7525,8 +7528,24 @@
   // ── Rebuild Phase 3 — digest overlay (edition list, viewer, run loop) ──
   var _wdDigestRunning = false;
 
+  /** Fill the build picker from the real editions, preserving the current
+      choice. Falls back to the default edition when the list is not loaded
+      yet, so the button is never disabled waiting on it. */
+  function wdDigestEditionsFill_() {
+    var sel = $sc('wd-digest-edition');
+    if (!sel) return;
+    var keep = sel.value;
+    var list = (_wdEditions && _wdEditions.length) ? _wdEditions
+             : [{ id: 'morning', name: 'The Morning Edition' }];
+    sel.innerHTML = list.map(function(e) {
+      return '<option value="' + scEsc(e.id) + '">' + scEsc(e.name) + '</option>';
+    }).join('');
+    if (keep) { sel.value = keep; if (!sel.value) sel.selectedIndex = 0; }
+  }
+
   function wdDigestOpen_() {
     $sc('wd-digest-overlay').style.display = 'flex';
+    wdDigestEditionsFill_();
     wdDigestRefresh_();
   }
 
@@ -7792,6 +7811,10 @@
   function wdDigestRun_() {
     if (_wdDigestRunning) return;
     _wdDigestRunning = true;
+    var edSel = $sc('wd-digest-edition');
+    var runEditionId = (edSel && edSel.value) || 'morning';
+    var runEditionName = (edSel && edSel.selectedOptions && edSel.selectedOptions.length)
+      ? edSel.selectedOptions[0].text : 'The Morning Edition';
     var btn = $sc('wd-digest-run');
     var status = $sc('wd-digest-status');
     if (btn) { btn.disabled = true; btn.textContent = 'Building…'; }
@@ -7802,7 +7825,10 @@
       scToast('Digest build failed (' + scEsc(msg) + '). Please try again.', true);
     }
     function stepLoop() {
-      _gasPost({ action: 'runDigestNow', token: scToken() })
+      // The pipeline is resumable across steps, so the edition is fixed at the
+      // START of a build and reused for every step — re-reading the picker
+      // mid-build would let a stray change split one edition across two.
+      _gasPost({ action: 'runDigestNow', token: scToken(), editionId: runEditionId })
         .then(function(data) {
           if (!data || !data.success) { fail(scErrMsg(data && data.error)); return; }
           status.textContent = 'Phase: ' + data.phase + ' · kept ' + data.kept
@@ -7811,7 +7837,7 @@
           if (data.done) {
             _wdDigestRunning = false;
             if (btn) { btn.disabled = false; btn.textContent = 'Run intake now'; }
-            status.textContent = 'Edition built — ' + data.kept + ' items taken in.';
+            status.textContent = runEditionName + ' built — ' + data.kept + ' items taken in.';
             scNotify_('Morning Edition built (' + data.date + ').');
             wdDigestRefresh_();
           } else {

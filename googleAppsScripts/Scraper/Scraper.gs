@@ -1,4 +1,4 @@
-var VERSION = "v01.56g";
+var VERSION = "v01.57g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -524,7 +524,9 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     terms: ['800 VDC', '800V DC', 'sidecar power rack', 'solid-state transformer', 'power architecture'],
     source: 'guidance:nvidia-800vdc-2026-08' },
   { key: 'topic-china-policy', label: 'China trade policy & BESS supply chain',
-    terms: ['tariff', 'export control', 'FEOC', 'Section 301', 'supply chain', 'decoupling'],
+    // 'supply chain' alone says nothing about China trade policy — it matched
+    // a residential product story and padded its topic band.
+    terms: ['tariff', 'export control', 'FEOC', 'Section 301', 'decoupling'],
     source: 'guidance:china-policy-stack-2026-08' },
   { key: 'topic-utility-procurement', label: 'Utility procurement & large-load interconnection',
     terms: ['interconnection', 'large load', 'tariff filing', 'ERCOT', 'PJM', 'co-location', 'behind-the-meter'],
@@ -558,7 +560,10 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
     terms: ['tolling agreement', 'offtake', 'epc contract', 'storage contract', 'capacity contract', 'ppa', 'resource adequacy'],
     source: 'market' },
   { key: 'topic-storage-degradation', label: 'Storage degradation, augmentation & warranties',
-    terms: ['degradation', 'augmentation', 'warranty', 'capacity guarantee', 'state of health', 'round-trip efficiency', 'cycle life'],
+    // 'warranty' alone is not a degradation story and already sits in
+    // topic-bess-bankability — one weak word matching two topics doubled the
+    // topic band on articles about neither.
+    terms: ['degradation', 'augmentation', 'capacity guarantee', 'state of health', 'round-trip efficiency', 'cycle life'],
     source: 'market' },
   { key: 'topic-capacity-markets', label: 'Interconnection queues & capacity markets',
     terms: ['interconnection queue', 'capacity market', 'capacity auction', 'pjm', 'ercot', 'caiso', 'miso', 'queue reform'],
@@ -585,39 +590,42 @@ var SCRAPER_SEGMENT_SEEDS = [
   // `seg-bess` alone could not express "utility-scale yes, residential no",
   // which is exactly the distinction a BESS-supplier edition needs. The
   // parent stays for continuity; these narrow it.
-  { key: 'seg-bess-utility', label: 'Utility-scale BESS', tv: 1,
-    terms: ['utility-scale storage', 'utility-scale battery', 'grid-scale storage', 'grid-scale battery', 'standalone storage', 'front-of-meter', 'transmission-connected', 'iso queue', 'merchant storage'] },
-  { key: 'seg-bess-datacenter', label: 'Data-center & behind-the-meter storage', tv: 1,
+  { key: 'seg-bess-utility', parent: 'seg-bess', label: 'Utility-scale BESS', tv: 2,
+    // 'grid-scale battery' deliberately NOT here: it is the generic phrase for
+    // the whole category (it lives in seg-bess) and matched a residential
+    // product story, letting a sibling rescue a disabled child.
+    terms: ['utility-scale storage', 'utility-scale battery', 'grid-scale storage', 'standalone storage', 'front-of-meter', 'transmission-connected', 'iso queue', 'merchant storage'] },
+  { key: 'seg-bess-datacenter', parent: 'seg-bess', label: 'Data-center & behind-the-meter storage', tv: 1,
     terms: ['behind-the-meter storage', 'data center battery', 'data center storage', 'ups battery', 'bridging power', 'on-site storage', 'microgrid storage'] },
-  { key: 'seg-bess-residential', label: 'Residential storage', tv: 1,
+  { key: 'seg-bess-residential', parent: 'seg-bess', label: 'Residential storage', tv: 1,
     terms: ['home battery', 'residential storage', 'residential battery', 'powerwall', 'home energy storage', 'rooftop storage'] },
-  { key: 'seg-bess-ci', label: 'C&I storage', tv: 1,
+  { key: 'seg-bess-ci', parent: 'seg-bess', label: 'C&I storage', tv: 1,
     terms: ['commercial and industrial storage', 'c&i storage', 'c&i battery', 'peak shaving', 'demand charge', 'behind-the-meter commercial'] },
-  { key: 'seg-bess-longduration', label: 'Long-duration storage', tv: 1,
+  { key: 'seg-bess-longduration', parent: 'seg-bess', label: 'Long-duration storage', tv: 1,
     terms: ['long-duration', 'long duration energy storage', 'ldes', 'flow battery', 'iron-air', 'compressed air storage', 'thermal storage', 'eight-hour storage'] },
   // --- Data-center power chain, split (v03.21r) ---------------------------
   // `power-electronics` and `grid-equipment` squashed the whole AIDC power
   // chain into two buckets; an AIDC-supplier edition needs to follow the
   // pieces separately.
-  { key: 'seg-mv-power-conversion', label: 'Medium-voltage power conversion', tv: 1,
+  { key: 'seg-mv-power-conversion', parent: 'seg-power-electronics', label: 'Medium-voltage power conversion', tv: 1,
     terms: ['medium-voltage', 'medium voltage', 'mv ups', 'solid-state transformer', 'power conversion system', 'pcs', 'static ups', '34.5 kv', '13.8 kv'] },
-  { key: 'seg-inverters', label: 'Inverters & converters', tv: 1,
+  { key: 'seg-inverters', parent: 'seg-power-electronics', label: 'Inverters & converters', tv: 1,
     terms: ['inverter', 'converter', 'rectifier', 'bidirectional converter', 'dc-dc', 'grid-forming', 'string inverter', 'central inverter'] },
-  { key: 'seg-transformers', label: 'Transformers & switchgear', tv: 1,
+  { key: 'seg-transformers', parent: 'seg-grid-equipment', label: 'Transformers & switchgear', tv: 1,
     terms: ['transformer', 'switchgear', 'substation', 'circuit breaker', 'ring main unit', 'gis switchgear', 'padmount', 'tap changer'] },
-  { key: 'seg-gensets', label: 'Diesel gensets & backup power', tv: 1,
+  { key: 'seg-gensets', parent: 'seg-gas-turbines', label: 'Diesel gensets & backup power', tv: 1,
     terms: ['diesel generator', 'genset', 'standby generator', 'backup generator', 'emergency power', 'prime power', 'generator set'] },
-  { key: 'seg-gas-engines', label: 'Gas turbines & reciprocating engines', tv: 1,
+  { key: 'seg-gas-engines', parent: 'seg-gas-turbines', label: 'Gas turbines & reciprocating engines', tv: 1,
     terms: ['gas turbine', 'reciprocating engine', 'gas engine', 'aeroderivative', 'combined cycle', 'simple cycle', 'turbine order', 'linear generator'] },
-  { key: 'seg-sidecar-power', label: 'Sidecar & skid power solutions', tv: 1,
+  { key: 'seg-sidecar-power', parent: 'seg-aidc', label: 'Sidecar & skid power solutions', tv: 1,
     terms: ['sidecar', 'skid-mounted', 'power skid', 'containerized power', 'modular power block', 'prefabricated power', 'power module'] },
-  { key: 'seg-rack-power', label: 'Rack PDU & busway', tv: 1,
+  { key: 'seg-rack-power', parent: 'seg-aidc', label: 'Rack PDU & busway', tv: 1,
     terms: ['rack pdu', 'busway', 'bus bar', 'busbar', 'power distribution unit', 'remote power panel', 'starline', 'whip'] },
-  { key: 'seg-psu', label: 'Server PSUs & power shelves', tv: 1,
+  { key: 'seg-psu', parent: 'seg-aidc', label: 'Server PSUs & power shelves', tv: 1,
     terms: ['power supply unit', 'psu', 'power shelf', 'rectifier shelf', 'ors', 'open rack', 'bbu', 'battery backup unit'] },
-  { key: 'seg-gpu-silicon', label: 'GPU & accelerator silicon', tv: 1,
+  { key: 'seg-gpu-silicon', parent: 'seg-semiconductors', label: 'GPU & accelerator silicon', tv: 1,
     terms: ['gpu', 'accelerator', 'blackwell', 'rubin', 'hbm', 'tpu', 'ai chip', 'xpu', 'nvlink'] },
-  { key: 'seg-cooling', label: 'Data-center cooling & thermal', tv: 1,
+  { key: 'seg-cooling', parent: 'seg-aidc', label: 'Data-center cooling & thermal', tv: 1,
     terms: ['liquid cooling', 'direct-to-chip', 'immersion cooling', 'cdu', 'coolant distribution', 'rear-door heat exchanger', 'chiller', 'thermal management'] },
   { key: 'seg-aidc', label: 'Data centers & AI infrastructure',
     terms: ['data center', 'datacenter', 'ai infrastructure', 'hyperscale', 'colocation', 'ai factory', 'compute campus'] },
@@ -700,7 +708,10 @@ var SCRAPER_DIGEST_ITEMS_PER_AI_CALL = 5;        // items per summarize request 
 // so an unpaced burst can trip a 429 — and before this, a single 429 aborted
 // summarization for the WHOLE edition (no retry, no resume, no AI lead).
 var SCRAPER_DIGEST_AI_PAUSE_MS = 1200;           // gap between consecutive AI calls
-var SCRAPER_AI_RETRY_BACKOFF_MS = [2000, 6000];  // waits before retry 1 and retry 2 on a rate limit
+// Waits before each retry. Extended past two attempts because a provider
+// OVERLOAD (HTTP 503) can persist for tens of seconds — a 2s+6s ladder gave up
+// long before it cleared and dropped the whole edition to fallback summaries.
+var SCRAPER_AI_RETRY_BACKOFF_MS = [2000, 6000, 15000, 30000];
 var SCRAPER_DIGEST_SUMMARY_MAX = 900;            // stored summary cap (chars) — generous; quality set by the prompt, not a hard length limit
 var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limit is 50k chars)
 var SCRAPER_DIGEST_KEEP = 60;                    // Digests tab retention (rows)
@@ -2648,7 +2659,8 @@ function scLoadInterestModel_(ss, edition) {
       if (Object.prototype.hasOwnProperty.call(tuning, key)) on = tuning[key] === true;
       if (type === 'segment') {
         if (!active) continue;
-        model.segments.push({ key: key, label: label, terms: terms, enabled: on });
+        model.segments.push({ key: key, label: label, terms: terms, enabled: on,
+                              parent: scSegmentParent_(key) });
         continue;
       }
       if (type !== 'company' && type !== 'topic') continue;
@@ -2737,14 +2749,26 @@ function scRubricScore_(title, snippet, model, ctx) {
   // company's off-segment news (e.g. an automaker's vehicle recall when
   // "EVs & automotive" is off) no longer rides the company match over the
   // relevance bar. Enabled hits, or no segment hits at all, change nothing.
-  var matchedSegments = [], excludedSegments = [];
+  var matchedSegments = [], excludedSegments = [], offParents = {}, onHits = [];
   var segs = model.segments || [];
   for (var g = 0; g < segs.length; g++) {
-    if (scTermsHit_(text, segs[g].terms)) {
-      (segs[g].enabled ? matchedSegments : excludedSegments).push(segs[g].label);
+    if (!scTermsHit_(text, segs[g].terms)) continue;
+    if (segs[g].enabled) { matchedSegments.push(segs[g].label); onHits.push(segs[g]); }
+    else {
+      excludedSegments.push(segs[g].label);
+      if (segs[g].parent) offParents[segs[g].parent] = true;
     }
   }
-  var gated = excludedSegments.length > 0 && matchedSegments.length === 0;
+  // SPECIFICITY BEATS BREADTH. A disabled child used to be out-voted by its own
+  // broader parent: "Residential storage" off still let a residential product
+  // story through because the umbrella "BESS & grid-scale storage" matched the
+  // same text. A parent whose disabled CHILD also matched is not independent
+  // evidence that the article is on-segment, so it does not count as an ON hit.
+  var independentOn = 0;
+  for (var oh = 0; oh < onHits.length; oh++) {
+    if (!offParents[onHits[oh].key]) independentOn++;
+  }
+  var gated = excludedSegments.length > 0 && independentOn === 0;
   // Per-company segment tightening (T1c): if every covered company this
   // article matched operates ONLY in currently-disabled segments (per its
   // mined dossier), gate it even when the article itself named no segment.
@@ -2760,7 +2784,12 @@ function scRubricScore_(title, snippet, model, ctx) {
     }
     if (allOff) gated = true;
   }
-  if (gated) company = 0;
+  // Zero the TOPIC band too, not just company. Company-only gating was a no-op
+  // for an article that matches no covered company — which is exactly how a
+  // residential product from an uncovered vendor rode five loosely-matched
+  // topics past the relevance bar and became the lead. Substance is left
+  // intact, which alone cannot clear the bar.
+  if (gated) { company = 0; topic = 0; }
   var emphasis = 0;
   if (matchedCompanies.length && !gated) {
     var freshest = 0;
@@ -3161,6 +3190,19 @@ function scActiveAiLabel_() {
     entire remainder of an edition to raw snippets and skipped the AI lead.
     Other errors (bad key, HTTP 400) are NOT retried: they will not fix
     themselves and retrying just burns quota. */
+/** Is this AI failure worth retrying?
+
+    Retrying a bad key or a malformed request only burns quota, so only
+    TRANSIENT conditions qualify: a rate limit (429) and the transient 5xx
+    family. 503 in particular is the provider saying "overloaded, try again" —
+    it was previously treated as fatal, which is how a single 503 sent an
+    entire edition to fallback summaries with `ai_unavailable: ai_http_503`. */
+function scAiRetryable_(msg) {
+  var m = String(msg || '');
+  if (m.indexOf('ai_rate_limited') !== -1) return true;
+  return /ai_http_(500|502|503|504|529)\b/.test(m);
+}
+
 function scAiWithRetry_(prompt, maxTokens) {
   var attempt = 0;
   for (;;) {
@@ -3168,7 +3210,7 @@ function scAiWithRetry_(prompt, maxTokens) {
       return aiComplete_(prompt, maxTokens);
     } catch (err) {
       var msg = String((err && err.message) || err);
-      if (msg.indexOf('ai_rate_limited') === -1 || attempt >= SCRAPER_AI_RETRY_BACKOFF_MS.length) throw err;
+      if (!scAiRetryable_(msg) || attempt >= SCRAPER_AI_RETRY_BACKOFF_MS.length) throw err;
       try { Utilities.sleep(SCRAPER_AI_RETRY_BACKOFF_MS[attempt]); } catch (sleepErr) {}
       attempt++;
     }
@@ -4525,6 +4567,15 @@ function scEditions_(ss) {
     }
   });
   return out;
+}
+
+/** A split segment's broader parent, from the seed table. Sheet rows do not
+    store the link — the seeds are its single source of truth. */
+function scSegmentParent_(key) {
+  for (var i = 0; i < SCRAPER_SEGMENT_SEEDS.length; i++) {
+    if (SCRAPER_SEGMENT_SEEDS[i].key === key) return SCRAPER_SEGMENT_SEEDS[i].parent || '';
+  }
+  return '';
 }
 
 /** Parse a boolean that arrived over the wire.

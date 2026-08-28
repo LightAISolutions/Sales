@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.57g] — 2026-08-28 01:38:29 AM EST — v03.24r
+
+### Fixed
+- **Turning a narrow segment off now actually keeps that news out.** A story about a switched-off segment could still get in — and even lead the edition — because a broader, still-on segment covering the same ground vouched for it. A broad category no longer speaks for a narrower one you have switched off
+- **A switched-off segment now excludes a story even when no company you follow is involved.** Previously switching a segment off only removed the boost a story got from mentioning one of your companies, so a story from an unfamiliar vendor could still ride in on loosely matched topics. A story about a segment you turned off can no longer reach the relevance bar at all
+- **A busy AI service no longer costs you the whole edition.** When the summariser replies "too busy, try again", that is now waited out and retried over about a minute instead of being treated as a hard failure that dropped every summary to the basic non-AI fallback. Genuine problems, like a bad key, still fail immediately rather than wasting your daily allowance
+- A few filter words were too broad to carry a match on their own — "warranty", "supply chain", and the generic phrase for grid-scale batteries appearing in the utility-scale list. They were letting unrelated stories score as if they were on-topic
 
 ## [v01.56g] — 2026-08-28 12:53:40 AM EST — v03.23r
 
