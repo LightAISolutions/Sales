@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-28 01:50:04 AM EST
+**Repo version:** v03.24r
+**Branch:** `claude/scraper-rebuild-phase-1-hl8uw0`
+
+**What we worked on (v03.04r–v03.24r — the whole Scraper rebuild, go-live, and per-edition editions):**
+
+- **Phases 1–4 shipped**: Interests tab + Profiler registry sync + four-signal rubric; Interests panel UI; weekday digest engine (chunked, resumable fetch → backstop → summarize → render) with the Night Ink email; then go-live — roster shakeout, email client-proofing, pause flags flipped on
+- **Phase 5**: Projects retired; Editions + Subscribers + Archive + Source stats replace it; new Wire Desk landing page
+- **Six relevance signals** implemented (click engagement, per-company mined segments, corroboration, plus the original four)
+- **Dossier mining** from Profiler — 88 dossiers, now fully read (88/88)
+- **Per-edition tuning**: three editions — `morning` (global preset, unchanged), `bess`, `aidc` — each materialised from a **preset** into a full explicit segment/topic map
+- **Source roster honesty**: retired outlets carry their own flag + recorded reason; `.claude/rules/scraper-sources.md` blocks re-proposing a proven-unfetchable outlet
+
+**Where we left off:**
+- Everything committed, pushed and merged through **v03.24r**; working tree clean
+- **The developer has "a couple more issues to fix" and deliberately deferred them to a fresh session.** They have not been described yet — ask first, do not guess
+- Last push fixed three reported faults (segment gate, AI 503 retry, edition picker). **The developer has not yet verified them on the live app**
+
+**Key decisions made:**
+- **Editions materialise, never inherit.** A sparse override map was tried (v03.21r) and rejected by the developer: it made every edition track the Morning Edition. Presets now expand into a full explicit map at creation; `global` is the only non-materialising preset and is what `morning` uses
+- The amber dot means **"changed from the recommendation"**, not "differs from global"
+- Companies and sources stay **global**; only segments and topics are per-edition
+- **Gemini free tier is the default AI provider**; Claude is opt-in via the in-app switch
+- Article caps favour completeness over less scanning — `TOP_N = 30`, section caps `{companies:12, market:10, incidents:8}` summing exactly to TOP_N
+- Night Ink email is 860px wide (widened twice at the developer's request)
+- Two outlets (Data Centre Magazine, Battery Technology) are **live but unfetchable** — Cloudflare-walled; one (Solar Industry) is genuinely offline. Do not re-propose any of them
+- `doPost(action=deploy)` stays unauthenticated; never hardcode the developer's email
+
+**Active context:**
+- Versions: repo **v03.24r** · Scraper **v01.50w / v01.57g** · Profiler v01.43w · Receipts v01.36w
+- Counters: repo CHANGELOG **91/100** (first rotation done this session) · `Scrapergs.changelog.md` **44/50** · `Scraperhtml.changelog.md` **50/50** (rotation due on its next entry)
+- **A `Sync now` is still owed** — the 15 new segments and 4 new topics added in v03.21r only appear in Tune after a sync, and presets can only materialise interests that exist
+- No TODO items; no active reminders
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+- Recurring lesson this session: **four separate bugs came from my own prior pushes** (mining clobber, tile never repainting, `'1'` parsed as false, the segment-split breaking the gate). When a rebuild adds vocabulary or state, re-check the consumers of that state in the same push
+
+**Recommendation for next session:**
+- **Ask the developer what the two deferred issues are, then rebuild The Morning Edition and confirm last night's three fixes held** — the footer should read `summarized by gemini/…` rather than the fallback note, no residential-storage story should appear, and the Digest overlay should let them pick the edition
+- **To continue:** type `pick up where we left off`
+
+## Previous Sessions
+
+### Session — 2026-08-27 (v03.01r–v03.03r)
+
 **Date:** 2026-08-27 04:19:08 PM EST
 **Repo version:** v03.03r
 **Branch:** `claude/scraper-profiler-integration-2z8ghm`
@@ -38,22 +82,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - **Execute Phase 1 of the approved Scraper rebuild** — the Interests tab + daily Profiler registry sync + four-signal rubric scaffolding in `Scraper.gs`, per the approved 4-phase plan and the D1–D3 decisions recorded in the v03.03r CHANGELOG section (30-source roster, company-name Google News backstop, feedback-off rubric)
 - **To continue:** type `start Phase 1`
-
-## Previous Sessions
-
-### Session — 2026-08-27 (v03.00r)
-
-**Date:** 2026-08-27 01:48:08 AM EST
-**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
-**Repo version:** v03.00r
-
-**What was done:**
-- Remote ACL health probe added to `Profiler.gs` — `aclHealthProbe_()`, dispatched as unauthenticated `GET ?action=api&op=aclhealth`; runs the exact Access-tab read sequence sign-in performs and reports the failing stage (spreadsheet ID redacted, 200-char cap, 60s result cache), turning an `acl_unavailable` sign-in outage into a one-curl diagnosis (v03.00r)
-- Profiler GAS v01.20g → v01.21g; `Profilergs.version.txt` synced; generic public entry added to the GAS changelog; README tree Profiler version display corrected from stale `v01.38w · v01.17g` to `v01.42w · v01.21g` (v03.00r)
-- Investigation established the reported `acl_unavailable/acl_unreachable` sign-in error is environment-side (Master ACL spreadsheet grant/transient), not a repo regression — all four live deployments answered unauthenticated version checks healthy and current (v03.00r)
-
-**Where we left off:** All changes committed and merged to main
-
-**Active context:**
-- No TODO items; no active reminders; CHANGELOG counter 93/100
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
