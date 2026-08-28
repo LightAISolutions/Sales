@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.40w">
+  <meta name="build-version" content="v01.41w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -510,6 +510,23 @@
     #wd-golive-body .gl-bad { color: var(--wd-warn); }
     #wd-golive-body .gl-lbl { color: var(--wd-mut2); }
     #wd-golive-note { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); }
+    .wd-gl-ctl { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--wd-line); }
+    .wd-gl-ctl-lbl { display: block; font-family: var(--wd-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--wd-mut2); margin-bottom: 6px; }
+    .wd-gl-seg { display: inline-flex; border: 1px solid var(--wd-line-soft); border-radius: 5px; overflow: hidden; }
+    .wd-gl-seg-btn { background: transparent; border: none; color: var(--wd-mut); font: inherit; font-size: 12px; padding: 5px 12px; cursor: pointer; }
+    .wd-gl-seg-btn + .wd-gl-seg-btn { border-left: 1px solid var(--wd-line-soft); }
+    .wd-gl-seg-btn:hover { color: var(--wd-ink); }
+    .wd-gl-seg-btn.on { background: var(--wd-green-bg); color: var(--wd-green-ink); }
+    .wd-gl-seg-btn:disabled { cursor: default; opacity: 0.55; }
+    .wd-gl-recip-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+    .wd-gl-recip-list:empty { display: none; }
+    .wd-gl-recip-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 6px 3px 9px; border: 1px solid var(--wd-line-soft); border-radius: 4px; background: var(--wd-panel); font-family: var(--wd-mono); font-size: 11px; color: var(--wd-ink2); }
+    .wd-gl-recip-chip button { background: none; border: none; color: var(--wd-faint); font-size: 14px; line-height: 1; cursor: pointer; padding: 0 2px; }
+    .wd-gl-recip-chip button:hover { color: #e08a84; }
+    .wd-gl-recip-add { display: flex; gap: 6px; align-items: center; }
+    #wd-gl-recip-input { flex: 1; min-width: 0; background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft); border-radius: 4px; color: var(--wd-ink); font: inherit; font-size: 12px; padding: 5px 8px; }
+    #wd-gl-recip-input:focus { outline: none; border-color: var(--wd-green-line); }
+    .wd-gl-recip-note { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); margin-top: 5px; min-height: 14px; }
     #wd-digest-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
     .wd-dg-chip {
       display: inline-flex; align-items: stretch;
@@ -1013,6 +1030,22 @@
       <div id="wd-digest-status"></div>
       <div id="wd-golive-panel" style="display:none;">
         <div id="wd-golive-body"><span class="wd-loading">Checking readiness…</span></div>
+        <div class="wd-gl-ctl" id="wd-gl-provider-ctl">
+          <span class="wd-gl-ctl-lbl">AI provider</span>
+          <div class="wd-gl-seg" id="wd-gl-provider-seg">
+            <button type="button" class="wd-gl-seg-btn" data-provider="gemini" title="Free — Google Gemini tier. No per-edition cost.">Gemini · free</button>
+            <button type="button" class="wd-gl-seg-btn" data-provider="claude" title="Claude Sonnet — sharper summaries, ~5–11¢ per edition. Needs an Anthropic API key.">Claude · Sonnet</button>
+          </div>
+        </div>
+        <div class="wd-gl-ctl" id="wd-gl-recip-ctl">
+          <span class="wd-gl-ctl-lbl">Recipients</span>
+          <div id="wd-gl-recip-list" class="wd-gl-recip-list"></div>
+          <div id="wd-gl-recip-add" class="wd-gl-recip-add">
+            <input type="email" id="wd-gl-recip-input" placeholder="name@example.com" autocomplete="off" spellcheck="false">
+            <button class="sc-btn" id="wd-gl-recip-btn" type="button" title="Add this address to the daily edition delivery list">Add</button>
+          </div>
+          <div id="wd-gl-recip-note" class="wd-gl-recip-note"></div>
+        </div>
         <div style="margin-top:8px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
           <button class="sc-btn" id="wd-golive-testai" type="button" title="One tiny AI call through the configured provider — proves the whole summarize path (free on Gemini's tier; well under a cent on Claude)">Test AI</button>
           <button class="sc-btn" id="wd-golive-email" type="button" title="Send the latest edition to your own inbox to check how your mail app renders it">Email me latest</button>
@@ -6627,6 +6660,24 @@
     if (glTest) glTest.addEventListener('click', wdGoLiveTestAi_);
     var glMail = $sc('wd-golive-email');
     if (glMail) glMail.addEventListener('click', wdGoLiveEmail_);
+    var glSeg = $sc('wd-gl-provider-seg');
+    if (glSeg) glSeg.addEventListener('click', function(ev) {
+      var b = ev.target.closest ? ev.target.closest('.wd-gl-seg-btn') : null;
+      if (b && !b.disabled) wdGoLiveSetProvider_(b.getAttribute('data-provider'));
+    });
+    var glRecipList = $sc('wd-gl-recip-list');
+    if (glRecipList) glRecipList.addEventListener('click', function(ev) {
+      var rm = ev.target.closest ? ev.target.closest('.wd-gl-recip-chip button') : null;
+      if (!rm) return;
+      var chip = rm.closest('.wd-gl-recip-chip');
+      if (chip) wdGoLiveRemoveRecipient_(chip.getAttribute('data-email'));
+    });
+    var glRecipBtn = $sc('wd-gl-recip-btn');
+    if (glRecipBtn) glRecipBtn.addEventListener('click', wdGoLiveAddRecipient_);
+    var glRecipInput = $sc('wd-gl-recip-input');
+    if (glRecipInput) glRecipInput.addEventListener('keydown', function(ev) {
+      if (ev.key === 'Enter') { ev.preventDefault(); wdGoLiveAddRecipient_(); }
+    });
     var dgList = $sc('wd-digest-list');
     if (dgList) dgList.addEventListener('click', function(ev) {
       var chip = ev.target.closest ? ev.target.closest('.wd-dg-chip') : null;
@@ -6896,6 +6947,8 @@
     if (show) wdGoLiveRefresh_();
   }
 
+  var _wdGoLive = { provider: '', canManage: false };
+
   function wdGoLiveRefresh_() {
     var body = $sc('wd-golive-body');
     body.innerHTML = '<span class="wd-loading">Checking readiness…</span>';
@@ -6908,23 +6961,112 @@
             + scEsc(value) + '</span></div>';
         }
         var keyOk = d.provider === 'claude' ? d.hasAnthropicKey : d.hasGeminiKey;
+        var recipCount = d.recipientCount || (d.recipients ? d.recipients.length : 0);
         body.innerHTML =
           row('AI provider', d.provider + ' · ' + d.model)
           + row('API key', keyOk ? 'set' : 'missing — summaries run in $0 fallback mode', keyOk)
           + row('Scheduled runs', d.runsEnabled ? 'on — weekdays from 7:00 AM ET' : 'paused', d.runsEnabled)
           + row('Email delivery', !d.emailEnabled ? 'off'
-                : d.recipient ? 'armed → ' + d.recipient
-                : 'waiting on a recipient — set the DIGEST_RECIPIENT script property to start delivery',
-                d.emailEnabled && !!d.recipient)
+                : recipCount ? 'armed → ' + recipCount + ' recipient' + (recipCount === 1 ? '' : 's')
+                : 'waiting on a recipient — add one below to start delivery',
+                d.emailEnabled && recipCount > 0)
           + row('Hourly trigger', d.trigger + (d.lastTickAgeMin != null
                 ? ' · last tick ' + d.lastTickAgeMin + 'm ago'
                 : ' · no tick recorded yet'),
                 d.trigger === 'installed' && d.lastTickAgeMin != null && d.lastTickAgeMin <= 90)
           + (d.lastEditionDate ? row('Last edition', d.lastEditionDate) : '');
+        _wdGoLive.provider = d.provider;
+        _wdGoLive.canManage = !!d.canManageRecipients;
+        wdGoLiveRenderProvider_(d.provider, _wdGoLive.canManage);
+        wdGoLiveRenderRecipients_(d.recipients || [], _wdGoLive.canManage);
       })
       .catch(function(err) {
         body.textContent = 'Could not check (' + ((err && err.message) || err) + ')';
       });
+  }
+
+  function wdGoLiveRenderProvider_(provider, canManage) {
+    var seg = $sc('wd-gl-provider-seg');
+    var btns = seg.querySelectorAll('.wd-gl-seg-btn');
+    for (var i = 0; i < btns.length; i++) {
+      var isOn = btns[i].getAttribute('data-provider') === provider;
+      btns[i].classList.toggle('on', isOn);
+      btns[i].disabled = !canManage;
+    }
+  }
+
+  function wdGoLiveRenderRecipients_(recipients, canManage) {
+    var list = $sc('wd-gl-recip-list');
+    list.innerHTML = recipients.length
+      ? recipients.map(function(e) {
+          return '<span class="wd-gl-recip-chip" data-email="' + scEsc(e) + '">' + scEsc(e)
+            + (canManage ? '<button type="button" title="Remove this recipient">×</button>' : '')
+            + '</span>';
+        }).join('')
+      : '';
+    // Hide the add row entirely for non-managers (multi-user, non-admin)
+    var addRow = $sc('wd-gl-recip-add');
+    if (addRow) addRow.style.display = canManage ? 'flex' : 'none';
+    if (!recipients.length && !canManage) {
+      $sc('wd-gl-recip-note').textContent = 'No recipients configured.';
+    }
+  }
+
+  function wdGoLiveSetProvider_(provider) {
+    if (!_wdGoLive.canManage || provider === _wdGoLive.provider) return;
+    var note = $sc('wd-golive-note');
+    note.textContent = 'Switching to ' + provider + '…';
+    _gasPost({ action: 'setAiProvider', token: scToken(), provider: provider })
+      .then(function(d) {
+        if (d && d.success) {
+          note.textContent = '✓ Provider set to ' + d.provider
+            + (d.provider === 'claude' ? ' (Sonnet)' : ' (free tier)');
+          wdGoLiveRefresh_();
+        } else {
+          note.textContent = '✗ ' + scErrMsg(d && d.error);
+        }
+      })
+      .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
+  }
+
+  function wdGoLiveAddRecipient_() {
+    var input = $sc('wd-gl-recip-input');
+    var note = $sc('wd-gl-recip-note');
+    var email = (input.value || '').trim();
+    if (!email) { note.textContent = 'Enter an email address first.'; return; }
+    var btn = $sc('wd-gl-recip-btn');
+    btn.disabled = true;
+    note.textContent = 'Adding…';
+    _gasPost({ action: 'addDigestRecipient', token: scToken(), email: email })
+      .then(function(d) {
+        btn.disabled = false;
+        if (d && d.success) {
+          input.value = '';
+          note.textContent = '✓ Recipient added.';
+          wdGoLiveRenderRecipients_(d.recipients || [], _wdGoLive.canManage);
+          wdGoLiveRefresh_();
+        } else {
+          note.textContent = '✗ ' + (d && d.error === 'invalid_email'
+            ? 'That does not look like a valid email address.' : scErrMsg(d && d.error));
+        }
+      })
+      .catch(function(err) { btn.disabled = false; note.textContent = '✗ ' + ((err && err.message) || err); });
+  }
+
+  function wdGoLiveRemoveRecipient_(email) {
+    var note = $sc('wd-gl-recip-note');
+    note.textContent = 'Removing…';
+    _gasPost({ action: 'removeDigestRecipient', token: scToken(), email: email })
+      .then(function(d) {
+        if (d && d.success) {
+          note.textContent = '✓ Recipient removed.';
+          wdGoLiveRenderRecipients_(d.recipients || [], _wdGoLive.canManage);
+          wdGoLiveRefresh_();
+        } else {
+          note.textContent = '✗ ' + scErrMsg(d && d.error);
+        }
+      })
+      .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
   }
 
   function wdGoLiveTestAi_() {

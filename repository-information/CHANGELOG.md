@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 85/100`
+`Sections: 86/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.10r] — 2026-08-27 08:56:08 PM EST
+
+> **Prompt:** "This is what the "Go-live" option results in. Make it easy for me to switch between the free Gemini version and the Claude sonnet version. Also, allow me to easily control the Digest Recipients from within the Scraper app. Later on, when I expand the Scraper app to allow other gmails to log in and have their own sessions based on access level (similar features-tied-to-access-level flow as Profiler), I would like the ability to control Digest Recipients to be restricted to "admin" level users only."
+
+### Added
+- **AI-provider switch + recipient management in `Scraper.gs`** — three new session-gated routes: `setAiProvider(provider)` (writes `AI_PROVIDER` = `gemini`|`claude`; the model stays each provider's code default, Claude → `claude-sonnet-5`), `addDigestRecipient(email)` and `removeDigestRecipient(email)` (edit `DIGEST_RECIPIENT`, now treated as a de-duplicated comma-separated list — `MailApp.sendEmail` accepts the same form). All three go through `scCanManageDigest_(user)` and audit-log the change (recipient addresses masked in the log). Helpers: `scValidEmail_`, `scDigestRecipients_`. Registered in `SCRAPER_PROJECT_ACTIONS` + `handleProjectAction_`
+- **Access gate `SCRAPER_DIGEST_ADMIN_ONLY` (`false`) + `scCanManageDigest_`** — while `false` (current single-user owner) any signed-in user may switch providers and edit recipients; flipping it to `true` at the multi-user expansion restricts both to `admin`/`developer` roles (read via `validateSessionForData(...).role`), and everyone else sees the controls read-only. Reading status and the self-service "email me latest" test are never gated. This is the literal "build now, restrict later" the developer asked for — one documented flag, chosen over gating on `admin` immediately (which could lock out the owner if their ACL role isn't admin)
+- **Go-live panel controls in `Scraper.html`** — a two-button segmented provider control ("Gemini · free" / "Claude · Sonnet", active one highlighted green, disabled for non-managers) and a recipient manager (address chips with remove buttons + an add field with client + server email validation). Both driven by `goLiveStatus`, which now returns `recipients` (full for managers, masked for others), `recipientCount`, and `canManageRecipients`; the delivery-status row now reflects the recipient count instead of a single masked address
+
+### Changed
+- **Recipient storage is now a list** — the scheduled send site reads `scDigestRecipients_().join(',')` (normalized) instead of the raw property, so multiple recipients each receive the edition and stray whitespace can't malform the `to` field
+- **`Scraper.gs`** VERSION v01.42g → v01.43g and **`Scraper.html`** v01.40w → v01.41w; version files + meta synced; public entries added (counters 43/50, 41/50)
+- **`repository-information/diagrams/Scraper-diagram.md`** — go-live route line extended with `setAiProvider` / `addDigestRecipient` / `removeDigestRecipient` and a note that provider + recipient edits are gated by `scCanManageDigest_`; pako URL regenerated and decompression-verified
+
+#### `Scraper.gs` — v01.43g
+
+##### Added
+- Provider-switch + recipient-management routes, the `SCRAPER_DIGEST_ADMIN_ONLY` gate and helpers (detail above); `Scrapergs.version.txt` synced; public entry added (counter 42 → 43)
+
+#### `Scraper.html` — v01.41w
+
+##### Added
+- Provider segmented control + recipient manager in the go-live panel (detail above); meta tag synced; public entry added (counter 40 → 41)
+
+### Notes
+- Verification: `node --check` clean on the `.gs` (via `.js` copy) and both inline blocks. Playwright drove the full panel from stubbed state in two roles — **manager**: gemini active initially, switch to Claude shows "(Sonnet)", add appends a chip, an invalid address is rejected with a clear message, remove drops the right chip; **non-manager**: the add row is hidden, chips carry no remove buttons, and both provider buttons are disabled. No page errors in either role
+- The email-validation regex is a shape check on both sides (client for instant feedback, server as the real guard) — it is not an existence/deliverability check
 
 ## [v03.09r] — 2026-08-27 08:12:11 PM EST
 

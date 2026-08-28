@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 40/50`
+`Sections: 41/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.41w] — 2026-08-27 08:56:08 PM EST — v03.10r
+
+### Added
+- A provider switch in the Go-live panel: pick "Gemini · free" or "Claude · Sonnet" with one tap, and the active choice is highlighted
+- A recipient manager in the Go-live panel: your delivery addresses show as chips you can remove, with a field to add new ones — the delivery-status line updates to show how many recipients are set
 
 ## [v01.40w] — 2026-08-27 08:12:11 PM EST — v03.09r
 

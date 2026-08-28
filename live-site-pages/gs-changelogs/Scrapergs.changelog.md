@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.43g] — 2026-08-27 08:56:08 PM EST — v03.10r
+
+### Added
+- Switch the AI service between the free Gemini tier and Claude Sonnet from inside the app — one tap, no configuration needed
+- Manage the daily edition's recipient list from inside the app: add or remove any number of email addresses, and every finished edition is sent to all of them
+- Recipient and provider controls are built to lock to admin-level users once the app opens to multiple sign-ins; today, while it's single-user, they're fully available
 
 ## [v01.42g] — 2026-08-27 08:12:11 PM EST — v03.09r
 

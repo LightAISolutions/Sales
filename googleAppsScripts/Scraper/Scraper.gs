@@ -1,4 +1,4 @@
-var VERSION = "v01.42g";
+var VERSION = "v01.43g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -378,7 +378,8 @@ var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
                                'rubricPreview',
                                'runDigestNow', 'getDigestStatus', 'listDigests', 'getDigest',
                                'deleteDigest',
-                               'goLiveStatus', 'testAi', 'emailLatestDigest'];
+                               'goLiveStatus', 'testAi', 'emailLatestDigest',
+                               'setAiProvider', 'addDigestRecipient', 'removeDigestRecipient'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -2933,7 +2934,7 @@ function scDigestRenderStep_(ss, state) {
   // Phase 4 go-live (2026-08-27): SCRAPER_SCHED_EMAIL_ENABLED is now true, so
   // delivery is armed the moment a DIGEST_RECIPIENT Script Property is set.
   // Use the app's "Email me latest" button for a real-inbox test first.
-  var recipient = props.getProperty('DIGEST_RECIPIENT') || '';
+  var recipient = scDigestRecipients_().join(',');  // normalized comma list
   if (recipient && SCRAPER_SCHED_EMAIL_ENABLED) {
     try {
       MailApp.sendEmail({ to: recipient,
@@ -3176,11 +3177,45 @@ function scMaskEmail_(addr) {
   return m ? m[1] + '***' + m[2] : '';
 }
 
+// Gate for the digest control actions that change spend or delivery — the AI
+// provider switch and the recipient list. While false (single-user owner),
+// any signed-in user may manage them. Flip to true once other Gmails can log
+// in with their own access levels (the multi-user expansion) and only admin /
+// developer roles will be allowed to switch providers or edit recipients;
+// everyone else sees the controls read-only. Reading go-live status and the
+// self-service "email me latest" test are never gated.
+var SCRAPER_DIGEST_ADMIN_ONLY = false;
+
+/** Whether `user` may change the AI provider or the recipient list. */
+function scCanManageDigest_(user) {
+  if (!SCRAPER_DIGEST_ADMIN_ONLY) return true;
+  var role = (user && user.role) || '';
+  return role === 'admin' || role === 'developer';
+}
+
+/** Basic email shape check (server-side guard for recipient input). */
+function scValidEmail_(addr) {
+  return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(addr || '').trim());
+}
+
+/** Current digest recipients as a de-duplicated array. DIGEST_RECIPIENT is a
+    comma-separated list (MailApp.sendEmail accepts the same form for `to`). */
+function scDigestRecipients_() {
+  var raw = PropertiesService.getScriptProperties().getProperty('DIGEST_RECIPIENT') || '';
+  var seen = {}, out = [];
+  raw.split(',').forEach(function(e) {
+    var v = String(e || '').trim();
+    var k = v.toLowerCase();
+    if (v && !seen[k]) { seen[k] = true; out.push(v); }
+  });
+  return out;
+}
+
 /** Go-live readiness snapshot (Phase 4): provider config, delivery config,
     trigger health. Reads state only — makes no AI call (testAi does that)
     and never returns secret values, only presence booleans. */
 function goLiveStatus(sessionToken) {
-  validateSessionForData(sessionToken, 'goLiveStatus');
+  var user = validateSessionForData(sessionToken, 'goLiveStatus');
   var props = PropertiesService.getScriptProperties();
   var provider = (props.getProperty('AI_PROVIDER') || SCRAPER_AI_PROVIDER).toLowerCase();
   var model;
@@ -3199,16 +3234,64 @@ function goLiveStatus(sessionToken) {
     trigger = 'unverifiable — authorize the script.scriptapp permission to check';
   }
   var lastTick = Number(props.getProperty('SCHEDULER_LAST_TICK')) || 0;
+  var canManage = scCanManageDigest_(user);
+  var recipients = scDigestRecipients_();
   return { success: true,
     provider: provider, model: model,
     hasGeminiKey: !!props.getProperty('GEMINI_API_KEY'),
     hasAnthropicKey: !!props.getProperty('ANTHROPIC_API_KEY'),
-    recipient: scMaskEmail_(props.getProperty('DIGEST_RECIPIENT')),
+    // Managers see full addresses (they need them to remove the right one);
+    // everyone else sees them masked.
+    recipients: canManage ? recipients : recipients.map(scMaskEmail_),
+    recipientCount: recipients.length,
+    canManageRecipients: canManage,
     runsEnabled: SCRAPER_SCHED_RUNS_ENABLED,
     emailEnabled: SCRAPER_SCHED_EMAIL_ENABLED,
     trigger: trigger,
     lastTickAgeMin: lastTick ? Math.round((Date.now() - lastTick) / 60000) : null,
     lastEditionDate: props.getProperty('DIGEST_LAST_DATE') || '' };
+}
+
+/** Switch the AI provider between the free Gemini tier and Claude (Sonnet).
+    Writes only the AI_PROVIDER property — the model each provider uses is the
+    code default (Claude → claude-sonnet-5) unless an ANTHROPIC_MODEL /
+    GEMINI_MODEL override is set. Gated: changes spend for the whole app. */
+function setAiProvider(sessionToken, provider) {
+  var user = validateSessionForData(sessionToken, 'setAiProvider');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var p = String(provider || '').toLowerCase().trim();
+  if (p !== 'gemini' && p !== 'claude') return { success: false, error: 'invalid_provider' };
+  PropertiesService.getScriptProperties().setProperty('AI_PROVIDER', p);
+  dataAuditLog((user && user.email) || 'unknown', 'update', 'config', 'AI_PROVIDER', p);
+  return { success: true, provider: p };
+}
+
+/** Add one recipient to the digest delivery list (gated). */
+function addDigestRecipient(sessionToken, email) {
+  var user = validateSessionForData(sessionToken, 'addDigestRecipient');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var addr = String(email || '').trim();
+  if (!scValidEmail_(addr)) return { success: false, error: 'invalid_email' };
+  var list = scDigestRecipients_();
+  if (list.some(function(e) { return e.toLowerCase() === addr.toLowerCase(); })) {
+    return { success: true, recipients: list };  // idempotent — already present
+  }
+  list.push(addr);
+  PropertiesService.getScriptProperties().setProperty('DIGEST_RECIPIENT', list.join(','));
+  dataAuditLog((user && user.email) || 'unknown', 'update', 'config', 'DIGEST_RECIPIENT', 'add ' + scMaskEmail_(addr));
+  return { success: true, recipients: list };
+}
+
+/** Remove one recipient from the digest delivery list (gated). */
+function removeDigestRecipient(sessionToken, email) {
+  var user = validateSessionForData(sessionToken, 'removeDigestRecipient');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var addr = String(email || '').trim().toLowerCase();
+  if (!addr) return { success: false, error: 'invalid_email' };
+  var kept = scDigestRecipients_().filter(function(e) { return e.toLowerCase() !== addr; });
+  PropertiesService.getScriptProperties().setProperty('DIGEST_RECIPIENT', kept.join(','));
+  dataAuditLog((user && user.email) || 'unknown', 'update', 'config', 'DIGEST_RECIPIENT', 'remove ' + scMaskEmail_(email));
+  return { success: true, recipients: kept };
 }
 
 /** One tiny live call through the configured provider (~30 tokens — free on
@@ -3973,6 +4056,9 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'goLiveStatus') return goLiveStatus(sessionToken);
   if (op === 'testAi') return testAi(sessionToken);
   if (op === 'emailLatestDigest') return emailLatestDigest(sessionToken);
+  if (op === 'setAiProvider') return setAiProvider(sessionToken, param('provider'));
+  if (op === 'addDigestRecipient') return addDigestRecipient(sessionToken, param('email'));
+  if (op === 'removeDigestRecipient') return removeDigestRecipient(sessionToken, param('email'));
   return { success: false, error: 'unknown_op' };
 }
 
