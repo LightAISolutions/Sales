@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.19r] — 2026-08-27 11:21:39 PM EST
+
+> **Prompt:** "continue with your recommendation\"
+
+### Added
+- **`SCRAPER_SOURCE_FLAG_RETIRED = 'Dropped from roster'`** — source rows stop borrowing `SCRAPER_INTEREST_FLAG_STALE` (`'Coverage ended'`). One string was doing double duty across two row types whose meanings are opposite: for a company leaving Profiler's registry "Coverage ended" is exactly right; for an outlet leaving `SCRAPER_SOURCE_ROSTER` it asserts the publication stopped publishing. The company flag is deliberately left untouched
+- **`SCRAPER_RETIRED_SOURCES`** — per-outlet `{ label, detail }` kept beside the roster so the reason survives in the UI rather than only in a changelog. Also a guard against a future pass "restoring" a feed that provably cannot be fetched
+- **`listInterests` returns `retiredLabel` / `retiredNote`** for stale source rows, computed from that map by key — no sheet write and no migration of stored data
+
+### Fixed
+- **Migration branch for outlets already retired.** The retirement branch only fires while a row is still `active`, so the three rows marked during the Phase 4 shakeout would have kept the company wording forever. A second branch re-labels a non-roster source row still carrying `SCRAPER_INTEREST_FLAG_STALE`. Verified idempotent — a second sync is a no-op
+- **`wdIntRow_` chip text and the disabled-toggle tooltip.** The chip is the only text most people read, so it now shows the reason (`Blocked to automated readers` / `Site offline`) with the full explanation on hover. The tooltip was hardcoded to `No longer covered by Profiler — kept for history` for every stale row — wrong for sources, which Profiler has nothing to do with; it is now type-aware
+
+### Notes
+- **The removals were correct; the label was the defect.** Re-probed all three tonight and every finding reproduces the v03.09r record. `datacentremagazine.com`: root 200 but `/news` and all five candidate feed paths 403 with `cf-mitigated: challenge` / `server: cloudflare` / `<title>Just a moment...</title>` — a Cloudflare Managed Challenge no server-side client can pass — and the homepage advertises **no** `<link rel="alternate">` feed at all. `batterytechonline.com`: 403 "Attention Required! | Cloudflare" on the root and every feed path, to **two independent fetchers** (curl via the agent proxy, and WebFetch), while a web search confirms it is publishing through 2026. `solarindustrymag.com/feed`: HTTP 200 but a 114-byte JS redirect to `/lander`, which carries GoDaddy's `_trfd.push({ap:"parking"})` marker — genuinely dead, and the only one of the three for which "Coverage ended" was true
+- **Google News site-scoped feeds were tested as a workaround and rejected**: `site:datacentremagazine.com` returns 1 item, `site:batterytechonline.com` 1 item dated April 2025, `site:solarindustrymag.com` 0. Not a feed; reported as a failure rather than offered as a fix
+- Root cause of the original defect: when the source-retirement branch was written in v03.09r it reused the nearest existing flag constant instead of introducing a source-specific one. No gate caught it because the constant was already correct for its original row type — the bug only exists at the intersection of two row types sharing one string
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **19 assertions**. *Server* (12): the two flags are distinct, the company flag is unchanged, no retired label claims the outlet ceased publishing, both live outlets are described as live, `Site offline` applies to exactly one key, every entry carries a re-check date, already-retired rows migrate, a newly-retired row gets the new label, a source returning to the roster is reactivated rather than relabelled, a stale **company** row keeps `Coverage ended`, and the migration is idempotent. *Playwright* (7): Data Centre Magazine renders `Blocked to automated readers` with "live and publishing" on hover and no `Profiler` in its tooltip, Solar Industry renders `Site offline`, and a stale company row still renders `Coverage ended` with the Profiler tooltip. Zero page errors
+- **`Scraper.gs`** VERSION v01.51g → v01.52g; **`Scraper.html`** v01.45w → v01.46w; version files synced; public entries added (GAS 49/50 — rotation due again next push; page 46/50)
 
 ## [v03.18r] — 2026-08-27 11:05:42 PM EST
 

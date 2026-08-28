@@ -1,4 +1,4 @@
-var VERSION = "v01.51g";
+var VERSION = "v01.52g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -463,6 +463,42 @@ var SCRAPER_INTERESTS_SYNC_MIN_MS = 20 * 3600 * 1000;  // hourly tick syncs at m
 var SCRAPER_INTERESTS_MAX_ROWS = 2000;       // read cap (registry is ~90 companies today)
 var SCRAPER_INTEREST_FLAG_NEW = 'New coverage';
 var SCRAPER_INTEREST_FLAG_STALE = 'Coverage ended';
+
+// A SOURCE row leaving the roster is NOT the same event as a COMPANY leaving
+// Profiler's registry, and must not borrow its wording. "Coverage ended" is
+// true of a company we stopped following; applied to an outlet it asserts the
+// publication stopped publishing — which was false for two of the three
+// outlets dropped in the Phase 4 shakeout (developer caught this 2026-08-27:
+// Data Centre Magazine was still live at datacentremagazine.com/news while
+// Scraper displayed "coverage ended" against it).
+var SCRAPER_SOURCE_FLAG_RETIRED = 'Dropped from roster';
+
+// Why each dropped outlet was dropped, kept next to the roster so the reason
+// survives in the UI instead of only in a changelog. `label` is what Tune
+// shows on the chip; `detail` is the hover text. Re-verified 2026-08-27 —
+// none of these can be fixed by changing the feed URL, so this also stops a
+// future pass from "restoring" a feed that provably cannot be fetched.
+var SCRAPER_RETIRED_SOURCES = {
+  'src-dc-magazine': {
+    label: 'Blocked to automated readers',
+    detail: 'Data Centre Magazine is live and publishing. Its pages sit behind a '
+          + 'Cloudflare browser challenge (a JavaScript test no server-side reader can '
+          + 'pass) and the site advertises no feed at any address. Re-checked 2026-08-27.'
+  },
+  'src-battery-technology': {
+    label: 'Blocked to automated readers',
+    detail: 'Battery Technology is live and publishing. The whole domain refuses '
+          + 'automated readers, including with browser identification. Battery and '
+          + 'storage stay covered by Energy-Storage.news and ESS News. Re-checked 2026-08-27.'
+  },
+  'src-solar-industry': {
+    label: 'Site offline',
+    detail: 'The publication\'s site is gone — the address now serves a domain-parking '
+          + 'page rather than articles. This is the one outlet of the three that genuinely '
+          + 'ended. Solar stays covered by pv magazine USA and Solar Power World. '
+          + 'Re-checked 2026-08-27.'
+  }
+};
 var SCRAPER_INTEREST_FLAG_NEWTOPIC = 'New topic';
 
 // Topic seeds — the source of truth for non-company interests. 'guidance:'
@@ -2379,7 +2415,13 @@ function scSyncInterests_(force, mineBudgetMs) {
       if (String(data[dr][1]) !== 'source') continue;
       var srcKey = String(data[dr][0]);
       if (!rosterKeys[srcKey] && String(data[dr][4]) === 'active') {
-        data[dr][4] = 'stale'; data[dr][5] = SCRAPER_INTEREST_FLAG_STALE; data[dr][12] = now;
+        data[dr][4] = 'stale'; data[dr][5] = SCRAPER_SOURCE_FLAG_RETIRED; data[dr][12] = now;
+        dirty = true;
+      } else if (!rosterKeys[srcKey] && String(data[dr][5]) === SCRAPER_INTEREST_FLAG_STALE) {
+        // Migration: the branch above only fires while a row is still `active`,
+        // so outlets retired before this flag existed would keep the company
+        // wording forever. Re-label them in place.
+        data[dr][5] = SCRAPER_SOURCE_FLAG_RETIRED; data[dr][12] = now;
         dirty = true;
       } else if (rosterKeys[srcKey] && String(data[dr][4]) === 'stale') {
         data[dr][4] = 'active'; data[dr][5] = ''; data[dr][12] = now;
@@ -2642,6 +2684,11 @@ function listInterests(sessionToken) {
       lastSynced: r[12] ? new Date(r[12]).toISOString() : '',
       notes: String(r[13] || '')
     });
+    var ret = SCRAPER_RETIRED_SOURCES[String(r[0])];
+    if (ret && String(r[4]) === 'stale') {
+      items[items.length - 1].retiredLabel = ret.label;
+      items[items.length - 1].retiredNote = ret.detail;
+    }
   }
   var lastSync = null;
   try {

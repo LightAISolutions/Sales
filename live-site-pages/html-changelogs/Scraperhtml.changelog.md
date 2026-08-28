@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.46w] — 2026-08-27 11:21:39 PM EST — v03.19r
+
+### Changed
+- **Tune now says why a news outlet was dropped** instead of implying it stopped publishing. The tag on the row states the real reason at a glance, and hovering it gives the full explanation and the date it was last checked
+- The explanation on a dropped outlet no longer says its coverage came from the company profiles — sources and companies are tracked separately and now read that way
 
 ## [v01.45w] — 2026-08-27 10:55:12 PM EST — v03.17r
 

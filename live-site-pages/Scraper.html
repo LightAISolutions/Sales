@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.45w">
+  <meta name="build-version" content="v01.46w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -6982,15 +6982,25 @@
   function wdIntRow_(it) {
     var stale = it.status === 'stale';
     var cls = 'wd-int-row' + (stale ? ' stale' : (it.enabled ? '' : ' off'));
-    var flag = it.flag
-      ? '<span class="wd-int-flag' + (stale ? ' ended' : '') + '">' + scEsc(it.flag) + '</span>'
+    // A retired SOURCE says why it was dropped. Falling back to the generic
+    // flag here is what made Scraper claim a live magazine had stopped
+    // publishing — the chip is the only text most people read.
+    var chip = (stale && it.retiredLabel) ? it.retiredLabel : it.flag;
+    var flagTitle = it.retiredNote ? ' title="' + scEsc(it.retiredNote) + '"' : '';
+    var flag = chip
+      ? '<span class="wd-int-flag' + (stale ? ' ended' : '') + '"' + flagTitle + '>' + scEsc(chip) + '</span>'
       : '';
+    // The disabled-toggle tooltip is type-aware: Profiler owns company
+    // coverage, the roster owns sources, and conflating them is the same bug.
+    var offTitle = it.retiredNote ? it.retiredNote
+      : (it.type === 'source' ? 'Removed from the source roster — kept for history'
+                              : 'No longer covered by Profiler — kept for history');
     return '<div class="' + cls + '">'
       + '<span class="wd-int-name" title="' + scEsc(it.label + (it.categories ? ' · ' + it.categories : '')) + '">' + scEsc(it.label) + '</span>'
       + flag
       + '<button type="button" class="wd-tg' + (it.enabled ? ' on' : '') + '" data-key="' + scEsc(it.key) + '"'
       + (stale
-        ? ' disabled title="No longer covered by Profiler — kept for history"'
+        ? ' disabled title="' + scEsc(offTitle) + '"'
         : ' title="' + (it.enabled ? 'On — counts toward digest relevance' : 'Off — excluded from digests') + '"')
       + '></button></div>';
   }
