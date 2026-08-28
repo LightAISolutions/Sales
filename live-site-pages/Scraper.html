@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.44w">
+  <meta name="build-version" content="v01.45w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -1067,6 +1067,8 @@
           <span class="wd-card-title">⟳ Profiler sync</span>
           <span class="wd-note" id="wd-sync-status">No sync data yet</span>
           <button class="wd-link" id="wd-sync-now" type="button">Sync now</button>
+          <button class="wd-link" id="wd-mine-all" type="button">Read all dossiers</button>
+          <span class="wd-note" id="wd-mine-status"></span>
         </div>
         <div class="wd-card">
           <span class="wd-card-title">Rubric tester</span>
@@ -6862,6 +6864,8 @@
     });
     var syncBtn = $sc('wd-sync-now');
     if (syncBtn) syncBtn.addEventListener('click', wdSyncNow_);
+    var mineBtn = $sc('wd-mine-all');
+    if (mineBtn) mineBtn.addEventListener('click', wdMineAll_);
     var rubricBtn = $sc('wd-rubric-btn');
     if (rubricBtn) rubricBtn.addEventListener('click', wdRubricScore_);
     var coList = $sc('wd-co-list'), tpList = $sc('wd-tp-list'), srcList = $sc('wd-src-list'),
@@ -7098,7 +7102,12 @@
       .then(function(data) {
         if (data && data.success) {
           var r = data.result || {};
-          if (r.skipped) {
+          if (r.skipped === 'locked') {
+            // Pressing again while the previous press is still running is the
+            // single most common reason the tile "never moves" — say so.
+            scToast('A sync is already running — wait for it to finish rather than '
+              + 'pressing again. Use "Read all dossiers" to do the whole fleet in one go.', true);
+          } else if (r.skipped) {
             scToast('Sync skipped (' + r.skipped + ').');
           } else {
             // Report the dossier pass explicitly. Without this the only signal
@@ -7124,6 +7133,69 @@
         scToast('Sync failed (' + scEsc((err && err.message) || err) + '). Please try again.', true);
       })
       .then(function() { if (btn) { btn.disabled = false; btn.textContent = 'Sync now'; } });
+  }
+
+  /** "Read all dossiers" — drain the whole mining queue, however many rounds
+      that takes. The server call is bounded by the GAS execution limit, so it
+      returns `remaining > 0` when it ran out of time; this simply calls again
+      and keeps a running total, which is why the developer never has to guess
+      how many presses are left. Stops on no-progress rather than looping
+      forever when every remaining company is genuinely unreadable. */
+  function wdMineAll_() {
+    var btn = $sc('wd-mine-all');
+    var out = $sc('wd-mine-status');
+    var totals = { read: 0, noDossier: 0, failed: 0 };
+    var errors = [];
+    var rounds = 0;
+    if (btn) { btn.disabled = true; btn.textContent = 'Reading…'; }
+
+    function say(t) { if (out) out.textContent = t; }
+
+    function round() {
+      rounds++;
+      say('Reading dossiers… ' + totals.read + ' done so far (round ' + rounds + ')');
+      return _gasPost({ action: 'mineAllDossiers', token: scToken() }).then(function(data) {
+        if (!data || !data.success) {
+          if (data && data.error === 'busy') {
+            throw new Error('Another sync is still running — try again in a minute.');
+          }
+          throw new Error(scErrMsg(data && data.error));
+        }
+        var r = data.result || {};
+        totals.read += r.read || 0;
+        totals.noDossier += r.noDossier || 0;
+        totals.failed += r.failed || 0;
+        (r.errors || []).forEach(function(e) { if (errors.length < 8) errors.push(e); });
+        var progressed = (r.read || 0) + (r.noDossier || 0) > 0;
+        if (r.remaining > 0 && progressed && rounds < 12) return round();
+        if (r.remaining > 0 && !progressed) {
+          // Every remaining company threw. Surfacing this is the whole point of
+          // the change — previously it looked like the button did nothing.
+          throw new Error(r.remaining + ' dossier(s) could not be read: '
+            + (errors.join('; ') || 'no detail returned'));
+        }
+        return r;
+      });
+    }
+
+    round().then(function() {
+      var msg = 'Read ' + totals.read + ' dossier' + (totals.read === 1 ? '' : 's');
+      if (totals.noDossier) msg += ', ' + totals.noDossier + ' had no published dossier';
+      if (totals.failed) msg += ', ' + totals.failed + ' failed';
+      msg += '. Coverage complete.';
+      say(msg);
+      scToast(msg);
+      if (errors.length) scToast('Details: ' + errors.join('; '), true);
+      wdInterestsLoad_();
+      wdLandingLoad_();
+    }).catch(function(err) {
+      var m = (err && err.message) || String(err);
+      say('Stopped: ' + m);
+      scToast('Dossier read stopped — ' + scEsc(m), true);
+      wdLandingLoad_();   // show whatever progress did commit
+    }).then(function() {
+      if (btn) { btn.disabled = false; btn.textContent = 'Read all dossiers'; }
+    });
   }
 
   function wdRubricScore_() {

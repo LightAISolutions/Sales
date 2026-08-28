@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.50g] — 2026-08-27 10:55:12 PM EST — v03.17r
+
+### Added
+- **Read all dossiers.** A single action now works through every covered company's briefing in one go instead of a few per sync, continuing automatically until the whole list is done. It reports how many were read, how many have no briefing published yet, and how many could not be read
+
+### Fixed
+- Reading briefings no longer saves each company one at a time. The whole batch is saved in a single write at the end, which is dramatically faster and means progress is kept even if a pass runs out of time partway through
+- A company that cannot be read is now reported with the reason instead of being skipped in silence, so a stalled list explains itself
+- Starting a sync while one is already running now says so plainly rather than appearing to do nothing
 
 ## [v01.49g] — 2026-08-27 10:30:53 PM EST — v03.16r
 

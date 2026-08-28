@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.17r] — 2026-08-27 10:55:12 PM EST
+
+> **Prompt:** "I pressed "Sync now" a couple times and refreshed, but the "Dossier read" number never changed - It's still 27. Can you just force Scraper to sit here and read through all of Profiler's dossiers?"
+
+### Added
+- **`scMineDossiersAll_` + `mineAllDossiers` + a "Read all dossiers" button** — a forced drain that does what the developer asked for directly. It differs from `scMineDossiersStep_` in three ways that each matter: **(1) no per-pass cap** — the paced pass reads at most `SCRAPER_DOSSIER_MINE_PRIORITY_MAX` (30) because it is a trickle riding along with the daily sync; this reads the entire queue. **(2) batched writes** — the paced pass issues two `setValue` calls per company (Aliases, then Notes), so a full 88-company fleet costs ~176 individual Sheets round-trips, which is what actually consumed the wall-clock budget; the drain mutates the columns in memory and commits them with **one `setValues` per column**. **(3) it reports failures** — see below. `SCRAPER_DOSSIER_DRAIN_BUDGET_MS = 240000` keeps a call inside the 6-minute GAS execution limit and returns `remaining`; the client loops until that reaches 0 (capped at 12 rounds), so the developer presses once
+- Partial progress is **always** persisted — the write-back is in a `finally`, so a timeout, a thrown fetch or a bad dossier still commits everything read up to that point
+
+### Fixed
+- **`catch (mErr) {}` in `scMineDossiersStep_` is why this was undiagnosable.** A company that could not be read was indistinguishable from one that was never reached: the pass returned a lower `mined` count with no indication that anything had failed, so a queue stuck behind unreadable rows looked exactly like a queue that was simply slow. The drain counts `read` / `noDossier` / `failed` separately and returns the first 8 error messages with their slugs; the client renders them. **This is the change that will actually explain the developer's stall** — the previous two pushes fixed real bugs (v03.14r the clobber, v03.16r the tile repaint) but neither could surface a per-company failure, which is the remaining candidate
+- **`lock.tryLock(5000)` made repeated pressing counter-productive.** `scSyncInterests_` returns `{ skipped: 'locked' }` when it cannot take the script lock within 5s, and a sync holds that lock for its whole run. So pressing *Sync now* a second time while the first was still working returned `skipped: locked` and did nothing — pressing "a couple times" in a row is close to the worst possible input. The client now says this in plain language instead of the opaque `Sync skipped (locked).`, and `mineAllDossiers` waits **45s** for the lock because an explicit "do it now" action should queue rather than bounce
+
+### Notes
+- **Ruled out first:** the live deployment was queried at `?action=api&op=deploy` and answered `Already up to date (v01.49g)`, so the previous fix *was* deployed and the stall is genuine rather than a stale deploy. All 88 slugs in `profiler-companies.json` have a matching `*.profile.json` in `live-site-pages/profiler-data/` (avg ~30 KB), so a mass 404 is not the explanation either
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **9 assertions** across two Playwright scenarios driving the real page. *Drain*: tile goes `27/88 (+61)` → `88/88` across 3 automatic rounds with **no Refresh pressed**, server-side queue fully drained, status line reads `Read 61 dossiers. Coverage complete.` *Stuck queue*: when every remaining company fails, the run **stops after one round** instead of looping, names the blocked count, surfaces the real error text (`vantage: Address unavailable`), and re-enables the button. Zero page errors in both
+- Test-harness note: `page.add_init_script` is the wrong hook for stubbing `_gasPost` on this page — the page's own inline definition runs later and overwrites it. The stub must be installed with `page.evaluate` **after** load and before `_scraperInit()`, wrapped as `() => { … }` so Playwright does not treat a trailing function expression as the callable
+- **`Scraper.gs`** VERSION v01.49g → v01.50g; **`Scraper.html`** v01.44w → v01.45w; version files synced; public entries added. **The GAS changelog is now at 50/50 — the next push that touches `Scraper.gs` must rotate it** (page counter 45/50)
 
 ## [v03.16r] — 2026-08-27 10:30:53 PM EST
 

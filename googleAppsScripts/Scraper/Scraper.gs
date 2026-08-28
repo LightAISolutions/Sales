@@ -1,4 +1,4 @@
-var VERSION = "v01.49g";
+var VERSION = "v01.50g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -380,6 +380,7 @@ var SCRAPER_MAX_PROJECTS_PER_USER = 10;
 // function bodies and Sheets data are untouched pending a cleanup pass.
 var SCRAPER_PROJECT_ACTIONS = ['getSchedulerHealth',
                                'listInterests', 'setInterestEnabled', 'syncInterestsNow',
+                               'mineAllDossiers',
                                'rubricPreview',
                                'runDigestNow', 'getDigestStatus', 'listDigests', 'getDigest',
                                'deleteDigest',
@@ -622,6 +623,11 @@ var SCRAPER_DOSSIER_MINE_BUDGET_MS = 60000;  // wall-clock guard for the SCHEDUL
 // (showing the old count), and the results appeared minutes later 'on their
 // own'. Interactive syncs get a shorter budget and report what they did.
 var SCRAPER_DOSSIER_MINE_BUDGET_INTERACTIVE_MS = 25000;
+// Forced full-drain budget ("Read all dossiers"). GAS kills an execution at
+// 6 minutes, so this stops well short and reports what is left — the client
+// simply calls again. Unlike the paced passes above this ignores the
+// per-pass company cap entirely: the point is to finish, not to trickle.
+var SCRAPER_DOSSIER_DRAIN_BUDGET_MS = 240000;
 var SCRAPER_HELD_BACK_MAX = 25;        // held-back items stored per edition (rollup feed)
 
 // D1 (2026-08-27): 30-source free trade-press roster — 3rd-party outlets only
@@ -4648,6 +4654,117 @@ function scMineDossiersStep_(ss, budgetMs) {
   return { mined: done, pending: Math.max(0, priority - done) };
 }
 
+/** Forced full drain — the "Read all dossiers" button.
+
+    Three things make this finish where the paced pass stalls:
+
+    1. NO PER-PASS CAP. `scMineDossiersStep_` reads at most
+       SCRAPER_DOSSIER_MINE_PRIORITY_MAX companies because it is a background
+       trickle riding along with the daily sync. This reads the whole queue.
+    2. BATCHED WRITES. The paced pass issues two setValue() calls per company
+       (Aliases, then Notes) — ~176 individual Sheets round-trips for a full
+       fleet, which is what actually consumed the wall-clock budget. Here the
+       columns are mutated in memory and written back with ONE setValues each,
+       so the pass is bounded by dossier fetches rather than by sheet I/O.
+    3. IT REPORTS FAILURES. The paced pass swallows every error
+       (`catch (mErr) {}`), so a company that cannot be read looks identical
+       to one that was never reached — a queue stuck behind bad rows is
+       invisible. Outcomes are counted and the first few messages returned.
+
+    Partial progress is ALWAYS persisted: the write-back is in a finally, so a
+    timeout, a bad dossier or a thrown fetch still commits everything read up
+    to that point. `remaining > 0` means call again. */
+function scMineDossiersAll_(ss) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+  if (!sheet) return { ok: false, error: 'no_interests_tab' };
+  var data = sheet.getDataRange().getValues();
+  var rows = data.length - 1;
+  if (rows < 1) return { ok: true, read: 0, noDossier: 0, failed: 0, remaining: 0, errors: [] };
+
+  var queue = [];
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][1]) !== 'company' || String(data[i][4]) !== 'active') continue;
+    var minedAt = Number(scNotesGetTag_(data[i][13], 'mined')) || 0;
+    if (!minedAt) { queue.push(i); continue; }
+    var pUpd = new Date(String(data[i][10] || '')).getTime();
+    if (pUpd && pUpd > minedAt) queue.push(i);
+  }
+
+  var t0 = Date.now();
+  var read = 0, noDossier = 0, failed = 0, errors = [], touched = false, n = 0;
+  try {
+    for (n = 0; n < queue.length; n++) {
+      if (Date.now() - t0 > SCRAPER_DOSSIER_DRAIN_BUDGET_MS) break;
+      var ri = queue[n];
+      var slug = String(data[ri][0]);
+      try {
+        var resp = UrlFetchApp.fetch(SCRAPER_DOSSIER_BASE + slug + '.profile.json?_cb=' + Date.now(),
+          { muteHttpExceptions: true });
+        var code = resp.getResponseCode();
+        if (code !== 200) {
+          // Same contract as the paced pass: stamp it so the queue moves on
+          // rather than retrying an absent dossier forever. Counted separately
+          // so "read" never overstates what was actually learned.
+          data[ri][13] = scNotesSetTag_(String(data[ri][13] || ''), 'mined', String(Date.now()));
+          noDossier++; touched = true;
+          if (errors.length < 8) errors.push(slug + ': HTTP ' + code);
+          continue;
+        }
+        var mined = scMineDossier_(JSON.parse(resp.getContentText()));
+        var existing = String(data[ri][7] || '').split(/[\n,]/)
+          .map(function(t) { return t.trim(); }).filter(Boolean);
+        var lower = {};
+        existing.forEach(function(t) { lower[t.toLowerCase()] = true; });
+        mined.terms.forEach(function(t) {
+          if (!lower[t.toLowerCase()]) { existing.push(t); lower[t.toLowerCase()] = true; }
+        });
+        data[ri][7] = existing.slice(0, 40).join(', ');
+        var notes = scNotesSetTag_(String(data[ri][13] || ''), 'seg', mined.segments.join('|'));
+        data[ri][13] = scNotesSetTag_(notes, 'mined', String(Date.now()));
+        read++; touched = true;
+      } catch (mErr) {
+        // Recorded, not swallowed — an unreadable dossier is left unstamped so
+        // it retries, but the developer can now SEE that it is the blocker.
+        failed++;
+        if (errors.length < 8) errors.push(slug + ': ' + ((mErr && mErr.message) || mErr));
+      }
+    }
+  } finally {
+    if (touched) {
+      var aliasCol = [], notesCol = [];
+      for (var w = 1; w < data.length; w++) {
+        aliasCol.push([data[w][7]]);
+        notesCol.push([data[w][13]]);
+      }
+      sheet.getRange(2, 8, rows, 1).setValues(aliasCol);
+      sheet.getRange(2, 14, rows, 1).setValues(notesCol);
+      SpreadsheetApp.flush();
+    }
+  }
+  return { ok: true, read: read, noDossier: noDossier, failed: failed,
+           errors: errors, remaining: Math.max(0, queue.length - n),
+           queued: queue.length, elapsedMs: Date.now() - t0 };
+}
+
+/** "Read all dossiers" — drain the mining queue in one call.
+
+    A longer lock wait than the paced sync on purpose: the failure mode the
+    developer hit was pressing a button whose previous run still held the
+    5-second lock, so the press returned `skipped: locked` and nothing moved.
+    Waiting is the correct behaviour for an explicit "do it now" action. */
+function mineAllDossiers(sessionToken) {
+  validateSessionForData(sessionToken, 'mineAllDossiers');
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(45000)) return { success: false, error: 'busy' };
+  try {
+    var ss = scraperSs_();
+    ensureScraperTabs_(ss);
+    return { success: true, result: scMineDossiersAll_(ss) };
+  } finally {
+    lock.releaseLock();
+  }
+}
+
 /** Mining coverage for the status strip: how many covered companies have been
     read, how many are queued, and when the fleet was last touched. */
 function scDossierMiningStats_(ss) {
@@ -4873,6 +4990,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'listInterests') return listInterests(sessionToken);
   if (op === 'setInterestEnabled') return setInterestEnabled(sessionToken, param('key'), param('enabled'));
   if (op === 'syncInterestsNow') return syncInterestsNow(sessionToken);
+  if (op === 'mineAllDossiers') return mineAllDossiers(sessionToken);
   if (op === 'rubricPreview') return rubricPreview(sessionToken, param('payload'));
   if (op === 'runDigestNow') return runDigestNow(sessionToken, param('editionId'));
   if (op === 'getDigestStatus') return getDigestStatus(sessionToken);

@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 44/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.45w] — 2026-08-27 10:55:12 PM EST — v03.17r
+
+### Added
+- **"Read all dossiers" button** next to Sync now. It keeps going by itself until every covered company has been read, showing a running count as it works, and finishes with a plain summary — no repeated pressing and no guessing how many rounds are left
+
+### Changed
+- If a run stops early, the message now names what blocked it and how many are left, and whatever progress was made is kept
+- Pressing Sync now while a sync is already running gives a clear explanation instead of a silent no-op
 
 ## [v01.44w] — 2026-08-27 10:30:53 PM EST — v03.16r
 
