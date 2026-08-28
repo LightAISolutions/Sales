@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.51w">
+  <meta name="build-version" content="v01.52w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -526,13 +526,94 @@
                     text-transform: uppercase; color: var(--wd-mut2); }
     .wd-stat.ok b { color: var(--wd-green-ink); }
     .wd-stat.warn b { color: var(--wd-warn); }
-    #wd-recent-strip { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 10px; }
-    #wd-recent-strip:empty { display: none; }
-    .wd-recent-chip { flex: 0 0 auto; border: 1px solid var(--wd-line-soft); background: var(--wd-panel);
-                      border-radius: 4px; padding: 5px 10px; font-family: var(--wd-mono); font-size: 11px;
-                      color: var(--wd-mut); cursor: pointer; white-space: nowrap; }
-    .wd-recent-chip:hover { color: var(--wd-ink); border-color: var(--wd-accent); }
-    .wd-recent-chip.on { background: var(--wd-green-bg); border-color: var(--wd-green-line); color: var(--wd-green-ink); }
+    /* ── News Stand ──────────────────────────────────────────────────────
+       Replaces the flat recent-editions chip strip. The approved mockup put
+       the masthead list in a vertical rail; here it runs horizontally instead,
+       because this page already spends both side columns on the Interests and
+       Drivers rails and a third one would leave the issue grid too narrow to
+       read. The roll-up counts and one-click filtering are unchanged. */
+    /* A class that sets `display` outranks the UA rule behind [hidden], so the
+       view containers below would all render at once without this. */
+    [hidden] { display: none !important; }
+    #wd-ns { margin-bottom: 12px; }
+    .wd-ns-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+    .wd-ns-views { display: flex; border: 1px solid var(--wd-line-soft); border-radius: 4px; overflow: hidden; flex: 0 0 auto; }
+    .wd-ns-view { font: inherit; font-size: 11.5px; padding: 5px 11px; cursor: pointer;
+      background: var(--wd-panel); border: none; border-right: 1px solid var(--wd-line-soft); color: var(--wd-mut); }
+    .wd-ns-view:last-child { border-right: none; }
+    .wd-ns-view.on { background: var(--wd-accent); color: var(--wd-on-accent); font-weight: 600; }
+    .wd-ns-search { display: flex; align-items: center; gap: 6px; flex: 1 1 170px; min-width: 0;
+      background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft); border-radius: 4px;
+      padding: 0 9px; color: var(--wd-faint); }
+    .wd-ns-search input { flex: 1; min-width: 0; background: none; border: none; color: var(--wd-ink);
+      font: inherit; font-size: 12px; padding: 6px 0; }
+    .wd-ns-search input:focus { outline: none; }
+    .wd-ns-search:focus-within { border-color: var(--wd-accent); }
+    .wd-ns-select { background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft); border-radius: 4px;
+      color: var(--wd-ink2); font: inherit; font-size: 11.5px; padding: 5px 7px; flex: 0 0 auto; }
+    .wd-ns-mastheads { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+    .wd-ns-mh { font-family: var(--wd-mono); font-size: 11px; line-height: 1; cursor: pointer;
+      padding: 5px 9px; border-radius: 999px; border: 1px solid var(--wd-line-soft);
+      background: var(--wd-chip-bg); color: var(--wd-chip-ink);
+      display: inline-flex; align-items: center; gap: 6px; }
+    .wd-ns-mh:hover { border-color: var(--wd-accent); color: var(--wd-ink); }
+    .wd-ns-mh.on { background: var(--wd-accent); border-color: var(--wd-accent);
+      color: var(--wd-on-accent); font-weight: 600; }
+    .wd-ns-mh.kid { padding-left: 7px; }
+    .wd-ns-mh .n { font-size: 10px; opacity: .75; font-variant-numeric: tabular-nums; }
+    .wd-ns-mh.zero { opacity: .45; }
+    .wd-ns-count { font-family: var(--wd-mono); font-size: 10.5px; color: var(--wd-faint); margin-bottom: 8px; }
+    .wd-ns-grid { display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); }
+    .wd-ns-card { background: var(--wd-panel); border: 1px solid var(--wd-line); border-radius: 5px;
+      padding: 10px; cursor: pointer; text-align: left; font: inherit; color: inherit;
+      display: flex; flex-direction: column; gap: 6px; transition: border-color .12s, transform .12s; }
+    .wd-ns-card:hover { border-color: var(--wd-accent); transform: translateY(-1px); }
+    .wd-ns-card.on { border-color: var(--wd-green-line); background: var(--wd-green-bg); }
+    .wd-ns-ed { font-family: var(--wd-mono); font-size: 9px; letter-spacing: .07em; text-transform: uppercase;
+      padding: 2px 5px; border-radius: 3px; border: 1px solid currentColor; align-self: flex-start; }
+    .wd-ns-date { font-family: var(--wd-mono); font-size: 10px; color: var(--wd-mut2); font-variant-numeric: tabular-nums; }
+    .wd-ns-hed { font-size: 12.5px; line-height: 1.3; color: var(--wd-ink);
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .wd-ns-hed.none { color: var(--wd-faint); font-style: italic; }
+    .wd-ns-foot { display: flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 5px;
+      border-top: 1px solid var(--wd-line); font-family: var(--wd-mono); font-size: 9.5px; color: var(--wd-faint); }
+    .wd-ns-bar-mini { flex: 1; height: 3px; border-radius: 2px; background: var(--wd-line-soft); overflow: hidden; }
+    .wd-ns-bar-mini i { display: block; height: 100%; background: var(--wd-accent); }
+    .wd-ns-cal { display: grid; gap: 4px; grid-template-columns: repeat(7, 1fr); }
+    .wd-ns-calh { font-family: var(--wd-mono); font-size: 9px; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--wd-faint); text-align: center; padding-bottom: 3px; }
+    .wd-ns-cald { background: var(--wd-bg-deep); border: 1px solid var(--wd-line); border-radius: 4px;
+      min-height: 50px; padding: 4px 5px; display: flex; flex-direction: column; gap: 3px;
+      text-align: left; font: inherit; cursor: default; }
+    .wd-ns-cald.void { background: none; border-color: transparent; }
+    .wd-ns-cald.has { cursor: pointer; }
+    .wd-ns-cald.has:hover { border-color: var(--wd-accent); }
+    .wd-ns-cald.today { border-color: var(--wd-accent); }
+    .wd-ns-caln { font-family: var(--wd-mono); font-size: 9.5px; color: var(--wd-faint); }
+    .wd-ns-cald.has .wd-ns-caln { color: var(--wd-ink2); }
+    .wd-ns-pip { width: 100%; height: 4px; border-radius: 2px; background: currentColor; opacity: .85; }
+    .wd-ns-key { display: flex; flex-wrap: wrap; gap: 5px 14px; margin-top: 9px;
+      font-family: var(--wd-mono); font-size: 10px; color: var(--wd-faint); }
+    .wd-ns-key span { display: inline-flex; align-items: center; gap: 5px; }
+    .wd-ns-key i { width: 13px; height: 4px; border-radius: 2px; background: currentColor; display: block; }
+    .wd-ns-tablewrap { overflow-x: auto; }
+    .wd-ns-tablewrap table { border-collapse: collapse; width: 100%; font-size: 11.5px; }
+    .wd-ns-tablewrap th { font-family: var(--wd-mono); font-size: 9px; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--wd-faint); text-align: left; padding: 5px 8px;
+      border-bottom: 1px solid var(--wd-line-soft); white-space: nowrap; }
+    .wd-ns-tablewrap td { padding: 6px 8px; border-bottom: 1px solid var(--wd-line); color: var(--wd-mut); }
+    .wd-ns-tablewrap tbody tr { cursor: pointer; }
+    .wd-ns-tablewrap tbody tr:hover td { background: var(--wd-panel); color: var(--wd-ink2); }
+    .wd-ns-tablewrap td.hed { color: var(--wd-ink2); min-width: 200px; }
+    .wd-ns-more { margin-top: 10px; text-align: center; }
+    .wd-ns-empty { font-family: var(--wd-mono); font-size: 11.5px; color: var(--wd-faint); padding: 14px 0; }
+    /* Masthead accents cycle so each edition is identifiable at a glance. */
+    .wd-ed-c0 { color: var(--wd-accent); }
+    .wd-ed-c1 { color: var(--wd-green-ink); }
+    .wd-ed-c2 { color: #7fb3d7; }
+    .wd-ed-c3 { color: #c9a2d8; }
+    .wd-ed-c4 { color: var(--wd-warn); }
+    .wd-ed-c5 { color: #d79a8a; }
     #wd-edition-view { border: 1px solid var(--wd-line); border-radius: 6px; overflow: hidden; background: var(--wd-bg-deep); }
     #wd-drivers { margin-top: 12px; }
     .wd-driver-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
@@ -1111,7 +1192,35 @@
           <span class="wd-title" id="wd-edition-title">Latest edition</span>
           <span class="wd-sub" id="wd-edition-sub"></span>
         </div>
-        <div id="wd-recent-strip"></div>
+        <div id="wd-ns">
+          <div class="wd-ns-bar">
+            <div class="wd-ns-views" role="tablist" aria-label="Archive view">
+              <button class="wd-ns-view on" data-view="grid" type="button" role="tab" aria-selected="true">News Stand</button>
+              <button class="wd-ns-view" data-view="cal" type="button" role="tab" aria-selected="false">Calendar</button>
+              <button class="wd-ns-view" data-view="table" type="button" role="tab" aria-selected="false">Table</button>
+            </div>
+            <label class="wd-ns-search">
+              <span aria-hidden="true">⌕</span>
+              <input id="wd-ns-q" type="search" placeholder="Search lead stories and editions…"
+                     autocomplete="off" spellcheck="false" aria-label="Search past editions">
+            </label>
+            <select id="wd-ns-range" class="wd-ns-select" aria-label="Date range">
+              <option value="0">Any date</option>
+              <option value="7">Last 7 days</option>
+              <option value="30" selected>Last 30 days</option>
+              <option value="90">Last 90 days</option>
+            </select>
+          </div>
+          <div id="wd-ns-mastheads" class="wd-ns-mastheads"></div>
+          <div id="wd-ns-count" class="wd-ns-count"></div>
+          <div id="wd-ns-grid" class="wd-ns-grid"></div>
+          <div id="wd-ns-calwrap" hidden>
+            <div id="wd-ns-cal" class="wd-ns-cal"></div>
+            <div id="wd-ns-key" class="wd-ns-key"></div>
+          </div>
+          <div id="wd-ns-table" class="wd-ns-tablewrap" hidden></div>
+          <div id="wd-ns-more" class="wd-ns-more"></div>
+        </div>
         <div id="wd-edition-view">
           <span class="wd-loading" style="display:block;padding:16px;">Loading the latest edition…</span>
         </div>
@@ -1227,6 +1336,7 @@
             </select>
             <input type="number" id="wd-ed-anchor" min="0" max="31" placeholder="Day" title="Weekly: 1=Mon…7=Sun. Monthly: day of month.">
             <select id="wd-ed-preset" title="What this edition starts out following. You can change any switch afterwards."></select>
+            <select id="wd-ed-parent" title="Make this a variant of another edition — the News Stand groups variants under their parent and a parent's filter includes them"></select>
             <button class="sc-btn primary" id="wd-ed-add" type="button">Add edition</button>
           </div>
           <div id="wd-ed-note" class="wd-hint"></div>
@@ -5085,35 +5195,91 @@
   // ── Phase 5 landing page ────────────────────────────────────────────────
   var _wdEditions = [], _wdDigests = [];
 
-  /** Load the landing view: status strip, recent editions, latest edition. */
+  /** News Stand state. `total` and `counts` come from the server so the
+      masthead counts describe the whole archive, not the page in hand. */
+  var _wdNs = { view: 'grid', ed: 'all', q: '', range: 30, offset: 0,
+                total: 0, counts: { all: 0, byEdition: {} }, current: '' };
+  var _wdNsPage = 24;
+  var _wdNsQTimer = null;
+
+  /** The filter set, as listDigests wants it. */
+  function wdNsPayload_(offset) {
+    var p = { edition: _wdNs.ed, q: _wdNs.q, offset: offset || 0, limit: _wdNsPage };
+    if (_wdNs.range) {
+      var d = new Date(Date.now() - _wdNs.range * 86400000);
+      p.from = d.getFullYear() + '-' + wdNsPad_(d.getMonth() + 1) + '-' + wdNsPad_(d.getDate());
+    }
+    return JSON.stringify(p);
+  }
+  function wdNsPad_(n) { return (n < 10 ? '0' : '') + n; }
+
+  /** Load the landing view: status strip, the News Stand, and the open edition. */
   function wdLandingLoad_() {
     var btn = $sc('sc-refresh-btn');
     if (btn) { btn.disabled = true; btn.textContent = 'Loading…'; }
+    _wdNs.offset = 0;
     Promise.all([
-      _gasPost({ action: 'listDigests', token: scToken(), limit: '12' }).catch(function(){ return null; }),
+      _gasPost({ action: 'listDigests', token: scToken(), payload: wdNsPayload_(0) })
+        .catch(function(){ return null; }),
       _gasPost({ action: 'goLiveStatus', token: scToken() }).catch(function(){ return null; }),
       _gasPost({ action: 'listEditions', token: scToken() }).catch(function(){ return null; })
     ]).then(function(res) {
       var dg = res[0], gl = res[1], ed = res[2];
-      _wdDigests = (dg && dg.success && dg.digests) ? dg.digests : [];
+      wdNsAbsorb_(dg, false);
       _wdEditions = (ed && ed.success && ed.editions) ? ed.editions : [];
       if (ed && ed.presets) { _wdPresets = ed.presets; wdPresetFill_('wd-ed-preset', 'all'); }
-      wdScopeFill_(); wdDigestEditionsFill_();
+      wdScopeFill_(); wdDigestEditionsFill_(); wdEdParentFill_();
       wdRenderStatusStrip_(gl && gl.success ? gl : null);
-      wdRenderRecentStrip_();
+      wdNsRender_();
       var empty = $sc('sc-empty');
-      if (!_wdDigests.length) {
-        if (empty) empty.style.display = '';
+      // "No editions at all" and "none match these filters" are different
+      // states — only the first is the first-run message, and showing it while
+      // a filter is active would read as though the archive had been lost.
+      var noneAtAll = !_wdDigests.length && !_wdNs.counts.all
+                      && _wdNs.ed === 'all' && !_wdNs.q && !_wdNs.range;
+      if (empty) empty.style.display = noneAtAll ? '' : 'none';
+      if (_wdDigests.length) {
+        wdLandingShowEdition_(_wdDigests[0].id);
+      } else {
         $sc('wd-edition-view').innerHTML = '';
         $sc('wd-edition-sub').textContent = '';
-      } else {
-        if (empty) empty.style.display = 'none';
-        wdLandingShowEdition_(_wdDigests[0].id);
       }
       wdRenderDrivers_();
     }).then(function() {
       if (btn) { btn.disabled = false; btn.textContent = 'Refresh'; }
     });
+  }
+
+  /** Fold one listDigests response into state. `append` keeps what is already
+      on screen (the Load more path) rather than replacing it. */
+  function wdNsAbsorb_(dg, append) {
+    if (!dg || !dg.success) {
+      if (!append) { _wdDigests = []; _wdNs.total = 0; _wdNs.counts = { all: 0, byEdition: {} }; }
+      return;
+    }
+    var page = dg.digests || [];
+    _wdDigests = append ? _wdDigests.concat(page) : page;
+    _wdNs.total = Number(dg.total) || 0;
+    _wdNs.counts = dg.counts || { all: 0, byEdition: {} };
+    _wdNs.offset = (Number(dg.offset) || 0) + page.length;
+  }
+
+  /** Re-query with the current filters. Always resets to the first page —
+      a filter change invalidates whatever offset was in hand. */
+  function wdNsReload_() {
+    var host = $sc('wd-ns-grid');
+    if (host && _wdNs.view === 'grid') host.innerHTML = '<span class="wd-loading">Loading…</span>';
+    return _gasPost({ action: 'listDigests', token: scToken(), payload: wdNsPayload_(0) })
+      .then(function(dg) { wdNsAbsorb_(dg, false); wdNsRender_(); })
+      .catch(function() { wdNsAbsorb_(null, false); wdNsRender_(); });
+  }
+
+  function wdNsLoadMore_() {
+    var btn = $sc('wd-ns-more').querySelector('button');
+    if (btn) { btn.disabled = true; btn.textContent = 'Loading…'; }
+    return _gasPost({ action: 'listDigests', token: scToken(), payload: wdNsPayload_(_wdNs.offset) })
+      .then(function(dg) { wdNsAbsorb_(dg, true); wdNsRender_(); })
+      .catch(function() { wdNsRender_(); });
   }
 
   var _wdDiagForced = false;   // ⚙ pressed this session — keep diagnostics visible
@@ -5162,7 +5328,9 @@
           mn.pending ? 'warn' : 'ok');
       }
     }
-    html += tile('Editions kept', String(_wdDigests.length));
+    // The whole archive, not the page currently loaded — the News Stand
+    // pages its results, so _wdDigests.length is a window, not a total.
+    html += tile('Editions kept', String(_wdNs.counts.all || _wdNs.total || _wdDigests.length));
     strip.innerHTML = html;
   }
 
@@ -5183,24 +5351,202 @@
       .catch(function() {});
   }
 
-  function wdRenderRecentStrip_() {
-    var strip = $sc('wd-recent-strip');
-    if (!strip) return;
-    // The edition name is on the chip because three editions now share the
-    // same date — without it every chip reads identically and picking the
-    // right issue is guesswork. The archive redesign builds on this.
-    strip.innerHTML = _wdDigests.map(function(d) {
-      return '<button type="button" class="wd-recent-chip" data-id="' + scEsc(d.id) + '" title="'
-        + scEsc((d.editionName || '') + ' · ' + d.date) + '">'
-        + scEsc(d.date) + (d.editionName ? ' · ' + scEsc(d.editionName) : '')
-        + ' · ' + Number(d.relevantCount) + '</button>';
+  /** ---- News Stand rendering ------------------------------------------- */
+
+  var _wdNsDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var _wdNsMon = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  /** A stable accent per edition, assigned by position in the masthead list so
+      the same edition keeps the same colour across the grid, the calendar pips
+      and the legend. */
+  function wdNsEdClass_(id) {
+    for (var i = 0; i < (_wdEditions || []).length; i++) {
+      if (_wdEditions[i].id === id) return 'wd-ed-c' + (i % 6);
+    }
+    return 'wd-ed-c0';
+  }
+  /** A short badge label for an edition. Card badges sit on a ~170px column, so
+      a long masthead has to be shortened rather than allowed to set the card
+      width — the parenthetical is the distinguishing part when there is one. */
+  function wdNsEdShort_(d) {
+    var name = d.editionName || d.edition || '';
+    var paren = name.match(/\(([^)]+)\)\s*$/);   // "The Morning Edition (BESS)" → BESS
+    var out = paren ? paren[1]
+                    : name.replace(/^The\s+/i, '').replace(/\s+Edition$/i, '');
+    out = out || String(d.edition || '');
+    return out.length > 13 ? out.slice(0, 12) + '…' : out;
+  }
+  /** 'YYYY-MM-DD' → local Date, without the UTC shift `new Date(str)` applies. */
+  function wdNsDate_(s) {
+    var m = String(s || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+    return m ? new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3])) : null;
+  }
+
+  function wdNsRender_() {
+    wdNsRenderMastheads_();
+    ['grid', 'calwrap', 'table'].forEach(function(v) {
+      var el = $sc('wd-ns-' + v);
+      if (el) el.hidden = (v === 'calwrap' ? 'cal' : v) !== _wdNs.view;
+    });
+    if (_wdNs.view === 'grid') wdNsRenderGrid_();
+    else if (_wdNs.view === 'cal') wdNsRenderCal_();
+    else wdNsRenderTable_();
+
+    var edLabel = 'all editions';
+    for (var i = 0; i < (_wdEditions || []).length; i++) {
+      if (_wdEditions[i].id === _wdNs.ed) edLabel = _wdEditions[i].name;
+    }
+    var shown = _wdNs.view === 'cal' ? 'this month' : 'showing ' + _wdDigests.length;
+    $sc('wd-ns-count').textContent = _wdNs.total + ' issue' + (_wdNs.total === 1 ? '' : 's')
+      + ' · ' + edLabel + (_wdNs.q ? ' · matching “' + _wdNs.q + '”' : '')
+      + ' · ' + shown;
+
+    // "Load more" only means anything in the paged views.
+    var more = $sc('wd-ns-more');
+    if (more) {
+      var hasMore = _wdNs.view !== 'cal' && _wdDigests.length < _wdNs.total;
+      more.innerHTML = hasMore
+        ? '<button class="sc-btn" type="button" id="wd-ns-more-btn">Load '
+          + Math.min(_wdNsPage, _wdNs.total - _wdDigests.length) + ' more</button>'
+        : '';
+    }
+  }
+
+  function wdNsRenderMastheads_() {
+    var host = $sc('wd-ns-mastheads');
+    if (!host) return;
+    var counts = _wdNs.counts.byEdition || {};
+    // A parent's count includes its variants, so selecting "The Morning
+    // Edition" and selecting its BESS variant are visibly different filters.
+    function rollUp(id) {
+      var n = counts[id] || 0;
+      (_wdEditions || []).forEach(function(e) { if (e.parent === id) n += counts[e.id] || 0; });
+      return n;
+    }
+    function chip(id, label, kid, n) {
+      return '<button type="button" class="wd-ns-mh' + (kid ? ' kid' : '')
+        + (_wdNs.ed === id ? ' on' : '') + (n ? '' : ' zero') + '" data-ed="' + scEsc(id) + '">'
+        + (kid ? '↳ ' : '') + scEsc(label) + '<span class="n">' + n + '</span></button>';
+    }
+    var html = chip('all', 'All editions', false, _wdNs.counts.all || 0);
+    (_wdEditions || []).forEach(function(e) {
+      if (e.parent) return;
+      html += chip(e.id, e.name, false, rollUp(e.id));
+      (_wdEditions || []).forEach(function(c) {
+        if (c.parent === e.id) html += chip(c.id, wdNsEdShort_({ editionName: c.name, edition: c.id }),
+                                            true, counts[c.id] || 0);
+      });
+    });
+    // An edition whose parent has been deleted would otherwise be unreachable.
+    (_wdEditions || []).forEach(function(e) {
+      if (!e.parent) return;
+      for (var i = 0; i < _wdEditions.length; i++) if (_wdEditions[i].id === e.parent) return;
+      html += chip(e.id, e.name, false, counts[e.id] || 0);
+    });
+    host.innerHTML = html;
+  }
+
+  function wdNsRenderGrid_() {
+    var host = $sc('wd-ns-grid');
+    if (!host) return;
+    if (!_wdDigests.length) {
+      host.innerHTML = '<div class="wd-ns-empty">'
+        + (_wdNs.counts.all ? 'No editions match these filters.' : 'No editions stored yet.')
+        + '</div>';
+      return;
+    }
+    host.innerHTML = _wdDigests.map(function(d) {
+      var dt = wdNsDate_(d.date);
+      var pct = d.itemCount ? Math.round(d.relevantCount / d.itemCount * 100) : 0;
+      return '<button type="button" class="wd-ns-card' + (d.id === _wdNs.current ? ' on' : '')
+        + '" data-id="' + scEsc(d.id) + '">'
+        + '<span class="wd-ns-ed ' + wdNsEdClass_(d.edition) + '">' + scEsc(wdNsEdShort_(d)) + '</span>'
+        + '<span class="wd-ns-date">'
+        + (dt ? _wdNsDays[dt.getDay()] + ' ' + dt.getDate() + ' ' + _wdNsMon[dt.getMonth()] : scEsc(d.date))
+        + '</span>'
+        + '<span class="wd-ns-hed' + (d.lead ? '' : ' none') + '">'
+        + scEsc(d.lead || 'No lead recorded') + '</span>'
+        // Spelled out rather than left as a bare "32/148" — the ratio is
+        // meaningless on a card without saying what it counts.
+        + '<span class="wd-ns-foot" title="' + Number(d.relevantCount)
+        + ' stories cleared the relevance rubric out of ' + Number(d.itemCount) + ' scanned">'
+        + Number(d.relevantCount) + ' of ' + Number(d.itemCount) + ' relevant'
+        + '<span class="wd-ns-bar-mini"><i style="width:' + pct + '%"></i></span></span>'
+        + '</button>';
     }).join('');
   }
 
+  function wdNsRenderCal_() {
+    var host = $sc('wd-ns-cal');
+    if (!host) return;
+    // The calendar answers "what ran on a given day", so it always covers a
+    // whole month — anchored on the newest issue in view, not on today, or a
+    // filtered range would render an empty grid.
+    var anchor = wdNsDate_(_wdDigests.length ? _wdDigests[0].date : '') || new Date();
+    var y = anchor.getFullYear(), m = anchor.getMonth();
+    var byDay = {};
+    _wdDigests.forEach(function(d) { (byDay[d.date] = byDay[d.date] || []).push(d); });
+    var first = new Date(y, m, 1).getDay(), last = new Date(y, m + 1, 0).getDate();
+    var today = new Date();
+    var isThisMonth = today.getFullYear() === y && today.getMonth() === m;
+    var h = _wdNsDays.map(function(d) { return '<div class="wd-ns-calh">' + d + '</div>'; }).join('');
+    for (var i = 0; i < first; i++) h += '<div class="wd-ns-cald void"></div>';
+    for (var day = 1; day <= last; day++) {
+      var key = y + '-' + wdNsPad_(m + 1) + '-' + wdNsPad_(day);
+      var hits = byDay[key] || [];
+      h += '<button type="button" class="wd-ns-cald' + (hits.length ? ' has' : '')
+        + (isThisMonth && day === today.getDate() ? ' today' : '') + '"'
+        + (hits.length ? ' data-id="' + scEsc(hits[0].id) + '"' : ' disabled')
+        + ' title="' + scEsc(key + (hits.length ? ' · ' + hits.length + ' edition'
+            + (hits.length === 1 ? '' : 's') : ' · nothing built')) + '">'
+        + '<span class="wd-ns-caln">' + day + '</span>'
+        + hits.map(function(d) {
+            return '<span class="wd-ns-pip ' + wdNsEdClass_(d.edition) + '"></span>';
+          }).join('')
+        + '</button>';
+    }
+    host.innerHTML = h;
+    // Without a key the stripes are just colours; with one the month reads.
+    var seen = {}, key2 = $sc('wd-ns-key');
+    _wdDigests.forEach(function(d) { seen[d.edition] = d; });
+    if (key2) {
+      var parts = [];
+      (_wdEditions || []).forEach(function(e) {
+        if (!seen[e.id]) return;
+        parts.push('<span class="' + wdNsEdClass_(e.id) + '"><i></i>' + scEsc(e.name) + '</span>');
+      });
+      key2.innerHTML = parts.join('') || '<span>Nothing built in this range</span>';
+    }
+  }
+
+  function wdNsRenderTable_() {
+    var host = $sc('wd-ns-table');
+    if (!host) return;
+    if (!_wdDigests.length) {
+      host.innerHTML = '<div class="wd-ns-empty">'
+        + (_wdNs.counts.all ? 'No editions match these filters.' : 'No editions stored yet.')
+        + '</div>';
+      return;
+    }
+    host.innerHTML = '<table><thead><tr><th>Date</th><th>Edition</th>'
+      + '<th>Lead story</th><th>Relevant</th><th>Scanned</th></tr></thead><tbody>'
+      + _wdDigests.map(function(d) {
+          return '<tr data-id="' + scEsc(d.id) + '">'
+            + '<td class="wd-ns-date">' + scEsc(d.date) + '</td>'
+            + '<td class="' + wdNsEdClass_(d.edition) + '">' + scEsc(wdNsEdShort_(d)) + '</td>'
+            + '<td class="hed">' + scEsc(d.lead || '—') + '</td>'
+            + '<td>' + Number(d.relevantCount) + '</td>'
+            + '<td>' + Number(d.itemCount) + '</td></tr>';
+        }).join('')
+      + '</tbody></table>';
+  }
+
   function wdLandingShowEdition_(id) {
-    var chips = $sc('wd-recent-strip').querySelectorAll('.wd-recent-chip');
-    for (var i = 0; i < chips.length; i++) {
-      chips[i].classList.toggle('on', chips[i].getAttribute('data-id') === id);
+    _wdNs.current = id;
+    var cards = $sc('wd-ns-grid').querySelectorAll('.wd-ns-card');
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].classList.toggle('on', cards[i].getAttribute('data-id') === id);
     }
     var meta = null;
     for (var k = 0; k < _wdDigests.length; k++) if (_wdDigests[k].id === id) meta = _wdDigests[k];
@@ -5267,11 +5613,23 @@
         if (!d || !d.success) { host.textContent = scErrMsg(d && d.error); return; }
         _wdEditions = d.editions || [];
         if (d.presets) { _wdPresets = d.presets; wdPresetFill_('wd-ed-preset', 'all'); }
-        wdScopeFill_(); wdDigestEditionsFill_();
-        host.innerHTML = _wdEditions.map(function(e) {
+        wdScopeFill_(); wdDigestEditionsFill_(); wdEdParentFill_();
+        // Parents first, each followed by its own variants, so the list reads
+        // the same way the News Stand rail does.
+        var ordered = [];
+        _wdEditions.forEach(function(e) {
+          if (e.parent) return;
+          ordered.push(e);
+          _wdEditions.forEach(function(c) { if (c.parent === e.id) ordered.push(c); });
+        });
+        _wdEditions.forEach(function(e) {
+          if (e.parent && ordered.indexOf(e) === -1) ordered.push(e);   // orphaned variant
+        });
+        host.innerHTML = ordered.map(function(e) {
           var when = e.cadence === 'weekly' ? 'weekly (day ' + e.anchor + ')'
                    : e.cadence === 'monthly' ? 'monthly (day ' + e.anchor + ')' : 'weekdays';
-          return '<div class="wd-listrow"><span class="wd-grow">' + scEsc(e.name)
+          return '<div class="wd-listrow"><span class="wd-grow">'
+            + (e.parent ? '<span class="wd-meta">↳ </span>' : '') + scEsc(e.name)
             + '</span><span class="wd-meta">' + scEsc(when)
             + (e.lastBuilt ? ' · last ' + scEsc(e.lastBuilt) : '') + '</span>'
             + (e.id === 'morning' ? '' : '<button type="button" data-ed="' + scEsc(e.id) + '">Delete</button>')
@@ -5281,18 +5639,49 @@
       .catch(function(err) { host.textContent = 'Could not load (' + ((err && err.message) || err) + ')'; });
   }
 
+  /** Fill "Variant of…" with the editions that can legally be a parent.
+      Variants are capped at one level, so an edition that is already a variant
+      is not offered — nesting deeper would give the masthead rail a tree it
+      cannot draw and make cycles possible. */
+  function wdEdParentFill_() {
+    var sel = $sc('wd-ed-parent');
+    if (!sel) return;
+    var keep = sel.value;
+    var html = '<option value="">Standalone edition</option>';
+    (_wdEditions || []).forEach(function(e) {
+      if (e.parent) return;
+      html += '<option value="' + scEsc(e.id) + '">Variant of ' + scEsc(e.name) + '</option>';
+    });
+    sel.innerHTML = html;
+    if (keep) { sel.value = keep; if (!sel.value) sel.selectedIndex = 0; }
+  }
+
   function wdEditionAdd_() {
     var note = $sc('wd-ed-note');
     var payload = JSON.stringify({
       name: $sc('wd-ed-name').value, cadence: $sc('wd-ed-cadence').value,
       anchor: Number($sc('wd-ed-anchor').value) || 0,
-      preset: ($sc('wd-ed-preset') || {}).value || 'all'
+      preset: ($sc('wd-ed-preset') || {}).value || 'all',
+      parent: ($sc('wd-ed-parent') || {}).value || ''
     });
     note.textContent = 'Saving…';
     _gasPost({ action: 'saveEdition', token: scToken(), payload: payload })
       .then(function(d) {
-        if (d && d.success) { note.textContent = '✓ Edition saved.'; $sc('wd-ed-name').value = ''; wdEditionsLoad_(); }
-        else note.textContent = '✗ ' + scErrMsg(d && d.error);
+        if (d && d.success) {
+          note.textContent = '✓ Edition saved.';
+          $sc('wd-ed-name').value = '';
+          wdEditionsLoad_();
+        } else {
+          var code = d && d.error;
+          note.textContent = '✗ ' + (
+              code === 'parent_is_variant'
+                ? 'That edition is already a variant — variants only nest one level deep.'
+            : code === 'parent_not_found' ? 'That parent edition no longer exists.'
+            : code === 'has_variants'
+                ? 'This edition has variants of its own, so it cannot become a variant.'
+            : code === 'parent_is_self' ? 'An edition cannot be a variant of itself.'
+            : scErrMsg(code));
+        }
       })
       .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
   }
@@ -5760,10 +6149,59 @@
       if (act.getAttribute('data-act') === 'status') wdSubRowStatus_(email);
       else wdSubscriberRemove_(email);
     });
-    // Recent-edition chips on the landing page
-    on('wd-recent-strip', 'click', function(ev) {
-      var c = ev.target.closest ? ev.target.closest('.wd-recent-chip') : null;
+    // ── News Stand ────────────────────────────────────────────────────────
+    // Every filter re-queries the server rather than slicing what is already
+    // loaded: the archive is paged now, so filtering client-side would only
+    // ever search the page in hand and quietly miss older matches.
+    on('wd-ns-mastheads', 'click', function(ev) {
+      var b = ev.target.closest ? ev.target.closest('.wd-ns-mh') : null;
+      if (!b) return;
+      _wdNs.ed = b.getAttribute('data-ed');
+      wdNsReload_();
+    });
+    document.querySelectorAll('.wd-ns-view').forEach(function(b) {
+      b.addEventListener('click', function() {
+        document.querySelectorAll('.wd-ns-view').forEach(function(o) {
+          var isOn = o === b;
+          o.classList.toggle('on', isOn);
+          o.setAttribute('aria-selected', isOn ? 'true' : 'false');
+        });
+        _wdNs.view = b.getAttribute('data-view');
+        // The calendar needs a whole month, so it asks for more than a grid
+        // page would; switching back does not need to re-shrink the list.
+        if (_wdNs.view === 'cal' && _wdDigests.length < Math.min(_wdNs.total, 60)) {
+          _wdNsPage = 60;
+          wdNsReload_();
+          return;
+        }
+        wdNsRender_();
+      });
+    });
+    on('wd-ns-q', 'input', function() {
+      var v = this.value;
+      // Debounced — a round trip per keystroke would be one Apps Script call
+      // per character, and the quota is per account, not per page.
+      if (_wdNsQTimer) clearTimeout(_wdNsQTimer);
+      _wdNsQTimer = setTimeout(function() {
+        _wdNs.q = v;
+        wdNsReload_();
+      }, 350);
+    });
+    on('wd-ns-range', 'change', function() { _wdNs.range = Number(this.value); wdNsReload_(); });
+    on('wd-ns-grid', 'click', function(ev) {
+      var c = ev.target.closest ? ev.target.closest('.wd-ns-card') : null;
       if (c) wdLandingShowEdition_(c.getAttribute('data-id'));
+    });
+    on('wd-ns-cal', 'click', function(ev) {
+      var c = ev.target.closest ? ev.target.closest('.wd-ns-cald[data-id]') : null;
+      if (c) wdLandingShowEdition_(c.getAttribute('data-id'));
+    });
+    on('wd-ns-table', 'click', function(ev) {
+      var r = ev.target.closest ? ev.target.closest('tr[data-id]') : null;
+      if (r) wdLandingShowEdition_(r.getAttribute('data-id'));
+    });
+    on('wd-ns-more', 'click', function(ev) {
+      if (ev.target && ev.target.id === 'wd-ns-more-btn') wdNsLoadMore_();
     });
   }
 

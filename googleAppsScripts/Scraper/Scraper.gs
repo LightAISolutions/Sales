@@ -1,4 +1,4 @@
-var VERSION = "v01.58g";
+var VERSION = "v01.59g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -359,12 +359,18 @@ var SCRAPER_TAB_HEADERS = {
   Interests: ['Key', 'Type', 'Label', 'Enabled', 'Status', 'Flag', 'Categories',
               'Aliases', 'Weight', 'Source', 'Profiler Updated', 'First Seen',
               'Last Synced', 'Notes'],
+  // 'Lead' is denormalised out of the Sections JSON on purpose: the News Stand
+  // shows each issue's lead headline on its card, and parsing Sections to get it
+  // would mean reading the one column the whole read-path fix exists to avoid.
   Digests: ['Digest ID', 'Date', 'Generated At', 'Status', 'Item Count',
-            'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI'],
+            'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI', 'Lead'],
   DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
                  'Score', 'Signals', 'Summary', 'Section', 'Backstop'],
+  // 'Parent' makes an edition a variant of another one ("The Morning Edition
+  // (BESS)" under "The Morning Edition") instead of a peer. Filtering by a
+  // parent includes its variants; filtering by a variant does not reach back up.
   Editions: ['Edition ID', 'Name', 'Cadence', 'Anchor', 'Window Hours', 'Enabled',
-             'Last Built Date', 'Created', 'Notes', 'Tuning', 'Preset'],
+             'Last Built Date', 'Created', 'Notes', 'Tuning', 'Preset', 'Parent'],
   Subscribers: ['Email', 'Name', 'Editions', 'Status', 'Admin', 'Token',
                 'Added', 'Updated'],
   ClickLog: ['Timestamp', 'Digest ID', 'Item Key', 'URL', 'Title', 'Source',
@@ -714,7 +720,16 @@ var SCRAPER_DIGEST_AI_PAUSE_MS = 1200;           // gap between consecutive AI c
 var SCRAPER_AI_RETRY_BACKOFF_MS = [2000, 6000, 15000, 30000];
 var SCRAPER_DIGEST_SUMMARY_MAX = 900;            // stored summary cap (chars) — generous; quality set by the prompt, not a hard length limit
 var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limit is 50k chars)
-var SCRAPER_DIGEST_KEEP = 60;                    // Digests tab retention (rows)
+// Digests tab retention (rows). Was 60 — roughly four working days once three
+// editions build daily — because every read of this tab pulled the Sections and
+// HTML columns for every row, so the cap was really a cap on how much text each
+// page load moved. Now that listDigests, getDigest, deleteDigest and
+// emailLatestDigest all read narrow ranges, the row count no longer drives that
+// cost and the archive can be deep enough to be worth browsing: 400 rows is
+// about six months of three weekday editions. Beyond that the right answer is
+// cold storage (move the HTML of old issues to Drive, keep the metadata row)
+// rather than a bigger number here — a Sheets cell still caps at 50k characters.
+var SCRAPER_DIGEST_KEEP = 400;
 var SCRAPER_DIGEST_SECTION_CAPS = { companies: 12, market: 10, incidents: 8 };
 // Editions (Phase 5): named digest products with their own cadence and
 // subscriber lists. 'morning' is the built-in default (the weekday Morning
@@ -764,9 +779,9 @@ var SCRAPER_TUNING_PRESETS = {
 
 var SCRAPER_EDITION_SEEDS = [
   { id: 'bess', name: 'The Morning Edition (BESS)', cadence: 'daily', anchor: 0, windowH: 0,
-    notes: 'Utility-scale storage focus', preset: 'bess' },
+    notes: 'Utility-scale storage focus', preset: 'bess', parent: 'morning' },
   { id: 'aidc', name: 'The Morning Edition (AIDC)', cadence: 'daily', anchor: 0, windowH: 0,
-    notes: 'Data-center power chain focus', preset: 'aidc' }
+    notes: 'Data-center power chain focus', preset: 'aidc', parent: 'morning' }
 ];
 
 /** Expand a preset into a full explicit map over every seeded segment + topic.
@@ -3348,7 +3363,8 @@ function scDigestRenderStep_(ss, state) {
     items.length, relevant.length,
     JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX),
     html.slice(0, SCRAPER_DIGEST_CELL_MAX),
-    state.aiNote || '', d.editionId, state.aiLabel || (state.aiNote ? 'none (fallback)' : '')]);
+    state.aiNote || '', d.editionId, state.aiLabel || (state.aiNote ? 'none (fallback)' : ''),
+    lead ? scStr_(lead.title, 300) : '']);
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
@@ -3562,53 +3578,134 @@ function getDigestStatus(sessionToken) {
     fetched: state.fetched || 0, kept: state.kept || 0, aiNote: state.aiNote || '' } : null };
 }
 
-/** Recent editions (newest first, metadata only — no HTML). */
-function listDigests(sessionToken, limit) {
+/** The News Stand's read path: recent editions newest-first, filtered and paged
+    on the server.
+
+    This used to call getDataRange().getValues(), which pulls all twelve columns
+    — including the stored Night Ink HTML and the sections JSON, each capped at
+    45,000 characters — for every issue ever built, and then kept six small
+    fields. At ~60 KB of markup per issue that is the ceiling this app reaches
+    first, well before the interface feels crowded, and it is why the Digests
+    tab had to be trimmed so aggressively. Reading only the narrow columns is
+    what makes a deep archive affordable.
+
+    `payload` (JSON, optional): { edition, from, to, q, offset, limit }.
+    `limit` is still honoured on its own so existing callers keep working. */
+function listDigests(sessionToken, limit, payload) {
   validateSessionForData(sessionToken, 'listDigests');
   var ss = scraperSs_();
   ensureScraperTabs_(ss);
-  var data = ss.getSheetByName(SCRAPER_TABS.DIGESTS).getDataRange().getValues();
-  var max = Math.max(1, Math.min(30, Number(limit) || 10));
-  // The Edition column has always been stored but was never returned, so every
-  // archived issue looked identical in the UI no matter which edition built it.
-  // Resolve the id to its display name here; an edition that has since been
-  // deleted falls back to its raw id rather than vanishing.
-  var edNames = {};
+  var p = {};
+  if (payload) { try { p = JSON.parse(payload) || {}; } catch (pErr) { p = {}; } }
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var n = sheet.getLastRow() - 1;
+  var max = Math.max(1, Math.min(60, Number(p.limit) || Number(limit) || 12));
+  var empty = { success: true, digests: [], total: 0, offset: 0, limit: max,
+                counts: { all: 0, byEdition: {} } };
+  if (n < 1) return empty;
+
+  // Two narrow reads instead of one wide one: columns 1–6 (id → relevantCount)
+  // and 9–12 (notes, edition, ai, lead). Columns 7 and 8 — Sections and HTML —
+  // are never touched here.
+  var meta = sheet.getRange(2, 1, n, 6).getValues();
+  // Lead (column 12) may not exist yet on a sheet created before it was added.
+  // ensureScraperTabs_ widens the header, but the grid itself can still be
+  // narrower, so clamp and pad rather than throwing.
+  var tailW = Math.max(1, Math.min(4, sheet.getMaxColumns() - 8));
+  var tail = sheet.getRange(2, 9, n, tailW).getValues();
+
+  var edNames = {}, edParent = {};
   try {
-    scEditions_(ss).forEach(function(e) { edNames[e.id] = e.name; });
+    scEditions_(ss).forEach(function(e) {
+      edNames[e.id] = e.name;
+      if (e.parent) edParent[e.id] = e.parent;
+    });
   } catch (edErr) {}
-  var out = [];
-  for (var i = data.length - 1; i >= 1 && out.length < max; i--) {
-    var edId = String(data[i][9] || SCRAPER_EDITION_DEFAULT.id);
-    out.push({
-      id: String(data[i][0]),
-      date: data[i][1] instanceof Date
-        ? Utilities.formatDate(data[i][1], 'America/New_York', 'yyyy-MM-dd') : String(data[i][1]),
-      generatedAt: data[i][2] ? new Date(data[i][2]).toISOString() : '',
-      status: String(data[i][3]), itemCount: Number(data[i][4]) || 0,
-      relevantCount: Number(data[i][5]) || 0, notes: String(data[i][8] || ''),
+
+  var rows = [];
+  for (var i = n - 1; i >= 0; i--) {
+    var t = tail[i] || [];
+    var edId = String(t[1] || SCRAPER_EDITION_DEFAULT.id);
+    rows.push({
+      id: String(meta[i][0]),
+      date: meta[i][1] instanceof Date
+        ? Utilities.formatDate(meta[i][1], 'America/New_York', 'yyyy-MM-dd') : String(meta[i][1]),
+      generatedAt: meta[i][2] ? new Date(meta[i][2]).toISOString() : '',
+      status: String(meta[i][3]),
+      itemCount: Number(meta[i][4]) || 0,
+      relevantCount: Number(meta[i][5]) || 0,
+      notes: String(t[0] || ''),
       edition: edId, editionName: edNames[edId] || edId,
-      ai: String(data[i][10] || '')
+      ai: String(t[2] || ''), lead: String(t[3] || '')
     });
   }
-  return { success: true, digests: out };
+
+  // Selecting a parent masthead includes its variants; selecting a variant does
+  // not reach back up to the parent.
+  var want = null;
+  var edPick = scStr_(p.edition || '', 40);
+  if (edPick && edPick !== 'all') {
+    want = {}; want[edPick] = true;
+    for (var kid in edParent) { if (edParent[kid] === edPick) want[kid] = true; }
+  }
+  var from = scStr_(p.from || '', 10), to = scStr_(p.to || '', 10);
+  var q = scStr_(p.q || '', 120).toLowerCase();
+  function passOthers(r) {
+    if (from && r.date < from) return false;
+    if (to && r.date > to) return false;
+    if (q && (r.lead + ' ' + r.editionName + ' ' + r.notes).toLowerCase().indexOf(q) === -1) {
+      return false;
+    }
+    return true;
+  }
+
+  // Rail counts answer "how many would I get if I clicked this", so they honour
+  // every active filter EXCEPT the edition one they are offering. A count that
+  // ignored the date range would promise 200 issues and then show 23.
+  var byEdition = {}, all = 0;
+  rows.forEach(function(r) {
+    if (!passOthers(r)) return;
+    all++;
+    byEdition[r.edition] = (byEdition[r.edition] || 0) + 1;
+  });
+
+  var matched = rows.filter(function(r) {
+    return (!want || want[r.edition]) && passOthers(r);
+  });
+  var offset = Math.min(Math.max(0, Number(p.offset) || 0), matched.length);
+  return { success: true, digests: matched.slice(offset, offset + max),
+           total: matched.length, offset: offset, limit: max,
+           counts: { all: all, byEdition: byEdition } };
 }
 
-/** One edition: parsed section JSON + the Night Ink HTML. Empty id = latest. */
+/** One edition: parsed section JSON + the Night Ink HTML. Empty id = latest.
+
+    Locates the row by scanning the id column alone, then reads the two heavy
+    columns for that single row. Reading the whole sheet to return one issue
+    scaled with the size of the archive rather than with the request. */
 function getDigest(sessionToken, digestId) {
   validateSessionForData(sessionToken, 'getDigest');
   var ss = scraperSs_();
   ensureScraperTabs_(ss);
-  var data = ss.getSheetByName(SCRAPER_TABS.DIGESTS).getDataRange().getValues();
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var n = sheet.getLastRow() - 1;
+  if (n < 1) return { success: false, error: 'not_found' };
   var want = scStr_(digestId, 60);
-  for (var i = data.length - 1; i >= 1; i--) {
-    if (want && String(data[i][0]) !== want) continue;
-    var sections = null;
-    try { sections = JSON.parse(String(data[i][6] || 'null')); } catch (e) {}
-    return { success: true, id: String(data[i][0]), digest: sections,
-             html: String(data[i][7] || '') };
+  var row = 0;
+  if (!want) {
+    row = n + 1;                       // newest issue is the last sheet row
+  } else {
+    var ids = sheet.getRange(2, 1, n, 1).getValues();
+    for (var i = n - 1; i >= 0; i--) {
+      if (String(ids[i][0]) === want) { row = i + 2; break; }
+    }
   }
-  return { success: false, error: 'not_found' };
+  if (!row) return { success: false, error: 'not_found' };
+  var heavy = sheet.getRange(row, 7, 1, 2).getValues()[0];
+  var sections = null;
+  try { sections = JSON.parse(String(heavy[0] || 'null')); } catch (e) {}
+  return { success: true, id: String(sheet.getRange(row, 1).getValue()),
+           digest: sections, html: String(heavy[1] || '') };
 }
 
 /** Delete one edition (Digests row + its DigestIntake rows). The developer
@@ -3623,10 +3720,14 @@ function deleteDigest(sessionToken, digestId) {
   if (!lock.tryLock(5000)) return { success: false, error: 'busy' };
   try {
     var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
-    var data = digests.getDataRange().getValues();
+    // Scan the id column only — matching a row never needed the stored HTML.
+    var dn = digests.getLastRow() - 1;
     var found = false;
-    for (var i = data.length - 1; i >= 1; i--) {
-      if (String(data[i][0]) === id) { digests.deleteRow(i + 1); found = true; }
+    if (dn > 0) {
+      var dids = digests.getRange(2, 1, dn, 1).getValues();
+      for (var i = dn - 1; i >= 0; i--) {
+        if (String(dids[i][0]) === id) { digests.deleteRow(i + 2); found = true; }
+      }
     }
     if (!found) return { success: false, error: 'not_found' };
     var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
@@ -3814,9 +3915,12 @@ function emailLatestDigest(sessionToken) {
   if (!to) return { success: false, error: 'no_session_email' };
   var ss = scraperSs_();
   ensureScraperTabs_(ss);
-  var data = ss.getSheetByName(SCRAPER_TABS.DIGESTS).getDataRange().getValues();
-  if (data.length < 2) return { success: false, error: 'no_editions' };
-  var row = data[data.length - 1];
+  // Only the newest row is needed — reading the whole sheet loaded every stored
+  // edition's HTML to send one of them.
+  var dSheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var lastRow = dSheet.getLastRow();
+  if (lastRow < 2) return { success: false, error: 'no_editions' };
+  var row = dSheet.getRange(lastRow, 1, 1, Math.min(11, dSheet.getMaxColumns())).getValues()[0];
   var html = String(row[7] || '');
   if (!html) return { success: false, error: 'edition_has_no_html' };
   var date = row[1] instanceof Date
@@ -4536,7 +4640,8 @@ function scEditions_(ss) {
       windowH: Number(data[i][4]) || 0,
       enabled: data[i][5] === true || String(data[i][5]).toLowerCase() === 'true',
       lastBuilt: String(data[i][6] || ''), created: data[i][7], notes: String(data[i][8] || ''),
-      tuning: scParseTuning_(data[i][9]), preset: String(data[i][10] || 'global')
+      tuning: scParseTuning_(data[i][9]), preset: String(data[i][10] || 'global'),
+      parent: String(data[i][11] || '')
     });
   }
   if (!out.length) {
@@ -4571,13 +4676,39 @@ function scEditions_(ss) {
         return;
       }
       sheet.appendRow([sd.id, sd.name, sd.cadence, sd.anchor, sd.windowH, true, '',
-                       new Date(), sd.notes || '', JSON.stringify(map), sd.preset]);
+                       new Date(), sd.notes || '', JSON.stringify(map), sd.preset,
+                       sd.parent || '']);
       out.push({ id: sd.id, name: sd.name, cadence: sd.cadence, anchor: sd.anchor,
                  windowH: sd.windowH, enabled: true, lastBuilt: '', created: new Date(),
-                 notes: sd.notes || '', tuning: map, preset: sd.preset });
+                 notes: sd.notes || '', tuning: map, preset: sd.preset,
+                 parent: sd.parent || '' });
     });
     props.setProperty(SCRAPER_EDITION_SEEDS_KEY, 'done');
   }
+
+  // Parent back-fill. The seeds gained a `parent` only after these editions
+  // were already created, and the seed block above is gated 'done' so it never
+  // runs again — without this the BESS and AIDC rows stay parentless and the
+  // masthead rail cannot roll them up under The Morning Edition. Idempotent:
+  // it only fills an empty cell, so a parent the developer clears stays clear
+  // until they say otherwise… except that an empty cell is exactly what
+  // "cleared" looks like, so this is deliberately keyed to the seeded pairs
+  // only and never invents a parent for an edition the developer created.
+  var liveIds = {};
+  out.forEach(function(e) { liveIds[e.id] = true; });
+  SCRAPER_EDITION_SEEDS.forEach(function(sd) {
+    if (!sd.parent || !liveIds[sd.parent]) return;
+    for (var oi = 0; oi < out.length; oi++) {
+      if (out[oi].id !== sd.id || out[oi].parent) continue;
+      out[oi].parent = sd.parent;
+      for (var pr = 1; pr < data.length; pr++) {
+        if (String(data[pr][0]) !== sd.id) continue;
+        sheet.getRange(pr + 1, 12).setValue(sd.parent);
+        break;
+      }
+      break;
+    }
+  });
 
   // Self-healing top-up: a materialised edition must carry an explicit value
   // for EVERY seeded interest. Without this, a segment shipped after the
@@ -4695,12 +4826,38 @@ function saveEdition(sessionToken, payload) {
   var data = sheet.getDataRange().getValues();
   var id = scStr_(p.id, 40);
   var enabled = p.enabled !== false;
+
+  // `parent` makes this edition a variant of another masthead. Validated here
+  // rather than trusted, because a bad value is not cosmetic: the News Stand
+  // rail walks these links, so a self-reference or a chain would either hide an
+  // edition from its own filter or recurse. Variants are deliberately capped at
+  // one level — a variant cannot itself have variants, which makes cycles
+  // impossible by construction instead of by cycle detection.
+  var parent = scStr_(p.parent || '', 40);
+  if (parent) {
+    if (parent === id) return { success: false, error: 'parent_is_self' };
+    var parentRow = null;
+    for (var pi = 1; pi < data.length; pi++) {
+      if (String(data[pi][0]) === parent) { parentRow = data[pi]; break; }
+    }
+    if (!parentRow) return { success: false, error: 'parent_not_found' };
+    if (String(parentRow[11] || '')) return { success: false, error: 'parent_is_variant' };
+    // Re-parenting an edition that already has variants of its own would create
+    // the second level the rule above forbids.
+    for (var ci = 1; ci < data.length; ci++) {
+      if (id && String(data[ci][11] || '') === id) {
+        return { success: false, error: 'has_variants' };
+      }
+    }
+  }
+
   if (id) {
     for (var i = 1; i < data.length; i++) {
       if (String(data[i][0]) === id) {
         sheet.getRange(i + 1, 2, 1, 4).setValues([[name, cadence, anchor, Number(p.windowH) || 0]]);
         sheet.getRange(i + 1, 6).setValue(enabled);
-        dataAuditLog(user.email, 'update', 'edition', id, name);
+        sheet.getRange(i + 1, 12).setValue(parent);
+        dataAuditLog(user.email, 'update', 'edition', id, name + (parent ? ' ⊂ ' + parent : ''));
         return { success: true, id: id };
       }
     }
@@ -4712,8 +4869,8 @@ function saveEdition(sessionToken, payload) {
   var map = scPresetMap_(preset) || {};
   id = 'ed-' + Utilities.getUuid().slice(0, 8);
   sheet.appendRow([id, name, cadence, anchor, Number(p.windowH) || 0, enabled, '', new Date(), '',
-                   JSON.stringify(map), preset]);
-  dataAuditLog(user.email, 'create', 'edition', id, name);
+                   JSON.stringify(map), preset, parent]);
+  dataAuditLog(user.email, 'create', 'edition', id, name + (parent ? ' ⊂ ' + parent : ''));
   return { success: true, id: id, preset: preset };
 }
 
@@ -5502,7 +5659,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'rubricPreview') return rubricPreview(sessionToken, param('payload'));
   if (op === 'runDigestNow') return runDigestNow(sessionToken, param('editionId'));
   if (op === 'getDigestStatus') return getDigestStatus(sessionToken);
-  if (op === 'listDigests') return listDigests(sessionToken, param('limit'));
+  if (op === 'listDigests') return listDigests(sessionToken, param('limit'), param('payload'));
   if (op === 'getDigest') return getDigest(sessionToken, param('digestId'));
   if (op === 'deleteDigest') return deleteDigest(sessionToken, param('digestId'));
   if (op === 'goLiveStatus') return goLiveStatus(sessionToken);

@@ -3,11 +3,26 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.52w] — 2026-08-28 04:35:51 AM EST — v03.26r
+
+### Added
+- **The News Stand replaces the strip of recent editions.** Past issues now appear as cards showing which edition produced them, the date, the lead story, and how many stories were relevant — with a row of mastheads above that filters to one edition in a tap
+- **Three ways to look at the same set** — the News Stand cards, a Calendar showing which editions ran on each day of the month, and a Table for scanning many issues at once. Clicking anywhere in any of them opens that issue
+- **Search and a date range** that apply across the whole archive, not just what is on screen. Selecting a parent edition includes its variants, so "The Morning Edition" covers its BESS and AIDC editions too
+- **Each masthead shows how many issues it holds** under the filters you have set, so the shape of the archive is visible before you click
+- **Load more** for going further back, instead of being limited to a fixed handful
+- **"Variant of…"** when creating an edition, which groups it under a parent edition everywhere it appears
+
+### Changed
+- Relevance figures are now spelled out as "32 of 148 relevant" instead of a bare ratio, so the number says what it counts
+- The Editions list groups variants under their parent
+- The subscriber count tile now reflects the whole archive rather than the issues currently on screen
 
 ## [v01.51w] — 2026-08-28 02:27:57 AM EST — v03.25r
 

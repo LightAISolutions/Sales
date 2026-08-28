@@ -3,11 +3,24 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.59g] — 2026-08-28 04:35:51 AM EST — v03.26r
+
+### Changed
+- **Far more of your past editions are kept.** Retention rises from roughly four working days to about six months of daily editions, now that loading the list no longer has to move every stored edition to draw it
+- **Opening the app is much lighter.** Listing past editions, opening one, deleting one and emailing yourself the latest all now read just the parts they need rather than the whole archive
+
+### Added
+- Past editions can be filtered by edition, date range and text, and are delivered a page at a time with a count per edition
+- An edition can be marked as a variant of another, so a parent and its variants group together and filtering by the parent includes them
+
+### Fixed
+- Clearing every edition from a subscriber is refused with an explanation rather than quietly signing them up to everything
 
 ## [v01.58g] — 2026-08-28 02:27:57 AM EST — v03.25r
 

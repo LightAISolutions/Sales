@@ -3,11 +3,46 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.26r] — 2026-08-28 04:35:51 AM EST
+
+> **Prompt:** "I verified the subscriber fixes. I have also reviewed the mockups and am happy with almost everything I see. Explain the numbers that I circled in the attached screenshot. 
+>
+> Also, I want "Newsstand" to be split up into "News Stand" everywhere it is mentioned. 
+>
+> Otherwise, start building the News Stand."
+
+### Fixed
+
+- **`listDigests` read the whole Digests sheet to render a handful of chips.** `getDataRange().getValues()` pulled all twelve columns — including `Sections` and `HTML`, each capped at 45,000 characters — for every issue ever built, then kept six small fields. Now reads two narrow ranges (columns 1–6 and 9–12) and never touches 7–8. The same fault was fixed in three sibling paths: `getDigest` scanned every row to find one (now scans the id column, then reads that row's two heavy columns), `deleteDigest` did the same to locate rows to delete, and `emailLatestDigest` loaded every stored edition's HTML to send the newest one
+- **`SCRAPER_DIGEST_KEEP` raised 60 → 400.** The old cap was really a cap on how much text each page load moved, and at three daily editions it held about four working days — "hundreds of past editions" was not reachable at all. With the read path fixed the row count no longer drives that cost. Flagged rather than silent: this is a deliberate retention change, and beyond ~400 the right answer is cold storage, not a bigger number
+- The Scraper sequence diagram still described delivery as `DIGEST_RECIPIENT`-driven and listed `addDigestRecipient` / `removeDigestRecipient` — stale since v03.25r moved delivery onto the Subscribers roster
+
+### Added
+
+- **`Parent` column on the Editions tab** — an edition can be a variant of another. Filtering by a parent includes its variants; filtering by a variant does not reach back up. Validated server-side in `saveEdition`: self-reference, a missing parent, a parent that is itself a variant, and re-parenting an edition that has variants are all rejected, so variants are capped at one level and cycles are impossible by construction rather than by cycle detection. Back-filled for the seeded `bess` / `aidc` rows, whose seed block is gated `done` and would never have run again
+- **`Lead` column on the Digests tab**, denormalised out of the Sections JSON at build time so a card can show its lead headline without reading the column the read-path fix exists to avoid
+- **Server-side filtering and paging in `listDigests`** — `{ edition, from, to, q, offset, limit }` — returning `total` and `counts.byEdition`. The counts honour every active filter *except* the edition filter they offer, so a masthead never promises 200 issues and then shows 23. The legacy `limit` argument still works
+- **The News Stand replaces the landing page's chip strip** — masthead row with roll-up counts, composable filter bar (view / search / date range), and three views: card grid, month calendar with per-edition colour pips and a legend, and a dense table. All three open an issue on click
+- **"Variant of…" control** in the Editions pane, offering only editions that can legally be a parent; the Editions list now groups variants under theirs
+
+### Changed
+
+- The mockup artifact is renamed **Newsstand → News Stand** throughout and republished to the same URL: <https://claude.ai/code/artifact/d61a7e78-ccb8-4530-86e4-7520ee132c16>
+- Card relevance figures read "32 of 148 relevant" rather than a bare `32/148` — the developer asked what the number meant, which was the answer: it had no label
+- "Editions kept" counts the whole archive rather than the page currently loaded
+- `wdNsEdShort_` caps badge labels at 13 characters so a long masthead cannot set the card width
+
+### Notes
+
+- **Layout deviation from the approved mockup:** the mockup put the masthead list in a vertical rail. The real landing page already spends both side columns on the Interests and Drivers rails, so a third would leave the grid too narrow to read — the mastheads run horizontally instead. Roll-up counts and one-click filtering are unchanged
+- **Verified**: 25 assertions against the real `listDigests` loaded into a sandbox with stubbed Google services — including that no `getRange` call ever overlaps columns 7–8 and that no 45,000-character payload appears in the response — plus 15 assertions on the client helpers (notably that `wdNsDate_` parses as local, since `new Date('2026-08-28')` is UTC midnight and renders as the 27th west of GMT). Playwright confirmed the rendered layout, and caught a `[hidden]`-vs-`display:grid` specificity bug that would have stacked all three views at once
+- **Still not built** (steps 4–5 of the proposed order): issue permalinks, share links, PDF/Word export, and the command palette
 
 ## [v03.25r] — 2026-08-28 02:27:57 AM EST
 
