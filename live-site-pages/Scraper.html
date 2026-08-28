@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.50w">
+  <meta name="build-version" content="v01.51w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -563,7 +563,50 @@
       color: var(--wd-ink); font: inherit; font-size: 12.5px; padding: 6px 9px; min-width: 0; }
     .wd-form-row input[type=text], .wd-form-row input[type=email] { flex: 1 1 160px; }
     .wd-form-row input[type=number] { width: 76px; }
-    .wd-form-row select[multiple] { flex: 1 1 180px; padding: 4px 6px; line-height: 1.5; }
+    /* Edition chips — replace the native multi-select the subscriber picker
+       used to be. A <select multiple> needs ctrl/⌘-click to pick a second
+       edition, gives no affordance saying so, and could not be used to EDIT an
+       existing subscriber at all (rows offered only "Remove"). Chips are
+       one-tap, self-describing, and work identically on the add form and on
+       every roster row. */
+    .wd-edchips { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; }
+    .wd-edchip {
+      font-family: var(--wd-mono); font-size: 11px; line-height: 1;
+      padding: 5px 9px; border-radius: 999px; cursor: pointer;
+      border: 1px solid var(--wd-line-soft); background: var(--wd-chip-bg);
+      color: var(--wd-chip-ink); transition: background .12s, border-color .12s, color .12s;
+    }
+    .wd-edchip:hover:not(:disabled) { border-color: var(--wd-accent); color: var(--wd-ink); }
+    .wd-edchip.on {
+      background: var(--wd-accent); border-color: var(--wd-accent);
+      color: var(--wd-on-accent); font-weight: 600;
+    }
+    .wd-edchip.all.on { background: var(--wd-accent-hi); border-color: var(--wd-accent-hi); }
+    /* "All editions" covers every specific edition, but painting those chips
+       exactly like an explicit pick makes the two indistinguishable at a
+       glance. An implied chip is outlined instead of filled. */
+    .wd-edchip.on.implied { background: transparent; border-color: var(--wd-accent);
+      color: var(--wd-accent); font-weight: 400; }
+    .wd-edchip:disabled { cursor: default; opacity: .55; }
+    .wd-edchip.busy { opacity: .5; cursor: progress; }
+    .wd-sub-row { display: block; padding: 9px 0; border-bottom: 1px solid var(--wd-line); }
+    .wd-sub-head { display: flex; align-items: center; gap: 8px; font-size: 12.5px; }
+    .wd-sub-head .wd-grow { flex: 1; min-width: 0; color: var(--wd-ink2);
+      overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .wd-sub-row .wd-edchips { margin-top: 6px; }
+    .wd-sub-tag { font-family: var(--wd-mono); font-size: 10px; letter-spacing: .04em;
+      text-transform: uppercase; padding: 2px 6px; border-radius: 3px;
+      border: 1px solid var(--wd-line-soft); color: var(--wd-mut2); }
+    .wd-sub-tag.admin { border-color: var(--wd-accent); color: var(--wd-accent); }
+    .wd-sub-tag.paused { border-color: var(--wd-warn-line); background: var(--wd-warn-bg); color: var(--wd-warn); }
+    .wd-sub-row button.wd-sub-act { background: none; border: 1px solid var(--wd-line-soft);
+      border-radius: 3px; color: var(--wd-mut2); font: inherit; font-size: 11px;
+      padding: 3px 8px; cursor: pointer; }
+    .wd-sub-row button.wd-sub-act:hover { color: var(--wd-ink); border-color: var(--wd-accent); }
+    .wd-sub-row button.wd-sub-act.danger:hover { color: #e08a84; border-color: #6b3630; }
+    .wd-sub-edrow { display: flex; align-items: flex-start; gap: 8px; margin-top: 8px; }
+    .wd-sub-edlbl { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2);
+      padding-top: 5px; flex: 0 0 auto; }
     .wd-tune-scope select { width: 100%; background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft);
       border-radius: 4px; color: var(--wd-ink); font: inherit; font-size: 12px; padding: 5px 7px; }
     .wd-tune-scope.scoped select { border-color: var(--wd-amber, #f2a33c); }
@@ -593,6 +636,8 @@
     .wd-gl-recip-list { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
     .wd-gl-recip-list:empty { display: none; }
     .wd-gl-recip-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 6px 3px 9px; border: 1px solid var(--wd-line-soft); border-radius: 4px; background: var(--wd-panel); font-family: var(--wd-mono); font-size: 11px; color: var(--wd-ink2); }
+    .wd-gl-recip-tag { font-size: 9px; letter-spacing: .05em; text-transform: uppercase;
+      padding: 1px 4px; border-radius: 2px; background: var(--wd-accent); color: var(--wd-on-accent); font-weight: 700; }
     .wd-gl-recip-chip button { background: none; border: none; color: var(--wd-faint); font-size: 14px; line-height: 1; cursor: pointer; padding: 0 2px; }
     .wd-gl-recip-chip button:hover { color: #e08a84; }
     .wd-gl-recip-add { display: flex; gap: 6px; align-items: center; }
@@ -1188,16 +1233,17 @@
         </div>
 
         <div class="wd-tune-pane" id="wd-pane-subs">
-          <p class="wd-hint">Subscribers receive finished editions by email. Pick which ones below — ctrl/⌘-click to choose more than one.</p>
+          <p class="wd-hint">Subscribers receive finished editions by email. Tap an edition chip on any row to subscribe or unsubscribe that person — each tap saves straight away, and any combination is allowed. <b>Pause</b> stops delivery without discarding their picks.</p>
           <div id="wd-sub-list"></div>
           <div class="wd-form-row">
             <input type="email" id="wd-sub-email" placeholder="name@example.com">
             <input type="text" id="wd-sub-name" placeholder="Name (optional)">
-            <select id="wd-sub-eds" multiple size="3" title="Which editions this subscriber receives (ctrl/⌘-click for more than one)">
-              <option value="all" selected>All editions</option>
-            </select>
             <label class="wd-check"><input type="checkbox" id="wd-sub-admin"> Admin</label>
             <button class="sc-btn primary" id="wd-sub-add" type="button">Add</button>
+          </div>
+          <div class="wd-sub-edrow" id="wd-sub-addrow-eds">
+            <span class="wd-sub-edlbl">Editions</span>
+            <div id="wd-sub-eds" class="wd-edchips"></div>
           </div>
           <div id="wd-sub-note" class="wd-hint"></div>
         </div>
@@ -5096,7 +5142,10 @@
     }
     var html = '';
     if (gl) {
-      var recip = gl.recipientCount || 0;
+      // Counts active rows in the Subscribers roster — the same list delivery
+      // actually resolves against. It used to read the legacy DIGEST_RECIPIENT
+      // property, so anyone added in Tune was invisible here.
+      var recip = gl.subscriberCount != null ? gl.subscriberCount : (gl.recipientCount || 0);
       html += tile('Next edition', gl.runsEnabled ? 'Weekdays 7:00 ET' : 'Paused', gl.runsEnabled ? 'ok' : 'warn');
       html += tile('Subscribers', String(recip), recip ? 'ok' : 'warn');
       var keyOk = gl.provider === 'claude' ? gl.hasAnthropicKey : gl.hasGeminiKey;
@@ -5117,12 +5166,34 @@
     strip.innerHTML = html;
   }
 
+  /** Repaint the subscriber-dependent surfaces after a roster change. The
+      landing tile and the Digest overlay's recipient list both read the
+      Subscribers roster now, so an edit made in Tune has to reach them without
+      the developer having to hit Refresh. */
+  function wdGoLiveSyncTiles_(noteOverride) {
+    return _gasPost({ action: 'goLiveStatus', token: scToken() })
+      .then(function(gl) {
+        if (!gl || !gl.success) return;
+        _wdGoLive.subscribers = gl.subscribers || [];
+        _wdGoLive.canManage = !!gl.canManageRecipients;
+        wdRenderStatusStrip_(gl);
+        var panel = $sc('wd-golive-panel');
+        if (panel && panel.style.display !== 'none') wdGoLiveRenderRecipients_(noteOverride);
+      })
+      .catch(function() {});
+  }
+
   function wdRenderRecentStrip_() {
     var strip = $sc('wd-recent-strip');
     if (!strip) return;
+    // The edition name is on the chip because three editions now share the
+    // same date — without it every chip reads identically and picking the
+    // right issue is guesswork. The archive redesign builds on this.
     strip.innerHTML = _wdDigests.map(function(d) {
-      return '<button type="button" class="wd-recent-chip" data-id="' + scEsc(d.id) + '">'
-        + scEsc(d.date) + ' · ' + Number(d.relevantCount) + '</button>';
+      return '<button type="button" class="wd-recent-chip" data-id="' + scEsc(d.id) + '" title="'
+        + scEsc((d.editionName || '') + ' · ' + d.date) + '">'
+        + scEsc(d.date) + (d.editionName ? ' · ' + scEsc(d.editionName) : '')
+        + ' · ' + Number(d.relevantCount) + '</button>';
     }).join('');
   }
 
@@ -5134,7 +5205,8 @@
     var meta = null;
     for (var k = 0; k < _wdDigests.length; k++) if (_wdDigests[k].id === id) meta = _wdDigests[k];
     if (meta) {
-      $sc('wd-edition-sub').textContent = meta.date + ' · ' + Number(meta.relevantCount)
+      $sc('wd-edition-sub').textContent = (meta.editionName ? meta.editionName + ' · ' : '')
+        + meta.date + ' · ' + Number(meta.relevantCount)
         + ' relevant of ' + Number(meta.itemCount) + ' scanned'
         + (meta.notes ? ' · ' + meta.notes : '');
     }
@@ -5235,26 +5307,72 @@
       .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
   }
 
-  /** Fill the subscriber edition picker from the real editions. Previously a
-      free-text box that required knowing an edition's internal id — with more
-      than one edition that is a guessing game, and a typo silently produced a
-      subscriber assigned to an edition that does not exist. */
-  function wdSubEditionsFill_() {
-    var sel = $sc('wd-sub-eds');
-    if (!sel) return;
-    var keep = {};
-    Array.prototype.forEach.call(sel.selectedOptions || [], function(o) { keep[o.value] = true; });
-    var html = '<option value="all">All editions</option>';
+  /** ---- Subscriber edition chips ---------------------------------------
+      The picker used to be a native <select multiple>. Any combination was
+      technically reachable, but only via ctrl/⌘-click announced in a tooltip —
+      and the control existed ONLY on the add form, so an existing subscriber's
+      editions could not be changed at all without removing and re-adding them.
+      Chips are one tap each, and the identical control renders on every roster
+      row, so matching people to editions is direct. */
+
+  var _wdSubNewEds = ['all'];    // edition selection held by the add form
+  var _wdSubRows = {};           // email → record, so a row edit can be saved
+  var _wdSubCanManage = false;
+
+  function wdEdChipsHtml_(selected, opts) {
+    var o = opts || {}, sel = {}, parts = [];
+    (selected || []).forEach(function(id) { sel[id] = true; });
+    var isAll = !!sel.all;
+    var dis = o.disabled ? ' disabled' : '';
+    parts.push('<button type="button" class="wd-edchip all' + (isAll ? ' on' : '')
+      + '" data-ed="all"' + dis
+      + ' title="Every edition, including any added later">All editions</button>');
     (_wdEditions || []).forEach(function(e) {
-      html += '<option value="' + scEsc(e.id) + '">' + scEsc(e.name) + '</option>';
+      var cls = sel[e.id] ? ' on' : (isAll ? ' on implied' : '');
+      parts.push('<button type="button" class="wd-edchip' + cls
+        + '" data-ed="' + scEsc(e.id) + '"' + dis
+        + (isAll && !sel[e.id] ? ' title="Covered by All editions — tap to receive every edition except this one"' : '')
+        + '>' + scEsc(e.name) + '</button>');
     });
-    sel.innerHTML = html;
-    var any = false;
-    Array.prototype.forEach.call(sel.options, function(o) {
-      if (keep[o.value]) { o.selected = true; any = true; }
+    // A stored id whose edition has since been deleted is surfaced verbatim
+    // rather than dropped, so a stale assignment stays visible and clearable.
+    var live = {};
+    (_wdEditions || []).forEach(function(e) { live[e.id] = true; });
+    (selected || []).forEach(function(id) {
+      if (id === 'all' || live[id]) return;
+      parts.push('<button type="button" class="wd-edchip on" data-ed="' + scEsc(id) + '"' + dis
+        + ' title="This edition no longer exists — tap to clear">' + scEsc(id) + ' ⚠</button>');
     });
-    if (!any) sel.options[0].selected = true;   // default to "All editions"
-    sel.size = Math.min(6, Math.max(3, sel.options.length));
+    return parts.join('');
+  }
+
+  /** Apply one chip tap to a selection. "All editions" is absolute: picking it
+      clears the rest, and picking a specific edition clears it. */
+  function wdEdChipToggle_(selected, id) {
+    var list = (selected || []).slice();
+    if (id === 'all') return list.indexOf('all') !== -1 ? [] : ['all'];
+    // Tapping a specific edition while "All editions" is on means "every
+    // edition except this one", so expand 'all' to the concrete list before
+    // dropping it. Narrowing to only the tapped edition would be the opposite
+    // of what the tap looks like — the chip is lit, so a tap must turn it off.
+    if (list.indexOf('all') !== -1) {
+      list = (_wdEditions || []).map(function(e) { return e.id; });
+    }
+    var at = list.indexOf(id);
+    if (at === -1) list.push(id); else list.splice(at, 1);
+    return list;
+  }
+
+  function wdSubEditionsFill_() {
+    var host = $sc('wd-sub-eds');
+    if (!host) return;
+    // Drop selections whose edition no longer exists, then fall back to "All"
+    // if that emptied the list — an add form with nothing picked cannot save.
+    var live = {};
+    (_wdEditions || []).forEach(function(e) { live[e.id] = true; });
+    _wdSubNewEds = _wdSubNewEds.filter(function(id) { return id === 'all' || live[id]; });
+    if (!_wdSubNewEds.length) _wdSubNewEds = ['all'];
+    host.innerHTML = wdEdChipsHtml_(_wdSubNewEds, {});
   }
 
   function wdSubscribersLoad_() {
@@ -5265,18 +5383,94 @@
       .then(function(d) {
         if (!d || !d.success) { host.textContent = scErrMsg(d && d.error); return; }
         var can = !!d.canManage;
-        var addRow = $sc('wd-sub-add');
-        if (addRow && addRow.parentNode) addRow.parentNode.style.display = can ? 'flex' : 'none';
+        _wdSubCanManage = can;
+        var addBtn = $sc('wd-sub-add');
+        if (addBtn && addBtn.parentNode) addBtn.parentNode.style.display = can ? 'flex' : 'none';
+        var addEds = $sc('wd-sub-addrow-eds');
+        if (addEds) addEds.style.display = can ? 'flex' : 'none';
+        _wdSubRows = {};
         host.innerHTML = (d.subscribers || []).map(function(sb) {
-          return '<div class="wd-listrow"><span class="wd-grow">' + scEsc(sb.email)
+          _wdSubRows[sb.email] = sb;
+          var paused = sb.status !== 'active';
+          return '<div class="wd-sub-row" data-sub="' + scEsc(sb.email) + '">'
+            + '<div class="wd-sub-head"><span class="wd-grow">' + scEsc(sb.email)
             + (sb.name ? ' <span class="wd-meta">(' + scEsc(sb.name) + ')</span>' : '')
-            + '</span><span class="wd-meta">' + scEsc(wdSubEdNames_(sb.editions))
-            + (sb.admin ? ' · admin' : '') + ' · ' + scEsc(sb.status) + '</span>'
-            + (can ? '<button type="button" data-sub="' + scEsc(sb.email) + '">Remove</button>' : '')
-            + '</div>';
+            + '</span>'
+            + (sb.admin ? '<span class="wd-sub-tag admin">admin</span>' : '')
+            + (paused ? '<span class="wd-sub-tag paused">paused</span>' : '')
+            + (can ? '<button type="button" class="wd-sub-act" data-act="status">'
+                     + (paused ? 'Resume' : 'Pause') + '</button>'
+                     + '<button type="button" class="wd-sub-act danger" data-act="remove">Remove</button>'
+                   : '')
+            + '</div><div class="wd-edchips">'
+            + wdEdChipsHtml_(sb.editions, { disabled: !can }) + '</div></div>';
         }).join('') || '<p class="wd-hint">No subscribers yet.</p>';
       })
       .catch(function(err) { host.textContent = 'Could not load (' + ((err && err.message) || err) + ')'; });
+  }
+
+  /** Persist one subscriber. The backend upserts on email, so the same call
+      covers an edition change, a pause/resume and the admin flag. */
+  function wdSubscriberSave_(rec) {
+    var note = $sc('wd-sub-note');
+    var payload = JSON.stringify({ email: rec.email, name: rec.name || '',
+      editions: rec.editions, status: rec.status, admin: rec.admin === true });
+    return _gasPost({ action: 'saveSubscriber', token: scToken(), payload: payload })
+      .then(function(d) {
+        if (d && d.success) return true;
+        var code = d && d.error;
+        note.textContent = '✗ ' + (code === 'invalid_email'
+            ? 'That does not look like a valid email address.'
+          : code === 'no_editions'
+            ? 'Pick at least one edition, or Pause the subscriber instead.'
+          : scErrMsg(code));
+        return false;
+      })
+      .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); return false; });
+  }
+
+  /** Toggle one edition on one roster row and persist straight away. The chips
+      repaint optimistically and revert if the save fails, so they never show a
+      state the sheet does not hold. */
+  function wdSubRowToggle_(email, edId, chipsEl) {
+    var rec = _wdSubRows[email];
+    if (!rec || !_wdSubCanManage) return;
+    var note = $sc('wd-sub-note');
+    var next = wdEdChipToggle_(rec.editions, edId);
+    if (!next.length) {
+      note.textContent = '✗ Pick at least one edition — use Pause to stop delivery instead.';
+      return;
+    }
+    var prev = rec.editions;
+    rec.editions = next;
+    chipsEl.innerHTML = wdEdChipsHtml_(next, {});
+    chipsEl.classList.add('busy');
+    note.textContent = 'Saving…';
+    wdSubscriberSave_(rec).then(function(ok) {
+      chipsEl.classList.remove('busy');
+      if (ok) {
+        note.textContent = '✓ ' + email + ' → ' + wdSubEdNames_(next);
+        wdGoLiveSyncTiles_();
+        return;
+      }
+      rec.editions = prev;
+      chipsEl.innerHTML = wdEdChipsHtml_(prev, {});
+    });
+  }
+
+  function wdSubRowStatus_(email) {
+    var rec = _wdSubRows[email];
+    if (!rec || !_wdSubCanManage) return;
+    var note = $sc('wd-sub-note');
+    var was = rec.status;
+    rec.status = was === 'active' ? 'paused' : 'active';
+    note.textContent = 'Saving…';
+    wdSubscriberSave_(rec).then(function(ok) {
+      if (!ok) { rec.status = was; return; }
+      note.textContent = '✓ ' + email + ' ' + (rec.status === 'active' ? 'resumed.' : 'paused.');
+      wdSubscribersLoad_();
+      wdGoLiveSyncTiles_();
+    });
   }
 
   /** Render stored edition ids as their display names. An id that no longer
@@ -5295,36 +5489,33 @@
 
   function wdSubscriberAdd_() {
     var note = $sc('wd-sub-note');
-    var sel = $sc('wd-sub-eds');
-    var eds = Array.prototype.map.call(sel.selectedOptions || [], function(o) { return o.value; });
-    // "All editions" is absolute — pairing it with a specific edition is
-    // contradictory, so it wins and the rest are discarded.
-    if (!eds.length || eds.indexOf('all') !== -1) eds = ['all'];
-    var payload = JSON.stringify({
-      email: $sc('wd-sub-email').value, name: $sc('wd-sub-name').value,
-      editions: eds, admin: $sc('wd-sub-admin').checked
-    });
+    var email = ($sc('wd-sub-email').value || '').trim();
+    if (!email) { note.textContent = '✗ Enter an email address first.'; return; }
+    if (!_wdSubNewEds.length) { note.textContent = '✗ Pick at least one edition.'; return; }
     note.textContent = 'Saving…';
-    _gasPost({ action: 'saveSubscriber', token: scToken(), payload: payload })
-      .then(function(d) {
-        if (d && d.success) {
-          note.textContent = '✓ Subscriber saved.';
-          $sc('wd-sub-email').value = ''; $sc('wd-sub-name').value = '';
-          wdSubscribersLoad_();
-        } else {
-          note.textContent = '✗ ' + (d && d.error === 'invalid_email'
-            ? 'That does not look like a valid email address.' : scErrMsg(d && d.error));
-        }
-      })
-      .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
+    wdSubscriberSave_({ email: email, name: $sc('wd-sub-name').value,
+                        editions: _wdSubNewEds.slice(), status: 'active',
+                        admin: $sc('wd-sub-admin').checked })
+      .then(function(ok) {
+        if (!ok) return;
+        note.textContent = '✓ ' + email + ' → ' + wdSubEdNames_(_wdSubNewEds);
+        $sc('wd-sub-email').value = ''; $sc('wd-sub-name').value = '';
+        $sc('wd-sub-admin').checked = false;
+        _wdSubNewEds = ['all'];
+        wdSubscribersLoad_();
+        wdGoLiveSyncTiles_();
+      });
   }
 
   function wdSubscriberRemove_(email) {
     var note = $sc('wd-sub-note');
     _gasPost({ action: 'removeSubscriber', token: scToken(), email: email })
       .then(function(d) {
-        if (d && d.success) { note.textContent = '✓ Subscriber removed.'; wdSubscribersLoad_(); }
-        else note.textContent = '✗ ' + scErrMsg(d && d.error);
+        if (d && d.success) {
+          note.textContent = '✓ Subscriber removed.';
+          wdSubscribersLoad_();
+          wdGoLiveSyncTiles_();
+        } else note.textContent = '✗ ' + scErrMsg(d && d.error);
       })
       .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
   }
@@ -5542,9 +5733,32 @@
       var b = ev.target.closest ? ev.target.closest('button[data-ed]') : null;
       if (b) wdEditionDelete_(b.getAttribute('data-ed'));
     });
+    // Edition chips on the add form — held client-side until Add is pressed.
+    on('wd-sub-eds', 'click', function(ev) {
+      var c = ev.target.closest ? ev.target.closest('.wd-edchip') : null;
+      if (!c || c.disabled) return;
+      _wdSubNewEds = wdEdChipToggle_(_wdSubNewEds, c.getAttribute('data-ed'));
+      $sc('wd-sub-eds').innerHTML = wdEdChipsHtml_(_wdSubNewEds, {});
+      $sc('wd-sub-note').textContent = _wdSubNewEds.length
+        ? 'Will subscribe to: ' + wdSubEdNames_(_wdSubNewEds)
+        : 'Pick at least one edition.';
+    });
+    // Roster rows: an edition chip saves on tap; Pause/Resume and Remove act
+    // on the row they sit in.
     on('wd-sub-list', 'click', function(ev) {
-      var b = ev.target.closest ? ev.target.closest('button[data-sub]') : null;
-      if (b) wdSubscriberRemove_(b.getAttribute('data-sub'));
+      if (!ev.target.closest) return;
+      var row = ev.target.closest('.wd-sub-row');
+      if (!row) return;
+      var email = row.getAttribute('data-sub');
+      var chip = ev.target.closest('.wd-edchip');
+      if (chip && !chip.disabled) {
+        wdSubRowToggle_(email, chip.getAttribute('data-ed'), chip.parentNode);
+        return;
+      }
+      var act = ev.target.closest('button[data-act]');
+      if (!act) return;
+      if (act.getAttribute('data-act') === 'status') wdSubRowStatus_(email);
+      else wdSubscriberRemove_(email);
     });
     // Recent-edition chips on the landing page
     on('wd-recent-strip', 'click', function(ev) {
@@ -7009,6 +7223,13 @@
     if (dgRun) dgRun.addEventListener('click', wdDigestRun_);
     var glBtn = $sc('wd-digest-golive');
     if (glBtn) glBtn.addEventListener('click', wdGoLiveToggle_);
+    // Recipients and the readiness line are scoped to the selected edition, so
+    // changing the picker has to repaint them.
+    var dgEdSel = $sc('wd-digest-edition');
+    if (dgEdSel) dgEdSel.addEventListener('change', function() {
+      var panel = $sc('wd-golive-panel');
+      if (panel && panel.style.display !== 'none') wdGoLiveRefresh_();
+    });
     var glTest = $sc('wd-golive-testai');
     if (glTest) glTest.addEventListener('click', wdGoLiveTestAi_);
     var glMail = $sc('wd-golive-email');
@@ -7572,14 +7793,19 @@
             + scEsc(value) + '</span></div>';
         }
         var keyOk = d.provider === 'claude' ? d.hasAnthropicKey : d.hasGeminiKey;
-        var recipCount = d.recipientCount || (d.recipients ? d.recipients.length : 0);
+        _wdGoLive.subscribers = d.subscribers || [];
+        // Scope the readiness line to the edition actually selected above —
+        // "armed → 3 recipients" is misleading when only one of them is
+        // subscribed to the edition about to be built.
+        var recipCount = wdEditionSubs_(wdGoLiveEditionId_()).length;
         body.innerHTML =
           row('AI provider', d.provider + ' · ' + d.model)
           + row('API key', keyOk ? 'set' : 'missing — summaries run in $0 fallback mode', keyOk)
           + row('Scheduled runs', d.runsEnabled ? 'on — weekdays from 7:00 AM ET' : 'paused', d.runsEnabled)
           + row('Email delivery', !d.emailEnabled ? 'off'
-                : recipCount ? 'armed → ' + recipCount + ' recipient' + (recipCount === 1 ? '' : 's')
-                : 'waiting on a recipient — add one below to start delivery',
+                : recipCount ? 'armed → ' + recipCount + ' subscriber' + (recipCount === 1 ? '' : 's')
+                    + ' of ' + wdGoLiveEditionName_()
+                : 'nobody is subscribed to ' + wdGoLiveEditionName_() + ' yet',
                 d.emailEnabled && recipCount > 0)
           + row('Hourly trigger', d.trigger + (d.lastTickAgeMin != null
                 ? ' · last tick ' + d.lastTickAgeMin + 'm ago'
@@ -7589,7 +7815,7 @@
         _wdGoLive.provider = d.provider;
         _wdGoLive.canManage = !!d.canManageRecipients;
         wdGoLiveRenderProvider_(d.provider, _wdGoLive.canManage);
-        wdGoLiveRenderRecipients_(d.recipients || [], _wdGoLive.canManage);
+        wdGoLiveRenderRecipients_();
       })
       .catch(function(err) {
         body.textContent = 'Could not check (' + ((err && err.message) || err) + ')';
@@ -7606,21 +7832,59 @@
     }
   }
 
-  function wdGoLiveRenderRecipients_(recipients, canManage) {
+  /** Which edition the overlay is currently pointed at. */
+  function wdGoLiveEditionId_() {
+    var sel = $sc('wd-digest-edition');
+    return (sel && sel.value) || ((_wdEditions[0] && _wdEditions[0].id) || '');
+  }
+
+  function wdGoLiveEditionName_() {
+    var id = wdGoLiveEditionId_();
+    for (var i = 0; i < (_wdEditions || []).length; i++) {
+      if (_wdEditions[i].id === id) return _wdEditions[i].name;
+    }
+    return id || 'this edition';
+  }
+
+  /** Active subscribers who would receive one edition — the same rule the
+      server applies in scEditionRecipients_ ('all' matches everything). */
+  function wdEditionSubs_(editionId) {
+    return (_wdGoLive.subscribers || []).filter(function(s) {
+      if (s.status !== 'active') return false;
+      var eds = s.editions || [];
+      return eds.indexOf('all') !== -1 || (!!editionId && eds.indexOf(editionId) !== -1);
+    });
+  }
+
+  /** Recipients for the selected edition, read from the Subscribers roster.
+      This panel used to list the legacy DIGEST_RECIPIENT property, which
+      nothing has sent to since Phase 5 — so a subscriber added in Tune never
+      appeared here, and an address added here never received anything. */
+  function wdGoLiveRenderRecipients_(noteOverride) {
     var list = $sc('wd-gl-recip-list');
-    list.innerHTML = recipients.length
-      ? recipients.map(function(e) {
-          return '<span class="wd-gl-recip-chip" data-email="' + scEsc(e) + '">' + scEsc(e)
-            + (canManage ? '<button type="button" title="Remove this recipient">×</button>' : '')
-            + '</span>';
-        }).join('')
-      : '';
+    if (!list) return;
+    var can = _wdGoLive.canManage;
+    var edName = wdGoLiveEditionName_();
+    var subs = wdEditionSubs_(wdGoLiveEditionId_());
+    list.innerHTML = subs.map(function(s) {
+      var all = (s.editions || []).indexOf('all') !== -1;
+      return '<span class="wd-gl-recip-chip" data-email="' + scEsc(s.email) + '">'
+        + scEsc(s.email)
+        + (all ? '<span class="wd-gl-recip-tag">all</span>' : '')
+        + (can ? '<button type="button" title="Unsubscribe from ' + scEsc(edName) + '">×</button>' : '')
+        + '</span>';
+    }).join('');
     // Hide the add row entirely for non-managers (multi-user, non-admin)
     var addRow = $sc('wd-gl-recip-add');
-    if (addRow) addRow.style.display = canManage ? 'flex' : 'none';
-    if (!recipients.length && !canManage) {
-      $sc('wd-gl-recip-note').textContent = 'No recipients configured.';
-    }
+    if (addRow) addRow.style.display = can ? 'flex' : 'none';
+    var note = $sc('wd-gl-recip-note');
+    if (!note) return;
+    if (noteOverride) { note.textContent = noteOverride; return; }
+    note.textContent = subs.length
+      ? subs.length + ' of ' + (_wdGoLive.subscribers || []).length + ' subscribers receive '
+        + edName + ' · full roster in Tune → Subscribers'
+      : (can ? 'Nobody receives ' + edName + ' yet — add an address below.'
+             : 'No subscribers for ' + edName + '.');
   }
 
   function wdGoLiveSetProvider_(provider) {
@@ -7640,22 +7904,54 @@
       .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
   }
 
+  /** Find a roster entry by address, case-insensitively. */
+  function wdGoLiveFindSub_(email) {
+    var want = String(email || '').toLowerCase();
+    var hit = null;
+    (_wdGoLive.subscribers || []).forEach(function(s) {
+      if (String(s.email).toLowerCase() === want) hit = s;
+    });
+    return hit;
+  }
+
+  /** Subscribe one address to the SELECTED edition. Writes through the
+      Subscribers roster, not the legacy recipient property, and unions with
+      whatever the person is already subscribed to — overwriting would
+      silently drop every other edition they receive. */
   function wdGoLiveAddRecipient_() {
     var input = $sc('wd-gl-recip-input');
     var note = $sc('wd-gl-recip-note');
     var email = (input.value || '').trim();
     if (!email) { note.textContent = 'Enter an email address first.'; return; }
+    var edId = wdGoLiveEditionId_();
+    if (!edId) { note.textContent = 'Pick an edition above first.'; return; }
+    var edName = wdGoLiveEditionName_();
+    var existing = wdGoLiveFindSub_(email);
+    if (existing) {
+      var eds = existing.editions || [];
+      if (eds.indexOf('all') !== -1) {
+        note.textContent = '✓ ' + email + ' already receives every edition.'; return;
+      }
+      if (eds.indexOf(edId) !== -1) {
+        note.textContent = existing.status === 'active'
+          ? '✓ ' + email + ' already receives ' + edName + '.'
+          : email + ' is subscribed but paused — resume them in Tune → Subscribers.';
+        return;
+      }
+    }
+    var next = existing ? (existing.editions || []).concat([edId]) : [edId];
     var btn = $sc('wd-gl-recip-btn');
     btn.disabled = true;
     note.textContent = 'Adding…';
-    _gasPost({ action: 'addDigestRecipient', token: scToken(), email: email })
+    _gasPost({ action: 'saveSubscriber', token: scToken(), payload: JSON.stringify({
+        email: email, name: (existing && existing.name) || '', editions: next,
+        status: (existing && existing.status) || 'active',
+        admin: !!(existing && existing.admin) }) })
       .then(function(d) {
         btn.disabled = false;
         if (d && d.success) {
           input.value = '';
-          note.textContent = '✓ Recipient added.';
-          wdGoLiveRenderRecipients_(d.recipients || [], _wdGoLive.canManage);
-          wdGoLiveRefresh_();
+          wdGoLiveSyncTiles_('✓ ' + email + ' now receives ' + edName + '.');
         } else {
           note.textContent = '✗ ' + (d && d.error === 'invalid_email'
             ? 'That does not look like a valid email address.' : scErrMsg(d && d.error));
@@ -7664,18 +7960,32 @@
       .catch(function(err) { btn.disabled = false; note.textContent = '✗ ' + ((err && err.message) || err); });
   }
 
+  /** Unsubscribe one address from the SELECTED edition only — their other
+      editions are untouched. Cases this cannot express on its own (an "All
+      editions" subscriber, or their last remaining edition) are sent to the
+      roster editor, where every edition is visible as its own chip. */
   function wdGoLiveRemoveRecipient_(email) {
     var note = $sc('wd-gl-recip-note');
+    var existing = wdGoLiveFindSub_(email);
+    if (!existing) { note.textContent = '✗ Not in the roster — reopen Go-live to refresh.'; return; }
+    var eds = existing.editions || [];
+    var edName = wdGoLiveEditionName_();
+    if (eds.indexOf('all') !== -1) {
+      note.textContent = email + ' is on "All editions" — narrow that in Tune → Subscribers.';
+      return;
+    }
+    var next = eds.filter(function(x) { return x !== wdGoLiveEditionId_(); });
+    if (!next.length) {
+      note.textContent = edName + ' is their only edition — pause or remove them in Tune → Subscribers.';
+      return;
+    }
     note.textContent = 'Removing…';
-    _gasPost({ action: 'removeDigestRecipient', token: scToken(), email: email })
+    _gasPost({ action: 'saveSubscriber', token: scToken(), payload: JSON.stringify({
+        email: existing.email, name: existing.name || '', editions: next,
+        status: existing.status, admin: existing.admin === true }) })
       .then(function(d) {
-        if (d && d.success) {
-          note.textContent = '✓ Recipient removed.';
-          wdGoLiveRenderRecipients_(d.recipients || [], _wdGoLive.canManage);
-          wdGoLiveRefresh_();
-        } else {
-          note.textContent = '✗ ' + scErrMsg(d && d.error);
-        }
+        if (d && d.success) wdGoLiveSyncTiles_('✓ ' + email + ' unsubscribed from ' + edName + '.');
+        else note.textContent = '✗ ' + scErrMsg(d && d.error);
       })
       .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
   }

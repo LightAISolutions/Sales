@@ -1,4 +1,4 @@
-var VERSION = "v01.57g";
+var VERSION = "v01.58g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3569,8 +3569,17 @@ function listDigests(sessionToken, limit) {
   ensureScraperTabs_(ss);
   var data = ss.getSheetByName(SCRAPER_TABS.DIGESTS).getDataRange().getValues();
   var max = Math.max(1, Math.min(30, Number(limit) || 10));
+  // The Edition column has always been stored but was never returned, so every
+  // archived issue looked identical in the UI no matter which edition built it.
+  // Resolve the id to its display name here; an edition that has since been
+  // deleted falls back to its raw id rather than vanishing.
+  var edNames = {};
+  try {
+    scEditions_(ss).forEach(function(e) { edNames[e.id] = e.name; });
+  } catch (edErr) {}
   var out = [];
   for (var i = data.length - 1; i >= 1 && out.length < max; i--) {
+    var edId = String(data[i][9] || SCRAPER_EDITION_DEFAULT.id);
     out.push({
       id: String(data[i][0]),
       date: data[i][1] instanceof Date
@@ -3578,6 +3587,7 @@ function listDigests(sessionToken, limit) {
       generatedAt: data[i][2] ? new Date(data[i][2]).toISOString() : '',
       status: String(data[i][3]), itemCount: Number(data[i][4]) || 0,
       relevantCount: Number(data[i][5]) || 0, notes: String(data[i][8] || ''),
+      edition: edId, editionName: edNames[edId] || edId,
       ai: String(data[i][10] || '')
     });
   }
@@ -3695,17 +3705,39 @@ function goLiveStatus(sessionToken) {
   }
   var lastTick = Number(props.getProperty('SCHEDULER_LAST_TICK')) || 0;
   var canManage = scCanManageDigest_(user);
-  var recipients = scDigestRecipients_();
+  // Delivery is driven by the Subscribers roster (Phase 5), NOT by the legacy
+  // DIGEST_RECIPIENT property — scDigestSend_ resolves who gets an edition
+  // through scEditionRecipients_. Reading the property here made the landing
+  // tile and the Digest overlay report a list nothing sends to, so a
+  // subscriber added in Tune showed up in neither. Read the roster instead;
+  // the property survives only as the one-time migration source.
+  var roster = [];
+  try {
+    var glSs = scraperSs_();
+    scMigrateLegacyRecipients_(glSs);
+    roster = scSubscribers_(glSs);
+  } catch (rosterErr) {}
   var mining = { total: 0, mined: 0, pending: 0, lastMined: 0 };
   try { mining = scDossierMiningStats_(scraperSs_()); } catch (mnErr) {}
+  var activeSubs = roster.filter(function(s) { return s.status === 'active'; });
+  // Managers see full addresses (they need them to identify the right row);
+  // everyone else sees them masked.
+  var subscribers = roster.map(function(s) {
+    return { email: canManage ? s.email : scMaskEmail_(s.email), name: s.name,
+             editions: s.editions, status: s.status, admin: s.admin };
+  });
   return { success: true,
     provider: provider, model: model,
     hasGeminiKey: !!props.getProperty('GEMINI_API_KEY'),
     hasAnthropicKey: !!props.getProperty('ANTHROPIC_API_KEY'),
-    // Managers see full addresses (they need them to remove the right one);
-    // everyone else sees them masked.
-    recipients: canManage ? recipients : recipients.map(scMaskEmail_),
-    recipientCount: recipients.length,
+    // The full roster, so the Digest overlay can scope recipients to whichever
+    // edition is selected without a second round trip.
+    subscribers: subscribers,
+    recipients: activeSubs.map(function(s) {
+      return canManage ? s.email : scMaskEmail_(s.email);
+    }),
+    recipientCount: activeSubs.length,
+    subscriberCount: activeSubs.length,
     canManageRecipients: canManage,
     runsEnabled: SCRAPER_SCHED_RUNS_ENABLED,
     emailEnabled: SCRAPER_SCHED_EMAIL_ENABLED,
@@ -4823,20 +4855,32 @@ function saveSubscriber(sessionToken, payload) {
   try { p = JSON.parse(payload || '{}'); } catch (e) { return { success: false, error: 'bad_payload' }; }
   var email = scStr_(p.email, 160).trim();
   if (!scValidEmail_(email)) return { success: false, error: 'invalid_email' };
-  var eds = (p.editions && p.editions.length) ? p.editions.map(function(x){return scStr_(x,40);}) : ['all'];
+  var eds = (p.editions || []).map(function(x) { return scStr_(x, 40).trim(); }).filter(Boolean);
+  // "All editions" is absolute — pairing it with a specific edition is
+  // contradictory, so it wins and the rest are discarded.
+  if (eds.indexOf('all') !== -1) eds = ['all'];
+  // An empty selection used to fall back to 'all'. On a first add that is a
+  // harmless default; on an EDIT it silently re-subscribed someone to every
+  // edition the moment their last box was unticked. Make it an explicit error
+  // so an unsubscribe is done by pausing the row, never by emptying it.
+  if (!eds.length) return { success: false, error: 'no_editions' };
+  var seenEd = {}, uniqEds = [];
+  eds.forEach(function(id) { if (!seenEd[id]) { seenEd[id] = true; uniqEds.push(id); } });
+  eds = uniqEds;
+  var status = p.status === 'paused' ? 'paused' : 'active';
   var ss = scraperSs_(); ensureScraperTabs_(ss);
   var sheet = ss.getSheetByName(SCRAPER_TABS.SUBSCRIBERS);
   var data = sheet.getDataRange().getValues();
   for (var i = 1; i < data.length; i++) {
     if (String(data[i][0]).trim().toLowerCase() === email.toLowerCase()) {
       sheet.getRange(i + 1, 2, 1, 4).setValues([[scStr_(p.name, 80), eds.join(','),
-        p.status === 'paused' ? 'paused' : 'active', p.admin === true]]);
+        status, p.admin === true]]);
       sheet.getRange(i + 1, 8).setValue(new Date());
       dataAuditLog(user.email, 'update', 'subscriber', scMaskEmail_(email), eds.join(','));
       return { success: true };
     }
   }
-  sheet.appendRow([email, scStr_(p.name, 80), eds.join(','), 'active', p.admin === true,
+  sheet.appendRow([email, scStr_(p.name, 80), eds.join(','), status, p.admin === true,
     Utilities.getUuid().replace(/-/g, ''), new Date(), new Date()]);
   dataAuditLog(user.email, 'create', 'subscriber', scMaskEmail_(email), eds.join(','));
   return { success: true };

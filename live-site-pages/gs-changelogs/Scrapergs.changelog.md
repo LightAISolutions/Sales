@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 44/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.58g] — 2026-08-28 02:27:57 AM EST — v03.25r
+
+### Added
+- Delivery details now report the people on your subscriber list, so the home screen and the Digest panel agree with who actually receives an edition
+- Stored editions now report which edition built them
+
+### Changed
+- Removing the last edition from a subscriber is now refused with an explanation instead of quietly signing them up to everything
+- Pausing a subscriber is kept separate from their edition choices, so resuming restores exactly what they had
 
 ## [v01.57g] — 2026-08-28 01:38:29 AM EST — v03.24r
 

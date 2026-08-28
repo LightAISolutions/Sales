@@ -3,11 +3,24 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.51w] — 2026-08-28 02:27:57 AM EST — v03.25r
+
+### Added
+- Subscribers can now be signed up to any combination of editions, not just one edition or all of them
+- Every subscriber row is editable in place — tap an edition to add or drop it and the change saves immediately
+- Subscribers can be paused and resumed, which stops their delivery without discarding which editions they had chosen
+- The recipient list in the Digest panel now shows who receives the edition you have selected, and lets you add or remove someone for just that edition
+- Past editions now show which edition produced them, so issues built on the same day are no longer indistinguishable
+
+### Fixed
+- The subscriber count on the home screen now reflects the people on your subscriber list instead of an older, separate delivery list
+- Someone added as a subscriber now appears everywhere they should, rather than only on the Subscribers tab
 
 ## [v01.50w] — 2026-08-28 01:38:29 AM EST — v03.24r
 
@@ -333,15 +346,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 ### Added
 - New text box with a Submit button that saves your entry to the spreadsheet
-
-## [v01.02w] — 2026-07-17 11:45:41 PM EST — v01.12r
-
-### Fixed
-- The application screen now loads reliably in any browser, including when multiple Google accounts are signed in
-
-## [v01.01w] — 2026-07-17 10:05:56 PM EST — v01.11r
-
-### Fixed
-- Sign-in now works reliably in any browser, including when multiple Google accounts are signed in
 
 Developed by: LightAISolutions

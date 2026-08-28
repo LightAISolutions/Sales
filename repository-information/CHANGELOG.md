@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.25r] — 2026-08-28 02:27:57 AM EST
+
+> **Prompt:** "Picking up from my recent "Scraper rebuild Phase 1" session, I am able to choose which Edition I want to "run intake now" for, but I am not able to independently match up different Subscribers to their unique Editions (see attached screenshot). Also, I added a second Subscriber in the "Tune" tab, but it doesn't show up in the "Digest" recipients nor the landing page's "Subscriber" count. I would like the Scraper app to check the "Subscribers" tab in the "Tune" section, then send out the chosen Edition(s) to each Subscriber accordingly. I would also like this "Subscribers" tab to allow me to let a Subscriber pick any combination of Editions instead of just one option or "all". 
+>
+> Also, considering how I will have more and more editions and even more subversions of the same edition (like The Morning Edition is turning out to be), come up with a better way, organizationally and aesthetically, to display past Editions on the landing page and the "Digest" section. Imagine months later, when I have tens of Edition types and hundreds of past Editions. I still need to be able to easily and accurately filter and find a specific Edition, display it, and possibly sharing or exporting (doc & pdf) it. You can use your imagination and come up with other features to recommend to me too. Recommend and show me some mockups of how you can execute this."
+
+### Fixed
+
+- **`goLiveStatus` read the retired `DIGEST_RECIPIENT` Script Property instead of the Subscribers roster.** Delivery itself was already correct — `scDigestSend_` resolves recipients through `scEditionRecipients_` against the Subscribers sheet — but the *reporting* path never moved off the legacy property in Phase 5. That single stale read caused both reported symptoms: the landing-page "Subscribers" tile and the Digest overlay's Recipients panel showed a list nothing sends to, so a subscriber added in Tune appeared in neither. `goLiveStatus` now reads the roster and returns `subscribers` (masked for non-managers) plus `subscriberCount`
+- **`listDigests` never returned the `Edition` column.** Column index 9 has been stored since Phase 5 but was dropped from the response, so every archived issue was indistinguishable in the UI regardless of which edition built it. Now returns `edition` and a resolved `editionName` (falling back to the raw id when an edition has been deleted)
+- **`saveSubscriber` silently defaulted an empty `editions` array to `['all']`.** Harmless on a first add; on an *edit* it re-subscribed someone to every edition the moment their last selection was cleared. Now returns `no_editions` so unsubscribing is done by pausing, never by emptying. Also de-duplicates ids and honours `status` on create, not just on update
+
+### Added
+
+- **Chip-based edition picker in Tune → Subscribers, on the add form and on every roster row.** The picker was a native `<select multiple>`: any combination was technically reachable but required ctrl/⌘-click announced only in a tooltip, and it existed *only* on the add form — an existing subscriber's editions could not be changed at all without removing and re-adding them. Each row now renders the same chips and saves on tap, with an optimistic repaint that reverts if the save fails
+- **Three visually distinct chip states** — filled amber (explicitly chosen), outlined amber (implied by "All editions"), grey (off). Tapping an implied chip expands `all` to the concrete edition list and then removes the tapped one, so a lit chip turns off rather than narrowing the selection to itself
+- **Pause / Resume per subscriber row**, separate from their edition picks, so delivery can stop without discarding what they had chosen
+- **Digest overlay Recipients panel is now scoped to the selected edition** and writes through `saveSubscriber`. Quick-add unions with the person's existing editions rather than overwriting them; quick-remove drops only the selected edition. The two cases that cannot be expressed there — an "All editions" subscriber, or their last remaining edition — are deferred to the roster editor with an explanation. Changing the edition picker repaints the panel and the readiness line
+- **Landing-page chips and the edition sub-line now carry the edition name**, so issues built on the same day are distinguishable
+
+### Changed
+
+- Legacy `addDigestRecipient` / `removeDigestRecipient` and the `DIGEST_RECIPIENT` property are left registered and intact (Chesterton's Fence — the property is still the one-time migration source for `scMigrateLegacyRecipients_`); the UI no longer writes to them
+- `.claude` rules untouched; no structural changes, so REPO-ARCHITECTURE.md diagrams are unaffected
+
+### Notes
+
+- **The archive redesign was delivered as mockups, not code**, per the request ("recommend and show me some mockups"). Published as a private artifact: <https://claude.ai/code/artifact/d61a7e78-ccb8-4530-86e4-7520ee132c16> — an interactive prototype covering the masthead-family model (a nullable `Parent` on Editions), a Newsstand grid / Calendar / Table view switcher, permalinks, share links, PDF and Word export routes, and six further recommendations
+- **Surfaced but not fixed:** `listDigests` calls `getDataRange().getValues()`, pulling all eleven columns — including the stored Night Ink HTML and the sections JSON — for every issue ever built, then keeping six small fields. At ~60&nbsp;KB of HTML per issue this is the scaling cliff that arrives before the interface feels crowded. Flagged as step 1 of the proposed build order
+- Verified with Playwright: chip states, roster rendering with a stale-edition row, no console errors beyond the expected `file://` CORS and CSP noise
 
 ## [v03.24r] — 2026-08-28 01:38:29 AM EST
 
