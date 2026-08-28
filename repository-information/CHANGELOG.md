@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.31r] — 2026-08-28 05:22:01 PM EST
+
+> **Prompt:** "If nothing was held back, just don't include the "View More" option."
+
+### Changed
+
+- `Scraper.gs` (v01.64g) — the zero-held-back branch of the edition footer emitted `Open the Wire Desk →` as a fallback. That was my judgment call in v03.30r, not something the developer asked for, and they have overruled it: the `ni-foot-r` cell is now emitted empty when `held === 0`. An edition that showed every relevant story has nothing more to offer, and a link there would only lead somewhere the reader did not ask to go. Three assertions cover it — no `View More`, no fallback text, and no `<a>` anywhere in the right-hand cell
+
+### Notes
+
+- `Scrapergs.changelog.md` reached 51/50, so the 2026-08-04 date group (12 sections, `v01.14g`–`v01.25g`) rotated to the archive with every header SHA-enriched from its repo-version cross-reference. Post-rotation verification returned no unenriched headers. Active file now 39/50
+- `Scraper.html` is untouched this push, so `v01.55w` is unchanged — the footer is rendered server-side
 
 ## [v03.30r] — 2026-08-28 05:16:12 PM EST
 

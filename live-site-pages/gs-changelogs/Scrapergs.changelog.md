@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 39/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.64g] — 2026-08-28 05:22:01 PM EST — v03.31r
+
+### Changed
+- When an edition holds nothing back, the footer's right-hand slot is now left empty rather than offering a link into the app. An edition that showed you everything relevant has nothing more to offer
 
 ## [v01.63g] — 2026-08-28 05:16:12 PM EST — v03.30r
 
@@ -331,91 +336,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - Scheduled briefs can no longer fail silently: if a morning run keeps failing, it now stops after several attempts, moves to the next cycle, and **emails you a failure notice with the reason** — you will always receive either your brief or an explanation
 - The hourly schedule timer is now re-verified every day and reinstalled automatically if it has gone missing, so schedules cannot silently stop running
 - When a brief email fails to send, the reason is now recorded so it can be diagnosed
-
-## [v01.25g] — 2026-08-04 08:11:10 PM EST — v01.74r
-
-### Changed
-- Button actions respond much faster: the service no longer performs its full startup routine (directory registration and scheduling checks) before answering each request — that work now happens only when the page itself loads
-- Repeated actions skip redundant storage checks for several hours at a time, shaving additional time off every press
-
-## [v01.24g] — 2026-08-04 06:41:08 PM EST — v01.73r
-
-### Added
-- You can now grow your search plan one company or term at a time: submit a name and the service instantly evaluates it, shapes it into a full search query group with relevant context added, and saves it to your plan — duplicates are detected and reported instead of added
-- Newly added terms are placed at the top of the plan, so they are always included in the very next gathering run
-
-### Changed
-- Opening the search plan now shows your saved plan instantly instead of rebuilding it, so manual additions are never lost — rebuilding is a separate, deliberate action
-- Gathering runs now use more of your search plan than before, widening coverage across both news sources
-
-## [v01.23g] — 2026-08-04 06:01:06 PM EST — v01.72r
-
-### Added
-- AI search planning: the full project description, keywords, and learned preferences can now be turned into a stored set of precise search queries — naming every company and topic you care about — that all news gathering uses from then on
-- Junk filtering at the door: newly fetched headlines are now screened for relevance before entering your collection, so gathering runs no longer pile up unrelated articles (if the screening service is unavailable, everything is kept — no articles are ever lost to a hiccup)
-- Deep backfill: a new premium gathering mode uses AI-powered web search to find historical articles quarter by quarter — results arrive with summaries already attached, ready for scoring, and runs resume automatically if interrupted
-
-### Changed
-- Historical backfill now uses the stored search plan when one exists, covering up to twice as many search angles as before
-
-## [v01.22g] — 2026-08-04 04:53:53 PM EST — v01.71r
-
-### Added
-- Score statistics now break down each score band by preview availability (with preview vs title-only), report how many articles qualify for archiving, and show how many are already archived
-- New archive action: unrated articles scoring under 10 can be moved out of your active collection in one pass — they no longer slow down or add cost to enrichment, re-scoring, analysis, or any other collection-wide operation, and archived articles are never re-imported by future news gathering
-
-## [v01.21g] — 2026-08-04 04:01:42 PM EST — v01.70r
-
-### Added
-- Score statistics: the app can now report your full score distribution and collection health (scored counts, preview coverage, rating totals) in a single quick request
-
-## [v01.20g] — 2026-08-04 06:02:52 AM EST — v01.69r
-
-### Fixed
-- Enrich could stall permanently when a website hung and never responded — the run would restart the same batch and hit the same site forever. Progress is now saved before every fetch, so a hanging site is automatically counted as unavailable and skipped, and the run continues past it
-
-## [v01.19g] — 2026-08-04 03:33:53 AM EST — v01.68r
-
-### Added
-- Articles gathered without preview text (common for historical articles) can now be enriched: the publisher's own summary is fetched and saved for each one, so relevance scoring and your rating cards work from real article content instead of just headlines
-- Enrichment runs in resumable batches, retries previously unavailable articles on a later run, and uses no AI credit
-
-## [v01.18g] — 2026-08-04 03:28:10 AM EST — v01.67r
-
-### Fixed
-- Relevance scoring was far too harsh — most articles scored near zero. Scoring now uses a detailed scale that recognizes adjacent coverage (corporate moves, financing, policy, supply-chain news about relevant players) as moderately relevant instead of dismissing it
-- Articles with only a headline (no preview text) are no longer penalized for the missing text — they're scored on what the headline covers
-- A rating history with mostly 👎s no longer drags all scores down — your ratings are presented to the scorer in a balanced way, and your preference profile now leads with what you value
-
-## [v01.17g] — 2026-08-04 01:46:24 AM EST — v01.65r
-
-### Changed
-- Saving project changes is faster when the report schedule wasn't modified
-
-### Fixed
-- Editing a project's topic, keywords, or sources no longer resets its report schedule's next-run timing
-
-## [v01.16g] — 2026-08-04 01:33:25 AM EST — v01.64r
-
-### Changed
-- Calibration no longer shows very low-scoring articles (under 10) — rating obvious junk teaches the scorer almost nothing
-- When the worthwhile articles run out, the calibration queue now ends instead of filling up with low-scoring leftovers — low scorers only ever appear as a small share of the mix
-
-## [v01.15g] — 2026-08-04 01:17:17 AM EST — v01.63r
-
-### Added
-- Automatic scheduled runs: your project's report schedule now runs by itself — news is gathered, scored against your learned preferences, and turned into an executive brief on your chosen frequency (daily, weekly, monthly, quarterly, biannual, annual, or custom), with runs anchored at 7:00 AM Eastern
-- Finished briefs are saved to the Reports tab of your spreadsheet and emailed to you when your delivery setting includes email
-- Long runs continue automatically across hourly passes until finished, and paused projects are skipped until you resume them
-- The scheduler starts itself the first time the page is opened after this update — no setup needed
-
-## [v01.14g] — 2026-08-04 01:08:07 AM EST — v01.62r
-
-### Added
-- Calibration article feed: serves a varied mix of your unrated articles weighted toward the uncertain middle scores, where your ratings improve accuracy the most
-- Article filters: the article list can now be narrowed by time window, minimum score, and keyword
-- On-demand preference learning: your ratings can now be distilled into an updated profile during a rating session, not just during analysis
-- Re-score support: all articles in a project can be re-scored with your latest learned preferences
-- News gathering now also searches the outlets behind your thumbs-up ratings, and learned suggestions now include adjacent topics — both widen what gets found beyond your typed keywords
 
 Developed by: LightAISolutions

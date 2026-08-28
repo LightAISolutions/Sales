@@ -1,4 +1,4 @@
-var VERSION = "v01.63g";
+var VERSION = "v01.64g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3622,14 +3622,14 @@ function scRenderDigestNightInk_(d) {
   // relevance bar but did not fit a section cap. It points at the embedding
   // page, never at /exec directly: a direct link is a cookie-carrying
   // navigation that Google resolves against the reader's default account (see
-  // scClickUrl_). With nothing held back there is nothing to view, so the slot
-  // falls back to a plain way into the app rather than promising an empty list.
+  // scClickUrl_). With nothing held back the slot is left empty — an edition
+  // that showed everything relevant has nothing more to offer, and any link
+  // there would only be a link to somewhere the reader did not ask to go.
   var moreLink = held
     ? '<a href="' + esc(EMBED_PAGE_URL + '?more=' + encodeURIComponent(d.id))
       + '" style="font-size:12px;font-weight:600;color:#f2a33c;text-decoration:none;">'
       + 'View More (' + held + ') →</a>'
-    : '<a href="' + esc(EMBED_PAGE_URL)
-      + '" style="font-size:11px;color:#8a919d;text-decoration:none;">Open the Wire Desk →</a>';
+    : '';
   html += '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
     + 'style="border-top:3px double #d8dbe1;margin-top:10px;"><tr>'
     + '<td class="ni-foot" style="font-size:12px;color:#8a919d;padding-top:12px;">'
