@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.54w">
+  <meta name="build-version" content="v01.55w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -506,10 +506,15 @@
     }
     #wd-digest-panel {
       background: var(--wd-panel); border: 1px solid var(--wd-line-soft);
-      border-radius: 8px; width: 100%; max-width: 760px;
+      border-radius: 8px; width: 100%; max-width: 1120px;
       padding: 20px 22px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
       box-sizing: border-box; margin-bottom: 4vh; color: var(--wd-ink); font-family: var(--wd-sans);
     }
+    /* The edition body lays out at up to 860px. At the old 760px panel width
+       it could not fit, so #wd-digest-view scrolled sideways and the reader had
+       to pan to see the right-hand column of every line. 1120 clears 860 plus
+       the panel's own padding with room left over, and the landing-page reader
+       (#wd-edition-view) is untouched — it was never the narrow one. */
     #wd-digest-status { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); min-height: 15px; margin: 2px 0 6px; }
     #wd-golive-panel { border: 1px solid var(--wd-line-soft); background: var(--wd-panel); border-radius: 4px; padding: 10px 12px; margin: 0 0 10px; }
     #wd-golive-body { font-family: var(--wd-mono); font-size: 11px; line-height: 1.8; color: var(--wd-mut); }
@@ -799,6 +804,34 @@
     #wd-digest-view {
       border: 1px solid var(--wd-line); border-radius: 6px; overflow-x: auto;
       background: #15171c;
+    }
+    /* ── Held-back reader ("View More") ── */
+    #wd-hb-overlay { position: fixed; inset: 0; z-index: 10005; background: rgba(8,10,13,0.86);
+      display: none; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 4vh 12px; }
+    #wd-hb-panel { background: #15171c; border: 1px solid #2c313a; border-radius: 8px;
+      width: 100%; max-width: 780px; box-sizing: border-box; margin-bottom: 4vh;
+      padding: 24px 26px 20px; color: #e6e4de; font-family: var(--wd-sans);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6); }
+    .wd-hb-head { display: flex; align-items: flex-start; gap: 12px; border-bottom: 3px double #d8dbe1;
+      padding-bottom: 12px; margin-bottom: 14px; }
+    .wd-hb-title { font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-size: 30px;
+      font-weight: 700; line-height: 1.1; color: #f0eee8; margin: 0; }
+    .wd-hb-sub { font-family: var(--wd-mono); font-size: 11px; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #f2a33c; margin-top: 5px; }
+    .wd-hb-x { background: none; border: none; font-size: 26px; line-height: 1; cursor: pointer;
+      color: var(--wd-faint); margin-left: auto; }
+    .wd-hb-item { padding: 0 0 15px; margin-bottom: 15px; border-bottom: 1px solid #262b33; }
+    .wd-hb-item:last-child { border-bottom: none; }
+    .wd-hb-item a { font-family: 'Newsreader', Georgia, 'Times New Roman', serif; font-size: 19px;
+      font-weight: 600; line-height: 1.3; color: #eceae4; text-decoration: none; }
+    .wd-hb-item a:hover { color: #f2a33c; }
+    .wd-hb-src { font-family: var(--wd-mono); font-size: 10px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #7b828e; margin-top: 4px; }
+    .wd-hb-note { font-size: 13px; line-height: 1.6; color: #9aa0ab; }
+    @media only screen and (max-width: 600px) {
+      #wd-hb-panel { padding: 18px 16px 16px; }
+      .wd-hb-title { font-size: 24px; }
+      .wd-hb-item a { font-size: 17px; }
     }
     /* Buttons */
     .sc-btn {
@@ -1333,10 +1366,27 @@
       </aside>
     </div>
   </div>
+  <!-- PROJECT: held-back reader. Opened by the "View More" link in an
+       edition's footer, both inside the app and from a link in the emailed
+       digest (?more=<digestId>). It sits outside #scraper-app on purpose: an
+       email reader arrives with no session, so this must render without the
+       app ever being unlocked. -->
+  <div id="wd-hb-overlay" aria-hidden="true">
+    <div id="wd-hb-panel" role="dialog" aria-modal="true" aria-labelledby="wd-hb-title">
+      <div class="wd-hb-head">
+        <div>
+          <h2 class="wd-hb-title" id="wd-hb-title">Held back</h2>
+          <div class="wd-hb-sub" id="wd-hb-sub"></div>
+        </div>
+        <button type="button" class="wd-hb-x" id="wd-hb-close" title="Close" aria-label="Close">&times;</button>
+      </div>
+      <div id="wd-hb-body"><div class="wd-hb-note">Loading…</div></div>
+    </div>
+  </div>
   <div id="wd-digest-overlay">
     <div id="wd-digest-panel">
       <div class="sc-wiz-head">
-        <h2>The Morning Edition</h2>
+        <h2>Your Morning Digest</h2>
         <div style="display:flex;gap:8px;align-items:center;">
           <button class="sc-btn" id="wd-digest-golive" type="button" title="Go-live readiness: AI provider, delivery config, and scheduler health at a glance">Go-live</button>
           <select id="wd-digest-edition" title="Which edition to build — each uses its own segment and topic settings"></select>
@@ -1410,7 +1460,7 @@
         <div class="wd-tune-pane on" id="wd-pane-interests"><div id="wd-tune-interests-host"></div></div>
 
         <div class="wd-tune-pane" id="wd-pane-editions">
-          <p class="wd-hint">Each edition has its own cadence, subscriber list and segment/topic settings. A new edition starts from the recommendation you pick — not from the Morning Edition — and every switch stays yours to change.</p>
+          <p class="wd-hint">Each edition has its own cadence, subscriber list and segment/topic settings. A new edition starts from the recommendation you pick — not from Your Morning Digest — and every switch stays yours to change.</p>
           <div id="wd-ed-list"></div>
           <div class="wd-form-row">
             <input type="text" id="wd-ed-name" placeholder="Edition name (e.g. The Week in Storage)">
@@ -1876,7 +1926,138 @@
             .catch(function() { _fin(EMBED_SELF_URL); });
         }
       } catch (goErr) {}
+
+      // PROJECT: held-back hop (?more=<digestId>). The "View More" link in an
+      // emailed edition. Same reasoning as ?go= above — it lands here rather
+      // than on /exec so nothing depends on which Google account the reader
+      // happens to be signed into, and it runs before anything auth-related
+      // because a subscriber reading their email has no session.
+      try {
+        var _mm = /[?&]more=([^&]+)/.exec(location.search);
+        if (_mm) {
+          var _mid = decodeURIComponent(_mm[1]);
+          // Defer one tick: the overlay's markup is further down the document
+          // and this script runs in <head> order relative to it.
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() { scHeldBackOpen_(_mid); });
+          } else {
+            scHeldBackOpen_(_mid);
+          }
+        }
+      } catch (moreErr) {}
     })();
+
+    // PROJECT: held-back reader ("View More").
+    //
+    // One implementation serves both entry points: the in-app footer link
+    // (intercepted below, so the app is not reloaded) and a click on the same
+    // link inside an emailed digest, which lands on ?more=<digestId>. Both end
+    // up here, and both resolve over the cookie-less fetch — never a navigation
+    // to /exec, which Google would route through the reader's default account.
+    //
+    // Everything is written with textContent / createElement rather than
+    // innerHTML: these titles come from third-party feeds by way of the sheet,
+    // and this overlay renders for readers who are not signed in.
+    function scHeldBackOpen_(digestId) {
+      var ov = document.getElementById('wd-hb-overlay');
+      var body = document.getElementById('wd-hb-body');
+      var sub = document.getElementById('wd-hb-sub');
+      if (!ov || !body) return;
+      var gasApp = document.getElementById('gas-app');
+      var base = (gasApp && gasApp.dataset && gasApp.dataset.baseUrl) || '';
+      ov.style.display = 'flex';
+      ov.setAttribute('aria-hidden', 'false');
+      sub.textContent = '';
+      body.textContent = '';
+      var loading = document.createElement('div');
+      loading.className = 'wd-hb-note';
+      loading.textContent = 'Loading the stories that did not make the edition…';
+      body.appendChild(loading);
+      var fail = function(msg) {
+        body.textContent = '';
+        var p = document.createElement('div');
+        p.className = 'wd-hb-note';
+        p.textContent = msg;
+        body.appendChild(p);
+      };
+      if (!base) { fail('Could not reach the desk. Try again from the app.'); return; }
+      fetch(base + '?action=more&more=' + encodeURIComponent(digestId), { redirect: 'follow' })
+        .then(function(r) { return r.json(); })
+        .then(function(j) {
+          body.textContent = '';
+          if (j && j.editionName) {
+            sub.textContent = j.editionName + (j.date ? ' · ' + j.date : '');
+          }
+          // An edition built before this feature shipped stored no held-back
+          // list. Saying that is more use to the reader than an empty page that
+          // reads as "nothing was held back".
+          if (j && j.legacy) {
+            fail('This edition was published before the held-back list was kept. '
+                 + 'Editions from here on will show it.');
+            return;
+          }
+          var items = (j && j.items) || [];
+          if (!items.length) { fail('Nothing was held back — every relevant story made this edition.'); return; }
+          var lede = document.createElement('div');
+          lede.className = 'wd-hb-note';
+          lede.style.marginBottom = '16px';
+          lede.textContent = items.length + ' stor' + (items.length === 1 ? 'y' : 'ies')
+            + ' cleared the relevance bar but did not fit a section cap'
+            + (j.total > items.length ? ' (showing the top ' + items.length + ' of ' + j.total + ')' : '') + '.';
+          body.appendChild(lede);
+          items.forEach(function(it) {
+            var row = document.createElement('div');
+            row.className = 'wd-hb-item';
+            var a = document.createElement('a');
+            a.href = it.url || '#';
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.textContent = it.title || '(untitled)';
+            row.appendChild(a);
+            var src = document.createElement('div');
+            src.className = 'wd-hb-src';
+            src.textContent = it.source || '';
+            row.appendChild(src);
+            body.appendChild(row);
+          });
+        })
+        .catch(function() { fail('Could not load the held-back stories. Try again in a moment.'); });
+    }
+
+    function scHeldBackClose_() {
+      var ov = document.getElementById('wd-hb-overlay');
+      if (!ov) return;
+      ov.style.display = 'none';
+      ov.setAttribute('aria-hidden', 'true');
+      // Drop the ?more= so a refresh does not reopen it, and so the app boots
+      // normally from here. replaceState keeps the reader's history intact.
+      try {
+        if (/[?&]more=/.test(location.search) && history.replaceState) {
+          history.replaceState(null, '', EMBED_SELF_URL + location.hash);
+        }
+      } catch (hx) {}
+    }
+
+    document.addEventListener('click', function(ev) {
+      var t = ev.target;
+      var close = t && t.closest ? t.closest('#wd-hb-close') : null;
+      if (close) { ev.preventDefault(); scHeldBackClose_(); return; }
+      if (t && t.id === 'wd-hb-overlay') { scHeldBackClose_(); return; }
+      // The footer link inside a rendered edition. Intercepted so the app is
+      // not thrown away and reloaded just to show a list it can already fetch.
+      var a = t && t.closest ? t.closest('a[href*="more="]') : null;
+      if (!a) return;
+      var m = /[?&]more=([^&]+)/.exec(a.getAttribute('href') || '');
+      if (!m) return;
+      ev.preventDefault();
+      scHeldBackOpen_(decodeURIComponent(m[1]));
+    });
+
+    document.addEventListener('keydown', function(ev) {
+      if (ev.key !== 'Escape') return;
+      var ov = document.getElementById('wd-hb-overlay');
+      if (ov && ov.style.display === 'flex') scHeldBackClose_();
+    });
 
     // Changelog HTML sanitizer — strips dangerous elements and event handlers
     // Declared at top-level scope so both changelog rendering and security tests can access it
@@ -5511,7 +5692,7 @@
       width — the parenthetical is the distinguishing part when there is one. */
   function wdNsEdShort_(d) {
     var name = d.editionName || d.edition || '';
-    var paren = name.match(/\(([^)]+)\)\s*$/);   // "The Morning Edition (BESS)" → BESS
+    var paren = name.match(/\(([^)]+)\)\s*$/);   // "Your Morning Digest (BESS)" → BESS
     var out = paren ? paren[1]
                     : name.replace(/^The\s+/i, '').replace(/\s+Edition$/i, '');
     out = out || String(d.edition || '');
@@ -8746,7 +8927,7 @@
     if (!sel) return;
     var keep = sel.value;
     var list = (_wdEditions && _wdEditions.length) ? _wdEditions
-             : [{ id: 'morning', name: 'The Morning Edition' }];
+             : [{ id: 'morning', name: 'Your Morning Digest' }];
     sel.innerHTML = list.map(function(e) {
       return '<option value="' + scEsc(e.id) + '">' + scEsc(e.name) + '</option>';
     }).join('');
@@ -9113,7 +9294,7 @@
     var edSel = $sc('wd-digest-edition');
     var runEditionId = (edSel && edSel.value) || 'morning';
     var runEditionName = (edSel && edSel.selectedOptions && edSel.selectedOptions.length)
-      ? edSel.selectedOptions[0].text : 'The Morning Edition';
+      ? edSel.selectedOptions[0].text : 'Your Morning Digest';
     var btn = $sc('wd-digest-run');
     var status = $sc('wd-digest-status');
     if (btn) { btn.disabled = true; btn.textContent = 'Building…'; }
@@ -9137,7 +9318,7 @@
             _wdDigestRunning = false;
             if (btn) { btn.disabled = false; btn.textContent = 'Run intake now'; }
             status.textContent = runEditionName + ' built — ' + data.kept + ' items taken in.';
-            scNotify_('Morning Edition built (' + data.date + ').');
+            scNotify_('Digest built (' + data.date + ').');
             wdDigestRefresh_();
           } else {
             setTimeout(stepLoop, 600);
@@ -9145,7 +9326,7 @@
         })
         .catch(function(err) { fail(String((err && err.message) || err)); });
     }
-    scNotify_('▶ started: Morning Edition build');
+    scNotify_('▶ started: digest build');
     status.textContent = 'Starting the intake…';
     stepLoop();
   }

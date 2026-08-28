@@ -3,11 +3,47 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.30r] — 2026-08-28 05:16:12 PM EST
+
+> **Prompt:** "I confirmed that I could successfully build and email a new edition to myself and open the article links from the email.
+>
+> A few changes:
+>
+> * I want the emailed digests to be optimally formatted for viewing on a mobile device as that is most likely how most of the readers will read them.
+> * (See attached screenshot) When I click the "Digest" button, I want the resulting window to be formatted such that there is no need to scroll horizontally to see everything. Ideally, I would like you to widen the window itself since there is more than enough room on the landing page screen.
+> * Throughout the whole thing, I want you to keep the landing page digest the same size and formatting.
+> * Rename "The Morning Edition" to "Your Morning Digest" everywhere. That means the BESS and AIDC versions should be "Your Morning Digest (BESS)" and "Your Morning Digest (AIDC)" as well.
+> * In the bottom right corner of the digest, instead of "Tune tomorrow's edition", I want you to create a link called "View More" that allows the reader to see the X number of "held back" articles "by the per-section caps"."
+
+### Changed
+
+#### `Scraper.gs` — v01.63g
+
+- **Fluid-hybrid email shell.** The edition body was a table carrying a literal `width="860"` attribute. No phone client collapses that, so a subscriber on a 390px screen got an 860px canvas and had to pan sideways to read every line. The inner table is now `width="100%"` + `max-width:860px`, wrapped in an MSO conditional ghost table at 860 so Outlook's Word engine — which genuinely does ignore `max-width` and margin centering, the reason the nested tables were introduced in the first place — still gets a fixed frame. Every other client gets a table that shrinks to the viewport
+- **`scNiMobileCss_()`** emits one `@media (max-width:600px)` block scaling the masthead 44→29px, the lead 32→23px, item headlines 22→19px, body 16→15.5px, and the cell padding 30→16px, and stacking the two footer cells. Deliberately gated at 600px so the app's own reader — the landing-page column lays out far wider — is unchanged. Verified in Chromium: at 1600px the body still measures exactly 860px with a 44px masthead; at 390px `documentElement.scrollWidth === clientWidth`
+- `SCRAPER_EDITION_DEFAULT`, the `bess`/`aidc` seeds, and every comment renamed to **Your Morning Digest**. `SCRAPER_EDITION_RENAMES` + a back-fill in the edition-roster loader rewrite the Editions rows already created (the seed block is gated `done`, so they would otherwise keep the old name forever); `scRewriteLegacyNames_` rewrites archived editions on read. Both are keyed to the exact old string, so an edition the developer renamed themselves is untouched, and a row already carrying the new name stops matching — which is what makes them idempotent
+- Footer link `Tune tomorrow's edition →` replaced with `View More (N) →`, pointing at `EMBED_PAGE_URL?more=<digestId>` — never `/exec`, for the account-routing reason fixed in v03.29r. With nothing held back the slot degrades to `Open the Wire Desk →` rather than promising an empty list
+- Held-back items are computed once, before the render, and embedded in the stored digest as `d.heldBack` / `d.heldBackTotal` (capped by the new `SCRAPER_HELD_BACK_SHOW = 60`, click-tracked like every other link). The `HELDBACK_` script property only ever holds the newest run of each edition, so View More could not have worked on an older one without this. `scStoreHeldBack_` still runs for the weekly rollup — it now reuses the same computed list instead of recomputing it after the render
+- New unauthenticated `action=more` route (`scHandleHeldBack_`), bounded exactly the way the click redirect is: the digest id names the edition, the payload comes from that edition's own stored JSON, no request input is echoed back, and there is no write. Reads column 7 only, never the rendered-HTML cell. An edition with no stored list returns an explicit `legacy` flag so the reader is told the edition predates the feature rather than shown an empty page
+- `scHandleSharedEdition_` now applies the same read-path upgrades `getDigest` does — a share recipient is the least likely of all readers to be signed into the right Google account
+
+#### `Scraper.html` — v01.55w
+
+- `#wd-digest-panel` widened from `max-width: 760px` to `1120px`. The edition lays out at up to 860px, so at 760 it could not fit and `#wd-digest-view` scrolled sideways — the horizontal scrollbar in the developer's screenshot. Measured after the change: panel 1120px, `scrollWidth === clientWidth`. `#wd-edition-view` untouched; it was never the narrow one
+- Held-back reader (`#wd-hb-overlay`) with `scHeldBackOpen_` / `scHeldBackClose_`. One implementation serves both entry points: a delegated click on `a[href*="more="]` inside a rendered edition (intercepted, so the app is not reloaded to show a list it can already fetch) and a `?more=<digestId>` bootstrap in the pre-auth IIFE, for a subscriber arriving from their email with no session. Both resolve over the cookie-less fetch. Rendered with `textContent`/`createElement` throughout — these titles come from third-party feeds and this overlay renders for readers who are not signed in
+- Closing the overlay `replaceState`s the `?more=` away so a refresh does not reopen it; Escape and backdrop click also close it
+- Renamed the Digest panel heading, the new-edition hint, the fallback edition list, and the build notifications
+
+### Notes
+
+- Verified in Chromium at 1920/1600/390px: modal has no horizontal scroll, landing-page reader byte-identical (860px body, 44px masthead), overlay opens from both entry points with feed titles escaped, and zero page errors in all three contexts. 34 server-side assertions cover the renderer and the new route, including the zero-held-back fallback and the legacy-edition flag
+- **Already-delivered email cannot be retro-fixed.** Editions in a subscriber's inbox keep the 860px shell and the old masthead; the fluid layout and the new name apply to editions built from here on. In the app and through share links the whole archive is corrected on read
 
 ## [v03.29r] — 2026-08-28 06:28:13 AM EST
 

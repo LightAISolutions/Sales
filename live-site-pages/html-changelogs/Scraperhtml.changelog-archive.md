@@ -8,6 +8,14 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.05w] — 2026-08-02 09:42:54 PM EST — v01.50r — [b71d24e](https://github.com/LightAISolutions/Sales/commit/b71d24e87e61efca66ed241d5be799f73c567271)
+
+### Added
+- New project dashboard: see all your research projects at a glance with status, report schedule, and delivery labels
+- "New Project" guided setup: a 5-step wizard asks about your topic, industries, keywords, sources, and report schedule, with a review screen before creating
+- Edit, pause/resume, and archive controls on each project card
+- Status messages confirm when a project is created, updated, paused, or archived
+
 ## [v01.04w] — 2026-07-18 02:39:24 AM EST — v01.14r — [cc86b54](https://github.com/LightAISolutions/Sales/commit/cc86b54bfa3e65e51730eddecb14fe439587fbfd)
 
 ### Removed

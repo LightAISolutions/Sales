@@ -1,4 +1,4 @@
-var VERSION = "v01.62g";
+var VERSION = "v01.63g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -367,8 +367,8 @@ var SCRAPER_TAB_HEADERS = {
             'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI', 'Lead'],
   DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
                  'Score', 'Signals', 'Summary', 'Section', 'Backstop'],
-  // 'Parent' makes an edition a variant of another one ("The Morning Edition
-  // (BESS)" under "The Morning Edition") instead of a peer. Filtering by a
+  // 'Parent' makes an edition a variant of another one ("Your Morning Digest
+  // (BESS)" under "Your Morning Digest") instead of a peer. Filtering by a
   // parent includes its variants; filtering by a variant does not reach back up.
   Editions: ['Edition ID', 'Name', 'Cadence', 'Anchor', 'Window Hours', 'Enabled',
              'Last Built Date', 'Created', 'Notes', 'Tuning', 'Preset', 'Parent'],
@@ -754,7 +754,7 @@ var SCRAPER_DIGEST_SECTION_CAPS = { companies: 12, market: 10, incidents: 8 };
 // Edition); more are added from the app. Cadences: daily (weekdays, 24h
 // window / 72h Mondays), weekly (anchor ISO day, 168h), monthly (anchor
 // day-of-month, 720h).
-var SCRAPER_EDITION_DEFAULT = { id: 'morning', name: 'The Morning Edition',
+var SCRAPER_EDITION_DEFAULT = { id: 'morning', name: 'Your Morning Digest',
   cadence: 'daily', anchor: 0, windowH: 0 };  // windowH 0 = cadence default
 
 // Editions seeded once (marker below), never re-seeded — deleting one has to
@@ -767,13 +767,13 @@ var SCRAPER_EDITION_SEEDS_KEY = 'EDITION_SEEDS_V2';
 // A preset is a RECOMMENDATION, expanded at edition-creation time into a FULL
 // explicit map over every segment and topic. Materialising matters: with a
 // sparse map an edition silently tracked whatever the global baseline did, so
-// a new edition was really just "the Morning Edition until told otherwise" —
+// a new edition was really just "Your Morning Digest until told otherwise" —
 // which is exactly what the developer did not want. A materialised edition is
 // independent from birth, and `presetOff` is kept so the UI can show which
 // switches the developer has since changed FROM the recommendation.
 //
 // 'global' is the one non-materialising preset: it means "inherit", and it is
-// what 'morning' uses, which is why the Morning Edition is unchanged.
+// what 'morning' uses, which is why Your Morning Digest is unchanged.
 var SCRAPER_TUNING_PRESETS = {
   global: { label: 'Follow the global baseline', off: null },
   all:    { label: 'Everything on', off: [] },
@@ -796,11 +796,38 @@ var SCRAPER_TUNING_PRESETS = {
 };
 
 var SCRAPER_EDITION_SEEDS = [
-  { id: 'bess', name: 'The Morning Edition (BESS)', cadence: 'daily', anchor: 0, windowH: 0,
+  { id: 'bess', name: 'Your Morning Digest (BESS)', cadence: 'daily', anchor: 0, windowH: 0,
     notes: 'Utility-scale storage focus', preset: 'bess', parent: 'morning' },
-  { id: 'aidc', name: 'The Morning Edition (AIDC)', cadence: 'daily', anchor: 0, windowH: 0,
+  { id: 'aidc', name: 'Your Morning Digest (AIDC)', cadence: 'daily', anchor: 0, windowH: 0,
     notes: 'Data-center power chain focus', preset: 'aidc', parent: 'morning' }
 ];
+
+// Masthead renames applied to already-created Editions rows and to archived
+// editions on read. `from` is matched exactly, so an edition the developer
+// renamed themselves is left alone, and a row already carrying the new name
+// stops matching — which is what makes both back-fills idempotent. The parent
+// name is a prefix of both variants, so the variants are listed first and the
+// row rule is keyed to the id as well: an id can only ever take its own rule.
+var SCRAPER_EDITION_RENAMES = [
+  { id: 'bess', from: 'The Morning Edition (BESS)', to: 'Your Morning Digest (BESS)' },
+  { id: 'aidc', from: 'The Morning Edition (AIDC)', to: 'Your Morning Digest (AIDC)' },
+  { id: 'morning', from: 'The Morning Edition', to: 'Your Morning Digest' }
+];
+
+/** Rewrite retired mastheads in stored edition HTML on read, so the whole
+    archive shows the current name rather than only editions built from here
+    on. A blanket string swap, the same shape as scRewriteLegacyClickUrls_: an
+    article headline that literally contained a retired edition name would be
+    rewritten too, which is an acceptable trade for not parsing the stored
+    HTML on every read. */
+function scRewriteLegacyNames_(text) {
+  if (!text) return text;
+  var out = String(text);
+  SCRAPER_EDITION_RENAMES.forEach(function(rn) {
+    while (out.indexOf(rn.from) !== -1) { out = out.replace(rn.from, rn.to); }
+  });
+  return out;
+}
 
 /** Expand a preset into a full explicit map over every seeded segment + topic.
     Returns null for 'global' — the caller stores {} and the edition inherits. */
@@ -842,6 +869,7 @@ var SCRAPER_SEGMENT_MAX_CHARS = 60;
 var SCRAPER_SEGMENT_MAX_WORDS = 6;
 var SCRAPER_SEGMENT_MAX_PER_COMPANY = 24;
 var SCRAPER_HELD_BACK_MAX = 25;        // held-back items stored per edition (rollup feed)
+var SCRAPER_HELD_BACK_SHOW = 60;       // held-back items embedded in an edition (View More)
 
 // D1 (2026-08-27): 30-source free trade-press roster — 3rd-party outlets only
 // (no paywalls, no company-owned newsrooms; RTO Insider et al. excluded as
@@ -3394,6 +3422,19 @@ function scDigestRenderStep_(ss, state) {
   var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
   var no = digests.getLastRow();   // header row makes the first edition No. 001
   var clock = scDigestClock_(new Date());
+  // Held-back = cleared the relevance bar, did not fit a section cap. Computed
+  // here rather than after the render (where the weekly-rollup stash still
+  // happens) so it can travel inside the stored edition: "View More" has to
+  // work on any edition the reader opens, and the HELDBACK_ script property
+  // only ever holds the newest run of each edition.
+  // `sections` and `lead` are the pre-trackAll intake items, so their urls are
+  // still raw — which is what makes them comparable.
+  var shownUrls = {};
+  [sections.companies, sections.market, sections.incidents].forEach(function(sec) {
+    sec.forEach(function(it) { shownUrls[it.url] = true; });
+  });
+  if (lead) shownUrls[lead.url] = true;
+  var heldBack = relevant.filter(function(it) { return !shownUrls[it.url]; });
   var d = {
     id: state.id, date: state.date, no: no, windowH: state.windowH,
     generatedAt: new Date().toISOString(), aiNote: state.aiNote || '',
@@ -3418,6 +3459,14 @@ function scDigestRenderStep_(ss, state) {
   function trackAll(list) { list.forEach(function(it) { it.url = scClickUrl_(state.id, it.url); }); }
   trackAll(d.sections.companies); trackAll(d.sections.market); trackAll(d.sections.incidents);
   if (d.lead) d.lead.url = scClickUrl_(state.id, d.lead.url);
+  // Slim, capped, and click-tracked like every other link in the edition — the
+  // items are in this digest's intake rows, so the redirect resolves them.
+  d.heldBack = heldBack.slice(0, SCRAPER_HELD_BACK_SHOW).map(function(it) {
+    return { title: scStr_(it.title, 180), source: it.source,
+             publishedAt: it.publishedAt, score: it.score,
+             url: scClickUrl_(state.id, it.url) };
+  });
+  d.heldBackTotal = heldBack.length;
 
   var html = scRenderDigestNightInk_(d);
   digests.appendRow([state.id, state.date, new Date(), 'generated',
@@ -3430,14 +3479,8 @@ function scDigestRenderStep_(ss, state) {
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
   props.setProperty('DIGEST_LAST_DATE', state.date);
-  // F5 — stash the relevant-but-not-shown items for the weekly rollup.
-  // `sections` holds the pre-trackAll intake items (raw urls); compare raw.
-  var shown = {};
-  [sections.companies, sections.market, sections.incidents].forEach(function(sec) {
-    sec.forEach(function(it) { shown[it.url] = true; });
-  });
-  if (lead) shown[lead.url] = true;
-  var heldBack = relevant.filter(function(it) { return !shown[it.url]; });
+  // F5 — stash the relevant-but-not-shown items for the weekly rollup. Same
+  // list the edition embedded above; computed once, before the render.
   scStoreHeldBack_(props, d.editionId, heldBack);
   // Stamp the edition's last-built date.
   try {
@@ -3471,7 +3514,7 @@ function scDigestItemOut_(it) {
 
 function scDigestNo_(n) { return ('000' + Math.max(1, n)).slice(-3); }
 
-/** Night Ink edition renderer (approved digest design: the Morning Edition's
+/** Night Ink edition renderer (approved digest design: Your Morning Digest's
     ceremony on the Wire Desk palette — Newsreader serif masthead, double
     rules, charcoal #15171c + amber #f2a33c). Inline styles only: this HTML is
     the email body. Dark-mode client-proofing happens at Phase 4 go-live. */
@@ -3503,9 +3546,9 @@ function scRenderDigestNightInk_(d) {
   }
   function itemHtml(it) {
     return '<div style="margin:0 0 20px;">'
-      + '<div style="' + serif + 'font-size:22px;font-weight:600;line-height:1.3;color:#eceae4;">'
+      + '<div class="ni-hed" style="' + serif + 'font-size:22px;font-weight:600;line-height:1.3;color:#eceae4;">'
       + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
-      + '<div style="' + sans + 'font-size:16px;line-height:1.62;color:#c2c8d2;margin-top:5px;">'
+      + '<div class="ni-body" style="' + sans + 'font-size:16px;line-height:1.62;color:#c2c8d2;margin-top:5px;">'
       + scNiBoldFigures_(esc(it.summary)) + '</div>'
       + srcLine(it) + '</div>';
   }
@@ -3518,20 +3561,35 @@ function scRenderDigestNightInk_(d) {
       + '</tr></table>'
       + items.map(itemHtml).join('') + '</div>';
   }
-  // Email-client proofing (Phase 4): nested tables instead of a margin-auto div
-  // (Outlook's Word engine ignores max-width/margin centering), bgcolor
-  // attributes alongside inline background styles (attributes survive the
-  // aggressive sanitizers), and solid inline colors on every element so
-  // dark-mode-inverting clients (Gmail) have nothing transparent to repaint.
-  var html = '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
+  // Email-client proofing (Phase 4): bgcolor attributes alongside inline
+  // background styles (attributes survive the aggressive sanitizers), and solid
+  // inline colors on every element so dark-mode-inverting clients (Gmail) have
+  // nothing transparent to repaint.
+  //
+  // Mobile (2026-08-28): fluid-hybrid shell. The body used to be a table with a
+  // literal width="860" attribute, which no phone client will collapse — the
+  // reader got a 860px canvas on a 390px screen and had to pan sideways. The
+  // inner table is width="100%" + max-width:860px now, wrapped in an MSO
+  // conditional ghost table at 860 so Outlook's Word engine — which really does
+  // ignore max-width and margin centering, the reason the nested tables were
+  // there in the first place — still gets a fixed frame. Every other client
+  // gets a table that shrinks to the screen.
+  //
+  // The @media block only fires at <=600px, so the app's own reader (the
+  // landing page column is far wider) renders exactly as it did before.
+  var html = '<style>' + scNiMobileCss_() + '</style>'
+    + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
     + 'bgcolor="#101216" style="background:#101216;margin:0;padding:0;border-collapse:collapse;">'
     + '<tr><td align="center" style="padding:16px 8px;">'
-    + '<table role="presentation" width="860" cellpadding="0" cellspacing="0" border="0" '
-    + 'bgcolor="#15171c" style="background:#15171c;width:860px;max-width:100%;border-collapse:collapse;">'
-    + '<tr><td style="color:#e6e4de;padding:32px 30px 26px;' + sans + '">'
+    + '<!--[if mso]><table role="presentation" width="860" cellpadding="0" cellspacing="0" '
+    + 'border="0"><tr><td><![endif]-->'
+    + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
+    + 'bgcolor="#15171c" style="background:#15171c;width:100%;max-width:860px;margin:0 auto;'
+    + 'border-collapse:collapse;">'
+    + '<tr><td class="ni-pad" style="color:#e6e4de;padding:32px 30px 26px;' + sans + '">'
     // Masthead
     + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:16px;margin-bottom:18px;">'
-    + '<div style="' + serif + 'font-size:44px;font-weight:700;line-height:1;color:#f0eee8;">'
+    + '<div class="ni-mast" style="' + serif + 'font-size:44px;font-weight:700;line-height:1.06;color:#f0eee8;">'
     + esc(d.editionName || SCRAPER_EDITION_DEFAULT.name) + '</div>'
     + '<div style="' + caps + 'color:#f2a33c;margin-top:6px;">Scraper · Trade news, distilled daily</div>'
     + '<div style="font-size:13px;color:#9aa0ab;margin-top:5px;">' + esc(longDate(d.date))
@@ -3540,9 +3598,9 @@ function scRenderDigestNightInk_(d) {
   if (d.lead) {
     html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:18px;margin-bottom:18px;">'
       + '<div style="' + caps + 'color:#f2a33c;">The lead</div>'
-      + '<div style="' + serif + 'font-size:32px;font-weight:600;line-height:1.18;color:#f0eee8;margin-top:6px;">'
+      + '<div class="ni-lead" style="' + serif + 'font-size:32px;font-weight:600;line-height:1.18;color:#f0eee8;margin-top:6px;">'
       + '<a href="' + esc(d.lead.url) + '" style="color:#f0eee8;text-decoration:none;">' + esc(d.lead.title) + '</a></div>'
-      + '<div style="font-size:17px;line-height:1.62;color:#c2c8d2;margin-top:8px;">'
+      + '<div class="ni-lede" style="font-size:17px;line-height:1.62;color:#c2c8d2;margin-top:8px;">'
       + scNiBoldFigures_(esc(d.lead.text)) + '</div>'
       + srcLine(d.lead) + '</div>';
   }
@@ -3559,21 +3617,55 @@ function scRenderDigestNightInk_(d) {
       + (d.newCoverage.names.length ? ' — ' + esc(d.newCoverage.names.join(', ')) : '')
       + '; folded into this edition automatically. Review them from the Interests panel.</div></div>';
   }
+  var held = Math.max(0, Number(d.counts.relevant) - Number(d.counts.shown || 0));
+  // "View More" opens the held-back stories — the ones that cleared the
+  // relevance bar but did not fit a section cap. It points at the embedding
+  // page, never at /exec directly: a direct link is a cookie-carrying
+  // navigation that Google resolves against the reader's default account (see
+  // scClickUrl_). With nothing held back there is nothing to view, so the slot
+  // falls back to a plain way into the app rather than promising an empty list.
+  var moreLink = held
+    ? '<a href="' + esc(EMBED_PAGE_URL + '?more=' + encodeURIComponent(d.id))
+      + '" style="font-size:12px;font-weight:600;color:#f2a33c;text-decoration:none;">'
+      + 'View More (' + held + ') →</a>'
+    : '<a href="' + esc(EMBED_PAGE_URL)
+      + '" style="font-size:11px;color:#8a919d;text-decoration:none;">Open the Wire Desk →</a>';
   html += '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
     + 'style="border-top:3px double #d8dbe1;margin-top:10px;"><tr>'
-    + '<td style="font-size:12px;color:#8a919d;padding-top:12px;">Published by your Scraper desk · '
+    + '<td class="ni-foot" style="font-size:12px;color:#8a919d;padding-top:12px;">'
+    + 'Published by your Scraper desk · '
     + Number(d.counts.shown || 0) + ' of ' + Number(d.counts.relevant)
     + ' relevant · ' + Number(d.counts.intake) + ' scanned'
-    + (Number(d.counts.relevant) > Number(d.counts.shown || 0)
-        ? ' · ' + (Number(d.counts.relevant) - Number(d.counts.shown || 0))
-          + ' more held back by the per-section caps' : '')
+    + (held ? ' · ' + held + ' more held back by the per-section caps' : '')
     + (d.aiNote ? ' · summaries in fallback mode'
         : (d.aiLabel ? ' · summarized by ' + esc(d.aiLabel) : '')) + '</td>'
-    + '<td align="right" style="padding-top:12px;"><a href="' + esc(EMBED_PAGE_URL)
-    + '" style="font-size:11px;color:#f2a33c;text-decoration:none;">Tune tomorrow\'s edition →</a></td>'
+    + '<td align="right" class="ni-foot-r" style="padding-top:12px;white-space:nowrap;">'
+    + moreLink + '</td>'
     + '</tr></table>'
-    + '</td></tr></table></td></tr></table>';
+    + '</td></tr></table>'
+    + '<!--[if mso]></td></tr></table><![endif]-->'
+    + '</td></tr></table>';
   return html;
+}
+
+/** Mobile rules for the edition body. Deliberately narrow: only the type sizes
+    and paddings that make an 860px-designed page unreadable on a 390px screen,
+    all under one <=600px query, so the app's own reader — which lays out far
+    wider than that — is unchanged. Class names are ni-* prefixed because this
+    <style> block also lands in the app's DOM when the stored HTML is injected
+    into the edition view. */
+function scNiMobileCss_() {
+  return '@media only screen and (max-width:600px){'
+    + '.ni-pad{padding:20px 16px 18px!important}'
+    + '.ni-mast{font-size:29px!important;line-height:1.12!important}'
+    + '.ni-lead{font-size:23px!important;line-height:1.24!important}'
+    + '.ni-lede{font-size:16px!important}'
+    + '.ni-hed{font-size:19px!important;line-height:1.32!important}'
+    + '.ni-body{font-size:15.5px!important}'
+    + '.ni-foot,.ni-foot-r{display:block!important;width:100%!important;'
+    + 'text-align:left!important;white-space:normal!important}'
+    + '.ni-foot-r{padding-top:10px!important}'
+    + '}';
 }
 
 /** One budget-bounded step of the digest state machine. A run left over
@@ -3766,14 +3858,19 @@ function getDigest(sessionToken, digestId) {
   var sections = null;
   try { sections = JSON.parse(String(heavy[0] || 'null')); } catch (e) {}
   // Editions built before the click-link fix carry direct /exec links, which
-  // hit Google's account routing. Upgrade them on read so the whole archive
-  // works in the app, not just editions built from here on.
+  // hit Google's account routing; editions built before 2026-08-28 carry the
+  // retired "The Morning Edition" masthead. Both are upgraded on read so the
+  // whole archive is current, not just editions built from here on.
+  if (sections && sections.editionName) {
+    sections.editionName = scRewriteLegacyNames_(sections.editionName);
+  }
   return { success: true, id: String(sheet.getRange(row, 1).getValue()),
-           digest: sections, html: scRewriteLegacyClickUrls_(String(heavy[1] || '')) };
+           digest: sections,
+           html: scRewriteLegacyNames_(scRewriteLegacyClickUrls_(String(heavy[1] || ''))) };
 }
 
 /** Delete one edition (Digests row + its DigestIntake rows). The developer
-    curates which Morning Editions to keep; deletion is permanent. */
+    curates which Morning Digests to keep; deletion is permanent. */
 function deleteDigest(sessionToken, digestId) {
   var user = validateSessionForData(sessionToken, 'deleteDigest');
   var id = scStr_(digestId, 60);
@@ -4011,14 +4108,14 @@ var SCRAPER_SCHED_MAX_FAILS = 6;            // consecutive failed ticks before a
 var SCRAPER_SCHED_RUN_HOUR = 7;             // scheduled runs anchor at 7:00 AM ET
 var SCRAPER_SCHED_STATE_PREFIX = 'scSchedRun_';
 var SCRAPER_SCHED_AI_PAUSE_MS = 4000;       // pause between analyze chunks (free-tier RPM safety)
-// Master kill switch for ALL scheduled email delivery — the Morning Edition
+// Master kill switch for ALL scheduled email delivery — Your Morning Digest
 // send and (when the legacy pipeline is enabled) the brief email + failure
-// notice. Phase 4 go-live (2026-08-27): flipped to true. The Morning Edition
+// notice. Phase 4 go-live (2026-08-27): flipped to true. Your Morning Digest
 // send additionally requires a DIGEST_RECIPIENT Script Property — with the
 // property unset, nothing is emailed even though this flag is on.
 var SCRAPER_SCHED_EMAIL_ENABLED = true;
 // Master pause for the scheduled pipeline. Phase 4 go-live (2026-08-27):
-// flipped to true — the hourly tick now advances the weekday Morning Edition
+// flipped to true — the hourly tick now advances the weekday Morning Digest
 // build (weekday ≥7:00 AM ET, one budget-bounded step per tick). AI tokens
 // are spent only if an AI provider key is configured; without one the
 // edition builds in $0 fallback mode. Flip to false and merge to re-pause.
@@ -4027,7 +4124,7 @@ var SCRAPER_SCHED_RUNS_ENABLED = true;
 // brief → per-schedule brief emails) stays OFF at go-live: the Morning
 // Edition replaces it, and reviving old Schedules rows unattended would
 // double-email and double-spend. The code path is preserved — flip to true
-// and merge to run legacy schedules again alongside the Morning Edition.
+// and merge to run legacy schedules again alongside Your Morning Digest.
 var SCRAPER_LEGACY_SCHEDULES_ENABLED = false;
 
 /** Manual fallback: run once from the Apps Script editor to install the trigger. */
@@ -4095,12 +4192,12 @@ function scSchedulerTick() {
   try {
     var ss = scraperSs_();
     ensureScraperTabs_(ss);
-    // Rebuild Phase 3: the weekday Morning Edition — one budget-bounded step
+    // Rebuild Phase 3: the weekday Morning Digest — one budget-bounded step
     // per tick (weekday-morning + built-today checks live inside). Sits after
     // the pipeline pause gate, so it cannot spend AI tokens while paused.
     scDigestScheduledTick_();
     // Phase 4 go-live: the legacy Schedules-tab pipeline below stays gated off
-    // (the Morning Edition replaces it) — see SCRAPER_LEGACY_SCHEDULES_ENABLED.
+    // (Your Morning Digest replaces it) — see SCRAPER_LEGACY_SCHEDULES_ENABLED.
     if (!SCRAPER_LEGACY_SCHEDULES_ENABLED) return;
     var t0 = Date.now();
     var sheet = ss.getSheetByName(SCRAPER_TABS.SCHEDULES);
@@ -4753,7 +4850,7 @@ function scEditions_(ss) {
   // Parent back-fill. The seeds gained a `parent` only after these editions
   // were already created, and the seed block above is gated 'done' so it never
   // runs again — without this the BESS and AIDC rows stay parentless and the
-  // masthead rail cannot roll them up under The Morning Edition. Idempotent:
+  // masthead rail cannot roll them up under Your Morning Digest. Idempotent:
   // it only fills an empty cell, so a parent the developer clears stays clear
   // until they say otherwise… except that an empty cell is exactly what
   // "cleared" looks like, so this is deliberately keyed to the seeded pairs
@@ -4768,6 +4865,25 @@ function scEditions_(ss) {
       for (var pr = 1; pr < data.length; pr++) {
         if (String(data[pr][0]) !== sd.id) continue;
         sheet.getRange(pr + 1, 12).setValue(sd.parent);
+        break;
+      }
+      break;
+    }
+  });
+
+  // Masthead rename back-fill (2026-08-28). "Your Morning Digest" became
+  // "Your Morning Digest". The seed block above is gated 'done', so the rows
+  // created under the old names would keep them forever without this. Keyed to
+  // the exact old string on the exact seeded id, so an edition the developer
+  // renamed themselves is never touched — and once rewritten the comparison
+  // no longer matches, which is what makes it idempotent.
+  SCRAPER_EDITION_RENAMES.forEach(function(rn) {
+    for (var oi = 0; oi < out.length; oi++) {
+      if (out[oi].id !== rn.id || out[oi].name !== rn.from) continue;
+      out[oi].name = rn.to;
+      for (var rr = 1; rr < data.length; rr++) {
+        if (String(data[rr][0]) !== rn.id) continue;
+        sheet.getRange(rr + 1, 2).setValue(rn.to);
         break;
       }
       break;
@@ -4927,7 +5043,7 @@ function saveEdition(sessionToken, payload) {
     }
   }
   // A NEW edition is materialised from its preset, never left to inherit —
-  // "start as a copy of the Morning Edition until told otherwise" is precisely
+  // "start as a copy of Your Morning Digest until told otherwise" is precisely
   // the behaviour the developer rejected. Default 'all' rather than 'global'.
   var preset = SCRAPER_TUNING_PRESETS[String(p.preset)] ? String(p.preset) : 'all';
   var map = scPresetMap_(preset) || {};
@@ -5273,6 +5389,11 @@ function scHandleSharedEdition_(e) {
   if (!row) return deny('This edition is no longer available.');
   var html = String(digests.getRange(row, 8).getValue() || '');
   if (!html) return deny('This edition is no longer available.');
+  // Same read-path upgrades getDigest applies: retired masthead, and legacy
+  // direct-/exec article links that Google's account routing breaks. A share
+  // recipient is the least likely of all readers to be signed into the right
+  // Google account, so this one matters here more than anywhere.
+  html = scRewriteLegacyNames_(scRewriteLegacyClickUrls_(html));
 
   try {
     var sh = ss.getSheetByName(SCRAPER_TABS.SHARES);
@@ -5338,6 +5459,55 @@ function scHandleClickRedirect_(e) {
     + '<script>location.replace(' + JSON.stringify(safe) + ');</script>'
     + '<p style="font-family:sans-serif">Opening article… '
     + '<a href="' + scAttr_(safe) + '">continue</a></p>');
+}
+
+/** Serve one edition's held-back stories — what cleared the relevance bar but
+    did not fit a section cap. Unauthenticated by design, and bounded exactly
+    the way the click redirect is: the digest id names the edition, the payload
+    is read from that edition's own stored JSON, nothing is echoed back from
+    the request, and there is no write of any kind. A subscriber opening
+    "View More" from their email has no session and needs none.
+
+    The reply is always JSON: the embedding page is what fetches this, over the
+    same cookie-less path the click hop uses. Nothing navigates to /exec. */
+function scHandleHeldBack_(e) {
+  var want = scStr_((e && e.parameter && e.parameter.more) || '', 60);
+  var out = { success: false, items: [], total: 0, editionName: '', date: '' };
+  var json = function(o) {
+    return ContentService.createTextOutput(JSON.stringify(o))
+      .setMimeType(ContentService.MimeType.JSON);
+  };
+  if (!want) return json(out);
+  try {
+    var ss = scraperSs_();
+    var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+    var n = sheet ? sheet.getLastRow() - 1 : 0;
+    if (n < 1) return json(out);
+    var ids = sheet.getRange(2, 1, n, 1).getValues();
+    var row = 0;
+    for (var i = n - 1; i >= 0; i--) {
+      if (String(ids[i][0]) === want) { row = i + 2; break; }
+    }
+    if (!row) return json(out);
+    // Column 7 only — the rendered HTML in column 8 is the largest cell in the
+    // sheet and this route never needs it.
+    var d = null;
+    try { d = JSON.parse(String(sheet.getRange(row, 7).getValue() || 'null')); } catch (pe) {}
+    if (!d) return json(out);
+    out.editionName = scRewriteLegacyNames_(String(d.editionName || ''));
+    out.date = String(d.date || '');
+    // Editions built before 2026-08-28 carry no embedded held-back list. Say so
+    // with an explicit flag rather than an empty list, so the reader is told the
+    // edition predates the feature instead of "nothing was held back".
+    if (!d.heldBack) { out.legacy = true; return json(out); }
+    out.items = (d.heldBack || []).map(function(it) {
+      return { title: String(it.title || ''), source: String(it.source || ''),
+               publishedAt: String(it.publishedAt || ''), url: String(it.url || '') };
+    });
+    out.total = Number(d.heldBackTotal) || out.items.length;
+    out.success = true;
+  } catch (err) { /* a read-only side route must never throw at the reader */ }
+  return json(out);
 }
 
 /** Short stable per-URL key for click links (avoids putting the full URL in
@@ -7943,6 +8113,13 @@ function doGet(e) {
   // arbitrary URL cannot be passed in. It only appends one ClickLog row.
   if (action === 'go') {
     return scHandleClickRedirect_(e);
+  }
+
+  // PROJECT: held-back stories for one edition ("View More"). Unauthenticated
+  // for the same reason the redirect above is — the reader arrives from their
+  // email with no session. Read-only, and scoped to the named edition.
+  if (action === 'more') {
+    return scHandleHeldBack_(e);
   }
 
   // PROJECT: shared-edition view. Unauthenticated by design — the point of a

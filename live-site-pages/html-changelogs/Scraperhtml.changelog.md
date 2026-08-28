@@ -9,6 +9,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 *(No changes yet)*
 
+## [v01.55w] — 2026-08-28 05:16:12 PM EST — v03.30r
+
+### Changed
+- The Digest window is wider and no longer needs to be scrolled sideways — the whole edition fits on screen at once
+- The landing-page edition reader is unchanged in size and layout
+
+### Added
+- A **View More** link in each edition's footer opens the stories that cleared your relevance bar but did not fit a section's cap, with the source for each. It works from the app and from a link in the emailed edition, and closing it returns you to where you were
+- Editions published before this release show a short note explaining that their held-back list was not kept, rather than an empty list
+
 ## [v01.54w] — 2026-08-28 06:28:13 AM EST — v03.29r
 
 ### Fixed
@@ -360,13 +370,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 ### Added
 - New Compile button on each project card gathers news for that project, with live progress shown while it runs
 - New Articles view lists everything gathered so far — headlines link to the original story, with source, date, and a short preview
-
-## [v01.05w] — 2026-08-02 09:42:54 PM EST — v01.50r
-
-### Added
-- New project dashboard: see all your research projects at a glance with status, report schedule, and delivery labels
-- "New Project" guided setup: a 5-step wizard asks about your topic, industries, keywords, sources, and report schedule, with a review screen before creating
-- Edit, pause/resume, and archive controls on each project card
-- Status messages confirm when a project is created, updated, paused, or archived
 
 Developed by: LightAISolutions
