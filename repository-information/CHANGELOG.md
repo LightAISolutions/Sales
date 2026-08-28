@@ -3,11 +3,56 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.12r] — 2026-08-27 09:42:55 PM EST
+
+> **Prompt:** "I fully agree with you on your "1. Free, automatic ways to sharpen Scraper's understanding of you". I want you to execute all six of your tier-1 and 2 suggestions. 
+>
+> I also fully agree with you on your "2. The Projects feature - my verdict". Execute your own recommendations, including all five "other features" in the priority order you chose. 
+>
+> I can't fully visualize your landing page, but go ahead and replace the current landing page with your recommendation. I will have you edit it later if needed. 
+>
+> Regarding the digest, does it cost any tokens to email it out to a recipient? I need to resend it to myself to see if I like your adjustments."
+
+### Added
+- **Three new tabs** (`Editions`, `Subscribers`, `ClickLog`) plus an `Edition` column on `Digests`. `ensureScraperTabs_` now tops up header rows when a schema grows, so existing tabs pick up new columns without manual repair
+- **Editions (replaces Projects)** — named digest products with per-edition cadence (`daily` weekdays / `weekly` on an ISO-day anchor / `monthly` on a day-of-month), reading window, and subscriber list. `scEditionDue_` + `scEditionWindowH_` are pure and unit-tested; `scDigestStart_`/`scDigestStep_` thread an `editionId`, and `scDigestScheduledTick_` finishes any in-flight build before picking the first due edition. `morning` is seeded as the built-in default and cannot be deleted. Routes: `listEditions`, `saveEdition`, `deleteEdition`
+- **Subscribers** — email, name, per-edition opt-in (`all` supported), status, admin flag, unsubscribe token. `scEditionRecipients_` resolves an edition's recipients; the legacy `DIGEST_RECIPIENT` list is migrated in once on first read (`SUBSCRIBERS_MIGRATED`). Routes: `listSubscribers`, `saveSubscriber`, `removeSubscriber` — all behind `scCanManageDigest_`, with addresses masked for non-managers
+- **T1a — click tracking**: every article link in a rendered edition routes through `doGet(action=go)` → `scHandleClickRedirect_`, which resolves the destination **server-side from that edition's own intake rows** by `(digest id, item key)` and appends a `ClickLog` row before redirecting. Deliberately unauthenticated (subscribers open these from email with no session) and deliberately **not** an open redirect — an arbitrary `?url=` can never be honored. `scClickBoosts_` converts a 30-day click window into a diminishing, capped per-label boost (`SCRAPER_CLICK_BOOST_CAP = 5`) folded into the company and topic signals
+- **T1b — dossier alias mining**: `scMineDossiersStep_` round-robins `SCRAPER_DOSSIER_MINE_PER_SYNC = 8` covered companies per daily sync, fetches each `<slug>.profile.json`, and merges product names, technical-spec names, legal name and ticker symbol into that company's Interests `Aliases` — **add-only**, capped at 40 terms, failure-tolerant per dossier
+- **T1c — per-company segment tightening**: the same pass derives each company's operating segments (from `productsAndServices[].targetSegments` + `categories`) into a `seg:` tag in Notes. The rubric now gates a company-matched article when **every** matched company operates only in currently-disabled segments — even when the article names no segment itself. Unknown segments never gate (fail-open)
+- **T2a — corroboration**: `scDigestItems_` groups intake by a normalized 8-word title signature and boosts stories carried by 2+ distinct sources, bounded by `SCRAPER_CORROB_CAP = 6`
+- **T2c — source performance**: `sourceStats` reports per-source items, how many cleared the relevance bar, hit-rate, and clicks earned
+- **F2/F3 — archive search + company timeline**: `searchArchive` (free-text over title/source with company and date filters) and `companyTimeline` (all stored coverage for one covered company, newest first)
+- **F4 — preview**: `previewEdition` renders the current top-scored intake as an edition **without storing or emailing it**
+- **F5 — held-back rollup**: the render step stashes relevant-but-unshown items per edition (`SCRAPER_HELD_BACK_MAX = 25`); `sendHeldBackRollup` emails admin subscribers "what your sources published that you didn't see"
+- **New landing page in `Scraper.html`** — the app opens on the latest edition rendered inline, above it a status strip (next edition / subscribers / AI provider / scheduler health / editions kept) that colours green or amber per row, a click-through strip of recent editions, and a "what is driving relevance" panel. A **Tune drawer** (5 tabs: Interests, Editions, Subscribers, Archive, Source stats) holds everything adjustable; the live interests rail is **relocated** into its first pane rather than duplicated, so there is exactly one interests UI that cannot drift
+
+### Changed
+- **Projects retired.** All 20 Project/article/schedule ops were removed from `SCRAPER_PROJECT_ACTIONS` and `handleProjectAction_`, and the wizard / articles / stats overlays and their topbar buttons were deleted from the page. Sheets data and the function bodies are untouched — the routes are simply unreachable. **`scBindEvents` was fully rewritten to be null-guarded**: it previously bound `sc-new-btn`, `sc-wizard-overlay` and others directly, and binding a now-absent element throws — which would halt the inline script before the auth init runs and take sign-in down for everyone. Every remaining call site of the dead Project functions is itself inside dead code (verified by call-graph grep)
+- **The desk is two columns** — the left interests rail is now a hidden mount point that the Tune drawer adopts on open
+- Scheduled delivery now resolves recipients per edition via `scEditionRecipients_` instead of the flat `DIGEST_RECIPIENT` string, and the subject line uses the edition's own name
+- **`Scraper.gs`** VERSION v01.44g → v01.45g and **`Scraper.html`** v01.41w → v01.42w; version files + meta synced; public entries added (counters 45/50, 42/50)
+
+#### `Scraper.gs` — v01.45g
+
+##### Added
+- Editions, Subscribers, click tracking, dossier mining, corroboration, archive/timeline/stats/preview/rollup (detail above); `Scrapergs.version.txt` synced; public entry added (counter 44 → 45)
+
+#### `Scraper.html` — v01.42w
+
+##### Added
+- Landing page (status strip, recent editions, inline edition, relevance drivers) + Tune drawer (detail above); meta tag synced; public entry added (counter 41 → 42)
+
+### Notes
+- Verification: `node --check` clean on the `.gs` and both inline blocks. **30 pure-logic assertions** pass — edition cadence/window across daily/weekly/monthly incl. the before-7am and already-built-today guards, dossier mining (product/spec/ticker/legal-name extraction, segment derivation, URL-junk rejection), click-key stability, engagement boost + cap, per-company gate zeroing (and that it kills the engagement boost too), fail-open on unknown segments, and corroboration bounding. **Playwright** drove the whole new UI against stubbed routes: status strip, recent-chip switching, inline edition render, drivers panel, absence of all Projects UI, Tune tab switching, editions list (default not deletable), subscribers with masking/removal, archive search, and source-stat bars — zero page errors
+- **Deferred to a cleanup push**: physically deleting the ~3,000 lines of now-unreachable legacy Project/schedule function bodies from `Scraper.gs`. Unregistering the routes makes them inert immediately; excising them safely is its own focused pass
+- Answered in chat: emailing a stored edition costs **no** tokens (the HTML is rendered once at build time and re-sent), but rebuilding an edition re-runs the Sonnet summaries at roughly 5–11¢
 
 ## [v03.11r] — 2026-08-27 09:13:55 PM EST
 

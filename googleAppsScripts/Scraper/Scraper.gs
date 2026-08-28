@@ -1,4 +1,4 @@
-var VERSION = "v01.44g";
+var VERSION = "v01.45g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -332,7 +332,10 @@ var SCRAPER_TABS = {
   QUERYPLANS: 'QueryPlans',
   INTERESTS: 'Interests',
   DIGESTS: 'Digests',
-  DIGEST_INTAKE: 'DigestIntake'
+  DIGEST_INTAKE: 'DigestIntake',
+  EDITIONS: 'Editions',
+  SUBSCRIBERS: 'Subscribers',
+  CLICK_LOG: 'ClickLog'
 };
 
 var SCRAPER_TAB_HEADERS = {
@@ -357,29 +360,35 @@ var SCRAPER_TAB_HEADERS = {
               'Aliases', 'Weight', 'Source', 'Profiler Updated', 'First Seen',
               'Last Synced', 'Notes'],
   Digests: ['Digest ID', 'Date', 'Generated At', 'Status', 'Item Count',
-            'Relevant Count', 'Sections', 'HTML', 'Notes'],
+            'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition'],
   DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
-                 'Score', 'Signals', 'Summary', 'Section', 'Backstop']
+                 'Score', 'Signals', 'Summary', 'Section', 'Backstop'],
+  Editions: ['Edition ID', 'Name', 'Cadence', 'Anchor', 'Window Hours', 'Enabled',
+             'Last Built Date', 'Created', 'Notes'],
+  Subscribers: ['Email', 'Name', 'Editions', 'Status', 'Admin', 'Token',
+                'Added', 'Updated'],
+  ClickLog: ['Timestamp', 'Digest ID', 'Item Key', 'URL', 'Title', 'Source',
+             'Companies', 'Topics', 'Segments']
 };
 
 var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual', 'annual', 'custom'];
 var SCRAPER_DELIVERIES = ['inapp', 'email', 'both'];
 var SCRAPER_MAX_PROJECTS_PER_USER = 10;
-var SCRAPER_PROJECT_ACTIONS = ['createProject', 'listProjects', 'getProject',
-                               'updateProject', 'setProjectStatus',
-                               'compileNow', 'getCompileStatus', 'listArticles',
-                               'analyzeArticles', 'previewBrief',
-                               'backfillNow', 'getBackfillStatus', 'enrichNow',
-                               'setArticleVerdict', 'distillPreferences', 'resetScores',
-                               'getScoreStats', 'archiveJunk',
-                               'planQueries', 'getQueryPlan', 'addPlanQuery', 'deepBackfillNow',
-                               'getSchedulerHealth', 'setArticleVerdicts',
+// Phase 5: the Projects feature is retired — Interests defines scope, the
+// source roster defines reach, the rubric scores, and Editions deliver. Its
+// routes are unregistered (unreachable) rather than deleted in this push; the
+// function bodies and Sheets data are untouched pending a cleanup pass.
+var SCRAPER_PROJECT_ACTIONS = ['getSchedulerHealth',
                                'listInterests', 'setInterestEnabled', 'syncInterestsNow',
                                'rubricPreview',
                                'runDigestNow', 'getDigestStatus', 'listDigests', 'getDigest',
                                'deleteDigest',
                                'goLiveStatus', 'testAi', 'emailLatestDigest',
-                               'setAiProvider', 'addDigestRecipient', 'removeDigestRecipient'];
+                               'setAiProvider', 'addDigestRecipient', 'removeDigestRecipient',
+                               'listEditions', 'saveEdition', 'deleteEdition',
+                               'listSubscribers', 'saveSubscriber', 'removeSubscriber',
+                               'searchArchive', 'companyTimeline', 'sourceStats',
+                               'previewEdition', 'sendHeldBackRollup'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -582,6 +591,18 @@ var SCRAPER_DIGEST_SUMMARY_MAX = 900;            // stored summary cap (chars) �
 var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limit is 50k chars)
 var SCRAPER_DIGEST_KEEP = 60;                    // Digests tab retention (rows)
 var SCRAPER_DIGEST_SECTION_CAPS = { companies: 6, market: 6, incidents: 4 };
+// Editions (Phase 5): named digest products with their own cadence and
+// subscriber lists. 'morning' is the built-in default (the weekday Morning
+// Edition); more are added from the app. Cadences: daily (weekdays, 24h
+// window / 72h Mondays), weekly (anchor ISO day, 168h), monthly (anchor
+// day-of-month, 720h).
+var SCRAPER_EDITION_DEFAULT = { id: 'morning', name: 'The Morning Edition',
+  cadence: 'daily', anchor: 0, windowH: 0 };  // windowH 0 = cadence default
+var SCRAPER_CLICK_BOOST_CAP = 5;       // max rubric points from engagement (clicks)
+var SCRAPER_CLICK_WINDOW_DAYS = 30;    // clicks older than this stop influencing scores
+var SCRAPER_CORROB_CAP = 6;            // max score boost from multi-source corroboration
+var SCRAPER_DOSSIER_MINE_PER_SYNC = 8; // Profiler dossiers mined per daily sync (round-robin)
+var SCRAPER_HELD_BACK_MAX = 25;        // held-back items stored per edition (rollup feed)
 
 // D1 (2026-08-27): 30-source free trade-press roster — 3rd-party outlets only
 // (no paywalls, no company-owned newsrooms; RTO Insider et al. excluded as
@@ -662,6 +683,12 @@ function ensureScraperTabs_(ss) {
       sheet = ss.insertSheet(name);
       sheet.appendRow(SCRAPER_TAB_HEADERS[name]);
       sheet.setFrozenRows(1);
+    } else if (sheet.getLastColumn() < SCRAPER_TAB_HEADERS[name].length) {
+      // Schema grew (e.g. Digests gained an Edition column) — rewrite the
+      // header row so existing tabs pick up the new columns; data rows are
+      // ragged-safe (getValues pads short rows with '').
+      sheet.getRange(1, 1, 1, SCRAPER_TAB_HEADERS[name].length)
+           .setValues([SCRAPER_TAB_HEADERS[name]]);
     }
   });
   _scTabsChecked = true;
@@ -2351,6 +2378,9 @@ function scSyncInterests_(force) {
         dirty = true;
       }
     }
+    // T1b/T1c — mine a few Profiler dossiers each sync for alias terms and
+    // per-company operating segments (add-only; never overwrites your edits).
+    try { scMineDossiersStep_(ss); } catch (mineErr) {}
     if (dirty && data.length > 1) {
       sheet.getRange(2, 1, data.length - 1, width).setValues(
         data.slice(1).map(function(dr) { return dr.slice(0, width); }));
@@ -2437,9 +2467,10 @@ function scTermsHit_(text, terms) {
     substance (0-20): snippet-quality heuristics (length, figures, quotes,
       hard-news verbs) — the Phase 3 AI pass refines this signal.
     Returns { score, signals, matchedCompanies, matchedTopics }. */
-function scRubricScore_(title, snippet, model) {
+function scRubricScore_(title, snippet, model, ctx) {
   var text = (String(title || '') + ' ' + String(snippet || '')).toLowerCase();
   var w = SCRAPER_RUBRIC_WEIGHTS;
+  ctx = ctx || {};
   var matchedCompanies = [], bestCoWeight = 0;
   for (var i = 0; i < model.companies.length; i++) {
     var co = model.companies[i];
@@ -2453,6 +2484,11 @@ function scRubricScore_(title, snippet, model) {
     company = w.company * Math.min(1, bestCoWeight);
     company = Math.min(w.company, company + w.company * 0.15 * (matchedCompanies.length - 1));
   }
+  // Engagement boost (T1a): reward companies you actually click through to.
+  var clickBoost = 0, cb = ctx.clickBoosts;
+  if (cb) {
+    matchedCompanies.forEach(function(l){ clickBoost = Math.max(clickBoost, cb.companies[l.toLowerCase()] || 0); });
+  }
   var matchedTopics = [], bestTopicWeight = 0;
   for (var j = 0; j < model.topics.length; j++) {
     var tp = model.topics[j];
@@ -2465,6 +2501,9 @@ function scRubricScore_(title, snippet, model) {
   if (matchedTopics.length) {
     topic = w.topic * Math.min(1, bestTopicWeight);
     topic = Math.min(w.topic, topic + w.topic * 0.2 * (matchedTopics.length - 1));
+  }
+  if (cb) {
+    matchedTopics.forEach(function(l){ clickBoost = Math.max(clickBoost, cb.topics[l.toLowerCase()] || 0); });
   }
   // Segment gate (developer feedback 2026-08-27): classify the article
   // against ALL segment lenses. If its only segment hits are toggled-off
@@ -2480,6 +2519,21 @@ function scRubricScore_(title, snippet, model) {
     }
   }
   var gated = excludedSegments.length > 0 && matchedSegments.length === 0;
+  // Per-company segment tightening (T1c): if every covered company this
+  // article matched operates ONLY in currently-disabled segments (per its
+  // mined dossier), gate it even when the article itself named no segment.
+  var cs = ctx.companySegments;
+  if (!gated && cs && matchedCompanies.length && ctx.disabledSegments) {
+    var allOff = true;
+    for (var mc = 0; mc < matchedCompanies.length; mc++) {
+      var opSegs = cs[matchedCompanies[mc].toLowerCase()];
+      if (!opSegs) { allOff = false; break; }              // unknown → don't gate
+      var anyOn = false;
+      for (var os in opSegs) { if (opSegs.hasOwnProperty(os) && !ctx.disabledSegments[os]) { anyOn = true; break; } }
+      if (anyOn) { allOff = false; break; }
+    }
+    if (allOff) gated = true;
+  }
   if (gated) company = 0;
   var emphasis = 0;
   if (matchedCompanies.length && !gated) {
@@ -2504,10 +2558,13 @@ function scRubricScore_(title, snippet, model) {
   if (/\b(announced|filed|signed|awarded|commissioned|acquired|ordered)\b/i.test(body)) substance += 3;
   substance = Math.min(w.substance, substance);
   var round1 = function(n) { return Math.round(n * 10) / 10; };
+  if (gated) clickBoost = 0;
+  var corrob = Math.min(SCRAPER_CORROB_CAP, Number(ctx.corrob) || 0);
   return {
-    score: Math.round(Math.min(100, company + topic + emphasis + substance)),
+    score: Math.round(Math.min(100, company + topic + emphasis + substance + clickBoost + corrob)),
     signals: { company: round1(company), topic: round1(topic),
-               emphasis: round1(emphasis), substance: substance },
+               emphasis: round1(emphasis), substance: substance,
+               engagement: round1(clickBoost), corroboration: round1(corrob) },
     matchedCompanies: matchedCompanies, matchedTopics: matchedTopics,
     matchedSegments: matchedSegments, excludedSegments: excludedSegments,
     gated: gated
@@ -2600,6 +2657,7 @@ function scDigestClock_(now) {
   var iso = Number(Utilities.formatDate(d, 'America/New_York', 'u'));   // 1=Mon … 7=Sun
   return {
     isoDay: iso,
+    dom: Number(Utilities.formatDate(d, 'America/New_York', 'd')),
     hour: Number(Utilities.formatDate(d, 'America/New_York', 'H')),
     date: Utilities.formatDate(d, 'America/New_York', 'yyyy-MM-dd'),
     windowH: iso === 1 ? 72 : SCRAPER_DIGEST_WINDOW_H   // Monday edition covers the weekend
@@ -2665,14 +2723,16 @@ function scDigestIntakeUrls_(sheet, digestId) {
 }
 
 /** Start a fresh run: clear the intake tab and initialize state. */
-function scDigestStart_(ss) {
+function scDigestStart_(ss, editionId) {
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
   var rows = intake.getLastRow();
   if (rows > 1) intake.deleteRows(2, rows - 1);
   var clock = scDigestClock_(new Date());
+  var ed = scEditionById_(ss, editionId || SCRAPER_EDITION_DEFAULT.id);
   var state = {
     id: 'dg-' + clock.date + '-' + Utilities.getUuid().slice(0, 8),
-    date: clock.date, windowH: clock.windowH,
+    editionId: ed.id, editionName: ed.name,
+    date: clock.date, windowH: scEditionWindowH_(ed, clock),
     phase: 'fetch', srcCursor: 0, bsCursor: 0, bsList: null,
     fetched: 0, kept: 0, startedAt: Date.now()
   };
@@ -2680,9 +2740,27 @@ function scDigestStart_(ss) {
   return state;
 }
 
+var _scRunCtx = null;
+/** Scoring context shared across a run's steps: engagement boosts, mined
+    per-company operating segments, and the set of currently-disabled
+    segment labels. Memoized per execution (each chunked step is a fresh
+    execution, so it naturally reflects the latest state). */
+function scRunCtx_(ss, model) {
+  if (_scRunCtx) return _scRunCtx;
+  var disabled = {};
+  (model.segments || []).forEach(function(sg) { if (!sg.enabled) disabled[sg.label.toLowerCase()] = true; });
+  _scRunCtx = {
+    clickBoosts: scClickBoosts_(ss),
+    companySegments: scCompanySegments_(ss),
+    disabledSegments: disabled
+  };
+  return _scRunCtx;
+}
+
 /** Score + append parsed feed items to the intake tab (shared by fetch and
     backstop). Returns the number kept. */
 function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen, model, cutoffMs) {
+  var ctx = scRunCtx_(ss, model);
   var out = [];
   for (var i = 0; i < items.length && out.length < SCRAPER_DIGEST_ITEMS_PER_SOURCE; i++) {
     var it = items[i];
@@ -2701,7 +2779,7 @@ function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen
     var normT = title.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
     var normS = snippet.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
     if (normS && normT && (normS === normT || normS.indexOf(normT) === 0)) snippet = '';
-    var r = scRubricScore_(title, snippet, model);
+    var r = scRubricScore_(title, snippet, model, ctx);
     var score = isBackstop ? Math.round(r.score * SCRAPER_DIGEST_BACKSTOP_PENALTY) : r.score;
     if (score < SCRAPER_DIGEST_MIN_INTAKE_SCORE) continue;
     seen[it.url] = true;
@@ -2806,6 +2884,24 @@ function scDigestItems_(ss, digestId) {
       summary: String(data[i][8] || ''), section: String(data[i][9] || 'market'),
       backstop: String(data[i][10]) === 'yes' });
   }
+  // Corroboration (T2a): a story covered by 2+ distinct sources in the window
+  // matters more. Group by a normalized title signature; add a bounded boost
+  // to each member's effective score. Deterministic, no extra storage.
+  var groups = {};
+  items.forEach(function(it) {
+    var sig = String(it.title).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(' ').slice(0, 8).join(' ');
+    (groups[sig] = groups[sig] || []).push(it);
+  });
+  Object.keys(groups).forEach(function(sig) {
+    var g = groups[sig];
+    var sources = {};
+    g.forEach(function(it){ sources[String(it.source).toLowerCase()] = true; });
+    var distinct = Object.keys(sources).length;
+    if (distinct >= 2) {
+      var boost = Math.min(SCRAPER_CORROB_CAP, (distinct - 1) * 3);
+      g.forEach(function(it){ it.corrob = distinct; it.score = Math.min(100, it.score + boost); });
+    }
+  });
   items.sort(function(a, b) { return b.score - a.score; });
   return items;
 }
@@ -2923,24 +3019,48 @@ function scDigestRenderStep_(ss, state) {
               shown: (lead ? 1 : 0) + sections.companies.length
                      + sections.market.length + sections.incidents.length }
   };
+  d.editionId = state.editionId || SCRAPER_EDITION_DEFAULT.id;
+  d.editionName = state.editionName || SCRAPER_EDITION_DEFAULT.name;
+  // T1a — route every article link through the logging redirect. The intake
+  // keeps the raw URL; the redirect resolves + logs, then forwards.
+  function trackAll(list) { list.forEach(function(it) { it.url = scClickUrl_(state.id, it.url); }); }
+  trackAll(d.sections.companies); trackAll(d.sections.market); trackAll(d.sections.incidents);
+  if (d.lead) d.lead.url = scClickUrl_(state.id, d.lead.url);
+
   var html = scRenderDigestNightInk_(d);
   digests.appendRow([state.id, state.date, new Date(), 'generated',
     items.length, relevant.length,
     JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX),
     html.slice(0, SCRAPER_DIGEST_CELL_MAX),
-    state.aiNote || '']);
+    state.aiNote || '', d.editionId]);
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
   props.setProperty('DIGEST_LAST_DATE', state.date);
-  // Phase 4 go-live (2026-08-27): SCRAPER_SCHED_EMAIL_ENABLED is now true, so
-  // delivery is armed the moment a DIGEST_RECIPIENT Script Property is set.
-  // Use the app's "Email me latest" button for a real-inbox test first.
-  var recipient = scDigestRecipients_().join(',');  // normalized comma list
+  // F5 — stash the relevant-but-not-shown items for the weekly rollup.
+  // `sections` holds the pre-trackAll intake items (raw urls); compare raw.
+  var shown = {};
+  [sections.companies, sections.market, sections.incidents].forEach(function(sec) {
+    sec.forEach(function(it) { shown[it.url] = true; });
+  });
+  if (lead) shown[lead.url] = true;
+  var heldBack = relevant.filter(function(it) { return !shown[it.url]; });
+  scStoreHeldBack_(props, d.editionId, heldBack);
+  // Stamp the edition's last-built date.
+  try {
+    var edSheet = ss.getSheetByName(SCRAPER_TABS.EDITIONS);
+    var eds = edSheet.getDataRange().getValues();
+    for (var ei = 1; ei < eds.length; ei++) {
+      if (String(eds[ei][0]) === d.editionId) { edSheet.getRange(ei + 1, 7).setValue(state.date); break; }
+    }
+  } catch (edErr) {}
+  // Deliver to this edition's subscribers (Phase 5). Legacy DIGEST_RECIPIENT
+  // entries were migrated into Subscribers on first read.
+  var recipient = scEditionRecipients_(ss, d.editionId).join(',');
   if (recipient && SCRAPER_SCHED_EMAIL_ENABLED) {
     try {
       MailApp.sendEmail({ to: recipient,
-        subject: 'The Morning Edition — ' + state.date + ' (No. ' + scDigestNo_(no) + ')',
+        subject: d.editionName + ' — ' + state.date + ' (No. ' + scDigestNo_(no) + ')',
         htmlBody: html });
     } catch (mailErr) {}
   }
@@ -2949,9 +3069,10 @@ function scDigestRenderStep_(ss, state) {
   return { phase: 'done', relevant: relevant.length, sectionsBuilt: true };
 }
 
+
 function scDigestItemOut_(it) {
   return { title: it.title, source: it.source, publishedAt: it.publishedAt,
-           url: it.url, score: it.score, backstop: it.backstop,
+           url: it.url, rawUrl: it.url, score: it.score, backstop: it.backstop,
            summary: it.summary || it.snippet };
 }
 
@@ -3062,13 +3183,17 @@ function scRenderDigestNightInk_(d) {
 
 /** One budget-bounded step of the digest state machine. A run left over
     from a previous day is abandoned and a fresh one starts. */
-function scDigestStep_() {
+function scDigestStep_(editionId) {
   var ss = scraperSs_();
   ensureScraperTabs_(ss);
   var t0 = Date.now();
   var today = scDigestClock_(new Date()).date;
+  var wantEd = editionId || SCRAPER_EDITION_DEFAULT.id;
   var state = scDigestState_();
-  if (!state || state.phase === 'done' || state.date !== today) state = scDigestStart_(ss);
+  if (!state || state.phase === 'done' || state.date !== today ||
+      (state.editionId || SCRAPER_EDITION_DEFAULT.id) !== wantEd) {
+    state = scDigestStart_(ss, wantEd);
+  }
   var info = null;
   if (state.phase === 'fetch') info = scDigestFetchStep_(ss, state, t0);
   else if (state.phase === 'backstop') info = scDigestBackstopStep_(ss, state, t0);
@@ -3076,6 +3201,7 @@ function scDigestStep_() {
   else if (state.phase === 'render') info = scDigestRenderStep_(ss, state);
   state = scDigestState_();
   return { success: true, id: state.id, date: state.date, phase: state.phase,
+           edition: state.editionId || SCRAPER_EDITION_DEFAULT.id,
            done: state.phase === 'done', fetched: state.fetched || 0,
            kept: state.kept || 0, aiNote: state.aiNote || '', detail: info };
 }
@@ -3085,19 +3211,28 @@ function scDigestStep_() {
     edition exists. Never throws into the tick. */
 function scDigestScheduledTick_() {
   var clock = scDigestClock_(new Date());
-  if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) return;
   if (clock.hour < SCRAPER_DIGEST_RUN_HOUR) return;
-  var props = PropertiesService.getScriptProperties();
+  var ss = scraperSs_();
   var state = scDigestState_();
-  var inFlight = state && state.phase !== 'done' && state.date === clock.date;
-  if (!inFlight && props.getProperty('DIGEST_LAST_DATE') === clock.date) return;
-  try { scDigestStep_(); } catch (dgErr) {}
+  // A build already in flight today → keep advancing it to completion first.
+  if (state && state.phase !== 'done' && state.date === clock.date) {
+    try { scDigestStep_(state.editionId); } catch (e0) {}
+    return;
+  }
+  // Otherwise pick the first enabled edition that is DUE and not built today.
+  var editions = scEditions_(ss);
+  for (var i = 0; i < editions.length; i++) {
+    if (scEditionDue_(editions[i], clock)) {
+      try { scDigestStep_(editions[i].id); } catch (e1) {}
+      return;
+    }
+  }
 }
 
 /** Advance the digest build one step (the app loops until done). */
-function runDigestNow(sessionToken) {
+function runDigestNow(sessionToken, editionId) {
   validateSessionForData(sessionToken, 'runDigestNow');
-  return scDigestStep_();
+  return scDigestStep_(editionId || SCRAPER_EDITION_DEFAULT.id);
 }
 
 /** Current run state, if any. */
@@ -4024,37 +4159,582 @@ function scBriefCore_(ss, email, project) {
 }
 
 /** Route dispatcher shared by the doPost actions and the doGet api mirror. */
+
+// ══════════════════════════════════════════════════════════════════════════
+// Phase 5 — Editions, Subscribers, Click tracking, Dossier mining, Signals
+// (all project-specific; lives in the PROJECT block)
+// ══════════════════════════════════════════════════════════════════════════
+
+var SCRAPER_DOSSIER_BASE = 'https://lightaisolutions.github.io/Sales/profiler-data/';
+
+/** ---- Editions -------------------------------------------------------- */
+
+/** All editions (default seeded if the tab is empty). */
+function scEditions_(ss) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.EDITIONS);
+  var data = sheet.getDataRange().getValues();
+  var out = [];
+  for (var i = 1; i < data.length; i++) {
+    if (!String(data[i][0]).trim()) continue;
+    out.push({
+      id: String(data[i][0]), name: String(data[i][1]),
+      cadence: String(data[i][2] || 'daily'), anchor: Number(data[i][3]) || 0,
+      windowH: Number(data[i][4]) || 0,
+      enabled: data[i][5] === true || String(data[i][5]).toLowerCase() === 'true',
+      lastBuilt: String(data[i][6] || ''), created: data[i][7], notes: String(data[i][8] || '')
+    });
+  }
+  if (!out.length) {
+    var d = SCRAPER_EDITION_DEFAULT;
+    sheet.appendRow([d.id, d.name, d.cadence, d.anchor, d.windowH, true, '', new Date(), 'built-in default']);
+    out.push({ id: d.id, name: d.name, cadence: d.cadence, anchor: d.anchor,
+               windowH: d.windowH, enabled: true, lastBuilt: '', created: new Date(), notes: '' });
+  }
+  return out;
+}
+
+function scEditionById_(ss, id) {
+  var want = String(id || SCRAPER_EDITION_DEFAULT.id);
+  var all = scEditions_(ss);
+  for (var i = 0; i < all.length; i++) if (all[i].id === want) return all[i];
+  return all[0];
+}
+
+/** Cadence → window hours (pure). */
+function scEditionWindowH_(ed, clock) {
+  if (ed.windowH) return ed.windowH;
+  if (ed.cadence === 'weekly') return 168;
+  if (ed.cadence === 'monthly') return 720;
+  return clock.isoDay === 1 ? 72 : SCRAPER_DIGEST_WINDOW_H;  // daily: 72h Mondays
+}
+
+/** Is this edition due to build now? (pure given clock + lastBuilt) */
+function scEditionDue_(ed, clock) {
+  if (!ed.enabled) return false;
+  if (clock.hour < SCRAPER_DIGEST_RUN_HOUR) return false;
+  if (ed.lastBuilt === clock.date) return false;
+  if (ed.cadence === 'daily') return SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) !== -1;
+  if (ed.cadence === 'weekly') return clock.isoDay === (ed.anchor || 5);   // default Friday
+  if (ed.cadence === 'monthly') return clock.dom === (ed.anchor || 1);
+  return false;
+}
+
+function listEditions(sessionToken) {
+  validateSessionForData(sessionToken, 'listEditions');
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  return { success: true, editions: scEditions_(ss) };
+}
+
+function saveEdition(sessionToken, payload) {
+  var user = validateSessionForData(sessionToken, 'saveEdition');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var p;
+  try { p = JSON.parse(payload || '{}'); } catch (e) { return { success: false, error: 'bad_payload' }; }
+  var name = scStr_(p.name, 80);
+  if (!name) return { success: false, error: 'name_required' };
+  var cadence = ['daily', 'weekly', 'monthly'].indexOf(String(p.cadence)) !== -1 ? p.cadence : 'daily';
+  var anchor = Math.max(0, Math.min(31, Number(p.anchor) || 0));
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.EDITIONS);
+  var data = sheet.getDataRange().getValues();
+  var id = scStr_(p.id, 40);
+  var enabled = p.enabled !== false;
+  if (id) {
+    for (var i = 1; i < data.length; i++) {
+      if (String(data[i][0]) === id) {
+        sheet.getRange(i + 1, 2, 1, 4).setValues([[name, cadence, anchor, Number(p.windowH) || 0]]);
+        sheet.getRange(i + 1, 6).setValue(enabled);
+        dataAuditLog(user.email, 'update', 'edition', id, name);
+        return { success: true, id: id };
+      }
+    }
+  }
+  id = 'ed-' + Utilities.getUuid().slice(0, 8);
+  sheet.appendRow([id, name, cadence, anchor, Number(p.windowH) || 0, enabled, '', new Date(), '']);
+  dataAuditLog(user.email, 'create', 'edition', id, name);
+  return { success: true, id: id };
+}
+
+function deleteEdition(sessionToken, editionId) {
+  var user = validateSessionForData(sessionToken, 'deleteEdition');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var id = scStr_(editionId, 40);
+  if (id === SCRAPER_EDITION_DEFAULT.id) return { success: false, error: 'cannot_delete_default' };
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.EDITIONS);
+  var data = sheet.getDataRange().getValues();
+  for (var i = data.length - 1; i >= 1; i--) {
+    if (String(data[i][0]) === id) { sheet.deleteRow(i + 1); dataAuditLog(user.email, 'delete', 'edition', id, ''); return { success: true }; }
+  }
+  return { success: false, error: 'not_found' };
+}
+
+/** ---- Subscribers ----------------------------------------------------- */
+
+function scSubscribers_(ss) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.SUBSCRIBERS);
+  var data = sheet.getDataRange().getValues();
+  var out = [];
+  for (var i = 1; i < data.length; i++) {
+    var email = String(data[i][0] || '').trim();
+    if (!email) continue;
+    out.push({
+      email: email, name: String(data[i][1] || ''),
+      editions: String(data[i][2] || '').split(',').map(function(x){return x.trim();}).filter(Boolean),
+      status: String(data[i][3] || 'active'),
+      admin: data[i][4] === true || String(data[i][4]).toLowerCase() === 'true',
+      token: String(data[i][5] || ''), added: data[i][6], updated: data[i][7]
+    });
+  }
+  return out;
+}
+
+/** Recipients (comma string) for one edition — active subscribers opted into
+    it, OR into 'all'. Legacy DIGEST_RECIPIENT entries are migrated in once. */
+function scEditionRecipients_(ss, editionId) {
+  scMigrateLegacyRecipients_(ss);
+  var subs = scSubscribers_(ss);
+  var out = [];
+  subs.forEach(function(s) {
+    if (s.status !== 'active') return;
+    if (s.editions.indexOf('all') !== -1 || s.editions.indexOf(editionId) !== -1) out.push(s.email);
+  });
+  return out;
+}
+
+/** One-time migration of the old DIGEST_RECIPIENT list into Subscribers. */
+function scMigrateLegacyRecipients_(ss) {
+  var props = PropertiesService.getScriptProperties();
+  if (props.getProperty('SUBSCRIBERS_MIGRATED') === '1') return;
+  var legacy = scDigestRecipients_();
+  if (legacy.length) {
+    var sheet = ss.getSheetByName(SCRAPER_TABS.SUBSCRIBERS);
+    var existing = {};
+    scSubscribers_(ss).forEach(function(s){ existing[s.email.toLowerCase()] = true; });
+    legacy.forEach(function(email) {
+      if (existing[email.toLowerCase()]) return;
+      sheet.appendRow([email, '', 'all', 'active', false,
+        Utilities.getUuid().replace(/-/g, ''), new Date(), new Date()]);
+    });
+  }
+  props.setProperty('SUBSCRIBERS_MIGRATED', '1');
+}
+
+function listSubscribers(sessionToken) {
+  var user = validateSessionForData(sessionToken, 'listSubscribers');
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  scMigrateLegacyRecipients_(ss);
+  var can = scCanManageDigest_(user);
+  var subs = scSubscribers_(ss).map(function(s) {
+    return { email: can ? s.email : scMaskEmail_(s.email), name: s.name,
+             editions: s.editions, status: s.status, admin: s.admin };
+  });
+  return { success: true, subscribers: subs, canManage: can };
+}
+
+function saveSubscriber(sessionToken, payload) {
+  var user = validateSessionForData(sessionToken, 'saveSubscriber');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var p;
+  try { p = JSON.parse(payload || '{}'); } catch (e) { return { success: false, error: 'bad_payload' }; }
+  var email = scStr_(p.email, 160).trim();
+  if (!scValidEmail_(email)) return { success: false, error: 'invalid_email' };
+  var eds = (p.editions && p.editions.length) ? p.editions.map(function(x){return scStr_(x,40);}) : ['all'];
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.SUBSCRIBERS);
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][0]).trim().toLowerCase() === email.toLowerCase()) {
+      sheet.getRange(i + 1, 2, 1, 4).setValues([[scStr_(p.name, 80), eds.join(','),
+        p.status === 'paused' ? 'paused' : 'active', p.admin === true]]);
+      sheet.getRange(i + 1, 8).setValue(new Date());
+      dataAuditLog(user.email, 'update', 'subscriber', scMaskEmail_(email), eds.join(','));
+      return { success: true };
+    }
+  }
+  sheet.appendRow([email, scStr_(p.name, 80), eds.join(','), 'active', p.admin === true,
+    Utilities.getUuid().replace(/-/g, ''), new Date(), new Date()]);
+  dataAuditLog(user.email, 'create', 'subscriber', scMaskEmail_(email), eds.join(','));
+  return { success: true };
+}
+
+function removeSubscriber(sessionToken, email) {
+  var user = validateSessionForData(sessionToken, 'removeSubscriber');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var addr = scStr_(email, 160).trim().toLowerCase();
+  if (!addr) return { success: false, error: 'invalid_email' };
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.SUBSCRIBERS);
+  var data = sheet.getDataRange().getValues();
+  for (var i = data.length - 1; i >= 1; i--) {
+    if (String(data[i][0]).trim().toLowerCase() === addr) {
+      sheet.deleteRow(i + 1);
+      dataAuditLog(user.email, 'delete', 'subscriber', scMaskEmail_(email), '');
+      return { success: true };
+    }
+  }
+  return { success: false, error: 'not_found' };
+}
+
+/** ---- Click tracking (T1a) -------------------------------------------- */
+
+/** Log a click and 302-redirect to the real article. Unauthenticated by
+    design: it only reads the stored edition's own intake rows to resolve the
+    target URL (no open redirect — an arbitrary ?url= is never honored), and
+    only appends one ClickLog row. Called from doGet(action=go). */
+function scHandleClickRedirect_(e) {
+  var digestId = (e && e.parameter && e.parameter.d) || '';
+  var itemKey = (e && e.parameter && e.parameter.i) || '';
+  var target = '', title = '', source = '', companies = '', topics = '', segments = '';
+  try {
+    var ss = scraperSs_();
+    var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+    if (intake) {
+      var data = intake.getDataRange().getValues();
+      for (var i = 1; i < data.length; i++) {
+        if (String(data[i][0]) !== digestId) continue;
+        if (scClickKey_(String(data[i][1])) !== itemKey) continue;
+        target = String(data[i][1]); title = String(data[i][2]); source = String(data[i][3]);
+        var sig = {};
+        try { sig = JSON.parse(String(data[i][7] || '{}')); } catch (se) {}
+        companies = (sig.mc || []).join('|'); topics = (sig.mt || []).join('|');
+        segments = (sig.ms || []).join('|');
+        break;
+      }
+    }
+    if (target && /^https?:\/\//i.test(target)) {
+      ss.getSheetByName(SCRAPER_TABS.CLICK_LOG).appendRow(
+        [new Date(), digestId, itemKey, target, title, source, companies, topics, segments]);
+    }
+  } catch (clkErr) { /* logging must never block the redirect */ }
+  var safe = (target && /^https?:\/\//i.test(target)) ? target : EMBED_PAGE_URL;
+  return HtmlService.createHtmlOutput(
+    '<!doctype html><meta http-equiv="refresh" content="0;url=' + scAttr_(safe) + '">'
+    + '<script>location.replace(' + JSON.stringify(safe) + ');</script>'
+    + '<p style="font-family:sans-serif">Opening article… '
+    + '<a href="' + scAttr_(safe) + '">continue</a></p>');
+}
+
+/** Short stable per-URL key for click links (avoids putting the full URL in
+    the redirect querystring). */
+function scClickKey_(url) {
+  var h = 0, str = String(url || '');
+  for (var i = 0; i < str.length; i++) { h = ((h << 5) - h + str.charCodeAt(i)) | 0; }
+  return (h >>> 0).toString(36);
+}
+
+function scAttr_(s) { return String(s || '').replace(/"/g, '&quot;').replace(/</g, '&lt;'); }
+
+/** Build the tracking redirect URL for one item — the app's own /exec
+    endpoint with action=go, which scHandleClickRedirect_ resolves and logs. */
+function scClickUrl_(digestId, url) {
+  var exec = 'https://script.google.com/macros/s/' + DEPLOYMENT_ID + '/exec';
+  return exec + '?action=go&d=' + encodeURIComponent(digestId)
+             + '&i=' + encodeURIComponent(scClickKey_(url));
+}
+
+/** Engagement boost map: label(lower) → points, from clicks in the window.
+    A covered thing you actually open scores higher next time. Capped. */
+function scClickBoosts_(ss) {
+  var out = { companies: {}, topics: {}, segments: {} };
+  var sheet = ss.getSheetByName(SCRAPER_TABS.CLICK_LOG);
+  if (!sheet) return out;
+  var data = sheet.getDataRange().getValues();
+  var cutoff = Date.now() - SCRAPER_CLICK_WINDOW_DAYS * 86400000;
+  var tally = { companies: {}, topics: {}, segments: {} };
+  for (var i = 1; i < data.length; i++) {
+    var ts = new Date(data[i][0]).getTime();
+    if (!ts || ts < cutoff) continue;
+    [['companies', 6], ['topics', 7], ['segments', 8]].forEach(function(pair) {
+      String(data[i][pair[1]] || '').split('|').forEach(function(lbl) {
+        var k = lbl.trim().toLowerCase();
+        if (k) tally[pair[0]][k] = (tally[pair[0]][k] || 0) + 1;
+      });
+    });
+  }
+  ['companies', 'topics', 'segments'].forEach(function(cat) {
+    Object.keys(tally[cat]).forEach(function(k) {
+      // diminishing: 1 click ~1.8pts, 3 ~3.4, saturating at the cap
+      out[cat][k] = Math.min(SCRAPER_CLICK_BOOST_CAP, Math.round(SCRAPER_CLICK_BOOST_CAP * (1 - Math.pow(0.6, tally[cat][k])) * 10) / 10);
+    });
+  });
+  return out;
+}
+
+/** ---- Dossier mining (T1b / T1c) -------------------------------------- */
+
+/** Extract alias terms + operating segments from one dossier JSON (pure). */
+function scMineDossier_(profile) {
+  var terms = {}, segs = {};
+  function add(t) {
+    var v = String(t || '').trim();
+    if (v.length >= 3 && v.length <= 40 && !/^https?:/i.test(v)) terms[v.toLowerCase()] = v;
+  }
+  add(profile.name); add(profile.legalName);
+  // ticker symbol tail (e.g. "SIX: ABBN" -> "ABBN", "NASDAQ: NVDA" -> "NVDA")
+  var tk = String(profile.ticker || '');
+  var tm = /([A-Za-z]{2,6})\s*$/.exec(tk.split(':').pop() || tk);
+  if (tm) add(tm[1]);
+  // product + tech names (flagship signal per schema)
+  (profile.productsAndServices || []).forEach(function(p) {
+    add(p.name);
+    (p.targetSegments || []).forEach(function(seg) { segs[String(seg).toLowerCase()] = true; });
+  });
+  (profile.technicalSpecs || []).forEach(function(t) { add(t.name); });
+  // decision-maker surnames are too noisy — skip. categories → segment hints
+  (profile.categories || []).forEach(function(c) { segs[String(c).toLowerCase()] = true; });
+  return { terms: Object.keys(terms).map(function(k){return terms[k];}), segments: Object.keys(segs) };
+}
+
+/** Daily dossier-mining pass: round-robin a handful of covered companies,
+    fetch each dossier, merge mined alias terms into that company's Interests
+    Aliases (add-only; never removes the developer's edits). Throttled and
+    failure-tolerant — never breaks the sync. */
+function scMineDossiersStep_(ss) {
+  var props = PropertiesService.getScriptProperties();
+  var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+  if (!sheet) return;
+  var data = sheet.getDataRange().getValues();
+  var companyRows = [];
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][1]) === 'company' && String(data[i][4]) === 'active') companyRows.push(i);
+  }
+  if (!companyRows.length) return;
+  var start = Number(props.getProperty('DOSSIER_MINE_CURSOR')) || 0;
+  var dirty = false;
+  for (var n = 0; n < Math.min(SCRAPER_DOSSIER_MINE_PER_SYNC, companyRows.length); n++) {
+    var ri = companyRows[(start + n) % companyRows.length];
+    var slug = String(data[ri][0]);
+    try {
+      var resp = UrlFetchApp.fetch(SCRAPER_DOSSIER_BASE + slug + '.profile.json?_cb=' + Date.now(),
+        { muteHttpExceptions: true });
+      if (resp.getResponseCode() !== 200) continue;
+      var profile = JSON.parse(resp.getContentText());
+      var mined = scMineDossier_(profile);
+      var existing = String(data[ri][7] || '').split(/[\n,]/).map(function(t){return t.trim();}).filter(Boolean);
+      var lower = {}; existing.forEach(function(t){ lower[t.toLowerCase()] = true; });
+      var addedAny = false;
+      mined.terms.forEach(function(t) { if (!lower[t.toLowerCase()]) { existing.push(t); lower[t.toLowerCase()] = true; addedAny = true; } });
+      if (addedAny) {
+        sheet.getRange(ri + 1, 8).setValue(existing.slice(0, 40).join(', '));
+        // stamp mined segments into Notes as seg:<...> without clobbering user notes
+        var notes = String(data[ri][13] || '');
+        var segTag = 'seg:' + mined.segments.join('|');
+        notes = notes.replace(/\bseg:[^;]*/, '').trim();
+        sheet.getRange(ri + 1, 14).setValue((notes ? notes + ' ' : '') + segTag);
+        dirty = true;
+      }
+    } catch (mErr) { /* one bad dossier never breaks the pass */ }
+  }
+  props.setProperty('DOSSIER_MINE_CURSOR', String((start + SCRAPER_DOSSIER_MINE_PER_SYNC) % companyRows.length));
+}
+
+/** Per-company operating segments mined from dossiers: company label(lower) →
+    {segLabel(lower): true}. Read from the Interests Notes 'seg:' tag. */
+function scCompanySegments_(ss) {
+  var out = {};
+  var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
+  if (!sheet) return out;
+  var data = sheet.getDataRange().getValues();
+  for (var i = 1; i < data.length; i++) {
+    if (String(data[i][1]) !== 'company') continue;
+    var m = /\bseg:([^\s;]*)/.exec(String(data[i][13] || ''));
+    if (!m || !m[1]) continue;
+    var set = {};
+    m[1].split('|').forEach(function(s){ if (s) set[s.trim().toLowerCase()] = true; });
+    out[String(data[i][2] || '').trim().toLowerCase()] = set;
+  }
+  return out;
+}
+
+/** ---- Held-back rollup (F5) ------------------------------------------- */
+
+function scStoreHeldBack_(props, editionId, items) {
+  try {
+    var slim = items.slice(0, SCRAPER_HELD_BACK_MAX).map(function(it) {
+      return { t: scStr_(it.title, 160), u: it.url, s: it.source, sc: it.score };
+    });
+    props.setProperty('HELDBACK_' + editionId, JSON.stringify(slim));
+  } catch (e) {}
+}
+
+
+/** ---- Archive search (F2) + company timeline (F3) --------------------- */
+
+/** Search stored editions' intake rows. Free-text over title/source, with
+    optional company/segment filters and a date range. */
+function searchArchive(sessionToken, payload) {
+  validateSessionForData(sessionToken, 'searchArchive');
+  var p;
+  try { p = JSON.parse(payload || '{}'); } catch (e) { p = {}; }
+  var q = String(p.q || '').trim().toLowerCase();
+  var company = String(p.company || '').trim().toLowerCase();
+  var fromMs = p.from ? new Date(p.from).getTime() : 0;
+  var toMs = p.to ? new Date(p.to).getTime() + 86400000 : 0;
+  var limit = Math.max(1, Math.min(100, Number(p.limit) || 40));
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var data = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE).getDataRange().getValues();
+  var out = [];
+  for (var i = data.length - 1; i >= 1 && out.length < limit; i--) {
+    var title = String(data[i][2]), source = String(data[i][3]);
+    var pub = String(data[i][4]);
+    if (q && (title + ' ' + source).toLowerCase().indexOf(q) === -1) continue;
+    var sig = {};
+    try { sig = JSON.parse(String(data[i][7] || '{}')); } catch (se) {}
+    if (company && (sig.mc || []).join('|').toLowerCase().indexOf(company) === -1) continue;
+    var ts = new Date(pub).getTime();
+    if (fromMs && ts && ts < fromMs) continue;
+    if (toMs && ts && ts > toMs) continue;
+    out.push({ digestId: String(data[i][0]), url: String(data[i][1]), title: title,
+      source: source, publishedAt: pub, score: Number(data[i][6]) || 0,
+      companies: sig.mc || [], summary: String(data[i][8] || '') });
+  }
+  return { success: true, results: out, count: out.length };
+}
+
+/** Every stored article that matched one covered company, newest first —
+    the bridge from a Profiler dossier to the news since it was written. */
+function companyTimeline(sessionToken, company, limit) {
+  validateSessionForData(sessionToken, 'companyTimeline');
+  var want = String(company || '').trim().toLowerCase();
+  if (!want) return { success: false, error: 'company_required' };
+  var max = Math.max(1, Math.min(100, Number(limit) || 30));
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var data = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE).getDataRange().getValues();
+  var out = [];
+  for (var i = data.length - 1; i >= 1 && out.length < max; i--) {
+    var sig = {};
+    try { sig = JSON.parse(String(data[i][7] || '{}')); } catch (se) {}
+    var mc = (sig.mc || []).map(function(x){ return String(x).toLowerCase(); });
+    if (mc.indexOf(want) === -1) continue;
+    out.push({ url: String(data[i][1]), title: String(data[i][2]),
+      source: String(data[i][3]), publishedAt: String(data[i][4]),
+      score: Number(data[i][6]) || 0, summary: String(data[i][8] || '') });
+  }
+  return { success: true, company: company, items: out, count: out.length };
+}
+
+/** ---- Source performance (T2c) ---------------------------------------- */
+
+/** Per-source stats: items ingested, how many cleared the relevance bar, and
+    clicks earned. Lets a noisy source be switched off with evidence. */
+function sourceStats(sessionToken) {
+  validateSessionForData(sessionToken, 'sourceStats');
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var data = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE).getDataRange().getValues();
+  var tally = {};
+  for (var i = 1; i < data.length; i++) {
+    var src = String(data[i][3] || '(unknown)');
+    var t = tally[src] || (tally[src] = { source: src, items: 0, relevant: 0, clicks: 0 });
+    t.items++;
+    if ((Number(data[i][6]) || 0) >= SCRAPER_RELEVANT_THRESHOLD) t.relevant++;
+  }
+  var clicks = ss.getSheetByName(SCRAPER_TABS.CLICK_LOG);
+  if (clicks) {
+    var cd = clicks.getDataRange().getValues();
+    for (var j = 1; j < cd.length; j++) {
+      var cs = String(cd[j][5] || '');
+      if (tally[cs]) tally[cs].clicks++;
+    }
+  }
+  var out = Object.keys(tally).map(function(k) {
+    var t = tally[k];
+    t.hitRate = t.items ? Math.round((t.relevant / t.items) * 100) : 0;
+    return t;
+  }).sort(function(a, b) { return b.relevant - a.relevant || b.items - a.items; });
+  return { success: true, sources: out };
+}
+
+/** ---- Preview + send-test (F4) ---------------------------------------- */
+
+/** Render the CURRENT top-scored intake as an edition preview without
+    storing it or emailing anyone. */
+function previewEdition(sessionToken, editionId) {
+  validateSessionForData(sessionToken, 'previewEdition');
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var state = scDigestState_();
+  if (!state || !state.id) return { success: false, error: 'no_run_yet' };
+  var items = scDigestItems_(ss, state.id);
+  if (!items.length) return { success: false, error: 'no_items' };
+  var ed = scEditionById_(ss, editionId || state.editionId);
+  var lead = items[0];
+  var sections = { companies: [], market: [], incidents: [] };
+  items.forEach(function(it) {
+    if (it.url === lead.url || it.score < SCRAPER_RELEVANT_THRESHOLD) return;
+    var sec = it.section || 'market';
+    if (sections[sec] && sections[sec].length < SCRAPER_DIGEST_SECTION_CAPS[sec]) sections[sec].push(it);
+  });
+  var d = {
+    id: state.id, date: state.date, no: 0, windowH: state.windowH,
+    generatedAt: new Date().toISOString(), aiNote: state.aiNote || '',
+    editionId: ed.id, editionName: ed.name,
+    lead: { title: lead.title, source: lead.source, publishedAt: lead.publishedAt,
+            url: lead.url, score: lead.score, text: lead.summary || lead.snippet },
+    sections: { companies: sections.companies.map(scDigestItemOut_),
+                market: sections.market.map(scDigestItemOut_),
+                incidents: sections.incidents.map(scDigestItemOut_) },
+    newCoverage: { count: 0, names: [] },
+    counts: { intake: items.length,
+              relevant: items.filter(function(it){ return it.score >= SCRAPER_RELEVANT_THRESHOLD; }).length,
+              shown: 1 + sections.companies.length + sections.market.length + sections.incidents.length }
+  };
+  return { success: true, html: scRenderDigestNightInk_(d), preview: true };
+}
+
+/** ---- Weekly held-back rollup (F5) ------------------------------------ */
+
+/** Email the admin subscribers the relevant stories that did NOT make the
+    last edition — "what your sources published that you didn't see". */
+function sendHeldBackRollup(sessionToken, editionId) {
+  var user = validateSessionForData(sessionToken, 'sendHeldBackRollup');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var edId = String(editionId || SCRAPER_EDITION_DEFAULT.id);
+  var raw = PropertiesService.getScriptProperties().getProperty('HELDBACK_' + edId) || '[]';
+  var items;
+  try { items = JSON.parse(raw); } catch (e) { items = []; }
+  if (!items.length) return { success: false, error: 'nothing_held_back' };
+  var to = scSubscribers_(ss).filter(function(s) { return s.admin && s.status === 'active'; })
+                             .map(function(s) { return s.email; });
+  if (!to.length) to = [user.email];
+  var html = scRenderHeldBackRollup_(items, edId);
+  MailApp.sendEmail({ to: to.join(','), subject: 'Held back — what did not make the last edition', htmlBody: html });
+  dataAuditLog(user.email, 'email', 'rollup', edId, String(items.length) + ' items');
+  return { success: true, sent: items.length, recipients: to.length };
+}
+
+function scRenderHeldBackRollup_(items, edId) {
+  function esc(x) { return escapeHtml(String(x == null ? '' : x)); }
+  var rows = items.map(function(it) {
+    return '<tr><td style="padding:8px 0;border-bottom:1px solid #262b33;">'
+      + '<a href="' + esc(it.u) + '" style="color:#eceae4;text-decoration:none;font-size:15px;">'
+      + esc(it.t) + '</a>'
+      + '<div style="font-family:monospace;font-size:11px;color:#7b828e;margin-top:3px;">'
+      + esc(it.s) + ' · score ' + Number(it.sc) + '</div></td></tr>';
+  }).join('');
+  return '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
+    + 'bgcolor="#101216" style="background:#101216;"><tr><td align="center" style="padding:20px 10px;">'
+    + '<table role="presentation" width="720" cellpadding="0" cellspacing="0" border="0" bgcolor="#15171c" '
+    + 'style="background:#15171c;width:720px;max-width:100%;"><tr><td style="padding:30px 34px;color:#e6e4de;'
+    + "font-family:'IBM Plex Sans',Segoe UI,system-ui,sans-serif;\">"
+    + '<div style="font-size:26px;font-weight:700;color:#f0eee8;">Held back</div>'
+    + '<div style="font-size:13px;color:#9aa0ab;margin:4px 0 16px;">'
+    + Number(items.length) + ' stories cleared your relevance bar but did not fit '
+    + esc(edId) + '\\u2019s section caps.</div>'
+    + '<table role="presentation" width="100%">' + rows + '</table>'
+    + '</td></tr></table></td></tr></table>';
+}
+
 function handleProjectAction_(op, sessionToken, e) {
   function param(k) { return (e && e.parameter && e.parameter[k]) || ''; }
-  if (op === 'createProject') return createProject(sessionToken, param('payload'));
-  if (op === 'listProjects') return listProjects(sessionToken, param('includeArchived') === '1');
-  if (op === 'getProject') return getProject(sessionToken, param('projectId'));
-  if (op === 'updateProject') return updateProject(sessionToken, param('projectId'), param('payload'));
-  if (op === 'setProjectStatus') return setProjectStatus(sessionToken, param('projectId'), param('status'));
-  if (op === 'compileNow') return compileNow(sessionToken, param('projectId'));
-  if (op === 'getCompileStatus') return getCompileStatus(sessionToken, param('projectId'));
-  if (op === 'listArticles') return listArticles(sessionToken, param('projectId'), param('limit'), param('mode'), param('minScore'), param('days'), param('q'));
-  if (op === 'distillPreferences') return distillPreferences(sessionToken, param('projectId'));
-  if (op === 'enrichNow') return enrichNow(sessionToken, param('projectId'));
-  if (op === 'getScoreStats') return getScoreStats(sessionToken, param('projectId'));
-  if (op === 'archiveJunk') return archiveJunk(sessionToken, param('projectId'));
-  if (op === 'planQueries') return planQueries(sessionToken, param('projectId'));
-  if (op === 'getQueryPlan') return getQueryPlan(sessionToken, param('projectId'));
-  if (op === 'addPlanQuery') return addPlanQuery(sessionToken, param('projectId'), param('term'));
-  if (op === 'deepBackfillNow') return deepBackfillNow(sessionToken, param('projectId'));
+  // Phase 5 surface: interests + rubric, editions + digests, subscribers,
+  // archive/timeline/stats, go-live controls. (Projects retired.)
   if (op === 'getSchedulerHealth') return getSchedulerHealth(sessionToken);
-  if (op === 'resetScores') return resetScores(sessionToken, param('projectId'));
-  if (op === 'analyzeArticles') return analyzeArticles(sessionToken, param('projectId'));
-  if (op === 'previewBrief') return previewBrief(sessionToken, param('projectId'));
-  if (op === 'backfillNow') return backfillNow(sessionToken, param('projectId'));
-  if (op === 'getBackfillStatus') return getBackfillStatus(sessionToken, param('projectId'));
-  if (op === 'setArticleVerdict') return setArticleVerdict(sessionToken, param('projectId'), param('articleId'), param('verdict'));
-  if (op === 'setArticleVerdicts') return setArticleVerdicts(sessionToken, param('projectId'), param('payload'));
   if (op === 'listInterests') return listInterests(sessionToken);
   if (op === 'setInterestEnabled') return setInterestEnabled(sessionToken, param('key'), param('enabled'));
   if (op === 'syncInterestsNow') return syncInterestsNow(sessionToken);
   if (op === 'rubricPreview') return rubricPreview(sessionToken, param('payload'));
-  if (op === 'runDigestNow') return runDigestNow(sessionToken);
+  if (op === 'runDigestNow') return runDigestNow(sessionToken, param('editionId'));
   if (op === 'getDigestStatus') return getDigestStatus(sessionToken);
   if (op === 'listDigests') return listDigests(sessionToken, param('limit'));
   if (op === 'getDigest') return getDigest(sessionToken, param('digestId'));
@@ -4065,6 +4745,17 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'setAiProvider') return setAiProvider(sessionToken, param('provider'));
   if (op === 'addDigestRecipient') return addDigestRecipient(sessionToken, param('email'));
   if (op === 'removeDigestRecipient') return removeDigestRecipient(sessionToken, param('email'));
+  if (op === 'listEditions') return listEditions(sessionToken);
+  if (op === 'saveEdition') return saveEdition(sessionToken, param('payload'));
+  if (op === 'deleteEdition') return deleteEdition(sessionToken, param('editionId'));
+  if (op === 'listSubscribers') return listSubscribers(sessionToken);
+  if (op === 'saveSubscriber') return saveSubscriber(sessionToken, param('payload'));
+  if (op === 'removeSubscriber') return removeSubscriber(sessionToken, param('email'));
+  if (op === 'searchArchive') return searchArchive(sessionToken, param('payload'));
+  if (op === 'companyTimeline') return companyTimeline(sessionToken, param('company'), param('limit'));
+  if (op === 'sourceStats') return sourceStats(sessionToken);
+  if (op === 'previewEdition') return previewEdition(sessionToken, param('editionId'));
+  if (op === 'sendHeldBackRollup') return sendHeldBackRollup(sessionToken, param('editionId'));
   return { success: false, error: 'unknown_op' };
 }
 
@@ -6034,6 +6725,15 @@ function doGet(e) {
   // re-pull what GitHub already contains. Do NOT add guards, secrets, or auth here.
   if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'deploy') {
     return ContentService.createTextOutput(pullAndDeployFromGitHub());
+  }
+
+  // PROJECT: digest click-tracking redirect (T1a). Unauthenticated by design —
+  // subscribers open these links straight from their email, with no session.
+  // It is NOT an open redirect: the destination is resolved server-side from
+  // the stored edition's own intake rows by (digest id, item key); an
+  // arbitrary URL cannot be passed in. It only appends one ClickLog row.
+  if (action === 'go') {
+    return scHandleClickRedirect_(e);
   }
 
   // GET API fallback for the fetch transport — Google's serving can drop POST

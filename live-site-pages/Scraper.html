@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.41w">
+  <meta name="build-version" content="v01.42w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -390,9 +390,14 @@
     .wd-spacer { flex: 1; }
     /* Desk grid — interests rail · projects · digest controls rail */
     .wd-desk {
-      display: grid; grid-template-columns: 280px minmax(0, 1fr) 300px;
+      /* Phase 5: the landing page leads with the edition. Interests/Sources/
+         Segments/Topics moved into the Tune drawer, so the left rail is only
+         a mount point — it is hidden here and shown inside the drawer. */
+      display: grid; grid-template-columns: minmax(0, 1fr) 300px;
       align-items: start; min-height: calc(100vh - 120px);
     }
+    .wd-desk > #wd-interests { display: none; }
+    #wd-tune-interests-host #wd-interests { display: flex; border: none; padding: 0; }
     .wd-rail { padding: 16px 14px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
     .wd-rail-left { border-right: 1px solid var(--wd-line); }
     .wd-rail-right { border-left: 1px solid var(--wd-line); background: var(--wd-rail); min-height: 100%; }
@@ -510,6 +515,61 @@
     #wd-golive-body .gl-bad { color: var(--wd-warn); }
     #wd-golive-body .gl-lbl { color: var(--wd-mut2); }
     #wd-golive-note { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); }
+    /* ── Phase 5 landing page ── */
+    #wd-status-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .wd-stat { border: 1px solid var(--wd-line); background: var(--wd-panel); border-radius: 5px;
+               padding: 7px 11px; min-width: 96px; }
+    .wd-stat b { display: block; font-family: var(--wd-mono); font-size: 15px; color: var(--wd-ink); line-height: 1.3; }
+    .wd-stat span { font-family: var(--wd-mono); font-size: 9.5px; letter-spacing: 0.12em;
+                    text-transform: uppercase; color: var(--wd-mut2); }
+    .wd-stat.ok b { color: var(--wd-green-ink); }
+    .wd-stat.warn b { color: var(--wd-warn); }
+    #wd-recent-strip { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 10px; }
+    #wd-recent-strip:empty { display: none; }
+    .wd-recent-chip { flex: 0 0 auto; border: 1px solid var(--wd-line-soft); background: var(--wd-panel);
+                      border-radius: 4px; padding: 5px 10px; font-family: var(--wd-mono); font-size: 11px;
+                      color: var(--wd-mut); cursor: pointer; white-space: nowrap; }
+    .wd-recent-chip:hover { color: var(--wd-ink); border-color: var(--wd-accent); }
+    .wd-recent-chip.on { background: var(--wd-green-bg); border-color: var(--wd-green-line); color: var(--wd-green-ink); }
+    #wd-edition-view { border: 1px solid var(--wd-line); border-radius: 6px; overflow: hidden; background: var(--wd-bg-deep); }
+    #wd-drivers { margin-top: 12px; }
+    .wd-driver-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+    .wd-driver { border: 1px solid var(--wd-line-soft); border-radius: 3px; padding: 3px 7px;
+                 font-family: var(--wd-mono); font-size: 10.5px; color: var(--wd-mut); }
+    .wd-driver b { color: var(--wd-accent); font-weight: 600; }
+    /* ── Tune overlay ── */
+    #wd-tune-overlay { display: none; position: fixed; inset: 0; background: rgba(8,9,12,0.72);
+                       z-index: 10001; align-items: flex-start; justify-content: center; padding: 40px 16px; overflow-y: auto; }
+    #wd-tune-panel { background: var(--wd-bg); border: 1px solid var(--wd-line-soft); border-radius: 8px;
+                     width: min(940px, 100%); padding: 18px 20px 22px;
+                     font-family: var(--wd-sans); color: var(--wd-ink); }
+    #wd-tune-panel .sc-wiz-head { display: flex; align-items: center; justify-content: space-between; }
+    #wd-tune-panel .sc-wiz-head h2 { margin: 0; font-size: 17px; font-weight: 700; color: var(--wd-ink); }
+    .wd-tune-body { min-height: 220px; max-height: 62vh; overflow-y: auto; }
+    .wd-listrow .wd-grow { color: var(--wd-ink2); }
+    .wd-tune-tabs { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid var(--wd-line); margin: 6px 0 14px; }
+    .wd-tune-tab { background: none; border: none; border-bottom: 2px solid transparent; color: var(--wd-mut);
+                   font: inherit; font-size: 12.5px; padding: 7px 12px; cursor: pointer; }
+    .wd-tune-tab:hover { color: var(--wd-ink); }
+    .wd-tune-tab.on { color: var(--wd-accent); border-bottom-color: var(--wd-accent); }
+    .wd-tune-pane { display: none; }
+    .wd-tune-pane.on { display: block; }
+    .wd-hint { font-size: 12px; color: var(--wd-mut2); margin: 0 0 10px; line-height: 1.5; }
+    .wd-form-row { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
+    .wd-form-row input[type=text], .wd-form-row input[type=email], .wd-form-row input[type=number], .wd-form-row select {
+      background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft); border-radius: 4px;
+      color: var(--wd-ink); font: inherit; font-size: 12.5px; padding: 6px 9px; min-width: 0; }
+    .wd-form-row input[type=text], .wd-form-row input[type=email] { flex: 1 1 160px; }
+    .wd-form-row input[type=number] { width: 76px; }
+    .wd-check { font-size: 12px; color: var(--wd-mut); display: inline-flex; align-items: center; gap: 5px; }
+    .wd-listrow { display: flex; align-items: center; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--wd-line); font-size: 12.5px; }
+    .wd-listrow .wd-grow { flex: 1; min-width: 0; }
+    .wd-listrow .wd-meta { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); }
+    .wd-listrow button { background: none; border: 1px solid var(--wd-line-soft); border-radius: 3px;
+                         color: var(--wd-faint); font-size: 11px; padding: 3px 8px; cursor: pointer; }
+    .wd-listrow button:hover { color: #e08a84; border-color: #6b3630; }
+    .wd-bar { height: 4px; background: var(--wd-line); border-radius: 2px; overflow: hidden; width: 90px; }
+    .wd-bar i { display: block; height: 100%; background: var(--wd-green); }
     .wd-gl-ctl { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--wd-line); }
     .wd-gl-ctl-lbl { display: block; font-family: var(--wd-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--wd-mut2); margin-bottom: 6px; }
     .wd-gl-seg { display: inline-flex; border: 1px solid var(--wd-line-soft); border-radius: 5px; overflow: hidden; }
@@ -935,8 +995,8 @@
       <div style="display:flex;gap:8px;align-items:center;">
         <button class="sc-btn" id="wd-digest-btn" type="button" title="View editions or run the intake now">Digest</button>
         <button class="sc-btn" id="sc-notif-btn" type="button" title="Notification history" style="position:relative;">🔔<span id="sc-notif-badge" style="display:none;position:absolute;top:-6px;right:-6px;background:#b3392f;color:#fff;border-radius:9px;font-size:10px;line-height:1;padding:3px 5px;min-width:10px;text-align:center;"></span></button>
-        <button class="sc-btn" id="sc-refresh-btn" type="button">Refresh</button>
-        <button class="sc-btn primary" id="sc-new-btn" type="button">+ New Project</button>
+        <button class="sc-btn" id="sc-refresh-btn" type="button" title="Reload the latest edition and status">Refresh</button>
+        <button class="sc-btn primary" id="wd-tune-btn" type="button" title="Interests, editions, subscribers, archive and source stats">Tune</button>
       </div>
     </div>
     <div class="wd-desk">
@@ -974,16 +1034,22 @@
         </div>
       </aside>
       <main class="wd-main">
+        <!-- Phase 5 landing page: the app opens on the thing it produces. -->
+        <div id="wd-status-strip"></div>
         <div class="wd-main-head">
-          <span class="wd-title">Projects</span>
-          <span class="wd-sub" id="wd-proj-sub"></span>
+          <span class="wd-title" id="wd-edition-title">Latest edition</span>
+          <span class="wd-sub" id="wd-edition-sub"></span>
         </div>
-        <div id="sc-list"></div>
+        <div id="wd-recent-strip"></div>
+        <div id="wd-edition-view">
+          <span class="wd-loading" style="display:block;padding:16px;">Loading the latest edition…</span>
+        </div>
         <div class="sc-empty" id="sc-empty" style="display:none;">
-          <p><b>No projects yet.</b></p>
-          <p>A Project is one research topic the scraper tracks for you —<br>
-          click <b>+ New Project</b> and answer a few questions to scope it.</p>
+          <p><b>No editions yet.</b></p>
+          <p>Scraper reads your 30 trade sources and builds a digest of what matters.<br>
+          Open <b>Digest → Run intake now</b> to build the first one.</p>
         </div>
+        <div id="wd-drivers"></div>
       </main>
       <aside class="wd-rail wd-rail-right">
         <span class="wd-lbl">Digest controls</span>
@@ -1056,110 +1122,71 @@
       <div id="wd-digest-view"><span class="wd-loading" style="display:block;padding:16px;">No editions yet — tap "Run intake now" to build the first one.</span></div>
     </div>
   </div>
-  <div id="sc-wizard-overlay">
-    <div id="sc-wizard">
+  <!-- Phase 5: Editions / Subscribers / Archive / Tune replace the retired
+       Project wizard, articles browser and stats overlays. -->
+  <div id="wd-tune-overlay">
+    <div id="wd-tune-panel">
       <div class="sc-wiz-head">
-        <h2 id="sc-wiz-title">New Project</h2>
-        <button id="sc-wiz-close" type="button" title="Close">&times;</button>
+        <h2>Tune</h2>
+        <button id="wd-tune-close" type="button" title="Close" style="background:none;border:none;font-size:24px;color:var(--wd-faint);cursor:pointer;line-height:1;">&times;</button>
       </div>
-      <div id="sc-wiz-progress"></div>
-      <div class="sc-step" data-step="0">
-        <label>Project name*
-          <input type="text" id="scf-name" maxlength="120" placeholder="e.g. EV Battery Market Watch" autocomplete="off">
-        </label>
-        <label>What should be researched?* <span class="sc-hint">Describe the topic like you'd brief a research analyst.</span>
-          <textarea id="scf-topic" maxlength="2000" rows="4" placeholder="e.g. News about solid-state EV battery technology: manufacturing breakthroughs, major supplier deals, and regulatory changes."></textarea>
-        </label>
+      <div class="wd-tune-tabs">
+        <button class="wd-tune-tab on" data-pane="interests" type="button">Interests</button>
+        <button class="wd-tune-tab" data-pane="editions" type="button">Editions</button>
+        <button class="wd-tune-tab" data-pane="subs" type="button">Subscribers</button>
+        <button class="wd-tune-tab" data-pane="archive" type="button">Archive</button>
+        <button class="wd-tune-tab" data-pane="sources" type="button">Source stats</button>
       </div>
-      <div class="sc-step" data-step="1">
-        <label>Industries <span class="sc-hint">comma-separated</span>
-          <input type="text" id="scf-industries" placeholder="e.g. Automotive, Energy storage" autocomplete="off">
-        </label>
-        <label>Must-have keywords <span class="sc-hint">articles should match these</span>
-          <input type="text" id="scf-keywords" placeholder="e.g. solid-state, battery, lithium" autocomplete="off">
-        </label>
-        <label>Exclude keywords <span class="sc-hint">skip articles about these</span>
-          <input type="text" id="scf-exclusions" placeholder="e.g. stock tips, sponsored" autocomplete="off">
-        </label>
-        <label>Regions / languages
-          <input type="text" id="scf-regions" placeholder="e.g. US, EU, English" autocomplete="off">
-        </label>
-      </div>
-      <div class="sc-step" data-step="2">
-        <label>Sources to always monitor <span class="sc-hint">Google News is always searched. Add site or RSS feed URLs, one per line (optional).</span>
-          <textarea id="scf-sources" rows="4" placeholder="https://example.com/news/feed.xml"></textarea>
-        </label>
-      </div>
-      <div class="sc-step" data-step="3">
-        <label>Report frequencies* <span class="sc-hint">pick at least one</span></label>
-        <div class="sc-freq-grid" id="scf-freqs"></div>
-        <label id="scf-custom-wrap" style="display:none;">Custom dates / frequency
-          <input type="text" id="scf-custom" maxlength="500" placeholder="e.g. every 10 days, or on 2026-09-01 and 2026-12-15" autocomplete="off">
-        </label>
-        <label>Delivery
-          <select id="scf-delivery">
-            <option value="inapp">In-app only</option>
-            <option value="email">Email only</option>
-            <option value="both" selected>In-app + email</option>
-          </select>
-        </label>
-      </div>
-      <div class="sc-step" data-step="4">
-        <div id="sc-review"></div>
-      </div>
-      <div class="sc-wiz-err" id="sc-wiz-err"></div>
-      <div class="sc-wiz-nav">
-        <button class="sc-btn" id="sc-wiz-back" type="button">Back</button>
-        <button class="sc-btn primary" id="sc-wiz-next" type="button">Next</button>
-      </div>
-    </div>
-  </div>
-  <div id="sc-articles-overlay">
-    <div id="sc-articles">
-      <div class="sc-wiz-head">
-        <h2 id="sc-articles-title">Articles</h2>
-        <div>
-          <button class="sc-btn" id="sc-brief-btn" type="button">Brief</button>
-          <button id="sc-articles-close" type="button" title="Close">&times;</button>
+      <div class="wd-tune-body">
+        <div class="wd-tune-pane on" id="wd-pane-interests"><div id="wd-tune-interests-host"></div></div>
+
+        <div class="wd-tune-pane" id="wd-pane-editions">
+          <p class="wd-hint">Each edition has its own cadence and subscriber list. The Morning Edition is built in.</p>
+          <div id="wd-ed-list"></div>
+          <div class="wd-form-row">
+            <input type="text" id="wd-ed-name" placeholder="Edition name (e.g. The Week in Storage)">
+            <select id="wd-ed-cadence">
+              <option value="daily">Daily (weekdays)</option>
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+            </select>
+            <input type="number" id="wd-ed-anchor" min="0" max="31" placeholder="Day" title="Weekly: 1=Mon…7=Sun. Monthly: day of month.">
+            <button class="sc-btn primary" id="wd-ed-add" type="button">Add edition</button>
+          </div>
+          <div id="wd-ed-note" class="wd-hint"></div>
+        </div>
+
+        <div class="wd-tune-pane" id="wd-pane-subs">
+          <p class="wd-hint">Subscribers receive finished editions by email. "all" means every edition.</p>
+          <div id="wd-sub-list"></div>
+          <div class="wd-form-row">
+            <input type="email" id="wd-sub-email" placeholder="name@example.com">
+            <input type="text" id="wd-sub-name" placeholder="Name (optional)">
+            <input type="text" id="wd-sub-eds" placeholder="all" title="Comma-separated edition ids, or 'all'">
+            <label class="wd-check"><input type="checkbox" id="wd-sub-admin"> Admin</label>
+            <button class="sc-btn primary" id="wd-sub-add" type="button">Add</button>
+          </div>
+          <div id="wd-sub-note" class="wd-hint"></div>
+        </div>
+
+        <div class="wd-tune-pane" id="wd-pane-archive">
+          <p class="wd-hint">Search every story Scraper has stored, across all editions.</p>
+          <div class="wd-form-row">
+            <input type="text" id="wd-ar-q" placeholder="Search headlines and sources…">
+            <input type="text" id="wd-ar-company" placeholder="Company (optional)">
+            <button class="sc-btn primary" id="wd-ar-go" type="button">Search</button>
+          </div>
+          <div id="wd-ar-results"></div>
+        </div>
+
+        <div class="wd-tune-pane" id="wd-pane-sources">
+          <p class="wd-hint">How each source is actually performing — items seen, how many cleared your relevance bar, and clicks earned.</p>
+          <div id="wd-src-stats"></div>
         </div>
       </div>
-      <div id="sc-filter-bar" style="display:none;">
-        <select id="scfb-days" title="Only articles gathered within this window">
-          <option value="">Any time</option><option value="1">Last 24h</option>
-          <option value="7">Last 7 days</option><option value="30">Last 30 days</option>
-          <option value="90">Last 90 days</option>
-        </select>
-        <select id="scfb-min" title="Minimum relevance score">
-          <option value="">Any score</option><option value="50">50+</option>
-          <option value="70">70+</option><option value="85">85+</option>
-        </select>
-        <input id="scfb-q" type="text" placeholder="Filter by keyword…">
-        <button class="sc-btn" id="scfb-apply" type="button">Apply</button>
-      </div>
-      <div id="sc-cal-controls" style="display:none;">
-        <span id="sc-cal-count">0 rated this session</span>
-        <button class="sc-btn" id="sc-cal-learned-btn" type="button">🧠 What I've learned</button>
-        <button class="sc-btn" id="sc-cal-rescore-btn" type="button">Re-score collection</button>
-      </div>
-      <div id="sc-learned" style="display:none;"></div>
-      <div id="sc-brief" style="display:none;"></div>
-      <div id="sc-articles-list"></div>
     </div>
   </div>
-  <div id="sc-vlog">
-    <div id="sc-vlog-head"><span>Rating status</span><button id="sc-vlog-close" type="button" title="Hide">&times;</button></div>
-    <div id="sc-vlog-lines"></div>
-  </div>
-  <div id="sc-prog-stack"></div>
-  <div id="sc-stats-overlay">
-    <div id="sc-stats">
-      <div class="sc-wiz-head">
-        <h2 id="sc-stats-title">Score Distribution</h2>
-        <button id="sc-stats-close" type="button" title="Close">&times;</button>
-      </div>
-      <div id="sc-stats-body"></div>
-    </div>
-  </div>
+
   <div id="sc-status-msg"></div>
 <!-- ══════════════ -->
 <!-- PROJECT END -->
@@ -4972,9 +4999,264 @@
 
   window._scraperInit = function() {
     if (!_scInited) { scBindEvents(); wdInit_(); _scInited = true; }
-    scLoadProjects();
-    wdInterestsLoad_();   // Wire Desk interests rail (rebuild Phase 2)
+    wdLandingLoad_();     // Phase 5: the app opens on the latest edition
+    wdInterestsLoad_();   // interests rail (feeds the Tune drawer too)
   };
+
+  // ── Phase 5 landing page ────────────────────────────────────────────────
+  var _wdEditions = [], _wdDigests = [];
+
+  /** Load the landing view: status strip, recent editions, latest edition. */
+  function wdLandingLoad_() {
+    var btn = $sc('sc-refresh-btn');
+    if (btn) { btn.disabled = true; btn.textContent = 'Loading…'; }
+    Promise.all([
+      _gasPost({ action: 'listDigests', token: scToken(), limit: '12' }).catch(function(){ return null; }),
+      _gasPost({ action: 'goLiveStatus', token: scToken() }).catch(function(){ return null; }),
+      _gasPost({ action: 'listEditions', token: scToken() }).catch(function(){ return null; })
+    ]).then(function(res) {
+      var dg = res[0], gl = res[1], ed = res[2];
+      _wdDigests = (dg && dg.success && dg.digests) ? dg.digests : [];
+      _wdEditions = (ed && ed.success && ed.editions) ? ed.editions : [];
+      wdRenderStatusStrip_(gl && gl.success ? gl : null);
+      wdRenderRecentStrip_();
+      var empty = $sc('sc-empty');
+      if (!_wdDigests.length) {
+        if (empty) empty.style.display = '';
+        $sc('wd-edition-view').innerHTML = '';
+        $sc('wd-edition-sub').textContent = '';
+      } else {
+        if (empty) empty.style.display = 'none';
+        wdLandingShowEdition_(_wdDigests[0].id);
+      }
+      wdRenderDrivers_();
+    }).then(function() {
+      if (btn) { btn.disabled = false; btn.textContent = 'Refresh'; }
+    });
+  }
+
+  function wdRenderStatusStrip_(gl) {
+    var strip = $sc('wd-status-strip');
+    if (!strip) return;
+    function tile(label, value, cls) {
+      return '<div class="wd-stat ' + (cls || '') + '"><b>' + scEsc(value) + '</b><span>'
+        + scEsc(label) + '</span></div>';
+    }
+    var html = '';
+    if (gl) {
+      var recip = gl.recipientCount || 0;
+      html += tile('Next edition', gl.runsEnabled ? 'Weekdays 7:00 ET' : 'Paused', gl.runsEnabled ? 'ok' : 'warn');
+      html += tile('Subscribers', String(recip), recip ? 'ok' : 'warn');
+      var keyOk = gl.provider === 'claude' ? gl.hasAnthropicKey : gl.hasGeminiKey;
+      html += tile('AI provider', gl.provider + (keyOk ? '' : ' (no key)'), keyOk ? 'ok' : 'warn');
+      html += tile('Scheduler', gl.trigger === 'installed' ? 'Healthy' : 'Check',
+                   gl.trigger === 'installed' ? 'ok' : 'warn');
+    }
+    html += tile('Editions kept', String(_wdDigests.length));
+    strip.innerHTML = html;
+  }
+
+  function wdRenderRecentStrip_() {
+    var strip = $sc('wd-recent-strip');
+    if (!strip) return;
+    strip.innerHTML = _wdDigests.map(function(d) {
+      return '<button type="button" class="wd-recent-chip" data-id="' + scEsc(d.id) + '">'
+        + scEsc(d.date) + ' · ' + Number(d.relevantCount) + '</button>';
+    }).join('');
+  }
+
+  function wdLandingShowEdition_(id) {
+    var chips = $sc('wd-recent-strip').querySelectorAll('.wd-recent-chip');
+    for (var i = 0; i < chips.length; i++) {
+      chips[i].classList.toggle('on', chips[i].getAttribute('data-id') === id);
+    }
+    var meta = null;
+    for (var k = 0; k < _wdDigests.length; k++) if (_wdDigests[k].id === id) meta = _wdDigests[k];
+    if (meta) {
+      $sc('wd-edition-sub').textContent = meta.date + ' · ' + Number(meta.relevantCount)
+        + ' relevant of ' + Number(meta.itemCount) + ' scanned'
+        + (meta.notes ? ' · ' + meta.notes : '');
+    }
+    $sc('wd-edition-view').innerHTML =
+      '<span class="wd-loading" style="display:block;padding:16px;">Loading edition…</span>';
+    _gasPost({ action: 'getDigest', token: scToken(), digestId: id })
+      .then(function(data) {
+        // Server-rendered from escaped content only.
+        if (data && data.success && data.html) $sc('wd-edition-view').innerHTML = data.html;
+        else $sc('wd-edition-view').innerHTML =
+          '<span class="wd-loading" style="display:block;padding:16px;">'
+          + scEsc(scErrMsg(data && data.error)) + '</span>';
+      })
+      .catch(function(err) {
+        $sc('wd-edition-view').innerHTML =
+          '<span class="wd-loading" style="display:block;padding:16px;">Could not load ('
+          + scEsc((err && err.message) || err) + ')</span>';
+      });
+  }
+
+  /** "What's driving relevance" — top companies/topics seen in recent editions. */
+  function wdRenderDrivers_() {
+    var host = $sc('wd-drivers');
+    if (!host || !_wdInterests) return;
+    var cos = _wdInterests.filter(function(i) { return i.type === 'company' && i.enabled && i.status === 'active'; });
+    var tps = _wdInterests.filter(function(i) { return i.type === 'topic' && i.enabled; });
+    var segsOff = _wdInterests.filter(function(i) { return i.type === 'segment' && !i.enabled; });
+    host.innerHTML = '<span class="wd-lbl">What is driving relevance</span>'
+      + '<div class="wd-driver-row">'
+      + '<span class="wd-driver"><b>' + cos.length + '</b> companies followed</span>'
+      + '<span class="wd-driver"><b>' + tps.length + '</b> topics on</span>'
+      + '<span class="wd-driver"><b>' + segsOff.length + '</b> segments filtered out</span>'
+      + '</div>';
+  }
+
+  // ── Tune drawer ─────────────────────────────────────────────────────────
+  function wdTuneOpen_() {
+    $sc('wd-tune-overlay').style.display = 'flex';
+    // Move the live interests rail into the drawer's first pane so there is
+    // exactly one interests UI, not a copy that can drift out of sync.
+    var host = $sc('wd-tune-interests-host');
+    var rail = $sc('wd-interests');
+    if (host && rail && rail.parentNode !== host) host.appendChild(rail);
+    wdTuneLoadPane_('interests');
+  }
+
+  function wdTuneLoadPane_(pane) {
+    if (pane === 'editions') wdEditionsLoad_();
+    else if (pane === 'subs') wdSubscribersLoad_();
+    else if (pane === 'sources') wdSourceStatsLoad_();
+  }
+
+  function wdEditionsLoad_() {
+    var host = $sc('wd-ed-list');
+    host.innerHTML = '<span class="wd-loading">Loading…</span>';
+    _gasPost({ action: 'listEditions', token: scToken() })
+      .then(function(d) {
+        if (!d || !d.success) { host.textContent = scErrMsg(d && d.error); return; }
+        _wdEditions = d.editions || [];
+        host.innerHTML = _wdEditions.map(function(e) {
+          var when = e.cadence === 'weekly' ? 'weekly (day ' + e.anchor + ')'
+                   : e.cadence === 'monthly' ? 'monthly (day ' + e.anchor + ')' : 'weekdays';
+          return '<div class="wd-listrow"><span class="wd-grow">' + scEsc(e.name)
+            + '</span><span class="wd-meta">' + scEsc(when)
+            + (e.lastBuilt ? ' · last ' + scEsc(e.lastBuilt) : '') + '</span>'
+            + (e.id === 'morning' ? '' : '<button type="button" data-ed="' + scEsc(e.id) + '">Delete</button>')
+            + '</div>';
+        }).join('');
+      })
+      .catch(function(err) { host.textContent = 'Could not load (' + ((err && err.message) || err) + ')'; });
+  }
+
+  function wdEditionAdd_() {
+    var note = $sc('wd-ed-note');
+    var payload = JSON.stringify({
+      name: $sc('wd-ed-name').value, cadence: $sc('wd-ed-cadence').value,
+      anchor: Number($sc('wd-ed-anchor').value) || 0
+    });
+    note.textContent = 'Saving…';
+    _gasPost({ action: 'saveEdition', token: scToken(), payload: payload })
+      .then(function(d) {
+        if (d && d.success) { note.textContent = '✓ Edition saved.'; $sc('wd-ed-name').value = ''; wdEditionsLoad_(); }
+        else note.textContent = '✗ ' + scErrMsg(d && d.error);
+      })
+      .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
+  }
+
+  function wdEditionDelete_(id) {
+    var note = $sc('wd-ed-note');
+    _gasPost({ action: 'deleteEdition', token: scToken(), editionId: id })
+      .then(function(d) {
+        if (d && d.success) { note.textContent = '✓ Edition deleted.'; wdEditionsLoad_(); }
+        else note.textContent = '✗ ' + scErrMsg(d && d.error);
+      })
+      .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
+  }
+
+  function wdSubscribersLoad_() {
+    var host = $sc('wd-sub-list');
+    host.innerHTML = '<span class="wd-loading">Loading…</span>';
+    _gasPost({ action: 'listSubscribers', token: scToken() })
+      .then(function(d) {
+        if (!d || !d.success) { host.textContent = scErrMsg(d && d.error); return; }
+        var can = !!d.canManage;
+        var addRow = $sc('wd-sub-add');
+        if (addRow && addRow.parentNode) addRow.parentNode.style.display = can ? 'flex' : 'none';
+        host.innerHTML = (d.subscribers || []).map(function(sb) {
+          return '<div class="wd-listrow"><span class="wd-grow">' + scEsc(sb.email)
+            + (sb.name ? ' <span class="wd-meta">(' + scEsc(sb.name) + ')</span>' : '')
+            + '</span><span class="wd-meta">' + scEsc((sb.editions || []).join(', '))
+            + (sb.admin ? ' · admin' : '') + ' · ' + scEsc(sb.status) + '</span>'
+            + (can ? '<button type="button" data-sub="' + scEsc(sb.email) + '">Remove</button>' : '')
+            + '</div>';
+        }).join('') || '<p class="wd-hint">No subscribers yet.</p>';
+      })
+      .catch(function(err) { host.textContent = 'Could not load (' + ((err && err.message) || err) + ')'; });
+  }
+
+  function wdSubscriberAdd_() {
+    var note = $sc('wd-sub-note');
+    var eds = ($sc('wd-sub-eds').value || 'all').split(',').map(function(x){ return x.trim(); }).filter(Boolean);
+    var payload = JSON.stringify({
+      email: $sc('wd-sub-email').value, name: $sc('wd-sub-name').value,
+      editions: eds, admin: $sc('wd-sub-admin').checked
+    });
+    note.textContent = 'Saving…';
+    _gasPost({ action: 'saveSubscriber', token: scToken(), payload: payload })
+      .then(function(d) {
+        if (d && d.success) {
+          note.textContent = '✓ Subscriber saved.';
+          $sc('wd-sub-email').value = ''; $sc('wd-sub-name').value = '';
+          wdSubscribersLoad_();
+        } else {
+          note.textContent = '✗ ' + (d && d.error === 'invalid_email'
+            ? 'That does not look like a valid email address.' : scErrMsg(d && d.error));
+        }
+      })
+      .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
+  }
+
+  function wdSubscriberRemove_(email) {
+    var note = $sc('wd-sub-note');
+    _gasPost({ action: 'removeSubscriber', token: scToken(), email: email })
+      .then(function(d) {
+        if (d && d.success) { note.textContent = '✓ Subscriber removed.'; wdSubscribersLoad_(); }
+        else note.textContent = '✗ ' + scErrMsg(d && d.error);
+      })
+      .catch(function(err) { note.textContent = '✗ ' + ((err && err.message) || err); });
+  }
+
+  function wdArchiveSearch_() {
+    var host = $sc('wd-ar-results');
+    host.innerHTML = '<span class="wd-loading">Searching…</span>';
+    var payload = JSON.stringify({ q: $sc('wd-ar-q').value, company: $sc('wd-ar-company').value, limit: 40 });
+    _gasPost({ action: 'searchArchive', token: scToken(), payload: payload })
+      .then(function(d) {
+        if (!d || !d.success) { host.textContent = scErrMsg(d && d.error); return; }
+        host.innerHTML = (d.results || []).map(function(r) {
+          return '<div class="wd-listrow"><span class="wd-grow">'
+            + '<a href="' + scEsc(r.url) + '" target="_blank" rel="noopener" style="color:var(--wd-ink);text-decoration:none;">'
+            + scEsc(r.title) + '</a></span><span class="wd-meta">' + scEsc(r.source)
+            + ' · ' + Number(r.score) + '</span></div>';
+        }).join('') || '<p class="wd-hint">No matches.</p>';
+      })
+      .catch(function(err) { host.textContent = 'Could not search (' + ((err && err.message) || err) + ')'; });
+  }
+
+  function wdSourceStatsLoad_() {
+    var host = $sc('wd-src-stats');
+    host.innerHTML = '<span class="wd-loading">Loading…</span>';
+    _gasPost({ action: 'sourceStats', token: scToken() })
+      .then(function(d) {
+        if (!d || !d.success) { host.textContent = scErrMsg(d && d.error); return; }
+        host.innerHTML = (d.sources || []).map(function(sv) {
+          return '<div class="wd-listrow"><span class="wd-grow">' + scEsc(sv.source) + '</span>'
+            + '<span class="wd-bar" title="' + sv.hitRate + '% cleared the bar"><i style="width:'
+            + Math.min(100, sv.hitRate) + '%"></i></span>'
+            + '<span class="wd-meta">' + Number(sv.relevant) + '/' + Number(sv.items)
+            + ' · ' + Number(sv.clicks) + ' clicks</span></div>';
+        }).join('') || '<p class="wd-hint">No source data yet — build an edition first.</p>';
+      })
+      .catch(function(err) { host.textContent = 'Could not load (' + ((err && err.message) || err) + ')'; });
+  }
 
   function scLoadProjects() {
     var btn = $sc('sc-refresh-btn');
@@ -5117,118 +5399,52 @@
       });
   }
 
+  // Phase 5: binds only the surviving surface. The retired Project wizard /
+  // articles / stats elements no longer exist in the DOM, and binding a null
+  // element throws — which would halt this inline script before the auth
+  // init runs, taking sign-in down. Every lookup here is null-guarded.
   function scBindEvents() {
-    $sc('sc-notif-btn').addEventListener('click', scNotifToggle_);
-    scNotifBadge_();  // unread count from previous sessions shows immediately
+    function on(id, ev, fn) { var el = $sc(id); if (el) el.addEventListener(ev, fn); }
+    on('sc-notif-btn', 'click', scNotifToggle_);
+    scNotifBadge_();     // unread count from previous sessions shows immediately
     scFlushVerdicts_();  // ratings still queued from a previous visit save now
-    $sc('sc-refresh-btn').addEventListener('click', scLoadProjects);
-    $sc('sc-new-btn').addEventListener('click', function() { scOpenWizard(null); });
-    $sc('sc-wiz-close').addEventListener('click', scCloseWizard);
-    $sc('sc-wiz-back').addEventListener('click', function() { scWizNav(-1); });
-    $sc('sc-wiz-next').addEventListener('click', function() { scWizNav(1); });
-    $sc('sc-wizard-overlay').addEventListener('click', function(ev) {
-      if (ev.target === this) scCloseWizard();  // click outside the panel closes
-    });
-    $sc('sc-articles-close').addEventListener('click', function() {
-      $sc('sc-articles-overlay').style.display = 'none';
-      $sc('sc-vlog').style.display = 'none';  // rating log lives with the articles view
-    });
-    $sc('sc-articles-overlay').addEventListener('click', function(ev) {
-      if (ev.target === this) { this.style.display = 'none'; $sc('sc-vlog').style.display = 'none'; }
-    });
-    $sc('sc-vlog-close').addEventListener('click', function() {
-      $sc('sc-vlog').style.display = 'none';  // reappears on the next rating tap
-    });
-    $sc('sc-brief-btn').addEventListener('click', scShowBrief);
-    $sc('sc-articles-list').addEventListener('click', scVerdictClick);  // delegated 👍/👎 handler
-    $sc('scfb-apply').addEventListener('click', function() {
-      if (_scArticlesProjectId) scOpenArticles(_scArticlesProjectId);
-    });
-    $sc('scfb-q').addEventListener('keydown', function(ev) {
-      if (ev.key === 'Enter' && _scArticlesProjectId) scOpenArticles(_scArticlesProjectId);
-    });
-    $sc('sc-cal-learned-btn').addEventListener('click', function() {
-      var box = $sc('sc-learned');
-      if (box.style.display !== 'none') { box.style.display = 'none'; return; }
-      box.innerHTML = '<p style="margin:0;">Loading profile…</p>';
-      box.style.display = 'block';
-      scCalDistill_(true);
-    });
-    $sc('sc-cal-rescore-btn').addEventListener('click', function() { scCalRescore_(this); });
-    $sc('sc-stats-close').addEventListener('click', function() {
-      $sc('sc-stats-overlay').style.display = 'none';
-    });
-    $sc('sc-stats-overlay').addEventListener('click', function(ev) {
+    on('sc-refresh-btn', 'click', wdLandingLoad_);
+    on('wd-tune-btn', 'click', wdTuneOpen_);
+    on('wd-tune-close', 'click', function() { $sc('wd-tune-overlay').style.display = 'none'; });
+    on('wd-tune-overlay', 'click', function(ev) {
       if (ev.target === this) this.style.display = 'none';
     });
-    $sc('sc-learned').addEventListener('click', function(ev) {
-      var t = ev.target && ev.target.closest ? ev.target.closest('.sc-sugg-add, .sc-sugg-undo') : null;
-      if (!t || t.disabled) return;
-      scCalToggleSuggestion_(t, t.classList.contains('sc-sugg-add') ? 'add' : 'remove');
-    });
-
-    // Frequency checkboxes (built once; custom option reveals the custom field)
-    var grid = $sc('scf-freqs');
-    var freqHtml = '';
-    Object.keys(SC_FREQ_LABELS).forEach(function(f) {
-      freqHtml += '<label><input type="checkbox" value="' + f + '"> ' + SC_FREQ_LABELS[f] + '</label>';
-    });
-    grid.innerHTML = freqHtml;
-    grid.addEventListener('change', function() {
-      var customChecked = !!grid.querySelector('input[value="custom"]:checked');
-      $sc('scf-custom-wrap').style.display = customChecked ? 'block' : 'none';
-    });
-
-    // Card actions via delegation. Archive uses a two-step inline confirm
-    // (no browser confirm() per coding guidelines): first click arms the
-    // button, second click within 4s archives.
-    $sc('sc-list').addEventListener('click', function(ev) {
-      var btn = ev.target.closest ? ev.target.closest('button[data-act]') : null;
-      if (!btn) return;
-      var act = btn.getAttribute('data-act');
-      var id = btn.getAttribute('data-id');
-      if (act === 'edit') {
-        var proj = null;
-        _scProjects.forEach(function(p) { if (p.id === id) proj = p; });
-        if (proj) scOpenWizard(proj);
-      } else if (act === 'compile') {
-        scRunCompile(id, btn);
-      } else if (act === 'backfill') {
-        scRunBackfill(id, btn);
-      } else if (act === 'plan') {
-        scRunPlan(id, btn);
-      } else if (act === 'deepbackfill') {
-        scRunDeepBackfill(id, btn);
-      } else if (act === 'enrich') {
-        scRunEnrich(id, btn);
-      } else if (act === 'analyze') {
-        scRunAnalyze(id, btn);
-      } else if (act === 'articles') {
-        scOpenArticles(id);
-      } else if (act === 'calibrate') {
-        scOpenCalibration(id);
-      } else if (act === 'scorestats') {
-        scOpenStats(id);
-      } else if (act === 'archivejunk') {
-        scRunArchiveJunk(id, btn);
-      } else if (act === 'status') {
-        scSetStatus(id, btn.getAttribute('data-to'), btn);
-      } else if (act === 'archive') {
-        if (btn.getAttribute('data-armed') === '1') {
-          if (_scConfirmTimer) clearTimeout(_scConfirmTimer);
-          scSetStatus(id, 'archived', btn);
-        } else {
-          btn.setAttribute('data-armed', '1');
-          btn.textContent = 'Confirm archive?';
-          btn.style.color = '#b3261e';
-          if (_scConfirmTimer) clearTimeout(_scConfirmTimer);
-          _scConfirmTimer = setTimeout(function() {
-            btn.removeAttribute('data-armed');
-            btn.textContent = 'Archive';
-            btn.style.color = '';
-          }, 4000);
+    // Tune tab switching
+    var tabs = document.querySelectorAll('.wd-tune-tab');
+    for (var t = 0; t < tabs.length; t++) {
+      tabs[t].addEventListener('click', function() {
+        var pane = this.getAttribute('data-pane');
+        var all = document.querySelectorAll('.wd-tune-tab');
+        for (var k = 0; k < all.length; k++) all[k].classList.toggle('on', all[k] === this);
+        var panes = document.querySelectorAll('.wd-tune-pane');
+        for (var m = 0; m < panes.length; m++) {
+          panes[m].classList.toggle('on', panes[m].id === 'wd-pane-' + pane);
         }
-      }
+        wdTuneLoadPane_(pane);
+      });
+    }
+    on('wd-ed-add', 'click', wdEditionAdd_);
+    on('wd-sub-add', 'click', wdSubscriberAdd_);
+    on('wd-ar-go', 'click', wdArchiveSearch_);
+    on('wd-ar-q', 'keydown', function(ev) { if (ev.key === 'Enter') { ev.preventDefault(); wdArchiveSearch_(); } });
+    // Delegated removes inside the Tune lists
+    on('wd-ed-list', 'click', function(ev) {
+      var b = ev.target.closest ? ev.target.closest('button[data-ed]') : null;
+      if (b) wdEditionDelete_(b.getAttribute('data-ed'));
+    });
+    on('wd-sub-list', 'click', function(ev) {
+      var b = ev.target.closest ? ev.target.closest('button[data-sub]') : null;
+      if (b) wdSubscriberRemove_(b.getAttribute('data-sub'));
+    });
+    // Recent-edition chips on the landing page
+    on('wd-recent-strip', 'click', function(ev) {
+      var c = ev.target.closest ? ev.target.closest('.wd-recent-chip') : null;
+      if (c) wdLandingShowEdition_(c.getAttribute('data-id'));
     });
   }
 

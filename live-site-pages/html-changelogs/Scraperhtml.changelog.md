@@ -3,11 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 41/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.42w] — 2026-08-27 09:42:55 PM EST — v03.12r
+
+### Added
+- **A new landing page**: the app now opens on your latest edition, rendered in full, with a status strip above it (next edition time, subscriber count, AI provider, scheduler health) and a strip of recent editions you can click through
+- A **"what is driving relevance"** panel showing how many companies, topics and filtered-out segments are shaping your digests
+- A **Tune drawer** gathering everything you adjust in one place: Interests, Editions, Subscribers, Archive search and Source stats
+
+### Changed
+- The Projects area is gone. The main screen is the edition itself; all settings moved behind the Tune button
 
 ## [v01.41w] — 2026-08-27 08:56:08 PM EST — v03.10r
 
