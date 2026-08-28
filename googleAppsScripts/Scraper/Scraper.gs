@@ -1,4 +1,4 @@
-var VERSION = "v01.59g";
+var VERSION = "v01.60g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -335,7 +335,8 @@ var SCRAPER_TABS = {
   DIGEST_INTAKE: 'DigestIntake',
   EDITIONS: 'Editions',
   SUBSCRIBERS: 'Subscribers',
-  CLICK_LOG: 'ClickLog'
+  CLICK_LOG: 'ClickLog',
+  SHARES: 'Shares'
 };
 
 var SCRAPER_TAB_HEADERS = {
@@ -374,7 +375,12 @@ var SCRAPER_TAB_HEADERS = {
   Subscribers: ['Email', 'Name', 'Editions', 'Status', 'Admin', 'Token',
                 'Added', 'Updated'],
   ClickLog: ['Timestamp', 'Digest ID', 'Item Key', 'URL', 'Title', 'Source',
-             'Companies', 'Topics', 'Segments']
+             'Companies', 'Topics', 'Segments'],
+  // One row per share link. The token IS the reference to the issue — nothing
+  // in the share URL names a digest — so holding one token can never be
+  // pivoted into reading a different edition.
+  Shares: ['Token', 'Digest ID', 'Created By', 'Created', 'Revoked',
+           'Views', 'Last Viewed']
 };
 
 var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual', 'annual', 'custom'];
@@ -396,7 +402,8 @@ var SCRAPER_PROJECT_ACTIONS = ['getSchedulerHealth',
                                'setEditionTuning', 'resetEditionTuning',
                                'listSubscribers', 'saveSubscriber', 'removeSubscriber',
                                'searchArchive', 'companyTimeline', 'sourceStats',
-                               'previewEdition', 'sendHeldBackRollup'];
+                               'previewEdition', 'sendHeldBackRollup',
+                               'listShares', 'createShareLink', 'revokeShareLink'];
 
 // ── Phase 3: AI layer tuning ──
 var SCRAPER_AI_PROVIDER = 'gemini';            // default; AI_PROVIDER Script Property overrides ('claude' | 'gemini')
@@ -5061,6 +5068,171 @@ function removeSubscriber(sessionToken, email) {
   return { success: false, error: 'not_found' };
 }
 
+/** ---- Share links ------------------------------------------------------
+
+    A share link lets someone without an account read exactly one stored
+    edition. The security model is deliberately narrow:
+
+      · The token IS the reference. The share URL carries no digest id, so a
+        holder of one token cannot pivot to another edition by editing the URL
+        — the same reason scHandleClickRedirect_ resolves its target from the
+        stored intake rows rather than from a query parameter.
+      · 128 bits of entropy (a UUID with the dashes removed), so guessing is
+        not a practical attack.
+      · Revocable, and revocation is immediate — the serve path re-reads the
+        row on every request rather than trusting a cached decision.
+      · Read-only and single-purpose: the route returns one stored HTML body.
+        It never accepts input that reaches a sheet write beyond a view counter,
+        and it never exposes the app shell, a session, or any other tab.
+      · Not secret-bearing: the Night Ink HTML is trade-press summaries, the
+        same content that is emailed to subscribers.
+
+    What a leaked link exposes is one edition — the same blast radius as
+    forwarding the email. Revoke it and the link dies. */
+
+function scShares_(ss) {
+  var sheet = ss.getSheetByName(SCRAPER_TABS.SHARES);
+  var n = sheet.getLastRow() - 1;
+  if (n < 1) return [];
+  var data = sheet.getRange(2, 1, n, 7).getValues();
+  var out = [];
+  for (var i = 0; i < n; i++) {
+    if (!String(data[i][0]).trim()) continue;
+    out.push({ token: String(data[i][0]), digestId: String(data[i][1]),
+               createdBy: String(data[i][2]), created: data[i][3],
+               revoked: data[i][4] === true || String(data[i][4]).toLowerCase() === 'true',
+               views: Number(data[i][5]) || 0, lastViewed: data[i][6], row: i + 2 });
+  }
+  return out;
+}
+
+/** Share links for one edition (manager-only — a link is a grant). */
+function listShares(sessionToken, digestId) {
+  var user = validateSessionForData(sessionToken, 'listShares');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var id = scStr_(digestId, 60);
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var out = scShares_(ss).filter(function(sh) {
+    return !sh.revoked && (!id || sh.digestId === id);
+  }).map(function(sh) {
+    return { token: sh.token, digestId: sh.digestId, views: sh.views,
+             url: scShareUrl_(sh.token) };
+  });
+  return { success: true, shares: out };
+}
+
+function scShareUrl_(token) {
+  return 'https://script.google.com/macros/s/' + DEPLOYMENT_ID + '/exec?action=share&t=' + token;
+}
+
+/** Mint a share link for one edition. Reuses the live link when one already
+    exists, so pressing Share twice does not scatter tokens that all have to be
+    revoked separately later. */
+function createShareLink(sessionToken, digestId) {
+  var user = validateSessionForData(sessionToken, 'createShareLink');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var id = scStr_(digestId, 60);
+  if (!id) return { success: false, error: 'digest_id_required' };
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  // The edition must exist — minting a link for a deleted or mistyped id would
+  // hand out a URL that can only ever 404.
+  var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var dn = digests.getLastRow() - 1;
+  var found = false;
+  if (dn > 0) {
+    var ids = digests.getRange(2, 1, dn, 1).getValues();
+    for (var i = 0; i < dn; i++) { if (String(ids[i][0]) === id) { found = true; break; } }
+  }
+  if (!found) return { success: false, error: 'not_found' };
+
+  var existing = null;
+  scShares_(ss).forEach(function(sh) {
+    if (!sh.revoked && sh.digestId === id) existing = sh;
+  });
+  if (existing) {
+    return { success: true, token: existing.token, url: scShareUrl_(existing.token),
+             reused: true, views: existing.views };
+  }
+  var token = Utilities.getUuid().replace(/-/g, '');
+  ss.getSheetByName(SCRAPER_TABS.SHARES)
+    .appendRow([token, id, user.email, new Date(), false, 0, '']);
+  dataAuditLog(user.email, 'create', 'share', id, 'share link minted');
+  return { success: true, token: token, url: scShareUrl_(token), reused: false, views: 0 };
+}
+
+/** Revoke one share link. Takes effect on the next request — the serve path
+    reads the row every time rather than caching the decision. */
+function revokeShareLink(sessionToken, token) {
+  var user = validateSessionForData(sessionToken, 'revokeShareLink');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var want = scStr_(token, 64);
+  if (!want) return { success: false, error: 'token_required' };
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var hit = null;
+  scShares_(ss).forEach(function(sh) { if (sh.token === want) hit = sh; });
+  if (!hit) return { success: false, error: 'not_found' };
+  ss.getSheetByName(SCRAPER_TABS.SHARES).getRange(hit.row, 5).setValue(true);
+  dataAuditLog(user.email, 'delete', 'share', hit.digestId, 'share link revoked');
+  return { success: true };
+}
+
+/** Serve one shared edition. Unauthenticated by design — that is the feature —
+    but strictly bounded: the token names the edition, a revoked or unknown
+    token gets a plain refusal, and nothing else about the app is reachable. */
+function scHandleSharedEdition_(e) {
+  var token = scStr_((e && e.parameter && e.parameter.t) || '', 64);
+  // Every refusal message below is a literal in this file — no request input is
+  // ever echoed back, which is why no escaping is needed here and why an
+  // invalid token can never be reflected into the response.
+  var deny = function(msg) {
+    return HtmlService.createHtmlOutput(
+      '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
+      + '<title>Link unavailable</title>'
+      + '<body style="font-family:system-ui,sans-serif;background:#15171c;color:#c9cdd4;'
+      + 'display:flex;align-items:center;justify-content:center;height:100vh;margin:0">'
+      + '<p>' + msg + '</p></body>')
+      .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.DEFAULT);
+  };
+  if (!/^[0-9a-f]{32}$/.test(token)) return deny('This link is not valid.');
+  var ss, hit = null;
+  try {
+    ss = scraperSs_(); ensureScraperTabs_(ss);
+    scShares_(ss).forEach(function(sh) { if (sh.token === token) hit = sh; });
+  } catch (shErr) { return deny('This link could not be opened right now.'); }
+  if (!hit || hit.revoked) return deny('This link has been revoked.');
+
+  // Read only the row the token points at, and only its HTML column.
+  var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var dn = digests.getLastRow() - 1;
+  var row = 0;
+  if (dn > 0) {
+    var ids = digests.getRange(2, 1, dn, 1).getValues();
+    for (var i = dn - 1; i >= 0; i--) {
+      if (String(ids[i][0]) === hit.digestId) { row = i + 2; break; }
+    }
+  }
+  // An edition trimmed by retention leaves its link pointing at nothing. Say
+  // so plainly rather than showing an empty page.
+  if (!row) return deny('This edition is no longer available.');
+  var html = String(digests.getRange(row, 8).getValue() || '');
+  if (!html) return deny('This edition is no longer available.');
+
+  try {
+    var sh = ss.getSheetByName(SCRAPER_TABS.SHARES);
+    sh.getRange(hit.row, 6, 1, 2).setValues([[hit.views + 1, new Date()]]);
+  } catch (cntErr) { /* a view counter must never block the read */ }
+
+  // The stored body is server-rendered from escaped content (see the Night Ink
+  // renderer), so it is emitted as-is inside a minimal, noindex wrapper. No app
+  // shell, no session, no scripts of our own.
+  return HtmlService.createHtmlOutput(
+    '<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex,nofollow">'
+    + '<meta name="viewport" content="width=device-width,initial-scale=1">'
+    + '<title>Shared edition</title>'
+    + '<body style="margin:0;background:#15171c">' + html + '</body>')
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.DEFAULT);
+}
+
 /** ---- Click tracking (T1a) -------------------------------------------- */
 
 /** Log a click and 302-redirect to the real article. Unauthenticated by
@@ -5673,6 +5845,11 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'deleteEdition') return deleteEdition(sessionToken, param('editionId'));
   if (op === 'setEditionTuning') return setEditionTuning(sessionToken, param('editionId'), param('key'), param('enabled'));
   if (op === 'resetEditionTuning') return resetEditionTuning(sessionToken, param('editionId'), param('preset'));
+  if (op === 'listShares') return listShares(sessionToken, param('digestId'));
+  if (op === 'createShareLink') return createShareLink(sessionToken, param('digestId'));
+  // NOT param('token') — that is the session token the client already sends,
+  // so reusing the name would silently revoke nothing and look like a miss.
+  if (op === 'revokeShareLink') return revokeShareLink(sessionToken, param('shareToken'));
   if (op === 'listSubscribers') return listSubscribers(sessionToken);
   if (op === 'saveSubscriber') return saveSubscriber(sessionToken, param('payload'));
   if (op === 'removeSubscriber') return removeSubscriber(sessionToken, param('email'));
@@ -7659,6 +7836,15 @@ function doGet(e) {
   // arbitrary URL cannot be passed in. It only appends one ClickLog row.
   if (action === 'go') {
     return scHandleClickRedirect_(e);
+  }
+
+  // PROJECT: shared-edition view. Unauthenticated by design — the point of a
+  // share link is that the recipient has no account. Bounded the same way the
+  // click redirect is: the token names the edition (no digest id is accepted
+  // from the URL), an unknown or revoked token gets a flat refusal, and the
+  // only write is a view counter on the share's own row.
+  if (action === 'share') {
+    return scHandleSharedEdition_(e);
   }
 
   // GET API fallback for the fetch transport — Google's serving can drop POST

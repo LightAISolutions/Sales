@@ -3,11 +3,22 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.53w] — 2026-08-28 05:44:48 AM EST — v03.27r
+
+### Added
+- **Every edition now has its own web address.** Opening one puts a link in the address bar that you can bookmark or paste anywhere, and your browser's back and forward buttons move between the editions you have opened
+- **Share an edition with someone who has no account.** *Share…* creates a read-only link that shows just that edition. The link is shown so you can read it before sending, can be copied in one tap, and can be revoked at any time — revoking stops it working immediately
+- **Export an edition.** *PDF* opens your print dialog with the edition laid out on a white page — choose "Save as PDF" as the destination. *Word* downloads a .doc file that opens directly in Word. *Email it to me* sends the latest edition to your inbox
+- **A command palette on ⌘K (Ctrl+K on Windows).** Start typing to jump to an edition, filter to a masthead, switch views, or open Digest and Tune. Searching looks through your whole archive, not just what is on screen. Arrow keys move, Enter opens, Escape closes
+
+### Changed
+- *Copy link* on the reader bar copies the in-app link to the edition you are reading
 
 ## [v01.52w] — 2026-08-28 04:35:51 AM EST — v03.26r
 
@@ -351,15 +362,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - "New Project" guided setup: a 5-step wizard asks about your topic, industries, keywords, sources, and report schedule, with a review screen before creating
 - Edit, pause/resume, and archive controls on each project card
 - Status messages confirm when a project is created, updated, paused, or archived
-
-## [v01.04w] — 2026-07-18 02:39:24 AM EST — v01.14r
-
-### Removed
-- The text box and Submit button have been removed from the page
-
-## [v01.03w] — 2026-07-18 12:05:25 AM EST — v01.13r
-
-### Added
-- New text box with a Submit button that saves your entry to the spreadsheet
 
 Developed by: LightAISolutions

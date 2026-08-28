@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.27r] — 2026-08-28 05:44:48 AM EST
+
+> **Prompt:** "I confirm that the masthead shows Morning with a count covering BESS and AIDC, and that Calendar displays as intended. I currently can't test the search function as all my issues were created today. Continue building the permalinks, share/export functions, and the command palette."
+
+### Added
+
+- **Permalinks.** Hash routing on `#/issue/<id>`, matched against a strict pattern (`[A-Za-z0-9._-]{1,60}`) so a crafted hash cannot become a lookup key. `replaceState` on the first open and `pushState` afterwards, so landing on the app does not leave a history entry that "back" returns to but deliberately opening a second issue does. A permalink beats "newest" on load
+- **Share links.** New `Shares` tab (`Token · Digest ID · Created By · Created · Revoked · Views · Last Viewed`) plus `createShareLink` / `revokeShareLink` / `listShares`, all manager-gated, and an unauthenticated `doGet(action=share&t=…)` that serves exactly one stored edition. Minting is idempotent per edition, so pressing Share twice does not scatter tokens that each have to be revoked
+- **Export.** PDF through a print-scoped stylesheet in an off-screen iframe (forces a light ground — the stored body is dark-mode email markup and would otherwise print as a solid black page), and Word as the same HTML served `application/msword` behind an Office namespace header. Neither needs a library or a CDN, which is what keeps [PC-PRIVATE-REPO] #18 satisfied
+- **Command palette** on ⌘K / Ctrl+K — mastheads, view switches, Digest/Tune, and a debounced server-side search of the whole archive with a sequence guard so a slow earlier request cannot overwrite a newer one's results. Arrow keys, Enter, Escape; click-outside closes
+- Reader bar above the open edition carrying Copy link, Share… and Export
+
+### Fixed
+
+- **Parameter-name collision, caught before it shipped.** `revokeShareLink` was wired to `param('token')` — the same key the client already uses for the session token — so it would have received the session token and silently revoked nothing. Renamed to `shareToken` on both sides
+
+### Security
+
+- The share route's threat model is written into the code and covered by tests: **the token is the only reference**, so no digest id is read from the share URL and one token cannot be pivoted to another edition; 128 bits of entropy; revocation takes effect on the next request because the row is re-read every time rather than cached; the only write is a view counter on the share's own row; refusal messages are literals so a malformed token is never reflected back; and the response carries `noindex`, no app shell and no session. A leaked link exposes one edition — the same blast radius as forwarding the email — and dies when revoked
+- The palette is added to `showAuthWall()`'s deactivation block per the Auth Wall Completeness rule, and its ⌘K handler refuses to open over the auth wall. Playwright confirms both
+
+### Changed
+
+- Scraper sequence diagram gains the share route and the token-scope note; mermaid.live link regenerated and verified to decompress byte-for-byte
+
+### Notes
+
+- **Verified**: 29 assertions against the real share functions in a sandbox with stubbed Google services — covering idempotent minting, immediate revocation, a re-mint after revoke issuing a fresh token while the old one stays dead, and four malformed-token cases including that a digest id in the URL cannot redirect the read — plus 14 on the client helpers (hash-route rejection of traversal, markup, spaces and over-long ids; filename sanitisation leaving no path separators). Playwright drove the palette end to end: ⌘K, arrow-key selection, filtering, Escape, and the auth wall closing it
+- **Testing note:** the first Playwright run showed the palette never opening. Not a bug in the feature — the listeners live in `scBindEvents()`, which only runs on app activation, so the test had to go through `window._scraperInit`
+- **Deliberately not built:** pinning and cold storage (mockup item 4). Retention now trims at 400 rows, and a share link for a trimmed edition says so plainly rather than 404-ing silently — but a pinned-issue exemption is the honest fix and is a separate piece of work
 
 ## [v03.26r] — 2026-08-28 04:35:51 AM EST
 

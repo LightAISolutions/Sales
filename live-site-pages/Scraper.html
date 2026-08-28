@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.52w">
+  <meta name="build-version" content="v01.53w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -614,6 +614,59 @@
     .wd-ed-c3 { color: #c9a2d8; }
     .wd-ed-c4 { color: var(--wd-warn); }
     .wd-ed-c5 { color: #d79a8a; }
+    /* ── Reader bar: share + export, above the open edition ── */
+    .wd-rd-bar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+    .wd-rd-bar .wd-grow { flex: 1; min-width: 0; }
+    .wd-rd-menu { position: relative; }
+    .wd-rd-drop { position: absolute; right: 0; top: calc(100% + 5px); z-index: 30; width: 236px;
+      background: var(--wd-panel); border: 1px solid var(--wd-line-soft); border-radius: 5px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.5); overflow: hidden; }
+    .wd-rd-drop button { display: block; width: 100%; text-align: left; font: inherit; cursor: pointer;
+      background: none; border: none; border-bottom: 1px solid var(--wd-line); padding: 8px 11px; color: var(--wd-ink2); }
+    .wd-rd-drop button:last-child { border-bottom: none; }
+    .wd-rd-drop button:hover { background: var(--wd-bg-deep); }
+    .wd-rd-drop b { display: block; font-size: 12.5px; font-weight: 600; }
+    .wd-rd-drop span { font-family: var(--wd-mono); font-size: 9.5px; color: var(--wd-faint); }
+    .wd-rd-note { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2);
+      margin-bottom: 8px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .wd-rd-note.ok { color: var(--wd-green-ink); }
+    .wd-rd-note.bad { color: #e08a84; }
+    .wd-rd-link { flex: 1 1 240px; min-width: 0; background: var(--wd-bg-deep);
+      border: 1px solid var(--wd-line-soft); border-radius: 4px; color: var(--wd-ink2);
+      font-family: var(--wd-mono); font-size: 11px; padding: 5px 8px; }
+
+    /* ── Command palette (⌘K) ── */
+    #wd-pal { display: none; position: fixed; inset: 0; z-index: 10001;
+      background: rgba(8,9,12,.72); align-items: flex-start; justify-content: center; padding: 12vh 16px; }
+    #wd-pal.on { display: flex; }
+    .wd-pal-box { width: min(620px, 100%); background: var(--wd-bg); border: 1px solid var(--wd-line-soft);
+      border-radius: 8px; box-shadow: 0 24px 60px rgba(0,0,0,.6); overflow: hidden; }
+    .wd-pal-head { display: flex; align-items: center; gap: 9px; padding: 12px 14px;
+      border-bottom: 1px solid var(--wd-line); color: var(--wd-faint); }
+    #wd-pal-input { flex: 1; min-width: 0; background: none; border: none; color: var(--wd-ink);
+      font: inherit; font-size: 15px; padding: 2px 0; }
+    #wd-pal-input:focus { outline: none; }
+    #wd-pal-input::placeholder { color: var(--wd-faint); }
+    .wd-pal-esc { font-family: var(--wd-mono); font-size: 10px; color: var(--wd-faint);
+      border: 1px solid var(--wd-line-soft); border-bottom-width: 2px; border-radius: 4px; padding: 2px 6px; }
+    .wd-pal-list { max-height: 52vh; overflow-y: auto; }
+    .wd-pal-sect { font-family: var(--wd-mono); font-size: 9.5px; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--wd-faint); padding: 9px 14px 4px; }
+    .wd-pal-item { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left;
+      font: inherit; background: none; border: none; cursor: pointer; color: var(--wd-ink2);
+      padding: 8px 14px; border-left: 2px solid transparent; }
+    .wd-pal-item:hover, .wd-pal-item.on { background: var(--wd-panel); color: var(--wd-ink);
+      border-left-color: var(--wd-accent); }
+    .wd-pal-item .k { font-family: var(--wd-mono); font-size: 9px; letter-spacing: .06em;
+      text-transform: uppercase; padding: 2px 5px; border-radius: 3px; border: 1px solid currentColor;
+      flex: 0 0 auto; }
+    .wd-pal-item .t { flex: 1; min-width: 0; font-size: 13px; overflow: hidden;
+      text-overflow: ellipsis; white-space: nowrap; }
+    .wd-pal-item .d { font-family: var(--wd-mono); font-size: 10px; color: var(--wd-faint); flex: 0 0 auto; }
+    .wd-pal-empty { font-family: var(--wd-mono); font-size: 11.5px; color: var(--wd-faint); padding: 16px 14px; }
+    .wd-pal-foot { border-top: 1px solid var(--wd-line); padding: 7px 14px;
+      font-family: var(--wd-mono); font-size: 10px; color: var(--wd-faint);
+      display: flex; gap: 14px; flex-wrap: wrap; }
     #wd-edition-view { border: 1px solid var(--wd-line); border-radius: 6px; overflow: hidden; background: var(--wd-bg-deep); }
     #wd-drivers { margin-top: 12px; }
     .wd-driver-row { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
@@ -1221,6 +1274,20 @@
           <div id="wd-ns-table" class="wd-ns-tablewrap" hidden></div>
           <div id="wd-ns-more" class="wd-ns-more"></div>
         </div>
+        <div class="wd-rd-bar" id="wd-rd-bar" style="display:none;">
+          <span class="wd-grow"></span>
+          <button class="sc-btn" id="wd-rd-copy" type="button" title="Copy a link that reopens this edition in the app">Copy link</button>
+          <button class="sc-btn" id="wd-rd-share" type="button" title="Create a read-only link anyone can open without an account">Share…</button>
+          <div class="wd-rd-menu">
+            <button class="sc-btn primary" id="wd-rd-export" type="button" aria-expanded="false" aria-haspopup="true">Export ▾</button>
+            <div class="wd-rd-drop" id="wd-rd-drop" hidden>
+              <button type="button" data-x="pdf"><b>PDF</b><span>Opens your print dialog</span></button>
+              <button type="button" data-x="doc"><b>Word (.doc)</b><span>Downloads straight away</span></button>
+              <button type="button" data-x="mail"><b>Email it to me</b><span>Sends the latest edition</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="wd-rd-note" id="wd-rd-note" style="display:none;"></div>
         <div id="wd-edition-view">
           <span class="wd-loading" style="display:block;padding:16px;">Loading the latest edition…</span>
         </div>
@@ -1308,6 +1375,24 @@
   </div>
   <!-- Phase 5: Editions / Subscribers / Archive / Tune replace the retired
        Project wizard, articles browser and stats overlays. -->
+  <!-- Command palette. Sits in the same z tier as the Tune and Digest overlays
+       (10001) so the auth wall at 10002 always covers it. -->
+  <div id="wd-pal" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="wd-pal-box">
+      <div class="wd-pal-head">
+        <span aria-hidden="true">⌕</span>
+        <input id="wd-pal-input" type="text" placeholder="Jump to an edition, a masthead, or a command…"
+               autocomplete="off" spellcheck="false" aria-label="Command palette search"
+               aria-controls="wd-pal-list">
+        <span class="wd-pal-esc">esc</span>
+      </div>
+      <div class="wd-pal-list" id="wd-pal-list" role="listbox"></div>
+      <div class="wd-pal-foot">
+        <span>↑↓ move</span><span>↵ open</span><span>esc close</span>
+      </div>
+    </div>
+  </div>
+
   <div id="wd-tune-overlay">
     <div id="wd-tune-panel">
       <div class="sc-wiz-head">
@@ -3488,6 +3573,16 @@
       if (tabWall) { tabWall.style.display = 'none'; _tabSurrendered = false; }
       var notifPanel = document.getElementById('sc-notif-panel'); // PROJECT OVERRIDE: Scraper notification history panel
       if (notifPanel) notifPanel.style.display = 'none';
+      // PROJECT: command palette (z-index 10001) — it would otherwise stay open
+      // behind the wall, still typing into a live search of the archive.
+      var palOverlay = document.getElementById('wd-pal');
+      if (palOverlay) {
+        palOverlay.classList.remove('on');
+        if (typeof _wdPal === 'object' && _wdPal) {
+          _wdPal.open = false;
+          if (_wdPal.timer) { clearTimeout(_wdPal.timer); _wdPal.timer = null; }
+        }
+      }
       if (typeof stopCountdownTimers === 'function') stopCountdownTimers();
 
       // Always show sign-in UI (not reconnecting/signing-in) when showAuthWall is called
@@ -5239,7 +5334,10 @@
                       && _wdNs.ed === 'all' && !_wdNs.q && !_wdNs.range;
       if (empty) empty.style.display = noneAtAll ? '' : 'none';
       if (_wdDigests.length) {
-        wdLandingShowEdition_(_wdDigests[0].id);
+        // A permalink wins over "newest": arriving on #/issue/<id> must open
+        // that issue even when it is not the first card in the current filter.
+        var want = wdHashIssue_();
+        wdLandingShowEdition_(want || _wdDigests[0].id, !!want);
       } else {
         $sc('wd-edition-view').innerHTML = '';
         $sc('wd-edition-sub').textContent = '';
@@ -5542,8 +5640,15 @@
       + '</tbody></table>';
   }
 
-  function wdLandingShowEdition_(id) {
+  function wdLandingShowEdition_(id, fromHash) {
+    // The hash is written BEFORE _wdNs.current changes, because wdHashSet_ uses
+    // "nothing open yet" to decide replaceState vs pushState — landing on the
+    // app should not leave a history entry that "back" returns to.
+    if (!fromHash) wdHashSet_(id);
     _wdNs.current = id;
+    var bar = $sc('wd-rd-bar');
+    if (bar) bar.style.display = id ? 'flex' : 'none';
+    wdRdNote_('');
     var cards = $sc('wd-ns-grid').querySelectorAll('.wd-ns-card');
     for (var i = 0; i < cards.length; i++) {
       cards[i].classList.toggle('on', cards[i].getAttribute('data-id') === id);
@@ -5571,6 +5676,339 @@
           '<span class="wd-loading" style="display:block;padding:16px;">Could not load ('
           + scEsc((err && err.message) || err) + ')</span>';
       });
+  }
+
+  /** ---- Permalinks -------------------------------------------------------
+      An issue now has an address: `#/issue/<digestId>`. That single change is
+      what makes share, export and the palette reachable — before it there was
+      no way to name an issue outside the page's own memory. */
+
+  var _wdHashLock = false;    // suppresses the hashchange we cause ourselves
+
+  function wdHashIssue_() {
+    var m = String(location.hash || '').match(/^#\/issue\/([A-Za-z0-9._-]{1,60})$/);
+    return m ? m[1] : '';
+  }
+
+  function wdHashSet_(id) {
+    var want = id ? '#/issue/' + id : '';
+    if (location.hash === want) return;
+    _wdHashLock = true;
+    // replaceState on the first open, pushState afterwards: landing on the app
+    // and having it select the newest issue should not leave a history entry
+    // that "back" returns to, but deliberately opening a second issue should.
+    try {
+      if (history.replaceState && !_wdNs.current) history.replaceState(null, '', want || location.pathname + location.search);
+      else location.hash = want;
+    } catch (histErr) { location.hash = want; }
+    setTimeout(function() { _wdHashLock = false; }, 0);
+  }
+
+  function wdHashRoute_() {
+    if (_wdHashLock) return;
+    var id = wdHashIssue_();
+    if (id && id !== _wdNs.current) wdLandingShowEdition_(id, true);
+  }
+
+  /** ---- Reader bar: share + export --------------------------------------- */
+
+  function wdRdNote_(msg, cls) {
+    var el = $sc('wd-rd-note');
+    if (!el) return;
+    if (!msg) { el.style.display = 'none'; el.innerHTML = ''; return; }
+    el.className = 'wd-rd-note' + (cls ? ' ' + cls : '');
+    el.style.display = 'flex';
+    el.innerHTML = msg;
+  }
+
+  /** The in-app permalink for an issue — reopens the News Stand on it. */
+  function wdIssueUrl_(id) {
+    return location.origin + location.pathname + '#/issue/' + id;
+  }
+
+  function wdRdCopy_() {
+    var id = _wdNs.current;
+    if (!id) return;
+    wdCopyText_(wdIssueUrl_(id)).then(function(ok) {
+      wdRdNote_(ok ? '✓ Link copied — it reopens this edition in the app (sign-in still required).'
+                   : '✗ Could not copy. The link is <code>' + scEsc(wdIssueUrl_(id)) + '</code>',
+                ok ? 'ok' : 'bad');
+    });
+  }
+
+  /** Clipboard with a fallback: the async Clipboard API needs a secure context
+      and a user gesture, and silently rejects in some embedded contexts. */
+  function wdCopyText_(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function() { return true; })
+        .catch(function() { return wdCopyFallback_(text); });
+    }
+    return Promise.resolve(wdCopyFallback_(text));
+  }
+  function wdCopyFallback_(text) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed'; ta.style.top = '-1000px';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = document.execCommand && document.execCommand('copy');
+      document.body.removeChild(ta);
+      return !!ok;
+    } catch (cpErr) { return false; }
+  }
+
+  /** Mint (or reuse) a public read-only link for this edition. */
+  function wdRdShare_() {
+    var id = _wdNs.current;
+    if (!id) return;
+    var btn = $sc('wd-rd-share');
+    if (btn) btn.disabled = true;
+    wdRdNote_('Creating a share link…');
+    _gasPost({ action: 'createShareLink', token: scToken(), digestId: id })
+      .then(function(d) {
+        if (btn) btn.disabled = false;
+        if (!d || !d.success) { wdRdNote_('✗ ' + scEsc(scErrMsg(d && d.error)), 'bad'); return; }
+        // Shown rather than only copied: a link someone can read and check is
+        // easier to trust than one that silently went to the clipboard.
+        wdRdNote_((d.reused ? '✓ Existing share link' : '✓ Share link created')
+          + ' — anyone with it can read this edition, no account needed.'
+          + '<input class="wd-rd-link" id="wd-rd-shareurl" readonly value="' + scEsc(d.url) + '">'
+          + '<button class="sc-btn" type="button" id="wd-rd-sharecopy">Copy</button>'
+          + '<button class="sc-btn" type="button" id="wd-rd-sharerevoke" data-token="'
+          + scEsc(d.token) + '">Revoke</button>', 'ok');
+        var input = $sc('wd-rd-shareurl');
+        if (input) input.addEventListener('focus', function() { this.select(); });
+      })
+      .catch(function(err) { if (btn) btn.disabled = false; wdRdNote_('✗ ' + scEsc((err && err.message) || err), 'bad'); });
+  }
+
+  function wdRdRevoke_(token) {
+    wdRdNote_('Revoking…');
+    _gasPost({ action: 'revokeShareLink', token: scToken(), shareToken: token })
+      .then(function(d) {
+        if (d && d.success) wdRdNote_('✓ Share link revoked — it stops working immediately.', 'ok');
+        else wdRdNote_('✗ ' + scEsc(scErrMsg(d && d.error)), 'bad');
+      })
+      .catch(function(err) { wdRdNote_('✗ ' + scEsc((err && err.message) || err), 'bad'); });
+  }
+
+  /** ---- Export -----------------------------------------------------------
+      Both routes reuse the Night Ink HTML already stored for the issue, so
+      neither needs a PDF or DOCX library — which also keeps [PC-PRIVATE-REPO]
+      satisfied, since no CDN or authenticated GitHub endpoint is involved. */
+
+  function wdExportMeta_() {
+    for (var i = 0; i < _wdDigests.length; i++) {
+      if (_wdDigests[i].id === _wdNs.current) return _wdDigests[i];
+    }
+    return null;
+  }
+  function wdExportName_(ext) {
+    var m = wdExportMeta_();
+    var base = ((m && m.editionName) || 'Edition') + ' ' + ((m && m.date) || '');
+    return base.replace(/[^A-Za-z0-9 ()._-]/g, '').trim().replace(/\s+/g, '-') + '.' + ext;
+  }
+
+  /** Fetch the stored HTML for the open issue, then hand it to `use`. */
+  function wdExportHtml_(use) {
+    var id = _wdNs.current;
+    if (!id) return;
+    wdRdNote_('Preparing…');
+    _gasPost({ action: 'getDigest', token: scToken(), digestId: id })
+      .then(function(d) {
+        if (!d || !d.success || !d.html) { wdRdNote_('✗ ' + scEsc(scErrMsg(d && d.error)), 'bad'); return; }
+        use(d.html);
+      })
+      .catch(function(err) { wdRdNote_('✗ ' + scEsc((err && err.message) || err), 'bad'); });
+  }
+
+  /** PDF via the browser's own print pipeline in an off-screen iframe. The
+      print stylesheet is scoped to that document, so nothing about the app's
+      own layout can leak into the page being printed. */
+  function wdExportPdf_() {
+    wdExportHtml_(function(html) {
+      var old = $sc('wd-print-frame');
+      if (old && old.parentNode) old.parentNode.removeChild(old);
+      var f = document.createElement('iframe');
+      f.id = 'wd-print-frame';
+      f.setAttribute('aria-hidden', 'true');
+      f.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0;visibility:hidden;';
+      document.body.appendChild(f);
+      var doc = f.contentWindow.document;
+      doc.open();
+      doc.write('<!doctype html><meta charset="utf-8"><title>'
+        + scEsc(wdExportName_('pdf').replace(/\.pdf$/, '')) + '</title>'
+        + '<style>@page{margin:14mm}'
+        + 'html,body{background:#fff!important;margin:0;padding:0}'
+        // The stored body is dark-mode email markup; force a light ground so it
+        // does not print as a solid black page or burn a cartridge.
+        + 'body{-webkit-print-color-adjust:exact;print-color-adjust:exact}'
+        + 'a{text-decoration:none}</style><body>' + html + '</body>');
+      doc.close();
+      var fire = function() {
+        try { f.contentWindow.focus(); f.contentWindow.print(); }
+        catch (prErr) { wdRdNote_('✗ Could not open the print dialog.', 'bad'); return; }
+        wdRdNote_('✓ Print dialog open — choose “Save as PDF” as the destination.', 'ok');
+      };
+      // Wait for the frame's own load so fonts and layout settle before print.
+      if (f.contentWindow.document.readyState === 'complete') setTimeout(fire, 60);
+      else f.addEventListener('load', function() { setTimeout(fire, 60); });
+    });
+  }
+
+  /** Word: the same HTML wrapped in the Office namespace header and served as
+      application/msword. Word opens HTML natively, so no .docx library, no
+      CDN, and no server round trip beyond fetching the issue. */
+  function wdExportDoc_() {
+    wdExportHtml_(function(html) {
+      var name = wdExportName_('doc');
+      var payload = '﻿<html xmlns:o="urn:schemas-microsoft-com:office:office"'
+        + ' xmlns:w="urn:schemas-microsoft-com:office:word"'
+        + ' xmlns="http://www.w3.org/TR/REC-html40"><head><meta charset="utf-8">'
+        + '<title>' + scEsc(name.replace(/\.doc$/, '')) + '</title>'
+        + '<style>body{background:#fff;color:#111;font-family:Georgia,serif}</style>'
+        + '</head><body>' + html + '</body></html>';
+      try {
+        var blob = new Blob([payload], { type: 'application/msword' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url; a.download = name;
+        document.body.appendChild(a); a.click();
+        document.body.removeChild(a);
+        // Revoke on the next tick — revoking synchronously can cancel the
+        // download in some browsers before it has read the blob.
+        setTimeout(function() { URL.revokeObjectURL(url); }, 4000);
+        wdRdNote_('✓ Downloaded ' + scEsc(name) + ' — opens in Word.', 'ok');
+      } catch (dlErr) {
+        wdRdNote_('✗ Could not build the file (' + scEsc((dlErr && dlErr.message) || dlErr) + ')', 'bad');
+      }
+    });
+  }
+
+  /** ---- Command palette (⌘K / Ctrl+K) -----------------------------------
+      At a few hundred issues this beats any arrangement of clickable things.
+      It searches the archive through the same server-side listDigests the News
+      Stand uses, so a match is found whether or not it is currently on screen. */
+
+  var _wdPal = { open: false, rows: [], sel: 0, timer: null, seq: 0 };
+
+  function wdPalOpen_() {
+    if (_wdPal.open) return;
+    _wdPal.open = true;
+    $sc('wd-pal').classList.add('on');
+    var input = $sc('wd-pal-input');
+    input.value = '';
+    input.focus();
+    wdPalSearch_('');
+  }
+
+  function wdPalClose_() {
+    if (!_wdPal.open) return;
+    _wdPal.open = false;
+    $sc('wd-pal').classList.remove('on');
+    if (_wdPal.timer) { clearTimeout(_wdPal.timer); _wdPal.timer = null; }
+  }
+
+  /** Commands and mastheads are always available; issues are fetched. */
+  function wdPalStatic_(q) {
+    var rows = [];
+    var needle = q.toLowerCase();
+    function add(kind, label, detail, run) {
+      if (needle && label.toLowerCase().indexOf(needle) === -1) return;
+      rows.push({ kind: kind, label: label, detail: detail || '', run: run });
+    }
+    (_wdEditions || []).forEach(function(e) {
+      add('masthead', e.name, e.parent ? 'variant' : 'masthead', function() {
+        _wdNs.ed = e.id;
+        wdNsReload_();
+      });
+    });
+    add('go', 'All editions', 'clear the masthead filter', function() {
+      _wdNs.ed = 'all'; wdNsReload_();
+    });
+    add('cmd', 'Open Digest', 'build or review an edition', function() { wdDigestOpen_(); });
+    add('cmd', 'Open Tune', 'interests, editions, subscribers', function() { wdTuneOpen_(); });
+    add('cmd', 'Refresh', 'reload the News Stand', function() { wdLandingLoad_(); });
+    add('cmd', 'Calendar view', 'switch the News Stand', function() { wdPalView_('cal'); });
+    add('cmd', 'Table view', 'switch the News Stand', function() { wdPalView_('table'); });
+    add('cmd', 'News Stand view', 'switch the News Stand', function() { wdPalView_('grid'); });
+    return rows;
+  }
+
+  /** Drive the view switcher through its own button so the tab state, the
+      aria-selected flags and the render all stay in one place. */
+  function wdPalView_(view) {
+    var btn = document.querySelector('.wd-ns-view[data-view="' + view + '"]');
+    if (btn) btn.click();
+  }
+
+  function wdPalSearch_(q) {
+    var statics = wdPalStatic_(q);
+    if (!q) { wdPalRender_(statics); return; }
+    wdPalRender_(statics, true);
+    var seq = ++_wdPal.seq;
+    if (_wdPal.timer) clearTimeout(_wdPal.timer);
+    _wdPal.timer = setTimeout(function() {
+      _gasPost({ action: 'listDigests', token: scToken(),
+                 payload: JSON.stringify({ edition: 'all', q: q, offset: 0, limit: 8 }) })
+        .then(function(d) {
+          // A slower earlier request must not overwrite a newer one's results.
+          if (seq !== _wdPal.seq || !_wdPal.open) return;
+          var hits = (d && d.success && d.digests) ? d.digests : [];
+          wdPalRender_(statics.concat(hits.map(function(it) {
+            return { kind: 'issue',
+                     label: it.lead || (it.editionName + ' — ' + it.date),
+                     detail: it.date, run: function() { wdLandingShowEdition_(it.id); } };
+          })));
+        })
+        .catch(function() { if (seq === _wdPal.seq) wdPalRender_(statics); });
+    }, 220);
+  }
+
+  function wdPalRender_(rows, searching) {
+    _wdPal.rows = rows;
+    if (_wdPal.sel >= rows.length) _wdPal.sel = 0;
+    var host = $sc('wd-pal-list');
+    if (!rows.length) {
+      host.innerHTML = '<div class="wd-pal-empty">'
+        + (searching ? 'Searching…' : 'Nothing matches.') + '</div>';
+      return;
+    }
+    var html = '', lastKind = '';
+    var KIND = { masthead: 'Mastheads', go: 'Mastheads', issue: 'Editions', cmd: 'Commands' };
+    rows.forEach(function(r, i) {
+      var sect = KIND[r.kind] || 'Other';
+      if (sect !== lastKind) { html += '<div class="wd-pal-sect">' + sect + '</div>'; lastKind = sect; }
+      html += '<button type="button" role="option" class="wd-pal-item' + (i === _wdPal.sel ? ' on' : '')
+        + '" data-i="' + i + '" aria-selected="' + (i === _wdPal.sel) + '">'
+        + '<span class="k">' + scEsc(r.kind === 'cmd' ? 'cmd' : r.kind === 'issue' ? 'issue' : 'ed') + '</span>'
+        + '<span class="t">' + scEsc(r.label) + '</span>'
+        + (r.detail ? '<span class="d">' + scEsc(r.detail) + '</span>' : '')
+        + '</button>';
+    });
+    html += (searching ? '<div class="wd-pal-empty">Searching the archive…</div>' : '');
+    host.innerHTML = html;
+  }
+
+  function wdPalMove_(delta) {
+    if (!_wdPal.rows.length) return;
+    _wdPal.sel = (_wdPal.sel + delta + _wdPal.rows.length) % _wdPal.rows.length;
+    var items = $sc('wd-pal-list').querySelectorAll('.wd-pal-item');
+    for (var i = 0; i < items.length; i++) {
+      var on = Number(items[i].getAttribute('data-i')) === _wdPal.sel;
+      items[i].classList.toggle('on', on);
+      items[i].setAttribute('aria-selected', on);
+      if (on && items[i].scrollIntoView) items[i].scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  function wdPalRun_(i) {
+    var r = _wdPal.rows[i];
+    if (!r) return;
+    wdPalClose_();
+    try { r.run(); } catch (runErr) {}
   }
 
   /** "What's driving relevance" — top companies/topics seen in recent editions. */
@@ -6203,6 +6641,77 @@
     on('wd-ns-more', 'click', function(ev) {
       if (ev.target && ev.target.id === 'wd-ns-more-btn') wdNsLoadMore_();
     });
+
+    // ── Reader bar: permalink, share, export ──────────────────────────────
+    on('wd-rd-copy', 'click', wdRdCopy_);
+    on('wd-rd-share', 'click', wdRdShare_);
+    on('wd-rd-export', 'click', function() {
+      var drop = $sc('wd-rd-drop');
+      var open = drop.hidden;
+      drop.hidden = !open;
+      this.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    on('wd-rd-drop', 'click', function(ev) {
+      var b = ev.target.closest ? ev.target.closest('button[data-x]') : null;
+      if (!b) return;
+      $sc('wd-rd-drop').hidden = true;
+      $sc('wd-rd-export').setAttribute('aria-expanded', 'false');
+      var x = b.getAttribute('data-x');
+      if (x === 'pdf') wdExportPdf_();
+      else if (x === 'doc') wdExportDoc_();
+      else wdGoLiveEmail_();
+    });
+    // Buttons inside the share note are rendered after the fact, so they are
+    // reached by delegation rather than bound at load.
+    on('wd-rd-note', 'click', function(ev) {
+      if (!ev.target) return;
+      if (ev.target.id === 'wd-rd-sharecopy') {
+        var inp = $sc('wd-rd-shareurl');
+        if (inp) wdCopyText_(inp.value).then(function(ok) {
+          ev.target.textContent = ok ? 'Copied' : 'Copy failed';
+        });
+      } else if (ev.target.id === 'wd-rd-sharerevoke') {
+        wdRdRevoke_(ev.target.getAttribute('data-token'));
+      }
+    });
+    document.addEventListener('click', function(ev) {
+      if (ev.target.closest && !ev.target.closest('.wd-rd-menu')) {
+        var drop = $sc('wd-rd-drop');
+        if (drop && !drop.hidden) {
+          drop.hidden = true;
+          $sc('wd-rd-export').setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+
+    // ── Permalinks ────────────────────────────────────────────────────────
+    window.addEventListener('hashchange', wdHashRoute_);
+
+    // ── Command palette ───────────────────────────────────────────────────
+    document.addEventListener('keydown', function(ev) {
+      // Only when the app is actually usable — never over the auth wall, and
+      // never while another overlay owns the screen.
+      if ((ev.key === 'k' || ev.key === 'K') && (ev.metaKey || ev.ctrlKey)) {
+        var app = $sc('scraper-app');
+        var wall = $sc('auth-wall');
+        if (!app || app.style.display === 'none') return;
+        if (wall && wall.style.display !== 'none' && wall.offsetParent !== null) return;
+        ev.preventDefault();
+        _wdPal.open ? wdPalClose_() : wdPalOpen_();
+        return;
+      }
+      if (!_wdPal.open) return;
+      if (ev.key === 'Escape') { ev.preventDefault(); wdPalClose_(); }
+      else if (ev.key === 'ArrowDown') { ev.preventDefault(); wdPalMove_(1); }
+      else if (ev.key === 'ArrowUp') { ev.preventDefault(); wdPalMove_(-1); }
+      else if (ev.key === 'Enter') { ev.preventDefault(); wdPalRun_(_wdPal.sel); }
+    });
+    on('wd-pal-input', 'input', function() { _wdPal.sel = 0; wdPalSearch_(this.value.trim()); });
+    on('wd-pal-list', 'click', function(ev) {
+      var b = ev.target.closest ? ev.target.closest('.wd-pal-item') : null;
+      if (b) wdPalRun_(Number(b.getAttribute('data-i')));
+    });
+    on('wd-pal', 'click', function(ev) { if (ev.target === this) wdPalClose_(); });
   }
 
   // Retry a transport-level failure once (2.5s pause) before surfacing it.

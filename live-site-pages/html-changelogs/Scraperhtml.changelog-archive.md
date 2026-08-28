@@ -8,6 +8,16 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.04w] — 2026-07-18 02:39:24 AM EST — v01.14r — [cc86b54](https://github.com/LightAISolutions/Sales/commit/cc86b54bfa3e65e51730eddecb14fe439587fbfd)
+
+### Removed
+- The text box and Submit button have been removed from the page
+
+## [v01.03w] — 2026-07-18 12:05:25 AM EST — v01.13r — [50449c4](https://github.com/LightAISolutions/Sales/commit/50449c4ba2dbaf36d2029a1aa8464bcfdbdf1670)
+
+### Added
+- New text box with a Submit button that saves your entry to the spreadsheet
+
 ## [v01.02w] — 2026-07-17 11:45:41 PM EST — v01.12r — [1d60d9f](https://github.com/LightAISolutions/Sales/commit/1d60d9f750f4b21a5e00240992bc65c5aafe15a6)
 
 ### Fixed

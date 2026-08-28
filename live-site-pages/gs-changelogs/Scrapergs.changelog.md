@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.60g] — 2026-08-28 05:44:48 AM EST — v03.27r
+
+### Added
+- **Read-only share links.** An edition can be given a link that anyone can open without signing in. Each link points at one edition only — editing the address cannot reach a different one — and revoking a link stops it working straight away
+- Pressing Share twice on the same edition reuses the existing link rather than creating a second one to keep track of
+- A share link records how many times it has been opened
+
+### Changed
+- Editions delete cleanly: a link created for an edition that has since been removed says so plainly instead of showing an empty page
 
 ## [v01.59g] — 2026-08-28 04:35:51 AM EST — v03.26r
 
