@@ -1,4 +1,4 @@
-var VERSION = "v01.48g";
+var VERSION = "v01.49g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -615,7 +615,13 @@ var SCRAPER_CLICK_WINDOW_DAYS = 30;    // clicks older than this stop influencin
 var SCRAPER_CORROB_CAP = 6;            // max score boost from multi-source corroboration
 var SCRAPER_DOSSIER_MINE_PRIORITY_MAX = 30;  // dossiers per sync while new/changed ones are queued
 var SCRAPER_DOSSIER_MINE_IDLE = 5;           // slow refresh trickle once the fleet is current
-var SCRAPER_DOSSIER_MINE_BUDGET_MS = 60000;  // wall-clock guard — keeps the pass inside the tick
+var SCRAPER_DOSSIER_MINE_BUDGET_MS = 60000;  // wall-clock guard for the SCHEDULED tick
+// A user-triggered sync is a foreground request behind a 90s client abort.
+// A 60s mining pass pushed the round trip to ~60-75s, so the button felt
+// dead, a Refresh pressed meanwhile read the sheet before mining committed
+// (showing the old count), and the results appeared minutes later 'on their
+// own'. Interactive syncs get a shorter budget and report what they did.
+var SCRAPER_DOSSIER_MINE_BUDGET_INTERACTIVE_MS = 25000;
 var SCRAPER_HELD_BACK_MAX = 25;        // held-back items stored per edition (rollup feed)
 
 // D1 (2026-08-27): 30-source free trade-press roster — 3rd-party outlets only
@@ -2263,7 +2269,7 @@ function syncProfilerInterests() {
     A failed fetch records the error and leaves the tab untouched — a bad
     pull must never stale-flag real coverage. Throttled to ~once/day unless
     forced; serialized under the script lock. */
-function scSyncInterests_(force) {
+function scSyncInterests_(force, mineBudgetMs) {
   if (!SCRAPER_INTERESTS_SYNC_ENABLED) return { skipped: 'disabled' };
   var props = PropertiesService.getScriptProperties();
   var last = Number(props.getProperty('INTERESTS_LAST_SYNC')) || 0;
@@ -2411,9 +2417,14 @@ function scSyncInterests_(force) {
     // matter how many times the sync was run. Running last also means mining
     // sees companies appended by THIS sync, which is exactly the priority
     // case (newly covered companies mined on the very next pass).
-    try { scMineDossiersStep_(ss); } catch (mineErr) {}
+    var mineResult = null;
+    try { mineResult = scMineDossiersStep_(ss, mineBudgetMs); } catch (mineErr) {}
     var summary = { ok: true, added: added, addedTopics: addedTopics, updated: updated,
-                    stale: stale, total: data.length - 1 + appendRows.length, at: Date.now() };
+                    stale: stale, total: data.length - 1 + appendRows.length, at: Date.now(),
+                    // Reported so the caller can say what the pass actually did
+                    // instead of leaving the developer to infer it from a tile.
+                    mined: (mineResult && mineResult.mined) || 0,
+                    minePending: (mineResult && mineResult.pending) || 0 };
     props.setProperty('INTERESTS_LAST_SYNC', String(Date.now()));
     props.setProperty('INTERESTS_LAST_SYNC_RESULT', JSON.stringify(summary));
     return summary;
@@ -2649,7 +2660,8 @@ function setInterestEnabled(sessionToken, key, enabled) {
 /** Force a registry sync now (Phase 2 "Sync now" button). */
 function syncInterestsNow(sessionToken) {
   validateSessionForData(sessionToken, 'syncInterestsNow');
-  return { success: true, result: scSyncInterests_(true) };
+  return { success: true,
+           result: scSyncInterests_(true, SCRAPER_DOSSIER_MINE_BUDGET_INTERACTIVE_MS) };
 }
 
 /** Score an ad-hoc title/snippet against the current interest model — the
@@ -4577,7 +4589,7 @@ function scNotesSetTag_(notes, name, value) {
     initial backfill of every company completes in a few days on its own),
     a small trickle once the fleet is current. A wall-clock guard keeps the
     pass well inside the scheduler tick's budget. */
-function scMineDossiersStep_(ss) {
+function scMineDossiersStep_(ss, budgetMs) {
   var sheet = ss.getSheetByName(SCRAPER_TABS.INTERESTS);
   if (!sheet) return null;
   var data = sheet.getDataRange().getValues();
@@ -4602,7 +4614,7 @@ function scMineDossiersStep_(ss) {
   var t0 = Date.now();
   var done = 0;
   for (var n = 0; n < Math.min(budget, queue.length); n++) {
-    if (Date.now() - t0 > SCRAPER_DOSSIER_MINE_BUDGET_MS) break;
+    if (Date.now() - t0 > (budgetMs || SCRAPER_DOSSIER_MINE_BUDGET_MS)) break;
     var ri = queue[n];
     var slug = String(data[ri][0]);
     var notes = String(data[ri][13] || '');

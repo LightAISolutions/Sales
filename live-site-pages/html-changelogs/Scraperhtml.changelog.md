@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.44w] — 2026-08-27 10:30:53 PM EST — v03.16r
+
+### Fixed
+- **The "Dossiers read" figure now updates as soon as a sync finishes.** Pressing "Sync now" refreshed the interests list but never the status tiles, so a sync could complete successfully and the count would still show its page-load value — making a working sync look like nothing had happened
 
 ## [v01.43w] — 2026-08-27 09:53:19 PM EST — v03.13r
 

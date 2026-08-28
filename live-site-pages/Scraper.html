@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.43w">
+  <meta name="build-version" content="v01.44w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -7098,11 +7098,24 @@
       .then(function(data) {
         if (data && data.success) {
           var r = data.result || {};
-          scToast(r.skipped
-            ? 'Sync skipped (' + r.skipped + ').'
-            : 'Interests synced — ' + (r.added || 0) + ' new compan' + ((r.added || 0) === 1 ? 'y' : 'ies')
-              + ', ' + (r.updated || 0) + ' updated' + (r.stale ? ', ' + r.stale + ' coverage ended' : '') + '.');
+          if (r.skipped) {
+            scToast('Sync skipped (' + r.skipped + ').');
+          } else {
+            // Report the dossier pass explicitly. Without this the only signal
+            // was the "Dossiers read" tile, which this handler never refreshed
+            // — so a successful pass looked like nothing had happened.
+            var msg = 'Interests synced — ' + (r.added || 0) + ' new compan'
+              + ((r.added || 0) === 1 ? 'y' : 'ies') + ', ' + (r.updated || 0) + ' updated'
+              + (r.stale ? ', ' + r.stale + ' coverage ended' : '') + '.';
+            if (r.mined) {
+              msg += ' Read ' + r.mined + ' dossier' + (r.mined === 1 ? '' : 's')
+                + (r.minePending ? ' — ' + r.minePending + ' still queued, press again to continue.'
+                                 : ' — coverage complete.');
+            }
+            scToast(msg);
+          }
           wdInterestsLoad_();
+          wdLandingLoad_();   // repaints the "Dossiers read" tile
         } else {
           scToast(scErrMsg(data && data.error), true);
         }

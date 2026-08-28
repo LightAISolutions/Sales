@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.16r] — 2026-08-27 10:30:53 PM EST
+
+> **Prompt:** "The Console shows 3 cents of Claude usage today, which is fine. The 'Sync now' function still doesn't fully work as intended. After I press it and it goes through its process, the 'Dossiers read' usually don't update even if I click the Refresh button on the top right of the screen. However, after a while of working on something else, I noticed the 'Dossiers read' number jumped from zero to 27/88, but I don't think it was a direct result of me pressing the 'Sync now' function. Figure out what's going on and fix it."
+
+### Fixed
+- **`wdSyncNow_` never repainted the status strip — the tile could not update no matter how long you waited.** The handler refreshed the Interests list (`wdInterestsLoad_()`) and stopped there, but the `Dossiers read` tile is painted exclusively by `wdRenderStatusStrip_`, which is only ever fed by `wdLandingLoad_()`. So the number the developer was watching was rendered once at page load and then never re-read — a *client-side staleness bug entirely independent of the v03.14r clobber fix*, which is why the tile still looked broken after that fix shipped. `wdSyncNow_` now calls `wdLandingLoad_()` after the sync resolves
+- **The Refresh button raced the sync instead of reporting it.** `scMineDossiersStep_` ran with the shared `SCRAPER_DOSSIER_MINE_BUDGET_MS = 60000` wall-clock budget even on the interactive path, so a single *Sync now* occupied ~60–75s of server time. Pressing Refresh during that window issued a **second** `google.script.run` call that read the sheet *before* the in-flight sync committed its write-back, returning pre-sync values — which reads to the developer as "Refresh doesn't work either." Interactive syncs now run against `SCRAPER_DOSSIER_MINE_BUDGET_INTERACTIVE_MS = 25000` (`scMineDossiersStep_(ss, budgetMs)` takes the budget as a parameter; the background scheduler path keeps the full 60s), so the round trip fits comfortably inside a normal button press
+- **The "jumped to 27/88 on its own" observation is explained by the same two bugs, not a third one.** 27 is not a round number and not the priority cap (30) — it is where the wall-clock guard truncated the pass mid-list. The write-back had already committed on the server; the developer only *saw* it later because the tile was waiting for the next full page load to repaint. Nothing ran in the background on its behalf
+
+### Changed
+- **`scSyncInterests_` now reports what mining did.** It returns `mined` (dossiers read this pass) and `minePending` (still queued) alongside the existing company counts, and the toast reads them back: `Read 27 dossiers — 61 still queued, press again to continue.` or `— coverage complete.` when the queue drains. Previously the sync was silent about the half of its work the developer was actually watching, so a *correct* partial pass was indistinguishable from a failed one
+
+### Notes
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; a Playwright interaction test drives the real page with a stubbed backend and asserts **5** conditions — the tile repaints after *Sync now* **with no Refresh pressed** (`0/88 (+88)` → `27/88 (+61)`), the pending count is shown, the toast reports dossiers read, the toast tells you to press again, and the sync endpoint is called **exactly once** (guarding against a double-submit reintroducing the race). Zero page errors
+- The overlay intercepts pointer events over the button in the test harness, so the click is dispatched via `el => el.click()`; the toast target is the shared status line, not a dedicated element — both worth remembering for the next interaction test on this page
+- **`Scraper.gs`** VERSION v01.48g → v01.49g; **`Scraper.html`** v01.43w → v01.44w; both version files synced; public entries added (GAS counter 49/50 — **rotation is due on the next push**; page counter 44/50)
 
 ## [v03.15r] — 2026-08-27 10:18:03 PM EST
 
