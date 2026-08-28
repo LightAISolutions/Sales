@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 41/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.67g] — 2026-08-28 05:58:49 PM EST — v03.34r
+
+### Changed
+- **Scoring now treats the US market as the clear priority.** Stories about other countries are heavily devalued, so they no longer crowd out US coverage or take the lead slot
+- China, Mexico, Chile and Canada are treated as a closer second tier — devalued, but far less sharply than the rest of the world
+- A story about any other country that also touches the US market — a shipment, a tariff, a US buyer — keeps most of its score. The devaluation is aimed at coverage with no bearing on your market, not at anything foreign
+- Stories that name no country at all are completely unaffected. Most US trade coverage never says "United States", so nothing is penalised for simply failing to say where it is
+- The rubric tester now shows when geography lowered a score, which countries it found, and whether a US connection softened it
 
 ## [v01.66g] — 2026-08-28 05:46:45 PM EST — v03.33r
 

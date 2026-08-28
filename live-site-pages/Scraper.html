@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.55w">
+  <meta name="build-version" content="v01.56w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -8888,7 +8888,9 @@
         var sig = data.signals || {};
         var maxes = { company: 40, topic: 25, emphasis: 15, substance: 20 };
         var names = { company: 'Company', topic: 'Topic', emphasis: 'Emphasis', substance: 'Substance' };
-        $sc('wd-rubric-score').textContent = (data.score || 0) + ' / 100';
+        var geo = Number(sig.geo == null ? 1 : sig.geo);
+        $sc('wd-rubric-score').textContent = (data.score || 0) + ' / 100'
+          + (geo < 1 ? '  (×' + geo + ' geo)' : '');
         $sc('wd-rubric-sigs').innerHTML = ['company', 'topic', 'emphasis', 'substance'].map(function(k) {
           var v = Number(sig[k]) || 0;
           var pct = Math.max(0, Math.min(100, Math.round(v / maxes[k] * 100)));
@@ -8901,6 +8903,16 @@
         var note = m.length
           ? 'Matched: ' + m.join(', ')
           : 'No interest matches — likely below the relevance bar';
+        // Geography is a multiplier, not a band, so it gets its own line rather
+        // than a bar — and it is the first thing worth saying when it fired,
+        // because it explains a low score that the four bands do not.
+        if (geo < 1) {
+          var regions = (data.geoRegions || []).join(', ');
+          note = 'Outside the US market (×' + geo + ')'
+            + (regions ? ' — ' + regions : '')
+            + (data.geoUsLinked ? '; softened because it also names the US market' : '')
+            + '. ' + note;
+        }
         if (data.gated) {
           note = 'Excluded by segment gate — only matches toggled-off segment'
             + ((data.excludedSegments || []).length === 1 ? '' : 's') + ': '

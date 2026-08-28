@@ -1,4 +1,4 @@
-var VERSION = "v01.66g";
+var VERSION = "v01.67g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -693,6 +693,97 @@ var SCRAPER_SEGMENT_SEEDS = [
 // off and hidden, historical votes preserved).
 var SCRAPER_RUBRIC_WEIGHTS = { company: 40, topic: 25, emphasis: 15, substance: 20 };
 var SCRAPER_RUBRIC_RECENT_DAYS = 45;  // Profiler lastUpdated within this window earns the full emphasis recency
+
+// ── Geographic priority (developer 2026-08-28) ───────────────────────────
+// "I am specifically focused on the US BESS/AIDC market… the US market is a
+// clear priority 1, greatly outpacing priority 2 countries closely related to
+// this industry (China, Mexico, Chile, Canada). [Priority 2] should generally
+// only be scored highly if whatever happened there directly affects the US
+// market." The example given: the lead should never be an Australian
+// transmission story.
+//
+// Applied as a MULTIPLIER on the finished rubric score rather than as another
+// additive band. The requirement is proportional — an additive penalty leaves a
+// strong company match on a foreign story still clearing the bar, whereas a
+// multiplier scales the whole judgement down the way the developer described.
+//
+// THE LOAD-BEARING RULE IS THE DEFAULT: an article with no geographic marker at
+// all scores 1.0, untouched. Most US trade coverage never says "United States"
+// — it says ERCOT, or a county in Texas, or nothing. Penalising unmarked
+// articles would empty the digest, so a penalty needs positive evidence of a
+// foreign subject, never merely the absence of evidence of a US one.
+var SCRAPER_GEO_FACTORS = {
+  // Foreign subject, no US connection named anywhere in the article.
+  tier2: 0.55,
+  other: 0.25,
+  // Foreign subject, but the article also names something US-market. This is
+  // the "directly affects the US market" case — a tariff, an export, a US buyer.
+  tier2Linked: 0.85,
+  otherLinked: 0.60
+};
+
+// US-market markers. Deliberately excludes the bare token "us" (the text is
+// lowercased before matching, so it would hit the pronoun in every other
+// sentence) and other short ambiguous ones like "ira" and "doe".
+var SCRAPER_GEO_US_TERMS = [
+  'united states', 'u.s.', 'u.s.a.', 'usa', 'north america', 'north american',
+  'washington d.c.', 'federal government',
+  // Grid operators and markets — the strongest US signal in this trade press.
+  'ercot', 'caiso', 'pjm', 'miso', 'nyiso', 'iso-ne', 'isone', 'spp',
+  'wecc', 'serc', 'ferc', 'nerc', 'eia', 'epa', 'nrel', 'department of energy',
+  'inflation reduction act', 'investment tax credit', 'production tax credit',
+  'section 45x', 'section 48e', 'section 301', 'buy american', 'domestic content',
+  // States and DC.
+  'alabama', 'alaska', 'arizona', 'arkansas', 'california', 'colorado',
+  'connecticut', 'delaware', 'florida', 'georgia', 'hawaii', 'idaho', 'illinois',
+  'indiana', 'iowa', 'kansas', 'kentucky', 'louisiana', 'maine', 'maryland',
+  'massachusetts', 'michigan', 'minnesota', 'mississippi', 'missouri', 'montana',
+  'nebraska', 'nevada', 'new hampshire', 'new jersey', 'new mexico', 'new york',
+  'north carolina', 'north dakota', 'ohio', 'oklahoma', 'oregon', 'pennsylvania',
+  'rhode island', 'south carolina', 'south dakota', 'tennessee', 'texas', 'utah',
+  'vermont', 'virginia', 'washington state', 'west virginia', 'wisconsin', 'wyoming'
+];
+
+// Priority 2 — closely related to this industry, devalued but not buried.
+var SCRAPER_GEO_TIER2 = {
+  china:  ['china', 'chinese', 'beijing', 'shanghai', 'shenzhen', 'prc'],
+  mexico: ['mexico', 'mexican', 'cfe', 'sener'],
+  chile:  ['chile', 'chilean', 'santiago', 'coordinador electrico'],
+  canada: ['canada', 'canadian', 'ontario', 'alberta', 'quebec', 'british columbia',
+           'ieso', 'aeso', 'hydro-quebec']
+};
+
+// Everything else. Not exhaustive by design — a country absent from this list
+// simply scores as unmarked, which is the safe default. Add to it rather than
+// widening the penalty when a region turns out to need devaluing.
+var SCRAPER_GEO_OTHER = {
+  // 'nem' is deliberately absent: in US solar coverage it means net energy
+  // metering, so it would have mislabelled US stories as Australian. 'victoria'
+  // likewise — too common a bare word to spend a 0.25 penalty on.
+  australia:   ['australia', 'australian', 'aemo', 'new south wales',
+                'queensland', 'south australia', 'snowy hydro', 'snowy 2.0'],
+  uk:          ['united kingdom', 'britain', 'british', 'england', 'scotland',
+                'wales', 'ofgem', 'national grid eso'],
+  germany:     ['germany', 'german', 'berlin', 'bundesnetzagentur'],
+  france:      ['france', 'french', 'edf'],
+  spain:       ['spain', 'spanish', 'iberdrola'],
+  italy:       ['italy', 'italian', 'terna'],
+  netherlands: ['netherlands', 'dutch'],
+  nordics:     ['sweden', 'swedish', 'norway', 'norwegian', 'finland', 'finnish', 'denmark', 'danish'],
+  poland:      ['poland', 'polish'],
+  india:       ['india', 'indian', 'seci'],
+  japan:       ['japan', 'japanese', 'tokyo'],
+  korea:       ['south korea', 'korean'],
+  taiwan:      ['taiwan', 'taiwanese'],
+  brazil:      ['brazil', 'brazilian', 'aneel'],
+  argentina:   ['argentina', 'argentine', 'argentinian'],
+  latam:       ['latin america', 'latam', 'dominican republic', 'colombia', 'peru'],
+  gulf:        ['saudi arabia', 'saudi', 'united arab emirates', 'uae', 'abu dhabi', 'dubai', 'qatar'],
+  africa:      ['south africa', 'eskom', 'nigeria', 'egypt', 'morocco'],
+  seasia:      ['vietnam', 'indonesia', 'philippines', 'thailand', 'malaysia', 'singapore'],
+  other:       ['new zealand', 'israel', 'turkey', 'ukraine', 'russia', 'switzerland',
+                'austria', 'belgium', 'portugal', 'greece', 'ireland', 'czech', 'romania']
+};
 
 // ── Rebuild Phase 3: weekday digest engine ──
 // One interest-driven morning digest (Mon–Fri 7:00 AM ET; the Monday edition
@@ -2788,6 +2879,53 @@ function scTermsHit_(text, terms) {
     substance (0-20): snippet-quality heuristics (length, figures, quotes,
       hard-news verbs) — the Phase 3 AI pass refines this signal.
     Returns { score, signals, matchedCompanies, matchedTopics }. */
+/** Classify an article's geography and return the multiplier its score earns.
+
+    Returns { factor, tier, regions, usLinked }. `tier` is one of:
+      'unmarked'  no country evidence either way — factor 1.0, the safe default
+      'us'        US markers and no foreign ones — factor 1.0
+      'tier2'     China / Mexico / Chile / Canada
+      'other'     everywhere else
+
+    When both tiers appear, the one with MORE distinct regions matched wins, and
+    a tie goes to the harsher tier. A Latin America round-up naming Chile and
+    Mexico alongside Brazil and Argentina is a regional piece, not a Chile
+    story, and should be treated as such. */
+function scGeoClassify_(title, snippet) {
+  var titleTxt = String(title || '').toLowerCase();
+  var text = (titleTxt + ' ' + String(snippet || '')).toLowerCase();
+  function regionsHit(group) {
+    var out = [];
+    for (var k in group) {
+      if (Object.prototype.hasOwnProperty.call(group, k) && scTermsHit_(text, group[k])) out.push(k);
+    }
+    return out;
+  }
+  // "America" on its own is a US marker; "Latin America", "South America" and
+  // "Central America" are the opposite. Strip the qualified forms before
+  // matching rather than trying to express that in the term list — a Latin
+  // America storage round-up was scoring as US-linked, which halved its
+  // penalty. ("North America" is left in as a US marker: it includes the US.)
+  var deQualified = text.replace(/\b(latin|south|central)\s+americ(an?s?)\b/g, ' ');
+  var usLinked = scTermsHit_(deQualified, SCRAPER_GEO_US_TERMS)
+              || /\bamericans?\b/.test(deQualified);
+  var t2 = regionsHit(SCRAPER_GEO_TIER2);
+  var ot = regionsHit(SCRAPER_GEO_OTHER);
+
+  if (!t2.length && !ot.length) {
+    // No foreign evidence. Unmarked and US-marked both score full — the point
+    // of the rule is to devalue foreign subjects, not to demand US paperwork.
+    return { factor: 1, tier: usLinked ? 'us' : 'unmarked', regions: [], usLinked: usLinked };
+  }
+  var tier = ot.length >= t2.length ? 'other' : 'tier2';
+  var regions = tier === 'other' ? ot : t2;
+  var factor = tier === 'tier2'
+    ? (usLinked ? SCRAPER_GEO_FACTORS.tier2Linked : SCRAPER_GEO_FACTORS.tier2)
+    : (usLinked ? SCRAPER_GEO_FACTORS.otherLinked : SCRAPER_GEO_FACTORS.other);
+  return { factor: factor, tier: tier, regions: regions.concat(tier === 'other' ? t2 : ot),
+           usLinked: usLinked };
+}
+
 function scRubricScore_(title, snippet, model, ctx) {
   var text = (String(title || '') + ' ' + String(snippet || '')).toLowerCase();
   var w = SCRAPER_RUBRIC_WEIGHTS;
@@ -2898,13 +3036,21 @@ function scRubricScore_(title, snippet, model, ctx) {
   var round1 = function(n) { return Math.round(n * 10) / 10; };
   if (gated) clickBoost = 0;
   var corrob = Math.min(SCRAPER_CORROB_CAP, Number(ctx.corrob) || 0);
+  var raw = Math.min(100, company + topic + emphasis + substance + clickBoost + corrob);
+  // Geography multiplies the finished judgement rather than adding a band of
+  // its own. An additive penalty would leave a strong company match on a
+  // foreign story above the bar, which is exactly the case the developer
+  // objected to (an Australian transmission story taking the lead).
+  var geo = scGeoClassify_(title, snippet);
   return {
-    score: Math.round(Math.min(100, company + topic + emphasis + substance + clickBoost + corrob)),
+    score: Math.round(Math.min(100, raw * geo.factor)),
     signals: { company: round1(company), topic: round1(topic),
                emphasis: round1(emphasis), substance: substance,
-               engagement: round1(clickBoost), corroboration: round1(corrob) },
+               engagement: round1(clickBoost), corroboration: round1(corrob),
+               geo: geo.factor },
     matchedCompanies: matchedCompanies, matchedTopics: matchedTopics,
     matchedSegments: matchedSegments, excludedSegments: excludedSegments,
+    geoTier: geo.tier, geoRegions: geo.regions, geoUsLinked: geo.usLinked,
     gated: gated
   };
 }

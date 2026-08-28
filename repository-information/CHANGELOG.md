@@ -9,6 +9,39 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 
 *(No changes yet)*
 
+## [v03.34r] — 2026-08-28 05:58:49 PM EST
+
+> **Prompt:** "For my Scraper app, I would like you to note that I am specifically focused on the US BESS/AIDC market, so I would like news about other countries to be greatly devalued in the scoring process. That doesn't mean I never want to see any news about any other country, but the US market is a clear priority 1, greatly outpacing priority 2 countries that are closely related to this industry (China, Mexico, Chile, Canada). There may be more priority 2 countries, but they should generally only be scored highly if whatever happened in those countries directly affect the US market. For instance, the lead article should never be "No word on Snowy 2.0 as Bowen underlines importance of transmission: they are not being built for fun" because this covers the Australian market and doesn't relate to the US market at all."
+
+### Added
+
+#### `Scraper.gs` — v01.67g
+
+- **Geographic priority in the rubric, applied as a multiplier on the finished score rather than as a fifth additive band.** The requirement is proportional — "greatly devalued", "greatly outpacing" — and an additive penalty leaves a strong company match on a foreign story still above the bar, which is precisely the case objected to. `scGeoClassify_` returns `{ factor, tier, regions, usLinked }` and `scRubricScore_` scales its total by it
+- Tiers: US x1.00; priority 2 (China, Mexico, Chile, Canada) x0.55; everywhere else x0.25. Each softens to x0.85 / x0.60 when the article also names something US-market — a tariff, an export, a US buyer, a US grid operator. That is what "directly affects the US market" looks like in the text
+- **The load-bearing rule is the default: no geographic marker at all scores x1.00, untouched.** Most US trade coverage never says "United States" — it says ERCOT, or a county in Texas, or nothing. A penalty needs positive evidence of a foreign subject, never merely the absence of evidence of a US one; the alternative would have emptied the digest
+- When both tiers appear, the tier with more distinct regions wins and a tie goes to the harsher one — a Latin America round-up naming Chile and Mexico alongside Brazil and Argentina is a regional piece, not a Chile story
+- `signals.geo`, `geoTier`, `geoRegions` and `geoUsLinked` are returned for diagnosis, so a low score explains itself
+
+#### `Scraper.html` — v01.56w
+
+- The rubric tester shows the multiplier beside the score and, when geography fired, a line naming the regions found and whether a US connection softened the penalty. Geography gets a sentence rather than a bar because it is a multiplier, not a band
+
+### Fixed
+
+- Three term collisions found by the tests while building this, each of which would have mis-scored real articles:
+  - **"America" matched "Latin America"**, so the Latin America storage round-up counted as US-linked and had its penalty halved. Qualified forms (`latin`/`south`/`central america`) are stripped before matching; `north america` is deliberately kept as a US marker since it includes the US
+  - **"NEM"** was in the Australia list as the National Electricity Market, but in US solar coverage it means net energy metering — a California NEM 3.0 story would have been devalued as Australian
+  - **"Victoria"** was in the Australia list; too common a bare word to spend a x0.25 penalty on, so a person named Victoria no longer makes a story Australian
+- The bare token `us` is deliberately absent from the US marker list: the text is lowercased before matching, so it would hit the pronoun in nearly every article. `ira` and `doe` are excluded for the same reason
+
+### Notes
+
+- Verified against the developer's own example: the Snowy 2.0 article classifies as `other`, matches `australia`, finds no US link, takes x0.25, and lands **below** `SCRAPER_RELEVANT_THRESHOLD` — while a US story in the same edition is untouched at x1.00
+- 172 assertions pass. 40 cover geography alone, including 8 regression guards named for the collisions above, the pronoun-"us" case, `Indiana`-is-not-`India`, and that a US story mentioning a Chinese rival is softened to x0.85 rather than buried
+- The term lists are deliberately not exhaustive. A country absent from them scores as unmarked, which is the safe direction — the lists should be extended when a region turns out to need devaluing, rather than the penalty being widened
+- **Rotation-script bug caught before it landed.** The rotation anchors the end of the moved block on the file's trailing `Developed by:` line — which works for the page and GAS changelogs, and which **this file does not have**. Its only two occurrences of that string are both inside quoted prompts, so the anchor landed ~1,100 lines *above* the block being moved and the slice duplicated ~68 sections. Reverted from `HEAD` before it was staged. The rotation now resolves the anchor as "the trailing branding line if it falls after the last version header, otherwise end of file", and asserts the resulting section count changed by exactly the size of the group moved — an assertion that would have caught this on the first attempt. The page and GAS rotations earlier in this session used the same anchor but are provably unaffected: those files contain that string exactly once, as their real trailing line
+
 ## [v03.33r] — 2026-08-28 05:46:45 PM EST
 
 > **Prompt:** "I successfully built a default and BESS Morning Digest, but when I tried to build the AIDC one, I failed twice. This is the error message. What's going on? Fix it."
@@ -1918,24 +1951,3 @@ If you hit the end of my weekly Fable limit before this task is done, switch to 
 
 ### Notes
 - Transcription itself stays on the developer's machine (RTX 4090, `whisper-ctranslate2` with `large-v3-turbo`). Fully unattended filing would need Drive credentials on the PC and its own OAuth flow; this keeps the browser's existing `drive.file` token as the only credential in play
-
-## [v02.34r] — 2026-08-11 02:25:14 AM EST
-
-> **Prompt:** "continue with your recommendation"
-
-### Added
-- **The AIDC market report is now issued in all five Profiler writing styles.** `repository-information/aidc-market-report-print.html` carries five presentation skins selected by a `data-style` attribute on `<html>`, each translated from the print-calibrated export CSS in `Profiler.html` so a report handed to a customer reads in the same voice as the app that produced it. New downloadable editions: `AIDC-MARKET-REPORT-analyst-prose.pdf` (Analyst Prose, the Profiler house style), `AIDC-MARKET-REPORT-equity-research.pdf` (Sell-Side Research Note), `AIDC-MARKET-REPORT-intel-briefing.pdf` (Intelligence Community Briefing) and `AIDC-MARKET-REPORT-smart-brevity.pdf` (Axios Smart Brevity). `AIDC-MARKET-REPORT.pdf` keeps its unsuffixed name as the canonical BloombergNEF edition, so existing links do not break
-- **Per-style banner in the masthead** naming the active skin. All five ship in the markup and CSS reveals the matching one; each states that the skin changes typography and chrome only. The `equity-research` banner carries the "analytical framing, **not investment advice**" disclaimer that `PROFILER-STYLES.md` rule 1 requires on any dossier issued in that style
-- `scripts/build-aidc-report-pdf.mjs` gained `--style <slug>`. **A bare run now renders all five editions from a single page load**, swapping the attribute between `Page.printToPDF` calls — so the editions are structurally incapable of drifting apart in content
-- A "Presentation styles" note in the report's own Method & Citation section, stating plainly that the text is identical across the five editions
-
-### Changed
-- The print stylesheet was refactored onto style-scoped CSS custom properties (`--accent`, `--body-font`, `--h1-*`, `--h2-*`, `--h3-*`, `--sub-*`, `--mast-rule`, `--pull-bg`). Every rule now reads a slot rather than a raw family, size or colour, so a skin is ~10 lines of variable overrides instead of a duplicated rule block. Chrome that was hardcoded to the Bloomberg blue — section rules, kick line, pull-quote spine, stat-tile rules, timeline axis and dates, contents numbers — now follows `--accent`
-- SVG figure numerals follow the active skin's display face via `.fig svg text { font-family:var(--h1-font) }` (a presentation attribute loses to any CSS rule, so no per-figure markup changed)
-- `repository-information/AIDC-MARKET-REPORT.md` — the "Formatted edition" pointer became a linked list of all five editions. The brittle page count was dropped rather than re-stated: page counts differ per skin (28–33) and would go stale on any text edit
-- `repository-information/PROFILER-STYLES.md` — the report is registered as a **second display-layer consumer** alongside `Profiler.html`, with the standing instruction to mirror skin changes across both in the same commit
-- `README.md` — tree entries for the four new editions
-
-### Notes
-- **Chart colours are deliberately style-invariant.** The categorical palette was validated once with the `dataviz` six checks against the white print surface; re-tinting it per skin would mean re-validating five palettes and would put the data layer at the mercy of a typographic choice. This is stated in the report's Method section rather than left implicit
-- Editions verified by rasterizing and inspecting the actual rendered PDFs, not the markup: Analyst Prose reproduces the Georgia/gold paper document, Intelligence Community Briefing renders fully monospaced with letterspaced ink rules, and the ring-gauge numerals reskin correctly with the chart palette intact
