@@ -1,4 +1,4 @@
-var VERSION = "v01.67g";
+var VERSION = "v01.68g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -367,9 +367,15 @@ var SCRAPER_TAB_HEADERS = {
   // on every card and the renumber pass compares it on every stored issue, and
   // reading it out of the Sections JSON would mean pulling the heavy column to
   // answer a question about one small number.
+  // 'Delivered' is what separates building an edition from sending it. The
+  // send used to happen inside the render step, which meant every manual "Run
+  // intake now" also mailed the subscribers. Now render marks the row pending
+  // and a separate delivery pass mails it — so a manual build is silent, and
+  // the scheduled send can be held until 7:00 regardless of when the build
+  // finished.
   Digests: ['Digest ID', 'Date', 'Generated At', 'Status', 'Item Count',
             'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI', 'Lead',
-            'No'],
+            'No', 'Delivered'],
   DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
                  'Score', 'Signals', 'Summary', 'Section', 'Backstop'],
   // 'Parent' makes an edition a variant of another one ("Your Morning Digest
@@ -794,7 +800,22 @@ var SCRAPER_GEO_OTHER = {
 // unattended AI spend) and the email site by SCRAPER_SCHED_EMAIL_ENABLED;
 // the manual runDigestNow route works while paused.
 var SCRAPER_DIGEST_RUN_DAYS = [1, 2, 3, 4, 5];   // ISO day-of-week, ET (Mon–Fri)
-var SCRAPER_DIGEST_RUN_HOUR = 7;                 // scheduled build not before 7:00 AM ET
+var SCRAPER_DIGEST_RUN_HOUR = 7;                 // hourly catch-up tick: no build before 7:00 ET
+// Build early, send at 7:00. One Apps Script execution is capped at 6 minutes
+// on a consumer account, and three editions need far longer than that — 30
+// feeds at 6 per step, plus backstop, summarize and render. Building at 7:00
+// therefore cannot deliver at 7:00. The build starts an hour earlier, works in
+// budgeted invocations that chain one-off continuations, and the finished
+// editions wait in the Digests tab until the 7:00 delivery pass.
+// The edition clock is Eastern throughout (scDigestClock_ formats against it),
+// and the triggers have to be created in the same zone or a 6:00 ET build would
+// fire at 6:00 in whatever zone the script project happens to be set to.
+var SCRAPER_DIGEST_TZ = 'America/New_York';
+var SCRAPER_DIGEST_BUILD_HOUR = 6;               // daily build trigger, ET
+var SCRAPER_DIGEST_SEND_HOUR = 7;                // nothing is emailed before this hour, ET
+// Comfortably inside the 6-minute execution cap, leaving room for the step in
+// flight to finish and for the continuation trigger to be created.
+var SCRAPER_DIGEST_RUN_BUDGET_MS = 240000;
 var SCRAPER_DIGEST_WINDOW_H = 24;                // Monday edition uses 72 (the weekend)
 var SCRAPER_DIGEST_FETCHES_PER_STEP = 6;         // feed fetches per chunked step
 var SCRAPER_DIGEST_TIME_BUDGET_MS = 40000;       // wall-clock budget per step
@@ -3196,15 +3217,40 @@ function scEnabledSources_(ss) {
   return enabled;
 }
 
-function scDigestState_() {
+/** In-flight build state, per edition.
+
+    This used to be ONE global Script Property. The scheduler would be three or
+    four steps into the morning edition, the developer would press "Run intake
+    now" for BESS, and scDigestStart_ overwrote the slot wholesale — srcCursor
+    back to 0 — throwing away the scheduled build's progress. With an hourly
+    trigger that cost hours, and on a day of active use the scheduled build
+    could be reset repeatedly and never finish. A slot per edition means a
+    manual build and a scheduled one no longer collide. */
+function scDigestStateKey_(editionId) {
+  return SCRAPER_DIGEST_STATE_KEY + '_' + String(editionId || SCRAPER_EDITION_DEFAULT.id);
+}
+function scDigestState_(editionId) {
+  var props = PropertiesService.getScriptProperties();
   try {
-    return JSON.parse(PropertiesService.getScriptProperties()
-      .getProperty(SCRAPER_DIGEST_STATE_KEY) || 'null');
+    if (editionId) {
+      return JSON.parse(props.getProperty(scDigestStateKey_(editionId)) || 'null');
+    }
+    // No edition named: return whichever slot is still mid-build today, so the
+    // legacy callers that ask "is anything running?" keep working.
+    var eds = [SCRAPER_EDITION_DEFAULT.id];
+    SCRAPER_EDITION_SEEDS.forEach(function(sd) { eds.push(sd.id); });
+    for (var i = 0; i < eds.length; i++) {
+      var st = JSON.parse(props.getProperty(scDigestStateKey_(eds[i])) || 'null');
+      if (st && st.phase !== 'done') return st;
+    }
+    // Nothing in flight — fall back to the legacy single slot so a run started
+    // before this version still reports its final state.
+    return JSON.parse(props.getProperty(SCRAPER_DIGEST_STATE_KEY) || 'null');
   } catch (e) { return null; }
 }
 function scDigestSaveState_(state) {
   PropertiesService.getScriptProperties()
-    .setProperty(SCRAPER_DIGEST_STATE_KEY, JSON.stringify(state));
+    .setProperty(scDigestStateKey_(state && state.editionId), JSON.stringify(state));
 }
 
 /** Existing intake URLs for the current digest (dedupe set). Reads the two
@@ -3689,7 +3735,7 @@ function scDigestRenderStep_(ss, state) {
     html.slice(0, SCRAPER_DIGEST_CELL_MAX),
     state.aiNote || state.aiSoftNote || '', d.editionId,
     state.aiLabel || (state.aiNote ? 'none (fallback)' : ''),
-    lead ? scStr_(lead.title, 300) : '', no]);
+    lead ? scStr_(lead.title, 300) : '', no, '']);   // '' = built, not yet delivered
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
@@ -3707,25 +3753,10 @@ function scDigestRenderStep_(ss, state) {
   } catch (edErr) {}
   // Deliver to this edition's subscribers (Phase 5). Legacy DIGEST_RECIPIENT
   // entries were migrated into Subscribers on first read.
-  var recipient = scEditionRecipients_(ss, d.editionId).join(',');
-  if (recipient && SCRAPER_SCHED_EMAIL_ENABLED) {
-    // Renumber the whole archive first. If issues were deleted since the last
-    // build, the surviving ones have moved, and the email is the one copy that
-    // can never be corrected afterwards — so it is the copy that most needs the
-    // numbering to be right at the moment it is sent.
-    var sendNo = no, sendHtml = html;
-    try {
-      if (scRenumberIssues_(ss)) {
-        sendNo = scIssueNumbers_(ss)[state.id] || no;
-        sendHtml = scRewriteIssueNo_(html, sendNo);
-      }
-    } catch (renErr) { /* never let numbering stop delivery */ }
-    try {
-      MailApp.sendEmail({ to: recipient,
-        subject: d.editionName + ' — ' + state.date + ' (No. ' + scDigestNo_(sendNo) + ')',
-        htmlBody: sendHtml });
-    } catch (mailErr) {}
-  }
+  // Rendering no longer sends. The row is left with an empty Delivered cell and
+  // scDigestDeliverPending_ mails it, which is what makes a manual build silent
+  // and lets the scheduled send wait for SCRAPER_DIGEST_SEND_HOUR however early
+  // the build actually finished.
   state.phase = 'done';
   scDigestSaveState_(state);
   return { phase: 'done', relevant: relevant.length, sectionsBuilt: true };
@@ -4083,6 +4114,167 @@ function scDigestScheduledTick_() {
   }
 }
 
+/** ---- Delivery (separated from building, 2026-08-28) ------------------
+    The send used to be the last thing scDigestRenderStep_ did, which had two
+    consequences the developer asked to undo: every manual "Run intake now"
+    also mailed the subscribers, and a scheduled edition went out whenever its
+    build happened to finish — which, with an hourly trigger advancing one
+    pipeline step per fire, was mid-afternoon rather than 7:00.
+
+    Delivery is its own pass now. It mails every edition built today that has
+    an empty Delivered cell, and refuses to send before SCRAPER_DIGEST_SEND_HOUR
+    so an edition finished at 06:20 still lands at 7:00. */
+function scDigestDeliverPending_(ss, opts) {
+  opts = opts || {};
+  var clock = scDigestClock_(new Date());
+  if (!opts.force && clock.hour < SCRAPER_DIGEST_SEND_HOUR) return { sent: 0, held: 0 };
+  if (!SCRAPER_SCHED_EMAIL_ENABLED) return { sent: 0, held: 0 };
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var n = sheet ? sheet.getLastRow() - 1 : 0;
+  if (n < 1) return { sent: 0, held: 0 };
+  if (sheet.getMaxColumns() < 14) return { sent: 0, held: 0 };   // schema not widened yet
+  var meta = sheet.getRange(2, 1, n, 2).getValues();             // id, date
+  var eds  = sheet.getRange(2, 10, n, 1).getValues();            // edition
+  var deliv = sheet.getRange(2, 14, n, 1).getValues();           // delivered
+  // Numbering first: the mailed copy is the one that can never be corrected
+  // afterwards, so it is the one that most needs to be right.
+  try { scRenumberIssues_(ss); } catch (renErr) {}
+  var nos = {};
+  try { nos = scIssueNumbers_(ss); } catch (noErr) {}
+  var sent = 0, held = 0;
+  for (var i = 0; i < n; i++) {
+    var id = String(meta[i][0] || '').trim();
+    if (!id) continue;
+    if (String(deliv[i][0] || '').trim()) continue;              // already delivered
+    if (scIssueDateKey_(meta[i][1]) !== clock.date) continue;    // only today's
+    var edId = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
+    var row = i + 2;
+    var to = scEditionRecipients_(ss, edId).join(',');
+    if (!to) {
+      // Nobody is subscribed to this edition. Stamp it so the pass does not
+      // reconsider the same row every hour, and say why in the cell — a silent
+      // skip is exactly how "it just did not email" goes undiagnosed.
+      sheet.getRange(row, 14).setValue('no-recipients');
+      held++;
+      continue;
+    }
+    try {
+      var edName = scRewriteLegacyNames_(String(scEditionById_(ss, edId).name || edId));
+      var html = scRewriteIssueNo_(
+        scRewriteLegacyNames_(scRewriteLegacyClickUrls_(String(sheet.getRange(row, 8).getValue() || ''))),
+        nos[id] || 0);
+      if (!html) { sheet.getRange(row, 14).setValue('no-html'); held++; continue; }
+      MailApp.sendEmail({ to: to,
+        subject: edName + ' — ' + clock.date + ' (No. ' + scDigestNo_(nos[id] || 1) + ')',
+        htmlBody: html });
+      sheet.getRange(row, 14).setValue(new Date());
+      sent++;
+    } catch (mailErr) {
+      // Leave Delivered empty so the next pass retries rather than dropping it.
+      held++;
+    }
+  }
+  return { sent: sent, held: held };
+}
+
+/** ---- The 7:00 weekday delivery, and the build that feeds it ----------
+
+    Apps Script caps one execution at 6 minutes on a consumer account
+    (developers.google.com/apps-script/guides/services/quotas), and the pipeline
+    needs far longer than that for three editions: 30 feeds at 6 per step, plus
+    backstop, summarize and render. So the build cannot be "one run at 7:00".
+
+    Instead the build starts at SCRAPER_DIGEST_BUILD_HOUR, works to a budget
+    safely inside the execution cap, and schedules a one-off continuation a
+    minute out when there is more to do. Delivery is held until
+    SCRAPER_DIGEST_SEND_HOUR, so editions finished early wait and go out
+    together at 7:00. */
+function scDigestMorningRun() {
+  var t0 = Date.now();
+  try {
+    PropertiesService.getScriptProperties().setProperty('SCHEDULER_LAST_TICK', String(Date.now()));
+  } catch (hbErr) {}
+  scDigestClearContinuations_();
+  if (!SCRAPER_SCHED_RUNS_ENABLED) return;
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return;
+  var more = false;
+  try {
+    var ss = scraperSs_();
+    ensureScraperTabs_(ss);
+    var clock = scDigestClock_(new Date());
+    if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) return;
+    var editions = scEditions_(ss).filter(function(ed) {
+      return ed.enabled && ed.lastBuilt !== clock.date && scEditionCadenceDue_(ed, clock);
+    });
+    // Every due edition, in roster order, to completion — within the budget.
+    for (var i = 0; i < editions.length; i++) {
+      while ((Date.now() - t0) < SCRAPER_DIGEST_RUN_BUDGET_MS) {
+        var info = null;
+        try { info = scDigestStep_(editions[i].id); } catch (stepErr) { break; }
+        if (info && info.done) break;
+      }
+      if ((Date.now() - t0) >= SCRAPER_DIGEST_RUN_BUDGET_MS) { more = true; break; }
+    }
+    try { scDigestDeliverPending_(ss); } catch (delErr) {}
+  } finally {
+    lock.releaseLock();
+  }
+  // Out of budget with work left → come back in a minute rather than in an hour.
+  if (more) scDigestScheduleContinuation_();
+}
+
+/** The 7:00 pass. Sends whatever is built and pending; if the build is still
+    running it will be sent by the continuation that finishes it. */
+function scDigestDeliveryRun() {
+  try {
+    PropertiesService.getScriptProperties().setProperty('SCHEDULER_LAST_TICK', String(Date.now()));
+  } catch (hbErr) {}
+  if (!SCRAPER_SCHED_RUNS_ENABLED) return;
+  var lock = LockService.getScriptLock();
+  if (!lock.tryLock(5000)) return;
+  try {
+    var ss = scraperSs_();
+    ensureScraperTabs_(ss);
+    var clock = scDigestClock_(new Date());
+    if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) return;
+    scDigestDeliverPending_(ss);
+  } finally { lock.releaseLock(); }
+}
+
+/** Cadence only — the hour and built-today checks belong to the caller, which
+    is what lets the morning run apply them once for the whole batch. */
+function scEditionCadenceDue_(ed, clock) {
+  if (ed.cadence === 'daily') return SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) !== -1;
+  if (ed.cadence === 'weekly') return clock.isoDay === (ed.anchor || 5);
+  if (ed.cadence === 'monthly') return clock.dom === (ed.anchor || 1);
+  return false;
+}
+
+/** Continuations get their own handler name purely so the cleanup below can
+    tell them apart from the daily build trigger. Both do the same work — if
+    they shared a name, clearing spent continuations would also delete the
+    daily trigger and the schedule would silently stop after one morning. */
+function scDigestContinueRun() { scDigestMorningRun(); }
+
+function scDigestScheduleContinuation_() {
+  try {
+    ScriptApp.newTrigger('scDigestContinueRun').timeBased().after(60000).create();
+  } catch (trigErr) { /* no scriptapp scope — the hourly tick still catches up */ }
+}
+
+/** Spent one-off continuations stay in the project's trigger list forever
+    unless deleted, and Apps Script caps triggers per script — an unbounded
+    daily leak would eventually refuse to create any trigger at all, including
+    the daily ones. Cleared at the top of every run. */
+function scDigestClearContinuations_() {
+  try {
+    ScriptApp.getProjectTriggers().forEach(function(t) {
+      if (t.getHandlerFunction() === 'scDigestContinueRun') ScriptApp.deleteTrigger(t);
+    });
+  } catch (clrErr) {}
+}
+
 /** Advance the digest build one step (the app loops until done). */
 function runDigestNow(sessionToken, editionId) {
   validateSessionForData(sessionToken, 'runDigestNow');
@@ -4132,7 +4324,7 @@ function listDigests(sessionToken, limit, payload) {
   // Lead (column 12) may not exist yet on a sheet created before it was added.
   // ensureScraperTabs_ widens the header, but the grid itself can still be
   // narrower, so clamp and pad rather than throwing.
-  var tailW = Math.max(1, Math.min(5, sheet.getMaxColumns() - 8));
+  var tailW = Math.max(1, Math.min(6, sheet.getMaxColumns() - 8));
   var tail = sheet.getRange(2, 9, n, tailW).getValues();
 
   var edNames = {}, edParent = {};
@@ -4164,7 +4356,8 @@ function listDigests(sessionToken, limit, payload) {
       notes: String(t[0] || ''),
       edition: edId, editionName: edNames[edId] || edId,
       ai: String(t[2] || ''), lead: String(t[3] || ''),
-      no: issueNos[id] || Number(t[4]) || 0
+      no: issueNos[id] || Number(t[4]) || 0,
+      delivered: t[5] instanceof Date ? t[5].toISOString() : String(t[5] || '')
     });
   }
   // Sort by the edition's own date, newest first — NOT by sheet row order.
@@ -4540,10 +4733,27 @@ function scEnsureSchedulerTrigger_(force) {
   // stale, so existing deployments re-verify on their next page load).
   var last = Number(props.getProperty('SCHEDULER_TRIGGER_SET')) || 0;
   if (!force && last && (Date.now() - last) < 86400000) return;
-  var exists = ScriptApp.getProjectTriggers().some(function(t) {
-    return t.getHandlerFunction() === 'scSchedulerTick';
-  });
-  if (!exists) ScriptApp.newTrigger('scSchedulerTick').timeBased().everyHours(1).create();
+  var handlers = {};
+  ScriptApp.getProjectTriggers().forEach(function(t) { handlers[t.getHandlerFunction()] = true; });
+  // The hourly tick stays: it carries the heartbeat and the daily Interests
+  // sync, and it is the catch-up path if a morning run is missed entirely.
+  if (!handlers.scSchedulerTick) {
+    ScriptApp.newTrigger('scSchedulerTick').timeBased().everyHours(1).create();
+  }
+  // The build, an hour ahead of delivery so the pipeline has time to finish.
+  if (!handlers.scDigestMorningRun) {
+    ScriptApp.newTrigger('scDigestMorningRun').timeBased()
+      .atHour(SCRAPER_DIGEST_BUILD_HOUR).nearMinute(0).everyDays(1)
+      .inTimezone(SCRAPER_DIGEST_TZ).create();
+  }
+  // The send. Separate from the build on purpose: whatever is ready goes out
+  // at 7:00 even if another edition is still building, and an edition that
+  // finished at 06:20 is not mailed early.
+  if (!handlers.scDigestDeliveryRun) {
+    ScriptApp.newTrigger('scDigestDeliveryRun').timeBased()
+      .atHour(SCRAPER_DIGEST_SEND_HOUR).nearMinute(0).everyDays(1)
+      .inTimezone(SCRAPER_DIGEST_TZ).create();
+  }
   props.setProperty('SCHEDULER_TRIGGER_SET', String(Date.now()));
 }
 
@@ -4593,6 +4803,11 @@ function scSchedulerTick() {
     // per tick (weekday-morning + built-today checks live inside). Sits after
     // the pipeline pause gate, so it cannot spend AI tokens while paused.
     scDigestScheduledTick_();
+    // Catch-up delivery. The 7:00 pass is the normal path; this covers the case
+    // where the morning build was still running at 7:00, or the day the daily
+    // triggers were missing entirely. It refuses to send before the send hour,
+    // so it can never mail an edition early.
+    try { scDigestDeliverPending_(ss); } catch (delErr) {}
     // Phase 4 go-live: the legacy Schedules-tab pipeline below stays gated off
     // (Your Morning Digest replaces it) — see SCRAPER_LEGACY_SCHEDULES_ENABLED.
     if (!SCRAPER_LEGACY_SCHEDULES_ENABLED) return;

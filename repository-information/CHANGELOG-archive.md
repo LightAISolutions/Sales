@@ -77,6 +77,56 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v02.37r] — 2026-08-13 04:34:03 AM EST — [09f990c](https://github.com/LightAISolutions/Sales/commit/09f990cfd3ee8cc87516087965ebe0c58ed07bf1)
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(The recommendation, from the preceding feasibility answer: build the summarization step — Build C-minimal — before speaker ID, because the pipeline currently ends at a transcript and a transcript is not something you send a customer. Reordered ahead of the prior session's "start Build B" recommendation.)*
+
+### Added
+- `Profiler.gs` (v01.09g) — **meeting-notes summarization**. A transcript filed with a note is turned into structured notes (Summary / Discussed / Customer signals / Action items / Open questions) by one Anthropic Messages API call. New `summarize` note op plus `summarizeNoteTranscript_`, `anthropicSummarize_`, `meetingNotesPrompt_`, and the pure `vttToPlainText_`
+- `vttToPlainText_` strips the WEBVTT header, cue numbers, timing lines, `NOTE`/`STYLE`/`REGION` blocks and inline cue tags, and collapses consecutive duplicate cues — Whisper repeats a cue's text when a segment spans a boundary, which would otherwise be fed to the model twice. Verified against a synthetic VTT carrying every one of those cases
+- Two new Script Properties on the Profiler Apps Script project: `ANTHROPIC_API_KEY` (required — without it the op returns `SUMMARY_NOT_CONFIGURED` and the note keeps its placeholder) and `ANTHROPIC_MODEL` (optional override). Default model is `claude-haiku-4-5-20251001`, chosen because `UrlFetchApp` gives up around 60 seconds and a slow response would cost the whole op; `claude-sonnet-5` is a one-property swap when depth matters more than latency
+- `Profiler.html` (v01.26w) — a submit that carried a transcript now chains straight into `summarize` (server signals this with a new `canSummarize` flag, true only for `.txt`/`.md`/`.vtt`/`.srt` attachments), and a **✨ Summarize** button appears on any logged note with a transcript, for retrying a failed run or back-filling notes filed before this existed
+
+### Changed
+- `Profiler.gs` — summarization is a **separate op**, not part of `submitFieldNote`: a submit must never fail because the model was slow or the key was missing. The note is written with its placeholder first, then filled in
+- `Profiler.gs` — re-running is idempotent rather than stacking. The developer's typed text is captured once into a new `typedText` field on first run and re-prepended every time, so the note is rebuilt as `typed text + fresh summary` and their own words are never consumed (User-Owned Content). `triage` deliberately stays `pending` — a machine summary is an input to promotion, not a decision to promote
+- `Profiler.gs` — transcripts over 120,000 characters (~2.5 hours) are truncated rather than failing the request, and the note's `[auto-summary …]` header says so. `listFieldNotes` now returns the new `summarized` date
+- `Profiler.html` — notes containing newlines render with `white-space: pre-wrap` in both the read-only log and the manage panel; generated notes are multi-line and a plain `<p>` collapsed them into one run-on paragraph
+- `repository-information/ENTERPRISE-SETUP.md` — documents the two new Script Properties, including that the key is unrelated to `GITHUB_TOKEN` rotation
+
+### Notes
+- This closes the "summary pending triage" placeholder path for transcripts specifically. Word/PDF attachments still get the placeholder and still wait for a triage pass — `driveReadNoteFile_` only returns text for `.txt`/`.md`/`.vtt`/`.srt`
+- The Profiler sequence diagram was checked and not updated: it depicts the note *transport* (`?action=note&nop=…`), not individual ops, so a new `nop` does not change what it shows
+
+## [v02.36r] — 2026-08-13 03:39:36 AM EST — [e21f497](https://github.com/LightAISolutions/Sales/commit/e21f497ed5727722df226aec40635382d0e00d0e)
+
+> **Prompt:** "add transcribe.ps1 to the repo. What exactly does adding this launcher to the repo do for me?"
+
+### Added
+- `scripts/transcribe.ps1` — PowerShell launcher for local Whisper transcription (`large-v3-turbo`, `--device cuda --compute_type float16 --vad_filter True --language en`, VTT out). Wraps the three things the bare command gets wrong: it calls `whisper-ctranslate2.exe` by full path so the venv need not be activated, prepends every `site-packages\nvidia\**\bin` folder to `PATH` (Windows does not search site-packages, which is what produced `RuntimeError: Library cublas64_12.dll is not found`), and writes each transcript beside its own audio via `--output_dir` so the current directory is irrelevant. Accepts multiple paths via `ValueFromRemainingArguments`, so several files can be drag-dropped onto the window in one go; exits non-zero if any file failed
+- Not deployed and not executed by CI — it runs on the developer's own Windows machine against their RTX 4090. Versioning it makes the transcription settings reviewable and diffable, and gives future sessions the exact flag set to mirror when Build A absorbs transcription into the app
+
+### Changed
+- `README.md` — `scripts/` tree gains the new entry
+
+## [v02.35r] — 2026-08-13 03:01:32 AM EST — [c8928a4](https://github.com/LightAISolutions/Sales/commit/c8928a46200a887002eb9c079cb9062c9a48db7b)
+
+> **Prompt:** "Can you make it so that a transcribed .vtt file is automatically saved in the "2-transcribed" Drive folder instead of the original "1-awaiting-transcription" Drive folder?"
+
+### Added
+- `Profiler.html` (v01.25w) — **File transcript** control in the admin note form. One file pick does three things: uploads the `.vtt` into `Profiler App/meeting-recordings/2-transcribed/`, moves its recording out of `1-awaiting-transcription/` to join it, and carries the same file into the note's attachments. Without the audio move the queue folder would keep advertising work that is already done, which is the whole reason the two folders exist
+- `ovFileTranscript`, plus `ovDriveList` (folder listing) and `ovDriveMove` (re-parent) — the latter two generalise the PATCH/list calls previously inlined in `ovSweepLooseRecordings`
+- `ovBaseName` matches transcript to recording by filename stem, so `catl--2026-08-10--Voice 260810_015240.vtt` claims `…015240.m4a` and leaves every other queued recording alone
+
+### Changed
+- `Profiler.html` (v01.25w) — `readFiles` now reads from a new `pendingFiles()` helper that merges the file input with the picked transcript, de-duplicated by name+size so selecting the same file in both controls cannot attach it twice. The save button's empty-note guard and its "Uploading…"/"Saving…" wording read from the same helper
+- A failed audio move is reported distinctly from a failed transcript upload — the transcript is already filed at that point, so the whole action must not read as failed
+
+### Notes
+- Transcription itself stays on the developer's machine (RTX 4090, `whisper-ctranslate2` with `large-v3-turbo`). Fully unattended filing would need Drive credentials on the PC and its own OAuth flow; this keeps the browser's existing `drive.file` token as the only credential in play
+
 ## [v02.34r] — 2026-08-11 02:25:14 AM EST — [d1366db](https://github.com/LightAISolutions/Sales/commit/d1366db3d54cc0928718cb45afd19d7f3ffe0fa6)
 
 > **Prompt:** "continue with your recommendation"

@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.35r] — 2026-08-28 06:57:56 PM EST
+
+> **Prompt:** "Continue with your recommendation to make the scheduler actually send digests out at 7am every weekday. Also, I can confirm that manually building a Digest does automatically email it out, but I would like that to stop happening. If I want to manually send out a digest via email, I will do it via "go-live" and "email me latest"."
+
+### Fixed
+
+`Scraper.gs` (v01.68g) — the 7:00 delivery, and the manual build that was mailing subscribers.
+
+- **The binding constraint, verified rather than assumed:** one Apps Script execution is capped at **6 minutes** on a consumer account ([quotas](https://developers.google.com/apps-script/guides/services/quotas)). The pipeline needs far longer for three editions — 30 feeds at `SCRAPER_DIGEST_FETCHES_PER_STEP = 6`, plus backstop, summarize and render — so "build at 7:00, deliver at 7:00" is not achievable in one run. The plan I proposed ("loop to completion in one invocation") would not have fit; the design changed once the limit was checked
+- **Build and delivery are now separate.** `scDigestRenderStep_` no longer mails; it leaves the new `Delivered` column empty and `scDigestDeliverPending_` sends. One change serves both requests: a manual build is silent *because* sending is no longer part of building, and the send can be held to 7:00 however early the build finished
+- **The build starts at `SCRAPER_DIGEST_BUILD_HOUR = 6`** on a daily trigger, works to `SCRAPER_DIGEST_RUN_BUDGET_MS = 240000` (four minutes, two clear of the cap), and chains a one-off continuation a minute out when there is more to do. All due editions are built in the same morning instead of one per day
+- **`SCRAPER_DIGEST_SEND_HOUR = 7`** gates every send. A separate 7:00 trigger mails whatever is pending; the hourly tick also calls the pass as a catch-up, and neither can send early because the gate lives in the pass itself, not in its callers
+- **Per-edition state slots.** `SCRAPER_DIGEST_STATE_KEY` was one global Script Property: the scheduler would be several steps into the morning edition, a manual BESS build would call `scDigestStart_`, and the slot was overwritten wholesale with `srcCursor: 0`. With an hourly trigger that cost hours, and on a day of active use the scheduled build could be reset repeatedly and never finish. `scDigestStateKey_` namespaces per edition; the no-argument form still answers "is anything running?" and falls back to the legacy slot
+- **Continuations get their own handler name** (`scDigestContinueRun`) purely so `scDigestClearContinuations_` can delete spent ones without deleting the daily build trigger — sharing a name would have stopped the schedule after one morning. Spent one-offs are cleared at the top of every run, since Apps Script caps triggers per script and an unbounded daily leak would eventually refuse to create any trigger at all
+- **An edition nobody is subscribed to now records `no-recipients` on its row** rather than being skipped in silence. The silent skip is exactly how "it just did not email" goes undiagnosed
+- Triggers are created `inTimezone(SCRAPER_DIGEST_TZ)`; without it a 6:00 ET build would fire at 6:00 in whatever zone the script project happens to be set to
+
+### Notes
+
+- 214 assertions pass. 28 cover the new scheduling (delivery held at 06:00 and sent at 07:00, no double-send, all three editions to the right addresses, `no-recipients` recorded, yesterday's rows untouched, per-edition state isolation, continuation creation and cleanup that spares the daily trigger, and that the run budget sits at least a minute inside the execution cap). 14 more are source-level proofs that the render step, `scDigestStep_` and `runDigestNow` contain no `MailApp` call at all, and that every remaining sender in the file is an explicit send path rather than a build step
+- **A test error worth recording:** the sender audit first counted `scValidEmail_` as a sender. It was matching the string `MailApp.sendEmail` inside `scDigestRecipients_`'s doc comment — a `/** */` continuation line with no leading `*`, so the comment filter missed it. Requiring the call paren fixed it. The finding was a false positive in the test, not a defect in the code
+- The hourly `scSchedulerTick` is deliberately kept: it carries the heartbeat and the daily Interests sync, and is the catch-up path if a morning run is missed entirely
 
 ## [v03.34r] — 2026-08-28 05:58:49 PM EST
 
@@ -1901,53 +1924,3 @@ If you hit the end of my weekly Fable limit before this task is done, switch to 
 - **Sourcing discipline is explicit throughout.** The brief separates sourced fact from the dossier's labeled analytical reads, and flags the unverified Lite-On displacement report specifically — the company has never confirmed it and its own late-2025 statements contradict it, so asserting it in the room would be a credibility loss. The dossier's moderate-confidence "architecture timing" thesis is marked as an interpretation to be presented as one
 - The 27 August 2026 H1 report is surfaced as the central catalyst: the company itself called AI-DC revenue immaterial through 2025 while consensus embeds a roughly six-fold FY2026 profit rebound, so the half-year print is the first hard test
 - No dossier data was changed — this is a derived study artifact only. The developer's separate request to further refine the AIDC market report was deferred at their instruction and is **not** actioned here
-
-## [v02.37r] — 2026-08-13 04:34:03 AM EST
-
-> **Prompt:** "continue with your recommendation"
->
-> *(The recommendation, from the preceding feasibility answer: build the summarization step — Build C-minimal — before speaker ID, because the pipeline currently ends at a transcript and a transcript is not something you send a customer. Reordered ahead of the prior session's "start Build B" recommendation.)*
-
-### Added
-- `Profiler.gs` (v01.09g) — **meeting-notes summarization**. A transcript filed with a note is turned into structured notes (Summary / Discussed / Customer signals / Action items / Open questions) by one Anthropic Messages API call. New `summarize` note op plus `summarizeNoteTranscript_`, `anthropicSummarize_`, `meetingNotesPrompt_`, and the pure `vttToPlainText_`
-- `vttToPlainText_` strips the WEBVTT header, cue numbers, timing lines, `NOTE`/`STYLE`/`REGION` blocks and inline cue tags, and collapses consecutive duplicate cues — Whisper repeats a cue's text when a segment spans a boundary, which would otherwise be fed to the model twice. Verified against a synthetic VTT carrying every one of those cases
-- Two new Script Properties on the Profiler Apps Script project: `ANTHROPIC_API_KEY` (required — without it the op returns `SUMMARY_NOT_CONFIGURED` and the note keeps its placeholder) and `ANTHROPIC_MODEL` (optional override). Default model is `claude-haiku-4-5-20251001`, chosen because `UrlFetchApp` gives up around 60 seconds and a slow response would cost the whole op; `claude-sonnet-5` is a one-property swap when depth matters more than latency
-- `Profiler.html` (v01.26w) — a submit that carried a transcript now chains straight into `summarize` (server signals this with a new `canSummarize` flag, true only for `.txt`/`.md`/`.vtt`/`.srt` attachments), and a **✨ Summarize** button appears on any logged note with a transcript, for retrying a failed run or back-filling notes filed before this existed
-
-### Changed
-- `Profiler.gs` — summarization is a **separate op**, not part of `submitFieldNote`: a submit must never fail because the model was slow or the key was missing. The note is written with its placeholder first, then filled in
-- `Profiler.gs` — re-running is idempotent rather than stacking. The developer's typed text is captured once into a new `typedText` field on first run and re-prepended every time, so the note is rebuilt as `typed text + fresh summary` and their own words are never consumed (User-Owned Content). `triage` deliberately stays `pending` — a machine summary is an input to promotion, not a decision to promote
-- `Profiler.gs` — transcripts over 120,000 characters (~2.5 hours) are truncated rather than failing the request, and the note's `[auto-summary …]` header says so. `listFieldNotes` now returns the new `summarized` date
-- `Profiler.html` — notes containing newlines render with `white-space: pre-wrap` in both the read-only log and the manage panel; generated notes are multi-line and a plain `<p>` collapsed them into one run-on paragraph
-- `repository-information/ENTERPRISE-SETUP.md` — documents the two new Script Properties, including that the key is unrelated to `GITHUB_TOKEN` rotation
-
-### Notes
-- This closes the "summary pending triage" placeholder path for transcripts specifically. Word/PDF attachments still get the placeholder and still wait for a triage pass — `driveReadNoteFile_` only returns text for `.txt`/`.md`/`.vtt`/`.srt`
-- The Profiler sequence diagram was checked and not updated: it depicts the note *transport* (`?action=note&nop=…`), not individual ops, so a new `nop` does not change what it shows
-
-## [v02.36r] — 2026-08-13 03:39:36 AM EST
-
-> **Prompt:** "add transcribe.ps1 to the repo. What exactly does adding this launcher to the repo do for me?"
-
-### Added
-- `scripts/transcribe.ps1` — PowerShell launcher for local Whisper transcription (`large-v3-turbo`, `--device cuda --compute_type float16 --vad_filter True --language en`, VTT out). Wraps the three things the bare command gets wrong: it calls `whisper-ctranslate2.exe` by full path so the venv need not be activated, prepends every `site-packages\nvidia\**\bin` folder to `PATH` (Windows does not search site-packages, which is what produced `RuntimeError: Library cublas64_12.dll is not found`), and writes each transcript beside its own audio via `--output_dir` so the current directory is irrelevant. Accepts multiple paths via `ValueFromRemainingArguments`, so several files can be drag-dropped onto the window in one go; exits non-zero if any file failed
-- Not deployed and not executed by CI — it runs on the developer's own Windows machine against their RTX 4090. Versioning it makes the transcription settings reviewable and diffable, and gives future sessions the exact flag set to mirror when Build A absorbs transcription into the app
-
-### Changed
-- `README.md` — `scripts/` tree gains the new entry
-
-## [v02.35r] — 2026-08-13 03:01:32 AM EST
-
-> **Prompt:** "Can you make it so that a transcribed .vtt file is automatically saved in the "2-transcribed" Drive folder instead of the original "1-awaiting-transcription" Drive folder?"
-
-### Added
-- `Profiler.html` (v01.25w) — **File transcript** control in the admin note form. One file pick does three things: uploads the `.vtt` into `Profiler App/meeting-recordings/2-transcribed/`, moves its recording out of `1-awaiting-transcription/` to join it, and carries the same file into the note's attachments. Without the audio move the queue folder would keep advertising work that is already done, which is the whole reason the two folders exist
-- `ovFileTranscript`, plus `ovDriveList` (folder listing) and `ovDriveMove` (re-parent) — the latter two generalise the PATCH/list calls previously inlined in `ovSweepLooseRecordings`
-- `ovBaseName` matches transcript to recording by filename stem, so `catl--2026-08-10--Voice 260810_015240.vtt` claims `…015240.m4a` and leaves every other queued recording alone
-
-### Changed
-- `Profiler.html` (v01.25w) — `readFiles` now reads from a new `pendingFiles()` helper that merges the file input with the picked transcript, de-duplicated by name+size so selecting the same file in both controls cannot attach it twice. The save button's empty-note guard and its "Uploading…"/"Saving…" wording read from the same helper
-- A failed audio move is reported distinctly from a failed transcript upload — the transcript is already filed at that point, so the whole action must not read as failed
-
-### Notes
-- Transcription itself stays on the developer's machine (RTX 4090, `whisper-ctranslate2` with `large-v3-turbo`). Fully unattended filing would need Drive credentials on the PC and its own OAuth flow; this keeps the browser's existing `drive.file` token as the only credential in play

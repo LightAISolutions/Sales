@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.68g] — 2026-08-28 06:57:56 PM EST — v03.35r
+
+### Fixed
+- **Your editions now actually arrive at 7:00 on weekday mornings.** The scheduler advanced the build by one small step per hour, so the first edition could not finish before mid-afternoon and the second and third were pushed to later days. The build now starts at 6:00 and runs continuously until it is done, and everything ready is emailed at 7:00
+- All three editions are built the same morning instead of one per day
+- Running a build by hand no longer wipes the progress of a build the scheduler already had underway — each edition keeps its own place in the queue
+
+### Changed
+- **Building an edition no longer emails it.** Pressing "Run intake now" builds silently, so you can rebuild as often as you like without anything reaching your subscribers. To send by hand, use **Go-live → Email me latest**
+- Sending is now a separate step from building, so an edition finished early waits for 7:00 rather than going out at 6:20
+- Each edition records when it was delivered. If nobody is subscribed to an edition, that is recorded on the edition instead of being skipped in silence — the previous behaviour gave no indication at all
 
 ## [v01.67g] — 2026-08-28 05:58:49 PM EST — v03.34r
 
