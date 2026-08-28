@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.33r] — 2026-08-28 05:46:45 PM EST
+
+> **Prompt:** "I successfully built a default and BESS Morning Digest, but when I tried to build the AIDC one, I failed twice. This is the error message. What's going on? Fix it."
+
+### Fixed
+
+`Scraper.gs` (v01.66g) — `ai_unavailable: ai_bad_json` on the AIDC build. Nothing about it was AIDC-specific: it is a chain of four defects, and any edition could draw the unlucky reply. All four are fixed, because fixing one link still leaves the others.
+
+1. **`scGeminiComplete_` never read `finishReason`.** A reply the model had to cut short at `maxOutputTokens` came back looking like a clean success, and the caller then failed to parse a JSON array with no closing bracket. Verified against the docs rather than assumed: thinking tokens count against the same `maxOutputTokens` budget on current models, so a long reasoning pass can consume it and return `finishReason: MAX_TOKENS` with the text truncated **or empty** ([ai.google.dev/gemini-api/docs/tokens](https://ai.google.dev/gemini-api/docs/tokens), plus the MAX_TOKENS-with-empty-text reports on [discuss.ai.google.dev](https://discuss.ai.google.dev/t/finishreason-max-tokens-but-text-is-empty/81874)). Now raises a distinct `ai_truncated`, and `SAFETY`/`RECITATION`/`PROHIBITED_CONTENT` raise a named `ai_blocked_*` instead of being reported as an empty response. `scClaudeComplete_` gets the same check on `stop_reason`
+2. **`scParseJsonArray_` threw the whole reply away.** It took everything between the first `[` and the *last* `]` — not string-aware, so a `]` inside a summary or in trailing prose moved the boundary; and a truncated array has no closing bracket at all, so four complete summaries out of five were discarded along with the half-written one. Now three widening passes: the original fast parse, a string-aware balanced scan (`scScanBalanced_`), then salvage (`scSalvageObjects_`) which parses every complete `{…}` in the array region individually
+3. **`ai_bad_json` was not retryable.** A model returning malformed JSON is the same class of transient as a 503 — generation is not deterministic and the next attempt usually parses. `scAiRetryable_` now includes `ai_bad_json`, `ai_truncated` and `ai_empty_response`. This is the identical failure the function's own comment says it was written to stop happening for 503; that fix was applied there and missed here
+4. **One bad batch abandoned the edition.** Any AI error `break`s the summarize loop, so one unusable reply out of six calls dropped all thirty items to raw snippets. New `scAiSoftFail_` separates "retry this call" from "keep going after giving up on this call": a batch that still will not parse after its retries falls back to snippets for **its own five items** and the loop continues, bounded by `SCRAPER_DIGEST_MAX_SOFT_AI_FAILS`. A missing key or unconfigured provider is still terminal — those say the next call will fail too
+
+- `SCRAPER_DIGEST_SUMMARY_TOKENS = 8000` replaces the hard-coded 3000 on the summarize call, so reasoning and output are not competing for one budget
+- New `state.aiSoftNote` carries a partial fallback separately from `aiNote`. The footer now reads `summarized by <model> · a few summaries fell back to source text` rather than the whole edition claiming fallback mode, and `getDigestStatus` exposes it while a build runs
+
+### Notes
+
+- 132 assertions pass. 30 cover the parser and the retry/soft-fail classification (including the literal truncated-reply shape from this bug, a `]` inside a summary, escaped quotes, nested objects, and that genuine garbage still throws); 15 cover `finishReason`/`stop_reason` handling and an end-to-end summarize run where one batch is unparseable through every retry — asserting the other batches keep their AI summaries, that `aiNote` is *not* set, and that a missing key still stops the edition
+- The diagnostic value is the point as much as the recovery: the note now distinguishes truncated from unreadable from blocked, so a recurrence names its own cause instead of reporting `ai_bad_json` for all three
 
 ## [v03.32r] — 2026-08-28 05:34:27 PM EST
 

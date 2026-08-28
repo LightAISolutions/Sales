@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 40/50`
+`Sections: 41/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.66g] — 2026-08-28 05:46:45 PM EST — v03.33r
+
+### Fixed
+- **An edition no longer loses every summary because one batch of them failed.** A single unusable reply from the AI used to abandon the rest of the edition, so all thirty stories dropped to raw source text at once. Now only the handful in that batch fall back, and the rest are summarized normally
+- Summaries that arrive cut off part-way are salvaged instead of discarded — the complete ones are kept and only the unfinished one is dropped
+- Unusable replies are retried before anything is given up on. Most succeed on the second attempt
+- The summarizer is given a much larger writing budget, so long summaries are far less likely to be cut off in the first place
+- When something does fall back, the edition footer now says a few summaries used source text rather than claiming the whole edition did
+- The status message now names what actually went wrong — cut off, unreadable, or blocked — instead of one catch-all
 
 ## [v01.65g] — 2026-08-28 05:34:27 PM EST — v03.32r
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.65g";
+var VERSION = "v01.66g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -731,6 +731,15 @@ var SCRAPER_DIGEST_AI_PAUSE_MS = 1200;           // gap between consecutive AI c
 // long before it cleared and dropped the whole edition to fallback summaries.
 var SCRAPER_AI_RETRY_BACKOFF_MS = [2000, 6000, 15000, 30000];
 var SCRAPER_DIGEST_SUMMARY_MAX = 900;            // stored summary cap (chars) — generous; quality set by the prompt, not a hard length limit
+// Output ceiling for one summarize call. Five items at 60-120 words is roughly
+// 900 tokens of prose before JSON overhead, so 3000 looked like ample headroom
+// — but thinking tokens count against this same budget on the current models,
+// and a long reasoning pass can consume it before any text is emitted, which
+// returns finishReason MAX_TOKENS with the JSON cut off or missing entirely.
+// (ai.google.dev/gemini-api/docs/tokens.) Raised so reasoning and output are
+// not competing for the same 3000.
+var SCRAPER_DIGEST_SUMMARY_TOKENS = 8000;
+var SCRAPER_DIGEST_MAX_SOFT_AI_FAILS = 3;        // batches that may fail to parse before the edition gives up on AI
 var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limit is 50k chars)
 // Digests tab retention (rows). Was 60 — roughly four working days once three
 // editions build daily — because every read of this tab pulled the Sections and
@@ -3317,7 +3326,32 @@ function scActiveAiLabel_() {
 function scAiRetryable_(msg) {
   var m = String(msg || '');
   if (m.indexOf('ai_rate_limited') !== -1) return true;
+  // A model that returns malformed JSON, gets cut off at the token ceiling, or
+  // returns nothing at all is the same class of transient as a 503: the next
+  // attempt usually succeeds, because generation is not deterministic. These
+  // were treated as terminal, which is how one unlucky reply sent a whole
+  // edition to raw snippets with `ai_unavailable: ai_bad_json` — the identical
+  // failure this function was written to stop happening for 503.
+  if (m.indexOf('ai_bad_json') !== -1) return true;
+  if (m.indexOf('ai_truncated') !== -1) return true;
+  if (m.indexOf('ai_empty_response') !== -1) return true;
   return /ai_http_(500|502|503|504|529)\b/.test(m);
+}
+
+/** Is this failure one batch's problem rather than the edition's?
+
+    A malformed, truncated, or empty reply says nothing about whether the NEXT
+    call will work. A missing key, an unconfigured provider or a rejected
+    request says the opposite — those are terminal and the edition should stop
+    asking. Kept separate from scAiRetryable_ because these two questions are
+    genuinely different: "retry this call" and "keep going after giving up on
+    this call". */
+function scAiSoftFail_(msg) {
+  var m = String(msg || '');
+  return m.indexOf('ai_bad_json') !== -1
+      || m.indexOf('ai_truncated') !== -1
+      || m.indexOf('ai_empty_response') !== -1
+      || m.indexOf('ai_blocked_') !== -1;
 }
 
 function scAiWithRetry_(prompt, maxTokens) {
@@ -3342,6 +3376,7 @@ function scDigestSummarizeStep_(ss, state, t0) {
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
   var top = items.slice(0, SCRAPER_DIGEST_SUMMARIZE_TOP_N);
   var pending = top.filter(function(it) { return !it.summary; });
+  var softFails = 0;
   while (pending.length && (Date.now() - t0) < SCRAPER_DIGEST_TIME_BUDGET_MS && !state.aiNote) {
     var batch = pending.slice(0, SCRAPER_DIGEST_ITEMS_PER_AI_CALL);
     // Longer summaries (developer feedback 2026-08-27): substance over
@@ -3357,7 +3392,7 @@ function scDigestSummarizeStep_(ss, state, t0) {
           return { i: n, title: it.title, snippet: it.snippet.slice(0, 280), source: it.source };
         }));
     try {
-      var parsed = scParseJsonArray_(scAiWithRetry_(prompt, 3000)) || [];
+      var parsed = scParseJsonArray_(scAiWithRetry_(prompt, SCRAPER_DIGEST_SUMMARY_TOKENS)) || [];
       var byIdx = {};
       parsed.forEach(function(p) {
         if (p && typeof p.i === 'number') byIdx[p.i] = scStr_(p.summary, SCRAPER_DIGEST_SUMMARY_MAX);
@@ -3370,7 +3405,24 @@ function scDigestSummarizeStep_(ss, state, t0) {
       scLogUsage_(ss, 'digest', 1, 0);
       if (!state.aiLabel) state.aiLabel = scActiveAiLabel_();
     } catch (aiErr) {
-      state.aiNote = 'ai_unavailable: ' + String((aiErr && aiErr.message) || aiErr).slice(0, 120);
+      var aiMsg = String((aiErr && aiErr.message) || aiErr);
+      // A batch that will not parse even after the retries costs THAT batch,
+      // not the edition. Previously any AI error broke the loop, so one bad
+      // reply out of six calls dropped all thirty items to raw snippets. The
+      // items here fall back to their snippet — exactly what they would have
+      // got anyway — and the next batch is still attempted.
+      if (scAiSoftFail_(aiMsg) && softFails < SCRAPER_DIGEST_MAX_SOFT_AI_FAILS) {
+        softFails++;
+        state.aiSoftNote = 'ai_partial: ' + aiMsg.slice(0, 80)
+          + ' (' + softFails + (softFails === 1 ? ' batch' : ' batches') + ')';
+        batch.forEach(function(it) {
+          intake.getRange(it.row, 9).setValue(it.snippet);
+          it.summary = it.snippet;
+        });
+        pending = pending.filter(function(it) { return !it.summary; });
+        continue;
+      }
+      state.aiNote = 'ai_unavailable: ' + aiMsg.slice(0, 120);
       break;
     }
     pending = pending.filter(function(it) { return !it.summary; });
@@ -3453,6 +3505,7 @@ function scDigestRenderStep_(ss, state) {
   var d = {
     id: state.id, date: state.date, no: no, windowH: state.windowH,
     generatedAt: new Date().toISOString(), aiNote: state.aiNote || '',
+    aiSoftNote: state.aiSoftNote || '',
     aiLabel: state.aiLabel || '',
     lead: lead ? { title: lead.title, source: lead.source, publishedAt: lead.publishedAt,
                    url: lead.url, score: lead.score,
@@ -3488,7 +3541,8 @@ function scDigestRenderStep_(ss, state) {
     items.length, relevant.length,
     JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX),
     html.slice(0, SCRAPER_DIGEST_CELL_MAX),
-    state.aiNote || '', d.editionId, state.aiLabel || (state.aiNote ? 'none (fallback)' : ''),
+    state.aiNote || state.aiSoftNote || '', d.editionId,
+    state.aiLabel || (state.aiNote ? 'none (fallback)' : ''),
     lead ? scStr_(lead.title, 300) : '', no]);
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
   if (extra > 0) digests.deleteRows(2, extra);
@@ -3802,7 +3856,9 @@ function scRenderDigestNightInk_(d) {
     + ' relevant · ' + Number(d.counts.intake) + ' scanned'
     + (held ? ' · ' + held + ' more held back by the per-section caps' : '')
     + (d.aiNote ? ' · summaries in fallback mode'
-        : (d.aiLabel ? ' · summarized by ' + esc(d.aiLabel) : '')) + '</td>'
+        : (d.aiLabel ? ' · summarized by ' + esc(d.aiLabel)
+             + (d.aiSoftNote ? ' · a few summaries fell back to source text' : '')
+           : '')) + '</td>'
     + '<td align="right" class="ni-foot-r" style="padding-top:12px;white-space:nowrap;">'
     + moreLink + '</td>'
     + '</tr></table>'
@@ -3854,7 +3910,8 @@ function scDigestStep_(editionId) {
   return { success: true, id: state.id, date: state.date, phase: state.phase,
            edition: state.editionId || SCRAPER_EDITION_DEFAULT.id,
            done: state.phase === 'done', fetched: state.fetched || 0,
-           kept: state.kept || 0, aiNote: state.aiNote || '', detail: info };
+           kept: state.kept || 0, aiNote: state.aiNote || '',
+           aiSoftNote: state.aiSoftNote || '', detail: info };
 }
 
 /** Scheduled entry (called from scSchedulerTick AFTER the pipeline pause
@@ -3892,7 +3949,8 @@ function getDigestStatus(sessionToken) {
   var state = scDigestState_();
   return { success: true, state: state ? {
     id: state.id, date: state.date, phase: state.phase, done: state.phase === 'done',
-    fetched: state.fetched || 0, kept: state.kept || 0, aiNote: state.aiNote || '' } : null };
+    fetched: state.fetched || 0, kept: state.kept || 0, aiNote: state.aiNote || '',
+    aiSoftNote: state.aiSoftNote || '' } : null };
 }
 
 /** The News Stand's read path: recent editions newest-first, filtered and paged
@@ -4598,6 +4656,9 @@ function scClaudeComplete_(prompt, maxTokens) {
   for (var i = 0; i < blocks.length; i++) {
     if (blocks[i] && blocks[i].type === 'text') text += blocks[i].text || '';
   }
+  // Same reason as the Gemini path: a reply cut off at the token ceiling must
+  // not be reported as a parse failure further down.
+  if (data && data.stop_reason === 'max_tokens') throw new Error('ai_truncated');
   if (!text) throw new Error('ai_empty_response');
   return text;
 }
@@ -4620,10 +4681,23 @@ function scGeminiComplete_(prompt, maxTokens) {
     throw new Error('ai_http_' + code + (apiMsg ? ' — ' + apiMsg.substring(0, 160) : ''));
   }
   var body = JSON.parse(resp.getContentText());
-  var parts = body.candidates && body.candidates[0] && body.candidates[0].content
-              && body.candidates[0].content.parts;
+  var cand = (body.candidates && body.candidates[0]) || {};
+  var parts = cand.content && cand.content.parts;
   var text = '';
   (parts || []).forEach(function(p) { if (p.text) text += p.text; });
+  // finishReason was never read, so a reply the model had to cut short came
+  // back looking like a clean success — and the caller then failed to parse a
+  // JSON array with no closing bracket and reported `ai_bad_json`, which says
+  // nothing about the actual cause. Thinking tokens count against
+  // maxOutputTokens on the current models, so a long reasoning pass can eat the
+  // whole budget and leave the text truncated or empty.
+  // Refs: ai.google.dev/gemini-api/docs/tokens and the MAX_TOKENS-with-empty-text
+  // reports on discuss.ai.google.dev.
+  var finish = String(cand.finishReason || '');
+  if (finish === 'MAX_TOKENS') throw new Error('ai_truncated');
+  if (finish === 'SAFETY' || finish === 'RECITATION' || finish === 'PROHIBITED_CONTENT') {
+    throw new Error('ai_blocked_' + finish.toLowerCase());
+  }
   if (!text.trim()) throw new Error('ai_empty_response');
   return text;
 }
@@ -4690,13 +4764,70 @@ function scGeminiDiscoverModel_(key) {
   return model;
 }
 
-/** Extract the first JSON array from an AI response (fences/preamble tolerated). */
+/** Extract a JSON array from an AI response, in three widening passes.
+
+    The old version took everything between the first '[' and the LAST ']' and
+    parsed it or threw. That fails two ways that both really happen:
+
+      - A reply cut off at the token ceiling has no closing bracket, so the
+        whole batch was discarded even though the first four of five objects
+        were complete and perfectly good.
+      - lastIndexOf(']') is not string-aware, so a ']' inside a summary (or in
+        trailing prose after the array) moved the boundary and broke an
+        otherwise valid reply.
+
+    Passes: (1) the fast whole-array parse, unchanged for the common case;
+    (2) a string-aware scan for the array's real matching bracket; (3) salvage
+    — every complete {...} object inside the array region, parsed one at a
+    time. Only if all three come back empty is this a genuine ai_bad_json. */
 function scParseJsonArray_(text) {
-  var start = text.indexOf('[');
-  var end = text.lastIndexOf(']');
-  if (start === -1 || end === -1 || end <= start) throw new Error('ai_bad_json');
-  try { return JSON.parse(text.substring(start, end + 1)); }
-  catch (pjErr) { throw new Error('ai_bad_json'); }
+  var s = String(text == null ? '' : text);
+  var start = s.indexOf('[');
+  if (start === -1) throw new Error('ai_bad_json');
+
+  var end = s.lastIndexOf(']');
+  if (end > start) {
+    try { return JSON.parse(s.substring(start, end + 1)); } catch (fastErr) {}
+  }
+  var balanced = scScanBalanced_(s, start, '[', ']');
+  if (balanced) {
+    try { return JSON.parse(balanced); } catch (balErr) {}
+  }
+  var salvaged = scSalvageObjects_(s, start);
+  if (salvaged.length) return salvaged;
+  throw new Error('ai_bad_json');
+}
+
+/** The substring from `from` to the bracket that actually closes it, or ''.
+    String-aware: brackets inside quoted values, and escaped quotes, do not
+    move the depth — which is the whole point of not using lastIndexOf. */
+function scScanBalanced_(s, from, open, close) {
+  var depth = 0, inStr = false, esc = false;
+  for (var i = from; i < s.length; i++) {
+    var c = s.charAt(i);
+    if (esc) { esc = false; continue; }
+    if (c === '\\') { esc = true; continue; }
+    if (c === '"') { inStr = !inStr; continue; }
+    if (inStr) continue;
+    if (c === open) depth++;
+    else if (c === close) { depth--; if (depth === 0) return s.substring(from, i + 1); }
+  }
+  return '';
+}
+
+/** Every complete JSON object inside the array region, parsed individually.
+    This is what rescues a truncated reply: the last object is half-written and
+    is dropped, and everything before it is kept. */
+function scSalvageObjects_(s, from) {
+  var out = [];
+  for (var i = from; i < s.length; i++) {
+    if (s.charAt(i) !== '{') continue;
+    var block = scScanBalanced_(s, i, '{', '}');
+    if (!block) break;                 // truncated mid-object — nothing left to save
+    try { out.push(JSON.parse(block)); } catch (objErr) { /* skip the bad one */ }
+    i += block.length - 1;
+  }
+  return out;
 }
 
 /** The project scope as prompt lines (shared by scoring and the brief). */
