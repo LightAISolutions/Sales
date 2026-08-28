@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 86/100`
+`Sections: 87/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.11r] — 2026-08-27 09:13:55 PM EST
+
+> **Prompt:** "I approve of the gated provider switching under the same admin flag - Good job, keep it up. 
+>
+> A few more things:
+>
+> * Now that Scraper directly downloads what matters to me from Profiler, what are some other ways that I can have Scraper further refine its understanding of what matters to me? I strongly prefer free methods and automatic processes. 
+> * Big picture, I want Scraper to be a dedicated third-party trade news scraper that identifies relevant articles from reputable web sites, summarizes them, and sends a daily (expandable to weekly, monthly, etc) digest to a list of subscriber emails (controlled by me, admin jonyang92@gmail.com). However, currently, the majority of the app is taken up by the "Project" feature, which I think should be mostly obsolete as its original purpose was to help me define the scope of its scraping and to develop a database. What are some other features that I can add to this kind of app and what should the landing page highlight? Do you think there's any value in keeping the "Project" feature? If so, explain why. If not, what should I replace it with?
+> * (See attached screenshot) - The emailed digest looks has way too much unused space on the left and right sides of the article summaries. Reformat the digest so that it's more comfortable to read. Also, just to confirm: Did you limit the number of articles found that meet the criteria or are these all the articles that met the criteria within the last 24 hours?"
+
+### Changed
+- **Night Ink email layout widened and retypeset in `Scraper.gs`** — the container table goes 640px → **720px**, outer cell padding 18px/8px → 20px/10px and inner padding 36px/44px/30px → 34px/34px/28px, so the live text column grows from ~552px to ~652px (the developer's screenshot showed a narrow ribbon stranded in a wide reading pane). Typography scaled with it: summary copy 13px/1.55 → **15px/1.65** (and lightened #b6bcc6 → #c2c8d2), item headlines 18px → **21px**, lead paragraph 14px → **16px**, lead headline 26px → **30px**, masthead 36px → **40px**, dateline 12px → 13px, footer 11px → 12px, and per-item bottom margin 14px → 20px. Nested-table structure, `bgcolor` attributes and `max-width:100%` mobile behaviour are unchanged, so the Outlook and dark-mode-client proofing from v03.09r still holds
+- **Digest footer now discloses truncation** — new `counts.shown` (lead + the three rendered section arrays) is reported as `N of M relevant · K scanned`, and when `M > N` the footer appends `· X more held back by the per-section caps`. This answers the developer's question permanently and in-band rather than only in chat: the edition itself now states whether items cleared the bar but were not printed
+- **`Scraper.gs`** VERSION v01.43g → v01.44g; version file synced; public entry added (counter 44/50). No HTML change this push — the renderer is entirely server-side and the in-app edition viewer displays the same stored HTML, so it inherits the new layout automatically
+
+#### `Scraper.gs` — v01.44g
+
+##### Changed
+- Widened + retypeset Night Ink email layout and truncation-aware footer (detail above); `Scrapergs.version.txt` synced; public entry added (counter 43 → 44)
+
+### Notes
+- Verification: `node --check` clean; a render fixture asserted all 10 layout invariants (720px container, trimmed paddings, each new font size, `5 of 22 relevant`, `17 more held back…`, balanced table tags) and a Chromium screenshot at an 1100px reading-pane width confirmed the column now fills the frame comfortably
+- **Caps are unchanged and deliberate** (the developer asked whether the count was limited): relevance floor `SCRAPER_RELEVANT_THRESHOLD = 50`, AI summaries for the top `SCRAPER_DIGEST_SUMMARIZE_TOP_N = 14`, and per-section printing caps `SCRAPER_DIGEST_SECTION_CAPS = { companies: 6, market: 6, incidents: 4 }` → at most 16 items + the lead. Raising them was **not** done unilaterally; it is offered as the next step
+- The strategic answers (free/automatic relevance-refinement options, the Projects-feature verdict and landing-page recommendation) were delivered in-chat — no code change in this push
 
 ## [v03.10r] — 2026-08-27 08:56:08 PM EST
 

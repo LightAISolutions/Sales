@@ -1,4 +1,4 @@
-var VERSION = "v01.43g";
+var VERSION = "v01.44g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -2919,7 +2919,9 @@ function scDigestRenderStep_(ss, state) {
       incidents: sections.incidents.map(scDigestItemOut_)
     },
     newCoverage: { count: newNames.length, names: newNames },
-    counts: { intake: items.length, relevant: relevant.length }
+    counts: { intake: items.length, relevant: relevant.length,
+              shown: (lead ? 1 : 0) + sections.companies.length
+                     + sections.market.length + sections.incidents.length }
   };
   var html = scRenderDigestNightInk_(d);
   digests.appendRow([state.id, state.date, new Date(), 'generated',
@@ -2986,10 +2988,10 @@ function scRenderDigestNightInk_(d) {
       + esc(it.source) + (t ? ' · ' + esc(t) : '') + '</div>';
   }
   function itemHtml(it) {
-    return '<div style="margin:0 0 14px;">'
-      + '<div style="' + serif + 'font-size:18px;font-weight:600;line-height:1.3;color:#eceae4;">'
+    return '<div style="margin:0 0 20px;">'
+      + '<div style="' + serif + 'font-size:21px;font-weight:600;line-height:1.32;color:#eceae4;">'
       + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
-      + '<div style="' + sans + 'font-size:13px;line-height:1.55;color:#b6bcc6;margin-top:3px;">'
+      + '<div style="' + sans + 'font-size:15px;line-height:1.65;color:#c2c8d2;margin-top:5px;">'
       + scNiBoldFigures_(esc(it.summary)) + '</div>'
       + srcLine(it) + '</div>';
   }
@@ -3009,23 +3011,23 @@ function scRenderDigestNightInk_(d) {
   // dark-mode-inverting clients (Gmail) have nothing transparent to repaint.
   var html = '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
     + 'bgcolor="#101216" style="background:#101216;margin:0;padding:0;border-collapse:collapse;">'
-    + '<tr><td align="center" style="padding:18px 8px;">'
-    + '<table role="presentation" width="640" cellpadding="0" cellspacing="0" border="0" '
-    + 'bgcolor="#15171c" style="background:#15171c;width:640px;max-width:100%;border-collapse:collapse;">'
-    + '<tr><td style="color:#e6e4de;padding:36px 44px 30px;' + sans + '">'
+    + '<tr><td align="center" style="padding:20px 10px;">'
+    + '<table role="presentation" width="720" cellpadding="0" cellspacing="0" border="0" '
+    + 'bgcolor="#15171c" style="background:#15171c;width:720px;max-width:100%;border-collapse:collapse;">'
+    + '<tr><td style="color:#e6e4de;padding:34px 34px 28px;' + sans + '">'
     // Masthead
     + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:16px;margin-bottom:18px;">'
-    + '<div style="' + serif + 'font-size:36px;font-weight:700;line-height:1;color:#f0eee8;">The Morning Edition</div>'
+    + '<div style="' + serif + 'font-size:40px;font-weight:700;line-height:1;color:#f0eee8;">The Morning Edition</div>'
     + '<div style="' + caps + 'color:#f2a33c;margin-top:6px;">Scraper · Trade news, distilled daily</div>'
-    + '<div style="font-size:12px;color:#9aa0ab;margin-top:4px;">' + esc(longDate(d.date))
+    + '<div style="font-size:13px;color:#9aa0ab;margin-top:5px;">' + esc(longDate(d.date))
     + ' · No. ' + scDigestNo_(d.no) + ' · covering the last ' + Number(d.windowH) + ' hours</div>'
     + '</div>';
   if (d.lead) {
     html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:18px;margin-bottom:18px;">'
       + '<div style="' + caps + 'color:#f2a33c;">The lead</div>'
-      + '<div style="' + serif + 'font-size:26px;font-weight:600;line-height:1.2;color:#f0eee8;margin-top:6px;">'
+      + '<div style="' + serif + 'font-size:30px;font-weight:600;line-height:1.2;color:#f0eee8;margin-top:6px;">'
       + '<a href="' + esc(d.lead.url) + '" style="color:#f0eee8;text-decoration:none;">' + esc(d.lead.title) + '</a></div>'
-      + '<div style="font-size:14px;line-height:1.6;color:#b6bcc6;margin-top:6px;">'
+      + '<div style="font-size:16px;line-height:1.65;color:#c2c8d2;margin-top:8px;">'
       + scNiBoldFigures_(esc(d.lead.text)) + '</div>'
       + srcLine(d.lead) + '</div>';
   }
@@ -3036,7 +3038,7 @@ function scRenderDigestNightInk_(d) {
     html += '<div style="border:1px solid #363c45;background:#1b1e24;border-radius:4px;'
       + 'padding:12px 16px;margin:6px 0 14px;">'
       + '<div style="' + caps + 'color:#e6e4de;">Newly covered</div>'
-      + '<div style="font-size:13px;line-height:1.55;color:#b6bcc6;margin-top:3px;">Profiler added '
+      + '<div style="font-size:15px;line-height:1.65;color:#c2c8d2;margin-top:5px;">Profiler added '
       + '<b style="color:#f2a33c;">' + Number(d.newCoverage.count) + ' compan'
       + (d.newCoverage.count === 1 ? 'y' : 'ies') + '</b>'
       + (d.newCoverage.names.length ? ' — ' + esc(d.newCoverage.names.join(', ')) : '')
@@ -3044,8 +3046,12 @@ function scRenderDigestNightInk_(d) {
   }
   html += '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
     + 'style="border-top:3px double #d8dbe1;margin-top:10px;"><tr>'
-    + '<td style="font-size:11px;color:#8a919d;padding-top:12px;">Published by your Scraper desk · '
-    + Number(d.counts.relevant) + ' relevant of ' + Number(d.counts.intake) + ' scanned'
+    + '<td style="font-size:12px;color:#8a919d;padding-top:12px;">Published by your Scraper desk · '
+    + Number(d.counts.shown || 0) + ' of ' + Number(d.counts.relevant)
+    + ' relevant · ' + Number(d.counts.intake) + ' scanned'
+    + (Number(d.counts.relevant) > Number(d.counts.shown || 0)
+        ? ' · ' + (Number(d.counts.relevant) - Number(d.counts.shown || 0))
+          + ' more held back by the per-section caps' : '')
     + (d.aiNote ? ' · summaries in fallback mode' : '') + '</td>'
     + '<td align="right" style="padding-top:12px;"><a href="' + esc(EMBED_PAGE_URL)
     + '" style="font-size:11px;color:#f2a33c;text-decoration:none;">Tune tomorrow\'s edition →</a></td>'

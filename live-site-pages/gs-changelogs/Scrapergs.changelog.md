@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.44g] — 2026-08-27 09:13:55 PM EST — v03.11r
+
+### Changed
+- The emailed edition is easier to read: the article column is wider, so there is far less empty space on either side, and the summary text, headlines and lead story are all set at a larger, roomier size
+- The edition footer now says how many stories are shown out of how many met your relevance bar — and, when some were left out, exactly how many were held back by the per-section limits
 
 ## [v01.43g] — 2026-08-27 08:56:08 PM EST — v03.10r
 
