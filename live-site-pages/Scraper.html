@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.64w">
+  <meta name="build-version" content="v01.65w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -597,6 +597,21 @@
     .wd-ns-caln { font-family: var(--wd-mono); font-size: 9.5px; color: var(--wd-faint); }
     .wd-ns-cald.has .wd-ns-caln { color: var(--wd-ink2); }
     .wd-ns-pip { width: 100%; height: 4px; border-radius: 2px; background: currentColor; opacity: .85; }
+    /* An edition that was built but never emailed. Hollow rather than filled,
+       so "built" and "sent" are distinguishable at a glance — the calendar was
+       read as a send schedule when every pip looked identical. */
+    .wd-ns-pip.undelivered { background: none; box-shadow: inset 0 0 0 1px currentColor; opacity: .55; }
+    /* Weekend cells: nothing is ever emailed on one, so the grid should say so
+       rather than leaving the reader to infer it from an empty column. */
+    .wd-ns-cald.nosend { background: repeating-linear-gradient(135deg,
+        var(--wd-bg-deep), var(--wd-bg-deep) 5px, var(--wd-rail) 5px, var(--wd-rail) 10px); }
+    .wd-ns-cald.nosend .wd-ns-caln { color: var(--wd-faint); }
+    .wd-ns-callegend { display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+      font-family: var(--wd-mono); font-size: 9.5px; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--wd-mut2); margin-top: 9px; }
+    .wd-ns-callegend i { display: inline-block; width: 14px; height: 4px; border-radius: 2px;
+      background: var(--wd-dim); margin-right: 5px; vertical-align: middle; }
+    .wd-ns-callegend i.hollow { background: none; box-shadow: inset 0 0 0 1px var(--wd-dim); }
     .wd-ns-key { display: flex; flex-wrap: wrap; gap: 5px 14px; margin-top: 9px;
       font-family: var(--wd-mono); font-size: 10px; color: var(--wd-faint); }
     .wd-ns-key span { display: inline-flex; align-items: center; gap: 5px; }
@@ -1354,6 +1369,7 @@
           <div id="wd-ns-grid" class="wd-ns-grid"></div>
           <div id="wd-ns-calwrap" hidden>
             <div id="wd-ns-cal" class="wd-ns-cal"></div>
+            <div id="wd-ns-callegend" class="wd-ns-callegend"></div>
             <div id="wd-ns-key" class="wd-ns-key"></div>
           </div>
           <div id="wd-ns-table" class="wd-ns-tablewrap" hidden></div>
@@ -5978,6 +5994,16 @@
   /** A stable accent per edition, assigned by position in the masthead list so
       the same edition keeps the same colour across the grid, the calendar pips
       and the legend. */
+  /** Was this edition actually emailed? The Delivered cell holds a real
+      timestamp on a genuine send, and a marker string on a deliberate
+      non-send ('no-recipients', 'no-html', 'superseded'). Only the first
+      counts, so a superseded rebuild is not drawn as though it went out. */
+  function wdNsDelivered_(d) {
+    var v = (d && d.delivered) || '';
+    if (!v) return false;
+    return !/^(no-recipients|no-html|superseded)$/.test(String(v));
+  }
+
   function wdNsEdClass_(id) {
     for (var i = 0; i < (_wdEditions || []).length; i++) {
       if (_wdEditions[i].id === id) return 'wd-ed-c' + (i % 6);
@@ -6113,18 +6139,46 @@
     for (var day = 1; day <= last; day++) {
       var key = y + '-' + wdNsPad_(m + 1) + '-' + wdNsPad_(day);
       var hits = byDay[key] || [];
+      // Nothing is ever emailed on a weekend, so mark those cells. The developer
+      // read three Saturday pips as three scheduled Saturday sends; they were
+      // three editions built by hand after midnight. The calendar was answering
+      // "what was built", which is a different question from "what goes out".
+      var dow = new Date(y, m, day).getDay();
+      var noSend = (dow === 0 || dow === 6);
+      var sent = hits.filter(function(d) { return wdNsDelivered_(d); }).length;
+      var tip = key + (noSend ? ' · weekend, no scheduled send' : '');
+      if (hits.length) {
+        tip += ' · ' + hits.length + ' edition' + (hits.length === 1 ? '' : 's') + ' built'
+             + ' · ' + (sent ? sent + ' emailed' : 'none emailed');
+      } else if (!noSend) { tip += ' · nothing built'; }
       h += '<button type="button" class="wd-ns-cald' + (hits.length ? ' has' : '')
+        + (noSend ? ' nosend' : '')
         + (isThisMonth && day === today.getDate() ? ' today' : '') + '"'
         + (hits.length ? ' data-id="' + scEsc(hits[0].id) + '"' : ' disabled')
-        + ' title="' + scEsc(key + (hits.length ? ' · ' + hits.length + ' edition'
-            + (hits.length === 1 ? '' : 's') : ' · nothing built')) + '">'
+        + ' title="' + scEsc(tip) + '">'
         + '<span class="wd-ns-caln">' + day + '</span>'
         + hits.map(function(d) {
-            return '<span class="wd-ns-pip ' + wdNsEdClass_(d.edition) + '"></span>';
+            return '<span class="wd-ns-pip ' + wdNsEdClass_(d.edition)
+              + (wdNsDelivered_(d) ? '' : ' undelivered') + '"></span>';
           }).join('')
         + '</button>';
     }
     host.innerHTML = h;
+    var legend = document.getElementById('wd-ns-callegend');
+    if (legend) {
+      legend.textContent = '';
+      [['', 'emailed'], ['hollow', 'built, not emailed'], ['nosend', 'weekend · no send']]
+        .forEach(function(pair) {
+          var span = document.createElement('span');
+          if (pair[0] !== 'nosend') {
+            var i = document.createElement('i');
+            if (pair[0]) i.className = 'hollow';
+            span.appendChild(i);
+          }
+          span.appendChild(document.createTextNode(pair[1]));
+          legend.appendChild(span);
+        });
+    }
     // Without a key the stripes are just colours; with one the month reads.
     var seen = {}, key2 = $sc('wd-ns-key');
     _wdDigests.forEach(function(d) { seen[d.edition] = d; });

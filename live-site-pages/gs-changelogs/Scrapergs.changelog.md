@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.82g] — 2026-08-29 01:19:10 AM EST — v03.50r
+
+### Fixed
+- **Editions can no longer be emailed at the weekend.** The weekday rule was applied by the two scheduled runs but not by the part that actually sends, and the hourly catch-up pass calls that part directly — it asked what time it was and never what day. An edition built late on a Friday night, or by hand on a Saturday morning, would have gone out to subscribers at 7:00 that Saturday. The rule now sits with the send itself, so nothing can route around it. A weekend edition stays unsent and is still there to go out on Monday
+- The desk's timezone is now set in one place rather than repeated throughout, so the daily schedule can be moved to another zone reliably
 
 ## [v01.81g] — 2026-08-29 12:37:08 AM EST — v03.49r
 

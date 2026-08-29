@@ -1,4 +1,4 @@
-var VERSION = "v01.81g";
+var VERSION = "v01.82g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -839,7 +839,8 @@ var SCRAPER_GEO_OTHER = {
 // scheduled path is gated by SCRAPER_SCHED_RUNS_ENABLED (still false — no
 // unattended AI spend) and the email site by SCRAPER_SCHED_EMAIL_ENABLED;
 // the manual runDigestNow route works while paused.
-var SCRAPER_DIGEST_RUN_DAYS = [1, 2, 3, 4, 5];   // ISO day-of-week, ET (Mon–Fri)
+var SCRAPER_DIGEST_RUN_DAYS = [1, 2, 3, 4, 5];   // ISO day-of-week (Mon–Fri)
+
 var SCRAPER_DIGEST_RUN_HOUR = 7;                 // hourly catch-up tick: no build before 7:00 ET
 // Build early, send at 7:00. One Apps Script execution is capped at 6 minutes
 // on a consumer account, and three editions need far longer than that — 30
@@ -847,12 +848,21 @@ var SCRAPER_DIGEST_RUN_HOUR = 7;                 // hourly catch-up tick: no bui
 // therefore cannot deliver at 7:00. The build starts an hour earlier, works in
 // budgeted invocations that chain one-off continuations, and the finished
 // editions wait in the Digests tab until the 7:00 delivery pass.
-// The edition clock is Eastern throughout (scDigestClock_ formats against it),
-// and the triggers have to be created in the same zone or a 6:00 ET build would
-// fire at 6:00 in whatever zone the script project happens to be set to.
+// THE one timezone every schedule decision is made in. The build hour, the send
+// hour and SCRAPER_DIGEST_RUN_DAYS are all read against it, as is every date key
+// written to the sheet, and the triggers have to be created in the same zone or
+// a 6:00 build would fire at 6:00 in whatever zone the script project happens to
+// be set to.
+//
+// scDigestClock_ now formats against this rather than a hardcoded literal, so
+// moving the desk to another zone is this line plus the label — not a
+// search-and-replace across two dozen occurrences with as many chances to miss
+// one. SCRAPER_DIGEST_TZ_LABEL is what the app shows the reader; keep it
+// truthful to the zone above.
 var SCRAPER_DIGEST_TZ = 'America/New_York';
-var SCRAPER_DIGEST_BUILD_HOUR = 6;               // daily build trigger, ET
-var SCRAPER_DIGEST_SEND_HOUR = 7;                // nothing is emailed before this hour, ET
+var SCRAPER_DIGEST_TZ_LABEL = 'ET';
+var SCRAPER_DIGEST_BUILD_HOUR = 6;               // daily build trigger, desk time
+var SCRAPER_DIGEST_SEND_HOUR = 7;                // nothing is emailed before this hour, desk time
 // Comfortably inside the 6-minute execution cap, leaving room for the step in
 // flight to finish and for the continuation trigger to be created.
 var SCRAPER_DIGEST_RUN_BUDGET_MS = 240000;
@@ -3459,12 +3469,12 @@ function digestScoreReport(sessionToken, digestId) {
 /** ET clock facts for the digest scheduler (pure given a Date). */
 function scDigestClock_(now) {
   var d = now || new Date();
-  var iso = Number(Utilities.formatDate(d, 'America/New_York', 'u'));   // 1=Mon … 7=Sun
+  var iso = Number(Utilities.formatDate(d, SCRAPER_DIGEST_TZ, 'u'));   // 1=Mon … 7=Sun
   return {
     isoDay: iso,
-    dom: Number(Utilities.formatDate(d, 'America/New_York', 'd')),
-    hour: Number(Utilities.formatDate(d, 'America/New_York', 'H')),
-    date: Utilities.formatDate(d, 'America/New_York', 'yyyy-MM-dd'),
+    dom: Number(Utilities.formatDate(d, SCRAPER_DIGEST_TZ, 'd')),
+    hour: Number(Utilities.formatDate(d, SCRAPER_DIGEST_TZ, 'H')),
+    date: Utilities.formatDate(d, SCRAPER_DIGEST_TZ, 'yyyy-MM-dd'),
     windowH: iso === 1 ? 72 : SCRAPER_DIGEST_WINDOW_H   // Monday edition covers the weekend
   };
 }
@@ -4783,6 +4793,30 @@ function scDigestDeliverPending_(ss, opts) {
   opts = opts || {};
   var clock = scDigestClock_(new Date());
   if (!opts.force && clock.hour < SCRAPER_DIGEST_SEND_HOUR) return { sent: 0, held: 0 };
+  // WEEKDAYS ONLY, CHECKED HERE — at the point of sending, not in the callers.
+  //
+  // The day guard lived in scDigestMorningRun and scDigestDeliveryRun but not
+  // in this function, and scSchedulerTick calls this directly as an hourly
+  // catch-up with no day check of its own. So an edition built on a Saturday —
+  // which a manual build at 00:30 produces, and which is entirely legitimate —
+  // sat undelivered until 07:00 and the tick mailed it, because the only gate
+  // it passed through asked about the hour and never the day.
+  //
+  // Three callers each having to remember the same rule is how one of them
+  // forgets. The rule belongs where the send happens: this is the only line of
+  // code that can put an edition in a subscriber's inbox, so it is the only
+  // place the weekday rule cannot be routed around. The two callers keep their
+  // checks — they gate expensive work, not just the send — but nothing now
+  // depends on them for correctness.
+  //
+  // `force` bypasses this exactly as it bypasses the hour check above. No
+  // caller passes it today — the developer's manual "email me latest" is
+  // emailLatestDigest, which sends through MailApp directly and never reaches
+  // this function — so the flag is here for symmetry with the hour gate and for
+  // a future caller that legitimately needs an off-schedule scheduled send.
+  if (!opts.force && SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) {
+    return { sent: 0, held: 0, skipped: 'weekend' };
+  }
   if (!SCRAPER_SCHED_EMAIL_ENABLED) return { sent: 0, held: 0 };
   var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
   var n = sheet ? sheet.getLastRow() - 1 : 0;

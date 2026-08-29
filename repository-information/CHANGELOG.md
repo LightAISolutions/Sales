@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.50r] — 2026-08-29 01:19:10 AM EST
+
+> **Prompt:** "I followed your call and everything looks good now. However, when I went to the Calendar (see screenshot), I noticed that it's showing a scheduled email out on Saturday when it should skip weekends. Evaluate the current scheduler and make sure it is set up to properly identify which editions should be sent out to which subscribers on weekdays (Mon-Fri) at 7am PST. It should also accurately sync with this Calendar tab."
+
+### Fixed
+
+`Scraper.gs` (v01.82g)
+
+- **`scDigestDeliverPending_` — the only function that can put an edition in a subscriber's inbox — checked the hour and never the day.** `SCRAPER_DIGEST_RUN_DAYS` was applied by `scDigestMorningRun` and `scDigestDeliveryRun`, but `scSchedulerTick` calls the sender directly as an hourly catch-up with no day check of its own. The developer built three editions by hand at ~00:30 on a Saturday; they were dated 2026-08-29 and undelivered, and at 07:00 that morning the tick would have mailed all three
+- **The guard now lives in the sender, not in three callers.** Three places each having to remember the same rule is how one of them forgets — and one of them had. The callers keep their checks (they gate expensive build work, not just the send), but nothing depends on them for correctness any more. A weekend edition stays pending and is still deliverable when the weekday returns, rather than being stamped and lost
+- **A comment I nearly shipped was wrong and was corrected before commit.** The first draft said `force` exists so "email me latest" can send on a Saturday. No caller passes `force`, and `emailLatestDigest` sends through `MailApp` directly without ever reaching this function. The comment now says what is actually true
+- **The timezone is one constant.** `scDigestClock_` formatted against a hardcoded `'America/New_York'` literal; it now reads `SCRAPER_DIGEST_TZ`, which already existed for the trigger installs. A second constant was nearly introduced alongside it — two names for one timezone is precisely the drift this was meant to end — so it was consolidated onto the existing one, with `SCRAPER_DIGEST_TZ_LABEL` for display
+
+### Changed
+
+`Scraper.html` (v01.65w)
+
+- **The Calendar was not lying, but it was answering a different question.** It plots editions that *exist* on a date — its own tooltip said "N editions" / "nothing built". The three Saturday pips were three manual builds, not three scheduled sends. It now distinguishes them: a filled pip is an edition that was **emailed**, a hollow one was built and never sent, and `wdNsDelivered_` treats the marker strings (`no-recipients`, `no-html`, `superseded`) as not-sent, so a superseded rebuild is not drawn as though it went out
+- Weekend cells are hatched and labelled "weekend, no scheduled send"; each day's tooltip separates built from emailed; a key under the grid explains the two pip styles. Built with `createElement`/`textContent`
+
+### Notes
+
+- **607 assertions pass** across 23 suites. New `t23.js` (39) walks all seven days at the send hour, pins the developer's exact case (built 00:30 Saturday, tick at 07:00 → nothing mailed, row left pending, still deliverable Monday), confirms the hour gate still binds on weekdays and that the weekend beats a late hour, and checks `force` bypasses both
+- **Rendered and measured**, not just asserted: 10 hatched weekend cells for August 2026, 4 hollow pips (three Saturday builds plus one superseded Friday edition), 3 filled, Saturday reading `weekend, no scheduled send · 3 editions built · none emailed` and Friday `2 editions built · 1 emailed`. The harness does not carry the app's edition-colour classes, so pip *colour* was not exercised — only the filled/hollow distinction
+- **⚠️ Unresolved and deliberately not guessed: the developer wrote "7am PST"; the app has always been 7:00 AM ET** and its Schedule panel says so. That is a three-hour difference. The send hour is unchanged at 7 ET; centralizing the timezone makes the switch a one-line edit once the developer confirms which they want
 
 ## [v03.49r] — 2026-08-29 12:37:08 AM EST
 

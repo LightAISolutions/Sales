@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.65w] — 2026-08-29 01:19:10 AM EST — v03.50r
+
+### Changed
+- **The Calendar now shows which editions were actually emailed.** A filled bar means the edition went out; a hollow one means it was built but never sent — including a rebuild that superseded an earlier copy. Previously every edition looked identical, so a day you had merely built on read the same as a day that mailed
+- **Weekend days are marked as non-send days**, so a Saturday you happened to build on can no longer be mistaken for a Saturday send
+- Each day's tooltip now says how many editions were built and how many of those were emailed, and a key under the grid explains the two bar styles
 
 ## [v01.64w] — 2026-08-28 11:43:43 PM EST — v03.47r
 
