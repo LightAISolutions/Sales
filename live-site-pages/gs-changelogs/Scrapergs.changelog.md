@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.74g] — 2026-08-28 09:04:47 PM EST — v03.41r
+
+### Fixed
+- **The emailed edition is now sized for a phone first.** The type sizes that make it readable are written directly onto each element, and the larger desktop sizes are applied on top only when the screen is wide enough. Previously it was the other way round, and Gmail was discarding the block of styling that shrank everything for small screens — leaving a headline built for a laptop wrapping across three lines on a phone. On a 390-pixel screen the masthead now fits on one line and the body runs at a comfortable reading width with no sideways scrolling
+- The footer no longer depends on that styling either. It stacks on its own, so the publisher line, the amber key and the View More link stay in order at any width
+
+### Changed
+- **Held-back stories now arrive with their summary and analysis.** Opening View More used to show only a headline and a source for work the desk had already read; each story now carries the same summary, and the same amber analysis, that it would have had if it had fit inside a section
+- **Every relevant story is summarized, not just the first thirty.** On a heavy news day, stories ranked past thirty cleared the relevance bar, were held back by a section cap, and reached View More with nothing but the raw feed snippet. The summarizing pass now follows the relevance bar rather than a fixed count, up to a ceiling of seventy. On a quiet day it is also cheaper, since it no longer summarizes stories that scored too low to be printed anywhere
 
 ## [v01.73g] — 2026-08-28 08:42:20 PM EST — v03.40r
 

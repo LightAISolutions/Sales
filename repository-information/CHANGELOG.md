@@ -3,11 +3,43 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.41r] — 2026-08-28 09:04:47 PM EST
+
+> **Prompt:** "This is how my Morning Digest looks on my phone. I like the amber analysis feature, but the formatting is extremely off. I am not sure what proper mobile sizing and formatting is, but this is very uncomfortable to read. Figure out what the optimal formatting is for mobile and fix this. Also, I want to extend the summarization and analysis to the articles that were held back by per section caps."
+
+### Fixed
+
+`Scraper.gs` (v01.74g)
+
+- **The mobile media query was being deleted before it ever ran.** The screenshot showed desktop type at phone width — a 44px masthead wrapping to three lines — which is only possible if the `@media (max-width:600px)` block never applied. Gmail strips the entire `<style>` element when it contains anything unsupported, and Outlook-targeting code is a documented trigger; this shell carries MSO conditional comments for the ghost table. The block was being dropped wholesale and the email fell back to the inline desktop sizes
+- **Fixed by inverting the direction rather than by fighting the stripper.** The inline styles now carry the phone sizes (30/25/20/16px, 22px padding) and `scNiMobileCss_` is a `min-width:601px` block that scales them *up* for desktop. Inline styles are never stripped, so the failure mode is now harmless: a lost `<style>` block leaves a phone-shaped email, correct on the surface it is mostly read on. The landing page is a browser, where the block always applies, so it is unchanged
+- The footer was a two-cell `<tr>` that needed `.ni-foot-r` to stack; rebuilt as a single stacked `<div>` so it has no media-query dependency at all
+- **Measured, not asserted.** Rendered at 390px with the `<style>` block intact and again with it stripped: identical output both times (mast 30, lead 25, hed 20, body 16, ~40 chars/line, no horizontal scroll). At 1000px the approved 44/32/22/16 sizes are restored
+
+### Changed
+
+`Scraper.gs` (v01.74g)
+
+- `d.heldBack` and the `action=more` payload now carry `summary` and `analysis`, so View More shows the desk's own reading of a story instead of a bare headline
+- **`SCRAPER_DIGEST_SUMMARIZE_TOP_N` (an unfiltered top-30) replaced by `scDigestSummarizeSet_` + `SCRAPER_DIGEST_SUMMARIZE_MAX = 70`.** This is the half of the request that the payload change alone did not deliver, and it only surfaced by tracing the field rather than trusting the comment above it: the section caps sum to exactly 30, so on any day with more than 30 relevant items — the developer saw 55 last week — everything held back sat *outside* the summarize window and reached View More with a raw feed snippet. The set is now the relevant set in score order, bounded at 70. It is also cheaper on a thin day, since it no longer buys summaries for items scoring below the bar that no part of the edition can print
+- The dead `var top` left in the render step by the earlier lead-pool fix is removed, along with two comments that the change made untrue
+
+`Scraper.html` (v01.59w)
+
+- The View More overlay renders each item's summary with the analysis appended in amber, built with `textContent` so a headline or summary containing markup cannot inject
+- Overlay lede now names the amber convention
+
+### Notes
+
+- **355 assertions pass** across 15 suites — 33 added or changed here, including a new `t15.js` covering summarize coverage on heavy, thin, flood and empty days
+- `t.js` gained the invariant that matters most: stripping the `<style>` block out of the rendered email must not change a single inline size. That is the whole architecture, expressed as a test
+- One suite (`t7.js`) failed after the change and was **right to** — its fixture items had no `score`, so the relevance-based set correctly returned nothing. Fixed the fixture, not the code: real intake rows always carry a number
 
 ## [v03.40r] — 2026-08-28 08:42:20 PM EST
 

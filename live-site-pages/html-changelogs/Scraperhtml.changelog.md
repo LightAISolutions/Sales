@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.59w] — 2026-08-28 09:04:47 PM EST — v03.41r
+
+### Changed
+- **View More now shows each held-back story's summary and analysis**, not just its headline and source. The analysis appears in amber, matching the convention used in the edition itself
+- The View More heading now says the analysis is the amber text, so the colour reads the same way everywhere
 
 ## [v01.58w] — 2026-08-28 08:02:19 PM EST — v03.38r
 

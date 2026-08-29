@@ -1,4 +1,4 @@
-var VERSION = "v01.73g";
+var VERSION = "v01.74g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -841,15 +841,15 @@ var SCRAPER_DIGEST_MIN_INTAKE_SCORE = 25;        // rubric floor to enter the in
 var SCRAPER_DIGEST_BACKSTOP_PER_RUN = 12;        // D2: company-name queries per run (round-robin)
 var SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY = 'scDigestBackstopCursor';
 var SCRAPER_DIGEST_BACKSTOP_PENALTY = 0.85;      // D2: backstop items are down-weighted
-var SCRAPER_DIGEST_SUMMARIZE_TOP_N = 30;         // AI key-point summaries for the top-scored items
+var SCRAPER_DIGEST_SUMMARIZE_MAX = 70;           // ceiling on AI-summarized items per edition
 // Caps raised 6/6/4 -> 12/10/8 (developer directive 2026-08-27): a daily
 // digest of skimmable summaries should err toward completeness, since a
-// missed story costs more than a longer scroll. Section caps sum to 30 so
-// every printed item is one the AI actually summarized (TOP_N), rather
+// missed story costs more than a longer scroll. Section caps sum to 30, and
+// the summarize set now covers every relevant item rather
 // than falling through to a raw feed snippet.
 var SCRAPER_DIGEST_ITEMS_PER_AI_CALL = 5;        // items per summarize request (smaller batches → room for longer summaries)
-// Free-tier pacing. At TOP_N=30 an edition fires ~7 AI calls back to back
-// (6 summarize batches + 1 lead). Gemini's free tier enforces per-minute AND
+// Free-tier pacing. At ~30 summarized items an edition fires ~7 AI calls back
+// to back (6 summarize batches + 1 lead), and more on a heavy news day. Gemini's free tier enforces per-minute AND
 // per-day request caps that are model-specific and have tightened over time,
 // so an unpaced burst can trip a 429 — and before this, a single 429 aborted
 // summarization for the WHOLE edition (no retry, no resume, no AI lead).
@@ -3748,13 +3748,34 @@ function scAiWithRetry_(prompt, maxTokens) {
   }
 }
 
+/** The items an edition will spend AI summaries on.
+
+    This used to be an unfiltered `items.slice(0, 30)`, which was wrong at both
+    ends. On a thin day it paid for summaries of items that scored below the
+    relevance bar and therefore could never be printed — the lead, the sections
+    and the held-back list all filter on that bar. On a heavy day it stopped at
+    30 while the relevant set ran past it, so items ranked 31+ cleared the bar,
+    got held back by a section cap, and reached View More carrying nothing but
+    the raw feed snippet.
+
+    Relevance is the honest boundary: summarize exactly what the edition can
+    display, in score order, bounded so one enormous news day cannot run the
+    AI budget away. The build starts an hour before send and resumes across
+    continuation triggers, so a larger set costs steps, not a missed delivery. */
+function scDigestSummarizeSet_(items) {
+  var relevant = items.filter(function (it) {
+    return it.score >= SCRAPER_RELEVANT_THRESHOLD;
+  });
+  return relevant.slice(0, SCRAPER_DIGEST_SUMMARIZE_MAX);
+}
+
 /** Summarize phase: AI key-point summaries for the top items, then the lead.
     No AI key / AI failure → deterministic fallback (snippets serve as
     summaries, top item becomes the lead) so the digest always builds. */
 function scDigestSummarizeStep_(ss, state, t0) {
   var items = scDigestItems_(ss, state.id);
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
-  var top = items.slice(0, SCRAPER_DIGEST_SUMMARIZE_TOP_N);
+  var top = scDigestSummarizeSet_(items);
   var pending = top.filter(function(it) { return !it.summary; });
   var softFails = 0;
   while (pending.length && (Date.now() - t0) < SCRAPER_DIGEST_TIME_BUDGET_MS && !state.aiNote) {
@@ -3889,12 +3910,10 @@ function scDigestSummarizeStep_(ss, state, t0) {
 function scDigestRenderStep_(ss, state) {
   var items = scDigestItems_(ss, state.id);
   var relevant = items.filter(function(it) { return it.score >= SCRAPER_RELEVANT_THRESHOLD; });
-  var top = items.slice(0, SCRAPER_DIGEST_SUMMARIZE_TOP_N);
-  // The lead is chosen from items that CLEAR the bar, not from the top 30 by
-  // score. `top` is unfiltered, so on a thin day — fewer than 30 relevant
-  // items, which is now the normal case — the AI's lead pick could land on an
-  // article that never qualified, and the lead is the most prominent thing in
-  // the edition. Sections were already filtered; this was the one hole left.
+  // The lead is chosen from items that CLEAR the bar. It used to be picked out
+  // of an unfiltered top-30, so on a thin day the AI's lead pick could land on
+  // an article that never qualified — and the lead is the most prominent thing
+  // in the edition. Sections were already filtered; this was the one hole left.
   var leadPool = relevant.length ? relevant : [];
   var lead = leadPool.length
     ? leadPool[Math.min(state.leadIdx || 0, leadPool.length - 1)] : null;
@@ -3970,10 +3989,17 @@ function scDigestRenderStep_(ss, state) {
   if (d.lead) d.lead.url = scClickUrl_(state.id, d.lead.url);
   // Slim, capped, and click-tracked like every other link in the edition — the
   // items are in this digest's intake rows, so the redirect resolves them.
+  // Held-back items carry their summary and analysis too — View More used to
+  // show a bare headline for an article the desk had already read. The
+  // summarize set is the relevant set (scDigestSummarizeSet_), so every item
+  // that reaches this list has been through the AI; the snippet fallback only
+  // catches an edition whose summarize phase was cut short by an AI outage.
   d.heldBack = heldBack.slice(0, SCRAPER_HELD_BACK_SHOW).map(function(it) {
     return { title: scStr_(it.title, 180), source: it.source,
              publishedAt: it.publishedAt, score: it.score,
-             url: scClickUrl_(state.id, it.url) };
+             url: scClickUrl_(state.id, it.url),
+             summary: scStr_(it.summary || it.snippet, SCRAPER_DIGEST_SUMMARY_MAX),
+             analysis: scStr_(it.analysis || '', SCRAPER_DIGEST_ANALYSIS_MAX) };
   });
   d.heldBackTotal = heldBack.length;
 
@@ -4240,9 +4266,9 @@ function scRenderDigestNightInk_(d) {
   }
   function itemHtml(it) {
     return '<div style="margin:0 0 20px;">'
-      + '<div class="ni-hed" style="' + serif + 'font-size:22px;font-weight:600;line-height:1.3;color:#eceae4;">'
+      + '<div class="ni-hed" style="' + serif + 'font-size:20px;font-weight:600;line-height:1.28;color:#eceae4;">'
       + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
-      + '<div class="ni-body" style="' + sans + 'font-size:16px;line-height:1.62;color:#c2c8d2;margin-top:5px;">'
+      + '<div class="ni-body" style="' + sans + 'font-size:16px;line-height:1.55;color:#c2c8d2;margin-top:5px;">'
       + scNiBoldFigures_(esc(it.summary)) + analysisRun(it.analysis) + '</div>'
       + srcLine(it) + '</div>';
   }
@@ -4280,10 +4306,10 @@ function scRenderDigestNightInk_(d) {
     + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
     + 'bgcolor="#15171c" style="background:#15171c;width:100%;max-width:860px;margin:0 auto;'
     + 'border-collapse:collapse;">'
-    + '<tr><td class="ni-pad" style="color:#e6e4de;padding:32px 30px 26px;' + sans + '">'
+    + '<tr><td class="ni-pad" style="color:#e6e4de;padding:22px 18px 20px;' + sans + '">'
     // Masthead
     + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:16px;margin-bottom:18px;">'
-    + '<div class="ni-mast" style="' + serif + 'font-size:44px;font-weight:700;line-height:1.06;color:#f0eee8;">'
+    + '<div class="ni-mast" style="' + serif + 'font-size:30px;font-weight:700;line-height:1.14;color:#f0eee8;">'
     + esc(d.editionName || SCRAPER_EDITION_DEFAULT.name) + '</div>'
     + '<div style="' + caps + 'color:#f2a33c;margin-top:6px;">Scraper · Trade news, distilled daily</div>'
     + '<div style="font-size:13px;color:#9aa0ab;margin-top:5px;">' + esc(longDate(d.date))
@@ -4292,9 +4318,9 @@ function scRenderDigestNightInk_(d) {
   if (d.lead) {
     html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:18px;margin-bottom:18px;">'
       + '<div style="' + caps + 'color:#f2a33c;">The lead</div>'
-      + '<div class="ni-lead" style="' + serif + 'font-size:32px;font-weight:600;line-height:1.18;color:#f0eee8;margin-top:6px;">'
+      + '<div class="ni-lead" style="' + serif + 'font-size:25px;font-weight:600;line-height:1.26;color:#f0eee8;margin-top:6px;">'
       + '<a href="' + esc(d.lead.url) + '" style="color:#f0eee8;text-decoration:none;">' + esc(d.lead.title) + '</a></div>'
-      + '<div class="ni-lede" style="font-size:17px;line-height:1.62;color:#c2c8d2;margin-top:8px;">'
+      + '<div class="ni-lede" style="font-size:16px;line-height:1.55;color:#c2c8d2;margin-top:8px;">'
       + scNiBoldFigures_(esc(d.lead.text)) + analysisRun(d.lead.analysis) + '</div>'
       + srcLine(d.lead) + '</div>';
   }
@@ -4334,9 +4360,12 @@ function scRenderDigestNightInk_(d) {
       + '" style="font-size:12px;font-weight:600;color:#f2a33c;text-decoration:none;">'
       + 'View More (' + held + ') →</a>'
     : '';
-  html += '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
-    + 'style="border-top:3px double #d8dbe1;margin-top:10px;"><tr>'
-    + '<td class="ni-foot" style="font-size:12px;color:#8a919d;padding-top:12px;">'
+  // One stacked block, not a two-column row. The old footer needed a media query
+  // to stack on a phone, and a query that can be stripped is not something a
+  // layout should depend on. Stacked unconditionally it is correct at every
+  // width with no CSS at all.
+  html += '<div style="border-top:3px double #d8dbe1;margin-top:10px;padding-top:12px;">'
+    + '<div class="ni-foot" style="font-size:12px;line-height:1.55;color:#8a919d;">'
     + 'Published by your Scraper desk · '
     + (hasAnalysis ? '<span style="color:#f2a33c;">Amber = analysis</span> · ' : '')
     + Number(d.counts.shown || 0) + ' of ' + Number(d.counts.relevant)
@@ -4345,33 +4374,38 @@ function scRenderDigestNightInk_(d) {
     + (d.aiNote ? ' · summaries in fallback mode'
         : (d.aiLabel ? ' · summarized by ' + esc(d.aiLabel)
              + (d.aiSoftNote ? ' · a few summaries fell back to source text' : '')
-           : '')) + '</td>'
-    + '<td align="right" class="ni-foot-r" style="padding-top:12px;white-space:nowrap;">'
-    + moreLink + '</td>'
-    + '</tr></table>'
+           : '')) + '</div>'
+    + (moreLink ? '<div style="margin-top:10px;">' + moreLink + '</div>' : '')
+    + '</div>'
     + '</td></tr></table>'
     + '<!--[if mso]></td></tr></table><![endif]-->'
     + '</td></tr></table>';
   return html;
 }
 
-/** Mobile rules for the edition body. Deliberately narrow: only the type sizes
-    and paddings that make an 860px-designed page unreadable on a 390px screen,
-    all under one <=600px query, so the app's own reader — which lays out far
-    wider than that — is unchanged. Class names are ni-* prefixed because this
-    <style> block also lands in the app's DOM when the stored HTML is injected
-    into the edition view. */
+/** Desktop enlargement. Note the direction: the INLINE styles carry the phone
+    sizes and this block scales them UP above 600px — the opposite of how it was
+    written, and the reason it is written that way now.
+
+    A max-width block that shrinks for phones only works if the block survives.
+    Gmail drops the whole <style> element when it contains anything it does not
+    support (Outlook-targeting code is a documented trigger, and this shell has
+    MSO conditional comments in it), and when that happened the email fell back
+    to the inline DESKTOP sizes: a 44px masthead wrapping to three lines on a
+    390px screen, which is what the developer was sent.
+
+    Inverted, the failure mode is harmless. Inline styles are never stripped, so
+    a lost <style> block leaves a phone-shaped email — correct on the surface it
+    is mostly read on, and merely a little large on a desktop. The landing page
+    is a browser, where the block always applies, so it is unchanged. */
 function scNiMobileCss_() {
-  return '@media only screen and (max-width:600px){'
-    + '.ni-pad{padding:20px 16px 18px!important}'
-    + '.ni-mast{font-size:29px!important;line-height:1.12!important}'
-    + '.ni-lead{font-size:23px!important;line-height:1.24!important}'
-    + '.ni-lede{font-size:16px!important}'
-    + '.ni-hed{font-size:19px!important;line-height:1.32!important}'
-    + '.ni-body{font-size:15.5px!important}'
-    + '.ni-foot,.ni-foot-r{display:block!important;width:100%!important;'
-    + 'text-align:left!important;white-space:normal!important}'
-    + '.ni-foot-r{padding-top:10px!important}'
+  return '@media only screen and (min-width:601px){'
+    + '.ni-pad{padding:32px 30px 26px!important}'
+    + '.ni-mast{font-size:44px!important;line-height:1.06!important}'
+    + '.ni-lead{font-size:32px!important;line-height:1.18!important}'
+    + '.ni-lede{font-size:17px!important;line-height:1.62!important}'
+    + '.ni-hed{font-size:22px!important;line-height:1.3!important}'
+    + '.ni-body{font-size:16px!important;line-height:1.62!important}'
     + '}';
 }
 
@@ -6504,7 +6538,8 @@ function scHandleHeldBack_(e) {
     if (!d.heldBack) { out.legacy = true; return json(out); }
     out.items = (d.heldBack || []).map(function(it) {
       return { title: String(it.title || ''), source: String(it.source || ''),
-               publishedAt: String(it.publishedAt || ''), url: String(it.url || '') };
+               publishedAt: String(it.publishedAt || ''), url: String(it.url || ''),
+               summary: String(it.summary || ''), analysis: String(it.analysis || '') };
     });
     out.total = Number(d.heldBackTotal) || out.items.length;
     out.success = true;
