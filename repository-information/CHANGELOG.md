@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.55r] — 2026-08-29 04:13:49 AM EST
+
+> **Prompt:** "Build the approved Compare view for the Profiler app (`live-site-pages/Profiler.html`), per the developer's approved design (2026-08-29 session, repo v03.54r):
+>
+> **Design (developer-approved):**
+> - Compare mode on the roster: a toggle chip; selecting the first company establishes the peer group (registry `categories` are the grouping key) and dims companies sharing no category; up to 4 companies.
+> - **Tiered rows:** Tier 0 (always): dossier meta — profileVersion, lastUpdated, source count. Tier 1 (always): financials — latest reported periods as-reported, beat/miss/in-line record tallied from `financials.periods[].metrics[].verdict`. Tier 2 (only when ALL selected companies share a category): category-specific rows — suppliers/integrators: product-line counts, flagship names, spec rows whose band/label at least two companies share; other categories start with product lines + lead `strategyRead` judgment.
+> - Cross-space selections are allowed via an explicit "Financials only" override chip — matrix then shows only Tiers 0–1.
+> - A mockup of the intended look exists (artboard 2 of the "Profiler Future Vision" design canvas — dark ink/gold, `.ov-*` visual language, matrix grid with row-label column).
+>
+> **Constraints from repo rules:** renderer-only change in Profiler.html's PROJECT blocks (no schema change yet — normalized-USD bars wait for the approved `relationships`-style KPI field extension, roadmap #2); deep-linkable state if reasonable (e.g. `#compare/slug1,slug2`); Playwright visual verification before commit (`scripts/playwright-harness.py` pattern, serve `live-site-pages/` over localhost, remove `#ov-authwall`); page version bump + page changelog + full Pre-Commit/Pre-Push checklists; push to the session's designated claude/* branch. Note the repo CHANGELOG's `Sections` counter and rotate per rules if the push exceeds 100.
+>
+> Done looks like: Compare reachable from the roster, peer-gating and the financials-first tiers working against real profile JSONs, verified visually, committed and pushed."
+
+### Added
+
+- `Profiler.html` (v01.46w) — **Compare view**, renderer-only (no schema change). Roster gains a `⇄ Compare` toggle (`ovCompareMode`) that flips cards from navigate-on-click to select-on-click, with a sticky selection tray and a hard cap of 4 (`OV_COMPARE_MAX`). **Peer gating**: the first pick fixes the peer group from its registry `categories`; companies sharing no category are dimmed (`.ov-card.dim`) and their clicks are refused at the handler, not just visually — verified by test (a supplier pick dims 49 of 88 and rejects a neocloud click)
+- `Profiler.html` (v01.46w) — **tiered matrix** (`ovRenderCompare` / `ovPaintCompare`): Tier 0 dossier meta (profileVersion, lastUpdated, cited-source count) and Tier 1 financials (latest reported period with per-metric verdict chips, plus a beat/in-line/miss tally bar across every period from `financials.periods[].metrics[].verdict`) always render; Tier 2 unlocks only when `shared` categories across all picks is non-empty — suppliers/integrators get product-line counts, flagship names and the spec attributes at least two dossiers both record (`ovCmpSpecMap` label intersection, capped at 8), other categories get product lines + the lead `strategyRead` judgment. `Financials only` chip (`ovCompareFinOnly`) lifts the peer gate for cross-space work and pins the matrix to Tiers 0–1
+- `Profiler.html` (v01.46w) — deep-linkable as `#compare/slug1,slug2[,…]` (`compare` reserved as a first hash segment); unknown/insufficient slugs render an explanation instead of a broken matrix; a hashchange mid-fetch discards the stale render; company names in the header row open their dossiers; the matrix scrolls inside `.ov-mx-wrap` on narrow screens rather than stacking (stacking loses the label↔company pairing)
+
+### Notes
+
+- Verified with a 40-check Playwright interaction suite (peer gating incl. refusal of a dimmed card, deselect/reselect, tray state, deep links both same-space and cross-space, Tier-2 gating in both directions, the financials-only override, guard rails for 1-slug and unknown-slug hashes, full row population, and mobile containment). `scripts/verify-profiler-roles.py` re-run clean (matrix + isolation + 88/88 specs)
+- **Test-quality note:** the first suite run appeared to show a peer-gating bug; the root cause was the test's own selectors — `has_text='Sungrow'` matches Key Capture Energy (whose tagline names Sungrow) before Sungrow itself, so the peer group was accidentally set to IPP and the app *correctly* refused a supplier. Selectors now match card headings exactly. The app behavior was right throughout
+- **Pre-existing data issue observed, not fixed here** (out of scope, Chesterton's fence): 6 profiles (`crusoe`, `eve-energy`, `hitachi-energy`, `huawei-digital-power`, `openai`, `xai`) put ownership prose in the `ticker` field, so `ovOwnership()` renders "private · private (~$30B round…)" on the dossier Summary, in exports, and now in the Compare Snapshot row. A task card was queued for the data cleanup rather than patching the shared renderer
 
 ## [v03.54r] — 2026-08-29 03:49:01 AM EST
 

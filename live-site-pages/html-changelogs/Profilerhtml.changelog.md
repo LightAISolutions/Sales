@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.46w] — 2026-08-29 04:13:49 AM EST — v03.55r
+
+### Added
+- Compare mode on the company list: pick up to four companies and see them side by side. The first pick sets the peer group, and companies from a different part of the ecosystem are dimmed so a comparison stays like-for-like
+- The comparison always shows dossier freshness and the financial record as reported; product and technical rows appear when every company picked works in the same space, listing the attributes their dossiers have in common
+- A "Financials only" option compares companies across different spaces, limited to the rows that stay meaningful
+- Comparisons have their own shareable link, and each company name opens its dossier
 
 ## [v01.45w] — 2026-08-29 03:49:01 AM EST — v03.54r
 

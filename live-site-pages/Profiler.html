@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.45w">
+  <meta name="build-version" content="v01.46w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -260,6 +260,62 @@
     .ov-fact .k { font: 9.5px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-faint); margin-bottom: 7px; }
     .ov-fact .v { font-size: 14.5px; }
     .ov-fact .v, td.fv { text-transform: capitalize; }
+    /* Compare — roster selection + cross-company matrix (v01.46w) */
+    .ov-chip-cmp.on { background: var(--ov-gold); color: var(--ov-ink); border-color: var(--ov-gold); font-weight: 700; }
+    .ov-cmp-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 0 18px; color: var(--ov-faint); font: 10.5px/1.6 var(--ov-mono); letter-spacing: 0.06em; text-transform: uppercase; }
+    .ov-card.sel { border-color: var(--ov-gold); background: var(--ov-card2); }
+    .ov-card.dim { opacity: 0.34; }
+    .ov-card.dim:hover { transform: none; border-color: var(--ov-line); background: var(--ov-card); }
+    .ov-card-check {
+      position: absolute; top: -9px; left: -9px; width: 22px; height: 22px; border-radius: 50%;
+      background: var(--ov-gold); color: var(--ov-ink); display: flex; align-items: center;
+      justify-content: center; font-size: 12px; font-weight: 700;
+    }
+    .ov-cmp-tray {
+      position: sticky; bottom: 14px; z-index: 50; margin-top: 22px;
+      background: var(--ov-card); border: 1px solid var(--ov-gold); border-radius: 12px;
+      padding: 13px 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .ov-cmp-tray .lbl { font: 10px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-gold); }
+    .ov-cmp-tray .names { flex: 1 1 240px; font-size: 14.5px; }
+    .ov-cmp-tray .hint { color: var(--ov-faint); font: 10px/1.5 var(--ov-mono); }
+    .ov-cmp-tray .ov-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .ov-cmp-sub { color: var(--ov-muted); font-size: 15px; max-width: 760px; margin: 0 0 12px; }
+    .ov-mx { display: grid; gap: 1px; background: var(--ov-line); border: 1px solid var(--ov-line); border-radius: 10px; overflow: hidden; margin: 6px 0 0; }
+    .ov-mx > div { background: var(--ov-card); padding: 13px 15px; min-width: 0; }
+    .ov-mx .rl { background: #181c26; color: var(--ov-faint); font: 10px/1.5 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase; }
+    .ov-mx .rl .sub { color: var(--ov-line2); letter-spacing: 0.08em; margin-top: 4px; text-transform: none; }
+    .ov-mx .co h3 { margin: 0 0 6px; }
+    .ov-mx .co .mono { color: var(--ov-faint); font: 10px/1.7 var(--ov-mono); white-space: pre-line; }
+    .ov-mx .co .tag-row { margin-bottom: 6px; }
+    .ov-cmp-open { background: none; border: none; padding: 0; cursor: pointer; color: var(--ov-paper); font: 400 21px/1.2 var(--ov-serif); text-align: left; }
+    .ov-cmp-open:hover { color: var(--ov-gold); text-decoration: underline; }
+    .ov-mx .v { font-size: 13.5px; line-height: 1.55; }
+    .ov-mx .v2 { font-size: 11.5px; line-height: 1.5; color: var(--ov-muted); margin-top: 4px; }
+    .ov-mx .per { font: 11px/1.5 var(--ov-mono); color: var(--ov-gold); letter-spacing: 0.06em; margin-bottom: 6px; }
+    .ov-mx .met { font-size: 12.5px; line-height: 1.5; margin: 3px 0; }
+    .ov-mx .met .mn { color: var(--ov-muted); }
+    .ov-mx .met .vd { font: 9.5px/1 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; }
+    .ov-mx .jdg { font-size: 12.5px; line-height: 1.55; }
+    .ov-mx .na { background: #1a1e29; }
+    .ov-mx-band {
+      background: var(--ov-card2) !important; color: var(--ov-gold);
+      font: 10px/1.5 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    .ov-cmp-bar { display: flex; gap: 2px; height: 12px; margin: 2px 0 6px; border-radius: 3px; overflow: hidden; }
+    .ov-cmp-bar i { display: block; height: 12px; border-radius: 2px; }
+    .ov-cmp-foot { margin-top: 18px; color: var(--ov-faint); font-size: 12px; font-style: italic; max-width: 860px; }
+    .ov-cmp-foot p { margin: 6px 0; }
+    .ov-cmp-foot .ov-btn { margin-top: 10px; font-style: normal; }
+    /* Narrow screens scroll the matrix sideways rather than stacking it — a
+       stacked matrix loses the label↔company pairing that makes it readable.
+       Matches the app's existing .ov-table-wrap convention. */
+    .ov-mx-wrap { overflow-x: auto; margin: 6px 0 0; }
+    @media (max-width: 720px) {
+      .ov-mx { min-width: 620px; }
+      .ov-mx > div { padding: 11px 12px; }
+    }
     /* Relationships — ecosystem cross-links + radial mind-map (v01.45w) */
     .ov-relmap { width: 100%; max-width: 860px; height: auto; display: block; margin: 8px 0 2px; }
     .ov-relmap .edge { stroke: rgba(233,228,214,0.22); stroke-width: 1; }
@@ -1465,6 +1521,14 @@ function ovReloadFresh() {
     var ovProfiles = {};
     var ovCat = 'all';
     var ovQuery = '';
+    // Compare mode (v01.46w) — roster-level multi-select feeding the comparison
+    // matrix. The first pick fixes the peer group (registry categories are the
+    // grouping key); companies sharing no category with it are dimmed and
+    // unselectable unless the developer opts into the financials-only override.
+    var ovCompareMode = false;
+    var ovComparePicks = [];
+    var ovCompareFinOnly = false;
+    var OV_COMPARE_MAX = 4;
 
     function ovEl(tag, cls, text) {
       var e = document.createElement(tag);
@@ -1524,6 +1588,8 @@ function ovReloadFresh() {
     }
 
     // Deep-linkable tabs (v01.35w): the hash is either "#slug" or "#slug/tab".
+    // Compare (v01.46w) adds "#compare/slug1,slug2[,…]" — 'compare' is a
+    // reserved first segment; no company slug may take it.
     var ovWantedTab = 'overview';
     function ovRoute() {
       if (!ovRegistry) return;
@@ -1531,7 +1597,10 @@ function ovReloadFresh() {
       var parts = raw.split('/');
       var slug = parts[0];
       ovWantedTab = parts[1] || 'overview';
-      if (slug) { ovRenderCompany(slug); } else { ovRenderRoster(); }
+      if (slug === 'compare') {
+        var picks = String(parts[1] || '').split(',').map(function(s) { return s.trim(); }).filter(Boolean);
+        ovRenderCompare(picks);
+      } else if (slug) { ovRenderCompany(slug); } else { ovRenderRoster(); }
       window.scrollTo(0, 0);
     }
     function ovShowTab(slug, key, fromClick) {
@@ -1582,7 +1651,47 @@ function ovReloadFresh() {
         });
         bar.appendChild(chip);
       });
+
+      // Compare toggle (v01.46w) — flips the grid from navigate-on-click to
+      // select-on-click. Leaving compare mode clears the selection, so the
+      // roster never carries a half-built comparison back into browsing.
+      var cmpChip = ovEl('button', 'ov-chip ov-chip-cmp' + (ovCompareMode ? ' on' : ''), '⇄ Compare' + (ovCompareMode ? ' — On' : ''));
+      cmpChip.type = 'button';
+      cmpChip.title = 'Select up to ' + OV_COMPARE_MAX + ' companies to compare side by side';
+      cmpChip.addEventListener('click', function() {
+        ovCompareMode = !ovCompareMode;
+        if (!ovCompareMode) { ovComparePicks = []; ovCompareFinOnly = false; }
+        ovRenderRoster();
+      });
+      bar.appendChild(cmpChip);
       main.appendChild(bar);
+
+      // Peer group = the categories of the first pick. Financials-only lifts
+      // the gate for cross-space selections and limits the matrix to Tiers 0–1.
+      function peerCats() {
+        if (!ovComparePicks.length) return null;
+        var first = companies.filter(function(c) { return c.slug === ovComparePicks[0]; })[0];
+        return first ? (first.categories || []) : null;
+      }
+      function inPeerGroup(c) {
+        if (ovCompareFinOnly) return true;
+        var pc = peerCats();
+        if (!pc || !pc.length) return true;
+        return (c.categories || []).some(function(k) { return pc.indexOf(k) >= 0; });
+      }
+
+      if (ovCompareMode) {
+        var legend = ovEl('div', 'ov-cmp-legend');
+        legend.appendChild(ovEl('span', null, ovComparePicks.length
+          ? 'Peer group: ' + (ovCompareFinOnly ? 'off — financials only' : (peerCats() || []).map(ovCatLabel).join(' / '))
+          : 'Pick a company to set the peer group'));
+        var foChip = ovEl('button', 'ov-chip' + (ovCompareFinOnly ? ' on' : ''), 'Financials only');
+        foChip.type = 'button';
+        foChip.title = 'Compare across different spaces — the matrix then shows only dossier meta and financials';
+        foChip.addEventListener('click', function() { ovCompareFinOnly = !ovCompareFinOnly; ovRenderRoster(); });
+        legend.appendChild(foChip);
+        main.appendChild(legend);
+      }
 
       var grid = ovEl('div'); grid.id = 'ov-grid';
       main.appendChild(grid);
@@ -1597,7 +1706,13 @@ function ovReloadFresh() {
         });
         if (!shown.length) { grid.appendChild(ovEl('p', 'ov-empty', 'No companies match.')); return; }
         shown.forEach(function(c) {
-          var card = ovEl('div', 'ov-card');
+          var picked = ovComparePicks.indexOf(c.slug) >= 0;
+          var eligible = !ovCompareMode || picked || inPeerGroup(c);
+          var card = ovEl('div', 'ov-card' + (ovCompareMode && picked ? ' sel' : '') + (ovCompareMode && !eligible ? ' dim' : ''));
+          if (ovCompareMode && picked) {
+            var chk = ovEl('div', 'ov-card-check', '✓');
+            card.appendChild(chk);
+          }
           card.appendChild(ovEl('h2', null, c.name));
           card.appendChild(ovTagRow(c.categories));
           card.appendChild(ovEl('p', 'tagline', c.tagline || ''));
@@ -1606,11 +1721,280 @@ function ovReloadFresh() {
           if (c.ticker) meta.push(c.ticker);
           if (c.lastUpdated) meta.push('as of ' + c.lastUpdated);
           card.appendChild(ovEl('div', 'meta', meta.join('  ·  ')));
-          card.addEventListener('click', function() { window.location.hash = c.slug; });
+          card.addEventListener('click', function() {
+            if (!ovCompareMode) { window.location.hash = c.slug; return; }
+            var at = ovComparePicks.indexOf(c.slug);
+            if (at >= 0) ovComparePicks.splice(at, 1);
+            else {
+              if (!eligible || ovComparePicks.length >= OV_COMPARE_MAX) return;
+              ovComparePicks.push(c.slug);
+            }
+            ovRenderRoster(); // peer gate depends on the first pick, so repaint whole
+          });
           grid.appendChild(card);
         });
       }
       ovPaintGrid();
+
+      if (ovCompareMode && ovComparePicks.length) {
+        var tray = ovEl('div', 'ov-cmp-tray');
+        tray.appendChild(ovEl('span', 'lbl', ovComparePicks.length + ' selected'));
+        tray.appendChild(ovEl('span', 'names', ovComparePicks.map(function(s) {
+          var hit = companies.filter(function(c) { return c.slug === s; })[0];
+          return hit ? hit.name : s;
+        }).join('  ·  ')));
+        if (ovComparePicks.length < OV_COMPARE_MAX)
+          tray.appendChild(ovEl('span', 'hint', 'Add up to ' + (OV_COMPARE_MAX - ovComparePicks.length) + ' more'));
+        var go = ovEl('button', 'ov-btn', 'Compare →');
+        go.type = 'button';
+        go.disabled = ovComparePicks.length < 2;
+        if (go.disabled) go.title = 'Pick at least two companies';
+        go.addEventListener('click', function() {
+          if (ovComparePicks.length < 2) return;
+          window.location.hash = 'compare/' + ovComparePicks.join(',');
+        });
+        tray.appendChild(go);
+        main.appendChild(tray);
+      }
+    }
+
+    // ── Compare — cross-company matrix (v01.46w) ──
+    // Financials-first by design (developer directive, 2026-08-29): only the
+    // dossier-meta and financial rows are universally comparable, so they
+    // always render. Deeper rows unlock only when every selected company
+    // shares an ecosystem category — comparing a supplier's spec sheet against
+    // a hyperscaler's would be a category error dressed up as a table.
+    var OV_CMP_VERDICTS = [['beat', 'Beat', 'var(--ov-dev)'], ['inline', 'In line', 'var(--ov-oth)'], ['miss', 'Miss', 'var(--ov-adv)']];
+    function ovCmpFinTally(p) {
+      var t = { beat: 0, inline: 0, miss: 0, total: 0 };
+      (((p.financials || {}).periods) || []).forEach(function(per) {
+        (per.metrics || []).forEach(function(m) {
+          if (t[m.verdict] != null) { t[m.verdict]++; t.total++; }
+        });
+      });
+      return t;
+    }
+    function ovCmpSpecMap(p) {
+      // label → {band, value}; first occurrence wins (flagship groups lead)
+      var out = {};
+      ovSpecGroups(p).forEach(function(g) {
+        g.rows.forEach(function(r) {
+          if (r.label && !out[r.label]) out[r.label] = { band: r.band || '', value: r.value };
+        });
+      });
+      return out;
+    }
+    function ovRenderCompare(slugs) {
+      var main = ovMain(); ovClear(main);
+      document.title = 'Compare — Profiler';
+      ovNotesCogVisible(ovCan('fieldNote') || ovCan('commands'));
+      var back = ovEl('button', 'ov-back', '← All companies');
+      back.type = 'button';
+      back.addEventListener('click', function() { window.location.hash = ''; });
+      main.appendChild(back);
+
+      var reg = {};
+      ((ovRegistry && ovRegistry.companies) || []).forEach(function(c) { reg[c.slug] = c; });
+      var picks = slugs.filter(function(s) { return reg[s]; }).slice(0, OV_COMPARE_MAX);
+      if (picks.length < 2) {
+        main.appendChild(ovEl('p', 'ov-empty', 'Pick at least two covered companies to compare — turn on Compare on the roster, or use a link of the form #compare/slug-one,slug-two.'));
+        return;
+      }
+      main.appendChild(ovEl('p', 'ov-loading', 'Loading dossiers…'));
+      Promise.all(picks.map(function(s) {
+        if (ovProfiles[s]) return Promise.resolve(ovProfiles[s]);
+        return ovFetchJson(s + '.profile.json').then(function(p) { ovProfiles[s] = p; return p; });
+      })).then(function(profiles) {
+        // A hashchange during the fetch means this render is stale — drop it
+        var raw = decodeURIComponent((window.location.hash || '').replace(/^#/, ''));
+        if (raw.split('/')[0] !== 'compare') return;
+        var loading = main.querySelector('.ov-loading');
+        if (loading) loading.parentNode.removeChild(loading);
+        ovPaintCompare(main, picks.map(function(s, i) { return { slug: s, reg: reg[s], p: profiles[i] }; }));
+      }).catch(function() {
+        var l2 = main.querySelector('.ov-loading');
+        if (l2) l2.parentNode.removeChild(l2);
+        main.appendChild(ovEl('p', 'ov-empty', 'One of these dossiers could not be loaded.'));
+      });
+    }
+    function ovPaintCompare(main, cols) {
+      var n = cols.length;
+      // Shared categories across every selection → the Tier 2 gate
+      var shared = (cols[0].reg.categories || []).filter(function(k) {
+        return cols.every(function(c) { return (c.reg.categories || []).indexOf(k) >= 0; });
+      });
+      var deep = shared.length > 0 && !ovCompareFinOnly;
+
+      var head = ovEl('div', 'ov-co-head');
+      head.appendChild(ovEl('div', 'ov-kicker', 'Compare'));
+      // Category keys are lowercase in the registry; the roster chips uppercase
+      // them in CSS, but this heading is serif body text so capitalize here.
+      function ovCatTitle(k) { var l = ovCatLabel(k); return l.charAt(0).toUpperCase() + l.slice(1); }
+      head.appendChild(ovEl('h2', null, (deep ? shared.map(ovCatTitle).join(' / ') : 'Cross-space') + ' — ' + n + ' companies'));
+      head.appendChild(ovEl('p', 'ov-cmp-sub', deep
+        ? 'Every cell comes from these dossiers. Dossier meta and financials are always comparable; the deeper rows are shown because all ' + n + ' companies are in the same space.'
+        : 'These companies do not share an ecosystem category, so only the rows that compare honestly across different spaces are shown — dossier meta and financials as reported.'));
+      head.appendChild(ovEl('p', 'ov-sty-banner', 'Figures as reported by each company · dossiers cite public sources'));
+      main.appendChild(head);
+
+      var mx = ovEl('div', 'ov-mx');
+      mx.style.gridTemplateColumns = '148px repeat(' + n + ', minmax(0, 1fr))';
+
+      function rowLabel(text, sub) {
+        var d = ovEl('div', 'rl');
+        d.appendChild(ovEl('div', null, text));
+        if (sub) d.appendChild(ovEl('div', 'sub', sub));
+        mx.appendChild(d);
+      }
+      function cell(build) { var d = ovEl('div'); build(d); mx.appendChild(d); }
+
+      // ── Header row ──
+      rowLabel('Company');
+      cols.forEach(function(c) {
+        cell(function(d) {
+          d.className = 'co';
+          d.appendChild(ovTagRow(c.reg.categories));
+          var h = ovEl('h3');
+          var a = ovEl('button', 'ov-cmp-open', c.reg.name);
+          a.type = 'button';
+          a.addEventListener('click', function() { window.location.hash = c.slug; });
+          h.appendChild(a);
+          d.appendChild(h);
+          var bits = [];
+          if (ovTicker(c.p) || c.reg.ticker) bits.push(ovTicker(c.p) || c.reg.ticker);
+          if (ovHq(c.p) || c.reg.hq) bits.push(ovHq(c.p) || c.reg.hq);
+          d.appendChild(ovEl('div', 'mono', bits.join('\n')));
+        });
+      });
+
+      // ── Tier 0 — dossier meta (always) ──
+      rowLabel('Dossier', 'always shown');
+      cols.forEach(function(c) {
+        cell(function(d) {
+          d.appendChild(ovEl('div', 'v', 'v' + (c.p.profileVersion || 1) + (c.p.lastUpdated ? ' · ' + c.p.lastUpdated : '')));
+          d.appendChild(ovEl('div', 'v2', ((c.p.sources || []).length) + ' cited sources'));
+        });
+      });
+      rowLabel('Snapshot');
+      cols.forEach(function(c) {
+        cell(function(d) {
+          d.appendChild(ovEl('div', 'v', ovOwnership(c.p) || '—'));
+          if (c.p.employees) d.appendChild(ovEl('div', 'v2', c.p.employees));
+        });
+      });
+
+      // ── Tier 1 — financials (always) ──
+      var anyFin = cols.some(function(c) { return (((c.p.financials || {}).periods) || []).length; });
+      if (anyFin) {
+        rowLabel('Latest reported', 'as reported');
+        cols.forEach(function(c) {
+          cell(function(d) {
+            var pers = ((c.p.financials || {}).periods) || [];
+            if (!pers.length) { d.appendChild(ovEl('div', 'v2', 'No reported periods in this dossier')); return; }
+            var last = pers[pers.length - 1];
+            d.appendChild(ovEl('div', 'per', last.period || ''));
+            (last.metrics || []).slice(0, 3).forEach(function(m) {
+              var line = ovEl('div', 'met');
+              line.appendChild(ovEl('span', 'mn', m.name + ': '));
+              line.appendChild(ovEl('span', null, m.actual || '—'));
+              if (m.verdict) {
+                var cls = m.verdict === 'beat' ? 'ov-delta-beat' : (m.verdict === 'miss' ? 'ov-delta-miss' : 'ov-delta-inline');
+                line.appendChild(ovEl('span', 'vd ' + cls, ' ' + m.verdict));
+              }
+              d.appendChild(line);
+            });
+            if ((c.p.financials || {}).currency) d.appendChild(ovEl('div', 'v2', 'Reported in ' + c.p.financials.currency));
+          });
+        });
+        rowLabel('Record vs expectations', 'all periods in the dossier');
+        cols.forEach(function(c) {
+          cell(function(d) {
+            var t = ovCmpFinTally(c.p);
+            if (!t.total) { d.appendChild(ovEl('div', 'v2', 'No verdicts recorded')); return; }
+            var bar = ovEl('div', 'ov-cmp-bar');
+            OV_CMP_VERDICTS.forEach(function(v) {
+              if (!t[v[0]]) return;
+              var seg = ovEl('i');
+              seg.style.width = (t[v[0]] / t.total * 100) + '%';
+              seg.style.background = v[2];
+              seg.title = t[v[0]] + ' ' + v[1];
+              bar.appendChild(seg);
+            });
+            d.appendChild(bar);
+            d.appendChild(ovEl('div', 'v2', t.beat + ' beat · ' + t.inline + ' in line · ' + t.miss + ' miss'));
+          });
+        });
+      }
+
+      // ── Tier 2 — category-specific (same-space selections only) ──
+      if (deep) {
+        var techy = shared.some(function(k) { return k === 'supplier' || k === 'integrator'; });
+        rowLabel('Capabilities');
+        cols.forEach(function(c) {
+          cell(function(d) {
+            var ps = c.p.productsAndServices || [];
+            d.appendChild(ovEl('div', 'v', ps.length + ' product line' + (ps.length === 1 ? '' : 's')));
+            if (techy && ps.length) d.appendChild(ovEl('div', 'v2', 'Flagship: ' + ovTrunc(ps[0].name || '', 64)));
+          });
+        });
+        if (techy) {
+          var maps = cols.map(function(c) { return ovCmpSpecMap(c.p); });
+          var counts = {}, order = [];
+          maps.forEach(function(m) {
+            Object.keys(m).forEach(function(l) {
+              if (counts[l] == null) { counts[l] = 0; order.push(l); }
+              counts[l]++;
+            });
+          });
+          var sharedLabels = order.filter(function(l) { return counts[l] >= 2; }).slice(0, 8);
+          if (sharedLabels.length) {
+            var band = ovEl('div', 'ov-mx-band');
+            band.style.gridColumn = '1 / -1';
+            band.textContent = 'Technical attributes at least two of these dossiers record (' + sharedLabels.length + ' shared)';
+            mx.appendChild(band);
+            sharedLabels.forEach(function(l) {
+              var b0 = '';
+              maps.forEach(function(m) { if (!b0 && m[l] && m[l].band) b0 = m[l].band; });
+              rowLabel(l, b0 || '');
+              maps.forEach(function(m) {
+                cell(function(d) {
+                  if (m[l]) d.appendChild(ovEl('div', 'v', m[l].value));
+                  else { d.className = 'na'; d.appendChild(ovEl('div', 'v2', 'not recorded')); }
+                });
+              });
+            });
+          }
+        } else {
+          rowLabel('Lead judgment', 'labeled analysis');
+          cols.forEach(function(c) {
+            cell(function(d) {
+              var j = (c.p.strategyRead || [])[0];
+              if (!j) { d.appendChild(ovEl('div', 'v2', 'No judgments in this dossier')); return; }
+              d.appendChild(ovEl('div', 'jdg', ovTrunc(ovStratText(j), 260)));
+            });
+          });
+        }
+      }
+      var mxWrap = ovEl('div', 'ov-mx-wrap');
+      mxWrap.appendChild(mx);
+      main.appendChild(mxWrap);
+
+      var foot = ovEl('div', 'ov-cmp-foot');
+      if (!deep) {
+        foot.appendChild(ovEl('p', null, ovCompareFinOnly
+          ? 'Financials-only override is on. Turn it off and pick companies from one space to unlock capability and technical rows.'
+          : 'Deeper rows unlock when every selected company shares an ecosystem category.'));
+      }
+      foot.appendChild(ovEl('p', null, 'Judgments are each dossier\'s own labeled analysis. Figures are verbatim from the companies\' reporting as captured in their dossiers — currency is not converted.'));
+      var again = ovEl('button', 'ov-btn ghost', 'Change selection');
+      again.type = 'button';
+      again.addEventListener('click', function() {
+        ovCompareMode = true;
+        ovComparePicks = cols.map(function(c) { return c.slug; });
+        window.location.hash = '';
+      });
+      foot.appendChild(again);
+      main.appendChild(foot);
     }
 
     // ── Dossier detail ──
