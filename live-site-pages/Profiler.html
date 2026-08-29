@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.58w">
+  <meta name="build-version" content="v01.59w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -3005,9 +3005,9 @@ function ovReloadFresh() {
     // read from both dossiers' curated links plus detected cross-mentions.
     var ovNxCompany = '', ovNxKind = '', ovNxCat = '', ovNxCompare = '', ovNxFresh = false;
     // "What's new" window: an edge is fresh when its latest evidence or
-    // curated since-date falls inside the trailing 90 days.
+    // curated since-date falls inside the trailing 30 days.
     function ovNxCutoff() {
-      return new Date(Date.now() - 90 * 86400000).toISOString().slice(0, 10);
+      return new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10);
     }
     function ovNxCatLabel(c) {
       return c === 'epc' ? 'EPC' : (c === 'gc' ? 'General Contractor' : c.charAt(0).toUpperCase() + c.slice(1));
@@ -3026,7 +3026,7 @@ function ovReloadFresh() {
       back.addEventListener('click', function() { window.location.hash = ''; });
       main.appendChild(back);
       main.appendChild(ovEl('h2', null, 'Ecosystem Network'));
-      main.appendChild(ovEl('p', 'sec-note', 'Every relationship across the covered companies — curated links read from both sides\' dossiers, plus cross-mentions detected in the corpus. Filter by company, link kind, or counterparty category; click a company to open its dossier. Pick a company, then “Compare with…” a second one to see their common ground — the direct link between them plus every counterparty they share. The ✦ New in 90d toggle narrows the view to links with fresh evidence — relationship momentum since your last visit.'));
+      main.appendChild(ovEl('p', 'sec-note', 'Every relationship across the covered companies — curated links read from both sides\' dossiers, plus cross-mentions detected in the corpus. Filter by company, link kind, or counterparty category; click a company to open its dossier. Pick a company, then “Compare with…” a second one to see their common ground — the direct link between them plus every counterparty they share. The ✦ New in 30d toggle narrows the view to links with fresh evidence — relationship momentum since your last visit.'));
       var box = ovEl('div', 'nx-box');
       main.appendChild(box);
       ovGraphLoad().then(function(g) {
@@ -3067,9 +3067,9 @@ function ovReloadFresh() {
       }
       var freshCut = ovNxCutoff();
       var freshN = ((ovGraph && ovGraph.edges) || []).filter(function(e) { return bySlug[e.a] && bySlug[e.b] && e.last && e.last >= freshCut; }).length;
-      var fb = ovEl('button', 'nx-fresh' + (ovNxFresh ? ' on' : ''), '✦ New in 90d · ' + freshN);
+      var fb = ovEl('button', 'nx-fresh' + (ovNxFresh ? ' on' : ''), '✦ New in 30d · ' + freshN);
       fb.type = 'button';
-      fb.title = 'Show only links with evidence from the last 90 days — relationship momentum since your last visit';
+      fb.title = 'Show only links with evidence from the last 30 days — relationship momentum since your last visit';
       fb.setAttribute('aria-pressed', ovNxFresh ? 'true' : 'false');
       fb.addEventListener('click', function() { ovNxFresh = !ovNxFresh; ovNetworkPaint(box); });
       bar.appendChild(fb);
@@ -6274,6 +6274,7 @@ function ovReloadFresh() {
         (rep.sections || []).forEach(function(sec) { main.appendChild(rpSection(sec)); });
         var ind = rpIndicators(rep); if (ind) main.appendChild(ind);
         var lim = rpLimitations(rep); if (lim) main.appendChild(lim);
+        main.appendChild(rpRelMap(rep));
         main.appendChild(rpCitations(rep));
         // Delegated citation-superscript clicks — no hrefs, so the hash
         // router never fires and the report view is not re-rendered.
@@ -6288,6 +6289,46 @@ function ovReloadFresh() {
       }).catch(function() {
         loading.textContent = 'Could not load the report (' + id + '). It may not be deployed yet.';
       });
+    }
+    // ── Relationship map (v01.59w) — live overlay from the ecosystem graph:
+    // every curated link among the report's in-scope companies, rendered with
+    // the Network explorer's row primitives. Drawn from the CURRENT dossiers
+    // and labeled as such, so it complements the immutable report snapshot
+    // rather than altering it; the Word export deliberately excludes it. ──
+    function rpRelMap(rep) {
+      var box = ovEl('section', 'gd-sec rp-sec');
+      box.appendChild(ovEl('h3', null, 'Relationship map'));
+      box.appendChild(ovEl('p', 'sec-note', 'Live overlay — curated relationship links among the in-scope companies, read from the current dossiers via the ecosystem graph. This reflects today’s data, not the report’s snapshot date, and is excluded from the Word export; open ⛓ Network for the full explorer.'));
+      var body = ovEl('div');
+      body.appendChild(ovEl('p', 'ov-loading', 'Loading the relationship graph…'));
+      box.appendChild(body);
+      var slugs = ((rep.coverage && rep.coverage.companies) || []).map(function(c) { return c.slug; }).filter(Boolean);
+      ovGraphLoad().then(function(g) {
+        if (!g || !document.body.contains(body)) { box.hidden = true; return; }
+        // Coverage names first so deep links work before the roster loads;
+        // registry entries overlay them to supply categories for the colors.
+        var bySlug = {};
+        ((rep.coverage && rep.coverage.companies) || []).forEach(function(c) {
+          if (c.slug) bySlug[c.slug] = { slug: c.slug, name: c.name || c.slug, categories: [] };
+        });
+        ((ovRegistry && ovRegistry.companies) || []).forEach(function(c) { bySlug[c.slug] = c; });
+        var edges = [];
+        for (var i = 0; i < slugs.length; i++)
+          for (var j = i + 1; j < slugs.length; j++) {
+            var e = ovRelEdgeFor(slugs[i], slugs[j]);
+            if (e && e.curated && bySlug[e.a] && bySlug[e.b]) edges.push(e);
+          }
+        var ord = { work: 0, comp: 1, other: 2, det: 3 };
+        edges.sort(function(a, b) {
+          var d = ord[ovNxKindOf(a)] - ord[ovNxKindOf(b)];
+          return d || String(b.last || '').localeCompare(String(a.last || ''));
+        });
+        ovClear(body);
+        if (!edges.length) { box.hidden = true; return; }
+        body.appendChild(ovEl('div', 'nx-count', edges.length + ' curated link' + (edges.length === 1 ? '' : 's') + ' among the ' + slugs.length + ' in-scope companies'));
+        edges.forEach(function(e) { body.appendChild(ovNxRow(e, bySlug)); });
+      });
+      return box;
     }
     // ── Report Word export — builds the document from the report data
     // directly (deterministic, DOM-independent), same .doc mechanics as the

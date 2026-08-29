@@ -3,11 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.71r] — 2026-08-29 07:48:18 PM EST
+
+> **Prompt:** "I would prefer 30 days instead of 90 days. Then continue with your recommendation."
+
+### Added
+- **Relationship map in the report view (`live-site-pages/Profiler.html` v01.59w)** — `rpRelMap(rep)` renders between Limitations and the Source List in `#report/<id>`: every curated edge among the report's `coverage.companies` slugs (via `ovRelEdgeFor` over all pairs, curated-only — detected cross-mentions excluded), sorted working → competing → other then freshest first, reusing `ovNxRow` for consistency with the ⛓ Network explorer. Labeled as a live overlay ("reflects today's data, not the report's snapshot date") so it never misrepresents the immutable snapshot, and deliberately excluded from `rpWordExport` (the export stays deterministic report data only). Coverage names seed `bySlug` before the registry overlays categories, so deep links render before the roster loads. Self-hides when the scope has no curated links. Playwright: 41 curated links among the 12 in-scope companies on the grid-scale BESS report, zero page errors
+
+### Changed
+- **Recency window 90 → 30 days (developer preference)** — `ovNxCutoff()` now uses a trailing-30-day window; button label "✦ New in 30d · N", tooltip, and explorer explainer updated to match. 22 of 472 edges are fresh at 30 days (vs 77 at 90)
 
 ## [v03.70r] — 2026-08-29 07:31:17 PM EST
 

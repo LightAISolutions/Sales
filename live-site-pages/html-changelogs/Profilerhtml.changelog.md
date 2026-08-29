@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.59w] — 2026-08-29 07:48:18 PM EST — v03.71r
+
+### Added
+- Industry reports now include a Relationship map — every curated link between the report's in-scope companies, each spelled out from both sides with its freshest supporting quote. Clearly labeled as current data alongside the report's point-in-time content
+
+### Changed
+- The "New in" window in the Ecosystem Network explorer is now 30 days instead of 90 — a tighter definition of recent momentum
 
 ## [v01.58w] — 2026-08-29 07:31:17 PM EST — v03.70r
 
