@@ -77,6 +77,19 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v02.69r] — 2026-08-19 03:21:20 PM EST — [d449b44](https://github.com/LightAISolutions/Sales/commit/d449b44e800c857c798f833ed5477597be2d1fc3)
+
+> **Prompt:** "I don't know anything about China's data centers' HVDC architecture (240Vdc, 336Vdc, 800Vdc). I have basic working knowledge of the US power flow from 135-230kVac (high AC voltage) -> substation and HV transformer step down to 10.47-34.5kVac (medium AC voltage) -> MV transformer and rectifier step down and transform to 480/380Vdc -> PDUs distribute power to server racks -> PSUs step down voltage to 56V -> 12V -> 6V ->~1V at the chip level. Teach me everything I need to know to sound knowledgeable about both architectures and be able to clearly explain the difference in an interview."
+
+### Added
+- **Profiler Prep Command output for Zhonhen: `repository-information/study-prep/zhonhen/zhonhen-lesson-plan.md` + `ZHONHEN-LESSON-PLAN.pdf`** (6 pages, BloombergNEF skin) — a five-module technology curriculum on data-center power architectures: the physics toolkit (I²R, stage-deletion economics, AC-grid/DC-endpoint tension), the Western AC chain stage by stage, China's 240V/336V HVDC (telecom −48Vdc heritage, the stock-PSU-passthrough adoption trick, battery-on-bus zero-transfer design, the Panama one-stage module), NVIDIA's 800Vdc convergence, and interview-ready scripts with objection Q&A and a numbers-to-memorize line
+- **The lesson plan explicitly corrects two errors in the developer's own stated mental model** before tonight's interview: the legacy chain's MV transformer produces 480V *AC*, not "480/380Vdc" (facility-level DC exists only in the new architectures; the legacy chain's DC hides inside the UPS and after the PSU), and the low-voltage ladder is 54 → 12 → ~1V with no standard 6V stage. Also flags that China's MV standard is 10kV (vs US 12.47–34.5kV) — likely the source of the developer's "10.47kV"
+- **`live-site-pages/profiler-data/zhonhen.study.json`** — the public-safe in-app rendering: 6 concept sections + 12 flashcards (technology-only per the prep-command contract, no interview context)
+- **`scripts/build-study-prep-pdf.mjs`** gained the `zhonhen-lesson-plan` registry entry
+
+### Changed
+- **README tree**: added the lesson-plan pair to the study-prep zhonhen block (lesson plan listed before the brief, matching the hithium/megmeet convention) and `zhonhen.study.json` to profiler-data
+
 ## [v02.68r] — 2026-08-18 10:05:58 PM EST — [b37809f](https://github.com/LightAISolutions/Sales/commit/b37809fd4220c3f16ccd502f5e52576c4fcb9be6)
 
 > **Prompt:** "Profiler Zhonhen Electric. Then, create an interview prep guide for an AIDC Sales Director position with Jacky Zhu, son of the current chairman. Output as a download able PDF file."

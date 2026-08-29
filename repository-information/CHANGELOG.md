@@ -9,6 +9,17 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with pr
 
 *(No changes yet)*
 
+## [v03.69r] — 2026-08-29 07:19:37 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Common-ground compare mode in the ⛓ Network explorer (`live-site-pages/Profiler.html` v01.57w)** — picking a company in the `#network` filter bar now reveals a "Compare with…" selector; with two companies picked, `ovNxCommonPaint` renders their direct link (via `ovRelEdgeFor`) plus every shared counterparty found through `ovGraphBy`, each side's typed tie spelled out from both curated dossier sides (falling back to detected-mention counts), sorted by freshest evidence. Kind filter matches either connecting edge; category filter applies to the shared counterparty. The flat edge-row renderer was extracted into `ovNxRow` so the direct-link section reuses it. Verified with node --check and Playwright (CATL + Tesla: direct link yes, 16 shared counterparties, zero page errors)
+
+### Changed
+- **Archive rotations (both changelogs were at capacity)** — `Profilerhtml.changelog.md` moved its 2026-08-08 date group (v01.09w–v01.07w, SHA-enriched) to `Profilerhtml.changelog-archive.md` (now 48/50); this CHANGELOG moved v02.69r (2026-08-19, SHA-enriched) to `CHANGELOG-archive.md` (stays 100/100)
+- **README tree** — Profiler page-version link corrected from stale `v01.54w` to `v01.57w` (the v01.55w/v01.56w bumps missed the tree display)
+
 ## [v03.68r] — 2026-08-29 07:03:56 PM EST
 
 > So far, almost everything looks good. See the attached screenshot - This is the only relationship that I found that doesn't really look useful at all, so remove it. I think making the "Detected in other dossiers" group a collapsed-by-default group is a good idea since those connections are relatively weak, but still existing. Can you think of any other way to improve this Relationships function or build on it?
@@ -2009,16 +2020,3 @@ If you hit the end of my weekly Fable limit before this task is done, switch to 
 
 ### Note
 - The source deck is marked confidential on every slide. The summary lives in `repository-information/study-prep/` — the non-deployed prep directory that already carries recruiting-channel details — with an explicit handling note at the top; the deck itself was NOT added to the repo, and nothing deck-sourced enters the public Profiler dossier
-
-## [v02.69r] — 2026-08-19 03:21:20 PM EST
-
-> **Prompt:** "I don't know anything about China's data centers' HVDC architecture (240Vdc, 336Vdc, 800Vdc). I have basic working knowledge of the US power flow from 135-230kVac (high AC voltage) -> substation and HV transformer step down to 10.47-34.5kVac (medium AC voltage) -> MV transformer and rectifier step down and transform to 480/380Vdc -> PDUs distribute power to server racks -> PSUs step down voltage to 56V -> 12V -> 6V ->~1V at the chip level. Teach me everything I need to know to sound knowledgeable about both architectures and be able to clearly explain the difference in an interview."
-
-### Added
-- **Profiler Prep Command output for Zhonhen: `repository-information/study-prep/zhonhen/zhonhen-lesson-plan.md` + `ZHONHEN-LESSON-PLAN.pdf`** (6 pages, BloombergNEF skin) — a five-module technology curriculum on data-center power architectures: the physics toolkit (I²R, stage-deletion economics, AC-grid/DC-endpoint tension), the Western AC chain stage by stage, China's 240V/336V HVDC (telecom −48Vdc heritage, the stock-PSU-passthrough adoption trick, battery-on-bus zero-transfer design, the Panama one-stage module), NVIDIA's 800Vdc convergence, and interview-ready scripts with objection Q&A and a numbers-to-memorize line
-- **The lesson plan explicitly corrects two errors in the developer's own stated mental model** before tonight's interview: the legacy chain's MV transformer produces 480V *AC*, not "480/380Vdc" (facility-level DC exists only in the new architectures; the legacy chain's DC hides inside the UPS and after the PSU), and the low-voltage ladder is 54 → 12 → ~1V with no standard 6V stage. Also flags that China's MV standard is 10kV (vs US 12.47–34.5kV) — likely the source of the developer's "10.47kV"
-- **`live-site-pages/profiler-data/zhonhen.study.json`** — the public-safe in-app rendering: 6 concept sections + 12 flashcards (technology-only per the prep-command contract, no interview context)
-- **`scripts/build-study-prep-pdf.mjs`** gained the `zhonhen-lesson-plan` registry entry
-
-### Changed
-- **README tree**: added the lesson-plan pair to the study-prep zhonhen block (lesson plan listed before the brief, matching the hithium/megmeet convention) and `zhonhen.study.json` to profiler-data

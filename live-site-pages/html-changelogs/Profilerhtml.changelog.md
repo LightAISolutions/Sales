@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.57w] — 2026-08-29 07:19:37 PM EST — v03.69r
+
+### Added
+- Compare mode in the Ecosystem Network explorer — pick a company, then "Compare with…" a second one to see their common ground: the direct link between them (if any) and every counterparty they both work with, with each side's relationship spelled out
 
 ## [v01.56w] — 2026-08-29 07:03:56 PM EST — v03.68r
 
@@ -350,29 +355,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 ### Added
 - The "Add a Field Note" box can now save notes and upload Word/PDF files directly inside the app — type, attach, and save in one place with a one-time Google sign-in (activates once the backend is connected; until then the box keeps its current behavior)
-
-## [v01.09w] — 2026-08-08 10:36:20 PM EST — v02.07r
-
-### Added
-- "Field note 📝" button at the top of every dossier — one tap jumps straight to the note box (previously it was easy to miss at the bottom of long dossiers)
-- "Upload Word/PDF 📎" button in the note box — opens a form where you attach your meeting-notes document; the file is stored and a log entry is created automatically
-- "📎 File" shortcut in the Field Notes changelog header for uploading a document without opening a dossier
-
-### Changed
-- Two test entries were removed from the Field Notes log
-
-## [v01.08w] — 2026-08-08 10:11:17 PM EST — v02.04r
-
-### Added
-- "Add a Field Note" box at the bottom of every dossier — type what you learned, pick how you learned it and your 0–100 confidence, and save in one tap
-
-### Changed
-- The "＋ Add note" button in the Field Notes changelog now opens the same streamlined note form
-
-## [v01.07w] — 2026-08-08 07:36:43 PM EST — v01.99r
-
-### Added
-- Dossier version history — companies with archived dossier versions show a "Versions 🕘" button; browse any previous version as a clearly-labeled historical snapshot with one tap back to the current dossier
-- "＋ Add note" button in the Field Notes changelog — opens the new sign-in-protected note form where you can record what you learned and rate your confidence
 
 Developed by: LightAISolutions

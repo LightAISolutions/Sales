@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.56w">
+  <meta name="build-version" content="v01.57w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -396,6 +396,9 @@
     .nx-note { color: var(--ov-muted); font-size: 12.5px; line-height: 1.55; margin-top: 5px; overflow-wrap: break-word; }
     .nx-quote { color: var(--ov-muted); font-size: 12px; line-height: 1.55; margin-top: 4px; overflow-wrap: break-word; }
     .nx-quote .wh { color: var(--ov-faint); font: 10.5px var(--ov-mono); letter-spacing: 0.05em; }
+    .nx-sub { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ov-faint); margin: 16px 0 2px; }
+    .nx-side { color: var(--ov-muted); font-size: 12.5px; line-height: 1.55; margin-top: 4px; overflow-wrap: break-word; }
+    .nx-side .wh { color: var(--ov-faint); font: 10.5px var(--ov-mono); letter-spacing: 0.05em; }
     /* Settings ⚙ menu + Commands reference (v01.45w) */
     #ov-settings-menu {
       position: fixed; right: 22px; bottom: 92px; z-index: 8901; display: none; width: 310px;
@@ -2996,7 +2999,7 @@ function ovReloadFresh() {
     // ── Ecosystem explorer (#network, v01.55w) ──
     // The whole graph in one flat, filterable view: who works with whom,
     // read from both dossiers' curated links plus detected cross-mentions.
-    var ovNxCompany = '', ovNxKind = '', ovNxCat = '';
+    var ovNxCompany = '', ovNxKind = '', ovNxCat = '', ovNxCompare = '';
     function ovNxCatLabel(c) {
       return c === 'epc' ? 'EPC' : (c === 'gc' ? 'General Contractor' : c.charAt(0).toUpperCase() + c.slice(1));
     }
@@ -3014,7 +3017,7 @@ function ovReloadFresh() {
       back.addEventListener('click', function() { window.location.hash = ''; });
       main.appendChild(back);
       main.appendChild(ovEl('h2', null, 'Ecosystem Network'));
-      main.appendChild(ovEl('p', 'sec-note', 'Every relationship across the covered companies — curated links read from both sides\' dossiers, plus cross-mentions detected in the corpus. Filter by company, link kind, or counterparty category; click a company to open its dossier.'));
+      main.appendChild(ovEl('p', 'sec-note', 'Every relationship across the covered companies — curated links read from both sides\' dossiers, plus cross-mentions detected in the corpus. Filter by company, link kind, or counterparty category; click a company to open its dossier. Pick a company, then “Compare with…” a second one to see their common ground — the direct link between them plus every counterparty they share.'));
       var box = ovEl('div', 'nx-box');
       main.appendChild(box);
       ovGraphLoad().then(function(g) {
@@ -3043,12 +3046,18 @@ function ovReloadFresh() {
       var coOpts = [['', 'All companies']].concat(
         ((ovRegistry && ovRegistry.companies) || []).slice().sort(function(a, b) { return a.name.localeCompare(b.name); })
           .map(function(c) { return [c.slug, c.name]; }));
-      sel(coOpts, ovNxCompany, function(v) { ovNxCompany = v; }, 'Filter by company');
+      sel(coOpts, ovNxCompany, function(v) { ovNxCompany = v; if (!v || ovNxCompare === v) ovNxCompare = ''; }, 'Filter by company');
       sel([['', 'All link kinds'], ['work', 'Working with'], ['comp', 'Competing with'], ['other', 'Other links'], ['det', 'Detected only']],
         ovNxKind, function(v) { ovNxKind = v; }, 'Filter by link kind');
       var catOpts = [['', 'All categories']].concat(((ovRegistry && ovRegistry.categories) || []).map(function(c) { return [c, ovNxCatLabel(c)]; }));
       sel(catOpts, ovNxCat, function(v) { ovNxCat = v; }, 'Filter by counterparty category');
+      if (ovNxCompany) {
+        // Second pick unlocks common-ground mode: the two companies' shared world.
+        var cmpOpts = [['', 'Compare with…']].concat(coOpts.slice(1).filter(function(o) { return o[0] !== ovNxCompany; }));
+        sel(cmpOpts, ovNxCompare, function(v) { ovNxCompare = v; }, 'Compare with a second company — show their common ground');
+      }
       box.appendChild(bar);
+      if (ovNxCompany && ovNxCompare) { ovNxCommonPaint(box, bySlug); return; }
       var edges = ((ovGraph && ovGraph.edges) || []).filter(function(e) {
         if (!bySlug[e.a] || !bySlug[e.b]) return false;
         if (ovNxCompany && e.a !== ovNxCompany && e.b !== ovNxCompany) return false;
@@ -3066,52 +3075,113 @@ function ovReloadFresh() {
       edges.sort(function(a, b) { return String(b.last || '').localeCompare(String(a.last || '')); });
       box.appendChild(ovEl('div', 'nx-count', edges.length + ' link' + (edges.length === 1 ? '' : 's') + ' shown · ' + (((ovGraph && ovGraph.edges) || []).length) + ' in the graph'));
       if (!edges.length) { box.appendChild(ovEl('p', 'ov-empty', 'No links match the current filters.')); return; }
-      edges.forEach(function(e) {
+      edges.forEach(function(e) { box.appendChild(ovNxRow(e, bySlug)); });
+    }
+    function ovNxRow(e, bySlug) {
+      var row = ovEl('div', 'nx-row');
+      var pair = ovEl('div', 'nx-pair');
+      function coBtn(slug) {
+        var b = ovEl('button', 'nx-co', bySlug[slug].name);
+        b.type = 'button';
+        b.style.borderColor = ovRelColor(bySlug[slug].categories);
+        b.addEventListener('click', function() { window.location.hash = slug; });
+        return b;
+      }
+      // With a company filter, lead with it so rows scan as "X and …".
+      var first = (ovNxCompany && e.b === ovNxCompany) ? e.b : e.a;
+      var second = first === e.a ? e.b : e.a;
+      pair.appendChild(coBtn(first));
+      var kind = ovNxKindOf(e);
+      pair.appendChild(ovEl('span', 'nx-tie' + (kind === 'det' ? ' det' : ''),
+        kind === 'work' ? 'Working' : (kind === 'comp' ? 'Competing' : (kind === 'other' ? 'Linked' : 'Detected'))));
+      pair.appendChild(coBtn(second));
+      var metaBits = [];
+      if (e.last) metaBits.push('latest ' + e.last);
+      metaBits.push((e.evid || []).length + ' mention' + ((e.evid || []).length === 1 ? '' : 's'));
+      pair.appendChild(ovEl('span', 'nx-meta', metaBits.join(' · ')));
+      row.appendChild(pair);
+      // Spell the typed link out from each side that curated it.
+      var ca = e.curated && e.curated.a, cb = e.curated && e.curated.b;
+      var parts = [];
+      if (ca && cb && ca.type === 'competitor' && cb.type === 'competitor') parts.push('Competitors — both dossiers agree.');
+      else {
+        if (ca) parts.push(bySlug[e.b].name + ' is ' + bySlug[e.a].name + '’s ' + (OV_REL_TYPES[ca.type] || 'link').toLowerCase() + '.');
+        if (cb) parts.push(bySlug[e.a].name + ' is ' + bySlug[e.b].name + '’s ' + (OV_REL_TYPES[cb.type] || 'link').toLowerCase() + '.');
+      }
+      var note = (ca && ca.note) || (cb && cb.note) || '';
+      if (parts.length || note) row.appendChild(ovEl('div', 'nx-note', parts.join(' ') + (note ? ' ' + note : '')));
+      // One quote: the freshest dated mention, attributed to the dossier it
+      // lives in — the full record is on either company's Relationships tab.
+      var best = null;
+      (e.evid || []).forEach(function(v) {
+        if (!best || String(v.date || '') > String(best.date || '')) best = v;
+      });
+      if (best) {
+        var q = ovEl('div', 'nx-quote');
+        var fromName = bySlug[best.from === 'a' ? e.a : e.b].name;
+        q.appendChild(ovEl('span', 'wh', fromName + ' dossier · ' + best.where + (best.date ? ' · ' + best.date : '')));
+        q.appendChild(document.createTextNode(' — ' + best.text));
+        row.appendChild(q);
+      }
+      return row;
+    }
+    // ── Common-ground mode (v01.57w): with two companies picked, answer "what
+    // do these two share?" — their direct link plus every counterparty that
+    // both are connected to, each side's tie spelled out from the graph. ──
+    function ovNxCommonPaint(box, bySlug) {
+      var A = ovNxCompany, B = ovNxCompare;
+      function tieText(t, c, e) {
+        var tS = e.a === t ? 'a' : 'b', cS = tS === 'a' ? 'b' : 'a';
+        var ct = e.curated && e.curated[tS], cc = e.curated && e.curated[cS];
+        if (ct && cc && ct.type === 'competitor' && cc.type === 'competitor') return 'Competitors — both dossiers agree.';
+        if (!ct && !cc) return 'Detected — ' + (e.evid || []).length + ' cross-mention' + ((e.evid || []).length === 1 ? '' : 's') + (e.last ? ', latest ' + e.last : '') + '.';
+        var parts = [];
+        if (ct) parts.push(bySlug[c].name + ' is ' + bySlug[t].name + '’s ' + (OV_REL_TYPES[ct.type] || 'link').toLowerCase() + '.');
+        if (cc) parts.push(bySlug[t].name + ' is ' + bySlug[c].name + '’s ' + (OV_REL_TYPES[cc.type] || 'link').toLowerCase() + '.');
+        var note = (ct && ct.note) || (cc && cc.note) || '';
+        return parts.join(' ') + (note ? ' ' + note : '');
+      }
+      var direct = ovRelEdgeFor(A, B);
+      var mine = {}, shared = [];
+      (ovGraphBy[A] || []).forEach(function(e) { mine[e.a === A ? e.b : e.a] = e; });
+      (ovGraphBy[B] || []).forEach(function(e) {
+        var c = e.a === B ? e.b : e.a;
+        if (c !== A && mine[c] && bySlug[c]) shared.push({ slug: c, ea: mine[c], eb: e });
+      });
+      if (ovNxKind) shared = shared.filter(function(s) { return ovNxKindOf(s.ea) === ovNxKind || ovNxKindOf(s.eb) === ovNxKind; });
+      if (ovNxCat) shared = shared.filter(function(s) { return (bySlug[s.slug].categories || []).indexOf(ovNxCat) >= 0; });
+      shared.sort(function(x, y) {
+        var mx = String(x.ea.last || '') > String(x.eb.last || '') ? String(x.ea.last || '') : String(x.eb.last || '');
+        var my = String(y.ea.last || '') > String(y.eb.last || '') ? String(y.ea.last || '') : String(y.eb.last || '');
+        return my.localeCompare(mx);
+      });
+      box.appendChild(ovEl('div', 'nx-count', bySlug[A].name + ' + ' + bySlug[B].name + ' — direct link: ' + (direct ? 'yes' : 'none') + ' · ' + shared.length + ' shared counterpart' + (shared.length === 1 ? 'y' : 'ies')));
+      if (direct) {
+        box.appendChild(ovEl('div', 'nx-sub', 'Direct link'));
+        box.appendChild(ovNxRow(direct, bySlug));
+      }
+      if (!shared.length) {
+        if (!direct) box.appendChild(ovEl('p', 'ov-empty', 'No common ground found between these two companies with the current filters.'));
+        return;
+      }
+      box.appendChild(ovEl('div', 'nx-sub', 'Shared counterparties — linked to both'));
+      shared.forEach(function(s) {
         var row = ovEl('div', 'nx-row');
         var pair = ovEl('div', 'nx-pair');
-        function coBtn(slug) {
-          var b = ovEl('button', 'nx-co', bySlug[slug].name);
-          b.type = 'button';
-          b.style.borderColor = ovRelColor(bySlug[slug].categories);
-          b.addEventListener('click', function() { window.location.hash = slug; });
-          return b;
-        }
-        // With a company filter, lead with it so rows scan as "X and …".
-        var first = (ovNxCompany && e.b === ovNxCompany) ? e.b : e.a;
-        var second = first === e.a ? e.b : e.a;
-        pair.appendChild(coBtn(first));
-        var kind = ovNxKindOf(e);
-        pair.appendChild(ovEl('span', 'nx-tie' + (kind === 'det' ? ' det' : ''),
-          kind === 'work' ? 'Working' : (kind === 'comp' ? 'Competing' : (kind === 'other' ? 'Linked' : 'Detected'))));
-        pair.appendChild(coBtn(second));
-        var metaBits = [];
-        if (e.last) metaBits.push('latest ' + e.last);
-        metaBits.push((e.evid || []).length + ' mention' + ((e.evid || []).length === 1 ? '' : 's'));
-        pair.appendChild(ovEl('span', 'nx-meta', metaBits.join(' · ')));
+        var b = ovEl('button', 'nx-co', bySlug[s.slug].name);
+        b.type = 'button';
+        b.style.borderColor = ovRelColor(bySlug[s.slug].categories);
+        b.addEventListener('click', function() { window.location.hash = s.slug; });
+        pair.appendChild(b);
+        pair.appendChild(ovEl('span', 'nx-tie' + (ovNxKindOf(s.ea) === 'det' && ovNxKindOf(s.eb) === 'det' ? ' det' : ''), 'Shared'));
+        pair.appendChild(ovEl('span', 'nx-meta', (bySlug[s.slug].categories || []).map(ovNxCatLabel).join(' · ')));
         row.appendChild(pair);
-        // Spell the typed link out from each side that curated it.
-        var ca = e.curated && e.curated.a, cb = e.curated && e.curated.b;
-        var parts = [];
-        if (ca && cb && ca.type === 'competitor' && cb.type === 'competitor') parts.push('Competitors — both dossiers agree.');
-        else {
-          if (ca) parts.push(bySlug[e.b].name + ' is ' + bySlug[e.a].name + '’s ' + (OV_REL_TYPES[ca.type] || 'link').toLowerCase() + '.');
-          if (cb) parts.push(bySlug[e.a].name + ' is ' + bySlug[e.b].name + '’s ' + (OV_REL_TYPES[cb.type] || 'link').toLowerCase() + '.');
-        }
-        var note = (ca && ca.note) || (cb && cb.note) || '';
-        if (parts.length || note) row.appendChild(ovEl('div', 'nx-note', parts.join(' ') + (note ? ' ' + note : '')));
-        // One quote: the freshest dated mention, attributed to the dossier it
-        // lives in — the full record is on either company's Relationships tab.
-        var best = null;
-        (e.evid || []).forEach(function(v) {
-          if (!best || String(v.date || '') > String(best.date || '')) best = v;
+        [[A, s.ea], [B, s.eb]].forEach(function(p) {
+          var d = ovEl('div', 'nx-side');
+          d.appendChild(ovEl('span', 'wh', bySlug[p[0]].name + ' ↔ ' + bySlug[s.slug].name));
+          d.appendChild(document.createTextNode(' — ' + tieText(p[0], s.slug, p[1])));
+          row.appendChild(d);
         });
-        if (best) {
-          var q = ovEl('div', 'nx-quote');
-          var fromName = bySlug[best.from === 'a' ? e.a : e.b].name;
-          q.appendChild(ovEl('span', 'wh', fromName + ' dossier · ' + best.where + (best.date ? ' · ' + best.date : '')));
-          q.appendChild(document.createTextNode(' — ' + best.text));
-          row.appendChild(q);
-        }
         box.appendChild(row);
       });
     }
