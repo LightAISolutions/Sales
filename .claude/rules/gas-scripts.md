@@ -90,20 +90,12 @@ The inline decode reverses this: `atob()` then string-reverse. The iframe is cre
 The setup script (`scripts/setup-gas-project.sh`) generates config.json files inline with placeholder values when creating new projects — there is no separate template config file to maintain.
 
 ## Commit Message Naming
-*Rule: see Pre-Commit Checklist item [PC-COMMIT-MSG] #8 in CLAUDE.md.*
-- All version types use the `v` prefix — suffix indicates type: `r` = repository, `g` = Google Apps Script, `w` = website
-- The **push commit** (final commit before `git push`) starts with the repo version prefix (`v01.XXr`) since repo version bumps on the push commit
-- When `.gs` or HTML versions are also bumped on the push commit, append them in order: `r`, `g`, `w`
-- **Intermediate commits** (earlier commits in the same session) use `g`/`w` prefixes only if those versions were bumped on that commit; otherwise, use a plain descriptive message
-- Push commit examples:
-  - `v01.05r Fix typo in CLAUDE.md` (repo-only change)
-  - `v01.06r v01.19g Fix sign-in popup to auto-close after authentication`
-  - `v01.07r v01.19g v01.12w Add auth wall with build version bump`
-- Intermediate commit examples:
-  - `v01.14g Fix sign-in popup timing` (GAS change, no repo version)
-  - `v01.02w Update page layout` (HTML change, no repo version)
-  - `Fix typo in CLAUDE.md` (no version bumps at all)
+*Rule: see Pre-Commit Checklist item [PC-COMMIT-MSG] #8 in CLAUDE.md — the push commit message carries the repo version prefix ONLY.*
+- All version types use the `v` prefix — suffix indicates type: `r` = repository, `g` = Google Apps Script, `w` = website. Only the `r` version ever appears in commit messages; `g`/`w` versions live in their version files and changelog headers
+- The **push commit** (final commit before `git push`) starts with the repo version prefix followed by a descriptive message (e.g. `v01.05r Fix typo in CLAUDE.md`) — do NOT append `g`/`w` versions, even when those were bumped in the same commit. Which layers a push touched is recorded by the CHANGELOG version section (per-file subheadings) and by each page/GAS changelog header's repo-version cross-reference — the archive rotation's SHA lookups rely on that cross-reference and on the leading `vXX.XXr `, never on `g`/`w` prefixes in commit subjects
+- **Intermediate commits** (earlier commits in the same session) use a plain descriptive message with no version prefix
 - SHA backfill commit: always uses `Backfill CHANGELOG SHA` — no version prefix, exempt from all push commit rules (see [PC-COMMIT-MSG] #8)
+- *(Superseded 2026-08-29, developer decision: this section previously instructed appending bumped `g`/`w` versions to push commits in `r`, `g`, `w` order, and prefixing intermediate commits with bumped `g`/`w` versions — both contradicted [PC-COMMIT-MSG] #8, the single source of truth, from the initial commit onward. Historical multi-version commit subjects remain valid history; SHA-enrichment greps anchor on the leading `vXX.XXr ` and match both forms.)*
 
 ## Test Quality
 

@@ -77,6 +77,80 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v02.68r] — 2026-08-18 10:05:58 PM EST — [b37809f](https://github.com/LightAISolutions/Sales/commit/b37809fd4220c3f16ccd502f5e52576c4fcb9be6)
+
+> **Prompt:** "Profiler Zhonhen Electric. Then, create an interview prep guide for an AIDC Sales Director position with Jacky Zhu, son of the current chairman. Output as a download able PDF file."
+
+### Added
+- **New Profiler dossier: `zhonhen.profile.json` (profileVersion 1)** — Hangzhou Zhonhen Electric Co., Ltd. (SZSE: 002364), China's #1 data-center HVDC power vendor, researched via the standard two-agent protocol (~105 evaluated sources across first-party IR/PR/product channels and third-party filings, consultancy data and trade press) and authored in the active `intel-briefing` style: BLUF summary, five confidence-tagged key judgments, 6 product lines with full v2 depth fields, 4 technical-spec blocks, 13 recent developments, 8 decision makers, 3 financial periods, 41 sources. Registered in `profiler-companies.json` (roster now **41 companies**)
+- **The research corrected the tasking's framing in three places, all documented in the dossier**: the current chairman is **Bao Xiaoru** — the interviewer's mother — not father Zhu Guoding, who is actual controller with no board seat and a December 2025 securities-manipulation conviction; the recruiter's "~50% HVDC share" is **31%** per the one named consultancy (still #1, CR3 72%); and CATL's RMB 4.1B investment (definitive agreements 14 August 2026) buys **49% of the controlling holdco**, not a direct listed-company stake
+- **New interview brief: `repository-information/study-prep/zhonhen/zhonhen-interview-brief.md` + `ZHONHEN-INTERVIEW-BRIEF.pdf`** (11 pages, 17 sections, BloombergNEF skin) for the 19 August first-round interview with Zhu Yikun (朱一鲲, "Jacky Zhu" per the recruiting channel), co-head of overseas business with a personal 10% stake in the SuperX Digital Power JV. Structure follows the Hithium/Megmeet briefs: logistics (from the calendar invite — including the Teams one-hour cutoff), the interviewer read, the recruiter's three published probe areas as a prep syllabus, a recruiter-claims-vs-public-record table, the HVDC/Panama architecture story, a US entry thesis built on the market report's time-to-power and craft-labor arguments, the FCC/tariff/FEOC regulatory read for a Chinese HVDC vendor ([Analysis]-labelled), objection handling, questions to ask, a do-not-say list, vocabulary, and a ten-question self-test
+- **`scripts/build-study-prep-pdf.mjs`** gained the `zhonhen-interview-brief` registry entry
+
+### Changed
+- **README tree**: added `zhonhen.profile.json` to the profiler-data listing and a `zhonhen/` block to study-prep (wartsila's tree-terminator characters adjusted since it is no longer the last entry)
+
+## [v02.67r] — 2026-08-18 06:16:45 AM EST — [12d3737](https://github.com/LightAISolutions/Sales/commit/12d373758ced83dd2d9fb4c10b14b5a5ec5cd12e)
+
+> **Prompt:** "I closed Profiler completely and reopened it with the ?fresh=1 addition and this is the result. I already signed in." *(with a screenshot on v01.31w / v01.16g showing the notes log reading "Could not load field notes — sign in and try again.")*
+
+### Fixed
+- `Profiler.html` (v01.32w) — **the notes-log load failure was a dead end.** Its `list` handler collapsed every cause into one sentence, printed no error code, and offered no way to act. The note box beside it has had a working recovery path since v01.02g (`sessionGuard` → `renderSignin`); the ⚙ panel never used it. Same defect class as the sign-in wall before v01.11g, where four distinct causes produced one indistinguishable message
+- The handler is now `loadNotes()`, re-callable, and branches by cause: session errors say "Your sign-in has expired", `no_backend` says the service is not reachable, anything else is generic. **All non-`ADMIN_ONLY` failures print `Reason: <code>`** so a failure can be reported precisely instead of described
+- A **Sign in and retry** button appears on every recoverable failure. It clears the stored session and role, calls the existing `ovNoteSignIn`, and on success re-runs `loadNotes()` in place. Suppressed for `no_backend`, which signing in cannot fix — the page never decoded a deployment URL, so there is nothing to sign in to
+- The import bar is no longer hidden when the list fails. It only dedups against the notes; hiding it left no path forward at all
+
+### Notes
+- `ADMIN_ONLY` deliberately prints no reason code and no button — it is a definitive answer about the account, not a fault to recover from
+- Verified across all four branches plus the retry: session and network failures show the code, the button and the import bar; `no_backend` shows the code and neither; `ADMIN_ONLY` shows neither; and pressing the button calls `ovNoteSignIn` exactly once, reloads clean and reveals the bar. Zero page errors at 390×844
+- **v01.31w's cache fix is confirmed working** — the developer's screenshot shows v01.31w live and the panel now reaching the backend and receiving a real answer, where before it was rendering stale HTML
+
+## [v02.66r] — 2026-08-18 06:09:59 AM EST — [642b0d0](https://github.com/LightAISolutions/Sales/commit/642b0d04145a256fb8378fa1b6a1e1de49dd913d)
+
+> **Prompt:** "I still cannot see the import transcript option. Fix this." *(with a screenshot of the notes log on v01.30w / v01.16g showing only the Sinexcel note and no import bar)*
+
+### Fixed
+- `Profiler.html` (v01.31w) — **the page was running stale HTML.** The v01.30w import bar is correct: driven against the developer's exact case (one note, PDF attachment, `hasTranscript: false`) it renders `display:block`, visible, three children, zero page errors. What their device was executing was older HTML. The three auto-refresh paths all called plain `window.location.reload()`, which is permitted to reuse the cached document; the version pill is a separate 8-byte fetch with `cache:'no-store'` plus a cache-bust param, so it reported v01.30w while the surrounding page was not. The **server-side** fix from the same push (no ✨ Summarize on a PDF note) *was* visible in the screenshot, which is the tell: GAS updated, HTML did not
+- New `ovFreshUrl` / `ovReloadFresh` replace all three `reload()` calls with a navigation to a URL carrying a fresh `_v` param, which forces a real document fetch. `PROJECT OVERRIDE` markers, since this modifies template polling logic
+
+### Notes
+- **This does not fix the copy already in the developer's browser** — only a hard refresh clears that. The change stops it recurring
+- `ovFreshUrl` is split from `ovReloadFresh` specifically so the URL rule is testable: `window.location`'s properties are non-configurable, so an earlier attempt to stub `location.replace` silently no-opped and produced a meaningless pass. Verified instead against controlled inputs — `_v` added, `#catl` hash preserved, `_v` replaced rather than accumulated across calls, unrelated params kept, successive calls differing, malformed input returning null
+- **Fleet-wide finding, not acted on:** all nine pages carry the same three `window.location.reload()` calls, inherited from both HTML templates. Every page can therefore serve stale HTML after a version bump. Fixing it properly means the templates plus nine pages under [PC-TEMPLATE-PROP] #19 — nine version bumps and nine changelog entries — so it is left as a deliberate decision rather than folded into this fix
+
+## [v02.65r] — 2026-08-18 05:56:47 AM EST — [f16b144](https://github.com/LightAISolutions/Sales/commit/f16b1441a4f6a2f87a4bb78f22ad04e7bb823e7d)
+
+> **Prompt:** "I'm seeing v01.29w, but I still cannot see the CATL .vtt file anywhere. When I click the cog button, I still see the SInexcel FCC Inverter Ban Exposure Report.
+>
+> Also, I want to achieve zero-click; How do I share my Drive folder with the script account? Do it for me if possible. Otherwise, give me step-by-step instructions. Also, can you change the naming rules to not be so obviously AI-created (dont use the em-dash and capitalize the first letter of the first word)?"
+
+#### `Profiler.html` — v01.30w
+
+##### Fixed
+- **The import bar never appeared, and the cause was a bug this repo had already fixed once.** `ovScanTranscripts` reaches `ovDriveToken`, which asks GIS for Drive consent — and GIS only opens that prompt inside a live user gesture. Its own comment says so: *"Warm library: stay synchronous so the gesture still counts."* v01.29w called the scan from the `ovNoteApi('list')` **callback**, by which point the gesture was long gone, so the consent request hung and nothing rendered at all. Identical in shape to the v02.28r recording-upload hang, whose fix was to move consent onto the button's click handler
+- The bar now renders immediately with no Drive contact, and every Drive-touching step runs inside the click. Verified: **zero** scan calls on open, exactly one on click
+
+##### Changed
+- Recording and transcript filenames drop the double-dash separator and capitalise the leading slug: `catl--2026-08-10--Voice 260810_015240.m4a` becomes `Catl 2026-08-10 Voice 260810_015240.m4a` (developer directive — the old form read as machine output in a Drive listing)
+- `ovSlugFromTranscript` parses **both** forms. The two transcripts already sitting in `2-transcribed/` use the old naming and still route to CATL and Hithium correctly — verified against those exact filenames, plus a hyphenated slug (`Siemens-energy`) to confirm the space-split does not truncate multi-word slugs
+- One click still covers a whole batch: scan, file, and summarise all run from the single button press
+
+#### `Profiler.gs` — v01.16g
+
+##### Added
+- **Unattended watcher for the zero-click path.** `transcriptWatcherTick` scans the transcribed folder, files each new transcript and writes it up with no app open; `installTranscriptWatcher` / `removeTranscriptWatcher` arm and disarm a 15-minute time-driven trigger. Capped at `WATCHER_MAX_PER_RUN` (3) per tick — Apps Script kills an execution at six minutes and each file costs a Drive read plus a model call, so a backlog drains across ticks rather than risking a mid-file kill
+- `whoIsTheScriptAccount()` — reads the owner of the notes file (which the script account owns by construction) to print the address the developer must share their Drive folder with. `diagnoseAuthorization` cannot supply this: `Session.getEffectiveUser` needs `userinfo.email`, which this project's grant does not include, and that is exactly the line that failed in the 2026-08-17 log
+- `slugFromTranscriptName_` and `createTranscriptNote_` — server-side counterparts of the browser path, both accepting old and new filename forms
+- **The watcher refuses to run until `TRANSCRIPT_AUTO_CONFIDENCE` is set** in Script Properties. A trigger has nobody to ask, and the 2026-08-07 directive says the confidence rating is never invented — so the developer states it once and the watcher uses it, rather than a default being chosen for them
+
+##### Changed
+- The generated note header is now `Auto-summary (model)` instead of `[auto-summary · model]`, matching the same developer directive about machine-looking output
+
+### Notes
+- **Sharing cannot be done from a session** — it requires access to the developer's Google Drive. Step-by-step supplied in the response instead
+- `script.scriptapp` was confirmed granted on Profiler in the 2026-08-17 diagnostic, which is what makes the trigger path viable here; the same code on Scraper would silently never install
+- The watcher is **untested** — it cannot run until the folder is shared and the trigger armed. Failure mode is contained: it logs and returns rather than throwing, and the browser import remains the working path either way
+
 ## [v02.64r] — 2026-08-17 08:36:32 PM EST — [9326148](https://github.com/LightAISolutions/Sales/commit/93261486e9ccea0ab47d76615dd15ee0b335cbc9)
 
 > **Prompt:** "I could not find my notes in the Profiler app - I could only see Sinexcel's FCC Inverter Exposure Report. However, I see my transcribed .vtt meeting notes in my Drive's Profiler App folder -> Meeting Recordings folder -> 2-transcribed folder. Make it easier for me to summarize my transcribed .vtt files. Ideally, make it so I don't have to press anything and my .vtt files automatically get summarized. If that isn't possible, then make it as close as possible to a one-click solution. Then, give me step by step instructions to continue."
