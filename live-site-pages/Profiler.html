@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.44w">
+  <meta name="build-version" content="v01.45w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -260,20 +260,56 @@
     .ov-fact .k { font: 9.5px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-faint); margin-bottom: 7px; }
     .ov-fact .v { font-size: 14.5px; }
     .ov-fact .v, td.fv { text-transform: capitalize; }
-    /* Summary signal board (v01.44w) — at-a-glance teasers into the deeper tabs */
-    .ov-sigs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin: 14px 0 6px; }
-    .ov-sig {
-      text-align: left; background: var(--ov-card); border: 1px solid var(--ov-line);
-      border-radius: 10px; padding: 13px 15px; cursor: pointer; color: var(--ov-paper);
-      font-family: inherit; display: flex; flex-direction: column;
-      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    /* Relationships — ecosystem cross-links + radial mind-map (v01.45w) */
+    .ov-relmap { width: 100%; max-width: 860px; height: auto; display: block; margin: 8px 0 2px; }
+    .ov-relmap .edge { stroke: rgba(233,228,214,0.22); stroke-width: 1; }
+    .ov-relmap text { font: 11px var(--ov-mono); fill: var(--ov-paper); }
+    .ov-relmap .ctr-t { font: 13px var(--ov-serif); fill: var(--ov-gold); }
+    .ov-relmap g.n { cursor: pointer; }
+    .ov-relmap g.n:hover text, .ov-relmap g.n:focus text { fill: var(--ov-gold); }
+    .ov-rels { margin-top: 8px; max-width: 860px; }
+    .ov-rel { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--ov-line); }
+    .ov-rel:last-child { border-bottom: none; }
+    .ov-rel-chip { flex: 0 0 170px; text-align: left; background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 999px; padding: 8px 13px; font: 12px/1.3 var(--ov-mono); color: var(--ov-paper); cursor: pointer; }
+    .ov-rel-chip:hover { color: var(--ov-gold); }
+    .ov-rel-type { flex: 0 0 auto; font: 9.5px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-ink); background: var(--ov-gold); border-radius: 4px; padding: 4px 7px; margin-top: 7px; }
+    .ov-rel-ev { flex: 1; color: var(--ov-muted); font-size: 12.5px; line-height: 1.55; }
+    .ov-rel-ev div { margin: 2px 0; }
+    @media (max-width: 640px) { .ov-rel { flex-wrap: wrap; } .ov-rel-chip { flex: 0 0 auto; } }
+    /* Settings ⚙ menu + Commands reference (v01.45w) */
+    #ov-settings-menu {
+      position: fixed; right: 22px; bottom: 92px; z-index: 8901; display: none; width: 310px;
+      background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 12px;
+      padding: 10px; box-shadow: 0 14px 50px rgba(0,0,0,0.5);
     }
-    .ov-sig:hover { transform: translateY(-1px); border-color: var(--ov-gold); background: var(--ov-card2); }
-    .ov-sig .k { font: 9.5px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-faint); margin-bottom: 8px; display: flex; justify-content: space-between; gap: 8px; }
-    .ov-sig .k .n { color: var(--ov-gold); letter-spacing: 0; }
-    .ov-sig .v { font-size: 13px; line-height: 1.55; }
-    .ov-sig .v2 { font-size: 11.5px; line-height: 1.5; color: var(--ov-muted); margin-top: 4px; }
-    .ov-sig .go { margin-top: auto; padding-top: 9px; font: 10px/1 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ov-gold); }
+    #ov-settings-menu .ttl { font: 10px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-gold); padding: 6px 10px 10px; }
+    .ov-set-item { display: block; width: 100%; text-align: left; background: none; border: 1px solid transparent; border-radius: 8px; padding: 9px 10px; cursor: pointer; color: var(--ov-paper); font: inherit; }
+    .ov-set-item:hover { background: var(--ov-card2); border-color: var(--ov-line); }
+    .ov-set-item .l { display: block; font-size: 14.5px; }
+    .ov-set-item .h { display: block; color: var(--ov-faint); font-size: 11.5px; margin-top: 2px; line-height: 1.4; }
+    #ov-cmd-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(8,9,12,0.8); z-index: 10002; display: none;
+      align-items: center; justify-content: center; padding: 20px; box-sizing: border-box;
+    }
+    #ov-cmd-panel {
+      background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 12px;
+      width: min(780px, 96vw); max-height: 86vh; display: flex; flex-direction: column;
+      box-shadow: 0 14px 50px rgba(0,0,0,0.5);
+    }
+    #ov-cmd-head { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--ov-line); }
+    #ov-cmd-head .ttl { font: 11px/1.4 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-gold); margin-right: auto; }
+    #ov-cmd-close { background: none; border: none; color: var(--ov-muted); font-size: 24px; cursor: pointer; padding: 0 4px; line-height: 1; }
+    #ov-cmd-close:hover { color: var(--ov-paper); }
+    #ov-cmd-body { padding: 4px 20px 20px; overflow-y: auto; }
+    #ov-cmd-body .intro { color: var(--ov-muted); font-size: 13.5px; line-height: 1.6; margin: 12px 0 4px; }
+    .ov-cmd { border: 1px solid var(--ov-line); border-radius: 10px; padding: 14px 16px; margin: 12px 0; background: var(--ov-card2); }
+    .ov-cmd .c { font: 13px/1.5 var(--ov-mono); color: var(--ov-gold); }
+    .ov-cmd .c .plan { font: 9px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-ink); background: var(--ov-oth); border-radius: 3px; padding: 3px 5px; margin-left: 8px; vertical-align: 2px; }
+    .ov-cmd .aka { color: var(--ov-faint); font: 10.5px/1.6 var(--ov-mono); margin: 3px 0 9px; }
+    .ov-cmd .kv { font-size: 13px; line-height: 1.55; margin: 7px 0; display: flex; gap: 10px; }
+    .ov-cmd .kv b { flex: 0 0 96px; font: 10px/1.8 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-muted); font-weight: 400; }
+    .ov-cmd .kv span { flex: 1; }
     /* Products */
     .ov-prod { border-left: 2px solid var(--ov-line2); padding: 2px 0 2px 18px; margin: 18px 0; }
     .ov-prod h4 { font: 400 19px/1.3 var(--ov-serif); margin: 0 0 6px; }
@@ -408,7 +444,7 @@
     #ov-prev-doc .d-toc li { margin: 5px 0; font-size: 13px; }
     #ov-prev-doc .d-toc a { color: #305a8a; word-break: normal; }
     @media (max-width: 560px) { #ov-prev-doc { padding: 26px 20px; } }
-    /* Field notes — ⚙ cog (dashboard) + chronological changelog overlay */
+    /* Settings ⚙ cog (opens the settings menu) + field-notes changelog overlay */
     #ov-notes-cog {
       position: fixed; bottom: 42px; right: 22px; z-index: 8900; /* below the sign-in wall (9000) so it can't be used while signed out */
       width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ov-line2);
@@ -1521,7 +1557,7 @@ function ovReloadFresh() {
     // ── Roster ──
     function ovRenderRoster() {
       document.title = 'Profiler — Ecosystem Company Dossiers';
-      ovNotesCogVisible(ovCan('fieldNote'));
+      ovNotesCogVisible(ovCan('fieldNote') || ovCan('commands'));
       var main = ovMain(); ovClear(main);
       var companies = (ovRegistry.companies || []).slice().sort(function(a, b) { return a.name.localeCompare(b.name); });
 
@@ -1707,7 +1743,9 @@ function ovReloadFresh() {
     ovStyleApply();
 
     function ovRenderCompany(slug) {
-      ovNotesCogVisible(false);
+      // The settings cog stays available on dossier views too (v01.45w) — it
+      // now fronts the Commands reference, not just the dashboard notes log.
+      ovNotesCogVisible(ovCan('fieldNote') || ovCan('commands'));
       var main = ovMain(); ovClear(main);
       var back = ovEl('button', 'ov-back', '← All companies');
       back.type = 'button';
@@ -1746,74 +1784,146 @@ function ovReloadFresh() {
       return g;
     }
 
-    // ── Summary signal board (v01.44w) ──
-    // An at-a-glance layer on the dossier's opening tab, synthesized from the
-    // deeper sections of the profile that is already loaded: each card shows
-    // the strongest datum its tab holds and clicking it opens that tab. Purely
-    // derived — nothing here is authored per-dossier or needs separate upkeep.
+    // ── Relationships — ecosystem cross-links (v01.45w) ──
+    // Two layers. Curated: the profile's relationships[] field (schema v3 —
+    // PROFILER-SCHEMA.md), written at research/refresh time. Derived fallback:
+    // when a dossier has no curated links yet, the app scans the dossier's own
+    // prose (summary, developments, judgments) for the names of other covered
+    // companies — the registry is the name authority — and shows each hit with
+    // the sentence that produced it. Curation supersedes detection; derived
+    // rows are evidence, not judgment. (Replaced the v01.44w signal board —
+    // developer review 2026-08-29 found the tab-teaser cards low-value.)
     function ovTrunc(s, n) {
       s = String(s || '').trim();
       if (s.length <= n) return s;
       return s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…';
     }
-    function ovSignalBoard(p) {
-      var defs = []; // [tab key, count badge, main line, secondary line]
-      if (p.strategyRead && p.strategyRead.length) {
-        var nJ = p.strategyRead.length;
-        defs.push(['strategy', nJ, ovTrunc(ovStratText(p.strategyRead[0]), 150),
-          nJ > 1 ? '+ ' + (nJ - 1) + ' more judgment' + (nJ > 2 ? 's' : '') + ', each with its basis' : '']);
-      }
-      if (p.financials && p.financials.periods && p.financials.periods.length) {
-        var tally = { beat: 0, miss: 0, inline: 0 }, perNames = [];
-        p.financials.periods.forEach(function(per) {
-          perNames.push(per.period);
-          (per.metrics || []).forEach(function(m) { if (tally[m.verdict] != null) tally[m.verdict]++; });
-        });
-        defs.push(['fin', p.financials.periods.length,
-          tally.beat + ' beat · ' + tally.miss + ' miss · ' + tally.inline + ' in line vs expectations',
-          ovTrunc(perNames.join(' · '), 70)]);
-      }
-      if (p.recentDevelopments && p.recentDevelopments.length) {
-        var ev = p.recentDevelopments[0]; // schema orders newest first
-        defs.push(['devs', p.recentDevelopments.length, ovTrunc(ev.headline || '', 120),
-          [ev.date || '', ev.category || ''].filter(Boolean).join(' · ')]);
-      }
-      if (p.productsAndServices && p.productsAndServices.length) {
-        var pn = p.productsAndServices.map(function(x) { return x.name; }).filter(Boolean);
-        var specN = ovSpecGroups(p).length;
-        var extra = [];
-        if (pn.length > 3) extra.push('+ ' + (pn.length - 3) + ' more line' + (pn.length > 4 ? 's' : ''));
-        if (specN) extra.push(specN + ' spec table' + (specN > 1 ? 's' : ''));
-        defs.push(['products', pn.length, ovTrunc(pn.slice(0, 3).join(' · '), 130), extra.join(' · ')]);
-      }
-      if (p.decisionMakers && p.decisionMakers.length) {
-        var x0 = p.decisionMakers[0], nP = p.decisionMakers.length;
-        defs.push(['people', nP, ovTrunc((x0.name || '') + (x0.title ? ' — ' + x0.title : ''), 110),
-          nP > 1 ? '+ ' + (nP - 1) + ' more profiled, with career backgrounds' : '']);
-      }
-      if (p.sources && p.sources.length) {
-        var d0 = '';
-        for (var si = 0; si < p.sources.length && !d0; si++) d0 = p.sources[si].date || '';
-        defs.push(['sources', p.sources.length, d0 ? 'Newest publication ' + d0 : 'Cited public sources',
-          'Dossier v' + (p.profileVersion || 1) + (p.lastUpdated ? ' · compiled ' + p.lastUpdated : '')]);
-      }
-      if (!defs.length) return null;
-      var wrap = ovEl('div', 'ov-sigs');
-      defs.forEach(function(d) {
-        var b = ovEl('button', 'ov-sig');
-        b.type = 'button';
-        b.setAttribute('aria-label', 'Open the ' + ovSecLabel(d[0]) + ' tab');
-        var k = ovEl('div', 'k');
-        k.appendChild(ovEl('span', null, ovSecLabel(d[0])));
-        k.appendChild(ovEl('span', 'n', String(d[1])));
-        b.appendChild(k);
-        if (d[2]) b.appendChild(ovEl('div', 'v', d[2]));
-        if (d[3]) b.appendChild(ovEl('div', 'v2', d[3]));
-        b.appendChild(ovEl('div', 'go', 'Open ' + ovSecLabel(d[0]) + ' →'));
-        b.addEventListener('click', function() { ovShowTab(p.slug, d[0], true); });
-        wrap.appendChild(b);
+    var OV_REL_TYPES = { customer: 'Customer', supplier: 'Supplier', partner: 'Partner', competitor: 'Competitor', investor: 'Investor', other: 'Linked' };
+    var OV_REL_CAT_COLORS = { supplier: '#e0a458', developer: '#82b56d', integrator: '#4fc1b4', investor: '#b18cf2', hyperscaler: '#6ea8fe', neocloud: '#59c2e6', advisor: '#e07a8b', epc: '#d9c74a', gc: '#b5896a', ipp: '#cf6fc0' };
+    function ovRelColor(cats) { return OV_REL_CAT_COLORS[(cats || [])[0]] || '#9aa3af'; }
+    function ovRelEscapeRe(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+    function ovRelDerive(p) {
+      var out = {};
+      var fields = [];
+      if (p.summary) fields.push([ovSecLabel('snapshot'), '', String(p.summary)]);
+      if (p.ecosystemRole) fields.push([ovSecLabel('snapshot'), '', String(p.ecosystemRole)]);
+      (p.recentDevelopments || []).forEach(function(ev) {
+        fields.push([ovSecLabel('devs'), ev.date || '', [ev.headline || '', ev.read || ''].filter(Boolean).join(' — ')]);
       });
-      return wrap;
+      (p.strategyRead || []).forEach(function(b) { fields.push([ovSecLabel('strategy'), '', ovStratText(b)]); });
+      ((ovRegistry && ovRegistry.companies) || []).forEach(function(c) {
+        if (c.slug === p.slug) return;
+        var re = new RegExp('\\b' + ovRelEscapeRe(c.name) + '\\b');
+        fields.forEach(function(f) {
+          var m = re.exec(f[2]);
+          if (!m) return;
+          // Ambiguity guard: a one-word name that is also an ordinary English
+          // word ("Switch", "Aligned", "Meta") matches at a sentence start on
+          // its capital letter alone — drop those; mid-sentence mentions stay.
+          if (c.name.indexOf(' ') < 0 && /^[A-Z][a-z]+$/.test(c.name)) {
+            if (/(^|[.!?:]\s*)$/.test(f[2].slice(0, m.index))) return;
+          }
+          if (!out[c.slug]) out[c.slug] = { slug: c.slug, name: c.name, cats: c.categories || [], type: '', evid: [] };
+          if (out[c.slug].evid.length < 2) {
+            var start = Math.max(0, m.index - 55);
+            var snip = (start > 0 ? '…' : '') + ovTrunc(f[2].slice(start), 165);
+            out[c.slug].evid.push({ where: f[0], date: f[1], text: snip });
+          }
+        });
+      });
+      return Object.keys(out).map(function(k) { return out[k]; });
+    }
+    var OV_SVG_NS = 'http://www.w3.org/2000/svg';
+    function ovSvgEl(tag, attrs) {
+      var el = document.createElementNS(OV_SVG_NS, tag);
+      for (var k in attrs) el.setAttribute(k, attrs[k]);
+      return el;
+    }
+    // Radial mind-map: this company at the center, linked companies around it,
+    // node color = the linked company's ecosystem category, click-through to
+    // its dossier. Pure SVG from data already on hand — no library.
+    function ovRelMap(p, rels) {
+      var W = 760, H = 380, cx = W / 2, cy = H / 2, rx = 248, ry = 126;
+      var svg = ovSvgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, 'class': 'ov-relmap', role: 'img', 'aria-label': 'Relationship map — linked companies around ' + (p.shortName || p.name) });
+      var n = rels.length;
+      rels.forEach(function(r, i) {
+        var a = -Math.PI / 2 + (i * 2 * Math.PI / n);
+        svg.appendChild(ovSvgEl('line', { x1: cx, y1: cy, x2: cx + rx * Math.cos(a), y2: cy + ry * Math.sin(a), 'class': 'edge' }));
+      });
+      rels.forEach(function(r, i) {
+        var a = -Math.PI / 2 + (i * 2 * Math.PI / n);
+        var x = cx + rx * Math.cos(a), y = cy + ry * Math.sin(a);
+        var g = ovSvgEl('g', { 'class': 'n', role: 'link', tabindex: '0', 'aria-label': 'Open the ' + r.name + ' dossier' });
+        // Invisible hit pad — the visible dot alone is a 14px target and the
+        // dot-to-label gap would otherwise belong to the svg, not the node.
+        g.appendChild(ovSvgEl('circle', { cx: x, cy: y, r: 22, fill: 'transparent' }));
+        g.appendChild(ovSvgEl('circle', { cx: x, cy: y, r: 7, fill: ovRelColor(r.cats), stroke: '#13151c', 'stroke-width': 1.5 }));
+        var c = Math.cos(a), s = Math.sin(a);
+        var anchor = c > 0.35 ? 'start' : (c < -0.35 ? 'end' : 'middle');
+        var t = ovSvgEl('text', {
+          x: x + (anchor === 'start' ? 13 : (anchor === 'end' ? -13 : 0)),
+          y: y + (s > 0.75 ? 21 : (s < -0.75 ? -13 : 4)),
+          'text-anchor': anchor
+        });
+        t.textContent = r.name;
+        g.appendChild(t);
+        var ti = ovSvgEl('title', {}); ti.textContent = 'Open the ' + r.name + ' dossier';
+        g.appendChild(ti);
+        function go() { window.location.hash = r.slug; }
+        g.addEventListener('click', go);
+        g.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+        svg.appendChild(g);
+      });
+      var name = p.shortName || p.name;
+      var ctrRx = Math.max(46, name.length * 3.6 + 14);
+      svg.appendChild(ovSvgEl('ellipse', { cx: cx, cy: cy, rx: ctrRx, ry: 26, fill: '#1d212d', stroke: '#d8b45a', 'stroke-width': 1.5 }));
+      var ct = ovSvgEl('text', { x: cx, y: cy + 4, 'text-anchor': 'middle', 'class': 'ctr-t' });
+      ct.textContent = name;
+      svg.appendChild(ct);
+      return svg;
+    }
+    function ovRelationshipsSection(p) {
+      var bySlug = {};
+      ((ovRegistry && ovRegistry.companies) || []).forEach(function(c) { bySlug[c.slug] = c; });
+      var rels, curated = !!(p.relationships && p.relationships.length);
+      if (curated) {
+        rels = [];
+        p.relationships.forEach(function(r) {
+          var c = bySlug[r.slug];
+          if (!c) return; // relationships[] may only point at covered companies
+          rels.push({ slug: r.slug, name: c.name, cats: c.categories || [], type: OV_REL_TYPES[r.type] || OV_REL_TYPES.other,
+            evid: r.note ? [{ where: 'Basis', date: '', text: String(r.note) }] : [] });
+        });
+      } else {
+        rels = ovRelDerive(p);
+        rels.sort(function(a, b) { return b.evid.length - a.evid.length || a.name.localeCompare(b.name); });
+      }
+      if (!rels.length) return null;
+      var shown = rels.slice(0, 10); // the map stays legible at ≤10 spokes
+      var sec = ovSection('Relationships', curated
+        ? 'Curated links from this dossier\'s research. Click a company to open its dossier.'
+        : 'Detected in this dossier\'s own reporting and judgments; curated into typed relationships at the next revision. Click a company to open its dossier.');
+      sec.appendChild(ovRelMap(p, shown));
+      var list = ovEl('div', 'ov-rels');
+      shown.forEach(function(r) {
+        var row = ovEl('div', 'ov-rel');
+        var chip = ovEl('button', 'ov-rel-chip', r.name);
+        chip.type = 'button';
+        chip.style.borderColor = ovRelColor(r.cats);
+        chip.addEventListener('click', function() { window.location.hash = r.slug; });
+        row.appendChild(chip);
+        if (r.type) row.appendChild(ovEl('span', 'ov-rel-type', r.type));
+        var ev = ovEl('div', 'ov-rel-ev');
+        r.evid.forEach(function(e) {
+          ev.appendChild(ovEl('div', null, e.where + (e.date ? ' · ' + e.date : '') + ' — ' + e.text));
+        });
+        if (!r.evid.length) ev.appendChild(ovEl('div', null, 'Cross-referenced in this dossier.'));
+        row.appendChild(ev);
+        list.appendChild(row);
+      });
+      if (rels.length > shown.length) list.appendChild(ovEl('p', 'sec-note', '+ ' + (rels.length - shown.length) + ' more linked companies.'));
+      sec.appendChild(list);
+      return sec;
     }
 
     function ovInitials(name) {
@@ -1943,12 +2053,10 @@ function ovReloadFresh() {
       if (p.summary) ovAppendSummary(prose, p.summary);
       if (p.ecosystemRole) prose.appendChild(ovEl('p', null, p.ecosystemRole));
       snap.appendChild(prose);
-      var sigBoard = ovSignalBoard(p);
-      if (sigBoard) {
-        snap.appendChild(ovEl('p', 'sec-note', 'At a glance — each card distills one of the deeper tabs; open a card for the full picture.'));
-        snap.appendChild(sigBoard);
-      }
       paneFor('overview').appendChild(snap);
+      // Relationships (v01.45w) — ecosystem cross-links with a mind-map
+      var relSec = ovRelationshipsSection(p);
+      if (relSec) paneFor('overview').appendChild(relSec);
 
       // Products & services
       if (p.productsAndServices && p.productsAndServices.length) {
@@ -2193,10 +2301,12 @@ function ovReloadFresh() {
     //   guidance  — 'Industry Guidance' masthead button + overlay
     //   export    — 'Export dossier' button + the preview/Word/PDF pipeline
     //   style     — dossier display-style switcher (admin tooling)
+    //   commands  — 'Commands' reference in the settings cog menu (developer
+    //               tooling: how Profiler is run and maintained through Claude)
     // Every backend op behind these surfaces is independently gated server-side
     // in Profiler.gs; this map governs what the app shows, not what it may do.
     var OV_ROLE_CAPS = {
-      admin:       ['fieldNote', 'versions', 'guidance', 'export', 'style'],
+      admin:       ['fieldNote', 'versions', 'guidance', 'export', 'style', 'commands'],
       contributor: ['guidance', 'export'],
       analyst:     ['export'],
       viewer:      []
@@ -3202,22 +3312,63 @@ function ovReloadFresh() {
       return s;
     }
 
-    // ── Field notes — ⚙ cog (dashboard) + chronological changelog overlay ──
-    // Data: profiler-data/profiler-notes.json (schema: PROFILER-SCHEMA.md, Field Notes)
+    // ── Settings ⚙ (bottom-right cog) → menu: Commands reference + Field notes ──
+    // The cog fronted the field-notes log alone until v01.45w (developer
+    // request 2026-08-29): it now opens a small settings menu whose entries are
+    // capability-gated — 'Commands' (cap: commands) and 'Field notes'
+    // (cap: fieldNote). Notes data: Drive-hosted log (PROFILER-SCHEMA.md).
     var ovNotesData = null;
     var ovNotesFilter = 'all';
 
     function ovNotesCogVisible(show) {
       var cog = document.getElementById('ov-notes-cog');
       if (cog) cog.style.display = show ? 'flex' : 'none';
+      if (!show) {
+        var menu = document.getElementById('ov-settings-menu');
+        if (menu) menu.style.display = 'none';
+      }
+    }
+
+    var ovSettingsMenuEl = null;
+    function ovSettingsToggle() {
+      if (ovSettingsMenuEl && ovSettingsMenuEl.style.display === 'block') { ovSettingsMenuEl.style.display = 'none'; return; }
+      if (!ovSettingsMenuEl) {
+        ovSettingsMenuEl = ovEl('div');
+        ovSettingsMenuEl.id = 'ov-settings-menu';
+        ovSettingsMenuEl.setAttribute('role', 'menu');
+        document.body.appendChild(ovSettingsMenuEl);
+        document.addEventListener('click', function(e) {
+          if (ovSettingsMenuEl.style.display !== 'block') return;
+          var cogEl = document.getElementById('ov-notes-cog');
+          if (ovSettingsMenuEl.contains(e.target) || e.target === cogEl) return;
+          ovSettingsMenuEl.style.display = 'none';
+        });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && ovSettingsMenuEl.style.display === 'block') ovSettingsMenuEl.style.display = 'none';
+        });
+      }
+      ovClear(ovSettingsMenuEl);
+      ovSettingsMenuEl.appendChild(ovEl('div', 'ttl', 'Settings'));
+      function item(label, hint, fn) {
+        var b = ovEl('button', 'ov-set-item');
+        b.type = 'button'; b.setAttribute('role', 'menuitem');
+        b.appendChild(ovEl('span', 'l', label));
+        b.appendChild(ovEl('span', 'h', hint));
+        b.addEventListener('click', function() { ovSettingsMenuEl.style.display = 'none'; fn(); });
+        ovSettingsMenuEl.appendChild(b);
+      }
+      if (ovCan('commands')) item('Commands', 'How Profiler is run and maintained through Claude — every command, when and how to use it', ovShowCommands);
+      if (ovCan('fieldNote')) item('Field notes', 'Chronological log of captured first-hand intel', ovShowNotes);
+      ovSettingsMenuEl.style.display = 'block';
     }
 
     (function() {
       var cog = ovEl('button', null, '⚙');
       cog.id = 'ov-notes-cog'; cog.type = 'button';
-      cog.title = 'Field notes — chronological changelog';
-      cog.setAttribute('aria-label', 'Field notes changelog');
-      cog.addEventListener('click', ovShowNotes);
+      cog.title = 'Settings';
+      cog.setAttribute('aria-label', 'Settings');
+      cog.setAttribute('aria-haspopup', 'true');
+      cog.addEventListener('click', ovSettingsToggle);
       document.body.appendChild(cog);
 
       var overlay = ovEl('div'); overlay.id = 'ov-notes-overlay';
@@ -3227,6 +3378,104 @@ function ovReloadFresh() {
       });
       document.body.appendChild(overlay);
     })();
+
+    // ── Commands reference (v01.45w) — settings menu → 'Commands' ──
+    // The operator's manual for the commands the developer types to Claude in
+    // a repo session. The app itself stays read-only; these describe how the
+    // dossier base is grown and maintained. UI-gated to the commands
+    // capability (admin tooling) — content is reference text only.
+    var OV_COMMANDS = [
+      {
+        c: 'profiler <Company>', plan: '',
+        aka: 'also: "add <Company> to Profiler" · "update the <Company> profile"',
+        when: 'Adding a company to coverage, or refreshing an existing dossier after earnings, a major order, a leadership change — anything that dates the current read.',
+        how: 'Say it to Claude in a repo session, with one company or a whole list. Revisions archive the outgoing version first (see the Versions button), so nothing is lost.',
+        does: 'Runs the standard research sweep — the company\'s own investor-relations, press and product pages first, then filings and trade press for expectations and critical context — writes the standardized dossier, registers it on the roster, and deploys. Post-earnings refreshes are pre-scheduled for the covered public names; private names get a quarterly sweep.'
+      },
+      {
+        c: 'profiler note <Company>: <text>', plan: '',
+        aka: 'also: "add a note to <Company>" · "I learned something about <Company>" — or the Field note button on the dossier itself',
+        when: 'The moment you learn something first-hand — a call, an event, a contact. Capture beats memory.',
+        how: 'Type the note verbatim to Claude, or use the dossier\'s Field note box (which also takes Word/PDF files and meeting audio). Either way you rate confidence 0–100 — that rating decides how much weight the note carries everywhere it is used.',
+        does: 'Stores the note word-for-word in the private log (never published, never cited as a dossier source). At the next refresh it is triaged: promoted into the dossier as context, or kept as recall-only background.'
+      },
+      {
+        c: 'triage notes', plan: '',
+        aka: 'also: "review pending notes"',
+        when: 'You want pending notes evaluated now instead of waiting for the next dossier refresh.',
+        how: 'Ask Claude to triage notes; if asked, paste the log\'s 📋 Copy pending output so the session can read them.',
+        does: 'Weighs each pending note — confidence, materiality, corroboration against public sources — and marks it promoted or logged-only, reporting every decision.'
+      },
+      {
+        c: 'profiler prep <Company>', plan: '',
+        aka: 'also: "prep me for <Company>" · "teach me <Company>"',
+        when: 'Before a meeting or a deep-dive — when you want to genuinely understand what the company\'s products do in their industry, not memorize trivia.',
+        how: 'One command; Claude reads the dossier\'s product and spec sections as the syllabus.',
+        does: 'Builds a technology lesson plan from a high-school-STEM baseline up to the company\'s product architecture, plus the in-app Study guide with concept flashcards. Re-running it regenerates both from the current dossier.'
+      },
+      {
+        c: 'industry guidance: <document>', plan: '',
+        aka: 'also: "add this to Industry Guidance" — attach the document to the message',
+        when: 'A whitepaper or industry report deserves proper study rather than a skim.',
+        how: 'Send Claude the document with that phrase.',
+        does: 'Deep-reads it with independently re-verified figures and publishes a study module — sections, glossary, flashcards, quiz — under the ✦ Industry Guidance hub on the masthead.'
+      },
+      {
+        c: 'set profiler style to <name>', plan: '',
+        aka: 'styles: default · bloomberg · equity-research · intel-briefing · smart-brevity',
+        when: 'You want future dossier prose authored in a different voice.',
+        how: 'One command; existing dossiers are not rewritten unless you ask.',
+        does: 'Switches the registry\'s active writing style for all future research and refreshes. The 🖋 button is different — it only re-skins how dossiers are presented and exported on this device.'
+      },
+      {
+        c: 'profiler report <topic>', plan: 'Planned',
+        aka: 'approved roadmap — macro · competitive · risk · opportunity reports',
+        when: 'You want an industry read synthesized across the whole dossier base.',
+        how: 'Name the topic; stale dossiers are refreshed before the report is generated.',
+        does: 'Will produce a cited report where every claim resolves to a dossier section, and every dossier resolves to its public sources.'
+      }
+    ];
+    var ovCmdOverlayEl = null;
+    function ovShowCommands() {
+      if (!ovCmdOverlayEl) {
+        ovCmdOverlayEl = ovEl('div');
+        ovCmdOverlayEl.id = 'ov-cmd-overlay';
+        ovCmdOverlayEl.addEventListener('click', function(e) { if (e.target === ovCmdOverlayEl) ovCmdOverlayEl.style.display = 'none'; });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && ovCmdOverlayEl.style.display === 'flex') ovCmdOverlayEl.style.display = 'none';
+        });
+        document.body.appendChild(ovCmdOverlayEl);
+      }
+      ovClear(ovCmdOverlayEl);
+      var panel = ovEl('div'); panel.id = 'ov-cmd-panel';
+      var head = ovEl('div'); head.id = 'ov-cmd-head';
+      head.appendChild(ovEl('span', 'ttl', 'Profiler Commands'));
+      var x = ovEl('button', null, '×'); x.id = 'ov-cmd-close'; x.type = 'button';
+      x.setAttribute('aria-label', 'Close');
+      x.addEventListener('click', function() { ovCmdOverlayEl.style.display = 'none'; });
+      head.appendChild(x);
+      panel.appendChild(head);
+      var body = ovEl('div'); body.id = 'ov-cmd-body';
+      body.appendChild(ovEl('p', 'intro', 'Profiler is maintained through commands typed to Claude in a repository session — the app itself is the reading surface. Each command below says when to reach for it, how to phrase it, and what it does.'));
+      OV_COMMANDS.forEach(function(d) {
+        var card = ovEl('div', 'ov-cmd');
+        var c = ovEl('div', 'c', d.c);
+        if (d.plan) c.appendChild(ovEl('span', 'plan', d.plan));
+        card.appendChild(c);
+        if (d.aka) card.appendChild(ovEl('div', 'aka', d.aka));
+        [['When', d.when], ['How', d.how], ['It does', d.does]].forEach(function(pair) {
+          if (!pair[1]) return;
+          var kv = ovEl('div', 'kv');
+          kv.appendChild(ovEl('b', null, pair[0]));
+          kv.appendChild(ovEl('span', null, pair[1]));
+          card.appendChild(kv);
+        });
+        body.appendChild(card);
+      });
+      panel.appendChild(body);
+      ovCmdOverlayEl.appendChild(panel);
+      ovCmdOverlayEl.style.display = 'flex';
+    }
 
     function ovCompanyLabel(slug) {
       if (slug === 'general') return 'General';

@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 44/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.45w] — 2026-08-29 03:49:01 AM EST — v03.54r
+
+### Added
+- The Summary tab now maps how covered companies relate to each other: a clickable relationship diagram plus the reporting behind each link, with one-tap access to the linked company's dossier
+- A settings menu in the bottom corner gathers administrator tools in one place
+
+### Removed
+- The Summary tab's shortcut cards — replaced by the relationships view
 
 ## [v01.44w] — 2026-08-29 02:50:58 AM EST — v03.52r
 

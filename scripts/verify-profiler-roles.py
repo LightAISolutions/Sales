@@ -261,7 +261,9 @@ def run():
 
             page.screenshot(path=str(SHOTS / ('profiler-role-%s.png' % role)), full_page=False)
 
-            # The field-notes log cog lives on the roster, not the dossier view
+            # Settings cog (v01.45w: fronts Commands + Field notes; renders on
+            # roster and dossier views). Both caps are admin-only, so the
+            # fieldNote expectation still gates its visibility per tier.
             page.goto(base + '#', wait_until='networkidle')
             page.wait_for_timeout(800)
             got['cog'] = page.evaluate(

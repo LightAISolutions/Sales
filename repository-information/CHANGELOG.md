@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.54r] — 2026-08-29 03:49:01 AM EST
+
+> **Prompt:** "I have reviewed the mockups and have the following feedback:
+>
+> \* In the Compare screen, focus mostly on financials since those are the only metrics that can realistically be compared between companies that fulfill different functions (supplier vs developers vs hyperscalers). Alternatively, suggest a better way to limit comparisons to only those within the same space. If they are in the same space, then you can also suggest ways to compare technical specs and other metrics.
+> \* In the Dossier Summary, remove the "at a glance" cards that link to other tabs. I find they don't contain enough value to justify their existence. I would prefer you to spend more resources on finding ecosystem cross-links, figuring out their relationship with each other, and creating a "Relationships" field as that would be extremely useful. If possible, a visual mind-map diagram would be useful too.
+> \* Create a Settings icon in the bottom right of Profiler (cog icon) that has a "Command" option that goes over all of my Profiler commands along with detailed explanations of when/how to use them.
+> \* Otherwise, I approve of all your recommendations to improve the Profiler app.
+>
+> If you run out of my weekly Fable limit, continue working with Opus 5."
+
+### Added
+
+- `Profiler.html` (v01.45w) — **Relationships section** on the dossier Summary tab. Curated layer: new `relationships[]` field (schema v3 — see PROFILER-SCHEMA.md). Derived fallback: `ovRelDerive()` scans the dossier's own summary, developments, and judgments for other covered companies' names (registry as the name authority; word-boundary matching with a sentence-start ambiguity guard so "Switchgear" never matches Switch). Rendered as a clickable radial SVG mind-map (`ovRelMap()` — category-colored nodes, keyboard-accessible, transparent hit pads) plus per-company evidence rows showing the sentence behind each link. On ABB it detects 8 real cross-links (NVIDIA, VoltaGrid, Vertiv, Eaton, Hitachi Energy, Siemens Energy, OpenAI, Applied Digital)
+- `Profiler.html` (v01.45w) — the bottom-right ⚙ cog is now a **Settings menu** (`ovSettingsToggle()`): capability-gated entries for the new **Commands reference** overlay (`ovShowCommands()` + `OV_COMMANDS` — all seven Profiler commands with when/how/what-it-does cards, including the planned `profiler report`) and the existing Field-notes log. New `commands` capability in `OV_ROLE_CAPS` (admin-only); the cog now renders on dossier views as well as the roster
+- `repository-information/PROFILER-SCHEMA.md` — profile schema v3: `relationships[]` field definition (`slug`/`type`/`note`/`source`; slugs must be covered companies; curation supersedes render-time detection; opportunistic backfill on each dossier's next revision)
+
+### Removed
+
+- `Profiler.html` (v01.45w) — the v01.44w Summary signal board (`ovSignalBoard()` + `.ov-sigs` CSS) — developer review found the tab-teaser cards too low-value to keep; the Relationships section takes their place
+
+### Changed
+
+- `scripts/verify-profiler-roles.py` — cog oracle note updated for the Settings-menu change (matrix unchanged: both cog entries are admin-only, all tiers verified passing; specs audit still 88/88)
 
 ## [v03.53r] — 2026-08-29 03:24:50 AM EST
 
@@ -1833,218 +1858,3 @@ If you hit the end of my weekly Fable limit before this task is done, switch to 
 - **Sharing cannot be done from a session** — it requires access to the developer's Google Drive. Step-by-step supplied in the response instead
 - `script.scriptapp` was confirmed granted on Profiler in the 2026-08-17 diagnostic, which is what makes the trigger path viable here; the same code on Scraper would silently never install
 - The watcher is **untested** — it cannot run until the folder is shared and the trigger armed. Failure mode is contained: it logs and returns rather than throwing, and the browser import remains the working path either way
-
-## [v02.64r] — 2026-08-17 08:36:32 PM EST
-
-> **Prompt:** "I could not find my notes in the Profiler app - I could only see Sinexcel's FCC Inverter Exposure Report. However, I see my transcribed .vtt meeting notes in my Drive's Profiler App folder -> Meeting Recordings folder -> 2-transcribed folder. Make it easier for me to summarize my transcribed .vtt files. Ideally, make it so I don't have to press anything and my .vtt files automatically get summarized. If that isn't possible, then make it as close as possible to a one-click solution. Then, give me step by step instructions to continue."
-
-#### `Profiler.html` — v01.29w
-
-##### Added
-- **Transcript auto-import.** Opening the ⚙ notes log now scans `2-transcribed/` browser-side and surfaces any transcript no note has claimed. New `ovScanTranscripts` / `ovImportTranscripts` / `ovDriveText` / `ovSlugFromTranscript`, plus the `#ov-notes-import` bar between the filter chips and the log
-- Import is **sequential by design** — `submit` → `summarize` per file, never a parallel batch. Each pass is a Drive write plus a model call, and firing N of those at once is how the one path that must not be flaky becomes flaky
-- The slug comes from the filename: uploads are already named `<slug>--YYYY-MM-DD--<original>`, so `catl--2026-08-10--Voice 260810_015240.vtt` routes to the CATL dossier with no lookup. An unrecognised prefix falls back to `general` rather than being skipped, so a mis-named file still reaches the log
-- Verified against the developer's two real transcripts: slug derivation, the rendered bar, and the full click-through produced `submit:catl → summarize → submit:hithium → summarize → list` in order with zero page errors, at 390×844
-
-##### Changed
-- The scan runs **after** the notes list returns, never before — it dedups against `sourceName`, so scanning first would offer to re-import everything
-- A failed scan renders an explicit message. Silence is reserved for "scan succeeded, nothing new"; a Drive or consent failure that rendered as silence would be indistinguishable from having no work to do
-- `btoa` is fed through `unescape(encodeURIComponent(...))` — it rejects multi-byte characters outright, and transcripts routinely carry smart quotes
-
-#### `Profiler.gs` — v01.15g
-
-##### Fixed
-- **`hasTranscript` counted any attachment, not just a readable one.** `!!(n.sourceFile && driveNoteFileId_(n.sourceFile))` is true for a Word/PDF note, but `driveReadNoteFile_` returns null for those — so the app offered **Copy + transcript** and **✨ Summarize** on notes where both were guaranteed to fail with `NO_TRANSCRIPT`. This is exactly what the developer's Sinexcel PDF note showed. Replaced with `noteHasTextTranscript_`, which tests the name against `NOTE_FILE_TEXT_RE`. Verified across 8 note shapes including both legacy (no `sourceName`) variants
-
-##### Added
-- `note.sourceName` records the attachment's **original** Drive filename on submit. The stored name carries a date+time prefix and could never match what the developer's Drive shows, so without this the import has no way to tell which transcripts are already filed
-- `driveNoteFileName_` resolves a name without paying for a full content read, for legacy notes predating `sourceName`
-
-### Notes
-- **This corrects an inaccurate claim from the prior response**, which told the developer that a `📋 Copy + transcript` label proved the server saw a readable transcript. It did not — the label was driven by the same over-broad check fixed here
-- Source type for imported transcripts is `contact`, the closest of the five valid values (`contact`/`event`/`call`/`news`/`other`). Adding a `meeting` type would touch the schema and the intake dropdown, so it was left out of scope
-- The confidence rating is **still the developer's** — the bar presents a selector pre-set to 100 rather than defaulting one silently, per the 2026-08-07 directive that Claude never invents this value. One selection covers the batch, which is what keeps it to a single click
-
-## [v02.63r] — 2026-08-17 04:07:29 AM EST
-
-> **Prompt:** "continue with your recommendation"
-
-### Fixed
-- **Every truncated `… +N more` marker removed from both documents' contents pages** — the Coverage Universe's three chapter entries now list all 17, 11 and 17 subsections respectively, and a fourth marker found in the market report's chapter 10 was removed. Replacements were generated programmatically from the actual `### N.M` headings rather than transcribed, so no title could be mistyped or invented
-- **Two of the four markers were miscounted**, confirming the suspicion raised by the v02.53r `+4 more` error: companion chapter 2 claimed `+3 more` when only 2 subsections were missing, and market report chapter 10 claimed `+1 more` when its entry already listed all nine. The other two (`+8 more` twice) were correct — the counts were unreliable in both directions, not uniformly wrong
-- **Chapter 4's capital-implications closer was the only one in the report without a section number.** Every other chapter numbers it — 2.7, 3.6, 5.7, 6.8, 7.8, 9.7 — while chapter 4 carried a bare `### What this means for your capital` *and* listed it in the contents, which is what produced a genuine 8-versus-7 mismatch. Now numbered `4.8`. Chapters 1 and 10 also use unnumbered closers but exclude them from their contents entries, so they are internally consistent and were deliberately left alone
-
-### Changed
-- **All ten editions rebuilt.** Page counts are unchanged for the canonical editions — market report 109, coverage companion 51 — since the expanded contents absorbed into existing page flow
-
-### Note
-- A full contents-to-subsection parity check now passes across **all 14 chapters in both documents** (11 report + 3 companion, zero mismatches). This was the check that surfaced the chapter 4 defect, which no amount of reading the truncation markers would have found
-
-## [v02.62r] — 2026-08-17 03:36:35 AM EST
-
-> **Prompt:** "I added the missing oauthScopes and re-ran diagnoseAuthorization. Here is the log."
-
-### Note
-- **Scraper is fully healthy: 7 declared, 7 granted, `script.scriptapp` now present in both, nothing outstanding.** Its three self-installed triggers (`scSchedulerTick`, `enforceRetention`, `auditRetentionCompliance`) can install again
-- **The two failure modes are now both confirmed by evidence, and they are opposites.** Receipts (v02.59r) declared the scope and never had it approved — a partial grant, repaired by re-consenting. Scraper (this version) never declared it — repaired by editing the manifest, which is *also* what finally triggered the consent prompt, since Apps Script prompts only on a change to the declared set. Identical runtime error, opposite repairs
-
-### Fixed
-- **`diagnoseOauthScopes_`'s "everything is declared" line was stale in both of its variants**, left over from when it was only ever called from `diagnoseAclAccess`. The propagated copies told the reader to *"Run diagnoseAuthorization to check whether it was actually GRANTED"* — while running inside `diagnoseAuthorization`, immediately below the granted list it names. The Receipts original was differently wrong: it attributed the case to a stale grant without pointing at that list at all. Both replaced with a single wording that directs the reader to compare against the granted list printed directly above
-
-### Changed
-- **`.claude/rules/gas-scripts-reference.md` — the two failure modes are now a decision table** (missing from *both* lists → under-declared, add and save to trigger the prompt; missing from *granted* only → an authorization URL will have been printed), each with its confirmed instance
-- **Recorded that the `script.scriptapp` gap is systemic rather than incidental.** v01.82r added the scope to the manifest *template*, `sample-components/appsscript.json` and the setup steps — "so **new** projects can self-install time-driven triggers" — but existing projects were never updated and **could not be**, since live manifests are not version-controlled and `pullAndDeployFromGitHub()` preserves them. Every project created before v01.82r is therefore still missing it unless hand-fixed, and the only symptom is that time-driven triggers silently never install
-- **This supersedes the v02.59r reading of the v01.87r trigger incident.** That note had downgraded it to "possibly the same partial-grant mechanism, treat as unconfirmed". The Scraper evidence settles it: it was a genuine declaration gap whose fix only ever reached the template
-- **Archive rotation executed** — this push takes the active changelog past 100 sections. The oldest non-exempt date group (**2026-08-04**, 14 sections) was rotated to `CHANGELOG-archive.md` as an indivisible unit with mandatory SHA enrichment on every header. The shallow clone was deepened first (69 → 374 commits), without which every lookup would have failed silently
-
-## [v02.61r] — 2026-08-17 03:23:38 AM EST
-
-> **Prompt:** "I found it and ran diagnostics. Here is the log." *(Scraper execution log: `Authorization status: NOT_REQUIRED`, 6 granted scopes, `No authorization is outstanding`, plus `Could not read the effective user: … Required permissions: …/auth/userinfo.email`)*
-
-### Note
-- **Scraper's sign-in is healthy — its grant DOES include `spreadsheets`.** So the Receipts failure was not fleet-wide, and Scraper needs no sign-in repair
-- **But Scraper is missing `script.scriptapp`, so all three of its self-installed triggers are dead**: the hourly `scSchedulerTick`, the daily `enforceRetention`, and `auditRetentionCompliance`. None of them produces a user-visible symptom — the scheduler simply never runs. This is the silent failure mode that made the v01.87r incident so hard to spot
-- **Scraper's problem is the mirror image of Receipts'.** Receipts declared the scope and never had it granted; Scraper's `NOT_REQUIRED` verdict with no authorization URL means the grant already covers everything the manifest declares — so the scope is missing from the **declaration**, not the approval. Same symptom, opposite repair: Receipts needed a re-consent, Scraper needs a manifest edit *then* a consent
-- `Session.getEffectiveUser()` also failed on Scraper (`userinfo.email` not granted), which is why the log shows no effective user. The call is deliberately wrapped in `try/catch`, so the diagnostic degraded gracefully instead of dying — the design held under a case it was not written for
-
-### Fixed
-- **Two defects in the diagnostics shipped one version earlier, both exposed by this very log:**
-- **`diagnoseAuthorization` never printed the DECLARED list, so its `NOT_REQUIRED` branch could not answer the question it fires on.** That branch is precisely the one that triggers when the manifest under-declares — the grant matches the declaration, so nothing is "outstanding" — yet it sent the reader to GCP consent-screen settings instead of showing the one list that identifies the gap. It now prints declared and granted side by side on every run, before the verdict
-- **`diagnoseOauthScopes_` was unreachable dead code in six of seven projects.** Only Receipts called it (from `diagnoseAclAccess`, and only on an ACL-open failure), and its trailing underscore hides it from the editor's Run dropdown by design — so in `Globalacl`, `MasterACL`, `Profiler`, `Scraper`, `Testauthgas1` and `Testauthhtml1` it could not be invoked at all. Calling it unconditionally from `diagnoseAuthorization` gives it a caller everywhere (verified: 2 call sites per project, 3 in Receipts)
-- **The `NOT_REQUIRED` guidance was rewritten to read the two lists against each other** and name the specific repair — missing from *both* lists means the manifest under-declares and needs a scope added, which is also what makes Apps Script finally prompt; missing from the granted list alone would have produced an authorization URL, so its absence rules that out. The previous text opened with GCP project settings, which is the least likely cause and the most expensive to investigate
-
-### Changed
-- Propagated to all seven auth projects and the GAS auth template; `node --check` clean across all nine `.gs` files
-- **CHANGELOG capacity is now exactly 100/100** — the next push commit exceeds the threshold and must perform archive rotation per [PC-CHANGELOG] #6
-
-## [v02.60r] — 2026-08-17 03:15:36 AM EST
-
-> **Prompt:** "access GRANTED. We were both able to sign in. Do I need to propogate anything to my other apps?"
-
-### Note
-- **Receipts sign-in is confirmed working for both users — the four-session investigation is closed.** Root cause was a partial OAuth grant: `spreadsheets` and `script.scriptapp` declared but never approved. Fixed by re-approving with every granular-consent box ticked
-- **Nothing about the fix itself is propagatable.** The repair was an *approval* recorded against a Google account, per script project. It cannot be pushed, deployed, or committed — each project has its own independent grant and must be approved on its own
-- **The exposure is real on the other three deployed apps.** `MasterACL`, `Profiler` and `Scraper` are all deployed, all call `SpreadsheetApp` (21, 19 and 20 call sites) for the same Master-ACL sign-in, and all call `ScriptApp.newTrigger`. Same account, same consent screens, same era of setup — so the same two gaps are likely. `Globalacl`, `Testauthgas1` and `Testauthhtml1` carry placeholder deployment IDs and are not deployed, so they are exposed only if they are ever deployed
-- **A successful sign-in does not clear an app.** It proves `spreadsheets` is granted, and nothing else. `script.scriptapp` failing takes down self-installed triggers with **no user-visible symptom at all** — which is exactly how the v01.87r incident stayed hidden
-
-### Added
-- **`diagnoseAuthorization()` and `diagnoseOauthScopes_()` propagated to all six remaining auth projects and the GAS auth template** (`gas-minimal-auth-template-code.js.txt`), so every app can answer "is my permission actually granted?" instead of only Receipts. Both functions are fully self-contained — they touch only `ScriptApp`, `UrlFetchApp` and `Session`, never a project-specific constant — so they ported verbatim with no adaptation
-- **Placed in the TEMPLATE region rather than a PROJECT block**, immediately before `checkSpreadsheetAccess`. They diagnose shared auth infrastructure, not per-project features, so they belong to the template and travel with it under [PC-TEMPLATE-PROP] #19. New auth projects created from the template now inherit them at v01.00g
-- Verified one definition of each per file (no duplicates from a double-applied patch) and `node --check` clean across all nine `.gs` files plus the template
-
-### Changed
-- The propagated copies carry two wording improvements over the Receipts originals: the incomplete-grant branch now says to open the URL **signed in as the account named above** (the account trap that cost a round trip on Receipts), and each diagnostic now points at the other as the next step, since a permissions error can come from either the declaration or the grant and neither check alone is conclusive
-
-## [v02.59r] — 2026-08-17 03:04:38 AM EST
-
-> **Prompt:** "I ran diagnoseAuthorization, here's the log." *(execution log: `Authorization status: REQUIRED`; 8 granted scopes listed; `THE GRANT IS INCOMPLETE` plus an `…/authorize?enable_granular_consent=true` URL)*
-
-### Note
-- **CONFIRMED ROOT CAUSE — a partial OAuth grant, not a manifest problem.** The grant covers 8 scopes (`drive`, `script.deployments`, `script.external_request`, `script.projects`, `script.send_mail`, plus `userinfo.email` / `userinfo.profile` / `openid`) while the manifest declares **`spreadsheets`** and **`script.scriptapp`** that the grant does not. `spreadsheets` is the one that makes `SpreadsheetApp.openById` throw, which denies every user of the app at once. Four sessions of narrowing end here
-- **The `enable_granular_consent=true` parameter on the authorization URL names the mechanism.** Google's granular consent presents a checkbox per permission and lets a user approve some while leaving others unticked — each unticked box becomes a declared-but-not-granted scope that fails at call time. `diagnoseAuthorization` returning a **non-null** URL is positive proof of this, per the documented contract that `getAuthorizationUrl()` returns `null` when nothing is outstanding
-- **`script.scriptapp` is missing too, so self-installed triggers are broken as well** — a second, quieter casualty that produces no user-visible error at all
-- **The script runs as `lightaisolution@gmail.com`**, confirming the two-account structure inferred in v02.55r from the `DRIVE_FOLDER_ID` comment. The authorization URL must be opened under **that** account; opening it under the personal Gmail grants to the wrong account, and this fleet is already exposed to multi-account routing
-
-### Changed
-- **Rewrote `.claude/rules/gas-scripts-reference.md`'s OAuth section, which v02.57r got wrong.** It was titled "OAuth Scope Regressions — invisible to git" and led with a **missing declaration** as the mechanism, having been written before the manifest was confirmed complete. Now titled "Partial OAuth Grants — the manifest is fine and the call is still denied", with a declaration-vs-grant table, granular consent named as the cause, and the delta-not-failure prompting rule that explains why nothing ever re-prompts
-- **Deleted the recommendation that would have wasted the most time.** The old section advised that if this recurred a third time, the fix to weigh was committing a canonical `appsscript.json` per project and having the self-deploy write it. That addresses a declaration problem this is not — the manifest was already correct, so version-controlling it would have changed nothing while looking like a fix. Replaced with an explicit **"What does NOT fix it"** list (editing the manifest, pushing, redeploying, committing manifests)
-- **Downgraded the v01.87r precedent from evidence to an open question.** It was recorded as the manifest lacking `script.scriptapp` — the very scope also missing from this confirmed partial grant — so that earlier diagnosis may have been the same mechanism misattributed. The section now says to treat it as unconfirmed rather than as a second data point for the declaration theory
-- Added the two repair traps (approve as the **script account**, tick **every** box) and a blast-radius note: grants are per-project, so `Profiler`, `Scraper` and `MasterACL` need checking rather than assuming
-
-## [v02.58r] — 2026-08-17 02:52:34 AM EST
-
-> **Prompt:** "I opened "appscript.json" and all seven oauthScopes were there. When I ran diagnoseAclAccess again, it showed the same error."
-
-### Note
-- **All seven scopes declared and the call still denied narrows this to the grant, not the manifest.** Declaring a scope and holding a grant for it are separate things: `appsscript.json` is only the **request list**, while the grant is a distinct record tied to the authorizing account. Apps Script re-prompts **only** when the requested set changes or the grant is revoked — so inspecting the manifest and changing nothing cannot produce a consent screen, and a stale or partially-approved grant survives untouched. That is precisely the state that reads as "declared but denied"
-- **This also explains the missing consent screen from the previous session without contradicting it.** v02.57r attributed it to a scope never being *requested*; with the manifest confirmed complete, the same silence is explained by the request set being *unchanged*. Both are the same underlying rule — Apps Script prompts on a delta, not on a failure
-- **`Updated to v01.24g (deployment 34) | 34/200`** — v02.57r's code had merged but the GAS project had **not** pulled it; the direct probe is what completed the deploy. A second concrete instance of the standing caveat that a green CI run is not proof the GAS side updated. Version headroom is comfortable at 34/200
-- **The `getAuthorizationInfo` contract was verified against Google's reference docs before being built on**, rather than asserted from memory: `getAuthorizationUrl()` returns `null` when no authorization is outstanding, which is what makes it a clean discriminator rather than just a convenience link
-
-### Added
-- **`diagnoseAuthorization()` in `Receipts.gs`** — reports the effective user, the authorization status, and (where the runtime exposes `getAuthorizedScopes()`) the scopes the grant **actually covers**, so the declared list and the granted list can be compared directly. Its verdict is binary and actionable: a non-null authorization URL means the grant is incomplete and the URL re-approves it; a null URL means the grant is *not* the problem, and the log then names the three remaining candidates in order — a standard GCP project whose consent screen lacks the scope or is stuck in Testing, a second signed-in account, or a grant needing full revocation at `myaccount.google.com/permissions`
-- **Named without a trailing underscore deliberately** — underscore-suffixed functions are hidden from the Apps Script editor's Run dropdown, and this one has to be runnable by hand. (`diagnoseOauthScopes_` keeps its underscore because it is only ever called programmatically.)
-
-### Changed
-- `diagnoseAclAccess()`'s permissions branch now runs **both** the scope report and the grant check. Either alone is ambiguous — declared-but-not-granted and genuinely-undeclared produce the identical runtime error, and only the pair separates them
-
-## [v02.57r] — 2026-08-17 02:45:40 AM EST
-
-> **Prompt:** "It failed again with the same "Access denied. Contact your administrator. (code: acl_unavailable)". Also, I was able to open Receipts in Apps Script and ran DiagnoseAclAccess. See attached screenshot." *(execution log showing `FAIL: cannot open the ACL spreadsheet … You do not have permission to call SpreadsheetApp.openById. Required permissions: https://www.googleapis.com/auth/spreadsheets`)*
-
-### Note
-- **ROOT CAUSE, three sessions in: the Receipts script lost the `https://www.googleapis.com/auth/spreadsheets` OAuth scope.** The Master ACL spreadsheet is intact and correctly populated. `SpreadsheetApp.openById` was throwing a **permissions** error, so `checkSpreadsheetAccess` took the `acl_unreachable` branch — every user of the app denied at once, exactly as the v02.54r analysis predicted the mechanism would look. The fix is manual and lives in Google, not this repo: add the scope to `appsscript.json` and re-approve the consent screen
-- **The prediction in the previous response was wrong.** `acl_column_missing` was called as the likely cause on the reasoning that only a structural fault persists across sessions. That reasoning held; the conclusion did not — a missing OAuth scope is equally persistent and equally global, and it was not in the candidate set at all because the four `checkSpreadsheetAccess` reasons describe what the ACL *contains*, not whether the script may read it
-- **Why no consent screen ever appeared**, which is the detail that makes this diagnosable: with an **explicit** `oauthScopes` array, Apps Script requests exactly that list and does not auto-derive missing scopes from the code. A dropped entry therefore fails at call time, not at authorization time — nothing prompts, because nothing was ever requested. A stale *grant* prompts for re-consent; a missing *declaration* just fails
-- **This class of fault is invisible to the repository and cannot be fixed by pushing.** No live project's `appsscript.json` is version-controlled, and `pullAndDeployFromGitHub()` deliberately preserves the project's existing manifest — it reads the current `appsscript` file back and writes it unchanged alongside the new `Code`. So the regression survives every push, deploy and CI run
-- Second occurrence of this exact class: v01.87r lost `script.scriptapp` and silently broke self-installed triggers the same way
-- **The live page was verified as current before concluding anything about the client** — `Receiptshtml.version.txt` served `|v01.35w|` and the deployed `Receipts.html` contains the new `aclMsgs` branch, so the generic "Access denied… (code: acl_unavailable)" wording the developer quoted came from a cached page, not from the shipped build
-
-### Changed
-- **`diagnoseAclAccess()` now distinguishes a permissions failure from a file failure.** Its ACL-open catch previously printed one line — *"Restore the script owner's access to that file"* — which describes the file-level cause only and actively misdirected on this incident. It now tests the error text and branches: authorization-shaped errors trigger the new scope report, file-shaped errors keep the ID/trash/sharing advice
-
-### Added
-- **`diagnoseOauthScopes_()` in `Receipts.gs`** — reads the project's manifest back through the Apps Script API (`/v1/projects/<id>/content`, already reachable since `script.projects` is granted and self-deploy works) and prints every declared scope, then names each scope the app needs but lacks **labelled with the feature it breaks** — `spreadsheets` → the ACL and all data sheets, `drive` → receipt photos and PDFs, `script.external_request` → GitHub pulls, and so on. Handles the no-explicit-`oauthScopes` case separately, since there a permissions error means a stale grant rather than a missing declaration, and the repair differs
-- **`.claude/rules/gas-scripts-reference.md` — "OAuth Scope Regressions"**: the no-consent-prompt tell, why git cannot see or repair it, the repair procedure with the mandatory re-consent step, and a standing note that if this recurs a third time the fix to weigh is committing a canonical per-project manifest and having the self-deploy write it — flagged explicitly as a change to `pullAndDeployFromGitHub`'s manifest-preservation behavior that must be discussed rather than slipped in, since preserving the manifest is what stops a shared template from clobbering per-project webapp settings
-
-## [v02.56r] — 2026-08-17 02:34:37 AM EST
-
-> **Prompt:** "Mandy failed to sign in and the error code is "acl_unavailable"."
-
-### Fixed
-- **v02.54r computed the specific ACL failure reason and then threw it away at the boundary — my own gap, and it is why `acl_unavailable` arrived with no detail.** `exchangeTokenForSession` returned `{ error: "acl_unavailable", reason: <specific> }`, but **no page ever read `reason`**: every client mapped `acl_unavailable` to one static sentence. The previous session's claim that the sign-in screen would "name the actual cause" was wrong — the server side was verified and the client display path was not
-- **A second, independent break in the same chain: the postMessage payload is an explicit field whitelist and silently dropped `reason`.** `gas-session-created` is assembled field-by-field in two places per project (the direct `JSON.stringify` payload and the string-built `google.script.run` listener), so a new server field never reaches pages using the `postMessage` transport regardless of what the client reads. Receipts runs `TOKEN_EXCHANGE_METHOD: 'fetch'` (raw JSON passthrough, unaffected), which is exactly why this would have stayed invisible on the app being debugged while quietly breaking MasterACL and Globalacl. `reason` added to both builders in all seven projects and the GAS template
-- **The message told users to retry faults that can never clear on their own.** `acl_column_missing`, `acl_tab_missing` and `acl_empty` are structural — retrying is futile — yet all three said "please try again in a moment". Each now states plainly that an administrator has to restore the list, and only `acl_unreachable` invites a retry
-
-### Changed
-- **Client error mapping is now reason-aware across 13 call sites** in the seven auth pages plus the auth HTML template — `_mapExchangeError` gained an `authReason` parameter (threaded from `data.reason` at every call site) and the `postMessage` branch reads `data.reason` directly. Every message ends with `(code: acl_unavailable/<reason>)` so the specific cause is quotable from a screenshot
-- `Profiler.html` needed its own branch again — its catch-all would otherwise have told a user to "ask Jon to add you to the access list" during a structural outage
-
-### Note
-- **Verified by calling the real function in a real browser**, not by inspecting the source: Playwright loaded `Receipts.html` and invoked `_mapExchangeError('acl_unavailable', …)` for all four reasons plus `undefined`, confirming each maps to its own message, the `undefined` fallback lands on `acl_unreachable`, and an unrelated code (`rate_limited`) still maps correctly — i.e. no regression in the surrounding chain
-- **The two harness FAILs on `Receipts` and `MasterACL` are pre-existing** — CSP image-load refusals under `file://`. Confirmed by stashing the change and re-running: byte-identical results (3 and 5 errors, same pass/fail), so nothing here introduced them
-- **What `acl_unavailable` already tells us** is that the v02.54r diagnosis was right — this is not a per-user denial. The ACL genuinely could not be READ, which is why Mandy and the developer were denied together. Which of the four causes fired still needs one more sign-in attempt on this build
-- The Master ACL and Receipts spreadsheets were probed through the Google Drive connector to try to settle the cause without another round trip; both returned "not found" while 15 other spreadsheets listed normally, so the connector is scoped to the personal account and cannot see the script account's files. Recorded as a dead end rather than as evidence about the spreadsheets' existence
-- All nine `.gs` files and all 15 inline page scripts pass `node --check`
-
-## [v02.55r] — 2026-08-17 02:24:25 AM EST
-
-> **Prompt:** "I tried to open Receipts in the Apps Script editor and this happened. What's going on? Fix it." *(with a screenshot of Google Drive's "Sorry, unable to open the file at this time.")*
-
-### Note
-- **The editor error is browser-side Google account routing and has no repo-side fix.** No code change can resolve it, and none was attempted. What the repo *could* contribute was proof of where the fault is not, plus documentation so it stops costing a session each time
-- **The live Receipts deployment was probed directly and answered `Already up to date (v01.22g)`.** That single response settles a great deal: the script project exists, the owning account still has access to it, and the v02.54r ACL fix from the previous push is **live in production**. The failure is therefore confined to the browser's account routing — a trashed project, revoked ownership, or a failed deploy are all ruled out
-- **Consequence for the previous session's recommendation: the editor is no longer required for the ACL diagnosis.** `diagnoseAclAccess()` was the only reason to open it, and v01.22g now names the failure reason (`acl_unreachable` / `acl_tab_missing` / `acl_empty` / `acl_column_missing`) on the sign-in screen itself
-- **The deploy webhook's green checkmark is not proof of deployment.** The workflow's deploy step exits 0 even when unconfirmed — it only emits a `::warning` — so the CI run passing and the GAS app actually updating are two different facts. The direct probe is what closes that gap
-
-### Added
-- **`.claude/rules/gas-scripts-reference.md` — "Checking the live GAS version without opening the editor".** Documents `?action=api&op=deploy` as the editor-free way to read the version a deployment is actually running. The route is unauthenticated and idempotent **by design** (the deploy handler's ⚠️ CRITICAL comment: it can only re-pull what GitHub already contains), so it is safe to call at any time. Also records that `globalacl`, `testauthgas1` and `testauthhtml1` carry placeholder deployment IDs and are never deployed — which is why their workflow deploy steps completed in 0 seconds on the v02.54r run while MasterACL, Scraper, Receipts and Profiler took real multi-second round trips
-- **`.claude/rules/gas-scripts-reference.md` — "Google Multi-Account Routing".** This exact Drive error has now hit the fleet **three times on three different surfaces**: the Profiler note-box iframe (v02.28r), the embedded `#gas-app` iframe after sign-in, and now the Apps Script editor. The mechanism is that Google resolves a URL with no `/u/N/` prefix against the browser's **default** account, and this fleet is unusually exposed because the GAS projects and their Drive folders are owned by a dedicated **script account** while day-to-day browsing happens as the developer's personal account — a split the `DRIVE_FOLDER_ID` comment in `Receipts.gs` states outright. Three ranked fixes are recorded (private window with only the owning account; `/u/N/` index forcing; changing the browser default), along with the note that the two **in-app** occurrences are already fixed structurally via credentialless iframes and cookie-less `fetch()`, so a reappearance inside a page means a transport lost its cookie-less property rather than a new Google bug
-
-### Changed
-- README tree description for `gas-scripts-reference.md` updated to cover the two new sections
-
-## [v02.54r] — 2026-08-17 02:10:00 AM EST
-
-> **Prompt:** "Picking up from my last "Receipts" related session, Mandy and I both tried to sign in and were denied per the attached screenshot. This is the second time this has happened now. What is going on? Is there any way to prevent this from happening in the future?" *(with a screenshot of the Receipts sign-in wall showing `Access denied. Contact your administrator. (code: not_authorized)`)*
-
-### Fixed
-- **`checkSpreadsheetAccess()` could not tell "this user is not on the list" apart from "I could not read the list" — and reported both as `not_authorized`.** The entire Master ACL read sat inside `try { … } catch(e) { /* continue to method 2 */ }`, but method 2 (the editor/viewer sharing-list fallback) is gated on `if (!hasAcl && hasSheet)` and is therefore **skipped whenever an ACL is configured**. So every exception — `SpreadsheetApp.openById` failing, a Sheets timeout, a lock/contention error, quota exhaustion — fell straight through to `cache.put(cacheKey, "0", 600); return denied;`. This is the defect that explains both reported incidents: a per-user data problem cannot deny two users at the same moment, but a failed read of the shared list denies **everyone at once**, and the 10-minute negative cache makes it persist well past the fault itself
-- **The same silent path swallowed three structural failures**, all of which deny 100% of an app's users while looking exactly like an individual denial: a missing `Access` tab, a sheet with fewer than two rows, and — most likely to occur in practice — **a missing or renamed page column** (`colIdx === -1`), which was simply skipped with no signal
-- **Error-path denials are no longer cached.** `aclReadOk` now records whether the list was actually read. Only a successful read that genuinely finds no grant caches `"0"`; an unreadable list returns a new uncached `aclUnavailable` verdict, so access is restored the moment the service recovers instead of up to 10 minutes later
-- **An unreadable ACL no longer counts as a failed login attempt.** `exchangeTokenForSession()` previously incremented the rate-limit counter on every `not_authorized`, and the `hipaa` preset (which Receipts runs) enables `ENABLE_ESCALATING_LOCKOUT` — 10 failures → 30 minutes, 20 → 6 hours. A user retrying through an outage could therefore convert a transient fault into a real lockout. The new `acl_unavailable` branch returns before the counter is touched
-- **The failure is now visible instead of silent.** Each failed read logs the attempt number, the page name and the exception message via `Logger.log`, and the unavailable verdict writes a `security_alert` / `acl_unavailable` audit entry with a specific reason (`acl_unreachable`, `acl_tab_missing`, `acl_empty`, `acl_column_missing`). Previously the `catch` block discarded the exception entirely, which is why the first investigation (v02.30r, which shipped the `diagnoseAclAccess()` diagnostic) could find no cause in the code
-
-### Added
-- **A bounded retry around the ACL read** — one retry after a 400 ms pause before concluding the list is unreachable, which absorbs momentary contention without materially slowing a genuine sign-in
-- **`acl_unavailable` client messaging** in all seven auth pages and the auth HTML template (13 mapping sites across the `fetch` and `postMessage` exchange branches): *"The sign-in service could not reach the access list… This is a temporary service problem, not a change to your access — please try again in a moment."* `Profiler.html` needed a dedicated branch because its catch-all `/access|acl|denied|not_authorized/i` test would otherwise have told the user to ask for access they already have
-
-### Changed
-- **`registerSelfProject()` is throttled to once per version (6 h cache TTL) instead of running on every `doGet`.** This is the contention source, not a side issue: the function writes five metadata cells (`#NAME`/`#URL`/`#AUTH`/`#ICON`/`#DESC`) into the **shared** `Access` tab on every page load, and **seven projects share that one tab** — so every page view of any app was writing to the exact sheet every sign-in must read. The marker is only set after a fully successful pass (a failed registration retries on the next load rather than being suppressed for six hours), and the `doPost(action=deploy)` route clears it outright so a redeploy always re-registers
-- **Propagated to all seven auth projects and both templates** per [PC-TEMPLATE-PROP] #19 — `Receipts`, `Profiler`, `Scraper`, `MasterACL`, `Globalacl`, `Testauthgas1`, `Testauthhtml1`, plus `gas-minimal-auth-template-code.js.txt` and `HtmlAndGasTemplateAutoUpdate-auth.html.txt`. The `checkSpreadsheetAccess` body was confirmed **byte-identical across all eight copies** (same 115-line md5) before patching, so a single scripted replacement was safe
-
-### Note
-- **The fix is fail-safe by construction: no path grants access to anyone who would previously have been denied.** A successful read that finds no grant behaves exactly as before. Only the *error* paths changed, and they still deny — they simply deny with a distinguishable code, without caching, and without counting against the lockout
-- **Which trigger fired on these two specific incidents is still unconfirmed** and cannot be determined from the repo — it needs the Apps Script execution log. Running `diagnoseAclAccess()` (added v02.30r) from the editor now discriminates it, and from this version on the execution log records the reason automatically. `acl_column_missing` and `acl_unreachable` are the two candidates consistent with two users being denied simultaneously
-- **`auditLog()` was verified safe to call from the new error path** — `_writeAuditLogEntry` wraps its own spreadsheet write in `try/catch` and swallows failures, so it cannot throw back into `checkSpreadsheetAccess` during the very outage being handled
-- All nine `.gs` files pass `node --check` after patching
