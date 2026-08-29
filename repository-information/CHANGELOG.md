@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.67r] — 2026-08-29 06:20:58 PM EST
+
+> Understanding the relationships between all these different players in different functions is extremely important for me to understand which companies my targets are already working with and how. How can I optimize this Relationships tab to generate me genuinely useful information? If you need to run curated passes on any dossier or even conduct new targeted research, that's totally fine. I just want a legitimately structured way to analyze and display the information I need. Recommend me some ways to improve this Relationships function to approve.
+
+### Added
+
+#### Profiler data (`live-site-pages/profiler-data/`)
+- Curated `relationships[]` for **all 88 dossiers** — 485 typed links (customer/supplier/partner/competitor/investor/other) with note, expanded context, stated source, and the schema-v6 `status`/`since`/`scale` deal metadata; every dossier now at schemaVersion 6
+- Targeted relationship research on the 12 hyperscaler/neocloud dossiers (Oracle, Microsoft, Google, Amazon, Meta, OpenAI, xAI, Crusoe, CoreWeave, IREN, Lambda, Nebius) via 12 parallel research agents — real revisions with archival (12 superseded versions archived per the Archival Procedure), 18 new development entries and ~40 new sources covering the Stargate build web, neocloud offtakes, and energy-chain deals
+- `profiler-graph.json` — prebuilt ecosystem relationship graph merging both sides' curated links with full-sentence cross-mention evidence: 474 edges (372 carrying curated data), 1,501 evidence items
+- `scripts/build-profiler-graph.py` — graph builder, now REQUIRED after any profile write (documented in PROFILER-SCHEMA.md and the Profiler Command's register step)
+
+#### `live-site-pages/Profiler.html` (v01.55w)
+- Relationships tab grouping: Working with / Competing with / Other links / Detected in other dossiers, with deal chips (status, since, scale, latest activity)
+- Inbound evidence: each relationship shows what the counterparty's dossier says back, and graph-only counterparts surface as detected links
+- `#network` ecosystem explorer + ⛓ Network masthead button — the full graph as a filterable list (company / link kind / counterparty category), each edge spelled out from both curated sides with its freshest quote
+
+### Changed
+- `README.md` — structure-tree entries for `profiler-graph.json` and `build-profiler-graph.py`; archive listing regenerated to full completeness (98 archived dossier versions — backfilled 74 entries missing from prior passes plus the 12 new ones)
+- `.claude/rules/profiler-app.md` — Profiler Command step 5 now requires the graph rebuild alongside the registry sync
 
 ## [v03.66r] — 2026-08-29 05:15:56 PM EST
 

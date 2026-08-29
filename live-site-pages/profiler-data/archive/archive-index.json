@@ -11,6 +11,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-22",
       "supersededBy": 3
+    },
+    {
+      "file": "amazon.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 4
     }
   ],
   "byd": [
@@ -325,6 +331,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "coreweave.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "crusoe": [
@@ -333,6 +345,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "crusoe.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "delta-electronics": [
@@ -389,6 +407,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "google.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "hitachi-energy": [
@@ -429,6 +453,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "iren.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "kiewit": [
@@ -445,6 +475,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "lambda.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "lg-energy-solution": [
@@ -469,6 +505,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "meta.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "microsoft": [
@@ -477,6 +519,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "microsoft.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "mortenson": [
@@ -493,6 +541,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "nebius.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "nvidia": [
@@ -509,6 +563,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "openai.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "oracle": [
@@ -517,6 +577,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "oracle.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ],
   "panasonic": [
@@ -637,6 +703,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "xai.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-29",
+      "supersededBy": 3
     }
   ]
 }

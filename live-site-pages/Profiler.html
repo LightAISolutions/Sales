@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.54w">
+  <meta name="build-version" content="v01.55w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -360,6 +360,39 @@
     .ov-rel-it a.srcl { color: var(--ov-gold); text-decoration: none; font: 11px var(--ov-mono); white-space: nowrap; }
     .ov-rel-it a.srcl:hover { text-decoration: underline; }
     @media (max-width: 640px) { .ov-rel { flex-wrap: wrap; } .ov-rel-chip { flex: 0 0 auto; } }
+    /* Relationships v01.55w: working/competing grouping, deal chips, inbound
+       evidence, and the #network ecosystem explorer. */
+    .ov-rel-grp { font: 600 11px/1 var(--ov-mono); letter-spacing: 0.24em; text-transform: uppercase; color: var(--ov-gold); border-bottom: 1px solid var(--ov-line2); padding-bottom: 7px; margin: 26px 0 2px; }
+    .ov-rel-grp:first-child { margin-top: 12px; }
+    .ov-rel-grp .cnt { color: var(--ov-faint); letter-spacing: 0.08em; margin-left: 8px; }
+    .ov-rel-chips { margin: 3px 0 6px; }
+    .ov-rel-chips .ch { display: inline-block; font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ov-muted); border: 1px solid var(--ov-line2); border-radius: 4px; padding: 3px 7px; margin: 2px 6px 2px 0; }
+    .ov-rel-chips .ch.st-active { color: #82b56d; border-color: rgba(130,181,109,0.45); }
+    .ov-rel-chips .ch.st-announced { color: #6ea8fe; border-color: rgba(110,168,254,0.45); }
+    .ov-rel-chips .ch.st-historical { color: var(--ov-faint); }
+    .ov-rel-evhd.inb { color: #6ea8fe; }
+    .ov-rel-type.det { background: transparent; color: var(--ov-faint); border: 1px solid var(--ov-line2); }
+    #ov-network-btn {
+      position: absolute; top: 84px; right: 0;
+      background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
+      border-radius: 999px; padding: 8px 16px; cursor: pointer;
+      font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    #ov-network-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
+    .nx-filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 6px; }
+    .nx-filters select { background: var(--ov-card); color: var(--ov-paper); border: 1px solid var(--ov-line2); border-radius: 6px; padding: 8px 10px; font: 12px var(--ov-mono); max-width: 100%; }
+    .nx-count { color: var(--ov-faint); font: 11px/1.6 var(--ov-mono); letter-spacing: 0.08em; margin: 4px 0 10px; }
+    .nx-row { padding: 12px 0; border-bottom: 1px solid var(--ov-line); }
+    .nx-row:last-child { border-bottom: none; }
+    .nx-pair { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .nx-co { background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 999px; padding: 6px 12px; font: 12px/1.3 var(--ov-mono); color: var(--ov-paper); cursor: pointer; text-align: left; }
+    .nx-co:hover { color: var(--ov-gold); }
+    .nx-tie { font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-ink); background: var(--ov-gold); border-radius: 4px; padding: 4px 7px; }
+    .nx-tie.det { background: transparent; color: var(--ov-faint); border: 1px solid var(--ov-line2); }
+    .nx-meta { color: var(--ov-faint); font: 10.5px/1.6 var(--ov-mono); letter-spacing: 0.05em; }
+    .nx-note { color: var(--ov-muted); font-size: 12.5px; line-height: 1.55; margin-top: 5px; overflow-wrap: break-word; }
+    .nx-quote { color: var(--ov-muted); font-size: 12px; line-height: 1.55; margin-top: 4px; overflow-wrap: break-word; }
+    .nx-quote .wh { color: var(--ov-faint); font: 10.5px var(--ov-mono); letter-spacing: 0.05em; }
     /* Settings ⚙ menu + Commands reference (v01.45w) */
     #ov-settings-menu {
       position: fixed; right: 22px; bottom: 92px; z-index: 8901; display: none; width: 310px;
@@ -1706,6 +1739,24 @@ function ovReloadFresh() {
       return fetch(OV_BASE + path + '?_cb=' + Date.now(), { cache: 'no-store' })
         .then(function(res) { if (!res.ok) throw new Error('http_' + res.status); return res.json(); });
     }
+    // ── Ecosystem graph (v01.55w) ──
+    // profiler-graph.json is prebuilt by scripts/build-profiler-graph.py from
+    // all dossiers: every cross-mention as full-sentence evidence plus both
+    // sides' curated links. One memoized fetch feeds the Relationships tab's
+    // inbound evidence and the #network explorer.
+    var ovGraph = null, ovGraphP = null, ovGraphBy = {};
+    function ovGraphLoad() {
+      if (ovGraph) return Promise.resolve(ovGraph);
+      if (!ovGraphP) ovGraphP = ovFetchJson('profiler-graph.json').then(function(g) {
+        ovGraph = g; ovGraphBy = {};
+        ((g && g.edges) || []).forEach(function(e) {
+          (ovGraphBy[e.a] = ovGraphBy[e.a] || []).push(e);
+          (ovGraphBy[e.b] = ovGraphBy[e.b] || []).push(e);
+        });
+        return g;
+      }).catch(function() { ovGraphP = null; return null; });
+      return ovGraphP;
+    }
 
     // Deep-linkable tabs (v01.35w): the hash is either "#slug" or "#slug/tab".
     // Compare (v01.46w) adds "#compare/slug1,slug2[,…]"; Reports (v01.52w)
@@ -1725,6 +1776,8 @@ function ovReloadFresh() {
         ovRenderReports();
       } else if (slug === 'report') {
         ovRenderReport(String(parts[1] || ''));
+      } else if (slug === 'network') {
+        ovRenderNetwork();
       } else if (slug) { ovRenderCompany(slug); } else { ovRenderRoster(); }
       window.scrollTo(0, 0);
     }
@@ -2755,7 +2808,88 @@ function ovReloadFresh() {
       }
       return { url: '', label: s, date: '' };
     }
-    function ovRelationshipsSection(p) {
+    // Type groups (v01.55w): the reader's first question is "who are they
+    // working with vs against" — customer/supplier/partner/investor land in
+    // "Working with", competitor in "Competing with", other in "Other links",
+    // and graph-only counterparts (companies whose dossiers mention this one
+    // with no curated link here) in "Detected in other dossiers".
+    var OV_REL_WORK = { customer: 1, supplier: 1, partner: 1, investor: 1 };
+    var OV_REL_STATUS = { active: 'Active', announced: 'Announced', historical: 'Historical' };
+    function ovRelEdgeFor(slug, other) {
+      var edges = ovGraphBy[slug] || [];
+      for (var i = 0; i < edges.length; i++) {
+        var o = edges[i].a === slug ? edges[i].b : edges[i].a;
+        if (o === other) return edges[i];
+      }
+      return null;
+    }
+    // Inbound evidence: sentences that live in the OTHER company's dossier and
+    // mention this one — the direction a single dossier read can never show.
+    function ovRelInbound(slug, other) {
+      var e = ovRelEdgeFor(slug, other);
+      if (!e) return [];
+      var side = e.a === slug ? 'b' : 'a';
+      return (e.evid || []).filter(function(v) { return v.from === side; });
+    }
+    function ovRelChips(ev, r) {
+      var chips = [];
+      if (r.status && OV_REL_STATUS[r.status]) chips.push(['st-' + r.status, OV_REL_STATUS[r.status]]);
+      if (r.since) chips.push([null, 'Since ' + r.since]);
+      if (r.scale) chips.push([null, r.scale]);
+      if (r.last) chips.push([null, 'Latest ' + r.last]);
+      if (!chips.length) return;
+      var row = ovEl('div', 'ov-rel-chips');
+      chips.forEach(function(c) { row.appendChild(ovEl('span', 'ch' + (c[0] ? ' ' + c[0] : ''), c[1])); });
+      ev.appendChild(row);
+    }
+    function ovRelEvidList(p, ev, items, head, inbound) {
+      if (!items.length) return;
+      if (head) ev.appendChild(ovEl('div', 'ov-rel-evhd' + (inbound ? ' inb' : ''), head));
+      items.forEach(function(e) {
+        var it = ovEl('div', 'ov-rel-it');
+        it.appendChild(ovEl('span', 'wh', e.where + (e.date ? ' · ' + e.date : '')));
+        it.appendChild(document.createTextNode(' — ' + e.text + ' '));
+        if (e.src) {
+          var so2 = ovRelSource(p, e.src);
+          if (so2 && so2.url) it.appendChild(ovLink(so2.url, 'srcl', '[' + so2.label + ']'));
+        }
+        ev.appendChild(it);
+      });
+    }
+    function ovRelRow(p, r) {
+      var row = ovEl('div', 'ov-rel');
+      var chip = ovEl('button', 'ov-rel-chip', r.name);
+      chip.type = 'button';
+      chip.style.borderColor = ovRelColor(r.cats);
+      chip.addEventListener('click', function() { window.location.hash = r.slug; });
+      row.appendChild(chip);
+      if (r.type) row.appendChild(ovEl('span', 'ov-rel-type' + (r.detected ? ' det' : ''), r.type));
+      var ev = ovEl('div', 'ov-rel-ev');
+      ovRelChips(ev, r);
+      if (r.src) {
+        var so = ovRelSource(p, r.src);
+        var line = ovEl('div', 'ov-rel-src');
+        line.appendChild(ovEl('span', 'k', 'Source'));
+        if (so.url) {
+          line.appendChild(ovLink(so.url, null, so.label));
+          if (so.date) line.appendChild(ovEl('span', 'ov-asof', ' — ' + so.date));
+        } else {
+          line.appendChild(document.createTextNode(so.label));
+        }
+        ev.appendChild(line);
+      }
+      if (r.note) ev.appendChild(ovEl('div', 'ov-rel-note', r.note));
+      if (r.context) String(r.context).split(/\n{2,}/).forEach(function(par) {
+        ev.appendChild(ovEl('p', 'ov-rel-ctx', par.trim()));
+      });
+      ovRelEvidList(p, ev, r.evid, (r.note || r.context || r.src) ? 'Mentions across this dossier' : '');
+      ovRelEvidList(p, ev, r.inb || [], 'Mentioned in ' + r.name + '’s dossier', true);
+      if (!r.evid.length && !(r.inb || []).length && !r.note && !r.context) ev.appendChild(ovEl('div', null, 'Cross-referenced in this dossier.'));
+      row.appendChild(ev);
+      return row;
+    }
+    function ovRelPaint(p, wrap) {
+      ovClear(wrap);
       var bySlug = {};
       ((ovRegistry && ovRegistry.companies) || []).forEach(function(c) { bySlug[c.slug] = c; });
       // Derived evidence is gathered for every dossier — on curated dossiers it
@@ -2766,71 +2900,211 @@ function ovReloadFresh() {
       var dBySlug = {};
       derived.forEach(function(d) { dBySlug[d.slug] = d; });
       var rels, curated = !!(p.relationships && p.relationships.length);
+      var seen = {};
       if (curated) {
         rels = [];
         p.relationships.forEach(function(r) {
           var c = bySlug[r.slug];
           if (!c) return; // relationships[] may only point at covered companies
-          rels.push({ slug: r.slug, name: c.name, cats: c.categories || [], type: OV_REL_TYPES[r.type] || OV_REL_TYPES.other,
+          var edge = ovGraph ? ovRelEdgeFor(p.slug, r.slug) : null;
+          seen[r.slug] = 1;
+          rels.push({ slug: r.slug, name: c.name, cats: c.categories || [], rawType: r.type,
+            type: OV_REL_TYPES[r.type] || OV_REL_TYPES.other,
             note: r.note || '', context: r.context || '', src: r.source || '',
-            evid: (dBySlug[r.slug] || {}).evid || [] });
+            status: r.status || '', since: r.since || '', scale: r.scale || '',
+            last: edge ? (edge.last || '') : '',
+            evid: (dBySlug[r.slug] || {}).evid || [],
+            inb: ovGraph ? ovRelInbound(p.slug, r.slug) : [] });
         });
       } else {
         rels = derived;
+        rels.forEach(function(r) { seen[r.slug] = 1; r.inb = ovGraph ? ovRelInbound(p.slug, r.slug) : []; });
         rels.sort(function(a, b) { return b.evid.length - a.evid.length || a.name.localeCompare(b.name); });
       }
-      if (!rels.length) return null;
+      // Graph-only counterparts: other dossiers that mention this company with
+      // no curated or derived link on this side — the inbound view.
+      var detected = [];
+      if (ovGraph) (ovGraphBy[p.slug] || []).forEach(function(e) {
+        var other = e.a === p.slug ? e.b : e.a;
+        if (seen[other] || !bySlug[other]) return;
+        var inb = ovRelInbound(p.slug, other);
+        if (!inb.length) return;
+        detected.push({ slug: other, name: bySlug[other].name, cats: bySlug[other].categories || [],
+          type: 'Detected', detected: true, note: '', context: '', src: '',
+          last: e.last || '', evid: [], inb: inb });
+      });
+      detected.sort(function(a, b) { return b.inb.length - a.inb.length || a.name.localeCompare(b.name); });
+      if (!rels.length && !detected.length) return false;
       var sec = ovSection(ovSecLabel('rels'), curated
-        ? 'Curated links from this dossier\'s research — each with its stated source, the relationship\'s context, and every mention across the dossier quoted in full. Click a company to open its dossier.'
+        ? 'Curated links from this dossier\'s research — grouped by who the company works with vs competes with, each with its stated source, deal metadata, every mention across this dossier, and what other dossiers say back. Click a company to open its dossier.'
         : 'Detected in this dossier\'s own reporting and judgments — every mention quoted in full below; curated into typed relationships at the next revision. Click a company to open its dossier.');
       var mapRels = rels.slice(0, 10); // the map stays legible at ≤10 spokes
-      sec.appendChild(ovRelMap(p, mapRels));
+      if (mapRels.length) sec.appendChild(ovRelMap(p, mapRels));
       if (rels.length > mapRels.length)
-        sec.appendChild(ovEl('p', 'sec-note', 'The map draws the ' + mapRels.length + ' most-evidenced links — every relationship is listed in full below.'));
-      var list = ovEl('div', 'ov-rels');
-      rels.forEach(function(r) {
-        var row = ovEl('div', 'ov-rel');
-        var chip = ovEl('button', 'ov-rel-chip', r.name);
-        chip.type = 'button';
-        chip.style.borderColor = ovRelColor(r.cats);
-        chip.addEventListener('click', function() { window.location.hash = r.slug; });
-        row.appendChild(chip);
-        if (r.type) row.appendChild(ovEl('span', 'ov-rel-type', r.type));
-        var ev = ovEl('div', 'ov-rel-ev');
-        if (r.src) {
-          var so = ovRelSource(p, r.src);
-          var line = ovEl('div', 'ov-rel-src');
-          line.appendChild(ovEl('span', 'k', 'Source'));
-          if (so.url) {
-            line.appendChild(ovLink(so.url, null, so.label));
-            if (so.date) line.appendChild(ovEl('span', 'ov-asof', ' — ' + so.date));
-          } else {
-            line.appendChild(document.createTextNode(so.label));
-          }
-          ev.appendChild(line);
-        }
-        if (r.note) ev.appendChild(ovEl('div', 'ov-rel-note', r.note));
-        if (r.context) String(r.context).split(/\n{2,}/).forEach(function(par) {
-          ev.appendChild(ovEl('p', 'ov-rel-ctx', par.trim()));
-        });
-        if (r.evid.length && (r.note || r.context || r.src))
-          ev.appendChild(ovEl('div', 'ov-rel-evhd', 'Mentions across this dossier'));
-        r.evid.forEach(function(e) {
-          var it = ovEl('div', 'ov-rel-it');
-          it.appendChild(ovEl('span', 'wh', e.where + (e.date ? ' · ' + e.date : '')));
-          it.appendChild(document.createTextNode(' — ' + e.text + ' '));
-          if (e.src) {
-            var so2 = ovRelSource(p, e.src);
-            if (so2 && so2.url) it.appendChild(ovLink(so2.url, 'srcl', '[' + so2.label + ']'));
-          }
-          ev.appendChild(it);
-        });
-        if (!r.evid.length && !r.note && !r.context) ev.appendChild(ovEl('div', null, 'Cross-referenced in this dossier.'));
-        row.appendChild(ev);
-        list.appendChild(row);
+        sec.appendChild(ovEl('p', 'sec-note', 'The map draws the first ' + mapRels.length + ' links — every relationship is listed in full below.'));
+      var groups = curated
+        ? [['Working with', rels.filter(function(r) { return OV_REL_WORK[r.rawType]; })],
+           ['Competing with', rels.filter(function(r) { return r.rawType === 'competitor'; })],
+           ['Other links', rels.filter(function(r) { return !OV_REL_WORK[r.rawType] && r.rawType !== 'competitor'; })]]
+        : [['Detected in this dossier', rels]];
+      groups.push(['Detected in other dossiers', detected]);
+      groups.forEach(function(g) {
+        if (!g[1].length) return;
+        var hd = ovEl('div', 'ov-rel-grp', g[0]);
+        hd.appendChild(ovEl('span', 'cnt', '· ' + g[1].length));
+        sec.appendChild(hd);
+        var list = ovEl('div', 'ov-rels');
+        g[1].forEach(function(r) { list.appendChild(ovRelRow(p, r)); });
+        sec.appendChild(list);
       });
-      sec.appendChild(list);
-      return sec;
+      wrap.appendChild(sec);
+      return true;
+    }
+    function ovRelationshipsSection(p) {
+      var wrap = ovEl('div', 'ov-rel-wrap');
+      var any = ovRelPaint(p, wrap);
+      if (!ovGraph) ovGraphLoad().then(function(g) {
+        // Repaint with the graph's inbound evidence once it arrives — only if
+        // this dossier is still on screen (hash may have moved on).
+        if (g && document.body.contains(wrap)) ovRelPaint(p, wrap);
+      });
+      return (any || !ovGraph) ? wrap : null;
+    }
+
+    // ── Ecosystem explorer (#network, v01.55w) ──
+    // The whole graph in one flat, filterable view: who works with whom,
+    // read from both dossiers' curated links plus detected cross-mentions.
+    var ovNxCompany = '', ovNxKind = '', ovNxCat = '';
+    function ovNxCatLabel(c) {
+      return c === 'epc' ? 'EPC' : (c === 'gc' ? 'General Contractor' : c.charAt(0).toUpperCase() + c.slice(1));
+    }
+    function ovNxKindOf(e) {
+      var a = e.curated && e.curated.a, b = e.curated && e.curated.b;
+      if ((a && OV_REL_WORK[a.type]) || (b && OV_REL_WORK[b.type])) return 'work';
+      if ((a && a.type === 'competitor') || (b && b.type === 'competitor')) return 'comp';
+      if (a || b) return 'other';
+      return 'det';
+    }
+    function ovRenderNetwork() {
+      var main = ovMain();
+      ovClear(main);
+      var back = ovEl('button', 'ov-back', '← All companies');
+      back.addEventListener('click', function() { window.location.hash = ''; });
+      main.appendChild(back);
+      main.appendChild(ovEl('h2', null, 'Ecosystem Network'));
+      main.appendChild(ovEl('p', 'sec-note', 'Every relationship across the covered companies — curated links read from both sides\' dossiers, plus cross-mentions detected in the corpus. Filter by company, link kind, or counterparty category; click a company to open its dossier.'));
+      var box = ovEl('div', 'nx-box');
+      main.appendChild(box);
+      ovGraphLoad().then(function(g) {
+        if (!document.body.contains(box)) return;
+        if (!g) { box.appendChild(ovEl('p', 'ov-empty', 'The relationship graph could not be loaded.')); return; }
+        ovNetworkPaint(box);
+      });
+    }
+    function ovNetworkPaint(box) {
+      ovClear(box);
+      var bySlug = {};
+      ((ovRegistry && ovRegistry.companies) || []).forEach(function(c) { bySlug[c.slug] = c; });
+      var bar = ovEl('div', 'nx-filters');
+      function sel(opts, cur, onchange, aria) {
+        var s = document.createElement('select');
+        s.setAttribute('aria-label', aria);
+        opts.forEach(function(o) {
+          var op = document.createElement('option');
+          op.value = o[0]; op.textContent = o[1];
+          if (o[0] === cur) op.selected = true;
+          s.appendChild(op);
+        });
+        s.addEventListener('change', function() { onchange(s.value); ovNetworkPaint(box); });
+        bar.appendChild(s);
+      }
+      var coOpts = [['', 'All companies']].concat(
+        ((ovRegistry && ovRegistry.companies) || []).slice().sort(function(a, b) { return a.name.localeCompare(b.name); })
+          .map(function(c) { return [c.slug, c.name]; }));
+      sel(coOpts, ovNxCompany, function(v) { ovNxCompany = v; }, 'Filter by company');
+      sel([['', 'All link kinds'], ['work', 'Working with'], ['comp', 'Competing with'], ['other', 'Other links'], ['det', 'Detected only']],
+        ovNxKind, function(v) { ovNxKind = v; }, 'Filter by link kind');
+      var catOpts = [['', 'All categories']].concat(((ovRegistry && ovRegistry.categories) || []).map(function(c) { return [c, ovNxCatLabel(c)]; }));
+      sel(catOpts, ovNxCat, function(v) { ovNxCat = v; }, 'Filter by counterparty category');
+      box.appendChild(bar);
+      var edges = ((ovGraph && ovGraph.edges) || []).filter(function(e) {
+        if (!bySlug[e.a] || !bySlug[e.b]) return false;
+        if (ovNxCompany && e.a !== ovNxCompany && e.b !== ovNxCompany) return false;
+        if (ovNxKind && ovNxKindOf(e) !== ovNxKind) return false;
+        if (ovNxCat) {
+          // With a company picked, the category filters the counterparty;
+          // otherwise either endpoint may carry it.
+          var ca = (bySlug[e.a].categories || []).indexOf(ovNxCat) >= 0;
+          var cb = (bySlug[e.b].categories || []).indexOf(ovNxCat) >= 0;
+          if (ovNxCompany) { if (!(e.a === ovNxCompany ? cb : ca)) return false; }
+          else if (!ca && !cb) return false;
+        }
+        return true;
+      });
+      edges.sort(function(a, b) { return String(b.last || '').localeCompare(String(a.last || '')); });
+      box.appendChild(ovEl('div', 'nx-count', edges.length + ' link' + (edges.length === 1 ? '' : 's') + ' shown · ' + (((ovGraph && ovGraph.edges) || []).length) + ' in the graph'));
+      if (!edges.length) { box.appendChild(ovEl('p', 'ov-empty', 'No links match the current filters.')); return; }
+      edges.forEach(function(e) {
+        var row = ovEl('div', 'nx-row');
+        var pair = ovEl('div', 'nx-pair');
+        function coBtn(slug) {
+          var b = ovEl('button', 'nx-co', bySlug[slug].name);
+          b.type = 'button';
+          b.style.borderColor = ovRelColor(bySlug[slug].categories);
+          b.addEventListener('click', function() { window.location.hash = slug; });
+          return b;
+        }
+        // With a company filter, lead with it so rows scan as "X and …".
+        var first = (ovNxCompany && e.b === ovNxCompany) ? e.b : e.a;
+        var second = first === e.a ? e.b : e.a;
+        pair.appendChild(coBtn(first));
+        var kind = ovNxKindOf(e);
+        pair.appendChild(ovEl('span', 'nx-tie' + (kind === 'det' ? ' det' : ''),
+          kind === 'work' ? 'Working' : (kind === 'comp' ? 'Competing' : (kind === 'other' ? 'Linked' : 'Detected'))));
+        pair.appendChild(coBtn(second));
+        var metaBits = [];
+        if (e.last) metaBits.push('latest ' + e.last);
+        metaBits.push((e.evid || []).length + ' mention' + ((e.evid || []).length === 1 ? '' : 's'));
+        pair.appendChild(ovEl('span', 'nx-meta', metaBits.join(' · ')));
+        row.appendChild(pair);
+        // Spell the typed link out from each side that curated it.
+        var ca = e.curated && e.curated.a, cb = e.curated && e.curated.b;
+        var parts = [];
+        if (ca && cb && ca.type === 'competitor' && cb.type === 'competitor') parts.push('Competitors — both dossiers agree.');
+        else {
+          if (ca) parts.push(bySlug[e.b].name + ' is ' + bySlug[e.a].name + '’s ' + (OV_REL_TYPES[ca.type] || 'link').toLowerCase() + '.');
+          if (cb) parts.push(bySlug[e.a].name + ' is ' + bySlug[e.b].name + '’s ' + (OV_REL_TYPES[cb.type] || 'link').toLowerCase() + '.');
+        }
+        var note = (ca && ca.note) || (cb && cb.note) || '';
+        if (parts.length || note) row.appendChild(ovEl('div', 'nx-note', parts.join(' ') + (note ? ' ' + note : '')));
+        // One quote: the freshest dated mention, attributed to the dossier it
+        // lives in — the full record is on either company's Relationships tab.
+        var best = null;
+        (e.evid || []).forEach(function(v) {
+          if (!best || String(v.date || '') > String(best.date || '')) best = v;
+        });
+        if (best) {
+          var q = ovEl('div', 'nx-quote');
+          var fromName = bySlug[best.from === 'a' ? e.a : e.b].name;
+          q.appendChild(ovEl('span', 'wh', fromName + ' dossier · ' + best.where + (best.date ? ' · ' + best.date : '')));
+          q.appendChild(document.createTextNode(' — ' + best.text));
+          row.appendChild(q);
+        }
+        box.appendChild(row);
+      });
+    }
+    // Masthead entry — ungated: relationships are public dossier data, so the
+    // explorer is available to every signed-in tier (unlike Reports/Guidance).
+    function ovNetworkBtnShow() {
+      if (document.getElementById('ov-network-btn')) return;
+      var head = document.getElementById('ov-header');
+      if (!head) return;
+      var b = document.createElement('button');
+      b.id = 'ov-network-btn'; b.type = 'button';
+      b.textContent = '⛓ Network';
+      b.title = 'Ecosystem relationship explorer — who works with whom across the covered companies';
+      b.addEventListener('click', function() { window.location.hash = 'network'; });
+      head.appendChild(b);
     }
 
     function ovInitials(name) {
@@ -6032,7 +6306,7 @@ function ovReloadFresh() {
       function say(msg, bad) { st.textContent = msg || ''; st.style.color = bad ? '#e07a8b' : 'var(--ov-faint)'; }
       function pass() {
         wall.style.display = 'none';
-        ovStyleBtnShow(); ovGuideBtnShow(); ovReportsBtnShow();
+        ovStyleBtnShow(); ovGuideBtnShow(); ovReportsBtnShow(); ovNetworkBtnShow();
         // The first render can run before whoami resolves, so the role-gated
         // controls in it were decided without a tier. Repaint now that we have one.
         try { if (ovRegistry) ovRoute(); } catch (rErr) {}
