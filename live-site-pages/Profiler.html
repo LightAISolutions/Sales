@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.47w">
+  <meta name="build-version" content="v01.48w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1532,6 +1532,43 @@ function ovReloadFresh() {
     var ovComparePicks = [];
     var ovCompareFinOnly = false;
     var OV_COMPARE_MAX = 4;
+    // Peer families (v01.48w, developer directive 2026-08-29) — categories that
+    // compete in the same space for comparison purposes. Suppliers and
+    // integrators both build BESS/AIDC hardware, so a Sungrow/CATL/Fluence/Tesla
+    // comparison is like-for-like even though Fluence is registered as an
+    // integrator. Deliberately declarative: the US BESS/AIDC map keeps moving,
+    // and a family change should be a one-line data edit, never a logic change.
+    // A category named in no family is its own family, so adding a category to
+    // the registry never silently widens a comparison.
+    var OV_PEER_FAMILIES = [
+      { key: 'hardware', label: 'Hardware', members: ['supplier', 'integrator'] }
+    ];
+    function ovPeerKey(cat) {
+      for (var i = 0; i < OV_PEER_FAMILIES.length; i++)
+        if (OV_PEER_FAMILIES[i].members.indexOf(cat) >= 0) return OV_PEER_FAMILIES[i].key;
+      return cat;
+    }
+    function ovPeerKeys(cats) {
+      var out = [];
+      (cats || []).forEach(function(c) {
+        var k = ovPeerKey(c);
+        if (out.indexOf(k) < 0) out.push(k);
+      });
+      return out;
+    }
+    // Title-cased display name for a family key or a bare category.
+    function ovPeerLabel(key) {
+      for (var i = 0; i < OV_PEER_FAMILIES.length; i++)
+        if (OV_PEER_FAMILIES[i].key === key) return OV_PEER_FAMILIES[i].label;
+      var l = ovCatLabel(key);
+      return l.charAt(0).toUpperCase() + l.slice(1);
+    }
+    // The categories a family covers, for explaining a family match in words.
+    function ovPeerMembers(key) {
+      for (var i = 0; i < OV_PEER_FAMILIES.length; i++)
+        if (OV_PEER_FAMILIES[i].key === key) return OV_PEER_FAMILIES[i].members.slice();
+      return [key];
+    }
 
     function ovEl(tag, cls, text) {
       var e = document.createElement(tag);
@@ -1669,24 +1706,25 @@ function ovReloadFresh() {
       bar.appendChild(cmpChip);
       main.appendChild(bar);
 
-      // Peer group = the categories of the first pick. Financials-only lifts
-      // the gate for cross-space selections and limits the matrix to Tiers 0–1.
+      // Peer group = the peer FAMILIES of the first pick (see OV_PEER_FAMILIES).
+      // Financials-only lifts the gate for cross-space selections and limits
+      // the matrix to Tiers 0–1.
       function peerCats() {
         if (!ovComparePicks.length) return null;
         var first = companies.filter(function(c) { return c.slug === ovComparePicks[0]; })[0];
-        return first ? (first.categories || []) : null;
+        return first ? ovPeerKeys(first.categories) : null;
       }
       function inPeerGroup(c) {
         if (ovCompareFinOnly) return true;
         var pc = peerCats();
         if (!pc || !pc.length) return true;
-        return (c.categories || []).some(function(k) { return pc.indexOf(k) >= 0; });
+        return ovPeerKeys(c.categories).some(function(k) { return pc.indexOf(k) >= 0; });
       }
 
       if (ovCompareMode) {
         var legend = ovEl('div', 'ov-cmp-legend');
         legend.appendChild(ovEl('span', null, ovComparePicks.length
-          ? 'Peer group: ' + (ovCompareFinOnly ? 'off — financials only' : (peerCats() || []).map(ovCatLabel).join(' / '))
+          ? 'Peer group: ' + (ovCompareFinOnly ? 'off — financials only' : (peerCats() || []).map(ovPeerLabel).join(' / '))
           : 'Pick a company to set the peer group'));
         var foChip = ovEl('button', 'ov-chip' + (ovCompareFinOnly ? ' on' : ''), 'Financials only');
         foChip.type = 'button';
@@ -1843,20 +1881,35 @@ function ovReloadFresh() {
     }
     function ovPaintCompare(main, cols) {
       var n = cols.length;
-      // Shared categories across every selection → the Tier 2 gate
-      var shared = (cols[0].reg.categories || []).filter(function(k) {
+      // Tier 2 gate — the selections must share a peer FAMILY (OV_PEER_FAMILIES).
+      // sharedRaw is the stricter exact-category match, kept only so the heading
+      // can name the precise category when one applies rather than falling back
+      // to the broader family name.
+      var sharedRaw = (cols[0].reg.categories || []).filter(function(k) {
         return cols.every(function(c) { return (c.reg.categories || []).indexOf(k) >= 0; });
       });
-      var deep = shared.length > 0 && !ovCompareFinOnly;
+      var sharedFam = ovPeerKeys(cols[0].reg.categories).filter(function(k) {
+        return cols.every(function(c) { return ovPeerKeys(c.reg.categories).indexOf(k) >= 0; });
+      });
+      var deep = sharedFam.length > 0 && !ovCompareFinOnly;
+      // A family match that is NOT an exact category match is worth saying out
+      // loud — the reader should know a supplier is being set beside an
+      // integrator, not discover it from the tags.
+      var viaFamily = deep && !sharedRaw.length;
 
       var head = ovEl('div', 'ov-co-head');
       head.appendChild(ovEl('div', 'ov-kicker', 'Compare'));
-      // Category keys are lowercase in the registry; the roster chips uppercase
-      // them in CSS, but this heading is serif body text so capitalize here.
-      function ovCatTitle(k) { var l = ovCatLabel(k); return l.charAt(0).toUpperCase() + l.slice(1); }
-      head.appendChild(ovEl('h2', null, (deep ? shared.map(ovCatTitle).join(' / ') : 'Cross-space') + ' — ' + n + ' companies'));
+      var headKeys = sharedRaw.length ? sharedRaw : sharedFam;
+      head.appendChild(ovEl('h2', null, (deep ? headKeys.map(ovPeerLabel).join(' / ') : 'Cross-space') + ' — ' + n + ' companies'));
+      var famWords = viaFamily
+        ? sharedFam.map(function(k) {
+            return ovPeerMembers(k).map(function(m) { return ovCatLabel(m) + 's'; }).join(' and ');
+          }).join('; ')
+        : '';
       head.appendChild(ovEl('p', 'ov-cmp-sub', deep
-        ? 'Every cell comes from these dossiers. Dossier meta and financials are always comparable; the deeper rows are shown because all ' + n + ' companies are in the same space.'
+        ? (viaFamily
+            ? 'Every cell comes from these dossiers. Dossier meta and financials are always comparable; the deeper rows are shown because all ' + n + ' compete in the same space — ' + famWords + ' are compared as one family.'
+            : 'Every cell comes from these dossiers. Dossier meta and financials are always comparable; the deeper rows are shown because all ' + n + ' companies are in the same space.')
         : 'These companies do not share an ecosystem category, so only the rows that compare honestly across different spaces are shown — dossier meta and financials as reported.'));
       head.appendChild(ovEl('p', 'ov-sty-banner', 'Figures as reported by each company · dossiers cite public sources'));
       main.appendChild(head);
@@ -1981,7 +2034,7 @@ function ovReloadFresh() {
 
       // ── Tier 2 — category-specific (same-space selections only) ──
       if (deep) {
-        var techy = shared.some(function(k) { return k === 'supplier' || k === 'integrator'; });
+        var techy = sharedFam.indexOf('hardware') >= 0;
         rowLabel('Capabilities');
         cols.forEach(function(c) {
           cell(function(d) {

@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.48w] — 2026-08-29 04:52:54 AM EST — v03.58r
+
+### Changed
+- Companies that build the same kind of hardware can now be compared in full even when the roster files them under different labels — a battery maker and a systems integrator are treated as one competitive family, so the product and technical rows are available for the comparison people most often want
+- The comparison heading names the exact company type when every company shares one, and otherwise names the wider family and says plainly which types were grouped
+- Companies from genuinely different parts of the ecosystem are still held apart, and the financials-only option is unchanged
 
 ## [v01.47w] — 2026-08-29 04:43:21 AM EST — v03.57r
 

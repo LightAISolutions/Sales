@@ -3,11 +3,35 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.58r] — 2026-08-29 04:52:54 AM EST
+
+> **Prompt:** "Judgment calls:
+>
+> 1. Agreed. I don't want six near-identical snapshots in the archive.
+> 2. Accepted too.
+>
+> Treat supplier and integrator as one family. I don't need the rules to be that rigid as the US BESS/AIDC industry changes a lot and build-in flexibility will be a big plus."
+
+### Added
+
+- `Profiler.html` (v01.48w) — **peer families** for Compare. New declarative `OV_PEER_FAMILIES` map with `ovPeerKey` / `ovPeerKeys` / `ovPeerLabel` / `ovPeerMembers`; the first entry groups `supplier` + `integrator` as **Hardware**. Both gates now resolve through it — the roster's dimming/selection rule and the Tier 2 unlock — so they can never disagree. Chosen declarative on the developer's reasoning that the US BESS/AIDC map keeps moving: adding or re-grouping a family is a one-line data edit, not a logic change
+
+### Changed
+
+- `Profiler.html` (v01.48w) — the Compare heading now prefers the **most specific accurate label**: an exact shared category still reads "Supplier — 3 companies", and only a family-level match falls back to "Hardware — 4 companies". When the match is family-level the subtitle says so outright ("suppliers and integrators are compared as one family") rather than leaving the reader to infer it from the tags. Tier 2's technical-row branch keys off the `hardware` family instead of a hardcoded supplier/integrator test
+
+### Notes
+
+- **A category named in no family remains its own family**, so future registry additions can never silently widen a comparison — verified by test: two IPPs still match as "IPP — 2 companies" and are not swept into Hardware
+- **The unlock is not cosmetic.** Sungrow/CATL/Fluence/Tesla previously rendered "Cross-space" with no technical rows; it now unlocks 7 shared attributes — including an **Integration** row that exists only because Fluence is in the selection, setting its Battery Pack integration beside Tesla's AC-coupled enclosure. That row was unreachable under the strict gate
+- Verified by a 22-check Playwright suite: the family unlock and its wording, exact-category precision preserved, unrelated spaces still gated (ABB vs Crusoe, Google vs Quanta), the identity rule for unfamilied categories, the roster gate accepting an integrator after a supplier while still refusing a neocloud, and the financials-only override unchanged. The KPI, Compare and role-matrix suites all re-run clean
+- **Test-authoring note (second occurrence this session):** a check failed against the legend text because `.ov-cmp-legend` is `text-transform: uppercase`, so Playwright's `inner_text()` returns "PEER GROUP: HARDWARE" while `textContent` returns "Peer group: Hardware". The app was correct both times; assertions against styled text must be case-insensitive or read `textContent`
 
 ## [v03.57r] — 2026-08-29 04:43:21 AM EST
 
