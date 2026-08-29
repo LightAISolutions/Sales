@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.64w] — 2026-08-28 11:43:43 PM EST — v03.47r
+
+### Fixed
+- **"Why thin?" now tells you if it is taking too long** instead of sitting on "Reading this edition's intake…" indefinitely. After 25 seconds it says so and suggests trying again in a moment
 
 ## [v01.63w] — 2026-08-28 11:28:04 PM EST — v03.46r
 

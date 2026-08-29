@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.63w">
+  <meta name="build-version" content="v01.64w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -2166,8 +2166,24 @@
         body.appendChild(d);
       };
       note('Reading this edition\u2019s intake\u2026');
+      // A deadline of its own. The transport aborts a POST at 90s and then
+      // silently retries it as a GET for another 90s, so a slow call showed
+      // "Reading…" for three minutes with nothing said — which is how this
+      // overlay looked hung when it was merely waiting. The request is left to
+      // finish; only the message stops pretending progress is being made.
+      var settled = false;
+      var deadline = setTimeout(function() {
+        if (settled) return;
+        settled = true;
+        note('This is taking longer than it should. The edition may have a very '
+             + 'large intake, or the desk may be busy building. Close this and try '
+             + 'again in a moment.');
+      }, 25000);
       _gasPost({ action: 'digestScoreReport', token: scToken(), digestId: digestId || '' })
         .then(function(r) {
+          if (settled) return;
+          settled = true;
+          clearTimeout(deadline);
           if (!r || !r.success) {
             note(r && r.error === 'no_intake'
               ? 'The stories this edition was built from are no longer stored, so it '
@@ -2276,6 +2292,9 @@
           });
         })
         .catch(function(err) {
+          if (settled) return;
+          settled = true;
+          clearTimeout(deadline);
           note('Could not read this edition (' + ((err && err.message) || err) + ').');
         });
     }

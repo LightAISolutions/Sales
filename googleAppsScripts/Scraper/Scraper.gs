@@ -1,4 +1,4 @@
-var VERSION = "v01.78g";
+var VERSION = "v01.79g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3302,6 +3302,57 @@ function rubricPreview(sessionToken, payloadJson) {
   return out;
 }
 
+/** The intake columns the score report needs, for ONE edition.
+
+    digestScoreReport originally called scDigestItems_, and that hung the app:
+    that helper does `intake.getDataRange().getValues()` — every row of every
+    edition ever built, all twelve columns, including the three largest
+    (snippet, summary, analysis). It is written for the build pipeline, where
+    it runs inside a budgeted step that resumes on a continuation trigger. A
+    request a person is waiting on has neither, so it simply sat there while
+    the transport aborted a POST at 90s and silently retried it as a GET.
+
+    The lesson was already in this file twice — listDigests: "Two narrow reads
+    instead of one wide one", and scHandleHeldBack_: "Column 7 only — the
+    rendered HTML in column 8 is the largest cell in the sheet and this route
+    never needs it". Reusing the wide helper walked straight back into it.
+
+    So: one narrow pass over column 1 to find where this edition's rows are,
+    then the five columns the report actually reads, over that span only. The
+    id column is still read in full — rows for an edition are not guaranteed
+    contiguous — but one column of ids carries no large cells. */
+function scDigestScoreRows_(ss, digestId) {
+  var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var n = intake ? intake.getLastRow() - 1 : 0;
+  if (n < 1) return [];
+  var ids = intake.getRange(2, 1, n, 1).getValues();
+  var first = -1, last = -1;
+  for (var i = 0; i < n; i++) {
+    if (String(ids[i][0]) !== digestId) continue;
+    if (first === -1) first = i;
+    last = i;
+  }
+  if (first === -1) return [];
+  var span = last - first + 1;
+  var base = first + 2;                                  // sheet row of `first`
+  var titles = intake.getRange(base, 3, span, 2).getValues();   // title, source
+  var scores = intake.getRange(base, 7, span, 2).getValues();   // score, signals
+  var flags  = intake.getRange(base, 11, span, 1).getValues();  // backstop
+  var out = [];
+  for (var j = 0; j < span; j++) {
+    if (String(ids[first + j][0]) !== digestId) continue;       // skip interleaved rows
+    var sig = {};
+    try { sig = JSON.parse(scores[j][1] || '{}'); } catch (pe) {}
+    out.push({ title: String(titles[j][0] || ''), source: String(titles[j][1] || ''),
+      score: Number(scores[j][0]) || 0,
+      matchedCompanies: sig.mc || [], matchedTopics: sig.mt || [],
+      evidence: Number(sig.ev) || 0, support: Number(sig.sup) || 0,
+      geoFactor: sig.gf == null ? 1 : Number(sig.gf),
+      backstop: String(flags[j][0]) === 'yes' });
+  }
+  return out;
+}
+
 /** Why was this edition thin?
 
     The per-article tester (rubricPreview) answers "why did THIS story fail",
@@ -3328,7 +3379,9 @@ function digestScoreReport(sessionToken, digestId) {
     want = String(sheet.getRange(n + 1, 1).getValue() || '');
   }
   if (!want) return { success: false, error: 'no_edition' };
-  var items = scDigestItems_(ss, want);
+  // scDigestScoreRows_, not scDigestItems_ — see that function for why reusing
+  // the build pipeline's wide reader hung this request.
+  var items = scDigestScoreRows_(ss, want);
   if (!items.length) return { success: false, error: 'no_intake', id: want };
 
   var T = SCRAPER_RELEVANT_THRESHOLD;

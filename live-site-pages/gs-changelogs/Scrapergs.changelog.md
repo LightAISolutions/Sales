@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.79g] — 2026-08-28 11:43:43 PM EST — v03.47r
+
+### Fixed
+- **"Why thin?" no longer hangs.** The report was reading every story from every edition ever built — including the long summaries and analyses — when all it needed were a few details from the one edition being asked about. On a spreadsheet with a lot of history that took long enough to look frozen. It now reads only that edition's rows, and only the handful of details it uses
 
 ## [v01.78g] — 2026-08-28 11:19:00 PM EST — v03.45r
 

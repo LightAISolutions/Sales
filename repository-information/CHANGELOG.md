@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.47r] — 2026-08-28 11:43:43 PM EST
+
+> **Prompt:** "I rebuilt BESS and it came back with 13 relevant articles, which is close to the sweet spot I'm looking for (assuming they are truly relevant). However, i pressed "Why thin?" just to see what happens and it stayed "Reading this edition's intake" for about 10 minutes. What happened?"
+
+### Fixed
+
+`Scraper.gs` (v01.79g)
+
+- **`digestScoreReport` was reading the entire DigestIntake tab.** It called `scDigestItems_`, whose first line is `intake.getDataRange().getValues()` — every row of every edition ever built, all twelve columns, including the three largest (snippet, summary, analysis). It needs one edition's rows and five columns. That helper belongs to the build pipeline, where it runs inside a 40-second budgeted step that resumes on a continuation trigger; a request a person is waiting on has neither
+- **This lesson was already written in this file, twice, before I walked back into it.** `listDigests`: *"Two narrow reads instead of one wide one … Columns 7 and 8 are never touched here."* `scHandleHeldBack_`: *"Column 7 only — the rendered HTML in column 8 is the largest cell in the sheet and this route never needs it."* Adding the report by reusing the convenient helper inherited exactly the cost both comments exist to avoid
+- **`scDigestScoreRows_`** replaces it: one narrow pass over column 1 to locate the edition's rows, then title/source, score/signals and the backstop flag over that bounded span. The snippet, summary and analysis columns are never read. The id column is still read in full because an edition's rows are not guaranteed contiguous — but one column of ids carries no large cells, and rows belonging to another edition inside the span are skipped. Measured on a fixture of 84 rows across three editions: **104 cells read instead of 1,008**
+
+`Scraper.html` (v01.64w)
+
+- **The overlay had no deadline of its own**, which is why it looked hung rather than slow. The transport aborts a POST at 90s and then *silently retries it as a GET* for another 90s, so a slow call showed "Reading this edition's intake…" for three minutes with nothing said. It now gives up on the message at 25 seconds and says what to do; the request is left to finish, and a `settled` flag stops a late reply overwriting what the reader is looking at
+
+### Notes
+
+- **522 assertions pass** across 20 suites. New `t20.js` (30) asserts the columns that must never be read, that only a single one-column read spans the tab, that every other read is bounded to the edition's span, and that interleaved rows of another edition are filtered
+- **`t18.js` silently dropped to zero assertions** when the report switched readers — it stubbed `scDigestItems_`, which the report no longer calls, so it threw before its first check. A pass/fail tally alone would not have caught that: the run showed no failures. The suite runner now flags a suite that produces **no** assertions, which is a distinct failure from producing failing ones
+- Removed an assertion I had written that compared three constants I had defined four lines above it — it asserted nothing about the code. Replaced with the cells-read measurement quoted above
+- The developer separately reports the rebuilt BESS edition came back with **13 relevant articles**, up from 3, after the v01.78g backstop-rotation fix. Not proof on its own — one build is one sample — but it is the direction that fix predicted
 
 ## [v03.46r] — 2026-08-28 11:28:04 PM EST
 
