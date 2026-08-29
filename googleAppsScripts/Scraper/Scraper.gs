@@ -1,4 +1,4 @@
-var VERSION = "v01.79g";
+var VERSION = "v01.80g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -631,8 +631,20 @@ var SCRAPER_SEGMENT_SEEDS = [
     terms: ['utility-scale storage', 'utility-scale battery', 'grid-scale storage', 'standalone storage', 'front-of-meter', 'transmission-connected', 'iso queue', 'merchant storage'] },
   { key: 'seg-bess-datacenter', parent: 'seg-bess', label: 'Data-center & behind-the-meter storage', tv: 1,
     terms: ['behind-the-meter storage', 'data center battery', 'data center storage', 'ups battery', 'bridging power', 'on-site storage', 'microgrid storage'] },
+  // Consumer-portable gear lives here rather than in seg-consumer ON PURPOSE.
+  // A portable power station on an Amazon sale used to match no segment at all:
+  // the terms below did not cover it, so `excludedSegments` was empty and the
+  // gate never fired, while the generic parent (seg-bess: 'energy storage',
+  // 'storage system') did match and handed it segment evidence. Because this is
+  // a CHILD of seg-bess, a hit here demotes the parent under the existing
+  // specificity-beats-breadth rule — independentOn falls to 0, the article is
+  // gated, and company/topic/clickBoost are zeroed. Putting these terms in the
+  // parentless seg-consumer instead would not have demoted anything.
   { key: 'seg-bess-residential', parent: 'seg-bess', label: 'Residential storage', tv: 1,
-    terms: ['home battery', 'residential storage', 'residential battery', 'powerwall', 'home energy storage', 'rooftop storage'] },
+    terms: ['home battery', 'residential storage', 'residential battery', 'powerwall',
+            'home energy storage', 'rooftop storage', 'portable power station',
+            'portable battery', 'portable power', 'solar generator', 'home backup',
+            'backup battery', 'balcony solar', 'plug-in solar'] },
   { key: 'seg-bess-ci', parent: 'seg-bess', label: 'C&I storage', tv: 1,
     terms: ['commercial and industrial storage', 'c&i storage', 'c&i battery', 'peak shaving', 'demand charge', 'behind-the-meter commercial'] },
   { key: 'seg-bess-longduration', parent: 'seg-bess', label: 'Long-duration storage', tv: 1,
@@ -695,8 +707,16 @@ var SCRAPER_SEGMENT_SEEDS = [
       'chargepoint', 'wallbox', 'megawatt charging', 'nacs'] },
   { key: 'seg-semiconductors', label: 'Semiconductors & AI hardware',
     terms: ['semiconductor', 'chip', 'chips', 'foundry', 'wafer', 'accelerator'] },
+  // Multi-word phrases only. A bare 'deal', 'discount' or 'power station' would
+  // fire on genuine trade coverage — utilities discount bills and power
+  // stations are power plants — so every retail marker here has to be one a
+  // trade story would not write.
   { key: 'seg-consumer', label: 'Consumer electronics & appliances',
-    terms: ['smartphone', 'consumer electronics', 'appliance', 'laptop', 'tablet', 'wearable'] },
+    terms: ['smartphone', 'consumer electronics', 'appliance', 'laptop', 'tablet', 'wearable',
+            'e-bike', 'ebike', 'electric scooter', 'power bank', 'portable charger',
+            'consumer-grade', 'consumer grade',
+            'labor day sale', 'prime day', 'black friday', 'cyber monday',
+            'early-bird pricing', 'promotional pricing', 'coupon code', 'deal of the day'] },
   { key: 'seg-industrial', label: 'Industrial automation & robotics',
     terms: ['robotics', 'robot', 'factory automation', 'industrial automation', 'humanoid'] }
 ];
@@ -844,7 +864,13 @@ var SCRAPER_DIGEST_BACKSTOP_PER_RUN = 12;        // D2: company-name queries per
 // why both matter. The bare key is the pre-v01.78g global one, kept only so
 // scDigestBackstopCursorKey_ can migrate a fleet that still has it set.
 var SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY = 'scDigestBackstopCursor';
-var SCRAPER_DIGEST_BACKSTOP_PENALTY = 0.85;      // D2: backstop items are down-weighted
+// D2: backstop items are down-weighted. 0.85 -> 0.70 (developer directive
+// 2026-08-29): none of the Google News items seen so far had earned their
+// place beside a roster source. Note what this does NOT do — a covered
+// company match is worth 40 evidence on its own, so a story genuinely about
+// one of their companies still clears the bar after the penalty. That is the
+// backstop working as intended; the weight only decides how much else it takes.
+var SCRAPER_DIGEST_BACKSTOP_PENALTY = 0.70;
 var SCRAPER_DIGEST_SUMMARIZE_MAX = 70;           // ceiling on AI-summarized items per edition
 // Caps raised 6/6/4 -> 12/10/8 (developer directive 2026-08-27): a daily
 // digest of skimmable summaries should err toward completeness, since a
@@ -3852,7 +3878,33 @@ function scDigestItems_(ss, digestId) {
     }
   });
   items.sort(function(a, b) { return b.score - a.score; });
-  return items;
+  // One row per story, AFTER corroboration.
+  //
+  // The developer saw the same Oracle headline printed twice in one edition,
+  // both from the backstop. Intake dedupes on URL, and Google News hands out a
+  // distinct URL for each republication of a syndicated story, so an identical
+  // headline slips through.
+  //
+  // The obvious fix — dedupe by title at ingest — would have broken the thing
+  // directly above: corroboration groups by title signature to reward a story
+  // two or more sources carried. Dedupe before it and no group can ever have
+  // two members, so the boost silently dies. Doing it here keeps both rows in
+  // the intake for the boost and collapses them only for the reader.
+  //
+  // Exact normalized title, not the 8-word signature corroboration uses. That
+  // signature is deliberately loose because a false grouping there only nudges
+  // a score; here a false grouping DELETES a story, so it has to be strict.
+  // The list is score-sorted, so the first of a group is the highest-scoring
+  // copy — usually the roster source rather than the penalised backstop one.
+  var bestByTitle = {}, deduped = [];
+  items.forEach(function(it) {
+    var key = String(it.title).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    if (!key) { deduped.push(it); return; }      // untitled: never collapse
+    if (bestByTitle[key]) { bestByTitle[key].duplicates = (bestByTitle[key].duplicates || 1) + 1; return; }
+    bestByTitle[key] = it;
+    deduped.push(it);
+  });
+  return deduped;
 }
 
 /** The provider/model an edition was actually built with. Recorded on every

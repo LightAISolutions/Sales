@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.48r] — 2026-08-29 12:17:16 AM EST
+
+> **Prompt:** "A few things: • First screenshot: The Jackery article is talking about consumer level electronics, which should be filtered out by Tune. • Second screenshot: There are two identical articles on the same digest, both from Google News (backstop). I haven't seen any actually relevant articles from Google News yet (out of a small sample size of maybe 4-5 articles), so I would devalue articles from Google News relative to the listed sources in Tune. Fix both problems."
+
+### Fixed
+
+`Scraper.gs` (v01.80g)
+
+- **Why Tune did not catch the Jackery story.** The segment gate only fires when an article hits a **disabled** segment. `seg-consumer`'s terms were `smartphone, consumer electronics, appliance, laptop, tablet, wearable`; `seg-bess-residential`'s were `home battery, residential storage, residential battery, powerwall, home energy storage, rooftop storage`. A portable power station on an Amazon Labor Day sale matches none of them — so `excludedSegments` was empty, the gate never engaged, and the generic parent `seg-bess` (`energy storage`, `storage system`, `megawatt-hour`) matched and handed it segment evidence. The AI's own analysis said readers would "find zero actionable intelligence here"; the rubric had already admitted it by then
+- **Fixed by vocabulary, not by a new mechanism.** The portable/consumer-storage terms went into **`seg-bess-residential`** specifically because it is a **child of `seg-bess`** — a hit there demotes the parent under the existing specificity-beats-breadth rule, `independentOn` falls to 0, `gated` becomes true, and company, topic and clickBoost are all zeroed. Putting the same terms in the parentless `seg-consumer` would have left the parent's hit independent and gated nothing. `seg-consumer` was broadened too, for the non-storage gadget and retail-sale case
+- **Measured on the developer's actual headline**, with a model carrying the company and topic evidence that would have carried it in: **81 → 0**. Four genuine trade headlines were checked against the new terms and none is gated, including a utility bill *discount* and a combined-cycle *power station* — every retail marker added is a multi-word phrase a trade story would not write
+- **Two identical articles in one edition.** Intake dedupes on URL, and Google News issues a distinct URL per republication of a syndicated story, so the same headline arrived twice and both printed. **The obvious fix would have broken something:** deduping by title at ingest kills corroboration, which groups by title signature to reward a story two or more sources carried — dedupe first and no group can ever have two members. So the collapse happens in `scDigestItems_` **after** the boost is applied: both rows stay in the intake, the reader sees one, and because the list is score-sorted it is the higher-scoring copy — usually the roster source rather than the penalised backstop one
+- The collapse matches the **exact** normalized title, not the 8-word signature corroboration uses. That signature is deliberately loose because a false grouping there only nudges a score; here a false grouping deletes a story
+
+### Changed
+
+`Scraper.gs` (v01.80g)
+
+- `SCRAPER_DIGEST_BACKSTOP_PENALTY` **0.85 → 0.70**. A backstop item now needs roughly 79 raw to clear the bar where 65 sufficed. **Stated plainly because it matters:** this does not suppress the Oracle-class item in the developer's second screenshot. A covered-company match is worth 40 evidence on its own, so a story genuinely about one of their companies still clears the bar after the penalty — that is the backstop working as designed, and the weight only decides how much *else* rides in beside it
+
+### Notes
+
+- **551 assertions pass** across 21 suites; new `t21.js` (29) covers the gate, the false-positive guards, the dedupe (including that corroboration still fires first), and the penalty
+- **Two fixture errors of my own, both fixed in the test.** A company entry with no `weight` scores zero, because `company = w.company * min(1, bestCoWeight)` — so the before/after case scored 36 and never demonstrated what it claimed. Then, with a weight, it still failed: `scLoadInterestModel_` lowercases every term on the way in and `scTermsHit_` scans lowercased text, so a hand-built `'Jackery'` could never match. The fixture now mirrors the loader, and the before/after reads 81 → 0
+- **Both changelogs were at their caps and both rotated**: `CHANGELOG.md` 100 → 94 (the 2026-08-16 group, six sections) and `Scrapergs.changelog.md` 50 → 45 (2026-08-17, five). The rotation asserts a single date group, an exact SHA-link count, and that the trailing branding line is only treated as an anchor when it falls after the last version header. It **refused** the GAS rotation on the first attempt rather than writing wrong links — a GAS version never appears alone in a commit subject, so the SHA resolves through the repo version each header carries as a cross-reference
 
 ## [v03.47r] — 2026-08-28 11:43:43 PM EST
 
@@ -1924,119 +1950,3 @@ If you hit the end of my weekly Fable limit before this task is done, switch to 
 - **Which trigger fired on these two specific incidents is still unconfirmed** and cannot be determined from the repo — it needs the Apps Script execution log. Running `diagnoseAclAccess()` (added v02.30r) from the editor now discriminates it, and from this version on the execution log records the reason automatically. `acl_column_missing` and `acl_unreachable` are the two candidates consistent with two users being denied simultaneously
 - **`auditLog()` was verified safe to call from the new error path** — `_writeAuditLogEntry` wraps its own spreadsheet write in `try/catch` and swallows failures, so it cannot throw back into `checkSpreadsheetAccess` during the very outage being handled
 - All nine `.gs` files pass `node --check` after patching
-
-## [v02.53r] — 2026-08-16 10:59:08 PM EST
-
-> **Prompt:** "Make the following changes:
->
-> * In the header, remove "Profiler Dossier Set" and revise "Equity Research" to "Jon Yang Equity Research".
-> * In the Table of Contents, Key Judgments, type out the last four topics instead of "+4 more".
->
-> Output both documents as downloadable PDFs."
-
-### Changed
-- **Header rebranded to "Jon Yang Equity Research" in both places it appears**, across both documents: the masthead kicker on page 1 of `aidc-market-report-print.html` and `aidc-coverage-universe-print.html`, and the running page header in `scripts/build-aidc-report-pdf.mjs` that prints on every page of every edition. **"Profiler dossier set" removed** from the running header, leaving `Jon Yang Equity Research · 40 companies under coverage · 16 August 2026`
-- **The Key Judgments contents entry now lists every judgment** — the truncated `… +4 more` marker was replaced with the three omitted titles: craft labor as the scarcest input, displacement windows open through 2026, and monitoring the risk stack on a calendar
-
-### Fixed
-- **The `+4 more` marker was itself wrong — only three judgments were omitted, not four.** The contents line listed nine of chapter 1's twelve judgments. Counted programmatically against the actual `### 1.x` headings rather than by eye, since the developer's instruction inherited the same miscount
-- **The Coverage Universe carried the market report's title in its running footer on all 51 pages** — a defect introduced when the companion was split out in v02.52r, because `FOOT` was a single hardcoded constant shared by both documents. Replaced with a `foot(label)` function and a per-document `foot` field in the `DOCS` registry, so each document's footer names itself
-
-### Note
-- `scripts/build-study-prep-pdf.mjs` also contains "Profiler dossier set" in three running headers, but those belong to the Hithium and Megmeet study-prep documents rather than the market report, and were left unchanged as out of scope
-
-## [v02.52r] — 2026-08-16 10:23:10 PM EST
-
-> **Prompt:** "Continue with your recommendation. I want the coverage document to keep the "recommended strategy" per company."
-
-### Added
-- **`AIDC-COVERAGE-UNIVERSE.md` and `aidc-coverage-universe-print.html`** — a new standalone companion carrying the former chapters 10–12, renumbered 1–3, with its own masthead, contents index, standing disclaimer and colophon. Per the developer's explicit instruction the **per-company recommended strategy stays in the companion** — all **14 recommended-strategy passages** were verified present in the extracted block before anything was written, and again after
-- **Five PDF editions of the companion** — `AIDC-COVERAGE-UNIVERSE.pdf` (canonical, **51 pages**) plus analyst-prose (48), equity-research (48), intel-briefing (57) and smart-brevity (54)
-- **A `DOCS` registry in `scripts/build-aidc-report-pdf.mjs`** replacing the single `SRC` constant, plus a `--doc <report|coverage>` flag. With no flags the script now renders **both documents in all five styles**, so neither the editions nor the two documents can drift apart. The `--png` proof mode still works, capturing whichever document rendered last
-
-### Changed
-- **The market report is now 11 chapters and 109 pages, down from 14 and 158** — a 31% reduction with no argument removed. What left was reference, not insight: the coverage chapters were 32.9% of the report by word count while carrying per-company entries rather than market analysis
-- **Chapters 13 and 14 renumbered to 10 and 11**, and **122 subsection headings renumbered** across both documents (`13.x`→`10.x`, `14.x`→`11.x` in the report; `10.x`/`11.x`/`12.x`→`1.x`/`2.x`/`3.x` in the companion). The chapter-level rename did not touch subsections, which is exactly the kind of half-applied edit that reads as complete
-- **Both documents cross-reference each other** — the report's "How to read" note and Markdown preamble point to the companion; the companion points back for the primer and conventions
-- **The Method chapter's "Coverage expanded to three chapters" row rewritten** to describe the split and the reason for it (different refresh clocks: company facts move on earnings, the argument does not)
-- **README tree** gained 7 entries for the new files, and two stale figures were corrected — the report row still claimed 14 chapters and 155 pages
-
-### Fixed
-- **A stale `chapter 13` cross-reference in the print HTML** that the Markdown-only prose repair had missed. Caught by re-grepping both files rather than trusting that the two twins had received identical treatment — the same `.md`/print-HTML drift risk flagged in earlier sessions
-- The companion initially lost the standing disclaimer, colophon and developer-branding block, because the extracted chapter range ended before the document footer. Restored with companion-specific wording
-
-## [v02.51r] — 2026-08-16 10:08:36 PM EST
-
-> **Prompt:** "Apply +1 patience to chapter 2 only.
->
-> Aside from that change, evaluate the current structure and flow of the market report. I think 157 pages is too long for a market report; I think it should be closer to 70-90 pages (actual Bloomberg report length). Are there any sections that we could break out into separate, more targeted, reports? However, I do not want to sacrifice market insights for a shorter report length. If you think we need more pages, then feel free to push for it."
-
-### Changed
-- **Chapter 2 of the AIDC market report raised one notch in teaching patience**, per the dial framework agreed in the preceding turn — and **chapter 2 only**, verified by confirming all five diff hunks fall inside lines 192–257. Chapter 2 was already strong prose, so the pass added targeted scaffolding at the five points a non-specialist actually stumbles rather than rewriting passages that worked: (1) a chapter on-ramp stating that no prior electrical knowledge is assumed and mapping the seven subsections in reading order, (2) the volatility swing made concrete — a 336 MW-IT building moving by a third is a ~110 MW step change appearing and disappearing in under a second, which upstream equipment experiences as a power station cycling on and off, (3) the grid-to-chip chain walked once end to end with real voltages at each stage, 138,000 V down to roughly 1 V across seven conversions, (4) the square law worked with actual arithmetic — one megawatt at 400 V needs 2,500 amps against 1,250 amps at 800 V, and holding voltage flat while a rack goes 200 kW → 1 MW raises current fivefold and losses twenty-fivefold, and (5) a power-versus-energy on-ramp before the storage table
-- **Chapter 2 grew 5,710 → 6,281 words** (+10%); canonical edition **157 → 158 pages**, analyst-prose 150, equity-research 150, intel-briefing 181, smart-brevity 166
-- The square-law arithmetic was deliberately written in **pure DC terms** rather than as an 800 VDC-versus-415 VAC comparison. The three-phase AC case involves a √3 factor and power-factor effects that would have made a hand-computed comparison easy to state wrongly; NVIDIA's published 157%-more-power and 45%-less-copper figures remain in the text as their own cited claims
-
-### Fixed
-- **Archive rotation executed** — the active changelog reached 101 sections with this push, exceeding the 100-section threshold. The oldest non-exempt date group (**2026-08-03, 11 sections, v01.51r–v01.61r**) was rotated to `CHANGELOG-archive.md` as an indivisible unit with mandatory SHA enrichment on every header. The shallow clone was deepened to 352 commits first, since all 11 lookups would otherwise have failed silently — the failure mode recorded in the session notes
-
-## [v02.50r] — 2026-08-16 09:09:12 PM EST
-
-> **Prompt:** "fix the term gaps"
-
-### Added
-- **Twenty-one acronym expansions inserted at first use** in the AIDC market report, closing the Tier A gaps found by the preceding sweep: **LFP** (lithium iron phosphate — expanded once at line 1027 previously, and never as a definition), **HVDC** (with an explicit note that it is unrelated to the 800 VDC rack architecture of chapter 6, which was the likeliest reader confusion), **BESS**, **OEM** (the report defined ODM carefully while leaning on a distinction it never stated), **IEC**, **PV**, **MOFCOM**, **SOFR**, **NFPA**, **IEEPA**, **NDAA**, **LMFP**, **OBBBA**, **AD/CVD**, **EPC**, **CAGR**, **SPV**, **PTC**, **ASIC**, **OCP**, and **EBITA**
-- **A new subsection in chapter 8, "Who actually enforces this — the two parties who can veto your supplier"**, closing the largest substantive gap: the chapter explained the FEOC material-assistance rule at length while never naming the **tax-equity investor** or the **independent engineer** — the two private parties who actually enforce it commercially. Neither phrase appeared anywhere in the report's 88,000 words. The passage also gives **bankability** a named enforcer by connecting it to the IE, and draws the consequence that a compliance claim is only as good as the tax counsel and independent engineer who must accept it
-- **Capacity factor** taught in section 5.6 — the report compared turbines, fuel cells, nuclear and storage on nameplate power throughout without ever introducing the metric that makes those numbers comparable, and specifically without noting that a fast-start aeroderivative bought for schedule runs at a low capacity factor by design
-- **Four further in-place definitions** for terms that were load-bearing but unexplained: **curtailment** (previously only "curtailability", used once inside a recommendation that depends on it), **ancillary-services markets** (which pay for the capability to respond rather than for energy delivered), **four-nines / three-nines** availability, and **book-and-burn** — which was being used to *explain* what backlog excludes while itself undefined
-
-### Changed
-- **The EBITA-versus-EBITDA trap is now flagged explicitly.** The report used **EBITA** six times for Hitachi Energy and **EBITDA** once for Eaton, expanded neither, and never signalled that they are different measures — leaving a 13.4% EBITA margin sitting near a 22.5× EBITDA multiple with nothing to warn the reader that the D is missing from one of them
-- **Chapter 1 gained a single forward-pointer sentence** directing readers to the section 2.6 vocabulary table, rather than back-defining thirteen terms inside the executive summary. Chapter 1 legitimately runs at summary speed before the chapter 2 primer arrives, so the Tier B ordering gaps (bps +1,719 lines, PJM +1,301, FERC +1,291, ESS +966, aeroderivative +666) were treated as a navigation problem rather than a definition problem
-- **All five PDF editions rebuilt** — canonical 155 → **157 pages**, analyst-prose 149, equity-research 149, intel-briefing 180, smart-brevity 165
-
-### Fixed
-- A stray `<em>` HTML tag introduced into the Markdown edition during the acronym pass was corrected to Markdown emphasis before commit
-
-## [v02.49r] — 2026-08-16 07:55:40 PM EST
-
-> **Prompt:** "Picking up from the recent "Hithium Interview brief PDF" session, I think the current iteration of AIDC market report is pretty good. I might have some clarification questions about certain parts of the reports, which I will ask you about, and you can decide if and how to integrate that information into the report. Speaking of which: • Give me a 1 sentence overview of what each of the following certifications cover: ○ UL 1973, UL 9540, UL 9540A, NFPA 855, IEC 62619/62477/63056"
-
-### Added
-- **A new subsection in the AIDC market report, §7.5 "Reading a certification claim — the stack in order"**, closing a teaching gap the previous edition left open: the section asserted that safety certification is a permitting gate rather than a badge, but defined only two of the gates (UL 9540A and NFPA 855) while naming none of the rest. The new passage teaches the whole ladder in dependency order — **UL 1973** at the component layer, **UL 9540** at the system layer (built on UL 1973 batteries and UL 1741 power conversion beneath it), **UL 9540A** as the fire test whose report feeds **NFPA 855** siting decisions, and the international ladder of **IEC 62619** (baseline industrial lithium safety), **IEC 63056** (the grid-storage layer on top of it) and **IEC 62477** (the converter side, to 1,000 V AC / 1,500 V DC)
-- **The investor-facing payload of that subsection is that "we are certified" is several non-interchangeable claims, not one.** Three discriminations are now stated explicitly: a vendor advertising itself as *UL 9540A certified* has made a category error because UL 9540A issues no certificate at all, only a test report; a vendor holding UL 1973 on a new large-format cell without a UL 9540 listing on the system built from it has cleared the component gate and not the system gate; and a vendor carrying the full UL *and* IEC stack avoids a re-test cycle when selling into both US and international procurement, which is a timing advantage when demand outruns laboratory scheduling. **Hithium** is cited as the corpus's clearest example of the complete stack *(Hithium dossier)*
-
-### Changed
-- **All five PDF editions rebuilt** from the amended source — canonical (Bloomberg) 155 pages, analyst-prose 148, equity-research 148, intel-briefing 178, smart-brevity 164. The addition absorbed into the existing page flow without changing the canonical page count
-- The standards scope statements were **verified against live sources before being written** rather than asserted from memory (UL/IEC/ANSI webstore scope text and standards summaries, retrieved 2026-08-16), consistent with the report's chapter 14 provenance statement. The Hithium certification attribution was checked against `hithium.profile.json` rather than carried over from the interview brief
-
-## [v02.48r] — 2026-08-16 03:15:19 AM EST
-
-> **Prompt:** "I want to refine the AIDC market report (bloomberg style): • Separate out the Table of Contents to the 2nd page and list out each chapter in a single column instead of two columns. • Make sure each Chapter starts on a fresh page. • You are the leader of an equity research department that covers the 40 companies on Profiler in order to fully understand the US AIDC industry. I am your most important investor that may not understand everything in the market. Your goal is to educate me on important industry trends, policy concerns, supply chain scarcities, and anything else that could impact my investment strategy. Analyze the current environment for the different companies under coverage and recommend some sales strategies for them and why. ○ Explain each Key Judgment in more detail. ○ Evaluate all other chapters and rewrite in a way that would actually be informative and educational for me rather than just throw a bunch of earnings report related facts at me. Output in a downloadable PDF."
-
-### Changed
-- **The AIDC market report was rewritten from a sales-strategy document into an investor-education one**, and roughly quintupled: **9 chapters → 14**, canonical edition **31 → 155 pages**, 12 → **17 figures**, 17 → **23 tables**. Every chapter now opens by teaching its subject in plain language, defines its terms in place, and closes with a passage titled *What this means for your capital* (23 such passages across the report) plus the observable that would falsify the argument
-- **Layout, per the three explicit requests** — the contents block moved to **its own page 2** as a **single-column** index (`.toc` `column-count:2` → `1`, plus `page-break-after`), and **every chapter opens a fresh page** (`page-break-before` on `h2`, which also lands Contents alone on page 2 since Contents is itself an `h2`). The manual `class="brk"` markers the previous edition carried on chapters 2–9 are now redundant
-- **Chapter 1 (Key Judgments) expanded** from 12 one-sentence assertions into 12 reasoned subsections, each stating the judgment plainly, explaining the mechanism, drawing the consequence for capital, and naming the specific observable that would prove it wrong — plus an opening passage teaching the reader how to weight a (High) versus a (Moderate) tag
-- **New chapter 2, a primer** — the electrical chain from grid to chip, why voltage matters (losses scale with the square of current), the three different jobs storage does at three different timescales, what an interconnection queue is, and a vocabulary table. Nothing in the previous edition taught any of this, which is why the rest read as a fact dump to a non-specialist
-- **New chapter 8 consolidates policy**, previously scattered across three chapters: the FEOC material-assistance regime taught mechanically (the (A−B)/A ratio, the 55% 2026 threshold rising to 75% by 2030, forfeiture of the entire 30–40% ITC, why US assembly does not automatically cure it, the finite safe-harbour pool), the tariff stack, the FCC Covered List action, the DoD 1260H list, FERC/Talen, the EU phase-out, and ratepayer politics
-- **Coverage expanded from a four-row account map to three full chapters (10–12)** covering **all 40 names individually** — 14 buyers/builders/landlords, 10 power/grid/prime-mover names, 16 storage/cell/rack-power names — each with what the company is in this pipeline, the forces acting on it now, a **recommended commercial strategy with its reasoning**, and the observable that would change the view
-- **New chapter 14** states provenance honestly, including a table of what changed from the previous edition
-- **Masthead, running header/footer and the how-to-read note** reframed for the new audience, with an explicit **not-investment-advice** disclaimer in the masthead and a standing one in chapter 14
-
-### Fixed
-- **The FCC inverter action, which the previous edition got wrong** — it described a *pending, draft, China-specific rule*. It took effect **28 July 2026**, and it is an **origin test, not a nationality test**: "foreign-produced" means failing the Buy American domestic-end-product threshold, so an American brand manufacturing offshore is caught too. It is a two-prong test (bi-directional inverter **and** wireless connectivity), **prospective only**, with a conditional-approval path to 1 January 2028. This closes the integrity gap flagged in the two previous sessions, where §6.4/§8.4 contradicted the report's own sourcing claim
-- **Figure and table numbering renumbered sequentially across the document.** Each chapter was drafted independently, so numbers restarted, duplicated and appeared in a chapter-prefixed form (`Figure 6.1`). Intra-chapter prose references ("the spread in Figure 1") were remapped with the captions, via a sentinel pass so a renumber could not collide with a number it was about to assign
-- **A fabricated citation** — the Buy-American 65%/75% thresholds were attributed in two chapters to a *National Law Review* item in the Huawei Digital Power dossier. That dossier contains no such figure; the attribution is now stated as re-verified policy research rather than a dossier source
-- **A misattributed but real figure** — the ≥12,000-cycle CATL 587 Ah comparator is genuinely in the corpus, in the **Hithium** dossier's competitor-positioning field, not CATL's own. The critique pass called it invented; it was not, and the citation now names the right dossier
-- **Three dropped confidence tags** — LITEON's "one generation behind Delta" read (dossier-tagged High) rendered as bare fact in three places, and the Hitachi Energy India read (dossier-tagged Low) lost its tag in chapter 4 while chapter 11 kept it
-- **Two contradictory rack-power figures** reconciled — chapter 2 said ">200 kW per rack today" while chapter 6 said "120–150 kW class today". Both are in the NVIDIA dossier as different NVIDIA framings; the text now carries both rather than silently picking one
-- **Three passages that read as security selection rather than commercial analysis** recast — a sentence directing the reader between a parent and a listed subsidiary, a "high-beta expression of the thesis" framing, and a relayed broker rating stated in the report's own voice
-- **Chinese export-control material given proper provenance** — the MOFCOM catalogue and announcement dates, and the Amara Raja/Gotion corroboration, are re-verified research rather than dossier facts, and two false cross-references pointing at a chapter that did not contain them were removed
-
-### Notes
-- **Produced by a 14-agent workflow** (ultracode): 13 parallel chapter drafts at high effort, then one adversarial critique pass over the assembled set hunting invented facts, stale FCC framing, unlabelled analysis, coverage gaps, investment-advice language and markup violations. 3.35M subagent tokens, 270 tool calls, 112 minutes wall clock — the container has 4 CPUs, so the workflow concurrency cap was **2**, not the 8–16 the fan-out was sized against
-- **The critique pass earned its place.** It found eight real defects and was itself wrong once, on the CATL cycle figure — checking `catl.profile.json` but not the Hithium dossier where the comparator actually lives. Verifying its findings before applying them mattered
-- **A bug of mine corrupted the assembled HTML mid-session and was caught by a structural check.** A heading-normalisation regex had four capture groups but its replacement used three, which prepended the heading-level digit to every heading (`1.5` → `31.5`) and **deleted every closing tag**. Recovery was a deterministic rebuild — `git checkout` the print HTML, re-apply the four layout/front-matter edits through a script that asserts each one applied, then re-run assembly and renumbering. The lesson is in the tooling now: every scripted edit in this session's helper scripts asserts its own application rather than silently no-opping
-- **Verified before committing** — heading open/close tags balanced at every level (15/15, 135/135, 156/156), zero NUL bytes from the sentinel pass, contents at one column, no table overflowing its column budget, no bar-chart fill above 100%, no empty bar labels, `<caption>` styled, and all five editions rebuilt (148–178 pages depending on skin)
-- **The `.md` and the print HTML were regenerated from the same chapter set in one pass**, so the canonical text and the typeset source cannot have drifted from each other in this edition
-- **This is a long document now.** 155 pages is proportionate to per-company coverage of 40 names, but it is a reference to consult by chapter rather than to read end to end; the contents page and the chapter-per-page layout exist to make that practical
