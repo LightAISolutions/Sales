@@ -8,6 +8,33 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.29g] — 2026-08-05 05:26:52 AM EST — v01.80r — [5b3e2d4](https://github.com/LightAISolutions/Sales/commit/5b3e2d4b89397195195f0308296808f474493bea)
+
+### Added
+- Article ratings can now be saved in batches: many ratings are stored in a single request instead of one request each — far more resilient to the intermittent connection failures that were causing "Could not save feedback" errors, and faster
+
+## [v01.28g] — 2026-08-05 03:13:25 AM EST — v01.78r — [d4550ef](https://github.com/LightAISolutions/Sales/commit/d4550efe2de4ca034ac49a7bf8a45dd078ee40d1)
+
+### Fixed
+- The scheduler health check now recognizes manually installed timers: each hourly run leaves a proof-of-life marker, and a recent marker verifies the schedule is alive even when the service lacks permission to inspect timers directly — previously a hand-added timer was wrongly reported as missing
+
+## [v01.27g] — 2026-08-05 02:57:13 AM EST — v01.77r — [cd475f1](https://github.com/LightAISolutions/Sales/commit/cd475f10dccf7a518651823ebc9c1ecf9b6c9afb)
+
+### Changed
+- Rebuilding the search plan now keeps the keywords you added by hand — they stay at the top of the list while the automatically generated groups are refreshed behind them
+- The saved plan now remembers which groups you added yourself, so they survive every rebuild
+
+### Added
+- New scheduler health check: the app can now verify that the hourly timer powering scheduled briefs actually exists, and report the exact reason when it can't be installed — this state was previously invisible
+
+## [v01.26g] — 2026-08-05 02:34:08 AM EST — v01.76r — [83fe573](https://github.com/LightAISolutions/Sales/commit/83fe5733bd839dc89d36f5ea84f584823c9da865)
+
+### Fixed
+- Keywords added to the search plan can no longer be silently lost when two additions overlap — plan updates are now processed one at a time, and a busy update reports itself instead of overwriting
+- Scheduled briefs can no longer fail silently: if a morning run keeps failing, it now stops after several attempts, moves to the next cycle, and **emails you a failure notice with the reason** — you will always receive either your brief or an explanation
+- The hourly schedule timer is now re-verified every day and reinstalled automatically if it has gone missing, so schedules cannot silently stop running
+- When a brief email fails to send, the reason is now recorded so it can be diagnosed
+
 ## [v01.25g] — 2026-08-04 08:11:10 PM EST — v01.74r — [bcac8c4](https://github.com/LightAISolutions/Sales/commit/bcac8c4e07d8617a65b824ba41b4a7675794de51)
 
 ### Changed

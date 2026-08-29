@@ -1,4 +1,4 @@
-var VERSION = "v01.75g";
+var VERSION = "v01.76g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3937,23 +3937,20 @@ function scDigestRenderStep_(ss, state) {
     }
   }
   var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
-  // A re-entered render REPLACES its own row rather than adding another.
+  // Rebuilding an edition REPLACES that day's row rather than adding another.
+  // Defence in depth: a bug that re-entered the render step used to leave one
+  // visible copy of the edition per pass (nine, in the case that prompted
+  // this), and the developer then had to delete them by hand. With this, the
+  // worst a repeat render can do is rewrite the same row.
   //
-  // This guard was keyed on (edition, date) when it was written, after a bug
-  // left nine visible copies of one edition that the developer had to delete
-  // by hand. That key was broader than the failure: all nine copies came from
-  // a SINGLE run re-entering this step, so they all carried the same state.id.
-  // Keying on the run keeps that protection exactly — a repeat render can still
-  // only rewrite its own row — while letting a deliberate rebuild stand beside
-  // the earlier build of the same day instead of erasing it, which is what the
-  // developer asked for. Two builds of a day are two takes of one issue; they
-  // share a number (scIssueNumbers_ ranks by distinct date) and the News Stand
-  // orders them newest-built first.
-  //
-  // Keeping both rows makes the delivery pass the thing that has to be careful:
-  // see scDigestDeliverPending_, which now mails exactly one row per edition
-  // per day no matter how many builds are sitting there.
-  var priorRow = scDigestDropRunRows_(digests, state.id);
+  // v03.42r briefly keyed this on the run id instead, so a deliberate rebuild
+  // stood beside the earlier build of the same day. The developer tried it and
+  // preferred one row per day, so the day key is back. The delivery pass keeps
+  // the per-edition grouping that change introduced — under replacement it can
+  // only ever find one row, but it means a duplicate row could never become a
+  // duplicate EMAIL if this guard were ever to miss.
+  var priorRow = scDigestDropSameDayRows_(digests,
+    state.editionId || SCRAPER_EDITION_DEFAULT.id, state.date);
   // Numbered against the editions that actually exist for THIS masthead —
   // see scIssueNumbers_ for why the old getLastRow() counter was wrong.
   var no = scNextIssueNo_(ss, state.editionId || SCRAPER_EDITION_DEFAULT.id, state.date);
@@ -4062,17 +4059,18 @@ function scDigestRenderStep_(ss, state) {
 
     Scoped deliberately tight: same edition AND same date only. It will never
     touch another masthead or another day. */
-function scDigestDropRunRows_(digests, runId) {
+function scDigestDropSameDayRows_(digests, editionId, date) {
   var n = digests.getLastRow() - 1;
   if (n < 1) return { dropped: 0, delivered: '' };
-  var want = String(runId || '').trim();
-  if (!want) return { dropped: 0, delivered: '' };
-  var ids = digests.getRange(2, 1, n, 1).getValues();
+  var dates = digests.getRange(2, 2, n, 1).getValues();
+  var eds = digests.getRange(2, 10, n, 1).getValues();
   var wide = digests.getMaxColumns() >= 14;
   var deliv = wide ? digests.getRange(2, 14, n, 1).getValues() : null;
   var dropped = 0, delivered = '';
   for (var i = n - 1; i >= 0; i--) {
-    if (String(ids[i][0] || '').trim() !== want) continue;
+    var ed = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
+    if (ed !== editionId) continue;
+    if (scIssueDateKey_(dates[i][0]) !== date) continue;
     if (deliv && !delivered) {
       var d = deliv[i][0];
       if (d instanceof Date || String(d || '').trim()) delivered = d;
@@ -4257,7 +4255,7 @@ function scRenderDigestNightInk_(d) {
   var serif = "font-family:'Newsreader',Georgia,'Times New Roman',serif;";
   var sans = "font-family:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;";
   var mono = "font-family:'IBM Plex Mono',Consolas,monospace;";
-  var caps = 'font-size:10px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;';
+  var caps = 'font-size:9px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;';
   function srcLine(it) {
     var t = timeOf(it.publishedAt);
     return '<div style="' + mono + caps + 'color:#7b828e;margin-top:2px;">'
@@ -4275,16 +4273,16 @@ function scRenderDigestNightInk_(d) {
   }
   function itemHtml(it) {
     return '<div style="margin:0 0 20px;">'
-      + '<div class="ni-hed" style="' + serif + 'font-size:20px;font-weight:600;line-height:1.28;color:#eceae4;">'
+      + '<div class="ni-hed" style="' + serif + 'font-size:16px;font-weight:600;line-height:1.3;color:#eceae4;">'
       + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
-      + '<div class="ni-body" style="' + sans + 'font-size:16px;line-height:1.55;color:#c2c8d2;margin-top:5px;">'
+      + '<div class="ni-body" style="' + sans + 'font-size:14px;line-height:1.5;color:#c2c8d2;margin-top:4px;">'
       + scNiBoldFigures_(esc(it.summary)) + analysisRun(it.analysis) + '</div>'
       + srcLine(it) + '</div>';
   }
   function sectionHtml(label, items, color, ruleColor) {
     if (!items.length) return '';
     return '<div style="margin:0 0 6px;">'
-      + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 10px;"><tr>'
+      + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 8px;"><tr>'
       + '<td style="' + sans + caps + 'color:' + color + ';white-space:nowrap;padding-right:12px;">' + label + '</td>'
       + '<td width="100%" style="border-top:1px solid ' + ruleColor + ';font-size:0;line-height:0;">&nbsp;</td>'
       + '</tr></table>'
@@ -4315,21 +4313,21 @@ function scRenderDigestNightInk_(d) {
     + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
     + 'bgcolor="#15171c" style="background:#15171c;width:100%;max-width:860px;margin:0 auto;'
     + 'border-collapse:collapse;">'
-    + '<tr><td class="ni-pad" style="color:#e6e4de;padding:22px 18px 20px;' + sans + '">'
+    + '<tr><td class="ni-pad" style="color:#e6e4de;padding:18px 14px 16px;' + sans + '">'
     // Masthead
-    + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:16px;margin-bottom:18px;">'
-    + '<div class="ni-mast" style="' + serif + 'font-size:30px;font-weight:700;line-height:1.14;color:#f0eee8;">'
+    + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:13px;margin-bottom:14px;">'
+    + '<div class="ni-mast" style="' + serif + 'font-size:24px;font-weight:700;line-height:1.16;color:#f0eee8;">'
     + esc(d.editionName || SCRAPER_EDITION_DEFAULT.name) + '</div>'
     + '<div style="' + caps + 'color:#f2a33c;margin-top:6px;">Scraper · Trade news, distilled daily</div>'
-    + '<div style="font-size:13px;color:#9aa0ab;margin-top:5px;">' + esc(longDate(d.date))
+    + '<div style="font-size:12px;color:#9aa0ab;margin-top:4px;">' + esc(longDate(d.date))
     + ' · No. ' + scDigestNo_(d.no) + ' · covering the last ' + Number(d.windowH) + ' hours</div>'
     + '</div>';
   if (d.lead) {
-    html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:18px;margin-bottom:18px;">'
+    html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:14px;margin-bottom:14px;">'
       + '<div style="' + caps + 'color:#f2a33c;">The lead</div>'
-      + '<div class="ni-lead" style="' + serif + 'font-size:25px;font-weight:600;line-height:1.26;color:#f0eee8;margin-top:6px;">'
+      + '<div class="ni-lead" style="' + serif + 'font-size:20px;font-weight:600;line-height:1.28;color:#f0eee8;margin-top:5px;">'
       + '<a href="' + esc(d.lead.url) + '" style="color:#f0eee8;text-decoration:none;">' + esc(d.lead.title) + '</a></div>'
-      + '<div class="ni-lede" style="font-size:16px;line-height:1.55;color:#c2c8d2;margin-top:8px;">'
+      + '<div class="ni-lede" style="font-size:14px;line-height:1.5;color:#c2c8d2;margin-top:6px;">'
       + scNiBoldFigures_(esc(d.lead.text)) + analysisRun(d.lead.analysis) + '</div>'
       + srcLine(d.lead) + '</div>';
   }
@@ -4340,7 +4338,7 @@ function scRenderDigestNightInk_(d) {
     html += '<div style="border:1px solid #363c45;background:#1b1e24;border-radius:4px;'
       + 'padding:12px 16px;margin:6px 0 14px;">'
       + '<div style="' + caps + 'color:#e6e4de;">Newly covered</div>'
-      + '<div style="font-size:16px;line-height:1.62;color:#c2c8d2;margin-top:5px;">Profiler added '
+      + '<div style="font-size:14px;line-height:1.5;color:#c2c8d2;margin-top:4px;">Profiler added '
       + '<b style="color:#f2a33c;">' + Number(d.newCoverage.count) + ' compan'
       + (d.newCoverage.count === 1 ? 'y' : 'ies') + '</b>'
       + (d.newCoverage.names.length ? ' — ' + esc(d.newCoverage.names.join(', ')) : '')
@@ -4366,15 +4364,15 @@ function scRenderDigestNightInk_(d) {
   // there would only be a link to somewhere the reader did not ask to go.
   var moreLink = held
     ? '<a href="' + esc(EMBED_PAGE_URL + '?more=' + encodeURIComponent(d.id))
-      + '" style="font-size:12px;font-weight:600;color:#f2a33c;text-decoration:none;">'
+      + '" style="font-size:11px;font-weight:600;color:#f2a33c;text-decoration:none;">'
       + 'View More (' + held + ') →</a>'
     : '';
   // One stacked block, not a two-column row. The old footer needed a media query
   // to stack on a phone, and a query that can be stripped is not something a
   // layout should depend on. Stacked unconditionally it is correct at every
   // width with no CSS at all.
-  html += '<div style="border-top:3px double #d8dbe1;margin-top:10px;padding-top:12px;">'
-    + '<div class="ni-foot" style="font-size:12px;line-height:1.55;color:#8a919d;">'
+  html += '<div style="border-top:3px double #d8dbe1;margin-top:8px;padding-top:10px;">'
+    + '<div class="ni-foot" style="font-size:11px;line-height:1.5;color:#8a919d;">'
     + 'Published by your Scraper desk · '
     + (hasAnalysis ? '<span style="color:#f2a33c;">Amber = analysis</span> · ' : '')
     + Number(d.counts.shown || 0) + ' of ' + Number(d.counts.relevant)
@@ -4384,7 +4382,7 @@ function scRenderDigestNightInk_(d) {
         : (d.aiLabel ? ' · summarized by ' + esc(d.aiLabel)
              + (d.aiSoftNote ? ' · a few summaries fell back to source text' : '')
            : '')) + '</div>'
-    + (moreLink ? '<div style="margin-top:10px;">' + moreLink + '</div>' : '')
+    + (moreLink ? '<div style="margin-top:8px;">' + moreLink + '</div>' : '')
     + '</div>'
     + '</td></tr></table>'
     + '<!--[if mso]></td></tr></table><![endif]-->'
@@ -4501,22 +4499,23 @@ function scDigestDeliverPending_(ss, opts) {
   var nos = {};
   try { nos = scIssueNumbers_(ss); } catch (noErr) {}
 
-  // ONE email per edition per day, however many builds are stored.
+  // ONE email per edition per day, however many rows are stored.
   //
-  // A rebuild used to delete the earlier row, so "every undelivered row dated
-  // today" could only ever be one row per edition. Now that a rebuild stands
-  // beside its predecessor, that loop would mail each of them — and since this
-  // pass also runs hourly from scSchedulerTick, an afternoon rebuild would post
-  // a second copy of the morning digest to every subscriber. The sheet keeping
-  // history must not turn into the inbox keeping duplicates.
+  // Under the current drop guard a rebuild replaces that day's row, so this
+  // grouping normally finds exactly one candidate per edition and changes
+  // nothing. It is kept as the second line of defence, because the loop below
+  // mails EVERY undelivered row dated today and runs hourly from
+  // scSchedulerTick: if the drop guard ever missed — a sheet read that failed,
+  // two rows whose date cells typed differently — the duplicate row would
+  // become a duplicate email to every subscriber. A duplicate row is a
+  // nuisance; a duplicate send cannot be taken back.
   //
-  // So group today's rows by edition first and choose one: the newest build by
-  // generatedAt. Every other undelivered row in the group is stamped
+  // So group today's rows by edition and choose one: the newest by
+  // generatedAt. Any other undelivered row in the group is stamped
   // 'superseded' — a real value, so the hourly pass stops reconsidering it, and
   // a named one, so the cell says why it never went out. If any row in the
   // group already carries a genuine send (a Date, as opposed to a marker like
-  // 'no-recipients'), nothing in that group mails at all: today's issue has
-  // been delivered, and rebuilding it afterwards must not re-send it.
+  // 'no-recipients'), nothing in that group mails at all.
   var groups = {};
   for (var g = 0; g < n; g++) {
     if (!String(meta[g][0] || '').trim()) continue;

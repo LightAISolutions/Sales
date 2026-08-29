@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.76g] — 2026-08-28 09:48:51 PM EST — v03.43r
+
+### Changed
+- **The emailed digest is noticeably smaller on a phone.** Every size came down about two steps — the masthead now fits on one line, headlines wrap far less, and the body sits at a comfortable reading size instead of filling the screen. Spacing between stories was tightened to match, so a whole edition takes much less scrolling. The desktop version is unchanged
+- **Rebuilding a digest replaces the earlier one from the same day again**, as it did before. Building a second edition on a day you have already built one leaves you with a single, current issue rather than two
+- You still receive only one email per edition per day. That safeguard is kept regardless, so a digest can never be sent to you twice
 
 ## [v01.75g] — 2026-08-28 09:39:29 PM EST — v03.42r
 
@@ -410,32 +417,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 ### Changed
 - The app now refreshes its entry in the shared access directory only when its version changes, instead of on every single page load. Less simultaneous writing to the shared directory means far fewer of the interruptions above
-
-## [v01.29g] — 2026-08-05 05:26:52 AM EST — v01.80r
-
-### Added
-- Article ratings can now be saved in batches: many ratings are stored in a single request instead of one request each — far more resilient to the intermittent connection failures that were causing "Could not save feedback" errors, and faster
-
-## [v01.28g] — 2026-08-05 03:13:25 AM EST — v01.78r
-
-### Fixed
-- The scheduler health check now recognizes manually installed timers: each hourly run leaves a proof-of-life marker, and a recent marker verifies the schedule is alive even when the service lacks permission to inspect timers directly — previously a hand-added timer was wrongly reported as missing
-
-## [v01.27g] — 2026-08-05 02:57:13 AM EST — v01.77r
-
-### Changed
-- Rebuilding the search plan now keeps the keywords you added by hand — they stay at the top of the list while the automatically generated groups are refreshed behind them
-- The saved plan now remembers which groups you added yourself, so they survive every rebuild
-
-### Added
-- New scheduler health check: the app can now verify that the hourly timer powering scheduled briefs actually exists, and report the exact reason when it can't be installed — this state was previously invisible
-
-## [v01.26g] — 2026-08-05 02:34:08 AM EST — v01.76r
-
-### Fixed
-- Keywords added to the search plan can no longer be silently lost when two additions overlap — plan updates are now processed one at a time, and a busy update reports itself instead of overwriting
-- Scheduled briefs can no longer fail silently: if a morning run keeps failing, it now stops after several attempts, moves to the next cycle, and **emails you a failure notice with the reason** — you will always receive either your brief or an explanation
-- The hourly schedule timer is now re-verified every day and reinstalled automatically if it has gone missing, so schedules cannot silently stop running
-- When a brief email fails to send, the reason is now recorded so it can be diagnosed
 
 Developed by: LightAISolutions

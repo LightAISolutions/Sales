@@ -3,11 +3,35 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.43r] — 2026-08-28 09:48:51 PM EST
+
+> **Prompt:** "in hindsight, I think what you were doing before was better. Go back to replacing the same edition generated on the same day. Also, make the emailed digest two font sizes smaller and adjust the format accordingly. The current version is still a bit big on mobile."
+
+### Changed
+
+`Scraper.gs` (v01.76g)
+
+- **`scDigestDropRunRows_` → `scDigestDropSameDayRows_`: v03.42r reverted.** A rebuild replaces that day's row for its edition and inherits its delivered stamp, exactly as before. The one-day trial of keeping both builds is over
+- **The mobile type scale comes down two steps.** Masthead 30→24, lead 25→20, headline 20→16, body and lede 16→14, dateline 13→12, caps labels 10→9, footer and View More 12→11. Outer padding 22/18/20→18/14/16, which buys back 8px of line width at 390px. Section rules, the masthead rule and the footer rule tightened proportionally (18→14, 16→13, 10→8) so the vertical rhythm matches the smaller type rather than leaving the old gaps around it
+- **The desktop scale is untouched** — the `min-width:601px` block still restores 44/32/22/17/16, so the change is mobile-only, which is where the complaint was. Block spacing is inline and therefore tightens on both; checked at 1000px and it reads as intentional, not cramped
+- **The delivery grouping from v03.42r is deliberately KEPT** — the one piece not reverted, and flagged as such before the work started. Under replacement it can only ever find one row per edition per day, so it changes nothing in normal operation. It stays because the delivery loop mails *every* undelivered row dated today and runs hourly: if the drop guard ever missed, a duplicate row would become a duplicate send. A duplicate row is a nuisance; a duplicate send cannot be taken back
+
+`Scraper.html` (v01.61w)
+
+- News Stand chip reverted to date + relevant count. The build-time label only existed to separate same-day rebuilds, and its `perDate` counter keyed on **date alone** — so with rebuilds gone it would have fired on multi-*edition* days instead, labelling three chips that were never ambiguous
+
+### Notes
+
+- **385 assertions pass** across 16 suites. `t.js` gains three that outlive any specific numbers — every phone size below its desktop counterpart, mast > lead > hed > body, and a 14px floor on body text — so a future resize cannot silently invert the media query or shrink past readability
+- **Measured at 390px with the `<style>` block intact and stripped: identical** (24/20/16/14/14/11 both ways). The v03.41r inversion still holds after a full rescale, which is the property that matters most about it
+- **`Scrapergs.changelog.md` rotated** — it stood at 50/50, so the oldest full date group (2026-08-05: v01.26g–v01.29g) moved to the archive with commit-SHA enrichment before the new section was added. 50 → 46 → 47
+- This repo CHANGELOG now stands at **100/100** — the next push must rotate it before adding a section
 
 ## [v03.42r] — 2026-08-28 09:39:29 PM EST
 
