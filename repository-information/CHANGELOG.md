@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.39r] — 2026-08-28 08:33:28 PM EST
+
+> **Prompt:** "I have built the default, BESS, and AIDC editions and I think the scoring rubric is working and I like the amount of relevant articles per issue.
+>
+> However, on the summarization side, I would like you to explicitly differentiate between the standard article summary and your analysis from different players' perspectives. When you analyze from different players' perspective, soften your language in accordance with your confidence level; Avoid definitive words like "definitely", "always", "will", etc. in lieu of softer words like "may", "could", and "try" (just examples, don't take as explicit instruction)."
+
+### Changed
+
+`Scraper.gs` (v01.72g) — the summary and the desk's analysis are now separate fields, separately rendered.
+
+- **Split in the data, not in the prose.** The model returns `{"i":0,"summary":"…","analysis":"…"}` and the two are stored in separate columns (`DigestIntake` gains `Analysis`, the twelfth). A boundary drawn in the data holds; one drawn inside a paragraph erodes the moment a sentence runs long, which is exactly how the two had blended into one closing clause
+- The `summary` prompt is now confined to what the article **reports** — "put no interpretation of your own here". The `analysis` prompt is explicitly named as inference and carries the edition's lens
+- **Register matched to confidence, not a word blacklist.** The prompt asks that the analysis be written "like someone who knows they are extrapolating", preferring the conditional where the article does not support a flat claim, and states outright that the softer words are "illustrations of the register, not a word list to work from" — the developer asked not to have their examples taken as explicit instruction. It also says not to hedge a fact the article reports directly, so the instruction cannot collapse into hedging everything
+- **Rendered as its own block**: a rule, an amber `What it means` micro-label in the same idiom as the section headers, and dimmer body ink (#a9b0bb against the reporting's #c2c8d2). Verified in Chromium at 1000px and 390px
+- The lead paragraph is split the same way (`text` + `analysis`), so the edition reads consistently from the top
+- **Backward compatible and honest about gaps**: an edition stored before this renders with no label at all rather than an empty block, and an item whose summary fell back to its raw snippet is given no analysis — better no desk read than a laundered snippet presented as one
+
+### Notes
+
+- 314 assertions pass; 31 are new. They cover the rendered separation, the ordering (analysis after the source line, not inside the summary), HTML escaping of the analysis, both no-analysis paths, the prompt's two-field shape and its register instructions, and the schema plumbing end to end
+- **Three test failures this push were all test-side, and each is worth recording.** `t7`'s sheet mock keyed `setValue` on the row alone, so writing the analysis to column 12 clobbered the summary just written to column 9 — a mock limitation, since the real sheet has distinct cells; fixed the mock rather than the code. `t13` asserted prompt wording that this change deliberately reworded. And `t13`'s remaining failure was subtler: the prompt is assembled by concatenating string literals, so a sentence can be split across two of them and never appear contiguously in the source — the assertions now join adjacent literals and test the prompt as assembled, which is what they were always meant to check
 
 ## [v03.38r] — 2026-08-28 08:02:19 PM EST
 

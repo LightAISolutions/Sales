@@ -1,4 +1,4 @@
-var VERSION = "v01.71g";
+var VERSION = "v01.72g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -376,8 +376,13 @@ var SCRAPER_TAB_HEADERS = {
   Digests: ['Digest ID', 'Date', 'Generated At', 'Status', 'Item Count',
             'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI', 'Lead',
             'No', 'Delivered'],
+  // 'Analysis' is kept apart from 'Summary' rather than appended to it. The two
+  // are different kinds of claim — one reports what the article says, the other
+  // is the desk's inference about what it means — and a reader is entitled to
+  // see which is which. Splitting them in the data rather than in the prose is
+  // what stops the boundary eroding whenever the model writes a long sentence.
   DigestIntake: ['Digest ID', 'URL', 'Title', 'Source', 'Published At', 'Snippet',
-                 'Score', 'Signals', 'Summary', 'Section', 'Backstop'],
+                 'Score', 'Signals', 'Summary', 'Section', 'Backstop', 'Analysis'],
   // 'Parent' makes an edition a variant of another one ("Your Morning Digest
   // (BESS)" under "Your Morning Digest") instead of a peer. Filtering by a
   // parent includes its variants; filtering by a variant does not reach back up.
@@ -909,7 +914,8 @@ function scEditionLens_(editionId) {
   return SCRAPER_EDITION_LENS[SCRAPER_EDITION_DEFAULT.id];
 }
 
-var SCRAPER_DIGEST_SUMMARY_MAX = 900;            // stored summary cap (chars) — generous; quality set by the prompt, not a hard length limit
+var SCRAPER_DIGEST_SUMMARY_MAX = 900;
+var SCRAPER_DIGEST_ANALYSIS_MAX = 500;   // the desk's read, kept shorter than the reporting            // stored summary cap (chars) — generous; quality set by the prompt, not a hard length limit
 // Output ceiling for one summarize call. Five items at 60-120 words is roughly
 // 900 tokens of prose before JSON overhead, so 3000 looked like ample headroom
 // — but thinking tokens count against this same budget on the current models,
@@ -3529,7 +3535,7 @@ function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen
         // whole set is known, can respect the same evidence cap the rubric
         // applied here rather than adding on top of it.
         ev: r.evidence, sup: r.support, gf: r.geoFactorApplied }).slice(0, 1200),
-      '', scDigestSectionFor_(r), isBackstop ? 'yes' : '']);
+      '', scDigestSectionFor_(r), isBackstop ? 'yes' : '', '']);
   }
   if (out.length) {
     intake.getRange(intake.getLastRow() + 1, 1, out.length, out[0].length).setValues(out);
@@ -3626,7 +3632,8 @@ function scDigestItems_(ss, digestId) {
       evidence: Number(sig.ev) || 0, support: Number(sig.sup) || 0,
       geoFactor: sig.gf == null ? 1 : Number(sig.gf),
       summary: String(data[i][8] || ''), section: String(data[i][9] || 'market'),
-      backstop: String(data[i][10]) === 'yes' });
+      backstop: String(data[i][10]) === 'yes',
+      analysis: String(data[i][11] || '') });
   }
   // Corroboration (T2a): a story covered by 2+ distinct sources in the window
   // matters more. Group by a normalized title signature; add a bounded boost
@@ -3746,22 +3753,34 @@ function scDigestSummarizeStep_(ss, state, t0) {
     // Longer summaries (developer feedback 2026-08-27): substance over
     // brevity — no hard sentence cap, the prompt sets the quality bar.
     var lens = scEditionLens_(state.editionId);
-    var prompt = 'You are writing news summaries for a morning digest read by '
-      + lens.audience + '. For each item write a '
-      + 'substantial summary — typically 3-5 sentences (~60-120 words): what happened and who '
-      + 'is involved; every concrete figure (MW/MWh/GW, $, %, dates, locations, counterparties); '
-      + 'and the mechanics of the deal, policy, or incident. '
-      + 'Then ' + lens.closing + '. '
-      // Asked for explicitly: "I don't want to give rigid rules because I don't
-      // want every article summary to end in the same way." So the closing line
-      // is specified by what it must ACHIEVE, and the model is told outright to
-      // vary how it gets there.
-      + 'Vary how you write that closing thought across the items — do not open it with the '
-      + 'same construction every time, and do not use a standard phrase like "For X, this…" '
-      + 'on more than one item in this batch. Sometimes it belongs as its own sentence, '
-      + 'sometimes it is better carried inside the preceding one. '
-      + 'No filler, no restating the headline. Reply ONLY with a JSON '
-      + 'array like [{"i":0,"summary":"..."}] covering every item.\n\nItems:\n'
+    var prompt = 'You are writing a morning digest read by ' + lens.audience + '. '
+      + 'For each item return TWO SEPARATE fields.\n\n'
+      // Two fields rather than one paragraph. The developer asked to "explicitly
+      // differentiate between the standard article summary and your analysis
+      // from different players' perspectives" — a boundary drawn in the data
+      // holds, where one drawn in prose erodes the moment a sentence runs long.
+      + '"summary" — what the article REPORTS. Typically 3-5 sentences (~60-120 words): '
+      + 'what happened and who is involved; every concrete figure (MW/MWh/GW, $, %, dates, '
+      + 'locations, counterparties); and the mechanics of the deal, policy or incident. '
+      + 'Confine this to what the article states. Put no interpretation of your own here, '
+      + 'and do not restate the headline.\n\n'
+      + '"analysis" — your own read, 1-2 sentences. ' + lens.closing + '.\n\n'
+      + 'The analysis is inference, not reporting, and its language must match how strongly '
+      + 'the article actually supports it. Where the article states something plainly you may '
+      + 'say so plainly; where you are extrapolating — which is most of the time — write like '
+      + 'someone who knows they are extrapolating. Prefer the conditional over the certain '
+      + '("may", "could", "points toward", "suggests", "is likely to" rather than "will", '
+      + '"always", "definitely", "guarantees"). Those are illustrations of the register, not a '
+      + 'word list to work from: the aim is that a reader can tell how much weight the claim '
+      + 'carries. Do not manufacture confidence you do not have, and equally do not hedge a '
+      + 'fact the article reports directly.\n\n'
+      // Same reasoning as before: the closing thought is specified by what it
+      // must achieve, never by a sentence pattern.
+      + 'Vary how you write the analysis across the items — do not open it with the same '
+      + 'construction every time, and do not use a standard phrase like "For X, this…" on '
+      + 'more than one item in this batch.\n\n'
+      + 'Reply ONLY with a JSON array like '
+      + '[{"i":0,"summary":"...","analysis":"..."}] covering every item.\n\nItems:\n'
       + JSON.stringify(batch.map(function(it, n) {
           return { i: n, title: it.title, snippet: it.snippet.slice(0, 280), source: it.source };
         }));
@@ -3769,12 +3788,22 @@ function scDigestSummarizeStep_(ss, state, t0) {
       var parsed = scParseJsonArray_(scAiWithRetry_(prompt, SCRAPER_DIGEST_SUMMARY_TOKENS)) || [];
       var byIdx = {};
       parsed.forEach(function(p) {
-        if (p && typeof p.i === 'number') byIdx[p.i] = scStr_(p.summary, SCRAPER_DIGEST_SUMMARY_MAX);
+        if (p && typeof p.i === 'number') {
+          byIdx[p.i] = { summary: scStr_(p.summary, SCRAPER_DIGEST_SUMMARY_MAX),
+                         analysis: scStr_(p.analysis, SCRAPER_DIGEST_ANALYSIS_MAX) };
+        }
       });
       batch.forEach(function(it, n) {
-        var s = byIdx[n] || it.snippet;
-        intake.getRange(it.row, 9).setValue(s);
-        it.summary = s;
+        var got = byIdx[n] || {};
+        // A batch that fell back to its raw snippet has no analysis to show —
+        // better an item with no desk read than a laundered snippet presented
+        // as one.
+        var sum = got.summary || it.snippet;
+        var ana = got.summary ? (got.analysis || '') : '';
+        intake.getRange(it.row, 9).setValue(sum);
+        intake.getRange(it.row, 12).setValue(ana);
+        it.summary = sum;
+        it.analysis = ana;
       });
       scLogUsage_(ss, 'digest', 1, 0);
       if (!state.aiLabel) state.aiLabel = scActiveAiLabel_();
@@ -3808,6 +3837,7 @@ function scDigestSummarizeStep_(ss, state, t0) {
   if ((!stillPending || state.aiNote) && !state.leadDone) {
     state.leadIdx = 0;
     state.leadText = '';
+    state.leadAnalysis = '';
     // The lead is picked from the SAME pool the render step indexes into —
     // items that clear the relevance bar, in the same order. Offering the model
     // the unfiltered top 30 and then applying its answer to the filtered list
@@ -3818,10 +3848,15 @@ function scDigestSummarizeStep_(ss, state, t0) {
       try {
         var lens2 = scEditionLens_(state.editionId);
         var lp = 'From these scored industry items, pick the single most consequential as "the lead" '
-          + 'and write a 3-5 sentence lead paragraph for a morning digest read by '
-          + lens2.audience + ': what happened, the key figures, the mechanism behind it, and then '
-          + lens2.closing + '. Reply ONLY with a JSON array: '
-          + '[{"lead": <item index>, "text": "..."}].\n\nItems:\n'
+          + 'for a morning digest read by ' + lens2.audience + '. Return the index and TWO '
+          + 'SEPARATE fields.\n\n'
+          + '"text" — what the article reports, 3-5 sentences: what happened, the key figures, '
+          + 'and the mechanism behind it. Reporting only.\n\n'
+          + '"analysis" — your own read, 1-2 sentences. ' + lens2.closing + '. This is inference, '
+          + 'so write it in a register that matches how strongly the article supports it — '
+          + 'conditional where you are extrapolating, plain only where the article is plain.\n\n'
+          + 'Reply ONLY with a JSON array: '
+          + '[{"lead": <item index>, "text": "...", "analysis": "..."}].\n\nItems:\n'
           + JSON.stringify(leadPool.slice(0, 6).map(function(it, n) {
               return { i: n, title: it.title, summary: it.summary || it.snippet.slice(0, 200) };
             }));
@@ -3829,6 +3864,7 @@ function scDigestSummarizeStep_(ss, state, t0) {
         if (lr[0]) {
           state.leadIdx = Math.max(0, Math.min(5, Number(lr[0].lead) || 0));
           state.leadText = scStr_(lr[0].text, 1200);
+          state.leadAnalysis = scStr_(lr[0].analysis, SCRAPER_DIGEST_ANALYSIS_MAX);
         }
         scLogUsage_(ss, 'digest', 1, 0);
       } catch (leadErr) { /* fallback below */ }
@@ -3904,7 +3940,8 @@ function scDigestRenderStep_(ss, state) {
     aiLabel: state.aiLabel || '',
     lead: lead ? { title: lead.title, source: lead.source, publishedAt: lead.publishedAt,
                    url: lead.url, score: lead.score,
-                   text: state.leadText || lead.summary || lead.snippet } : null,
+                   text: state.leadText || lead.summary || lead.snippet,
+                   analysis: state.leadAnalysis || lead.analysis || '' } : null,
     sections: {
       companies: sections.companies.map(scDigestItemOut_),
       market: sections.market.map(scDigestItemOut_),
@@ -4005,7 +4042,11 @@ function scDigestDropSameDayRows_(digests, editionId, date) {
 function scDigestItemOut_(it) {
   return { title: it.title, source: it.source, publishedAt: it.publishedAt,
            url: it.url, rawUrl: it.url, score: it.score, backstop: it.backstop,
-           summary: it.summary || it.snippet };
+           summary: it.summary || it.snippet,
+           // Absent on editions built before the split, and on any item that
+           // fell back to its raw snippet — the renderer omits the block rather
+           // than printing an empty label.
+           analysis: it.analysis || '' };
 }
 
 function scDigestNo_(n) { return ('000' + Math.max(1, n)).slice(-3); }
@@ -4178,13 +4219,27 @@ function scRenderDigestNightInk_(d) {
     return '<div style="' + mono + caps + 'color:#7b828e;margin-top:2px;">'
       + esc(it.source) + (t ? ' · ' + esc(t) : '') + '</div>';
   }
+  // The desk's read, visibly set apart from the reporting above it. An amber
+  // caps micro-label in the same idiom the section headers already use, over a
+  // rule, in a dimmer ink — so a reader can see at a glance which sentences are
+  // the article's and which are ours. Omitted entirely when there is no
+  // analysis, rather than printing an empty label.
+  function analysisHtml(text, topGap) {
+    if (!text) return '';
+    return '<div class="ni-analysis" style="border-top:1px solid #2c313a;'
+      + 'margin-top:' + (topGap || 10) + 'px;padding-top:8px;">'
+      + '<div style="' + mono + caps + 'color:#f2a33c;">What it means</div>'
+      + '<div class="ni-body" style="' + sans + 'font-size:15px;line-height:1.6;'
+      + 'color:#a9b0bb;margin-top:4px;">' + scNiBoldFigures_(esc(text)) + '</div></div>';
+  }
   function itemHtml(it) {
     return '<div style="margin:0 0 20px;">'
       + '<div class="ni-hed" style="' + serif + 'font-size:22px;font-weight:600;line-height:1.3;color:#eceae4;">'
       + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
       + '<div class="ni-body" style="' + sans + 'font-size:16px;line-height:1.62;color:#c2c8d2;margin-top:5px;">'
       + scNiBoldFigures_(esc(it.summary)) + '</div>'
-      + srcLine(it) + '</div>';
+      + srcLine(it)
+      + analysisHtml(it.analysis, 10) + '</div>';
   }
   function sectionHtml(label, items, color, ruleColor) {
     if (!items.length) return '';
@@ -4236,7 +4291,8 @@ function scRenderDigestNightInk_(d) {
       + '<a href="' + esc(d.lead.url) + '" style="color:#f0eee8;text-decoration:none;">' + esc(d.lead.title) + '</a></div>'
       + '<div class="ni-lede" style="font-size:17px;line-height:1.62;color:#c2c8d2;margin-top:8px;">'
       + scNiBoldFigures_(esc(d.lead.text)) + '</div>'
-      + srcLine(d.lead) + '</div>';
+      + srcLine(d.lead)
+      + analysisHtml(d.lead.analysis, 12) + '</div>';
   }
   html += sectionHtml('Covered companies', d.sections.companies, '#e6e4de', '#2c313a')
     + sectionHtml('US AIDC market &amp; policy', d.sections.market, '#e6e4de', '#2c313a')
@@ -4298,6 +4354,7 @@ function scNiMobileCss_() {
     + '.ni-lede{font-size:16px!important}'
     + '.ni-hed{font-size:19px!important;line-height:1.32!important}'
     + '.ni-body{font-size:15.5px!important}'
+    + '.ni-analysis{margin-top:8px!important;padding-top:7px!important}'
     + '.ni-foot,.ni-foot-r{display:block!important;width:100%!important;'
     + 'text-align:left!important;white-space:normal!important}'
     + '.ni-foot-r{padding-top:10px!important}'

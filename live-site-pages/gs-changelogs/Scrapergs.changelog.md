@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.72g] — 2026-08-28 08:33:28 PM EST — v03.39r
+
+### Changed
+- **The reporting and the interpretation are now visibly separate.** Each story gives you what the article says, then a short **What it means** passage underneath — set off by a rule and a label, so it is always clear which sentences come from the source and which are the desk's read
+- **The interpretation is written at the confidence it deserves.** Where the desk is extrapolating it now says so, favouring conditional language over flat assertion. Facts the article reports directly are still stated plainly — the aim is that you can tell how much weight a claim carries, not that everything is hedged
+- The lead story is split the same way, so the edition reads consistently from the top
+- Editions published before this release are unaffected and display exactly as they did, and a story whose summary fell back to raw source text is shown without an interpretation rather than with a manufactured one
 
 ## [v01.71g] — 2026-08-28 08:02:19 PM EST — v03.38r
 
