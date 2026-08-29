@@ -23,6 +23,17 @@ import json, re, sys, datetime
 DATA = 'live-site-pages/profiler-data'
 OUT = f'{DATA}/profiler-graph.json'
 
+# Excluded pairs (developer directive 2026-08-29): derived-only edges whose
+# entire evidence is an anti-relationship sentence ("no X ties found") carry
+# no intelligence value — the sentence explicitly denies a link. Both pairs
+# below exist solely on Terra-Gen's "No Hithium history or contact found; no
+# CATL/EVE/Sungrow/Tesla ties found" line. Curated links are never excluded;
+# add a pair here only when every evidence sentence is a denial.
+EXCLUDED_PAIRS = {
+    ('catl', 'terra-gen'),
+    ('sungrow', 'terra-gen'),
+}
+
 def sentences(text, rx, ambiguous):
     out = []
     for m in rx.finditer(text):
@@ -107,6 +118,7 @@ def main():
             side = 'a' if e['a'] == slug else 'b'
             for item in evid:
                 e['evid'].append(dict(item, **{'from': side}))
+    edges = {k: v for k, v in edges.items() if k not in EXCLUDED_PAIRS}
     for e in edges.values():
         dates = [i['date'] for i in e['evid'] if i.get('date')]
         for side in e['curated'].values():

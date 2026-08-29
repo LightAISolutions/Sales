@@ -4208,20 +4208,6 @@
   },
   {
    "a": "catl",
-   "b": "terra-gen",
-   "evid": [
-    {
-     "where": "Capabilities · Procurement program (the FEOC pivot)",
-     "date": "",
-     "text": "No Hithium history or contact found; no CATL/EVE/Sungrow/Tesla ties found.",
-     "src": "",
-     "from": "b"
-    }
-   ],
-   "last": ""
-  },
-  {
-   "a": "catl",
    "b": "tesla",
    "curated": {
     "a": {
@@ -17331,20 +17317,6 @@
      "where": "Key Judgments",
      "date": "",
      "text": "(High confidence) We assess Sunwoda's two-hat model — top-10 merchant cell supplier AND ~#9 system integrator — as both its edge and its structural conflict: it sells cells to integrators it competes with downstream (Sungrow gave it a strategic-partner award while fielding rival containers), which caps how far partners will let it climb the integration stack.",
-     "src": "",
-     "from": "b"
-    }
-   ],
-   "last": ""
-  },
-  {
-   "a": "sungrow",
-   "b": "terra-gen",
-   "evid": [
-    {
-     "where": "Capabilities · Procurement program (the FEOC pivot)",
-     "date": "",
-     "text": "No Hithium history or contact found; no CATL/EVE/Sungrow/Tesla ties found.",
      "src": "",
      "from": "b"
     }

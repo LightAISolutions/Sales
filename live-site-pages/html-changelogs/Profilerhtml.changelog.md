@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.56w] — 2026-08-29 07:03:56 PM EST — v03.68r
+
+### Changed
+- The "Detected in other dossiers" group now starts collapsed — these are weaker signals, so the curated relationships lead and the long tail opens with one click on the group header
+- Removed two detected links whose only supporting text was a sentence explicitly stating no relationship exists
 
 ## [v01.55w] — 2026-08-29 06:20:58 PM EST — v03.67r
 

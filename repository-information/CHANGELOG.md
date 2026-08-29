@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.68r] — 2026-08-29 07:03:56 PM EST
+
+> So far, almost everything looks good. See the attached screenshot - This is the only relationship that I found that doesn't really look useful at all, so remove it. I think making the "Detected in other dossiers" group a collapsed-by-default group is a good idea since those connections are relatively weak, but still existing. Can you think of any other way to improve this Relationships function or build on it?
+
+### Changed
+
+#### `live-site-pages/Profiler.html` (v01.56w)
+- "Detected in other dossiers" group now collapsed by default with a click-to-expand header (▸ show / ▾ hide, keyboard-accessible with aria-expanded)
+
+#### `scripts/build-profiler-graph.py` + `live-site-pages/profiler-data/profiler-graph.json`
+- Added `EXCLUDED_PAIRS` to the graph builder for derived-only edges whose entire evidence is an anti-relationship sentence; excluded CATL–Terra-Gen (the flagged entry) and its identical twin Sungrow–Terra-Gen — both existed solely on Terra-Gen's "no CATL/EVE/Sungrow/Tesla ties found" line; graph rebuilt (472 edges, 1,499 evidence items)
+- Exclusion mechanism documented in `repository-information/PROFILER-SCHEMA.md` (Relationship graph section)
 
 ## [v03.67r] — 2026-08-29 06:20:58 PM EST
 

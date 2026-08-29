@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.55w">
+  <meta name="build-version" content="v01.56w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -365,6 +365,9 @@
     .ov-rel-grp { font: 600 11px/1 var(--ov-mono); letter-spacing: 0.24em; text-transform: uppercase; color: var(--ov-gold); border-bottom: 1px solid var(--ov-line2); padding-bottom: 7px; margin: 26px 0 2px; }
     .ov-rel-grp:first-child { margin-top: 12px; }
     .ov-rel-grp .cnt { color: var(--ov-faint); letter-spacing: 0.08em; margin-left: 8px; }
+    .ov-rel-grp.clps { cursor: pointer; }
+    .ov-rel-grp.clps:hover { color: var(--ov-paper); }
+    .ov-rel-grp .car { float: right; color: var(--ov-faint); letter-spacing: 0.08em; }
     .ov-rel-chips { margin: 3px 0 6px; }
     .ov-rel-chips .ch { display: inline-block; font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ov-muted); border: 1px solid var(--ov-line2); border-radius: 4px; padding: 3px 7px; margin: 2px 6px 2px 0; }
     .ov-rel-chips .ch.st-active { color: #82b56d; border-color: rgba(130,181,109,0.45); }
@@ -2950,12 +2953,31 @@ function ovReloadFresh() {
       groups.push(['Detected in other dossiers', detected]);
       groups.forEach(function(g) {
         if (!g[1].length) return;
-        var hd = ovEl('div', 'ov-rel-grp', g[0]);
+        // Detected links are real but weak signals — the group ships collapsed
+        // so curated intelligence leads and the long tail stays one click away
+        // (developer directive 2026-08-29).
+        var collapsible = g[0] === 'Detected in other dossiers';
+        var hd = ovEl('div', 'ov-rel-grp' + (collapsible ? ' clps' : ''), g[0]);
         hd.appendChild(ovEl('span', 'cnt', '· ' + g[1].length));
         sec.appendChild(hd);
         var list = ovEl('div', 'ov-rels');
         g[1].forEach(function(r) { list.appendChild(ovRelRow(p, r)); });
         sec.appendChild(list);
+        if (collapsible) {
+          list.hidden = true;
+          var car = ovEl('span', 'car', '▸ show');
+          hd.appendChild(car);
+          hd.setAttribute('role', 'button');
+          hd.tabIndex = 0;
+          hd.setAttribute('aria-expanded', 'false');
+          var toggle = function() {
+            list.hidden = !list.hidden;
+            hd.setAttribute('aria-expanded', list.hidden ? 'false' : 'true');
+            car.textContent = list.hidden ? '▸ show' : '▾ hide';
+          };
+          hd.addEventListener('click', toggle);
+          hd.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+        }
       });
       wrap.appendChild(sec);
       return true;
