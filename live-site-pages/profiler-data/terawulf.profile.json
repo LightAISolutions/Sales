@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "terawulf",
   "name": "TeraWulf",
   "legalName": "TeraWulf Inc.",
@@ -296,7 +296,10 @@
             "actual": "$168.5M (mining $151.6M / HPC $16.9M)",
             "expected": "Q4: ~$43.5M Zacks consensus vs $35.8M actual",
             "verdict": "miss",
-            "result": "Q4 missed revenue by 17.7% and adj. EPS (-$0.28 vs -$0.13, Zacks); Q3 also missed revenue ($50.6M vs $56.3M MarketBeat)"
+            "result": "Q4 missed revenue by 17.7% and adj. EPS (-$0.28 vs -$0.13, Zacks); Q3 also missed revenue ($50.6M vs $56.3M MarketBeat)",
+            "kpi": "revenue",
+            "usdMillions": 168.5,
+            "fxBasis": "as reported"
           },
           {
             "name": "Net loss",
@@ -320,7 +323,9 @@
             "result": "The market looked through warrant marks all year; shares +55.6% YTD into the February FY print"
           }
         ],
-        "commentary": "Expectations honesty: TeraWulf issues no revenue/EPS guidance — its 'guidance' is capacity milestones, $/MW build cost, and ~85% NOI targets, so consensus comparisons (Zacks/MarketBeat, cited per quarter) are the only benchmark available."
+        "commentary": "Expectations honesty: TeraWulf issues no revenue/EPS guidance — its 'guidance' is capacity milestones, $/MW build cost, and ~85% NOI targets, so consensus comparisons (Zacks/MarketBeat, cited per quarter) are the only benchmark available.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "H1 2026 (latest: Q2 reported Aug 5, 2026)",

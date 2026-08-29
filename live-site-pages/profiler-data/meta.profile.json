@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "meta",
   "name": "Meta Platforms, Inc.",
   "shortName": "Meta",
@@ -287,7 +287,10 @@
             "actual": "$200.97B (+22%)",
             "expected": "Q4: $59.89B vs $58.59B est",
             "verdict": "beat",
-            "result": "Q4 EPS $8.88 vs $8.23 est"
+            "result": "Q4 EPS $8.88 vs $8.23 est",
+            "kpi": "revenue",
+            "usdMillions": 200970,
+            "fxBasis": "as reported"
           },
           {
             "name": "Net income",
@@ -304,7 +307,9 @@
             "result": "initial FY2026 guide of $115–135B sent the stock +10% after hours in Jan 2026"
           }
         ],
-        "commentary": "FY2024 for reference: revenue $164.50B (+22%), net income $62.36B, capex $39.23B."
+        "commentary": "FY2024 for reference: revenue $164.50B (+22%), net income $62.36B, capex $39.23B.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       }
     ],
     "commentary": "The only big-four member with no external AI/cloud revenue. Peer 2026 capex guides for context: Amazon ~$220B, Microsoft ~$190B (calendar), Alphabet $195–205B, Meta $130–145B — but Meta's is the steepest multiple of its 2024 base."

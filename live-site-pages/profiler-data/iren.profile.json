@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "iren",
   "name": "IREN",
   "legalName": "IREN Limited (formerly Iris Energy Limited)",
@@ -343,7 +343,10 @@
             "actual": "$501.0M (+168%): mining $484.6M (5,499 BTC) / AI cloud $16.4M",
             "expected": "Q4: $0.08 EPS vs $0.17 Zacks (-53%); revenue miss 0.6%",
             "verdict": "miss",
-            "result": "Stock rose +26.3% in two sessions after the Q4 miss anyway — the market traded the pivot, not the print"
+            "result": "Stock rose +26.3% in two sessions after the Q4 miss anyway — the market traded the pivot, not the print",
+            "kpi": "revenue",
+            "usdMillions": 501,
+            "fxBasis": "as reported"
           },
           {
             "name": "Profitability",
@@ -353,7 +356,9 @@
             "result": "50 EH/s, 810 MW operating, ~$41k all-in cost per BTC — peak mining economics, immediately redeployed"
           }
         ],
-        "commentary": "Expectations honesty: consensus figures per Zacks/MarketBeat as cited; IREN guides on ARR and capacity targets, not EPS."
+        "commentary": "Expectations honesty: consensus figures per Zacks/MarketBeat as cited; IREN guides on ARR and capacity targets, not EPS.",
+        "periodType": "annual",
+        "periodEnd": "2025-06-30"
       },
       {
         "period": "FY2026 through Q3 (Jul 2025–Mar 2026; FY report due Aug 27, 2026)",

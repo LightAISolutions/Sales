@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "schneider-electric",
   "name": "Schneider Electric",
   "legalName": "Schneider Electric SE",
@@ -300,7 +300,10 @@
             "actual": "€40.15B (+8.9% organic)",
             "expected": "Q1 missed (€9.33B vs €9.47B); Q4 beat by ~2%",
             "verdict": "beat",
-            "result": "Q4 organic +10.7% with North America Energy Management +19.4%"
+            "result": "Q4 organic +10.7% with North America Energy Management +19.4%",
+            "kpi": "revenue",
+            "usdMillions": 45393.6,
+            "fxBasis": "EUR converted at 1.1306 USD/EUR (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Adjusted EBITA",
@@ -310,7 +313,9 @@
             "result": "Both divisions missed divisional expectations by 2-3%; group rescued by central costs. FCF record €4.64B beat (consensus €4.22B)"
           }
         ],
-        "commentary": "A bumpy path to a record: the April margin cut (-50bps within two months of guidance) and tariff-driven H1 gross-margin pressure gave way to a strong Q4 on triple-digit data-center demand. Initial 2026 guidance was below consensus at midpoint — later cured."
+        "commentary": "A bumpy path to a record: the April margin cut (-50bps within two months of guidance) and tariff-driven H1 gross-margin pressure gave way to a strong Q4 on triple-digit data-center demand. Initial 2026 guidance was below consensus at midpoint — later cured.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "H1 2026 (latest interim)",

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "hithium",
   "name": "Xiamen Hithium Energy Storage Technology Co., Ltd. (厦门海辰储能科技股份有限公司)",
   "shortName": "Hithium",
@@ -685,7 +685,10 @@
             "actual": "RMB 12.917B (~US$1.8B, +26–27% YoY)",
             "expected": "",
             "verdict": "inline",
-            "result": "Private — no consensus benchmark"
+            "result": "Private — no consensus benchmark",
+            "kpi": "revenue",
+            "usdMillions": 1800,
+            "fxBasis": "as stated in this dossier's own reporting (RMB 12.917B ≈ US$1.8B)"
           },
           {
             "name": "Net result",
@@ -716,7 +719,9 @@
             "result": "—"
           }
         ],
-        "commentary": "The overseas pivot drove margins: H1 2025 overseas gross margin ran ~30.5% per media summaries of the prospectus."
+        "commentary": "The overseas pivot drove margins: H1 2025 overseas gross margin ran ~30.5% per media summaries of the prospectus.",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31"
       },
       {
         "period": "H1 2025 (latest published interim; FY2025 financials never published)",

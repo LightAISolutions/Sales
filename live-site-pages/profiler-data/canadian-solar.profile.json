@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "canadian-solar",
   "name": "Canadian Solar (e-STORAGE)",
   "shortName": "Canadian Solar",
@@ -302,7 +302,10 @@
             "actual": "$5.6B; net loss $(104.1)M",
             "expected": "Q4 revenue $1.2B vs ~$1.37B consensus — an ~11% miss",
             "verdict": "miss",
-            "result": "Storage the bright spot: record 7.8 GWh shipped (3.9 GWh US), storage revenue $1.37B; Q4 hit by storage delays, Recurrent project-sale timing and impairments"
+            "result": "Storage the bright spot: record 7.8 GWh shipped (3.9 GWh US), storage revenue $1.37B; Q4 hit by storage delays, Recurrent project-sale timing and impairments",
+            "kpi": "revenue",
+            "usdMillions": 5600,
+            "fxBasis": "as reported"
           },
           {
             "name": "Storage backlog",
@@ -311,7 +314,9 @@
             "verdict": "beat",
             "result": "Backlog trajectory: $3.2B (Dec 2024) → $3.1B (Oct 2025) → $3.6B (Mar 2026) → $3.5B (May 2026)"
           }
-        ]
+        ],
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q1 2026 (latest interim)",

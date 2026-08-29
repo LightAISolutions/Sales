@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "byd",
   "name": "BYD Company Limited (比亚迪股份有限公司)",
   "shortName": "BYD",
@@ -456,7 +456,10 @@
             "actual": "RMB 803.97B (+3.5%)",
             "expected": "RMB 836.26B (consensus)",
             "verdict": "miss",
-            "result": "Below consensus"
+            "result": "Below consensus",
+            "kpi": "revenue",
+            "usdMillions": 111859.8,
+            "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Net profit (attributable)",
@@ -473,7 +476,9 @@
             "result": "—"
           }
         ],
-        "commentary": "NEV sales 4,602,436 (+7.7%); exports 1.05M (+140%); R&D RMB 63.4B (+17%); proposed final dividend RMB 0.358/share."
+        "commentary": "NEV sales 4,602,436 (+7.7%); exports 1.05M (+140%); R&D RMB 63.4B (+17%); proposed final dividend RMB 0.358/share.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q1 2026 (reported April 2026; H1 2026 due late August)",

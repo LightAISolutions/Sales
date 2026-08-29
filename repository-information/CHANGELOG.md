@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.59r] — 2026-08-29 05:21:35 AM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Fixed
+- `Profiler.html` (v01.49w) — `ovCmpLatestRevenue()` selected the latest annual revenue by array position (`periods[periods.length - 1]`), but period ordering is not a contract: 49 dossiers are authored oldest-first and 22 newest-first. The Compare view was therefore showing the prior year for every newest-first dossier — Amazon rendered FY2024 $638.0B instead of FY2025 $716.9B, and Google, Microsoft, NVIDIA, Jinko, LG Energy Solution, Megmeet, Samsung SDI and Primoris were all affected. Selection is now by `periodEnd` (ISO dates sort lexicographically), with a comment recording why position cannot be trusted
+
+### Added
+- Normalized-KPI (schema v4) backfill extended from the 6 demo dossiers to 42 of 88 across `live-site-pages/profiler-data/`: `schemaVersion` → 4, `periodType`/`periodEnd` on the tagged annual period, and `kpi: "revenue"` + `usdMillions` + `fxBasis` on the revenue metric. 36 dossiers changed this push
+- FX bases recorded per dossier: 21 "as reported" (USD reporters), 13 converted at researched annual-average rates — CNY 7.1873 (2025), TWD 31.171 (2025), KRW 1421.48 (2025), EUR 1.1306 USD/EUR (2025) — and 2 using the dossier's own stated USD equivalent (Jinko $9.37B, Hithium ~$1.8B) in preference to any external rate. Per `PROFILER-SCHEMA.md`, rates were researched rather than recalled; the CNY rate was cross-validated against CATL's own stated USD figure (RMB 72.2B ÷ 7.1873 = $10.05B vs "~US$10B" in the dossier)
+- Deliberate exclusions, left rendering "Not normalized yet" rather than fabricating a comparable bar: Oracle (guidance, not an actual), Switch (quarterly splits with no annual total), Crusoe and Lambda (third-party estimates), OpenAI (press-reported, not company-disclosed)
+
+### Changed
+- Verification: a new 15-check coverage suite confirmed newest-first years resolve correctly, that every non-USD basis is present and correctly named, that the hardware peer-family unlock still holds, and that excluded companies still show an honest gap. An independent audit recomputed 12 conversions with zero mismatches and confirmed no segment figure was mistaken for a company total; three figures that resisted regex parsing were hand-verified. The `vt-kpi` regression suite was repointed off Eaton and Schneider (both now carry overlay data) onto Crusoe and Oracle/Switch as the no-overlay fixtures
 
 ## [v03.58r] — 2026-08-29 04:52:54 AM EST
 

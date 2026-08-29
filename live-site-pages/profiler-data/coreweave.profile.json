@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "coreweave",
   "name": "CoreWeave",
   "legalName": "CoreWeave, Inc.",
@@ -246,7 +246,10 @@
             "actual": "$5.13B (+168%)",
             "expected": "all four quarters beat consensus",
             "verdict": "beat",
-            "result": "Q3 FY-guide cut (developer delay) was the year's one stumble; Q4 revenue $1.57B modest beat"
+            "result": "Q3 FY-guide cut (developer delay) was the year's one stumble; Q4 revenue $1.57B modest beat",
+            "kpi": "revenue",
+            "usdMillions": 5130,
+            "fxBasis": "as reported"
           },
           {
             "name": "Net loss",
@@ -263,7 +266,9 @@
             "result": "850+ MW active / ~3.1 GW contracted at year-end"
           }
         ],
-        "commentary": "'Fastest cloud in history to $5B' — and a stock that fell after four of five prints as the market traded losses, debt, and depreciation rather than growth. Microsoft ~67% of revenue."
+        "commentary": "'Fastest cloud in history to $5B' — and a stock that fell after four of five prints as the market traded losses, debt, and depreciation rather than growth. Microsoft ~67% of revenue.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q1 2026 (latest interim; Q2 reports August 11)",

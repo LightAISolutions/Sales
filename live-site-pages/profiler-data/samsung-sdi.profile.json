@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "samsung-sdi",
   "name": "Samsung SDI Co., Ltd. (삼성SDI)",
   "shortName": "Samsung SDI",
@@ -260,7 +260,10 @@
             "actual": "13.27T (−20%)",
             "expected": "",
             "verdict": "miss",
-            "result": "no full-year consensus retrievable"
+            "result": "no full-year consensus retrievable",
+            "kpi": "revenue",
+            "usdMillions": 9335.3,
+            "fxBasis": "KRW converted at 1421.48 KRW/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Operating loss",
@@ -270,7 +273,9 @@
             "result": "Energy Solutions segment alone lost 1.85T; FY2025 AMPC 275B (vs 90B in FY2024)"
           }
         ],
-        "commentary": "Q4 2025 loss halved QoQ on record ESS revenue — the inflection quarter before the 2026 recovery."
+        "commentary": "Q4 2025 loss halved QoQ on record ESS revenue — the inflection quarter before the 2026 recovery.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "FY2024",

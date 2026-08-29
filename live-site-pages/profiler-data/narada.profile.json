@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "narada",
   "name": "Narada Power (Zhejiang Narada Power Source)",
   "shortName": "Narada",
@@ -266,7 +266,10 @@
             "actual": "RMB 7.471B (−6.4%). Energy storage RMB 3.742B (+70.8%, 50.1% of revenue, GM 27.45%); comms/data-center RMB 1.853B (+7.4%); recycling ~RMB 1.875B (−53.9%, negative margin)",
             "expected": "n/a",
             "verdict": "n/a",
-            "result": "Storage-type businesses ≈75% of revenue — the pivot succeeded operationally while the company failed financially"
+            "result": "Storage-type businesses ≈75% of revenue — the pivot succeeded operationally while the company failed financially",
+            "kpi": "revenue",
+            "usdMillions": 1039.5,
+            "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Profit",
@@ -275,7 +278,9 @@
             "verdict": "miss",
             "result": "Catastrophic miss; going-concern qualification, adverse internal-controls opinion, ST label"
           }
-        ]
+        ],
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "FY2024 / Q1 2026",

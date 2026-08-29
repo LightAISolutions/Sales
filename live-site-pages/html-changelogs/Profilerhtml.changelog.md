@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.49w] — 2026-08-29 05:21:35 AM EST — v03.59r
+
+### Fixed
+- The revenue figure shown in a comparison now always reflects each company's most recent reported year. Some dossiers list their financial years newest-first and others oldest-first, and the comparison had been reading whichever year happened to be listed last — which meant a handful of companies were being compared on the prior year's revenue
+
+### Changed
+- Many more companies now show a directly comparable revenue figure. Where a company reports in a currency other than the US dollar, the figure is converted at the average rate for that reporting year and labelled with the currency it came from, so the basis of every comparison is visible
+- Companies whose only available revenue figures are outside estimates, forward guidance, or partial-year splits continue to show no comparable figure rather than an approximation
 
 ## [v01.48w] — 2026-08-29 04:52:54 AM EST — v03.58r
 

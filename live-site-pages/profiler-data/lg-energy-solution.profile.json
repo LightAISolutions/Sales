@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "lg-energy-solution",
   "name": "LG Energy Solution, Ltd. (LG에너지솔루션)",
   "shortName": "LG Energy Solution",
@@ -250,7 +250,10 @@
             "actual": "23.67T (−7.6%)",
             "expected": "Own guidance: +5–10%",
             "verdict": "miss",
-            "result": "missed its own growth guidance"
+            "result": "missed its own growth guidance",
+            "kpi": "revenue",
+            "usdMillions": 16651.7,
+            "fxBasis": "KRW converted at 1421.48 KRW/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Operating profit",
@@ -267,7 +270,9 @@
             "result": "2026 target: >90 GWh new ESS orders"
           }
         ],
-        "commentary": "~KRW 13.5T of EV contracts cancelled during the period (Ford ~9.6T, Freudenberg 3.9T). Restated FY2025 under the 2026 accounting change (NA incentives into revenue): revenue 25.3T, OP 1.35T, incentives 1.65T."
+        "commentary": "~KRW 13.5T of EV contracts cancelled during the period (Ford ~9.6T, Freudenberg 3.9T). Restated FY2025 under the 2026 accounting change (NA incentives into revenue): revenue 25.3T, OP 1.35T, incentives 1.65T.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "FY2024",

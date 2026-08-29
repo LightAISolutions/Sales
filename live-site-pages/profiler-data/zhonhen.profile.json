@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "zhonhen",
   "name": "Hangzhou Zhonhen Electric Co., Ltd.",
   "shortName": "Zhonhen Electric",
@@ -409,7 +409,10 @@
             "actual": "2.137B",
             "expected": "~2.0–2.2B (institutional forecasts)",
             "verdict": "inline",
-            "result": "+8.9% YoY"
+            "result": "+8.9% YoY",
+            "kpi": "revenue",
+            "usdMillions": 297.3,
+            "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Net profit (attributable)",
@@ -426,7 +429,9 @@
             "result": "+16.1%; 36.3% of revenue; 2025 HVDC orders ~RMB 776M"
           }
         ],
-        "commentary": "Gross margin pressure (9M 2025 −2.84pp) and receivables growth (RMB 1.01B at Q3, ~9x profit) accompanied the growth; operating cash flow fell 48% to RMB 243M. Exports RMB 87.6M (+178%) — 4.1% of revenue."
+        "commentary": "Gross margin pressure (9M 2025 −2.84pp) and receivables growth (RMB 1.01B at Q3, ~9x profit) accompanied the growth; operating cash flow fell 48% to RMB 243M. Exports RMB 87.6M (+178%) — 4.1% of revenue.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q1 2026 (latest interim; H1 2026 not published as of 2026-08-18)",

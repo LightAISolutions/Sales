@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "core-scientific",
   "name": "Core Scientific",
   "legalName": "Core Scientific, Inc.",
@@ -305,7 +305,10 @@
             "actual": "$319.0M (self-mining $229.2M / colocation $65.4M / hosted $24.4M)",
             "expected": "revenue missed consensus all four quarters (Zacks: Q3 -24.3%, Q4 -11.8%)",
             "verdict": "miss",
-            "result": "Mining shrank faster than colocation billed — the classic pivot air pocket"
+            "result": "Mining shrank faster than colocation billed — the classic pivot air pocket",
+            "kpi": "revenue",
+            "usdMillions": 319,
+            "fxBasis": "as reported"
           },
           {
             "name": "Net loss / Adj. EBITDA",
@@ -322,7 +325,9 @@
             "result": "Balance sheet at YE: cash $311M + BTC $222M; stockholders' deficit -$962.7M"
           }
         ],
-        "commentary": "Expectations honesty: no formal revenue/EPS guidance is issued — management guides on MW milestones and capex; consensus sources (Zacks/MarketBeat) named per quarter, and their adjusted-EPS conventions genuinely diverge on warrant-heavy quarters."
+        "commentary": "Expectations honesty: no formal revenue/EPS guidance is issued — management guides on MW milestones and capex; consensus sources (Zacks/MarketBeat) named per quarter, and their adjusted-EPS conventions genuinely diverge on warrant-heavy quarters.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "H1 2026 (latest: Q2 reported Jul 28, 2026)",

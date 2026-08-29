@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "bloom-energy",
   "name": "Bloom Energy",
   "legalName": "Bloom Energy Corporation",
@@ -289,7 +289,10 @@
             "actual": "$2.02B (+37.3%)",
             "expected": "Q4: $645M consensus",
             "verdict": "beat",
-            "result": "Q4 revenue $778M beat by ~21%; Q4 non-GAAP EPS $0.45 vs $0.30 (+50%)"
+            "result": "Q4 revenue $778M beat by ~21%; Q4 non-GAAP EPS $0.45 vs $0.30 (+50%)",
+            "kpi": "revenue",
+            "usdMillions": 2020,
+            "fxBasis": "as reported"
           },
           {
             "name": "Backlog",
@@ -299,7 +302,9 @@
             "result": "Backlog spans 'half a dozen hyperscale and neo-cloud end customers' vs one a year earlier"
           }
         ],
-        "commentary": "Still a GAAP loss year (-$88.4M) despite non-GAAP EPS $0.76 — and shares outstanding jumped ~17% within the year (240M weighted-average vs 280M year-end), the dilution cost of the $2.2B convertible raise that built the $2.45B cash position."
+        "commentary": "Still a GAAP loss year (-$88.4M) despite non-GAAP EPS $0.76 — and shares outstanding jumped ~17% within the year (240M weighted-average vs 280M year-end), the dilution cost of the $2.2B convertible raise that built the $2.45B cash position.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q2 2026 (latest interim)",

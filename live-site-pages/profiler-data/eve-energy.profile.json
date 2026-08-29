@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "eve-energy",
   "name": "EVE Energy",
   "legalName": "EVE Energy Co., Ltd. (亿纬锂能)",
@@ -283,7 +283,10 @@
             "actual": "¥61.47B (+26.44%)",
             "expected": "n/a",
             "verdict": "beat",
-            "result": "ESS shipments 71.05 GWh (+40.84%); power 50.15 GWh (+65.56%)"
+            "result": "ESS shipments 71.05 GWh (+40.84%); power 50.15 GWh (+65.56%)",
+            "kpi": "revenue",
+            "usdMillions": 8552.6,
+            "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Net profit (attributable)",
@@ -300,7 +303,9 @@
             "result": "Cash generation recovered ahead of profit"
           }
         ],
-        "commentary": "A back-loaded recovery year: H1 profit collapse, strong H2 as InfoLink's documented glut-to-tightness flip (Q2→Q3 2025) restored pricing power. A new 60 GWh power battery project was announced with the results."
+        "commentary": "A back-loaded recovery year: H1 profit collapse, strong H2 as InfoLink's documented glut-to-tightness flip (Q2→Q3 2025) restored pricing power. A new 60 GWh power battery project was announced with the results.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q1 2026 + H1 2026 guidance",

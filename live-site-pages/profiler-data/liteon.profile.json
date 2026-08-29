@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "liteon",
   "name": "LITEON",
   "legalName": "LITEON Technology Corporation",
@@ -266,7 +266,10 @@
             "actual": "NT$166.1B (+21%)",
             "expected": "NT$153.2B (March 2025 consensus)",
             "verdict": "beat",
-            "result": "~8.4% beat, H2-loaded as AI power ramped; gross margin 22.9% (+1.3pp)"
+            "result": "~8.4% beat, H2-loaded as AI power ramped; gross margin 22.9% (+1.3pp)",
+            "kpi": "revenue",
+            "usdMillions": 5328.7,
+            "fxBasis": "NT$ converted at 31.171 TWD/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "EPS",
@@ -276,7 +279,9 @@
             "result": "-0.6%, essentially in line; net profit NT$15.1B (+27%)"
           }
         ],
-        "commentary": "The inflection: cloud & AIoT grew past 50% of the mix and AI revenue passed 20% of sales."
+        "commentary": "The inflection: cloud & AIoT grew past 50% of the mix and AI revenue passed 20% of sales.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q2 2026 (latest interim)",

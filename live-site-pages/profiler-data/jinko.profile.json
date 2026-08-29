@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "jinko",
   "name": "JinkoSolar Holding Co., Ltd. (晶科能源) — incl. Jinko Solar Co. (SSE STAR: 688223) and Jinko ESS",
   "shortName": "Jinko",
@@ -256,7 +256,10 @@
             "actual": "RMB 65.50B / $9.37B (−29.0%)",
             "expected": "Consensus",
             "verdict": "beat",
-            "result": "revenue beat ~1.1% (Simply Wall St)"
+            "result": "revenue beat ~1.1% (Simply Wall St)",
+            "kpi": "revenue",
+            "usdMillions": 9370,
+            "fxBasis": "as stated in this dossier's own reporting (RMB 65.50B / $9.37B)"
           },
           {
             "name": "Net loss",
@@ -273,7 +276,9 @@
             "result": "ESS slightly under early guidance; still the growth line"
           }
         ],
-        "commentary": "Management attribution: silver costs +250–300%, polysilicon cost rises, RMB appreciation. A-share entity reported −RMB 6.88B."
+        "commentary": "Management attribution: silver costs +250–300%, polysilicon cost rises, RMB appreciation. A-share entity reported −RMB 6.88B.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "FY2024",

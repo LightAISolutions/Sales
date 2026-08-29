@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "amazon",
   "name": "Amazon.com, Inc.",
   "shortName": "Amazon",
@@ -289,7 +289,10 @@
             "actual": "$716.9B (+12%)",
             "expected": "Q4: $213.4B vs ~$211.5B",
             "verdict": "beat",
-            "result": "Q4 EPS $1.95 slightly missed"
+            "result": "Q4 EPS $1.95 slightly missed",
+            "kpi": "revenue",
+            "usdMillions": 716900,
+            "fxBasis": "as reported"
           },
           {
             "name": "AWS",
@@ -306,7 +309,9 @@
             "result": "stock −8–11% on the guide"
           }
         ],
-        "commentary": "Net income $77.7B. TTM FCF collapsed from $38.2B (2024) to $11.2B (2025) to $1.2B (Q1 2026)."
+        "commentary": "Net income $77.7B. TTM FCF collapsed from $38.2B (2024) to $11.2B (2025) to $1.2B (Q1 2026).",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "FY2024",

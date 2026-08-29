@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "microsoft",
   "name": "Microsoft Corporation",
   "shortName": "Microsoft",
@@ -237,7 +237,10 @@
             "actual": "$331.8B (+18%)",
             "expected": "Q4: $90.0B vs $87.6B consensus",
             "verdict": "beat",
-            "result": "operating income $155.2B (+21%)"
+            "result": "operating income $155.2B (+21%)",
+            "kpi": "revenue",
+            "usdMillions": 331800,
+            "fxBasis": "as reported"
           },
           {
             "name": "Net income",
@@ -261,7 +264,9 @@
             "result": "restated to ~$175B via accounting change"
           }
         ],
-        "commentary": "Q1 FY2027 guide: Azure +45% cc, revenue $89.85–90.95B. Standardize on capex including finance leases — third-party trackers diverge on definitions."
+        "commentary": "Q1 FY2027 guide: Azure +45% cc, revenue $89.85–90.95B. Standardize on capex including finance leases — third-party trackers diverge on definitions.",
+        "periodType": "annual",
+        "periodEnd": "2026-06-30"
       },
       {
         "period": "FY2025 (Jul 2024–Jun 2025)",

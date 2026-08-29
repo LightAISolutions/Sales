@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "turner-construction",
   "name": "Turner Construction",
   "legalName": "Turner Construction Company (wholly-owned subsidiary of Hochtief AG; Hochtief is ~79-80% controlled by Grupo ACS)",
@@ -309,7 +309,10 @@
             "actual": "$29.2B company-reported (+40%); $28.3B on the ENR 2026 list",
             "expected": "",
             "verdict": "beat",
-            "result": "Data-center revenue ~tripled toward ~$9B; DC new orders €18.1B (Hochtief)"
+            "result": "Data-center revenue ~tripled toward ~$9B; DC new orders €18.1B (Hochtief)",
+            "kpi": "revenue",
+            "usdMillions": 29200,
+            "fxBasis": "as reported (company-reported figure; the ENR 2026 list shows $28.3B)"
           },
           {
             "name": "Operational PBT (Hochtief basis)",
@@ -326,7 +329,9 @@
             "result": "Analysts probed capacity limits on the results call; management denied a ceiling"
           }
         ],
-        "commentary": "Expectations honesty: Turner files no standalone statements and no consensus exists at the subsidiary level — all figures are Hochtief/ACS disclosures, ENR self-reported revenue, or trade-press reporting, as cited."
+        "commentary": "Expectations honesty: Turner files no standalone statements and no consensus exists at the subsidiary level — all figures are Hochtief/ACS disclosures, ENR self-reported revenue, or trade-press reporting, as cited.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "H1 2026 (Hochtief reporting, Jul 27, 2026)",

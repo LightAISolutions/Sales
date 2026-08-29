@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "primoris",
   "name": "Primoris",
   "legalName": "Primoris Services Corporation",
@@ -332,7 +332,10 @@
             "actual": "$7.6B (+19%)",
             "expected": "Beat consensus every quarter",
             "verdict": "beat",
-            "result": "Q2 $1.89B vs $1.69B; Q3 $2.17B vs $1.83B; Q4 $1.90B vs $1.81B"
+            "result": "Q2 $1.89B vs $1.69B; Q3 $2.17B vs $1.83B; Q4 $1.90B vs $1.81B",
+            "kpi": "revenue",
+            "usdMillions": 7600,
+            "fxBasis": "as reported"
           },
           {
             "name": "Adjusted EPS",
@@ -349,7 +352,9 @@
             "result": "Backlog $11.9B at year-end"
           }
         ],
-        "commentary": "The peak year — later recast by plaintiffs as the run-up: the class period opens with the Q2 2025 release (2025-08-05). GAAP diluted EPS $5.02."
+        "commentary": "The peak year — later recast by plaintiffs as the run-up: the class period opens with the Q2 2025 release (2025-08-05). GAAP diluted EPS $5.02.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "FY2024",

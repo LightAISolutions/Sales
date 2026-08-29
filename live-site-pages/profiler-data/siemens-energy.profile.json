@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "siemens-energy",
   "name": "Siemens Energy",
   "legalName": "Siemens Energy AG (rebranding to 'Omterra' — announced July 14, 2026, phase-in from late 2026)",
@@ -292,7 +292,10 @@
             "actual": "€39,077M (+15.2% comp.)",
             "expected": "~$10.64B Q4 ADR consensus (beaten)",
             "verdict": "beat",
-            "result": "Record; first quarter above €10B in Q4"
+            "result": "Record; first quarter above €10B in Q4",
+            "kpi": "revenue",
+            "usdMillions": 44180.5,
+            "fxBasis": "EUR converted at 1.1306 USD/EUR (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Net income",
@@ -302,7 +305,9 @@
             "result": "Stock +10% on results day; first dividend in four years (€0.70)"
           }
         ],
-        "commentary": "The beat-and-raise that reset the story: FY28 margin target lifted to 14-16%, €6B buyback announced at CMD, 194 turbines sold (vs 100 in FY24). Citigroup: targets 'exceeded already high expectations.'"
+        "commentary": "The beat-and-raise that reset the story: FY28 margin target lifted to 14-16%, €6B buyback announced at CMD, 194 turbines sold (vs 100 in FY24). Citigroup: targets 'exceeded already high expectations.'",
+        "periodType": "annual",
+        "periodEnd": "2025-09-30"
       },
       {
         "period": "Q3 FY2026 (Apr-Jun 2026, reported 2026-08-05)",

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "ge-vernova",
   "name": "GE Vernova",
   "legalName": "GE Vernova Inc.",
@@ -309,7 +309,10 @@
             "actual": "$38.1B (+9%)",
             "expected": "$36-37B original guide / ~$36.8B consensus",
             "verdict": "beat",
-            "result": "Q4 revenue ~$11.0B beat consensus ~7%; GAAP EPS swollen by one-time items (tax valuation allowance ~$2.9B)"
+            "result": "Q4 revenue ~$11.0B beat consensus ~7%; GAAP EPS swollen by one-time items (tax valuation allowance ~$2.9B)",
+            "kpi": "revenue",
+            "usdMillions": 38100,
+            "fxBasis": "as reported"
           },
           {
             "name": "Free cash flow",
@@ -319,7 +322,9 @@
             "result": "Orders $59.3B (+34% organic); backlog $150B; dividend doubled, buyback authorization to $10B; S&P upgrade to BBB"
           }
         ],
-        "commentary": "The breakout year on orders and cash — but wind lost ~$600M against ~$400M guided, and headline GAAP EPS 'beats' (Q4: $13.39) were one-time-item artifacts; the adjusted picture was modest."
+        "commentary": "The breakout year on orders and cash — but wind lost ~$600M against ~$400M guided, and headline GAAP EPS 'beats' (Q4: $13.39) were one-time-item artifacts; the adjusted picture was modest.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q2 2026 (latest interim)",

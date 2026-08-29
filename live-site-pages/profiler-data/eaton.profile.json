@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "eaton",
   "name": "Eaton",
   "legalName": "Eaton Corporation plc",
@@ -339,7 +339,10 @@
             "actual": "$27.4B (+10%)",
             "expected": "Q3 $7.07B / Q4 $7.1B (consensus)",
             "verdict": "miss",
-            "result": "Q3 and Q4 revenue both came in slightly under consensus; Q4 adjusted EPS $3.33 exactly matched"
+            "result": "Q3 and Q4 revenue both came in slightly under consensus; Q4 adjusted EPS $3.33 exactly matched",
+            "kpi": "revenue",
+            "usdMillions": 27400,
+            "fxBasis": "as reported"
           },
           {
             "name": "Adjusted EPS",
@@ -349,7 +352,9 @@
             "result": "Beats of 0.3-2.3% per quarter; electrical backlog ended +29% at $19.6B"
           }
         ],
-        "commentary": "Tariffs drove a Q3 guidance miss (shares fell >7%); data-center orders grew 200% in Q4. Growth was real but the stock repeatedly sold off on good prints — priced for perfection."
+        "commentary": "Tariffs drove a Q3 guidance miss (shares fell >7%); data-center orders grew 200% in Q4. Growth was real but the stock repeatedly sold off on good prints — priced for perfection.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q2 2026 (latest interim)",

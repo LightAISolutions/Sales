@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "applied-digital",
   "name": "Applied Digital",
   "legalName": "Applied Digital Corporation (formerly Applied Blockchain, Inc.)",
@@ -344,7 +344,10 @@
             "actual": "$611.3M (+167%): services $496.6M + rental $114.7M",
             "expected": "Zacks FY consensus stood at just $280.9M as late as April 2026",
             "verdict": "beat",
-            "result": "Every quarter beat hugely — Q1 +~27% vs consensus, Q2 +46%, Q3 +68%, Q4 +148% (vs Zacks) — because models never caught the tenant fit-out revenue ($152.4M in Q4 alone)"
+            "result": "Every quarter beat hugely — Q1 +~27% vs consensus, Q2 +46%, Q3 +68%, Q4 +148% (vs Zacks) — because models never caught the tenant fit-out revenue ($152.4M in Q4 alone)",
+            "kpi": "revenue",
+            "usdMillions": 611.3,
+            "fxBasis": "as reported"
           },
           {
             "name": "Profitability",
@@ -368,7 +371,9 @@
             "result": "810 MW / ~$20.2B signed with one unnamed hyperscaler in FY2026 alone; CoreWeave ~$11B; actively marketing 1.7 GW more"
           }
         ],
-        "commentary": "The market's verdict all year: believe the leases, fear the leverage. Street: 15 Buy / 2 Hold, average target ~$68–73 vs ~$30 — with Zacks a lone Strong Sell on 12x forward P/S."
+        "commentary": "The market's verdict all year: believe the leases, fear the leverage. Street: 15 Buy / 2 Hold, average target ~$68–73 vs ~$30 — with Zacks a lone Strong Sell on 12x forward P/S.",
+        "periodType": "annual",
+        "periodEnd": "2026-05-31"
       },
       {
         "period": "Capital structure (as of mid-2026)",

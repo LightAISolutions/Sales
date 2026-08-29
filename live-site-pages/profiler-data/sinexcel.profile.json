@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "sinexcel",
   "name": "Shenzhen Sinexcel Electric Co., Ltd. (深圳市盛弘电气股份有限公司)",
   "shortName": "Sinexcel",
@@ -788,7 +788,10 @@
             "actual": "RMB 3.463B (+14.1% YoY)",
             "expected": "",
             "verdict": "inline",
-            "result": "No public revenue consensus found"
+            "result": "No public revenue consensus found",
+            "kpi": "revenue",
+            "usdMillions": 481.8,
+            "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Net profit (attributable)",
@@ -805,7 +808,9 @@
             "result": "—"
           }
         ],
-        "commentary": "Segments: EV charging RMB 1.496B (+23.0%, now 43.2% of revenue), energy storage RMB 825M (-3.7% — H1 down 39% on the domestic price war, sharp H2 recovery), power quality RMB 710M (+17.8%), battery test RMB 343M (+16.0%). Overseas storage revenue RMB 645M (+50.1%) at 61.3% gross margin. Q4 2025 accelerated: revenue +32.5%, profit +25.9%. Sector narrative: \"storage stalled; AIDC/data-center power the swing factor.\" Dividend: RMB 5.00 per 10 shares (RMB 156M, paid May 2026)."
+        "commentary": "Segments: EV charging RMB 1.496B (+23.0%, now 43.2% of revenue), energy storage RMB 825M (-3.7% — H1 down 39% on the domestic price war, sharp H2 recovery), power quality RMB 710M (+17.8%), battery test RMB 343M (+16.0%). Overseas storage revenue RMB 645M (+50.1%) at 61.3% gross margin. Q4 2025 accelerated: revenue +32.5%, profit +25.9%. Sector narrative: \"storage stalled; AIDC/data-center power the swing factor.\" Dividend: RMB 5.00 per 10 shares (RMB 156M, paid May 2026).",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q1 2026 (latest interim; H1 2026 report not yet published as of Aug 2026)",

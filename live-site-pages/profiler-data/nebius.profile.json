@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "nebius",
   "name": "Nebius",
   "legalName": "Nebius Group N.V.",
@@ -351,7 +351,10 @@
             "actual": "$529.8M (+479%)",
             "expected": "Q3: $155.7M consensus vs $146.1M (miss ~6%); Q4: $247.5M consensus vs $227.7M (miss ~8%) — Investing.com-compiled",
             "verdict": "miss",
-            "result": "Both H2 quarters missed on deployment timing even as demand stayed sold out; Q1'25 also missed revenue ($55.3M vs $57.7M) while beating EPS"
+            "result": "Both H2 quarters missed on deployment timing even as demand stayed sold out; Q1'25 also missed revenue ($55.3M vs $57.7M) while beating EPS",
+            "kpi": "revenue",
+            "usdMillions": 529.8,
+            "fxBasis": "as reported"
           },
           {
             "name": "Adj. EBITDA",
@@ -375,7 +378,9 @@
             "result": "2025 capex guidance had been raised from ~$2B to ~$5B at Q3 — the print that sent shares down ~20% into December"
           }
         ],
-        "commentary": "The pattern of 2025: revenue misses from buildout timing, punished briefly, then forgiven as the backlog compounded (Microsoft Sep, Meta Nov)."
+        "commentary": "The pattern of 2025: revenue misses from buildout timing, punished briefly, then forgiven as the backlog compounded (Microsoft Sep, Meta Nov).",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "H1 2026 (latest: Q2 reported Aug 12, 2026)",

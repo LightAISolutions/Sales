@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "google",
   "name": "Alphabet Inc. (Google LLC)",
   "shortName": "Google",
@@ -282,7 +282,10 @@
             "actual": "$402.8B (+15%) — first $400B year",
             "expected": "Q4: beat",
             "verdict": "beat",
-            "result": "Q4 EPS $2.82; Cloud Q4 $17.7B (+48%)"
+            "result": "Q4 EPS $2.82; Cloud Q4 $17.7B (+48%)",
+            "kpi": "revenue",
+            "usdMillions": 402800,
+            "fxBasis": "as reported"
           },
           {
             "name": "Net income",
@@ -299,7 +302,9 @@
             "result": "stock −3% AH on the guide"
           }
         ],
-        "commentary": "FY2024 for reference: revenue $350.0B, EPS $8.04, capex $52.5B; the Feb 2025 '$75B' guide was the cycle's first Alphabet capex shock."
+        "commentary": "FY2024 for reference: revenue $350.0B, EPS $8.04, capex $52.5B; the Feb 2025 '$75B' guide was the cycle's first Alphabet capex shock.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       }
     ],
     "commentary": "Antitrust: search remedies (Sept 2025) bar exclusive distribution and mandate data-sharing; no Chrome divestiture; DOJ/38-state cross-appeal argued late 2026/early 2027. EU cumulative fines >€8B incl. €2.95B adtech (Sept 2025). Sustainability: 66% hourly CFE; total footprint +18% in 2025, +81% vs 2019."

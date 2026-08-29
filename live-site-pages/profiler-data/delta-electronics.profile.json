@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "delta-electronics",
   "name": "Delta Electronics",
   "legalName": "Delta Electronics, Inc.",
@@ -293,7 +293,10 @@
             "actual": "NT$554.9B (+32%, record)",
             "expected": "Q3 beat ~3.6%; Q4 beat ~2-3%",
             "verdict": "beat",
-            "result": "Net income NT$60.1B (+71%); EPS NT$23.14 (~3% under mid-year consensus marker)"
+            "result": "Net income NT$60.1B (+71%); EPS NT$23.14 (~3% under mid-year consensus marker)",
+            "kpi": "revenue",
+            "usdMillions": 17801.8,
+            "fxBasis": "NT$ converted at 31.171 TWD/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Q4 gross margin",
@@ -303,7 +306,9 @@
             "result": "EPS miss on a one-off asset write-off; net profit still +141% YoY"
           }
         ],
-        "commentary": "Infrastructure (+82% revenue, +413% profit) and Power Electronics drove the record; Mobility lost money. AI ~20-30% of revenue by year-end per brokerage estimates."
+        "commentary": "Infrastructure (+82% revenue, +413% profit) and Power Electronics drove the record; Mobility lost money. AI ~20-30% of revenue by year-end per brokerage estimates.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q2 2026 (latest interim)",

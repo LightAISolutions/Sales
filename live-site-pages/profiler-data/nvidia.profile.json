@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "nvidia",
   "name": "NVIDIA Corporation",
   "shortName": "NVIDIA",
@@ -257,7 +257,10 @@
             "actual": "$215.9B (+65%)",
             "expected": "Q4: $68.1B vs $65.9B consensus",
             "verdict": "beat",
-            "result": "first $200B+ year"
+            "result": "first $200B+ year",
+            "kpi": "revenue",
+            "usdMillions": 215900,
+            "fxBasis": "as reported"
           },
           {
             "name": "Data center revenue",
@@ -274,7 +277,9 @@
             "result": "supply commitments $50.3B → $95.2B QoQ"
           }
         ],
-        "commentary": "Guidance assumes zero China data-center compute revenue. The one blemish of the year: Q2 FY2026 data-center revenue ($41.1B) slightly missed the $41.3B consensus — the cycle's first such miss."
+        "commentary": "Guidance assumes zero China data-center compute revenue. The one blemish of the year: Q2 FY2026 data-center revenue ($41.1B) slightly missed the $41.3B consensus — the cycle's first such miss.",
+        "periodType": "annual",
+        "periodEnd": "2026-01-25"
       },
       {
         "period": "FY2025 (ended 2025-01-26)",

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "sunwoda",
   "name": "Sunwoda (Sunwoda Electronic / Sunwoda Energy)",
   "shortName": "Sunwoda",
@@ -258,7 +258,10 @@
             "actual": "RMB 63.246B (+12.9%); consumer RMB 31.41B (GM 19.4%), EV battery incl. storage cells RMB 18.91B (+24.9%, GM only 4.86%), energy storage systems RMB 2.31B (+22.4%, GM 23.3%); overseas 38.6%",
             "expected": "n/a",
             "verdict": "n/a",
-            "result": "Storage-system integration is just 3.7% of revenue — the true storage exposure hides inside the EV-battery segment's cell sales"
+            "result": "Storage-system integration is just 3.7% of revenue — the true storage exposure hides inside the EV-battery segment's cell sales",
+            "kpi": "revenue",
+            "usdMillions": 8799.7,
+            "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Profit",
@@ -274,7 +277,9 @@
             "verdict": "beat",
             "result": "Among the fastest growth rates in the global top ten"
           }
-        ]
+        ],
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q1 2026 (reported Apr 23, 2026)",

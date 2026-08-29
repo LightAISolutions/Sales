@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "quanta-services",
   "name": "Quanta Services",
   "legalName": "Quanta Services, Inc.",
@@ -265,7 +265,10 @@
             "actual": "$28.48B (+20%)",
             "expected": "Q4: $7.8B vs $7.37B (+6.4% beat)",
             "verdict": "beat",
-            "result": "Electric segment $23.0B (10.3% op margin)"
+            "result": "Electric segment $23.0B (10.3% op margin)",
+            "kpi": "revenue",
+            "usdMillions": 28480,
+            "fxBasis": "as reported"
           },
           {
             "name": "Adjusted EPS",
@@ -282,7 +285,9 @@
             "result": "Record adjusted EBITDA $2.88B and FCF $1.67B"
           }
         ],
-        "commentary": "Eight acquisitions in the year (+~11,100 employees) incl. Dynamic Systems, Tri-City, Wilson. Zacks: consensus beaten on both lines in all four trailing quarters through Q2 2026."
+        "commentary": "Eight acquisitions in the year (+~11,100 employees) incl. Dynamic Systems, Tri-City, Wilson. Zacks: consensus beaten on both lines in all four trailing quarters through Q2 2026.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q2 2026 (reported 2026-07-30)",

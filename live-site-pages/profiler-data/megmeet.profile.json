@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "megmeet",
   "name": "Shenzhen Megmeet Electrical Co., Ltd. (深圳麦格米特电气股份有限公司)",
   "shortName": "Megmeet",
@@ -395,7 +395,10 @@
             "actual": "¥9.403B (+15.1%)",
             "expected": "",
             "verdict": "inline",
-            "result": "no pre-result consensus retrieved"
+            "result": "no pre-result consensus retrieved",
+            "kpi": "revenue",
+            "usdMillions": 1308.3,
+            "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Net profit (attributable)",
@@ -426,7 +429,9 @@
             "result": "price wars + low-margin EV mix"
           }
         ],
-        "commentary": "The Jan 2026 profit warning (−66% to −72%) landed far below the ~¥172M Q4 consensus (per CLS) — the actual Q4 was a ¥67M loss. Causes per company: AI-power R&D spend, overseas/Hangzhou base build-outs, industry price competition, and large FX losses. Segment mix: appliances ¥3.56B (−5%), power ¥2.68B (+14%), EV/rail ¥1.14B (+109%), industrial automation ¥877M (+40%), intelligent equipment ¥605M (+31%), precision connection ¥449M (+18%)."
+        "commentary": "The Jan 2026 profit warning (−66% to −72%) landed far below the ~¥172M Q4 consensus (per CLS) — the actual Q4 was a ¥67M loss. Causes per company: AI-power R&D spend, overseas/Hangzhou base build-outs, industry price competition, and large FX losses. Segment mix: appliances ¥3.56B (−5%), power ¥2.68B (+14%), EV/rail ¥1.14B (+109%), industrial automation ¥877M (+40%), intelligent equipment ¥605M (+31%), precision connection ¥449M (+18%).",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "FY2024",

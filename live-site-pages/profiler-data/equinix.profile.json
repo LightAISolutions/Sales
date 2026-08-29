@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "equinix",
   "name": "Equinix",
   "legalName": "Equinix, Inc.",
@@ -243,7 +243,10 @@
             "actual": "$9.217B (+5.4%)",
             "expected": "$9.26B (consensus)",
             "verdict": "miss",
-            "result": "Q4 revenue and AFFO both light; full-year AFFO/share $38.33 vs $38.48 consensus"
+            "result": "Q4 revenue and AFFO both light; full-year AFFO/share $38.33 vs $38.48 consensus",
+            "kpi": "revenue",
+            "usdMillions": 9217,
+            "fxBasis": "as reported"
           },
           {
             "name": "Bookings",
@@ -253,7 +256,9 @@
             "result": "~60% of largest Q4 deals AI-driven; 500,000+ interconnections; initial 2026 AFFO guide (+9-11.5%) landed above consensus"
           }
         ],
-        "commentary": "Miss on the print, inflection under the surface: record bookings and an above-consensus 2026 guide marked the turn. Capex stepped to $4.3B."
+        "commentary": "Miss on the print, inflection under the surface: record bookings and an above-consensus 2026 guide marked the turn. Capex stepped to $4.3B.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q2 2026 (latest interim)",

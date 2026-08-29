@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "hitachi-energy",
   "name": "Hitachi Energy",
   "legalName": "Hitachi Energy Ltd (wholly-owned subsidiary of Hitachi, Ltd., TYO: 6501; formed from ABB Power Grids acquisition)",
@@ -253,7 +253,10 @@
             "actual": "$19.8B (+26% nominal)",
             "expected": "n/a (subsidiary; no standalone consensus)",
             "verdict": "inline",
-            "result": "20% revenue CAGR FY21-25; strongest growth in Europe and North America"
+            "result": "20% revenue CAGR FY21-25; strongest growth in Europe and North America",
+            "kpi": "revenue",
+            "usdMillions": 19800,
+            "fxBasis": "as reported"
           },
           {
             "name": "Orders",
@@ -270,7 +273,9 @@
             "result": "Energy segment adj. EBITA ¥416.0B (+¥164.0B YoY); backlog margin improving"
           }
         ],
-        "commentary": "Parent-level FY2025 was a record year (revenue ¥10,586.7B) with Energy the primary driver — though the Q4 call showed an EPS miss on a revenue beat at group level. Hitachi Energy capex FY23-25: $2.6B; market outlook 13-15% CAGR (FY24-FY30)."
+        "commentary": "Parent-level FY2025 was a record year (revenue ¥10,586.7B) with Energy the primary driver — though the Q4 call showed an EPS miss on a revenue beat at group level. Hitachi Energy capex FY23-25: $2.6B; market outlook 13-15% CAGR (FY24-FY30).",
+        "periodType": "annual",
+        "periodEnd": "2026-03-31"
       },
       {
         "period": "Q1 FY2026 (Apr-Jun 2026, Energy segment)",
