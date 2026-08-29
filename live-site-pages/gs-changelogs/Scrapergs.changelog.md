@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.71g] — 2026-08-28 08:02:19 PM EST — v03.38r
+
+### Fixed
+- **Stories about the UK are now recognised as foreign.** The country list knew "United Kingdom" and "Britain" but not the abbreviation headlines actually use, so a UK datacenter story was treated as having no country at all and kept its full score. The EU and a few other common abbreviations were missing the same way
+- **The lead story must now clear the relevance bar.** Sections already required it, but the lead was chosen from the highest-scoring items regardless — so on a day with few qualifying stories, the most prominent item in the edition could be one that never qualified
+- **Corroboration can no longer push a weak story over the bar.** Being covered by several outlets adds to an article's score, but that was being added on top of a score whose supporting signals had already been capped. It is now bounded by the same limit, and reduced for foreign stories like every other part of the score
+
+### Changed
+- **Each edition now summarises from its own point of view.** Every summary used to close from a BESS seller's perspective because that viewpoint was fixed in one place. The AIDC edition now identifies which part of the data-center power chain a story touches — generation, interconnection, transformers, cooling and water, siting, tariffs — and closes on what it means for people working in that part. The BESS edition is unchanged in intent
+- Closing lines are deliberately not templated. Each edition specifies what its closing thought must accomplish, not how to word it, and the summariser is asked to vary its phrasing rather than end every item the same way
+- The rubric tester now scores against the edition selected in the Digest panel, and states the bar it judged against and whether the article cleared it. It was scoring against a general profile no edition actually uses, so it could disagree with the digest it was being used to explain
 
 ## [v01.70g] — 2026-08-28 07:42:36 PM EST — v03.37r
 

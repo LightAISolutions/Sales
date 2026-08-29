@@ -1,4 +1,4 @@
-var VERSION = "v01.70g";
+var VERSION = "v01.71g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -771,11 +771,17 @@ var SCRAPER_GEO_OTHER = {
   // 'nem' is deliberately absent: in US solar coverage it means net energy
   // metering, so it would have mislabelled US stories as Australian. 'victoria'
   // likewise — too common a bare word to spend a 0.25 penalty on.
-  australia:   ['australia', 'australian', 'aemo', 'new south wales',
+  australia:   ['australia', 'australian', 'aussie', 'aemo', 'new south wales',
                 'queensland', 'south australia', 'snowy hydro', 'snowy 2.0'],
-  uk:          ['united kingdom', 'britain', 'british', 'england', 'scotland',
-                'wales', 'ofgem', 'national grid eso'],
+  // 'uk' is how a headline writes it nine times in ten. Its absence is why
+  // "Green Party wants to slam the brakes on UK datacenter construction"
+  // classified as unmarked and kept the full x1.00 factor. Two letters is safe
+  // here because scTermsHit_ matches on word boundaries — it cannot fire
+  // inside another word.
+  uk:          ['uk', 'u.k.', 'united kingdom', 'britain', 'british', 'england',
+                'scotland', 'wales', 'ofgem', 'national grid eso'],
   germany:     ['germany', 'german', 'berlin', 'bundesnetzagentur'],
+  eu:          ['european union', 'e.u.', 'brussels', 'european commission'],
   france:      ['france', 'french', 'edf'],
   spain:       ['spain', 'spanish', 'iberdrola'],
   italy:       ['italy', 'italian', 'terna'],
@@ -784,7 +790,7 @@ var SCRAPER_GEO_OTHER = {
   poland:      ['poland', 'polish'],
   india:       ['india', 'indian', 'seci'],
   japan:       ['japan', 'japanese', 'tokyo'],
-  korea:       ['south korea', 'korean'],
+  korea:       ['south korea', 'korean', 'seoul'],
   taiwan:      ['taiwan', 'taiwanese'],
   brazil:      ['brazil', 'brazilian', 'aneel'],
   argentina:   ['argentina', 'argentine', 'argentinian'],
@@ -847,6 +853,62 @@ var SCRAPER_DIGEST_AI_PAUSE_MS = 1200;           // gap between consecutive AI c
 // OVERLOAD (HTTP 503) can persist for tens of seconds — a 2s+6s ladder gave up
 // long before it cleared and dropped the whole edition to fallback summaries.
 var SCRAPER_AI_RETRY_BACKOFF_MS = [2000, 6000, 15000, 30000];
+// ── Per-edition summary lens (developer 2026-08-28) ─────────────────────
+// Every summary used to close from one fixed viewpoint, because the prompt
+// hardcoded "a US grid-scale battery (BESS) seller". That is right for the
+// BESS edition and wrong for the others: the developer asked that an AIDC
+// edition instead "highlight whichever part of the AIDC power infrastructure
+// is within the scope of this article and why it matters to players in that
+// scope", and explicitly asked NOT to be given rigid rules, "because I don't
+// want every article summary to end in the same way".
+//
+// So each edition carries an AUDIENCE and a CLOSING INTENT rather than a
+// sentence pattern. The intent says what the last line has to accomplish; the
+// wording is left to the model, and the prompt asks outright for variety.
+var SCRAPER_EDITION_LENS = {
+  morning: {
+    audience: 'a US grid-scale battery (BESS) seller who also tracks the AI '
+      + 'data-center buildout, because that buildout is what drives their demand',
+    closing: 'close by making clear why this particular story matters to that '
+      + 'reader — the demand it signals, the competitor it exposes, the cost or '
+      + 'schedule it moves, the precedent it sets. Draw the line to THIS story, '
+      + 'not to the category it belongs to'
+  },
+  bess: {
+    audience: 'a US grid-scale battery storage (BESS) seller — utility-scale '
+      + 'projects, interconnection queues, offtake and procurement',
+    closing: 'close on what it changes for someone selling grid-scale storage '
+      + 'in the US: the demand, the competition, the pricing, the permitting or '
+      + 'interconnection reality, the supply chain. Name the specific mechanism, '
+      + 'not a general observation'
+  },
+  aidc: {
+    audience: 'someone working in the US AI data-center power chain — '
+      + 'generation, transmission and interconnection, substations and '
+      + 'transformers, on-site generation, cooling and water, siting and '
+      + 'permitting, utility tariffs and large-load agreements',
+    closing: 'identify WHICH part of that power chain this story actually '
+      + 'touches, and close on what it means for the people working in that '
+      + 'part. A transformer lead-time story matters to different people than a '
+      + 'water-permitting fight or a large-load tariff ruling — say which, and '
+      + 'why it lands'
+  }
+};
+
+/** The lens for one edition, falling back to its parent, then to the default.
+    Kept out of the Editions sheet on purpose: this is editorial voice, not a
+    per-edition setting the developer tunes from the UI. */
+function scEditionLens_(editionId) {
+  var id = String(editionId || SCRAPER_EDITION_DEFAULT.id);
+  if (SCRAPER_EDITION_LENS[id]) return SCRAPER_EDITION_LENS[id];
+  for (var i = 0; i < SCRAPER_EDITION_SEEDS.length; i++) {
+    if (SCRAPER_EDITION_SEEDS[i].id === id && SCRAPER_EDITION_LENS[SCRAPER_EDITION_SEEDS[i].parent]) {
+      return SCRAPER_EDITION_LENS[SCRAPER_EDITION_SEEDS[i].parent];
+    }
+  }
+  return SCRAPER_EDITION_LENS[SCRAPER_EDITION_DEFAULT.id];
+}
+
 var SCRAPER_DIGEST_SUMMARY_MAX = 900;            // stored summary cap (chars) — generous; quality set by the prompt, not a hard length limit
 // Output ceiling for one summarize call. Five items at 60-120 words is roughly
 // 900 tokens of prose before JSON overhead, so 3000 looked like ample headroom
@@ -3123,6 +3185,7 @@ function scRubricScore_(title, snippet, model, ctx) {
                engagement: round1(clickBoost), corroboration: round1(corrob),
                geo: geo.factor },
     evidence: round1(evidence), support: round1(support), segment: round1(segment),
+    geoFactorApplied: geo.factor,
     supportCapped: (emphasis + substance + clickBoost + corrob) > supportCap + 0.05,
     matchedCompanies: matchedCompanies, matchedTopics: matchedTopics,
     matchedSegments: matchedSegments, excludedSegments: excludedSegments,
@@ -3208,10 +3271,24 @@ function rubricPreview(sessionToken, payloadJson) {
   catch (parseErr) { return { success: false, error: 'bad_payload' }; }
   var ss = scraperSs_();
   ensureScraperTabs_(ss);
-  var model = scLoadInterestModel_(ss);
+  // Score against the SAME model the build uses. This loaded the global
+  // interest model while every build loads the edition's materialised one, so
+  // the tester and the digest could legitimately disagree — and the tester is
+  // the tool the developer reaches for to ask why the digest did what it did.
+  // A diagnostic that answers a different question than the one being asked is
+  // worse than no diagnostic.
+  var edId = scStr_(p.editionId || '', 40) || SCRAPER_EDITION_DEFAULT.id;
+  var edition = null;
+  try { edition = scEditionById_(ss, edId); } catch (edErr) {}
+  var model = scLoadInterestModel_(ss, edition);
   var out = scRubricScore_(scStr_(p.title, 300), scStr_(p.snippet, 2000), model);
   out.success = true;
-  out.modelCounts = { companies: model.companies.length, topics: model.topics.length };
+  out.edition = edId;
+  out.editionName = edition ? edition.name : edId;
+  out.threshold = SCRAPER_RELEVANT_THRESHOLD;
+  out.passes = out.score >= SCRAPER_RELEVANT_THRESHOLD;
+  out.modelCounts = { companies: model.companies.length, topics: model.topics.length,
+                      segments: (model.segments || []).length };
   return out;
 }
 
@@ -3447,7 +3524,11 @@ function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen
     out.push([state.id, it.url, title, sourceLabel || it.source,
       it.publishedAt, snippet, score,
       JSON.stringify({ s: r.signals, mc: r.matchedCompanies, mt: r.matchedTopics,
-        ms: r.matchedSegments, xs: r.excludedSegments, g: r.gated ? 1 : 0 }).slice(0, 1200),
+        ms: r.matchedSegments, xs: r.excludedSegments, g: r.gated ? 1 : 0,
+        // Persisted so the corroboration boost, which is applied later once the
+        // whole set is known, can respect the same evidence cap the rubric
+        // applied here rather than adding on top of it.
+        ev: r.evidence, sup: r.support, gf: r.geoFactorApplied }).slice(0, 1200),
       '', scDigestSectionFor_(r), isBackstop ? 'yes' : '']);
   }
   if (out.length) {
@@ -3542,6 +3623,8 @@ function scDigestItems_(ss, digestId) {
       source: String(data[i][3]), publishedAt: String(data[i][4]),
       snippet: String(data[i][5]), score: Number(data[i][6]) || 0,
       matchedCompanies: sig.mc || [], matchedTopics: sig.mt || [],
+      evidence: Number(sig.ev) || 0, support: Number(sig.sup) || 0,
+      geoFactor: sig.gf == null ? 1 : Number(sig.gf),
       summary: String(data[i][8] || ''), section: String(data[i][9] || 'market'),
       backstop: String(data[i][10]) === 'yes' });
   }
@@ -3560,7 +3643,19 @@ function scDigestItems_(ss, digestId) {
     var distinct = Object.keys(sources).length;
     if (distinct >= 2) {
       var boost = Math.min(SCRAPER_CORROB_CAP, (distinct - 1) * 3);
-      g.forEach(function(it){ it.corrob = distinct; it.score = Math.min(100, it.score + boost); });
+      g.forEach(function(it) {
+        it.corrob = distinct;
+        // Corroboration is only knowable once the whole set is in hand, so it
+        // is added here rather than inside scRubricScore_. That made it a hole
+        // in the evidence gate: it was added raw to a score whose supporting
+        // signals had already been capped, so an item at 52 became 58 without
+        // any new evidence that it was relevant. The boost now spends whatever
+        // support allowance the article had left, and nothing more — scaled by
+        // the same geographic factor the rest of its score was.
+        var room = Math.max(0, (it.evidence || 0) * SCRAPER_SUPPORT_RATIO - (it.support || 0));
+        var allowed = Math.min(boost, room) * (it.geoFactor == null ? 1 : it.geoFactor);
+        it.score = Math.min(100, Math.round(it.score + allowed));
+      });
     }
   });
   items.sort(function(a, b) { return b.score - a.score; });
@@ -3650,12 +3745,22 @@ function scDigestSummarizeStep_(ss, state, t0) {
     var batch = pending.slice(0, SCRAPER_DIGEST_ITEMS_PER_AI_CALL);
     // Longer summaries (developer feedback 2026-08-27): substance over
     // brevity — no hard sentence cap, the prompt sets the quality bar.
-    var prompt = 'You are writing news summaries for a morning digest read by a US grid-scale '
-      + 'battery (BESS) seller who tracks the AI data-center buildout. For each item write a '
+    var lens = scEditionLens_(state.editionId);
+    var prompt = 'You are writing news summaries for a morning digest read by '
+      + lens.audience + '. For each item write a '
       + 'substantial summary — typically 3-5 sentences (~60-120 words): what happened and who '
       + 'is involved; every concrete figure (MW/MWh/GW, $, %, dates, locations, counterparties); '
-      + 'the mechanics of the deal, policy, or incident; and one concluding line on why it '
-      + 'matters to that reader. No filler, no restating the headline. Reply ONLY with a JSON '
+      + 'and the mechanics of the deal, policy, or incident. '
+      + 'Then ' + lens.closing + '. '
+      // Asked for explicitly: "I don't want to give rigid rules because I don't
+      // want every article summary to end in the same way." So the closing line
+      // is specified by what it must ACHIEVE, and the model is told outright to
+      // vary how it gets there.
+      + 'Vary how you write that closing thought across the items — do not open it with the '
+      + 'same construction every time, and do not use a standard phrase like "For X, this…" '
+      + 'on more than one item in this batch. Sometimes it belongs as its own sentence, '
+      + 'sometimes it is better carried inside the preceding one. '
+      + 'No filler, no restating the headline. Reply ONLY with a JSON '
       + 'array like [{"i":0,"summary":"..."}] covering every item.\n\nItems:\n'
       + JSON.stringify(batch.map(function(it, n) {
           return { i: n, title: it.title, snippet: it.snippet.slice(0, 280), source: it.source };
@@ -3703,14 +3808,21 @@ function scDigestSummarizeStep_(ss, state, t0) {
   if ((!stillPending || state.aiNote) && !state.leadDone) {
     state.leadIdx = 0;
     state.leadText = '';
-    if (!state.aiNote && top.length) {
+    // The lead is picked from the SAME pool the render step indexes into —
+    // items that clear the relevance bar, in the same order. Offering the model
+    // the unfiltered top 30 and then applying its answer to the filtered list
+    // would point the chosen index at a different article than the one the
+    // lead paragraph describes.
+    var leadPool = items.filter(function(it) { return it.score >= SCRAPER_RELEVANT_THRESHOLD; });
+    if (!state.aiNote && leadPool.length) {
       try {
+        var lens2 = scEditionLens_(state.editionId);
         var lp = 'From these scored industry items, pick the single most consequential as "the lead" '
-          + 'and write a 3-5 sentence lead paragraph for a morning digest: what happened, the key '
-          + 'figures, the mechanism behind it, and why it matters to a US grid-scale battery seller '
-          + 'tracking the AI data-center buildout. Reply ONLY with a JSON array: '
+          + 'and write a 3-5 sentence lead paragraph for a morning digest read by '
+          + lens2.audience + ': what happened, the key figures, the mechanism behind it, and then '
+          + lens2.closing + '. Reply ONLY with a JSON array: '
           + '[{"lead": <item index>, "text": "..."}].\n\nItems:\n'
-          + JSON.stringify(top.slice(0, 6).map(function(it, n) {
+          + JSON.stringify(leadPool.slice(0, 6).map(function(it, n) {
               return { i: n, title: it.title, summary: it.summary || it.snippet.slice(0, 200) };
             }));
         var lr = scParseJsonArray_(scAiWithRetry_(lp, 1200)) || [];
@@ -3733,7 +3845,14 @@ function scDigestRenderStep_(ss, state) {
   var items = scDigestItems_(ss, state.id);
   var relevant = items.filter(function(it) { return it.score >= SCRAPER_RELEVANT_THRESHOLD; });
   var top = items.slice(0, SCRAPER_DIGEST_SUMMARIZE_TOP_N);
-  var lead = top.length ? top[Math.min(state.leadIdx || 0, top.length - 1)] : null;
+  // The lead is chosen from items that CLEAR the bar, not from the top 30 by
+  // score. `top` is unfiltered, so on a thin day — fewer than 30 relevant
+  // items, which is now the normal case — the AI's lead pick could land on an
+  // article that never qualified, and the lead is the most prominent thing in
+  // the edition. Sections were already filtered; this was the one hole left.
+  var leadPool = relevant.length ? relevant : [];
+  var lead = leadPool.length
+    ? leadPool[Math.min(state.leadIdx || 0, leadPool.length - 1)] : null;
   var sections = { companies: [], market: [], incidents: [] };
   items.forEach(function(it) {
     if (lead && it.url === lead.url) return;

@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.57w">
+  <meta name="build-version" content="v01.58w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -8881,15 +8881,22 @@
     if (!title && !snippet) { scToast('Type a headline (or snippet) to score first.', true); return; }
     var btn = $sc('wd-rubric-btn');
     if (btn) { btn.disabled = true; btn.textContent = 'Scoring…'; }
+    // Score against the edition currently selected in the Digest panel, so the
+    // tester answers "would THIS edition have taken it" rather than a question
+    // about the global model that no edition actually uses.
+    var edSel = $sc('wd-digest-edition');
+    var edId = (edSel && edSel.value) || 'morning';
     _gasPost({ action: 'rubricPreview', token: scToken(),
-               payload: JSON.stringify({ title: title, snippet: snippet }) })
+               payload: JSON.stringify({ title: title, snippet: snippet, editionId: edId }) })
       .then(function(data) {
         if (!data || !data.success) { scToast(scErrMsg(data && data.error), true); return; }
         var sig = data.signals || {};
         var maxes = { company: 40, topic: 25, emphasis: 15, substance: 20 };
         var names = { company: 'Company', topic: 'Topic', emphasis: 'Emphasis', substance: 'Substance' };
         var geo = Number(sig.geo == null ? 1 : sig.geo);
+        var bar = Number(data.threshold || 0);
         $sc('wd-rubric-score').textContent = (data.score || 0) + ' / 100'
+          + (bar ? '  ' + (data.passes ? '✓ taken' : '✗ below the bar of ' + bar) : '')
           + (geo < 1 ? '  (×' + geo + ' geo)' : '');
         $sc('wd-rubric-sigs').innerHTML = ['company', 'topic', 'emphasis', 'substance'].map(function(k) {
           var v = Number(sig[k]) || 0;
@@ -8902,7 +8909,8 @@
           .concat(data.matchedSegments || []);
         var note = m.length
           ? 'Matched: ' + m.join(', ')
-          : 'No interest matches — likely below the relevance bar';
+          : 'No interest matches — below the relevance bar';
+        if (data.editionName) note = 'Scored for ' + data.editionName + '. ' + note;
         // Geography is a multiplier, not a band, so it gets its own line rather
         // than a bar — and it is the first thing worth saying when it fired,
         // because it explains a low score that the four bands do not.

@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.38r] — 2026-08-28 08:02:19 PM EST
+
+> **Prompt:** "The number of relevant articles dropped down to 24, which is closer to what I would expect from a 24-hour scan. However, the "Green Party wants to slam the brakes on UK datacenter construction until water and energy use are sorted" article is not related to the US AIDC market at all, so I think it should have been excluded from the Digest. The rubric tester gave it a 12/100, which is about right. How do you decide which articles pass or not?
+>
+> Also, I noticed that many of the article summaries' last sentence starts with something along the lines of "For BESS sellers...". This line is amazing for the BESS-specific digests. However, for AIDC-specific digests, instead of summarizing articles from the BESS seller's perspective, I want you to highlight whichever part of the AIDC power infrastructure is within the scope of this article and why it matters to players in that scope. Essentially, I would like the last sentence of the summary to somehow explain why this article is important to readers of that Digest. I don't want to give rigid rules because I don't want every article summary to end in the same way."
+
+### Fixed
+
+`Scraper.gs` (v01.71g) — the UK article, plus three further gaps found tracing how it got in.
+
+1. **`uk` was missing from the geography terms.** The Britain list held `united kingdom`, `britain`, `british` — but not the two-letter form headlines overwhelmingly use. Verified directly: `scGeoClassify_` returned `tier: unmarked, factor: 1, regions: []` for that exact headline, so the ×0.25 foreign penalty never fired and the article was scored as if it had no country at all. Two letters is safe because `scTermsHit_` matches on word boundaries — asserted against `Ukraine` and `Fukushima`. `e.u.`/`european union`, `aussie` and `seoul` were missing the same way
+2. **The lead bypassed the relevance bar.** Sections filtered on `score >= SCRAPER_RELEVANT_THRESHOLD`, but the lead was taken from `items.slice(0, 30)` — unfiltered. Now that a normal day yields ~24 relevant items out of 30, that slice routinely contains items that never qualified, and the lead is the most prominent thing in the edition. The lead is now chosen from the relevance-filtered pool
+3. **Corroboration was a hole in the evidence gate.** It is only knowable once the whole set is in hand, so `scDigestItems_` added it raw — to a score whose supporting signals `scRubricScore_` had already capped. An item at 52 became 58 with no new evidence. `evidence`, `support` and the geo factor are now persisted in the intake signals, and the boost spends only the support allowance the article had left, scaled by the same geographic factor as the rest of its score
+4. **The rubric tester was scoring a different model than the build.** `rubricPreview` called `scLoadInterestModel_(ss)` (global) while every build calls it with the edition's materialised map. The tester is the tool reached for to ask why the digest did something; one that answers a different question is worse than none. It now takes an `editionId`, reports the threshold it judged against, and says whether the article passed
+
+### Changed
+
+**Per-edition summary lens.** The closing line was fixed to "a US grid-scale battery (BESS) seller" in the summarize prompt and again in the lead prompt, which is why every summary closed the same way. `SCRAPER_EDITION_LENS` gives each edition an **audience** and a **closing intent** — what the last line must accomplish, never a sentence pattern. AIDC's asks the model to identify *which* part of the power chain a story touches (generation, interconnection, transformers, cooling and water, siting, large-load tariffs) and close on what it means for people working in that part.
+
+- Asked for explicitly: *"I don't want to give rigid rules because I don't want every article summary to end in the same way."* The prompt therefore also instructs the model to vary the construction across a batch and not to reuse a standard "For X, this…" opener more than once — and an assertion checks that no lens itself encodes such a pattern
+- `scEditionLens_` falls back through an edition's parent to the default, so a new variant inherits its masthead's voice rather than losing one
+- Aligning the lead pool exposed a second-order bug **in the same change**: the lead prompt offered the model `top.slice(0, 6)` (unfiltered) while the render step would now index into the filtered list. The chosen index would have pointed at a different article than the lead paragraph described. Both now use the same expression
+
+### Notes
+
+- 283 assertions pass; 28 are new. They cover the exact flagged headline, the two-letter-token safety cases, all three corroboration regimes (thin evidence gets nothing, well-evidenced gets its boost, foreign gets it scaled), lens differentiation and fallback, and that the prompts actually carry the lens rather than the retired hardcoded audience
 
 ## [v03.37r] — 2026-08-28 07:42:36 PM EST
 
@@ -1877,99 +1904,3 @@ If you hit the end of my weekly Fable limit before this task is done, switch to 
 - **Verified visually before committing** — rendered the intermediate print HTML in Chromium and screenshotted the masthead/contents, the say-don't-say and questions sections, and the final page: all 16 contents entries resolve, no table overflows its column budget, and the `<details>` self-test block is force-opened so all ten answers print
 - The interview is **Monday 2026-08-17** (`date -d` confirmed the weekday), two days out from this session
 - **Only the Hithium brief was built.** A bare `node scripts/build-study-prep-pdf.mjs` rebuilds every registered document, which would rewrite the two Megmeet PDFs for nothing but a new `/CreationDate` — the same history churn declined in v02.43r. `hithium-lesson-plan.md` was deliberately **not** registered: the developer asked for the brief, and registering the lesson plan is a separate decision
-
-## [v02.43r] — 2026-08-14 02:29:35 AM EST
-
-> **Prompt:** "continue with your recommendation"
-
-### Added
-- **`repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf`** — the companion lesson plan typeset to match the interview brief. 5 pages, 5 modules. The brief teaches the room, the lesson plan teaches the physics; both now travel in the same format
-- **Fenced code block support in `scripts/build-study-prep-pdf.mjs`** — the renderer previously had no `` ``` `` handling, which the interview brief never exercised but the lesson plan needed for its two ASCII architecture diagrams (the legacy power chain and the 800 VDC chain). Fenced content is escaped and never inline-processed, so a stray `*` inside a diagram stays a stray `*`. The print style sets `white-space:pre` at 7.5pt mono — **deliberately non-wrapping, because a wrapped ASCII diagram is a destroyed one**; that size fits ~118 columns in the printable width, comfortably clearing the widest block in either document (92 columns)
-
-### Changed
-- **Contents block collapses to one column at 6 sections or fewer** — the lesson plan's 5 long module titles balanced badly across two columns, wrapping in the first while the second sat half empty. The interview brief's 15 sections are unaffected and still render two-up
-- **README tree** — added `MEGMEET-LESSON-PLAN.pdf` under `study-prep/megmeet/`
-
-### Notes
-- **The interview brief PDF was rebuilt and then deliberately reverted.** It has no fenced code and 15 sections, so neither renderer change touches it — a byte comparison confirmed the rebuild differed in exactly 14 bytes, all of them the PDF `/CreationDate`. Re-committing a 350 KB blob to move a timestamp is pure history churn, so the committed file stands. Both PDFs are nonetheless verified against the current script
-- **Verified visually before committing** — the two ASCII diagrams render intact at full width with box-drawing characters and column alignment preserved, and the interview brief still reports 13 pages / 15 sections / identical size, confirming no regression
-- Today is **Friday 2026-08-14** (`date -d` confirmed), which is the meeting date the lesson plan's pacing section is written against
-
-## [v02.42r] — 2026-08-14 02:12:33 AM EST
-
-> **Prompt:** "Picking up from the last "AIDC Market Report PDF conversion" session, output the "Megmeet Interview Brief" in a downloadable PDF."
-
-### Added
-- **`repository-information/study-prep/megmeet/MEGMEET-INTERVIEW-BRIEF.pdf`** — the Megmeet interview brief typeset for print and download. 13 pages, 15 sections, letter format with a running header, a `Page N of M` footer, and an auto-generated two-column contents block. Presentation is the `bloomberg` export skin from `PROFILER-STYLES.md`, so it reads as the same product as the canonical AIDC report PDF
-- **`scripts/build-study-prep-pdf.mjs`** — a Markdown-driven PDF renderer for study-prep documents. Unlike `build-aidc-report-pdf.mjs`, whose source was authored as HTML, this parses the `.md` file directly, so **the Markdown stays the single source of truth and the PDF cannot drift from the document the developer actually edits**. Drives the pre-installed Chromium over the DevTools Protocol (only `Page.printToPDF` accepts a custom running header/footer — the `--print-to-pdf` CLI flag cannot). No npm dependencies. Usage: `node scripts/build-study-prep-pdf.mjs [<doc-key>] [--png] [--keep-html]`; a bare invocation builds every registered document
-
-### Changed
-- **README tree** — added `build-study-prep-pdf.mjs` under `scripts/` and `MEGMEET-INTERVIEW-BRIEF.pdf` under `study-prep/megmeet/`
-
-### Notes
-- **Three rendering decisions worth recording.** (1) **Proportional table columns** — the renderer weights each column by the average text length of its cells, clamped to 11–58%, because equal thirds under `table-layout:fixed` reads badly when one column holds a sentence and another holds a date. The five-objections table is the case that proves it. (2) **`<details>` is forced open** — Chromium prints a collapsed `<details>` as just its `<summary>`, so the self-test answers would have silently vanished from the PDF; they render as a ruled "Answers" block instead. (3) **Blockquotes are split by role** — a bolded lead-in becomes a boxed caution, a quoted line becomes a tinted "Say it like this" pull quote, because the brief uses `>` for both and they should not look alike
-- **Deliberately one skin, not five.** The AIDC report ships in all five registered writing styles and `PROFILER-STYLES.md` carries a standing instruction to mirror skin changes across its consumers. Registering a third consumer for a prep document would take on that maintenance obligation for no reader benefit, so this script hard-codes the canonical `bloomberg` skin and stays out of the registry
-- **The intermediate HTML is staged outside the repo** (a temp dir), not committed. A committed HTML twin is exactly the drift this design avoids; `--keep-html` writes it next to the PDF when it is wanted for inspection
-- **`megmeet-lesson-plan` is registered but not built** — the developer asked for the interview brief. It is one command away: `node scripts/build-study-prep-pdf.mjs megmeet-lesson-plan`
-- **`REPO-ARCHITECTURE.md` deliberately not updated**, following the precedent set in v02.33r: the Scripts subgraph carries shared infrastructure only and already omits `check-gas-inner-scripts.js`, `playwright-harness.py` and `build-aidc-report-pdf.mjs`
-- **Content gap flagged, not fixed** — the brief's self-test asks twelve questions but the answers block stops at ten. Questions 11 and 12 are both answered in the body. Left alone as developer-owned content
-
-## [v02.41r] — 2026-08-14 01:54:33 AM EST
-
-> **Prompt:** "refresh the Huawei dossier"
-
-### Changed
-- **Huawei Digital Power dossier refreshed to profileVersion 2** (`live-site-pages/profiler-data/huawei-digital-power.profile.json`), correcting the materially stale FCC record identified in v02.40r. v1 archived per the Archival Procedure; `archive-index.json` and `profiler-companies.json` synced
-- **`summary`** — the defining-constraint clause moved from "a pending FCC inverter ban being drafted" to the enacted 2026-07-28 Covered List prohibition on foreign-produced connected power inverters that blocks new equipment authorizations. `ecosystemRole` updated on the same point
-- **New `recentDevelopments` entry (2026-07-28)** — the Covered List action, with the read that matters analytically: the FCC fact sheet names no company or country, the test is the Buy American "domestic end product" standard at 48 CFR 25.101(a), so it is an **origin rule rather than a China rule** and catches Taiwanese, Korean and US-brand offshore production alike. Direct incremental effect on Huawei assessed as near zero (Entity List and NDAA 889 already closed the US); the competitive effect is the real story
-- **The 2026-06-30 draft-report entry was retained and marked SUPERSEDED** rather than deleted — it is the accurate record of what was trailed in advance, and the delta between the trailed China-specific framing and the adopted country-agnostic rule is itself analytically useful
-- **`strategyRead` #5 rewritten** — now carries the Sungrow market impact (roughly CNY 100B / $14.8B of market value shed over the following month, despite Sungrow retaining US access where Huawei never had it), the two load-bearing scope limits (prospective-only; the two-prong definition requiring both bi-directional conversion **and** remote connectivity), and Sungrow's public argument that it falls outside the connectivity prong because it restricts connection activity to wired links. Whether wired management satisfies "another similar connection" is flagged as unresolved and as the variable that determines how far the rule reaches into wired-managed power electronics, Megmeet rack power included. Collection gap stated explicitly: no source located addresses IT or data-center power supplies directly
-- **`strategyRead` #1** — "pending FCC inverter ban" corrected to the enacted prohibition
-- Five sources added at the head of `sources[]`: the FCC fact sheet (first-party), Cooley, Morgan Lewis, National Law Review, and Energy-Storage.News on the scope-clarity concerns
-
-### Notes
-- Data-only change: `Profiler.html` was not modified, so no page version bump and no page changelog entry ([PC-HTML-VERSION] #2 does not fire). The Profiler page is an **indirect affect**
-- All prose written in the registry's active `intel-briefing` style — confidence-tagged judgment, "We assess" construction, facts and assessments kept separate, collection gap stated
-- `AIDC-MARKET-REPORT.md` §6.4 and §8.4 still carry the stale framing. Left unchanged: the developer deferred report work, and the report should be regenerated from the refreshed dossier rather than hand-patched
-
-## [v02.40r] — 2026-08-14 01:42:59 AM EST
-
-> **Prompt:** "Will the recent FCC ban on foreign-made inverters be a problem for Megmeet? Give me a detailed answer"
-
-### Added
-- **New section in the Megmeet interview brief — the July 2026 FCC inverter rule** (`repository-information/study-prep/megmeet/megmeet-interview-brief.md`, and the published artifact). Verified against current sources on 2026-08-14 rather than from the dossier, because the dossier is stale on this (see below). Covers: the mechanism (Covered List addition effective 2026-07-28, barring FCC equipment authorization); the two-part definition (bi-directional DC↔AC conversion **and** remote connectivity via Wi-Fi/cellular/Bluetooth "or another similar connection"); the "foreign-produced" test (Buy American *domestic end product*, 48 CFR § 25.101(a) — US manufacture plus >65% domestic component cost through 2028, 75% from 2029); prospective-only application with pre-28-July authorizations grandfathered; and the Conditional Approval pathway through the Department of War or DHS, open until 2026-01-01, requiring a time-bound US onshoring plan
-- **A three-bucket exposure assessment for Megmeet**: AI data-center power (PSUs, shelves, sidecar, SST) reads as **probably out of scope but unsettled** — unidirectional AC→DC, none of the enumerated inverter categories, wired management via PMBus and IPMI/Redfish/SNMP rather than wireless; PV/storage/EV-charging components are **genuinely exposed**, with the 40 kW EV-charging module platform launched 2026-07-31 landing three days after the rule took effect; everything else is out
-- **The competitive insight that matters commercially**: the rule is an **origin test, not a China test**, so Delta and Lite-On are equally foreign-produced. If the interpretation ever stretches toward IT power it does not hit Megmeet asymmetrically — it hits incumbents with far more US SKUs to re-authorize
-- An eighth question for the interviewer, on whether the covered-list action has changed US authorization planning or the US-versus-Thailand manufacturing calculus
-
-### Notes
-- **Confidence is explicitly bounded in the brief.** No source located addresses data-center or IT power supplies directly, so the in/out read is stated as inference from the definition rather than a sourced ruling. The FCC's own FAQ and determination PDF both returned HTTP 403 and could not be read; the analysis rests on law-firm alerts (Cooley, Morgan Lewis, Crowell, Covington) and trade press. The brief instructs the developer to say "my read", not "the rule says"
-- **Dossier staleness identified and flagged, not silently patched.** `live-site-pages/profiler-data/huawei-digital-power.profile.json` still records this as a **draft, China-specific** rule from the 2026-06-30 Reuters report, with a strategyRead calling the Megmeet spillover "unconfirmed and scope-dependent". Both predate the 2026-07-28 action and its country-agnostic scope. `AIDC-MARKET-REPORT.md` §6.4 and §8.4 carry the same stale framing. Refreshing the Huawei dossier is a Profiler revision (archive + profileVersion bump) and the report refresh was deferred by the developer, so neither was changed here
-
-## [v02.39r] — 2026-08-14 01:18:13 AM EST
-
-> **Prompt:** "sales role, meeting Yuan Meng, head of NA Sales & Marketing."
-
-### Changed
-- **Retuned the Megmeet interview brief for a sales role** (`repository-information/study-prep/megmeet/megmeet-interview-brief.md`, and the published artifact at the same URL). The technology chain is retained — the brief now says explicitly that the bar is being credible with an engineer for twenty minutes, not designing a power shelf — and the weight moved to the commercial picture
-- **New section — who you're meeting.** Yuan Meng appears nowhere in the dossier or the repo, and the brief says so plainly rather than inventing a background. What it does supply is the *function*: the only US-facing leader on record is Roya Movahedi (CMO, US/international), the quoted spokesperson in every 2025–26 English release and absent from the China filings — evidence, flagged as inference, that the international commercial layer was built recently and separately
-- **New section — the North America picture.** Leads on the nuance most candidates will miss: the expected first hyperscaler volume delivery is **domestic**, so North America is greenfield with no reference win to point at. Then the sellable assets (NVIDIA ecosystem seat, the Dallas lab as a sales instrument, the existing Ericsson/Cisco/Juniper/Arista/Accton network-power relationships, full-chain quoting, spec leadership, financed capacity), the design-in sales motion, and the country-of-origin question
-- **New section — five field objections** with what each one is really asking and how to answer: Chinese supplier, unproven at scale, shaky financials, Delta owns the socket, and 800 VDC slipping
-- **Rewritten questions-to-ask** for a sales counterpart — territory questions, sale-mechanics questions, and a closing question that separates the equity story from the sales motion. **Two new hard questions** (cold account opening; first ninety days) and **two new self-test items**, bringing it to twelve
-
-### Notes
-- **The regulatory framing is deliberately fenced.** The brief warns against importing the battery world's 1260H listings, stepped cell tariffs and draft inverter rule into a Megmeet conversation — those are documented for battery and inverter suppliers, and Megmeet is not recorded as being on those lists. Carrying that framing into the room would describe someone else's problem
-- No dossier data changed; this remains a derived study artifact
-
-## [v02.38r] — 2026-08-14 01:06:30 AM EST
-
-> **Prompt:** "I want to further refine the AIDC market report, but save that task for later. I am going to interview with Megmeet tomorrow morning and want to quickly learn everything I need to seem like I understand their products, industry position, and recent activities. Organize the information in Megmeet's dossier and output it to me in whichever way you think will be best for me to learn what I need to learn."
-
-### Added
-- **`repository-information/study-prep/megmeet/megmeet-interview-brief.md`** (new) — an interview-facing companion to the existing technology lesson plan, organized from the Megmeet dossier (profileVersion 2). Where `megmeet-lesson-plan.md` teaches the physics, the brief covers what an interview actually tests: a 60-second "what do you know about us" answer, the five load-bearing facts, the product chain as the catalogue (grid to SST to sidecar to BBU/supercap to power shelves to M-CRPS to power brick), the competitive position against Delta and Lite-On inside the ~74% Taiwanese bloc, a reverse-chronological activity timeline, four hard questions with model answers, a say/don't-say table, six questions to ask them, a 17-term vocabulary table, and a ten-question self-test with collapsible answers
-- Published as a phone-readable artifact for review before the interview — serif and monospace typography with no sans face, a signal-teal accent on warm-neutral paper, both themes token-defined, and the grid-to-GPU power chain rendered as a one-line-diagram ladder with voltage annotations
-
-### Notes
-- **Sourcing discipline is explicit throughout.** The brief separates sourced fact from the dossier's labeled analytical reads, and flags the unverified Lite-On displacement report specifically — the company has never confirmed it and its own late-2025 statements contradict it, so asserting it in the room would be a credibility loss. The dossier's moderate-confidence "architecture timing" thesis is marked as an interpretation to be presented as one
-- The 27 August 2026 H1 report is surfaced as the central catalyst: the company itself called AI-DC revenue immaterial through 2025 while consensus embeds a roughly six-fold FY2026 profit rebound, so the half-year print is the first hard test
-- No dossier data was changed — this is a derived study artifact only. The developer's separate request to further refine the AIDC market report was deferred at their instruction and is **not** actioned here

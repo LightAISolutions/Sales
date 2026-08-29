@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.58w] — 2026-08-28 08:02:19 PM EST — v03.38r
+
+### Changed
+- The rubric tester now scores a headline against the edition selected in the Digest panel rather than a general profile, names that edition in its result, and says plainly whether the article cleared the bar and what the bar was
 
 ## [v01.57w] — 2026-08-28 07:42:36 PM EST — v03.37r
 
