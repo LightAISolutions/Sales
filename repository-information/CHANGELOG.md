@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.49r] — 2026-08-29 12:37:08 AM EST
+
+> **Prompt:** "I just rebuilt BESS and the Jackery article is still there."
+
+### Fixed
+
+`Scraper.gs` (v01.81g)
+
+- **v03.48r could not have worked, and the reason was in the comment directly above the code I edited.** Segment terms are not read from the source file at scoring time — they are read from the developer's **Interests sheet**. `scSyncInterests_` rewrites a row's terms only when the seed's `tv` is **greater than** the `seed-terms-vN` marker in that row's Notes, a mechanism that exists precisely so improved vocabulary can ship without clobbering the developer's own edits. `seg-bess-residential` was left at `tv: 1` and `seg-consumer` had no `tv` at all (defaults to 1). Their rows carry `seed-terms-v1`, so `1 < 1` is false: the sync read those rows and correctly concluded nothing needed doing. **The deploy was fine; the data never moved.** `seg-bess-utility`, `seg-ev` and `seg-ev-charging` are already at `tv: 2` — the convention was established and I did not follow it
+- Both bumped to `tv: 2`. `seg-bess-residential` also carries an in-code note that `tv` must move whenever its terms do
+
+### Added
+
+- **`t22.js` — a guard that makes this mistake unshippable.** It parses `SCRAPER_SEGMENT_SEEDS` out of the source, hashes each seed's terms, and locks that hash against the seed's `tv`. Change terms without bumping `tv` and the suite fails naming the seed. **Verified by injecting the exact v03.48r mistake** — added a term to `seg-bess-residential` leaving `tv` alone, watched the suite fail with `DRIFTED: seg-bess-residential`, then restored and watched it pass
+- The suite also simulates the sync's upgrade rule directly, pinning the four cases that matter: a `v1` row with `tv: 1` does **not** upgrade (the bug), a `v1` row with `tv: 2` does (the fix), an unversioned row always does, and a row whose Notes say anything else (e.g. `custom`) never does
+
+`.claude/rules/scraper-sources.md`
+
+- **A durable rule, because the test corpus is not committed and cannot protect a future session.** New section "Editing seed terms: bump `tv`, or the change never ships", written as a blocking gate on any edit to a seed's `terms:` array, with the three-step procedure (bump `tv`; tell the developer to Sync now *before* rebuilding, since the build path does not sync; say plainly that a customised row will never receive the new terms). The file is path-scoped to `Scraper.gs` and `Scraper.html`, so it auto-injects exactly when it is needed. Retitled to "Scraper Data Invariants" since it now holds two
+
+### Notes
+
+- **568 assertions pass** across 22 suites
+- Three defects of my own in the new suite, all fixed before it was trusted: a seed parser whose regex matched nothing (the suite would have asserted vacuously against an empty list, so it now also asserts the parser returned something); a simulation returning `null` rather than `false` where the real code relies on `if` coercion; and an assertion ending in `|| true`, which makes it pass unconditionally — the banned pattern, removed rather than repaired
+- **The developer must press "Sync now" before rebuilding.** The hourly tick calls `scSyncInterests_(false)`, which is throttled; the build path does not sync at all. Without it the sheet still holds `seed-terms-v1` and the rebuild behaves exactly as before — which is the same failure, one layer out
 
 ## [v03.48r] — 2026-08-29 12:17:16 AM EST
 

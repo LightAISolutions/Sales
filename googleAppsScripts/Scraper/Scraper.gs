@@ -1,4 +1,4 @@
-var VERSION = "v01.80g";
+var VERSION = "v01.81g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -640,7 +640,11 @@ var SCRAPER_SEGMENT_SEEDS = [
   // specificity-beats-breadth rule — independentOn falls to 0, the article is
   // gated, and company/topic/clickBoost are zeroed. Putting these terms in the
   // parentless seg-consumer instead would not have demoted anything.
-  { key: 'seg-bess-residential', parent: 'seg-bess', label: 'Residential storage', tv: 1,
+  // tv MUST be bumped whenever these terms change — the sync only rewrites a
+  // sheet row whose seed-terms-vN marker is BEHIND the seed. v03.48r changed
+  // the words here and left tv at 1, so the vocabulary never left this file and
+  // the developer's next build printed the same consumer article. tv 1 -> 2.
+  { key: 'seg-bess-residential', parent: 'seg-bess', label: 'Residential storage', tv: 2,
     terms: ['home battery', 'residential storage', 'residential battery', 'powerwall',
             'home energy storage', 'rooftop storage', 'portable power station',
             'portable battery', 'portable power', 'solar generator', 'home backup',
@@ -711,7 +715,7 @@ var SCRAPER_SEGMENT_SEEDS = [
   // fire on genuine trade coverage — utilities discount bills and power
   // stations are power plants — so every retail marker here has to be one a
   // trade story would not write.
-  { key: 'seg-consumer', label: 'Consumer electronics & appliances',
+  { key: 'seg-consumer', label: 'Consumer electronics & appliances', tv: 2,
     terms: ['smartphone', 'consumer electronics', 'appliance', 'laptop', 'tablet', 'wearable',
             'e-bike', 'ebike', 'electric scooter', 'power bank', 'portable charger',
             'consumer-grade', 'consumer grade',

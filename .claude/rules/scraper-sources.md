@@ -4,11 +4,36 @@ paths:
   - "live-site-pages/Scraper.html"
 ---
 
-# Scraper Source Roster — Unavailable Outlets
+# Scraper Data Invariants — Source Roster & Seed Vocabulary
 
-*Path-scoped reference for `googleAppsScripts/Scraper/Scraper.gs` and `live-site-pages/Scraper.html`. Consult this **before** proposing any new outlet for `SCRAPER_SOURCE_ROSTER`.*
+*Path-scoped reference for `googleAppsScripts/Scraper/Scraper.gs` and `live-site-pages/Scraper.html`. Two invariants live here: consult the roster section **before** proposing any new outlet for `SCRAPER_SOURCE_ROSTER`, and the seed-vocabulary section **before** editing the terms of any seed.*
 
-## Mandatory check before suggesting a source
+## Editing seed terms: bump `tv`, or the change never ships
+
+> **THIS BLOCKS EVERY EDIT TO A `terms:` ARRAY IN `SCRAPER_SEGMENT_SEEDS`.**
+> The failure mode: the terms are edited in the source file, the change is committed, deployed and reported as fixed — and the running app behaves exactly as before, because scoring reads terms from the **Interests sheet**, not from the source file. Seeds only populate a sheet row once. The developer then rebuilds, sees the same wrong article, and the session has to be spent rediscovering this.
+
+**The rule.** `scSyncInterests_` rewrites a segment row's terms only when the seed's `tv` is **greater than** the `seed-terms-vN` marker stored in that row's Notes:
+
+```js
+if (sgNotes === '' || (sgM && Number(sgM[1]) < sgTv)) { sgRow[7] = sgs.terms.join(', '); … }
+```
+
+So `tv: 1` against a row already marked `seed-terms-v1` is a no-op. **Changing terms without bumping `tv` is indistinguishable from changing nothing.**
+
+**Before committing any seed-terms edit:**
+
+1. **Bump `tv`** on that seed — a seed with no `tv` counts as 1, so the first bump is `tv: 2`.
+2. **Tell the developer to press "Sync now"** (or wait for the hourly tick) *before* rebuilding. The build path does not sync; a rebuild alone will not pick up the new vocabulary.
+3. A row whose Notes hold anything other than `seed-terms-vN` (e.g. `custom`) is **never** rewritten — that is deliberate, and it means a developer who has customised a row will not receive the new terms at all. Say so rather than assuming the change reached them.
+
+**Confirmed instance:** v03.48r broadened `seg-bess-residential` and `seg-consumer` to catch consumer power stations, left both at `tv: 1`, and the next build printed the same article. Fixed in v03.49r by bumping both to `tv: 2`.
+
+**The same shape applies to `SCRAPER_INTEREST_TOPIC_SEEDS` and the source roster** — anything seeded into the Interests sheet is a one-time copy unless a version marker says otherwise.
+
+---
+
+## Source roster: mandatory check before suggesting a source
 
 > **THIS BLOCKS ADDING ANY OUTLET TO `SCRAPER_SOURCE_ROSTER`.**
 > The failure mode: an outlet is dropped after being proven unfetchable, the reason is recorded only in a changelog, and a later session — reasoning from the outlet's obvious topical fit — proposes it again as a "gap in coverage". The developer then re-approves work that was already proven impossible. A changelog entry does not survive that; a checklist does.
