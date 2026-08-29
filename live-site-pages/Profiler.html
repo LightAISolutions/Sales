@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.51w">
+  <meta name="build-version" content="v01.52w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -762,6 +762,41 @@
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
     }
     #ov-guide-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
+    /* ── Industry Reports (v01.52w) ─────────────────────────────────────
+       In-page views (#reports / #report/<id>) reusing the gd-* section
+       primitives; rp-* covers only what reports add — citation superscripts,
+       confidence chips, coverage drift badges, the masthead button. */
+    #ov-reports-btn {
+      position: absolute; top: 44px; right: 0;
+      background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
+      border-radius: 999px; padding: 8px 16px; cursor: pointer;
+      font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    #ov-reports-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
+    .rp-sec { margin: 14px 0; }
+    .rp-kicker { font: 600 11px/1 var(--ov-mono); letter-spacing: 0.28em; color: var(--ov-gold); text-transform: uppercase; margin-bottom: 10px; }
+    .rp-meta { color: var(--ov-muted); font: 11.5px/1.8 var(--ov-mono); margin: 4px 0 18px; }
+    .rp-chip { display: inline-block; font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 9px; border-radius: 4px; margin-right: 9px; color: var(--ov-ink); background: var(--ov-gold); vertical-align: 2px; }
+    .rp-bluf p { font: 16.5px/1.7 var(--ov-serif); }
+    .rp-antag { font: 10.5px/1.5 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ov-adv); margin: 2px 0 8px; }
+    .rp-cite a, .rp-cites a { color: var(--ov-gold); cursor: pointer; text-decoration: none; font: inherit; }
+    sup.rp-cite { font: 10px/1 var(--ov-mono); }
+    .rp-cites { font: 11px/1.6 var(--ov-mono); color: var(--ov-faint); margin-top: 8px; }
+    .rp-cites .lb { letter-spacing: 0.1em; text-transform: uppercase; margin-right: 6px; }
+    .rp-cites a { margin-right: 6px; }
+    .rp-jdgs { margin: 8px 0 4px; padding-left: 22px; }
+    .rp-jdgs li { font: 14.5px/1.75 var(--ov-serif); color: var(--ov-paper); margin: 10px 0; }
+    .rp-conf { display: inline-block; font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 7px; border-radius: 3px; margin-right: 8px; border: 1px solid; vertical-align: 1px; }
+    .rp-conf.high { color: var(--ov-dev); border-color: rgba(130,181,109,0.5); }
+    .rp-conf.moderate { color: var(--ov-gold); border-color: rgba(216,180,90,0.5); }
+    .rp-conf.low { color: var(--ov-adv); border-color: rgba(224,122,139,0.5); }
+    .rp-drift { font: 9.5px/1.5 var(--ov-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ov-adv); border: 1px solid rgba(224,122,139,0.45); border-radius: 3px; padding: 0 5px; white-space: nowrap; }
+    .rp-cits ol { font: 12.5px/1.8 var(--ov-mono); color: var(--ov-muted); padding-left: 4px; list-style: none; }
+    .rp-cits .co-hd { font: 700 14px/1.4 var(--ov-serif); color: var(--ov-paper); margin: 12px 0 2px; }
+    .rp-card { cursor: pointer; }
+    .rp-card:hover { border-color: var(--ov-gold); }
+    .rp-card .rp-counts { font: 11px/1.6 var(--ov-mono); color: var(--ov-faint); margin-top: 6px; }
+    .rp-superseded { opacity: 0.55; }
     #ov-guide-overlay {
       position: fixed; inset: 0; background: rgba(8,9,12,0.92); z-index: 10002;
       display: none; overflow-y: auto;
@@ -1662,8 +1697,9 @@ function ovReloadFresh() {
     }
 
     // Deep-linkable tabs (v01.35w): the hash is either "#slug" or "#slug/tab".
-    // Compare (v01.46w) adds "#compare/slug1,slug2[,…]" — 'compare' is a
-    // reserved first segment; no company slug may take it.
+    // Compare (v01.46w) adds "#compare/slug1,slug2[,…]"; Reports (v01.52w)
+    // adds "#reports" and "#report/<id>" — 'compare', 'reports', and 'report'
+    // are reserved first segments; no company slug may take them.
     var ovWantedTab = 'overview';
     function ovRoute() {
       if (!ovRegistry) return;
@@ -1674,6 +1710,10 @@ function ovReloadFresh() {
       if (slug === 'compare') {
         var picks = String(parts[1] || '').split(',').map(function(s) { return s.trim(); }).filter(Boolean);
         ovRenderCompare(picks);
+      } else if (slug === 'reports') {
+        ovRenderReports();
+      } else if (slug === 'report') {
+        ovRenderReport(String(parts[1] || ''));
       } else if (slug) { ovRenderCompany(slug); } else { ovRenderRoster(); }
       window.scrollTo(0, 0);
     }
@@ -4191,6 +4231,13 @@ function ovReloadFresh() {
         does: 'Deep-reads it with independently re-verified figures and publishes a study module — sections, glossary, flashcards, quiz — under the ✦ Industry Guidance hub on the masthead.'
       },
       {
+        c: 'profiler report <topic>', plan: '',
+        aka: 'also: "profiler report <type>: <topic>" — types: macro · competitive · risk · opportunity',
+        when: 'You want the covered dossiers synthesized into one document — the state of a space, a head-to-head, the risk picture, or the whitespace.',
+        how: 'One command; Claude resolves the scope, shows a coverage preflight (how fresh and complete each in-scope dossier is), and authors the report from the dossiers alone — no fresh research, every citation copied from a dossier\'s own source list.',
+        does: 'Publishes an immutable snapshot report under the ▤ Reports button — bottom line, confidence-tagged judgments, comparable figures with denominators stated, coverage honesty, and provenance-badged citations. Re-running a topic supersedes the old report rather than editing it.'
+      },
+      {
         c: 'set profiler style to <name>', plan: '',
         aka: 'styles: default · bloomberg · equity-research · intel-briefing · smart-brevity',
         when: 'You want future dossier prose authored in a different voice.',
@@ -5254,19 +5301,22 @@ function ovReloadFresh() {
       return el;
     }
 
-    function gdTable(cols, rows) {
+    // Optional fmt lets the Reports views run their citation-token formatter
+    // through the same table/timeline primitives; guidance callers omit it.
+    function gdTable(cols, rows, fmt) {
+      var F = fmt || gdFmt;
       var wrap = ovEl('div', 'gd-tblwrap');
       var tb = document.createElement('table'); tb.className = 'gd-tbl';
       var thead = document.createElement('thead'), trh = document.createElement('tr');
       for (var c = 0; c < (cols || []).length; c++) {
-        var th = document.createElement('th'); th.innerHTML = gdFmt(cols[c]); trh.appendChild(th);
+        var th = document.createElement('th'); th.innerHTML = F(cols[c]); trh.appendChild(th);
       }
       thead.appendChild(trh); tb.appendChild(thead);
       var tbody = document.createElement('tbody');
       for (var r = 0; r < (rows || []).length; r++) {
         var tr = document.createElement('tr');
         for (var d = 0; d < rows[r].length; d++) {
-          var td = document.createElement('td'); td.innerHTML = gdFmt(rows[r][d]); tr.appendChild(td);
+          var td = document.createElement('td'); td.innerHTML = F(rows[r][d]); tr.appendChild(td);
         }
         tbody.appendChild(tr);
       }
@@ -5299,7 +5349,8 @@ function ovReloadFresh() {
     // lane. Lane colors are the CVD-validated trio (see the CSS block note).
     var GD_LANE_COLORS = { gen: '#b18f35', deploy: '#4f83e6', eco: '#cc5f75' };
 
-    function gdTimeline(sec) {
+    function gdTimeline(sec, fmt) {
+      var F = fmt || gdFmt;
       var box = ovEl('div');
       var lg = ovEl('div', 'gd-legend');
       for (var k in (sec.lanes || {})) if (sec.lanes.hasOwnProperty(k)) {
@@ -5321,8 +5372,8 @@ function ovReloadFresh() {
         dot.style.background = GD_LANE_COLORS[it.lane] || 'var(--ov-muted)';
         dot.title = (sec.lanes && sec.lanes[it.lane]) || it.lane;
         row.appendChild(dot);
-        var lb = ovEl('div', 'lb2'); lb.innerHTML = gdFmt(it.label); row.appendChild(lb);
-        var sb = ovEl('div', 'sb'); sb.innerHTML = gdFmt(it.sub); row.appendChild(sb);
+        var lb = ovEl('div', 'lb2'); lb.innerHTML = F(it.label); row.appendChild(lb);
+        var sb = ovEl('div', 'sb'); sb.innerHTML = F(it.sub); row.appendChild(sb);
         tl.appendChild(row);
       }
       box.appendChild(tl);
@@ -5433,6 +5484,399 @@ function ovReloadFresh() {
       if (ovl) ovl.addEventListener('scroll', hide);
     }
 
+    // ── Industry Reports (v01.52w) ─────────────────────────────────────
+    // Snapshot reports generated by the `profiler report <topic>` command:
+    // point-in-time syntheses built from the covered dossiers, citing THEIR
+    // sources (schema: PROFILER-SCHEMA.md → Report schema). In-page views
+    // (#reports library, #report/<id>) reuse the guidance section primitives
+    // (gdTable/gdTimeline/gdBars/gdProsCons) without the study-module chrome.
+    // Reports are visible to every signed-in tier, like dossiers; only the
+    // Word export inside is gated (the existing `export` capability).
+    var OV_RPT_TYPE_LABEL = { macro: 'Macro', competitive: 'Competitive', risk: 'Risk', opportunity: 'Opportunity' };
+    // Structural headers re-skin per display style, mirroring OV_SEC_LABELS.
+    var OV_RPT_LABELS = {
+      'default':         { bluf: 'Bottom Line', jdg: 'Key Judgments', ind: 'What to Watch', lim: 'Limitations & Gaps', cit: 'Citations', cov: 'Coverage' },
+      'bloomberg':       { bluf: 'Executive Summary', jdg: 'Key Findings', ind: 'Outlook Indicators', lim: 'Methodology Notes & Gaps', cit: 'References', cov: 'Coverage' },
+      'equity-research': { bluf: 'Thesis', jdg: 'Key Calls', ind: 'Catalysts to Watch', lim: 'Risks to the Analysis', cit: 'Sources', cov: 'Coverage' },
+      'intel-briefing':  { bluf: 'Bottom Line Up Front', jdg: 'Key Judgments', ind: 'Indicators to Watch', lim: 'Collection Gaps', cit: 'Source List', cov: 'Coverage' },
+      'smart-brevity':   { bluf: 'The Big Picture', jdg: 'Why It Matters', ind: "What's Next", lim: 'The Fine Print', cit: 'Go Deeper', cov: 'Coverage' }
+    };
+    function rpLabel(k) { return (OV_RPT_LABELS[ovStyle()] || OV_RPT_LABELS['default'])[k]; }
+    // gdFmt plus inline citation tokens: "[c:c3]" becomes a superscript [3]
+    // that scrolls to the citation entry. Anchor-free (data attribute +
+    // delegated click) so in-page citations never fight the hash router.
+    function rpFmt(s) {
+      return gdFmt(s).replace(/\[c:([a-z0-9-]+)\]/gi, function(m, id) {
+        return '<sup class="rp-cite"><a data-rpcite="' + id + '">[' + id.replace(/^c(?=\d)/, '') + ']</a></sup>';
+      });
+    }
+    function rpCiteRow(ids) {
+      if (!ids || !ids.length) return null;
+      var row = ovEl('div', 'rp-cites');
+      row.appendChild(ovEl('span', 'lb', 'Sources:'));
+      for (var i = 0; i < ids.length; i++) {
+        var a = ovEl('a', null, '[' + String(ids[i]).replace(/^c(?=\d)/, '') + ']');
+        a.setAttribute('data-rpcite', ids[i]);
+        row.appendChild(a);
+      }
+      return row;
+    }
+    // One report section — same kind vocabulary as gdRenderSection, minus the
+    // study-module extras (progress buttons, zh notes, flashcards/quiz), plus
+    // the report extras (analysis tag, citation rows, cite tokens in cells).
+    function rpSection(sec) {
+      var el = ovEl('section', 'gd-sec rp-sec');
+      el.id = 'rp-' + (sec.id || '');
+      if (sec.title) el.appendChild(ovEl('h3', null, sec.title));
+      if (sec.analysis) el.appendChild(ovEl('div', 'rp-antag', OV_STRAT_TAG[ovStyle()] || OV_STRAT_TAG['default']));
+      if (sec.read) el.appendChild(ovEl('div', 'gd-read', sec.read));
+      var host = el, pi;
+      if (sec.kind === 'callout') {
+        var wrap = ovEl('div', 'gd-callout' + (sec.tone === 'warn' ? ' warn' : ''));
+        el.appendChild(wrap); host = wrap;
+      }
+      if (sec.intro) host.appendChild(gdP(rpFmt(sec.intro)));
+      if (sec.kind === 'prose' || sec.kind === 'callout') {
+        for (pi = 0; pi < (sec.ps || []).length; pi++) host.appendChild(gdP(rpFmt(sec.ps[pi])));
+      } else if (sec.kind === 'table') {
+        el.appendChild(gdTable(sec.cols, sec.rows, rpFmt));
+      } else if (sec.kind === 'proscons') {
+        for (pi = 0; pi < (sec.cards || []).length; pi++) el.appendChild(gdProsCons(sec.cards[pi]));
+      } else if (sec.kind === 'timeline') {
+        el.appendChild(gdTimeline(sec, rpFmt));
+      } else if (sec.kind === 'bars') {
+        el.appendChild(gdBars(sec));
+      } else if (sec.kind === 'ledger') {
+        el.appendChild(gdTable(['#', 'Claim', 'Basis'], (sec.rows || []).map(function(r, n) {
+          return [String(n + 1), r[0], r[1]];
+        }), rpFmt));
+      }
+      if (sec.note) { var nt = ovEl('div', 'gd-note'); nt.innerHTML = rpFmt(sec.note); el.appendChild(nt); }
+      var cr = rpCiteRow(sec.cites); if (cr) el.appendChild(cr);
+      return el;
+    }
+    function rpRegistryEntry(slug) {
+      var cs = (ovRegistry && ovRegistry.companies) || [];
+      for (var i = 0; i < cs.length; i++) if (cs[i].slug === slug) return cs[i];
+      return null;
+    }
+    // Coverage — the honesty block: the pinned dossier state the report was
+    // built from, the roster-style aggregate strip, and a per-company table
+    // with a "since revised" badge whenever the live registry has moved past
+    // the pin (the report itself is an immutable snapshot).
+    function rpCoverage(rep) {
+      var box = ovEl('section', 'gd-sec rp-sec');
+      box.appendChild(ovEl('h3', null, rpLabel('cov')));
+      var cov = rep.coverage || {}, cs = cov.companies || [];
+      var strip = ovCovStrip(cs);
+      if (strip) box.appendChild(strip);
+      var wrapT = ovEl('div', 'gd-tblwrap');
+      var tb = document.createElement('table'); tb.className = 'gd-tbl';
+      var thead = document.createElement('thead'), trh = document.createElement('tr');
+      ['Company', 'Dossier', 'Updated', 'Sources', 'First-party', 'Comparable $', ''].forEach(function(h) {
+        var th = document.createElement('th'); th.textContent = h; trh.appendChild(th);
+      });
+      thead.appendChild(trh); tb.appendChild(thead);
+      var tbody = document.createElement('tbody');
+      cs.forEach(function(c) {
+        var tr = document.createElement('tr');
+        var td1 = document.createElement('td');
+        var a = ovEl('a', null, c.name || c.slug);
+        a.href = '#' + c.slug; td1.appendChild(a); tr.appendChild(td1);
+        var td2 = document.createElement('td'); td2.textContent = 'v' + (c.profileVersion != null ? c.profileVersion : '?'); tr.appendChild(td2);
+        var td3 = document.createElement('td');
+        var fr = ovFreshness(c.lastUpdated);
+        var dot = ovEl('i', 'dot ' + fr.cls); dot.style.cssText = 'display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;vertical-align:middle;';
+        dot.style.background = fr.cls === 'fresh' ? 'var(--ov-dev)' : (fr.cls === 'aging' ? 'var(--ov-gold)' : 'var(--ov-adv)');
+        td3.appendChild(dot); td3.appendChild(document.createTextNode(c.lastUpdated || '—')); tr.appendChild(td3);
+        var td4 = document.createElement('td'); td4.textContent = c.srcTotal != null ? String(c.srcTotal) : '—'; tr.appendChild(td4);
+        var td5 = document.createElement('td'); td5.textContent = c.srcFirstPct != null ? c.srcFirstPct + '%' : '—'; tr.appendChild(td5);
+        var td6 = document.createElement('td'); td6.textContent = c.kpiNorm ? 'yes' : 'not normalized'; tr.appendChild(td6);
+        var td7 = document.createElement('td');
+        var reg = rpRegistryEntry(c.slug);
+        if (reg && reg.lastUpdated && c.lastUpdated && reg.lastUpdated > c.lastUpdated) {
+          var b = ovEl('span', 'rp-drift', 'since revised ' + reg.lastUpdated);
+          b.title = 'The live dossier has been revised after this report was generated — the report reflects the pinned state';
+          td7.appendChild(b);
+        }
+        tr.appendChild(td7);
+        tbody.appendChild(tr);
+      });
+      tb.appendChild(tbody); wrapT.appendChild(tb); box.appendChild(wrapT);
+      if (cov.gaps && cov.gaps.length) {
+        var gh = ovEl('div', 'gd-read', 'Known gaps'); gh.style.marginTop = '14px'; box.appendChild(gh);
+        var ul = document.createElement('ul');
+        cov.gaps.forEach(function(g) { var li = document.createElement('li'); li.innerHTML = rpFmt(g); ul.appendChild(li); });
+        box.appendChild(ul);
+      }
+      if (cov.dataWindow) {
+        box.appendChild(ovEl('div', 'gd-note', 'Dossier data window: oldest update ' + (cov.dataWindow.oldest || '—')
+          + ', newest ' + (cov.dataWindow.newest || '—') + '. Figures and citations reflect the pinned dossier versions above.'));
+      }
+      return box;
+    }
+    function rpJudgments(rep) {
+      var box = ovEl('section', 'gd-sec rp-sec');
+      box.appendChild(ovEl('h3', null, rpLabel('jdg')));
+      box.appendChild(ovEl('div', 'rp-antag', OV_STRAT_TAG[ovStyle()] || OV_STRAT_TAG['default']));
+      var ol = ovEl('ol', 'rp-jdgs');
+      (rep.keyJudgments || []).forEach(function(j) {
+        var li = document.createElement('li');
+        var conf = (j.confidence === 'high' || j.confidence === 'low') ? j.confidence : 'moderate';
+        li.appendChild(ovEl('span', 'rp-conf ' + conf, conf + ' confidence'));
+        var tx = ovEl('span'); tx.innerHTML = rpFmt(j.text); li.appendChild(tx);
+        var cr = rpCiteRow(j.cites); if (cr) li.appendChild(cr);
+        ol.appendChild(li);
+      });
+      box.appendChild(ol);
+      return box;
+    }
+    function rpIndicators(rep) {
+      if (!rep.indicators || !rep.indicators.length) return null;
+      var box = ovEl('section', 'gd-sec rp-sec');
+      box.appendChild(ovEl('h3', null, rpLabel('ind')));
+      var ul = document.createElement('ul');
+      rep.indicators.forEach(function(it) {
+        var li = document.createElement('li');
+        li.innerHTML = (it.date ? '<strong>' + gdFmt(it.date) + '</strong> — ' : '') + rpFmt(it.text)
+          + (it.confirms ? ' <em>(' + rpFmt(it.confirms) + ')</em>' : '');
+        ul.appendChild(li);
+      });
+      box.appendChild(ul);
+      return box;
+    }
+    function rpLimitations(rep) {
+      if (!rep.limitations || !rep.limitations.length) return null;
+      var box = ovEl('section', 'gd-sec rp-sec');
+      box.appendChild(ovEl('h3', null, rpLabel('lim')));
+      var ul = document.createElement('ul');
+      rep.limitations.forEach(function(g) { var li = document.createElement('li'); li.innerHTML = rpFmt(g); ul.appendChild(li); });
+      box.appendChild(ul);
+      return box;
+    }
+    // Citation list — grouped by company, each entry anchored for the inline
+    // superscripts, with the same provenance tier badges as dossier sources.
+    function rpCitations(rep) {
+      var box = ovEl('section', 'gd-sec rp-sec rp-cits');
+      box.appendChild(ovEl('h3', null, rpLabel('cit')));
+      box.appendChild(ovEl('div', 'gd-read', (rep.citations || []).length
+        + ' citations — every one copied from the cited dossier’s own source list at generation'));
+      var bySlug = {}, order = [];
+      (rep.citations || []).forEach(function(c) {
+        if (!bySlug[c.slug]) { bySlug[c.slug] = []; order.push(c.slug); }
+        bySlug[c.slug].push(c);
+      });
+      order.forEach(function(slug) {
+        var grp = bySlug[slug];
+        var hd = ovEl('div', 'co-hd');
+        var a = ovEl('a', null, grp[0].company || slug);
+        a.href = '#' + slug; hd.appendChild(a); box.appendChild(hd);
+        var ol = document.createElement('ol');
+        grp.forEach(function(c) {
+          var li = document.createElement('li');
+          li.id = 'rpcite-' + c.id;
+          li.appendChild(ovEl('span', null, '[' + String(c.id).replace(/^c(?=\d)/, '') + '] '));
+          var party = OV_PARTY_LABEL[c.party] || OV_PARTY_LABEL.independent;
+          var tag = ovEl('span', 'ov-src-tag ' + party[0], party[1]);
+          tag.title = 'Provenance tier of this source (from the dossier)';
+          li.appendChild(tag);
+          li.appendChild(ovLink(c.url, null, c.label || c.url));
+          if (c.date) { li.appendChild(document.createTextNode(' — ')); li.appendChild(ovEl('span', 'ov-asof', c.date)); }
+          ol.appendChild(li);
+        });
+        box.appendChild(ol);
+      });
+      return box;
+    }
+    // ── Reports views ──
+    function ovRenderReports() {
+      document.title = 'Profiler — Industry Reports';
+      ovNotesCogVisible(ovCan('fieldNote') || ovCan('commands'));
+      var main = ovMain(); ovClear(main);
+      var back = ovEl('button', 'ov-back', '← All companies');
+      back.addEventListener('click', function() { window.location.hash = ''; });
+      main.appendChild(back);
+      main.appendChild(ovEl('div', 'rp-kicker', 'Profiler · Industry Reports'));
+      var loading = ovEl('p', 'ov-loading', 'Loading the report library…');
+      main.appendChild(loading);
+      ovFetchJson('reports/reports-index.json').then(function(idx) {
+        main.removeChild(loading);
+        var reps = (idx && idx.reports) || [];
+        if (!reps.length) { main.appendChild(ovEl('p', 'ov-empty', 'No reports yet — generate one with `profiler report <topic>`.')); return; }
+        var current = reps.filter(function(r) { return r.status !== 'superseded'; });
+        var old = reps.filter(function(r) { return r.status === 'superseded'; });
+        function card(r) {
+          var el = ovEl('div', 'gd-sec rp-sec rp-card' + (r.status === 'superseded' ? ' rp-superseded' : ''));
+          var h = ovEl('h3');
+          var chip = ovEl('span', 'rp-chip', OV_RPT_TYPE_LABEL[r.type] || r.type);
+          h.appendChild(chip); h.appendChild(document.createTextNode(r.title)); el.appendChild(h);
+          el.appendChild(ovEl('div', 'gd-read', (r.date || '') + (r.scopeLabel ? ' · ' + r.scopeLabel : '')
+            + (r.status === 'superseded' ? ' · superseded' : '')));
+          el.appendChild(ovEl('div', 'rp-counts', (r.companies != null ? r.companies + ' companies · ' : '') + (r.citations != null ? r.citations + ' citations' : '')));
+          el.addEventListener('click', function() { window.location.hash = 'report/' + r.id; });
+          return el;
+        }
+        current.forEach(function(r) { main.appendChild(card(r)); });
+        if (old.length) {
+          var oh = ovEl('div', 'gd-read', 'Superseded reports'); oh.style.margin = '22px 0 4px'; main.appendChild(oh);
+          old.forEach(function(r) { main.appendChild(card(r)); });
+        }
+      }).catch(function() {
+        loading.textContent = 'Could not load the report library (profiler-data/reports/reports-index.json).';
+      });
+    }
+    function ovRenderReport(id) {
+      ovNotesCogVisible(ovCan('fieldNote') || ovCan('commands'));
+      var main = ovMain(); ovClear(main);
+      if (!/^[a-z0-9-]+$/.test(id)) { main.appendChild(ovEl('p', 'ov-empty', 'Malformed report id.')); return; }
+      var loading = ovEl('p', 'ov-loading', 'Loading the report…');
+      main.appendChild(loading);
+      ovFetchJson('reports/' + id + '.report.json').then(function(rep) {
+        ovClear(main);
+        document.title = rep.title + ' — Profiler';
+        var back = ovEl('button', 'ov-back', '← All reports');
+        back.addEventListener('click', function() { window.location.hash = 'reports'; });
+        main.appendChild(back);
+        main.appendChild(ovEl('div', 'rp-kicker', 'Profiler · Industry Report'));
+        var h2 = ovEl('h2'); h2.style.cssText = 'font:400 clamp(26px,4.5vw,40px)/1.15 var(--ov-serif);margin:0 0 8px;';
+        h2.textContent = rep.title; main.appendChild(h2);
+        var meta = ovEl('div', 'rp-meta');
+        meta.appendChild(ovEl('span', 'rp-chip', OV_RPT_TYPE_LABEL[rep.type] || rep.type));
+        meta.appendChild(document.createTextNode('generated ' + rep.generated
+          + ((rep.scope && rep.scope.rationale) ? ' · ' + rep.scope.rationale : '')
+          + (rep.supersedes ? ' · supersedes an earlier report' : '')));
+        main.appendChild(meta);
+        if (ovCan('export')) {
+          var ex = ovEl('button', 'ov-btn', 'Export report (.doc)');
+          ex.style.marginBottom = '18px';
+          ex.addEventListener('click', function() { rpWordExport(rep); });
+          main.appendChild(ex);
+        }
+        var bluf = ovEl('section', 'gd-sec rp-sec rp-bluf');
+        bluf.appendChild(ovEl('h3', null, rpLabel('bluf')));
+        bluf.appendChild(ovEl('div', 'rp-antag', OV_STRAT_TAG[ovStyle()] || OV_STRAT_TAG['default']));
+        var bp = document.createElement('p'); bp.innerHTML = '<strong>' + rpFmt(rep.bluf) + '</strong>'; bluf.appendChild(bp);
+        main.appendChild(bluf);
+        main.appendChild(rpCoverage(rep));
+        main.appendChild(rpJudgments(rep));
+        (rep.sections || []).forEach(function(sec) { main.appendChild(rpSection(sec)); });
+        var ind = rpIndicators(rep); if (ind) main.appendChild(ind);
+        var lim = rpLimitations(rep); if (lim) main.appendChild(lim);
+        main.appendChild(rpCitations(rep));
+        // Delegated citation-superscript clicks — no hrefs, so the hash
+        // router never fires and the report view is not re-rendered.
+        main.addEventListener('click', function(ev) {
+          var t = ev.target && ev.target.closest ? ev.target.closest('a[data-rpcite]') : null;
+          if (!t) return;
+          ev.preventDefault();
+          var el = document.getElementById('rpcite-' + t.getAttribute('data-rpcite'));
+          if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.style.color = 'var(--ov-gold)'; setTimeout(function() { el.style.color = ''; }, 1600); }
+        });
+        window.scrollTo(0, 0);
+      }).catch(function() {
+        loading.textContent = 'Could not load the report (' + id + '). It may not be deployed yet.';
+      });
+    }
+    // ── Report Word export — builds the document from the report data
+    // directly (deterministic, DOM-independent), same .doc mechanics as the
+    // dossier export. Gated by the existing `export` capability at the button.
+    function rpWordText(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*([^*\n]+)\*/g, '<em>$1</em>')
+        .replace(/\{\{([^}]+)\}\}/g, '$1')
+        .replace(/\[c:c?(\d+)\]/gi, '<sup>[$1]</sup>')
+        .replace(/\[c:([a-z0-9-]+)\]/gi, '<sup>[$1]</sup>');
+    }
+    function rpWordExport(rep) {
+      var h = [];
+      function sec(title) { h.push('<h2>' + rpWordText(title) + '</h2>'); }
+      h.push('<h1>' + rpWordText(rep.title) + '</h1>');
+      h.push('<p class="d-meta">' + rpWordText((OV_RPT_TYPE_LABEL[rep.type] || rep.type) + ' report · generated ' + rep.generated
+        + ((rep.scope && rep.scope.rationale) ? ' · ' + rep.scope.rationale : '')) + '</p>');
+      sec(rpLabel('bluf')); h.push('<p><strong>' + rpWordText(rep.bluf) + '</strong></p>');
+      sec(rpLabel('jdg')); h.push('<ol>');
+      (rep.keyJudgments || []).forEach(function(j) {
+        h.push('<li><strong>(' + rpWordText((j.confidence || 'moderate') + ' confidence') + ')</strong> ' + rpWordText(j.text) + '</li>');
+      });
+      h.push('</ol>');
+      function tbl(cols, rows) {
+        h.push('<table><thead><tr>' + (cols || []).map(function(c) { return '<th>' + rpWordText(c) + '</th>'; }).join('') + '</tr></thead><tbody>');
+        (rows || []).forEach(function(r) { h.push('<tr>' + r.map(function(d) { return '<td>' + rpWordText(d) + '</td>'; }).join('') + '</tr>'); });
+        h.push('</tbody></table>');
+      }
+      (rep.sections || []).forEach(function(s) {
+        sec(s.title || '');
+        if (s.analysis) h.push('<p class="d-note">' + rpWordText(OV_STRAT_TAG['default']) + '</p>');
+        if (s.intro) h.push('<p>' + rpWordText(s.intro) + '</p>');
+        if (s.kind === 'prose' || s.kind === 'callout') (s.ps || []).forEach(function(p) { h.push('<p>' + rpWordText(p) + '</p>'); });
+        else if (s.kind === 'table') tbl(s.cols, s.rows);
+        else if (s.kind === 'bars') tbl(['', s.unit || 'Value'], (s.items || []).map(function(it) { return [it.label + (it.sub ? ' — ' + it.sub : ''), String(it.v)]; }));
+        else if (s.kind === 'timeline') tbl(['When', 'Event', 'Read'], (s.items || []).slice().sort(function(a, b) { return a.x - b.x; }).map(function(it) { return [String(it.x), it.label, it.sub || '']; }));
+        else if (s.kind === 'ledger') tbl(['#', 'Claim', 'Basis'], (s.rows || []).map(function(r, n) { return [String(n + 1), r[0], r[1]]; }));
+        else if (s.kind === 'proscons') (s.cards || []).forEach(function(c) {
+          h.push('<h3>' + rpWordText(c.t) + '</h3>');
+          h.push('<p><strong>Advantages:</strong></p><ul>' + (c.adv || []).map(function(x) { return '<li>' + rpWordText(x) + '</li>'; }).join('') + '</ul>');
+          h.push('<p><strong>Disadvantages / costs:</strong></p><ul>' + (c.dis || []).map(function(x) { return '<li>' + rpWordText(x) + '</li>'; }).join('') + '</ul>');
+        });
+        if (s.note) h.push('<p class="d-note">' + rpWordText(s.note) + '</p>');
+      });
+      if (rep.indicators && rep.indicators.length) {
+        sec(rpLabel('ind')); h.push('<ul>');
+        rep.indicators.forEach(function(it) { h.push('<li><strong>' + rpWordText(it.date || '') + '</strong> ' + rpWordText(it.text) + (it.confirms ? ' <em>(' + rpWordText(it.confirms) + ')</em>' : '') + '</li>'); });
+        h.push('</ul>');
+      }
+      if (rep.limitations && rep.limitations.length) {
+        sec(rpLabel('lim')); h.push('<ul>' + rep.limitations.map(function(g) { return '<li>' + rpWordText(g) + '</li>'; }).join('') + '</ul>');
+      }
+      sec(rpLabel('cov'));
+      tbl(['Company', 'Dossier', 'Updated', 'Sources', 'First-party', 'Comparable $'],
+        ((rep.coverage && rep.coverage.companies) || []).map(function(c) {
+          return [c.name || c.slug, 'v' + c.profileVersion, c.lastUpdated || '—', String(c.srcTotal != null ? c.srcTotal : '—'), (c.srcFirstPct != null ? c.srcFirstPct + '%' : '—'), c.kpiNorm ? 'yes' : 'not normalized'];
+        }));
+      ((rep.coverage && rep.coverage.gaps) || []).forEach(function(g) { h.push('<p class="d-note">' + rpWordText(g) + '</p>'); });
+      sec(rpLabel('cit')); h.push('<ol>');
+      (rep.citations || []).forEach(function(c) {
+        h.push('<li>[' + rpWordText(String(c.id).replace(/^c(?=\d)/, '')) + '] ' + rpWordText((c.company || c.slug) + ' — ' + (c.label || ''))
+          + (c.url ? ' — <a href="' + String(c.url).replace(/"/g, '&quot;') + '">' + rpWordText(c.url) + '</a>' : '')
+          + (c.date ? ' (' + rpWordText(c.date) + ')' : '') + ' · ' + rpWordText(c.party || 'independent') + '</li>');
+      });
+      h.push('</ol>');
+      var css = 'body{font-family:Georgia,"Times New Roman",serif;font-size:11pt;color:#23211c;}'
+        + 'h1{font-size:20pt;margin:0 0 2pt;}'
+        + 'h2{font-size:10pt;letter-spacing:2px;text-transform:uppercase;color:#8a6d1f;border-bottom:1pt solid #cfc8b4;margin:16pt 0 6pt;padding-bottom:3pt;}'
+        + 'h3{font-size:12pt;margin:9pt 0 2pt;} p{margin:5pt 0;} ul,ol{margin:3pt 0 8pt;} li{margin:2pt 0;}'
+        + 'table{border-collapse:collapse;width:100%;margin:6pt 0 10pt;}'
+        + 'th{text-align:left;font-size:8pt;text-transform:uppercase;color:#6d6758;border-bottom:1.5pt solid #23211c;padding:3pt 8pt 3pt 0;}'
+        + 'td{border-bottom:0.5pt solid #d8d2c0;padding:3pt 8pt 3pt 0;vertical-align:top;font-size:10pt;}'
+        + '.d-meta{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;} .d-note{font-style:italic;color:#6d6758;font-size:10pt;}'
+        + 'a{color:#305a8a;text-decoration:none;} sup{font-size:7pt;}';
+      var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
+        + '<head><meta charset="utf-8"><title>' + rpWordText(rep.title) + '</title><style>' + css + '</style></head>'
+        + '<body>' + h.join('') + '</body></html>';
+      var blob = new Blob(['﻿' + html], { type: 'application/msword' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = (rep.id || 'report') + '.doc';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function() { URL.revokeObjectURL(a.href); }, 4000);
+    }
+    // Masthead button — reports are dossier-grade public Pages data, so the
+    // button is not role-gated; the sign-in wall still covers the whole UI
+    // until a session validates (or the pre-deployment fallback skips it).
+    function ovReportsBtnShow() {
+      if (document.getElementById('ov-reports-btn')) return;
+      var head = document.getElementById('ov-header');
+      if (!head) return;
+      var b = document.createElement('button');
+      b.id = 'ov-reports-btn'; b.type = 'button';
+      b.textContent = '▤ Reports';
+      b.title = 'Industry reports generated from the covered dossiers';
+      b.addEventListener('click', function() { window.location.hash = 'reports'; });
+      head.appendChild(b);
+    }
+    ovReportsBtnShow();
     // ── App sign-in wall (developer directive 2026-08-09) ──
     // The whole app sits behind Google sign-in + the Master ACL, like Receipts.
     // Reuses the note backend's session machinery (GIS popup + fetch exchange).

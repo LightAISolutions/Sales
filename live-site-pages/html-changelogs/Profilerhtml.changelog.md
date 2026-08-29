@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.52w] — 2026-08-29 04:45:35 PM EST — v03.63r
+
+### Added
+- A new Reports library on the masthead — point-in-time industry reports built from the covered dossiers. The first report covers the grid-scale battery storage competitive field
+- Each report opens with the bottom line and numbered, confidence-tagged key judgments, and shows exactly which companies it draws on, how current each one was, and how well-sourced — including a plain statement of what is missing
+- Every figure and claim links to numbered citations taken from the dossiers' own source lists, each labelled by where it came from — the company itself, its filings and releases, or independent reporting
+- Reports can be exported as Word documents
 
 ## [v01.51w] — 2026-08-29 03:37:45 PM EST — v03.61r
 
@@ -338,34 +346,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 ### Added
 - Dossier version history — companies with archived dossier versions show a "Versions 🕘" button; browse any previous version as a clearly-labeled historical snapshot with one tap back to the current dossier
 - "＋ Add note" button in the Field Notes changelog — opens the new sign-in-protected note form where you can record what you learned and rate your confidence
-
-## [v01.06w] — 2026-08-07 11:02:33 PM EST — v01.94r
-
-### Added
-- Field Notes changelog — a ⚙ button in the bottom-right of the dashboard opens a chronological log of first-hand notes, filterable by company, each showing its date, source type, and a 0–100 confidence rating
-- Study guides — companies with a published study guide now show a "Study guide 📖" button on their dossier, opening a need-to-know brief with tap-to-flip flashcards
-
-## [v01.05w] — 2026-08-07 09:49:43 PM EST — v01.92r
-
-### Added
-- Profiler can now be installed to your phone's home screen as a real app — added via "Add to Home Screen", it opens full-screen with its own icon, without the browser address bar
-
-## [v01.04w] — 2026-08-07 03:26:14 AM EST — v01.91r
-
-### Changed
-- Profiler now has its own logo — a corporate dossier emblem shown on the loading and maintenance screens, replacing the generic placeholder
-
-## [v01.03w] — 2026-08-07 12:34:58 AM EST — v01.89r
-
-### Changed
-- The app has a new name: **Profiler** — the page title, header, and document exports now use the new name
-
-## [v01.02w] — 2026-08-07 12:02:06 AM EST — v01.88r
-
-### Added
-- Recent Developments timeline on company dossiers — dated news highlights with a category tag and a one-line strategy takeaway per event
-- Strategy Read section — a clearly-labeled analytical view of each company's sales and product direction
-- Richer product entries: competitive positioning, how each product is sold, target segments, and roadmap items
-- Word and PDF exports include all the new sections
 
 Developed by: LightAISolutions

@@ -1,0 +1,16 @@
+{
+ "schemaVersion": 1,
+ "reports": [
+  {
+   "id": "grid-scale-bess--competitive--2026-08-29",
+   "title": "Grid-Scale Battery Storage — Competitive Assessment",
+   "type": "competitive",
+   "topic": "Grid-scale battery energy storage systems — the head-to-head set of system suppliers and integrators",
+   "date": "2026-08-29",
+   "scopeLabel": "12 grid-scale BESS system players",
+   "companies": 12,
+   "citations": 42,
+   "status": "current"
+  }
+ ]
+}

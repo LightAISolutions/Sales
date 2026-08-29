@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.63r] — 2026-08-29 04:45:35 PM EST
+
+> **Prompt:** "Picking up from my recent \"Profiler app dossier Summary expansion\" session, design and build profiler report <topic> (roadmap #3, the last approved item) — the industry-report engine the whole quality build-out was for. Everything it needs now exists: normalized KPIs for cross-company figures, provenance for citation confidence, relationships for ecosystem structure, peer families for scoping, and coverage metadata for honesty about gaps. Start with a design pass (report types — macro, competitive, risk, opportunity; output format; how reports cite dossier sources) and get developer approval before building."
+
+### Added
+- **`profiler report <topic>` command — the industry-report engine (roadmap #3, developer-approved design).** Reports are immutable snapshot JSONs synthesized from covered dossiers only (no fresh research), citing the dossiers' own `sources[]` with data-driven provenance tiers. Report schema + reports-index schema added to `repository-information/PROFILER-SCHEMA.md`; the "Profiler Report Command" section added to `.claude/rules/profiler-app.md` (type/scope resolution, coverage preflight, authoring rules, verification, supersede-not-edit lifecycle); CLAUDE.md Profiler Command pointer updated. Four report types: macro, competitive, risk, opportunity. Field notes are excluded from report content by design (public Pages data)
+- Reports renderer in `Profiler.html` (v01.52w): `#reports` library + `#report/<id>` views, masthead "▤ Reports" button (all tiers, like dossiers), inline `[c:id]` citation superscripts with provenance badges, coverage block with pinned dossier versions + "since revised" drift badges, confidence-tagged key judgments, indicators/limitations sections, and a report Word export (gated by the existing `export` capability). Section bodies reuse the guidance renderer primitives — `gdTable`/`gdTimeline` gained an optional formatter parameter (backward compatible)
+- `scripts/check-profiler-reports.py` — mandatory verification after any report write: schema shape, citation resolution against each cited profile's `sources[]`, party-tier derivation match, bars-figure verification against the KPI overlay, coverage-pin drift, and index reconciliation. Pin/citation mismatches are errors while the cited profile sits at the pinned version, warnings once it has moved on
+- Seed report `grid-scale-bess--competitive--2026-08-29` (12 grid-scale BESS system players, 42 citations, 7 sections) + `reports-index.json` — validated end-to-end: check script 0 errors / 0 warnings, Playwright render test of both views passed with zero page errors
+
+### Changed
+- `live-site-pages/html-changelogs/Profilerhtml.changelog.md`: rotated the 2026-08-07 date group (v01.02w–v01.06w, five sections) to the archive with SHA enrichment — active file now 46/50
 
 ## [v03.62r] — 2026-08-29 03:45:02 PM EST
 

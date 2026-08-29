@@ -74,6 +74,20 @@ If the user says **"profiler prep \<Company\>"** (or similar: "prep me for \<Com
 5. **Refresh on demand** — re-running the command regenerates both layers from the current dossier + notes; files are overwritten in place (git history preserves prior versions)
 6. **Commit/push** — normal checklists; repo CHANGELOG entry (private file names are fine in the repo CHANGELOG; keep them out of any public page changelog)
 
+## Profiler Report Command — Industry Reports
+
+If the user says **"profiler report \<topic\>"** (or similar: "generate a report on \<topic\>", "industry report: \<topic\>", or the explicit form **"profiler report \<type\>: \<topic\>"**):
+
+**What this command is:** the industry-report engine. It synthesizes a **point-in-time report from covered dossiers only** — reading profiles and citing *their* sources, never re-researching (the "Reports" rule under Recall design below). The output is a snapshot JSON (`live-site-pages/profiler-data/reports/<id>.report.json`, schema: PROFILER-SCHEMA.md → Report schema) rendered by the app's Reports view (`#reports` / `#report/<id>`, masthead button, all tiers).
+
+1. **Resolve type and scope** — `type` ∈ `macro` (state of a topic across the ecosystem), `competitive` (who is winning a peer set and why — scope within a peer family so comparisons stay like-for-like), `risk` (what could go wrong: misses, guidance cuts, litigation/regulatory items, concentration), `opportunity` (whitespace: roadmaps, unserved segments, expansion signals — the most analysis-heavy type). Infer the type from the phrasing when unambiguous; otherwise ask. Resolve the topic to in-scope companies via registry categories, peer families, or named slugs, and record the one-line `scope.rationale`
+2. **Preflight** — present the resolved type + scope + a coverage table (each company's `lastUpdated`, freshness tier per the roster thresholds — fresh ≤45d / aging ≤120d / stale — `kpiNorm`, `srcFirstPct`). If the type/scope is ambiguous or stale dossiers materially affect the report, ask the developer (refresh first vs. proceed with staleness flagged); an unattended session proceeds and records the staleness honestly in `coverage`. Refresh-first runs the normal Profiler Command on the stale companies before authoring
+3. **Author the report** — in the **active writing style** (PROFILER-STYLES.md): `bluf`, confidence-tagged `keyJudgments[]`, body `sections[]` (guidance section-kind vocabulary), `indicators[]`, `limitations[]`. Hard rules, all from the Report schema: citations copied verbatim from dossier `sources[]` with data-driven `party` tiers; comparison figures **only** from the normalized-KPI overlay with denominators stated; analysis labeled (`analysis: true`, judgments, bluf); **field notes never appear in report content** (they may steer scope/emphasis when the developer supplies them — nothing note-derived is stated); mandatory `coverage` block with per-company pins and `gaps[]`
+4. **Register it** — add the entry (newest first) to `reports/reports-index.json`; if this re-runs a prior topic, set `supersedes` on the new report and flip the old index entry's `status` to `superseded`. Reports are immutable — never edit a published report file; supersede it
+5. **Verify** — run `python3 scripts/check-profiler-reports.py`. A report write without a clean pass is incomplete (sibling rule to the registry sync in step 5 of the Profiler Command). Fix any errors before committing
+6. **Versioning** — report JSONs + index are **data-only**: no Profiler page version bump, the Profiler page is an indirect affect in AFFECTED URLS, and the repo CHANGELOG records the report (e.g. "Generated grid-scale BESS competitive report (<id>)"). Renderer/UI changes follow the normal page rules
+7. **Commit/push** — normal Pre-Commit + Pre-Push checklists apply
+
 ## Dossier Writing Styles
 
 `repository-information/PROFILER-STYLES.md` is the named-styles registry and the single source of truth for **how dossier prose is written** — the schema says *what* fields exist; the active style says *how* their prose reads. Rules:
@@ -151,6 +165,6 @@ Built so a future Claude session can reconstruct full context cheaply:
 - **Field notes are NOT readable from the repo** — the log moved to Drive (M3). An unattended session (scheduled refresh, quarterly sweep) has no note context and should proceed without it rather than erroring on a missing file. When the developer is present and notes matter for the task, ask them to paste the app's **📋 Copy pending** output; weight what they supply by `confidence` as usual
 - **Schema doc defines meaning** — field semantics live in PROFILER-SCHEMA.md, not in Claude's memory
 - **Revisions are diffable** — `profileVersion` + `lastUpdated` + git history + repo CHANGELOG entries give a full revision trail per company
-- **Reports** — when generating a report that cites covered companies, read the relevant profiles and cite their `sources` rather than re-researching from scratch; refresh a profile first if it is stale for the report's purpose
+- **Reports** — when generating a report that cites covered companies, read the relevant profiles and cite their `sources` rather than re-researching from scratch; refresh a profile first if it is stale for the report's purpose. This rule is operationalized by the **Profiler Report Command** above — reports are snapshot JSONs whose citations are copied verbatim from dossier `sources[]` and whose coverage pins make staleness visible
 
 Developed by: LightAISolutions
