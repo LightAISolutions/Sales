@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.52w">
+  <meta name="build-version" content="v01.53w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -3113,10 +3113,14 @@ function ovReloadFresh() {
     //   style     — dossier display-style switcher (admin tooling)
     //   commands  — 'Commands' reference in the settings cog menu (developer
     //               tooling: how Profiler is run and maintained through Claude)
+    //   reports   — '▤ Reports' masthead button + the #reports/#report views
+    //               (admin-only by developer directive, 2026-08-29). No server
+    //               half exists: report JSONs are static Pages data, so this
+    //               UI gate is the only boundary (same caveat as dossiers)
     // Every backend op behind these surfaces is independently gated server-side
     // in Profiler.gs; this map governs what the app shows, not what it may do.
     var OV_ROLE_CAPS = {
-      admin:       ['fieldNote', 'versions', 'guidance', 'export', 'style', 'commands'],
+      admin:       ['fieldNote', 'versions', 'guidance', 'export', 'style', 'commands', 'reports'],
       contributor: ['guidance', 'export'],
       analyst:     ['export'],
       viewer:      []
@@ -4235,7 +4239,7 @@ function ovReloadFresh() {
         aka: 'also: "profiler report <type>: <topic>" — types: macro · competitive · risk · opportunity',
         when: 'You want the covered dossiers synthesized into one document — the state of a space, a head-to-head, the risk picture, or the whitespace.',
         how: 'One command; Claude resolves the scope, shows a coverage preflight (how fresh and complete each in-scope dossier is), and authors the report from the dossiers alone — no fresh research, every citation copied from a dossier\'s own source list.',
-        does: 'Publishes an immutable snapshot report under the ▤ Reports button — bottom line, confidence-tagged judgments, comparable figures with denominators stated, coverage honesty, and provenance-badged citations. Re-running a topic supersedes the old report rather than editing it.'
+        does: 'Publishes an immutable snapshot report under the admin-only ▤ Reports button — bottom line, confidence-tagged judgments, comparable figures with denominators stated, coverage honesty, and provenance-badged citations. Re-running a topic supersedes the old report rather than editing it.'
       },
       {
         c: 'set profiler style to <name>', plan: '',
@@ -5490,8 +5494,10 @@ function ovReloadFresh() {
     // sources (schema: PROFILER-SCHEMA.md → Report schema). In-page views
     // (#reports library, #report/<id>) reuse the guidance section primitives
     // (gdTable/gdTimeline/gdBars/gdProsCons) without the study-module chrome.
-    // Reports are visible to every signed-in tier, like dossiers; only the
-    // Word export inside is gated (the existing `export` capability).
+    // The whole surface is admin-only (the `reports` capability in
+    // OV_ROLE_CAPS — developer directive, 2026-08-29): the masthead button,
+    // both views, and the Word export inside (which additionally keeps its
+    // own `export` capability check).
     var OV_RPT_TYPE_LABEL = { macro: 'Macro', competitive: 'Competitive', risk: 'Risk', opportunity: 'Opportunity' };
     // Structural headers re-skin per display style, mirroring OV_SEC_LABELS.
     var OV_RPT_LABELS = {
@@ -5692,7 +5698,9 @@ function ovReloadFresh() {
     function ovRenderReports() {
       document.title = 'Profiler — Industry Reports';
       ovNotesCogVisible(ovCan('fieldNote') || ovCan('commands'));
-      var main = ovMain(); ovClear(main);
+      var main = ovMain();
+      if (!ovCan('reports')) { rpDenied(main); return; }
+      ovClear(main);
       var back = ovEl('button', 'ov-back', '← All companies');
       back.addEventListener('click', function() { window.location.hash = ''; });
       main.appendChild(back);
@@ -5727,7 +5735,9 @@ function ovReloadFresh() {
     }
     function ovRenderReport(id) {
       ovNotesCogVisible(ovCan('fieldNote') || ovCan('commands'));
-      var main = ovMain(); ovClear(main);
+      var main = ovMain();
+      if (!ovCan('reports')) { rpDenied(main); return; }
+      ovClear(main);
       if (!/^[a-z0-9-]+$/.test(id)) { main.appendChild(ovEl('p', 'ov-empty', 'Malformed report id.')); return; }
       var loading = ovEl('p', 'ov-loading', 'Loading the report…');
       main.appendChild(loading);
@@ -5862,21 +5872,32 @@ function ovReloadFresh() {
       document.body.appendChild(a); a.click(); document.body.removeChild(a);
       setTimeout(function() { URL.revokeObjectURL(a.href); }, 4000);
     }
-    // Masthead button — reports are dossier-grade public Pages data, so the
-    // button is not role-gated; the sign-in wall still covers the whole UI
-    // until a session validates (or the pre-deployment fallback skips it).
+    // Masthead button — admin-only (the `reports` capability), created from
+    // the auth wall's pass() like the guidance button, so other tiers and
+    // signed-out visitors never see it in the DOM. Note the raw report JSONs
+    // remain public Pages data — this gates the app surface, not the files.
     function ovReportsBtnShow() {
+      if (!ovCan('reports')) return;
       if (document.getElementById('ov-reports-btn')) return;
       var head = document.getElementById('ov-header');
       if (!head) return;
       var b = document.createElement('button');
       b.id = 'ov-reports-btn'; b.type = 'button';
       b.textContent = '▤ Reports';
-      b.title = 'Industry reports generated from the covered dossiers';
+      b.title = 'Industry reports generated from the covered dossiers (admin)';
       b.addEventListener('click', function() { window.location.hash = 'reports'; });
       head.appendChild(b);
     }
-    ovReportsBtnShow();
+    // Direct-hash access lands here for every tier, so the views enforce the
+    // same capability the button does. pass() re-runs ovRoute once the tier is
+    // known, so an admin deep link renders after sign-in without a reload.
+    function rpDenied(main) {
+      ovClear(main);
+      var back = ovEl('button', 'ov-back', '← All companies');
+      back.addEventListener('click', function() { window.location.hash = ''; });
+      main.appendChild(back);
+      main.appendChild(ovEl('p', 'ov-empty', 'Reports are available to administrators only.'));
+    }
     // ── App sign-in wall (developer directive 2026-08-09) ──
     // The whole app sits behind Google sign-in + the Master ACL, like Receipts.
     // Reuses the note backend's session machinery (GIS popup + fetch exchange).
@@ -5900,7 +5921,7 @@ function ovReloadFresh() {
       function say(msg, bad) { st.textContent = msg || ''; st.style.color = bad ? '#e07a8b' : 'var(--ov-faint)'; }
       function pass() {
         wall.style.display = 'none';
-        ovStyleBtnShow(); ovGuideBtnShow();
+        ovStyleBtnShow(); ovGuideBtnShow(); ovReportsBtnShow();
         // The first render can run before whoami resolves, so the role-gated
         // controls in it were decided without a tier. Repaint now that we have one.
         try { if (ovRegistry) ovRoute(); } catch (rErr) {}

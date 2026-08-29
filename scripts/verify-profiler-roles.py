@@ -15,13 +15,13 @@ the four gated surfaces actually render. The tier is never written to
 localStorage directly — it arrives from the stubbed whoami and passes through
 ovNormalizeRole, so the test exercises the real sign-in path.
 
-The matrix under test (developer directive, 2026-08-22):
+The matrix under test (developer directives, 2026-08-22; Reports added 2026-08-29):
 
-    tier          Field Note   Versions   Industry Guidance   Export dossier
-    admin              yes        yes            yes               yes
-    contributor         no         no            yes               yes
-    analyst             no         no             no               yes
-    viewer              no         no             no                no
+    tier          Field Note   Versions   Industry Guidance   Export dossier   Reports
+    admin              yes        yes            yes               yes           yes
+    contributor         no         no            yes               yes            no
+    analyst             no         no             no               yes            no
+    viewer              no         no             no                no            no
 
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
@@ -45,10 +45,10 @@ SHOTS.mkdir(exist_ok=True)
 
 # Expected matrix — the developer's directive, encoded as the test oracle.
 EXPECT = {
-    'admin':       {'fieldNote': True,  'versions': True,  'guidance': True,  'export': True},
-    'contributor': {'fieldNote': False, 'versions': False, 'guidance': True,  'export': True},
-    'analyst':     {'fieldNote': False, 'versions': False, 'guidance': False, 'export': True},
-    'viewer':      {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False},
+    'admin':       {'fieldNote': True,  'versions': True,  'guidance': True,  'export': True,  'reports': True},
+    'contributor': {'fieldNote': False, 'versions': False, 'guidance': True,  'export': True,  'reports': False},
+    'analyst':     {'fieldNote': False, 'versions': False, 'guidance': False, 'export': True,  'reports': False},
+    'viewer':      {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False, 'reports': False},
 }
 GUIDANCE_ALLOWED = {'admin', 'contributor'}   # mirrors guidanceAllowed_ in Profiler.gs
 
@@ -112,6 +112,7 @@ def probe(page):
         versions:  vis('ov-vers-btn'),
         guidance:  vis('ov-guide-btn'),
         export:    vis('ov-export-btn'),
+        reports:   vis('ov-reports-btn'),
         wall:      vis('ov-authwall'),
         role:      localStorage.getItem('ov_note_role')
       };
@@ -271,7 +272,7 @@ def run():
                 " return !!e && getComputedStyle(e).display !== 'none'; }")
 
             exp = EXPECT[role]
-            for cap in ('fieldNote', 'versions', 'guidance', 'export'):
+            for cap in ('fieldNote', 'versions', 'guidance', 'export', 'reports'):
                 if got[cap] != exp[cap]:
                     failures.append('%s: %s expected %s, got %s' % (role, cap, exp[cap], got[cap]))
             if got['cog'] != exp['fieldNote']:
@@ -291,13 +292,13 @@ def run():
 
     mark = lambda b: 'shown ' if b else 'hidden'
     print('\nRole + Access matrix')
-    print('\n%-12s %-8s %-8s %-8s %-8s %-8s %-8s' %
-          ('ROLE', 'NoteBtn', 'NoteBox', 'Cog', 'Versions', 'Guidance', 'Export'))
-    print('-' * 66)
+    print('\n%-12s %-8s %-8s %-8s %-8s %-8s %-8s %-8s' %
+          ('ROLE', 'NoteBtn', 'NoteBox', 'Cog', 'Versions', 'Guidance', 'Export', 'Reports'))
+    print('-' * 75)
     for role, g in rows:
-        print('%-12s %-8s %-8s %-8s %-8s %-8s %-8s' % (
+        print('%-12s %-8s %-8s %-8s %-8s %-8s %-8s %-8s' % (
             role, mark(g['noteBtn']), mark(g['noteBox']), mark(g['cog']),
-            mark(g['versions']), mark(g['guidance']), mark(g['export'])))
+            mark(g['versions']), mark(g['guidance']), mark(g['export']), mark(g['reports'])))
     print()
     if failures:
         print('FAILURES (%d):' % len(failures))

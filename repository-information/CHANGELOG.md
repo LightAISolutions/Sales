@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.64r] — 2026-08-29 04:56:45 PM EST
+
+> **Prompt:** "Make the entire \"Reports\" function only visible and accessible to admin level users."
+
+### Changed
+- **Reports surface is now admin-only** (`Profiler.html` v01.53w): added a `reports` capability to `OV_ROLE_CAPS` granted to `admin` alone; the masthead "▤ Reports" button is now created from the auth wall's `pass()` (like the guidance button) so other tiers and signed-out visitors never get it in the DOM; the `#reports` and `#report/<id>` routes render an "administrators only" notice via `rpDenied()` for any tier without the capability — `pass()`'s existing `ovRoute()` repaint means an admin deep link renders right after sign-in. Raw report JSONs remain public Pages data (UI-level gate, same caveat as dossiers), noted in the code comments and docs
+- `scripts/verify-profiler-roles.py`: Reports column added to the matrix oracle (`EXPECT`), the DOM probe, the per-tier assertion loop, and the printed summary table — full run passes (admin shown; contributor/analyst/viewer hidden)
+- `.claude/rules/profiler-app.md`: Role + Access matrix updated (contributor now loses Field Note, Versions, and Reports); Profiler Report Command wording changed from "all tiers" to admin-only. `repository-information/PROFILER-SCHEMA.md`: Report schema notes the admin-only app surface and the public-files caveat
 
 ## [v03.63r] — 2026-08-29 04:45:35 PM EST
 

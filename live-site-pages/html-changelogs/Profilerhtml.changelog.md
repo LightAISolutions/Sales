@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.53w] — 2026-08-29 04:56:45 PM EST — v03.64r
+
+### Changed
+- The Reports library is now available to administrators only — the masthead button and report pages no longer appear for other users
 
 ## [v01.52w] — 2026-08-29 04:45:35 PM EST — v03.63r
 
