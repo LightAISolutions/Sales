@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.52r] — 2026-08-29 02:50:58 AM EST
+
+> **Prompt:** "Picking up from my "Profiler app sign-in error" session, (see attached screenshot) I want each dossier's "Background" tab to be renamed to "Summary" and I want each dossier's Summary to contain more information. On the surface, my purpose for creating the Profiler app is just to get some high level stats of major players in the US BESS/AIDC market and essentially create a Sparknotes-like portfolio for myself and other users to quickly read and understand the target company. However, in the grand scheme of my app ecosystem, I am relying on the Profiler app to have the most factual information from 1st party sources and be able to cross-analyze major players of different aspects of the US BESS/AIDC industry in order to better understand the market as a whole, culminating in very high-value industry reports (macro, competitive analysis, risk analysis, opportunities, etc.). Thus, I would like to improve each dossier's Summary tab (and other tabs if possible) to show more high-value information, ideally enough that would make the user look through the other tabs for deeper understanding. Recommend me some ways to improve my Profiler app as a whole to approve."
+
+### Changed
+
+- `Profiler.html` (v01.44w) — renamed the dossier's opening tab from "Background" to "Summary" under the active `intel-briefing` display style (`OV_SEC_LABELS['intel-briefing'].snapshot`). The section heading, tab chip, deep-link labels, and Word/PDF export chapter list all follow automatically via `ovSecLabel()`; the other four styles keep their own idiomatic labels ("Snapshot", "1. Executive Summary", "Company Overview", "The Big Picture"), and the `BACKGROUND:` prose signpost inside dossier `summary` fields is untouched (it is authored prose, split by `ovAppendSummary()` as before)
+
+### Added
+
+- `Profiler.html` (v01.44w) — Summary signal board: `ovSignalBoard()` + `ovTrunc()` in the PROJECT JS block and `.ov-sigs`/`.ov-sig` styles in the PROJECT CSS block. Six clickable cards render under the BLUF prose on the opening tab, each derived entirely from the already-loaded profile JSON: lead key judgment (+ judgment count), financial beat/miss/in-line tally across all reported periods, newest recent development (schema orders newest first), first three product lines + spec-table count, top listed decision maker (+ count), and source count with newest publication date + dossier version/compile date. Each card calls `ovShowTab()` so the reader lands on the full tab. Data-only dossier revisions need no upkeep — the board recomputes from whatever the profile holds, and dossiers missing a section simply render fewer cards
 
 ## [v03.51r] — 2026-08-29 01:30:10 AM EST
 

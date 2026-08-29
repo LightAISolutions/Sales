@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.44w] — 2026-08-29 02:50:58 AM EST — v03.52r
+
+### Changed
+- The dossier's opening tab is now called "Summary"
+
+### Added
+- The Summary tab opens with an at-a-glance board: the lead analytic judgment, the beat/miss record across reported financial periods, the newest reported development, product-line and leadership counts, and how fresh the sourcing is — each card jumps straight to its full tab
 
 ## [v01.43w] — 2026-08-27 04:09:00 PM EST — v03.03r
 

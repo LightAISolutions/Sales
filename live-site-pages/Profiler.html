@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.43w">
+  <meta name="build-version" content="v01.44w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -260,6 +260,20 @@
     .ov-fact .k { font: 9.5px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-faint); margin-bottom: 7px; }
     .ov-fact .v { font-size: 14.5px; }
     .ov-fact .v, td.fv { text-transform: capitalize; }
+    /* Summary signal board (v01.44w) — at-a-glance teasers into the deeper tabs */
+    .ov-sigs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin: 14px 0 6px; }
+    .ov-sig {
+      text-align: left; background: var(--ov-card); border: 1px solid var(--ov-line);
+      border-radius: 10px; padding: 13px 15px; cursor: pointer; color: var(--ov-paper);
+      font-family: inherit; display: flex; flex-direction: column;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+    .ov-sig:hover { transform: translateY(-1px); border-color: var(--ov-gold); background: var(--ov-card2); }
+    .ov-sig .k { font: 9.5px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-faint); margin-bottom: 8px; display: flex; justify-content: space-between; gap: 8px; }
+    .ov-sig .k .n { color: var(--ov-gold); letter-spacing: 0; }
+    .ov-sig .v { font-size: 13px; line-height: 1.55; }
+    .ov-sig .v2 { font-size: 11.5px; line-height: 1.5; color: var(--ov-muted); margin-top: 4px; }
+    .ov-sig .go { margin-top: auto; padding-top: 9px; font: 10px/1 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ov-gold); }
     /* Products */
     .ov-prod { border-left: 2px solid var(--ov-line2); padding: 2px 0 2px 18px; margin: 18px 0; }
     .ov-prod h4 { font: 400 19px/1.3 var(--ov-serif); margin: 0 0 6px; }
@@ -1582,7 +1596,7 @@ function ovReloadFresh() {
       'default':         { snapshot: 'Snapshot', products: 'Products & Services', devs: 'Recent Developments', strategy: 'Strategy Read', specs: 'Technical Specifications', people: 'Decision Makers', fin: 'Financial Performance vs Expectations', sources: 'Sources' },
       'bloomberg':       { snapshot: '1. Executive Summary', products: '2. Products and Services', devs: '3. Recent Developments', strategy: '4. Strategy Read', specs: '5. Technical Specifications', people: '6. Leadership', fin: '7. Financials Versus Expectations', sources: '8. Sources' },
       'equity-research': { snapshot: 'Company Overview', products: 'Business Segments', devs: 'Catalysts & News Flow', strategy: 'Investment Thesis — Analytical View', specs: 'Product Detail', people: 'Management', fin: 'Results vs Consensus', sources: 'Sources' },
-      'intel-briefing':  { snapshot: 'Background', products: 'Capabilities', devs: 'Recent Reporting', strategy: 'Key Judgments', specs: 'Technical Annex', people: 'Key Personnel', fin: 'Financial Reporting', sources: 'Source List' },
+      'intel-briefing':  { snapshot: 'Summary', products: 'Capabilities', devs: 'Recent Reporting', strategy: 'Key Judgments', specs: 'Technical Annex', people: 'Key Personnel', fin: 'Financial Reporting', sources: 'Source List' },
       'smart-brevity':   { snapshot: 'The Big Picture', products: 'What They Sell', devs: "What's Happening", strategy: 'Between the Lines', specs: 'Zoom In', people: "Who's Who", fin: 'By the Numbers', sources: 'Go Deeper' }
     };
     var OV_STRAT_TAG = {
@@ -1732,6 +1746,76 @@ function ovReloadFresh() {
       return g;
     }
 
+    // ── Summary signal board (v01.44w) ──
+    // An at-a-glance layer on the dossier's opening tab, synthesized from the
+    // deeper sections of the profile that is already loaded: each card shows
+    // the strongest datum its tab holds and clicking it opens that tab. Purely
+    // derived — nothing here is authored per-dossier or needs separate upkeep.
+    function ovTrunc(s, n) {
+      s = String(s || '').trim();
+      if (s.length <= n) return s;
+      return s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…';
+    }
+    function ovSignalBoard(p) {
+      var defs = []; // [tab key, count badge, main line, secondary line]
+      if (p.strategyRead && p.strategyRead.length) {
+        var nJ = p.strategyRead.length;
+        defs.push(['strategy', nJ, ovTrunc(ovStratText(p.strategyRead[0]), 150),
+          nJ > 1 ? '+ ' + (nJ - 1) + ' more judgment' + (nJ > 2 ? 's' : '') + ', each with its basis' : '']);
+      }
+      if (p.financials && p.financials.periods && p.financials.periods.length) {
+        var tally = { beat: 0, miss: 0, inline: 0 }, perNames = [];
+        p.financials.periods.forEach(function(per) {
+          perNames.push(per.period);
+          (per.metrics || []).forEach(function(m) { if (tally[m.verdict] != null) tally[m.verdict]++; });
+        });
+        defs.push(['fin', p.financials.periods.length,
+          tally.beat + ' beat · ' + tally.miss + ' miss · ' + tally.inline + ' in line vs expectations',
+          ovTrunc(perNames.join(' · '), 70)]);
+      }
+      if (p.recentDevelopments && p.recentDevelopments.length) {
+        var ev = p.recentDevelopments[0]; // schema orders newest first
+        defs.push(['devs', p.recentDevelopments.length, ovTrunc(ev.headline || '', 120),
+          [ev.date || '', ev.category || ''].filter(Boolean).join(' · ')]);
+      }
+      if (p.productsAndServices && p.productsAndServices.length) {
+        var pn = p.productsAndServices.map(function(x) { return x.name; }).filter(Boolean);
+        var specN = ovSpecGroups(p).length;
+        var extra = [];
+        if (pn.length > 3) extra.push('+ ' + (pn.length - 3) + ' more line' + (pn.length > 4 ? 's' : ''));
+        if (specN) extra.push(specN + ' spec table' + (specN > 1 ? 's' : ''));
+        defs.push(['products', pn.length, ovTrunc(pn.slice(0, 3).join(' · '), 130), extra.join(' · ')]);
+      }
+      if (p.decisionMakers && p.decisionMakers.length) {
+        var x0 = p.decisionMakers[0], nP = p.decisionMakers.length;
+        defs.push(['people', nP, ovTrunc((x0.name || '') + (x0.title ? ' — ' + x0.title : ''), 110),
+          nP > 1 ? '+ ' + (nP - 1) + ' more profiled, with career backgrounds' : '']);
+      }
+      if (p.sources && p.sources.length) {
+        var d0 = '';
+        for (var si = 0; si < p.sources.length && !d0; si++) d0 = p.sources[si].date || '';
+        defs.push(['sources', p.sources.length, d0 ? 'Newest publication ' + d0 : 'Cited public sources',
+          'Dossier v' + (p.profileVersion || 1) + (p.lastUpdated ? ' · compiled ' + p.lastUpdated : '')]);
+      }
+      if (!defs.length) return null;
+      var wrap = ovEl('div', 'ov-sigs');
+      defs.forEach(function(d) {
+        var b = ovEl('button', 'ov-sig');
+        b.type = 'button';
+        b.setAttribute('aria-label', 'Open the ' + ovSecLabel(d[0]) + ' tab');
+        var k = ovEl('div', 'k');
+        k.appendChild(ovEl('span', null, ovSecLabel(d[0])));
+        k.appendChild(ovEl('span', 'n', String(d[1])));
+        b.appendChild(k);
+        if (d[2]) b.appendChild(ovEl('div', 'v', d[2]));
+        if (d[3]) b.appendChild(ovEl('div', 'v2', d[3]));
+        b.appendChild(ovEl('div', 'go', 'Open ' + ovSecLabel(d[0]) + ' →'));
+        b.addEventListener('click', function() { ovShowTab(p.slug, d[0], true); });
+        wrap.appendChild(b);
+      });
+      return wrap;
+    }
+
     function ovInitials(name) {
       var parts = String(name || '?').trim().split(/\s+/);
       var ini = (parts[0] ? parts[0][0] : '?') + (parts.length > 1 ? parts[parts.length - 1][0] : '');
@@ -1859,6 +1943,11 @@ function ovReloadFresh() {
       if (p.summary) ovAppendSummary(prose, p.summary);
       if (p.ecosystemRole) prose.appendChild(ovEl('p', null, p.ecosystemRole));
       snap.appendChild(prose);
+      var sigBoard = ovSignalBoard(p);
+      if (sigBoard) {
+        snap.appendChild(ovEl('p', 'sec-note', 'At a glance — each card distills one of the deeper tabs; open a card for the full picture.'));
+        snap.appendChild(sigBoard);
+      }
       paneFor('overview').appendChild(snap);
 
       // Products & services
