@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.51r] — 2026-08-29 01:30:10 AM EST
+
+> **Prompt:** "7am ET is fine. I am currently testing the app so there will be weekend editions. Keep my scheduler on the Mon-Fri 7am ET schedule, but don't just ship out existing Editions. Run a new intake for each Edition 1 hour before it's scheduled to be shipped out. That should replace any same-day versions I may have created during my tests right? On every Monday 6am ET, you should run a new intake for news over the last 72 hours - I assume that will result in a similar number of relevant articles as these news sources shouldn't be working over the weekend most of the time. Then, Tue-Fri 6am ET, run a new intake for news over the last 24 hours instead of 72 to cover the entire week."
+
+### Fixed
+
+`Scraper.gs` (v01.83g)
+
+- **The 06:00 scheduled build skipped any edition that had already been built that day — including by hand.** `scDigestMorningRun` filtered on `ed.lastBuilt !== clock.date` and `scEditionDue_` repeated it, and `lastBuilt` is written by *every* build. So a manual "Run intake now" at 02:00 made the edition look already-built at 06:00; the scheduled run passed it over and 07:00 shipped the hand-built copy. That is the precise opposite of what the developer asked for, and it is what their current testing would have produced every weekday morning
+- **The scheduled build is now tracked separately from `lastBuilt`.** `scSchedBuiltToday_` / `scMarkSchedBuilt_` answer the narrower question the schedule actually needs — "has *today's scheduled* build run for this edition" — while `lastBuilt` keeps its original job of stopping the hourly tick rebuilding all day. The marker is written **only on completion**, in all three paths that can finish a build, so a run cut short by the execution budget resumes on its continuation trigger and is retried rather than silently counted as done
+- **A stale row can no longer ship while its replacement is being built.** The 06:00 build is chunked across continuation triggers and can still be working at 07:00; `scDigestBuildInFlight_` makes the send pass hold that edition instead of mailing the copy the rebuild exists to discard. Held, not stamped, so the pass after the finished build delivers it
+
+### Changed
+
+`Scraper.html` (v01.66w)
+
+- The Schedule panel stated only the send time. It now states the build hour, that the build replaces the day's existing edition, and the 72h/24h split — the half of the schedule the developer had to ask about because the UI never said it
+
+### Notes
+
+- **Already correct and left alone, verified rather than assumed:** `SCRAPER_DIGEST_BUILD_HOUR` is 6, `SCRAPER_DIGEST_SEND_HOUR` is 7, and `scEditionWindowH_` already returns 72 on `isoDay === 1` and 24 otherwise. `t24.js` now pins all of it, including that the two hours are exactly one apart, so the request is a standing test rather than a claim in a changelog
+- **Answering the developer's question precisely:** yes for same-day — `scDigestDropSameDayRows_` is keyed on (edition, date), so Monday's 06:00 build deletes and replaces any Monday-dated edition. Their **weekend** test editions are a different case: they persist in the sheet but can never be emailed, because delivery filters to rows dated `clock.date` and the weekend guard added in v03.50r refuses the day outright. Both are asserted
+- **One deliberate non-change:** `scEditionWindowH_` honours an explicit per-edition `windowH` ahead of the Monday rule. That is a setting, not a bug, so it stands — but it means an edition with a stored window would not get 72h on a Monday. Pinned by test and flagged to the developer rather than quietly overridden
+- **639 assertions pass** across 24 suites; new `t24.js` (32) covers the windows, the marker, the interrupted-build retry, and the in-flight delivery hold
+- `Scraperhtml.changelog.md` was at 50/50 and rotated — the 2026-08-04 group, twelve sections, to the archive with SHA enrichment
 
 ## [v03.50r] — 2026-08-29 01:19:10 AM EST
 

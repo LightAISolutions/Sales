@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.83g] — 2026-08-29 01:30:10 AM EST — v03.51r
+
+### Fixed
+- **The 6:00 AM build now runs even if you already built that edition by hand.** It previously skipped any edition that had been built at all that day — so an edition you made while testing at 2am was left in place and emailed at 7am instead of being replaced by a fresh one. The scheduled run is now tracked separately from your manual builds: it always produces a new edition, replacing the day's existing one, and still runs only once a day
+- **An edition can no longer be emailed while its replacement is still being built.** The 6:00 build runs in stages and can occasionally still be working at 7:00; the send now waits for it rather than mailing the copy it is about to discard
+
+### Notes
+- The daily schedule was already correct and is unchanged: build 6:00 AM ET, send 7:00 AM ET, Monday–Friday, with Monday covering 72 hours and Tuesday–Friday covering 24
 
 ## [v01.82g] — 2026-08-29 01:19:10 AM EST — v03.50r
 

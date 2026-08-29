@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 39/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.66w] — 2026-08-29 01:30:10 AM EST — v03.51r
+
+### Changed
+- The Schedule panel now states the whole schedule rather than only the send time: a fresh intake builds at 6:00 AM ET, one hour before the send, and replaces any edition already built that day; Monday covers 72 hours and Tuesday–Friday cover 24
 
 ## [v01.65w] — 2026-08-29 01:19:10 AM EST — v03.50r
 
@@ -288,86 +293,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - Adding a keyword to the search plan now shows instantly: a pending row appears at the top of the list the moment you press Add, then is replaced by the saved entry (highlighted) as soon as the service confirms
 - After every addition the panel re-displays the exact saved plan from the server, so the list on screen always matches what is actually stored
 - If the confirmation is lost to a slow connection, the panel now re-checks the saved plan and tells you definitively whether your keyword was added — no more guessing
-
-## [v01.27w] — 2026-08-04 08:27:47 PM EST — v01.75r
-
-### Added
-- Every completed action now tells you the recommended next step (e.g. after gathering news: "Next: run Analyze to score them"), and result messages stay on screen longer so they're harder to miss
-- The search plan panel now always shows how many query groups are saved and when the plan was last saved — so you can verify a rebuild went through even if you looked away
-- The Stats panel footer now recommends the single most valuable next action based on your numbers
-
-### Fixed
-- Requests that hang no longer leave a button stuck forever — after 90 seconds the call fails visibly with a clear message and the button becomes usable again
-
-## [v01.26w] — 2026-08-04 08:11:10 PM EST — v01.74r
-
-### Changed
-- Faster button responses: when the connection has to use its backup route, the page now remembers that and uses the working route directly — cutting each press's wait roughly in half in that situation
-
-## [v01.25w] — 2026-08-04 06:41:08 PM EST — v01.73r
-
-### Added
-- The search plan panel now has an add-a-term box: type a company or keyword (and press Enter or tap Add) and a fully-shaped query group appears at the top of the list in real time, highlighted so you can see exactly what was added — no need to leave the panel
-- If a term is already covered by an existing query group, the panel tells you which one instead of adding a duplicate
-
-### Changed
-- The Plan button now opens your saved plan instantly (no waiting, no rebuild) — a separate Rebuild button inside the panel regenerates the plan from scratch, with a confirmation tap since it replaces the current list including your manual additions
-
-## [v01.24w] — 2026-08-04 06:01:06 PM EST — v01.72r
-
-### Added
-- New Plan button on each project card: builds an AI search plan from your full topic, keywords, and learned preferences, and shows the resulting query groups in a panel — the plan then powers Compile, Backfill, and Deep backfill
-- New Deep backfill button: a premium history search that asks for confirmation before running (it uses paid AI web searches), shows live progress with articles found and searches used, and resumes where it left off if interrupted
-- Compile and Backfill progress now shows how many junk headlines were filtered out before entering your collection
-
-## [v01.23w] — 2026-08-04 04:53:53 PM EST — v01.71r
-
-### Added
-- The Stats panel now shows, under each score band, how many articles had a preview versus title-only — so you can see whether missing previews explain low scores
-- The Stats footer now shows how many articles qualify for archiving and how many are already archived
-- New "Archive junk" button on each project card: shows the exact count first ("Archive 1781? Tap again"), then moves unrated articles scoring under 10 out of your collection with a progress panel and a result message
-
-## [v01.22w] — 2026-08-04 04:01:42 PM EST — v01.70r
-
-### Added
-- New Stats button on each project card shows your score distribution at a glance: a big headline with the share of articles scoring 20+, color-coded bars for each score band, and corpus health (preview coverage, your rating counts, and how many articles are worth calibrating)
-
-## [v01.21w] — 2026-08-04 03:33:53 AM EST — v01.68r
-
-### Added
-- New Enrich button on each project card fills in missing article previews by fetching them from the publishers — with live progress showing how many previews were found and how many were unavailable
-
-## [v01.20w] — 2026-08-04 02:39:32 AM EST — v01.66r
-
-### Added
-- Added suggestions can now be undone — tap the × on an added keyword or source chip to remove it from your project (undo saves instantly and in the background, just like adding)
-- New progress bars for Compile, Backfill, Analyze, and Re-score: a panel in the bottom-left shows the action name, a live fill bar, detailed counts (processed, found, failed, scored, remaining), and a running clock — it stays visible even while the articles or calibration view is open, and turns green when finished
-
-## [v01.19w] — 2026-08-04 01:46:24 AM EST — v01.65r
-
-### Changed
-- Adding suggested keywords/sources to your project now responds instantly — taps register immediately and save together in the background, with a clear message if a save fails so you can retry
-
-### Fixed
-- Rapidly adding several suggestions could previously lose some of them — all additions now save reliably
-
-## [v01.18w] — 2026-08-04 01:33:25 AM EST — v01.64r
-
-### Changed
-- Calibration now explains clearly when there's nothing worthwhile left to rate, and points to Compile + Analyze to bring in fresh articles
-
-## [v01.17w] — 2026-08-04 01:17:17 AM EST — v01.63r
-
-### Added
-- Project cards now show a green ⏰ chip with the next scheduled run time (hover to see the last run), or "first run pending" for a newly scheduled project
-
-## [v01.16w] — 2026-08-04 01:08:07 AM EST — v01.62r
-
-### Added
-- New Calibrate button on each project: a focused rating mode that feeds you a varied mix of articles — mostly borderline ones where your opinion teaches the most — and replaces each card as you rate it, with a running session counter
-- While calibrating, your preferences automatically re-learn after every 10 ratings, with a confirmation message each time
-- New "What I've learned" panel shows the current preference profile plus suggested search keywords and your most-liked news sources, each with a one-tap + to add it to your project permanently
-- New "Re-score collection" button re-scores all your gathered articles with the latest learned preferences (asks for confirmation first)
-- The Articles view now has filters: time window, minimum score, and keyword search
 
 Developed by: LightAISolutions

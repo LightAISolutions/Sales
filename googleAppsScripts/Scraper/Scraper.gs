@@ -1,4 +1,4 @@
-var VERSION = "v01.82g";
+var VERSION = "v01.83g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4766,14 +4766,21 @@ function scDigestScheduledTick_() {
   var state = scDigestState_();
   // A build already in flight today → keep advancing it to completion first.
   if (state && state.phase !== 'done' && state.date === clock.date) {
-    try { scDigestStep_(state.editionId); } catch (e0) {}
+    var edId = state.editionId;
+    var info = null;
+    try { info = scDigestStep_(edId); } catch (e0) {}
+    // The tick can be the pass that finishes a build the 06:00 run started, so
+    // the marker has to be written here too or the schedule would re-run it.
+    if (info && info.done) scMarkSchedBuilt_(edId, clock.date);
     return;
   }
   // Otherwise pick the first enabled edition that is DUE and not built today.
   var editions = scEditions_(ss);
   for (var i = 0; i < editions.length; i++) {
     if (scEditionDue_(editions[i], clock)) {
-      try { scDigestStep_(editions[i].id); } catch (e1) {}
+      var due = editions[i].id, r = null;
+      try { r = scDigestStep_(due); } catch (e1) {}
+      if (r && r.done) scMarkSchedBuilt_(due, clock.date);
       return;
     }
   }
@@ -4880,6 +4887,13 @@ function scDigestDeliverPending_(ss, opts) {
     if (scIssueDateKey_(meta[i][1]) !== clock.date) continue;    // only today's
     var edId = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
     var row = i + 2;
+    // A scheduled build for this edition is still running today. The 06:00 run
+    // is chunked across continuation triggers, so it can still be working at
+    // 07:00 — and this row is the one it is about to replace. Sending it now
+    // would deliver exactly the stale copy the rebuild exists to discard.
+    // Left pending, not stamped: the pass that follows the finished build
+    // picks it up.
+    if (scDigestBuildInFlight_(edId, clock.date)) { held++; continue; }
     if (!chosen[i]) {
       // Superseded by a newer build of the same day, or the day already mailed.
       sheet.getRange(row, 14).setValue('superseded');
@@ -4941,16 +4955,24 @@ function scDigestMorningRun() {
     ensureScraperTabs_(ss);
     var clock = scDigestClock_(new Date());
     if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) return;
+    // Same change as scEditionDue_: the 06:00 run rebuilds even when the day
+    // already has an edition, because replacing it is the point.
     var editions = scEditions_(ss).filter(function(ed) {
-      return ed.enabled && ed.lastBuilt !== clock.date && scEditionCadenceDue_(ed, clock);
+      return ed.enabled && !scSchedBuiltToday_(ed.id, clock.date)
+        && scEditionCadenceDue_(ed, clock);
     });
     // Every due edition, in roster order, to completion — within the budget.
     for (var i = 0; i < editions.length; i++) {
+      var finished = false;
       while ((Date.now() - t0) < SCRAPER_DIGEST_RUN_BUDGET_MS) {
         var info = null;
         try { info = scDigestStep_(editions[i].id); } catch (stepErr) { break; }
-        if (info && info.done) break;
+        if (info && info.done) { finished = true; break; }
       }
+      // Marked only on completion. A build cut short by the budget resumes on
+      // the continuation trigger and is marked when it actually finishes — so
+      // an interrupted build is retried rather than silently counted as done.
+      if (finished) scMarkSchedBuilt_(editions[i].id, clock.date);
       if ((Date.now() - t0) >= SCRAPER_DIGEST_RUN_BUDGET_MS) { more = true; break; }
     }
     try { scDigestDeliverPending_(ss); } catch (delErr) {}
@@ -6387,11 +6409,52 @@ function scEditionWindowH_(ed, clock) {
   return clock.isoDay === 1 ? 72 : SCRAPER_DIGEST_WINDOW_H;  // daily: 72h Mondays
 }
 
+/** Has TODAY'S SCHEDULED build already run for this edition?
+
+    Distinct from `lastBuilt`, which any build sets — including a manual "Run
+    intake now". That is the whole point. The morning run filtered on
+    `ed.lastBuilt !== clock.date`, so an edition the developer had built by hand
+    at 02:00 looked already-built at 06:00 and the scheduled run skipped it —
+    leaving the hand-built copy to be emailed at 07:00. The developer asked for
+    the opposite: the 06:00 run should produce a fresh edition and REPLACE
+    whatever the day already had.
+
+    `lastBuilt` still does its original job of stopping the hourly tick from
+    rebuilding all day. This marker answers the narrower question the schedule
+    actually needs, and only the scheduled path writes it. */
+function scSchedBuiltKey_(editionId) {
+  return 'scDigestSchedBuilt_' + String(editionId || SCRAPER_EDITION_DEFAULT.id);
+}
+function scSchedBuiltToday_(editionId, date) {
+  try {
+    return PropertiesService.getScriptProperties()
+      .getProperty(scSchedBuiltKey_(editionId)) === date;
+  } catch (e) { return false; }
+}
+function scMarkSchedBuilt_(editionId, date) {
+  try {
+    PropertiesService.getScriptProperties().setProperty(scSchedBuiltKey_(editionId), date);
+  } catch (e) { /* a marker that fails to save costs one duplicate build, not a send */ }
+}
+
+/** Is a scheduled build for this edition still running today? Delivery has to
+    know: if the 06:00 build overruns past 07:00 — it is chunked across
+    continuation triggers — the send pass would otherwise ship the row the
+    rebuild is about to replace, which is precisely the stale test edition the
+    developer is trying not to receive. */
+function scDigestBuildInFlight_(editionId, date) {
+  var st = null;
+  try { st = scDigestState_(editionId); } catch (e) { return false; }
+  return !!(st && st.date === date && st.phase && st.phase !== 'done');
+}
+
 /** Is this edition due to build now? (pure given clock + lastBuilt) */
 function scEditionDue_(ed, clock) {
   if (!ed.enabled) return false;
   if (clock.hour < SCRAPER_DIGEST_RUN_HOUR) return false;
-  if (ed.lastBuilt === clock.date) return false;
+  // The catch-up tick asks whether the SCHEDULED build has run, not whether
+  // anything has. A manual test build must not satisfy the schedule.
+  if (scSchedBuiltToday_(ed.id, clock.date)) return false;
   if (ed.cadence === 'daily') return SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) !== -1;
   if (ed.cadence === 'weekly') return clock.isoDay === (ed.anchor || 5);   // default Friday
   if (ed.cadence === 'monthly') return clock.dom === (ed.anchor || 1);
