@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.61r] — 2026-08-29 03:37:45 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- Roster freshness tints and coverage meters (roadmap #5) in `live-site-pages/Profiler.html`: every roster card carries a `cov` line — freshness dot (`ovFreshness`: fresh ≤45d, aging ≤120d, stale beyond — thresholds follow the post-earnings refresh cadence), visible age in days, source count, first-party share, and a `$ comparable` / `$ not normalized` tag from the schema-v4 overlay. An aggregate strip above the grid (`ovCovStrip`) totals dossiers, cited sources, comparable-revenue count, median first-party share, and the oldest update age
+- `scripts/sync-profiler-registry.py` — reconciliation for denormalized registry fields. The roster renders from the registry alone (recall design: one fetch, no per-card profile loads), so the new per-card facts are denormalized into `profiler-companies.json` as `srcTotal`, `srcFirstPct`, `kpiNorm` (all 88 populated), with `lastUpdated` sync folded in — replacing the one-off drift pass from v03.54r. `--check` reports drift without writing; the provenance logic mirrors `ovSourceParty` and both carry keep-in-sync comments
+- `PROFILER-SCHEMA.md`: the three denormalized fields documented as auto-maintained (never hand-edit), plus a "Denormalized fields & the sync script" note explaining the reconciliation contract
+
+### Changed
+- Roster cards show update age (`7d`) instead of the raw `as of` date — the cov line owns the date signal, and age scans faster across 88 cards
+
+### Fixed
+- `ovFreshness` initially computed age with `Math.round` over a datetime-minus-midnight delta, which flipped boundary dates between tiers over the course of a single day (caught by the 45d/120d edge checks in the new Playwright suite). Now whole-calendar-day arithmetic: both ends floored to UTC days
 
 ## [v03.60r] — 2026-08-29 05:41:32 AM EST
 

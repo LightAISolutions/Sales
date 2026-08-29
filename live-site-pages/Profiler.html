@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.50w">
+  <meta name="build-version" content="v01.51w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -201,6 +201,20 @@
     .ov-card .tag-row { margin-bottom: 10px; }
     .ov-card .tagline { color: var(--ov-muted); font-size: 13.5px; margin: 0 0 14px; min-height: 2.6em; }
     .ov-card .meta { color: var(--ov-faint); font: 10.5px/1.5 var(--ov-mono); letter-spacing: 0.04em; }
+    /* Roster freshness + coverage (v01.51w) */
+    .ov-card .cov { display: flex; align-items: center; gap: 9px; margin-top: 9px; padding-top: 8px; border-top: 1px solid var(--ov-line); color: var(--ov-faint); font: 10.5px/1.4 var(--ov-mono); letter-spacing: 0.04em; }
+    .ov-card .cov .dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+    .ov-card .cov .dot.fresh { background: var(--ov-dev); }
+    .ov-card .cov .dot.aging { background: var(--ov-gold); }
+    .ov-card .cov .dot.stale { background: var(--ov-adv); }
+    .ov-card .cov .kpi { color: var(--ov-dev); }
+    .ov-card .cov .nokpi { opacity: 0.55; }
+    #ov-cov-strip { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 2px 0 16px; color: var(--ov-muted); font: 11px/1.6 var(--ov-mono); letter-spacing: 0.04em; }
+    #ov-cov-strip b { color: var(--ov-paper); font-weight: 400; }
+    #ov-cov-strip .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+    #ov-cov-strip .dot.fresh { background: var(--ov-dev); }
+    #ov-cov-strip .dot.aging { background: var(--ov-gold); }
+    #ov-cov-strip .dot.stale { background: var(--ov-adv); }
     .ov-tag {
       display: inline-block; font: 9.5px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
       padding: 4px 8px; border-radius: 4px; margin: 0 6px 4px 0;
@@ -1684,6 +1698,78 @@ function ovReloadFresh() {
     }
 
     // ── Roster ──
+    // ── Roster freshness + coverage (v01.51w) ─────────────────────────────
+    // Everything shown here comes from the REGISTRY (srcTotal, srcFirstPct,
+    // kpiNorm — denormalized by scripts/sync-profiler-registry.py). The roster
+    // stays a single fetch; per-card profile loads would defeat the
+    // registry-as-index design. If these numbers look out of step with a
+    // dossier, re-run the sync script — drift means a profile changed without
+    // the registry pass.
+    // Thresholds follow the refresh cadence, not calendar quarters: dossiers
+    // revise post-earnings, so ~45 days is one cycle with slack and 120 days
+    // means a company missed a whole cycle.
+    function ovFreshness(lastUpdated) {
+      if (!lastUpdated) return { cls: 'stale', label: 'no update date' };
+      // Whole-calendar-day age: floor both ends to UTC days. Rounding a
+      // datetime delta instead would flip a boundary date between tiers over
+      // the course of a single day.
+      var days = Math.max(0, Math.floor(Date.now() / 86400000) - Math.floor(new Date(lastUpdated + 'T00:00:00Z').getTime() / 86400000));
+      var cls = days <= 45 ? 'fresh' : (days <= 120 ? 'aging' : 'stale');
+      return { cls: cls, days: days, label: days === 0 ? 'updated today' : 'updated ' + days + 'd ago' };
+    }
+    function ovCovLine(c) {
+      var line = ovEl('div', 'cov');
+      var fr = ovFreshness(c.lastUpdated);
+      var dot = ovEl('i', 'dot ' + fr.cls);
+      line.appendChild(dot);
+      var age = ovEl('span', null, fr.days != null ? fr.days + 'd' : '—');
+      age.title = fr.label + (c.lastUpdated ? ' (' + c.lastUpdated + ')' : '');
+      line.appendChild(age);
+      var srcBit = ovEl('span', null, (c.srcTotal != null ? c.srcTotal + ' src' : '— src') +
+        (c.srcFirstPct != null ? ' · ' + c.srcFirstPct + '% 1st' : ''));
+      srcBit.title = c.srcTotal != null
+        ? c.srcTotal + ' cited sources, ' + c.srcFirstPct + '% first-party (company channels + filings/releases)'
+        : 'Source coverage not synced yet — run scripts/sync-profiler-registry.py';
+      line.appendChild(srcBit);
+      var kpi = ovEl('span', c.kpiNorm ? 'kpi' : 'nokpi', c.kpiNorm ? '$ comparable' : '$ not normalized');
+      kpi.title = c.kpiNorm
+        ? 'Latest annual revenue is normalized to USD and comparable in the Compare view'
+        : 'No normalized revenue yet — this dossier shows as-reported figures only';
+      line.appendChild(kpi);
+      return line;
+    }
+    function ovCovStrip(companies) {
+      var withKpi = 0, srcSum = 0, fpVals = [], oldest = null;
+      companies.forEach(function(c) {
+        if (c.kpiNorm) withKpi++;
+        srcSum += c.srcTotal || 0;
+        if (c.srcFirstPct != null) fpVals.push(c.srcFirstPct);
+        if (c.lastUpdated && (!oldest || c.lastUpdated < oldest)) oldest = c.lastUpdated;
+      });
+      if (!companies.length) return null;
+      fpVals.sort(function(x, y) { return x - y; });
+      var med = fpVals.length ? fpVals[Math.floor(fpVals.length / 2)] : null;
+      var strip = ovEl('div'); strip.id = 'ov-cov-strip';
+      var s1 = ovEl('span'); s1.appendChild(ovEl('b', null, String(companies.length))); s1.appendChild(document.createTextNode(' dossiers · ')); s1.appendChild(ovEl('b', null, String(srcSum))); s1.appendChild(document.createTextNode(' cited sources'));
+      strip.appendChild(s1);
+      var s2 = ovEl('span'); s2.appendChild(ovEl('b', null, String(withKpi))); s2.appendChild(document.createTextNode(' with comparable revenue'));
+      s2.title = (companies.length - withKpi) + ' still show as-reported figures only';
+      strip.appendChild(s2);
+      if (med != null) {
+        var s3 = ovEl('span'); s3.appendChild(document.createTextNode('median ')); s3.appendChild(ovEl('b', null, med + '%')); s3.appendChild(document.createTextNode(' first-party'));
+        strip.appendChild(s3);
+      }
+      if (oldest) {
+        var frO = ovFreshness(oldest);
+        var s4 = ovEl('span');
+        s4.appendChild(ovEl('i', 'dot ' + frO.cls));
+        s4.appendChild(document.createTextNode('oldest '));
+        s4.appendChild(ovEl('b', null, frO.days + 'd'));
+        s4.title = 'Least recently refreshed dossier: ' + oldest;
+        strip.appendChild(s4);
+      }
+      return strip;
+    }
     function ovRenderRoster() {
       document.title = 'Profiler — Ecosystem Company Dossiers';
       ovNotesCogVisible(ovCan('fieldNote') || ovCan('commands'));
@@ -1754,6 +1840,9 @@ function ovReloadFresh() {
         main.appendChild(legend);
       }
 
+      var covStrip = ovCovStrip(companies);
+      if (covStrip) main.appendChild(covStrip);
+
       var grid = ovEl('div'); grid.id = 'ov-grid';
       main.appendChild(grid);
 
@@ -1780,8 +1869,8 @@ function ovReloadFresh() {
           var meta = [];
           if (c.hq) meta.push(c.hq);
           if (c.ticker) meta.push(c.ticker);
-          if (c.lastUpdated) meta.push('as of ' + c.lastUpdated);
           card.appendChild(ovEl('div', 'meta', meta.join('  ·  ')));
+          card.appendChild(ovCovLine(c));
           card.addEventListener('click', function() {
             if (!ovCompareMode) { window.location.hash = c.slug; return; }
             var at = ovComparePicks.indexOf(c.slug);

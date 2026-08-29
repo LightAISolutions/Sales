@@ -9,6 +9,15 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 *(No changes yet)*
 
+## [v01.51w] — 2026-08-29 03:37:45 PM EST — v03.61r
+
+### Added
+- The company roster now shows how current and how complete each dossier is at a glance. Every card carries a freshness dot with the age of its last update — green for recently refreshed, amber when a refresh cycle has been missed, red when two have — plus its source count, its first-party share, and whether its revenue is comparable in the Compare view
+- A summary line above the roster totals it up: how many dossiers, how many cited sources, how many companies carry a comparable revenue figure, the median first-party share, and the age of the least recently updated dossier
+
+### Changed
+- Roster cards show the update age in days instead of a raw date — quicker to scan across many companies
+
 ## [v01.50w] — 2026-08-29 05:41:32 AM EST — v03.60r
 
 ### Added
@@ -358,12 +367,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - Strategy Read section — a clearly-labeled analytical view of each company's sales and product direction
 - Richer product entries: competitive positioning, how each product is sold, target segments, and roadmap items
 - Word and PDF exports include all the new sections
-
-## [v01.01w] — 2026-08-06 09:50:12 PM EST — v01.84r
-
-### Added
-- Export button on every company dossier
-- Document-style preview screen so you can check for mistakes before exporting
-- Export to Word (downloads a .doc file) or PDF (opens the print dialog — choose "Save as PDF")
 
 Developed by: LightAISolutions

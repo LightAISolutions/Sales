@@ -28,7 +28,10 @@
       "domains": [
         "global.abb",
         "abb.com"
-      ]
+      ],
+      "srcTotal": 16,
+      "srcFirstPct": 69,
+      "kpiNorm": true
     },
     {
       "slug": "aligned",
@@ -42,7 +45,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "aligneddc.com"
-      ]
+      ],
+      "srcTotal": 39,
+      "srcFirstPct": 77,
+      "kpiNorm": false
     },
     {
       "slug": "amazon",
@@ -58,7 +64,10 @@
       "domains": [
         "aboutamazon.com",
         "amazon.com"
-      ]
+      ],
+      "srcTotal": 20,
+      "srcFirstPct": 50,
+      "kpiNorm": true
     },
     {
       "slug": "applied-digital",
@@ -73,7 +82,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "applieddigital.com"
-      ]
+      ],
+      "srcTotal": 24,
+      "srcFirstPct": 62,
+      "kpiNorm": true
     },
     {
       "slug": "arevon",
@@ -87,7 +99,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "arevonenergy.com"
-      ]
+      ],
+      "srcTotal": 19,
+      "srcFirstPct": 74,
+      "kpiNorm": false
     },
     {
       "slug": "bechtel",
@@ -101,7 +116,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "bechtel.com"
-      ]
+      ],
+      "srcTotal": 31,
+      "srcFirstPct": 55,
+      "kpiNorm": false
     },
     {
       "slug": "black-veatch",
@@ -115,7 +133,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "bv.com"
-      ]
+      ],
+      "srcTotal": 29,
+      "srcFirstPct": 55,
+      "kpiNorm": false
     },
     {
       "slug": "blattner",
@@ -130,7 +151,10 @@
       "lastUpdated": "2026-08-24",
       "domains": [
         "blattnercompany.com"
-      ]
+      ],
+      "srcTotal": 18,
+      "srcFirstPct": 56,
+      "kpiNorm": false
     },
     {
       "slug": "bloom-energy",
@@ -145,7 +169,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "bloomenergy.com"
-      ]
+      ],
+      "srcTotal": 14,
+      "srcFirstPct": 50,
+      "kpiNorm": true
     },
     {
       "slug": "burns-mcdonnell",
@@ -159,7 +186,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "burnsmcd.com"
-      ]
+      ],
+      "srcTotal": 28,
+      "srcFirstPct": 64,
+      "kpiNorm": false
     },
     {
       "slug": "byd",
@@ -175,7 +205,10 @@
       "domains": [
         "byd.com",
         "bydenergy.com"
-      ]
+      ],
+      "srcTotal": 33,
+      "srcFirstPct": 15,
+      "kpiNorm": true
     },
     {
       "slug": "canadian-solar",
@@ -190,7 +223,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "csestorage.com"
-      ]
+      ],
+      "srcTotal": 27,
+      "srcFirstPct": 59,
+      "kpiNorm": true
     },
     {
       "slug": "catl",
@@ -205,7 +241,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "catl.com"
-      ]
+      ],
+      "srcTotal": 44,
+      "srcFirstPct": 32,
+      "kpiNorm": true
     },
     {
       "slug": "constellation-energy",
@@ -220,7 +259,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "constellationenergy.com"
-      ]
+      ],
+      "srcTotal": 14,
+      "srcFirstPct": 64,
+      "kpiNorm": false
     },
     {
       "slug": "core-scientific",
@@ -236,7 +278,10 @@
       "domains": [
         "corescientific.com",
         "d1io3yog0oux5.cloudfront.net"
-      ]
+      ],
+      "srcTotal": 25,
+      "srcFirstPct": 64,
+      "kpiNorm": true
     },
     {
       "slug": "coreweave",
@@ -251,7 +296,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "coreweave.com"
-      ]
+      ],
+      "srcTotal": 14,
+      "srcFirstPct": 57,
+      "kpiNorm": true
     },
     {
       "slug": "crrc-zhuzhou",
@@ -267,7 +315,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "crrcgc.cc"
-      ]
+      ],
+      "srcTotal": 21,
+      "srcFirstPct": 38,
+      "kpiNorm": false
     },
     {
       "slug": "crusoe",
@@ -282,7 +333,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "crusoe.ai"
-      ]
+      ],
+      "srcTotal": 15,
+      "srcFirstPct": 53,
+      "kpiNorm": false
     },
     {
       "slug": "delta-electronics",
@@ -298,7 +352,10 @@
       "domains": [
         "deltaww.com",
         "delta-americas.com"
-      ]
+      ],
+      "srcTotal": 14,
+      "srcFirstPct": 57,
+      "kpiNorm": true
     },
     {
       "slug": "dpr",
@@ -312,7 +369,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "dpr.com"
-      ]
+      ],
+      "srcTotal": 30,
+      "srcFirstPct": 43,
+      "kpiNorm": false
     },
     {
       "slug": "eaton",
@@ -327,7 +387,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "eaton.com"
-      ]
+      ],
+      "srcTotal": 13,
+      "srcFirstPct": 69,
+      "kpiNorm": true
     },
     {
       "slug": "envision-energy",
@@ -342,7 +405,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "envision-group.com"
-      ]
+      ],
+      "srcTotal": 24,
+      "srcFirstPct": 25,
+      "kpiNorm": false
     },
     {
       "slug": "eolian",
@@ -356,7 +422,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "eolianenergy.com"
-      ]
+      ],
+      "srcTotal": 21,
+      "srcFirstPct": 48,
+      "kpiNorm": false
     },
     {
       "slug": "equinix",
@@ -371,7 +440,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "equinix.com"
-      ]
+      ],
+      "srcTotal": 12,
+      "srcFirstPct": 50,
+      "kpiNorm": true
     },
     {
       "slug": "enchanted-rock",
@@ -386,7 +458,10 @@
       "lastUpdated": "2026-08-24",
       "domains": [
         "erock.com"
-      ]
+      ],
+      "srcTotal": 23,
+      "srcFirstPct": 39,
+      "kpiNorm": true
     },
     {
       "slug": "eve-energy",
@@ -401,7 +476,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "evebattery.com"
-      ]
+      ],
+      "srcTotal": 16,
+      "srcFirstPct": 44,
+      "kpiNorm": true
     },
     {
       "slug": "flexgen",
@@ -415,7 +493,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "flexgen.com"
-      ]
+      ],
+      "srcTotal": 25,
+      "srcFirstPct": 72,
+      "kpiNorm": false
     },
     {
       "slug": "fluence",
@@ -430,7 +511,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "fluenceenergy.com"
-      ]
+      ],
+      "srcTotal": 30,
+      "srcFirstPct": 57,
+      "kpiNorm": true
     },
     {
       "slug": "ge-vernova",
@@ -445,7 +529,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "gevernova.com"
-      ]
+      ],
+      "srcTotal": 13,
+      "srcFirstPct": 62,
+      "kpiNorm": true
     },
     {
       "slug": "google",
@@ -462,7 +549,10 @@
         "abc.xyz",
         "google",
         "google.com"
-      ]
+      ],
+      "srcTotal": 16,
+      "srcFirstPct": 62,
+      "kpiNorm": true
     },
     {
       "slug": "hitachi-energy",
@@ -477,7 +567,10 @@
       "domains": [
         "hitachienergy.com",
         "hitachi.com"
-      ]
+      ],
+      "srcTotal": 16,
+      "srcFirstPct": 50,
+      "kpiNorm": true
     },
     {
       "slug": "hithium",
@@ -492,7 +585,10 @@
       "domains": [
         "en.hithium.com",
         "hithium.com"
-      ]
+      ],
+      "srcTotal": 51,
+      "srcFirstPct": 45,
+      "kpiNorm": true
     },
     {
       "slug": "hitt",
@@ -507,7 +603,10 @@
       "domains": [
         "hitt.com",
         "hittyearinreview.com"
-      ]
+      ],
+      "srcTotal": 33,
+      "srcFirstPct": 55,
+      "kpiNorm": false
     },
     {
       "slug": "holder-construction",
@@ -521,7 +620,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "holderconstruction.com"
-      ]
+      ],
+      "srcTotal": 28,
+      "srcFirstPct": 18,
+      "kpiNorm": false
     },
     {
       "slug": "huawei-digital-power",
@@ -536,7 +638,10 @@
       "domains": [
         "digitalpower.huawei.com",
         "huawei.com"
-      ]
+      ],
+      "srcTotal": 21,
+      "srcFirstPct": 29,
+      "kpiNorm": false
     },
     {
       "slug": "hyperstrong",
@@ -552,7 +657,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "hyperstrong.com"
-      ]
+      ],
+      "srcTotal": 26,
+      "srcFirstPct": 38,
+      "kpiNorm": false
     },
     {
       "slug": "iren",
@@ -569,7 +677,10 @@
       "domains": [
         "iren.com",
         "iren.gcs-web.com"
-      ]
+      ],
+      "srcTotal": 31,
+      "srcFirstPct": 71,
+      "kpiNorm": true
     },
     {
       "slug": "jinko",
@@ -584,7 +695,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "jinkosolar.com"
-      ]
+      ],
+      "srcTotal": 15,
+      "srcFirstPct": 40,
+      "kpiNorm": true
     },
     {
       "slug": "jupiter-power",
@@ -598,7 +712,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "jupiterpower.io"
-      ]
+      ],
+      "srcTotal": 21,
+      "srcFirstPct": 29,
+      "kpiNorm": false
     },
     {
       "slug": "key-capture-energy",
@@ -612,7 +729,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "keycaptureenergy.com"
-      ]
+      ],
+      "srcTotal": 19,
+      "srcFirstPct": 21,
+      "kpiNorm": false
     },
     {
       "slug": "kiewit",
@@ -626,7 +746,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "kiewit.com"
-      ]
+      ],
+      "srcTotal": 28,
+      "srcFirstPct": 18,
+      "kpiNorm": false
     },
     {
       "slug": "lambda",
@@ -640,7 +763,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "lambda.ai"
-      ]
+      ],
+      "srcTotal": 27,
+      "srcFirstPct": 52,
+      "kpiNorm": false
     },
     {
       "slug": "lg-energy-solution",
@@ -655,7 +781,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "lgensol.com"
-      ]
+      ],
+      "srcTotal": 15,
+      "srcFirstPct": 53,
+      "kpiNorm": true
     },
     {
       "slug": "lightsource-bp",
@@ -669,7 +798,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "lightsourcebp.com"
-      ]
+      ],
+      "srcTotal": 24,
+      "srcFirstPct": 38,
+      "kpiNorm": false
     },
     {
       "slug": "liteon",
@@ -684,7 +816,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "liteon.com"
-      ]
+      ],
+      "srcTotal": 14,
+      "srcFirstPct": 57,
+      "kpiNorm": true
     },
     {
       "slug": "ls-energy-solutions",
@@ -700,7 +835,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "ls-es.com"
-      ]
+      ],
+      "srcTotal": 20,
+      "srcFirstPct": 60,
+      "kpiNorm": false
     },
     {
       "slug": "mainspring-energy",
@@ -714,7 +852,10 @@
       "lastUpdated": "2026-08-24",
       "domains": [
         "mainspringenergy.com"
-      ]
+      ],
+      "srcTotal": 22,
+      "srcFirstPct": 36,
+      "kpiNorm": false
     },
     {
       "slug": "mastec",
@@ -730,7 +871,10 @@
       "domains": [
         "mastec.com",
         "mastecprofessionalservices.com"
-      ]
+      ],
+      "srcTotal": 20,
+      "srcFirstPct": 40,
+      "kpiNorm": false
     },
     {
       "slug": "megmeet",
@@ -745,7 +889,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "megmeet.com"
-      ]
+      ],
+      "srcTotal": 29,
+      "srcFirstPct": 55,
+      "kpiNorm": true
     },
     {
       "slug": "meta",
@@ -762,7 +909,10 @@
         "meta.com",
         "fb.com",
         "atmeta.com"
-      ]
+      ],
+      "srcTotal": 14,
+      "srcFirstPct": 64,
+      "kpiNorm": true
     },
     {
       "slug": "microsoft",
@@ -777,7 +927,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "microsoft.com"
-      ]
+      ],
+      "srcTotal": 15,
+      "srcFirstPct": 40,
+      "kpiNorm": true
     },
     {
       "slug": "mortenson",
@@ -792,7 +945,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "mortenson.com"
-      ]
+      ],
+      "srcTotal": 32,
+      "srcFirstPct": 38,
+      "kpiNorm": false
     },
     {
       "slug": "narada",
@@ -809,7 +965,10 @@
       "domains": [
         "en.naradapower.com",
         "mpinarada.com"
-      ]
+      ],
+      "srcTotal": 25,
+      "srcFirstPct": 32,
+      "kpiNorm": true
     },
     {
       "slug": "nebius",
@@ -824,7 +983,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "nebius.com"
-      ]
+      ],
+      "srcTotal": 27,
+      "srcFirstPct": 48,
+      "kpiNorm": true
     },
     {
       "slug": "nextera-energy-resources",
@@ -840,7 +1002,10 @@
       "domains": [
         "nexteraenergyresources.com",
         "nexteraenergy.com"
-      ]
+      ],
+      "srcTotal": 20,
+      "srcFirstPct": 40,
+      "kpiNorm": false
     },
     {
       "slug": "nvidia",
@@ -855,7 +1020,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "nvidia.com"
-      ]
+      ],
+      "srcTotal": 15,
+      "srcFirstPct": 60,
+      "kpiNorm": true
     },
     {
       "slug": "on-energy",
@@ -870,7 +1038,10 @@
       "lastUpdated": "2026-08-24",
       "domains": [
         "on.energy"
-      ]
+      ],
+      "srcTotal": 18,
+      "srcFirstPct": 33,
+      "kpiNorm": false
     },
     {
       "slug": "openai",
@@ -884,7 +1055,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "openai.com"
-      ]
+      ],
+      "srcTotal": 15,
+      "srcFirstPct": 67,
+      "kpiNorm": false
     },
     {
       "slug": "oracle",
@@ -899,7 +1073,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "oracle.com"
-      ]
+      ],
+      "srcTotal": 13,
+      "srcFirstPct": 54,
+      "kpiNorm": false
     },
     {
       "slug": "panasonic",
@@ -915,7 +1092,10 @@
       "domains": [
         "holdings.panasonic",
         "panasonic.com"
-      ]
+      ],
+      "srcTotal": 14,
+      "srcFirstPct": 50,
+      "kpiNorm": false
     },
     {
       "slug": "plus-power",
@@ -929,7 +1109,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "pluspower.com"
-      ]
+      ],
+      "srcTotal": 19,
+      "srcFirstPct": 42,
+      "kpiNorm": false
     },
     {
       "slug": "prevalon",
@@ -944,7 +1127,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "prevalonenergy.com"
-      ]
+      ],
+      "srcTotal": 22,
+      "srcFirstPct": 50,
+      "kpiNorm": false
     },
     {
       "slug": "primoris",
@@ -959,7 +1145,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "prim.com"
-      ]
+      ],
+      "srcTotal": 26,
+      "srcFirstPct": 69,
+      "kpiNorm": true
     },
     {
       "slug": "proenergy",
@@ -973,7 +1162,10 @@
       "lastUpdated": "2026-08-24",
       "domains": [
         "proenergyservices.com"
-      ]
+      ],
+      "srcTotal": 20,
+      "srcFirstPct": 45,
+      "kpiNorm": false
     },
     {
       "slug": "qts",
@@ -987,7 +1179,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "q.com"
-      ]
+      ],
+      "srcTotal": 44,
+      "srcFirstPct": 55,
+      "kpiNorm": false
     },
     {
       "slug": "quanta-services",
@@ -1002,7 +1197,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "quantaservices.com"
-      ]
+      ],
+      "srcTotal": 14,
+      "srcFirstPct": 50,
+      "kpiNorm": true
     },
     {
       "slug": "rosendin",
@@ -1016,7 +1214,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "rosendin.com"
-      ]
+      ],
+      "srcTotal": 12,
+      "srcFirstPct": 58,
+      "kpiNorm": false
     },
     {
       "slug": "samsung-ct",
@@ -1032,7 +1233,10 @@
       "domains": [
         "samsungcnt.com",
         "samsungrenewableenergy.com"
-      ]
+      ],
+      "srcTotal": 21,
+      "srcFirstPct": 33,
+      "kpiNorm": false
     },
     {
       "slug": "samsung-sdi",
@@ -1047,7 +1251,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "samsungsdi.com"
-      ]
+      ],
+      "srcTotal": 15,
+      "srcFirstPct": 60,
+      "kpiNorm": true
     },
     {
       "slug": "schneider-electric",
@@ -1062,7 +1269,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "se.com"
-      ]
+      ],
+      "srcTotal": 13,
+      "srcFirstPct": 69,
+      "kpiNorm": true
     },
     {
       "slug": "siemens-energy",
@@ -1077,7 +1287,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "siemens-energy.com"
-      ]
+      ],
+      "srcTotal": 16,
+      "srcFirstPct": 56,
+      "kpiNorm": true
     },
     {
       "slug": "sinexcel",
@@ -1092,7 +1305,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "en.sinexcel.com"
-      ]
+      ],
+      "srcTotal": 42,
+      "srcFirstPct": 64,
+      "kpiNorm": true
     },
     {
       "slug": "solv-energy",
@@ -1107,7 +1323,10 @@
       "lastUpdated": "2026-08-24",
       "domains": [
         "solvenergy.com"
-      ]
+      ],
+      "srcTotal": 17,
+      "srcFirstPct": 53,
+      "kpiNorm": false
     },
     {
       "slug": "stack-infrastructure",
@@ -1121,7 +1340,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "stackinfra.com"
-      ]
+      ],
+      "srcTotal": 40,
+      "srcFirstPct": 80,
+      "kpiNorm": false
     },
     {
       "slug": "sungrow",
@@ -1137,7 +1359,10 @@
       "domains": [
         "en.sungrowpower.com",
         "sungrowpower.com"
-      ]
+      ],
+      "srcTotal": 41,
+      "srcFirstPct": 49,
+      "kpiNorm": true
     },
     {
       "slug": "sunwoda",
@@ -1155,7 +1380,10 @@
         "sunwodaenergy.com",
         "sunwoda.com",
         "sunwodaess.com"
-      ]
+      ],
+      "srcTotal": 21,
+      "srcFirstPct": 29,
+      "kpiNorm": true
     },
     {
       "slug": "switch",
@@ -1169,7 +1397,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "switch.com"
-      ]
+      ],
+      "srcTotal": 43,
+      "srcFirstPct": 79,
+      "kpiNorm": false
     },
     {
       "slug": "terawulf",
@@ -1184,7 +1415,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "terawulf.com"
-      ]
+      ],
+      "srcTotal": 27,
+      "srcFirstPct": 59,
+      "kpiNorm": true
     },
     {
       "slug": "terra-gen",
@@ -1198,7 +1432,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "terra-gen.com"
-      ]
+      ],
+      "srcTotal": 19,
+      "srcFirstPct": 47,
+      "kpiNorm": false
     },
     {
       "slug": "tesla",
@@ -1213,7 +1450,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "tesla.com"
-      ]
+      ],
+      "srcTotal": 30,
+      "srcFirstPct": 20,
+      "kpiNorm": true
     },
     {
       "slug": "trina-storage",
@@ -1228,7 +1468,10 @@
       "lastUpdated": "2026-08-23",
       "domains": [
         "trinasolar.com"
-      ]
+      ],
+      "srcTotal": 32,
+      "srcFirstPct": 47,
+      "kpiNorm": false
     },
     {
       "slug": "turner-construction",
@@ -1242,7 +1485,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "turnerconstruction.com"
-      ]
+      ],
+      "srcTotal": 24,
+      "srcFirstPct": 33,
+      "kpiNorm": true
     },
     {
       "slug": "vantage",
@@ -1256,7 +1502,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "vantage-dc.com"
-      ]
+      ],
+      "srcTotal": 44,
+      "srcFirstPct": 84,
+      "kpiNorm": false
     },
     {
       "slug": "vertiv",
@@ -1271,7 +1520,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "vertiv.com"
-      ]
+      ],
+      "srcTotal": 12,
+      "srcFirstPct": 67,
+      "kpiNorm": true
     },
     {
       "slug": "voltagrid",
@@ -1285,7 +1537,10 @@
       "lastUpdated": "2026-08-24",
       "domains": [
         "voltagrid.com"
-      ]
+      ],
+      "srcTotal": 20,
+      "srcFirstPct": 50,
+      "kpiNorm": false
     },
     {
       "slug": "wartsila",
@@ -1300,7 +1555,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "wartsila.com"
-      ]
+      ],
+      "srcTotal": 30,
+      "srcFirstPct": 70,
+      "kpiNorm": false
     },
     {
       "slug": "xai",
@@ -1314,7 +1572,10 @@
       "lastUpdated": "2026-08-22",
       "domains": [
         "x.ai"
-      ]
+      ],
+      "srcTotal": 15,
+      "srcFirstPct": 40,
+      "kpiNorm": false
     },
     {
       "slug": "zhonhen",
@@ -1331,7 +1592,10 @@
         "en.hzzh.com",
         "hzzh.com",
         "zhonhen.com"
-      ]
+      ],
+      "srcTotal": 43,
+      "srcFirstPct": 42,
+      "kpiNorm": true
     }
   ]
 }
