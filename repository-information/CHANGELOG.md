@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.42r] — 2026-08-28 09:39:29 PM EST
+
+> **Prompt:** "When I build a new Morning Digest, why does it replace my previous one for the same day? I want it to save both."
+
+### Changed
+
+`Scraper.gs` (v01.75g)
+
+- **`scDigestDropSameDayRows_` → `scDigestDropRunRows_`: the guard is keyed on the build run, not the day.** It was added in v03.36r after a bug left nine copies of one edition, and it was keyed on `(editionId, date)` — broader than the failure it was defending against. All nine copies came from a **single** run re-entering the render step, so they all carried the same `state.id`. Keying on the run keeps that protection exactly (a repeat render can still only rewrite its own row) while a deliberate rebuild stands beside its predecessor
+- **`scDigestDeliverPending_` now mails exactly one row per edition per day.** This is the half the developer did not ask for and would have been bitten by: the delivery loop sends *every* undelivered row dated today, and it runs hourly from `scSchedulerTick`, so the moment rebuilds stopped deleting their predecessor an afternoon rebuild would have posted a second copy of the morning digest to every subscriber. Today's rows are grouped by edition, the newest build by `generatedAt` is chosen, and the rest are stamped `superseded` — a real value, so the hourly pass stops reconsidering them, and a named one, so the cell says why it never went out
+- **A rebuild after delivery sends nothing.** If any row in the group carries a genuine send (a `Date`, as distinct from a marker like `no-recipients`), the whole group is skipped. The old code achieved this by carrying the delivered stamp onto the replacement row; with rows now accumulating, that inheritance no longer applies and the group check replaces it
+- Issue numbering needed no change: `scIssueNumbers_` ranks by **distinct date**, so two builds of a day share that day's number — which is the right reading, since they are two takes of one issue
+
+`Scraper.html` (v01.60w)
+
+- The News Stand chip labels the build time **only** when a date carries more than one build. Two chips reading the same date were indistinguishable, and the build time was in a `title` tooltip a phone never shows. A one-build day renders exactly the chip it did before
+
+### Notes
+
+- **380 assertions pass** across 16 suites. New `t16.js` (29) covers the drop guard, the one-email-per-day rule, and the chip label
+- **Three assertions in `t11.js` failed and were right to** — that suite is the nine-copy regression harness, and it pinned `rebuilding still leaves ONE row`, which is precisely the behaviour the developer asked to change. Rewritten to assert the new contract while keeping the nine-copy protection pinned; its section-5 count is now a **delta** rather than a running total, which is what made it fragile to begin with
+- The GAS changelog reaches `50/50` with this push — the next Scraper GAS change must rotate it to the archive first
 
 ## [v03.41r] — 2026-08-28 09:04:47 PM EST
 

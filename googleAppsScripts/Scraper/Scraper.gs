@@ -1,4 +1,4 @@
-var VERSION = "v01.74g";
+var VERSION = "v01.75g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3937,13 +3937,23 @@ function scDigestRenderStep_(ss, state) {
     }
   }
   var digests = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
-  // Rebuilding an edition REPLACES that day's row rather than adding another.
-  // Defence in depth: a bug that re-entered the render step used to leave one
-  // visible copy of the edition per pass (nine, in the case that prompted
-  // this), and the developer then had to delete them by hand. With this, the
-  // worst a repeat render can do is rewrite the same row.
-  var priorRow = scDigestDropSameDayRows_(digests,
-    state.editionId || SCRAPER_EDITION_DEFAULT.id, state.date);
+  // A re-entered render REPLACES its own row rather than adding another.
+  //
+  // This guard was keyed on (edition, date) when it was written, after a bug
+  // left nine visible copies of one edition that the developer had to delete
+  // by hand. That key was broader than the failure: all nine copies came from
+  // a SINGLE run re-entering this step, so they all carried the same state.id.
+  // Keying on the run keeps that protection exactly — a repeat render can still
+  // only rewrite its own row — while letting a deliberate rebuild stand beside
+  // the earlier build of the same day instead of erasing it, which is what the
+  // developer asked for. Two builds of a day are two takes of one issue; they
+  // share a number (scIssueNumbers_ ranks by distinct date) and the News Stand
+  // orders them newest-built first.
+  //
+  // Keeping both rows makes the delivery pass the thing that has to be careful:
+  // see scDigestDeliverPending_, which now mails exactly one row per edition
+  // per day no matter how many builds are sitting there.
+  var priorRow = scDigestDropRunRows_(digests, state.id);
   // Numbered against the editions that actually exist for THIS masthead —
   // see scIssueNumbers_ for why the old getLastRow() counter was wrong.
   var no = scNextIssueNo_(ss, state.editionId || SCRAPER_EDITION_DEFAULT.id, state.date);
@@ -4052,18 +4062,17 @@ function scDigestRenderStep_(ss, state) {
 
     Scoped deliberately tight: same edition AND same date only. It will never
     touch another masthead or another day. */
-function scDigestDropSameDayRows_(digests, editionId, date) {
+function scDigestDropRunRows_(digests, runId) {
   var n = digests.getLastRow() - 1;
   if (n < 1) return { dropped: 0, delivered: '' };
-  var dates = digests.getRange(2, 2, n, 1).getValues();
-  var eds = digests.getRange(2, 10, n, 1).getValues();
+  var want = String(runId || '').trim();
+  if (!want) return { dropped: 0, delivered: '' };
+  var ids = digests.getRange(2, 1, n, 1).getValues();
   var wide = digests.getMaxColumns() >= 14;
   var deliv = wide ? digests.getRange(2, 14, n, 1).getValues() : null;
   var dropped = 0, delivered = '';
   for (var i = n - 1; i >= 0; i--) {
-    var ed = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
-    if (ed !== editionId) continue;
-    if (scIssueDateKey_(dates[i][0]) !== date) continue;
+    if (String(ids[i][0] || '').trim() !== want) continue;
     if (deliv && !delivered) {
       var d = deliv[i][0];
       if (d instanceof Date || String(d || '').trim()) delivered = d;
@@ -4483,7 +4492,7 @@ function scDigestDeliverPending_(ss, opts) {
   var n = sheet ? sheet.getLastRow() - 1 : 0;
   if (n < 1) return { sent: 0, held: 0 };
   if (sheet.getMaxColumns() < 14) return { sent: 0, held: 0 };   // schema not widened yet
-  var meta = sheet.getRange(2, 1, n, 2).getValues();             // id, date
+  var meta = sheet.getRange(2, 1, n, 3).getValues();             // id, date, generatedAt
   var eds  = sheet.getRange(2, 10, n, 1).getValues();            // edition
   var deliv = sheet.getRange(2, 14, n, 1).getValues();           // delivered
   // Numbering first: the mailed copy is the one that can never be corrected
@@ -4491,6 +4500,47 @@ function scDigestDeliverPending_(ss, opts) {
   try { scRenumberIssues_(ss); } catch (renErr) {}
   var nos = {};
   try { nos = scIssueNumbers_(ss); } catch (noErr) {}
+
+  // ONE email per edition per day, however many builds are stored.
+  //
+  // A rebuild used to delete the earlier row, so "every undelivered row dated
+  // today" could only ever be one row per edition. Now that a rebuild stands
+  // beside its predecessor, that loop would mail each of them — and since this
+  // pass also runs hourly from scSchedulerTick, an afternoon rebuild would post
+  // a second copy of the morning digest to every subscriber. The sheet keeping
+  // history must not turn into the inbox keeping duplicates.
+  //
+  // So group today's rows by edition first and choose one: the newest build by
+  // generatedAt. Every other undelivered row in the group is stamped
+  // 'superseded' — a real value, so the hourly pass stops reconsidering it, and
+  // a named one, so the cell says why it never went out. If any row in the
+  // group already carries a genuine send (a Date, as opposed to a marker like
+  // 'no-recipients'), nothing in that group mails at all: today's issue has
+  // been delivered, and rebuilding it afterwards must not re-send it.
+  var groups = {};
+  for (var g = 0; g < n; g++) {
+    if (!String(meta[g][0] || '').trim()) continue;
+    if (scIssueDateKey_(meta[g][1]) !== clock.date) continue;
+    var gEd = String(eds[g][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
+    var grp = groups[gEd] || (groups[gEd] = { rows: [], sentAlready: false });
+    var gd = deliv[g][0];
+    if (gd instanceof Date) grp.sentAlready = true;
+    grp.rows.push({ i: g, at: meta[g][2] ? new Date(meta[g][2]).getTime() : 0 });
+  }
+  var chosen = {};      // sheet index -> true, the one row per edition that may mail
+  for (var edKey in groups) {
+    if (!Object.prototype.hasOwnProperty.call(groups, edKey)) continue;
+    var grp2 = groups[edKey];
+    if (grp2.sentAlready) continue;                              // nothing mails today
+    var best = grp2.rows[0];
+    for (var r = 1; r < grp2.rows.length; r++) {
+      // >= so an equal timestamp resolves to the later row, which is the later
+      // append — two builds inside the same second are still ordered.
+      if (grp2.rows[r].at >= best.at) best = grp2.rows[r];
+    }
+    chosen[best.i] = true;
+  }
+
   var sent = 0, held = 0;
   for (var i = 0; i < n; i++) {
     var id = String(meta[i][0] || '').trim();
@@ -4499,6 +4549,12 @@ function scDigestDeliverPending_(ss, opts) {
     if (scIssueDateKey_(meta[i][1]) !== clock.date) continue;    // only today's
     var edId = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
     var row = i + 2;
+    if (!chosen[i]) {
+      // Superseded by a newer build of the same day, or the day already mailed.
+      sheet.getRange(row, 14).setValue('superseded');
+      held++;
+      continue;
+    }
     var to = scEditionRecipients_(ss, edId).join(',');
     if (!to) {
       // Nobody is subscribed to this edition. Stamp it so the pass does not

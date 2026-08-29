@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.59w">
+  <meta name="build-version" content="v01.60w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -9254,13 +9254,25 @@
         if (!data || !data.success) return;
         var list = $sc('wd-digest-list');
         var ds = data.digests || [];
+        // A day can now hold more than one build (rebuilding no longer erases
+        // the earlier issue). Two chips reading the same date are impossible to
+        // tell apart, and the build time was only in a title tooltip — which a
+        // phone never shows. So label the time on the chip itself, but ONLY for
+        // dates that actually have more than one build: the ordinary one-build
+        // day keeps exactly the chip it had.
+        var perDate = {};
+        ds.forEach(function(d) { perDate[d.date] = (perDate[d.date] || 0) + 1; });
         list.innerHTML = ds.length
           ? ds.map(function(dg) {
-              var when = dg.generatedAt ? new Date(dg.generatedAt).toLocaleString() : '';
+              var at = dg.generatedAt ? new Date(dg.generatedAt) : null;
+              var when = at ? at.toLocaleString() : '';
+              var stamp = (perDate[dg.date] > 1 && at)
+                ? ' · ' + at.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+                : '';
               return '<span class="wd-dg-chip" data-id="' + scEsc(dg.id) + '">'
                 + '<button type="button" class="wd-dg-open" title="'
                 + scEsc('Generated ' + when + (dg.notes ? ' · ' + dg.notes : '')) + '">'
-                + scEsc(dg.date) + ' · ' + Number(dg.relevantCount) + ' relevant</button>'
+                + scEsc(dg.date) + stamp + ' · ' + Number(dg.relevantCount) + ' relevant</button>'
                 + '<button type="button" class="wd-dg-del" title="Delete this edition (asks once to confirm)">×</button>'
                 + '</span>';
             }).join('')

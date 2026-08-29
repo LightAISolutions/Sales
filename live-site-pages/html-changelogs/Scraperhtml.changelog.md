@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 44/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.60w] — 2026-08-28 09:39:29 PM EST — v03.42r
+
+### Changed
+- **When a day has more than one edition, each one now shows the time it was built**, so two entries for the same date can be told apart at a glance. A day with a single edition looks exactly as it did before
 
 ## [v01.59w] — 2026-08-28 09:04:47 PM EST — v03.41r
 

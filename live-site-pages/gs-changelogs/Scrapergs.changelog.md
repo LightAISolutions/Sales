@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.75g] — 2026-08-28 09:39:29 PM EST — v03.42r
+
+### Changed
+- **Rebuilding a digest no longer erases the earlier one from the same day.** Both are kept, so you can build a second edition in the afternoon and still open the morning's. Two builds of a day share that day's issue number — they are two takes of one issue, not two issues
+- **You still receive only one email per edition per day, however many times you rebuild.** The newest build is the one that goes out; earlier ones are marked as superseded and never mail. If the day's edition has already been sent, rebuilding it afterwards sends nothing at all
+- Protection against duplicate copies is unchanged. It now recognises a repeated build of the *same run* — which is what produced the nine copies — instead of treating every rebuild of the day as a duplicate
 
 ## [v01.74g] — 2026-08-28 09:04:47 PM EST — v03.41r
 
