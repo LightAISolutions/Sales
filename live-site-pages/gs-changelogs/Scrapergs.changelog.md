@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.73g] — 2026-08-28 08:42:20 PM EST — v03.40r
+
+### Changed
+- **Each story takes up less room.** The separate "What it means" heading and the rule above it are gone; the analysis now runs on from the summary in the same paragraph, marked in amber. Measured on a phone, an edition is about 11 per cent shorter for the same content — roughly 46 pixels back per story
+- A short **Amber = analysis** key now sits in the footer, in amber, and only appears when the edition actually contains analysis
+- **Figures are no longer amber.** They are still bold, now in the brighter headline ink. Amber was doing two jobs at once — marking figures and marking analysis — which would have made the new key untrue. In the body it now means one thing
 
 ## [v01.72g] — 2026-08-28 08:33:28 PM EST — v03.39r
 

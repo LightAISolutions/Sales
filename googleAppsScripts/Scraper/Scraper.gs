@@ -1,4 +1,4 @@
-var VERSION = "v01.72g";
+var VERSION = "v01.73g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3332,10 +3332,19 @@ function scDigestSectionFor_(item) {
 
 /** Wrap concrete figures in an already-HTML-escaped string with the Night
     Ink amber bold — pure, node-testable. */
-function scNiBoldFigures_(escaped) {
+/** Bold the figures in a passage.
+
+    `color` defaults to the headline ink rather than amber. Amber now means one
+    thing and one thing only — analysis, as the footer key states — so a figure
+    inside a reported summary can no longer be amber without making that key a
+    lie. Figures keep their emphasis through weight and a brighter ink instead.
+    Inside the analysis the caller passes 'inherit', so a figure there bolds
+    within the amber run rather than breaking out of it. */
+function scNiBoldFigures_(escaped, color) {
+  var c = color || '#f0eee8';
   return String(escaped || '').replace(
     /((?:[\$€£]\s?)?\d[\d,]*(?:\.\d+)?\s?(?:(?:GWh?|MWh?|kWh?|GW|MW|kW|billion|million|bn)\b|%)|[\$€£]\s?\d[\d,]*(?:\.\d+)?)/g,
-    '<b style="color:#f2a33c;">$1</b>');
+    '<b style="color:' + c + ';">$1</b>');
 }
 
 /** Enabled-state map for roster sources from the Interests tab
@@ -4219,27 +4228,23 @@ function scRenderDigestNightInk_(d) {
     return '<div style="' + mono + caps + 'color:#7b828e;margin-top:2px;">'
       + esc(it.source) + (t ? ' · ' + esc(t) : '') + '</div>';
   }
-  // The desk's read, visibly set apart from the reporting above it. An amber
-  // caps micro-label in the same idiom the section headers already use, over a
-  // rule, in a dimmer ink — so a reader can see at a glance which sentences are
-  // the article's and which are ours. Omitted entirely when there is no
-  // analysis, rather than printing an empty label.
-  function analysisHtml(text, topGap) {
+  // The desk's read runs on from the reporting in the same paragraph, marked
+  // only by colour. It had its own labelled block with a rule above it, which
+  // read clearly but cost four lines of height on every single item — and the
+  // developer reads these on a phone. Colour carries the distinction for a
+  // fraction of the space, with one key in the footer to say what it means.
+  function analysisRun(text) {
     if (!text) return '';
-    return '<div class="ni-analysis" style="border-top:1px solid #2c313a;'
-      + 'margin-top:' + (topGap || 10) + 'px;padding-top:8px;">'
-      + '<div style="' + mono + caps + 'color:#f2a33c;">What it means</div>'
-      + '<div class="ni-body" style="' + sans + 'font-size:15px;line-height:1.6;'
-      + 'color:#a9b0bb;margin-top:4px;">' + scNiBoldFigures_(esc(text)) + '</div></div>';
+    return ' <span style="color:#f2a33c;">'
+      + scNiBoldFigures_(esc(text), 'inherit') + '</span>';
   }
   function itemHtml(it) {
     return '<div style="margin:0 0 20px;">'
       + '<div class="ni-hed" style="' + serif + 'font-size:22px;font-weight:600;line-height:1.3;color:#eceae4;">'
       + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
       + '<div class="ni-body" style="' + sans + 'font-size:16px;line-height:1.62;color:#c2c8d2;margin-top:5px;">'
-      + scNiBoldFigures_(esc(it.summary)) + '</div>'
-      + srcLine(it)
-      + analysisHtml(it.analysis, 10) + '</div>';
+      + scNiBoldFigures_(esc(it.summary)) + analysisRun(it.analysis) + '</div>'
+      + srcLine(it) + '</div>';
   }
   function sectionHtml(label, items, color, ruleColor) {
     if (!items.length) return '';
@@ -4290,9 +4295,8 @@ function scRenderDigestNightInk_(d) {
       + '<div class="ni-lead" style="' + serif + 'font-size:32px;font-weight:600;line-height:1.18;color:#f0eee8;margin-top:6px;">'
       + '<a href="' + esc(d.lead.url) + '" style="color:#f0eee8;text-decoration:none;">' + esc(d.lead.title) + '</a></div>'
       + '<div class="ni-lede" style="font-size:17px;line-height:1.62;color:#c2c8d2;margin-top:8px;">'
-      + scNiBoldFigures_(esc(d.lead.text)) + '</div>'
-      + srcLine(d.lead)
-      + analysisHtml(d.lead.analysis, 12) + '</div>';
+      + scNiBoldFigures_(esc(d.lead.text)) + analysisRun(d.lead.analysis) + '</div>'
+      + srcLine(d.lead) + '</div>';
   }
   html += sectionHtml('Covered companies', d.sections.companies, '#e6e4de', '#2c313a')
     + sectionHtml('US AIDC market &amp; policy', d.sections.market, '#e6e4de', '#2c313a')
@@ -4308,6 +4312,16 @@ function scRenderDigestNightInk_(d) {
       + '; folded into this edition automatically. Review them from the Interests panel.</div></div>';
   }
   var held = Math.max(0, Number(d.counts.relevant) - Number(d.counts.shown || 0));
+  // The key for the amber run above. Only printed when the edition actually
+  // contains analysis — an edition built before the split, or one whose
+  // summaries all fell back to raw source text, has nothing amber in it and a
+  // key would be explaining something that is not there.
+  var hasAnalysis = !!(d.lead && d.lead.analysis);
+  ['companies', 'market', 'incidents'].forEach(function(sec) {
+    ((d.sections && d.sections[sec]) || []).forEach(function(it) {
+      if (it && it.analysis) hasAnalysis = true;
+    });
+  });
   // "View More" opens the held-back stories — the ones that cleared the
   // relevance bar but did not fit a section cap. It points at the embedding
   // page, never at /exec directly: a direct link is a cookie-carrying
@@ -4324,6 +4338,7 @@ function scRenderDigestNightInk_(d) {
     + 'style="border-top:3px double #d8dbe1;margin-top:10px;"><tr>'
     + '<td class="ni-foot" style="font-size:12px;color:#8a919d;padding-top:12px;">'
     + 'Published by your Scraper desk · '
+    + (hasAnalysis ? '<span style="color:#f2a33c;">Amber = analysis</span> · ' : '')
     + Number(d.counts.shown || 0) + ' of ' + Number(d.counts.relevant)
     + ' relevant · ' + Number(d.counts.intake) + ' scanned'
     + (held ? ' · ' + held + ' more held back by the per-section caps' : '')
@@ -4354,7 +4369,6 @@ function scNiMobileCss_() {
     + '.ni-lede{font-size:16px!important}'
     + '.ni-hed{font-size:19px!important;line-height:1.32!important}'
     + '.ni-body{font-size:15.5px!important}'
-    + '.ni-analysis{margin-top:8px!important;padding-top:7px!important}'
     + '.ni-foot,.ni-foot-r{display:block!important;width:100%!important;'
     + 'text-align:left!important;white-space:normal!important}'
     + '.ni-foot-r{padding-top:10px!important}'

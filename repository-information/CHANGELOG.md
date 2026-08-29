@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.40r] — 2026-08-28 08:42:20 PM EST
+
+> **Prompt:** "I don't want to see "what it means" under every article summary. Instead, add a short key in the footer that says something like "Amber = Analysis" in the amber color. Then, just keep the summary and analysis portions together like they were. I want to minimize the amount of space that each article block takes up."
+
+### Changed
+
+`Scraper.gs` (v01.73g)
+
+- `analysisHtml` (a rule, an amber caps label, its own block) replaced by `analysisRun` — a single amber `<span>` appended to the summary's own paragraph. **Measured, not asserted:** identical content rendered by both versions at 390px, 1297px → 1160px, **137px saved (11 per cent)** across one lead and two items, about 46px per story
+- Footer gains `Amber = analysis` in amber, emitted only when the edition actually contains analysis — an edition built before the split, or one whose summaries all fell back to raw source text, has nothing amber in it and a key would explain something that is not there
+- The now-dead `.ni-analysis` mobile rule removed
+- **`scNiBoldFigures_` no longer colours figures amber.** This was not in the request, and it is what makes the request true: amber was already the figure colour, so `$450 million` inside a reported summary rendered in exactly the shade the new key claims means analysis. Caught by looking at the render rather than the diff. Figures keep their emphasis through weight in the headline ink (`#f0eee8`); inside the analysis the caller passes `inherit`, so a figure there bolds within the amber run instead of breaking out of it
+
+### Notes
+
+- 323 assertions pass; 12 changed or added for this. Five of them pin the new invariant — a figure in a summary is not amber, a figure in an analysis stays inside the amber run, and within body text the only amber span is the analysis
+- **Two assertion errors of my own, both from imprecision rather than the code.** The first tested for a bolded "18 months" — the figure regex covers energy units, currency and percent, not durations. The second counted *every* amber occurrence in the document and expected two; amber is legitimately also the idiom for structural micro-labels (the masthead line, `THE LEAD`). The claim that actually matters is narrower and is what the test now makes: within **body text**, amber means analysis
 
 ## [v03.39r] — 2026-08-28 08:33:28 PM EST
 
