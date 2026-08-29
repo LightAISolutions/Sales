@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.45r] — 2026-08-28 11:19:00 PM EST
+
+> **Prompt:** "I just rebuilt my BESS Morning Digest and it only has 3 relevant articles. The last iteration had 12 articles. What happened? I feel like there should definitely be closer to 10 articles that are relevant."
+
+### Fixed
+
+`Scraper.gs` (v01.78g)
+
+- **The backstop rotation moved under a rebuild.** `scDigestBackstopStep_` picks 12 company names from a script-property cursor and advances it by 12 **every run**. So a rebuild never re-queried what the build it replaced had queried — it queried the *next* twelve companies. A rebuild was not a repeat, it was a different roll, and each successive rebuild rolled again. `scDigestBackstopPick_` memoises the day's pick per (edition, date), so a rebuild re-queries exactly what it is replacing. The rotation still turns daily, which is what it was for
+- **One cursor was shared by every edition**, so building the morning digest consumed rotation the BESS build then did not get — the two editions were competing for the same twelve slots. Cursors are now per-edition (`scDigestBackstopCursorKey_`), with a one-time read of the old global key so an existing deployment resumes its rotation rather than restarting at the top of the alphabet
+- The memo is keyed on the roster length as well as the date, so adding or removing a covered company re-picks instead of querying a name that has left the roster
+
+### Added
+
+`Scraper.gs` (v01.78g)
+
+- **`digestScoreReport` — why an edition came out thin.** `rubricPreview` answers "why did THIS story fail", which only helps once you already suspect a story; it cannot answer the question actually being asked, which is about an edition as a whole. The new report reads the run's own intake rows and returns the score distribution in bands, the near-misses within 10 of the bar (ranked, each with how far short it fell, its geographic factor and its matched companies), the backstop/roster split, and how many items the geographic multiplier down-weighted. Its `verdict` separates the two cases that look identical from the outside: `bar-bound` (a crowd of items sitting just under the threshold) from `intake-bound` (an empty near-miss band, meaning the fetch was the constraint, not the scoring)
+
+### Notes
+
+- **Diagnosis, stated honestly:** three mechanisms make a rebuild thinner than the original — the backstop rotation above, corroboration (computed within a run, so a thinner fetch yields fewer of the boosts that were sized to help items clear the bar, compounding the first), and the sliding 24-hour window (an 11pm rebuild covers Thu 11pm–Fri 11pm; the morning build covered Thu 7am–Fri 7am). Without the developer's sheet it is not possible to say from here which dominated, and the changelog should not pretend otherwise. The first is a genuine flaw and is fixed; the third is correct behaviour. `digestScoreReport` exists so the next occurrence is measured rather than reasoned about
+- Ruled out by reading the code rather than by assumption: `scDigestPruneOrphanIntake_` cannot delete an in-flight run's rows (it is called only from `scDigestStart_`, before the run writes any, and keeps 240 editions); intake dedup is scoped to the run's own `digestId`, so editions do not steal each other's articles; and the fetch phase cannot render early, since it only advances to `backstop` once `srcCursor` has passed every one of the 73 roster feeds. No scoring constant has changed in the last ten commits
+- **449 assertions pass** across 18 suites; new `t18.js` (33) covers rebuild stability, per-edition isolation, migration off the shared cursor, roster changes, and every branch of the report
+- Two of my own test defects, both fixed in the test: the suite stubbed `validateSessionForData` globally but `eval` re-declared it locally, so the first run threw `SESSION_EXPIRED` — which was at least proof the route is genuinely session-gated; and an assertion I wrote carried an `|| length===12` escape hatch that reduced it to a length check, the tautological pattern this repo bans. It now asserts the re-pick actually happens and starts from the cursor
 
 ## [v03.44r] — 2026-08-28 11:06:15 PM EST
 

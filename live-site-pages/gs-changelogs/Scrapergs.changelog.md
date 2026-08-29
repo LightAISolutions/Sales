@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.78g] — 2026-08-28 11:19:00 PM EST — v03.45r
+
+### Fixed
+- **Rebuilding an edition now searches the same companies as the build it replaces.** Alongside the news sources, each build runs a rotating set of twelve company-name searches, and that rotation was moving forward on every build — so a rebuild searched a *different* twelve companies and could come back with noticeably fewer stories than the build it replaced, with nothing about the rebuild to explain why. The rotation still advances each day; it no longer moves under a rebuild of the same day
+- **Building one edition no longer uses up another edition's turn in that rotation.** The rotation was shared, so building the morning digest advanced it and the BESS edition built afterwards searched a different set of companies. Each edition now keeps its own place in the rotation
+
+### Added
+- **A report explaining why an edition came out thin.** It shows how many stories came in, where their scores landed, how many just missed the relevance bar and by how much, how many were down-weighted for being outside the US market, and how much came from company searches rather than the news sources — so a quiet edition can be read rather than guessed at
 
 ## [v01.77g] — 2026-08-28 11:06:15 PM EST — v03.44r
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.77g";
+var VERSION = "v01.78g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -409,7 +409,7 @@ var SCRAPER_MAX_PROJECTS_PER_USER = 10;
 var SCRAPER_PROJECT_ACTIONS = ['getSchedulerHealth',
                                'listInterests', 'setInterestEnabled', 'syncInterestsNow',
                                'mineAllDossiers',
-                               'rubricPreview',
+                               'rubricPreview', 'digestScoreReport',
                                'runDigestNow', 'getDigestStatus', 'listDigests', 'getDigest',
                                'deleteDigest',
                                'goLiveStatus', 'testAi', 'emailLatestDigest',
@@ -839,6 +839,10 @@ var SCRAPER_DIGEST_STATE_KEY = 'scDigestRun';    // Script Property: current run
 var SCRAPER_DIGEST_ITEMS_PER_SOURCE = 15;        // intake cap per source per run
 var SCRAPER_DIGEST_MIN_INTAKE_SCORE = 25;        // rubric floor to enter the intake tab
 var SCRAPER_DIGEST_BACKSTOP_PER_RUN = 12;        // D2: company-name queries per run (round-robin)
+// Round-robin cursor for the backstop company queries. Per EDITION, and the
+// day's pick is memoised per (edition, date) — see scDigestBackstopPick_ for
+// why both matter. The bare key is the pre-v01.78g global one, kept only so
+// scDigestBackstopCursorKey_ can migrate a fleet that still has it set.
 var SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY = 'scDigestBackstopCursor';
 var SCRAPER_DIGEST_BACKSTOP_PENALTY = 0.85;      // D2: backstop items are down-weighted
 var SCRAPER_DIGEST_SUMMARIZE_MAX = 70;           // ceiling on AI-summarized items per edition
@@ -3298,6 +3302,70 @@ function rubricPreview(sessionToken, payloadJson) {
   return out;
 }
 
+/** Why was this edition thin?
+
+    The per-article tester (rubricPreview) answers "why did THIS story fail",
+    which only helps once you already suspect a story. It cannot answer the
+    question the developer actually asks, which is about an edition as a whole:
+    twelve relevant yesterday, three today, and nothing to look at but the two
+    numbers. Guessing from those two numbers is what this replaces.
+
+    Reads the run's own intake rows, so it reports what the build actually saw:
+    how much came in, where the scores landed, how many missed the bar and by
+    how little, what the geographic multiplier did, and how much of the intake
+    came from the backstop rather than the roster. Near-misses are the useful
+    part — a dozen items sitting at 50-54 says the bar is the constraint, while
+    an empty band says the fetch was. */
+function digestScoreReport(sessionToken, digestId) {
+  validateSessionForData(sessionToken, 'digestScoreReport');
+  var ss = scraperSs_();
+  ensureScraperTabs_(ss);
+  var want = scStr_(digestId || '', 60);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var n = sheet ? sheet.getLastRow() - 1 : 0;
+  // No id given → the most recently generated edition.
+  if (!want && n > 0) {
+    want = String(sheet.getRange(n + 1, 1).getValue() || '');
+  }
+  if (!want) return { success: false, error: 'no_edition' };
+  var items = scDigestItems_(ss, want);
+  if (!items.length) return { success: false, error: 'no_intake', id: want };
+
+  var T = SCRAPER_RELEVANT_THRESHOLD;
+  var bands = { '0-24': 0, '25-39': 0, '40-49': 0, '50-54': 0, '55-69': 0, '70-100': 0 };
+  var nearMiss = [], backstopCount = 0, geoPenalised = 0, relevant = 0;
+  items.forEach(function(it) {
+    var sc = Number(it.score) || 0;
+    bands[sc < 25 ? '0-24' : sc < 40 ? '25-39' : sc < 50 ? '40-49'
+          : sc < 55 ? '50-54' : sc < 70 ? '55-69' : '70-100']++;
+    if (it.backstop) backstopCount++;
+    if ((it.geoFactor == null ? 1 : Number(it.geoFactor)) < 1) geoPenalised++;
+    if (sc >= T) { relevant++; return; }
+    // Within 10 of the bar: the items a small change would have admitted.
+    if (sc >= T - 10) {
+      nearMiss.push({ title: scStr_(it.title, 140), source: it.source, score: sc,
+                      short: Math.round((T - sc) * 10) / 10,
+                      geoFactor: it.geoFactor == null ? 1 : Number(it.geoFactor),
+                      evidence: it.evidence, support: it.support,
+                      companies: (it.matchedCompanies || []).slice(0, 4),
+                      topics: (it.matchedTopics || []).slice(0, 4),
+                      backstop: !!it.backstop });
+    }
+  });
+  nearMiss.sort(function(a, b) { return b.score - a.score; });
+  return {
+    success: true, id: want, threshold: T,
+    intake: items.length, relevant: relevant,
+    fromBackstop: backstopCount, fromRoster: items.length - backstopCount,
+    geoPenalised: geoPenalised, bands: bands,
+    nearMiss: nearMiss.slice(0, 20),
+    // The one-line read, so the answer does not depend on interpreting bands.
+    verdict: relevant >= 10 ? 'healthy'
+      : (bands['50-54'] + bands['40-49']) >= 8 ? 'bar-bound'
+      : items.length < 60 ? 'intake-bound' : 'thin-day'
+  };
+}
+
 // ── Rebuild Phase 3: digest engine ──────────────────────────────────────
 // Chunked, resumable pipeline: start → fetch (roster feeds) → backstop
 // (Google News company queries, D2) → summarize (AI key points, with a
@@ -3588,6 +3656,60 @@ function scDigestFetchStep_(ss, state, t0) {
   return { phase: state.phase, cursor: state.srcCursor, total: SCRAPER_SOURCE_ROSTER.length };
 }
 
+/** Cursor key for an edition's backstop rotation.
+
+    The cursor used to be one global script property. Two consequences, both
+    of which the developer felt as "my rebuild has far fewer articles":
+
+    1. Building the morning edition advanced the cursor, so the BESS build that
+       followed queried a DIFFERENT twelve companies — one edition was eating
+       another's rotation.
+    2. Rebuilding an edition advanced it again, so the rebuild could not query
+       what the build it replaced had queried. A rebuild was not a repeat; it
+       was a roll of different dice, and each rebuild rolled again.
+
+    Per-edition keys fix (1). scDigestBackstopPick_ fixes (2). */
+function scDigestBackstopCursorKey_(editionId) {
+  return SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY + '_' +
+    String(editionId || SCRAPER_EDITION_DEFAULT.id);
+}
+
+/** The twelve company names this edition queries today.
+
+    Memoised per (edition, date), so a rebuild re-queries exactly what the run
+    it replaces did. The rotation is meant to spread company coverage across
+    DAYS — a name not queried today comes up tomorrow. It was never meant to
+    move under a rebuild, which is the one case where the developer is directly
+    comparing two editions and expects them to be comparable.
+
+    The cursor advances once per edition per day, on the first build of that
+    day, and the pick is stored so later builds reuse it. */
+function scDigestBackstopPick_(props, names, editionId, date) {
+  if (!names.length) return [];
+  var memoKey = scDigestBackstopCursorKey_(editionId) + '_pick';
+  var memo = null;
+  try { memo = JSON.parse(props.getProperty(memoKey) || 'null'); } catch (e) {}
+  // Same edition, same day, and the roster has not changed underneath it.
+  if (memo && memo.date === date && memo.n === names.length &&
+      memo.pick && memo.pick.length) {
+    return memo.pick.filter(function(nm) { return names.indexOf(nm) !== -1; });
+  }
+  var cursorKey = scDigestBackstopCursorKey_(editionId);
+  var start = Number(props.getProperty(cursorKey));
+  if (!start) {
+    // One-time migration off the shared global cursor, so an existing fleet
+    // does not restart every edition's rotation from the top of the alphabet.
+    start = Number(props.getProperty(SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY)) || 0;
+  }
+  var pick = [];
+  for (var i = 0; i < Math.min(SCRAPER_DIGEST_BACKSTOP_PER_RUN, names.length); i++) {
+    pick.push(names[(start + i) % names.length]);
+  }
+  props.setProperty(cursorKey, String((start + pick.length) % names.length));
+  props.setProperty(memoKey, JSON.stringify({ date: date, n: names.length, pick: pick }));
+  return pick;
+}
+
 /** Backstop phase (D2): rotating Google News company-name queries —
     down-weighted, labeled, capped per run. Kept only as a covered-company
     safety net, never a primary source. */
@@ -3596,15 +3718,9 @@ function scDigestBackstopStep_(ss, state, t0) {
   var model = scLoadInterestModel_(ss, scEditionById_(ss, state.editionId));
   var props = PropertiesService.getScriptProperties();
   if (!state.bsList) {
-    var names = model.companies.map(function(c) { return c.label; }).sort();
-    var start = Number(props.getProperty(SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY)) || 0;
-    var pick = [];
-    for (var i = 0; i < Math.min(SCRAPER_DIGEST_BACKSTOP_PER_RUN, names.length); i++) {
-      pick.push(names[(start + i) % names.length]);
-    }
-    props.setProperty(SCRAPER_DIGEST_BACKSTOP_CURSOR_KEY,
-      String(names.length ? (start + pick.length) % names.length : 0));
-    state.bsList = pick;
+    state.bsList = scDigestBackstopPick_(props,
+      model.companies.map(function(c) { return c.label; }).sort(),
+      state.editionId || SCRAPER_EDITION_DEFAULT.id, state.date);
     state.bsCursor = 0;
   }
   var seen = scDigestIntakeUrls_(intake, state.id);
@@ -7287,6 +7403,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'syncInterestsNow') return syncInterestsNow(sessionToken);
   if (op === 'mineAllDossiers') return mineAllDossiers(sessionToken, param('since'));
   if (op === 'rubricPreview') return rubricPreview(sessionToken, param('payload'));
+  if (op === 'digestScoreReport') return digestScoreReport(sessionToken, param('digestId'));
   if (op === 'runDigestNow') return runDigestNow(sessionToken, param('editionId'));
   if (op === 'getDigestStatus') return getDigestStatus(sessionToken);
   if (op === 'listDigests') return listDigests(sessionToken, param('limit'), param('payload'));
