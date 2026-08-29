@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.46w">
+  <meta name="build-version" content="v01.47w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -303,6 +303,9 @@
       background: var(--ov-card2) !important; color: var(--ov-gold);
       font: 10px/1.5 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
     }
+    .ov-cmp-mag { height: 10px; border-radius: 3px; background: rgba(233,228,214,0.10); margin: 7px 0 5px; overflow: hidden; }
+    .ov-cmp-mag i { display: block; height: 10px; border-radius: 3px; background: #b18f35; }
+    .ov-cmp-fx { cursor: help; border-bottom: 1px dotted var(--ov-line2); display: inline-block; }
     .ov-cmp-bar { display: flex; gap: 2px; height: 12px; margin: 2px 0 6px; border-radius: 3px; overflow: hidden; }
     .ov-cmp-bar i { display: block; height: 12px; border-radius: 2px; }
     .ov-cmp-foot { margin-top: 18px; color: var(--ov-faint); font-size: 12px; font-style: italic; max-width: 860px; }
@@ -1774,6 +1777,27 @@ function ovReloadFresh() {
       });
       return t;
     }
+    // Latest COMPLETE annual period carrying a normalized revenue figure.
+    // Periods are authored oldest-first, so the last match is the newest; an
+    // in-progress year is typed 'other' and is skipped by the periodType test.
+    function ovCmpLatestRevenue(p) {
+      var hit = null;
+      (((p.financials || {}).periods) || []).forEach(function(per) {
+        if (per.periodType !== 'annual') return;
+        (per.metrics || []).forEach(function(m) {
+          if (m.kpi !== 'revenue' || typeof m.usdMillions !== 'number') return;
+          hit = { usdMillions: m.usdMillions, fxBasis: m.fxBasis || '', period: per.period, periodEnd: per.periodEnd || '' };
+        });
+      });
+      return hit;
+    }
+    // Uniform precision across the row: a column mixing "$12.4B" with "$2.30B"
+    // reads as sloppy and invites a false comparison. Two decimals on billions
+    // is $10M resolution — within the significant figures the sources carry.
+    function ovCmpUsd(m) {
+      if (m >= 1000) return '$' + (m / 1000).toFixed(2) + 'B';
+      return '$' + Math.round(m) + 'M';
+    }
     function ovCmpSpecMap(p) {
       // label → {band, value}; first occurrence wins (flagship groups lead)
       var out = {};
@@ -1886,6 +1910,35 @@ function ovReloadFresh() {
       // ── Tier 1 — financials (always) ──
       var anyFin = cols.some(function(c) { return (((c.p.financials || {}).periods) || []).length; });
       if (anyFin) {
+        // Normalized revenue (v01.47w) — the one row that is genuinely
+        // like-for-like across companies, drawn from the schema-v4 KPI overlay
+        // (PROFILER-SCHEMA.md). Absent overlay = no bar and a plain "not
+        // normalized yet" note; a dossier is never given a fabricated figure to
+        // make the chart look complete.
+        var revs = cols.map(function(c) { return ovCmpLatestRevenue(c.p); });
+        if (revs.some(Boolean)) {
+          var maxRev = Math.max.apply(null, revs.map(function(r) { return r ? r.usdMillions : 0; }));
+          rowLabel('Revenue', 'latest full year, USD');
+          revs.forEach(function(r) {
+            cell(function(d) {
+              if (!r) { d.className = 'na'; d.appendChild(ovEl('div', 'v2', 'Not normalized yet — see the as-reported figures below')); return; }
+              d.appendChild(ovEl('div', 'v', ovCmpUsd(r.usdMillions)));
+              var track = ovEl('div', 'ov-cmp-mag');
+              var fill = ovEl('i');
+              fill.style.width = Math.max(2, r.usdMillions / maxRev * 100) + '%';
+              track.appendChild(fill);
+              d.appendChild(track);
+              var note = r.period + (r.periodEnd ? ' · ended ' + r.periodEnd : '');
+              d.appendChild(ovEl('div', 'v2', note));
+              // A converted figure never renders without its basis in reach.
+              if (r.fxBasis && r.fxBasis !== 'as reported') {
+                var fxEl = ovEl('div', 'v2 ov-cmp-fx', 'converted — hover for the basis');
+                fxEl.title = r.fxBasis;
+                d.appendChild(fxEl);
+              }
+            });
+          });
+        }
         rowLabel('Latest reported', 'as reported');
         cols.forEach(function(c) {
           cell(function(d) {

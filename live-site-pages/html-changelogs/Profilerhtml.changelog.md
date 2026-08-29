@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.47w] — 2026-08-29 04:43:21 AM EST — v03.57r
+
+### Added
+- Comparisons now lead with a like-for-like revenue row: each company's latest full year in US dollars, with a bar showing relative size
+- Where a figure was converted from another currency, the conversion basis is shown on hover, and the period each figure covers is stated so companies with different financial year-ends can be read correctly
+- Companies whose dossier does not yet carry a comparable figure say so plainly instead of showing an estimate
 
 ## [v01.46w] — 2026-08-29 04:13:49 AM EST — v03.55r
 

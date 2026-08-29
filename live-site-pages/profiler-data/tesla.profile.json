@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "tesla",
   "name": "Tesla, Inc.",
   "shortName": "Tesla",
@@ -447,7 +447,9 @@
             "result": "Segment was the standout"
           }
         ],
-        "commentary": ""
+        "commentary": "",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31"
       },
       {
         "period": "FY2025",
@@ -457,7 +459,10 @@
             "actual": "$94.83B (-3%); Q4 $24.90B",
             "expected": "Q4 $24.74B (consensus)",
             "verdict": "beat",
-            "result": "Q4 beat"
+            "result": "Q4 beat",
+            "kpi": "revenue",
+            "usdMillions": 94830,
+            "fxBasis": "as reported"
           },
           {
             "name": "EPS (non-GAAP)",
@@ -474,7 +479,9 @@
             "result": "Energy became the profit engine as automotive shrank"
           }
         ],
-        "commentary": ""
+        "commentary": "",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q1–Q2 2026 (latest quarters)",
@@ -508,7 +515,8 @@
             "result": "H1 2026 deployments 22.3 GWh"
           }
         ],
-        "commentary": "No formal FY2026 guidance figures published; the watch items are H2 deployment guidance and the Megapack 3 / Brookshire ramp."
+        "commentary": "No formal FY2026 guidance figures published; the watch items are H2 deployment guidance and the Megapack 3 / Brookshire ramp.",
+        "periodType": "other"
       }
     ],
     "commentary": "Deployment GWh, segment revenue/margins, and EPS are company-reported (shareholder updates / SEC filings) as relayed by cited outlets; consensus figures are analyst estimates (LSEG/aggregators). The ~25 GWh NatPower deal is third-party reported, not company-confirmed."

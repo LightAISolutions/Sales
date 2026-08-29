@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "abb",
   "name": "ABB",
   "legalName": "ABB Ltd",
@@ -367,7 +367,9 @@
             "result": "H2 consensus misses preceded the 2025 acceleration"
           }
         ],
-        "commentary": "Continuing-ops restatement (ex-Robotics): orders $31.5B, revenue $30.6B, Op. EBITA $5.57B (18.2%). The data-center growth story is real but recent — FY2024 still showed Robotics backlog adjustments and China drag."
+        "commentary": "Continuing-ops restatement (ex-Robotics): orders $31.5B, revenue $30.6B, Op. EBITA $5.57B (18.2%). The data-center growth story is real but recent — FY2024 still showed Robotics backlog adjustments and China drag.",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31"
       },
       {
         "period": "FY2025",
@@ -384,7 +386,10 @@
             "actual": "$33.2B (+9%)",
             "expected": "Q3 $9.08B vs $8.91B; Q4 $9.05B vs $8.94B",
             "verdict": "beat",
-            "result": "Both H2 quarters beat consensus on both lines"
+            "result": "Both H2 quarters beat consensus on both lines",
+            "kpi": "revenue",
+            "usdMillions": 33200,
+            "fxBasis": "as reported"
           },
           {
             "name": "Operational EBITA",
@@ -394,7 +399,9 @@
             "result": "All-time-high margin; EPS $2.59 (+21%); FCF $4.57B; ROCE 25.3%"
           }
         ],
-        "commentary": "Record year. Electrification: orders $18.8B (+14%), Op. EBITA margin 23.5%, backlog +26%. Dividend raised to CHF 0.94; $2B buyback launched February 2026. CMD (Nov 2025) raised targets: Op. EBITA margin 18-22%, ROCE >20%, FCF conversion >95%."
+        "commentary": "Record year. Electrification: orders $18.8B (+14%), Op. EBITA margin 23.5%, backlog +26%. Dividend raised to CHF 0.94; $2B buyback launched February 2026. CMD (Nov 2025) raised targets: Op. EBITA margin 18-22%, ROCE >20%, FCF conversion >95%.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q2 2026",
@@ -421,7 +428,9 @@
             "result": "Discontinued-ops noise; Q1 2026 EPS also missed ($0.73 vs $0.782)"
           }
         ],
-        "commentary": "Electrification Q2: orders $7.2B (+60%, first >$7B quarter), data-center orders triple-digit, Americas +114%, margin 24.9%. FY2026 guidance raised to low-double-digit-to-low-teens comparable growth. Shares fell ~4% on the day — Rotork price concerns, not operations. Net debt just $2.3B (0.3x EBITDA)."
+        "commentary": "Electrification Q2: orders $7.2B (+60%, first >$7B quarter), data-center orders triple-digit, Americas +114%, margin 24.9%. FY2026 guidance raised to low-double-digit-to-low-teens comparable growth. Shares fell ~4% on the day — Rotork price concerns, not operations. Net debt just $2.3B (0.3x EBITDA).",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30"
       }
     ]
   },

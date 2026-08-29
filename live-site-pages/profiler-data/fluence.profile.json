@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "fluence",
   "name": "Fluence Energy, Inc.",
   "shortName": "Fluence",
@@ -410,7 +410,9 @@
             "result": "Baseline for the FY2025 guidance collapse below"
           }
         ],
-        "commentary": ""
+        "commentary": "",
+        "periodType": "annual",
+        "periodEnd": "2024-09-30"
       },
       {
         "period": "FY2025 (ended Sep 30, 2025) — the guidance collapse",
@@ -427,7 +429,10 @@
             "actual": "$2.3B — below even the final guided range",
             "expected": "$2.6–2.8B (final guidance)",
             "verdict": "miss",
-            "result": "Miss vs guidance"
+            "result": "Miss vs guidance",
+            "kpi": "revenue",
+            "usdMillions": 2300,
+            "fxBasis": "as reported"
           },
           {
             "name": "Net result",
@@ -437,7 +442,9 @@
             "result": "—"
           }
         ],
-        "commentary": "FY2025 damage was tariff-driven (Chinese cell imports, paused US projects); mitigation via the Utah/Tennessee domestic supply chain became central to the story."
+        "commentary": "FY2025 damage was tariff-driven (Chinese cell imports, paused US projects); mitigation via the Utah/Tennessee domestic supply chain became central to the story.",
+        "periodType": "annual",
+        "periodEnd": "2025-09-30"
       },
       {
         "period": "FY2026 (in progress; Q3 reported Aug 2026)",
@@ -464,7 +471,8 @@
             "result": "Offsets: record $1.44B quarterly order intake (≈3× YoY) and record $6.4B backlog"
           }
         ],
-        "commentary": "Ownership context: AES's reported ~$38B take-private by GIP/BlackRock (Oct 2025) drove a ~24.5% one-day FLNC pop on stake speculation; AES and Siemens then trimmed via the May 2026 $420M secondary (20M shares at $21). No Fluence take-private has occurred."
+        "commentary": "Ownership context: AES's reported ~$38B take-private by GIP/BlackRock (Oct 2025) drove a ~24.5% one-day FLNC pop on stake speculation; AES and Siemens then trimmed via the May 2026 $420M secondary (20M shares at $21). No Fluence take-private has occurred.",
+        "periodType": "other"
       }
     ],
     "commentary": "Fiscal year ends September 30. Guidance and results are company-reported; consensus figures and stock-move magnitudes are third-party press numbers (the Feb 2025 drop is reported between 38% and 46% across accounts)."

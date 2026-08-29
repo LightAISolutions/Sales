@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "catl",
   "name": "Contemporary Amperex Technology Co., Limited (宁德时代新能源科技股份有限公司)",
   "shortName": "CATL",
@@ -544,7 +544,9 @@
             "result": "Power-battery gross margin 23.9% vs 28.2% expected"
           }
         ],
-        "commentary": "Announced a ~US$2.8B dividend plan alongside the results."
+        "commentary": "Announced a ~US$2.8B dividend plan alongside the results.",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31"
       },
       {
         "period": "FY2025 (reported March 2026)",
@@ -554,7 +556,10 @@
             "actual": "RMB 423.7B (+17.0%)",
             "expected": "",
             "verdict": "beat",
-            "result": "Shares surged on the 'upbeat' results — HK +9.2%, Shenzhen +6%"
+            "result": "Shares surged on the 'upbeat' results — HK +9.2%, Shenzhen +6%",
+            "kpi": "revenue",
+            "usdMillions": 58951,
+            "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com); cross-checks against this dossier’s own \"~US$10B\" beside RMB 72.2B net profit"
           },
           {
             "name": "Net profit (attributable)",
@@ -571,7 +576,9 @@
             "result": "—"
           }
         ],
-        "commentary": "R&D spend RMB 22.1B; storage growth lagged the group in FY2025 before re-accelerating sharply in 2026."
+        "commentary": "R&D spend RMB 22.1B; storage growth lagged the group in FY2025 before re-accelerating sharply in 2026.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "H1 2026 (reported July 2026)",
@@ -598,7 +605,9 @@
             "result": "—"
           }
         ],
-        "commentary": "US headwinds: added to the US DoD 1260H list (Jan 2025, disputed); Pentagon direct contracting bans phase in from June 2026 and DoD procurement of CATL batteries is barred from October 2027 — pushing US strategy toward the LRS licensing route."
+        "commentary": "US headwinds: added to the US DoD 1260H list (Jan 2025, disputed); Pentagon direct contracting bans phase in from June 2026 and DoD procurement of CATL batteries is barred from October 2027 — pushing US strategy toward the LRS licensing route.",
+        "periodType": "half",
+        "periodEnd": "2026-06-30"
       }
     ],
     "commentary": "Figures company-reported (annual reports / exchange filings) as relayed by cited outlets; consensus numbers are analyst estimates and marked per period."

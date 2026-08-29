@@ -35,7 +35,7 @@ Top-level fields:
 
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
-| `schemaVersion` | number | yes | Profile schema version — currently `3` (v3 adds `relationships[]`; v2 added `recentDevelopments[]`, `strategyRead[]`, and the product depth fields). Older profiles remain valid; the renderer skips absent sections. Write new/revised profiles at v3 |
+| `schemaVersion` | number | yes | Profile schema version — currently `4` (v4 adds the normalized-KPI fields on `financials` periods/metrics; v3 added `relationships[]`; v2 added `recentDevelopments[]`, `strategyRead[]`, and the product depth fields). Older profiles remain valid; the renderer skips absent sections. Write new/revised profiles at v4 |
 | `slug` / `name` / `shortName` | string | yes | Identity; `name` is the full legal name, `shortName` the display name |
 | `categories` | string[] | yes | Same values as the registry entry |
 | `website` | string | no | `https://` URL |
@@ -66,6 +66,33 @@ Top-level fields:
 | `background` | string[] | yes | Work-experience bullets, most recent first (`"Role — Company (years)"` style); education last if notable |
 
 `financials` object: `{ "currency", "type": "public"|"private", "periods": [...], "commentary" }`. Each period: `{ "period": "FY2024", "metrics": [{ "name", "actual", "expected", "verdict": "beat"|"miss"|"inline", "result" }], "commentary" }` — `expected` is the analyst consensus or company guidance at the time (state which in `result`/`commentary`); for private companies use disclosed figures/funding rounds and leave `expected` empty where none exists. Cover the trailing **two fiscal years** plus the latest interim period when published.
+
+### Normalized KPI fields (schema v4)
+
+The `name`/`actual` pair is deliberately prose — 217 distinct metric names across the covered set, with figures, YoY deltas and caveats written the way each company reports them. That prose stays authoritative and unchanged. **v4 layers a small, optional, machine-readable overlay on top of it** so a metric can be compared across companies (the Compare view's normalized revenue row is the first consumer). Fill it only where the mapping is genuine; leave it out otherwise — an absent field is always better than a forced one.
+
+On each **period** (`financials.periods[]`):
+
+| Field | Type | Required | Meaning |
+|-------|------|----------|---------|
+| `periodType` | string | no | `annual` · `half` · `quarter` · `other`. What kind of reporting period this is, independent of how the label is worded (`FY2025 (ended Sep 30, 2025)` and `FY2025` are both `annual`) |
+| `periodEnd` | string | no | `YYYY-MM-DD` the period ended. Makes fiscal-year offsets explicit — Fluence's FY2025 ended 2025-09-30 while Tesla's ended 2025-12-31, and a consumer comparing them must be able to say so |
+
+On each **metric** (`financials.periods[].metrics[]`):
+
+| Field | Type | Required | Meaning |
+|-------|------|----------|---------|
+| `kpi` | string | no | Canonical key identifying what this metric *is*, regardless of how `name` words it: `revenue`, `net-income`, `eps`, `operating-profit`, `gross-margin`, `orders`, `backlog`, `capex`, `shipments`. Set it only when the metric is that KPI for the **whole company** — a segment figure (`ESS segment revenue`) is not `revenue`, and a guidance line is not an actual |
+| `usdMillions` | number | no | The figure expressed in **millions of USD**. For companies that report in USD this is the reported number restated in millions and nothing else. For any other reporting currency it is a conversion, and `fxBasis` is then **mandatory** |
+| `fxBasis` | string | see left | How `usdMillions` was arrived at. `"as reported"` when the company reports in USD. Otherwise the citable conversion basis, including the rate, the period it applies to and its source — e.g. `"RMB at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"`. **Never store a converted figure without one**: an unsourced conversion is fabricated precision, which the No-fabrication rule forbids as squarely as an invented revenue number |
+
+**Rules**
+
+- **The prose is the source of truth; the overlay is a convenience.** `usdMillions` must be derivable from `actual` — never introduce a figure the prose does not contain. If they ever disagree, `actual` is right and the overlay is the bug
+- **Only comparable things get a `kpi`.** Whole-company actuals only: not segments, not guidance ranges, not trajectories, not "Results"-style composite lines. When a period reports several revenue lines (total, segment, quarterly split), the `kpi: "revenue"` marker belongs on the total for that period alone
+- **One `kpi` per key per period.** A consumer reading `revenue` for a period must get exactly one answer
+- **FX rates are researched, not remembered** — per the "Platform quotas, limits, and pricing require web search verification" rule in `.claude/rules/behavioral-rules.md`, look the rate up and cite it. Where the dossier itself already states a USD equivalent (CATL's `~US$10B` beside `RMB 72.2B`), use it to sanity-check the conversion and say so
+- **Backfill opportunistically** — a dossier gains these on its next revision, exactly as `relationships[]` does. There is no mass migration, and consumers must treat every field as optional
 
 ## Authoring rules
 

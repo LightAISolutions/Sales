@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "sungrow",
   "name": "Sungrow Power Supply Co., Ltd. (阳光电源股份有限公司)",
   "shortName": "Sungrow",
@@ -601,7 +601,9 @@
             "result": "—"
           }
         ],
-        "commentary": ""
+        "commentary": "",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31"
       },
       {
         "period": "FY2025 (reported April 2026)",
@@ -611,7 +613,10 @@
             "actual": "RMB 89.18B (+14.6%)",
             "expected": "",
             "verdict": "inline",
-            "result": "No explicit consensus comparison found; Q4 momentum decelerated"
+            "result": "No explicit consensus comparison found; Q4 momentum decelerated",
+            "kpi": "revenue",
+            "usdMillions": 12408,
+            "fxBasis": "RMB converted at 7.1873 CNY/USD (2025 calendar-year average, exchange-rates.org / x-rates.com)"
           },
           {
             "name": "Net profit (attributable)",
@@ -628,7 +633,9 @@
             "result": "Storage became the largest and highest-margin segment"
           }
         ],
-        "commentary": "Dividends: FY2025 final RMB 6.90 per 10 shares plus an H1 2025 interim of RMB 9.50 per 10 shares; ~RMB 300M of buybacks in 2025. Shares hit a record (~RMB 413.5B market cap) in Nov 2025 after the first >RMB 4B quarterly profit."
+        "commentary": "Dividends: FY2025 final RMB 6.90 per 10 shares plus an H1 2025 interim of RMB 9.50 per 10 shares; ~RMB 300M of buybacks in 2025. Shares hit a record (~RMB 413.5B market cap) in Nov 2025 after the first >RMB 4B quarterly profit.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q1 2026 (reported April 2026; H1 2026 due late August)",
@@ -648,7 +655,9 @@
             "result": "Institutions cut target prices; market cap ~RMB 277B by late April, >10% down YTD"
           }
         ],
-        "commentary": "2026 management operating targets circulating from investor-briefing recaps (unverified against a filing): revenue RMB 110–120B, net profit RMB 17–19B, storage shipments ≥60 GWh."
+        "commentary": "2026 management operating targets circulating from investor-briefing recaps (unverified against a filing): revenue RMB 110–120B, net profit RMB 17–19B, storage shipments ≥60 GWh.",
+        "periodType": "quarter",
+        "periodEnd": "2026-03-31"
       }
     ],
     "commentary": "Company-reported figures from annual/quarterly disclosures as relayed by cited outlets; the FY2024 storage GWh is derived, and the 2026 targets are investor-recap numbers, both flagged as such."

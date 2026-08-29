@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.57r] — 2026-08-29 04:43:21 AM EST
+
+> **Prompt:** "continue with your recommendation"
+>
+> *(Standing recommendation from the previous response: add the normalized KPI fields — roadmap item #2 — so the Compare view's as-reported figures become comparable USD bars.)*
+
+### Added
+
+- `PROFILER-SCHEMA.md` — **profile schema v4: the normalized-KPI overlay.** New optional fields on `financials.periods[]` (`periodType` ∈ annual/half/quarter/other, `periodEnd` as `YYYY-MM-DD`) and on `financials.periods[].metrics[]` (`kpi` from a fixed nine-key set, `usdMillions`, `fxBasis`). Designed against a survey of the live data — **217 distinct metric names across 88 dossiers**, in 15 different currency spellings — which is why it is a thin opt-in overlay rather than a migration: the prose `name`/`actual` pair stays authoritative and unchanged, and `usdMillions` must be derivable from `actual`. Rules cover whole-company actuals only (no segments, no guidance), one `kpi` per key per period, and **`fxBasis` mandatory on any converted figure**
+- `Profiler.html` (v01.47w) — Compare's Tier 1 now opens with a **normalized revenue row**: each company's latest complete annual revenue in USD with a proportional magnitude bar (`ovCmpLatestRevenue` / `ovCmpUsd` / `.ov-cmp-mag`), the period and its end date beneath so differing fiscal years are visible at a glance, and a hover-revealed conversion basis on any figure that was converted. A company without the overlay renders "Not normalized yet" and **no bar** — the chart is never completed with an invented figure; the row is omitted entirely when no selected company carries the data
+- `profiler-data/` — backfilled six dossiers to schema v4 (`sungrow`, `catl`, `fluence`, `tesla`, `abb`, `vertiv`): `periodType`/`periodEnd` on every period, and FY2025 revenue tagged `kpi: "revenue"` with `usdMillions`
+
+### Notes
+
+- **FX was researched, not remembered.** Fluence, Tesla, ABB and Vertiv report in USD, so their figures are `"as reported"` with no conversion at all. Sungrow and CATL report in RMB and were converted at **7.1873 CNY/USD** (2025 calendar-year average, per exchange-rates.org and x-rates.com, which agree). The rate independently cross-checks against CATL's own dossier: RMB 72.2B net profit ÷ 7.1873 = US$10.05B, and the dossier states "~US$10B"
+- **No `profileVersion` bump and no archival on the six backfilled dossiers.** This is an additive metadata overlay — no fact, figure or prose changed — so treating it as a dossier *revision* would archive six near-identical snapshots and desynchronize `lastUpdated` from the registry that v03.53r just re-synced. `schemaVersion` is what moves; the schema's own "backfill opportunistically" rule is satisfied without a revision
+- **Only the latest complete annual period is normalized.** FY2024 was left alone because the verified rate is the 2025 average and applying it to 2024 figures would be a conversion with the wrong basis. Earlier years backfill when their own rate is verified
+- Verified by a 24-check Playwright suite: figures and bar proportions against the real dossiers, bars scaling to the selection maximum, the fiscal-year offset surfacing for Fluence's September year-end, conversion bases present on exactly the two converted figures and absent on the four as-reported ones, the honest-gap fallback, and the row disappearing when no company has the overlay. The Compare and ticker-render suites and `scripts/verify-profiler-roles.py` all re-run clean
+- **Uniform display precision** — `ovCmpUsd` renders two decimals on billions throughout. A column mixing `$12.4B` with `$2.30B` reads as sloppy and invites a false comparison; two decimals is $10M resolution, within the significant figures the sources carry
+- **Observed, not changed:** a Sungrow/CATL/Fluence/Tesla comparison renders as "Cross-space" because Fluence is categorized `integrator` while the others are `supplier` — no shared category, so Tier 2 stays suppressed per the approved gate. The gate behaves exactly as specified; whether `supplier` and `integrator` should count as one technical family for Tier 2 is a design question raised with the developer rather than decided here
 
 ## [v03.56r] — 2026-08-29 04:19:16 AM EST
 

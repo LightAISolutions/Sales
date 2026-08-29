@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "slug": "vertiv",
   "name": "Vertiv",
   "legalName": "Vertiv Holdings Co",
@@ -298,7 +298,9 @@
             "result": "+17.9% Q4 surprise — but shares fell on soft Q1 2025 guidance"
           }
         ],
-        "commentary": "Four-for-four beats, net leverage cut to ~1x. The pattern of 'beat the quarter, get punished on guidance' started here."
+        "commentary": "Four-for-four beats, net leverage cut to ~1x. The pattern of 'beat the quarter, get punished on guidance' started here.",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31"
       },
       {
         "period": "FY2025",
@@ -308,7 +310,10 @@
             "actual": "$10.23B (+27.7%)",
             "expected": "beats every quarter (+3.6% to +11.9%)",
             "verdict": "beat",
-            "result": "Q4 revenue $2.88B in line; organic orders +252% YoY, backlog $15.0B"
+            "result": "Q4 revenue $2.88B in line; organic orders +252% YoY, backlog $15.0B",
+            "kpi": "revenue",
+            "usdMillions": 10230,
+            "fxBasis": "as reported"
           },
           {
             "name": "Adjusted EPS",
@@ -318,7 +323,9 @@
             "result": "Q3 EPS +24% surprise; Q4 +5.8%; initial FY2026 guide $5.97-6.07 later raised twice"
           }
         ],
-        "commentary": "The blowout year: book-to-bill ~2.9x in Q4 and a backlog covering 12-18 months of revenue. Geographic caveat — growth was overwhelmingly Americas; APAC -9.6% and EMEA -8.2% in Q4."
+        "commentary": "The blowout year: book-to-bill ~2.9x in Q4 and a backlog covering 12-18 months of revenue. Geographic caveat — growth was overwhelmingly Americas; APAC -9.6% and EMEA -8.2% in Q4.",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31"
       },
       {
         "period": "Q2 2026 (latest interim)",
@@ -338,7 +345,9 @@
             "result": "Fifth straight EPS beat; adjusted operating margin 22.6% (+410 bps); FY guide raised to $13.8-14.2B / $6.65-6.75"
           }
         ],
-        "commentary": "EPS, margin, and free cash flow (+234%) all beat, guidance was raised — and the stock still fell ~10-17% in a session, capping a ~27% one-month drawdown. At least seven analysts cut targets while keeping Buy ratings. The debate: timing blip versus the first evidence of execution strain at scale."
+        "commentary": "EPS, margin, and free cash flow (+234%) all beat, guidance was raised — and the stock still fell ~10-17% in a session, capping a ~27% one-month drawdown. At least seven analysts cut targets while keeping Buy ratings. The debate: timing blip versus the first evidence of execution strain at scale.",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30"
       }
     ]
   },
