@@ -24,7 +24,7 @@
       "hq": "Zurich, Switzerland",
       "ticker": "SIX: ABBN",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "aligned",
@@ -35,7 +35,7 @@
       "tagline": "The record $40B exit — AIP/MGX/GIP bought the 51-campus, 6.4 GW Americas platform from Macquarie with Microsoft, NVIDIA and xAI inside the buyer consortium; patented Delta³/DeltaFlow waterless cooling (600+ kW/rack hybrid) is the moat.",
       "hq": "Dallas, TX, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "amazon",
@@ -47,7 +47,7 @@
       "hq": "Seattle, WA, USA",
       "ticker": "NASDAQ: AMZN",
       "status": "active",
-      "lastUpdated": "2026-08-10"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "applied-digital",
@@ -59,7 +59,7 @@
       "hq": "Dallas, TX, USA",
       "ticker": "NASDAQ: APLD",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "arevon",
@@ -81,7 +81,7 @@
       "tagline": "The megaproject dynasty — ENR #2 at $19.5B with a $58.2B backlog; the only EPC to bring 21st-century US nuclear online, three concurrent LNG megatrains, and NVIDIA's partner for modularized gigawatt AI factories.",
       "hq": "Reston, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "black-veatch",
@@ -92,7 +92,7 @@
       "tagline": "The interconnection specialist — client-owned substations that halve hyperscale grid timelines; ENR #6 Power + #8 Water + #1 Hydrogen (ACES Delta), and an equal seat in one of the first US SMR design-build JVs.",
       "hq": "Overland Park, KS, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "blattner",
@@ -116,7 +116,7 @@
       "hq": "San Jose, CA, USA",
       "ticker": "NYSE: BE",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "burns-mcdonnell",
@@ -127,7 +127,7 @@
       "tagline": "ENR's #1 power design firm eleven years running — the largest US substation design group and a claimed >50% RICE share, fused to Tier-3 data-center design-build under a 100% ESOP.",
       "hq": "Kansas City, MO, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "byd",
@@ -139,7 +139,7 @@
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 002594 · HKEX: 1211",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "canadian-solar",
@@ -163,7 +163,7 @@
       "hq": "Ningde, China",
       "ticker": "SZSE: 300750 · HKEX: 3750",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "constellation-energy",
@@ -175,7 +175,7 @@
       "hq": "Baltimore, MD, USA",
       "ticker": "NASDAQ: CEG",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "core-scientific",
@@ -187,7 +187,7 @@
       "hq": "Austin, TX, USA",
       "ticker": "NASDAQ: CORZ",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "coreweave",
@@ -199,7 +199,7 @@
       "hq": "Livingston, NJ, USA",
       "ticker": "NASDAQ: CRWV",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "crrc-zhuzhou",
@@ -224,7 +224,7 @@
       "tagline": "The energy-first AI factory builder — Abilene 1.2 GW for OpenAI/Oracle, ~4.9 GW contracted of a 40+ GW pipeline; the deepest private-developer energy stack.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "delta-electronics",
@@ -236,7 +236,7 @@
       "hq": "Taipei, Taiwan",
       "ticker": "TWSE: 2308",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "dpr",
@@ -247,7 +247,7 @@
       "tagline": "The technical builder of Stargate Abilene — self-performing GC with ~6,000 craft workers and prefab on 90%+ of new work; ENR #7 at $14.0B with $26.1B of new contracts booked.",
       "hq": "Redwood City, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "eaton",
@@ -259,7 +259,7 @@
       "hq": "Dublin, Ireland",
       "ticker": "NYSE: ETN",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "envision-energy",
@@ -294,7 +294,7 @@
       "hq": "Redwood City, CA, USA",
       "ticker": "NASDAQ: EQIX",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "enchanted-rock",
@@ -318,7 +318,7 @@
       "hq": "Huizhou, China",
       "ticker": "SZSE: 300014",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "flexgen",
@@ -329,7 +329,7 @@
       "tagline": "Software-first US BESS integrator (HybridOS EMS) — assessed as a services-lane specialist after acquiring Powin's assets in 2025.",
       "hq": "Durham, NC, USA",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "fluence",
@@ -341,7 +341,7 @@
       "hq": "Arlington, VA, USA",
       "ticker": "NASDAQ: FLNC",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "ge-vernova",
@@ -353,7 +353,7 @@
       "hq": "Cambridge, MA, USA",
       "ticker": "NYSE: GEV",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "google",
@@ -365,7 +365,7 @@
       "hq": "Mountain View, CA, USA",
       "ticker": "NASDAQ: GOOGL",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "hitachi-energy",
@@ -376,7 +376,7 @@
       "tagline": "World's largest transformer maker and HVDC leader — $57.9B backlog, 30-40 month lead times, $9B+ capacity program; its calendar is everyone's constraint.",
       "hq": "Zurich, Switzerland",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "hithium",
@@ -398,7 +398,7 @@
       "tagline": "America's #1 data-center builder by revenue — $13B on an 82% mission-critical mix, 2+ GW commissioned; the 180-day 22.5 MW speed benchmark from Data Center Alley's home team.",
       "hq": "Falls Church, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "holder-construction",
@@ -409,7 +409,7 @@
       "tagline": "The quiet giant of hyperscale construction — BD+C's #1 data-center contractor in 2023-24; Google's $2B Fort Wayne campus and EdgeCore's 450 MW Mesa build behind an NDA-heavy low profile.",
       "hq": "Atlanta, GA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "huawei-digital-power",
@@ -420,7 +420,7 @@
       "tagline": "The excluded benchmark — #1 in prefab modular DCs and PV inverters, CNY 77.3B revenue; US-banned and EU-phasing-out, so its AIDC market is the Gulf and APAC.",
       "hq": "Shenzhen, China",
       "status": "active",
-      "lastUpdated": "2026-08-14"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "hyperstrong",
@@ -446,7 +446,7 @@
       "hq": "Sydney, Australia",
       "ticker": "NASDAQ: IREN",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "jinko",
@@ -458,7 +458,7 @@
       "hq": "Shangrao, China",
       "ticker": "NYSE: JKS · SSE: 688223",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "jupiter-power",
@@ -491,7 +491,7 @@
       "tagline": "The power picks-and-shovels of the AI boom — ~11 GW of gas EPC (Homer City 4.5 GW), completed HVDC (CHPE), and the Oklo SMR constructor seat; employee-owned at ENR #4.",
       "hq": "Omaha, NE, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "lambda",
@@ -502,7 +502,7 @@
       "tagline": "The Superintelligence Cloud — Microsoft multibillion + NVIDIA leaseback anchors, $5.9B Series E, first IG-rated private-neocloud term loan; H2 2026 IPO window.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "lg-energy-solution",
@@ -514,7 +514,7 @@
       "hq": "Seoul, South Korea",
       "ticker": "KRX: 373220",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "lightsource-bp",
@@ -537,7 +537,7 @@
       "hq": "Taipei, Taiwan",
       "ticker": "TWSE: 2301",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "ls-energy-solutions",
@@ -585,7 +585,7 @@
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 002851",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "meta",
@@ -597,7 +597,7 @@
       "hq": "Menlo Park, CA, USA",
       "ticker": "NASDAQ: META",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "microsoft",
@@ -609,7 +609,7 @@
       "hq": "Redmond, WA, USA",
       "ticker": "NASDAQ: MSFT",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "mortenson",
@@ -621,7 +621,7 @@
       "tagline": "The power-and-shell contractor — top-10 ENR builder pairing 11 GW of data centers with 47.8 GW wind / 17 GW solar / 45 GWh storage EPC and gigawatt-class substations.",
       "hq": "Minneapolis, MN, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "narada",
@@ -646,7 +646,7 @@
       "hq": "Amsterdam, Netherlands",
       "ticker": "NASDAQ: NBIS",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "nextera-energy-resources",
@@ -670,7 +670,7 @@
       "hq": "Santa Clara, CA, USA",
       "ticker": "NASDAQ: NVDA",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "on-energy",
@@ -693,7 +693,7 @@
       "tagline": "Anchor demand — ~$1.4T / ~30 GW committed against ~0.3 GW operational; the circular-financing debate is, in large part, the OpenAI-solvency debate.",
       "hq": "San Francisco, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "oracle",
@@ -705,7 +705,7 @@
       "hq": "Austin, TX, USA",
       "ticker": "NYSE: ORCL",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "panasonic",
@@ -717,7 +717,7 @@
       "hq": "Osaka, Japan",
       "ticker": "TYO: 6752",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "plus-power",
@@ -752,7 +752,7 @@
       "hq": "Dallas, TX, USA",
       "ticker": "NYSE: PRIM",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "proenergy",
@@ -774,7 +774,7 @@
       "tagline": "Blackstone's $60B growth machine — leased capacity 14× since the take-private, 3 GW+ live with a $30B pre-leased pipeline stamped from the water-free Freedom design; the $4.6B Baa2 green bond marked the wholesale sector's IG debut.",
       "hq": "Sterling, VA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "quanta-services",
@@ -786,7 +786,7 @@
       "hq": "Houston, TX, USA",
       "ticker": "NYSE: PWR",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "rosendin",
@@ -797,7 +797,7 @@
       "tagline": "#2 US electrical contractor (ESOP, $5.6B revenue) — 15+ GW of data-center power built; BESSUPS with FlexGen moves BESS inside the fence.",
       "hq": "San Jose, CA, USA",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "samsung-ct",
@@ -821,7 +821,7 @@
       "hq": "Yongin-si, South Korea",
       "ticker": "KRX: 006400",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "schneider-electric",
@@ -833,7 +833,7 @@
       "hq": "Rueil-Malmaison, France",
       "ticker": "EPA: SU",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "siemens-energy",
@@ -845,7 +845,7 @@
       "hq": "Munich, Germany",
       "ticker": "ETR: ENR",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "sinexcel",
@@ -857,7 +857,7 @@
       "hq": "Shenzhen, China",
       "ticker": "SZSE: 300693",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "solv-energy",
@@ -892,7 +892,7 @@
       "hq": "Hefei, China",
       "ticker": "SZSE: 300274",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "sunwoda",
@@ -916,7 +916,7 @@
       "tagline": "Patent-moated Tier 5 landlord of the AI-factory era — five US Prime campuses, 2 MW-per-rack EVO halls, a 12 GW Oklo nuclear option and $24B raised since 2024; a confidential S-1 is filed at a reported $50–80B.",
       "hq": "Las Vegas, NV, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "terawulf",
@@ -928,7 +928,7 @@
       "hq": "Easton, MD, USA",
       "ticker": "NASDAQ: WULF",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "terra-gen",
@@ -951,7 +951,7 @@
       "hq": "Austin, TX, USA",
       "ticker": "NASDAQ: TSLA",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "trina-storage",
@@ -974,7 +974,7 @@
       "tagline": "ENR's #1 US contractor six years running — data-center revenue tripling toward a $20B-by-2030 target on Meta, CoreWeave, and Stargate mega-campuses; SourceBlue buys the gear.",
       "hq": "New York, NY, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "vantage",
@@ -985,7 +985,7 @@
       "tagline": "The giga-scale Stargate landlord — 41 campuses / ~9 GW on five continents, 1.4 GW Frontier + 902 MW Lighthouse for Oracle/OpenAI behind a record $38B loan; invented the data-center ABS, now reportedly exploring a ~$100B IPO.",
       "hq": "Denver, CO, USA",
       "status": "active",
-      "lastUpdated": "2026-08-21"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "vertiv",
@@ -997,7 +997,7 @@
       "hq": "Columbus, OH, USA",
       "ticker": "NYSE: VRT",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "voltagrid",
@@ -1020,7 +1020,7 @@
       "hq": "Helsinki, Finland",
       "ticker": "HEL: WRT1V",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "xai",
@@ -1032,7 +1032,7 @@
       "hq": "Palo Alto, CA, USA",
       "ticker": "private (inside SpaceX; IPO S-1 filed)",
       "status": "active",
-      "lastUpdated": "2026-08-09"
+      "lastUpdated": "2026-08-22"
     },
     {
       "slug": "zhonhen",

@@ -3,11 +3,19 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.53r] — 2026-08-29 03:24:50 AM EST
+
+> **Prompt:** "While building a Profiler mockup, a data drift was found in `live-site-pages/profiler-data/`: many entries in `profiler-companies.json` carry `lastUpdated: "2026-08-09"` while their corresponding `<slug>.profile.json` files say `lastUpdated: "2026-08-22"` (confirmed for at least: abb, sungrow, catl, tesla, fluence, vertiv, crusoe, quanta-services, constellation-energy — likely more; the 2026-08-22 dossier-mining/refresh pass appears to have bumped profiles without updating the registry). `repository-information/PROFILER-SCHEMA.md` (Registry schema) requires `companies[].lastUpdated` to be kept in sync with the profile's `lastUpdated`, and the roster UI displays the registry value, so the app currently understates freshness. Task: write a small script or one-off pass that, for every company in `profiler-companies.json`, reads `<slug>.profile.json` and sets the registry `lastUpdated` to match. Report which entries changed. This is a data-only change: per `.claude/rules/profiler-app.md` ("Version & changelog interactions") there is no Profiler page version bump — repo CHANGELOG entry + repo version bump on the push commit per the normal Pre-Commit Checklist. Follow the repo's CLAUDE.md session protocols and push to the session's designated claude/* branch. Done looks like: every registry entry's lastUpdated equals its profile's lastUpdated, committed and pushed so the auto-merge workflow deploys it."
+
+### Fixed
+
+- `profiler-data/profiler-companies.json` — re-synced `lastUpdated` for **59 of 88** registry entries to match their `<slug>.profile.json` values (all landed on `2026-08-22`; stale values were `2026-08-09`, `2026-08-10`, `2026-08-14`, and `2026-08-21`). The 2026-08-22 dossier-mining pass had bumped every profile's `lastUpdated` without updating the registry, so the roster cards and "as of" lines understated freshness for two-thirds of the covered set. 29 entries were already in sync; every registry slug had a matching profile file. Data-only change — no Profiler page version bump per `.claude/rules/profiler-app.md`
 
 ## [v03.52r] — 2026-08-29 02:50:58 AM EST
 
