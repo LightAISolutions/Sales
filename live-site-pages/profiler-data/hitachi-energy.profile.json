@@ -7,9 +7,8 @@
     "supplier"
   ],
   "hq": "Zurich, Switzerland",
-  "ticker": "private (parent Hitachi TYO: 6501; listed sub Hitachi Energy India NSE: POWERINDIA)",
   "founded": "2020 (as Hitachi ABB Power Grids; full Hitachi ownership 2022)",
-  "ownership": "subsidiary (Hitachi, Ltd.)",
+  "ownership": "subsidiary (Hitachi, Ltd. — parent TYO: 6501; listed subsidiary Hitachi Energy India NSE: POWERINDIA)",
   "employees": "~50,000 across 60 countries",
   "website": "https://www.hitachienergy.com",
   "summary": "BOTTOM LINE UP FRONT: Hitachi Energy is the world's largest transformer maker by installed base and the HVDC market leader — which makes it the single most important gatekeeper of the AIDC sector's worst bottleneck. Its own large-transformer waits exceed 30-40 months, its reservation system rations access years ahead, and its FY25 numbers show what scarcity monetization looks like: orders $32.8B, backlog $57.9B (~2.9x annual revenue), revenue $19.8B (+26%), adjusted EBITA margin up from 6.1% (FY21) to 13.4%. The supply response is a $9B+ global capacity program headlined by a $457M South Boston, Virginia plant billed as the largest US transformer factory (operational 2028). BACKGROUND: Formed in 2020 when Hitachi bought ABB's Power Grids business, the company now spans transformers, high-voltage products, HVDC/FACTS grid integration, grid automation, and the e-mesh BESS line. Its AIDC play sharpened in October 2025 with an NVIDIA collaboration on 800 VDC grid-to-rack architecture (claimed 15x power-supply increase vs traditional systems). CEO Andreas Schierenbeck is the industry's loudest voice on AI power volatility — his January 2025 warning that AI training loads spike 'up to 10 times' normal draw was vindicated by August 2026 Bloomberg reporting that volatile AI load is physically damaging data-center equipment.",

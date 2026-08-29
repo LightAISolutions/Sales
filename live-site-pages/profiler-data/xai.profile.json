@@ -7,9 +7,8 @@
     "hyperscaler"
   ],
   "hq": "Palo Alto, CA, USA (AI HQ); data centers Memphis, TN / Southaven, MS",
-  "ticker": "private (inside SpaceX; S-1 filed May 2026)",
   "founded": "2023",
-  "ownership": "private (SpaceX subsidiary; Musk-controlled)",
+  "ownership": "private (SpaceX subsidiary; Musk-controlled; S-1 filed May 2026)",
   "employees": ">22,000 (combined SpaceXAI; AI-segment split not published)",
   "website": "https://x.ai",
   "summary": "BOTTOM LINE UP FRONT: xAI is the most aggressive self-builder in AI infrastructure — the Colossus campuses in Memphis/Southaven reached ~1.0 GW of nameplate compute draw by March 2026 (0 GW in 2023), built almost entirely on self-deployed behind-the-meter gas generation buffered by the world's largest Tesla Megapack installation — and it no longer exists as a standalone company: SpaceX acquired it February 2, 2026 (xAI valued ~$250B) and filed an IPO S-1 that makes its economics public for the first time: the AI segment lost $6.4B from operations on ~$3.2B revenue in 2025. BACKGROUND: Founded March 2023; acquired X in March 2025 ($80B/$33B); raised a $20B Series E at ~$230B (January 2026, NVIDIA and Cisco in) weeks before the SpaceX merger. Colossus 1: 100,000 H100s live in 122 days, now >220,000 GPUs. Colossus II: gigawatt-class (per SemiAnalysis, the first), with GB200/GB300 clusters brought up in 91 and 64 days. Monetization turned a corner in May 2026: Anthropic signed cloud agreements at $1.25B/month through May 2029 (~$15B/yr) for Colossus capacity. The unresolved liability: the gas fleet — up to 35 unpermitted mobile turbines documented at Memphis, 27 alleged at Southaven in a federal NAACP Clean Air Act suit ($399M litigation accrual), against a permitted path of 41 permanent turbines (1.2 GW plant) and mobile-unit removal by July 2027.",

@@ -7,9 +7,8 @@
     "supplier"
   ],
   "hq": "Shenzhen, China",
-  "ticker": "private (Huawei is employee-owned, unlisted)",
   "founded": "2021 (as standalone unit; Huawei network-energy lineage much older)",
-  "ownership": "subsidiary (Huawei Technologies)",
+  "ownership": "subsidiary (Huawei Technologies — employee-owned, unlisted)",
   "employees": "not disclosed (Huawei group ~200,000+)",
   "website": "https://digitalpower.huawei.com",
   "summary": "BOTTOM LINE UP FRONT: Huawei Digital Power is the largest China-based competitor across the AIDC power stack — global #1 in prefabricated modular data centers (Omdia), #1 in PV inverters (176 GWac in 2024; 55% of the global market combined with Sungrow), top-5 in data-center UPS, and joint-#4 in utility BESS integration — with 2025 segment revenue of CNY 77.3B (~$11.2B, +12.7%) making it ~9% of Huawei group revenue and its second-strongest growth engine after automotive. Its defining constraint is regulatory, not competitive: effectively banned from the US (Entity List since 2019, NDAA 889, and — since 28 July 2026 — an enacted FCC Covered List prohibition on foreign-produced connected power inverters that blocks new equipment authorizations), being phased out of EU-funded energy projects by April 2027 on cybersecurity grounds, and barred from remote asset access in Lithuania — so its addressable AIDC market is the Middle East, APAC, Africa, and LatAm. BACKGROUND: The unit spans data-center facility & critical power (PowerPOD power blocks, UPS5000, SmartLi lithium BBU, FusionModule/FusionCol), FusionSolar PV+ESS (LUTERRA grid-forming platform), site power, and EV charging. Its flagship reference is the Saudi Red Sea project (400 MW PV + 1.3 GWh BESS, the world's largest off-grid grid-forming microgrid) — though Sungrow, not Huawei, won the neighboring 7.8 GWh Saudi SEC deal, and the May 2025 'rogue devices' scandal (undisclosed communication hardware found in Chinese inverters) is the live controversy behind the Western bans.",

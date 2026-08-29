@@ -3,11 +3,48 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.56r] — 2026-08-29 04:19:16 AM EST
+
+> **Prompt:** "Six Profiler dossiers put ownership prose in the `ticker` field, which makes `ovOwnership()` in `live-site-pages/Profiler.html` render duplicated text like "private · private (~$30B round in talks, July 2026)". This shows on the dossier Summary tab's Ownership fact, in Word/PDF exports, and in the new Compare view's Snapshot row.
+>
+> Affected files in `live-site-pages/profiler-data/`:
+> - `crusoe.profile.json` — ticker: "private (~$30B round in talks, July 2026)"
+> - `eve-energy.profile.json` — ticker: "SZSE ChiNext: 300014 (HKEX H-share listing twice-filed, unconfirmed)"
+> - `hitachi-energy.profile.json` — ticker: "private (parent Hitachi TYO: 6501; listed sub …)"
+> - `huawei-digital-power.profile.json` — ticker: "private (Huawei is employee-owned, unlisted)"
+> - `openai.profile.json` — ticker: "private (confidential S-1 filed June 2026)"
+> - `xai.profile.json` — ticker: "private (inside SpaceX; S-1 filed May 2026)"
+>
+> Per `repository-information/PROFILER-SCHEMA.md`, `ticker` is `EXCHANGE: SYMBOL` for public companies and `ownership` carries the type. The prose belongs in `ownership` (or the summary), not `ticker`.
+>
+> Task: for each of the six, move the parenthetical/prose into the `ownership` field (or drop it if the summary already says it) and either set `ticker` to a real `EXCHANGE: SYMBOL` (eve-energy, hitachi-energy's parent) or omit the field entirely for genuinely private companies. Keep `profiler-companies.json`'s matching `ticker` values consistent with the profiles. Then check the rendering: the dossier Summary's Ownership fact and the Compare Snapshot row should read cleanly with no duplication (serve `live-site-pages/` over localhost and open `Profiler.html#crusoe` and `Profiler.html#compare/abb,crusoe`).
+>
+> Consider also whether `ovOwnership()` should defensively skip a ticker that starts with the ownership type — surface that as a recommendation to the developer rather than applying it unasked, since it is shared rendering code.
+>
+> This is a data-only change: no Profiler page version bump (per `.claude/rules/profiler-app.md`), repo CHANGELOG entry + repo version bump on the push commit, full Pre-Commit/Pre-Push checklists, push to the session's designated claude/* branch. Note the repo CHANGELOG `Sections` counter (91/100 at time of writing) and rotate if the push exceeds 100."
+
+### Fixed
+
+- `profiler-data/` — six dossiers held ownership prose in `ticker`, so `ovOwnership()` (which renders `type · ticker`) produced duplications like "private · private (~$30B round in talks, July 2026)" on the dossier Summary's Ownership fact, in Word/PDF exports, and in the Compare Snapshot row. The prose moved into `ownership`, where the schema says it belongs:
+  - `crusoe` — ownership → `"private (~$30B round in talks, July 2026)"`; `ticker` removed
+  - `openai` — ownership → `"private (Microsoft ~27% as-converted; Foundation ~26%; confidential S-1 filed June 2026)"`; `ticker` removed
+  - `xai` — ownership → `"private (SpaceX subsidiary; Musk-controlled; S-1 filed May 2026)"`; `ticker` removed (also removed from `profiler-companies.json`, the only registry entry with a malformed ticker)
+  - `huawei-digital-power` — ownership → `"subsidiary (Huawei Technologies — employee-owned, unlisted)"`; `ticker` removed
+  - `hitachi-energy` — ownership → `"subsidiary (Hitachi, Ltd. — parent TYO: 6501; listed subsidiary Hitachi Energy India NSE: POWERINDIA)"`; `ticker` removed
+  - `eve-energy` — the only one that had a real symbol buried in the prose: `ticker` → `"SZSE ChiNext: 300014"`, ownership → `"public (HKEX H-share listing twice-filed, unconsummated as of Aug 2026)"`
+
+### Notes
+
+- **`hitachi-energy` keeps no ticker deliberately.** The task allowed setting the parent's symbol, but `ticker` renders as *this company's* ticker in the dossier header, the roster card and the Compare header column — `TYO: 6501` there would assert that Hitachi Energy trades under its parent's symbol, which is false. Both the parent's and the listed Indian subsidiary's symbols are preserved in the `ownership` prose instead
+- **`eve-energy`'s registry entry stays `SZSE: 300014`** while the profile carries `SZSE ChiNext: 300014`. That mirrors the existing `sinexcel` pattern (registry `SZSE: 300693`, profile `SZSE ChiNext: 300693`) — same exchange and symbol, board qualifier only in the profile — so this follows house convention rather than inventing a new one
+- Verified by rendering: 18 checks over the six dossiers' Ownership facts, the header meta line, the Compare Snapshot row (ABB vs Crusoe) and the Compare header column (EVE vs CATL) — no duplications, real tickers still shown where one exists, ownership prose kept out of the ticker position. A repo-wide re-survey finds **0** profiles and **0** registry entries with a malformed ticker, and **0** remaining type/ticker echoes across all 88 dossiers
+- **Recommendation surfaced, not applied** (shared rendering code, developer's call): `ovOwnership()` could defensively skip a ticker that starts with the ownership type. It would have masked this bug rather than surfacing it, and the data is now clean, so it is proposed as a guard against future drift only
 
 ## [v03.55r] — 2026-08-29 04:13:49 AM EST
 
