@@ -6,6 +6,55 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-29 01:34:01 AM EST
+**Repo version:** v03.51r
+**Branch:** `claude/scraper-subscriber-edition-match-6dwyjt`
+
+**What we worked on (v03.25r–v03.51r — Scraper polish, then a run of scoring and scheduler fixes):**
+
+- **Emailed digest, mobile.** Rebuilt the layout phone-first: the `@media (max-width:600px)` block was being stripped wholesale by Gmail (it drops the whole `<style>` element when it contains unsupported code, and the shell carries MSO conditional comments), so the email fell back to inline *desktop* sizes. Inverted it — inline styles now carry the phone sizes and a `min-width:601px` block enlarges for desktop, so a stripped block leaves a phone-shaped email. Settled on 27/22/18/15 after two rounds (24/20/16/14 was a step too small)
+- **Summary/analysis presentation.** Analysis runs inline in amber with an "Amber = analysis" footer key; figures in reported text are green (`#4ade80`), figures inside an analysis stay amber via `inherit`
+- **Held-back stories** now carry their summary and analysis into View More, and `scDigestSummarizeSet_` summarizes the *relevant* set rather than an unfiltered top-30 (section caps summed to exactly 30, so on a heavy day everything held back was unsummarized)
+- **Same-day editions**: tried keeping both builds (v03.42r), developer preferred replacement, reverted (v03.43r). The per-edition delivery grouping from that experiment was deliberately kept as defence in depth
+- **Scoring fixes**: backstop rotation was advancing on every run so a rebuild queried a *different* 12 companies (and editions ate each other's rotation); consumer gear reaching the digest; duplicate Google News stories; Google News weighted down 0.85 → 0.70
+- **Scheduler**: the weekday guard was missing from the sender itself, so Saturday-built editions would have mailed at 07:00; and the 06:00 build skipped any edition already built that day, including by hand — so a manual test build would have been the thing that shipped
+- **Diagnostics added**: `digestScoreReport` + a "Why thin?" button, and the Calendar now separates emailed from merely built
+
+**Where we left off:**
+
+- All work committed and pushed; branch merged to `main` by the auto-merge workflow each time. Working tree clean at v03.51r
+- **Nothing is broken and nothing is half-finished.** The last push (v03.51r) closed the scheduler request completely
+- **The open item is empirical, not code**: Monday 2026-08-31 is the first real run of the full schedule — 06:00 build with the 72-hour window, 07:00 send, replacing whatever the day already holds. Nobody has watched that path execute end to end
+- The developer has weekend test editions sitting in the sheet. They are harmless (delivery only considers rows dated today, and the weekend guard refuses the day outright) and the Calendar now draws them hollow
+
+**Key decisions made:**
+
+- **7:00 AM ET, not PT.** The developer wrote "7am PST"; the app has always been ET. Asked rather than guessed — they confirmed ET. `SCRAPER_DIGEST_TZ` + `SCRAPER_DIGEST_TZ_LABEL` were centralised so the switch is two lines if that ever changes
+- **One edition per day, replacement not accumulation.** Tried the alternative for one version and reverted at the developer's request
+- **Guards belong where the action happens, not in the callers.** The weekday rule now lives in `scDigestDeliverPending_` — the only code that can put an edition in an inbox — because three callers each remembering the same rule is how one of them forgot
+- **Verify against the developer's real input, not a synthetic one.** The Jackery fix was measured on their actual headline (81 → 0); the mobile sizes were measured in a browser at 390px with and without the `<style>` block
+- **A changed seed's `tv` must be bumped or the change never ships.** Learned the hard way — v03.48r shipped new segment vocabulary that could not reach the app. Now guarded by `t22.js` *and* a blocking section in `.claude/rules/scraper-sources.md`, because the test corpus is not committed and cannot protect a future session
+- **`scEditionWindowH_` still honours an explicit per-edition `windowH` ahead of the Monday-72h rule.** That is a setting, not a bug — pinned by test and flagged to the developer rather than quietly overridden
+
+**Active context:**
+
+- **Branch:** `claude/scraper-subscriber-edition-match-6dwyjt` · **Repo:** v03.51r · **Scraper:** `v01.83g` / `v01.66w`
+- **Schedule as it now stands:** build 06:00 ET, send 07:00 ET, Mon–Fri. Monday scans 72h, Tue–Fri 24h. The 06:00 build replaces the day's existing edition; delivery holds an edition whose build is still in flight
+- **Test corpus lives in `/tmp/sc/` and is NOT committed** — 24 suites, 639 assertions (`t.js`, `t2.js`…`t24.js`). It will be gone in a fresh session. Anything that must survive belongs in `.claude/rules/`, which is why the seed-`tv` rule was written there
+- **Changelog capacity is tight**: repo `98/100`, `Scrapergs` `49/50`, `Scraperhtml` `39/50`. **The next push must rotate the repo CHANGELOG, and the GAS one is one push behind it.** Both rotations need SHA enrichment; the GAS/page ones resolve their SHA through the repo version each header carries as a cross-reference, since a `g`/`w` version never appears alone in a commit subject
+- **Three editions**: `morning` (to jonyang92@gmail.com), `bess` and `aidc` (to jymiasole01@gmail.com). 88 companies, ~14 topics, 12–17 segments filtered depending on edition
+- Relevance bar is 55. Recent BESS builds land 13–16 relevant of 84–99 scanned, which the developer called close to the sweet spot
+
+**Recommendation for next session:**
+
+- Ask the developer how Monday 2026-08-31's 06:00 scheduled run went — whether it replaced the day's edition, whether the 72-hour window produced a comparable article count to a weekday, and whether all three editions arrived at 07:00. That is the first unattended execution of the whole schedule and the only thing in the system that has never been observed working; if it did run clean, the Scraper is feature-complete for now and the next session is free for new work.
+
+**To continue:** type `check how Monday's scheduled run went`
+
+## Previous Sessions
+
+### Session — 2026-08-28 (v03.04r–v03.24r)
+
 **Date:** 2026-08-28 01:50:04 AM EST
 **Repo version:** v03.24r
 **Branch:** `claude/scraper-rebuild-phase-1-hl8uw0`
@@ -45,40 +94,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 **Recommendation for next session:**
 - **Ask the developer what the two deferred issues are, then rebuild The Morning Edition and confirm last night's three fixes held** — the footer should read `summarized by gemini/…` rather than the fallback note, no residential-storage story should appear, and the Digest overlay should let them pick the edition
 - **To continue:** type `pick up where we left off`
-
-## Previous Sessions
-
-### Session — 2026-08-27 (v03.01r–v03.03r)
-
-**Date:** 2026-08-27 04:19:08 PM EST
-**Repo version:** v03.03r
-**Branch:** `claude/scraper-profiler-integration-2z8ghm`
-
-**What we worked on (v03.01r-v03.03r — Scraper pause + Scraper↔Profiler rebuild planning + developer rebrand):**
-
-- **v03.01r (GAS v01.35g):** `SCRAPER_SCHED_EMAIL_ENABLED` kill switch — all scheduled digest emails (every cadence) stopped
-- **v03.02r (GAS v01.36g):** full scheduled-pipeline pause — scheduled runs skip compile/analyze/brief entirely, so no Anthropic/Gemini token spend and no email while paused; manual in-app actions still work. Re-enable = flip both flags in Phase 4
-- **Scraper rebuild planned and fully decided:** 4-phase plan approved (Phase 1 Interests tab + Profiler registry sync + rubric scaffolding; Phase 2 Interests panel UI; Phase 3 digest engine; Phase 4 go-live re-enabling delivery). Design locked via the "Scraper Redesign Mockups" canvas (https://claude.ai/code/artifact/4fb0367c-a82f-4e5e-b6c3-0d117c0f7b2f): **App = Wire Desk** (dark, IBM Plex Sans/Mono, #15171c charcoal + #f2a33c amber), **Digest = Morning Edition in the Night Ink dark variant** (Newsreader serif masthead on the app palette)
-- **D1–D3 recorded (full detail in the v03.03r CHANGELOG section):** D1 = 30-source free trade-press roster (no paywalled sources; RTO Insider et al. excluded — known partial gap on ERCOT/PJM market-rule minutiae); D2 = Google News kept only as a covered-company-name backstop (down-weighted, labeled); D3 = four-signal Profiler-derived scoring rubric (company / topic / Profiler-emphasis / substance) replaces 👍/👎 — feedback UI turned off and hidden but code + historical votes preserved
-- **v03.03r:** `DEVELOPER_NAME` rebrand ShadowAISolutions → LightAISolutions across 242 files; every page (w), GAS (g), and AHK (a) version bumped with changelog entries; all 23 tracked PDFs regenerated; the 13 study-prep PDFs re-delivered as chat downloads
-
-**Where we left off:**
-- Everything committed and merged through v03.03r; working tree clean. Scraper is fully paused (no emails, no scheduled AI spend). **The rebuild has NOT started** — the developer wants the buildout in a fresh session, beginning with Phase 1
-
-**Key decisions made:**
-- Scraper = 3rd-party trade news only; Profiler = 1st-party sources. Company-owned domains (IR/newsrooms) excluded from Scraper's sources
-- Weekday digest Mon–Fri 7:00 AM ET; Monday edition covers 72h (the weekend)
-- Interest model: an Interests tab in Scraper's spreadsheet synced daily from the public `profiler-data/profiler-companies.json`; new Profiler companies default-ON flagged "New coverage"; removed ones marked stale, never deleted
-- Guidance topic sync happens at authoring time (extend the Industry Guidance Command rule), not via a runtime Profiler API probe
-- Night Ink production email needs dark-mode client-proofing (Outlook/Gmail recoloring) + a real-inbox test before Phase 4 go-live
-- Rebrand preserved 4 occurrences intentionally: the Provenance Markers rule, the init-history archive entry, and two archived incident docs where the literal old string is load-bearing; hidden provenance markers untouched
-
-**Active context:**
-- CHANGELOG counter 96/100; Profiler v01.43w/v01.22g; Scraper v01.35w/v01.37g; registry 88 companies; no TODO items or active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-- Developer-side: replace the stale Google Drive PDF copies with the regenerated ones delivered in chat
-- Standing sensitivities unchanged from prior sessions (Zhonhen/Schneider disclosure scoping, Zhu Guoding conviction, NVIDIA quote paraphrasing, field notes never cited, Hithium executive arrest do-not-quote)
-
-**Recommendation for next session:**
-- **Execute Phase 1 of the approved Scraper rebuild** — the Interests tab + daily Profiler registry sync + four-signal rubric scaffolding in `Scraper.gs`, per the approved 4-phase plan and the D1–D3 decisions recorded in the v03.03r CHANGELOG section (30-source roster, company-name Google News backstop, feedback-off rubric)
-- **To continue:** type `start Phase 1`
