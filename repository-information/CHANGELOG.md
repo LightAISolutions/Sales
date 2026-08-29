@@ -3,11 +3,19 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.62r] — 2026-08-29 03:45:02 PM EST
+
+> **Prompt:** "continue with your recommendation, then remember session to prepare for profiler report as its own session with fresh context."
+
+### Changed
+- `.claude/rules/profiler-app.md`: running `scripts/sync-profiler-registry.py` after any profile write is now a required step of the Profiler Command (step 5) and of every data-only change — closing the drift gap before the ~30 armed October post-earnings triggers fire. Scheduled refreshes and quarterly sweeps inherit the requirement since they walk the full command
+- Saved session context to `SESSION-CONTEXT.md` (Remember Session): the Profiler quality build-out is complete through roadmap #5; next session picks up the `profiler report <topic>` design with fresh context
 
 ## [v03.61r] — 2026-08-29 03:37:45 PM EST
 

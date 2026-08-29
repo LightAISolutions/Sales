@@ -6,6 +6,52 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-29 03:45:02 PM EST
+**Repo version:** v03.62r
+**Branch:** `claude/profiler-dossier-summary-8obbjo`
+
+**What we worked on (v03.52r–v03.62r — the Profiler quality build-out, all six approved recommendations now shipped):**
+
+- **Summary tab + relationships (v01.44w–v01.45w):** renamed each dossier's Background tab to Summary; replaced the rejected "at a glance" cards with a Relationships section — typed cross-links derived from dossier data plus a radial SVG relationship map with clickable nodes. Settings cog (bottom right) with a Commands overlay documenting all Profiler commands
+- **Compare view (v01.46w–v01.48w):** roster Compare mode (up to 4 companies), tiered rows — dossier meta and financials always; product/spec rows only within a shared peer group. Peer families: `OV_PEER_FAMILIES` treats supplier + integrator as one "Hardware" family (developer directive — keep grouping flexible as the industry shifts). Cross-space selections fall back to financials-only
+- **Normalized KPIs, schema v4 (v01.47w–v01.49w, roadmap #2):** `periodType`/`periodEnd`/`kpi`/`usdMillions`/`fxBasis` overlay; comparable-revenue coverage now **42 of 88**. FX rates researched, never recalled (CNY 7.1873, TWD 31.171, KRW 1421.48, EUR 1.1306 — all 2025 annual averages). Five deliberate exclusions render "Not normalized yet": Oracle (guidance), Switch (no annual total), Crusoe + Lambda (third-party estimates), OpenAI (press-reported)
+- **Source provenance (v01.50w, roadmap #4):** every source classified company / disclosure / independent; first-party share shown on the dossier header, in the Source List with per-source tags, and as a Compare Tier 0 row. Registry schema v2 added `companies[].domains` (all 88 curated); per-source `party` field overrides any verdict
+- **Roster coverage (v01.51w, roadmap #5):** freshness dot (fresh ≤45d / aging ≤120d / stale — post-earnings cadence) with visible age, source count, first-party share, `$ comparable` tag per card; aggregate strip above the grid. New `scripts/sync-profiler-registry.py` reconciles the denormalized registry fields (`--check` reports drift); its use is now REQUIRED after any profile write (rule added to `.claude/rules/profiler-app.md` step 5 this push)
+- **Notable bugs found & fixed:** `ovCmpLatestRevenue` picked revenue by array position but 22/88 dossiers are newest-first (Amazon would have shown FY2024); a token-matching provenance classifier was **discarded before shipping** after an 88-dossier audit (Black & Veatch 6%, Google 0% — replaced with declared domains); `ovFreshness` boundary flip from `Math.round` on datetime deltas
+- Six ticker-field ownership-prose fixes; registry `lastUpdated` drift sync (both task cards)
+
+**Where we left off:**
+
+- All work committed, pushed, and auto-merged through **v03.62r** (this push carries the sync-requirement rule + this session context). Working tree clean
+- **All six approved recommendations from the session-opening review are done except #3 — the `profiler report <topic>` command — which the developer explicitly wants as its own session with fresh context**
+- Profiler page changelog sits at **50/50 — the next page bump rotates again** (2026-08-07's five sections move as one date group, SHA enrichment mandatory). Repo CHANGELOG at 98/100
+
+**Key decisions made:**
+
+- Compare is financials-first; deep rows only within a peer family. Supplier + integrator are one family; the structure is declarative so new families are one-line additions
+- Provenance classification is data-driven (registry `domains`), never name-token heuristics — a wrong sourcing claim is worse than none
+- First-party share is a **balance signal, not a quality score** — near-total company sourcing reads as under-corroborated by design
+- No near-identical archive snapshots for batch data passes; FY2025-only KPI normalization; dossier-stated USD beats external FX conversion
+- The roster renders from the registry alone — anything it displays gets denormalized into the registry and reconciled by the sync script, never fetched per-card
+
+**Active context:**
+
+- **Branch:** `claude/profiler-dossier-summary-8obbjo` · **Repo:** v03.62r · **Profiler:** `v01.51w` / GAS `v01.22g`
+- Coverage: 88 dossiers · 2,058 cited sources · 42 comparable revenue · median 52% first-party · all freshness dots green (oldest 7d — tints differentiate as October earnings approach)
+- ~30 armed post-earnings refresh triggers start firing late October; each fired session now inherits the sync-script requirement via the updated Profiler Command
+- Test suites live in the session scratchpad and are NOT committed — the durable contracts are in `.claude/rules/` and `PROFILER-SCHEMA.md`
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+
+**Recommendation for next session:**
+
+- Design and build **`profiler report <topic>`** (roadmap #3, the last approved item) — the industry-report engine that was the point of the whole quality build-out. Everything it needs now exists: normalized KPIs for cross-company figures, provenance for citation confidence, relationships for ecosystem structure, peer families for scoping, and coverage metadata for honesty about gaps. Start with a design pass (report types — macro, competitive, risk, opportunity; output format; how reports cite dossier sources per the "Reports" rule in profiler-app.md's Recall design) and get developer approval before building.
+
+**To continue:** type `design profiler report`
+
+## Previous Sessions
+
+### Session — 2026-08-29 (Scraper scoring & scheduler fixes, v03.25r–v03.51r)
+
 **Date:** 2026-08-29 01:34:01 AM EST
 **Repo version:** v03.51r
 **Branch:** `claude/scraper-subscriber-edition-match-6dwyjt`
@@ -51,46 +97,4 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **To continue:** type `check how Monday's scheduled run went`
 
-## Previous Sessions
-
-### Session — 2026-08-28 (v03.04r–v03.24r)
-
-**Date:** 2026-08-28 01:50:04 AM EST
-**Repo version:** v03.24r
-**Branch:** `claude/scraper-rebuild-phase-1-hl8uw0`
-
-**What we worked on (v03.04r–v03.24r — the whole Scraper rebuild, go-live, and per-edition editions):**
-
-- **Phases 1–4 shipped**: Interests tab + Profiler registry sync + four-signal rubric; Interests panel UI; weekday digest engine (chunked, resumable fetch → backstop → summarize → render) with the Night Ink email; then go-live — roster shakeout, email client-proofing, pause flags flipped on
-- **Phase 5**: Projects retired; Editions + Subscribers + Archive + Source stats replace it; new Wire Desk landing page
-- **Six relevance signals** implemented (click engagement, per-company mined segments, corroboration, plus the original four)
-- **Dossier mining** from Profiler — 88 dossiers, now fully read (88/88)
-- **Per-edition tuning**: three editions — `morning` (global preset, unchanged), `bess`, `aidc` — each materialised from a **preset** into a full explicit segment/topic map
-- **Source roster honesty**: retired outlets carry their own flag + recorded reason; `.claude/rules/scraper-sources.md` blocks re-proposing a proven-unfetchable outlet
-
-**Where we left off:**
-- Everything committed, pushed and merged through **v03.24r**; working tree clean
-- **The developer has "a couple more issues to fix" and deliberately deferred them to a fresh session.** They have not been described yet — ask first, do not guess
-- Last push fixed three reported faults (segment gate, AI 503 retry, edition picker). **The developer has not yet verified them on the live app**
-
-**Key decisions made:**
-- **Editions materialise, never inherit.** A sparse override map was tried (v03.21r) and rejected by the developer: it made every edition track the Morning Edition. Presets now expand into a full explicit map at creation; `global` is the only non-materialising preset and is what `morning` uses
-- The amber dot means **"changed from the recommendation"**, not "differs from global"
-- Companies and sources stay **global**; only segments and topics are per-edition
-- **Gemini free tier is the default AI provider**; Claude is opt-in via the in-app switch
-- Article caps favour completeness over less scanning — `TOP_N = 30`, section caps `{companies:12, market:10, incidents:8}` summing exactly to TOP_N
-- Night Ink email is 860px wide (widened twice at the developer's request)
-- Two outlets (Data Centre Magazine, Battery Technology) are **live but unfetchable** — Cloudflare-walled; one (Solar Industry) is genuinely offline. Do not re-propose any of them
-- `doPost(action=deploy)` stays unauthenticated; never hardcode the developer's email
-
-**Active context:**
-- Versions: repo **v03.24r** · Scraper **v01.50w / v01.57g** · Profiler v01.43w · Receipts v01.36w
-- Counters: repo CHANGELOG **91/100** (first rotation done this session) · `Scrapergs.changelog.md` **44/50** · `Scraperhtml.changelog.md` **50/50** (rotation due on its next entry)
-- **A `Sync now` is still owed** — the 15 new segments and 4 new topics added in v03.21r only appear in Tune after a sync, and presets can only materialise interests that exist
-- No TODO items; no active reminders
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-- Recurring lesson this session: **four separate bugs came from my own prior pushes** (mining clobber, tile never repainting, `'1'` parsed as false, the segment-split breaking the gate). When a rebuild adds vocabulary or state, re-check the consumers of that state in the same push
-
-**Recommendation for next session:**
-- **Ask the developer what the two deferred issues are, then rebuild The Morning Edition and confirm last night's three fixes held** — the footer should read `summarized by gemini/…` rather than the fallback note, no residential-storage story should appear, and the Digest overlay should let them pick the edition
-- **To continue:** type `pick up where we left off`
+Developed by: LightAISolutions
