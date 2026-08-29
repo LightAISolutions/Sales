@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.66r] — 2026-08-29 05:15:56 PM EST
+
+> **Prompt:** "For every dossier, make the \"Relationships\" section its own tab and then improve the explanation of each relationship below. Mention the source which explicitly states the relationship, then explain the context and the detailed nature of their relationship. Also, make sure that no words get cut off; Just expand the explanation and let me scroll down to read it all."
+
+### Added
+- **Relationships is now its own dossier tab** (`Profiler.html` v01.54w): new `rels` entry in `OV_SEC_LABELS` (all five styles) and `tabDefs`; the section moved out of the Summary pane into `paneFor('rels')` — the tab self-hides on dossiers with no links, and `#slug/rels` deep-links work via the existing tab router
+- **Expanded relationship explanations**: curated `relationships[]` entries now render their stated `source` as a linked "Source" line (resolved against the dossier's `sources[]` via new `ovRelSource()` — label + publication date when the URL is a cited source, hostname link otherwise), the one-line `note`, and the new multi-paragraph `context` field; derived evidence renders under curated rows as "Mentions across this dossier"
+- **Schema v5** (`repository-information/PROFILER-SCHEMA.md`): `relationships[].context` — 2–6 sentences on the nature, history, and mechanics of the relationship, grounded in the cited source; authoring guidance now asks research passes to fill `note`, `context`, and `source` per curated link. Backfill stays opportunistic per "Extending the schema"
+
+### Changed
+- **All truncation removed from relationship evidence** (`ovRelDerive` rework): mentions are extracted as complete sentences via new `ovRelSentences()` (sentence-boundary expansion; decimals like "14.5 MWh" survive), the 165-character clip and 2-evidence cap are gone, the 10-row list slice and "+ N more" note are gone — every relationship renders with every mention in full. Derivation now also mines product `description`/`positioning` fields, and development mentions carry the event's date and a resolved source link. The radial map alone stays capped at 10 spokes for legibility, with a caption pointing to the full list
 
 ## [v03.65r] — 2026-08-29 05:03:13 PM EST
 

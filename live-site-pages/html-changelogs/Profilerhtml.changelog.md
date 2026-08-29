@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.54w] — 2026-08-29 05:15:56 PM EST — v03.66r
+
+### Added
+- Every dossier's Relationships section is now its own tab, with the relationship map and the full list of linked companies
+- Each relationship now reads as a fuller explanation: where a curated link states its source, that source is shown and linked with its publication date, followed by the relationship's context and every mention of that company across the dossier — quoted as complete sentences with the section each one came from, and event mentions carrying their date and source link
+
+### Changed
+- Relationship explanations are no longer shortened — nothing is cut off mid-sentence and no entries are hidden behind a "+ more" note; the page simply scrolls. The map still draws the ten strongest links for legibility, with the complete list below
 
 ## [v01.53w] — 2026-08-29 04:56:45 PM EST — v03.64r
 
