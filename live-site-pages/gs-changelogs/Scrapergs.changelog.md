@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.77g] — 2026-08-28 11:06:15 PM EST — v03.44r
+
+### Fixed
+- **"View More" no longer says nothing was held back when stories were.** The count in the footer and the list the link opens were worked out two different ways, so they could disagree — and when the list could not be read, you were told the edition held nothing back rather than that something had gone wrong. The footer now counts the same list the link opens, so the two can no longer contradict each other, and a genuine failure explains itself
+- **A large edition can no longer be stored in a state it cannot be read back from.** Editions were saved by cutting them at a fixed length, which on a busy day cut mid-sentence and left the whole record unreadable. A long edition is now shortened deliberately — trimming the held-back stories first, keeping as many as will fit — so it always reads back, and says so when it had to give something up
+
+### Changed
+- **The emailed digest sits between the last two sizes.** The previous version was too large on a phone and the one after it a little small; this is the middle. The desktop version is unchanged
+- **Figures in a summary are now green rather than white.** Amber already means analysis, and white bold said nothing in particular — green gives the numbers a meaning of their own. Figures inside an analysis stay amber, so the footer key stays true
 
 ## [v01.76g] — 2026-08-28 09:48:51 PM EST — v03.43r
 

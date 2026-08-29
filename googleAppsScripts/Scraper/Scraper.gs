@@ -1,4 +1,4 @@
-var VERSION = "v01.76g";
+var VERSION = "v01.77g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3341,7 +3341,15 @@ function scDigestSectionFor_(item) {
     Inside the analysis the caller passes 'inherit', so a figure there bolds
     within the amber run rather than breaking out of it. */
 function scNiBoldFigures_(escaped, color) {
-  var c = color || '#f0eee8';
+  // Figures are bolded AND coloured. The colour used to be the headline ink,
+  // which read as ordinary emphasis and said nothing; green gives the numbers
+  // a meaning of their own without competing with the amber that means
+  // analysis. Distinguished by hue rather than brightness — both sit near the
+  // same luminance, and weight is already carrying the emphasis. Measured
+  // 10.5:1 against the edition ground, comfortably past WCAG AAA.
+  // Callers inside the analysis pass 'inherit', so a figure there stays amber
+  // and cannot break out of the run the footer key describes.
+  var c = color || '#4ade80';
   return String(escaped || '').replace(
     /((?:[\$€£]\s?)?\d[\d,]*(?:\.\d+)?\s?(?:(?:GWh?|MWh?|kWh?|GW|MW|kW|billion|million|bn)\b|%)|[\$€£]\s?\d[\d,]*(?:\.\d+)?)/g,
     '<b style="color:' + c + ';">$1</b>');
@@ -3906,6 +3914,60 @@ function scDigestSummarizeStep_(ss, state, t0) {
   return { phase: state.phase, summarized: top.length - pending.length, top: top.length };
 }
 
+/** Serialise a digest for its Sheets cell, guaranteeing it parses back.
+
+    This replaces `JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX)`, which
+    cut the string at a fixed offset — mid-key, mid-value, wherever it landed —
+    producing a cell that JSON.parse could never read again. Every consumer of
+    column 7 then failed silently: getDigest fell back, and View More reported
+    "Nothing was held back", which is not a smaller truth but a false one.
+
+    It was not a theoretical cap. Measured against the real payload sizes, an
+    edition with the sections full and its held-back list carrying summaries
+    runs 90,000-160,000 characters against a 45,000 cap.
+
+    So drop by value instead of by offset, cheapest first: the held-back
+    analysis, then the held-back summaries, then the held-back list itself
+    (its count survives in heldBackTotal, so the footer stays honest), and only
+    then the section analyses. Each step re-measures. `truncated` records what
+    was given up, so a shrunken edition can say so rather than look complete.
+    The final slice is unreachable in practice and kept only so this can never
+    return something longer than the cell accepts. */
+function scDigestFitJson_(d) {
+  var out = JSON.stringify(d);
+  if (out.length <= SCRAPER_DIGEST_CELL_MAX) return out;
+  var c = JSON.parse(out);                       // a copy; never mutate the caller's
+  var steps = [
+    function() { (c.heldBack || []).forEach(function(it) { it.analysis = ''; }); },
+    function() { (c.heldBack || []).forEach(function(it) { it.summary = ''; }); },
+    // Drop items, not the list. Halving keeps the highest-scored ones the
+    // reader most wants, and the overlay already says "showing the top N of
+    // <total>" whenever the list is shorter than heldBackTotal — so a partial
+    // list reads correctly with no further work. Only a list that shrinks to
+    // nothing sets heldBackTrimmed, which is what makes the overlay explain
+    // itself instead of claiming nothing was held back.
+    function() {
+      while (c.heldBack && c.heldBack.length &&
+             JSON.stringify(c).length > SCRAPER_DIGEST_CELL_MAX) {
+        c.heldBack = c.heldBack.slice(0, Math.floor(c.heldBack.length / 2));
+      }
+      if (c.heldBack && !c.heldBack.length) c.heldBackTrimmed = true;
+    },
+    function() {
+      ['companies', 'market', 'incidents'].forEach(function(sec) {
+        ((c.sections && c.sections[sec]) || []).forEach(function(it) { it.analysis = ''; });
+      });
+    }
+  ];
+  for (var i = 0; i < steps.length; i++) {
+    steps[i]();
+    c.trimmed = true;
+    out = JSON.stringify(c);
+    if (out.length <= SCRAPER_DIGEST_CELL_MAX) return out;
+  }
+  return out.slice(0, SCRAPER_DIGEST_CELL_MAX);
+}
+
 /** Render phase: section grouping → Night Ink HTML → Digests row. */
 function scDigestRenderStep_(ss, state) {
   var items = scDigestItems_(ss, state.id);
@@ -4013,7 +4075,7 @@ function scDigestRenderStep_(ss, state) {
   var html = scRenderDigestNightInk_(d);
   digests.appendRow([state.id, state.date, new Date(), 'generated',
     items.length, relevant.length,
-    JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX),
+    scDigestFitJson_(d),
     html.slice(0, SCRAPER_DIGEST_CELL_MAX),
     state.aiNote || state.aiSoftNote || '', d.editionId,
     state.aiLabel || (state.aiNote ? 'none (fallback)' : ''),
@@ -4208,8 +4270,7 @@ function scRenumberIssues_(ss) {
       var cells = sheet.getRange(row, 7, 1, 2).getValues()[0];
       var d = null;
       try { d = JSON.parse(String(cells[0] || 'null')); } catch (pe) {}
-      if (d) { d.no = target; sheet.getRange(row, 7).setValue(
-        JSON.stringify(d).slice(0, SCRAPER_DIGEST_CELL_MAX)); }
+      if (d) { d.no = target; sheet.getRange(row, 7).setValue(scDigestFitJson_(d)); }
       var html = String(cells[1] || '');
       if (html) sheet.getRange(row, 8).setValue(
         scRewriteIssueNo_(html, target).slice(0, SCRAPER_DIGEST_CELL_MAX));
@@ -4273,16 +4334,16 @@ function scRenderDigestNightInk_(d) {
   }
   function itemHtml(it) {
     return '<div style="margin:0 0 20px;">'
-      + '<div class="ni-hed" style="' + serif + 'font-size:16px;font-weight:600;line-height:1.3;color:#eceae4;">'
+      + '<div class="ni-hed" style="' + serif + 'font-size:18px;font-weight:600;line-height:1.29;color:#eceae4;">'
       + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
-      + '<div class="ni-body" style="' + sans + 'font-size:14px;line-height:1.5;color:#c2c8d2;margin-top:4px;">'
+      + '<div class="ni-body" style="' + sans + 'font-size:15px;line-height:1.52;color:#c2c8d2;margin-top:5px;">'
       + scNiBoldFigures_(esc(it.summary)) + analysisRun(it.analysis) + '</div>'
       + srcLine(it) + '</div>';
   }
   function sectionHtml(label, items, color, ruleColor) {
     if (!items.length) return '';
     return '<div style="margin:0 0 6px;">'
-      + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 8px;"><tr>'
+      + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:0 0 9px;"><tr>'
       + '<td style="' + sans + caps + 'color:' + color + ';white-space:nowrap;padding-right:12px;">' + label + '</td>'
       + '<td width="100%" style="border-top:1px solid ' + ruleColor + ';font-size:0;line-height:0;">&nbsp;</td>'
       + '</tr></table>'
@@ -4313,21 +4374,21 @@ function scRenderDigestNightInk_(d) {
     + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" '
     + 'bgcolor="#15171c" style="background:#15171c;width:100%;max-width:860px;margin:0 auto;'
     + 'border-collapse:collapse;">'
-    + '<tr><td class="ni-pad" style="color:#e6e4de;padding:18px 14px 16px;' + sans + '">'
+    + '<tr><td class="ni-pad" style="color:#e6e4de;padding:20px 16px 18px;' + sans + '">'
     // Masthead
-    + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:13px;margin-bottom:14px;">'
-    + '<div class="ni-mast" style="' + serif + 'font-size:24px;font-weight:700;line-height:1.16;color:#f0eee8;">'
+    + '<div style="text-align:center;border-bottom:3px double #d8dbe1;padding-bottom:14px;margin-bottom:16px;">'
+    + '<div class="ni-mast" style="' + serif + 'font-size:27px;font-weight:700;line-height:1.15;color:#f0eee8;">'
     + esc(d.editionName || SCRAPER_EDITION_DEFAULT.name) + '</div>'
     + '<div style="' + caps + 'color:#f2a33c;margin-top:6px;">Scraper · Trade news, distilled daily</div>'
     + '<div style="font-size:12px;color:#9aa0ab;margin-top:4px;">' + esc(longDate(d.date))
     + ' · No. ' + scDigestNo_(d.no) + ' · covering the last ' + Number(d.windowH) + ' hours</div>'
     + '</div>';
   if (d.lead) {
-    html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:14px;margin-bottom:14px;">'
+    html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:16px;margin-bottom:16px;">'
       + '<div style="' + caps + 'color:#f2a33c;">The lead</div>'
-      + '<div class="ni-lead" style="' + serif + 'font-size:20px;font-weight:600;line-height:1.28;color:#f0eee8;margin-top:5px;">'
+      + '<div class="ni-lead" style="' + serif + 'font-size:22px;font-weight:600;line-height:1.27;color:#f0eee8;margin-top:6px;">'
       + '<a href="' + esc(d.lead.url) + '" style="color:#f0eee8;text-decoration:none;">' + esc(d.lead.title) + '</a></div>'
-      + '<div class="ni-lede" style="font-size:14px;line-height:1.5;color:#c2c8d2;margin-top:6px;">'
+      + '<div class="ni-lede" style="font-size:15px;line-height:1.52;color:#c2c8d2;margin-top:7px;">'
       + scNiBoldFigures_(esc(d.lead.text)) + analysisRun(d.lead.analysis) + '</div>'
       + srcLine(d.lead) + '</div>';
   }
@@ -4338,13 +4399,25 @@ function scRenderDigestNightInk_(d) {
     html += '<div style="border:1px solid #363c45;background:#1b1e24;border-radius:4px;'
       + 'padding:12px 16px;margin:6px 0 14px;">'
       + '<div style="' + caps + 'color:#e6e4de;">Newly covered</div>'
-      + '<div style="font-size:14px;line-height:1.5;color:#c2c8d2;margin-top:4px;">Profiler added '
+      + '<div style="font-size:15px;line-height:1.52;color:#c2c8d2;margin-top:5px;">Profiler added '
       + '<b style="color:#f2a33c;">' + Number(d.newCoverage.count) + ' compan'
       + (d.newCoverage.count === 1 ? 'y' : 'ies') + '</b>'
       + (d.newCoverage.names.length ? ' — ' + esc(d.newCoverage.names.join(', ')) : '')
       + '; folded into this edition automatically. Review them from the Interests panel.</div></div>';
   }
-  var held = Math.max(0, Number(d.counts.relevant) - Number(d.counts.shown || 0));
+  // The count printed here and the list View More opens must be the SAME fact.
+  // This used to be `relevant - shown` — arithmetic over counts, computed with
+  // no reference to d.heldBack at all. So the footer could confidently promise
+  // "6 more held back" while the stored list the overlay reads was empty or
+  // unreadable, and the reader got "Nothing was held back" one click later.
+  // Two independent sources for one number can only ever drift; taking the
+  // number FROM the list makes the contradiction impossible to express.
+  // heldBackTotal is the true count (d.heldBack itself is capped for display,
+  // and the overlay says "showing the top N of total" when they differ).
+  // Editions built before heldBackTotal existed fall back to the arithmetic.
+  var held = d.heldBackTotal == null
+    ? Math.max(0, Number(d.counts.relevant) - Number(d.counts.shown || 0))
+    : Number(d.heldBackTotal) || 0;
   // The key for the amber run above. Only printed when the edition actually
   // contains analysis — an edition built before the split, or one whose
   // summaries all fell back to raw source text, has nothing amber in it and a
@@ -4371,7 +4444,7 @@ function scRenderDigestNightInk_(d) {
   // to stack on a phone, and a query that can be stripped is not something a
   // layout should depend on. Stacked unconditionally it is correct at every
   // width with no CSS at all.
-  html += '<div style="border-top:3px double #d8dbe1;margin-top:8px;padding-top:10px;">'
+  html += '<div style="border-top:3px double #d8dbe1;margin-top:9px;padding-top:11px;">'
     + '<div class="ni-foot" style="font-size:11px;line-height:1.5;color:#8a919d;">'
     + 'Published by your Scraper desk · '
     + (hasAnalysis ? '<span style="color:#f2a33c;">Amber = analysis</span> · ' : '')
@@ -6568,23 +6641,32 @@ function scHandleHeldBack_(e) {
     return ContentService.createTextOutput(JSON.stringify(o))
       .setMimeType(ContentService.MimeType.JSON);
   };
-  if (!want) return json(out);
+  // Every failure below used to return this same empty payload, which the
+  // reader's overlay renders as "Nothing was held back — every relevant story
+  // made this edition." That is a false statement, not a degraded one: the
+  // edition it could not find or could not read may have held back plenty.
+  // `unavailable` separates "could not answer" from "the answer is none".
+  var gone = function(why) { out.unavailable = why; return json(out); };
+  if (!want) return gone('no-id');
   try {
     var ss = scraperSs_();
     var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
     var n = sheet ? sheet.getLastRow() - 1 : 0;
-    if (n < 1) return json(out);
+    if (n < 1) return gone('no-editions');
     var ids = sheet.getRange(2, 1, n, 1).getValues();
     var row = 0;
     for (var i = n - 1; i >= 0; i--) {
       if (String(ids[i][0]) === want) { row = i + 2; break; }
     }
-    if (!row) return json(out);
+    // The commonest real cause: the edition was rebuilt, which replaces the
+    // row and its id, so a link in an older rendering of the day now points at
+    // an edition that no longer exists.
+    if (!row) return gone('not-found');
     // Column 7 only — the rendered HTML in column 8 is the largest cell in the
     // sheet and this route never needs it.
     var d = null;
     try { d = JSON.parse(String(sheet.getRange(row, 7).getValue() || 'null')); } catch (pe) {}
-    if (!d) return json(out);
+    if (!d) return gone('unreadable');
     out.editionName = scRewriteLegacyNames_(String(d.editionName || ''));
     out.date = String(d.date || '');
     // Editions built before 2026-08-28 carry no embedded held-back list. Say so
@@ -6597,8 +6679,15 @@ function scHandleHeldBack_(e) {
                summary: String(it.summary || ''), analysis: String(it.analysis || '') };
     });
     out.total = Number(d.heldBackTotal) || out.items.length;
+    // The stored list was dropped to fit the cell (scDigestFitJson_) while the
+    // count survived. Saying so beats showing a total with nothing under it.
+    if (d.heldBackTrimmed && !out.items.length && out.total) out.unavailable = 'trimmed';
     out.success = true;
-  } catch (err) { /* a read-only side route must never throw at the reader */ }
+  } catch (err) {
+    // A read-only side route must never throw at the reader — but it must not
+    // present a failure as an empty list either.
+    out.unavailable = out.unavailable || 'error';
+  }
   return json(out);
 }
 

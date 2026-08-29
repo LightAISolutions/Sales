@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.61w">
+  <meta name="build-version" content="v01.62w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -1997,6 +1997,22 @@
           if (j && j.legacy) {
             fail('This edition was published before the held-back list was kept. '
                  + 'Editions from here on will show it.');
+            return;
+          }
+          // "Could not answer" is not "the answer is none". Every server-side
+          // failure used to arrive here as an empty items array and got
+          // rendered as "Nothing was held back" — a confident false statement,
+          // and one that directly contradicted the count in the same footer
+          // the reader had just clicked. Each cause now says what happened.
+          if (j && j.unavailable) {
+            fail(j.unavailable === 'not-found'
+                 ? 'This edition is no longer stored — it was most likely rebuilt, '
+                   + 'which replaces the day\'s issue. Open the current one from the News Stand.'
+                 : j.unavailable === 'trimmed'
+                 ? 'This edition held back ' + (Number(j.total) || 0) + ' stor'
+                   + ((Number(j.total) || 0) === 1 ? 'y' : 'ies')
+                   + ', but the list was too large to store with it.'
+                 : 'The held-back list could not be read for this edition.');
             return;
           }
           var items = (j && j.items) || [];

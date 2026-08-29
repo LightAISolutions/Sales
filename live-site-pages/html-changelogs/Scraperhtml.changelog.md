@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.62w] — 2026-08-28 11:06:15 PM EST — v03.44r
+
+### Fixed
+- **The held-back window now tells you when it could not load an edition**, instead of reporting that nothing was held back. If the edition was rebuilt — which replaces that day's issue — it says so and points you to the current one; if the list was too large to store, it says that and still gives you the count
 
 ## [v01.61w] — 2026-08-28 09:48:51 PM EST — v03.43r
 

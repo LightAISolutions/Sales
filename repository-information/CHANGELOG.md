@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.44r] — 2026-08-28 11:06:15 PM EST
+
+> **Prompt:** "Is there a size between the current version and the last version? If so, I think that would be perfect for mobile. Also, since Amber = analysis, you bolded dollar amounts in white color font. Make it a shade of green that contrasts with the background instead. Also, see the attached screenshot. My most recent Morning Digest shows "6 more held back" and "View More (6)". However, when I press it, it shows nothing was held back. Which one is wrong? Fix it."
+
+### Fixed
+
+`Scraper.gs` (v01.77g)
+
+- **Which one was wrong: the overlay.** The footer count was `relevant - shown` — arithmetic over `counts`, computed without ever consulting `d.heldBack`, which is the list View More actually opens. Two independent sources for one number can only drift. The footer now reads `heldBackTotal`, taken **from** the list, so the contradiction is no longer expressible: an empty list prints no sentence and offers no link
+- **Every failure in the held-back route returned the same empty payload**, which the overlay renders as "Nothing was held back — every relevant story made this edition." That is a false statement, not a degraded one. Each cause now returns an `unavailable` reason, and the overlay says which: `not-found` (the edition was rebuilt — replacement changes the row id, so a link in an older rendering points at an issue that no longer exists), `unreadable`, `trimmed`, `no-id`, `error`. The developer's screenshot showed no edition-name subtitle, which is the signature of exactly these early exits rather than a genuinely empty list
+- **`JSON.stringify(d).slice(0, 45000)` replaced by `scDigestFitJson_`.** Cutting a JSON string at a fixed offset lands mid-key or mid-value and produces a cell `JSON.parse` can never read again — so every consumer of column 7 failed silently, `unreadable` being one of the two candidate causes above. **Measured, not assumed:** an edition with full sections and a held-back list carrying summaries runs **90,000–160,000 characters against a 45,000 cap**. It now drops by value, cheapest first — held-back analyses, held-back summaries, then held-back items by halving (keeping the highest-scored, since the overlay already says "showing the top N of <total>"), then section analyses — re-measuring at each step, and records `trimmed` so a shortened edition can say so. Verified: every over-cap case now parses, and a typical busy day keeps 30 of 60 held-back items instead of losing the whole record
+
+### Changed
+
+`Scraper.gs` (v01.77g)
+
+- **Mobile type set between the last two versions**, as asked: masthead 24→27, lead 20→22, headline 16→18, body and lede 14→15, padding 18/14/16→20/16/18, block rhythm 14→16. Desktop still restores 44/32/22/17/16. Measured at 390px with the `<style>` block intact and stripped — identical both ways
+- **Bold figures are green (`#4ade80`), not the headline ink.** Distinguished by hue rather than brightness, since weight already carries the emphasis and green must not read as louder than the amber beside it. 10.5:1 against the edition ground, past WCAG AAA. Callers inside the analysis pass `inherit`, so a figure there stays amber and cannot break out of the run the footer key describes
+
+`Scraper.html` (v01.62w)
+
+- The overlay branches on `unavailable` before the empty-list message, and phrases each cause for a reader rather than a maintainer
+
+### Notes
+
+- **416 assertions pass** across 17 suites. New `t17.js` (28) pins the three fixes, including the decisive case: when the counts and the list disagree, the **list** wins and the stale arithmetic is never printed
+- **Two test-side errors, both mine, both fixed in the test.** An extraction regex stopped at the first two-level brace so the ordering assertion compared against a string it had not captured; and once fixed, `indexOf` matched the explanatory **comment** quoting the message rather than the `fail(...)` call — the assertion now anchors on the executable form. Also deleted an assertion I had written as literal `true`, which is the tautological-test pattern this repo bans
+- **`CHANGELOG.md` rotated** — it stood at 100/100, so the oldest full date group (2026-08-15: v02.44r–v02.47r) moved to the archive with commit-SHA enrichment before this section was added. 100 → 96 → 97. The rotation asserts the group is a single date and that exactly four SHA links were written, because the v03.28r rotation corrupted this file by anchoring on a string that also appeared inside a quoted prompt
 
 ## [v03.43r] — 2026-08-28 09:48:51 PM EST
 
@@ -1941,85 +1970,3 @@ If you hit the end of my weekly Fable limit before this task is done, switch to 
 - **Verified before committing** — heading open/close tags balanced at every level (15/15, 135/135, 156/156), zero NUL bytes from the sentinel pass, contents at one column, no table overflowing its column budget, no bar-chart fill above 100%, no empty bar labels, `<caption>` styled, and all five editions rebuilt (148–178 pages depending on skin)
 - **The `.md` and the print HTML were regenerated from the same chapter set in one pass**, so the canonical text and the typeset source cannot have drifted from each other in this edition
 - **This is a long document now.** 155 pages is proportionate to per-company coverage of 40 names, but it is a reference to consult by chapter rather than to read end to end; the contents page and the chapter-per-page layout exist to make that practical
-
-## [v02.47r] — 2026-08-15 11:17:14 PM EST
-
-> **Prompt:** "continue with your recommendation"
-
-### Added
-- **`repository-information/study-prep/hithium/hithium-strategy-addendum.md`** + **`HITHIUM-STRATEGY-ADDENDUM.pdf`** (3 pages) — a short companion to the 21-page interview brief, answering the developer's question about what sales strategies to propose and how well Hithium is positioned for US AI data centres. Five sections: the two strategies to lead with (own the material-assistance arithmetic; sell to the grid rather than to the data centre), five more held in reserve, the AIDC position, two questions it sets up, and a do-not-say list. Kept as a **separate artifact deliberately** so the brief stays closed at 21 pages
-
-### Changed
-- **`scripts/build-study-prep-pdf.mjs`** — registered `hithium-strategy-addendum`, and added two **purely additive** shell options for short documents: `toc: false` suppresses the contents block, and an omitted `banner` suppresses the style banner. Both default to the existing full treatment when the fields are absent, so the three previously registered documents are untouched — verified by rebuilding the interview brief and confirming a byte-identical size
-- **README tree** — added both addendum files under `study-prep/hithium/`, and corrected the interview-brief PDF's connector from `└──` to `├──` now that it has siblings
-
-### Notes
-- **I missed my own page target and the document says so.** The recommendation promised a one-page sheet; it came out at three. Trimming the body ~25% moved the page count not at all — the driver is the letter format, the ~10pt base type and the 258px masthead, not word count. The remaining ways to reach one page were to cut the reserve-strategies table (which is the substance the developer actually asked for) or to shrink type toward unreadable, so the content was kept and **the document's own framing line was rewritten from "One page." to "Three dense pages"** rather than shipping a false claim in the deliverable
-- **The AIDC verdict is deliberately unflattering: weak, and worse than for ordinary utility-scale storage.** Four reasons, of which the binding one is that Hithium has no product at the rack layer — no BBU, supercapacitor shelf, UPS, PCS or rack form factor — so it cannot participate in the storage layer specific to AI, and in the campus layer it sells DC blocks where data-centre EPCs buy integrated AC systems. The constructive half is the reframe: the buildout AI is actually causing is utility- and IPP-owned front-of-meter storage, which is ordinary Hithium territory
-- **One research finding reversed an initial hypothesis and the reversal is recorded in the document.** The Gulf looked like the soft landing for AIDC given the existing 4 GWh Saudi Electricity Company relationship. It is the opposite for AI-specific equipment: Gulf AI investment with the US was conditioned on divesting Chinese equivalent technology, with advanced-chip access as the lever. Gulf *grid* storage remains wide open — SPPC's 3 GW/12 GWh tender, 27 prequalified. Same country, opposite answer depending on where the electron goes; the addendum states it that way
-- **Sourcing discipline is carried in the masthead**, which states plainly that market facts are sourced while the layer analysis, the weak grading and the sell-to-the-grid reframe are labelled analysis
-- **Verified visually before committing** — contents block and style banner correctly absent, masthead compact at 258px, five H2s, no table overflow
-- **A no-op rebuild of the interview brief was reverted.** The script change does not affect it, and re-committing a 493 KB blob to move a `/CreationDate` is the same history churn declined in v02.43r and v02.44r
-
-## [v02.46r] — 2026-08-15 10:40:56 PM EST
-
-> **Prompt:** "continue with your recommendation"
-
-### Added
-- **`#### Beijing's half of the squeeze`** in `hithium-interview-brief.md` — a sub-block inside the FEOC subsection of the regulatory stack. The brief previously carried the Reliance licensing collapse as a half-sentence inside a hedging paragraph; the developer asked for the story, and tracing it established that this is the mechanism making the FEOC problem *structurally* hard rather than merely expensive, which is too valuable to leave buried. Covers: the two Chinese export-control actions with dates and thresholds (MOFCOM/MOST catalogue amendment 2025-07-15 adding LFP/LMFP cathode preparation technology while **lowering** the technical thresholds that define scope; MOFCOM/Customs Announcement No. 58 of 2025-10-09, effective 2025-11-08, extending dual-use controls to batteries, cathode and graphite anodes); the **restricted-not-prohibited** licence-management mechanism and what the July → November → January sequencing implies; the Amara Raja/Gotion and Exide/SVOLT corroboration including the visa-denial lever; the two-sided bind; and why wholly-owned plants are the consequence
-- **A third question in the "About the compliance crux" group** — whether the export-control regime shapes the localization strategy, and whether it touches the Navarre cell plant. Carries an explicit ask-don't-assert instruction, since nothing published addresses intra-group technology transfers
-- **A two-part caution blockquote** — Reliance **publicly and categorically denied** pausing its battery plans (it owns Lithium Werks and Faradion as fallbacks), so the brief prescribes "the licensing route stalled under Chinese export controls" and forbids "Reliance halted its gigafactory"; and it warns against opening the topic as "what happened with Reliance?", which invites the interviewer to hear a probe about a failure
-
-### Changed
-- **`HITHIUM-INTERVIEW-BRIEF.pdf`** rebuilt — 20 → **21 pages**. Section count stays at 16: the addition is an H4 inside an existing H3 inside an existing H2, so the contents block is untouched
-- **README tree** — the PDF's page count updated from 20 to 21
-
-### Notes
-- **First use of an H4 in a study-prep document.** The renderer already handled it — it derives heading level from the `#` run length and emits `<h4>`, and the print stylesheet already carried an `h4` rule — so no script change was needed. Verified the computed style renders as a small-caps amber label, visually a clear level below the numbered H3s and not competing with the bold paragraph lead-ins around it
-- **The analytical payload is the two-sided bind**, and it is the strongest observation in the brief: the emerging workaround for the American material-assistance rules is a structure in which a non-prohibited US entity owns the production, and that is exactly the technology transfer Beijing converted into a discretionary permission. Hithium is constrained from both capitals at once, which is why its localization answer is wholly-owned plants (Mesquite, Navarre) rather than licensed local manufacture
-- **Confidence discipline preserved.** Both export-control actions, the Bloomberg report, Reliance's denial, and the Amara Raja and Exide details are sourced. Two items are labelled as inference in the document: the reading of *why* Hithium withdrew in January when the rules changed in July and November, and whether transferring restricted cathode technology to a wholly-owned overseas subsidiary escapes the regime — the latter is deliberately framed as a question to ask rather than a claim to make
-- **Verified visually before committing** — the new block's five bullets render intact, the cautions blockquote correctly picks up the boxed-caution treatment (bold lead-in) rather than the pull-quote treatment, contents still resolves 16 entries, and no table overflows its column budget
-- **Rebased onto `origin/main` before editing**, since v02.45r had already auto-merged; branch confirmed absent from the remote before pushing
-- **This is intended as the last content addition before the 2026-08-17 interview.** At 21 pages, further material costs the developer absorption time rather than buying readiness — stated as such in the response so the decision is visible rather than implicit
-
-## [v02.45r] — 2026-08-15 10:29:57 PM EST
-
-> **Prompt:** "continue with your recommendation"
-
-### Added
-- **`### How cycle life converts into money`** in `hithium-interview-brief.md` — the brief's "What you have to sell with" table asserted that Hithium's cycle life is "augmentation capex avoided and a warranty-reserve line item" without explaining the mechanism. The developer asked what that meant, which identified the one place in the document that stated a conclusion and withheld the reasoning underneath it. The new subsection sits immediately after the table it explains and covers: the flat-obligation-versus-decaying-asset mechanism (70–80% LFP retention at ten years of daily cycling, 70%-at-year-ten warranty convention, 15–20% day-one oversizing as standard practice, Lazard-style augmentation reserve at ~3% of equipment cost per year); **two traps** — a cycle count is not a degradation curve, and cycles beyond what the duty cycle consumes are worth nothing; the two-sided warranty reserve (seller-side provision against gross margin, buyer-side IE haircut plus mitigant cost); a speakable compressed version; and a hedged note on how augmentation may interact with the FEOC regime
-- **Two vocabulary entries** — `Capacity guarantee` (the warranted year-by-year retention table, which is what a financial model actually consumes) and `Warranty provision / reserve` (both sides of it)
-- **Self-test question 11 + answer** — section retitled from "Ten-question self-test" to "Eleven-question self-test". A concept the brief now teaches is reinforced the way every other concept in it is, and the question/answer counts stay in parity
-
-### Changed
-- **`HITHIUM-INTERVIEW-BRIEF.pdf`** rebuilt — 18 → **20 pages**. Section count stays at 16 because the addition is an H3 inside the existing North America section, so the contents block is unchanged
-- **README tree** — the PDF's page count updated from 18 to 20
-
-### Notes
-- **The load-bearing point of the new subsection is that the two halves of the phrase are one argument, and only one of them is about the cell.** Cycle life moves the augmentation line; it does nothing for the warranty reserve, because a lender's independent engineer can haircut a warranty from a private supplier that has never published a full year of financials regardless of how good the cell is. That is why the brief already pairs cycle life with the warranty-backstop objection and the insurance-wrapper question — the subsection now makes the connection explicit rather than leaving it implicit across three sections
-- **Confidence discipline preserved.** The retention figures, warranty convention, oversizing norm and Lazard augmentation reserve are sourced. The FEOC/augmentation interaction is labelled as inference in the document itself, with an explicit instruction to raise it as a question for tax advisers rather than assert it — consistent with how the brief handles the material-assistance and FCC reads. No illustrative dollar figures were carried into the document; the worked NPV example used in chat was deliberately left out, since arbitrary numbers in a reference document invite being quoted
-- **Verified visually before committing** — the new subsection renders with its bulleted traps intact, the speakable version is correctly detected as a "SAY IT LIKE THIS" pull quote (it opens with a quote mark), the contents block still resolves 16 entries, no table overflows its column budget, and the force-opened self-test block prints all eleven answers
-- **Rebased onto `origin/main` before editing**, since v02.44r had already auto-merged; the branch was confirmed absent from the remote before pushing, per push-once enforcement
-- Only the Hithium document was rebuilt, so the two Megmeet PDFs are untouched
-
-## [v02.44r] — 2026-08-15 09:20:49 PM EST
-
-> **Prompt:** "Picking up from the last "Megmeet Interview Brief PDF" session, the Megmeet interview brief was very useful. I have a third round interview with Hithium's Mizhi Zhang in two days, so create me a similar interview brief for it. Output as a downloadable PDF."
-
-### Added
-- **`repository-information/study-prep/hithium/hithium-interview-brief.md`** — the Hithium counterpart to the Megmeet interview brief, tuned for the third-round on-site with Mizhi Zhang on 2026-08-17. 16 sections following the Megmeet structure, with three sections that have no Megmeet analogue because the subject demanded them: a **logistics** block (this round is an in-person visit, so time/address/room/coordinator are actionable), a consolidated **regulatory stack** section covering the three separate US actions that hit this company differently, and an expanded **"who you're meeting"** section — because unlike Megmeet's interviewer, this one is extensively documented
-- **`repository-information/study-prep/hithium/HITHIUM-INTERVIEW-BRIEF.pdf`** — 18 pages, 16 sections, same `bloomberg` export skin as the Megmeet pair
-
-### Changed
-- **`scripts/build-study-prep-pdf.mjs`** — registered `hithium-interview-brief` in the `DOCS` map. No renderer changes were needed; the brief exercises only Markdown features the Megmeet brief already covered (headings, pipe tables, blockquotes, lists, `<details>`), so the script itself is untouched below the registry
-- **README tree** — added `hithium-interview-brief.md` and `HITHIUM-INTERVIEW-BRIEF.pdf` under `study-prep/hithium/`, and changed the lesson plan's tree connector from `└──` to `├──`
-
-### Notes
-- **Research went well past the dossier, and it changed the brief's centre of gravity.** `hithium.profile.json` (profileVersion 3, 2026-08-09) supplied the company; two things it does not carry turned out to matter more:
-  - **Mizhi Zhang was CEO of Sungrow North America**, and before that managing director of the Americas energy-storage business at the Sungrow–Samsung SDI joint venture. He has already run the playbook this role exists to execute, at a company that is now ranked No. 1 globally among BESS integrators — and he crossed from the PCS/integrator side to the cell side. The brief is built around that rather than around a generic "sales interview" frame. Biography assembled from aggregator renderings of his LinkedIn profile, so the shape is treated as reliable and the exact title as approximate (three variants appear across sources)
-  - **The FEOC / prohibited-foreign-entity regime is the commercial crux of the job and postdates nothing in the dossier's framing.** Material assistance cost ratio, ≥55% non-PFE for 2026 construction starts, forfeiture of the entire 30–40% ITC on failure, IRS Notice 2026-15. Paired with the Section 301 step from 7.5% to 25% on non-EV lithium-ion effective 2026-01-01
-- **The FCC covered-list analysis is Hithium-specific, not inherited from the Megmeet brief.** The conclusion differs because the products differ: Hithium's utility products ship as **DC** blocks with the PCS supplied by someone else, so the rule's conversion prong is not met on a plain reading — whereas the residential line (integrated inverter + MPPT, wireless connectivity) is genuinely exposed. Flagged in the brief as a labelled read, not a sourced ruling; no source addresses DC-block-without-PCS supply directly
-- **Three places the brief deliberately withholds rather than asserts.** FY2025 financials do not publicly exist (the second HKEX application lapsed in April 2026 before they were filed), so the brief instructs citing shipment rankings instead of full-year revenue. The total tariff stack is given as a hedged range because the Supreme Court struck the IEEPA tariffs on 2026-02-20 and landed cost turns on HTS classification. And the CATL litigation carries an explicit do-not-raise instruction, including a specific instruction not to repeat the reported executive detention or the controlling-shareholder equity freeze — those surface only in hostile coverage, and organized opposition coverage of the listing exists whose backers could not be verified
-- **Verified visually before committing** — rendered the intermediate print HTML in Chromium and screenshotted the masthead/contents, the say-don't-say and questions sections, and the final page: all 16 contents entries resolve, no table overflows its column budget, and the `<details>` self-test block is force-opened so all ten answers print
-- The interview is **Monday 2026-08-17** (`date -d` confirmed the weekday), two days out from this session
-- **Only the Hithium brief was built.** A bare `node scripts/build-study-prep-pdf.mjs` rebuilds every registered document, which would rewrite the two Megmeet PDFs for nothing but a new `/CreationDate` — the same history churn declined in v02.43r. `hithium-lesson-plan.md` was deliberately **not** registered: the developer asked for the brief, and registering the lesson plan is a separate decision
