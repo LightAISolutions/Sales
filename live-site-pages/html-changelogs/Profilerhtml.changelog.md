@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.50w] — 2026-08-29 05:41:32 AM EST — v03.60r
+
+### Added
+- Every dossier now shows where its information actually came from. A sourcing line under the company name gives the share drawn from the company itself, and the Source List breaks it into three groups — the company's own channels, its filings and press releases, and independent reporting — with each individual source labelled
+- The comparison view gained a sourcing row, so when two companies are shown side by side you can see how well-evidenced each dossier is before weighing the figures against each other
+- A short plain-language note characterises the balance. A dossier built almost entirely from the company's own material is flagged as lightly corroborated rather than presented as well-sourced — heavy company sourcing is a caution, not a mark of quality
 
 ## [v01.49w] — 2026-08-29 05:21:35 AM EST — v03.59r
 

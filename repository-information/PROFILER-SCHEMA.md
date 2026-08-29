@@ -17,7 +17,7 @@ This file is the **single source of truth for the data schema**. Profiles are ge
 
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
-| `schemaVersion` | number | yes | Registry schema version (currently `1`) |
+| `schemaVersion` | number | yes | Registry schema version (currently `2` — v2 added `companies[].domains`) |
 | `categories` | string[] | yes | Canonical category order for the filter chips: `supplier`, `developer`, `integrator`, `epc`, `gc`, `investor`, `hyperscaler`, `neocloud`, `advisor`, `other` (`epc` renders as "EPC", `gc` as "General Contractor") |
 | `companies[]` | object[] | yes | One entry per covered company |
 | `companies[].slug` | string | yes | Per Slug rules; must have a matching `<slug>.profile.json` |
@@ -28,6 +28,7 @@ This file is the **single source of truth for the data schema**. Profiles are ge
 | `companies[].ticker` | string | no | `EXCHANGE: SYMBOL` for public companies |
 | `companies[].status` | string | yes | `active` (normal) or `archived` (kept but de-emphasized) |
 | `companies[].lastUpdated` | string | yes | `YYYY-MM-DD` of the profile's last revision — keep in sync with the profile's `lastUpdated` |
+| `companies[].domains` | string[] | no | **Registry v2.** The company's own web domains, used to classify source provenance (see "Source provenance" below). Bare hostnames, no scheme and no `www.` — a subdomain match is implied, so `abb.com` covers `new.abb.com`. Include the host from the profile's `website`, plus any other domain the company itself publishes on: parent-company domains for subsidiaries (`hitachi.com` for Hitachi Energy), regional or sub-brand sites (`bydenergy.com`, `delta-americas.com`), separate newsrooms (`about.fb.com`, `atmeta.com` for Meta), brand TLDs (`blog.google`), and IR-platform hosts serving the company's own filings (`iren.gcs-web.com`). Omitting the field is safe — every source then falls to `disclosure` or `independent`, which understates rather than overstates first-party sourcing |
 
 ## Profile schema — `<slug>.profile.json`
 
@@ -50,7 +51,7 @@ Top-level fields:
 | `technicalSpecs[]` | object[] | no | `{ "product", "specs": [...], "notes" }` — flagship products only, concrete figures. **`specs[]` entries are `{ "band", "label", "value" }`** (banded format, v01.41w — developer directive 2026-08-22): `band` is the category the attribute sits under (Power, Electrical, Design, Compliance, …) and consecutive entries sharing a band render under one gold band header inside the product table; `label` is the attribute name; `value` is the figure. **Author values verbatim from the source** — split a packed source statement on its own punctuation and keep each fragment word-for-word; labels and bands are yours to write, values are not. Two legacy shapes still render and must keep rendering, because archived snapshots hold them forever: `{ "label", "value" }` with no band (a plain two-column row) and a **plain string** (a full-width statement row spanning both columns). Entries with no text are dropped, a group with no renderable rows and no `notes` is dropped, and a profile whose groups all drop renders **no** specs section at all rather than an empty heading |
 | `decisionMakers[]` | object[] | yes | See below |
 | `financials` | object | yes | See below |
-| `sources[]` | object[] | yes | `{ "label", "url", "date": "YYYY-MM-DD" }` — every fact in the profile must be traceable to one of these. `date` is the source's **publication/article date** (`YYYY-MM` when only the month is known); **omit the field** for undated evergreen pages (product pages, IR hubs, corporate about pages, market-report landing pages, aggregator quote pages). **Ordering: chronological, newest publication first; undated sources last** (developer directive, 2026-08-09 — replaced the accessed-date format and the first-party-first ordering). The renderer falls back to a legacy `accessed` field for archived pre-migration profiles |
+| `sources[]` | object[] | yes | `{ "label", "url", "date": "YYYY-MM-DD" }` — every fact in the profile must be traceable to one of these. `date` is the source's **publication/article date** (`YYYY-MM` when only the month is known); **omit the field** for undated evergreen pages (product pages, IR hubs, corporate about pages, market-report landing pages, aggregator quote pages). **Ordering: chronological, newest publication first; undated sources last** (developer directive, 2026-08-09 — replaced the accessed-date format and the first-party-first ordering). The renderer falls back to a legacy `accessed` field for archived pre-migration profiles. An optional `party` (`company` \| `disclosure` \| `independent`) overrides the derived provenance for that one source — see "Source provenance" |
 | `lastUpdated` | string | yes | `YYYY-MM-DD` of this revision |
 | `profileVersion` | number | yes | Starts at `1`, +1 on every revision — gives Claude a diffable revision marker |
 
@@ -93,6 +94,23 @@ On each **metric** (`financials.periods[].metrics[]`):
 - **One `kpi` per key per period.** A consumer reading `revenue` for a period must get exactly one answer
 - **FX rates are researched, not remembered** — per the "Platform quotas, limits, and pricing require web search verification" rule in `.claude/rules/behavioral-rules.md`, look the rate up and cite it. Where the dossier itself already states a USD equivalent (CATL's `~US$10B` beside `RMB 72.2B`), use it to sanity-check the conversion and say so
 - **Backfill opportunistically** — a dossier gains these on its next revision, exactly as `relationships[]` does. There is no mass migration, and consumers must treat every field as optional
+
+### Source provenance
+
+Every cited source is classified into one of three tiers, mirroring the citation order in the Source Priority Protocol (`.claude/rules/profiler-app.md`). The app shows the resulting **first-party share** on the dossier header, in the Source List, and as a Compare row.
+
+| Tier | Means | Determined by |
+|------|-------|---------------|
+| `company` | Published on the company's own channels — IR pages, newsroom, product pages, leadership pages | Source host matches (or is a subdomain of) an entry in the registry's `companies[].domains` |
+| `disclosure` | The company's own words, published through a regulated or syndicated channel — exchange and regulator filings, newswire releases | Source host matches the app's global filing-host or wire-service list |
+| `independent` | Everyone else — trade press, analysts, consultancies, aggregators, government bodies writing about the company | Neither of the above |
+
+**"First-party share" = `company` + `disclosure`** — both are the company's own account of itself; only the publisher differs.
+
+**Classification is data-driven, never inferred from the company name.** An earlier token-matching approach mislabelled whole dossiers: Black & Veatch (`bv.com`), QTS (`q.com`) and Schneider (`se.com`) have domains too short to tokenize; Google and xAI publish on brand TLDs (`blog.google`, `x.ai`); Meta's newsroom is `about.fb.com`. Declare the domains in the registry instead. When a single source still lands in the wrong tier, set its `party` explicitly — that always wins.
+
+**A high first-party share is a caution, not a credential.** The schema leans on first-party channels for products, specs and leadership, and on independent sources for what a company cannot credibly say about itself — missed expectations, litigation, independent rankings. A dossier sourced almost entirely from the company is under-checked, and the app says so in those words.
+
 
 ## Authoring rules
 

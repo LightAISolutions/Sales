@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.49w">
+  <meta name="build-version" content="v01.50w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -414,6 +414,26 @@
     .ov-sources a { color: var(--ov-hyp); text-decoration: none; word-break: break-all; }
     .ov-sources a:hover { text-decoration: underline; }
     .ov-asof { color: var(--ov-faint); font: 11px/1 var(--ov-mono); }
+    /* Source provenance (v01.50w) — company / disclosure / independent */
+    .ov-prov { margin: 14px 0 0; }
+    .ov-prov-bar { display: flex; height: 7px; border-radius: 4px; overflow: hidden; background: var(--ov-card2); margin: 7px 0 8px; max-width: 420px; }
+    .ov-prov-bar i { display: block; height: 100%; }
+    .ov-prov-bar i.co { background: var(--ov-gold); }
+    .ov-prov-bar i.di { background: var(--ov-hyp); }
+    .ov-prov-bar i.in { background: var(--ov-dev); }
+    .ov-prov-key { display: flex; flex-wrap: wrap; gap: 4px 16px; font: 11px/1.5 var(--ov-mono); color: var(--ov-muted); }
+    .ov-prov-key span.zero { opacity: 0.42; }
+    .ov-prov-key span::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+    .ov-prov-key .co::before { background: var(--ov-gold); }
+    .ov-prov-key .di::before { background: var(--ov-hyp); }
+    .ov-prov-key .in::before { background: var(--ov-dev); }
+    .ov-prov-note { color: var(--ov-faint); font-size: 12.5px; font-style: italic; margin: 8px 0 0; }
+    .ov-prov-head { font: 10px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ov-faint); }
+    .ov-prov-head b { color: var(--ov-paper); font-weight: 400; letter-spacing: 0; font-size: 12px; text-transform: none; }
+    .ov-src-tag { display: inline-block; font: 9.5px/1.5 var(--ov-mono); letter-spacing: 0.08em; text-transform: uppercase; padding: 0 5px; border-radius: 3px; margin-right: 7px; vertical-align: 1px; border: 1px solid; }
+    .ov-src-tag.co { color: var(--ov-gold); border-color: rgba(216,180,90,0.45); }
+    .ov-src-tag.di { color: var(--ov-hyp); border-color: rgba(110,168,254,0.45); }
+    .ov-src-tag.in { color: var(--ov-dev); border-color: rgba(130,181,109,0.45); }
     @media (max-width: 560px) {
       #ov-app { padding-top: 28px; }
       .ov-exec { flex-direction: column; }
@@ -1815,6 +1835,138 @@ function ovReloadFresh() {
       });
       return t;
     }
+    // ── Source provenance (v01.50w) ────────────────────────────────────────
+    // Three tiers, matching the citation order in the Source Priority Protocol
+    // (.claude/rules/profiler-app.md): the company's own channels, then the
+    // company's words published through a regulated or syndicated channel,
+    // then everyone else.
+    //
+    //   company      — the company's own domains (registry `domains`)
+    //   disclosure   — exchange/regulator filings + newswire releases: the
+    //                  company authored the words, someone else published them
+    //   independent  — trade press, analysts, aggregators, government bodies
+    //
+    // Classification is DATA-DRIVEN, not heuristic. An earlier token-matching
+    // approach silently mislabelled whole dossiers — Black & Veatch (bv.com),
+    // QTS (q.com) and Schneider (se.com) have domains too short to tokenize,
+    // Google and xAI publish on brand TLDs (blog.google, x.ai), and Meta's
+    // newsroom is about.fb.com. A provenance indicator that guesses wrong is
+    // worse than none, because it makes a truth claim about sourcing quality.
+    // So the company's own domains are declared per company in
+    // profiler-companies.json, and an individual source may override the
+    // verdict outright with a `party` field.
+    var OV_WIRE_HOSTS = ['prnewswire.com', 'businesswire.com', 'globenewswire.com', 'newswire.ca',
+      'accesswire.com', 'prnasia.com', 'acnnewswire.com', 'jcnnewswire.com', 'presseportal.de'];
+    var OV_FILING_HOSTS = ['sec.gov', 'hkexnews.hk', 'hkex.com.hk', 'sse.com.cn', 'szse.cn',
+      'cninfo.com.cn', 'dart.fss.or.kr', 'tdnet.info', 'jpx.co.jp', 'six-group.com',
+      'londonstockexchange.com', 'sedar.com', 'asx.com.au'];
+    function ovHostOf(url) {
+      var m = String(url || '').match(/^https?:\/\/([^\/?#]+)/i);
+      if (!m) return '';
+      var h = m[1].toLowerCase().replace(/:\d+$/, '');
+      return h.indexOf('www.') === 0 ? h.slice(4) : h;
+    }
+    function ovHostIn(host, list) {
+      for (var i = 0; i < list.length; i++) {
+        if (host === list[i] || host.slice(-(list[i].length + 1)) === '.' + list[i]) return true;
+      }
+      return false;
+    }
+    function ovSourceParty(src, domains) {
+      // An explicit `party` in the data always wins — the escape hatch for the
+      // cases domain matching cannot see (a company blog on a shared platform,
+      // a filing mirrored somewhere unexpected).
+      var declared = (src && src.party) || '';
+      if (declared === 'company' || declared === 'disclosure' || declared === 'independent') return declared;
+      var host = ovHostOf(src && src.url);
+      if (!host) return 'independent';
+      if (ovHostIn(host, domains || [])) return 'company';
+      if (ovHostIn(host, OV_FILING_HOSTS) || ovHostIn(host, OV_WIRE_HOSTS)) return 'disclosure';
+      return 'independent';
+    }
+    function ovProvenance(p, regEntry) {
+      var domains = (regEntry && regEntry.domains) || [];
+      var out = { company: 0, disclosure: 0, independent: 0, total: 0, firstPct: 0, indPct: 0 };
+      (p && p.sources || []).forEach(function(s) {
+        out[ovSourceParty(s, domains)]++;
+        out.total++;
+      });
+      if (out.total) {
+        out.firstPct = Math.round((out.company + out.disclosure) / out.total * 100);
+        out.indPct = 100 - out.firstPct;
+      }
+      return out;
+    }
+    // Deliberately NOT a quality score. A dossier built almost entirely from the
+    // company's own material is under-checked, not well-sourced — the schema
+    // leans on first-party channels for products, specs and leadership, and on
+    // independent sources for the things a company cannot credibly say about
+    // itself (misses, litigation, rankings). The wording reflects that.
+    function ovProvNote(pr) {
+      if (!pr.total) return '';
+      if (pr.indPct < 20) return 'Drawn almost entirely from the company\u2019s own material \u2014 light on independent corroboration.';
+      if (pr.indPct < 45) return 'Company-led sourcing with some independent checking.';
+      if (pr.indPct < 70) return 'Balanced between company material and independent reporting.';
+      return 'Largely independent reporting, with the company\u2019s own material in support.';
+    }
+    function ovProvBlock(p, regEntry) {
+      var pr = ovProvenance(p, regEntry);
+      if (!pr.total) return null;
+      var box = ovEl('div', 'ov-prov');
+      var hd = ovEl('div', 'ov-prov-head');
+      hd.appendChild(document.createTextNode('Sourcing  '));
+      hd.appendChild(ovEl('b', null, pr.firstPct + '% first-party'));
+      hd.appendChild(document.createTextNode('  of ' + pr.total + ' cited sources'));
+      box.appendChild(hd);
+      var bar = ovEl('div', 'ov-prov-bar');
+      [['co', pr.company], ['di', pr.disclosure], ['in', pr.independent]].forEach(function(seg) {
+        if (!seg[1]) return;
+        var i = ovEl('i', seg[0]);
+        i.style.width = (seg[1] / pr.total * 100) + '%';
+        bar.appendChild(i);
+      });
+      box.appendChild(bar);
+      var key = ovEl('div', 'ov-prov-key');
+      // A tier with no sources still earns its line — "0 filings & releases"
+      // is itself a finding — but dimmed, so the swatch is not read as a
+      // segment the eye then fails to find in the bar.
+      [['co', pr.company, 'company'], ['di', pr.disclosure, 'filings & releases'], ['in', pr.independent, 'independent']].forEach(function(k) {
+        key.appendChild(ovEl('span', k[0] + (k[1] ? '' : ' zero'), k[1] + ' ' + k[2]));
+      });
+      box.appendChild(key);
+      box.appendChild(ovEl('p', 'ov-prov-note', ovProvNote(pr)));
+      return box;
+    }
+    var OV_PARTY_LABEL = { company: ['co', 'company'], disclosure: ['di', 'filing'], independent: ['in', 'independent'] };
+    function ovRegOf(slug) {
+      var hit = ((ovRegistry && ovRegistry.companies) || []).filter(function(c) { return c.slug === slug; });
+      return hit[0] || null;
+    }
+    // Header variant: the headline number and the bar only. The full key and the
+    // interpretive note live in the Sources section, where the reader can see
+    // which specific source sits in which tier.
+    function ovProvStrip(p, regEntry) {
+      var pr = ovProvenance(p, regEntry);
+      if (!pr.total) return null;
+      var box = ovEl('div', 'ov-prov');
+      var hd = ovEl('div', 'ov-prov-head');
+      hd.appendChild(document.createTextNode('Sourcing  '));
+      hd.appendChild(ovEl('b', null, pr.firstPct + '% first-party'));
+      hd.appendChild(document.createTextNode('  \u00b7  ' + pr.total + ' cited'));
+      box.appendChild(hd);
+      var bar = ovEl('div', 'ov-prov-bar');
+      [['co', pr.company], ['di', pr.disclosure], ['in', pr.independent]].forEach(function(seg) {
+        if (!seg[1]) return;
+        var i = ovEl('i', seg[0]);
+        i.style.width = (seg[1] / pr.total * 100) + '%';
+        bar.appendChild(i);
+      });
+      box.appendChild(bar);
+      box.title = pr.company + ' from the company\u2019s own channels, ' + pr.disclosure +
+        ' from filings and newswire releases, ' + pr.independent + ' independent';
+      return box;
+    }
+
     // Latest COMPLETE annual period carrying a normalized revenue figure.
     // Period ORDER IS NOT A CONTRACT: 49 dossiers are authored oldest-first and
     // 22 newest-first, so "the last one in the array" silently picks the wrong
@@ -1957,6 +2109,30 @@ function ovReloadFresh() {
           d.appendChild(ovEl('div', 'v2', ((c.p.sources || []).length) + ' cited sources'));
         });
       });
+
+      // Sourcing (v01.50w) — sits in Tier 0 because it qualifies every other row
+      // in the table. Two revenue bars drawn side by side look equally solid; the
+      // dossiers behind them may not be. A high first-party share is a caution,
+      // not a credential — see ovProvNote.
+      var provs = cols.map(function(c) { return ovProvenance(c.p, c.reg); });
+      if (provs.some(function(pr) { return pr.total; })) {
+        rowLabel('Sourcing', 'first-party share');
+        provs.forEach(function(pr) {
+          cell(function(d) {
+            if (!pr.total) { d.className = 'na'; d.appendChild(ovEl('div', 'v2', 'No sources cited')); return; }
+            d.appendChild(ovEl('div', 'v', pr.firstPct + '% first-party'));
+            var bar = ovEl('div', 'ov-prov-bar');
+            [['co', pr.company], ['di', pr.disclosure], ['in', pr.independent]].forEach(function(seg) {
+              if (!seg[1]) return;
+              var i = ovEl('i', seg[0]);
+              i.style.width = (seg[1] / pr.total * 100) + '%';
+              bar.appendChild(i);
+            });
+            d.appendChild(bar);
+            d.appendChild(ovEl('div', 'v2', pr.company + ' company · ' + pr.disclosure + ' filings · ' + pr.independent + ' independent'));
+          });
+        });
+      }
       rowLabel('Snapshot');
       cols.forEach(function(c) {
         cell(function(d) {
@@ -2448,6 +2624,8 @@ function ovReloadFresh() {
       meta.appendChild(document.createTextNode(bits.join('  ·  ') + (p.website ? '  ·  ' : '')));
       if (p.website) meta.appendChild(ovLink(p.website, null, p.website.replace(/^https?:\/\//, '').replace(/\/$/, '')));
       head.appendChild(meta);
+      var provStrip = ovProvStrip(p, ovRegOf(p.slug));
+      if (provStrip) head.appendChild(provStrip);
       var styBan = ovStyleBanner(p);
       if (styBan) head.appendChild(ovEl('p', 'ov-sty-banner', styBan));
       var figN = 0; // Bloomberg-style figure numbering (specs + financial tables)
@@ -2723,10 +2901,18 @@ function ovReloadFresh() {
       // Sources
       if (p.sources && p.sources.length) {
         var src = ovSection(ovSecLabel('sources'));
+        var srcReg = ovRegOf(p.slug);
+        var srcDomains = (srcReg && srcReg.domains) || [];
+        var provBlock = ovProvBlock(p, srcReg);
+        if (provBlock) src.appendChild(provBlock);
         var wrapS = ovEl('div', 'ov-sources');
         var ol = ovEl('ol');
         p.sources.forEach(function(s) {
           var li = ovEl('li');
+          var party = OV_PARTY_LABEL[ovSourceParty(s, srcDomains)];
+          var tag = ovEl('span', 'ov-src-tag ' + party[0], party[1]);
+          tag.title = 'Provenance of this source';
+          li.appendChild(tag);
           li.appendChild(ovLink(s.url, null, s.label || s.url));
           var srcDate = s.date ? s.date : (s.accessed ? 'accessed ' + s.accessed : null);
           if (srcDate) li.appendChild(document.createTextNode(' — '));

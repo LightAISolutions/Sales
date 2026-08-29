@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.60r] — 2026-08-29 05:41:32 AM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- Source provenance indicator (roadmap #4) across `live-site-pages/Profiler.html`: `ovSourceParty`, `ovProvenance`, `ovProvBlock`, `ovProvStrip` and `ovProvNote` classify every cited source as `company`, `disclosure` or `independent`, surfaced as a compact strip in the dossier header, a full breakdown with per-source tags in the Source List, and a Tier 0 "Sourcing" row in Compare
+- Registry schema v2 — `companies[].domains` in `profiler-data/profiler-companies.json` declares each company's own web domains (88/88 populated). Subdomains match implicitly, so `abb.com` covers `new.abb.com`. Curated beyond the profile's `website` host where the company publishes elsewhere: parent domains (`hitachi.com`, `huawei.com`), sub-brands and regional sites (`bydenergy.com`, `delta-americas.com`, `sunwodaess.com`, `mpinarada.com`, `samsungrenewableenergy.com`, `mastecprofessionalservices.com`, `hittyearinreview.com`), separate newsrooms (`about.fb.com`/`atmeta.com`, `news.panasonic.com`), brand TLDs (`blog.google`) and IR-platform hosts (`iren.gcs-web.com`)
+- Optional per-source `party` override, documented in `PROFILER-SCHEMA.md` alongside a new "Source provenance" section defining the three tiers and the classification contract
+
+### Changed
+- Provenance is deliberately **not** framed as a quality score. `ovProvNote` reads a low independent share as under-corroborated rather than well-sourced, matching the schema's own division of labour: first-party channels are ground truth for products, specs and leadership; independent sources supply what a company cannot credibly say about itself
+- `.claude`-adjacent test asset: `vt-family`'s row-order assertion was pinned to a positional index (`r[3] == 'revenue'`) and broke when the Sourcing row was inserted into Tier 0. Rewritten as order-semantic assertions (revenue precedes the as-reported row; sourcing precedes revenue) so future Tier 0 additions do not produce a false failure
+
+### Fixed
+- A token-matching prototype of this feature was discarded before shipping after an audit across all 88 dossiers showed systematic misclassification: Black & Veatch rendered 6% first-party despite `bv.com` supplying 14 of its 29 sources, and Google, Schneider Electric, QTS and xAI all rendered 0% company sources. The causes were structural, not tunable — domains too short to tokenize (`bv.com`, `q.com`, `se.com`), brand TLDs (`blog.google`, `x.ai`) and separate corporate domains (`about.fb.com`). Replaced with the declared-domain model above; Black & Veatch now reads 55% and Google 63%
 
 ## [v03.59r] — 2026-08-29 05:21:35 AM EST
 
