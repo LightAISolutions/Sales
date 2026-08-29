@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.63w] — 2026-08-28 11:28:04 PM EST — v03.46r
+
+### Added
+- **A "Why thin?" button on the digest panel**, next to "Run intake now". It explains the edition you are looking at: a plain-English verdict at the top, then how many stories were scanned, how many were relevant, how many came from company searches, and how many were down-weighted for being outside the US market
+- The report shows **where the scores landed** across six bands with the relevance bar drawn in, so you can see at a glance whether stories are piling up just underneath it
+- It also lists the **stories that nearly made it** — how far short each fell, and whether it was held back for being outside the US market or for coming from a company search
+- The verdict distinguishes the two situations that look identical from the outside: a crowd of stories sitting just under the bar (where adjusting your settings would help) from too little coming in at all (where it would not)
 
 ## [v01.62w] — 2026-08-28 11:06:15 PM EST — v03.44r
 

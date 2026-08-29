@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.62w">
+  <meta name="build-version" content="v01.63w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -836,6 +836,55 @@
       .wd-hb-title { font-size: 24px; }
       .wd-hb-item a { font-size: 17px; }
     }
+    /* ── Score report ("Why thin?") ── */
+    #wd-sr-overlay { position: fixed; inset: 0; z-index: 10006; background: rgba(8,10,13,0.86);
+      display: none; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 4vh 12px; }
+    #wd-sr-panel { background: #15171c; border: 1px solid #2c313a; border-radius: 8px;
+      width: 100%; max-width: 720px; box-sizing: border-box; margin-bottom: 4vh;
+      padding: 24px 26px 20px; color: var(--wd-ink); font-family: var(--wd-sans);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6); }
+    /* The verdict is a headline, not a chart: one fact, read in a glance. */
+    .wd-sr-verdict { font-family: 'Newsreader', Georgia, serif; font-size: 26px; line-height: 1.2;
+      font-weight: 600; color: var(--wd-ink); margin: 2px 0 4px; }
+    .wd-sr-because { font-size: 13.5px; line-height: 1.55; color: var(--wd-mut); margin-bottom: 18px; }
+    /* Stat tiles — a single figure each, so no plot and no hover layer. */
+    .wd-sr-tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 20px; }
+    .wd-sr-tile { background: var(--wd-panel); border: 1px solid var(--wd-line); border-radius: 6px;
+      padding: 10px 11px; }
+    .wd-sr-tile b { display: block; font-family: var(--wd-mono); font-size: 21px; font-weight: 600;
+      color: var(--wd-ink); line-height: 1.1; }
+    .wd-sr-tile span { display: block; font-family: var(--wd-mono); font-size: 9.5px;
+      letter-spacing: 0.11em; text-transform: uppercase; color: var(--wd-mut2); margin-top: 5px; }
+    .wd-sr-h { font-family: var(--wd-mono); font-size: 10px; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--wd-mut2); margin: 0 0 10px; }
+    /* One ordered series: bands are rows, count is length. No legend — a single
+       series is named by the title. The below/above split is carried by the
+       labelled rule and the row labels, so it never rests on colour alone. */
+    .wd-sr-row { display: grid; grid-template-columns: 58px 1fr 34px; align-items: center;
+      gap: 9px; margin-bottom: 5px; }
+    .wd-sr-band { font-family: var(--wd-mono); font-size: 10.5px; color: var(--wd-mut2); text-align: right; }
+    .wd-sr-track { background: var(--wd-bg-deep); border-radius: 3px; height: 15px; overflow: hidden; }
+    .wd-sr-bar { height: 100%; border-radius: 0 3px 3px 0; background: var(--wd-dim); min-width: 2px; }
+    .wd-sr-bar.pass { background: var(--wd-accent); }
+    .wd-sr-n { font-family: var(--wd-mono); font-size: 11.5px; color: var(--wd-ink2); }
+    .wd-sr-rule { display: flex; align-items: center; gap: 8px; margin: 9px 0 8px 67px; }
+    .wd-sr-rule i { flex: 1; height: 1px; background: var(--wd-accent); opacity: 0.5; font-style: normal; }
+    .wd-sr-rule span { font-family: var(--wd-mono); font-size: 9.5px; letter-spacing: 0.11em;
+      text-transform: uppercase; color: var(--wd-accent); white-space: nowrap; }
+    .wd-sr-miss { border-top: 1px solid var(--wd-line); padding-top: 10px; margin-top: 9px; }
+    .wd-sr-miss:first-of-type { border-top: none; }
+    .wd-sr-mt { font-size: 14px; line-height: 1.4; color: var(--wd-ink2); }
+    .wd-sr-mm { font-family: var(--wd-mono); font-size: 10px; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--wd-mut2); margin-top: 4px; }
+    .wd-sr-short { color: var(--wd-accent); }
+    .wd-sr-note { font-size: 13px; line-height: 1.6; color: var(--wd-mut); }
+    @media only screen and (max-width: 600px) {
+      #wd-sr-panel { padding: 18px 15px 15px; }
+      .wd-sr-verdict { font-size: 21px; }
+      .wd-sr-tiles { grid-template-columns: repeat(2, 1fr); }
+      .wd-sr-row { grid-template-columns: 52px 1fr 30px; gap: 7px; }
+      .wd-sr-rule { margin-left: 59px; }
+    }
     /* Buttons */
     .sc-btn {
       border: 1px solid var(--wd-line-soft); border-radius: 4px; padding: 8px 14px;
@@ -1374,6 +1423,19 @@
        digest (?more=<digestId>). It sits outside #scraper-app on purpose: an
        email reader arrives with no session, so this must render without the
        app ever being unlocked. -->
+  <div id="wd-sr-overlay" aria-hidden="true">
+    <div id="wd-sr-panel" role="dialog" aria-modal="true" aria-labelledby="wd-sr-title">
+      <div class="wd-hb-head">
+        <div>
+          <h2 class="wd-hb-title" id="wd-sr-title">Why this size</h2>
+          <div class="wd-hb-sub" id="wd-sr-sub"></div>
+        </div>
+        <button type="button" class="wd-hb-x" id="wd-sr-close" title="Close" aria-label="Close">&times;</button>
+      </div>
+      <div id="wd-sr-body"><div class="wd-sr-note">Loading…</div></div>
+    </div>
+  </div>
+
   <div id="wd-hb-overlay" aria-hidden="true">
     <div id="wd-hb-panel" role="dialog" aria-modal="true" aria-labelledby="wd-hb-title">
       <div class="wd-hb-head">
@@ -1394,6 +1456,7 @@
           <button class="sc-btn" id="wd-digest-golive" type="button" title="Go-live readiness: AI provider, delivery config, and scheduler health at a glance">Go-live</button>
           <select id="wd-digest-edition" title="Which edition to build — each uses its own segment and topic settings"></select>
           <button class="sc-btn" id="wd-digest-run" type="button" title="Build (or rebuild) today's edition now — runs the fetch → score → summarize → render pipeline">Run intake now</button>
+          <button class="sc-btn" id="wd-digest-why" type="button" title="Why did this edition come out the size it did — score distribution, near misses, and where the intake came from">Why thin?</button>
           <button id="wd-digest-close" type="button" title="Close" style="background:none;border:none;font-size:24px;color:var(--wd-faint);cursor:pointer;line-height:1;">&times;</button>
         </div>
       </div>
@@ -2058,6 +2121,172 @@
         .catch(function() { fail('Could not load the held-back stories. Try again in a moment.'); });
     }
 
+    /** The "Why thin?" report for the edition currently on screen.
+
+        Built with createElement/textContent like the held-back overlay: the
+        titles in it come from third-party feeds by way of the sheet.
+
+        Shape follows the data's job rather than habit. The verdict is one fact,
+        so it is a headline, not a chart. The four counts are single figures, so
+        they are tiles with no plot. Only the score distribution is a chart, and
+        it is one ordered series — so no legend, the count direct-labelled on
+        every row (six rows, not a dense scatter), and the relevance bar drawn
+        as a labelled rule so the below/above split is carried by position and
+        text rather than by colour alone. */
+    var WD_SR_VERDICTS = {
+      'healthy': ['This edition is a normal size.',
+        'Enough stories cleared the relevance bar. Nothing here needs attention.'],
+      'bar-bound': ['The bar is what is holding this edition down.',
+        'A crowd of stories landed just under the relevance threshold. These are '
+        + 'articles the scoring nearly admitted — so tuning the rubric, not finding '
+        + 'more sources, is what would change this edition.'],
+      'intake-bound': ['Not enough came in to choose from.',
+        'Almost nothing landed near the bar, so the fetch was the constraint rather '
+        + 'than the scoring. Lowering the threshold would not have helped — there '
+        + 'was little to admit.'],
+      'thin-day': ['Plenty was scanned; little of it was relevant.',
+        'The intake was a normal size but the stories in it were not close to your '
+        + 'interests. This is usually a quiet news day rather than a setting.']
+    };
+
+    function scScoreReportOpen_(digestId) {
+      var ov = document.getElementById('wd-sr-overlay');
+      var body = document.getElementById('wd-sr-body');
+      var sub = document.getElementById('wd-sr-sub');
+      if (!ov || !body) return;
+      ov.style.display = 'flex';
+      ov.setAttribute('aria-hidden', 'false');
+      sub.textContent = '';
+      body.textContent = '';
+      var note = function(msg) {
+        body.textContent = '';
+        var d = document.createElement('div');
+        d.className = 'wd-sr-note';
+        d.textContent = msg;
+        body.appendChild(d);
+      };
+      note('Reading this edition\u2019s intake\u2026');
+      _gasPost({ action: 'digestScoreReport', token: scToken(), digestId: digestId || '' })
+        .then(function(r) {
+          if (!r || !r.success) {
+            note(r && r.error === 'no_intake'
+              ? 'The stories this edition was built from are no longer stored, so it '
+                + 'cannot be explained after the fact.'
+              : r && r.error === 'no_edition'
+              ? 'There is no edition to report on yet.'
+              : 'Could not read this edition (' + scErrMsg(r && r.error) + ').');
+            return;
+          }
+          body.textContent = '';
+          sub.textContent = r.relevant + ' relevant of ' + r.intake + ' scanned';
+
+          var v = WD_SR_VERDICTS[r.verdict] || WD_SR_VERDICTS['thin-day'];
+          var h = document.createElement('div');
+          h.className = 'wd-sr-verdict';
+          h.textContent = v[0];
+          body.appendChild(h);
+          var because = document.createElement('div');
+          because.className = 'wd-sr-because';
+          because.textContent = v[1];
+          body.appendChild(because);
+
+          var tiles = document.createElement('div');
+          tiles.className = 'wd-sr-tiles';
+          [[r.intake, 'scanned'], [r.relevant, 'relevant'],
+           [r.fromBackstop, 'company searches'], [r.geoPenalised, 'outside the US']]
+            .forEach(function(t) {
+              var el = document.createElement('div');
+              el.className = 'wd-sr-tile';
+              var n = document.createElement('b'); n.textContent = String(t[0]);
+              var l = document.createElement('span'); l.textContent = t[1];
+              el.appendChild(n); el.appendChild(l);
+              tiles.appendChild(el);
+            });
+          body.appendChild(tiles);
+
+          var ch = document.createElement('div');
+          ch.className = 'wd-sr-h';
+          ch.textContent = 'Where the scores landed';
+          body.appendChild(ch);
+          var order = ['0-24', '25-39', '40-49', '50-54', '55-69', '70-100'];
+          var max = 1;
+          order.forEach(function(k) { max = Math.max(max, Number(r.bands[k]) || 0); });
+          order.forEach(function(k) {
+            // The bar is drawn between the two bands it separates, so the split
+            // is a position in the list rather than a colour difference.
+            if (k === '55-69') {
+              var rule = document.createElement('div');
+              rule.className = 'wd-sr-rule';
+              var lab = document.createElement('span');
+              lab.textContent = 'relevance bar \u00b7 ' + r.threshold;
+              var line = document.createElement('i');
+              rule.appendChild(lab); rule.appendChild(line);
+              body.appendChild(rule);
+            }
+            var n = Number(r.bands[k]) || 0;
+            var row = document.createElement('div');
+            row.className = 'wd-sr-row';
+            row.title = n + (n === 1 ? ' story scored ' : ' stories scored ') + k;
+            var band = document.createElement('div');
+            band.className = 'wd-sr-band'; band.textContent = k;
+            var track = document.createElement('div');
+            track.className = 'wd-sr-track';
+            var bar = document.createElement('div');
+            bar.className = 'wd-sr-bar' + (k === '55-69' || k === '70-100' ? ' pass' : '');
+            bar.style.width = Math.round((n / max) * 100) + '%';
+            track.appendChild(bar);
+            var cnt = document.createElement('div');
+            cnt.className = 'wd-sr-n'; cnt.textContent = String(n);
+            row.appendChild(band); row.appendChild(track); row.appendChild(cnt);
+            body.appendChild(row);
+          });
+
+          var misses = r.nearMiss || [];
+          var mh = document.createElement('div');
+          mh.className = 'wd-sr-h';
+          mh.style.marginTop = '20px';
+          mh.textContent = misses.length
+            ? 'Nearly made it (' + misses.length + ')'
+            : 'Nothing came close to the bar';
+          body.appendChild(mh);
+          misses.forEach(function(it) {
+            var w = document.createElement('div');
+            w.className = 'wd-sr-miss';
+            var t = document.createElement('div');
+            t.className = 'wd-sr-mt'; t.textContent = it.title || '(untitled)';
+            var m = document.createElement('div');
+            m.className = 'wd-sr-mm';
+            var meta = (it.source || '') + ' \u00b7 scored ' + it.score;
+            m.textContent = meta + ' \u00b7 ';
+            var sh = document.createElement('span');
+            sh.className = 'wd-sr-short';
+            sh.textContent = it.short + ' short';
+            m.appendChild(sh);
+            var extra = [];
+            if (Number(it.geoFactor) < 1) extra.push('outside the US market');
+            if (it.backstop) extra.push('from a company search');
+            if ((it.companies || []).length) extra.push(it.companies.join(', '));
+            if (extra.length) {
+              var ex = document.createElement('span');
+              ex.textContent = ' \u00b7 ' + extra.join(' \u00b7 ');
+              m.appendChild(ex);
+            }
+            w.appendChild(t); w.appendChild(m);
+            body.appendChild(w);
+          });
+        })
+        .catch(function(err) {
+          note('Could not read this edition (' + ((err && err.message) || err) + ').');
+        });
+    }
+
+    function scScoreReportClose_() {
+      var ov = document.getElementById('wd-sr-overlay');
+      if (!ov) return;
+      ov.style.display = 'none';
+      ov.setAttribute('aria-hidden', 'true');
+    }
+
     function scHeldBackClose_() {
       var ov = document.getElementById('wd-hb-overlay');
       if (!ov) return;
@@ -2077,6 +2306,18 @@
       var close = t && t.closest ? t.closest('#wd-hb-close') : null;
       if (close) { ev.preventDefault(); scHeldBackClose_(); return; }
       if (t && t.id === 'wd-hb-overlay') { scHeldBackClose_(); return; }
+      var srClose = t && t.closest ? t.closest('#wd-sr-close') : null;
+      if (srClose) { ev.preventDefault(); scScoreReportClose_(); return; }
+      if (t && t.id === 'wd-sr-overlay') { scScoreReportClose_(); return; }
+      // "Why thin?" reports on the edition currently on screen — the selected
+      // chip. With none selected the server falls back to the newest edition.
+      var why = t && t.closest ? t.closest('#wd-digest-why') : null;
+      if (why) {
+        ev.preventDefault();
+        var onChip = document.querySelector('#wd-digest-list .wd-dg-chip.on');
+        scScoreReportOpen_(onChip ? onChip.getAttribute('data-id') : '');
+        return;
+      }
       // The footer link inside a rendered edition. Intercepted so the app is
       // not thrown away and reloaded just to show a list it can already fetch.
       var a = t && t.closest ? t.closest('a[href*="more="]') : null;
@@ -2089,6 +2330,9 @@
 
     document.addEventListener('keydown', function(ev) {
       if (ev.key !== 'Escape') return;
+      // Score report sits above the held-back reader, so it closes first.
+      var srOv = document.getElementById('wd-sr-overlay');
+      if (srOv && srOv.style.display === 'flex') { scScoreReportClose_(); return; }
       var ov = document.getElementById('wd-hb-overlay');
       if (ov && ov.style.display === 'flex') scHeldBackClose_();
     });

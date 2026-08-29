@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.46r] — 2026-08-28 11:28:04 PM EST
+
+> **Prompt:** "I'd rather be able to click digestScoreReport. I will rebuild the BESS edition and run disgestScoreReport afterwards."
+
+### Added
+
+`Scraper.html` (v01.63w)
+
+- **A "Why thin?" button beside "Run intake now"**, reporting on the edition currently on screen (the selected chip; with none selected the server falls back to the newest edition). Opens `#wd-sr-overlay`, built on the held-back reader's pattern — same panel treatment, same close routes
+- **Shape chosen from the data's job, not from habit.** The verdict is one fact, so it is a headline rather than a chart. The four counts are single figures, so they are stat tiles with no plot. Only the score distribution is a chart, and it is a **single ordered series** — so there is no legend (the heading names it), the count is direct-labelled on every one of the six rows, and bar length is scaled to the largest band rather than a fixed maximum
+- **The below/above split is never carried by colour alone.** The relevance bar is drawn as a labelled rule positioned between the `50-54` and `55-69` rows, so the boundary is a position in an ordered list plus a text label; the accent fill on the passing bands is the third, redundant cue. Each row also carries a hover title, so a bar is readable without reference to anything else
+- **Verdict copy says what to do, not just what happened.** `bar-bound` states that tuning the rubric is the lever; `intake-bound` states the opposite — that lowering the threshold would not have helped, because there was little to admit. Those are the two cases that look identical from outside the app, which is the whole reason the report exists
+- No new palette was introduced: the panel draws on the app's existing tokens (`--wd-accent`, `--wd-dim`, `--wd-mut2`, `--wd-line`). With one series and no categorical scale there is nothing to validate for colourblind separation
+
+### Notes
+
+- **Rendered and looked at before shipping**, per the last step of the visualization procedure — the validator checks colour, not layout. Measured at 1280px and 390px: six band rows, four tiles, the rule labelled `relevance bar · 55`, no horizontal scroll at either width, no page errors. Tiles reflow to two columns on a phone and the band label column narrows
+- Every value in the overlay is written with `createElement` / `textContent`. These titles come from third-party feeds by way of the sheet, and `t19.js` asserts the report assigns `innerHTML` nowhere
+- The report sits above the held-back reader (`z-index` 10006 vs 10005), and Escape closes the top one first — asserted both as source order and as a z-index comparison, so the two cannot drift apart
+- **492 assertions pass** across 19 suites; new `t19.js` (43) covers wiring, the close routes, injection safety, the shape decisions, verdict coverage in both directions (every verdict the server can emit has copy, and every copy key is a verdict the server emits), failure states, and the phone reflow
+- One test-side typo of my own: an assertion matched `class = ` where the code sets `className = `. Fixed in the test
 
 ## [v03.45r] — 2026-08-28 11:19:00 PM EST
 
