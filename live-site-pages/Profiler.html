@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.59w">
+  <meta name="build-version" content="v01.60w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -376,7 +376,9 @@
     .ov-rel-evhd.inb { color: #6ea8fe; }
     .ov-rel-type.det { background: transparent; color: var(--ov-faint); border: 1px solid var(--ov-line2); }
     #ov-network-btn {
-      position: absolute; top: 84px; right: 0;
+      /* Second slot (44px) — visible to every tier, so it sits flush under the
+         guidance button; the admin-only Reports button takes the outer slot. */
+      position: absolute; top: 44px; right: 0;
       background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
       border-radius: 999px; padding: 8px 16px; cursor: pointer;
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
@@ -816,12 +818,15 @@
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
     }
     #ov-guide-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
+    .gd-group { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-faint); margin: 20px 0 4px; border-bottom: 1px solid var(--ov-line); padding-bottom: 6px; }
     /* ── Industry Reports (v01.52w) ─────────────────────────────────────
        In-page views (#reports / #report/<id>) reusing the gd-* section
        primitives; rp-* covers only what reports add — citation superscripts,
        confidence chips, coverage drift badges, the masthead button. */
     #ov-reports-btn {
-      position: absolute; top: 44px; right: 0;
+      /* Outer slot (84px) — admin-only, so tiers without it see a contiguous
+         button stack instead of a gap where Reports would have been. */
+      position: absolute; top: 84px; right: 0;
       background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
       border-radius: 999px; padding: 8px 16px; cursor: pointer;
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
@@ -2898,8 +2903,10 @@ function ovReloadFresh() {
       row.appendChild(ev);
       return row;
     }
-    function ovRelPaint(p, wrap) {
-      ovClear(wrap);
+    // Shared assembly for the Relationships tab and the one-pager export:
+    // curated links (or derived mentions, when uncurated) plus graph-only
+    // detected counterparts, grouped exactly the way the tab displays them.
+    function ovRelData(p) {
       var bySlug = {};
       ((ovRegistry && ovRegistry.companies) || []).forEach(function(c) { bySlug[c.slug] = c; });
       // Derived evidence is gathered for every dossier — on curated dossiers it
@@ -2944,20 +2951,34 @@ function ovReloadFresh() {
           last: e.last || '', evid: [], inb: inb });
       });
       detected.sort(function(a, b) { return b.inb.length - a.inb.length || a.name.localeCompare(b.name); });
-      if (!rels.length && !detected.length) return false;
-      var sec = ovSection(ovSecLabel('rels'), curated
-        ? 'Curated links from this dossier\'s research — grouped by who the company works with vs competes with, each with its stated source, deal metadata, every mention across this dossier, and what other dossiers say back. Click a company to open its dossier.'
-        : 'Detected in this dossier\'s own reporting and judgments — every mention quoted in full below; curated into typed relationships at the next revision. Click a company to open its dossier.');
-      var mapRels = rels.slice(0, 10); // the map stays legible at ≤10 spokes
-      if (mapRels.length) sec.appendChild(ovRelMap(p, mapRels));
-      if (rels.length > mapRels.length)
-        sec.appendChild(ovEl('p', 'sec-note', 'The map draws the first ' + mapRels.length + ' links — every relationship is listed in full below.'));
       var groups = curated
         ? [['Working with', rels.filter(function(r) { return OV_REL_WORK[r.rawType]; })],
            ['Competing with', rels.filter(function(r) { return r.rawType === 'competitor'; })],
            ['Other links', rels.filter(function(r) { return !OV_REL_WORK[r.rawType] && r.rawType !== 'competitor'; })]]
         : [['Detected in this dossier', rels]];
       groups.push(['Detected in other dossiers', detected]);
+      return { curated: curated, rels: rels, detected: detected, groups: groups };
+    }
+    function ovRelPaint(p, wrap) {
+      ovClear(wrap);
+      var reld = ovRelData(p);
+      var curated = reld.curated, rels = reld.rels, detected = reld.detected, groups = reld.groups;
+      if (!rels.length && !detected.length) return false;
+      var sec = ovSection(ovSecLabel('rels'), curated
+        ? 'Curated links from this dossier\'s research — grouped by who the company works with vs competes with, each with its stated source, deal metadata, every mention across this dossier, and what other dossiers say back. Click a company to open its dossier.'
+        : 'Detected in this dossier\'s own reporting and judgments — every mention quoted in full below; curated into typed relationships at the next revision. Click a company to open its dossier.');
+      if (ovCan('export')) {
+        var ex = ovEl('button', 'ov-btn', 'Export one-pager (.doc)');
+        ex.type = 'button';
+        ex.style.margin = '2px 0 10px';
+        ex.title = 'Compact Word download of this Relationships view — grouped links, deal details, and sources, for meeting prep';
+        ex.addEventListener('click', function() { ovRelWordExport(p); });
+        sec.appendChild(ex);
+      }
+      var mapRels = rels.slice(0, 10); // the map stays legible at ≤10 spokes
+      if (mapRels.length) sec.appendChild(ovRelMap(p, mapRels));
+      if (rels.length > mapRels.length)
+        sec.appendChild(ovEl('p', 'sec-note', 'The map draws the first ' + mapRels.length + ' links — every relationship is listed in full below.'));
       groups.forEach(function(g) {
         if (!g[1].length) return;
         // Detected links are real but weak signals — the group ships collapsed
@@ -2988,6 +3009,58 @@ function ovReloadFresh() {
       });
       wrap.appendChild(sec);
       return true;
+    }
+    // ── Relationship one-pager export (v01.60w) — a compact .doc of the
+    // Relationships view for meeting prep: grouped links with deal details,
+    // notes, and stated sources. Same .doc mechanics as the dossier export;
+    // detected links come as one-line entries so the page stays tight. ──
+    function ovRelWordExport(p) {
+      var reld = ovRelData(p);
+      var esc = rpWordText;
+      var today = new Date().toISOString().slice(0, 10);
+      var h = [];
+      h.push('<h1>' + esc(p.name || p.slug) + ' — Relationship One-Pager</h1>');
+      h.push('<p class="d-meta">' + esc('Generated ' + today + ' · dossier v' + (p.profileVersion || '?') + ', updated ' + (p.lastUpdated || '—') + ' · curated links from the dossier + detected cross-dossier mentions') + '</p>');
+      reld.groups.forEach(function(g) {
+        if (!g[1].length) return;
+        h.push('<h2>' + esc(g[0] + ' · ' + g[1].length) + '</h2>');
+        if (g[0].indexOf('Detected') === 0) {
+          h.push('<ul>');
+          g[1].forEach(function(r) {
+            var n = (r.inb && r.inb.length) || (r.evid && r.evid.length) || 0;
+            h.push('<li><strong>' + esc(r.name) + '</strong> — ' + n + ' mention' + (n === 1 ? '' : 's') + (r.last ? esc(' · latest ' + r.last) : '') + '</li>');
+          });
+          h.push('</ul>');
+          return;
+        }
+        g[1].forEach(function(r) {
+          h.push('<h3>' + esc(r.name) + ' — ' + esc(r.type) + '</h3>');
+          var chips = [];
+          if (r.status) chips.push('Status: ' + r.status);
+          if (r.since) chips.push('Since: ' + r.since);
+          if (r.scale) chips.push('Scale: ' + r.scale);
+          if (r.last) chips.push('Latest: ' + r.last);
+          if (chips.length) h.push('<p class="d-meta">' + esc(chips.join(' · ')) + '</p>');
+          var body = [r.note, r.context].filter(Boolean).join(' ');
+          if (body) h.push('<p>' + esc(body) + '</p>');
+          if (r.src) h.push('<p class="d-note">Source: <a href="' + String(r.src).replace(/"/g, '&quot;') + '">' + esc(r.src) + '</a></p>');
+        });
+      });
+      var css = 'body{font-family:Georgia,"Times New Roman",serif;font-size:11pt;color:#23211c;}'
+        + 'h1{font-size:18pt;margin:0 0 2pt;}'
+        + 'h2{font-size:10pt;letter-spacing:2px;text-transform:uppercase;color:#8a6d1f;border-bottom:1pt solid #cfc8b4;margin:14pt 0 5pt;padding-bottom:3pt;}'
+        + 'h3{font-size:11.5pt;margin:8pt 0 1pt;} p{margin:3pt 0;} ul{margin:3pt 0 8pt;} li{margin:2pt 0;}'
+        + '.d-meta{font-family:Consolas,monospace;font-size:8pt;color:#6d6758;} .d-note{font-style:italic;color:#6d6758;font-size:9.5pt;}'
+        + 'a{color:#305a8a;text-decoration:none;}';
+      var html = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">'
+        + '<head><meta charset="utf-8"><title>' + esc((p.name || p.slug) + ' relationships') + '</title><style>' + css + '</style></head>'
+        + '<body>' + h.join('') + '</body></html>';
+      var blob = new Blob(['﻿' + html], { type: 'application/msword' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = (p.slug || 'company') + '-relationships-' + today + '.doc';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(function() { URL.revokeObjectURL(a.href); }, 4000);
     }
     function ovRelationshipsSection(p) {
       var wrap = ovEl('div', 'ov-rel-wrap');
@@ -5582,7 +5655,16 @@ function ovReloadFresh() {
         shell.innerHTML = '';
         shell.appendChild(gdCloseBtn());
         shell.appendChild(ovEl('div', 'gd-kicker', 'Industry Guidance · Library'));
+        // Topic lanes: modules arrive grouped from the backend (each carries a
+        // `group` label); a header renders whenever the lane changes. Docs
+        // without a group (older backend) simply render ungrouped.
+        var lastGroup = null;
         for (var i = 0; i < res.docs.length; i++) (function(d) {
+          var grp = d.group || '';
+          if (grp !== lastGroup) {
+            lastGroup = grp;
+            if (grp) shell.appendChild(ovEl('div', 'gd-group', grp));
+          }
           var card = ovEl('div', 'gd-sec');
           var h = ovEl('h3', null, d.title);
           card.appendChild(h);

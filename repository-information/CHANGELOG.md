@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.72r] — 2026-08-29 07:58:17 PM EST
+
+> **Prompt:** "continue with your recommendation. Also, a few other things:
+>
+> * Swap the positions of the "Reports" and "Network" buttons on the top right of Profiler's home page, so that contributors don't see an awkward empty spot where "Reports" is hidden.
+> * In the "Industry Guidance" library, organize the modules in a way that groups related topics together and makes it easier to find the information users are looking for."
+
+### Changed
+- **Archive rotation** — the Profiler page changelog was at capacity (50/50): the 2026-08-09 date group (v01.18w–v01.10w, nine sections, SHA-enriched) moved to `Profilerhtml.changelog-archive.md` (now 42/50)
+- **`.claude/rules/industry-guidance.md`** — step 4 now documents the module `group` meta field (topic-lane label consumed by the library renderer and `guidanceIndex_`)
+
+#### `Profiler.html` — v01.60w
+
+##### Added
+- **Relationship one-pager export** — `ovRelWordExport(p)` builds a compact .doc from the Relationships view (grouped links, Status/Since/Scale/Latest chips, note+context, source URLs; detected links as one-line mention counts), downloaded from a new export-gated button on the Relationships tab. The tab's data assembly was extracted into `ovRelData(p)` shared by `ovRelPaint` and the export
+- **Guidance library topic lanes** — `ovGuideOpen()` renders a `.gd-group` header whenever the module index's `group` label changes; ungrouped docs (older backend) render as before
+
+##### Changed
+- **Masthead stack** — ⛓ Network moved to the 44px slot (visible to every tier), admin-only ▤ Reports to the outer 84px slot, so contributor/analyst/viewer tiers see a contiguous stack with no gap
+
+#### `Profiler.gs` — v01.23g
+
+##### Added
+- **`group` labels on all six guidance modules** (Technology Foundations: BESS Tech Fundamentals, Power Infrastructure; The AI Data-Center Wave: NVIDIA 800 VDC, Utility Procurement; Market Access & Bankability: China Policy Stack, Bankability & Certification); `guidanceDocs_()` reordered into lane order and `guidanceIndex_()` now emits `group`
 
 ## [v03.71r] — 2026-08-29 07:48:18 PM EST
 

@@ -2,6 +2,65 @@
 
 Archived changelog sections rotated from [Profilerhtml.changelog.md](Profilerhtml.changelog.md).
 
+## [v01.18w] — 2026-08-09 11:18:02 PM EST — v02.24r — [a288645](https://github.com/LightAISolutions/Sales/commit/a288645799c20d80924396004fd6c47b6b357506)
+
+### Changed
+- Source citations now show each article's publication date instead of the date it was looked up, in the dossier view and in exported documents
+- Sources are now listed chronologically with the most recent news first; undated reference pages appear at the end
+
+## [v01.17w] — 2026-08-09 05:09:33 AM EST — v02.19r — [3b7949d](https://github.com/LightAISolutions/Sales/commit/3b7949db9a12b54e84f565e65afb75f6543c3782)
+
+### Fixed
+- PDF exports no longer show the page name in the top corner or the web address in the bottom corner — exported documents are now clean, with proper page margins built into the document itself
+
+## [v01.16w] — 2026-08-09 04:30:58 AM EST — v02.17r — [0312e54](https://github.com/LightAISolutions/Sales/commit/0312e545ac0f61be92bcf499fdfa7e9af46e23ec)
+
+### Added
+- Dossier styles — five presentation styles (Default, Bloomberg, Equity Research, Intel Briefing, Smart Brevity) that change section titles, typography, and spacing throughout the app **and** in the exported Word/PDF documents, so the export always matches the on-screen style
+- Style switcher for the app owner — a 🖋 button opens a picker to change the style; the choice applies on that device
+
+### Changed
+- Dossiers now display in the **Intel Briefing** style by default — briefing-style section titles (Background, Key Judgments, Technical Annex), numbered analytical judgments, and a typewriter-style export document
+
+## [v01.15w] — 2026-08-09 03:29:35 AM EST — v02.15r — [62c6809](https://github.com/LightAISolutions/Sales/commit/62c6809b0e96a40687dd56ed3af435f593786715)
+
+### Added
+- Sign-in required — the app now asks for a one-time Google sign-in before anything is shown; access is limited to approved users
+
+### Changed
+- Previous dossier versions (the "Versions 🕘" browser) are now visible to the app owner only — everyone else sees the current version of each dossier
+
+## [v01.14w] — 2026-08-09 03:03:41 AM EST — v02.14r — [7e089a7](https://github.com/LightAISolutions/Sales/commit/7e089a7ade424c8dbbfaac897e164901d7426307)
+
+### Added
+- Team-ready field notes: signed-in team members can now suggest notes — type what you learned, attach Word/PDF files, and rate your confidence; suggestions go to the app owner for review instead of publishing directly. Full note management remains reserved for the owner
+
+## [v01.13w] — 2026-08-09 02:37:16 AM EST — v02.12r — [f9ef3e0](https://github.com/LightAISolutions/Sales/commit/f9ef3e0f578a759bca123d4889c574ee74803a54)
+
+### Fixed
+- The field-note form now works on phones where it previously showed an "unable to open the file" error — the form is built into the page itself instead of loading an embedded frame
+
+### Changed
+- Sign in with Google directly in the note box (one time); then type notes, attach Word/PDF files, and manage existing notes — all in place
+
+## [v01.12w] — 2026-08-09 02:20:26 AM EST — v02.11r — [cdb8c74](https://github.com/LightAISolutions/Sales/commit/cdb8c74052b1acfed8e94f06a0ebb78965e9a29e)
+
+### Fixed
+- The field-note form failed to load inside the note box on some phones ("unable to open the file" error) — the box now loads the form in a way that avoids that failure
+
+### Added
+- "Open the note form in its own tab" link under the note box — a full-screen fallback that always works
+
+## [v01.11w] — 2026-08-09 01:30:51 AM EST — v02.09r — [829f7e0](https://github.com/LightAISolutions/Sales/commit/829f7e0cb8fe2a7f17daa660f2a7e9894cf35a4d)
+
+### Changed
+- The in-app field-note box is now live — the "Add a Field Note" section saves typed notes and Word/PDF uploads directly inside the app (one-time Google sign-in)
+
+## [v01.10w] — 2026-08-09 01:11:29 AM EST — v02.08r — [3c30acd](https://github.com/LightAISolutions/Sales/commit/3c30acd618ed609af1274204e2bce0290e5581c1)
+
+### Added
+- The "Add a Field Note" box can now save notes and upload Word/PDF files directly inside the app — type, attach, and save in one place with a one-time Google sign-in (activates once the backend is connected; until then the box keeps its current behavior)
+
 ## [v01.09w] — 2026-08-08 10:36:20 PM EST — v02.07r — [58d0d4e](https://github.com/LightAISolutions/Sales/commit/58d0d4eebd8a5c1c375bca27fc11636924928b87)
 
 ### Added

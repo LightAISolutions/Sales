@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 22/50`
+`Sections: 23/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.23g] — 2026-08-29 07:58:17 PM EST — v03.72r
+
+### Changed
+- The Industry Guidance library now organizes its study modules into topic groups — fundamentals first, then the AI data-center wave, then market access — so related documents sit together
 
 ## [v01.22g] — 2026-08-27 04:09:00 PM EST — v03.03r
 

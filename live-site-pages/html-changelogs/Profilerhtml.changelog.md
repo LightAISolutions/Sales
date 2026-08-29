@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.60w] — 2026-08-29 07:58:17 PM EST — v03.72r
+
+### Added
+- Export one-pager button on every dossier's Relationships tab — downloads a compact Word document of the full relationship view (grouped links with status, start date, deal size, latest activity, notes, and stated sources) for meeting preparation
+
+### Changed
+- The Network and Reports buttons on the masthead swapped places, so users without Reports access see a continuous button stack instead of a gap
+- The Industry Guidance library now shows its study modules under topic group headers, so related documents sit together and are easier to find
 
 ## [v01.59w] — 2026-08-29 07:48:18 PM EST — v03.71r
 
@@ -309,64 +318,5 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - Copy buttons on every note, plus a copy-all for untriaged notes, put a note and its transcript on your clipboard in one tap
 - Attach a meeting recording to a note straight from your phone or computer
 - Transcript files can be attached alongside Word and PDF notes
-
-## [v01.18w] — 2026-08-09 11:18:02 PM EST — v02.24r
-
-### Changed
-- Source citations now show each article's publication date instead of the date it was looked up, in the dossier view and in exported documents
-- Sources are now listed chronologically with the most recent news first; undated reference pages appear at the end
-
-## [v01.17w] — 2026-08-09 05:09:33 AM EST — v02.19r
-
-### Fixed
-- PDF exports no longer show the page name in the top corner or the web address in the bottom corner — exported documents are now clean, with proper page margins built into the document itself
-
-## [v01.16w] — 2026-08-09 04:30:58 AM EST — v02.17r
-
-### Added
-- Dossier styles — five presentation styles (Default, Bloomberg, Equity Research, Intel Briefing, Smart Brevity) that change section titles, typography, and spacing throughout the app **and** in the exported Word/PDF documents, so the export always matches the on-screen style
-- Style switcher for the app owner — a 🖋 button opens a picker to change the style; the choice applies on that device
-
-### Changed
-- Dossiers now display in the **Intel Briefing** style by default — briefing-style section titles (Background, Key Judgments, Technical Annex), numbered analytical judgments, and a typewriter-style export document
-
-## [v01.15w] — 2026-08-09 03:29:35 AM EST — v02.15r
-
-### Added
-- Sign-in required — the app now asks for a one-time Google sign-in before anything is shown; access is limited to approved users
-
-### Changed
-- Previous dossier versions (the "Versions 🕘" browser) are now visible to the app owner only — everyone else sees the current version of each dossier
-
-## [v01.14w] — 2026-08-09 03:03:41 AM EST — v02.14r
-
-### Added
-- Team-ready field notes: signed-in team members can now suggest notes — type what you learned, attach Word/PDF files, and rate your confidence; suggestions go to the app owner for review instead of publishing directly. Full note management remains reserved for the owner
-
-## [v01.13w] — 2026-08-09 02:37:16 AM EST — v02.12r
-
-### Fixed
-- The field-note form now works on phones where it previously showed an "unable to open the file" error — the form is built into the page itself instead of loading an embedded frame
-
-### Changed
-- Sign in with Google directly in the note box (one time); then type notes, attach Word/PDF files, and manage existing notes — all in place
-
-## [v01.12w] — 2026-08-09 02:20:26 AM EST — v02.11r
-
-### Fixed
-- The field-note form failed to load inside the note box on some phones ("unable to open the file" error) — the box now loads the form in a way that avoids that failure
-
-### Added
-- "Open the note form in its own tab" link under the note box — a full-screen fallback that always works
-
-## [v01.11w] — 2026-08-09 01:30:51 AM EST — v02.09r
-
-### Changed
-- The in-app field-note box is now live — the "Add a Field Note" section saves typed notes and Word/PDF uploads directly inside the app (one-time Google sign-in)
-
-## [v01.10w] — 2026-08-09 01:11:29 AM EST — v02.08r
-
-### Added
-- The "Add a Field Note" box can now save notes and upload Word/PDF files directly inside the app — type, attach, and save in one place with a one-time Google sign-in (activates once the backend is connected; until then the box keeps its current behavior)
 
 Developed by: LightAISolutions

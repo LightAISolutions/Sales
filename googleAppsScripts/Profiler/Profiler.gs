@@ -1,4 +1,4 @@
-var VERSION = "v01.22g";
+var VERSION = "v01.23g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -366,8 +366,11 @@ function handleGuidanceOp_(e) {
 }
 
 function guidanceDocs_() {
-  return [guidanceDocNvidia800_(), guidanceDocChinaPolicy_(), guidanceDocUtilityAidc_(), guidanceDocBankability_(),
-          guidanceDocBessTech_(), guidanceDocPowerInfra_()];
+  // Ordered by topic lane (the library renders these as grouped sections):
+  // fundamentals first, then the AI data-center wave, then market access.
+  return [guidanceDocBessTech_(), guidanceDocPowerInfra_(),
+          guidanceDocNvidia800_(), guidanceDocUtilityAidc_(),
+          guidanceDocChinaPolicy_(), guidanceDocBankability_()];
 }
 
 function guidanceIndex_() {
@@ -375,6 +378,7 @@ function guidanceIndex_() {
   var out = [];
   for (var i = 0; i < docs.length; i++) {
     out.push({ id: docs[i].id, title: docs[i].title, short: docs[i].short,
+               group: docs[i].group || '',
                date: docs[i].source && docs[i].source.date, updated: docs[i].updated,
                sections: (docs[i].sections || []).length });
   }
@@ -394,6 +398,7 @@ function guidanceDoc_(id) {
 function guidanceDocNvidia800_() {
   return {
  "id": "nvidia-800vdc-2026-08",
+ "group": "The AI Data-Center Wave",
  "title": "NVIDIA 800 VDC: Industry Alignment & Execution",
  "short": "The industry's steering document for AI-factory power, 2026-2027 - analyzed and tailored.",
  "source": {
@@ -1297,6 +1302,7 @@ function guidanceDocNvidia800_() {
 function guidanceDocChinaPolicy_() {
   return {
  "id": "china-policy-stack-2026-08",
+ "group": "Market Access & Bankability",
  "title": "The China Policy Stack for a BESS Seller",
  "short": "The four federal machines constraining Chinese battery storage in the US - and the lanes that remain.",
  "source": {
@@ -1900,6 +1906,7 @@ function guidanceDocChinaPolicy_() {
 function guidanceDocUtilityAidc_() {
   return {
  "id": "utility-aidc-procurement-2026-08",
+ "group": "The AI Data-Center Wave",
  "title": "When Utility Procurement Meets AI Data-Center Load",
  "short": "How five gatekeeping utilities are answering the AI load wave - and where BESS actually enters their procurement.",
  "source": {
@@ -2500,6 +2507,7 @@ function guidanceDocUtilityAidc_() {
 function guidanceDocBankability_() {
   return {
  "id": "bess-bankability-2026-08",
+ "group": "Market Access & Bankability",
  "title": "Bankability & Certification for Grid-Scale BESS",
  "short": "The three approval gauntlets - safety code, grid, and money - and what 'bankable' concretely means in 2026.",
  "source": {
@@ -3012,6 +3020,7 @@ function guidanceDocBankability_() {
 function guidanceDocBessTech_() {
   return {
  "id": "bess-tech-fundamentals-2026-08",
+ "group": "Technology Foundations",
  "title": "BESS Technology Fundamentals for the Sales Team",
  "short": "The machine we sell - cells, containers, the spec sheet, sodium, and the safety vocabulary - taught from zero.",
  "source": {
@@ -3452,6 +3461,7 @@ function guidanceDocBessTech_() {
 function guidanceDocPowerInfra_() {
   return {
  "id": "power-infra-aidc-2026-08",
+ "group": "Technology Foundations",
  "title": "Power Infrastructure & the AIDC Power Chain",
  "short": "The grid we sell into, what a battery earns, and the data-center power chain - with the three BESS sockets.",
  "source": {
