@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.57w">
+  <meta name="build-version" content="v01.58w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -397,6 +397,10 @@
     .nx-quote { color: var(--ov-muted); font-size: 12px; line-height: 1.55; margin-top: 4px; overflow-wrap: break-word; }
     .nx-quote .wh { color: var(--ov-faint); font: 10.5px var(--ov-mono); letter-spacing: 0.05em; }
     .nx-sub { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ov-faint); margin: 16px 0 2px; }
+    .nx-fresh { background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 6px; padding: 8px 10px; font: 12px var(--ov-mono); color: var(--ov-muted); cursor: pointer; }
+    .nx-fresh:hover { color: var(--ov-gold); }
+    .nx-fresh.on { border-color: var(--ov-gold); color: var(--ov-gold); }
+    .nx-meta.fresh { color: var(--ov-gold); }
     .nx-side { color: var(--ov-muted); font-size: 12.5px; line-height: 1.55; margin-top: 4px; overflow-wrap: break-word; }
     .nx-side .wh { color: var(--ov-faint); font: 10.5px var(--ov-mono); letter-spacing: 0.05em; }
     /* Settings ⚙ menu + Commands reference (v01.45w) */
@@ -2999,7 +3003,12 @@ function ovReloadFresh() {
     // ── Ecosystem explorer (#network, v01.55w) ──
     // The whole graph in one flat, filterable view: who works with whom,
     // read from both dossiers' curated links plus detected cross-mentions.
-    var ovNxCompany = '', ovNxKind = '', ovNxCat = '', ovNxCompare = '';
+    var ovNxCompany = '', ovNxKind = '', ovNxCat = '', ovNxCompare = '', ovNxFresh = false;
+    // "What's new" window: an edge is fresh when its latest evidence or
+    // curated since-date falls inside the trailing 90 days.
+    function ovNxCutoff() {
+      return new Date(Date.now() - 90 * 86400000).toISOString().slice(0, 10);
+    }
     function ovNxCatLabel(c) {
       return c === 'epc' ? 'EPC' : (c === 'gc' ? 'General Contractor' : c.charAt(0).toUpperCase() + c.slice(1));
     }
@@ -3017,7 +3026,7 @@ function ovReloadFresh() {
       back.addEventListener('click', function() { window.location.hash = ''; });
       main.appendChild(back);
       main.appendChild(ovEl('h2', null, 'Ecosystem Network'));
-      main.appendChild(ovEl('p', 'sec-note', 'Every relationship across the covered companies — curated links read from both sides\' dossiers, plus cross-mentions detected in the corpus. Filter by company, link kind, or counterparty category; click a company to open its dossier. Pick a company, then “Compare with…” a second one to see their common ground — the direct link between them plus every counterparty they share.'));
+      main.appendChild(ovEl('p', 'sec-note', 'Every relationship across the covered companies — curated links read from both sides\' dossiers, plus cross-mentions detected in the corpus. Filter by company, link kind, or counterparty category; click a company to open its dossier. Pick a company, then “Compare with…” a second one to see their common ground — the direct link between them plus every counterparty they share. The ✦ New in 90d toggle narrows the view to links with fresh evidence — relationship momentum since your last visit.'));
       var box = ovEl('div', 'nx-box');
       main.appendChild(box);
       ovGraphLoad().then(function(g) {
@@ -3056,10 +3065,19 @@ function ovReloadFresh() {
         var cmpOpts = [['', 'Compare with…']].concat(coOpts.slice(1).filter(function(o) { return o[0] !== ovNxCompany; }));
         sel(cmpOpts, ovNxCompare, function(v) { ovNxCompare = v; }, 'Compare with a second company — show their common ground');
       }
+      var freshCut = ovNxCutoff();
+      var freshN = ((ovGraph && ovGraph.edges) || []).filter(function(e) { return bySlug[e.a] && bySlug[e.b] && e.last && e.last >= freshCut; }).length;
+      var fb = ovEl('button', 'nx-fresh' + (ovNxFresh ? ' on' : ''), '✦ New in 90d · ' + freshN);
+      fb.type = 'button';
+      fb.title = 'Show only links with evidence from the last 90 days — relationship momentum since your last visit';
+      fb.setAttribute('aria-pressed', ovNxFresh ? 'true' : 'false');
+      fb.addEventListener('click', function() { ovNxFresh = !ovNxFresh; ovNetworkPaint(box); });
+      bar.appendChild(fb);
       box.appendChild(bar);
       if (ovNxCompany && ovNxCompare) { ovNxCommonPaint(box, bySlug); return; }
       var edges = ((ovGraph && ovGraph.edges) || []).filter(function(e) {
         if (!bySlug[e.a] || !bySlug[e.b]) return false;
+        if (ovNxFresh && !(e.last && e.last >= freshCut)) return false;
         if (ovNxCompany && e.a !== ovNxCompany && e.b !== ovNxCompany) return false;
         if (ovNxKind && ovNxKindOf(e) !== ovNxKind) return false;
         if (ovNxCat) {
@@ -3096,9 +3114,10 @@ function ovReloadFresh() {
         kind === 'work' ? 'Working' : (kind === 'comp' ? 'Competing' : (kind === 'other' ? 'Linked' : 'Detected'))));
       pair.appendChild(coBtn(second));
       var metaBits = [];
-      if (e.last) metaBits.push('latest ' + e.last);
+      var fresh = e.last && e.last >= ovNxCutoff();
+      if (e.last) metaBits.push((fresh ? '✦ ' : '') + 'latest ' + e.last);
       metaBits.push((e.evid || []).length + ' mention' + ((e.evid || []).length === 1 ? '' : 's'));
-      pair.appendChild(ovEl('span', 'nx-meta', metaBits.join(' · ')));
+      pair.appendChild(ovEl('span', 'nx-meta' + (fresh ? ' fresh' : ''), metaBits.join(' · ')));
       row.appendChild(pair);
       // Spell the typed link out from each side that curated it.
       var ca = e.curated && e.curated.a, cb = e.curated && e.curated.b;
@@ -3150,6 +3169,12 @@ function ovReloadFresh() {
       });
       if (ovNxKind) shared = shared.filter(function(s) { return ovNxKindOf(s.ea) === ovNxKind || ovNxKindOf(s.eb) === ovNxKind; });
       if (ovNxCat) shared = shared.filter(function(s) { return (bySlug[s.slug].categories || []).indexOf(ovNxCat) >= 0; });
+      if (ovNxFresh) {
+        var cut = ovNxCutoff();
+        shared = shared.filter(function(s) {
+          return (s.ea.last && s.ea.last >= cut) || (s.eb.last && s.eb.last >= cut);
+        });
+      }
       shared.sort(function(x, y) {
         var mx = String(x.ea.last || '') > String(x.eb.last || '') ? String(x.ea.last || '') : String(x.eb.last || '');
         var my = String(y.ea.last || '') > String(y.eb.last || '') ? String(y.ea.last || '') : String(y.eb.last || '');

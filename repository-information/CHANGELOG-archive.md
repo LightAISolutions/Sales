@@ -77,6 +77,112 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v02.75r] — 2026-08-21 11:01:38 PM EST — [0f7c48b](https://github.com/LightAISolutions/Sales/commit/0f7c48b9e924ba72aafdbb37c23f4d1bf396013f)
+
+> **Prompt:** "Evaluate all the companies under my coverage and recategorize them accordingly. I want to see EPCs and General Contractors added to the category list."
+
+### Added
+- New `epc` and `gc` roster categories (displayed as "EPC" / "General Contractor" via a new `ovCatLabel` map) with dedicated tag colors (`--ov-epc` yellow, `--ov-gc` tan) in `live-site-pages/Profiler.html` v01.34w, registered in `profiler-companies.json` and documented in `repository-information/PROFILER-SCHEMA.md`
+
+### Changed
+- Roster-wide recategorization after evaluating all 57 covered companies (registry + profile JSONs): Bechtel, Black & Veatch, Burns & McDonnell, Kiewit, Primoris, Quanta Services, and Rosendin moved `integrator` → `epc`; DPR, HITT, Holder Construction, and Turner Construction moved `integrator` → `gc`; Mortenson dual-tagged `gc` + `epc` (data-center shell GC plus utility-scale renewables EPC); Equinix moved `hyperscaler` → `developer` (colo/data-center operator-landlord, not a cloud provider) — leaving `integrator` as the clean BESS-integrator set (FlexGen, Fluence, Wärtsilä)
+- Category display sites (roster tags, filter chips, dossier "Ecosystem role" fact, Word-export meta line) now render labels through `ovCatLabel` (`live-site-pages/Profiler.html`)
+
+## [v02.74r] — 2026-08-21 10:49:24 PM EST — [369827c](https://github.com/LightAISolutions/Sales/commit/369827c23039a27bcf11b6e88dc911ca4b4839e2)
+
+> **Prompt:** "Run the study-guide backfill. Also, split the neocloud companies out of the "Hyperscaler" category into their own "Neocloud" category. Also, see the attached screenshot - Capitalize the first letter of words in the Background section for all dossiers and separate out the "Bottom Line Up Front" section from the "Background" section into their own paragraphs."
+
+### Added
+- 30 new study guides completing roster-wide study coverage (`live-site-pages/profiler-data/*.study.json`): hyperscalers/AI labs (Amazon, Google, Meta, Microsoft, NVIDIA, OpenAI, Oracle, xAI), neoclouds & DC operators (CoreWeave, Crusoe, Equinix), power electronics & electrical OEMs (ABB, Delta Electronics, Eaton, Schneider Electric, Vertiv, LiteOn, Huawei Digital Power, Bloom Energy), batteries & solar (EVE Energy, Jinko Solar, LG Energy Solution, Panasonic Energy, Samsung SDI), and grid OEMs & integrators (Constellation Energy, GE Vernova, Hitachi Energy, Quanta Services, Rosendin, Siemens Energy) — concept-curriculum format, cross-checked against adjacent existing guides to avoid overlap
+- New `neocloud` roster category with its own tag color in the Profiler app (`live-site-pages/Profiler.html`, `live-site-pages/profiler-data/profiler-companies.json`, `repository-information/PROFILER-SCHEMA.md`)
+
+### Changed
+- CoreWeave, Lambda, and Nebius recategorized from `hyperscaler` to `neocloud`; IREN and Crusoe now `neocloud` + `developer` (`live-site-pages/profiler-data/*.profile.json`, `profiler-companies.json`)
+- Dossier summaries now render "Bottom Line Up Front" and "Background" as separate paragraphs, and snapshot fact values (ownership, category, etc.) display with capitalized first letters (`live-site-pages/Profiler.html` v01.33w)
+- Summary label normalization: 9 recent dossiers' "BLUF:" prefix expanded to the house-standard "BOTTOM LINE UP FRONT:" (Bechtel, Black & Veatch, Burns & McDonnell, DPR, Hitt, Holder, Kiewit, Mortenson, Primoris profile JSONs)
+
+### Fixed
+- Profiler renderer now reads both legacy and schema-v2 profile field shapes (`hq`/`headquarters`, string/object `ownership`, top-level `ticker`, `legalName`/`shortName`) — newer dossiers no longer show blank Headquarters/Ownership snapshot cells or a duplicated company name in the header (`live-site-pages/Profiler.html`)
+
+## [v02.73r] — 2026-08-21 09:47:30 PM EST — [50ee250](https://github.com/LightAISolutions/Sales/commit/50ee250ba86cc00df8f97ef6a3199e8bde28ebc2)
+
+> **Prompt:** "run batch C"
+
+### Added
+- **Profiler Batch C — five EPC/engineering dossiers** (registry now **57 companies**), each researched via a single-agent run under the Source Priority Protocol (~44–63 sources evaluated per company), authored in the active `intel-briefing` style at schema v2, profileVersion 1, all categorized `integrator`:
+  - **`live-site-pages/profiler-data/bechtel.profile.json`** — Bechtel (family-held, 5th generation): ENR #2 at $19.5B, $58.2B backlog; only EPC to complete 21st-century US nuclear (Vogtle), Natrium construction start, Poland AP1000 site takeover, three concurrent LNG megatrains, NVIDIA Omniverse DSX AI-factory modularization partner; the circulating Microsoft-Fairwater association did NOT substantiate (Walsh builds Mount Pleasant) — recorded as a verification result
+  - **`live-site-pages/profiler-data/kiewit.profile.json`** — Kiewit (employee-owned): ENR #4; ~11 GW AI-driven gas-EPC stack (Homer City 4.5 GW — largest US gas plant under construction — NRG/GE Vernova ~5.4 GW venture, Oglethorpe 1.4 GW), Oklo Aurora SMR lead constructor, CHPE HVDC completed, US-Japan $550B framework naming; Key Bridge Phase 2 off-ramp documented
+  - **`live-site-pages/profiler-data/burns-mcdonnell.profile.json`** — Burns & McDonnell (100% ESOP): ENR #1 Power design 11 straight years, largest US substation design group claim, >50% claimed RICE share; record $8.6B 2025 revenue; the Santee Cooper data-center transmission EPC as the utility-side capture template; Certus/1898 & Co. MWBE lawsuit flagged
+  - **`live-site-pages/profiler-data/black-veatch.profile.json`** — Black & Veatch (100% ESOP): the client-owned-substation specialist (six-site colocation program; two 300 MW hyperscale units); ENR #6 Power + #8 Water + #1 Hydrogen (ACES Delta EPC); equal seat in the Aecon-Kiewit-B&V Cascade SMR JV; Dycom wireless divestiture and the adverse Boldt litigation turn documented
+  - **`live-site-pages/profiler-data/primoris.profile.json`** — Primoris (NYSE: PRIM — the batch's only listed company): #4 US solar contractor, Meta Nebraska $250M+ and Crusoe off-grid gas data-center work, PayneCrest acquisition; full actual-vs-consensus financials covering the 2024-25 beat streak and the 2026 guidance collapse (-57%), securities class action, and record $13.9B backlog
+- **Five in-app study guides** (`bechtel.study.json`, `kiewit.study.json`, `burns-mcdonnell.study.json`, `black-veatch.study.json`, `primoris.study.json`) — complementary curricula (6 sections + 12 concept flashcards each): Bechtel covers LNG liquefaction, lump-sum risk, nuclear FOAK economics, and gigawatt modularization; Kiewit covers combined-cycle plants, HVDC, advanced reactors, coal-site conversion, and the turbine queue; Burns & McDonnell covers the AEC industry map, transmission lines, interconnection, offshore engineering, OT security, and public procurement; Black & Veatch covers green hydrogen, grid stability/synchronous condensers, water engineering, the Owner's Engineer role, private networks, and construction disputes; Primoris covers solar-farm construction, public-contractor earnings mechanics, backlog quality, percentage-of-completion accounting, and behind-the-meter gas
+- **15 executive photos** in `live-site-pages/images/execs/` (Bechtel ×5, Black & Veatch ×4, Burns & McDonnell ×3, Primoris ×3 — company-published only, WebP sources converted to JPEG; Kiewit publishes no leadership page, so its decision makers have no photos by protocol) — directory now 62 photos across 16 companies
+- **Post-earnings Routine armed for Primoris** (`trig_01QfYxVDmk3bHUqgvr3czAmT`): one-shot 2026-11-03 13:00 UTC (Q3 results estimated ~11-02; the fired session verifies, refreshes, and re-arms for Q4)
+
+### Changed
+- **`live-site-pages/profiler-data/profiler-companies.json`** — registry 52 → 57 companies (five EPCs inserted alphabetically as `integrator`; Primoris carries ticker NYSE: PRIM)
+- **`README.md`** — structure tree +10 rows for the new profile/study JSONs; execs photo-count line updated to 16 companies / 62 photos
+- **`.claude/rules/profiler-app.md`** — quarterly private-company sweep expanded from 12 to 16 companies (Bechtel, Kiewit, Burns & McDonnell, Black & Veatch joined 2026-08-21 with per-company watch items; Primoris noted as public with its own trigger); the sweep Routine (`trig_01UVzjF6Y91Gb2MzKdDAznd9`) renamed and re-prompted to match; Primoris one-shot added to the Currently armed list
+- Render check: Playwright verified all five dossiers render from the roster and by direct `#slug` navigation with study-guide buttons present and zero console errors
+
+## [v02.72r] — 2026-08-21 09:00:04 PM EST — [98f533a](https://github.com/LightAISolutions/Sales/commit/98f533a32bfb89ec6d627f5b7a566e41dc2fca50)
+
+> **Prompt:** "run batch B"
+
+### Added
+- **Profiler Batch B — five general-contractor dossiers** (registry now **52 companies**), each researched via a single-agent run under the Source Priority Protocol (~35–52 sources evaluated per company), authored in the active `intel-briefing` style at schema v2, profileVersion 1, all categorized `integrator`:
+  - **`live-site-pages/profiler-data/turner-construction.profile.json`** — Turner Construction (Hochtief/ACS subsidiary): ENR #1 six straight years at $28.3B; data-center revenue tripling toward a $20B-by-2030 target (~42% of the $48.9B backlog); SourceBlue ~$1B/yr procurement arm; Meta Richland Parish/Lebanon IN, CoreWeave Lancaster, Stargate WI
+  - **`live-site-pages/profiler-data/mortenson.profile.json`** — Mortenson (family-owned): ENR #10 on $10.85B (+12 spots — largest top-10 move); the only US contractor pairing an 11 GW data-center fleet with 47.8 GW wind / 17+ GW solar / 45 GWh storage EPC; 1 GW / 345 kV Abilene substation; Meta concentration and Hermantown MN entitlement litigation flagged
+  - **`live-site-pages/profiler-data/hitt.profile.json`** — HITT Contracting (family-owned): #1 US data-center builder by revenue (ENR 2025 telecom list; BD+C 2025 first) at $13.0B, 82% mission-critical mix; Sterling II 22.5 MW in 180 days; the $51M Glenstone settlement's ~$24M uninsured layer (affirmed on appeal 2026-08-04) and the April 2025 Vantage Ashburn trench-collapse fatality documented
+  - **`live-site-pages/profiler-data/holder-construction.profile.json`** — Holder Construction (family-owned): BD+C's #1 data-center contractor 2023–24 (#2 2025); Google Fort Wayne $2B campus, EdgeCore Mesa $1.9B / ≥450 MW; a reported ~$10.2B 2025 revenue behind a deliberately NDA-heavy zero-publicity posture (no leadership page — no exec photos exist to publish)
+  - **`live-site-pages/profiler-data/dpr.profile.json`** — DPR Construction (employee-owned): lead builder of Stargate Abilene (8 buildings, ~4M sq ft, 1.2 GW; buildings in <1 year); ENR #7 at $14.0B with $26.1B booked; ~6,000 self-perform craft workers, prefab >90% of new work; the June 2026 TIME safety investigation and CalSTRS lawsuit documented as watch items
+- **Five in-app study guides** (`turner-construction.study.json`, `mortenson.study.json`, `hitt.study.json`, `holder-construction.study.json`, `dpr.study.json`) — complementary construction-industry curricula (6 sections + 12 concept flashcards each): Turner covers GC/CM-at-risk economics and reading contractor financials; Mortenson covers power EPC, substations, and MW/MWh literacy; HITT covers data-center anatomy, commissioning, and speed economics; Holder covers the NDA award market, cooling/water trade-offs, JVs, and labor law; DPR covers employee ownership, DfMA/prefab, VDC, AI data-hall internals, and schedule science
+- **22 executive photos** in `live-site-pages/images/execs/` (Turner ×4, Mortenson ×1, HITT ×3, DPR ×5 — company-published only; Holder publishes none) — directory now 47 photos across 12 companies
+
+### Changed
+- **`live-site-pages/profiler-data/profiler-companies.json`** — registry 47 → 52 companies (all five GCs inserted alphabetically as `integrator`, no tickers, status active)
+- **`README.md`** — structure tree +10 rows for the new profile/study JSONs; execs photo-count line updated
+- **`.claude/rules/profiler-app.md`** — quarterly private-company sweep expanded from 7 to 12 companies: Turner, HITT, Holder, DPR, and Mortenson joined 2026-08-21 with per-company watch items (Turner financials via Hochtief quarterly disclosures; HITT Glenstone/trench-collapse follow-ups; Holder mega-campus lineup appearances; DPR TIME-investigation and CalSTRS fallout; Mortenson Hermantown review and Meta program). The sweep Routine (`trig_01UVzjF6Y91Gb2MzKdDAznd9`) was renamed and its prompt updated to match — next fire 2026-10-01 13:00 UTC
+- Render check: Playwright verified all five dossiers render from the roster and by direct `#slug` navigation with study-guide buttons present and zero console errors
+
+## [v02.71r] — 2026-08-21 06:11:48 PM EST — [75ee3ac](https://github.com/LightAISolutions/Sales/commit/75ee3ac11315a20a771308d635213a6558c632e5)
+
+> **Prompt:** "Picking up from my last "AIDC market report clarifications" session, I approve you to follow the action plan and run batch A."
+
+### Added
+- **Profiler Batch A — six neocloud dossiers** (registry now **47 companies**), each researched via the two-agent Source Priority Protocol (~85–110 sources evaluated per company across first-party and third-party stages), authored in the active `intel-briefing` style at schema v2, profileVersion 1:
+  - **`live-site-pages/profiler-data/nebius.profile.json`** — Nebius Group (NASDAQ: NBIS): Q2 2026 revenue $582.3M (+454%), ARR $3.0B, >$40B Microsoft/Meta backlog, 5 GW contracted-power target; Vineland stop-work orders flagged as the live risk on the Microsoft contract
+  - **`live-site-pages/profiler-data/lambda.profile.json`** — Lambda (private): Microsoft multibillion agreement, NVIDIA $1.5B leaseback (reportedly its largest customer), $5.9B Series E, first investment-grade-rated private-neocloud Term Loan B ($926M, Baa2), H2 2026 IPO window; the Aug 10 Bloomberg "$917M loan" and Aug 12 "$926M TLB" reconciled as one instrument
+  - **`live-site-pages/profiler-data/applied-digital.profile.json`** — Applied Digital (NASDAQ: APLD): 1.4 GW / ~$36B base-term backlog (largest disclosed in the cohort), CoreWeave + one unnamed high-IG hyperscaler (~69% of backlog), 12.75% Macquarie perpetual preferred, NVIDIA's full stake exit (Q4 2025 13F)
+  - **`live-site-pages/profiler-data/iren.profile.json`** — IREN (NASDAQ: IREN): 5 GW secured power, $9.7B Microsoft GB300 contract with Horizon 1 delivered/accepted 2026-08-13, NVIDIA $3.4B contract + 5 GW DSX partnership, ClusterMAX "Underperforming" vs NVIDIA Exemplar Cloud tension; FY2026 results land 2026-08-27
+  - **`live-site-pages/profiler-data/terawulf.profile.json`** — TeraWulf (NASDAQ: WULF): 839 MW leased / ~$27B contracted incl. the 401 MW / ~$19B Anthropic lease at Hawesville KY; Google's ~$4.5B Fluidstack backstops for ~14% pro forma equity; warrant mark-to-market GAAP distortion documented
+  - **`live-site-pages/profiler-data/core-scientific.profile.json`** — Core Scientific (NASDAQ: CORZ): the CoreWeave-merger no-vote (Oct 2025) → AMD ~530 MW / $14B+ second anchor (Jul 2026) vindication arc; $24B+ backlog; Feb 2026 restatement covered
+- **Six `<slug>.study.json` technology study guides** (same batch, per the roster-expansion plan): `nebius.study.json`, `lambda.study.json`, `applied-digital.study.json`, `iren.study.json`, `terawulf.study.json`, `core-scientific.study.json` — complementary concept curricula (service ladders & rack-scale systems; brownfield conversion & credit enhancement; ARR/backlog/power-funnel literacy; GPU-collateralized finance; Chapter 11 warrants & M&A governance; vendor-circularity detection), 6 sections + 12 flashcards each, public-safe per the prep-command contract
+- **25 company-published executive headshots** in `live-site-pages/images/execs/` (Lambda ×4, TeraWulf ×5, Nebius ×5, Applied Digital ×4, IREN ×4, Core Scientific ×3), referenced from the new dossiers' `decisionMakers[].photo` fields
+- **Five post-earnings refresh Routines armed** (fresh-session one-shots, staggered to avoid parallel-session conflicts): IREN 2026-08-28 15:00 UTC (results confirmed 08-27), Applied Digital 2026-10-15 13:00 UTC (Q1 FY27 scheduled 10-14), Core Scientific 2026-10-24 15:00 UTC (est. 10-23), TeraWulf 2026-11-10 15:00 UTC (est. 11-09), Nebius 2026-11-11 13:00 UTC (expected ~11-10, unconfirmed)
+
+### Changed
+- **`live-site-pages/profiler-data/profiler-companies.json`** — six registry entries added alphabetically with taglines/HQ/tickers; roster 41 → 47
+- **`.claude/rules/profiler-app.md`** — "Currently armed" list gains the five new one-shots; the private quarterly sweep entry and its live Routine prompt now cover **seven** companies with Lambda's watch items (IPO progress incl. the Mubadala no-IPO penalty clock, funding/debt terms, Microsoft execution, NVIDIA leaseback, Kansas City scaling, Combes-era leadership changes)
+- **`README.md`** — 12 new tree rows for the batch's profile/study files; `images/execs/` count line updated to eight companies
+
+### Note
+- Data-only change: `Profiler.html` untouched, no page version bump per the Profiler version-interaction rules; all six dossiers + study guides Playwright render-checked locally (roster cards, full dossier render, study-guide buttons, zero console errors) before commit
+
+## [v02.70r] — 2026-08-21 04:08:51 PM EST — [5d77f8b](https://github.com/LightAISolutions/Sales/commit/5d77f8bd3935da236bd0860b2909c6414421e1bc)
+
+> **Prompt:** "Output the deck summary in a downloadable PDF."
+
+### Added
+- **`repository-information/study-prep/zhonhen/zhonhen-deck-summary.md` + `ZHONHEN-DECK-SUMMARY.pdf`** (4 pages, no contents block) — the absorption summary of the company-provided "Zhonhen AIDC Introduction EN" deck (v1.35, 24 slides, received after the passed first-round interview), restructured for print: the deck's five-move argument, the MVR-vs-traditional comparison table (98.5% vs 94%, 720kW–3.6MW, one-stage 10–35kV→DC), the rack-side product table (1MW sidecar at 473kW/m³, 100kW shelf, 18kW PSU), the JLL prefab-market table ($68.57B US of $94.86B global), the container portfolio table, the NVIDIA 2025/2026 whitepaper citations including the 2026 paper naming the "Panama Architecture", the deltas-vs-public-record section, five absorbed-signal talking points, and the 70%-per-account vs 31%-overall share reconciliation
+- **`scripts/build-study-prep-pdf.mjs`** gained the `zhonhen-deck-summary` registry entry (toc disabled — short reference sheet)
+
+### Changed
+- **README tree**: two rows added to the study-prep zhonhen block
+
+### Note
+- The source deck is marked confidential on every slide. The summary lives in `repository-information/study-prep/` — the non-deployed prep directory that already carries recruiting-channel details — with an explicit handling note at the top; the deck itself was NOT added to the repo, and nothing deck-sourced enters the public Profiler dossier
+
 ## [v02.69r] — 2026-08-19 03:21:20 PM EST — [d449b44](https://github.com/LightAISolutions/Sales/commit/d449b44e800c857c798f833ed5477597be2d1fc3)
 
 > **Prompt:** "I don't know anything about China's data centers' HVDC architecture (240Vdc, 336Vdc, 800Vdc). I have basic working knowledge of the US power flow from 135-230kVac (high AC voltage) -> substation and HV transformer step down to 10.47-34.5kVac (medium AC voltage) -> MV transformer and rectifier step down and transform to 480/380Vdc -> PDUs distribute power to server racks -> PSUs step down voltage to 56V -> 12V -> 6V ->~1V at the chip level. Teach me everything I need to know to sound knowledgeable about both architectures and be able to clearly explain the difference in an interview."

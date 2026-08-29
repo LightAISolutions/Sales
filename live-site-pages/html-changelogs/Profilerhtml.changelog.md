@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.58w] — 2026-08-29 07:31:17 PM EST — v03.70r
+
+### Added
+- ✦ New in 90d toggle in the Ecosystem Network explorer — narrows the view to relationships with evidence from the last 90 days, so what changed since your last visit stands out; works together with the other filters and inside compare mode. Links with fresh evidence also show their latest date highlighted in gold at all times
 
 ## [v01.57w] — 2026-08-29 07:19:37 PM EST — v03.69r
 
