@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 33/50`
+`Sections: 34/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.87g] — 2026-08-30 06:58:35 PM EST — v03.87r
+
+### Fixed
+- **A story whose AI summary fails is now retried instead of being quietly written off.** One bad AI reply used to leave part of an edition carrying plain source excerpts with no analysis — and those stories were never looked at again. Failed stories now go back in the queue and keep being re-attempted through the morning
+- **A morning build that fails early now recovers in minutes, not hours.** Retries begin almost immediately and step back gradually across the morning; previously a failure right at build time had no recovery path for a full hour
+
+### Changed
+- **Your Morning Digest is only emailed once it is whole.** If any summaries are still missing, the send waits while they are repaired. By a late-morning cutoff the best available edition goes out regardless — its footer says when some summaries fell back to source text — and if nothing could be built at all, the desk is alerted rather than nobody noticing
+- **Subscriber privacy:** digest emails no longer reveal the subscriber list to every recipient — each subscriber now receives their copy as a blind copy
+- Summaries are requested in smaller batches, so one failed reply affects fewer stories and long replies are less likely to be cut off
 
 ## [v01.86g] — 2026-08-30 05:32:47 PM EST — v03.86r
 

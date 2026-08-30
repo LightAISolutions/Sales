@@ -3,11 +3,39 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.87r] — 2026-08-30 06:58:35 PM EST
+
+> **Prompt:** "Picking up from my recent "Morning Digests footer updates" session, build approved phase 1."
+
+### Fixed
+
+**`googleAppsScripts/Scraper/Scraper.gs` (v01.87g)**
+- **Soft-failed AI batches now re-queue instead of being written off** — the confirmed root cause of the 2-of-3-unsummarized edition. `scDigestSummarizeStep_` tracks per-item attempts in run state (`state.aiAttempts`, ceiling `SCRAPER_DIGEST_ITEM_AI_ATTEMPTS` = 3 per pass); a batch that soft-fails (`ai_bad_json` / `ai_truncated` / `ai_empty_response` / `ai_blocked_*`), or an item skipped in an otherwise-parsed reply, goes back to pending with its summary cell left EMPTY. The old path wrote the raw feed snippet as the summary, which permanently excluded those items from every later batch, step and continuation ("pending" is recomputed as items with no summary, and a snippet is a summary to that test). Snippets are now written in exactly one place: the hard-stop finalizer
+- **The scheduled build's swallowed-throw hole** — `scDigestMorningRun`'s `catch (stepErr) { break; }` scheduled no continuation (`more` only reflects the budget) and left no trace, while the hourly tick refused to look before 07:00 against a 06:00 build. The tick gate (`scDigestScheduledTick_`) and `scEditionDue_` now use `SCRAPER_DIGEST_BUILD_HOUR` (6); the retired `SCRAPER_DIGEST_RUN_HOUR` (7) is removed (approved Phase 1 item 5)
+
+### Added
+
+**`googleAppsScripts/Scraper/Scraper.gs` (v01.87g)**
+- **Completeness verdict + delivery gate** — the render step computes `complete` (every summarize-set item carries a real AI summary; the lead has text + analysis) into a new `Complete` column (17: `yes` / `no` / `best-available`; blank on pre-existing rows = ship as before). `scDigestDeliverPending_` HOLDS a `no` row — left pending, never stamped — until the 12:00 ET hard stop (`SCRAPER_DIGEST_HARD_STOP_HOUR`, = 09:00 PT per the developer's deadline model)
+- **Repair pass** (`scDigestRepairPass_`, weekday- and build-hour-gated) — reopens today's rendered-but-incomplete undelivered editions (attempts reset, phase back to summarize; only empty-summary items re-attempted; the lead redone only when it lacks text or analysis), advances them within the caller's budget, and the delivery pass that follows mails each edition the moment it is whole. At the hard stop `scDigestFinalizeBestAvailable_` writes the display snippets, re-renders with the honest footer note ("a few summaries fell back to source text") and ships; a due edition with no Digests row at all triggers a once-per-day failure alert email instead of an unexplained empty inbox
+- **Escalating-backoff retry ladder** — Tier 1: 3 immediate same-execution attempts (`scDigestStepWithRetry_`, 2s/5s pauses); Tier 2: one-off continuations at +5/+10/+20/+30/+60/+60/+60 min (`SCRAPER_DIGEST_RETRY_LADDER_MIN`, monotonic per-day index in one self-resetting Script Property — at most 7 rungs/day, ~21 step attempts across six hours where a fixed 5-minute interval would burn ~72 executions against the consumer 90 min/day trigger budget); Tier 3: the hourly tick to the hard stop. Terminal AI faults (`scAiTerminal_`: missing key, unconfigured provider, rejected request) skip the rungs — one alert per day (`scDigestAlertOnce_`) and recovery stays with the tick. `scDigestScheduleContinuation_` now accepts a delay
+- **Hidden subscriber-milestone alert** (`scSubsMilestoneCheck_`, called from `scSchedulerTick` right after the Interests sync, before the pause gate) — when active subscribers reach `SCRAPER_SUBS_MILESTONE` (15) and the `SUBS_MILESTONE_15_SENT` Script Property is unset, one email to the developer covers the consumer 100-recipients/day ceiling, the ×3 editions multiplier and the transactional-provider option, then sets the property so it can never fire twice. No UI surface; threshold and address deliberately kept out of the public GAS changelog per the approved plan
+
+### Changed
+
+**`googleAppsScripts/Scraper/Scraper.gs` (v01.87g)**
+- `SCRAPER_DIGEST_ITEMS_PER_AI_CALL` 5 → 3 — smaller batches truncate less, and a soft-fail now costs 3 items, not 5 (approved Phase 1 item 6)
+- **Delivery recipients split** — the developer's two addresses ride in `to:` (`SCRAPER_DIGEST_TO_ADDRS`), every other subscriber in `bcc:` (first subscriber promoted to `to:` if neither developer address subscribes — MailApp requires one); the old comma-joined `to:` exposed every subscriber's address to every recipient. Zero quota cost — Apps Script counts recipients, not fields
+- `listDigests` tail read widened to columns 9–17 and rows carry the `complete` verdict; the render step's return and saved state carry the verdict for the ladder/repair callers; `SCRAPER_DIGEST_MAX_SOFT_AI_FAILS` re-commented for its new semantics (caps per-pass churn; items stay pending for repair)
+
+**`repository-information/diagrams/Scraper-diagram.md`**
+- Sequence diagram synced to the new behavior: hourly tick assists ≥6 ET, Complete verdict + hold/repair/hard-stop and the `to:`/`bcc:` split in the delivery note, `listDigests` columns 1-6 + 9-17. mermaid.live URL regenerated via pako and decompression-verified
 
 ## [v03.86r] — 2026-08-30 05:32:47 PM EST
 

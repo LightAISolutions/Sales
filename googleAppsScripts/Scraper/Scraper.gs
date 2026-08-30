@@ -1,4 +1,4 @@
-var VERSION = "v01.86g";
+var VERSION = "v01.87g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -382,9 +382,16 @@ var SCRAPER_TAB_HEADERS = {
   // two integers. Rows written before these columns existed leave them blank,
   // and listDigests reports blank as null so the app can omit the line rather
   // than claim an edition showed nothing.
+  // 'Complete' is the render step's verdict on its own work: 'yes' = every
+  // summarize-set item carries a real AI summary and the lead has both text
+  // and analysis; 'no' = something is missing, and the delivery gate HOLDS the
+  // row for the repair pass instead of mailing a degraded edition;
+  // 'best-available' = the hard stop shipped what existed, footer note and
+  // all. Rows written before the column existed read blank = no verdict, and
+  // ship exactly as they always did.
   Digests: ['Digest ID', 'Date', 'Generated At', 'Status', 'Item Count',
             'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI', 'Lead',
-            'No', 'Delivered', 'Shown', 'Held Back'],
+            'No', 'Delivered', 'Shown', 'Held Back', 'Complete'],
   // 'Analysis' is kept apart from 'Summary' rather than appended to it. The two
   // are different kinds of claim — one reports what the article says, the other
   // is the desk's inference about what it means — and a reader is entitled to
@@ -850,7 +857,6 @@ var SCRAPER_GEO_OTHER = {
 // the manual runDigestNow route works while paused.
 var SCRAPER_DIGEST_RUN_DAYS = [1, 2, 3, 4, 5];   // ISO day-of-week (Mon–Fri)
 
-var SCRAPER_DIGEST_RUN_HOUR = 7;                 // hourly catch-up tick: no build before 7:00 ET
 // Build early, send at 7:00. One Apps Script execution is capped at 6 minutes
 // on a consumer account, and three editions need far longer than that — 30
 // feeds at 6 per step, plus backstop, summarize and render. Building at 7:00
@@ -871,7 +877,18 @@ var SCRAPER_DIGEST_RUN_HOUR = 7;                 // hourly catch-up tick: no bui
 var SCRAPER_DIGEST_TZ = 'America/New_York';
 var SCRAPER_DIGEST_TZ_LABEL = 'ET';
 var SCRAPER_DIGEST_BUILD_HOUR = 6;               // daily build trigger, desk time
+// The hourly tick and the repair pass gate on the BUILD hour, not a separate
+// later "run hour". A separate 7:00 gate meant a 06:00 build failure had NO
+// recovery path for a full hour — the tick, the one mechanism that could have
+// caught it, refused to look until 07:00 (Phase 1 reliability, 2026-08-30).
 var SCRAPER_DIGEST_SEND_HOUR = 7;                // nothing is emailed before this hour, desk time
+// The repair ceiling, desk time (12:00 ET = 09:00 PT — the last moment a
+// morning digest is still a morning digest on the developer's coast). Until
+// this hour an incomplete edition is HELD and re-attempted; at this hour the
+// best available copy ships with an honest footer note, because the standing
+// rule is: a late edition is acceptable, a silently degraded or permanently
+// missing one is not.
+var SCRAPER_DIGEST_HARD_STOP_HOUR = 12;
 // Comfortably inside the 6-minute execution cap, leaving room for the step in
 // flight to finish and for the continuation trigger to be created.
 var SCRAPER_DIGEST_RUN_BUDGET_MS = 240000;
@@ -900,7 +917,11 @@ var SCRAPER_DIGEST_SUMMARIZE_MAX = 70;           // ceiling on AI-summarized ite
 // missed story costs more than a longer scroll. Section caps sum to 30, and
 // the summarize set now covers every relevant item rather
 // than falling through to a raw feed snippet.
-var SCRAPER_DIGEST_ITEMS_PER_AI_CALL = 5;        // items per summarize request (smaller batches → room for longer summaries)
+// 5 → 3 (Phase 1 reliability, 2026-08-30): the batch is the unit of loss when
+// one reply fails to parse, and smaller replies truncate less in the first
+// place — three items cost a few more calls, but each failure now puts 3
+// items back in the queue instead of 5.
+var SCRAPER_DIGEST_ITEMS_PER_AI_CALL = 3;        // items per summarize request
 // Free-tier pacing. At ~30 summarized items an edition fires ~7 AI calls back
 // to back (6 summarize batches + 1 lead), and more on a heavy news day. Gemini's free tier enforces per-minute AND
 // per-day request caps that are model-specific and have tightened over time,
@@ -911,6 +932,32 @@ var SCRAPER_DIGEST_AI_PAUSE_MS = 1200;           // gap between consecutive AI c
 // OVERLOAD (HTTP 503) can persist for tens of seconds — a 2s+6s ladder gave up
 // long before it cleared and dropped the whole edition to fallback summaries.
 var SCRAPER_AI_RETRY_BACKOFF_MS = [2000, 6000, 15000, 30000];
+// ── Phase 1 reliability (2026-08-30) ────────────────────────────────────
+// Per-item AI attempt ceiling per summarize pass. A soft-failed batch returns
+// to pending and is retried; an item that keeps failing is set aside with NO
+// snippet written into its summary cell, so the edition can still render, be
+// held as incomplete by the delivery gate, and be repaired on a later pass.
+// Snippets are only ever written at the hard stop, when repair time is gone
+// (scDigestFinalizeBestAvailable_).
+var SCRAPER_DIGEST_ITEM_AI_ATTEMPTS = 3;
+// Tier 2 of the retry ladder: one-off continuations scheduled after a
+// scheduled-build failure, minutes out from the moment of failure. Escalating
+// on purpose — from a 06:00 failure this lands ~06:05, 06:15, 06:35, 07:05,
+// 08:05, 09:05, 10:05: dense while the 07:00 courtesy send is still
+// reachable, sparse across the long tail to the hard stop. Roughly 21 step
+// attempts across six hours, where a fixed 5-minute interval would burn ~72
+// executions against the consumer 90 min/day trigger-runtime budget.
+// Tier 1 is 3 immediate same-execution attempts (scDigestStepWithRetry_);
+// Tier 3 is the hourly tick, which carries the edition to the hard stop.
+var SCRAPER_DIGEST_RETRY_LADDER_MIN = [5, 10, 20, 30, 60, 60, 60];
+// Failure alerts, the one-time subscriber-milestone heads-up, and the
+// delivery to: line. Every other subscriber rides in bcc: — subscribers must
+// never see each other's addresses.
+var SCRAPER_DIGEST_ALERT_EMAIL = 'jonyang92@gmail.com';
+var SCRAPER_DIGEST_TO_ADDRS = ['jonyang92@gmail.com', 'lightaisolution@gmail.com'];
+// Active-subscriber count that triggers the one-time quota heads-up email
+// (scSubsMilestoneCheck_). Deliberately no UI surface.
+var SCRAPER_SUBS_MILESTONE = 15;
 // ── Per-edition summary lens (developer 2026-08-28) ─────────────────────
 // Every summary used to close from one fixed viewpoint, because the prompt
 // hardcoded "a US grid-scale battery (BESS) seller". That is right for the
@@ -977,7 +1024,7 @@ var SCRAPER_DIGEST_ANALYSIS_MAX = 500;   // the desk's read, kept shorter than t
 // (ai.google.dev/gemini-api/docs/tokens.) Raised so reasoning and output are
 // not competing for the same 3000.
 var SCRAPER_DIGEST_SUMMARY_TOKENS = 8000;
-var SCRAPER_DIGEST_MAX_SOFT_AI_FAILS = 3;        // batches that may fail to parse before the edition gives up on AI
+var SCRAPER_DIGEST_MAX_SOFT_AI_FAILS = 3;        // soft-failed calls per pass before the pass stops asking (items stay pending for repair)
 var SCRAPER_DIGEST_CELL_MAX = 45000;             // Sheets cell safety cap (limit is 50k chars)
 // Digests tab retention (rows). Was 60 — roughly four working days once three
 // editions build daily — because every read of this tab pulled the Sections and
@@ -4006,6 +4053,19 @@ function scAiSoftFail_(msg) {
       || m.indexOf('ai_blocked_') !== -1;
 }
 
+/** Is this AI failure terminal for the day — a missing key, an unconfigured
+    provider, a rejected/unauthorized request? Retrying these burns quota and
+    trigger runtime without any chance of a different answer, so the retry
+    ladder skips its rungs and goes straight to an alert + the hourly
+    back-off. (A spent DAILY quota still surfaces as ai_rate_limited and
+    cannot be told apart from a per-minute limit here, so it stays on the
+    ladder — at ladder cadence that costs a handful of calls, not the day.) */
+function scAiTerminal_(msg) {
+  var m = String(msg || '');
+  if (m.indexOf('ai_') !== 0) return false;
+  return !scAiRetryable_(m) && !scAiSoftFail_(m);
+}
+
 function scAiWithRetry_(prompt, maxTokens) {
   var attempt = 0;
   for (;;) {
@@ -4048,7 +4108,21 @@ function scDigestSummarizeStep_(ss, state, t0) {
   var items = scDigestItems_(ss, state.id);
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
   var top = scDigestSummarizeSet_(items);
-  var pending = top.filter(function(it) { return !it.summary; });
+  // Phase 1 re-queue: per-item AI attempts live in state, so a soft-failed
+  // batch goes back to pending instead of being written off with its raw
+  // snippet. The write-off silently excluded those items from every later
+  // batch, step and continuation — "pending" is recomputed as items with no
+  // summary, and a snippet IS a summary to that test — which is exactly how
+  // an edition shipped with two of three articles unsummarized. An item that
+  // reaches the ceiling is set aside with its summary cell left EMPTY: the
+  // render shows its snippet as a display fallback, the sheet stays honest
+  // about what was never summarized, and the repair pass knows exactly what
+  // to re-attempt.
+  var att = state.aiAttempts || (state.aiAttempts = {});
+  function scEligible_(it) {
+    return !it.summary && (att[String(it.row)] || 0) < SCRAPER_DIGEST_ITEM_AI_ATTEMPTS;
+  }
+  var pending = top.filter(scEligible_);
   var softFails = 0;
   while (pending.length && (Date.now() - t0) < SCRAPER_DIGEST_TIME_BUDGET_MS && !state.aiNote) {
     var batch = pending.slice(0, SCRAPER_DIGEST_ITEMS_PER_AI_CALL);
@@ -4097,46 +4171,59 @@ function scDigestSummarizeStep_(ss, state, t0) {
       });
       batch.forEach(function(it, n) {
         var got = byIdx[n] || {};
-        // A batch that fell back to its raw snippet has no analysis to show —
-        // better an item with no desk read than a laundered snippet presented
-        // as one.
-        var sum = got.summary || it.snippet;
-        var ana = got.summary ? (got.analysis || '') : '';
-        intake.getRange(it.row, 9).setValue(sum);
-        intake.getRange(it.row, 12).setValue(ana);
-        it.summary = sum;
-        it.analysis = ana;
+        if (!got.summary) {
+          // The reply parsed but skipped this item — the same class of loss
+          // as a soft-failed batch, at item granularity. It used to be
+          // written off with its raw snippet right here; now it costs an
+          // attempt and stays in the re-queue for a later batch or the
+          // repair pass. (No snippet before the hard stop, ever.)
+          var k = String(it.row);
+          att[k] = (att[k] || 0) + 1;
+          return;
+        }
+        intake.getRange(it.row, 9).setValue(got.summary);
+        intake.getRange(it.row, 12).setValue(got.analysis || '');
+        it.summary = got.summary;
+        it.analysis = got.analysis || '';
       });
       scLogUsage_(ss, 'digest', 1, 0);
       if (!state.aiLabel) state.aiLabel = scActiveAiLabel_();
     } catch (aiErr) {
       var aiMsg = String((aiErr && aiErr.message) || aiErr);
-      // A batch that will not parse even after the retries costs THAT batch,
-      // not the edition. Previously any AI error broke the loop, so one bad
-      // reply out of six calls dropped all thirty items to raw snippets. The
-      // items here fall back to their snippet — exactly what they would have
-      // got anyway — and the next batch is still attempted.
+      // A batch that will not parse even after the retries costs THAT batch
+      // an attempt, not the edition. Previously any AI error broke the loop,
+      // so one bad reply out of six calls dropped all thirty items to raw
+      // snippets. The items here are counted and RE-QUEUED — no snippet is
+      // written any more (that only happens at the hard stop, in
+      // scDigestFinalizeBestAvailable_, once repair time is gone) — and the
+      // next eligible batch is still attempted.
       if (scAiSoftFail_(aiMsg) && softFails < SCRAPER_DIGEST_MAX_SOFT_AI_FAILS) {
         softFails++;
         state.aiSoftNote = 'ai_partial: ' + aiMsg.slice(0, 80)
           + ' (' + softFails + (softFails === 1 ? ' batch' : ' batches') + ')';
         batch.forEach(function(it) {
-          intake.getRange(it.row, 9).setValue(it.snippet);
-          it.summary = it.snippet;
+          var k = String(it.row);
+          att[k] = (att[k] || 0) + 1;
         });
-        pending = pending.filter(function(it) { return !it.summary; });
+        pending = top.filter(scEligible_);
         continue;
       }
       state.aiNote = 'ai_unavailable: ' + aiMsg.slice(0, 120);
       break;
     }
-    pending = pending.filter(function(it) { return !it.summary; });
+    pending = top.filter(scEligible_);
     // Space out consecutive calls so a 30-item edition doesn't burst ~7
     // requests at the free tier's per-minute cap.
     if (pending.length) { try { Utilities.sleep(SCRAPER_DIGEST_AI_PAUSE_MS); } catch (pErr) {} }
   }
-  var stillPending = top.some(function(it) { return !it.summary; });
-  if ((!stillPending || state.aiNote) && !state.leadDone) {
+  // The lead runs once this pass has nothing left it MAY attempt: every item
+  // is either summarized or set aside at its attempt ceiling (or the provider
+  // is down for the pass). Set-aside items leave the phase incomplete — the
+  // render verdict and the repair pass own that; the build itself keeps
+  // moving. Items still eligible mean the step ran out of budget, and the
+  // next continuation resumes the summarize phase as before.
+  var eligibleLeft = top.some(scEligible_);
+  if ((!eligibleLeft || state.aiNote) && !state.leadDone) {
     state.leadIdx = 0;
     state.leadText = '';
     state.leadAnalysis = '';
@@ -4175,7 +4262,10 @@ function scDigestSummarizeStep_(ss, state, t0) {
   }
   if (state.leadDone) state.phase = 'render';
   scDigestSaveState_(state);
-  return { phase: state.phase, summarized: top.length - pending.length, top: top.length };
+  var unsummarized = 0;
+  top.forEach(function(it) { if (!it.summary) unsummarized++; });
+  return { phase: state.phase, summarized: top.length - unsummarized,
+           deferred: unsummarized, top: top.length };
 }
 
 /** Serialise a digest for its Sheets cell, guaranteeing it parses back.
@@ -4336,6 +4426,28 @@ function scDigestRenderStep_(ss, state) {
   });
   d.heldBackTotal = heldBack.length;
 
+  // Phase 1 completeness verdict (see the Digests header comment): complete
+  // means every summarize-set item carries a real AI summary AND the lead has
+  // both text and analysis. The verdict rides in its own column so the
+  // delivery gate can hold an incomplete edition without parsing the heavy
+  // Sections JSON, and the repair pass can find work with one narrow read.
+  var summarizeSet = scDigestSummarizeSet_(items);
+  var unsummarized = 0;
+  summarizeSet.forEach(function(it) { if (!it.summary) unsummarized++; });
+  var leadOk = !lead
+    || !!((state.leadText || lead.summary) && (state.leadAnalysis || lead.analysis));
+  var complete = !state.aiNote && !unsummarized && leadOk;
+  var completeCell = state.bestAvailable ? 'best-available' : (complete ? 'yes' : 'no');
+  // aiSoftNote becomes a reader-facing footer claim — "a few summaries fell
+  // back to source text". Once a repair pass has summarized everything the
+  // claim is false, so the shipped edition drops it (the Notes column below
+  // keeps it as telemetry). A best-available edition is the opposite case:
+  // the claim MUST print, even when no earlier pass happened to set it.
+  if (complete && !state.bestAvailable) d.aiSoftNote = '';
+  if (state.bestAvailable && !d.aiNote && !d.aiSoftNote) {
+    d.aiSoftNote = 'ai_partial: best available at hard stop';
+  }
+
   var html = scRenderDigestNightInk_(d);
   digests.appendRow([state.id, state.date, new Date(), 'generated',
     items.length, relevant.length,
@@ -4347,7 +4459,8 @@ function scDigestRenderStep_(ss, state) {
     priorRow.delivered || '',   // '' = built, not yet delivered
     // Written from the same two values the render just used, so the News Stand
     // and the edition can never disagree about what this issue covered.
-    Number(d.counts.shown || 0), Number(d.heldBackTotal || 0)]);
+    Number(d.counts.shown || 0), Number(d.heldBackTotal || 0),
+    completeCell]);
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
@@ -4370,8 +4483,10 @@ function scDigestRenderStep_(ss, state) {
   // and lets the scheduled send wait for SCRAPER_DIGEST_SEND_HOUR however early
   // the build actually finished.
   state.phase = 'done';
+  state.complete = completeCell;
   scDigestSaveState_(state);
-  return { phase: 'done', relevant: relevant.length, sectionsBuilt: true };
+  return { phase: 'done', relevant: relevant.length, sectionsBuilt: true,
+           complete: complete && !state.bestAvailable };
 }
 
 
@@ -4839,7 +4954,9 @@ function scDigestStep_(editionId) {
     edition exists. Never throws into the tick. */
 function scDigestScheduledTick_() {
   var clock = scDigestClock_(new Date());
-  if (clock.hour < SCRAPER_DIGEST_RUN_HOUR) return;
+  // Gated on the BUILD hour so the tick can assist during the 06:00 hour —
+  // see the comment at SCRAPER_DIGEST_BUILD_HOUR.
+  if (clock.hour < SCRAPER_DIGEST_BUILD_HOUR) return;
   var ss = scraperSs_();
   var state = scDigestState_();
   // A build already in flight today → keep advancing it to completion first.
@@ -4862,6 +4979,10 @@ function scDigestScheduledTick_() {
       return;
     }
   }
+  // Nothing building, nothing due — Tier 3 of the retry ladder. Give any
+  // rendered-but-incomplete edition another pass; past the hard stop, ship
+  // the best available copy (or alert if a due edition never rendered).
+  try { scDigestRepairPass_(ss, 90000); } catch (rpErr) {}
 }
 
 /** ---- Delivery (separated from building, 2026-08-28) ------------------
@@ -4873,7 +4994,14 @@ function scDigestScheduledTick_() {
 
     Delivery is its own pass now. It mails every edition built today that has
     an empty Delivered cell, and refuses to send before SCRAPER_DIGEST_SEND_HOUR
-    so an edition finished at 06:20 still lands at 7:00. */
+    so an edition finished at 06:20 still lands at 7:00.
+
+    Phase 1 added the completeness gate: a row whose Complete verdict is 'no'
+    is HELD — left pending for the repair pass — until the hard stop, because
+    an edition must never be mailed degraded while there is still time to fix
+    it (and must always eventually be mailed: at the hard stop the hold ends
+    unconditionally). Recipients are split to: (the developer's addresses) and
+    bcc: (everyone else) so no subscriber ever sees another's address. */
 function scDigestDeliverPending_(ss, opts) {
   opts = opts || {};
   var clock = scDigestClock_(new Date());
@@ -4910,6 +5038,10 @@ function scDigestDeliverPending_(ss, opts) {
   var meta = sheet.getRange(2, 1, n, 3).getValues();             // id, date, generatedAt
   var eds  = sheet.getRange(2, 10, n, 1).getValues();            // edition
   var deliv = sheet.getRange(2, 14, n, 1).getValues();           // delivered
+  // Completeness verdicts (Phase 1). A grid from before the column existed
+  // reads as blank = no verdict, and those rows ship exactly as they used to.
+  var comp = sheet.getMaxColumns() >= 17
+    ? sheet.getRange(2, 17, n, 1).getValues() : null;
   // Numbering first: the mailed copy is the one that can never be corrected
   // afterwards, so it is the one that most needs to be right.
   try { scRenumberIssues_(ss); } catch (renErr) {}
@@ -4978,8 +5110,20 @@ function scDigestDeliverPending_(ss, opts) {
       held++;
       continue;
     }
-    var to = scEditionRecipients_(ss, edId).join(',');
-    if (!to) {
+    // Phase 1 completeness gate. Held, not stamped, so every later pass
+    // reconsiders it — the repair pass is meanwhile re-attempting the missing
+    // summaries, and completeness beats punctuality right up to the hard
+    // stop. AT the hard stop the hold ends whatever the verdict still says:
+    // by then the repair pass has re-rendered a best-available copy with the
+    // honest footer note, and if it could not (state lost), late-but-sent
+    // still beats never.
+    if (comp && String(comp[i][0] || '') === 'no' && !opts.force
+        && clock.hour < SCRAPER_DIGEST_HARD_STOP_HOUR) {
+      held++;
+      continue;
+    }
+    var rcpt = scEditionRecipients_(ss, edId);
+    if (!rcpt.length) {
       // Nobody is subscribed to this edition. Stamp it so the pass does not
       // reconsider the same row every hour, and say why in the cell — a silent
       // skip is exactly how "it just did not email" goes undiagnosed.
@@ -4993,9 +5137,23 @@ function scDigestDeliverPending_(ss, opts) {
         scRewriteLegacyNames_(scRewriteLegacyClickUrls_(String(sheet.getRange(row, 8).getValue() || ''))),
         nos[id] || 0);
       if (!html) { sheet.getRange(row, 14).setValue('no-html'); held++; continue; }
-      MailApp.sendEmail({ to: to,
+      // to: carries only the developer's own addresses; every other
+      // subscriber rides in bcc:. The old comma-joined to: line showed every
+      // subscriber every other subscriber's address on every edition. Costs
+      // nothing against quota — Apps Script counts recipients, not fields.
+      var toList = [], bcc = [];
+      rcpt.forEach(function(addr) {
+        (SCRAPER_DIGEST_TO_ADDRS.indexOf(String(addr).toLowerCase()) !== -1
+          ? toList : bcc).push(addr);
+      });
+      // MailApp requires a to: — if neither developer address subscribes to
+      // this edition, promote the first subscriber rather than failing.
+      if (!toList.length) toList.push(bcc.shift());
+      var mail = { to: toList.join(','),
         subject: edName + ' — ' + clock.date + ' (No. ' + scDigestNo_(nos[id] || 1) + ')',
-        htmlBody: html });
+        htmlBody: html };
+      if (bcc.length) mail.bcc = bcc.join(',');
+      MailApp.sendEmail(mail);
       sheet.getRange(row, 14).setValue(new Date());
       sent++;
     } catch (mailErr) {
@@ -5044,7 +5202,17 @@ function scDigestMorningRun() {
       var finished = false;
       while ((Date.now() - t0) < SCRAPER_DIGEST_RUN_BUDGET_MS) {
         var info = null;
-        try { info = scDigestStep_(editions[i].id); } catch (stepErr) { break; }
+        // Tier 1 of the retry ladder lives inside the step call: three
+        // immediate attempts, same execution. A step that STILL throws used
+        // to `break` here silently — `finished` stayed false, but `more` only
+        // reflects the BUDGET, so the throw scheduled no continuation at all
+        // and the swallowed error left the failure with no recovery path (and
+        // no trace) until the hourly tick looked in, an hour later. Now the
+        // failure walks the Tier 2 ladder — unless it is terminal, where a
+        // fresh trigger could change nothing: then alert once and leave the
+        // hourly tick as the watchman.
+        try { info = scDigestStepWithRetry_(editions[i].id); }
+        catch (stepErr) { scDigestLadderOnFailure_(clock, stepErr); break; }
         if (info && info.done) { finished = true; break; }
       }
       // Marked only on completion. A build cut short by the budget resumes on
@@ -5053,6 +5221,16 @@ function scDigestMorningRun() {
       if (finished) scMarkSchedBuilt_(editions[i].id, clock.date);
       if ((Date.now() - t0) >= SCRAPER_DIGEST_RUN_BUDGET_MS) { more = true; break; }
     }
+    // Builds that finished but rendered incomplete (held by the delivery
+    // gate) get their repair attempts with whatever budget this run has left;
+    // if one is still incomplete afterwards, the next ladder rung books the
+    // next look. Skipped when the budget itself ran out — the one-minute
+    // continuation below is already coming back.
+    var rep = null;
+    try {
+      rep = scDigestRepairPass_(ss, SCRAPER_DIGEST_RUN_BUDGET_MS - (Date.now() - t0));
+    } catch (rpErr) {}
+    if (rep && rep.stillIncomplete && !more) scDigestLadderNext_(clock);
     try { scDigestDeliverPending_(ss); } catch (delErr) {}
   } finally {
     lock.releaseLock();
@@ -5094,9 +5272,10 @@ function scEditionCadenceDue_(ed, clock) {
     daily trigger and the schedule would silently stop after one morning. */
 function scDigestContinueRun() { scDigestMorningRun(); }
 
-function scDigestScheduleContinuation_() {
+function scDigestScheduleContinuation_(delayMs) {
   try {
-    ScriptApp.newTrigger('scDigestContinueRun').timeBased().after(60000).create();
+    ScriptApp.newTrigger('scDigestContinueRun').timeBased()
+      .after(Math.max(60000, Number(delayMs) || 60000)).create();
   } catch (trigErr) { /* no scriptapp scope — the hourly tick still catches up */ }
 }
 
@@ -5110,6 +5289,208 @@ function scDigestClearContinuations_() {
       if (t.getHandlerFunction() === 'scDigestContinueRun') ScriptApp.deleteTrigger(t);
     });
   } catch (clrErr) {}
+}
+
+/** Phase 1 repair pass: the road from "held as incomplete" back to "mailed".
+
+    Every rendered-but-undelivered edition of today marked Complete = 'no' is
+    reopened — attempt allowance reset, phase back to summarize — and advanced
+    within the caller's budget. The summarize step only batches items whose
+    summary cell is still empty, so a repair spends AI calls on exactly the
+    items that failed, re-renders (replacing the day's row and re-computing
+    the verdict), and the delivery pass that follows in every caller mails the
+    edition the moment it comes back whole.
+
+    At the hard stop the goal flips from COMPLETE to DELIVERED: snippets are
+    written for whatever never summarized, the edition re-renders as
+    'best-available' carrying the honest footer note, and the gate lets it
+    ship. If a due edition never rendered at all, that is the one silent
+    outcome left — so it becomes an alert instead of an unexplained empty
+    inbox. Late is acceptable; silent, or degraded without saying so, is not.
+
+    Weekday-gated like delivery, and never before the build hour: an
+    unattended weekend or small-hours repair would be unattended AI spend. */
+function scDigestRepairPass_(ss, budgetMs) {
+  var clock = scDigestClock_(new Date());
+  var out = { repaired: 0, stillIncomplete: 0 };
+  if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) return out;
+  if (clock.hour < SCRAPER_DIGEST_BUILD_HOUR) return out;
+  var t0 = Date.now();
+  var budget = Math.max(0, Number(budgetMs) || 0);
+  var atStop = clock.hour >= SCRAPER_DIGEST_HARD_STOP_HOUR;
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGESTS);
+  var n = sheet ? sheet.getLastRow() - 1 : 0;
+  var dates = null, eds = null;
+  if (n > 0 && sheet.getMaxColumns() >= 17) {
+    dates = sheet.getRange(2, 2, n, 1).getValues();
+    eds = sheet.getRange(2, 10, n, 1).getValues();
+    var deliv = sheet.getRange(2, 14, n, 1).getValues();
+    var comp = sheet.getRange(2, 17, n, 1).getValues();
+    var seen = {};   // one repair per edition per pass
+    for (var i = n - 1; i >= 0; i--) {
+      if (scIssueDateKey_(dates[i][0]) !== clock.date) continue;
+      if (String(deliv[i][0] || '').trim()) continue;
+      if (String(comp[i][0] || '') !== 'no') continue;
+      var edId = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
+      if (seen[edId]) continue;
+      seen[edId] = true;
+      if (scDigestBuildInFlight_(edId, clock.date)) { out.stillIncomplete++; continue; }
+      var st = scDigestState_(edId);
+      if (!st || st.date !== clock.date) {
+        // The state property is gone (rare — a manual reset, or the property
+        // store failing). Nothing can re-render without it; past the hard
+        // stop the gate ships the stored copy exactly as it stands.
+        out.stillIncomplete++;
+        continue;
+      }
+      if (atStop) {
+        scDigestFinalizeBestAvailable_(ss, st);
+      } else {
+        // Reopen: a fresh attempt allowance, phase back to summarize. The
+        // lead redoes itself only when it lacks text or analysis — a lead
+        // that satisfied the verdict is never re-spent.
+        st.aiAttempts = {};
+        st.aiNote = '';
+        if (!st.leadText || !st.leadAnalysis) {
+          st.leadDone = false; st.leadText = ''; st.leadAnalysis = '';
+        }
+        st.phase = 'summarize';
+        scDigestSaveState_(st);
+      }
+      var finished = false, becameComplete = false;
+      while ((Date.now() - t0) < budget) {
+        var info = null;
+        try { info = scDigestStepWithRetry_(edId); } catch (rErr) { break; }
+        if (info && info.done) {
+          finished = true;
+          becameComplete = !!(info.detail && info.detail.complete);
+          break;
+        }
+      }
+      if (finished && becameComplete) out.repaired++;
+      else out.stillIncomplete++;
+    }
+  }
+  // The one silent failure left: a due edition with no Digests row at all.
+  if (atStop) {
+    try {
+      var have = {};
+      if (n > 0) {
+        if (!dates) {
+          dates = sheet.getRange(2, 2, n, 1).getValues();
+          eds = sheet.getRange(2, 10, n, 1).getValues();
+        }
+        for (var m = 0; m < n; m++) {
+          if (scIssueDateKey_(dates[m][0]) !== clock.date) continue;
+          have[String(eds[m][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id] = true;
+        }
+      }
+      var missing = [];
+      scEditions_(ss).forEach(function(ed) {
+        if (ed.enabled && scEditionCadenceDue_(ed, clock) && !have[ed.id]) {
+          missing.push(ed.name || ed.id);
+        }
+      });
+      if (missing.length) {
+        scDigestAlertOnce_(clock, 'norender',
+          'Morning Digest: no edition rendered by the hard stop',
+          'Nothing rendered today for: ' + missing.join(', ') + '.\n\n'
+          + 'The build never produced a Digests row, so there is nothing to '
+          + 'ship best-available. Check the Apps Script executions log and '
+          + 'the AI provider configuration.');
+      }
+    } catch (mErr) {}
+  }
+  return out;
+}
+
+/** Hard stop: write display snippets into the summary cells that are still
+    empty — the ONLY place a snippet is ever written as a summary now — mark
+    the state best-available, and point it at render so the shipped copy
+    carries the honest footer note and a verdict the delivery gate lets
+    through. */
+function scDigestFinalizeBestAvailable_(ss, st) {
+  try {
+    var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+    scDigestSummarizeSet_(scDigestItems_(ss, st.id)).forEach(function(it) {
+      if (!it.summary) intake.getRange(it.row, 9).setValue(it.snippet);
+    });
+    st.bestAvailable = true;
+    if (!st.aiSoftNote) st.aiSoftNote = 'ai_partial: best available at hard stop';
+    st.leadDone = true;          // ship whatever lead exists; spend no more on it
+    st.phase = 'render';
+    scDigestSaveState_(st);
+  } catch (fErr) {}
+}
+
+/** Tier 1 of the retry ladder: three immediate attempts at one step, same
+    execution — free, no trigger. Short pauses, because the classic causes (a
+    transient sheet error, a lock, the self-update webhook swapping the
+    deployment mid-request) either clear in seconds or not at all. Rethrows
+    the last error so Tier 2 can classify it. */
+function scDigestStepWithRetry_(editionId) {
+  var pauses = [2000, 5000];
+  for (var a = 0; ; a++) {
+    try { return scDigestStep_(editionId); }
+    catch (err) {
+      if (a >= pauses.length) throw err;
+      try { Utilities.sleep(pauses[a]); } catch (sErr) {}
+    }
+  }
+}
+
+/** Book the next Tier 2 rung: one Script Property holding "date|index",
+    self-resetting when the date rolls. Monotonic on purpose — however
+    failures interleave across editions and passes, a day spends at most
+    SCRAPER_DIGEST_RETRY_LADDER_MIN.length one-off continuations before
+    recovery belongs to the hourly tick alone. Returns whether a rung was
+    actually booked. */
+function scDigestLadderNext_(clock) {
+  try {
+    if (clock.hour >= SCRAPER_DIGEST_HARD_STOP_HOUR) return false;  // repair time is over
+    var props = PropertiesService.getScriptProperties();
+    var parts = String(props.getProperty('scDigestLadder') || '').split('|');
+    var idx = parts[0] === clock.date ? (Number(parts[1]) || 0) : 0;
+    if (idx >= SCRAPER_DIGEST_RETRY_LADDER_MIN.length) return false; // ladder spent → Tier 3
+    props.setProperty('scDigestLadder', clock.date + '|' + (idx + 1));
+    scDigestScheduleContinuation_(SCRAPER_DIGEST_RETRY_LADDER_MIN[idx] * 60000);
+    return true;
+  } catch (ldErr) { return false; }
+}
+
+/** A scheduled step failed even after the in-execution retries. Terminal
+    faults (missing key, unconfigured provider, a rejected request) skip the
+    ladder — a fresh trigger cannot fix configuration — so say so once and
+    leave the hourly tick as the watchman. Everything else books the next
+    rung. */
+function scDigestLadderOnFailure_(clock, err) {
+  var msg = String((err && err.message) || err || '');
+  if (scAiTerminal_(msg)) {
+    scDigestAlertOnce_(clock, 'terminal',
+      'Morning Digest: AI provider fault needs attention',
+      'The scheduled digest build hit a terminal AI fault: ' + msg + '\n\n'
+      + 'Retries cannot clear this class of failure (missing or revoked key, '
+      + 'or an unconfigured provider). The hourly tick keeps re-checking and '
+      + 'any rendered edition still ships best-available at the hard stop, '
+      + 'but the actual fix is in Script Properties or the provider '
+      + 'dashboard.');
+    return;
+  }
+  scDigestLadderNext_(clock);
+}
+
+/** One alert of each kind per day, so a failure morning produces a signal
+    rather than an inbox full of the same sentence. */
+function scDigestAlertOnce_(clock, kind, subject, body) {
+  try {
+    var props = PropertiesService.getScriptProperties();
+    var parts = String(props.getProperty('scDigestAlerts') || '').split('|');
+    var kinds = parts[0] === clock.date ? parts.slice(1) : [];
+    if (kinds.indexOf(kind) !== -1) return;
+    MailApp.sendEmail({ to: SCRAPER_DIGEST_ALERT_EMAIL, subject: subject, body: body });
+    kinds.push(kind);
+    props.setProperty('scDigestAlerts', clock.date + '|' + kinds.join('|'));
+  } catch (alErr) {}
 }
 
 /** Advance the digest build one step (the app loops until done). */
@@ -5155,13 +5536,13 @@ function listDigests(sessionToken, limit, payload) {
   if (n < 1) return empty;
 
   // Two narrow reads instead of one wide one: columns 1–6 (id → relevantCount)
-  // and 9–16 (notes, edition, ai, lead, no, delivered, shown, held back).
-  // Columns 7 and 8 — Sections and HTML — are never touched here.
+  // and 9–17 (notes, edition, ai, lead, no, delivered, shown, held back,
+  // complete). Columns 7 and 8 — Sections and HTML — are never touched here.
   var meta = sheet.getRange(2, 1, n, 6).getValues();
   // The tail columns may not all exist yet on a sheet created before they were
   // added. ensureScraperTabs_ widens the header, but the grid itself can still
   // be narrower, so clamp and pad rather than throwing.
-  var tailW = Math.max(1, Math.min(8, sheet.getMaxColumns() - 8));
+  var tailW = Math.max(1, Math.min(9, sheet.getMaxColumns() - 8));
   var tail = sheet.getRange(2, 9, n, tailW).getValues();
 
   var edNames = {}, edParent = {};
@@ -5200,7 +5581,10 @@ function listDigests(sessionToken, limit, payload) {
       // have the News Stand print "0 shown of 15 relevant" about an edition
       // that ran perfectly well. The app omits what is null.
       shown: (t[6] === '' || t[6] == null) ? null : Number(t[6]) || 0,
-      heldBack: (t[7] === '' || t[7] == null) ? null : Number(t[7]) || 0
+      heldBack: (t[7] === '' || t[7] == null) ? null : Number(t[7]) || 0,
+      // '' = built before the verdict existed; 'yes' / 'no' / 'best-available'
+      // otherwise. Surfaced so the News Stand can say why a row is unmailed.
+      complete: String(t[8] || '')
     });
   }
   // Sort by the edition's own date, newest first — NOT by sheet row order.
@@ -5620,6 +6004,40 @@ function scNextRun_(freq, from, customConfig) {
   return d;
 }
 
+/** The one-time subscriber-milestone heads-up (Phase 1). One email, once
+    ever, to the developer when active subscribers reach the milestone: on a
+    consumer account MailApp allows 100 email RECIPIENTS per day, shared
+    across every script the account runs — and a subscriber taking all three
+    editions counts three times. The conversation about a transactional
+    provider should happen BEFORE a growth day burns the budget mid-send.
+    Deliberately no UI surface; the Script Property makes it unrepeatable.
+    The property gate runs first, so after the send this costs nothing. */
+function scSubsMilestoneCheck_() {
+  var props = PropertiesService.getScriptProperties();
+  if (props.getProperty('SUBS_MILESTONE_15_SENT')) return;
+  var active = 0;
+  scSubscribers_(scraperSs_()).forEach(function(s) {
+    if (s.status === 'active') active++;
+  });
+  if (active < SCRAPER_SUBS_MILESTONE) return;
+  MailApp.sendEmail({
+    to: SCRAPER_DIGEST_ALERT_EMAIL,
+    subject: 'Morning Digest: ' + active + ' active subscribers — plan for the email ceiling',
+    body: 'Active subscribers just reached ' + active + '.\n\n'
+      + 'The consumer Apps Script quota is 100 email recipients per day, '
+      + 'shared across every script on this account — and a subscriber '
+      + 'taking all three editions counts three times, so ' + active
+      + ' subscribers can consume ~' + (active * 3) + ' of the 100 on a '
+      + 'normal weekday, before retries, manual tests, the held-back rollup '
+      + 'or any other project sends a thing.\n\n'
+      + 'Options from here: hold subscriptions around 20 while on the free '
+      + 'quota, or move digest delivery to a transactional email provider '
+      + '(free tiers comfortably cover thousands of sends a month) and keep '
+      + 'Apps Script email for everything else.'
+  });
+  props.setProperty('SUBS_MILESTONE_15_SENT', '1');
+}
+
 /** Hourly trigger entry point. */
 function scSchedulerTick() {
   // Heartbeat FIRST (before the lock): proof-of-life for getSchedulerHealth.
@@ -5636,6 +6054,10 @@ function scSchedulerTick() {
   // the Phase 2 panel and the Phase 4 go-live start from live data. It
   // throttles itself to ~once/day and must never break the tick.
   try { scSyncInterests_(false); } catch (interestsErr) {}
+  // Phase 1: the one-time subscriber-milestone heads-up. Sits with the sync,
+  // before the pause gate — it is about roster growth, not the pipeline, and
+  // its property guard makes the steady-state cost a single property read.
+  try { scSubsMilestoneCheck_(); } catch (msErr) {}
   if (!SCRAPER_SCHED_RUNS_ENABLED) return;  // pipeline paused — heartbeat only
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) return;  // a previous tick is still running
@@ -6535,7 +6957,9 @@ function scDigestBuildInFlight_(editionId, date) {
 /** Is this edition due to build now? (pure given clock + lastBuilt) */
 function scEditionDue_(ed, clock) {
   if (!ed.enabled) return false;
-  if (clock.hour < SCRAPER_DIGEST_RUN_HOUR) return false;
+  // Build hour, not the retired separate run hour: if the 06:00 trigger never
+  // fired at all, the tick may start the build itself during the 06:00 hour.
+  if (clock.hour < SCRAPER_DIGEST_BUILD_HOUR) return false;
   // The catch-up tick asks whether the SCHEDULED build has run, not whether
   // anything has. A manual test build must not satisfy the schedule.
   if (scSchedBuiltToday_(ed.id, clock.date)) return false;
