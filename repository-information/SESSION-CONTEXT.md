@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-29 09:54:32 PM EST
+**Repo version:** v03.82r
+**Branch:** `claude/industry-guidance-cleanup-xblq61`
+
+**What we worked on (v03.76r–v03.82r — the Industry Guidance scrub + improvement build-out):**
+
+- **Content scrub (v03.76r, GAS v01.24g + page v01.63w):** all six guidance modules stripped of company-specific guidance (Zhonhen, Hithium) — modules now address supplier/buyer groups only ("BESS suppliers", "TRU/SST suppliers", "§154-listed suppliers", developers, integrators, hyperscalers); statutory facts naming companies (the NDAA §154(b) list) stay as objective information. The `zh` note field renamed `sales`, rendered under a neutral "Sales angle" label (the renderer had leaked "For the Zhonhen conversation" to all guidance viewers). Repo CHANGELOG's 2026-08-22 date group (15 sections) rotated to the archive, SHA-enriched
+- **Admin lens (v03.77r, page v01.64w):** reports declare `guidanceOverlays[]` (`{moduleId, sectionId, ps}`) and admins (the `reports` capability) see 🔒 rose panels inside the anchored module sections with a "View source report" link; stale anchors fall back to module end; non-admin tiers never fetch report data. `check-profiler-reports.py` validates anchors against the live modules parsed from Profiler.gs, forbids citation tokens in overlay prose, and reconciles the index's new `overlayModules` field
+- **Two overlay-bearing reports** restoring the company lens the scrub removed: `s154-listed-bess-suppliers--risk--2026-08-29` (v03.78r — CATL/BYD/Envision/EVE/Hithium, 24 citations, 5 overlays onto China Policy / Bankability / Power Infra / Utility-AIDC; carries the *current* Hithium file: third listing lapse Apr 2026, equity freeze, ~10 CATL suits) and `aidc-power-conversion--competitive--2026-08-29` (v03.79r — Delta/LITEON/Megmeet/Zhonhen/Sinexcel/Vertiv/Eaton/Schneider, 29 citations, 3 overlays onto the NVIDIA module; carries the CATL RMB 4.1B/49% Zhonhen-holdco re-rating and the roster-absence read)
+- **Freshness discipline (v03.80r, GAS v01.25g + page v01.65w):** every module carries a gate-derived `reviewBy` (Bankability → Oct 1 PRC-029-1; Utility-AIDC + Power Infra → Dec 10 Batch Zero; China Policy → Dec 31 Treasury PFE regs; NVIDIA → Nov 30; BESS Tech → Feb 24) rendered as plain/gold/red chips; report library + report view show fresh ≤45d / aging ≤120d / stale age chips; quarterly review Routine armed (`trig_01CrhxzfBV6uKQNKpUXLLMSZ`, Jan/Apr/Jul/Oct 15 13:00 UTC, fresh session, first fire 2026-10-15)
+- **Company-chip cross-links (v03.81r, GAS v01.26g + page v01.66w):** covered company names in module text link to dossiers (`gdLinkCompanies` — registry name authority + `ovRelDerive` ambiguity guard; buttons/links/headings/term-spans excluded); dossiers show "✦ Covered in guidance modules" for guidance-capable tiers via the new role-gated `gop=mentions` op (server scan, 6h `CacheService`)
+- **Search + unified glossary (v03.82r, page v01.67w, client-only):** library search across every module's flattened section text + glossary (ranked, highlighted snippets, hit → module scrolled to section via `ovGuideLoadDoc`'s new scroll arg); "📖 Unified glossary" merges all terms alphabetically, duplicates grouped with per-module definitions and source chips
+
+**Where we left off:**
+
+- Everything through v03.82r committed, pushed, and auto-merged; working tree clean; the v01.24g GAS deploy was live-verified via the `op=deploy` probe (later bumps ride the same webhook)
+- **Of the six improvement recommendations from the module audit, four are delivered (#1 lens, #2 freshness, #3 cross-links, #6 search/glossary). #4 and #5 are deferred to next session at the developer's instruction** — see the recommendation below
+- Profiler page changelog at **49/50 — the next page bump triggers its rotation** (SHA enrichment mandatory); repo CHANGELOG at 92/100; GAS changelog 26/50
+
+**Key decisions made:**
+
+- **Content scope rule (in `industry-guidance.md` step 4):** modules give guidance to groups only, never to a single named company; single-company specificity lives in admin-only reports and reaches modules through the Admin lens; statutory name-lists stay as fact
+- Report overlays carry no `[c:id]` citation tokens (the report link is the citation path); reports stay immutable — the two new reports were authored fresh rather than retrofitting the existing one
+- `reviewBy` derives from each module's own nearest dated gate, not a fixed cadence; the quarterly Routine is the backstop, the in-app chips the primary signal
+- Cross-link matching inherits the ambiguity guard (one-word capitalized names skip sentence starts/post-colon) — under-linking beats false-linking
+- Search and glossary are client-only over the existing role-gated ops — no new server surface, no content exposure beyond what the viewer's tier can already open
+
+**Active context:**
+
+- **Branch:** `claude/industry-guidance-cleanup-xblq61` · **Repo:** v03.82r · **Profiler:** v01.67w / GAS v01.26g
+- Reports library: 3 reports, all `current`; the two new ones carry `overlayModules`; the older competitive report's coverage pins are aging by design (12 checker warnings, not errors)
+- Imminent external events (no action needed — automated): Zhonhen H1 2026 report due by Aug 31 (feeds the NVIDIA-module lens's checkpoint); Sungrow + BYD post-earnings refresh triggers fire Aug 30; **inherited watch item: Monday 2026-08-31's scheduled Scraper digest run is the first real end-to-end execution — verify it built from the 72-hour window, replaced the day's edition, and mailed**
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+
+**Recommendation for next session:**
+
+- **Finish the two remaining guidance improvements in one pass (developer instruction, 2026-08-29):** **#5 per-module revision notes** — a `revisions: [{date, note}]` meta field on each module rendered near the header (seed each module with the 2026-08-29 scrub/generalization as its first entry; emit via `guidanceIndex_()` if the library should show a "revised" hint), then **#4 server-side reading-progress sync** — replace/augment the per-device localStorage `gdProgress` with a per-user store behind new role-gated guidance ops (e.g. `gop=progress` read / `gop=setprogress` write in `handleGuidanceOp_`, keyed by the validated session's account; keep localStorage as the offline fallback and migrate local ticks up on first sync). #4 is server-handler work only (not the served auth shell) but touches Profiler.gs storage — plan the storage medium (Script Properties vs the Master ACL spreadsheet pattern) before coding, and run the full gate set (node --check, inner-scripts, Playwright, harness). Both land as one interaction commit with GAS + page bumps.
+
+**To continue:** type `finish the guidance improvements`
+
+## Previous Sessions
+
+### Session — 2026-08-29 (report engine + Relationships build-out, v03.63r-v03.75r)
+
 **Date:** 2026-08-29 08:19:11 PM EST
 **Repo version:** v03.75r
 **Branch:** `claude/profiler-report-engine-nlopn4`
@@ -45,51 +89,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Nothing is deferred from this session. One inherited watch item survives from the Scraper session (its entry rotated out of this file under the 2-session cap): **Monday 2026-08-31's scheduled Scraper digest run is the first real end-to-end execution** of the 06:00 ET build / 07:00 ET send schedule — verify it built from the 72-hour window, replaced the day's edition, and actually mailed.
 
 **To continue:** type `check how Monday's scheduled Scraper run went`
-
-## Previous Sessions
-
-### Session — 2026-08-29 (Profiler quality build-out, v03.52r-v03.62r)
-
-**Date:** 2026-08-29 03:45:02 PM EST
-**Repo version:** v03.62r
-**Branch:** `claude/profiler-dossier-summary-8obbjo`
-
-**What we worked on (v03.52r–v03.62r — the Profiler quality build-out, all six approved recommendations now shipped):**
-
-- **Summary tab + relationships (v01.44w–v01.45w):** renamed each dossier's Background tab to Summary; replaced the rejected "at a glance" cards with a Relationships section — typed cross-links derived from dossier data plus a radial SVG relationship map with clickable nodes. Settings cog (bottom right) with a Commands overlay documenting all Profiler commands
-- **Compare view (v01.46w–v01.48w):** roster Compare mode (up to 4 companies), tiered rows — dossier meta and financials always; product/spec rows only within a shared peer group. Peer families: `OV_PEER_FAMILIES` treats supplier + integrator as one "Hardware" family (developer directive — keep grouping flexible as the industry shifts). Cross-space selections fall back to financials-only
-- **Normalized KPIs, schema v4 (v01.47w–v01.49w, roadmap #2):** `periodType`/`periodEnd`/`kpi`/`usdMillions`/`fxBasis` overlay; comparable-revenue coverage now **42 of 88**. FX rates researched, never recalled (CNY 7.1873, TWD 31.171, KRW 1421.48, EUR 1.1306 — all 2025 annual averages). Five deliberate exclusions render "Not normalized yet": Oracle (guidance), Switch (no annual total), Crusoe + Lambda (third-party estimates), OpenAI (press-reported)
-- **Source provenance (v01.50w, roadmap #4):** every source classified company / disclosure / independent; first-party share shown on the dossier header, in the Source List with per-source tags, and as a Compare Tier 0 row. Registry schema v2 added `companies[].domains` (all 88 curated); per-source `party` field overrides any verdict
-- **Roster coverage (v01.51w, roadmap #5):** freshness dot (fresh ≤45d / aging ≤120d / stale — post-earnings cadence) with visible age, source count, first-party share, `$ comparable` tag per card; aggregate strip above the grid. New `scripts/sync-profiler-registry.py` reconciles the denormalized registry fields (`--check` reports drift); its use is now REQUIRED after any profile write (rule added to `.claude/rules/profiler-app.md` step 5 this push)
-- **Notable bugs found & fixed:** `ovCmpLatestRevenue` picked revenue by array position but 22/88 dossiers are newest-first (Amazon would have shown FY2024); a token-matching provenance classifier was **discarded before shipping** after an 88-dossier audit (Black & Veatch 6%, Google 0% — replaced with declared domains); `ovFreshness` boundary flip from `Math.round` on datetime deltas
-- Six ticker-field ownership-prose fixes; registry `lastUpdated` drift sync (both task cards)
-
-**Where we left off:**
-
-- All work committed, pushed, and auto-merged through **v03.62r** (this push carries the sync-requirement rule + this session context). Working tree clean
-- **All six approved recommendations from the session-opening review are done except #3 — the `profiler report <topic>` command — which the developer explicitly wants as its own session with fresh context**
-- Profiler page changelog sits at **50/50 — the next page bump rotates again** (2026-08-07's five sections move as one date group, SHA enrichment mandatory). Repo CHANGELOG at 98/100
-
-**Key decisions made:**
-
-- Compare is financials-first; deep rows only within a peer family. Supplier + integrator are one family; the structure is declarative so new families are one-line additions
-- Provenance classification is data-driven (registry `domains`), never name-token heuristics — a wrong sourcing claim is worse than none
-- First-party share is a **balance signal, not a quality score** — near-total company sourcing reads as under-corroborated by design
-- No near-identical archive snapshots for batch data passes; FY2025-only KPI normalization; dossier-stated USD beats external FX conversion
-- The roster renders from the registry alone — anything it displays gets denormalized into the registry and reconciled by the sync script, never fetched per-card
-
-**Active context:**
-
-- **Branch:** `claude/profiler-dossier-summary-8obbjo` · **Repo:** v03.62r · **Profiler:** `v01.51w` / GAS `v01.22g`
-- Coverage: 88 dossiers · 2,058 cited sources · 42 comparable revenue · median 52% first-party · all freshness dots green (oldest 7d — tints differentiate as October earnings approach)
-- ~30 armed post-earnings refresh triggers start firing late October; each fired session now inherits the sync-script requirement via the updated Profiler Command
-- Test suites live in the session scratchpad and are NOT committed — the durable contracts are in `.claude/rules/` and `PROFILER-SCHEMA.md`
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-
-**Recommendation for next session:**
-
-- Design and build **`profiler report <topic>`** (roadmap #3, the last approved item) — the industry-report engine that was the point of the whole quality build-out. Everything it needs now exists: normalized KPIs for cross-company figures, provenance for citation confidence, relationships for ecosystem structure, peer families for scoping, and coverage metadata for honesty about gaps. Start with a design pass (report types — macro, competitive, risk, opportunity; output format; how reports cite dossier sources per the "Reports" rule in profiler-app.md's Recall design) and get developer approval before building.
-
-**To continue:** type `design profiler report`
 
 Developed by: LightAISolutions
