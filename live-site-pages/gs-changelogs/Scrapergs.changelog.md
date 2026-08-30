@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 32/50`
+`Sections: 33/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.86g] — 2026-08-30 05:32:47 PM EST — v03.86r
+
+### Changed
+- **The line at the bottom of your Morning Digest now reads across two sides.** On the left, what the edition is and how wide a net it cast — *Amber = Analysis by Gemini · 15 relevant of 104 scanned*. On the right, the byline: *Developed by Jon Yang*. The **View More** link keeps its own line underneath
+- On a narrow phone the left-hand run wraps onto a second line while the byline stays pinned to the right, so the footer reads correctly at every width
 
 ## [v01.85g] — 2026-08-30 04:34:20 PM EST — v03.85r
 

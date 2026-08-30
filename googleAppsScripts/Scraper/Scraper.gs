@@ -1,4 +1,4 @@
-var VERSION = "v01.85g";
+var VERSION = "v01.86g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4714,38 +4714,60 @@ function scRenderDigestNightInk_(d) {
       + '" style="font-size:11px;font-weight:600;color:#f2a33c;text-decoration:none;">'
       + 'View More (' + held + ') →</a>'
     : '';
-  // One stacked block, not a two-column row. The old footer needed a media query
-  // to stack on a phone, and a query that can be stripped is not something a
-  // layout should depend on. Stacked unconditionally it is correct at every
-  // width with no CSS at all.
+  // The left half of the footer: what the edition is and how wide a net it
+  // cast, in one run.
+  //
+  // Built as a list joined with ' · ' rather than concatenated with leading
+  // separators, because two of the three parts are conditional. Written the
+  // other way, an edition with no analysis in it opened its footer with a
+  // dangling '· 15 relevant of 104 scanned' — a separator with nothing on its
+  // left. A join cannot express that.
+  //
+  // What is NOT here: the shown-of-relevant count and the 'N more held back by
+  // the per-section caps' clause that used to run along this line. Those are
+  // desk telemetry — they answer "how did the pipeline do today", which the
+  // subscriber did not ask and cannot act on, and printing "14 of 15" invited
+  // the reading that the edition was keeping something back. They moved to the
+  // News Stand (see listDigests' Shown and Held Back columns).
+  //
+  // Relevant-of-scanned is a different claim and stays: 104 stories read, 15
+  // worth the reader's morning. `relevant` is the whole relevant set, held-back
+  // items included, which is what keeps it consistent with the "View More"
+  // link — that link's N is a subset of this count, not a contradiction of it.
+  var footLeft = [];
+  if (hasAnalysis) {
+    footLeft.push('<span style="color:#f2a33c;">Amber = Analysis'
+      + (aiBrand ? ' by ' + esc(aiBrand) : '') + '</span>');
+  }
+  footLeft.push(Number(d.counts.relevant) + ' relevant of '
+    + Number(d.counts.intake) + ' scanned');
+  // Kept, and deliberately not folded into the credit above: these two say the
+  // summaries are NOT the model's work, which is a claim about the content in
+  // front of the reader rather than an attribution.
+  if (d.aiNote) footLeft.push('summaries in fallback mode');
+  else if (d.aiSoftNote) footLeft.push('a few summaries fell back to source text');
+
+  // A two-cell table row, not CSS columns. A previous version of this footer
+  // was a two-column layout that relied on a media query to stack on a phone,
+  // and was rewritten as one stacked block for a good reason: Gmail drops the
+  // whole <style> element when it contains anything it does not support, and a
+  // layout that depends on a query that can be stripped is not a layout.
+  //
+  // A table has neither problem. align="left"/align="right" are HTML
+  // attributes, not CSS, so nothing can strip them, and no query is needed at
+  // any width: when the left cell runs out of room it wraps inside its own cell
+  // and the byline stays pinned right. nowrap on the right cell keeps the
+  // byline itself from breaking mid-phrase, and the left padding guarantees a
+  // gutter so the two runs can never touch.
+  var footCell = 'font-size:11px;line-height:1.5;color:#8a919d;' + sans;
   html += '<div style="border-top:3px double #d8dbe1;margin-top:9px;padding-top:11px;">'
-    + '<div class="ni-foot" style="font-size:11px;line-height:1.5;color:#8a919d;">'
-    // What used to run along this line was the full coverage arithmetic —
-    // SHOWN of relevant, scanned, and N more held back by the per-section caps.
-    // The shown/held-back half of that is desk telemetry: it answers "how did
-    // the pipeline do today", which the subscriber did not ask and cannot act
-    // on, and printing "14 of 15" invited the reading that the edition was
-    // keeping something from them. That half moved to the News Stand (see
-    // listDigests' Shown and Held Back columns), where the person who tunes the
-    // pipeline reads it.
-    //
-    // The relevant-of-scanned pair below is a different claim and stays: it is
-    // the edition telling the reader how wide a net it cast on their behalf —
-    // 104 stories read, 15 worth their morning — and neither number implies
-    // anything is being withheld. `relevant` is the whole relevant set, held-
-    // back items included, which is what makes it honest beside the "View More"
-    // link: the link's N is a subset of this count, not a contradiction of it.
-    + 'Developed by Jon Yang'
-    + (hasAnalysis ? ' · <span style="color:#f2a33c;">Amber = Analysis'
-        + (aiBrand ? ' by ' + esc(aiBrand) : '') + '</span>' : '')
-    + ' · ' + Number(d.counts.relevant) + ' relevant of '
-    + Number(d.counts.intake) + ' scanned'
-    // Kept, and deliberately not merged into the credit above: these two say
-    // the summaries are NOT the model's work, which is a claim about the
-    // content in front of the reader rather than an attribution.
-    + (d.aiNote ? ' · summaries in fallback mode'
-        : (d.aiSoftNote ? ' · a few summaries fell back to source text' : ''))
-    + '</div>'
+    + '<table class="ni-foot" role="presentation" width="100%" cellpadding="0" '
+    + 'cellspacing="0" border="0" style="width:100%;border-collapse:collapse;">'
+    + '<tr><td align="left" valign="top" style="' + footCell + '">'
+    + footLeft.join(' · ') + '</td>'
+    + '<td align="right" valign="top" style="' + footCell
+    + 'white-space:nowrap;padding-left:14px;">Developed by Jon Yang</td>'
+    + '</tr></table>'
     + (moreLink ? '<div style="margin-top:8px;">' + moreLink + '</div>' : '')
     + '</div>'
     + '</td></tr></table>'

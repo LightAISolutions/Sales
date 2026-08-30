@@ -3,11 +3,26 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.86r] — 2026-08-30 05:32:47 PM EST
+
+> **Prompt:** "I want the footer to be formatted like so:
+>
+> * Left-aligned: "Amber = Analysis by X * Y relevant of Z scanned" where X can be Gemini or Claude depending on AI model used, Y is number of relevant articles, and Z is number of scanned articles"
+> * Right-aligned: "Developed by Jon Yang""
+
+### Changed
+
+**`googleAppsScripts/Scraper/Scraper.gs` (v01.86g)**
+- Night Ink footer is now a two-cell table row instead of one stacked run: left cell (`align="left"`) carries `Amber = Analysis by <Brand> · <relevant> relevant of <intake> scanned` plus any AI fallback note, right cell (`align="right"`, `white-space:nowrap`, 14px left gutter) carries `Developed by Jon Yang`. The `View More (N)` link keeps its own full-width row below
+- The left run is built as a `footLeft` array joined with `' · '` rather than concatenated with leading separators. Two of its three parts are conditional, and the concatenated form emitted a dangling leading `·` on an edition containing no analysis — a join cannot express that
+- Layout deliberately uses an email `<table>` with HTML `align` attributes rather than CSS columns. The previous two-column footer was replaced by a stacked block because it depended on a media query to stack on phones and Gmail drops the whole `<style>` element when it dislikes any part of it; a table needs no query at any width — the left cell wraps inside itself and the byline stays pinned right — and `align` attributes cannot be stripped
+- Verified with Playwright at 640px and 390px across four states (Gemini + analysis, Claude + soft fallback note, hard fallback with no analysis, analysis with no model label): two columns hold, no overlap, no horizontal scroll, no stray separators
 
 ## [v03.85r] — 2026-08-30 04:34:20 PM EST
 
