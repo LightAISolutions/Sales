@@ -3,11 +3,19 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.82r] — 2026-08-29 09:52:01 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Guidance search + unified glossary** (recommendation #6 from the v03.76r module audit, `Profiler.html` v01.67w — client-only, rides the existing role-gated `index`/`doc` ops): a search box atop the guidance library (`gdFetchAllDocs` one-time doc cache, `gdSecText` recursive string flattener so tables/cards/drills/notes/sales angles are all searchable, `gdSearchHits` ranking title/term matches first, highlighted snippets, hit click → `ovGuideLoadDoc` with a new scroll-to-section argument), and a "📖 Unified glossary" view merging all modules' terms alphabetically with duplicate terms grouped per-module (`gdShowGlossary`, source chips opening each module's glossary)
+- `.claude/rules/industry-guidance.md` step 4 documents both features
 
 ## [v03.81r] — 2026-08-29 09:47:21 PM EST
 

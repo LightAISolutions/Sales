@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.66w">
+  <meta name="build-version" content="v01.67w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -945,6 +945,23 @@
     .ov-gd-mentions .chip { background: transparent; border: 1px solid var(--ov-line2); color: var(--ov-paper);
       border-radius: 6px; padding: 4px 9px; margin: 0 6px 6px 0; cursor: pointer; font: 11px var(--ov-mono); }
     .ov-gd-mentions .chip:hover { border-color: #4f83e6; color: #4f83e6; }
+    /* Guidance search + unified glossary (v01.67w) */
+    .gd-search { display: block; width: 100%; box-sizing: border-box; margin: 14px 0 4px;
+      background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 8px;
+      color: var(--ov-paper); padding: 10px 13px; font: 13px var(--ov-mono); }
+    .gd-search:focus { outline: none; border-color: var(--ov-gold); }
+    .gd-gloss-btn { background: transparent; border: 1px solid var(--ov-line2); color: var(--ov-muted);
+      border-radius: 7px; padding: 6px 12px; margin: 8px 0 0; cursor: pointer; font: 11.5px var(--ov-mono); }
+    .gd-gloss-btn:hover { border-color: var(--ov-gold); color: var(--ov-gold); }
+    .gd-hit { cursor: pointer; }
+    .gd-hit .path { font: 600 10.5px/1 var(--ov-mono); letter-spacing: 0.1em; color: var(--ov-gold);
+      text-transform: uppercase; margin-bottom: 6px; }
+    .gd-hit .snip { font: 13px/1.6 var(--ov-serif); color: var(--ov-paper); }
+    .gd-hit .snip .hl { color: var(--ov-ink); background: var(--ov-gold); border-radius: 3px; padding: 0 3px; }
+    .gd-gl .src { display: inline-block; font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.08em;
+      color: var(--ov-muted); border: 1px solid var(--ov-line2); border-radius: 5px;
+      padding: 2px 6px; margin: 6px 6px 0 0; cursor: pointer; }
+    .gd-gl .src:hover { border-color: var(--ov-gold); color: var(--ov-gold); }
     .gd-callout { border: 1px solid rgba(216,180,90,0.4); border-radius: 10px; padding: 4px 16px 10px; }
     .gd-callout.warn { border-color: rgba(224,122,139,0.45); }
     .gd-note { font: 12.5px/1.6 var(--ov-mono); color: var(--ov-muted); margin-top: 10px;
@@ -5800,6 +5817,41 @@ function ovReloadFresh() {
         shell.innerHTML = '';
         shell.appendChild(gdCloseBtn());
         shell.appendChild(ovEl('div', 'gd-kicker', 'Industry Guidance · Library'));
+        // Search + unified glossary (v01.67w) — typing ≥2 chars hides the
+        // card list and searches every module's content; clearing restores it.
+        var search = document.createElement('input');
+        search.type = 'search'; search.className = 'gd-search';
+        search.placeholder = 'Search all modules — sections, tables, drills, glossary…';
+        shell.appendChild(search);
+        var gbtn = ovEl('button', 'gd-gloss-btn', '📖 Unified glossary — every term across all modules');
+        gbtn.type = 'button';
+        gbtn.addEventListener('click', function() { gdShowGlossary(shell); });
+        shell.appendChild(gbtn);
+        var results = ovEl('div');
+        shell.appendChild(results);
+        var cardsWrap = ovEl('div');
+        shell.appendChild(cardsWrap);
+        search.addEventListener('input', function() {
+          var q = search.value.trim();
+          results.innerHTML = '';
+          if (q.length < 2) { cardsWrap.style.display = ''; return; }
+          cardsWrap.style.display = 'none';
+          results.appendChild(ovEl('p', 'ov-loading', 'Searching…'));
+          gdFetchAllDocs(function(docs) {
+            if (search.value.trim() !== q) return;
+            results.innerHTML = '';
+            if (!docs) { results.appendChild(ovEl('p', 'ov-loading', 'Could not load module content for search.')); return; }
+            var hits = gdSearchHits(q, docs);
+            if (!hits.length) { results.appendChild(ovEl('p', 'ov-empty', 'No matches for "' + q + '".')); return; }
+            hits.forEach(function(h) {
+              var hitCard = ovEl('div', 'gd-sec gd-hit');
+              hitCard.appendChild(ovEl('div', 'path', h.docTitle + ' › ' + h.secTitle));
+              hitCard.appendChild(gdSnippet(h, q));
+              hitCard.addEventListener('click', function() { ovGuideLoadDoc(h.docId, shell, h.secId); });
+              results.appendChild(hitCard);
+            });
+          });
+        });
         // Topic lanes: modules arrive grouped from the backend (each carries a
         // `group` label); a header renders whenever the lane changes. Docs
         // without a group (older backend) simply render ungrouped.
@@ -5808,7 +5860,7 @@ function ovReloadFresh() {
           var grp = d.group || '';
           if (grp !== lastGroup) {
             lastGroup = grp;
-            if (grp) shell.appendChild(ovEl('div', 'gd-group', grp));
+            if (grp) cardsWrap.appendChild(ovEl('div', 'gd-group', grp));
           }
           var card = ovEl('div', 'gd-sec');
           var h = ovEl('h3', null, d.title);
@@ -5820,7 +5872,7 @@ function ovReloadFresh() {
           card.appendChild(ovEl('p', null, d.short || ''));
           card.style.cursor = 'pointer';
           card.addEventListener('click', function() { ovGuideLoadDoc(d.id, shell); });
-          shell.appendChild(card);
+          cardsWrap.appendChild(card);
         })(res.docs[i]);
       });
     }
@@ -5956,7 +6008,7 @@ function ovReloadFresh() {
       return c;
     }
 
-    function ovGuideLoadDoc(id, shell) {
+    function ovGuideLoadDoc(id, shell, scrollTo) {
       shell.innerHTML = '';
       shell.appendChild(ovEl('p', 'ov-loading', 'Loading module…'));
       ovGuideApi('doc', { id: id }, function(res) {
@@ -5969,6 +6021,122 @@ function ovReloadFresh() {
         }
         gdRenderDoc(res.doc, shell);
         gdLoadAdminLens(res.doc, shell);
+        if (scrollTo) {
+          var target = document.getElementById('gd-' + scrollTo);
+          if (target) target.scrollIntoView({ block: 'start' });
+        }
+      });
+    }
+
+    // PROJECT: guidance search + unified glossary (v01.67w). Entirely
+    // client-side against the role-gated index/doc ops — the six modules are
+    // fetched once per page load on first use and cached. gdSecText flattens
+    // every string a section renders (prose, tables, cards, drills, notes,
+    // sales angles) so the search sees what the reader sees.
+    var gdDocsCache = null;
+    function gdFetchAllDocs(cb) {
+      if (gdDocsCache) { cb(gdDocsCache); return; }
+      ovGuideApi('index', {}, function(res) {
+        if (!res || !res.success || !(res.docs || []).length) { cb(null); return; }
+        var ids = res.docs.map(function(d) { return d.id; });
+        var docs = [], left = ids.length, failed = false;
+        ids.forEach(function(id, i) {
+          ovGuideApi('doc', { id: id }, function(r2) {
+            if (!r2 || !r2.success) failed = true; else docs[i] = r2.doc;
+            if (--left === 0) {
+              if (failed) { cb(null); return; }
+              gdDocsCache = docs;
+              cb(docs);
+            }
+          });
+        });
+      });
+    }
+    function gdSecText(sec) {
+      var parts = [];
+      (function walk(node) {
+        if (typeof node === 'string') { parts.push(node); return; }
+        if (Array.isArray(node)) { node.forEach(walk); return; }
+        if (node && typeof node === 'object') {
+          for (var k in node) {
+            if (!node.hasOwnProperty(k)) continue;
+            if (k === 'id' || k === 'kind' || k === 'read' || k === 'moduleId' || k === 'sectionId') continue;
+            walk(node[k]);
+          }
+        }
+      })(sec);
+      return parts.join(' · ');
+    }
+    function gdSearchHits(q, docs) {
+      var needle = q.toLowerCase(), hits = [];
+      docs.forEach(function(doc) {
+        (doc.sections || []).forEach(function(sec) {
+          var text = gdSecText(sec);
+          var idx = text.toLowerCase().indexOf(needle);
+          var inTitle = String(sec.title || '').toLowerCase().indexOf(needle) !== -1;
+          if (idx === -1 && !inTitle) return;
+          hits.push({ docId: doc.id, docTitle: doc.title, secId: sec.id, secTitle: sec.title,
+                      text: text, at: idx, rank: inTitle ? 0 : 1 });
+        });
+        (doc.glossary || []).forEach(function(g) {
+          var blob = g.t + ' — ' + g.d;
+          var gidx = blob.toLowerCase().indexOf(needle);
+          if (gidx === -1) return;
+          hits.push({ docId: doc.id, docTitle: doc.title, secId: 'glossary', secTitle: 'Glossary · ' + g.t,
+                      text: blob, at: gidx, rank: g.t.toLowerCase().indexOf(needle) !== -1 ? 0 : 2 });
+        });
+      });
+      hits.sort(function(a, b) { return a.rank - b.rank; });
+      return hits.slice(0, 40);
+    }
+    function gdSnippet(hit, q) {
+      var el = ovEl('div', 'snip');
+      if (hit.at === -1) { el.textContent = hit.text.slice(0, 140) + (hit.text.length > 140 ? '…' : ''); return el; }
+      var s = Math.max(0, hit.at - 60), e = Math.min(hit.text.length, hit.at + q.length + 80);
+      if (s > 0) el.appendChild(document.createTextNode('…'));
+      el.appendChild(document.createTextNode(hit.text.slice(s, hit.at)));
+      el.appendChild(ovEl('span', 'hl', hit.text.slice(hit.at, hit.at + q.length)));
+      el.appendChild(document.createTextNode(hit.text.slice(hit.at + q.length, e)));
+      if (e < hit.text.length) el.appendChild(document.createTextNode('…'));
+      return el;
+    }
+    function gdShowGlossary(shell) {
+      shell.innerHTML = '';
+      shell.appendChild(ovEl('p', 'ov-loading', 'Loading all modules…'));
+      gdFetchAllDocs(function(docs) {
+        shell.innerHTML = '';
+        var back = ovEl('button', 'gd-gloss-btn', '← Library');
+        back.type = 'button';
+        back.addEventListener('click', function() { ovGuideOpen(); });
+        shell.appendChild(back);
+        shell.appendChild(gdCloseBtn());
+        shell.appendChild(ovEl('div', 'gd-kicker', 'Industry Guidance · Unified Glossary'));
+        if (!docs) { shell.appendChild(ovEl('p', 'ov-loading', 'Could not load module content.')); return; }
+        var byTerm = {};
+        docs.forEach(function(doc) {
+          (doc.glossary || []).forEach(function(g) {
+            var key = String(g.t).toLowerCase();
+            if (!byTerm[key]) byTerm[key] = { t: g.t, defs: [] };
+            byTerm[key].defs.push({ d: g.d, docId: doc.id, docTitle: doc.title });
+          });
+        });
+        var keys = Object.keys(byTerm).sort();
+        shell.appendChild(ovEl('div', 'gd-read', keys.length + ' terms across ' + docs.length
+          + ' modules — a term defined in several modules shows every definition with its source'));
+        var grid = ovEl('div', 'gd-gloss');
+        keys.forEach(function(k) {
+          var ent = byTerm[k], cell = ovEl('div', 'gd-gl');
+          cell.appendChild(ovEl('div', 't', ent.t));
+          ent.defs.forEach(function(def) {
+            cell.appendChild(ovEl('div', 'd', def.d));
+            var src = ovEl('span', 'src', def.docTitle);
+            src.title = 'Open this module’s glossary';
+            src.addEventListener('click', function() { ovGuideLoadDoc(def.docId, shell, 'glossary'); });
+            cell.appendChild(src);
+          });
+          grid.appendChild(cell);
+        });
+        shell.appendChild(grid);
       });
     }
 
