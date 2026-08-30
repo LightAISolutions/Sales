@@ -2,6 +2,18 @@
  "schemaVersion": 1,
  "reports": [
   {
+   "id": "s154-listed-bess-suppliers--risk--2026-08-29",
+   "title": "§154-Listed BESS Suppliers — US Market-Access Risk",
+   "type": "risk",
+   "topic": "US market-access, policy, and counterparty risk across the covered FY2024 NDAA §154(b)-listed battery makers",
+   "date": "2026-08-29",
+   "scopeLabel": "5 covered §154(b)-listed makers",
+   "companies": 5,
+   "citations": 24,
+   "status": "current",
+   "overlayModules": ["bess-bankability-2026-08", "china-policy-stack-2026-08", "power-infra-aidc-2026-08", "utility-aidc-procurement-2026-08"]
+  },
+  {
    "id": "grid-scale-bess--competitive--2026-08-29",
    "title": "Grid-Scale Battery Storage — Competitive Assessment",
    "type": "competitive",

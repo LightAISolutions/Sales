@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.78r] — 2026-08-29 09:22:40 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Generated the first overlay-bearing industry report** — `s154-listed-bess-suppliers--risk--2026-08-29` ("§154-Listed BESS Suppliers — US Market-Access Risk", risk type, intel-briefing style): 5 covered §154(b)-listed makers (CATL, BYD, Envision, EVE, Hithium — all dossiers fresh 2026-08-29; Gotion recorded as a coverage gap), 6 confidence-tagged key judgments, 4 sections (exposure map, the policy fence, counterparty files, lanes-as-used), 6 indicators, 24 citations copied verbatim from dossier `sources[]`. Registered in `reports-index.json` with `overlayModules`
+- **Five `guidanceOverlays[]` restore the admin-only company lens** the v03.76r scrub removed from the shared modules — anchored to China Policy (`levers`, `interaction`), Bankability (`counterparty`), Power Infrastructure (`markets`), and Utility-AIDC (`channels`), carrying the current company-specific reads (Hithium's third listing lapse + equity freeze + ~10 CATL suits, EVE's reported §1260H addition and §337 action, the AESC/Fixx divest-to-comply lane, the Jupiter/Peak-Energy account defense)
+- Verified: `check-profiler-reports.py` clean (0 errors; overlay anchors validated against the live modules), plus a Playwright render of the real report overlays inside the China-policy module
 
 ## [v03.77r] — 2026-08-29 09:12:08 PM EST
 
