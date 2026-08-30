@@ -1,4 +1,4 @@
-var VERSION = "v01.87g";
+var VERSION = "v01.88g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -958,6 +958,14 @@ var SCRAPER_DIGEST_TO_ADDRS = ['jonyang92@gmail.com', 'lightaisolution@gmail.com
 // Active-subscriber count that triggers the one-time quota heads-up email
 // (scSubsMilestoneCheck_). Deliberately no UI surface.
 var SCRAPER_SUBS_MILESTONE = 15;
+// ── Phase 2 reliability (2026-08-30) ────────────────────────────────────
+// Delivery looks back this many days for built-but-undelivered editions.
+// Every candidate check used to be "dated today", so an edition that missed
+// its day — a send failure at 23:5x, a weekend manual build, a day the
+// triggers were dead — was never delivered at all: the give-up was silent
+// and permanent at midnight. Three days spans a weekend, and the one-email-
+// per-edition-per-day guard still applies within each day's group.
+var SCRAPER_DIGEST_DELIVER_WINDOW_DAYS = 3;
 // ── Per-edition summary lens (developer 2026-08-28) ─────────────────────
 // Every summary used to close from one fixed viewpoint, because the prompt
 // hardcoded "a US grid-scale battery (BESS) seller". That is right for the
@@ -4066,7 +4074,7 @@ function scAiTerminal_(msg) {
   return !scAiRetryable_(m) && !scAiSoftFail_(m);
 }
 
-function scAiWithRetry_(prompt, maxTokens) {
+function scAiWithRetry_(prompt, maxTokens, deadlineMs) {
   var attempt = 0;
   for (;;) {
     try {
@@ -4074,7 +4082,16 @@ function scAiWithRetry_(prompt, maxTokens) {
     } catch (err) {
       var msg = String((err && err.message) || err);
       if (!scAiRetryable_(msg) || attempt >= SCRAPER_AI_RETRY_BACKOFF_MS.length) throw err;
-      try { Utilities.sleep(SCRAPER_AI_RETRY_BACKOFF_MS[attempt]); } catch (sleepErr) {}
+      var wait = SCRAPER_AI_RETRY_BACKOFF_MS[attempt];
+      // Phase 2: never sleep past the caller's step budget. The full backoff
+      // ladder sleeps up to 53s inside ONE call, and the 40s step budget is
+      // only tested between batches — so a batch entering at t=39s could
+      // return at t≈95s, which is exactly what the browser's 90-second
+      // watchdog reported as "no reply after 90s" on a manual build. With
+      // the Phase 1 re-queue, giving up early costs nothing: the batch keeps
+      // its attempt count and a later pass retries it.
+      if (deadlineMs && Date.now() + wait >= deadlineMs) throw err;
+      try { Utilities.sleep(wait); } catch (sleepErr) {}
       attempt++;
     }
   }
@@ -4161,7 +4178,8 @@ function scDigestSummarizeStep_(ss, state, t0) {
           return { i: n, title: it.title, snippet: it.snippet.slice(0, 280), source: it.source };
         }));
     try {
-      var parsed = scParseJsonArray_(scAiWithRetry_(prompt, SCRAPER_DIGEST_SUMMARY_TOKENS)) || [];
+      var parsed = scParseJsonArray_(scAiWithRetry_(prompt, SCRAPER_DIGEST_SUMMARY_TOKENS,
+        t0 + SCRAPER_DIGEST_TIME_BUDGET_MS)) || [];
       var byIdx = {};
       parsed.forEach(function(p) {
         if (p && typeof p.i === 'number') {
@@ -4249,7 +4267,8 @@ function scDigestSummarizeStep_(ss, state, t0) {
           + JSON.stringify(leadPool.slice(0, 6).map(function(it, n) {
               return { i: n, title: it.title, summary: it.summary || it.snippet.slice(0, 200) };
             }));
-        var lr = scParseJsonArray_(scAiWithRetry_(lp, 1200)) || [];
+        var lr = scParseJsonArray_(scAiWithRetry_(lp, 1200,
+          t0 + SCRAPER_DIGEST_TIME_BUDGET_MS)) || [];
         if (lr[0]) {
           state.leadIdx = Math.max(0, Math.min(5, Number(lr[0].lead) || 0));
           state.leadText = scStr_(lr[0].text, 1200);
@@ -4963,7 +4982,7 @@ function scDigestScheduledTick_() {
   if (state && state.phase !== 'done' && state.date === clock.date) {
     var edId = state.editionId;
     var info = null;
-    try { info = scDigestStep_(edId); } catch (e0) {}
+    try { info = scDigestStep_(edId); } catch (e0) { scDigestLogErr_('tick.step', e0); }
     // The tick can be the pass that finishes a build the 06:00 run started, so
     // the marker has to be written here too or the schedule would re-run it.
     if (info && info.done) scMarkSchedBuilt_(edId, clock.date);
@@ -4974,7 +4993,7 @@ function scDigestScheduledTick_() {
   for (var i = 0; i < editions.length; i++) {
     if (scEditionDue_(editions[i], clock)) {
       var due = editions[i].id, r = null;
-      try { r = scDigestStep_(due); } catch (e1) {}
+      try { r = scDigestStep_(due); } catch (e1) { scDigestLogErr_('tick.start', e1); }
       if (r && r.done) scMarkSchedBuilt_(due, clock.date);
       return;
     }
@@ -4982,7 +5001,7 @@ function scDigestScheduledTick_() {
   // Nothing building, nothing due — Tier 3 of the retry ladder. Give any
   // rendered-but-incomplete edition another pass; past the hard stop, ship
   // the best available copy (or alert if a due edition never rendered).
-  try { scDigestRepairPass_(ss, 90000); } catch (rpErr) {}
+  try { scDigestRepairPass_(ss, 90000); } catch (rpErr) { scDigestLogErr_('tick.repair', rpErr); }
 }
 
 /** ---- Delivery (separated from building, 2026-08-28) ------------------
@@ -5001,7 +5020,17 @@ function scDigestScheduledTick_() {
     an edition must never be mailed degraded while there is still time to fix
     it (and must always eventually be mailed: at the hard stop the hold ends
     unconditionally). Recipients are split to: (the developer's addresses) and
-    bcc: (everyone else) so no subscriber ever sees another's address. */
+    bcc: (everyone else) so no subscriber ever sees another's address.
+
+    Phase 2 widened the candidate window from "dated today" to "dated within
+    SCRAPER_DIGEST_DELIVER_WINDOW_DAYS and undelivered" — the old date check
+    was a silent midnight give-up: an edition that missed its day was never
+    delivered at all. The one-email-per-edition guard now groups per edition
+    per DAY, the completeness hold applies only to today's rows (an older
+    row's repair day is over — it ships as it stands), and each send is
+    preceded by a MailApp.getRemainingDailyQuota() check so a quota-starved
+    day holds the mail (and alerts once) rather than failing into the same
+    silent catch that used to eat send errors. */
 function scDigestDeliverPending_(ss, opts) {
   opts = opts || {};
   var clock = scDigestClock_(new Date());
@@ -5048,6 +5077,13 @@ function scDigestDeliverPending_(ss, opts) {
   var nos = {};
   try { nos = scIssueNumbers_(ss); } catch (noErr) {}
 
+  // The delivery window: today back through the last N days (inclusive),
+  // nothing future-dated. String comparison is safe — scIssueDateKey_ is
+  // always yyyy-MM-dd in the desk timezone.
+  var cutoff = Utilities.formatDate(
+    new Date(Date.now() - SCRAPER_DIGEST_DELIVER_WINDOW_DAYS * 86400000),
+    SCRAPER_DIGEST_TZ, 'yyyy-MM-dd');
+
   // ONE email per edition per day, however many rows are stored.
   //
   // Under the current drop guard a rebuild replaces that day's row, so this
@@ -5068,9 +5104,14 @@ function scDigestDeliverPending_(ss, opts) {
   var groups = {};
   for (var g = 0; g < n; g++) {
     if (!String(meta[g][0] || '').trim()) continue;
-    if (scIssueDateKey_(meta[g][1]) !== clock.date) continue;
+    var gDate = scIssueDateKey_(meta[g][1]);
+    if (gDate > clock.date || gDate < cutoff) continue;
     var gEd = String(eds[g][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
-    var grp = groups[gEd] || (groups[gEd] = { rows: [], sentAlready: false });
+    // Grouped per edition per DAY now that the window spans several days —
+    // Friday's undelivered edition and Monday's are different papers, not
+    // duplicates of each other.
+    var gKey = gEd + '|' + gDate;
+    var grp = groups[gKey] || (groups[gKey] = { rows: [], sentAlready: false });
     var gd = deliv[g][0];
     if (gd instanceof Date) grp.sentAlready = true;
     grp.rows.push({ i: g, at: meta[g][2] ? new Date(meta[g][2]).getTime() : 0 });
@@ -5089,12 +5130,20 @@ function scDigestDeliverPending_(ss, opts) {
     chosen[best.i] = true;
   }
 
+  // Phase 2: quota pre-check. One read up front, decremented per send — a
+  // day whose remaining recipient allowance cannot cover the next edition
+  // HOLDS it (retried when the quota refreshes) instead of throwing into the
+  // per-row catch. null = the API itself failed; proceed as before.
+  var quota = null;
+  try { quota = MailApp.getRemainingDailyQuota(); } catch (qErr) { quota = null; }
+
   var sent = 0, held = 0;
   for (var i = 0; i < n; i++) {
     var id = String(meta[i][0] || '').trim();
     if (!id) continue;
     if (String(deliv[i][0] || '').trim()) continue;              // already delivered
-    if (scIssueDateKey_(meta[i][1]) !== clock.date) continue;    // only today's
+    var rowDate = scIssueDateKey_(meta[i][1]);
+    if (rowDate > clock.date || rowDate < cutoff) continue;      // delivery window
     var edId = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
     var row = i + 2;
     // A scheduled build for this edition is still running today. The 06:00 run
@@ -5102,8 +5151,10 @@ function scDigestDeliverPending_(ss, opts) {
     // 07:00 — and this row is the one it is about to replace. Sending it now
     // would deliver exactly the stale copy the rebuild exists to discard.
     // Left pending, not stamped: the pass that follows the finished build
-    // picks it up.
-    if (scDigestBuildInFlight_(edId, clock.date)) { held++; continue; }
+    // picks it up. Keyed on the ROW's date — a build running today must hold
+    // today's row (it is about to replace it) but has no claim on an older
+    // undelivered edition, which ships as it stands.
+    if (scDigestBuildInFlight_(edId, rowDate)) { held++; continue; }
     if (!chosen[i]) {
       // Superseded by a newer build of the same day, or the day already mailed.
       sheet.getRange(row, 14).setValue('superseded');
@@ -5117,7 +5168,11 @@ function scDigestDeliverPending_(ss, opts) {
     // by then the repair pass has re-rendered a best-available copy with the
     // honest footer note, and if it could not (state lost), late-but-sent
     // still beats never.
+    // Today's rows only: an older row's repair day is over, so holding it
+    // for a repair that can never run again would be the midnight give-up
+    // back under another name.
     if (comp && String(comp[i][0] || '') === 'no' && !opts.force
+        && rowDate === clock.date
         && clock.hour < SCRAPER_DIGEST_HARD_STOP_HOUR) {
       held++;
       continue;
@@ -5128,6 +5183,20 @@ function scDigestDeliverPending_(ss, opts) {
       // reconsider the same row every hour, and say why in the cell — a silent
       // skip is exactly how "it just did not email" goes undiagnosed.
       sheet.getRange(row, 14).setValue('no-recipients');
+      held++;
+      continue;
+    }
+    // Quota gate: hold rather than half-send. Editions later in the loop are
+    // held by the same check, so the day's remaining allowance is never
+    // burned on a partial roster. Alerted once per day — a quota-starved
+    // morning must not be silent.
+    if (quota != null && quota < rcpt.length) {
+      scDigestAlertOnce_(clock, 'quota',
+        'Morning Digest: daily email quota cannot cover the next edition',
+        'Remaining MailApp quota is ' + quota + ' recipients, but the next '
+        + 'pending edition needs ' + rcpt.length + '. It stays held and will '
+        + 'send when the quota refreshes (quotas reset roughly daily). The '
+        + 'quota is shared by every script on this account.');
       held++;
       continue;
     }
@@ -5150,14 +5219,20 @@ function scDigestDeliverPending_(ss, opts) {
       // this edition, promote the first subscriber rather than failing.
       if (!toList.length) toList.push(bcc.shift());
       var mail = { to: toList.join(','),
-        subject: edName + ' — ' + clock.date + ' (No. ' + scDigestNo_(nos[id] || 1) + ')',
+        // The edition's own date — a late-delivered Friday paper must say
+        // Friday, not the day it finally went out.
+        subject: edName + ' — ' + rowDate + ' (No. ' + scDigestNo_(nos[id] || 1) + ')',
         htmlBody: html };
       if (bcc.length) mail.bcc = bcc.join(',');
       MailApp.sendEmail(mail);
       sheet.getRange(row, 14).setValue(new Date());
       sent++;
+      if (quota != null) quota -= rcpt.length;
     } catch (mailErr) {
-      // Leave Delivered empty so the next pass retries rather than dropping it.
+      // Leave Delivered empty so the next pass retries rather than dropping
+      // it — but no longer silently: the trail is what makes "it just did
+      // not email" answerable (Phase 2).
+      scDigestLogErr_('deliver.send', mailErr);
       held++;
     }
   }
@@ -5229,9 +5304,11 @@ function scDigestMorningRun() {
     var rep = null;
     try {
       rep = scDigestRepairPass_(ss, SCRAPER_DIGEST_RUN_BUDGET_MS - (Date.now() - t0));
-    } catch (rpErr) {}
+    } catch (rpErr) { scDigestLogErr_('build.repair', rpErr); }
     if (rep && rep.stillIncomplete && !more) scDigestLadderNext_(clock);
-    try { scDigestDeliverPending_(ss); } catch (delErr) {}
+    try { scDigestDeliverPending_(ss); } catch (delErr) { scDigestLogErr_('build.deliver', delErr); }
+    scDigestNoteRun_('build', more ? 'out of budget — continuing'
+      : (rep && rep.stillIncomplete ? 'finished, ' + rep.stillIncomplete + ' incomplete' : 'finished'));
   } finally {
     lock.releaseLock();
   }
@@ -5253,7 +5330,9 @@ function scDigestDeliveryRun() {
     ensureScraperTabs_(ss);
     var clock = scDigestClock_(new Date());
     if (SCRAPER_DIGEST_RUN_DAYS.indexOf(clock.isoDay) === -1) return;
-    scDigestDeliverPending_(ss);
+    var dres = scDigestDeliverPending_(ss);
+    scDigestNoteRun_('delivery',
+      'sent ' + ((dres && dres.sent) || 0) + ', held ' + ((dres && dres.held) || 0));
   } finally { lock.releaseLock(); }
 }
 
@@ -5276,7 +5355,12 @@ function scDigestScheduleContinuation_(delayMs) {
   try {
     ScriptApp.newTrigger('scDigestContinueRun').timeBased()
       .after(Math.max(60000, Number(delayMs) || 60000)).create();
-  } catch (trigErr) { /* no scriptapp scope — the hourly tick still catches up */ }
+  } catch (trigErr) {
+    // No scriptapp scope — the hourly tick still catches up, but this is the
+    // failure that silently kills every continuation and Tier 2 rung, so it
+    // must leave a trace (Phase 2).
+    scDigestLogErr_('continuation', trigErr);
+  }
 }
 
 /** Spent one-off continuations stay in the project's trigger list forever
@@ -5360,7 +5444,8 @@ function scDigestRepairPass_(ss, budgetMs) {
       var finished = false, becameComplete = false;
       while ((Date.now() - t0) < budget) {
         var info = null;
-        try { info = scDigestStepWithRetry_(edId); } catch (rErr) { break; }
+        try { info = scDigestStepWithRetry_(edId); }
+        catch (rErr) { scDigestLogErr_('repair.step', rErr); break; }
         if (info && info.done) {
           finished = true;
           becameComplete = !!(info.detail && info.detail.complete);
@@ -5399,7 +5484,7 @@ function scDigestRepairPass_(ss, budgetMs) {
           + 'ship best-available. Check the Apps Script executions log and '
           + 'the AI provider configuration.');
       }
-    } catch (mErr) {}
+    } catch (mErr) { scDigestLogErr_('repair.norender', mErr); }
   }
   return out;
 }
@@ -5420,7 +5505,7 @@ function scDigestFinalizeBestAvailable_(ss, st) {
     st.leadDone = true;          // ship whatever lead exists; spend no more on it
     st.phase = 'render';
     scDigestSaveState_(st);
-  } catch (fErr) {}
+  } catch (fErr) { scDigestLogErr_('repair.finalize', fErr); }
 }
 
 /** Tier 1 of the retry ladder: three immediate attempts at one step, same
@@ -5465,6 +5550,7 @@ function scDigestLadderNext_(clock) {
     rung. */
 function scDigestLadderOnFailure_(clock, err) {
   var msg = String((err && err.message) || err || '');
+  scDigestLogErr_('build.step', err);
   if (scAiTerminal_(msg)) {
     scDigestAlertOnce_(clock, 'terminal',
       'Morning Digest: AI provider fault needs attention',
@@ -5491,6 +5577,53 @@ function scDigestAlertOnce_(clock, kind, subject, body) {
     kinds.push(kind);
     props.setProperty('scDigestAlerts', clock.date + '|' + kinds.join('|'));
   } catch (alErr) {}
+}
+
+/** Phase 2: a bounded trail for the scheduled path. Every catch that used to
+    swallow an error silently now leaves one line here — a Script Property
+    ring buffer, newest last, capped — so "it just didn't run" is answerable
+    from the app (goLiveStatus serves the 24h tail) without opening the Apps
+    Script executions log. */
+function scDigestLogErr_(where, err) {
+  try {
+    var props = PropertiesService.getScriptProperties();
+    var arr = [];
+    try { arr = JSON.parse(props.getProperty('scDigestErrLog') || '[]'); } catch (pErr) { arr = []; }
+    arr.push({ t: new Date().toISOString(), w: String(where || '').slice(0, 40),
+               m: String((err && err.message) || err || '').slice(0, 160) });
+    if (arr.length > 20) arr = arr.slice(arr.length - 20);
+    props.setProperty('scDigestErrLog', JSON.stringify(arr));
+  } catch (lgErr) {}
+}
+
+/** Phase 2: the "last scheduled run" stamp — which scheduled entry point ran
+    last, when, and how it ended. One property, overwritten on every run;
+    goLiveStatus serves it as the health line. */
+function scDigestNoteRun_(kind, note) {
+  try {
+    PropertiesService.getScriptProperties().setProperty('DIGEST_LAST_RUN',
+      JSON.stringify({ at: new Date().toISOString(), kind: String(kind || ''),
+                       note: String(note || '').slice(0, 120) }));
+  } catch (nrErr) {}
+}
+
+/** Phase 2: deploy-webhook timestamps. The transport http_404s the browser
+    has hit are best explained by the self-update webhook swapping the
+    deployment version mid-request — an inference nothing could test, because
+    nothing recorded WHEN deploys happened. Every deploy call now logs its
+    completion time and result here (capped ring buffer), and goLiveStatus
+    serves the tail, so a client failure can be laid against the deploy
+    times and the theory confirmed or retired. */
+function scRecordDeploy_(result, via) {
+  try {
+    var props = PropertiesService.getScriptProperties();
+    var arr = [];
+    try { arr = JSON.parse(props.getProperty('scDeployLog') || '[]'); } catch (pErr) { arr = []; }
+    arr.push({ t: new Date().toISOString(), via: String(via || ''),
+               r: String(result || '').slice(0, 80) });
+    if (arr.length > 10) arr = arr.slice(arr.length - 10);
+    props.setProperty('scDeployLog', JSON.stringify(arr));
+  } catch (rdErr) {}
 }
 
 /** Advance the digest build one step (the app loops until done). */
@@ -5798,6 +5931,20 @@ function goLiveStatus(sessionToken) {
   } catch (rosterErr) {}
   var mining = { total: 0, mined: 0, pending: 0, lastMined: 0 };
   try { mining = scDossierMiningStats_(scraperSs_()); } catch (mnErr) {}
+  // Phase 2: the "last scheduled run" health line, the 24-hour error trail,
+  // and the recent deploy timestamps (what makes a transport http_404
+  // diagnosable against a deployment swap). All best-effort reads.
+  var lastRun = null, recentErrors = [], recentDeploys = [];
+  try { lastRun = JSON.parse(props.getProperty('DIGEST_LAST_RUN') || 'null'); } catch (lrErr) {}
+  try {
+    var errCut = Date.now() - 86400000;
+    recentErrors = (JSON.parse(props.getProperty('scDigestErrLog') || '[]'))
+      .filter(function(le) { return new Date(le.t).getTime() >= errCut; })
+      .slice(-5);
+  } catch (elErr) {}
+  try {
+    recentDeploys = (JSON.parse(props.getProperty('scDeployLog') || '[]')).slice(-5);
+  } catch (dlErr) {}
   var activeSubs = roster.filter(function(s) { return s.status === 'active'; });
   // Managers see full addresses (they need them to identify the right row);
   // everyone else sees them masked.
@@ -5823,6 +5970,9 @@ function goLiveStatus(sessionToken) {
     trigger: trigger,
     lastTickAgeMin: lastTick ? Math.round((Date.now() - lastTick) / 60000) : null,
     lastEditionDate: props.getProperty('DIGEST_LAST_DATE') || '',
+    lastRun: lastRun,
+    recentErrors: recentErrors,
+    recentDeploys: recentDeploys,
     mining: mining };
 }
 
@@ -6053,11 +6203,11 @@ function scSchedulerTick() {
   // Interests tab current while the digest pipeline is paused is what lets
   // the Phase 2 panel and the Phase 4 go-live start from live data. It
   // throttles itself to ~once/day and must never break the tick.
-  try { scSyncInterests_(false); } catch (interestsErr) {}
+  try { scSyncInterests_(false); } catch (interestsErr) { scDigestLogErr_('tick.interests', interestsErr); }
   // Phase 1: the one-time subscriber-milestone heads-up. Sits with the sync,
   // before the pause gate — it is about roster growth, not the pipeline, and
   // its property guard makes the steady-state cost a single property read.
-  try { scSubsMilestoneCheck_(); } catch (msErr) {}
+  try { scSubsMilestoneCheck_(); } catch (msErr) { scDigestLogErr_('tick.milestone', msErr); }
   if (!SCRAPER_SCHED_RUNS_ENABLED) return;  // pipeline paused — heartbeat only
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) return;  // a previous tick is still running
@@ -6072,7 +6222,8 @@ function scSchedulerTick() {
     // where the morning build was still running at 7:00, or the day the daily
     // triggers were missing entirely. It refuses to send before the send hour,
     // so it can never mail an edition early.
-    try { scDigestDeliverPending_(ss); } catch (delErr) {}
+    try { scDigestDeliverPending_(ss); } catch (delErr) { scDigestLogErr_('tick.deliver', delErr); }
+    scDigestNoteRun_('tick', 'ok');
     // Phase 4 go-live: the legacy Schedules-tab pipeline below stays gated off
     // (Your Morning Digest replaces it) — see SCRAPER_LEGACY_SCHEDULES_ENABLED.
     if (!SCRAPER_LEGACY_SCHEDULES_ENABLED) return;
@@ -8613,6 +8764,10 @@ function doPost(e) {
   // script with whatever is on GitHub (the source of truth), so there is no abuse vector.
   if (action === "deploy") {
     var result = pullAndDeployFromGitHub();
+    // PROJECT: Phase 2 — record when the webhook swapped the deployment, so a
+    // client-side transport failure can be laid against the deploy times
+    // (scRecordDeploy_). Runs AFTER the pull; can never gate or fail it.
+    try { scRecordDeploy_(result, 'webhook'); } catch (eDep) {}
     // Deploy-time self-registration — a brand-new project appears in the Master ACL
     // Access tab as soon as CI deploys it, without anyone having to open the app first.
     // Clear the registration throttle first so a deploy always rewrites the metadata
@@ -10115,7 +10270,11 @@ function doGet(e) {
   // protected doPost(action=deploy) handler (see its ⚠️ CRITICAL comment): it can only
   // re-pull what GitHub already contains. Do NOT add guards, secrets, or auth here.
   if (action === 'api' && ((e && e.parameter && e.parameter.op) || '') === 'deploy') {
-    return ContentService.createTextOutput(pullAndDeployFromGitHub());
+    var depResult = pullAndDeployFromGitHub();
+    // PROJECT: Phase 2 — deploy-timestamp recording, same as the doPost
+    // handler. After the pull, never gating it.
+    try { scRecordDeploy_(depResult, 'get'); } catch (eDep2) {}
+    return ContentService.createTextOutput(depResult);
   }
 
   // PROJECT: digest click-tracking redirect (T1a). Unauthenticated by design —

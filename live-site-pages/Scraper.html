@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.67w">
+  <meta name="build-version" content="v01.68w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -5961,6 +5961,18 @@
           + (mn.pending ? ' (+' + mn.pending + ')' : ''),
           mn.pending ? 'warn' : 'ok');
       }
+      // The "last scheduled run" health line (Phase 2): when the schedule
+      // last actually did anything, and whether the last 24h left errors in
+      // the trail — the answer to "did it just not run?" without opening the
+      // Apps Script executions log.
+      if (gl.lastRun && gl.lastRun.at) {
+        var lrMin = Math.max(0, Math.round((Date.now() - new Date(gl.lastRun.at).getTime()) / 60000));
+        var lrAge = lrMin < 60 ? lrMin + 'm ago' : Math.round(lrMin / 60) + 'h ago';
+        var lrErrs = (gl.recentErrors || []).length;
+        html += tile('Last scheduled run',
+          (gl.lastRun.kind || 'run') + ' ' + lrAge + (lrErrs ? ' · ' + lrErrs + ' err/24h' : ''),
+          lrErrs ? 'warn' : 'ok');
+      }
     }
     // The whole archive, not the page currently loaded — the News Stand
     // pages its results, so _wdDigests.length is a window, not a total.
@@ -9704,6 +9716,14 @@
       status.textContent = '';
       scToast('Digest build failed (' + scEsc(msg) + '). Please try again.', true);
     }
+    // Phase 2: the build is resumable server-side, so a transport failure is
+    // not a build failure. "no reply after 90s" in particular usually means
+    // the step overran its budget and is STILL WORKING — declaring failure
+    // threw away a build that was going fine, and calling runDigestNow again
+    // simply resumes from the saved state. Bounded, so a genuinely dead
+    // backend still fails visibly after three consecutive misses; any
+    // successful reply resets the allowance.
+    var transportMisses = 0;
     function stepLoop() {
       // The pipeline is resumable across steps, so the edition is fixed at the
       // START of a build and reused for every step — re-reading the picker
@@ -9711,6 +9731,7 @@
       _gasPost({ action: 'runDigestNow', token: scToken(), editionId: runEditionId })
         .then(function(data) {
           if (!data || !data.success) { fail(scErrMsg(data && data.error)); return; }
+          transportMisses = 0;
           status.textContent = 'Phase: ' + data.phase + ' · kept ' + data.kept
             + ' of ' + data.fetched + ' scanned'
             + (data.aiNote ? ' · summaries in fallback mode' : '');
@@ -9724,7 +9745,20 @@
             setTimeout(stepLoop, 600);
           }
         })
-        .catch(function(err) { fail(String((err && err.message) || err)); });
+        .catch(function(err) {
+          var msg = String((err && err.message) || err);
+          if (transportMisses < 3
+              && /no reply after 90s|http_(404|429|5\d\d)|failed to fetch|networkerror|load failed/i.test(msg)) {
+            transportMisses++;
+            status.textContent = 'Connection hiccup (' + msg + ') — resuming ('
+              + transportMisses + '/3)…';
+            // Grows so an overrunning server call has time to finish before
+            // the resume lands on it.
+            setTimeout(stepLoop, 5000 * transportMisses);
+            return;
+          }
+          fail(msg);
+        });
     }
     scNotify_('▶ started: digest build');
     status.textContent = 'Starting the intake…';

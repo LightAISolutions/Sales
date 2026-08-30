@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 34/50`
+`Sections: 35/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.88g] — 2026-08-30 07:14:52 PM EST — v03.88r
+
+### Fixed
+- **Long retry waits no longer overrun a build step's time budget.** When there isn't room left to wait, the story simply rejoins the retry queue for a later pass — this is also what caused the "no reply after 90 seconds" errors during manual builds
+- **An edition that misses its day is now delivered late instead of never.** Delivery looks back a few days for anything built but unsent, and a late-delivered edition is dated by its own day
+
+### Added
+- **The day's remaining email allowance is checked before every send.** If it can't cover the edition, the send is held until the allowance refreshes — and the desk is alerted — rather than failing partway through
+- **Background failures now leave a visible trace.** Scheduled-run errors are recorded and shown in the app's status area alongside when the schedule last ran, and update times are logged so intermittent connection errors can be traced
 
 ## [v01.87g] — 2026-08-30 06:58:35 PM EST — v03.87r
 

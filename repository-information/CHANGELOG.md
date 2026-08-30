@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.88r] — 2026-08-30 07:14:52 PM EST
+
+> **Prompt:** "Where do I input the "op=deploy" probe? If it's through you, then execute the probe. Then, start building Phase 2."
+
+Probe executed first: the live deployment answered `Already up to date (v01.87g)`, confirming Phase 1 deployed via the webhook. Then the four approved Phase 2 items, as one commit.
+
+#### `googleAppsScripts/Scraper/Scraper.gs` — v01.88g
+
+##### Fixed
+- **Item 5 (server half): `scAiWithRetry_` accepts a `deadlineMs`** and rethrows instead of sleeping past it — the backoff ladder sleeps up to 53s inside one call while the 40s step budget is only tested between batches, so a batch entering at t=39s could return at t≈95s: the actual mechanism behind the browser's "no reply after 90s". Both digest callsites (summarize batch, lead) pass `t0 + SCRAPER_DIGEST_TIME_BUDGET_MS`. With the Phase 1 re-queue, giving up early costs nothing — the batch keeps its attempts
+- **Item 6: delivery candidates widen from "dated today" to the last `SCRAPER_DIGEST_DELIVER_WINDOW_DAYS` (3) days** — the old check was a silent, permanent midnight give-up for any edition that missed its day. The one-email guard now groups per edition per DAY, the in-flight hold and the completeness hold key on the ROW's date (an older row's repair day is over — it ships as it stands), and a late-delivered edition's subject carries its own date
+
+##### Added
+- **Item 6 (quota):** `MailApp.getRemainingDailyQuota()` read once per delivery pass and decremented per send; an edition the remaining allowance cannot cover is HELD (retried when quota refreshes) with a once-per-day alert, instead of throwing into the formerly-silent send catch
+- **Item 7: the scheduled path leaves traces** — `scDigestLogErr_` (Script Property ring buffer, capped 20) wired into every meaningful swallowed catch: tick interests/milestone/deliver/step/start/repair, morning-run step (via the ladder), repair, deliver, per-row send failures, and the continuation-trigger create (the scriptapp-scope failure that silently kills the ladder). `scDigestNoteRun_` stamps the last scheduled run (`build` / `tick` / `delivery` + outcome) in `DIGEST_LAST_RUN`
+- **Item 8: `scRecordDeploy_`** logs completion time, route (`webhook` / `get`) and result of every deploy call (capped 10) — called after `pullAndDeployFromGitHub()` in both the `doPost(action=deploy)` handler and the GET fallback with inline `// PROJECT:` markers, never gating the pull (Deploy Handler Protection intact)
+- **`goLiveStatus` serves the diagnostics**: `lastRun`, `recentErrors` (24-hour tail, last 5) and `recentDeploys` (last 5) — what makes the transport `http_404`-vs-deploy-swap theory finally testable
+
+#### `live-site-pages/Scraper.html` — v01.68w
+
+##### Fixed
+- **Item 5 (client half): `stepLoop` resumes instead of declaring failure on a transport error** ("no reply after 90s", `http_404`/`429`/`5xx`, failed fetch) — the build is resumable server-side, so re-calling `runDigestNow` continues from saved state. Bounded at 3 consecutive misses with growing pauses (5s/10s/15s) so an overrunning server call can finish before the resume lands; any successful reply resets the allowance
+
+##### Added
+- **"Last scheduled run" health tile** in the go-live status strip: kind + age of the last scheduled run, flagged `warn` with an error count when the 24-hour trail is non-empty
 
 ## [v03.87r] — 2026-08-30 06:58:35 PM EST
 

@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 40/50`
+`Sections: 41/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.68w] — 2026-08-30 07:14:52 PM EST — v03.88r
+
+### Fixed
+- **A digest build no longer gives up over a connection hiccup.** If the server stops answering mid-build — including the "no reply after 90 seconds" case — the build now quietly resumes from where it left off instead of declaring failure. It only reports a genuine failure after several consecutive misses
+
+### Added
+- **The status strip shows when the scheduled morning run last did anything** — and flags when the last day left errors behind, so "did it just not run?" is answerable at a glance
 
 ## [v01.67w] — 2026-08-30 04:17:50 PM EST — v03.84r
 
