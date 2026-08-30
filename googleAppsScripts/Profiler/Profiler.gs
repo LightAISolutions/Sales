@@ -1,4 +1,4 @@
-var VERSION = "v01.24g";
+var VERSION = "v01.25g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -380,6 +380,7 @@ function guidanceIndex_() {
     out.push({ id: docs[i].id, title: docs[i].title, short: docs[i].short,
                group: docs[i].group || '',
                date: docs[i].source && docs[i].source.date, updated: docs[i].updated,
+               reviewBy: docs[i].reviewBy || '',
                sections: (docs[i].sections || []).length });
   }
   return out;
@@ -411,6 +412,7 @@ function guidanceDocNvidia800_() {
   "repo": "repository-information/industry-guidance/ (source PDF + full analysis)"
  },
  "updated": "2026-08-22",
+ "reviewBy": "2026-11-30",
  "tiles": [
   {
    "k": "800 VDC",
@@ -1314,6 +1316,7 @@ function guidanceDocChinaPolicy_() {
   "repo": "repository-information/industry-guidance/china-policy-stack-analysis.md"
  },
  "updated": "2026-08-24",
+ "reviewBy": "2026-12-31",
  "tiles": [
   {
    "k": "55% → 75%",
@@ -1914,6 +1917,7 @@ function guidanceDocUtilityAidc_() {
   "repo": "repository-information/industry-guidance/utility-aidc-procurement-analysis.md"
  },
  "updated": "2026-08-24",
+ "reviewBy": "2026-12-10",
  "tiles": [
   {
    "k": "~474 GW",
@@ -2515,6 +2519,7 @@ function guidanceDocBankability_() {
   "repo": "repository-information/industry-guidance/bess-bankability-certification-analysis.md"
  },
  "updated": "2026-08-24",
+ "reviewBy": "2026-10-01",
  "tiles": [
   {
    "k": "UL 9540A",
@@ -3020,6 +3025,7 @@ function guidanceDocBessTech_() {
   "repo": "repository-information/industry-guidance/bess-technology-fundamentals-analysis.md"
  },
  "updated": "2026-08-24",
+ "reviewBy": "2027-02-24",
  "tiles": [
   {
    "k": "LFP",
@@ -3452,6 +3458,7 @@ function guidanceDocPowerInfra_() {
   "repo": "repository-information/industry-guidance/power-infrastructure-aidc-analysis.md"
  },
  "updated": "2026-08-24",
+ "reviewBy": "2026-12-10",
  "tiles": [
   {
    "k": "MW vs MWh",

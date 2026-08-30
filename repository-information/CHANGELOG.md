@@ -3,11 +3,28 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.80r] — 2026-08-29 09:39:08 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Freshness discipline for the Industry Guidance function** (recommendation #2 from the v03.76r module audit): every guidance module now carries a `reviewBy` date set from its own nearest dated gate (Bankability → 2026-10-01 PRC-029-1; Utility-AIDC and Power Infrastructure → 2026-12-10 Batch Zero; China Policy → 2026-12-31 Treasury PFE regs; NVIDIA 800 VDC → 2026-11-30 post-3Q26 shipments; BESS Tech → 2027-02-24 six-month default), emitted via `guidanceIndex_()` and rendered as library/header chips; report library entries and report pages show age-tier chips (fresh ≤45d / aging ≤120d / stale) from each report's date
+- **Quarterly guidance-review Routine armed** — `Industry Guidance quarterly review` (`trig_01CrhxzfBV6uKQNKpUXLLMSZ`, cron `0 13 15 1,4,7,10 *` UTC, fresh session per fire; first fire 2026-10-15): re-verifies each module's dated gates against primary sources, refreshes `updated`/`reviewBy`, validates report overlay anchors, and recommends superseding aged reports
+- `.claude/rules/industry-guidance.md` step 10 documents the field, chip thresholds, and the Routine; `.claude/rules/profiler-app.md` notes the report age chips
+
+#### `Profiler.gs` — v01.25g
+##### Added
+- `reviewBy` meta on all six guidance modules; `guidanceIndex_()` emits it
+
+#### `Profiler.html` — v01.65w
+##### Added
+- `gdReviewChip` (plain / gold ≤30d / red overdue) on guidance library cards and module headers; `rpAgeChip` (fresh/aging/stale, roster palette) on report library cards and the report view meta line
 
 ## [v03.79r] — 2026-08-29 09:30:14 PM EST
 

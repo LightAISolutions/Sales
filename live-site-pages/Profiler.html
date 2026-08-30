@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.64w">
+  <meta name="build-version" content="v01.65w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -927,6 +927,14 @@
     .gd-lens .rpt { background: transparent; border: 1px solid rgba(204,95,117,0.5); color: #cc5f75;
       border-radius: 7px; padding: 5px 11px; cursor: pointer; font: 11px var(--ov-mono); }
     .gd-lens .rpt:hover { background: rgba(204,95,117,0.14); }
+    /* Freshness chips (v01.65w) — guidance review-by state and report age tiers,
+       reusing the roster freshness palette (dev=fresh, gold=aging/soon, adv=stale/due). */
+    .gd-review, .rp-age { display: inline-block; font: 600 10px/1 var(--ov-mono); letter-spacing: 0.08em;
+      border-radius: 5px; padding: 3px 7px; margin-left: 8px; vertical-align: 1px;
+      border: 1px solid var(--ov-line2); color: var(--ov-muted); }
+    .gd-review.soon, .rp-age.aging { color: var(--ov-gold); border-color: var(--ov-gold); }
+    .gd-review.due, .rp-age.stale { color: var(--ov-adv); border-color: var(--ov-adv); }
+    .rp-age.fresh { color: var(--ov-dev); border-color: var(--ov-dev); }
     .gd-callout { border: 1px solid rgba(216,180,90,0.4); border-radius: 10px; padding: 4px 16px 10px; }
     .gd-callout.warn { border-color: rgba(224,122,139,0.45); }
     .gd-note { font: 12.5px/1.6 var(--ov-mono); color: var(--ov-muted); margin-top: 10px;
@@ -5795,13 +5803,35 @@ function ovReloadFresh() {
           var card = ovEl('div', 'gd-sec');
           var h = ovEl('h3', null, d.title);
           card.appendChild(h);
-          card.appendChild(ovEl('div', 'gd-read', (d.date || '') + ' · ' + d.sections + ' sections'));
+          var meta = ovEl('div', 'gd-read', (d.date || '') + ' · ' + d.sections + ' sections');
+          var rc = gdReviewChip(d.reviewBy);
+          if (rc) meta.appendChild(rc);
+          card.appendChild(meta);
           card.appendChild(ovEl('p', null, d.short || ''));
           card.style.cursor = 'pointer';
           card.addEventListener('click', function() { ovGuideLoadDoc(d.id, shell); });
           shell.appendChild(card);
         })(res.docs[i]);
       });
+    }
+
+    // PROJECT: freshness discipline (v01.65w). Guidance modules carry a
+    // reviewBy date (set at authoring from each module's own dated gates);
+    // the chip turns gold inside 30 days and red once the date passes.
+    // Reports age on the dossier tiers: fresh ≤45d / aging ≤120d / stale.
+    function gdReviewChip(reviewBy) {
+      if (!reviewBy) return null;
+      var days = Math.floor((new Date(reviewBy + 'T23:59:59') - Date.now()) / 86400000);
+      var cls = days < 0 ? ' due' : (days <= 30 ? ' soon' : '');
+      var txt = days < 0 ? '⚠ review due ' + reviewBy : 'review by ' + reviewBy;
+      return ovEl('span', 'gd-review' + cls, txt);
+    }
+    function rpAgeChip(dateStr) {
+      if (!dateStr) return null;
+      var days = Math.floor((Date.now() - new Date(dateStr + 'T00:00:00')) / 86400000);
+      if (days < 0) return null;
+      var tier = days <= 45 ? 'fresh' : (days <= 120 ? 'aging' : 'stale');
+      return ovEl('span', 'rp-age ' + tier, tier + ' · ' + days + 'd');
     }
 
     function gdCloseBtn() {
@@ -5947,9 +5977,12 @@ function ovReloadFresh() {
       tl.appendChild(ovEl('div', 'gd-kicker', 'Industry Guidance · Study Module'));
       tl.appendChild(ovEl('h2', 'gd-title', doc.title));
       var src = doc.source || {};
-      tl.appendChild(ovEl('div', 'gd-srcline', (src.doc || '') + ' — ' + (src.publisher || '') + ', '
+      var srcline = ovEl('div', 'gd-srcline', (src.doc || '') + ' — ' + (src.publisher || '') + ', '
         + (src.date || '') + ' · ' + (src.pages || '?') + ' pp · ' + (src.series || '')
-        + ' · analyzed ' + (doc.updated || '')));
+        + ' · analyzed ' + (doc.updated || ''));
+      var rvc = gdReviewChip(doc.reviewBy);
+      if (rvc) srcline.appendChild(rvc);
+      tl.appendChild(srcline);
       top.appendChild(tl);
       top.appendChild(gdCloseBtn());
       shell.appendChild(top);
@@ -6484,8 +6517,13 @@ function ovReloadFresh() {
           var h = ovEl('h3');
           var chip = ovEl('span', 'rp-chip', OV_RPT_TYPE_LABEL[r.type] || r.type);
           h.appendChild(chip); h.appendChild(document.createTextNode(r.title)); el.appendChild(h);
-          el.appendChild(ovEl('div', 'gd-read', (r.date || '') + (r.scopeLabel ? ' · ' + r.scopeLabel : '')
-            + (r.status === 'superseded' ? ' · superseded' : '')));
+          var line = ovEl('div', 'gd-read', (r.date || '') + (r.scopeLabel ? ' · ' + r.scopeLabel : '')
+            + (r.status === 'superseded' ? ' · superseded' : ''));
+          if (r.status !== 'superseded') {
+            var ac = rpAgeChip(r.date);
+            if (ac) line.appendChild(ac);
+          }
+          el.appendChild(line);
           el.appendChild(ovEl('div', 'rp-counts', (r.companies != null ? r.companies + ' companies · ' : '') + (r.citations != null ? r.citations + ' citations' : '')));
           el.addEventListener('click', function() { window.location.hash = 'report/' + r.id; });
           return el;
@@ -6521,6 +6559,8 @@ function ovReloadFresh() {
         meta.appendChild(document.createTextNode('generated ' + rep.generated
           + ((rep.scope && rep.scope.rationale) ? ' · ' + rep.scope.rationale : '')
           + (rep.supersedes ? ' · supersedes an earlier report' : '')));
+        var age = rpAgeChip(rep.generated);
+        if (age) meta.appendChild(age);
         main.appendChild(meta);
         if (ovCan('export')) {
           var ex = ovEl('button', 'ov-btn', 'Export report (.doc)');
