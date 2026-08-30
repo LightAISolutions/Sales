@@ -6,6 +6,49 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-30 07:26:24 PM EST
+**Repo version:** v03.88r
+**Branch:** `claude/morning-digests-footer-phase-1-ivjdg5`
+
+**What we worked on (v03.87r–v03.88r — BOTH approved reliability phases built, deployed, and probe-confirmed live):**
+
+- **v03.87r (GAS v01.87g) — Phase 1, all 8 items:** (1) soft-failed AI batches **re-queue** via per-item attempts in run state (`state.aiAttempts`, ceiling 3/pass) — no snippet is ever written as a summary before the hard stop, killing the write-off that permanently excluded items (root cause of the 2-of-3-unsummarized edition); an item skipped inside an otherwise-parsed reply re-queues too; (2) render writes a **`Complete` verdict** (Digests col 17: `yes`/`no`/`best-available`) and `scDigestDeliverPending_` HOLDS `no` rows; (3) **repair pass** (`scDigestRepairPass_`) reopens incomplete undelivered editions (re-attempts only empty-summary items; lead only if deficient), and at the **12:00 ET hard stop** (`SCRAPER_DIGEST_HARD_STOP_HOUR`) `scDigestFinalizeBestAvailable_` writes snippets, re-renders with the honest footer note and ships — plus a once-per-day alert if a due edition never rendered; (4) **retry ladder** — Tier 1: 3 in-execution attempts (`scDigestStepWithRetry_`), Tier 2: continuations at +5/+10/+20/+30/+60/+60/+60 min (monotonic per-day index, `scDigestLadderNext_`), Tier 3: hourly tick; terminal AI faults (`scAiTerminal_`) skip rungs → one alert/day; (5) tick + `scEditionDue_` gate on `SCRAPER_DIGEST_BUILD_HOUR` (6), `SCRAPER_DIGEST_RUN_HOUR` removed; (6) `SCRAPER_DIGEST_ITEMS_PER_AI_CALL` 5→3; (7) delivery `to:` = the two developer addresses (`SCRAPER_DIGEST_TO_ADDRS`), everyone else `bcc:`; (8) hidden 15-subscriber milestone alert (`scSubsMilestoneCheck_`, property `SUBS_MILESTONE_15_SENT`, no UI). Scraper sequence diagram synced + pako URL regenerated
+- **v03.88r (GAS v01.88g, page v01.68w) — Phase 2, all 4 items:** (5) `scAiWithRetry_` takes `deadlineMs` and rethrows instead of sleeping past the 40s step budget (the real mechanism behind "no reply after 90s"), and the client `stepLoop` **resumes** on transport errors (90s watchdog, `http_404`/`429`/`5xx`, failed fetch — max 3 consecutive, 5s/10s/15s pauses) instead of declaring failure; (6) delivery window widened to `SCRAPER_DIGEST_DELIVER_WINDOW_DAYS` (3) days of built-but-unsent editions (grouped per edition per day, holds keyed to the row's own date, subject dated by the edition's day) + `MailApp.getRemainingDailyQuota()` pre-check that holds + alerts when the allowance can't cover an edition; (7) `scDigestLogErr_` ring buffer (cap 20) wired into every meaningful swallowed catch in the scheduled path (incl. per-row send failures and the continuation-trigger create), `scDigestNoteRun_` stamps `DIGEST_LAST_RUN`, and the app's status strip gained a **"Last scheduled run"** tile (kind + age + 24h error count); (8) `scRecordDeploy_` timestamps every deploy (webhook + GET routes, `// PROJECT:` marked, never gating the pull) and `goLiveStatus` serves `lastRun`/`recentErrors`/`recentDeploys`
+- **Deploys verified by probe** (`?action=api&op=deploy` via curl): answered `Already up to date (v01.87g)` after Phase 1 and `Already up to date (v01.88g)` after Phase 2 — the webhook fired both times
+- Playwright smoke on `Scraper.html`: zero page errors (only the documented expected `file://`/sandbox console noise)
+
+**Where we left off:**
+
+- **The entire reliability backlog from the investigation session is delivered** — Phase 1 items 1–8 and Phase 2 items 5–8. Nothing approved remains unbuilt
+- Everything committed, merged to `main`, deployed, and probe-confirmed; working tree clean
+
+**Key decisions made:**
+
+- Snippets are written as summaries in exactly ONE place — the hard-stop finalizer; before that, an unsummarized item's cell stays empty so repair knows what to re-attempt and the sheet stays honest (the rendered HTML still shows the snippet as a display fallback)
+- Hard stop = 12:00 ET / 09:00 PT; completeness beats punctuality until then, delivery beats completeness after
+- Ladder index is monotonic per day (max 7 Tier-2 continuations/day) — interleaved failures can never multiply trigger spend
+- Delivery looks back 3 days (spans a weekend); an older row's completeness hold is waived — its repair day is over
+- Quota gate holds rather than half-sends, so the remaining allowance is never burned on a partial roster
+- Item 8's threshold + alert address, and the `to:` addresses, stay out of the public GAS changelog (they are in code + repo CHANGELOG only)
+
+**Active context:**
+
+- **Branch:** `claude/morning-digests-footer-phase-1-ivjdg5` · **Repo:** v03.88r · **Scraper:** page v01.68w / GAS v01.88g (both live)
+- Capacity: **repo CHANGELOG 98/100 — archive rotation (SHA enrichment mandatory) will trigger within ~2 pushes**; Scraper GAS changelog 35/50; Scraper page changelog 41/50
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+- Watch item: **Monday 2026-08-31's 06:00 ET scheduled run** — first real end-to-end execution, now exercising both phases unattended (ladder, completeness gate, repair, bcc delivery, quota check). The new "Last scheduled run" tile and `goLiveStatus` diagnostics (`lastRun`, `recentErrors`, `recentDeploys`) are the fastest read on how it went
+
+**Recommendation for next session:**
+
+- **Check how Monday 2026-08-31's scheduled run went end-to-end**: edition built from the 72-hour window, `Complete` = `yes` in the Digests tab (or a visible repair trail in the error log if not), delivered at 07:00 ET with subscribers in `bcc:`, and the health tile green. If anything failed, the new diagnostics name where — start from `goLiveStatus`'s `recentErrors` and `DIGEST_LAST_RUN`
+
+**To continue:** type `check how Monday's scheduled Scraper run went`
+
+
+## Previous Sessions
+
+### Session — 2026-08-30 (Morning Digest footer rework + reliability investigation, v03.84r–v03.86r)
+
 **Date:** 2026-08-30 06:35:39 PM EST
 **Repo version:** v03.86r
 **Branch:** `claude/morning-digests-footer-38e7we`
@@ -92,47 +135,5 @@ Developer is in San Jose (Pacific). 07:00 ET is a *courtesy* target for future E
 
 **To continue:** type `build approved Phase 1`
 
-
-## Previous Sessions
-
-### Session — 2026-08-29 (Industry Guidance revision notes + reading-progress sync, v03.83r)
-
-
-**Date:** 2026-08-29 10:54:00 PM EST
-**Repo version:** v03.83r
-**Branch:** `claude/industry-guidance-cleanup-9jsnzi`
-
-**What we worked on (v03.83r — the two remaining guidance improvements, one pass):**
-
-- **#5 Per-module revision notes (page v01.68w):** all six guidance modules in `Profiler.gs` carry a `revisions: [{date, note}]` meta field, seeded with the 2026-08-29 scrub/generalization as each module's first entry; `guidanceIndex_()` emits a `revised` date (latest entry); the page renders a "Revision notes" block under the module header (newest first) and a `↻ revised` chip on library cards
-- **#4 Server-side reading-progress sync (GAS v01.27g):** new role-gated `gop=progress` / `gop=setprogress` ops in `handleGuidanceOp_` store each account's section ticks in one Script Property (`gd_progress:<email>`), doc/section ids validated against registered modules, writes under a script lock; the page prefers the server map once a sync succeeds, keeps localStorage as the offline fallback, migrates local-only ticks up in one batch on first sync, and repaints the open module when a sync lands (done buttons now carry `data-sec` for the repaint)
-- **Data-loss guard (found via `verify-profiler-roles.py`'s isolation test):** a sync response without a real `progress` object counts as "sync unavailable" — never as an empty server map — and a failed migration aborts adoption, so a legacy backend or network failure can never wipe local ticks
-- **Deploy verified end-to-end:** commit merged to main, `op=deploy` probe returned "Already up to date (v01.27g)" (webhook had already fired), Pages serving `|v01.68w|` / `|v01.27g|`
-- Profiler diagram's guidance bullet updated to the real op set + role gate; README tree/timestamp synced
-
-**Where we left off:**
-
-- **All six module-audit improvements are now delivered** (#1 lens, #2 freshness, #3 cross-links, #4 progress sync, #5 revision notes, #6 search/glossary) — the Industry Guidance improvement thread is closed
-- Everything committed, merged, and live; working tree clean
-- One manual check remains (needs two real signed-in accounts, no probe can do it): tick a section on one device, confirm it appears on another device on the same account — existing local ticks migrate up on each account's first sign-in after the deploy
-
-**Key decisions made:**
-
-- **Progress storage medium (decided before coding, per prior session's instruction):** Script Properties, one property per account — tiny per-user blobs, no cross-project consumers, no spreadsheet round-trip per tick; the Master ACL spreadsheet pattern stays reserved for cross-app access control
-- **Sync trust rule:** the server map is authoritative only after a response carrying a real `progress` object; localStorage is mirrored down post-sync (including removals) and stays the offline source until then
-- Revision notes are meta, not content — adding them bumped versions but did not add a new `revisions` entry to the modules themselves
-
-**Active context:**
-
-- **Branch:** `claude/industry-guidance-cleanup-9jsnzi` · **Repo:** v03.83r · **Profiler:** v01.68w / GAS v01.27g
-- **Profiler page changelog is FULL at 50/50 — the next page version bump exceeds capacity and triggers its archive rotation (SHA enrichment mandatory)**; repo CHANGELOG 93/100; GAS changelog 27/50
-- Inherited watch item (automated, verify after it fires): Monday 2026-08-31's scheduled Scraper digest run is the first real end-to-end execution of the 06:00 ET build / 07:00 ET send schedule
-- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
-
-**Recommendation for next session:**
-
-- **Check how Monday 2026-08-31's scheduled Scraper digest run went** — the first real end-to-end execution of the 06:00 ET build / 07:00 ET send schedule: verify it built from the 72-hour window, replaced the day's edition, and actually mailed. (The guidance thread is fully delivered — nothing is deferred there; the only guidance follow-up is the manual two-device tick check noted above, which needs the developer's own accounts.)
-
-**To continue:** type `check how Monday's scheduled Scraper run went`
 
 Developed by: LightAISolutions
