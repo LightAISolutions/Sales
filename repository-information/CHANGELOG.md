@@ -3,11 +3,19 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.75r] — 2026-08-29 08:19:11 PM EST
+
+> **Prompt:** "Continue with your recommendation about the opener-gate miss. Then, remember session."
+
+### Changed
+- **Response Opener gate hardened (`.claude/rules/chat-bookends.md`)** — Step 1 is now a threefold combined command (timestamp + toggle rows + every tracked page's version file) so the page enumeration can no longer displace the timestamp capture; the Precedence Header and the Page Enumeration gate gained a "response-start coverage" note (the opener output satisfies PLANNED AFFECTED URLS; end-of-response URL sections still re-read post-bump state). Includes the 2026-08-29 incident note: a response opened with a standalone enumeration call in Step 1's place and wrote a fabricated opening timestamp
+- **Session context saved (`repository-information/SESSION-CONTEXT.md`)** — new Latest Session covering v03.63r–v03.75r (report engine + the complete Relationships build-out); the v03.62r Profiler quality build-out entry demoted to Previous Sessions; the Scraper v03.51r entry rotated out under the 2-session cap, with its Monday 2026-08-31 first-scheduled-run watch item carried into the new recommendation
 
 ## [v03.74r] — 2026-08-29 08:14:28 PM EST
 

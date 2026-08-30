@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-08-29 08:19:11 PM EST
+**Repo version:** v03.75r
+**Branch:** `claude/profiler-report-engine-nlopn4`
+
+**What we worked on (v03.63r-v03.75r — the report engine, then the complete Relationships build-out):**
+
+- **Report engine (v01.52w-v01.53w):** `#reports` / `#report/<id>` views + the grid-scale BESS competitive report (`profiler-data/reports/`), admin-only via the `reports` capability; commit-message rule contradiction resolved in `gas-scripts.md` (repo-version prefix only, developer decision)
+- **Relationships tab (v01.54w):** own tab per dossier, full-length explanations (source + context + every quoted mention), nothing truncated
+- **The big build-out (v01.55w, v03.67r, approved at maximum scope):** 485 curated relationship links across all 88 dossiers (schema v6), 12 hyperscaler/neocloud dossiers revised with targeted research (archived per procedure), `profiler-graph.json` built by new `scripts/build-profiler-graph.py` (REQUIRED after every profile write, rule updated), grouped tab (Working with / Competing with / Other / Detected) with deal chips + cross-dossier inbound evidence, ⛓ Network explorer at `#network`
+- **Refinements (v01.56w-v01.62w):** Detected group collapsed by default + denial-only edges excluded via `EXCLUDED_PAIRS` (v03.68r); two-company common-ground compare mode (v03.69r); "What's new" recency feed, later tightened 90d→30d (v03.70r-71r); report Relationship map — live overlay, curated links only, excluded from Word export (v03.71r); relationship one-pager Word export + masthead button swap (Network 44px / admin-only Reports 84px) + Industry Guidance grouped into three topic lanes with a `group` meta field (Profiler.gs v01.23g, v03.72r); counterparty-category filter chips + IPP label fix (v03.73r); formation timeline with lane-based collision-free labels (v03.74r)
+- **Opener-gate hardening (v03.75r, this push):** page enumeration folded into the Response Opener Step 1 command in `chat-bookends.md` after a fabricated-timestamp miss — one combined command (timestamp + toggles + version files) that nothing can displace
+
+**Where we left off:**
+
+- Everything committed, pushed, and auto-merged through v03.74r; v03.75r (gate fix + this context) is the final push. Working tree clean
+- **The Relationships improvement list is fully delivered** — grouping + deal chips, graph + inbound evidence, Network explorer, common ground, recency feed, report wiring, one-pager export, category chips, formation timeline. No deferred work on this thread
+- The Industry Guidance topic-lane headers require the GAS deploy webhook to have fired (v01.23g) — if the library still renders flat well after the v03.72r merge, check the deploy webhook
+
+**Key decisions made:**
+
+- Detected (derived-only) links are weak signals: collapsed by default; edges whose only evidence is an anti-relationship denial sentence are excluded in the graph builder (`EXCLUDED_PAIRS` — curated links can never be excluded)
+- Recency window is 30 days (developer preference over the initial 90)
+- The report Relationship map is a clearly-labeled **live overlay** — never blended into the immutable report snapshot, curated links only, excluded from the Word export
+- Masthead slots: universally-visible buttons take the inner slots, admin-only buttons the outermost, so lower tiers never see a gap
+- Guidance topic lanes: Technology Foundations → The AI Data-Center Wave → Market Access & Bankability; every future module must carry a `group` label (rule in `industry-guidance.md` step 4)
+- Two "run this first" habits displace each other under task focus — the opener is now one indivisible command
+
+**Active context:**
+
+- **Branch:** `claude/profiler-report-engine-nlopn4` · **Repo:** v03.75r · **Profiler:** v01.62w / GAS v01.23g
+- Relationship graph: 472 edges (372 curated), 1,499 evidence items, 88 companies
+- Changelog capacity: page 44/50 · GAS 23/50 · **repo CHANGELOG 100/100 — the NEXT push must rotate a date group into the archive (SHA enrichment mandatory)**
+- Toggles: START_OF_RESPONSE_BLOCK On · CHAT_BOOKENDS Off · TIMING_ESTIMATES On · END_OF_RESPONSE_BLOCK On
+
+**Recommendation for next session:**
+
+- Nothing is deferred from this session. One inherited watch item survives from the Scraper session (its entry rotated out of this file under the 2-session cap): **Monday 2026-08-31's scheduled Scraper digest run is the first real end-to-end execution** of the 06:00 ET build / 07:00 ET send schedule — verify it built from the 72-hour window, replaced the day's edition, and actually mailed.
+
+**To continue:** type `check how Monday's scheduled Scraper run went`
+
+## Previous Sessions
+
+### Session — 2026-08-29 (Profiler quality build-out, v03.52r-v03.62r)
+
 **Date:** 2026-08-29 03:45:02 PM EST
 **Repo version:** v03.62r
 **Branch:** `claude/profiler-dossier-summary-8obbjo`
@@ -47,54 +91,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Design and build **`profiler report <topic>`** (roadmap #3, the last approved item) — the industry-report engine that was the point of the whole quality build-out. Everything it needs now exists: normalized KPIs for cross-company figures, provenance for citation confidence, relationships for ecosystem structure, peer families for scoping, and coverage metadata for honesty about gaps. Start with a design pass (report types — macro, competitive, risk, opportunity; output format; how reports cite dossier sources per the "Reports" rule in profiler-app.md's Recall design) and get developer approval before building.
 
 **To continue:** type `design profiler report`
-
-## Previous Sessions
-
-### Session — 2026-08-29 (Scraper scoring & scheduler fixes, v03.25r–v03.51r)
-
-**Date:** 2026-08-29 01:34:01 AM EST
-**Repo version:** v03.51r
-**Branch:** `claude/scraper-subscriber-edition-match-6dwyjt`
-
-**What we worked on (v03.25r–v03.51r — Scraper polish, then a run of scoring and scheduler fixes):**
-
-- **Emailed digest, mobile.** Rebuilt the layout phone-first: the `@media (max-width:600px)` block was being stripped wholesale by Gmail (it drops the whole `<style>` element when it contains unsupported code, and the shell carries MSO conditional comments), so the email fell back to inline *desktop* sizes. Inverted it — inline styles now carry the phone sizes and a `min-width:601px` block enlarges for desktop, so a stripped block leaves a phone-shaped email. Settled on 27/22/18/15 after two rounds (24/20/16/14 was a step too small)
-- **Summary/analysis presentation.** Analysis runs inline in amber with an "Amber = analysis" footer key; figures in reported text are green (`#4ade80`), figures inside an analysis stay amber via `inherit`
-- **Held-back stories** now carry their summary and analysis into View More, and `scDigestSummarizeSet_` summarizes the *relevant* set rather than an unfiltered top-30 (section caps summed to exactly 30, so on a heavy day everything held back was unsummarized)
-- **Same-day editions**: tried keeping both builds (v03.42r), developer preferred replacement, reverted (v03.43r). The per-edition delivery grouping from that experiment was deliberately kept as defence in depth
-- **Scoring fixes**: backstop rotation was advancing on every run so a rebuild queried a *different* 12 companies (and editions ate each other's rotation); consumer gear reaching the digest; duplicate Google News stories; Google News weighted down 0.85 → 0.70
-- **Scheduler**: the weekday guard was missing from the sender itself, so Saturday-built editions would have mailed at 07:00; and the 06:00 build skipped any edition already built that day, including by hand — so a manual test build would have been the thing that shipped
-- **Diagnostics added**: `digestScoreReport` + a "Why thin?" button, and the Calendar now separates emailed from merely built
-
-**Where we left off:**
-
-- All work committed and pushed; branch merged to `main` by the auto-merge workflow each time. Working tree clean at v03.51r
-- **Nothing is broken and nothing is half-finished.** The last push (v03.51r) closed the scheduler request completely
-- **The open item is empirical, not code**: Monday 2026-08-31 is the first real run of the full schedule — 06:00 build with the 72-hour window, 07:00 send, replacing whatever the day already holds. Nobody has watched that path execute end to end
-- The developer has weekend test editions sitting in the sheet. They are harmless (delivery only considers rows dated today, and the weekend guard refuses the day outright) and the Calendar now draws them hollow
-
-**Key decisions made:**
-
-- **7:00 AM ET, not PT.** The developer wrote "7am PST"; the app has always been ET. Asked rather than guessed — they confirmed ET. `SCRAPER_DIGEST_TZ` + `SCRAPER_DIGEST_TZ_LABEL` were centralised so the switch is two lines if that ever changes
-- **One edition per day, replacement not accumulation.** Tried the alternative for one version and reverted at the developer's request
-- **Guards belong where the action happens, not in the callers.** The weekday rule now lives in `scDigestDeliverPending_` — the only code that can put an edition in an inbox — because three callers each remembering the same rule is how one of them forgot
-- **Verify against the developer's real input, not a synthetic one.** The Jackery fix was measured on their actual headline (81 → 0); the mobile sizes were measured in a browser at 390px with and without the `<style>` block
-- **A changed seed's `tv` must be bumped or the change never ships.** Learned the hard way — v03.48r shipped new segment vocabulary that could not reach the app. Now guarded by `t22.js` *and* a blocking section in `.claude/rules/scraper-sources.md`, because the test corpus is not committed and cannot protect a future session
-- **`scEditionWindowH_` still honours an explicit per-edition `windowH` ahead of the Monday-72h rule.** That is a setting, not a bug — pinned by test and flagged to the developer rather than quietly overridden
-
-**Active context:**
-
-- **Branch:** `claude/scraper-subscriber-edition-match-6dwyjt` · **Repo:** v03.51r · **Scraper:** `v01.83g` / `v01.66w`
-- **Schedule as it now stands:** build 06:00 ET, send 07:00 ET, Mon–Fri. Monday scans 72h, Tue–Fri 24h. The 06:00 build replaces the day's existing edition; delivery holds an edition whose build is still in flight
-- **Test corpus lives in `/tmp/sc/` and is NOT committed** — 24 suites, 639 assertions (`t.js`, `t2.js`…`t24.js`). It will be gone in a fresh session. Anything that must survive belongs in `.claude/rules/`, which is why the seed-`tv` rule was written there
-- **Changelog capacity is tight**: repo `98/100`, `Scrapergs` `49/50`, `Scraperhtml` `39/50`. **The next push must rotate the repo CHANGELOG, and the GAS one is one push behind it.** Both rotations need SHA enrichment; the GAS/page ones resolve their SHA through the repo version each header carries as a cross-reference, since a `g`/`w` version never appears alone in a commit subject
-- **Three editions**: `morning` (to jonyang92@gmail.com), `bess` and `aidc` (to jymiasole01@gmail.com). 88 companies, ~14 topics, 12–17 segments filtered depending on edition
-- Relevance bar is 55. Recent BESS builds land 13–16 relevant of 84–99 scanned, which the developer called close to the sweet spot
-
-**Recommendation for next session:**
-
-- Ask the developer how Monday 2026-08-31's 06:00 scheduled run went — whether it replaced the day's edition, whether the 72-hour window produced a comparable article count to a weekday, and whether all three editions arrived at 07:00. That is the first unattended execution of the whole schedule and the only thing in the system that has never been observed working; if it did run clean, the Scraper is feature-complete for now and the next session is free for new work.
-
-**To continue:** type `check how Monday's scheduled run went`
 
 Developed by: LightAISolutions
