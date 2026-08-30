@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.85r] — 2026-08-30 04:34:20 PM EST
+
+> **Prompt:** "The changes successfully went through. One adjustment: I would actually like the right side of the footer say "X revelant of Y scanned" where X is the total number of relevant articles (including the ones in View More) and Y is the total number of articles scanned, just like before."
+>
+> **Follow-up (same turn):** "Also, change "Published by Jon Yang" to "Developed by Jon Yang""
+
+### Changed
+
+**`googleAppsScripts/Scraper/Scraper.gs` (v01.85g)**
+- Night Ink footer restores the coverage pair on the right: `<relevant> relevant of <intake> scanned`, from `d.counts.relevant` (the whole relevant set, held-back items included) and `d.counts.intake`. The desk-side half removed in v01.84g stays removed — no `shown` count, no `N more held back by the per-section caps` clause — and the News Stand remains the home for those
+- Footer byline changed from `Published by Jon Yang` to `Developed by Jon Yang`
+- The footer comment now distinguishes the two claims explicitly: shown/held-back is pipeline telemetry (moved to the News Stand), relevant-of-scanned is the edition telling the reader how wide a net it cast, and `relevant` being the full set is what keeps it consistent with the `View More (N)` link rather than in tension with it
+
+### Housekeeping
+- `live-site-pages/gs-changelogs/Scrapergs.changelog.md` exceeded its 50-section cap (51 after this entry), so the oldest date group — all 19 sections dated 2026-08-27 — rotated to `Scrapergs.changelog-archive.md` with commit-SHA enrichment on every moved header. Active file now at `Sections: 32/50`
 
 ## [v03.84r] — 2026-08-30 04:17:50 PM EST
 

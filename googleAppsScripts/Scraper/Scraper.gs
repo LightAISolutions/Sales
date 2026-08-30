@@ -1,4 +1,4 @@
-var VERSION = "v01.84g";
+var VERSION = "v01.85g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4720,18 +4720,26 @@ function scRenderDigestNightInk_(d) {
   // width with no CSS at all.
   html += '<div style="border-top:3px double #d8dbe1;margin-top:9px;padding-top:11px;">'
     + '<div class="ni-foot" style="font-size:11px;line-height:1.5;color:#8a919d;">'
-    // Coverage arithmetic — shown / relevant / scanned / held back — used to
-    // run along this line. It is desk telemetry, not reader information: it
-    // answers "how did the pipeline do today", a question the subscriber did
-    // not ask and cannot act on, and it invited the reading that an edition
-    // showing 14 of 15 was holding something back. It is not lost — the News
-    // Stand prints the whole line on the open issue (see listDigests' Shown and
-    // Held Back columns), which is where the person who tunes the pipeline
-    // reads it. The reader keeps the one piece of it that is actionable: the
-    // "View More (N)" link below.
-    + 'Published by Jon Yang'
+    // What used to run along this line was the full coverage arithmetic —
+    // SHOWN of relevant, scanned, and N more held back by the per-section caps.
+    // The shown/held-back half of that is desk telemetry: it answers "how did
+    // the pipeline do today", which the subscriber did not ask and cannot act
+    // on, and printing "14 of 15" invited the reading that the edition was
+    // keeping something from them. That half moved to the News Stand (see
+    // listDigests' Shown and Held Back columns), where the person who tunes the
+    // pipeline reads it.
+    //
+    // The relevant-of-scanned pair below is a different claim and stays: it is
+    // the edition telling the reader how wide a net it cast on their behalf —
+    // 104 stories read, 15 worth their morning — and neither number implies
+    // anything is being withheld. `relevant` is the whole relevant set, held-
+    // back items included, which is what makes it honest beside the "View More"
+    // link: the link's N is a subset of this count, not a contradiction of it.
+    + 'Developed by Jon Yang'
     + (hasAnalysis ? ' · <span style="color:#f2a33c;">Amber = Analysis'
         + (aiBrand ? ' by ' + esc(aiBrand) : '') + '</span>' : '')
+    + ' · ' + Number(d.counts.relevant) + ' relevant of '
+    + Number(d.counts.intake) + ' scanned'
     // Kept, and deliberately not merged into the credit above: these two say
     // the summaries are NOT the model's work, which is a claim about the
     // content in front of the reader rather than an attribution.

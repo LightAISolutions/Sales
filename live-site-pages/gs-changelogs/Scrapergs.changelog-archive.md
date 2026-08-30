@@ -8,6 +8,173 @@ Same rotation logic as the repository changelog archive — see [CHANGELOG-archi
 
 ---
 
+## [v01.53g] — 2026-08-27 11:51:21 PM EST — v03.20r — [886efa3](https://github.com/LightAISolutions/Sales/commit/886efa3fb3db9a3069c57e7be4bbaeee47d66508)
+
+### Changed
+- **An outlet whose site is gone is no longer listed at all.** It cannot be turned on or off, so showing it was only clutter. Its history is kept behind the scenes, and putting the outlet back on the roster still brings it back
+- An outlet that is still publishing but refuses automated readers stays listed, so it is clear the beat is uncovered on purpose
+
+## [v01.52g] — 2026-08-27 11:21:39 PM EST — v03.19r — [0dc2474](https://github.com/LightAISolutions/Sales/commit/0dc2474d5dab83a58ee3b3d588a417102f7d59dd)
+
+### Fixed
+- **A retired news outlet no longer says "coverage ended".** That wording belongs to a company you have stopped following; used for an outlet it claimed the publication had shut down, which was untrue for two of the three outlets dropped during the source review. Outlets now carry their own wording, and each one records the actual reason it was dropped — whether it is still publishing but refuses automated readers, or its site is genuinely gone — along with the date that was last checked
+- Outlets dropped before this change are relabelled automatically on the next sync
+
+## [v01.51g] — 2026-08-27 11:05:42 PM EST — v03.18r — [4d7f22b](https://github.com/LightAISolutions/Sales/commit/4d7f22bcf33d6d4d84560f45a327afe75b50a526)
+
+### Fixed
+- **The real reason company briefings stopped being read.** Just over half of the covered companies describe who a product is sold to as one written-out phrase rather than a list, and the reader only accepted the list form — it stopped on the first company written the other way and moved on without reading it, every time. Both forms are now understood, so every covered company can be read
+- **Flagship product names were never picked up.** The reader was looking for those names in the wrong place, so it always found nothing. They now feed into the terms used to spot a company in the news, which should surface stories that mention a product without naming the company
+- A written-out phrase is split sensibly rather than chopped at every comma, so a grouping like "labs (A, B)" stays whole, and long prose is left out of the segment list instead of being treated as a segment
+
+### Changed
+- **"Read all dossiers" now re-reads every covered company**, not only the ones never read before — so companies read under the old, partly-broken reader are brought up to date too. It still works through them automatically and stops when finished
+
+### Removed
+- Older entries moved to the archive
+
+## [v01.50g] — 2026-08-27 10:55:12 PM EST — v03.17r — [e87c5b7](https://github.com/LightAISolutions/Sales/commit/e87c5b7dc884d4811db125023b8b986a46895fd0)
+
+### Added
+- **Read all dossiers.** A single action now works through every covered company's briefing in one go instead of a few per sync, continuing automatically until the whole list is done. It reports how many were read, how many have no briefing published yet, and how many could not be read
+
+### Fixed
+- Reading briefings no longer saves each company one at a time. The whole batch is saved in a single write at the end, which is dramatically faster and means progress is kept even if a pass runs out of time partway through
+- A company that cannot be read is now reported with the reason instead of being skipped in silence, so a stalled list explains itself
+- Starting a sync while one is already running now says so plainly rather than appearing to do nothing
+
+## [v01.49g] — 2026-08-27 10:30:53 PM EST — v03.16r — [3dd6c9d](https://github.com/LightAISolutions/Sales/commit/3dd6c9da5379d09cabfe0a7be5f7b3281ea11779)
+
+### Changed
+- **"Sync now" now finishes promptly and tells you what it did.** It reads a smaller batch of company dossiers per press so it returns in a few seconds instead of running for a minute, and reports the result directly — for example "Read 27 dossiers — 61 still queued, press again to continue." Press it a few times to finish a large backlog, or simply leave it: the overnight refresh still works through more per night
+
+## [v01.48g] — 2026-08-27 10:18:03 PM EST — v03.15r — [424509e](https://github.com/LightAISolutions/Sales/commit/424509eb333cdfac891f9a9728f069fbfc51428d)
+
+### Added
+- **Every edition now records which AI service wrote its summaries**, and says so in its own footer — so you can tell at a glance whether an edition was produced on the free service or the paid one. Previously the two were indistinguishable once an edition was saved
+
+### Fixed
+- **A temporary "too many requests" response no longer ruins an entire edition.** Requests are now spaced out and retried a couple of times with a growing wait, instead of one busy moment silently dropping every remaining story to a plain feed blurb and skipping the lead write-up. Errors that cannot fix themselves — a bad or missing key — still stop immediately rather than retrying and consuming more of your free allowance
+
+## [v01.47g] — 2026-08-27 10:06:57 PM EST — v03.14r — [d0f1ab5](https://github.com/LightAISolutions/Sales/commit/d0f1ab58b96941f3db55ec7d2c536df1977b62c8)
+
+### Fixed
+- **Company research results were being erased moments after they were saved.** The daily refresh saved its own copy of your interests list *after* the research pass had already written to it, overwriting every newly found product name, ticker and market — so the "Dossiers read" count stayed at zero no matter how many times the refresh was run. Research results now save last and stick
+
+### Changed
+- **Each edition now carries far more stories.** Written summaries per edition go from 14 to 30, and the per-section limits rise from 6 covered-company / 6 market / 4 incident items to 12 / 10 / 8 — so noticeably fewer qualifying stories are held back
+- **The emailed edition is wider and easier to read again** — the article column widens further with slimmer margins, and the summary text, headlines, lead story and masthead all step up a size
+
+## [v01.46g] — 2026-08-27 09:53:19 PM EST — v03.13r — [35b7068](https://github.com/LightAISolutions/Sales/commit/35b70682d2979ae1ac277cdb7b74ce498c36115d)
+
+### Fixed
+- Company research with multi-word market names (for example "data centers") was being recorded incorrectly — everything after the first such name was dropped, which weakened the market-based filtering for those companies. All of it is now stored and read back correctly
+- A company whose dossier could not be read was retried on every single refresh forever; it is now marked and the queue moves on
+
+### Changed
+- The daily company-research pass now prioritises what changed: companies newly added to your coverage are read first, then companies whose dossier was refreshed since it was last read, and only then a slow background re-read of everything else. Previously it worked through the list in fixed order, so a brand-new company could wait a week and a half before its product names were recognised
+- The pass reads more companies per day while there is a backlog and settles to a light trickle once everything is current, so the first full read of your whole coverage list completes on its own within a few days — no manual refreshing needed
+- Every read is now recorded even when it finds nothing new, so coverage progress can be reported accurately
+
+### Added
+- Research coverage is now reported to the app, so you can see how many of your covered companies have been read and how many are still queued
+
+## [v01.45g] — 2026-08-27 09:42:55 PM EST — v03.12r — [e5732df](https://github.com/LightAISolutions/Sales/commit/e5732dfc70604bda74bddc2c1136c0fbb6f7b508)
+
+### Added
+- **Editions**: the digest is now a named product you can have more than one of. Each edition has its own schedule — daily on weekdays, weekly on a day you pick, or monthly on a date — its own reading window, and its own subscriber list. The Morning Edition is built in and unchanged
+- **Subscribers**: a real list with names, per-edition sign-up, an admin flag, and pause/remove. Every finished edition goes to the people signed up for it. Your previous single delivery address is carried over automatically
+- **Learning from what you open**: article links in the emailed edition now record which stories you actually click, and the companies and topics you engage with score higher in later editions. The boost is capped and fades after a month, so it nudges rather than takes over
+- **Learning from your research**: each day the app reads a few of your company dossiers and folds their product names, ticker symbols and alternate names into that company's matching terms — so a story about a named product is recognised even when the company itself is never mentioned. Your own edits are never overwritten
+- **Smarter segment filtering**: it also learns which markets each company actually operates in, so a company that works only in markets you've switched off is filtered out even when the story never names the market
+- **Corroboration**: a story covered by several of your sources within the window is ranked higher than a single-outlet item
+- **Archive search** across every story ever stored, and a **per-company timeline** of all coverage since a dossier was written
+- **Source performance**: see how many items each publication contributed, how many cleared your relevance bar, and how many clicks each earned — so a noisy source can be switched off with evidence
+- **Edition preview** without storing or sending, and a **held-back rollup** that emails admins the relevant stories which didn't fit the edition's section limits
+
+### Changed
+- The Projects feature is retired. Defining scope, building an article database and scoring by hand were all replaced by your auto-synced interests, the fixed source roster and the relevance rubric. Existing project data is left untouched
+
+## [v01.44g] — 2026-08-27 09:13:55 PM EST — v03.11r — [51554e8](https://github.com/LightAISolutions/Sales/commit/51554e80adf0203c09c188b495e14305c633e422)
+
+### Changed
+- The emailed edition is easier to read: the article column is wider, so there is far less empty space on either side, and the summary text, headlines and lead story are all set at a larger, roomier size
+- The edition footer now says how many stories are shown out of how many met your relevance bar — and, when some were left out, exactly how many were held back by the per-section limits
+
+## [v01.43g] — 2026-08-27 08:56:08 PM EST — v03.10r — [6664c97](https://github.com/LightAISolutions/Sales/commit/6664c97d86b6706745491497771e4317db31c3a7)
+
+### Added
+- Switch the AI service between the free Gemini tier and Claude Sonnet from inside the app — one tap, no configuration needed
+- Manage the daily edition's recipient list from inside the app: add or remove any number of email addresses, and every finished edition is sent to all of them
+- Recipient and provider controls are built to lock to admin-level users once the app opens to multiple sign-ins; today, while it's single-user, they're fully available
+
+## [v01.42g] — 2026-08-27 08:12:11 PM EST — v03.09r — [3851180](https://github.com/LightAISolutions/Sales/commit/3851180f60e9c4e9d680a3c255c72610e6197692)
+
+### Added
+- Weekday editions now build on their own: every weekday from 7:00 AM Eastern, the morning edition is assembled automatically (Monday's covers the whole weekend). Editions can still be built on demand at any time
+- Email delivery of each finished edition, which starts as soon as a delivery address is configured
+- A go-live readiness view showing which AI service is in use, whether scheduled runs and delivery are on, and when the schedule last checked in — plus a one-tap AI check and a "send me the latest edition" button for testing how it looks in your mail app
+
+### Fixed
+- Five news sources were fetching nothing: two had moved their feeds, one had changed section addresses, and two now block automated readers. The moved and renamed feeds are corrected, and the blocked ones (plus one whose website shut down) are replaced with three working publications covering the same beats — so the roster is a full 30 live sources again
+- A source that leaves the roster is now clearly marked as retired in your source list instead of sitting there looking active
+
+### Changed
+- The emailed edition is rebuilt to survive email apps: it keeps its dark newspaper look in clients that force their own colors, and it stays centered and correctly laid out in Outlook
+
+## [v01.41g] — 2026-08-27 06:49:49 PM EST — v03.08r — [f18d048](https://github.com/LightAISolutions/Sales/commit/f18d0482890d2b020a8f9a00750f55218f2f054a)
+
+### Added
+- Past editions can now be deleted: removing one permanently clears the edition and its stored articles, and the removal is recorded for audit
+
+### Fixed
+- Article links from the general-news safety net no longer lead to an error page — very long links were being cut short before saving, which broke them; full links are now kept intact
+- Cleaner safety-net headlines and blurbs: stray symbol codes are now shown as real characters, duplicated publisher names are trimmed from headline ends, and blurbs that merely repeat the headline are dropped
+
+### Changed
+- Segment filtering now catches far more off-target stories: the vehicle and charging segment vocabularies recognize many more terms (driver-assistance features, model names, recall phrasing, safety-regulator references, and more), and existing setups pick up these improvements automatically on the next daily refresh — unless you've customized a segment's terms, in which case your edits are left untouched
+
+## [v01.40g] — 2026-08-27 06:20:46 PM EST — v03.07r — [9d0415d](https://github.com/LightAISolutions/Sales/commit/9d0415de8d497275363cb8fdb5d2abc80e0a334f)
+
+### Added
+- Business-segment filtering: the companies you follow work in many markets (batteries, EVs, chargers, transformers, and more), and you can now switch entire segments on or off. News from a followed company that only touches a switched-off segment — say an automaker's vehicle recall — no longer makes the digest
+
+### Changed
+- Article summaries are now substantially longer and more informative: each one covers what happened, who is involved, the key figures, how the deal or event works, and why it matters — instead of a one-line blurb
+
+## [v01.39g] — 2026-08-27 05:48:26 PM EST — v03.06r — [2173eb0](https://github.com/LightAISolutions/Sales/commit/2173eb05ba3f60f35474bcce4d315f04ae665f44)
+
+### Added
+- The weekday morning digest engine: every weekday edition gathers the last 24 hours of industry news (Monday covers the whole weekend) from 30 hand-picked free trade publications, with an extra safety net that checks general news for each covered company by name
+- Stories are ranked by how well they match your interests, the top items get short AI-written summaries that keep the key figures, and everything is assembled into a newspaper-style edition grouped by covered companies, market & policy, and incidents & community
+- Your source list is now visible and adjustable: each of the 30 publications can be switched on or off, and your choices are respected on the very next run
+- Recent editions are kept so you can revisit past days
+- Scheduled delivery remains paused — editions can be built on demand from inside the app, and nothing is emailed until the launch step
+
+## [v01.38g] — 2026-08-27 04:39:36 PM EST — v03.04r — [2918ab6](https://github.com/LightAISolutions/Sales/commit/2918ab66a7061d8a1ee76ad8e520ffa102985bc3)
+
+### Added
+- Your news interests now build themselves: the companies you research in the company-profile app flow into a new interest list automatically, refreshed daily. Newly covered companies join enabled and flagged as new coverage; companies no longer covered are kept but marked — nothing is ever deleted
+- A starter set of industry topic interests (policy, grid, safety incidents, market buildout, and more), each of which can be switched on or off
+- Groundwork for smarter article relevance that learns from your research focus instead of requiring thumbs-up/down feedback
+
+## [v01.37g] — 2026-08-27 04:09:00 PM EST — v03.03r — [9d8b671](https://github.com/LightAISolutions/Sales/commit/9d8b671a397fa5ce856794d4c056a3793b022477)
+
+### Changed
+- Minor internal improvements
+
+## [v01.36g] — 2026-08-27 02:20:49 AM EST — v03.02r — [f1ef994](https://github.com/LightAISolutions/Sales/commit/f1ef9941fb9d43719de98f4fad78fb7a48ea772b)
+
+### Changed
+- Scheduled news runs are now fully paused — nothing is compiled, analyzed, or emailed automatically, and no AI cost is incurred, until the redesigned daily digest launches. Manual actions inside the app still work normally
+
+## [v01.35g] — 2026-08-27 01:54:03 AM EST — v03.01r — [a75d27e](https://github.com/LightAISolutions/Sales/commit/a75d27e74be59c932823b0886d791a47233d4428)
+
+### Changed
+- Scheduled news brief emails are paused for now, ahead of a digest redesign. Scheduled runs still happen and briefs still appear inside the app — email delivery will return with the redesigned daily digest
+
+Developed by: LightAISolutions
+
 ## [v01.34g] — 2026-08-17 03:36:35 AM EST — v02.62r — [9cf3289](https://github.com/LightAISolutions/Sales/commit/9cf3289d2f283834fc1ddba030f2013e6fcef83a)
 
 ### Changed
