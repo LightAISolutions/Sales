@@ -3,11 +3,22 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.83r] — 2026-08-29 10:28:50 PM EST
+
+> **Prompt:** "Picking up from my recent "Industry Guidance modules cleanup", finish the two remaining guidance improvements in one pass."
+
+### Added
+- Industry Guidance per-module revision notes (#5 of the module-audit improvements): every guidance module in `Profiler.gs` now carries a `revisions: [{date, note}]` meta field, seeded with the 2026-08-29 scrub/generalization as each module's first entry; `guidanceIndex_()` emits a `revised` date (latest entry) and `Profiler.html` renders a "Revision notes" block under the module header plus a "↻ revised" chip on library cards
+- Server-side reading-progress sync (#4): new role-gated `gop=progress` / `gop=setprogress` ops in `handleGuidanceOp_` store each account's section ticks in one Script Property (`gd_progress:<email>` — chosen over the Master ACL spreadsheet pattern: tiny per-user blobs, no cross-project consumers, no spreadsheet round-trip per tick), with doc/section ids validated against the registered modules and writes guarded by a script lock; `Profiler.html` prefers the server map once a sync succeeds, keeps localStorage as the offline fallback, migrates local-only ticks up in one batch on first sync, and repaints the open module when a sync lands. A response without a real `progress` object counts as "sync unavailable" — never an empty map — and a failed migration aborts adoption, so a legacy backend or network failure can never wipe local ticks (caught by `verify-profiler-roles.py`'s isolation test during development)
+
+### Changed
+- `repository-information/diagrams/profiler-diagram.md` — Industry Guidance transport bullet updated to the current op set (`index|doc|mentions|progress|setprogress`) and the real role gate (`guidanceAllowed_`: admin permission or `GUIDANCE_ROLES` tier), and documents the progress-sync storage
 
 ## [v03.82r] — 2026-08-29 09:52:01 PM EST
 

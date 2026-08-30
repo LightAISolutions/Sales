@@ -1,4 +1,4 @@
-var VERSION = "v01.26g";
+var VERSION = "v01.27g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -361,6 +361,8 @@ function handleGuidanceOp_(e) {
       var men = guidanceMentions_();
       return { success: true, mentions: men.mentions, built: men.built };
     }
+    if (op === 'progress') return { success: true, progress: gdProgressRead_(sess) };
+    if (op === 'setprogress') return gdProgressWrite_(sess, p);
     return { success: false, error: 'unknown_gop' };
   } catch (gErr) {
     var gMsg = String((gErr && gErr.message) || gErr);
@@ -385,6 +387,8 @@ function guidanceIndex_() {
                group: docs[i].group || '',
                date: docs[i].source && docs[i].source.date, updated: docs[i].updated,
                reviewBy: docs[i].reviewBy || '',
+               revised: (docs[i].revisions && docs[i].revisions.length)
+                 ? docs[i].revisions[docs[i].revisions.length - 1].date : '',
                sections: (docs[i].sections || []).length });
   }
   return out;
@@ -435,6 +439,87 @@ function guidanceMentions_() {
   return res;
 }
 
+// PROJECT: ── Guidance reading progress (server-side, per account) ─────────
+// gop=progress / gop=setprogress — same role gate as index/doc. The account's
+// section ticks live server-side so progress follows the account across
+// devices; the page keeps localStorage as its offline fallback and migrates
+// local-only ticks up in one batch on its first successful sync. Storage is
+// one Script Property per account ('gd_progress:<email>' →
+// {docId:{secId:true}}): the blobs are tiny (well under the 9KB/value cap)
+// and have no cross-project consumers, so PropertiesService beats the Master
+// ACL spreadsheet pattern here — no spreadsheet round-trip per tick. Doc and
+// section ids are validated against the registered modules so junk params
+// can never grow the store.
+var GD_PROGRESS_PROP_PREFIX = 'gd_progress:';
+
+function gdProgressAcct_(sess) {
+  var em = String((sess && sess.email) || '').toLowerCase().trim();
+  if (!em || em === 'unvalidated' || em.indexOf('@') < 0) return '';
+  return em;
+}
+
+function gdProgressRead_(sess) {
+  var acct = gdProgressAcct_(sess);
+  if (!acct) return {};
+  try {
+    var raw = PropertiesService.getScriptProperties()
+      .getProperty(GD_PROGRESS_PROP_PREFIX + acct);
+    return raw ? (JSON.parse(raw) || {}) : {};
+  } catch (e) { return {}; }
+}
+
+function gdProgressWrite_(sess, p) {
+  var acct = gdProgressAcct_(sess);
+  if (!acct) return { success: false, error: 'NO_ACCOUNT' };
+  var valid = {};
+  var docs = guidanceDocs_();
+  for (var i = 0; i < docs.length; i++) {
+    var set = {}, secs = docs[i].sections || [];
+    for (var j = 0; j < secs.length; j++) if (secs[j].id) set[secs[j].id] = true;
+    valid[docs[i].id] = set;
+  }
+  // Delta: a single tick (id + sec + done=1|0) or a batch merge (merge=
+  // JSON {docId:{secId:bool}}) used by the page's first-sync migration.
+  var delta = {};
+  if (p.merge) {
+    try { delta = JSON.parse(String(p.merge)) || {}; }
+    catch (me) { return { success: false, error: 'BAD_MERGE' }; }
+  } else if (p.id && p.sec) {
+    var one = {}; one[String(p.sec)] = String(p.done) === '1';
+    delta[String(p.id)] = one;
+  } else {
+    return { success: false, error: 'NO_DELTA' };
+  }
+  var lock = null;
+  try { lock = LockService.getScriptLock(); lock.waitLock(5000); }
+  catch (le) { lock = null; /* best effort — same-account collisions are rare */ }
+  try {
+    var props = PropertiesService.getScriptProperties();
+    var key = GD_PROGRESS_PROP_PREFIX + acct;
+    var cur = {};
+    try { cur = JSON.parse(props.getProperty(key) || '{}') || {}; } catch (pe) { cur = {}; }
+    for (var docId in delta) {
+      if (!delta.hasOwnProperty(docId) || !valid[docId]) continue;
+      var secMap = delta[docId] || {};
+      for (var secId in secMap) {
+        if (!secMap.hasOwnProperty(secId) || !valid[docId][secId]) continue;
+        if (secMap[secId]) {
+          if (!cur[docId]) cur[docId] = {};
+          cur[docId][secId] = true;
+        } else if (cur[docId]) {
+          delete cur[docId][secId];
+        }
+      }
+      if (cur[docId] && !Object.keys(cur[docId]).length) delete cur[docId];
+    }
+    if (Object.keys(cur).length) props.setProperty(key, JSON.stringify(cur));
+    else props.deleteProperty(key);
+    return { success: true, progress: cur };
+  } finally {
+    if (lock) try { lock.releaseLock(); } catch (re) { /* already released */ }
+  }
+}
+
 // Content: NVIDIA 800 VDC white paper (Aug 2026) analysis module.
 // Derived from repository-information/industry-guidance/nvidia-800vdc-analysis.md;
 // every quantitative claim verified against the source PDF by two independent
@@ -456,6 +541,10 @@ function guidanceDocNvidia800_() {
  },
  "updated": "2026-08-22",
  "reviewBy": "2026-11-30",
+ "revisions": [
+  { "date": "2026-08-29",
+    "note": "Generalized to supplier/buyer-group guidance - single-company analysis moved to the admin-lens report overlays; statutory company lists retained as objective fact." }
+ ],
  "tiles": [
   {
    "k": "800 VDC",
@@ -1360,6 +1449,10 @@ function guidanceDocChinaPolicy_() {
  },
  "updated": "2026-08-24",
  "reviewBy": "2026-12-31",
+ "revisions": [
+  { "date": "2026-08-29",
+    "note": "Generalized to supplier/buyer-group guidance - single-company analysis moved to the admin-lens report overlays; statutory company lists retained as objective fact." }
+ ],
  "tiles": [
   {
    "k": "55% → 75%",
@@ -1961,6 +2054,10 @@ function guidanceDocUtilityAidc_() {
  },
  "updated": "2026-08-24",
  "reviewBy": "2026-12-10",
+ "revisions": [
+  { "date": "2026-08-29",
+    "note": "Generalized to supplier/buyer-group guidance - single-company analysis moved to the admin-lens report overlays; statutory company lists retained as objective fact." }
+ ],
  "tiles": [
   {
    "k": "~474 GW",
@@ -2563,6 +2660,10 @@ function guidanceDocBankability_() {
  },
  "updated": "2026-08-24",
  "reviewBy": "2026-10-01",
+ "revisions": [
+  { "date": "2026-08-29",
+    "note": "Generalized to supplier/buyer-group guidance - single-company analysis moved to the admin-lens report overlays; statutory company lists retained as objective fact." }
+ ],
  "tiles": [
   {
    "k": "UL 9540A",
@@ -3069,6 +3170,10 @@ function guidanceDocBessTech_() {
  },
  "updated": "2026-08-24",
  "reviewBy": "2027-02-24",
+ "revisions": [
+  { "date": "2026-08-29",
+    "note": "Generalized to supplier/buyer-group guidance - single-company analysis moved to the admin-lens report overlays; statutory company lists retained as objective fact." }
+ ],
  "tiles": [
   {
    "k": "LFP",
@@ -3502,6 +3607,10 @@ function guidanceDocPowerInfra_() {
  },
  "updated": "2026-08-24",
  "reviewBy": "2026-12-10",
+ "revisions": [
+  { "date": "2026-08-29",
+    "note": "Generalized to supplier/buyer-group guidance - single-company analysis moved to the admin-lens report overlays; statutory company lists retained as objective fact." }
+ ],
  "tiles": [
   {
    "k": "MW vs MWh",

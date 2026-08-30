@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.67w">
+  <meta name="build-version" content="v01.68w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -935,6 +935,18 @@
     .gd-review.soon, .rp-age.aging { color: var(--ov-gold); border-color: var(--ov-gold); }
     .gd-review.due, .rp-age.stale { color: var(--ov-adv); border-color: var(--ov-adv); }
     .rp-age.fresh { color: var(--ov-dev); border-color: var(--ov-dev); }
+    /* Revision notes (v01.68w) — modules carry a revisions[] meta rendered
+       under the module header; library cards show a small "revised" chip
+       from the index's latest revision date. */
+    .gd-rev-chip { display: inline-block; font: 600 10px/1 var(--ov-mono); letter-spacing: 0.08em;
+      border-radius: 5px; padding: 3px 7px; margin-left: 8px; vertical-align: 1px;
+      border: 1px solid var(--ov-line2); color: var(--ov-muted); }
+    .gd-revs { border-left: 3px solid var(--ov-line2); background: rgba(255,255,255,0.03);
+      border-radius: 0 9px 9px 0; padding: 8px 14px; margin-top: 10px; }
+    .gd-revs .lb { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.18em; color: var(--ov-muted);
+      text-transform: uppercase; margin-bottom: 5px; }
+    .gd-revs .rv { font: 12px/1.6 var(--ov-mono); color: var(--ov-muted); }
+    .gd-revs .rv .d { color: var(--ov-paper); margin-right: 8px; }
     /* Company cross-links (v01.66w) — covered company names in guidance prose
        link to dossiers (CVD blue, distinct from the gold glossary terms);
        dossiers get a "Covered in guidance modules" chip line. */
@@ -5781,6 +5793,7 @@ function ovReloadFresh() {
     // and non-admin users never see it in the DOM at all.
     function ovGuideBtnShow() {
       if (!ovCan('guidance')) return;
+      gdProgressSync();   // pre-warm the server progress map at sign-in
       if (document.getElementById('ov-guide-btn')) return;
       var head = document.getElementById('ov-header');
       if (!head) return;
@@ -5794,6 +5807,7 @@ function ovReloadFresh() {
     }
 
     function ovGuideOpen() {
+      gdProgressSync();   // no-op once a sync has succeeded; retries after failures
       var ov = document.getElementById('ov-guide-overlay');
       if (!ov) {
         ov = document.createElement('div');
@@ -5868,6 +5882,11 @@ function ovReloadFresh() {
           var meta = ovEl('div', 'gd-read', (d.date || '') + ' · ' + d.sections + ' sections');
           var rc = gdReviewChip(d.reviewBy);
           if (rc) meta.appendChild(rc);
+          if (d.revised) {
+            var rvch = ovEl('span', 'gd-rev-chip', '↻ revised ' + d.revised);
+            rvch.title = 'Content revised — notes on the module header';
+            meta.appendChild(rvch);
+          }
           card.appendChild(meta);
           card.appendChild(ovEl('p', null, d.short || ''));
           card.style.cursor = 'pointer';
@@ -6218,15 +6237,118 @@ function ovReloadFresh() {
     function gdProgressKey(docId) {
       return GD_PROGRESS_KEY + '_' + ovAcctKey() + '_' + docId;
     }
-    function gdProgress(docId) {
+    // Server sync (v01.68w) — the account's ticks also live server-side behind
+    // the role-gated guidance ops (gop=progress / gop=setprogress), so progress
+    // follows the account across devices. localStorage stays as the offline
+    // fallback: reads prefer the server map once a sync has succeeded, every
+    // write lands in both, and local-only ticks (made offline or pre-sync)
+    // migrate up in one batch on the first successful sync of each page load.
+    var gdServerProg = null;      // null until a sync succeeds — then authoritative
+    var gdProgSyncStarted = false;
+    var gdCurDoc = null;          // module currently rendered in the overlay
+    function gdLocalProgress(docId) {
       try { return JSON.parse(localStorage.getItem(gdProgressKey(docId)) || '{}'); }
       catch (e) { return {}; }
     }
+    function gdProgress(docId) {
+      if (gdServerProg) return gdServerProg[docId] || {};
+      return gdLocalProgress(docId);
+    }
     function gdSetProgress(docId, secId, done) {
       try {
-        var pr = gdProgress(docId); pr[secId] = !!done;
+        var pr = gdLocalProgress(docId); pr[secId] = !!done;
         localStorage.setItem(gdProgressKey(docId), JSON.stringify(pr));
-      } catch (e) { /* private mode — progress just not persisted */ }
+      } catch (e) { /* private mode — offline fallback just not persisted */ }
+      if (gdServerProg) {
+        if (done) (gdServerProg[docId] = gdServerProg[docId] || {})[secId] = true;
+        else if (gdServerProg[docId]) delete gdServerProg[docId][secId];
+      }
+      ovGuideApi('setprogress', { id: docId, sec: secId, done: done ? '1' : '0' }, function(res) {
+        if (res && res.success && res.progress) gdServerProg = res.progress;
+        // On failure the tick already sits in localStorage — the next page
+        // load's first-sync migration pushes it up.
+      });
+    }
+    function gdProgressSync() {
+      if (gdProgSyncStarted) return;
+      gdProgSyncStarted = true;
+      ovGuideApi('progress', {}, function(res) {
+        // A response without a real progress object (older backend, stub, or
+        // malformed reply) is "sync unavailable", never an empty server map —
+        // adopting it would wipe the local fallback.
+        if (!res || !res.success || typeof res.progress !== 'object' || res.progress === null) {
+          gdProgSyncStarted = false; return;
+        }
+        var server = res.progress;
+        // First-sync migration: push local ticks the server doesn't have up in
+        // one batch (covers offline ticks and failed setprogress writes).
+        var missing = {}, any = false;
+        var pfx = GD_PROGRESS_KEY + '_' + ovAcctKey() + '_';
+        try {
+          for (var i = 0; i < localStorage.length; i++) {
+            var k = localStorage.key(i);
+            if (!k || k.indexOf(pfx) !== 0) continue;
+            var docId = k.slice(pfx.length), loc;
+            try { loc = JSON.parse(localStorage.getItem(k) || '{}'); } catch (je) { continue; }
+            for (var secId in loc) {
+              if (loc.hasOwnProperty(secId) && loc[secId] && !(server[docId] && server[docId][secId])) {
+                (missing[docId] = missing[docId] || {})[secId] = true; any = true;
+              }
+            }
+          }
+        } catch (le) { /* private mode — nothing local to migrate */ }
+        var adopt = function(map) {
+          gdServerProg = map || {};
+          // Mirror the merged server state down so the offline fallback
+          // matches exactly — including ticks removed on another device
+          // (local-only ticks were already migrated up above, so any doc
+          // key absent from the server map is a deliberate removal).
+          try {
+            var drop = [];
+            for (var li = 0; li < localStorage.length; li++) {
+              var lk = localStorage.key(li);
+              if (lk && lk.indexOf(pfx) === 0 && !gdServerProg[lk.slice(pfx.length)]) drop.push(lk);
+            }
+            for (var di = 0; di < drop.length; di++) localStorage.removeItem(drop[di]);
+            for (var d in gdServerProg) if (gdServerProg.hasOwnProperty(d)) {
+              localStorage.setItem(gdProgressKey(d), JSON.stringify(gdServerProg[d]));
+            }
+          } catch (se) { /* private mode */ }
+          gdApplyProgressUI();
+        };
+        if (any) {
+          ovGuideApi('setprogress', { merge: JSON.stringify(missing) }, function(mres) {
+            if (mres && mres.success && typeof mres.progress === 'object' && mres.progress !== null) {
+              adopt(mres.progress);
+            } else {
+              // Migration failed — adopting the pre-merge map would erase the
+              // unmigrated local ticks. Stay on localStorage; retry next open.
+              gdProgSyncStarted = false;
+            }
+          });
+        } else {
+          adopt(server);
+        }
+      });
+    }
+    // Repaint the rendered module's nav ticks + done buttons after a sync
+    // lands (the overlay may already be open when the server map arrives).
+    function gdApplyProgressUI() {
+      if (!gdCurDoc) return;
+      var overlay = document.getElementById('ov-guide-overlay');
+      if (!overlay || overlay.style.display === 'none') return;
+      var prog = gdProgress(gdCurDoc);
+      var navLinks = overlay.querySelectorAll('.gd-nav a[id^="gdnav-"]');
+      for (var i = 0; i < navLinks.length; i++) {
+        var secId = navLinks[i].id.slice('gdnav-'.length);
+        navLinks[i].classList.toggle('done', !!prog[secId]);
+      }
+      var btns = overlay.querySelectorAll('.gd-done-btn[data-sec]');
+      for (var j = 0; j < btns.length; j++) {
+        var on = !!prog[btns[j].getAttribute('data-sec')];
+        btns[j].classList.toggle('on', on);
+        btns[j].textContent = on ? '✓ Understood' : 'Mark as understood';
+      }
     }
     // One-time cleanup of the pre-v01.40w shared keys. They cannot be migrated
     // safely — there is no record of which account earned them — so they are
@@ -6248,6 +6370,7 @@ function ovReloadFresh() {
     })();
 
     function gdRenderDoc(doc, shell) {
+      gdCurDoc = doc.id;
       gdGlossMap = {};
       var gi;
       for (gi = 0; gi < (doc.glossary || []).length; gi++) gdGlossMap[doc.glossary[gi].t.toLowerCase()] = doc.glossary[gi].d;
@@ -6264,6 +6387,18 @@ function ovReloadFresh() {
       var rvc = gdReviewChip(doc.reviewBy);
       if (rvc) srcline.appendChild(rvc);
       tl.appendChild(srcline);
+      // Revision notes (v01.68w) — per-module revisions[] meta, newest first.
+      if (doc.revisions && doc.revisions.length) {
+        var revs = ovEl('div', 'gd-revs');
+        revs.appendChild(ovEl('div', 'lb', 'Revision notes'));
+        for (var rvi = doc.revisions.length - 1; rvi >= 0; rvi--) {
+          var rv = ovEl('div', 'rv');
+          rv.appendChild(ovEl('span', 'd', doc.revisions[rvi].date));
+          rv.appendChild(document.createTextNode(doc.revisions[rvi].note));
+          revs.appendChild(rv);
+        }
+        tl.appendChild(revs);
+      }
       top.appendChild(tl);
       top.appendChild(gdCloseBtn());
       shell.appendChild(top);
@@ -6373,6 +6508,7 @@ function ovReloadFresh() {
       }
       var done = ovEl('button', 'gd-done-btn' + (gdProgress(doc.id)[sec.id] ? ' on' : ''));
       done.type = 'button';
+      done.setAttribute('data-sec', sec.id);
       done.textContent = gdProgress(doc.id)[sec.id] ? '✓ Understood' : 'Mark as understood';
       done.addEventListener('click', function() {
         var now = !done.classList.contains('on');

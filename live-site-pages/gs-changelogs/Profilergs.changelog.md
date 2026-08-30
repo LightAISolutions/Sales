@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 26/50`
+`Sections: 27/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.27g] — 2026-08-29 10:28:50 PM EST — v03.83r
+
+### Added
+- Study modules now carry dated revision notes describing how their content has changed
+- Each account's reading progress is now stored centrally, so section ticks follow you across devices
 
 ## [v01.26g] — 2026-08-29 09:47:21 PM EST — v03.81r
 
