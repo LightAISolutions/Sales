@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.62w">
+  <meta name="build-version" content="v01.63w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -5984,10 +5984,10 @@ function ovReloadFresh() {
         })));
       }
       if (sec.note) { var nt = ovEl('div', 'gd-note'); nt.innerHTML = gdFmt(sec.note); el.appendChild(nt); }
-      if (sec.zh) {
+      if (sec.sales) {
         var zh = ovEl('div', 'gd-zh');
-        zh.appendChild(ovEl('div', 'lb', 'For the Zhonhen conversation'));
-        var zt = ovEl('div', 'tx'); zt.innerHTML = gdFmt(sec.zh); zh.appendChild(zt);
+        zh.appendChild(ovEl('div', 'lb', 'Sales angle'));
+        var zt = ovEl('div', 'tx'); zt.innerHTML = gdFmt(sec.sales); zh.appendChild(zt);
         el.appendChild(zh);
       }
       var done = ovEl('button', 'gd-done-btn' + (gdProgress(doc.id)[sec.id] ? ' on' : ''));

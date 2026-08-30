@@ -1,4 +1,4 @@
-var VERSION = "v01.23g";
+var VERSION = "v01.24g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -400,7 +400,7 @@ function guidanceDocNvidia800_() {
  "id": "nvidia-800vdc-2026-08",
  "group": "The AI Data-Center Wave",
  "title": "NVIDIA 800 VDC: Industry Alignment & Execution",
- "short": "The industry's steering document for AI-factory power, 2026-2027 - analyzed and tailored.",
+ "short": "The industry's steering document for AI-factory power, 2026-2027 - analyzed.",
  "source": {
   "doc": "800 VDC Architecture: Industry Alignment & Execution (White Paper)",
   "publisher": "NVIDIA",
@@ -444,7 +444,7 @@ function guidanceDocNvidia800_() {
     "Three structural signals make it the steering document: **CSP alignment is explicit** - a joint Google / Microsoft / NVIDIA position from GTC Taipei 2026 covering the converged direction, phased AC/DC coexistence, common power-block sizing and redundancy philosophy, open OEM development, {{power smoothing}} requirements, and {{OCP}}-hosted standards work. **The equipment scope is bounded** - a deliberately limited set of deployable configurations so OEMs stop spreading engineering across incompatible designs. **Coexistence is doctrine** - 800 VDC \"is not intended to replace existing 415/480 VAC systems\"; every option overlays existing AC facilities, and the {{DSX}} reference design gains 800 VDC options rather than being replaced.",
     "Equally important is what is *absent*: no efficiency percentages, no copper-savings claims, no TCO math. The sales numbers you know (+157% power through the same copper, -45% copper, ~+5% efficiency) come from the **October 2025 paper** - this one is engineering execution, and its business-value study is explicitly future work (p34)."
    ],
-   "zh": "When a counterpart cites efficiency numbers, know which paper they came from. This paper's authority is architectural: it defines the slots, the ratings, and the calendar."
+   "sales": "When a counterpart cites efficiency numbers, know which paper they came from. This paper's authority is architectural: it defines the slots, the ratings, and the calendar."
   },
   {
    "id": "roadmap",
@@ -525,7 +525,7 @@ function guidanceDocNvidia800_() {
      "sub": "\"expected to be launched toward 2029\" - unlocks 34.5 kV MV-direct (p23)"
     }
    ],
-   "zh": "The 2029 date belongs to next-gen SST specifically. TRU-based power blocks are being specified now - the competitive window for a shipping TRU fleet is real but tighter than 'nothing until 2029.'"
+   "sales": "The 2029 date belongs to next-gen SST specifically. TRU-based power blocks are being specified now - the competitive window for a shipping TRU fleet is real but tighter than 'nothing until 2029.'"
   },
   {
    "id": "power",
@@ -640,14 +640,14 @@ function guidanceDocNvidia800_() {
      ]
     }
    ],
-   "zh": "Option C initial implementation is TRU-or-SST - and its containerized-prefab definition is exactly the form Zhonhen ships. The competitive question a buyer will ask: how does a 2.5-3.6 MW Panama/SuperX lineup compose into NVIDIA's standardized 4.8 MW blocks, 1250 A busways and tap-can interfaces?"
+   "sales": "Option C initial implementation is TRU-or-SST - and its containerized-prefab definition matches what containerized TRU suppliers already ship. The competitive question a buyer will ask any supplier whose modules are rated below the standard block: how does the lineup compose into NVIDIA's standardized 4.8 MW blocks, 1250 A busways and tap-can interfaces?"
   },
   {
    "id": "trusst",
    "title": "TRU vs SST - and the Panama name-check",
    "read": "4 min",
    "kind": "table",
-   "intro": "The paper's own device-class framing (p21-23) - which matches the TRU-vs-SST distinction in your Zhonhen prep exactly. Three TRU implementation families are named: IGBT UPS-derived conversion; aggregated SiC power shelves behind front-end transformers; and **the \"Panama Architecture\"** - a line-frequency phase-shifting transformer at the MV entry feeding centralized rectification, relying \"more heavily on passive magnetic components, offering a simpler and highly familiar design philosophy\" (p22).",
+   "intro": "The paper's own device-class framing (p21-23). Three TRU implementation families are named: IGBT UPS-derived conversion; aggregated SiC power shelves behind front-end transformers; and **the \"Panama Architecture\"** - a line-frequency phase-shifting transformer at the MV entry feeding centralized rectification, relying \"more heavily on passive magnetic components, offering a simpler and highly familiar design philosophy\" (p22).",
    "cols": [
     "",
     "TRU - the near-term block",
@@ -686,7 +686,7 @@ function guidanceDocNvidia800_() {
     ]
    ],
    "note": "Analysis: NVIDIA has formally blessed the TRU path - naming Panama as one of its three canonical implementations - for the first-deployed power-block slot. \"Mature magnetics, shipping today\" is now the reference document's own logic, not just a vendor pitch.",
-   "zh": "The strategy-report flag is resolved: the 'simpler and highly familiar' phrase is verified at p22, and the document is in the repo. Cite it as 'NVIDIA's August 2026 white paper' and paraphrase in customer settings - the notice bars verbatim reproduction, and the paper names an architecture, not a company."
+   "sales": "The 'simpler and highly familiar' phrase is verified at p22, and the document is in the repo. Cite it as 'NVIDIA's August 2026 white paper' and paraphrase in customer settings - the notice bars verbatim reproduction, and the paper names an architecture, not a company."
   },
   {
    "id": "faults",
@@ -797,7 +797,7 @@ function guidanceDocNvidia800_() {
     "**SSCBs (p27-29)** interrupt electronically before fault current peaks - sub-millisecond isolation versus several milliseconds - slashing let-through energy (I²t), damage and arc-flash risk. NVIDIA's two target ratings: **125 A air-cooled** for the 800→54 V shelves inside compute racks, and **1250 A, likely liquid-cooled**, for future native-800 VDC rack interfaces; the practical ceiling of air-cooled SSCB current is under evaluation. The sober counterweight: **MCCBs remain the primary Day-1 branch device** (availability, supply chain, certification familiarity) with ~20 ms clearing at 125 A branches. Figure 15 (Siemens data, 200 A/µs rise) shows the shape: a fuse peaks near 9.4 kA around 3 ms; a thermal-mag breaker near 5.7 kA clearing in ~6-7 ms; a hybrid in ~2.5 ms; the SSCB holds current near zero inside a millisecond. *(Chart values read from an image - treat as shape, not datasheet.)*",
     "**Power smoothing moves rack-side (p4).** AI training's synchronized swings are tamed *at the compute rack*: \"localized peak shaving, power smoothing, and slew rate control using minimal energy storage (e.g., electrolytic capacitors)\" so the grid sees a stable rack interface; facility/BTM storage is optional for interconnection needs. The 1,200 J per PSU (p12) is that philosophy in hardware."
    ],
-   "zh": "Grid-code compliance is where your ERCOT knowledge composes with this: NVIDIA specifies the rack-interface behavior; NOGRR282/FERC govern the facility's behavior at the meter. Deep storage on the DC bus remains the compliance-by-construction story for ride-through - and off-grid, generator protection."
+   "sales": "Grid-code compliance is where ERCOT knowledge composes with this: NVIDIA specifies the rack-interface behavior; NOGRR282/FERC govern the facility's behavior at the meter. Deep storage on the DC bus remains the compliance-by-construction story for ride-through - and off-grid, generator protection."
   },
   {
    "id": "cert",
@@ -811,14 +811,14 @@ function guidanceDocNvidia800_() {
    ]
   },
   {
-   "id": "zhpanel",
-   "title": "For the Zhonhen conversation",
+   "id": "suppliers",
+   "title": "For TRU and SST suppliers",
    "read": "4 min",
    "kind": "callout",
    "ps": [
     "**1 - The quote is verified, in hand.** Page 22 names the \"Panama Architecture\" as a TRU implementation with the exact phrase - *\"a simpler and highly familiar design philosophy.\"* Cite it as NVIDIA's August 2026 white paper; paraphrase in customer settings (the notice bars verbatim reproduction) and remember it names an architecture, not any company - it puts nobody on a roster.",
-    "**2 - The window holds but tightens.** The 2029 date attaches to **next-gen SST** and MV-direct conversion specifically. TRU-based ~4.8 MW blocks are being specified now, containerized, with OEMs converging - and Option B hits deployment as soon as Q3 2027. The defensible claim: *the industry's own reference document says the near-term block is a TRU - the device class Zhonhen has productized since 2019 - while the SST future arrives ~2029.* Zhonhen's edge is a shipping fleet and prefab maturity, not an empty Western calendar.",
-    "**3 - 4.8 MW is the block to answer for.** NVIDIA standardizes 4.8 MW blocks, 4+1 catcher STS, 6000 A switchboards, 1250 A busways, tap-can interfaces, 20 MW Deployment Units. Panama modules are 2.5 MW; SuperX is 3.6 MW. Prepare the composition story: paralleling to 4.8 MW, busway and tap-can interface compatibility, catcher participation.",
+    "**2 - The window holds but tightens.** The 2029 date attaches to **next-gen SST** and MV-direct conversion specifically. TRU-based ~4.8 MW blocks are being specified now, containerized, with OEMs converging - and Option B hits deployment as soon as Q3 2027. The defensible claim for any TRU supplier with a delivered fleet: *the industry's own reference document says the near-term block is a TRU, while the SST future arrives ~2029.* The edge is a shipping fleet and prefab maturity, not an empty Western calendar.",
+    "**3 - 4.8 MW is the block to answer for.** NVIDIA standardizes 4.8 MW blocks, 4+1 catcher STS, 6000 A switchboards, 1250 A busways, tap-can interfaces, 20 MW Deployment Units. Suppliers whose module ratings sit below 4.8 MW must prepare the composition story: paralleling to 4.8 MW, busway and tap-can interface compatibility, catcher participation.",
     "**4 - Prefab containers are now table stakes.** Option C is *defined* as modularized, factory-tested, containerized delivery. The differentiator shifts to delivered fleet history at these voltages and speed-to-power - 'shipping the 2027 slot today.'",
     "**5 - Vocabulary upgrade.** HRMG/HRRG grounding, IMD/RCM monitoring, the two protection zones, interlocked 125 A whips, SSCB ratings (125 A air / 1250 A liquid), 4+1 catcher STS. Fluency here is what 'knows the space' sounds like in late 2026."
    ]
@@ -1333,7 +1333,7 @@ function guidanceDocChinaPolicy_() {
   {
    "k": "Oct 1, 2027",
    "v": "the DoD ban",
-   "sub": "§154 names Hithium; FY2026 NDAA phases FEOC-free 2028-31"
+   "sub": "§154 names six makers; FY2026 NDAA phases FEOC-free 2028-31"
   }
  ],
  "sections": [
@@ -1344,8 +1344,8 @@ function guidanceDocChinaPolicy_() {
    "kind": "prose",
    "ps": [
     "Four separate federal machines constrain Chinese battery storage in the US, on four different legal levers: **tax law** (the OBBBA {{PFE}} rules attached to the §48E storage ITC), **trade law** (tariffs), **defense procurement law** (NDAA bans), and the **domestic-content adder**. They have different dates, different tests, and different remedies - conflating them is the most common seller error.",
-    "The tax lever is the decisive one. Since July 4, 2025 the tax code disqualifies projects tied to prohibited foreign entities from the storage ITC - worth ~30%+ of a buyer's capex. Hithium is a statutory {{SFE}} **by name**: the code incorporates the FY2024 NDAA §154(b) list (CATL, BYD, Envision, EVE, Gotion, Hithium) directly, and Hithium qualifies a second time as a Chinese-organized company. This is statute, not agency discretion - no delisting process short of Congress.",
-    "The consequence chain to memorize: a 2026-construction-start BESS needs a {{MACR}} of at least 55% non-PFE manufactured-product cost. The battery pack is ~65.6% of that cost under the IRS tables - so a Hithium-cell system lands around 34% and loses the **entire ITC**, not a bonus. The escape: projects that began construction (tax rules) by **December 31, 2025** are exempt from the MACR test entirely.",
+    "The tax lever is the decisive one. Since July 4, 2025 the tax code disqualifies projects tied to prohibited foreign entities from the storage ITC - worth ~30%+ of a buyer's capex. Six makers are statutory {{SFE}}s **by name**: the code incorporates the FY2024 NDAA §154(b) list (CATL, BYD, Envision, EVE, Gotion, Hithium) directly - and any Chinese-organized company qualifies independently of the list. This is statute, not agency discretion - no delisting process short of Congress.",
+    "The consequence chain to memorize: a 2026-construction-start BESS needs a {{MACR}} of at least 55% non-PFE manufactured-product cost. The battery pack is ~65.6% of that cost under the IRS tables - so a system built on listed-maker cells lands around 34% and loses the **entire ITC**, not a bonus. The escape: projects that began construction (tax rules) by **December 31, 2025** are exempt from the MACR test entirely.",
     "**Field note:** When a buyer says 'the FEOC thing', find out which lever they actually mean - tax eligibility, tariff cost, defense scope, or the adder. Each has a different answer and a different date."
    ]
   },
@@ -1358,14 +1358,14 @@ function guidanceDocChinaPolicy_() {
     "",
     "What it does",
     "Key dates",
-    "Severity for Hithium"
+    "Severity for listed suppliers"
    ],
    "rows": [
     [
      "Tax (OBBBA FEOC/PFE)",
      "Kills the §48E ITC for projects failing the MACR test; entity-level bans on SFE/FIE taxpayers",
      "Enacted Jul 4, 2025; MACR applies to post-2025 construction starts; 55% floor in 2026",
-     "Decisive - full ITC loss on 2026+ starts with Hithium cells"
+     "Decisive - full ITC loss on 2026+ starts with listed-maker cells"
     ],
     [
      "Trade (tariffs)",
@@ -1377,7 +1377,7 @@ function guidanceDocChinaPolicy_() {
      "Defense (NDAA)",
      "DoD cannot buy batteries from the six named makers; FEOC-free phase-in for defense batteries",
      "§154 ban Oct 1, 2027; FY2026 NDAA phases 2028-2031",
-     "Narrow - commercial sales untouched, but §154 listing wrote Hithium into the tax code"
+     "Narrow - commercial sales untouched, but the §154 list was written into the tax code"
     ],
     [
      "Domestic content (+10% adder)",
@@ -1420,7 +1420,7 @@ function guidanceDocChinaPolicy_() {
      "sub": "steepest ladder in the statute"
     }
    ],
-   "note": "Storage was deliberately given the steepest facility-level ladder (non-storage facilities run 40-60%). A Hithium-cell system computes to ~34% - the pack/module is ~65.6% of manufactured-product cost under the IRS tables, and any Hithium entity's output (including Mesquite, TX assembly) counts as PFE-made."
+   "note": "Storage was deliberately given the steepest facility-level ladder (non-storage facilities run 40-60%). A listed-maker-cell system computes to ~34% - the pack/module is ~65.6% of manufactured-product cost under the IRS tables, and a listed maker's output (including its US assembly plants) counts as PFE-made."
   },
   {
    "id": "mechanics",
@@ -1428,10 +1428,10 @@ function guidanceDocChinaPolicy_() {
    "read": "6 min",
    "kind": "prose",
    "ps": [
-    "**Who is a PFE.** Two routes: a **Specified Foreign Entity** ({{SFE}} - the §154(b) six by name, DoD §1260H companies, UFLPA-listed entities, and any company organized in or majority-owned from China/Russia/Iran/North Korea) or a **Foreign-Influenced Entity** ({{FIE}} - an SFE can appoint a board member or executive; a single SFE owns ≥25%; SFEs aggregate ≥40%; SFEs hold ≥15% of debt; or payments under a contract giving an SFE 'effective control'). Hithium US is ≥25% owned by an SFE → it is an FIE → its Texas-assembled product is PFE-made for tax purposes. **US soil does not cleanse the product.**",
-    "**The licensing kill-switch.** For IP-license deals signed on or after July 4, 2025, 'effective control' includes: licensor rights to specify component sources, direct operations, or limit IP use; royalties beyond year 10; service agreements longer than 2 years; or any license that fails to transfer all know-how needed to operate independently. Outright bona fide IP purchase is carved out. Ford's CATL-license plant proceeds under this standard (Ford owns site and equipment) - but every indicium is a diligence item tax counsel will run against a Hithium license structure.",
-    "**The paper trail.** IRS Notice 2026-15 (Feb 12, 2026) provides three interim safe harbors - Identification, Cost Percentage (use the Notice 2025-08 tables), and supplier Certification. Certifications must carry the supplier's EIN, be signed under penalties of perjury, and be retained six years; you cannot rely on one you have reason to doubt. Enforcement: a supplier penalty of the greater of 10% of the underpayment or $5,000 for false certifications; the substantial-understatement penalty trigger drops to 1% for energy-credit disallowances; and the IRS gets a 6-year statute of limitations. **A Hithium entity cannot sign a non-PFE certification for its own product - and no one on our side should ever facilitate one.**",
-    "**Timing traps.** The taxpayer-level prohibition (no credit for an SFE/FIE claimant) applies to tax years beginning after July 4, 2025 regardless of construction date. The 10-year recapture rule (tax years beginning after July 4, 2027) claws back the full ITC if the owner makes an effective-control payment to an SFE post-COD - which is why buyers will keep post-COD service contracts with us short and non-exclusive, and why we should structure for that rather than fight it."
+    "**Who is a PFE.** Two routes: a **Specified Foreign Entity** ({{SFE}} - the §154(b) six by name, DoD §1260H companies, UFLPA-listed entities, and any company organized in or majority-owned from China/Russia/Iran/North Korea) or a **Foreign-Influenced Entity** ({{FIE}} - an SFE can appoint a board member or executive; a single SFE owns ≥25%; SFEs aggregate ≥40%; SFEs hold ≥15% of debt; or payments under a contract giving an SFE 'effective control'). A listed maker's US subsidiary that is ≥25% SFE-owned is an FIE → its US-assembled product is PFE-made for tax purposes. **US soil does not cleanse the product.**",
+    "**The licensing kill-switch.** For IP-license deals signed on or after July 4, 2025, 'effective control' includes: licensor rights to specify component sources, direct operations, or limit IP use; royalties beyond year 10; service agreements longer than 2 years; or any license that fails to transfer all know-how needed to operate independently. Outright bona fide IP purchase is carved out. Ford's CATL-license plant proceeds under this standard (Ford owns site and equipment) - but every indicium is a diligence item tax counsel will run against any listed maker's license structure.",
+    "**The paper trail.** IRS Notice 2026-15 (Feb 12, 2026) provides three interim safe harbors - Identification, Cost Percentage (use the Notice 2025-08 tables), and supplier Certification. Certifications must carry the supplier's EIN, be signed under penalties of perjury, and be retained six years; you cannot rely on one you have reason to doubt. Enforcement: a supplier penalty of the greater of 10% of the underpayment or $5,000 for false certifications; the substantial-understatement penalty trigger drops to 1% for energy-credit disallowances; and the IRS gets a 6-year statute of limitations. **A listed maker's entity cannot sign a non-PFE certification for its own product - and a seller should never facilitate one.**",
+    "**Timing traps.** The taxpayer-level prohibition (no credit for an SFE/FIE claimant) applies to tax years beginning after July 4, 2025 regardless of construction date. The 10-year recapture rule (tax years beginning after July 4, 2027) claws back the full ITC if the owner makes an effective-control payment to an SFE post-COD - which is why buyers will keep post-COD service contracts with listed suppliers short and non-exclusive; sellers should structure for that rather than fight it."
    ]
   },
   {
@@ -1450,7 +1450,7 @@ function guidanceDocChinaPolicy_() {
      "x": 2023.98,
      "lane": "def",
      "label": "FY2024 NDAA §154",
-     "sub": "six makers named incl. Hithium; DoD ban set for Oct 1, 2027"
+     "sub": "six makers named; DoD ban set for Oct 1, 2027"
     },
     {
      "x": 2024.75,
@@ -1534,7 +1534,7 @@ function guidanceDocChinaPolicy_() {
   },
   {
    "id": "interaction",
-   "title": "A developer buying Hithium in 2026 - the interaction map",
+   "title": "A developer buying §154-listed cells in 2026 - the interaction map",
    "read": "4 min",
    "kind": "table",
    "intro": "Standalone 200 MWh grid-scale project, evaluated August 2026. The layers stack; the ITC layer decides.",
@@ -1556,7 +1556,7 @@ function guidanceDocChinaPolicy_() {
     ],
     [
      "Tariff",
-     "~40.9% on imported customs value; cells-into-Mesquite roughly halves the base vs a finished container",
+     "~40.9% on imported customs value; importing cells into US assembly roughly halves the base vs a finished container",
      "Same"
     ],
     [
@@ -1610,14 +1610,14 @@ function guidanceDocChinaPolicy_() {
      ]
     },
     {
-     "t": "Tariff engineering via Mesquite",
+     "t": "Tariff engineering via US assembly",
      "meta": "cost lever, not a tax fix",
      "adv": [
       "Duty applies to cell customs value only - roughly halves the tariff burden vs finished containers",
       "US logistics, delivery speed, and optics"
      ],
      "dis": [
-      "Fixes nothing on FEOC or the adder - Mesquite output is still PFE-made",
+      "Fixes nothing on FEOC or the adder - a listed maker's US output is still PFE-made",
       "Overpromising tax outcomes on 'Made in Texas' is the fastest way to lose a customer"
      ]
     },
@@ -1626,7 +1626,7 @@ function guidanceDocChinaPolicy_() {
      "meta": "the structurally available play",
      "adv": [
       "Bona fide IP purchase is carved out of effective control",
-      "Puts Hithium technology inside someone else's compliant supply chain"
+      "Puts the listed maker's technology inside someone else's compliant supply chain"
      ],
      "dis": [
       "A royalty-bearing license is the dangerous version - every indicium was written for it",
@@ -1649,13 +1649,13 @@ function guidanceDocChinaPolicy_() {
   },
   {
    "id": "redlines",
-   "title": "Compliance red lines for the sales team",
+   "title": "Compliance red lines for listed-supplier sales teams",
    "read": "2 min",
    "kind": "callout",
    "ps": [
-    "**1 - Never assert ITC eligibility** for a 2026+ construction-start project using Hithium content. It is not supportable under current law.",
-    "**2 - Never sign or facilitate a non-PFE certification** for Hithium product - certifications are penalties-of-perjury documents with supplier penalties attached.",
-    "**3 - Route all begin-construction and safe-harbor representations through counsel.** We support the buyer's documentation; we do not opine on their tax position.",
+    "**1 - Never assert ITC eligibility** for a 2026+ construction-start project using §154-listed content. It is not supportable under current law.",
+    "**2 - Never sign or facilitate a non-PFE certification** for listed-maker product - certifications are penalties-of-perjury documents with supplier penalties attached.",
+    "**3 - Route all begin-construction and safe-harbor representations through counsel.** Support the buyer's documentation; never opine on their tax position.",
     "**4 - Disclose the ~40.9% duty stack in TCO models** - and date-stamp it: the rate changed four times in 2026 and must be re-verified at quote time.",
     "**5 - In Texas, lead with the no-remote-access security architecture** (LSIPA / NPRR1199) before it is asked for."
    ]
@@ -1720,10 +1720,6 @@ function guidanceDocChinaPolicy_() {
      "Stoel Rives; Notice 2025-08; Energy-Storage.News"
     ],
     [
-     "Mesquite TX: ~10 GWh/yr module+system assembly, no cell lines, mass production Aug 2025",
-     "Hithium PR; Dallas Innovates"
-    ],
-    [
      "Storage ITC: 100% through 2033 starts, then 75/50/0 - exempt from the wind/solar 2027 cliff",
      "Stoel Rives; pv magazine USA"
     ],
@@ -1740,20 +1736,20 @@ function guidanceDocChinaPolicy_() {
    "kind": "flashcards",
    "cards": [
     {
-     "q": "Why is Hithium a Specified Foreign Entity?",
-     "a": "Twice over: the tax code incorporates the FY2024 NDAA §154(b) list by name (CATL, BYD, Envision, EVE, Gotion, Hithium), and Hithium is a Chinese-organized company. Statutory - no delisting short of Congress."
+     "q": "How does a maker end up a Specified Foreign Entity?",
+     "a": "Two routes: by name - the tax code incorporates the FY2024 NDAA §154(b) list (CATL, BYD, Envision, EVE, Gotion, Hithium) directly - or by organization, for any Chinese-organized or majority-Chinese-owned company. Statutory - no delisting short of Congress."
     },
     {
-     "q": "The storage MACR floor for a 2026 construction start - and what a Hithium-cell system computes to?",
-     "a": "55% non-PFE manufactured-product cost required; a Hithium-cell system lands ~34% because the pack/module is ~65.6% of MP cost - the entire ITC is lost."
+     "q": "The storage MACR floor for a 2026 construction start - and what a listed-maker-cell system computes to?",
+     "a": "55% non-PFE manufactured-product cost required; a listed-maker-cell system lands ~34% because the pack/module is ~65.6% of MP cost - the entire ITC is lost."
     },
     {
      "q": "What escapes the MACR test entirely?",
      "a": "Projects that began construction (physical-work test or 5% safe harbor, per Notices 2013-29/2018-59 as of Jan 1, 2025) by December 31, 2025 - plus a cost exclusion for pre-Jun-16-2025 binding contracts."
     },
     {
-     "q": "Does Mesquite TX assembly fix the tax problem?",
-     "a": "No. Hithium US is ≥25% SFE-owned, so it is a Foreign-Influenced Entity and its output is PFE-made. Mesquite is a tariff lever (duty on cell value only, not the full container) - never a tax fix."
+     "q": "Does US assembly by a listed maker fix the tax problem?",
+     "a": "No. A US subsidiary ≥25% SFE-owned is a Foreign-Influenced Entity and its output is PFE-made. US assembly is a tariff lever (duty on cell value only, not the full container) - never a tax fix."
     },
     {
      "q": "The current tariff stack on Chinese BESS, and its 2026 path?",
@@ -1780,12 +1776,12 @@ function guidanceDocChinaPolicy_() {
    "kind": "quiz",
    "items": [
     {
-     "q": "A developer's project began construction in November 2025 (documented 5% spend). They buy Hithium DC blocks in 2026. The ITC?",
+     "q": "A developer's project began construction in November 2025 (documented 5% spend). They buy §154-listed DC blocks in 2026. The ITC?",
      "c": [
-      "Lost - Hithium is an SFE",
+      "Lost - the maker is an SFE",
       "Survives - the MACR test doesn't apply to pre-2026 starts, provided the owner avoids effective-control contracts",
       "Reduced to 50%",
-      "Survives only if assembled at Mesquite"
+      "Survives only if assembled in the US"
      ],
      "a": 1,
      "why": "The begin-construction exemption is the primary 2026-27 sales lane. Entity-level rules still apply to the claimant, and effective-control contracting discipline matters."
@@ -1813,7 +1809,7 @@ function guidanceDocChinaPolicy_() {
      "why": "SCOTUS struck only the IEEPA-based layers (Feb 20, 2026). Section 301 rests on different authority and stands; the 12.5% forced-labor action began Jul 24."
     },
     {
-     "q": "A DoD contractor wants Hithium batteries inside a 2028 deliverable. The cleanest answer?",
+     "q": "A DoD contractor wants §154-listed batteries inside a 2028 deliverable. The cleanest answer?",
      "c": [
       "Fine - §154 only covers direct DoD purchases forever",
       "Blocked or at severe risk: the §154 funds ban runs from Oct 1, 2027 and FY2026 NDAA FEOC-free phases begin Jan 1, 2028; scope details await DFARS",
@@ -1824,18 +1820,18 @@ function guidanceDocChinaPolicy_() {
      "why": "The defense channel closes hardest. Contractor-embedded gray zones exist but the trajectory is unambiguous - do not build a defense-adjacent pipeline."
     },
     {
-     "q": "A buyer asks Hithium to sign a certification that its product is not PFE-made, 'just paperwork.' You:",
+     "q": "A buyer asks a listed maker to sign a certification that its product is not PFE-made, 'just paperwork.' You:",
      "c": [
       "Sign it - it speeds the deal",
-      "Decline: Hithium product is PFE-made by statute; the certification is penalties-of-perjury with §6695B supplier penalties",
-      "Sign it only for Mesquite product",
+      "Decline: the product is PFE-made by statute; the certification is penalties-of-perjury with §6695B supplier penalties",
+      "Sign it only for US-assembled product",
       "Refer to marketing"
      ],
      "a": 1,
      "why": "Red line #2. A false certification exposes the supplier to the greater of 10% of the underpayment or $5,000 - and destroys the relationship."
     },
     {
-     "q": "Where does a Hithium license-to-US-partner model stand?",
+     "q": "Where does a listed maker's license-to-US-partner model stand?",
      "c": [
       "Prohibited outright",
       "Safe - Ford proved it",
@@ -1855,11 +1851,11 @@ function guidanceDocChinaPolicy_() {
   },
   {
    "t": "SFE",
-   "d": "Specified Foreign Entity - includes the FY2024 NDAA §154(b) six by name (Hithium among them), DoD §1260H companies, UFLPA-listed entities, and Chinese/Russian/Iranian/North Korean-organized or majority-owned companies."
+   "d": "Specified Foreign Entity - includes the FY2024 NDAA §154(b) six by name, DoD §1260H companies, UFLPA-listed entities, and Chinese/Russian/Iranian/North Korean-organized or majority-owned companies."
   },
   {
    "t": "FIE",
-   "d": "Foreign-Influenced Entity - an entity an SFE can influence: covered-officer appointment rights, ≥25% single-SFE ownership, ≥40% aggregate SFE ownership, ≥15% SFE-held debt, or effective-control payments. Hithium's US subsidiaries are FIEs."
+   "d": "Foreign-Influenced Entity - an entity an SFE can influence: covered-officer appointment rights, ≥25% single-SFE ownership, ≥40% aggregate SFE ownership, ≥15% SFE-held debt, or effective-control payments. A listed maker's ≥25%-SFE-owned US subsidiaries are FIEs."
   },
   {
    "t": "MACR",
@@ -2109,7 +2105,7 @@ function guidanceDocUtilityAidc_() {
      "meta": "the volume channel, maturing",
      "adv": [
       "~16.3 GW fleet (Jul 2026); AIDC volatility is a named revenue force",
-      "Buyer is the developer/IPP - fast decisions, cost- and availability-driven (Hithium's existing lane: Perfect Power 1 GWh MOU)"
+      "Buyer is the developer/IPP - fast decisions, cost- and availability-driven"
      ],
      "dis": [
       "Growth decelerating - queue entries fell ~50% in H2 2025",
@@ -2247,7 +2243,7 @@ function guidanceDocUtilityAidc_() {
      "ERCOT merchant",
      "Market-driven",
      "~16.3 GW fleet",
-     "Full OEM spectrum incl. Hithium (Mesquite shipping since Aug 2025; Perfect Power 1 GWh MOU)",
+     "Full OEM spectrum - incumbents and §154-listed suppliers alike",
      "Continuous, decelerating"
     ]
    ]
@@ -2660,37 +2656,37 @@ function guidanceDocBankability_() {
    "ps": [
     "**The Independent Engineer report is the gate.** Lenders and tax equity will not close without one (DNV, Sargent & Lundy, Black & Veatch, Leidos, ICF, UL Solutions and peers). The IE tests: the revenue model against the equipment's real capability (cycling regime vs warranty limits - a two-cycles-per-day contract against a one-cycle warranty voids coverage, and IEs check for exactly this); technology and integration quality; **degradation and warranty terms** (do the guaranteed retention curves support the pro forma? is {{augmentation}} costed and physically provided for?); grid compliance; commercial agreements; and **supplier counterparty strength** - financial health, factory-audit results, field record, spares and service network.",
     "**The contractual skeleton:** commissioning guarantees (capacity + round-trip efficiency at COD); long-term energy-retention warranties conditioned on an operating envelope; **availability guarantees delivered through the LTSA** with liquidated damages - and suppliers generally will not give long-term warranties without holding the LTSA, since the LTSA controls the conditions the warranty depends on. Lenders now expect availability-anchored LTSA structures as standard.",
-    "**The scorecards buyers consult:** the {{BNEF Tier 1}} storage list (a financeability screen - Chinese firms held ~85% of the Q2 2026 list; Hithium listed since at least 2Q 2024); DNV's annual Battery Performance Scorecard (independent lab degradation/safety testing); and CEA's factory-audit reporting - whose headline finding reframed diligence: **72% of BESS manufacturing defects are now found at system level** (fire detection & suppression 28% of system-level findings, auxiliary circuit panels 19%, thermal management 15%). Cell quality is no longer where most defects live - which is why factory-audit rights are in every serious RFP. (No dedicated PVEL/Kiwa BESS scorecard was confirmed - their famous scorecard is PV modules; do not cite one.)",
+    "**The scorecards buyers consult:** the {{BNEF Tier 1}} storage list (a financeability screen - Chinese firms held ~85% of the Q2 2026 list); DNV's annual Battery Performance Scorecard (independent lab degradation/safety testing); and CEA's factory-audit reporting - whose headline finding reframed diligence: **72% of BESS manufacturing defects are now found at system level** (fire detection & suppression 28% of system-level findings, auxiliary circuit panels 19%, thermal management 15%). Cell quality is no longer where most defects live - which is why factory-audit rights are in every serious RFP. (No dedicated PVEL/Kiwa BESS scorecard was confirmed - their famous scorecard is PV modules; do not cite one.)",
     "**The China overlay:** lenders cannot avoid Chinese content (90-100% of US BESS carries some), so they price and paper it - MACR documentation, FEOC certifications, ITC-eligibility representations, recapture indemnities (mechanics in the companion China-policy module). The FCC moved mid-2026 to ban **new** equipment authorizations for Chinese-made inverters (prospective; DOE's January 2026 inspection of 30 units found no malicious hardware). The practical pairing: Chinese DC blocks with **non-Chinese PCS/EMS**, plus unprompted cybersecurity documentation (SBOM, firmware provenance, remote-access policy)."
    ]
   },
   {
-   "id": "hithium",
-   "title": "Hithium's file - what an IE will say",
+   "id": "counterparty",
+   "title": "The counterparty file - what an IE will say",
    "read": "4 min",
    "kind": "proscons",
-   "intro": "Know both columns cold. The tailwinds are real and quantified; the headwinds will be raised in every diligence process, and the sales team should raise them first, with the structural answers attached.",
+   "intro": "Every supplier walks into diligence with both columns. Know the categories cold: the tailwinds are proof points to quantify in every proposal; the headwinds will be raised in every diligence process, and a sales team should raise them first, with the structural answers attached.",
    "cards": [
     {
-     "t": "Tailwinds",
+     "t": "Tailwinds IEs credit",
      "meta": "the proof points to quantify in every proposal",
      "adv": [
-      "#2 global ESS cell shipper in 2025 (InfoLink; 35.1 GWh / #3 in 2024)",
-      "BNEF Tier 1 listed since at least 2Q 2024",
-      "Real US operating record: Jupiter Power 3 GWh (∞Block 5 MWh, 314 Ah cells rated to 11,000 cycles); Perfect Power 1 GWh MOU",
-      "Mesquite, TX assembly (~10 GWh/yr) shipping since Aug 28, 2025"
+      "Shipment-volume rank from independent trackers (InfoLink, SMM) - scale implies process maturity",
+      "BNEF Tier 1 listing - the financeability screen lenders actually run",
+      "A quantified US operating fleet: GWh delivered, availability achieved, named reference projects",
+      "US assembly capacity and demonstrated delivery speed"
      ],
      "dis": []
     },
     {
-     "t": "Headwinds",
+     "t": "Headwinds IEs flag",
      "meta": "raise them first, with answers",
      "adv": [],
      "dis": [
-      "HKEX IPO: filed Mar 2025, lapsed Sep 25, 2025, refiled Oct 2025, unclosed as of Aug 2026 - an IE reads an unclosed IPO as a financing-dependency flag against a 20-year warranty",
-      "Gross margin compression: 17.9% (2024) → 13.1% (H1 2025) despite +224.6% revenue growth",
-      "CATL unfair-competition suit (Ningde court, confirmed Jun 2025; 587 Ah cell allegations) - injunction and reputational tail risk",
-      "The FEOC/tariff overlay per the companion module"
+      "Financing dependency - an unclosed IPO or thin balance sheet reads as a flag against a 20-year warranty",
+      "Margin compression despite fast revenue growth - IEs read it as pricing-war exposure",
+      "Live litigation with competitors - injunction and reputational tail risk",
+      "For China-linked suppliers, the FEOC/tariff overlay per the companion module"
      ]
     },
     {
@@ -2767,8 +2763,8 @@ function guidanceDocBankability_() {
    "ps": [
     "**1 - Lead with the complete safety dossier** - full 9540A stack (cell + module + unit, 5th-edition testing), LSFT results, listings, UN 38.3 summaries, NFPA 855-2026 package. Completeness IS differentiation.",
     "**2 - Reframe Moss Landing proactively** - indoor, NMC, legacy design; cite the insurers' own 'not a market-moving event' verdict and the EPRI ~97-99% decline with its caveat stated honestly.",
-    "**3 - Own the FEOC/tariff conversation before diligence raises it** - the MACR narrative, certifications we can and cannot sign, and the indemnity/recapture structure on offer (companion module).",
-    "**4 - Neutralize the counterparty file with structure** - guarantees, bonding, escrowed spares, US-entity-backed LTSAs, bank references, quantified Jupiter fleet performance.",
+    "**3 - Own the FEOC/tariff conversation before diligence raises it** - the MACR narrative, the certifications a supplier can and cannot sign, and the indemnity/recapture structure on offer (companion module).",
+    "**4 - Neutralize the counterparty file with structure** - guarantees, bonding, escrowed spares, US-entity-backed LTSAs, bank references, quantified US fleet performance.",
     "**5 - Bundle for the grid gauntlet** - IEEE 2800-conformant PCS documentation, non-Chinese PCS/EMS pairing options, and cybersecurity documentation, all unprompted.",
     "**6 - Enforce the vocabulary** - 9540A is a test, not a cert; NOGRR 282 is a load rule; Tier 1 is a financeability screen. Precision is credibility."
    ]
@@ -2825,8 +2821,8 @@ function guidanceDocBankability_() {
      "Sargent & Lundy; DNV; Sunraise"
     ],
     [
-     "BNEF Tier 1 criteria (≥6 projects ≥10 MW/MWh, 2 yrs, ≥3 buyers); ~85% Chinese Q2 2026; Hithium listed since ≥2Q24",
-     "BNEF methodology; EnergyTrend; Hithium PR"
+     "BNEF Tier 1 criteria (≥6 projects ≥10 MW/MWh, 2 yrs, ≥3 buyers); ~85% Chinese Q2 2026",
+     "BNEF methodology; EnergyTrend"
     ],
     [
      "CEA: 72% of defects at system level - fire detection 28%, aux panels 19%, thermal 15% (680+ inspections)",
@@ -2839,14 +2835,6 @@ function guidanceDocBankability_() {
     [
      "FCC ban on new Chinese-inverter authorizations (mid-2026, prospective); DOE found no malicious hardware (Jan 2026)",
      "pv magazine USA; Reuters/US News; Canary Media"
-    ],
-    [
-     "Hithium: #2 2025 ESS cell shipments; Jupiter 3 GWh (∞Block, 314 Ah, ≤11,000 cycles); Mesquite shipping Aug 2025",
-     "InfoLink; SolarbeGlobal; Energy-Storage.News"
-    ],
-    [
-     "Hithium IPO lapsed Sep 25, 2025 → refiled Oct 2025; margin 17.9 → 13.1%; CATL suit Jun 2025",
-     "Energy-Storage.News; Bamboo Works; ess-news; pv magazine"
     ]
    ]
   },
@@ -2878,7 +2866,7 @@ function guidanceDocBankability_() {
     },
     {
      "q": "What is BNEF Tier 1, precisely?",
-     "a": "A bank-financeability screen: supply to ≥6 projects of ≥10 MW/10 MWh in the past two years, to ≥3 independent buyers, with tracked non-recourse financing. Not a quality award. Hithium: listed since at least 2Q 2024."
+     "a": "A bank-financeability screen: supply to ≥6 projects of ≥10 MW/10 MWh in the past two years, to ≥3 independent buyers, with tracked non-recourse financing. Not a quality award."
     },
     {
      "q": "Why won't a supplier give a long-term warranty without holding the LTSA?",
@@ -2938,14 +2926,14 @@ function guidanceDocBankability_() {
       "Only NMC systems fail"
      ],
      "a": 1,
-     "why": "The number lands hardest when the caveat is stated honestly - that discipline is also what separates our materials from vendor puff."
+     "why": "The number lands hardest when the caveat is stated honestly - that discipline is what separates a credible seller's materials from vendor puff."
     },
     {
      "q": "A buyer asks why they should trust a 20-year warranty from a company whose IPO hasn't closed. The professional answer:",
      "c": [
       "The IPO will close soon",
-      "Acknowledge the flag and answer with structure: parent guarantees, warranty insurance/bonding, escrowed spares, a US-entity-backed availability-LD LTSA, bank references, and quantified Jupiter fleet performance",
-      "Point to revenue growth (+224.6%)",
+      "Acknowledge the flag and answer with structure: parent guarantees, warranty insurance/bonding, escrowed spares, a US-entity-backed availability-LD LTSA, bank references, and quantified US fleet performance",
+      "Point to revenue growth",
       "Change the subject to price"
      ],
      "a": 1,
@@ -3015,16 +3003,16 @@ function guidanceDocBankability_() {
 }
 // Content: BESS Technology Fundamentals for the Sales Team (teaching synthesis, 2026-08-24).
 // Derived from repository-information/industry-guidance/bess-technology-fundamentals-analysis.md;
-// no new external claims - specs are company-published figures via hithium.profile.json v5,
-// safety/certification claims via the bankability analysis. Phase 5 (team training) module 1 of 2.
+// no new external claims - specs are class-typical figures drawn from the covered supplier
+// dossiers, safety/certification claims via the bankability analysis. Phase 5 (team training) module 1 of 2.
 function guidanceDocBessTech_() {
   return {
  "id": "bess-tech-fundamentals-2026-08",
  "group": "Technology Foundations",
  "title": "BESS Technology Fundamentals for the Sales Team",
- "short": "The machine we sell - cells, containers, the spec sheet, sodium, and the safety vocabulary - taught from zero.",
+ "short": "The machine BESS suppliers sell - cells, containers, the spec sheet, sodium, and the safety vocabulary - taught from zero.",
  "source": {
-  "doc": "Teaching synthesis - hithium.profile.json v5 + the bankability analysis + the Hithium lesson plan",
+  "doc": "Teaching synthesis - covered supplier dossiers + the bankability analysis",
   "publisher": "Internal analysis",
   "date": "August 2026",
   "pages": 4,
@@ -3041,7 +3029,7 @@ function guidanceDocBessTech_() {
   {
    "k": "280 → 1300 Ah",
    "v": "the cell ladder",
-   "sub": "larger cells, fewer parts - the company's founding bet"
+   "sub": "larger cells, fewer parts - the industry's large-cell race"
   },
   {
    "k": "≥10-13k cycles",
@@ -3051,7 +3039,7 @@ function guidanceDocBessTech_() {
   {
    "k": "2h · 4h · 8h",
    "v": "duration classes",
-   "sub": "8h-native LDES is the tier with no mass-produced like-for-like rival"
+   "sub": "8h-native LDES is the newest tier - kAh-class cells make it native, not stacked"
   }
  ],
  "sections": [
@@ -3061,8 +3049,8 @@ function guidanceDocBessTech_() {
    "read": "2 min",
    "kind": "prose",
    "ps": [
-    "The core-technical half of your onboarding: what a storage cell is, how cells become the containers we actually sell, what every line on a spec sheet means and why a buyer cares, where sodium-ion honestly stands, and the safety vocabulary you must not fumble in front of a technical audience. After this module you can hold a products conversation without a spec sheet in your hand; its companion (Power Infrastructure & the AIDC Power Chain) teaches the grid those products plug into.",
-    "Sourcing discipline: every product figure here is the company's own published specification, carried with its citations in the Hithium dossier (profileVersion 5). Safety and certification facts come from the bankability research module. Where a teaching simplification is used, it is flagged in place - never repeat a simplification as a fact in a customer room."
+    "The core-technical half of a seller's onboarding: what a storage cell is, how cells become the containers suppliers actually sell, what every line on a spec sheet means and why a buyer cares, where sodium-ion honestly stands, and the safety vocabulary you must not fumble in front of a technical audience. After this module you can hold a products conversation without a spec sheet in your hand; its companion (Power Infrastructure & the AIDC Power Chain) teaches the grid those products plug into.",
+    "Sourcing discipline: cell and container figures here are class-typical values drawn from the covered supplier dossiers, which carry the original citations - always quote a specific vendor's spec sheet, not this module, in a proposal. Safety and certification facts come from the bankability research module. Where a teaching simplification is used, it is flagged in place - never repeat a simplification as a fact in a customer room."
    ]
   },
   {
@@ -3071,8 +3059,8 @@ function guidanceDocBessTech_() {
    "read": "4 min",
    "kind": "prose",
    "ps": [
-    "A battery cell stores energy chemically. Charging pushes lithium ions from one electrode into the other and holds them there; discharging lets them flow back, releasing energy as electric current. The two electrode materials define the chemistry: our cells are {{LFP}} (lithium iron phosphate); the EV world leans {{NMC}} (nickel manganese cobalt). That single choice drives almost everything a buyer experiences.",
-    "Why stationary storage chose LFP: it is thermally stable (harder to push into dangerous overheating), it cycles for longer, and it is cheaper per kWh - at the cost of energy density, which a parked container barely cares about. Hithium's founding premise sharpens this: its cells are purpose-built for storage rather than repurposed from EV lines - {{prismatic cell}} formats sized for containers, tuned for cycle count over weight.",
+    "A battery cell stores energy chemically. Charging pushes lithium ions from one electrode into the other and holds them there; discharging lets them flow back, releasing energy as electric current. The two electrode materials define the chemistry: grid-storage cells are overwhelmingly {{LFP}} (lithium iron phosphate); the EV world leans {{NMC}} (nickel manganese cobalt). That single choice drives almost everything a buyer experiences.",
+    "Why stationary storage chose LFP: it is thermally stable (harder to push into dangerous overheating), it cycles for longer, and it is cheaper per kWh - at the cost of energy density, which a parked container barely cares about. Storage-first makers sharpen this: cells purpose-built for storage rather than repurposed from EV lines - {{prismatic cell}} formats sized for containers, tuned for cycle count over weight.",
     "Four words carry most spec conversations. {{cycle life}}: how many full charge-discharge round trips before capacity falls to the warranty floor (distinct from calendar life - degradation that happens with time regardless of use). {{DoD}}: how much of the stored energy each cycle actually uses. {{C-rate}}: how fast energy moves relative to capacity - a 0.25C system empties in four hours, a 1C system in one. {{RTE}}: energy out divided by energy in - every lost percentage point is paid for twice, once buying the charge and once in forgone discharge revenue.",
     "**Field note:** buyers rarely ask how the chemistry works - they ask what happens in year 12. The chemistry answer is the setup; the warranty-curve-plus-augmentation answer is the sale."
    ]
@@ -3091,7 +3079,7 @@ function guidanceDocBessTech_() {
     [
      "Cycle life",
      "Full round trips before capacity hits the warranty floor",
-     "Sets project life and augmentation cadence - the Hithium ladder runs ≥10,000-13,000 by cell class"
+     "Sets project life and augmentation cadence - modern storage-class LFP cells rate ≥10,000-13,000 cycles by class"
     ],
     [
      "Energy density (Wh/kg · Wh/L)",
@@ -3116,12 +3104,12 @@ function guidanceDocBessTech_() {
     [
      "Operating window",
      "Temperatures without derating",
-     "Siting reach - the hardened Desert Eagle variant is rated -30°C to 60°C; sodium reaches -40°C"
+     "Siting reach - hardened extreme-climate variants rate -30°C to 60°C; sodium reaches -40°C"
     ],
     [
      "Footprint density",
      "kWh per square meter of site",
-     "Land is a cost line - the 10-ft modular Flexsso is cited at ~423 kWh/m²"
+     "Land is a cost line - transport-optimized 10-ft modular formats push past ~400 kWh/m²"
     ],
     [
      "Augmentation path",
@@ -3132,40 +3120,35 @@ function guidanceDocBessTech_() {
   },
   {
    "id": "ladder",
-   "title": "The Hithium cell ladder",
+   "title": "The grid-scale cell ladder",
    "read": "2 min",
    "kind": "bars",
-   "unit": "Ah per cell",
+   "unit": "Ah per cell (class-representative sizes)",
    "items": [
     {
-     "label": "280Ah",
+     "label": "280Ah class",
      "v": 280,
-     "sub": "≥7,000 cycles - the original catalog cell"
+     "sub": "the long-time catalog standard across vendors"
     },
     {
-     "label": "314Ah",
+     "label": "314Ah class",
      "v": 314,
-     "sub": "≥13,000 cycles - the volume workhorse inside ∞Block"
+     "sub": "≥10,000-cycle class - the current volume workhorse industry-wide"
     },
     {
-     "label": "587Ah",
+     "label": "500-600Ah class",
      "v": 587,
-     "sub": "≥11,000 cycles - mass production and first deliveries since 2025"
+     "sub": "mass production and first deliveries across vendors since 2025"
     },
     {
-     "label": "650Ah",
-     "v": 650,
-     "sub": "SNEC 2026 debut - deliveries expected 2027, detailed specs unpublished"
-    },
-    {
-     "label": "1175Ah",
+     "label": "kAh class",
      "v": 1175,
-     "sub": "the first mass-produced kAh-class cell (Chongqing, Jun 2025)"
+     "sub": "1,000+ Ah cells - first mass production 2025"
     },
     {
-     "label": "1300Ah",
+     "label": "8h-native kAh",
      "v": 1300,
-     "sub": "8h LDES-native - mass delivery targeted Q4 2026"
+     "sub": "LDES-native designs - mass deliveries ramping from late 2026"
     }
    ]
   },
@@ -3175,8 +3158,8 @@ function guidanceDocBessTech_() {
    "read": "4 min",
    "kind": "prose",
    "ps": [
-    "The chain: cell → module → liquid-cooled DC block (the container) → {{PCS}} → AC block → site. We sell DC blocks; the {{BMS}} rides inside them; the PCS that converts DC to grid AC is usually another vendor's scope. Keeping the layers straight tells you what our spec sheet does and does not answer for.",
-    "The container catalog, by duty: ∞Block 4.180 and 5.016 MWh in a standard 20-ft frame (314Ah cells - the Jupiter fleet's building block); ∞Power 6.25 MWh in 2h (587Ah) and 4h (1175Ah) builds; the ∞Power 6.9 MWh 8-hour LDES unit (1300Ah cells - 55.2 MWh per 8-unit block, mass delivery from Q4 2026); the transport-optimized 10-ft Flexsso (3.125/6.25 MWh, under 26 t per unit, first deliveries Q2 2026); and the hardened Desert Eagle variant for extreme sites.",
+    "The chain: cell → module → liquid-cooled DC block (the container) → {{PCS}} → AC block → site. Cell makers and system suppliers sell DC blocks; the {{BMS}} rides inside them; the PCS that converts DC to grid AC is usually another vendor's scope. Keeping the layers straight tells you what a DC-block spec sheet does and does not answer for.",
+    "The container landscape, by duty: standard 20-ft frames now carry ~4-5 MWh on 314Ah-class cells - the delivered fleet's building block; ~6 MWh-class 2h and 4h builds on 500-600 Ah and kAh-class cells; 8-hour LDES-native units approaching ~7 MWh per container as kAh-class cells reach mass delivery; transport-optimized 10-ft modular formats staying under road-weight limits; and hardened variants for extreme-climate sites.",
     "The large-cell logic, and its honest tradeoff: fewer cells per container means fewer welds, fewer connections, fewer failure points, and lower integration cost - a directional argument, not a costed bill-of-materials claim. The tradeoffs are thermal management and propagation behavior, which is exactly why the fire-test file (next sections) must keep pace with the ladder: a bigger cell without matching test data is a harder bankability story, not an easier one.",
     "**Field note:** the owner-furnished norm - project owners pick the cell brand; EPCs install what the owner supplies. If you find yourself explaining this stack to an EPC, you are collecting approved-vendor intel, not closing a sale."
    ]
@@ -3187,9 +3170,9 @@ function guidanceDocBessTech_() {
    "read": "3 min",
    "kind": "prose",
    "ps": [
-    "Same shuttle idea, different ion: sodium instead of lithium, an NFPP (sodium iron pyrophosphate) cathode with a hard-carbon anode. The shipping product is the ∞Cell N162Ah - 2.82 V nominal, ≥95.2 Wh/kg, a ≥20,000-cycle class rating, and a -40°C to 60°C operating window - paired with the ∞Power N 2.28 MWh one-hour containerized system.",
-    "What sodium is for: power duty (short, hard, frequent cycling), brutal cold, and extreme cycle counts. What it is not for: energy duty - at roughly ≥95 Wh/kg against LFP's ≥173 Wh/kg (314Ah class), a sodium container carries far less energy per footprint, so it is the wrong tool for 4h+ shifting today. Sell it as the specialist, not the successor.",
-    "The claim discipline (this is enforced, not stylistic): the sodium SKU inside the AIDC product line has **unconfirmed mass production** - the approved line is *\"we ship sodium today in one utility SKU; here is the roadmap, and here is what we will commit to in writing.\"* Context that makes this matter: a domestic sodium supplier (Peak Energy) is being groomed inside our anchor US account precisely on the sodium story - overclaiming sodium is how that account is lost. The IC playbook's Jupiter-defense section owns the account motion."
+    "Same shuttle idea, different ion: sodium instead of lithium, typically an NFPP (sodium iron pyrophosphate) cathode with a hard-carbon anode. Shipping utility-scale sodium cells sit around 2.8 V nominal and ~95 Wh/kg, with ≥20,000-cycle class ratings and a -40°C to 60°C operating window - typically packaged as ~1-hour containerized systems.",
+    "What sodium is for: power duty (short, hard, frequent cycling), brutal cold, and extreme cycle counts. What it is not for: energy duty - at roughly ~95 Wh/kg against LFP's ~170+ Wh/kg (314Ah class), a sodium container carries far less energy per footprint, so it is the wrong tool for 4h+ shifting today. Sell it as the specialist, not the successor.",
+    "The claim discipline (enforced, not stylistic): sodium roadmaps across the industry run ahead of **confirmed mass production** - the defensible line for any seller is *\"here is what ships today; here is the roadmap; here is what we will commit to in writing.\"* Context that makes this matter: domestic sodium specialists are positioning inside major US accounts precisely on the sodium story - an overclaimed sodium slide is exactly the opening they need."
    ]
   },
   {
@@ -3201,7 +3184,7 @@ function guidanceDocBessTech_() {
    "cards": [
     {
      "t": "1h - power duty",
-     "meta": "served by sodium (∞Power N 2.28 MWh)",
+     "meta": "typically served by sodium (~1h containerized systems)",
      "adv": [
       "Millisecond-to-minutes smoothing and frequency work",
       "Cold-climate reach (-40°C) and extreme cycle tolerance"
@@ -3213,7 +3196,7 @@ function guidanceDocBessTech_() {
     },
     {
      "t": "2h - ancillary + peaks",
-     "meta": "served by the 587Ah (∞Power 6.25 MWh 2h)",
+     "meta": "typically served by 500-600 Ah-class cells",
      "adv": [
       "The classic ERCOT merchant duty - ancillary services plus peak arbitrage",
       "Fast payback where price volatility is high"
@@ -3225,7 +3208,7 @@ function guidanceDocBessTech_() {
     },
     {
      "t": "4h - the capacity workhorse",
-     "meta": "served by the 1175Ah (∞Power 6.25 MWh 4h)",
+     "meta": "served by 314Ah-class and kAh-class cells alike",
      "adv": [
       "Where most US RFP volume sits - the capacity-market standard",
       "The volume SKU every serious buyer benchmarks"
@@ -3237,13 +3220,13 @@ function guidanceDocBessTech_() {
     },
     {
      "t": "8h - LDES-native",
-     "meta": "served by the 1300Ah (∞Power 6.9 MWh)",
+     "meta": "served by 8h-native kAh-class designs",
      "adv": [
-      "Native 8-hour design rather than two 4h systems stacked - no mass-produced like-for-like above 1,000 Ah",
+      "Native 8-hour design rather than two 4h systems stacked - the thinnest competitive field of the four classes",
       "Policy tailwinds in duration-mandating markets; policy risk is lowest where technical substitutability is lowest"
      ],
      "dis": [
-      "Mass delivery starts Q4 2026 - the operating record is ahead of us; sell the design, commit conservatively",
+      "Mass deliveries are only starting - the operating record is still ahead; sell the design, commit conservatively",
       "Long-duration revenue models are less standardized - expect heavier IE scrutiny"
      ]
     }
@@ -3273,11 +3256,11 @@ function guidanceDocBessTech_() {
     },
     {
      "q": "A developer asks about energy density. What do you answer with instead?",
-     "a": "Footprint economics - kWh per square meter of site (e.g. Flexsso ~423 kWh/m²). Wh/kg is a vehicle metric; land cost is the stationary equivalent."
+     "a": "Footprint economics - kWh per square meter of site (transport-optimized modular formats push past ~400 kWh/m²). Wh/kg is a vehicle metric; land cost is the stationary equivalent."
     },
     {
-     "q": "The 314Ah cell's headline numbers?",
-     "a": "≥13,000 cycles, ≥173.2 Wh/kg - the volume workhorse inside ∞Block 4.180/5.016 MWh containers, and the cell in the delivered Jupiter fleet."
+     "q": "The 314Ah-class cell's headline numbers?",
+     "a": "≥10,000-cycle class ratings and ~170+ Wh/kg - the industry's volume workhorse, inside the ~4-5 MWh 20-ft containers that make up most of the delivered fleet."
     },
     {
      "q": "The large-cell argument - and its tradeoff?",
@@ -3292,12 +3275,12 @@ function guidanceDocBessTech_() {
      "a": "For: power duty (1h), extreme cold (-40°C), extreme cycle counts (≥20,000 class). Not for: energy duty - ~95 Wh/kg vs LFP's ~173, so far less energy per footprint. The specialist, not the successor."
     },
     {
-     "q": "The approved sodium sales line?",
-     "a": "\"We ship sodium today in one utility SKU; here is the roadmap, and here is what we will commit to in writing.\" The AIDC sodium SKU's mass production is unconfirmed - overclaiming sodium hands ammunition to a domestic sodium rival inside our anchor account."
+     "q": "The defensible sodium sales line?",
+     "a": "\"Here is what ships today; here is the roadmap; here is what we will commit to in writing.\" Sodium roadmaps industry-wide run ahead of confirmed mass production - overclaiming hands ammunition to the domestic sodium specialists positioning inside major accounts."
     },
     {
-     "q": "What makes the 8h product different from two 4h systems?",
-     "a": "It is LDES-native on the 1300Ah cell (6.9 MWh per container, 55.2 MWh per 8-unit block) rather than doubled-up 4h hardware - and no rival mass-produces a like-for-like cell above 1,000 Ah. Caveat honestly: mass delivery starts Q4 2026."
+     "q": "What makes an 8h-native product different from two 4h systems?",
+     "a": "It is LDES-native on kAh-class cells (~7 MWh per container) rather than doubled-up 4h hardware - the thinnest competitive field of the duration classes. Caveat honestly: mass deliveries are only starting."
     }
    ]
   },
@@ -3312,22 +3295,22 @@ function guidanceDocBessTech_() {
      "c": [
       "LFP chemistry fundamentals",
       "The warranty SoH curve plus the augmentation plan designed in on day one",
-      "Our shipment rankings",
+      "Shipment rankings",
       "A price discount for the out-years"
      ],
      "a": 1,
      "why": "Year-12 questions are degradation-economics questions. The warranty envelope and augmentation headroom are the substantive answer; chemistry is only the setup."
     },
     {
-     "q": "Which cell serves the ∞Power 6.25 MWh 4h container?",
+     "q": "Which duration class is the capacity workhorse where most US RFP volume sits?",
      "c": [
-      "314Ah",
-      "587Ah",
-      "1175Ah",
-      "1300Ah"
+      "1h",
+      "2h",
+      "4h",
+      "8h"
      ],
      "a": 2,
-     "why": "The 4h build runs the 1175Ah kAh-class cell; the 2h build runs the 587Ah. The 314Ah serves ∞Block; the 1300Ah serves the 8h LDES unit."
+     "why": "4h is the capacity-market standard every serious buyer benchmarks; 2h serves ancillary-plus-peaks; 1h is power duty (sodium's niche); 8h is bulk shifting via LDES-native designs."
     },
     {
      "q": "A prospect asks: \"Is your container UL 9540A certified?\" You say:",
@@ -3346,21 +3329,21 @@ function guidanceDocBessTech_() {
       "An overblown media story",
       "Proof all batteries are dangerous",
       "NMC chemistry in a legacy indoor design with suppression deactivated - a different device class from modern outdoor LFP containers, and insurers priced it that way",
-      "Irrelevant because it was a competitor"
+      "Irrelevant because it was another vendor"
      ],
      "a": 2,
      "why": "Concede the true part, then answer with structure: device-class distinction, the insurance market's read, the improving EPRI failure data (with its media-derived caveat), then your test reports."
     },
     {
-     "q": "A colleague's deck claims the AIDC sodium system is in mass production. You:",
+     "q": "A colleague's deck claims a sodium SKU is in mass production when only a roadmap exists. You:",
      "c": [
       "Let it ship - it's roughly true",
-      "Correct it - sodium mass production is confirmed only for the utility N162Ah SKU; the AIDC sodium SKU is unconfirmed, and the approved line commits only to what we ship today plus a written roadmap",
+      "Correct it - commit only to what ships today plus a written roadmap; sodium claim discipline is enforced",
       "Add a footnote",
       "Escalate to legal"
      ],
      "a": 1,
-     "why": "Claim discipline is enforced. The overclaim is exactly the opening a domestic sodium rival needs inside our anchor account."
+     "why": "Claim discipline is enforced. The overclaim is exactly the opening a domestic sodium specialist needs inside a major account."
     }
    ]
   },
@@ -3372,12 +3355,12 @@ function guidanceDocBessTech_() {
    "intro": "Pointer form - this module introduces no new external claims. Each row names the internal source that carries the original citations.",
    "rows": [
     [
-     "All cell and container specs, dates, and product claims (company-published figures)",
-     "hithium.profile.json v5 - productsAndServices + technicalSpecs (51 sources)"
+     "Cell and container class figures (class-typical, cross-vendor)",
+     "covered supplier dossiers in profiler-data (company-published specs, cited per dossier)"
     ],
     [
-     "Shipment rankings; Mesquite and Navarre plants",
-     "hithium.profile.json v5 - ecosystemRole (InfoLink/SMM/ICC per dossier)"
+     "Shipment rankings and US assembly footprints",
+     "covered supplier dossiers - ecosystemRole (InfoLink/SMM/ICC per dossier)"
     ],
     [
      "9540A / NFPA 855 / LSFT mechanics; certification stack",
@@ -3388,12 +3371,8 @@ function guidanceDocBessTech_() {
      "bess-bankability-certification-analysis.md - claims ledger"
     ],
     [
-     "AIDC sodium SKU mass production unconfirmed; zero named AIDC customers",
-     "hithium.profile.json v5 - strategyRead (high-confidence read)"
-    ],
-    [
-     "Peak Energy sodium wedge inside the anchor account",
-     "hithium.profile.json v5 + hithium-relationship-web.md §3"
+     "Sodium class figures and mass-production caveats",
+     "covered supplier dossiers - strategyRead sections"
     ]
    ]
   }
@@ -3401,7 +3380,7 @@ function guidanceDocBessTech_() {
  "glossary": [
   {
    "t": "LFP",
-   "d": "Lithium iron phosphate - the storage chemistry: thermally stable, long-cycling, cheaper per kWh, lower energy density than NMC. All Hithium lithium cells are LFP."
+   "d": "Lithium iron phosphate - the storage chemistry: thermally stable, long-cycling, cheaper per kWh, lower energy density than NMC. The default chemistry of new US grid storage."
   },
   {
    "t": "NMC",
@@ -3437,7 +3416,7 @@ function guidanceDocBessTech_() {
   },
   {
    "t": "LDES",
-   "d": "Long-duration energy storage - 8+ hour discharge. The 1300Ah cell and ∞Power 6.9 MWh unit are 8h-native rather than doubled-up 4h hardware."
+   "d": "Long-duration energy storage - 8+ hour discharge. kAh-class cells enable 8h-native units rather than doubled-up 4h hardware."
   },
   {
    "t": "BMS",
@@ -3463,7 +3442,7 @@ function guidanceDocPowerInfra_() {
  "id": "power-infra-aidc-2026-08",
  "group": "Technology Foundations",
  "title": "Power Infrastructure & the AIDC Power Chain",
- "short": "The grid we sell into, what a battery earns, and the data-center power chain - with the three BESS sockets.",
+ "short": "The grid BESS suppliers sell into, what a battery earns, and the data-center power chain - with the three BESS sockets.",
  "source": {
   "doc": "Teaching synthesis - the utility-AIDC, bankability, China-policy and NVIDIA analyses + the relationship web + the ON.energy dossier",
   "publisher": "Internal analysis",
@@ -3492,7 +3471,7 @@ function guidanceDocPowerInfra_() {
   {
    "k": "3 sockets",
    "v": "where BESS earns",
-   "sub": "grid-side (ours) · campus BtM (contested) · in-rack (not our layer)"
+   "sub": "grid-side (core) · campus BtM (contested) · in-rack (incumbent-held)"
   }
  ],
  "sections": [
@@ -3502,7 +3481,7 @@ function guidanceDocPowerInfra_() {
    "read": "2 min",
    "kind": "prose",
    "ps": [
-    "The infrastructure half of your onboarding: how the US grid is organized and paid, the two market designs a BESS is sold into, what a grid battery actually earns money doing, the power chain between a utility substation and a GPU rack, and the three sockets where batteries plug into the AI buildout. Its companion (BESS Technology Fundamentals) teaches the machine; this module teaches the world the machine is sold into.",
+    "The infrastructure half of a seller's onboarding: how the US grid is organized and paid, the two market designs a BESS is sold into, what a grid battery actually earns money doing, the power chain between a utility substation and a GPU rack, and the three sockets where batteries plug into the AI buildout. Its companion (BESS Technology Fundamentals) teaches the machine; this module teaches the world the machine is sold into.",
     "Sourcing discipline: this module introduces no new external claims. Market figures come from the utility-procurement research module, grid rules from the bankability research, chain structure from the relationship-web analysis and the ON.energy dossier - each carries the original citations. Teaching simplifications are flagged in place."
    ]
   },
@@ -3515,7 +3494,7 @@ function guidanceDocPowerInfra_() {
     "Three stages: generation makes power, transmission moves it at high voltage across distances, distribution steps it down and delivers it. A grid-scale BESS interconnects like a small power plant - {{FOM}}, in front of the customer's meter, paid by markets or contracts. Equipment on a customer's own site - {{BTM}} - is a different business with different buyers, which is why the distinction opens nearly every qualification call.",
     "MW versus MWh, the week-one confusion: **MW is a rate** (how fast energy flows - the pipe's width); **MWh is an amount** (how much is stored - the tank's size). Duration is simply MWh ÷ MW: a 100 MW / 400 MWh battery is a \"4-hour\" system. Misusing these in a technical room is the fastest credibility loss available to a new seller.",
     "Interconnection queues have detached from reality: ERCOT carries ~474 GW of large-load requests (about five times its all-time peak); AEP has fielded ~190 GW of inquiries against a 37 GW system. The filter that separates real from vapor is the **large-load tariff**: AEP Ohio's terms (12-year contracts, ramp schedule, then {{minimum take}} at 85%, exit fees, collateral) collapsed a 30 GW pipeline to ~5.6 GW of signed, financially committed load. That is the single number pair to remember when someone quotes a queue.",
-    "**Field note:** certified and contracted MW are purchase orders on a 12-36-month fuse; queue GW are press releases. Track IRP dockets and certification orders, not headlines - the team-lead playbook builds the forecast rules on exactly this."
+    "**Field note:** certified and contracted MW are purchase orders on a 12-36-month fuse; queue GW are press releases. Track IRP dockets and certification orders, not headlines."
    ]
   },
   {
@@ -3545,9 +3524,9 @@ function guidanceDocPowerInfra_() {
      "Rate-based recovery; the 85% minimum-take world; PUC oversight"
     ],
     [
-     "Our fit",
+     "Fit for China-linked suppliers",
      "The core lane - ~16.3 GW ERCOT fleet (Jul 2026), buyers without ITC exposure",
-     "Effectively fenced for Chinese cells (Georgia → Tesla; Dominion → EVLO) - a relationship long game, not a quota lane"
+     "Self-build effectively fenced for Chinese cells (Georgia → Tesla; Dominion → EVLO) - a relationship long game, not a quota lane"
     ],
     [
      "The watch item",
@@ -3573,9 +3552,9 @@ function guidanceDocPowerInfra_() {
    "read": "4 min",
    "kind": "prose",
    "ps": [
-    "The walk from fence to silicon: utility interconnection → campus substation → medium-voltage distribution → transformers and switchgear → the {{UPS}} layer → power distribution units → racks. *(Teaching simplification, flagged: real campuses run redundancy topologies - N+1, catcher/reserve buses - compressed here into \"the UPS layer.\")* Our containers live at or outside the fence line; nothing we ship today sits past the substation.",
+    "The walk from fence to silicon: utility interconnection → campus substation → medium-voltage distribution → transformers and switchgear → the {{UPS}} layer → power distribution units → racks. *(Teaching simplification, flagged: real campuses run redundancy topologies - N+1, catcher/reserve buses - compressed here into \"the UPS layer.\")* Grid-scale containers live at or outside the fence line; a DC-block supplier's scope typically stops at the substation.",
     "The buffering problem that created a product category: GPU fleets swing between roughly 30% and 100% of load in milliseconds to seconds - a load profile the grid has never served at this scale. The rules answered: {{NOGRR 282}} requires new ≥75 MW electronic loads in ERCOT to ride through grid disturbances (grandfathered if energized or studied by Nov 14, 2025), effectively mandating a buffer - UPS, BESS, or on-site generation - between grid and GPUs. Texas's SB 6 adds curtailment protocols and a co-location kill switch for big loads: **storage converts curtailable interconnection into firm compute**, which is the cleanest sentence in the BtM pitch.",
-    "**Field note:** the NVIDIA 800 VDC module teaches the inside-the-rack half of this chain - it is advanced material, not week-one material. A seller needs the fence-line view first: know where our product stops, and whose problem each layer is."
+    "**Field note:** the NVIDIA 800 VDC module teaches the inside-the-rack half of this chain - it is advanced material, not week-one material. A seller needs the fence-line view first: know where the product stops, and whose problem each layer is."
    ]
   },
   {
@@ -3583,15 +3562,15 @@ function guidanceDocPowerInfra_() {
    "title": "The three BESS sockets in the AI buildout",
    "read": "4 min",
    "kind": "proscons",
-   "intro": "Where batteries plug into the AI story - and our honest position in each. The orienting rule across all three: sell to the grid, not to the data centre.",
+   "intro": "Where batteries plug into the AI story - and the honest fit for a BESS supplier in each. The orienting rule across all three: sell to the grid, not to the data centre.",
    "cards": [
     {
      "t": "Grid-side FOM storage",
-     "meta": "our lane",
+     "meta": "the core lane",
      "adv": [
-      "Judged on duration, cycle life, and price - exactly our criteria",
+      "Judged on duration, cycle life, and price - storage criteria, not AI criteria",
       "AI load growth drives utility and IPP storage procurement regardless of what happens inside any campus",
-      "The Jupiter pattern lives here: merchant and safe-harbored owners buying on economics"
+      "Merchant and safe-harbored owners buying on economics live here"
      ],
      "dis": [
       "Not \"AI-branded\" revenue - it is ordinary FOM storage (which is precisely the point)",
@@ -3612,13 +3591,13 @@ function guidanceDocPowerInfra_() {
     },
     {
      "t": "Inside the data hall",
-     "meta": "not our layer",
+     "meta": "incumbent-held",
      "adv": [
       "Worth tracking: enormous category spend, and its specs cascade outward to the campus level",
       "The honest no is itself credibility - knowing your layer is a technical-audience signal"
      ],
      "dis": [
-      "No rack form factor, no UPS or BBU product in the line today",
+      "No entry for a BESS supplier without a rack form factor or UPS/BBU product",
       "The most China-averse buyer class in the market, served by entrenched incumbents (Vertiv, Eaton, Schneider)"
      ]
     }
@@ -3629,7 +3608,7 @@ function guidanceDocPowerInfra_() {
    "title": "The 2026-28 gates",
    "read": "4 min",
    "kind": "timeline",
-   "intro": "The dated events a seller navigates, in three lanes. Positions are approximate on the axis; dates in the labels are exact. The team-lead playbook carries the per-gate team actions.",
+   "intro": "The dated events a seller navigates, in three lanes. Positions are approximate on the axis; dates in the labels are exact.",
    "lanes": {
     "rules": "Grid rules",
     "proc": "Procurement",
@@ -3714,7 +3693,7 @@ function guidanceDocPowerInfra_() {
     "**NOGRR 245 is storage/IBR ride-through; NOGRR 282 is large electronic loads** (data centers). Mixing them in an ERCOT room costs you the technical audience.",
     "**Certified MW, not queue GW** - queues are ~5x reality; tariff-committed and certification-order MW are the real pipeline.",
     "**Minimum take** (85% is the national norm) is how a utility makes AI load bankable - and a bankability world is a certification-file world.",
-    "**Sell to the grid, not to the data centre** - the largest storage buildout AI causes is ordinary FOM storage judged on our criteria.",
+    "**Sell to the grid, not to the data centre** - the largest storage buildout AI causes is ordinary FOM storage judged on storage criteria.",
     "**In Texas, lead with the no-remote-access architecture** (LSIPA / NPRR1199) before it is asked for - it converts an objection into a spec you wrote."
    ]
   },
@@ -3745,8 +3724,8 @@ function guidanceDocPowerInfra_() {
      "a": "Study fees, mandatory curtailment protocols, co-location kill-switch review for ≥75 MW loads. The pitch: storage converts curtailable interconnection into firm compute."
     },
     {
-     "q": "The three BESS sockets and our position in each?",
-     "a": "Grid-side FOM (our lane - judged on duration, cycle life, price); campus BtM buffering (contested - ON.energy's FEOC-clean AI UPS defines the US category); inside the data hall (not our layer - no rack or UPS product)."
+     "q": "The three BESS sockets and the supplier fit in each?",
+     "a": "Grid-side FOM (the core lane - judged on duration, cycle life, price); campus BtM buffering (contested - ON.energy's FEOC-clean AI UPS defines the US category); inside the data hall (incumbent-held - no entry without a rack or UPS product)."
     },
     {
      "q": "What is ON.energy's AI UPS in one sentence?",
@@ -3773,10 +3752,10 @@ function guidanceDocPowerInfra_() {
       "Ask for the queue number to verify"
      ],
      "a": 1,
-     "why": "Queues run ~5x reality. The tariff filter (minimum take, collateral, exit fees) separates committed load from vapor - S1 lane verification in the pipeline gates."
+     "why": "Queues run ~5x reality. The tariff filter (minimum take, collateral, exit fees) separates committed load from vapor."
     },
     {
-     "q": "A regulated Southeast utility announces a self-build BESS program. The realistic Hithium motion is:",
+     "q": "A regulated Southeast utility announces a self-build BESS program. The realistic motion for a §154-listed supplier is:",
      "c": [
       "Bid aggressively on price",
       "Relationship coverage - EPC approved-vendor lists and the IE ecosystem - because self-build is effectively closed to Chinese cells on prudence/FEOC grounds",
@@ -3789,8 +3768,8 @@ function guidanceDocPowerInfra_() {
     {
      "q": "A data-center developer in ERCOT asks how to satisfy NOGRR 282. The correct frame:",
      "c": [
-      "Our containers are 282-certified",
-      "282 requires their ≥75 MW load to ride through disturbances - a buffering layer (UPS, BESS, or generation) between grid and GPUs; our fit depends on their FEOC/ITC posture, and the US category leader is a FEOC-clean MV AI UPS",
+      "Offer 282-certified containers",
+      "282 requires their ≥75 MW load to ride through disturbances - a buffering layer (UPS, BESS, or generation) between grid and GPUs; a supplier's fit depends on the buyer's FEOC/ITC posture, and the US category leader is a FEOC-clean MV AI UPS",
       "282 doesn't apply to data centers",
       "Storage is exempt under SB 6"
      ],
@@ -3812,12 +3791,12 @@ function guidanceDocPowerInfra_() {
      "q": "Why does 'sell to the grid, not to the data centre' hold even in the AI boom?",
      "c": [
       "Data centers don't buy batteries",
-      "The largest storage buildout AI causes is utility- and IPP-owned FOM storage judged on duration, cycle life, and price - our criteria - while the inside-the-fence sockets are FEOC-contested or not our layer",
+      "The largest storage buildout AI causes is utility- and IPP-owned FOM storage judged on duration, cycle life, and price - storage criteria - while the inside-the-fence sockets are FEOC-contested or incumbent-held",
       "Grid sales close faster",
       "Utilities pay more per MWh"
      ],
      "a": 1,
-     "why": "The orienting rule of the whole program: Hithium does not need to be inside a data centre to be paid by data-centre demand growth."
+     "why": "The orienting rule: a BESS supplier does not need to be inside a data centre to be paid by data-centre demand growth."
     }
    ]
   },
@@ -3846,7 +3825,7 @@ function guidanceDocPowerInfra_() {
     ],
     [
      "The buyer map (self-build vs PPA vs merchant); owner-furnished norm; the three sockets",
-     "utility-aidc-procurement-analysis.md buyer map + hithium-relationship-web.md §2/§4/§6"
+     "utility-aidc-procurement-analysis.md buyer map + the internal relationship-web analysis"
     ],
     [
      "AI UPS category facts (MV, ride-through, FEOC-clean, 5 GW Crusoe)",
@@ -3866,7 +3845,7 @@ function guidanceDocPowerInfra_() {
  "glossary": [
   {
    "t": "FOM",
-   "d": "Front-of-meter - interconnected to the grid like a power plant, paid by markets or contracts. Grid-scale BESS is FOM; it is our core business."
+   "d": "Front-of-meter - interconnected to the grid like a power plant, paid by markets or contracts. Grid-scale BESS is FOM - the core of the business."
   },
   {
    "t": "BTM",

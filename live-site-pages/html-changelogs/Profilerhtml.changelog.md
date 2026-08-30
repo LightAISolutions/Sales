@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 44/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.63w] — 2026-08-29 08:41:26 PM EST — v03.76r
+
+### Changed
+- The highlighted note boxes in Industry Guidance study modules now carry a neutral "Sales angle" label
 
 ## [v01.62w] — 2026-08-29 08:14:28 PM EST — v03.74r
 

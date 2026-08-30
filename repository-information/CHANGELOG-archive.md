@@ -77,6 +77,236 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v02.90r] — 2026-08-22 10:57:17 PM EST — [b53b9ea](https://github.com/LightAISolutions/Sales/commit/b53b9eaa768310e52f712201f6d08f837313fbac)
+
+> **Prompt:** "I can see the Technical Annex details now, but the format is very loose. I want the format to be more professional and intuitive to read. Give me some mockups of different formats to choose from. Then, revise all dossiers to match my chosen format." *(Four formats mocked against real ABB data — labelled rows, datasheet grid, banded table, inline definition list. Developer chose **C · Banded table** with **preserve wording exactly**.)*
+
+### Added
+- **Banded spec format across all 62 dossiers (`Profiler.html` v01.41w)** — `technicalSpecs[].specs` entries gain an optional `band`, and consecutive entries sharing one render under a gold category header inside the product table. Bands live on the rows themselves rather than in a nested structure, so a profile written before banding — and every archived snapshot — simply has no bands and renders flat. `ovSpecRow` carries the field through, `ovSpecBandOpens` decides where a header is emitted, and both the app renderer and the export/preview builder emit them (`ovDocFacts` takes an optional third tuple element for the band). Styling added for the app, the preview/PDF skin and the Word export's inline CSS
+- **Fixed label column on banded tables** — a `colgroup` sets a 208px first column under `table-layout: fixed`, so every product table in a section shares one value-column edge. The colgroup is required rather than a `td` width: the first row of a banded table is a `colspan=2` band header, from which fixed layout would otherwise derive a 50/50 split
+- **`scripts/apply-bands` migration guard (scratchpad, not committed)** — validated every migrated value against a punctuation-insensitive digest of its product's source text before writing, so a re-cut that reworded a value failed the run instead of shipping. It caught one (a hitachi-energy value that had a parenthetical lifted out of its middle) and was hardened mid-run to validate all slugs before writing any, after an abort left four dossiers migrated with the archive index unsaved (repaired in the same pass)
+
+### Changed
+- **All 62 dossiers migrated to the banded format** — 926 spec entries (476 unlabelled statement strings + 450 label/value pairs) re-cut into **983 banded rows across 817 product/band groups**; zero plain-string specs remain. Every value is verbatim source text split on its own punctuation; labels and bands are new authoring. Each dossier's outgoing version was archived and indexed per the Archival Procedure, and `profileVersion` incremented
+- **`PROFILER-SCHEMA.md`** — `technicalSpecs[].specs` now documents the banded entry as the authoring format, states that values are copied verbatim while labels and bands are authored, and records that both legacy shapes (unbanded pair, plain string) must keep rendering because archived snapshots hold them permanently
+
+### Notes
+- Format chosen from four mockups rendered against the Profiler's real stylesheet with real ABB data (a short product and a dense one, to show scaling): A labelled rows, B datasheet grid, C banded table, D inline definition list
+- The 62 archived snapshots add 62 entries to the admin-only Versions overlay for a format-only revision. Following the Archival Procedure as written, since the protection is worth having across a 926-entry restructure — but it is the one debatable cost of doing this as a versioned revision rather than an in-place reformat
+
+## [v02.89r] — 2026-08-22 10:24:05 PM EST — [a9182c8](https://github.com/LightAISolutions/Sales/commit/a9182c8d380ec89182fc0544288044189211451c)
+
+> **Prompt:** "The only issue between the admin and contributor accounts is that when I logged into the contributor account after using the Industry Guidance module on the admin account, it saved the progress from the admin account instead of giving the contributor account a clean version of the module. Fix that.
+>
+> Also, several dossiers show nothing under the Technical Annex (see attached screenshot). Why is that? Make sure every dossiers' Technical Annex shows some information or doesn't show a Technical Annex at all." *(Screenshot: ABB dossier, Technical Annex showing three product headings over empty table rows.)*
+
+### Fixed
+- **Industry Guidance progress leaked between accounts on a shared browser (`Profiler.html` v01.40w)** — `gdProgress`/`gdSetProgress` keyed on `ov_guide_progress_<docId>`, which is device-scoped, so a second account signing into the same browser inherited the first account's ticked sections. Progress is now keyed `ov_guide_progress_<acct>_<docId>` via `gdProgressKey`, where `<acct>` is a djb2 digest of the signed-in address from the new `ov_note_email` key (`ovAcctKey`). The address is recorded at all three sign-in sites (token exchange + both `whoami` paths) and cleared at all three sign-out sites. Each account keeps its own progress on the device; a new account starts clean. A one-time `gdPurgeSharedProgress` drops the pre-v01.40w shared keys — they cannot be attributed to an account, so crediting them to whoever signs in first would reproduce the bug
+- **Technical Annex rendered blank for 41 of 62 dossiers (`Profiler.html` v01.40w)** — `technicalSpecs[].specs` entries exist in two authored shapes: 450 label/value objects and 476 plain strings (no dossier mixes them). Both renderers read `.label`/`.value` only, so string entries produced rows of two `undefined` cells in the app, and were dropped entirely by `ovDocFacts`'s falsy-value guard in exports — headings over empty tables in both. Added `ovSpecRow` (dual-shape normalizer; string becomes a statement row with an empty label) and `ovSpecGroups` (drops rows with no text, then groups with no rows and no notes), used by the app renderer, the export/preview builder and `ovDocFacts`, which now spans unlabelled rows across both columns. Affected: abb, aligned, applied-digital, bechtel, black-veatch, bloom-energy, burns-mcdonnell, constellation-energy, core-scientific, coreweave, crusoe, delta-electronics, dpr, eaton, equinix, eve-energy, ge-vernova, hitachi-energy, hitt, holder-construction, huawei-digital-power, iren, kiewit, lambda, liteon, mortenson, nebius, openai, oracle, primoris, qts, quanta-services, schneider-electric, siemens-energy, stack-infrastructure, switch, terawulf, turner-construction, vantage, vertiv, xai
+- **Empty specs sections are no longer emitted** — a profile whose spec groups all reduce to nothing renders no specs heading at all, in the app and in exports
+
+### Changed
+- **`scripts/verify-profiler-roles.py` widened to three checks** — the access matrix (unchanged, still screenshots per tier) plus `check_progress_isolation` (signs two accounts into one browser context and asserts progress namespaces differ, the second starts clean, and the first keeps its own) and `check_spec_sections` (walks all 62 dossiers via hash routing and asserts no blank spec row and no lone specs heading). The backend stub now reads a mutable role/email state so one context can switch accounts. Result: 62/62 dossiers clean, 0 blank rows, progress isolated
+- **`PROFILER-SCHEMA.md`** — `technicalSpecs[].specs` now documents both accepted entry shapes, names the labelled pair as preferred for new authoring while explicitly permitting a plain string where a spec is naturally one sentence, and records the drop rules for empty rows, groups and sections
+
+### Notes
+- The `<td colspan="2">` statement row and the matching `.ov-spec-hd` heading style are new; the labelled two-column form is untouched, verified against a labelled dossier (amazon) alongside a string-spec one (abb)
+- Renderer tolerance rather than data normalization, per the standing rule: archived snapshots keep whichever shape they were authored with, and converting 476 statement strings into labelled pairs would mean inventing 476 labels
+- The first run of the new progress check failed on a test bug, not a product bug — re-navigating to an identical URL is a same-document fragment move, so the page never re-ran `whoami` and the stale account was still in `localStorage`. The helper now reloads explicitly and waits for the account the stub is reporting
+
+## [v02.88r] — 2026-08-22 08:01:32 PM EST — [9660334](https://github.com/LightAISolutions/Sales/commit/966033452b7c6fb5cc00746d25d269461cd04c69)
+
+> **Prompt:** "Picking up from my recent \"AIDC market report photo backfill\" session, triage zhonhen notes and refresh the dossier.
+>
+> Also, make it so that my Profiler app follows the following Role + Access structure:
+>
+> * \"admin\" level users can see all features the app has.
+> * \"contributor\" level users cannot see \"Field Note\" (button and section below) and \"Versions\".
+> * \"analyst\" level users cannot see \"Field Note\", \"Versions\", nor \"Industry Guidance\".
+> * \"viewer\" level users cannot see \"Field Note\", \"Versions\", \"Industry Guidance\", nor \"Export dossier\"
+>
+> Do a check to verify that these Role + Access permissions are correct and show me screenshots taken from different Roles."
+
+### Added
+- **Role + Access matrix in the Profiler app (`Profiler.html` v01.39w)** — replaces the binary `admin`/`member` split with a four-tier capability model. `OV_ROLE_CAPS` maps each ACL tier to UI capabilities (`fieldNote`, `versions`, `guidance`, `export`, `style`); `ovCan(cap)` is the single gate consulted by all seven call sites (style switcher, Industry Guidance button, Versions button, Export button, Field note button, the note box below the dossier, and the field-notes log cog on the roster). `ovNormalizeRole(role, isAdmin)` collapses whatever the backend reports into one of the four known tiers — roles carrying the `admin` permission (`admin`, `developer`) normalize to `admin`, and any unmapped tier (`editor`, `medical_director`, a stale `member` value) collapses to `viewer`, so an unrecognized ACL role can only lose access, never gain it
+- **Preview-as-role (`?as=<tier>`)** — narrows the current session to another tier's surface for verification from a single account. `ovCan` intersects the real capabilities with the previewed ones, so the parameter can only ever subtract: a viewer requesting `?as=admin` still gets viewer
+- **`scripts/verify-profiler-roles.py`** — Playwright harness that serves `live-site-pages/` locally, stubs the Profiler GAS backend (`whoami` + `guidance` ops), signs in as each tier through the real `ovNormalizeRole` path (the tier is never written to localStorage directly), asserts the rendered surfaces against the matrix, and writes `.playwright-screenshots/profiler-role-<tier>.png`. Non-zero exit on any mismatch. All four tiers verified: admin 6/6 surfaces, contributor guidance+export, analyst export only, viewer none
+- **Zhonhen dossier v3** — the NVIDIA August 2026 execution paper naming the Panama Architecture as a TRU implementation of its data-hall DC power block (pp. 21–23) added to `recentDevelopments`, `ecosystemRole` and `strategyRead[1]`, with the paper cited in `sources[]`; a new `strategyRead` entry promoting the field note on neocloud targeting as labeled analysis; an interface note on the JV flagship spec (a 3.6 MW Panama-800VDC system is a sub-block element against NVIDIA's ~4.8 MW block, not a one-for-one substitute); collection-gap date advanced to 2026-08-22. v2 archived to `archive/zhonhen.profile.v2.json` and registered in `archive-index.json`
+
+### Changed
+- **Server-side guidance gate widened (`Profiler.gs` v01.18g)** — `handleGuidanceOp_`'s inline admin check replaced with `guidanceAllowed_(sess)` (`GUIDANCE_ROLES = ['contributor']` plus anything carrying the `admin` permission), returning `ROLE_DENIED` instead of `ADMIN_ONLY`. Unit-tested across nine role/permission shapes including case variance and missing fields. The note write pipeline (`submit`/`list`/`edit`/`delete`) stays admin-only in `handleNoteOp_` — unchanged
+- **Mid-session downgrade handling** — a server `ADMIN_ONLY` on a note op now stores the least-privileged tier and repaints the view (removing the note surface) instead of falling back to the suggest form, which the matrix no longer exposes
+- **Post-auth repaint** — the sign-in wall's `pass()` now re-runs `ovRoute()` so role-gated controls built during a render that raced `whoami` are rebuilt against the resolved tier
+
+### Notes
+- The `suggest` note op and the page's `renderSuggest()` form are both retained but no longer reachable through the UI: under the matrix no non-admin tier renders the note box at all. Left in place deliberately rather than removed — if a suggest-capable tier is wanted later, both halves already exist
+- Field-note triage this pass: the neocloud-targeting note was **promoted** into `strategyRead` as labeled analysis; the Schneider Electric note remains **logged-only** under the standing confidentiality rule. The Drive-hosted note log is not readable from a session, so both were triaged from the recorded session context rather than from the log, and neither developer confidence rating was available — the promoted entry is hedged at moderate confidence pending the developer's rating
+
+## [v02.87r] — 2026-08-22 07:32:39 PM EST — [ed021c3](https://github.com/LightAISolutions/Sales/commit/ed021c3be129927704bf94b6631efb4b4d8b114f)
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **`zhonhen-block-composition.md` + `ZHONHEN-BLOCK-COMPOSITION.pdf`** — the technical-sales argument answering NVIDIA's standardized 4.8 MW power block from Zhonhen's lineup. Contents: the current-ladder derivation (6000 A = 4.8 MW ÷ 800 V; 1250 A = 1 MW; 125 A = 100 kW), the legitimacy argument (the paper's TRU section canonizes "multiple rectifier modules operating in parallel", p22 — composition is a named implementation family, not a workaround), the composition arithmetic (2 × 2.5 MW Panama = the drawn 5 MVA block; **8 × 2.5 MW = a 20 MW Deployment Unit exactly**; the 5 MW MVR container equals the drawn block 1:1; the future 8 MW cluster fits only via 2 × 4 MW), an eight-row interface scorecard (switchboard, tap cans, catcher STS — rehearsed by the delivered Alibaba STS/ATS fleet — DR four-bus mapping, fault-current envelope, grounding, current sharing, certification), ten engineering questions, and the closing lines for the room. Registered in `scripts/build-study-prep-pdf.mjs`
+- One deliberate caution carried prominently: the deck's MVR container table lists 270/400 Vdc output — **which MW ratings ship at 800 VDC is question #1**, not an assumption
+
+## [v02.86r] — 2026-08-22 07:05:31 PM EST — [19ac4d3](https://github.com/LightAISolutions/Sales/commit/19ac4d33659a23460009702d3eeee7e77283b555)
+
+> **Prompt:** "I want you to create an \"Industry Guidance\" button (located where the red circle is in the attached screenshot) that is only visible to \"admin\" level users. This section will be where I send you impactful industry-wide documents to analyze and create whatever you think is best for me to deeply understand them. I would expect to see overviews and study guides, as well as interactive widgets or modules whenever applicable. Maybe even a chatbox where I can ask you questions and have you respond in-app if you can link to this Claude account. Be creative.
+>
+> For my first entry, this is the NVIDIA white paper that came out recently that Zhonhen's deck refers to. I need to deeply understand it as it is most likely going to be the primary form of industry guidance for the next year or so. Analyze it, then create a detailed overview and study guide of it that is custom-tailored to me. I want you to consider what I know and what I don't know, and explain technical content as needed. Display graphs and tables whenever possible to make it easier for me to digest information. Also, generate a timeline for me to visually see how NVIDIA maps different generations of solutions whenever applicable. Also, pay attention to comparisons and clearly state advantages/disadvantages whenever applicable.
+>
+> Create an action plan for me to approve before starting work." *(Plan approved via structured questions: in-app renderer + gated op architecture; Q&A skipped for v1; source PDF committed; Zhonhen docs updated.)*
+
+### Added
+- **Industry Guidance hub (Profiler v01.38w · GAS v01.17g)** — admin-only "✦ Industry Guidance" button on the Profiler masthead (created only after a validated admin session by the auth wall's `pass()`) opening a full-screen overlay that renders document-analysis study modules. The renderer (`gdRenderDoc` + widget engine in `Profiler.html`) draws everything from module JSON — prose with `{{term}}` glossary tooltips, callouts, tables, pros/cons cards, a lane-colored vertical timeline, magnitude bars, click-to-flip flashcards, a scored self-test, a page-referenced claims ledger, per-section "For the Zhonhen conversation" notes, and per-section reading-progress ticks (localStorage) — so future documents need no page changes. Timeline/lane colors CVD-validated with the dataviz six-checks against the card surface (gold `#b18f35` / blue `#4f83e6` / rose `#cc5f75`)
+- **Guidance API in `Profiler.gs`** — `action=guidance` (`gop=index|doc`) on the existing cookie-less fetch transport (POST + GET api-route mirror), admin-gated server-side in `handleGuidanceOp_` via `validateSessionForData` + the `admin` permission; pure `// PROJECT:`-marked additions (deploy handler untouched, no template overrides). Module content ships inside the PROJECT block — repo + GAS project only, never on public Pages. Behaviorally tested: index/doc/unknown-doc/non-admin paths
+- **First module: NVIDIA 800 VDC white paper (Aug 2026)** — 14 sections, 30-term glossary, 16 flashcards, 10-question quiz, 34-row claims ledger; every quantitative claim verified by two independent extraction passes over the source PDF. Source committed at `repository-information/industry-guidance/sources/nvidia-800vdc-white-paper-2026-08.pdf` with the full analysis in `nvidia-800vdc-analysis.md` (the module's source of truth)
+- **`.claude/rules/industry-guidance.md`** — the "industry guidance: \<document\>" command (ingest → verified deep-read → analysis markdown → in-app module → admin-gated serving → versioning); CLAUDE.md gains the command pointer section + Reference Files row
+
+### Changed
+- **Zhonhen prep docs amended from the now-in-hand paper** (`zhonhen-strategy-report.md`, `zhonhen-deck-summary.md`, `zhonhen-lesson-plan.md` + regenerated PDFs): the "simpler and highly familiar design philosophy" quote is **verified at p22**, which also names the "Panama Architecture" as one of three canonical TRU implementations — retiring the strategy report's claim that Panama "appears in no accessible NVIDIA or OCP document" and flipping the quote from Zhonhen-conversations-only to customer-usable (cited + paraphrased). A dated update block also records the window refinement: 2029 attaches to next-gen SST specifically, while TRU-based 4.8 MW blocks are specified now and Option B deploys as soon as Q3 2027
+- `repository-information/diagrams/profiler-diagram.md` prose notes document the guidance ops on the shared fetch transport
+- README structure tree: `industry-guidance/` directory + rules file registered; Profiler tree entry now shows v01.38w · v01.17g
+
+## [v02.85r] — 2026-08-22 05:05:29 PM EST — [0129e28](https://github.com/LightAISolutions/Sales/commit/0129e28be48dfce374e8c34a51a6a101309884b1)
+
+> **Prompt:** "continue with your recommendation. I want the one-pager output as a downloadable PDF."
+>
+> *(mid-turn)* "It is ok to go over 1 page as long as the information is good and complete."
+
+### Added
+- **`zhonhen-one-pager.md` + `ZHONHEN-ONE-PAGER.pdf`** — an interview-day scan sheet compressing the strategy report, lesson plan and deck summary into what the developer can hold five minutes before the call: the opening line, the TRU-vs-SST table (with the correction landed in v02.84r), ERCOT's binding NOGRR282 numbers, the 473 kW/m³ argument **segmented by buyer type**, a landmines table, numbers cold, and the Schneider question to close on. Registered in `scripts/build-study-prep-pdf.mjs` so the Markdown stays the source of truth
+- **`dense: true` option in `scripts/build-study-prep-pdf.mjs`** — a scan-sheet variant of the BloombergNEF skin. A sheet read standing up is a different document class from a report: the masthead stops behaving like a cover (h1 30pt → 17pt, sub 15pt → 9.5pt), and vertical rhythm tightens throughout. Opt-in per document; every existing document renders unchanged
+
+### Changed
+- README structure tree: the two new Zhonhen prep files registered under `study-prep/zhonhen/`
+
+### Notes on scope
+- The document is **2 pages, not 1**. It was cut to fit a single page first — that version lost the buyer segmentation, half the landmines and most of the numbers block, which is the material actually worth carrying into the room. The developer confirmed mid-turn that length was fine if the content was complete, so the full version was restored and the dense type backed off from 8.05pt to 8.7pt for readability. The name is kept as the developer's own term for the artefact
+
+## [v02.84r] — 2026-08-22 04:42:58 PM EST — [54100bb](https://github.com/LightAISolutions/Sales/commit/54100bb31c1c92cc04125fb30f6e79616b9098b2)
+
+> **Prompt:** "Continue with your recommendation.
+
+A few questions:
+
+* What is the difference between a Medium Voltage Rectifier like Zhonhen's Panama system and a true Solid State Transformer?
+* "473 kilowatts per cubic meter on the 1MW sidecar — with the capacitor and battery options inside the same cabinet — is the spec I'd lead with for neocloud buyers." This quote is from the "Zhonhen Deck Summary" pdf. Explain why you would lead with this spec for neocloud buyers. Tell me what they care the most about and why."
+
+### Fixed
+- **`zhonhen-lesson-plan.md` corrected a factual error that would have cost credibility in the interview.** The plan told the developer to describe Panama as a "solid-state transformer / MV rectifier sidecar" and to say so "in exactly those words". Panama is a **transformer-rectifier unit** — a line-frequency transformer feeding a rectifier — whereas a true SST switches MV-rated SiC at kilohertz and takes isolation through a high-frequency core. Both fill the same MV-to-DC block slot (Schneider's 800VDC paper: "by SST or TRU"), but they are different device classes and a power-electronics buyer would catch the conflation. Both the Module 3 passage and the Module 5 Q&A row now say TRU explicitly, and explain why the TRU framing is the stronger card. `ZHONHEN-LESSON-PLAN.pdf` regenerated from the corrected Markdown
+
+### Changed
+- `scripts/harvest-exec-photos.py` environment notes now record the **full Chromium/proxy diagnosis** so no future session re-derives it: Chromium does honour the proxy (a deliberately wrong port yields `ERR_PROXY_CONNECTION_FAILED`); its NSS trust store starts empty, which is fixable with `libnss3-tools` + `certutil` and is why the failure first appears as `ERR_CERT_AUTHORITY_INVALID`; after that fix github.com returns a real HTTP status but all other hosts still reset, with nothing in the proxy's `recentRelayFailures` and no change from `--disable-quic`/`--disable-http2`. That residue is upstream egress policy, to be reported rather than routed around. The notes also record that regulatory filings carry no exec photos while designed ESG reports show boards rather than executive teams
+
+### Notes on scope
+- **No photos were harvested this push.** The recommendation was to determine whether the browser path could be unblocked; it cannot be, from inside the session. Two genuine client-side defects were found and fixed along the way (missing proxy CA in the browser trust store, and the untested assumption that Chromium was ignoring the proxy), but the remaining reset is policy-side. Unblocking it is an administrator action
+
+## [v02.83r] — 2026-08-22 04:05:21 PM EST — [b23c933](https://github.com/LightAISolutions/Sales/commit/b23c9330cde38831990583738eed8ff9f9dad60e)
+
+> **Prompt:** "continue with your recommendation. Also, I have already added the two field notes to Profiler."
+
+### Added
+- New **PDF track** in `scripts/harvest-exec-photos.py` (`pdfs` subcommand) — harvests headshots out of company-published PDF reports by matching each embedded image to the caption printed beside it, since PDFs carry no alt text. Two caption layouts are scored (name below a grid portrait, name to the right of a bio-block portrait) and images are captured by rendering the clip region rather than extracting the raw xref, so masks and alpha composite as a reader sees them
+- 4 verified headshots from company ESG/annual reports (exec photo coverage 160 → 164 of 320; dossiers with at least one photo 43 → 46): **Samsung SDI** (Joo Sun Choi), **LG Energy Solution** (Kim Dong-Myung, Lee Chang Sil) and **Huawei Digital Power** (Hou Jinlong). All three companies previously had zero photos
+
+### Changed
+- README structure tree: exec-image directory description now reflects 164 images across 46 companies and names PDF reports as a photo source
+
+### Fixed
+- PDF caption matching evaluated only the text *below* an image, so layouts that print the name to the *right* of a bio-block portrait never matched — Huawei's director pages were silently missed until both bands were scored
+
+### Security
+- Every PDF candidate was inspected on a rendered contact sheet before wiring. A re-run of the first-party track re-surfaced the Core Scientific "Yadin Rozov" image (alt text scores 100) and it was **rejected again** — the file at that URL is the company logo, not a person
+
+### Notes on scope
+- **The recommendation this push acted on was only partly borne out.** Regulatory filings — A-share and HKEX annual reports — are text-only: verified directly on CATL's 2025 annual report, where every page naming multiple executives carried zero images. Only *designed* ESG/sustainability reports and corporate annual reports contain portraits, and those show **boards**, not full executive teams, so most named directors are not the operating executives the dossiers track. Yield was 4 photos, not the ~60 the channel was proposed to reach
+- Playwright still cannot reach corporate sites through the proxy (`ERR_CONNECTION_RESET`, re-tested), so JS-rendered leadership pages — the largest remaining block — stay out of reach
+
+## [v02.82r] — 2026-08-22 03:18:46 PM EST — [38d5856](https://github.com/LightAISolutions/Sales/commit/38d585664353bb0d8647affa6094e7aa32a3ece3)
+
+> **Prompt:** "Picking up from my recent "AIDC market report batch D" session, continue the photo backfill."
+
+### Added
+- Executive-photo backfill, second pass: **34 verified headshots across 19 dossiers** (exec photo coverage 126 → 160 of 320; dossiers with at least one photo 38 → 43). **First-party (27)**: Aligned, Applied Digital, Bloom Energy, Core Scientific, CoreWeave, Fluence, IREN, QTS, Quanta Services, Siemens Energy, STACK Infrastructure, Switch, Vantage and Wärtsilä leadership pages. **Wikimedia Commons (7)**: BYD (Wang Chuanfu, Stella Li), Google (Demis Hassabis), Meta (Andrew Bosworth), OpenAI (Sam Altman, Greg Brockman) and Oracle (Safra Catz), each carrying a `photoCredit` attribution
+- `scripts/harvest-exec-photos.py` — the harvest method captured as reusable tooling with five subcommands (`gaps` / `firstparty` / `commons` / `sheet` / `wire`), replacing the ad-hoc scripts rebuilt each session
+
+### Changed
+- First-party discovery now **crawls the site's own navigation** (homepage → about/company/investor hubs → leadership leaves) instead of guessing common URL paths. Path-guessing was the prior sweep's main failure: `global.abb`, `byd.com` and `jinkosolar.com` all serve HTTP 200 but place leadership outside every common pattern
+- Exec-name matching expands each name to its alias forms before scoring, so `James (Jim) Moos`, `Wu Zuyu (吴祖钰) — "Jeff Wu"` and `Thomas M. 'Tommy' Holder` can match a page that prints only one of those forms
+- Commons lookups resolve a person's **Wikipedia biography lead image** rather than searching Commons filenames — a biography's lead image depicts its subject, which removes the failure mode that matched a cottage window to "Olivier Blum" last sweep
+- `photoCredit` license strings normalised to Wikimedia's spaced attribution style (`CC BY-SA 4.0`, not `CC-BY-SA-4.0`) across `meta`, `byd`, `google` and `openai`, and the generator now emits that form
+
+### Fixed
+- Exec objects packed onto a single line in older-vintage profiles (`google`, `meta`) are now wired in place rather than reported as "name line not found"
+- Two execs sharing a surname within one company no longer overwrite each other's image file — the collision was silently discarding one photo (caught on Delta Electronics: `Ping Cheng` and `Victor Cheng` both resolved to `delta-electronics-cheng.jpg`)
+
+### Security
+- Every candidate was inspected on a rendered contact sheet before wiring; **5 first-party candidates were rejected** — a Core Scientific company logo, a Lambda blog banner group shot, a generic "Headshot-Template" file, and both Delta Electronics images (generic `alt` text plus the filename collision above). **2 Commons candidates** were rejected at the license check
+
+## [v02.81r] — 2026-08-22 04:39:06 AM EST — [3443ee3](https://github.com/LightAISolutions/Sales/commit/3443ee31d054a7ba165ec944a4dede1000d3c7d3)
+
+> **Prompt:** "run the photo backfill"
+
+### Added
+- Executive-photo backfill: 40 verified headshots added across 17 dossiers (exec photo coverage 86 → 126 of 320; dossiers with at least one photo 21 → 38). Two tracks — **first-party (23)**: official leadership pages for Vertiv, GE Vernova, Equinix, Constellation Energy, Rosendin, Crusoe and Microsoft, harvested by matching exec names against image filenames/alt text; **Wikimedia Commons (17)**: license-verified free images (CC BY / CC BY-SA / public domain only) for Amazon, Google, Meta, Microsoft, NVIDIA, OpenAI, Oracle, Tesla, xAI, ABB and Schneider Electric, each carrying a `photoCredit` attribution
+- New `photoCredit` schema field (`repository-information/PROFILER-SCHEMA.md`) rendered as a caption on exec cards in the app and as a credit line in Word/PDF exports (`live-site-pages/Profiler.html` v01.37w)
+
+### Changed
+- Photo policy extended per developer approval (`PROFILER-SCHEMA.md`, `.claude/rules/profiler-app.md`): company-published photos now joined by verified free-licensed Wikimedia Commons images of public figures; LinkedIn scraping, news-agency/wire photos and video frame-grabs remain prohibited
+
+### Fixed
+- 4 of 21 Commons candidates were rejected at visual verification before wiring (a French cottage window matched for "Olivier Blum", a 19th-century painting for "Christian Bruch", plus two unusable group shots) — every accepted photo was inspected on a rendered contact sheet, not trusted from search scoring alone
+
+## [v02.80r] — 2026-08-22 03:25:08 AM EST — [c4935d7](https://github.com/LightAISolutions/Sales/commit/c4935d77e28deec4714c3161dd6434e5894a3053)
+
+> **Prompt:** "Some of the dossiers don't have any Key Judgments (ie: ABB) - Why not? Go through all the dossiers and create some. Also, most dossiers' Key Personnel section don't have any pictures, while some others do - Why? Can you think of new ways to get some pictures of the executive leadership team?"
+
+### Fixed
+- Key Judgments visibility: all 62 dossiers already carried `strategyRead` data, but seven older profiles (abb, eve-energy, hitachi-energy, huawei-digital-power, quanta-services, siemens-energy, xai) stored entries as `{confidence, judgment}` objects that `ovEl` rendered as "[object Object]" — added an `ovStratText` dual-shape helper to both the app renderer and the export builder in `live-site-pages/Profiler.html` v01.36w (archived snapshots keep the old shape, so renderer tolerance is required), and normalized the seven live profiles to the schema's canonical string form ("(High confidence) …") via bracket-matched surgical edits — no content changed, no profileVersion bumps (format normalization per the v02.74r precedent)
+
+## [v02.79r] — 2026-08-22 03:15:24 AM EST — [b6be1cd](https://github.com/LightAISolutions/Sales/commit/b6be1cd229ce6663471854ceacb011e5a4ea156b)
+
+> **Prompt:** "Fix Zhonhen Electric's "BOTTOM LINE UP FRONT" and "BACKGROUND" sections. I want there to be a space between them like all other dossiers. Do a sweeping check on all dossiers to make sure this format is congruent. Also, see the first attached screenshot - Is that a typo? It doesn't make sense to me. Fix it. \
+Then, for all dossiers, analyze and identify different sections and display them as labeled tabs in the red circled area in the second attached screenshot. Make sure to space things out properly for ease of use. I don't want users to have to scroll down such a long sweeping document to find the information they are looking for. I also want each dossier to look professionally prepared. When a dossier gets exported, recombine all the tabs into one comprehensive document/PDF, but make sure each tab starts on a separate page instead of where the last tab left off. Also, for exports specifically, make a Table of Contents on page 2 with each chapter hyperlinked to the page that the chapter starts on. If you have any suggestions regarding my formatting, let me know before you begin."
+
+### Added
+- Tabbed dossier layout in `live-site-pages/Profiler.html` v01.35w: seven style-aware tabs (Overview, Products & Specs merged, Developments, Key Judgments, Leadership, Financials, Sources) rendered as a sticky pill bar between the dossier header and content; per-tab panes replace the single long document; tabs appear only when a dossier has that section; deep-linkable `#slug/tab` URLs via `history.replaceState` (developer-selected design: 7 tabs / sticky + deep links / Word-only real page numbers)
+- Paginated exports: `ovBuildDoc` now emits anchored `h2.d-ch` chapters with `page-break-before` (cover = page 1, hyperlinked Contents = page 2, each chapter on a fresh page — verified 15-page print PDF with live internal links); the Word export swaps the static ToC for a real Word `TOC \o "2-2" \h` field that populates page numbers on field update
+
+### Fixed
+- Summary paragraphing: `ovAppendSummary` now splits on `BACKGROUND:`/`BACKGROUND.`, `Watch items:` and `Collection gap(s):` signposts, so all 62 dossiers render spaced paragraphs (the nine batch-B/C single-block summaries included); Zhonhen's data normalized `BACKGROUND.` → `BACKGROUND:` (the renderer split only on the colon form — the reported bug)
+- Zhonhen summary readability: bare "10jqka" consensus attribution expanded to "Tonghuashun (the Chinese financial-data platform 10jqka.com.cn)" — not a typo, an unexplained platform name (`zhonhen.profile.json`)
+
+## [v02.78r] — 2026-08-22 02:53:44 AM EST — [4a66d30](https://github.com/LightAISolutions/Sales/commit/4a66d30e788970607f1a62a3ba844610aca4aad9)
+
+> **Prompt:** "continue with your recommendation"
+
+### Fixed
+- Zhonhen dossier revised to profileVersion 2 (v1 archived per the Archival Procedure): corrected the claim that NVIDIA's published 800VDC partner roster "names Delta, Megmeet and Hopewind" — verification against NVIDIA's own May and October 2025 partner posts shows Hopewind appears on neither list (it was sourced from Chinese trade coverage that lumped it in). Fixed in `ecosystemRole`, a product highlight, and `strategyRead`; the Sina-roll source replaced with NVIDIA's two primary blog posts in `zhonhen.profile.json`; registry `lastUpdated` synced; `archive-index.json` updated. Playwright render check passed
+
+## [v02.77r] — 2026-08-22 02:47:09 AM EST — [7dc5476](https://github.com/LightAISolutions/Sales/commit/7dc547643feb529615c2598c12a202cc74f599cf)
+
+> **Prompt:** "I want to impress Jacky Zhu from Zhonghen in our next call, so I need to fully understand how Zhonhen is positioned to amongst other SST and medium-voltage (MV) solution providers. I want you to create a strategy report from Zhonhen Electric's perspective. I know that AIDC projects currently care a lot about the MV solution's ability to endure voltage ride-through from the grid(led by the EROCT market) and voltage flickers from fluctuating GPU usage from the server chips. Also, Jacky has told me that he has a relationship with Schneider Electric (confidential) and CATL (public). Analyze how Zhonhen should leverage these relationships to penetrate the US AIDC market. Jacky also said that they are targeting neoclouds due to their willingness to procure power solutions (priority is speed and technical capability); Check if that information is true, and if so, tell me which neocloud(s) I should target, why, and how. Make sure to properly source information that form the crux of the strategy. Output the report as a downloadable PDF. \
+If you hit the end of my weekly Fable limit before this task is done, switch to Opus 5 Xhigh effort and continue."
+
+### Added
+- Zhonhen US AIDC market-entry strategy report (`repository-information/study-prep/zhonhen/zhonhen-strategy-report.md` + `ZHONHEN-STRATEGY-REPORT.pdf`, 15 pages): SST/MV competitive positioning against the verified NVIDIA 800VDC rosters and productization ladder (MV-to-DC power blocks are NVIDIA's 2029 rung — Zhonhen ships one-stage MV-to-DC today), the ERCOT ride-through sales narrative (NOGRR282/NPRR1308 Large Computational Load rule, effective 2026-08-01; FERC-ordered national NERC standards due Dec 2026) and GPU-flicker narrative (Microsoft/OpenAI/NVIDIA arXiv 2508.14318; the proposed 10 MW / 5-second ERCOT variation limit), CATL (public) and Schneider Electric (confidential first-hand intel) leverage analysis, verified neocloud targeting (IREN and Crusoe ranked first; xAI deprioritized on security politics; tenant neoclouds routed to the rack-side product motion), risk stack, and a call playbook — ~45 crux sources cited with URLs, unverifiable claims explicitly flagged
+- New `zhonhen-strategy-report` entry in the `scripts/build-study-prep-pdf.mjs` DOCS registry (Strategy Report masthead, confidential-handling banner)
+
+## [v02.76r] — 2026-08-22 02:04:25 AM EST — [0ade66d](https://github.com/LightAISolutions/Sales/commit/0ade66d95a800f9848eb5da97601e72e8b53a056)
+
+> **Prompt:** "Picking up from my recent "AIDC market report batch A" session, continue with batch D."
+
+### Added
+- Batch D of the Profiler roster expansion — colocation providers (registry 57 → 62): Vantage Data Centers, Aligned Data Centers, QTS Data Centers, Switch, and STACK Infrastructure dossiers (`live-site-pages/profiler-data/{vantage,aligned,qts,switch,stack-infrastructure}.profile.json` — schemaVersion 2, profileVersion 1, intel-briefing style, 39–44 sources each) with matching technology study guides (`*.study.json`) and 24 company-published executive photos in `live-site-pages/images/execs/`
+- The five colocation providers (all private) joined the quarterly private-company sweep — armed list and per-company watch items added to `.claude/rules/profiler-app.md`; the sweep Routine's name and fired prompt updated to 21 companies
+
+### Changed
+- README tree caught up on 42 entries missed by prior sessions (the 30 v02.74r study guides and 12 newer `profiler-data/archive/` files) and adds this batch's 10 new data files and executive-photo counts
+- CHANGELOG archive rotation: the 2026-08-05 date group (7 sections, v01.76r–v01.82r) rotated to `CHANGELOG-archive.md` with SHA enrichment (counter 100 → 94)
+
 ## [v02.75r] — 2026-08-21 11:01:38 PM EST — [0f7c48b](https://github.com/LightAISolutions/Sales/commit/0f7c48b9e924ba72aafdbb37c23f4d1bf396013f)
 
 > **Prompt:** "Evaluate all the companies under my coverage and recategorize them accordingly. I want to see EPCs and General Contractors added to the category list."

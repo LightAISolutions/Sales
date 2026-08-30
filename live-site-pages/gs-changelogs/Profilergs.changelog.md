@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 23/50`
+`Sections: 24/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.24g] — 2026-08-29 08:41:26 PM EST — v03.76r
+
+### Changed
+- Industry Guidance study modules were revised to speak to industry groups — suppliers, developers, integrators, and buyers — rather than any single company, with training content generalized to industry-typical figures
 
 ## [v01.23g] — 2026-08-29 07:58:17 PM EST — v03.72r
 
