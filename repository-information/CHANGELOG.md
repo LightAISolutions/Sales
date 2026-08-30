@@ -3,11 +3,20 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.79r] — 2026-08-29 09:30:14 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Generated the companion competitive report** — `aidc-power-conversion--competitive--2026-08-29` ("AIDC Power Conversion — The 800 VDC Race", intel-briefing style): the 8 covered power-conversion players (Delta, LITEON, Megmeet, Zhonhen, Sinexcel, Vertiv, Eaton, Schneider — all dossiers fresh 2026-08-29; Huawei DP excluded from scope as sanctions-fenced, Flex/BizLink uncovered, both recorded in gaps), 6 confidence-tagged judgments, 3 sections (position table, the three contested layers, the Zhonhen file), 6 indicators, 29 citations copied verbatim from dossier `sources[]`
+- **Three `guidanceOverlays[]` restore the Zhonhen-side admin lens** onto the NVIDIA 800 VDC module (`options`, `trusst`, `suppliers`) — carrying the current company-specific reads: the Aug 2026 white paper naming Panama, Kezhi's 31% China HVDC share, the CATL RMB 4.1B/49% holdco definitive agreements, absence from NVIDIA's partner rosters, the Enervell Western vehicle, the founder's Dec 2025 conviction, and the H1 2026 report checkpoint (due 31 Aug)
+- Verified: `check-profiler-reports.py` clean on the first pass (0 errors, all 3 anchors + 29 citations validated); Playwright render confirmed all three panels anchor in the NVIDIA module
 
 ## [v03.78r] — 2026-08-29 09:22:40 PM EST
 
