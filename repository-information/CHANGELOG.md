@@ -3,11 +3,18 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.74r] — 2026-08-29 08:14:28 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Formation timeline on the dossier Relationships tab (`live-site-pages/Profiler.html` v01.62w)** — `ovRelTimeline` renders an SVG strip (viewBox 760×118) below the relationship map when a curated dossier has ≥2 links with `since` dates: year axis with adaptive tick step, category-colored dots at each formation date (`ovRelSinceX` maps YYYY/YYYY-MM to a year fraction), lane-based label placement (four near/far lanes above/below with per-lane extent tracking and edge clamping, added after the first Playwright pass showed same-year clusters overprinting), keyboard-accessible click-through to each counterparty. Respects the category chips (`frels`). Verified on Meta (7 dated links, 2024–2026): zero label overlaps, zero clipped labels, click-through navigates, zero page errors. **This completes the 2026-08-29 Relationships improvement list** (grouping+chips, graph+inbound, network explorer, common ground, recency feed, report wiring, one-pager export, category filters, formation timeline)
 
 ## [v03.73r] — 2026-08-29 08:08:54 PM EST
 

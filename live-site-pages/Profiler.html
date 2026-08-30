@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.61w">
+  <meta name="build-version" content="v01.62w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -368,6 +368,15 @@
     .ov-rel-grp.clps { cursor: pointer; }
     .ov-rel-grp.clps:hover { color: var(--ov-paper); }
     .ov-rel-grp .car { float: right; color: var(--ov-faint); letter-spacing: 0.08em; }
+    .ov-rel-tl { margin: 10px 0 4px; }
+    .ov-rel-tl-hd { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ov-faint); margin: 0 0 4px; }
+    .ov-rel-tl svg { width: 100%; height: auto; display: block; }
+    .ov-rel-tl .axis { stroke: var(--ov-line2); stroke-width: 1; }
+    .ov-rel-tl .tick { stroke: var(--ov-line); stroke-width: 1; }
+    .ov-rel-tl text { fill: var(--ov-muted); font: 9.5px var(--ov-mono); }
+    .ov-rel-tl .yr { fill: var(--ov-faint); }
+    .ov-rel-tl .n { cursor: pointer; }
+    .ov-rel-tl .n:hover text { fill: var(--ov-gold); }
     .ov-rel-cats { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 12px; }
     .ov-rel-catbtn { background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 999px; padding: 6px 12px; font: 11px var(--ov-mono); color: var(--ov-muted); cursor: pointer; letter-spacing: 0.06em; }
     .ov-rel-catbtn:hover { color: var(--ov-gold); }
@@ -2963,6 +2972,71 @@ function ovReloadFresh() {
       groups.push(['Detected in other dossiers', detected]);
       return { curated: curated, rels: rels, detected: detected, groups: groups };
     }
+    // ── Formation timeline (v01.62w) — a compact strip from curated links'
+    // since-dates: is this company's ecosystem long-standing or newly built?
+    // Dots are category-colored and click through to the counterparty. ──
+    function ovRelSinceX(s) {
+      var m = /^(\d{4})(?:-(\d{2}))?/.exec(String(s));
+      return m ? (+m[1]) + (m[2] ? ((+m[2] - 0.5) / 12) : 0.5) : null;
+    }
+    function ovRelTimeline(dated) {
+      var pts = [];
+      dated.forEach(function(r) {
+        var t = ovRelSinceX(r.since);
+        if (t != null) pts.push({ r: r, t: t });
+      });
+      if (pts.length < 2) return null;
+      pts.sort(function(a, b) { return a.t - b.t || a.r.name.localeCompare(b.r.name); });
+      var W = 760, H = 118, padL = 26, padR = 26, mid = 56;
+      var t0 = Math.floor(pts[0].t), t1 = Math.ceil(pts[pts.length - 1].t);
+      if (t1 - t0 < 1) t1 = t0 + 1;
+      var step = Math.max(1, Math.ceil((t1 - t0) / 8));
+      function X(t) { return padL + (t - t0) / (t1 - t0) * (W - padL - padR); }
+      var box = ovEl('div', 'ov-rel-tl');
+      box.appendChild(ovEl('div', 'ov-rel-tl-hd', 'Formation timeline — when each relationship began'));
+      var svg = ovSvgEl('svg', { viewBox: '0 0 ' + W + ' ' + H, role: 'img', 'aria-label': 'Formation timeline — relationship start dates' });
+      svg.appendChild(ovSvgEl('line', { x1: padL, y1: mid, x2: W - padR, y2: mid, 'class': 'axis' }));
+      for (var y = t0; y <= t1; y += step) {
+        svg.appendChild(ovSvgEl('line', { x1: X(y), y1: mid - 4, x2: X(y), y2: mid + 4, 'class': 'tick' }));
+        var yt = ovSvgEl('text', { x: X(y), y: H - 6, 'text-anchor': 'middle', 'class': 'yr' });
+        yt.textContent = String(y);
+        svg.appendChild(yt);
+      }
+      // Lane-based label placement: four lanes (near/far, above/below); each
+      // label takes the first lane with room at its x, so same-year clusters
+      // fan out vertically instead of overprinting. Centers are clamped so
+      // edge labels stay inside the viewBox.
+      var lanes = [
+        { y: mid - 12, end: -1e9 }, { y: mid + 20, end: -1e9 },
+        { y: mid - 26, end: -1e9 }, { y: mid + 34, end: -1e9 }
+      ];
+      pts.forEach(function(pt) {
+        var x = X(pt.t);
+        var w = pt.r.name.length * 6.2;
+        var lx = Math.min(Math.max(x, w / 2 + 2), W - w / 2 - 2);
+        var lane = null;
+        for (var li = 0; li < lanes.length; li++) {
+          if (lx - w / 2 >= lanes[li].end + 8) { lane = lanes[li]; break; }
+        }
+        if (!lane) { lane = lanes[0]; for (var lj = 1; lj < lanes.length; lj++) if (lanes[lj].end < lane.end) lane = lanes[lj]; }
+        lane.end = lx + w / 2;
+        var g = ovSvgEl('g', { 'class': 'n', role: 'link', tabindex: '0', 'aria-label': 'Open the ' + pt.r.name + ' dossier — linked since ' + pt.r.since });
+        g.appendChild(ovSvgEl('circle', { cx: x, cy: mid, r: 9, fill: 'transparent' }));
+        g.appendChild(ovSvgEl('circle', { cx: x, cy: mid, r: 4.5, fill: ovRelColor(pt.r.cats), stroke: '#13151c', 'stroke-width': 1.2 }));
+        var lb = ovSvgEl('text', { x: lx, y: lane.y, 'text-anchor': 'middle' });
+        lb.textContent = pt.r.name;
+        g.appendChild(lb);
+        var tip = ovSvgEl('title', {});
+        tip.textContent = pt.r.name + ' — ' + pt.r.type + ', since ' + pt.r.since;
+        g.appendChild(tip);
+        var go = function() { window.location.hash = pt.r.slug; };
+        g.addEventListener('click', go);
+        g.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+        svg.appendChild(g);
+      });
+      box.appendChild(svg);
+      return box;
+    }
     // Category-chip filter state — per dossier, reset on navigation.
     var ovRelCatSel = '', ovRelCatSlug = '';
     function ovRelPaint(p, wrap) {
@@ -3012,6 +3086,10 @@ function ovReloadFresh() {
       var fgroups = groups.map(function(g) { return [g[0], g[1].filter(catHit)]; });
       var mapRels = frels.slice(0, 10); // the map stays legible at ≤10 spokes
       if (mapRels.length) sec.appendChild(ovRelMap(p, mapRels));
+      if (curated) {
+        var tl = ovRelTimeline(frels.filter(function(r) { return r.since; }));
+        if (tl) sec.appendChild(tl);
+      }
       if (frels.length > mapRels.length)
         sec.appendChild(ovEl('p', 'sec-note', 'The map draws the first ' + mapRels.length + ' links — every relationship is listed in full below.'));
       fgroups.forEach(function(g) {

@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.62w] — 2026-08-29 08:14:28 PM EST — v03.74r
+
+### Added
+- Formation timeline on the Relationships tab — when a dossier's relationships carry start dates, a compact year strip shows when each one began, with color-coded dots you can tap to open the counterparty's dossier. It reveals at a glance whether a company's ecosystem is long-standing or newly assembled, and follows the category filter chips
 
 ## [v01.61w] — 2026-08-29 08:08:54 PM EST — v03.73r
 
