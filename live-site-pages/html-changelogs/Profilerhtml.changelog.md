@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 47/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.66w] — 2026-08-29 09:47:21 PM EST — v03.81r
+
+### Added
+- Company names in Industry Guidance modules are now clickable — tap one to jump straight to that company's dossier
+- Dossiers now show a "Covered in guidance modules" line for guidance-tier viewers, with buttons that open each study module directly
 
 ## [v01.65w] — 2026-08-29 09:39:08 PM EST — v03.80r
 

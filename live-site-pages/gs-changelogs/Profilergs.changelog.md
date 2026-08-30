@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 25/50`
+`Sections: 26/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.26g] — 2026-08-29 09:47:21 PM EST — v03.81r
+
+### Added
+- The app can now tell which study modules cover each company, powering the new cross-links between dossiers and the guidance library
 
 ## [v01.25g] — 2026-08-29 09:39:08 PM EST — v03.80r
 

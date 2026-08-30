@@ -1,4 +1,4 @@
-var VERSION = "v01.25g";
+var VERSION = "v01.26g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -357,6 +357,10 @@ function handleGuidanceOp_(e) {
       if (!doc) return { success: false, error: 'UNKNOWN_DOC' };
       return { success: true, doc: doc };
     }
+    if (op === 'mentions') {
+      var men = guidanceMentions_();
+      return { success: true, mentions: men.mentions, built: men.built };
+    }
     return { success: false, error: 'unknown_gop' };
   } catch (gErr) {
     var gMsg = String((gErr && gErr.message) || gErr);
@@ -390,6 +394,45 @@ function guidanceDoc_(id) {
   var docs = guidanceDocs_();
   for (var i = 0; i < docs.length; i++) if (docs[i].id === id) return docs[i];
   return null;
+}
+
+// Which guidance modules mention each covered company (gop=mentions —
+// role-gated like index/doc, so module titles never reach tiers without
+// guidance access). The registry on public Pages is the name authority;
+// the scan mirrors the client's ovRelDerive ambiguity guard: one-word
+// common-word names only count mid-sentence (never right after a field
+// start or sentence-ending punctuation in the module JSON). Result is
+// cached 6h — module content only changes on deploys.
+function guidanceMentions_() {
+  var cache = CacheService.getScriptCache();
+  var hit = cache.get('gd_mentions_v1');
+  if (hit) return JSON.parse(hit);
+  var base = EMBED_PAGE_URL.replace(/[^\/]*$/, '');
+  var reg = JSON.parse(UrlFetchApp.fetch(base + 'profiler-data/profiler-companies.json',
+    { muteHttpExceptions: true }).getContentText());
+  var docs = guidanceDocs_();
+  var blobs = docs.map(function(d) { return JSON.stringify(d); });
+  var out = {};
+  (reg.companies || []).forEach(function(c) {
+    var name = String(c.name || '');
+    if (!name) return;
+    var ambiguous = name.indexOf(' ') < 0 && /^[A-Z][a-z]+$/.test(name);
+    var src = '\\b' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b';
+    var hits = [];
+    for (var i = 0; i < docs.length; i++) {
+      var re = new RegExp(src, 'g'), m, ok = false;
+      while ((m = re.exec(blobs[i]))) {
+        if (!ambiguous) { ok = true; break; }
+        var prev = blobs[i].slice(0, m.index).replace(/\s+$/, '').slice(-1);
+        if (prev && '"{[.!?:'.indexOf(prev) === -1) { ok = true; break; }
+      }
+      if (ok) hits.push({ id: docs[i].id, title: docs[i].title });
+    }
+    if (hits.length) out[c.slug] = hits;
+  });
+  var res = { mentions: out, built: new Date().toISOString() };
+  try { cache.put('gd_mentions_v1', JSON.stringify(res), 21600); } catch (ce) { /* oversized — serve uncached */ }
+  return res;
 }
 
 // Content: NVIDIA 800 VDC white paper (Aug 2026) analysis module.

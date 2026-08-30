@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.65w">
+  <meta name="build-version" content="v01.66w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -935,6 +935,16 @@
     .gd-review.soon, .rp-age.aging { color: var(--ov-gold); border-color: var(--ov-gold); }
     .gd-review.due, .rp-age.stale { color: var(--ov-adv); border-color: var(--ov-adv); }
     .rp-age.fresh { color: var(--ov-dev); border-color: var(--ov-dev); }
+    /* Company cross-links (v01.66w) — covered company names in guidance prose
+       link to dossiers (CVD blue, distinct from the gold glossary terms);
+       dossiers get a "Covered in guidance modules" chip line. */
+    .gd-co { border-bottom: 1px dotted #4f83e6; cursor: pointer; }
+    .gd-co:hover { color: #4f83e6; }
+    .ov-gd-mentions { margin: 26px 0 8px; font: 12px var(--ov-mono); color: var(--ov-muted); }
+    .ov-gd-mentions .lbl { margin-right: 8px; }
+    .ov-gd-mentions .chip { background: transparent; border: 1px solid var(--ov-line2); color: var(--ov-paper);
+      border-radius: 6px; padding: 4px 9px; margin: 0 6px 6px 0; cursor: pointer; font: 11px var(--ov-mono); }
+    .ov-gd-mentions .chip:hover { border-color: #4f83e6; color: #4f83e6; }
     .gd-callout { border: 1px solid rgba(216,180,90,0.4); border-radius: 10px; padding: 4px 16px 10px; }
     .gd-callout.warn { border-color: rgba(224,122,139,0.45); }
     .gd-note { font: 12.5px/1.6 var(--ov-mono); color: var(--ov-muted); margin-top: 10px;
@@ -2662,7 +2672,7 @@ function ovReloadFresh() {
       back.type = 'button';
       back.addEventListener('click', function() { window.location.hash = ''; });
       main.appendChild(back);
-      if (ovProfiles[slug]) { ovPaintCompany(main, ovProfiles[slug]); return; }
+      if (ovProfiles[slug]) { ovPaintCompany(main, ovProfiles[slug]); ovGuidanceMentionsLine(main, slug); return; }
       main.appendChild(ovEl('p', 'ov-loading', 'Loading dossier…'));
       ovFetchJson(slug + '.profile.json')
         .then(function(p) {
@@ -5815,6 +5825,108 @@ function ovReloadFresh() {
       });
     }
 
+    // PROJECT: company cross-links (v01.66w). Covered company names inside
+    // guidance module text become chips that close the overlay and open the
+    // dossier. Matching reuses ovRelDerive's name authority (the registry)
+    // and its ambiguity guard, so common-word one-word names never link at
+    // sentence starts. Buttons (quiz choices, done buttons), existing links,
+    // glossary terms, headings, and label rows are never rewritten.
+    function gdOpenCompany(slug) {
+      var ov = document.getElementById('ov-guide-overlay');
+      if (ov) ov.style.display = 'none';
+      window.location.hash = slug;
+    }
+    function gdLinkCompanies(root) {
+      var comps = ((ovRegistry && ovRegistry.companies) || []);
+      if (!comps.length || !root) return;
+      var items = comps.map(function(c) {
+        return { slug: c.slug, nm: c.name,
+                 re: new RegExp('\\b' + ovRelEscapeRe(c.name) + '\\b', 'g'),
+                 ambiguous: c.name.indexOf(' ') < 0 && /^[A-Z][a-z]+$/.test(c.name) };
+      }).sort(function(a, b) { return b.nm.length - a.nm.length; });
+      var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+      var nodes = [], n;
+      while ((n = walker.nextNode())) {
+        if (!n.nodeValue || n.nodeValue.length < 3) continue;
+        var anc = n.parentNode, skip = false;
+        while (anc && anc !== root) {
+          var cls = String(anc.className || '');
+          if (anc.tagName === 'BUTTON' || anc.tagName === 'A' || anc.tagName === 'H2' || anc.tagName === 'H3'
+              || cls.indexOf('gd-term') !== -1 || cls.indexOf('gd-co') !== -1
+              || cls.indexOf('gd-kicker') !== -1 || cls.indexOf('gd-srcline') !== -1
+              || cls.indexOf('lb') !== -1) { skip = true; break; }
+          anc = anc.parentNode;
+        }
+        if (!skip) nodes.push(n);
+      }
+      nodes.forEach(function(node) {
+        var text = node.nodeValue, ranges = [];
+        items.forEach(function(it) {
+          it.re.lastIndex = 0;
+          var m;
+          while ((m = it.re.exec(text))) {
+            if (it.ambiguous && ovRelFalseStart(text, m.index)) continue;
+            var s = m.index, e = s + m[0].length, clash = false;
+            for (var ri = 0; ri < ranges.length; ri++) {
+              if (s < ranges[ri].e && e > ranges[ri].s) { clash = true; break; }
+            }
+            if (!clash) ranges.push({ s: s, e: e, slug: it.slug });
+          }
+        });
+        if (!ranges.length) return;
+        ranges.sort(function(a, b) { return a.s - b.s; });
+        var frag = document.createDocumentFragment(), pos = 0;
+        ranges.forEach(function(r) {
+          if (r.s > pos) frag.appendChild(document.createTextNode(text.slice(pos, r.s)));
+          var chip = ovEl('span', 'gd-co', text.slice(r.s, r.e));
+          chip.title = 'Open dossier';
+          chip.addEventListener('click', function() { gdOpenCompany(r.slug); });
+          frag.appendChild(chip);
+          pos = r.e;
+        });
+        if (pos < text.length) frag.appendChild(document.createTextNode(text.slice(pos)));
+        node.parentNode.replaceChild(frag, node);
+      });
+    }
+    // Open the guidance overlay directly on one module (dossier mention chips).
+    function ovGuideOpenDoc(id) {
+      var ov = document.getElementById('ov-guide-overlay');
+      if (!ov) { ov = document.createElement('div'); ov.id = 'ov-guide-overlay'; document.body.appendChild(ov); }
+      ov.style.display = 'block';
+      ov.innerHTML = '';
+      var shell = ovEl('div', 'gd-shell');
+      ov.appendChild(shell);
+      ovGuideLoadDoc(id, shell);
+    }
+    // Dossier-side line: which guidance modules mention this company — served
+    // by the role-gated gop=mentions op, so tiers without guidance access
+    // never fetch (ovCan guard) and never see module titles. One fetch per
+    // page load, cached; every failure path renders nothing.
+    var gdMentionsCache = null;
+    function ovGuidanceMentionsLine(main, slug) {
+      if (!ovCan('guidance') || !window._gasNoteUrl) return;
+      function paint(mentions) {
+        var hits = (mentions || {})[slug];
+        if (!hits || !hits.length) return;
+        if (decodeURIComponent((window.location.hash || '').replace(/^#/, '')).split('/')[0] !== slug) return;
+        var line = ovEl('div', 'ov-gd-mentions');
+        line.appendChild(ovEl('span', 'lbl', '✦ Covered in guidance modules:'));
+        hits.forEach(function(h) {
+          var chip = ovEl('button', 'chip', h.title);
+          chip.type = 'button';
+          chip.addEventListener('click', function() { ovGuideOpenDoc(h.id); });
+          line.appendChild(chip);
+        });
+        main.appendChild(line);
+      }
+      if (gdMentionsCache) { paint(gdMentionsCache); return; }
+      ovGuideApi('mentions', {}, function(res) {
+        if (!res || !res.success) return;
+        gdMentionsCache = res.mentions || {};
+        paint(gdMentionsCache);
+      });
+    }
+
     // PROJECT: freshness discipline (v01.65w). Guidance modules carry a
     // reviewBy date (set at authoring from each module's own dated gates);
     // the chip turns gold inside 30 days and red once the date passes.
@@ -5901,6 +6013,7 @@ function ovReloadFresh() {
           location.hash = '#report/' + rep.id;
         });
         panel.appendChild(lk);
+        gdLinkCompanies(panel);
         var sec = shell.querySelector('#gd-' + o.sectionId);
         if (sec) {
           var btn = sec.querySelector('.gd-done-btn');
@@ -6050,6 +6163,7 @@ function ovReloadFresh() {
         nav.appendChild(ga);
       }
       gdBindTermTips(shell);
+      gdLinkCompanies(shell);
     }
 
     function gdRenderSection(doc, sec) {

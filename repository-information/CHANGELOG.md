@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.81r] — 2026-08-29 09:47:21 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Company-chip cross-links** (recommendation #3 from the v03.76r module audit), completing the module ↔ dossier ↔ report triangle in both directions. Guidance → dossiers: `gdLinkCompanies` walks rendered module text nodes and wraps covered company names (registry name authority, `ovRelDerive`'s ambiguity guard via `ovRelFalseStart`, longest-name-first overlap resolution) as CVD-blue chips that close the overlay and open the dossier — excluding buttons, links, headings, glossary-term spans, and label rows; Admin lens panels get the same pass. Dossiers → guidance: new role-gated `gop=mentions` op (`guidanceMentions_` — registry fetched from Pages, mirrored ambiguity guard, `CacheService` 6h) feeds an "✦ Covered in guidance modules" chip line on dossiers for `guidance`-capable tiers only, each chip opening the module via `ovGuideOpenDoc`
+- `.claude/rules/industry-guidance.md` steps 4-5 document the chips, the mentions op, and the tier gate
+
+#### `Profiler.gs` — v01.26g
+##### Added
+- `guidanceMentions_()` + `gop=mentions` wired into `handleGuidanceOp_` behind the existing `guidanceAllowed_` gate
+
+#### `Profiler.html` — v01.66w
+##### Added
+- `gdLinkCompanies`/`gdOpenCompany` (guidance-side chips, called from `gdRenderDoc` and `gdApplyLens`), `ovGuideOpenDoc` (direct module open), `ovGuidanceMentionsLine` (dossier-side line, session-cached), `.gd-co`/`.ov-gd-mentions` styles
 
 ## [v03.80r] — 2026-08-29 09:39:08 PM EST
 
