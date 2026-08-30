@@ -3,11 +3,24 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.84g] — 2026-08-30 04:17:50 PM EST — v03.84r
+
+### Changed
+- **The line at the bottom of your Morning Digest is shorter and says who published it.** It now reads *Published by Jon Yang*, and the amber key credits the model behind the analysis by name — *Amber = Analysis by Gemini* — rather than simply marking the colour
+- **The coverage tally has been taken out of the edition.** Subscribers no longer see how many stories ran out of how many were relevant, how many were scanned, or how many were held back by the section caps — those are desk numbers, not reader numbers. The **View More** link still tells a reader how many extra stories are waiting
+- The separate *summarized by* credit at the end of the footer is gone, because the amber key now names the model in the same breath as it explains the colour
+
+### Added
+- Every issue records how many stories it ran and how many it held back, so the desk can read the full coverage tally from the News Stand instead of the edition. Issues built before this change simply show what they always showed
+
+### Notes
+- Editions that fall back to raw source text still say so — that is a statement about the content in front of the reader, not an attribution, so it stays
 
 ## [v01.83g] — 2026-08-29 01:30:10 AM EST — v03.51r
 

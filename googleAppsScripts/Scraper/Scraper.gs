@@ -1,4 +1,4 @@
-var VERSION = "v01.83g";
+var VERSION = "v01.84g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -373,9 +373,18 @@ var SCRAPER_TAB_HEADERS = {
   // and a separate delivery pass mails it — so a manual build is silent, and
   // the scheduled send can be held until 7:00 regardless of when the build
   // finished.
+  // 'Shown' and 'Held Back' are denormalised for the same reason 'Lead' and
+  // 'No' are, and for one more: the edition footer used to carry the coverage
+  // line ("14 of 15 relevant · 104 scanned · 1 more held back") and no longer
+  // does — that is desk telemetry, so it moved to the News Stand. Both numbers
+  // live inside the Sections JSON, and reading them from there would mean
+  // pulling the heaviest column in the tab on every archive page just to print
+  // two integers. Rows written before these columns existed leave them blank,
+  // and listDigests reports blank as null so the app can omit the line rather
+  // than claim an edition showed nothing.
   Digests: ['Digest ID', 'Date', 'Generated At', 'Status', 'Item Count',
             'Relevant Count', 'Sections', 'HTML', 'Notes', 'Edition', 'AI', 'Lead',
-            'No', 'Delivered'],
+            'No', 'Delivered', 'Shown', 'Held Back'],
   // 'Analysis' is kept apart from 'Summary' rather than appended to it. The two
   // are different kinds of claim — one reports what the article says, the other
   // is the desk's inference about what it means — and a reader is entitled to
@@ -3934,6 +3943,26 @@ function scActiveAiLabel_() {
   return provider + '/' + model;
 }
 
+/** The reader-facing name of the model behind the analysis.
+
+    `aiLabel` is 'gemini/gemini-3.5-flash-lite' — a provider/model pair that is
+    exactly right in an operations log and exactly wrong in an email. The
+    version suffix tells a reader nothing they can act on, and it dates the
+    edition the moment the model is swapped: an archive read six months later
+    would be advertising a build number nobody runs any more. The provider
+    segment is the part of the label that survives that swap, so it is the part
+    that gets printed. Anything unrecognised is title-cased rather than
+    dropped — a new provider should still be credited, not silently anonymous —
+    and a fallback run ('none (fallback)', or no label at all) returns '' so
+    the footer credits nothing rather than crediting nobody. */
+function scAiBrand_(label) {
+  var provider = String(label || '').split('/')[0].trim().toLowerCase();
+  if (!provider || provider.indexOf('none') === 0) return '';
+  var known = { gemini: 'Gemini', claude: 'Claude' };
+  if (known[provider]) return known[provider];
+  return provider.charAt(0).toUpperCase() + provider.slice(1);
+}
+
 /** aiComplete_ with bounded retry on rate limiting. A free-tier 429 is a
     transient, self-clearing condition — treating it as terminal dropped the
     entire remainder of an edition to raw snippets and skipped the AI lead.
@@ -4315,7 +4344,10 @@ function scDigestRenderStep_(ss, state) {
     state.aiNote || state.aiSoftNote || '', d.editionId,
     state.aiLabel || (state.aiNote ? 'none (fallback)' : ''),
     lead ? scStr_(lead.title, 300) : '', no,
-    priorRow.delivered || '']);   // '' = built, not yet delivered
+    priorRow.delivered || '',   // '' = built, not yet delivered
+    // Written from the same two values the render just used, so the News Stand
+    // and the edition can never disagree about what this issue covered.
+    Number(d.counts.shown || 0), Number(d.heldBackTotal || 0)]);
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
   if (extra > 0) digests.deleteRows(2, extra);
   var props = PropertiesService.getScriptProperties();
@@ -4647,6 +4679,9 @@ function scRenderDigestNightInk_(d) {
   // unreadable, and the reader got "Nothing was held back" one click later.
   // Two independent sources for one number can only ever drift; taking the
   // number FROM the list makes the contradiction impossible to express.
+  // The footer no longer prints this as prose — the reader's only view of it is
+  // the "View More (N)" link below — but the drift argument is unchanged: that
+  // link's N is still a promise about a list, so it still comes from the list.
   // heldBackTotal is the true count (d.heldBack itself is capped for display,
   // and the overlay says "showing the top N of total" when they differ).
   // Editions built before heldBackTotal existed fall back to the arithmetic.
@@ -4658,6 +4693,10 @@ function scRenderDigestNightInk_(d) {
   // summaries all fell back to raw source text, has nothing amber in it and a
   // key would be explaining something that is not there.
   var hasAnalysis = !!(d.lead && d.lead.analysis);
+  // The key credits the model in the same breath as it explains the colour,
+  // which is why the footer's separate "summarized by" line is gone: naming the
+  // model twice in one line of 11px grey is not disclosure, it is clutter.
+  var aiBrand = scAiBrand_(d.aiLabel);
   ['companies', 'market', 'incidents'].forEach(function(sec) {
     ((d.sections && d.sections[sec]) || []).forEach(function(it) {
       if (it && it.analysis) hasAnalysis = true;
@@ -4681,15 +4720,24 @@ function scRenderDigestNightInk_(d) {
   // width with no CSS at all.
   html += '<div style="border-top:3px double #d8dbe1;margin-top:9px;padding-top:11px;">'
     + '<div class="ni-foot" style="font-size:11px;line-height:1.5;color:#8a919d;">'
-    + 'Published by your Scraper desk · '
-    + (hasAnalysis ? '<span style="color:#f2a33c;">Amber = analysis</span> · ' : '')
-    + Number(d.counts.shown || 0) + ' of ' + Number(d.counts.relevant)
-    + ' relevant · ' + Number(d.counts.intake) + ' scanned'
-    + (held ? ' · ' + held + ' more held back by the per-section caps' : '')
+    // Coverage arithmetic — shown / relevant / scanned / held back — used to
+    // run along this line. It is desk telemetry, not reader information: it
+    // answers "how did the pipeline do today", a question the subscriber did
+    // not ask and cannot act on, and it invited the reading that an edition
+    // showing 14 of 15 was holding something back. It is not lost — the News
+    // Stand prints the whole line on the open issue (see listDigests' Shown and
+    // Held Back columns), which is where the person who tunes the pipeline
+    // reads it. The reader keeps the one piece of it that is actionable: the
+    // "View More (N)" link below.
+    + 'Published by Jon Yang'
+    + (hasAnalysis ? ' · <span style="color:#f2a33c;">Amber = Analysis'
+        + (aiBrand ? ' by ' + esc(aiBrand) : '') + '</span>' : '')
+    // Kept, and deliberately not merged into the credit above: these two say
+    // the summaries are NOT the model's work, which is a claim about the
+    // content in front of the reader rather than an attribution.
     + (d.aiNote ? ' · summaries in fallback mode'
-        : (d.aiLabel ? ' · summarized by ' + esc(d.aiLabel)
-             + (d.aiSoftNote ? ' · a few summaries fell back to source text' : '')
-           : '')) + '</div>'
+        : (d.aiSoftNote ? ' · a few summaries fell back to source text' : ''))
+    + '</div>'
     + (moreLink ? '<div style="margin-top:8px;">' + moreLink + '</div>' : '')
     + '</div>'
     + '</td></tr></table>'
@@ -5077,13 +5125,13 @@ function listDigests(sessionToken, limit, payload) {
   if (n < 1) return empty;
 
   // Two narrow reads instead of one wide one: columns 1–6 (id → relevantCount)
-  // and 9–12 (notes, edition, ai, lead). Columns 7 and 8 — Sections and HTML —
-  // are never touched here.
+  // and 9–16 (notes, edition, ai, lead, no, delivered, shown, held back).
+  // Columns 7 and 8 — Sections and HTML — are never touched here.
   var meta = sheet.getRange(2, 1, n, 6).getValues();
-  // Lead (column 12) may not exist yet on a sheet created before it was added.
-  // ensureScraperTabs_ widens the header, but the grid itself can still be
-  // narrower, so clamp and pad rather than throwing.
-  var tailW = Math.max(1, Math.min(6, sheet.getMaxColumns() - 8));
+  // The tail columns may not all exist yet on a sheet created before they were
+  // added. ensureScraperTabs_ widens the header, but the grid itself can still
+  // be narrower, so clamp and pad rather than throwing.
+  var tailW = Math.max(1, Math.min(8, sheet.getMaxColumns() - 8));
   var tail = sheet.getRange(2, 9, n, tailW).getValues();
 
   var edNames = {}, edParent = {};
@@ -5116,7 +5164,13 @@ function listDigests(sessionToken, limit, payload) {
       edition: edId, editionName: edNames[edId] || edId,
       ai: String(t[2] || ''), lead: String(t[3] || ''),
       no: issueNos[id] || Number(t[4]) || 0,
-      delivered: t[5] instanceof Date ? t[5].toISOString() : String(t[5] || '')
+      delivered: t[5] instanceof Date ? t[5].toISOString() : String(t[5] || ''),
+      // null, not 0. An issue built before these columns existed genuinely does
+      // not know how many stories it showed, and reporting that as zero would
+      // have the News Stand print "0 shown of 15 relevant" about an edition
+      // that ran perfectly well. The app omits what is null.
+      shown: (t[6] === '' || t[6] == null) ? null : Number(t[6]) || 0,
+      heldBack: (t[7] === '' || t[7] == null) ? null : Number(t[7]) || 0
     });
   }
   // Sort by the edition's own date, newest first — NOT by sheet row order.

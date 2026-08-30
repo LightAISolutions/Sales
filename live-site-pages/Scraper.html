@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.66w">
+  <meta name="build-version" content="v01.67w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -6114,7 +6114,10 @@
         // Spelled out rather than left as a bare "32/148" — the ratio is
         // meaningless on a card without saying what it counts.
         + '<span class="wd-ns-foot" title="' + Number(d.relevantCount)
-        + ' stories cleared the relevance rubric out of ' + Number(d.itemCount) + ' scanned">'
+        + ' stories cleared the relevance rubric out of ' + Number(d.itemCount) + ' scanned'
+        + (d.shown == null ? '' : '; ' + Number(d.shown) + ' ran in the edition')
+        + (d.heldBack ? '; ' + Number(d.heldBack) + ' held back by the section caps' : '')
+        + (d.ai ? '; summarized by ' + scEsc(d.ai) : '') + '">'
         + Number(d.relevantCount) + ' of ' + Number(d.itemCount) + ' relevant'
         + '<span class="wd-ns-bar-mini"><i style="width:' + pct + '%"></i></span></span>'
         + '</button>';
@@ -6230,10 +6233,27 @@
     var meta = null;
     for (var k = 0; k < _wdDigests.length; k++) if (_wdDigests[k].id === id) meta = _wdDigests[k];
     if (meta) {
-      $sc('wd-edition-sub').textContent = (meta.editionName ? meta.editionName + ' · ' : '')
-        + meta.date + ' · ' + Number(meta.relevantCount)
-        + ' relevant of ' + Number(meta.itemCount) + ' scanned'
-        + (meta.notes ? ' · ' + meta.notes : '');
+      // The coverage line used to run along the bottom of the edition itself,
+      // where every subscriber read it. It is desk telemetry — it answers "how
+      // did the pipeline do today", which is a question for the person tuning
+      // the pipeline and nobody else — so it was taken out of the footer and
+      // put here, on the one surface only the desk sees. Same numbers, plus the
+      // exact model, which the footer now only credits by brand.
+      var cov = [];
+      // `shown` is null on issues built before the column existed. Those are
+      // reported the way they were always reported rather than as "0 shown".
+      cov.push(meta.shown == null
+        ? Number(meta.relevantCount) + ' relevant'
+        : Number(meta.shown) + ' shown of ' + Number(meta.relevantCount) + ' relevant');
+      cov.push(Number(meta.itemCount) + ' scanned');
+      if (meta.heldBack) cov.push(Number(meta.heldBack) + ' held back by the section caps');
+      var sub = [];
+      if (meta.editionName) sub.push(meta.editionName);
+      sub.push(meta.date);
+      sub.push(cov.join(' · '));
+      if (meta.ai) sub.push(meta.ai);
+      if (meta.notes) sub.push(meta.notes);
+      $sc('wd-edition-sub').textContent = sub.join(' · ');
     }
     $sc('wd-edition-view').innerHTML =
       '<span class="wd-loading" style="display:block;padding:16px;">Loading edition…</span>';

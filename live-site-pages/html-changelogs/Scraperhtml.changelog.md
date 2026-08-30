@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 39/50`
+`Sections: 40/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.67w] — 2026-08-30 04:17:50 PM EST — v03.84r
+
+### Added
+- **The News Stand now carries the coverage tally that used to sit at the bottom of the edition.** The line above the archive tells you, for the issue you have open, how many stories ran, how many cleared the relevance bar, how many were scanned, how many were held back by the section caps, and which model wrote the summaries — the same numbers, on the one screen only you see
+- Hovering an issue's card in the News Stand shows the same breakdown for that issue without opening it
+
+### Notes
+- Issues built before this change do not record how many stories they ran, so their line reports what it always reported rather than guessing
 
 ## [v01.66w] — 2026-08-29 01:30:10 AM EST — v03.51r
 

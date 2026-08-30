@@ -3,11 +3,36 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.84r] — 2026-08-30 04:17:50 PM EST
+
+> **Prompt:** "Picking up from my "Scraper subscriber/edition matching" session, I want the following changes to the Morning Digests' footers:
+>
+> * Replace "Published by your Scraper desk" with "Published by Jon Yang"
+> * Replace "Amber = analysis" with "Amber = Analysis by X" where X is the AI model used. If it is Gemini 3.5 flash lite, just say "Gemini" and don't mention the exact model
+> * Since we reference the AI model above, remove the "summarized by X" line at the end
+> * Remove the "14 of 15 relevant * 104 scanned * 1 more held back by the per-section caps" - My readers don't need to know all that. Just make it clear in the News Stand for me to see."
+
+### Changed
+
+**`googleAppsScripts/Scraper/Scraper.gs` (v01.84g)**
+- Night Ink footer (`scRenderDigestNightInk_`) rewritten: byline is now `Published by Jon Yang`; the amber key reads `Amber = Analysis by <Brand>`; the coverage run (`shown of relevant · intake scanned · N more held back by the per-section caps`) and the trailing `summarized by <provider/model>` credit are both removed. The `aiNote` / `aiSoftNote` fallback notices are deliberately kept — they are claims about the content in front of the reader, not attributions
+- `Digests` tab header gained `Shown` and `Held Back` (columns 15–16), denormalised out of the Sections JSON for the same reason `Lead` and `No` are: the News Stand read path must not pull the heavy column to print two integers. `ensureScraperTabs_`'s cache key is column-count-derived, so the widening lands on the next call
+- `listDigests` tail read widened from 6 to 8 columns and now returns `shown` / `heldBack`. Both are `null` (not `0`) on rows written before the columns existed, so the app can omit the figure rather than claim an edition showed nothing
+
+**`live-site-pages/Scraper.html` (v01.67w)**
+- News Stand subtitle (`wdLandingShowEdition_`) now prints the full coverage line for the open issue — `N shown of M relevant · K scanned · J held back by the section caps` — plus the exact `provider/model` label and any AI note. This is the desk-side home of what the footer used to broadcast to every subscriber
+- News Stand card tooltips carry the same per-issue breakdown
+
+### Added
+
+**`googleAppsScripts/Scraper/Scraper.gs`**
+- `scAiBrand_(label)` maps the stored `provider/model` label to a reader-facing brand (`gemini/gemini-3.5-flash-lite` → `Gemini`, `claude/...` → `Claude`, unknown providers title-cased, fallback runs → `''`). The model version is intentionally dropped: it is unactionable for a reader and dates an archived edition the moment the model is swapped
 
 ## [v03.83r] — 2026-08-29 10:28:50 PM EST
 
