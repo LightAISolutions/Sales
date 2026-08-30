@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.60w">
+  <meta name="build-version" content="v01.61w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -368,6 +368,10 @@
     .ov-rel-grp.clps { cursor: pointer; }
     .ov-rel-grp.clps:hover { color: var(--ov-paper); }
     .ov-rel-grp .car { float: right; color: var(--ov-faint); letter-spacing: 0.08em; }
+    .ov-rel-cats { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 12px; }
+    .ov-rel-catbtn { background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 999px; padding: 6px 12px; font: 11px var(--ov-mono); color: var(--ov-muted); cursor: pointer; letter-spacing: 0.06em; }
+    .ov-rel-catbtn:hover { color: var(--ov-gold); }
+    .ov-rel-catbtn.on { color: var(--ov-gold); border-color: var(--ov-gold) !important; background: rgba(216,180,90,0.08); }
     .ov-rel-chips { margin: 3px 0 6px; }
     .ov-rel-chips .ch { display: inline-block; font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ov-muted); border: 1px solid var(--ov-line2); border-radius: 4px; padding: 3px 7px; margin: 2px 6px 2px 0; }
     .ov-rel-chips .ch.st-active { color: #82b56d; border-color: rgba(130,181,109,0.45); }
@@ -2959,11 +2963,14 @@ function ovReloadFresh() {
       groups.push(['Detected in other dossiers', detected]);
       return { curated: curated, rels: rels, detected: detected, groups: groups };
     }
+    // Category-chip filter state — per dossier, reset on navigation.
+    var ovRelCatSel = '', ovRelCatSlug = '';
     function ovRelPaint(p, wrap) {
       ovClear(wrap);
       var reld = ovRelData(p);
       var curated = reld.curated, rels = reld.rels, detected = reld.detected, groups = reld.groups;
       if (!rels.length && !detected.length) return false;
+      if (ovRelCatSlug !== p.slug) { ovRelCatSlug = p.slug; ovRelCatSel = ''; }
       var sec = ovSection(ovSecLabel('rels'), curated
         ? 'Curated links from this dossier\'s research — grouped by who the company works with vs competes with, each with its stated source, deal metadata, every mention across this dossier, and what other dossiers say back. Click a company to open its dossier.'
         : 'Detected in this dossier\'s own reporting and judgments — every mention quoted in full below; curated into typed relationships at the next revision. Click a company to open its dossier.');
@@ -2975,11 +2982,39 @@ function ovReloadFresh() {
         ex.addEventListener('click', function() { ovRelWordExport(p); });
         sec.appendChild(ex);
       }
-      var mapRels = rels.slice(0, 10); // the map stays legible at ≤10 spokes
+      // Category filter chips (v01.61w) — on link-heavy dossiers, cut the map
+      // and every group to one counterparty category. Chips list only the
+      // categories actually present, with counts; the one-pager export always
+      // carries the full unfiltered view.
+      var total = rels.length + detected.length;
+      var catCounts = {};
+      rels.concat(detected).forEach(function(r) {
+        (r.cats || []).forEach(function(c) { catCounts[c] = (catCounts[c] || 0) + 1; });
+      });
+      var catKeys = Object.keys(catCounts).sort(function(a, b) { return catCounts[b] - catCounts[a] || a.localeCompare(b); });
+      if (total >= 8 && catKeys.length >= 2) {
+        if (ovRelCatSel && !catCounts[ovRelCatSel]) ovRelCatSel = '';
+        var cbar = ovEl('div', 'ov-rel-cats');
+        var mkChip = function(val, label, n) {
+          var b = ovEl('button', 'ov-rel-catbtn' + ((ovRelCatSel === val) ? ' on' : ''), label + ' · ' + n);
+          b.type = 'button';
+          if (val) b.style.borderColor = ovRelColor([val]);
+          b.setAttribute('aria-pressed', ovRelCatSel === val ? 'true' : 'false');
+          b.addEventListener('click', function() { ovRelCatSel = (ovRelCatSel === val) ? '' : val; ovRelPaint(p, wrap); });
+          cbar.appendChild(b);
+        };
+        mkChip('', 'All', total);
+        catKeys.forEach(function(c) { mkChip(c, ovNxCatLabel(c), catCounts[c]); });
+        sec.appendChild(cbar);
+      } else ovRelCatSel = '';
+      var catHit = function(r) { return !ovRelCatSel || (r.cats || []).indexOf(ovRelCatSel) >= 0; };
+      var frels = rels.filter(catHit);
+      var fgroups = groups.map(function(g) { return [g[0], g[1].filter(catHit)]; });
+      var mapRels = frels.slice(0, 10); // the map stays legible at ≤10 spokes
       if (mapRels.length) sec.appendChild(ovRelMap(p, mapRels));
-      if (rels.length > mapRels.length)
+      if (frels.length > mapRels.length)
         sec.appendChild(ovEl('p', 'sec-note', 'The map draws the first ' + mapRels.length + ' links — every relationship is listed in full below.'));
-      groups.forEach(function(g) {
+      fgroups.forEach(function(g) {
         if (!g[1].length) return;
         // Detected links are real but weak signals — the group ships collapsed
         // so curated intelligence leads and the long tail stays one click away
@@ -3083,7 +3118,10 @@ function ovReloadFresh() {
       return new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10);
     }
     function ovNxCatLabel(c) {
-      return c === 'epc' ? 'EPC' : (c === 'gc' ? 'General Contractor' : c.charAt(0).toUpperCase() + c.slice(1));
+      if (c === 'epc') return 'EPC';
+      if (c === 'gc') return 'General Contractor';
+      if (c === 'ipp') return 'IPP';
+      return c.charAt(0).toUpperCase() + c.slice(1);
     }
     function ovNxKindOf(e) {
       var a = e.curated && e.curated.a, b = e.curated && e.curated.b;

@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.61w] — 2026-08-29 08:08:54 PM EST — v03.73r
+
+### Added
+- Category filter chips on the Relationships tab of link-heavy dossiers — one chip per counterparty category with a count; tap one to cut the map and every group to that slice, tap again for the full view. The filter clears when you open a different dossier
+
+### Fixed
+- The IPP category label now displays fully capitalized in the Relationships chips and the Network explorer's category filter
 
 ## [v01.60w] — 2026-08-29 07:58:17 PM EST — v03.72r
 

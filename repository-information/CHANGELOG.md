@@ -3,11 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.73r] — 2026-08-29 08:08:54 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Counterparty-category filter chips on the dossier Relationships tab (`live-site-pages/Profiler.html` v01.61w)** — on dossiers with ≥8 links and ≥2 counterparty categories, `ovRelPaint` renders an `.ov-rel-cats` chip bar ("All · N" + one chip per category present, frequency-sorted, category-colored borders via `ovRelColor`, `aria-pressed`); the selection filters the relationship map and every group (`fgroups`), state (`ovRelCatSel`/`ovRelCatSlug`) resets on dossier navigation, and the one-pager export always carries the full unfiltered view. Playwright on CATL: 21 links → Supplier chip filters to 16 with per-group recounts, toggle-off restores, filter resets after navigating to Tesla, zero page errors
+
+### Fixed
+- **`ovNxCatLabel`** — `ipp` now renders as "IPP" (was "Ipp") in the new chips and the Network explorer's category dropdown
 
 ## [v03.72r] — 2026-08-29 07:58:17 PM EST
 
