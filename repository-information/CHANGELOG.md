@@ -3,11 +3,23 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 86/100`
+`Sections: 87/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.77r] — 2026-08-29 09:12:08 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Added
+- **Admin lens overlays** (the recommended next step from v03.76r): reports can now declare `guidanceOverlays[]` (`{moduleId, sectionId, title?, ps[]}`) anchoring company-specific analysis to Industry Guidance module sections. `Profiler.html`'s guidance renderer fetches overlay-bearing `current` reports (via the new `overlayModules` field on reports-index entries) for viewers with the `reports` capability only, and renders 🔒 "Admin lens" panels (rose-accent `.gd-lens`, distinct from the gold "Sales angle" notes) inside the anchored sections with a "View source report →" link into `#report/<id>`; a stale anchor falls back to the end of the module with an explanatory note instead of dropping the content. Non-admin tiers never fetch report data, so shared modules stay group-level
+- `scripts/check-profiler-reports.py` now validates overlays: `moduleId`/`sectionId` verified against the guidance modules parsed live from `Profiler.gs`, non-empty `ps`, no `[c:id]` citation tokens in overlay prose, and index `overlayModules` reconciliation
+
+### Changed
+- `repository-information/PROFILER-SCHEMA.md`: `guidanceOverlays[]` added to the Report schema table; `overlayModules` documented on the reports index
+- `.claude/rules/profiler-app.md` (Report Command step 3) and `.claude/rules/industry-guidance.md` (step 4): overlay authoring rules + the 2026-08-29 content-scope directive (modules address groups only; company-specific analysis reaches admins via the lens)
 
 ## [v03.76r] — 2026-08-29 08:41:26 PM EST
 

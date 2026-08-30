@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.63w">
+  <meta name="build-version" content="v01.64w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -916,6 +916,17 @@
     .gd-zh .lb { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.18em; color: var(--ov-gold);
       text-transform: uppercase; margin-bottom: 5px; }
     .gd-zh .tx { font: 13px/1.65 var(--ov-serif); color: var(--ov-paper); }
+    /* Admin lens — company-specific overlays sourced from admin-only reports (v01.64w).
+       Rose accent (the CVD-validated timeline rose) keeps it visually distinct from
+       the gold group-level Sales angle notes. */
+    .gd-lens { border-left: 3px solid #cc5f75; background: rgba(204,95,117,0.08);
+      border-radius: 0 9px 9px 0; padding: 10px 14px; margin-top: 14px; }
+    .gd-lens .lb { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.18em; color: #cc5f75;
+      text-transform: uppercase; margin-bottom: 5px; }
+    .gd-lens p { font: 13px/1.65 var(--ov-serif); color: var(--ov-paper); margin: 0 0 8px; }
+    .gd-lens .rpt { background: transparent; border: 1px solid rgba(204,95,117,0.5); color: #cc5f75;
+      border-radius: 7px; padding: 5px 11px; cursor: pointer; font: 11px var(--ov-mono); }
+    .gd-lens .rpt:hover { background: rgba(204,95,117,0.14); }
     .gd-callout { border: 1px solid rgba(216,180,90,0.4); border-radius: 10px; padding: 4px 16px 10px; }
     .gd-callout.warn { border-color: rgba(224,122,139,0.45); }
     .gd-note { font: 12.5px/1.6 var(--ov-mono); color: var(--ov-muted); margin-top: 10px;
@@ -5815,7 +5826,62 @@ function ovReloadFresh() {
           return;
         }
         gdRenderDoc(res.doc, shell);
+        gdLoadAdminLens(res.doc, shell);
       });
+    }
+
+    // PROJECT: Admin lens — company-specific overlays inside guidance modules,
+    // sourced from admin-only reports (v01.64w). Guidance modules speak to
+    // supplier/buyer groups only; a report may declare guidanceOverlays[]
+    // ({moduleId, sectionId, ps}) and admins see those panels rendered inside
+    // the anchored sections, with a link to the source report. Contributors
+    // never fetch report data (the reports capability gates the loader), so
+    // the shared modules stay group-level. Fetch failures degrade silently —
+    // the lens is an enhancement, never a blocker for the module itself.
+    function gdLoadAdminLens(doc, shell) {
+      if (!ovCan('reports')) return;
+      ovFetchJson('reports/reports-index.json').then(function(idx) {
+        var entries = (idx && idx.reports) || [];
+        for (var i = 0; i < entries.length; i++) (function(e) {
+          if (e.status !== 'current') return;
+          if ((e.overlayModules || []).indexOf(doc.id) === -1) return;
+          ovFetchJson('reports/' + e.id + '.report.json').then(function(rep) {
+            gdApplyLens(doc, shell, rep);
+          }).catch(function() { /* report fetch failed — lens skipped */ });
+        })(entries[i]);
+      }).catch(function() { /* index unavailable — lens skipped */ });
+    }
+
+    function gdApplyLens(doc, shell, rep) {
+      var ovs = (rep && rep.guidanceOverlays) || [];
+      for (var i = 0; i < ovs.length; i++) (function(o) {
+        if (o.moduleId !== doc.id) return;
+        var panel = ovEl('div', 'gd-lens');
+        panel.appendChild(ovEl('div', 'lb', '🔒 Admin lens — ' + (o.title || rep.title || 'Report')
+          + (rep.generated ? ' · ' + rep.generated : '')));
+        var stale = !shell.querySelector('#gd-' + o.sectionId);
+        if (stale) panel.appendChild(gdP(gdFmt('*The section this note was anchored to ("'
+          + o.sectionId + '") no longer exists in this module — shown here at the end instead.*')));
+        for (var pj = 0; pj < (o.ps || []).length; pj++) panel.appendChild(gdP(gdFmt(o.ps[pj])));
+        var lk = ovEl('button', 'rpt', 'View source report →');
+        lk.type = 'button';
+        lk.addEventListener('click', function() {
+          var g = document.getElementById('ov-guide-overlay');
+          if (g) g.style.display = 'none';
+          location.hash = '#report/' + rep.id;
+        });
+        panel.appendChild(lk);
+        var sec = shell.querySelector('#gd-' + o.sectionId);
+        if (sec) {
+          var btn = sec.querySelector('.gd-done-btn');
+          if (btn) sec.insertBefore(panel, btn); else sec.appendChild(panel);
+        } else {
+          // Stale anchor (module revised after the report) — never drop admin content.
+          var glossary = shell.querySelector('#gd-glossary');
+          if (glossary && glossary.parentNode) glossary.parentNode.insertBefore(panel, glossary);
+          else shell.appendChild(panel);
+        }
+      })(ovs[i]);
     }
 
     // Escape, then apply the module micro-markup: **bold**, *italic*,

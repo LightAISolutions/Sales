@@ -13,8 +13,10 @@ for profile writes):
 Checks per report: schema shape (required fields, type/kind/confidence enums),
 citation resolution (slug registered, URL present in that profile's sources[],
 party matches the derived tier), inline [c:id] token resolution, bars-figure
-verification against the profile KPI overlay, coverage-pin drift, and index
-reconciliation (entry per file, counts, status vs supersedes).
+verification against the profile KPI overlay, coverage-pin drift, Admin-lens
+guidanceOverlays[] anchors (moduleId/sectionId must exist in Profiler.gs's
+guidance modules; ps required; no [c:id] tokens), and index reconciliation
+(entry per file, counts, status vs supersedes, overlayModules vs overlays).
 
 Severity: structural problems are always ERRORS. Citation/pin mismatches are
 ERRORS while the cited profile still sits at the pinned profileVersion, and
@@ -71,10 +73,52 @@ def walk_strings(node):
         for v in node.values():
             yield from walk_strings(v)
 
-def check_report(rep, reg_by_slug, errors, warnings):
+PROFILER_GS = 'googleAppsScripts/Profiler/Profiler.gs'
+
+def guidance_anchors():
+    """Map of guidance module id -> set of section ids, parsed from Profiler.gs.
+
+    Each guidanceDoc<Name>_() returns an object literal whose first "id" string
+    is the module id and whose remaining "id" strings are section ids (tiles,
+    glossary, quiz, and timeline entries use other keys). Returns None when the
+    file is unreadable so callers can degrade to a warning instead of erroring.
+    """
+    try:
+        src = open(PROFILER_GS, encoding='utf-8').read()
+    except OSError:
+        return None
+    anchors = {}
+    chunks = re.split(r'^function guidanceDoc\w+_\(\) \{', src, flags=re.M)[1:]
+    for chunk in chunks:
+        ids = re.findall(r'"id":\s*"([^"]+)"', chunk)
+        if ids:
+            anchors[ids[0]] = set(ids[1:])
+    return anchors
+
+def check_overlays(rep, anchors, err, warn):
+    for i, o in enumerate(rep.get('guidanceOverlays') or []):
+        tag = f'overlay {i} ({o.get("moduleId")!r} → {o.get("sectionId")!r})'
+        ps = o.get('ps')
+        if not (isinstance(ps, list) and ps and all(isinstance(p, str) and p.strip() for p in ps)):
+            err(f'{tag}: ps must be a non-empty list of non-empty strings')
+        for p in ps or []:
+            if isinstance(p, str) and CITE_TOKEN.search(p):
+                err(f'{tag}: [c:id] citation tokens are not allowed in overlay ps '
+                    '(the lens renderer does not resolve them — the report link is the citation path)')
+        if anchors is None:
+            warn(f'{tag}: {PROFILER_GS} unreadable — anchor not verified'); continue
+        if o.get('moduleId') not in anchors:
+            err(f'{tag}: moduleId not among guidance modules {sorted(anchors)}')
+        elif o.get('sectionId') not in anchors[o['moduleId']]:
+            # The renderer falls back to end-of-module, so a stale anchor is
+            # survivable at view time — but a fresh report must anchor cleanly.
+            err(f'{tag}: sectionId not among sections {sorted(anchors[o["moduleId"]])}')
+
+def check_report(rep, reg_by_slug, anchors, errors, warnings):
     rid = rep.get('id', '?')
     def err(msg): errors.append(f'{rid}: {msg}')
     def warn(msg): warnings.append(f'{rid}: {msg}')
+    check_overlays(rep, anchors, err, warn)
 
     for f in ('schemaVersion', 'id', 'title', 'type', 'topic', 'generated', 'style',
               'scope', 'coverage', 'bluf', 'keyJudgments', 'sections', 'limitations', 'citations'):
@@ -162,6 +206,7 @@ def check_report(rep, reg_by_slug, errors, warnings):
 def main():
     reg = json.load(open(os.path.join(DATA, 'profiler-companies.json')))
     reg_by_slug = {c['slug']: c for c in reg['companies']}
+    anchors = guidance_anchors()
     errors, warnings = [], []
     try:
         idx = json.load(open(INDEX))
@@ -183,7 +228,7 @@ def main():
             errors.append(f'{rid}: invalid JSON — {e}'); continue
         if rep.get('id') != rid: errors.append(f'{rid}: file name and id {rep.get("id")!r} disagree')
         reports[rid] = rep
-        check_report(rep, reg_by_slug, errors, warnings)
+        check_report(rep, reg_by_slug, anchors, errors, warnings)
     superseded = {r.get('supersedes') for r in reports.values() if r.get('supersedes')}
     for e in idx.get('reports') or []:
         rep = reports.get(e.get('id'))
@@ -196,6 +241,10 @@ def main():
                         ('citations', len(rep.get('citations') or []))):
             if e.get(f) != want:
                 errors.append(f'index {e.get("id")}: {f} {e.get(f)!r} != report {want!r}')
+        want_ov = sorted({o.get('moduleId') for o in rep.get('guidanceOverlays') or [] if o.get('moduleId')})
+        if sorted(e.get('overlayModules') or []) != want_ov:
+            errors.append(f'index {e.get("id")}: overlayModules {e.get("overlayModules")!r} '
+                          f'!= report overlay modules {want_ov!r}')
 
     for w in warnings: print(f'  WARN  {w}')
     for e in errors: print(f'  ERROR {e}')
