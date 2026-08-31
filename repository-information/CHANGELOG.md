@@ -3,11 +3,29 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.95r] — 2026-08-30 10:42:56 PM EST
+
+> **Prompt:** "I approve of your alternative: a drift-gated monthly Routine + library filters. Go ahead. Continue with your recommendation."
+
+The report-automation build, all three approved halves: the baseline opportunity report, the library's search/filter surface, and the drift-gated monthly Routine.
+
+### Added
+- **Inaugural opportunity report** — `live-site-pages/profiler-data/reports/named-project-bess-attach--opportunity--2026-08-30.report.json` (intel-briefing style): BESS attach across the eight registered named projects. 15 scoped companies pinned at today's versions, 18 citations copied verbatim from dossier `sources[]` with derived party tiers, 5 confidence-tagged key judgments, a project-by-project pipeline table, the two proven attach lanes (owner-led Jupiter/Hithium Trimount; vendor-led Tesla at Colossus), a labeled-analysis whitespace callout, and 5 `indicators[]` that double as the drift gate's tripwires. Registered in `reports-index.json`; `check-profiler-reports.py` passed with 0 errors on the first run
+- **Report library search + filters** (`Profiler.html` v01.72w → v01.73w) — title/topic/scope search box, type filter chips, and a Superseded toggle in the `#reports` view (superseded editions now sit behind the toggle instead of always trailing the list); new `.rp-lib-bar`/`.rp-lib-q` styles
+- **Drift-gated monthly Routine** — `Profiler opportunity report — monthly drift check` (`trig_01TvnXREVHsQ4QCrtveYjvZM`, cron `0 17 1 * *` ≈ 1st of the month 9am PST, fresh session per fire; first fire 2026-09-01): counts scoped dossiers revised past the current edition's coverage pins and checks `indicators[]` via the Scraper corpus when a token is supplied; under 10 revised dossiers with no fired indicator it stands down silently, otherwise it authors a superseding edition opening with "What changed since the last edition". Documented as step 8 of the Profiler Report Command in `.claude/rules/profiler-app.md`
+
+### Fixed
+- **README tree report entries** — the reports block listed only one of the three 2026-08-29 report files; all four report JSONs (including today's) now have tree entries
+
+### Notes
+- Verified: Playwright renders of the filtered library (search narrowing to the new card, chips + Superseded toggle styled) and the report view's coverage table (15 pins, all at 2026-08-30); inline-script `node --check` clean; zero page errors
+- The Routine's first firing lands tomorrow (2026-09-01 17:00 UTC) — expected outcome is a silent stand-down at near-zero drift, which doubles as the gate's live test
 
 ## [v03.94r] — 2026-08-30 10:31:34 PM EST
 

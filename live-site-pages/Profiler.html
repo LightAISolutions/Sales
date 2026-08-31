@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.72w">
+  <meta name="build-version" content="v01.73w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -886,6 +886,10 @@
     .rp-card { cursor: pointer; }
     .rp-card:hover { border-color: var(--ov-gold); }
     .rp-card .rp-counts { font: 11px/1.6 var(--ov-mono); color: var(--ov-faint); margin-top: 6px; }
+    /* Report library search + filter bar (v01.73w) */
+    .rp-lib-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin: 10px 0 16px; }
+    .rp-lib-q { flex: 1 1 220px; min-width: 160px; background: var(--ov-card); border: 1px solid var(--ov-line2); border-radius: 7px; color: var(--ov-ink2, var(--ov-ink)); font: 13px/1.4 var(--ov-sans, sans-serif); padding: 8px 12px; outline: none; }
+    .rp-lib-q:focus { border-color: var(--ov-gold); }
     .rp-superseded { opacity: 0.55; }
     #ov-guide-overlay {
       position: fixed; inset: 0; background: rgba(8,9,12,0.92); z-index: 10002;
@@ -7197,8 +7201,41 @@ function ovReloadFresh() {
         main.removeChild(loading);
         var reps = (idx && idx.reports) || [];
         if (!reps.length) { main.appendChild(ovEl('p', 'ov-empty', 'No reports yet — generate one with `profiler report <topic>`.')); return; }
-        var current = reps.filter(function(r) { return r.status !== 'superseded'; });
-        var old = reps.filter(function(r) { return r.status === 'superseded'; });
+        // Library search + filters (v01.73w) — a title/topic/scope search, type
+        // chips, and a superseded toggle, so the growing snapshot history stays
+        // navigable. State is per-visit; superseded editions stay one click away
+        // rather than always trailing the current list.
+        var q = '', typeSel = '', showOld = false;
+        var bar = ovEl('div', 'rp-lib-bar');
+        var search = ovEl('input', 'rp-lib-q');
+        search.type = 'search'; search.placeholder = 'Search reports…';
+        search.setAttribute('aria-label', 'Search reports by title or topic');
+        search.addEventListener('input', function() { q = search.value.toLowerCase(); paint(); });
+        bar.appendChild(search);
+        var types = [];
+        reps.forEach(function(r) { if (r.type && types.indexOf(r.type) < 0) types.push(r.type); });
+        var chipBtns = [];
+        function mkChip(val, label) {
+          var b = ovEl('button', 'ov-rel-catbtn', label);
+          b.type = 'button';
+          b.addEventListener('click', function() { typeSel = (typeSel === val) ? '' : val; paint(); });
+          chipBtns.push([b, val]); bar.appendChild(b);
+        }
+        mkChip('', 'All');
+        types.forEach(function(t) { mkChip(t, OV_RPT_TYPE_LABEL[t] || t); });
+        var oldBtn = ovEl('button', 'ov-rel-catbtn', 'Superseded');
+        oldBtn.type = 'button';
+        oldBtn.title = 'Include superseded editions in the list';
+        oldBtn.addEventListener('click', function() { showOld = !showOld; paint(); });
+        bar.appendChild(oldBtn);
+        main.appendChild(bar);
+        var list = ovEl('div');
+        main.appendChild(list);
+        function hit(r) {
+          if (typeSel && r.type !== typeSel) return false;
+          if (!q) return true;
+          return ((r.title || '') + ' ' + (r.topic || '') + ' ' + (r.scopeLabel || '')).toLowerCase().indexOf(q) >= 0;
+        }
         function card(r) {
           var el = ovEl('div', 'gd-sec rp-sec rp-card' + (r.status === 'superseded' ? ' rp-superseded' : ''));
           var h = ovEl('h3');
@@ -7215,11 +7252,20 @@ function ovReloadFresh() {
           el.addEventListener('click', function() { window.location.hash = 'report/' + r.id; });
           return el;
         }
-        current.forEach(function(r) { main.appendChild(card(r)); });
-        if (old.length) {
-          var oh = ovEl('div', 'gd-read', 'Superseded reports'); oh.style.margin = '22px 0 4px'; main.appendChild(oh);
-          old.forEach(function(r) { main.appendChild(card(r)); });
+        function paint() {
+          chipBtns.forEach(function(cb) { cb[0].className = 'ov-rel-catbtn' + (typeSel === cb[1] ? ' on' : ''); });
+          oldBtn.className = 'ov-rel-catbtn' + (showOld ? ' on' : '');
+          ovClear(list);
+          var current = reps.filter(function(r) { return r.status !== 'superseded' && hit(r); });
+          var old = showOld ? reps.filter(function(r) { return r.status === 'superseded' && hit(r); }) : [];
+          if (!current.length && !old.length) list.appendChild(ovEl('p', 'ov-empty', 'No reports match the current filter.'));
+          current.forEach(function(r) { list.appendChild(card(r)); });
+          if (old.length) {
+            var oh = ovEl('div', 'gd-read', 'Superseded reports'); oh.style.margin = '22px 0 4px'; list.appendChild(oh);
+            old.forEach(function(r) { list.appendChild(card(r)); });
+          }
         }
+        paint();
       }).catch(function() {
         loading.textContent = 'Could not load the report library (profiler-data/reports/reports-index.json).';
       });

@@ -96,6 +96,7 @@ If the user says **"profiler report \<topic\>"** (or similar: "generate a report
 5. **Verify** — run `python3 scripts/check-profiler-reports.py`. A report write without a clean pass is incomplete (sibling rule to the registry sync in step 5 of the Profiler Command). Fix any errors before committing
 6. **Versioning** — report JSONs + index are **data-only**: no Profiler page version bump, the Profiler page is an indirect affect in AFFECTED URLS, and the repo CHANGELOG records the report (e.g. "Generated grid-scale BESS competitive report (<id>)"). Renderer/UI changes follow the normal page rules
 7. **Commit/push** — normal Pre-Commit + Pre-Push checklists apply
+8. **Drift-gated monthly review (armed 2026-08-30, developer-approved — the alternative to weekly wall-clock regeneration)** — Routine `Profiler opportunity report — monthly drift check` (`trig_01TvnXREVHsQ4QCrtveYjvZM`, cron `0 17 1 * *` = 1st of the month ~9am PST, fresh session per fire). Each firing reads the newest current `named-project-bess-attach--opportunity` edition, counts scoped dossiers revised past their coverage pins, and checks `indicators[]` (via the Scraper corpus when a token is supplied; skipped gracefully otherwise). **Gate**: under 10 revised dossiers and no fired indicator → stand down silently, no commit. Over the gate → author a superseding edition whose first section is "What changed since the last edition". The report library's search + type/status filters (v01.73w) are the browsing surface for the resulting history
 
 ## Dossier Writing Styles
 

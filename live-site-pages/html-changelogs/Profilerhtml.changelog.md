@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.73w] — 2026-08-30 10:42:56 PM EST — v03.95r
+
+### Added
+- The report library now has a search box and filter chips — filter by report type, search titles and topics, and show or hide superseded editions
 
 ## [v01.72w] — 2026-08-30 10:31:34 PM EST — v03.94r
 

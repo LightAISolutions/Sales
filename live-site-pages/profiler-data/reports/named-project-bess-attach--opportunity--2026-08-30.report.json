@@ -1,0 +1,520 @@
+{
+ "schemaVersion": 1,
+ "id": "named-project-bess-attach--opportunity--2026-08-30",
+ "title": "Named-Project Pipeline — BESS Attach",
+ "type": "opportunity",
+ "topic": "BESS attach opportunities across the registered named-project web",
+ "generated": "2026-08-30",
+ "style": "intel-briefing",
+ "scope": {
+  "kind": "slugs",
+  "value": [
+   "bloom-energy",
+   "dpr",
+   "hithium",
+   "jupiter-power",
+   "kiewit",
+   "meta",
+   "mortenson",
+   "openai",
+   "oracle",
+   "stack-infrastructure",
+   "tesla",
+   "turner-construction",
+   "vantage",
+   "voltagrid",
+   "xai"
+  ],
+  "rationale": "The companies whose curated relationships pin the eight registered named projects — operators, builders, power vendors, and the two storage suppliers already attached."
+ },
+ "coverage": {
+  "companies": [
+   {
+    "slug": "bloom-energy",
+    "name": "Bloom Energy",
+    "profileVersion": 5,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 14,
+    "srcFirstPct": 50,
+    "kpiNorm": true
+   },
+   {
+    "slug": "dpr",
+    "name": "DPR Construction",
+    "profileVersion": 5,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 30,
+    "srcFirstPct": 43,
+    "kpiNorm": false
+   },
+   {
+    "slug": "hithium",
+    "name": "Hithium",
+    "profileVersion": 8,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 51,
+    "srcFirstPct": 45,
+    "kpiNorm": true
+   },
+   {
+    "slug": "jupiter-power",
+    "name": "Jupiter Power",
+    "profileVersion": 4,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 21,
+    "srcFirstPct": 29,
+    "kpiNorm": false
+   },
+   {
+    "slug": "kiewit",
+    "name": "Kiewit",
+    "profileVersion": 4,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 28,
+    "srcFirstPct": 18,
+    "kpiNorm": false
+   },
+   {
+    "slug": "meta",
+    "name": "Meta",
+    "profileVersion": 5,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 20,
+    "srcFirstPct": 50,
+    "kpiNorm": true
+   },
+   {
+    "slug": "mortenson",
+    "name": "Mortenson",
+    "profileVersion": 5,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 32,
+    "srcFirstPct": 38,
+    "kpiNorm": false
+   },
+   {
+    "slug": "openai",
+    "name": "OpenAI",
+    "profileVersion": 4,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 22,
+    "srcFirstPct": 50,
+    "kpiNorm": false
+   },
+   {
+    "slug": "oracle",
+    "name": "Oracle",
+    "profileVersion": 4,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 16,
+    "srcFirstPct": 44,
+    "kpiNorm": false
+   },
+   {
+    "slug": "stack-infrastructure",
+    "name": "STACK Infrastructure",
+    "profileVersion": 5,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 40,
+    "srcFirstPct": 80,
+    "kpiNorm": false
+   },
+   {
+    "slug": "tesla",
+    "name": "Tesla",
+    "profileVersion": 6,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 30,
+    "srcFirstPct": 20,
+    "kpiNorm": true
+   },
+   {
+    "slug": "turner-construction",
+    "name": "Turner Construction",
+    "profileVersion": 5,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 24,
+    "srcFirstPct": 33,
+    "kpiNorm": true
+   },
+   {
+    "slug": "vantage",
+    "name": "Vantage Data Centers",
+    "profileVersion": 5,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 44,
+    "srcFirstPct": 84,
+    "kpiNorm": false
+   },
+   {
+    "slug": "voltagrid",
+    "name": "VoltaGrid",
+    "profileVersion": 3,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 20,
+    "srcFirstPct": 50,
+    "kpiNorm": false
+   },
+   {
+    "slug": "xai",
+    "name": "xAI",
+    "profileVersion": 4,
+    "lastUpdated": "2026-08-30",
+    "srcTotal": 19,
+    "srcFirstPct": 32,
+    "kpiNorm": false
+   }
+  ],
+  "gaps": [
+   "GE Vernova sits outside scope — its Homer City turbine role is cited through Kiewit’s dossier rather than pinned.",
+   "Only two BESS suppliers (Hithium, Tesla) are in scope: this report maps project attach, not supplier rankings — the grid-scale competitive report covers those.",
+   "Most scoped companies are private (VoltaGrid, Vantage, STACK, Jupiter Power, the GCs) with no comparable financials; no normalized comparison is attempted."
+  ],
+  "dataWindow": {
+   "oldest": "2026-08-30",
+   "newest": "2026-08-30"
+  }
+ },
+ "bluf": "The registered named-project web now maps where AI-campus power architecture is being decided — and battery storage is on the public record at only a minority of those decisions. Trimount proves the owner-led lane for Chinese-cell BESS [c:c1], Colossus proves the vendor-led lane [c:c15], while the gas- and fuel-cell-first Stargate campuses — Frontier [c:c6] and Project Jupiter [c:c4] — name no storage supplier at all. We assess that gap, not any supplier ranking, is the clearest attach whitespace this corpus can see.",
+ "keyJudgments": [
+  {
+   "confidence": "high",
+   "cites": [
+    "c6",
+    "c9",
+    "c11"
+   ],
+   "text": "We assess named projects are where campus power architecture gets decided — operator, builders, prime power, and offtake are all selected per campus (Frontier, Project Jupiter, Hyperion), so project-level visibility is the right altitude for BESS business development, and the new pin layer makes that map queryable."
+  },
+  {
+   "confidence": "high",
+   "cites": [
+    "c1",
+    "c2",
+    "c3",
+    "c15"
+   ],
+   "text": "We assess two attach lanes are now proven in this corpus: owner-led — a battery-buying project owner (Jupiter Power) carries a Chinese supplier into a named project (3 GWh supply, then the 2.8 GWh Trimount design win through state approval) — and vendor-led — an integrator (Tesla) rides the operator relationship into the campus ($430M of Megapacks to xAI in 2025)."
+  },
+  {
+   "confidence": "moderate",
+   "cites": [
+    "c4",
+    "c5",
+    "c6",
+    "c10",
+    "c18"
+   ],
+   "text": "We assess the gas- and fuel-cell-first campuses — Frontier (VoltaGrid microgrid), Project Jupiter (Bloom fuel cells, displacing planned turbines and diesel), Homer City (4.5 GW gas) — have no named BESS supplier in the public record this corpus holds; buffering and augmentation decisions there appear open, which is the central whitespace call of this report."
+  },
+  {
+   "confidence": "moderate",
+   "cites": [
+    "c11",
+    "c12",
+    "c13"
+   ],
+   "text": "We assess the shared GC bench (Turner + DPR + Mortenson at Hyperion, with Mortenson holding the power scopes) is the practical access channel for behind-the-meter equipment on gigacampuses — power-scope holders specify and procure what the operator does not name directly."
+  },
+  {
+   "confidence": "moderate",
+   "cites": [
+    "c8"
+   ],
+   "text": "We assess community consent is now a schedule gate at named-project altitude: Port Washington’s referendum and the contested TIF sit directly on Lighthouse’s buildout — timeline risk that any supplier chasing these campuses inherits."
+  }
+ ],
+ "sections": [
+  {
+   "id": "pipeline",
+   "title": "The pipeline at a glance",
+   "kind": "table",
+   "read": "The eight registered projects, who leads them, and what the public record says about power and storage.",
+   "intro": "Storage on record means a named supplier in this corpus’s sourced content — an empty cell is a corpus observation, not proof of absence in the market.",
+   "cols": [
+    "Project",
+    "Operator / lead",
+    "Power architecture on record",
+    "Storage on record"
+   ],
+   "rows": [
+    [
+     "Stargate (program; Abilene flagship)",
+     "OpenAI-led with Oracle [c:c17]; Crusoe built Abilene, DPR lead contractor [c:c14]",
+     "Program spans campuses below; Abilene site also known as the Lancium Clean Campus",
+     "—"
+    ],
+    [
+     "Frontier (Shackelford Co., TX)",
+     "Vantage, for Oracle/OpenAI [c:c6]",
+     "VoltaGrid natural-gas microgrid as primary power [c:c5]",
+     "None named"
+    ],
+    [
+     "Lighthouse (Port Washington, WI)",
+     "Vantage, for Oracle/OpenAI [c:c7]",
+     "Grid-served; referendum and TIF contested locally [c:c8]",
+     "None named"
+    ],
+    [
+     "Project Jupiter (Doña Ana Co., NM)",
+     "STACK Infrastructure, Oracle lease, OpenAI tenant [c:c9]",
+     "Bloom solid-oxide fuel cells as prime power [c:c4] [c:c10]",
+     "None named"
+    ],
+    [
+     "Hyperion (Richland Parish, LA)",
+     "Meta [c:c11]",
+     "Turner/DPR/Mortenson shared bench; Mortenson holds power scopes [c:c12] [c:c13]",
+     "None named"
+    ],
+    [
+     "Colossus (Memphis, TN)",
+     "xAI",
+     "Gas turbines plus battery buffering",
+     "Tesla Megapack — $430M in 2025 [c:c15]"
+    ],
+    [
+     "Homer City (Homer City, PA)",
+     "Homer City Redevelopment; Kiewit EPC [c:c18]",
+     "4.5 GW natural-gas campus on the retired coal site [c:c18]",
+     "None named"
+    ],
+    [
+     "Trimount (Everett, MA)",
+     "Jupiter Power [c:c2]",
+     "Standalone BESS — the project IS storage",
+     "Hithium 5.015 MWh units, 2.8 GWh, EFSB-approved [c:c1]"
+    ]
+   ]
+  },
+  {
+   "id": "lanes",
+   "title": "Two proven attach lanes",
+   "kind": "prose",
+   "read": "How storage actually got into this web where it did.",
+   "ps": [
+    "Owner-led: Jupiter Power signed a 3 GWh supply agreement for Hithium ∞Block containers in June 2024 [c:c3], and the relationship then materialized as Trimount — 2.8 GWh in Everett, Massachusetts, approved by the state EFSB in February 2026 with Hithium’s 5.015 MWh units confirmed [c:c2] [c:c1]. The supplier never had to win the campus; it had to win the owner who brings it to the campus.",
+    "Vendor-led: Tesla sold $430M of Megapacks to xAI in 2025 [c:c15], buffering Colossus alongside the gas fleet — the integrator’s operator relationship carried the product into the project, and the Megapack 3/Megablock generation extends that portfolio [c:c16]."
+   ]
+  },
+  {
+   "id": "absent",
+   "title": "Where storage is absent from the record",
+   "kind": "prose",
+   "read": "The sourced facts behind the whitespace call.",
+   "ps": [
+    "Frontier runs on a VoltaGrid natural-gas microgrid as primary power [c:c5] on a $25B+, 1.4 GW campus [c:c6]. Project Jupiter’s prime power is Bloom solid-oxide fuel cells, which the announcement frames as displacing planned gas turbines and diesel [c:c4] [c:c10]. Homer City pairs a 4.5 GW gas plant with the data-center campus [c:c18]. Hyperion’s record names its GC bench and power scopes but no storage supplier [c:c12] [c:c13].",
+    "In each case the corpus holds detailed power-architecture sourcing with no named battery vendor — while the same corpus shows engine-plus-battery pairing working at Colossus [c:c15]. OpenAI’s own scaling update puts the program past 10 GW [c:c17]; the buffering questions scale with it."
+   ]
+  },
+  {
+   "id": "openlanes",
+   "title": "The open lanes — our read",
+   "kind": "callout",
+   "analysis": true,
+   "read": "Analysis — inference from the sourced facts above, not company statements.",
+   "ps": [
+    "We assess the highest-probability attach path into the gas-first Stargate campuses mirrors Colossus: battery buffering added alongside reciprocating engines for load-smoothing at AI-training power swings. The buyer to court is not the hyperscaler — it is the microgrid operator (VoltaGrid), the campus developer (Vantage, STACK), and the power-scope GC (Mortenson at Hyperion), because those are the parties this corpus shows making equipment-level power decisions.",
+    "For a Chinese-cell supplier working the policy fence, the owner-led lane is the proven template: battery-buying owners like Jupiter Power carry the equipment relationship, and Trimount shows it surviving state-level approval. The monthly drift check should watch for the first named BESS award at any of Frontier, Lighthouse, or Project Jupiter — whoever lands it defines the reference architecture the rest of the program copies."
+   ]
+  }
+ ],
+ "indicators": [
+  {
+   "date": "2026-H2",
+   "text": "First named BESS award at a Stargate campus (Frontier, Lighthouse, or Project Jupiter)",
+   "confirms": "the central whitespace call (Judgment 3) — and which attach lane won it"
+  },
+  {
+   "date": "2026-H2",
+   "text": "Frontier first-building delivery on the announced schedule",
+   "confirms": "Vantage execution pace and VoltaGrid microgrid performance under AI load (Judgment 3)"
+  },
+  {
+   "date": "2027",
+   "text": "Trimount construction milestones toward energization",
+   "confirms": "the owner-led Chinese-cell lane surviving beyond permitting (Judgment 2)"
+  },
+  {
+   "date": "2026-Q4",
+   "text": "Port Washington TIF/referendum litigation outcome",
+   "confirms": "whether local-consent friction moves the Lighthouse schedule (Judgment 5)"
+  },
+  {
+   "date": "2027",
+   "text": "Homer City first power",
+   "confirms": "the gas-campus timeline that any storage-augmentation decision there would trail"
+  }
+ ],
+ "limitations": [
+  "Built from covered dossiers only, at the pinned versions — no fresh research. “None named” cells are corpus observations, not proof of absence in the market.",
+  "Campus capacity and dollar figures are operator announcements quoted from cited sources, not comparable KPIs; no normalized cross-company comparison is made.",
+  "Most scoped companies are private and publish no comparable financials.",
+  "The pin layer this report queries was backfilled on 2026-08-30 — pin coverage will widen with future refreshes, so early editions understate project participation.",
+  "Baseline edition for the drift-gated monthly review: supersede when roughly ten or more scoped dossiers have revised past their pins, or when an indicator above fires."
+ ],
+ "citations": [
+  {
+   "id": "c1",
+   "slug": "hithium",
+   "company": "Hithium",
+   "label": "Energy-Storage.News — Jupiter's Trimount 2.8 GWh wins Massachusetts EFSB approval (Hithium 5.015 MWh units)",
+   "url": "https://www.energy-storage.news/jupiter-power-receives-approval-for-2-8gwh-massachusetts-bess/",
+   "date": "2026-02-27",
+   "party": "independent"
+  },
+  {
+   "id": "c2",
+   "slug": "jupiter-power",
+   "company": "Jupiter Power",
+   "label": "Energy-Storage.News — Jupiter receives approval for 2.8 GWh Massachusetts BESS (Hithium 5.015 MWh units confirmed)",
+   "url": "https://www.energy-storage.news/jupiter-power-receives-approval-for-2-8gwh-massachusetts-bess/",
+   "date": "2026-03-04",
+   "party": "independent"
+  },
+  {
+   "id": "c3",
+   "slug": "jupiter-power",
+   "company": "Jupiter Power",
+   "label": "Solarbe Global — Hithium signs 3 GWh battery storage supply deal with Jupiter Power",
+   "url": "https://www.solarbeglobal.com/hithium-signs-3-gwh-battery-storage-supply-deal-with-jupiter-power/",
+   "date": "2024-06-20",
+   "party": "independent"
+  },
+  {
+   "id": "c4",
+   "slug": "bloom-energy",
+   "company": "Bloom Energy",
+   "label": "Oracle Project Jupiter fuel-cell announcement",
+   "url": "https://www.oracle.com/news/announcement/oracle-borderplex-and-bloom-energy-to-power-project-jupiter-with-fuel-cell-technology-2026-04-27/",
+   "date": "2026-04-27",
+   "party": "independent"
+  },
+  {
+   "id": "c5",
+   "slug": "voltagrid",
+   "company": "VoltaGrid",
+   "label": "Vantage Data Centers / BusinessWire — >1 GW VoltaGrid partnership",
+   "url": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-more-than-one-gigawatt-of-power-generation/",
+   "date": "2025-02-11",
+   "party": "independent"
+  },
+  {
+   "id": "c6",
+   "slug": "vantage",
+   "company": "Vantage Data Centers",
+   "label": "Vantage — Frontier unveiled: $25B+, 1.4GW mega-campus in Shackelford County, TX",
+   "url": "https://vantage-dc.com/news/vantage-data-centers-unveils-plans-for-frontier-a-25b-mega-campus-in-texas-to-meet-unprecedented-ai-demand/",
+   "date": "2025-08-19",
+   "party": "company"
+  },
+  {
+   "id": "c7",
+   "slug": "vantage",
+   "company": "Vantage Data Centers",
+   "label": "OpenAI/Oracle/Vantage — Stargate Wisconsin site announcement (Lighthouse)",
+   "url": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+   "date": "2025-10-22",
+   "party": "company"
+  },
+  {
+   "id": "c8",
+   "slug": "vantage",
+   "company": "Vantage Data Centers",
+   "label": "Wisconsin Watch — Port Washington referendum and the $458M Lighthouse TIF",
+   "url": "https://wisconsinwatch.org/2026/04/port-washington-data-center-project-voters-referendum-tif-district-wisconsin/",
+   "date": "2026-04",
+   "party": "independent"
+  },
+  {
+   "id": "c9",
+   "slug": "stack-infrastructure",
+   "company": "STACK Infrastructure",
+   "label": "STACK — delivers digital infrastructure for 1GW+ data center campus in Doña Ana County, New Mexico (Oracle Stargate)",
+   "url": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digital-infrastructure-for-data-center-campus-in-new-mexico/",
+   "date": "2025-09-26",
+   "party": "company"
+  },
+  {
+   "id": "c10",
+   "slug": "oracle",
+   "company": "Oracle",
+   "label": "Project Jupiter — Bloom fuel-cell announcement",
+   "url": "https://www.oracle.com/news/announcement/oracle-borderplex-and-bloom-energy-to-power-project-jupiter-with-fuel-cell-technology-2026-04-27/",
+   "date": "2026-04-27",
+   "party": "company"
+  },
+  {
+   "id": "c11",
+   "slug": "meta",
+   "company": "Meta",
+   "label": "Meta — Richland Parish 5 GW expansion + Entergy package",
+   "url": "https://about.fb.com/news/2026/07/teachers-local-businesses-win-as-meta-expands-louisiana-data-center/",
+   "date": "2026-07-13",
+   "party": "company"
+  },
+  {
+   "id": "c12",
+   "slug": "turner-construction",
+   "company": "Turner Construction",
+   "label": "ENR — Meta picks Turner-DPR-Mortenson for $10B Louisiana campus",
+   "url": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-center",
+   "date": "2024-12",
+   "party": "independent"
+  },
+  {
+   "id": "c13",
+   "slug": "mortenson",
+   "company": "Mortenson",
+   "label": "Mortenson — Richland Parish data center project page (scope; 7,500+ craft workers)",
+   "url": "https://www.mortenson.com/projects/richland-parish-data-center",
+   "party": "company"
+  },
+  {
+   "id": "c14",
+   "slug": "dpr",
+   "company": "DPR Construction",
+   "label": "W.Media — Crusoe tops off final AI data center building in Abilene, Texas (8 buildings, 1.2 GW)",
+   "url": "https://w.media/crusoe-tops-off-final-ai-data-center-in-abilene-texas/",
+   "date": "2025-11-18",
+   "party": "independent"
+  },
+  {
+   "id": "c15",
+   "slug": "xai",
+   "company": "xAI",
+   "label": "CNBC — Tesla sold $430M of Megapacks to xAI in 2025",
+   "url": "https://www.cnbc.com/2026/01/29/tesla-sold-430-million-worth-of-its-megapack-batteries-to-xai-in-2025.html",
+   "date": "2026-01-29",
+   "party": "independent"
+  },
+  {
+   "id": "c16",
+   "slug": "tesla",
+   "company": "Tesla",
+   "label": "ESS News — Megapack 3 and Megablock unveiling",
+   "url": "https://www.ess-news.com/2025/09/09/tesla-unveils-new-generation-of-utility-scale-batteries-megapack-3-and-megablock/",
+   "date": "2025-09-09",
+   "party": "independent"
+  },
+  {
+   "id": "c17",
+   "slug": "openai",
+   "company": "OpenAI",
+   "label": "Stargate scaling update (10 GW surpassed)",
+   "url": "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age/",
+   "date": "2026-04",
+   "party": "company"
+  },
+  {
+   "id": "c18",
+   "slug": "kiewit",
+   "company": "Kiewit",
+   "label": "GE Vernova — Homer City Redevelopment & Kiewit announce country's largest natural-gas-powered data center campus",
+   "url": "https://www.gevernova.com/news/press-releases/homer-city-redevelopment-kiewit-announce-country-largest-natural-gas-powered-data-center-support-ai-hpc-demand",
+   "date": "2025-04-02",
+   "party": "independent"
+  }
+ ]
+}
