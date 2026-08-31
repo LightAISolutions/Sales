@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 27/50`
+`Sections: 28/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.28g] — 2026-08-30 08:43:06 PM EST — v03.89r
+
+### Added
+- Backend support for the new dossier Coverage view (recent industry news about each company)
 
 ## [v01.27g] — 2026-08-29 10:28:50 PM EST — v03.83r
 

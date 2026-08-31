@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.69w] — 2026-08-30 08:43:06 PM EST — v03.89r
+
+### Added
+- New "Coverage" view on every dossier: recent industry news about the company, with stories published since the dossier's last revision called out separately from earlier coverage, and a list of possible new company relationships spotted in the news
+
+### Fixed
+- Removed a duplicate entry from the in-app commands reference
 
 ## [v01.68w] — 2026-08-29 10:28:50 PM EST — v03.83r
 
@@ -322,48 +330,3 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 ### Added
 - A **File transcript** button in the note box. Once you have transcribed a recording on your own computer, pick the transcript here and it is saved into the "transcribed" folder, the recording it belongs to moves out of the waiting folder to join it, and the transcript is attached to the note you are writing — all from the one selection
 
-## [v01.24w] — 2026-08-10 04:42:24 AM EST — v02.30r
-
-### Fixed
-- Meeting recordings now go into a **Profiler App** folder in your own Google Drive, matching how the receipts app names its folder. The previous version put them somewhere you had no way to reach
-
-### Changed
-- Recordings are placed in the right folder as they upload, rather than landing loose and being tidied up afterwards
-- Any recordings still sitting loose in your Drive are moved into the folder the next time you attach one, and the status line tells you how many were moved
-
-## [v01.23w] — 2026-08-10 04:25:55 AM EST — v02.29r
-
-### Changed
-- After a recording uploads, the status line now tells you exactly where it was put away rather than just saying "attached"
-- Any recordings left loose from an earlier session are tidied away when you open the note box, and you are told how many were moved
-
-## [v01.22w] — 2026-08-10 04:13:24 AM EST — v02.28r
-
-### Fixed
-- Attaching a recording could sit on "Uploading…" forever with no Drive permission prompt ever appearing. Permission is now requested the moment you tap the button, which is when your browser will actually allow the prompt to open
-- If the permission window is blocked, dismissed, or never comes back, the status line now says so and invites you to tap again — previously nothing was reported and the upload appeared to stall indefinitely
-- An upload that stops responding is now cancelled and reported instead of hanging
-
-## [v01.21w] — 2026-08-10 04:01:03 AM EST — v02.27r
-
-### Changed
-- Long meeting recordings now upload reliably. A file of any length is sent in pieces, so a dropped signal costs only the piece in flight instead of restarting the whole upload, and the button now shows a percentage while it works
-- The recording button reads "Attach saved recording" and explains the flow: record in your phone's own voice recorder app, which has no length limit, then browse to the saved file. The record shortcut offered inside the file picker stops at about ten minutes and is not the way to capture a full meeting
-
-## [v01.20w] — 2026-08-10 03:38:54 AM EST — v02.26r
-
-### Fixed
-- Attaching a meeting recording failed for anyone already signed in — the upload now works without needing to sign in again
-- Note confirmations no longer say the log updates after a short delay; notes appear in the log immediately
-
-## [v01.19w] — 2026-08-10 02:17:53 AM EST — v02.25r
-
-### Changed
-- Field notes are now private — they are kept in your own Google Drive and shown only after you sign in with an approved account
-
-### Added
-- Copy buttons on every note, plus a copy-all for untriaged notes, put a note and its transcript on your clipboard in one tap
-- Attach a meeting recording to a note straight from your phone or computer
-- Transcript files can be attached alongside Word and PDF notes
-
-Developed by: LightAISolutions

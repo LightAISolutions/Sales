@@ -3,11 +3,22 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 35/50`
+`Sections: 36/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.89g] — 2026-08-30 08:43:06 PM EST — v03.89r
+
+### Added
+- Stored articles now carry an event category and the key figures they state, enriching archive views
+- Stories that mention two covered companies together are collected as possible-relationship leads
+- Older stored items are preserved in long-term storage instead of being deleted as the rolling archive window advances
+
+### Changed
+- Archive search now also looks inside article summaries and analysis text
+- Lower-scoring stories that mention covered companies are retained for the archive (they never appear in digests)
 
 ## [v01.88g] — 2026-08-30 07:14:52 PM EST — v03.88r
 

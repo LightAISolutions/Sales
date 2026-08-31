@@ -61,6 +61,15 @@ If the user says **"profiler note \<Company\>: \<text\>"** (or similar: "add a n
 - **0–39** — treat as rumor: mention only with explicit hedging, never as a basis for conclusions
 - In all cases, notes are **never** cited as profile sources and never blended into sourced profile sections (see "Notes are not sources" in PROFILER-SCHEMA.md)
 
+## News Triage — Scraper Corpus Bridge (Phase 3, 2026-08-30)
+
+Scraper stores every scored trade-press article with matched-company **slugs**, an AI summary/analysis, an event type, and captured figures — and mines **edge candidates** (two covered companies named in one article) into its EdgeCandidates tab. Refresh sessions consume both through Scraper's token-gated corpus route:
+
+- **Endpoint**: `<Scraper exec URL>?action=corpus&t=<CORPUS_TOKEN>&cop=timeline&slug=<slug>&since=<YYYY-MM-DD>&limit=<n>` (single-company news, newest first, deduped across editions) and `...&cop=candidates&slug=<slug>` (pending relationship candidates). Read-only, bounded to 200 items
+- **Token handling**: `CORPUS_TOKEN` lives in **both** GAS projects' Script Properties and is supplied to sessions in the Routine prompt or pasted by the developer — it must **never** be committed to any repo file (the repo is public via Pages) and never quoted back in responses, CHANGELOG prompt blockquotes excepted only if the developer typed it (warn them instead and paraphrase). A session without the token proceeds without news context — exactly the field-notes pattern — and says so
+- **Triage procedure (runs inside every dossier refresh — scheduled, sweep, or manual)**: (1) fetch the company's timeline since the dossier's `lastUpdated` and its pending candidates; (2) weigh each item as an **independent trade-press lead** — verify against the article itself (fetch the URL) and, where material, corroborating sources before use; (3) promote what qualifies into `recentDevelopments[]` (with the article as `source` — trade press is a citable independent source, unlike field notes) and curate real relationships into `relationships[]` per the schema; (4) items that don't qualify are simply left — **no write-back exists or is needed**: Scraper's daily reconcile pass watches the published `profiler-graph.json` and marks a candidate `covered` the moment the curated edge deploys
+- **Weighting**: a single-outlet claim is a lead, not a fact — corroborated items (Scraper stores corroboration in scoring) and company-confirmed items rank higher; never promote a speculative single-source claim as sourced fact
+
 ## Profiler Prep Command — Technology Lesson Plans
 
 If the user says **"profiler prep \<Company\>"** (or similar: "prep me for \<Company\>", "teach me \<Company\>", "study plan for \<Company\>", "teach me their products"):
@@ -114,7 +123,7 @@ The `archive/` directory deploys with the site like the rest of `profiler-data/`
 
 Post-earnings dossier refreshes run on one-shot Routines (triggers) rather than manual prompts:
 
-- **Convention** — a one-shot trigger named `Profiler refresh — <Company> (<period>)`, firing a **fresh session** the day after the company's scheduled report date, with a complete standalone prompt that invokes `profiler <Company>` and walks the full command (verify → research → archive → write → register → render check → commit/push)
+- **Convention** — a one-shot trigger named `Profiler refresh — <Company> (<period>)`, firing a **fresh session** the day after the company's scheduled report date, with a complete standalone prompt that invokes `profiler <Company>` and walks the full command (verify → research → **news triage per "News Triage — Scraper Corpus Bridge" above (when the prompt carries the corpus token; skip gracefully otherwise)** → archive → write → register → render check → commit/push)
 - **Verify before running** — the fired session first confirms the report actually published; if not, it re-schedules itself ~3 days out and stops
 - **Self-re-arming** — the final step of every scheduled refresh researches the company's next scheduled report date and creates the next one-shot trigger (report date +1 day). If trigger tooling is unavailable in the firing session, it instead adds an Active Reminder to `repository-information/REMINDERS.md` telling the developer to re-arm manually (including the expected date) and states this plainly in its summary
 - **Currently armed** (all fire fresh sessions; one-shots re-arm themselves):

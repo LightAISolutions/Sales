@@ -3,11 +3,52 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.89r] — 2026-08-30 08:43:06 PM EST
+
+> **Prompt:** "approve phases 0-3"
+
+Phases 0–3 of the approved Profiler/Scraper strategic plan (gap analysis authored in the prior research response): hygiene sweep, the Scraper↔Profiler bridge, corpus preservation, and the diamond pipeline — one commit.
+
+### Added
+- News-triage procedure for refresh sessions: new "News Triage — Scraper Corpus Bridge" section in `.claude/rules/profiler-app.md` (corpus endpoint shape, CORPUS_TOKEN handling rules — the token lives only in both projects' Script Properties and Routine prompts, never in repo files — triage/promotion procedure, single-source weighting), wired into the Scheduled Refreshes convention
+
+### Changed
+- `repository-information/PROFILER-SCHEMA.md`: registry categories now document `ipp`; the `legalName`+`hq` identity variant is documented beside the canonical `name`/`shortName`+`headquarters` shape (consumers must tolerate both; normalize opportunistically); `recentDevelopments.category` canonical enum expanded from 8 to 17 values with a case-insensitive consumption rule (the live corpus had drifted to 33 free-text spellings)
+- Diagrams synced for the new behavior: Scraper sequence diagram (corpus route, corpus-only archive rows, event/figure capture, EdgeCandidates mining + reconcile, Drive cold storage), Profiler sequence diagram (Coverage panel proxy flow), REPO-ARCHITECTURE flowchart (Profiler.gs → Scraper.gs "Coverage proxy" edge) — all three pako URLs regenerated and decompression-verified
+- Rotated the six 2026-08-10 sections of the Profiler page changelog to its archive with SHA enrichment (file was at its 50-section cap)
+
+#### `googleAppsScripts/Scraper/Scraper.gs` — v01.89g
+
+##### Added
+- Token-gated corpus read route (`?action=corpus`, `scHandleCorpus_`): `cop=timeline` (per-slug news, since-filter, cross-edition dedupe on the article key) and `cop=candidates` (pending relationship candidates); flat refusal while `CORPUS_TOKEN` is unset
+- EdgeCandidates tab + `scMineEdgeCandidates_` (post-render, one row per covered-company pair per article, deduped, ≤25/run) + `scReconcileEdgeCandidates_` (daily: pending → `covered` when the published profiler-graph.json curates the pair, `expired` after 60 days)
+- Drive cold storage (`scColdStoreRows_` → "Scraper Archive" folder): Digests-tab and DigestIntake retention trims serialize rows to JSON files before deletion; a failed Drive write skips the trim rather than lose rows
+- Summarize call now also returns per-item `event` (closed 10-value vocabulary, validated on parse) and up to 6 verbatim `figs`, merged into the row's Signals JSON (`scSignalsMerge_`)
+- Corpus-only intake rows: sub-floor items naming a covered company are stored with Section `archive` — excluded from the digest flow (`scDigestItems_` drops them) but searchable, timelineable, and mineable
+
+##### Changed
+- Rubric returns matched-company slugs (`matchedCompanySlugs` from the Interests Key) alongside labels; intake Signals JSON now carries `mcs` + a normalized-URL article key `ak`, serialized field-drop-first via `scSignalsJson_` (replaces the raw 1200-char slice that could cut mid-structure)
+- `companyTimeline` refactored onto the shared `scTimelineScan_` (slug match with label fallback, bounded, deduped); `searchArchive` haystack extended to summary + analysis text and slug filtering; `searchArchive`/`sourceStats`/mining read bounded newest-8000-row (and column-scoped) ranges instead of full-tab `getDataRange()` scans
+- ClickLog retention cap (`scTrimClickLog_`, 20k rows) added to the hourly tick's quiet branch
+
+#### `googleAppsScripts/Profiler/Profiler.gs` — v01.28g
+
+##### Added
+- Coverage proxy op (`action=news`, `handleNewsOp_`): session-validated, then server-to-server `UrlFetchApp` call to Scraper's corpus route with the shared `CORPUS_TOKEN` Script Property; reports `not_configured` while the token is unset; GET api mirror + doPost route registered
+
+#### `live-site-pages/Profiler.html` — v01.69w
+
+##### Added
+- "Coverage 📰" dossier button + overlay (`ovShowCoverage`/`ovNewsApi`): stored trade-press items split at the dossier's `lastUpdated` ("since this dossier was written" vs earlier), with event chips, verbatim figures, desk-read analysis, corpus-only markers, and a "possible relationships spotted in the news" candidates list; graceful states for unconfigured token, expired session, and missing backend
+
+##### Fixed
+- Removed the stale duplicate `profiler report <topic>` commands-reference entry that was still marked "Planned" for a shipped feature
 
 ## [v03.88r] — 2026-08-30 07:14:52 PM EST
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.88g";
+var VERSION = "v01.89g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -336,7 +336,8 @@ var SCRAPER_TABS = {
   EDITIONS: 'Editions',
   SUBSCRIBERS: 'Subscribers',
   CLICK_LOG: 'ClickLog',
-  SHARES: 'Shares'
+  SHARES: 'Shares',
+  EDGE_CANDIDATES: 'EdgeCandidates'
 };
 
 var SCRAPER_TAB_HEADERS = {
@@ -412,7 +413,18 @@ var SCRAPER_TAB_HEADERS = {
   // in the share URL names a digest — so holding one token can never be
   // pivoted into reading a different edition.
   Shares: ['Token', 'Digest ID', 'Created By', 'Created', 'Revoked',
-           'Views', 'Last Viewed']
+           'Views', 'Last Viewed'],
+  // Phase 3 (diamond pipeline): one row per (covered-company pair, article)
+  // the digest pipeline spotted together — candidate evidence of a
+  // relationship the dossiers may not curate yet. 'Status' is the lifecycle:
+  // pending → covered (a curated edge for the pair appeared in the published
+  // profiler-graph.json) / expired (nothing curated it inside the window).
+  // Refresh sessions read pending rows through the corpus route and promote
+  // the real ones into the dossier's relationships[]; nothing here ever
+  // writes back — the daily reconcile pass observes the public graph instead.
+  EdgeCandidates: ['Key', 'Date', 'Digest ID', 'Slug A', 'Slug B', 'Event',
+                   'Title', 'URL', 'Source', 'Score', 'Evidence', 'Status',
+                   'Resolved', 'Notes']
 };
 
 var SCRAPER_FREQUENCIES = ['daily', 'weekly', 'monthly', 'quarterly', 'biannual', 'annual', 'custom'];
@@ -1055,6 +1067,27 @@ var SCRAPER_DIGEST_KEEP = 400;
 // (digest id, item key) → URL index rather than a scan; until that exists,
 // raising this trades link lifetime against the cost of every scan.
 var SCRAPER_INTAKE_KEEP_EDITIONS = 240;
+// ── Corpus work (Phases 2–3 of the Scraper↔Profiler bridge, 2026-08-30) ──
+// Rows leaving the rolling Sheets window are serialized to Drive BEFORE
+// deletion (scColdStoreRows_), so retention bounds the TAB, not the corpus.
+// If the Drive write fails, the trim is skipped: kept rows cost a slower scan
+// for a day; deleted rows are unrecoverable.
+var SCRAPER_COLDSTORE_FOLDER = 'Scraper Archive';
+// Newest intake rows the archive read paths walk (search, timeline, source
+// stats, candidate mining). Bounds what used to be unbounded getDataRange()
+// scans — the same fix "Why thin?" and listDigests already received.
+var SCRAPER_ARCHIVE_SCAN_ROWS = 8000;
+var SCRAPER_SIGNALS_CELL_MAX = 1500;   // intake Signals JSON cap (was a raw 1200 slice)
+var SCRAPER_CLICKLOG_KEEP = 20000;     // scoring reads 30 days; beyond this is dead weight
+var SCRAPER_EDGE_CAND_KEEP_DAYS = 60;  // pending candidates expire after this
+var SCRAPER_EDGE_CAND_MAX_PER_RUN = 25;
+// Closed event vocabulary the summarize call classifies each item into. A
+// closed list, validated on parse, so the corpus can be faceted — a free-text
+// event field drifts into 33 spellings the way recentDevelopments.category did.
+var SCRAPER_EVENT_TYPES = ['order-win', 'partnership', 'financing', 'project',
+                           'product', 'policy', 'incident', 'ma', 'results', 'other'];
+var SCRAPER_PROFILER_GRAPH_URL =
+  'https://lightaisolutions.github.io/Sales/profiler-data/profiler-graph.json';
 var SCRAPER_DIGEST_SECTION_CAPS = { companies: 12, market: 10, incidents: 8 };
 // Editions (Phase 5): named digest products with their own cadence and
 // subscriber lists. 'morning' is the built-in default (the weekday Morning
@@ -3143,11 +3176,15 @@ function scRubricScore_(title, snippet, model, ctx) {
   var text = (String(title || '') + ' ' + String(snippet || '')).toLowerCase();
   var w = SCRAPER_RUBRIC_WEIGHTS;
   ctx = ctx || {};
-  var matchedCompanies = [], bestCoWeight = 0;
+  var matchedCompanies = [], matchedCompanySlugs = [], bestCoWeight = 0;
   for (var i = 0; i < model.companies.length; i++) {
     var co = model.companies[i];
     if (scTermsHit_(text, co.terms)) {
       matchedCompanies.push(co.label);
+      // The Interests Key IS the Profiler slug — the permanent identity. The
+      // label is a display string the daily sync overwrites on a rename, so a
+      // row keyed by label alone silently detaches from its dossier over time.
+      matchedCompanySlugs.push(co.key);
       if (co.weight > bestCoWeight) bestCoWeight = co.weight;
     }
   }
@@ -3301,7 +3338,8 @@ function scRubricScore_(title, snippet, model, ctx) {
     evidence: round1(evidence), support: round1(support), segment: round1(segment),
     geoFactorApplied: geo.factor,
     supportCapped: (emphasis + substance + clickBoost + corrob) > supportCap + 0.05,
-    matchedCompanies: matchedCompanies, matchedTopics: matchedTopics,
+    matchedCompanies: matchedCompanies, matchedCompanySlugs: matchedCompanySlugs,
+    matchedTopics: matchedTopics,
     matchedSegments: matchedSegments, excludedSegments: excludedSegments,
     geoTier: geo.tier, geoRegions: geo.regions, geoUsLinked: geo.usLinked,
     gated: gated
@@ -3669,6 +3707,178 @@ function scDigestIntakeUrls_(sheet, digestId) {
   return seen;
 }
 
+/** Drive folder for cold-stored rows (script owner's Drive, id cached in
+    Script Properties — the same lookup-once pattern the Profiler note
+    folders use). */
+function scColdStoreFolder_() {
+  var props = PropertiesService.getScriptProperties();
+  var id = props.getProperty('COLDSTORE_FOLDER_ID');
+  if (id) { try { return DriveApp.getFolderById(id); } catch (e) {} }
+  var it = DriveApp.getFoldersByName(SCRAPER_COLDSTORE_FOLDER);
+  var folder = it.hasNext() ? it.next() : DriveApp.createFolder(SCRAPER_COLDSTORE_FOLDER);
+  props.setProperty('COLDSTORE_FOLDER_ID', folder.getId());
+  return folder;
+}
+
+/** Serialize rows to a Drive JSON file BEFORE they leave the sheet, so the
+    rolling retention windows bound the tab, not the corpus. Returns true
+    when written (or nothing to write); false means the caller must NOT
+    delete the rows — kept rows cost a slower scan for a day, deleted rows
+    are unrecoverable. Chunked so a large first cleanup neither builds one
+    giant string nor exceeds Drive's comfort zone per file. */
+function scColdStoreRows_(kind, header, rows) {
+  if (!rows || !rows.length) return true;
+  try {
+    var folder = scColdStoreFolder_();
+    var stamp = Utilities.formatDate(new Date(), 'Etc/UTC', 'yyyyMMdd-HHmmss');
+    for (var i = 0; i < rows.length; i += 2000) {
+      folder.createFile(
+        kind + '-' + stamp + (i ? '-p' + (Math.floor(i / 2000) + 1) : '') + '.json',
+        JSON.stringify({ kind: kind, archivedAt: new Date().toISOString(),
+                         header: header, rows: rows.slice(i, i + 2000) }),
+        'application/json');
+    }
+    return true;
+  } catch (e) { scDigestLogErr_('coldstore.' + kind, e); return false; }
+}
+
+/** ClickLog retention: scoring only ever reads the last 30 days of clicks,
+    so rows beyond the cap are dead weight every sourceStats read still has
+    to lift. Telemetry, not corpus — no cold-store. */
+function scTrimClickLog_(ss) {
+  var clicks = ss.getSheetByName(SCRAPER_TABS.CLICK_LOG);
+  if (!clicks) return;
+  var extra = clicks.getLastRow() - 1 - SCRAPER_CLICKLOG_KEEP;
+  if (extra > 0) clicks.deleteRows(2, extra);
+}
+
+/** Phase 3 (diamond pipeline): file an EdgeCandidates row for every covered-
+    company PAIR this run's articles name together. Runs after render, so the
+    rows already carry summaries and event types. Corpus-only rows count too —
+    a gated or geo-penalised article naming two covered companies is still
+    relationship evidence. Deduped on (pair, article key) so the same story
+    built into three editions files one row per pair. */
+function scMineEdgeCandidates_(ss, digestId) {
+  var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var last = intake.getLastRow();
+  var n = Math.min(Math.max(0, last - 1), SCRAPER_ARCHIVE_SCAN_ROWS);
+  var data = n ? intake.getRange(last - n + 1, 1, n, 12).getValues() : [];
+  var cand = ss.getSheetByName(SCRAPER_TABS.EDGE_CANDIDATES);
+  if (!cand) return 0;
+  var have = {};
+  var cn = cand.getLastRow() - 1;
+  if (cn > 0) {
+    cand.getRange(2, 1, cn, 1).getValues()
+        .forEach(function(r) { have[String(r[0])] = true; });
+  }
+  var today = scDigestClock_(new Date()).date;
+  var out = [];
+  for (var i = 0; i < data.length && out.length < SCRAPER_EDGE_CAND_MAX_PER_RUN; i++) {
+    if (String(data[i][0]) !== digestId) continue;
+    var sig = {};
+    try { sig = JSON.parse(String(data[i][7] || '{}')); } catch (se) {}
+    var mcs = (sig.mcs || []).slice(0, 6);
+    if (mcs.length < 2) continue;
+    var ak = String(sig.ak || scArticleKey_(String(data[i][1])));
+    for (var a = 0; a < mcs.length - 1; a++) {
+      for (var b = a + 1; b < mcs.length; b++) {
+        var pair = [String(mcs[a]), String(mcs[b])].sort();
+        var key = pair[0] + '|' + pair[1] + '|' + ak;
+        if (have[key]) continue;
+        have[key] = true;
+        out.push([key, today, digestId, pair[0], pair[1],
+          String(sig.evt || ''), String(data[i][2]).slice(0, 200),
+          String(data[i][1]), String(data[i][3]), Number(data[i][6]) || 0,
+          String(data[i][8] || data[i][5] || '').slice(0, 300), 'pending', '', '']);
+      }
+    }
+  }
+  if (out.length) {
+    cand.getRange(cand.getLastRow() + 1, 1, out.length, out[0].length).setValues(out);
+  }
+  return out.length;
+}
+
+/** Daily: resolve pending edge candidates against the PUBLISHED relationship
+    graph. A pair that gained a curated edge is marked 'covered' — the
+    promotion loop closes with no write-back channel: a refresh session
+    promotes a candidate into the dossier, the graph rebuild publishes it,
+    and this pass observes it. Pending rows older than the window expire. */
+function scReconcileEdgeCandidates_(ss) {
+  var props = PropertiesService.getScriptProperties();
+  var today = scDigestClock_(new Date()).date;
+  if (props.getProperty('EDGECAND_RECONCILED') === today) return;
+  var cand = ss.getSheetByName(SCRAPER_TABS.EDGE_CANDIDATES);
+  if (!cand) return;
+  var n = cand.getLastRow() - 1;
+  if (n < 1) { props.setProperty('EDGECAND_RECONCILED', today); return; }
+  var curated = {};
+  try {
+    var g = JSON.parse(UrlFetchApp.fetch(SCRAPER_PROFILER_GRAPH_URL,
+      { muteHttpExceptions: true, followRedirects: true }).getContentText());
+    (g.edges || []).forEach(function(ed) {
+      if (ed.curated) curated[[String(ed.a), String(ed.b)].sort().join('|')] = true;
+    });
+  } catch (gErr) { scDigestLogErr_('edgecand.graph', gErr); return; }
+  var data = cand.getRange(2, 1, n, 13).getValues();
+  var cutoff = Date.now() - SCRAPER_EDGE_CAND_KEEP_DAYS * 86400000;
+  for (var i = 0; i < n; i++) {
+    if (String(data[i][11]) !== 'pending') continue;
+    var pairKey = [String(data[i][3]), String(data[i][4])].sort().join('|');
+    var ts = new Date(String(data[i][1])).getTime();
+    var status = curated[pairKey] ? 'covered'
+      : ((ts && ts < cutoff) ? 'expired' : '');
+    if (!status) continue;
+    cand.getRange(i + 2, 12).setValue(status);
+    cand.getRange(i + 2, 13).setValue(today);
+  }
+  props.setProperty('EDGECAND_RECONCILED', today);
+}
+
+/** Phase 3: the corpus read route (?action=corpus). Token-gated rather than
+    session-gated: its consumers are peer systems — the Profiler backend's
+    Coverage proxy and Claude refresh sessions — which hold the shared
+    CORPUS_TOKEN Script Property, not a browser sign-in. Read-only, bounded
+    the same way the archive reads are, and refused outright while the
+    property is unset (no default token ever ships in code). */
+function scHandleCorpus_(e) {
+  var p = (e && e.parameter) || {};
+  var want = PropertiesService.getScriptProperties().getProperty('CORPUS_TOKEN') || '';
+  if (want.length < 16 || String(p.t || '') !== want) {
+    return { success: false, error: 'denied' };
+  }
+  var cop = String(p.cop || '');
+  var limit = Math.max(1, Math.min(200, Number(p.limit) || 60));
+  if (cop === 'timeline') {
+    var slug = String(p.slug || '').trim().toLowerCase();
+    if (!slug) return { success: false, error: 'slug_required' };
+    var sinceMs = p.since ? new Date(String(p.since)).getTime() : 0;
+    return { success: true, slug: slug,
+             items: scTimelineScan_(slug, sinceMs || 0, limit) };
+  }
+  if (cop === 'candidates') {
+    var ss = scraperSs_(); ensureScraperTabs_(ss);
+    var cand = ss.getSheetByName(SCRAPER_TABS.EDGE_CANDIDATES);
+    var out = [];
+    var n = cand ? cand.getLastRow() - 1 : 0;
+    if (n > 0) {
+      var data = cand.getRange(2, 1, n, 13).getValues();
+      var slugF = String(p.slug || '').trim().toLowerCase();
+      for (var i = n - 1; i >= 0 && out.length < limit; i--) {
+        if (String(data[i][11]) !== 'pending') continue;
+        if (slugF && String(data[i][3]) !== slugF && String(data[i][4]) !== slugF) continue;
+        out.push({ key: String(data[i][0]), date: scIssueDateKey_(data[i][1]),
+          a: String(data[i][3]), b: String(data[i][4]), event: String(data[i][5]),
+          title: String(data[i][6]), url: String(data[i][7]),
+          source: String(data[i][8]), score: Number(data[i][9]) || 0,
+          evidence: String(data[i][10]) });
+      }
+    }
+    return { success: true, candidates: out, count: out.length };
+  }
+  return { success: false, error: 'unknown_cop' };
+}
+
 /** Drop intake rows whose digest no longer has a Digests row — exactly what an
     aborted run, or a retention trim, leaves behind. Completed editions keep
     their rows, which is what makes their links resolvable for as long as the
@@ -3693,6 +3903,13 @@ function scDigestPruneOrphanIntake_(ss) {
     if (live[String(ids[i][0])]) { i--; continue; }
     var end = i;
     while (i >= 0 && !live[String(ids[i][0])]) i--;
+    // Cold-store the block before it goes (Phase 2 of the corpus work):
+    // aged-out editions' rows ARE the corpus; the few aborted-run orphans
+    // ride along harmlessly. A failed Drive write stops the prune — rows
+    // stay in the tab and the next run retries.
+    var gone = intake.getRange(i + 3, 1, end - i,
+      SCRAPER_TAB_HEADERS.DigestIntake.length).getValues();
+    if (!scColdStoreRows_('intake', SCRAPER_TAB_HEADERS.DigestIntake, gone)) break;
     intake.deleteRows(i + 3, end - i);   // sheet rows (i+3)…(end+2)
     removed += end - i;
   }
@@ -3743,6 +3960,50 @@ function scRunCtx_(ss, model) {
   return _scRunCtx;
 }
 
+/** Serialize the intake Signals JSON without ever cutting mid-structure.
+    The old `.slice(0, 1200)` could land inside a key or value and leave a
+    cell JSON.parse rejects — consumers tolerate that with {}, but a broken
+    cell silently loses mc/mcs for search, the timeline, and candidate
+    mining. Drop whole fields, least important first, until it fits. */
+function scSignalsJson_(o) {
+  var drop = ['xs', 'ms', 'figs', 'mt', 's'];
+  var out = JSON.stringify(o);
+  for (var i = 0; i < drop.length && out.length > SCRAPER_SIGNALS_CELL_MAX; i++) {
+    if (o[drop[i]] === undefined) continue;
+    delete o[drop[i]];
+    out = JSON.stringify(o);
+  }
+  return out.length > SCRAPER_SIGNALS_CELL_MAX ? out.slice(0, SCRAPER_SIGNALS_CELL_MAX) : out;
+}
+
+/** Merge fields into one intake row's Signals JSON (read-modify-write).
+    Used by the summarize step to attach the AI's event type and captured
+    figures after the row already exists. Never throws — corpus metadata
+    must not break a build. */
+function scSignalsMerge_(intake, row, extra) {
+  try {
+    var cell = intake.getRange(row, 8);
+    var sig = {};
+    try { sig = JSON.parse(String(cell.getValue() || '{}')); } catch (pe) { sig = {}; }
+    for (var k in extra) {
+      if (extra.hasOwnProperty(k) && extra[k] !== undefined) sig[k] = extra[k];
+    }
+    cell.setValue(scSignalsJson_(sig));
+  } catch (e) {}
+}
+
+/** Stable cross-edition identity for one article: the same story stored by
+    the morning, bess and aidc builds carries the same key, so consumers can
+    collapse the rows into one article. Normalizes the URL (scheme, www,
+    query, trailing slash) before hashing. */
+function scArticleKey_(url) {
+  var u = String(url || '').toLowerCase().replace(/^https?:\/\//, '')
+    .replace(/^www\./, '').replace(/[?#].*$/, '').replace(/\/+$/, '');
+  var h = 0;
+  for (var i = 0; i < u.length; i++) { h = ((h * 31) + u.charCodeAt(i)) >>> 0; }
+  return h.toString(36) + '-' + u.length.toString(36);
+}
+
 /** Score + append parsed feed items to the intake tab (shared by fetch and
     backstop). Returns the number kept. */
 function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen, model, cutoffMs) {
@@ -3767,17 +4028,26 @@ function scDigestIngest_(ss, intake, state, items, sourceLabel, isBackstop, seen
     if (normS && normT && (normS === normT || normS.indexOf(normT) === 0)) snippet = '';
     var r = scRubricScore_(title, snippet, model, ctx);
     var score = isBackstop ? Math.round(r.score * SCRAPER_DIGEST_BACKSTOP_PENALTY) : r.score;
-    if (score < SCRAPER_DIGEST_MIN_INTAKE_SCORE) continue;
+    // Below the intake floor an item used to vanish without trace. Items that
+    // name a covered company are now kept as corpus-only rows (Section
+    // 'archive'): they never enter the digest, the summarize set, or the
+    // counts — scDigestItems_ drops them — but the sub-floor band (gated,
+    // geo-penalised) is exactly where quiet single-source leaks live, and a
+    // discarded row can never be searched, timelined, or mined for edges.
+    var corpusOnly = score < SCRAPER_DIGEST_MIN_INTAKE_SCORE;
+    if (corpusOnly && !r.matchedCompanySlugs.length) continue;
     seen[it.url] = true;
     out.push([state.id, it.url, title, sourceLabel || it.source,
       it.publishedAt, snippet, score,
-      JSON.stringify({ s: r.signals, mc: r.matchedCompanies, mt: r.matchedTopics,
+      scSignalsJson_({ s: r.signals, mc: r.matchedCompanies, mcs: r.matchedCompanySlugs,
+        mt: r.matchedTopics,
         ms: r.matchedSegments, xs: r.excludedSegments, g: r.gated ? 1 : 0,
+        ak: scArticleKey_(it.url),
         // Persisted so the corroboration boost, which is applied later once the
         // whole set is known, can respect the same evidence cap the rubric
         // applied here rather than adding on top of it.
-        ev: r.evidence, sup: r.support, gf: r.geoFactorApplied }).slice(0, 1200),
-      '', scDigestSectionFor_(r), isBackstop ? 'yes' : '', '']);
+        ev: r.evidence, sup: r.support, gf: r.geoFactorApplied }),
+      '', corpusOnly ? 'archive' : scDigestSectionFor_(r), isBackstop ? 'yes' : '', '']);
   }
   if (out.length) {
     intake.getRange(intake.getLastRow() + 1, 1, out.length, out[0].length).setValues(out);
@@ -3913,6 +4183,12 @@ function scDigestItems_(ss, digestId) {
   var items = [];
   for (var i = 1; i < data.length; i++) {
     if (String(data[i][0]) !== digestId) continue;
+    // Corpus-only rows (kept below the intake floor because they name a
+    // covered company) are archive material, not digest material: they must
+    // never reach the summarize set, the sections, the lead pool, or the
+    // counts. The click redirect reads the tab directly, so their links
+    // still resolve.
+    if (String(data[i][9]) === 'archive') continue;
     var sig = {};
     try { sig = JSON.parse(data[i][7] || '{}'); } catch (e) {}
     items.push({ row: i + 1, url: String(data[i][1]), title: String(data[i][2]),
@@ -4167,13 +4443,25 @@ function scDigestSummarizeStep_(ss, state, t0) {
       + 'word list to work from: the aim is that a reader can tell how much weight the claim '
       + 'carries. Do not manufacture confidence you do not have, and equally do not hedge a '
       + 'fact the article reports directly.\n\n'
+      // Corpus metadata (Phase 3 of the bridge work): typed events and captured
+      // figures are what make the stored corpus mineable — the digest itself
+      // never renders them. Cheap to ask for here because the model has already
+      // read the item for the summary; a separate classification call would
+      // double the AI spend for the same information.
+      + '"event" — ONE word classifying what the item IS, from exactly this list: '
+      + 'order-win, partnership, financing, project, product, policy, incident, ma, '
+      + 'results, other.\n\n'
+      + '"figs" — up to 6 concrete figures copied VERBATIM from the item text '
+      + '("212 MW", "$4.3B", "4-hour"); [] when it states none. Never invent or restate '
+      + 'a figure in different units.\n\n'
       // Same reasoning as before: the closing thought is specified by what it
       // must achieve, never by a sentence pattern.
       + 'Vary how you write the analysis across the items — do not open it with the same '
       + 'construction every time, and do not use a standard phrase like "For X, this…" on '
       + 'more than one item in this batch.\n\n'
       + 'Reply ONLY with a JSON array like '
-      + '[{"i":0,"summary":"...","analysis":"..."}] covering every item.\n\nItems:\n'
+      + '[{"i":0,"summary":"...","analysis":"...","event":"...","figs":["..."]}] '
+      + 'covering every item.\n\nItems:\n'
       + JSON.stringify(batch.map(function(it, n) {
           return { i: n, title: it.title, snippet: it.snippet.slice(0, 280), source: it.source };
         }));
@@ -4183,8 +4471,18 @@ function scDigestSummarizeStep_(ss, state, t0) {
       var byIdx = {};
       parsed.forEach(function(p) {
         if (p && typeof p.i === 'number') {
+          // Event is validated against the closed list — an off-list word
+          // (or prose) collapses to 'other' rather than polluting the enum.
+          var ev = String(p.event || '').toLowerCase().trim();
+          if (SCRAPER_EVENT_TYPES.indexOf(ev) === -1) ev = ev ? 'other' : '';
+          var figs = [];
+          if (Object.prototype.toString.call(p.figs) === '[object Array]') {
+            figs = p.figs.slice(0, 6).map(function(f) { return scStr_(f, 40); })
+                         .filter(function(f) { return !!f; });
+          }
           byIdx[p.i] = { summary: scStr_(p.summary, SCRAPER_DIGEST_SUMMARY_MAX),
-                         analysis: scStr_(p.analysis, SCRAPER_DIGEST_ANALYSIS_MAX) };
+                         analysis: scStr_(p.analysis, SCRAPER_DIGEST_ANALYSIS_MAX),
+                         event: ev, figs: figs };
         }
       });
       batch.forEach(function(it, n) {
@@ -4201,6 +4499,13 @@ function scDigestSummarizeStep_(ss, state, t0) {
         }
         intake.getRange(it.row, 9).setValue(got.summary);
         intake.getRange(it.row, 12).setValue(got.analysis || '');
+        // Corpus metadata rides into the row's Signals JSON — the digest
+        // never renders it, but the timeline, corpus API and edge-candidate
+        // mining all read it.
+        if (got.event || (got.figs && got.figs.length)) {
+          scSignalsMerge_(intake, it.row,
+            { evt: got.event || undefined, figs: (got.figs && got.figs.length) ? got.figs : undefined });
+        }
         it.summary = got.summary;
         it.analysis = got.analysis || '';
       });
@@ -4480,13 +4785,22 @@ function scDigestRenderStep_(ss, state) {
     // and the edition can never disagree about what this issue covered.
     Number(d.counts.shown || 0), Number(d.heldBackTotal || 0),
     completeCell]);
+  // Cold-store before the trim (Phase 2): an edition leaving the 400-row
+  // window keeps its HTML, sections and verdicts in Drive instead of
+  // evaporating. A failed Drive write skips the trim rather than lose rows.
   var extra = digests.getLastRow() - 1 - SCRAPER_DIGEST_KEEP;
-  if (extra > 0) digests.deleteRows(2, extra);
+  if (extra > 0 && scColdStoreRows_('digests', SCRAPER_TAB_HEADERS.Digests,
+        digests.getRange(2, 1, extra, SCRAPER_TAB_HEADERS.Digests.length).getValues())) {
+    digests.deleteRows(2, extra);
+  }
   var props = PropertiesService.getScriptProperties();
   props.setProperty('DIGEST_LAST_DATE', state.date);
   // F5 — stash the relevant-but-not-shown items for the weekly rollup. Same
   // list the edition embedded above; computed once, before the render.
   scStoreHeldBack_(props, d.editionId, heldBack);
+  // Phase 3 — mine covered-company pairs out of this run's rows. Soft-fails:
+  // the diamond queue must never cost an edition.
+  try { scMineEdgeCandidates_(ss, state.id); } catch (ecErr) { scDigestLogErr_('edgecand.mine', ecErr); }
   // Stamp the edition's last-built date.
   try {
     var edSheet = ss.getSheetByName(SCRAPER_TABS.EDITIONS);
@@ -5002,6 +5316,10 @@ function scDigestScheduledTick_() {
   // rendered-but-incomplete edition another pass; past the hard stop, ship
   // the best available copy (or alert if a due edition never rendered).
   try { scDigestRepairPass_(ss, 90000); } catch (rpErr) { scDigestLogErr_('tick.repair', rpErr); }
+  // Quiet-hour housekeeping: click-log retention (cheap getLastRow check)
+  // and the once-a-day edge-candidate reconcile against the published graph.
+  try { scTrimClickLog_(ss); } catch (clErr) {}
+  try { scReconcileEdgeCandidates_(ss); } catch (rcErr) { scDigestLogErr_('edgecand.reconcile', rcErr); }
 }
 
 /** ---- Delivery (separated from building, 2026-08-28) ------------------
@@ -8106,23 +8424,71 @@ function searchArchive(sessionToken, payload) {
   var toMs = p.to ? new Date(p.to).getTime() + 86400000 : 0;
   var limit = Math.max(1, Math.min(100, Number(p.limit) || 40));
   var ss = scraperSs_(); ensureScraperTabs_(ss);
-  var data = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE).getDataRange().getValues();
+  // Bounded, newest-N read — this and its two siblings below used to
+  // getDataRange() the widest tab in the file, the exact pattern the
+  // "Why thin?" and listDigests fixes removed elsewhere.
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var last = sheet.getLastRow();
+  var n = Math.min(Math.max(0, last - 1), SCRAPER_ARCHIVE_SCAN_ROWS);
+  var data = n ? sheet.getRange(last - n + 1, 1, n, 12).getValues() : [];
   var out = [];
-  for (var i = data.length - 1; i >= 1 && out.length < limit; i--) {
+  for (var i = data.length - 1; i >= 0 && out.length < limit; i--) {
     var title = String(data[i][2]), source = String(data[i][3]);
     var pub = String(data[i][4]);
-    if (q && (title + ' ' + source).toLowerCase().indexOf(q) === -1) continue;
+    var summary = String(data[i][8] || ''), analysis = String(data[i][11] || '');
+    // The haystack now includes the summary and the desk's analysis — the
+    // analysis corpus is the most distinctive text in the system and used to
+    // be searchable by nothing.
+    if (q && (title + ' ' + source + ' ' + summary + ' ' + analysis)
+          .toLowerCase().indexOf(q) === -1) continue;
     var sig = {};
     try { sig = JSON.parse(String(data[i][7] || '{}')); } catch (se) {}
-    if (company && (sig.mc || []).join('|').toLowerCase().indexOf(company) === -1) continue;
+    if (company && (sig.mc || []).join('|').toLowerCase().indexOf(company) === -1
+                && (sig.mcs || []).join('|').toLowerCase().indexOf(company) === -1) continue;
     var ts = new Date(pub).getTime();
     if (fromMs && ts && ts < fromMs) continue;
     if (toMs && ts && ts > toMs) continue;
     out.push({ digestId: String(data[i][0]), url: String(data[i][1]), title: title,
       source: source, publishedAt: pub, score: Number(data[i][6]) || 0,
-      companies: sig.mc || [], summary: String(data[i][8] || '') });
+      companies: sig.mc || [], slugs: sig.mcs || [], event: String(sig.evt || ''),
+      summary: summary, analysis: analysis });
   }
   return { success: true, results: out, count: out.length };
+}
+
+/** Shared timeline scanner: every stored article that matched one covered
+    company, newest first, matched by SLUG (sig.mcs) with a label fallback
+    for rows written before slugs were stored. Bounded to the newest
+    SCRAPER_ARCHIVE_SCAN_ROWS rows; cross-edition duplicates of the same
+    story collapse on the article key. Serves both the authed
+    companyTimeline op and the token-gated corpus route. */
+function scTimelineScan_(want, sinceMs, max) {
+  var ss = scraperSs_(); ensureScraperTabs_(ss);
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var last = sheet.getLastRow();
+  var n = Math.min(Math.max(0, last - 1), SCRAPER_ARCHIVE_SCAN_ROWS);
+  var data = n ? sheet.getRange(last - n + 1, 1, n, 12).getValues() : [];
+  var out = [], seenAk = {};
+  for (var i = data.length - 1; i >= 0 && out.length < max; i--) {
+    var sig = {};
+    try { sig = JSON.parse(String(data[i][7] || '{}')); } catch (se) {}
+    var mcs = (sig.mcs || []).map(function(x) { return String(x).toLowerCase(); });
+    var mc = (sig.mc || []).map(function(x) { return String(x).toLowerCase(); });
+    if (mcs.indexOf(want) === -1 && mc.indexOf(want) === -1) continue;
+    if (sinceMs) {
+      var ts = new Date(String(data[i][4])).getTime();
+      if (ts && ts < sinceMs) continue;
+    }
+    var ak = String(sig.ak || data[i][1]);
+    if (seenAk[ak]) continue;   // same story stored by another edition's build
+    seenAk[ak] = true;
+    out.push({ url: String(data[i][1]), title: String(data[i][2]),
+      source: String(data[i][3]), publishedAt: String(data[i][4]),
+      score: Number(data[i][6]) || 0, summary: String(data[i][8] || ''),
+      analysis: String(data[i][11] || ''), event: String(sig.evt || ''),
+      figs: sig.figs || [], corpusOnly: String(data[i][9]) === 'archive' });
+  }
+  return out;
 }
 
 /** Every stored article that matched one covered company, newest first —
@@ -8132,18 +8498,7 @@ function companyTimeline(sessionToken, company, limit) {
   var want = String(company || '').trim().toLowerCase();
   if (!want) return { success: false, error: 'company_required' };
   var max = Math.max(1, Math.min(100, Number(limit) || 30));
-  var ss = scraperSs_(); ensureScraperTabs_(ss);
-  var data = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE).getDataRange().getValues();
-  var out = [];
-  for (var i = data.length - 1; i >= 1 && out.length < max; i--) {
-    var sig = {};
-    try { sig = JSON.parse(String(data[i][7] || '{}')); } catch (se) {}
-    var mc = (sig.mc || []).map(function(x){ return String(x).toLowerCase(); });
-    if (mc.indexOf(want) === -1) continue;
-    out.push({ url: String(data[i][1]), title: String(data[i][2]),
-      source: String(data[i][3]), publishedAt: String(data[i][4]),
-      score: Number(data[i][6]) || 0, summary: String(data[i][8] || '') });
-  }
+  var out = scTimelineScan_(want, 0, max);
   return { success: true, company: company, items: out, count: out.length };
 }
 
@@ -8154,19 +8509,26 @@ function companyTimeline(sessionToken, company, limit) {
 function sourceStats(sessionToken) {
   validateSessionForData(sessionToken, 'sourceStats');
   var ss = scraperSs_(); ensureScraperTabs_(ss);
-  var data = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE).getDataRange().getValues();
+  // Bounded + column-scoped: only Source..Score (cols 4-7) of the newest
+  // rows — the old getDataRange() lifted snippet, summary and analysis for
+  // every row in the tab just to count two of its columns.
+  var sheet = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
+  var last = sheet.getLastRow();
+  var n = Math.min(Math.max(0, last - 1), SCRAPER_ARCHIVE_SCAN_ROWS);
+  var data = n ? sheet.getRange(last - n + 1, 4, n, 4).getValues() : [];
   var tally = {};
-  for (var i = 1; i < data.length; i++) {
-    var src = String(data[i][3] || '(unknown)');
+  for (var i = 0; i < data.length; i++) {
+    var src = String(data[i][0] || '(unknown)');
     var t = tally[src] || (tally[src] = { source: src, items: 0, relevant: 0, clicks: 0 });
     t.items++;
-    if ((Number(data[i][6]) || 0) >= SCRAPER_RELEVANT_THRESHOLD) t.relevant++;
+    if ((Number(data[i][3]) || 0) >= SCRAPER_RELEVANT_THRESHOLD) t.relevant++;
   }
   var clicks = ss.getSheetByName(SCRAPER_TABS.CLICK_LOG);
   if (clicks) {
-    var cd = clicks.getDataRange().getValues();
-    for (var j = 1; j < cd.length; j++) {
-      var cs = String(cd[j][5] || '');
+    var cn = clicks.getLastRow() - 1;
+    var cd = cn > 0 ? clicks.getRange(2, 6, cn, 1).getValues() : [];
+    for (var j = 0; j < cd.length; j++) {
+      var cs = String(cd[j][0] || '');
       if (tally[cs]) tally[cs].clicks++;
     }
   }
@@ -10300,6 +10662,15 @@ function doGet(e) {
   // only write is a view counter on the share's own row.
   if (action === 'share') {
     return scHandleSharedEdition_(e);
+  }
+
+  // PROJECT: corpus read API (Phase 3 of the Scraper↔Profiler bridge).
+  // Token-gated (CORPUS_TOKEN Script Property, shared with the Profiler
+  // backend), read-only, bounded; a missing or wrong token gets a flat
+  // refusal. See scHandleCorpus_ for the boundary rationale.
+  if (action === 'corpus') {
+    return ContentService.createTextOutput(JSON.stringify(scHandleCorpus_(e)))
+      .setMimeType(ContentService.MimeType.JSON);
   }
 
   // GET API fallback for the fetch transport — Google's serving can drop POST

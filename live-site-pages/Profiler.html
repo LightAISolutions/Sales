@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.68w">
+  <meta name="build-version" content="v01.69w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -703,23 +703,25 @@
     #ov-authwall .aw-title { font: 400 44px/1.1 var(--ov-serif); color: var(--ov-paper); margin-bottom: 14px; }
     #ov-authwall .aw-sub { font: 13.5px/1.6 var(--ov-serif); color: var(--ov-faint); margin-bottom: 26px; }
     #ov-authwall .aw-status { margin-top: 14px; font-size: 12.5px; min-height: 1.4em; color: var(--ov-faint); }
-    /* Study guide — dossier button + overlay */
+    /* Study guide — dossier button + overlay. The Coverage overlay (#ov-cov-*)
+       shares the same skeleton, so the selectors are doubled rather than the
+       rules duplicated. */
     #ov-study-btn { margin-top: 14px; margin-left: 8px; }
-    #ov-study-overlay {
+    #ov-study-overlay, #ov-cov-overlay {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(8,9,12,0.8); z-index: 10002; display: none;
       overflow-y: auto; padding: 26px 14px; box-sizing: border-box;
     }
-    #ov-study-panel {
+    #ov-study-panel, #ov-cov-panel {
       width: min(760px, 100%); box-sizing: border-box; margin: 0 auto; background: var(--ov-card);
       border: 1px solid var(--ov-line2); border-radius: 12px; padding: 24px 26px 30px;
       box-shadow: 0 14px 50px rgba(0,0,0,0.5);
     }
-    #ov-study-panel .s-head { display: flex; align-items: baseline; gap: 12px; border-bottom: 3px double var(--ov-line2); padding-bottom: 14px; margin-bottom: 6px; }
-    #ov-study-panel .s-head h2 { font: 400 clamp(24px, 4vw, 32px)/1.15 var(--ov-serif); margin: 0; }
-    #ov-study-panel .s-head .asof { margin-left: auto; color: var(--ov-faint); font: 10.5px/1.6 var(--ov-mono); white-space: nowrap; }
-    #ov-study-close { background: none; border: none; color: var(--ov-muted); font-size: 24px; cursor: pointer; padding: 0 0 0 6px; line-height: 1; }
-    #ov-study-close:hover { color: var(--ov-paper); }
+    #ov-study-panel .s-head, #ov-cov-panel .s-head { display: flex; align-items: baseline; gap: 12px; border-bottom: 3px double var(--ov-line2); padding-bottom: 14px; margin-bottom: 6px; }
+    #ov-study-panel .s-head h2, #ov-cov-panel .s-head h2 { font: 400 clamp(24px, 4vw, 32px)/1.15 var(--ov-serif); margin: 0; }
+    #ov-study-panel .s-head .asof, #ov-cov-panel .s-head .asof { margin-left: auto; color: var(--ov-faint); font: 10.5px/1.6 var(--ov-mono); white-space: nowrap; }
+    #ov-study-close, #ov-cov-close { background: none; border: none; color: var(--ov-muted); font-size: 24px; cursor: pointer; padding: 0 0 0 6px; line-height: 1; }
+    #ov-study-close:hover, #ov-cov-close:hover { color: var(--ov-paper); }
     .ov-flash { background: var(--ov-card2); border: 1px solid var(--ov-line2); border-radius: 10px; padding: 14px 18px; margin: 10px 0; cursor: pointer; }
     .ov-flash .hint { font: 9px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-faint); margin-bottom: 7px; }
     .ov-flash .q { font-size: 14.5px; }
@@ -3529,6 +3531,17 @@ function ovReloadFresh() {
           });
           head.appendChild(nBtn);
         }
+        // Coverage button — the trade-press news Scraper has stored about
+        // this company (Phase 1 of the Scraper↔Profiler bridge). The page
+        // only ever talks to its own backend; the backend proxies the
+        // token-gated corpus route server-to-server. Available to every
+        // signed-in tier — the payload is public-sourced news metadata,
+        // the same class of content as the dossier itself.
+        var cvBtn = ovEl('button', 'ov-btn ghost', 'Coverage 📰');
+        cvBtn.id = 'ov-cov-btn'; cvBtn.type = 'button';
+        cvBtn.title = 'Trade-press coverage of this company, including everything since the dossier was written';
+        cvBtn.addEventListener('click', function() { ovShowCoverage(p); });
+        head.appendChild(cvBtn);
         ovFetchJson(p.slug + '.study.json')
           .then(function(sg) {
             if (document.getElementById('ov-study-btn')) return;
@@ -4381,6 +4394,27 @@ function ovReloadFresh() {
         });
     }
 
+    // Coverage-panel transport — mirrors ovNoteApi: POST to the page's own
+    // backend (action=news), GET api fallback for Google's dropped-POST-body
+    // redirect failure mode. The backend validates the session, then proxies
+    // Scraper's token-gated corpus route server-to-server.
+    function ovNewsApi(nop, params, cb) {
+      var base = window._gasNoteUrl;
+      if (!base) { cb({ success: false, error: 'no_backend' }); return; }
+      var qp = { action: 'news', nop: nop, session: localStorage.getItem(OV_NOTE_SESSION_KEY) || '' };
+      for (var k in params) if (params.hasOwnProperty(k)) qp[k] = params[k];
+      fetch(base + '?' + ovNoteQs(qp), { method: 'POST', redirect: 'follow' })
+        .then(function(r) { if (!r.ok) throw new Error('http_' + r.status); return r.json(); })
+        .then(cb)
+        .catch(function() {
+          qp.action = 'api'; qp.op = 'news';
+          fetch(base + '?' + ovNoteQs(qp), { method: 'GET', redirect: 'follow' })
+            .then(function(r2) { if (!r2.ok) throw new Error('http_' + r2.status); return r2.json(); })
+            .then(cb)
+            .catch(function() { cb({ success: false, error: 'network_failed' }); });
+        });
+    }
+
     function ovLoadGis() {
       if (window.google && window.google.accounts && window.google.accounts.oauth2) return Promise.resolve();
       if (ovGisLoading) return ovGisLoading;
@@ -4996,13 +5030,6 @@ function ovReloadFresh() {
         when: 'You want future dossier prose authored in a different voice.',
         how: 'One command; existing dossiers are not rewritten unless you ask.',
         does: 'Switches the registry\'s active writing style for all future research and refreshes. The 🖋 button is different — it only re-skins how dossiers are presented and exported on this device.'
-      },
-      {
-        c: 'profiler report <topic>', plan: 'Planned',
-        aka: 'approved roadmap — macro · competitive · risk · opportunity reports',
-        when: 'You want an industry read synthesized across the whole dossier base.',
-        how: 'Name the topic; stale dossiers are refreshed before the report is generated.',
-        does: 'Will produce a cited report where every claim resolves to a dossier section, and every dossier resolves to its public sources.'
       }
     ];
     var ovCmdOverlayEl = null;
@@ -5418,6 +5445,119 @@ function ovReloadFresh() {
 
     // ── Study guide — dossier button + overlay (data: <slug>.study.json) ──
     var ovStudyOverlay = null;
+    // ── Coverage overlay (Phase 1 of the Scraper↔Profiler bridge) ──
+    // The news Scraper has stored about this company, split at the dossier's
+    // lastUpdated so "what happened since this was written" reads at a
+    // glance, plus any pending relationship candidates naming this company.
+    var ovCovOverlay = null;
+    function ovCovItem(it) {
+      var row = ovEl('div');
+      row.style.cssText = 'border-top:1px solid var(--ov-line2);padding:12px 0;';
+      var meta = ovEl('div', null,
+        (it.publishedAt ? String(it.publishedAt).slice(0, 10) + ' · ' : '') + (it.source || '')
+        + (it.event ? ' · ' + it.event : '') + ' · score ' + (it.score || 0)
+        + (it.corpusOnly ? ' · kept below the bar (covered company)' : ''));
+      meta.style.cssText = 'font:10.5px/1.6 var(--ov-mono);color:var(--ov-faint);margin-bottom:3px;';
+      row.appendChild(meta);
+      var a = ovEl('a', null, it.title || it.url);
+      a.href = it.url; a.target = '_blank'; a.rel = 'noopener';
+      a.style.cssText = 'font-size:15px;line-height:1.35;';
+      row.appendChild(a);
+      if (it.summary) {
+        var sum = ovEl('p', null, it.summary);
+        sum.style.cssText = 'margin:6px 0 0;font-size:13px;line-height:1.5;color:var(--ov-muted);';
+        row.appendChild(sum);
+      }
+      if (it.analysis) {
+        var an = ovEl('p', null, 'Desk read — ' + it.analysis);
+        an.style.cssText = 'margin:6px 0 0;font-size:12.5px;line-height:1.5;font-style:italic;color:#b18f35;';
+        row.appendChild(an);
+      }
+      if (it.figs && it.figs.length) {
+        var fg = ovEl('div', null, it.figs.join(' · '));
+        fg.style.cssText = 'margin:5px 0 0;font:10.5px/1.6 var(--ov-mono);color:var(--ov-faint);';
+        row.appendChild(fg);
+      }
+      return row;
+    }
+    function ovShowCoverage(p) {
+      if (!ovCovOverlay) {
+        ovCovOverlay = ovEl('div'); ovCovOverlay.id = 'ov-cov-overlay';
+        ovCovOverlay.addEventListener('click', function(e) { if (e.target === ovCovOverlay) ovCovOverlay.style.display = 'none'; });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && ovCovOverlay.style.display === 'block') ovCovOverlay.style.display = 'none';
+        });
+        document.body.appendChild(ovCovOverlay);
+      }
+      ovClear(ovCovOverlay);
+      var panel = ovEl('div'); panel.id = 'ov-cov-panel';
+      var head = ovEl('div', 's-head');
+      head.appendChild(ovEl('h2', null, 'Coverage — ' + (p.shortName || p.name || p.slug)));
+      if (p.lastUpdated) head.appendChild(ovEl('span', 'asof', 'dossier as of ' + p.lastUpdated));
+      var closeBtn = ovEl('button', null, '×'); closeBtn.id = 'ov-cov-close'; closeBtn.type = 'button';
+      closeBtn.setAttribute('aria-label', 'Close');
+      closeBtn.addEventListener('click', function() { ovCovOverlay.style.display = 'none'; });
+      head.appendChild(closeBtn);
+      panel.appendChild(head);
+      var status = ovEl('p', null, 'Loading stored coverage…');
+      status.style.cssText = 'color:var(--ov-faint);font-size:13px;';
+      panel.appendChild(status);
+      ovCovOverlay.appendChild(panel);
+      ovCovOverlay.style.display = 'block';
+      ovCovOverlay.scrollTop = 0;
+      ovNewsApi('timeline', { slug: p.slug, limit: 60 }, function(res) {
+        if (!res || !res.success) {
+          var err = (res && res.error) || 'unavailable';
+          status.textContent =
+            err === 'not_configured' ? 'The corpus link is not configured yet — the panel activates once the shared token is set in both backends.'
+            : err === 'SESSION_EXPIRED' ? 'Session expired — sign in again to load coverage.'
+            : err === 'no_backend' ? 'No backend deployed — coverage needs the live app.'
+            : 'Coverage is unavailable right now (' + err + ').';
+          return;
+        }
+        var items = res.items || [];
+        if (!items.length) {
+          status.textContent = 'No stored coverage for this company yet — the corpus holds roughly the last four months of scanned trade press.';
+        } else {
+          panel.removeChild(status);
+          var cut = p.lastUpdated ? new Date(p.lastUpdated + 'T00:00:00').getTime() : 0;
+          var fresh = [], older = [];
+          items.forEach(function(it) {
+            var ts = new Date(it.publishedAt).getTime();
+            (cut && ts && ts >= cut ? fresh : older).push(it);
+          });
+          var draw = function(title, hint, arr) {
+            if (!arr.length) return;
+            var s = ovSection(title, hint);
+            arr.forEach(function(it) { s.appendChild(ovCovItem(it)); });
+            panel.appendChild(s);
+          };
+          draw('Since this dossier was written',
+            p.lastUpdated ? 'Published on or after ' + p.lastUpdated + ' — not yet reflected in the dossier.' : '', fresh);
+          draw(fresh.length ? 'Earlier coverage' : 'Stored coverage',
+            'Inside the window the dossier\'s research already covered.', older);
+        }
+        ovNewsApi('candidates', { slug: p.slug, limit: 20 }, function(cr) {
+          if (!cr || !cr.success || !(cr.candidates || []).length) return;
+          var cs = ovSection('Possible relationships spotted in the news',
+            'Articles naming this company together with another covered company — candidate links awaiting triage at the next refresh.');
+          cr.candidates.forEach(function(c) {
+            var row = ovEl('div');
+            row.style.cssText = 'border-top:1px solid var(--ov-line2);padding:10px 0;';
+            var meta = ovEl('div', null, (c.date ? c.date + ' · ' : '') + c.a + ' ↔ ' + c.b + (c.event ? ' · ' + c.event : ''));
+            meta.style.cssText = 'font:10.5px/1.6 var(--ov-mono);color:var(--ov-faint);margin-bottom:3px;';
+            row.appendChild(meta);
+            var a = ovEl('a', null, c.title || c.url);
+            a.href = c.url; a.target = '_blank'; a.rel = 'noopener';
+            a.style.cssText = 'font-size:14px;';
+            row.appendChild(a);
+            cs.appendChild(row);
+          });
+          panel.appendChild(cs);
+        });
+      });
+    }
+
     function ovShowStudy(sg) {
       if (!ovStudyOverlay) {
         ovStudyOverlay = ovEl('div'); ovStudyOverlay.id = 'ov-study-overlay';

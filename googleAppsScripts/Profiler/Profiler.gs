@@ -1,4 +1,4 @@
-var VERSION = "v01.27g";
+var VERSION = "v01.28g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -368,6 +368,49 @@ function handleGuidanceOp_(e) {
     var gMsg = String((gErr && gErr.message) || gErr);
     if (gMsg.indexOf('SESSION_EXPIRED') >= 0) return { success: false, error: 'SESSION_EXPIRED' };
     return { success: false, error: gMsg };
+  }
+}
+
+// PROJECT: ── Coverage panel (Scraper corpus proxy) ─────────────────────────
+// The dossier's "Coverage 📰" overlay shows the trade-press news the Scraper
+// app has stored about a company — the bridge back from the daily corpus to
+// the quarterly dossier. The browser never talks to Scraper: this backend
+// calls Scraper's token-gated corpus route server-to-server (CORPUS_TOKEN
+// Script Property — set the SAME random value, 16+ chars, in BOTH projects'
+// Script Properties) and relays the JSON to its own ACL-validated session.
+// Every signed-in tier may read it: the payload is public-sourced trade-press
+// metadata, the same class of content as the dossiers themselves. While the
+// token is unset the panel reports itself unconfigured instead of erroring.
+var SCRAPER_CORPUS_EXEC =
+  'https://script.google.com/macros/s/AKfycby8nOR0AqLsDlZPcrTX9dWIInY48R9Jrl8oBDtN5t0emC06j7iwidEMdXttrD1zXnjUIg/exec';
+function handleNewsOp_(e) {
+  var p = (e && e.parameter) || {};
+  var session = p.session || '';
+  if (!session || session.length < 32) return { success: false, error: 'SESSION_EXPIRED' };
+  try {
+    validateSessionForData(session, 'news_' + String(p.nop || 'timeline'));
+  } catch (nErr) {
+    var nMsg = String((nErr && nErr.message) || nErr);
+    if (nMsg.indexOf('SESSION_EXPIRED') >= 0) return { success: false, error: 'SESSION_EXPIRED' };
+    return { success: false, error: nMsg };
+  }
+  var token = PropertiesService.getScriptProperties().getProperty('CORPUS_TOKEN') || '';
+  if (token.length < 16) return { success: false, error: 'not_configured' };
+  var nop = String(p.nop || 'timeline');
+  var qs = '?action=corpus&t=' + encodeURIComponent(token)
+    + '&cop=' + (nop === 'candidates' ? 'candidates' : 'timeline')
+    + (p.slug ? '&slug=' + encodeURIComponent(String(p.slug)) : '')
+    + (p.since ? '&since=' + encodeURIComponent(String(p.since)) : '')
+    + (p.limit ? '&limit=' + encodeURIComponent(String(p.limit)) : '');
+  try {
+    var resp = UrlFetchApp.fetch(SCRAPER_CORPUS_EXEC + qs,
+      { muteHttpExceptions: true, followRedirects: true });
+    if (resp.getResponseCode() !== 200) {
+      return { success: false, error: 'upstream_http_' + resp.getResponseCode() };
+    }
+    return JSON.parse(resp.getContentText());
+  } catch (fErr) {
+    return { success: false, error: 'upstream_unreachable' };
   }
 }
 
@@ -4592,6 +4635,14 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 
+  // PROJECT: Coverage-panel ops via fetch() — same transport rationale as the
+  // note ops; session-validated inside handleNewsOp_, which then proxies the
+  // token-gated Scraper corpus route server-to-server.
+  if (action === "news") {
+    return ContentService.createTextOutput(JSON.stringify(handleNewsOp_(e)))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
   return ContentService.createTextOutput("Unknown action");
 }
 
@@ -6914,6 +6965,9 @@ function doGet(e) {
       } else if (apiOp === 'guidance') {
         // PROJECT: GET mirror of the guidance ops (read-only, no payloads)
         apiResult = handleGuidanceOp_(e);
+      } else if (apiOp === 'news') {
+        // PROJECT: GET mirror of the Coverage-panel ops (read-only)
+        apiResult = handleNewsOp_(e);
       } else {
         apiResult = { error: 'unknown_op' };
       }
