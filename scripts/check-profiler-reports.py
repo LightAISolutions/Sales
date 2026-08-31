@@ -193,9 +193,13 @@ def check_report(rep, reg_by_slug, anchors, errors, warnings):
                 if not (slug and kpi): continue
                 p = profiles.get(slug)
                 if p is None: err(f'bars item {it.get("label")!r}: slug {slug!r} not in coverage'); continue
-                vals = [m.get('usdMillions') for per in (p.get('financials') or {}).get('periods') or []
+                # Currency KPIs carry usdMillions; physical KPIs (gwh-shipped,
+                # backlog-gwh, mw-energized, mw-contracted — schema v7) carry qty.
+                vals = [v for per in (p.get('financials') or {}).get('periods') or []
                         for m in per.get('metrics') or []
-                        if m.get('kpi') == kpi and isinstance(m.get('usdMillions'), (int, float))]
+                        if m.get('kpi') == kpi
+                        for v in (m.get('usdMillions'), m.get('qty'))
+                        if isinstance(v, (int, float))]
                 if not vals:
                     (warn if moved.get(slug) else err)(f'bars item {it.get("label")!r}: {slug} has no {kpi} overlay figure')
                 elif it.get('v') not in vals:

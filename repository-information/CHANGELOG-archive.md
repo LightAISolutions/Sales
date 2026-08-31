@@ -77,6 +77,29 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v02.92r] — 2026-08-23 11:37:09 PM EST — [aef66a2](https://github.com/LightAISolutions/Sales/commit/aef66a24436545878776dcb6a0ae73d017e122b0)
+
+> **Prompt:** "Approved — start Batch A" *(Executes Batch A of the plan approved under v02.91r — the nine containerized-BESS competitor dossiers, researched via the standard two-agent-per-company sweep (13 parallel background agents including shared policy/rankings passes). Structured-question decisions carried forward: Tiers 1+2 scope minus Powin; parallel subagents; utilities and standards bodies as Industry Guidance modules rather than dossiers; both IC and team-lead strategy documents.)*
+
+### Added
+- **Nine Batch A competitor dossiers** (`live-site-pages/profiler-data/`) — `prevalon`, `canadian-solar`, `trina-storage`, `hyperstrong`, `ls-energy-solutions`, `crrc-zhuzhou`, `sunwoda`, `narada`, `envision-energy` `.profile.json`, all schemaVersion 2 with banded Technical Annex specs, labeled strategy reads, and chronological newest-first sources. Together they map the containerized-BESS field for the Hithium/US-AIDC lens: the FEOC-compliant US tier (Prevalon, LS-ES), the overseas-listed Chinese tier (Canadian Solar e-STORAGE, Trina Storage), the China grid-side heavyweights (HyperStrong, CRRC Zhuzhou), the fast riser (Sunwoda), the distressed incumbent (Narada), and the other NDAA §154-named major (Envision). Each carries an explicit Hithium-lens strategy read
+- **Registry** — `profiler-companies.json` grows 62 → 71 companies; all nine registered with taglines, HQ, tickers where applicable, name-sorted order preserved
+
+### Changed
+- **README tree** — nine `*.profile.json` entries inserted into the `profiler-data/` block in filename order
+
+### Notes
+- Data-only change: `Profiler.html` stays at v01.41w (no page version bump); the app discovers new companies from the registry at load
+- `scripts/verify-profiler-roles.py` re-run post-registration: 71/71 dossiers render a specs section, 0 blank rows, role matrix and per-account progress isolation intact
+- Batch B (IPPs), C (EPCs), D (BtM packagers) follow in subsequent passes per the approved plan
+
+## [v02.91r] — 2026-08-23 11:04:41 PM EST — [b3f7479](https://github.com/LightAISolutions/Sales/commit/b3f747936c435d083a899237b659930dd55e442f)
+
+> **Prompt:** "The dossiers look good now. Besides Zhonhen Electric, I am also strongly considering a Director of Sales, AIDC role at Hithium, so I also need to fully understand the US AIDC industry from a Chinese containerized BESS supplier's (Hithium) perspective. What other companies should I add to the Profiler app to be able to understand the web of relationships between containerized BESS suppliers, developers, general contractors, and data center operators? To clarify, Hithium will most likely not be competing in the sidecar, backup battery unit, electrical room space; Rather, they will be competing in the containerized BESS space. After understanding this part of the industry, I will ask you to create a comprehensive sales strategy report for me. I might be leading a team for Hithium to attack the US AIDC market, so once you have all the information, I will also want you to create training materials to teach core technical, power infrastructure, policy (and probably more) to newer teammates. Create an action plan for me to review and approve." *(Plan approved via structured questions: Tiers 1+2 scope minus Powin — 25 new dossiers; parallel subagents; utilities/standards as Industry Guidance modules; both IC and team-lead strategy documents. This housekeeping push lands the mandatory archive rotation while Batch A research runs; the Batch A dossiers follow as their own push.)*
+
+### Changed
+- **CHANGELOG archive rotation** — the section counter stood at 108 with the current-day exemptions expired, so the two oldest date groups rotated to `CHANGELOG-archive.md`: 2026-08-06 (5 sections, v01.83r–v01.87r) and 2026-08-07 (8 sections, v01.88r–v01.95r), 13 sections total, moved verbatim with commit-SHA enrichment on every header (batch lookup, zero missing). Post-rotation verification clean; active file 95 sections + this one, archive 95
+
 ## [v02.90r] — 2026-08-22 10:57:17 PM EST — [b53b9ea](https://github.com/LightAISolutions/Sales/commit/b53b9eaa768310e52f712201f6d08f837313fbac)
 
 > **Prompt:** "I can see the Technical Annex details now, but the format is very loose. I want the format to be more professional and intuitive to read. Give me some mockups of different formats to choose from. Then, revise all dossiers to match my chosen format." *(Four formats mocked against real ABB data — labelled rows, datasheet grid, banded table, inline definition list. Developer chose **C · Banded table** with **preserve wording exactly**.)*

@@ -106,10 +106,19 @@ def main():
         if key not in edges:
             edges[key] = {'a': key[0], 'b': key[1], 'curated': {}, 'evid': [], 'last': ''}
         return edges[key]
-    CURATED_FIELDS = ('type', 'note', 'context', 'source', 'status', 'since', 'scale')
+    CURATED_FIELDS = ('type', 'note', 'context', 'source', 'status', 'since', 'scale', 'via', 'project')
+    # Named-projects registry (schema v7) — a curated `project` pin must name a
+    # registered slug; warn (not fail) so the graph still builds while the
+    # registry catches up.
+    try:
+        projects = {pr['slug'] for pr in json.load(open(f'{DATA}/profiler-projects.json'))['projects']}
+    except (FileNotFoundError, KeyError, ValueError):
+        projects = set()
     for slug, p in profs.items():
         for r in p.get('relationships') or []:
             if r.get('slug') not in names: continue
+            if r.get('project') and r['project'] not in projects:
+                print(f'  WARN  {slug}: relationship {r.get("slug")!r} pins unregistered project {r["project"]!r}')
             e = edge(slug, r['slug'])
             side = 'a' if e['a'] == slug else 'b'
             e['curated'][side] = {k: r[k] for k in CURATED_FIELDS if r.get(k)}

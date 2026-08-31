@@ -1,0 +1,26 @@
+{
+ "schemaVersion": 1,
+ "projects": [
+  {
+   "slug": "colossus",
+   "name": "Colossus",
+   "kind": "aidc-campus",
+   "location": "Memphis, TN",
+   "note": "xAI's AI supercomputer campus."
+  },
+  {
+   "slug": "homer-city",
+   "name": "Homer City Energy Campus",
+   "kind": "power-campus",
+   "location": "Homer City, PA",
+   "note": "Redevelopment of the retired Homer City coal-plant site into a gas-powered data-center energy campus."
+  },
+  {
+   "slug": "stargate",
+   "name": "Stargate",
+   "kind": "program",
+   "location": "Abilene, TX (flagship); multi-site US",
+   "note": "OpenAI-led AI data-center program with Oracle and SoftBank."
+  }
+ ]
+}

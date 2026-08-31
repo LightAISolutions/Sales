@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.70w">
+  <meta name="build-version" content="v01.71w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -386,6 +386,8 @@
     .ov-rel-chips .ch.st-active { color: #82b56d; border-color: rgba(130,181,109,0.45); }
     .ov-rel-chips .ch.st-announced { color: #6ea8fe; border-color: rgba(110,168,254,0.45); }
     .ov-rel-chips .ch.st-historical { color: var(--ov-faint); }
+    .ov-rel-chips .ch.via { color: #4fc1b4; border-color: rgba(79,193,180,0.4); text-transform: none; letter-spacing: 0.04em; }
+    .ov-rel-chips .ch.pj { color: var(--ov-gold); border-color: rgba(177,143,53,0.5); text-transform: none; letter-spacing: 0.04em; }
     .ov-rel-evhd.inb { color: #6ea8fe; }
     .ov-rel-type.det { background: transparent; color: var(--ov-faint); border: 1px solid var(--ov-line2); }
     #ov-network-btn {
@@ -532,6 +534,20 @@
     .ov-dev h4 { font: 400 15.5px/1.35 var(--ov-serif); margin: 0 0 3px; }
     .ov-dev .read { color: var(--ov-muted); font-size: 13px; font-style: italic; margin: 2px 0 0; }
     .ov-dev .src { color: var(--ov-faint); font: 10px/1.6 var(--ov-mono); margin: 3px 0 0; }
+    /* Policy exposure (schema v7) — one bordered row per regime */
+    .ov-pol { border-left: 2px solid var(--ov-line2); padding: 4px 0 6px 18px; margin: 14px 0; }
+    .ov-pol-hd { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 10px; }
+    .ov-pol-hd h4 { font: 400 15.5px/1.35 var(--ov-serif); margin: 0; }
+    .ov-pol-st { font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ov-muted); border: 1px solid var(--ov-line2); border-radius: 4px; padding: 3px 7px; }
+    .ov-pol-st.ps-in-effect { color: #cc5f75; border-color: rgba(204,95,117,0.45); }
+    .ov-pol-st.ps-announced { color: #6ea8fe; border-color: rgba(110,168,254,0.45); }
+    .ov-pol-st.ps-proposed { color: var(--ov-muted); }
+    .ov-pol-st.ps-expired { color: var(--ov-faint); }
+    .ov-pol-eff { font: 10.5px/1.8 var(--ov-mono); color: var(--ov-faint); }
+    .ov-pol-x { font-size: 13.5px; margin: 5px 0 0; }
+    .ov-pol-mit { color: var(--ov-muted); font-size: 13px; margin: 4px 0 0; }
+    .ov-pol-mit .k, .ov-pol-src .k { font: 600 9.5px/1 var(--ov-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ov-gold); margin-right: 7px; }
+    .ov-pol-src { font: 11px/1.7 var(--ov-mono); color: var(--ov-faint); margin: 4px 0 0; }
     .ov-strategy { background: var(--ov-card); border: 1px solid var(--ov-gold); border-radius: 12px; padding: 18px 20px; margin-top: 16px; }
     .ov-strategy .tag {
       font: 9.5px/1.4 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
@@ -1733,16 +1749,27 @@ function ovReloadFresh() {
     var ovComparePicks = [];
     var ovCompareFinOnly = false;
     var OV_COMPARE_MAX = 4;
-    // Peer families (v01.48w, developer directive 2026-08-29) — categories that
-    // compete in the same space for comparison purposes. Suppliers and
-    // integrators both build BESS/AIDC hardware, so a Sungrow/CATL/Fluence/Tesla
-    // comparison is like-for-like even though Fluence is registered as an
-    // integrator. Deliberately declarative: the US BESS/AIDC map keeps moving,
-    // and a family change should be a one-line data edit, never a logic change.
-    // A category named in no family is its own family, so adding a category to
-    // the registry never silently widens a comparison.
+    // Peer families (v01.48w, developer directive 2026-08-29; expanded to the
+    // full map v01.71w, schema v7) — categories that compete in the same space
+    // for comparison purposes. Suppliers and integrators both build BESS/AIDC
+    // hardware, so a Sungrow/CATL/Fluence/Tesla comparison is like-for-like
+    // even though Fluence is registered as an integrator. Colocation providers
+    // and neoclouds both monetize AI data-center capacity — and IREN and Crusoe
+    // literally carry both tags — so a QTS/CoreWeave/Applied Digital comparison
+    // is this corpus's capacity-provider like-for-like. EPCs and GCs build the
+    // same campuses (Mortenson is registered as both). The ipp category is the
+    // BESS project-developer/owner-operator set; the family gives it its market
+    // name. Hyperscalers stay their own family — they are the buyers.
+    // Deliberately declarative: the US BESS/AIDC map keeps moving, and a family
+    // change should be a one-line data edit, never a logic change. A category
+    // named in no family is its own family, so adding a category to the
+    // registry never silently widens a comparison. Each category belongs to at
+    // most ONE family — ovPeerKey returns the first match.
     var OV_PEER_FAMILIES = [
-      { key: 'hardware', label: 'Hardware', members: ['supplier', 'integrator'] }
+      { key: 'hardware', label: 'Hardware', members: ['supplier', 'integrator'] },
+      { key: 'colocation', label: 'Colocation & Cloud Capacity', members: ['developer', 'neocloud'] },
+      { key: 'construction', label: 'EPC & GC', members: ['epc', 'gc'] },
+      { key: 'developer-ipp', label: 'Developers & IPPs', members: ['ipp'] }
     ];
     function ovPeerKey(cat) {
       for (var i = 0; i < OV_PEER_FAMILIES.length; i++)
@@ -1845,6 +1872,23 @@ function ovReloadFresh() {
       }).catch(function() { ovGraphP = null; return null; });
       return ovGraphP;
     }
+    // ── Named-projects registry (schema v7) ──
+    // profiler-projects.json holds the ecosystem's recurring named projects
+    // (Stargate, Colossus, Homer City…) as first-class entities that a curated
+    // relationship pins via its `project` slug. One memoized fetch, same
+    // pattern as the graph; a chip renders the raw slug until it lands — and
+    // forever, harmlessly, if the file is absent.
+    var ovProjects = null, ovProjectsP = null;
+    function ovProjectsLoad() {
+      if (ovProjects) return Promise.resolve(ovProjects);
+      if (!ovProjectsP) ovProjectsP = ovFetchJson('profiler-projects.json').then(function(j) {
+        ovProjects = {};
+        ((j && j.projects) || []).forEach(function(pr) { if (pr && pr.slug) ovProjects[pr.slug] = pr; });
+        return ovProjects;
+      }).catch(function() { ovProjectsP = null; return null; });
+      return ovProjectsP;
+    }
+    function ovProjectOf(slug) { return (ovProjects && ovProjects[slug]) || null; }
 
     // Deep-linkable tabs (v01.35w): the hash is either "#slug" or "#slug/tab".
     // Compare (v01.46w) adds "#compare/slug1,slug2[,…]"; Reports (v01.52w)
@@ -2586,11 +2630,11 @@ function ovReloadFresh() {
       'smart-brevity': 'Smart Brevity — Axios Form'
     };
     var OV_SEC_LABELS = {
-      'default':         { snapshot: 'Snapshot', rels: 'Relationships', products: 'Products & Services', devs: 'Recent Developments', strategy: 'Strategy Read', specs: 'Technical Specifications', people: 'Decision Makers', fin: 'Financial Performance vs Expectations', sources: 'Sources' },
-      'bloomberg':       { snapshot: '1. Executive Summary', rels: 'Relationships', products: '2. Products and Services', devs: '3. Recent Developments', strategy: '4. Strategy Read', specs: '5. Technical Specifications', people: '6. Leadership', fin: '7. Financials Versus Expectations', sources: '8. Sources' },
-      'equity-research': { snapshot: 'Company Overview', rels: 'Relationships', products: 'Business Segments', devs: 'Catalysts & News Flow', strategy: 'Investment Thesis — Analytical View', specs: 'Product Detail', people: 'Management', fin: 'Results vs Consensus', sources: 'Sources' },
-      'intel-briefing':  { snapshot: 'Summary', rels: 'Relationships', products: 'Capabilities', devs: 'Recent Reporting', strategy: 'Key Judgments', specs: 'Technical Annex', people: 'Key Personnel', fin: 'Financial Reporting', sources: 'Source List' },
-      'smart-brevity':   { snapshot: 'The Big Picture', rels: 'Relationships', products: 'What They Sell', devs: "What's Happening", strategy: 'Between the Lines', specs: 'Zoom In', people: "Who's Who", fin: 'By the Numbers', sources: 'Go Deeper' }
+      'default':         { snapshot: 'Snapshot', rels: 'Relationships', products: 'Products & Services', devs: 'Recent Developments', policy: 'Policy Exposure', strategy: 'Strategy Read', specs: 'Technical Specifications', people: 'Decision Makers', fin: 'Financial Performance vs Expectations', sources: 'Sources' },
+      'bloomberg':       { snapshot: '1. Executive Summary', rels: 'Relationships', products: '2. Products and Services', devs: '3. Recent Developments', policy: '4. Policy and Trade Exposure', strategy: '5. Strategy Read', specs: '6. Technical Specifications', people: '7. Leadership', fin: '8. Financials Versus Expectations', sources: '9. Sources' },
+      'equity-research': { snapshot: 'Company Overview', rels: 'Relationships', products: 'Business Segments', devs: 'Catalysts & News Flow', policy: 'Regulatory & Policy Risk', strategy: 'Investment Thesis — Analytical View', specs: 'Product Detail', people: 'Management', fin: 'Results vs Consensus', sources: 'Sources' },
+      'intel-briefing':  { snapshot: 'Summary', rels: 'Relationships', products: 'Capabilities', devs: 'Recent Reporting', policy: 'Policy & Regulatory Exposure', strategy: 'Key Judgments', specs: 'Technical Annex', people: 'Key Personnel', fin: 'Financial Reporting', sources: 'Source List' },
+      'smart-brevity':   { snapshot: 'The Big Picture', rels: 'Relationships', products: 'What They Sell', devs: "What's Happening", policy: 'The Rulebook', strategy: 'Between the Lines', specs: 'Zoom In', people: "Who's Who", fin: 'By the Numbers', sources: 'Go Deeper' }
     };
     var OV_STRAT_TAG = {
       'default': 'Analysis — inference from the sourced facts, not company statements',
@@ -2908,6 +2952,9 @@ function ovReloadFresh() {
     // with no curated link here) in "Detected in other dossiers".
     var OV_REL_WORK = { customer: 1, supplier: 1, partner: 1, investor: 1 };
     var OV_REL_STATUS = { active: 'Active', announced: 'Announced', historical: 'Historical' };
+    // Policy-exposure regime states (schema v7) — how the regime applies to
+    // this company per the cited source, not the regime's global lifecycle.
+    var OV_POL_STATUS = { 'in-effect': 'In effect', announced: 'Announced', proposed: 'Proposed', expired: 'Expired' };
     function ovRelEdgeFor(slug, other) {
       var edges = ovGraphBy[slug] || [];
       for (var i = 0; i < edges.length; i++) {
@@ -2925,14 +2972,28 @@ function ovReloadFresh() {
       return (e.evid || []).filter(function(v) { return v.from === side; });
     }
     function ovRelChips(ev, r) {
+      // Each chip is [class, text, title?] — title carries hover context where
+      // the chip alone would be cryptic (the project chip's kind + location).
       var chips = [];
       if (r.status && OV_REL_STATUS[r.status]) chips.push(['st-' + r.status, OV_REL_STATUS[r.status]]);
       if (r.since) chips.push([null, 'Since ' + r.since]);
       if (r.scale) chips.push([null, r.scale]);
+      if (r.via) chips.push(['via', 'Via ' + r.via, 'Product line the engagement runs through']);
+      if (r.project) {
+        // Named-project pin (schema v7) — resolved against the projects
+        // registry; an unregistered slug renders as-is rather than vanishing.
+        var pj = ovProjectOf(r.project);
+        chips.push(['pj', '⚑ ' + (pj ? pj.name : r.project),
+          pj ? [pj.kind, pj.location].filter(Boolean).join(' · ') : 'Named project (not in the projects registry)']);
+      }
       if (r.last) chips.push([null, 'Latest ' + r.last]);
       if (!chips.length) return;
       var row = ovEl('div', 'ov-rel-chips');
-      chips.forEach(function(c) { row.appendChild(ovEl('span', 'ch' + (c[0] ? ' ' + c[0] : ''), c[1])); });
+      chips.forEach(function(c) {
+        var el = ovEl('span', 'ch' + (c[0] ? ' ' + c[0] : ''), c[1]);
+        if (c[2]) el.title = c[2];
+        row.appendChild(el);
+      });
       ev.appendChild(row);
     }
     function ovRelEvidList(p, ev, items, head, inbound) {
@@ -3007,6 +3068,7 @@ function ovReloadFresh() {
             type: OV_REL_TYPES[r.type] || OV_REL_TYPES.other,
             note: r.note || '', context: r.context || '', src: r.source || '',
             status: r.status || '', since: r.since || '', scale: r.scale || '',
+            via: r.via || '', project: r.project || '',
             last: edge ? (edge.last || '') : '',
             evid: (dBySlug[r.slug] || {}).evid || [],
             inb: ovGraph ? ovRelInbound(p.slug, r.slug) : [] });
@@ -3217,6 +3279,8 @@ function ovReloadFresh() {
           if (r.status) chips.push('Status: ' + r.status);
           if (r.since) chips.push('Since: ' + r.since);
           if (r.scale) chips.push('Scale: ' + r.scale);
+          if (r.via) chips.push('Via: ' + r.via);
+          if (r.project) { var xpj = ovProjectOf(r.project); chips.push('Project: ' + (xpj ? xpj.name : r.project)); }
           if (r.last) chips.push('Latest: ' + r.last);
           if (chips.length) h.push('<p class="d-meta">' + esc(chips.join(' · ')) + '</p>');
           var body = [r.note, r.context].filter(Boolean).join(' ');
@@ -3247,6 +3311,11 @@ function ovReloadFresh() {
         // Repaint with the graph's inbound evidence once it arrives — only if
         // this dossier is still on screen (hash may have moved on).
         if (g && document.body.contains(wrap)) ovRelPaint(p, wrap);
+      });
+      // Same repaint for the named-projects registry, so ⚑ chips upgrade from
+      // raw slug to display name once it loads (schema v7).
+      if (!ovProjects) ovProjectsLoad().then(function(j) {
+        if (j && document.body.contains(wrap)) ovRelPaint(p, wrap);
       });
       return (any || !ovGraph) ? wrap : null;
     }
@@ -3585,6 +3654,7 @@ function ovReloadFresh() {
         ['rels', ovSecLabel('rels')],
         ['products', ovSecLabel('products')],
         ['devs', ovSecLabel('devs')],
+        ['policy', ovSecLabel('policy')],
         ['strategy', ovSecLabel('strategy')],
         ['people', ovSecLabel('people')],
         ['fin', ovSecLabel('fin')],
@@ -3673,6 +3743,45 @@ function ovReloadFresh() {
           rd.appendChild(row);
         });
         paneFor('devs').appendChild(rd);
+      }
+
+      // Policy exposure (schema v7) — named tariff/content/incentive regimes
+      // and how this company sits in them. Facts with cited sources; the
+      // mitigation line is the company's own stated response, never inference
+      // (inference belongs in the strategy tab).
+      if (p.policyExposure && p.policyExposure.length) {
+        var pe = ovSection(ovSecLabel('policy'),
+          'How named policy regimes — tariffs, content rules, incentives — bear on this company, most material first, each with its cited source.');
+        p.policyExposure.forEach(function(px) {
+          var row = ovEl('div', 'ov-pol');
+          var hd = ovEl('div', 'ov-pol-hd');
+          hd.appendChild(ovEl('h4', null, px.regime || ''));
+          var pst = String(px.status || '').toLowerCase();
+          if (px.status) hd.appendChild(ovEl('span', 'ov-pol-st' + (OV_POL_STATUS[pst] ? ' ps-' + pst : ''), OV_POL_STATUS[pst] || px.status));
+          if (px.effectiveDate) hd.appendChild(ovEl('span', 'ov-pol-eff', 'Effective ' + px.effectiveDate));
+          row.appendChild(hd);
+          if (px.exposure) row.appendChild(ovEl('p', 'ov-pol-x', px.exposure));
+          if (px.mitigation) {
+            var mit = ovEl('p', 'ov-pol-mit');
+            mit.appendChild(ovEl('span', 'k', 'Mitigation'));
+            mit.appendChild(document.createTextNode(' ' + px.mitigation));
+            row.appendChild(mit);
+          }
+          if (px.source) {
+            var pso = ovRelSource(p, px.source);
+            var pline = ovEl('div', 'ov-pol-src');
+            pline.appendChild(ovEl('span', 'k', 'Source'));
+            if (pso && pso.url) {
+              pline.appendChild(ovLink(pso.url, null, pso.label));
+              if (pso.date) pline.appendChild(ovEl('span', 'ov-asof', ' — ' + pso.date));
+            } else {
+              pline.appendChild(document.createTextNode(pso ? pso.label : String(px.source)));
+            }
+            row.appendChild(pline);
+          }
+          pe.appendChild(row);
+        });
+        paneFor('policy').appendChild(pe);
       }
 
       // Strategy read — labeled analysis (schema v2)
@@ -5696,6 +5805,18 @@ function ovReloadFresh() {
           doc.appendChild(ovEl('p', 'd-devdate', (ev.date || '') + (ev.category ? '  ·  ' + ev.category : '')));
           doc.appendChild(ovEl('h3', null, ev.headline));
           if (ev.read) doc.appendChild(ovEl('p', 'd-note', '→ ' + ev.read));
+        });
+      }
+
+      // Policy exposure (schema v7) — mirrors the app's policy tab
+      if (p.policyExposure && p.policyExposure.length) {
+        dCh('policy');
+        p.policyExposure.forEach(function(px) {
+          var pst = String(px.status || '').toLowerCase();
+          doc.appendChild(ovEl('h3', null, (px.regime || '') + (px.status ? ' — ' + (OV_POL_STATUS[pst] || px.status) : '')));
+          if (px.effectiveDate) doc.appendChild(ovEl('p', 'd-note', 'Effective ' + px.effectiveDate));
+          if (px.exposure) doc.appendChild(ovEl('p', null, px.exposure));
+          if (px.mitigation) doc.appendChild(ovEl('p', 'd-note', 'Mitigation: ' + px.mitigation));
         });
       }
 

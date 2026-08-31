@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 46/50`
+`Sections: 47/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.71w] — 2026-08-30 09:31:43 PM EST — v03.91r
+
+### Added
+- Dossiers can now carry a Policy Exposure tab showing how tariffs, content rules, and incentive programs bear on the company — each regime with its status, effective date, the company's stated mitigation, and a cited source
+- Relationship cards can show two new details: the product line an engagement runs through, and a flag pinning it to a named industry project
+
+### Changed
+- Comparisons recognize more peer groups — colocation and cloud-capacity providers, EPC and general contractors, and project developers/IPPs now compare like-for-like within their own groups
 
 ## [v01.70w] — 2026-08-30 09:09:00 PM EST — v03.90r
 

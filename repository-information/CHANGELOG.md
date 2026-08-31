@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.91r] — 2026-08-30 09:31:43 PM EST
+
+> **Prompt:** "Picking up from my recent "BESS/AIDC market research system" session, build phase 4."
+
+Phase 4 of the approved strategic plan — schema v7 depth: policy-exposure tracking, BESS/AIDC-native physical KPIs, named-project relationship pins, and the full Compare peer-family map.
+
+### Added
+- **`policyExposure[]` profile section (schema v7)** — `repository-information/PROFILER-SCHEMA.md` defines `{regime, status, effectiveDate, exposure, mitigation, source}` (status enum `in-effect` / `announced` / `proposed` / `expired`; mitigation is the company's own stated response, never inference); `Profiler.html` (v01.70w → v01.71w) renders it as a new dossier tab — per-style labels added to `OV_SEC_LABELS` (Bloomberg chapters renumbered 4→9), status chips, gold Mitigation/Source labels, source links resolved against `sources[]` via `ovRelSource`, and a matching Word/PDF export chapter
+- **BESS/AIDC-native KPI keys (schema v7)** — the normalized-KPI vocabulary gains physical keys `gwh-shipped`, `backlog-gwh`, `mw-energized`, `mw-contracted` with a new `qty` overlay field (the figure in the unit the key names; currency KPIs keep `usdMillions`+`fxBasis`, never both on one metric); `scripts/check-profiler-reports.py` bars verification now accepts `qty` overlay values alongside `usdMillions`
+- **Named-projects registry** — new `live-site-pages/profiler-data/profiler-projects.json` (schemaVersion 1) carrying Colossus, Homer City, and Stargate as first-class entities, with its schema section in PROFILER-SCHEMA.md (deliberately lightweight: identity + one orientation line; participants stay derivable from published relationships); `Profiler.html` loads it memoized (`ovProjectsLoad`, graph-fetch pattern) and renders relationship `project` pins as gold ⚑ chips with kind/location tooltips and a raw-slug fallback for unregistered pins
+- **Relationship `via`/`project` fields (schema v7)** — optional deal metadata: `via` (the product line the engagement runs through, teal chip) and `project` (named-project pin); carried through `ovRelData`, the relationship one-pager export, and `scripts/build-profiler-graph.py` curated edges (`CURATED_FIELDS` + a WARN on unregistered project slugs)
+
+### Changed
+- **Compare peer families** — `OV_PEER_FAMILIES` in `Profiler.html` expanded beyond the single `hardware` family: `colocation` (developer + neocloud — the AIDC capacity providers; IREN and Crusoe carry both tags), `construction` (epc + gc — they build the same campuses), `developer-ipp` (the BESS project-developer/owner-operator set under its market name); hyperscalers deliberately stay their own family (they are the buyers, not competing sellers)
+- **CHANGELOG archive rotation** — this section pushed the counter to 101, so the oldest date group (2026-08-23: v02.91r–v02.92r, 2 sections) rotated to `CHANGELOG-archive.md` verbatim with commit-SHA enrichment on both headers; active file 99 sections, archive 192
+
+### Notes
+- No data migration — existing dossiers stay valid at their schema versions; v7 backfill rides each dossier's next revision per the proven v3/v4 pattern (raw policy material already exists across dossier prose, the bankability guidance module, and the §154 risk report)
+- Verified: Playwright render of the policy tab + v7 relationship chips on a synthetic dossier (zero page errors), `node --check` on the page script, `build-profiler-graph.py --check` byte-stable (472 edges), `sync-profiler-registry.py --check` (88/88 in sync), `check-profiler-reports.py` (0 errors)
 
 ## [v03.90r] — 2026-08-30 09:09:00 PM EST
 
@@ -1999,26 +2019,3 @@ Read and write therefore pointed at different properties. The loop set `phase: '
 ### Notes
 - `Profiler.html` v01.41w → v01.42w (page-side `ipp` support is a renderer change; dossier data remains data-only)
 - Batches C (EPCs) and D (BtM packagers) follow per the approved plan; Phase 2 Industry Guidance modules and the Hithium dossier v5 revision come after
-
-## [v02.92r] — 2026-08-23 11:37:09 PM EST
-
-> **Prompt:** "Approved — start Batch A" *(Executes Batch A of the plan approved under v02.91r — the nine containerized-BESS competitor dossiers, researched via the standard two-agent-per-company sweep (13 parallel background agents including shared policy/rankings passes). Structured-question decisions carried forward: Tiers 1+2 scope minus Powin; parallel subagents; utilities and standards bodies as Industry Guidance modules rather than dossiers; both IC and team-lead strategy documents.)*
-
-### Added
-- **Nine Batch A competitor dossiers** (`live-site-pages/profiler-data/`) — `prevalon`, `canadian-solar`, `trina-storage`, `hyperstrong`, `ls-energy-solutions`, `crrc-zhuzhou`, `sunwoda`, `narada`, `envision-energy` `.profile.json`, all schemaVersion 2 with banded Technical Annex specs, labeled strategy reads, and chronological newest-first sources. Together they map the containerized-BESS field for the Hithium/US-AIDC lens: the FEOC-compliant US tier (Prevalon, LS-ES), the overseas-listed Chinese tier (Canadian Solar e-STORAGE, Trina Storage), the China grid-side heavyweights (HyperStrong, CRRC Zhuzhou), the fast riser (Sunwoda), the distressed incumbent (Narada), and the other NDAA §154-named major (Envision). Each carries an explicit Hithium-lens strategy read
-- **Registry** — `profiler-companies.json` grows 62 → 71 companies; all nine registered with taglines, HQ, tickers where applicable, name-sorted order preserved
-
-### Changed
-- **README tree** — nine `*.profile.json` entries inserted into the `profiler-data/` block in filename order
-
-### Notes
-- Data-only change: `Profiler.html` stays at v01.41w (no page version bump); the app discovers new companies from the registry at load
-- `scripts/verify-profiler-roles.py` re-run post-registration: 71/71 dossiers render a specs section, 0 blank rows, role matrix and per-account progress isolation intact
-- Batch B (IPPs), C (EPCs), D (BtM packagers) follow in subsequent passes per the approved plan
-
-## [v02.91r] — 2026-08-23 11:04:41 PM EST
-
-> **Prompt:** "The dossiers look good now. Besides Zhonhen Electric, I am also strongly considering a Director of Sales, AIDC role at Hithium, so I also need to fully understand the US AIDC industry from a Chinese containerized BESS supplier's (Hithium) perspective. What other companies should I add to the Profiler app to be able to understand the web of relationships between containerized BESS suppliers, developers, general contractors, and data center operators? To clarify, Hithium will most likely not be competing in the sidecar, backup battery unit, electrical room space; Rather, they will be competing in the containerized BESS space. After understanding this part of the industry, I will ask you to create a comprehensive sales strategy report for me. I might be leading a team for Hithium to attack the US AIDC market, so once you have all the information, I will also want you to create training materials to teach core technical, power infrastructure, policy (and probably more) to newer teammates. Create an action plan for me to review and approve." *(Plan approved via structured questions: Tiers 1+2 scope minus Powin — 25 new dossiers; parallel subagents; utilities/standards as Industry Guidance modules; both IC and team-lead strategy documents. This housekeeping push lands the mandatory archive rotation while Batch A research runs; the Batch A dossiers follow as their own push.)*
-
-### Changed
-- **CHANGELOG archive rotation** — the section counter stood at 108 with the current-day exemptions expired, so the two oldest date groups rotated to `CHANGELOG-archive.md`: 2026-08-06 (5 sections, v01.83r–v01.87r) and 2026-08-07 (8 sections, v01.88r–v01.95r), 13 sections total, moved verbatim with commit-SHA enrichment on every header (batch lookup, zero missing). Post-rotation verification clean; active file 95 sections + this one, archive 95
