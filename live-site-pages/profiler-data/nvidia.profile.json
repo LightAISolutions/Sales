@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "nvidia",
  "name": "NVIDIA Corporation",
  "shortName": "NVIDIA",
@@ -131,6 +131,7 @@
    "note": "10 GW letter of intent; NVIDIA to invest up to $100B as capacity deploys — the anchor of the circular-financing critique.",
    "context": "September 2025: OpenAI signed a letter of intent for at least 10 GW of NVIDIA systems, with NVIDIA intending to invest up to $100B progressively as each gigawatt deploys (first GW on Vera Rubin in 2H 2026). The defining GW-scale demand signal — and the anchor of the circular-financing critique the dossier rates the most serious structural risk (Bernstein: will 'clearly fuel circular concerns'), alongside reported discussions of guaranteeing up to $250B of OpenAI lease payments.",
    "source": "https://nvidianews.nvidia.com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-1",
+   "via": "Vera Rubin",
    "status": "active",
    "since": "2025-09",
    "scale": "10 GW LOI; up to $100B investment"
@@ -141,6 +142,7 @@
    "note": "Anthropic-Microsoft-NVIDIA partnership: up to 1 GW of Grace Blackwell/Vera Rubin capacity, NVIDIA investing up to $10B.",
    "context": "November 2025: the three-way partnership commits Anthropic initially to up to 1 GW of Grace Blackwell/Vera Rubin capacity on Azure with NVIDIA investing up to $10B — the dossier's marker that demand now arrives denominated in gigawatts, and that compute procurement has become power procurement. Microsoft is simultaneously one of the four direct customers concentrating 61% of NVIDIA revenue.",
    "source": "https://blogs.nvidia.com/blog/microsoft-nvidia-anthropic-announce-partnership",
+   "via": "Grace Blackwell/Vera Rubin",
    "status": "active",
    "since": "2025-11"
   },
@@ -150,6 +152,7 @@
    "note": "Grid-tier member of the 800VDC ecosystem (added at OCP 2025).",
    "context": "ABB joined NVIDIA's 800VDC ecosystem at the October 2025 OCP Summit alongside GE Vernova, Hitachi Energy, Siemens and Heron Power — the grid-equipment tier joining the partner list moved 800VDC from server-vendor concern to utility-interconnection concern, where BESS lives.",
    "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-fact",
+   "via": "800VDC ecosystem",
    "status": "active",
    "since": "2025-10"
   },
@@ -159,6 +162,7 @@
    "note": "Grid-tier 800VDC ecosystem member with three joint AI-factory reference designs.",
    "context": "GE Vernova joined the 800VDC ecosystem at OCP 2025 and co-published AI Factory 800 VDC reference designs (grid-connected, islanded, bridging) with Omniverse DSX digital twins — the deepest grid-tier collaboration in the partner list.",
    "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-fact",
+   "via": "800VDC ecosystem",
    "status": "active",
    "since": "2025-10"
   },
@@ -168,6 +172,7 @@
    "note": "Grid-tier 800VDC member with a co-designed grid-to-rack architecture.",
    "context": "Hitachi Energy joined the 800VDC ecosystem (OCP 2025) with a co-designed grid-to-rack power conversion architecture (company-claimed 15x power-supply increase) plus Omniverse digital-twin and DSX blueprint work announced at CERAWeek 2026.",
    "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-fact",
+   "via": "800VDC ecosystem",
    "status": "active",
    "since": "2025-10"
   },
@@ -177,6 +182,7 @@
    "note": "Founding 800VDC partner on the power/cooling side.",
    "context": "Vertiv was on the initial 800VDC partner list at Computex (May 2025) — the founding document of the 2027 power transition — carrying the white-space power and cooling tier of the architecture into hyperscale deployments.",
    "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+   "via": "800VDC ecosystem",
    "status": "active",
    "since": "2025-05"
   },
@@ -186,6 +192,7 @@
    "note": "Founding 800VDC partner at the power-infrastructure tier.",
    "context": "Eaton appeared on NVIDIA's initial 800VDC partner list (Computex, May 2025) with Delta, LITEON, Megmeet, Schneider, Vertiv, Infineon and TI — the power-infrastructure names NVIDIA designated to carry the 2027 rack transition.",
    "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+   "via": "800VDC ecosystem",
    "status": "active",
    "since": "2025-05"
   },
@@ -195,6 +202,7 @@
    "note": "Dominant AI-server power supplier (~70% of Blackwell-platform PSUs per KGI) and founding 800VDC partner.",
    "context": "Delta holds an estimated ~70% of Blackwell-platform AI-server PSUs (KGI) and anchors the component tier of the 800VDC ecosystem from the founding Computex list — the incumbent every other power-shelf vendor is measured against.",
    "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+   "via": "Blackwell-platform PSUs",
    "status": "active",
    "scale": "~70% Blackwell PSU share (est.)"
   },
@@ -204,6 +212,7 @@
    "note": "#2 Blackwell-platform PSU source and founding 800VDC component-tier partner.",
    "context": "LITEON is the estimated #2 supplier of Blackwell-platform AI-server power (KGI) and a founding member of the 800VDC component tier, shipping 110 kW power shelves for Vera Rubin NVL72 and GB300-class BBU collaborations.",
    "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+   "via": "Blackwell-platform PSUs",
    "status": "active"
   },
   {
@@ -212,7 +221,22 @@
    "note": "The mainland-China exception on both 800VDC partner lists; named for GB200 NVL72 power.",
    "context": "Megmeet's inclusion in both NVIDIA 800VDC partner lists is the mainland-China exception — the only mainland power vendor NVIDIA has named for GB200 NVL72 power, co-developing the 800V sidecar for the Kyber rack platform.",
    "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation",
+   "via": "GB200 NVL72 power",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US export controls (China)",
+   "status": "in-effect",
+   "exposure": "NVIDIA's guidance assumes zero China data-center compute revenue after the H20 whipsaw: a $4.5B export-restriction charge absorbed in Q1 FY2026 with ~$8B of guided China revenue loss, then a 15%-of-revenue export deal, then Beijing's effective blacklisting — the dossier assesses China as regulatory downside only.",
+   "source": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026"
+  },
+  {
+   "regime": "China Anti-Monopoly Law",
+   "status": "in-effect",
+   "exposure": "China's SAMR ruled preliminarily in September 2025 that NVIDIA violated conditions of the 2020 Mellanox approval, with the investigation continuing and a potential fine of ~$2.9B — paired with the export controls, China is now regulatory downside only for NVIDIA.",
+   "source": "https://www.cnbc.com/2025/09/15/china-nvidia-violated-anti-monopoly-law-will-continue-investigation.html"
   }
  ],
  "technicalSpecs": [
@@ -471,6 +495,6 @@
    "url": "https://insights.trendforce.com/p/ai-data-center-energy-storage-demand"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

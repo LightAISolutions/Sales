@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "enchanted-rock",
  "name": "ERock (Enchanted Rock)",
  "shortName": "ERock",
@@ -183,6 +183,7 @@
    "note": "100 MW RNG-backed backup at San Jose (complete) — 224 of ERock's ~0.45 MW units replacing diesel.",
    "context": "The first anchor contract of the AIDC book, with food-waste RNG procured via a US Energy partnership from early 2026 to keep gas gensets inside hyperscaler carbon pledges. Air-district friction is the watch item: BAAQMD objected to run-hour assumptions at the site.",
    "source": "Data Center Frontier / PRNewswire",
+   "via": "RNG-backed backup microgrid",
    "status": "active",
    "scale": "100 MW"
   },
@@ -192,6 +193,7 @@
    "note": "The 366 MW McCloud Generation bridge plant for Meta's El Paso campus — utility-owned (El Paso Electric), Meta-funded, ERock-built-and-operated; construction started Q2 2026.",
    "context": "Filed at the PUCT in January 2026 at $473–500M: a commission-approved rate structure where the utility owns the plant and Meta pays for it, with an exclusive 5-year bridge from 2027. The dossier calls this the structural innovation competitors must now answer — it converts a merchant bridge sale into regulated-utility paper.",
    "source": "El Paso Matters / PUCT filing / Argus",
+   "via": "McCloud Generation bridge plant",
    "status": "active",
    "since": "2026-01",
    "scale": "366 MW / ~$473-500M"
@@ -210,6 +212,20 @@
    "slug": "hithium",
    "type": "other",
    "note": "Not a battery rival but a demand-shaper: every ERock bridge defers a containerized-storage purchase, while ERock's own post-bridge roadmap concedes battery supplementation — a future BESS channel Hithium's NDAA §154 designation likely locks it out of on US soil."
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "ERock is positioned as the archetype of the FEOC-immune energy dollar in US AIDC — a pure natural-gas genset platform hyperscalers can buy with zero sourcing-compliance diligence (the ~470 MW Anthropic order), in direct contrast to Chinese-cell BESS after the Jan 2026 Section 301 escalation and FY2026 NDAA §154-type prohibitions. The caveat the dossier keeps in reserve: single-source engine supplier PSI is majority-owned by China's Weichai Power, so the 'FEOC-clean' supply chain has its own China dependency one layer down.",
+   "source": "https://www.businesswire.com/news/home/20260811144024/en/"
+  },
+  {
+   "regime": "US air-quality permitting",
+   "status": "in-effect",
+   "exposure": "Emissions friction is the sleeper risk to the whole gas-bridge category: BAAQMD objected to run-hour assumptions at the Microsoft San Jose microgrid, El Paso council scrutiny targets NOx/CO from McCloud's 813 engines, and EPA tightening on long-duration 'mobile' generation would raise costs across ERock, VoltaGrid, and ProEnergy simultaneously. The RockBlock line is marketed as avoiding Title V major-source permitting and is CARB DG-compliant.",
+   "source": "https://www.baaqmd.gov"
   }
  ],
  "decisionMakers": [
@@ -411,6 +427,6 @@
    "date": null
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

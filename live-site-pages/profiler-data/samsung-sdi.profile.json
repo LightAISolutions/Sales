@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "samsung-sdi",
  "name": "Samsung SDI Co., Ltd. (삼성SDI)",
  "shortName": "Samsung SDI",
@@ -141,6 +141,7 @@
    "note": "Confirmed multi-project ESS supply — ~$301M first tranche, reported ~6.3 GWh of Samsung Battery Boxes.",
    "context": "March 2025: Samsung SDI confirmed the multi-project ESS supply deal with NextEra Energy Resources (first tranche ~$301M; Korean-press-reported ~6.3 GWh across projects; 20-ft SBB containers) — the anchor win of the US ESS ramp and the named piece of NextEra's domestic-supply wall.",
    "source": "https://www.energy-storage.news/samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand",
+   "via": "Samsung Battery Box",
    "status": "active",
    "since": "2025-03",
    "scale": "~6.3 GWh reported"
@@ -151,6 +152,7 @@
    "note": "Reported near-final talks for ~10 GWh/yr of LFP ESS cells (~KRW 3T) from converted StarPlus lines — unconfirmed.",
    "context": "November 2025: Korean press reported near-final talks with Tesla for ~10 GWh/yr of LFP ESS cells from converted StarPlus Michigan lines; the company confirmed talks but 'no details finalized'. Treat as unconfirmed — it would mirror the LGES Megapack-cell playbook and materially change the trajectory.",
    "source": "https://www.koreaherald.com/article/10608634",
+   "via": "LFP ESS cells",
    "status": "announced",
    "since": "2025-11",
    "scale": "~10 GWh/yr (reported talks)"
@@ -170,6 +172,7 @@
    "note": "Reported (unverified) end customer of the Simplo BBU chain.",
    "context": "Trade press reports Meta, with Amazon, as an end customer of the Simplo BBU chain Samsung SDI supplies into — not company-confirmed; recorded at low confidence as part of the BBU/AIDC demand picture.",
    "source": "Dossier verification note — BBU chain reporting",
+   "via": "BBU cells",
    "status": "announced"
   },
   {
@@ -178,6 +181,7 @@
    "note": "The ~80%-share BBU incumbent Samsung SDI's challenger push targets.",
    "context": "Samsung SDI competes with Panasonic (which claims ~80% of DC distributed-power systems) in the BBU niche NVIDIA's rack power-smoothing architecture is expanding — with safety certification as the differentiation wedge, and industry-wide BBU cell shortages giving the challenger an opening.",
    "source": "Dossier competitive assessment — BBU",
+   "via": "BBU",
    "status": "active"
   },
   {
@@ -203,6 +207,21 @@
    "context": "NVIDIA's rack power-smoothing architecture (GB300-class BBU/supercap tiers) is expanding the data-center battery niche Samsung SDI's UPS/BBU push targets — architecture-driven demand rather than a named NVIDIA relationship.",
    "source": "Dossier competitive assessment — BBU",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "The regime works in Samsung SDI's favor: in the US, FEOC rules do the squeezing in reverse — SDI's Korean chain qualifies where CATL's cannot — underwriting its claim to be 'North America's sole non-Chinese supplier of prismatic ESS batteries' and the two billion-dollar-class US ESS deals (KRW 1.5T prismatic, >KRW 2T LFP) whose delivery depends on the US cell ramp.",
+   "mitigation": "A deliberately built non-FEOC chain: US prismatic LFP cell production from October 2026 at the StarPlus Indiana JV (toward a 30 GWh BESS cell target), plus a ~KRW 1.6T 3-year LFP cathode deal with L&F for US ESS production.",
+   "source": "https://www.energy-storage.news/samsung-sdi-on-track-with-us-lfp-cell-production-expects-demand-to-outstrip-production/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "AMPC credits are load-bearing in the recovery: FY2025 AMPC was KRW 275B (versus 90B in FY2024), and the Q2 2026 return to profit — the first in seven quarters — included AMPC and US tariff refunds, which is why the dossier flags profit quality as the near-term watch item.",
+   "source": "https://news.samsungsdi.com/global/press/view?seq=440"
   }
  ],
  "technicalSpecs": [
@@ -447,6 +466,6 @@
    "url": "https://www.samsungsdi.com/upload/download/business/SAMSUNG%20SDI_ESS%20Product%20Information_JP&EN.pdf"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

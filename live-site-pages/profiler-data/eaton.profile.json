@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "eaton",
  "name": "Eaton",
  "legalName": "Eaton Corporation plc",
@@ -170,6 +170,7 @@
    "note": "One of three named NVIDIA 800 VDC data-center power-systems partners (with Vertiv and Schneider) — Kyber-rack reference architectures, and the Beam Rubin DSX platform at GTC 2026.",
    "context": "The July 2025 collaboration covers reference architectures and power management for Kyber racks with Rubin Ultra GPUs (1 MW racks and beyond). March 2026's Beam Rubin DSX packages Fibrebond, NordicEPOD and Flexnode assets into an end-to-end power-plus-cooling platform aligned to NVIDIA's Omniverse DSX blueprint with digital-twin assets. Eaton also productized GPU-transient detection (PXQ subsynchronous-oscillation firmware) for the installed base.",
    "source": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-accelerates-data-center-infrastrructure-in-ai-era-with-nvidia.html",
+   "via": "800 VDC power systems",
    "status": "active",
    "since": "2025-07"
   },
@@ -179,6 +180,7 @@
    "note": "June 2025 alliance for standardized ~500 MW modular on-site power plants for data centers — SGT-800 gas turbines plus battery storage, grid-independent, no diesel backup.",
    "context": "The alliance answers the interconnection-queue bottleneck inside Eaton's own scope, claiming up to two years faster time-to-market. It is part of the ~14-month inorganic assembly (Fibrebond, Boyd Thermal, Ultra PCS, Resilient Power SSTs) behind Eaton's grid-to-chip framing.",
    "source": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-and-siemens-energy-join-forces-to-provide-power-and-technology.html",
+   "via": "~500 MW modular on-site power plants",
    "status": "active",
    "since": "2025-06",
    "scale": "~500 MW plant template"
@@ -187,6 +189,7 @@
    "slug": "microsoft",
    "type": "customer",
    "note": "Co-developed EnergyAware grid-interactive UPS — data-center UPS fleets that sell frequency regulation while protecting load.",
+   "via": "EnergyAware grid-interactive UPS",
    "status": "active"
   },
   {
@@ -485,6 +488,6 @@
    "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-power-market.asp"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

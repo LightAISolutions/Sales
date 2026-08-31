@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "black-veatch",
  "name": "Black & Veatch",
  "legalName": "Black & Veatch (100% employee-owned via ESOP since 2015; employee-owned corporation since 1999)",
@@ -213,6 +213,7 @@
    "type": "partner",
    "note": "Equal partners in Cascade Nuclear Partners (with Aecon) — first 4 of 12 X-energy Xe-100 SMRs at Energy Northwest — and complementary roles on IPP Renewed (B&V engineered, Kiewit built).",
    "context": "Energy Northwest selected the Aecon / Kiewit Nuclear Solutions / Black & Veatch JV in October 2025 as progressive design-builder for up to 320 MW of Xe-100 SMRs at Richland, WA — one of the first US SMR design-build seats, on the Amazon-backed program. On IPP Renewed's 840 MW hydrogen-capable combined cycle, B&V held the Owner's Engineer role while Kiewit built — the engineer-brain vs builder division of labor that defines B&V's positioning. They remain rivals elsewhere: Kiewit holds the behind-the-meter AI-campus gas awards B&V lacks.",
+   "via": "X-energy Xe-100 SMRs",
    "status": "active",
    "since": "2025-10"
   },
@@ -550,6 +551,6 @@
    "url": "https://www.forbes.com/companies/black-veatch/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

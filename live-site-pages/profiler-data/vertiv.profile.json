@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "vertiv",
  "name": "Vertiv",
  "legalName": "Vertiv Holdings Co",
@@ -149,6 +149,7 @@
    "note": "Named 800 VDC power-systems partner; GB300 reference architecture; full 800 VDC portfolio ships 2H 2026.",
    "context": "Vertiv is a named NVIDIA 800 VDC data-center power systems partner: platform designs advanced to engineering readiness (October 2025) with early design engagement on multiple gigawatt-scale AI-factory projects, timed for Kyber/Rubin Ultra in 2027; an energy-efficient cooling + power reference architecture for GB300 NVL72 (142 kW/rack) with SimReady assets in Omniverse (June 2025); and a DGX GB300 federal deployment at the Naval Postgraduate School (July 2026).",
    "source": "https://www.vertiv.com/en-us/about/news-and-events/corporate-news/from-vision-to-readiness-vert",
+   "via": "800 VDC power systems",
    "status": "active",
    "since": "2025-06"
   },
@@ -190,6 +191,7 @@
    "note": "Third-party-reported source of 36 kW HVDC rectifier modules.",
    "context": "Third-party reporting has Sinexcel supplying 36 kW HVDC rectifier modules to Vertiv — an OEM component relationship (not company-confirmed) that gives the Chinese power-quality specialist indirect NVIDIA-ecosystem exposure through Vertiv's channel.",
    "source": "Third-party reporting (via Sinexcel dossier)",
+   "via": "36 kW HVDC rectifier modules",
    "status": "announced"
   }
  ],
@@ -462,6 +464,6 @@
    "url": "https://rosenlegal.com/case/vertiv-holdings-co/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

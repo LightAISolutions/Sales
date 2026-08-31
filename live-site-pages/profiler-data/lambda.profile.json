@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "lambda",
  "name": "Lambda",
  "legalName": "Lambda, Inc. (formerly branded Lambda Labs)",
@@ -185,6 +185,7 @@
    "note": "Multibillion-dollar multi-year AI infrastructure agreement — tens of thousands of GPUs including GB300 NVL72.",
    "context": "Announced November 3, 2025, extending a relationship dating to 2018. The Series E (>$1.5B, TWG Global/USIT) and the 2026 debt program (JPMorgan $1B facility; ~$1B of short-dated private debt for chips leased to Microsoft) are explicitly tied to funding this contract's deployments.",
    "source": "https://lambda.ai/blog/lambda-announces-multibillion-dollar-agreement-with-microsoft-to-deploy-ai-infrastructure-powered-by-tens-of-thousands-of-nvidia-gpus",
+   "via": "GB300 NVL72",
    "status": "active",
    "since": "2025-11"
   },
@@ -194,6 +195,7 @@
    "note": "Supplier, Series D investor — and largest customer via the ~$1.5B, 4-year GPU leaseback.",
    "context": "NVIDIA supplies Lambda's entire fleet (H100 through GB300, priority allocation as an NVIDIA Cloud Partner), invested in the February 2025 Series D, and — per September 2025 reporting — signed a ~$1.5B four-year deal leasing back ~18,000 of its own GPUs from Lambda, making NVIDIA the largest customer at the time. The Morgan Stanley-led $926M investment-grade TLB (August 2026) funds GB300 deployment for the NVIDIA contract.",
    "source": "https://www.datacenterdynamics.com/en/news/nvidia-signs-15bn-deal-to-lease-its-gpus-back-from-lambda-report/",
+   "via": "GB300 GPUs",
    "status": "active",
    "since": "2025-09",
    "scale": "~$1.5B leaseback (18,000 GPUs)"
@@ -510,6 +512,6 @@
    "url": "https://sacra.com/c/lambda-labs/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "solv-energy",
  "name": "SOLV Energy",
  "shortName": "SOLV",
@@ -178,6 +178,7 @@
    "note": "Built Arevon's Tesla-Megapack flagships — Vikings and the >$2B Eland complex.",
    "context": "SOLV's verified flagship builds are Arevon projects: Vikings (157 MWdc + 150 MW/600 MWh Tesla Megapack, COD Nov 2024, 'first US utility-scale solar peaker') and Eland 1 & 2 (758 MWdc + 1,200 MWh combined, Tesla Megapack 2 XL, >$2B). The template: owner-furnished Tesla, union labor, Buy-America framing.",
    "source": "https://www.solvenergy.com/projects",
+   "via": "utility-scale solar + storage EPC",
    "status": "active",
    "scale": "Vikings + Eland (>$2B complex)"
   },
@@ -187,6 +188,7 @@
    "note": "Owner-furnished Tesla Megapacks on every verified flagship BESS build — SOLV installs what owners buy.",
    "context": "On Vikings, Eland and Intersect's Oberon, the batteries were owner-furnished Tesla Megapacks — the channel fact that matters most: SOLV is a constructability and services channel, not a procurement principal, with battery-selection influence concentrated in mid-size utility/co-op jobs, advertised battery-module procurement scope, and the O&M fleet's augmentation cycle (~22 GW, ~155 plants) where OEM lock-in is weakest.",
    "source": "Verified flagship builds — Vikings / Eland / Oberon",
+   "via": "Megapack",
    "status": "active"
   },
   {
@@ -203,6 +205,7 @@
    "note": "Inverter-side experience only — no blanket China aversion, no battery relationship.",
    "context": "Sungrow inverters run SOLV's flagship solar builds — evidence there is no blanket aversion to Chinese equipment, though as a newly public company SOLV has no appetite to champion a §154-named battery supplier. Its Sungrow experience is inverter-side only.",
    "source": "Dossier assessment — equipment experience",
+   "via": "PV inverters",
    "status": "active"
   },
   {
@@ -211,7 +214,23 @@
    "note": "One contract away: services Google's co-location partner Intersect Power under O&M.",
    "context": "SOLV built Intersect Power's Oberon 1 (339 MWdc + 250 MWac/1,000 MWh Tesla BESS) and services Intersect — Google's co-location partner — and Stargate-linked SB Energy under O&M. With 'actively exploring storage for data centers' and the Roberson Waite urban-BESS capability, the dossier rates SOLV one contract away from AIDC-adjacent storage construction.",
    "source": "Dossier assessment — AIDC angle",
+   "via": "O&M services",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "SOLV's project pipeline rides on tax-credit economics: its $8.9B backlog is marketed as ~100% safe-harbored and tax-credit-clean, with visibility through 2028, and EPC contracts use LNTP structures under which customers prepay deposits for long-lead equipment. The dossier also notes O&M augmentation purchases are less FEOC-visible than new-build ITC procurement.",
+   "mitigation": "Safe-harboring across essentially the entire backlog — marketed as 100% safe-harbored — plus domestic-content framing on flagship builds (Vikings sold on 'components sourced from American suppliers').",
+   "source": "https://www.globenewswire.com/news-release/2026/08/13/3344355"
+  },
+  {
+   "regime": "NDAA §154",
+   "status": "in-effect",
+   "exposure": "As a newly public company SOLV has no appetite to champion a §154-named battery supplier, though it shows no blanket aversion to Chinese equipment — Sungrow inverters run its flagship solar builds, and CEO Hershman's record is anti-tariff yet pro-domestic-manufacturing (past SEIA board chair).",
+   "source": "Dossier assessment — equipment experience"
   }
  ],
  "decisionMakers": [
@@ -357,6 +376,6 @@
    "date": "2021-12"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

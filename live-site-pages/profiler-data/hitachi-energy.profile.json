@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "hitachi-energy",
  "name": "Hitachi Energy",
  "legalName": "Hitachi Energy Ltd (wholly-owned subsidiary of Hitachi, Ltd., TYO: 6501; formed from ABB Power Grids acquisition)",
@@ -138,6 +138,7 @@
    "note": "Co-designed 800 VDC grid-to-rack architecture; Omniverse digital twins and DSX AI-factory blueprint work.",
    "context": "October 2025: Hitachi Energy joined NVIDIA's 800 VDC ecosystem with a co-designed grid-to-rack power conversion architecture for AI racks (company-claimed 15x power-supply increase, unverified independently), framing up to 125 GW of global AI data-center capacity 2025-2030.\n\nCERAWeek 2026 extended the collaboration: HMAX Energy AI service suite, NVIDIA Omniverse digital twins to test grid scenarios pre-deployment, and DSX AI-factory blueprint work aimed at making AI facilities grid-stabilizing rather than grid-destabilizing assets.",
    "source": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/nvidia-800-vdc-collaboration",
+   "via": "800 VDC grid-to-rack architecture",
    "status": "active",
    "since": "2025-10"
   },
@@ -147,6 +148,7 @@
    "note": "Ellipse EAM asset-management suite reinvented with Microsoft AI.",
    "context": "Hitachi Energy's grid-automation software line leans on Microsoft: the Ellipse enterprise asset management suite was reinvented with Microsoft AI, supporting the IDC 'Leader' rating in utility Asset Performance Management. A software-layer partnership rather than a power-equipment deal.",
    "source": "Hitachi Energy grid automation disclosures",
+   "via": "Ellipse EAM",
    "status": "active"
   },
   {
@@ -446,6 +448,6 @@
    "url": "https://www.mordorintelligence.com/industry-reports/global-hvdc-converter-station-market-industry"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

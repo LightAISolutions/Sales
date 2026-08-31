@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "aligned",
  "name": "Aligned Data Centers",
  "legalName": "Aligned Data Centers, LLC (launched as Aligned Energy)",
@@ -271,6 +271,16 @@
    "slug": "vertiv",
    "type": "other",
    "note": "Not a disclosed supplier: Aligned's in-house Delta³/DeltaFlow cooling IP is its moat claim versus peers who buy merchant CRAH/CDU equipment from Vertiv and others."
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Texas data-center standards",
+   "status": "in-effect",
+   "effectiveDate": "2026-08",
+   "exposure": "The August 2026 state audit of all ERCOT interconnection-queue data centers — with new Texas projects frozen pending the audit — bears directly on Aligned's Texas pipeline, which includes the 540 MW Project Caprock gigascale campus in Hale County and the Dallas-Fort Worth campuses.",
+   "mitigation": "Aligned publicly committed to Gov. Abbott's responsible data-center development standards (developer-funded grid infrastructure, zero-water operational cooling, community engagement), positioning its closed-loop waterless cooling design as already compliant while the audit freezes less-prepared competitors' Texas pipelines.",
+   "source": "https://aligneddc.com/press-release/responsible-data-center-development-texas/"
   }
  ],
  "technicalSpecs": [
@@ -765,6 +775,6 @@
    "url": "https://aligneddc.com/locations/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

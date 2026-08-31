@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "ls-energy-solutions",
  "name": "LS Energy Solutions",
  "shortName": "LS-ES",
@@ -193,6 +193,7 @@
    "note": "Tier-1 NMC cells (E4D) in the AiON-ESS Energy Series.",
    "context": "LS-ES's AiON-ESS Energy Series (2-4 hour, 2.31-2.57 MWh per unit) runs on Samsung SDI E4D or SK On M003A tier-1 NMC — the documented Korean cell chain behind what the dossier calls the cleanest structural FEOC story in the US mid-tier, deployed at Big Rock at 1.5 MW/3.5 MWh per container.",
    "source": "https://www.ls-es.com/wp-content/uploads/2021/09/AiON-ESS-EnergySeries_SK_datasheet_092721.pdf",
+   "via": "E4D NMC cells",
    "status": "active"
   },
   {
@@ -229,6 +230,14 @@
    "context": "For FEOC-robust supply, LS-ES defines the 'clean-provenance premium' segment: buyers who will pay above Chinese-content pricing but below what Tesla charges — making Tesla the price umbrella and the competitive ceiling for every LS-ES bid.",
    "source": "Dossier competitive assessment — FEOC positioning",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "LS-ES holds what the dossier calls the cleanest structural FEOC story in the US mid-tier — Korean parent, documented Korean tier-1 NMC cells (SK On, Samsung SDI), US-engineered PCS — making it precisely what compliance-driven buyers say they want post-FEOC. Yet it conspicuously fails to market the position: no FEOC or non-Chinese-supply-chain marketing page, white paper or press release exists, so buyers screening for FEOC-robust supply must discover LS-ES on their own. It defines the 'clean-provenance premium' segment — buyers paying above Chinese-content pricing but below what Tesla charges.",
+   "source": "https://www.ls-es.com/wp-content/uploads/2021/09/AiON-ESS-EnergySeries_SK_datasheet_092721.pdf"
   }
  ],
  "decisionMakers": [
@@ -398,6 +407,6 @@
    "url": "https://www.ls-es.com/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

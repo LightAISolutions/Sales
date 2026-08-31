@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "catl",
  "name": "Contemporary Amperex Technology Co., Limited (宁德时代新能源科技股份有限公司)",
  "shortName": "CATL",
@@ -277,7 +277,40 @@
    "type": "customer",
    "note": "Primary LFP cell supplier to Tesla's storage products — while TENER competes with Megapack 3 at system level.",
    "context": "CATL is the primary cell supplier at Tesla's Shanghai Megafactory (with BYD's FinDreams reportedly taking >20% of Megapack cell orders from Q1 2025), and Tesla's ~7 GWh Sparks, NV LFP plant was built with CATL equipment — the supplier relationship persists even as the two fight for integrator rankings.",
+   "via": "LFP cells",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "DoD 1260H listing",
+   "status": "in-effect",
+   "effectiveDate": "2025-01",
+   "exposure": "CATL was added to the US DoD 1260H list in January 2025 (a designation the company disputes), and Pentagon direct contracting bans phase in from June 2026 — one of the US restrictions the dossier says push CATL's US strategy toward licensing rather than cell exports.",
+   "mitigation": "The LRS licensing route: patent licenses, production technology, equipment and ramp-up services for a one-time fee plus per-unit royalties — flagship Ford BlueOval Battery Park Michigan (~20 GWh/yr LFP design capacity), with market-ready cells due before end-2026.",
+   "source": "https://cnevpost.com/2026/07/24/catl-h1-profit-share-buyback/"
+  },
+  {
+   "regime": "NDAA §154",
+   "status": "announced",
+   "effectiveDate": "2027-10",
+   "exposure": "DoD procurement of CATL batteries is barred from October 2027 — the endpoint of the phased Pentagon restrictions the dossier tracks alongside the 1260H listing.",
+   "mitigation": "US strategy pushed toward the LRS licensing route rather than direct sales.",
+   "source": "https://cnevpost.com/2026/07/24/catl-h1-profit-share-buyback/"
+  },
+  {
+   "regime": "US–China battery tariffs",
+   "status": "in-effect",
+   "exposure": "CATL serves the US storage market via cell supply only 'where tariffs permit', and the dossier describes a tariff wall alongside the 1260H listing as the barrier the LRS model turns into a royalty stream.",
+   "mitigation": "LRS licensing — royalty income from US-built, CATL-licensed LFP capacity (Ford BlueOval Battery Park Michigan) with near-zero capex, where Korean rivals commit their own capital to US plants.",
+   "source": "https://www.electrive.com/2026/06/18/ford-to-produce-first-lfp-cells-this-year-thanks-to-catl/"
+  },
+  {
+   "regime": "IRA sourcing rules",
+   "status": "in-effect",
+   "exposure": "IRA sourcing rules sit alongside the 1260H listing and tariffs in the dossier's list of US restrictions; the LRS line targets US and European automakers needing domestically produced, IRA-compliant LFP cells.",
+   "mitigation": "LRS-licensed domestic production — Ford's BlueOval Battery Park Michigan is the first US plant making LFP cells for the mainstream consumer market, supported on-site by CATL engineers.",
+   "source": "https://www.electrive.com/2026/06/18/ford-to-produce-first-lfp-cells-this-year-thanks-to-catl/"
   }
  ],
  "technicalSpecs": [
@@ -875,6 +908,6 @@
    "date": "2023-04-19"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

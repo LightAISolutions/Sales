@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "stack-infrastructure",
  "name": "STACK Infrastructure",
  "categories": [
@@ -248,6 +248,7 @@
    "note": "Developer of Project Jupiter — the 1GW+ Stargate campus in Santa Teresa, NM serving Oracle/OpenAI.",
    "context": "September 2025: STACK was named developer of Project Jupiter (with BorderPlex Digital Assets) — a 1GW+ AI campus in Doña Ana County, New Mexico, part of Oracle's 4.5GW additional Stargate capacity, with an on-site microgrid and closed-loop cooling holding water use to office-building levels; Blue Owl funds the development. STACK joins Vantage as a named Stargate landlord.",
    "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digita",
+   "project": "stargate",
    "status": "active",
    "since": "2025-09",
    "scale": "1GW+ campus"
@@ -258,6 +259,7 @@
    "note": "End tenant of the Stargate capacity Project Jupiter delivers.",
    "context": "Project Jupiter serves the Oracle/OpenAI Stargate program — Oracle holds the lease (18-year OCI term per trade reporting) with OpenAI as primary client, making STACK one of the small set of private wholesale platforms holding developer-owner roles in a Stargate site and a hyperscaler state-scale program simultaneously.",
    "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digita",
+   "project": "stargate",
    "status": "active",
    "since": "2025-09"
   },
@@ -765,6 +767,6 @@
    "url": "https://www.stackinfra.com/solutions/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

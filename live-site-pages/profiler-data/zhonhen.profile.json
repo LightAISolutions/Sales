@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "zhonhen",
  "name": "Hangzhou Zhonhen Electric Co., Ltd.",
  "shortName": "Zhonhen Electric",
@@ -321,6 +321,7 @@
    "note": "NVIDIA's Aug 2026 execution paper names the Panama Architecture — but confers no commercial relationship; Zhonhen denied any agreements.",
    "context": "NVIDIA's second 800VDC white paper (Industry Alignment & Execution, August 2026, pp. 21-23) names the Panama Architecture — which Zhonhen co-developed with Alibaba — as a transformer-rectifier-unit implementation of its data-hall DC power block, practical at ~5MW class and in initial implementation, with solid-state successors dated ~2029.\n\nThe boundary matters: Zhonhen is absent from every published NVIDIA 800VDC partner roster, and in August 2025 the company formally denied rumored agreements with NVIDIA, Meta and Google after a >20% three-session stock run. Architectural validation, not a contract.",
    "source": "https://www.nvidia.com/en-us/data-center/technologies/800-vdc-architecture/",
+   "via": "Panama Architecture",
    "status": "announced",
    "since": "2026-08"
   },
@@ -330,6 +331,7 @@
    "note": "Eighth-anniversary strategic partnership with ABB (China) Electrification — HVDC, 800V DC for AI computing, global expansion.",
    "context": "December 2025: Zhonhen and ABB (China) Electrification signed an eighth-anniversary strategic partnership covering HVDC, 800V DC for AI computing and global expansion — a Western-incumbent channel relationship predating the AI cycle, notable because ABB is simultaneously building its own medium-voltage AIDC power franchise.",
    "source": "Zhonhen news — ABB (China) Electrification partnership signing (Dec 2025)",
+   "via": "HVDC / 800V DC",
    "status": "active",
    "since": "2025-12"
   },
@@ -339,6 +341,7 @@
    "note": "Buys custom high-power EV charging equipment from Zhonhen.",
    "context": "Envision Energy appears among Zhonhen's charging-equipment customers (with State Grid, Sinopec, China Tower, CNOOC, and CATL's Times Electric Service branded stations) — the EV charging/swap segment that the CATL holdco deal now folds into the compute-electricity platform.",
    "source": "Zhonhen charging-segment customer disclosures",
+   "via": "high-power EV charging equipment",
    "status": "active"
   },
   {
@@ -722,6 +725,6 @@
    "url": "http://basic.10jqka.com.cn/002364/worth.html"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

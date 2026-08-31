@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "sungrow",
  "name": "Sungrow Power Supply Co., Ltd. (阳光电源股份有限公司)",
  "shortName": "Sungrow",
@@ -172,6 +172,7 @@
    "note": "First vendor ever to take the global BESS integrator top spot from Tesla — and holder of both Wood Mackenzie crowns.",
    "context": "July 2026: Sungrow ranked #1 in BOTH Wood Mackenzie's inaugural Global BESS Integrator Comprehensive Ranking and its Global PV Inverter Manufacturer Comprehensive Ranking (assessing 2025) — the first company to take the integrator top spot from Tesla, as annual global BESS installations passed 100 GW. PowerTitan 3.0 (12.5 MWh per 30-ft) contests Megapack 3/Megablock on density; Tesla's counters are US manufacturing, bankability and Autobidder.",
    "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "via": "PowerTitan 3.0",
    "status": "active",
    "since": "2026-07"
   },
@@ -181,6 +182,7 @@
    "note": "TENER Stack rival in the next-gen AC-block race.",
    "context": "CATL's TENER Stack (9 MWh stackable) sits in the PowerTitan 3.0 competitive set with Tesla's Megablock — the head-on Chinese-major contest where Sungrow differentiates on AC-block integration, grid-forming maturity, burn-tested safety and harsh-climate MEA engineering.",
    "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "via": "PowerTitan 3.0",
    "status": "active"
   },
   {
@@ -197,6 +199,7 @@
    "note": "Sinexcel-powered integrators contest the C&I cabinet segment PowerStack leads.",
    "context": "In fast-consolidating C&I storage, Sungrow's PowerStack series competes against Tesla Powerpack-class offerings, Sinexcel-powered integrators, and domestic Chinese cabinet vendors — leaning on utility-derived liquid cooling, safety certification depth, and the installed PV base for attach sales.",
    "source": "Dossier competitive assessment — C&I storage",
+   "via": "PowerStack",
    "status": "active"
   }
  ],
@@ -665,7 +668,9 @@
       "actual": "ESS RMB 37.29B (+49.4%, 41.8% of revenue, GM 36.5%) overtook inverters (RMB 31.14B, +6.9%); storage 43 GWh (+53.5%); inverters 143 GW; overseas ~60.5% of revenue (+48.8%)",
       "expected": "",
       "verdict": "beat",
-      "result": "Storage became the largest and highest-margin segment"
+      "result": "Storage became the largest and highest-margin segment",
+      "kpi": "gwh-shipped",
+      "qty": 43
      }
     ],
     "commentary": "Dividends: FY2025 final RMB 6.90 per 10 shares plus an H1 2025 interim of RMB 9.50 per 10 shares; ~RMB 300M of buybacks in 2025. Shares hit a record (~RMB 413.5B market cap) in Nov 2025 after the first >RMB 4B quarterly profit.",
@@ -897,6 +902,6 @@
    "url": "https://stockanalysis.com/quote/she/300274/company/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "bechtel",
  "name": "Bechtel",
  "legalName": "Bechtel Group, Inc. (principal operating company Bechtel Corporation)",
@@ -209,6 +209,7 @@
    "type": "partner",
    "note": "October 2025 partnership to modularize the Omniverse DSX blueprint for gigawatt-scale AI factories.",
    "context": "Bechtel's Manufacturing & Technology unit turns NVIDIA's 1 GW reference architecture into deployable factory modules that compress time to first revenue token. The dossier assesses this as Bechtel positioning one phase ahead of the AI construction cycle: not competing for today's hyperscale shells, but industrializing tomorrow's gigawatt factories with the OEM that defines them.",
+   "via": "Omniverse DSX",
    "status": "active",
    "since": "2025-10"
   },
@@ -555,6 +556,6 @@
    "url": "https://www.bechtel.com/about/leadership/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

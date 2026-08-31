@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "burns-mcdonnell",
  "name": "Burns & McDonnell",
  "legalName": "Burns & McDonnell (100% employee-owned via ESOP; no outside shareholders)",
@@ -193,6 +193,7 @@
    "type": "customer",
    "note": "The De Soto, KS wastewater treatment-plant capacity doubling — opened June 2026 — was built to support Panasonic's EV-battery manufacturing site.",
    "context": "The water practice riding the manufacturing-reshoring adjacency: giga-factories, like data centers, force utility infrastructure the firm gets paid to design and build.",
+   "via": "wastewater treatment",
    "status": "active",
    "since": "2026-06"
   },
@@ -530,6 +531,6 @@
    "url": "https://www.tdworld.com/home/contact/21140190/keegan-odle"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

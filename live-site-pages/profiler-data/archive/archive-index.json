@@ -17,6 +17,28 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-29",
       "supersededBy": 4
+    },
+    {
+      "file": "amazon.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
+    }
+  ],
+  "arevon": [
+    {
+      "file": "arevon.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "blattner": [
+    {
+      "file": "blattner.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
     }
   ],
   "byd": [
@@ -37,6 +59,20 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-22",
       "supersededBy": 4
+    },
+    {
+      "file": "byd.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 6
+    }
+  ],
+  "canadian-solar": [
+    {
+      "file": "canadian-solar.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
     }
   ],
   "catl": [
@@ -57,6 +93,44 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-22",
       "supersededBy": 4
+    },
+    {
+      "file": "catl.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 6
+    }
+  ],
+  "crrc-zhuzhou": [
+    {
+      "file": "crrc-zhuzhou.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "enchanted-rock": [
+    {
+      "file": "enchanted-rock.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "envision-energy": [
+    {
+      "file": "envision-energy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "eolian": [
+    {
+      "file": "eolian.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
     }
   ],
   "flexgen": [
@@ -77,6 +151,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-22",
       "supersededBy": 4
+    },
+    {
+      "file": "flexgen.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 6
     }
   ],
   "fluence": [
@@ -97,6 +177,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-22",
       "supersededBy": 4
+    },
+    {
+      "file": "fluence.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 6
     }
   ],
   "hithium": [
@@ -123,6 +209,12 @@
       "profileVersion": 4,
       "archivedAt": "2026-08-24",
       "supersededBy": 5
+    },
+    {
+      "file": "hithium.profile.v6.json",
+      "profileVersion": 6,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 7
     }
   ],
   "huawei-digital-power": [
@@ -137,6 +229,68 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-22",
       "supersededBy": 3
+    },
+    {
+      "file": "huawei-digital-power.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
+    }
+  ],
+  "hyperstrong": [
+    {
+      "file": "hyperstrong.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "jupiter-power": [
+    {
+      "file": "jupiter-power.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "key-capture-energy": [
+    {
+      "file": "key-capture-energy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "lightsource-bp": [
+    {
+      "file": "lightsource-bp.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "ls-energy-solutions": [
+    {
+      "file": "ls-energy-solutions.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "mainspring-energy": [
+    {
+      "file": "mainspring-energy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "mastec": [
+    {
+      "file": "mastec.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
     }
   ],
   "megmeet": [
@@ -150,6 +304,68 @@
       "file": "megmeet.profile.v2.json",
       "profileVersion": 2,
       "archivedAt": "2026-08-22",
+      "supersededBy": 3
+    },
+    {
+      "file": "megmeet.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
+    }
+  ],
+  "narada": [
+    {
+      "file": "narada.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "nextera-energy-resources": [
+    {
+      "file": "nextera-energy-resources.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "on-energy": [
+    {
+      "file": "on-energy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "plus-power": [
+    {
+      "file": "plus-power.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "prevalon": [
+    {
+      "file": "prevalon.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "proenergy": [
+    {
+      "file": "proenergy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "samsung-ct": [
+    {
+      "file": "samsung-ct.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
       "supersededBy": 3
     }
   ],
@@ -171,6 +387,20 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-22",
       "supersededBy": 4
+    },
+    {
+      "file": "sinexcel.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 6
+    }
+  ],
+  "solv-energy": [
+    {
+      "file": "solv-energy.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
     }
   ],
   "sungrow": [
@@ -191,6 +421,28 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-22",
       "supersededBy": 4
+    },
+    {
+      "file": "sungrow.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 6
+    }
+  ],
+  "sunwoda": [
+    {
+      "file": "sunwoda.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "terra-gen": [
+    {
+      "file": "terra-gen.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
     }
   ],
   "tesla": [
@@ -219,6 +471,22 @@
       "supersededBy": 6
     }
   ],
+  "trina-storage": [
+    {
+      "file": "trina-storage.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
+  "voltagrid": [
+    {
+      "file": "voltagrid.profile.v2.json",
+      "profileVersion": 2,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 3
+    }
+  ],
   "wartsila": [
     {
       "file": "wartsila.profile.v1.json",
@@ -237,6 +505,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-22",
       "supersededBy": 4
+    },
+    {
+      "file": "wartsila.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 6
     }
   ],
   "zhonhen": [
@@ -257,6 +531,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-22",
       "supersededBy": 4
+    },
+    {
+      "file": "zhonhen.profile.v5.json",
+      "profileVersion": 5,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 6
     }
   ],
   "abb": [
@@ -265,6 +545,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "abb.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "aligned": [
@@ -273,6 +559,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "aligned.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "applied-digital": [
@@ -281,6 +573,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "applied-digital.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "bechtel": [
@@ -289,6 +587,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "bechtel.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "black-veatch": [
@@ -297,6 +601,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "black-veatch.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "bloom-energy": [
@@ -305,6 +615,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "bloom-energy.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "burns-mcdonnell": [
@@ -313,6 +629,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "burns-mcdonnell.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "constellation-energy": [
@@ -321,6 +643,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "constellation-energy.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "core-scientific": [
@@ -343,6 +671,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "coreweave.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "crusoe": [
@@ -357,6 +691,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "crusoe.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "delta-electronics": [
@@ -365,6 +705,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "delta-electronics.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "dpr": [
@@ -373,6 +719,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "dpr.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "eaton": [
@@ -381,6 +733,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "eaton.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "equinix": [
@@ -389,6 +747,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "equinix.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "eve-energy": [
@@ -397,6 +761,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "eve-energy.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "ge-vernova": [
@@ -405,6 +775,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "ge-vernova.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "google": [
@@ -419,6 +795,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "google.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "hitachi-energy": [
@@ -427,6 +809,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "hitachi-energy.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "jinko": [
@@ -435,6 +823,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "jinko.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "hitt": [
@@ -465,6 +859,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "iren.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "kiewit": [
@@ -473,6 +873,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "kiewit.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "lambda": [
@@ -487,6 +893,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "lambda.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "lg-energy-solution": [
@@ -495,6 +907,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "lg-energy-solution.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "liteon": [
@@ -503,6 +921,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "liteon.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "meta": [
@@ -517,6 +941,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "meta.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "microsoft": [
@@ -531,6 +961,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "microsoft.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "mortenson": [
@@ -539,6 +975,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "mortenson.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "nebius": [
@@ -553,6 +995,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "nebius.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "nvidia": [
@@ -561,6 +1009,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "nvidia.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "openai": [
@@ -575,6 +1029,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "openai.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "oracle": [
@@ -589,6 +1049,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-29",
       "supersededBy": 3
+    },
+    {
+      "file": "oracle.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "panasonic": [
@@ -597,6 +1063,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "panasonic.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "primoris": [
@@ -605,6 +1077,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "primoris.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "qts": [
@@ -613,6 +1091,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "qts.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "quanta-services": [
@@ -621,6 +1105,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "quanta-services.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "rosendin": [
@@ -629,6 +1119,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "rosendin.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "samsung-sdi": [
@@ -637,6 +1133,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "samsung-sdi.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "schneider-electric": [
@@ -645,6 +1147,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "schneider-electric.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "siemens-energy": [
@@ -653,6 +1161,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "siemens-energy.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "stack-infrastructure": [
@@ -661,6 +1175,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "stack-infrastructure.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "terawulf": [
@@ -669,6 +1189,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "terawulf.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "switch": [
@@ -677,6 +1203,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "switch.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "turner-construction": [
@@ -685,6 +1217,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "turner-construction.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "vantage": [
@@ -693,6 +1231,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "vantage.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "vertiv": [
@@ -701,6 +1245,12 @@
       "profileVersion": 1,
       "archivedAt": "2026-08-22",
       "supersededBy": 2
+    },
+    {
+      "file": "vertiv.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "xai": [

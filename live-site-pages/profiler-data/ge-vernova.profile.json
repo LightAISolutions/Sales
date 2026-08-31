@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "ge-vernova",
  "name": "GE Vernova",
  "legalName": "GE Vernova Inc.",
@@ -144,6 +144,7 @@
    "note": "Three jointly developed AI-factory 800 VDC reference designs with Omniverse digital twins.",
    "context": "October 2025: GE Vernova and NVIDIA published AI Factory 800 VDC reference designs in grid-connected, islanded, and bridging-power variants — 13.8 kV AC converted to 800 VDC at the perimeter via solid-state transformers and industrial rectifiers, with digital twins in NVIDIA's Omniverse DSX Blueprint. GEV's claim on the AI-factory perimeter.",
    "source": "https://library.grid.gevernova.com/white-papers-case-studies/ai-factory-800vdc-reference-designs",
+   "via": "800 VDC reference designs",
    "status": "active",
    "since": "2025-10"
   },
@@ -153,6 +154,7 @@
    "note": "LM2500XPRESS aeroderivative fleets power Crusoe AI data centers.",
    "context": "Crusoe runs GEV's LM2500XPRESS packaged aeroderivative units (>99.8% availability) as fast-deploy prime power for its AI data centers — one of the marquee examples of hyperscale loads routing around the grid queue via GEV hardware, alongside Chevron's 4 GW 'power foundries' (seven 7HA turbines) and Oracle Abilene's on-site turbines.",
    "source": "https://www.gevernova.com/gas-power/industries/data-centers",
+   "via": "LM2500XPRESS",
    "status": "active",
    "scale": "LM2500XPRESS fleet deployments"
   },
@@ -162,6 +164,7 @@
    "note": "On-site GEV turbines power Oracle's Stargate Abilene build-out.",
    "context": "Oracle Abilene's behind-the-meter generation is cited in GEV's own investor materials as a flagship case of data centers routing around the interconnection queue with GEV hardware — part of the demand base that has turbine reservations sold out through ~2030 at ~$3,000/kW implied combined-cycle pricing (roughly triple three years ago).",
    "source": "https://www.utilitydive.com/news/ge-vernova-gas-turbine-investor/807662/",
+   "project": "stargate",
    "status": "active"
   },
   {
@@ -187,6 +190,21 @@
    "context": "Eaton sits in the global transformer top tier with Hitachi Energy, Siemens Energy, GEV and Toshiba. With US transformer lead times at 2.5-4 years and prices up sharply, the two compete for the same data-center and utility electrification backlog — GEV's edge being the wholly owned Prolec GE North American footprint.",
    "source": "https://www.woodmac.com/news/opinion/supply-shortages-and-an-inflexible-market-give-rise-to-high-power-transfo",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US import tariffs",
+   "status": "in-effect",
+   "exposure": "Tariffs are a $100–200M headwind for GEV in 2026 — a named driver (with widening wind losses) of the Q2 2026 adjusted-EPS miss (~$2.47 vs ~$3.04 consensus, a ~19% miss) even as orders broke records and guidance was raised.",
+   "source": "https://www.gevernova.com/sites/default/files/gev_webcast_pressrelease_07222026.pdf"
+  },
+  {
+   "regime": "US offshore wind stop-work",
+   "status": "in-effect",
+   "effectiveDate": "2025-12",
+   "exposure": "The December 2025 federal stop-work order forced further offshore contract-loss accruals in a Wind segment whose losses overshot guidance in 2025 (~$600M vs ~$400M guided); the dossier assesses wind will keep subtracting roughly $400M of EBITDA annually through 2026-27 with limited strategic exit options — management's language signals containment, not resolution.",
+   "source": "https://www.bostonglobe.com/2026/01/28/business/ge-vernova-offshore-wind-losses/"
   }
  ],
  "technicalSpecs": [
@@ -465,6 +483,6 @@
    "url": "https://www.gevernova.com/gas-power/industries/data-centers"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "constellation-energy",
  "name": "Constellation Energy",
  "legalName": "Constellation Energy Corporation",
@@ -121,6 +121,7 @@
    "note": "20-year, 835 MW PPA behind the Crane Clean Energy Center (Three Mile Island Unit 1) restart — the deal that defines hyperscaler firm-power pricing.",
    "context": "Analysts price the PPA at ~$112/MWh, roughly twice regional renewable rates. The restart is running ahead of schedule toward 2027, backed by a $1B DOE Energy Dominance Financing loan and a FERC interconnection-rights waiver. Microsoft is also the anchor customer of Constellation's hourly carbon-free matching platform (built on Azure).",
    "source": "https://www.constellationenergy.com/news/2025/11/us-government-backs-constellations-plan-to-launch-crane-clean-energy-center-adding-835-mws-of-new-baseload-power-to-the-grid.html",
+   "via": "Crane Clean Energy Center PPA",
    "status": "active",
    "since": "2024-09",
    "scale": "835 MW / 20 years"
@@ -130,6 +131,7 @@
    "type": "customer",
    "note": "20-year, 1,121 MW PPA at Clinton from June 2027 — replacing the expiring state ZEC program, with a 30 MW uprate.",
    "context": "Analyst-estimated ~$70/MWh for existing output. Utility Dive reads the Clinton deal as 'the first of many' for existing reactors; together with Walmart's first retailer nuclear PPA (176 MW Dresden) and 920 MW of additional long-term deals signed in Q2 2026 alone, it makes Constellation the reference seller of firm clean energy to large loads.",
+   "via": "Clinton nuclear PPA",
    "status": "active",
    "since": "2027",
    "scale": "1,121 MW / 20 years"
@@ -139,6 +141,28 @@
    "type": "other",
    "note": "No direct deal documented — FERC's 2024 rejection of the Talen/Amazon co-location arrangement chilled behind-the-meter deals and prompted Constellation's own complaint, which won a December 2025 order directing PJM to write co-location rules.",
    "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FERC co-location rules (PJM)",
+   "status": "announced",
+   "exposure": "FERC's 2024 rejection of the Talen/Amazon co-location arrangement chilled behind-the-meter deals and forced the industry pivot to front-of-meter and virtual PPAs; Constellation's own complaint won the December 2025 order directing PJM to write transparent co-location and large-load tariff rules, and management explicitly ties the next deal wave to that rulemaking — expecting deal flow to 'kick off with a bit of a bang' once the rules land.",
+   "mitigation": "Constellation filed the FERC complaint itself, and its marquee deals (Crane/Microsoft) are structured as grid-delivered PPAs rather than behind-the-meter arrangements.",
+   "source": "https://www.utilitydive.com/news/ferc-pjm-colocation-data-center/808368/"
+  },
+  {
+   "regime": "§45U nuclear PTC",
+   "status": "in-effect",
+   "exposure": "The ~$43.75/MWh nuclear PTC floor underwrites the 'protected downside, unlimited upside' pitch through 2032 — but FY2025 already recorded 'unfavorable PTC portfolio results,' and the credit's expiry is inside the term of every PPA the company is signing.",
+   "source": "https://www.spglobal.com/marketintelligence/en/news-insights/latest-news-headlines/constellation-stock-price-jumps-on-nuclear-tax-credit-earnings-certainty-80617932"
+  },
+  {
+   "regime": "Illinois ZEC program",
+   "status": "in-effect",
+   "exposure": "Clinton's state ZEC support expires in June 2027 — the policy revenue stream the 20-year Meta PPA was structured to replace at market-based terms.",
+   "mitigation": "The 20-year, 1,121 MW Meta PPA for Clinton's output from June 2027, with a 30 MW uprate.",
+   "source": "https://www.constellationenergy.com/news/2025/constellation-meta-sign-20-year-deal-for-clean-reliable-nuclear-energy-in-illinois.html"
   }
  ],
  "technicalSpecs": [
@@ -362,6 +386,6 @@
    "date": "2024-02"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

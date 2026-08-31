@@ -77,6 +77,136 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v03.00r] — 2026-08-24 06:16:16 PM EST — [0c1bc91](https://github.com/LightAISolutions/Sales/commit/0c1bc918a9276ff66a7426136a25b5fbf7c03530)
+
+> **Prompt:** "Picking up from my recent "Profiler app role-based access control" session, I suddenly cannot sign into my Profiler app as jonyang92@gmail.com with the following error message. What's going on? Fix it." *(with a screenshot of the Profiler sign-in screen showing "Sign-in could not reach the access list, so it could not confirm your account. This is usually temporary — please try again in a moment. (code: acl_unavailable/acl_unreachable)")*
+
+### Added
+- **Remote ACL health probe in `Profiler.gs`** — `aclHealthProbe_()` (PROJECT block), dispatched as unauthenticated `GET ?action=api&op=aclhealth` (inline `// PROJECT:` branch beside the deploy fallback in `doGet`). It runs the exact Access-tab read sequence sign-in performs before trusting the list — `openById` → tab lookup → data read → page-column scan — and reports the failing stage plus the caught exception message (spreadsheet ID redacted, 200-char cap, 60-second result cache so unauthenticated callers cannot burn Sheets quota). Same trust model as the deliberately-unauthenticated deploy fallback: it returns only reason codes the sign-in screen already shows any visitor, never emails, rows, or ACL contents. Turns an `acl_unavailable` outage from an Apps-Script-editor-log round-trip into a one-curl diagnosis
+
+### Changed
+- **`Profiler.gs`** VERSION v01.20g → v01.21g; `Profilergs.version.txt` synced; generic public entry added to the GAS changelog (counter 20 → 21)
+- **README tree** — Profiler version display corrected from the stale `v01.38w · v01.17g` to the current `v01.42w · v01.21g` (drift left by earlier pushes)
+
+### Notes
+- Investigation established before the probe was written: the reported code (`acl_unavailable/acl_unreachable`) is produced only when the deployed script **throws while opening/reading the Master ACL spreadsheet**; the entire auth/ACL code path is unchanged across the recent GAS versions (v01.19g/v01.20g appended guidance-module content only), and all four live deployments (Profiler v01.20g, Receipts, Scraper, MasterACL) answered the unauthenticated version check as healthy and current — so the cause is environment-side (grant/spreadsheet/transient), not a repo regression. The probe exists to name which one
+- `node --check` clean on a `.js` copy of Profiler.gs; `scripts/check-gas-inner-scripts.js` clean (75 inner blocks)
+
+## [v02.99r] — 2026-08-24 05:13:40 PM EST — [33def8f](https://github.com/LightAISolutions/Sales/commit/33def8f4baeedaf33d88603b3ef4491395bc443a)
+
+> **Prompt:** "Output both reports as downloadable PDFs, then continue with Phase 5." *(Both Phase 4 playbook PDFs were delivered to the developer as downloadable attachments, then Phase 5 — the team training curriculum, the final phase of the v02.91r plan ("training materials to teach core technical, power infrastructure, policy … to newer teammates") — executed. Policy/procurement/bankability teaching already existed as three guidance modules; the two gaps (core technical, power infrastructure) were filled the same in-app way, and a curriculum document sequences all assets into a four-week onboarding program.)*
+
+### Added
+- **Two training modules in the Industry Guidance library** (PROJECT block of `googleAppsScripts/Profiler/Profiler.gs`, registered in `guidanceDocs_()` — library now 6 documents): `guidanceDocBessTech_()` — *BESS Technology Fundamentals for the Sales Team* (LFP in plain terms, the spec sheet decoded, the 280→1300Ah cell ladder as bars, cell-to-container integration, sodium-ion claim discipline, duration-class proscons, safety/certification vocabulary, flashcards + self-test + pointer-form claims ledger + 13-term glossary); `guidanceDocPowerInfra_()` — *Power Infrastructure & the AIDC Power Chain* (grid organization and MW-vs-MWh, the two market designs, the battery revenue stack, the grid-to-GPU chain with NOGRR 282/SB 6, the three BESS sockets, the 2026-28 gates timeline in three lanes, vocabulary callout, flashcards + self-test + ledger + 12-term glossary). Teaching syntheses only — no new external claims; ledgers point to the internal sources carrying the citations
+- **Two analysis markdowns** (source of truth, never deployed) in `repository-information/industry-guidance/`: `bess-technology-fundamentals-analysis.md`, `power-infrastructure-aidc-analysis.md` — provenance, teaching sequence, pointer-form claims ledgers, flagged teaching simplifications, scope notes
+- **The team training curriculum** — `repository-information/study-prep/hithium/hithium-team-training-curriculum.md` + `HITHIUM-TEAM-TRAINING-CURRICULUM.pdf` (5 pages): the four-week onboarding program (the machine → the grid and the buildout → the policy stack → the motion), each week with study assets, dossier rotations, exercises, and a pass/fail competency gate (G1-G4, consolidated with failure handling); before-day-one setup (contributor-tier grant, playbook timing, day-one standards); the post-week-4 cadence; and the trainer's notes (gate-don't-lecture, the week-3 shortcut trap, concede-then-structure as the house pattern)
+
+### Changed
+- **`Profiler.gs`** VERSION v01.19g → v01.20g; `Profilergs.version.txt` synced; generic public entry added to the GAS changelog (counter 19 → 20)
+- **`scripts/build-study-prep-pdf.mjs`** — curriculum registered in the DOCS registry (kick `Profiler Study Prep · Team Training`)
+- **README tree** — two analysis entries inserted into the `industry-guidance/` block and the curriculum md/PDF pair added under `study-prep/hithium/`, all in filename order
+
+### Notes
+- Verification before push: `node --check` on a `.js` copy of Profiler.gs; `scripts/check-gas-inner-scripts.js` (75 inner blocks clean); JSON/tooltip/quiz validation of both module objects (all `{{term}}` tooltips resolve, quiz indices in range); Playwright render of both modules via direct `gdRenderDoc()` invocation (screenshots inspected — tiles, nav, tooltips, ledger, glossary all correct); standard harness smoke test (Profiler PASS)
+- Guidance content ships inside `Profiler.gs` (repo + GAS project only, never on public Pages); access remains role-gated server-side; `Profiler.html` stays at v01.42w — the renderer needed no page changes
+- Both Phase 4 playbook PDFs were also delivered to the developer as chat attachments this interaction
+- **The v02.91r plan is complete** — Phases 1-5 all delivered (88-dossier base, guidance modules, Hithium v5 + relationship web, the two playbooks, the training curriculum)
+
+## [v02.98r] — 2026-08-24 04:53:57 PM EST — [75878f6](https://github.com/LightAISolutions/Sales/commit/75878f6a3f25354cf1f56f6a28ba79775fe73389)
+
+> **Prompt:** "Picking up from my recent "Profiler app role-based access control" session, continue with Phase 4." *(Executes Phase 4 of the plan approved under v02.91r — the Hithium sales strategy report as two documents, per the developer decision recorded in the v02.97r session context. Both documents synthesize the completed understanding phase: the 88-dossier base, the Hithium v5 AIDC-lens dossier, the relationship-web deliverable, and the three Industry Guidance analyses.)*
+
+### Added
+- **The IC sales playbook** — `repository-information/study-prep/hithium/hithium-ic-playbook.md` + `HITHIUM-IC-PLAYBOOK.pdf` (7 pages): the account executive's working document — the one-page market fence (the four federal machines, three open lanes, four closed doors), the six-channel hunt map with the Jupiter-pattern account profile, a seven-question first-call qualification script with a disqualifier table, the MACR-arithmetic-as-a-service play, a seven-row objection-handling table (FEOC listing, tariffs, the lapsed IPO, the CATL suit, Moss Landing, domestic content, BMS security), the five-play Jupiter account defense against the Peak Energy sodium wedge with early-warning indicators, the 10-item proof pack, and the red-lines/vocabulary-discipline list
+- **The team-lead playbook** — `repository-information/study-prep/hithium/hithium-team-lead-playbook.md` + `HITHIUM-TEAM-LEAD-PLAYBOOK.pdf` (6 pages): the sales leader's working document — the three-judgment market thesis (certified MW over queue GW; the fence's lane concentration; the low-drama-book imperative), the six-demand-pool coverage plan with staffing allocation, the dated 2026-28 policy calendar with per-gate team actions, competitive rules of engagement (ON.energy, the gas cohort, CATL, the FEOC-compliant tier, Peak Energy), five-stage pipeline gates with enforced counting rules (MOUs at zero; the safe-harbor pool as a depletion asset), team standards, and the 2026-28 play
+
+### Changed
+- **`scripts/build-study-prep-pdf.mjs`** — both playbooks registered in the DOCS registry (kick `Profiler Study Prep · Sales Strategy`, classification Internal — sales strategy)
+- **README tree** — four entries added under `study-prep/hithium/` (both markdown sources and both typeset PDFs)
+
+### Notes
+- Data/documentation-only change: no HTML page or GAS script touched (`Profiler.html` stays at v01.42w, `Profiler.gs` at v01.19g)
+- Phase 5 (the team training curriculum) is the remaining phase of the v02.91r plan
+
+## [v02.97r] — 2026-08-24 02:47:41 PM EST — [e06b86f](https://github.com/LightAISolutions/Sales/commit/e06b86f80289116a8d378dc157f4e1fe51bf6b13)
+
+> **Prompt:** "continue with Phase 3" *(Executes Phase 3 of the plan approved under v02.91r — the Hithium dossier v5 revision through the AIDC lens plus the relationship-web deliverable, completing the understanding phase. Research ran as one focused delta-sweep background agent (~44 tool uses); its digest arrived while the stop-hook-prompted interim commit was being prepared, so the whole phase landed as this single push after all.)*
+
+### Added
+- **The relationship-web deliverable** — `repository-information/study-prep/hithium/hithium-relationship-web.md`: the US AIDC containerized-BESS web from Hithium's seat, synthesized from the 88-dossier base — the eight-layer value chain (anchor tenants → neoclouds → colos → power developers/IPPs → EPCs/GCs → BESS OEMs → FEOC-immune BtM adjacents → utilities/grid rules), Hithium's verified-relationship grades, the cell-brand decision map per channel, two Mermaid diagrams (full web + Hithium ego-network), and the six 2026-2028 demand pools
+
+### Changed
+- **Hithium dossier revised to profileVersion 5 (AIDC lens)** — `hithium.profile.json`: new `∞Power Solutions for AI Data Center` product entry (four-SKU lithium-sodium portfolio; positioned as a full-duration energy backbone, NOT a compliance-grade UPS — no NOGRR 282/LVRT claims, zero named customers eight months post-launch) with an AIDC/US-book spec annex (∞Power8 6.9 MW/55.2 MWh, Q4 2026 mass delivery; Jupiter 3 GWh + Trimount EFSB approval Feb 2026; MGN NYC 55 MW/290 MWh; the Jupiter-Peak Energy sodium wedge); six new recentDevelopments (Fraser Coast 421 MWh, Heze park, Trimount, the Dec 2025 AIDC launch, Jupiter-Peak, MGN); three new AIDC-lens strategy reads (marketing-position-not-yet-business; ON.energy sets the US category terms; the anchor account is strong but no longer exclusive-trending); 13 new sources (51 total); v4 archived to `archive/hithium.profile.v4.json` + `archive-index.json` entry
+- **Registry** — hithium `lastUpdated` synced to 2026-08-24 (was stale at 08-09) and tagline refreshed with the AIDC line
+- **README tree** — relationship-web entry added under `study-prep/hithium/`; archive entries added for `hithium.profile.v4.json` **and** `hithium.profile.v3.json` (drift fix — the v3 entry had been missed in the v3→v4 revision push)
+
+### Notes
+- Data-only change: `Profiler.html` stays at v01.42w
+- Phase 1-3 (the understanding phase) is complete; the sales-strategy report (Phase 4) and training curriculum (Phase 5) await the developer's go
+
+## [v02.96r] — 2026-08-24 01:51:27 PM EST — [5a7c28b](https://github.com/LightAISolutions/Sales/commit/5a7c28b97d157a9e8e4211504241220ba4f32961)
+
+> **Prompt:** "continue with Phase 2" *(Executes Phase 2 of the plan approved under v02.91r — the three Industry Guidance study modules that convert the Phase 1 dossier base into teachable context. Research ran as three parallel background agents (~55/~60/~50 sources); notable finding: the current stacked China tariff is ~40.9% — the 58.4% print circulating in some trackers is the pre-February stack from before the Supreme Court struck the IEEPA layers.)*
+
+### Added
+- **Three Industry Guidance modules** in the PROJECT block of `googleAppsScripts/Profiler/Profiler.gs`, registered in `guidanceDocs_()` (library now 4 documents): `guidanceDocChinaPolicy_()` — the China policy stack for a BESS seller (FEOC/PFE entity tests, the 55→75% storage MACR ladder, the 2026 tariff rollercoaster to the current ~40.9% stack, NDAA §154/FY2026 phases, the five compliant lanes, and sales red lines); `guidanceDocUtilityAidc_()` — utility procurement meets AIDC load (Oncor/AEP/Entergy/Dominion/Georgia Power case studies, the 85% minimum-take tariff norm, the five BESS demand channels, the two-lane buyer map); `guidanceDocBankability_()` — bankability & certification (the UL/NFPA/grid certification stack, Moss Landing/EPRI context, IE diligence mechanics, the Hithium counterparty file, the 10-item RFP checklist). Each module carries tiles, timeline/bars/table/proscons sections, a claims ledger, flashcards, a quiz, and a glossary — rendered by the existing guidance renderer with no page changes
+- **Three analysis markdowns** (source of truth, never deployed) in `repository-information/industry-guidance/`: `china-policy-stack-analysis.md`, `utility-aidc-procurement-analysis.md`, `bess-bankability-certification-analysis.md` — research provenance, executive reads, deep dives, claims ledgers with source links, and scope notes
+
+### Changed
+- **`Profiler.gs`** VERSION v01.18g → v01.19g; `Profilergs.version.txt` synced; generic public entry added to the GAS changelog
+- **README tree** — three analysis-file entries inserted into the `industry-guidance/` block in filename order
+
+### Notes
+- **Archive rotation executed this push** — the counter reached 101 sections; the oldest date group (2026-08-08, 12 sections v01.96r–v02.07r) rotated to `CHANGELOG-archive.md` with SHA enrichment, leaving 89
+- Module content ships inside `Profiler.gs` (repo + GAS project only, never on public Pages); guidance access remains role-gated server-side
+- Phase 3 next: Hithium dossier v5 (AIDC lens) + the relationship-web deliverable
+
+## [v02.95r] — 2026-08-24 01:27:35 AM EST — [cd49b37](https://github.com/LightAISolutions/Sales/commit/cd49b37ff6d708be4a8f869f05ff96fa15fea7f2)
+
+> **Prompt:** "continue with Batch D" *(Executes Batch D of the plan approved under v02.91r — the behind-the-meter power packagers that are not Hithium BESS competitors but map the FEOC-immune gas/hybrid adjacent competition for AIDC energy dollars. Research ran as five parallel background agents; the VoltaGrid agent died mid-run on a server error and was resumed via SendMessage to completion. The ON.energy evaluation sweep returned a FULL DOSSIER verdict — its 2025 pivot to a BESS-based medium-voltage AI UPS with a 5 GW Crusoe deployment makes it a direct product-category competitor to Hithium's ∞Power AIDC line — so Batch D landed five dossiers instead of four.)*
+
+### Added
+- **Five Batch D BtM-power dossiers** (`live-site-pages/profiler-data/`) — `voltagrid`, `enchanted-rock`, `proenergy`, `mainspring-energy` (all `supplier`), and `on-energy` (`supplier`+`integrator`) `.profile.json`, all schemaVersion 2 with banded contracted-book/platform annexes, labeled strategy reads with an explicit Hithium lens, and chronological sources. The through-line: the four gas/linear players (VoltaGrid 2.3 GW Oracle/OpenAI + >1 GW Vantage; ERock's Microsoft/Meta-EPE/Anthropic ~936 MW book post-NYSE-IPO; ProEnergy's >1.65 GW refurb-jet-core turbine orders; Mainspring's OBBBA flat-30%-ITC linear generators) carry zero BESS in their product lines — every campus they win defers a containerized-storage purchase while leaving an open storage-attach socket — and ON.energy is productizing BESS itself into that chain as a FEOC-clean MV AI UPS with the cell supplier still unnamed
+- **Registry** — `profiler-companies.json` grows 83 → 88 companies
+
+### Changed
+- **README tree** — five `*.profile.json` entries inserted into the `profiler-data/` block in filename order
+
+### Notes
+- Data-only change: `Profiler.html` stays at v01.42w
+- Phase 1 (dossier coverage) is complete; Phase 2 (Industry Guidance modules) and Phase 3 (Hithium dossier v5 + relationship-web deliverable) follow
+- Capacity counter reaches 100/100 — the next push commit triggers mandatory archive rotation with SHA enrichment
+
+## [v02.94r] — 2026-08-24 12:41:29 AM EST — [75c94dc](https://github.com/LightAISolutions/Sales/commit/75c94dca4fd4bf26348a78a573c7409aee546c3e)
+
+> **Prompt:** "continue with Batch C" *(Executes Batch C of the plan approved under v02.91r — the four EPC dossiers, the last unmapped link between the Batch A suppliers and Batch B buyers. Research ran as five parallel background agents: a two-stage first-party/third-party sweep for Samsung C&T (the third Hithium prospectus reference) and single combined sweeps for SOLV Energy, Blattner, and MasTec.)*
+
+### Added
+- **Four Batch C EPC dossiers** (`live-site-pages/profiler-data/`) — `solv-energy`, `blattner`, `mastec`, `samsung-ct` `.profile.json`, all schemaVersion 2 under the existing `epc` category with banded construction-record/interface annexes, labeled strategy reads with an explicit Hithium lens, and chronological sources. Key verifications: the Samsung C&T-Hithium relationship is a real, prospectus-cited ~10 GWh E&C cooperation agreement (Jan 2025) that remains publicly unconverted 19 months on, and its US develop-and-sell arm hands battery procurement to buyers (Sunraycer chose e-STORAGE for the ex-Samsung Texas pipeline); the owner-furnished procurement norm is documented across SOLV (Tesla on every flagship), Blattner (Fluence/e-STORAGE, owner-selected — including the Slate precedent of installing China-linked BESS), and MasTec (twice-documented Sungrow pairings, both owner-selected)
+- **Registry** — `profiler-companies.json` grows 79 → 83 companies (EPC category now 12)
+
+### Changed
+- **README tree** — four `*.profile.json` entries inserted into the `profiler-data/` block in filename order
+
+### Notes
+- Data-only change: `Profiler.html` stays at v01.42w
+- Phase 1 concludes with Batch D (BtM packagers: VoltaGrid, Enchanted Rock, ProEnergy, Mainspring; ON.energy evaluated during the batch)
+
+## [v02.93r] — 2026-08-24 12:15:30 AM EST — [6a3d0b3](https://github.com/LightAISolutions/Sales/commit/6a3d0b312a1e6ea5b5f573bb0c1aa21bed1ee6b5)
+
+> **Prompt:** "continue with Batch B" *(Executes Batch B of the plan approved under v02.91r — the eight IPP/developer dossiers covering the buyer side of the containerized-BESS web. Research ran as ten parallel background agents: two-stage first-party/third-party sweeps for the two Hithium prospectus references (Jupiter Power, Lightsource bp) and single combined sweeps for the other six.)*
+
+### Added
+- **Eight Batch B IPP dossiers** (`live-site-pages/profiler-data/`) — `nextera-energy-resources`, `jupiter-power`, `plus-power`, `arevon`, `lightsource-bp`, `key-capture-energy`, `eolian`, `terra-gen` `.profile.json`, all schemaVersion 2 with banded fleet/supplier Technical Annexes, labeled strategy reads with an explicit Hithium lens, and chronological sources. The batch verifies both Hithium prospectus references at trade-press level: Jupiter (3 GWh 2024 supply deal + the 2.8 GWh Trimount design win with 5.015 MWh units) and Lightsource bp (640 MWh Woolooga, Australia — 128 × 5 MWh containers); documents each buyer's FEOC posture (NextEra's domestic lock through 2029, Terra-Gen's 8 GWh LG Vertech pivot, Eolian's American-built coalition stance, Arevon's Tesla monogamy, Plus Power's dual-source Tesla/Sungrow split, KCE's open windows); and corrects two tasking premises (Big Rock belongs to Gore Street, not Arevon; ECP fully exited Terra-Gen in Oct 2024)
+- **`ipp` registry category** — `profiler-companies.json` gains `ipp` in its category list and grows 71 → 79 companies; `Profiler.html` (v01.42w) adds the category to `ovSafeCat`'s known list, an `IPP` display label in `ovCatLabel`, and an `--ov-ipp` tag color, so roster chips and tags render the new category natively
+
+### Changed
+- **README tree** — eight `*.profile.json` entries inserted into the `profiler-data/` block in filename order
+
+### Notes
+- `Profiler.html` v01.41w → v01.42w (page-side `ipp` support is a renderer change; dossier data remains data-only)
+- Batches C (EPCs) and D (BtM packagers) follow per the approved plan; Phase 2 Industry Guidance modules and the Hithium dossier v5 revision come after
+
 ## [v02.92r] — 2026-08-23 11:37:09 PM EST — [aef66a2](https://github.com/LightAISolutions/Sales/commit/aef66a24436545878776dcb6a0ae73d017e122b0)
 
 > **Prompt:** "Approved — start Batch A" *(Executes Batch A of the plan approved under v02.91r — the nine containerized-BESS competitor dossiers, researched via the standard two-agent-per-company sweep (13 parallel background agents including shared policy/rankings passes). Structured-question decisions carried forward: Tiers 1+2 scope minus Powin; parallel subagents; utilities and standards bodies as Industry Guidance modules rather than dossiers; both IC and team-lead strategy documents.)*

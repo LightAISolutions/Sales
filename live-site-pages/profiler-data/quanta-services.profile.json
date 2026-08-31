@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "quanta-services",
  "name": "Quanta Services",
  "legalName": "Quanta Services, Inc.",
@@ -136,6 +136,7 @@
    "note": "Direct data-center electrical rival — at ~3.7x Rosendin's electrical revenue.",
    "context": "Quanta is the #1 US electrical contractor ($13.5B electrical revenue per EC&M 2025, roughly 3.7x #2 Rosendin) and its Technology & Load Centers end market (guided +220-240% in 2026) is head-to-head with Rosendin, MYR and IES in data-center electrical — the fastest-scaling craft-labor platform in the AIDC buildout, with record $53.4B backlog.",
    "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-co",
+   "via": "data-center electrical",
    "status": "active"
   },
   {
@@ -152,6 +153,7 @@
    "note": "Partial equipment rival once Quanta's transformer/breaker self-supply ramps from 2028.",
    "context": "Quanta's vertical integration into transformers and 800 kV breakers turns the #1 buyer of grid equipment into a partial competitor of Hitachi Energy, Siemens Energy and GE Vernova on critical-path gear — eroding scarcity rents at the margin and giving Quanta's EPC bids a schedule weapon. The dossier frames the two as the AIDC buildout's twin chokepoints: Quanta on craft labor, Hitachi on equipment.",
    "source": "Dossier vertical-integration assessment",
+   "via": "transformers and 800 kV breakers",
    "status": "active",
    "since": "2028"
   },
@@ -161,6 +163,7 @@
    "note": "Grid-equipment incumbent exposed to Quanta's self-supply move.",
    "context": "If the #1 buyer of grid equipment self-supplies transformers and breakers from 2028, the scarcity rents flowing to Hitachi/Siemens Energy/GE Vernova erode at the margin — Quanta as emerging partial competitor rather than pure customer of the equipment oligopoly.",
    "source": "Dossier vertical-integration assessment",
+   "via": "transformers and 800 kV breakers",
    "status": "active"
   },
   {
@@ -177,6 +180,7 @@
    "note": "Gas-generation EPC tier the NiSource program lifts Quanta into.",
    "context": "The NiSource generation program puts Quanta into gas-generation EPC against Bechtel/Kiewit-tier players — a new front for a company whose base is T&D craft labor and renewables (Blattner).",
    "source": "Dossier peer-set assessment",
+   "via": "gas-generation EPC",
    "status": "active"
   },
   {
@@ -185,6 +189,7 @@
    "note": "Gas-EPC incumbent Quanta now bids against.",
    "context": "Kiewit's gigawatt-class gas EPC franchise is the tier Quanta's NiSource program enters. Both hold AI-cycle backlogs at record levels; Kiewit brings OEM turbine-slot allocation, Quanta brings the largest craft-labor platform.",
    "source": "Dossier peer-set assessment",
+   "via": "gas-generation EPC",
    "status": "active"
   }
  ],
@@ -448,6 +453,6 @@
    "url": "https://en.wikipedia.org/wiki/LUMA_Energy"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

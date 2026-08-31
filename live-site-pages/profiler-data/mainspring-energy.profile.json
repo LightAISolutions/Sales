@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "mainspring-energy",
  "name": "Mainspring Energy",
  "shortName": "Mainspring",
@@ -186,6 +186,7 @@
    "note": "Amazon's Climate Pledge Fund joined the $258M Series F; reported last-mile linear-generator deployments.",
    "context": "April 2025: Mainspring closed a $258M Series F led by General Catalyst with Amazon's Climate Pledge Fund, DCVC and Temasek participating (total raised >$800M; NextEra, AEP and Chevron sit on the cap table as strategics). The utility & C&I fleet section also carries reported Amazon last-mile deployments of the linear generator — investor first, early customer second.",
    "source": "https://www.bloomberg.com/news/articles/2025-04-14/menlo-park-based-energy-startup-nabs-258-mil",
+   "via": "linear generators",
    "status": "active",
    "since": "2025-04"
   },
@@ -237,6 +238,27 @@
    "context": "Aggregator profiles circulate an 'NVIDIA backing' claim for Mainspring that no primary source confirms. The dossier holds it at low confidence and warns that repeating it in customer-facing material would be an unforced error — recorded here so the claim is flagged, not endorsed.",
    "source": "Dossier verification note",
    "status": "announced"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "effectiveDate": "2025-07",
+   "exposure": "Mainspring's decisive 2025 break was legislative: OBBBA (Jul 2025) classifies linear generators as 'qualified fuel cell property,' earning a flat 30% ITC under §48E for post-2025 construction starts with no zero-GHG requirement — gas-fired operation qualifies — and no prevailing-wage requirement; 100% value through 2033 starts, then 75%/50%/0% in 2034/35/36. The dossier calls Mainspring one of the bill's rare cleantech winners ('changed things overnight'), with the post-OBBBA demand surge arriving while the Pittsburgh factory is simultaneously delayed on DOE grant uncertainty.",
+   "source": "https://www.projectfinance.law/tax-equity-news/qa-fuel-cell-projects-eligible-for-itc-under-section-48e"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Effectively FEOC-immune: US-designed, US-built, DOE-backed — fuel-cell-category PFE rules apply but with no Chinese-supply-chain dependence, and Mainspring markets accordingly. The dossier calls its 30% ITC with zero China exposure the single cleanest policy contrast to an NDAA §154-named supplier (Hithium) in the competitive map: a flat 30% ITC versus escalating FEOC material-assistance ratios on storage from 2026.",
+   "source": "https://www.gibsondunn.com/focus-on-clean-energy-tax-provisions-in-the-one-big-beautiful-bill-act/"
+  },
+  {
+   "regime": "US air-quality permitting",
+   "status": "in-effect",
+   "exposure": "The permitting wedge is structural: sub-1.5 ppm NOx (<0.05 lb/MWh) with no SCR or after-treatment admits Mainspring to air-quality non-attainment areas — a claimed ~46% of planned data-center capacity — where diesel, recips and turbines face hard limits. The dossier frames this as where Mainspring wins against the speed-and-block-size onsite-generation cohort.",
+   "source": "https://www.energy.ca.gov/sites/default/files/2024-05/CEC-500-2024-037.pdf"
   }
  ],
  "decisionMakers": [
@@ -416,6 +438,6 @@
    "date": null
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

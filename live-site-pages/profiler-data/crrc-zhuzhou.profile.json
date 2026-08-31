@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "crrc-zhuzhou",
  "name": "CRRC Zhuzhou Institute",
  "shortName": "CRRC Zhuzhou",
@@ -220,6 +220,7 @@
    "type": "supplier",
    "note": "≥120 GWh cell-supply agreement for 2026–2030 (314/587/1,175 Ah) — one of the largest bilateral cell deals ever disclosed — while both compete in systems.",
    "context": "CRRC buys its cells, and Hithium is its single largest disclosed supplier; a 6.25 MWh CRRC variant on Hithium's 587 Ah cell already has >1 GWh deployed in northwest China. The dossier calls the relationship existential and double-edged for Hithium: CRRC is simultaneously the anchor customer underwriting its capacity expansion and the domestic systems rival its own integration business must beat.",
+   "via": "314/587/1,175 Ah cells",
    "status": "active",
    "since": "2026",
    "scale": "≥120 GWh through 2030"
@@ -230,6 +231,7 @@
    "note": "20 GWh cell order (January 2026: ~8 GWh of 314 Ah + ~12 GWh of 587 Ah) — the second mega-supplier locked within a month of the Hithium deal.",
    "context": "The dossier reads the two deals together as a deliberate cell-dependency hedge: supply security through 2030 from the two biggest storage-cell makers, both of whom sell competing systems.",
    "source": "ess-news, 2026-01-05",
+   "via": "314/587 Ah cells",
    "status": "active",
    "since": "2026-01",
    "scale": "20 GWh"
@@ -253,6 +255,33 @@
    "slug": "hyperstrong",
    "type": "competitor",
    "note": "Displaced HyperStrong as CNESA's #1 Chinese domestic ESS integrator on 2024 new installs."
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "DoD 1260H listing",
+   "status": "in-effect",
+   "exposure": "CRRC is a Defense Department 1260H 'Chinese Military Company' designee, carried for at least three consecutive lists — one pillar of a US exclusion the dossier assesses as structural and permanent under current law, with no US office, no US channel, and no workaround attempted; the company's Western play is Europe, MEA, Central Asia and Australia.",
+   "source": "https://railsecurity.org/wp-content/uploads/2024/02/Entity-List-Press-Release-021324-.pdf"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "As a Chinese central SOE under SASAC, CRRC holds automatic 'specified foreign entity' status under OBBBA — an automatic prohibited foreign entity under the FEOC rules, with no ownership-threshold analysis even applying and no FEOC workaround attempted. In the US market CRRC functions only as the cost benchmark and the proof of what the exclusion regime is excluding.",
+   "source": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/"
+  },
+  {
+   "regime": "TIVSA transit ban",
+   "status": "in-effect",
+   "effectiveDate": "2020",
+   "exposure": "TIVSA has banned CRRC from federal transit dollars since 2020 — the rail-side pillar of the structural US exclusion alongside the 1260H designation and automatic FEOC status.",
+   "source": "https://railsecurity.org/wp-content/uploads/2024/02/Entity-List-Press-Release-021324-.pdf"
+  },
+  {
+   "regime": "EU Foreign Subsidies Regulation",
+   "status": "in-effect",
+   "exposure": "CRRC's rail arm became the first-ever target of an EU Foreign Subsidies Regulation probe — in Bulgaria, the same country hosting the 200 MWh Bohot BESS European flagship — and the dossier assesses the FSR toolkit hangs over any subsidized European BESS expansion.",
+   "source": "https://www.prnewswire.com/news-releases/crrc-zhuzhou-institute-bohot-bess-bulgaria-full-capacity-grid-connection.html"
   }
  ],
  "decisionMakers": [
@@ -421,6 +450,6 @@
    "url": "https://www.crrcgc.cc/zsen/products_services/main_products/energy_system/energy_storage_system/index.html"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

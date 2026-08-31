@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "microsoft",
  "name": "Microsoft Corporation",
  "shortName": "Microsoft",
@@ -143,6 +143,7 @@
    "note": "~27% stake (~$135B) plus an incremental $250B Azure commitment under the October 2025 'next chapter' agreement.",
    "context": "The restructured partnership (announced Oct 28-30, 2025) gives Microsoft ~27% of OpenAI Group PBC while OpenAI contracted an incremental $250B of Azure purchases — and removed Microsoft's right of first refusal, opening OpenAI to multi-cloud procurement. An April 2026 overhaul then capped the 20% revenue share (through 2030), made the IP license (through 2032) explicitly non-exclusive, and replaced the AGI trigger with fixed dates. Simultaneously investor, largest supplier, and — as OpenAI buys AWS and Google capacity — a loosening anchor.",
    "source": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
+   "via": "Azure",
    "status": "active",
    "since": "2019",
    "scale": "~27% stake; $250B Azure commitment"
@@ -172,6 +173,7 @@
    "note": "$9.7B five-year AI cloud contract — GB300 capacity across four 50MW liquid-cooled 'Horizon' data centers at Childress, TX.",
    "context": "Announced November 3, 2025 with a 20% prepayment and phased delivery through 2026: Horizon 1 was delivered and accepted in August 2026, Horizon 2 is commissioning, Horizons 3-4 target Q4 2026. Goldman Sachs/JPMorgan financed ~96% of the associated GPU capex against the contract — the same offtake-to-financing template as Nebius.",
    "source": "https://iren.gcs-web.com/news-releases/news-release-details/iren-secures-97bn-ai-cloud-contract-microsoft",
+   "via": "GB300",
    "status": "active",
    "since": "2025-11",
    "scale": "$9.7B / 5 years / 200MW IT"
@@ -182,6 +184,7 @@
    "note": "Multibillion-dollar multi-year AI infrastructure agreement — tens of thousands of NVIDIA GPUs including GB300 NVL72.",
    "context": "Announced November 3, 2025 (the same day as the IREN deal), extending an 8+ year relationship dating to 2018. Lambda's subsequent raises — the $1.5B+ Series E and 2026 debt facilities — are explicitly tied to funding deployments for this contract, including ~$1B of JPMorgan-arranged debt for chips Lambda leases to Microsoft.",
    "source": "https://lambda.ai/blog/lambda-announces-multibillion-dollar-agreement-with-microsoft-to-deploy-ai-infrastructure-powered-by-tens-of-thousands-of-nvidia-gpus",
+   "via": "GB300 NVL72",
    "status": "active",
    "since": "2025-11"
   },
@@ -191,8 +194,17 @@
    "note": "Tri-party Anthropic partnership: up to 1 GW of Grace Blackwell/Vera Rubin on Azure, NVIDIA investing up to $10B.",
    "context": "November 2025: Microsoft, NVIDIA and Anthropic announced a partnership committing Anthropic initially to up to 1 GW of NVIDIA capacity on Azure with NVIDIA investing up to $10B — gigawatt-denominated demand landing on Microsoft's cloud, alongside NVIDIA's role as Microsoft's dominant accelerator supplier.",
    "source": "https://blogs.nvidia.com/blog/microsoft-nvidia-anthropic-announce-partnership",
+   "via": "Grace Blackwell/Vera Rubin",
    "status": "active",
    "since": "2025-11"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "DOE nuclear restart loans",
+   "status": "in-effect",
+   "exposure": "Microsoft's marquee power bet — the 20-year PPA for the full ~835 MW output of Three Mile Island Unit 1 (Crane Clean Energy Center) — is accelerating toward 2027 on the back of a $1B DOE loan, an NRC waiver, and FERC clearance, with every regulatory gate passed so far on an accelerated timeline. The dossier reads on-time 2027 delivery as validating the restart playbook and the federal-loan model; slippage would push firming demand toward gas and storage across the sector.",
+   "source": "https://www.utilitydive.com/news/constellation-three-mile-island-nuclear-power-plant-microsoft-data-center-ppa/727652/"
   }
  ],
  "technicalSpecs": [
@@ -468,6 +480,6 @@
    "date": "2023-05-10"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

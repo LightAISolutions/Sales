@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "lightsource-bp",
  "name": "Lightsource bp",
  "shortName": "Lightsource",
@@ -211,6 +211,7 @@
    "note": "Woolooga BESS Stage 1: 128 × 5 MWh containers (640 MWh) — Hithium's Australian market entry, geographically fenced from the FEOC-clean US book.",
    "context": "The December 2024 deal — 640 MWh of 314 Ah LFP containers with 25-year warranties and INTEC partnering on O&M, expected operational mid-2026 — made Lightsource bp the second verified Hithium field customer, later named among Hithium's flagship customers in HKEX prospectus coverage.\n\nThe relationship lives only where FEOC doesn't reach: the US book is FEOC-clean by design (~8.3 GW of First Solar modules), the larger follow-on Queensland battery (Lower Wonga) went to rival Gotion, and the Woolooga asset itself may now belong to Aula Energy after the February 2026 Australian portfolio sale — so the signing entity, the COD owner, and the future procurement decider may be three different organizations.",
    "source": "https://www.energy-storage.news/lightsource-bp-picks-hithium-to-supply-640mwh-bess-for-australia-pro",
+   "via": "5 MWh LFP containers",
    "status": "active",
    "since": "2024-12",
    "scale": "640 MWh (128 × 5 MWh)"
@@ -221,6 +222,7 @@
    "note": "Two solar PPAs, including Mowata (172 MWdc, LA) framed against Meta's Hyperion AI campus.",
    "context": "Meta holds two Lightsource bp offtakes — Arche (133 MW, Ohio) and Mowata (172 MWdc, Louisiana; PPA July 2026, $237M), which trade press frames against Meta's Hyperion AI campus in Richland Parish. The Gulf-South/Louisiana position adjacent to Meta's AI buildout is the dossier's sharpest AIDC asset for the #1-ranked US solar developer.",
    "source": "https://www.datacenterdynamics.com/en/news/meta-inks-172mw-solar-ppa-with-lightsource-bp-in-acadia-p",
+   "via": "solar PPAs",
    "status": "active",
    "scale": "Arche 133 MW + Mowata 172 MWdc"
   },
@@ -230,6 +232,7 @@
    "note": "Honeysuckle solar (188 MW, Indiana) — 'supporting Google's Fort Wayne data center campus'.",
    "context": "The Honeysuckle project (188 MW, Indiana) is contracted to Google and explicitly framed as supporting the Fort Wayne data-center campus — a PPA-mediated AIDC relationship: hyperscaler demand attached to solar, with the storage attach (and its supplier choices) still ahead.",
    "source": "https://lightsourcebp.com/news/honeysuckle-solar-goes-online/",
+   "via": "Honeysuckle solar",
    "status": "active",
    "scale": "188 MW"
   },
@@ -257,6 +260,27 @@
    "context": "Constellation appears on Lightsource bp's named-offtaker roster alongside the hyperscalers and corporates (Toyota, McDonald's, Verizon, L3Harris, H&M, Allianz) — a conventional PPA relationship within the top-ranked US solar development platform.",
    "source": "Lightsource bp US platform disclosures",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Lightsource bp runs a geographically split playbook around the regime: the US book is FEOC-clean by design — ~8.3 GW of First Solar modules committed through 2028, all-domestic marketing, no US BESS in the public record — while Chinese BESS suppliers (Hithium, Gotion, CHINT) are engaged only in Australia/APAC where FEOC doesn't reach. The dossier assesses the US storage whitespace (Big Bronco, Zion Valley, Golden Plains) as unwinnable for ITC-claiming vintages absent a FEOC-compliant structure.",
+   "mitigation": "An American-made US supply chain: First Solar modules (~8.3 GW committed through 2028), Array Technologies trackers, and Nucor steel.",
+   "source": "https://www.pv-tech.org/lightsource-bp-and-first-solar-ink-4gw-module-supply-agreement-for-2026-28/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "The US financing machine runs on ITC monetization — e.g. $97.9M of Pinnacle tax equity for Peacock Solar (187 MW, TX) within $5B+ of third-party US capital raised since 2019 — which the dossier reads as exactly why the US supply chain stays FEOC-clean.",
+   "source": "https://mercomcapital.com/lightsource-bp-secures-97-9-m-tax-equity-financing-187-mw-solar-project/"
+  },
+  {
+   "regime": "Australia FIRB screening",
+   "status": "in-effect",
+   "exposure": "Australian foreign-investment scrutiny blocked the ~A$800M sale of the 1 GW Australian portfolio to Beijing Energy International; the portfolio (including Woolooga) was later sold to Aula Energy (Macquarie) in February 2026. The dossier's read: Australian scrutiny bites on Chinese asset ownership while Chinese supply proceeds unimpeded — Hithium/Gotion/CHINT BESS procurement is unaffected.",
+   "source": "https://www.ess-news.com/2026/02/24/lightsource-bp-in-australia-finds-a-buyer-for-large-solar-and-storage-portfolio-pivots-to-hybrid-generation/"
   }
  ],
  "decisionMakers": [
@@ -440,6 +464,6 @@
    "url": "https://lightsourcebp.com/data-center-solutions/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

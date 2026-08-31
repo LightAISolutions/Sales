@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "mortenson",
  "name": "Mortenson",
  "legalName": "M. A. Mortenson Company",
@@ -227,6 +227,7 @@
    "note": "Revealed end user of the ~700 MW Hermantown MN site Mortenson Properties is entitling.",
    "context": "March 2026: the city of Hermantown revealed Google as end user of the ~700 MW data center Mortenson's development arm is entitling — the first public confirmation that Mortenson Properties is originating hyperscale work as a land developer, a second Google-adjacent channel beyond the GC book. An updated environmental review (~7 months) is underway with the MCEA lawsuit on hold.",
    "source": "https://www.kaxe.org/local-news/2026-03-31/public-comments-updated-review-proposed-hermantown-d",
+   "via": "Mortenson Properties",
    "status": "announced",
    "since": "2026-03",
    "scale": "~700 MW site"
@@ -270,6 +271,14 @@
    "context": "Primoris sits in Mortenson's renewables peer set (Blattner/Quanta, MasTec-IEA, SOLV) — direct competition for utility-scale wind, solar and storage EPC, without the hyperscale building franchise that differentiates Mortenson's integrated offer.",
    "source": "Dossier peer-set assessment",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "California AB 205 fast-track",
+   "status": "in-effect",
+   "exposure": "Mortenson is full EPC on Darden Clean Energy (Intersect Power) — ~1,500 MWdc of solar plus 4,600 MWh of storage, the world's largest BESS when built per the California Energy Commission — which in June 2025 became the first project approved under California's AB 205 fast-track permitting regime, with completion targeted for 2028.",
+   "source": "https://www.energy.ca.gov/news/2025-06/cec-approves-worlds-largest-solar-battery-storage-project-fresno-county-under"
   }
  ],
  "technicalSpecs": [
@@ -621,6 +630,6 @@
    "url": "https://www.mortenson.com/services/mortenson-properties"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

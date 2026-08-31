@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "openai",
  "name": "OpenAI",
  "legalName": "OpenAI Group PBC (controlled by the nonprofit OpenAI Foundation)",
@@ -136,6 +136,7 @@
    "note": "~27% owner and anchor cloud partner — $250B incremental Azure commitment, exclusivity gone.",
    "context": "Microsoft holds ~27% of OpenAI Group PBC (~$135B) under the October 2025 restructuring; OpenAI committed an incremental $250B of Azure purchases while gaining multi-cloud freedom (ROFR removed; April 2026 made the IP license non-exclusive and capped the revenue share). The relationship is now one giant supplier among several — but still the largest single investor and compute commitment.",
    "source": "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/",
+   "via": "Azure",
    "status": "active",
    "since": "2019",
    "scale": "~27%; $250B Azure"
@@ -146,6 +147,7 @@
    "note": "Stargate anchor: ~$300B over five years from 2027, 4.5GW+ of capacity across five US sites.",
    "context": "Oracle is a Stargate equity partner ($7B) and the anchor capacity supplier — the July 2025 4.5GW partnership grew into a WSJ-reported ~$300B five-year contract beginning 2027. Oracle is tenant/hardware owner at Abilene, Shackelford County TX, Doña Ana County NM, Port Washington WI and Saline Township MI, financing and overseeing construction of the Oracle-led sites.",
    "source": "https://builtin.com/articles/openai-300b-cloud-deal-oracle-20250911",
+   "project": "stargate",
    "status": "active",
    "since": "2025",
    "scale": "~$300B / 5 years / 4.5GW+"
@@ -156,6 +158,7 @@
    "note": "10 GW letter of intent with NVIDIA investing up to $100B progressively as capacity deploys.",
    "context": "The September 2025 LOI: at least 10 GW of NVIDIA systems, first gigawatt on Vera Rubin in 2H 2026, with NVIDIA investing up to $100B as each GW deploys. Non-binding, and the anchor of the circular-financing critique — NVIDIA part-funding its own demand — but the defining GW-scale supply relationship of the buildout.",
    "source": "https://openai.com/index/openai-nvidia-systems-partnership/",
+   "via": "Vera Rubin",
    "status": "announced",
    "since": "2025-09",
    "scale": "10 GW LOI; up to $100B"
@@ -166,6 +169,7 @@
    "note": "$38B seven-year AWS compute deal — hundreds of thousands of NVIDIA GPUs by end-2026.",
    "context": "November 3, 2025: OpenAI's first big multi-cloud move after exclusivity ended — $38B over seven years for GB200/GB300-class capacity on AWS, expandable from 2027. April 2026 reporting adds a ~$100B eight-year expansion and AWS exclusivity for OpenAI's 'Frontier' enterprise platform (single-outlet, unconfirmed). Amazon is simultaneously Anthropic's anchor backer — supplier and rival-by-proxy at once.",
    "source": "https://www.aboutamazon.com/news/aws/aws-open-ai-workloads-compute-infrastructure",
+   "via": "AWS",
    "status": "active",
    "since": "2025-11",
    "scale": "$38B / 7 years"
@@ -186,6 +190,7 @@
    "note": "Developer of Stargate Site 1 — the Abilene campus scaling to 8 buildings / 1.2GW.",
    "context": "Crusoe develops and operates the Lancium Clean Campus at Abilene: Phase 1 (200+ MW) live ~September 2025 running Oracle OCI with GB200s; Phase 2 expands to ~4M sq ft and 1.2GW targeted end-2026, each building holding up to 50,000 GB200 NVL72s. The proof-of-concept site for the whole Stargate program.",
    "source": "Stargate Abilene site record (Epoch AI tracker / DCD)",
+   "project": "stargate",
    "status": "active",
    "since": "2024",
    "scale": "1.2GW campus"
@@ -196,6 +201,7 @@
    "note": "Landlord of two Stargate giga-campuses — Frontier (1.4GW TX) and Lighthouse (902MW WI).",
    "context": "Vantage builds and owns the two largest third-party Stargate campuses, leased through Oracle for OpenAI: Frontier in Shackelford County, TX ($25B+, off-grid on a 700MW VoltaGrid microgrid) and Lighthouse in Port Washington, WI ($15B+), financed by a record ~$38B bank package whose refinancing rides on the OpenAI complex's credit.",
    "source": "https://vantage-dc.com/news/openai-oracle-and-vantage-data-centers-announce-stargate-data-center-site-in-wisconsin/",
+   "project": "stargate",
    "status": "active",
    "since": "2025-08",
    "scale": "2.3GW across two campuses"
@@ -206,6 +212,7 @@
    "note": "Developer-owner of Project Jupiter — the 1GW+ Stargate campus in Santa Teresa, NM.",
    "context": "STACK develops and owns Project Jupiter (with BorderPlex Digital Assets): up to $165B program value, an 18-year Oracle OCI lease with OpenAI as primary client, construction from September 2025 with initial operations targeted Q4 2026, powered by on-site gas microgrids.",
    "source": "https://elpasomatters.org/2025/09/25/stargate-open-ai-oracle-project-jupiter-data-center-dona-ana-new-mexico-el-paso-texas/",
+   "project": "stargate",
    "status": "active",
    "since": "2025-09",
    "scale": "1GW+ campus"
@@ -216,6 +223,8 @@
    "note": "Stargate Korea: floating data centers jointly developed with Samsung C&T and Samsung Heavy Industries.",
    "context": "October 2025: Samsung and SK joined Stargate — Samsung Electronics and SK hynix on advanced memory supply, and Samsung C&T + Samsung Heavy Industries jointly developing floating data centers with OpenAI, with the first US floating-DC engineering contract signed and initial installations planned for Texas.",
    "source": "https://openai.com/index/samsung-and-sk-join-stargate/",
+   "via": "floating data centers",
+   "project": "stargate",
    "status": "active",
    "since": "2025-10"
   },
@@ -225,6 +234,7 @@
    "note": "Leads the Stargate Abilene build (with Rosendin electrical and Southland/Brandt mechanical).",
    "context": "ENR reports DPR Construction leading the Abilene delivery for Crusoe — a 1.2GW campus on a two-year schedule with a peak workforce approaching 5,000, Rosendin Electric as electrical prime and Southland/Brandt mechanical. The construction bench behind Stargate Site 1.",
    "source": "ENR — Abilene data center project team",
+   "project": "stargate",
    "status": "active",
    "scale": "1.2GW campus build"
   }
@@ -486,6 +496,6 @@
    "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

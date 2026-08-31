@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "oracle",
  "name": "Oracle",
  "legalName": "Oracle Corporation",
@@ -134,6 +134,7 @@
    "note": "~$300B five-year Stargate contract from 2027 — the anchor of Oracle's AI capacity book.",
    "context": "Oracle is Stargate's anchor capacity supplier and a $7B equity partner: the July 2025 4.5GW partnership became a WSJ-reported ~$300B five-year contract beginning 2027, with Oracle as tenant/hardware owner across the Abilene, Shackelford, Doña Ana, Port Washington and Saline Township sites. The single largest customer commitment in Oracle's history — and its concentration risk.",
    "source": "https://builtin.com/articles/openai-300b-cloud-deal-oracle-20250911",
+   "project": "stargate",
    "status": "active",
    "since": "2025",
    "scale": "~$300B / 5 years"
@@ -144,6 +145,7 @@
    "note": "Landlord of Frontier (1.4GW TX) and Lighthouse (902MW WI) — Oracle-tied leases behind a record ~$38B bank package.",
    "context": "Vantage builds and owns the two Stargate giga-campuses Oracle leases for OpenAI capacity. Bloomberg reported banks led by JPMorgan and MUFG preparing ~$38B of debt ($23.25B Frontier, $14.75B Lighthouse, ~4-year tenor, ~250bps) against the Oracle-tied leases — the largest AI-infrastructure financing ever assembled.",
    "source": "https://www.bloomberg.com/news/articles/2025-10-23/record-38-billion-debt-sale-nears-for-oracle-tied-data-centers",
+   "project": "stargate",
    "status": "active",
    "since": "2025-08",
    "scale": "2.3GW leased; ~$38B financing"
@@ -154,6 +156,7 @@
    "note": "Project Jupiter landlord — 18-year OCI lease at the 1GW+ Stargate New Mexico campus.",
    "context": "STACK (with BorderPlex Digital Assets) develops and owns the Santa Teresa, NM campus under an 18-year Oracle Cloud Infrastructure lease with OpenAI as primary client — one of the five September 2025 Stargate expansion sites, microgrid-powered, initial operations targeted Q4 2026.",
    "source": "https://elpasomatters.org/2025/09/25/stargate-open-ai-oracle-project-jupiter-data-center-dona-ana-new-mexico-el-paso-texas/",
+   "project": "stargate",
    "status": "active",
    "since": "2025-09",
    "scale": "1GW+; 18-year lease"
@@ -164,6 +167,7 @@
    "note": "2,300 MW of contracted prime power across Texas — Bloomberg-reported >$1B/year from a single OpenAI site.",
    "context": "VoltaGrid supplies behind-the-meter gas prime power for Oracle's Texas AI fleet: 2,300 MW contracted, operationalized by INNIO's largest-ever engine order (92 × 25 MW QPac packs, October 2025) with firm gas from Energy Transfer. Bloomberg reports Oracle paying >$1B/year for a single OpenAI site — grid interconnection delay converted into a service contract.",
    "source": "Bloomberg / INNIO order reporting (Oct 2025 - Feb 2026)",
+   "via": "prime power",
    "status": "active",
    "since": "2025",
    "scale": "2,300 MW"
@@ -174,6 +178,7 @@
    "note": "Developer-operator of the Abilene campus where Oracle is tenant and hardware owner.",
    "context": "Crusoe develops and operates Stargate Site 1 at Abilene — Oracle runs OCI on the campus (64,000+ GB200s planned by March 2026 per reporting) and owns the hardware, with the site scaling to 1.2GW by end-2026. The operating model for the Oracle-led Stargate sites.",
    "source": "Stargate Abilene site record (Epoch AI tracker / DCD)",
+   "project": "stargate",
    "status": "active",
    "since": "2024",
    "scale": "1.2GW campus"
@@ -184,6 +189,8 @@
    "note": "GB200/GB300-class systems fill the Stargate capacity Oracle deploys.",
    "context": "Oracle's Stargate deployments run on NVIDIA racks (Abilene's GB200 NVL72 installs; Vera Rubin ahead), and NVIDIA sits beside Oracle in Stargate UAE. Oracle's AI capex is, at the margin, an NVIDIA purchase order — with the same circular-financing exposure the whole complex carries.",
    "source": "Dossier assessment — Stargate hardware chain",
+   "via": "GB200/GB300 systems",
+   "project": "stargate",
    "status": "active"
   },
   {
@@ -192,6 +199,7 @@
    "note": "Behind-the-meter turbines power the Abilene site (~360MW permitted; GEV attribution at medium confidence).",
    "context": "Abilene runs grid power plus ~360MW of behind-the-meter simple-cycle gas turbines (TCEQ permit January 2025); multiple secondary sources identify GE Vernova as turbine maker, one tracker splitting supply between GEV and Solar Turbines. Attribution is medium-confidence — secondary sources only.",
    "source": "Secondary reporting — Abilene behind-the-meter turbines",
+   "via": "gas turbines",
    "status": "active",
    "scale": "~360MW BTM (permitted)"
   },
@@ -201,7 +209,16 @@
    "note": "Reported Oracle-Bloom fuel-cell deal (July 2025) — not primary-verified.",
    "context": "Trade reporting places a Bloom Energy fuel-cell arrangement with Oracle (July 2025), with one low-tier source tying Bloom plus Tallgrass to future Abilene power. Held at low confidence pending primary confirmation — recorded so the claim is tracked, not endorsed.",
    "source": "Trade reporting (Jul 2025) — unverified",
+   "via": "fuel cells",
    "status": "announced"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "TCEQ permit-by-rule",
+   "status": "in-effect",
+   "exposure": "Abilene's ~360 MW of behind-the-meter simple-cycle gas turbines were authorized via minor 'permit by rule' pathways (TCEQ permit January 2025), with community-notification failures documented by Floodlight and the Texas Tribune. The dossier holds the permitting controversy as a latent regulatory and reputational exposure for the whole behind-the-fence generation model, not just Oracle — press investigation only, with no enforcement action reported to date.",
+   "source": "https://floodlightnews.org/ai-data-centers-texas-pollution-loophole/"
   }
  ],
  "technicalSpecs": [
@@ -462,6 +479,6 @@
    "url": "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

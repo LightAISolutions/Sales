@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "nextera-energy-resources",
  "name": "NextEra Energy Resources (NEER)",
  "shortName": "NextEra",
@@ -222,6 +222,7 @@
    "note": "Confirmed multi-project ESS supply — first tranche ~$301M, reported ~6.3 GWh of 20-ft Samsung Battery Boxes.",
    "context": "March 2025: Samsung SDI confirmed a multi-project ESS supply deal with NextEra (first tranche ~$301M; Korean-press-reported ~6.3 GWh total). It is the one named piece of NEER's domestic-supply wall — 'competitively priced domestic battery supply secured through 2029' at 1.5x inventory coverage, with the master domestic counterparty still undisclosed. NEER buys as a self-integrator: cells and DC blocks direct, no Tesla/Fluence channel.",
    "source": "https://www.energy-storage.news/samsung-sdi-confirms-multi-project-energy-storage-supply-deal-w",
+   "via": "Samsung Battery Box",
    "status": "active",
    "since": "2025-03",
    "scale": "~6.3 GWh reported"
@@ -232,9 +233,32 @@
    "note": "Gas framework with reserved turbine slots for 4 GW of CCGT behind the >20 GW gas pipeline.",
    "context": "Revealed on the Q4 2024 call and restated since: a GE Vernova framework with turbine slots for 4 GW of combined-cycle capacity, feeding a >20 GW gas pipeline that includes 9.5 GW in Texas and Pennsylvania selected under the $550B US-Japan investment vehicle (March 2026). One of the two supply walls — gas turbines and domestic cells — locked years forward against the AIDC demand wave.",
    "source": "https://www.utilitydive.com/news/nextera-ge-vernova-gas-earnings/738316/",
+   "via": "CCGT turbines",
    "status": "active",
    "since": "2025-01",
    "scale": "4 GW CCGT turbine slots"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "NEER's ITC economics cannot tolerate prohibited-foreign-entity content, and the dossier assesses the account as structurally closed to §154-named Chinese suppliers through decade-end. The stated OBBBA strategy: projects that began construction by December 31, 2025 are FEOC-exempt with a four-year completion window, with 'significant financial commitments' already made and credits underwritten through ~2030.",
+   "mitigation": "Domestic battery supply secured through 2029 at 1.5x inventory coverage and 'expected to be FEOC compliant' — Samsung SDI (~6.3 GWh reported) plus an undisclosed master US-made-battery contract — alongside banked begin-construction safe-harbor positions covering the near-term backlog.",
+   "source": "https://www.investor.nexteraenergy.com/~/media/Files/N/NEE-IR/news-and-events/events-and-presentations/2026/March%20Investor%20Presentation%20vF.pdf"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "NEER's storage model runs on the ITC: the master domestic-battery contract is structured so domestic-content ITC adders at least offset residual tariff cost, its ITC-qualifying pipeline anchors the FEOC-compliant procurement doctrine, and the fleet is funded on balance sheet plus tax-credit transfers — NEE is among the largest transfer-market sellers, with credits underwritten through ~2030.",
+   "source": "https://www.utilitydive.com/news/nextera-ge-vernova-gas-earnings/738316/"
+  },
+  {
+   "regime": "US–China battery tariffs",
+   "status": "in-effect",
+   "exposure": "NEER states its battery tariff exposure is 'negligible': the undisclosed master domestic contract puts tariff risk on the supplier, and the OCPA Lock Energy Center ESA (115 MW/460 MWh, 20-yr) carries explicit cost-sharing protections against tariffs and 'future federal actions' — post-OBBBA contract engineering made visible.",
+   "mitigation": "Supplier-borne tariff risk in the master US-made-battery contract, with domestic-content ITC adders sized to offset residual tariff cost.",
+   "source": "https://www.energy-storage.news/nextera-and-california-utility-agree-bess-offtake-deal-with-protections-against-future-federal-actions-and-market-volatility/"
   }
  ],
  "decisionMakers": [
@@ -391,6 +415,6 @@
    "url": "https://www.nexteraenergyresources.com/our-solutions/battery-energy-storage.html"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

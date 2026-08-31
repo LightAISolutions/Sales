@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "lg-energy-solution",
  "name": "LG Energy Solution, Ltd. (LG에너지솔루션)",
  "shortName": "LG Energy Solution",
@@ -131,6 +131,7 @@
    "note": "Confirmed Megapack 3 LFP cell supplier — $4.3B, Lansing MI production from 2027.",
    "context": "May 2026 confirmation resolved eight months of 'mystery buyer' speculation: LGES supplies Tesla's Megapack 3 LFP cells under a $4.3B contract with production at Lansing, Michigan from 2027. A structural win the dossier calls the FEOC thesis in action — Tesla onshoring Megapack cells to a Korean supplier — even as LGES Vertech competes with Tesla downstream in integration.",
    "source": "https://electrek.co/2026/03/17/tesla-lg-energy-solution-4-3-billion-lfp-battery-deal-megapack-confir",
+   "via": "Megapack 3 LFP cells",
    "status": "active",
    "since": "2026",
    "scale": "$4.3B; production from 2027"
@@ -176,6 +177,20 @@
    "context": "Hithium holds 17.2% North America ESS exposure to LGES's 13.6% (SNE H1 2026) — but the regulatory current runs opposite: Hithium's Chinese content faces the FEOC fence while LGES's Korean five-site network is the default compliant chain. Both began US manufacturing in 2025; only one qualifies for ITC domestic-content economics.",
    "source": "https://cnevpost.com/2026/08/04/global-ess-battery-market-share-h1-2026/",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "LGES sits on the favorable side of the regime: FEOC/tariff rules and domestic-content credits make its five-site North American ESS network the default non-Chinese supply chain for US storage, pushing US buyers toward non-Chinese cells that only Korean suppliers make locally at scale. The dossier reads the $4.3B Tesla Megapack 3 contract and the DTE/Qcells/Excelsior pipeline as direct evidence, and notes FEOC rules progressively fence CATL out of ITC-qualifying projects LGES can serve.",
+   "source": "https://www.lgensol.com/upload/file/irEvent/26_2Q_LGES_business_performance_F_EN.pdf"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Profitability is dependent on US 45X production tax credits: ex-AMPC operating losses in most quarters from Q4 2024 through Q2 2026 (Q2 2026's KRW 113.3B operating profit becomes a ~KRW 128B loss without the 241B credit), with quarterly AMPC disclosures ranging KRW 189.8B–377.3B. On the demand side, ITC domestic-content economics steer US storage projects toward its North-America-made cells — the DTE 6 GWh agreement is domestic-content-compliant.",
+   "source": "https://www.prnewswire.com/news-releases/lg-energy-solution-releases-2026-second-quarter-financial-results-302838408.html"
   }
  ],
  "technicalSpecs": [
@@ -321,7 +336,9 @@
       "actual": "140 GWh (end-2025)",
       "expected": "",
       "verdict": "inline",
-      "result": "2026 target: >90 GWh new ESS orders"
+      "result": "2026 target: >90 GWh new ESS orders",
+      "kpi": "backlog-gwh",
+      "qty": 140
      }
     ],
     "commentary": "~KRW 13.5T of EV contracts cancelled during the period (Ford ~9.6T, Freudenberg 3.9T). Restated FY2025 under the 2026 accounting change (NA incentives into revenue): revenue 25.3T, OP 1.35T, incentives 1.65T.",
@@ -427,6 +444,6 @@
    "url": "https://www.lgensol.com/assets/file/LGES_spec_sheet_cells_2024.pdf"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

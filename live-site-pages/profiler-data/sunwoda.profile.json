@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "sunwoda",
  "name": "Sunwoda (Sunwoda Electronic / Sunwoda Energy)",
  "shortName": "Sunwoda",
@@ -231,6 +231,7 @@
    "note": "Added as Tesla's fifth global EV cell supplier (April 2026).",
    "context": "Tesla added Sunwoda as its fifth EV cell supplier in April 2026 amid cost pressure — the marquee validation of Sunwoda's two-hat model: top-10 merchant cell supplier whose content can appear inside other players' systems even as it climbs the integration stack itself.",
    "source": "https://electrek.co/2026/04/10/tesla-adds-sunwoda-fifth-global-battery-supplier-cost-pressure/",
+   "via": "EV cells",
    "status": "active",
    "since": "2026-04"
   },
@@ -240,6 +241,7 @@
    "note": "Cell supplier honored with Sungrow's Global Strategic Partner award — while fielding rival containers.",
    "context": "Sungrow awarded Sunwoda a Global Strategic Partner award as a cell supplier — the structural conflict in one relationship: Sunwoda sells cells to integrators it competes with downstream (~#9 integrator per Benchmark), which caps how far partners will let it climb the integration stack.",
    "source": "Dossier two-hat assessment",
+   "via": "storage cells",
    "status": "active"
   },
   {
@@ -256,6 +258,7 @@
    "note": "600Ah+ roadmap closing on Sunwoda's 684 Ah early-mover lead through 2026-27.",
    "context": "Sunwoda's 684 Ah volume leadership in the 600+ Ah class is real but perishable: CATL/EVE/Hithium roadmaps close the gap through 2026-2027, and Sunwoda runs from a much smaller base — with cells booked against a sub-5% margin price war.",
    "source": "https://www.energy-storage.news/industry-updates/sunwoda-produces-one-millionth-684ah-energy-st",
+   "via": "684 Ah cell",
    "status": "active"
   },
   {
@@ -264,6 +267,7 @@
    "note": "Fellow 600Ah+ class contender at far larger scale.",
    "context": "EVE's 628Ah mass-production lead and larger base bracket Sunwoda's 684 Ah early-mover position in the large-format race — two of the cell-first players whose roadmaps converge on the same 2026-27 window.",
    "source": "Dossier competitive assessment — large-format race",
+   "via": "684 Ah cell",
    "status": "active"
   },
   {
@@ -273,6 +277,23 @@
    "context": "Benchmark Mineral Intelligence's 2025 integrator ranking puts Sunwoda #9 with ~4% global share, tied with Fluence — top-10 status on Benchmark's methodology only (InfoLink's top tier omits it), in a tightly packed, rank-fragile ~10 GWh tier.",
    "source": "https://www.energytrend.com/news/20260519-51424.html",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Sunwoda is a Chinese-controlled prohibited foreign entity under FEOC rules, with no US manufacturing, no US grid-scale reference projects, and no UL 9540 full-system listing surfaced — the dossier assesses it lacks both the compliance path and the local footprint to bid US ITC-linked containerized BESS projects.",
+   "mitigation": "The stated US go-to-market is the AIDC backup/BBU lane (72 Ah 8C cells, 800 V rack systems), which doesn't claim ITC — showcased at Data Center World America, Washington DC in April 2026.",
+   "source": "https://www.sunwodaess.com/company-news/sunwoda-aidc-energy-solutions-at-data-center-world-america-2026.html"
+  },
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-01",
+   "exposure": "The 25% Section 301 step-up (January 2026) adds a tariff wall on top of FEOC status for Sunwoda's China-manufactured storage — the dossier assesses the US containerized-BESS market as effectively closed to it near-term, with full FEOC/tariff exposure and no announced US manufacturing plan.",
+   "mitigation": "The US play is explicitly the backup/BBU lane, not grid BESS — consistent with FEOC/tariff walls on ITC-linked storage.",
+   "source": "https://www.sunwodaess.com/company-news/sunwoda-aidc-energy-solutions-at-data-center-world-america-2026.html"
   }
  ],
  "decisionMakers": [
@@ -326,7 +347,9 @@
       "actual": "EV batteries incl. storage cells 42.72 GWh (+68.9%); storage systems 25.6 GWh (+188%)",
       "expected": "SMM had forecast 20-25 GWh systems",
       "verdict": "beat",
-      "result": "Among the fastest growth rates in the global top ten"
+      "result": "Among the fastest growth rates in the global top ten",
+      "kpi": "gwh-shipped",
+      "qty": 25.6
      }
     ],
     "periodType": "annual",
@@ -451,6 +474,6 @@
    "url": "https://en.sunwoda.com/article/1524/9.html"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

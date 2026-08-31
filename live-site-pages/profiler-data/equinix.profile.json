@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "equinix",
  "name": "Equinix",
  "legalName": "Equinix, Inc.",
@@ -132,6 +132,7 @@
    "note": "Long-running on-site fuel-cell supplier; agreement extended as part of the alternative-energy portfolio push.",
    "context": "Bloom's solid-oxide fuel cells power Equinix IBX sites under a supply relationship that Bloom extended in 2025 — one of the largest data-center fuel-cell fleets in the industry, and the anchor of the alternative-energy provider portfolio (fuel cells plus advanced-nuclear agreements) Equinix announced in August 2025 to get ahead of grid power constraints.",
    "source": "https://www.datacenterdynamics.com/en/news/bloom-extends-fuel-cell-supply-agreement-with-equinix/",
+   "via": "solid-oxide fuel cells",
    "status": "active",
    "scale": "Fuel-cell fleet across dozens of IBX data centers"
   },
@@ -141,6 +142,7 @@
    "note": "Cisco/NVIDIA Secure AI Factory blueprints deploying across the footprint; managed DGX service.",
    "context": "Equinix's AI-ready pitch runs through NVIDIA: direct-to-chip liquid cooling in 100+ IBX facilities across 45+ metros, 'more than 270 AI-ready data centers' claimed, Cisco/NVIDIA Secure AI Factory blueprints deploying across the footprint (June 2026), a managed NVIDIA DGX service, and an AI Solutions Lab in 20 locations under the Distributed AI Hub framework (March 2026).",
    "source": "Equinix AI-ready infrastructure disclosures",
+   "via": "Secure AI Factory blueprints",
    "status": "active",
    "since": "2026"
   },
@@ -152,6 +154,15 @@
    "source": "https://newsroom.equinix.com/2026-07-29-Equinix-Reports-Second-Quarter-Results",
    "status": "active",
    "since": "2026-03"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Data-center moratoria",
+   "status": "in-effect",
+   "exposure": "Power scarcity — not demand or capital — is Equinix's growth gate, and policy restrictions are part of it: Amsterdam's >70 MW moratorium, Singapore's rationed capacity releases (a 'sustainability-gated' market in the dossier's segmentation), 0.3% vacancy in Northern Virginia, and a record ~$130B of blocked/delayed US projects in Q1 2026.",
+   "mitigation": "The atNorth Nordic acquisition (~800 MW installed, 1 GW secured power in power-rich markets) and the firm-power portfolio (>100 MW Bloom fuel-cell fleet, ~1.25 GW of advanced-nuclear commitments and LOIs, take-or-pay utility structures) are both structured around this constraint.",
+   "source": "https://www.cbre.com/insights/reports/global-data-center-trends-2026"
   }
  ],
  "technicalSpecs": [
@@ -373,6 +384,6 @@
    "date": "2023-03"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

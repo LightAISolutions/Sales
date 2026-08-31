@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "proenergy",
  "name": "ProEnergy",
  "shortName": "ProEnergy",
@@ -186,6 +186,7 @@
    "note": "13 PE6000s (650 MW) for hyperscale AI factories — dual-sourced head-to-head against GE Vernova's LM2500XPRESS.",
    "context": "April 2026: Crusoe ordered 13 PE6000 packages (650 MW) for hyperscale AI factories, delivery targeted summer 2027 — the second major AIDC award in ProEnergy's >1.65 GW announced book, and a telling one: Crusoe dual-sources 29 LM2500XPRESS units alongside the 13 PE6000s, meaning refurbished 747/767 cores now bid head-to-head with new OEM iron. The schedule is the product: 2027 delivery against OEM queues stretching to 2029-2030.",
    "source": "https://thedatacenterengineer.com/news/proenergy-to-deliver-13x-50-mw-pe6000-gas-turbine-genset",
+   "via": "PE6000",
    "status": "active",
    "since": "2026-04",
    "scale": "650 MW (13 × PE6000)"
@@ -196,6 +197,7 @@
    "note": "The supply-chain arbitrage target: PE6000 (refurbished GE CF6 cores) delivers 2027 while GEV's book is sold out to 2030.",
    "context": "ProEnergy refurbishes retired Boeing 747/767 GE CF6-80C2 cores into its own-spec PE6000 (48 MW ISO, 5-minute start, LM6000-interchangeable), winning the ~50 MW-block segment on availability — 2027 delivery vs LM6000 waitlists of 3-5 years. The window is real but closing: GEV aero output rose 32% YoY in Q1 2026, and Crusoe already dual-sources both vendors.",
    "source": "https://www.power-eng.com/gas/turbines/data-centers-drive-record-surge-in-ge-vernova-power-equi",
+   "via": "PE6000",
    "status": "active"
   },
   {
@@ -212,6 +214,7 @@
    "note": "Recip rival on footprint-per-MW and block size.",
    "context": "The PE6000 competes with reciprocating-engine vendors (Wärtsilä, Cat, INNIO) on footprint-per-MW and block size in the AIDC bridge-power segment — plus Boom's announced 'Superpower' 42 MW entrant targeting 4+ GW/yr by 2030.",
    "source": "Dossier competitive assessment — gas-bridge cohort",
+   "via": "PE6000",
    "status": "active"
   },
   {
@@ -221,6 +224,21 @@
    "context": "For Hithium, ProEnergy is a demand-shaper and latent channel: the >1.65 GW AIDC book has no storage attached yet, but FEOC/§154 optics on flagship-visibility projects push any paired storage toward non-Chinese cells — the realistic play runs through the EPC/owner layer, not ProEnergy itself.",
    "source": "Dossier ecosystem assessment",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "ProEnergy sells FEOC-immune AIDC power: refurbished US jet-engine (GE CF6-80C2) cores packaged in Sedalia, with no BESS offering anywhere in the platform. The regime shapes the storage conversation around its campuses — FEOC/§154 optics on flagship-visibility AIDC projects steer any battery attach at its >1.65 GW announced turbine book toward non-Chinese cells, so the open attach socket runs through the EPC/owner layer rather than ProEnergy itself.",
+   "source": "Dossier ecosystem assessment"
+  },
+  {
+   "regime": "EPA mobile-turbine permitting",
+   "status": "proposed",
+   "exposure": "Permitting is the gas-bridge category's shared soft spot: 8,800 Btu/kWh simple-cycle heat rates invite opposition in non-attainment areas, and EPA is reportedly tightening on long-duration 'mobile' turbine fleets. A hard permitting turn would compress the 5-7-year bridge window the AIDC book depends on and accelerate BESS-heavy alternatives.",
+   "mitigation": "An emissions kit aimed squarely at data-center-grade permits: ammonia SCR/CO catalyst (company-claimed 90% NOx / 95% CO removal) and EnergyLink Direct Injection SCR demonstrated at ≤2.5 ppm NOx behind an operating unit at Braes Bayou.",
+   "source": "https://www.datacenterfrontier.com/energy/article/55358731"
   }
  ],
  "decisionMakers": [
@@ -390,6 +408,6 @@
    "date": null
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

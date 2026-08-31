@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "meta",
  "name": "Meta Platforms, Inc.",
  "shortName": "Meta",
@@ -161,6 +161,7 @@
    "note": "Up to ~$27B over five years — $12B of dedicated Vera Rubin capacity plus a $15B compute option.",
    "context": "The ~$3B November 2025 deal (capped only by Nebius's sold-out capacity) was expanded in March 2026 to up to ~$27B: $12B of dedicated capacity across multiple locations on the NVIDIA Vera Rubin platform (deliveries from early 2027) plus commitment to purchase up to $15B of additional compute from upcoming Nebius clusters.",
    "source": "https://nebius.com/newsroom/nebius-signs-new-ai-infrastructure-agreement-with-meta",
+   "via": "Vera Rubin capacity",
    "status": "active",
    "since": "2025-11",
    "scale": "up to ~$27B / 5 years"
@@ -210,6 +211,7 @@
    "note": "Two solar PPAs — Arche (133 MW OH) and Mowata (172 MWdc LA), framed against the Hyperion AI campus.",
    "context": "Meta holds two Lightsource bp offtakes: Arche in Ohio and the $237M Mowata PPA in Acadia Parish, Louisiana (July 2026), which trade press frames against Meta's Hyperion AI campus in Richland Parish — renewable supply siting next to the AI load.",
    "source": "https://www.datacenterdynamics.com/en/news/meta-inks-172mw-solar-ppa-with-lightsource-bp-in-acadia-p",
+   "via": "solar PPAs",
    "status": "active",
    "scale": "305 MW across two PPAs"
   },
@@ -222,6 +224,15 @@
    "status": "active",
    "since": "2024-12",
    "scale": "120 MWac"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Louisiana LPSC review",
+   "status": "in-effect",
+   "exposure": "Meta's Hyperion power supply runs through the ecosystem's highest-profile ratepayer controversy: the Entergy Louisiana package (~2.3 GW Phase 1 approved + ~5.2 GW Phase 2 proposed across seven gas plants, plus three grid-scale batteries and nuclear uprates) faces LPSC challenges, a judge ordering Meta to reveal withheld demand evidence, and a dissenting commissioner flagging 15-year Meta contracts against 30-year plant lives. The dossier reads the proceeding as the sector's regulatory bellwether — its outcomes shape how much firm generation vs storage gets built for AI load.",
+   "mitigation": "A ratepayer-protection pledge attached to the Entergy utility-tariff arrangements.",
+   "source": "https://www.ucs.org/about/news/judge-orders-meta-explain-new-gas-demand-hyperscale-louisiana-data-center"
   }
  ],
  "technicalSpecs": [
@@ -514,6 +525,6 @@
    "url": "https://www.ucs.org/about/news/judge-orders-meta-explain-new-gas-demand-hyperscale-louisiana-data-center"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

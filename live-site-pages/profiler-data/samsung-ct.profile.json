@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "samsung-ct",
  "name": "Samsung C&T (E&C + Renewables)",
  "shortName": "Samsung C&T",
@@ -197,6 +197,7 @@
    "note": "~10 GWh global cooperation agreement (Jan 2025), prospectus-cited — real but unconverted 19 months on.",
    "context": "The agreement — signed at Hithium's Xiamen HQ with the E&C group, announced January 6-8, 2025 — covers ~10 GWh of ESS execution projects worldwide with continuous battery-and-system supply, and the HKEX prospectus naming is confirmed. Yet no publicly attributed project exists anywhere: the classic optionality MOU.\n\nThe plausible conversion theatre is E&C's non-US book (Middle East, Australia, Asia — the Qatar/Dukhan-class franchise), not the US, where C&T's develop-and-sell T&I model hands battery procurement to its buyers (see the e-STORAGE/Sunraycer outcome) and Korean battery politics plus Samsung SDI's US ramp pull against every future C&T battery decision.",
    "source": "https://www.ess-news.com/2025/01/08/hithium-samsung-ct-corporation-partner-on-10-gwh-battery-st",
+   "via": "ESS batteries and system solutions",
    "status": "announced",
    "since": "2025-01",
    "scale": "~10 GWh MOU"
@@ -207,6 +208,8 @@
    "note": "Stargate Korea: C&T + Samsung Heavy jointly developing floating data centers with OpenAI — first US installations planned for Texas.",
    "context": "October 2025: Samsung joined OpenAI's Stargate, with Samsung C&T and Samsung Heavy Industries jointly developing floating data centers (SHI later signed the first US floating-DC engineering contract; initial installations planned for Texas). The group's boldest AIDC play and C&T's most direct line into US AI infrastructure — via ocean-going substation-and-shell rather than Texas dirt.",
    "source": "https://openai.com/index/samsung-and-sk-join-stargate/",
+   "via": "floating data centers",
+   "project": "stargate",
    "status": "active",
    "since": "2025-10"
   },
@@ -216,6 +219,7 @@
    "note": "e-STORAGE won 503 MWh in the ex-Samsung Texas pipeline — the develop-and-sell model's procurement truth.",
    "context": "February 2026: e-STORAGE (Canadian Solar) signed 503 MWh of supply for Sunraycer's Lupinus projects — Texas projects C&T originated and sold (the 2023 Sunraycer transaction: ~1 GW solar + ~2 GW ESS across 15 projects, with Samsung retaining development services through NTP). C&T teed up the projects; the buyer picked the batteries, and picked a US-manufacturing-committed supplier.",
    "source": "https://www.energy-storage.news/e-storage-sunraycer-enter-agreements-for-texas-bess-projects-to",
+   "via": "e-STORAGE",
    "status": "active",
    "since": "2026-02"
   },
@@ -235,6 +239,14 @@
    "context": "Samsung SDI's US ESS ramp (Indiana conversion, ~30 GWh target, $1B+ deals including NextEra's ~6.3 GWh) works against every future C&T battery decision going to an outside vendor — the Korean-group dynamic that makes the Hithium MOU harder to convert with each SDI capacity milestone.",
    "source": "Dossier group-context assessment",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Samsung C&T's US machine is structurally FEOC-conscious: the T&I develop-and-sell platform exits pre-NTP, so its buyers procure batteries post-sale under FEOC-era credit math — demonstrated when Sunraycer chose Canadian Solar's e-STORAGE (503 MWh) for the ex-Samsung Texas pipeline. A Chinese partner like Hithium is only influential in this channel by being specifiable and FEOC-viable in the projects C&T originates — which it currently is not for ITC-claiming vintages — and Korean-partner dynamics around the LS ELECTRIC JV's 500 MW Texas BESS favor compliant suppliers.",
+   "source": "https://www.energy-storage.news/e-storage-sunraycer-enter-agreements-for-texas-bess-projects-totalling-503mwh/"
   }
  ],
  "decisionMakers": [
@@ -407,6 +419,6 @@
    "url": "https://www.samsungcnt.com/eng/about-us/overview.do"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "google",
  "name": "Alphabet Inc. (Google LLC)",
  "shortName": "Google",
@@ -178,6 +178,7 @@
    "note": "$920M/month for ~110,000 NVIDIA GPUs at xAI data centers (Oct 2026 - Jun 2029, ~$30B).",
    "context": "Announced June 5, 2026: Google buys bridge capacity for Gemini Enterprise demand from SpaceX-xAI — ramp at reduced fees through September 2026, termination right if GPUs slip past end-September (one-month grace), and mutual 90-day cancellation after December 2026. A frontier-lab rival as compute landlord — the starkest sign that capacity scarcity outranks competitive hygiene.",
    "source": "https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/",
+   "via": "NVIDIA GPUs",
    "status": "active",
    "since": "2026-06",
    "scale": "$920M/month (~$30B)"
@@ -188,6 +189,7 @@
    "note": "~$4.5B of credit backstops across the Fluidstack-TeraWulf lease chain — bought with warrants now ~14% of TeraWulf.",
    "context": "Google provides amortizing lease backstops behind Fluidstack's TeraWulf capacity ($3.2B at Lake Mariner, $1.3B at the Abernathy JV), obliged by SEC-filed mechanics to assume the leases on Fluidstack default — and took warrants equal to ~14% of TeraWulf pro forma. Downside protection plus penny-warrant upside: how AI-buildout credit actually gets underwritten.",
    "source": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidstack-expansion-with-160-mw-cb-5-lease-at-lake-mariner",
+   "via": "Fluidstack lease backstops",
    "status": "active",
    "since": "2025-08",
    "scale": "~$4.5B backstops; ~14% warrants"
@@ -218,6 +220,7 @@
    "note": "Honeysuckle solar (188 MW, Indiana) contracted — 'supporting Google's Fort Wayne data center campus'.",
    "context": "Lightsource bp's Honeysuckle project delivers 188 MW of Indiana solar under a Google offtake explicitly framed as supporting the Fort Wayne data-center campus — PPA-mediated energy supply attached to the same campus Holder builds.",
    "source": "https://lightsourcebp.com/news/honeysuckle-solar-goes-online/",
+   "via": "Honeysuckle solar",
    "status": "active",
    "scale": "188 MW"
   },
@@ -236,6 +239,15 @@
    "context": "Reuters reported (June 2025) OpenAI adding Google Cloud as a compute provider, and the April 2026 Microsoft restructuring formally freed OpenAI to buy Google capacity — no primary announcement or terms. Simultaneously Gemini's chief rival: supplier economics and existential competition in one relationship.",
    "source": "Reuters-reported (Jun 2025) — unverified",
    "status": "announced"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US search antitrust remedies",
+   "status": "in-effect",
+   "effectiveDate": "2025-09",
+   "exposure": "The September 2025 search-antitrust remedies bar exclusive distribution deals (Gemini included) and mandate data-sharing, though Chrome was not divested; the DOJ and 38 states cross-appealed (February 2026, argued late 2026/early 2027), and the data-sharing remedies already bind while the appeal runs. The dossier reads the Apple-Siri Gemini win as exactly the distribution the remedies were designed to constrain — better than the worst case, but unresolved into 2027.",
+   "source": "https://www.yahoo.com/news/articles/google-not-forced-divest-chrome-203808656.html"
   }
  ],
  "technicalSpecs": [
@@ -524,6 +536,6 @@
    "url": "https://lightsourcebp.com/news/honeysuckle-solar-goes-online/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

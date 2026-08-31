@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "eve-energy",
  "name": "EVE Energy",
  "legalName": "EVE Energy Co., Ltd. (亿纬锂能)",
@@ -144,6 +144,7 @@
    "note": "Tesla's 6th cell supplier — ESS cells shipping from EVE's Malaysia plant starting 2026.",
    "context": "The marquee counterweight to EVE's US setbacks: Tesla qualified EVE as its sixth cell supplier, with stationary-storage cells supplied from the Malaysia plant beginning 2026 — a tariff-insulated route into the Western integrator that anchors the FEOC-clean US market. Sits alongside American Battery Solutions (13.4 GWh) and an 8 GWh India order in the post-Powin diversification.",
    "source": "EVE Energy strategy disclosures / trade reporting",
+   "via": "ESS cells",
    "status": "active",
    "since": "2026",
    "scale": "ESS cells ex-Malaysia"
@@ -207,6 +208,21 @@
    "source": "https://www.evebattery.com/news-1101",
    "status": "active",
    "since": "2026"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "DoD 1260H list",
+   "status": "in-effect",
+   "exposure": "Reuters reported in June 2026 that EVE was added to the US DoD 1260H 'Chinese military companies' list — a major procurement and reputational risk for US ESS sales, since utilities and federal-adjacent buyers increasingly screen against 1260H. Combined with the pending FCC Chinese-inverter ban, the dossier reads the US compliance wall around Chinese energy hardware as rising fast. The listing rests on Reuters as relayed by secondary sources; the dossier flags it for verification against the original before customer-facing use.",
+   "source": "https://en.wikipedia.org/wiki/EVE_Energy"
+  },
+  {
+   "regime": "US–China battery tariffs",
+   "status": "in-effect",
+   "exposure": "The US market is closing on EVE from multiple directions at once, and direct US exports are already <4% of revenue on FOB terms — the dossier frames its offshore footprint as its tariff-and-sanctions insulation and the template for how Chinese cell makers will serve US demand: minority stakes, licensing, offshore cells.",
+   "mitigation": "Malaysia plants (Kulim cylindrical producing since February 2025; Malaysia ESS plant operational 2026), Hungary (2027), and the 10%-stake Amplify Cell Technologies JV (Cummins/Daimler/PACCAR, Mississippi) — with Tesla stationary-storage cells supplied from Malaysia beginning 2026 as a tariff-insulated route into the Western integrator.",
+   "source": "https://www.evebattery.com/news-1099"
   }
  ],
  "technicalSpecs": [
@@ -488,6 +504,6 @@
    "url": "https://stockanalysis.com/quote/she/300014/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

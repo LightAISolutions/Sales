@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "applied-digital",
  "name": "Applied Digital",
  "legalName": "Applied Digital Corporation (formerly Applied Blockchain, Inc.)",
@@ -409,7 +409,9 @@
       "actual": "1.4 GW / ~$36B base-term contracted (~$86B with renewals) across five campuses",
       "expected": "",
       "verdict": "beat",
-      "result": "810 MW / ~$20.2B signed with one unnamed hyperscaler in FY2026 alone; CoreWeave ~$11B; actively marketing 1.7 GW more"
+      "result": "810 MW / ~$20.2B signed with one unnamed hyperscaler in FY2026 alone; CoreWeave ~$11B; actively marketing 1.7 GW more",
+      "kpi": "mw-contracted",
+      "qty": 1400
      }
     ],
     "commentary": "The market's verdict all year: believe the leases, fear the leverage. Street: 15 Buy / 2 Hold, average target ~$68–73 vs ~$30 — with Zacks a lone Strong Sell on 12x forward P/S.",
@@ -563,6 +565,6 @@
    "url": "https://www.investing.com/equities/applied-blockchain-earnings"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

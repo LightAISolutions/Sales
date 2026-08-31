@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "terra-gen",
  "name": "Terra-Gen",
  "shortName": "Terra-Gen",
@@ -220,6 +220,7 @@
    "note": "8 GWh, ~$1.43B Vertech framework (2026-2029) on US-made Arizona LFP — LG ES Vertech's largest order ever.",
    "context": "November 2024: Terra-Gen locked an up-to-8 GWh, four-year supply agreement with LG Energy Solution Vertech — modular containerized LFP on cells from LG's Arizona plant, 'all products meeting domestic content requirements,' ~KRW 2T (~$1.43B), including AEROS EMS, following a prior 2.2 GWh collaboration believed to be LG's Edwards & Sanborn share.\n\nThe decisive fact of the account: the most Chinese-content-comfortable large US buyer (LG+Samsung+BYD at E&S; BYD at Canyon Country as late as Nov 2024) solved FEOC with one Korean-US supply chain, pre-booking its mid-decade pipeline before OBBBA even passed.",
    "source": "https://www.ess-news.com/2024/11/18/masdar-backed-terra-gen-places-8-gwh-energy-storage-order-w",
+   "via": "Vertech containerized LFP",
    "status": "active",
    "since": "2024-11",
    "scale": "8 GWh / ~$1.43B"
@@ -230,6 +231,7 @@
    "note": "Enclosures at Canyon Country (Nov 2024) and part of the Edwards & Sanborn mix — the pre-pivot record.",
    "context": "BYD supplied battery enclosures at Canyon Country (80 MW/320 MWh, Santa Clarita, completed Nov 2024 — the last documented Chinese-container installation) and was part of the 120,720-unit LG/Samsung SDI/BYD mix at Edwards & Sanborn. Proof the pre-pivot playbook ran right up to the LG signing; the compliance center of gravity is now US-made cells.",
    "source": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
+   "via": "battery enclosures",
    "status": "historical",
    "scale": "Canyon Country + E&S share"
   },
@@ -247,7 +249,23 @@
    "note": "EPC on the Edwards & Sanborn flagship and Canyon Country.",
    "context": "Mortenson delivered Edwards & Sanborn as full EPC (4,600 acres, 1.9M First Solar modules, 3,287 MWh of BESS) and built Canyon Country (BYD enclosures + Power Electronics PCS) — the construction constant across Terra-Gen's flagship franchise.",
    "source": "https://www.mortenson.com/projects/canyon-country-energy-storage-facility",
+   "via": "full EPC",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Terra-Gen was the most Chinese-content-comfortable large US buyer — a documented LG + Samsung SDI + BYD mix at Edwards & Sanborn and BYD enclosures at Canyon Country as late as November 2024 — and its heavy tax-equity capital stack makes FEOC compliance existential: the financing structure cannot tolerate prohibited-foreign-entity taint.",
+   "mitigation": "The November 2024 up-to-8 GWh, ~$1.43B LG Energy Solution Vertech framework (2026-2029) on US-made Arizona LFP cells, 'all products meeting domestic content requirements' — pre-booking the mid-decade CA/NY pipeline with a Korean-US supply chain before OBBBA even passed, rather than diversifying among Chinese OEMs.",
+   "source": "https://www.ess-news.com/2024/11/18/masdar-backed-terra-gen-places-8-gwh-energy-storage-order-with-lg/"
+  },
+  {
+   "regime": "NDAA §154",
+   "status": "in-effect",
+   "exposure": "The Edwards & Sanborn flagship sits partly on Edwards Air Force Base leased land under 'the largest public-private collaboration in DoD history' — a nexus that makes NDAA §154 optics acute: the dossier assesses DoD-adjacent placement of §154-named battery suppliers as effectively unpitchable at Terra-Gen.",
+   "source": "https://www.solarpowerworldonline.com/2024/01/the-largest-us-solar-storage-project-is-complete/"
   }
  ],
  "decisionMakers": [
@@ -399,6 +417,6 @@
    "url": "https://terra-gen.com/projects/energy-storage/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

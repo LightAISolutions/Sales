@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "key-capture-energy",
  "name": "Key Capture Energy (KCE)",
  "shortName": "Key Capture",
@@ -165,9 +165,24 @@
    "note": "The incumbent primary supplier — a 390 MW framework (2021) built ~450 MW of the fleet.",
    "context": "KCE placed a 390 MW BESS order with Sungrow (ST2752UX, 2-hour) in October 2021 — the framework that made Sungrow the incumbent across the Texas fleet (TX 13, TX 19/21, TX 10, TX 15) and the New York franchise (with Black & McDonald EPC and union labor). The last Sungrow delivery reached COD January 2025 (TX 10 + TX 15, 200 MW/400 MWh, with the second ITC transfer).\n\nThe precedent the dossier flags: KCE demonstrably commits to Chinese-integrated systems at framework scale when price and availability win — but its next procurement windows (LIPA, NYSERDA, Michigan 2027) have no announced suppliers, no disclosed FEOC pathway, and an unresolved SK ownership process freezing decisions.",
    "source": "https://www.energy-storage.news/key-capture-energy-places-390mw-bess-order-with-sungrow/",
+   "via": "ST2752UX",
    "status": "active",
    "since": "2021-10",
    "scale": "390 MW framework; ~450 MW cumulative"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "FEOC economics bind every ITC-claiming project KCE builds from 2026: it has no public FEOC posture, no disclosed safe-harbored equipment bank, and its ~700 MW Michigan tranche's early-2027 construction implies equipment selection through 2026 — inside the FEOC-governed vintage with no disclosed compliance pathway. Its fleet was built on Chinese-integrated systems bought on price and availability, but at ~55% effective tariff on Chinese content, price alone no longer closes; trade press flags SK On's US LFP capacity as an unexploited FEOC-era synergy.",
+   "source": "https://www.energy-storage.news/why-sk-is-exploring-various-options-to-raise-financing-for-bess-developer-key-capture-energy/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "KCE's capital model runs on ITC transfer monetization — two of the industry's earliest transfer deals (120 MW to Enhanced Capital, Dec 2023; 200 MW in Jan 2025) — and the KCE TX 10/TX 15 CODs carried the 10% Energy Community ITC adder. Keeping the credits flowing now depends on FEOC-compliant equipment from 2026.",
+   "source": "https://www.energy-storage.news/key-capture-energy-sells-investment-tax-credits-for-120mw-of-new-york-and-texas-bess/"
   }
  ],
  "decisionMakers": [
@@ -312,6 +327,6 @@
    "url": "https://keycaptureenergy.com/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

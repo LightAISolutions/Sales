@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "amazon",
  "name": "Amazon.com, Inc.",
  "shortName": "Amazon",
@@ -149,6 +149,7 @@
    "note": "$38B seven-year AWS compute deal — the marquee win of OpenAI's multi-cloud era.",
    "context": "November 2025: OpenAI contracted $38B of AWS capacity over seven years (hundreds of thousands of GB200/GB300-class GPUs by end-2026, expandable 2027+); April 2026 reporting adds a ~$100B eight-year expansion and AWS exclusivity for OpenAI's 'Frontier' enterprise platform (single-outlet, unconfirmed). Amazon backs Anthropic while selling compute to its rival — both sides of the frontier race run through AWS.",
    "source": "https://www.aboutamazon.com/news/aws/aws-open-ai-workloads-compute-infrastructure",
+   "via": "AWS compute",
    "status": "active",
    "since": "2025-11",
    "scale": "$38B / 7 years"
@@ -187,6 +188,16 @@
    "source": "Series F participation (Apr 2025)",
    "status": "active",
    "since": "2025-04"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FERC co-location precedent",
+   "status": "in-effect",
+   "effectiveDate": "2024-11",
+   "exposure": "FERC rejected the amended interconnection service agreement for Amazon's behind-the-meter expansion at Talen's Susquehanna nuclear plant (November 2024, upheld April 2025), setting the national precedent against uncompensated behind-the-meter nuclear co-location — a precedent Amazon itself triggered and one that now reshapes how every hyperscaler structures nuclear deals.",
+   "mitigation": "The Talen deal was restructured in June 2025 into a grid-transparent front-of-meter PPA ramping to 1,920 MW of Susquehanna nuclear through 2042, plus SMR exploration — the model other hyperscalers now follow.",
+   "source": "https://www.utilitydive.com/news/ferc-interconnection-isa-talen-amazon-data-center-susquehanna-exelon/731841/"
   }
  ],
  "technicalSpecs": [
@@ -516,6 +527,6 @@
    "url": "https://www.aboutamazon.com/news/sustainability/amazon-renewable-energy-updates"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 4
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 5
 }

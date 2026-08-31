@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "voltagrid",
  "name": "VoltaGrid",
  "shortName": "VoltaGrid",
@@ -186,6 +186,7 @@
    "note": "2,300 MW of prime power across Texas — Bloomberg-reported >$1B/year from a single OpenAI site.",
    "context": "Oracle is the anchor of VoltaGrid's 4.3+ GW fully contracted book (7.5 GW through 2030): 2,300 MW across Texas, with Bloomberg reporting Oracle paying >$1B/year for a single OpenAI site. The October 2025 INNIO order — 2.3 GW / 92 × 25 MW QPac packs, INNIO's largest ever — operationalizes the contract, with firm gas supply from Energy Transfer's 140k-mile network.",
    "source": "https://www.innio.com/en/news-media",
+   "via": "QPac",
    "status": "active",
    "scale": "2,300 MW; >$1B/yr single site"
   },
@@ -195,6 +196,8 @@
    "note": ">1 GW microgrid partnership — prime power across the North America portfolio, led by Frontier's 700 MW.",
    "context": "The February 2025 Vantage partnership (>1 GW of natural-gas microgrids as primary power) announced the oilfield-to-AIDC pivot had worked — prime power, not just bridge. Frontier, Shackelford County (the 1.4 GW OpenAI/Stargate campus) runs on VoltaGrid's 210 Jenbacher J624s, ~700 MW initial, TCEQ-permitted, with no battery layer.",
    "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-",
+   "via": "natural-gas microgrids",
+   "project": "stargate",
    "status": "active",
    "since": "2025-02",
    "scale": ">1 GW; 700 MW at Frontier"
@@ -205,6 +208,7 @@
    "note": "62 synchronous condensers with flywheels + eHouses + MV/LV distribution — the no-battery stability architecture.",
    "context": "ABB supplies the QPac platform's transient-response layer: 62 synchronous condensers with flywheels ordered (27 in Nov 2025, +35 extension in Mar 2026; first units operational April 2026), plus eHouses and MV/LV distribution. Combined with engine inertia and StabilAI controls it handles 40-70% AI load swings with 'zero reliance on battery storage' — every condenser ordered is a BESS socket that will never exist.",
    "source": "https://new.abb.com/news/detail/134418",
+   "via": "synchronous condensers with flywheels",
    "status": "active",
    "since": "2025-11",
    "scale": "62 synchronous condensers"
@@ -215,6 +219,8 @@
    "note": "14 mobile units (~35 MW) powered the Colossus 122-day bring-up — the pivot's proof point.",
    "context": "June 2024: 14 VoltaGrid mobile units (~35 MW) powered xAI Colossus's 122-day, 100k-GPU bring-up before grid power and Tesla Megapacks arrived — the deployment that migrated the fleet from frac pads to AI and seeded the AIDC franchise. Bridge-scope, superseded at the site by permanent power.",
    "source": "xAI Colossus bring-up coverage (Jun 2024)",
+   "via": "mobile fleet",
+   "project": "colossus",
    "status": "historical",
    "since": "2024-06",
    "scale": "~35 MW bridge fleet"
@@ -250,6 +256,21 @@
    "context": "VoltaGrid's QPac is explicitly marketed with 'zero reliance on battery storage', designing BESS out of prime-power campuses. For Hithium the read-through is double-edged: the >$10B valuation mark and $1B/yr single-site revenue validate the size of the AIDC energy budget — while proving that budget can be captured entirely without batteries, by a FEOC-clean-by-construction stack (Austrian engines, Swiss electricals, Texas manufacturing).",
    "source": "Dossier competitive assessment — BESS displacement",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Minor-source air permitting",
+   "status": "in-effect",
+   "exposure": "The QPac platform stacks up to 200 MW of prime power under a single minor-source air permit — the core permitting strategy that replaces Title V exposure and underpins the AIDC product; Frontier's 210-engine, ~700 MW plant is TCEQ-approved. The dossier flags EPA/state aggregation challenges to the minor-source stacking strategy as the regulatory risk that could re-open architecture choices.",
+   "mitigation": "SCR aftertreatment cuts criteria pollutants 85-97% below OEM spec (NOx as low as 0.155 lb/MWh), and the QPac is hydrogen-upgradeable to 100%.",
+   "source": "https://voltagrid.com/news"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "VoltaGrid is FEOC-clean by construction — Austrian engines (INNIO Jenbacher), Swiss electricals (ABB), Texas manufacturing — a stack the dossier reads as part of its customer pitch even if never stated as such; its residual battery surfaces (undisclosed BESS on the mobile-fleet switchgear bus, Tesla Megapack pairings at bridge sites) leave no visible path for a §154-named supplier.",
+   "source": "Dossier competitive assessment — BESS displacement"
   }
  ],
  "decisionMakers": [
@@ -418,6 +439,6 @@
    "url": "https://voltagrid.com/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "prevalon",
  "name": "Prevalon Energy",
  "shortName": "Prevalon",
@@ -254,6 +254,7 @@
    "note": "HD5 AC (5 MWh integrated AC block) competes with Megapack 3/Megablock on integration engineering.",
    "context": "The May 2026 HD5 AC launch (5 MWh integrated AC block, up to 426 MWh/acre, 92.5% RTE, distributed 500 kW string PCS, direct MV connection) matches where Tesla is taking the market with Megapack 3/Megablock — integration engineering as the differentiator for a player that cannot win on volume.",
    "source": "https://prevalonenergy.com/prevalon-energy-launches-hd5-ac/",
+   "via": "HD5 AC",
    "status": "active",
    "since": "2026-05"
   },
@@ -263,6 +264,7 @@
    "note": "Quantum3-class AC-block rival in the integration-engineering lane.",
    "context": "The HD5 AC's competitive set is Tesla Megapack 3/Megablock and Wärtsilä Quantum3 — the AC-block integration play where Prevalon differentiates on engineering rather than scale, with the PCS vendor undisclosed pending the Nextpower Zigor/Apex fit.",
    "source": "https://prevalonenergy.com/prevalon-energy-launches-hd5-ac/",
+   "via": "HD5 AC",
    "status": "active"
   },
   {
@@ -271,8 +273,27 @@
    "note": "Hybrid Power Stabilizer targets the GPU load-swing problem NVIDIA's 800 VDC papers define — DOE-lab tested with hyperscalers participating.",
    "context": "Prevalon's HPS — BESS plus power electronics aimed at GPU load swings, loss-of-load events, faults and islanded architectures — entered hardware-in-the-loop testing at a US DOE national laboratory in April 2026 with hyperscalers participating. The testing scope reads like the NVIDIA 800 VDC papers' problem list; ecosystem alignment, not a named NVIDIA partnership.",
    "source": "https://prevalonenergy.com/prevalon-advances-hybrid-power-stabilizer-hps/",
+   "via": "Hybrid Power Stabilizer",
    "status": "active",
    "since": "2026-04"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-01",
+   "exposure": "Prevalon ran on Chinese REPT cells and a Chinese contract manufacturer (CLOU) before the January 2026 FEOC changes; CEO Cornell has publicly detailed how buyers now scrutinise origin, ownership and control. The pivot is genuine but incomplete: the Fixx-controlled Smyrna plant changed hands only in April 2026, and whether Envision's continuing licence role in that plant survives Treasury's final FEOC regulations is an open legal question — a domestic-content claim built on Smyrna cells carries regulatory tail risk Prevalon does not control.",
+   "mitigation": "A multi-year, 10 GWh AESC cell-and-module supply agreement (June 2026) delivering US-manufactured, domestic-content modules via Fixx Energy's Smyrna, Tennessee LFP plant; supply diversified to US, Indonesia, Malaysia and Thailand facilities for US-bound product; long-lead equipment pre-bought under multiple sourcing scenarios.",
+   "source": "https://www.energy-storage.news/prevalon-on-how-feoc-rules-change-us-bess-buying/"
+  },
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "effectiveDate": "2026-01",
+   "exposure": "The January 2026 Section 301 changes, alongside FEOC, drove Prevalon to re-plumb its supply chain — an unusually candid public account from a mid-tier integrator of re-routing around China exposure.",
+   "mitigation": "Supply extended to US, Indonesia, Malaysia and Thailand facilities for US-bound product, with China supply retained for non-US markets.",
+   "source": "https://www.energy-storage.news/prevalon-on-how-feoc-rules-change-us-bess-buying/"
   }
  ],
  "decisionMakers": [
@@ -457,6 +478,6 @@
    "url": "https://prevalonenergy.com/hybrid-power-stabilizer-for-data-centers/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

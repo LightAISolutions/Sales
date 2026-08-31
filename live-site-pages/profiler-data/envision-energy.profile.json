@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "envision-energy",
  "name": "Envision Energy (Envision Group / AESC)",
  "shortName": "Envision",
@@ -260,6 +260,7 @@
    "type": "customer",
    "note": "AESC cells (via the US-controlled Fixx Energy structure at Smyrna, TN) supply ~50% of Fluence's US project LFP as domestic content.",
    "context": "Named in NDAA §154 and FEOC-walled from direct ITC-linked sales, Envision sold control of AESC's Smyrna plant to Fixx Energy (control from 1 April 2026, AESC retaining a minority stake plus licensing) — the only executed template for converting a statutorily-named Chinese battery maker's US assets into FEOC-tolerable supply. The dossier's biggest open question: whether the structure survives Treasury's final FEOC regulations due late 2026 — if licensing ties taint effective control, both Fluence's and Prevalon's domestic-content narratives take damage.",
+   "via": "AESC LFP cells (Smyrna)",
    "status": "active",
    "since": "2026-04"
   },
@@ -268,6 +269,7 @@
    "type": "customer",
    "note": "3-year, 10 GWh US domestic-content cell+module deal (June 2026) through the same Fixx-controlled Smyrna structure — the second proof point after Fluence.",
    "source": "Energy-Storage.News",
+   "via": "AESC cells and modules",
    "status": "active",
    "since": "2026-06",
    "scale": "10 GWh / 3 years"
@@ -298,6 +300,23 @@
    "slug": "byd",
    "type": "competitor",
    "note": "The other volume surger that pushed Envision down the comprehensive ranking; both bundle vertical integration, but BYD's is EV-funded."
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Envision is FEOC-walled from direct ITC-linked US sales — no Envision-branded system sells into the US. The dossier's single biggest open question is whether the Fixx structure survives Treasury's final FEOC regulations due late 2026: if continuing licensing/IP ties are ruled to taint effective-control status, the Smyrna cells lose their domestic-content halo and both Fluence's and Prevalon's supply narratives take damage — a systemic event for the US mid-tier.",
+   "mitigation": "Sold control of AESC's Smyrna TN cell plant to US-controlled Fixx Energy (control from April 1, 2026; AESC retains a minority stake plus technology licensing), letting the cells flow to US integrators as domestic content — ~50% of Fluence's US project LFP and a 3-year 10 GWh Prevalon deal.",
+   "source": "https://foleyhoag.com/news-and-insights/blogs/energy-and-climate-counsel/2026/july/the-prohibited-foreign-entity-(or-feoc)-rules-and-battery-storage/"
+  },
+  {
+   "regime": "NDAA §154",
+   "status": "in-effect",
+   "effectiveDate": "2027-10",
+   "exposure": "Envision is one of six Chinese battery makers named in the FY24 NDAA §154 DoD procurement ban (effective October 2027), alongside Hithium — the statutory naming that anchors the dossier's read of Envision's US strategy as 'arm the compliant competition' rather than compete directly.",
+   "mitigation": "The Fixx restructuring converted its US cell asset into influence: upstream domestic-content supply through a US-controlled entity while Envision keeps a minority stake and licensing income.",
+   "source": "https://www.trendforce.com/news/2024/01/22/news-six-companies-including-byd-and-catl-are-included-in-the-u-s-procurement-ban-list/"
   }
  ],
  "decisionMakers": [
@@ -485,6 +504,6 @@
    "url": "https://www.aesc-group.com/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

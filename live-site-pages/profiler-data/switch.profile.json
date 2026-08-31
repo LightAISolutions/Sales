@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "switch",
  "name": "Switch, Inc.",
  "categories": [
@@ -238,6 +238,7 @@
    "note": "Two consecutive world-first NVIDIA bring-ups on Switch floors; Omniverse DSX integrated into the LDC EVO operating system — NVIDIA also a customer per Reuters.",
    "context": "Switch's EVO AI Factories are aligned to NVIDIA DGX/MGX roadmaps from Blackwell through Rubin and hosted the industry-first GB200 NVL72 bring-up (Nov 2024) and world-first GB300 NVL72 bring-up (Jul 2025). March 2026: the NVIDIA Omniverse DSX Blueprint was integrated into EVO and the LDC EVO living-data-center OS — a physics-accurate digital twin replacing DCIM, showcased at GTC with Dell, Schneider, Cadence and ETAP. Reuters also lists NVIDIA among Switch customers.",
    "source": "https://www.switch.com/switch-integrates-nvidia-omniverse-dsx-blueprint-into-switchs-evo-ai-fac",
+   "via": "EVO AI Factories",
    "status": "active",
    "since": "2024-11"
   },
@@ -247,6 +248,7 @@
    "note": "Executed both world-first NVIDIA bring-ups (GB200, GB300 NVL72) inside Switch AI Factories.",
    "context": "CoreWeave ran the industry-first NVIDIA GB200 NVL72 bring-up (November 2024) and the world-first GB300 NVL72 bring-up (on Dell rack-scale systems, July 2025) inside Switch's Rob Roy EVO AI Factories — two NVIDIA generations launched first on Switch floors, the strongest third-party validation that the 2MW-per-rack EVO density claims translate to deployed hardware.",
    "source": "https://www.switch.com/coreweave-deploys-industry-first-nvidia-gb300-nvl72-in-switchs-ai-factor",
+   "via": "EVO AI Factories",
    "status": "active",
    "since": "2024-11"
   },
@@ -256,6 +258,7 @@
    "note": "$1.9B supply-capacity agreement — prefab power modules, Uniflair chillers, and full-service maintenance for the EVO rollout.",
    "context": "November 2025: the Schneider Electric supply-capacity agreement expanded to $1.9B across two phases — prefabricated power modules, the first North American deployment of new Uniflair chillers, and a three-year full-service maintenance contract supporting up to 2MW-per-rack EVO builds across all five campuses. Switch locked its power-and-cooling slots the way hyperscalers lock GPUs.",
    "source": "https://www.switch.com/schneider-electric-and-switch-expand-partnership-with-1-9-billion-supply",
+   "via": "prefab power modules & Uniflair chillers",
    "status": "active",
    "since": "2025-11",
    "scale": "$1.9B supply-capacity reservation"
@@ -274,6 +277,7 @@
    "note": "AI-hall rival whose 250kW-class designs Switch's 2MW-per-rack ceiling out-specs.",
    "context": "Versus Vantage/Aligned AI halls (250kW-class liquid-cooled designs), Switch markets an order-of-magnitude higher density ceiling and a facility operating system, not just a shell. On power, the models diverge too: Vantage goes gas-microgrid (VoltaGrid/Liberty) while Switch stays a creditworthy offtaker with PPAs, LC capacity and nuclear options (Oklo).",
    "source": "Dossier competitive assessment — AI factories",
+   "via": "EVO AI Factories",
    "status": "active"
   },
   {
@@ -282,7 +286,18 @@
    "note": "Wholesale AI-hall peer in the density-and-standards contest.",
    "context": "Aligned's liquid-cooled AI halls sit in the competitive set Switch answers with Tier 5 standards and the 2MW-per-rack EVO product — a standards-and-density story against raw build-to-suit scale.",
    "source": "Dossier competitive assessment — AI factories",
+   "via": "EVO AI Factories",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Texas data-center standards",
+   "status": "in-effect",
+   "effectiveDate": "2026-08-03",
+   "exposure": "Texas Governor Abbott paused new data-center approvals pending an ERCOT/PUCT energy-and-water audit (August 2026) — a regime bearing directly on Switch's Texas ecosystem (The Rock in Round Rock plus Data Foundry's Austin/Houston sites, over 2M sq ft and 185MW announced).",
+   "mitigation": "Switch publicly backed the governor's data-center standards, citing self-funded infrastructure, REC-backed renewables and $250M+ committed in Round Rock — converting its pay-your-own-way posture into first-mover regulatory alignment; it also publicly committed to self-funding its power infrastructure in Texas and Pennsylvania.",
+   "source": "https://www.switch.com/statement-on-gov-abbotts-data-center-standards/"
   }
  ],
  "technicalSpecs": [
@@ -817,6 +832,6 @@
    "url": "https://www.switch.com/atlanta/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

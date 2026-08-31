@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "mastec",
  "name": "MasTec",
  "shortName": "MasTec",
@@ -183,6 +183,20 @@
    "scale": "200 MW/400 MWh + distributed portfolio"
   }
  ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "MasTec takes no FEOC position of its own — its posture is outsourced to customers by design: the safe-harbored, top-tier-developer strategy structurally selects FEOC-compliant equipment onto its sites, keeping the pipeline structurally away from §154-named content. Simultaneously, the 2025 Sungrow pairings (Apache Hill 200 MW/400 MWh; Onyx distributed portfolio — both owner-selected) are the field's clearest evidence that a Chinese-headquartered BESS supplier still rides owner selection through a top-tier US EPC; the constraint is the owner's tax-credit math, not the contractor.",
+   "source": "https://www.energy-storage.news/vitis-energy-and-enertis-applus-advance-texas-bess-projects/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "MasTec's post-OBBBA read (Q2 2025 call): credits intact through 2027 with 'a clear path for safe harboring projects... construction through 2030', and customers 'heavily skewed to top-tier developers' with high safe-harbor success — keeping the renewables construction pipeline credit-eligible without MasTec ever taking a policy position itself.",
+   "source": "https://www.investing.com/news/transcripts/earnings-call-transcript-mastec-q2-2025-sees-robust-growth-stock-dips-93CH-4320406"
+  }
+ ],
  "decisionMakers": [
   {
    "name": "Jose R. Mas",
@@ -340,6 +354,6 @@
    "url": "https://www.mastec.com/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "iren",
  "name": "IREN",
  "legalName": "IREN Limited (formerly Iris Energy Limited)",
@@ -198,6 +198,7 @@
    "note": "$9.7B five-year GB300 contract — four 50MW 'Horizon' AI data centers at Childress, TX.",
    "context": "Announced November 3, 2025 with a 20% prepayment: dedicated GB300 capacity across Horizons 1-4 (200MW IT total), phased through 2026 — Horizon 1 delivered and accepted August 2026, Horizon 2 commissioning, 3-4 targeting Q4 2026. Expected to contribute ~$1.9B of annual run-rate revenue, and financed ~96% by the Goldman Sachs/JPMorgan $3.6B facility secured against the contract.",
    "source": "https://iren.gcs-web.com/news-releases/news-release-details/iren-secures-97bn-ai-cloud-contract-microsoft",
+   "via": "GB300 capacity",
    "status": "active",
    "since": "2025-11",
    "scale": "$9.7B / 5 years / 200MW IT"
@@ -588,6 +589,6 @@
    "url": "https://stockanalysis.com/stocks/iren/forecast/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "plus-power",
  "name": "Plus Power",
  "shortName": "Plus Power",
@@ -201,6 +201,7 @@
    "note": "Megapack side of the dual-source model: Kapolei, Sierra Estrella, Superstition, Cranberry Point — plus deep alumni ties.",
    "context": "Verified Tesla Megapack pairings: Kapolei HI (158 Megapack 2 XL), Sierra Estrella AZ (276 units, 'designed and manufactured in the US' per SRP), Superstition AZ, and Cranberry Point MA (82 Megapack 2XL per Mass DPU filings) — deployed where utility optics reward US-made hardware. Institutional ties run deep: Exec Vice Chairman Bobby Rudd and CDO Molly Emerson are Tesla/SolarCity alumni, and Plus Power's Gambit project was sold to Tesla in 2021.",
    "source": "https://electrek.co/2024/06/27/tesla-megapack-arizona-sierra-estrella/",
+   "via": "Megapack",
    "status": "active",
    "scale": "500+ Megapacks across 4 flagship projects"
   },
@@ -210,8 +211,29 @@
    "note": "PowerTitan side of the dual-source model — 330+ containers through 2025, including ISO-NE's largest BESS.",
    "context": "Sungrow won the merchant-economics side of the per-project split ('Texas projects used Sungrow, Arizona used Tesla' — then-CEO Keefe): the ERCOT trio plus Cross Town, Maine (175 MW/350 MWh, 156 PowerTitan units — the largest BESS on the ISO-NE grid, inaugurated February 2026 with claimed 100% availability through Winter Storm Fern). One of Sungrow's best US references — and the relationship to watch as the FEOC indicator of whether any Chinese-brand system retains a path at this account.",
    "source": "https://www.canarymedia.com/articles/batteries/new-england-biggest-grid-battery-maine",
+   "via": "PowerTitan",
    "status": "active",
    "scale": "330+ PowerTitan containers"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "FEOC material-assistance ratios govern all of Plus Power's 2026+ construction starts — Corazon (construction 2026), Crawfish Creek (2028) and Laurel Creek (2029) all sit in FEOC-governed vintages — while one flank of its dual-source model is Chinese incumbent Sungrow (330+ PowerTitan containers deployed through 2025), which faces the same disqualification math as any Chinese supplier. No public FEOC or domestic-content posture statement has been located anywhere — the account's defining intel gap.",
+   "source": "https://www.prnewswire.com/news-releases/plus-power-pnm-corazon"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Every project claims the 30% ITC, monetized through five distinct tax-equity/debt syndicates (Morgan Stanley, BofA, Foss & Co., Greenprint plus bank clubs) — IRS-compliance cleanliness is a procurement gating criterion by construction, and keeping the 30% ITC on 2026+ vintages is the open question forced by Corazon's construction start.",
+   "source": "https://www.prnewswire.com/news-releases/plus-power-160m-tax-equity-iso-ne"
+  },
+  {
+   "regime": "NDAA §154",
+   "status": "in-effect",
+   "exposure": "Kapolei is marketed partly on powering Oahu's military installations — an optics-sensitive detail for NDAA-named suppliers in any follow-on — and the dossier reads NDAA §154 optics, alongside red-state utility counterparties (TVA, SRP), as among the harder walls for any Chinese-brand entrant at this account.",
+   "source": "https://www.prnewswire.com/news-releases/plus-power-kapolei-online"
   }
  ],
  "decisionMakers": [
@@ -363,6 +385,6 @@
    "url": "https://pluspower.com/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "delta-electronics",
  "name": "Delta Electronics",
  "legalName": "Delta Electronics, Inc.",
@@ -149,6 +149,7 @@
    "note": "The incumbent standard inside the NVIDIA rack — first-qualified power-shelf supplier for GB200/GB300 NVL72, with a reported exclusive on NVIDIA DC-DC modules.",
    "context": "TrendForce names Delta the primary beneficiary of the 800V HVDC shift (NVIDIA Vera Rubin and Google adopting first, initial shipments 3Q26). At GTC 2026 Delta unveiled the 660 kW In-Row Power Rack and shipped the GoCool 3 MW CDU across the MGX ecosystem. The dossier's caveat: AI data center >50% of revenue concentrates exposure on NVIDIA's rack cadence, and no third-party source quantifies NVIDIA as a share of Delta revenue.",
    "source": "https://www.trendforce.com/news/2026/06/15/news-nvidia-google-may-be-first-to-adopt-800v-hvdc-initial-3q26-shipments-may-boost-delta-and-infrastructure-suppliers/",
+   "via": "GB200/GB300 NVL72 power shelves",
    "status": "active",
    "since": "2024"
   },
@@ -161,7 +162,8 @@
   {
    "slug": "liteon",
    "type": "competitor",
-   "note": "Fellow Taiwanese power-shelf qualifier reported at #2-then-displaced in the NVL72 supplier set — the incumbency fight beneath Delta's first-qualified position."
+   "note": "Fellow Taiwanese power-shelf qualifier reported at #2-then-displaced in the NVL72 supplier set — the incumbency fight beneath Delta's first-qualified position.",
+   "via": "NVL72 power shelves"
   },
   {
    "slug": "vertiv",
@@ -177,14 +179,25 @@
   {
    "slug": "ge-vernova",
    "type": "competitor",
-   "note": "The two vendors pairing solid-state transformers with complete AI-factory power architectures — Delta from the rack up, GE Vernova from the grid down."
+   "note": "The two vendors pairing solid-state transformers with complete AI-factory power architectures — Delta from the rack up, GE Vernova from the grid down.",
+   "via": "solid-state transformers"
   },
   {
    "slug": "google",
    "type": "customer",
    "note": "Named (with NVIDIA) as a first adopter of 800V HVDC per TrendForce — initial shipments 3Q26, with Delta the primary beneficiary.",
    "source": "https://www.trendforce.com/news/2026/06/15/news-nvidia-google-may-be-first-to-adopt-800v-hvdc-initial-3q26-shipments-may-boost-delta-and-infrastructure-suppliers/",
+   "via": "800V HVDC",
    "status": "announced"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US reciprocal tariffs",
+   "status": "in-effect",
+   "exposure": "Thai-listed subsidiary DELTA TH — Thailand's largest listed company and the group's main export production/earnings vehicle — carries the US tariff exposure; Delta Thailand CEO Victor Cheng has said rates 'beyond 15% will be difficult to take.'",
+   "mitigation": "Chairman/CEO Ping Cheng's stated position that Delta has 'sufficient production sites around the world.'",
+   "source": "https://fortune.com/asia/2025/04/14/delta-electronics-thailand-trump-tariffs-ai-ev-data-centers"
   }
  ],
  "technicalSpecs": [
@@ -447,6 +460,6 @@
    "url": "https://longportapp.com/en/news/227685286"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

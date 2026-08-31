@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "megmeet",
  "name": "Shenzhen Megmeet Electrical Co., Ltd. (深圳麦格米特电气股份有限公司)",
  "shortName": "Megmeet",
@@ -213,6 +213,7 @@
    "note": "The only mainland-China power vendor NVIDIA has named for GB200 NVL72 power; 800VDC sidecar co-developed.",
    "context": "Megmeet is a member of NVIDIA's 800V HVDC ecosystem — the mainland-China exception on both partner lists — and moved first among mainland vendors on the 800VDC sidecar/SST full chain: an 800V HVDC Sidecar for the NVIDIA Kyber rack-scale platform (>1 MW per rack, claimed +5% end-to-end efficiency, −45% copper) announced May 2025, shown co-developed with NVIDIA at OCP October 2025, and MGX support with a 110 kW liquid-cooled power shelf for GB300/Vera Rubin-class racks by May 2026.",
    "source": "https://en.megmeet.com/news/info/2335.html",
+   "via": "800V HVDC Sidecar",
    "status": "active",
    "since": "2025-05"
   },
@@ -222,6 +223,7 @@
    "note": "Contested #2 fight for NVIDIA power-shelf share.",
    "context": "Trade press reports Megmeet displacing Lite-On as the #2 NVIDIA power-shelf source behind Delta — market speculation, not company-confirmed, and contradicted by LITEON's own record shipments. The two are fighting for the sidecar power-rack segment whose TAM independent analysis projects peaking around 2028.",
    "source": "Dossier competitive assessment — NVIDIA power-shelf tier",
+   "via": "NVIDIA power shelves",
    "status": "active"
   },
   {
@@ -231,6 +233,15 @@
    "context": "Megmeet chases a server-power market ~74% held by Taiwanese suppliers (Delta ~41%, plus Lite-On, AcBel, Chicony, Advanced Energy). Its wedge is architecture timing, not price: first mainland mover on the 800VDC sidecar/SST chain, deliberately sacrificing near-term profit for early position ahead of the projected 2027 rack transition.",
    "source": "Dossier competitive assessment — NVIDIA power-shelf tier",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US import tariffs",
+   "status": "in-effect",
+   "exposure": "As a mainland-China supplier selling into US hyperscaler and NVIDIA-ecosystem procurement, Megmeet faces tariff and geopolitical friction on China-origin output — the dossier assesses its geographic build-out as supply-chain de-risking aimed at making a mainland company buyable by American AI-infrastructure buyers.",
+   "mitigation": "The build-out itself: Thailand phase II, the Dallas, Texas AI-DC power test lab (360 kW active, 1.5 MW roadmap) placing validation capacity physically next to US hyperscaler customers, India localization, and the pending Hong Kong A+H listing — on a manufacturing footprint spanning China, Thailand, India, the US, and Germany.",
+   "source": "https://en.megmeet.com/news/info/2343.html"
   }
  ],
  "technicalSpecs": [
@@ -633,6 +644,6 @@
    "url": "https://www.tradingview.com/symbols/SZSE-002851/forecast-actuals-and-estimates/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 4
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 5
 }

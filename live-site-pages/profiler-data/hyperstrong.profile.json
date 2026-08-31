@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "hyperstrong",
  "name": "HyperStrong (Beijing HyperStrong Technology)",
  "shortName": "HyperStrong",
@@ -284,6 +284,15 @@
    "status": "active"
   }
  ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Under the FEOC material-assistance rules a HyperStrong system — a Chinese integrator wrapping Chinese cells, with no US manufacturing — is essentially all-prohibited-content for ITC purposes, leaving its US lane to safe-harbored projects and tax-credit-indifferent buyers. The company's own 2026 Americas order framing (data-center storage projects with multiple asset operators) points at the tax-credit-indifferent lane as the intended US path; the 420+ MWh US delivery claim remains unverified by any third party.",
+   "mitigation": "The US position is deliberately kept alive despite the fence: Houston/Chicago/San Francisco offices, the Luminous Energy MoU, the HyperBlock III large-scale fire test run with a North-America-registered fire-protection engineer for US permitting files, and the full UL certification stack.",
+   "source": "https://www.morganlewis.com/pubs/2026/03/how-feoc-rules-are-reshaping-energy-storage-tax-credit-eligibility"
+  }
+ ],
  "decisionMakers": [
   {
    "name": "Dr. Zhang Jianhui (张剑辉)",
@@ -496,6 +505,6 @@
    "url": "https://www.hyperstrong.com/en/products/hyperblockm"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

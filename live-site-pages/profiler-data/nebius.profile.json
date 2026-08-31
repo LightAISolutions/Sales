@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "nebius",
  "name": "Nebius",
  "legalName": "Nebius Group N.V.",
@@ -211,6 +211,7 @@
    "note": "Up to ~$27B over five years — $12B dedicated Vera Rubin capacity plus a $15B option.",
    "context": "The ~$3B November 2025 agreement (capacity-capped — Nebius was effectively sold out) expanded in March 2026 to up to ~$27B: $12B of dedicated Vera Rubin capacity with deliveries from early 2027, plus Meta's commitment to purchase up to $15B of additional compute from upcoming clusters.",
    "source": "https://www.cnbc.com/2026/03/16/meta-nebius-ai-infrastructure.html",
+   "via": "Vera Rubin",
    "status": "active",
    "since": "2025-11",
    "scale": "up to ~$27B / 5 years"
@@ -231,6 +232,7 @@
    "note": "328 MW of fuel cells planned operational in 2026 for the build-out — first US deployment at Vineland.",
    "context": "May 2026 partnership: Bloom solid-oxide fuel cells totaling 328 MW planned operational in 2026, starting with a first US deployment tied by local reporting to the Vineland, NJ site — where the city's August 2026 stop-work orders on unpermitted fuel-cell and LNG-tank work introduced permitting risk.",
    "source": "Nebius-Bloom partnership announcement (May 2026)",
+   "via": "solid-oxide fuel cells",
    "status": "active",
    "since": "2026-05",
    "scale": "328 MW"
@@ -241,8 +243,24 @@
    "note": "Landlord at CWL1 Newport — the first commercial commitment in the UK's South Wales AI Growth Zone.",
    "context": "August 2026: Nebius leases high-density capacity at Vantage's CWL1 campus in Newport, Wales, built to NVIDIA's DSX AI-factory reference design — part of the ~£1.7B, ~65MW-by-2027 UK program alongside Kao Data Harlow, the Ark Chertsey site and Digital Realty/Docklands colocation.",
    "source": "https://vantage-dc.com/news/vantage-data-centers-and-nebius-expand-uk-ai-infrastructure-with-first-deployment-in-south-wales-ai-growth-zone/",
+   "via": "CWL1 campus",
    "status": "active",
    "since": "2026-08"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Clean Air Act PSD review",
+   "status": "in-effect",
+   "exposure": "Nebius's behind-the-meter power strategy is shaped by permitting: gas turbines at US data centers trigger Clean Air Act PSD review, and Nebius chose Bloom solid-oxide fuel cells partly because they avoid it — the dossier reads the fuel-cell strategy as a permitting arbitrage and 'power procurement as schedule engineering.' Execution risk showed up anyway: two Vineland, NJ stop-work orders in August 2026 for unpermitted fuel-cell/LNG work sit on the Microsoft contract's critical path.",
+   "mitigation": "The $2.6B, 10-year Bloom Energy master agreement for behind-the-meter solid-oxide fuel cells across Nebius US data centers, with a first 328 MW deployment at Vineland.",
+   "source": "https://www.cnbc.com/2026/05/21/bloom-energy-nebius-ai-infrastructure-firm-partnership.html"
+  },
+  {
+   "regime": "EU Russia sanctions",
+   "status": "expired",
+   "exposure": "Nebius is the Amsterdam-headquartered remainder of Yandex N.V. after the July 2024 Russia divestment at a Kremlin-required ~50% discount (~$5.2–5.4B) — the largest corporate exit from Russia since the invasion. Founder Arkady Volozh was EU-sanctioned in June 2022 and returned as CEO after the sanctions were lifted in March 2024; ClusterMAX still flags lingering 'Russian roots' customer hesitancy as a weakness.",
+   "source": "https://www.themoscowtimes.com/2025/12/10/arkady-volozhs-second-act-a91269"
   }
  ],
  "technicalSpecs": [
@@ -626,6 +644,6 @@
    "url": "https://public.com/stocks/nbis/earnings"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

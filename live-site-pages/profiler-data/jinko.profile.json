@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "jinko",
  "name": "JinkoSolar Holding Co., Ltd. (晶科能源) — incl. Jinko Solar Co. (SSE STAR: 688223) and Jinko ESS",
  "shortName": "Jinko",
@@ -166,6 +166,21 @@
    "context": "The SunTera G3's 6.25 MWh, 587 Ah grid-forming design lands squarely in the container class Hithium contests with ∞Block/∞Power — with Jinko's differentiation being grid-forming capability for weak-grid markets and PV+storage integration from its module base.",
    "source": "https://www.ess-news.com/2025/04/14/jinko-unveils-6-25-mwh-suntera-g3-global-shipments-set-for-q4-20",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "AD/CVD",
+   "status": "in-effect",
+   "exposure": "US Commerce's April 2025 final AD/CVD determinations set Jinko-specific combined rates up to ~246% on its Vietnam-made modules — ROTH called the determinations 'negative for JinkoSolar' — narrowing the US module door to Jacksonville assembly. The Tiger Neo 3.0 global rollout explicitly excludes the US, a tariff-era product-segmentation decision, with the 2023 Jacksonville raid an unresolved backdrop.",
+   "mitigation": "US-market EAGLE modules assembled in Jacksonville, FL (2 GW, 650+ workers, since 2018) as the US hedge; storage and non-US markets carry the growth burden.",
+   "source": "https://pv-magazine-usa.com/2025/04/21/u-s-commerce-department-slaps-unexpectedly-high-tariffs-on-solar-imports/"
+  },
+  {
+   "regime": "China anti-involution policy",
+   "status": "in-effect",
+   "exposure": "The margin-recovery thesis rides on China's 'anti-involution' price discipline: Q1 2026 gross margin recovered to 8.3% (from 2.2% FY2025) on policy-driven price firming plus storage mix, and the dossier assesses the recovery depends on that discipline holding as much as on Jinko's own execution.",
+   "source": "https://www.prnewswire.com/news-releases/jinkosolar-announces-first-quarter-2026-financial-results-302757116.html"
   }
  ],
  "technicalSpecs": [
@@ -420,6 +435,6 @@
    "url": "https://www.jinkosolar.com/en/site/tigerneo_3"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

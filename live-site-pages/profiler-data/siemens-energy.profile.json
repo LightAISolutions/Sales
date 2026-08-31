@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "siemens-energy",
  "name": "Siemens Energy",
  "legalName": "Siemens Energy AG (rebranding to 'Omterra' — announced July 14, 2026, phase-in from late 2026)",
@@ -138,6 +138,7 @@
    "note": "Alliance productizing a 500 MW SGT-800-based standard onsite-power block — diesel-free, claimed two years off time-to-power.",
    "context": "June 2025: Eaton and Siemens Energy joined forces on a fast-track data-center offering — a repeatable 500 MW grid-independent block (SGT-800 fleet: 620 installations, >20M operating hours, 99.1% reliability; hydrogen-ready to 75 vol%) that 'eliminates diesel backup gensets', with Siemens Energy supplying generation/storage and Eaton the grid-to-chip electrical stack (MV/LV switchgear, UPS, busway, racks). The dossier rates it the most productized onsite-power offering from any major OEM — aimed squarely at the behind-the-meter demand xAI, Crusoe and the hyperscalers validated, and the direct structural answer to GE Vernova's AIDC push.",
    "source": "https://www.siemens-energy.com/us/en/home/press-releases/eaton-and-siemens-energy-join-forces-t",
+   "via": "500 MW SGT-800 block",
    "status": "active",
    "since": "2025-06",
    "scale": "500 MW standard block"
@@ -158,6 +159,15 @@
    "source": "https://www.siemens-energy.com/us/en/home/press-releases/siemens-energy-is-investing--1-billion",
    "status": "active",
    "since": "2026-02"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US import tariffs",
+   "status": "in-effect",
+   "exposure": "As a Munich-headquartered supplier into the US buildout, Siemens Energy carries tariff exposure on imported equipment — ~80% of US large power transformers are imported, with US Southeast lead times of 36+ months — and the dossier reads the February 2026 US localization program as aimed against both the transformer bottleneck and tariff exposure.",
+   "mitigation": "The $1B US investment (announced February 3, 2026, 1,500+ jobs): a Mississippi HV switchgear plant, resumption of Charlotte, NC gas-turbine manufacturing, and the $150M Charlotte LPT plant (first units early 2026, full production 2027), plus an Orlando AI grid lab with NVIDIA.",
+   "source": "https://www.siemens-energy.com/us/en/home/press-releases/siemens-energy-is-investing--1-billion-and-creating-highly-skill.html"
   }
  ],
  "technicalSpecs": [
@@ -445,6 +455,6 @@
    "url": "https://capital.com/en-int/analysis/siemens-energy-stock-forecast"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

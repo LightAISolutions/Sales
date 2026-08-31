@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "huawei-digital-power",
  "name": "Huawei Digital Power",
  "legalName": "Huawei Digital Power Technologies Co., Ltd. (business unit of Huawei Technologies Co., Ltd.; incorporated June 2021)",
@@ -197,6 +197,34 @@
    "context": "Sinexcel appears in the component tier of the Chinese AIDC power ecosystem that brokerages map beneath Huawei's integrated-solution anchor position — ecosystem structure rather than a bilateral deal.",
    "source": "Dossier competitive assessment — integrated-solution tier",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US Entity List",
+   "status": "in-effect",
+   "exposure": "Huawei has been effectively banned from the US since its 2019 Entity List designation — the foundation of a de facto exclusion that, together with NDAA 889, makes it a structural non-factor in US procurement and confines its addressable AIDC market to the Middle East, APAC, Africa, and LatAm. The security rationale (Chinese intelligence-law cooperation obligations) travels with every grid-connected product.",
+   "mitigation": "Group R&D of CNY 192.3B (22% of revenue) explicitly targets reducing dependence on restricted US technology.",
+   "source": "https://www.usnews.com/news/politics/articles/2026-06-30/exclusive-us-working-on-ban-targeting-chinese-energy-inverters-sources-say"
+  },
+  {
+   "regime": "NDAA §889",
+   "status": "in-effect",
+   "exposure": "NDAA 889 works alongside the Entity List to close the US market; the dossier assesses the July 2026 FCC Covered List action's direct incremental effect on Huawei as near zero precisely because these two regimes had already shut the door.",
+   "source": "https://www.usnews.com/news/politics/articles/2026-06-30/exclusive-us-working-on-ban-targeting-chinese-energy-inverters-sources-say"
+  },
+  {
+   "regime": "FCC Covered List (power inverters)",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-28",
+   "exposure": "The FCC added foreign-produced connected power inverters to the Covered List on 28 July 2026, blocking new US equipment authorizations on a country-agnostic Buy American \"domestic end product\" origin test — an origin rule, not a China rule. The direct incremental effect on Huawei is assessed as near zero (the Entity List and NDAA 889 already closed the US), but the competitive effect is material: it closes the US to Sungrow and the rest of the Chinese inverter bloc on the same terms. The restriction is prospective only — pre-28-July authorizations survive — and the definition's second prong (remote connectivity via Wi-Fi, cellular, Bluetooth or another similar connection) leaves the reach into wired-managed power electronics unresolved.",
+   "source": "https://docs.fcc.gov/public/attachments/DOC-423682A1.pdf"
+  },
+  {
+   "regime": "EU high-risk inverter phase-out",
+   "status": "announced",
+   "exposure": "The European Commission is phasing Chinese inverters (Huawei and Sungrow named) out of EU-funded energy projects on cybersecurity grounds, with full restrictions on new contracts by April 2027 — after which Huawei's grid-tied Western European business is effectively confined to non-funded private projects. The Commission's assessment concluded hostile access to inverters could potentially even trigger blackouts; ESMC claims Huawei and Sungrow hold remote access to 168 GW of European PV.",
+   "source": "https://www.euronews.com/my-europe/2026/05/04/eu-moves-to-ban-high-risk-inverters-from-china-over-cybersecurity-threats"
   }
  ],
  "technicalSpecs": [
@@ -429,6 +457,6 @@
    "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-ups-market.asp"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 4
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 5
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "on-energy",
  "name": "ON.energy",
  "shortName": "ON.energy",
@@ -170,6 +170,7 @@
    "note": "5 GW AI UPS deployment agreement across multiple hyperscale campuses, commissioning 2026-2027.",
    "context": "July 2026: Crusoe and ON.energy agreed to deploy 5 GW of AI UPS™ — the category-making award that puts a BESS-based medium-voltage UPS into ERCOT hyperscale sockets at gigawatt scale, validated against NOGRR 282 large-load ride-through requirements. Financing is undisclosed, and the dossier flags scaffolding risk: >$250M lifetime capital raised against a 5 GW buildout implies project-level structures or a major raise that has not surfaced.",
    "source": "https://www.crusoe.ai/resources/newsroom/crusoe-and-on-energy-to-deploy-5-gw-of-ai-ups-tm-at-mu",
+   "via": "AI UPS",
    "status": "active",
    "since": "2026-07",
    "scale": "5 GW"
@@ -180,6 +181,7 @@
    "note": "Prolec GE signed 5 GW of pad-mount transformers — 'the largest dedicated transformer deal in the US'.",
    "context": "December 2025: Prolec GE (GE Vernova's transformer arm) signed a 5 GW pad-mount transformer supply agreement with ON.energy — locking the industry's scarcest component before the Crusoe announcement revealed how early the 5 GW deal was in hand. Part of the deliberately US-made, FEOC-clean AI UPS stack alongside EPC Power (grid-forming PCS) and Shoals (DC recombiners/eBOS).",
    "source": "https://www.businesswire.com/news/home/20251211998584/en/",
+   "via": "pad-mount transformers",
    "status": "active",
    "since": "2025-12",
    "scale": "5 GW of pad-mount transformers"
@@ -216,6 +218,21 @@
    "context": "Eaton's conventional UPS franchise sits on one flank of ON.energy's medium-voltage AI UPS category (Hithium's AIDC battery line on the other). An incumbent contest of the category within 12-24 months is the dossier's expected trajectory.",
    "source": "Dossier competitive assessment — MV-UPS category",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "ON.energy is assembling its AI UPS supply chain deliberately FEOC-clean and US-made — post-OBBBA, a BESS-based product aimed at US hyperscale campuses built with zero Chinese content by design, even though the company's own legacy LatAm fleet is CATL-supplied. The battery-cell supplier for AI UPS is conspicuously unnamed; the dossier reads a US-made LFP supplier or §45X-qualified transplant as the natural fit, while the dormant LatAm franchise remains a non-FEOC channel where Chinese cells stay acceptable.",
+   "mitigation": "The assembled US component stack: EPC Power grid-forming PCS (Nov 2025), Prolec GE 5 GW of pad-mount transformers (Dec 2025), and Shoals DC recombiners/eBOS (Feb 2026), with the website claiming 'FEOC-compliant, engineered and built in America.'",
+   "source": "https://www.on.energy/"
+  },
+  {
+   "regime": "ERCOT NOGRR 282",
+   "status": "in-effect",
+   "exposure": "ERCOT's NOGRR 282 large-load ride-through mandate is the regulatory driver AI UPS monetizes: the product is validated against NOGRR 282 / Large Load Interconnection requirements, with zero-voltage ride-through demonstrated in independent testing in May 2026 — and whether NOGRR 282 enforcement drives copycat procurement is a stated watch item.",
+   "source": "https://www.businesswire.com/news/home/20260519648563/en/"
   }
  ],
  "decisionMakers": [
@@ -365,6 +382,6 @@
    "date": null
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

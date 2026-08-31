@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "abb",
  "name": "ABB",
  "legalName": "ABB Ltd",
@@ -143,6 +143,7 @@
    "note": "800 VDC architecture collaboration for gigawatt-scale AI factories and 1 MW racks.",
    "context": "Announced October 2025: ABB develops next-generation AI data-center power with NVIDIA — HiPerGuard MV UPS, high-efficiency MVAC-to-LVDC converters, the SACE Infinitus solid-state breaker, DC switchgear and storage as building blocks of NVIDIA's 800 VDC reference architecture.\n\nPhase 2 (June 2026) integrated ABB power systems as SimReady 3D assets into NVIDIA's Omniverse DSX blueprint, so AI factories are electrically designed in simulation with ABB equipment as native components — a design-in lock that lands before procurement opens.",
    "source": "https://new.abb.com/news/detail/129805/abb-to-develop-next-generation-ai-data-centers-with-nvidia",
+   "via": "HiPerGuard + SACE Infinitus",
    "status": "active",
    "since": "2025-10"
   },
@@ -152,6 +153,7 @@
    "note": "Ordered 62 Motion flywheel synchronous condensers for behind-the-meter AI campuses.",
    "context": "Two orders — 27 units in November 2025 (first operational April 2026) and 35 more announced at CERAWeek in March 2026 — plus a related ~$150M Motion order booked in Q2 2026. VoltaGrid's distributed-generation fleet model makes ABB's rotating stability hardware a de facto standard in behind-the-meter AI power, the clearest evidence that AI load volatility has become a purchasable product category.",
    "source": "https://www.engineering.com/abb-expands-voltagrid-deal-for-ai-data-center-power/",
+   "via": "flywheel synchronous condensers",
    "status": "active",
    "since": "2025-11",
    "scale": "62 synchronous condensers + ~$150M related order"
@@ -162,6 +164,7 @@
    "note": "HiPerGuard MV UPS standard across the Polaris Forge campuses.",
    "context": "The reference deployment for medium-voltage UPS at neocloud scale: Polaris Forge 1 (400 MW, June 2025 collaboration) extended in November 2025 to Polaris Forge 2 (Harwood, ND — 300 MW of HiPerGuard MV UPS plus MV/LV switchgear, scaling in 25 MW blocks). ABB is becoming the electrical standard for Applied Digital's buildout.",
    "source": "https://new.abb.com/news/detail/131324/abb-expands-power-technology-partnership-with-applied-digital-for-ai-ready-data-centers",
+   "via": "HiPerGuard MV UPS",
    "status": "active",
    "since": "2025-06",
    "scale": "700 MW across two campuses"
@@ -574,6 +577,6 @@
    "url": "https://www.investing.com/equities/abb-ltd-earnings"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

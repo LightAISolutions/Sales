@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "terawulf",
  "name": "TeraWulf",
  "legalName": "TeraWulf Inc.",
@@ -151,6 +151,7 @@
    "note": "~$4.5B of lease credit backstops bought with warrants now ~14% of the company pro forma.",
    "context": "Google provides amortizing credit backstops across TeraWulf's Fluidstack lease chain — $3.2B behind the Lake Mariner leases (378 MW, ~$6.7B contracted, up to ~$16B with extensions) plus $1.3B behind the 168 MW Abernathy, TX JV — with SEC 8-K mechanics obliging Google to assume the lease on Fluidstack default. The warrants Google received equal ~14% of pro forma equity: the disclosed price of bankability, and the paper the $3.2B of 7.75% WULF Compute notes are secured against.\n\nThe dossier's frame: TeraWulf is credit arbitrage on power scarcity — brownfield megawatts converted into 10-20-year take-or-pay leases with thinly capitalized AI intermediaries, made bankable by Google's investment-grade support (and Anthropic's investment-grade-supported 401 MW/~$19B Hawesville lease).",
    "source": "https://investors.terawulf.com/news-events/press-releases/detail/114/terawulf-announces-fluidst",
+   "via": "lease credit backstops",
    "status": "active",
    "since": "2025-08",
    "scale": "~$4.5B backstops; ~14% warrants"
@@ -349,7 +350,9 @@
       "actual": "$6.5B+ raised in 2025; cash $3.7B at YE; 522 MW contracted; $12.8B+ backlog",
       "expected": "",
       "verdict": "beat",
-      "result": "$500M+$1.0B+$1.025B converts, $3.2B 7.75% project notes, Series A preferred converted"
+      "result": "$500M+$1.0B+$1.025B converts, $3.2B 7.75% project notes, Series A preferred converted",
+      "kpi": "mw-contracted",
+      "qty": 522
      },
      {
       "name": "Stock reaction pattern",
@@ -392,7 +395,9 @@
       "actual": "839 MW leased; ~$27B+ contracted revenue; ~$1.5B avg annual NOI",
       "expected": "",
       "verdict": "beat",
-      "result": "Anthropic ~$19B (Jul 2026) + Fluidstack $6.7B + Core42 ~$1.1B; Abernathy exited at ~$530M / ~20% IRR"
+      "result": "Anthropic ~$19B (Jul 2026) + Fluidstack $6.7B + Core42 ~$1.1B; Abernathy exited at ~$530M / ~20% IRR",
+      "kpi": "mw-contracted",
+      "qty": 839
      }
     ],
     "commentary": "Q3 2026 report estimated Monday Nov 9, 2026 (MarketBeat; consensus -$0.20) — not yet company-confirmed; the IR calendar was empty as of Aug 21."
@@ -533,6 +538,6 @@
    "url": "https://www.lakemarinerdata.com/project-overview"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

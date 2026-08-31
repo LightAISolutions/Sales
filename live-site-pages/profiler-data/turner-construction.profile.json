@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "turner-construction",
  "name": "Turner Construction",
  "legalName": "Turner Construction Company (wholly-owned subsidiary of Hochtief AG; Hochtief is ~79-80% controlled by Grupo ACS)",
@@ -190,6 +190,7 @@
    "note": "Turner-Wohlsen JV builds CoreWeave's $6B Lancaster, PA AI campus.",
    "context": "July 2025: the Turner-Wohlsen JV was selected for CoreWeave's $6B Lancaster, PA campus (100 MW initial, expandable to 300 MW) — the dossier's marker that neocloud money now buys the same tier of builder as hyperscaler money.",
    "source": "https://www.constructiondive.com/news/turner-wohlsen-pennsylvania-data-center-coreweave/753877/",
+   "via": "Turner-Wohlsen JV",
    "status": "active",
    "since": "2025-07",
    "scale": "$6B campus"
@@ -200,6 +201,8 @@
    "note": "Builder on the Stargate Wisconsin campus — and enterprise customer of OpenAI in the other direction.",
    "context": "September 2025: the Turner-McCarthy JV was named among phase-1 builders of Vantage's $15B 'Stargate' campus for OpenAI/Oracle in Port Washington, WI ($8B first phase, 1.3 GW — split four ways with Whiting-Turner, Weitz and Michels). November 2025: Turner signed a 'wall to wall' OpenAI partnership deploying ChatGPT Enterprise to every employee with 100+ custom AI agents — the AI trade running in both directions.",
    "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-da",
+   "via": "Turner-McCarthy JV",
+   "project": "stargate",
    "status": "active",
    "since": "2025-09"
   },
@@ -209,6 +212,7 @@
    "note": "The Stargate WI campus Turner co-builds is Oracle-leased capacity.",
    "context": "Turner's seat on Vantage's Port Washington 'Stargate' campus places it in the Oracle/OpenAI delivery chain — Oracle-linked work adding to a data-center backlog already concentrated in Meta programs, per the dossier's counterparty-concentration basis.",
    "source": "https://www.enr.com/articles/61793-construction-team-chosen-for-first-phase-of-15b-wisconsin-da",
+   "project": "stargate",
    "status": "active"
   },
   {
@@ -217,6 +221,8 @@
    "note": "Repeat wholesale client — Ohio work plus the $15B Stargate Wisconsin campus.",
    "context": "Vantage appears among Turner's company-referenced Critical Facilities clients (Ohio; the Stargate Wisconsin campus) — a wholesale-landlord relationship where megacampus owners hire Turner alongside rivals rather than instead of them: Stargate WI is split four ways, Meta LA three ways.",
    "source": "https://www.turnerconstruction.com/pages/critical-facilities-market",
+   "via": "Critical Facilities",
+   "project": "stargate",
    "status": "active"
   },
   {
@@ -545,6 +551,6 @@
    "url": "https://www.turnerconstruction.com/services"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

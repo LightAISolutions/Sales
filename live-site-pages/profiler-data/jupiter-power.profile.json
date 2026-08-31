@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "jupiter-power",
  "name": "Jupiter Power",
  "shortName": "Jupiter",
@@ -209,6 +209,7 @@
    "note": "3 GWh ∞Block supply agreement + the Trimount 2.8 GWh design win — Hithium's most important disclosed US customer relationship.",
    "context": "Three verified layers: the June 20, 2024 supply agreement for 3 GWh of ∞Block 5 MWh containers (314 Ah cells, delivery by end-2025 — timing that landed the equipment inside the pre-2026 FEOC safe-harbor window, CTO Michael Geier quoted); Jupiter's naming in Hithium's HKEX prospectus partner roster; and the confirmed design win at Trimount, Everett MA — the largest planned BESS in New England (700 MW/2,800 MWh, Hithium 5.015 MWh units, final EFSB approval Feb 27, 2026, target 2027).\n\nThe asymmetry is deliberate: Jupiter's own channels have never mentioned Hithium while publicly messaging domestic content (Energy Vault domestic-content LOI, Peak Energy sodium-ion agreement up to 4.75 GWh, financing language earmarking 'domestic battery storage procurement') — the template for how a top-tier US buyer manages a Chinese supplier post-FEOC: buy big quietly inside the safe-harbor window, never co-market, hedge loudly.",
    "source": "https://www.solarbeglobal.com/hithium-signs-3-gwh-battery-storage-supply-deal-with-jupiter-power/",
+   "via": "∞Block",
    "status": "active",
    "since": "2024-06",
    "scale": "3 GWh + 2.8 GWh Trimount"
@@ -237,6 +238,21 @@
    "context": "Jupiter was reported the third storage owner past 1 GWh installed in ERCOT alongside Plus Power and ENGIE — parallel merchant BESS fleets contesting the same Texas revenue stack, both now expanding into Northeastern capacity markets.",
    "source": "https://modoenergy.com/research/en/ercot-battery-buildout-2025-annual-report",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Jupiter's 3 GWh Hithium supply agreement (June 2024) specified delivery by end-2025 — timing that landed the equipment inside the pre-2026 FEOC safe-harbor window, which closed December 31, 2025. Post-2025 procurement tilts domestic by default: the pipeline's ITC economics now demand FEOC-compliant supply, and a follow-on Chinese-content order would require either safe-harbored inventory or a compliant structure Hithium does not yet publicly have. The 2025 $286M construction financing with tax-equity bridges implies FEOC-safe ITC treatment was underwritten on safe-harbor timing.",
+   "mitigation": "The domestic hedge: the Peak Energy agreement for up to 4.75 GWh of US-made sodium-ion (FEOC-clean by construction), the Energy Vault domestic-content strand, and the January 2026 $500M credit facility with proceeds earmarked partly for 'domestic battery storage procurement.'",
+   "source": "https://jupiterpower.io/jupiter-power-secures-500-million-in-upsized-corporate-credit-facility-to-accelerate-portfolio-expansion/"
+  },
+  {
+   "regime": "IRA domestic content bonus",
+   "status": "in-effect",
+   "exposure": "The September 2022 Energy Vault LOI for 2.4 GWh of domestic-content-qualified BESS explicitly targeted the IRA domestic-content bonus — one leg of a barbell strategy pairing safe-harbored Chinese supply for near-term GWh with domestic-content options for bonus credits and post-2026 FEOC compliance.",
+   "source": "https://s203.q4cdn.com/692145866/files/doc_news/JUPITER-POWER-AND-ENERGY-VAULT-SIGN-LETTER-OF-INTENT-TO-SECURE-2.4-GWh-OF-DOMESTIC-CONTENT-QUALIFIED-BATTERY-ENERGY-STORAGE-SYSTEMS-2022.pdf"
   }
  ],
  "decisionMakers": [
@@ -398,6 +414,6 @@
    "url": "https://jupiterpower.io/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

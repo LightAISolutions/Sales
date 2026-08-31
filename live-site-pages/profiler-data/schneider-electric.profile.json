@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "schneider-electric",
  "name": "Schneider Electric",
  "legalName": "Schneider Electric SE",
@@ -150,6 +150,7 @@
    "note": "The deepest reference-design franchise: co-developed designs from GB200 through Vera Rubin and gigawatt AI-factory blueprints.",
    "context": "Schneider is the only vendor with co-developed NVIDIA designs spanning power management (ETAP electrical models), liquid-cooling controls (interoperable with NVIDIA Mission Control — the industry-first integrated design, Sept 2025), and whole-factory blueprints: GB200 NVL72 (132 kW racks, Dec 2024), GB300 NVL72 (142 kW racks, ANSI+IEC variants), and gigawatt-scale AI-factory blueprints with AVEVA embedded in Omniverse DSX (GTC, March 2026), including Vera Rubin NVL72 and tokens-per-MW optimization.\n\nThe dossier's judgment: reference-design-led selling pulls Schneider hardware into projects before competitive bidding starts — the procurement template hyperscalers apply to everyone else.",
    "source": "https://www.globenewswire.com/news-release/2026/03/16/3256775/0/en/schneider-electric-teams-wit",
+   "via": "reference designs and AI-factory blueprints",
    "status": "active",
    "since": "2024-12"
   },
@@ -175,6 +176,7 @@
    "note": "Fellow member of the top-5 data-center UPS oligopoly.",
    "context": "Schneider's Galaxy/APC secure-power line sits in the top-5 UPS oligopoly (with Vertiv, Eaton, Huawei, ABB holding ~40-42% of data-center UPS) — the incumbent set contesting every hyperscale power train, now extending into the 800 VDC transition where ABB brings its own NVIDIA collaboration.",
    "source": "Dossier competitive assessment — UPS oligopoly",
+   "via": "data-center UPS",
    "status": "active"
   },
   {
@@ -184,6 +186,21 @@
    "context": "Huawei holds a top-5 data-center UPS position and the #1 prefab-modular ranking globally, but its Western exclusion (Entity List, NDAA 889, FCC Covered List) makes Schneider — the North America prefab podium leader with Johnson Controls — a structural share beneficiary in exactly the geographies Huawei cannot enter.",
    "source": "Dossier competitive assessment — UPS oligopoly",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US import tariffs",
+   "status": "in-effect",
+   "exposure": "Tariff-driven gross-margin pressure hit H1 2025, and management's claim that pricing would fully offset tariffs was vindicated by the H1 2026 margin beat (+120bps organic adjusted-EBITA margin) — the pricing-versus-tariffs argument is now a proven part of the delivery record.",
+   "mitigation": "Pricing actions plus the >$700M US manufacturing expansion through 2027 across eight sites (El Paso switchgear, Fairfield OH, Houston, Raleigh, Columbia MO) — Schneider's largest-ever US commitment, part of the onshoring race with Eaton and Vertiv driven by tariffs and hyperscaler proximity.",
+   "source": "https://www.se.com/ww/en/assets/pdf/release-hy-results-2026"
+  },
+  {
+   "regime": "NDAA 889 / Entity List",
+   "status": "in-effect",
+   "exposure": "A structural benefit: Huawei holds a top-5 data-center UPS position and the #1 prefab-modular ranking globally, but its Western exclusion (Entity List, NDAA 889, FCC Covered List) makes Schneider — the North America prefab podium leader with Johnson Controls — a structural share beneficiary in exactly the geographies Huawei cannot enter.",
+   "source": "Dossier competitive assessment — UPS oligopoly"
   }
  ],
  "technicalSpecs": [
@@ -449,6 +466,6 @@
    "date": "2024-10"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

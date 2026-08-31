@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "kiewit",
  "name": "Kiewit",
  "legalName": "Kiewit Corporation",
@@ -198,6 +198,8 @@
    "note": "Standing generation venture (with NRG) holding reserved 7HA turbine slots — plus EPC on three GEV-powered gigawatt plants.",
    "context": "February 2025: NRG, GE Vernova and Kiewit (TIC) formed a generation venture initially targeting ~5.4 GW of combined-cycle plants for data-center demand in ERCOT and PJM, with reserved turbine slots — converting Kiewit's EPC bench into allocated OEM capacity competitors can't match, since turbine slots (not construction labor) gate gigawatt-class gas through 2030.\n\nThe delivery record around it: Homer City, PA (EPC for up to 4.5 GW on seven GEV 7HA.02s — the largest US gas plant under construction, powering a >3,200-acre AI campus, first power targeted 2027) and Oglethorpe's 1,425 MW Georgia plant (GEV 7HA.03, COD 2029).",
    "source": "https://www.energychoicematters.com/stories/20250226a.html",
+   "via": "7HA turbines",
+   "project": "homer-city",
    "status": "active",
    "since": "2025-02",
    "scale": "~11 GW AI-driven gas EPC book"
@@ -218,6 +220,14 @@
    "context": "Kiewit slipped to #4 in the ENR 2026 Top 400 despite growth because building-side AI plays (STO, DPR, HITT, Mortenson) scaled faster than its power-side exposure — which is larger in dollars but recognized over longer EPC schedules. Different lanes (power EPC vs data-center GC), same AI capex pool.",
    "source": "https://thejobwalk.com/p/enr-releases-2026-top-400-the-data-behind-every-move-in-the-top-10",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US–Japan AI infrastructure framework",
+   "status": "announced",
+   "exposure": "Kiewit and Bechtel were the two US EPC firms named delivery contractors under the $550B US-Japan AI infrastructure framework (October 2025), with up to $332B earmarked for energy infrastructure. No Kiewit projects have been assigned — the dossier treats the naming as optionality rather than backlog, while flagging that the framework could become the largest demand channel of all.",
+   "source": "https://www.constructiondive.com/news/bechtel-kiewit-us-japan-ai-infrastructure-data-centers/804220/"
   }
  ],
  "technicalSpecs": [
@@ -516,6 +526,6 @@
    "url": "https://www.datacenterdynamics.com/en/news/homer-city-and-kiewit-unveil-plans-for-45gw-natural-gas-powered-ai-data-center-in-pennsylvania/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

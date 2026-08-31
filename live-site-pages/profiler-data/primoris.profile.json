@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "primoris",
  "name": "Primoris",
  "legalName": "Primoris Services Corporation",
@@ -176,6 +176,7 @@
    "note": "Behind-the-meter West Texas off-grid gas plant for Crusoe.",
    "context": "The Crusoe off-grid gas plant anchors Primoris's gas-generation franchise — the AI asset the dossier judges quietly more valuable than renewables, with none of the IRA/tariff/interconnection policy exposure, and Q2 2026's $2.0B award flow leaning into gas generation and electric services.",
    "source": "https://www.prim.com/capabilities/data-centers",
+   "via": "behind-the-meter gas generation",
    "status": "active"
   },
   {
@@ -184,6 +185,7 @@
    "note": "Named Meta Nebraska utility-infrastructure contracts, $250M+.",
    "context": "Meta Nebraska ($250M+ of utility infrastructure and duct banks) plus Northern Virginia duct-bank scope are the named data-center awards in Primoris's deliberately perimeter-focused strategy — everything AI campuses need around the building, now extended inside the fence via the $422M PayneCrest acquisition (May 2026).",
    "source": "https://www.prim.com/capabilities/data-centers",
+   "via": "utility infrastructure and duct banks",
    "status": "active",
    "scale": "$250M+ Nebraska contracts"
   },
@@ -552,6 +554,6 @@
    "url": "https://seekingalpha.com/article/4846646-prim-an-emerging-data-center-infrastructure-play"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

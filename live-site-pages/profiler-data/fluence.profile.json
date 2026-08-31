@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "fluence",
  "name": "Fluence Energy, Inc.",
  "shortName": "Fluence",
@@ -199,6 +199,7 @@
    "note": "PowerTitan 3.0 vs Smartstack in the density race; Sungrow leads the ranking where Fluence sits #7.",
    "context": "Sungrow's PowerTitan 3.0 (12.5 MWh per 30-ft) set the density bar the Smartstack 10 MWh high-density system answers (~680 MWh/acre, up to 40% balance-of-plant cost reduction, June 2026). Sungrow tops Wood Mackenzie's first global BESS integrator ranking (July 2026) as annual installs passed 100 GW; Fluence's counter-position is multi-vendor cell sourcing, fire-safety test record, and the US domestic-content moat Chinese rivals cannot match.",
    "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
+   "via": "PowerTitan 3.0",
    "status": "active"
   },
   {
@@ -215,6 +216,7 @@
    "note": "TENER Stack competes with Smartstack; CATL-supplied integrators are the pricing benchmark Fluence sells against.",
    "context": "CATL's TENER Stack (9 MWh stackable) sits in the same next-gen AC-block race as Smartstack, and CATL-supplied integrators define the cost floor in open markets. Fluence's multi-vendor cell sourcing and US domestic-content strategy are built to compete where CATL content is a liability (FEOC rules, ITC bonus) rather than on cell cost.",
    "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-market-tops-100-gw/",
+   "via": "TENER Stack",
    "status": "active"
   },
   {
@@ -223,9 +225,32 @@
    "note": "Smartstack integrated into Siemens' reference architecture for NVIDIA AI data centers.",
    "context": "June 2026: Fluence's Smartstack was integrated (with nVent) into Siemens' reference architecture for NVIDIA AI data centers — AI load smoothing, black start, and demand response in a 136 MW facility design. A named lane in the NVIDIA/Siemens AI-infrastructure stack and the clearest signal yet that BESS is becoming standard equipment behind the data-center meter.",
    "source": "https://www.energy-storage.news/fluence-to-integrate-smartstack-into-siemens-nvidia-ai-data-centre-reference-a",
+   "via": "Smartstack",
    "status": "active",
    "since": "2026-06",
    "scale": "136 MW reference facility design"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US–China battery tariffs",
+   "status": "in-effect",
+   "exposure": "FY2025's damage was tariff-driven: tariffs on Chinese cell imports and tariff-uncertainty pauses on US projects pushed ~$700M of revenue out, forced two guidance cuts (shares collapsed ~38–46% in a session on the February 2025 cut), and left FY2025 revenue at $2.3B — below even the final guided range.",
+   "mitigation": "Onshored production of every major BESS component: Tennessee cells, Utah module assembly (from Sep 2024), Goodyear AZ enclosures + BMS hardware (US steel, May 2025), Texas thermal management, and South Carolina inverters — a ~$700M partner-network investment, with first US domestic-content shipments in September 2025.",
+   "source": "https://www.globenewswire.com/news-release/2025/05/07/3076549/0/en/Fluence-Energy-Inc-Reports-Second-Quarter-2025-Results-Lowers-Full-Year-2025-Guidance-Citing-Decisions-to-Pause-Certain-U-S-Projects-Due-to-Tariff-Uncertainty.html"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Fluence's US differentiation is domestic content — US-made cells (Tennessee) and Utah module assembly qualify customers for the 10% IRA domestic-content ITC bonus, making it (with Tesla) the only at-scale Western integrator offering an ITC-bonus-qualifying US supply chain; the Avantus Rexford 2 deal (200 MW/800 MWh, July 2026) was the first domestic-content Smartstack sale.",
+   "source": "https://fluenceenergy.com/domestic-content/"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "FEOC compliance under the OBBBA is decisive for US hyperscaler deals — Fluence and Tesla hold the only two at-scale FEOC-compliant Western supply chains. Roughly half of Fluence's US cell supply comes from the Smyrna, Tennessee plant built by AESC and divested to US-owned Fixx Energy in April 2026, under a multi-year cell supply agreement.",
+   "mitigation": "The company states it expects to meet FEOC compliance by regulatory deadlines; a second US cell supplier is in negotiation with capacity expected within roughly a year.",
+   "source": "https://www.energy-storage.news/fluence-expects-to-meet-feoc-compliance-by-regulatory-deadlines-offers-2026-guidance/"
   }
  ],
  "technicalSpecs": [
@@ -665,6 +690,6 @@
    "url": "https://fluenceenergy.com/domestic-content/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

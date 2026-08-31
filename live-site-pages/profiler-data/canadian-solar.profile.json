@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "canadian-solar",
  "name": "Canadian Solar (e-STORAGE)",
  "shortName": "Canadian Solar",
@@ -240,28 +240,56 @@
   {
    "slug": "tesla",
    "type": "competitor",
-   "note": "SolBank competes with Megapack on delivered cost with a Western-governance wrapper."
+   "note": "SolBank competes with Megapack on delivered cost with a Western-governance wrapper.",
+   "via": "SolBank"
   },
   {
    "slug": "sungrow",
    "type": "competitor",
-   "note": "PowerTitan is a named rival to SolBank in both the 5 MWh and the 6+ MWh block classes."
+   "note": "PowerTitan is a named rival to SolBank in both the 5 MWh and the 6+ MWh block classes.",
+   "via": "SolBank"
   },
   {
    "slug": "hithium",
    "type": "competitor",
    "note": "∞Power competes with SolBank on delivered cost; both have run array-level large-scale fire testing now table stakes under NFPA 855.",
-   "source": "csestorage.com, 2025-06-03"
+   "source": "csestorage.com, 2025-06-03",
+   "via": "SolBank"
   },
   {
    "slug": "hyperstrong",
    "type": "competitor",
-   "note": "HyperBlock's 12.8 MWh modular block is part of the 6+ MWh race SolBank 4.0 answers; both carry array-level burn validation."
+   "note": "HyperBlock's 12.8 MWh modular block is part of the 6+ MWh race SolBank 4.0 answers; both carry array-level burn validation.",
+   "via": "SolBank 4.0"
   },
   {
    "slug": "fluence",
    "type": "competitor",
-   "note": "Smartstack's 7.5–10 MWh skid is among the 6+ MWh blocks SolBank 4.0 was launched to match."
+   "note": "Smartstack's 7.5–10 MWh skid is among the 6+ MWh blocks SolBank 4.0 was launched to match.",
+   "via": "SolBank 4.0"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "e-STORAGE is the FEOC-adaptation playbook executed early and at scale — Western listing and governance, a domestic cell plant announced before the rules bit, and a corporate restructuring designed to clear foreign-entity ownership tests. Until Kentucky cells ship at volume, its US sales carry the same material-assistance exposure as its Chinese peers, and the Gotion precedent shows a US plant alone does not guarantee credit eligibility.",
+   "mitigation": "December 2025 consolidation of US manufacturing under CS PowerTech — the NASDAQ-listed parent holds 75.1%, China-listed CSI Solar retains 24.9% — explicitly to align with OBBBA FEOC/prohibited-foreign-entity rules, plus the $712M cell-and-module plant in Shelbyville, Kentucky.",
+   "source": "https://www.ess-news.com/2025/12/01/canadian-solar-consolidates-us-manufacturing-under-parent-including-solar-and-storage/"
+  },
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "exposure": "US Section 301 duties on Chinese ESS batteries rose to 25%, and until Kentucky cells ship at volume e-STORAGE's US sales carry the same tariff exposure as its Chinese peers — the March 2026 2.5 GWh data-center order sources cells from the 'global manufacturing network', not Kentucky.",
+   "mitigation": "The $712M Shelbyville, Kentucky cell-and-module plant — though its production ramp remains publicly unconfirmed through August 2026.",
+   "source": "https://battery-tech.net/battery-markets-news/u-s-raises-section-301-duties-on-chinese-ess-batteries/"
+  },
+  {
+   "regime": "IRA domestic content bonus",
+   "status": "in-effect",
+   "exposure": "The CS PowerTech restructuring was framed explicitly around IRA domestic content alongside the FEOC rules, and the company ties Kentucky on-site cells to its domestic-content strategy; FY2026 guidance targets 4.5–5.5 GWh into the US market.",
+   "mitigation": "Kentucky on-site cell production, tied to the domestic-content strategy at the plant announcement.",
+   "source": "https://www.ess-news.com/2025/12/01/canadian-solar-consolidates-us-manufacturing-under-parent-including-solar-and-storage/"
   }
  ],
  "decisionMakers": [
@@ -496,6 +524,6 @@
    "url": "https://csestorage.com/mediapr/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

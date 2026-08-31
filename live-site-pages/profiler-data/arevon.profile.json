@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "arevon",
  "name": "Arevon Energy",
  "shortName": "Arevon",
@@ -187,6 +187,7 @@
    "type": "supplier",
    "note": "Sole BESS integrator across the entire fleet — seven for seven projects on Megapack (~5.6 GWh), plus O&M ties.",
    "context": "Every identified Arevon battery project runs on Tesla Megapack: Saticoy (142 units), California Flats (84), Condor (200 MW/800 MWh with a Tesla O&M contract), Vikings, Eland 1&2 (172 Megapack 2 XL), Peregrine (200 MW/400 MWh), Nighthawk (300 MW/1,200 MWh, operational 12 August 2026) and the planned Avocet (200 MW/800 MWh).\n\nThe dossier assesses Arevon as the case study in single-integrator lock-in at scale: a ~1–2 GWh/yr CAISO buying cadence channeled entirely through Tesla, reinforced by an explicit domestic-supply doctrine and ITC-transfer dependence that makes FEOC compliance economically existential. The August 2025 California Flats thermal event (4 of 84 Megapacks, ~3-hour evacuation) now shadows every permitting hearing — without loosening the lock so far.",
+   "via": "Megapack",
    "status": "active",
    "since": "2021",
    "scale": "~5.6 GWh across 7+ projects"
@@ -205,6 +206,7 @@
    "type": "customer",
    "note": "Environmental-attributes agreement on Kelso 1&2 (430 MWdc, Missouri), COD March 2026.",
    "context": "Kelso 1&2 reached commercial operation under a Meta environmental-attributes agreement marketed as domestic-made energy (Ohio-built First Solar modules). The dossier's read: attribute deals, not storage, are the current hyperscaler product Arevon sells.",
+   "via": "environmental-attributes agreements",
    "status": "active",
    "since": "2026-03",
    "scale": "430 MWdc"
@@ -219,6 +221,28 @@
    "slug": "hithium",
    "type": "other",
    "note": "No relationship — the dossier uses Arevon as a market signal for the Hithium lens: its no-ERCOT footprint means Hithium's likeliest merchant-Texas demand never intersects this account."
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Arevon's ITC-transfer financing model — with tax-credit and transfer proceeds funding ~30-40% of project capital stacks — makes FEOC compliance economically existential for post-2025 vintages; the Cormorant build (construction March 2026, COD 2027) sits squarely in the FEOC-constrained vintage. CEO Justin Johnson frames IRA, tariffs and FEOC as 'another impetus to continue bringing more domestic supply online' and predicts domestic cell oversupply through 2028.",
+   "mitigation": "An explicitly domestic-first procurement doctrine: a seven-for-seven Tesla Megapack fleet (Lathrop-built units), Vikings delivered with all major components US-manufactured (Tesla Lathrop, First Solar, Nextracker), and a 2 GW First Solar US-made module supply agreement.",
+   "source": "https://www.energy-storage.news/ev-slowdown-creates-potential-lifeline-for-us-energy-storage-amid-feoc-tariffs/"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "ITC and transferability are the core of Arevon's financing machine: tax-credit and transfer proceeds fund ~30-40% of capital stacks, with the $191M JPMorgan ITC+PTC transfer on Vikings among the first IRA transferability deals in the US, a Stifel ITC-transfer purchase on Condor, and a $268M tax-credit transfer to an unnamed corporate on Nighthawk. This dependence is the economic root of the FEOC-compliant procurement doctrine.",
+   "source": "https://www.prnewswire.com/news-releases/arevon-vikings-financing-301980619.html"
+  },
+  {
+   "regime": "US–China battery tariffs",
+   "status": "in-effect",
+   "exposure": "Chinese battery imports face a ~55% tariff, which — combined with a predicted domestic cell oversupply through 2028 — removes the price-urgency argument for Chinese supply into Arevon's fleet; the CEO frames tariffs alongside IRA and FEOC as reinforcing the domestic-supply push.",
+   "mitigation": "Procurement channeled entirely through Tesla's US-built Megapack line, with the EV slowdown freeing domestic cell capacity ('kind of saving our asses', per CEO Johnson).",
+   "source": "https://www.energy-storage.news/ev-slowdown-creates-potential-lifeline-for-us-energy-storage-amid-feoc-tariffs/"
   }
  ],
  "decisionMakers": [
@@ -370,6 +394,6 @@
    "url": "https://arevonenergy.com/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

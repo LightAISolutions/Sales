@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "byd",
  "name": "BYD Company Limited (比亚迪股份有限公司)",
  "shortName": "BYD",
@@ -179,6 +179,7 @@
    "note": "Cell customer AND head-on BESS rival: FinDreams supplies LFP cells to Tesla's Shanghai Megafactory while BYD's systems business overtook Tesla in Benchmark's 2025 integrator ranking.",
    "context": "From Q1 2025 FinDreams Battery supplies LFP cells to Tesla's Shanghai Megafactory, reportedly securing >20% of Megapack cell orders alongside primary supplier CATL — while at system level Benchmark ranked BYD the #1 global BESS integrator for 2025 (>60 GWh shipped, 13% share) over Tesla's 46.7 GWh. The duality is the point: BYD monetizes its rival's demand at the cell layer and fights it at the container layer, with HaoHan's 14.5 MWh single block against Megapack 3's ~5 MWh standardization.",
    "source": "https://electrek.co/2026/05/13/byd-surpasses-tesla-energy-storage-bess-benchmark-2025/",
+   "via": "LFP cells",
    "status": "active",
    "since": "2025"
   },
@@ -201,7 +202,8 @@
   {
    "slug": "sinexcel",
    "type": "competitor",
-   "note": "C&I storage rival — Chess Plus competes with Sinexcel's cabinets in the segment where thermal-incident history drives procurement."
+   "note": "C&I storage rival — Chess Plus competes with Sinexcel's cabinets in the segment where thermal-incident history drives procurement.",
+   "via": "Chess Plus"
   }
  ],
  "technicalSpecs": [
@@ -505,7 +507,9 @@
       "actual": "~60 GWh of storage systems (2025, Benchmark estimate) — world #1 integrator by that count; no standalone ESS revenue disclosed (folded into automobiles & related products, RMB 648.65B)",
       "expected": "",
       "verdict": "inline",
-      "result": "—"
+      "result": "—",
+      "kpi": "gwh-shipped",
+      "qty": 60
      }
     ],
     "commentary": "NEV sales 4,602,436 (+7.7%); exports 1.05M (+140%); R&D RMB 63.4B (+17%); proposed final dividend RMB 0.358/share.",
@@ -698,6 +702,6 @@
    "url": "https://www.vpsolar.com/en/product/byd-battery-box-premium-hvs-hvm/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

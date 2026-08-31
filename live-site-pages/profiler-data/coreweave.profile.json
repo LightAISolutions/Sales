@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "coreweave",
  "name": "CoreWeave",
  "legalName": "CoreWeave, Inc.",
@@ -166,6 +166,7 @@
    "note": "Supplier, IPO anchor investor, and $6.3B capacity backstop — customer of last resort through 2032.",
    "context": "Three-sided: CoreWeave is serially first-to-market with NVIDIA platforms (GB200 GA, first GB300 NVL72, early Vera Rubin); NVIDIA anchored the IPO with a $250M order and reportedly provided ~$2B of further support (January 2026, structure unverified); and a September 2025 order form obliges NVIDIA to purchase unsold capacity up to $6.3B through April 2032 — the backstop that de-risks the entire model.",
    "source": "https://www.datacenterdynamics.com/en/news/nvidia-to-purchase-unsold-compute-capacity-from-coreweave-for-63bn/",
+   "via": "GB200/GB300 GPUs",
    "status": "active",
    "scale": "$6.3B backstop through 2032"
   },
@@ -194,6 +195,7 @@
    "note": "Host of both world-first NVIDIA bring-ups — GB200 (Nov 2024) and GB300 NVL72 (Jul 2025).",
    "context": "CoreWeave executed the industry-first GB200 NVL72 bring-up and the world-first GB300 NVL72 bring-up (on Dell rack-scale systems) inside Switch's EVO AI Factories — two NVIDIA generations launched first on Switch floors, with CoreWeave as the operating tenant.",
    "source": "https://www.switch.com/coreweave-deploys-industry-first-nvidia-gb300-nvl72-in-switchs-ai-factory-solution/",
+   "via": "EVO AI Factories",
    "status": "active",
    "since": "2024-11"
   },
@@ -213,6 +215,7 @@
    "note": "Fuel cells power the Chirisa-hosted Volo, IL site — commissioned Q3 2025.",
    "context": "Bloom's solid-oxide fuel cells supply on-site power at the Volo, Illinois data center hosting CoreWeave (14 MW, partnership announced 2024, commissioned Q3 2025) — the only named CoreWeave-specific generation vendor; elsewhere power procurement sits with its landlords.",
    "source": "https://www.bloomenergy.com/news/bloom-energy-and-coreweave-partner-to-revolutionize-ai-data-center-power-solutions/",
+   "via": "solid-oxide fuel cells",
    "status": "active",
    "since": "2024",
    "scale": "14 MW site"
@@ -512,6 +515,6 @@
    "url": "https://electroneconomics.substack.com/p/coreweaves-customers-are-becoming"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "eolian",
  "name": "Eolian",
  "shortName": "Eolian",
@@ -201,6 +201,7 @@
    "note": "Supplies the entire 400 MW / 1.8 GWh Padua complex — Tesla's largest Texas Megapack showcase.",
    "context": "Padua 1 (50 MW/100 MWh, COD Sep 2025), Padua 2 (150 MW/600 MWh, Winter 2026) and Padua 3 'Ferdinand' (200 MW/800 MWh, Spring 2026) are all Tesla Megapack — the largest BESS site in Texas at >$700M, under CPS Energy storage-capacity agreements.\n\nThe relationship is embedded in Eolian's financing story: Tesla VP Mike Snyder was quoted in the $463M Natixis-arranged construction + term + LC financing for Padua 2&3 (Oct 2025). Tesla is the endpoint of Eolian's supplier progression (Sungrow 2021 → Wärtsilä 2023 → Tesla), consistent with its American-built advocacy.",
    "source": "https://www.prnewswire.com/news-releases/eolian-and-natixis-corporate--investment-banking-close-463-million-fi",
+   "via": "Megapack",
    "status": "active",
    "since": "2025",
    "scale": "400 MW / 1.8 GWh, >$700M complex"
@@ -211,6 +212,7 @@
    "note": "Delivered Madero & Ignacio Grid (200 MW) — world's largest fully-merchant BESS at COD — with an ongoing GEMS service agreement.",
    "context": "Wärtsilä supplied GridSolv Quantum hardware and the GEMS energy-management platform for the Mission, TX pair (200 MW / >500 MWh combined, COD March 2023), operated under a Service+ GAP agreement with dispatch via Eolian's own software. The middle step of Eolian's supplier progression, after Sungrow and before the all-Tesla Padua complex.",
    "source": "https://www.wartsila.com/media/news/27-03-2023-wartsila-and-eolian-complete-200-mw-standalone-energy-storage-f",
+   "via": "GridSolv Quantum + GEMS",
    "status": "active",
    "since": "2023-03",
    "scale": "200 MW / >500 MWh"
@@ -257,6 +259,21 @@
    "context": "LG Energy Solution Vertech is a fellow US Energy Storage Coalition member, and the dossier assesses the open supplier slots for Flint Grid — 200 MW/1.06 GWh under construction (PJM's largest battery), with Phase 1 delivering ~2027 and Phase 2 ~2029 — as effectively reserved for FEOC-clean vendors, with Tesla and LGES Vertech the structural favorites given the coalition posture and the Padua precedent.",
    "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "Eolian's ITC-monetization-led financing stack makes FEOC-compliant supply structurally mandatory for 2026+ vintages, and the dossier assesses the open Flint Grid supplier slots (Phase 1 delivering ~2027, Phase 2 ~2029) as effectively reserved for FEOC-clean vendors. The ERCOT merchant-revenue squeeze creates cost pressure that low-cost cells could theoretically answer, but only through a FEOC-compliant, non-Chinese-entity supply path.",
+   "mitigation": "A supplier progression consistent with its American-built advocacy — Sungrow (2021) → Wärtsilä (2023) → all-Tesla for the 400 MW/1.8 GWh Padua complex — plus US Energy Storage Coalition membership behind the March 2026 claim that American factories can now fully supply US projects.",
+   "source": "https://www.energystorage.org/blog/press-release-energy-storage-industry-poised-to-supply-100-of-u-s-projects-with-american-built-battery-systems-and-power-electronics-u-s-energy-storage-coalition-report-finds"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Eolian invented standalone-storage ITC monetization — the first-of-its-kind tax-equity financing for Madero/Ignacio (February 2023, structured through Churchill Stateside) — and the whole standalone tier now runs on the category it created. The dossier reads this dependence as wiring ITC compliance, now FEOC compliance, into Eolian's own financing DNA.",
+   "source": "https://www.prnewswire.com/news-releases/eolian-closes-first-of-its-kind-standalone-battery-energy-storage-tax-equity-financing-301745302.html"
   }
  ],
  "decisionMakers": [
@@ -413,6 +430,6 @@
    "url": "https://www.eolianenergy.com/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

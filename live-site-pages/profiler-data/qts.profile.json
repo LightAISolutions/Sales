@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "qts",
  "name": "QTS Data Centers (QTS Realty Trust, LLC)",
  "categories": [
@@ -263,6 +263,7 @@
    "note": "Fayetteville flagship houses at least one Microsoft AI 'superfactory'; the $4.6B green bond's collateral tied to Microsoft.",
    "context": "QTS's Fayetteville, GA mega-campus (13 'Freedom' buildings, ~6.2M sq ft) houses at least one Microsoft AI 'superfactory' per trade press, and Bloomberg tied the collateral of the April 2026 $4.6B green bond (10-year, 5.700%, Baa2 — QTS's first investment-grade rating, ~$12.5B peak demand) to Microsoft — the AI-landlord relationship priced by the bond market at 5.7%.",
    "source": "https://www.bloomberg.com/news/articles/2026-04-06/blackstone-backed-data-center-firm-qts-kicks",
+   "via": "Freedom buildings",
    "status": "active",
    "scale": "Fayetteville flagship + $4.6B bond collateral"
   },
@@ -307,6 +308,15 @@
    "context": "STACK sits with Vantage, Aligned and CloudHQ in the wholesale mega-campus competitive set. QTS's edge per the dossier: the Blackstone pipeline, the power-ready land bank, and federal wholesale isolation none of the three offer.",
    "source": "Dossier competitive assessment — hyperscale wholesale",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FAST-41 permitting",
+   "status": "in-effect",
+   "effectiveDate": "2026-04",
+   "exposure": "QTS's Richmond Technology Park Data Center 5 (RIC5) became the first data center ever granted federal FAST-41 permitting coverage (April 2026), following the executive order on accelerating federal permitting of data-center infrastructure — Washington's pro-AI permitting doctrine landing on a QTS project first, a federal tailwind arriving exactly where local consent headwinds (the DeForest withdrawal, the Dane County moratorium push) blow hardest.",
+   "source": "https://www.permitting.gov/newsroom/press-releases/first-data-center-project-gains-permitting-councils-fast-41-coverage"
   }
  ],
  "technicalSpecs": [
@@ -556,7 +566,9 @@
       "actual": "2GW of critical power operating and 1,600+ employees (company release, March 2025); 3GW+ across 70+ facilities per Site Selection Group's 2026 ranking — the largest independent US data-center operator",
       "expected": "",
       "verdict": "inline",
-      "result": "Company disclosures stopped at the March 2025 release; third-party trackers carry the 2026 figures"
+      "result": "Company disclosures stopped at the March 2025 release; third-party trackers carry the 2026 figures",
+      "kpi": "mw-energized",
+      "qty": 2000
      },
      {
       "name": "Land bank",
@@ -790,6 +802,6 @@
    "url": "https://info.siteselectiongroup.com/blog/the-largest-u-s-data-center-operators-in-2026"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

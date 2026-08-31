@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "trina-storage",
  "name": "Trina Storage (Trina Solar)",
  "shortName": "Trina Storage",
@@ -252,6 +252,7 @@
    "note": "371 MWh Houston BESS delivered with FlexGen as integrator — the flagship US reference.",
    "context": "April 2025: Trina Storage's largest North American grid-scale deployment — 371 MWh in Houston for developer SMT Energy, with FlexGen as integrator (HybridOS EMS) and Macquarie/KeyBank as equity and tax partners. Notably delivered through a US integrator wrapping Trina DC blocks — exactly the channel structure FEOC pressure favors.",
    "source": "https://www.prnewswire.com/news-releases/trina-storage-and-flexgen-to-deploy-371-mwh-of-battery",
+   "via": "DC blocks",
    "status": "active",
    "since": "2025-04",
    "scale": "371 MWh"
@@ -262,6 +263,7 @@
    "note": "∞Power 6.25-class rival in the 6+ MWh container generation.",
    "context": "Elementa 3 enters the 6+ MWh generation level with Hithium ∞Power 6.25, Sungrow PowerTitan 3.0 Class and CRRC 6.X — differentiated by Trina's in-house cell and the certification wrap (UL 9540A Nov 2025 ed., CSA/ANSI C800-2025, NFPA 855-2026 at beyond-standard severity), not the container.",
    "source": "https://www.trinasolar.com/us/resources/newsroom/Trina-Storage-Unveils-Elementa-3-Advancing-Saf",
+   "via": "Elementa 3",
    "status": "active"
   },
   {
@@ -295,6 +297,23 @@
    "context": "As the 2025-26 cell market flipped from glut to tightness, integrator-without-cells rivals (HyperStrong, CRRC) locked multi-year supply at unknown cost while Trina controls 16-25 GWh of captive cell capacity with 36 GWh more approved — the vertical-integration contrast at the heart of Trina's pitch.",
    "source": "Dossier competitive assessment — captive cells",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "effectiveDate": "2026-01",
+   "exposure": "Trina retreated from US manufacturing precisely as the January 2026 FEOC rules closed the door: it completed the sale of its Wilmer, Texas plant to T1 Energy (December 2025) and cut its T1 stake from 17.4% to 10% (May 2026) explicitly to ease T1's FEOC alignment, leaving no owned US manufacturing — and all cells are made in China, so the US exposure is unhedged. The ~10 GWh US ambition now depends on the shrinking safe-harbored pool and non-ITC merchant niches, while the Fuzzy Panda short campaign against T1 keeps Trina's name attached to FEOC-evasion narratives.",
+   "mitigation": "The stated 'T-shaped' local-for-local model with flexible manufacturing options (VP Terry Chen, November 2025), the fully wrapped Cell-to-AC offer with Trina Storage Trace serialized component-level traceability positioned for US supply-chain compliance, and delivery through US integrators wrapping Trina DC blocks (FlexGen on the Houston project).",
+   "source": "https://www.energy-storage.news/trina-storage-charts-strategic-course-in-complex-us-energy-storage-market-landscape/"
+  },
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "exposure": "With no owned US manufacturing and captive cells made only in China, Trina's US deliveries run on tariff-priced imports under the 2026 tariff stack — the Section 301 step-up to 25% drove US battery imports to a five-year low, and the dossier flags the open question of what cells feed US Elementa 3 deliveries.",
+   "mitigation": "'Flexible manufacturing to mitigate tariffs' under the T-shaped US strategy (VP Terry Chen interview, November 2025).",
+   "source": "https://source.benchmarkminerals.com/article/us-battery-imports-fall-to-five-year-low-after-section-301-tariffs-raised-to-25-"
   }
  ],
  "decisionMakers": [
@@ -542,6 +561,6 @@
    "url": "https://www.trinasolar.com/en-glb/management-team/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

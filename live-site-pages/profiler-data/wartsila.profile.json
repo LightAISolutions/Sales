@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "wartsila",
  "name": "Wärtsilä Oyj Abp (Wärtsilä Corporation)",
  "shortName": "Wärtsilä",
@@ -186,6 +186,7 @@
    "note": "Delivered Madero & Ignacio (200 MW) — world's largest fully-merchant BESS at COD — with an ongoing GEMS service agreement.",
    "context": "Wärtsilä completed Eolian's Madero and Ignacio Grid pair (Mission, TX — 200 MW / >500 MWh combined) in March 2023, the world's largest fully-merchant BESS at COD, on GridSolv Quantum hardware with the GEMS platform under a Service+ GAP agreement. The middle chapter of Eolian's supplier progression (Sungrow → Wärtsilä → all-Tesla Padua).",
    "source": "Wärtsilä-Eolian Madero/Ignacio delivery (Mar 2023)",
+   "via": "GridSolv Quantum",
    "status": "active",
    "since": "2023-03",
    "scale": "200 MW / >500 MWh"
@@ -204,6 +205,7 @@
    "note": "Megapack-class rival in the 5 MWh AC-block class Quantum3 entered.",
    "context": "GridSolve Quantum3 (September 2024) sits in the grid-scale '5 MWh in a 20-ft container' class Tesla, Sungrow, CATL and BYD define. Wärtsilä's counter as a pure-play: GEMS software optimization, cybersecurity certification depth, and multi-asset (storage + engine + renewables) coordination single-product vendors lack.",
    "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
+   "via": "Quantum3",
    "status": "active"
   },
   {
@@ -221,6 +223,21 @@
    "context": "Wood Mackenzie frames Wärtsilä with Fluence and Powin as the pure-play integrators against the vertically integrated Chinese/Tesla leaders — the two Western firms contest the same utility and IPP accounts with rival OS stacks (GEMS vs Fluence OS/Mosaic).",
    "source": "https://www.ess-news.com/2026/07/14/sungrow-leads-first-global-bess-integrator-ranking-as-marke",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US–China battery tariffs",
+   "status": "in-effect",
+   "exposure": "US battery tariffs are cited — alongside FEOC rules and price competition — as a driver of the Energy Storage segment's 2025 order collapse: intake fell 60% to EUR 455M (2,677 MWh, -52%), with quarterly orders of EUR 31/50/11M in Q1–Q3 before a EUR 364M Q4 revival; Q4 2025 group order intake was described in press coverage as below analyst forecasts on US battery tariffs and storage competition.",
+   "mitigation": "The June 2026 decision to fold the global Energy Storage business into a 50/50 joint venture with RCT Solutions GmbH (closing expected Q3 2026) — the managed retreat from merchant storage integration the dossier reads against this backdrop.",
+   "source": "https://www.wartsila.com/docs/default-source/investors/financial-materials/interim-reports/w%C3%A4rtsil%C3%A4-financial-statements-bulletin-2025.pdf"
+  },
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "FEOC rules are named with US tariffs and price competition as the backdrop to the storage business's strategic squeeze — the 60% order-intake collapse that made standalone scale uneconomic and preceded the reclassification of Energy Storage as discontinued operations.",
+   "source": "https://www.wartsila.com/media/news/15-06-2026-inside-information-wartsila-to-establish-a-joint-venture-for-its-global-energy-storage-business-with-rct-solutions-gmbh-and-discontinue-energy-storage-as-a-separate-reporting-segment-3763438"
   }
  ],
  "technicalSpecs": [
@@ -656,6 +673,6 @@
    "url": "https://storage.wartsila.com/solutions/service/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

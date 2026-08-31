@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "flexgen",
  "name": "FlexGen Power Systems, Inc.",
  "shortName": "FlexGen",
@@ -171,6 +171,7 @@
    "note": "BESSUPS partnership — medium-voltage BESS replacing conventional UPS infrastructure for data centers.",
    "context": "Announced June 2025: FlexGen and Rosendin Electric partner on BESSUPS, first-of-its-kind medium-voltage utility-scale battery storage that replaces conventional UPS infrastructure — BESS as both power quality inside the fence and grid services outside it, aimed at AI campuses stuck in interconnection queues. FlexGen's clearest data-center wedge post-pivot.",
    "source": "https://www.businesswire.com/news/home/20250603612484/en/FlexGen-and-Rosendin-Partner-to-Deliver-First-of-its-",
+   "via": "BESSUPS",
    "status": "active",
    "since": "2025-06"
   },
@@ -604,6 +605,6 @@
    "url": "https://linxon.com/press-release-flexgen-and-linxon-announce-collaboration-to-advance-energy-storage-solutions/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

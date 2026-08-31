@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "blattner",
  "name": "Blattner (Quanta Services)",
  "shortName": "Blattner",
@@ -179,7 +179,8 @@
    "slug": "fluence",
    "type": "other",
    "note": "Builds with Fluence hardware under owner-furnished procurement — ~2,000 Fluence cubes installed at Eleven Mile — but the vendor choice belongs to project owners, not Blattner.",
-   "context": "Eleven Mile Solar Center (Ørsted): 300 MW solar + 300 MW/1,200 MWh on Fluence cubes, COD October 2024, majority offtake to Meta's Mesa AZ data center. The dossier's structural point: Blattner advertises battery procurement and installation, but every documented project shows the owner picking the integrator — so a BESS vendor's route into Blattner projects runs through the owners."
+   "context": "Eleven Mile Solar Center (Ørsted): 300 MW solar + 300 MW/1,200 MWh on Fluence cubes, COD October 2024, majority offtake to Meta's Mesa AZ data center. The dossier's structural point: Blattner advertises battery procurement and installation, but every documented project shows the owner picking the integrator — so a BESS vendor's route into Blattner projects runs through the owners.",
+   "via": "Fluence cubes"
   },
   {
    "slug": "ge-vernova",
@@ -197,6 +198,14 @@
    "slug": "hithium",
    "type": "other",
    "note": "No relationship — the dossier treats Blattner compatibility as a qualification checkbox for Hithium, not a sales pursuit; its Quanta storage volume (4.3 GWh/yr) is the denominator of US BESS construction."
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "NDAA §154",
+   "status": "in-effect",
+   "exposure": "Blattner sits on the install side of the §154 screen: inside Quanta, the corporate narrative showcases domestic-content stacks (Eleven Mile's First Solar/Fluence/Nextracker feeding Meta) and hyperscaler relationships, and the dossier assesses Blattner will not advocate a §154-named OEM into those accounts. The counterweight is the Slate precedent — Blattner demonstrably installed China-linked containerized BESS (Canadian Solar SSES/e-STORAGE, 561 MWh, 2020-22) when a bankable owner selected it — so there is no blanket China refusal at the EPC level, only owner-level economics and politics; safe-harbored equipment and non-ITC merchant projects remain constructible.",
+   "source": "https://csestorage.com/slate/"
   }
  ],
  "decisionMakers": [
@@ -343,6 +352,6 @@
    "url": "https://www.blattnercompany.com/expertise/storage"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }

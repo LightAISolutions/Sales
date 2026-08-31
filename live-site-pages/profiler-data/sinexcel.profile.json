@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "sinexcel",
  "name": "Shenzhen Sinexcel Electric Co., Ltd. (深圳市盛弘电气股份有限公司)",
  "shortName": "Sinexcel",
@@ -207,6 +207,7 @@
    "note": "36 kW HVDC rectifier modules third-party-reported shipping to Vertiv — indirect NVIDIA-ecosystem exposure.",
    "context": "Sinexcel's current shipping AIDC exposure is a 36 kW HVDC rectifier module that third-party reporting says is supplied to Vertiv — the module/OEM wedge into the AI data-center power race, selling through established power-infrastructure OEMs rather than direct hyperscaler design-ins. The own-brand AIDC division (established June 2025, HVDC and SST products) remains pre-revenue as of early 2026.",
    "source": "https://www.haizhilicai.com/stock_selecter/newsDetail/20251009084653497788",
+   "via": "36 kW HVDC rectifier module",
    "status": "announced"
   },
   {
@@ -215,6 +216,7 @@
    "note": "Named among battery formation & test equipment customers.",
    "context": "Third-party reporting names CATL, BYD, ATL and XPeng among customers of Sinexcel's battery formation and test equipment line — an upstream equipment relationship into the cell-manufacturing complex, separate from the power-quality and BESS-PCS businesses.",
    "source": "Third-party customer reporting — battery formation & test equipment",
+   "via": "battery formation & test equipment",
    "status": "active"
   },
   {
@@ -223,6 +225,7 @@
    "note": "Named battery formation & test equipment customer.",
    "context": "BYD appears with CATL, ATL and XPeng in third-party reporting on Sinexcel's battery formation and test equipment customer base — equipment supply into BYD's cell manufacturing.",
    "source": "Third-party customer reporting — battery formation & test equipment",
+   "via": "battery formation & test equipment",
    "status": "active"
   },
   {
@@ -1082,6 +1085,6 @@
    "url": "https://www.charin.global/news/sinexcel-becomes-a-core-member-of-charin-e-v/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 5
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 6
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "hithium",
  "name": "Xiamen Hithium Energy Storage Technology Co., Ltd. (厦门海辰储能科技股份有限公司)",
  "shortName": "Hithium",
@@ -298,6 +298,35 @@
    "source": "https://www.ess-news.com/2025/06/06/hithium-lg-begin-us-battery-manufacture-in-tough-american-market/",
    "status": "active",
    "since": "2025"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "The FEOC/tariff stack fences Hithium out of ITC-driven and hyperscale-visible US procurement, leaving safe-harbored, merchant, and non-US channels as the realistic landing zones for its AIDC line — the NDAA/FEOC fence on US campuses is a named gap of the ∞Power AIDC portfolio. The framing comparison: LG Energy Solution scales domestic cells that qualify for ITC bonuses Hithium's content cannot.",
+   "mitigation": "US module and full-BESS assembly in Mesquite, Texas (10 GWh/yr, first shipments August 2025) — localization as the sales argument in tariff- and content-rule-constrained procurement.",
+   "source": "https://www.ess-news.com/2025/06/06/hithium-lg-begin-us-battery-manufacture-in-tough-american-market/"
+  },
+  {
+   "regime": "US–China battery tariffs",
+   "status": "in-effect",
+   "exposure": "US tariffs on Chinese-import battery products rise from 7% to 26% in 2026, bearing directly on the North American book Hithium serves.",
+   "mitigation": "The ~$200M, ~484,000 sq ft Mesquite, Texas module + BESS assembly plant (10 GWh/yr, first shipments August 2025) partially insulates US sales from tariff escalation — among the first Chinese ESS makers with US BESS assembly.",
+   "source": "https://www.energy-storage.news/chinese-battery-manufacturer-hithium-ships-first-units-from-texas-bess-assembly-plant/"
+  },
+  {
+   "regime": "China battery export controls",
+   "status": "in-effect",
+   "exposure": "A cell-technology licensing deal with India's Reliance Industries collapsed in January 2026 after Beijing tightened export controls on battery technology transfer — closing licensing as an expansion channel and capping India localization options, while protecting the technology moat. Hithium remains a Reliance BESS component partner per media reports.",
+   "source": "https://www.indianchemicalnews.com/battery/reliance-pauses-lithium-ion-battery-push-amid-china-tech-hurdle-says-report-28931"
+  },
+  {
+   "regime": "EU Battery Regulation",
+   "status": "in-effect",
+   "exposure": "European sales fall under the EU Battery Regulation: the ∞Power Flexsso is marketed as fully aligned with the regulation, and Hithium holds a TÜV Rheinland EU Battery Regulation 2023/1542 conformity certificate for C&I products.",
+   "mitigation": "The committed €400M cell + BESS gigafactory in Navarre, Spain (JV with Sodena, €81M Spanish government grant, target 2027) — planned Spanish cells for EU battery-regulation alignment.",
+   "source": "https://www.globenewswire.com/de/news-release/2026/08/19/3347813/0/en/"
   }
  ],
  "technicalSpecs": [
@@ -787,7 +816,9 @@
       "actual": "35.1 GWh — global No. 3, ~11% share (behind CATL and EVE)",
       "expected": "",
       "verdict": "inline",
-      "result": "—"
+      "result": "—",
+      "kpi": "gwh-shipped",
+      "qty": 35.1
      },
      {
       "name": "Overseas mix",
@@ -823,7 +854,9 @@
       "actual": "30.0 GWh (+252.9% YoY)",
       "expected": "",
       "verdict": "inline",
-      "result": "—"
+      "result": "—",
+      "kpi": "gwh-shipped",
+      "qty": 30.0
      }
     ],
     "commentary": "FY2025 full-year: financials unpublished (the second HKEX application lapsed April 2026 before FY2025 results were filed), but third parties (InfoLink, SMM, ICC) ranked Hithium global Top 2 in both total and utility-scale ESS battery shipments for 2025 in a market of 612.39 GWh (+94.6%)."
@@ -1084,6 +1117,6 @@
    "url": "https://en.hithium.com/products/residential.html"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 6
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 7
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "panasonic",
  "name": "Panasonic Holdings Corporation (パナソニックホールディングス) — focus: Panasonic Energy Co., Ltd.",
  "shortName": "Panasonic",
@@ -130,6 +130,7 @@
    "note": "The widely understood (first-party-unnamed) anchor customer for 2170 cells — and the EV business's defining risk.",
    "context": "Tesla concentration remains Panasonic's defining EV exposure: Nevada's ~41 GWh/yr 2170 output (>11B cells to date) anchors on Tesla, the Kansas De Soto ramp decisions tracked Tesla's sales slump (full-capacity date abandoned), and the ¥40B defect charge is widely inferred to involve the 2170 anchor customer — while first-party channels conspicuously avoid naming Tesla and publicize Lucid/Subaru/Mazda/Zoox diversification instead. The Kansas lines are now partially converting to data-center cells — the AI pivot in one building.",
    "source": "https://news.panasonic.com/global/press/en250714-6",
+   "via": "2170 cells",
    "status": "active",
    "scale": "~41 GWh/yr 2170 anchor volume"
   },
@@ -139,6 +140,7 @@
    "note": "Zoox (Amazon) multi-year 2170 supply for robotaxis, deliveries from early 2026.",
    "context": "November 2025: Panasonic announced a multi-year 2170 cell supply agreement with Zoox, Amazon's robotaxi unit, with deliveries from early 2026 — customer diversification beyond the Tesla anchor and indirect exposure to Amazon's autonomy program.",
    "source": "https://news.panasonic.com/global/press/en251125-2",
+   "via": "2170 cells",
    "status": "active",
    "since": "2025-11"
   },
@@ -148,6 +150,7 @@
    "note": "CBU supercapacitor roadmap targets the rack-side transient tier NVIDIA's GB300 architecture created.",
    "context": "Panasonic's data-center strategy ('Empowering AI Stability at Scale', March 2026 — ~80% claimed share of DC distributed power, ¥800B FY2029 target) includes next-generation Capacitor Backup Units that map directly onto NVIDIA's rack-side storage tier — architecture alignment with the GB300-created transient market, not a named partnership.",
    "source": "https://news.panasonic.com/global/stories/18524",
+   "via": "Capacitor Backup Units",
    "status": "active"
   },
   {
@@ -157,6 +160,27 @@
    "context": "Panasonic is the BBU incumbent with a self-reported ~80% share of data-center distributed power systems; Samsung SDI's UPS/BBU push plus reported industry-wide BBU cell shortages are the reasons the dossier expects the moat to be contested as the market grows toward ~$7B by 2033.",
    "source": "https://news.panasonic.com/global/stories/18524",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US EV tax credits",
+   "status": "expired",
+   "exposure": "Panasonic cut its North American auto-battery sales plan 13% to 40 GWh in October 2025 as US EV credits ended, and the Kansas De Soto plant's full-capacity date was abandoned amid the EV slump — the $4B factory was built for a Tesla demand curve that didn't materialize.",
+   "mitigation": "Kansas EV lines are being repurposed to data-center cells within the ¥350B FY2026–FY2028 data-center storage investment — EV assets redeployed to the AI boom rather than idled.",
+   "source": "https://kansasreflector.com/2025/07/11/panasonic-to-delay-production-at-kansas-battery-plant-as-electric-car-sales-decline-policies-shift/"
+  },
+  {
+   "regime": "US import tariffs",
+   "status": "in-effect",
+   "exposure": "Tariffs were among the factors that crushed the Energy segment's fiscal 2026 profit — segment OP of ¥69.8B against an original ¥167B plan, with tariffs, Kansas fixed costs and the ¥40B defect charge landing together — and contributed to the October 2025 guidance cut (OP ¥370B→¥320B).",
+   "source": "https://finance.yahoo.com/news/panasonic-cuts-full-profit-forecast-064900002.html"
+  },
+  {
+   "regime": "ITC/45X",
+   "status": "in-effect",
+   "exposure": "Panasonic's US cell economics ride on the IRA's manufacturing credits: fiscal 2025 operating cash flow was boosted by IRA credit monetization via third-party transfer (absent the following year), and a reduced AMPC windfall was among the drivers of the October 2025 guidance cut.",
+   "source": "https://finance.yahoo.com/news/panasonic-cuts-full-profit-forecast-064900002.html"
   }
  ],
  "technicalSpecs": [
@@ -415,6 +439,6 @@
    "url": "https://www.panasonic.com/global/energy/company/profile.html"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

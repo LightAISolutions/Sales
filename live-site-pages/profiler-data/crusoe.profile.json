@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "crusoe",
  "name": "Crusoe",
  "legalName": "Crusoe Energy Systems LLC",
@@ -140,6 +140,7 @@
    "note": "End tenant of Stargate Site 1 — the Abilene campus Crusoe develops and operates.",
    "context": "Crusoe develops the Lancium Clean Campus at Abilene for the OpenAI/Oracle Stargate program: Phase 1 (200+ MW) live ~September 2025, Phase 2 scaling to 8 buildings / ~4M sq ft / 1.2GW by end-2026, each building up to 50,000 GB200 NVL72s. The site that proved the whole program buildable.",
    "source": "Stargate Abilene site record (Epoch AI tracker / DCD)",
+   "project": "stargate",
    "status": "active",
    "since": "2024",
    "scale": "1.2GW campus"
@@ -159,6 +160,7 @@
    "note": "LM2500XPRESS fleet powers Crusoe sites; GEV turbines anchor the 4.5GW gas JV.",
    "context": "Crusoe runs GEV LM2500XPRESS packaged aeroderivatives (>99.8% availability) as prime power, dual-sourcing 29 XPRESS units alongside ProEnergy's PE6000s, and its 4.5GW gas-generation JV (Engine No. 1/Chevron) is built on GE Vernova turbines.",
    "source": "https://www.datacenterfrontier.com/hyperscale/article/55276169/crusoe-adds-45-gw-natural-gas-to-fuel-ai-expands-abilene-data-center-to-12-gw",
+   "via": "LM2500XPRESS turbines",
    "status": "active",
    "scale": "29 XPRESS + 4.5GW JV"
   },
@@ -168,6 +170,7 @@
    "note": "13 PE6000s (650 MW) ordered for hyperscale AI factories, delivery summer 2027.",
    "context": "April 2026: Crusoe ordered 13 ProEnergy PE6000 packages (650 MW) — refurbished 747/767-core aeroderivatives bid head-to-head against GEV's LM2500XPRESS inside the same fleet, won on 2027 delivery against OEM queues stretching to 2029-2030.",
    "source": "https://thedatacenterengineer.com/news/proenergy-to-deliver-13x-50-mw-pe6000-gas-turbine-genset",
+   "via": "PE6000 gas turbines",
    "status": "active",
    "since": "2026-04",
    "scale": "650 MW (13 × PE6000)"
@@ -178,9 +181,18 @@
    "note": "5 GW of AI UPS™ deploying across multiple hyperscale campuses, commissioning 2026-2027.",
    "context": "July 2026: Crusoe and ON.energy agreed to deploy 5 GW of medium-voltage, BESS-based AI UPS — ride-through-certified (NOGRR 282), FEOC-clean — across Crusoe campuses. The category-making battery-buffer award of the AIDC buildout, sitting beside Crusoe's gas fleet as the stability layer.",
    "source": "https://www.crusoe.ai/resources/newsroom/crusoe-and-on-energy-to-deploy-5-gw-of-ai-ups-tm-at-multiple-hyperscale-campuses",
+   "via": "AI UPS",
    "status": "active",
    "since": "2026-07",
    "scale": "5 GW"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Texas air permitting",
+   "status": "in-effect",
+   "exposure": "The Texas Tribune documented that Abilene's on-site plant runs on minor 'permit by rule' instruments now under press scrutiny, with a pending major permit for 41 more turbines that would rank among Texas's largest fossil plants; the dossier assesses the gas-heavy energy stack carries accumulating regulatory and reputational exposure, alongside community cost-shifting reporting (85%/20-year abatements).",
+   "source": "https://www.texastribune.org/2026/07/09/texas-data-centers-ai-power-plants-pollution-state-permits/"
   }
  ],
  "technicalSpecs": [
@@ -414,6 +426,6 @@
    "url": "https://sacra.com/c/crusoe/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

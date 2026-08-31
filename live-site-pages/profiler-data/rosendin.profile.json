@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "rosendin",
  "name": "Rosendin Holdings, Inc. (Rosendin Electric, Inc.)",
  "shortName": "Rosendin",
@@ -147,6 +147,7 @@
    "note": "BESSUPS: Rosendin's patented design + FlexGen's controls IP — BESS replacing data-center UPS and diesel.",
    "context": "Announced June 2025: BESSUPS pairs Rosendin's patented medium-voltage BESS-as-UPS design and data-center customer base with FlexGen's grid-interconnection and transient-frequency-stabilization patents, meeting CBEMA power-quality standards — the clearest BESS-for-AIDC product move by any contractor in the covered set, sited outside the building at medium voltage.",
    "source": "https://www.businesswire.com/news/home/20250603612484/en/",
+   "via": "BESSUPS",
    "status": "active",
    "since": "2025-06"
   },
@@ -164,6 +165,7 @@
    "note": "The #1 electrical contractor Rosendin trails at ~3.7x scale in data-center electrical.",
    "context": "Quanta's $13.5B electrical revenue (EC&M 2025) is roughly 3.7x Rosendin's #2 position, and Quanta's Technology & Load Centers segment competes directly for the same data-center electrical scope. Rosendin's counter is the employee-owned craft franchise plus product moves (BESSUPS, Phinergy aluminum-air backup) that sell power capacity, not just installation.",
    "source": "https://www.ecmweb.com/top-50-electrical-contractors/article/55316333/2025-top-50-electrical-co",
+   "via": "data-center electrical",
    "status": "active"
   }
  ],
@@ -383,6 +385,6 @@
    "url": "https://www.rosendin.com/sectors/renewable-energy/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "dpr",
  "name": "DPR Construction",
  "legalName": "DPR Construction (privately held, employee-owned; reorganized as a C corporation in 2021)",
@@ -211,6 +211,7 @@
    "type": "customer",
    "note": "Lead contractor on Crusoe's Stargate Abilene campus — 8 buildings, ~4M sq ft, 1.2 GW, each 474,000 sq ft building delivered in under a year.",
    "context": "The flagship technical build of the AI era, serving the OpenAI/Oracle Stargate program. The dossier's read: DPR dominates the neocloud tier where single-lead awards at gigawatt scale are still available, against the hyperscalers' deliberate multi-GC model.",
+   "project": "stargate",
    "status": "active",
    "scale": "1.2 GW campus"
   },
@@ -232,7 +233,8 @@
   {
    "slug": "openai",
    "type": "other",
-   "note": "Indirect: DPR builds the Stargate Abilene campus OpenAI's workloads anchor — the contract runs through developer Crusoe, not OpenAI."
+   "note": "Indirect: DPR builds the Stargate Abilene campus OpenAI's workloads anchor — the contract runs through developer Crusoe, not OpenAI.",
+   "project": "stargate"
   },
   {
    "slug": "oracle",
@@ -582,6 +584,6 @@
    "url": "https://en.wikipedia.org/wiki/DPR_Construction"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 3
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 4
 }

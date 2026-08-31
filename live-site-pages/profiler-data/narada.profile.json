@@ -1,5 +1,5 @@
 {
- "schemaVersion": 6,
+ "schemaVersion": 7,
  "slug": "narada",
  "name": "Narada Power (Zhejiang Narada Power Source)",
  "shortName": "Narada",
@@ -239,6 +239,7 @@
    "note": "AIOn 800V HVDC products aligned to NVIDIA-style architecture; CNESA lists Narada among 31 core 800V industry-chain companies.",
    "context": "Narada's AIOn 800V HVDC and AIOn pod products align to the NVIDIA-style 800 VDC architecture, and CNESA lists it among 31 core industry-chain companies for 800V — ecosystem alignment from the AIDC backup-power side (10C AIOn X-Rate, >600 kW per cabinet), not a named NVIDIA partnership.",
    "source": "https://en.cnesa.org/latest-news/2025/11/25/nvidias-800v-architecture-reshapes-ai-data-centers-",
+   "via": "AIOn 800V HVDC",
    "status": "active"
   },
   {
@@ -248,6 +249,26 @@
    "context": "Narada is one of the few vendors with both inside-the-fence (VRLA→lithium UPS→10C AIOn X-Rate→800V HVDC) and outside-the-fence (grid-forming BESS) AIDC legs, and its MPI Energy channel is a working 'de-branded US beachhead'. For Hithium it is simultaneously the cautionary comp — differentiated product undone by balance-sheet distress — and an opportunity map: that distress is actively freeing up backup-power accounts, channel partners and talent a US-entering competitor can pick up.",
    "source": "Dossier ecosystem assessment",
    "status": "active"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "FEOC restrictions",
+   "status": "in-effect",
+   "exposure": "FEOC status forecloses ITC-linked US grid BESS sales for Narada from 2026 — the dossier assesses its US position as FEOC-blocked for grid storage while remaining shippable for UPS/backup, since backup batteries inside data centers generally don't claim the ITC.",
+   "source": "https://davisgraham.com/news-events/battery-storage-for-data-centers-in-2026-feoc-compliance-ferc-co-location-and-the-deals-getting-done-now/"
+  },
+  {
+   "regime": "Section 301 tariffs",
+   "status": "in-effect",
+   "exposure": "With the ITC lane closed, Narada's US backup/UPS business through the MPI channel remains shippable but tariff-burdened — Section 301 tariffs are named among the binding constraints on the US position, alongside NDAA restrictions and voluntary hyperscaler de-risking.",
+   "source": "https://davisgraham.com/news-events/battery-storage-for-data-centers-in-2026-feoc-compliance-ferc-co-location-and-the-deals-getting-done-now/"
+  },
+  {
+   "regime": "NDAA §154",
+   "status": "in-effect",
+   "exposure": "DoD-adjacent NDAA restrictions are among the binding constraints on Narada's US backup-power lane, per the dossier's assessment of its Chinese-flagged supplier position.",
+   "source": "https://davisgraham.com/news-events/battery-storage-for-data-centers-in-2026-feoc-compliance-ferc-co-location-and-the-deals-getting-done-now/"
   }
  ],
  "decisionMakers": [
@@ -440,6 +461,6 @@
    "url": "https://mpinarada.com/critical-power-ups/"
   }
  ],
- "lastUpdated": "2026-08-29",
- "profileVersion": 2
+ "lastUpdated": "2026-08-30",
+ "profileVersion": 3
 }
