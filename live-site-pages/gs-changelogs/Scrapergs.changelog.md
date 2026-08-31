@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 36/50`
+`Sections: 37/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.90g] — 2026-08-30 11:13:05 PM EST — v03.97r
+
+### Added
+- News tracking now follows the industry's major named data-center and storage projects, so stories about them are scored and surfaced alongside company and topic coverage
 
 ## [v01.89g] — 2026-08-30 08:43:06 PM EST — v03.89r
 

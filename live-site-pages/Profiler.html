@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.73w">
+  <meta name="build-version" content="v01.74w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -719,31 +719,26 @@
     #ov-authwall .aw-title { font: 400 44px/1.1 var(--ov-serif); color: var(--ov-paper); margin-bottom: 14px; }
     #ov-authwall .aw-sub { font: 13.5px/1.6 var(--ov-serif); color: var(--ov-faint); margin-bottom: 26px; }
     #ov-authwall .aw-status { margin-top: 14px; font-size: 12.5px; min-height: 1.4em; color: var(--ov-faint); }
-    /* Study guide — dossier button + overlay. The Coverage overlay (#ov-cov-*)
-       shares the same skeleton, so the selectors are doubled rather than the
-       rules duplicated. */
+    /* Study guide button — the guide itself renders in the guidance overlay
+       via gdRenderDoc since v01.74w (Phase 5 learning-layer unification); the
+       old dedicated study overlay skin retired with the v1 renderer. The
+       Coverage overlay keeps the shared skeleton the two once doubled. */
     #ov-study-btn { margin-top: 14px; margin-left: 8px; }
-    #ov-study-overlay, #ov-cov-overlay {
+    #ov-cov-overlay {
       position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background: rgba(8,9,12,0.8); z-index: 10002; display: none;
       overflow-y: auto; padding: 26px 14px; box-sizing: border-box;
     }
-    #ov-study-panel, #ov-cov-panel {
+    #ov-cov-panel {
       width: min(760px, 100%); box-sizing: border-box; margin: 0 auto; background: var(--ov-card);
       border: 1px solid var(--ov-line2); border-radius: 12px; padding: 24px 26px 30px;
       box-shadow: 0 14px 50px rgba(0,0,0,0.5);
     }
-    #ov-study-panel .s-head, #ov-cov-panel .s-head { display: flex; align-items: baseline; gap: 12px; border-bottom: 3px double var(--ov-line2); padding-bottom: 14px; margin-bottom: 6px; }
-    #ov-study-panel .s-head h2, #ov-cov-panel .s-head h2 { font: 400 clamp(24px, 4vw, 32px)/1.15 var(--ov-serif); margin: 0; }
-    #ov-study-panel .s-head .asof, #ov-cov-panel .s-head .asof { margin-left: auto; color: var(--ov-faint); font: 10.5px/1.6 var(--ov-mono); white-space: nowrap; }
-    #ov-study-close, #ov-cov-close { background: none; border: none; color: var(--ov-muted); font-size: 24px; cursor: pointer; padding: 0 0 0 6px; line-height: 1; }
-    #ov-study-close:hover, #ov-cov-close:hover { color: var(--ov-paper); }
-    .ov-flash { background: var(--ov-card2); border: 1px solid var(--ov-line2); border-radius: 10px; padding: 14px 18px; margin: 10px 0; cursor: pointer; }
-    .ov-flash .hint { font: 9px/1 var(--ov-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ov-faint); margin-bottom: 7px; }
-    .ov-flash .q { font-size: 14.5px; }
-    .ov-flash .a { display: none; color: var(--ov-muted); font-size: 13.5px; margin-top: 9px; border-top: 1px dashed var(--ov-line2); padding-top: 9px; }
-    .ov-flash.open .a { display: block; }
-    .ov-flash.open .hint { color: var(--ov-gold); }
+    #ov-cov-panel .s-head { display: flex; align-items: baseline; gap: 12px; border-bottom: 3px double var(--ov-line2); padding-bottom: 14px; margin-bottom: 6px; }
+    #ov-cov-panel .s-head h2 { font: 400 clamp(24px, 4vw, 32px)/1.15 var(--ov-serif); margin: 0; }
+    #ov-cov-panel .s-head .asof { margin-left: auto; color: var(--ov-faint); font: 10.5px/1.6 var(--ov-mono); white-space: nowrap; }
+    #ov-cov-close { background: none; border: none; color: var(--ov-muted); font-size: 24px; cursor: pointer; padding: 0 0 0 6px; line-height: 1; }
+    #ov-cov-close:hover { color: var(--ov-paper); }
     /* Dossier display styles — admin 🖋 switcher + per-style skins
        (style registry: repository-information/PROFILER-STYLES.md) */
     #ov-style-btn {
@@ -5564,8 +5559,7 @@ function ovReloadFresh() {
         });
     }
 
-    // ── Study guide — dossier button + overlay (data: <slug>.study.json) ──
-    var ovStudyOverlay = null;
+    // ── Study guide — renders on the guidance engine; see ovShowStudy below ──
     // ── Coverage overlay (Phase 1 of the Scraper↔Profiler bridge) ──
     // The news Scraper has stored about this company, split at the dossier's
     // lastUpdated so "what happened since this was written" reads at a
@@ -5679,48 +5673,86 @@ function ovReloadFresh() {
       });
     }
 
-    function ovShowStudy(sg) {
-      if (!ovStudyOverlay) {
-        ovStudyOverlay = ovEl('div'); ovStudyOverlay.id = 'ov-study-overlay';
-        ovStudyOverlay.addEventListener('click', function(e) { if (e.target === ovStudyOverlay) ovStudyOverlay.style.display = 'none'; });
-        document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && ovStudyOverlay.style.display === 'block') ovStudyOverlay.style.display = 'none';
-        });
-        document.body.appendChild(ovStudyOverlay);
+    // ── Study guide — rendered on the guidance engine (v01.74w, Phase 5) ──
+    // <slug>.study.json (public Pages data) renders through gdRenderDoc with
+    // a "Study Guide" shell: same section kinds, glossary tooltips, covered-
+    // company chips, and per-account quiz/done progress as guidance modules
+    // (doc id 'study-<slug>'). The content channels never mix — study guides
+    // stay public Pages JSON; guidance modules stay role-gated in the backend.
+
+    // Shared public concepts glossary (profiler-concepts.json) — fetched once
+    // per page load on first study-guide open. {{term}} tooltips resolve the
+    // guide's own glossary first, then this registry (term + aliases, matched
+    // case-insensitively). A failed fetch degrades to doc-glossary-only.
+    var ovConceptsP = null;
+    function ovConceptsLoad() {
+      if (ovConceptsP) return ovConceptsP;
+      ovConceptsP = ovFetchJson('profiler-concepts.json')
+        .then(function(reg) {
+          var map = {};
+          ((reg && reg.concepts) || []).forEach(function(c) {
+            if (!c || !c.term || !c.def) return;
+            map[String(c.term).toLowerCase()] = c.def;
+            (c.aliases || []).forEach(function(a) { map[String(a).toLowerCase()] = c.def; });
+          });
+          return map;
+        })
+        .catch(function() { return null; });
+      return ovConceptsP;
+    }
+
+    // v1→v2 study adapter — the safety net that keeps schema v1
+    // ({heading, bullets[]}) renderable forever: v1 sections map losslessly
+    // onto the guidance vocabulary (prose, ps = bullets, generated ids), and
+    // top-level flashcards[] (valid at v2 for continuity) fold into a
+    // trailing flashcards section. gdRenderDoc never sees a v1 shape.
+    // Id generation mirrors scripts/lift-study-guides.py — keep them in sync.
+    function ovStudyV2(sg) {
+      var secs = [], used = {};
+      function secId(txt, n) {
+        var id = String(txt || '').toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-').replace(/^[-0-9]+|-+$/g, '').slice(0, 64)
+          || ('s' + (n + 1));
+        var base = id, k = 2;
+        while (used[id]) id = base + '-' + k++;
+        used[id] = true;
+        return id;
       }
-      ovClear(ovStudyOverlay);
-      var panel = ovEl('div'); panel.id = 'ov-study-panel';
-      var head = ovEl('div', 's-head');
-      head.appendChild(ovEl('h2', null, sg.title || 'Study Guide'));
-      if (sg.lastUpdated) head.appendChild(ovEl('span', 'asof', 'as of ' + sg.lastUpdated));
-      var closeBtn = ovEl('button', null, '×'); closeBtn.id = 'ov-study-close'; closeBtn.type = 'button';
-      closeBtn.setAttribute('aria-label', 'Close');
-      closeBtn.addEventListener('click', function() { ovStudyOverlay.style.display = 'none'; });
-      head.appendChild(closeBtn);
-      panel.appendChild(head);
-      (sg.sections || []).forEach(function(sec) {
-        var s = ovSection(sec.heading || '');
-        var ul = ovEl('ul');
-        ul.style.cssText = 'margin:12px 0 0;padding-left:20px;font-size:14px;';
-        (sec.bullets || []).forEach(function(b) { var li = ovEl('li', null, b); li.style.margin = '5px 0'; ul.appendChild(li); });
-        s.appendChild(ul);
-        panel.appendChild(s);
-      });
+      if ((sg.schemaVersion || 1) >= 2) {
+        (sg.sections || []).forEach(function(sec) {
+          used[sec.id] = true;
+          secs.push(sec);
+        });
+      } else {
+        (sg.sections || []).forEach(function(sec, n) {
+          secs.push({ id: secId(sec.heading, n), title: sec.heading || '',
+                      kind: 'prose', ps: sec.bullets || [] });
+        });
+      }
       if (sg.flashcards && sg.flashcards.length) {
-        var fs = ovSection('Flashcards', 'Tap a card to reveal the answer.');
-        sg.flashcards.forEach(function(fc) {
-          var card = ovEl('div', 'ov-flash');
-          card.appendChild(ovEl('div', 'hint', 'Tap to flip'));
-          card.appendChild(ovEl('div', 'q', fc.q));
-          card.appendChild(ovEl('div', 'a', fc.a));
-          card.addEventListener('click', function() { card.classList.toggle('open'); });
-          fs.appendChild(card);
-        });
-        panel.appendChild(fs);
+        secs.push({ id: secId('flashcards', secs.length), title: 'Flashcards',
+                    kind: 'flashcards', read: 'Click a card to flip it.',
+                    cards: sg.flashcards });
       }
-      ovStudyOverlay.appendChild(panel);
-      ovStudyOverlay.style.display = 'block';
-      ovStudyOverlay.scrollTop = 0;
+      return { id: 'study-' + (sg.slug || ''), title: sg.title || 'Study Guide',
+               updated: sg.lastUpdated || '', sections: secs,
+               glossary: sg.glossary || [] };
+    }
+
+    function ovShowStudy(sg) {
+      gdProgressSync();   // cross-device ticks where the ops allow; localStorage fallback otherwise
+      var ov = document.getElementById('ov-guide-overlay');
+      if (!ov) { ov = document.createElement('div'); ov.id = 'ov-guide-overlay'; document.body.appendChild(ov); }
+      ov.style.display = 'block';
+      ov.innerHTML = '';
+      var shell = ovEl('div', 'gd-shell');
+      shell.appendChild(ovEl('p', 'ov-loading', 'Loading study guide…'));
+      ov.appendChild(shell);
+      ov.scrollTop = 0;
+      var doc = ovStudyV2(sg);
+      ovConceptsLoad().then(function(concepts) {
+        gdRenderDoc(doc, shell, { kicker: 'Study Guide', concepts: concepts });
+      });
     }
 
     // ── Export: document builder + preview + Word/PDF ──
@@ -6642,24 +6674,43 @@ function ovReloadFresh() {
       } catch (e) { /* private mode — nothing persisted to clean */ }
     })();
 
-    function gdRenderDoc(doc, shell) {
+    // opts (v01.74w, Phase 5): shell variants for non-guidance callers.
+    //   kicker   — replaces the "Industry Guidance · Study Module" label
+    //   concepts — pre-lowercased {term: def} map merged in UNDER the doc's
+    //              own glossary, so {{term}} resolves doc-glossary-first and
+    //              falls back to the shared concepts registry (study guides).
+    function gdRenderDoc(doc, shell, opts) {
+      opts = opts || {};
       gdCurDoc = doc.id;
       gdGlossMap = {};
       var gi;
+      if (opts.concepts) for (var ck in opts.concepts) {
+        if (opts.concepts.hasOwnProperty(ck)) gdGlossMap[ck] = opts.concepts[ck];
+      }
       for (gi = 0; gi < (doc.glossary || []).length; gi++) gdGlossMap[doc.glossary[gi].t.toLowerCase()] = doc.glossary[gi].d;
       shell.innerHTML = '';
 
       var top = ovEl('div', 'gd-top');
       var tl = ovEl('div');
-      tl.appendChild(ovEl('div', 'gd-kicker', 'Industry Guidance · Study Module'));
+      tl.appendChild(ovEl('div', 'gd-kicker', opts.kicker || 'Industry Guidance · Study Module'));
       tl.appendChild(ovEl('h2', 'gd-title', doc.title));
-      var src = doc.source || {};
-      var srcline = ovEl('div', 'gd-srcline', (src.doc || '') + ' — ' + (src.publisher || '') + ', '
-        + (src.date || '') + ' · ' + (src.pages || '?') + ' pp · ' + (src.series || '')
-        + ' · analyzed ' + (doc.updated || ''));
-      var rvc = gdReviewChip(doc.reviewBy);
-      if (rvc) srcline.appendChild(rvc);
-      tl.appendChild(srcline);
+      // Source line renders only when the doc carries source meta (guidance
+      // modules always do); docs without one — study guides — get a plain
+      // as-of line instead, with the review chip omitted when absent.
+      if (doc.source) {
+        var src = doc.source;
+        var srcline = ovEl('div', 'gd-srcline', (src.doc || '') + ' — ' + (src.publisher || '') + ', '
+          + (src.date || '') + ' · ' + (src.pages || '?') + ' pp · ' + (src.series || '')
+          + ' · analyzed ' + (doc.updated || ''));
+        var rvc = gdReviewChip(doc.reviewBy);
+        if (rvc) srcline.appendChild(rvc);
+        tl.appendChild(srcline);
+      } else if (doc.updated) {
+        var asof = ovEl('div', 'gd-srcline', 'as of ' + doc.updated);
+        var rvc2 = gdReviewChip(doc.reviewBy);
+        if (rvc2) asof.appendChild(rvc2);
+        tl.appendChild(asof);
+      }
       // Revision notes (v01.68w) — per-module revisions[] meta, newest first.
       if (doc.revisions && doc.revisions.length) {
         var revs = ovEl('div', 'gd-revs');

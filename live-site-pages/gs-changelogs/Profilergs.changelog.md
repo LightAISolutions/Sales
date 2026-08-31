@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 28/50`
+`Sections: 29/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.29g] — 2026-08-30 11:13:05 PM EST — v03.97r
+
+### Added
+- Study-guide reading progress now syncs across devices for accounts with study-module access
 
 ## [v01.28g] — 2026-08-30 08:43:06 PM EST — v03.89r
 

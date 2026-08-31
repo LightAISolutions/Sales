@@ -1,4 +1,4 @@
-var VERSION = "v01.89g";
+var VERSION = "v01.90g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -602,6 +602,39 @@ var SCRAPER_INTEREST_TOPIC_SEEDS = [
   { key: 'topic-grid-infrastructure', label: 'Grid infrastructure & the AIDC power chain',
     terms: ['grid capacity', 'transformer shortage', 'gas turbine', 'transmission', 'NOGRR 282', 'SB 6'],
     source: 'guidance:power-infra-aidc-2026-08' },
+  // Named-project seeds (Phase 5 rider, Layer 3 — 2026-08-30). One seed per
+  // registered project in profiler-data/profiler-projects.json, so the digest
+  // rubric scores news about the ecosystem's recurring named projects.
+  // 'project:' seeds sync at registration time (PROFILER-SCHEMA.md →
+  // Named-projects registry): registering a project adds its seed here in the
+  // same commit. Terms stay distinctive-proper-noun or multi-word — a bare
+  // common word ('Frontier', 'Lighthouse', 'Jupiter') pads topic bands on
+  // unrelated articles, the same trap the 'supply chain'/'warranty' notes
+  // above record.
+  { key: 'topic-colossus', label: 'Project: Colossus (xAI — Memphis, TN)',
+    terms: ['Colossus', 'xAI Memphis'],
+    source: 'project:colossus' },
+  { key: 'topic-frontier', label: 'Project: Frontier (Vantage/Stargate — Shackelford County, TX)',
+    terms: ['Stargate Frontier', 'Vantage Frontier', 'Frontier campus', 'Shackelford County'],
+    source: 'project:frontier' },
+  { key: 'topic-homer-city', label: 'Project: Homer City Energy Campus (PA)',
+    terms: ['Homer City'],
+    source: 'project:homer-city' },
+  { key: 'topic-hyperion', label: 'Project: Hyperion (Meta — Richland Parish, LA)',
+    terms: ['Hyperion', 'Richland Parish'],
+    source: 'project:hyperion' },
+  { key: 'topic-jupiter-nm', label: 'Project: Jupiter (STACK/Stargate — Doña Ana County, NM)',
+    terms: ['Project Jupiter', 'Doña Ana', 'Dona Ana', 'Stargate New Mexico'],
+    source: 'project:jupiter-nm' },
+  { key: 'topic-lighthouse', label: 'Project: Lighthouse (Vantage/Stargate — Port Washington, WI)',
+    terms: ['Port Washington', 'Vantage Lighthouse', 'Stargate Wisconsin', 'Lighthouse campus'],
+    source: 'project:lighthouse' },
+  { key: 'topic-stargate', label: 'Project: Stargate (OpenAI/Oracle/SoftBank program)',
+    terms: ['Stargate', 'Abilene', 'Lancium Clean Campus'],
+    source: 'project:stargate' },
+  { key: 'topic-trimount', label: 'Project: Trimount (Jupiter Power — Everett, MA)',
+    terms: ['Trimount', 'Jupiter Power Everett'],
+    source: 'project:trimount' },
   { key: 'topic-aidc-geopolitics', label: 'Geopolitical & federal policy affecting AIDC',
     terms: ['executive order', 'permitting reform', 'national security', 'chip export', 'energy policy'],
     source: 'market' },

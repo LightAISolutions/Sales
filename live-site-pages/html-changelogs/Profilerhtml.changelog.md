@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.74w] — 2026-08-30 11:13:05 PM EST — v03.97r
+
+### Changed
+- Study guides now open in the full study-module experience: a section navigator with per-section "Mark as understood" progress that follows your account, tap-to-flip flashcards, hoverable glossary terms, and company names that link straight to their dossiers
+- Technical terms across all study guides can now share one glossary, so a definition reads the same wherever it appears
 
 ## [v01.73w] — 2026-08-30 10:42:56 PM EST — v03.95r
 

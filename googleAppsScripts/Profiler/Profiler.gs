@@ -1,4 +1,4 @@
-var VERSION = "v01.28g";
+var VERSION = "v01.29g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -493,7 +493,34 @@ function guidanceMentions_() {
 // ACL spreadsheet pattern here — no spreadsheet round-trip per tick. Doc and
 // section ids are validated against the registered modules so junk params
 // can never grow the store.
+//
+// Study-guide progress (Phase 5, v01.29g): doc ids 'study-<slug>' are also
+// accepted, so study-guide ticks sync across devices exactly like module
+// ticks. A public Pages study guide's section ids aren't known server-side,
+// so their validation is containment rather than enumeration: the slug must
+// exist in the public registry (cached 6h), section ids must look like the
+// renderer's kebab-case anchors, and each study doc's tick set is capped —
+// junk params still can't grow the store meaningfully. Tiers outside the
+// guidance role gate never reach these ops; their study ticks stay in the
+// page's localStorage fallback.
 var GD_PROGRESS_PROP_PREFIX = 'gd_progress:';
+var GD_STUDY_SEC_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;
+var GD_STUDY_SEC_CAP = 80;
+
+function gdStudySlugs_() {
+  var cache = CacheService.getScriptCache();
+  var hit = cache.get('gd_studyslugs_v1');
+  if (hit) return JSON.parse(hit);
+  var slugs = {};
+  try {
+    var base = EMBED_PAGE_URL.replace(/[^\/]*$/, '');
+    var reg = JSON.parse(UrlFetchApp.fetch(base + 'profiler-data/profiler-companies.json',
+      { muteHttpExceptions: true }).getContentText());
+    (reg.companies || []).forEach(function(c) { if (c.slug) slugs[c.slug] = true; });
+    try { cache.put('gd_studyslugs_v1', JSON.stringify(slugs), 21600); } catch (ce) { /* oversized — serve uncached */ }
+  } catch (fe) { /* registry unreachable — no study docs validate this call */ }
+  return slugs;
+}
 
 function gdProgressAcct_(sess) {
   var em = String((sess && sess.email) || '').toLowerCase().trim();
@@ -541,11 +568,22 @@ function gdProgressWrite_(sess, p) {
     var key = GD_PROGRESS_PROP_PREFIX + acct;
     var cur = {};
     try { cur = JSON.parse(props.getProperty(key) || '{}') || {}; } catch (pe) { cur = {}; }
+    var studySlugs = null;   // registry fetched only when a study doc id appears
     for (var docId in delta) {
-      if (!delta.hasOwnProperty(docId) || !valid[docId]) continue;
+      if (!delta.hasOwnProperty(docId)) continue;
+      var isStudy = !valid[docId] && docId.indexOf('study-') === 0;
+      if (isStudy) {
+        if (studySlugs === null) studySlugs = gdStudySlugs_();
+        if (!studySlugs[docId.slice(6)]) continue;
+      } else if (!valid[docId]) continue;
       var secMap = delta[docId] || {};
       for (var secId in secMap) {
-        if (!secMap.hasOwnProperty(secId) || !valid[docId][secId]) continue;
+        if (!secMap.hasOwnProperty(secId)) continue;
+        if (isStudy) {
+          if (!GD_STUDY_SEC_RE.test(secId)) continue;
+          if (secMap[secId] && cur[docId] && !cur[docId][secId]
+              && Object.keys(cur[docId]).length >= GD_STUDY_SEC_CAP) continue;
+        } else if (!valid[docId][secId]) continue;
         if (secMap[secId]) {
           if (!cur[docId]) cur[docId] = {};
           cur[docId][secId] = true;

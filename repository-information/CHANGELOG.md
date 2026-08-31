@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.97r] — 2026-08-30 11:13:05 PM EST
+
+> **Prompt:** "Picking up from my recent "BESS/AIDC market research system phase 4", build Phase 5 (learning-layer unification) per repository-information/PHASE5-LEARNING-LAYER-PLAN.md — study.json v2 on the guidance engine, the concepts registry, the v1 adapter (+ confirm the one-shot lift of all 62 guides), and the approved Layer 3 Scraper-seed rider in the same train."
+
+Phase 5 — learning-layer unification: study guides now share the guidance engine's renderer and vocabulary (never its content channels or gates), the shared concepts registry is live, all 62 guides are lifted to v2 in one shot, and the approved Layer 3 Scraper-seed rider rode the same train.
+
+### Added
+- **Study Guide schema v2** (`repository-information/PROFILER-SCHEMA.md`) — sections use the guidance section-kind vocabulary (`prose`/`callout`/`table`/`proscons`/`timeline`/`bars`/`ledger` + study-only `flashcards`/`quiz`) with stable kebab-case ids; optional per-guide `glossary[]`; legacy top-level `flashcards[]` valid at v2; v1 stays renderable forever via the in-page adapter
+- **`live-site-pages/profiler-data/profiler-concepts.json`** — the shared public concepts glossary (schema v1: slug/term/def/aliases), seeded with 44 core BESS/AIDC concepts (LFP, PCS, ITC, 45X, FEOC, NDAA §154, N+1, 800 VDC, SST, ERCOT/PJM, tolling, bankability, …). Study `{{term}}` tooltips resolve doc-glossary-first, then this registry; guidance modules keep their internal glossaries (role-gated content stays in `Profiler.gs`)
+- **`scripts/lift-study-guides.py`** — the one-shot mechanical v1→v2 lift (heading/bullets → prose/ps, generated section ids mirroring the in-page adapter, flashcards and `lastUpdated` preserved, per-file losslessness assertions, `--check` mode). Run once: **all 62 guides lifted (384 sections, 802 flashcards), zero already-v2, zero skipped**
+- **`scripts/check-profiler-study.py`** — the study-layer validator (v1/v2 shapes, per-kind section fields, unique ids matching the server progress pattern, slug↔filename↔registry↔profile agreement, concepts-registry shape + case-insensitive term/alias collision detection, `{{term}}` resolution): clean pass on the lifted corpus, wired into PROFILER-SCHEMA.md and the Prep Command as the mandatory post-write check
+- **Named-project seed convention** (PROFILER-SCHEMA.md → Named-projects registry) — registering a project now adds a matching Scraper interest seed in the same commit
+
+### Changed
+- **`.claude/rules/profiler-app.md`** — Prep Command step 4 rewritten for v2 authoring: guidance vocabulary, concepts-registry registration instead of per-guide redefinition, `{{term}}` markup, mandatory checker run
+- **All 62 `<slug>.study.json` files** — lifted v1→v2 (lossless; content and `lastUpdated` unchanged)
+
+#### `Profiler.html` — v01.74w
+##### Changed
+- `ovShowStudy` renders through `gdRenderDoc` with a study shell: "Study Guide" kicker, as-of line replacing the source line when a doc carries no source meta, concepts-registry tooltip fallback (`ovConceptsLoad`, one cached fetch), covered-company chips, and per-account section/quiz progress under doc id `study-<slug>` (server-synced where the guidance ops allow, localStorage otherwise). New `ovStudyV2` adapter keeps schema v1 renderable
+##### Removed
+- The v1 study overlay renderer and its dedicated skin (`#ov-study-overlay`/`#ov-study-panel` halves, `.ov-flash`) — the Coverage overlay keeps the formerly shared skeleton
+
+#### `Profiler.gs` — v01.29g
+##### Changed
+- `gdProgressWrite_` accepts `study-<slug>` doc ids alongside module ids: slug validated against the public registry (new `gdStudySlugs_`, 6h cache), section ids pattern-checked (`GD_STUDY_SEC_RE`), per-doc tick cap (`GD_STUDY_SEC_CAP` = 80) — study ticks sync cross-device without loosening the junk-params containment or the guidance role gate
+
+#### `Scraper.gs` — v01.90g
+##### Added
+- Layer 3 rider: 8 named-project interest topic seeds (`source: 'project:<slug>'`) for colossus, frontier, homer-city, hyperion, jupiter-nm, lighthouse, stargate, trimount — insert-only sheet upserts, distinctive multi-word terms to avoid topic-band padding
 
 ## [v03.96r] — 2026-08-30 10:53:59 PM EST
 

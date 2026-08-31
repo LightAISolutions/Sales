@@ -1,0 +1,318 @@
+{
+ "schemaVersion": 1,
+ "concepts": [
+  {
+   "slug": "45x",
+   "term": "45X",
+   "def": "The US advanced-manufacturing production credit: a per-unit federal tax credit for domestically made battery cells, modules, and components — the incentive pulling battery manufacturing onshore.",
+   "aliases": [
+    "Section 45X",
+    "advanced manufacturing production credit"
+   ]
+  },
+  {
+   "slug": "800vdc",
+   "term": "800 VDC",
+   "def": "The next-generation data-center power architecture: distributing 800-volt direct current to the rack instead of low-voltage AC. Higher voltage means lower current and losses, fewer conversion stages, and far less copper for megawatt-class racks.",
+   "aliases": [
+    "800V DC",
+    "800 V DC"
+   ]
+  },
+  {
+   "slug": "ad-cvd",
+   "term": "AD/CVD",
+   "def": "Anti-dumping and countervailing duties: US trade remedies against imports priced below fair value or subsidized at home. Even a petition creates pricing risk, because duties can apply retroactively to goods already entered.",
+   "aliases": [
+    "anti-dumping",
+    "countervailing duties"
+   ]
+  },
+  {
+   "slug": "augmentation",
+   "term": "augmentation",
+   "def": "Adding new battery capacity to an operating storage plant to offset degradation, keeping the plant at its contracted capacity over its life."
+  },
+  {
+   "slug": "bankability",
+   "term": "bankability",
+   "def": "Whether lenders and investors will finance a project or accept a supplier — a function of certifications, warranties, balance-sheet strength, track record, and policy exposure rather than spec-sheet performance."
+  },
+  {
+   "slug": "behind-the-meter",
+   "term": "behind-the-meter",
+   "def": "Generation or storage connected on the customer's side of the utility meter, serving the site directly — like on-site power at a data-center campus — versus front-of-the-meter assets selling into the grid.",
+   "aliases": [
+    "BTM"
+   ]
+  },
+  {
+   "slug": "bess",
+   "term": "BESS",
+   "def": "Battery energy storage system: a grid-connected battery plant — cells packaged into modules and enclosures plus power conversion, thermal management, and controls. Rated in MW (power) and MWh (energy).",
+   "aliases": [
+    "battery energy storage system"
+   ]
+  },
+  {
+   "slug": "bms",
+   "term": "BMS",
+   "def": "Battery management system: the electronics that watch every cell's voltage, current, and temperature, balance the cells, and disconnect the battery when limits are crossed — the battery's safety and health guardian.",
+   "aliases": [
+    "battery management system"
+   ]
+  },
+  {
+   "slug": "c-rate",
+   "term": "C-rate",
+   "def": "How fast a battery charges or discharges relative to its capacity: 1C empties it in one hour, 0.25C in four. Grid storage typically runs at low C-rates — multi-hour durations rather than sprints."
+  },
+  {
+   "slug": "colocation",
+   "term": "colocation",
+   "def": "Data-center space, power, and cooling leased to tenants who bring their own IT equipment. Colocation providers are the landlords of the AI buildout.",
+   "aliases": [
+    "colo"
+   ]
+  },
+  {
+   "slug": "degradation",
+   "term": "degradation",
+   "def": "The gradual loss of a battery's usable capacity with cycling and age. Storage contracts manage it with capacity guarantees and planned augmentation."
+  },
+  {
+   "slug": "duration",
+   "term": "duration",
+   "def": "How long a storage plant can discharge at full power (energy divided by power, MWh ÷ MW). Duration decides which grid jobs a battery can do — most US grid-scale projects run a few hours."
+  },
+  {
+   "slug": "ems",
+   "term": "EMS",
+   "def": "Energy management system: the supervisory software that decides when a storage plant charges and discharges — following price signals, grid instructions, or a contract — and coordinates the PCS and BMS to do it.",
+   "aliases": [
+    "energy management system"
+   ]
+  },
+  {
+   "slug": "epc",
+   "term": "EPC",
+   "def": "Engineering, procurement, and construction: the contractor model that delivers a plant turnkey under one contract — and the label for the firms that do it.",
+   "aliases": [
+    "engineering, procurement, and construction"
+   ]
+  },
+  {
+   "slug": "ercot",
+   "term": "ERCOT",
+   "def": "The Texas grid operator. An energy-only market with its own interconnection process — faster to connect, more volatile to operate in — which is why so much US storage and data-center buildout lands in Texas."
+  },
+  {
+   "slug": "feoc",
+   "term": "FEOC",
+   "def": "Foreign entity of concern: a US legal designation (tied to China, Russia, Iran, and North Korea) that disqualifies projects and products with too much such involvement from federal tax credits — a central bankability question for China-linked battery supply.",
+   "aliases": [
+    "foreign entity of concern"
+   ]
+  },
+  {
+   "slug": "gan",
+   "term": "GaN",
+   "def": "Gallium nitride: a wide-bandgap semiconductor suited to very fast, compact low-to-mid-voltage converters — one of the two key materials (with SiC) shrinking modern power electronics.",
+   "aliases": [
+    "gallium nitride"
+   ]
+  },
+  {
+   "slug": "grid-forming",
+   "term": "grid-forming inverter",
+   "def": "An inverter that sets its own voltage and frequency like a traditional generator, rather than following the grid's. It lets storage stabilize weak grids and restart dead ones (black start).",
+   "aliases": [
+    "grid-forming"
+   ]
+  },
+  {
+   "slug": "hyperscaler",
+   "term": "hyperscaler",
+   "def": "One of the giant cloud and platform operators that build and lease data-center capacity at gigawatt scale. Their capital spending sets the pace of the AI data-center buildout."
+  },
+  {
+   "slug": "interconnection-queue",
+   "term": "interconnection queue",
+   "def": "The waiting line for grid-connection studies and approval. Multi-year queues are one of the main bottlenecks for new data centers and storage plants.",
+   "aliases": [
+    "interconnection"
+   ]
+  },
+  {
+   "slug": "itc",
+   "term": "ITC",
+   "def": "The US investment tax credit: a percentage of a storage or solar project's cost returned as a federal tax credit. A core driver of BESS project economics, with bonus tiers for domestic content.",
+   "aliases": [
+    "investment tax credit"
+   ]
+  },
+  {
+   "slug": "lfp",
+   "term": "LFP",
+   "def": "Lithium iron phosphate: a lithium-ion battery chemistry using an iron-phosphate cathode. It trades some energy density for lower cost, longer cycle life, and much better thermal stability than nickel-based chemistries — which is why it dominates grid-scale storage.",
+   "aliases": [
+    "lithium iron phosphate",
+    "LiFePO4"
+   ]
+  },
+  {
+   "slug": "medium-voltage",
+   "term": "medium voltage",
+   "def": "Distribution-level voltage, roughly the single-digit to tens of kilovolts — the tier data centers and storage plants connect at before power is stepped down to usable levels.",
+   "aliases": [
+    "MV"
+   ]
+  },
+  {
+   "slug": "microgrid",
+   "term": "microgrid",
+   "def": "A self-contained power system — generation, storage, and controls — that can run connected to the grid or islanded on its own. It is how some AI campuses get power before utility interconnection arrives."
+  },
+  {
+   "slug": "n-plus-1",
+   "term": "N+1",
+   "def": "Redundancy shorthand: N is the equipment needed to carry the load, N+1 adds one spare unit, 2N doubles everything. Data centers price reliability in these terms — more redundancy means fewer outages and more capital.",
+   "aliases": [
+    "N+1 redundancy",
+    "2N"
+   ]
+  },
+  {
+   "slug": "ndaa-154",
+   "term": "NDAA §154",
+   "def": "A US defense-authorization provision restricting Department of Defense battery procurement from named Chinese suppliers — the list that made \"is your cell maker §154-listed?\" a standard sourcing question.",
+   "aliases": [
+    "Section 154",
+    "§154"
+   ]
+  },
+  {
+   "slug": "neocloud",
+   "term": "neocloud",
+   "def": "A newer GPU-cloud provider renting AI compute capacity, typically growing faster than its capital base — a distinct buyer class from the hyperscalers."
+  },
+  {
+   "slug": "nfpa-855",
+   "term": "NFPA 855",
+   "def": "The US fire-protection standard for stationary energy storage installations — spacing, enclosures, suppression, and the fire testing (UL 9540A) it references. Permitting officials work from it."
+  },
+  {
+   "slug": "nmc",
+   "term": "NMC",
+   "def": "Nickel manganese cobalt: a lithium-ion cathode chemistry with higher energy density than LFP but higher cost and more thermal-runaway risk — favored where weight matters, largely displaced by LFP in stationary storage.",
+   "aliases": [
+    "nickel manganese cobalt"
+   ]
+  },
+  {
+   "slug": "offtake",
+   "term": "offtake",
+   "def": "The committed purchase of a project's output — power, capacity, or storage services. Signed offtake is what turns a development pipeline into a financeable project."
+  },
+  {
+   "slug": "pcs",
+   "term": "PCS",
+   "def": "Power conversion system: the bidirectional inverter of a battery plant — converts the batteries' DC to grid AC when discharging and back when charging. Its rating sets the plant's power (MW), while the batteries set its energy (MWh).",
+   "aliases": [
+    "power conversion system"
+   ]
+  },
+  {
+   "slug": "pdu",
+   "term": "PDU",
+   "def": "Power distribution unit: data-center gear that splits and distributes power to the racks — the branch circuits between the UPS and the servers.",
+   "aliases": [
+    "power distribution unit"
+   ]
+  },
+  {
+   "slug": "pjm",
+   "term": "PJM",
+   "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
+  },
+  {
+   "slug": "ppa",
+   "term": "PPA",
+   "def": "Power purchase agreement: a long-term contract to buy a project's power or capacity at agreed terms — the bankable revenue stream that lets developers finance construction.",
+   "aliases": [
+    "power purchase agreement"
+   ]
+  },
+  {
+   "slug": "rectifier",
+   "term": "rectifier",
+   "def": "A power-electronics device that turns AC into DC — the first stage of nearly every power supply, charger, and data-center power shelf."
+  },
+  {
+   "slug": "round-trip-efficiency",
+   "term": "round-trip efficiency",
+   "def": "The share of energy put into a storage system that comes back out after conversion and thermal losses — typically in the high-80s percent range for lithium-ion. The gap is energy bought but never sold.",
+   "aliases": [
+    "RTE"
+   ]
+  },
+  {
+   "slug": "section-301",
+   "term": "Section 301 tariffs",
+   "def": "US tariffs on Chinese imports imposed under Section 301 of the Trade Act — including steep rates on lithium-ion batteries — that reshape the landed cost of China-sourced storage hardware.",
+   "aliases": [
+    "Section 301"
+   ]
+  },
+  {
+   "slug": "sic",
+   "term": "SiC",
+   "def": "Silicon carbide: a wide-bandgap semiconductor that switches faster with lower losses than silicon, at higher voltages and temperatures — the material behind smaller, more efficient inverters and converters.",
+   "aliases": [
+    "silicon carbide"
+   ]
+  },
+  {
+   "slug": "sodium-ion",
+   "term": "sodium-ion",
+   "def": "A battery chemistry replacing lithium with abundant sodium — cheaper materials and better cold-weather performance at lower energy density; an emerging challenger for stationary storage.",
+   "aliases": [
+    "Na-ion"
+   ]
+  },
+  {
+   "slug": "sst",
+   "term": "SST",
+   "def": "Solid-state transformer: a power-electronics replacement for the iron transformer that converts medium-voltage AC directly to regulated DC using high-frequency switching — a candidate to collapse today's multi-stage data-center power chain into one device.",
+   "aliases": [
+    "solid-state transformer"
+   ]
+  },
+  {
+   "slug": "thermal-runaway",
+   "term": "thermal runaway",
+   "def": "A self-accelerating overheating reaction inside a battery cell: heat triggers reactions that release more heat, potentially propagating cell to cell. The failure mode BESS safety standards are designed to contain."
+  },
+  {
+   "slug": "tolling-agreement",
+   "term": "tolling agreement",
+   "def": "A storage contract where the offtaker pays a fixed fee for the right to charge and discharge the battery as they wish — the owner operates the asset, the toller takes the market risk.",
+   "aliases": [
+    "tolling"
+   ]
+  },
+  {
+   "slug": "ul-9540a",
+   "term": "UL 9540A",
+   "def": "The test method that characterizes how battery fires start and propagate at cell, module, unit, and installation level. Its data feeds fire-safety design and permitting for storage projects."
+  },
+  {
+   "slug": "ups",
+   "term": "UPS",
+   "def": "Uninterruptible power supply: a battery-backed power stage that carries the load through grid disturbances until generators start. In data centers it sits between utility power and the IT load.",
+   "aliases": [
+    "uninterruptible power supply"
+   ]
+  }
+ ]
+}
