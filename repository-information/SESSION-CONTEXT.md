@@ -5,6 +5,52 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 > **Note on stale-context auto-reconstruction** — when a session starts and this file's `Repo version:` doesn't match the current repo version, Claude reconstructs the missing entry from CHANGELOG.md and commits it **without pushing**. The commit rides along with the session's first user-task commit on the next push. If a session ends before any user-task push happens, the reconstructed entry stays **local-only** and the next session will just re-reconstruct from CHANGELOG if still stale. This is intentional — pushing a dedicated reconstruction commit on its own would force every subsequent user push in the same session to wait for the auto-merge workflow to finish before it could push too (push-once enforcement). The reconstructed entry is a convenience hint, not load-bearing state, so the small persistence risk is a fair trade.
 
 ## Latest Session
+**Date:** 2026-08-31 05:32:16 AM EST
+**Repo version:** v03.99r
+**Branch:** `claude/dossier-analyst-access-fix-v437ym`
+
+**What we worked on (Phase 6 C0's first slice built early + a model-choice analysis, v03.99r):**
+
+- **v03.99r — the Profiler access retune, built.** The developer reported analysts still reaching Network + Relationships and thought it had already been changed. **Their premise was half right and the correction mattered**: the retune was *approved* in the v03.98r design gate but never coded — `OV_ROLE_CAPS` carried no `network` capability at all, so the Relationships tab and `#network` explorer were ungated for **every** signed-in tier, viewer included. The screenshot was correct behavior, not a regression
+- **Scope call, flagged before starting**: implemented the whole approved table from `PHASE6-CLASSROOM-DESIGN.md`, not just the two surfaces named — analyst also lost Coverage 📰 and Export, viewer lost Study + Compare. Reason given: splitting it would have made `verify-profiler-roles.py` encode a half-applied matrix that gets rewritten next session. Developer did not object and has since verified admin/analyst differentiation live
+- `Profiler.html` **v01.75w** — four new caps (`network`, `coverage`, `study`, `compare`); `ovDeniedView()` added so `#network` and `#compare` deep links deny on their own; three stale "ungated / every signed-in tier" comments corrected
+- `Profiler.gs` **v01.30g** — `COVERAGE_ROLES` + `coverageAllowed_()` (sharing a new `roleAllowed_` helper with guidance) enforced in `handleNewsOp_`
+- `scripts/verify-profiler-roles.py` — five surfaces → ten per tier, plus deep-link denial assertions in **both** directions; full run clean (4 tiers + progress isolation + 88-dossier specs audit)
+- Profiler page changelog hit its 50/50 cap exactly as predicted — 2026-08-13 date group (2 sections) rotated to the archive with SHA enrichment
+- **Then a research response (no code): Fable 5 vs Opus 5 for building Classroom**, asked because the developer is at 95% of their weekly Fable limit
+
+**Where we left off:**
+
+- Everything pushed and auto-merged; working tree clean. Developer confirmed the access differentiation is correct on the live site
+- **Classroom v1 (C0–C2) is NOT started.** The developer is pausing the project here and will restart later — they took the model advice as something to "keep in mind for when I restart this project"
+- Phase 6 C0's *first slice* is done; the rest of C0 (Classroom scaffold via `setup-gas-project.sh`, masthead cross-links) plus C1 and C2 remain
+
+**Key decisions made:**
+
+- **`network` is one capability gating two doors** — the per-dossier Relationships tab and the standalone explorer — so they can never drift apart. Documented in `.claude/rules/profiler-app.md`
+- **Hidden entry points are not the gate**: every gated hash route re-checks its own capability. A bookmarked `#network` from an analyst gets a denial view, not a blank screen
+- **Only Coverage got a real server-side boundary** — the corpus reaches the browser solely through the GAS proxy. The relationship graph, study guides and Compare read public Pages JSON, so their gates are honest app-experience gates (same standing as Versions). Making any of them truly private is a data-relocation decision (the M3 pattern), not a gate tweak — this is written into both the `.gs` matrix comment and the rules file
+- **Model choice for Classroom — build C0–C2 on Opus 5 at `xhigh`; do NOT spend the last 5% of the Fable allowance on C0.** Reasoning worth keeping: (a) the design gate already closed, so C0–C2 is spec-following, and the reasoning premium pays most on open-ended design; (b) this repo's highly prescriptive `CLAUDE.md` is the *documented* anti-pattern for Fable — the migration guide says prompts written for prior models "are often too prescriptive and reduce output quality," so getting Fable's benefit would mean re-tuning ~99 versions of gate system for a model affordable 5% of the time; (c) fast mode is Opus-only, Fable has none; (d) in this repo the verifiers catch errors, not model brilliance. Fable pricing is 2× Opus ($10/$50 vs $5/$25 per MTok), same 1M context and 128K output
+- **Where Fable would actually earn it: C2** — and specifically the model that **runs as** the weekly authoring Routine (recurring, unattended, open-ended), not the one that *builds* the pipeline. That is a per-Routine model setting, and it is the choice that compounds
+- Weekly Fable limit **resets Saturday 2026-09-05 07:00 AM EST**, so a full allowance will very likely be available by the time C2 is reached — the decision does not need making at C0
+
+**Active context:**
+
+- Branch `claude/dossier-analyst-access-fix-v437ym` · repo **v03.99r** · Profiler page **v01.75w** / GAS **v01.30g** · session ran as `claude-opus-5` at `effort_level: xhigh`
+- Capacity: **repo CHANGELOG 99/100 — the next push rotates** (2026-08-27 date group, 20 sections, is the oldest); Profiler page changelog 49/50; Profiler GAS 30/50; Scraper GAS 37/50
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
+- Watch items: today's **Monday 2026-08-31 06:00 ET Scraper run** (first unattended corpus exercise — fires ~30 min after this save; the 8 project seeds should land in the Interests tab flagged "New topic") and the drift Routine's first fire **2026-09-01 ~9am PST** (expected: silent stand-down)
+
+**Recommendation for next session:**
+
+- Build **Classroom v1 C0** per `repository-information/PHASE6-CLASSROOM-DESIGN.md` — the scaffold half that remains (`setup-gas-project.sh` → Classroom app on the auth template, Classroom access matrix, masthead cross-links between the apps); the Profiler retune half is already shipped. Stay on Opus 5 at `xhigh`, and expect that push to rotate the repo CHANGELOG
+
+**To continue:** type `build classroom v1`
+
+## Previous Sessions
+
+### Session — 2026-08-31 (Phase 5 learning layer built + Phase 6 Classroom design gate, v03.97r–v03.98r)
+
 **Date:** 2026-08-31 04:11:48 AM EST
 **Repo version:** v03.98r
 **Branch:** `claude/bess-aidc-phase-5-learning-gdc1f0`
@@ -38,49 +84,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - **Build Classroom v1 (C0–C2)** per `repository-information/PHASE6-CLASSROOM-DESIGN.md` — C0 scaffold + Profiler access retune (that push must also rotate the Profiler page changelog, at cap), then C1 learning core, then C2 curriculum pipeline
 
 **To continue:** type `build classroom v1`
-
-## Previous Sessions
-
-### Session — 2026-08-30 (Phase 4 built + fleet backfill + pin layer + report automation + Phase 5 handoff, v03.91r–v03.96r)
-
-**Date:** 2026-08-30 10:53:59 PM EST
-**Repo version:** v03.96r
-**Branch:** `claude/bess-aidc-phase-4-l74und`
-
-**What we worked on (Phase 4 built + accelerated fleet backfill + pin layer + report automation, v03.91r–v03.96r):**
-
-- **v03.91r — Phase 4 / schema v7 built:** `policyExposure[]` (regime/status/effectiveDate/exposure/mitigation/source; new Policy tab in all 5 style skins + export chapter), physical KPI keys (`gwh-shipped`, `backlog-gwh`, `mw-energized`, `mw-contracted`) + `qty` overlay, relationship `via`/`project` + `profiler-projects.json` named-projects registry (colossus/homer-city/stargate), `OV_PEER_FAMILIES` expanded to 4 families (hardware · colocation=developer+neocloud · construction=epc+gc · developer-ipp=ipp). Profiler v01.71w; graph builder + reports checker extended; CHANGELOG archive rotation (2026-08-23 group)
-- **v03.92r — first real v7 data:** Tesla (2 policy regimes + `via` on CATL/LG) and xAI (tesla rel → `via: Megapack` + first `⚑ colossus` pin); both archived; developer verified live
-- **v03.93r — fleet-wide backfill, 9 parallel agents:** 83 dossiers → v7 (116 policy entries, 180 `via`, pins 28, 10 qty overlays); 3 legitimate skips (core-scientific, hitt, holder-construction — nothing supportable); 83 outgoing versions archived from git; rotation again (2026-08-24 group, 8 sections)
-- **v03.94r — pin-coverage Layers 1+2:** projects registry v2 (`parent` rollup), 5 new registrations (hyperion, frontier/lighthouse/jupiter-nm as stargate children, trimount), 14 pins added + 3 stargate pins refined to specific campuses (pin-precision rule now in schema), denton deliberately NOT registered (no single-campus engagement — the registry's own rule held), `scripts/scan-project-candidates.py` standing scanner (20-name watchlist, flags ≥3-dossier unregistered names), v01.72w tooltip "part of Stargate"
-- **v03.95r — report automation (developer approved drift-gated monthly over their weekly-wall-clock instinct):** inaugural opportunity report `named-project-bess-attach--opportunity--2026-08-30` (15 pins, 18 verbatim citations, checker 0 errors first run), report-library search + type/status filters (v01.73w), Routine `Profiler opportunity report — monthly drift check` (`trig_01TvnXREVHsQ4QCrtveYjvZM`, cron `0 17 1 * *` ≈ 1st 9am PST, fresh session; gate: <10 scoped dossiers revised past pins AND no fired indicator → silent stand-down, else supersede with "What changed since the last edition"); documented as Report Command step 8 in `.claude/rules/profiler-app.md`
-- **v03.96r — Phase 5 handoff:** wrote `repository-information/PHASE5-LEARNING-LAYER-PLAN.md` (detailed spec re-derived from the codebase: study.json v2 on the guidance engine via `gdRenderDoc`'s fetch-decoupled renderer, concepts registry, v1 adapter + optional one-shot lift, Layer 3 Scraper-seed rider) + this context save
-
-**Where we left off:**
-
-- Everything pushed and auto-merged; working tree clean. **Phases 0–4 of the 7-phase plan are DONE**; the pin/report layer extensions are done
-- **Phase 5 (learning-layer unification) is greenlit for a FRESH session** — the full spec is in `repository-information/PHASE5-LEARNING-LAYER-PLAN.md`; Layer 3 (Scraper interest seeds for registered projects) rides its commit train (approved)
-- Phase 6 = Classroom design gate — a design conversation AFTER P5, not a build
-
-**Key decisions made:**
-
-- Drift-gated monthly report regeneration approved over weekly wall-clock (reports read only dossiers; weekly signal lives in Scraper; library is already the archive)
-- Pin-precision rule: single-campus engagements pin the sub-campus (parent rolls up); multi-site engagements keep the program pin
-- Registry register-only-when-referenced rule enforced (denton deferred to watchlist despite 5-dossier corroboration)
-- Regime labels stay free-string; minor drift noted ("DoD 1260H list" vs "listing") — normalize opportunistically
-- Pre-existing gap flagged NOT repaired (developer's call pending): `tesla.profile.v4.json` never archived by the v03.67r curation pass; recoverable from git before commit `a5f7158`
-
-**Active context:**
-
-- Branch `claude/bess-aidc-phase-4-l74und` · repo v03.96r · Profiler page v01.73w · Profiler GAS v01.28g · Scraper GAS v01.89g
-- Capacity: repo CHANGELOG 96/100; **Profiler page changelog 49/50 — its rotation likely fires within the next 1–2 page bumps**; toggles unchanged (START/TIMING/END On, CHAT_BOOKENDS Off)
-- Watch items for the next session's first check: Monday 2026-08-31 06:00 ET scheduled Scraper run (first unattended reliability+corpus exercise) and the drift Routine's first fire 2026-09-01 ~9am PST (expected: silent stand-down at near-zero drift)
-- Unregistered-project watchlist headliners from `scan-project-candidates.py`: new-albany 8 dossiers (multi-operator cluster — needs human split), denton 5, polaris-forge 4
-
-**Recommendation for next session:**
-
-- **Build Phase 5 (learning-layer unification)** per `repository-information/PHASE5-LEARNING-LAYER-PLAN.md` — study.json v2 on the guidance engine, the concepts registry, the v1 adapter (+ confirm the one-shot lift of all 62 guides with the developer), and the approved Layer 3 Scraper-seed rider in the same train
-
-**To continue:** type `build phase 5`
 
 Developed by: LightAISolutions
