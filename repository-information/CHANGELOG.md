@@ -3,11 +3,21 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.98r] — 2026-08-31 03:51:22 AM EST
+
+> **Prompt:** "start the phase 6 design conversation"
+
+The Phase 6 Classroom design gate, held and closed: four decision points put to the developer with recommendations, their answers reasoned through (including a reversed form-factor recommendation under new ecosystem context), and the approved design written as the executable spec for the build sessions.
+
+### Added
+- **`repository-information/PHASE6-CLASSROOM-DESIGN.md`** — the approved Phase 6 spec: Classroom as its **own app** (`Classroom.html` + `Classroom.gs`, federated via Pages data + token-gated routes — recommendation reversed from "Profiler mode" once the developer stated the growing-ecosystem/quality-over-economy context); audience admin/contributor/analyst (viewer excluded); "Everything" content under the **provenance-gating rule** (a lesson inherits the strictest gate of its inputs; field notes never become content); the approved **Profiler analyst-tier retune** (loses Relationships/Network, Coverage with a real server-side check, and Export; viewer strict dossier-only) executing as C0's first slice; phase plan C0–C6 with **v1 = C0–C2** (scaffold + learning core + scheduled curriculum pipeline with weekly briefing lessons and freshness deltas); **C3 — Guidance homecoming** (developer-proposed migration of Industry Guidance from Profiler.gs to Classroom, with the full migration checklist: ops, Admin lens re-hosting, mentions route, progress-tick export/import, Routine + rules re-pointing); C4 drills, C5 sales simulations, C6 team layer gated on a team existing; in-app runtime Q&A stays deliberately deferred
+- **README tree** — entry for the new spec doc
 
 ## [v03.97r] — 2026-08-30 11:13:05 PM EST
 
