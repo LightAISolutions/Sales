@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.70w] — 2026-08-30 09:09:00 PM EST — v03.90r
+
+### Changed
+- The company search box now matches company names only — card descriptions no longer pull unrelated companies into the results
 
 ## [v01.69w] — 2026-08-30 08:43:06 PM EST — v03.89r
 

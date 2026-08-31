@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.90r] — 2026-08-30 09:09:00 PM EST
+
+> **Prompt:** "Coverage seems to work (see first three screenshots from Tesla, CATL, and NVIDIA). Then see the last screenshot: The current searchbar seems to be matching my inputs to both dossier names + summary. Change it so the searchbar only matches my inputs to dossier names."
+
+Bridge verified live by the developer (Tesla/CATL/NVIDIA Coverage panels all rendering, including event capture and desk reads on pre-launch rows), then the requested roster-search narrowing.
+
+### Changed
+
+#### `live-site-pages/Profiler.html` — v01.70w
+
+##### Changed
+- Roster search now matches company **names only** (`c.name` + `c.slug`) — the tagline was dropped from the haystack, so a query like "nvidia" no longer surfaces every card whose blurb mentions NVIDIA. The slug rides along as the hyphenated name form and cannot reintroduce tagline noise
 
 ## [v03.89r] — 2026-08-30 08:43:06 PM EST
 
