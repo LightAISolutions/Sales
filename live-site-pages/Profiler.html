@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.74w">
+  <meta name="build-version" content="v01.75w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -2036,15 +2036,18 @@ function ovReloadFresh() {
       // Compare toggle (v01.46w) — flips the grid from navigate-on-click to
       // select-on-click. Leaving compare mode clears the selection, so the
       // roster never carries a half-built comparison back into browsing.
-      var cmpChip = ovEl('button', 'ov-chip ov-chip-cmp' + (ovCompareMode ? ' on' : ''), '⇄ Compare' + (ovCompareMode ? ' — On' : ''));
-      cmpChip.type = 'button';
-      cmpChip.title = 'Select up to ' + OV_COMPARE_MAX + ' companies to compare side by side';
-      cmpChip.addEventListener('click', function() {
-        ovCompareMode = !ovCompareMode;
-        if (!ovCompareMode) { ovComparePicks = []; ovCompareFinOnly = false; }
-        ovRenderRoster();
-      });
-      bar.appendChild(cmpChip);
+      if (ovCan('compare')) {
+        var cmpChip = ovEl('button', 'ov-chip ov-chip-cmp' + (ovCompareMode ? ' on' : ''), '⇄ Compare' + (ovCompareMode ? ' — On' : ''));
+        cmpChip.id = 'ov-cmp-chip';
+        cmpChip.type = 'button';
+        cmpChip.title = 'Select up to ' + OV_COMPARE_MAX + ' companies to compare side by side';
+        cmpChip.addEventListener('click', function() {
+          ovCompareMode = !ovCompareMode;
+          if (!ovCompareMode) { ovComparePicks = []; ovCompareFinOnly = false; }
+          ovRenderRoster();
+        });
+        bar.appendChild(cmpChip);
+      }
       main.appendChild(bar);
 
       // Peer group = the peer FAMILIES of the first pick (see OV_PEER_FAMILIES).
@@ -2333,7 +2336,12 @@ function ovReloadFresh() {
       return out;
     }
     function ovRenderCompare(slugs) {
-      var main = ovMain(); ovClear(main);
+      var main = ovMain();
+      if (!ovCan('compare')) {
+        ovDeniedView(main, 'The compare view is available to analysts, contributors and administrators.');
+        return;
+      }
+      ovClear(main);
       document.title = 'Compare — Profiler';
       ovNotesCogVisible(ovCan('fieldNote') || ovCan('commands'));
       var back = ovEl('button', 'ov-back', '← All companies');
@@ -3344,8 +3352,24 @@ function ovReloadFresh() {
       if (a || b) return 'other';
       return 'det';
     }
+    // Shared "your tier cannot see this" view for the hash routes. The
+    // masthead/chip entries are hidden per tier, but a deep link or a
+    // bookmarked hash reaches the renderer directly — so every gated route
+    // re-checks the capability here rather than trusting the missing button.
+    function ovDeniedView(main, what) {
+      ovClear(main);
+      var back = ovEl('button', 'ov-back', '← All companies');
+      back.type = 'button';
+      back.addEventListener('click', function() { window.location.hash = ''; });
+      main.appendChild(back);
+      main.appendChild(ovEl('p', 'ov-empty', what));
+    }
     function ovRenderNetwork() {
       var main = ovMain();
+      if (!ovCan('network')) {
+        ovDeniedView(main, 'The ecosystem network is available to contributors and administrators.');
+        return;
+      }
       ovClear(main);
       var back = ovEl('button', 'ov-back', '← All companies');
       back.addEventListener('click', function() { window.location.hash = ''; });
@@ -3535,9 +3559,13 @@ function ovReloadFresh() {
         box.appendChild(row);
       });
     }
-    // Masthead entry — ungated: relationships are public dossier data, so the
-    // explorer is available to every signed-in tier (unlike Reports/Guidance).
+    // Masthead entry — contributor+ ('network' cap, retuned 2026-08-31). The
+    // graph JSON is public Pages data, so this is an app-experience gate of
+    // the same honest standing as Versions, not a data boundary; making the
+    // ecosystem view genuinely private would be a data-relocation decision
+    // (the M3 pattern), not a gate tweak.
     function ovNetworkBtnShow() {
+      if (!ovCan('network')) return;
       if (document.getElementById('ov-network-btn')) return;
       var head = document.getElementById('ov-header');
       if (!head) return;
@@ -3610,14 +3638,19 @@ function ovReloadFresh() {
         // Coverage button — the trade-press news Scraper has stored about
         // this company (Phase 1 of the Scraper↔Profiler bridge). The page
         // only ever talks to its own backend; the backend proxies the
-        // token-gated corpus route server-to-server. Available to every
-        // signed-in tier — the payload is public-sourced news metadata,
-        // the same class of content as the dossier itself.
-        var cvBtn = ovEl('button', 'ov-btn ghost', 'Coverage 📰');
-        cvBtn.id = 'ov-cov-btn'; cvBtn.type = 'button';
-        cvBtn.title = 'Trade-press coverage of this company, including everything since the dossier was written';
-        cvBtn.addEventListener('click', function() { ovShowCoverage(p); });
-        head.appendChild(cvBtn);
+        // token-gated corpus route server-to-server. Contributor+ from
+        // 2026-08-31 ('coverage' cap) — and unlike the graph, this one has a
+        // REAL boundary: handleNewsOp_ in Profiler.gs re-checks the tier
+        // server-side, so hiding the button is not the only thing stopping an
+        // analyst from reading the corpus.
+        if (ovCan('coverage')) {
+          var cvBtn = ovEl('button', 'ov-btn ghost', 'Coverage 📰');
+          cvBtn.id = 'ov-cov-btn'; cvBtn.type = 'button';
+          cvBtn.title = 'Trade-press coverage of this company, including everything since the dossier was written';
+          cvBtn.addEventListener('click', function() { ovShowCoverage(p); });
+          head.appendChild(cvBtn);
+        }
+        if (ovCan('study'))
         ovFetchJson(p.slug + '.study.json')
           .then(function(sg) {
             if (document.getElementById('ov-study-btn')) return;
@@ -3696,8 +3729,13 @@ function ovReloadFresh() {
       // lived inside the Summary tab v01.45w–v01.53w). The pane only exists
       // when the section has content, so the tab hides itself on dossiers
       // with no detected or curated links.
-      var relSec = ovRelationshipsSection(p);
-      if (relSec) paneFor('rels').appendChild(relSec);
+      // Gated with the #network explorer (one 'network' cap, two doors —
+      // see OV_ROLE_CAPS). paneFor() is what creates the tab, so an ungated
+      // tier gets no Relationships tab at all rather than an empty one.
+      if (ovCan('network')) {
+        var relSec = ovRelationshipsSection(p);
+        if (relSec) paneFor('rels').appendChild(relSec);
+      }
 
       // Products & services
       if (p.productsAndServices && p.productsAndServices.length) {
@@ -3997,10 +4035,18 @@ function ovReloadFresh() {
     //               UI gate is the only boundary (same caveat as dossiers)
     // Every backend op behind these surfaces is independently gated server-side
     // in Profiler.gs; this map governs what the app shows, not what it may do.
+    // Retuned 2026-08-31 (Phase 6 C0 slice, PHASE6-CLASSROOM-DESIGN.md): the
+    // ecosystem surfaces — Relationships tab, #network explorer, Coverage 📰
+    // and dossier Export — are contributor+ from here on. Analyst keeps the
+    // dossier reading surface plus study guides and Compare; viewer is strict
+    // dossier-only. 'network' covers BOTH the per-dossier Relationships tab
+    // and the standalone explorer — they are one surface with two doors, so
+    // one capability gates both and they can never drift apart.
     var OV_ROLE_CAPS = {
-      admin:       ['fieldNote', 'versions', 'guidance', 'export', 'style', 'commands', 'reports'],
-      contributor: ['guidance', 'export'],
-      analyst:     ['export'],
+      admin:       ['fieldNote', 'versions', 'guidance', 'export', 'style', 'commands', 'reports',
+                    'network', 'coverage', 'study', 'compare'],
+      contributor: ['guidance', 'export', 'network', 'coverage', 'study', 'compare'],
+      analyst:     ['study', 'compare'],
       viewer:      []
     };
     // Preview-as-role (?as=viewer) narrows the current session to another tier's
@@ -5627,6 +5673,7 @@ function ovReloadFresh() {
             err === 'not_configured' ? 'The corpus link is not configured yet — the panel activates once the shared token is set in both backends.'
             : err === 'SESSION_EXPIRED' ? 'Session expired — sign in again to load coverage.'
             : err === 'no_backend' ? 'No backend deployed — coverage needs the live app.'
+            : err === 'ROLE_DENIED' ? 'Coverage is available to contributors and administrators.'
             : 'Coverage is unavailable right now (' + err + ').';
           return;
         }

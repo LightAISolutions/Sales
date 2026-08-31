@@ -15,13 +15,18 @@ the four gated surfaces actually render. The tier is never written to
 localStorage directly — it arrives from the stubbed whoami and passes through
 ovNormalizeRole, so the test exercises the real sign-in path.
 
-The matrix under test (developer directives, 2026-08-22; Reports added 2026-08-29):
+The matrix under test (developer directives, 2026-08-22; Reports added
+2026-08-29; ecosystem retune 2026-08-31 per PHASE6-CLASSROOM-DESIGN.md):
 
-    tier          Field Note   Versions   Industry Guidance   Export dossier   Reports
-    admin              yes        yes            yes               yes           yes
-    contributor         no         no            yes               yes            no
-    analyst             no         no             no               yes            no
-    viewer              no         no             no                no            no
+    tier         Note  Vers  Guid  Export  Reports  Network  Coverage  Study  Compare
+    admin         yes   yes   yes    yes     yes      yes      yes      yes     yes
+    contributor    no    no   yes    yes      no      yes      yes      yes     yes
+    analyst        no    no    no     no      no       no       no      yes     yes
+    viewer         no    no    no     no      no       no       no       no      no
+
+'network' gates BOTH the per-dossier Relationships tab and the #network
+explorer — one capability, two doors, so they cannot drift apart. The probe
+therefore asserts the tab and the masthead button together.
 
 Chromium is PRE-INSTALLED in the Claude Code web environment at /opt/pw-browsers;
 the bundled Playwright build number does not match, so launch with an explicit
@@ -45,12 +50,19 @@ SHOTS.mkdir(exist_ok=True)
 
 # Expected matrix — the developer's directive, encoded as the test oracle.
 EXPECT = {
-    'admin':       {'fieldNote': True,  'versions': True,  'guidance': True,  'export': True,  'reports': True},
-    'contributor': {'fieldNote': False, 'versions': False, 'guidance': True,  'export': True,  'reports': False},
-    'analyst':     {'fieldNote': False, 'versions': False, 'guidance': False, 'export': True,  'reports': False},
-    'viewer':      {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False, 'reports': False},
+    'admin':       {'fieldNote': True,  'versions': True,  'guidance': True,  'export': True,
+                    'reports': True,  'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True},
+    'contributor': {'fieldNote': False, 'versions': False, 'guidance': True,  'export': True,
+                    'reports': False, 'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True},
+    'analyst':     {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False,
+                    'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': True,  'compare': True},
+    'viewer':      {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False,
+                    'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': False, 'compare': False},
 }
+CAPS = ('fieldNote', 'versions', 'guidance', 'export', 'reports',
+        'network', 'relTab', 'coverage', 'study', 'compare')
 GUIDANCE_ALLOWED = {'admin', 'contributor'}   # mirrors guidanceAllowed_ in Profiler.gs
+COVERAGE_ALLOWED = {'admin', 'contributor'}   # mirrors coverageAllowed_ in Profiler.gs
 
 
 def find_chrome():
@@ -91,13 +103,28 @@ def gas_stub(state):
                                                    'short': 'stub', 'sections': 1}]}
             else:
                 body = {'success': False, 'error': 'ROLE_DENIED', 'role': role}
+        elif 'action=news' in url or 'nop=' in url:
+            # Mirrors handleNewsOp_'s server-side tier check (2026-08-31): the
+            # corpus reaches the browser only through this proxy, so a denied
+            # tier is turned away here, not merely by a hidden button.
+            if role in COVERAGE_ALLOWED:
+                body = {'success': True, 'items': []}
+            else:
+                body = {'success': False, 'error': 'ROLE_DENIED', 'role': role}
         route.fulfill(status=200, content_type='application/json',
                       headers={'Access-Control-Allow-Origin': '*'}, body=json.dumps(body))
     return handle
 
 
 def probe(page):
-    """Read the four gated surfaces out of the live DOM."""
+    """Read the dossier-view gated surfaces out of the live DOM.
+
+    The probe company (zhonhen) is chosen because it exercises every surface at
+    once: it has a study guide and 9 graph edges, so both the Study button and
+    the Relationships tab render whenever the tier is allowed to see them. A
+    company with no links would make relTab False for every tier and quietly
+    turn that column into a no-op assertion.
+    """
     return page.evaluate("""() => {
       const vis = id => {
         const el = document.getElementById(id);
@@ -113,6 +140,10 @@ def probe(page):
         guidance:  vis('ov-guide-btn'),
         export:    vis('ov-export-btn'),
         reports:   vis('ov-reports-btn'),
+        network:   vis('ov-network-btn'),
+        relTab:    vis('ov-tab-rels'),
+        coverage:  vis('ov-cov-btn'),
+        study:     vis('ov-study-btn'),
         wall:      vis('ov-authwall'),
         role:      localStorage.getItem('ov_note_role')
       };
@@ -270,9 +301,14 @@ def run():
             got['cog'] = page.evaluate(
                 "() => { const e = document.getElementById('ov-notes-cog');"
                 " return !!e && getComputedStyle(e).display !== 'none'; }")
+            # Compare is a ROSTER chip, so it can only be read on this second
+            # (roster) load — the dossier probe above would always see False.
+            got['compare'] = page.evaluate(
+                "() => { const e = document.getElementById('ov-cmp-chip');"
+                " return !!e && getComputedStyle(e).display !== 'none'; }")
 
             exp = EXPECT[role]
-            for cap in ('fieldNote', 'versions', 'guidance', 'export', 'reports'):
+            for cap in CAPS:
                 if got[cap] != exp[cap]:
                     failures.append('%s: %s expected %s, got %s' % (role, cap, exp[cap], got[cap]))
             if got['cog'] != exp['fieldNote']:
@@ -281,6 +317,21 @@ def run():
                 failures.append('%s: stored tier is %r' % (role, got['role']))
             if got['wall']:
                 failures.append('%s: sign-in wall still covering the app' % role)
+
+            # Entry points are hidden per tier, but a bookmarked hash reaches
+            # the renderer directly — assert the routes deny on their own.
+            for hash_, cap, label in (('#network', 'network', 'ecosystem network'),
+                                      ('#compare/zhonhen,abb', 'compare', 'compare view')):
+                page.evaluate("h => { location.hash = h; }", hash_)
+                page.wait_for_timeout(500)
+                denied = page.evaluate(
+                    "() => { const e = document.querySelector('#ov-main .ov-empty');"
+                    " return !!e && /available to/.test(e.textContent || ''); }")
+                if exp[cap] and denied:
+                    failures.append('%s: %s deep link denied but tier is allowed' % (role, label))
+                if not exp[cap] and not denied:
+                    failures.append('%s: %s deep link rendered for a denied tier' % (role, label))
+            page.evaluate("() => { location.hash = ''; }")
 
             rows.append((role, got))
             ctx.close()
@@ -291,14 +342,18 @@ def run():
     httpd.shutdown()
 
     mark = lambda b: 'shown ' if b else 'hidden'
+    hdr = ('ROLE', 'NoteBtn', 'Cog', 'Versions', 'Guidance', 'Export', 'Reports',
+           'Network', 'RelTab', 'Coverage', 'Study', 'Compare')
+    fmt = '%-12s' + ' %-8s' * (len(hdr) - 1)
     print('\nRole + Access matrix')
-    print('\n%-12s %-8s %-8s %-8s %-8s %-8s %-8s %-8s' %
-          ('ROLE', 'NoteBtn', 'NoteBox', 'Cog', 'Versions', 'Guidance', 'Export', 'Reports'))
-    print('-' * 75)
+    print('\n' + fmt % hdr)
+    print('-' * (12 + 9 * (len(hdr) - 1)))
     for role, g in rows:
-        print('%-12s %-8s %-8s %-8s %-8s %-8s %-8s %-8s' % (
-            role, mark(g['noteBtn']), mark(g['noteBox']), mark(g['cog']),
-            mark(g['versions']), mark(g['guidance']), mark(g['export']), mark(g['reports'])))
+        print(fmt % (
+            role, mark(g['noteBtn']), mark(g['cog']), mark(g['versions']),
+            mark(g['guidance']), mark(g['export']), mark(g['reports']),
+            mark(g['network']), mark(g['relTab']), mark(g['coverage']),
+            mark(g['study']), mark(g['compare'])))
     print()
     if failures:
         print('FAILURES (%d):' % len(failures))

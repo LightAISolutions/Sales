@@ -2,6 +2,22 @@
 
 Archived changelog sections rotated from [Profilerhtml.changelog.md](Profilerhtml.changelog.md).
 
+## [v01.26w] — 2026-08-13 04:34:03 AM EST — v02.37r — [09f990c](https://github.com/LightAISolutions/Sales/commit/09f990cfd3ee8cc87516087965ebe0c58ed07bf1)
+
+### Added
+- Filing a transcript with a note now writes the meeting up for you. Instead of a placeholder that waited for a later pass, the note comes back as a short summary, what was discussed, what the customer signalled, action items and open questions — readable and copyable within about a minute of saving
+- A **✨ Summarize** button on any note that has a transcript attached. Use it to write up notes filed before this existed, or to retry if the first attempt did not finish
+- The note log shows the date a note was written up from its transcript
+
+### Changed
+- Notes that run to several lines now keep their line breaks in the log and in the manage panel, instead of collapsing into a single block of text
+- If the write-up step does not complete, the note and its transcript are still saved — the status message says so and points at the retry button
+
+## [v01.25w] — 2026-08-13 03:01:32 AM EST — v02.35r — [c8928a4](https://github.com/LightAISolutions/Sales/commit/c8928a46200a887002eb9c079cb9062c9a48db7b)
+
+### Added
+- A **File transcript** button in the note box. Once you have transcribed a recording on your own computer, pick the transcript here and it is saved into the "transcribed" folder, the recording it belongs to moves out of the waiting folder to join it, and the transcript is attached to the note you are writing — all from the one selection
+
 ## [v01.24w] — 2026-08-10 04:42:24 AM EST — v02.30r — [ecaf52f](https://github.com/LightAISolutions/Sales/commit/ecaf52f)
 
 ### Fixed

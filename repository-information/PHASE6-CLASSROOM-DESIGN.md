@@ -15,7 +15,9 @@
 
 ## Access model
 
-### Profiler retune (C0's first slice — approved 2026-08-31)
+### Profiler retune (C0's first slice — approved 2026-08-31; **BUILT 2026-08-31**, ahead of the Classroom scaffold)
+
+> **Status: done.** Shipped as Profiler v01.75w / v01.30g — `OV_ROLE_CAPS` gained `network` · `coverage` · `study` · `compare`, `handleNewsOp_` got its server-side check, the `#network` and `#compare` hash routes deny on their own, and `scripts/verify-profiler-roles.py` now asserts all ten surfaces per tier plus both deep links. The rest of C0 (Classroom scaffold, cross-links) is still to build.
 
 | Profiler surface | Admin | Contributor | Analyst | Viewer |
 |---|---|---|---|---|

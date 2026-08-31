@@ -3,11 +3,47 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.99r] — 2026-08-31 05:18:48 AM EST
+
+> **Prompt:** "Picking up from my recent \"BESS/AIDC Phase 5 learning-layer unification\" session, before building Classroom V1, see the attached screenshot and fix the analyst-level users being able to access Network and Relationships in dossiers. I thought we changed that to Admins + Contributors only."
+
+### Changed
+
+Phase 6 **C0's first slice built ahead of the Classroom scaffold** — the Profiler access retune approved in the v03.98r design gate (`PHASE6-CLASSROOM-DESIGN.md`) but not yet coded. The developer's screenshot was correct behavior, not a regression: `OV_ROLE_CAPS` carried no `network` capability at all, so the Relationships tab and `#network` explorer were ungated for every signed-in tier.
+
+#### `Profiler.html` — v01.75w
+
+- `OV_ROLE_CAPS` gained four capabilities — `network`, `coverage`, `study`, `compare`. New matrix: admin all; contributor loses `fieldNote`/`versions`/`reports`/`style`; analyst additionally loses `guidance`/`network`/`coverage`/`export` (keeps `study` + `compare`); viewer empty
+- **One capability, two doors** — `network` gates both `ovNetworkBtnShow()` and the per-dossier Relationships tab (`paneFor('rels')` is now inside the `ovCan('network')` branch, so an ungated tier gets no tab rather than an empty one). They cannot drift apart
+- `ovDeniedView(main, what)` added: `ovRenderNetwork()` and `ovRenderCompare()` re-check their capability, so a bookmarked `#network` / `#compare/…` is turned away instead of trusting the hidden entry point
+- Coverage 📰 button wrapped in `ovCan('coverage')`; Study guide fetch wrapped in `ovCan('study')`; roster compare chip wrapped in `ovCan('compare')` and given `id="ov-cmp-chip"` so the verifier can probe it
+- Coverage overlay now renders `ROLE_DENIED` as "available to contributors and administrators" rather than falling through to the generic unavailable text
+- Three stale "ungated / every signed-in tier" comments corrected — they were the standing record of the old policy
+
+#### `Profiler.gs` — v01.30g
+
+- `COVERAGE_ROLES` + `coverageAllowed_()` added; `guidanceAllowed_`/`coverageAllowed_` now share a `roleAllowed_(sess, roles)` helper
+- `handleNewsOp_` captures the validated session and returns `ROLE_DENIED` for tiers outside `COVERAGE_ROLES`. **This is the one real boundary in the retune** — the corpus reaches the browser only through this proxy. The graph, study guides and compare read public Pages JSON, so their gates stay app-experience gates (the M3 data-relocation note in the Role + Access matrix comment)
+
+#### `scripts/verify-profiler-roles.py`
+
+- `EXPECT` extended from five surfaces to ten (adds `network`, `relTab`, `coverage`, `study`, `compare`); `CAPS` tuple drives the assertion loop so a future surface is one edit
+- Probe reads `ov-network-btn`, `ov-tab-rels`, `ov-cov-btn`, `ov-study-btn` on the dossier and `ov-cmp-chip` on the roster load (the compare chip is roster-only — probing it on the dossier would have been a silent no-op assertion)
+- **Deep-link assertions added** — walks `#network` and `#compare/zhonhen,abb` per tier and fails in both directions: a denied tier that renders, and an allowed tier that gets denied
+- GAS stub now mirrors `handleNewsOp_`'s tier check; docstring notes why zhonhen is the probe company (has a study guide *and* 9 graph edges, so every column is a live assertion)
+- Run clean: all four tiers, progress isolation, and the 88-dossier specs audit
+
+#### Documentation
+
+- `.claude/rules/profiler-app.md` — Role + Access matrix rewritten for the retune, including the one-capability-two-doors rule, the deep-link re-check, and which gates are real boundaries vs app-experience gates
+- `repository-information/PHASE6-CLASSROOM-DESIGN.md` — retune section marked **BUILT**, with a status note recording what shipped and that the rest of C0 (Classroom scaffold, cross-links) remains
+- `live-site-pages/html-changelogs/Profilerhtml.changelog.md` hit its 50-section cap, so the oldest date group (2 sections dated 2026-08-13) rotated to the archive with commit-SHA enrichment. Active file now at `Sections: 49/50`
 
 ## [v03.98r] — 2026-08-31 03:51:22 AM EST
 

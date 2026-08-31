@@ -1,4 +1,4 @@
-var VERSION = "v01.29g";
+var VERSION = "v01.30g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -317,22 +317,31 @@ var AUTH_CONFIG = resolveConfig(ACTIVE_PRESET, PROJECT_OVERRIDES);
 // ══════════════
 // PROJECT START — Add your project-specific code here
 
-// PROJECT: ── Role + Access matrix (developer directive, 2026-08-22) ──────
+// PROJECT: ── Role + Access matrix (developer directive, 2026-08-22;
+// retuned 2026-08-31 per PHASE6-CLASSROOM-DESIGN.md) ──────────────────────
 // The server half of the Profiler page's access matrix. The page hides UI per
 // tier (OV_ROLE_CAPS in Profiler.html); these checks are the boundary:
 //   admin / developer — every feature
-//   contributor       — Industry Guidance, dossier export
-//   analyst           — dossier export
+//   contributor       — Industry Guidance, Coverage, relationships, export
+//   analyst           — dossiers, study guides, compare
 //   viewer            — dossiers only
 // Field notes (submit/list/edit/delete) stay admin-only and are gated in
-// handleNoteOp_. Dossier versions are static archive JSONs on Pages, so their
-// gate is the page's alone. Keep GUIDANCE_ROLES in sync with OV_ROLE_CAPS.
+// handleNoteOp_. Dossier versions, the relationship graph, study guides and
+// compare all read static JSON on public Pages, so their gates are the page's
+// alone — app-experience gates, not data boundaries (making any of them truly
+// private is a data-relocation decision, the M3 pattern, not a gate tweak).
+// Coverage is different: its payload is proxied through THIS backend, so it
+// gets a real server-side check below. Keep GUIDANCE_ROLES and COVERAGE_ROLES
+// in sync with OV_ROLE_CAPS.
 var GUIDANCE_ROLES = ['contributor'];
-function guidanceAllowed_(sess) {
+var COVERAGE_ROLES = ['contributor'];
+function roleAllowed_(sess, roles) {
   if ((sess && sess.permissions || []).indexOf('admin') >= 0) return true;
-  var gr = String((sess && sess.role) || '').toLowerCase().trim();
-  return GUIDANCE_ROLES.indexOf(gr) >= 0;
+  var r = String((sess && sess.role) || '').toLowerCase().trim();
+  return roles.indexOf(r) >= 0;
 }
+function guidanceAllowed_(sess) { return roleAllowed_(sess, GUIDANCE_ROLES); }
+function coverageAllowed_(sess) { return roleAllowed_(sess, COVERAGE_ROLES); }
 
 // PROJECT: ── Industry Guidance ───────────────────────────────────────────
 // Document-analysis modules rendered by the Profiler page's Industry Guidance
@@ -378,21 +387,26 @@ function handleGuidanceOp_(e) {
 // calls Scraper's token-gated corpus route server-to-server (CORPUS_TOKEN
 // Script Property — set the SAME random value, 16+ chars, in BOTH projects'
 // Script Properties) and relays the JSON to its own ACL-validated session.
-// Every signed-in tier may read it: the payload is public-sourced trade-press
-// metadata, the same class of content as the dossiers themselves. While the
-// token is unset the panel reports itself unconfigured instead of erroring.
+// Contributor+ from 2026-08-31 (COVERAGE_ROLES): because the corpus reaches
+// the browser only through this proxy, this check is the actual boundary —
+// the page's hidden button is UI convenience on top of it. While the token is
+// unset the panel reports itself unconfigured instead of erroring.
 var SCRAPER_CORPUS_EXEC =
   'https://script.google.com/macros/s/AKfycby8nOR0AqLsDlZPcrTX9dWIInY48R9Jrl8oBDtN5t0emC06j7iwidEMdXttrD1zXnjUIg/exec';
 function handleNewsOp_(e) {
   var p = (e && e.parameter) || {};
   var session = p.session || '';
   if (!session || session.length < 32) return { success: false, error: 'SESSION_EXPIRED' };
+  var nSess;
   try {
-    validateSessionForData(session, 'news_' + String(p.nop || 'timeline'));
+    nSess = validateSessionForData(session, 'news_' + String(p.nop || 'timeline'));
   } catch (nErr) {
     var nMsg = String((nErr && nErr.message) || nErr);
     if (nMsg.indexOf('SESSION_EXPIRED') >= 0) return { success: false, error: 'SESSION_EXPIRED' };
     return { success: false, error: nMsg };
+  }
+  if (!coverageAllowed_(nSess)) {
+    return { success: false, error: 'ROLE_DENIED', role: (nSess && nSess.role) || RBAC_DEFAULT_ROLE };
   }
   var token = PropertiesService.getScriptProperties().getProperty('CORPUS_TOKEN') || '';
   if (token.length < 16) return { success: false, error: 'not_configured' };

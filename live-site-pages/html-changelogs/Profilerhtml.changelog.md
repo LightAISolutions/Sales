@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.75w] — 2026-08-31 05:18:48 AM EST — v03.99r
+
+### Changed
+- The ecosystem views — the Relationships tab on a dossier and the ⛓ Network explorer — are now available to contributors and administrators. Analysts and viewers see dossiers without them
+- Coverage 📰 and Export dossier are likewise now contributor and administrator features
+- Analysts keep the full dossier reading surface, study guides and the compare view; viewers see dossiers only
+- Opening a link straight to a view your access level does not include now explains that plainly instead of showing an empty screen
 
 ## [v01.74w] — 2026-08-30 11:13:05 PM EST — v03.97r
 
@@ -343,20 +351,3 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 - A brief interruption while the app was checking your access no longer appears as "Access denied". Sign-in now says it is a temporary service problem and asks you to try again, instead of turning you away with a message that suggests your access had been removed
 - After one of these interruptions, sign-in works again as soon as the service recovers rather than staying blocked for the next several minutes
 - Retrying during an interruption no longer counts toward the failed-attempt limit, so a service hiccup can no longer escalate into a temporary lockout
-
-## [v01.26w] — 2026-08-13 04:34:03 AM EST — v02.37r
-
-### Added
-- Filing a transcript with a note now writes the meeting up for you. Instead of a placeholder that waited for a later pass, the note comes back as a short summary, what was discussed, what the customer signalled, action items and open questions — readable and copyable within about a minute of saving
-- A **✨ Summarize** button on any note that has a transcript attached. Use it to write up notes filed before this existed, or to retry if the first attempt did not finish
-- The note log shows the date a note was written up from its transcript
-
-### Changed
-- Notes that run to several lines now keep their line breaks in the log and in the manage panel, instead of collapsing into a single block of text
-- If the write-up step does not complete, the note and its transcript are still saved — the status message says so and points at the retry button
-
-## [v01.25w] — 2026-08-13 03:01:32 AM EST — v02.35r
-
-### Added
-- A **File transcript** button in the note box. Once you have transcribed a recording on your own computer, pick the transcript here and it is saved into the "transcribed" folder, the recording it belongs to moves out of the waiting folder to join it, and the transcript is attached to the note you are writing — all from the one selection
-

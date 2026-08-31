@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 29/50`
+`Sections: 30/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.30g] — 2026-08-31 05:18:48 AM EST — v03.99r
+
+### Changed
+- Coverage is now served only to contributors and administrators. Other access levels are told so directly rather than receiving an empty result
 
 ## [v01.29g] — 2026-08-30 11:13:05 PM EST — v03.97r
 
