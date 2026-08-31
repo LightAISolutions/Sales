@@ -182,7 +182,6 @@
    "note": "Co-prime on the ~$50B/5 GW Richland Parish campus and the $10B Lebanon, IN campus.",
    "context": "Turner shares Meta's largest programs: Richland Parish, LA — won at $10B in December 2024 with DPR and Mortenson, expanded to ~$50B / 5 GW / ~10M sq ft by July 2026 (~7,500 peak workers) — plus the $10B, 1 GW Lebanon, Indiana campus and Jeffersonville. Meta standardizes on a repeat builder bench and multi-sources every gigacampus.",
    "source": "https://www.turnerconstruction.com/insights/expanded-meta-data-center-creates-more-jobs-and-opp",
-   "project": "hyperion",
    "status": "active",
    "since": "2024-12",
    "scale": "~$60B of campus value"
@@ -193,7 +192,6 @@
    "note": "Shared-bench prime on Richland Parish and the newest mega-campus wave.",
    "context": "DPR sits on the Turner + DPR + Mortenson team Meta selected for Richland Parish in December 2024 — the shared-bench delivery template now spanning Meta's record Louisiana and Indiana programs.",
    "source": "ENR — Meta Richland Parish team (Dec 2024)",
-   "project": "hyperion",
    "status": "active",
    "since": "2024-12"
   },
@@ -203,7 +201,6 @@
    "note": "Three live engagements: Richland Parish power scopes, Lebanon IN co-prime, Beaver Dam WI solo GC.",
    "context": "Mortenson holds the sitework, MV-power, substation, water and fiber scopes on Richland Parish alongside Turner and DPR, a >$10B co-prime at Lebanon, Indiana, and the $1B Beaver Dam, Wisconsin dry-cooled campus as solo GC (completion 2027) — the power-scope specialist on Meta's bench.",
    "source": "https://www.constructiondive.com/news/meta-mortenson-beaver-dam-wisconsin-data-center/806211/",
-   "project": "hyperion",
    "status": "active",
    "since": "2024-12",
    "scale": "3 campuses"
@@ -529,5 +526,5 @@
   }
  ],
  "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "profileVersion": 4
 }

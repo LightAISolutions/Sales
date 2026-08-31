@@ -2649,7 +2649,8 @@
      "status": "active",
      "since": "2025",
      "scale": "up to 2.8 GW master agreement",
-     "via": "solid-oxide fuel cells"
+     "via": "solid-oxide fuel cells",
+     "project": "jupiter-nm"
     },
     "b": {
      "type": "supplier",
@@ -6565,7 +6566,8 @@
      "source": "Construction Dive, 2024-12-04; ENR",
      "status": "active",
      "since": "2024-12",
-     "scale": "$10B campus (3 GCs)"
+     "scale": "$10B campus (3 GCs)",
+     "project": "hyperion"
     },
     "b": {
      "type": "supplier",
@@ -6573,7 +6575,8 @@
      "context": "DPR sits on the Turner + DPR + Mortenson team Meta selected for Richland Parish in December 2024 — the shared-bench delivery template now spanning Meta's record Louisiana and Indiana programs.",
      "source": "ENR — Meta Richland Parish team (Dec 2024)",
      "status": "active",
-     "since": "2024-12"
+     "since": "2024-12",
+     "project": "hyperion"
     }
    },
    "evid": [
@@ -6600,14 +6603,16 @@
    "curated": {
     "a": {
      "type": "partner",
-     "note": "Co-GC on Meta Richland Parish — and the benchmark rival on every major data-center pursuit."
+     "note": "Co-GC on Meta Richland Parish — and the benchmark rival on every major data-center pursuit.",
+     "project": "hyperion"
     },
     "b": {
      "type": "partner",
      "note": "Fellow prime on Meta Richland Parish; hyperscale rival elsewhere.",
      "context": "DPR shares the largest Meta campuses with Mortenson and Turner — Mortenson holding the power-and-site scopes, DPR the building scopes it subcontracts power for. The same firms contest each other's positions on every other hyperscale program.",
      "source": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/",
-     "status": "active"
+     "status": "active",
+     "project": "hyperion"
     }
    },
    "evid": [
@@ -6688,7 +6693,8 @@
      "context": "Meta selected the Turner + DPR + Mortenson team for Richland Parish in December 2024 — the template for the shared-bench delivery model on AI gigacampuses, now a ~$50B program. Rivals on every other pursuit.",
      "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-",
      "status": "active",
-     "since": "2024-12"
+     "since": "2024-12",
+     "project": "hyperion"
     }
    },
    "evid": [],
@@ -10698,7 +10704,8 @@
      "context": "Jupiter Power is the largest named US relationship in Hithium's book — a 3 GWh supply agreement plus the 2.8 GWh Trimount, Massachusetts design win that cleared the state EFSB in February 2026. Access runs through battery-buying owners like Jupiter while utility self-build stays effectively closed to Chinese cells.\n\nThe warning light: in November 2025 Jupiter signed a sodium-ion supply deal with US maker Peak Energy (720 MWh for 2027, up to 4 GWh reserved 2028-30) — supply-chain diversification that plants a domestic competing supplier inside the anchor account.",
      "source": "https://www.energy-storage.news/jupiter-power-receives-approval-for-2-8gwh-massachusetts-bess/",
      "status": "active",
-     "scale": "3 GWh supply + 2.8 GWh Trimount design win"
+     "scale": "3 GWh supply + 2.8 GWh Trimount design win",
+     "project": "trimount"
     },
     "b": {
      "type": "supplier",
@@ -10708,7 +10715,8 @@
      "status": "active",
      "since": "2024-06",
      "scale": "3 GWh + 2.8 GWh Trimount",
-     "via": "∞Block"
+     "via": "∞Block",
+     "project": "trimount"
     }
    },
    "evid": [
@@ -13869,7 +13877,8 @@
      "source": "https://www.constructiondive.com/news/meta-mortenson-beaver-dam-wisconsin-data-center/806211/",
      "status": "active",
      "since": "2024-12",
-     "scale": "3 campuses"
+     "scale": "3 campuses",
+     "project": "hyperion"
     },
     "b": {
      "type": "customer",
@@ -13877,7 +13886,8 @@
      "context": "Meta concentration is Mortenson's defining commercial exposure through at least 2028: on Richland Parish (within Meta's ~$50B deepened Louisiana commitment) Mortenson holds the sitework, MV-power, substation, water and fiber scopes alongside Turner and DPR; Lebanon, Indiana is a >$10B co-prime; and Beaver Dam, Wisconsin is a $1B, 700,000 sq ft solo GC award (dry-cooled, completion 2027). The three almost certainly account for a large share of the $13.85B of 2025 new contracts — and a Meta capex pause would hit Mortenson harder than any peer except possibly Turner.",
      "source": "https://www.constructiondive.com/news/meta-mortenson-beaver-dam-wisconsin-data-center/806211/",
      "status": "active",
-     "scale": "3 campuses incl. >$10B co-prime"
+     "scale": "3 campuses incl. >$10B co-prime",
+     "project": "hyperion"
     }
    },
    "evid": [
@@ -14223,7 +14233,8 @@
      "source": "https://www.turnerconstruction.com/insights/expanded-meta-data-center-creates-more-jobs-and-opp",
      "status": "active",
      "since": "2024-12",
-     "scale": "~$60B of campus value"
+     "scale": "~$60B of campus value",
+     "project": "hyperion"
     },
     "b": {
      "type": "customer",
@@ -14771,7 +14782,8 @@
      "note": "Co-prime alongside Turner on Meta's largest campuses — and building-GC rival everywhere else.",
      "context": "On Meta's Richland Parish campus Mortenson works alongside Turner and DPR rather than subordinate to them, differentiated by self-performed power scope (substations to 345 kV/1 GW class) that the building GCs largely subcontract. Outside the shared Meta work they compete directly for hyperscale awards.",
      "source": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/",
-     "status": "active"
+     "status": "active",
+     "project": "hyperion"
     },
     "b": {
      "type": "partner",
@@ -14779,7 +14791,8 @@
      "context": "Mortenson shares the Richland Parish bench with Turner and DPR, holding the sitework, MV-power, substation, water and fiber scopes — the shared-award pattern (Meta LA split three ways, Stargate WI four ways) that shows how hyperscalers dual-source GC capacity: no single builder gets an AI gigacampus alone.",
      "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-",
      "status": "active",
-     "since": "2024-12"
+     "since": "2024-12",
+     "project": "hyperion"
     }
    },
    "evid": [
@@ -15926,7 +15939,7 @@
      "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-delivers-digita",
      "status": "active",
      "since": "2025-09",
-     "project": "stargate"
+     "project": "jupiter-nm"
     }
    },
    "evid": [
@@ -16214,7 +16227,7 @@
      "status": "active",
      "since": "2025-09",
      "scale": "1GW+ campus",
-     "project": "stargate"
+     "project": "jupiter-nm"
     }
    },
    "evid": [
@@ -18041,7 +18054,7 @@
      "status": "active",
      "since": "2025-09",
      "via": "Turner-McCarthy JV",
-     "project": "stargate"
+     "project": "lighthouse"
     }
    },
    "evid": [],
@@ -18059,7 +18072,8 @@
      "status": "active",
      "since": "2025-02",
      "scale": ">1GW partnership; 700MW at Frontier",
-     "via": "natural-gas microgrid"
+     "via": "natural-gas microgrid",
+     "project": "frontier"
     },
     "b": {
      "type": "customer",

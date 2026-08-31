@@ -129,7 +129,6 @@
    "note": "Master agreement up to 2.8 GW of solid-oxide fuel cells — up to 2.45 GW earmarked for the Doña Ana 'Project Jupiter' campus.",
    "context": "The defining commercial relationship of the dossier: Bloom's first Oracle deployment delivered whole-data-center prime power in 55 days (beating its own 90-day commitment), and Project Jupiter explicitly displaces planned gas turbines and diesel with fuel cells. The demand repriced the company — 2026 revenue guidance was raised twice to $3.9–4.2B (~100% growth at midpoint).",
    "via": "solid-oxide fuel cells",
-   "project": "jupiter-nm",
    "status": "active",
    "since": "2025",
    "scale": "up to 2.8 GW master agreement"
@@ -414,5 +413,5 @@
   }
  ],
  "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "profileVersion": 4
 }

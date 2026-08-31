@@ -239,7 +239,6 @@
    "note": "Anchor US account: 3 GWh supply plus the 2.8 GWh Trimount design win (EFSB-approved Feb 2026).",
    "context": "Jupiter Power is the largest named US relationship in Hithium's book — a 3 GWh supply agreement plus the 2.8 GWh Trimount, Massachusetts design win that cleared the state EFSB in February 2026. Access runs through battery-buying owners like Jupiter while utility self-build stays effectively closed to Chinese cells.\n\nThe warning light: in November 2025 Jupiter signed a sodium-ion supply deal with US maker Peak Energy (720 MWh for 2027, up to 4 GWh reserved 2028-30) — supply-chain diversification that plants a domestic competing supplier inside the anchor account.",
    "source": "https://www.energy-storage.news/jupiter-power-receives-approval-for-2-8gwh-massachusetts-bess/",
-   "project": "trimount",
    "status": "active",
    "scale": "3 GWh supply + 2.8 GWh Trimount design win"
   },
@@ -1119,5 +1118,5 @@
   }
  ],
  "lastUpdated": "2026-08-30",
- "profileVersion": 8
+ "profileVersion": 7
 }

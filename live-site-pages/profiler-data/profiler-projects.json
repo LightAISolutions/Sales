@@ -1,5 +1,5 @@
 {
- "schemaVersion": 1,
+ "schemaVersion": 2,
  "projects": [
   {
    "slug": "colossus",
@@ -9,6 +9,14 @@
    "note": "xAI's AI supercomputer campus."
   },
   {
+   "slug": "frontier",
+   "name": "Frontier",
+   "kind": "aidc-campus",
+   "location": "Shackelford County, TX",
+   "parent": "stargate",
+   "note": "Vantage's 1.4 GW Oracle/OpenAI Stargate campus, primary-powered by VoltaGrid natural-gas microgrids."
+  },
+  {
    "slug": "homer-city",
    "name": "Homer City Energy Campus",
    "kind": "power-campus",
@@ -16,11 +24,41 @@
    "note": "Redevelopment of the retired Homer City coal-plant site into a gas-powered data-center energy campus."
   },
   {
+   "slug": "hyperion",
+   "name": "Hyperion (Richland Parish)",
+   "kind": "aidc-campus",
+   "location": "Richland Parish, LA",
+   "note": "Meta's largest AI data-center campus (~$50B / 5 GW program), delivered by a shared Turner/DPR/Mortenson bench."
+  },
+  {
+   "slug": "jupiter-nm",
+   "name": "Project Jupiter",
+   "kind": "aidc-campus",
+   "location": "Doña Ana County, NM",
+   "parent": "stargate",
+   "note": "STACK Infrastructure's 1 GW+ Stargate campus serving Oracle/OpenAI, with Bloom Energy fuel-cell prime power."
+  },
+  {
+   "slug": "lighthouse",
+   "name": "Lighthouse",
+   "kind": "aidc-campus",
+   "location": "Port Washington, WI",
+   "parent": "stargate",
+   "note": "Vantage's Wisconsin Stargate campus ($8B first phase, 1.3 GW), built by a four-way GC bench."
+  },
+  {
    "slug": "stargate",
    "name": "Stargate",
    "kind": "program",
    "location": "Abilene, TX (flagship); multi-site US",
-   "note": "OpenAI-led AI data-center program with Oracle and SoftBank."
+   "note": "OpenAI-led AI data-center program with Oracle and SoftBank; the Abilene, TX flagship site is also known as the Lancium Clean Campus."
+  },
+  {
+   "slug": "trimount",
+   "name": "Trimount",
+   "kind": "bess",
+   "location": "Everett, MA",
+   "note": "Jupiter Power's 2.8 GWh battery storage project — Hithium's flagship US design win, EFSB-approved February 2026."
   }
  ]
 }

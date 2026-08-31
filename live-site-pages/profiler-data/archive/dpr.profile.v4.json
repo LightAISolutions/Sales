@@ -221,7 +221,6 @@
    "note": "One of three GCs (with Turner and Mortenson) on Meta's $10B Richland Parish, LA AI campus — Meta's largest data center.",
    "context": "Selected December 2024 for the ~4M sq ft campus (>5,000 peak workers, completion ~2030). The dossier's judgment: Meta's multi-GC model caps any single builder's share of the largest programs by design — hyperscalers deliberately maintain a bench of substitutable top-tier GCs.",
    "source": "Construction Dive, 2024-12-04; ENR",
-   "project": "hyperion",
    "status": "active",
    "since": "2024-12",
    "scale": "$10B campus (3 GCs)"
@@ -229,8 +228,7 @@
   {
    "slug": "mortenson",
    "type": "partner",
-   "note": "Co-GC on Meta Richland Parish — and the benchmark rival on every major data-center pursuit.",
-   "project": "hyperion"
+   "note": "Co-GC on Meta Richland Parish — and the benchmark rival on every major data-center pursuit."
   },
   {
    "slug": "openai",
@@ -587,5 +585,5 @@
   }
  ],
  "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "profileVersion": 4
 }

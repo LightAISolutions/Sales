@@ -218,7 +218,6 @@
    "note": "Three simultaneous engagements — Richland Parish LA, Lebanon IN (>$10B co-prime), Beaver Dam WI ($1B solo GC).",
    "context": "Meta concentration is Mortenson's defining commercial exposure through at least 2028: on Richland Parish (within Meta's ~$50B deepened Louisiana commitment) Mortenson holds the sitework, MV-power, substation, water and fiber scopes alongside Turner and DPR; Lebanon, Indiana is a >$10B co-prime; and Beaver Dam, Wisconsin is a $1B, 700,000 sq ft solo GC award (dry-cooled, completion 2027). The three almost certainly account for a large share of the $13.85B of 2025 new contracts — and a Meta capex pause would hit Mortenson harder than any peer except possibly Turner.",
    "source": "https://www.constructiondive.com/news/meta-mortenson-beaver-dam-wisconsin-data-center/806211/",
-   "project": "hyperion",
    "status": "active",
    "scale": "3 campuses incl. >$10B co-prime"
   },
@@ -239,7 +238,6 @@
    "note": "Co-prime alongside Turner on Meta's largest campuses — and building-GC rival everywhere else.",
    "context": "On Meta's Richland Parish campus Mortenson works alongside Turner and DPR rather than subordinate to them, differentiated by self-performed power scope (substations to 345 kV/1 GW class) that the building GCs largely subcontract. Outside the shared Meta work they compete directly for hyperscale awards.",
    "source": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/",
-   "project": "hyperion",
    "status": "active"
   },
   {
@@ -248,7 +246,6 @@
    "note": "Fellow prime on Meta Richland Parish; hyperscale rival elsewhere.",
    "context": "DPR shares the largest Meta campuses with Mortenson and Turner — Mortenson holding the power-and-site scopes, DPR the building scopes it subcontracts power for. The same firms contest each other's positions on every other hyperscale program.",
    "source": "https://www.constructiondive.com/news/meta-data-center-louisiana-turner-dpr-mortenson/734640/",
-   "project": "hyperion",
    "status": "active"
   },
   {
@@ -634,5 +631,5 @@
   }
  ],
  "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "profileVersion": 4
 }

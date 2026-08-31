@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.71w">
+  <meta name="build-version" content="v01.72w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -2982,9 +2982,12 @@ function ovReloadFresh() {
       if (r.project) {
         // Named-project pin (schema v7) — resolved against the projects
         // registry; an unregistered slug renders as-is rather than vanishing.
+        // Registry v2: a sub-campus pin's tooltip names its umbrella program.
         var pj = ovProjectOf(r.project);
+        var pjParent = pj && pj.parent ? ovProjectOf(pj.parent) : null;
         chips.push(['pj', '⚑ ' + (pj ? pj.name : r.project),
-          pj ? [pj.kind, pj.location].filter(Boolean).join(' · ') : 'Named project (not in the projects registry)']);
+          pj ? [pj.kind, pj.location, pjParent ? 'part of ' + pjParent.name : ''].filter(Boolean).join(' · ')
+             : 'Named project (not in the projects registry)']);
       }
       if (r.last) chips.push([null, 'Latest ' + r.last]);
       if (!chips.length) return;

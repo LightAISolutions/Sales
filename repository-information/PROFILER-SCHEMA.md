@@ -270,12 +270,13 @@ The ecosystem's recurring **named projects** (Stargate, Colossus, Homer City…)
 
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
-| `schemaVersion` | number | yes | Registry schema version (currently `1`) |
+| `schemaVersion` | number | yes | Registry schema version (currently `2` — v2 added `projects[].parent`) |
 | `projects[]` | object[] | yes | One entry per named project, alphabetical by slug |
 | `projects[].slug` | string | yes | Per Slug rules — the permanent identity `relationships[].project` references |
 | `projects[].name` | string | yes | Display name as the ecosystem uses it (e.g. "Stargate", "Homer City Energy Campus") |
 | `projects[].kind` | string | yes | Short lowercase label for what the project is: `aidc-campus`, `power-campus`, `bess`, `program`, … — freeform-lite, reuse existing values where they fit |
 | `projects[].location` | string | no | Where it is, plainly ("Abilene, TX", "Memphis, TN"); multi-site programs name the flagship |
+| `projects[].parent` | string | no | **Registry v2.** Slug of the umbrella project this one belongs to (Frontier/Lighthouse/Project Jupiter → `stargate`), so sub-campus pins still roll up to the program. The renderer surfaces it in the ⚑ chip tooltip ("part of Stargate"). **Pin precision rule**: a relationship whose substance is one specific sub-campus pins the child; an engagement spanning several of a program's campuses pins the parent program |
 | `projects[].note` | string | yes | Neutral one-liner orienting the reader — who leads it and what it is. No figures, no claims that need their own citation: anything source-worthy belongs in a dossier |
 
 Add a project only when at least one dossier's `relationships[]` is ready to reference it — the registry is an index of pins in use, not a research surface. `build-profiler-graph.py` warns when a curated `project` slug is missing from the registry. The file deploys with the site like all `profiler-data/` files.

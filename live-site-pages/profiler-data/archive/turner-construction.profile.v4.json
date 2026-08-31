@@ -231,7 +231,6 @@
    "note": "Shared-bench co-prime on Meta Richland Parish.",
    "context": "Meta selected the Turner + DPR + Mortenson team for Richland Parish in December 2024 — the template for the shared-bench delivery model on AI gigacampuses, now a ~$50B program. Rivals on every other pursuit.",
    "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-",
-   "project": "hyperion",
    "status": "active",
    "since": "2024-12"
   },
@@ -241,7 +240,6 @@
    "note": "Co-prime on Meta Richland Parish; the power-scope specialist beside the building GCs.",
    "context": "Mortenson shares the Richland Parish bench with Turner and DPR, holding the sitework, MV-power, substation, water and fiber scopes — the shared-award pattern (Meta LA split three ways, Stargate WI four ways) that shows how hyperscalers dual-source GC capacity: no single builder gets an AI gigacampus alone.",
    "source": "https://www.enr.com/articles/59958-meta-picks-turner-dpr-mortenson-team-for-10b-louisiana-data-",
-   "project": "hyperion",
    "status": "active",
    "since": "2024-12"
   }
@@ -554,5 +552,5 @@
   }
  ],
  "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "profileVersion": 4
 }

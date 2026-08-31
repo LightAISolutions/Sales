@@ -215,6 +215,12 @@
       "profileVersion": 6,
       "archivedAt": "2026-08-30",
       "supersededBy": 7
+    },
+    {
+      "file": "hithium.profile.v7.json",
+      "profileVersion": 7,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 8
     }
   ],
   "huawei-digital-power": [
@@ -251,6 +257,12 @@
       "profileVersion": 2,
       "archivedAt": "2026-08-30",
       "supersededBy": 3
+    },
+    {
+      "file": "jupiter-power.profile.v3.json",
+      "profileVersion": 3,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 4
     }
   ],
   "key-capture-energy": [
@@ -621,6 +633,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "bloom-energy.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
     }
   ],
   "burns-mcdonnell": [
@@ -725,6 +743,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "dpr.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
     }
   ],
   "eaton": [
@@ -947,6 +971,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "meta.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
     }
   ],
   "microsoft": [
@@ -981,6 +1011,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "mortenson.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
     }
   ],
   "nebius": [
@@ -1181,6 +1217,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "stack-infrastructure.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
     }
   ],
   "terawulf": [
@@ -1223,6 +1265,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "turner-construction.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
     }
   ],
   "vantage": [
@@ -1237,6 +1285,12 @@
       "profileVersion": 3,
       "archivedAt": "2026-08-30",
       "supersededBy": 4
+    },
+    {
+      "file": "vantage.profile.v4.json",
+      "profileVersion": 4,
+      "archivedAt": "2026-08-30",
+      "supersededBy": 5
     }
   ],
   "vertiv": [

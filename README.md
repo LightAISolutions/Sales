@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
+Last updated: `2026-08-30 10:31:34 PM EST` · Repo version: `v03.94r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -49,7 +49,7 @@ Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
 │   │
 │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/globalacl.html">globalacl.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/globalacl.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Globalacl/globalacl.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/globalaclhtml.changelog.md">v01.05w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/globalaclgs.changelog.md">v01.07g</a> | [template] Global ACL page
 │   │
-│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.71w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">v01.28g</a> | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs; in-dossier field-note intake
+│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.72w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">v01.28g</a> | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs; in-dossier field-note intake
 │   │
 │   <b>│ ─ Standalone Utilities ─────────────────────────────────────────────────────</b>
 │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/text-compare.html">text-compare.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/text-compare.html">🌐</a>  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/text-comparehtml.changelog.md">v01.01w</a> · vNoGASg | [template] Text comparison tool with side-by-side diff highlighting
@@ -250,6 +250,7 @@ Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/blattner.profile.v2.json">blattner.profile.v2.json</a> — Archived v2 dossier (Blattner)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/bloom-energy.profile.v1.json">bloom-energy.profile.v1.json</a> — Archived v1 dossier (Bloom Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/bloom-energy.profile.v3.json">bloom-energy.profile.v3.json</a> — Archived v3 dossier (Bloom Energy)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/bloom-energy.profile.v4.json">bloom-energy.profile.v4.json</a> — Archived v4 dossier (Bloom Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/burns-mcdonnell.profile.v1.json">burns-mcdonnell.profile.v1.json</a> — Archived v1 dossier (Burns & McDonnell)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/burns-mcdonnell.profile.v3.json">burns-mcdonnell.profile.v3.json</a> — Archived v3 dossier (Burns & McDonnell)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/byd.profile.v1.json">byd.profile.v1.json</a> — Archived v1 dossier (BYD)
@@ -275,6 +276,7 @@ Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/delta-electronics.profile.v3.json">delta-electronics.profile.v3.json</a> — Archived v3 dossier (Delta Electronics)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/dpr.profile.v1.json">dpr.profile.v1.json</a> — Archived v1 dossier (DPR Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/dpr.profile.v3.json">dpr.profile.v3.json</a> — Archived v3 dossier (DPR Construction)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/dpr.profile.v4.json">dpr.profile.v4.json</a> — Archived v4 dossier (DPR Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/eaton.profile.v1.json">eaton.profile.v1.json</a> — Archived v1 dossier (Eaton)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/eaton.profile.v3.json">eaton.profile.v3.json</a> — Archived v3 dossier (Eaton)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/enchanted-rock.profile.v2.json">enchanted-rock.profile.v2.json</a> — Archived v2 dossier (ERock (Enchanted Rock))
@@ -304,6 +306,7 @@ Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v3.json">hithium.profile.v3.json</a> — Archived v3 dossier (Hithium)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v4.json">hithium.profile.v4.json</a> — Archived v4 dossier (Hithium)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v6.json">hithium.profile.v6.json</a> — Archived v6 dossier (Hithium)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hithium.profile.v7.json">hithium.profile.v7.json</a> — Archived v7 dossier (Hithium)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/hitt.profile.v1.json">hitt.profile.v1.json</a> — Archived v1 dossier (HITT Contracting)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/holder-construction.profile.v1.json">holder-construction.profile.v1.json</a> — Archived v1 dossier (Holder Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/huawei-digital-power.profile.v1.json">huawei-digital-power.profile.v1.json</a> — Archived v1 dossier (Huawei Digital Power)
@@ -316,6 +319,7 @@ Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jinko.profile.v1.json">jinko.profile.v1.json</a> — Archived v1 dossier (Jinko)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jinko.profile.v3.json">jinko.profile.v3.json</a> — Archived v3 dossier (Jinko)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jupiter-power.profile.v2.json">jupiter-power.profile.v2.json</a> — Archived v2 dossier (Jupiter Power)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/jupiter-power.profile.v3.json">jupiter-power.profile.v3.json</a> — Archived v3 dossier (Jupiter Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/key-capture-energy.profile.v2.json">key-capture-energy.profile.v2.json</a> — Archived v2 dossier (Key Capture Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/kiewit.profile.v1.json">kiewit.profile.v1.json</a> — Archived v1 dossier (Kiewit)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/kiewit.profile.v3.json">kiewit.profile.v3.json</a> — Archived v3 dossier (Kiewit)
@@ -336,11 +340,13 @@ Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v1.json">meta.profile.v1.json</a> — Archived v1 dossier (Meta)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v2.json">meta.profile.v2.json</a> — Archived v2 dossier (Meta)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v3.json">meta.profile.v3.json</a> — Archived v3 dossier (Meta)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/meta.profile.v4.json">meta.profile.v4.json</a> — Archived v4 dossier (Meta)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/microsoft.profile.v1.json">microsoft.profile.v1.json</a> — Archived v1 dossier (Microsoft)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/microsoft.profile.v2.json">microsoft.profile.v2.json</a> — Archived v2 dossier (Microsoft)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/microsoft.profile.v3.json">microsoft.profile.v3.json</a> — Archived v3 dossier (Microsoft)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mortenson.profile.v1.json">mortenson.profile.v1.json</a> — Archived v1 dossier (Mortenson)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mortenson.profile.v3.json">mortenson.profile.v3.json</a> — Archived v3 dossier (Mortenson)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/mortenson.profile.v4.json">mortenson.profile.v4.json</a> — Archived v4 dossier (Mortenson)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/narada.profile.v2.json">narada.profile.v2.json</a> — Archived v2 dossier (Narada Power)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nebius.profile.v1.json">nebius.profile.v1.json</a> — Archived v1 dossier (Nebius)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/nebius.profile.v2.json">nebius.profile.v2.json</a> — Archived v2 dossier (Nebius)
@@ -382,6 +388,7 @@ Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/solv-energy.profile.v2.json">solv-energy.profile.v2.json</a> — Archived v2 dossier (SOLV Energy)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/stack-infrastructure.profile.v1.json">stack-infrastructure.profile.v1.json</a> — Archived v1 dossier (STACK Infrastructure)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/stack-infrastructure.profile.v3.json">stack-infrastructure.profile.v3.json</a> — Archived v3 dossier (STACK Infrastructure)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/stack-infrastructure.profile.v4.json">stack-infrastructure.profile.v4.json</a> — Archived v4 dossier (STACK Infrastructure)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sungrow.profile.v1.json">sungrow.profile.v1.json</a> — Archived v1 dossier (Sungrow)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sungrow.profile.v2.json">sungrow.profile.v2.json</a> — Archived v2 dossier (Sungrow)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/sungrow.profile.v3.json">sungrow.profile.v3.json</a> — Archived v3 dossier (Sungrow)
@@ -399,8 +406,10 @@ Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/trina-storage.profile.v2.json">trina-storage.profile.v2.json</a> — Archived v2 dossier (Trina Storage)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/turner-construction.profile.v1.json">turner-construction.profile.v1.json</a> — Archived v1 dossier (Turner Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/turner-construction.profile.v3.json">turner-construction.profile.v3.json</a> — Archived v3 dossier (Turner Construction)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/turner-construction.profile.v4.json">turner-construction.profile.v4.json</a> — Archived v4 dossier (Turner Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vantage.profile.v1.json">vantage.profile.v1.json</a> — Archived v1 dossier (Vantage Data Centers)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vantage.profile.v3.json">vantage.profile.v3.json</a> — Archived v3 dossier (Vantage Data Centers)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vantage.profile.v4.json">vantage.profile.v4.json</a> — Archived v4 dossier (Vantage Data Centers)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vertiv.profile.v1.json">vertiv.profile.v1.json</a> — Archived v1 dossier (Vertiv)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vertiv.profile.v3.json">vertiv.profile.v3.json</a> — Archived v3 dossier (Vertiv)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/voltagrid.profile.v2.json">voltagrid.profile.v2.json</a> — Archived v2 dossier (VoltaGrid)
@@ -542,6 +551,7 @@ Last updated: `2026-08-30 10:07:41 PM EST` · Repo version: `v03.93r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-profiler-graph.py">build-profiler-graph.py</a> — Profiler relationship-graph builder (merges both dossiers' curated links + full-sentence cross-mention evidence into profiler-graph.json; --check reports drift) — required after any profile write
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-profiler-reports.py">check-profiler-reports.py</a> — Profiler report verification (citation resolution against dossier sources, provenance tiers, KPI figure checks, index reconciliation) — required after any report write
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/playwright-harness.py">playwright-harness.py</a>   — Chromium smoke-test harness for all projects (load + console-error + screenshot)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/scan-project-candidates.py">scan-project-candidates.py</a> — Named-project candidate scanner (counts distinct-dossier mentions per watchlisted project; flags unregistered names at ≥3 dossiers for registry review)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/verify-profiler-roles.py">verify-profiler-roles.py</a> — Profiler app verifier (Role + Access matrix with per-tier screenshots, per-account guidance-progress isolation, Technical Annex render audit across all dossiers)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/sync-profiler-registry.py">sync-profiler-registry.py</a> — Profiler registry reconciliation (syncs denormalized lastUpdated / source counts / first-party share / KPI flag from the profile JSONs; --check reports drift)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-aidc-report-pdf.mjs">build-aidc-report-pdf.mjs</a> — Renders the AIDC market report HTML to paginated PDFs, one per Profiler writing style (headless Chromium, DevTools Protocol)

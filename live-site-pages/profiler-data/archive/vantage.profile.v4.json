@@ -265,7 +265,6 @@
    "context": "February 2025: VoltaGrid partnered to deploy more than 1GW of prime natural-gas microgrid capacity across Vantage's North America portfolio — months-scale installation, up to 98% criteria-pollutant reduction, hydrogen/RNG-capable. Frontier runs fully off-grid on the resulting 700MW plant (210 Jenbacher J624s per TCEQ filings, 197 prime + 13 backup) — the largest off-grid data-center power plant disclosed to date, converting ERCOT interconnection delay into a procurement item. Liberty Energy (Jan 2026, up to 1GW with 400MW of 2027 capacity reserved) is the second leg of the dispatchable-power bench.",
    "source": "https://vantage-dc.com/news/vantage-data-centers-and-voltagrid-establish-partnership-to-deploy-",
    "via": "natural-gas microgrid",
-   "project": "frontier",
    "status": "active",
    "since": "2025-02",
    "scale": ">1GW partnership; 700MW at Frontier"
@@ -286,7 +285,7 @@
    "context": "The Turner-McCarthy JV was named among the phase-1 builders of Lighthouse ($8B first phase, 1.3 GW), split four ways with Whiting-Turner, Weitz and Michels — the multi-source GC model Vantage applies to giga-campus delivery.",
    "source": "ENR — Stargate WI phase-1 construction team (Sept 2025)",
    "via": "Turner-McCarthy JV",
-   "project": "lighthouse",
+   "project": "stargate",
    "status": "active",
    "since": "2025-09"
   },
@@ -826,5 +825,5 @@
   }
  ],
  "lastUpdated": "2026-08-30",
- "profileVersion": 5
+ "profileVersion": 4
 }

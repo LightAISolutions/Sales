@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.94r] — 2026-08-30 10:31:34 PM EST
+
+> **Prompt:** "Regarding Lancium Clean Campus / Abilene, mention it in stargate's registry note. Regarding the opportunity analysis report, my first instinct is to ask you to automatically generate one weekly every Monday 9am PST and create an organized way for me to easily search and filter through past versions. Do you think that's a good idea? If not, propose an alternative with reasoning. Once we are done, continue with your recommendation."
+
+Pin-coverage Layers 1+2 per the approved recommendation, after a corroboration-verified read of every candidate relationship context. (The weekly-report question was answered as analysis — a drift-gated monthly Routine proposed instead of weekly wall-clock; nothing armed pending the developer's decision.)
+
+### Added
+- **Named-projects registry v2** (`live-site-pages/profiler-data/profiler-projects.json`; schema section updated in PROFILER-SCHEMA.md) — optional `parent` field for sub-campus rollup, plus five registrations: `hyperion` (Meta Richland Parish), `frontier` and `lighthouse` (Vantage, parent `stargate`), `jupiter-nm` (STACK Doña Ana, parent `stargate`), `trimount` (Jupiter Power/Hithium, Everett MA). Stargate's note now names the Abilene flagship as the Lancium Clean Campus (developer instruction). Denton deliberately NOT registered — all three CoreWeave-side engagements span multiple sites, so no relationship is ready to pin it (the registry's own rule held)
+- **14 new project pins** across 9 dossiers (each archived + profileVersion +1): the Meta Richland Parish co-prime web (meta↔turner-construction/dpr/mortenson + GC↔GC partner links → `hyperion`), vantage→voltagrid → `frontier`, bloom-energy→oracle → `jupiter-nm`, hithium↔jupiter-power → `trimount`. Skips were deliberate: turner-construction→meta spans two campuses (stays unpinned), lightsource-bp↔meta is trade-press framing not stated service, amazon↔openai's "Frontier" is OpenAI's product, holder-construction's Hyperion mentions are absence-of-role observations
+- **`scripts/scan-project-candidates.py`** — Layer 2: the standing corroboration scanner (20-name watchlist, distinct-dossier counts, flags unregistered names at ≥3 dossiers). First run: new-albany 8 (multi-operator OH cluster — needs a human split), denton 5, polaris-forge 4, lebanon-in/horizon-childress/fort-wayne/cwl1/clinton 3
+
+### Changed
+- **3 program pins refined to their specific campus** (pin-precision rule now in PROFILER-SCHEMA.md): stack-infrastructure→oracle and →openai `stargate` → `jupiter-nm` (the engagement is Project Jupiter itself), vantage→turner-construction `stargate` → `lighthouse` (the Turner-McCarthy JV builds Lighthouse phase 1). turner-construction→vantage and voltagrid→vantage keep `stargate` (multi-site engagements)
+- **`Profiler.html` v01.71w → v01.72w** — ⚑ chip tooltips on sub-campus pins now name the umbrella program ("part of Stargate")
+
+### Notes
+- Post-write passes clean: registry sync (0 drift), graph rebuilt (curated edges carry the new pins), global v7 validation 42 pins / 0 errors
+- Fleet pin count 28 → 42; every pin was verified against the relationship's own note/context before writing — 8 scanner hits were rejected as false positives or peer-comparison mentions
 
 ## [v03.93r] — 2026-08-30 10:07:41 PM EST
 

@@ -210,7 +210,6 @@
    "context": "Three verified layers: the June 20, 2024 supply agreement for 3 GWh of ∞Block 5 MWh containers (314 Ah cells, delivery by end-2025 — timing that landed the equipment inside the pre-2026 FEOC safe-harbor window, CTO Michael Geier quoted); Jupiter's naming in Hithium's HKEX prospectus partner roster; and the confirmed design win at Trimount, Everett MA — the largest planned BESS in New England (700 MW/2,800 MWh, Hithium 5.015 MWh units, final EFSB approval Feb 27, 2026, target 2027).\n\nThe asymmetry is deliberate: Jupiter's own channels have never mentioned Hithium while publicly messaging domestic content (Energy Vault domestic-content LOI, Peak Energy sodium-ion agreement up to 4.75 GWh, financing language earmarking 'domestic battery storage procurement') — the template for how a top-tier US buyer manages a Chinese supplier post-FEOC: buy big quietly inside the safe-harbor window, never co-market, hedge loudly.",
    "source": "https://www.solarbeglobal.com/hithium-signs-3-gwh-battery-storage-supply-deal-with-jupiter-power/",
    "via": "∞Block",
-   "project": "trimount",
    "status": "active",
    "since": "2024-06",
    "scale": "3 GWh + 2.8 GWh Trimount"
@@ -416,5 +415,5 @@
   }
  ],
  "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "profileVersion": 3
 }
