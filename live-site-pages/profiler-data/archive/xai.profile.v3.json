@@ -1,5 +1,5 @@
 {
- "schemaVersion": 7,
+ "schemaVersion": 6,
  "slug": "xai",
  "name": "xAI",
  "legalName": "X.AI Corp. — since February 2, 2026 a wholly-owned SpaceX subsidiary (combined entity branded 'SpaceXAI')",
@@ -157,8 +157,6 @@
    "note": "Megapack supplier at every campus — and a $2B investor (January 2026).",
    "context": "Tesla Energy supplies Megapack storage across xAI's build: 168 Megapacks at Colossus 1 (150MW integrated per MLGW), ~200 more (~1 GWh) planned buffering Colossus 2 alongside the gas fleet. In January 2026 Tesla disclosed a $2B investment in xAI on round terms (after the November 2025 shareholder advisory vote failed on abstentions), plus a framework agreement for evaluating AI collaborations.",
    "source": "https://dataconomy.com/2026/01/29/tesla-defies-shareholder-vote-to-invest-2-billion-in-musks-xai/",
-   "via": "Megapack",
-   "project": "colossus",
    "status": "active",
    "since": "2024",
    "scale": "~1.15 GWh deployed/planned + $2B investment"
@@ -432,6 +430,6 @@
    "url": "https://x.ai/memphis"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 4
+ "lastUpdated": "2026-08-29",
+ "profileVersion": 3
 }

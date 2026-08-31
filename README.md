@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-30 09:31:43 PM EST` · Repo version: `v03.91r`
+Last updated: `2026-08-30 09:44:57 PM EST` · Repo version: `v03.92r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -319,6 +319,7 @@ Last updated: `2026-08-30 09:31:43 PM EST` · Repo version: `v03.91r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v1.json">tesla.profile.v1.json</a> — Archived v1 dossier (Tesla)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v2.json">tesla.profile.v2.json</a> — Archived v2 dossier (Tesla)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v3.json">tesla.profile.v3.json</a> — Archived v3 dossier (Tesla)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/tesla.profile.v5.json">tesla.profile.v5.json</a> — Archived v5 dossier (Tesla)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/turner-construction.profile.v1.json">turner-construction.profile.v1.json</a> — Archived v1 dossier (Turner Construction)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vantage.profile.v1.json">vantage.profile.v1.json</a> — Archived v1 dossier (Vantage Data Centers)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/vertiv.profile.v1.json">vertiv.profile.v1.json</a> — Archived v1 dossier (Vertiv)
@@ -327,6 +328,7 @@ Last updated: `2026-08-30 09:31:43 PM EST` · Repo version: `v03.91r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/wartsila.profile.v3.json">wartsila.profile.v3.json</a> — Archived v3 dossier (Wärtsilä)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/xai.profile.v1.json">xai.profile.v1.json</a> — Archived v1 dossier (xAI)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/xai.profile.v2.json">xai.profile.v2.json</a> — Archived v2 dossier (xAI)
+│   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/xai.profile.v3.json">xai.profile.v3.json</a> — Archived v3 dossier (xAI)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v1.json">zhonhen.profile.v1.json</a> — Archived v1 dossier (Zhonhen Electric)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v2.json">zhonhen.profile.v2.json</a> — Archived v2 dossier (Zhonhen Electric)
 │   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/archive/zhonhen.profile.v3.json">zhonhen.profile.v3.json</a> — Archived v3 dossier (Zhonhen Electric)

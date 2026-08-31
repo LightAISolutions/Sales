@@ -1,5 +1,5 @@
 {
- "schemaVersion": 7,
+ "schemaVersion": 6,
  "slug": "tesla",
  "name": "Tesla, Inc.",
  "shortName": "Tesla",
@@ -200,7 +200,6 @@
    "note": "Primary LFP cell source for Megapack — dependence now being reduced by in-house Nevada cells made on CATL equipment.",
    "context": "Megapack 2XL runs primarily on CATL LFP cells, and Tesla's ~7 GWh Sparks, NV cell plant — which shipped its first US-made-cell Megapacks in July 2026 — was itself built with CATL equipment. The dossier's judgment: onshored LFP production reduces but does not eliminate structural dependence on CATL, with tariff hedging the near-term driver; the Megapack 3's in-house 2.8L cell is the next-generation reduction step.",
    "source": "https://teslanorth.com/2026/07/31/tesla-begins-shipping-first-megapacks-powered-by-american-mad",
-   "via": "Megapack",
    "status": "active",
    "scale": "Primary storage-cell source"
   },
@@ -210,7 +209,6 @@
    "note": "Confirmed Megapack 3 LFP cell supplier — $4.3B, Lansing MI production from 2027.",
    "context": "May 2026 confirmation (after eight months of 'mystery buyer' speculation): LG Energy Solution supplies Megapack 3 LFP cells under a $4.3B contract with Lansing, Michigan production from 2027 — Tesla onshoring Megapack cells to a Korean supplier, the FEOC thesis in action.",
    "source": "Confirmed via LG Energy Solution disclosures (May 2026)",
-   "via": "Megapack 3",
    "status": "active",
    "since": "2026",
    "scale": "$4.3B"
@@ -272,22 +270,6 @@
    "context": "Fluence's Smartstack (7→10 MWh, ~680 MWh/acre claimed) competes with Megablock at the site-architecture level, and Mosaic contests Autobidder in market-bidding software. The two are the only at-scale Western integrators with US domestic-content paths — allies in policy, rivals in every bid.",
    "source": "Dossier competitive assessment — AC blocks",
    "status": "active"
-  }
- ],
- "policyExposure": [
-  {
-   "regime": "US–China battery tariffs",
-   "status": "in-effect",
-   "exposure": "Megapack has run primarily on China-sourced CATL LFP cells, and Tesla multi-sources cells from the US, Southeast Asia, and China explicitly to manage tariff and supply-chain exposure; Q2 2025 energy margins were flattered by one-time tariff-related benefits, and Tesla's competitive positioning leans on non-China supply for tariff-sensitive Western buyers.",
-   "mitigation": "A stated onshoring sequence: the ~7 GWh Sparks, NV plant shipped the first Megapacks with US-made LFP cells in July 2026; EVE Energy ESS cells ship from Malaysia from 2026; LG Energy Solution Megapack 3 LFP cells come from Lansing, MI from 2027; Megafactory Shanghai serves APAC/EMEA from tariff-advantaged local supply.",
-   "source": "https://teslanorth.com/2026/07/31/tesla-begins-shipping-first-megapacks-powered-by-american-made-lfp-cells/"
-  },
-  {
-   "regime": "FEOC restrictions",
-   "status": "in-effect",
-   "exposure": "Tesla's storage-cell chain has been anchored on China-based CATL — a sourcing profile that FEOC-linked eligibility rules on US storage projects bear on directly; the dossier reads the LG Lansing deal as the FEOC thesis in action.",
-   "mitigation": "The $4.3B LG Energy Solution contract moves Megapack 3 LFP cell supply to a Korean supplier producing in Lansing, Michigan from 2027, alongside in-house Nevada LFP cells.",
-   "source": "Confirmed via LG Energy Solution disclosures (May 2026)"
   }
  ],
  "technicalSpecs": [
@@ -763,6 +745,6 @@
    "url": "https://energylibrary.tesla.com/docs/Public/EnergyStorage/Powerwall/3/InstallManual/BackupSwitch/en-us/GUID-EC527BC7-4750-4425-BBC4-DB8C000339B3.html"
   }
  ],
- "lastUpdated": "2026-08-30",
- "profileVersion": 6
+ "lastUpdated": "2026-08-29",
+ "profileVersion": 5
 }

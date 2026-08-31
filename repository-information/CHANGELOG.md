@@ -3,11 +3,27 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.92r] — 2026-08-30 09:44:57 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+First real schema-v7 data — the Tesla and xAI dossiers backfilled so every Phase 4 surface renders live.
+
+### Changed
+- **Tesla dossier → schema v7, profileVersion 6** (`live-site-pages/profiler-data/tesla.profile.json`; outgoing v5 archived as `archive/tesla.profile.v5.json` with an index entry) — added `policyExposure[]` with two regimes built strictly from the dossier's existing sourced prose: `US–China battery tariffs` (in-effect; China-sourced CATL cell dependence and multi-sourcing exposure, with the stated onshoring sequence — Sparks NV, EVE Malaysia, LG Lansing, Megafactory Shanghai — as mitigation, TeslaNorth source) and `FEOC restrictions` (in-effect; CATL-anchored cell chain with the $4.3B LG Lansing contract as mitigation, LG disclosure source); added `via` deal metadata to the CATL (`"Megapack"`) and LG Energy Solution (`"Megapack 3"`) relationships
+- **xAI dossier → schema v7, profileVersion 4** (`xai.profile.json`; outgoing v3 archived as `archive/xai.profile.v3.json`) — the Tesla relationship now carries `via: "Megapack"` and `project: "colossus"`, the first named-project pin against the new `profiler-projects.json` registry
+- **Post-write passes** — `sync-profiler-registry.py` (2 entries updated) and `build-profiler-graph.py` rebuilt `profiler-graph.json` (472 edges; the tesla–xai curated edge now carries `via`/`project`, zero unregistered-project warnings)
+- **README tree** — archive entries added for `tesla.profile.v5.json` and `xai.profile.v3.json`
+
+### Notes
+- Pre-existing archive-trail gap flagged, deliberately NOT repaired piecemeal: `tesla.profile.v4.json` was never archived when the 88-dossier relationships-curation pass (v03.67r) bumped Tesla v4→v5 (the index still ends at v3 `supersededBy: 4`), while the same pass did archive xAI's outgoing v2 — surfaced to the developer for a decision on recovering it from git history
+- Verified: Playwright renders of the live Tesla Policy & Regulatory Exposure tab and the xAI Relationships tab using the real revised data (zero page errors); both profile JSONs and the archive index parse cleanly
 
 ## [v03.91r] — 2026-08-30 09:31:43 PM EST
 
