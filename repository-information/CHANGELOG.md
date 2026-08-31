@@ -3,11 +3,24 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v03.96r] — 2026-08-30 10:53:59 PM EST
+
+> **Prompt:** "Continue with your recommendation, then remember session."
+
+The Phase 5 handoff (the greenlit recommendation, executed as a fresh-session spec rather than an in-session build, per the recommendation's own framing) plus the session-context save.
+
+### Added
+- **`repository-information/PHASE5-LEARNING-LAYER-PLAN.md`** — the detailed Phase 5 spec, re-derived from the current codebase since only the one-line scope survived the gap-analysis transcript: current-state inventory (62 study.json v1 files / 384 sections / 802 flashcards vs the fetch-decoupled `gdRenderDoc` guidance engine), the build order (study.json v2 on the guidance section-kind vocabulary → renderer swap with a study shell → `profiler-concepts.json` registry → v1 adapter + optional one-shot lift → the approved Layer 3 Scraper-seed rider → docs/verification), open questions, and the Phase 6 Classroom design-gate boundary
+
+### Changed
+- **`repository-information/SESSION-CONTEXT.md`** — Remember Session: the strategic/Phases-0–3 entry rotated to Previous Sessions (2-session cap dropped the Scraper-reliability entry), new Latest Session covering v03.91r–v03.96r (Phase 4 build, fleet backfill, pin layer, report automation, this handoff) with the next-session recommendation `build phase 5`
+- **README tree** — entry for the new plan doc
 
 ## [v03.95r] — 2026-08-30 10:42:56 PM EST
 

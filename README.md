@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-08-30 10:42:56 PM EST` · Repo version: `v03.95r`
+Last updated: `2026-08-30 10:53:59 PM EST` · Repo version: `v03.96r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -617,6 +617,7 @@ Last updated: `2026-08-30 10:42:56 PM EST` · Repo version: `v03.95r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/HIPAA-CODING-REQUIREMENTS.md">HIPAA-CODING-REQUIREMENTS.md</a> — Complete HIPAA regulatory reference for coding (Security Rule, Privacy Rule, Breach Notification, 2025 NPRM, implementation checklist)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/IMPROVEMENTS.md">IMPROVEMENTS.md</a>         — [template · initialized] Potential improvements
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/KNOWN-CONSTRAINTS-AND-FIXES.md">KNOWN-CONSTRAINTS-AND-FIXES.md</a>    — Architectural constraints &amp; resolved bug fixes (GAS double-iframe, postMessage, HMAC, deploy webhook)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PHASE5-LEARNING-LAYER-PLAN.md">PHASE5-LEARNING-LAYER-PLAN.md</a> — Phase 5 spec: study.json v2 on the guidance engine + concepts registry (greenlit for a fresh-session build)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-STYLES.md">PROFILER-STYLES.md</a>      — Profiler dossier writing-style registry (active style + Default/Bloomberg/alternative styles with mock-ups)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/industry-guidance">industry-guidance/</a>   — Analyses of industry-wide documents feeding the Profiler app's admin-only Industry Guidance modules (not deployed)
