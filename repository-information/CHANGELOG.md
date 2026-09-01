@@ -3,11 +3,44 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 82/100`
+`Sections: 83/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.03r] — 2026-09-01 02:20:46 AM EST
+
+> **Prompt:** "set up acl health monitoring"
+
+### Added
+
+**The sign-in outage is monitored now.** All three incidents were discovered the same way — the developer hitting a wall — and the v04.02r probe that would have caught each of them a morning earlier had nothing watching it.
+
+#### `scripts/check-acl-health.sh`
+
+- Probes `?action=api&op=aclhealth` on every deployed project that serves it and answers "can sign-in read the Master ACL right now?" in about two seconds. Exit **0** healthy, **1** unhealthy, **2** nothing-probed.
+- **Exit 2 is a failure, not a pass.** A monitor that reports success when it checked nothing is worse than no monitor, because it is trusted. Nothing probed means either the probe reached no deployed project or the config files lost their deployment ids — both worth investigating.
+- **The probed set is discovered, not hardcoded** — any `.gs` dispatching `op=aclhealth` is picked up, so adding the probe to another project enrolls it with no edit here. Projects whose `DEPLOYMENT_ID` is still the placeholder are skipped as not-deployed rather than counted as failures.
+- **A non-JSON or empty body counts as a failure.** The probe is unauthenticated and always answers when the deployment is alive, so no answer means the deployment is unreachable — which blocks sign-in just as thoroughly as an unreadable ACL, and would otherwise have been swallowed as a parse error.
+- Reports each project's **grace snapshot state** (users covered, age, armed or not) and exits **3** internally for armed-but-empty, surfaced as a non-fatal warning. Sign-in can be perfectly healthy while the safety net is not, and that specific combination is what turns the next lapse back into a hard lockout — it deserves to be visible before the lapse, not after.
+- Optional project-name filter (`bash scripts/check-acl-health.sh receipts`, case-insensitive) for checking one app by hand.
+- On failure it prints the repair inline — `diagnoseAuthorization()`, private window as the script account, approve every checkbox — and states plainly that an `acl_unreachable` permissions message is account-level, so the spreadsheet, its tabs and its rows are not worth checking. Past incidents lost hours to exactly that.
+
+#### Routine — `ACL health check (daily)`
+
+- `trig_01GeTqB8xp5nG8FCC139Bgr9`, cron `0 10 * * *` (06:00 ET), fresh session per fire, push + email notifications. Runs the script and is instructed to stay **silent** on a healthy run: noise on the ~364 quiet days is what trains someone to ignore the one alert that matters.
+- **Deliberately outside Google.** A GAS-side time-driven check was considered and rejected: it would sit in the same account whose grant keeps lapsing — the one failure domain a monitor must not share with what it monitors — and `script.scriptapp` is systemically missing on pre-v01.82r projects, so such a trigger could silently never install and the absence would look exactly like health.
+
+### Changed
+
+- `.claude/rules/gas-scripts-reference.md` — the "Partial OAuth Grants" section now points at the monitor, so the next person diagnosing this checks it before re-deriving the mechanism.
+- `README.md` — new script registered in the structure tree. `REPO-ARCHITECTURE.md` deliberately **not** changed: its diagram depicts the three *template* scripts only, and six existing utility scripts are already absent by that same convention.
+
+### Verified
+
+- `bash -n` clean; run live against both deployments — `Profiler v01.31g acl_ok`, `Receipts v01.29g acl_ok [grace: 16 users, 333s old, armed]`, exit 0.
+- Every branch exercised against synthetic payloads rather than assumed: unhealthy (exit 1, renders stage/reason/detail), empty response (exit 1, `<empty response>`), healthy-but-unarmed-snapshot (exit 3), and the case-insensitive project filter.
 
 ## [v04.02r] — 2026-09-01 01:51:37 AM EST
 

@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-01 01:51:37 AM EST` · Repo version: `v04.02r`
+Last updated: `2026-09-01 02:20:46 AM EST` · Repo version: `v04.03r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -552,6 +552,7 @@ Last updated: `2026-09-01 01:51:37 AM EST` · Repo version: `v04.02r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/setup-gas-project.sh">setup-gas-project.sh</a>    — [template] GAS project file creation script
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/compute-csp-hash.sh">compute-csp-hash.sh</a>     — [template] CSP SHA-256 hash computation for inline scripts
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-gas-inner-scripts.js">check-gas-inner-scripts.js</a> — CI check: validates served inner &lt;script&gt; syntax in GAS files
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-acl-health.sh">check-acl-health.sh</a>     — Sign-in health probe: asks every deployed GAS project whether it can read the Master ACL right now (run by the daily ACL health Routine; also runnable by hand)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-profiler-graph.py">build-profiler-graph.py</a> — Profiler relationship-graph builder (merges both dossiers' curated links + full-sentence cross-mention evidence into profiler-graph.json; --check reports drift) — required after any profile write
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-profiler-reports.py">check-profiler-reports.py</a> — Profiler report verification (citation resolution against dossier sources, provenance tiers, KPI figure checks, index reconciliation) — required after any report write
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/playwright-harness.py">playwright-harness.py</a>   — Chromium smoke-test harness for all projects (load + console-error + screenshot)
