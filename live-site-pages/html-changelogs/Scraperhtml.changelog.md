@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.71w] — 2026-09-01 05:38:51 PM EST — v04.08r
+
+### Fixed
+- "Why thin?" now delivers its answer however long the desk takes to reply. It previously gave up after 25 seconds and, worse, threw away a reply that arrived after that — so it never once rendered when the desk was slow, even though the report had completed
+- While waiting, the panel shows a live elapsed count and says what the wait most likely is, instead of a message that reads as a failure
+- The panel's subtitle now shows how long the desk took and how long the round trip took, so a slow report can be told apart from a slow connection at a glance
 
 ## [v01.70w] — 2026-09-01 04:30:02 PM EST — v04.07r
 

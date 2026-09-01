@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 44/50`
+`Sections: 45/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.98g] — 2026-09-01 05:38:51 PM EST — v04.08r
+
+### Fixed
+- The edition explainer now reads only the most recent stored stories rather than the entire history, so it stays fast as the archive grows. An edition older than that window reports that it can no longer be explained, as the other archive views already do
+- The explainer reports how long it took to assemble, so slowness can be attributed correctly in the app
 
 ## [v01.97g] — 2026-09-01 04:30:02 PM EST — v04.07r
 

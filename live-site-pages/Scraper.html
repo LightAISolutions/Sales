@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.70w">
+  <meta name="build-version" content="v01.71w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -2237,24 +2237,44 @@
         body.appendChild(d);
       };
       note('Reading this edition\u2019s intake\u2026');
-      // A deadline of its own. The transport aborts a POST at 90s and then
-      // silently retries it as a GET for another 90s, so a slow call showed
-      // "Reading…" for three minutes with nothing said — which is how this
-      // overlay looked hung when it was merely waiting. The request is left to
-      // finish; only the message stops pretending progress is being made.
+      // THE DEADLINE IS A PROGRESS NOTE, NOT A VERDICT.
+      //
+      // This report has never once rendered for the developer, across two
+      // fixes. The first version read the entire intake tab and hung into the
+      // transport's 90s+90s abort. The fix narrowed the read and added a 25s
+      // deadline — whose comment promised "the request is left to finish; only
+      // the message stops pretending progress is being made". The code did the
+      // opposite: the deadline set `settled = true`, and the success handler's
+      // first line was `if (settled) return;`. A response landing at second 26
+      // was thrown away unread. The report went from "hangs forever" to "gives
+      // up at 25s and discards the answer" — never once through to a render.
+      //
+      // Why 25s was too short is an inference, stated as one: the script is
+      // ~820 KB, and a cold Apps Script container has to compile all of it
+      // before doPost runs. A cold trip can take 10-20s, and the transport's
+      // POST-then-GET fallback can pay it twice. The developer tests right
+      // after a deploy — precisely when every container is cold.
+      //
+      // So: no `settled` on the timer at all. The timer only rewrites the note
+      // with a live elapsed count, so a wait is visibly a wait and not a hang,
+      // and the one thing that ends the request is the request itself — its
+      // resolution, or the transport's own rejection after its retries.
+      var t0 = Date.now();
       var settled = false;
-      var deadline = setTimeout(function() {
-        if (settled) return;
-        settled = true;
-        note('This is taking longer than it should. The edition may have a very '
-             + 'large intake, or the desk may be busy building. Close this and try '
-             + 'again in a moment.');
-      }, 25000);
+      var tick = setInterval(function() {
+        if (settled) { clearInterval(tick); return; }
+        var sec = Math.round((Date.now() - t0) / 1000);
+        if (sec < 8) return;
+        note('Still reading \u2014 ' + sec + 's. '
+             + (sec < 40
+                 ? 'The desk may be waking up after a deploy; this usually lands within a minute.'
+                 : 'Still waiting on the desk. The transport gives up on its own at three minutes; '
+                   + 'the result will appear here if it arrives before then.'));
+      }, 1000);
       _gasPost({ action: 'digestScoreReport', token: scToken(), digestId: digestId || '' })
         .then(function(r) {
-          if (settled) return;
           settled = true;
-          clearTimeout(deadline);
+          clearInterval(tick);
           if (!r || !r.success) {
             note(r && r.error === 'no_intake'
               ? 'The stories this edition was built from are no longer stored, so it '
@@ -2265,7 +2285,15 @@
             return;
           }
           body.textContent = '';
-          sub.textContent = r.relevant + ' relevant of ' + r.intake + ' scanned';
+          // Both timings, so the next slow case is diagnosable from the panel:
+          // a large server number is the sheet read, a large gap between the
+          // two is the transport (cold container, redirect, or a POST→GET
+          // fallback). That distinction took a session to establish; it
+          // should never need establishing again.
+          var wall = Math.round((Date.now() - t0) / 1000);
+          sub.textContent = r.relevant + ' relevant of ' + r.intake + ' scanned'
+            + (r.ms != null ? ' \u00b7 desk ' + (Math.round(r.ms / 100) / 10) + 's' : '')
+            + ' \u00b7 round trip ' + wall + 's';
 
           var v = WD_SR_VERDICTS[r.verdict] || WD_SR_VERDICTS['thin-day'];
           var h = document.createElement('div');
@@ -2414,10 +2442,14 @@
           });
         })
         .catch(function(err) {
-          if (settled) return;
           settled = true;
-          clearTimeout(deadline);
-          note('Could not read this edition (' + ((err && err.message) || err) + ').');
+          clearInterval(tick);
+          var m = String((err && err.message) || err || '');
+          note(/90s/.test(m)
+            ? 'The desk did not answer within the transport\u2019s limit (three minutes across '
+              + 'its retries). That is the transport giving up, not the report failing \u2014 '
+              + 'try once more; a second call after a deploy usually lands on a warm container.'
+            : 'Could not read this edition (' + m + ').');
         });
     }
 

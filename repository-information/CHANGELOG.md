@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 87/100`
+`Sections: 88/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.08r] — 2026-09-01 05:38:51 PM EST
+
+> **Prompt:** "I build a fresh manual build and clicked \"Why Thin?\" and got the attached screenshot. For what it's worth, I have never once successfully ran \"Why Thin?\" since it was created. It always gave me some excuse as to why it cannot deliver anything. Analyze what's going on and fix it."
+
+### Fixed
+
+**"Never once" was literally true, and the reason is on one line.** The report's 25-second client deadline set `settled = true`, and the success handler's first line was `if (settled) return;`. A reply landing at second 26 was **thrown away unread**. The comment on that very deadline promised the opposite — *"the request is left to finish; only the message stops pretending progress is being made"* — and the code did the reverse. Intent and implementation contradicted each other; the implementation won.
+
+The history explains why nobody caught it. The first version read the entire intake tab and hung into the transport's 90 s + 90 s abort. The fix narrowed the read and added the deadline. So the report went from *hangs forever* to *gives up at 25 s and discards the answer* — never once through to a render, across two fixes. Each fix moved the wall; neither removed the discard.
+
+**Why 25 s was too short is an inference, stated as one.** `Scraper.gs` is ~820 KB, and a cold Apps Script container compiles all of it before `doPost` runs — 10–20 s is plausible, and the transport's POST-then-GET fallback can pay it twice. The developer tests immediately after a deploy, which is precisely when every container is cold. Every other call in the app tolerates this because none of them has a deadline; "Why thin?" was the only one honest enough to give up, and the only one that punished the honesty by discarding the result.
+
+#### `Scraper.html` — v01.71w
+
+- The timer no longer settles anything. It rewrites the note with a **live elapsed count** from 8 s on ("Still reading — 14s. The desk may be waking up after a deploy…"), so a wait is visibly a wait and not a hang. The only things that end the request are its own resolution or the transport's rejection after its retries
+- A transport abort (`no reply after 90s`) is now explained as the transport, with a retry hint — a second call after a deploy usually lands on a warm container
+- The subtitle shows **desk time and round-trip time** side by side (`16 relevant of 112 scanned · desk 1.8s · round trip 10s`), so the next slow case is diagnosable from the panel: a large desk number is the sheet read, a large gap between the two is the transport
+
+#### `Scraper.gs` — v01.98g
+
+- `scDigestScoreRows_` **bounded to the newest `SCRAPER_ARCHIVE_SCAN_ROWS` (8 000) intake rows.** That constant's own comment lists "Why thin?" among the paths it already fixed — but this reader still read column 1 from row 2 to the end. With `SCRAPER_INTAKE_KEEP_EDITIONS = 240` and three editions a day, that column heads toward ~30 000 cells for a report that needs the newest hundred. Builds append, so a recent edition is in the tail by construction; one older than the window reports `no_intake` exactly as the other archive paths do
+- `ms` — server-side wall time in the payload, feeding the subtitle above
+
+### Verified
+
+- **Late-result path, headless:** a mocked 10-second reply shows the live count at 9 s (no give-up wording), then **renders** with the source table, FERC row and silent-source list; a 1.5-second reply renders directly; a mocked `no reply after 90s` rejection shows the transport explanation. No page errors
+- **Bounded reader, mock sheet:** a 30 000-row tab with the edition in the tail — all 51 rows found, id read capped at 8 000 cells starting at sheet row 22 002, span reads at the edition's true row; an edition older than the window returns nothing; today's ~1 500-row tab reads the whole column as before
+- `node --check` on the `.gs`; both page inline blocks parse; `check-gas-inner-scripts.js` clean
 
 ## [v04.07r] — 2026-09-01 04:30:02 PM EST
 

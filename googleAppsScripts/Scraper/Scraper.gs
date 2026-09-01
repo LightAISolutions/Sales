@@ -1,4 +1,4 @@
-var VERSION = "v01.97g";
+var VERSION = "v01.98g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3587,9 +3587,19 @@ function rubricPreview(sessionToken, payloadJson) {
     contiguous — but one column of ids carries no large cells. */
 function scDigestScoreRows_(ss, digestId) {
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
-  var n = intake ? intake.getLastRow() - 1 : 0;
-  if (n < 1) return [];
-  var ids = intake.getRange(2, 1, n, 1).getValues();
+  var total = intake ? intake.getLastRow() - 1 : 0;
+  if (total < 1) return [];
+  // BOUNDED TO THE NEWEST ROWS — the bound this reader was documented as
+  // already having and did not. SCRAPER_ARCHIVE_SCAN_ROWS's own comment lists
+  // "Why thin?" among the paths it fixed; this function still read column 1
+  // from row 2 to the end. With SCRAPER_INTAKE_KEEP_EDITIONS at 240 and three
+  // editions a day, that column heads toward ~30,000 cells for a report that
+  // needs the newest hundred. Builds append, so an edition recent enough to
+  // be worth explaining is in the tail by construction; one older than the
+  // window reports no_intake, exactly as the other archive paths do.
+  var n = Math.min(total, SCRAPER_ARCHIVE_SCAN_ROWS);
+  var top = total - n + 2;                               // sheet row of the first id read
+  var ids = intake.getRange(top, 1, n, 1).getValues();
   var first = -1, last = -1;
   for (var i = 0; i < n; i++) {
     if (String(ids[i][0]) !== digestId) continue;
@@ -3598,7 +3608,7 @@ function scDigestScoreRows_(ss, digestId) {
   }
   if (first === -1) return [];
   var span = last - first + 1;
-  var base = first + 2;                                  // sheet row of `first`
+  var base = top + first;                                // sheet row of `first`
   var titles = intake.getRange(base, 3, span, 2).getValues();   // title, source
   var scores = intake.getRange(base, 7, span, 2).getValues();   // score, signals
   var flags  = intake.getRange(base, 11, span, 1).getValues();  // backstop
@@ -3632,6 +3642,7 @@ function scDigestScoreRows_(ss, digestId) {
     part — a dozen items sitting at 50-54 says the bar is the constraint, while
     an empty band says the fetch was. */
 function digestScoreReport(sessionToken, digestId) {
+  var t0 = Date.now();
   validateSessionForData(sessionToken, 'digestScoreReport');
   var ss = scraperSs_();
   ensureScraperTabs_(ss);
@@ -3710,6 +3721,10 @@ function digestScoreReport(sessionToken, digestId) {
       return !bySource[src.name] && !SCRAPER_RETIRED_SOURCES[src.key];
     }).map(function(src) { return src.name; }),
     nearMiss: nearMiss.slice(0, 20),
+    // Server-side wall time, so the panel can split "the sheet read was slow"
+    // from "the transport was slow" — which is the distinction this report's
+    // whole history turned on.
+    ms: Date.now() - t0,
     // The one-line read, so the answer does not depend on interpreting bands.
     verdict: relevant >= 10 ? 'healthy'
       : (bands['50-54'] + bands['40-49']) >= 8 ? 'bar-bound'
