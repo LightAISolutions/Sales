@@ -5,6 +5,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 > **Note on stale-context auto-reconstruction** — when a session starts and this file's `Repo version:` doesn't match the current repo version, Claude reconstructs the missing entry from CHANGELOG.md and commits it **without pushing**. The commit rides along with the session's first user-task commit on the next push. If a session ends before any user-task push happens, the reconstructed entry stays **local-only** and the next session will just re-reconstruct from CHANGELOG if still stale. This is intentional — pushing a dedicated reconstruction commit on its own would force every subsequent user push in the same session to wait for the auto-merge workflow to finish before it could push too (push-once enforcement). The reconstructed entry is a convenience hint, not load-bearing state, so the small persistence risk is a fair trade.
 
 ## Latest Session
+**Date:** 2026-09-01 01:51:37 AM EST
+**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
+**Repo version:** v04.02r
+**Branch:** `claude/receipts-app-bug-73prik`
+
+**What was done (v04.00r–v04.01r, reconstructed from CHANGELOG):**
+
+- **v04.00r — Monday's first unattended Scraper run worked; the delivery gate around it did not.** The three-day delivery window (added to end a midnight give-up) had silently split the weekday rule in two: the pass asked "is today a run day?" but never "is the EDITION for a run day?", so the weekend's manual builds mailed alongside Monday's. Fixed with an off-day gate applied in both the grouping and send loops, off-day rows stamped `'off-day'` rather than skipped, and a DST-proof `scIsoDayOfDateKey_` that deliberately avoids `new Date(key)`. The window itself was kept — it is what carries a missed Friday edition to Monday
+- **v04.01r — weekend builds unnumbered, and same-story clustering.** `scIssueNumbers_` ranks run-day dates only, retroactively moving Monday from No. 004 to No. 002; `scClusterStories_` collapses multi-outlet coverage of one event onto the most reliable source, with event category as a separator rather than a requirement and a shared-distinctive-token test rather than a similarity ratio
+
+**What this session did (v04.02r):**
+
+- **Receipts sign-in outage, third of its kind — fixed the lockout, not the grant.** A live probe of the Profiler deployment (different script, same ACL spreadsheet) returned `acl_unreachable` with "You do not have permission to call SpreadsheetApp.openById. Required permissions: .../auth/spreadsheets" — proving the failure is an account-level OAuth grant gap hitting every auth app at once, not a Receipts defect and not the spreadsheet
+- Added a **last-known-good ACL snapshot** to the shared AUTH block (auth template + all 7 auth projects): a successful read stores the page's allow-list in Script Properties; an unreadable ACL is answered from it instead of denying everyone. Reproduces only "yes" verdicts the real ACL already gave, never denies from the snapshot, 24h ceiling, `ACL_GRACE_ENABLED` off-switch, every grace grant audited
+- Ported **`aclHealthProbe_`** to `Receipts.gs` (`GET ?action=api&op=aclhealth`) — Profiler had it, Receipts did not, which is why all three Receipts incidents cost an Apps Script editor round-trip. Extended with a `grace` field reporting snapshot presence, coverage and age
+
+**Where we left off:**
+
+- All changes committed and merged to main
+- **The developer still has one manual step in Google that no commit can do**: run `diagnoseAuthorization()` from the Receipts Apps Script editor, open the authorization URL it prints, and approve **every** checkbox as the script account. Until then the ACL stays unreadable — the grace snapshot only masks it for users already recorded, and a first-ever sign-in on a project with no snapshot yet will still be denied
+
+**Key decisions made:**
+
+- **Availability beats strict denial here, deliberately.** A revoked user can retain access for up to 24h past the last good read. Receipts runs the `hipaa` preset, so this is a real trade — flagged in the CHANGELOG as the one part of the push worth a second opinion. `ACL_GRACE_ENABLED = false` restores the old behavior
+- **The grace verdict is not cached** — a cached grant would outlive the outage by the full 10-minute access-cache TTL
+- **Fixed in the shared AUTH block, not just Receipts.** `checkSpreadsheetAccess` was byte-identical across the template and all seven projects, and the outage was fleet-wide; patching only Receipts would have created drift that the next template propagation would clobber
+- **Not attempted: pinning `oauthScopes` from the deploy path.** Considered as a recurrence fix, rejected — the deploy path is the most dangerous code in the repo, an under-declared pinned list would brick self-update fleet-wide, and the manifest is already preserved verbatim by `pullAndDeployFromGitHub()`. The recurrence is in the *grant*, not the declaration
+
+**Active context:**
+
+- Branch `claude/receipts-app-bug-73prik` · repo **v04.02r** · Receipts GAS **v01.29g**, Profiler **v01.31g**, Scraper **v01.93g**, MasterACL **v01.14g**, globalacl **v01.08g**, testauth\* **v01.07g**
+- Capacity after this push: repo CHANGELOG **82/100** (the 2026-08-27 group, 20 sections, rotated to the archive with SHA enrichment; archive now 220); Scraper GAS 40/50; Profiler GAS 31/50; Receipts GAS 29/50
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
+- **Sandbox note for future sessions in this environment**: the auto-mode classifier blocks most bulk file mutation from Bash (heredoc-to-file, running scripts from the scratchpad, many compound commands). Simple `sed -i 's///'`, single redirects, `cp`, and the Edit/Write tools all work. `node --check` cannot read `.gs` (Node 22 rejects the extension — it fails on untouched files too); use `node --check --input-type=commonjs < file`
+
+**Recommendation for next session:**
+
+- Confirm the Google-side grant is repaired and the fleet is healthy: curl the Receipts `aclhealth` probe shipped this push (`?action=api&op=aclhealth` on its `/exec` URL) and expect `"ok":true,"reason":"acl_ok"`. If it still reports `acl_unreachable`, the `diagnoseAuthorization()` re-consent has not been done yet and nothing else should be built on top of it
+
+**To continue:** type `check acl health`
+
+## Previous Sessions
+
+### Session — 2026-08-31 (Profiler analyst access retune + model-choice analysis, v03.99r)
 **Date:** 2026-08-31 05:32:16 AM EST
 **Repo version:** v03.99r
 **Branch:** `claude/dossier-analyst-access-fix-v437ym`
@@ -46,43 +90,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Build **Classroom v1 C0** per `repository-information/PHASE6-CLASSROOM-DESIGN.md` — the scaffold half that remains (`setup-gas-project.sh` → Classroom app on the auth template, Classroom access matrix, masthead cross-links between the apps); the Profiler retune half is already shipped. Stay on Opus 5 at `xhigh`, and expect that push to rotate the repo CHANGELOG
 
 **To continue:** type `build classroom v1`
-
-## Previous Sessions
-
-### Session — 2026-08-31 (Phase 5 learning layer built + Phase 6 Classroom design gate, v03.97r–v03.98r)
-
-**Date:** 2026-08-31 04:11:48 AM EST
-**Repo version:** v03.98r
-**Branch:** `claude/bess-aidc-phase-5-learning-gdc1f0`
-
-**What we worked on (Phase 5 built + Phase 6 design gate closed, v03.97r–v03.98r):**
-
-- **v03.97r — Phase 5 (learning-layer unification) built end-to-end** per the plan doc: Study Guide **schema v2** on the guidance section-kind vocabulary (PROFILER-SCHEMA.md rewritten; v1 renderable forever via the in-page `ovStudyV2` adapter); **`profiler-concepts.json`** shared public glossary seeded with 44 core concepts ({{term}} resolves doc-glossary-first → registry); `ovShowStudy` swapped onto `gdRenderDoc` with a "Study Guide" shell (v01.74w; old v1 overlay + CSS retired); `Profiler.gs` v01.29g accepts `study-<slug>` progress ids (registry-validated, pattern-checked, 80-tick cap — cross-device sync for guidance-role tiers, localStorage otherwise); **one-shot lift of all 62 guides** (384 sections, 802 flashcards, lossless, `scripts/lift-study-guides.py`); `scripts/check-profiler-study.py` validator (clean pass, wired into schema + Prep Command); **Layer 3 rider**: 8 named-project interest seeds in `Scraper.gs` v01.90g (`source: 'project:<slug>'`) + registration-time seed convention in PROFILER-SCHEMA.md. Verified: node --check, inner-scripts check, Playwright renders (lifted guide, rich-kind synthetic with registry tooltips + doc-glossary override, v1 adapter), harness smoke
-- **v03.98r — Phase 6 Classroom design gate held and closed**: four decision points put to the developer, answers reasoned through, approved design written as **`repository-information/PHASE6-CLASSROOM-DESIGN.md`** — the executable spec for the build sessions
-
-**Where we left off:**
-
-- Everything pushed and auto-merged; working tree clean. **Phases 0–5 of the 7-phase plan are DONE; the Phase 6 design gate is CLOSED** — the developer approved the plan and will build Classroom v1 in a fresh session
-- Classroom v1 = **C0–C2** per the spec: C0 scaffold (`setup-gas-project.sh` → Classroom app) + the approved Profiler analyst-tier access retune; C1 learning core (tracks/progress/study-next); C2 curriculum pipeline (scheduled authoring Routine, weekly briefing lessons, freshness gates)
-
-**Key decisions made:**
-
-- **Classroom is its own app** (`Classroom.html` + `Classroom.gs`) — recommendation deliberately reversed from "Profiler mode" once the developer stated the federated-ecosystem/quality-over-economy context; synergy via Pages data + token-gated server-to-server routes
-- **Profiler access retune approved** (not yet coded — C0's first slice): analyst loses Relationships/Network, Coverage (real server-side check in `handleNewsOp_`), and Export; viewer strict dossier-only; contributor/admin unchanged; `verify-profiler-roles.py` to be extended
-- **"Everything" content under the provenance-gating rule** — a lesson inherits the strictest gate of its inputs; field notes never become content; the deep-analysis half runs as scheduled Claude sessions, not in GAS; in-app runtime Q&A stays deliberately deferred
-- **C3 = Guidance homecoming** (developer-proposed, agreed): Industry Guidance migrates from `Profiler.gs` to Classroom after v1 verifies; **no interim Profiler→Classroom guidance route** — tracks deep-link until then; full migration checklist is in the spec
-- One-shot v1→v2 study lift confirmed by the developer's prompt phrasing and executed; `lastUpdated` values preserved (content unchanged)
-
-**Active context:**
-
-- Branch `claude/bess-aidc-phase-5-learning-gdc1f0` · repo v03.98r · Profiler page v01.74w / GAS v01.29g · Scraper page v01.68w / GAS v01.90g
-- Capacity: repo CHANGELOG 98/100 (rotation ~2–3 pushes out); **Profiler page changelog 50/50 — the C0 session's Profiler.html bump (access retune) WILL trigger its archive rotation with SHA enrichment**; Profiler GAS 29/50; Scraper GAS 37/50; toggles unchanged (START/TIMING/END On, CHAT_BOOKENDS Off)
-- Watch items: Monday 2026-08-31 06:00 ET scheduled Scraper run (first unattended corpus exercise; the 8 project seeds land in the Interests tab flagged "New topic" via the daily registry sync) and the drift Routine's first fire 2026-09-01 ~9am PST (expected: silent stand-down)
-
-**Recommendation for next session:**
-
-- **Build Classroom v1 (C0–C2)** per `repository-information/PHASE6-CLASSROOM-DESIGN.md` — C0 scaffold + Profiler access retune (that push must also rotate the Profiler page changelog, at cap), then C1 learning core, then C2 curriculum pipeline
-
-**To continue:** type `build classroom v1`
-
-Developed by: LightAISolutions
