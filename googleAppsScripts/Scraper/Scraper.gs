@@ -1,4 +1,4 @@
-var VERSION = "v01.90g";
+var VERSION = "v01.91g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1006,10 +1006,20 @@ var SCRAPER_SUBS_MILESTONE = 15;
 // ── Phase 2 reliability (2026-08-30) ────────────────────────────────────
 // Delivery looks back this many days for built-but-undelivered editions.
 // Every candidate check used to be "dated today", so an edition that missed
-// its day — a send failure at 23:5x, a weekend manual build, a day the
-// triggers were dead — was never delivered at all: the give-up was silent
-// and permanent at midnight. Three days spans a weekend, and the one-email-
-// per-edition-per-day guard still applies within each day's group.
+// its day — a send failure at 23:5x, a day the triggers were dead — was
+// never delivered at all: the give-up was silent and permanent at midnight.
+// Three days is what carries a missed FRIDAY edition across the weekend to
+// Monday's pass, which is the longest gap the weekday schedule can open.
+// The one-email-per-edition-per-day guard still applies within each day's
+// group.
+//
+// The window says how far BACK to look. It does not say every row it finds
+// is mailable: an edition dated to a non-run day is not (scDigestDeliverable
+// Date_), because the window's first version mailed the weekend's manual
+// builds alongside Monday's own edition on 2026-08-31 — three papers in one
+// inbox, two of them for days nobody works. Weekend builds remain fully
+// stored, archived and manually sendable; they are simply not part of the
+// scheduled weekday mailing.
 var SCRAPER_DIGEST_DELIVER_WINDOW_DAYS = 3;
 // ── Per-edition summary lens (developer 2026-08-28) ─────────────────────
 // Every summary used to close from one fixed viewpoint, because the prompt
@@ -4984,6 +4994,37 @@ function scIssueDateKey_(v) {
   return m ? m[1] : s;
 }
 
+/** ISO day-of-week (1=Mon … 7=Sun) for a yyyy-MM-dd issue-date key.
+
+    Deliberately NOT `new Date(key)` reformatted through SCRAPER_DIGEST_TZ:
+    that string parses as UTC midnight, which in a western timezone is the
+    PREVIOUS calendar day — a Saturday row would read as Friday and sail
+    straight through the off-day gate below. A bare date has no timezone, so
+    it is read as one: the y/m/d are pushed through Date.UTC and the weekday
+    is taken in the same frame. Pure, node-testable, and correct on both
+    sides of a DST boundary. Returns 0 for an unparseable key so callers can
+    tell "not a date" apart from any real day. */
+function scIsoDayOfDateKey_(key) {
+  var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(key || '').trim());
+  if (!m) return 0;
+  var d = new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3])));
+  if (isNaN(d.getTime())) return 0;
+  var dow = d.getUTCDay();                       // 0=Sun … 6=Sat
+  return dow === 0 ? 7 : dow;
+}
+
+/** Is an edition DATED this day allowed to be mailed at all?
+
+    The weekday gate at the top of scDigestDeliverPending_ asks what day it is
+    NOW. This asks what day the EDITION is FOR — a different question that the
+    three-day delivery window made load-bearing, and that nothing was asking.
+    See the off-day gate in scDigestDeliverPending_ for why. */
+function scDigestDeliverableDate_(dateKey) {
+  var iso = scIsoDayOfDateKey_(dateKey);
+  if (!iso) return true;                         // unparseable: behave as before
+  return SCRAPER_DIGEST_RUN_DAYS.indexOf(iso) !== -1;
+}
+
 /** Renumber every stored issue so the archive is congruent with itself.
 
     Called after a deletion and again before an edition is emailed. The read
@@ -5381,7 +5422,16 @@ function scDigestScheduledTick_() {
     row's repair day is over — it ships as it stands), and each send is
     preceded by a MailApp.getRemainingDailyQuota() check so a quota-starved
     day holds the mail (and alerts once) rather than failing into the same
-    silent catch that used to eat send errors. */
+    silent catch that used to eat send errors.
+
+    TWO day questions, not one (2026-08-31). Widening the window silently
+    split the weekday rule in half. "Is today a run day?" is asked below and
+    always was; "is the EDITION for a run day?" nobody asked, because before
+    the window the only candidate was today's row and the two questions could
+    not disagree. They disagreed on the first Monday after a weekend of
+    manual builds: Saturday's and Sunday's editions were inside the window,
+    undelivered, and went out at 07:00 with Monday's. Both questions are now
+    asked — the second by the off-day gate in the send loop below. */
 function scDigestDeliverPending_(ss, opts) {
   opts = opts || {};
   var clock = scDigestClock_(new Date());
@@ -5457,6 +5507,8 @@ function scDigestDeliverPending_(ss, opts) {
     if (!String(meta[g][0] || '').trim()) continue;
     var gDate = scIssueDateKey_(meta[g][1]);
     if (gDate > clock.date || gDate < cutoff) continue;
+    // Off-day rows are not candidates for anything — see the send loop.
+    if (!opts.force && !scDigestDeliverableDate_(gDate)) continue;
     var gEd = String(eds[g][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
     // Grouped per edition per DAY now that the window spans several days —
     // Friday's undelivered edition and Monday's are different papers, not
@@ -5497,6 +5549,37 @@ function scDigestDeliverPending_(ss, opts) {
     if (rowDate > clock.date || rowDate < cutoff) continue;      // delivery window
     var edId = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
     var row = i + 2;
+    // THE EDITION'S OWN DAY, not today's.
+    //
+    // The weekday gate above asks what day it is now. Until the delivery
+    // window widened from "dated today" to "dated within three days", those
+    // were the same question — the only row that could ever be a candidate
+    // was today's, so a weekday `now` guaranteed a weekday edition. The
+    // window broke that equivalence and nothing replaced it: a Saturday and
+    // a Sunday build sat undelivered through the weekend (the pass returns
+    // early on both days), were still inside the three-day window come
+    // Monday 07:00, and went out alongside Monday's own edition. Three
+    // papers in one inbox, two of them for days nobody works.
+    //
+    // The window is right and stays: a FRIDAY edition that missed its send
+    // must still be rescuable on Monday, which is the silent-give-up this
+    // window exists to prevent. Friday is a run day, so it still is. The
+    // rule the window actually needed is narrower than "look back three
+    // days" — an edition is mailable when BOTH the day it is for and the day
+    // we are on are run days. Only the second half was ever checked.
+    //
+    // Stamped rather than skipped, for the same reason 'superseded' and
+    // 'no-recipients' are: an unstamped row is reconsidered by every hourly
+    // tick for the rest of the window, and the cell should say why it never
+    // went out. The stamp does not strand the edition — it is stored, it is
+    // in the archive and the UI, and emailLatestDigest reads the newest row
+    // directly without consulting this column, so the developer's own "email
+    // me the latest" still sends a weekend build on demand.
+    if (!opts.force && !scDigestDeliverableDate_(rowDate)) {
+      sheet.getRange(row, 14).setValue('off-day');
+      held++;
+      continue;
+    }
     // A scheduled build for this edition is still running today. The 06:00 run
     // is chunked across continuation triggers, so it can still be working at
     // 07:00 — and this row is the one it is about to replace. Sending it now

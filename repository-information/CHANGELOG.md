@@ -3,11 +3,45 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.00r] — 2026-08-31 08:53:46 PM EST
+
+> **Prompt:** "Picking up from my \"Morning Digests footer phase 1\" session, check how Monday's scheduled Scraper run went:
+>
+> * Jonyang92@gmail.com (admin) received three different emails (see first attached screenshot): one for Saturday, Sunday, and Monday. Regardless of whether or not I generated Editions over the weekend, the Monday routine should not email out the weekend Editions.
+> * jymiasole01@gmail.com (analyst) received four different emails (see second attached screenshot): A BESS Edition from Saturday and Monday and an AIDC Edition from Saturday and Monday. This makes me feel like it only sent out the Saturday Edition because I generated one over the weekend. However, these weekend Editions should not be sent out on Monday.
+> * All three Monday Editions had over 30 relevant articles over the weekend. Several of them were from different news sources covering the same topic (Microsoft's DataOne AI data center caught using unpermitted turbines, Vertiv's Q1'26 Fiscal Results, etc). Do you have any good ideas on how we can group articles from different sources covering the same topic together and just show the most reliable source (based on source stats)? I think it's possible that it's normal for Monday digests to have 30+ relevant articles, while normal weekday digests have about 12-15 relevant articles, so there may be no real issues with Scraper."
+
+### Fixed
+
+The **Monday 2026-08-31 06:00 ET run — the first unattended one — worked**; the delivery gate around it did not. Verified against the admin's mailbox: the Saturday (No. 002), Sunday (No. 003) and Monday (No. 004) editions were all sent between 07:01:56 and 07:01:59 AM EDT, i.e. by a single delivery pass, not by three.
+
+Root cause: `SCRAPER_DIGEST_DELIVER_WINDOW_DAYS` (Phase 2, v03.9xr) widened the candidate set from "dated today" to "dated within three days and undelivered" to end a silent midnight give-up. That widening **split the weekday rule in two without anyone noticing**, because before it the two halves could not disagree — the only candidate was today's row, so a weekday `now` implied a weekday edition. `scDigestDeliverPending_` asks "is today a run day?" and always did; nothing asks "is the EDITION for a run day?". The weekend's manual builds were undelivered (the pass returns early on Sat/Sun), still inside the window on Monday, and mailed alongside Monday's own.
+
+#### `Scraper.gs` — v01.91g
+
+- `scIsoDayOfDateKey_(key)` — ISO day-of-week for a `yyyy-MM-dd` issue key. Deliberately **not** `new Date(key)` reformatted through `SCRAPER_DIGEST_TZ`: that string parses as UTC midnight, which in a western timezone is the previous calendar day, so a Saturday row would have read as Friday and passed the new gate. The y/m/d go through `Date.UTC` and the weekday is taken in the same frame — pure, node-testable, DST-proof. Returns `0` for an unparseable key
+- `scDigestDeliverableDate_(dateKey)` — the edition's own day against `SCRAPER_DIGEST_RUN_DAYS`; an unparseable key returns `true` so unreadable rows behave exactly as before
+- **Off-day gate in `scDigestDeliverPending_`**, applied in both the grouping loop (an off-day row can never become the `chosen` row) and the send loop. Honours `opts.force` the same way the existing hour and weekday gates do
+- Off-day rows are **stamped `'off-day'`** in the Delivered column rather than skipped, matching the `'superseded'` / `'no-recipients'` pattern — an unstamped row is reconsidered by every hourly tick for the rest of the window, and the cell should say why it never went out
+
+**The three-day window is kept, deliberately.** It is what carries a missed *Friday* edition to Monday's pass, which is the longest gap the weekday schedule can open and the exact silent-give-up it was added to prevent. Friday is a run day, so that rescue is untouched. The rule the window actually needed was narrower than it: an edition mails when **both** the day it is for and the day we are on are run days — only the second half was ever checked.
+
+**Weekend builds are not stranded.** They are stored, numbered, archived and visible in the UI, and `emailLatestDigest` (the developer's "email me the latest") reads the newest row directly without consulting the Delivered column — so a weekend edition can still be sent by hand on demand. Only the scheduled weekday mailing excludes them.
+
+### Changed
+
+- The stale rationale at `SCRAPER_DIGEST_DELIVER_WINDOW_DAYS` ("a weekend manual build" listed as a case the window exists to rescue — the behavior now removed) and the `scDigestDeliverPending_` header comment both rewritten to record the two-day-questions split, so the next reader does not re-derive the same bug
+
+### Verified
+
+- `node --check` clean; `scripts/check-gas-inner-scripts.js` clean (8 files, 76 blocks)
+- Ad-hoc node harness over the two extracted helpers: the four dates in evidence (Fri 08-28 deliverable, Sat 08-29 and Sun 08-30 not, Mon 08-31 deliverable), both 2026 US DST boundaries, unparseable keys, and a 365-day sweep of 2026 cross-checked against the platform's own weekday — all pass
 
 ## [v03.99r] — 2026-08-31 05:18:48 AM EST
 

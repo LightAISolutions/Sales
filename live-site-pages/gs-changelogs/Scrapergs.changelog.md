@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 37/50`
+`Sections: 38/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.91g] — 2026-08-31 08:53:46 PM EST — v04.00r
+
+### Fixed
+- Editions dated to a Saturday or Sunday are no longer emailed out with Monday's digest. Building an edition over the weekend is still fine — it is stored, numbered and browsable in the archive, and can still be sent by hand — but the weekday mailing now only carries editions that are themselves dated to a weekday
+- A weekday edition that misses its own send still catches up on the next weekday exactly as before, so a Friday edition delayed past midnight is still delivered on Monday
+- The delivery record now says why an edition was not mailed on a given morning rather than leaving the entry blank
 
 ## [v01.90g] — 2026-08-30 11:13:05 PM EST — v03.97r
 
