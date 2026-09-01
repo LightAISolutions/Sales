@@ -3,12 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 43/50`
+`Sections: 44/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.97g] — 2026-09-01 04:30:02 PM EST — v04.07r
+
+### Added
+- The edition explainer now reports the contribution of each source individually — stories in, best score reached, and how many cleared the bar — and names any source that returned nothing at all in the window
 ## [v01.96g] — 2026-09-01 03:41:19 AM EST — v04.06r
 
 ### Added

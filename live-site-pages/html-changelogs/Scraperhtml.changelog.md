@@ -3,12 +3,21 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.70w] — 2026-09-01 04:30:02 PM EST — v04.07r
+
+### Changed
+- The edition picker is now grouped by edition, so several editions built on the same day are no longer an indistinguishable row of near-identical chips. Each entry leads with its issue number, and shows the weekday alongside the date
+- Editions built on a weekend are labelled "unnumbered", matching the fact that they are stored builds rather than published issues
+
+### Added
+- An edition filter above the picker: one click narrows the list to a single edition, with a count beside each name. Filtering is instant — it re-reads the list already loaded rather than fetching again
+- "Why thin?" now shows where the intake actually came from: a per-source table of how many stories each source contributed, the best score it reached, and how many cleared the bar — plus a list of sources that returned nothing at all in that window. This distinguishes a source that is broken from one that simply had a quiet day, which previously looked identical from the outside
 ## [v01.69w] — 2026-09-01 03:16:00 AM EST — v04.04r
 
 ### Changed

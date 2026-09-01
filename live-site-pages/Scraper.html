@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.69w">
+  <meta name="build-version" content="v01.70w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -798,7 +798,20 @@
     #wd-gl-recip-input { flex: 1; min-width: 0; background: var(--wd-bg-deep); border: 1px solid var(--wd-line-soft); border-radius: 4px; color: var(--wd-ink); font: inherit; font-size: 12px; padding: 5px 8px; }
     #wd-gl-recip-input:focus { outline: none; border-color: var(--wd-green-line); }
     .wd-gl-recip-note { font-family: var(--wd-mono); font-size: 11px; color: var(--wd-mut2); margin-top: 5px; min-height: 14px; }
-    #wd-digest-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+    #wd-digest-list { display: block; margin: 0 0 12px; }
+    .wd-dg-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 10px; }
+    .wd-dg-filter { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px;
+      padding-bottom: 10px; border-bottom: 1px solid var(--wd-line); }
+    .wd-dg-f { border: 1px solid var(--wd-line-soft); background: var(--wd-bg-deep);
+      border-radius: 999px; padding: 4px 11px; font-family: var(--wd-mono); font-size: 11px;
+      color: var(--wd-mut2); cursor: pointer; }
+    .wd-dg-f:hover { color: var(--wd-ink); border-color: var(--wd-line); }
+    .wd-dg-f.on { border-color: var(--wd-accent); color: var(--wd-accent); }
+    .wd-dg-group { font-family: var(--wd-mono); font-size: 9.5px; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--wd-faint); margin: 0 0 6px; font-weight: 700; }
+    .wd-dg-open b { font-weight: 700; color: var(--wd-ink); }
+    .wd-dg-chip.on .wd-dg-open b { color: var(--wd-accent); }
+    .wd-dg-open b.un { color: var(--wd-faint); font-weight: 400; font-style: italic; }
     .wd-dg-chip {
       display: inline-flex; align-items: stretch;
       border: 1px solid var(--wd-line-soft); background: var(--wd-bg-deep); border-radius: 4px;
@@ -821,6 +834,16 @@
       background: #15171c;
     }
     /* ── Held-back reader ("View More") ── */
+    .wd-sr-src { width: 100%; border-collapse: collapse; margin-top: 10px;
+      font-family: var(--wd-mono); font-size: 12px; }
+    .wd-sr-src th { text-align: left; padding: 4px 8px 6px; color: var(--wd-faint);
+      font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase;
+      border-bottom: 1px solid var(--wd-line); font-weight: 700; }
+    .wd-sr-src td { padding: 5px 8px; border-bottom: 1px solid rgba(255,255,255,0.04);
+      color: var(--wd-ink); }
+    .wd-sr-src th.num, .wd-sr-src td.num { text-align: right; width: 58px; }
+    .wd-sr-src tr.dim td { color: var(--wd-faint); }
+    .wd-sr-src td.num.pass { color: var(--wd-green-ink); }
     #wd-hb-overlay { position: fixed; inset: 0; z-index: 10005; background: rgba(8,10,13,0.86);
       display: none; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 4vh 12px; }
     #wd-err-overlay { position: fixed; inset: 0; z-index: 10006; background: rgba(8,10,13,0.86);
@@ -2304,6 +2327,57 @@
             row.appendChild(band); row.appendChild(track); row.appendChild(cnt);
             body.appendChild(row);
           });
+
+          // SOURCE CONTRIBUTION — "is that feed working?"
+          //
+          // The bands above say how the intake scored; they cannot say where it
+          // came from. That is the difference between a feed that is broken and
+          // a feed that is fine but had a quiet day, and those need opposite
+          // fixes. A source with items and a low best score is being read and
+          // judged. A source in the silent list returned nothing at all.
+          var bs = r.bySource || [];
+          if (bs.length) {
+            var sh2 = document.createElement('div');
+            sh2.className = 'wd-sr-h';
+            sh2.style.marginTop = '20px';
+            sh2.textContent = 'Where the intake came from (' + bs.length + ' sources)';
+            body.appendChild(sh2);
+            var tbl = document.createElement('table');
+            tbl.className = 'wd-sr-src';
+            var thead = document.createElement('tr');
+            ['Source', 'In', 'Best', 'Cleared'].forEach(function(hn, hi) {
+              var th = document.createElement('th');
+              th.textContent = hn;
+              if (hi) th.className = 'num';
+              thead.appendChild(th);
+            });
+            tbl.appendChild(thead);
+            bs.forEach(function(row) {
+              var tr = document.createElement('tr');
+              if (!row.relevant) tr.className = 'dim';
+              var td0 = document.createElement('td');
+              td0.textContent = row.source + (row.backstop === row.items && row.items ? ' (backstop)' : '');
+              var td1 = document.createElement('td'); td1.className = 'num'; td1.textContent = String(row.items);
+              var td2 = document.createElement('td'); td2.className = 'num';
+              td2.textContent = String(row.best);
+              if (row.best >= (Number(r.threshold) || 55)) td2.classList.add('pass');
+              var td3 = document.createElement('td'); td3.className = 'num'; td3.textContent = String(row.relevant);
+              tr.appendChild(td0); tr.appendChild(td1); tr.appendChild(td2); tr.appendChild(td3);
+              tbl.appendChild(tr);
+            });
+            body.appendChild(tbl);
+          }
+          var silent = r.silentSources || [];
+          if (silent.length) {
+            var sn = document.createElement('div');
+            sn.className = 'wd-sr-note';
+            sn.style.marginTop = '10px';
+            sn.textContent = 'Returned nothing in this window (' + silent.length + '): '
+              + silent.join(' \u00b7 ')
+              + ' \u2014 normal for a source that simply published nothing inside the '
+              + 'window; a concern only if one stays here across several builds.';
+            body.appendChild(sn);
+          }
 
           var misses = r.nearMiss || [];
           var mh = document.createElement('div');
@@ -8983,6 +9057,17 @@
     });
     var dgList = $sc('wd-digest-list');
     if (dgList) dgList.addEventListener('click', function(ev) {
+      // Edition filter. Delegated and re-rendered from the cached list, so
+      // switching editions costs no round trip — the rows are already here.
+      var fb = ev.target.closest ? ev.target.closest('.wd-dg-f') : null;
+      if (fb) {
+        ev.preventDefault();
+        _wdDgFilter = fb.getAttribute('data-ed') || '';
+        wdDigestRenderList_($sc('wd-digest-list'), _wdDgAll);
+        // Keep the open edition highlighted if it survived the filter.
+        if (_wdDgShownId) wdDigestMarkChip_(_wdDgShownId);
+        return;
+      }
       var chip = ev.target.closest ? ev.target.closest('.wd-dg-chip') : null;
       if (!chip) return;
       var del = ev.target.closest('button.wd-dg-del');
@@ -9789,23 +9874,114 @@
       });
   }
 
+  // The edition picker's state: the full list as last fetched, and which
+  // edition the developer has filtered to ('' = all).
+  var _wdDgAll = [];
+  var _wdDgFilter = '';
+  var _wdDgShownId = '';
+
+  /** Group the picker by edition, and say which edition every chip belongs to.
+
+      The flat list printed only "<date> · N relevant". With one edition that
+      was legible; with three it produced rows of chips reading
+      "2026-09-01 · 16 relevant" three times over, identical apart from a
+      number that says nothing about which paper it is. The developer could
+      see thirteen issues and not tell which was which.
+
+      Three changes, all from data listDigests already returned and the client
+      already threw away: group under an edition heading, put the issue number
+      on the chip (the thing that actually identifies an issue), and offer a
+      filter so one edition can be read on its own. */
+  function wdDigestRenderList_(list, ds) {
+    if (!list) return;
+    list.innerHTML = '';
+    if (!ds.length) return;
+
+    // Counts per edition for the filter row, in first-seen order so the
+    // default edition leads rather than whatever sorts first alphabetically.
+    var order = [], byEd = {};
+    ds.forEach(function(dg) {
+      var k = dg.editionName || dg.edition || 'Edition';
+      if (!byEd[k]) { byEd[k] = []; order.push(k); }
+      byEd[k].push(dg);
+    });
+
+    if (order.length > 1) {
+      var bar = document.createElement('div');
+      bar.className = 'wd-dg-filter';
+      var mk = function(label, key, n) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'wd-dg-f' + (_wdDgFilter === key ? ' on' : '');
+        b.setAttribute('data-ed', key);
+        b.textContent = label + ' ' + n;
+        return b;
+      };
+      bar.appendChild(mk('All', '', ds.length));
+      order.forEach(function(k) { bar.appendChild(mk(k, k, byEd[k].length)); });
+      list.appendChild(bar);
+    }
+
+    order.forEach(function(k) {
+      if (_wdDgFilter && k !== _wdDgFilter) return;
+      var rows = byEd[k];
+      if (order.length > 1) {
+        var h = document.createElement('div');
+        h.className = 'wd-dg-group';
+        h.textContent = k;
+        list.appendChild(h);
+      }
+      var wrap = document.createElement('div');
+      wrap.className = 'wd-dg-row';
+      rows.forEach(function(dg) {
+        var chip = document.createElement('span');
+        chip.className = 'wd-dg-chip';
+        chip.setAttribute('data-id', dg.id);
+        var open = document.createElement('button');
+        open.type = 'button';
+        open.className = 'wd-dg-open';
+        var when = dg.generatedAt ? new Date(dg.generatedAt).toLocaleString() : '';
+        open.title = k + (dg.no ? ' · No. ' + dg.no : '') + ' · generated ' + when
+                   + (dg.notes ? ' · ' + dg.notes : '');
+        // Issue number first: it is the identifier. An unnumbered build (a
+        // weekend one) says so rather than borrowing No. 001.
+        var no = document.createElement('b');
+        no.textContent = dg.no ? ('No. ' + ('00' + dg.no).slice(-3)) : 'unnumbered';
+        if (!dg.no) no.className = 'un';
+        open.appendChild(no);
+        open.appendChild(document.createTextNode(
+          ' \u00b7 ' + wdDgDate_(dg.date) + ' \u00b7 ' + Number(dg.relevantCount) + ' rel'));
+        var del = document.createElement('button');
+        del.type = 'button';
+        del.className = 'wd-dg-del';
+        del.title = 'Delete this edition (asks once to confirm)';
+        del.textContent = '\u00d7';
+        chip.appendChild(open); chip.appendChild(del);
+        wrap.appendChild(chip);
+      });
+      list.appendChild(wrap);
+    });
+  }
+
+  /** yyyy-MM-dd → "Tue Sep 1". Parsed as a plain date in UTC, never through
+      the local timezone: new Date('2026-09-01') is UTC midnight, which west of
+      Greenwich renders as Aug 31 and would label every chip a day early. */
+  function wdDgDate_(key) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(key || ''));
+    if (!m) return String(key || '');
+    var d = new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3])));
+    return d.toLocaleDateString(undefined,
+      { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'UTC' });
+  }
+
   function wdDigestRefresh_() {
     _gasPost({ action: 'listDigests', token: scToken(), limit: '30' })
       .then(function(data) {
         if (!data || !data.success) return;
         var list = $sc('wd-digest-list');
         var ds = data.digests || [];
-        list.innerHTML = ds.length
-          ? ds.map(function(dg) {
-              var when = dg.generatedAt ? new Date(dg.generatedAt).toLocaleString() : '';
-              return '<span class="wd-dg-chip" data-id="' + scEsc(dg.id) + '">'
-                + '<button type="button" class="wd-dg-open" title="'
-                + scEsc('Generated ' + when + (dg.notes ? ' · ' + dg.notes : '')) + '">'
-                + scEsc(dg.date) + ' · ' + Number(dg.relevantCount) + ' relevant</button>'
-                + '<button type="button" class="wd-dg-del" title="Delete this edition (asks once to confirm)">×</button>'
-                + '</span>';
-            }).join('')
-          : '';
+        _wdDgAll = ds;
+        wdDigestRenderList_(list, ds);
         if (ds.length) {
           wdDigestShow_(ds[0].id);
           // Surface why summaries fell back (e.g. an AI key/config error) —
@@ -9851,11 +10027,21 @@
       });
   }
 
-  function wdDigestShow_(id) {
-    var chips = $sc('wd-digest-list').querySelectorAll('.wd-dg-chip');
+  /** Mark the open edition's chip. Extracted because the edition filter
+      re-renders the list, which throws the `on` class away — the highlight has
+      to be reapplied from the remembered id rather than re-fetched. */
+  function wdDigestMarkChip_(id) {
+    var host = $sc('wd-digest-list');
+    if (!host) return;
+    var chips = host.querySelectorAll('.wd-dg-chip');
     for (var i = 0; i < chips.length; i++) {
       chips[i].classList.toggle('on', chips[i].getAttribute('data-id') === id);
     }
+  }
+
+  function wdDigestShow_(id) {
+    _wdDgShownId = id;
+    wdDigestMarkChip_(id);
     $sc('wd-digest-view').innerHTML =
       '<span class="wd-loading" style="display:block;padding:16px;">Loading edition…</span>';
     _gasPost({ action: 'getDigest', token: scToken(), digestId: id })

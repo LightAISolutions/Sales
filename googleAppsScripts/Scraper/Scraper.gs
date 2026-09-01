@@ -1,4 +1,4 @@
-var VERSION = "v01.96g";
+var VERSION = "v01.97g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3651,6 +3651,29 @@ function digestScoreReport(sessionToken, digestId) {
   var T = SCRAPER_RELEVANT_THRESHOLD;
   var bands = { '0-24': 0, '25-39': 0, '40-49': 0, '50-54': 0, '55-69': 0, '70-100': 0 };
   var nearMiss = [], backstopCount = 0, geoPenalised = 0, relevant = 0;
+  // PER-SOURCE CONTRIBUTION — the answer to "is that feed working?"
+  //
+  // The report already read `source` on every scored row and then aggregated
+  // it away, so the only two questions it could answer were "how many came in"
+  // and "how many cleared the bar". That leaves the one question a newly added
+  // feed actually raises unanswerable: a source that fetched nothing and a
+  // source that fetched plenty of sub-threshold material both show up as
+  // absent from the edition, and they need opposite fixes — one is a broken
+  // feed, the other is a working feed on a quiet beat.
+  //
+  // Tallied here rather than in a second pass because the loop is already
+  // walking every row. `best` is the discriminator: a source with items but a
+  // best score of 30 is being read and judged, not ignored.
+  var bySource = {};
+  items.forEach(function(it) {
+    var sn = String(it.source || '(unknown)');
+    var bs = bySource[sn] || (bySource[sn] = { source: sn, items: 0, relevant: 0, best: 0, backstop: 0 });
+    var scv = Number(it.score) || 0;
+    bs.items++;
+    if (scv >= T) bs.relevant++;
+    if (scv > bs.best) bs.best = scv;
+    if (it.backstop) bs.backstop++;
+  });
   items.forEach(function(it) {
     var sc = Number(it.score) || 0;
     bands[sc < 25 ? '0-24' : sc < 40 ? '25-39' : sc < 50 ? '40-49'
@@ -3675,6 +3698,17 @@ function digestScoreReport(sessionToken, digestId) {
     intake: items.length, relevant: relevant,
     fromBackstop: backstopCount, fromRoster: items.length - backstopCount,
     geoPenalised: geoPenalised, bands: bands,
+    // Sorted by contribution, then by how close the source came — so a feed
+    // that contributed nothing but nearly cleared ranks above one that
+    // returned nothing at all, which is the order a reader debugs in.
+    bySource: Object.keys(bySource).map(function(k) { return bySource[k]; })
+      .sort(function(x, y) { return y.relevant - x.relevant || y.best - x.best || y.items - x.items; }),
+    // Roster sources that produced NO row at all this run. An empty tally is
+    // invisible by construction — the loop can only count rows that exist —
+    // so the silent ones have to be named from the roster instead.
+    silentSources: SCRAPER_SOURCE_ROSTER.filter(function(src) {
+      return !bySource[src.name] && !SCRAPER_RETIRED_SOURCES[src.key];
+    }).map(function(src) { return src.name; }),
     nearMiss: nearMiss.slice(0, 20),
     // The one-line read, so the answer does not depend on interpreting bands.
     verdict: relevant >= 10 ? 'healthy'

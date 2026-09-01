@@ -3,11 +3,48 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 86/100`
+`Sections: 87/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.07r] — 2026-09-01 04:30:02 PM EST
+
+> **Prompt:** "Unrelated to what you are asking me to do:
+>
+> * See attached screenshot. I am starting to accumulate more and more Editions on Scraper. I want a more organized, easier way to see, filter, and choose which type of Edition on which day I want to see on the main screen.
+>
+> Back to what you asked me to do:
+>
+> * I confirmed the five new sources and two new topics landed and are toggled on. Then, I ran a manual Morning Digest build and did not see any Federal Register notices amongst the relevant articles. That may not be a mistake though if there simply weren't valuable articles in the last 24 hours. How can you tell if it's working correctly?"
+
+### Added
+
+**"Is that feed working?" was unanswerable, and that is what the developer actually hit.** A source that fetched nothing and a source that fetched plenty of sub-threshold material both show up as *absent from the edition* — and they need opposite fixes. The score report already read `source` on every scored row and then aggregated it away, so the only questions it could answer were "how many came in" and "how many cleared the bar".
+
+#### `Scraper.gs` — v01.97g
+
+- `bySource` — per-source tally on the existing pass (no second read): items in, best score reached, how many cleared, and how many were backstop. **`best` is the discriminator**: a source with items and a best of 30 is being read and judged, not ignored
+- `silentSources` — roster sources that produced no row at all this run, named from the roster rather than the tally, because an empty tally is invisible by construction: a loop can only count rows that exist. Retired sources are excluded
+- Sorted by contribution then by how close the source came, which is the order a reader debugs in
+
+#### `Scraper.html` — v01.70w
+
+- **Source contribution table** in "Why thin?", with the silent-source list underneath and an explicit note that silence is normal for one window and a concern only across several builds
+- **Edition picker rebuilt.** With one edition the flat `<date> · N relevant` list was legible; with three it produced rows of chips reading `2026-09-01 · 16 relevant` three times over, identical apart from a number that says nothing about which paper it is. Thirteen issues, unidentifiable. Now: grouped under an edition heading, **issue number first** (the thing that actually identifies an issue), weekday shown, and an edition filter with counts that re-renders from the cached list rather than re-fetching
+- Weekend builds display **"unnumbered"** in the picker, matching the v04.01r numbering change
+- `wdDigestMarkChip_` extracted from `wdDigestShow_` — the filter re-renders the list and throws the `on` class away, so the highlight has to be reapplied from a remembered id
+- `wdDgDate_` parses the date key through `Date.UTC`, never the local timezone: `new Date('2026-09-01')` is UTC midnight, which west of Greenwich renders as Aug 31 and would label every chip a day early — the same trap as the delivery-gate helper in v04.00r
+
+### Verified
+
+- `node --check` on the `.gs`; both `Scraper.html` inline blocks parse; `check-gas-inner-scripts.js` clean
+- Picker rendered headless against the page's real stylesheet using a 13-issue / 3-edition fixture matching the developer's screenshot: 4 filter chips with correct counts (All 13 · Morning 5 · BESS 4 · AIDC 4), 3 edition groups, 13 chips, 4 correctly marked unnumbered, 1 marked as open. Clicking the BESS filter narrowed to 4 chips and one group, with the filter chip active. No page errors
+
+### Note
+
+**No live-data conclusion is claimed here.** Whether the Federal Register feeds are contributing is a question this release makes *answerable in the app*; it does not answer it. Probed at authoring time, the FERC feed did carry items dated the same day, while the White House and DOE feeds' newest items were several days old — so those two legitimately had nothing inside a 24-hour window.
 
 ## [v04.06r] — 2026-09-01 03:41:19 AM EST
 
