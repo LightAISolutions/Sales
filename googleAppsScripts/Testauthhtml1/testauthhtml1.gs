@@ -1,4 +1,4 @@
-var VERSION = "v01.06g";
+var VERSION = "v01.07g";
 var TITLE = "Testauthhtml1 Title";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "lightaisolutions";
@@ -2089,6 +2089,78 @@ function diagnoseOauthScopes_() {
   }
 }
 
+// ── ACL availability grace (last-known-good snapshot) ────────────────
+// Three separate incidents have now taken every user of an app offline at
+// once because the Master ACL could not be READ — most recently a missing
+// `spreadsheets` OAuth grant, which makes SpreadsheetApp.openById throw for
+// every caller until the owner re-consents in Google. The verdict in that
+// state is UNKNOWN, and answering "no" to a user the list has repeatedly
+// said "yes" to is the least accurate answer available.
+//
+// So every successful read stores the page's allow-list, and an unreadable
+// ACL is answered from that snapshot instead of locking the app out.
+// Deliberate boundaries, because this trades some security for availability:
+//   * It can only ever REPRODUCE a "yes" the real ACL already gave. An email
+//     absent from the snapshot is still denied — a user added during an
+//     outage waits, which is the safe direction to fail.
+//   * It never denies from the snapshot. Removals are honoured the moment the
+//     list is readable again (within the normal 10-minute access cache).
+//   * A revoked user can therefore retain access for at most
+//     ACL_GRACE_MAX_AGE_SEC after the last good read. Set ACL_GRACE_ENABLED
+//     to false for strict-denial compliance, accepting total lockouts.
+// Every grace grant writes a security_alert audit row, so a degraded period is
+// reconstructable afterwards rather than silent.
+var ACL_GRACE_ENABLED = true;
+var ACL_GRACE_MAX_AGE_SEC = 86400;  // 24h — covers an outage that starts on a Friday
+var ACL_GRACE_MAX_ENTRIES = 200;    // Script Properties values cap at ~9KB
+
+function aclSnapshotKey_() {
+  return 'ACL_SNAPSHOT_' + String(ACL_PAGE_NAME || 'page');
+}
+
+// Persist the page's allow-list. Script Properties, not CacheService: a cache
+// entry can evaporate at any moment, and the snapshot is only ever worth having
+// at the moment the ACL is already unreachable. Writes are throttled to roughly
+// one per ten minutes by a cache marker — without it this would write on every
+// single sign-in.
+function aclSnapshotSave_(allowMap) {
+  if (!ACL_GRACE_ENABLED) return;
+  try {
+    var cache = getEpochCache();
+    if (cache.get('acl_snapshot_fresh')) return;
+    var emails = Object.keys(allowMap);
+    if (emails.length > ACL_GRACE_MAX_ENTRIES) emails = emails.slice(0, ACL_GRACE_MAX_ENTRIES);
+    var trimmed = {};
+    for (var i = 0; i < emails.length; i++) trimmed[emails[i]] = allowMap[emails[i]];
+    PropertiesService.getScriptProperties().setProperty(aclSnapshotKey_(),
+      JSON.stringify({ at: Date.now(), roles: trimmed }));
+    cache.put('acl_snapshot_fresh', '1', 600);
+  } catch (e) {
+    Logger.log('aclSnapshotSave_ failed (non-fatal): ' + e.message);
+  }
+}
+
+// Returns { role: <string>, ageSec: <number> } when the snapshot still vouches
+// for this email, else null. Null covers every uncertain case — no snapshot,
+// unparseable snapshot, expired snapshot, email absent — so an unreadable ACL
+// falls back to the original hard denial rather than to a guess.
+function aclSnapshotLookup_(lowerEmail) {
+  if (!ACL_GRACE_ENABLED) return null;
+  try {
+    var raw = PropertiesService.getScriptProperties().getProperty(aclSnapshotKey_());
+    if (!raw) return null;
+    var snap = JSON.parse(raw);
+    if (!snap || !snap.roles || !snap.at) return null;
+    var ageSec = Math.floor((Date.now() - Number(snap.at)) / 1000);
+    if (!(ageSec >= 0) || ageSec > ACL_GRACE_MAX_AGE_SEC) return null;
+    if (!Object.prototype.hasOwnProperty.call(snap.roles, lowerEmail)) return null;
+    return { role: snap.roles[lowerEmail] || RBAC_DEFAULT_ROLE, ageSec: ageSec };
+  } catch (e) {
+    Logger.log('aclSnapshotLookup_ failed (non-fatal): ' + e.message);
+    return null;
+  }
+}
+
 // Legacy boolean callers: use checkSpreadsheetAccess(email).hasAccess
 function checkSpreadsheetAccess(email, opt_ss) {
   var denied = { hasAccess: false, role: null, isEmergencyAccess: false };
@@ -2169,6 +2241,26 @@ function checkSpreadsheetAccess(email, opt_ss) {
         // real denial and is safe to cache.
         aclReadOk = true;
         aclFailReason = '';
+        // Refresh the last-known-good snapshot while the list is readable. This
+        // is a separate pass rather than being folded into the lookup below,
+        // which breaks as soon as it finds the user and so never sees the whole
+        // column.
+        var allowMap = {};
+        var rolesMatrix = null;
+        for (var sr = 1; sr < data.length; sr++) {
+          var sEmail = String(data[sr][0]).trim().toLowerCase();
+          if (!sEmail) continue;
+          var sVal = data[sr][colIdx];
+          if (!(sVal === true || String(sVal).trim().toUpperCase() === 'TRUE')) continue;
+          var sRole = RBAC_DEFAULT_ROLE;
+          if (roleColIdx !== -1 && data[sr][roleColIdx]) {
+            var sRaw = String(data[sr][roleColIdx]).trim().toLowerCase();
+            if (rolesMatrix === null) rolesMatrix = getRolesFromSpreadsheet();
+            if (rolesMatrix[sRaw]) sRole = sRaw;
+          }
+          allowMap[sEmail] = sRole;
+        }
+        aclSnapshotSave_(allowMap);
         for (var r = 1; r < data.length; r++) {
           if (String(data[r][0]).trim().toLowerCase() === lowerEmail) {
             var val = data[r][colIdx];
@@ -2199,6 +2291,24 @@ function checkSpreadsheetAccess(email, opt_ss) {
     // verdict is UNKNOWN, not "no". Return that uncached and let the caller
     // present it as a retryable outage.
     if (!aclReadOk) {
+      // The list could not be read, so the verdict is UNKNOWN rather than "no".
+      // Before reporting an outage, ask the last-known-good snapshot whether
+      // this email was allowed the last time the list WAS readable, and serve
+      // that instead of locking every user of the app out (aclSnapshotLookup_).
+      var grace = aclSnapshotLookup_(lowerEmail);
+      if (grace) {
+        auditLog('security_alert', email, 'acl_grace_grant',
+          { reason: aclFailReason || 'acl_unreachable', page: ACL_PAGE_NAME,
+            role: grace.role, snapshotAgeSec: grace.ageSec });
+        Logger.log('checkSpreadsheetAccess: ACL unreadable ('
+          + (aclFailReason || 'acl_unreachable') + ') - granting ' + lowerEmail
+          + ' from a snapshot ' + grace.ageSec + 's old.');
+        // Deliberately not cached: the moment the ACL is readable again the real
+        // verdict must win, and a cached grace grant would outlive the outage by
+        // the full 10-minute access-cache TTL.
+        return { hasAccess: true, role: grace.role, isEmergencyAccess: false,
+                 aclDegraded: true };
+      }
       auditLog('security_alert', email, 'acl_unavailable',
         { reason: aclFailReason || 'acl_unreachable', page: ACL_PAGE_NAME });
       return { hasAccess: false, role: null, isEmergencyAccess: false,

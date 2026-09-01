@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [globalaclgs.changelog-archive.md](globalaclgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08g] — 2026-09-01 01:51:37 AM EST — v04.02r
+
+### Fixed
+- Signing in no longer fails when the access list is briefly unreachable. If your access was confirmed recently, you are let straight in and the app keeps working while the problem clears
+- Access changes still take effect as soon as the list can be read again, and anyone not already on it is asked to wait rather than being let in
 
 ## [v01.07g] — 2026-08-27 04:09:00 PM EST — v03.03r
 

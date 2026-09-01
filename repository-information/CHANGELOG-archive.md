@@ -77,6 +77,451 @@ If ANY lines appear (sections without SHA links), the rotation is incomplete —
 
 ---
 
+## [v03.20r] — 2026-08-27 11:51:21 PM EST — [886efa3](https://github.com/LightAISolutions/Sales/commit/886efa3fb3db9a3069c57e7be4bbaeee47d66508)
+
+> **Prompt:** "I approve the plan. Your assumption about my "Subscribers sentence" is also correct. Push A."
+
+### Added
+- **`.claude/rules/scraper-sources.md`** — the part of "remember this source is unavailable" that is actually durable. A changelog entry does not survive a future session reasoning from an outlet's topical fit and re-proposing it; a path-scoped gate does. The file blocks adding anything to `SCRAPER_SOURCE_ROSTER` without first checking the unavailable table, mandates a live feed probe rather than adopting a URL from memory, and gives the exact HTTP signatures that separate **blocked** (`cf-mitigated: challenge`, `Just a moment…`, `Attention Required!`) from **offline** (200 with a `/lander` redirect and a `_trfd` / `ap:"parking"` marker) — they are visually identical in a browser and are opposite facts. It also records the rejected Google News workaround with its measurements so it is not re-tried
+- **`status: 'blocked' | 'offline'` on `SCRAPER_RETIRED_SOURCES`**, surfaced to the client as `retiredStatus`
+- **`⚙` diagnostics reveal** on the sync card, plus `wdSyncDiagShow_` — *Read all dossiers* is hidden at full coverage, reappears by itself when `pending > 0`, and is force-shown after a failed run (`_wdDiagForced`), which is precisely when it must stay reachable
+
+### Changed
+- **`offline` sources are dropped from the `listInterests` payload** rather than dimmed. The sheet row is deliberately left in place — nothing is destroyed and re-adding the key to the roster still reactivates it — but an outlet that no longer exists is not a filter the developer can act on
+- **`blocked` sources sort to the bottom** of the Tune source list and their toggle renders **off**. Their stored `Enabled` is still `TRUE` from seeding, so rendering from `enabled` drew a live-looking ON switch on an outlet contributing nothing; the "N on" count now excludes them too
+- **Subscribers: the free-text edition-ids input became a real multi-select** (`wdSubEditionsFill_`) fed from `_wdEditions`, with an *All editions* option, and the roster row renders edition **names** via `wdSubEdNames_` instead of raw ids. Previously the field required knowing an edition's internal id and a typo silently produced a subscriber bound to an edition that does not exist — which mattered little with one edition and would matter a lot with three. `all` takes precedence over specific picks, since pairing them is contradictory. An id that no longer resolves renders verbatim rather than being dropped, so a stale assignment stays visible
+
+### Notes
+- This is **Push A** of the approved two-push plan (items 1, 2 and 6). Push B — editions becoming first-class with per-edition segment/topic tuning and the new BESS/AIDC filters — is unstarted
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **20 assertions**. *Playwright* (10), driving the page twice at different coverage levels: the button is hidden at 88/88 with the gear offered instead, it returns unaided at 61 pending, the offline source never reaches the list, the blocked source sorts last with its toggle off while live sources stay on, the count reads `2/3`, the dropdown renders `All editions` + both editions in order, and the subscriber row shows `The Morning Edition (BESS)` rather than `bess`. *Server* (10): every retired source carries a valid status, exactly one is `offline`, the payload filter is surgical (drops one row, leaves a stale **company** untouched), and the `all`-wins rule plus the removal of the old text input are asserted against the shipped source
+- GAS changelog is at **50/50** — at the cap but not over it, so no rotation this push; the next section triggers one
+- **`Scraper.gs`** VERSION v01.52g → v01.53g; **`Scraper.html`** v01.46w → v01.47w; version files synced
+
+## [v03.19r] — 2026-08-27 11:21:39 PM EST — [0dc2474](https://github.com/LightAISolutions/Sales/commit/0dc2474d5dab83a58ee3b3d588a417102f7d59dd)
+
+> **Prompt:** "continue with your recommendation\"
+
+### Added
+- **`SCRAPER_SOURCE_FLAG_RETIRED = 'Dropped from roster'`** — source rows stop borrowing `SCRAPER_INTEREST_FLAG_STALE` (`'Coverage ended'`). One string was doing double duty across two row types whose meanings are opposite: for a company leaving Profiler's registry "Coverage ended" is exactly right; for an outlet leaving `SCRAPER_SOURCE_ROSTER` it asserts the publication stopped publishing. The company flag is deliberately left untouched
+- **`SCRAPER_RETIRED_SOURCES`** — per-outlet `{ label, detail }` kept beside the roster so the reason survives in the UI rather than only in a changelog. Also a guard against a future pass "restoring" a feed that provably cannot be fetched
+- **`listInterests` returns `retiredLabel` / `retiredNote`** for stale source rows, computed from that map by key — no sheet write and no migration of stored data
+
+### Fixed
+- **Migration branch for outlets already retired.** The retirement branch only fires while a row is still `active`, so the three rows marked during the Phase 4 shakeout would have kept the company wording forever. A second branch re-labels a non-roster source row still carrying `SCRAPER_INTEREST_FLAG_STALE`. Verified idempotent — a second sync is a no-op
+- **`wdIntRow_` chip text and the disabled-toggle tooltip.** The chip is the only text most people read, so it now shows the reason (`Blocked to automated readers` / `Site offline`) with the full explanation on hover. The tooltip was hardcoded to `No longer covered by Profiler — kept for history` for every stale row — wrong for sources, which Profiler has nothing to do with; it is now type-aware
+
+### Notes
+- **The removals were correct; the label was the defect.** Re-probed all three tonight and every finding reproduces the v03.09r record. `datacentremagazine.com`: root 200 but `/news` and all five candidate feed paths 403 with `cf-mitigated: challenge` / `server: cloudflare` / `<title>Just a moment...</title>` — a Cloudflare Managed Challenge no server-side client can pass — and the homepage advertises **no** `<link rel="alternate">` feed at all. `batterytechonline.com`: 403 "Attention Required! | Cloudflare" on the root and every feed path, to **two independent fetchers** (curl via the agent proxy, and WebFetch), while a web search confirms it is publishing through 2026. `solarindustrymag.com/feed`: HTTP 200 but a 114-byte JS redirect to `/lander`, which carries GoDaddy's `_trfd.push({ap:"parking"})` marker — genuinely dead, and the only one of the three for which "Coverage ended" was true
+- **Google News site-scoped feeds were tested as a workaround and rejected**: `site:datacentremagazine.com` returns 1 item, `site:batterytechonline.com` 1 item dated April 2025, `site:solarindustrymag.com` 0. Not a feed; reported as a failure rather than offered as a fix
+- Root cause of the original defect: when the source-retirement branch was written in v03.09r it reused the nearest existing flag constant instead of introducing a source-specific one. No gate caught it because the constant was already correct for its original row type — the bug only exists at the intersection of two row types sharing one string
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **19 assertions**. *Server* (12): the two flags are distinct, the company flag is unchanged, no retired label claims the outlet ceased publishing, both live outlets are described as live, `Site offline` applies to exactly one key, every entry carries a re-check date, already-retired rows migrate, a newly-retired row gets the new label, a source returning to the roster is reactivated rather than relabelled, a stale **company** row keeps `Coverage ended`, and the migration is idempotent. *Playwright* (7): Data Centre Magazine renders `Blocked to automated readers` with "live and publishing" on hover and no `Profiler` in its tooltip, Solar Industry renders `Site offline`, and a stale company row still renders `Coverage ended` with the Profiler tooltip. Zero page errors
+- **`Scraper.gs`** VERSION v01.51g → v01.52g; **`Scraper.html`** v01.45w → v01.46w; version files synced; public entries added (GAS 49/50 — rotation due again next push; page 46/50)
+
+## [v03.18r] — 2026-08-27 11:05:42 PM EST — [4d7f22b](https://github.com/LightAISolutions/Sales/commit/4d7f22bcf33d6d4d84560f45a327afe75b50a526)
+
+> **Prompt:** "It read 14 dossiers and increased the "Dossiers read" number from 27 to 41. Here is the error message (attached). Fix it."
+
+### Fixed
+- **Root cause of the stall, finally identified: `(p.targetSegments || []).forEach is not a function` in `scMineDossier_`.** `|| []` only rescues `null`/`undefined`, so a field that arrived as a **string** threw — and the throw aborted the whole dossier, not just that product. `targetSegments` is schema-legal as **both** `string[]` and a comma-joined string, and the string form is actually the majority: across the 88 live dossiers there are **205 string** occurrences vs **174 array** ones, spread over **exactly 47 files**. 47 is precisely the developer's `47 failed`, and 41 + 47 = 88. Replaced with `scAsList_` / `scSegmentList_`, which normalise either shape. **Confirmed by regression guard**: the pre-fix expression was reconstructed verbatim and run against the real corpus — it throws on exactly 47 dossiers, first `amazon.profile.json`, with the identical message
+- **`technicalSpecs[].name` matched nothing in any dossier — all 286 entries are keyed `product`.** `add(t.name)` had therefore been a silent no-op since the function was written, so flagship product names were never mined as alias terms despite the code comment saying that was the intent. Now reads `t.product || t.name`; **81 of 88** dossiers contribute product terms that were previously lost
+- Comma splitting is bracket-aware (`scSplitTopLevel_`), so `"Enterprises, frontier labs (Anthropic, OpenAI), governments"` yields **three** segments rather than four with a severed `"(Anthropic"` — 60 of the 205 string values contain parentheses. Prose is filtered out (`SCRAPER_SEGMENT_MAX_CHARS` 60 / `SCRAPER_SEGMENT_MAX_WORDS` 6) because a sentence is inert as a segment key and would only dilute the gate; per-company segments capped at 24
+
+### Changed
+- **`scMineDossiersAll_` takes a server-issued epoch instead of a force flag**, and `mineAllDossiers` now re-reads **every** covered company. Without this the 41 already stamped would keep the alias terms produced by the broken reader — they are not in the "never mined" queue, so no amount of pressing would refresh them. A boolean force cannot converge (each round rebuilds the identical full queue); anchoring on `Date.now()` **at the server** when the run starts means a row leaves the queue the moment this run stamps it. The epoch is deliberately server-side — a browser-supplied timestamp would drift and could either loop or skip rows. Client round cap raised 12 → 20 to cover a full 88-company re-read
+
+### Notes
+- **This is the bug the previous two pushes could not see.** v03.14r fixed a real clobber and v03.16r a real tile-repaint failure, but neither could surface a per-company exception — `catch (mErr) {}` made an unreadable dossier indistinguishable from one never reached. The error reporting added in v03.17r produced the exact message within one press, which is what made this diagnosable at all
+- **Data was deliberately not rewritten.** Normalising the 47 dossiers to arrays was considered and rejected: the schema never pinned the type, and `PROFILER-SCHEMA.md` already establishes the opposite convention for `specs[]` ("Two legacy shapes still render and must keep rendering, because archived snapshots hold them forever"). Archived snapshots would carry the string form regardless, so the consumer is the correct place to fix. `PROFILER-SCHEMA.md` now states both shapes are accepted
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **21 assertions** across three suites. *Unit + corpus* (11): the exact crash input parses, array form unchanged, prose dropped, non-array/non-string shapes degrade rather than throw, all **88** real dossiers mine with **0** crashes, every one yields ≥1 segment, cap respected, 81 gain spec-product terms. *Drain* (6): 88 re-read across **3** rounds (30+30+28), round 1 sends no epoch, rounds 2+ echo it back, tile repaints with no Refresh. *Stuck queue* (4): stops after one round, names the count, surfaces real error text, re-enables the button
+- **`Scrapergs.changelog.md` rotated** — 3 sections of the 2026-07-17 date group moved to the archive with commit-SHA enrichment (first rotation for this file); counter 50/50 → 48/50 after the new entry. `Scraper.html` unchanged this push, so no page version bump
+- **`Scraper.gs`** VERSION v01.50g → v01.51g; version file synced
+
+## [v03.17r] — 2026-08-27 10:55:12 PM EST — [e87c5b7](https://github.com/LightAISolutions/Sales/commit/e87c5b7dc884d4811db125023b8b986a46895fd0)
+
+> **Prompt:** "I pressed "Sync now" a couple times and refreshed, but the "Dossier read" number never changed - It's still 27. Can you just force Scraper to sit here and read through all of Profiler's dossiers?"
+
+### Added
+- **`scMineDossiersAll_` + `mineAllDossiers` + a "Read all dossiers" button** — a forced drain that does what the developer asked for directly. It differs from `scMineDossiersStep_` in three ways that each matter: **(1) no per-pass cap** — the paced pass reads at most `SCRAPER_DOSSIER_MINE_PRIORITY_MAX` (30) because it is a trickle riding along with the daily sync; this reads the entire queue. **(2) batched writes** — the paced pass issues two `setValue` calls per company (Aliases, then Notes), so a full 88-company fleet costs ~176 individual Sheets round-trips, which is what actually consumed the wall-clock budget; the drain mutates the columns in memory and commits them with **one `setValues` per column**. **(3) it reports failures** — see below. `SCRAPER_DOSSIER_DRAIN_BUDGET_MS = 240000` keeps a call inside the 6-minute GAS execution limit and returns `remaining`; the client loops until that reaches 0 (capped at 12 rounds), so the developer presses once
+- Partial progress is **always** persisted — the write-back is in a `finally`, so a timeout, a thrown fetch or a bad dossier still commits everything read up to that point
+
+### Fixed
+- **`catch (mErr) {}` in `scMineDossiersStep_` is why this was undiagnosable.** A company that could not be read was indistinguishable from one that was never reached: the pass returned a lower `mined` count with no indication that anything had failed, so a queue stuck behind unreadable rows looked exactly like a queue that was simply slow. The drain counts `read` / `noDossier` / `failed` separately and returns the first 8 error messages with their slugs; the client renders them. **This is the change that will actually explain the developer's stall** — the previous two pushes fixed real bugs (v03.14r the clobber, v03.16r the tile repaint) but neither could surface a per-company failure, which is the remaining candidate
+- **`lock.tryLock(5000)` made repeated pressing counter-productive.** `scSyncInterests_` returns `{ skipped: 'locked' }` when it cannot take the script lock within 5s, and a sync holds that lock for its whole run. So pressing *Sync now* a second time while the first was still working returned `skipped: locked` and did nothing — pressing "a couple times" in a row is close to the worst possible input. The client now says this in plain language instead of the opaque `Sync skipped (locked).`, and `mineAllDossiers` waits **45s** for the lock because an explicit "do it now" action should queue rather than bounce
+
+### Notes
+- **Ruled out first:** the live deployment was queried at `?action=api&op=deploy` and answered `Already up to date (v01.49g)`, so the previous fix *was* deployed and the stall is genuine rather than a stale deploy. All 88 slugs in `profiler-companies.json` have a matching `*.profile.json` in `live-site-pages/profiler-data/` (avg ~30 KB), so a mass 404 is not the explanation either
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; **9 assertions** across two Playwright scenarios driving the real page. *Drain*: tile goes `27/88 (+61)` → `88/88` across 3 automatic rounds with **no Refresh pressed**, server-side queue fully drained, status line reads `Read 61 dossiers. Coverage complete.` *Stuck queue*: when every remaining company fails, the run **stops after one round** instead of looping, names the blocked count, surfaces the real error text (`vantage: Address unavailable`), and re-enables the button. Zero page errors in both
+- Test-harness note: `page.add_init_script` is the wrong hook for stubbing `_gasPost` on this page — the page's own inline definition runs later and overwrites it. The stub must be installed with `page.evaluate` **after** load and before `_scraperInit()`, wrapped as `() => { … }` so Playwright does not treat a trailing function expression as the callable
+- **`Scraper.gs`** VERSION v01.49g → v01.50g; **`Scraper.html`** v01.44w → v01.45w; version files synced; public entries added. **The GAS changelog is now at 50/50 — the next push that touches `Scraper.gs` must rotate it** (page counter 45/50)
+
+## [v03.16r] — 2026-08-27 10:30:53 PM EST — [3dd6c9d](https://github.com/LightAISolutions/Sales/commit/3dd6c9da5379d09cabfe0a7be5f7b3281ea11779)
+
+> **Prompt:** "The Console shows 3 cents of Claude usage today, which is fine. The 'Sync now' function still doesn't fully work as intended. After I press it and it goes through its process, the 'Dossiers read' usually don't update even if I click the Refresh button on the top right of the screen. However, after a while of working on something else, I noticed the 'Dossiers read' number jumped from zero to 27/88, but I don't think it was a direct result of me pressing the 'Sync now' function. Figure out what's going on and fix it."
+
+### Fixed
+- **`wdSyncNow_` never repainted the status strip — the tile could not update no matter how long you waited.** The handler refreshed the Interests list (`wdInterestsLoad_()`) and stopped there, but the `Dossiers read` tile is painted exclusively by `wdRenderStatusStrip_`, which is only ever fed by `wdLandingLoad_()`. So the number the developer was watching was rendered once at page load and then never re-read — a *client-side staleness bug entirely independent of the v03.14r clobber fix*, which is why the tile still looked broken after that fix shipped. `wdSyncNow_` now calls `wdLandingLoad_()` after the sync resolves
+- **The Refresh button raced the sync instead of reporting it.** `scMineDossiersStep_` ran with the shared `SCRAPER_DOSSIER_MINE_BUDGET_MS = 60000` wall-clock budget even on the interactive path, so a single *Sync now* occupied ~60–75s of server time. Pressing Refresh during that window issued a **second** `google.script.run` call that read the sheet *before* the in-flight sync committed its write-back, returning pre-sync values — which reads to the developer as "Refresh doesn't work either." Interactive syncs now run against `SCRAPER_DOSSIER_MINE_BUDGET_INTERACTIVE_MS = 25000` (`scMineDossiersStep_(ss, budgetMs)` takes the budget as a parameter; the background scheduler path keeps the full 60s), so the round trip fits comfortably inside a normal button press
+- **The "jumped to 27/88 on its own" observation is explained by the same two bugs, not a third one.** 27 is not a round number and not the priority cap (30) — it is where the wall-clock guard truncated the pass mid-list. The write-back had already committed on the server; the developer only *saw* it later because the tile was waiting for the next full page load to repaint. Nothing ran in the background on its behalf
+
+### Changed
+- **`scSyncInterests_` now reports what mining did.** It returns `mined` (dossiers read this pass) and `minePending` (still queued) alongside the existing company counts, and the toast reads them back: `Read 27 dossiers — 61 still queued, press again to continue.` or `— coverage complete.` when the queue drains. Previously the sync was silent about the half of its work the developer was actually watching, so a *correct* partial pass was indistinguishable from a failed one
+
+### Notes
+- Verification: `node --check` clean on `Scraper.gs` and both inline `<script>` blocks; a Playwright interaction test drives the real page with a stubbed backend and asserts **5** conditions — the tile repaints after *Sync now* **with no Refresh pressed** (`0/88 (+88)` → `27/88 (+61)`), the pending count is shown, the toast reports dossiers read, the toast tells you to press again, and the sync endpoint is called **exactly once** (guarding against a double-submit reintroducing the race). Zero page errors
+- The overlay intercepts pointer events over the button in the test harness, so the click is dispatched via `el => el.click()`; the toast target is the shared status line, not a dedicated element — both worth remembering for the next interaction test on this page
+- **`Scraper.gs`** VERSION v01.48g → v01.49g; **`Scraper.html`** v01.43w → v01.44w; both version files synced; public entries added (GAS counter 49/50 — **rotation is due on the next push**; page counter 44/50)
+
+## [v03.15r] — 2026-08-27 10:18:03 PM EST — [424509e](https://github.com/LightAISolutions/Sales/commit/424509eb333cdfac891f9a9728f069fbfc51428d)
+
+> **Prompt:** "I currently have the Scraper AI model set to Gemini for the free summaries - Can you confirm that the previous two digests were summarized for free with Gemini? Also, make Scraper's default AI model Gemini's free tier. In this case, it doesn't matter that we raised the article caps right?"
+
+### Added
+- **Per-edition AI provenance.** New `AI` column on the `Digests` tab plus `scActiveAiLabel_()` (provider + resolved model, e.g. `gemini/gemini-2.5-flash`), captured on the first successful summarize call, persisted with the edition, returned by `listDigests`, and printed in the Night Ink footer as `· summarized by <provider>/<model>`. **This was written because the developer's question could not be answered:** nothing recorded which provider produced an edition — `Notes` is only populated on *failure*, so a Gemini-built and a Claude-built edition were byte-identical once stored. A fallback edition now stores `none (fallback)` and the footer keeps saying `summaries in fallback mode` rather than naming an engine that did no work
+
+### Fixed
+- **A single rate-limit response no longer degrades a whole edition.** `scDigestSummarizeStep_` caught every AI error into a terminal `state.aiNote`, and the loop guard `!state.aiNote` then blocked any retry on subsequent ticks — so one 429 dropped every remaining item to a raw feed snippet **and** skipped the AI lead paragraph, permanently, for that edition. Added `scAiWithRetry_` (bounded retry on `ai_rate_limited` with `[2000, 6000]` ms backoff) around both the summarize and lead calls, plus a `SCRAPER_DIGEST_AI_PAUSE_MS = 1200` gap between consecutive summarize batches. **Non-transient errors are deliberately not retried** — a bad/missing key or HTTP 400 will not fix itself and retrying only burns free-tier quota
+
+### Notes
+- **Direct answers to the three questions.** (1) *Confirm the last two digests were free?* — **Not confirmable**, and the repo is the reason: no provider was recorded per edition (now fixed going forward). The developer's own screenshots point the other way — the Go-live panel read `claude · claude-sonnet-5` with `✓ claude replied: READY` at ~8:47 PM and only read `gemini` by ~9:07 PM, so at least one of the two editions may have been billed to Anthropic. Ground truth is the Anthropic Console usage page for the day; everything else is inference. (2) *Make Gemini the default* — **already was**: `SCRAPER_AI_PROVIDER = 'gemini'` has been the code default since the provider switch shipped; Claude ran only because the `AI_PROVIDER` Script Property was explicitly set to `claude`, and the in-app toggle has since written `gemini`. No change required. (3) *Do the raised caps not matter now?* — **correct on cost** ($0 on the free tier regardless), **but not on consequences**: `TOP_N = 30` fires ~7 AI calls per edition (6 summarize batches + 1 lead) versus ~4 before, previously unpaced, against a free tier whose per-minute and per-day caps are model-specific and have been reduced over time — and every manual *Run intake now* spends another ~7 requests against the daily cap. Hence the pacing and retry work above
+- Free-tier limit characteristics verified against Google's published rate-limit documentation rather than asserted from memory; exact per-model numbers are dynamic and are best read from Google AI Studio for the model actually in use
+- Verification: `node --check` clean; **13 assertions** pass — provider labelling across unset/claude/gemini property states, recovery after two rate limits, exact attempt counts and backoff sequence, bounded give-up on a persistent limit, immediate surfacing of a non-retryable `ai_http_400` with **no** retry, and footer stamping in both the summarized and fallback cases
+- **`Scraper.gs`** VERSION v01.47g → v01.48g; version file synced; public entry added (counter 48/50). No HTML change — renderer and routes are server-side
+
+## [v03.14r] — 2026-08-27 10:06:57 PM EST — [d0f1ab5](https://github.com/LightAISolutions/Sales/commit/d0f1ab58b96941f3db55ec7d2c536df1977b62c8)
+
+> **Prompt:** "I just pressed "Sync now" four times and the "Dossiers read" tile never updated past "0/88 (+88)". What's wrong? Fix it. 
+>
+> Also, the email (attached) still looks very narrow. Can you widen it more and also increase the caps on articles in the Digest? Considering it's a digest full of summaries that the reader may or may not click into and it only happens once a day, I think it's reasonable to include more summaries in order to make sure no articles (or at least fewer) get missed rather than decrease the amount of scanning the reader has to do."
+
+### Fixed
+- **Dossier mining was silently clobbered by the sync's own write-back — coverage could never leave `0/88`.** `scSyncInterests_` snapshots the Interests sheet into `data` at the top, then called `scMineDossiersStep_(ss)` — which does its **own** read and writes Aliases + the `mined:`/`seg:` tags directly to the sheet — and **on the very next line** wrote its stale snapshot back with `setValues(data…)`, overwriting every mined cell milliseconds after it landed. The company loop sets `dirty = true` for every existing company on every sync, so the clobbering write always fired. Mining ran correctly all four times the developer pressed Sync now; the results were erased each time. Fixed by moving the mining call **after** the bulk write-back and the append block, which also means mining now sees companies appended by the same sync — exactly the priority case. The ordering is documented in-code as load-bearing so it is not re-inverted
+
+### Changed
+- **Digest caps raised (developer directive)** — `SCRAPER_DIGEST_SUMMARIZE_TOP_N` 14 → **30** and `SCRAPER_DIGEST_SECTION_CAPS` `{6,6,4}` → **`{companies:12, market:10, incidents:8}`**, taking a printed edition from at most 16 items + lead to **30 + lead**. The section caps deliberately **sum to exactly `TOP_N`** so every printed item is one the AI actually summarized rather than falling through to a raw feed snippet. Rationale accepted as stated: for a once-daily digest of skimmable summaries, a missed story costs more than a longer scroll
+- **Night Ink widened again** — container 720px → **860px**, outer padding 20/10 → 16/8 and inner 34 → 30 (text column ~652px → **~800px**); summary copy 15 → 16px, item headlines 21 → 22px, lead paragraph 16 → 17px, lead headline 30 → 32px, masthead 40 → 44px. Nested-table structure, `bgcolor` attributes and `max-width:100%` mobile fluidity all unchanged, so the Outlook and dark-mode-client proofing still holds
+- **`Scraper.gs`** VERSION v01.46g → v01.47g; version file synced; public entry added (counter 47/50). No HTML change — the renderer is entirely server-side and the in-app viewer shows the same stored HTML
+
+### Notes
+- **The regression test is the important artifact here.** A unit test of `scMineDossiersStep_` alone passes against the broken code — the bug lives in the *interaction* between mining and its caller. `scripts`-free harness `sync-clobber-test.js` stubs PropertiesService / LockService / CacheService / Utilities / UrlFetchApp and a mutable 2-D-array-backed Sheet, then runs the **real `scSyncInterests_`** end to end and asserts the `mined:` stamp, `seg:` tag and mined aliases survive. It was then run against a reconstructed pre-fix ordering and **fails there** (`notes=` empty, `aliases=ABB` — the pre-mining value restored), confirming it actually catches the defect rather than merely passing
+- Stubbing note for future harnesses: `eval()`'d declarations land in **module** scope, so a `global.scraperSs_` override is invisible to the eval'd code. Stub `SpreadsheetApp.openById` instead and let the real `scraperSs_` run
+- Render fixture re-verified at the new width with all 30 section items: container 860, 16/22/17px type, balanced tables, `31 of 41 relevant … 10 more held back`, plus a Chromium screenshot at a 1250px reading pane
+- **Cost note:** doubling summarized items roughly doubles per-edition AI spend on the Claude path (~5–11¢ → ~10–22¢/edition, ~$2–5/month for 22 weekday editions). Free on the Gemini tier
+
+## [v03.13r] — 2026-08-27 09:53:19 PM EST — [35b7068](https://github.com/LightAISolutions/Sales/commit/35b70682d2979ae1ac277cdb7b74ce498c36115d)
+
+> **Prompt:** "How often would Scraper need to do dossier mining after the first full pass of 88 dossiers? I can manually press "Sync now" 11 times to do the first pass, but would I have to ever do this again? If so, can you figure out a way to automate it?"
+
+### Fixed
+- **Multi-word segment labels were silently corrupted** (introduced v03.12r). `scCompanySegments_` parsed the Notes tag with `/\bseg:([^\s;]*)/`, which stops at the first space — so `seg:bess|data centers|evs & automotive` read back as `['bess','data']`, dropping every segment after the first multi-word one and weakening the per-company segment gate for those companies. Reproduced in isolation before fixing. Notes tags are now `;`-terminated (`seg:…;`, `mined:…;`) with `scNotesGetTag_` / `scNotesSetTag_` helpers that preserve the developer's free text, replace rather than duplicate a tag, and tolerate spaces
+- **A 404 dossier was retried on every sync forever** — a covered company with no published profile JSON re-fetched indefinitely. It is now stamped `mined:` on a non-200 so the queue advances
+- **The mine stamp was only written when new terms were found**, so a company that was read but yielded nothing new was indistinguishable from one never read — making coverage unanswerable. Every successful read now stamps
+
+### Changed
+- **Dossier mining is priority-ordered, not round-robin.** `scMineDossiersStep_` now builds its queue as: (1) never mined, (2) `Profiler Updated` newer than the `mined:` stamp — i.e. the dossier was refreshed, typically post-earnings — then (3) oldest-mined first as a background refresh. Answering the developer's question: mining already repeated forever with no manual action (the daily `scSyncInterests_` throttled at ~20h drove a wrap-around cursor), so nothing was ever *required* of them; what round-robin cost was **latency** — a newly covered company or a freshly refreshed dossier could wait the full ~11-day cycle before its product names and tickers were recognised. Priority ordering cuts that to the next daily sync
+- **Adaptive budget with a wall-clock guard** — `SCRAPER_DOSSIER_MINE_PER_SYNC = 8` is replaced by `PRIORITY_MAX = 30` / `IDLE = 5` / `BUDGET_MS = 60000`. The idle value is a **floor**, not an alternative: an early revision capped the budget at the priority count, which a test caught as starving the background refresh whenever only one or two companies were queued. Net effect — the initial backfill of all 88 dossiers now completes **automatically in ~3 daily passes** with zero presses (previously ~11 days, or 11 manual presses), and steady state is a light 5/day refresh
+- **Coverage is now visible** — new `scDossierMiningStats_` (total / mined / pending / lastMined) rides on `goLiveStatus`, and the landing status strip gains a **"Dossiers read"** tile (`34/88 (+12)`, amber while work is queued, green when current) so the background pass is observable rather than silent
+- **`Scraper.gs`** VERSION v01.45g → v01.46g and **`Scraper.html`** v01.42w → v01.43w; version files + meta synced; public entries added (counters 46/50, 43/50)
+
+#### `Scraper.gs` — v01.46g
+
+##### Fixed
+- Multi-word segment corruption, 404 retry loop, missing mine stamp (detail above); `Scrapergs.version.txt` synced; public entry added (counter 45 → 46)
+
+#### `Scraper.html` — v01.43w
+
+##### Added
+- "Dossiers read" coverage tile on the landing status strip; meta tag synced; public entry added (counter 42 → 43)
+
+### Notes
+- Verification: `node --check` clean on the `.gs` and both inline blocks. **16 pure-logic assertions** pass — tag round-trip with multi-word segments, two tags coexisting without eating each other, user free text preserved, update-not-duplicate, null on absent/empty, priority ordering (never → changed → oldest-aged) driven through `scMineDossiersStep_` against a stubbed sheet and fetcher, the idle-floor fix, the 30/pass cap under an 88-company backlog, and the resulting 3-pass completion. Playwright re-run confirms the new tile renders `34/88 (+12)` with zero page errors
+- The spaces bug was **reproduced in isolation first** rather than assumed — the current parse was run against a realistic tag and shown to return `['bess','data']`
+
+## [v03.12r] — 2026-08-27 09:42:55 PM EST — [e5732df](https://github.com/LightAISolutions/Sales/commit/e5732dfc70604bda74bddc2c1136c0fbb6f7b508)
+
+> **Prompt:** "I fully agree with you on your "1. Free, automatic ways to sharpen Scraper's understanding of you". I want you to execute all six of your tier-1 and 2 suggestions. 
+>
+> I also fully agree with you on your "2. The Projects feature - my verdict". Execute your own recommendations, including all five "other features" in the priority order you chose. 
+>
+> I can't fully visualize your landing page, but go ahead and replace the current landing page with your recommendation. I will have you edit it later if needed. 
+>
+> Regarding the digest, does it cost any tokens to email it out to a recipient? I need to resend it to myself to see if I like your adjustments."
+
+### Added
+- **Three new tabs** (`Editions`, `Subscribers`, `ClickLog`) plus an `Edition` column on `Digests`. `ensureScraperTabs_` now tops up header rows when a schema grows, so existing tabs pick up new columns without manual repair
+- **Editions (replaces Projects)** — named digest products with per-edition cadence (`daily` weekdays / `weekly` on an ISO-day anchor / `monthly` on a day-of-month), reading window, and subscriber list. `scEditionDue_` + `scEditionWindowH_` are pure and unit-tested; `scDigestStart_`/`scDigestStep_` thread an `editionId`, and `scDigestScheduledTick_` finishes any in-flight build before picking the first due edition. `morning` is seeded as the built-in default and cannot be deleted. Routes: `listEditions`, `saveEdition`, `deleteEdition`
+- **Subscribers** — email, name, per-edition opt-in (`all` supported), status, admin flag, unsubscribe token. `scEditionRecipients_` resolves an edition's recipients; the legacy `DIGEST_RECIPIENT` list is migrated in once on first read (`SUBSCRIBERS_MIGRATED`). Routes: `listSubscribers`, `saveSubscriber`, `removeSubscriber` — all behind `scCanManageDigest_`, with addresses masked for non-managers
+- **T1a — click tracking**: every article link in a rendered edition routes through `doGet(action=go)` → `scHandleClickRedirect_`, which resolves the destination **server-side from that edition's own intake rows** by `(digest id, item key)` and appends a `ClickLog` row before redirecting. Deliberately unauthenticated (subscribers open these from email with no session) and deliberately **not** an open redirect — an arbitrary `?url=` can never be honored. `scClickBoosts_` converts a 30-day click window into a diminishing, capped per-label boost (`SCRAPER_CLICK_BOOST_CAP = 5`) folded into the company and topic signals
+- **T1b — dossier alias mining**: `scMineDossiersStep_` round-robins `SCRAPER_DOSSIER_MINE_PER_SYNC = 8` covered companies per daily sync, fetches each `<slug>.profile.json`, and merges product names, technical-spec names, legal name and ticker symbol into that company's Interests `Aliases` — **add-only**, capped at 40 terms, failure-tolerant per dossier
+- **T1c — per-company segment tightening**: the same pass derives each company's operating segments (from `productsAndServices[].targetSegments` + `categories`) into a `seg:` tag in Notes. The rubric now gates a company-matched article when **every** matched company operates only in currently-disabled segments — even when the article names no segment itself. Unknown segments never gate (fail-open)
+- **T2a — corroboration**: `scDigestItems_` groups intake by a normalized 8-word title signature and boosts stories carried by 2+ distinct sources, bounded by `SCRAPER_CORROB_CAP = 6`
+- **T2c — source performance**: `sourceStats` reports per-source items, how many cleared the relevance bar, hit-rate, and clicks earned
+- **F2/F3 — archive search + company timeline**: `searchArchive` (free-text over title/source with company and date filters) and `companyTimeline` (all stored coverage for one covered company, newest first)
+- **F4 — preview**: `previewEdition` renders the current top-scored intake as an edition **without storing or emailing it**
+- **F5 — held-back rollup**: the render step stashes relevant-but-unshown items per edition (`SCRAPER_HELD_BACK_MAX = 25`); `sendHeldBackRollup` emails admin subscribers "what your sources published that you didn't see"
+- **New landing page in `Scraper.html`** — the app opens on the latest edition rendered inline, above it a status strip (next edition / subscribers / AI provider / scheduler health / editions kept) that colours green or amber per row, a click-through strip of recent editions, and a "what is driving relevance" panel. A **Tune drawer** (5 tabs: Interests, Editions, Subscribers, Archive, Source stats) holds everything adjustable; the live interests rail is **relocated** into its first pane rather than duplicated, so there is exactly one interests UI that cannot drift
+
+### Changed
+- **Projects retired.** All 20 Project/article/schedule ops were removed from `SCRAPER_PROJECT_ACTIONS` and `handleProjectAction_`, and the wizard / articles / stats overlays and their topbar buttons were deleted from the page. Sheets data and the function bodies are untouched — the routes are simply unreachable. **`scBindEvents` was fully rewritten to be null-guarded**: it previously bound `sc-new-btn`, `sc-wizard-overlay` and others directly, and binding a now-absent element throws — which would halt the inline script before the auth init runs and take sign-in down for everyone. Every remaining call site of the dead Project functions is itself inside dead code (verified by call-graph grep)
+- **The desk is two columns** — the left interests rail is now a hidden mount point that the Tune drawer adopts on open
+- Scheduled delivery now resolves recipients per edition via `scEditionRecipients_` instead of the flat `DIGEST_RECIPIENT` string, and the subject line uses the edition's own name
+- **`Scraper.gs`** VERSION v01.44g → v01.45g and **`Scraper.html`** v01.41w → v01.42w; version files + meta synced; public entries added (counters 45/50, 42/50)
+
+#### `Scraper.gs` — v01.45g
+
+##### Added
+- Editions, Subscribers, click tracking, dossier mining, corroboration, archive/timeline/stats/preview/rollup (detail above); `Scrapergs.version.txt` synced; public entry added (counter 44 → 45)
+
+#### `Scraper.html` — v01.42w
+
+##### Added
+- Landing page (status strip, recent editions, inline edition, relevance drivers) + Tune drawer (detail above); meta tag synced; public entry added (counter 41 → 42)
+
+### Notes
+- Verification: `node --check` clean on the `.gs` and both inline blocks. **30 pure-logic assertions** pass — edition cadence/window across daily/weekly/monthly incl. the before-7am and already-built-today guards, dossier mining (product/spec/ticker/legal-name extraction, segment derivation, URL-junk rejection), click-key stability, engagement boost + cap, per-company gate zeroing (and that it kills the engagement boost too), fail-open on unknown segments, and corroboration bounding. **Playwright** drove the whole new UI against stubbed routes: status strip, recent-chip switching, inline edition render, drivers panel, absence of all Projects UI, Tune tab switching, editions list (default not deletable), subscribers with masking/removal, archive search, and source-stat bars — zero page errors
+- **Deferred to a cleanup push**: physically deleting the ~3,000 lines of now-unreachable legacy Project/schedule function bodies from `Scraper.gs`. Unregistering the routes makes them inert immediately; excising them safely is its own focused pass
+- Answered in chat: emailing a stored edition costs **no** tokens (the HTML is rendered once at build time and re-sent), but rebuilding an edition re-runs the Sonnet summaries at roughly 5–11¢
+
+## [v03.11r] — 2026-08-27 09:13:55 PM EST — [51554e8](https://github.com/LightAISolutions/Sales/commit/51554e80adf0203c09c188b495e14305c633e422)
+
+> **Prompt:** "I approve of the gated provider switching under the same admin flag - Good job, keep it up. 
+>
+> A few more things:
+>
+> * Now that Scraper directly downloads what matters to me from Profiler, what are some other ways that I can have Scraper further refine its understanding of what matters to me? I strongly prefer free methods and automatic processes. 
+> * Big picture, I want Scraper to be a dedicated third-party trade news scraper that identifies relevant articles from reputable web sites, summarizes them, and sends a daily (expandable to weekly, monthly, etc) digest to a list of subscriber emails (controlled by me, admin jonyang92@gmail.com). However, currently, the majority of the app is taken up by the "Project" feature, which I think should be mostly obsolete as its original purpose was to help me define the scope of its scraping and to develop a database. What are some other features that I can add to this kind of app and what should the landing page highlight? Do you think there's any value in keeping the "Project" feature? If so, explain why. If not, what should I replace it with?
+> * (See attached screenshot) - The emailed digest looks has way too much unused space on the left and right sides of the article summaries. Reformat the digest so that it's more comfortable to read. Also, just to confirm: Did you limit the number of articles found that meet the criteria or are these all the articles that met the criteria within the last 24 hours?"
+
+### Changed
+- **Night Ink email layout widened and retypeset in `Scraper.gs`** — the container table goes 640px → **720px**, outer cell padding 18px/8px → 20px/10px and inner padding 36px/44px/30px → 34px/34px/28px, so the live text column grows from ~552px to ~652px (the developer's screenshot showed a narrow ribbon stranded in a wide reading pane). Typography scaled with it: summary copy 13px/1.55 → **15px/1.65** (and lightened #b6bcc6 → #c2c8d2), item headlines 18px → **21px**, lead paragraph 14px → **16px**, lead headline 26px → **30px**, masthead 36px → **40px**, dateline 12px → 13px, footer 11px → 12px, and per-item bottom margin 14px → 20px. Nested-table structure, `bgcolor` attributes and `max-width:100%` mobile behaviour are unchanged, so the Outlook and dark-mode-client proofing from v03.09r still holds
+- **Digest footer now discloses truncation** — new `counts.shown` (lead + the three rendered section arrays) is reported as `N of M relevant · K scanned`, and when `M > N` the footer appends `· X more held back by the per-section caps`. This answers the developer's question permanently and in-band rather than only in chat: the edition itself now states whether items cleared the bar but were not printed
+- **`Scraper.gs`** VERSION v01.43g → v01.44g; version file synced; public entry added (counter 44/50). No HTML change this push — the renderer is entirely server-side and the in-app edition viewer displays the same stored HTML, so it inherits the new layout automatically
+
+#### `Scraper.gs` — v01.44g
+
+##### Changed
+- Widened + retypeset Night Ink email layout and truncation-aware footer (detail above); `Scrapergs.version.txt` synced; public entry added (counter 43 → 44)
+
+### Notes
+- Verification: `node --check` clean; a render fixture asserted all 10 layout invariants (720px container, trimmed paddings, each new font size, `5 of 22 relevant`, `17 more held back…`, balanced table tags) and a Chromium screenshot at an 1100px reading-pane width confirmed the column now fills the frame comfortably
+- **Caps are unchanged and deliberate** (the developer asked whether the count was limited): relevance floor `SCRAPER_RELEVANT_THRESHOLD = 50`, AI summaries for the top `SCRAPER_DIGEST_SUMMARIZE_TOP_N = 14`, and per-section printing caps `SCRAPER_DIGEST_SECTION_CAPS = { companies: 6, market: 6, incidents: 4 }` → at most 16 items + the lead. Raising them was **not** done unilaterally; it is offered as the next step
+- The strategic answers (free/automatic relevance-refinement options, the Projects-feature verdict and landing-page recommendation) were delivered in-chat — no code change in this push
+
+## [v03.10r] — 2026-08-27 08:56:08 PM EST — [6664c97](https://github.com/LightAISolutions/Sales/commit/6664c97d86b6706745491497771e4317db31c3a7)
+
+> **Prompt:** "This is what the "Go-live" option results in. Make it easy for me to switch between the free Gemini version and the Claude sonnet version. Also, allow me to easily control the Digest Recipients from within the Scraper app. Later on, when I expand the Scraper app to allow other gmails to log in and have their own sessions based on access level (similar features-tied-to-access-level flow as Profiler), I would like the ability to control Digest Recipients to be restricted to "admin" level users only."
+
+### Added
+- **AI-provider switch + recipient management in `Scraper.gs`** — three new session-gated routes: `setAiProvider(provider)` (writes `AI_PROVIDER` = `gemini`|`claude`; the model stays each provider's code default, Claude → `claude-sonnet-5`), `addDigestRecipient(email)` and `removeDigestRecipient(email)` (edit `DIGEST_RECIPIENT`, now treated as a de-duplicated comma-separated list — `MailApp.sendEmail` accepts the same form). All three go through `scCanManageDigest_(user)` and audit-log the change (recipient addresses masked in the log). Helpers: `scValidEmail_`, `scDigestRecipients_`. Registered in `SCRAPER_PROJECT_ACTIONS` + `handleProjectAction_`
+- **Access gate `SCRAPER_DIGEST_ADMIN_ONLY` (`false`) + `scCanManageDigest_`** — while `false` (current single-user owner) any signed-in user may switch providers and edit recipients; flipping it to `true` at the multi-user expansion restricts both to `admin`/`developer` roles (read via `validateSessionForData(...).role`), and everyone else sees the controls read-only. Reading status and the self-service "email me latest" test are never gated. This is the literal "build now, restrict later" the developer asked for — one documented flag, chosen over gating on `admin` immediately (which could lock out the owner if their ACL role isn't admin)
+- **Go-live panel controls in `Scraper.html`** — a two-button segmented provider control ("Gemini · free" / "Claude · Sonnet", active one highlighted green, disabled for non-managers) and a recipient manager (address chips with remove buttons + an add field with client + server email validation). Both driven by `goLiveStatus`, which now returns `recipients` (full for managers, masked for others), `recipientCount`, and `canManageRecipients`; the delivery-status row now reflects the recipient count instead of a single masked address
+
+### Changed
+- **Recipient storage is now a list** — the scheduled send site reads `scDigestRecipients_().join(',')` (normalized) instead of the raw property, so multiple recipients each receive the edition and stray whitespace can't malform the `to` field
+- **`Scraper.gs`** VERSION v01.42g → v01.43g and **`Scraper.html`** v01.40w → v01.41w; version files + meta synced; public entries added (counters 43/50, 41/50)
+- **`repository-information/diagrams/Scraper-diagram.md`** — go-live route line extended with `setAiProvider` / `addDigestRecipient` / `removeDigestRecipient` and a note that provider + recipient edits are gated by `scCanManageDigest_`; pako URL regenerated and decompression-verified
+
+#### `Scraper.gs` — v01.43g
+
+##### Added
+- Provider-switch + recipient-management routes, the `SCRAPER_DIGEST_ADMIN_ONLY` gate and helpers (detail above); `Scrapergs.version.txt` synced; public entry added (counter 42 → 43)
+
+#### `Scraper.html` — v01.41w
+
+##### Added
+- Provider segmented control + recipient manager in the go-live panel (detail above); meta tag synced; public entry added (counter 40 → 41)
+
+### Notes
+- Verification: `node --check` clean on the `.gs` (via `.js` copy) and both inline blocks. Playwright drove the full panel from stubbed state in two roles — **manager**: gemini active initially, switch to Claude shows "(Sonnet)", add appends a chip, an invalid address is rejected with a clear message, remove drops the right chip; **non-manager**: the add row is hidden, chips carry no remove buttons, and both provider buttons are disabled. No page errors in either role
+- The email-validation regex is a shape check on both sides (client for instant feedback, server as the real guard) — it is not an existence/deliverability check
+
+## [v03.09r] — 2026-08-27 08:12:11 PM EST — [3851180](https://github.com/LightAISolutions/Sales/commit/3851180f60e9c4e9d680a3c255c72610e6197692)
+
+> **Prompt:** "Start phase 4"
+
+### Added
+- **Go-live routes in `Scraper.gs`** — `goLiveStatus` (provider/model, key-presence booleans, masked recipient, both pause flags, trigger install + last-tick age, last edition date — no secret values ever returned), `testAi` (one ~30-token `aiComplete_` probe that returns the exact `ai_*` error when the path is broken), `emailLatestDigest` (mails the newest stored edition to the **signed-in user only**, deliberately independent of `DIGEST_RECIPIENT`, audit-logged). Registered in `SCRAPER_PROJECT_ACTIONS` + `handleProjectAction_`; helper `scMaskEmail_`
+- **Go-live panel in `Scraper.html`** — new Digest-overlay section (toggled from a topbar "Go-live" button) rendering the five readiness rows green/amber, plus Test AI and "Email me latest" buttons that surface the server's exact result inline
+- **Retired-source marking in `scSyncInterests_`** — a `source` row whose key has left `SCRAPER_SOURCE_ROSTER` is flipped to `stale` + "Coverage ended" (row kept, never deleted); re-adding the key reactivates it. Previously such rows sat "active" while being inert (the fetch loop iterates the roster, not the sheet)
+
+### Changed
+- **Pause flags flipped for go-live** — `SCRAPER_SCHED_RUNS_ENABLED` and `SCRAPER_SCHED_EMAIL_ENABLED` both `false` → `true`. The Morning Edition now advances one budget-bounded step per hourly tick on weekday mornings ≥7:00 AM ET; the email site still additionally requires a `DIGEST_RECIPIENT` Script Property, so nothing is sent until the developer sets it
+- **New `SCRAPER_LEGACY_SCHEDULES_ENABLED` gate (`false`)** — flipping the master pause would otherwise have revived the pre-rebuild Schedules-tab pipeline (compile → analyze → brief → per-schedule emails) unattended alongside the Morning Edition, double-spending AI and double-emailing. `scSchedulerTick` now returns after `scDigestScheduledTick_()` unless this is explicitly turned on. The legacy code path is preserved intact
+- **Night Ink email-client proofing** — the renderer's outer `max-width`/`margin:auto` div is replaced by nested `<table>`s (Outlook's Word engine ignores both), with `bgcolor` attributes alongside the inline `background` styles (attributes survive aggressive sanitizers) and solid inline colors throughout so dark-mode-inverting clients have nothing transparent to repaint. Body content unchanged
+- **Roster shakeout (all 30 feeds probed live)** — 5 were fetching nothing. Fixed: `dc-frontier` and `microgrid-knowledge` (both moved to a Nuxt platform — real paths discovered from their homepage `<link rel="alternate">` tags), `register-dc` (section slug `data_centre` → `on_prem`). Replaced: `battery-technology` (Informa bot-wall 403s even with browser UAs) → **The Next Platform**, `dc-magazine` (BizClik bot-wall 403) → **HPCwire**, `solar-industry` (domain parked/dead, serves a `/lander` redirect) → **RenewEconomy**. Roster is back to 30 live feeds; battery and solar beats stay covered by Energy-Storage.news / ESS News and pv magazine USA / Solar Power World
+- **`Scraper.gs`** VERSION v01.41g → v01.42g and **`Scraper.html`** v01.39w → v01.40w (topbar pill now green "▶ DIGEST LIVE"); version files + meta synced; public entries added (counters 42/50, 40/50)
+- **`repository-information/diagrams/Scraper-diagram.md`** — scheduled path no longer labeled "paused until Phase 4", email note rewritten to the recipient-gated form, route line extended with the three go-live actions; pako URL regenerated and decompression-verified against the file's code
+
+#### `Scraper.gs` — v01.42g
+
+##### Added
+- Go-live routes + retired-source marking (detail above); `Scrapergs.version.txt` synced; public entry added (counter 41 → 42)
+
+##### Changed
+- Pause flags, legacy-schedules gate, email-proofed renderer, roster shakeout (detail above)
+
+#### `Scraper.html` — v01.40w
+
+##### Added
+- Go-live panel with Test AI + inbox-test buttons (detail above); meta tag synced; public entry added (counter 39 → 40)
+
+### Notes
+- Verification: all 30 roster feeds probed with `curl` (status, item count, latest `pubDate`); replacement candidates probed before adoption. Renderer fixture test — 10 structural assertions (outer/inner table nesting, `bgcolor` attributes, balanced tags, masthead, lead, sections, figure bolding, newly-covered box) all pass. Playwright: go-live panel rows render correctly from stubbed state, Test AI surfaces `ai_key_missing`, inbox test surfaces the masked address, panel collapses; no page errors. `node --check` clean on the `.gs` and both inline blocks
+- **Still developer-side to finish go-live**: set an AI key (`GEMINI_API_KEY` for the free tier, or `ANTHROPIC_API_KEY` + `AI_PROVIDER=claude`) — without one, editions build in $0 fallback mode; and set `DIGEST_RECIPIENT` to start email delivery. The go-live panel reports both
+- The `script.scriptapp` scope gap (documented in `gas-scripts-reference.md`) is what would keep the hourly trigger from installing — the panel's trigger row now makes that visible instead of silent
+
+## [v03.08r] — 2026-08-27 06:49:49 PM EST — [f18d048](https://github.com/LightAISolutions/Sales/commit/f18d0482890d2b020a8f9a00750f55218f2f054a)
+
+> **Prompt:** "A few things:
+>
+> * Why is it free for Profiler to analyze public earnings report and other sources of first-party information, generate dossiers and guidance modules, and even auto-update the dossiers after each company's earnings report, but it costs money for Scraper to analyze third-party trade news sources, identify relevant articles and summarize them, and email out a daily digest to myself? Is there any way to make Scraper do what I want it to do for free as well? If not, then what are some ways I can reduce my costs and still keep myself aware of happenings in my industry?
+> * I will keep generating more and more Digests, so build me a way to easily organize and switch between my past digests. By "organize", I want the ability to see them in an organized manner and delete the ones I don't want anymore (ie: any versions of The Morning Edition between now and the version I run with for the foreseeable future).
+> * (See attached screenshot) The "Lancium, NVIDIA partner..." article I circled in red led to an error 400 message (attached). What happened? Make sure it doesn't happen in the future.
+> * I toggled off EV-related segments, so why did the Digest still give me a "What Tesla Full Self Driving V14 Still Can't Do" and a "Huge Tesla recalls in China while European authorities remain cautious"?"
+
+### Added
+- **Edition manager with delete** — the Digest overlay's edition chips are now open/delete pairs; delete is two-step (arm → "Delete?" with a 4s auto-disarm) and calls the new session-gated `deleteDigest` route in `Scraper.gs`, which lock-serializes, removes the edition's `Digests` row(s) and its `DigestIntake` rows bottom-up, and audit-logs the removal. The chip list now requests 30 editions, and when the latest edition was built in fallback mode its stored note (e.g. `ai_unavailable: ai_http_400`) is surfaced in the Digest status line
+
+### Fixed
+- **Google News 400 on backstop article clicks** — `scParseFeed_` truncated stored URLs at 500 chars; Google News redirect URLs routinely exceed that (curl sampling showed ~500+ even on small samples), so the encoded article token was chopped and Google returned "400 malformed". Caps raised to 1500 in both the RSS and Atom branches
+- **Backstop headline/snippet hygiene** — `scDigestIngest_`'s `clean()` now decodes HTML entities (`&nbsp;`, `&quot;`, `&#39;`/`&apos;`, `&lt;`, `&gt;`, numeric refs, `&amp;` last); backstop titles get their trailing " - Publisher" suffix stripped; snippets that merely restate the title are blanked
+- **EV segment gate misses** — "What Tesla Full Self Driving V14 Still Can't Do" and "Huge Tesla recalls in China…" contained no v1 `seg-ev` vocabulary term, scored segment-neutral, and passed on the company signal alone. `seg-ev` expanded to 31 terms and `seg-ev-charging` to 13 (FSD variants, model names, recall phrasing, NHTSA, robotaxi, ChargePoint, NACS, …) with seed-term versioning: seeds now carry `tv`, and `scSyncInterests_` upgrades existing segment rows whose Notes is empty or `seed-terms-v(N)` with N < tv (replaces Aliases, stamps the marker); any other Notes content permanently opts the row out of upgrades. Functional tests: both Tesla headlines now gate (11 and 5 points) while a Tesla Megapack control passes ungated (59)
+
+#### `Scraper.gs` — v01.41g
+
+##### Added
+- `deleteDigest` route; `Scrapergs.version.txt` synced; public entry added (counter 40 → 41)
+
+##### Fixed
+- URL cap 500 → 1500, entity decoding, backstop title/snippet cleanup, EV vocabulary upgrade + sync upgrade path (detail above)
+
+#### `Scraper.html` — v01.39w
+
+##### Added
+- Edition-manager chips with two-step delete and fallback-note surfacing; meta tag synced; public entry added (counter 38 → 39)
+
+### Notes
+- The Profiler-free-vs-Scraper-cost explanation and the operating options (Gemini free tier by default, `ANTHROPIC_MODEL=claude-haiku-4-5` as the cheap Anthropic path, current fallback mode already costing $0) were delivered in-chat
+- Playwright verified the edition manager end-to-end (chips render, fallback note surfaces, arm/confirm/timeout paths); `node --check` clean on the `.gs` and both inline blocks
+- Archive rotation performed on this push — the 2026-08-09 date group (17 sections, v02.24r–v02.08r) moved to CHANGELOG-archive.md with SHA enrichment; counter 101 → 84
+
+## [v03.07r] — 2026-08-27 06:20:46 PM EST — [9d0415d](https://github.com/LightAISolutions/Sales/commit/9d0415de8d497275363cb8fdb5d2abc80e0a334f)
+
+> **Prompt:** "Before starting phase 4, walk me through the current Scraper workflow, including details on how many articles it searches through from the 30 sources, how it searches through them, how it summarizes and scores them, why the current digest only shows 8 article summaries instead of more, and what parts of the workflow cost real money via Anthropic's API & how much. My current feedback is: I like the design and, while the 8 articles Scraper found for today's digest are related to my covered companies, some of them cover topics from my covered companies that are not directly related to BESS or AIDC (ie: CATL's EV, BYD's EV chargers, or Tesla's vehicle recall). I would like Scraper to analyze my covered companies' business segments (ie: BESS, EV, chargers, transformers, etc.) and create another toggle-able subsection on the left called "Segments" that includes the list of segments Scraper identifies. That will allow me to have direct control on which segments I want to include/exclude from actively covered companies. Also, I want the article summaries to be longer. I'm not sure if I want to set a hard limit; I just want more information in each summary. Use your best judgment."
+
+### Added
+- **Segment lenses + rubric segment gate in `Scraper.gs`** — 14-entry business-segment taxonomy (`SCRAPER_SEGMENT_SEEDS`: BESS, AIDC, transformers/grid equipment, power electronics, solar, wind, nuclear, gas/turbines, fuel cells, EVs & automotive, EV charging, semiconductors, consumer electronics, industrial automation) seeded into the Interests tab as toggleable `segment` rows (default ON, flag "New segment", insert-only — in-sheet term edits win). `scLoadInterestModel_` now loads segments in both enabled and disabled states; `scRubricScore_` classifies each article against all lenses and applies the gate: a company-matched article whose only segment hits are toggled-off segments has its company + emphasis signals zeroed (topics unaffected; no segment hits = neutral). Rubric results and intake signals now carry `matchedSegments` / `excludedSegments` / `gated`. Functional tests: the developer's three examples (CATL EV deal, BYD chargers, Tesla recall) drop to 2–5 points with "EVs & automotive"/"EV charging" off, while a CATL grid-storage order (62), a mixed EV+BESS story (59), and a no-segment-terms company story (56) pass through ungated
+- **Segments panel in `Scraper.html`** — new toggleable subsection between Companies and Topics (reusing the interest toggle/route path); the rubric tester now reports segment matches and prints an "Excluded by segment gate — only matches toggled-off segment: …" explanation when the gate fires
+
+### Changed
+- **Longer digest summaries** — summarize prompt rewritten (what happened + parties, all figures, deal/policy/incident mechanics, why-it-matters close; typically 3–5 sentences / 60–120 words, no hard cap), batches 7 → 5 items with maxTokens 1200 → 3000, stored-summary cap 400 → 900 chars, lead paragraph 2-3 → 3-5 sentences (maxTokens 500 → 1200, cap 600 → 1200); AI-unavailable fallback now keeps the full snippet
+- **`Scraper.gs`** VERSION v01.39g → v01.40g and **`Scraper.html`** v01.37w → v01.38w; version files + meta synced; public entries added (counters 40/50, 38/50); README tree updated
+- **`repository-information/diagrams/Scraper-diagram.md`** — sync seed line now includes topic/segment/source seeds, interests-rail flow lists all four sections, rubric line notes the segment gate; URL regenerated and decompression-verified
+
+### Notes
+- The workflow walkthrough and Anthropic cost map (Sonnet 5 $2/$10 per MTok, Haiku 4.5 $1/$5, web search $10 per 1,000 searches — verified against current pricing docs) were delivered in-chat; the digest's summarize/lead calls bill to Anthropic only when the `AI_PROVIDER=claude` Script Property is set, and the scheduled pipeline remains paused
+- Playwright verified the Segments section and the gated rubric-tester note; `node --check` clean on the `.gs` and both inline blocks
+- CHANGELOG counter is now exactly at capacity (100/100) — the next push triggers archive rotation with SHA enrichment
+
+## [v03.06r] — 2026-08-27 05:48:26 PM EST — [2173eb0](https://github.com/LightAISolutions/Sales/commit/2173eb05ba3f60f35474bcce4d315f04ae665f44)
+
+> **Prompt:** "Execute Phase 3"
+
+### Added
+- **Weekday digest engine in `Scraper.gs` (rebuild Phase 3)** — chunked, resumable state machine (`scDigestStep_`: start → fetch → backstop → summarize → render; state in Script Properties, intake sheet-backed in the new `DigestIntake` tab, editions stored in the new `Digests` tab with 60-row retention): fetches the enabled D1 roster feeds (≤6/step, 40s budget, broken feeds tolerated), windows to 24h (72h Monday editions via ET ISO-day), dedupes by URL, scores every item with the D3 rubric on intake (floor 25 to enter; relevance bar 50), adds the **D2 Google News company-name backstop** (12 enabled companies per run, round-robin cursor, labeled `(backstop)`, score ×0.85), AI-summarizes the top 14 (batches of 7 via `aiComplete_`, figures preserved; one more call picks the lead + writes the lead paragraph) with a **deterministic snippet fallback when no AI key is configured** — the digest always builds — then groups sections (incident/opposition topics win over company matches → Incidents & community; company matches → Covered companies; rest → Market & policy) and renders the **Night Ink** edition (`scRenderDigestNightInk_`: Newsreader serif masthead, double rules, amber-bolded figures, red incidents rule, Newly-covered box, email-ready inline styles)
+- **30-source D1 roster** (`SCRAPER_SOURCE_ROSTER`) — free 3rd-party trade press only, tier 1 core AIDC/BESS/grid + tier 2 adjacent; seeded into the Interests tab as toggleable `source` rows by the daily sync (insert-only, default ON; the sheet toggle wins, the constant owns name + feed URL). The approved in-chat list wasn't persisted to the repo, so the roster reconstructs it to D1's recorded constraints (no paywalls — RTO Insider et al. stay excluded; no company-owned newsrooms)
+- **Scheduled hook + dormant delivery** — `scDigestScheduledTick_()` inside `scSchedulerTick` after the pipeline pause gate (weekday ≥7:00 AM ET, one step/tick, stops once today's edition exists; `SCRAPER_SCHED_RUNS_ENABLED` still `false` so no unattended AI spend); the email site requires both `SCRAPER_SCHED_EMAIL_ENABLED` and a `DIGEST_RECIPIENT` Script Property — both unset until Phase 4's client-proofing + go-live
+- **Four session-gated routes** — `runDigestNow` (client-looped steps), `getDigestStatus`, `listDigests`, `getDigest` — registered in `SCRAPER_PROJECT_ACTIONS` + `handleProjectAction_`
+- **App wiring in `Scraper.html`** — Sources section atop the interests rail (30 outlets with toggles, reusing the interest toggle path) and the topbar **Digest** button → edition overlay (edition chips via `listDigests`, Night Ink render via `getDigest`, "Run intake now" loop with live phase/kept/fetched progress); IBM Plex font link extended with Newsreader for in-app edition fidelity
+
+#### `Scraper.gs` — v01.39g
+
+##### Added
+- Digest pipeline, roster, backstop, scheduled hook, routes (detail above); `Scrapergs.version.txt` synced; public entry added (counter 38 → 39)
+
+#### `Scraper.html` — v01.37w
+
+##### Added
+- Sources panel + Digest overlay (detail above); meta tag synced; public entry added (counter 36 → 37)
+
+### Changed
+- **`repository-information/diagrams/Scraper-diagram.md`** — new "The Morning Edition (Rebuild Phase 3)" flow (Trade-press RSS + Google News participant, chunked build loop, dormant-email note, edition viewer ops); mermaid.live URL regenerated and decompression-verified
+
+### Notes
+- Functional node tests: section grouping (incident-over-company precedence, opposition routing), figure-bolding regex (fixed a `\b`-after-`%` boundary miss found by the test), full renderer output (masthead, No. 001, escaped XSS probe, amber figures, red incidents rule, newly-covered box)
+- Playwright: full "Run intake now" loop driven through all four phases against stubbed routes; sources rail and the rendered Night Ink edition verified on screenshot; no unexpected console errors; `node --check` clean on the `.gs` and both inline script blocks
+
+## [v03.05r] — 2026-08-27 05:08:03 PM EST — [60f3f07](https://github.com/LightAISolutions/Sales/commit/60f3f07722b31e9e96bcdd06a374f3593746cdf9)
+
+> **Prompt:** "Execute Phase 2"
+
+### Added
+- **Wire Desk reskin of `Scraper.html` (rebuild Phase 2)** — the approved dark monitoring-desk design from the "Scraper Redesign Mockups" canvas applied to the whole app layer: CSS-token system (`--wd-*`: charcoal #15171c, panels #1b1e24, lines #262b33, amber accent #f2a33c, IBM Plex Sans/Mono), sticky top bar (SCRAPER · News Desk wordmark, live ET clock, DIGEST PAUSED pill tied to the v03.02r pipeline pause, notification/refresh/new-project actions), and a 280px · 1fr · 300px desk grid that collapses to a single column under 1100px. Every existing surface restyled onto the tokens with selectors unchanged (project cards, 5-step wizard, articles overlay, filter bar, stats panel, learned panel, progress stack, rating log, notification panel)
+- **Interests rail (left)** — live from the Phase 1 routes: Companies section (`listInterests` on sign-in; category-count chips + "+N new" chip; search filter; first 12 with "All N companies" expander; "New coverage" flags float to top; stale rows dimmed/struck-through as "Coverage ended" with a read-only toggle) and Topics section ("New topic" flags); per-row on/off toggles post `setInterestEnabled` optimistically with revert-on-failure, and toggling clears the attention flag
+- **Digest-controls rail (right)** — Schedule card (Mon–Fri 7:00 AM ET display, weekend-coverage note; editable at Phase 3), Profiler sync card (last-sync status from the sync summary + "Sync now" → `syncInterestsNow`), and a rubric tester (headline/snippet → `rubricPreview` → 0–100 score with per-signal bars for company/topic/emphasis/substance and matched-interest list)
+- **CSP `style-src` extension** — `https://fonts.googleapis.com` added to both the active and the commented hardened CSP tags (PROJECT OVERRIDE-marked) so the IBM Plex stylesheet loads in production; font files were already allowed via `fonts.gstatic.com`
+
+### Changed
+- **👍/👎 feedback UI retired per decision D3** — `SCRAPER_FEEDBACK_UI_ENABLED = false` gates the verdict buttons, the Calibrate card action, and the rating-coaching copy (Stats recommendation, post-Analyze toast); all verdict/calibration code paths, routes, and historical votes are preserved and the flag restores them
+- **`Scraper.html`** version v01.35w → v01.36w (`Scraperhtml.version.txt` + meta tag); public entry added to the page changelog (counter 35 → 36)
+- **`repository-information/diagrams/Scraper-diagram.md`** — interest-ops block rewritten as the wired "Wire Desk Interests Rail (Rebuild Phase 2)" flow; the 👍/👎 tap flow replaced with a retirement note (server-side routes preserved); mermaid.live URL regenerated and decompression-verified
+- **README tree** — Scraper version display v01.35w → v01.36w
+
+### Notes
+- Playwright visual verification passed on 1440×900 and 390×844 (fixture-fed signed-in state): interests rows/flags/stale render, rubric result renders, zero verdict/calibrate buttons, no unexpected console errors; screenshots reviewed
+- Inline `<script>` blocks pass `node --check`
+
+## [v03.04r] — 2026-08-27 04:39:36 PM EST — [2918ab6](https://github.com/LightAISolutions/Sales/commit/2918ab66a7061d8a1ee76ad8e520ffa102985bc3)
+
+> **Prompt:** "Picking up from my recent "Scraper digest customization and Profiler Integration" session, execute Phase 1 of the approved Scraper rebuild"
+
+### Added
+- **Interests tab + daily Profiler-registry sync in `Scraper.gs` (rebuild Phase 1)** — new `Interests` tab (Key / Type / Label / Enabled / Status / Flag / Categories / Aliases / Weight / Source / Profiler Updated / First Seen / Last Synced / Notes) synced from the public GitHub Pages `profiler-data/profiler-companies.json` by `scSyncInterests_()`: new active registry companies upsert default-ON flagged "New coverage"; companies that leave the registry are marked stale ("Coverage ended"), never deleted; registry-owned fields refresh on sync while developer-owned fields (Enabled / Aliases / Weight / Notes / Flag) are never overwritten (a stale→active return re-flags as new coverage). Driven by the hourly `scSchedulerTick` ahead of the pipeline pause gate (no AI tokens, no email; throttled to ~once/day; serialized under the script lock; a failed fetch is recorded and never stale-flags real coverage). Manual editor fallback `syncProfilerInterests()`
+- **Ten topic-interest seeds** (`SCRAPER_INTEREST_TOPIC_SEEDS`) — six mapped 1:1 to the Industry Guidance modules (800 VDC, China policy, utility procurement, BESS bankability, BESS technology, grid infrastructure) and four standing market topics from the original rebuild request (AIDC geopolitics, community opposition, battery fire incidents, US buildout/capex). Insert-only: once a seed lands in the tab, in-sheet developer edits win
+- **Four-signal scoring rubric scaffolding (decision D3)** — `scRubricScore_()` + `scLoadInterestModel_()` + word-boundary matcher `scTermsHit_()`: company (0–40, developer Weight scales it), topic (0–25), Profiler-emphasis (0–15: coverage base + dossier recency over 45 days + weight boost), substance (0–20: deterministic snippet heuristics — length, figures, quotes, hard-news verbs). 0–100 output aligned with `SCRAPER_RELEVANT_THRESHOLD`; Phase 3 wires it into the digest scoring path (feedback code + historical votes preserved per D3). Node-based functional tests verified the scoring shape and the word-boundary guard (short names like ABB cannot match inside longer words)
+- **Four session-gated routes for the Phase 2 panel** — `listInterests`, `setInterestEnabled` (toggling clears the attention flag), `syncInterestsNow`, `rubricPreview` — registered in `SCRAPER_PROJECT_ACTIONS` and `handleProjectAction_` (served by both doPost and the doGet api mirror)
+
+### Changed
+- **`Scraper.gs`** VERSION v01.37g → v01.38g; `Scrapergs.version.txt` synced; public entry added to the GAS changelog (counter 37 → 38)
+- **`.claude/rules/industry-guidance.md`** — new step 9: authoring a guidance module now also adds a matching topic seed to `SCRAPER_INTEREST_TOPIC_SEEDS` (the approved authoring-time sync — no runtime Profiler probe)
+- **`repository-information/diagrams/Scraper-diagram.md`** — added the Interest Model Sync flow (registry participant, daily sync loop before the pause gate, the new session-gated ops); mermaid.live URL regenerated and decompression-verified
+- **README tree** — Scraper version display v01.37g → v01.38g
+
+## [v03.03r] — 2026-08-27 04:09:00 PM EST — [9d8b671](https://github.com/LightAISolutions/Sales/commit/9d8b671a397fa5ce856794d4c056a3793b022477)
+
+> **Prompt:** "D1: I like the 12 sources you provided, but I think this source pool is too small. Expand the source list to 30 sources (if possible). If you can only get to 30 sources by including low-value entries, then don't include them, but let me know which sources they are and why you aren't including them. I do not want any sources that require paid subscriptions. D2: Go with your recommended option B. D3: Go with your recommended option A. Also: (See attached screenshot) For all outputs, do not say "Developed by: ShadowAISolutions"; Instead, say "Developed by: LightAISolutions"." *(with a screenshot of HITHIUM-INTERVIEW-BRIEF.pdf in Google Drive, its footer line "Developed by: ShadowAISolutions" circled in red)*
+
+### Changed
+- **Developer rebrand** — `DEVELOPER_NAME` changed from `ShadowAISolutions` to `LightAISolutions` in the Template Variables table and propagated across 242 files (footers, LICENSE.md copyright, CITATION.cff, FUNDING.yml, GOVERNANCE.md, CONTRIBUTING.md, PR template, workflow comments, SVG logo comments, templates, scripts, tests, `archive info/` doc footers). Intentionally preserved occurrences: the Provenance Markers rule in `.claude/rules/behavioral-rules.md` (documents the original author; hidden provenance markers remain untouched per that rule), the init history entry in `CHANGELOG-archive.md`, and the historical technical content in `archive info/07-SECURITY-UPDATE-PLAN-TESTAUTHGAS1.md` and `archive info/TEMPLATE-UPDATE-PLAN.md` (the literal old string is load-bearing in those incident records — e.g. the v02.79r origin case-mismatch bug)
+- **Version bumps for every deployed file the footer swap touched** — pages: MasterACL v01.05w, Profiler v01.43w, Receipts v01.36w, Scraper v01.35w, gas-project-creator v01.03w, globalacl v01.05w, testauthgas1 v01.03w, testauthhtml1 v01.03w, text-compare v01.01w (version files + meta tags); GAS: MasterACL v01.13g, Profiler v01.22g, Receipts v01.28g, Scraper v01.37g, globalacl v01.07g, testauthgas1 v01.06g, testauthhtml1 v01.06g (VERSION constants + version files), Claspdeploytest v01.01g (constant only — pilot has no version file); AHK: AutoUpdate v01.01a, Test1 v01.01a (constants only — CI regenerates version files). All 18 page/GAS/AHK changelogs received a "Minor internal improvements" section; README tree version displays updated
+- **Study-prep and AIDC report PDFs regenerated** from their corrected sources so no delivered PDF still carries the old attribution footer
+
+### Notes
+- Scraper digest build decisions recorded: **D1** = 30-source free roster approved in-chat (paywalled and low-value exclusions named); **D2** = option B (Google News retained only as a covered-company-name backstop, down-weighted and labeled); **D3** = option A (four-signal Profiler-derived scoring rubric approved; 👍/👎 feedback turned off and hidden but code and historical votes preserved, not deleted)
+
+## [v03.02r] — 2026-08-27 02:20:49 AM EST — [f1ef994](https://github.com/LightAISolutions/Sales/commit/f1ef9941fb9d43719de98f4fad78fb7a48ea772b)
+
+> **Prompt:** "A few things: • I want to temporarily stop all emails to jonyang92@gmail.com that cost me tokens through Anthropic API, in case "digests" does not provide enough context. • Explain to me the difference between a runtime Profiler-API probe vs the rule-based sync. Then, let me choose. • I wasn't very happy with having to provide so much "thumbs up/down" feedback in order to train Scraper to learn which articles I would be interested in. Therefore, I want Scraper to be able to analyze and learn from Profiler so that I don't have to provide personal feedback anymore. Is this possible? If so, I would like to abolish the feedback system or at least temporarily turn it off. • I wasn't very satisfied with the depth of information provided by Google News RSS queries. I would prefer you analyze and identify between 12-20 reputable and trafficked trade news sites that would serve as a good source of news instead. If you think there is still value provided by Google News RSS queries, then explain what the value is and let me decide afterwards. • Scraper's html looks very rough and unprofessional. Don't copy Profiler's aesthetic, but remake Scraper in a way that is equally professional, but with a more news-friendly theme. I want Scraper to be designed in a way that makes it easy for me to see and adjust sources, keywords, topics, summary formats, and anything else you think would help me stay on top of my industry's news. Recommend a couple styles and let me see mockups of what they would look like before I decide. Do the same with the outputted digest as well - let me see what they would look like and let me adjust things before we set things in stone."
+
+### Changed
+- **`Scraper.gs`** — added the `SCRAPER_SCHED_RUNS_ENABLED` pipeline pause (set `false`): `scSchedulerTick()` now exits immediately after its heartbeat, so no scheduled compile/analyze/brief phase executes — closing the gap left by v03.01r, which stopped emails but let scheduled runs keep spending AI tokens generating briefs into the Reports tab. The heartbeat still updates, so `getSchedulerHealth` correctly reports the trigger alive; Next Run does not advance while paused (due schedules run once on resume); manual in-app actions are unaffected. The v03.01r `SCRAPER_SCHED_EMAIL_ENABLED` switch remains as delivery-layer defense in depth. VERSION v01.35g → v01.36g; `Scrapergs.version.txt` synced; public entry added to the GAS changelog (counter 35 → 36)
+- **README tree** — Scraper version display v01.35g → v01.36g
+
+### Notes
+- Repo-wide token-cost audit of email/automation paths: Profiler's field-note suggestion email is human-typed (no AI); Receipts uses Gemini only (free tier) and its emails are compliance alerts; Profiler's 15-minute transcript watcher DOES spend Anthropic tokens when new transcripts appear but sends no email — left untouched and flagged to the developer
+- Trade-news source list verification, Profiler-taught relevance design, and app/digest style mockups were delivered in-chat for developer decisions — no further repo changes this push
+
+## [v03.01r] — 2026-08-27 01:54:03 AM EST — [a75d27e](https://github.com/LightAISolutions/Sales/commit/a75d27e74be59c932823b0886d791a47233d4428)
+
+> **Prompt:** "Picking up from my "Receipts sign-in denials" session, make Scraper stop emailing jonyang92@gmail.com any daily, weekly, monthly, bi-annual, and annual digests for now. I have been refining my Profiler app to conduct, organize, and analyze deep research of companies' 1st-party sources (prioritizing public earnings reports, investor relations articles, and press releases by the companies themselves). I want my Scraper app to be differentiated from Profiler in that its role is to conduct, organize, and analyze deep research of companies' 3rd-party trade news sites and automatically send me daily digests in the morning that go over the past 24 hours of news related to my covered companies and US AIDC market as a whole (geopolitical policies, public protests, battery fire incidents, etc). If possible, I want you to develop a way for Scraper to analyze Profiler and learn which companies and topics I care about, then use that information to scrape highly reputable and highly trafficked trade news sites for relevant articles. Then, use Claude AI to summarize the key points and figures from these articles that would matter to me, Jon Yang, and send me a daily weekday (Mon-Fri) digest that will allow me to quickly understand what happened since the last digest and stay on top of industry information. Since my Profiler app currently has 88 companies (and growing) and I would obviously want Scraper to care about Profiler's covered companies, I would like Scraper to give me a way to see all relevant keywords I care about and give me the ability to toggle them on/off for Scraper's digests. That way, I will be able to customize my digests to focus on the companies and topics that matter to me most in the moment. I would also like Scraper to be able to see newly added companies and industry guidances on Profiler and automatically refine its search algorithm to update along with Profiler. Recommend me an action plan to approve."
+
+### Changed
+- **`Scraper.gs`** — added the `SCRAPER_SCHED_EMAIL_ENABLED` master kill switch (set `false`), gating both scheduler email call sites: the brief-delivery email in `scDeliverBrief_()` and the run-failure notice in `scRunScheduleStep_()`. Every scheduled cadence (daily/weekly/monthly/quarterly/biannual/annual/custom) delivers through these two sites, so all digest emails stop once the auto-merge workflow's GAS self-update webhook deploys this version. Scheduled runs still execute and briefs still land in the Reports tab (row status stays `generated`); flipping the flag back to `true` and merging resumes email delivery with no other change. VERSION v01.34g → v01.35g; `Scrapergs.version.txt` synced; public entry added to the GAS changelog (counter 34 → 35)
+- **README tree** — Scraper version display v01.34g → v01.35g
+
+### Notes
+- The Scraper↔Profiler integration action plan (Profiler-derived interest model, keyword on/off toggles, Claude-summarized Mon–Fri morning digests, auto-refinement as Profiler grows) was presented in-chat for developer approval — no implementation this push
+- Session start reconstructed the stale `SESSION-CONTEXT.md` (recorded v02.99r vs actual v03.00r) as an intermediate commit bundled with this push
+
 ## [v03.00r] — 2026-08-24 06:16:16 PM EST — [0c1bc91](https://github.com/LightAISolutions/Sales/commit/0c1bc918a9276ff66a7426136a25b5fbf7c03530)
 
 > **Prompt:** "Picking up from my recent "Profiler app role-based access control" session, I suddenly cannot sign into my Profiler app as jonyang92@gmail.com with the following error message. What's going on? Fix it." *(with a screenshot of the Profiler sign-in screen showing "Sign-in could not reach the access list, so it could not confirm your account. This is usually temporary — please try again in a moment. (code: acl_unavailable/acl_unreachable)")*
