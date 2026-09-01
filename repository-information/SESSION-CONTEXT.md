@@ -5,6 +5,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 > **Note on stale-context auto-reconstruction** — when a session starts and this file's `Repo version:` doesn't match the current repo version, Claude reconstructs the missing entry from CHANGELOG.md and commits it **without pushing**. The commit rides along with the session's first user-task commit on the next push. If a session ends before any user-task push happens, the reconstructed entry stays **local-only** and the next session will just re-reconstruct from CHANGELOG if still stale. This is intentional — pushing a dedicated reconstruction commit on its own would force every subsequent user push in the same session to wait for the auto-merge workflow to finish before it could push too (push-once enforcement). The reconstructed entry is a convenience hint, not load-bearing state, so the small persistence risk is a fair trade.
 
 ## Latest Session
+**Date:** 2026-09-01 03:01:25 AM EST
+**Repo version:** v04.03r
+**Branch:** `claude/receipts-app-bug-73prik`
+
+**What we worked on (two pushes, v04.02r and v04.03r):**
+
+- **The developer reported a third Receipts sign-in outage** (`acl_unavailable/acl_unreachable`) with a screenshot and said "fix it." Before touching code, I probed the **Profiler** deployment's `aclhealth` endpoint — a *different* Apps Script project reading the *same* ACL spreadsheet — and it returned `stage:"open"`, `acl_unreachable`, `"You do not have permission to call SpreadsheetApp.openById. Required permissions: .../auth/spreadsheets"`. **That one call settled everything**: the spreadsheet was irrelevant (the call never reached it), the fault was not Receipts-specific (a second project failed identically), and it was not fixable from this repo (no commit grants an OAuth scope)
+- **So the defect worth fixing was not the grant — it was that a grant gap produced a total, silent, undiagnosable lockout.** Two changes followed
+- **v04.02r — last-known-good ACL snapshot** in the shared AUTH block. Every successful read stores the page's allow-list (`email → role`) in Script Properties; a read that fails both attempts consults it before reporting an outage. Applied to `gas-minimal-auth-template-code.js.txt` and propagated to **all 7 auth projects** per [PC-TEMPLATE-PROP] #19 — the function was byte-identical across all 8 files before (`69231e6bc877`) and after (`ef876136e831`), verified by hash
+- **v04.02r — `aclHealthProbe_` ported to `Receipts.gs`** (`GET ?action=api&op=aclhealth`), extended with a `grace` field (users covered, age, armed). Profiler had this since its own incident; Receipts did not, which is exactly why all three Receipts incidents cost an Apps Script editor round-trip
+- **Developer then repaired the grant in Google and confirmed all three apps work.** Verified from outside: Receipts `v01.29g acl_ok`, Profiler `v01.31g acl_ok`, Scraper `v01.93g`, MasterACL `v01.14g` — and the Receipts probe showed **`grace: 16 users, armed`**, i.e. the new safety net populated itself on their first successful sign-in
+- **v04.03r — monitoring.** `scripts/check-acl-health.sh` plus a daily Routine, because all three incidents were discovered the same way (the developer hitting a wall) and the probe that would have caught each a morning earlier had nothing watching it
+
+**Where we left off:**
+
+- Everything committed, pushed and merged (`a8fab2f`); working tree clean; all four deployed projects verified green from outside
+- **Routine `ACL health check (daily)` — `trig_01GeTqB8xp5nG8FCC139Bgr9`**, cron `0 10 * * *` (06:00 ET), fresh session per fire, push + email. **First fire was 2026-09-01 ~06:02 AM EDT.** It is instructed to stay **silent** on a healthy run, so silence is the success signal
+- The one thing not yet observed: a real quiet-day run. Manual runs pass; the Routine has not yet been seen to correctly say nothing
+
+**Key decisions made:**
+
+- **Availability over strict denial, deliberately and flagged.** A revoked user keeps access up to 24h past the last good read if the ACL happens to be unreadable. Receipts runs the `hipaa` preset, so this is a real trade — `ACL_GRACE_ENABLED = false` restores strict denial. The snapshot can only ever *reproduce* a yes the real ACL already gave; it never denies from the snapshot, so removals land as soon as the list is readable
+- **The grace verdict is not cached** — a cached grant would outlive the outage by the full 10-minute access-cache TTL
+- **The monitor lives outside Google, on purpose.** A GAS-side time-driven check would sit in the same account whose grant keeps lapsing — the one failure domain a monitor must not share — and `script.scriptapp` is systemically missing on pre-v01.82r projects, so such a trigger could silently never install and look exactly like health
+- **Exit 2 (nothing probed) is a failure, not a pass.** A monitor that reports success when it checked nothing is worse than no monitor, because it gets trusted. Same reasoning makes an empty/non-JSON body a failure rather than a swallowed parse error
+- **Rejected: pinning `oauthScopes` from the deploy path.** Considered as a recurrence fix — an under-declared pinned list would brick self-update fleet-wide, and `pullAndDeployFromGitHub()` already preserves the manifest verbatim. The recurrence is in the *grant*, not the declaration
+- **`REPO-ARCHITECTURE.md` deliberately not updated** for the new script: its diagram depicts the three *template* scripts only, and six existing utility scripts are already absent by that convention
+
+**Active context:**
+
+- Branch `claude/receipts-app-bug-73prik` · repo **v04.03r** · GAS: Receipts **v01.29g**, Profiler **v01.31g**, Scraper **v01.93g**, MasterACL **v01.14g**, globalacl **v01.08g**, testauthgas1/testauthhtml1 **v01.07g**. No HTML page versions changed in either push
+- Capacity: repo CHANGELOG **83/100** (the 2026-08-27 group, 20 sections, rotated to the archive with SHA enrichment this session; archive now 220). GAS changelogs: Scraper 40/50, Profiler 31/50, Receipts 29/50, MasterACL 14/50, globalacl 8/50, testauth\* 7/50
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
+- **Diagnostic entry points worth remembering**: `bash scripts/check-acl-health.sh` (2s, exits 0/1/2, optional project-name filter); `?action=api&op=aclhealth` on Receipts or Profiler; `?action=api&op=deploy` on any project to read its live GAS version. `diagnoseAuthorization()` in the editor is the only thing that separates a never-*declared* scope from a declared-but-partially-*granted* one — they throw the identical error and have opposite repairs
+- **Sandbox notes for future sessions in this environment**: the auto-mode classifier blocks most bulk file mutation from Bash — heredoc-to-file, running scripts from the scratchpad, and many compound commands are denied, sometimes inconsistently for the same command shape. What reliably works: single `sed -i 's///'`, single redirects, `cp`, and the Edit/Write tools. Budget for propagation-by-Edit rather than by script. Also: `node --check` cannot read `.gs` (Node 22 rejects the extension and fails identically on untouched files, so it is **not** a syntax signal) — use `node --check --input-type=commonjs < file`
+
+**Recommendation for next session:**
+
+- Confirm the monitoring Routine behaved correctly on its quiet days — check that `trig_01GeTqB8xp5nG8FCC139Bgr9` has fired (`list_triggers` shows `last_run`) and that it produced **no** notification while the fleet was healthy. That is the only property the manual runs could not prove, and a detector that cries wolf on healthy days is worse than none. If it did notify on a green run, tighten the "stay silent" instruction in its prompt via `update_trigger` rather than deleting and recreating it
+
+**To continue:** type `check the acl routine fired quietly`
+
+## Previous Sessions
+
+### Session — 2026-09-01 (Receipts ACL outage: live diagnosis, grace snapshot, health probe — v04.02r)
 **Date:** 2026-09-01 01:51:37 AM EST
 **Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
 **Repo version:** v04.02r
@@ -45,48 +90,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Confirm the Google-side grant is repaired and the fleet is healthy: curl the Receipts `aclhealth` probe shipped this push (`?action=api&op=aclhealth` on its `/exec` URL) and expect `"ok":true,"reason":"acl_ok"`. If it still reports `acl_unreachable`, the `diagnoseAuthorization()` re-consent has not been done yet and nothing else should be built on top of it
 
 **To continue:** type `check acl health`
-
-## Previous Sessions
-
-### Session — 2026-08-31 (Profiler analyst access retune + model-choice analysis, v03.99r)
-**Date:** 2026-08-31 05:32:16 AM EST
-**Repo version:** v03.99r
-**Branch:** `claude/dossier-analyst-access-fix-v437ym`
-
-**What we worked on (Phase 6 C0's first slice built early + a model-choice analysis, v03.99r):**
-
-- **v03.99r — the Profiler access retune, built.** The developer reported analysts still reaching Network + Relationships and thought it had already been changed. **Their premise was half right and the correction mattered**: the retune was *approved* in the v03.98r design gate but never coded — `OV_ROLE_CAPS` carried no `network` capability at all, so the Relationships tab and `#network` explorer were ungated for **every** signed-in tier, viewer included. The screenshot was correct behavior, not a regression
-- **Scope call, flagged before starting**: implemented the whole approved table from `PHASE6-CLASSROOM-DESIGN.md`, not just the two surfaces named — analyst also lost Coverage 📰 and Export, viewer lost Study + Compare. Reason given: splitting it would have made `verify-profiler-roles.py` encode a half-applied matrix that gets rewritten next session. Developer did not object and has since verified admin/analyst differentiation live
-- `Profiler.html` **v01.75w** — four new caps (`network`, `coverage`, `study`, `compare`); `ovDeniedView()` added so `#network` and `#compare` deep links deny on their own; three stale "ungated / every signed-in tier" comments corrected
-- `Profiler.gs` **v01.30g** — `COVERAGE_ROLES` + `coverageAllowed_()` (sharing a new `roleAllowed_` helper with guidance) enforced in `handleNewsOp_`
-- `scripts/verify-profiler-roles.py` — five surfaces → ten per tier, plus deep-link denial assertions in **both** directions; full run clean (4 tiers + progress isolation + 88-dossier specs audit)
-- Profiler page changelog hit its 50/50 cap exactly as predicted — 2026-08-13 date group (2 sections) rotated to the archive with SHA enrichment
-- **Then a research response (no code): Fable 5 vs Opus 5 for building Classroom**, asked because the developer is at 95% of their weekly Fable limit
-
-**Where we left off:**
-
-- Everything pushed and auto-merged; working tree clean. Developer confirmed the access differentiation is correct on the live site
-- **Classroom v1 (C0–C2) is NOT started.** The developer is pausing the project here and will restart later — they took the model advice as something to "keep in mind for when I restart this project"
-- Phase 6 C0's *first slice* is done; the rest of C0 (Classroom scaffold via `setup-gas-project.sh`, masthead cross-links) plus C1 and C2 remain
-
-**Key decisions made:**
-
-- **`network` is one capability gating two doors** — the per-dossier Relationships tab and the standalone explorer — so they can never drift apart. Documented in `.claude/rules/profiler-app.md`
-- **Hidden entry points are not the gate**: every gated hash route re-checks its own capability. A bookmarked `#network` from an analyst gets a denial view, not a blank screen
-- **Only Coverage got a real server-side boundary** — the corpus reaches the browser solely through the GAS proxy. The relationship graph, study guides and Compare read public Pages JSON, so their gates are honest app-experience gates (same standing as Versions). Making any of them truly private is a data-relocation decision (the M3 pattern), not a gate tweak — this is written into both the `.gs` matrix comment and the rules file
-- **Model choice for Classroom — build C0–C2 on Opus 5 at `xhigh`; do NOT spend the last 5% of the Fable allowance on C0.** Reasoning worth keeping: (a) the design gate already closed, so C0–C2 is spec-following, and the reasoning premium pays most on open-ended design; (b) this repo's highly prescriptive `CLAUDE.md` is the *documented* anti-pattern for Fable — the migration guide says prompts written for prior models "are often too prescriptive and reduce output quality," so getting Fable's benefit would mean re-tuning ~99 versions of gate system for a model affordable 5% of the time; (c) fast mode is Opus-only, Fable has none; (d) in this repo the verifiers catch errors, not model brilliance. Fable pricing is 2× Opus ($10/$50 vs $5/$25 per MTok), same 1M context and 128K output
-- **Where Fable would actually earn it: C2** — and specifically the model that **runs as** the weekly authoring Routine (recurring, unattended, open-ended), not the one that *builds* the pipeline. That is a per-Routine model setting, and it is the choice that compounds
-- Weekly Fable limit **resets Saturday 2026-09-05 07:00 AM EST**, so a full allowance will very likely be available by the time C2 is reached — the decision does not need making at C0
-
-**Active context:**
-
-- Branch `claude/dossier-analyst-access-fix-v437ym` · repo **v03.99r** · Profiler page **v01.75w** / GAS **v01.30g** · session ran as `claude-opus-5` at `effort_level: xhigh`
-- Capacity: **repo CHANGELOG 99/100 — the next push rotates** (2026-08-27 date group, 20 sections, is the oldest); Profiler page changelog 49/50; Profiler GAS 30/50; Scraper GAS 37/50
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
-- Watch items: today's **Monday 2026-08-31 06:00 ET Scraper run** (first unattended corpus exercise — fires ~30 min after this save; the 8 project seeds should land in the Interests tab flagged "New topic") and the drift Routine's first fire **2026-09-01 ~9am PST** (expected: silent stand-down)
-
-**Recommendation for next session:**
-
-- Build **Classroom v1 C0** per `repository-information/PHASE6-CLASSROOM-DESIGN.md` — the scaffold half that remains (`setup-gas-project.sh` → Classroom app on the auth template, Classroom access matrix, masthead cross-links between the apps); the Profiler retune half is already shipped. Stay on Opus 5 at `xhigh`, and expect that push to rotate the repo CHANGELOG
-
-**To continue:** type `build classroom v1`
