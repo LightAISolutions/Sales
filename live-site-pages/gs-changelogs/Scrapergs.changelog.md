@@ -3,12 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 40/50`
+`Sections: 41/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.94g] — 2026-09-01 03:16:00 AM EST — v04.04r
+
+### Added
+- The app can now show you exactly what went wrong in the background: every recorded fault is served with its time, the step it came from, and its message, so a problem can be read and dealt with in the app instead of the Apps Script console
+- Digest managers can mark recorded faults as resolved and clear them, returning the health tile to green once the cause is fixed
+- The error count is now exact. It was previously capped at five before it ever reached the app, so five and fifty looked identical; the count is now kept separately from the stored detail and is accurate however many faults occurred
+
+### Fixed
+- A failure early in the hourly scheduled run used to leave no trace at all — the run simply stopped reporting, with nothing to explain why. Those failures are now recorded, while still being raised so the existing failure notification is unaffected
 ## [v01.93g] — 2026-09-01 01:51:37 AM EST — v04.02r
 
 ### Fixed

@@ -3,12 +3,22 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scraperhtml.changelog-archive.md](Scraperhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 41/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.69w] — 2026-09-01 03:16:00 AM EST — v04.04r
+
+### Changed
+- The status strip's run indicator has been split into two, because one tile was answering two different questions at once. Freshness of the last scheduled run and the count of recorded faults are now separate, each with a label that says what it is — so a punctual run with a minor fault no longer looks the same as a run that stopped hours ago
+- "5 err/24h" is gone. The fault tile now reads in plain words, with the time window moved into the label where there is room for it
+- The run tile now says **overdue** when the scheduled run has not reported in too long. The scheduler indicator beside it only ever confirmed the schedule exists, which is a different thing from it having finished
+
+### Added
+- The fault tile is now clickable (and keyboard-accessible) and opens a panel listing each recorded fault with its time, originating step and message, plus a one-click copy of the whole list
+- A "Mark resolved & clear" action in that panel, shown to digest managers, clears the recorded faults and returns the tile to green
 ## [v01.68w] — 2026-08-30 07:14:52 PM EST — v03.88r
 
 ### Fixed

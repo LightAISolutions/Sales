@@ -1,4 +1,4 @@
-var VERSION = "v01.93g";
+var VERSION = "v01.94g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -441,6 +441,7 @@ var SCRAPER_PROJECT_ACTIONS = ['getSchedulerHealth',
                                'runDigestNow', 'getDigestStatus', 'listDigests', 'getDigest',
                                'deleteDigest',
                                'goLiveStatus', 'testAi', 'emailLatestDigest',
+                               'clearDigestErrLog',
                                'setAiProvider', 'addDigestRecipient', 'removeDigestRecipient',
                                'listEditions', 'saveEdition', 'deleteEdition',
                                'setEditionTuning', 'resetEditionTuning',
@@ -1021,6 +1022,17 @@ var SCRAPER_SUBS_MILESTONE = 15;
 // stored, archived and manually sendable; they are simply not part of the
 // scheduled weekday mailing.
 var SCRAPER_DIGEST_DELIVER_WINDOW_DAYS = 3;
+// Error-trail sizing. The DETAIL buffer is bounded by the ~9 KB Script
+// Property value cap (20 entries x ~260 bytes ~= 5 KB, comfortably inside it);
+// the COUNT lives in a separate hourly tally that costs almost nothing, so the
+// number the app shows is exact even on a day that overruns the buffer.
+var SCRAPER_ERRLOG_KEEP = 20;          // detail entries retained
+var SCRAPER_ERRTALLY_HOURS = 48;       // hourly count buckets retained
+var SCRAPER_ERRLOG_SERVE = 8;          // detail entries served to the app
+// A tick is installed as everyHours(1). Two hours allows one missed or delayed
+// firing before the app calls the run overdue — 'Scheduler: Healthy' only ever
+// proved the TRIGGER EXISTS, which is a different claim from 'it completed'.
+var SCRAPER_TICK_OVERDUE_MIN = 120;
 // ── Per-edition summary lens (developer 2026-08-28) ─────────────────────
 // Every summary used to close from one fixed viewpoint, because the prompt
 // hardcoded "a US grid-scale battery (BESS) seller". That is right for the
@@ -6350,9 +6362,64 @@ function scDigestLogErr_(where, err) {
     try { arr = JSON.parse(props.getProperty('scDigestErrLog') || '[]'); } catch (pErr) { arr = []; }
     arr.push({ t: new Date().toISOString(), w: String(where || '').slice(0, 40),
                m: String((err && err.message) || err || '').slice(0, 160) });
-    if (arr.length > 20) arr = arr.slice(arr.length - 20);
+    if (arr.length > SCRAPER_ERRLOG_KEEP) arr = arr.slice(arr.length - SCRAPER_ERRLOG_KEEP);
     props.setProperty('scDigestErrLog', JSON.stringify(arr));
+    // THE COUNT AND THE DETAIL ARE NOW TWO DIFFERENT STORES, on purpose.
+    //
+    // The ring buffer above holds 20 entries because a Script Property value
+    // caps around 9 KB and a full entry is ~260 bytes. That bound is fine for
+    // "show me what broke" and useless for "how many times" — an error firing
+    // hourly overruns 20 inside a day, so a count derived from the buffer
+    // silently understates exactly when things are worst.
+    //
+    // So the count lives in its own store: one integer per clock hour, pruned
+    // to 48 hours. Forty-eight small numbers cost a fraction of the buffer and
+    // give an EXACT 24h total no matter how many details had to be dropped.
+    // This is what lets the tile print a real number instead of the old
+    // saturated "5", which could equally have meant five or fifty.
+    var tally = {};
+    try { tally = JSON.parse(props.getProperty('scDigestErrTally') || '{}'); } catch (tErr) { tally = {}; }
+    var hourKey = new Date().toISOString().slice(0, 13);      // yyyy-MM-ddTHH (UTC)
+    tally[hourKey] = (Number(tally[hourKey]) || 0) + 1;
+    var keys = Object.keys(tally).sort();
+    while (keys.length > SCRAPER_ERRTALLY_HOURS) { delete tally[keys.shift()]; }
+    props.setProperty('scDigestErrTally', JSON.stringify(tally));
   } catch (lgErr) {}
+}
+
+/** Exact number of logged errors in the last `hours`, read from the hourly
+    tally rather than the detail buffer. Hour buckets are UTC and whole, so a
+    24-hour ask covers the 24 buckets at or after the cutoff hour — the current
+    partial hour included. Pure apart from the property read. */
+function scDigestErrCount_(hours) {
+  try {
+    var tally = JSON.parse(PropertiesService.getScriptProperties()
+      .getProperty('scDigestErrTally') || '{}');
+    var cut = new Date(Date.now() - (Number(hours) || 24) * 3600000)
+      .toISOString().slice(0, 13);
+    var n = 0;
+    Object.keys(tally).forEach(function(k) { if (k >= cut) n += Number(tally[k]) || 0; });
+    return n;
+  } catch (e) { return 0; }
+}
+
+/** Clear both error stores. The tile is a health signal, and a health signal
+    nobody can reset stops being read — after a fix there has to be a way to
+    say "that is dealt with" from inside the app, or the amber becomes
+    permanent wallpaper and the next real fault goes unnoticed. Manager-gated
+    because it discards diagnostic history. */
+function clearDigestErrLog(sessionToken) {
+  var user = validateSessionForData(sessionToken, 'clearDigestErrLog');
+  if (!scCanManageDigest_(user)) return { success: false, error: 'not_authorized' };
+  var cleared = 0;
+  try {
+    var props = PropertiesService.getScriptProperties();
+    try { cleared = (JSON.parse(props.getProperty('scDigestErrLog') || '[]')).length; } catch (pe) {}
+    props.deleteProperty('scDigestErrLog');
+    props.deleteProperty('scDigestErrTally');
+  } catch (e) { return { success: false, error: 'clear_failed' }; }
+  dataAuditLog(user.email, 'clear', 'digestErrLog', '', String(cleared) + ' entries');
+  return { success: true, cleared: cleared };
 }
 
 /** Phase 2: the "last scheduled run" stamp — which scheduled entry point ran
@@ -6695,11 +6762,18 @@ function goLiveStatus(sessionToken) {
   // diagnosable against a deployment swap). All best-effort reads.
   var lastRun = null, recentErrors = [], recentDeploys = [];
   try { lastRun = JSON.parse(props.getProperty('DIGEST_LAST_RUN') || 'null'); } catch (lrErr) {}
+  var recentErrorCount = 0;
   try {
     var errCut = Date.now() - 86400000;
     recentErrors = (JSON.parse(props.getProperty('scDigestErrLog') || '[]'))
       .filter(function(le) { return new Date(le.t).getTime() >= errCut; })
-      .slice(-5);
+      .slice(-SCRAPER_ERRLOG_SERVE);
+    // The count comes from the tally, NOT from recentErrors.length. The old
+    // tile rendered the length of a slice capped at 5, so "5 err/24h" was a
+    // ceiling wearing the costume of a measurement — five and fifty printed
+    // identically. The served array stays capped (it is the payload); the
+    // number beside it is now the real one.
+    recentErrorCount = scDigestErrCount_(24);
   } catch (elErr) {}
   try {
     recentDeploys = (JSON.parse(props.getProperty('scDeployLog') || '[]')).slice(-5);
@@ -6731,6 +6805,11 @@ function goLiveStatus(sessionToken) {
     lastEditionDate: props.getProperty('DIGEST_LAST_DATE') || '',
     lastRun: lastRun,
     recentErrors: recentErrors,
+    recentErrorCount: recentErrorCount,
+    // Served rather than re-derived in the browser so the two cannot drift:
+    // the app must not have its own opinion about when a run is overdue.
+    tickOverdueMin: SCRAPER_TICK_OVERDUE_MIN,
+    canClearErrors: canManage,
     recentDeploys: recentDeploys,
     mining: mining };
 }
@@ -6971,12 +7050,32 @@ function scSchedulerTick() {
   var lock = LockService.getScriptLock();
   if (!lock.tryLock(5000)) return;  // a previous tick is still running
   try {
-    var ss = scraperSs_();
-    ensureScraperTabs_(ss);
-    // Rebuild Phase 3: the weekday Morning Digest — one budget-bounded step
-    // per tick (weekday-morning + built-today checks live inside). Sits after
-    // the pipeline pause gate, so it cannot spend AI tokens while paused.
-    scDigestScheduledTick_();
+    // THE SILENT-THROW PATH, CLOSED — but not swallowed.
+    //
+    // These three ran bare inside a try/FINALLY with no catch. A throw from
+    // any of them skipped scDigestNoteRun_('tick', 'ok') below, so the "last
+    // scheduled run" stamp simply stopped advancing — and because nothing
+    // caught the throw, nothing wrote to the error trail either. The app then
+    // showed a stale run age with no error to explain it, which is the exact
+    // "did it just not run?" question the Phase 2 trail exists to answer.
+    //
+    // Logged and RETHROWN, deliberately. Catching it outright would be worse
+    // than the bug: an Apps Script execution that throws is what triggers
+    // Google's own failure notification, and a handler that returns quietly
+    // would trade a visible failure for a hidden one. The rethrow keeps that
+    // notification and the failed-execution record intact; the log entry just
+    // means the app can now say what happened without opening the console.
+    try {
+      var ss = scraperSs_();
+      ensureScraperTabs_(ss);
+      // Rebuild Phase 3: the weekday Morning Digest — one budget-bounded step
+      // per tick (weekday-morning + built-today checks live inside). Sits after
+      // the pipeline pause gate, so it cannot spend AI tokens while paused.
+      scDigestScheduledTick_();
+    } catch (fatalErr) {
+      scDigestLogErr_('tick.fatal', fatalErr);
+      throw fatalErr;
+    }
     // Catch-up delivery. The 7:00 pass is the normal path; this covers the case
     // where the morning build was still running at 7:00, or the day the daily
     // triggers were missing entirely. It refuses to send before the send hour,
@@ -9085,6 +9184,7 @@ function handleProjectAction_(op, sessionToken, e) {
   if (op === 'deleteDigest') return deleteDigest(sessionToken, param('digestId'));
   if (op === 'goLiveStatus') return goLiveStatus(sessionToken);
   if (op === 'testAi') return testAi(sessionToken);
+  if (op === 'clearDigestErrLog') return clearDigestErrLog(sessionToken);
   if (op === 'emailLatestDigest') return emailLatestDigest(sessionToken);
   if (op === 'setAiProvider') return setAiProvider(sessionToken, param('provider'));
   if (op === 'addDigestRecipient') return addDigestRecipient(sessionToken, param('email'));

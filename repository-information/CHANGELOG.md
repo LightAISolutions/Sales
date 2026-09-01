@@ -3,11 +3,47 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 83/100`
+`Sections: 84/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.04r] — 2026-09-01 03:16:00 AM EST
+
+> **Prompt:** "Improve the syntax from \"5+ err/24h\" to something that actually explains what it is. Then, continue with your recommendation. I would prefer to be able to resolve any issues in-app rather than here in Claude."
+
+### Changed
+
+**One tile was answering two questions, and so answered neither.** `tick 8h ago · 5 err/24h` packed run freshness and a fault count into a single value line, sharing one amber — so a punctual tick with one logged hiccup rendered identically to a tick that had stopped running eight hours earlier. They are separate signals and are now separate tiles.
+
+The developer asked for wording that explains itself, and for faults to be resolvable **in the app rather than here**. That second requirement is what shaped the rest of this change: a diagnosis that requires opening the Apps Script console is not resolvable in-app, so the trail had to become readable, copyable and clearable from the page.
+
+#### `Scraper.html` — v01.69w
+
+- **`err/24h` retired.** The window moved into the tile *label* (`BACKGROUND FAULTS · LAST 24H`), which frees the value line to be a plain count and a plain noun — `5 errors logged`, correctly singular at one. The two surviving occurrences of the old string in the file are inside the comment explaining why it was replaced
+- **Run tile now says `overdue`** when the last scheduled run is older than the server's `tickOverdueMin`. The threshold is served, not re-derived in the browser, so the two cannot drift. The `Scheduler: Healthy` tile beside it only ever proved *the trigger is installed* — a different claim from "it completed", which is how a tick throwing every hour left both tiles green while nothing ran
+- **The fault tile opens a panel** (`role="button"`, `tabindex="0"`, answering Enter and Space) listing each entry's time, originating step and message. `goLiveStatus` had always shipped `w` and `m`; the strip used nothing but `.length`, so the diagnosis was already crossing the wire with nowhere to be shown
+- **Copy all** and, for digest managers, **Mark resolved & clear** — the action that lets a fixed problem return the tile to green. A health signal nobody can reset stops being read
+- The panel reuses the held-back overlay's shell (`wd-hb-*`) rather than growing a second copy of the same rules; Escape closes it first, being the topmost layer
+
+### Added
+
+#### `Scraper.gs` — v01.94g
+
+- **`scDigestErrCount_(hours)` — the count is no longer a ceiling.** `goLiveStatus` served `recentErrors.slice(-5)` and the tile printed its `.length`, so "5 err/24h" was a cap wearing the costume of a measurement: five and fifty rendered the same. Detail and count are now separate stores — the ring buffer keeps 20 entries because a Script Property value caps near 9 KB, while an hourly tally (48 buckets, pruned) gives an exact 24h total however many details had to be dropped
+- **`clearDigestErrLog`** — manager-gated via `scCanManageDigest_`, audit-logged, registered in the allowed-ops list and the router
+- New payload fields: `recentErrorCount` (exact), `tickOverdueMin`, `canClearErrors`; the served detail slice widened to 8
+
+### Fixed
+
+- **The silent-throw path in `scSchedulerTick`, closed — but not swallowed.** `scraperSs_()`, `ensureScraperTabs_()` and `scDigestScheduledTick_()` ran bare inside a `try`/**`finally`** with no `catch`. A throw from any of them skipped `scDigestNoteRun_('tick', 'ok')`, so the run stamp stopped advancing — and with nothing catching it, nothing reached the error trail either. The app then showed a stale run age with no error to explain it: precisely the "did it just not run?" question the Phase 2 trail exists to answer. Now logged as `tick.fatal` **and rethrown** — catching it outright would trade a visible failure for a hidden one, since a throwing execution is what triggers Google's own failure notification. `var` being function-scoped, the later `scDigestDeliverPending_(ss)` still resolves
+
+### Verified
+
+- `node --check` clean; `check-gas-inner-scripts.js` clean (8 files, 76 blocks); both `Scraper.html` inline script blocks parse
+- **14 cases**: 50 errors in one hour counted exactly (the old path would have said 5) while the detail buffer stays bounded at 20; buckets outside the window excluded and included at 48h; tally pruning; both property values well inside the 9 KB cap; and the tile branch re-run against the screenshot's own numbers — `tick 8h ago · overdue` + `5 errors logged`, correct singular, no error tile when clean, and a punctual tick with faults no longer marking the run tile amber
+- Panel rendered headless in Chromium against the page's real stylesheet — 5 rows, correct tile text, styling consistent with the existing overlays
 
 ## [v04.03r] — 2026-09-01 02:20:46 AM EST
 

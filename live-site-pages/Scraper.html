@@ -11,7 +11,7 @@
   PROJECT OVERRIDE: Wire Desk IBM Plex — fonts.googleapis.com added to style-src (matches the active tag above)
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.68w">
+  <meta name="build-version" content="v01.69w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>News Scraper</title>
 <!-- ══════════════ -->
@@ -823,6 +823,22 @@
     /* ── Held-back reader ("View More") ── */
     #wd-hb-overlay { position: fixed; inset: 0; z-index: 10005; background: rgba(8,10,13,0.86);
       display: none; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 4vh 12px; }
+    #wd-err-overlay { position: fixed; inset: 0; z-index: 10006; background: rgba(8,10,13,0.86);
+      display: none; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 4vh 12px; }
+    #wd-err-panel { background: #15171c; border: 1px solid #2c313a; border-radius: 8px;
+      width: 100%; max-width: 780px; box-sizing: border-box; margin-bottom: 4vh; padding: 24px 26px 20px; }
+    .wd-err-row { border-top: 1px solid #23272f; padding: 10px 0; }
+    .wd-err-row:first-child { border-top: none; }
+    .wd-err-where { font-family: var(--wd-mono); font-size: 11px; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--wd-warn); }
+    .wd-err-when { font-family: var(--wd-mono); font-size: 11px; color: #7b828e; margin-left: 8px; }
+    .wd-err-msg { font-size: 13px; line-height: 1.55; color: #c2c8d2; margin-top: 4px;
+      word-break: break-word; }
+    .wd-err-acts { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px;
+      border-top: 1px solid #23272f; padding-top: 14px; }
+    /* The error tile is a button in everything but element name. */
+    .wd-stat.wd-clickable { cursor: pointer; }
+    .wd-stat.wd-clickable:hover { border-color: var(--wd-warn); }
     #wd-hb-panel { background: #15171c; border: 1px solid #2c313a; border-radius: 8px;
       width: 100%; max-width: 780px; box-sizing: border-box; margin-bottom: 4vh;
       padding: 24px 26px 20px; color: #e6e4de; font-family: var(--wd-sans);
@@ -1449,6 +1465,22 @@
         <button type="button" class="wd-hb-x" id="wd-sr-close" title="Close" aria-label="Close">&times;</button>
       </div>
       <div id="wd-sr-body"><div class="wd-sr-note">Loading…</div></div>
+    </div>
+  </div>
+
+  <!-- The background-error trail. Reuses the held-back panel's shell so it
+       inherits its sizing, scroll and close behaviour rather than growing a
+       second set of the same rules. -->
+  <div id="wd-err-overlay" aria-hidden="true">
+    <div id="wd-err-panel" role="dialog" aria-modal="true" aria-labelledby="wd-err-title">
+      <div class="wd-hb-head">
+        <div>
+          <h2 class="wd-hb-title" id="wd-err-title">Background errors</h2>
+          <div class="wd-hb-sub" id="wd-err-sub"></div>
+        </div>
+        <button type="button" class="wd-hb-x" id="wd-err-close" title="Close" aria-label="Close">&times;</button>
+      </div>
+      <div id="wd-err-body"><div class="wd-hb-note">Loading&hellip;</div></div>
     </div>
   </div>
 
@@ -2344,6 +2376,28 @@
       var srClose = t && t.closest ? t.closest('#wd-sr-close') : null;
       if (srClose) { ev.preventDefault(); scScoreReportClose_(); return; }
       if (t && t.id === 'wd-sr-overlay') { scScoreReportClose_(); return; }
+      // Background-error trail: tile opens it, X / backdrop closes it, and the
+      // two actions inside it are delegated here too so the panel body can be
+      // re-rendered without rebinding anything.
+      var errTile = t && t.closest ? t.closest('#wd-err-tile') : null;
+      if (errTile) { ev.preventDefault(); scErrLogOpen_(); return; }
+      var errClose = t && t.closest ? t.closest('#wd-err-close') : null;
+      if (errClose) { ev.preventDefault(); scErrLogClose_(); return; }
+      if (t && t.id === 'wd-err-overlay') { scErrLogClose_(); return; }
+      var errClear = t && t.closest ? t.closest('#wd-err-clear') : null;
+      if (errClear) { ev.preventDefault(); scErrLogClear_(); return; }
+      var errCopy = t && t.closest ? t.closest('#wd-err-copy') : null;
+      if (errCopy) {
+        ev.preventDefault();
+        var text = (_wdErrLog || []).map(function(e) {
+          return String(e.t || '') + '  [' + String(e.w || '?') + ']  ' + String(e.m || '');
+        }).join('\n') || 'No errors recorded in the last 24 hours.';
+        try {
+          navigator.clipboard.writeText(text).then(function() { scToast('Error log copied'); },
+                                                   function() { scToast('Could not copy', true); });
+        } catch (cx) { scToast('Could not copy', true); }
+        return;
+      }
       // "Why thin?" reports on the edition currently on screen — the selected
       // chip. With none selected the server falls back to the newest edition.
       var why = t && t.closest ? t.closest('#wd-digest-why') : null;
@@ -2365,6 +2419,9 @@
 
     document.addEventListener('keydown', function(ev) {
       if (ev.key !== 'Escape') return;
+      // Highest z-index closes first — the error trail sits above both.
+      var errOv = document.getElementById('wd-err-overlay');
+      if (errOv && errOv.style.display === 'flex') { scErrLogClose_(); return; }
       // Score report sits above the held-back reader, so it closes first.
       var srOv = document.getElementById('wd-sr-overlay');
       if (srOv && srOv.style.display === 'flex') { scScoreReportClose_(); return; }
@@ -5917,6 +5974,87 @@
   }
 
   var _wdDiagForced = false;   // ⚙ pressed this session — keep diagnostics visible
+  // The last goLiveStatus payload's error tail, held so the panel opens
+  // instantly from data the strip already fetched rather than issuing a
+  // second round trip for something the browser is holding.
+  var _wdErrLog = [];
+  var _wdErrCanClear = false;
+
+  /** The background-error trail, readable in the app.
+
+      goLiveStatus has always shipped each entry's `where` and `message`; the
+      strip used nothing but `.length`, so the one number it printed was also
+      the only thing anyone could learn. The diagnosis was already crossing the
+      wire — it just had nowhere to be shown. */
+  function scErrLogOpen_() {
+    var ov = document.getElementById('wd-err-overlay');
+    var body = document.getElementById('wd-err-body');
+    var sub = document.getElementById('wd-err-sub');
+    if (!ov || !body) return;
+    var rows = _wdErrLog || [];
+    if (sub) {
+      sub.textContent = rows.length
+        ? 'SHOWING THE LATEST ' + rows.length + ' \u00b7 NEWEST LAST'
+        : 'NOTHING RECORDED';
+    }
+    var html = '<div class="wd-hb-note" style="margin-bottom:14px;">'
+      + 'Scheduled background work that failed and was recorded. These are caught faults, '
+      + 'not necessarily failed editions \u2014 an edition can still build and send with '
+      + 'entries listed here. <b>Where</b> names the step that threw.</div>';
+    if (!rows.length) {
+      html += '<div class="wd-hb-note">No errors recorded in the last 24 hours.</div>';
+    } else {
+      html += rows.map(function(e) {
+        var when = '';
+        try { when = new Date(e.t).toLocaleString(); } catch (dx) { when = String(e.t || ''); }
+        return '<div class="wd-err-row"><div><span class="wd-err-where">'
+          + scEsc(String(e.w || 'unknown')) + '</span>'
+          + '<span class="wd-err-when">' + scEsc(when) + '</span></div>'
+          + '<div class="wd-err-msg">' + scEsc(String(e.m || '(no message)')) + '</div></div>';
+      }).join('');
+    }
+    html += '<div class="wd-err-acts">'
+      + '<button type="button" class="sc-btn" id="wd-err-copy">Copy all</button>'
+      + (_wdErrCanClear
+          ? '<button type="button" class="sc-btn" id="wd-err-clear" title="Discard the recorded errors and return the tile to green. Do this once the cause is fixed.">Mark resolved &amp; clear</button>'
+          : '')
+      + '</div>';
+    body.innerHTML = html;
+    ov.style.display = 'flex';
+    ov.setAttribute('aria-hidden', 'false');
+  }
+
+  function scErrLogClose_() {
+    var ov = document.getElementById('wd-err-overlay');
+    if (!ov) return;
+    ov.style.display = 'none';
+    ov.setAttribute('aria-hidden', 'true');
+  }
+
+  /** Clear both server-side error stores, then repaint from a fresh
+      goLiveStatus rather than assuming the result — if a tick fails again
+      between the clear and the repaint, the tile should say so immediately. */
+  function scErrLogClear_() {
+    var btn = document.getElementById('wd-err-clear');
+    if (btn) { btn.disabled = true; btn.textContent = 'Clearing\u2026'; }
+    _gasPost({ action: 'clearDigestErrLog', token: scToken() })
+      .then(function(r) {
+        if (!r || !r.success) {
+          scToast((r && r.error === 'not_authorized')
+            ? 'Only digest managers can clear the error log'
+            : 'Could not clear the error log', true);
+          if (btn) { btn.disabled = false; btn.textContent = 'Mark resolved & clear'; }
+          return;
+        }
+        scToast('Cleared ' + (r.cleared || 0) + ' recorded error(s)');
+        scErrLogClose_();
+        return wdGoLiveSyncTiles_();
+      })
+      .catch(function() {
+        scToast('Could not clear the error log', true);
+        if (btn) { btn.disabled = false; btn.textContent = 'Mark resolved & clear'; }
+      });
+  }
 
   /** "Read all dossiers" is a repair tool, not routine. It appears on its own
       while coverage is incomplete or the last run reported failures, and is
@@ -5965,13 +6103,41 @@
       // last actually did anything, and whether the last 24h left errors in
       // the trail — the answer to "did it just not run?" without opening the
       // Apps Script executions log.
+      // ONE TILE WAS ANSWERING TWO QUESTIONS, AND SO ANSWERED NEITHER.
+      //
+      // It read "tick 8h ago · 5 err/24h", which packed the run age and the
+      // error count into a single value line with no room to say what either
+      // meant — and worse, made the run's freshness and the error count share
+      // one amber, so a perfectly punctual tick with one logged hiccup looked
+      // exactly like a tick that had stopped running eight hours ago.
+      //
+      // They are separate signals, so they are now separate tiles, each with
+      // a label that says what it is. "err/24h" is gone: the count tile's own
+      // label carries the window, which leaves the value free to be a plain
+      // number and a plain noun.
       if (gl.lastRun && gl.lastRun.at) {
         var lrMin = Math.max(0, Math.round((Date.now() - new Date(gl.lastRun.at).getTime()) / 60000));
         var lrAge = lrMin < 60 ? lrMin + 'm ago' : Math.round(lrMin / 60) + 'h ago';
-        var lrErrs = (gl.recentErrors || []).length;
+        // Overdue is the server's call, not ours — see tickOverdueMin. The
+        // Scheduler tile above only ever proved the TRIGGER IS INSTALLED,
+        // which is a different claim from "it completed", so a tick that
+        // throws every hour left both tiles green while nothing ran.
+        var overdueMin = Number(gl.tickOverdueMin) || 120;
+        var lrLate = gl.runsEnabled && lrMin > overdueMin;
         html += tile('Last scheduled run',
-          (gl.lastRun.kind || 'run') + ' ' + lrAge + (lrErrs ? ' · ' + lrErrs + ' err/24h' : ''),
-          lrErrs ? 'warn' : 'ok');
+          (gl.lastRun.kind || 'run') + ' ' + lrAge + (lrLate ? ' · overdue' : ''),
+          lrLate ? 'warn' : 'ok');
+      }
+      // Shown only when there is something to report — a permanent "0 errors"
+      // tile would be one more thing to stop reading.
+      _wdErrLog = gl.recentErrors || [];
+      _wdErrCanClear = !!gl.canClearErrors;
+      var errN = Number(gl.recentErrorCount) || 0;
+      if (errN) {
+        html += '<div class="wd-stat warn wd-clickable" id="wd-err-tile" role="button" tabindex="0"'
+          + ' title="Background tasks that failed and were recorded. Click to read them.">'
+          + '<b>' + scEsc(errN + (errN === 1 ? ' error logged' : ' errors logged')) + '</b>'
+          + '<span>BACKGROUND FAULTS · LAST 24H</span></div>';
       }
     }
     // The whole archive, not the page currently loaded — the News Stand
@@ -7294,6 +7460,16 @@
     window.addEventListener('hashchange', wdHashRoute_);
 
     // ── Command palette ───────────────────────────────────────────────────
+    // The error tile is role="button" tabindex="0", so it must answer Enter
+    // and Space like a real one — a tile reachable by Tab that does nothing
+    // when pressed is worse than one that was never focusable.
+    document.addEventListener('keydown', function(ev) {
+      if (ev.key !== 'Enter' && ev.key !== ' ') return;
+      var t = ev.target;
+      if (!t || !t.closest || !t.closest('#wd-err-tile')) return;
+      ev.preventDefault();
+      scErrLogOpen_();
+    });
     document.addEventListener('keydown', function(ev) {
       // Only when the app is actually usable — never over the auth wall, and
       // never while another overlay owns the screen.
