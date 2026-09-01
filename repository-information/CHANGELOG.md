@@ -3,11 +3,56 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 100/100`
+`Sections: 101/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.01r] — 2026-09-01 12:26:40 AM EST
+
+> **Prompt:** "Don't count weekend builds as real archived issues. Then continue with your recommendation."
+
+### Changed
+
+**Weekend builds are stored editions, not issues of the paper.** `scIssueNumbers_` now ranks run-day dates only; an off-day date resolves to `0` (unnumbered) rather than being rounded up into the sequence.
+
+#### `Scraper.gs` — v01.92g (numbering)
+
+- `scIssueNumbers_` filters its date order through `scDigestDeliverableDate_`, and the `|| 1` fallback on the per-row lookup is gone — it would have turned every unnumbered edition into No. 001
+- `scNextIssueNo_` returns `0` for an off-day build before touching the sheet, and off-day dates no longer advance the sequence for anyone else
+- `scRenumberIssues_` treats `0` as a **real target** via `hasOwnProperty` rather than truthiness. This is what makes the fix retroactive: the pass already runs before every delivery, so the stored 2026-08-29 and 2026-08-30 builds lose their numbers and **Monday 2026-08-31 moves from No. 004 to No. 002** without anything being edited by hand
+- `scRewriteIssueNo_` strips the `· No. XXX` segment when the number is `0` instead of returning the html untouched — the old early-return was right while `0` only meant "unknown", but `0` is now a decision, and it would have left a stale number printed on the stored weekend rows
+- Masthead omits the issue segment when unnumbered; the delivery subject drops its `(No. XXX)` on the same condition (unreachable for a weekend build, which the off-day gate stops long before, but the subject must not lie if any other route reaches it)
+- **Numbers stay dense.** Dropping Saturday does not leave a hole in the sequence — it closes one. A reader uses the number to tell whether they missed an issue, and 001 → 004 said "you missed two" when nothing was missed
+
+### Added
+
+**Same-story clustering** — the answer to the developer's third question from the v04.00r session. Their Monday edition carried the Microsoft DataOne turbine story and Vertiv's Q1 results several times over, each from a different outlet, each printed in full.
+
+Two collapse passes already existed and neither could catch it: corroboration groups on a *loose* 8-word title signature but only to award a score boost — and it made the problem **worse**, because it promotes every copy, so the more outlets carry a story the more section slots it eats; the exact-normalized-title dedupe collapses only byte-identical headlines, which is the syndication case, not the same-story case.
+
+#### `Scraper.gs` — v01.92g (clustering)
+
+- `scStoryKey_` — the bucket: `section | anchor | publication day`, where anchor is a matched company slug, else a company name, else a topic. **No anchor means no clustering**, so an entity-less market story is never collapsed — the safe direction to fail
+- `scStorySameEvent_` — event category (`sig.evt`) is a **separator, never a requirement**: two items with different non-empty categories can never merge, while two items with no category fall back to a stricter token test. Making it a required key component would have silently disabled the entire pass in `$0` fallback mode, where nothing is classified
+- The lexical test counts **shared distinctive tokens**, not a similarity ratio. The real pair — *"Microsoft-backed AI data center faces backlash over alleged unpermitted turbines"* and *"DataOne AI campus ran unpermitted turbines, regulators say"* — shares three content words out of fourteen, a Jaccard of ~0.2. Any ratio threshold high enough to be safe would have missed the exact case this was built for
+- `scSourceRankOf_` / `scRankBetter_` — representative picked on a lexicographic tuple, not a blended score: non-backstop first, then roster tier, then the outlet's hit rate (only once it has ≥20 intake rows, so one lucky article cannot outrank a tier-1 desk), then item score. **Click counts deliberately excluded** — too sparse, and the winning outlet would jitter between editions for no reason a reader could see
+- `scClusterStories_` re-elects the representative on rank rather than keeping the top scorer, and carries the highest score in the cluster forward so collapsing can never demote a story out of its section
+- Hit rates are tallied from the intake rows `scDigestItems_` **has already read** — `sourceStats()` computes the same figure with its own bounded read, and doing it again here would be a second pass over a tab just loaded in full
+- Ordering is load-bearing: the pass runs *after* corroboration (before it, the boost would starve of group members — the trap the dedupe comment already warns about) and *after* the exact-title dedupe (before it, cluster slots would go to syndication copies that are not additional coverage)
+- **Nothing is destroyed.** `alsoIn` renders each collapsed outlet as a link; `merged` carries the full items so `scDigestRenderStep_` puts them back into the held-back list and the weekly rollup — the one place a bad merge can be *noticed* rather than silently swallowed. `intake` and `relevant` counts stay **pre-cluster** so they remain comparable with earlier editions and with the Scraper UI, and a new `clustered` count states the difference in the footer
+
+#### `repository-information/diagrams/Scraper-diagram.md`
+
+- The Morning Edition pipeline arrow depicts the render step sequence this change inserts into, so the clustering stage was added between the AI-summary step and `sections`. The `pako` URL was regenerated per the mandatory procedure and verified by decompression — the decoded code matches the file's block byte for byte
+
+### Verified
+
+- `node --check` clean; `scripts/check-gas-inner-scripts.js` clean (8 files, 76 blocks)
+- **15 clustering cases**: the three-outlet turbine story collapses to the tier-1 desk; same company + different event categories never merge; same company + same event + unrelated subject stays separate; entity-less stories never cluster; incidents never merge across sections; `$0` fallback mode still clusters on the stricter floor; a 5-article source cannot outrank a tier-1 desk; a backstop republication never wins; cluster size capped; different days never merge; a lone story is returned untouched
+- **12 numbering cases** against the developer's actual August rows: Friday 001, Saturday and Sunday unnumbered, Monday **002 not 004**; a second week stays dense with no holes; editions number independently; `scNextIssueNo_` returns 0 for a weekend build and reuses the number on a same-day weekday rebuild; the masthead rewrite strips a stale number, renumbers 004 → 002, and leaves an already-unnumbered masthead alone
+- The v04.00r off-day harness re-run clean, including both 2026 DST boundaries and the 365-day weekday sweep
 
 ## [v04.00r] — 2026-08-31 08:53:46 PM EST
 

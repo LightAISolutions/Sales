@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 38/50`
+`Sections: 39/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.92g] — 2026-09-01 12:26:40 AM EST — v04.01r
+
+### Added
+- When several outlets cover the same story, the edition now prints it once — the most reliable outlet's write-up — with an "Also covered by" line linking every other outlet that ran it. Nothing is lost: each collapsed article keeps its own link, and all of them remain available under "View More" and in the weekly held-back rollup
+- The outlet chosen is the one with the strongest track record for your interests: hand-ranked core trade press first, then the outlet's own hit rate across everything scanned so far, and a syndicated republication never outranks the desk that reported the story
+- The footer now says how many articles were merged as duplicate coverage, so a genuinely quiet day is distinguishable from a day whose duplicates were folded together
+
+### Changed
+- Weekend builds are no longer counted as issues of the paper. Building over the weekend still works and the edition is still stored, searchable and sendable by hand — it simply takes no issue number, so the printed sequence counts only the weekdays the paper publishes on
+- Existing editions correct themselves automatically: the weekend builds already stored lose their numbers and the following Monday edition moves down to the number it should always have had
+- Stories are only ever grouped when they share a company or topic, a publication day and a section, and a safety or incident story is never folded into a company story
 
 ## [v01.91g] — 2026-08-31 08:53:46 PM EST — v04.00r
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.91g";
+var VERSION = "v01.92g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4220,6 +4220,202 @@ function scDigestBackstopStep_(ss, state, t0) {
 }
 
 /** Intake rows for a digest as objects, sorted by score (desc). */
+/** ---- Same-story clustering (2026-09-01) -------------------------------
+
+    The developer's Monday edition carried the same story three and four times
+    over — Microsoft's DataOne turbines, Vertiv's Q1 results — each from a
+    different outlet, each printed in full. Two collapse passes already existed
+    and neither could catch it:
+
+      * corroboration groups on a LOOSE 8-word title signature, but only to
+        award a score boost. It made the problem worse, not better: it promotes
+        EVERY copy, so the more outlets carry a story the more section slots it
+        eats.
+      * the exact-normalized-title dedupe collapses only byte-identical
+        headlines, which is the syndication case, not the same-story case.
+
+    Between them is the gap: different headlines, same event. This pass fills
+    it — and deliberately does NOT reuse the corroboration signature to do it,
+    for the reason that signature's own comment gives: a false grouping there
+    only nudges a score, here it would DELETE a story.
+
+    So the key is semantic, not lexical. Two items are the same story when they
+    share an ANCHOR (a matched company slug, else a company name, else a topic)
+    and a publication date and a section — and then, only then, is a lexical
+    test applied to separate two genuinely different stories about the same
+    company on the same day.
+
+    Why the lexical test is a shared-distinctive-token count and not a
+    similarity ratio: the real pair reads
+
+        "Microsoft-backed AI data center faces backlash over alleged
+         unpermitted turbines"
+        "DataOne AI campus ran unpermitted turbines, regulators say"
+
+    which share three content words out of fourteen — a Jaccard of about 0.2.
+    Any ratio high enough to be safe would have missed the exact case this was
+    built for. Counting distinctive shared tokens ("unpermitted", "turbines")
+    is what actually separates "same event, different desk" from "same company,
+    different event". */
+
+// Off by default would make this dead code; on with a switch the developer can
+// flip from the source if a bad merge ever needs stopping in a hurry.
+var SCRAPER_CLUSTER_ENABLED = true;
+// Distinctive shared tokens required to merge, once the anchor+date+section
+// key already matches. Two is the floor that merges the turbine pair.
+var SCRAPER_CLUSTER_MIN_SHARED = 2;
+// Required instead when NEITHER item carries an event category — no AI key, or
+// a story the model would not classify. The semantic key is weaker there, so
+// the lexical test has to be stronger.
+var SCRAPER_CLUSTER_MIN_SHARED_NOEVT = 3;
+// A short-headline escape hatch: two distinctive tokens out of five words is a
+// much stronger signal than two out of twenty, so a high overlap ratio merges
+// on its own.
+var SCRAPER_CLUSTER_SIM = 0.5;
+// Members per cluster, representative included. A run of more than this on one
+// anchor is likelier to be a bad key than a genuinely 8-outlet story.
+var SCRAPER_CLUSTER_MAX = 6;
+// Intake rows a source needs before its hit rate is allowed to influence the
+// representative pick. Under this, one lucky article would outrank a roster
+// tier-1 desk.
+var SCRAPER_CLUSTER_MIN_STATS = 20;
+// Stripped before tokens are compared. Deliberately small: this is a headline
+// stopword list, not a general one — anything longer starts eating the words
+// that distinguish trade stories from each other ("power", "grid", "storage").
+var SCRAPER_CLUSTER_STOPWORDS = {
+  'the':1,'a':1,'an':1,'and':1,'or':1,'but':1,'of':1,'in':1,'on':1,'at':1,
+  'to':1,'for':1,'from':1,'by':1,'with':1,'as':1,'is':1,'are':1,'was':1,
+  'were':1,'be':1,'been':1,'it':1,'its':1,'this':1,'that':1,'these':1,
+  'those':1,'has':1,'have':1,'had':1,'will':1,'would':1,'says':1,'say':1,
+  'said':1,'new':1,'more':1,'after':1,'over':1,'into':1,'amid':1,'up':1,
+  'out':1,'how':1,'why':1,'what':1,'who':1,'not':1,'no':1,'first':1
+};
+
+/** Content tokens of a headline: lowercased, punctuation-flattened,
+    stopwords and 1-2 character fragments removed. Pure. */
+function scStoryTokens_(title) {
+  var out = [], seen = {};
+  String(title || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()
+    .split(' ').forEach(function(w) {
+      if (!w || w.length < 3) return;
+      if (SCRAPER_CLUSTER_STOPWORDS[w]) return;
+      if (seen[w]) return;
+      seen[w] = 1; out.push(w);
+    });
+  return out;
+}
+
+/** The bucket an item can cluster within: section, anchor entity and
+    publication DAY. Returns '' when the item has no anchor — an entity-less
+    market story never clusters, which is the safe direction to fail. */
+function scStoryKey_(it) {
+  var anchor = '';
+  var mcs = it.companySlugs || [], mc = it.matchedCompanies || [], mt = it.matchedTopics || [];
+  if (mcs.length)      anchor = String(mcs[0]).toLowerCase();
+  else if (mc.length)  anchor = String(mc[0]).toLowerCase();
+  else if (mt.length)  anchor = 'topic:' + String(mt[0]).toLowerCase();
+  if (!anchor) return '';
+  var day = String(it.publishedAt || '').slice(0, 10);
+  return (it.section || 'market') + '|' + anchor + '|' + day;
+}
+
+/** Are two items in the same bucket actually the same story?
+
+    Event category is a SEPARATOR, never a requirement: two items with
+    different non-empty categories are different stories and can never merge,
+    while two items with no category at all fall back to the stricter token
+    test. Making it a required key component instead would have silently
+    disabled the whole pass in $0 fallback mode, where nothing is classified. */
+function scStorySameEvent_(a, b) {
+  var ea = String(a.event || ''), eb = String(b.event || '');
+  if (ea && eb && ea !== eb) return false;
+  var ta = scStoryTokens_(a.title), tb = scStoryTokens_(b.title);
+  if (!ta.length || !tb.length) return false;
+  var set = {}, shared = 0;
+  ta.forEach(function(w) { set[w] = 1; });
+  tb.forEach(function(w) { if (set[w]) shared++; });
+  var need = (ea && eb) ? SCRAPER_CLUSTER_MIN_SHARED : SCRAPER_CLUSTER_MIN_SHARED_NOEVT;
+  if (shared >= need) return true;
+  var union = ta.length + tb.length - shared;
+  return union > 0 && (shared / union) >= SCRAPER_CLUSTER_SIM;
+}
+
+/** Reliability rank for the representative pick — LOWER IS BETTER, and the
+    comparison is lexicographic across the tuple, not a blended score.
+
+    Roster tier leads because it is the developer's own editorial judgment and
+    it does not move; hit rate is the earned signal underneath it but only once
+    a source has enough intake rows to have earned anything. Click counts are
+    deliberately NOT here: they are sparse enough that the winning outlet would
+    jitter between editions for no reason the reader could see. */
+function scSourceRankOf_(it, tierByName, hitByName) {
+  var name = String(it.source || '').toLowerCase();
+  var tier = tierByName[name] || 3;                 // unknown ranks below tier 2
+  var stat = hitByName[name];
+  var hit = (stat && stat.items >= SCRAPER_CLUSTER_MIN_STATS)
+    ? Math.round((stat.relevant / stat.items) * 100) : -1;
+  return [ it.backstop ? 1 : 0, tier, -hit, -(Number(it.score) || 0) ];
+}
+
+function scRankBetter_(a, b) {
+  for (var i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) return a[i] < b[i];
+  }
+  return false;
+}
+
+/** Collapse same-story runs. `items` must already be score-sorted.
+
+    Returns the same array shape with each survivor carrying `alsoIn` (the
+    outlets that also ran it, for the reader) and `merged` (the full items, so
+    the caller can keep them in the held-back list and in the relevant count —
+    a merged story is hidden, never destroyed). */
+function scClusterStories_(items, tierByName, hitByName) {
+  if (!SCRAPER_CLUSTER_ENABLED) return items;
+  var buckets = {}, out = [];
+  items.forEach(function(it) {
+    var key = scStoryKey_(it);
+    if (!key) { out.push(it); return; }             // no anchor: never cluster
+    var bucket = buckets[key] || (buckets[key] = []);
+    for (var c = 0; c < bucket.length; c++) {
+      var cl = bucket[c];
+      if (cl.members.length >= SCRAPER_CLUSTER_MAX) continue;
+      if (!scStorySameEvent_(cl.rep, it)) continue;
+      cl.members.push(it);
+      // The list arrives score-sorted, but score is not the reliability order:
+      // a tier-1 desk's slightly lower-scoring write-up is still the copy to
+      // print. Re-elect on rank, and keep the higher score for the survivor so
+      // clustering can never demote a story out of its section.
+      if (scRankBetter_(scSourceRankOf_(it, tierByName, hitByName),
+                        scSourceRankOf_(cl.rep, tierByName, hitByName))) {
+        var old = cl.rep;
+        it.score = Math.max(Number(it.score) || 0, Number(old.score) || 0);
+        cl.rep = it;
+        cl.others.push(old);
+        var at = out.indexOf(old);
+        if (at !== -1) out[at] = it;
+      } else {
+        cl.others.push(it);
+      }
+      return;
+    }
+    bucket.push({ rep: it, members: [it], others: [] });
+    out.push(it);
+  });
+  // Attach after the fact: `rep` can change mid-pass, so decorating as we go
+  // would strand `alsoIn` on an item that lost the election.
+  Object.keys(buckets).forEach(function(k) {
+    buckets[k].forEach(function(cl) {
+      if (!cl.others.length) return;
+      cl.rep.merged = cl.others;
+      cl.rep.alsoIn = cl.others.map(function(o) {
+        return { source: o.source, url: o.url, title: o.title };
+      });
+    });
+  });
+  return out;
+}
+
 function scDigestItems_(ss, digestId) {
   var intake = ss.getSheetByName(SCRAPER_TABS.DIGEST_INTAKE);
   var data = intake.getDataRange().getValues();
@@ -4238,11 +4434,31 @@ function scDigestItems_(ss, digestId) {
       source: String(data[i][3]), publishedAt: String(data[i][4]),
       snippet: String(data[i][5]), score: Number(data[i][6]) || 0,
       matchedCompanies: sig.mc || [], matchedTopics: sig.mt || [],
+      companySlugs: sig.mcs || [], event: String(sig.evt || ''),
       evidence: Number(sig.ev) || 0, support: Number(sig.sup) || 0,
       geoFactor: sig.gf == null ? 1 : Number(sig.gf),
       summary: String(data[i][8] || ''), section: String(data[i][9] || 'market'),
       backstop: String(data[i][10]) === 'yes',
       analysis: String(data[i][11] || '') });
+  }
+  // Per-source hit rate for the clustering representative pick, tallied from
+  // the rows ALREADY IN HAND. sourceStats() computes the same figure with its
+  // own bounded read; doing it again here would be a second pass over a tab
+  // this function has just loaded in full. Every intake row counts, not only
+  // this digest's — the question is how the outlet performs generally, and one
+  // edition is far too small a sample to answer it.
+  var hitByName = {};
+  for (var h = 1; h < data.length; h++) {
+    var hs = String(data[h][3] || '').toLowerCase();
+    if (!hs) continue;
+    var hv = hitByName[hs] || (hitByName[hs] = { items: 0, relevant: 0 });
+    hv.items++;
+    if ((Number(data[h][6]) || 0) >= SCRAPER_RELEVANT_THRESHOLD) hv.relevant++;
+  }
+  var tierByName = {};
+  for (var r0 = 0; r0 < SCRAPER_SOURCE_ROSTER.length; r0++) {
+    tierByName[String(SCRAPER_SOURCE_ROSTER[r0].name).toLowerCase()] =
+      Number(SCRAPER_SOURCE_ROSTER[r0].tier) || 2;
   }
   // Corroboration (T2a): a story covered by 2+ distinct sources in the window
   // matters more. Group by a normalized title signature; add a bounded boost
@@ -4301,7 +4517,13 @@ function scDigestItems_(ss, digestId) {
     bestByTitle[key] = it;
     deduped.push(it);
   });
-  return deduped;
+  // Same-story clustering runs LAST, on a list that is score-sorted and free
+  // of byte-identical headlines. Order matters in both directions: before the
+  // corroboration boost it would have starved the boost of group members (the
+  // trap the dedupe comment above describes), and before the exact-title
+  // dedupe it would have spent cluster slots on syndication copies that are
+  // not additional coverage at all.
+  return scClusterStories_(deduped, tierByName, hitByName);
 }
 
 /** The provider/model an edition was actually built with. Recorded on every
@@ -4750,7 +4972,24 @@ function scDigestRenderStep_(ss, state) {
     sec.forEach(function(it) { shownUrls[it.url] = true; });
   });
   if (lead) shownUrls[lead.url] = true;
-  var heldBack = relevant.filter(function(it) { return !shownUrls[it.url]; });
+  // A CLUSTERED STORY IS HIDDEN, NEVER DESTROYED.
+  //
+  // scDigestItems_ returns one item per story, so the outlets it collapsed are
+  // no longer in `items` and therefore not in `relevant` either — which would
+  // have quietly dropped them out of the held-back list as well, and the
+  // held-back list is the one place a bad merge could be noticed. Pulling them
+  // back out of `merged` puts every collapsed article in "View More" and in
+  // the weekly rollup, where a false grouping shows up as a story that reads
+  // like it belongs in the edition rather than as a story nobody ever sees.
+  var mergedAway = [];
+  items.forEach(function(it) {
+    (it.merged || []).forEach(function(m) { mergedAway.push(m); });
+  });
+  var mergedRelevant = mergedAway.filter(function(it) {
+    return it.score >= SCRAPER_RELEVANT_THRESHOLD && !shownUrls[it.url];
+  });
+  var heldBack = relevant.filter(function(it) { return !shownUrls[it.url]; })
+                         .concat(mergedRelevant);
   var d = {
     id: state.id, date: state.date, no: no, windowH: state.windowH,
     generatedAt: new Date().toISOString(), aiNote: state.aiNote || '',
@@ -4766,7 +5005,15 @@ function scDigestRenderStep_(ss, state) {
       incidents: sections.incidents.map(scDigestItemOut_)
     },
     newCoverage: { count: newNames.length, names: newNames },
-    counts: { intake: items.length, relevant: relevant.length,
+    // `intake` and `relevant` are counted BEFORE clustering — they answer
+    // "what did my sources publish", which clustering does not change, and
+    // keeping them pre-cluster leaves them comparable with every edition
+    // built before this and with the Scraper UI's own tallies. `clustered`
+    // is the difference, stated rather than left for the reader to notice
+    // that the numbers stopped adding up.
+    counts: { intake: items.length + mergedAway.length,
+              relevant: relevant.length + mergedRelevant.length,
+              clustered: mergedAway.length,
               shown: (lead ? 1 : 0) + sections.companies.length
                      + sections.market.length + sections.incidents.length }
   };
@@ -4908,7 +5155,11 @@ function scDigestItemOut_(it) {
            // Absent on editions built before the split, and on any item that
            // fell back to its raw snippet — the renderer omits the block rather
            // than printing an empty label.
-           analysis: it.analysis || '' };
+           analysis: it.analysis || '',
+           // The other outlets that ran this same story, collapsed into this
+           // one by scClusterStories_. Omitted entirely when nothing merged,
+           // so an edition built before clustering renders identically.
+           alsoIn: (it.alsoIn && it.alsoIn.length) ? it.alsoIn : undefined };
 }
 
 function scDigestNo_(n) { return ('000' + Math.max(1, n)).slice(-3); }
@@ -4949,10 +5200,27 @@ function scIssueNumbers_(ss) {
   }
   for (var edId in byEd) {
     if (!Object.prototype.hasOwnProperty.call(byEd, edId)) continue;
-    var order = Object.keys(byEd[edId].dates).sort();   // ISO dates sort lexically
+    // ISSUE NUMBERS COUNT RUN DAYS ONLY.
+    //
+    // A weekend build is a real stored edition — it is in the archive, it is
+    // searchable, it can be opened and mailed by hand — but it is not an
+    // issue of the paper. The paper publishes on weekdays. Numbering the
+    // weekend builds made Monday's edition No. 004 when it was the second
+    // issue ever published, and the number is the one thing in the masthead a
+    // reader uses to tell whether they missed one: a sequence that jumps
+    // 001 → 004 says "you missed two" when nothing was missed.
+    //
+    // Off-day editions get 0, which every consumer already treats as
+    // "unnumbered" (getDigest guards on it, the masthead omits the segment,
+    // and scRewriteIssueNo_ strips a stale one). Numbers stay dense across
+    // the run days: dropping Saturday does not leave a hole, it closes one.
+    var order = Object.keys(byEd[edId].dates).sort()    // ISO dates sort lexically
+                      .filter(function(dk) { return scDigestDeliverableDate_(dk); });
     var rank = {};
     for (var k = 0; k < order.length; k++) { rank[order[k]] = k + 1; }
-    byEd[edId].rows.forEach(function(r) { out[r.id] = rank[r.date] || 1; });
+    // No `|| 1` fallback: an off-day date is absent from `rank` on purpose and
+    // must resolve to 0, not be rounded up into the first issue.
+    byEd[edId].rows.forEach(function(r) { out[r.id] = rank[r.date] || 0; });
   }
   return out;
 }
@@ -4965,6 +5233,10 @@ function scNextIssueNo_(ss, editionId, date) {
   var n = sheet ? sheet.getLastRow() - 1 : 0;
   var want = String(editionId || SCRAPER_EDITION_DEFAULT.id);
   var key = scIssueDateKey_(date);
+  // An edition built for a non-run day takes no number at all — it is a
+  // stored build, not an issue. Checked before any sheet work: there is
+  // nothing to count for a date that cannot hold a number.
+  if (!scDigestDeliverableDate_(key)) return 0;
   if (n < 1) return 1;
   var meta = sheet.getRange(2, 2, n, 1).getValues();    // date
   var eds = sheet.getRange(2, 10, n, 1).getValues();    // edition
@@ -4973,7 +5245,8 @@ function scNextIssueNo_(ss, editionId, date) {
     var ed = String(eds[i][0] || '').trim() || SCRAPER_EDITION_DEFAULT.id;
     if (ed !== want) continue;
     var d = scIssueDateKey_(meta[i][0]);
-    if (d) dates[d] = true;
+    // Off-day rows are not part of the sequence, so they must not advance it.
+    if (d && scDigestDeliverableDate_(d)) dates[d] = true;
   }
   if (key && dates[key]) {
     // Same-day rebuild: this date already has a number — reuse it.
@@ -5048,8 +5321,21 @@ function scRenumberIssues_(ss) {
   for (var i = 0; i < n; i++) {
     var id = String(ids[i][0] || '').trim();
     if (!id) continue;
-    var target = want[id] || 0;
-    if (!target) continue;
+    // 0 IS A REAL TARGET, not a missing one.
+    //
+    // Weekend builds now resolve to 0 (unnumbered), and the rows already in
+    // the sheet were stored back when they took numbers — the 2026-08-29 and
+    // 2026-08-30 builds hold No. 002 and No. 003, and Monday holds No. 004.
+    // Skipping falsy targets would leave all three stale forever. Treating 0
+    // as a target lets this pass, which already runs before every delivery,
+    // correct them in place: the weekend rows lose their numbers and Monday
+    // becomes No. 002, which is what it always was.
+    //
+    // `hasOwnProperty` rather than truthiness is what makes that distinction
+    // sayable at all — an id absent from the map (a row scIssueNumbers_ never
+    // saw) is still skipped, an id mapped to 0 is not.
+    if (!Object.prototype.hasOwnProperty.call(want, id)) continue;
+    var target = Number(want[id]) || 0;
     var current = stored ? Number(stored[i][0]) || 0 : 0;
     if (current === target) continue;
     var row = i + 2;
@@ -5076,7 +5362,15 @@ function scRenumberIssues_(ss) {
     the archive. Anchored on the full surrounding phrase rather than the digits
     alone, so it cannot match a number inside a headline or a summary. */
 function scRewriteIssueNo_(html, no) {
-  if (!html || !no) return html;
+  if (!html) return html;
+  // Unnumbered (a weekend build, or any edition scIssueNumbers_ resolves to
+  // 0): REMOVE the segment rather than leaving the stale one standing. The
+  // old `!no` early return was correct while 0 only ever meant "unknown";
+  // now that 0 is a decision, returning the html untouched would keep
+  // "No. 002" printed on an edition that no longer has a number.
+  if (!no) {
+    return String(html).replace(/\u00b7 No\. \d{3,} (\u00b7 covering the last )/, '$1');
+  }
   return String(html).replace(/(\u00b7 No\. )\d{3,}( \u00b7 covering the last )/,
                               '$1' + scDigestNo_(no) + '$2');
 }
@@ -5121,13 +5415,28 @@ function scRenderDigestNightInk_(d) {
     return ' <span style="color:#f2a33c;">'
       + scNiBoldFigures_(esc(text), 'inherit') + '</span>';
   }
+  // The outlets whose copy of a story was collapsed into this one. Rendered
+  // as links, not as plain names: the whole point of hiding a duplicate is
+  // that nothing is lost, and a reader who wants the second desk's write-up
+  // must still be one click from it. Reads as corroboration — "three desks
+  // carried this" — where three separate entries read as noise.
+  function alsoLine(it) {
+    var also = it.alsoIn || [];
+    if (!also.length) return '';
+    return '<div style="' + mono + caps + 'color:#7b828e;margin-top:3px;">Also covered by '
+      + also.map(function(o) {
+          return '<a href="' + esc(o.url) + '" style="color:#9aa0ab;text-decoration:underline;">'
+            + esc(o.source) + '</a>';
+        }).join(' · ')
+      + '</div>';
+  }
   function itemHtml(it) {
     return '<div style="margin:0 0 20px;">'
       + '<div class="ni-hed" style="' + serif + 'font-size:18px;font-weight:600;line-height:1.29;color:#eceae4;">'
       + '<a href="' + esc(it.url) + '" style="color:#eceae4;text-decoration:none;">' + esc(it.title) + '</a></div>'
       + '<div class="ni-body" style="' + sans + 'font-size:15px;line-height:1.52;color:#c2c8d2;margin-top:5px;">'
       + scNiBoldFigures_(esc(it.summary)) + analysisRun(it.analysis) + '</div>'
-      + srcLine(it) + '</div>';
+      + srcLine(it) + alsoLine(it) + '</div>';
   }
   function sectionHtml(label, items, color, ruleColor) {
     if (!items.length) return '';
@@ -5170,7 +5479,10 @@ function scRenderDigestNightInk_(d) {
     + esc(d.editionName || SCRAPER_EDITION_DEFAULT.name) + '</div>'
     + '<div style="' + caps + 'color:#f2a33c;margin-top:6px;">Scraper · Trade news, distilled daily</div>'
     + '<div style="font-size:12px;color:#9aa0ab;margin-top:4px;">' + esc(longDate(d.date))
-    + ' · No. ' + scDigestNo_(d.no) + ' · covering the last ' + Number(d.windowH) + ' hours</div>'
+    // Unnumbered editions print no issue segment at all. scRewriteIssueNo_
+    // matches on this exact phrasing, so the two must stay in step.
+    + (Number(d.no) ? ' · No. ' + scDigestNo_(d.no) : '')
+    + ' · covering the last ' + Number(d.windowH) + ' hours</div>'
     + '</div>';
   if (d.lead) {
     html += '<div style="border-bottom:1px solid #2c313a;padding-bottom:16px;margin-bottom:16px;">'
@@ -5263,6 +5575,13 @@ function scRenderDigestNightInk_(d) {
   }
   footLeft.push(Number(d.counts.relevant) + ' relevant of '
     + Number(d.counts.intake) + ' scanned');
+  // Stated in the footer so the collapse is visible in the edition itself.
+  // Without it the reader has no way to tell a quiet day apart from a day
+  // whose duplicates were folded together, and the developer would have to
+  // open the sheet to find out which.
+  if (Number(d.counts.clustered)) {
+    footLeft.push(Number(d.counts.clustered) + ' merged as duplicate coverage');
+  }
   // Kept, and deliberately not folded into the credit above: these two say the
   // summaries are NOT the model's work, which is a claim about the content in
   // front of the reader rather than an attribution.
@@ -5655,7 +5974,13 @@ function scDigestDeliverPending_(ss, opts) {
       var mail = { to: toList.join(','),
         // The edition's own date — a late-delivered Friday paper must say
         // Friday, not the day it finally went out.
-        subject: edName + ' — ' + rowDate + ' (No. ' + scDigestNo_(nos[id] || 1) + ')',
+        // `|| 1` used to stand in for a missing number; with 0 now meaning
+        // "unnumbered" it would have relabelled such an edition No. 001.
+        // Unreachable for a weekend build (the off-day gate above stops it
+        // long before this line) but the subject must not lie if any other
+        // route ever reaches here unnumbered.
+        subject: edName + ' — ' + rowDate
+                 + (nos[id] ? ' (No. ' + scDigestNo_(nos[id]) + ')' : ''),
         htmlBody: html };
       if (bcc.length) mail.bcc = bcc.join(',');
       MailApp.sendEmail(mail);
@@ -8668,6 +8993,8 @@ function previewEdition(sessionToken, editionId) {
   var items = scDigestItems_(ss, state.id);
   if (!items.length) return { success: false, error: 'no_items' };
   var ed = scEditionById_(ss, editionId || state.editionId);
+  var pvMerged = [];
+  items.forEach(function(it) { (it.merged || []).forEach(function(m) { pvMerged.push(m); }); });
   var lead = items[0];
   var sections = { companies: [], market: [], incidents: [] };
   items.forEach(function(it) {
@@ -8685,8 +9012,12 @@ function previewEdition(sessionToken, editionId) {
                 market: sections.market.map(scDigestItemOut_),
                 incidents: sections.incidents.map(scDigestItemOut_) },
     newCoverage: { count: 0, names: [] },
-    counts: { intake: items.length,
-              relevant: items.filter(function(it){ return it.score >= SCRAPER_RELEVANT_THRESHOLD; }).length,
+    // Same pre-cluster accounting as the stored render, so a preview and the
+    // edition it previews report the same numbers.
+    counts: { intake: items.length + pvMerged.length,
+              relevant: items.filter(function(it){ return it.score >= SCRAPER_RELEVANT_THRESHOLD; }).length
+                        + pvMerged.filter(function(it){ return it.score >= SCRAPER_RELEVANT_THRESHOLD; }).length,
+              clustered: pvMerged.length,
               shown: 1 + sections.companies.length + sections.market.length + sections.incidents.length }
   };
   return { success: true, html: scRenderDigestNightInk_(d), preview: true };
