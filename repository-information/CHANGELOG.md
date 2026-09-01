@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 84/100`
+`Sections: 85/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.05r] — 2026-09-01 03:24:56 AM EST
+
+> **Prompt:** "I opened Scraper after GAS updated and I don't see a tile called \"5 errors logged\". Does that mean I have no errors now and everything's ok?"
+
+### Fixed
+
+**No — and the missing tile was a bug shipped in v01.94g, not a clean bill of health.** The developer opened the app expecting to read the five faults from the previous session and found no tile at all, which reads as "resolved". It was not.
+
+`v01.94g` split the fault trail into two stores — `scDigestErrLog` (detail, capped at 20) and `scDigestErrTally` (hourly counts, exact) — and pointed `recentErrorCount` at the tally alone, because the tally is the accurate one. **The tally property did not exist before that release.** So on the first load after deploy it read empty, the count came back `0`, and the tile — which renders only on a non-zero count — hid. The five entries were still in `scDigestErrLog`, still filtered to the 24h window, still serialized into the `goLiveStatus` payload and sent to the browser. They were simply unreachable: the tile is the only thing that opens the panel that displays them.
+
+Shipped the diagnostic surface and hid the diagnosis in the same release.
+
+#### `Scraper.gs` — v01.95g
+
+- `recentErrorCount` is now `Math.max(scDigestErrCount_(24), errInWindow.length)` — the greater of the hourly tally and the in-window length of the detail log
+- The in-window filter is hoisted so the count sees **all** matching entries while `recentErrors` keeps its `slice(-SCRAPER_ERRLOG_SERVE)` cap for the payload. Counting the sliced array is what made the *original* `5 err/24h` a ceiling, so the fix must not reintroduce it at the other end
+- **Right beyond the migration**, which is why it is `max()` rather than a one-off backfill: the tally is more accurate (it survives detail eviction) but more losable — cleared, corrupted, or newer than the log — and *every* failure mode of reading it alone points the same way, at silence where there are faults. The log's in-window length can only ever understate (it evicts at `SCRAPER_ERRLOG_KEEP`), so the larger of the two is never an overstatement and is never zero while any entry remains visible
+
+### Verified
+
+- `node --check` clean; `check-gas-inner-scripts.js` clean (8 files, 76 blocks)
+- **11 cases**, opening with a reproduction of the developer's exact post-deploy state — a populated `scDigestErrLog` with no tally property at all: tally-only reports `0` (the shipped bug), the fix reports `5`, the 5 entries are still served, and the tile therefore renders. Then: 50 faults still counted exactly while only 20 details are kept and 8 served; a wiped tally cannot zero the tile while the log holds entries; an evicted log cannot zero it while the tally holds counts; and a genuinely clean install still reports `0` so no tile is drawn
+
+### Note
+
+The **`tick 20m ago`** in the developer's screenshot is real and is good news, independent of the above: the run tile is green and no longer `overdue`, so the hourly tick is completing again after having last reported eight hours earlier.
 
 ## [v04.04r] — 2026-09-01 03:16:00 AM EST
 

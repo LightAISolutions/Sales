@@ -3,12 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 41/50`
+`Sections: 42/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.95g] — 2026-09-01 03:24:56 AM EST — v04.05r
+
+### Fixed
+- Recorded faults that happened **before** the previous update went out were not being counted, so the health tile stayed hidden and there was no way to open the panel and read them — an empty tile looked like a clean bill of health when it was not. The count now also considers the stored fault detail, so anything already recorded shows up immediately
+- More generally, the tile can no longer be silenced by one of its two stores being empty, cleared or out of date — whichever holds more is the one reported, so a fault that has been recorded anywhere is always visible
 ## [v01.94g] — 2026-09-01 03:16:00 AM EST — v04.04r
 
 ### Added

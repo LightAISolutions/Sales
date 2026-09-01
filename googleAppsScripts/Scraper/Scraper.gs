@@ -1,4 +1,4 @@
-var VERSION = "v01.94g";
+var VERSION = "v01.95g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -6765,15 +6765,33 @@ function goLiveStatus(sessionToken) {
   var recentErrorCount = 0;
   try {
     var errCut = Date.now() - 86400000;
-    recentErrors = (JSON.parse(props.getProperty('scDigestErrLog') || '[]'))
-      .filter(function(le) { return new Date(le.t).getTime() >= errCut; })
-      .slice(-SCRAPER_ERRLOG_SERVE);
-    // The count comes from the tally, NOT from recentErrors.length. The old
-    // tile rendered the length of a slice capped at 5, so "5 err/24h" was a
-    // ceiling wearing the costume of a measurement — five and fifty printed
-    // identically. The served array stays capped (it is the payload); the
-    // number beside it is now the real one.
-    recentErrorCount = scDigestErrCount_(24);
+    var errInWindow = (JSON.parse(props.getProperty('scDigestErrLog') || '[]'))
+      .filter(function(le) { return new Date(le.t).getTime() >= errCut; });
+    recentErrors = errInWindow.slice(-SCRAPER_ERRLOG_SERVE);
+    // THE GREATER OF THE TWO STORES, NEVER THE TALLY ALONE.
+    //
+    // The count comes from the tally rather than recentErrors.length because
+    // the served array is capped: the old tile printed the length of a
+    // slice(-5), so "5 err/24h" was a ceiling wearing the costume of a
+    // measurement — five and fifty printed identically.
+    //
+    // But reading the tally ALONE was worse, and shipped: the tally property
+    // did not exist before the release that introduced it, so on the first
+    // load after deploy it read empty and the count came back 0 — while the
+    // detail log sat there holding the very errors the developer had opened
+    // the app to read. The tile renders only when the count is non-zero, so
+    // it hid; and the tile is the only way to open the panel; so the entries
+    // were shipped to the browser and made unreachable in the same breath.
+    // The developer reasonably read a missing tile as "no errors".
+    //
+    // max() of the two is right beyond that one migration. The tally is the
+    // more accurate source (it survives detail eviction) but it is also the
+    // more losable one — cleared, corrupted, or newer than the log — and
+    // every failure mode of reading it alone points the same way: silence
+    // where there are faults. The log's in-window length can only understate
+    // (it evicts at SCRAPER_ERRLOG_KEEP), so the larger of the two is never
+    // an overstatement and is never zero while any entry is visible.
+    recentErrorCount = Math.max(scDigestErrCount_(24), errInWindow.length);
   } catch (elErr) {}
   try {
     recentDeploys = (JSON.parse(props.getProperty('scDeployLog') || '[]')).slice(-5);
