@@ -58,7 +58,26 @@ So `tv: 1` against a row already marked `seed-terms-v1` is a no-op. **Changing t
 |---|---|---|---|---|
 | Data Centre Magazine | `datacentremagazine.com` | `blocked` | Live and publishing. Cloudflare Managed Challenge on every content path; the site advertises no feed at any address. Five candidate paths probed, all 403. | 2026-08-27 |
 | Battery Technology | `batterytechonline.com` | `blocked` | Live and publishing through 2026. Whole domain returns 403 to automated clients, including with browser User-Agents, confirmed from two independent fetchers. | 2026-08-27 |
+| FERC | `ferc.gov` | `blocked` | Live and publishing. Cloudflare Managed Challenge (`cf-mitigated: challenge`) on the news feed. **Not uncovered** — FERC orders and notices are carried by the Federal Register feed, which is where they take legal effect. | 2026-09-01 |
+| IRS Newsroom | `irs.gov` | `blocked` | No feed is published; every documented address returns 404. IRS guidance that moves this market (credit and domestic-content rules) is carried by the Federal Register IRS feed. | 2026-09-01 |
+| EPA News Releases | `epa.gov` | `blocked` | Answers automated clients with an empty `202` and no body, repeatably. EPA rulemakings reach the desk through the Federal Register. | 2026-09-01 |
 | Solar Industry | `solarindustrymag.com` | `offline` | Publication gone. `/feed` returns 200 but is a 114-byte JS redirect to `/lander`, a GoDaddy parking page. The only one of the three that genuinely ended. | 2026-08-27 |
+
+## Primary federal sources — adopted 2026-09-01
+
+Added after EO 14420 (2026-08-26) reached the desk only through trade coverage. All probed live before adoption.
+
+| Feed | URL shape | Probe (2026-09-01) |
+|---|---|---|
+| White House — Presidential Actions | `whitehouse.gov/presidential-actions/feed/` | 200, XML, 30 items, newest 2026-08-28 |
+| Federal Register — FERC | `federalregister.gov/api/v1/documents.rss?conditions[agencies][]=federal-energy-regulatory-commission` | 200, XML, 148 items |
+| Federal Register — IRS | same API, `conditions[agencies][]=internal-revenue-service` | 200, XML, 33 items |
+| US DOE — Newsroom | `energy.gov/rss/articles.xml` | 200, XML, 10 items |
+| EIA — Today in Energy | `eia.gov/rss/todayinenergy.xml` | 200, XML, 21 items |
+
+**Do not substitute a Federal Register `conditions[term]=` query with `OR` operators** — measured 2026-09-01, an OR'd term query returns **0 items**. Single terms work (`electric grid` → 19, `bulk power system` → 20); agency-scoped queries are what this roster uses.
+
+`whitehouse.gov/briefing-room/feed/` and `whitehouse.gov/feed/` both **404** — only the `presidential-actions` path serves a feed.
 
 ## Rejected workarounds
 

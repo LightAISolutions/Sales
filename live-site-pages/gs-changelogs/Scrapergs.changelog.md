@@ -3,12 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 42/50`
+`Sections: 43/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.96g] — 2026-09-01 03:41:19 AM EST — v04.06r
+
+### Added
+- The scan now reads primary federal sources directly, not only trade coverage of them: White House presidential actions, the Federal Register (energy regulator and tax filings), the Department of Energy newsroom, and EIA's Today in Energy. A federal action is the one kind of story where the original text is both freely available and more useful than the write-up, because the detail that decides scope sits in the definitions a summary leaves out
+- Two new tracked topics so federal material scores properly rather than arriving unrecognised: one for bulk-power-system security and equipment restrictions, and a standing one for orders, rules and agency guidance generally
+
+### Changed
+- Two agency sites and one newsroom were checked and cannot be read by any automated reader — their feeds either refuse automated clients or do not exist. They are listed as unavailable with the reason, and their output is covered through the Federal Register instead, which is where those actions take legal effect anyway
 ## [v01.95g] — 2026-09-01 03:24:56 AM EST — v04.05r
 
 ### Fixed

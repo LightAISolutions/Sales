@@ -1,4 +1,4 @@
-var VERSION = "v01.95g";
+var VERSION = "v01.96g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -564,6 +564,28 @@ var SCRAPER_RETIRED_SOURCES = {
           + 'automated readers, including with browser identification. Battery and '
           + 'storage stay covered by Energy-Storage.news and ESS News. Re-checked 2026-08-27.'
   },
+  'src-ferc-gov': {
+    status: 'blocked',
+    label: 'Blocked to automated readers',
+    detail: 'FERC\'s own news feed sits behind a Cloudflare browser challenge that no '
+          + 'server-side reader can pass. FERC is not uncovered: its orders and notices '
+          + 'are carried by the Federal Register feed, which is where they take legal '
+          + 'effect anyway. Re-checked 2026-09-01.'
+  },
+  'src-irs-newsroom': {
+    status: 'blocked',
+    label: 'No feed published',
+    detail: 'The IRS publishes no working newsroom feed — every documented address '
+          + 'returns 404. IRS guidance that moves this market (credit and domestic-content '
+          + 'rules) is carried by the Federal Register feed instead. Re-checked 2026-09-01.'
+  },
+  'src-epa-newsreleases': {
+    status: 'blocked',
+    label: 'Blocked to automated readers',
+    detail: 'EPA\'s news-release feed answers automated clients with an empty 202 and no '
+          + 'body, repeatably. EPA rulemakings reach the desk through the Federal Register '
+          + 'instead. Re-checked 2026-09-01.'
+  },
   'src-solar-industry': {
     status: 'offline',
     label: 'Site offline',
@@ -583,6 +605,22 @@ var SCRAPER_INTEREST_FLAG_NEWTOPIC = 'New topic';
 // Terms are the default search/match aliases; once a seed lands in the
 // Interests tab the developer's in-sheet edits win and are never overwritten.
 var SCRAPER_INTEREST_TOPIC_SEEDS = [
+  // Guidance seed for the EO 14420 module (industry-guidance.md step 9). The
+  // terms are the order's OWN vocabulary, not paraphrase: "bulk-power system"
+  // and "Covered Foreign Entity" are defined terms that every implementing
+  // rule, FERC order and trade write-up will quote verbatim, which makes them
+  // far better discriminators than "grid security" would be.
+  { key: 'topic-bps-security', label: 'Bulk-power system security & equipment restrictions',
+    terms: ['bulk-power system', 'Covered Foreign Entity', 'EO 14420', 'IEEPA',
+            'grid-connected inverter', 'pre-qualified vendor'],
+    source: 'guidance:eo14420-bulk-power-2026-08' },
+  // Standing federal-action seed. Separate from the guidance seed on purpose:
+  // that one ages with its module, this one has to keep scoring the NEXT
+  // executive order, which nobody has written yet.
+  { key: 'topic-federal-action', label: 'Federal action — orders, rules & agency guidance',
+    terms: ['executive order', 'national emergency', 'Federal Register', 'notice of proposed rulemaking',
+            'Department of Energy', 'FERC order', 'Treasury guidance', 'Federal Acquisition Regulation'],
+    source: 'market' },
   { key: 'topic-800vdc-power', label: '800 VDC & AI-factory power architecture',
     terms: ['800 VDC', '800V DC', 'sidecar power rack', 'solid-state transformer', 'power architecture'],
     source: 'guidance:nvidia-800vdc-2026-08' },
@@ -1325,7 +1363,36 @@ var SCRAPER_SOURCE_ROSTER = [
   { key: 'smart-energy-intl', name: 'Smart Energy International', tier: 2, rss: 'https://www.smart-energy.com/feed/' },
   // Replaced Data Centre Magazine (BizClik bot-wall 403s even browser UAs).
   // HPCwire covers the AI/HPC data-center hardware beat — go-live shakeout 2026-08-27
-  { key: 'hpcwire', name: 'HPCwire', tier: 2, rss: 'https://www.hpcwire.com/feed/' }
+  { key: 'hpcwire', name: 'HPCwire', tier: 2, rss: 'https://www.hpcwire.com/feed/' },
+  // ── Primary federal sources (2026-09-01) ──────────────────────────────
+  // Added after EO 14420 of 2026-08-26 — which names battery energy storage
+  // systems, grid-connected inverters and UPS supporting critical
+  // infrastructure as in-scope bulk-power-system equipment — reached the desk
+  // through trade coverage days later, and only partially. The roster was
+  // entirely secondary: thirty outlets all reporting ON government action,
+  // none reading it. A federal action is the one class of story where the
+  // primary text is both freely available and more useful than the coverage,
+  // because the operative detail is in the definitions section that trade
+  // pieces summarise away.
+  //
+  // Tier 1: these are the record, not a report of the record. Every URL below
+  // was probed live on 2026-09-01 per .claude/rules/scraper-sources.md —
+  // status, XML body, and item recency — never adopted from memory.
+  //
+  // ferc.gov and the IRS newsroom are NOT here and must not be re-proposed:
+  // see SCRAPER_RETIRED_SOURCES. Their operative output is covered below,
+  // because a FERC order and an IRS notice are legally effective on
+  // publication in the Federal Register, not on the agency's own newsroom.
+  { key: 'wh-presidential-actions', name: 'White House — Presidential Actions', tier: 1,
+    rss: 'https://www.whitehouse.gov/presidential-actions/feed/' },
+  { key: 'fedreg-ferc', name: 'Federal Register — FERC', tier: 1,
+    rss: 'https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=federal-energy-regulatory-commission&order=newest' },
+  { key: 'fedreg-irs', name: 'Federal Register — IRS', tier: 1,
+    rss: 'https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=internal-revenue-service&order=newest' },
+  { key: 'doe-newsroom', name: 'US Dept. of Energy — Newsroom', tier: 1,
+    rss: 'https://www.energy.gov/rss/articles.xml' },
+  { key: 'eia-today', name: 'EIA — Today in Energy', tier: 1,
+    rss: 'https://www.eia.gov/rss/todayinenergy.xml' }
 ];
 
 function scraperSs_() {

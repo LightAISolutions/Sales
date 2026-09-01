@@ -3,11 +3,66 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 85/100`
+`Sections: 86/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.06r] — 2026-09-01 03:41:19 AM EST
+
+> **Prompt:** "The GAS shows v01.95g and nothing appeared, so everything's fine now.
+>
+> I know that Scraper only started building digests on 8/28/26, but on 8/26/26, the White House \"declared a national emergency\"(https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/) that directly impacts the US BESS/AIDC industry. I want Scraper to be able to scan press releases from the White House, IRS, and other relevant government agencies as well, so as to not miss these kinds of TOP-PRIORITY news when they come out.
+>
+> I also want Profiler to build an Industry Guidance module based on this article as well."
+
+### Added
+
+**The roster was entirely secondary — thirty outlets reporting *on* government action, none reading it.** EO 14420 of 2026-08-26 names battery energy storage systems, grid-connected inverters and critical-infrastructure UPS as in-scope bulk-power-system equipment, and it reached the desk through trade coverage days later and only partially. A federal action is the one class of story where the primary text is both freely available and more useful than the coverage, because the operative detail lives in the definitions section trade pieces summarise away.
+
+#### `Scraper.gs` — v01.96g
+
+Five primary federal feeds, **every URL probed live on 2026-09-01** per `.claude/rules/scraper-sources.md` — status, XML body, item recency — never adopted from memory:
+
+| Feed | Probe result |
+|---|---|
+| White House — Presidential Actions | `200`, XML, 30 items, newest 2026-08-28 |
+| Federal Register — FERC | `200`, XML, 148 items, newest 2026-08-31 |
+| Federal Register — IRS | `200`, XML, 33 items, newest 2026-08-31 |
+| US DOE — Newsroom | `200`, XML, 10 items, newest 2026-08-24 |
+| EIA — Today in Energy | `200`, XML, 21 items, newest 2026-08-28 |
+
+**Validation that the gap is closed:** the White House feed was confirmed to contain the exact article the developer cited, at the exact URL. That feed would have caught it on 2026-08-26.
+
+- Two topic seeds: `topic-bps-security` (the guidance-module seed required by `industry-guidance.md` step 9, using the order's **own** defined terms — "bulk-power system", "Covered Foreign Entity" — because implementing rules and trade write-ups quote them verbatim, making them far better discriminators than "grid security") and `topic-federal-action`, a standing seed kept **separate on purpose**: the guidance seed ages with its module, this one has to keep scoring the next executive order, which nobody has written yet
+
+**Three federal sources retired rather than added**, with `SCRAPER_RETIRED_SOURCES` entries and rows in the rules-file table:
+
+- `ferc.gov` — `403` with `cf-mitigated: challenge` and `server: cloudflare`, the exact blocked signature. **Not uncovered**: FERC orders are carried by the Federal Register feed, which is where they take legal effect anyway
+- IRS newsroom — every documented address returns `404`; no feed is published. Covered via the Federal Register IRS feed
+- EPA news releases — answers automated clients with an empty `202`, repeatably. Covered via the Federal Register
+
+Per the rules file, no workaround was attempted for the Cloudflare-blocked feed.
+
+#### `Profiler.gs` — v01.32g
+
+New guidance module **`eo14420-bulk-power-2026-08`** (lane: Market Access & Bankability), authored from the primary text — nine sections (`prose`, `table`, `timeline`, `prose`, `proscons`, `callout`, `flashcards`, `quiz`, `ledger`), 4 tiles, 6 glossary terms, 7 flashcards, 5 quiz items, and a 14-row claims ledger where every row cites a section of the order rather than a secondary report.
+
+- `reviewBy: 2026-12-24` — set from the module's **own nearest dated gate** (the §3(b) 120-day implementing-rules deadline), per the freshness rule, not a fixed cadence
+- Timeline lane keys are `gen`/`deploy` so they resolve against `GD_LANE_COLORS`; verified in the browser as gold `#b18f35` and blue `#4f83e6` with **zero grey dots**
+- Content-scope rule observed: guidance is to supplier and buyer **groups** (BESS suppliers and integrators, inverter/PCS suppliers, data-center developers and hyperscalers, developers and EPCs) — no single-company analysis. The order names no companies, so no statutory-list exception was needed
+
+#### `repository-information/industry-guidance/`
+
+- `eo14420-bulk-power-system-analysis.md` — the source of truth, with a claims ledger and an explicit "what the order does NOT say" section
+- `sources/eo14420-bulk-power-system-2026-08.html` + `.txt` — the archived page and the extracted text the analysis was written against
+
+### Verified
+
+- `node --check` on both `.gs` files; `check-gas-inner-scripts.js` clean (8 files, 76 blocks)
+- Statutory deadlines computed with `date -d`, not inferred: 120 days → **2026-12-24**, 180 days → **2027-02-22**, +90 → **2027-05-23**
+- Playwright render via direct `gdRenderDoc(doc, host)`: 24 327 chars of markup, 25 table rows, 4 timeline dots in the two CVD-validated hues, glossary tooltips resolving, review chip rendering, **no page errors**
 
 ## [v04.05r] — 2026-09-01 03:24:56 AM EST
 

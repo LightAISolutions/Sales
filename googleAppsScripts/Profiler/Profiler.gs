@@ -1,4 +1,4 @@
-var VERSION = "v01.31g";
+var VERSION = "v01.32g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -428,12 +428,444 @@ function handleNewsOp_(e) {
   }
 }
 
+function guidanceDocEo14420_() {
+  return {
+ "id": "eo14420-bulk-power-2026-08",
+ "group": "Market Access & Bankability",
+ "title": "EO 14420 — The Bulk-Power System Emergency",
+ "short": "Battery storage, inverters and data-center UPS are named equipment in a live IEEPA emergency. What is restricted, what reaches backwards, and the dates.",
+ "source": {
+  "doc": "Executive Order 14420, \"Declaring a National Emergency to Secure the United States Bulk-Power System\"",
+  "publisher": "The White House — Presidential Actions",
+  "date": "August 26, 2026",
+  "pages": 7,
+  "series": "Industry Guidance — policy module",
+  "repo": "repository-information/industry-guidance/eo14420-bulk-power-system-analysis.md"
+ },
+ "updated": "2026-09-01",
+ "reviewBy": "2026-12-24",
+ "revisions": [
+  {
+   "date": "2026-09-01",
+   "note": "Authored from the primary text on the day the federal-source roster was added to Scraper. Every figure is a section citation, not a secondary report."
+  }
+ ],
+ "tiles": [
+  {
+   "k": "§5(b)",
+   "v": "storage is named",
+   "sub": "BESS, grid-connected inverters and critical-infrastructure UPS are in-scope equipment"
+  },
+  {
+   "k": "69 kV",
+   "v": "the scoping line",
+   "sub": "transmission at or above it is covered; local distribution is excluded"
+  },
+  {
+   "k": "§2(b)",
+   "v": "reaches backwards",
+   "sub": "conditions on equipment installed BEFORE the order — up to removal"
+  },
+  {
+   "k": "Dec 24, 2026",
+   "v": "implementing rules due",
+   "sub": "120 days from signing; the covered-entity designations arrive here"
+  }
+ ],
+ "sections": [
+  {
+   "id": "what",
+   "title": "What the order actually is",
+   "read": "3 min",
+   "kind": "prose",
+   "ps": [
+    "A national emergency declared under {{IEEPA}} over the **foreign supply of bulk-power system electric equipment**. It is not a tariff, not a tax rule and not a procurement preference — it is an authority to **prohibit transactions**, and separately to **impose conditions on equipment already installed**.",
+    "It is only partly self-executing. §2(a) is a live prohibition from the signing date, but it bites only on transactions the Secretary of Energy has *determined* meet the risk tests. The machinery that turns it into day-to-day compliance — the rules, the {{CFE}} designations, the pre-qualified vendor list — is delegated and dated.",
+    "**Why it matters here rather than in the general policy news:** §5(b) enumerates in-scope equipment, and the list names **battery energy storage systems**, **utility-scale and other grid-connected inverters**, and **uninterruptible power supply systems supporting critical infrastructure**. That is not an inference from \"grid equipment\" — storage and inverters are on the face of the definition.",
+    "**Field note:** the order names no companies and no countries. Every designation is delegated to the Secretary, which means the covered set can grow later without notice-and-comment."
+   ]
+  },
+  {
+   "id": "scope",
+   "title": "What counts as covered equipment",
+   "read": "3 min",
+   "kind": "table",
+   "cols": [
+    "Equipment class (§5(b))",
+    "Named in the order",
+    "Why it lands on this desk"
+   ],
+   "rows": [
+    [
+     "Battery energy storage systems",
+     "Yes, by name",
+     "Exposure runs past cell origin to the enclosure, PCS, BMS firmware and remote-diagnostics channel"
+    ],
+    [
+     "Utility-scale and grid-connected inverters",
+     "Yes, by name",
+     "Firmware and OTA update path are part of the assessed risk surface"
+    ],
+    [
+     "UPS supporting critical infrastructure",
+     "Yes, by name",
+     "The data-center hook — brings AIDC power trains inside the frame"
+    ],
+    [
+     "Generation turbines",
+     "Yes, by name",
+     "On-site generation behind a campus is covered where it touches the bulk-power system"
+    ],
+    [
+     "Substation transformers, reactors, capacitors",
+     "Yes, by name",
+     "The long-lead items where replacement availability is weakest"
+    ],
+    [
+     "ICS / DCS — RTUs, PLCs, IEDs",
+     "Yes, by name",
+     "The control layer, assessed alongside the hardware it operates"
+    ],
+    [
+     "Protective relaying, HV circuit breakers, metering",
+     "Yes, by name",
+     "Substation balance-of-plant"
+    ],
+    [
+     "Associated software, firmware, remote access, lifecycle updates",
+     "Considered, not listed",
+     "A US-assembled unit with foreign firmware and a vendor support tunnel is inside the question"
+    ],
+    [
+     "Local distribution equipment",
+     "Excluded by §5(a)",
+     "Below the 69 kV line the order does not reach"
+    ]
+   ]
+  },
+  {
+   "id": "gates",
+   "title": "The dated gates",
+   "read": "2 min",
+   "kind": "timeline",
+   "intro": "Two lanes: what is already in force (gold), and what the order only promises (blue). The asymmetry matters — §4(b) obliges the FAR Council to consider proposing, not to propose.",
+   "lanes": {
+    "gen": "In force",
+    "deploy": "Delegated & dated"
+   },
+   "items": [
+    {
+     "x": 2026.65,
+     "lane": "gen",
+     "label": "EO 14420 signed",
+     "sub": "§2(a) prohibition live for transactions initiated after Aug 26, 2026"
+    },
+    {
+     "x": 2026.98,
+     "lane": "deploy",
+     "label": "Implementing rules due",
+     "sub": "§3(b) — 120 days; covered-entity designations and licensing procedures"
+    },
+    {
+     "x": 2027.14,
+     "lane": "deploy",
+     "label": "FAR recommendations due",
+     "sub": "§4(a) — 180 days; prioritising US-manufactured energy infrastructure"
+    },
+    {
+     "x": 2027.39,
+     "lane": "deploy",
+     "label": "FAR Council considers",
+     "sub": "§4(b) — +90 days; considers proposing for notice and comment"
+    }
+   ]
+  },
+  {
+   "id": "defs",
+   "title": "The four definitions that decide everything",
+   "read": "4 min",
+   "kind": "prose",
+   "ps": [
+    "**\"Bulk-power system\" (§5(a))** — transmission facilities and control systems plus the generation needed for reliability. It **includes transmission rated at 69,000 volts or more** and **excludes facilities used in local distribution**. The 69 kV line is the single most useful scoping fact in the order: it separates a covered substation asset from distribution-side equipment.",
+    "**\"Foreign-produced\" (§5(c))** — \"not manufactured, produced, or assembled in the United States.\" Note *assembled*. On the text, US final assembly of foreign content sits outside this definition. This is a **materially different test** from the tax-side domestic-content rules, and conflating the two is the predictable error.",
+    "**\"Covered Foreign Entity\" (§5(e))** — two routes. Either a government subject to a US arms embargo or sanctions regime under the {{ITAR}}, or one the Secretary determines is engaged in conduct detrimental to US national security or foreign policy. **The second route is discretionary and undated** — that is where the real uncertainty sits.",
+    "**\"Transaction\" (§2(a))** — acquisition, importation, transfer *or installation*. Installation is a transaction in its own right, so a unit already imported is not automatically clear of the prohibition."
+   ]
+  },
+  {
+   "id": "groups",
+   "title": "What it means by group",
+   "read": "5 min",
+   "kind": "proscons",
+   "intro": "Exposure on the left, the opening on the right. Read the §2(e) pre-qualification opportunity as the strategic item — it is the only part of this order that creates advantage rather than cost.",
+   "cards": [
+    {
+     "t": "BESS suppliers & integrators",
+     "meta": "named equipment",
+     "adv": [
+      "Domestic assembly changes the §5(c) analysis — 'assembled' is in the definition",
+      "Early supply-chain and remote-access documentation becomes a differentiator before December",
+      "§2(e) pre-qualification, if published, converts compliance work into a shortlist position"
+     ],
+     "dis": [
+      "Exposure runs past cell origin to PCS, BMS firmware and diagnostics tunnels",
+      "§2(b) makes an installed fleet a live question rather than a closed sale",
+      "Covered-entity set can expand by determination, with no notice-and-comment"
+     ]
+    },
+    {
+     "t": "Inverter & PCS suppliers",
+     "meta": "named equipment",
+     "adv": [
+      "Explicitly enumerated, so the scope question is settled rather than argued",
+      "OTA architecture is now a sales artefact, not just an engineering one"
+     ],
+     "dis": [
+      "Firmware and update mechanism are inside the assessed risk surface",
+      "Remote-support models built on vendor tunnels need a defensible story"
+     ]
+    },
+    {
+     "t": "Data-center developers & hyperscalers",
+     "meta": "UPS, turbines and controls named",
+     "adv": [
+      "Distribution-side equipment below 69 kV is generally outside the order",
+      "Phased compliance is expressly permitted under §2(b)"
+     ],
+     "dis": [
+      "Critical-infrastructure UPS, generation turbines and the ICS/DCS layer are all named",
+      "On-site generation touching the bulk-power system is inside the frame"
+     ]
+    },
+    {
+     "t": "Developers & EPCs",
+     "meta": "procurement exposure",
+     "adv": [
+      "Reliability, safety, replacement availability and continuity must be weighed before any removal order",
+      "Pre-order transactions are only conditioned, not prohibited"
+     ],
+     "dis": [
+      "§2(a) bites on transactions initiated after Aug 26, 2026, including installation",
+      "Federal procurement pathway tightens if the §4 FAR recommendations land"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "notsay",
+   "title": "What the order does NOT say",
+   "read": "2 min",
+   "kind": "callout",
+   "ps": [
+    "**1 — It names no companies and no countries.** Every designation is delegated to the Secretary.",
+    "**2 — It sets no tariff and no duty rate.** This is not a trade-remedy instrument. If a buyer says \"the new tariff\", they mean something else.",
+    "**3 — It does not require removal of existing equipment.** §2(b) is an *authority* to impose conditions, exercised after weighing reliability, safety, replacement availability and continuity — and it expressly permits phased compliance.",
+    "**4 — It gives no deadline and no criteria for the pre-qualified vendor list.** Treat §2(e) as an opportunity with an unknown clock, not a scheduled one.",
+    "**5 — It does not touch the tax-side FEOC/PFE rules.** Different statute, different test, different dates. See the China policy-stack module.",
+    "**6 — It creates no private right of action** (§7(c))."
+   ]
+  },
+  {
+   "id": "cards",
+   "title": "Flashcards",
+   "read": "drill",
+   "kind": "flashcards",
+   "cards": [
+    {
+     "q": "Which three items on this desk are named equipment under §5(b)?",
+     "a": "Battery energy storage systems; utility-scale and other grid-connected inverters; uninterruptible power supply systems supporting critical infrastructure. All three are on the face of the definition — no inference required."
+    },
+    {
+     "q": "Where is the line between covered and not covered?",
+     "a": "69,000 volts. §5(a) includes transmission rated at 69 kV or more and expressly excludes facilities used in local distribution."
+    },
+    {
+     "q": "What does 'foreign-produced' mean, and why is the wording load-bearing?",
+     "a": "Not manufactured, produced, OR ASSEMBLED in the United States (§5(c)). Because 'assembled' is included, US final assembly of foreign content falls outside this particular test — which is a different test from the tax-side domestic-content rules."
+    },
+    {
+     "q": "Does the order reach equipment already installed?",
+     "a": "Yes. §2(a) restricts transactions initiated after Aug 26, 2026, but §2(b) authorises conditions on equipment acquired or installed before it — identify, isolate, monitor, secure, disconnect, replace or remove — after weighing reliability, safety, replacement availability and continuity, with phased compliance permitted."
+    },
+    {
+     "q": "Two routes to becoming a Covered Foreign Entity?",
+     "a": "A government subject to a US arms embargo or sanctions regime under the ITAR; or a Secretary determination that conduct is detrimental to US national security or foreign policy. The second is discretionary and undated."
+    },
+    {
+     "q": "What is the §2(e) opportunity?",
+     "a": "The Secretary may establish criteria and publish a list of pre-qualified equipment and vendors exempt from the §2(a) prohibition. No deadline and no criteria are given — but a published list would function as a procurement shortlist."
+    },
+    {
+     "q": "What is due on 2026-12-24?",
+     "a": "Implementing rules or regulations under §3(b) — 120 days from signing. This is where covered-entity designations and licensing procedures are expected to arrive, and it is the module's review gate."
+    }
+   ]
+  },
+  {
+   "id": "quiz",
+   "title": "Self-test",
+   "read": "5 questions",
+   "kind": "quiz",
+   "items": [
+    {
+     "q": "A distribution-side battery installed behind a 34.5 kV feeder. Covered by EO 14420?",
+     "c": [
+      "Yes — all storage is named equipment",
+      "Generally no — §5(a) excludes local distribution and sets the line at 69 kV",
+      "Only if the cells are foreign",
+      "Only after the December rules"
+     ],
+     "a": 1,
+     "why": "§5(b) names BESS as an equipment class, but §5(a) defines the system the order reaches: transmission at or above 69 kV plus reliability generation, expressly excluding local distribution."
+    },
+    {
+     "q": "An inverter assembled in Texas from foreign-made subassemblies. Under §5(c), is it 'foreign-produced'?",
+     "c": [
+      "Yes — the subassemblies are foreign",
+      "No — 'foreign-produced' means not manufactured, produced, or assembled in the US, and it was assembled here",
+      "Only if the firmware is foreign",
+      "The order does not define it"
+     ],
+     "a": 1,
+     "why": "§5(c) includes 'assembled'. US final assembly takes it outside this definition — though §5(b)'s software, firmware and remote-access language can still bring the unit into scope by another route."
+    },
+    {
+     "q": "A BESS installed in 2024 using equipment from a later-designated Covered Foreign Entity. What can the Secretary do?",
+     "c": [
+      "Nothing — §2(a) only reaches transactions after Aug 26, 2026",
+      "Impose conditions up to and including disconnection, replacement or removal, after weighing reliability and continuity",
+      "Impose a tariff",
+      "Void the interconnection agreement"
+     ],
+     "a": 1,
+     "why": "§2(b) is the retroactive-reach provision. It is an authority to impose conditions on pre-order equipment, exercised after considering reliability, safety, availability of secure replacements and continuity of essential service, with phased compliance permitted."
+    },
+    {
+     "q": "Which is the module's nearest dated gate?",
+     "c": [
+      "2027-02-22 — FAR recommendations",
+      "2026-12-24 — implementing rules under §3(b)",
+      "2027-05-23 — FAR Council action",
+      "There is no deadline in the order"
+     ],
+     "a": 1,
+     "why": "§3(b) requires rules or regulations within 120 days of signing, i.e. 2026-12-24. The FAR dates are later and §4(b) commits only to considering a proposal."
+    },
+    {
+     "q": "A buyer asks what duty rate EO 14420 adds. The correct answer?",
+     "c": [
+      "About 25%",
+      "It stacks on the existing §301 rate",
+      "None — it sets no tariff; it is an IEEPA transaction-prohibition authority",
+      "It depends on the equipment class"
+     ],
+     "a": 2,
+     "why": "The order is a national-emergency transaction restriction under IEEPA, not a trade remedy. No duty rate appears anywhere in it. The tariff question belongs to a different lever entirely."
+    }
+   ]
+  },
+  {
+   "id": "ledger",
+   "title": "Claims ledger",
+   "read": "reference",
+   "kind": "ledger",
+   "intro": "Every load-bearing statement above, with its section. Full ledger and the archived source text: the analysis file in the repo.",
+   "rows": [
+    [
+     "Signed 2026-08-26; EO 14420; IEEPA + NEA + 3 U.S.C. 301",
+     "Preamble and dateline"
+    ],
+    [
+     "BESS, grid-connected inverters, critical-infrastructure UPS named as in-scope equipment",
+     "§5(b)"
+    ],
+    [
+     "Scope extends to software, firmware, remote access, lifecycle update mechanisms",
+     "§5(b), final sentence"
+    ],
+    [
+     "Bulk-power system includes transmission ≥69 kV; excludes local distribution",
+     "§5(a)"
+    ],
+    [
+     "'Foreign-produced' = not manufactured, produced, or assembled in the US",
+     "§5(c)"
+    ],
+    [
+     "Covered Foreign Entity: ITAR arms-embargo/sanctions route, or Secretary determination",
+     "§5(e)"
+    ],
+    [
+     "Prohibition applies to transactions initiated after the order date; installation is a transaction",
+     "§2(a)"
+    ],
+    [
+     "Authority over equipment acquired/installed before the order, incl. disconnect/replace/remove",
+     "§2(b)"
+    ],
+    [
+     "Reliability, safety, replacement availability, continuity weighed; phased compliance permitted",
+     "§2(b)"
+    ],
+    [
+     "Pre-qualified equipment and vendor list authorised; no deadline or criteria given",
+     "§2(e)"
+    ],
+    [
+     "Implementing rules within 120 days → 2026-12-24",
+     "§3(b)"
+    ],
+    [
+     "FAR revision recommendations within 180 days → 2027-02-22",
+     "§4(a)"
+    ],
+    [
+     "FAR Council considers proposing within 90 days of receipt → 2027-05-23",
+     "§4(b)"
+    ],
+    [
+     "No private right of action",
+     "§7(c)"
+    ]
+   ]
+  }
+ ],
+ "glossary": [
+  {
+   "t": "IEEPA",
+   "d": "International Emergency Economic Powers Act (50 U.S.C. 1701 et seq.) — the statute authorising the President to regulate or prohibit transactions after declaring a national emergency over an unusual and extraordinary foreign threat."
+  },
+  {
+   "t": "CFE",
+   "d": "Covered Foreign Entity — under §5(e), a country or person owned by, controlled by, or subject to the jurisdiction or direction of a government subject to a US arms embargo or sanctions regime under the ITAR, or one the Secretary determines is engaged in conduct detrimental to US national security or foreign policy."
+  },
+  {
+   "t": "ITAR",
+   "d": "International Traffic in Arms Regulations — the arms-export control regime whose embargo and sanctions list supplies the first, non-discretionary route into Covered Foreign Entity status."
+  },
+  {
+   "t": "BPS",
+   "d": "Bulk-power system — under §5(a), transmission facilities and control systems plus generation needed for reliability; includes transmission rated at 69 kV or more, excludes local distribution."
+  },
+  {
+   "t": "NEA",
+   "d": "National Emergencies Act (50 U.S.C. 1601 et seq.) — the procedural statute governing declaration, renewal and congressional reporting of a national emergency."
+  },
+  {
+   "t": "FAR",
+   "d": "Federal Acquisition Regulation — the rulebook for federal procurement. §4 directs recommendations to amend it so federal energy-infrastructure buys weigh national-security risk and prioritise US-manufactured equipment."
+  }
+ ]
+};
+}
+
 function guidanceDocs_() {
   // Ordered by topic lane (the library renders these as grouped sections):
   // fundamentals first, then the AI data-center wave, then market access.
   return [guidanceDocBessTech_(), guidanceDocPowerInfra_(),
           guidanceDocNvidia800_(), guidanceDocUtilityAidc_(),
-          guidanceDocChinaPolicy_(), guidanceDocBankability_()];
+          guidanceDocChinaPolicy_(), guidanceDocBankability_(),
+          guidanceDocEo14420_()];
 }
 
 function guidanceIndex_() {

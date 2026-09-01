@@ -3,12 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 31/50`
+`Sections: 32/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
 
+## [v01.32g] — 2026-09-01 03:41:19 AM EST — v04.06r
+
+### Added
+- Guidance library updated with a new policy module
 ## [v01.31g] — 2026-09-01 01:51:37 AM EST — v04.02r
 
 ### Fixed
