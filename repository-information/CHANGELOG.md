@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 75/100`
+`Sections: 76/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.23r] — 2026-09-02 03:13:23 AM EST
+
+> **Prompt:** "Picking up from my last session, run C2c — the authoring prompt on Fable 5.1 High as a fresh session: add an "Authoring a pipeline lesson" section to .claude/rules/classroom-app.md, written against CLASSROOM-COMMITTER-CONTRACT.md and the twelve assertions that now mechanically enforce it — in particular what makes newer material a contradiction under G3 rather than novelty, how to name revisions[].changed[] so P8's "differing sections == changed[]" equality holds, the G11 minimum-material bar for a briefing (≥3 qualifying items across ≥2 sources), and the three guarantees no checker can see (G2 read-before-re-pin, G7 ref resolution, §5.2 read-phase honesty). Read the contract and scripts/check-classroom-pipeline.py's assertion list first — the prompt is written to the checkers, not alongside them. Finish by deleting the "PRE-FLIGHT GATE — C2c" paragraph from Routine trig_017pcCGpj1fkNYcUyCXPY3Wd so the next Wednesday run is a real one."
+
+### Added
+
+**`.claude/rules/classroom-app.md` — new section "Authoring a pipeline lesson" (C2c).** The decision procedure a Classroom pipeline run follows, written to the twelve assertions of `scripts/check-classroom-pipeline.py` rather than alongside them — each rule names the assertion that judges it. Eight sub-sections:
+
+- **The shape of a run** — a decision followed by at most one write: build the pin table from every lesson's `provenance.inputs[]` (the ledger never duplicates pins), fetch every distinct ref once and record the date read off the fetched document (unchanged / moved / unknown — the report's `Sources seen:` line), decide each moved source's lessons, decide the briefing, apply the P10 caps ranked by size of contradiction, then write
+- **What makes newer material a contradiction (G3) rather than novelty** — a revision exists only when the run can write, per section id, *"section `<id>` teaches X; `<ref>` now says Y"* with X actually in that section's text and Y on the fetched document. Contradiction is a taught claim stated differently (number, date, direction, ranking, mechanism, who-does-what); supersession is the G8 report swap; novelty is briefing material, never a silent addition. **A source that moved without contradicting anything leaves the lesson untouched, pin included** — the pin is part of the lesson under G3, the re-examination next week is the intended idempotence, and the G8 swap is the only pin movement without a section change. Wording is never a revision: P8 compares each section's parsed JSON, so the safe practice is to copy unrevised sections byte for byte or not open the literal
+- **Naming `revisions[].changed[]` so P8's equality holds** — `changed[]` is exactly the set of section ids present at both base and head whose parsed content differs: existing ids only (P7), newly appended sections never listed (P8 computes *differs* over the intersection, so naming one fails as "identical"), one entry appended per run (P7, P10), `updated` = run date, `reviewBy` from the new material's nearest dated gate and never before `updated` (G13), pins forward-only and only on inputs the revision drew on. **The fields outside `sections[]` that no assertion watches — `title`, `short`, `group`, `type`, `edition`, `tiles[]`, `glossary[]`, `schemaVersion` — are frozen for the run** (contract §3.1 item 2's closed list); a contradicted tile or glossary entry is reported under `Needs the developer`, not edited
+- **The briefing — G9 and G11** — `edition` = the run date (the window is `(coveredThrough, runDate]`, so the run date closes it and makes `briefing-<edition>` deterministic under G10). A *qualifying item* is one dated, stated development carried by a document fetched this run with a date inside the window; a *source* is one distinct `ref`; undated registries are windowed by commit date and itemised by `git diff` against the file at `coveredThrough`. The bar — ≥ 3 items across ≥ 2 sources — is counted **after** the gate is chosen (an item left out because its source would raise the gate does not count); the run decides the edition's tier first and admits only inputs at or below it, corroborating gated items from public layers where they carry them. The ledger moves only with a briefing; no briefing from memory
+- **A new module — the exception** — fundamentals that hold for months, one coherent gate, an existing lane, an explanatory section plus a check, no duplicate; appended to a track only when the track's stated outcome covers it. New tracks are reported rather than made
+- **The three guarantees no checker can see** — G2 (every written date was read off the fetched document body — the dossier's own `lastUpdated`, never the registry row's; the §8 `ref@date` record makes it auditable), G7 (a per-prefix resolution rule: the parsed document's identity must match the id, a `corpus:` key must have come back on the route this run, a `guidance:` id must be in `guidanceDocs_()` at base), and §5.2 (fetch failure, parse failure, unrecognised shape, or a date older than the pin → unknown, lesson frozen and listed; a layer not read is *not read*, never "unchanged"; nothing filled from memory; retrying once is reading, retrying until it agrees is not)
+- **The write, in the order the checkers read it** — the eight-step write from the literal inside the fence through `VERSION` (+0.01, P12), the version file, the generic-only GAS changelog (P11), the §8 CHANGELOG record, the two README lines, the ledger, the verification set run twice, and the commit
+- **Assertion → the authoring rule that satisfies it** — a P1–P12 table pairing each assertion with the run's behaviour, closing with the note that G2, G7 and §5.2 are the run's word
+
+### Changed
+
+- **`.claude/rules/classroom-app.md`** — the "Unattended (pipeline) sessions" bullet now points at the new section as the run's decision procedure instead of at C2c as future work
+- **`repository-information/CLASSROOM-COMMITTER-CONTRACT.md`** — §10 gains "Settled in C2c (2026-09-02)": where the authoring prompt lives, the readings it fixes (the G3 sentence test, `changed[]` as P8's differs set, `edition` = run date, the G11 item/source definitions counted after the gate, the frozen non-section fields, G2/G7/§5.2 as stated obligations), and that no number in G11 or §5.3 moved
+- **`repository-information/PHASE6-CLASSROOM-DESIGN.md`** — C2 status: C2a, C2b and C2c done; the pipeline is live and the next Wednesday run is a real one
+- **`CLAUDE.md`** Reference Files row and **`README.md`** tree entry for `classroom-app.md` — describe the new section
+
+### Notes
+
+- **Routine `trig_017pcCGpj1fkNYcUyCXPY3Wd` (Classroom curriculum pipeline, weekly)** — the "PRE-FLIGHT GATE — C2c" paragraph was deleted from its prompt after this push, so the run at Wednesday 11:00 UTC proceeds to the contract's own §5.1 pre-flight instead of standing itself down. The prompt is otherwise unchanged: no corpus token, 45-minute / 120-turn budget, the three READ FIRST documents in the same order
+- No Classroom code changed — Classroom stays v01.04w / v01.07g, the gate digest is untouched, and the ledger (`coveredThrough` 2026-09-01, `lastRun` null) is left for the first committing run to write
 
 ## [v04.22r] — 2026-09-02 02:41:00 AM EST
 

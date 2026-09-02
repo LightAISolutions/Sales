@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-02 02:41:00 AM EST` · Repo version: `v04.22r`
+Last updated: `2026-09-02 03:13:23 AM EST` · Repo version: `v04.23r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -762,7 +762,7 @@ Last updated: `2026-09-02 02:41:00 AM EST` · Repo version: `v04.22r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/changelogs.md">changelogs.md</a>              — [template · initialized · modified] Path-scoped — CHANGELOG rules
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/chat-bookends.md">chat-bookends.md</a>           — [template · modified] Always loaded — response formatting rules
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/chat-bookends-reference.md">chat-bookends-reference.md</a> — [template] Path-scoped — bookend examples &amp; tables
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/classroom-app.md">classroom-app.md</a>           — Path-scoped — Classroom content authoring: where lessons/tracks live, the provenance stamp rule, the content fence, freshness pins, verification, the gateDigest refresh obligation, unattended-session pointer (triggers on Classroom app files + CLASSROOM-SCHEMA.md + CLASSROOM-COMMITTER-CONTRACT.md)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/classroom-app.md">classroom-app.md</a>           — Path-scoped — Classroom content authoring: where lessons/tracks live, the provenance stamp rule, the content fence, freshness pins, verification, the gateDigest refresh obligation, unattended-session pointer, the C2c "Authoring a pipeline lesson" decision procedure written to the checker's assertions (triggers on Classroom app files + CLASSROOM-SCHEMA.md + CLASSROOM-COMMITTER-CONTRACT.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/cli-styling-reference.md">cli-styling-reference.md</a>   — Path-scoped — CLI accent styling tables + patterns (triggers on chat-bookends.md + output-formatting.md + CLAUDE.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/dead-code-detection.md">dead-code-detection.md</a>     — Path-scoped — dead-code analysis methodology (triggers on HTML pages + GAS files + workflow files; user-invoked via "check for dead code")
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/gas-scripts.md">gas-scripts.md</a>             — [template · modified] Path-scoped — GAS core rules (version, config, commit naming, Deploy Handler Protection)
