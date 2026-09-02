@@ -480,6 +480,41 @@ out.progress.afterUntick = clProgressRead_(asContrib);
 out.progress.anon = clProgressWrite_({ role: 'admin', permissions: [], email: 'unvalidated' },
                                      { id: 'l-pub', sec: 'a', done: '1' });
 
+// ── Drill: the pool is never a weaker gate than reading ─────────────────
+// The drill's item pool is derived from clLessonVisible_, so a tier that
+// cannot open a lesson must not be able to drill its cards or learn their
+// ids. Re-point the stand-in registry at lessons that actually carry
+// drillable sections, then enumerate per tier.
+var __clLessonsOrig = clLessons_;
+clLessons_ = function() { return [
+  { id: 'l-pub', title: 'P', provenance: FX['public-only'].provenance, sections: [
+    { id: 'f1', kind: 'flashcards', cards: [ { q: 'pub q1', a: 'pub a1' }, { q: 'pub q2', a: 'pub a2' } ] },
+    { id: 'z1', kind: 'quiz', items: [ { q: 'pub quiz', c: ['x','y'], a: 1, why: 'because' } ] }
+  ] },
+  { id: 'l-gd', title: 'G', provenance: FX['public-plus-guidance'].provenance, sections: [
+    { id: 'f2', kind: 'flashcards', cards: [ { q: 'gd q1', a: 'gd a1' } ] }
+  ] },
+  { id: 'l-rep', title: 'R', provenance: FX['public-plus-report'].provenance, sections: [
+    { id: 'f3', kind: 'flashcards', cards: [ { q: 'rep q1', a: 'rep a1' } ] }
+  ] }
+]; };
+out.drill = {};
+Object.keys(TIERS).forEach(function(t) {
+  out.drill[t] = Object.keys(clDrillLessonItems_(TIERS[t])).sort();
+});
+clLessons_ = __clLessonsOrig;   // restore: study-next below asserts against the original registry
+// Study-item containment: a real slug validates, a bogus one does not, and
+// the registry fetch is stubbed so the checker never touches the network.
+clDrillStudySlugs_ = function() { return { 'real-co': true }; };
+out.drillStudy = {
+  good: Object.keys(clDrillStudyItems_(JSON.stringify([['sf:real-co:0', 'h']]))),
+  bogusSlug: Object.keys(clDrillStudyItems_(JSON.stringify([['sf:not-a-company:0', 'h']]))),
+  badShape: Object.keys(clDrillStudyItems_(JSON.stringify([['nonsense', 'h'], ['sf:real-co:x', 'h']]))),
+  capped: Object.keys(clDrillStudyItems_(JSON.stringify(
+    Array.apply(null, { length: CL_DRILL_INV_CAP + 50 }).map(function(_, i) {
+      return ['sf:real-co:' + i, 'h']; })))).length
+};
+
 // ── Study-next: the pointer walks registry order and never names a lesson
 // the tier cannot read. The stand-in track lists a readable lesson, a gated
 // one, and a ghost id, so the skip-don't-stop rule is exercised.
@@ -596,6 +631,39 @@ def run_gate_truth_table(src):
         cases += 1
         if not ok:
             err("progress test: " + msg)
+
+    # Drill: the item pool is never a weaker gate than reading. The pool is
+    # derived from clLessonVisible_, so a tier's drillable ids must reference
+    # only lessons that tier may open — otherwise a card, or merely its id,
+    # leaks material the reader is gated out of.
+    dr = out["drill"]
+    for tier, want in EXPECTED_INDEX.items():
+        readable = set(want["lessons"])
+        cases += 1
+        leaked = [i for i in dr.get(tier, [])
+                  if i.split(":")[1] not in readable]
+        if leaked:
+            err("drill gate: %s can drill %s, which belong to lessons it cannot read (%s)"
+                % (tier, leaked, sorted(readable)))
+    # Positive control: a tier that CAN read a lesson gets its cards, so the
+    # test above cannot pass merely by the pool being empty.
+    cases += 1
+    if not dr.get("admin"):
+        err("drill gate: admin drew an empty drill pool — the gate test proves nothing")
+    cases += 1
+    if "lq:l-pub:z1:0" not in dr.get("admin", []):
+        err("drill: quiz items are not being enumerated (expected lq:l-pub:z1:0 for admin)")
+
+    ds = out["drillStudy"]
+    for label, got, want in (("a registry slug validates", ds["good"], ["sf:real-co:0"]),
+                             ("an unknown slug is refused", ds["bogusSlug"], []),
+                             ("a malformed id is refused", ds["badShape"], [])):
+        cases += 1
+        if got != want:
+            err("drill study containment: %s — got %r, expected %r" % (label, got, want))
+    cases += 1
+    if ds["capped"] > 1200:
+        err("drill study containment: inventory not capped — %d items accepted" % ds["capped"])
 
     # Study-next: never points a tier at a lesson it cannot read.
     nx = out["next"]

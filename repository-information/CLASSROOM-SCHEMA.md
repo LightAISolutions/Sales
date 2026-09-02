@@ -98,8 +98,10 @@ Read-only fetch ops, the guidance-ops transport (`doPost` `action=classroom`, mi
 | `index` | `{ role, schema: { lesson, track }, tracks[], lessons[] }` — tracks as the tier sees them (readable lessons as cards + `withheld` count), every readable lesson as a card | session → `clRequire_(sess, 'tracks')` (the app door; viewer is turned away) |
 | `track` | `{ track }` — one track as the tier sees it; `UNKNOWN_TRACK` when it does not exist **or** nothing in it is readable | same door |
 | `lesson` | `{ lesson }` — the full lesson including sections | door, then **`clRequireLesson_(sess, clStampKinds_(lesson))`** — the stamp's fold is enforced before any section text leaves the server |
+| `drill` | `{ today, items[], stats }` — the queue (see "Drill items and history"); lesson items carry their payload, study items carry the id | door; lesson items enumerated from `clLessonVisible_`, study items validated by containment |
+| `grade` | `{ id, state }` — the item's new scheduling state | door, then the same derivation `drill` served from; an id outside it is `ITEM_DENIED` |
 
-A **card** (`clLessonCard_`) is metadata only — `id`, `type`, `title`, `short`, `group`, `updated`, `reviewBy`, `edition`, `gate` (the capability the stamp folded to), `kinds` (the distinct stamp kinds, for a provenance badge), `revised`, `sections` (count). Errors: `SESSION_EXPIRED`, `ROLE_DENIED` (with the tier), `UNKNOWN_TRACK`, `UNKNOWN_LESSON`, `unknown_cop`. Every denial writes an audit-log entry naming the operation and tier (`clRequire_` / `clRequireLesson_`).
+A **card** (`clLessonCard_`) is metadata only — `id`, `type`, `title`, `short`, `group`, `updated`, `reviewBy`, `edition`, `gate` (the capability the stamp folded to), `kinds` (the distinct stamp kinds, for a provenance badge), `revised`, `sections` (count). Errors: `SESSION_EXPIRED`, `ROLE_DENIED` (with the tier), `UNKNOWN_TRACK`, `UNKNOWN_LESSON`, `NO_ACCOUNT`, `BAD_ITEM`, `ITEM_DENIED`, `DRILL_FULL`, `DRILL_STORE_UNAVAILABLE`, `unknown_cop`. Every denial writes an audit-log entry naming the operation and tier (`clRequire_` / `clRequireLesson_`).
 
 ## Example — a guidance-derived module (contributor+)
 
@@ -135,6 +137,78 @@ function clLessonSpecSheet_() {
 ```
 
 The stamp folds to `guidance` (one guidance input outranks the two public ones), so contributor and admin read it and analyst sees it only as a withheld count in its track. Pre-C3 the renderer shows the guidance input as a deep link into Profiler's hub; the data does not change at C3.
+
+## Drill items and history (C4)
+
+The retention layer. Every flashcard and quiz item already in the corpus becomes a drillable **item**; the account's per-item history drives a spaced-repetition queue. Nothing about lessons or study guides changes to support this — the drill reads the material that already exists.
+
+### Item identity
+
+An item id is `<kind>:<source>:<section>:<n>` — stable, derivable from the content alone, and never stored inside the content:
+
+| Kind | Id shape | Source of the item |
+|------|----------|--------------------|
+| `lc` | `lc:<lessonId>:<sectionId>:<n>` | a lesson's `flashcards` section, `cards[n]` |
+| `lq` | `lq:<lessonId>:<sectionId>:<n>` | a lesson's `quiz` section, `items[n]` |
+| `sf` | `sf:<slug>:<n>` | a study guide's top-level `flashcards[n]` (public Pages data) |
+
+`n` is the index within its array. Ids are **positional**, which is deliberate: the alternative is authoring an id per card, and 855 hand-written ids is a maintenance surface with no reader-visible benefit. Positional ids have one failure mode — inserting a card mid-array shifts every later id — and the content hash below is what makes that failure safe rather than silent.
+
+### The content hash
+
+Each history row stores a short hash of the item's own text (question + answer, or question + choices + answer). It is a **change detector, not a checksum**: djb2 over the concatenated text, base-36. On every grade the client sends the hash it rendered; when it does not match the stored one, the item's scheduling state is **reset and the item is re-introduced** rather than being credited with a history that belonged to different text.
+
+This is the same reasoning as `revisions[].changed[]` for lessons: material that changed is material you have not learned. It also absorbs the positional-id failure — a card inserted mid-array shifts its successors' ids onto different text, the hashes stop matching, and those cards are re-introduced instead of silently inheriting a stranger's schedule.
+
+### Scheduling — SM-2
+
+Standard SM-2, with the grade collapsed to four buttons because a six-point self-rating is a decision the reader should not have to make on every card:
+
+| Button | SM-2 `q` | Effect |
+|--------|----------|--------|
+| Again | 2 | lapse: `reps` → 0, `interval` → 1 day, `lapses` +1 |
+| Hard | 3 | `interval` × 1.2, ease −0.14 |
+| Good | 4 | standard progression (1 → 6 → `interval` × ease) |
+| Easy | 5 | standard progression, ease +0.10 |
+
+Ease starts at 2.5 and floors at 1.3 — below that a card is not being learned and the interval, not the ease, should absorb it. Intervals are whole days; `due` is a `YYYY-MM-DD` date, so "due today" is a string comparison in the same shape the progress store already uses.
+
+### Storage — two sheet tabs
+
+The design doc called this out at C4: drill history outgrows the 9 KB-per-account Script Property that reading progress uses. 855 items × a scheduling row is comfortably past it, so the drill is sheet-backed on the Classroom spreadsheet.
+
+**`ClassroomDrill`** — current state, one row per (account, item). This is the queue.
+
+| Column | Meaning |
+|--------|---------|
+| `Account` | lower-cased email; the account key, exactly as the progress store scopes |
+| `ItemId` | per "Item identity" above |
+| `Hash` | the content hash the state was earned against |
+| `Ease` | SM-2 ease factor |
+| `IntervalDays` | current interval |
+| `Reps` | consecutive successful reviews |
+| `Lapses` | lifetime count of `Again` |
+| `Due` | `YYYY-MM-DD` |
+| `LastGrade` | 0–3 as sent by the client |
+| `LastSeen` | `YYYY-MM-DD` |
+| `Updated` | ISO timestamp of the last write |
+
+**`ClassroomDrillLog`** — append-only, one row per grade: `Timestamp`, `Account`, `ItemId`, `Grade`, `IntervalBefore`, `IntervalAfter`, `Ease`. The state tab answers "what is due"; the log answers "how did this go over time", which is the question a retention feature has to be able to answer later. Nothing reads the log yet, and that is fine — it cannot be reconstructed after the fact, so it is written from the first commit.
+
+### Caps
+
+- **`CL_DRILL_SESSION_CAP` = 20** items per drill session, and **`CL_DRILL_NEW_CAP` = 10** never-before-seen items introduced per day. A queue that returns everything due is a queue the reader stops opening
+- **`CL_DRILL_ACCOUNT_CAP` = 3000** state rows per account. The corpus holds ~855 items, so this is headroom rather than a limit; it exists so a malformed client cannot grow the tab without bound
+- **`CL_DRILL_INV_CAP` = 1200** study-guide items accepted in one `cop=drill` inventory (see below)
+
+### Serving — `cop=drill` and `cop=grade`
+
+Both sit behind the same app door as every other Classroom op (`clRequire_(sess, 'tracks')`), and both enforce the rule the progress store established: **the drill is never a weaker gate than reading.**
+
+- **Lesson items** are enumerated server-side from lessons this session may actually read (`clLessonVisible_`), exactly as `clProgressValid_` does for sections. A tier that cannot open a lesson can neither drill its cards nor discover them by probing an id
+- **Study-guide items** are public Pages data the server does not hold. The client sends the inventory it can see as `inv` — a capped array of `[itemId, hash]` — and the server validates by **containment**: the id must parse, the slug must exist in the public registry (cached), and the array is truncated at the cap. Same rule as `study-<slug>` progress ids in `Profiler.gs`, for the same reason
+- `cop=drill` returns the queue: due items first (oldest `Due` first), then new items up to the daily cap. Lesson items carry their payload, since the server holds them and the gate has been checked; study items carry the id only, because the client already has the text
+- `cop=grade` takes `id`, `grade` (0–3) and `hash`, re-validates the id against the same gate, applies SM-2, writes both tabs, and returns the updated state. An unvalidated id is refused, never silently stored
 
 ## Verification
 

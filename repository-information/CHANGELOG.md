@@ -3,11 +3,78 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 80/100`
+`Sections: 81/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.28r] — 2026-09-02 05:45:44 PM EST
+
+> **Prompt:** "implement Session C of IMPROVEMENT-PLAN.md"
+
+**Session C: the drill (P1/C4).** The feature the whole plan is pointed at — the corpus already held ~855
+flashcards and quiz items whose only retention mechanism was a card that flips when tapped. They are now a
+scheduled queue with per-item history. `PHASE6-CLASSROOM-DESIGN.md` C4 is marked built, with the order note:
+C4 was pulled ahead of C3 because the C3 → C4 sequence was a build order, not a dependency.
+
+### Added
+
+**`repository-information/CLASSROOM-SCHEMA.md` → "Drill items and history" — written first, as the plan
+specified.** Item identity (`lc:` lesson flashcard, `lq:` lesson quiz, `sf:` study-guide flashcard, all
+positional), the content hash and why it is a change detector rather than a checksum, the SM-2 grade table
+collapsed to four buttons, both sheet layouts, and the four caps.
+
+**`googleAppsScripts/Classroom/Classroom.gs` (v01.09g) — the drill backend.**
+
+- **Two sheet tabs**, as the design doc predicted at C4: `ClassroomDrill` (one state row per account+item — the
+  queue) and `ClassroomDrillLog` (append-only, one row per grade). The log is unread today and written from the
+  first commit anyway, because it is the one thing that cannot be reconstructed later
+- **`clDrillSchedule_` is pure** — previous state plus a grade in, next state out, no spreadsheet — which is
+  what let it be unit-tested directly. 17 assertions: the 1 → 6 → ×ease progression, `Again` resetting to one
+  day and incrementing lapses, `Hard` growing slower and `Easy` faster than `Good`, the 1.3 ease floor holding
+  under repeated failure, and month-crossing date arithmetic
+- **The gate rule is the progress store's, unchanged.** Lesson items are enumerated through `clLessonVisible_`;
+  study-guide items are public Pages data the server does not hold, so the client sends the inventory it can
+  see and the server validates by containment (slug in the registry, id shape, capped at 1200) — the same rule
+  `Profiler.gs` applies to `study-<slug>` progress ids. `cop=grade` re-authorises against the *same* derivation
+  `cop=drill` served from, so the two ops cannot drift on what counts as readable
+- **A hash mismatch resets the schedule** rather than crediting it. This also absorbs the one failure mode of
+  positional ids: a card inserted mid-array shifts its successors onto different text, the hashes stop
+  matching, and those cards are re-introduced instead of inheriting a stranger's schedule
+
+**`live-site-pages/Classroom.html` (v01.06w) — the drill surface.** A landing card above the study-next
+pointer (what you are about to forget outranks what you have not yet read), the `#drill` route, and a
+reveal-then-grade card — the two-step is the point, since rating recall *before* seeing the answer is what
+makes the interval mean anything. Every card names its source; lesson cards link back to their section. The
+study inventory is fetched with `cache: 'no-store'` throughout: a drill scheduled against a stale card is
+worse than a slow drill, and these files change on every dossier refresh.
+
+### Changed
+
+**`scripts/check-classroom-content.py` — 12 new gate cases (124 → 136), no existing assertion weakened.** The
+drill's pool is a new way to reach gated material, so it gets the same treatment reading did: per tier, every
+drillable id must belong to a lesson that tier may open. Plus a positive control (admin's pool must be
+non-empty, so the test cannot pass by the pool being empty), quiz-item enumeration, and four study-containment
+cases (a registry slug validates, an unknown slug and a malformed id are refused, the inventory is capped).
+The harness restores the stand-in registry after the drill block so the study-next assertions still run
+against theirs.
+
+### Verified
+
+- **The gate assertion was mutation-tested.** Disabling the `clLessonVisible_` check in `clDrillLessonItems_`
+  made the checker report exactly the leaks it is designed to catch — analyst reaching the guidance and report
+  lessons, viewer reaching all five items. Restored, green. A gate test that has never failed is a test of
+  nothing
+- **Client and server hash implementations agree** on all five probe cases including unicode and a 5,000-char
+  string, and the browser's value for `'abc'` (`3772q3`) matches the server's. They must: a disagreement would
+  make every card look permanently changed and reset its schedule on every grade
+- Playwright on the real page, plain and `?as=analyst`: **no page errors on either**, every drill function
+  present, the preview role resolving correctly, `#drill` in the router, and `cache: 'no-store'` confirmed in
+  the inventory builder. `?as=` is client-side preview only, which is why the substantive gate test is the
+  server-side one above
+- `gateDigest` refreshed in the same commit — `handleClassroomOp_` is a `GATE_SYMBOL` and gained two ops.
+  Both checkers green; `node --check` on the `.gs` and both page scripts; `check-gas-inner-scripts` clean
 
 ## [v04.27r] — 2026-09-02 05:16:32 PM EST
 

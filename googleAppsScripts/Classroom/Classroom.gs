@@ -1,4 +1,4 @@
-var VERSION = "v01.08g";
+var VERSION = "v01.09g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -2252,6 +2252,281 @@ function clStudyNext_(sess, prog) {
   return null;   // everything readable is complete — the page says so
 }
 
+
+// PROJECT: ── Drill: spaced repetition over every card in the corpus (C4) ──
+// The retention layer. Reading progress answers "have I been through this";
+// the drill answers "do I still know it". Every flashcard and quiz item that
+// already exists becomes a drillable item — nothing in the lessons or the
+// study guides changes to support this.
+//
+// Storage is SHEET-BACKED, not PropertiesService. PHASE6-CLASSROOM-DESIGN
+// called this at C4 and it is right: ~855 items × a scheduling row is well
+// past the 9KB-per-account property the section ticks live in. Two tabs —
+// ClassroomDrill (current state, the queue) and ClassroomDrillLog
+// (append-only, one row per grade). Nothing reads the log yet; it is written
+// from the first commit because it cannot be reconstructed afterwards.
+//
+// The gate rule is the progress store's, unchanged: **the drill is never a
+// weaker gate than reading.** Lesson items are enumerated from lessons this
+// session may actually read; study-guide items are public Pages data the
+// server does not hold, so the client sends the inventory it can see and the
+// server validates by containment (slug in the public registry, capped) —
+// the same rule Profiler.gs uses for 'study-<slug>' progress ids.
+//
+// Full specification, including the SM-2 grade table and the column layout:
+// repository-information/CLASSROOM-SCHEMA.md → "Drill items and history".
+var CL_DRILL_TAB = 'ClassroomDrill';
+var CL_DRILL_LOG_TAB = 'ClassroomDrillLog';
+var CL_DRILL_HEADERS = ['Account', 'ItemId', 'Hash', 'Ease', 'IntervalDays',
+                        'Reps', 'Lapses', 'Due', 'LastGrade', 'LastSeen', 'Updated'];
+var CL_DRILL_LOG_HEADERS = ['Timestamp', 'Account', 'ItemId', 'Grade',
+                            'IntervalBefore', 'IntervalAfter', 'Ease'];
+var CL_DRILL_SESSION_CAP = 20;    // items served in one drill session
+var CL_DRILL_NEW_CAP = 10;        // never-seen items introduced per day
+var CL_DRILL_ACCOUNT_CAP = 3000;  // state rows per account — a guard, not a limit
+var CL_DRILL_INV_CAP = 1200;      // study items accepted in one inventory
+var CL_DRILL_ID_RE = /^(lc|lq|sf):[a-z0-9][a-z0-9-]{0,63}(:[a-z0-9][a-z0-9-]{0,63})?:\d{1,4}$/;
+
+// djb2 → base36. A CHANGE DETECTOR, not a checksum: it decides whether the
+// text behind an item id is still the text the account earned its schedule
+// against. Collisions cost a missed re-introduction, not a security property.
+function clDrillHash_(text) {
+  var h = 5381, s = String(text == null ? '' : text);
+  for (var i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0;
+  return h.toString(36);
+}
+
+// Today in the fleet's reporting zone. Intl, matching the progress store —
+// see the note there on keeping this region runnable outside Apps Script.
+function clDrillToday_() {
+  try { return new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' }); }
+  catch (te) { return new Date().toISOString().slice(0, 10); }
+}
+function clDrillAddDays_(isoDate, days) {
+  var d = new Date(isoDate + 'T12:00:00Z');   // noon, so DST cannot shift the date
+  d.setUTCDate(d.getUTCDate() + Math.max(0, Math.round(days)));
+  return d.toISOString().slice(0, 10);
+}
+
+function clDrillSheet_(name) {
+  if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') return null;
+  var headers = name === CL_DRILL_LOG_TAB ? CL_DRILL_LOG_HEADERS : CL_DRILL_HEADERS;
+  try {
+    var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+    var sheet = ss.getSheetByName(name);
+    if (!sheet) {
+      sheet = ss.insertSheet(name);
+      sheet.appendRow(headers);
+      sheet.setFrozenRows(1);
+    } else if (sheet.getLastColumn() < headers.length) {
+      // Schema grew — rewrite the header row; data rows are ragged-safe.
+      sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    }
+    return sheet;
+  } catch (e) { return null; }
+}
+
+// Every state row for one account, as { itemId: {row, hash, ease, ivl, reps,
+// lapses, due, grade, seen} }. One read of the tab per call: the alternative
+// is a lookup per item and the queue touches hundreds.
+function clDrillState_(acct) {
+  var out = {}, sheet = clDrillSheet_(CL_DRILL_TAB);
+  if (!sheet) return out;
+  var last = sheet.getLastRow();
+  if (last < 2) return out;
+  var rows = sheet.getRange(2, 1, last - 1, CL_DRILL_HEADERS.length).getValues();
+  for (var i = 0; i < rows.length; i++) {
+    if (String(rows[i][0]).toLowerCase() !== acct) continue;
+    var id = String(rows[i][1]);
+    if (!id) continue;
+    out[id] = { row: i + 2, hash: String(rows[i][2] || ''),
+                ease: Number(rows[i][3]) || 2.5, ivl: Number(rows[i][4]) || 0,
+                reps: Number(rows[i][5]) || 0, lapses: Number(rows[i][6]) || 0,
+                due: String(rows[i][7] || ''), grade: Number(rows[i][8]),
+                seen: String(rows[i][9] || '') };
+  }
+  return out;
+}
+
+
+// Every drillable LESSON item this session may read, as
+// { itemId: {q, a, c, why, kind, lesson, lessonTitle, section, hash} }.
+// Built from clLessonVisible_ — the same derivation clProgressValid_ uses —
+// so a tier that cannot open a lesson can neither drill its cards nor
+// discover them by probing an id.
+function clDrillLessonItems_(sess) {
+  var all = clLessons_(), out = {};
+  for (var i = 0; i < all.length; i++) {
+    var lesson = all[i];
+    if (!clLessonVisible_(sess, lesson)) continue;
+    var secs = lesson.sections || [];
+    for (var j = 0; j < secs.length; j++) {
+      var sec = secs[j];
+      if (!sec || !sec.id) continue;
+      if (sec.kind === 'flashcards') {
+        var cards = sec.cards || [];
+        for (var c = 0; c < cards.length; c++) {
+          if (!cards[c] || !cards[c].q) continue;
+          out['lc:' + lesson.id + ':' + sec.id + ':' + c] = {
+            kind: 'flash', q: cards[c].q, a: cards[c].a,
+            lesson: lesson.id, lessonTitle: lesson.title, section: sec.id,
+            hash: clDrillHash_(cards[c].q + '||' + cards[c].a)
+          };
+        }
+      } else if (sec.kind === 'quiz') {
+        var items = sec.items || [];
+        for (var q = 0; q < items.length; q++) {
+          var it = items[q];
+          if (!it || !it.q) continue;
+          out['lq:' + lesson.id + ':' + sec.id + ':' + q] = {
+            kind: 'quiz', q: it.q, c: it.c || [], a: it.a, why: it.why,
+            lesson: lesson.id, lessonTitle: lesson.title, section: sec.id,
+            hash: clDrillHash_(it.q + '||' + (it.c || []).join('|') + '||' + it.a)
+          };
+        }
+      }
+    }
+  }
+  return out;
+}
+
+// Slugs that exist in the public company registry, cached 6h. The containment
+// half of study-item validation — mirrors gdStudySlugs_ in Profiler.gs.
+function clDrillStudySlugs_() {
+  var cache = null;
+  try {
+    cache = CacheService.getScriptCache();
+    var hit = cache.get('cl_studyslugs_v1');
+    if (hit) return JSON.parse(hit);
+  } catch (ce) { cache = null; }
+  var slugs = {};
+  try {
+    var base = EMBED_PAGE_URL.replace(/[^\/]*$/, '');
+    var reg = JSON.parse(UrlFetchApp.fetch(base + 'profiler-data/profiler-companies.json',
+      { muteHttpExceptions: true }).getContentText());
+    (reg.companies || []).forEach(function(c) { if (c.slug) slugs[c.slug] = true; });
+    if (cache) try { cache.put('cl_studyslugs_v1', JSON.stringify(slugs), 21600); } catch (pe) { /* oversized */ }
+  } catch (fe) { /* registry unreachable — no study item validates this call */ }
+  return slugs;
+}
+
+// Validate a client-supplied study inventory: [[itemId, hash], …]. Capped,
+// shape-checked, and slug-checked against the registry. Returns the same map
+// shape as clDrillLessonItems_ so the queue builder treats both alike; study
+// items carry no payload because the client already has the text.
+function clDrillStudyItems_(invRaw) {
+  var out = {};
+  if (!invRaw) return out;
+  var inv;
+  try { inv = JSON.parse(String(invRaw)); } catch (pe) { return out; }
+  if (!inv || !inv.length) return out;
+  var slugs = null, n = Math.min(inv.length, CL_DRILL_INV_CAP);
+  for (var i = 0; i < n; i++) {
+    var pair = inv[i];
+    if (!pair || !pair.length) continue;
+    var id = String(pair[0] || '');
+    if (id.indexOf('sf:') !== 0 || !CL_DRILL_ID_RE.test(id)) continue;
+    var slug = id.split(':')[1];
+    if (slugs === null) slugs = clDrillStudySlugs_();
+    if (!slugs[slug]) continue;
+    out[id] = { kind: 'study', slug: slug, hash: String(pair[1] || '') };
+  }
+  return out;
+}
+
+// The union of what this session may drill, lesson items and validated study
+// items together. The single place cop=drill and cop=grade both authorise
+// against, so the two ops cannot drift apart on what counts as readable.
+function clDrillAllowed_(sess, invRaw) {
+  var items = clDrillLessonItems_(sess);
+  var study = clDrillStudyItems_(invRaw);
+  for (var k in study) if (study.hasOwnProperty(k)) items[k] = study[k];
+  return items;
+}
+
+
+// SM-2, with the grade collapsed to four buttons (0 Again / 1 Hard / 2 Good /
+// 3 Easy). The schema's table is the specification; this is it in code.
+// Returns the NEXT state from the previous one — pure, so the checker can
+// exercise it without a spreadsheet.
+function clDrillSchedule_(prev, grade, today) {
+  var ease = (prev && prev.ease) || 2.5;
+  var reps = (prev && prev.reps) || 0;
+  var lapses = (prev && prev.lapses) || 0;
+  var ivl = (prev && prev.ivl) || 0;
+  var g = Math.max(0, Math.min(3, Number(grade)));
+  if (g === 0) {
+    lapses++; reps = 0; ivl = 1;
+    ease = Math.max(1.3, ease - 0.20);
+  } else {
+    if (g === 1) ease = Math.max(1.3, ease - 0.14);
+    else if (g === 3) ease = ease + 0.10;
+    reps++;
+    if (reps === 1) ivl = 1;
+    else if (reps === 2) ivl = 6;
+    else ivl = Math.max(1, Math.round(ivl * ease));
+    if (g === 1) ivl = Math.max(1, Math.round(ivl * 1.2 / ease));   // Hard grows slower
+  }
+  return { ease: Math.round(ease * 1000) / 1000, ivl: ivl, reps: reps,
+           lapses: lapses, due: clDrillAddDays_(today, ivl), seen: today };
+}
+
+// The queue: everything due today or earlier, oldest first, then never-seen
+// items up to the daily new cap, all trimmed to the session cap. An item whose
+// stored hash no longer matches its content is treated as NEW — the text moved
+// under the schedule, so the schedule is not evidence of anything.
+function clDrillQueue_(allowed, state, today) {
+  var due = [], fresh = [], id;
+  for (id in allowed) {
+    if (!allowed.hasOwnProperty(id)) continue;
+    var st = state[id];
+    var changed = st && allowed[id].hash && st.hash && st.hash !== allowed[id].hash;
+    if (!st || changed) { fresh.push(id); continue; }
+    if (st.due && st.due <= today) due.push(id);
+  }
+  due.sort(function(a, b) {
+    var da = state[a].due, db = state[b].due;
+    return da === db ? (a < b ? -1 : 1) : (da < db ? -1 : 1);
+  });
+  fresh.sort();
+  var introducedToday = 0;
+  for (id in state) {
+    if (state.hasOwnProperty(id) && state[id].seen === today && state[id].reps <= 1) introducedToday++;
+  }
+  var room = Math.max(0, CL_DRILL_NEW_CAP - introducedToday);
+  var queue = due.concat(fresh.slice(0, room)).slice(0, CL_DRILL_SESSION_CAP);
+  return { queue: queue, dueTotal: due.length, newTotal: fresh.length };
+}
+
+// Write one graded item to both tabs. State is upserted by row; the log is
+// append-only. Locked, because two tabs must not diverge.
+function clDrillWrite_(acct, id, prevState, next, grade, hash) {
+  var sheet = clDrillSheet_(CL_DRILL_TAB);
+  if (!sheet) return false;
+  var lock = null;
+  try { lock = LockService.getScriptLock(); lock.waitLock(5000); }
+  catch (le) { lock = null; /* best effort — same-account collisions are rare */ }
+  try {
+    var row = [acct, id, hash, next.ease, next.ivl, next.reps, next.lapses,
+               next.due, grade, next.seen, new Date().toISOString()];
+    if (prevState && prevState.row) {
+      sheet.getRange(prevState.row, 1, 1, CL_DRILL_HEADERS.length).setValues([row]);
+    } else {
+      sheet.appendRow(row);
+    }
+    var log = clDrillSheet_(CL_DRILL_LOG_TAB);
+    if (log) {
+      log.appendRow([new Date().toISOString(), acct, id, grade,
+                     (prevState && prevState.ivl) || 0, next.ivl, next.ease]);
+    }
+    return true;
+  } catch (we) {
+    return false;
+  } finally {
+    if (lock) try { lock.releaseLock(); } catch (re) { /* already released */ }
+  }
+}
+
 // PROJECT: ── Classroom ops (action=classroom, cop=index|track|lesson|progress|setprogress)
 // Read-only, over the same cookie-less fetch transport as Profiler's guidance
 // ops. Order of checks: session → the app door (clRequire_ 'tracks' — every
@@ -2308,6 +2583,65 @@ function handleClassroomOp_(e) {
           String(p.id || 'merge'), { changed: wr.changed, role: clRoleOf_(sess) });
       }
       return wr;
+    }
+    if (op === 'drill') {
+      var dAcct = clProgressAcct_(sess);
+      if (!dAcct) return { success: false, error: 'NO_ACCOUNT' };
+      var dToday = clDrillToday_();
+      var dAllowed = clDrillAllowed_(sess, p.inv);
+      var dState = clDrillState_(dAcct);
+      var built = clDrillQueue_(dAllowed, dState, dToday);
+      // Lesson items ship their payload — the gate has already been checked.
+      // Study items ship the id only; the client holds that text already.
+      var served = built.queue.map(function(id) {
+        var it = dAllowed[id], st = dState[id];
+        var row = { id: id, kind: it.kind, hash: it.hash,
+                    seen: !!st, due: (st && st.due) || null };
+        if (it.kind === 'flash') {
+          row.q = it.q; row.a = it.a;
+          row.lesson = it.lesson; row.lessonTitle = it.lessonTitle; row.section = it.section;
+        } else if (it.kind === 'quiz') {
+          row.q = it.q; row.c = it.c; row.a = it.a; row.why = it.why;
+          row.lesson = it.lesson; row.lessonTitle = it.lessonTitle; row.section = it.section;
+        } else {
+          row.slug = it.slug;
+        }
+        return row;
+      });
+      return { success: true, today: dToday, items: served,
+               stats: { due: built.dueTotal, fresh: built.newTotal,
+                        known: Object.keys(dState).length,
+                        pool: Object.keys(dAllowed).length,
+                        sessionCap: CL_DRILL_SESSION_CAP, newCap: CL_DRILL_NEW_CAP } };
+    }
+    if (op === 'grade') {
+      var gAcct = clProgressAcct_(sess);
+      if (!gAcct) return { success: false, error: 'NO_ACCOUNT' };
+      var gId = String(p.id || '');
+      if (!CL_DRILL_ID_RE.test(gId)) return { success: false, error: 'BAD_ITEM' };
+      // Re-authorise against the SAME derivation cop=drill served from, so
+      // grading can never reach an item reading could not.
+      var gAllowed = clDrillAllowed_(sess, p.inv);
+      if (!gAllowed[gId]) return { success: false, error: 'ITEM_DENIED' };
+      var gGrade = Math.max(0, Math.min(3, parseInt(p.grade, 10) || 0));
+      var gState = clDrillState_(gAcct);
+      if (!gState[gId] && Object.keys(gState).length >= CL_DRILL_ACCOUNT_CAP) {
+        return { success: false, error: 'DRILL_FULL' };
+      }
+      var gToday = clDrillToday_();
+      var gHash = String(p.hash || gAllowed[gId].hash || '');
+      var prev = gState[gId];
+      // The text moved under the schedule — the schedule is not evidence.
+      if (prev && prev.hash && gHash && prev.hash !== gHash) {
+        prev = { row: prev.row, hash: gHash, ease: 2.5, ivl: 0, reps: 0,
+                 lapses: prev.lapses, due: '', grade: NaN, seen: '' };
+      }
+      var next = clDrillSchedule_(prev, gGrade, gToday);
+      var ok = clDrillWrite_(gAcct, gId, prev, next, gGrade, gHash);
+      if (!ok) return { success: false, error: 'DRILL_STORE_UNAVAILABLE' };
+      dataAuditLog(sess.email, 'write', 'classroom_drill', gId,
+        { grade: gGrade, interval: next.ivl, role: clRoleOf_(sess) });
+      return { success: true, id: gId, state: next };
     }
     return { success: false, error: 'unknown_cop' };
   } catch (cErr) {

@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 5/50`
+`Sections: 6/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.06w] — 2026-09-02 05:45:44 PM EST — v04.28r
+
+### Added
+- **The drill — spaced repetition across every card in the curriculum.** A new Drill card on the tracks page shows what is due today and takes you straight into it. Each card asks the question, waits for you to commit, then shows the answer and asks how it went: Again, Hard, Good or Easy. What you found hard comes back soon; what you found easy comes back much later, and keeps stretching out as long as you keep knowing it
+- The drill covers **flashcards and quiz questions from every lesson you can read, plus every company study guide** — over 850 cards in total. Sessions are capped at 20 cards, with at most 10 brand-new ones a day, so it stays a few minutes rather than an evening
+- Every card names where it came from, and lesson cards link straight back to the section they belong to, so "I don't actually remember this" turns into re-reading it in one click
+- **A card whose wording has materially changed is treated as new again** rather than counting on what you knew about the old version
 
 ## [v01.05w] — 2026-09-02 05:16:32 PM EST — v04.27r
 

@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 8/50`
+`Sections: 9/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.09g] — 2026-09-02 05:45:44 PM EST — v04.28r
+
+### Added
+- Storage and scheduling for the new drill: what you are due to review, when each card comes back, and a full history of how each one has gone over time. It follows your account across devices like the rest of your progress
+- The drill only ever offers cards from material you are allowed to read — the same rule that governs which lessons you can open
 
 ## [v01.08g] — 2026-09-02 05:16:32 PM EST — v04.27r
 

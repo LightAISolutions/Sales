@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.05w">
+  <meta name="build-version" content="v01.06w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -484,6 +484,47 @@
       font: 12px/1.6 var(--cl-mono); color: var(--cl-warn); }
     .cl-nav a.stale .tick { border-color: var(--cl-warn); background: var(--cl-warn); }
     .cl-nav a.stale .nm { color: var(--cl-warn); text-decoration: none; }
+    /* ── The drill (C4) ─────────────────────────────────────────────────
+       The landing card borrows the study-next card's shape deliberately —
+       they are the same kind of object (one thing to do next) and should not
+       look like two systems. Warn-toned rather than accent-toned, because
+       "about to be forgotten" outranks "not yet read". */
+    .cl-drillcard { border: 1px solid var(--cl-warn); border-left-width: 4px; border-radius: 10px;
+      background: #fdf6ec; padding: 14px 18px 16px; margin: 18px 0 4px; }
+    .cl-drillcard .lb { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--cl-warn); margin-bottom: 7px; }
+    .cl-drillcard .ti { font: 700 19px/1.3 var(--cl-serif); color: var(--cl-ink); background: none;
+      border: 0; padding: 0; cursor: pointer; text-align: left; text-decoration: underline;
+      text-decoration-color: var(--cl-line2); text-underline-offset: 3px; }
+    .cl-drillcard .ti:disabled { cursor: default; text-decoration: none; color: var(--cl-muted); }
+    .cl-drillcard .sb { font: 12px/1.6 var(--cl-mono); color: var(--cl-muted); margin-top: 7px; }
+    .cl-drill { background: var(--cl-card); border: 1px solid var(--cl-line); border-radius: 12px;
+      padding: 22px 24px 20px; margin: 18px 0; }
+    .cl-drill .mt { display: flex; gap: 12px; align-items: center; margin-bottom: 14px;
+      font: 11px/1 var(--cl-mono); letter-spacing: 0.10em; color: var(--cl-faint); }
+    .cl-drill .mt .k { text-transform: uppercase; color: var(--cl-warn); }
+    .cl-drill .q { font: 600 20px/1.4 var(--cl-serif); color: var(--cl-ink); margin-bottom: 16px; }
+    .cl-drill .a { border-top: 1px solid var(--cl-line); padding-top: 14px; margin-bottom: 4px; }
+    .cl-drill .a .wy { font: 15px/1.7 var(--cl-serif); color: var(--cl-ink); }
+    .cl-drill .ch { margin-bottom: 10px; }
+    .cl-drill .ch .c { font: 14px/1.7 var(--cl-serif); color: var(--cl-muted); display: flex; gap: 9px; }
+    .cl-drill .ch .c.right { color: var(--cl-adv); font-weight: 700; }
+    .cl-drill .ch .c .x { width: 12px; flex: none; }
+    .cl-drill .sr { margin-top: 12px; font: 11.5px/1.5 var(--cl-mono); color: var(--cl-faint); }
+    .cl-drill .sr .lk { background: none; border: 0; padding: 0; cursor: pointer; font: inherit;
+      color: var(--cl-accent); text-decoration: underline; text-underline-offset: 3px; }
+    .cl-drill .gr { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .cl-drill .gr .g { border: 1px solid var(--cl-line2); border-radius: 8px; background: none;
+      padding: 9px 16px; font: 12px/1 var(--cl-mono); color: var(--cl-muted); cursor: pointer; }
+    .cl-drill .gr .g:hover { border-color: var(--cl-ink); color: var(--cl-ink); }
+    .cl-drill .gr .g0:hover { border-color: var(--cl-dis); color: var(--cl-dis); }
+    .cl-drill .gr .g3:hover { border-color: var(--cl-adv); color: var(--cl-adv); }
+    .cl-drilldone { border: 1px solid var(--cl-adv); border-left-width: 4px; border-radius: 10px;
+      background: #f2f7f2; padding: 16px 20px 18px; margin: 18px 0; }
+    .cl-drilldone .lb { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--cl-adv); margin-bottom: 7px; }
+    .cl-drilldone .ti { font: 700 19px/1.3 var(--cl-serif); color: var(--cl-ink); }
+    .cl-drilldone .sb { font: 12px/1.6 var(--cl-mono); color: var(--cl-muted); margin-top: 7px; }
     .cl-next { border: 1px solid var(--cl-accent); border-left-width: 4px; border-radius: 10px;
       background: #fbf6e8; padding: 14px 18px 16px; margin: 18px 0 4px; }
     .cl-next.all { border-color: var(--cl-adv); background: #f2f7f2; }
@@ -4992,7 +5033,7 @@ function clApplyProgressUI() {
         : (st.ticks ? st.ticks + ' / ' + st.total + ' sections' : st.total + ' sections');
     }
   }
-  if (!clCurLesson) clRenderNext(shell);
+  if (!clCurLesson) { clRenderNext(shell); clRenderDrillCard(shell); }
   var rollups = shell.querySelectorAll('.cl-rollup[data-lessons]');
   for (var t = 0; t < rollups.length; t++) {
     var ids = (rollups[t].getAttribute('data-lessons') || '').split(',').filter(Boolean);
@@ -5372,11 +5413,244 @@ function clShowLesson(id, scrollTo) {
   });
 }
 
+
+// PROJECT: ── The drill (C4) ──────────────────────────────────────────────
+// Reading progress answers "have I been through this"; the drill answers "do
+// I still know it". Every flashcard and quiz item in the corpus is drillable.
+// The server owns scheduling and the gate; this file owns the study-guide
+// half of the item pool and the grading surface.
+//
+// Why the client supplies study items: 802 of the ~855 items live in study
+// guides on public Pages, which the server does not hold. Rather than have
+// Classroom.gs fetch 62 files per drill, the page sends the inventory it can
+// see — [[itemId, hash], …] — and the server validates it by containment
+// (slug in the public registry, capped) exactly as Profiler validates
+// 'study-<slug>' progress ids. Lesson items never travel this way: the server
+// enumerates those itself from the lessons the tier may read, so the gate
+// cannot be widened by anything the client claims.
+var clDrillInv = null;        // [[id, hash], …] — study items, built once
+var clDrillText = {};         // id → {q, a, slug, title} for study items
+var clDrillQueueArr = [];
+var clDrillPos = 0;
+var clDrillStats = null;
+var clDrillRevealed = false;
+var CL_DRILL_STUDY_CAP = 1200;
+
+function clDrillHashJs(text) {
+  var h = 5381, s = String(text == null ? '' : text);
+  for (var i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) >>> 0;
+  return h.toString(36);
+}
+
+// Build the study inventory from the public registry + each study guide.
+// cache: 'no-store' throughout — a drill scheduled against a stale card is
+// worse than a slow drill, and these files change on every dossier refresh.
+function clDrillBuildInv(done) {
+  if (clDrillInv) { done(clDrillInv); return; }
+  var base = (function() {
+    var p = window.location.pathname.replace(/[^\/]*$/, '');
+    return p + 'profiler-data/';
+  })();
+  fetch(base + 'profiler-companies.json', { cache: 'no-store' })
+    .then(function(r) { return r.ok ? r.json() : null; })
+    .then(function(reg) {
+      var slugs = ((reg && reg.companies) || []).map(function(c) { return c.slug; }).filter(Boolean);
+      if (!slugs.length) { clDrillInv = []; done(clDrillInv); return; }
+      var inv = [], pending = slugs.length;
+      slugs.forEach(function(slug) {
+        fetch(base + slug + '.study.json', { cache: 'no-store' })
+          .then(function(r) { return r.ok ? r.json() : null; })
+          .then(function(sg) {
+            var cards = (sg && sg.flashcards) || [];
+            for (var i = 0; i < cards.length && inv.length < CL_DRILL_STUDY_CAP; i++) {
+              if (!cards[i] || !cards[i].q) continue;
+              var id = 'sf:' + slug + ':' + i;
+              inv.push([id, clDrillHashJs(cards[i].q + '||' + cards[i].a)]);
+              clDrillText[id] = { q: cards[i].q, a: cards[i].a, slug: slug,
+                                  title: (sg && sg.title) || slug };
+            }
+          })
+          .catch(function() { /* one unreadable guide must not sink the drill */ })
+          .then(function() { if (--pending === 0) { clDrillInv = inv; done(inv); } });
+      });
+    })
+    .catch(function() { clDrillInv = []; done(clDrillInv); });
+}
+
+// The landing card. Sits above the study-next pointer: what you are about to
+// forget outranks what you have not yet read.
+function clRenderDrillCard(host) {
+  var old = document.getElementById('cl-drillcard');
+  if (old && old.parentNode) old.parentNode.removeChild(old);
+  if (!host || !clDrillStats) return;
+  var box = clEl('div', 'cl-drillcard');
+  box.id = 'cl-drillcard';
+  var due = clDrillStats.due || 0, fresh = clDrillStats.fresh || 0;
+  box.appendChild(clEl('div', 'lb', due ? 'Due today' : 'Nothing due'));
+  var btn = clEl('button', 'ti', due
+    ? due + (due === 1 ? ' card to review' : ' cards to review')
+    : (fresh ? 'Start learning ' + Math.min(fresh, clDrillStats.newCap || 10) + ' new cards' : 'All caught up'));
+  btn.type = 'button';
+  btn.disabled = !due && !fresh;
+  btn.addEventListener('click', function() { window.location.hash = 'drill'; });
+  box.appendChild(btn);
+  box.appendChild(clEl('div', 'sb',
+    clDrillStats.known + ' of ' + clDrillStats.pool + ' cards started'
+    + (fresh ? '  ·  ' + fresh + ' not yet seen' : '')
+    + '  ·  up to ' + (clDrillStats.sessionCap || 20) + ' per session'));
+  host.insertBefore(box, host.firstChild);
+}
+
+// Ask the server for the queue. Cheap enough to call on every index render,
+// and it is the only thing that knows what is due.
+function clDrillSync(cb) {
+  clDrillBuildInv(function(inv) {
+    clApi('drill', { inv: JSON.stringify(inv) }, function(res) {
+      if (res && res.success) {
+        clDrillQueueArr = res.items || [];
+        clDrillStats = res.stats || null;
+      }
+      if (cb) cb();
+    });
+  });
+}
+
+
+// The drill view. One card at a time, reveal then grade — the two-step is the
+// whole point: rating your recall before seeing the answer is what makes the
+// interval mean something.
+var CL_GRADES = [
+  { g: 0, label: 'Again', hint: 'I did not know it' },
+  { g: 1, label: 'Hard',  hint: 'I knew it, barely' },
+  { g: 2, label: 'Good',  hint: 'I knew it' },
+  { g: 3, label: 'Easy',  hint: 'I knew it instantly' }
+];
+
+function clShowDrill() {
+  clCurLesson = null; clCurLessonObj = null;
+  var shell = clShell();
+  if (!shell) return;
+  shell.innerHTML = '';
+  var top = clEl('div', 'cl-top');
+  top.appendChild(clEl('h1', null, 'Drill'));
+  var back = clEl('button', 'cl-back', '← All tracks');
+  back.type = 'button';
+  back.addEventListener('click', function() { window.location.hash = ''; });
+  top.appendChild(back);
+  shell.appendChild(top);
+  var host = clEl('div'); host.id = 'cl-drillhost';
+  shell.appendChild(host);
+  if (!clDrillQueueArr.length) {
+    host.appendChild(clEl('p', 'cl-loading', 'Building your queue…'));
+    clDrillSync(function() { clDrillPos = 0; clDrillPaint(); });
+    return;
+  }
+  clDrillPos = 0;
+  clDrillPaint();
+}
+
+function clDrillPaint() {
+  var host = document.getElementById('cl-drillhost');
+  if (!host) return;
+  host.innerHTML = '';
+  clDrillRevealed = false;
+  if (clDrillPos >= clDrillQueueArr.length) {
+    var done = clEl('div', 'cl-drilldone');
+    done.appendChild(clEl('div', 'lb', 'Session complete'));
+    done.appendChild(clEl('div', 'ti', clDrillQueueArr.length
+      + (clDrillQueueArr.length === 1 ? ' card reviewed' : ' cards reviewed')));
+    done.appendChild(clEl('div', 'sb', 'Each one comes back on its own schedule. Come back tomorrow.'));
+    var again = clEl('button', 'cl-done-btn', 'Back to tracks');
+    again.type = 'button';
+    again.addEventListener('click', function() { window.location.hash = ''; });
+    done.appendChild(again);
+    host.appendChild(done);
+    return;
+  }
+  var it = clDrillQueueArr[clDrillPos];
+  var card = clEl('div', 'cl-drill');
+  var meta = clEl('div', 'mt');
+  meta.appendChild(clEl('span', 'n', (clDrillPos + 1) + ' / ' + clDrillQueueArr.length));
+  meta.appendChild(clEl('span', 'k', it.seen ? 'review' : 'new'));
+  card.appendChild(meta);
+
+  // Question. Study items carry no payload from the server — the client holds
+  // that text from the inventory it built.
+  var txt = it.kind === 'study' ? (clDrillText[it.id] || {}) : it;
+  card.appendChild(clEl('div', 'q', txt.q || '(this card could not be loaded)'));
+
+  var ansBox = clEl('div', 'a'); ansBox.hidden = true;
+  if (it.kind === 'quiz') {
+    var list = clEl('div', 'ch');
+    (it.c || []).forEach(function(choice, ci) {
+      var row = clEl('div', 'c' + (ci === it.a ? ' right' : ''));
+      row.appendChild(clEl('span', 'x', ci === it.a ? '✓' : '·'));
+      row.appendChild(document.createTextNode(choice));
+      list.appendChild(row);
+    });
+    ansBox.appendChild(list);
+    if (it.why) ansBox.appendChild(clEl('div', 'wy', it.why));
+  } else {
+    ansBox.appendChild(clEl('div', 'wy', txt.a || ''));
+  }
+  // Where this card came from — a drill that cannot show you the source is a
+  // trivia app, not a study tool.
+  var src = clEl('div', 'sr');
+  if (it.kind === 'study') {
+    src.appendChild(document.createTextNode('Study guide · ' + (txt.title || txt.slug || '')));
+  } else {
+    var link = clEl('button', 'lk', it.lessonTitle || it.lesson);
+    link.type = 'button';
+    link.addEventListener('click', function() {
+      window.location.hash = 'lesson/' + it.lesson + '/' + it.section;
+    });
+    src.appendChild(document.createTextNode('Lesson · '));
+    src.appendChild(link);
+  }
+  ansBox.appendChild(src);
+  card.appendChild(ansBox);
+
+  var reveal = clEl('button', 'cl-done-btn', 'Show answer');
+  reveal.type = 'button';
+  var grades = clEl('div', 'gr'); grades.hidden = true;
+  CL_GRADES.forEach(function(gd) {
+    var b = clEl('button', 'g g' + gd.g, gd.label);
+    b.type = 'button'; b.title = gd.hint;
+    b.addEventListener('click', function() { clDrillGrade(it, gd.g); });
+    grades.appendChild(b);
+  });
+  reveal.addEventListener('click', function() {
+    clDrillRevealed = true;
+    ansBox.hidden = false;
+    reveal.hidden = true;
+    grades.hidden = false;
+  });
+  card.appendChild(reveal);
+  card.appendChild(grades);
+  host.appendChild(card);
+}
+
+function clDrillGrade(it, grade) {
+  // Advance immediately. The write is authoritative but the reader should not
+  // wait on a round trip to see the next card; a failed write simply leaves
+  // the item due, which is the safe direction.
+  clDrillPos++;
+  clDrillPaint();
+  clApi('grade', { id: it.id, grade: String(grade), hash: it.hash || '',
+                   inv: JSON.stringify(clDrillInv || []) }, function(res) {
+    if (res && res.success && clDrillStats) {
+      if (!it.seen) { clDrillStats.known++; clDrillStats.fresh = Math.max(0, clDrillStats.fresh - 1); }
+      else clDrillStats.due = Math.max(0, clDrillStats.due - 1);
+    }
+  });
+}
+
 // Hash routes: '' → the index, '#lesson/<id>' → one lesson. Deep links
 // survive a reload, and the browser's back button returns to the index.
 function clRoute() {
   if (!clAdmitted()) return;
   var h = String(window.location.hash || '').replace(/^#\/?/, '');
+  if (h === 'drill') { clShowDrill(); return; }
   var m = /^lesson\/([a-z0-9][a-z0-9-]{0,63})(?:\/([a-z0-9][a-z0-9-]{0,63}))?$/.exec(h);
   if (m) clShowLesson(m[1], m[2] || ''); else clShowIndex();
 }
@@ -5396,6 +5670,9 @@ function clAppMount() {
   app.dataset.mounted = '1';
   app.style.display = 'block';
   clProgressSync();          // pre-warm the server map at sign-in
+  // The drill queue needs the study inventory, which is 60-odd fetches; start
+  // it at mount so the landing card is populated by the time it is looked at.
+  clDrillSync(function() { if (!clCurLesson) clApplyProgressUI(); });
   window.addEventListener('hashchange', clRoute);
   clRoute();
 }
