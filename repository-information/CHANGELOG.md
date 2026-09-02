@@ -3,11 +3,32 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 99/100`
+`Sections: 100/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.20r] — 2026-09-02 01:30:36 AM EST
+
+> **Prompt:** "See attached screenshot - The Sign In button is messed up. Fix it. After clicking it though, the overlay did honestly report nothing logged yet. Then, recommend me to build C2's pipeline machinery — the scheduled Routine, the corpus-delta computation, and the commit-and-deploy path for authored lessons. Are you sure I should not upgrade to Fable 5.1 for this? I thought C2 was more complicated and important."
+
+### Fixed
+
+**`live-site-pages/Profiler.html` (v01.78w → v01.79w) — the Sign-ins button rendered on top of Reports.** Self-inflicted in v01.78w: the masthead buttons are absolutely positioned in a 40px slot stack, and folding `#ov-signins-btn` into `#ov-reports-btn`'s rule gave it that rule's `top: 124px` as well as its appearance, so both admin-only buttons landed at identical coordinates. The rule's own comment described the slot system; reusing it wholesale without reading it is what caused this.
+
+- Appearance stays shared; the slot does not. `#ov-reports-btn { top: 124px }` and `#ov-signins-btn { top: 164px }` are now separate one-line rules, and the block carries a comment recording that **the stack order is the access matrix** — least restrictive innermost, most restrictive outermost, so a tier missing a capability sees a contiguous stack rather than a gap
+- `#ov-header` gains `min-height: 194px`. The fifth slot's bottom (164 + 30) exceeded the masthead's natural content height, so the button overhung the double rule. The value is the slot arithmetic, commented as such, with a note that a sixth surface means raising it by another 40
+
+### Verified
+
+- A measuring pass in the browser rather than a look at a screenshot: all five buttons' bounding boxes read back, asserted pairwise non-overlapping, and asserted inside the masthead. Before the fix the assertion caught the overhang (button bottom 236 vs header bottom 222) that the eye would have missed; after it, five slots 40px apart with the rule clear below
+- `scripts/verify-profiler-roles.py` re-run clean across all four tiers
+
+### Worth noting
+
+- **`Profilerhtml.changelog.md` is now at 50/50** — the next Profiler page change triggers archive rotation
+- **`CHANGELOG.md` is now at 100/100** — at capacity, not over it. The next push crosses the line and rotation becomes mandatory
 
 ## [v04.19r] — 2026-09-02 01:21:25 AM EST
 

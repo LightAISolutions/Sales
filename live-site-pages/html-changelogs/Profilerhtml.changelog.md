@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.79w] — 2026-09-02 01:30:36 AM EST — v04.20r
+
+### Fixed
+- The new Sign-ins button was printing on top of the Reports button instead of taking its own place in the row of masthead buttons
 
 ## [v01.78w] — 2026-09-02 01:21:25 AM EST — v04.19r
 

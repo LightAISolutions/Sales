@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.78w">
+  <meta name="build-version" content="v01.79w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -836,7 +836,13 @@
        modules fetched from the admin-gated GAS guidance ops. Colors for the
        timeline lanes are CVD-validated against the card surface (dataviz
        six-checks, 2026-08-22): gold #b18f35 / blue #4f83e6 / rose #cc5f75. */
-    #ov-header { position: relative; }
+    /* The masthead has to be at least as tall as the button stack it hosts, or
+       the outermost slot overhangs the double rule. The slots are positioned
+       against this box, so the value is simply the bottom of the last one:
+       164px (its top, in the block below) + 30px (button height) = 194. The
+       26px padding-bottom then keeps the rule clear of it. Adding a sixth
+       surface means raising this by another 40. */
+    #ov-header { position: relative; min-height: 194px; }
     #ov-guide-btn {
       position: absolute; top: 44px; right: 0; display: none;
       background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
@@ -859,15 +865,28 @@
        In-page views (#reports / #report/<id>) reusing the gd-* section
        primitives; rp-* covers only what reports add — citation superscripts,
        confidence chips, coverage drift badges, the masthead button. */
+    /* The masthead buttons are absolutely positioned in a 40px slot stack, and
+       the ORDER IS THE ACCESS MATRIX: least restrictive innermost, most
+       restrictive outermost, so a tier missing a capability sees a contiguous
+       stack rather than a gap where a button it cannot have would sit.
+         4px  Classroom  — admin · contributor · analyst
+        44px  Guidance   — admin · contributor
+        84px  Network    — admin · contributor
+       124px  Reports    — admin
+       164px  Sign-ins   — admin
+       Appearance is shared below; the slot is NOT. Giving a new button an
+       existing button's rule wholesale lands both at the same coordinates and
+       they render on top of each other (v01.78w did exactly that). Every
+       button owns its own `top`. */
     #ov-signins-btn,
     #ov-reports-btn {
-      /* Outer slot (124px) — admin-only, so tiers without it see a contiguous
-         button stack instead of a gap where Reports would have been. */
-      position: absolute; top: 124px; right: 0;
+      position: absolute; right: 0;
       background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
       border-radius: 999px; padding: 8px 16px; cursor: pointer;
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
     }
+    #ov-reports-btn { top: 124px; }
+    #ov-signins-btn { top: 164px; }
     #ov-signins-btn:hover,
     #ov-reports-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
     .rp-sec { margin: 14px 0; }
