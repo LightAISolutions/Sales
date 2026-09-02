@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-02 04:29:02 AM EST` · Repo version: `v04.24r`
+Last updated: `2026-09-02 04:23:00 PM EST` · Repo version: `v04.25r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -651,11 +651,13 @@ Last updated: `2026-09-02 04:29:02 AM EST` · Repo version: `v04.24r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/GOVERNANCE.md">GOVERNANCE.md</a>           — [template · initialized] Project governance
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/HIPAA-CODING-REQUIREMENTS.md">HIPAA-CODING-REQUIREMENTS.md</a> — Complete HIPAA regulatory reference for coding (Security Rule, Privacy Rule, Breach Notification, 2025 NPRM, implementation checklist)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/IMPROVEMENTS.md">IMPROVEMENTS.md</a>         — [template · initialized] Potential improvements
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/IMPROVEMENT-PLAN.md">IMPROVEMENT-PLAN.md</a>   — Three-app architecture review (Profiler · Scraper · Classroom): ground truth, diagnosis, proposals, collision register, session-by-session build order
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/KNOWN-CONSTRAINTS-AND-FIXES.md">KNOWN-CONSTRAINTS-AND-FIXES.md</a>    — Architectural constraints &amp; resolved bug fixes (GAS double-iframe, postMessage, HMAC, deploy webhook)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PHASE5-LEARNING-LAYER-PLAN.md">PHASE5-LEARNING-LAYER-PLAN.md</a> — Phase 5 spec: study.json v2 on the guidance engine + concepts registry (built v03.97r)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PHASE6-CLASSROOM-DESIGN.md">PHASE6-CLASSROOM-DESIGN.md</a> — Phase 6 spec (approved design-gate output): Classroom as its own app, access matrices, provenance-gated content, phase plan C0–C6 with v1 = C0–C2
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-STYLES.md">PROFILER-STYLES.md</a>      — Profiler dossier writing-style registry (active style + Default/Bloomberg/alternative styles with mock-ups)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/profiler-refresh-calendar.json">profiler-refresh-calendar.json</a> — Report calendar driving the Profiler earnings desk Routine — next report date, confirmation status and watch items per covered company (schema: repository-information/PROFILER-SCHEMA.md)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/industry-guidance">industry-guidance/</a>   — Analyses of industry-wide documents feeding the Profiler app's admin-only Industry Guidance modules (not deployed)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/bess-bankability-certification-analysis.md">bess-bankability-certification-analysis.md</a> — Bankability &amp; certification for grid-scale BESS (research synthesis; source of truth for the in-app module)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/bess-technology-fundamentals-analysis.md">bess-technology-fundamentals-analysis.md</a> — BESS technology fundamentals for the sales team (teaching synthesis from verified internal material; source of truth for the in-app training module)

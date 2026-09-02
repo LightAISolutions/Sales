@@ -325,7 +325,7 @@ td strong { color: #0f1620; }
     <li><strong>Open the edition</strong><span>It was built at 6am and is waiting. Read by section &mdash; Companies first if you are prepping a call, Market first if you are thinking about positioning.</span></li>
     <li><strong>Read the summary, then the read</strong><span>The reported facts and the desk's interpretation are visually separated so you always know which is which. Figures are highlighted; you can scan for numbers alone.</span></li>
     <li><strong>Click through what matters</strong><span>This is not passive. Clicks are logged and become an engagement boost for that company and topic, so tomorrow's ranking reflects today's attention.</span></li>
-    <li><strong>Rate the misses</strong><span>&#128077; and &#128078; on individual items. A thumbs-down on a story that should not have been there is the highest-value signal you can give.</span></li>
+    <li><strong>Note the misses</strong><span>There is no per-item rating any more &mdash; the rubric replaced it. When a story should not have been there, the fix is a segment toggle or a topic weight, not a verdict on the item.</span></li>
     <li><strong>Ask "Why thin?" when it looks light</strong><span>You get the real reason &mdash; a quiet news day, a failing feed, a segment you turned off &mdash; instead of guessing.</span></li>
     <li><strong>Check "Held back"</strong><span>Everything that cleared the bar but lost to a section cap. Worth a glance on days when the top of the edition felt off.</span></li>
   </ol>
@@ -337,7 +337,7 @@ td strong { color: #0f1620; }
       <tr><td><strong>Segment toggles</strong></td><td>A whole beat is noise right now &mdash; residential storage, EVs, consumer gear. Turn the segment off and the gate zeroes those stories even when they name a company you cover.</td></tr>
       <tr><td><strong>Topic weights</strong></td><td>You are working a specific problem &mdash; interconnection queues, domestic content, fire codes. Weight it up for the duration.</td></tr>
       <tr><td><strong>Companies</strong></td><td>Synced from Profiler automatically. Adding a dossier there adds it to the scorer here; the two never drift.</td></tr>
-      <tr><td><strong>Calibrate</strong></td><td>A guided rating pass. It deliberately samples mostly mid-scoring articles with some high and some low mixed in, because your judgment on borderline cases carries far more information than your agreement on obvious ones.</td></tr>
+      <tr><td><strong>Why thin?</strong></td><td>The other direction from "Score it": instead of asking why one article ranked where it did, it explains why a whole edition came out light &mdash; a quiet day, a dark feed, or tuning you turned too far.</td></tr>
       <tr><td><strong>Score it</strong></td><td>Paste any article and see exactly what the rubric would give it, band by band. The fastest way to understand a surprising ranking.</td></tr>
       <tr><td><strong>Source stats</strong></td><td>Which outlets are actually earning their slot. Evidence for adding or retiring one.</td></tr>
       <tr><td><strong>Presets</strong></td><td>Apply a whole tuning profile to an edition at once, rather than flipping 29 toggles by hand.</td></tr>
@@ -361,7 +361,7 @@ td strong { color: #0f1620; }
   <div class="callout">
     <ul>
       <li><strong>Click through, don't just skim.</strong> The engagement boost is built from real click-throughs, so a week of reading headlines in the email teaches the scorer nothing. Opening the three stories you actually care about is the cheapest tuning available.</li>
-      <li><strong>Thumbs-down is worth more than thumbs-up.</strong> Agreement confirms what the rubric already believed. A rejection is new information, and it is what moves the ranking.</li>
+      <li><strong>The rubric is the relevance model, not a vote.</strong> Per-item &#128077;/&#128078; rating and the guided Calibrate pass were retired in August 2026 when the scoring rubric replaced them. Your steering signals are click-throughs, segment toggles and topic weights.</li>
       <li><strong>Toggle segments before you touch sources.</strong> Almost every "this edition is noisy" problem is a segment problem, not a source problem &mdash; and a segment toggle is reversible in one click, where retiring an outlet costs you a beat.</li>
       <li><strong>Trust the unmarked-geography default.</strong> If you ever find yourself wanting to penalise articles that do not mention the US, remember that most of the coverage you want does not mention it either.</li>
       <li><strong>Use "Score it" when a ranking surprises you.</strong> Guessing at the rubric wastes more time than checking it. The band-by-band breakdown usually shows a segment you forgot you turned off.</li>
@@ -377,7 +377,7 @@ td strong { color: #0f1620; }
     <tbody>
       <tr><td>Edition is unusually short</td><td><strong>Why thin?</strong> &mdash; distinguishes a quiet day from a broken feed from an over-tightened tuning profile.</td></tr>
       <tr><td>An obviously relevant story is missing</td><td><strong>Score it</strong> on the article's URL. Usually an off segment zeroing the company match, or a geographic multiplier you did not expect.</td></tr>
-      <tr><td>The same story appears twice</td><td>Clustering did not recognise them as one event. Thumbs-down the weaker one.</td></tr>
+      <tr><td>The same story appears twice</td><td>Clustering did not recognise them as one event &mdash; usually different headlines over the same wire copy. Nothing to do in the edition; it self-corrects as the cluster keys settle.</td></tr>
       <tr><td>Summaries look truncated</td><td>The edition hit the storage cap and was trimmed in order. The footer will say so.</td></tr>
       <tr><td>A term change did nothing</td><td>The seed version was not bumped, or <strong>Sync now</strong> was not pressed before the rebuild.</td></tr>
       <tr><td>A source stopped contributing</td><td><strong>Source stats</strong> and the background-errors panel. It may have been bot-walled rather than gone quiet.</td></tr>

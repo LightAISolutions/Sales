@@ -175,9 +175,10 @@
 
   <h3>Refreshes fire on the market's clock</h3>
   <ul>
-    <li><strong>Earnings-driven, per company.</strong> Each listed company carries a one-shot trigger set for the day after its scheduled results. The fired session first <em>verifies the report actually published</em> &mdash; if the company slipped, it reschedules itself and stops rather than writing a dossier from an announcement that does not exist.</li>
-    <li><strong>Self-re-arming.</strong> The last step of every refresh researches the next scheduled report date and arms the following trigger. If the tooling is unavailable it leaves you a reminder instead, naming the expected date. The chain does not quietly end.</li>
-    <li><strong>Staggered.</strong> Companies reporting the same day are spaced two hours apart so parallel sessions never collide.</li>
+    <li><strong>One desk, one calendar.</strong> A single recurring job runs each weekday against a calendar listing every covered company, its next report date, whether that date is company-confirmed, and what to watch for when it reports.</li>
+    <li><strong>Verify before writing.</strong> When a row comes due the session first <em>confirms the report actually published</em> &mdash; if the company slipped, the row is re-dated and nothing is written from an announcement that does not exist.</li>
+    <li><strong>The calendar is the queue.</strong> Each run takes at most three companies and advances the rows it finished; anything still due is due again tomorrow. When nothing is due the run stands down without a commit.</li>
+    <li><strong>Kept where you can see it.</strong> The calendar is a file in the repository, so a date that moves shows up in a diff. It replaced per-company one-shot triggers whose state lived nowhere the repository could check &mdash; a chain that ended silently in August 2026.</li>
     <li><strong>Quarterly sweeps</strong> cover the private and unit-level companies with no earnings calendar &mdash; Crusoe, Hithium, FlexGen, Rosendin, Turner, Bechtel, Kiewit, Vantage, QTS and the rest &mdash; checking for material developments and refreshing only when something actually moved.</li>
   </ul>
 

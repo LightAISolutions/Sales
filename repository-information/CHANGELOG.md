@@ -3,11 +3,112 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 77/100`
+`Sections: 78/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.25r] — 2026-09-02 04:23:00 PM EST
+
+> **Prompt:** "Implement Session A of repository-information/IMPROVEMENT-PLAN.md — the earnings desk. [Full instruction: read §0, §2 P3, §4 R1/R4, §6, §7 Session A and §9 of the plan, plus profiler-app.md's "Scheduled Refreshes" and "News Triage" and SESSION-CONTEXT.md. Verify §9 items 1–3 and report before changing anything: today's first Classroom pipeline run's §5.4 report (refresh the ledger's gateDigest only if it says BLOCKED on P3, otherwise do not touch Classroom); why none of the seven August "Profiler refresh —" one-shots re-armed a successor and why IREN's run is ABANDONED; and whether those seven dossiers' financials.periods[] carry the H1/Q2 2026 period. Then build as one push train: (1) create repository-information/profiler-refresh-calendar.json per §2 P3, seeded from the armed one-shot prompts plus researched next dates for the seven that fired, with quarterly rows for the 21 private companies, and add its schema to PROFILER-SCHEMA.md; (2) create ONE recurring Routine, "Profiler earnings desk", weekdays 13:00 UTC, fresh session per fire, push + email — short prompt carrying the corpus token and nothing else, the cap of three with carry-over, the verify-published step, the calendar advance, the silent stand-down, the report shape; the fired session may update the calendar but never creates triggers. CORPUS_TOKEN: [not supplied — placeholder left blank; ask before creating the Routine]; (3) fire the desk by hand on today's calendar and confirm a silent stand-down; (4) only then delete the armed one-shots; (5) rewrite "Scheduled Refreshes" around the calendar and delete the "Currently armed" list; (6) fix the R4 drift — the Scraper brochure's rating/Calibrate advice (correct the brochure, do not flip SCRAPER_FEEDBACK_UI_ENABLED) — rebuild the brochure PDF and re-check the 1006 px page limit; (7) fold in the CHANGELOG entry and README tree row the plan commit skipped. Constraints: no app code, no schema field on a profile, no Classroom change beyond the gateDigest refresh if and only if §9 item 1 demands it; do not start Sessions B–E; if anything contradicts the plan's evidence, say so and stop.]"
+
+**Session A of the improvement plan, partially complete.** The calendar, its schema, the rules rewrite and the
+documentation drift all landed. **The desk Routine was not created** — its prompt must carry `CORPUS_TOKEN` and the
+developer did not have the value to hand, so steps 2–4 (create the Routine, dry-run fire it, delete the 22
+per-company one-shots) are deferred. The 22 one-shots therefore remain armed and are still the only thing scheduling
+refreshes; `.claude/rules/profiler-app.md` carries a status block saying so, and the order to finish in.
+
+### Added
+
+**`repository-information/profiler-refresh-calendar.json`** — the report calendar that replaces 22 hand-armed
+one-shot Routines. 50 rows: 29 public companies carrying `nextReport` / `confirmed` / `source` / `lastRefreshed` /
+`watch[]`, and 21 private or unit-level companies carrying `cadence: "quarterly"` to mirror the existing sweep.
+Seeded by reading all 22 armed trigger prompts in full — their dates, confirmation status, cited sources and
+per-company watch items are now repo-resident and diffable rather than sealed inside trigger records. Names and
+tickers are deliberately not duplicated; they resolve against `profiler-companies.json` by slug.
+
+- **Seven rows are seeded overdue on purpose** — Sinexcel, EVE Energy, NVIDIA, Jinko, IREN, Sungrow and BYD carry
+  the August report date that already published and was never folded in, so the desk picks them up on its first run
+  (see the verification below). Each of their `watch[]` lists opens with the missing period, named explicitly
+- **`repository-information/PROFILER-SCHEMA.md`** — new "Refresh calendar" section documenting the file: every
+  field, the public-vs-quarterly row shapes, why names and tickers are absent, who writes it, and how a company is
+  added or converted from a quarterly row when it lists
+
+### Changed
+
+**`.claude/rules/profiler-app.md` — "Scheduled Refreshes" rewritten around the calendar and the desk.** The
+"Currently armed" list is deleted; it had been wrong since August. The section now specifies the desk's contract —
+weekdays 13:00 UTC, fresh session, verify-published before writing, news triage inside every refresh, three
+companies per run with carry-over, advance the row, and a silent no-commit stand-down whose report must still name
+what it read. Two rules are stated that the old convention lacked: **the desk never creates triggers** (the
+self-re-arming step is deleted, not moved), and **a stand-down must be distinguishable from a session that never
+reached the repo**. The desk's prompt is recorded verbatim in the section so it can be recreated, with
+`CORPUS_TOKEN` as a paste-at-creation placeholder. "News Triage — Scraper Corpus Bridge" is unchanged.
+
+**Why the convention was reconsidered (§6 collision register, "P3 — one desk Routine").** The rules file now
+carries the measured argument rather than a pointer to it: the self-re-arming one-shot chain failed 7 for 7 in
+August, and the failure was invisible by construction because a one-shot that fires and does not re-arm leaves no
+artefact the repo can see. Three properties are named and fixed — unreadable state, procedure copied into 22 places
+and drifted several schema generations behind, and a corpus token that reached none of them. What the convention
+protected — refreshes firing on the market's clock, not the operator's memory — is kept.
+
+**Documentation drift (§4 R4).**
+
+- **`repository-information/brochures/scraper.body.html`** — four corrections where the brochure taught a workflow
+  the app no longer offers. `SCRAPER_FEEDBACK_UI_ENABLED = false` retired per-item 👍/👎 rating and the guided
+  Calibrate pass on 2026-08-27 (D3), but pages 6–7 still instructed the reader to "rate the misses", listed
+  Calibrate as a Tune control, coached that "thumbs-down is worth more than thumbs-up", and told them to
+  thumbs-down a duplicate. The flag was **not** flipped — that is the developer's call and R2 may moot it; the
+  brochure was corrected to describe the rubric as the relevance model and click-throughs, segment toggles and
+  topic weights as the steering signals. The Calibrate row is replaced by "Why thin?", which exists
+- **`repository-information/brochures/profiler.body.html`** — page 5 ("Staying current without being asked") was
+  describing the per-company one-shot convention this commit retires, including the claim that "the chain does not
+  quietly end". Rewritten around the desk and the calendar, and it now says plainly that the chain it replaced did
+  end silently in August 2026. Not part of R4's list — this drift is created by the change itself
+- **PDFs rebuilt** for both, and every page re-measured against the 1006 px limit `brochures/README.md` records.
+  The first rewrite pushed Profiler page 5 to **1007 px**, one pixel over; two bullets were tightened and it now
+  measures 989 px. All three brochures remain 8 pages
+
+### Fixed
+
+**`README.md` — the tree row for `repository-information/IMPROVEMENT-PLAN.md`**, skipped when the plan was
+committed docs-only at `25b279c`, alongside a row for the new calendar. This entry also supplies the CHANGELOG
+record that commit deliberately omitted: the plan itself (296 lines, §0–§9) is the three-app architecture review
+for Profiler · Scraper · Classroom — measured ground truth, diagnosis, three flagship proposals, a second tier,
+stop/remove/freeze items, the C3→C6 sequencing verdict, a rule-and-decision collision register, a session-by-session
+build order, and the facts a build session must verify first.
+
+### Verified before building (plan §9, items 1–3)
+
+- **The first Classroom pipeline run** (fired 2026-09-02 11:17 UTC, `SUCCEEDED`, 3m39s) **landed no commit, pushed
+  no branch, and left the ledger untouched** — `lastRun` still `null`, `coveredThrough` still `2026-09-01`, which
+  is what the contract prescribes for a `STAND-DOWN`. The §5.4 report text itself was not readable from this
+  session (no transcript tool), so the P3 question was settled directly instead: the gate digest recomputed from
+  `Classroom.gs` matches the ledger's `gateDigest` byte for byte with all 32 symbols present, so the run **cannot**
+  have blocked on P3. Per §9 item 1 that means no `gateDigest` refresh is owed and **Classroom was not touched**
+- **Why none of the seven August one-shots re-armed.** Not a missing step: all seven prompts carried the re-arm
+  instruction *and* the `REMINDERS.md` fallback. The runs did no work at all. None landed a commit, none created an
+  archive version, and all seven dossiers still describe their reported period as pending. The six `SUCCEEDED` runs
+  lasted 2m10s–6m37s; one measured session spent 5,071 output tokens and $0.36, which is one turn, not a refresh.
+  The re-arm is the *last* step of a chain that never reached step 2 — which is also why no fallback reminder was
+  written. **IREN is `ABANDONED`** because its session is still parked in `REQUIRES_ACTION`, holding an unanswered
+  permission prompt for `find /home /root -iname "*profiler*"` — it was hunting for the repository checkout with
+  nobody there to approve it. The desk's stand-down report requirement (name what you read) exists because of this:
+  under the old design a no-op run and a correct quiet run were indistinguishable
+- **None of the seven dossiers carries its post-earnings period.** All seven need re-doing, and all seven are
+  seeded overdue so the desk's first run handles them: Sinexcel (H1 2026), EVE Energy (H1 2026), NVIDIA
+  (Q2 FY2027), Jinko (Q2/H1 2026), IREN (FY2026), Sungrow (H1 2026), BYD (H1 2026). The 2026-08-30 mass pass moved
+  `lastUpdated` on all 89 dossiers but added no figures — NVIDIA's dossier still reads "Q2 FY2027 not yet reported
+  as of 2026-08-09", Sungrow's and BYD's "H1 2026 due late August", IREN's "FY report due Aug 27, 2026"
+
+### Corrections to the plan's own evidence
+
+- **There are 22 armed one-shots, not 21.** §0 says 21 and §2 P3 says "retire the 21"; the Routine API returns 22
+  and `profiler-app.md`'s deleted "Currently armed" list held 22 (27 active Routines − 5 recurring). §0's own
+  arithmetic is what gives it away. The calendar is seeded from all 22
+- **Session A's exit criteria are not met.** One desk Routine and zero per-company one-shots both wait on the
+  corpus token. The calendar is committed and the rules point at it
 
 ## [v04.24r] — 2026-09-02 03:52:35 AM EST
 

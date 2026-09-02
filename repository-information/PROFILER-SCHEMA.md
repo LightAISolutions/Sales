@@ -324,6 +324,30 @@ Why the file date rather than a per-entry `updated`:
 
 **If a per-entry date is ever wanted anyway** it is additive under "Extending the schema" below — `projects[].updated` / `concepts[].updated`, `schemaVersion` bumped, absent meaning "fall back to the file date". Nothing here forecloses it; the pipeline simply does not depend on it.
 
+## Refresh calendar — `repository-information/profiler-refresh-calendar.json`
+
+**Not a deployed file.** It lives in `repository-information/`, not `live-site-pages/`, because it is operational state for the **Profiler earnings desk** Routine rather than site content. One row per covered company; the desk reads it on every fire and writes back the row it advanced. See "Scheduled Refreshes" in `.claude/rules/profiler-app.md` for how the desk consumes it.
+
+| Field | Type | Required | Meaning |
+|-------|------|----------|---------|
+| `schemaVersion` | number | yes | Calendar schema version (currently `1`) |
+| `updated` | string | yes | `YYYY-MM-DD` the file was last written |
+| `description` | string | yes | One-paragraph orientation for a fired session that reads the file cold |
+| `companies[]` | object[] | yes | One row per covered company, public and private alike |
+| `companies[].slug` | string | yes | Per Slug rules; must exist in `profiler-companies.json` |
+| `companies[].nextReport` | string | public only | `YYYY-MM-DD` of the **next report this dossier owes** — the date the desk compares against. A date in the past means the row is **due**: either the report just published, or it published earlier and was never folded in |
+| `companies[].confirmed` | boolean | public only | `true` when `nextReport` comes from the company itself (IR calendar, press release, regulatory deadline); `false` when it is a tracker estimate or a cadence inference. Unconfirmed rows within seven days are the desk's confirm-the-date work |
+| `companies[].cadence` | string | private only | `"quarterly"` — the row has no earnings clock and is carried by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1). Mutually exclusive with `nextReport`/`confirmed` |
+| `companies[].source` | string | yes | URL or note establishing where `nextReport` came from, and any caveat the desk's verify step needs (conflicting trackers, unannounced dates, rebrands, overdue history) |
+| `companies[].lastRefreshed` | string | yes | `YYYY-MM-DD` the dossier was last revised — mirrors the registry's `lastUpdated` for the slug |
+| `companies[].watch[]` | string[] | yes | Research focus items for the next refresh, in priority order. This is where the per-company judgment that used to live inside 22 separate trigger prompts is kept |
+
+**Names and tickers are deliberately absent.** They resolve against `profiler-companies.json` by slug. Duplicating them here would create a second place for them to drift.
+
+**Who writes it.** The desk advances the row it refreshed (`nextReport`, `confirmed`, `source`, `lastRefreshed`, and `watch[]` where the picture moved) in the same commit as the dossier. A developer adds a row when a company joins coverage, and converts a `cadence` row to a `nextReport` row when a private company lists — the quarterly sweep's watch items already flag the candidates (Vantage, Switch, Lambda, xAI).
+
+**Adding a company.** Add the row in the same commit that adds the dossier. A public company with no announced date gets `confirmed: false` and a cadence-inferred `nextReport`; the desk confirms it when the date comes within seven days.
+
 ## Extending the schema
 
 When a new section is needed ("potentially more later"):

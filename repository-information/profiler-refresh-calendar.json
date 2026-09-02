@@ -1,0 +1,676 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-09-02",
+  "description": "Report calendar for the 'Profiler earnings desk' Routine. One row per covered company. Rows with nextReport are public companies on an earnings clock; rows with cadence are private or unit-level companies carried by the quarterly sweep. Company names, tickers and taglines are NOT duplicated here - resolve a slug against live-site-pages/profiler-data/profiler-companies.json. Schema: repository-information/PROFILER-SCHEMA.md.",
+  "companies": [
+    {
+      "slug": "applied-digital",
+      "nextReport": "2026-10-14",
+      "confirmed": false,
+      "source": "Investing.com earnings calendar (fiscal Q1 2027, quarter ended 2026-08-31); matches the early-to-mid-October Q1 cadence, not company-confirmed — verify at https://ir.applieddigital.com/news-events/press-releases",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Q1 FY2027 vs Street (~-$0.25 EPS / $111M revenue at arming)",
+        "Any identification of the unnamed high-investment-grade hyperscaler tenant (~69% of the $36B backlog)",
+        "New leases from the 1.7 GW being marketed",
+        "Polaris Forge 3 MDU regulatory approval status",
+        "Delivery milestones at PF1/PF2",
+        "Financing actions (project notes, Macquarie preferred draws)",
+        "ChronoScale (CHRN) status"
+      ]
+    },
+    {
+      "slug": "abb",
+      "nextReport": "2026-10-20",
+      "confirmed": true,
+      "source": "ABB quarterly-results calendar (Q3 2026) — https://global.abb/group/en/investors",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Electrification segment orders/backlog — whether triple-digit data-center order growth held",
+        "Rotork acquisition progress (recommended offer 503p/~$5.5B, close expected H1 2027; watch for counter-bids)",
+        "Robotics-to-SoftBank closing status (expected mid-to-late 2026)",
+        "New HiPerGuard MV UPS or VoltaGrid synchronous-condenser orders",
+        "800 VDC / NVIDIA ecosystem progress",
+        "New M&A from the ~$14B stated firepower"
+      ]
+    },
+    {
+      "slug": "tesla",
+      "nextReport": "2026-10-21",
+      "confirmed": false,
+      "source": "Tracker estimate; Tesla typically posts results after close on a mid-to-late-October Wednesday — verify at https://ir.tesla.com",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Energy segment: Megapack and Powerwall deployments in GWh",
+        "Shanghai and Houston Megafactory ramp",
+        "Energy gross margin and storage backlog"
+      ]
+    },
+    {
+      "slug": "hitachi-energy",
+      "nextReport": "2026-10-23",
+      "confirmed": false,
+      "source": "Investing.com estimate for parent Hitachi Ltd (TYO: 6501) Q2 FY2026 (Jul-Sep 2026; FY ends March). Hitachi Energy is wholly owned with no standalone reporting — segment figures come from the parent's disclosure — verify at https://www.hitachi.com/IR/",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Energy segment revenue/orders/backlog (was JPY1.9T orders, >JPY10T backlog at Q1)",
+        "$9B+ capacity program milestones (South Boston VA $457M plant, Alamo TN, Varennes)",
+        "New HVDC awards and any HVDC execution delays",
+        "Transformer lead-time trends (was 30-40 months)",
+        "NVIDIA 800 VDC collaboration progress",
+        "CEO Schierenbeck's AI-load-volatility positioning"
+      ]
+    },
+    {
+      "slug": "core-scientific",
+      "nextReport": "2026-10-23",
+      "confirmed": false,
+      "source": "MarketBeat cadence-based calendar (prior-year Q3 reported Oct 23-24); NOT company-confirmed — the IR calendar was empty at arming — verify at https://investors.corescientific.com/news-events/press-releases",
+      "lastRefreshed": "2026-08-29",
+      "watch": [
+        "Q3 vs Zacks consensus (+$0.02 EPS / $167.2M revenue at arming)",
+        "CoreWeave billing progression toward the full ~590 MW (was 437 MW mid-July)",
+        "AMD program status — identity of the AMD-credit-backed neocloud taking ~150 MW; early-2027 delivery prep; the 2.5 GW expansion",
+        "Muskogee/Pecos 1.5 GW expansion and behind-the-meter progress",
+        "Mining wind-down (sites remaining)",
+        "Warrant-mark noise vs segment reality; any restatement/litigation follow-through"
+      ]
+    },
+    {
+      "slug": "wartsila",
+      "nextReport": "2026-10-27",
+      "confirmed": true,
+      "source": "Company-announced January-September 2026 interim report date — https://www.wartsila.com/investors",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Energy Storage & Optimisation business results",
+        "The announced 50/50 storage JV with RCT Solutions",
+        "Order intake and backlog in Energy Storage"
+      ]
+    },
+    {
+      "slug": "samsung-sdi",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "source": "Financial-calendar listing for Q3 2026 — confirm against https://www.samsungsdi.com IR",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "UPS/BBU revenue trajectory (the +70% guide)",
+        "SBB 1.5/1.7/2.0 traction",
+        "The US LFP line conversion slated for October 2026",
+        "Whether the press-reported Tesla/Amazon ESS deals were ever confirmed (Low-confidence/unverified in the dossier)"
+      ]
+    },
+    {
+      "slug": "google",
+      "nextReport": "2026-10-27",
+      "confirmed": true,
+      "source": "Alphabet Q3 2026 listed as confirmed for 2026-10-27 after close; one tracker showed 10-28 unconfirmed — verify at https://abc.xyz/investor",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Capex guidance",
+        "Intersect Power buildout and the energy-parks pipeline",
+        "Form Energy iron-air progress",
+        "Demand-response scale and new BESS/storage procurement",
+        "TPU v7 external-sales momentum"
+      ]
+    },
+    {
+      "slug": "microsoft",
+      "nextReport": "2026-10-27",
+      "confirmed": false,
+      "source": "Tracker estimate for FY2027 Q1 after close; one source showed 10-28 unconfirmed — verify at https://www.microsoft.com/en-us/investor",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Azure growth and RPO; capex guidance",
+        "Energy posture: TMI/Crane restart progress toward 2027, Helion, Fairwater grid-only design",
+        "Whether the BESS gap flagged in the dossier has changed (any battery-storage procurement or grid-interactive UPS beyond the Dublin pilot)"
+      ]
+    },
+    {
+      "slug": "meta",
+      "nextReport": "2026-10-28",
+      "confirmed": false,
+      "source": "Tracker estimate for Q3 2026 after close, based on past reporting schedules; not company-confirmed at arming — verify at https://investor.atmeta.com",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Capex guidance; self-build progress (Hyperion/Prometheus)",
+        "Energy procurement: nuclear package, new BESS tolling deals beyond Enbridge Cowboy, the Noon LDES reservation",
+        "SPV financing developments",
+        "Whether the press-reported TPU purchases were ever confirmed (Low-confidence/unverified in the dossier)"
+      ]
+    },
+    {
+      "slug": "equinix",
+      "nextReport": "2026-10-28",
+      "confirmed": false,
+      "source": "Estimate from the prior-year pattern (Q3 2025 results came 2025-10-29); not company-confirmed at arming — verify at https://investor.equinix.com",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Q3 results vs the raised 2026 guidance",
+        "xScale JV (>$15B) deployment progress and atNorth integration",
+        "Bloom Energy fuel-cell fleet expansion (>100 MW) and the four nuclear agreements",
+        "'Build Bolder' capex trajectory",
+        "New AI/inference-oriented product moves"
+      ]
+    },
+    {
+      "slug": "amazon",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "source": "Tracker estimate for Q3 2026 after close; sources ranged 2026-10-22 to 2026-11-02, none company-confirmed at arming — verify at https://ir.aboutamazon.com",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "AWS growth and capex",
+        "Energy procurement: clean-energy portfolio and BESS additions beyond Bellefield",
+        "Talen nuclear PPA progress and the FERC precedent's aftermath; SMR developments",
+        "Trainium GW-scale commitments (Anthropic/Project Rainier ramp, the OpenAI deal)"
+      ]
+    },
+    {
+      "slug": "lg-energy-solution",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "source": "Estimate from the prior-quarter pattern (Q2 2026 full results came 2026-07-30). LGES typically issues provisional figures in early October and full results with a call in late October; neither was company-confirmed at arming — verify at https://news.lgensol.com",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "ESS revenue trajectory and backlog (was 140 GWh)",
+        "Tesla Megapack LFP ramp",
+        "US AMPC dependence and any policy impact",
+        "New ESS orders",
+        "Whether the LGES-Google Steel River link was ever confirmed (Low-confidence/unverified in the dossier)"
+      ]
+    },
+    {
+      "slug": "quanta-services",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "source": "Investing.com/Nasdaq estimate for Q3 2026 (Q3 2025 came 2025-10-30) — verify at https://investors.quantaservices.com",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Q3 vs the raised FY2026 guidance ($39.3-39.7B revenue, $16.45-16.95 adj. EPS)",
+        "Backlog trajectory (was record $53.4B) and whether NiSource ~3 GW program portions entered backlog",
+        "Technology & Load Centers end-market growth vs the 220-240% guide",
+        "New acquisitions; HV transformer manufacturing program and Hyosung HICO breaker JV progress",
+        "LUMA Energy/Puerto Rico developments"
+      ]
+    },
+    {
+      "slug": "panasonic",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "source": "Estimate from the prior-year pattern for FY2027 Q2 (Jul-Sep 2026; FY ends March) — FY2026 Q2 results came 2025-10-30; not company-confirmed at arming — verify the financial calendar at https://holdings.panasonic",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Energy segment: BBU/data-center power revenue vs the JPY800B FY2029 target",
+        "Kansas EV-to-DC-cell conversion progress",
+        "Capex deployment (JPY350B program)",
+        "Tesla cell demand concentration",
+        "New data-center power products or partners"
+      ]
+    },
+    {
+      "slug": "catl",
+      "nextReport": "2026-10-31",
+      "confirmed": false,
+      "source": "Q3 2026 report required by the 2026-10-31 CSRC disclosure deadline; the exact date was unannounced at arming (most A-share companies file in the final week of October)",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Q3 results and ESS/battery shipment mix",
+        "Data-center and grid storage order momentum",
+        "Overseas capacity progress"
+      ]
+    },
+    {
+      "slug": "primoris",
+      "nextReport": "2026-11-02",
+      "confirmed": false,
+      "source": "MarketBeat estimate for Q3 2026 after close; Investing.com said Nov 9 and the company had not formally scheduled the date as of 2026-08-22 (it issues a scheduling notice ~2 weeks ahead) — verify at https://ir.prim.com",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Q3 2026 actual vs consensus (was $0.92 adj. EPS at arming) and whether the slashed FY2026 guidance ($2.05-2.60 adj. EPS) held",
+        "Backlog progression from the record $13.9B",
+        "Renewables-segment margin recovery vs further overruns",
+        "Securities class action status (Hagens Berman; class period 2025-08-05 to 2026-06-22; lead plaintiff was due 2026-09-21)",
+        "COO and permanent Renewables-president searches under CEO Koti Vadlamudi",
+        "PayneCrest integration and data-center awards (Meta Nebraska, Crusoe West Texas)"
+      ]
+    },
+    {
+      "slug": "constellation-energy",
+      "nextReport": "2026-11-09",
+      "confirmed": true,
+      "source": "Zacks/Nasdaq earnings calendar marked Confirmed for Q3 2026 — verify at https://investors.constellationenergy.com",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Q3 results and FY2026 guidance",
+        "Crane Clean Energy Center (TMI) restart progress toward the 2027 target and the Microsoft PPA",
+        "Meta 1,121 MW Clinton and other data-center PPAs (new deals or pricing disclosures)",
+        "Calpine integration progress (55 GW combined fleet)",
+        "PJM capacity-price politics and regulatory/legislative developments",
+        "Section 45U PTC dynamics"
+      ]
+    },
+    {
+      "slug": "terawulf",
+      "nextReport": "2026-11-09",
+      "confirmed": false,
+      "source": "MarketBeat estimate for Q3 2026 before market open, consistent with the prior-year Nov 10 cadence; NOT company-confirmed at arming — the IR calendar was empty — verify at https://investors.terawulf.com/news-events/press-releases",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Q3 vs consensus (-$0.20 adj. EPS at arming per MarketBeat)",
+        "Lake Mariner CB-4 first-hall revenue (was due late Sept 2026) and CB-5 progress",
+        "HPC vs mining revenue mix (HPC was 71% in Q2)",
+        "Anthropic/Justified Kentucky construction status against the 'minimal procurement buffer' critique",
+        "Warrant mark-to-market noise (separate from operations); capex per MW vs the $8-10M guidance",
+        "New tenant or site news (Lake Hawkeye, Muskie, Chesapeake close)"
+      ]
+    },
+    {
+      "slug": "nebius",
+      "nextReport": "2026-11-10",
+      "confirmed": false,
+      "source": "Investing.com/Public.com calendars for Q3 2026; NOT company-confirmed at arming — Nebius announces dates ~2 weeks ahead and MarketChameleon projected a Nov 20-30 window, so a delay is plausible — verify at https://nebius.com/newsroom",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Q3 vs LSEG/Zacks consensus",
+        "Progress toward FY2026 guidance ($3.0-3.4B revenue, $7-9B exit ARR, ~40% EBITDA margin) and the 5 GW contracted-power target",
+        "Vineland NJ permitting/stop-work resolution and Microsoft tranche deliveries",
+        "Meta agreement #2 buildout toward H1 2027; 'Meta Compute' competitor developments",
+        "The August $5.0B convert settlement and any new financing",
+        "Token Factory/inference traction"
+      ]
+    },
+    {
+      "slug": "siemens-energy",
+      "nextReport": "2026-11-11",
+      "confirmed": true,
+      "source": "Company-announced extended Q4/FY2026 call (FY ends September 30) per the IR calendar — verify at https://www.siemens-energy.com investor pages, or the Omterra successor domain",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "FY2026 actuals vs guidance (revenue +14-16%, net income ~EUR4B, FCF ~EUR8B) and FY2027 guidance",
+        "Gas Services data-center order momentum (was book-to-bill 2.65, backlog EUR73B) and Eaton 500 MW SGT-800 alliance wins",
+        "Grid Technologies transformer capacity progress (Charlotte LPT, Mississippi switchgear)",
+        "Siemens Gamesa break-even trajectory",
+        "The 'Omterra' rebrand execution — update name/legalName fields as needed; the slug stays siemens-energy"
+      ]
+    },
+    {
+      "slug": "fluence",
+      "nextReport": "2026-11-24",
+      "confirmed": false,
+      "source": "Estimate — FY ends September 30 and Fluence has historically reported in the last week of November; not company-confirmed at arming — verify at https://ir.fluenceenergy.com",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Q4 and full-year FY2026 actuals vs guidance",
+        "Backlog and order intake",
+        "Domestic-content ramp and gross-margin trajectory"
+      ]
+    },
+    {
+      "slug": "sinexcel",
+      "nextReport": "2026-08-11",
+      "confirmed": true,
+      "source": "H1 2026 report scheduled 2026-08-11 (SZSE ChiNext: 300693). OVERDUE — the 2026-08-12 one-shot fired (SUCCEEDED) but landed no commit and the dossier still reads 'H1 2026 report not yet published as of Aug 2026'. Next after this: Q3 2026, due by the 2026-10-31 CSRC disclosure deadline.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "ADD THE MISSING PERIOD: H1 2026 actuals are absent from financials.periods[]",
+        "H1 2026 revenue/margin vs the FY2025 base",
+        "ESS PCS and charging-pile order momentum"
+      ]
+    },
+    {
+      "slug": "eve-energy",
+      "nextReport": "2026-08-20",
+      "confirmed": true,
+      "source": "H1 2026 semi-annual report (SZSE ChiNext: 300014) — expected 2026-08-18 (TradingView) or 2026-08-20 (StockAnalysis); sources conflicted at arming, so the desk confirms the actual publication date. OVERDUE — the 2026-08-21 one-shot fired (SUCCEEDED) but landed no commit. Next after this: Q3 2026, due by the 2026-10-31 CSRC disclosure deadline.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "ADD THE MISSING PERIOD: H1 2026 actuals are absent from financials.periods[] (the dossier still carries only 'Q1 2026 + H1 2026 guidance')",
+        "H1 2026 actuals vs the +95-110% YoY net-profit pre-guidance",
+        "ESS shipment volumes and 628Ah/Mr.Big ramp vs the >10 GWh 2026 guidance",
+        "Hong Kong H-share listing status (twice-filed, unconsummated as of Aug 2026)",
+        "US DoD 1260H listing (verify the Reuters original)",
+        "LG Energy Solution/Tulip ITC Section 337 case",
+        "AI data-center BBU customer wins; Malaysia/Hungary plant progress"
+      ]
+    },
+    {
+      "slug": "nvidia",
+      "nextReport": "2026-08-26",
+      "confirmed": true,
+      "source": "Q2 FY2027 results (quarter ended 2026-07-26) were company-confirmed for 2026-08-26. OVERDUE — the 2026-08-27 one-shot fired (SUCCEEDED) but landed no commit and the dossier's latest period is still Q1 FY2027 with commentary reading 'Q2 FY2027 not yet reported as of 2026-08-09'. Next after this: Q3 FY2027, tracker estimates conflict (2026-11-17 vs 2026-11-25), not company-confirmed.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "ADD THE MISSING PERIOD: Q2 FY2027 actuals are absent from financials.periods[]",
+        "Data-center segment results vs the $91B Q2 guide",
+        "Rack-power architecture signals (800 VDC rollout, Vera Rubin/Kyber timing, power-smoothing features)",
+        "Any changes to the published 800VDC partner list"
+      ]
+    },
+    {
+      "slug": "jinko",
+      "nextReport": "2026-08-27",
+      "confirmed": true,
+      "source": "JinkoSolar (NYSE: JKS) Q2 2026 released 2026-08-27 before market open (call held 2026-08-26 08:30 ET); the A-share listing (SSE STAR: 688223) filed H1 2026 by the 2026-08-31 deadline. OVERDUE — the 2026-08-28 one-shot fired (SUCCEEDED) but landed no commit and the dossier's latest period is still Q1 2026. Next after this: Q3 2026, unannounced at time of writing.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "ADD THE MISSING PERIOD: Q2/H1 2026 actuals are absent from financials.periods[]",
+        "Energy-storage 'second growth engine' (SunTera shipments/orders, grid-forming wins)",
+        "Module pricing/margin recovery vs the first loss in 12 years",
+        "US tariff exposure; the Sunny 365 AIDC initiative"
+      ]
+    },
+    {
+      "slug": "iren",
+      "nextReport": "2026-08-27",
+      "confirmed": true,
+      "source": "FY2026 annual results (fiscal year ended 2026-06-30) were company-confirmed for 2026-08-27 after close; the FY2026 Form 10-K is on EDGAR. OVERDUE — the 2026-08-28 one-shot fired and was ABANDONED (the session blocked on a permission prompt while hunting for the repo checkout); the dossier still reads 'FY2026 through Q3 ... FY report due Aug 27, 2026'. Next after this: Q1 FY2027, tracker estimate 2026-12-01, not company-confirmed.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "ADD THE MISSING PERIOD: FY2026 actuals are absent from financials.periods[]",
+        "FY2026 actuals vs consensus ($722.9M revenue / -$1.57 EPS per stockanalysis.com)",
+        "The >$4B year-end-2026 ARR bridge (~85% contracted claim)",
+        "Horizon 2-4 delivery cadence for Microsoft",
+        "Mining wind-down status (last EH/s disclosure); convert/dilution detail in the 10-K",
+        "Any Sweetwater tenant news"
+      ]
+    },
+    {
+      "slug": "sungrow",
+      "nextReport": "2026-08-29",
+      "confirmed": true,
+      "source": "H1 2026 report scheduled 2026-08-29 (SZSE: 300274, announced pre-disclosure date). OVERDUE — the 2026-08-30 one-shot fired (SUCCEEDED) but landed no commit and the dossier still reads 'H1 2026 due late August'. Next after this: Q3 2026, due by the 2026-10-31 CSRC disclosure deadline.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "ADD THE MISSING PERIOD: H1 2026 actuals are absent from financials.periods[]",
+        "PV inverter and ESS shipment volumes and margins",
+        "Data-center power positioning and overseas order mix"
+      ]
+    },
+    {
+      "slug": "byd",
+      "nextReport": "2026-08-29",
+      "confirmed": true,
+      "source": "H1 2026 interim results scheduled 2026-08-29 (SZSE: 002594 / HKEX: 1211). OVERDUE — the 2026-08-30 one-shot fired (SUCCEEDED) but landed no commit and the dossier still reads 'H1 2026 due late August'. Next after this: Q3 2026, due by the 2026-10-31 CSRC disclosure deadline.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "ADD THE MISSING PERIOD: H1 2026 actuals are absent from financials.periods[]",
+        "BYD Energy Storage (BESS) shipments and the MC Cube line",
+        "Blade/second-gen cell roadmap and overseas ESS wins"
+      ]
+    },
+    {
+      "slug": "hithium",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "ESS cell/system shipments and overseas orders",
+        "Capacity and financing milestones"
+      ]
+    },
+    {
+      "slug": "flexgen",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Project awards and software/integration wins",
+        "Ownership and financing developments"
+      ]
+    },
+    {
+      "slug": "rosendin",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Data-center electrical scope awards",
+        "Employee-ownership and revenue disclosures"
+      ]
+    },
+    {
+      "slug": "crusoe",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Campus/power contracts",
+        "Funding/valuation",
+        "Energy-stack partnerships",
+        "IPO signals"
+      ]
+    },
+    {
+      "slug": "huawei-digital-power",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Annual/interim segment figures",
+        "US/EU regulatory actions",
+        "AIDC launches",
+        "Gulf/APAC wins"
+      ]
+    },
+    {
+      "slug": "xai",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "SpaceX IPO progress - if SpaceXAI begins quarterly reporting, recommend converting xAI to a calendar row",
+        "Colossus milestones",
+        "NAACP litigation",
+        "Turbine/Megapack procurement",
+        "Anthropic agreements"
+      ]
+    },
+    {
+      "slug": "lambda",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "IPO progress - the reported H2 2026 listing window, any public S-1, pricing/valuation; if Lambda lists, recommend converting it to a calendar row",
+        "New funding/debt and terms",
+        "Microsoft-agreement execution",
+        "The NVIDIA leaseback and allocation changes",
+        "Data-center milestones - Kansas City scaling past 24 MW, new owned sites",
+        "Leadership changes under CEO Michel Combes"
+      ]
+    },
+    {
+      "slug": "turner-construction",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Hochtief quarterly disclosures for Turner revenue/PBT - no standalone filings; if Hochtief's cadence makes a calendar row cleaner, recommend it",
+        "The $20B-by-2030 data-center target",
+        "Meta Richland Parish/Lebanon IN phases",
+        "CoreWeave Lancaster; Stargate/Vantage WI",
+        "SourceBlue expansion"
+      ]
+    },
+    {
+      "slug": "hitt",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-29",
+      "watch": [
+        "Microsoft Alviso progress",
+        "QTS/Vantage/Corscale awards",
+        "The Glenstone insurance aftermath post the 2026-08-04 appeals affirmance",
+        "The Vantage Ashburn trench-collapse citation outcome",
+        "Brycon/Central integration",
+        "New-HQ delivery early 2027"
+      ]
+    },
+    {
+      "slug": "holder-construction",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-29",
+      "watch": [
+        "Google Fort Wayne/New Albany progress",
+        "EdgeCore Mesa phases",
+        "Mega-campus lineup appearances",
+        "Ownership/leadership disclosures",
+        "Georgia Power board developments"
+      ]
+    },
+    {
+      "slug": "dpr",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Stargate Abilene energization completion and new Crusoe/OpenAI awards",
+        "TIME safety-investigation fallout",
+        "CalSTRS case rulings",
+        "ENR bookings updates",
+        "WND Ventures"
+      ]
+    },
+    {
+      "slug": "mortenson",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Meta program progress across Richland Parish/Lebanon/Beaver Dam",
+        "The Hermantown MN review outcome and Google entitlement",
+        "Nor-Cal Controls integration",
+        "The Darden buildout",
+        "Gigawatt-class substation awards"
+      ]
+    },
+    {
+      "slug": "bechtel",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "NVIDIA Omniverse DSX progress toward first deployed AI-factory modules",
+        "Natrium and Poland AP1000 milestones",
+        "LNG train deliveries and the Port Arthur fatality litigation/OSHA outcomes",
+        "Sentinel re-baselining",
+        "Micron Clay NY",
+        "Annual impact-report figures against the $20.6B/$58.2B 2024 baseline"
+      ]
+    },
+    {
+      "slug": "kiewit",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Homer City first power (2027) and turbine deliveries",
+        "The NRG/GE Vernova venture's expected 2026 data-center offtake announcement",
+        "Oklo Aurora progress toward 2027-28 commissioning",
+        "Grain Belt financing status",
+        "The Key Bridge Phase 2 rebid outcome",
+        "US-Japan framework project assignments"
+      ]
+    },
+    {
+      "slug": "burns-mcdonnell",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "The annual April revenue/ENR release",
+        "Santee Cooper-template utility-side data-center transmission awards",
+        "The Certus/1898 & Co. MWBE suit disposition",
+        "RICE/bridge-power awards"
+      ]
+    },
+    {
+      "slug": "black-veatch",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Cascade SMR JV progress",
+        "Client-owned substation expansion and any first named behind-the-meter AI-campus gas award",
+        "The Boldt retrial outcome",
+        "Annual revenue vs the ~$5B 2025 baseline"
+      ]
+    },
+    {
+      "slug": "vantage",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "The Reuters-reported ~$100B IPO/sale exploration - if Vantage lists, recommend converting it to a calendar row",
+        "Frontier's first-building delivery (H2 2026 target) and Lighthouse buildout toward 2028",
+        "New Stargate/hyperscaler awards",
+        "Refinancing progress on the ~$38B JPMorgan/MUFG Stargate bank package",
+        "The Port Washington referendum litigation (MMAC suit) and Lighthouse TIF status",
+        "Whether the customary January annual growth recap returns",
+        "France/Altarea and Nebius CWL1 execution"
+      ]
+    },
+    {
+      "slug": "aligned",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "AIP integration and deployment of the $5B closing growth commitment",
+        "Project Caprock LBB-01 first service (Q1 2027 target)",
+        "Securitization cadence under the new owners",
+        "Any first company-named hyperscaler tenant",
+        "DeltaFlow liquid retrofits at scale",
+        "ERCOT/Texas interconnection-audit fallout",
+        "ODATA/LatAm expansion"
+      ]
+    },
+    {
+      "slug": "qts",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "Whether the $10B-class campus-announcement cadence holds",
+        "Community-consent outcomes (the Blakely priced-consent template vs another DeForest-style loss)",
+        "Cambois UK 720MW progress",
+        "Replication of the Hall County/Lancium power-developer-holds-the-land structure",
+        "Further IG issuance after the $4.6B Baa2 green bond",
+        "Microsoft 'superfactory' confirmations",
+        "Greason/Robey co-CEO stability"
+      ]
+    },
+    {
+      "slug": "switch",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "IPO execution - a public S-1, pricing vs the press-reported $50-80B-including-debt range; if Switch lists, recommend converting it to a calendar row",
+        "First EVO AI-factory tenant go-lives at 2MW/rack",
+        "Conversion of the 12GW non-binding Oklo master agreement into binding PPAs",
+        "Beaver County PA numbers and timeline",
+        "Thomas Morton's status (absent from the March 2026 executive page with no announcement)",
+        "Usage of the $3.5B performance-LC facility"
+      ]
+    },
+    {
+      "slug": "stack-infrastructure",
+      "cadence": "quarterly",
+      "source": "Private or unit-level; no earnings calendar. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-08-30",
+      "watch": [
+        "The Bloomberg-reported >$30B APAC portfolio sale",
+        "Amazon Louisiana execution beyond $18B and any further raises",
+        "Project Jupiter (Stargate NM) buildout",
+        "Further stabilized-asset drop-downs into Blue Owl's perpetual REIT",
+        "EMEA restructuring under founder Cox after the Apollo colo carve-out",
+        "Americas master-trust ABS cadence"
+      ]
+    }
+  ]
+}
