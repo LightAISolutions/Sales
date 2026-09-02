@@ -1,4 +1,4 @@
-var VERSION = "v01.06g";
+var VERSION = "v01.07g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -486,6 +486,18 @@ function clLessonVisible_(sess, lesson) {
   return !!cap && clCan_(sess, cap);
 }
 
+// CONTENT START — the pipeline's write set inside this file
+// Everything between this marker and // CONTENT END is the *content region*:
+// the clLesson<Name>_() / clTrack<Name>_() literals and the two registries,
+// and nothing else. An unattended C2 pipeline run may write here and on the
+// VERSION line at the top of the file — nowhere else in this project, and
+// nothing at all outside the write set of CLASSROOM-COMMITTER-CONTRACT.md §3.
+// scripts/check-classroom-pipeline.py asserts a pipeline diff stays inside
+// these markers (P2); scripts/check-classroom-content.py asserts no lesson or
+// track literal is ever defined outside them, which is what keeps the fence an
+// allowlist rather than a suggestion. Do not move a marker to admit an edit:
+// the gate derivation below the fence is frozen precisely so a stamp can be
+// checked rather than trusted.
 // ── The first tracks, assembled from the existing corpus (C1) ─────────────
 // Four public-stamped modules authored from the company study guides and the
 // public concepts registry, plus one guidance-stamped module built on the BESS
@@ -1982,6 +1994,7 @@ function clLessons_() {
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackAidcPowerPrimer_()];
 }
+// CONTENT END — below here the gate derivation is frozen for pipeline runs
 function clLesson_(id) {
   var all = clLessons_();
   for (var i = 0; i < all.length; i++) if (all[i].id === id) return all[i];

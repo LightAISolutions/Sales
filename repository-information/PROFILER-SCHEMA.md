@@ -213,7 +213,7 @@ The **shared public glossary** for study guides: one definition per core BESS/AI
 | `concepts[].def` | string | yes | 1–3 sentence tooltip definition, high-school-STEM baseline, public-safe, no figures that need their own citation |
 | `concepts[].aliases[]` | string[] | no | Alternate spellings that resolve to the same definition ("lithium iron phosphate" for LFP). Case-insensitive; must not collide with another concept's term or aliases |
 
-Add a concept when study guides use it or are about to (the initial set seeds the core BESS/AIDC vocabulary the corpus already teaches) — the registry is a vocabulary in use, not an encyclopedia. `scripts/check-profiler-study.py` validates the registry shape and flags term/alias collisions and unresolved `{{term}}` references. The file deploys with the site like all `profiler-data/` files (public-safe content only).
+The registry carries **no revision date** — see "Registry revision signals" below for the date the Classroom pipeline reads for `concepts:profiler-concepts`. Add a concept when study guides use it or are about to (the initial set seeds the core BESS/AIDC vocabulary the corpus already teaches) — the registry is a vocabulary in use, not an encyclopedia. `scripts/check-profiler-study.py` validates the registry shape and flags term/alias collisions and unresolved `{{term}}` references. The file deploys with the site like all `profiler-data/` files (public-safe content only).
 
 ## Report schema — `reports/<id>.report.json`
 
@@ -297,9 +297,32 @@ The ecosystem's recurring **named projects** (Stargate, Colossus, Homer City…)
 | `projects[].parent` | string | no | **Registry v2.** Slug of the umbrella project this one belongs to (Frontier/Lighthouse/Project Jupiter → `stargate`), so sub-campus pins still roll up to the program. The renderer surfaces it in the ⚑ chip tooltip ("part of Stargate"). **Pin precision rule**: a relationship whose substance is one specific sub-campus pins the child; an engagement spanning several of a program's campuses pins the parent program |
 | `projects[].note` | string | yes | Neutral one-liner orienting the reader — who leads it and what it is. No figures, no claims that need their own citation: anything source-worthy belongs in a dossier |
 
-Add a project only when at least one dossier's `relationships[]` is ready to reference it — the registry is an index of pins in use, not a research surface. `build-profiler-graph.py` warns when a curated `project` slug is missing from the registry. The file deploys with the site like all `profiler-data/` files.
+Entries carry **no revision date** — see "Registry revision signals" below for the date the Classroom pipeline reads for `project:<slug>`. Add a project only when at least one dossier's `relationships[]` is ready to reference it — the registry is an index of pins in use, not a research surface. `build-profiler-graph.py` warns when a curated `project` slug is missing from the registry. The file deploys with the site like all `profiler-data/` files.
 
 **Scraper interest seed (registration-time sync, Layer 3 — 2026-08-30).** Every registered project also gets a matching interest-topic seed in `SCRAPER_INTEREST_TOPIC_SEEDS` (`googleAppsScripts/Scraper/Scraper.gs`) — `key: 'topic-<project-slug>'`, a label naming the project, precise search `terms` (multi-word phrases; a bare common word like "Frontier" or "Lighthouse" pads topic bands on unrelated articles), and `source: 'project:<slug>'` — mirroring the guidance-module seed convention in `.claude/rules/industry-guidance.md` step 9. When registering a new project, add the seed in the same commit (Scraper GAS version bump applies). Seeds are one-time sheet inserts: the developer's in-sheet edits win afterwards (see `.claude/rules/scraper-sources.md`).
+
+## Registry revision signals — the undated layers
+
+Most corpus layers carry their own revision date (`lastUpdated` on a profile or study guide, `built` on the graph, `updated` on a guidance module, `generated` on a report). **`profiler-projects.json` and `profiler-concepts.json` do not** — neither the file nor its entries carry one. That gap was found while writing `CLASSROOM-COMMITTER-CONTRACT.md` (§6.1, handed to C2b as item 2) because the Classroom pipeline's refresh rule (G1) needs a comparable date for every layer a lesson pins.
+
+**The decision (C2b, 2026-09-02): the layer's revision date is the file's last commit date.** No `updated` field is added to either registry.
+
+```
+git log -1 --format=%cs -- live-site-pages/profiler-data/profiler-projects.json
+git log -1 --format=%cs -- live-site-pages/profiler-data/profiler-concepts.json
+```
+
+`%cs` is the committer date as `YYYY-MM-DD`, which is exactly the pin format. Read it on the base revision the run started from (`origin/main`), not on a dirty working tree.
+
+Why the file date rather than a per-entry `updated`:
+
+- **A per-entry date cannot serve the concepts layer at all.** `concepts:profiler-concepts` is a *fixed* ref — the whole registry is one identity, the way `graph:profiler-graph` is. There is no entry to date. Any per-entry scheme would still need a file-level answer here, so it could never be the single mechanism
+- **A field a human must remember to set fails in the unsafe direction.** A forgotten `updated` makes a changed source look unchanged, and a lesson built on it is never re-examined — silent staleness. A commit date cannot be forgotten. The file date over-triggers instead: it makes every lesson pinned to the layer a *candidate* whenever the file is touched for any reason, and candidacy is cheap — G3 ("contradiction, not novelty") still requires the run to name the taught claim that moved before anything is written, and the blast-radius caps bound a bad week
+- **Both registries are deliberately lightweight** — an index of pins in use and a vocabulary in use, not research surfaces. A maintenance field on every entry is exactly the weight their schemas were written to avoid
+
+**Fail-closed.** If the commit date cannot be determined — a shallow clone with no history for the path — the layer is **unknown** for that run (`CLASSROOM-COMMITTER-CONTRACT.md` §5.2) and every lesson pinned to it is frozen. It is never assumed to be today's date, and never assumed unchanged. Unshallowing first (`git fetch --unshallow`) is the fix, the same one CHANGELOG archive rotation already needs.
+
+**If a per-entry date is ever wanted anyway** it is additive under "Extending the schema" below — `projects[].updated` / `concepts[].updated`, `schemaVersion` bumped, absent meaning "fall back to the file date". Nothing here forecloses it; the pipeline simply does not depend on it.
 
 ## Extending the schema
 

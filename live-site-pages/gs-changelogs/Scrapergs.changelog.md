@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Scrapergs.changelog-archive.md](Scrapergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 45/50`
+`Sections: 46/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.99g] — 2026-09-02 02:41:00 AM EST — v04.22r
+
+### Added
+- Stored articles now carry a short, stable identifier alongside their link, so other tools in the suite can refer to the same story reliably over time.
+
+### Fixed
+- Two copies of the same story filed under slightly different links are now recognised as one.
 
 ## [v01.98g] — 2026-09-01 05:38:51 PM EST — v04.08r
 

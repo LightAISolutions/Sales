@@ -1,4 +1,4 @@
-var VERSION = "v01.98g";
+var VERSION = "v01.99g";
 var TITLE = "News Scraper";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -4021,6 +4021,11 @@ function scHandleCorpus_(e) {
   var cop = String(p.cop || '');
   var limit = Math.max(1, Math.min(200, Number(p.limit) || 60));
   if (cop === 'timeline') {
+    // Every item carries `key` — scArticleKey_'s base36 digest of the
+    // normalised URL, which is also the dedupe identity. It is the stable,
+    // charset-safe name a peer system cites an item by: Classroom's
+    // `corpus:<item-key>` provenance ref requires an id matching CL_REF_RE
+    // ([A-Za-z0-9][A-Za-z0-9._-]{0,127}), which a URL can never satisfy.
     var slug = String(p.slug || '').trim().toLowerCase();
     if (!slug) return { success: false, error: 'slug_required' };
     var sinceMs = p.since ? new Date(String(p.since)).getTime() : 0;
@@ -9153,10 +9158,17 @@ function scTimelineScan_(want, sinceMs, max) {
       var ts = new Date(String(data[i][4])).getTime();
       if (ts && ts < sinceMs) continue;
     }
-    var ak = String(sig.ak || data[i][1]);
+    // `ak` is the article key scDigestIngest_ stored in the signals blob; the
+    // fallback recomputes it from the URL for legacy rows written before the
+    // blob carried one (the same fallback scDigestEdgeCandidates_ uses). It
+    // must be the key rather than the raw URL: the key is both the dedupe
+    // identity and the item's public name on this route, and a URL fits
+    // neither Classroom's CL_REF_RE id charset nor a stable identity (http vs
+    // https, trailing slash and tracking query strings all name one story).
+    var ak = String(sig.ak || scArticleKey_(String(data[i][1])));
     if (seenAk[ak]) continue;   // same story stored by another edition's build
     seenAk[ak] = true;
-    out.push({ url: String(data[i][1]), title: String(data[i][2]),
+    out.push({ key: ak, url: String(data[i][1]), title: String(data[i][2]),
       source: String(data[i][3]), publishedAt: String(data[i][4]),
       score: Number(data[i][6]) || 0, summary: String(data[i][8] || ''),
       analysis: String(data[i][11] || ''), event: String(sig.evt || ''),

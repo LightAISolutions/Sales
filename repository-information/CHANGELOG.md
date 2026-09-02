@@ -3,11 +3,51 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 74/100`
+`Sections: 75/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.22r] — 2026-09-02 02:41:00 AM EST
+
+> **Prompt:** "Picking up from my last session, run C2b — the pipeline machinery — on Opus 5 Extra, working the contract's §10 in order: expose a stable item key on the Scraper timeline route, decide the undated-layer signal for projects and concepts, add the content fence to Classroom.gs, write check-classroom-pipeline.py with its twelve assertions and a failing fixture for each, create the ledger, and only then arm the weekly Routine. Read CLASSROOM-COMMITTER-CONTRACT.md first."
+
+### Added
+
+**`scripts/check-classroom-pipeline.py` (new) — the diff-aware judge of `CLASSROOM-COMMITTER-CONTRACT.md` §7 (item 10.4).** Run as `--base origin/main` against the working tree; `check-classroom-content.py` validates a *state*, this validates a *change*.
+
+- **P1** changed paths ⊆ the write set (§3) · **P2** the `Classroom.gs` diff lies inside `// CONTENT START` … `// CONTENT END` plus exactly the `VERSION` line (§3.1) · **P3** the gate surface digests identically base → head and matches the ledger's `gateDigest` (§4.2, §5.1) · **P4** `CL_PROVENANCE_REF_KINDS` / `CL_PROVENANCE_STRICTNESS` / `CL_PROVENANCE_CAPS` byte-identical, and no `note` (§4.3)
+- **P5** every lesson, track and section id survives; registries and track `lessons[]` are prefix-preserving (§4.4, G12) · **P6** every surviving lesson's derived gate is unchanged, computed by running the snapshot's own PROJECT region in Node rather than re-implementing the fold (G6) · **P7** pins monotone, `updated` advances when content moved, exactly one `revisions[]` entry appended whose `changed[]` are real section ids, `reviewBy` ≥ `updated` (G1, G4, G5, G13) · **P8** `changed[]` equals the set of sections that actually differ, and a whitespace-only edit is an error (G3, G4)
+- **P9** a new briefing's id names its `edition`, the edition sits in `(coveredThrough, today]`, and the ledger's watermark follows it (G9, G10) · **P10** blast-radius caps — ≤ 1 briefing, ≤ 1 module, ≤ 3 revisions, ≤ 1 track, no lesson revised twice (§5.3 step 6) · **P11** the deployed GAS changelog names no gated lesson title and no corpus ref (§3.2, changelog-security) · **P12** `VERSION` and `Classroomgs.version.txt` move together by exactly one step ([PC-GS-VERSION] #1)
+- **`--selftest` runs thirteen fixtures**: one **positive** — a well-formed pipeline commit, which must report nothing — and one negative per assertion, each being the positive with a single forbidden mutation applied (a path outside the write set, an edit outside the fence, the gate derivation altered, a `note` prefix, a removed section id, an input that raises the gate, a backwards pin, an unnamed rewrite, a briefing behind the watermark, a fourth revision, a gated title in the public changelog, a double version step). The suite refuses to run if any of P1–P12 lacks a fixture. All 13 pass
+- Parsing scans a *masked* copy of the `.gs` — comment bodies and string contents blanked, length preserved — so an apostrophe in a comment or a brace in a string cannot throw off brace matching, while byte-identical comparisons still read the original text
+
+**`repository-information/classroom-pipeline-ledger.json` (new) — the pipeline's run record (item 10.5).** `coveredThrough` `2026-09-01` (the newest lesson `updated` at creation), `gateDigest` computed by the new checker over the 32 §4.2 symbols, `lastRun` `null` — no committing run has happened yet. Not deployed, so it may name gated identities.
+
+**`repository-information/PROFILER-SCHEMA.md` — new section "Registry revision signals — the undated layers" (item 10.2).** The decision: `profiler-projects.json` and `profiler-concepts.json` are dated by **file commit date** (`git log -1 --format=%cs`), not a per-entry `updated`. A per-entry date cannot serve `concepts:profiler-concepts` at all — it is a whole-file identity like the graph — and a field a human must remember to set fails in the unsafe direction, where a forgotten date makes a changed source look unchanged. The file date over-triggers candidacy instead, which G3 ("contradiction, not novelty") and the blast-radius caps already bound. An undeterminable date (shallow clone) makes the layer **unknown** for that run, never "today" and never "unchanged".
+
+### Changed
+
+**`googleAppsScripts/Scraper/Scraper.gs` v01.98g → v01.99g — a stable corpus item key on the timeline route (item 10.1).**
+
+- `scTimelineScan_` now emits `key` on every item: `scArticleKey_`'s base36 digest of the normalised URL, which is also the route's dedupe identity. Without it no `corpus:<item-key>` provenance ref could ever be written — the route identified items by `url`, and a URL can satisfy neither `CL_REF_RE`'s id charset nor a stable identity (http vs https, trailing slash and tracking query strings all name one story)
+- The dedupe fallback for legacy rows whose signals blob predates `ak` changed from the raw URL to `scArticleKey_(url)` — the same fallback `scDigestEdgeCandidates_` already uses two thousand lines earlier. Consequence beyond consistency: two records of one story filed under different URL spellings now collapse to one row, and the emitted `key` is unique within a response
+
+**`googleAppsScripts/Classroom/Classroom.gs` v01.06g → v01.07g — the content fence (item 10.3).** `// CONTENT START` / `// CONTENT END` now bracket the `clLesson<Name>_()` / `clTrack<Name>_()` literals and both registries, making the committer's in-file write set mechanical rather than a line range. No behaviour changed: the gate-surface digest is identical before and after.
+
+**`scripts/check-classroom-content.py` — `check_fence()`.** Errors on any lesson or track literal, or either registry, defined outside the fence. Checked on every *state*, not only on a diff: a literal below `// CONTENT END` could never be revised by a run without tripping P2, and a new one written there would sit in the frozen gate region.
+
+**`.claude/rules/classroom-app.md` — the `gateDigest` obligation is now actionable.** It names the gate surface (the 32 `GATE_SYMBOLS`, comments included), gives the command that recomputes and writes the digest, and tells a developer session to run the pipeline checker before pushing and refresh on a P3 mismatch. Adds the fence to "Where content lives" and both new checker invocations to the verification set.
+
+**`repository-information/CLASSROOM-COMMITTER-CONTRACT.md` — §10 "Settled in C2b".** One row per handed item recording where each decision now lives, including **10.7 deferred**: the admin-only in-app "curriculum current through …" surface waits for C3 and the ledger is **not** mirrored into a Script Property — that would add a write target the checkers cannot judge, since a Script Property leaves no diff.
+
+### Notes
+
+- **The Routine is armed for Wednesday 11:00 UTC (07:00 ET), weekly**, fresh session per fire, `notifications: { push: true, email: true }`, prompt carrying the contract by path and a budget, no corpus token. **Its pre-flight stands the run down until C2c lands**: the prompt requires an "Authoring a pipeline lesson" section in `.claude/rules/classroom-app.md` and reports `STAND-DOWN` when it is absent, so the first fires are safe no-ops rather than curriculum authored without the C2c bar. Delete that one pre-flight line from the Routine prompt to lift it
+- This developer commit **fails P1 by design** — it writes seven paths outside the committer's write set. No assertion was softened to make the repo pass
+- Verification: `check-classroom-content.py` clean (5 lessons, 2 tracks, 123 gate cases, 0 errors, 0 warnings) · `check-classroom-pipeline.py --selftest` 13 fixtures, 0 failures · `node --check` on both `.gs` files · `check-gas-inner-scripts.js` 9 files, 86 blocks
+- `Classroom.gs VERSION v01.06g → v01.07g` · `Scraper.gs VERSION v01.98g → v01.99g`
 
 ## [v04.21r] — 2026-09-02 02:01:40 AM EST
 

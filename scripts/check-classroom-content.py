@@ -6,7 +6,9 @@ googleAppsScripts/Classroom/Classroom.gs and validates both schemas — see
 repository-information/CLASSROOM-SCHEMA.md (the single source of truth).
 Stamps are checked against the prefix table read from the .gs itself
 (CL_PROVENANCE_REF_KINDS / CL_PROVENANCE_STRICTNESS), so this script cannot
-drift from the code it validates. It then loads the PROJECT region into Node
+drift from the code it validates. Every literal must sit inside the
+`// CONTENT START` … `// CONTENT END` fence (CLASSROOM-COMMITTER-CONTRACT.md
+§3.1) — the region an unattended pipeline run may write. It then loads the PROJECT region into Node
 and asserts the stamp → gate truth table (clStampKinds_ → clGateForProvenance_
 → clLessonVisible_ per tier, plus per-tier index filtering) against fixtures.
 
@@ -158,6 +160,38 @@ def parse_literals(src, prefix):
         except ValueError as e:
             err("%s(): literal is not strict JSON — %s" % (name, e))
     return out
+
+
+def check_fence(src):
+    """The content fence — `// CONTENT START` … `// CONTENT END` in Classroom.gs.
+
+    CLASSROOM-COMMITTER-CONTRACT.md §3.1 makes the fence the unattended
+    pipeline's write set inside this file, and check-classroom-pipeline.py (P2)
+    asserts a pipeline diff stays inside it. That assertion is only worth
+    anything if every lesson and track literal actually lives there: a literal
+    defined below // CONTENT END could never be revised by a run without
+    tripping P2, and a *new* one written there would sit in the frozen gate
+    region. So the fence is checked here, on every state, not only on a diff.
+    """
+    starts = [m.start() for m in re.finditer(r"^// CONTENT START\b", src, re.M)]
+    ends = [m.start() for m in re.finditer(r"^// CONTENT END\b", src, re.M)]
+    if len(starts) != 1 or len(ends) != 1:
+        err("content fence: expected exactly one `// CONTENT START` and one "
+            "`// CONTENT END` in %s, found %d and %d" % (GS.name, len(starts), len(ends)))
+        return
+    a, b = starts[0], ends[0]
+    if a >= b:
+        err("content fence: `// CONTENT END` precedes `// CONTENT START`")
+        return
+    for m in re.finditer(r"^function (cl(?:Lesson|Track)[A-Z]\w*_)\(\) \{", src, re.M):
+        if not (a < m.start() < b):
+            err("%s() is defined outside the content fence — every lesson and "
+                "track literal belongs between // CONTENT START and // CONTENT END"
+                % m.group(1))
+    for reg in ("clLessons_", "clTracks_"):
+        m = re.search(r"^function %s\(\) \{" % reg, src, re.M)
+        if m and not (a < m.start() < b):
+            err("%s() is defined outside the content fence" % reg)
 
 
 def registered(src, registry):
@@ -602,6 +636,7 @@ def main():
     if lesson_ver is None or track_ver is None:
         err("schema version constants not found")
 
+    check_fence(src)
     lessons = parse_literals(src, "clLesson")
     tracks = parse_literals(src, "clTrack")
     reg_l = registered(src, "clLessons_")
