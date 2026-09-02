@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 93/100`
+`Sections: 94/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.14r] — 2026-09-02 12:20:16 AM EST
+
+> **Prompt:** "I literally copy-pasted the same GITHUB_TOKEN value from my Scraper GAS to my Classroom GAS. Check to make sure it is correct. Then, my Deployment ID is: AKfycbzgrjTjU_lRoMsBzH2CIjZsqXmoN9PJMqSYawhARg9FkvjmxbyX0k85X0Q6Ud9mL3gy Then, give me step-by-step instructions to close out deploying the Classroom GAS project. Then, recommend me to continue building out Classroom in phases with recommended Claude model."
+
+### Added
+
+**Classroom's deployment ID recorded — the bootstrap gap closed.** The GAS project has been created and deployed manually; recording its id is the second of the two touches that flow requires, and it is what turns every future push into a self-deploying one.
+
+- **`googleAppsScripts/Classroom/Classroom.config.json`** — `DEPLOYMENT_ID` set (was the `YOUR_DEPLOYMENT_ID` placeholder). This is the single source of truth; the workflow's `Deploy Classroom` step reads it with `jq` at merge time and stops no-opping from this push forward
+- **`googleAppsScripts/Classroom/Classroom.gs` (v01.02g → v01.03g)** — `var DEPLOYMENT_ID` synced to match, per [PC-GAS-CONFIG] #14
+- **`live-site-pages/Classroom.html` (v01.01w → v01.02w)** — `var _e` set to the reversed + base64 `/exec` URL, so `_gasPost` finally resolves a base URL and `clApi` can reach the `action=classroom` ops
+
+### Verified
+
+- **The `_e` decode was checked end to end in a headless browser**, not just written: the iframe is created, `dataset.baseUrl` decodes to exactly the expected `/exec` URL, and the deployment id round-trips through `rev | base64` intact
+- **The iframe layering seam, flagged last push as untested, now runs with a real deployment id.** With `_e` non-empty the template injects its fixed full-viewport iframe at `z-index: 1`; the curriculum still renders both tracks above it, and an `elementFromPoint` hit-test at a track title returns the page's own `H3` rather than the iframe — the `z-index: 2` decision holds and the template block still needs no modification
+- **The deployment id's 72-character length was checked against the four already-deployed projects** rather than assumed: Receipts is also 72, MasterACL / Profiler / Scraper are 74, so the length is in range and the paste was not truncated
+
+### Worth noting (no change made)
+
+- **`repository-information/ENTERPRISE-SETUP.md`'s "Current GAS Auto-Deploy Token" record is stale and internally inconsistent** — its header says "5 GAS projects", its list names three, and its **Repository access** row reads `LightAISolutions/lightaisolutions` (the template repo) even though every `.gs` in this repo pulls from `LightAISolutions/Sales`. Profiler and Scraper, both deployed and self-updating, are absent from the list. Left unedited on purpose: correcting it means knowing which token each project actually holds, which is a Script-Property fact only the developer can read
 
 ## [v04.13r] — 2026-09-01 11:14:26 PM EST
 

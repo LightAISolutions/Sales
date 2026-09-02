@@ -1,10 +1,10 @@
-var VERSION = "v01.02g";
+var VERSION = "v01.03g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
 var GITHUB_BRANCH = "main";
 var FILE_PATH     = "googleAppsScripts/Classroom/Classroom.gs";
-var DEPLOYMENT_ID = "YOUR_DEPLOYMENT_ID";
+var DEPLOYMENT_ID = "AKfycbzgrjTjU_lRoMsBzH2CIjZsqXmoN9PJMqSYawhARg9FkvjmxbyX0k85X0Q6Ud9mL3gy";
 var EMBED_PAGE_URL = "https://lightaisolutions.github.io/Sales/Classroom.html";
 
 // Derive the parent page's origin from EMBED_PAGE_URL for postMessage targeting.

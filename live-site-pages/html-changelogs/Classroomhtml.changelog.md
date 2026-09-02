@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 1/50`
+`Sections: 2/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.02w] — 2026-09-02 12:20:16 AM EST — v04.14r
+
+### Added
+- The Classroom is now connected to its backend, so tracks and lessons load for signed-in accounts instead of reporting that content is not connected yet
 
 ## [v01.01w] — 2026-09-01 11:14:26 PM EST — v04.13r
 
