@@ -6,6 +6,49 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-02 03:17:49 AM EST
+**Repo version:** v04.23r
+**Branch:** `claude/classroom-pipeline-authoring-rules-wxl3n6`
+
+**What we worked on (one push, v04.23r — C2c, the authoring prompt, on Fable 5.1 High as a fresh session):**
+
+- **`.claude/rules/classroom-app.md` — new section "Authoring a pipeline lesson"** (~95 lines, eight sub-sections), written *to* the twelve assertions of `scripts/check-classroom-pipeline.py`: the shape of a run (pin table → fetch every ref once → classify unchanged / moved / unknown → decide per lesson → decide the briefing → apply the P10 caps ranked by size of contradiction → one write); the **G3 contradiction test** — a revision exists only when the run can write, per section id, *"section `<id>` teaches X; `<ref>` now says Y"* with X actually in that section and Y on the fetched document; **`changed[]` = exactly P8's differs set** (existing ids only, newly appended sections never listed, one entry per run, `updated` = run date, `reviewBy` from the new material's gate); **the briefing** (`edition` = run date so `briefing-<edition>` is deterministic under G10; a G11 *item* is one dated, stated development, a *source* one distinct `ref`; ≥ 3 / ≥ 2 counted **after** the gate is chosen); the new-module exception; **G2 / G7 / §5.2 as the run's own obligations** with per-prefix ref-resolution rules; the eight-step write in checker order; an assertion → rule table
+- **Two readings the section fixes that the contract left open** — both the stricter one: (1) a source that moved without contradicting anything leaves the lesson untouched **pin included** (G3's "does not change" read strictly; the G8 report swap is the only pin move without a section change; the re-examination next week is intended idempotence), (2) `title`, `short`, `group`, `type`, `edition`, `tiles[]`, `glossary[]`, `schemaVersion` are **frozen for the run** because contract §3.1 item 2's permitted-edit list omits them and no assertion watches them — a contradicted tile or glossary entry is reported under `Needs the developer`, never edited
+- **Recorded:** `CLASSROOM-COMMITTER-CONTRACT.md` §10 "Settled in C2c (2026-09-02)"; `PHASE6-CLASSROOM-DESIGN.md` C2 status → C2a, C2b, C2c done, pipeline live; `CLAUDE.md` Reference Files row and README tree entry for `classroom-app.md`
+- **The Routine's C2c pre-flight gate was deleted** from `trig_017pcCGpj1fkNYcUyCXPY3Wd`'s prompt (`update_trigger`, 07:15 UTC) — the prompt is otherwise byte-identical: no corpus token, 45-min / 120-turn budget, the three READ FIRST documents in the same order. **No Classroom code, ledger or `gateDigest` moved**; `--selftest` 13/13 and `check-classroom-content.py` 0/0 re-confirmed
+
+**Where we left off:**
+
+- **C2 is complete and live.** v04.23r merged to `main` (commit `5e5ad0b`). The first real run fires **today, Wednesday 2026-09-02 11:06 UTC (07:06 ET)** — the first fire whose pre-flight is the contract's own §5.1 rather than a stand-down. Push + email notification will carry its §5.4 report
+- **Expected first outcome:** with no corpus token the corpus layer is *not read*, so a briefing can only come from dossier / study / guidance / registry / graph / report movement inside `(2026-09-01, 2026-09-02]` — most likely a `STAND-DOWN` with a real `Sources seen:` line, which is itself the measurement C2 needs
+- Nothing is pending from this session
+
+**Key decisions made:**
+
+- **The prompt is written to the checkers, not alongside them** — every rule names the assertion that judges it, and the closing table pairs P1–P12 with the run's behaviour, so a future change to an assertion has one place to update in the prose
+- **`edition` = the run date**, not the newest item's date: the window is `(coveredThrough, runDate]`, so the run date is what closes it, and it is what makes the briefing id deterministic for a re-fire after a lost push (G10)
+- **G11 counted after the gate decision** — an item left out because its source would raise the briefing's gate does not count toward the three; the run picks the edition's tier first (public-only → analyst-visible; one guidance/corpus/briefing input → contributor+; one report → admin-only) and admits only inputs at or below it
+- **No number moved** — G11 (3 / 2) and the §5.3 caps stay as the contract set them; the section says a developer may raise them, never lower them
+- **Model plan held:** C2c on Fable 5.1 High (done); the weekly runs on Opus 5 High, measured against the contract's caps and budget
+
+**Active context:**
+
+- Repo **v04.23r** · Classroom **v01.04w** / **v01.07g** · Scraper **v01.71w** / **v01.99g** · Profiler **v01.79w** / **v01.33g**
+- Capacity: repo CHANGELOG **76/100**; `Scrapergs.changelog.md` **46/50**; `Classroomgs.changelog.md` **7/50**; `Profilerhtml.changelog.md` still **50/50** — the next Profiler page change forces its rotation
+- Ledger: `coveredThrough` `2026-09-01`, `lastRun` `null` — left for the first committing run to write
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
+- **Verification set for any Classroom change:** `python3 scripts/check-classroom-content.py`, `python3 scripts/check-classroom-pipeline.py --selftest` (13/13), `python3 scripts/check-classroom-pipeline.py --base origin/main` (P1 noise expected on a developer commit; **P3 is not** — refresh `gateDigest`), `node --check` on a `.js` copy of `Classroom.gs`, `node scripts/check-gas-inner-scripts.js`
+- **Still flagged, not fixed:** `ENTERPRISE-SETUP.md`'s token record is stale (needs the developer to read the Script Property); the template-wide first-sign-in self-denial (Setup Step 14 trap) is documented but not designed out
+
+**Recommendation for next session:**
+
+- Read the §5.4 report from today's 07:06 ET pipeline run (push/email notification; session title prefixed `BLOCKED —` if it blocked) against the contract's caps and the 45-minute / 120-turn budget, and spot-check the one thing the checkers cannot: that every `ref@date` a `COMMIT` names in CHANGELOG matches the document it claims to have fetched. If it reports `BLOCKED` on P3, the ledger's `gateDigest` is stale against `main` — refresh it with the command in `.claude/rules/classroom-app.md`, not anything in the run. If it reports `STAND-DOWN`, note the `Sources seen:` counts — that is the first measurement of how much the corpus moves week to week, and decides whether the Wednesday cadence and the no-token default hold.
+
+**To continue:** type `review the first pipeline run`
+
+## Previous Sessions
+
+### Session — 2026-09-02 (C2b — the pipeline machinery — v04.22r)
 **Date:** 2026-09-02 03:01:02 AM EST
 **Repo version:** v04.22r
 **Branch:** `claude/classroom-pipeline-c2b-x7f4e2`
@@ -49,49 +92,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run **C2c — the authoring prompt** on **Fable 5.1 High** as a fresh session: add an **"Authoring a pipeline lesson"** section to `.claude/rules/classroom-app.md`, written against `CLASSROOM-COMMITTER-CONTRACT.md` and the twelve assertions that now mechanically enforce it — in particular what makes newer material a **contradiction** under G3 rather than novelty, how to name `revisions[].changed[]` so P8's "differing sections == changed[]" equality holds, the G11 minimum-material bar for a briefing (≥3 qualifying items across ≥2 sources), and the three guarantees no checker can see (G2 read-before-re-pin, G7 ref resolution, §5.2 read-phase honesty). Read the contract and `scripts/check-classroom-pipeline.py`'s assertion list first — the prompt is written *to* the checkers, not alongside them. Finish by deleting the "PRE-FLIGHT GATE — C2c" paragraph from Routine `trig_017pcCGpj1fkNYcUyCXPY3Wd` so the next Wednesday run is a real one.
 
 **To continue:** type `build C2c — the authoring prompt`
-
-
-## Previous Sessions
-
-### Session — 2026-09-02 (C2a — the unattended-committer contract — v04.21r)
-**Date:** 2026-09-02 02:17:43 AM EST
-**Repo version:** v04.21r
-**Branch:** `claude/c2a-unattended-committer-spec-0d10mk`
-
-**What we worked on (one push, v04.21r — C2a, the unattended-committer contract, design only, on Fable 5.1 Extra as a fresh session):**
-
-- **`repository-information/CLASSROOM-COMMITTER-CONTRACT.md` (new, ten sections)** — the contract a scheduled Classroom pipeline run is held to. **§3 write set (closed):** the *content region* of `Classroom.gs` (the `clLesson*_()` / `clTrack*_()` literals + the two registries — C2b fences it with `// CONTENT START` / `// CONTENT END`), the `VERSION` line, the GAS version/changelog files, the repo CHANGELOG (+ archive), `repository.version.txt`, two lines of `README.md`, and a new `classroom-pipeline-ledger.json`. Deliberately excluded: `SESSION-CONTEXT.md` (weekly auto-reconstruction would flush the developer's handoff under the 2-session cap), `REMINDERS.md`/`TODO.md`, `Classroom.html`, the whole corpus
-- **§4 frozen surfaces:** the AUTH region + template (shared across five projects), the gate derivation (every `CL_*` constant and `cl*` gating/progress/ops function — frozen so the stamp stays *checked* not *trusted*), the stamp vocabulary (no new prefix/kind/rung, no `note:`, no unread input, no unresolved ref, no URL), permanent ids (section ids never removed — `clProgressVisible_` would erase the tick for every account), append-only tracks/registries, and **the gate of an existing lesson never changes in either direction**
-- **§5 fail-closed:** `COMMIT` / `STAND-DOWN` (repo untouched, silent — the Profiler drift-check precedent) / `BLOCKED` (repo untouched, reported via final message + Routine notification + `BLOCKED —` session title). Pre-flight blocks on identity, a red baseline checker, gate-surface drift vs the ledger's `gateDigest`, a schema bump without a contract update. One attempt per run, never edits its judge, blast-radius caps (≤1 briefing, ≤1 module, ≤3 revisions, ≤1 track)
-- **§6 thirteen corpus-delta guarantees** (pinned baseline, read-before-re-pin, contradiction-not-novelty, meaning-not-wording, monotone pins, gate invariance, ref resolution, superseded-report swap, watermark discipline, determinism, minimum material, progress safety, `reviewBy` from the lesson's own gate) + per-layer revision-signal table + a minimal ledger (`coveredThrough`, `gateDigest`, `lastRun`; pins stay in the lessons). **§7** the twelve assertions of a diff-aware `check-classroom-pipeline.py` C2b must add, each with a failing fixture. **§8** CHANGELOG run record. **§9** cadence recommendation Wednesday 11:00 UTC. **§10** seven items handed to C2b/C2c
-- **Pointers:** `.claude/rules/classroom-app.md` (path scope + new "Unattended (pipeline) sessions" section, including the one obligation that flows back to developer sessions — refresh `gateDigest` when the gate surface changes), `PHASE6-CLASSROOM-DESIGN.md` (C2 status note), `CLASSROOM-SCHEMA.md` (Freshness pointer), `CLAUDE.md` Reference Files row, README tree
-- **CHANGELOG rotated** — the 2026-08-28 date group (27 sections, v03.21r → v03.47r) archived with SHA enrichment; counter 100 → **74/100**
-
-**Where we left off:**
-
-- **C2a is complete, pushed and merged** (v04.21r on `main`). No page, GAS, or data file changed — Classroom stays **v01.04w / v01.06g**
-- **C2b and C2c have not been started.** Nothing mechanical enforces the contract yet — no content fence, no ledger, no pipeline checker, no Routine
-
-**Key decisions made:**
-
-- **"PROJECT region" is too coarse an allowlist** — the gate derivation and the lesson literals share it in `Classroom.gs`, so the contract defines a narrower *content region* and makes C2b fence it explicitly
-- **The gate of an existing lesson never changes in a pipeline run, in either direction** — raising hides a lesson analysts were reading; lowering is the "content flows down the ladder" failure. New material at a different gate becomes a new lesson
-- **Stand-downs leave no repo trace; blocked runs report out of band** — a quiet week must not cost a workflow run, a version bump and a CHANGELOG section; a blocked run must not write anything (not even a reminder) because a blocked run's judgment is exactly what is in doubt
-- **Pins stay in the lessons; the ledger carries only what lessons cannot** (the watermark, the gate digest, the last committing run) — one source of truth, nothing to drift
-- **A separate document rather than a schema section** — the schema says what a lesson *is*; the contract says what an unwatched actor may *do to the repository*
-- **Two prerequisite gaps found and handed to C2b, not patched here:** the Scraper timeline route identifies items by `url` (cannot fit `CL_REF_RE`'s id charset — no `corpus:` ref can be written yet), and `profiler-projects.json` / `profiler-concepts.json` carry no per-entry revision date
-
-**Active context:**
-
-- Repo **v04.21r** · Classroom **v01.04w** / **v01.06g** · Profiler **v01.79w** / **v01.33g** · Scraper **v01.71w** / **v01.98g**
-- Capacity: repo CHANGELOG **74/100** (room again); `Profilerhtml.changelog.md` still **50/50** — the next Profiler page change forces its rotation
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
-- Verification set for any Classroom change: `python3 scripts/check-classroom-content.py`, `node --check` on a `.js` copy of `Classroom.gs`, `node scripts/check-gas-inner-scripts.js`. For Profiler role surfaces: `python3 scripts/verify-profiler-roles.py`
-- **Still flagged, not fixed:** `ENTERPRISE-SETUP.md`'s token record is stale (needs the developer to read the Script Property); the template-wide first-sign-in self-denial (Setup Step 14 trap) is documented but not designed out
-- **Model plan for the rest of C2:** C2b — build the machinery — **Opus 5 Extra**; C2c — authoring prompt + freshness deltas — **Fable 5.1 High**; the weekly runs — **Opus 5 High**, measured against the contract's caps
-
-**Recommendation for next session:**
-
-- Run **C2b — the pipeline machinery** on **Opus 5 Extra**, working the contract's §10 in order: (1) expose a stable, charset-safe item key on the Scraper timeline route, (2) decide the undated-layer signal for projects/concepts in `PROFILER-SCHEMA.md`, (3) add the `// CONTENT START` / `// CONTENT END` fence to `Classroom.gs` and teach `check-classroom-content.py` to flag literals outside it, (4) write `scripts/check-classroom-pipeline.py` with its twelve assertions and a failing fixture for each, (5) create the ledger, and only then (6) arm the weekly Routine with push + email notifications. Read `CLASSROOM-COMMITTER-CONTRACT.md` first — the machinery is built *to* it, not the other way round.
-
-**To continue:** type `build C2b — the pipeline machinery`
