@@ -3,11 +3,31 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 89/100`
+`Sections: 90/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.10r] — 2026-09-01 09:22:14 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+### Fixed
+
+**Twenty dossiers reported "its profile has not been generated" when the profile had loaded and the renderer had crashed.** The developer's screenshot showed Arevon's header — tag, as-of date, sourcing bar, 19 cited — above that message, which is the tell: everything above it is painted from the loaded JSON. A headless render of all 89 profiles through the page's own paint function reproduced it exactly: 69 rendered, 20 threw `x.background.forEach is not a function`.
+
+- **Root cause, data side.** The schema has always specified `decisionMakers[].background` as `string[]`, but one authoring batch (the 20 dossiers revised 2026-08-30 — all eight pre-existing IPPs, four EPCs, four on-site-power suppliers, four supplier/integrators) stored it as a single prose string, and their archived snapshots have carried that shape since v2. Apex Clean Energy, written 2026-09-01 in the array form, was the only IPP that rendered — the pattern the developer noticed
+- **Root cause, page side.** The dossier loader re-enters the render inside the fetch promise's `.then()`, so a render exception rejected the promise and landed in the `.catch` written for a missing JSON file — the message was true for a 404 and false for a crash
+
+#### `Profiler.html` — v01.76w
+
+- `ovBackgroundList(b)` — one reader for both shapes, used by the dossier card loop and the Word/PDF export loop. An array passes through (blank entries dropped); a string splits on line breaks, or, failing that, on sentence and clause boundaries (`. ` / `; ` followed by a capital, only after a lowercase letter, digit or closing bracket so `U.S. Army` and `Inc. and` stay whole), with trailing semicolons stripped. Fixed in the renderer rather than the 20 files because the Versions view renders archived snapshots, which keep the string form forever
+- The cached-profile render path now runs inside `try`/`catch`; a render exception paints "loaded but failed to render — <error>" and logs the error to the console, so the next bad field cannot masquerade as an ungenerated profile. A genuinely missing file still gets the original message
+
+### Verified
+
+- Headless Chromium (the pre-installed `/opt/pw-browsers` build) rendering every profile through `ovPaintCompany`: **89 of 89** after the change, 69 of 89 before; the 20 previously-crashing dossiers now render their executive cards with the prose split into 1–3 bullets per executive; a deliberately malformed profile produces the new "loaded but failed to render — <error>" message on the cached path. No page errors on load; both inline script blocks parse
 
 ## [v04.09r] — 2026-09-01 08:40:12 PM EST
 

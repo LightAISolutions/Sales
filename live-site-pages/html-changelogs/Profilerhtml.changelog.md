@@ -3,11 +3,18 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 49/50`
+`Sections: 50/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.76w] — 2026-09-01 09:22:14 PM EST — v04.10r
+
+### Fixed
+- Twenty dossiers — including every IPP except Apex Clean Energy — opened to a "profile has not been generated" message even though their profiles existed. Their executive backgrounds were stored as a paragraph rather than a list, which stopped the page partway through drawing the dossier. Both forms now display, with paragraphs shown as bullet points
+- Exporting one of those dossiers to Word or PDF failed for the same reason and now works
+- When a dossier does fail to draw, the page now says that it loaded but could not be displayed, with the reason, instead of claiming the profile was never created
 
 ## [v01.75w] — 2026-08-31 05:18:48 AM EST — v03.99r
 

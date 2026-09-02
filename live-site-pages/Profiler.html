@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.75w">
+  <meta name="build-version" content="v01.76w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -1822,6 +1822,24 @@ function ovReloadFresh() {
     // and schema-v2 cohort ({hq, ownership:"string", ticker, legalName}). Read both.
     function ovHq(p) { return p.headquarters || p.hq || ''; }
     function ovTicker(p) { return (p.ownership && p.ownership.ticker) || p.ticker || ''; }
+    // Executive backgrounds are string[] per PROFILER-SCHEMA.md, but one
+    // authoring batch (20 dossiers revised 2026-08-30) stored a single prose
+    // string, and their archived snapshots keep that shape forever — so both
+    // paint loops read through this instead of calling .forEach on whatever
+    // the file holds (v01.76w). A string splits on line breaks when it has
+    // them, otherwise on sentence/clause boundaries: ". " or "; " followed by
+    // a capital, and only after a lowercase letter, digit or closing bracket,
+    // so "U.S. Army" and "Inc. and" stay whole.
+    function ovBackgroundList(b) {
+      if (Array.isArray(b)) return b.filter(function(s) { return s != null && String(s).trim() !== ''; });
+      if (typeof b !== 'string' || !b.trim()) return [];
+      var parts = b.split(/\r?\n+/).map(function(s) { return s.trim(); }).filter(Boolean);
+      if (parts.length === 1) {
+        parts = b.replace(/([a-z0-9)\]'"%])([.;])\s+(?=[A-Z0-9(])/g, '$1$2\u0000')
+                 .split('\u0000').map(function(s) { return s.trim().replace(/;$/, ''); }).filter(Boolean);
+      }
+      return parts;
+    }
     function ovOwnership(p) {
       if (!p.ownership) return '';
       var t = (typeof p.ownership === 'string') ? p.ownership : (p.ownership.type || '');
@@ -2759,7 +2777,19 @@ function ovReloadFresh() {
       back.type = 'button';
       back.addEventListener('click', function() { window.location.hash = ''; });
       main.appendChild(back);
-      if (ovProfiles[slug]) { ovPaintCompany(main, ovProfiles[slug]); ovGuidanceMentionsLine(main, slug); return; }
+      if (ovProfiles[slug]) {
+        // The fetch path below re-enters here once the JSON is cached, so a
+        // render exception used to reject that promise and land in its
+        // .catch — which reported "profile has not been generated" for a
+        // dossier that had loaded fine and then crashed the painter. Catch
+        // it here and say what actually happened (v01.76w).
+        try { ovPaintCompany(main, ovProfiles[slug]); ovGuidanceMentionsLine(main, slug); }
+        catch (err) {
+          main.appendChild(ovEl('p', 'ov-empty', 'The "' + slug + '" dossier loaded but failed to render — ' + String(err && err.message || err) + '. This is a data or renderer fault, not a missing profile.'));
+          if (window.console && console.error) console.error('Profiler: dossier render failed for ' + slug, err);
+        }
+        return;
+      }
       main.appendChild(ovEl('p', 'ov-loading', 'Loading dossier…'));
       ovFetchJson(slug + '.profile.json')
         .then(function(p) {
@@ -3901,9 +3931,10 @@ function ovReloadFresh() {
           var body = ovEl('div');
           body.appendChild(ovEl('h4', null, x.name));
           if (x.title) body.appendChild(ovEl('div', 'role', x.title));
-          if (x.background && x.background.length) {
+          var bgList = ovBackgroundList(x.background);
+          if (bgList.length) {
             var bul = ovEl('ul');
-            x.background.forEach(function(b) { bul.appendChild(ovEl('li', null, b)); });
+            bgList.forEach(function(b) { bul.appendChild(ovEl('li', null, b)); });
             body.appendChild(bul);
           }
           if (x.linkedin) body.appendChild(ovLink(x.linkedin, 'li-link', 'LinkedIn ↗'));
@@ -5933,9 +5964,10 @@ function ovReloadFresh() {
         p.decisionMakers.forEach(function(x) {
           doc.appendChild(ovEl('h3', null, x.name));
           if (x.title) doc.appendChild(ovEl('p', 'd-role', x.title));
-          if (x.background && x.background.length) {
+          var bgList = ovBackgroundList(x.background);
+          if (bgList.length) {
             var bul = ovEl('ul');
-            x.background.forEach(function(b) { bul.appendChild(ovEl('li', null, b)); });
+            bgList.forEach(function(b) { bul.appendChild(ovEl('li', null, b)); });
             doc.appendChild(bul);
           }
           if (x.linkedin) { var lp = ovEl('p', 'd-note'); lp.appendChild(ovLink(x.linkedin, null, x.linkedin)); doc.appendChild(lp); }
