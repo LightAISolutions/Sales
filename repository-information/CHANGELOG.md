@@ -3,11 +3,30 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 88/100`
+`Sections: 89/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.09r] — 2026-09-01 08:40:12 PM EST
+
+> **Prompt:** "Profiler Apex Clean Energy"
+
+### Added
+
+**Apex Clean Energy dossier (profileVersion 1)** — `live-site-pages/profiler-data/apex-clean-energy.profile.json`, schema v7, written in the active `intel-briefing` style from a two-agent research pass (Stage 1 first-party: ~80 company URLs including the newsroom back to 2016, the 2025 Impact Report PDF and the leadership page; Stage 2 third-party: 71 pages across trade press, ACP, Cleanview, law-firm and lender releases, county and PUC records, Ohio Supreme Court and bankruptcy-docket coverage). 77 cited sources, 47% first-party by the registry's provenance tiering.
+
+- **What the dossier establishes.** A wind-heritage developer converted into a farmdown IPP under Ares Management: 12 GW commercialized, 3+ GW operating or under construction, 2 GW under management, $4.08B of project financing in 2025 plus $2.79B in January 2026 and a $1.05B corporate refinancing (October 2025) — all on traditional tax equity from J.P. Morgan, Wells Fargo, Goldman Sachs and Bank of America. The storage finding is the one that matters for this repo's lens: every operating Apex battery (Great Kiskadee 100 MW/200 MWh, Angelo Storage 100 MW/200 MWh, Cameron 16.4 MW) is a Powin system, Powin entered Chapter 11 in June 2025, and the first post-Powin award (Coldwater Storage, 75 MW/381 MWh, June 2026) went to Canadian Solar e-STORAGE — with Raven Storage (100 MW, financed January 2026) still unnamed. No incumbent integrator, a demonstrated willingness to buy Chinese-manufactured LFP, and a FEOC due-diligence framework stated in the 2025 Impact Report
+- Seven product lines (wind, solar, storage, distributed energy, Powered Land, build/operate/trade services, dormant green fuels) with the v2 depth fields; three banded spec groups (battery fleet, 2024–2028 wind fleet with turbine OEMs, finance stack); 21 developments (September 2024 → August 2026); five confidence-tagged key judgments; 12 curated relationships (Meta, Google, Microsoft, Canadian Solar, FlexGen, GE Vernova, MasTec, Siemens Energy, NextEra Energy Resources, Arevon, Jupiter Power, Hithium — the last three as explicit non-links or conflation warnings); five policy regimes including a new `EO 14420 bulk-power system` entry and a state-siting entry, because county and state siting — not federal policy — is the demonstrated loss mechanism (Discovery Wind, Goose Creek, Emerson Creek)
+- **Seven company-published leadership portraits** downloaded to `live-site-pages/images/execs/apex-clean-energy-<lastname>.jpg` (Young, Chernauskas, Perrel, Friesen, Case, O'Shaughnessy, Tetrault), each verified as an individual headshot before wiring. Three further decision makers (Hahn, Haug, Koziar) render as initials avatars
+- Registered in `profiler-companies.json` (category `ipp`, domains `apexcleanenergy.com` + `apexcleanenergyproject.com`); `sync-profiler-registry.py` populated `srcTotal 77 / srcFirstPct 47 / kpiNorm false`; `build-profiler-graph.py` rebuilt `profiler-graph.json` (490 edges, 18 touching the new dossier, including derived edges to CATL, Tesla, Terra-Gen, Lightsource bp, VoltaGrid and ProEnergy from the dossier's own prose)
+- `README.md` — new profile registered in the structure tree
+
+### Note
+
+- **Honesty flags carried in the dossier rather than resolved:** the Powin docket motion to reject Apex affiliates' supply and service agreements (17 June 2025) is known only from a search summary; the Plug Power PPA reportedly passing to NextEra is a single local-press item; the Ares minority-stake sale process is a single Infralogic report; the April 2025 Chief Development Officer no longer appears on the company leadership page with no announcement. Each is stated as unverified where it appears
+- **Session start:** `SESSION-CONTEXT.md` was stale (v04.03r vs v04.08r) and was auto-reconstructed from this changelog in a separate `Session start: reconstruct stale session context` commit, bundled into this push per the Session Start Checklist
 
 ## [v04.08r] — 2026-09-01 05:38:51 PM EST
 

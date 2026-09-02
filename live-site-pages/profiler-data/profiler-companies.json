@@ -70,6 +70,24 @@
       "kpiNorm": true
     },
     {
+      "slug": "apex-clean-energy",
+      "name": "Apex Clean Energy",
+      "categories": [
+        "ipp"
+      ],
+      "tagline": "Wind-heritage farmdown IPP under Ares — 12 GW commercialized, 3+ GW operating/under construction, $4.08B financed in 2025; all three operating ERCOT batteries are Powin (bankrupt) and the next award went to Canadian Solar e-STORAGE — an open, FEOC-constrained storage buyer with no data-center customer yet.",
+      "hq": "Charlottesville, VA, USA",
+      "status": "active",
+      "lastUpdated": "2026-09-01",
+      "domains": [
+        "apexcleanenergy.com",
+        "apexcleanenergyproject.com"
+      ],
+      "srcTotal": 77,
+      "srcFirstPct": 47,
+      "kpiNorm": false
+    },
+    {
       "slug": "applied-digital",
       "name": "Applied Digital",
       "categories": [

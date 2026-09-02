@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-08-31",
- "companies": 88,
+ "built": "2026-09-02",
+ "companies": 89,
  "edges": [
   {
    "a": "abb",
@@ -1561,6 +1561,456 @@
      "where": "Key Judgments",
      "date": "",
      "text": "Layer 2 — behind-the-meter BESS at the campus: no announced Amazon deployments, a genuine structural contrast with xAI (Megapack fleet) and Crusoe (integrated energy stack).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "arevon",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Peer, not counterparty: Arevon CEO Justin Johnson joined the American Clean Power Association board in 2026 as Ken Young became chair. No commercial link found.",
+     "source": "https://cleanpower.org/news/american-clean-power-association-welcomes-new-board-chair-ken-young-and-three-new-board-members/"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "canadian-solar",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "e-STORAGE selected as 'single technology partner' for Coldwater Storage (75 MW/381 MWh SolBank 3.0 LFP, PCS and EQ-S EMS) — Apex's first post-Powin battery award.",
+     "context": "Announced 24 June 2026 for a battery co-located with the operating 150 MW Coldwater Solar plant in Branch County, Michigan; deliveries early 2027 and COD mid-2027. It is the first storage supplier Apex has named since Powin's June 2025 bankruptcy and the company's first non-ERCOT battery. CEO Ken Young's quote in the coverage — 'Power demand is rising rapidly, and storage projects like Coldwater enable our grid to keep pace' — is the company's only 2026 demand framing on record.",
+     "source": "https://www.solarpowerworldonline.com/2026/06/canadian-solar-storage-subsidiary-supplying-battery-for-150-mw-michigan-solar-project/",
+     "status": "announced",
+     "since": "2026-06",
+     "scale": "75 MW / 381 MWh",
+     "via": "SolBank 3.0"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-24",
+     "text": "Apex Clean Energy orders 75 MW/381 MWh (Coldwater Storage, Michigan) with PCS and EQ-S EMS; deliveries early 2027 — A marquee independent developer choosing the full e-STORAGE stack including the in-house EMS — the turnkey scope is widening beyond bare DC blocks.",
+     "src": "PRNewswire, 2026-06-24",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-24"
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "catl",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-11",
+     "text": "Powin — integrator on all three operating Apex batteries — files Chapter 11 in New Jersey, citing 145% China tariffs, a $44M CATL supplier suit and ITC uncertainty; a docket summary indicates a June 17 motion to reject Energy Supply and Long-Term Service Agreements with Great Kiskadee Storage LLC and Angelo Storage LLC (unverified); FlexGen later acquired Powin's IP and assets — The tariff shock reached Apex through its supplier rather than its own imports — and left the fleet's warranties and service inside a liquidation estate.",
+     "src": "https://www.energy-storage.news/powin-files-for-chapter-11-bankruptcy-protection-and-spins-off-project-services-business/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-06-11"
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "flexgen",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Holds Powin's IP and service business after the June 2025 bankruptcy; Apex's three Powin batteries are not named in the coverage, so servicing continuity is inferred, not stated.",
+     "context": "FlexGen bought Powin's intellectual property and assets for $36M (closed 19 August 2025) and said it would keep the Powin brand and its installed base afloat. Great Kiskadee, Angelo Storage and Cameron Storage are all Powin systems, which makes FlexGen the default service counterparty for Apex's entire operating storage fleet — but no source names Apex among the projects FlexGen took on.",
+     "source": "https://www.solarpowerworldonline.com/2025/08/flexgen-acquires-powin-ip-will-keep-popular-bess-brand-afloat/",
+     "status": "announced",
+     "since": "2025-08"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Apex as the clearest open-procurement storage account among the covered US IPPs: no incumbent integrator survives (Powin is in liquidation; FlexGen holds its IP and service business), the one post-Powin award went to a Chinese-manufactured LFP product (Canadian Solar e-STORAGE SolBank 3.0), the SA Grid Solutions venture with SK Gas targets 900 MW by 2029, and the company claims 13+ GW of storage in development — yet every disclosed financing uses traditional tax equity (J.P.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the entire operating fleet (Great Kiskadee, Angelo Storage, Cameron; ~216 MW) is Powin, now in liquidation with FlexGen holding the IP; the first post-Powin award (Coldwater, 75 MW/381 MWh) went to Canadian Solar e-STORAGE; Raven Storage (100 MW, financed January 2026) has no named supplier; the company claims 13+ GW of storage in development and SK targets 900 MW by 2029.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-11",
+     "text": "Powin — integrator on all three operating Apex batteries — files Chapter 11 in New Jersey, citing 145% China tariffs, a $44M CATL supplier suit and ITC uncertainty; a docket summary indicates a June 17 motion to reject Energy Supply and Long-Term Service Agreements with Great Kiskadee Storage LLC and Angelo Storage LLC (unverified); FlexGen later acquired Powin's IP and assets — The tariff shock reached Apex through its supplier rather than its own imports — and left the fleet's warranties and service inside a liquidation estate.",
+     "src": "https://www.energy-storage.news/powin-files-for-chapter-11-bankruptcy-protection-and-spins-off-project-services-business/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-08"
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "ge-vernova",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Turbine supplier on Bowman (74 × GE 2.82-127), Rocky Forge (13 units), Great Pathfinder (66 units) and Lincoln Land (107 × GE 2.82-127); GE-158 is a candidate model for Big Bend.",
+     "context": "GE and Vestas split Apex's turbine bench. The GE units at Rocky Forge were reported delivering in May–June 2026 for fall erection; the Big Bend permit amendment lists the GE-158 alongside Nordex and Vestas models with no order announced.",
+     "source": "https://www.wsls.com/news/local/2026/02/18/virginias-first-wind-farm-to-supply-all-power-to-google/",
+     "status": "active",
+     "scale": "260 turbines across four named projects",
+     "via": "onshore wind turbines"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the relationship web it is the supply-side counterpart to Meta, Google and Microsoft power purchase agreements, a GE Vernova and Vestas turbine buyer, a MasTec frame-agreement customer, and — through Ares — a portfolio company whose ownership may change hands.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Two full-capacity PPAs in PJM supporting Google's Virginia data centers: Timbermill Wind (189 MW, NC, COD December 2024) and Rocky Forge Wind (79.3 MW, VA, COD late 2026).",
+     "context": "Timbermill (August 2023) was the first Google deal; Rocky Forge (December 2024) the second, taking a Virginia project whose prior Dominion contract had expired unrenewed after roughly a decade of litigation. Local coverage in February 2026 describes turbine deliveries in May–June 2026 and erection in the fall, with output that 'could match Google's Virginia data center energy demand'.",
+     "source": "https://www.apexcleanenergy.com/news/google-and-apex-collaborate-on-virginias-first-onshore-wind-farm/",
+     "status": "active",
+     "since": "2023",
+     "scale": "268 MW across two PJM wind farms",
+     "via": "full-capacity PPAs"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hyperscaler franchise: Meta (>1 GW across six projects), Google (Timbermill 189 MW and Rocky Forge 79.3 MW, both PJM), Microsoft (Wheatsborough 125 MWac) — all offtake, none co-located; the 'Powered Land' flagship Glass Mountain Energy (2.4 GW near-term, 14 GW long-term, West Texas) has no announced customer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the relationship web it is the supply-side counterpart to Meta, Google and Microsoft power purchase agreements, a GE Vernova and Vestas turbine buyer, a MasTec frame-agreement customer, and — through Ares — a portfolio company whose ownership may change hands.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Glass Mountain Energy (2.4 GW near-term, 14 GW long-term, 380,000+ acres, planned 765 kV) is described only on company Insight pages; the company concedes near-term gas firming; no data-center co-location, site sale or behind-the-meter contract appears in any record, and the hyperscaler book (Meta more than 1 GW, Google 268 MW, Microsoft 125 MWac) is grid-delivered offtake.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-scale wind — development, construction and ownership",
+     "date": "",
+     "text": "The 2024–2028 build slate is Timbermill (189 MW, NC, Google, COD December 2024), Prosperity (300 MW, IL, online 2025), Downeast (126 MW, ME, COD April 2025), Bowman (200–208 MW, ND, COD December 2025), Lotus (202 MW, IL, operating March 2026 per Cleanview), Rocky Forge (79.3 MW, VA, Google, COD late 2026 — Virginia's first land-based wind farm), Heritage (126 MW, NY, NYSERDA RECs, construction from January 2026), Coles (300 MW, IL, financed January 2026 — 'largest project-level transaction to date'), Emerson Creek (269 MW, OH, AEP Energy offtake, construction from November 2025, COD Q2 2027) and Big Bend (300 MW, MN, Great River Energy PPA plus Surplus Interconnection Service Agreement, COD 2028).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-18",
+     "text": "Rocky Forge Wind (79.3 MW, VA): civil work complete, GE turbine deliveries May–June, erection fall 2026, COD by year-end; neighbors call for a moratorium on further turbines — A decade of litigation ends in steel — the Google PPA replaced an expired Dominion contract, a case of hyperscaler demand rescuing a stranded wind permit.",
+     "src": "https://www.wsls.com/news/local/2026/02/18/virginias-first-wind-farm-to-supply-all-power-to-google/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-03",
+     "text": "Eamon Perrel named Chief Commercial Officer — a 16-year Apex veteran, previously EVP and Head of Business Development — The offtake originator now owns the commercial function — the executive who signed Google and Meta is the one who would sign a Powered Land customer.",
+     "src": "https://www.apexcleanenergy.com/news/apex-names-eamon-perrel-chief-commercial-officer/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2024-12-16",
+     "text": "Prosperity Wind (300 MW; J.P. Morgan tax equity; CIBC/Crédit Agricole-led debt; Vestas; White Construction) and Timbermill Wind (189 MW; Goldman Sachs tax equity; Helaba/BNP Paribas/SMBC/Société Générale; Google) financings close — Two closes in two weeks with two different tax-equity houses — bankability, not offtake, is what a developer must prove, and Apex proves it routinely.",
+     "src": "https://www.renewableenergyworld.com/wind-power/apex-finances-wind-farms-in-illinois-and-north-carolina/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-02-18"
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "hithium",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "No relationship found. The dossier's judgment for the Hithium lens: an open storage account with no incumbent integrator, but one whose tax-equity financing and stated FEOC due-diligence framework screen a §154-listed OEM as tightly as at Arevon."
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "For the Hithium lens: a §154-listed Chinese OEM faces the same FEOC screen as at Arevon, but here there is no incumbent to displace and a demonstrated willingness (e-STORAGE) to buy Chinese-manufactured LFP.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "jupiter-power",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "No relationship — conflation warning: Jupiter Power's 'Coldwater' battery for Consumers Energy is a separate project in the same Michigan town as Apex's Coldwater Solar and Coldwater Storage."
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "lightsource-bp",
+   "evid": [
+    {
+     "where": "Capabilities · Utility-scale solar",
+     "date": "",
+     "text": "A mid-tier solar developer that sells on repeat-customer relationships and hybridization rather than scale — Solar Power World's 2025 list is led by Lightsource bp, Silicon Ranch and Arevon, none of which Apex approaches in installed solar MW; per Cleanview and Solar Power World.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "mastec",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Strategic frame agreement (April 2024); EPC on Lotus Wind and Timbermill Wind; White Construction (a MasTec/IEA unit) built Prosperity and IEA Constructors built Great Pathfinder.",
+     "context": "The April 2024 company Insight describes a strategic frame agreement with MasTec covering construction of Apex's wind program. Apex's 2025 hire of Matt Tetrault as EVP and Head of Engineering and Construction came from MasTec Renewables, where he had been SVP Operations.",
+     "source": "https://www.apexcleanenergy.com/insight/constructing-a-clean-energy-future/",
+     "status": "active",
+     "since": "2024-04",
+     "via": "EPC frame agreement"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the relationship web it is the supply-side counterpart to Meta, Google and Microsoft power purchase agreements, a GE Vernova and Vestas turbine buyer, a MasTec frame-agreement customer, and — through Ares — a portfolio company whose ownership may change hands.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Construction management, asset management (ROCC) and energy marketing",
+     "date": "",
+     "text": "Facility Construction: an in-house construction team managing EPC contractors — MasTec under a strategic frame agreement (April 2024; Lotus and Timbermill), White Construction (Prosperity), IEA Constructors (Great Pathfinder), Saber Power Services (Great Kiskadee), Worley (Cameron Storage).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-03-19",
+     "text": "Lotus Wind (202 MW, IL) financing: Goldman Sachs tax equity; CIBC-led debt with U.S. Bank, EIFO and Banco Sabadell; Vestas V163-4.5 MW turbines; MasTec EPC; COD 2026 — Danish export credit attached to a Vestas order — turbine sourcing and financing travel together, a pattern any battery supplier's export-credit agency could replicate.",
+     "src": "https://www.apexcleanenergy.com/news/apex-secures-financing-for-202-mw-lotus-wind/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-03-19"
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Largest corporate customer: more than 1 GW across six projects (Angelo Solar 195 MW, Altavista Solar 80 MW, Aviator Wind East 200 MW, Lincoln Land ~175 MW, Jayhawk 197 MW, Great Pathfinder 225 MW) under PPAs and environmental-attribute agreements.",
+     "context": "The Meta portfolio passed one gigawatt with the January 2023 Angelo Solar environmental-attribute agreement, which the company describes as supporting Meta's regional operations (data centers). Several of the underlying projects have since been farmed down or sold — Lincoln Land to Ares (2021), Jayhawk to WEC/Invenergy (2021), 75% of Great Pathfinder to ERG (2024) — while Angelo Solar carries a $30M Great Bay Renewables royalty (2024) and is co-located with the wholly owned Angelo Storage battery.\n\nEvery Meta deal is grid-delivered offtake; none is a campus co-location, which is the gap the company's Powered Land offering is meant to close.",
+     "source": "https://www.apexcleanenergy.com/news/apexs-portfolio-with-meta-tops-one-gigawatt-of-clean-energy/",
+     "status": "active",
+     "since": "2019",
+     "scale": ">1 GW across six projects",
+     "via": "PPAs / environmental-attribute agreements"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the relationship web it is the supply-side counterpart to Meta, Google and Microsoft power purchase agreements, a GE Vernova and Vestas turbine buyer, a MasTec frame-agreement customer, and — through Ares — a portfolio company whose ownership may change hands.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Glass Mountain Energy (2.4 GW near-term, 14 GW long-term, 380,000+ acres, planned 765 kV) is described only on company Insight pages; the company concedes near-term gas firming; no data-center co-location, site sale or behind-the-meter contract appears in any record, and the hyperscaler book (Meta more than 1 GW, Google 268 MW, Microsoft 125 MWac) is grid-delivered offtake.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-scale solar",
+     "date": "",
+     "text": "Operating fleet: Angelo Solar (195 MW, Tom Green County TX, Meta environmental-attribute agreement, operating June 2024, with a $30M Great Bay Renewables royalty), Big Elm Solar (200 MW, Bell County TX, online 2024 — the company's first agrivoltaics project, consortium VPPA), Wheatsborough Solar (125 MWac, Erie County OH, Microsoft via the Volt Energy Utility Environmental Justice PPA framework, COD 12 August 2025, EGCO 49%), Mulligan Solar (92.4 MWdc, IL, COD July 2022, ERG 75%) and Coldwater Solar (150 MW, Branch County MI, PPA with an unnamed 'large Michigan-based energy company' signed September 2024, nearing its final operational phase in January 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-03",
+     "text": "Eamon Perrel named Chief Commercial Officer — a 16-year Apex veteran, previously EVP and Head of Business Development — The offtake originator now owns the commercial function — the executive who signed Google and Meta is the one who would sign a Powered Land customer.",
+     "src": "https://www.apexcleanenergy.com/news/apex-names-eamon-perrel-chief-commercial-officer/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-12-03"
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Wheatsborough Solar (125 MWac, Erie County OH) PPA under the Microsoft–Volt Energy Utility Environmental Justice framework; COD 12 August 2025; EGCO holds 49%.",
+     "context": "Signed in January 2024 as the first project under the Microsoft–Volt Energy Utility Environmental Justice PPA framework. The project reached commercial operation on 12 August 2025 and was farmed down to EGCO Group as part of the Pinnacle II portfolio in October 2025, with Apex retaining 51% and operations. The Ohio Power Siting Board certificate also carries a 50 MW battery.",
+     "source": "https://www.pv-tech.org/apex-and-microsoft-sign-ppa-for-125mw-ohio-solar-project/",
+     "status": "active",
+     "since": "2024-01",
+     "scale": "125 MWac",
+     "via": "Environmental Justice PPA"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Hyperscaler franchise: Meta (>1 GW across six projects), Google (Timbermill 189 MW and Rocky Forge 79.3 MW, both PJM), Microsoft (Wheatsborough 125 MWac) — all offtake, none co-located; the 'Powered Land' flagship Glass Mountain Energy (2.4 GW near-term, 14 GW long-term, West Texas) has no announced customer.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the relationship web it is the supply-side counterpart to Meta, Google and Microsoft power purchase agreements, a GE Vernova and Vestas turbine buyer, a MasTec frame-agreement customer, and — through Ares — a portfolio company whose ownership may change hands.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Glass Mountain Energy (2.4 GW near-term, 14 GW long-term, 380,000+ acres, planned 765 kV) is described only on company Insight pages; the company concedes near-term gas firming; no data-center co-location, site sale or behind-the-meter contract appears in any record, and the hyperscaler book (Meta more than 1 GW, Google 268 MW, Microsoft 125 MWac) is grid-delivered offtake.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Utility-scale solar",
+     "date": "",
+     "text": "Operating fleet: Angelo Solar (195 MW, Tom Green County TX, Meta environmental-attribute agreement, operating June 2024, with a $30M Great Bay Renewables royalty), Big Elm Solar (200 MW, Bell County TX, online 2024 — the company's first agrivoltaics project, consortium VPPA), Wheatsborough Solar (125 MWac, Erie County OH, Microsoft via the Volt Energy Utility Environmental Justice PPA framework, COD 12 August 2025, EGCO 49%), Mulligan Solar (92.4 MWdc, IL, COD July 2022, ERG 75%) and Coldwater Solar (150 MW, Branch County MI, PPA with an unnamed 'large Michigan-based energy company' signed September 2024, nearing its final operational phase in January 2026).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024-01"
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "A local-press summary reports the 345 MW Plug Power wind PPA 'continued with NextEra Energy' after Plug suspended Project Limestone (November 2025) — single-source, unverified; NextEra is also a prior employer of Apex's EVP Engineering and Construction.",
+     "context": "If accurate, Apex either sold or assigned the Texas wind project that underpinned its 2021 'largest green hydrogen PPA in the United States'. No company statement addresses the project's status, and the green-fuels line has been absent from company boilerplates since April 2025.",
+     "source": "https://www.grahamleader.com/news/pulling-plug-plug-power-suspends-project-limestone-young-county",
+     "status": "historical"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "proenergy",
+   "evid": [
+    {
+     "where": "Capabilities · Powered Land — large-load and data-center sites",
+     "date": "",
+     "text": "A land-and-interconnection play into the AI-campus market competing against gas-first on-site generation (VoltaGrid, ProEnergy-type offerings) and against Intersect Power and NextEra-style co-location; differentiated by wind-resource depth in West Texas rather than by firm capacity — no firming partner is named.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Historical: 47 × Siemens Gamesa SG 3.465-132 turbines at Midway Wind (2018) — described by the company as the first US installation of that model.",
+     "context": "Midway Wind was sold to Sammons in 2018; no Siemens Gamesa order has appeared on an Apex project since, with GE Vernova and Vestas taking every named 2023–2026 order.",
+     "source": "https://www.apexcleanenergy.com/insight/overcoming-the-elements-to-build-midway-wind/",
+     "status": "historical",
+     "since": "2018"
+    }
+   },
+   "evid": [],
+   "last": "2018"
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "terra-gen",
+   "evid": [
+    {
+     "where": "Capabilities · Battery energy storage — merchant ERCOT fleet and solar-attached projects",
+     "date": "",
+     "text": "A late but genuinely open storage buyer: unlike Tesla-locked (Arevon) or LG-locked (Terra-Gen) peers it has no surviving incumbent integrator, has already switched to a second supplier (Canadian Solar e-STORAGE) for its first solar-attached battery, and has an unnamed slot open on Raven Storage; the constraint is financing structure (traditional tax equity) and the company's own FEOC due-diligence commitments rather than an installed base.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Capabilities · Battery energy storage — merchant ERCOT fleet and solar-attached projects",
+     "date": "",
+     "text": "A late but genuinely open storage buyer: unlike Tesla-locked (Arevon) or LG-locked (Terra-Gen) peers it has no surviving incumbent integrator, has already switched to a second supplier (Canadian Solar e-STORAGE) for its first solar-attached battery, and has an unnamed slot open on Raven Storage; the constraint is financing structure (traditional tax equity) and the company's own FEOC due-diligence commitments rather than an installed base.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "apex-clean-energy",
+   "b": "voltagrid",
+   "evid": [
+    {
+     "where": "Capabilities · Powered Land — large-load and data-center sites",
+     "date": "",
+     "text": "A land-and-interconnection play into the AI-campus market competing against gas-first on-site generation (VoltaGrid, ProEnergy-type offerings) and against Intersect Power and NextEra-style co-location; differentiated by wind-resource depth in West Texas rather than by firm capacity — no firming partner is named.",
      "src": "",
      "from": "a"
     }

@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-01 05:38:51 PM EST` · Repo version: `v04.08r`
+Last updated: `2026-09-01 08:40:12 PM EST` · Repo version: `v04.09r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -84,6 +84,7 @@ Last updated: `2026-09-01 05:38:51 PM EST` · Repo version: `v04.08r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/aligned.study.json">aligned.study.json</a> — Aligned Data Centers in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/amazon.profile.json">amazon.profile.json</a>    — Amazon dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/amazon.study.json">amazon.study.json</a> — Amazon in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/apex-clean-energy.profile.json">apex-clean-energy.profile.json</a> — Apex Clean Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/applied-digital.profile.json">applied-digital.profile.json</a> — Applied Digital dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/applied-digital.study.json">applied-digital.study.json</a> — Applied Digital in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/arevon.profile.json">arevon.profile.json</a> — Arevon Energy dossier profile
@@ -485,7 +486,7 @@ Last updated: `2026-09-01 05:38:51 PM EST` · Repo version: `v04.08r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">Profilergs.changelog.md</a>               — Profiler GAS changelog
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog-archive.md">Profilergs.changelog-archive.md</a>       — Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (164 images across 46 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (171 images across 47 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Code_Ready_Voice_1.mp3">Code_Ready_Voice_1.mp3</a>      — [template] "Code Ready" splash sound
