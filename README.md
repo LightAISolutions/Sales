@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-01 10:08:49 PM EST` · Repo version: `v04.11r`
+Last updated: `2026-09-01 10:31:20 PM EST` · Repo version: `v04.12r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -61,7 +61,7 @@ Last updated: `2026-09-01 10:08:49 PM EST` · Repo version: `v04.11r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Receipts.html">Receipts.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Receipts.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1SfVRsHm6pUn1bq633BSKiQ8c3IsQeVAs7H0265ckdDM/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Receipts/Receipts.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog.md">v01.36w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog.md">v01.28g</a> | [template] Receipts page
 │   │
 │   │
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Classroom.html">Classroom.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Classroom.html">🌐</a>🟢 · ◽ · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Classroom/Classroom.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Classroomhtml.changelog.md">v01.00w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">v01.00g</a> | [template] Classroom — BESS/AIDC Curriculum page
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Classroom.html">Classroom.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Classroom.html">🌐</a>🟢 · ◽ · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Classroom/Classroom.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Classroomhtml.changelog.md">v01.00w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">v01.01g</a> | [template] Classroom — BESS/AIDC Curriculum page
 │   │
 │   <b>│ ─ External Sites (Placeholder) ────────────────────────────────────────────</b>
 │   │   <i>(No external-site pages yet)</i>
@@ -563,6 +563,7 @@ Last updated: `2026-09-01 10:08:49 PM EST` · Repo version: `v04.11r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/init-repo.sh">init-repo.sh</a>            — [template] One-shot fork initialization script
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/setup-gas-project.sh">setup-gas-project.sh</a>    — [template] GAS project file creation script
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/compute-csp-hash.sh">compute-csp-hash.sh</a>     — [template] CSP SHA-256 hash computation for inline scripts
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-classroom-content.py">check-classroom-content.py</a> — Classroom content validator (lesson/track schemas parsed out of Classroom.gs, provenance stamps against the code's own prefix table, Node truth table of the stamp → gate fold) — required after any lesson or track write
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-gas-inner-scripts.js">check-gas-inner-scripts.js</a> — CI check: validates served inner &lt;script&gt; syntax in GAS files
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/check-acl-health.sh">check-acl-health.sh</a>     — Sign-in health probe: asks every deployed GAS project whether it can read the Master ACL right now (run by the daily ACL health Routine; also runnable by hand)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/scripts/build-profiler-graph.py">build-profiler-graph.py</a> — Profiler relationship-graph builder (merges both dossiers' curated links + full-sentence cross-mention evidence into profiler-graph.json; --check reports drift) — required after any profile write
@@ -627,6 +628,7 @@ Last updated: `2026-09-01 10:08:49 PM EST` · Repo version: `v04.11r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG.md">CHANGELOG.md</a>            — [template · initialized] Version history
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG-archive.md">CHANGELOG-archive.md</a>    — [template · initialized] Older changelog sections (rotated from CHANGELOG.md)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASP-PUSH-PILOT-SETUP.md">CLASP-PUSH-PILOT-SETUP.md</a> — Setup for the GitHub Actions → clasp push deployment pilot
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASSROOM-SCHEMA.md">CLASSROOM-SCHEMA.md</a>     — Classroom app track/lesson schema + provenance stamp (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CODING-GUIDELINES.md">CODING-GUIDELINES.md</a>    — [template · initialized] Domain-specific coding knowledge
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/DATA-POLL-ARCHITECTURE.md">DATA-POLL-ARCHITECTURE.md</a> — Data poll vs heartbeat architecture &amp; quota reference
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/ENTERPRISE-SETUP.md">ENTERPRISE-SETUP.md</a>     — Enterprise PAT policies, GAS auto-deploy token config, 404 troubleshooting, rotation
@@ -757,6 +759,7 @@ Last updated: `2026-09-01 10:08:49 PM EST` · Repo version: `v04.11r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/changelogs.md">changelogs.md</a>              — [template · initialized · modified] Path-scoped — CHANGELOG rules
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/chat-bookends.md">chat-bookends.md</a>           — [template · modified] Always loaded — response formatting rules
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/chat-bookends-reference.md">chat-bookends-reference.md</a> — [template] Path-scoped — bookend examples &amp; tables
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/classroom-app.md">classroom-app.md</a>           — Path-scoped — Classroom content authoring: where lessons/tracks live, the provenance stamp rule, freshness pins, verification (triggers on Classroom app files + CLASSROOM-SCHEMA.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/cli-styling-reference.md">cli-styling-reference.md</a>   — Path-scoped — CLI accent styling tables + patterns (triggers on chat-bookends.md + output-formatting.md + CLAUDE.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/dead-code-detection.md">dead-code-detection.md</a>     — Path-scoped — dead-code analysis methodology (triggers on HTML pages + GAS files + workflow files; user-invoked via "check for dead code")
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/gas-scripts.md">gas-scripts.md</a>             — [template · modified] Path-scoped — GAS core rules (version, config, commit naming, Deploy Handler Protection)

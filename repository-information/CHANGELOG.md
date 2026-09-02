@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.12r] — 2026-09-01 10:31:20 PM EST
+
+> **Prompt:** "Picking up from my last session, build C1's track/lesson schema and its provenance stamp first, on Fable 5.1 High, before any renderer or progress work — it is the one irreversible decision in v1 (Phase 5 showed study.json v1 stays renderable forever behind an adapter), it must slot into clGateForProvenance_()'s existing vocabulary, and every lesson C2 later auto-authors inherits it."
+
+### Added
+
+**Classroom C1, schema slice — the track/lesson schema and its provenance stamp.** The one irreversible decision in v1, made before any renderer or progress code exists to lean on it. The stamp is designed to be *checked*, not trusted: a lesson declares its corpus inputs as typed refs whose prefix fixes the provenance kind, so the fold `clGateForProvenance_()` already performs runs on a vocabulary the data cannot misstate. Registries ship empty by design — the first tracks, the renderer, progress, and study-next are the remaining C1 slices, and every lesson C2 later auto-authors inherits this shape.
+
+- `repository-information/CLASSROOM-SCHEMA.md` (new) — single source of truth: id rules, the provenance stamp (`provenance.inputs[]{kind, ref, date}`, the ref-prefix → kind table, fold semantics, no `note:` prefix by design), lesson schema v1 (`module` / `briefing`, guidance section-kind vocabulary, `reviewBy`, `revisions[].changed[]`), track schema v1 (gate is its lessons'; withheld counts; unreadable tracks are not enumerable), the freshness hooks C2 relies on, the `action=classroom` op contract, a worked example, verification and extension rules
+- `scripts/check-classroom-content.py` (new) — parses every `clLesson<Name>_()` / `clTrack<Name>_()` strict-JSON literal out of `Classroom.gs`, validates both schemas and every stamp against the prefix table read from the `.gs` itself, checks registry membership and prerequisite cycles, then loads the PROJECT region into Node and asserts a 97-case truth table: stamp → gate fold, per-tier visibility, per-tier index filtering, card metadata never carrying sections, and every denial path throwing and audit-logging
+- `.claude/rules/classroom-app.md` (new, path-scoped) + a CLAUDE.md Reference Files row — the authoring contract C2's pipeline sessions inherit: where content lives, never fabricate an input, never invent a parallel gate, freshness pins, verification before push
+
+#### `Classroom.gs` — v01.01g
+
+- `CL_PROVENANCE_REF_KINDS` — the ref-prefix table (`profile` / `study` / `project` / `graph` / `concepts` → public; `guidance` → guidance; `corpus` / `briefing` → briefing; `report` → report) and `clStampKinds_()`, which reads a lesson's stamp into the list the C0 gate folds and returns `[]` (→ deny) on a missing or empty stamp, a malformed ref, an unknown prefix, or a kind/prefix mismatch — a stamp is fully well-formed or it does not exist
+- `clLessons_()` / `clTracks_()` registries (empty), `clLessonCard_()` metadata cards, and per-tier filtering (`clLessonIndexFor_`, `clTrackFor_`, `clTrackIndexFor_`) — a track is served with the lessons the tier may read plus a withheld count, and a track with nothing readable is not listed
+- `handleClassroomOp_()` — read-only `action=classroom` ops (`cop=index|track|lesson`, mirrored on the GET `api` route) in the guidance-ops transport: session → `clRequire_(sess, 'tracks')` at the app door → `clRequireLesson_()` on the lesson's own stamp before any section text leaves the server
+
+### Changed
+
+- `PHASE6-CLASSROOM-DESIGN.md` — C1 carries a status note for the schema slice; `README.md` tree lists the three new files and Classroom's GAS version
 
 ## [v04.11r] — 2026-09-01 10:08:49 PM EST
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.00g";
+var VERSION = "v01.01g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -404,6 +404,174 @@ function clRequireLesson_(sess, provenances, operationName) {
     throw new Error('CLASSROOM_FORBIDDEN');
   }
   return clRequire_(sess, cap, operationName);
+}
+
+// PROJECT: ── Track / lesson schema + provenance stamp (C1, schema v1) ─────
+// Data-shape single source of truth: repository-information/CLASSROOM-SCHEMA.md.
+// Lessons and tracks are strict-JSON object literals returned by
+// clLesson<Name>_() / clTrack<Name>_() and registered in clLessons_() /
+// clTracks_() below — the guidance content-in-GAS pattern, because a track
+// names gated titles and a lesson's sections may carry gated material, so
+// none of it may reach public Pages. scripts/check-classroom-content.py parses
+// the literals straight out of this file: keep them JSON (double-quoted keys,
+// no trailing commas, no expressions).
+var CL_LESSON_SCHEMA_VERSION = 1;
+var CL_TRACK_SCHEMA_VERSION = 1;
+
+// The provenance stamp. Every lesson carries provenance.inputs[] — one entry
+// per corpus source it was authored from: { kind, ref, date }. `ref` is a
+// typed identity '<prefix>:<id>' and its prefix FIXES the kind, so a stamp is
+// checked rather than trusted: an input claiming kind 'public' on a 'report:'
+// ref is malformed and the lesson is denied, never gated down. Field notes have
+// no prefix here on purpose (notes-are-not-sources): a 'note:' ref is unknown,
+// so clStampKinds_ fails closed on it. Kinds are CL_PROVENANCE_STRICTNESS's
+// vocabulary — nothing else folds.
+var CL_PROVENANCE_REF_KINDS = {
+  'profile':  'public',    // profile:<slug>              — a company dossier
+  'study':    'public',    // study:<slug>                — a company study guide
+  'project':  'public',    // project:<slug>              — a named project
+  'graph':    'public',    // graph:profiler-graph        — the relationship graph
+  'concepts': 'public',    // concepts:profiler-concepts  — the concepts registry
+  'guidance': 'guidance',  // guidance:<module-id>        — an Industry Guidance module
+  'corpus':   'briefing',  // corpus:<scraper-item-key>   — Scraper corpus material
+  'briefing': 'briefing',  // briefing:<lesson-id>        — an earlier briefing edition
+  'report':   'report'     // report:<report-id>          — a session-authored report
+};
+var CL_ID_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;
+var CL_REF_RE = /^([a-z]+):([A-Za-z0-9][A-Za-z0-9._-]{0,127})$/;
+
+// Read a lesson's stamp into the list clGateForProvenance_ folds. Returns []
+// — which the gate turns into '' = deny — when the stamp is missing or empty,
+// or when ANY input is malformed, carries an unknown prefix, or claims a kind
+// its prefix does not carry. A stamp is either fully well-formed or it does
+// not exist; there is no partial credit and no "best available" kind.
+function clStampKinds_(lesson) {
+  var inputs = lesson && lesson.provenance && lesson.provenance.inputs;
+  if (Object.prototype.toString.call(inputs) !== '[object Array]' || !inputs.length) return [];
+  var kinds = [];
+  for (var i = 0; i < inputs.length; i++) {
+    var inp = inputs[i] || {};
+    var m = CL_REF_RE.exec(String(inp.ref || ''));
+    if (!m) return [];
+    var expected = CL_PROVENANCE_REF_KINDS[m[1]];
+    if (!expected || String(inp.kind || '').toLowerCase().trim() !== expected) return [];
+    kinds.push(expected);
+  }
+  return kinds;
+}
+// The capability a lesson's stamp demands, or '' (deny). Never stored in the
+// data — derived at serve time so it cannot drift from the stamp.
+function clLessonGate_(lesson) { return clGateForProvenance_(clStampKinds_(lesson)); }
+// Whether this session may read this lesson. False on a bad stamp — a lesson
+// is never readable by default.
+function clLessonVisible_(sess, lesson) {
+  var cap = clLessonGate_(lesson);
+  return !!cap && clCan_(sess, cap);
+}
+
+// Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs. Empty at
+// the schema slice: the next C1 slice assembles the first tracks from the
+// corpus and C2's pipeline appends to both. Register every clLesson<Name>_()
+// / clTrack<Name>_() here — the checker flags an unregistered literal.
+function clLessons_() { return []; }
+function clTracks_() { return []; }
+function clLesson_(id) {
+  var all = clLessons_();
+  for (var i = 0; i < all.length; i++) if (all[i].id === id) return all[i];
+  return null;
+}
+function clTrack_(id) {
+  var all = clTracks_();
+  for (var i = 0; i < all.length; i++) if (all[i].id === id) return all[i];
+  return null;
+}
+
+// A lesson card — what an index may say about a lesson the session can read.
+// Metadata only, never the sections; `kinds` are the distinct stamp kinds so
+// the page can badge a lesson's provenance without learning its inputs.
+function clLessonCard_(lesson) {
+  var kinds = clStampKinds_(lesson), distinct = [];
+  for (var i = 0; i < kinds.length; i++) if (distinct.indexOf(kinds[i]) < 0) distinct.push(kinds[i]);
+  return { id: lesson.id, type: lesson.type || 'module', title: lesson.title,
+           short: lesson.short || '', group: lesson.group || '',
+           updated: lesson.updated || '', reviewBy: lesson.reviewBy || '',
+           edition: lesson.edition || '', gate: clLessonGate_(lesson), kinds: distinct,
+           revised: (lesson.revisions && lesson.revisions.length)
+             ? lesson.revisions[lesson.revisions.length - 1].date : '',
+           sections: (lesson.sections || []).length };
+}
+// Every lesson this session may read, as cards, in registry order.
+function clLessonIndexFor_(sess) {
+  var all = clLessons_(), out = [];
+  for (var i = 0; i < all.length; i++) if (clLessonVisible_(sess, all[i])) out.push(clLessonCard_(all[i]));
+  return out;
+}
+// A track as this session sees it: its readable lessons in track order plus a
+// count of the ones withheld (so the page can say "2 more with contributor
+// access" without naming them). null when nothing in it is readable — an
+// entirely gated track is not listed, and asking for it by id says UNKNOWN.
+function clTrackFor_(sess, track) {
+  if (!track) return null;
+  var ids = track.lessons || [], lessons = [], withheld = 0;
+  for (var i = 0; i < ids.length; i++) {
+    var l = clLesson_(ids[i]);
+    if (l && clLessonVisible_(sess, l)) lessons.push(clLessonCard_(l)); else withheld++;
+  }
+  if (!lessons.length) return null;
+  return { id: track.id, title: track.title, short: track.short || '',
+           group: track.group || '', updated: track.updated || '',
+           prereqs: track.prereqs || [], lessons: lessons, withheld: withheld };
+}
+function clTrackIndexFor_(sess) {
+  var all = clTracks_(), out = [];
+  for (var i = 0; i < all.length; i++) {
+    var t = clTrackFor_(sess, all[i]);
+    if (t) out.push(t);
+  }
+  return out;
+}
+
+// PROJECT: ── Classroom ops (action=classroom, cop=index|track|lesson) ─────
+// Read-only, over the same cookie-less fetch transport as Profiler's guidance
+// ops. Order of checks: session → the app door (clRequire_ 'tracks' — every
+// admitted tier holds it; viewer is turned away with an audit entry) → for a
+// lesson, its own stamp through clRequireLesson_ before any section text
+// leaves the server. Index and track answers are pre-filtered to what the tier
+// may read. The renderer (next C1 slice) is the consumer.
+function handleClassroomOp_(e) {
+  var p = (e && e.parameter) || {};
+  var op = String(p.cop || '');
+  var session = p.session || '';
+  if (!session || session.length < 32) return { success: false, error: 'SESSION_EXPIRED' };
+  var sess = null;
+  try {
+    sess = validateSessionForData(session, 'classroom_' + op);
+    clRequire_(sess, 'tracks', 'classroom_' + op);
+    if (op === 'index') {
+      return { success: true, role: clRoleOf_(sess),
+               schema: { lesson: CL_LESSON_SCHEMA_VERSION, track: CL_TRACK_SCHEMA_VERSION },
+               tracks: clTrackIndexFor_(sess), lessons: clLessonIndexFor_(sess) };
+    }
+    if (op === 'track') {
+      var t = clTrackFor_(sess, clTrack_(String(p.id || '')));
+      if (!t) return { success: false, error: 'UNKNOWN_TRACK' };
+      return { success: true, track: t };
+    }
+    if (op === 'lesson') {
+      var lesson = clLesson_(String(p.id || ''));
+      if (!lesson) return { success: false, error: 'UNKNOWN_LESSON' };
+      clRequireLesson_(sess, clStampKinds_(lesson), 'classroom_lesson:' + lesson.id);
+      return { success: true, lesson: lesson };
+    }
+    return { success: false, error: 'unknown_cop' };
+  } catch (cErr) {
+    var cMsg = String((cErr && cErr.message) || cErr);
+    if (cMsg.indexOf('SESSION_EXPIRED') >= 0) return { success: false, error: 'SESSION_EXPIRED' };
+    if (cMsg.indexOf('CLASSROOM_FORBIDDEN') >= 0) {
+      return { success: false, error: 'ROLE_DENIED', role: sess ? clRoleOf_(sess) : RBAC_DEFAULT_ROLE };
+    }
+    return { success: false, error: cMsg };
+  }
 }
 // PROJECT END
 // ══════════════
@@ -922,6 +1090,13 @@ function doPost(e) {
       soResult = { type: 'gas-signed-out', success: false, error: String((soErr && soErr.message) || soErr) };
     }
     return ContentService.createTextOutput(JSON.stringify(soResult))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
+  // PROJECT: Classroom ops via fetch() — same transport rationale as the
+  // fetch routes above; session + role + provenance gated in handleClassroomOp_.
+  if (action === "classroom") {
+    return ContentService.createTextOutput(JSON.stringify(handleClassroomOp_(e)))
       .setMimeType(ContentService.MimeType.JSON);
   }
 
@@ -2483,6 +2658,9 @@ function doGet(e) {
         apiResult = processSignOut(apiToken);
       } else if (apiOp === 'heartbeat') {
         apiResult = processHeartbeat(apiToken);
+      } else if (apiOp === 'classroom') {
+        // PROJECT: GET mirror of the Classroom ops (read-only, no payloads)
+        apiResult = handleClassroomOp_(e);
       } else {
         apiResult = { error: 'unknown_op' };
       }
