@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.16r] — 2026-09-02 12:46:51 AM EST
+
+> **Prompt:** "After clearAllAccessCache, I was able to sign in and the attached screenshot is what I see. If everything looks good, then recommend me to keep building the Classroom v1 app in phases + recommended AI model."
+
+### Changed
+
+**Classroom is live and verified, so the Phase 6 spec's status notes are no longer accurate — refreshed.** The developer's admin session was checked field-for-field against what the registries say the ops should return: 2 tracks, 5 lessons readable, section counts 7/7/6 and 7/7, the guidance badge on `spec-sheet-decoded` only, and no withheld line (admin withholds nothing). Every value matches, so the whole path — auth → ACL → `action=classroom` → stamp fold → renderer — is confirmed working against the live backend rather than fixtures.
+
+- **`repository-information/PHASE6-CLASSROOM-DESIGN.md`** — two stale notes corrected. The Profiler-retune note still said "the rest of C0 … is still to build" when C0 shipped as v04.11r. The C1 note still said the registries were empty with four slices remaining; it now records both built slices (schema + stamp; first tracks + renderer) with their versions, states that the backend is deployed and verified end to end, notes that the provenance gate is now exercised by real content rather than only fixtures, and narrows the remaining C1 work to per-account progress + rollup and the study-next pointer
+
+### Worth noting
+
+- **No page or GAS version bump** — nothing that deploys was touched, so the auto-deploy webhook correctly stays quiet and Classroom holds at v01.02w / v01.03g
 
 ## [v04.15r] — 2026-09-02 12:41:49 AM EST
 
