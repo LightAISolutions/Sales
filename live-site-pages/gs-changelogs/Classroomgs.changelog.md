@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 3/50`
+`Sections: 4/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.04g] — 2026-09-02 12:58:13 AM EST — v04.17r
+
+### Added
+- Reading progress is now stored per account, so it is the same on every device you sign in from
+- Progress can only be recorded against material your access level lets you open, and ticks on material you can no longer open are hidden rather than deleted
+
+### Changed
+- The app now keeps a record of sign-ins, refusals, and who opened restricted material; the record starts filling once a log destination is attached
 
 ## [v01.03g] — 2026-09-02 12:20:16 AM EST — v04.14r
 

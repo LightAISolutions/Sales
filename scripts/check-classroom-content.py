@@ -380,7 +380,19 @@ READS = {"tracks": {"admin", "admin-by-permission", "contributor", "analyst"},
 HARNESS = r"""
 var __audit = [];
 function auditLog(ev, user, result, details) { __audit.push({ result: result, details: details }); }
+function dataAuditLog() {}
 var RBAC_DEFAULT_ROLE = 'viewer';
+// The progress store is the only part of the region that touches Apps Script
+// services; stubbing them keeps the whole region runnable in Node.
+var __props = {};
+var PropertiesService = { getScriptProperties: function() { return {
+  getProperty: function(k) { return Object.prototype.hasOwnProperty.call(__props, k) ? __props[k] : null; },
+  setProperty: function(k, v) { __props[k] = String(v); },
+  deleteProperty: function(k) { delete __props[k]; }
+}; } };
+var LockService = { getScriptLock: function() { return {
+  waitLock: function() {}, releaseLock: function() {}
+}; } };
 %(region)s
 var FX = %(fixtures)s, TIERS = %(tiers)s, out = { gate: {}, visible: {}, index: {} };
 Object.keys(FX).forEach(function(k) {
@@ -390,11 +402,11 @@ Object.keys(FX).forEach(function(k) {
 });
 // Index filtering with a stand-in registry: later declarations override.
 function clLessons_() { return [
-  { id: 'l-pub', title: 'P', provenance: FX['public-only'].provenance, sections: [{id:'a'}] },
-  { id: 'l-gd',  title: 'G', provenance: FX['public-plus-guidance'].provenance, sections: [] },
-  { id: 'l-rep', title: 'R', provenance: FX['public-plus-report'].provenance, sections: [] },
-  { id: 'l-bad', title: 'B', provenance: FX['note-ref'].provenance, sections: [] },
-  { id: 'b-1', type: 'briefing', edition: '2026-09-01', title: 'W', provenance: FX['corpus'].provenance, sections: [] }
+  { id: 'l-pub', title: 'P', provenance: FX['public-only'].provenance, sections: [{id:'a'},{id:'b'}] },
+  { id: 'l-gd',  title: 'G', provenance: FX['public-plus-guidance'].provenance, sections: [{id:'a'},{id:'b'}] },
+  { id: 'l-rep', title: 'R', provenance: FX['public-plus-report'].provenance, sections: [{id:'a'}] },
+  { id: 'l-bad', title: 'B', provenance: FX['note-ref'].provenance, sections: [{id:'a'}] },
+  { id: 'b-1', type: 'briefing', edition: '2026-09-01', title: 'W', provenance: FX['corpus'].provenance, sections: [{id:'a'}] }
 ]; }
 function clTracks_() { return [
   { id: 't-mixed', title: 'M', lessons: ['l-pub', 'l-gd', 'l-rep', 'l-bad', 'ghost'] },
@@ -406,6 +418,34 @@ Object.keys(TIERS).forEach(function(t) {
                    lessons: ix.lessons.map(function(l) { return l.id; }),
                    cards: ix.lessons.map(function(l) { return Object.keys(l).sort().join(','); }) };
 });
+// ── Progress ops: progress is never a weaker gate than reading ──────────
+out.tickable = {};
+Object.keys(TIERS).forEach(function(t) {
+  var sess = { role: TIERS[t].role, permissions: TIERS[t].permissions, email: t + '@example.com' };
+  out.tickable[t] = Object.keys(clProgressValid_(sess)).sort();
+});
+var EM = 'shared@example.com';
+var asContrib = { role: 'contributor', permissions: [], email: EM };
+var asAnalyst = { role: 'analyst', permissions: [], email: EM };
+out.progress = {
+  // A tier that cannot read the lesson cannot tick it.
+  analystTicksGuidance: clProgressWrite_({ role: 'analyst', permissions: [], email: 'a@example.com' },
+                                         { id: 'l-gd', sec: 'a', done: '1' }),
+  // A section id that does not exist is not storable either.
+  contribTicksGhostSection: clProgressWrite_(asContrib, { id: 'l-pub', sec: 'ghost', done: '1' }),
+  // The real write, then the same account seen at a lower tier.
+  contribTicksGuidance: clProgressWrite_(asContrib, { id: 'l-gd', sec: 'a', done: '1' }),
+  readAsContrib: null, readAsAnalyst: null, rawKept: null, afterUntick: null
+};
+out.progress.readAsContrib = clProgressRead_(asContrib);
+out.progress.readAsAnalyst = clProgressRead_(asAnalyst);
+out.progress.rawKept = JSON.parse(__props['cl_progress:' + EM] || '{}');
+clProgressWrite_(asContrib, { id: 'l-gd', sec: 'a', done: '0' });
+out.progress.afterUntick = clProgressRead_(asContrib);
+// A session with no usable email cannot write at all.
+out.progress.anon = clProgressWrite_({ role: 'admin', permissions: [], email: 'unvalidated' },
+                                     { id: 'l-pub', sec: 'a', done: '1' });
+
 var forbidden = 0;
 try { clRequireLesson_(TIERS['analyst'], clStampKinds_(FX['public-plus-guidance']), 't'); } catch (e) { forbidden += /CLASSROOM_FORBIDDEN/.test(String(e.message)) ? 1 : 0; }
 try { clRequireLesson_(TIERS['admin'], clStampKinds_(FX['note-ref']), 't'); } catch (e) { forbidden += /CLASSROOM_FORBIDDEN/.test(String(e.message)) ? 1 : 0; }
@@ -456,10 +496,45 @@ def run_gate_truth_table(src):
                 err("gate test: card keys for %s = %s (sections must never leak into a card)" % (t, keys))
     if out["forbidden"] != 3:
         err("gate test: expected 3 CLASSROOM_FORBIDDEN throws, got %s" % out["forbidden"])
+
+    # Progress: a tier may tick exactly the lessons it may read — no more.
+    cases = 0
+    for t, want in EXPECTED_INDEX.items():
+        got = out["tickable"].get(t)
+        cases += 1
+        if got != sorted(want["lessons"]):
+            err("progress test: %s may tick %s, but may read %s — progress must not be a weaker gate"
+                % (t, got, sorted(want["lessons"])))
+    pr = out["progress"]
+    checks = [
+        (pr["analystTicksGuidance"].get("changed") == 0,
+         "an analyst tick against a guidance-gated lesson changed %s rows (expected 0)"
+         % pr["analystTicksGuidance"].get("changed")),
+        ("l-gd" not in (pr["analystTicksGuidance"].get("progress") or {}),
+         "a denied tick still appeared in the returned progress map"),
+        (pr["contribTicksGhostSection"].get("changed") == 0,
+         "a tick against a section id that does not exist was stored"),
+        (pr["contribTicksGuidance"].get("changed") == 1,
+         "a permitted tick changed %s rows (expected 1)" % pr["contribTicksGuidance"].get("changed")),
+        (pr["readAsContrib"].get("l-gd", {}).get("a") is True,
+         "a permitted tick did not read back for the tier that made it"),
+        ("l-gd" not in pr["readAsAnalyst"],
+         "a guidance-derived tick leaked to the same account seen as analyst"),
+        (pr["rawKept"].get("l-gd", {}).get("a") is True,
+         "the stored tick was destroyed by the demotion rather than filtered"),
+        ("l-gd" not in pr["afterUntick"],
+         "un-ticking did not remove the section"),
+        (pr["anon"].get("error") == "NO_ACCOUNT",
+         "a session without a usable email was allowed to write progress"),
+    ]
+    for ok, msg in checks:
+        cases += 1
+        if not ok:
+            err("progress test: " + msg)
+    return (len(EXPECTED_GATE) * (1 + len(TIERS))) + len(EXPECTED_INDEX) + cases
     for want in ("classroom_capability_denied", "classroom_bad_provenance", "classroom_not_admitted"):
         if want not in out["audited"]:
             err("gate test: denial %r was not audit-logged" % want)
-    return len(EXPECTED_GATE) * (1 + len(TIERS)) + len(EXPECTED_INDEX)
 
 def main():
     src = read_gs()

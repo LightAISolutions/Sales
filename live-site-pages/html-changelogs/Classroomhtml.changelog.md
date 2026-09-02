@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 2/50`
+`Sections: 3/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.03w] — 2026-09-02 12:58:13 AM EST — v04.17r
+
+### Added
+- Mark a section as understood as you read it — the section list ticks it off and strikes it through
+- Each track now shows how far through it you are, and a finished lesson is marked complete on the index
+- Your progress follows your account rather than the browser, so it is there on another device and a second person signing in on the same computer starts from a clean slate
+- Ticks made while offline are kept and pushed up the next time the app can reach the server
 
 ## [v01.02w] — 2026-09-02 12:20:16 AM EST — v04.14r
 

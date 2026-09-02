@@ -3,11 +3,45 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.17r] — 2026-09-02 12:58:13 AM EST
+
+> **Prompt:** "build C1 — per-account progress. Also, follow Profiler in folding an account digest into the shared cache key to avoid the trap Profiler experienced. I also want an audit trail before the C2 pipeline starts committing content on a schedule."
+
+### Added
+
+**Classroom C1, progress slice — per-account section ticks, and the audit trail switched on ahead of C2.** The `gd_progress` pattern ported from Profiler, with one Classroom-specific rule the original does not need: **progress is never a weaker gate than reading.**
+
+**`googleAppsScripts/Classroom/Classroom.gs` (v01.03g → v01.04g)**
+
+- **`cop=progress` / `cop=setprogress`** on the existing `action=classroom` transport, behind the same app door. Storage is one Script Property per account (`cl_progress:<email>` → `{lessonId:{secId:true}}`) — tiny blobs, no cross-project consumers, no spreadsheet round-trip per tick. C4's drill history will not fit this pattern, which is exactly why the design doc calls for a sheet-backed store there
+- **Validation is built from what the session may READ**, not from the whole registry: `clProgressValid_` filters through `clLessonVisible_`, so a tier that cannot open a lesson can neither tick it nor discover its section ids by probing. Ticks for lessons an account can no longer read are **filtered out of reads but never deleted** — access can be restored, and progress is the developer's own history rather than resettable state
+- A single tick (`id` + `sec` + `done`) and a batch `merge` (the page's first-sync migration) share one validated write path, under a script lock
+
+**`live-site-pages/Classroom.html` (v01.02w → v01.03w)**
+
+- Mark-as-understood per section, nav ticks with strike-through, per-row completion and a per-track rollup chip on the index. State is painted by `clApplyProgressUI` rather than by the renderers, so a server map arriving after either view has painted repaints it correctly
+- **The account digest is in the storage key from the first commit.** `clProgressKey()` is `cl_progress_<digest>_<lessonId>` using Profiler's DJB2 of the session email. Profiler shipped a shared key and had to fix it in v01.40w after a second account signing into the same browser inherited the first account's ticks; Classroom never shipped the shared form, so there is **no legacy-key purge to port** — only the namespacing itself
+- The server is authoritative once a sync succeeds; localStorage is the offline fallback, and a reply without a real progress object is treated as "sync unavailable" rather than an empty server map (adopting it would wipe the fallback)
+
+**Audit trail (`PROJECT_OVERRIDES`)**
+
+- `ENABLE_AUDIT_LOG` and `ENABLE_DATA_AUDIT_LOG` set to `true`. The `standard` preset ships both off; these are the supported per-project overrides and both writers no-op while `SPREADSHEET_ID` is a placeholder, so they are **inert until a spreadsheet is attached** — one ID away from live, nothing to undo if it never happens
+- **Successful reads of gated lessons are now logged** (`dataAuditLog`, resource `classroom_lesson`, with the gate and tier). Denials were already audited by `clRequire_` / `clRequireLesson_`; who *opened* guidance-, corpus- or report-derived material was the missing half. Public-stamped lessons are deliberately not logged — every admitted tier may read them, so the row would carry no signal and only add volume
+- Progress writes are logged too, and only when something actually changed (`wr.changed`)
+
+### Changed
+
+- **`scripts/check-classroom-content.py`** — the Node harness now stubs `PropertiesService` and `LockService` so the whole PROJECT region still runs, the stand-in lessons carry real sections, and 15 new assertions cover the progress ops. The headline invariant is asserted per tier: **the set of lessons a tier may tick equals the set it may read.** Also asserted: a denied tick changes nothing and does not appear in the returned map, a non-existent section id is not storable, a demotion hides ticks without destroying the stored value, un-ticking removes the section, and a session without a usable email cannot write at all. 97 → 112 gate cases. Verified by probe — removing the visibility filter from `clProgressValid_` fails six assertions immediately
+
+### Verified
+
+- Headless pass over the real registries with a stand-in server: 13 checks, all green. The two that matter — the storage key came back as `cl_progress_uvkee5i_heat-is-the-constraint` (digest present, shared form absent), and **a second account in the same browser saw "not started" with zero completed rows while the first account's progress was intact on return.** That is Profiler's trap, tested rather than asserted
 
 ## [v04.16r] — 2026-09-02 12:46:51 AM EST
 

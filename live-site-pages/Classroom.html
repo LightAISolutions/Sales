@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.02w">
+  <meta name="build-version" content="v01.03w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -463,8 +463,24 @@
     .cl-nav a { display: flex; align-items: baseline; gap: 8px; padding: 6px 8px; border-radius: 7px;
       text-decoration: none; color: var(--cl-muted); font: 12.5px/1.45 var(--cl-serif); }
     .cl-nav a:hover { background: var(--cl-card2); color: var(--cl-ink); }
-    .cl-nav .tick { flex: 0 0 auto; width: 5px; height: 5px; background: var(--cl-line2);
-      border-radius: 50%; display: inline-block; position: relative; top: -3px; }
+    /* The marker was a plain bullet while progress did not exist; now that a
+       section can actually be ticked it is a checkbox again, and the promise
+       it makes is one the page keeps. */
+    .cl-nav .tick { flex: 0 0 auto; width: 12px; height: 12px; border: 1px solid var(--cl-line2);
+      border-radius: 4px; display: inline-block; position: relative; top: 1px; }
+    .cl-nav a.done .tick { background: var(--cl-accent); border-color: var(--cl-accent); }
+    .cl-nav a.done .nm { color: var(--cl-faint); text-decoration: line-through; }
+    .cl-done-btn { margin-top: 14px; background: transparent; border: 1px solid var(--cl-line2);
+      color: var(--cl-muted); border-radius: 999px; padding: 6px 15px; cursor: pointer;
+      font: 12px/1 var(--cl-mono); }
+    .cl-done-btn:hover { border-color: var(--cl-accent); color: var(--cl-accent); }
+    .cl-done-btn.on { background: var(--cl-accent); border-color: var(--cl-accent); color: #fff; }
+    .cl-rollup { float: right; font: 600 10px/1 var(--cl-mono); letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--cl-faint); border: 1px solid var(--cl-line);
+      border-radius: 999px; padding: 3px 9px; }
+    .cl-rollup.all { color: var(--cl-adv); border-color: var(--cl-adv); }
+    .cl-row.done .t { color: var(--cl-muted); }
+    .cl-row.done .r { color: var(--cl-adv); }
     .cl-sec { background: var(--cl-card); border: 1px solid var(--cl-line); border-radius: 12px;
       padding: 16px 20px 18px; margin: 0 0 16px; }
     .cl-sec h3 { font: 700 20px/1.25 var(--cl-serif); color: var(--cl-ink); margin: 0 0 4px; }
@@ -4702,8 +4718,180 @@ function clBindTermTips(root) {
   window.addEventListener('scroll', hide);
 }
 
+// PROJECT: ── Reading progress (C1) ───────────────────────────────────────
+// Section ticks per account. The server (cop=progress / cop=setprogress) is
+// authoritative once a sync succeeds, so progress follows the account across
+// devices; localStorage is the offline fallback and local-only ticks migrate
+// up in one batch on the first successful sync of each page load.
+//
+// The account digest is in the storage key from the FIRST commit, which is
+// Profiler's hard-won fix rather than a precaution: before Profiler v01.40w
+// its key was shared, so signing a second account into the same browser
+// inherited the first account's ticks. Classroom never shipped a shared key,
+// so there is no legacy-key purge to port — the namespacing is simply correct
+// from the start.
+var CL_PROGRESS_KEY = 'cl_progress';
+var clServerProg = null;      // null until a sync succeeds — then authoritative
+var clProgSyncStarted = false;
+var clCurLesson = null;       // lesson currently rendered, for repaints
+
+function clAcctKey() {
+  var e = String((loadSession() || {}).email || '').trim().toLowerCase();
+  if (!e) return 'anon';
+  var h = 5381;
+  for (var i = 0; i < e.length; i++) h = ((h << 5) + h + e.charCodeAt(i)) >>> 0;
+  return 'u' + h.toString(36);
+}
+function clProgressKey(lessonId) {
+  return CL_PROGRESS_KEY + '_' + clAcctKey() + '_' + lessonId;
+}
+function clLocalProgress(lessonId) {
+  try { return JSON.parse(localStorage.getItem(clProgressKey(lessonId)) || '{}'); }
+  catch (e) { return {}; }
+}
+function clProgress(lessonId) {
+  if (clServerProg) return clServerProg[lessonId] || {};
+  return clLocalProgress(lessonId);
+}
+function clSetProgress(lessonId, secId, done) {
+  try {
+    var pr = clLocalProgress(lessonId); pr[secId] = !!done;
+    localStorage.setItem(clProgressKey(lessonId), JSON.stringify(pr));
+  } catch (e) { /* private mode — the offline fallback just is not persisted */ }
+  if (clServerProg) {
+    if (done) (clServerProg[lessonId] = clServerProg[lessonId] || {})[secId] = true;
+    else if (clServerProg[lessonId]) delete clServerProg[lessonId][secId];
+  }
+  clApplyProgressUI();
+  clApi('setprogress', { id: lessonId, sec: secId, done: done ? '1' : '0' }, function(res) {
+    if (res && res.success && res.progress) { clServerProg = res.progress; clApplyProgressUI(); }
+    // On failure the tick already sits in localStorage — the next page load's
+    // first-sync migration pushes it up.
+  });
+}
+
+function clProgressSync() {
+  if (clProgSyncStarted) return;
+  clProgSyncStarted = true;
+  clApi('progress', {}, function(res) {
+    // A response without a real progress object (no backend yet, a stub, or a
+    // malformed reply) means "sync unavailable" — never an empty server map.
+    // Adopting it would wipe the local fallback.
+    if (!res || !res.success || typeof res.progress !== 'object' || res.progress === null) {
+      clProgSyncStarted = false; return;
+    }
+    var server = res.progress;
+    // First-sync migration: push up local ticks the server does not have, in
+    // one batch (covers offline ticks and failed setprogress writes).
+    var missing = {}, any = false;
+    var pfx = CL_PROGRESS_KEY + '_' + clAcctKey() + '_';
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (!k || k.indexOf(pfx) !== 0) continue;
+        var lid = k.slice(pfx.length), loc;
+        try { loc = JSON.parse(localStorage.getItem(k) || '{}'); } catch (je) { continue; }
+        for (var secId in loc) {
+          if (loc.hasOwnProperty(secId) && loc[secId] && !(server[lid] && server[lid][secId])) {
+            (missing[lid] = missing[lid] || {})[secId] = true; any = true;
+          }
+        }
+      }
+    } catch (le) { /* private mode — nothing local to migrate */ }
+    var adopt = function(map) {
+      clServerProg = map || {};
+      // Mirror the merged server state down so the offline fallback matches
+      // exactly, including ticks removed on another device. Local-only ticks
+      // were migrated up above, so a lesson key absent from the server map is
+      // a deliberate removal rather than an un-synced local one.
+      try {
+        var drop = [];
+        for (var li = 0; li < localStorage.length; li++) {
+          var lk = localStorage.key(li);
+          if (lk && lk.indexOf(pfx) === 0 && !clServerProg[lk.slice(pfx.length)]) drop.push(lk);
+        }
+        for (var di = 0; di < drop.length; di++) localStorage.removeItem(drop[di]);
+        for (var d in clServerProg) if (clServerProg.hasOwnProperty(d)) {
+          localStorage.setItem(clProgressKey(d), JSON.stringify(clServerProg[d]));
+        }
+      } catch (se) { /* private mode */ }
+      clApplyProgressUI();
+    };
+    if (any) {
+      clApi('setprogress', { merge: JSON.stringify(missing) }, function(mres) {
+        if (mres && mres.success && typeof mres.progress === 'object' && mres.progress !== null) {
+          adopt(mres.progress);
+        } else {
+          // Adopting the pre-merge map would erase the unmigrated local ticks.
+          // Stay on localStorage and retry on the next page load.
+          clProgSyncStarted = false;
+        }
+      });
+    } else {
+      adopt(server);
+    }
+  });
+}
+
+// How many sections of a lesson card are ticked, and whether that finishes it.
+function clLessonDone_(card) {
+  var ticks = 0, pr = clProgress(card.id);
+  for (var k in pr) if (pr.hasOwnProperty(k) && pr[k]) ticks++;
+  var total = card.sections || 0;
+  return { ticks: ticks, total: total, complete: total > 0 && ticks >= total };
+}
+
+// Repaint whichever view is on screen after a sync lands or a tick changes.
+// Both views are handled here rather than in their renderers, because the
+// server map can arrive after either one has already painted.
+function clApplyProgressUI() {
+  var shell = document.getElementById('cl-shell');
+  if (!shell) return;
+  // Lesson view — nav ticks and the mark-as-understood buttons.
+  if (clCurLesson) {
+    var prog = clProgress(clCurLesson);
+    var navLinks = shell.querySelectorAll('.cl-nav a[id^="clnav-"]');
+    for (var i = 0; i < navLinks.length; i++) {
+      var secId = navLinks[i].id.slice('clnav-'.length);
+      navLinks[i].classList.toggle('done', !!prog[secId]);
+    }
+    var btns = shell.querySelectorAll('.cl-done-btn[data-sec]');
+    for (var j = 0; j < btns.length; j++) {
+      var on = !!prog[btns[j].getAttribute('data-sec')];
+      btns[j].classList.toggle('on', on);
+      btns[j].textContent = on ? '✓ Understood' : 'Mark as understood';
+    }
+  }
+  // Index view — per-row completion and the per-track rollup.
+  var rows = shell.querySelectorAll('.cl-row[data-lesson]');
+  for (var r = 0; r < rows.length; r++) {
+    var card = { id: rows[r].getAttribute('data-lesson'),
+                 sections: parseInt(rows[r].getAttribute('data-sections') || '0', 10) };
+    var st = clLessonDone_(card);
+    rows[r].classList.toggle('done', st.complete);
+    var mark = rows[r].querySelector('.r');
+    if (mark) {
+      mark.textContent = st.complete ? '✓ complete'
+        : (st.ticks ? st.ticks + ' / ' + st.total + ' sections' : st.total + ' sections');
+    }
+  }
+  var rollups = shell.querySelectorAll('.cl-rollup[data-lessons]');
+  for (var t = 0; t < rollups.length; t++) {
+    var ids = (rollups[t].getAttribute('data-lessons') || '').split(',').filter(Boolean);
+    var secs = (rollups[t].getAttribute('data-sections') || '').split(',');
+    var doneCount = 0;
+    for (var q = 0; q < ids.length; q++) {
+      if (clLessonDone_({ id: ids[q], sections: parseInt(secs[q] || '0', 10) }).complete) doneCount++;
+    }
+    rollups[t].textContent = doneCount
+      ? doneCount + ' of ' + ids.length + ' complete'
+      : 'not started';
+    rollups[t].classList.toggle('all', ids.length > 0 && doneCount === ids.length);
+  }
+}
+
 // ── Section + lesson rendering ────────────────────────────────────────────
-function clRenderSection(sec) {
+function clRenderSection(lesson, sec) {
   var el = clEl('section', 'cl-sec');
   el.id = 'cl-' + sec.id;
   el.appendChild(clEl('h3', null, sec.title));
@@ -4740,6 +4928,16 @@ function clRenderSection(sec) {
     var zt = clEl('div', 'tx'); zt.innerHTML = clFmt(sec.sales); zh.appendChild(zt);
     el.appendChild(zh);
   }
+  // Mark as understood. State is painted by clApplyProgressUI rather than here,
+  // so a server sync landing after the render repaints correctly.
+  var done = clEl('button', 'cl-done-btn');
+  done.type = 'button';
+  done.setAttribute('data-sec', sec.id);
+  done.textContent = 'Mark as understood';
+  done.addEventListener('click', function() {
+    clSetProgress(lesson.id, sec.id, !done.classList.contains('on'));
+  });
+  el.appendChild(done);
   return el;
 }
 
@@ -4781,6 +4979,8 @@ function clProvStrip(lesson) {
 
 function clRenderLesson(lesson, shell) {
   clGlossMap = {};
+  clCurLesson = lesson.id;
+  clProgressSync();          // no-op once a sync has succeeded; retries after failures
   clConceptsLoad().then(function(concepts) {
     var ck;
     if (concepts) for (ck in concepts) if (concepts.hasOwnProperty(ck)) clGlossMap[ck] = concepts[ck];
@@ -4857,7 +5057,7 @@ function clRenderLesson(lesson, shell) {
 
     var secs = lesson.sections || [];
     for (var si = 0; si < secs.length; si++) {
-      main.appendChild(clRenderSection(secs[si]));
+      main.appendChild(clRenderSection(lesson, secs[si]));
       navLink(secs[si].id, secs[si].title);
     }
 
@@ -4880,6 +5080,7 @@ function clRenderLesson(lesson, shell) {
     }
 
     clBindTermTips(shell);
+    clApplyProgressUI();
     window.scrollTo(0, 0);
   });
 }
@@ -4911,6 +5112,10 @@ function clLessonRow(card, n) {
   row.appendChild(mid);
   var right = clEl('div', 'r', (card.sections || 0) + ' sections');
   row.appendChild(right);
+  // Completion is painted by clApplyProgressUI from these attributes, so the
+  // row repaints when the server map lands after the index has rendered.
+  row.setAttribute('data-lesson', card.id);
+  row.setAttribute('data-sections', String(card.sections || 0));
   row.addEventListener('click', function() {
     window.location.hash = 'lesson/' + card.id;
   });
@@ -4923,7 +5128,12 @@ function clTrackCard(track) {
   if (track.short) box.appendChild(clEl('p', 'cl-tsub', track.short));
   var meta = (track.lessons || []).length + ' lesson' + ((track.lessons || []).length === 1 ? '' : 's');
   if (track.updated) meta += '  ·  updated ' + track.updated;
-  box.appendChild(clEl('div', 'cl-meta', meta));
+  var metaEl = clEl('div', 'cl-meta', meta);
+  var roll = clEl('span', 'cl-rollup', 'not started');
+  roll.setAttribute('data-lessons', (track.lessons || []).map(function(l) { return l.id; }).join(','));
+  roll.setAttribute('data-sections', (track.lessons || []).map(function(l) { return l.sections || 0; }).join(','));
+  metaEl.appendChild(roll);
+  box.appendChild(metaEl);
   (track.lessons || []).forEach(function(card, i) { box.appendChild(clLessonRow(card, i + 1)); });
   if (track.withheld) {
     box.appendChild(clEl('div', 'cl-withheld', track.withheld === 1
@@ -4934,6 +5144,8 @@ function clTrackCard(track) {
 }
 
 function clRenderIndex(res, shell) {
+  clCurLesson = null;
+  clProgressSync();
   shell.innerHTML = '';
   var tracks = res.tracks || [], lessons = res.lessons || [];
 
@@ -4982,6 +5194,7 @@ function clRenderIndex(res, shell) {
     loose.forEach(function(c) { lbox.appendChild(clLessonRow(c, null)); });
     shell.appendChild(lbox);
   }
+  clApplyProgressUI();
 }
 
 // ── Views + routing ───────────────────────────────────────────────────────
@@ -5046,6 +5259,7 @@ function clAppMount() {
   if (app.dataset.mounted === '1') return;
   app.dataset.mounted = '1';
   app.style.display = 'block';
+  clProgressSync();          // pre-warm the server map at sign-in
   window.addEventListener('hashchange', clRoute);
   clRoute();
 }

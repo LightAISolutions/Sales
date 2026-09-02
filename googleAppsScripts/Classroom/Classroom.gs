@@ -1,4 +1,4 @@
-var VERSION = "v01.03g";
+var VERSION = "v01.04g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -45,6 +45,14 @@ var PROJECT_OVERRIDES = {
   ENABLE_DOMAIN_RESTRICTION: false,
   ALLOWED_DOMAINS: [],
   SESSION_EXPIRATION: 7200,   // default new projects to a 2-hour rolling session (overrides the preset's shorter default; absolute ceiling stays at the preset's ABSOLUTE_SESSION_TIMEOUT). The client countdown derives from this via the heartbeat's expiresIn, so no second constant is needed.
+  // Audit trail (developer directive 2026-09-02, ahead of the C2 pipeline).
+  // The 'standard' preset ships both loggers off; Classroom wants a record of
+  // who signed in, who was denied, and who opened gated lesson material before
+  // a scheduled pipeline starts authoring content on its own. Both writers
+  // no-op while SPREADSHEET_ID is a placeholder, so these are inert until a
+  // spreadsheet is attached — nothing to undo if that never happens.
+  ENABLE_AUDIT_LOG: true,       // SessionAuditLog tab: sign-ins, failures, denials
+  ENABLE_DATA_AUDIT_LOG: true,  // DataAuditLog tab: gated-lesson reads, progress writes
 };
 
 // ══════════════
@@ -2021,7 +2029,123 @@ function clTrackIndexFor_(sess) {
   return out;
 }
 
-// PROJECT: ── Classroom ops (action=classroom, cop=index|track|lesson) ─────
+
+// PROJECT: ── Per-account reading progress (C1) ────────────────────────────
+// cop=progress / cop=setprogress, over the same transport and the same app
+// door as index/track/lesson. The account's section ticks live server-side so
+// progress follows the account across devices; the page keeps localStorage as
+// its offline fallback and migrates local-only ticks up in one batch on its
+// first successful sync (the guidance pattern, Profiler.gs gd_progress).
+//
+// Storage is one Script Property per account ('cl_progress:<email>' →
+// {lessonId:{secId:true}}). The blobs are tiny, well under the 9KB/value cap,
+// and have no cross-project consumers, so PropertiesService beats a
+// spreadsheet round-trip per tick. C4's drill history will NOT fit this
+// pattern — that is why the design doc calls out a sheet-backed store there.
+//
+// The one Classroom-specific rule: **progress is never a weaker gate than
+// reading.** Validation is built from the lessons this session may actually
+// read (clLessonVisible_), not from the whole registry, so a tier that cannot
+// open a lesson can neither tick it nor discover its section ids by probing.
+// Stored ticks for lessons the account can no longer read are filtered out of
+// reads but never deleted — access can be restored, and progress is the
+// developer's own history, not resettable state.
+var CL_PROGRESS_PROP_PREFIX = 'cl_progress:';
+
+function clProgressAcct_(sess) {
+  var em = String((sess && sess.email) || '').toLowerCase().trim();
+  if (!em || em === 'unvalidated' || em.indexOf('@') < 0) return '';
+  return em;
+}
+
+// {lessonId: {sectionId: true}} for every lesson this session may read.
+function clProgressValid_(sess) {
+  var all = clLessons_(), valid = {};
+  for (var i = 0; i < all.length; i++) {
+    if (!clLessonVisible_(sess, all[i])) continue;
+    var set = {}, secs = all[i].sections || [];
+    for (var j = 0; j < secs.length; j++) if (secs[j].id) set[secs[j].id] = true;
+    valid[all[i].id] = set;
+  }
+  return valid;
+}
+
+function clProgressRaw_(acct) {
+  try {
+    var raw = PropertiesService.getScriptProperties().getProperty(CL_PROGRESS_PROP_PREFIX + acct);
+    return raw ? (JSON.parse(raw) || {}) : {};
+  } catch (e) { return {}; }
+}
+
+// Narrow a stored map to what this session may currently read. Unknown lesson
+// ids and sections that no longer exist drop out too, so a renamed section
+// cannot resurrect as a phantom tick.
+function clProgressVisible_(stored, valid) {
+  var out = {};
+  for (var lid in stored) {
+    if (!stored.hasOwnProperty(lid) || !valid[lid]) continue;
+    var keep = {}, any = false;
+    for (var sid in stored[lid]) {
+      if (stored[lid].hasOwnProperty(sid) && stored[lid][sid] && valid[lid][sid]) { keep[sid] = true; any = true; }
+    }
+    if (any) out[lid] = keep;
+  }
+  return out;
+}
+
+function clProgressRead_(sess) {
+  var acct = clProgressAcct_(sess);
+  if (!acct) return {};
+  return clProgressVisible_(clProgressRaw_(acct), clProgressValid_(sess));
+}
+
+// Delta: one tick (id + sec + done=1|0) or a batch merge (merge = JSON
+// {lessonId:{secId:bool}}) used by the page's first-sync migration.
+function clProgressWrite_(sess, p) {
+  var acct = clProgressAcct_(sess);
+  if (!acct) return { success: false, error: 'NO_ACCOUNT' };
+  var valid = clProgressValid_(sess);
+  var delta = {};
+  if (p.merge) {
+    try { delta = JSON.parse(String(p.merge)) || {}; }
+    catch (me) { return { success: false, error: 'BAD_MERGE' }; }
+  } else if (p.id && p.sec) {
+    var one = {}; one[String(p.sec)] = String(p.done) === '1';
+    delta[String(p.id)] = one;
+  } else {
+    return { success: false, error: 'NO_DELTA' };
+  }
+  var lock = null;
+  try { lock = LockService.getScriptLock(); lock.waitLock(5000); }
+  catch (le) { lock = null; /* best effort — same-account collisions are rare */ }
+  try {
+    var props = PropertiesService.getScriptProperties();
+    var key = CL_PROGRESS_PROP_PREFIX + acct;
+    var cur = clProgressRaw_(acct);
+    var wrote = 0;
+    for (var lid in delta) {
+      if (!delta.hasOwnProperty(lid) || !valid[lid]) continue;
+      var secMap = delta[lid] || {};
+      for (var sid in secMap) {
+        if (!secMap.hasOwnProperty(sid) || !valid[lid][sid]) continue;
+        if (secMap[sid]) {
+          if (!cur[lid]) cur[lid] = {};
+          if (!cur[lid][sid]) { cur[lid][sid] = true; wrote++; }
+        } else if (cur[lid] && cur[lid][sid]) {
+          delete cur[lid][sid]; wrote++;
+        }
+      }
+      if (cur[lid] && !Object.keys(cur[lid]).length) delete cur[lid];
+    }
+    if (Object.keys(cur).length) props.setProperty(key, JSON.stringify(cur));
+    else props.deleteProperty(key);
+    return { success: true, changed: wrote, progress: clProgressVisible_(cur, valid) };
+  } finally {
+    if (lock) try { lock.releaseLock(); } catch (re) { /* already released */ }
+  }
+}
+
+// PROJECT: ── Classroom ops (action=classroom, cop=index|track|lesson|progress|setprogress)
 // Read-only, over the same cookie-less fetch transport as Profiler's guidance
 // ops. Order of checks: session → the app door (clRequire_ 'tracks' — every
 // admitted tier holds it; viewer is turned away with an audit entry) → for a
@@ -2051,7 +2175,28 @@ function handleClassroomOp_(e) {
       var lesson = clLesson_(String(p.id || ''));
       if (!lesson) return { success: false, error: 'UNKNOWN_LESSON' };
       clRequireLesson_(sess, clStampKinds_(lesson), 'classroom_lesson:' + lesson.id);
+      // Denials are already audited by clRequire_/clRequireLesson_. Successful
+      // reads of GATED lessons are the other half of the trail worth keeping:
+      // who opened guidance-, corpus- or report-derived material, and when.
+      // Public-stamped lessons are not logged — every admitted tier may read
+      // them, so the row would carry no signal and only add volume.
+      var lessonGate = clLessonGate_(lesson);
+      if (lessonGate && lessonGate !== 'tracks') {
+        dataAuditLog(sess.email, 'read', 'classroom_lesson', lesson.id,
+          { gate: lessonGate, role: clRoleOf_(sess) });
+      }
       return { success: true, lesson: lesson };
+    }
+    if (op === 'progress') {
+      return { success: true, progress: clProgressRead_(sess) };
+    }
+    if (op === 'setprogress') {
+      var wr = clProgressWrite_(sess, p);
+      if (wr.success && wr.changed) {
+        dataAuditLog(sess.email, 'write', 'classroom_progress',
+          String(p.id || 'merge'), { changed: wr.changed, role: clRoleOf_(sess) });
+      }
+      return wr;
     }
     return { success: false, error: 'unknown_cop' };
   } catch (cErr) {
