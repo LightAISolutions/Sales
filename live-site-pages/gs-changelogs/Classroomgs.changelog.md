@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.05g] — 2026-09-02 01:10:32 AM EST — v04.18r
+
+### Added
+- The app now works out what you should read next and sends it with the curriculum, so the suggestion is always current and never points at material your access level cannot open
+
+### Changed
+- The record of sign-ins, refusals and restricted-material reads now has somewhere to go, so it starts filling from this update onward
 
 ## [v01.04g] — 2026-09-02 12:58:13 AM EST — v04.17r
 

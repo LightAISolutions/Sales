@@ -1,4 +1,4 @@
-var VERSION = "v01.04g";
+var VERSION = "v01.05g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -23,7 +23,14 @@ var PARENT_ORIGIN = EMBED_PAGE_URL.replace(/^(https?:\/\/[^\/]+).*$/, '$1').toLo
 // AUTH CONFIG
 // ══════════════
 // Spreadsheet ID for project data (the GAS app reads/writes user data here).
-var SPREADSHEET_ID = "YOUR_SPREADSHEET_ID";
+// "Classroom - Audit Log" (developer-created 2026-09-02). Holds ONLY the two
+// audit tabs, which _writeAuditLogEntry/dataAuditLog create on first write.
+// It is deliberately not the Master ACL spreadsheet: that file is read on
+// every sign-in by every project and already carries a contention retry
+// loop, so an append-heavy log does not belong in it. Note this does NOT
+// become an authorization source — checkSpreadsheetAccess only consults a
+// project sheet's sharing list when no Master ACL is configured, and one is.
+var SPREADSHEET_ID = "16tt7n_1sEcOzLYOEOWZbkw81dva7i9zT6-1e5CTzXDk";
 var SHEET_NAME     = "YOUR_SHEET_NAME";
 // Master ACL spreadsheet — centralized access control for all GAS-powered pages.
 // Two tabs:
@@ -2145,6 +2152,46 @@ function clProgressWrite_(sess, p) {
   }
 }
 
+// PROJECT: ── Study-next pointer (C1, final slice) ─────────────────────────
+// "Pick up where you left off": the first section this account has not yet
+// ticked, in the first unfinished lesson, in the first unfinished track.
+// Registry order IS the teaching order, so walking it in order is the whole
+// algorithm — no scoring, no recency, nothing to tune.
+//
+// Computed server-side because the client only holds lesson CARDS, which
+// carry a section COUNT and deliberately not the section ids (clLessonCard_'s
+// shape is asserted by the checker so section content can never ride along in
+// an index). The server has the lessons, so it names the exact section.
+//
+// Returned from cop=index AND from cop=setprogress, so the pointer is exact
+// again the instant a tick lands without the page spending a round trip on it.
+// Tracks only: briefings are a dated feed, not a path through the material.
+function clStudyNext_(sess, prog) {
+  var tracks = clTracks_();
+  for (var t = 0; t < tracks.length; t++) {
+    var ids = tracks[t].lessons || [];
+    for (var i = 0; i < ids.length; i++) {
+      var lesson = clLesson_(ids[i]);
+      // An unreadable lesson is skipped rather than ending the walk — a tier
+      // that cannot read lesson 3 should still be pointed at lesson 4.
+      if (!lesson || !clLessonVisible_(sess, lesson)) continue;
+      var secs = lesson.sections || [];
+      var done = prog[lesson.id] || {};
+      for (var s = 0; s < secs.length; s++) {
+        if (done[secs[s].id]) continue;
+        var ticked = 0;
+        for (var k in done) if (done.hasOwnProperty(k) && done[k]) ticked++;
+        return { track: tracks[t].id, trackTitle: tracks[t].title,
+                 lesson: lesson.id, lessonTitle: lesson.title,
+                 section: secs[s].id, sectionTitle: secs[s].title,
+                 done: ticked, total: secs.length,
+                 started: ticked > 0 };
+      }
+    }
+  }
+  return null;   // everything readable is complete — the page says so
+}
+
 // PROJECT: ── Classroom ops (action=classroom, cop=index|track|lesson|progress|setprogress)
 // Read-only, over the same cookie-less fetch transport as Profiler's guidance
 // ops. Order of checks: session → the app door (clRequire_ 'tracks' — every
@@ -2162,9 +2209,11 @@ function handleClassroomOp_(e) {
     sess = validateSessionForData(session, 'classroom_' + op);
     clRequire_(sess, 'tracks', 'classroom_' + op);
     if (op === 'index') {
+      var ixProg = clProgressRead_(sess);
       return { success: true, role: clRoleOf_(sess),
                schema: { lesson: CL_LESSON_SCHEMA_VERSION, track: CL_TRACK_SCHEMA_VERSION },
-               tracks: clTrackIndexFor_(sess), lessons: clLessonIndexFor_(sess) };
+               tracks: clTrackIndexFor_(sess), lessons: clLessonIndexFor_(sess),
+               progress: ixProg, next: clStudyNext_(sess, ixProg) };
     }
     if (op === 'track') {
       var t = clTrackFor_(sess, clTrack_(String(p.id || '')));
@@ -2188,10 +2237,12 @@ function handleClassroomOp_(e) {
       return { success: true, lesson: lesson };
     }
     if (op === 'progress') {
-      return { success: true, progress: clProgressRead_(sess) };
+      var pr = clProgressRead_(sess);
+      return { success: true, progress: pr, next: clStudyNext_(sess, pr) };
     }
     if (op === 'setprogress') {
       var wr = clProgressWrite_(sess, p);
+      if (wr.success) wr.next = clStudyNext_(sess, wr.progress);
       if (wr.success && wr.changed) {
         dataAuditLog(sess.email, 'write', 'classroom_progress',
           String(p.id || 'merge'), { changed: wr.changed, role: clRoleOf_(sess) });

@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.18r] — 2026-09-02 01:10:32 AM EST
+
+> **Prompt:** "build C1 — study-next pointer. Also, I created a Google Sheet called \"Classroom - Audit Log\" and its ID is \"16tt7n_1sEcOzLYOEOWZbkw81dva7i9zT6-1e5CTzXDk\". I would also like a way to keep track of which users are logging into Profiler; What is the best way to let me check? If there is a way to check in-app as an Admin, that would be preferable than making a new Google Sheet. If you think that's a bad idea, speak up."
+
+### Added
+
+**C1 is complete — the study-next pointer lands, and the audit trail is live.**
+
+**`googleAppsScripts/Classroom/Classroom.gs` (v01.04g → v01.05g)**
+
+- **`clStudyNext_()`** — the first unticked section, in the first unfinished lesson, in the first unfinished track. Registry order *is* teaching order, so walking it in order is the whole algorithm: no scoring, no recency, nothing to tune. An unreadable lesson is **skipped rather than ending the walk**, so a tier that cannot read lesson 3 is still pointed at lesson 4
+- Computed server-side because the client holds lesson *cards*, which carry a section count and deliberately not the section ids — `clLessonCard_`'s shape is asserted by the checker precisely so section content can never ride along in an index. The server has the lessons, so it names the exact section
+- Returned from **`cop=index`, `cop=progress` and `cop=setprogress`**, so the pointer is exact again the instant a tick lands without the page spending a round trip on it. The index answer now also carries the account's progress map, so a cold load paints ticks and pointer without waiting on the separate sync
+- **`SPREADSHEET_ID` set** to the developer-created "Classroom - Audit Log". This activates the two loggers enabled in v04.17r: `SessionAuditLog` (sign-ins, failures, denials) and `DataAuditLog` (gated-lesson reads, progress writes), both tabs auto-created on first write. Commented in place: it is deliberately **not** the Master ACL spreadsheet, which is read on every sign-in by every project and already carries a contention retry loop — an append-heavy log does not belong in it. It also does not become an authorization source, because `checkSpreadsheetAccess` consults a project sheet's sharing list only when no Master ACL is configured
+
+**`live-site-pages/Classroom.html` (v01.03w → v01.04w)**
+
+- The **"Pick up where you left off"** card at the top of the index — "Start here" on a first visit, the lesson title as the link, and a subtitle naming the track, the next section, and progress through the lesson. Rebuilt on every repaint rather than patched, because a single tick can move the pointer to a different lesson
+- **Section-level deep links**: `#lesson/<id>/<sectionId>` opens the lesson and scrolls to that section; a plain `#lesson/<id>` still starts at the top
+- A null pointer only renders "Curriculum complete" **after** a sync has succeeded — before that, null means "not known yet", not "nothing left to read"
+
+### Changed
+
+- **`scripts/check-classroom-content.py`** — 11 new study-next assertions, 112 → 123 gate cases. Per tier: the pointer never names a lesson that tier cannot read, and a tier that can read nothing gets no pointer at all. Plus: a fresh account starts at the first section of the first lesson and is not marked resumed; an analyst that has finished its only readable lesson gets `null` rather than being pointed at the guidance-gated lesson behind it; a contributor in the same state advances to the next readable lesson; and a part-finished lesson resumes at its first unticked section. Verified by probe — removing the visibility skip from `clStudyNext_` fails three assertions immediately
+
+### Verified
+
+- Headless pass, 13 checks green: the card renders above the lanes, says "Start here" cold, deep-links to `#lesson/cell-to-container/what-a-cell-is`, scrolls past the top of the lesson on arrival, and after one tick advances to section 2 with "1 of 7 sections done"
 
 ## [v04.17r] — 2026-09-02 12:58:13 AM EST
 

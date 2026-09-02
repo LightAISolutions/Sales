@@ -446,6 +446,25 @@ out.progress.afterUntick = clProgressRead_(asContrib);
 out.progress.anon = clProgressWrite_({ role: 'admin', permissions: [], email: 'unvalidated' },
                                      { id: 'l-pub', sec: 'a', done: '1' });
 
+// ── Study-next: the pointer walks registry order and never names a lesson
+// the tier cannot read. The stand-in track lists a readable lesson, a gated
+// one, and a ghost id, so the skip-don't-stop rule is exercised.
+var nx = {};
+Object.keys(TIERS).forEach(function(t) {
+  var sess = { role: TIERS[t].role, permissions: TIERS[t].permissions, email: 'nx-' + t + '@example.com' };
+  nx[t] = { fresh: clStudyNext_(sess, {}) };
+});
+// An analyst has finished the only lesson it can read: the pointer must be
+// null rather than falling through to the guidance-gated lesson behind it.
+var nxAnalyst = { role: 'analyst', permissions: [], email: 'nx2@example.com' };
+nx.analystDone = clStudyNext_(nxAnalyst, { 'l-pub': { a: true, b: true } });
+// A contributor in the same state advances past the finished lesson to the
+// next readable one rather than stopping.
+var nxContrib = { role: 'contributor', permissions: [], email: 'nx3@example.com' };
+nx.contribAdvances = clStudyNext_(nxContrib, { 'l-pub': { a: true, b: true } });
+nx.contribMidLesson = clStudyNext_(nxContrib, { 'l-pub': { a: true } });
+out.next = nx;
+
 var forbidden = 0;
 try { clRequireLesson_(TIERS['analyst'], clStampKinds_(FX['public-plus-guidance']), 't'); } catch (e) { forbidden += /CLASSROOM_FORBIDDEN/.test(String(e.message)) ? 1 : 0; }
 try { clRequireLesson_(TIERS['admin'], clStampKinds_(FX['note-ref']), 't'); } catch (e) { forbidden += /CLASSROOM_FORBIDDEN/.test(String(e.message)) ? 1 : 0; }
@@ -531,6 +550,33 @@ def run_gate_truth_table(src):
         cases += 1
         if not ok:
             err("progress test: " + msg)
+
+    # Study-next: never points a tier at a lesson it cannot read.
+    nx = out["next"]
+    for t, want_lessons in ((k, set(v["lessons"])) for k, v in EXPECTED_INDEX.items()):
+        got = nx[t]["fresh"]
+        cases += 1
+        if want_lessons and (got is None or got["lesson"] not in want_lessons):
+            err("study-next: %s was pointed at %r, which is not among the lessons it may read (%s)"
+                % (t, got and got["lesson"], sorted(want_lessons)))
+        if not want_lessons and got is not None:
+            err("study-next: %s may read nothing but was pointed at %r" % (t, got["lesson"]))
+    nx_checks = [
+        (nx["admin"]["fresh"]["lesson"] == "l-pub",
+         "a fresh account is not pointed at the first lesson of the first track"),
+        (nx["admin"]["fresh"]["section"] == "a" and nx["admin"]["fresh"]["started"] is False,
+         "a fresh pointer does not start at the first section, or claims to be resumed"),
+        (nx["analystDone"] is None,
+         "an analyst that finished its only readable lesson was pointed at a gated one"),
+        (nx["contribAdvances"] is not None and nx["contribAdvances"]["lesson"] == "l-gd",
+         "a contributor did not advance past a finished lesson to the next readable one"),
+        (nx["contribMidLesson"]["section"] == "b" and nx["contribMidLesson"]["started"] is True,
+         "a part-finished lesson does not resume at its first unticked section"),
+    ]
+    for ok, msg in nx_checks:
+        cases += 1
+        if not ok:
+            err("study-next: " + msg)
     return (len(EXPECTED_GATE) * (1 + len(TIERS))) + len(EXPECTED_INDEX) + cases
     for want in ("classroom_capability_denied", "classroom_bad_provenance", "classroom_not_admitted"):
         if want not in out["audited"]:

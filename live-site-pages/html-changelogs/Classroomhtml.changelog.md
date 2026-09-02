@@ -3,11 +3,19 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 3/50`
+`Sections: 4/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.04w] — 2026-09-02 01:10:32 AM EST — v04.18r
+
+### Added
+- A "pick up where you left off" card at the top of the Classroom: it names the next lesson and the exact section you have not read yet, and opens straight to it
+- On a first visit it says "Start here" instead, pointing at the opening section of the first track
+- The card moves the moment you mark a section understood, and reports when everything you can read is finished
+- A lesson can now be linked to at a specific section, so a shared link lands where it should
 
 ## [v01.03w] — 2026-09-02 12:58:13 AM EST — v04.17r
 

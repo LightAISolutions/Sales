@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.03w">
+  <meta name="build-version" content="v01.04w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -475,6 +475,18 @@
       font: 12px/1 var(--cl-mono); }
     .cl-done-btn:hover { border-color: var(--cl-accent); color: var(--cl-accent); }
     .cl-done-btn.on { background: var(--cl-accent); border-color: var(--cl-accent); color: #fff; }
+    .cl-next { border: 1px solid var(--cl-accent); border-left-width: 4px; border-radius: 10px;
+      background: #fbf6e8; padding: 14px 18px 16px; margin: 18px 0 4px; }
+    .cl-next.all { border-color: var(--cl-adv); background: #f2f7f2; }
+    .cl-next .lb { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--cl-accent); margin-bottom: 7px; }
+    .cl-next.all .lb { color: var(--cl-adv); }
+    .cl-next .ti { font: 700 19px/1.3 var(--cl-serif); color: var(--cl-ink); background: none;
+      border: 0; padding: 0; cursor: pointer; text-align: left; text-decoration: underline;
+      text-decoration-color: var(--cl-line2); text-underline-offset: 3px; }
+    .cl-next .ti:hover { text-decoration-color: var(--cl-accent); }
+    .cl-next.all .ti { cursor: default; text-decoration: none; font-weight: 400; font-size: 15px; }
+    .cl-next .sb { font: 12px/1.6 var(--cl-mono); color: var(--cl-muted); margin-top: 6px; }
     .cl-rollup { float: right; font: 600 10px/1 var(--cl-mono); letter-spacing: 0.08em;
       text-transform: uppercase; color: var(--cl-faint); border: 1px solid var(--cl-line);
       border-radius: 999px; padding: 3px 9px; }
@@ -4731,6 +4743,7 @@ function clBindTermTips(root) {
 // so there is no legacy-key purge to port — the namespacing is simply correct
 // from the start.
 var CL_PROGRESS_KEY = 'cl_progress';
+var clNext = null;            // study-next pointer, server-computed
 var clServerProg = null;      // null until a sync succeeds — then authoritative
 var clProgSyncStarted = false;
 var clCurLesson = null;       // lesson currently rendered, for repaints
@@ -4764,7 +4777,11 @@ function clSetProgress(lessonId, secId, done) {
   }
   clApplyProgressUI();
   clApi('setprogress', { id: lessonId, sec: secId, done: done ? '1' : '0' }, function(res) {
-    if (res && res.success && res.progress) { clServerProg = res.progress; clApplyProgressUI(); }
+    if (res && res.success && res.progress) {
+      clServerProg = res.progress;
+      if (res.hasOwnProperty('next')) clNext = res.next;   // null is meaningful: all done
+      clApplyProgressUI();
+    }
     // On failure the tick already sits in localStorage — the next page load's
     // first-sync migration pushes it up.
   });
@@ -4780,6 +4797,7 @@ function clProgressSync() {
     if (!res || !res.success || typeof res.progress !== 'object' || res.progress === null) {
       clProgSyncStarted = false; return;
     }
+    if (res.hasOwnProperty('next')) clNext = res.next;
     var server = res.progress;
     // First-sync migration: push up local ticks the server does not have, in
     // one batch (covers offline ticks and failed setprogress writes).
@@ -4841,6 +4859,38 @@ function clLessonDone_(card) {
   return { ticks: ticks, total: total, complete: total > 0 && ticks >= total };
 }
 
+// The "pick up where you left off" card. Rebuilt on every repaint rather than
+// patched, because the pointer can move to a different lesson on a single tick.
+function clRenderNext(host) {
+  var old = document.getElementById('cl-next');
+  if (old && old.parentNode) old.parentNode.removeChild(old);
+  if (!host) return;
+  var box = clEl('div', 'cl-next');
+  box.id = 'cl-next';
+  if (!clNext) {
+    // Only claim completion once a sync has actually happened — before that,
+    // a null pointer means "not known yet", not "nothing left to read".
+    if (!clServerProg) return;
+    box.classList.add('all');
+    box.appendChild(clEl('div', 'lb', 'Curriculum complete'));
+    box.appendChild(clEl('div', 'ti', 'Every lesson you can read is finished.'));
+    box.appendChild(clEl('div', 'sb', 'New lessons appear here as they are published.'));
+    host.insertBefore(box, host.firstChild);
+    return;
+  }
+  box.appendChild(clEl('div', 'lb', clNext.started ? 'Pick up where you left off' : 'Start here'));
+  var link = clEl('button', 'ti', clNext.lessonTitle);
+  link.type = 'button';
+  link.addEventListener('click', function() {
+    window.location.hash = 'lesson/' + clNext.lesson + '/' + clNext.section;
+  });
+  box.appendChild(link);
+  box.appendChild(clEl('div', 'sb',
+    clNext.trackTitle + '  ·  next up: ' + clNext.sectionTitle
+    + '  ·  ' + clNext.done + ' of ' + clNext.total + ' sections done'));
+  host.insertBefore(box, host.firstChild);
+}
+
 // Repaint whichever view is on screen after a sync lands or a tick changes.
 // Both views are handled here rather than in their renderers, because the
 // server map can arrive after either one has already painted.
@@ -4875,6 +4925,7 @@ function clApplyProgressUI() {
         : (st.ticks ? st.ticks + ' / ' + st.total + ' sections' : st.total + ' sections');
     }
   }
+  if (!clCurLesson) clRenderNext(shell);
   var rollups = shell.querySelectorAll('.cl-rollup[data-lessons]');
   for (var t = 0; t < rollups.length; t++) {
     var ids = (rollups[t].getAttribute('data-lessons') || '').split(',').filter(Boolean);
@@ -4977,7 +5028,7 @@ function clProvStrip(lesson) {
   return box;
 }
 
-function clRenderLesson(lesson, shell) {
+function clRenderLesson(lesson, shell, scrollTo) {
   clGlossMap = {};
   clCurLesson = lesson.id;
   clProgressSync();          // no-op once a sync has succeeded; retries after failures
@@ -5081,7 +5132,11 @@ function clRenderLesson(lesson, shell) {
 
     clBindTermTips(shell);
     clApplyProgressUI();
-    window.scrollTo(0, 0);
+    // A study-next deep link lands on its section rather than the top of the
+    // lesson; a plain lesson link starts at the top as before.
+    var target = scrollTo ? document.getElementById('cl-' + scrollTo) : null;
+    if (target) target.scrollIntoView({ block: 'start' });
+    else window.scrollTo(0, 0);
   });
 }
 
@@ -5214,25 +5269,31 @@ function clShowError(shell, err) {
 function clShowIndex() {
   var shell = clShell();
   if (!shell) return;
+  // The cached index is metadata only; progress and the study-next pointer are
+  // repainted from clServerProg/clNext, so a cache hit is still correct.
   if (clIndexCache) { clRenderIndex(clIndexCache, shell); window.scrollTo(0, 0); return; }
   shell.innerHTML = '';
   shell.appendChild(clEl('p', 'cl-loading', 'Loading tracks…'));
   clApi('index', {}, function(res) {
     if (!res || !res.success) { clShowError(shell, res && res.error); return; }
+    // The index answer carries the account's progress and pointer, so a cold
+    // load paints them without waiting on the separate sync round trip.
+    if (typeof res.progress === 'object' && res.progress !== null) clServerProg = res.progress;
+    if (res.hasOwnProperty('next')) clNext = res.next;
     clIndexCache = res;
     clRenderIndex(res, shell);
     window.scrollTo(0, 0);
   });
 }
 
-function clShowLesson(id) {
+function clShowLesson(id, scrollTo) {
   var shell = clShell();
   if (!shell) return;
   shell.innerHTML = '';
   shell.appendChild(clEl('p', 'cl-loading', 'Loading lesson…'));
   clApi('lesson', { id: id }, function(res) {
     if (!res || !res.success) { clShowError(shell, res && res.error); return; }
-    clRenderLesson(res.lesson, shell);
+    clRenderLesson(res.lesson, shell, scrollTo);
   });
 }
 
@@ -5241,8 +5302,8 @@ function clShowLesson(id) {
 function clRoute() {
   if (!clAdmitted()) return;
   var h = String(window.location.hash || '').replace(/^#\/?/, '');
-  var m = /^lesson\/([a-z0-9][a-z0-9-]{0,63})$/.exec(h);
-  if (m) clShowLesson(m[1]); else clShowIndex();
+  var m = /^lesson\/([a-z0-9][a-z0-9-]{0,63})(?:\/([a-z0-9][a-z0-9-]{0,63}))?$/.exec(h);
+  if (m) clShowLesson(m[1], m[2] || ''); else clShowIndex();
 }
 
 // Mounted from the showApp wrapper below, so the curriculum appears only after
