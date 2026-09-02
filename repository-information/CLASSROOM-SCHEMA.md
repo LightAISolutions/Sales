@@ -83,7 +83,7 @@ A track is an ordered reading list of module lessons with a stated outcome. It c
 
 ## Freshness — `updated`, `reviewBy`, `revisions[]`, input pins
 
-Every lesson is dated three ways, and C2's pipeline relies on all three:
+Every lesson is dated three ways, and C2's pipeline relies on all three (what an **unattended** pipeline run may do with them — pins only advance to observed dates, gates never change on a revision, section ids are never removed — is `CLASSROOM-COMMITTER-CONTRACT.md`):
 
 - **`reviewBy`** — the lesson's own nearest dated gate. The renderer shows it as a chip (plain > 30 days out, gold within 30 days, red "⚠ review due" once passed — the guidance `gdReviewChip` behaviour). The quarterly review Routine is the backstop; a revision that changes a dated gate sets the new `reviewBy` in the same commit
 - **`provenance.inputs[].date`** — the source's revision date **at authoring**. A refresh session re-reads each input, and where the live source is newer and contradicts taught material it revises the lesson and records what moved

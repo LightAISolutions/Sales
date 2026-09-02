@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-02 01:30:36 AM EST` · Repo version: `v04.20r`
+Last updated: `2026-09-02 02:01:40 AM EST` · Repo version: `v04.21r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -628,6 +628,7 @@ Last updated: `2026-09-02 01:30:36 AM EST` · Repo version: `v04.20r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG.md">CHANGELOG.md</a>            — [template · initialized] Version history
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CHANGELOG-archive.md">CHANGELOG-archive.md</a>    — [template · initialized] Older changelog sections (rotated from CHANGELOG.md)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASP-PUSH-PILOT-SETUP.md">CLASP-PUSH-PILOT-SETUP.md</a> — Setup for the GitHub Actions → clasp push deployment pilot
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASSROOM-COMMITTER-CONTRACT.md">CLASSROOM-COMMITTER-CONTRACT.md</a> — C2a: the contract an unattended Classroom pipeline run is held to (write set, frozen surfaces, fail-closed outcomes, corpus-delta guarantees, checker obligations)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CLASSROOM-SCHEMA.md">CLASSROOM-SCHEMA.md</a>     — Classroom app track/lesson schema + provenance stamp (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/CODING-GUIDELINES.md">CODING-GUIDELINES.md</a>    — [template · initialized] Domain-specific coding knowledge
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/DATA-POLL-ARCHITECTURE.md">DATA-POLL-ARCHITECTURE.md</a> — Data poll vs heartbeat architecture &amp; quota reference
@@ -759,7 +760,7 @@ Last updated: `2026-09-02 01:30:36 AM EST` · Repo version: `v04.20r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/changelogs.md">changelogs.md</a>              — [template · initialized · modified] Path-scoped — CHANGELOG rules
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/chat-bookends.md">chat-bookends.md</a>           — [template · modified] Always loaded — response formatting rules
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/chat-bookends-reference.md">chat-bookends-reference.md</a> — [template] Path-scoped — bookend examples &amp; tables
-│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/classroom-app.md">classroom-app.md</a>           — Path-scoped — Classroom content authoring: where lessons/tracks live, the provenance stamp rule, freshness pins, verification (triggers on Classroom app files + CLASSROOM-SCHEMA.md)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/classroom-app.md">classroom-app.md</a>           — Path-scoped — Classroom content authoring: where lessons/tracks live, the provenance stamp rule, freshness pins, verification, unattended-session pointer (triggers on Classroom app files + CLASSROOM-SCHEMA.md + CLASSROOM-COMMITTER-CONTRACT.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/cli-styling-reference.md">cli-styling-reference.md</a>   — Path-scoped — CLI accent styling tables + patterns (triggers on chat-bookends.md + output-formatting.md + CLAUDE.md)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/dead-code-detection.md">dead-code-detection.md</a>     — Path-scoped — dead-code analysis methodology (triggers on HTML pages + GAS files + workflow files; user-invoked via "check for dead code")
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/.claude/rules/gas-scripts.md">gas-scripts.md</a>             — [template · modified] Path-scoped — GAS core rules (version, config, commit naming, Deploy Handler Protection)

@@ -3,6 +3,7 @@ paths:
   - "live-site-pages/Classroom.html"
   - "googleAppsScripts/Classroom/**"
   - "repository-information/CLASSROOM-SCHEMA.md"
+  - "repository-information/CLASSROOM-COMMITTER-CONTRACT.md"
 ---
 
 # Classroom App — Content Authoring Rules
@@ -26,6 +27,11 @@ paths:
 
 - Every lesson carries `updated` and `reviewBy` (set from the lesson's own nearest dated gate, guidance discipline step 10 in `.claude/rules/industry-guidance.md`), and each `provenance.inputs[].date` pins the source's revision date at authoring — that pin is what a C2 refresh compares against to emit "what changed since you learned this"
 - A revision appends to `revisions[]` with `changed[]` naming the section ids whose meaning changed; unchanged sections keep their ids and their progress
+
+## Unattended (pipeline) sessions
+
+- A session fired by the C2 Routine — no developer present — is bound by **`repository-information/CLASSROOM-COMMITTER-CONTRACT.md`** (C2a, 2026-09-02) on top of everything above: a closed write set (the content region of `Classroom.gs` + the versioning/changelog files only), frozen surfaces (the AUTH region, the gate derivation, the stamp vocabulary, existing ids, existing gates), three outcomes (`COMMIT` / `STAND-DOWN` / `BLOCKED`, the latter two leaving the repo untouched), the thirteen corpus-delta guarantees, and the diff-aware checker C2b adds. Read it before authoring the Routine prompt (C2c) or the pipeline machinery (C2b)
+- Developer sessions are **not** bound by it, but one obligation flows back: a developer session that changes the gate surface (`CL_*` constants, `cl*` gating/progress/ops functions) refreshes `gateDigest` in `repository-information/classroom-pipeline-ledger.json` in the same commit once C2b creates it — otherwise the next pipeline run blocks on "the ground moved"
 
 ## Versioning and verification
 
