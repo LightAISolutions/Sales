@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.06w">
+  <meta name="build-version" content="v01.07w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -5428,13 +5428,10 @@ function clShowLesson(id, scrollTo) {
 // 'study-<slug>' progress ids. Lesson items never travel this way: the server
 // enumerates those itself from the lessons the tier may read, so the gate
 // cannot be widened by anything the client claims.
-var clDrillInv = null;        // [[id, hash], …] — study items, built once
-var clDrillText = {};         // id → {q, a, slug, title} for study items
+var clDrillText = {};         // id → {q, a, title} for study cards actually served
 var clDrillQueueArr = [];
 var clDrillPos = 0;
 var clDrillStats = null;
-var clDrillRevealed = false;
-var CL_DRILL_STUDY_CAP = 1200;
 
 function clDrillHashJs(text) {
   var h = 5381, s = String(text == null ? '' : text);
@@ -5442,39 +5439,33 @@ function clDrillHashJs(text) {
   return h.toString(36);
 }
 
-// Build the study inventory from the public registry + each study guide.
-// cache: 'no-store' throughout — a drill scheduled against a stale card is
+// Fetch the text for the study cards in THIS queue — typically a handful of
+// guides, not all 62. The server sends study items as ids only (it caches ids
+// and hashes, never card text), so the page resolves the text it needs.
+// cache: 'no-store' throughout: a drill scheduled against a stale card is
 // worse than a slow drill, and these files change on every dossier refresh.
-function clDrillBuildInv(done) {
-  if (clDrillInv) { done(clDrillInv); return; }
-  var base = (function() {
-    var p = window.location.pathname.replace(/[^\/]*$/, '');
-    return p + 'profiler-data/';
-  })();
-  fetch(base + 'profiler-companies.json', { cache: 'no-store' })
-    .then(function(r) { return r.ok ? r.json() : null; })
-    .then(function(reg) {
-      var slugs = ((reg && reg.companies) || []).map(function(c) { return c.slug; }).filter(Boolean);
-      if (!slugs.length) { clDrillInv = []; done(clDrillInv); return; }
-      var inv = [], pending = slugs.length;
-      slugs.forEach(function(slug) {
-        fetch(base + slug + '.study.json', { cache: 'no-store' })
-          .then(function(r) { return r.ok ? r.json() : null; })
-          .then(function(sg) {
-            var cards = (sg && sg.flashcards) || [];
-            for (var i = 0; i < cards.length && inv.length < CL_DRILL_STUDY_CAP; i++) {
-              if (!cards[i] || !cards[i].q) continue;
-              var id = 'sf:' + slug + ':' + i;
-              inv.push([id, clDrillHashJs(cards[i].q + '||' + cards[i].a)]);
-              clDrillText[id] = { q: cards[i].q, a: cards[i].a, slug: slug,
-                                  title: (sg && sg.title) || slug };
-            }
-          })
-          .catch(function() { /* one unreadable guide must not sink the drill */ })
-          .then(function() { if (--pending === 0) { clDrillInv = inv; done(inv); } });
-      });
-    })
-    .catch(function() { clDrillInv = []; done(clDrillInv); });
+function clDrillLoadText(queue, done) {
+  var need = {};
+  (queue || []).forEach(function(it) {
+    if (it.kind === 'study' && it.slug && !clDrillText[it.id]) need[it.slug] = true;
+  });
+  var slugs = Object.keys(need);
+  if (!slugs.length) { done(); return; }
+  var pending = slugs.length;
+  slugs.forEach(function(slug) {
+    fetch(CL_DATA_BASE + slug + '.study.json?_cb=' + Date.now(), { cache: 'no-store' })
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(sg) {
+        var cards = (sg && sg.flashcards) || [];
+        for (var i = 0; i < cards.length; i++) {
+          if (!cards[i] || !cards[i].q) continue;
+          clDrillText['sf:' + slug + ':' + i] = {
+            q: cards[i].q, a: cards[i].a, title: (sg && sg.title) || slug };
+        }
+      })
+      .catch(function() { /* one unreadable guide must not sink the session */ })
+      .then(function() { if (--pending === 0) done(); });
+  });
 }
 
 // The landing card. Sits above the study-next pointer: what you are about to
@@ -5504,14 +5495,14 @@ function clRenderDrillCard(host) {
 // Ask the server for the queue. Cheap enough to call on every index render,
 // and it is the only thing that knows what is due.
 function clDrillSync(cb) {
-  clDrillBuildInv(function(inv) {
-    clApi('drill', { inv: JSON.stringify(inv) }, function(res) {
-      if (res && res.success) {
-        clDrillQueueArr = res.items || [];
-        clDrillStats = res.stats || null;
-      }
-      if (cb) cb();
-    });
+  clApi('drill', {}, function(res) {
+    if (res && res.success) {
+      clDrillQueueArr = res.items || [];
+      clDrillStats = res.stats || null;
+      clDrillLoadText(clDrillQueueArr, function() { if (cb) cb(); });
+      return;
+    }
+    if (cb) cb();
   });
 }
 
@@ -5597,7 +5588,7 @@ function clDrillPaint() {
   // trivia app, not a study tool.
   var src = clEl('div', 'sr');
   if (it.kind === 'study') {
-    src.appendChild(document.createTextNode('Study guide · ' + (txt.title || txt.slug || '')));
+    src.appendChild(document.createTextNode('Study guide · ' + (txt.title || it.slug || '')));
   } else {
     var link = clEl('button', 'lk', it.lessonTitle || it.lesson);
     link.type = 'button';
@@ -5636,8 +5627,7 @@ function clDrillGrade(it, grade) {
   // the item due, which is the safe direction.
   clDrillPos++;
   clDrillPaint();
-  clApi('grade', { id: it.id, grade: String(grade), hash: it.hash || '',
-                   inv: JSON.stringify(clDrillInv || []) }, function(res) {
+  clApi('grade', { id: it.id, grade: String(grade), hash: it.hash || '' }, function(res) {
     if (res && res.success && clDrillStats) {
       if (!it.seen) { clDrillStats.known++; clDrillStats.fresh = Math.max(0, clDrillStats.fresh - 1); }
       else clDrillStats.due = Math.max(0, clDrillStats.due - 1);
@@ -5670,8 +5660,8 @@ function clAppMount() {
   app.dataset.mounted = '1';
   app.style.display = 'block';
   clProgressSync();          // pre-warm the server map at sign-in
-  // The drill queue needs the study inventory, which is 60-odd fetches; start
-  // it at mount so the landing card is populated by the time it is looked at.
+  // Start the queue at mount so the landing card is populated by the time it
+  // is looked at. One op plus the text for whatever it returns.
   clDrillSync(function() { if (!clCurLesson) clApplyProgressUI(); });
   window.addEventListener('hashchange', clRoute);
   clRoute();

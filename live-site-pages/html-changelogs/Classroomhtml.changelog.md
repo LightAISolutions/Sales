@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 6/50`
+`Sections: 7/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.07w] — 2026-09-02 06:23:38 PM EST — v04.29r
+
+### Fixed
+- **The drill card never appeared.** The page was sending its whole card inventory to the server on every check — far more than a request can carry — so the check failed and the card stayed hidden. The server now works out the card list itself, and the page only fetches the handful of cards it is actually given
 
 ## [v01.06w] — 2026-09-02 05:45:44 PM EST — v04.28r
 

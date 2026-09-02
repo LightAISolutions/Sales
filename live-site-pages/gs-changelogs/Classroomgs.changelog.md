@@ -3,11 +3,16 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 9/50`
+`Sections: 10/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.10g] — 2026-09-02 06:23:38 PM EST — v04.29r
+
+### Fixed
+- The drill now assembles its own list of available study-guide cards instead of relying on the page to send one, which is what stopped the drill from loading at all
 
 ## [v01.09g] — 2026-09-02 05:45:44 PM EST — v04.28r
 

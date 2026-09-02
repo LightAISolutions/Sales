@@ -505,15 +505,16 @@ Object.keys(TIERS).forEach(function(t) {
 clLessons_ = __clLessonsOrig;   // restore: study-next below asserts against the original registry
 // Study-item containment: a real slug validates, a bogus one does not, and
 // the registry fetch is stubbed so the checker never touches the network.
-clDrillStudySlugs_ = function() { return { 'real-co': true }; };
-out.drillStudy = {
-  good: Object.keys(clDrillStudyItems_(JSON.stringify([['sf:real-co:0', 'h']]))),
-  bogusSlug: Object.keys(clDrillStudyItems_(JSON.stringify([['sf:not-a-company:0', 'h']]))),
-  badShape: Object.keys(clDrillStudyItems_(JSON.stringify([['nonsense', 'h'], ['sf:real-co:x', 'h']]))),
-  capped: Object.keys(clDrillStudyItems_(JSON.stringify(
-    Array.apply(null, { length: CL_DRILL_INV_CAP + 50 }).map(function(_, i) {
-      return ['sf:real-co:' + i, 'h']; })))).length
-};
+// The study pool is built server-side from the public guides (v01.10g), so
+// there is no client inventory to validate. What still must hold is that the
+// pool is capped and that a network failure degrades to lesson items only
+// rather than throwing. UrlFetchApp is stubbed rather than reached.
+UrlFetchApp = { fetch: function() { throw new Error('offline'); },
+                fetchAll: function() { return []; } };
+CacheService = { getScriptCache: function() { return {
+  get: function() { return null; }, put: function() {} }; } };
+out.drillStudy = { offline: Object.keys(clDrillStudyItems_()).length,
+                   cap: CL_DRILL_INV_CAP };
 
 // ── Study-next: the pointer walks registry order and never names a lesson
 // the tier cannot read. The stand-in track lists a readable lesson, a gated
@@ -655,15 +656,13 @@ def run_gate_truth_table(src):
         err("drill: quiz items are not being enumerated (expected lq:l-pub:z1:0 for admin)")
 
     ds = out["drillStudy"]
-    for label, got, want in (("a registry slug validates", ds["good"], ["sf:real-co:0"]),
-                             ("an unknown slug is refused", ds["bogusSlug"], []),
-                             ("a malformed id is refused", ds["badShape"], [])):
-        cases += 1
-        if got != want:
-            err("drill study containment: %s — got %r, expected %r" % (label, got, want))
     cases += 1
-    if ds["capped"] > 1200:
-        err("drill study containment: inventory not capped — %d items accepted" % ds["capped"])
+    if ds["offline"] != 0:
+        err("drill study pool: an unreachable registry should yield no study items, got %d"
+            % ds["offline"])
+    cases += 1
+    if ds["cap"] > 1200:
+        err("drill study pool: the build cap is %d, above the documented 1200" % ds["cap"])
 
     # Study-next: never points a tier at a lesson it cannot read.
     nx = out["next"]

@@ -98,7 +98,7 @@ Read-only fetch ops, the guidance-ops transport (`doPost` `action=classroom`, mi
 | `index` | `{ role, schema: { lesson, track }, tracks[], lessons[] }` — tracks as the tier sees them (readable lessons as cards + `withheld` count), every readable lesson as a card | session → `clRequire_(sess, 'tracks')` (the app door; viewer is turned away) |
 | `track` | `{ track }` — one track as the tier sees it; `UNKNOWN_TRACK` when it does not exist **or** nothing in it is readable | same door |
 | `lesson` | `{ lesson }` — the full lesson including sections | door, then **`clRequireLesson_(sess, clStampKinds_(lesson))`** — the stamp's fold is enforced before any section text leaves the server |
-| `drill` | `{ today, items[], stats }` — the queue (see "Drill items and history"); lesson items carry their payload, study items carry the id | door; lesson items enumerated from `clLessonVisible_`, study items validated by containment |
+| `drill` | `{ today, items[], stats }` — the queue (see "Drill items and history"); lesson items carry their payload, study items carry the id and slug (the page fetches that text) | door; lesson items enumerated from `clLessonVisible_`, study items from the server-built public pool |
 | `grade` | `{ id, state }` — the item's new scheduling state | door, then the same derivation `drill` served from; an id outside it is `ITEM_DENIED` |
 
 A **card** (`clLessonCard_`) is metadata only — `id`, `type`, `title`, `short`, `group`, `updated`, `reviewBy`, `edition`, `gate` (the capability the stamp folded to), `kinds` (the distinct stamp kinds, for a provenance badge), `revised`, `sections` (count). Errors: `SESSION_EXPIRED`, `ROLE_DENIED` (with the tier), `UNKNOWN_TRACK`, `UNKNOWN_LESSON`, `NO_ACCOUNT`, `BAD_ITEM`, `ITEM_DENIED`, `DRILL_FULL`, `DRILL_STORE_UNAVAILABLE`, `unknown_cop`. Every denial writes an audit-log entry naming the operation and tier (`clRequire_` / `clRequireLesson_`).
@@ -199,14 +199,14 @@ The design doc called this out at C4: drill history outgrows the 9 KB-per-accoun
 
 - **`CL_DRILL_SESSION_CAP` = 20** items per drill session, and **`CL_DRILL_NEW_CAP` = 10** never-before-seen items introduced per day. A queue that returns everything due is a queue the reader stops opening
 - **`CL_DRILL_ACCOUNT_CAP` = 3000** state rows per account. The corpus holds ~855 items, so this is headroom rather than a limit; it exists so a malformed client cannot grow the tab without bound
-- **`CL_DRILL_INV_CAP` = 1200** study-guide items accepted in one `cop=drill` inventory (see below)
+- **`CL_DRILL_INV_CAP` = 1200** study-guide items built into the pool — a guard against a registry that grows unexpectedly, not a limit the corpus is near
 
 ### Serving — `cop=drill` and `cop=grade`
 
 Both sit behind the same app door as every other Classroom op (`clRequire_(sess, 'tracks')`), and both enforce the rule the progress store established: **the drill is never a weaker gate than reading.**
 
 - **Lesson items** are enumerated server-side from lessons this session may actually read (`clLessonVisible_`), exactly as `clProgressValid_` does for sections. A tier that cannot open a lesson can neither drill its cards nor discover them by probing an id
-- **Study-guide items** are public Pages data the server does not hold. The client sends the inventory it can see as `inv` — a capped array of `[itemId, hash]` — and the server validates by **containment**: the id must parse, the slug must exist in the public registry (cached), and the array is truncated at the cap. Same rule as `study-<slug>` progress ids in `Profiler.gs`, for the same reason
+- **Study-guide items** are public Pages data. The server builds this half of the pool **itself** — registry, then every `<slug>.study.json` through `UrlFetchApp.fetchAll`, cached six hours as ids and hashes only (~23 KB; card text is never cached). It briefly did this from a client-supplied `inv` array instead, which could not work: the shared GAS transport carries parameters in the query string and the real corpus encodes to ~39,000 characters, several times what Apps Script accepts. Owning it server-side removes the payload, lets the hash comparison re-introduce a changed card at queue time rather than only at grade time, and leaves nothing client-supplied to validate. `CL_DRILL_INV_CAP` remains as a build guard
 - `cop=drill` returns the queue: due items first (oldest `Due` first), then new items up to the daily cap. Lesson items carry their payload, since the server holds them and the gate has been checked; study items carry the id only, because the client already has the text
 - `cop=grade` takes `id`, `grade` (0–3) and `hash`, re-validates the id against the same gate, applies SM-2, writes both tabs, and returns the updated state. An unvalidated id is refused, never silently stored
 

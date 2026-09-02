@@ -3,11 +3,53 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 81/100`
+`Sections: 82/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.29r] — 2026-09-02 06:23:38 PM EST
+
+> **Prompt:** "Where is the drill? Also, go over Classroom's current workflow and logic. \n\nAlso, I want to increase Classroom's actual curriculum. Right now, there are only five lessons across two focus areas and I want more lessons, but I have no idea how to populate them or which focus areas matter to me. Should I switch you to Fable 5.1 and have you help me think through which other lessons to add to fill out both Technology Foundations (currently only BESS, but could span other technologies as well) and The AI Data Center Wave (I would like to understand all other important pieces of equipment across the AIDC grid to chip power flow, how they work together, what are some common points of failure & why, and anything else you can think of)?"
+
+**The drill shipped broken in v04.28r, and this fixes it.** The developer's screenshot showed no drill card. The
+immediate cause was that the page had not deployed yet — but the deployed version would not have worked either.
+
+### Fixed
+
+**`cop=drill` could never succeed with the real corpus.** Session C had the client send its study-card
+inventory to the server as an `inv` parameter. The shared GAS transport (`_gasPost`) carries every parameter
+in the **query string** — there is no request body — and the real corpus is 802 study cards, which URL-encodes
+to **~39,000 characters**, roughly five times what Apps Script accepts. The op failed, `clDrillStats` stayed
+null, and `clRenderDrillCard` returned early every time. Silent by construction: a failed sync is
+indistinguishable from "nothing due" at the UI.
+
+The transport is shared by every app in the fleet and was not the thing to change. **The server now builds the
+study half of the pool itself** (`clDrillStudyItems_`, Classroom v01.10g) — registry, then every
+`<slug>.study.json` through `UrlFetchApp.fetchAll`, cached six hours as ids and hashes only (~23 KB, inside
+the 100 KB CacheService value cap; card text is never cached). The page (v01.07w) sends nothing and fetches
+text only for the guides the returned queue actually references — roughly ten fetches instead of sixty-three.
+
+Three things improved rather than merely moved:
+
+- **The gate surface shrank.** There is no client-supplied list to validate, cap, or trust — `clDrillAllowed_`
+  now takes only the session
+- **The hash comparison happens at queue time**, so a card whose text changed is re-introduced into the queue
+  rather than only resetting when it happens to be graded
+- **The client is lighter**, not heavier: one op plus a handful of guide fetches, versus 63 fetches at mount
+
+`CLASSROOM-SCHEMA.md` and the `Classroom.gs` header comment are corrected to describe what the code does. The
+checker's four study-containment cases are replaced by two that match the new shape (an unreachable registry
+yields no study items rather than throwing; the build cap holds) — 134 gate cases, 0 errors. `gateDigest`
+refreshed in the same commit.
+
+### Worth recording
+
+The bug is a good argument for the repo's own render-check discipline: every checker passed, `node --check`
+passed, Playwright reported no page errors, and the feature still could not work — because none of those
+exercise a signed-in session against the real deployment. The failure needed either arithmetic on the payload
+size or a human looking at the page.
 
 ## [v04.28r] — 2026-09-02 05:45:44 PM EST
 

@@ -1,4 +1,4 @@
-var VERSION = "v01.09g";
+var VERSION = "v01.10g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -2268,10 +2268,9 @@ function clStudyNext_(sess, prog) {
 //
 // The gate rule is the progress store's, unchanged: **the drill is never a
 // weaker gate than reading.** Lesson items are enumerated from lessons this
-// session may actually read; study-guide items are public Pages data the
-// server does not hold, so the client sends the inventory it can see and the
-// server validates by containment (slug in the public registry, capped) —
-// the same rule Profiler.gs uses for 'study-<slug>' progress ids.
+// session may actually read; study-guide items come from the public study
+// guides, which the server builds and caches itself (see clDrillStudyItems_).
+// Nothing about the pool is client-supplied, so there is nothing to trust.
 //
 // Full specification, including the SM-2 grade table and the column layout:
 // repository-information/CLASSROOM-SCHEMA.md → "Drill items and history".
@@ -2284,7 +2283,7 @@ var CL_DRILL_LOG_HEADERS = ['Timestamp', 'Account', 'ItemId', 'Grade',
 var CL_DRILL_SESSION_CAP = 20;    // items served in one drill session
 var CL_DRILL_NEW_CAP = 10;        // never-seen items introduced per day
 var CL_DRILL_ACCOUNT_CAP = 3000;  // state rows per account — a guard, not a limit
-var CL_DRILL_INV_CAP = 1200;      // study items accepted in one inventory
+var CL_DRILL_INV_CAP = 1200;      // study items built into the pool — a guard, not a limit
 var CL_DRILL_ID_RE = /^(lc|lq|sf):[a-z0-9][a-z0-9-]{0,63}(:[a-z0-9][a-z0-9-]{0,63})?:\d{1,4}$/;
 
 // djb2 → base36. A CHANGE DETECTOR, not a checksum: it decides whether the
@@ -2390,56 +2389,72 @@ function clDrillLessonItems_(sess) {
   return out;
 }
 
-// Slugs that exist in the public company registry, cached 6h. The containment
-// half of study-item validation — mirrors gdStudySlugs_ in Profiler.gs.
-function clDrillStudySlugs_() {
+// The study-guide half of the item pool, built SERVER-SIDE and cached 6h.
+//
+// v01.10g — this used to be a client-supplied inventory, and that was a bug.
+// The shared GAS transport (_gasPost) carries every parameter in the QUERY
+// STRING, not a body; the real corpus is 802 study cards, which is ~39,000
+// URL-encoded characters — roughly five times what Apps Script will accept.
+// cop=drill failed outright, so the landing card never rendered. The transport
+// is shared by every app in the fleet and is not the thing to change; the
+// inventory is.
+//
+// Owning it here is also simply better: the server already owns the lesson
+// half, the hash comparison that re-introduces a changed card now happens at
+// queue time rather than only at grade time, and the gate surface SHRINKS —
+// there is no client-supplied list to validate, cap, or trust. What the client
+// still does is fetch the text for the handful of study cards actually served.
+//
+// UrlFetchApp.fetchAll issues the ~62 guide fetches in parallel, so a cold
+// build is seconds rather than a minute. Cached as ids+hashes only (~23KB,
+// well inside the 100KB CacheService value cap) — never the card text.
+function clDrillStudyItems_() {
   var cache = null;
   try {
     cache = CacheService.getScriptCache();
-    var hit = cache.get('cl_studyslugs_v1');
+    var hit = cache.get('cl_drillstudy_v1');
     if (hit) return JSON.parse(hit);
   } catch (ce) { cache = null; }
-  var slugs = {};
-  try {
-    var base = EMBED_PAGE_URL.replace(/[^\/]*$/, '');
-    var reg = JSON.parse(UrlFetchApp.fetch(base + 'profiler-data/profiler-companies.json',
-      { muteHttpExceptions: true }).getContentText());
-    (reg.companies || []).forEach(function(c) { if (c.slug) slugs[c.slug] = true; });
-    if (cache) try { cache.put('cl_studyslugs_v1', JSON.stringify(slugs), 21600); } catch (pe) { /* oversized */ }
-  } catch (fe) { /* registry unreachable — no study item validates this call */ }
-  return slugs;
-}
-
-// Validate a client-supplied study inventory: [[itemId, hash], …]. Capped,
-// shape-checked, and slug-checked against the registry. Returns the same map
-// shape as clDrillLessonItems_ so the queue builder treats both alike; study
-// items carry no payload because the client already has the text.
-function clDrillStudyItems_(invRaw) {
   var out = {};
-  if (!invRaw) return out;
-  var inv;
-  try { inv = JSON.parse(String(invRaw)); } catch (pe) { return out; }
-  if (!inv || !inv.length) return out;
-  var slugs = null, n = Math.min(inv.length, CL_DRILL_INV_CAP);
-  for (var i = 0; i < n; i++) {
-    var pair = inv[i];
-    if (!pair || !pair.length) continue;
-    var id = String(pair[0] || '');
-    if (id.indexOf('sf:') !== 0 || !CL_DRILL_ID_RE.test(id)) continue;
-    var slug = id.split(':')[1];
-    if (slugs === null) slugs = clDrillStudySlugs_();
-    if (!slugs[slug]) continue;
-    out[id] = { kind: 'study', slug: slug, hash: String(pair[1] || '') };
-  }
+  try {
+    var base = EMBED_PAGE_URL.replace(/[^\/]*$/, '') + 'profiler-data/';
+    var reg = JSON.parse(UrlFetchApp.fetch(base + 'profiler-companies.json',
+      { muteHttpExceptions: true }).getContentText());
+    var slugs = ((reg && reg.companies) || []).map(function(c) { return c.slug; })
+      .filter(function(x) { return !!x; });
+    if (!slugs.length) return out;
+    var reqs = slugs.map(function(sl) {
+      return { url: base + sl + '.study.json', muteHttpExceptions: true };
+    });
+    var res = UrlFetchApp.fetchAll(reqs);
+    for (var i = 0; i < res.length && Object.keys(out).length < CL_DRILL_INV_CAP; i++) {
+      var guide = null;
+      try {
+        if (res[i].getResponseCode() !== 200) continue;
+        guide = JSON.parse(res[i].getContentText());
+      } catch (pe) { continue; }   // one unreadable guide must not sink the pool
+      var cards = (guide && guide.flashcards) || [];
+      for (var c = 0; c < cards.length; c++) {
+        if (!cards[c] || !cards[c].q) continue;
+        if (Object.keys(out).length >= CL_DRILL_INV_CAP) break;
+        out['sf:' + slugs[i] + ':' + c] = {
+          kind: 'study', slug: slugs[i],
+          hash: clDrillHash_(cards[c].q + '||' + cards[c].a)
+        };
+      }
+    }
+    if (cache) try { cache.put('cl_drillstudy_v1', JSON.stringify(out), 21600); }
+               catch (pu) { /* oversized — serve uncached */ }
+  } catch (fe) { /* registry or guides unreachable — lesson items still drill */ }
   return out;
 }
 
 // The union of what this session may drill, lesson items and validated study
 // items together. The single place cop=drill and cop=grade both authorise
 // against, so the two ops cannot drift apart on what counts as readable.
-function clDrillAllowed_(sess, invRaw) {
+function clDrillAllowed_(sess) {
   var items = clDrillLessonItems_(sess);
-  var study = clDrillStudyItems_(invRaw);
+  var study = clDrillStudyItems_();
   for (var k in study) if (study.hasOwnProperty(k)) items[k] = study[k];
   return items;
 }
@@ -2588,7 +2603,7 @@ function handleClassroomOp_(e) {
       var dAcct = clProgressAcct_(sess);
       if (!dAcct) return { success: false, error: 'NO_ACCOUNT' };
       var dToday = clDrillToday_();
-      var dAllowed = clDrillAllowed_(sess, p.inv);
+      var dAllowed = clDrillAllowed_(sess);
       var dState = clDrillState_(dAcct);
       var built = clDrillQueue_(dAllowed, dState, dToday);
       // Lesson items ship their payload — the gate has already been checked.
@@ -2621,7 +2636,7 @@ function handleClassroomOp_(e) {
       if (!CL_DRILL_ID_RE.test(gId)) return { success: false, error: 'BAD_ITEM' };
       // Re-authorise against the SAME derivation cop=drill served from, so
       // grading can never reach an item reading could not.
-      var gAllowed = clDrillAllowed_(sess, p.inv);
+      var gAllowed = clDrillAllowed_(sess);
       if (!gAllowed[gId]) return { success: false, error: 'ITEM_DENIED' };
       var gGrade = Math.max(0, Math.min(3, parseInt(p.grade, 10) || 0));
       var gState = clDrillState_(gAcct);
