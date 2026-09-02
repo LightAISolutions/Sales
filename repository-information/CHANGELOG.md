@@ -3,11 +3,58 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 76/100`
+`Sections: 77/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.24r] — 2026-09-02 03:52:35 AM EST
+
+> **Prompt:** "I want you to review my Profiler, Scraper, and Classroom apps and come up with informational brochures on their functions, methodologies, and workflow are (output in downloadable PDF) with the intent to inform new users on what the apps can do, how they do it, and how the user can use them effectively.\n\nAlso, if I wanted you to come up with ways to improve them individually and synergistically, should I run that prompt on Opus 5 or Fable 5.1?"
+
+### Added
+
+**`repository-information/brochures/` — informational brochures for the three apps (PDF).** Three 8-page
+brochures written for a new user: what each app does, the methodology behind it, the day-to-day workflow, and
+how to use it effectively. Authored from the apps' own code and rules rather than from the design documents, so
+the described behaviour is the shipped behaviour.
+
+- **`profiler-brochure.pdf`** — the ten standard dossier sections and the surfaces beyond them; the two-stage
+  research protocol (first-party exhaustive, then third-party to fill and check) and the four standing rules
+  (labeled analysis, notes-are-not-sources, expectations honesty, standard treatment); field notes — the three
+  capture channels, the 0–100 confidence bands and the promote/log triage; scheduled earnings refreshes,
+  quarterly sweeps, the Scraper news bridge and archive-before-edit; the workflow and the six commands; the
+  four-tier access matrix; and the current coverage across the eight categories
+- **`scraper-brochure.pdf`** — the two daily editions and their three sections; the 35-outlet roster with the
+  probe-before-adopt discipline and the blocked-vs-offline distinction; the scoring rubric (company 40 / topic 25
+  / substance 20 / emphasis 15), the hierarchical segment gate, and the geographic multiplier with its
+  load-bearing unmarked default; the seven-phase morning build, the held-back accounting and the ordered trim;
+  the daily and weekly loops, the tuning controls and the seed-version trap; a symptom → diagnosis table; and the
+  token-gated corpus bridge
+- **`classroom-brochure.pdf`** — tracks, modules, briefings and study-next; the live curriculum (2 tracks,
+  5 modules) and the nine source types with their gate consequences; the provenance stamp, the strictest-input
+  fold and the four rules that hold it up; freshness pins, the weekly pipeline and the ≥3-items/≥2-sources
+  briefing bar; the contradiction test and why wording is never a revision; how to study; and the C3–C6 roadmap
+- **Build tooling** — `build-brochures.py` renders each `<slug>.body.html` fragment through the shared
+  `brochure.css` (Letter pages, per-app accent colour) with headless Chromium. `README.md` records the rebuild
+  command and the layout constraint that matters: pages are fixed-height with `overflow: hidden`, so content
+  past ~1006px of the 1056px box is silently clipped — every page in all three brochures was measured against
+  that limit and sits between 73% and 95% full
+
+### Changed
+
+- **`README.md`** — tree entry for `repository-information/brochures/` and its thirteen files
+
+### Notes
+
+- **Not deployed.** The brochures live under `repository-information/`, not `live-site-pages/`, because they
+  describe gated internal surfaces (the access matrices, the corpus route, private note handling) that should
+  not be published to GitHub Pages
+- **`REPO-ARCHITECTURE.md` not changed** — the diagram carries no node for `study-prep/` or
+  `industry-guidance/` either; content directories under `repository-information/` are outside its repo-wide
+  architecture scope, and the brochures introduce no behaviour any diagram depicts
+- No app code changed: Profiler stays v01.79w / v01.33g, Scraper v01.71w / v01.99g, Classroom v01.04w / v01.07g
 
 ## [v04.23r] — 2026-09-02 03:13:23 AM EST
 

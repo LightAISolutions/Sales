@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-02 03:13:23 AM EST` · Repo version: `v04.23r`
+Last updated: `2026-09-02 03:52:35 AM EST` · Repo version: `v04.24r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -603,6 +603,19 @@ Last updated: `2026-09-02 03:13:23 AM EST` · Repo version: `v04.23r`
 <b>─── Repository Information ───────────────────────────────────────────────────</b>
 ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information">repository-information/</a>    — [template]
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/REPO-ARCHITECTURE.md">REPO-ARCHITECTURE.md</a>         — [template · initialized] System diagram (Mermaid)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/brochures">brochures/</a>              — Informational brochures for the Profiler, Scraper and Classroom apps (PDF; not deployed)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/README.md">README.md</a> — How the brochures are authored and rebuilt
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/build-brochures.py">build-brochures.py</a> — Renders each body fragment to PDF via headless Chromium
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/brochure.css">brochure.css</a> — Shared print stylesheet (Letter pages, per-app accent colour)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/profiler.body.html">profiler.body.html</a> — Profiler brochure source fragment
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/scraper.body.html">scraper.body.html</a> — Scraper brochure source fragment
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/classroom.body.html">classroom.body.html</a> — Classroom brochure source fragment
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/profiler-brochure.pdf">profiler-brochure.pdf</a> — Profiler brochure (8 pages)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/scraper-brochure.pdf">scraper-brochure.pdf</a> — Scraper brochure (8 pages)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/classroom-brochure.pdf">classroom-brochure.pdf</a> — Classroom brochure (8 pages)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/profiler-brochure.html">profiler-brochure.html</a> — Build artifact (regenerated; edit the body fragment instead)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/scraper-brochure.html">scraper-brochure.html</a> — Build artifact (regenerated; edit the body fragment instead)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/brochures/classroom-brochure.html">classroom-brochure.html</a> — Build artifact (regenerated; edit the body fragment instead)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/diagrams">diagrams/</a>               — [template] Per-page architecture diagrams
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/gas-project-creator-diagram.md">gas-project-creator-diagram.md</a> — [template] GAS Project Creator user flow
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/testauthgas1-diagram.md">testauthgas1-diagram.md</a>         — [template] Testauthgas1 page GAS integration sequence (auth)

@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Classroom — The Curriculum</title>
+<style>:root { --accent: #5b86d6; --accentdk: #2c4d8f; }
+/* Shared brochure stylesheet — Profiler / Scraper / Classroom informational brochures */
+@page { size: Letter; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 9.7pt; line-height: 1.44; color: #1c2430;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.page {
+  width: 8.5in; height: 11in; padding: 0.56in 0.64in 0.44in;
+  page-break-after: always; position: relative; overflow: hidden; background: #fff;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ── Cover ───────────────────────────────────────────── */
+.cover { background: #10161f; color: #eef2f7; padding: 0.9in 0.8in; }
+.cover .kicker { font-size: 8.6pt; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent); font-weight: 700; }
+.cover h1 { font-size: 52pt; line-height: .96; margin: .16in 0 0; font-weight: 800; letter-spacing: -.025em; }
+.cover .sub { font-size: 15pt; line-height: 1.35; color: #9fb0c4; margin: .16in 0 0; font-weight: 400; max-width: 5.6in; }
+.cover .rule { height: 4px; width: 1.5in; background: var(--accent); margin: .34in 0 .3in; }
+.cover .lede { font-size: 11pt; line-height: 1.62; color: #cbd6e4; max-width: 6.3in; }
+.cover .lede strong { color: #fff; }
+.glance { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: .42in; }
+.glance div { background: #1a2432; border-top: 3px solid var(--accent); padding: 11px 12px 13px; }
+.glance .n { font-size: 21pt; font-weight: 800; color: #fff; line-height: 1; }
+.glance .l { font-size: 7.6pt; color: #94a6bb; text-transform: uppercase; letter-spacing: .07em; margin-top: 6px; line-height: 1.35; }
+.cover .foot { position: absolute; left: .8in; right: .8in; bottom: .62in;
+  border-top: 1px solid #2b3span; padding-top: 10px; font-size: 8.2pt; color: #6d7f94;
+  display: flex; justify-content: space-between; border-top: 1px solid #2b3849; }
+
+/* ── Interior ────────────────────────────────────────── */
+.ph { display: flex; justify-content: space-between; align-items: baseline;
+  border-bottom: 2px solid var(--accent); padding-bottom: 7px; margin-bottom: .24in; }
+.ph .t { font-size: 8.4pt; letter-spacing: .18em; text-transform: uppercase; font-weight: 700; color: var(--accent); }
+.ph .n { font-size: 8.4pt; color: #94a3b4; letter-spacing: .06em; }
+h2 { font-size: 17.5pt; margin: 0 0 .08in; font-weight: 800; letter-spacing: -.015em; color: #0f1620; }
+h2 + .dek { font-size: 10pt; color: #55636f; margin: 0 0 .16in; line-height: 1.45; max-width: 6.6in; }
+h3 { font-size: 10.7pt; margin: .17in 0 .055in; font-weight: 800; color: #0f1620; }
+h3:first-of-type { margin-top: .06in; }
+h4 { font-size: 9.6pt; margin: .14in 0 .04in; font-weight: 700; color: #2c3a4a; }
+p { margin: 0 0 .1in; }
+ul, ol { margin: .04in 0 .12in; padding-left: 16px; }
+li { margin-bottom: .038in; }
+li > strong:first-child { color: #0f1620; }
+.lead { font-size: 10.6pt; color: #3a4654; }
+
+/* ── Components ──────────────────────────────────────── */
+.cols2 { column-count: 2; column-gap: .3in; }
+.cols2 > * { break-inside: avoid; }
+
+.card { border: 1px solid #dde3ea; border-left: 3px solid var(--accent);
+  padding: 7px 10px 8px; margin-bottom: 6px; break-inside: avoid; background: #fbfcfd; }
+.card .h { font-weight: 800; font-size: 9.3pt; color: #0f1620; margin-bottom: 2px; }
+.card p { font-size: 8.7pt; color: #48566a; margin: 0; line-height: 1.45; }
+
+.callout { background: #f4f7fa; border-left: 4px solid var(--accent);
+  padding: 9px 12px; margin: .11in 0; break-inside: avoid; }
+.callout .h { font-weight: 800; font-size: 9.4pt; color: var(--accentdk);
+  text-transform: uppercase; letter-spacing: .07em; margin-bottom: 4px; }
+.callout p, .callout li { font-size: 8.9pt; color: #3c4a5a; }
+.callout p:last-child, .callout ul:last-child { margin-bottom: 0; }
+
+table { width: 100%; border-collapse: collapse; margin: .08in 0 .13in; font-size: 8.5pt; }
+th { background: #10161f; color: #fff; text-align: left; padding: 5px 7px;
+  font-size: 8.1pt; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; }
+td { padding: 4px 7px; border-bottom: 1px solid #e4e9ee; vertical-align: top; color: #34414f; }
+tbody tr:nth-child(even) td { background: #f8fafb; }
+td strong { color: #0f1620; }
+.tc { text-align: center; }
+.yes { color: #157a4a; font-weight: 800; }
+.no { color: #b4bcc6; font-weight: 700; }
+
+.steps { counter-reset: s; list-style: none; padding: 0; margin: .1in 0; }
+.steps li { counter-increment: s; position: relative; padding-left: 28px; margin-bottom: .072in; break-inside: avoid; }
+.steps li::before { content: counter(s); position: absolute; left: 0; top: 0;
+  width: 21px; height: 21px; border-radius: 50%; background: var(--accent); color: #fff;
+  font-size: 8.6pt; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.steps li strong { display: block; color: #0f1620; font-size: 9.4pt; }
+.steps li span { font-size: 8.8pt; color: #4a5766; }
+
+.flow { display: flex; gap: 6px; margin: .12in 0 .18in; }
+.flow div { flex: 1; background: #f4f7fa; border-top: 3px solid var(--accent); padding: 7px 8px; }
+.flow .s { font-size: 7.4pt; font-weight: 800; color: var(--accentdk); letter-spacing: .07em; text-transform: uppercase; }
+.flow .b { font-size: 8.3pt; color: #43505f; margin-top: 3px; line-height: 1.38; }
+
+.kv { font-size: 9.2pt; margin-bottom: .06in; }
+.kv b { color: #0f1620; }
+.tag { display: inline-block; background: var(--accent); color: #fff; font-size: 7.4pt;
+  font-weight: 800; padding: 2px 7px; letter-spacing: .06em; text-transform: uppercase;
+  vertical-align: middle; margin-left: 5px; }
+.mono { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 8.5pt;
+  background: #eef2f6; padding: 1px 4px; color: #2a3644; }
+.pf { position: absolute; left: .64in; right: .64in; bottom: .26in;
+  border-top: 1px solid #e2e7ec; padding-top: 7px; font-size: 7.6pt; color: #9aa7b4;
+  display: flex; justify-content: space-between; }
+
+/* ── Cover contents strip ────────────────────────────── */
+.toc { margin-top: .34in; border-top: 1px solid #2b3849; padding-top: .17in; }
+.toc .lbl { font-size: 7.8pt; letter-spacing: .2em; text-transform: uppercase;
+  color: #6d7f94; font-weight: 700; margin-bottom: 9px; }
+.toc ol { list-style: none; padding: 0; margin: 0;
+  display: grid; grid-auto-flow: column; grid-template-rows: repeat(4, auto);
+  grid-template-columns: 1fr 1fr; gap: 5px 26px; }
+.toc li { display: flex; gap: 9px; font-size: 9pt; color: #b9c6d5; margin: 0; }
+.toc li b { color: var(--accent); font-weight: 800; min-width: 13px; }
+.toc li span { color: #e6ecf3; font-weight: 600; }
+.toc li i { color: #7f92a8; font-style: normal; }
+
+/* Developed by: LightAISolutions */
+</style></head><body>
+<!-- ══ COVER ══════════════════════════════════════════ -->
+<div class="page cover">
+  <div class="kicker">BESS &middot; AI Data-Center Ecosystem</div>
+  <h1>Classroom</h1>
+  <div class="sub">Turning the corpus into taught, retained, current knowledge.</div>
+  <div class="rule"></div>
+  <p class="lede">Profiler is the skeleton and Scraper is the fresh blood. <strong>Classroom is the institution.</strong>
+  It takes everything the other two apps know &mdash; dossiers, study guides, the relationship graph, industry guidance,
+  reports and the news corpus &mdash; and turns it into structured tracks, taught lessons, and a weekly briefing on what
+  changed. Every lesson carries a <strong>provenance stamp</strong> naming the sources it was written from, and inherits
+  the strictest access gate among them. Content flows <em>up</em> the corpus into lessons, never <em>down</em> the
+  access ladder.</p>
+  <div class="glance">
+    <div><div class="n">2</div><div class="l">Tracks live</div></div>
+    <div><div class="n">5</div><div class="l">Modules</div></div>
+    <div><div class="n">9</div><div class="l">Source types</div></div>
+    <div><div class="n">Weekly</div><div class="l">Automated refresh</div></div>
+  </div>
+  <div class="toc">
+    <div class="lbl">Inside</div>
+    <ol>
+      <li><b>01</b><span>What Classroom does</span></li>
+      <li><b>&nbsp;&nbsp;</b><span>The curriculum today</span></li>
+      <li><b>02</b><span>The provenance stamp</span></li>
+      <li><b>&nbsp;&nbsp;</b><span>Freshness &amp; the weekly pipeline</span></li>
+      <li><b>&nbsp;&nbsp;</b><span>The contradiction test</span></li>
+      <li><b>03</b><span>How to study here</span></li>
+      <li><b>&nbsp;&nbsp;</b><span>Getting the most out of it</span></li>
+      <li><b>04</b><span>What comes next</span></li>
+    </ol>
+  </div>
+  <div class="foot"><span>LightAISolutions &middot; Internal briefing document</span><span>Classroom</span></div>
+</div>
+
+<!-- ══ PAGE 2 — WHAT IT DOES ═════════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">What Classroom Does</span><span class="n">01</span></div>
+  <h2>A curriculum, not a document library</h2>
+  <p class="dek">The corpus already holds more than anyone can read. Classroom's job is to decide what is worth
+  <em>learning</em>, teach it in an order that builds, and tell you when what you learned stops being true.</p>
+
+  <h3>The four things it gives you</h3>
+  <div class="cols2">
+    <div class="card"><div class="h">Tracks</div><p>An ordered reading list with a stated outcome &mdash; not "topics covered" but "finish this and you can do X". A track carries no access gate of its own: it shows you the lessons you may read plus a count of the ones withheld.</p></div>
+    <div class="card"><div class="h">Modules</div><p>One teachable unit each, built from explanatory prose, comparison tables, pro/con breakdowns, timelines, callouts and bar charts &mdash; always closing with flashcards or a quiz.</p></div>
+    <div class="card"><div class="h">Briefings</div><p>A dated "This week in BESS/AIDC" edition covering what the corpus added that no lesson yet teaches. A feed rather than a track member.</p></div>
+    <div class="card"><div class="h">Progress &amp; study-next</div><p>Per-section ticks stored per account, and a pointer to the next unread section. It skips lessons you cannot read rather than stopping at them.</p></div>
+  </div>
+
+  <h3>What a lesson is made of</h3>
+  <p>Lessons use one shared section vocabulary, so every module reads consistently no matter who or what authored it:</p>
+  <table>
+    <thead><tr><th style="width:19%">Section kind</th><th>What it is for</th></tr></thead>
+    <tbody>
+      <tr><td><span class="mono">prose</span></td><td>The explanation itself &mdash; the load-bearing teaching.</td></tr>
+      <tr><td><span class="mono">table</span></td><td>Side-by-side comparison, spec sheets, decision matrices.</td></tr>
+      <tr><td><span class="mono">bars</span></td><td>Proportion at a glance &mdash; cost stacks, efficiency budgets, loss breakdowns.</td></tr>
+      <tr><td><span class="mono">proscons</span></td><td>Genuine engineering trade-offs, stated as trade-offs rather than as a verdict.</td></tr>
+      <tr><td><span class="mono">timeline</span></td><td>How a technology or a market arrived where it is.</td></tr>
+      <tr><td><span class="mono">callout</span></td><td>The one thing to remember from a section.</td></tr>
+      <tr><td><span class="mono">flashcards</span> &middot; <span class="mono">quiz</span></td><td>Retention checks on <em>how the technology works</em> &mdash; never company trivia.</td></tr>
+    </tbody>
+  </table>
+  <p>Jargon is wrapped in tooltips that resolve against the lesson's own glossary first, then the shared concepts
+  registry &mdash; so a term defined once for the whole ecosystem means the same thing in every lesson that uses it.</p>
+  <div class="callout">
+    <div class="h">The teaching contract</div>
+    <p>Every lesson assumes a <strong>high-school STEM baseline</strong> and teaches the technology and the market in
+    their industry context &mdash; what a product actually does, what it displaces, who buys it and why the economics
+    work. Acronyms are defined on first use. Flashcards and quizzes drill <em>understanding</em>: how a cell becomes a
+    container, why heat sets rack density, what a warranty is really guaranteeing. Founding dates, headquarters and
+    executive names stay in the dossier where they belong &mdash; they are reference, not learning.</p>
+  </div>
+  <div class="pf"><span>Classroom &mdash; The Curriculum</span><span>2</span></div>
+</div>
+
+<!-- ══ PAGE 3 — THE CURRICULUM ═══════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">What Classroom Does</span><span class="n">01</span></div>
+  <h2>The curriculum today</h2>
+  <p class="dek">Two tracks are live, both built from study guides and the shared concepts registry &mdash; which means
+  both are public-provenance and readable by every admitted tier.</p>
+
+  <h3>Track &mdash; BESS Foundations</h3>
+  <p class="lead"><em>Finish this and you can read a grid-storage spec sheet and hold a technical conversation about
+  cells, duration and degradation.</em></p>
+  <table>
+    <thead><tr><th style="width:32%">Module</th><th>What it teaches</th></tr></thead>
+    <tbody>
+      <tr><td><strong>From Cell to Container</strong></td><td>How a 3-volt chemistry becomes the box a developer buys by the megawatt-hour &mdash; and why every layer in between costs money.</td></tr>
+      <tr><td><strong>Duration, Degradation, and the Twenty-Year Promise</strong></td><td>Power and energy are two different numbers. What each one buys, how capacity fades, and what a vendor is actually guaranteeing.</td></tr>
+      <tr><td><strong>The Spec Sheet, Decoded</strong></td><td>Every line on a grid-BESS container spec sheet, what it plainly means, and the question the buyer is really asking behind it.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Track &mdash; The AI Data-Center Power Primer</h3>
+  <p class="lead"><em>Finish this and you can follow a megawatt from the utility service entrance to the chip, and
+  explain why heat now sets the density.</em></p>
+  <table>
+    <thead><tr><th style="width:32%">Module</th><th>What it teaches</th></tr></thead>
+    <tbody>
+      <tr><td><strong>The AI Data-Center Power Chain</strong></td><td>Follow a megawatt from the service entrance to the rack &mdash; switchgear, busway, the UPS dial, and the choreography of an outage.</td></tr>
+      <tr><td><strong>Heat Is the Constraint</strong></td><td>Why AI racks outran air cooling, and how the chip-to-atmosphere thermal chain spends a fixed budget of degrees.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Where the material comes from</h3>
+  <p>Nine source types can feed a lesson, and each carries a fixed access consequence. The prefix in a lesson's stamp
+  determines its kind, and the kind determines who may read it:</p>
+  <table>
+    <thead><tr><th style="width:26%">Source</th><th style="width:20%">Kind</th><th>Who can read a lesson built from it</th></tr></thead>
+    <tbody>
+      <tr><td>Company dossier &middot; study guide &middot; named project &middot; relationship graph &middot; concepts registry</td><td><strong>public</strong></td><td>Analyst and above &mdash; the whole admitted audience.</td></tr>
+      <tr><td>Industry Guidance module</td><td><strong>guidance</strong></td><td>Contributor and above.</td></tr>
+      <tr><td>Scraper corpus item &middot; an earlier briefing</td><td><strong>briefing</strong></td><td>Contributor and above.</td></tr>
+      <tr><td>Session-authored industry report</td><td><strong>report</strong></td><td>Admin only.</td></tr>
+      <tr><td><em>A private field note</em></td><td colspan="2"><em>No prefix exists. Field notes can never become lesson content &mdash; see overleaf.</em></td></tr>
+    </tbody>
+  </table>
+  <div class="pf"><span>Classroom &mdash; The Curriculum</span><span>3</span></div>
+</div>
+
+<!-- ══ PAGE 4 — PROVENANCE ═══════════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">How Classroom Works</span><span class="n">02</span></div>
+  <h2>The provenance stamp</h2>
+  <p class="dek">Classroom was allowed to teach from <em>everything</em> in the corpus &mdash; including material most
+  tiers cannot see. One mechanism makes that safe, and everything else in the app is downstream of it.</p>
+
+  <h3>How it works</h3>
+  <p>Every lesson carries a list of the sources it was authored from. Each entry names the <strong>kind</strong> of
+  source, a <strong>typed reference</strong> to the specific document, and the <strong>date</strong> that document was at
+  when the lesson was written. At the moment a lesson is served, the app folds that list to its strictest member and
+  demands the matching permission:</p>
+  <div class="flow">
+    <div><div class="s">All-public inputs</div><div class="b">The lesson is readable by every admitted tier &mdash; analyst, contributor and admin.</div></div>
+    <div><div class="s">Any guidance or corpus input</div><div class="b">The whole lesson becomes contributor+, however much of it came from public sources.</div></div>
+    <div><div class="s">Any report input</div><div class="b">The whole lesson becomes admin-only. One gated source raises the gate for everything.</div></div>
+  </div>
+
+  <div class="callout">
+    <div class="h">Four rules that hold the guarantee up</div>
+    <ul>
+      <li><strong>Never fabricate an input.</strong> An input is a source the lesson's content actually came from &mdash; not a citation of convenience. A lesson with no corpus input has no place here at all.</li>
+      <li><strong>The gate is never stored.</strong> It is recomputed from the stamp every time a lesson is served, so it cannot drift out of sync with the material the way a stored permission field would.</li>
+      <li><strong>Malformed fails closed.</strong> An unrecognised source prefix, a mismatched kind, a broken reference &mdash; any of these collapse the gate to "deny for everyone". That is the intended outcome, not a bug to route around.</li>
+      <li><strong>Field notes can never become content.</strong> There is deliberately no note prefix in the vocabulary. A lesson referencing one is denied to every tier, including admin. Notes may steer what a pipeline session emphasises &mdash; never quoted, never cited.</li>
+    </ul>
+  </div>
+
+  <h3>Who sees what</h3>
+  <table>
+    <thead><tr><th style="width:44%">Classroom surface</th><th class="tc">Admin</th><th class="tc">Contributor</th><th class="tc">Analyst</th><th class="tc">Viewer</th></tr></thead>
+    <tbody>
+      <tr><td>Public-provenance tracks, progress, study-next</td><td class="tc yes">&#10003;</td><td class="tc yes">&#10003;</td><td class="tc yes">&#10003;</td><td class="tc no">&mdash;</td></tr>
+      <tr><td>Guidance-derived lessons</td><td class="tc yes">&#10003;</td><td class="tc yes">&#10003;</td><td class="tc no">&mdash;</td><td class="tc no">&mdash;</td></tr>
+      <tr><td>Weekly briefing editions</td><td class="tc yes">&#10003;</td><td class="tc yes">&#10003;</td><td class="tc no">&mdash;</td><td class="tc no">&mdash;</td></tr>
+      <tr><td>Report-derived lessons</td><td class="tc yes">&#10003;</td><td class="tc no">&mdash;</td><td class="tc no">&mdash;</td><td class="tc no">&mdash;</td></tr>
+      <tr><td>Pipeline controls, content admin</td><td class="tc yes">&#10003;</td><td class="tc no">&mdash;</td><td class="tc no">&mdash;</td><td class="tc no">&mdash;</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:9.2pt;color:#55636f">Viewers have no Classroom access at all. An unrecognised role is treated as a
+  viewer &mdash; unknown fails closed rather than inheriting the reading surface. And because the same fold runs in
+  Profiler, a tier that cannot open a report there will never meet report-derived material in a lesson here either. The
+  gate follows the content across app boundaries, without anyone having to remember to apply it.</p>
+  <div class="pf"><span>Classroom &mdash; The Curriculum</span><span>4</span></div>
+</div>
+
+<!-- ══ PAGE 5 — FRESHNESS & PIPELINE ═════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">How Classroom Works</span><span class="n">02</span></div>
+  <h2>Staying true &mdash; the weekly pipeline</h2>
+  <p class="dek">Teaching material goes stale silently. A lesson that was right in March can be quietly wrong in
+  September with nothing on the page to say so. Classroom's answer is a scheduled, unattended authoring run bound by a
+  written contract.</p>
+
+  <h3>How a lesson knows it has aged</h3>
+  <p>Every lesson carries an <strong>updated</strong> date and a <strong>review-by</strong> date &mdash; and the review-by
+  is set from the lesson's <em>own nearest dated gate</em>, not a fixed cadence. If a lesson teaches a tariff that steps
+  up in January, it is scheduled for review before January; slow-moving fundamentals default to about six months. On top
+  of that, each source in the stamp is <strong>pinned to the date that document was at</strong> when the lesson was
+  written. That pin is the hook: a weekly run compares it against the live source and knows exactly what moved.</p>
+
+  <h3>What one run does</h3>
+  <ol class="steps">
+    <li><strong>Read every pin</strong><span>Build a table of every lesson's sources and the dates they were pinned at.</span></li>
+    <li><strong>Fetch each source once</strong><span>Read the current revision date off the document itself &mdash; never from an index, never from a previous pin plus a guess. Classify each as unchanged, moved, or unknown.</span></li>
+    <li><strong>Decide per lesson</strong><span>Apply the contradiction test opposite. A lesson whose sources are all unknown is frozen rather than guessed at.</span></li>
+    <li><strong>Decide the briefing</strong><span>Everything the corpus added that no lesson teaches is briefing material &mdash; if there is enough of it.</span></li>
+    <li><strong>Apply the caps and write once</strong><span>At most one briefing, one new module, three revised lessons and one new track per run. The decision is made in full before the first line is written.</span></li>
+    <li><strong>Verify, or discard everything</strong><span>Four checkers run twice &mdash; once after writing and once immediately before committing. Any finding at all and the entire run is discarded and reported as blocked.</span></li>
+  </ol>
+
+  <div class="callout">
+    <div class="h">A quiet week is the expected outcome</div>
+    <p>The default result of a run is <strong>stand down</strong> &mdash; write nothing, report what was seen. A briefing
+    is only published when there are at least three teachable, dated developments across at least two distinct sources.
+    Two items from one source is not a thin briefing; it is no briefing, and the report says so with the counts. This is
+    deliberate: a curriculum that publishes something every week regardless is a curriculum nobody trusts.</p>
+  </div>
+
+  <h3>The caps, and why a run is deliberately small</h3>
+  <p>One run may publish at most <strong>one briefing, one new module, three revised lessons and one new track</strong>,
+  and may never revise the same lesson twice. When more than three lessons have genuinely been contradicted, the run
+  ranks them by the size of the contradiction &mdash; a wrong number in a taught claim outranks a merely superseded
+  reference &mdash; takes the top three, and reports the rest as skipped. Nothing is lost: their pins did not move, so
+  they are re-examined next week. The caps exist because a small, fully-explained change is reviewable and a large one
+  is not.</p>
+  <div class="pf"><span>Classroom &mdash; The Curriculum</span><span>5</span></div>
+</div>
+
+<!-- ══ PAGE 6 — THE CONTRADICTION TEST ═══════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">How Classroom Works</span><span class="n">02</span></div>
+  <h2>When a lesson changes &mdash; and when it doesn't</h2>
+  <p class="dek">The hardest question an automated curriculum faces is not "what is new" but "what does new material
+  mean for what I already taught". Classroom answers it with one test that has to pass before a lesson is opened.</p>
+
+  <h3>The contradiction test</h3>
+  <p>A source that moved is only a <strong>candidate</strong>. It becomes a revision only when the run can write, for one
+  named section, the sentence: <em>"this section teaches X; the source now says Y"</em> &mdash; where X is a claim
+  actually present in that section, and Y is on the document fetched this week. That sentence <em>is</em> the revision:
+  it names the sections that changed and becomes the note in the lesson's history.</p>
+  <table>
+    <thead><tr><th style="width:20%">Category</th><th style="width:36%">What it looks like</th><th>What happens</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Contradiction</strong></td><td>A taught claim the source now states differently &mdash; a cycle-life figure, an effective date, a direction of travel, a ranking, a mechanism, a "who does what".</td><td>The section is corrected in place, under the same id, and listed in the revision.</td></tr>
+      <tr><td><strong>Supersession</strong></td><td>The same claim restated by a successor document.</td><td>The reference is swapped for the successor; only sections whose claims actually changed are listed.</td></tr>
+      <tr><td><strong>Novelty</strong></td><td>Material the lesson never taught &mdash; a new project, a new product line, a figure for something it never cited.</td><td>Goes to the weekly briefing, or occasionally becomes a new module. Never appended silently to an existing lesson.</td></tr>
+      <tr><td><strong>Wording</strong></td><td>A tighter phrase, a restyle, a typo.</td><td><strong>Never a revision.</strong> A section whose meaning stands is not opened at all.</td></tr>
+    </tbody>
+  </table>
+  <p>Two consequences follow that look surprising until you see why. A source that moved but contradicted nothing leaves
+  the lesson <strong>completely untouched, its pin included</strong> &mdash; so it will be re-examined next week, which is
+  the intended behaviour rather than a missed update. And the contradiction has to touch <em>what the lesson actually
+  took</em> from that source: a dossier that revised its financials does not contradict a lesson that only ever used its
+  container spec table.</p>
+
+  <div class="callout">
+    <div class="h">Why section identities are permanent</div>
+    <p>Your progress ticks key on section ids, and so does the "what changed since you learned this" delta. So a claim
+    that no longer holds is corrected <em>in place</em>, under its existing id &mdash; never deleted and re-added under a
+    new one. That is what lets a revision tell you precisely which of the sections you already completed are worth
+    re-reading, and leave the rest of your progress alone.</p>
+  </div>
+  <h3>Three guarantees no checker can see</h3>
+  <div class="cols2">
+    <div class="card"><div class="h">Read before re-pin</div><p>Every date written into a stamp was read off a document fetched in that same run. Never the ledger, never today's date because it seemed close enough.</p></div>
+    <div class="card"><div class="h">Every reference resolved</div><p>A source is only cited if its document was actually fetched, parsed, and its identity matched. Well-formed is not the same as real.</p></div>
+    <div class="card"><div class="h">Degrade to unknown, never assume</div><p>A failed fetch, an unparseable body, an unrecognised shape &mdash; all make the source unknown and freeze the lessons pinned to it. Nothing is ever filled in from memory.</p></div>
+    <div class="card"><div class="h">And the record to check them</div><p>Each run writes its full decision into the repository changelog, so a developer can spot-check the one thing automation cannot verify: that the run read what it says it read.</p></div>
+  </div>
+  <div class="pf"><span>Classroom &mdash; The Curriculum</span><span>6</span></div>
+</div>
+
+<!-- ══ PAGE 7 — HOW TO STUDY ═════════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">Using Classroom</span><span class="n">03</span></div>
+  <h2>How to study here</h2>
+  <p class="dek">Classroom is built for repeated short sessions rather than one long sitting. Everything about it &mdash;
+  section-level progress, the study-next pointer, the weekly briefing &mdash; assumes you come back.</p>
+
+  <ol class="steps">
+    <li><strong>Sign in and start where it points you</strong><span>The study-next pointer names the exact next unread section, its lesson and its track, with your progress through that lesson. It skips lessons your tier cannot read rather than stalling on them, so the path never dead-ends.</span></li>
+    <li><strong>Work a track in order</strong><span>Tracks are ordered for a reason &mdash; "The Spec Sheet, Decoded" assumes you already know what a cell-to-container stack costs. Reading out of order works, but it works harder.</span></li>
+    <li><strong>Tick sections as you finish them</strong><span>Progress is per section, not per lesson, so a fifteen-minute session is a real contribution rather than something you lose by not finishing.</span></li>
+    <li><strong>Do the flashcards and the quiz</strong><span>They are the point, not the appendix. They also become the substrate for the spaced-repetition drill queue that is coming next.</span></li>
+    <li><strong>Read the weekly briefing when it appears</strong><span>It covers what the corpus added that no lesson teaches yet. Some weeks there is no briefing at all &mdash; that is the system working, not failing.</span></li>
+    <li><strong>Re-read what a revision flags</strong><span>When a lesson is revised, only the sections whose meaning actually changed are marked. Your ticks on everything else stand, so a revision costs you minutes rather than restarting a lesson.</span></li>
+    <li><strong>Pair it with a Profiler prep pack</strong><span>Classroom teaches the industry; <span class="mono">profiler prep &lt;Company&gt;</span> teaches one company's products inside it. Do the track first, then the prep pack before the meeting.</span></li>
+  </ol>
+
+  <div class="callout">
+    <div class="h">Getting the most out of it</div>
+    <ul>
+      <li><strong>Short and often beats long and rare.</strong> Section-level progress exists precisely so that twenty minutes is a complete unit of work.</li>
+      <li><strong>A gated lesson is not a bug.</strong> If a track shows you three lessons and a count of withheld ones, the fold is doing its job &mdash; that lesson was built from material your tier cannot see, so the lesson inherits the restriction.</li>
+      <li><strong>Report a stale tile or glossary entry.</strong> The pipeline deliberately will not touch a lesson's headline tiles, glossary, title or grouping &mdash; no automated check watches those fields, so they are left alone and flagged for a person. If one looks wrong, it needs you.</li>
+      <li><strong>Trust the stand-downs.</strong> A week with no briefing means the corpus genuinely did not move enough to teach. That honesty is what makes the weeks with a briefing worth reading.</li>
+      <li><strong>Use the review-by dates as a planning signal.</strong> A lesson scheduled for review in six weeks is telling you there is a dated event in the material &mdash; often one worth knowing about before it lands.</li>
+    </ul>
+  </div>
+  <div class="pf"><span>Classroom &mdash; The Curriculum</span><span>7</span></div>
+</div>
+
+<!-- ══ PAGE 8 — WHAT COMES NEXT ══════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">What Comes Next</span><span class="n">04</span></div>
+  <h2>The road ahead</h2>
+  <p class="dek">The learning core and the weekly pipeline are live. Four further phases are designed and sequenced;
+  each one rides on the provenance stamp already in place.</p>
+  <table>
+    <thead><tr><th style="width:12%">Phase</th><th style="width:28%">What it adds</th><th>Why it comes in this order</th></tr></thead>
+    <tbody>
+      <tr><td><strong>C3</strong></td><td>Guidance homecoming</td><td>Industry Guidance modules migrate from Profiler into Classroom, where teaching material belongs. Until then, tracks deep-link out to Profiler's guidance hub for tiers that hold the capability.</td></tr>
+      <tr><td><strong>C4</strong></td><td>Retention &mdash; the drill queue</td><td>Spaced repetition across every flashcard and quiz item, with per-item history. This is why the flashcard sections matter now: they are the material the drill queue will schedule.</td></tr>
+      <tr><td><strong>C5</strong></td><td>Sales simulations</td><td>Objection and discovery scenarios built from real dossier facts and relationships &mdash; practising the conversation, not just the content.</td></tr>
+      <tr><td><strong>C6</strong></td><td>Team layer</td><td>Instructor dashboard, placement quiz, completion tracking. Gated on a team actually existing rather than built speculatively.</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:9.2pt;color:#55636f">One capability is <em>deliberately</em> deferred: in-app runtime question
+  answering &mdash; "ask the instructor". It is a genuine cost surface and needs its own design pass rather than being
+  added because it is technically possible. The same decision was taken for Industry Guidance, and held.</p>
+
+  <h2 style="margin-top:.16in">Where Classroom sits</h2>
+  <div class="flow">
+    <div><div class="s">Profiler &mdash; the skeleton</div><div class="b">Who everyone is: dossiers, study guides, projects, the graph, guidance and reports. The raw material.</div></div>
+    <div><div class="s">Scraper &mdash; the blood</div><div class="b">What just happened: scored trade press and the federal record, held in a queryable corpus.</div></div>
+    <div><div class="s">Classroom &mdash; the institution</div><div class="b">What it means and what to retain: tracks, modules, briefings and progress, gated by where the material came from.</div></div>
+  </div>
+  <p>Classroom is the layer that makes the other two compound. A dossier read once is a fact you half-remember; a track
+  finished is a capability you keep. And because a lesson's stamp pins the exact revision of every source it was written
+  from, the curriculum can tell you not merely that something changed &mdash; but which of the things you personally
+  learned are now out of date, and which are still sound.</p>
+
+  <div class="callout">
+    <div class="h">In one line</div>
+    <p>Classroom answers <em>"what do I need to understand to sell in this market, in what order, and what have I learned
+    that is no longer true?"</em> &mdash; teaching from the whole corpus while never showing anyone material they were
+    not cleared to see.</p>
+  </div>
+  <div class="pf"><span>Classroom &mdash; The Curriculum</span><span>8</span></div>
+</div>
+<!-- Developed by: LightAISolutions -->
+
+</body></html>

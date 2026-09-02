@@ -1,0 +1,323 @@
+<!-- ══ COVER ══════════════════════════════════════════ -->
+<div class="page cover">
+  <div class="kicker">BESS &middot; AI Data-Center Ecosystem</div>
+  <h1>Scraper</h1>
+  <div class="sub">A daily industry news desk that reads 35 outlets so you read twelve stories.</div>
+  <div class="rule"></div>
+  <p class="lede">Scraper is the ecosystem's <strong>fresh third-party blood</strong>. Every weekday morning it sweeps
+  the trade press and the federal record, scores every article against what <em>you</em> actually cover, clusters
+  duplicate reporting into single stories, writes a summary and a separately-labeled analytical read, and delivers two
+  editions before you sit down. Everything it discards is <strong>counted and explained</strong> &mdash; the footer never
+  claims nothing was held back.</p>
+  <div class="glance">
+    <div><div class="n">35</div><div class="l">Curated outlets</div></div>
+    <div><div class="n">29</div><div class="l">Tunable segments</div></div>
+    <div><div class="n">2</div><div class="l">Daily editions</div></div>
+    <div><div class="n">6 mo</div><div class="l">Searchable archive</div></div>
+  </div>
+  <div class="toc">
+    <div class="lbl">Inside</div>
+    <ol>
+      <li><b>01</b><span>What Scraper does</span></li>
+      <li><b>02</b><span>The source roster &amp; its discipline</span></li>
+      <li><b>&nbsp;&nbsp;</b><span>How an article is scored</span></li>
+      <li><b>&nbsp;&nbsp;</b><span>The morning build pipeline</span></li>
+      <li><b>03</b><span>Your day with Scraper</span></li>
+      <li><b>&nbsp;&nbsp;</b><span>Tuning &amp; the feedback loop</span></li>
+      <li><b>&nbsp;&nbsp;</b><span>Getting the most out of it</span></li>
+      <li><b>04</b><span>The corpus bridge</span></li>
+    </ol>
+  </div>
+  <div class="foot"><span>LightAISolutions &middot; Internal briefing document</span><span>Scraper</span></div>
+</div>
+
+<!-- ══ PAGE 2 — WHAT IT DOES ═════════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">What Scraper Does</span><span class="n">01</span></div>
+  <h2>Two editions, built before you wake up</h2>
+  <p class="dek">Scraper's job is not to show you the news. It is to decide, defensibly, which twelve of the day's
+  hundred-odd articles are worth your attention &mdash; and to show its working when you disagree.</p>
+
+  <h3>The morning digest</h3>
+  <p>Two editions build daily at 6am desk time and deliver from 7am: <strong>Your Morning Digest (BESS)</strong>, tuned
+  to utility-scale storage, and <strong>Your Morning Digest (AIDC)</strong>, tuned to the data-center power chain. Each
+  edition sorts what survives into three sections:</p>
+  <div class="flow">
+    <div><div class="s">Companies</div><div class="b">Stories naming a company you cover in Profiler &mdash; the ones that change a dossier or a conversation.</div></div>
+    <div><div class="s">Market</div><div class="b">Structural movement with no single company at the centre: pricing, policy, interconnection, demand.</div></div>
+    <div><div class="s">Incidents</div><div class="b">Fires, safety findings, siting opposition and permitting fights &mdash; the stories that move public sentiment.</div></div>
+  </div>
+  <p>Every item carries a reported <strong>summary</strong> and, set apart from it, <strong>the desk's read</strong>
+  &mdash; an analytical line kept deliberately shorter than the reporting. The two are colour-keyed and the key is
+  printed in the footer: <span style="color:#8a6410;font-weight:700">amber means analysis</span>, and concrete figures
+  are highlighted so a number never hides inside a paragraph.</p>
+
+  <h3>The rest of the app</h3>
+  <table>
+    <thead><tr><th style="width:23%">Surface</th><th>What it gives you</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Tune</strong></td><td>29 segments and 24 topics with individual on/off toggles and weights, plus your covered companies synced live from Profiler. This is where you tell the scorer what you care about today.</td></tr>
+      <tr><td><strong>Editions</strong></td><td>Create your own beyond the two defaults &mdash; name it, set the cadence and window, apply a tuning preset, schedule it.</td></tr>
+      <tr><td><strong>Archive</strong></td><td>About six months of past editions, browsable as a grid, a table, or a calendar. Links keep resolving to their real destinations for roughly sixteen weeks.</td></tr>
+      <tr><td><strong>Projects &amp; Plan</strong></td><td>Saved research queries with backfill, deep backfill and compile &mdash; for going wide on a topic rather than waiting for it to surface.</td></tr>
+      <tr><td><strong>Subscribers</strong></td><td>An email list, "email me the latest", and shareable links for a single edition.</td></tr>
+      <tr><td><strong>Why thin? / Held back</strong></td><td>Two explanations rather than a shrug: why an edition is short today, and exactly what cleared the bar but did not make the cut.</td></tr>
+      <tr><td><strong>Source stats</strong></td><td>Per-outlet contribution &mdash; who is actually earning their place in the roster.</td></tr>
+      <tr><td><strong>Corpus route</strong></td><td>A read-only, token-gated feed that hands scored articles and relationship candidates to Profiler and Classroom.</td></tr>
+    </tbody>
+  </table>
+  <div class="pf"><span>Scraper &mdash; The Industry News Desk</span><span>2</span></div>
+</div>
+
+<!-- ══ PAGE 3 — THE ROSTER ═══════════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">How Scraper Works</span><span class="n">02</span></div>
+  <h2>The roster, and why it is short on purpose</h2>
+  <p class="dek">Thirty-five outlets is a deliberate number. A larger roster does not produce a better digest &mdash; it
+  produces more noise for the scorer to reject, and more silent failures nobody notices.</p>
+
+  <h3>Tier 1 &mdash; the record and the beat leaders</h3>
+  <p>Seventeen feeds, including five <strong>primary federal sources</strong> adopted after an executive order naming
+  battery storage and grid inverters as in-scope critical infrastructure reached the desk only through second-hand trade
+  coverage, days late and partial. The roster had been entirely secondary &mdash; thirty outlets reporting <em>on</em>
+  government action, none reading it.</p>
+  <table>
+    <thead><tr><th style="width:32%">Primary source</th><th>Why it is the record, not a report of it</th></tr></thead>
+    <tbody>
+      <tr><td><strong>White House &mdash; Presidential Actions</strong></td><td>Executive orders in full. The operative detail is in the definitions section that trade pieces summarise away.</td></tr>
+      <tr><td><strong>Federal Register &mdash; FERC</strong></td><td>A FERC order takes legal effect on publication here, not on the agency's own newsroom.</td></tr>
+      <tr><td><strong>Federal Register &mdash; IRS</strong></td><td>Credit and domestic-content guidance &mdash; the rules that move project economics.</td></tr>
+      <tr><td><strong>US Dept. of Energy</strong></td><td>Programme announcements, loan authority, funding awards.</td></tr>
+      <tr><td><strong>EIA &mdash; Today in Energy</strong></td><td>The primary data series behind most market claims you will read elsewhere.</td></tr>
+    </tbody>
+  </table>
+  <p>The rest of Tier 1 is the beat leadership &mdash; Utility Dive, Data Center Dynamics, Energy-Storage.news, ESS News,
+  Canary Media, POWER, Data Center Knowledge, Data Center Frontier, pv magazine USA, Microgrid Knowledge, T&amp;D World,
+  The Next Platform. Tier 2 adds eighteen outlets of breadth and specialist depth.</p>
+
+  <div class="callout">
+    <div class="h">No outlet is adopted from reputation</div>
+    <p>Every feed is <strong>probed live</strong> before it joins the roster: HTTP status, that the body is actually XML,
+    and that it carries items with recent dates. A feed URL is never taken from memory or from the outlet's standing in
+    the industry. When one is dropped, the reason and the date are recorded so a future session cannot re-propose it as
+    "a gap in coverage" &mdash; which is precisely what used to happen.</p>
+  </div>
+
+  <h3>Blocked is not the same as gone</h3>
+  <p>Two failure modes look identical in a browser and are opposite facts. Scraper distinguishes them and treats them
+  differently in the UI:</p>
+  <div class="cols2">
+    <div class="card"><div class="h">Blocked &mdash; the outlet is alive</div><p>A bot wall answers every automated client. Kept visible in Tune, struck through, toggle frozen off &mdash; so you can see the beat is <em>intentionally</em> uncovered rather than quietly missing.</p></div>
+    <div class="card"><div class="h">Offline &mdash; the publication ended</div><p>The domain is parked and the feed is a redirect stub. Filtered out entirely; the record is kept so re-adding the key would reactivate it if it ever returns.</p></div>
+  </div>
+  <p style="font-size:9.2pt;color:#55636f">Six outlets currently sit on the do-not-re-propose list, five blocked and one
+  genuinely gone. None of them cost coverage: battery and storage run through Energy-Storage.news and ESS News, solar
+  through pv magazine USA and Solar Power World, data centres through Data Center Frontier, DCD and The Register, and
+  the federal agencies through the Federal Register &mdash; where their output is legally effective anyway.</p>
+  <div class="pf"><span>Scraper &mdash; The Industry News Desk</span><span>3</span></div>
+</div>
+
+<!-- ══ PAGE 4 — SCORING ══════════════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">How Scraper Works</span><span class="n">02</span></div>
+  <h2>How an article is scored</h2>
+  <p class="dek">Every article gets a number out of 100 from four weighted bands, then a geographic multiplier. Below 25
+  it does not even enter the intake &mdash; it is stored for the corpus and never shown.</p>
+
+  <table>
+    <thead><tr><th style="width:20%">Band</th><th class="tc" style="width:11%">Weight</th><th>What earns it</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Company</strong></td><td class="tc">40</td><td>Names a company you cover in Profiler. Matched on the dossier's permanent slug, not its display name, so a rename never silently detaches a row from its company. Additional companies add a smaller increment each.</td></tr>
+      <tr><td><strong>Topic</strong></td><td class="tc">25</td><td>Hits one of 24 topic vocabularies &mdash; interconnection, tariffs, offtake, safety, siting, supply chain and the rest.</td></tr>
+      <tr><td><strong>Substance</strong></td><td class="tc">20</td><td>Carries concrete detail &mdash; figures, capacities, dates, named counterparties &mdash; rather than a press-release restatement.</td></tr>
+      <tr><td><strong>Emphasis</strong></td><td class="tc">15</td><td>Weighted toward companies you are actively working: a dossier updated within the last 45 days earns the full recency component.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>The segment gate &mdash; specificity beats breadth</h3>
+  <p>Segments are hierarchical. <span class="mono">seg-bess</span> is the broad parent; beneath it sit utility-scale,
+  data-centre/behind-the-meter, residential, C&amp;I and long-duration. Two rules follow from that shape:</p>
+  <ul>
+    <li><strong>A child hit demotes its parent.</strong> When an article matches a specific child segment, the generic parent's evidence is discounted &mdash; a residential product story cannot ride the broad "energy storage" match into a utility-scale edition.</li>
+    <li><strong>Off-segment company news is zeroed, not merely down-ranked.</strong> If an article's only segment hits are segments you have turned <em>off</em>, its company, topic and engagement signals are all set to zero. A covered automaker's vehicle recall no longer clears the bar on the strength of the company match when you have "EVs &amp; automotive" switched off.</li>
+    <li><strong>No segment hit at all changes nothing.</strong> The gate only fires on positive evidence of an excluded subject &mdash; never on absence.</li>
+  </ul>
+
+  <h3>Geography &mdash; a multiplier, not a penalty band</h3>
+  <p>The US market is priority one. Related markets &mdash; China, Mexico, Chile, Canada &mdash; matter mainly when what
+  happened there affects the US. That is applied as a multiplier on the finished score, because an additive penalty would
+  leave a strong company match on a foreign story still clearing the bar:</p>
+  <div class="flow">
+    <div><div class="s">&times;1.00 &mdash; US or unmarked</div><div class="b">The load-bearing default. Most US trade coverage never says "United States" &mdash; it says ERCOT, or a county in Texas, or nothing at all.</div></div>
+    <div><div class="s">&times;0.55 &mdash; Related market</div><div class="b">A foreign subject in a priority-two country with no US connection named anywhere in the piece.</div></div>
+    <div><div class="s">&times;0.25 &mdash; Elsewhere</div><div class="b">Everywhere else. The lead should never be an Australian transmission story.</div></div>
+  </div>
+  <div class="callout">
+    <div class="h">Why the default is the important part</div>
+    <p>Penalising articles with <em>no</em> geographic marker would empty the digest, because the overwhelming majority of
+    relevant US coverage carries no such marker. A penalty therefore requires positive evidence of a foreign subject
+    &mdash; never merely the absence of evidence of a domestic one. This is the single rule most likely to be broken by a
+    well-meaning "improvement" to the scorer.</p>
+  </div>
+  <div class="pf"><span>Scraper &mdash; The Industry News Desk</span><span>4</span></div>
+</div>
+
+<!-- ══ PAGE 5 — THE BUILD ════════════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">How Scraper Works</span><span class="n">02</span></div>
+  <h2>The morning build</h2>
+  <p class="dek">The build runs in chunked steps rather than one long pass, so a slow feed or a rate-limited model
+  degrades one step instead of failing the edition. Each phase hands its state to the next.</p>
+  <ol class="steps">
+    <li><strong>Fetch</strong><span>Walk the enabled feeds for the edition's window, parse each one, and drop anything already seen. A feed that fails is skipped and logged &mdash; never allowed to abort the run.</span></li>
+    <li><strong>Score &amp; gate</strong><span>Apply the rubric, the segment gate and the geographic multiplier to every item. Anything below 25 is stored for the corpus and goes no further.</span></li>
+    <li><strong>Cluster</strong><span>Detect articles covering the same event and collapse them into one story, keeping the best-ranked outlet's version. Six outlets reporting one deal is one item, not six.</span></li>
+    <li><strong>Summarize</strong><span>Generate the reported summary and, separately, the desk's analytical read &mdash; capped shorter than the reporting on purpose. Gemini or Claude Sonnet, selectable in the UI; failures are classified as soft (retry) or terminal (stop asking) so one bad call cannot burn the whole budget.</span></li>
+    <li><strong>Backstop</strong><span>If the edition is coming in thin, a second pass widens the net rather than shipping three items with no explanation.</span></li>
+    <li><strong>Render &amp; deliver</strong><span>Build the HTML, resolve every link through the intake table so clicks land on the real article, store the edition, and email subscribers from 7am.</span></li>
+    <li><strong>Reconcile</strong><span>A daily pass mines articles naming two covered companies into relationship candidates for Profiler, and prunes orphaned intake rows.</span></li>
+  </ol>
+
+  <h3>The footer tells the truth</h3>
+  <p>Every edition ends with a line like <span class="mono">14 of 15 relevant &middot; 104 scanned &middot; 1 more held
+  back</span>. That is not decoration &mdash; it is the contract. Items that cleared the relevance bar but lost to a
+  section cap are counted in that number and readable in the <strong>Held back</strong> panel.</p>
+  <div class="callout">
+    <div class="h">What happens when an edition is too big to store</div>
+    <p>A Sheets cell caps at 50,000 characters, so a very large edition has to be trimmed to fit. The trim is ordered:
+    analysis text goes first, then summaries, then the held-back list is halved. Crucially, when the held-back list is
+    trimmed the edition <strong>says so</strong> rather than reporting a smaller number &mdash; because "nothing was held
+    back" would not be a smaller truth, it would be a false one. The total count survives the trim untouched.</p>
+  </div>
+
+  <h3>Retention</h3>
+  <div class="cols2">
+    <div class="card"><div class="h">400 editions kept</div><p>Roughly six months of three weekday editions, browsable and searchable. Narrow reads mean depth no longer costs page-load time.</p></div>
+    <div class="card"><div class="h">240 editions of live links</div><p>About sixteen weeks. Beyond that an edition stays readable but its links fall back to opening the app.</p></div>
+  </div>
+  <div class="pf"><span>Scraper &mdash; The Industry News Desk</span><span>5</span></div>
+</div>
+
+<!-- ══ PAGE 6 — YOUR DAY ═════════════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">Using Scraper</span><span class="n">03</span></div>
+  <h2>Your day with Scraper</h2>
+  <p class="dek">The daily loop takes five minutes. The tuning loop runs weekly at most. Both feed the same scorer, and
+  the second is what makes the first keep getting better.</p>
+
+  <h3>The five-minute morning</h3>
+  <ol class="steps">
+    <li><strong>Open the edition</strong><span>It was built at 6am and is waiting. Read by section &mdash; Companies first if you are prepping a call, Market first if you are thinking about positioning.</span></li>
+    <li><strong>Read the summary, then the read</strong><span>The reported facts and the desk's interpretation are visually separated so you always know which is which. Figures are highlighted; you can scan for numbers alone.</span></li>
+    <li><strong>Click through what matters</strong><span>This is not passive. Clicks are logged and become an engagement boost for that company and topic, so tomorrow's ranking reflects today's attention.</span></li>
+    <li><strong>Rate the misses</strong><span>&#128077; and &#128078; on individual items. A thumbs-down on a story that should not have been there is the highest-value signal you can give.</span></li>
+    <li><strong>Ask "Why thin?" when it looks light</strong><span>You get the real reason &mdash; a quiet news day, a failing feed, a segment you turned off &mdash; instead of guessing.</span></li>
+    <li><strong>Check "Held back"</strong><span>Everything that cleared the bar but lost to a section cap. Worth a glance on days when the top of the edition felt off.</span></li>
+  </ol>
+
+  <h3>Tuning &mdash; the weekly loop</h3>
+  <table>
+    <thead><tr><th style="width:24%">Control</th><th>When to reach for it</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Segment toggles</strong></td><td>A whole beat is noise right now &mdash; residential storage, EVs, consumer gear. Turn the segment off and the gate zeroes those stories even when they name a company you cover.</td></tr>
+      <tr><td><strong>Topic weights</strong></td><td>You are working a specific problem &mdash; interconnection queues, domestic content, fire codes. Weight it up for the duration.</td></tr>
+      <tr><td><strong>Companies</strong></td><td>Synced from Profiler automatically. Adding a dossier there adds it to the scorer here; the two never drift.</td></tr>
+      <tr><td><strong>Calibrate</strong></td><td>A guided rating pass. It deliberately samples mostly mid-scoring articles with some high and some low mixed in, because your judgment on borderline cases carries far more information than your agreement on obvious ones.</td></tr>
+      <tr><td><strong>Score it</strong></td><td>Paste any article and see exactly what the rubric would give it, band by band. The fastest way to understand a surprising ranking.</td></tr>
+      <tr><td><strong>Source stats</strong></td><td>Which outlets are actually earning their slot. Evidence for adding or retiring one.</td></tr>
+      <tr><td><strong>Presets</strong></td><td>Apply a whole tuning profile to an edition at once, rather than flipping 29 toggles by hand.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="h">The one trap worth knowing</div>
+    <p>Segment vocabularies live in the running spreadsheet, not in the source file &mdash; so editing the words in code
+    changes nothing until the seed's version marker is bumped <em>and</em> you press <strong>Sync now</strong>. Rebuilding
+    alone does not sync. If you have customised a segment's terms yourself, it is deliberately never overwritten, which
+    also means it will not receive future vocabulary updates.</p>
+  </div>
+  <div class="pf"><span>Scraper &mdash; The Industry News Desk</span><span>6</span></div>
+</div>
+
+<!-- ══ PAGE 7 — GETTING THE MOST ═════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">Using Scraper</span><span class="n">03</span></div>
+  <h2>Getting the most out of it</h2>
+  <div class="callout">
+    <ul>
+      <li><strong>Click through, don't just skim.</strong> The engagement boost is built from real click-throughs, so a week of reading headlines in the email teaches the scorer nothing. Opening the three stories you actually care about is the cheapest tuning available.</li>
+      <li><strong>Thumbs-down is worth more than thumbs-up.</strong> Agreement confirms what the rubric already believed. A rejection is new information, and it is what moves the ranking.</li>
+      <li><strong>Toggle segments before you touch sources.</strong> Almost every "this edition is noisy" problem is a segment problem, not a source problem &mdash; and a segment toggle is reversible in one click, where retiring an outlet costs you a beat.</li>
+      <li><strong>Trust the unmarked-geography default.</strong> If you ever find yourself wanting to penalise articles that do not mention the US, remember that most of the coverage you want does not mention it either.</li>
+      <li><strong>Use "Score it" when a ranking surprises you.</strong> Guessing at the rubric wastes more time than checking it. The band-by-band breakdown usually shows a segment you forgot you turned off.</li>
+      <li><strong>Read the footer count on thin days.</strong> "104 scanned, 14 relevant" is a quiet news day. "104 scanned, 3 relevant" with a held-back count of zero is usually a feed that has gone dark &mdash; check the background-errors panel.</li>
+      <li><strong>Let editions specialise.</strong> Rather than one edition tuned to a compromise, run BESS and AIDC separately &mdash; and add a third for whatever you are actively pitching. Presets make that a one-click setup.</li>
+      <li><strong>Bump the version when you edit segment terms.</strong> This is the single change most likely to look like it worked and silently do nothing.</li>
+    </ul>
+  </div>
+
+  <h3>Where things go wrong, and what the app tells you</h3>
+  <table>
+    <thead><tr><th style="width:30%">Symptom</th><th>What to look at first</th></tr></thead>
+    <tbody>
+      <tr><td>Edition is unusually short</td><td><strong>Why thin?</strong> &mdash; distinguishes a quiet day from a broken feed from an over-tightened tuning profile.</td></tr>
+      <tr><td>An obviously relevant story is missing</td><td><strong>Score it</strong> on the article's URL. Usually an off segment zeroing the company match, or a geographic multiplier you did not expect.</td></tr>
+      <tr><td>The same story appears twice</td><td>Clustering did not recognise them as one event. Thumbs-down the weaker one.</td></tr>
+      <tr><td>Summaries look truncated</td><td>The edition hit the storage cap and was trimmed in order. The footer will say so.</td></tr>
+      <tr><td>A term change did nothing</td><td>The seed version was not bumped, or <strong>Sync now</strong> was not pressed before the rebuild.</td></tr>
+      <tr><td>A source stopped contributing</td><td><strong>Source stats</strong> and the background-errors panel. It may have been bot-walled rather than gone quiet.</td></tr>
+    </tbody>
+  </table>
+  <h3>Reading an edition at a glance</h3>
+  <table>
+    <thead><tr><th style="width:30%">What you see</th><th>What it means</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Amber text</strong></td><td>Analysis &mdash; the desk's read, not reported fact. The footer key says so on every edition, which is why a figure inside a reported summary is never amber.</td></tr>
+      <tr><td><strong>Highlighted figures</strong></td><td>Concrete numbers pulled out of the prose so you can scan an edition for quantities without reading it.</td></tr>
+      <tr><td><strong>Section headings</strong></td><td>Companies, Market, Incidents &mdash; assigned by what the article matched, not by the outlet it came from.</td></tr>
+      <tr><td><strong>The footer count</strong></td><td>Relevant / scanned / held back. The held-back figure survives any trimming, so it is always the true count.</td></tr>
+    </tbody>
+  </table>
+  <div class="pf"><span>Scraper &mdash; The Industry News Desk</span><span>7</span></div>
+</div>
+
+<!-- ══ PAGE 8 — CORPUS BRIDGE ════════════════════════ -->
+<div class="page">
+  <div class="ph"><span class="t">The Corpus Bridge</span><span class="n">04</span></div>
+  <h2>Where the news goes after you read it</h2>
+  <p class="dek">An article read once and forgotten is worth little. Scraper's second job is to hold everything it scored in a queryable corpus, and hand the right slice to the other two apps when they need it.</p>
+
+  <h3>What the corpus holds</h3>
+  <p>Every scored article &mdash; including the ones that never made an edition &mdash; is stored with the Profiler slugs it matched, its summary and analysis, its event type, and the figures captured from it. A daily pass also mines <strong>edge candidates</strong>: articles naming two covered companies, which may signal a relationship the graph does not yet know about.</p>
+  <div class="flow">
+    <div><div class="s">Timeline</div><div class="b">One company's news since a given date, newest first, deduplicated &mdash; what a dossier refresh reads to find what it missed.</div></div>
+    <div><div class="s">Candidates</div><div class="b">Co-mentions awaiting a judgment about whether a real relationship actually exists between the two.</div></div>
+    <div><div class="s">Read-only, bounded</div><div class="b">The route cannot write and returns at most 200 items &mdash; a window onto the corpus, not a control surface.</div></div>
+  </div>
+
+  <h3>Who reads it, and how it is protected</h3>
+  <ul>
+    <li><strong>Profiler dossier refreshes.</strong> Every refresh pulls the company's timeline since the dossier's last update plus its pending candidates, verifying each promising item against the article itself before promoting it.</li>
+    <li><strong>Classroom's weekly pipeline.</strong> Corpus items are one source the curriculum run reads when deciding what a seller now needs to know.</li>
+    <li><strong>Access is token-gated.</strong> The route requires a shared secret held server-side in both scripts, never committed and never quoted back. A session without it proceeds without news context and says so &mdash; rather than failing, or inventing coverage.</li>
+    <li><strong>The gate follows the content.</strong> Corpus-derived material is contributor-tier wherever it lands &mdash; a lesson built from it inherits that gate automatically.</li>
+  </ul>
+
+  <div class="callout">
+    <div class="h">One outlet is a lead, never a fact</div>
+    <p>Nothing crosses the bridge automatically. A single-outlet claim is a lead requiring corroboration; corroborated and company-confirmed items rank higher; every item is verified against the article itself. And there is no write-back &mdash; unqualified items are simply left for the daily reconcile pass. Nothing has to stay in sync, so nothing can fall out of sync.</p>
+  </div>
+
+  <h2 style="margin-top:.1in">Where Scraper sits</h2>
+  <div class="flow">
+    <div><div class="s">Profiler &mdash; the skeleton</div><div class="b">Who everyone is. Supplies the covered-company list driving the 40-point company band.</div></div>
+    <div><div class="s">Scraper &mdash; the blood</div><div class="b">What just happened. Feeds refreshes, relationship candidates and curriculum material back.</div></div>
+    <div><div class="s">Classroom &mdash; the institution</div><div class="b">What it means and what to retain. Turns both into taught, gated knowledge.</div></div>
+  </div>
+  <div class="callout">
+    <div class="h">In one line</div>
+    <p>Scraper answers <em>"what changed today, does it matter to me, and why did you think so?"</em> &mdash; and keeps everything it read, so the answer is still there months later when a dossier needs it.</p>
+  </div>
+  <div class="pf"><span>Scraper &mdash; The Industry News Desk</span><span>8</span></div>
+</div>
+<!-- Developed by: LightAISolutions -->
