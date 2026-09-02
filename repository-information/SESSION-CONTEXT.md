@@ -6,6 +6,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-02 04:29:02 AM EST
+**Repo version:** v04.24r
+**Branch:** `claude/app-brochures-model-selection-4hrge9`
+
+**What we worked on (one push, v04.24r — app brochures + a model-selection decision, on Opus 5):**
+
+- **`repository-information/brochures/` — three 8-page informational PDF brochures**, one per app, for a new user: what it does, the methodology, the workflow, and how to use it effectively. **Authored from the apps' own code and rules, not from the design documents**, so every figure is the shipped value — Scraper's 40/25/20/15 rubric weights and ×1.00/×0.55/×0.25 geo multipliers, Classroom's ≥3-items/≥2-sources briefing bar and nine ref prefixes, Profiler's four-tier matrix and 0–100 note-confidence bands
+- **Build tooling** — `build-brochures.py` renders each `<slug>.body.html` fragment through the shared `brochure.css` (Letter, per-app accent) with headless Chromium at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`. `brochures/README.md` records the rebuild command and the one constraint that bit: pages are fixed-height with `overflow: hidden`, so content past **~1006px of the 1056px box** is *silently clipped* — no error, no reflow
+- **Kept out of `live-site-pages/`** — the brochures describe access matrices, the corpus route and private note handling; GitHub Pages is public
+- **`REPO-ARCHITECTURE.md` deliberately not touched** — its diagram carries no node for `study-prep/` or `industry-guidance/` either; content directories under `repository-information/` are outside its repo-wide-architecture scope. Flagged rather than silently added
+- **Model-selection question answered** (`claude-api` skill read first, per its trigger): **Fable 5.1** for the improvement/ideation prompt — most capable widely released model, built for demanding long-horizon reasoning, $10/$50 vs Opus 5's $5/$25 (a rounding error one-shot). Matches the developer's own precedent: C2c authoring on Fable 5.1, the checker-bound weekly pipeline runs on Opus 5
+- **Wrote the Fable 5.1 handoff prompt** (delivered in chat, not committed) — loose on analysis, tight only on constraints; its highest-value instruction is *read the `.claude/rules/` files before proposing*, with four concrete already-rejected examples (notes-are-not-sources, the unmarked-geography default, Google News site-feeds, deferred in-app AI) so the session doesn't re-propose walked ground
+
+**Where we left off:**
+
+- **v04.24r merged to `main`** (commit `80d1d26`); the brochure PDFs were also delivered to the developer directly
+- The **Fable 5.1 prompt is in the chat transcript of this session only** — it was never written to a file. If it is wanted again, it is reproducible from the design notes below but not stored in the repo
+- Nothing else pending. Classroom's first real pipeline run (Wed 07:06 ET) was **not** reviewed this session — that carries over
+
+**Key decisions made:**
+
+- **Brochures are repo documentation, not site content.** `repository-information/brochures/`, never `live-site-pages/`
+- **Build artifacts are committed** (`<slug>-brochure.html`) rather than gitignored — keeps the working tree clean for the stop hook, and the intermediate HTML is browser-viewable
+- **The Fable prompt makes the final chat message the deliverable, not a file.** In this remote environment an uncommitted file dies with the container, so "research-only, no commit" and "write it to disk" are in conflict; the transcript is the durable option. A one-line swap to a docs-only commit was offered as the alternative
+- **Prompt design for Fable 5.1**: full task spec up front, loose on *how to think*, tight on constraints and deliverable — the `claude-api` skill warns that prompts written for prior models are often too prescriptive and reduce Fable 5.1's output quality, and this repo's CLAUDE.md is already maximally prescriptive ambient context
+- **Ask for conviction, not ranking** — "three you'd stake your reputation on" over "rank fifteen politely"
+
+**Active context:**
+
+- Repo **v04.24r** · Classroom **v01.04w** / **v01.07g** · Scraper **v01.71w** / **v01.99g** · Profiler **v01.79w** / **v01.33g** — **no app code changed this session**
+- Capacity: repo CHANGELOG **77/100**; `Scrapergs.changelog.md` **46/50**; `Classroomgs.changelog.md` **7/50**; `Profilerhtml.changelog.md` still **50/50** — the next Profiler page change forces its rotation
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
+- **Pre-existing drift, flagged not fixed:** the README tree's root line shows `v01.03r` beside the CHANGELOG link while the repo is at v04.24r
+- **Still flagged, not fixed:** `ENTERPRISE-SETUP.md`'s token record is stale; the template-wide first-sign-in self-denial (Setup Step 14 trap)
+- **Useful technique from this session:** a measurement harness that sets `.page { overflow: visible }` and compares each page's last child's bottom against the 1006px limit via headless Chromium `--dump-dom`. Anything fixed-height and print-bound in this repo should be checked that way rather than by eye
+
+**Recommendation for next session:**
+
+- Run the **Fable 5.1 xhigh** improvement session with the three brochures attached, using the prompt from this session's transcript — then bring its plan back to **Opus 5** to implement. If the transcript is gone, the prompt's shape is recorded above: open on the analysis, tight on constraints (read anything / change nothing / deliver in the final chat message), and leading with the instruction to read `.claude/rules/` before proposing so it doesn't re-tread rejected ground. **Before that**, spend two minutes on the one thing that carried over: read the §5.4 report from the Wednesday 07:06 ET Classroom pipeline run — a `BLOCKED` on P3 means the ledger's `gateDigest` is stale against `main`, and a `STAND-DOWN` is the first real measurement of how much the corpus moves week to week.
+
+**To continue:** type `review the first pipeline run, then give me the Fable prompt again`
+
+## Previous Sessions
+
+### Session — 2026-09-02 (C2c — the pipeline authoring prompt — v04.23r)
 **Date:** 2026-09-02 03:17:49 AM EST
 **Repo version:** v04.23r
 **Branch:** `claude/classroom-pipeline-authoring-rules-wxl3n6`
@@ -45,50 +90,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Read the §5.4 report from today's 07:06 ET pipeline run (push/email notification; session title prefixed `BLOCKED —` if it blocked) against the contract's caps and the 45-minute / 120-turn budget, and spot-check the one thing the checkers cannot: that every `ref@date` a `COMMIT` names in CHANGELOG matches the document it claims to have fetched. If it reports `BLOCKED` on P3, the ledger's `gateDigest` is stale against `main` — refresh it with the command in `.claude/rules/classroom-app.md`, not anything in the run. If it reports `STAND-DOWN`, note the `Sources seen:` counts — that is the first measurement of how much the corpus moves week to week, and decides whether the Wednesday cadence and the no-token default hold.
 
 **To continue:** type `review the first pipeline run`
-
-## Previous Sessions
-
-### Session — 2026-09-02 (C2b — the pipeline machinery — v04.22r)
-**Date:** 2026-09-02 03:01:02 AM EST
-**Repo version:** v04.22r
-**Branch:** `claude/classroom-pipeline-c2b-x7f4e2`
-
-**What we worked on (one push, v04.22r — C2b, the Classroom pipeline machinery, on Opus 5 Extra, working `CLASSROOM-COMMITTER-CONTRACT.md` §10 in order):**
-
-- **§10.1 — corpus item identity.** `scTimelineScan_` in `Scraper.gs` now emits `key` on every timeline item: `scArticleKey_`'s base36 digest of the normalised URL, which is also the route's dedupe identity and fits `CL_REF_RE`'s id charset. Without it no `corpus:<item-key>` provenance ref could ever be written. **Behaviour change worth remembering:** the dedupe fallback for legacy intake rows whose signals blob predates `ak` moved from the raw URL to `scArticleKey_(url)` — matching what `scDigestEdgeCandidates_` already did — so two records of one story under different URL spellings now collapse to one row. **Scraper v01.98g → v01.99g**
-- **§10.2 — the undated layers.** New "Registry revision signals" section in `PROFILER-SCHEMA.md`: `profiler-projects.json` and `profiler-concepts.json` are dated by **file commit date** (`git log -1 --format=%cs`, read on the base revision), not a per-entry `updated`. An undeterminable date (shallow clone) makes the layer **unknown** for that run, never "today" and never "unchanged"
-- **§10.3 — the content fence.** `// CONTENT START` / `// CONTENT END` now bracket the `clLesson*_()` / `clTrack*_()` literals and both registries in `Classroom.gs`; `check-classroom-content.py` gained `check_fence()`, which errors on any literal or registry defined outside it — on every *state*, not only on a diff. Negative-tested by relocating the fence. **Classroom v01.06g → v01.07g**; the gate-surface digest is byte-identical before and after
-- **§10.4 — `scripts/check-classroom-pipeline.py` (new, ~1090 lines).** The diff-aware judge: P1–P12 exactly as the contract's §7 table states them, run as `--base origin/main` against the working tree. P6 computes gates by loading the snapshot's own PROJECT region into Node rather than re-implementing the fold. Parsing scans a **comment/string-masked copy** of the `.gs` (same length, bodies blanked) so an apostrophe in a comment or a brace in a string cannot break brace matching, while byte-identical comparisons still read the original. `--selftest` runs **13 fixtures — one positive (a well-formed pipeline commit, which must report nothing) and one negative per assertion** — and refuses to run if any of P1–P12 lacks one. 13/13 pass
-- **§10.5 — the ledger.** `repository-information/classroom-pipeline-ledger.json`: `coveredThrough` `2026-09-01` (newest lesson `updated` at creation), `gateDigest` over the 32 §4.2 symbols, `lastRun` `null`. `.claude/rules/classroom-app.md` now carries the developer-side refresh obligation **with the command that recomputes it**, plus the fence and both new checker invocations in the verification set
-- **§10.6 — the Routine, armed.** `trig_017pcCGpj1fkNYcUyCXPY3Wd`, `0 11 * * 3` (Wednesday ~11:00 UTC / 07:00 ET), fresh session per fire, `notifications: { push: true, email: true }`, prompt carrying the contract by path, a 45-min / 120-turn budget, and **no corpus token**
-- **§10.7 — deferred with a reason.** The admin-only in-app "curriculum current through …" surface waits for C3, and the ledger is **not** mirrored into a Script Property: that would add a write target the checkers cannot judge (a Script Property leaves no diff) to buy one line of text
-- **Recorded:** `CLASSROOM-COMMITTER-CONTRACT.md` §10 "Settled in C2b" (one row per handed item), `PHASE6-CLASSROOM-DESIGN.md` (C2a+C2b done, C2c not started), `CLAUDE.md` Reference Files row, README tree (two new entries + both GAS version displays)
-
-**Where we left off:**
-
-- **C2b is complete, pushed and merged** (v04.22r on `main`, commit `4fc34af`). No page version moved — Classroom stays **v01.04w**, Scraper **v01.71w**
-- **The Routine is live and will fire Wednesday ~11:00 UTC**, but **it stands itself down until C2c lands** (see key decisions). Expect a push + email notification reporting `STAND-DOWN` each Wednesday until then
-- **C2c has not been started.** It is the only thing between the machinery and the first real authoring run
-
-**Key decisions made:**
-
-- **The Routine's pre-flight gates on C2c.** Its first fire was ~4 hours after arming, before any authoring prompt existed. Rather than disable it (the developer asked for it armed) or let it author curriculum without the C2c bar, the prompt requires a section headed **"Authoring a pipeline lesson"** in `.claude/rules/classroom-app.md` and reports `STAND-DOWN` when absent. **Deleting that one paragraph from the Routine prompt lifts it** — that is the C2c hand-off switch
-- **File commit date over a per-entry `updated`** for the undated registries: a per-entry date cannot serve `concepts:profiler-concepts` at all (it is a whole-file identity like the graph), and a field a human must remember to set fails in the *unsafe* direction — a forgotten date makes a changed source look unchanged. The file date over-triggers candidacy instead, which G3 and the blast-radius caps already bound
-- **The gate digest includes comments** inside the 32 gate symbols (whitespace-normalised, comments kept). Deliberate — a change to the reasoning written next to the gate is exactly what a run should see acknowledged — but it means a comment reflow in e.g. `clStudyNext_` blocks the next run until `gateDigest` is refreshed
-- **No assertion was softened to make the repo pass.** This developer commit deliberately fails P1 (seven paths outside the committer's write set); that is the checker working on a developer commit
-- **No diagram change.** The Scraper sequence diagram depicts the corpus route at `{items[] | candidates[]}` granularity and never enumerates response fields; its "dedupes editions on the article key" note is now *more* accurate. The Classroom diagram depicts serve-time behaviour, unchanged
-
-**Active context:**
-
-- Repo **v04.22r** · Classroom **v01.04w** / **v01.07g** · Scraper **v01.71w** / **v01.99g** · Profiler **v01.79w** / **v01.33g**
-- Capacity: repo CHANGELOG **75/100**; `Scrapergs.changelog.md` **46/50** (four Scraper GAS pushes from forced rotation); `Classroomgs.changelog.md` **7/50**; `Profilerhtml.changelog.md` still **50/50** — the next Profiler page change forces its rotation
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
-- **Verification set for any Classroom change:** `python3 scripts/check-classroom-content.py`, `python3 scripts/check-classroom-pipeline.py --selftest` (must stay 13/13), `python3 scripts/check-classroom-pipeline.py --base origin/main` (P1 write-set noise is expected on a developer commit; **P3 is not** — refresh `gateDigest`), `node --check` on a `.js` copy of `Classroom.gs`, `node scripts/check-gas-inner-scripts.js`
-- **Still flagged, not fixed:** `ENTERPRISE-SETUP.md`'s token record is stale (needs the developer to read the Script Property); the template-wide first-sign-in self-denial (Setup Step 14 trap) is documented but not designed out
-- **Model plan:** C2c — authoring prompt + freshness deltas — **Fable 5.1 High**; the weekly runs — **Opus 5 High**, measured against the contract's caps
-
-**Recommendation for next session:**
-
-- Run **C2c — the authoring prompt** on **Fable 5.1 High** as a fresh session: add an **"Authoring a pipeline lesson"** section to `.claude/rules/classroom-app.md`, written against `CLASSROOM-COMMITTER-CONTRACT.md` and the twelve assertions that now mechanically enforce it — in particular what makes newer material a **contradiction** under G3 rather than novelty, how to name `revisions[].changed[]` so P8's "differing sections == changed[]" equality holds, the G11 minimum-material bar for a briefing (≥3 qualifying items across ≥2 sources), and the three guarantees no checker can see (G2 read-before-re-pin, G7 ref resolution, §5.2 read-phase honesty). Read the contract and `scripts/check-classroom-pipeline.py`'s assertion list first — the prompt is written *to* the checkers, not alongside them. Finish by deleting the "PRE-FLIGHT GATE — C2c" paragraph from Routine `trig_017pcCGpj1fkNYcUyCXPY3Wd` so the next Wednesday run is a real one.
-
-**To continue:** type `build C2c — the authoring prompt`
