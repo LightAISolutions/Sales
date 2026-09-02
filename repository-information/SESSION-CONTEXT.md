@@ -5,6 +5,31 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 > **Note on stale-context auto-reconstruction** — when a session starts and this file's `Repo version:` doesn't match the current repo version, Claude reconstructs the missing entry from CHANGELOG.md and commits it **without pushing**. The commit rides along with the session's first user-task commit on the next push. If a session ends before any user-task push happens, the reconstructed entry stays **local-only** and the next session will just re-reconstruct from CHANGELOG if still stale. This is intentional — pushing a dedicated reconstruction commit on its own would force every subsequent user push in the same session to wait for the auto-merge workflow to finish before it could push too (push-once enforcement). The reconstructed entry is a convenience hint, not load-bearing state, so the small persistence risk is a fair trade.
 
 ## Latest Session
+**Date:** 2026-09-01 08:03:04 PM EST
+**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
+**Repo version:** v04.08r
+
+**What was done (v04.04r–v04.08r, reconstructed from CHANGELOG — Scraper diagnostics, federal feeds, an EO 14420 guidance module; no session context was saved):**
+
+- Scraper's status strip split `tick 8h ago · 5 err/24h` into two tiles: a run tile that says `overdue` past the served `tickOverdueMin`, and a `BACKGROUND FAULTS · LAST 24H` tile that opens a panel listing each fault with **Copy all** and a manager-gated **Mark resolved & clear**. The count became exact via an hourly tally (`scDigestErrCount_`) instead of a `.slice(-5).length` ceiling, and the silent-throw path in `scSchedulerTick` now logs `tick.fatal` and rethrows (Scraper.html v01.69w, Scraper.gs v01.94g) (v04.04r)
+- Fixed the fault tile vanishing right after that deploy — the new tally property did not exist yet, so `recentErrorCount` read 0 while five entries sat unreachable in the detail log; now `max(tally, in-window log length)` (Scraper.gs v01.95g) (v04.05r)
+- Five primary federal feeds added to Scraper after live probes (White House Presidential Actions, Federal Register FERC + IRS, DOE Newsroom, EIA Today in Energy); ferc.gov (Cloudflare 403), the IRS newsroom (404) and EPA (empty 202) retired with rules-file entries; `topic-bps-security` + `topic-federal-action` seeds; EO 14420 bulk-power-system guidance module `eo14420-bulk-power-2026-08` authored from the primary text, with analysis markdown + archived source under `repository-information/industry-guidance/` (Scraper.gs v01.96g, Profiler.gs v01.32g) (v04.06r)
+- "Why thin?" gained a per-source contribution table (`bySource`, `silentSources`) so a silent feed and a sub-threshold feed are distinguishable; the edition picker was rebuilt (grouped by edition, issue number first, weekday shown, edition filter, weekend builds shown as unnumbered) with `wdDgDate_` parsing through `Date.UTC` (Scraper.gs v01.97g, Scraper.html v01.70w) (v04.07r)
+- "Why thin?" had never rendered once: its 25 s client deadline set `settled`, and the success handler discarded any later reply. The timer now shows a live elapsed count instead of giving up, transport aborts are explained with a retry hint, the subtitle shows desk vs round-trip time, and `scDigestScoreRows_` is bounded to the newest 8,000 intake rows (Scraper.html v01.71w, Scraper.gs v01.98g) (v04.08r)
+
+**Where we left off:** All changes committed and merged to main
+
+**Active context:**
+
+- Repo **v04.08r** · HTML: Scraper **v01.71w**, Profiler **v01.75w** · GAS: Scraper **v01.98g**, Profiler **v01.32g**, Receipts **v01.29g**, MasterACL **v01.14g**
+- Repo CHANGELOG at **88/100**
+- TODO.md empty; REMINDERS.md has no active reminders
+- Toggles: `START_OF_RESPONSE_BLOCK` On, `CHAT_BOOKENDS` Off, `TIMING_ESTIMATES` On, `END_OF_RESPONSE_BLOCK` On
+- Open items carried forward: the daily ACL health Routine (`trig_01GeTqB8xp5nG8FCC139Bgr9`) has not yet been observed staying silent on a healthy day (v04.03r recommendation); v04.07r made "are the Federal Register feeds contributing?" answerable in-app but did not answer it
+
+## Previous Sessions
+
+### Session — 2026-09-01 (Receipts ACL grace snapshot + health probe, daily ACL monitoring Routine — v04.03r)
 **Date:** 2026-09-01 03:01:25 AM EST
 **Repo version:** v04.03r
 **Branch:** `claude/receipts-app-bug-73prik`
@@ -47,46 +72,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **To continue:** type `check the acl routine fired quietly`
 
-## Previous Sessions
-
-### Session — 2026-09-01 (Receipts ACL outage: live diagnosis, grace snapshot, health probe — v04.02r)
-**Date:** 2026-09-01 01:51:37 AM EST
-**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
-**Repo version:** v04.02r
-**Branch:** `claude/receipts-app-bug-73prik`
-
-**What was done (v04.00r–v04.01r, reconstructed from CHANGELOG):**
-
-- **v04.00r — Monday's first unattended Scraper run worked; the delivery gate around it did not.** The three-day delivery window (added to end a midnight give-up) had silently split the weekday rule in two: the pass asked "is today a run day?" but never "is the EDITION for a run day?", so the weekend's manual builds mailed alongside Monday's. Fixed with an off-day gate applied in both the grouping and send loops, off-day rows stamped `'off-day'` rather than skipped, and a DST-proof `scIsoDayOfDateKey_` that deliberately avoids `new Date(key)`. The window itself was kept — it is what carries a missed Friday edition to Monday
-- **v04.01r — weekend builds unnumbered, and same-story clustering.** `scIssueNumbers_` ranks run-day dates only, retroactively moving Monday from No. 004 to No. 002; `scClusterStories_` collapses multi-outlet coverage of one event onto the most reliable source, with event category as a separator rather than a requirement and a shared-distinctive-token test rather than a similarity ratio
-
-**What this session did (v04.02r):**
-
-- **Receipts sign-in outage, third of its kind — fixed the lockout, not the grant.** A live probe of the Profiler deployment (different script, same ACL spreadsheet) returned `acl_unreachable` with "You do not have permission to call SpreadsheetApp.openById. Required permissions: .../auth/spreadsheets" — proving the failure is an account-level OAuth grant gap hitting every auth app at once, not a Receipts defect and not the spreadsheet
-- Added a **last-known-good ACL snapshot** to the shared AUTH block (auth template + all 7 auth projects): a successful read stores the page's allow-list in Script Properties; an unreadable ACL is answered from it instead of denying everyone. Reproduces only "yes" verdicts the real ACL already gave, never denies from the snapshot, 24h ceiling, `ACL_GRACE_ENABLED` off-switch, every grace grant audited
-- Ported **`aclHealthProbe_`** to `Receipts.gs` (`GET ?action=api&op=aclhealth`) — Profiler had it, Receipts did not, which is why all three Receipts incidents cost an Apps Script editor round-trip. Extended with a `grace` field reporting snapshot presence, coverage and age
-
-**Where we left off:**
-
-- All changes committed and merged to main
-- **The developer still has one manual step in Google that no commit can do**: run `diagnoseAuthorization()` from the Receipts Apps Script editor, open the authorization URL it prints, and approve **every** checkbox as the script account. Until then the ACL stays unreadable — the grace snapshot only masks it for users already recorded, and a first-ever sign-in on a project with no snapshot yet will still be denied
-
-**Key decisions made:**
-
-- **Availability beats strict denial here, deliberately.** A revoked user can retain access for up to 24h past the last good read. Receipts runs the `hipaa` preset, so this is a real trade — flagged in the CHANGELOG as the one part of the push worth a second opinion. `ACL_GRACE_ENABLED = false` restores the old behavior
-- **The grace verdict is not cached** — a cached grant would outlive the outage by the full 10-minute access-cache TTL
-- **Fixed in the shared AUTH block, not just Receipts.** `checkSpreadsheetAccess` was byte-identical across the template and all seven projects, and the outage was fleet-wide; patching only Receipts would have created drift that the next template propagation would clobber
-- **Not attempted: pinning `oauthScopes` from the deploy path.** Considered as a recurrence fix, rejected — the deploy path is the most dangerous code in the repo, an under-declared pinned list would brick self-update fleet-wide, and the manifest is already preserved verbatim by `pullAndDeployFromGitHub()`. The recurrence is in the *grant*, not the declaration
-
-**Active context:**
-
-- Branch `claude/receipts-app-bug-73prik` · repo **v04.02r** · Receipts GAS **v01.29g**, Profiler **v01.31g**, Scraper **v01.93g**, MasterACL **v01.14g**, globalacl **v01.08g**, testauth\* **v01.07g**
-- Capacity after this push: repo CHANGELOG **82/100** (the 2026-08-27 group, 20 sections, rotated to the archive with SHA enrichment; archive now 220); Scraper GAS 40/50; Profiler GAS 31/50; Receipts GAS 29/50
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
-- **Sandbox note for future sessions in this environment**: the auto-mode classifier blocks most bulk file mutation from Bash (heredoc-to-file, running scripts from the scratchpad, many compound commands). Simple `sed -i 's///'`, single redirects, `cp`, and the Edit/Write tools all work. `node --check` cannot read `.gs` (Node 22 rejects the extension — it fails on untouched files too); use `node --check --input-type=commonjs < file`
-
-**Recommendation for next session:**
-
-- Confirm the Google-side grant is repaired and the fleet is healthy: curl the Receipts `aclhealth` probe shipped this push (`?action=api&op=aclhealth` on its `/exec` URL) and expect `"ok":true,"reason":"acl_ok"`. If it still reports `acl_unreachable`, the `diagnoseAuthorization()` re-consent has not been done yet and nothing else should be built on top of it
-
-**To continue:** type `check acl health`
