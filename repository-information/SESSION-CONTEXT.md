@@ -6,6 +6,49 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-02 04:58:20 AM EST
+**Repo version:** v04.24r *(unchanged — this session's plan commit was documentation-only by instruction, no version bump)*
+**Branch:** `claude/three-app-architecture-review-e1on3o`
+
+**What we worked on (one docs-only push, commit `25b279c`, merged to `main` — the three-app architecture review):**
+
+- **`repository-information/IMPROVEMENT-PLAN.md`** (296 lines, §0–§9) — the improvement plan for Profiler · Scraper · Classroom, written from a full read of all six app source files, the four rules files, both schemas, the Phase 6 design + committer contract, the brochures, every file in `profiler-data/`, and the **live Routine inventory including prompts** (27 active, 33 completed). §0 is a measured ground-truth table; §1 the diagnosis; §2 the three flagship proposals; §3 second tier; §4 stop/remove/freeze; §5 the C3→C6 sequencing verdict; **§6 a collision register** naming every rule or recorded decision a proposal touches and the argument for reconsidering it; **§7 a session-by-session build order (A–E)**; §8 what was examined and left alone; **§9 facts to verify before building**
+- **The three flagship proposals:** **P1** build the retention loop now — pull **C4 ahead of C3** (SM-2 drill over the 802 study-guide flashcards + 53 lesson items, sheet-backed history in a `ClassroomDrill` tab, a "due today" landing card; prerequisite: both progress stores change from booleans to **completion dates** so the schema-promised "changed since you learned this" delta can render); **P2** deltas not documents — Profiler adopts Classroom's revision discipline (computed "what changed in vN" strip from the archive, a per-account mark-as-read stamp + roster badge, optional authored `revisions[]` at schema v8); **P3** one **earnings desk** Routine driven by `repository-information/profiler-refresh-calendar.json`, replacing the 21 hand-armed one-shot refreshes and carrying the corpus token once
+- **Second tier:** S1 token-gated **notes route** on Profiler.gs (`pending` / `triage` / `recent`) so unattended refreshes can weigh field notes — Classroom pipeline explicitly *not* a consumer (contract §4.3 intact); S2 corpus token in the C2 prompt, decided after 2–3 measured runs; S3 cross-links (digest → dossier, all mastheads ↔ Scraper); S4 report `indicators[]` as Scraper topic seeds; S5 quizzes only via `profiler prep`. **Removals/freezes:** R1 stop hand-arming one-shots; R2 audit-then-remove Scraper's legacy Projects machinery (~1,900 GAS + ~1,700 HTML lines, three AI-spend paths); R3 a one-quarter freeze on production-side building; R4 doc/prompt drift
+- **Evidence the plan stands on** (all measured 2026-09-02): the **seven August post-earnings triggers fired — six `SUCCEEDED`, IREN `ABANDONED` — and none re-armed a successor or wrote the fallback reminder**; `profiler-app.md` still lists them as armed. **0 of 21 armed refresh prompts mention the corpus bridge** (they predate it); the Tesla prompt says "schema-v2" and "mirror via add_repo" (both superseded). The **C2 prompt states "CORPUS TOKEN: none is supplied"**. Both progress stores hold `{sec: true}`. All 89 dossiers carry `lastUpdated` 2026-08-30 (mass pass). 62 study guides, 0 quiz sections. The Scraper brochure teaches 👍/👎 rating and Calibrate, retired by `SCRAPER_FEEDBACK_UI_ENABLED = false` (D3, 2026-08-27)
+- **Delivered in chat, not committed:** the copy/paste Opus 5 prompt for Session A of the plan
+
+**Where we left off:**
+
+- `25b279c` merged to `main` by the auto-merge workflow; `main` at `7a451ba`. This Remember-session commit is the branch's second push
+- **Deliberately skipped for the plan commit, per the developer's "that file and nothing else":** Pre-Commit [PC-CHANGELOG] #6 (no CHANGELOG entry for `IMPROVEMENT-PLAN.md`), [PC-README-TREE] #7 (no README tree row), [PC-README-TIMESTAMP] #10, [PC-REPO-VERSION] #15. **The next push commit should fold these in** — the plan's Session A is the natural place
+- **Classroom's first real pipeline run (today 11:06 UTC / 07:06 ET) is still unreviewed** — carried over from two sessions now; §9 item 1 of the plan predicts a `STAND-DOWN`
+- Nothing else pending
+
+**Key positions taken (proposals, not decisions — the developer decides):**
+
+- **Documentation only.** No code, schema, rules file, changelog, README or version file changed; every collision with a recorded decision is named in §6 with its argument, never made silently
+- **Order of build:** Session A = P3 (small, operational, stops a failure already happening) before P1 (the flagship); then B = completion dates + computed dossier deltas; C = the drill; D = seams (S1, S3, S4); E = the R2 audit; then C3 as designed
+- **Decision 6 honoured:** guidance items stay out of the drill until C3 — no interim Profiler→Classroom guidance route
+- **S1 respects M3's purpose** (notes never in repo or on Pages) and argues from the corpus-token precedent; the Classroom pipeline is excluded as a consumer
+
+**Active context:**
+
+- Repo **v04.24r** · Classroom **v01.04w** / **v01.07g** · Scraper **v01.71w** / **v01.99g** · Profiler **v01.79w** / **v01.33g** — **no app code changed this session**
+- Capacity unchanged: repo CHANGELOG **77/100**; `Scrapergs.changelog.md` **46/50**; `Classroomgs.changelog.md` **7/50**; `Profilerhtml.changelog.md` **50/50** — the next Profiler page change forces its rotation
+- Ledger `coveredThrough` `2026-09-01`, `lastRun` `null`. Routines: 21 one-shot refreshes (2026-10-15 → 11-25) + quarterly private sweep + monthly drift check + quarterly guidance review + daily ACL check + weekly C2
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
+- **Still flagged, not fixed:** README tree root line shows `v01.03r`; `ENTERPRISE-SETUP.md` token record stale; the template-wide first-sign-in self-denial (Setup Step 14 trap)
+
+**Recommendation for next session:**
+
+- Run **Session A of `IMPROVEMENT-PLAN.md` §7 (the earnings desk)** on Opus 5: first verify §9 items 1–3 (today's pipeline report; what the seven August refresh sessions did and why IREN was abandoned; whether the 08-30 dossiers carry the H1/Q2 figures), then seed `repository-information/profiler-refresh-calendar.json` from the 21 armed prompts + the 7 fired ones, create the one desk Routine with the corpus token pasted at creation and nowhere else, hand-fire it on a no-due day to confirm a silent stand-down, retire the 21 one-shots, rewrite "Scheduled Refreshes" in `profiler-app.md` around the calendar, fix the R4 drift, and fold in the CHANGELOG entry + README tree row the plan commit skipped. No app code in that session
+
+**To continue:** type `implement Session A of IMPROVEMENT-PLAN.md`
+
+## Previous Sessions
+
+### Session — 2026-09-02 (App brochures + model selection — v04.24r)
 **Date:** 2026-09-02 04:29:02 AM EST
 **Repo version:** v04.24r
 **Branch:** `claude/app-brochures-model-selection-4hrge9`
@@ -47,46 +90,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run the **Fable 5.1 xhigh** improvement session with the three brochures attached, using the prompt from this session's transcript — then bring its plan back to **Opus 5** to implement. If the transcript is gone, the prompt's shape is recorded above: open on the analysis, tight on constraints (read anything / change nothing / deliver in the final chat message), and leading with the instruction to read `.claude/rules/` before proposing so it doesn't re-tread rejected ground. **Before that**, spend two minutes on the one thing that carried over: read the §5.4 report from the Wednesday 07:06 ET Classroom pipeline run — a `BLOCKED` on P3 means the ledger's `gateDigest` is stale against `main`, and a `STAND-DOWN` is the first real measurement of how much the corpus moves week to week.
 
 **To continue:** type `review the first pipeline run, then give me the Fable prompt again`
-
-## Previous Sessions
-
-### Session — 2026-09-02 (C2c — the pipeline authoring prompt — v04.23r)
-**Date:** 2026-09-02 03:17:49 AM EST
-**Repo version:** v04.23r
-**Branch:** `claude/classroom-pipeline-authoring-rules-wxl3n6`
-
-**What we worked on (one push, v04.23r — C2c, the authoring prompt, on Fable 5.1 High as a fresh session):**
-
-- **`.claude/rules/classroom-app.md` — new section "Authoring a pipeline lesson"** (~95 lines, eight sub-sections), written *to* the twelve assertions of `scripts/check-classroom-pipeline.py`: the shape of a run (pin table → fetch every ref once → classify unchanged / moved / unknown → decide per lesson → decide the briefing → apply the P10 caps ranked by size of contradiction → one write); the **G3 contradiction test** — a revision exists only when the run can write, per section id, *"section `<id>` teaches X; `<ref>` now says Y"* with X actually in that section and Y on the fetched document; **`changed[]` = exactly P8's differs set** (existing ids only, newly appended sections never listed, one entry per run, `updated` = run date, `reviewBy` from the new material's gate); **the briefing** (`edition` = run date so `briefing-<edition>` is deterministic under G10; a G11 *item* is one dated, stated development, a *source* one distinct `ref`; ≥ 3 / ≥ 2 counted **after** the gate is chosen); the new-module exception; **G2 / G7 / §5.2 as the run's own obligations** with per-prefix ref-resolution rules; the eight-step write in checker order; an assertion → rule table
-- **Two readings the section fixes that the contract left open** — both the stricter one: (1) a source that moved without contradicting anything leaves the lesson untouched **pin included** (G3's "does not change" read strictly; the G8 report swap is the only pin move without a section change; the re-examination next week is intended idempotence), (2) `title`, `short`, `group`, `type`, `edition`, `tiles[]`, `glossary[]`, `schemaVersion` are **frozen for the run** because contract §3.1 item 2's permitted-edit list omits them and no assertion watches them — a contradicted tile or glossary entry is reported under `Needs the developer`, never edited
-- **Recorded:** `CLASSROOM-COMMITTER-CONTRACT.md` §10 "Settled in C2c (2026-09-02)"; `PHASE6-CLASSROOM-DESIGN.md` C2 status → C2a, C2b, C2c done, pipeline live; `CLAUDE.md` Reference Files row and README tree entry for `classroom-app.md`
-- **The Routine's C2c pre-flight gate was deleted** from `trig_017pcCGpj1fkNYcUyCXPY3Wd`'s prompt (`update_trigger`, 07:15 UTC) — the prompt is otherwise byte-identical: no corpus token, 45-min / 120-turn budget, the three READ FIRST documents in the same order. **No Classroom code, ledger or `gateDigest` moved**; `--selftest` 13/13 and `check-classroom-content.py` 0/0 re-confirmed
-
-**Where we left off:**
-
-- **C2 is complete and live.** v04.23r merged to `main` (commit `5e5ad0b`). The first real run fires **today, Wednesday 2026-09-02 11:06 UTC (07:06 ET)** — the first fire whose pre-flight is the contract's own §5.1 rather than a stand-down. Push + email notification will carry its §5.4 report
-- **Expected first outcome:** with no corpus token the corpus layer is *not read*, so a briefing can only come from dossier / study / guidance / registry / graph / report movement inside `(2026-09-01, 2026-09-02]` — most likely a `STAND-DOWN` with a real `Sources seen:` line, which is itself the measurement C2 needs
-- Nothing is pending from this session
-
-**Key decisions made:**
-
-- **The prompt is written to the checkers, not alongside them** — every rule names the assertion that judges it, and the closing table pairs P1–P12 with the run's behaviour, so a future change to an assertion has one place to update in the prose
-- **`edition` = the run date**, not the newest item's date: the window is `(coveredThrough, runDate]`, so the run date is what closes it, and it is what makes the briefing id deterministic for a re-fire after a lost push (G10)
-- **G11 counted after the gate decision** — an item left out because its source would raise the briefing's gate does not count toward the three; the run picks the edition's tier first (public-only → analyst-visible; one guidance/corpus/briefing input → contributor+; one report → admin-only) and admits only inputs at or below it
-- **No number moved** — G11 (3 / 2) and the §5.3 caps stay as the contract set them; the section says a developer may raise them, never lower them
-- **Model plan held:** C2c on Fable 5.1 High (done); the weekly runs on Opus 5 High, measured against the contract's caps and budget
-
-**Active context:**
-
-- Repo **v04.23r** · Classroom **v01.04w** / **v01.07g** · Scraper **v01.71w** / **v01.99g** · Profiler **v01.79w** / **v01.33g**
-- Capacity: repo CHANGELOG **76/100**; `Scrapergs.changelog.md` **46/50**; `Classroomgs.changelog.md` **7/50**; `Profilerhtml.changelog.md` still **50/50** — the next Profiler page change forces its rotation
-- Ledger: `coveredThrough` `2026-09-01`, `lastRun` `null` — left for the first committing run to write
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
-- **Verification set for any Classroom change:** `python3 scripts/check-classroom-content.py`, `python3 scripts/check-classroom-pipeline.py --selftest` (13/13), `python3 scripts/check-classroom-pipeline.py --base origin/main` (P1 noise expected on a developer commit; **P3 is not** — refresh `gateDigest`), `node --check` on a `.js` copy of `Classroom.gs`, `node scripts/check-gas-inner-scripts.js`
-- **Still flagged, not fixed:** `ENTERPRISE-SETUP.md`'s token record is stale (needs the developer to read the Script Property); the template-wide first-sign-in self-denial (Setup Step 14 trap) is documented but not designed out
-
-**Recommendation for next session:**
-
-- Read the §5.4 report from today's 07:06 ET pipeline run (push/email notification; session title prefixed `BLOCKED —` if it blocked) against the contract's caps and the 45-minute / 120-turn budget, and spot-check the one thing the checkers cannot: that every `ref@date` a `COMMIT` names in CHANGELOG matches the document it claims to have fetched. If it reports `BLOCKED` on P3, the ledger's `gateDigest` is stale against `main` — refresh it with the command in `.claude/rules/classroom-app.md`, not anything in the run. If it reports `STAND-DOWN`, note the `Sources seen:` counts — that is the first measurement of how much the corpus moves week to week, and decides whether the Wednesday cadence and the no-token default hold.
-
-**To continue:** type `review the first pipeline run`
