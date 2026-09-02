@@ -3,11 +3,19 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 33/50`
+`Sections: 34/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.34g] — 2026-09-02 05:16:32 PM EST — v04.27r
+
+### Added
+- Read marks on company dossiers are now saved to your account and follow you across devices, the same way study-guide and briefing progress already did
+
+### Changed
+- Marking something read or understood now records the date it happened, not just that it happened, so a page can tell you when something changed after you read it
 
 ## [v01.33g] — 2026-09-02 01:21:25 AM EST — v04.19r
 

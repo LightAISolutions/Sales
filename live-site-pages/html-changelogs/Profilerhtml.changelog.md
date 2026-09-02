@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.80w] — 2026-09-02 05:16:32 PM EST — v04.27r
+
+### Added
+- **Mark a dossier as read.** A Read button on each company records that you have read the version in front of you. On the roster, a company you have read shows a green tick — and if the dossier has been revised since, that flips to an amber "revised" mark, so you can see which of the companies you follow have moved without opening any of them
+- **"Changed since" strip on a revised dossier.** When a company has a previous version on file, the dossier now shows which parts of it changed — recent developments, financials, relationships and so on, with a count of newly added items. Each one is a button that jumps straight to that section, so catching up on a revision no longer means re-reading the whole page
 
 ## [v01.79w] — 2026-09-02 01:30:36 AM EST — v04.20r
 
@@ -328,25 +334,3 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 
 ### Fixed
 - Newer dossiers now show their Headquarters, Ownership, stock ticker, and legal-name details correctly — these fields could previously appear blank on some companies
-
-## [v01.32w] — 2026-08-18 06:16:45 AM EST — v02.67r
-
-### Fixed
-- **A note log that would not load left you with nowhere to go.** Every possible cause showed the same sentence, with nothing to press. It now says which kind of problem it is, shows a short reason code you can quote, and offers a **Sign in and retry** button that signs you back in and reloads the log in place
-- An expired sign-in is now named as such, rather than described the same way as a network problem
-- The transcript import panel stays available when the log itself fails to load. It never depended on the log, and hiding it removed the only remaining option
-
-## [v01.31w] — 2026-08-18 06:09:59 AM EST — v02.66r
-
-### Fixed
-- **Updates could be announced without arriving.** The page checks for a new version and reloads itself, but that reload was allowed to reuse the copy already stored on your device — so the version shown at the bottom could move forward while the page around it stayed on the previous build, and new features appeared to be missing. Reloads now always fetch a fresh copy
-- This does not repair a copy already stored on your device. If a feature seems missing right after an update, fully close the tab and reopen it once; from this version on it corrects itself
-
-## [v01.30w] — 2026-08-18 05:56:47 AM EST — v02.65r
-
-### Fixed
-- **The import panel never appeared.** Checking the transcribed folder needs Google's permission prompt, and that prompt only opens while you are actually pressing something. The check was running on its own a moment after the log opened, so the prompt could never appear and nothing was shown. The panel now appears straight away and the check happens when you press the button
-
-### Changed
-- Recordings and transcripts are named more readably: `Catl 2026-08-10 Voice 260810_015240.m4a` rather than the previous run-together form. Files saved under the old naming are still recognised, so nothing already in your folders needs renaming
-- The summary heading on a written-up note now reads `Auto-summary (model)` instead of the bracketed form

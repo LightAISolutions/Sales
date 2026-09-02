@@ -3,11 +3,20 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomhtml.changelog-archive.md](Classroomhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 4/50`
+`Sections: 5/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.05w] — 2026-09-02 05:16:32 PM EST — v04.27r
+
+### Added
+- **A lesson now tells you when it changed after you read it.** Mark a section understood and, if that section is later revised in a way that changes its meaning, an amber note appears on it naming the revision date and what the revision said. The section also stands out in the sidebar list, so you can see at a glance which parts of a lesson you have already read are no longer what you read
+- Sections you marked understood now remember the date you did it, and the button says so when you hover it
+
+### Changed
+- Sections marked understood before this version are still marked understood, but they carry no date, so they will not show a "changed since you read it" note. Marking such a section again dates it from then on
 
 ## [v01.04w] — 2026-09-02 01:10:32 AM EST — v04.18r
 

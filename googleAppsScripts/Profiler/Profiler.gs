@@ -1,4 +1,4 @@
-var VERSION = "v01.33g";
+var VERSION = "v01.34g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1017,9 +1017,18 @@ function guidanceMentions_() {
 // section ids are validated against the registered modules so junk params
 // can never grow the store.
 //
+// **Values are COMPLETION DATES ('YYYY-MM-DD'), not booleans** (v01.34g).
+// Legacy `true` is accepted forever and never rewritten — it reads as
+// "completed, date unknown". The date is what lets a dossier revision dated
+// after a completion render as a "changed since you read it" delta; a boolean
+// could not answer "after". Stamping old ticks with today would fabricate
+// history, so they simply carry no delta.
+//
 // Study-guide progress (Phase 5, v01.29g): doc ids 'study-<slug>' are also
 // accepted, so study-guide ticks sync across devices exactly like module
-// ticks. A public Pages study guide's section ids aren't known server-side,
+// ticks. Dossier progress (v01.34g) adds 'dossier-<slug>' on the same rule,
+// so marking a dossier read is per-account and cross-device like everything
+// else here. A public Pages study guide's section ids aren't known server-side,
 // so their validation is containment rather than enumeration: the slug must
 // exist in the public registry (cached 6h), section ids must look like the
 // renderer's kebab-case anchors, and each study doc's tick set is capped —
@@ -1043,6 +1052,15 @@ function gdStudySlugs_() {
     try { cache.put('gd_studyslugs_v1', JSON.stringify(slugs), 21600); } catch (ce) { /* oversized — serve uncached */ }
   } catch (fe) { /* registry unreachable — no study docs validate this call */ }
   return slugs;
+}
+
+// Today in the fleet's reporting zone as 'YYYY-MM-DD'. 'en-CA' is the locale
+// whose short date IS ISO order. Falls back to UTC if the runtime was built
+// without full ICU, which costs at most a few hours of accuracy at a date
+// boundary and never throws.
+function gdProgressToday_() {
+  try { return new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' }); }
+  catch (te) { return new Date().toISOString().slice(0, 10); }
 }
 
 function gdProgressAcct_(sess) {
@@ -1083,6 +1101,10 @@ function gdProgressWrite_(sess, p) {
   } else {
     return { success: false, error: 'NO_DELTA' };
   }
+  // One stamp per call, so a batch merge dates everything it completes alike.
+  // Intl rather than Utilities.formatDate, matching Classroom.gs — it keeps
+  // the progress store runnable outside Apps Script.
+  var today = gdProgressToday_();
   var lock = null;
   try { lock = LockService.getScriptLock(); lock.waitLock(5000); }
   catch (le) { lock = null; /* best effort — same-account collisions are rare */ }
@@ -1094,22 +1116,36 @@ function gdProgressWrite_(sess, p) {
     var studySlugs = null;   // registry fetched only when a study doc id appears
     for (var docId in delta) {
       if (!delta.hasOwnProperty(docId)) continue;
-      var isStudy = !valid[docId] && docId.indexOf('study-') === 0;
-      if (isStudy) {
+      // Two validation regimes. Guidance modules are ENUMERATED (the server
+      // holds them, so every id is checked against the real section list).
+      // Slug-keyed docs — 'study-<slug>' and, from v01.34g, 'dossier-<slug>' —
+      // are public Pages content whose section ids the server does not hold,
+      // so they are validated by CONTAINMENT: the slug must exist in the
+      // registry, ids must look like the renderer's kebab-case anchors, and
+      // each doc's tick set is capped. Identical rule, one more prefix.
+      var slugPrefix = !valid[docId]
+        ? (docId.indexOf('study-') === 0 ? 'study-'
+          : (docId.indexOf('dossier-') === 0 ? 'dossier-' : ''))
+        : '';
+      var isSlugDoc = !!slugPrefix;
+      if (isSlugDoc) {
         if (studySlugs === null) studySlugs = gdStudySlugs_();
-        if (!studySlugs[docId.slice(6)]) continue;
+        if (!studySlugs[docId.slice(slugPrefix.length)]) continue;
       } else if (!valid[docId]) continue;
       var secMap = delta[docId] || {};
       for (var secId in secMap) {
         if (!secMap.hasOwnProperty(secId)) continue;
-        if (isStudy) {
+        if (isSlugDoc) {
           if (!GD_STUDY_SEC_RE.test(secId)) continue;
           if (secMap[secId] && cur[docId] && !cur[docId][secId]
               && Object.keys(cur[docId]).length >= GD_STUDY_SEC_CAP) continue;
         } else if (!valid[docId][secId]) continue;
         if (secMap[secId]) {
           if (!cur[docId]) cur[docId] = {};
-          cur[docId][secId] = true;
+          // Completion DATE, not true. An existing value stands — re-ticking
+          // must not move the date, or the "changed since you read it" delta
+          // resets itself on every repaint. Legacy true is never rewritten.
+          if (!cur[docId][secId]) cur[docId][secId] = today;
         } else if (cur[docId]) {
           delete cur[docId][secId];
         }

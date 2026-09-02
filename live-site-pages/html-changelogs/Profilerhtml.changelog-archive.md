@@ -2,6 +2,28 @@
 
 Archived changelog sections rotated from [Profilerhtml.changelog.md](Profilerhtml.changelog.md).
 
+## [v01.32w] — 2026-08-18 06:16:45 AM EST — v02.67r — [12d3737](https://github.com/LightAISolutions/Sales/commit/12d373758ced83dd2d9fb4c10b14b5a5ec5cd12e)
+
+### Fixed
+- **A note log that would not load left you with nowhere to go.** Every possible cause showed the same sentence, with nothing to press. It now says which kind of problem it is, shows a short reason code you can quote, and offers a **Sign in and retry** button that signs you back in and reloads the log in place
+- An expired sign-in is now named as such, rather than described the same way as a network problem
+- The transcript import panel stays available when the log itself fails to load. It never depended on the log, and hiding it removed the only remaining option
+
+## [v01.31w] — 2026-08-18 06:09:59 AM EST — v02.66r — [642b0d0](https://github.com/LightAISolutions/Sales/commit/642b0d04145a256fb8378fa1b6a1e1de49dd913d)
+
+### Fixed
+- **Updates could be announced without arriving.** The page checks for a new version and reloads itself, but that reload was allowed to reuse the copy already stored on your device — so the version shown at the bottom could move forward while the page around it stayed on the previous build, and new features appeared to be missing. Reloads now always fetch a fresh copy
+- This does not repair a copy already stored on your device. If a feature seems missing right after an update, fully close the tab and reopen it once; from this version on it corrects itself
+
+## [v01.30w] — 2026-08-18 05:56:47 AM EST — v02.65r — [f16b144](https://github.com/LightAISolutions/Sales/commit/f16b1441a4f6a2f87a4bb78f22ad04e7bb823e7d)
+
+### Fixed
+- **The import panel never appeared.** Checking the transcribed folder needs Google's permission prompt, and that prompt only opens while you are actually pressing something. The check was running on its own a moment after the log opened, so the prompt could never appear and nothing was shown. The panel now appears straight away and the check happens when you press the button
+
+### Changed
+- Recordings and transcripts are named more readably: `Catl 2026-08-10 Voice 260810_015240.m4a` rather than the previous run-together form. Files saved under the old naming are still recognised, so nothing already in your folders needs renaming
+- The summary heading on a written-up note now reads `Auto-summary (model)` instead of the bracketed form
+
 ## [v01.29w] — 2026-08-17 08:36:32 PM EST — v02.64r — [9326148](https://github.com/LightAISolutions/Sales/commit/93261486e9ccea0ab47d76615dd15ee0b335cbc9)
 
 ### Added
