@@ -5,6 +5,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 > **Note on stale-context auto-reconstruction** — when a session starts and this file's `Repo version:` doesn't match the current repo version, Claude reconstructs the missing entry from CHANGELOG.md and commits it **without pushing**. The commit rides along with the session's first user-task commit on the next push. If a session ends before any user-task push happens, the reconstructed entry stays **local-only** and the next session will just re-reconstruct from CHANGELOG if still stale. This is intentional — pushing a dedicated reconstruction commit on its own would force every subsequent user push in the same session to wait for the auto-merge workflow to finish before it could push too (push-once enforcement). The reconstructed entry is a convenience hint, not load-bearing state, so the small persistence risk is a fair trade.
 
 ## Latest Session
+**Date:** 2026-09-01 10:37:01 PM EST
+**Repo version:** v04.12r
+**Branch:** `claude/c1-track-lesson-schema-k4nh88`
+
+**What we worked on (one push, v04.12r — Classroom C1, schema slice, on Fable 5.1 High):**
+
+- **The track/lesson schema and its provenance stamp — the one irreversible decision in v1 — built first, before any renderer or progress code.** `repository-information/CLASSROOM-SCHEMA.md` (new) is the single source of truth: id rules, the stamp (`provenance.inputs[]{kind, ref, date}`), lesson schema v1 (`module` / `briefing`, guidance section-kind vocabulary, `reviewBy`, `revisions[].changed[]`), track schema v1, freshness hooks, the `action=classroom` op contract, a worked example, verification and extension rules
+- **The stamp is checked, not trusted.** `CL_PROVENANCE_REF_KINDS` in `Classroom.gs` (v01.01g) maps ref prefixes to kinds (`profile`/`study`/`project`/`graph`/`concepts` → public; `guidance` → guidance; `corpus`/`briefing` → briefing; `report` → report). `clStampKinds_()` reads a lesson's stamp into the list the C0 gate folds and returns `[]` (→ deny) on a missing/empty stamp, malformed ref, unknown prefix, or kind/prefix mismatch. There is no `note:` prefix by design
+- **Registries + filtering + ops:** `clLessons_()` / `clTracks_()` (empty), `clLessonCard_()` metadata cards, per-tier `clLessonIndexFor_` / `clTrackFor_` / `clTrackIndexFor_` (withheld counts; unreadable tracks are not enumerable), and read-only `handleClassroomOp_()` (`cop=index|track|lesson`, wired in `doPost` and the GET `api` mirror) — session → `clRequire_(sess,'tracks')` → `clRequireLesson_()` on the lesson's own stamp before any section text leaves the server
+- **`scripts/check-classroom-content.py` (new)** parses the strict-JSON lesson/track literals out of the `.gs`, validates both schemas and every stamp against the prefix table read from the code itself, then loads the PROJECT region into Node and asserts a 97-case truth table (fold outcomes, per-tier visibility, index filtering, card shape, audited denials). Clean pass, no warnings
+- **`.claude/rules/classroom-app.md` (new, path-scoped) + CLAUDE.md Reference Files row** — the authoring contract C2's pipeline sessions inherit; PHASE6 doc carries a C1 status note; README tree lists the three new files
+
+**Where we left off:**
+
+- The schema slice is complete, pushed and merged (v04.12r). Classroom is at **v01.00w / v01.01g**; the page was not touched this session
+- **Registries are empty by design.** Nothing renders in Classroom yet — the remaining C1 slices are: first tracks from the corpus, the renderer (port the guidance engine), per-account progress (`gd_progress` pattern), and the study-next pointer
+- **`DEPLOYMENT_ID` is still a placeholder** — the ops answer only after the developer deploys the GAS project once and records the ID in `googleAppsScripts/Classroom/Classroom.config.json`
+
+**Key decisions made:**
+
+- **Content lives in `Classroom.gs` as strict-JSON literals** (`clLesson<Name>_()` / `clTrack<Name>_()`, guidance content-in-GAS pattern) — never on Pages — so the checker can parse them and tracks can name gated titles
+- **The gate is never stored in data**; it is derived from the stamp at serve time. A malformed stamp denies to every tier rather than gating down
+- **Guidance inputs are stored by module id, never a URL** — Profiler's hash router has no `#guidance` route (found this session), so data must not depend on another app's routes; the renderer derives links. C0's masthead deep link to `Profiler.html#guidance` was left as is
+- **`corpus:` refs carry the `briefing` kind** (contributor+), matching Coverage's tier in Profiler — the gate follows the content across apps
+- **A briefing's "public-only edition"** for analysts is simply a briefing whose inputs are all public — no special field
+- **The Classroom tree entry keeps its `[template]` label** — C0 deliberately left that convention unsettled, so it was not changed unilaterally here either
+
+**Active context:**
+
+- Repo **v04.12r** · Classroom **v01.00w** / **v01.01g** · Profiler **v01.77w** / **v01.32g** · Scraper **v01.71w** / **v01.98g**
+- Capacity: repo CHANGELOG **92/100**; Classroom GAS changelog **1/50**
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
+- Model plan for the remaining phases (agreed last session): next C1 slice (tracks, renderer, progress, study-next) on **Opus 5 Extra**; C2 machinery on Opus 5 Extra; C2 authoring prompt + freshness deltas on Fable 5.1 High
+- Verification set for any Classroom change: `python3 scripts/check-classroom-content.py`, `node --check` on a `.js` copy of `Classroom.gs`, `node scripts/check-gas-inner-scripts.js`
+- Quiz item shape in the shared renderer is `{ q, c: [choices], a: <index>, why }` (documented in the schema example)
+
+**Recommendation for next session:**
+
+- Assemble the first tracks from the existing corpus on Opus 5 Extra: author public-stamped modules from the study guides and concepts registry plus one guidance-stamped module that deep-links pre-C3, register them in `clLessons_()` / `clTracks_()`, pass `check-classroom-content.py`, then port the guidance renderer into `Classroom.html` so the index and lesson views render through the new `action=classroom` ops.
+
+**To continue:** type `build C1 — first tracks and the renderer`
+
+## Previous Sessions
+
+### Session — 2026-09-01 (Classroom C0 — scaffold, access matrix, cross-links; model plan — v04.11r)
 **Date:** 2026-09-01 10:08:49 PM EST
 **Repo version:** v04.11r
 **Branch:** `claude/classroom-v1-model-selection-ja05mu`
@@ -53,46 +98,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Build **C1's track/lesson schema and its provenance stamp first**, on Fable 5.1 High, before any renderer or progress work — it is the one irreversible decision in v1 (Phase 5 showed study.json v1 stays renderable forever behind an adapter), it must slot into `clGateForProvenance_()`'s existing vocabulary, and every lesson C2 later auto-authors inherits it.
 
 **To continue:** type `build C1 — start with the track and lesson schema`
-
-## Previous Sessions
-
-### Session — 2026-09-01 (Apex Clean Energy dossier; renderer fix for 20 dossiers — v04.09r–v04.10r)
-**Date:** 2026-09-01 09:30:32 PM EST
-**Repo version:** v04.10r
-**Branch:** `claude/profiler-apex-clean-energy-wunvad`
-
-**What we worked on (two pushes, v04.09r and v04.10r):**
-
-- **v04.09r — Apex Clean Energy dossier (profileVersion 1).** Two-agent research pass (first-party ~80 company URLs; third-party 71 pages), written at schema v7 in the `intel-briefing` style: 7 product lines, 3 banded spec groups, 21 developments, 5 key judgments, 12 curated relationships, 5 policy regimes (including a new `EO 14420 bulk-power system` regime and a state-siting entry), 10 decision makers with 7 company-published portraits, 77 sources at 47% first-party. Registered as `ipp`; registry synced; graph rebuilt (490 edges, 18 touching Apex)
-- **The Apex storage finding:** every operating Apex battery (Great Kiskadee, Angelo Storage, Cameron — all Powin, now in liquidation) and the first post-Powin award went to Canadian Solar e-STORAGE (Coldwater, 75 MW/381 MWh); Raven Storage (100 MW) still has no named supplier. An open account with no incumbent, constrained by traditional tax equity and a stated FEOC due-diligence framework
-- **v04.10r — 20 dossiers showed "profile has not been generated".** The developer's Arevon screenshot showed the header painted above that message, which meant the JSON had loaded and the renderer had crashed. Headless render of all 89 profiles through `ovPaintCompany` reproduced it: 20 threw `x.background.forEach is not a function` — the 2026-08-30 batch (all 8 pre-existing IPPs, 4 EPCs, 4 on-site-power suppliers, 4 supplier/integrators) stores `decisionMakers[].background` as a string; the loader's re-entrant `.then()` sent the exception into the missing-file `.catch`. Fixed in the renderer (Profiler.html v01.76w): `ovBackgroundList()` tolerates both shapes in the dossier and export loops; the cached-path render is try/caught and reports "loaded but failed to render — <error>". 89/89 render after; the 20 data files were deliberately left as-is because archived snapshots keep the string form forever
-
-**Where we left off:**
-
-- All three commits merged to main (`044ee50` dossier, `7b84362` renderer fix, plus the session-context reconstruction); working tree clean; Profiler v01.76w deploying via the auto-merge workflow
-- The developer has not yet confirmed on the live site that the previously broken dossiers read well — the bullet split for prose-form backgrounds is heuristic
-
-**Key decisions made:**
-
-- **Fix the renderer, not the 20 files** — the Versions view renders archived snapshots that will carry the string form forever, so tolerance in `Profiler.html` is the only fix that covers every copy; the files can be normalized opportunistically on their next revision per the schema's rule
-- **A render exception must never masquerade as a missing profile** — the message was true for a 404 and false for a crash; the next bad field now names itself
-- **Apex categorized `ipp`, not `developer`** — in this registry `developer` means data-center developer; renewable developer/IPPs (Arevon, Terra-Gen, NextEra Energy Resources) are `ipp`
-- **Ownership stored as a string** (the IPP-cohort convention) rather than the schema's object form, because the string carries the Ares/co-investor detail the object cannot
-- **Four claims carried as unverified inside the Apex dossier rather than dropped:** the Powin docket motion against Apex affiliates (search summary only), the Plug Power PPA passing to NextEra (one local paper), the Ares minority-stake sale (Infralogic alone), and the CDO's unexplained absence from the leadership page
-
-**Active context:**
-
-- Repo **v04.10r** · Profiler **v01.76w** / **v01.32g** · Scraper **v01.71w** / **v01.98g** · Receipts **v01.36w** / **v01.29g**
-- Capacity: repo CHANGELOG **90/100**; **Profiler page changelog 50/50 — the next Profiler page bump triggers archive rotation with SHA enrichment**
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
-- 89 profiles in the registry; Apex Clean Energy is the ninth IPP
-- **Headless render recipe that works here:** `pip install playwright` (package only), launch with `executable_path=/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell`, serve `live-site-pages/` over `python3 -m http.server`, then `page.evaluate` calling `ovPaintCompany(host, profile)` per slug — auth wall irrelevant because the functions are global. Stop the server with `fuser -k <port>/tcp` (a `pkill -f` matches the shell's own command line and kills the session)
-- **Editing trap hit this session:** typing a JS `\u0000` escape inside an Edit produced a literal NUL byte in `Profiler.html`; `grep` reporting "binary file matches" is the tell. Fix by byte-replacing `\x00` with the six-character escape
-
-**Recommendation for next session:**
-
-- Open two or three of the previously broken dossiers on the live site (Arevon, Terra-Gen, MasTec) and confirm the executive cards read well after v01.76w deploys; if the sentence split produced an odd bullet, tune the boundary rule in `ovBackgroundList` (currently splits on `. ` / `; ` before a capital, only after a lowercase letter, digit or closing bracket)
-
-**To continue:** type `check the fixed dossiers render`
 
 Developed by: LightAISolutions
