@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.00w">
+  <meta name="build-version" content="v01.01w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -343,7 +343,7 @@
        is light, so the palette is dark-on-paper with a double rule under it —
        the same editorial treatment Profiler's masthead uses. */
     #cl-header {
-      display: none; max-width: 900px; margin: 26px auto 0; padding: 0 20px 18px;
+      display: none; max-width: var(--cl-measure); margin: 26px auto 0; padding: 0 20px 18px;
       border-bottom: 3px double #c9c4ba; font-family: Georgia, 'Times New Roman', serif;
     }
     #cl-header .cl-kicker {
@@ -362,6 +362,190 @@
       font-size: 11px; letter-spacing: .1em; text-transform: uppercase;
       color: #6f6960; margin-left: auto;
     }
+
+    /* PROJECT: Classroom curriculum UI (C1). The section renderer below is a
+       port of Profiler's guidance engine (gdRenderDoc / gdRenderSection and
+       the per-kind primitives) onto Classroom's light palette — same section
+       vocabulary, same widget behaviour, `cl` prefixes to match this file's
+       own naming. Keep the two in step: a change to a section kind in either
+       app should land in both. Progress ticks are deliberately absent — the
+       per-account progress store is the next C1 slice. */
+    :root {
+      --cl-paper: #ffffff;   --cl-card: #fbfaf7;  --cl-card2: #f4f1ea;
+      --cl-ink: #23201b;     --cl-muted: #5d574e; --cl-faint: #8a8378;
+      --cl-line: #e2ddd3;    --cl-line2: #b8b2a7; --cl-accent: #8a6d1f;
+      --cl-adv: #2f6b3f;     --cl-dis: #a33a4c;
+      /* Shared page measure — the masthead and the curriculum column below it
+         must line up, so both read from this one value. */
+      --cl-measure: 1180px;
+      --cl-serif: Georgia, 'Times New Roman', serif;
+      --cl-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    /* The template's GAS iframe is a fixed, full-viewport element at z-index 1
+       and carries the auth plumbing (nonce handshake, DOM-clearing reload), so
+       it is left exactly as the template injects it. Classroom's own UI is
+       page-side — it reads content over action=classroom — so it paints above
+       the iframe rather than replacing it. */
+    #cl-header, #cl-app { position: relative; z-index: 2; }
+    #cl-app { display: none; max-width: var(--cl-measure); margin: 0 auto; padding: 22px 20px 70px;
+      background: var(--cl-paper); font-family: var(--cl-serif); }
+    .cl-loading, .cl-empty { font: 13px/1.6 var(--cl-mono); color: var(--cl-muted); padding: 18px 0; }
+    .cl-err { font: 13px/1.7 var(--cl-serif); color: var(--cl-dis); border-left: 3px solid var(--cl-dis);
+      background: #fdf5f6; padding: 12px 16px; border-radius: 0 8px 8px 0; margin: 16px 0; }
+
+    /* ── Index: lanes, track cards, lesson rows ─────────────────────────── */
+    .cl-lane { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--cl-faint); margin: 26px 0 10px; border-bottom: 1px solid var(--cl-line); padding-bottom: 7px; }
+    .cl-track { border: 1px solid var(--cl-line2); border-radius: 12px; background: var(--cl-card);
+      padding: 16px 18px; margin: 12px 0; }
+    .cl-track h3 { font: 700 20px/1.25 var(--cl-serif); color: var(--cl-ink); margin: 0 0 4px; }
+    .cl-track .cl-tsub { font: 13.5px/1.6 var(--cl-serif); color: var(--cl-muted); margin: 0 0 12px; }
+    .cl-track .cl-meta { font: 11px/1 var(--cl-mono); letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--cl-faint); margin-bottom: 12px; }
+    .cl-row { display: grid; grid-template-columns: 30px 1fr auto; gap: 12px; align-items: baseline;
+      width: 100%; text-align: left; background: transparent; border: 0; border-top: 1px solid var(--cl-line);
+      padding: 11px 4px; cursor: pointer; font-family: var(--cl-serif); }
+    .cl-row:hover { background: var(--cl-card2); }
+    .cl-row .n { font: 600 12px/1.5 var(--cl-mono); color: var(--cl-faint); }
+    .cl-row .t { font: 600 15px/1.4 var(--cl-serif); color: var(--cl-ink); }
+    .cl-row .s { display: block; font: 12.5px/1.55 var(--cl-serif); color: var(--cl-muted); margin-top: 3px; font-weight: 400; }
+    .cl-row .r { font: 11px/1 var(--cl-mono); color: var(--cl-faint); white-space: nowrap; }
+    .cl-withheld { font: 11.5px/1.5 var(--cl-mono); color: var(--cl-muted); border-top: 1px solid var(--cl-line);
+      padding: 10px 4px 0; margin-top: 2px; }
+    .cl-badge { display: inline-block; font: 600 9.5px/1 var(--cl-mono); letter-spacing: 0.1em;
+      text-transform: uppercase; border: 1px solid var(--cl-line2); border-radius: 999px;
+      padding: 3px 8px; margin-left: 8px; color: var(--cl-muted); vertical-align: 1px; }
+    .cl-badge.guidance { color: var(--cl-accent); border-color: var(--cl-accent); }
+    .cl-badge.briefing { color: #4f6fb0; border-color: #4f6fb0; }
+    .cl-badge.report { color: var(--cl-dis); border-color: var(--cl-dis); }
+
+    /* ── Lesson view: masthead, tiles, nav, sections ────────────────────── */
+    .cl-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+      border-bottom: 3px double #c9c4ba; padding-bottom: 14px; }
+    .cl-kick { font: 600 11px/1 var(--cl-mono); letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--cl-accent); margin-bottom: 7px; }
+    .cl-title { font: 700 clamp(24px,3.6vw,34px)/1.15 var(--cl-serif); color: var(--cl-ink); margin: 0 0 8px; }
+    .cl-asof { font: 12px/1.7 var(--cl-mono); color: var(--cl-muted); }
+    .cl-back { background: transparent; border: 1px solid var(--cl-line2); color: var(--cl-muted);
+      border-radius: 999px; padding: 6px 14px; cursor: pointer; font: 12px/1 var(--cl-mono); white-space: nowrap; }
+    .cl-back:hover { color: var(--cl-ink); border-color: var(--cl-ink); }
+    .cl-review { display: inline-block; font: 600 10px/1 var(--cl-mono); letter-spacing: 0.08em;
+      border: 1px solid var(--cl-line2); color: var(--cl-muted); border-radius: 999px; padding: 3px 8px; margin-left: 8px; }
+    .cl-review.soon { color: var(--cl-accent); border-color: var(--cl-accent); }
+    .cl-review.due { color: var(--cl-dis); border-color: var(--cl-dis); }
+    /* Provenance strip — the lesson's sourcing, which is its stamp. Guidance
+       inputs render as a deep link out to Profiler's hub (pre-C3); every other
+       kind is shown as a plain typed identity, never as a URL. */
+    .cl-prov { border-left: 3px solid var(--cl-line2); background: var(--cl-card2);
+      padding: 10px 14px; border-radius: 0 8px 8px 0; margin: 14px 0 0; }
+    .cl-prov .lb { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--cl-faint); margin-bottom: 7px; }
+    .cl-prov .it { font: 12px/1.7 var(--cl-mono); color: var(--cl-muted); }
+    .cl-prov .it .k { color: var(--cl-ink); font-weight: 600; }
+    .cl-prov a { color: var(--cl-accent); }
+    .cl-revs { border-left: 3px solid var(--cl-line2); background: var(--cl-card2);
+      padding: 10px 14px; border-radius: 0 8px 8px 0; margin: 10px 0 0; }
+    .cl-revs .lb { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--cl-faint); margin-bottom: 6px; }
+    .cl-revs .rv { font: 12px/1.65 var(--cl-mono); color: var(--cl-muted); }
+    .cl-revs .rv .d { color: var(--cl-ink); margin-right: 8px; }
+    .cl-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(215px,1fr)); gap: 10px; margin: 16px 0 6px; }
+    .cl-tile { background: var(--cl-card); border: 1px solid var(--cl-line); border-radius: 10px; padding: 12px 14px; }
+    .cl-tile .k { font: 700 15px/1.25 var(--cl-serif); color: var(--cl-accent); }
+    .cl-tile .v { font: 600 11px/1.4 var(--cl-mono); letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--cl-ink); margin-top: 3px; }
+    .cl-tile .s { font: 11.5px/1.45 var(--cl-mono); color: var(--cl-muted); margin-top: 5px; }
+    .cl-body { display: grid; grid-template-columns: 225px 1fr; gap: 26px; margin-top: 18px; }
+    @media (max-width: 860px) { .cl-body { grid-template-columns: 1fr; } .cl-nav { position: static !important; } }
+    .cl-nav { position: sticky; top: 14px; align-self: start; }
+    .cl-nav .hd { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--cl-faint); margin-bottom: 8px; }
+    .cl-nav a { display: flex; align-items: baseline; gap: 8px; padding: 6px 8px; border-radius: 7px;
+      text-decoration: none; color: var(--cl-muted); font: 12.5px/1.45 var(--cl-serif); }
+    .cl-nav a:hover { background: var(--cl-card2); color: var(--cl-ink); }
+    .cl-nav .tick { flex: 0 0 auto; width: 5px; height: 5px; background: var(--cl-line2);
+      border-radius: 50%; display: inline-block; position: relative; top: -3px; }
+    .cl-sec { background: var(--cl-card); border: 1px solid var(--cl-line); border-radius: 12px;
+      padding: 16px 20px 18px; margin: 0 0 16px; }
+    .cl-sec h3 { font: 700 20px/1.25 var(--cl-serif); color: var(--cl-ink); margin: 0 0 4px; }
+    .cl-read { font: 10.5px/1 var(--cl-mono); letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--cl-faint); margin-bottom: 6px; }
+    .cl-sec p { font: 14.5px/1.75 var(--cl-serif); color: var(--cl-ink); margin: 9px 0; }
+    .cl-sec p strong { color: var(--cl-accent); font-weight: 700; }
+    .cl-zh { border-left: 3px solid var(--cl-accent); background: #fbf6e8;
+      padding: 10px 14px; border-radius: 0 8px 8px 0; margin-top: 12px; }
+    .cl-zh .lb { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--cl-accent); margin-bottom: 5px; }
+    .cl-zh .tx { font: 13px/1.65 var(--cl-serif); color: var(--cl-ink); }
+    .cl-callout { border: 1px solid rgba(138,109,31,0.45); border-radius: 10px; padding: 4px 16px 10px; }
+    .cl-callout.warn { border-color: rgba(163,58,76,0.45); }
+    .cl-note { font: 12.5px/1.6 var(--cl-mono); color: var(--cl-muted); margin-top: 10px;
+      border-top: 1px solid var(--cl-line); padding-top: 9px; }
+
+    /* ── Per-kind widgets (ported 1:1 from the guidance engine) ─────────── */
+    .cl-tblwrap { overflow-x: auto; margin: 12px 0 4px; }
+    .cl-tbl { border-collapse: collapse; width: 100%; font: 13px/1.55 var(--cl-serif); }
+    .cl-tbl th { font: 600 10.5px/1.4 var(--cl-mono); letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--cl-muted); text-align: left; border-bottom: 2px solid var(--cl-line2); padding: 7px 12px 7px 0; }
+    .cl-tbl td { border-bottom: 1px solid var(--cl-line); padding: 8px 12px 8px 0;
+      vertical-align: top; color: var(--cl-ink); }
+    .cl-tbl td strong { color: var(--cl-accent); }
+    .cl-pc { border: 1px solid var(--cl-line); border-radius: 10px; padding: 14px 16px; margin: 12px 0; background: var(--cl-card2); }
+    .cl-pc .t { font: 700 16.5px/1.3 var(--cl-serif); color: var(--cl-ink); }
+    .cl-pc .m { font: 11.5px/1.5 var(--cl-mono); color: var(--cl-accent); margin: 3px 0 10px; }
+    .cl-pc .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 700px) { .cl-pc .cols { grid-template-columns: 1fr; } }
+    .cl-pc .hd { font: 600 10px/1 var(--cl-mono); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 6px; }
+    .cl-pc .adv .hd { color: var(--cl-adv); } .cl-pc .dis .hd { color: var(--cl-dis); }
+    .cl-pc li { font: 13px/1.6 var(--cl-serif); color: var(--cl-ink); margin: 4px 0 4px 16px; }
+    .cl-tl { position: relative; margin: 14px 0 4px; padding-left: 84px; }
+    .cl-tl::before { content: ''; position: absolute; left: 64px; top: 6px; bottom: 6px; width: 2px; background: var(--cl-line2); }
+    .cl-tl-it { position: relative; margin: 0 0 16px; }
+    .cl-tl-it .yr { position: absolute; left: -84px; top: 0; width: 52px; text-align: right;
+      font: 600 12px/1.5 var(--cl-mono); color: var(--cl-faint); }
+    .cl-tl-it .dot { position: absolute; left: -26px; top: 4px; width: 12px; height: 12px; border-radius: 50%; }
+    .cl-tl-it .lb2 { font: 600 14.5px/1.4 var(--cl-serif); color: var(--cl-ink); }
+    .cl-tl-it .sb { font: 12px/1.55 var(--cl-mono); color: var(--cl-muted); margin-top: 2px; }
+    .cl-legend { display: flex; flex-wrap: wrap; gap: 14px; margin: 4px 0 10px; }
+    .cl-legend span { font: 11px/1 var(--cl-mono); color: var(--cl-muted); display: inline-flex; align-items: center; gap: 6px; }
+    .cl-legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .cl-bars { margin: 14px 0 4px; }
+    .cl-bar { display: grid; grid-template-columns: 175px 1fr 88px; gap: 10px; align-items: center; margin: 7px 0; }
+    .cl-bar .lb { font: 12px/1.35 var(--cl-mono); color: var(--cl-ink); text-align: right; }
+    .cl-bar .lb small { display: block; color: var(--cl-faint); }
+    .cl-bar .track { background: var(--cl-card2); border: 1px solid var(--cl-line); border-radius: 5px; height: 22px; position: relative; }
+    .cl-bar .fill { position: absolute; inset: 2px auto 2px 2px; background: #b18f35; border-radius: 4px; min-width: 3px; }
+    .cl-bar .val { font: 600 12.5px/1 var(--cl-mono); color: var(--cl-ink); }
+    .cl-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px,1fr)); gap: 12px; margin-top: 12px; }
+    .cl-card { background: var(--cl-card2); border: 1px solid var(--cl-line); border-radius: 10px;
+      padding: 14px 15px; cursor: pointer; min-height: 92px; }
+    .cl-card .q { font: 600 13.5px/1.5 var(--cl-serif); color: var(--cl-ink); }
+    .cl-card .a { display: none; font: 13px/1.6 var(--cl-serif); color: var(--cl-accent); margin-top: 9px;
+      border-top: 1px solid var(--cl-line); padding-top: 9px; }
+    .cl-card.flip .a { display: block; }
+    .cl-card .hint { font: 10px/1 var(--cl-mono); letter-spacing: 0.12em; color: var(--cl-faint);
+      text-transform: uppercase; margin-top: 8px; }
+    .cl-quiz-it { border: 1px solid var(--cl-line); border-radius: 10px; padding: 13px 15px; margin: 11px 0; background: var(--cl-card2); }
+    .cl-quiz-it .q { font: 600 14px/1.55 var(--cl-serif); color: var(--cl-ink); margin-bottom: 9px; }
+    .cl-quiz-it button.ch { display: block; width: 100%; text-align: left; margin: 5px 0;
+      background: var(--cl-paper); border: 1px solid var(--cl-line2); color: var(--cl-ink);
+      border-radius: 7px; padding: 8px 12px; cursor: pointer; font: 13px/1.5 var(--cl-serif); }
+    .cl-quiz-it button.ch:hover:not(:disabled) { border-color: var(--cl-accent); }
+    .cl-quiz-it button.ch.right { border-color: var(--cl-adv); color: var(--cl-adv); }
+    .cl-quiz-it button.ch.wrong { border-color: var(--cl-dis); color: var(--cl-dis); }
+    .cl-quiz-it .why { display: none; font: 12.5px/1.6 var(--cl-serif); color: var(--cl-muted);
+      margin-top: 8px; border-top: 1px solid var(--cl-line); padding-top: 8px; }
+    .cl-score { font: 600 13px/1 var(--cl-mono); color: var(--cl-accent); margin-top: 10px; }
+    .cl-gloss { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px,1fr)); gap: 10px; margin-top: 12px; }
+    .cl-gl { background: var(--cl-card2); border: 1px solid var(--cl-line); border-radius: 9px; padding: 10px 13px; }
+    .cl-gl .t { font: 700 12px/1.4 var(--cl-mono); color: var(--cl-accent); }
+    .cl-gl .d { font: 12.5px/1.55 var(--cl-serif); color: var(--cl-ink); margin-top: 3px; }
+    .cl-term { border-bottom: 1px dotted var(--cl-accent); cursor: help; }
+    #cl-tip { position: fixed; z-index: 10005; max-width: 330px; background: var(--cl-paper);
+      border: 1px solid var(--cl-accent); border-radius: 9px; padding: 10px 13px; display: none;
+      font: 12.5px/1.55 var(--cl-serif); color: var(--cl-ink); box-shadow: 0 8px 28px rgba(35,32,27,0.22); }
+    #cl-tip .tt { font: 600 11px/1 var(--cl-mono); letter-spacing: 0.1em; color: var(--cl-accent);
+      text-transform: uppercase; margin-bottom: 5px; }
 /* ══════════════ */
 /* PROJECT END */
 /* ══════════════ */
@@ -508,6 +692,9 @@
     <p class="cl-sub">Taught, retained, current knowledge from the Profiler and Scraper corpus.</p>
     <div class="cl-links" id="cl-links"></div>
   </div>
+  <!-- PROJECT: curriculum surface — mounted by clAppMount() after a validated
+       session, so signed-out visitors get an empty container and no ops. -->
+  <div id="cl-app"></div>
 <!-- ══════════════ -->
 <!-- PROJECT END -->
 <!-- ══════════════ -->
@@ -4225,10 +4412,643 @@ if (typeof showApp === 'function') {
   showApp = function() {
     var r = _clShowApp.apply(this, arguments);
     try { clHeaderShow(); } catch (e) { /* masthead is cosmetic — never block auth */ }
+    try { clAppMount(); } catch (e2) { /* curriculum UI must never block auth either */ }
     return r;
   };
 }
 
+
+// PROJECT: ── Curriculum UI (C1) ──────────────────────────────────────────
+// The index and lesson views, rendered page-side from the role-gated
+// action=classroom ops (cop=index|lesson) in Classroom.gs. Content never
+// reaches public Pages: the server pre-filters both answers to the tier and
+// re-checks a lesson's own provenance stamp before any section text leaves it,
+// so everything below renders what it is given and gates nothing itself.
+//
+// The section renderer is a port of Profiler's guidance engine — gdRenderDoc /
+// gdRenderSection and the per-kind primitives (table, proscons, timeline,
+// bars, flashcards, quiz, ledger, {{term}} tooltips) — onto this page's light
+// palette, with `cl` names to match this file. One section vocabulary across
+// study guides, guidance modules, reports and lessons (Phase 5): a change to a
+// kind in either app belongs in both.
+//
+// Deliberately absent: per-account progress ticks and the study-next pointer.
+// Those are the next C1 slice and key on lesson id + section id, both of which
+// the schema already fixes as permanent.
+var CL_DATA_BASE = 'profiler-data/';
+var clGlossMap = {};
+var clIndexCache = null;
+
+function clEl(tag, cls, text) {
+  var e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined && text !== null && text !== '') e.textContent = text;
+  return e;
+}
+
+// The public concepts registry backs {{term}} tooltips for terms a lesson's
+// own glossary does not define — the study-guide resolution order. It is
+// public Pages data, so a private repo cannot break it (no authenticated
+// GitHub endpoint is involved). A failed fetch degrades to glossary-only.
+var clConceptsP = null;
+function clConceptsLoad() {
+  if (clConceptsP) return clConceptsP;
+  clConceptsP = fetch(CL_DATA_BASE + 'profiler-concepts.json?_cb=' + Date.now(), { cache: 'no-store' })
+    .then(function(r) { if (!r.ok) throw new Error('http_' + r.status); return r.json(); })
+    .then(function(reg) {
+      var map = {};
+      ((reg && reg.concepts) || []).forEach(function(c) {
+        if (!c || !c.term || !c.def) return;
+        map[String(c.term).toLowerCase()] = c.def;
+        (c.aliases || []).forEach(function(a) { map[String(a).toLowerCase()] = c.def; });
+      });
+      return map;
+    })
+    .catch(function() { return null; });
+  return clConceptsP;
+}
+
+// Read-only fetch to the classroom ops. _gasPost already implements the
+// transport handleClassroomOp_ is wired for — POST action=classroom with a
+// GET action=api&op=classroom fallback — so this adds only the session token
+// and the op parameters. Before the GAS project is deployed there is no base
+// URL at all, which surfaces as a plain not-connected message rather than an
+// error, since that is the expected state until DEPLOYMENT_ID is recorded.
+function clApi(cop, params, cb) {
+  var session = (loadSession() || {}).token || '';
+  if (!session) { cb({ success: false, error: 'SESSION_EXPIRED' }); return; }
+  var qp = { action: 'classroom', cop: cop, session: session };
+  for (var k in params) if (params.hasOwnProperty(k)) qp[k] = params[k];
+  _gasPost(qp)
+    .then(function(res) { cb(res || { success: false, error: 'empty_response' }); })
+    .catch(function(e) {
+      cb({ success: false, error: String((e && e.message) || 'network_failed') });
+    });
+}
+
+function clErrText(err) {
+  if (err === 'no_base_url') return 'Classroom content is not connected yet — the Apps Script backend has not been deployed for this page.';
+  if (err === 'SESSION_EXPIRED') return 'Your session has expired. Sign in again to continue.';
+  if (err === 'ROLE_DENIED') return 'Your account does not have access to Classroom content.';
+  if (err === 'UNKNOWN_LESSON') return 'That lesson does not exist, or is not readable at your access level.';
+  if (err === 'UNKNOWN_TRACK') return 'That track does not exist, or nothing in it is readable at your access level.';
+  return 'Could not load Classroom content (' + (err || 'unknown') + ').';
+}
+
+// Prose micro-markup, identical to the guidance engine's: **bold**, *italic*,
+// {{term}} tooltips. Escapes first, so lesson text can never inject markup.
+function clFmt(s) {
+  var t = String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  t = t.replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
+  t = t.replace(/\{\{([^}]+)\}\}/g, function(m, term) {
+    return '<span class="cl-term" data-term="' + term + '">' + term + '</span>';
+  });
+  return t;
+}
+function clP(html) { var p = document.createElement('p'); p.innerHTML = html; return p; }
+
+// reviewBy chip: plain beyond 30 days, gold inside 30, red once passed — the
+// guidance freshness behaviour, so a stale lesson looks stale everywhere.
+function clReviewChip(reviewBy) {
+  if (!reviewBy) return null;
+  var days = Math.floor((new Date(reviewBy + 'T23:59:59') - Date.now()) / 86400000);
+  var cls = days < 0 ? ' due' : (days <= 30 ? ' soon' : '');
+  return clEl('span', 'cl-review' + cls, days < 0 ? '⚠ review due ' + reviewBy : 'review by ' + reviewBy);
+}
+
+// ── Per-kind section primitives (ported from the guidance engine) ─────────
+function clTable(cols, rows) {
+  var wrap = clEl('div', 'cl-tblwrap');
+  var tb = document.createElement('table'); tb.className = 'cl-tbl';
+  var thead = document.createElement('thead'), trh = document.createElement('tr');
+  for (var c = 0; c < (cols || []).length; c++) {
+    var th = document.createElement('th'); th.innerHTML = clFmt(cols[c]); trh.appendChild(th);
+  }
+  thead.appendChild(trh); tb.appendChild(thead);
+  var tbody = document.createElement('tbody');
+  for (var r = 0; r < (rows || []).length; r++) {
+    var tr = document.createElement('tr');
+    for (var d = 0; d < rows[r].length; d++) {
+      var td = document.createElement('td'); td.innerHTML = clFmt(rows[r][d]); tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+  }
+  tb.appendChild(tbody); wrap.appendChild(tb);
+  return wrap;
+}
+
+function clProsCons(card) {
+  var el = clEl('div', 'cl-pc');
+  el.appendChild(clEl('div', 't', card.t));
+  if (card.meta) el.appendChild(clEl('div', 'm', card.meta));
+  var cols = clEl('div', 'cols');
+  var mk = function(cls, hd, items) {
+    var box = clEl('div', cls);
+    box.appendChild(clEl('div', 'hd', hd));
+    var ul = document.createElement('ul');
+    for (var i = 0; i < (items || []).length; i++) {
+      var li = document.createElement('li'); li.innerHTML = clFmt(items[i]); ul.appendChild(li);
+    }
+    box.appendChild(ul);
+    return box;
+  };
+  cols.appendChild(mk('adv', 'Advantages', card.adv));
+  cols.appendChild(mk('dis', 'Disadvantages / costs', card.dis));
+  el.appendChild(cols);
+  return el;
+}
+
+// Lane colours are the CVD-validated trio the guidance timelines use.
+var CL_LANE_COLORS = { gen: '#b18f35', deploy: '#4f83e6', eco: '#cc5f75' };
+
+function clTimeline(sec) {
+  var box = clEl('div');
+  var lg = clEl('div', 'cl-legend');
+  for (var k in (sec.lanes || {})) if (sec.lanes.hasOwnProperty(k)) {
+    var s = document.createElement('span');
+    var i = document.createElement('i'); i.style.background = CL_LANE_COLORS[k] || 'var(--cl-faint)';
+    s.appendChild(i); s.appendChild(document.createTextNode(sec.lanes[k]));
+    lg.appendChild(s);
+  }
+  box.appendChild(lg);
+  var tl = clEl('div', 'cl-tl');
+  var items = (sec.items || []).slice().sort(function(a, b) { return a.x - b.x; });
+  var lastYear = null;
+  for (var n = 0; n < items.length; n++) {
+    var it = items[n], row = clEl('div', 'cl-tl-it');
+    var yr = Math.floor(it.x);
+    row.appendChild(clEl('div', 'yr', yr === lastYear ? '' : String(yr)));
+    lastYear = yr;
+    var dot = clEl('span', 'dot');
+    dot.style.background = CL_LANE_COLORS[it.lane] || 'var(--cl-faint)';
+    dot.title = (sec.lanes && sec.lanes[it.lane]) || it.lane;
+    row.appendChild(dot);
+    var lb = clEl('div', 'lb2'); lb.innerHTML = clFmt(it.label); row.appendChild(lb);
+    var sb = clEl('div', 'sb'); sb.innerHTML = clFmt(it.sub); row.appendChild(sb);
+    tl.appendChild(row);
+  }
+  box.appendChild(tl);
+  return box;
+}
+
+// Single-series magnitude bars: one hue, direct labels, no legend.
+function clBars(sec) {
+  var box = clEl('div', 'cl-bars');
+  var max = 0, i;
+  for (i = 0; i < (sec.items || []).length; i++) if (sec.items[i].v > max) max = sec.items[i].v;
+  for (i = 0; i < (sec.items || []).length; i++) {
+    var it = sec.items[i], row = clEl('div', 'cl-bar');
+    var lb = clEl('div', 'lb');
+    lb.appendChild(document.createTextNode(it.label));
+    var sm = document.createElement('small'); sm.textContent = it.sub || ''; lb.appendChild(sm);
+    row.appendChild(lb);
+    var track = clEl('div', 'track');
+    var fill = clEl('div', 'fill');
+    fill.style.width = 'calc(' + Math.max(2, Math.round(it.v / max * 100)) + '% - 4px)';
+    track.title = it.label + ' — ' + it.v + ' ' + (sec.unit || '');
+    track.appendChild(fill);
+    row.appendChild(track);
+    row.appendChild(clEl('div', 'val', String(it.v) + (sec.unit ? ' ' + sec.unit.split(' ')[0] : '')));
+    box.appendChild(row);
+  }
+  return box;
+}
+
+function clFlashcards(cards) {
+  var grid = clEl('div', 'cl-cards');
+  for (var i = 0; i < cards.length; i++) (function(c) {
+    var el = clEl('div', 'cl-card');
+    var q = clEl('div', 'q'); q.innerHTML = clFmt(c.q); el.appendChild(q);
+    var a = clEl('div', 'a'); a.innerHTML = clFmt(c.a); el.appendChild(a);
+    el.appendChild(clEl('div', 'hint', 'click to flip'));
+    el.addEventListener('click', function() { el.classList.toggle('flip'); });
+    grid.appendChild(el);
+  })(cards[i]);
+  return grid;
+}
+
+function clQuiz(items) {
+  var box = clEl('div');
+  var score = { right: 0, answered: 0 };
+  var scoreLine = clEl('div', 'cl-score', '');
+  for (var i = 0; i < items.length; i++) (function(it, n) {
+    var el = clEl('div', 'cl-quiz-it');
+    var q = clEl('div', 'q'); q.innerHTML = (n + 1) + '. ' + clFmt(it.q); el.appendChild(q);
+    var why = clEl('div', 'why'); why.innerHTML = clFmt(it.why || '');
+    var btns = [];
+    for (var c = 0; c < it.c.length; c++) (function(ci) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'ch'; b.innerHTML = clFmt(it.c[ci]);
+      b.addEventListener('click', function() {
+        if (b.disabled) return;
+        score.answered++;
+        if (ci === it.a) { b.classList.add('right'); score.right++; }
+        else { b.classList.add('wrong'); btns[it.a].classList.add('right'); }
+        for (var x = 0; x < btns.length; x++) btns[x].disabled = true;
+        why.style.display = 'block';
+        scoreLine.textContent = 'Score: ' + score.right + ' / ' + score.answered
+          + (score.answered === items.length ? ' — complete' : '');
+      });
+      btns.push(b); el.appendChild(b);
+    })(c);
+    el.appendChild(why);
+    box.appendChild(el);
+  })(items[i], i);
+  box.appendChild(scoreLine);
+  return box;
+}
+
+// One floating tip positioned near the hovered/tapped term; hidden on leave,
+// on a second tap, and on scroll.
+function clBindTermTips(root) {
+  var tip = document.getElementById('cl-tip');
+  if (!tip) { tip = document.createElement('div'); tip.id = 'cl-tip'; document.body.appendChild(tip); }
+  // The shell is reused across renders (Profiler builds a fresh one per doc),
+  // so bind the delegated handlers exactly once — a second click handler would
+  // toggle the tip straight back off after the first one showed it.
+  if (root.dataset && root.dataset.tipsBound === '1') return;
+  if (root.dataset) root.dataset.tipsBound = '1';
+  function show(span) {
+    var term = span.getAttribute('data-term') || '';
+    var def = clGlossMap[term.toLowerCase()];
+    if (!def) return;
+    tip.innerHTML = '';
+    tip.appendChild(clEl('div', 'tt', term));
+    tip.appendChild(document.createTextNode(def));
+    tip.style.display = 'block';
+    var r = span.getBoundingClientRect();
+    var top = r.bottom + 8, left = Math.min(r.left, window.innerWidth - 350);
+    if (top + 140 > window.innerHeight) top = Math.max(8, r.top - tip.offsetHeight - 8);
+    tip.style.top = top + 'px'; tip.style.left = Math.max(8, left) + 'px';
+  }
+  function hide() { tip.style.display = 'none'; }
+  root.addEventListener('mouseover', function(ev) {
+    var t = ev.target;
+    if (t && t.classList && t.classList.contains('cl-term')) show(t); else hide();
+  });
+  root.addEventListener('click', function(ev) {
+    var t = ev.target;
+    if (t && t.classList && t.classList.contains('cl-term')) {
+      if (tip.style.display === 'block') hide(); else show(t);
+    }
+  });
+  // Document scroll only — scroll events do not bubble, so a plain window
+  // listener never fires for a nested scroller. Capture phase would: hovering
+  // a term inside a horizontally scrolling table wrapper hid the tip the same
+  // instant it appeared. (Profiler binds this to its scrolling overlay, which
+  // is the same intent expressed against the element that actually scrolls.)
+  window.addEventListener('scroll', hide);
+}
+
+// ── Section + lesson rendering ────────────────────────────────────────────
+function clRenderSection(sec) {
+  var el = clEl('section', 'cl-sec');
+  el.id = 'cl-' + sec.id;
+  el.appendChild(clEl('h3', null, sec.title));
+  if (sec.read) el.appendChild(clEl('div', 'cl-read', sec.read));
+  var host = el, wrap = null, pi;
+  if (sec.kind === 'callout') {
+    wrap = clEl('div', 'cl-callout' + (sec.tone === 'warn' ? ' warn' : ''));
+    el.appendChild(wrap); host = wrap;
+  }
+  if (sec.intro) host.appendChild(clP(clFmt(sec.intro)));
+  if (sec.kind === 'prose' || sec.kind === 'callout') {
+    for (pi = 0; pi < (sec.ps || []).length; pi++) host.appendChild(clP(clFmt(sec.ps[pi])));
+  } else if (sec.kind === 'table') {
+    el.appendChild(clTable(sec.cols, sec.rows));
+  } else if (sec.kind === 'proscons') {
+    for (pi = 0; pi < (sec.cards || []).length; pi++) el.appendChild(clProsCons(sec.cards[pi]));
+  } else if (sec.kind === 'timeline') {
+    el.appendChild(clTimeline(sec));
+  } else if (sec.kind === 'bars') {
+    el.appendChild(clBars(sec));
+  } else if (sec.kind === 'flashcards') {
+    el.appendChild(clFlashcards(sec.cards || []));
+  } else if (sec.kind === 'quiz') {
+    el.appendChild(clQuiz(sec.items || []));
+  } else if (sec.kind === 'ledger') {
+    el.appendChild(clTable(['#', 'Claim', 'Source'], (sec.rows || []).map(function(r, n) {
+      return [String(n + 1), r[0], r[1]];
+    })));
+  }
+  if (sec.note) { var nt = clEl('div', 'cl-note'); nt.innerHTML = clFmt(sec.note); el.appendChild(nt); }
+  if (sec.sales) {
+    var zh = clEl('div', 'cl-zh');
+    zh.appendChild(clEl('div', 'lb', 'Sales angle'));
+    var zt = clEl('div', 'tx'); zt.innerHTML = clFmt(sec.sales); zh.appendChild(zt);
+    el.appendChild(zh);
+  }
+  return el;
+}
+
+// The provenance strip — a lesson's sourcing IS its stamp, which is why
+// sections carry no citation tokens. Inputs are shown as their typed identity
+// (never a URL: the data must not depend on another app's routes). Pre-C3 a
+// guidance input links out to Profiler's hub, matching the masthead's own
+// deep link; when C3 moves guidance here, only this function changes.
+var CL_PROV_LABEL = {
+  'profile': 'dossier', 'study': 'study guide', 'project': 'project',
+  'graph': 'relationship graph', 'concepts': 'concepts registry',
+  'guidance': 'guidance module', 'corpus': 'corpus item',
+  'briefing': 'briefing edition', 'report': 'report'
+};
+function clProvStrip(lesson) {
+  var inputs = (lesson.provenance && lesson.provenance.inputs) || [];
+  if (!inputs.length) return null;
+  var box = clEl('div', 'cl-prov');
+  box.appendChild(clEl('div', 'lb', 'Built from'));
+  inputs.forEach(function(inp) {
+    var ref = String(inp.ref || ''), colon = ref.indexOf(':');
+    var prefix = colon > 0 ? ref.slice(0, colon) : '', id = colon > 0 ? ref.slice(colon + 1) : ref;
+    var row = clEl('div', 'it');
+    row.appendChild(clEl('span', 'k', (CL_PROV_LABEL[prefix] || prefix || 'source') + ' · '));
+    if (prefix === 'guidance') {
+      var a = document.createElement('a');
+      a.href = 'Profiler.html#guidance';
+      a.textContent = id;
+      a.title = 'Guidance modules live in Profiler until C3 moves the hub here';
+      row.appendChild(a);
+    } else {
+      row.appendChild(document.createTextNode(id));
+    }
+    if (inp.date) row.appendChild(document.createTextNode('  ·  as of ' + inp.date));
+    box.appendChild(row);
+  });
+  return box;
+}
+
+function clRenderLesson(lesson, shell) {
+  clGlossMap = {};
+  clConceptsLoad().then(function(concepts) {
+    var ck;
+    if (concepts) for (ck in concepts) if (concepts.hasOwnProperty(ck)) clGlossMap[ck] = concepts[ck];
+    for (var gi = 0; gi < (lesson.glossary || []).length; gi++) {
+      clGlossMap[String(lesson.glossary[gi].t).toLowerCase()] = lesson.glossary[gi].d;
+    }
+    shell.innerHTML = '';
+
+    var top = clEl('div', 'cl-top');
+    var tl = clEl('div');
+    tl.appendChild(clEl('div', 'cl-kick',
+      (lesson.type === 'briefing' ? 'Briefing · ' + (lesson.edition || '') : 'Lesson · ' + (lesson.group || ''))));
+    tl.appendChild(clEl('h2', 'cl-title', lesson.title));
+    var asof = clEl('div', 'cl-asof', 'as of ' + (lesson.updated || ''));
+    var chip = clReviewChip(lesson.reviewBy);
+    if (chip) asof.appendChild(chip);
+    tl.appendChild(asof);
+    top.appendChild(tl);
+    var back = clEl('button', 'cl-back', '← All tracks');
+    back.type = 'button';
+    back.addEventListener('click', function() { window.location.hash = ''; clRoute(); });
+    top.appendChild(back);
+    shell.appendChild(top);
+
+    var prov = clProvStrip(lesson);
+    if (prov) shell.appendChild(prov);
+
+    if (lesson.revisions && lesson.revisions.length) {
+      var revs = clEl('div', 'cl-revs');
+      revs.appendChild(clEl('div', 'lb', 'Revision notes'));
+      for (var rvi = lesson.revisions.length - 1; rvi >= 0; rvi--) {
+        var rv = clEl('div', 'rv');
+        rv.appendChild(clEl('span', 'd', lesson.revisions[rvi].date));
+        rv.appendChild(document.createTextNode(lesson.revisions[rvi].note));
+        revs.appendChild(rv);
+      }
+      shell.appendChild(revs);
+    }
+
+    if (lesson.tiles && lesson.tiles.length) {
+      var tiles = clEl('div', 'cl-tiles');
+      for (var ti = 0; ti < lesson.tiles.length; ti++) {
+        var t = lesson.tiles[ti], tile = clEl('div', 'cl-tile');
+        tile.appendChild(clEl('div', 'k', t.k));
+        tile.appendChild(clEl('div', 'v', t.v));
+        tile.appendChild(clEl('div', 's', t.sub));
+        tiles.appendChild(tile);
+      }
+      shell.appendChild(tiles);
+    }
+
+    var body = clEl('div', 'cl-body');
+    var nav = clEl('nav', 'cl-nav');
+    nav.appendChild(clEl('div', 'hd', 'Sections'));
+    var main = clEl('div');
+    body.appendChild(nav); body.appendChild(main);
+    shell.appendChild(body);
+
+    // The nav tick box is rendered but never filled — the progress slice adds
+    // the 'done' class here and the mark-as-understood control per section.
+    function navLink(id, label) {
+      var a = document.createElement('a');
+      a.href = '#cl-' + id;
+      a.id = 'clnav-' + id;
+      a.appendChild(clEl('span', 'tick'));
+      a.appendChild(clEl('span', 'nm', label));
+      a.addEventListener('click', function(ev) {
+        ev.preventDefault();
+        var target = document.getElementById('cl-' + id);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      nav.appendChild(a);
+    }
+
+    var secs = lesson.sections || [];
+    for (var si = 0; si < secs.length; si++) {
+      main.appendChild(clRenderSection(secs[si]));
+      navLink(secs[si].id, secs[si].title);
+    }
+
+    if (lesson.glossary && lesson.glossary.length) {
+      var gsec = clEl('section', 'cl-sec');
+      gsec.id = 'cl-glossary';
+      gsec.appendChild(clEl('h3', null, 'Glossary'));
+      gsec.appendChild(clEl('div', 'cl-read',
+        lesson.glossary.length + ' terms — dotted terms anywhere in the lesson show these on hover'));
+      var grid = clEl('div', 'cl-gloss');
+      for (var gj = 0; gj < lesson.glossary.length; gj++) {
+        var g = lesson.glossary[gj], cell = clEl('div', 'cl-gl');
+        cell.appendChild(clEl('div', 't', g.t));
+        cell.appendChild(clEl('div', 'd', g.d));
+        grid.appendChild(cell);
+      }
+      gsec.appendChild(grid);
+      main.appendChild(gsec);
+      navLink('glossary', 'Glossary');
+    }
+
+    clBindTermTips(shell);
+    window.scrollTo(0, 0);
+  });
+}
+
+// ── Index rendering ───────────────────────────────────────────────────────
+// The server has already removed everything this tier may not read, so the
+// only gating expressed here is cosmetic: a withheld count the track op
+// supplied, and a provenance badge derived from the card's own `kinds`.
+function clGateBadge(card) {
+  var kinds = card.kinds || [];
+  var strictest = '';
+  ['guidance', 'briefing', 'report'].forEach(function(k) { if (kinds.indexOf(k) >= 0) strictest = k; });
+  if (!strictest) return null;
+  var label = strictest === 'report' ? 'report-derived'
+            : (strictest === 'briefing' ? 'corpus-derived' : 'guidance-derived');
+  return clEl('span', 'cl-badge ' + strictest, label);
+}
+
+function clLessonRow(card, n) {
+  var row = clEl('button', 'cl-row');
+  row.type = 'button';
+  row.appendChild(clEl('div', 'n', n === null ? '·' : String(n)));
+  var mid = clEl('div');
+  var t = clEl('div', 't', card.title);
+  var badge = clGateBadge(card);
+  if (badge) t.appendChild(badge);
+  mid.appendChild(t);
+  if (card.short) mid.appendChild(clEl('div', 's', card.short));
+  row.appendChild(mid);
+  var right = clEl('div', 'r', (card.sections || 0) + ' sections');
+  row.appendChild(right);
+  row.addEventListener('click', function() {
+    window.location.hash = 'lesson/' + card.id;
+  });
+  return row;
+}
+
+function clTrackCard(track) {
+  var box = clEl('div', 'cl-track');
+  box.appendChild(clEl('h3', null, track.title));
+  if (track.short) box.appendChild(clEl('p', 'cl-tsub', track.short));
+  var meta = (track.lessons || []).length + ' lesson' + ((track.lessons || []).length === 1 ? '' : 's');
+  if (track.updated) meta += '  ·  updated ' + track.updated;
+  box.appendChild(clEl('div', 'cl-meta', meta));
+  (track.lessons || []).forEach(function(card, i) { box.appendChild(clLessonRow(card, i + 1)); });
+  if (track.withheld) {
+    box.appendChild(clEl('div', 'cl-withheld', track.withheld === 1
+      ? '1 further lesson in this track needs a higher access level.'
+      : track.withheld + ' further lessons in this track need a higher access level.'));
+  }
+  return box;
+}
+
+function clRenderIndex(res, shell) {
+  shell.innerHTML = '';
+  var tracks = res.tracks || [], lessons = res.lessons || [];
+
+  var intro = clEl('div', 'cl-asof',
+    'Signed in as ' + (res.role || 'unknown') + '  ·  '
+    + tracks.length + ' track' + (tracks.length === 1 ? '' : 's') + ' readable  ·  '
+    + lessons.length + ' lesson' + (lessons.length === 1 ? '' : 's') + ' readable');
+  shell.appendChild(intro);
+
+  if (!tracks.length && !lessons.length) {
+    shell.appendChild(clEl('p', 'cl-empty',
+      'No Classroom content is readable at your access level yet.'));
+    return;
+  }
+
+  // Tracks grouped by lane, in registry order — the same lane ordering the
+  // guidance library uses, so the two apps read the same way.
+  var lanes = [], byLane = {};
+  tracks.forEach(function(t) {
+    var g = t.group || 'Other';
+    if (!byLane[g]) { byLane[g] = []; lanes.push(g); }
+    byLane[g].push(t);
+  });
+  lanes.forEach(function(g) {
+    shell.appendChild(clEl('div', 'cl-lane', g));
+    byLane[g].forEach(function(t) { shell.appendChild(clTrackCard(t)); });
+  });
+
+  // Anything readable that no readable track lists: briefings (a dated feed,
+  // never track members) first, then loose modules.
+  var inTracks = {};
+  tracks.forEach(function(t) { (t.lessons || []).forEach(function(c) { inTracks[c.id] = true; }); });
+  var briefings = lessons.filter(function(c) { return c.type === 'briefing'; });
+  var loose = lessons.filter(function(c) { return c.type !== 'briefing' && !inTracks[c.id]; });
+
+  if (briefings.length) {
+    shell.appendChild(clEl('div', 'cl-lane', 'Briefings'));
+    var bbox = clEl('div', 'cl-track');
+    briefings.sort(function(a, b) { return String(b.edition || '').localeCompare(String(a.edition || '')); });
+    briefings.forEach(function(c) { bbox.appendChild(clLessonRow(c, null)); });
+    shell.appendChild(bbox);
+  }
+  if (loose.length) {
+    shell.appendChild(clEl('div', 'cl-lane', 'Further modules'));
+    var lbox = clEl('div', 'cl-track');
+    loose.forEach(function(c) { lbox.appendChild(clLessonRow(c, null)); });
+    shell.appendChild(lbox);
+  }
+}
+
+// ── Views + routing ───────────────────────────────────────────────────────
+function clShell() {
+  var app = document.getElementById('cl-app');
+  if (!app) return null;
+  var shell = document.getElementById('cl-shell');
+  if (!shell) { shell = clEl('div'); shell.id = 'cl-shell'; app.appendChild(shell); }
+  return shell;
+}
+
+function clShowError(shell, err) {
+  shell.innerHTML = '';
+  shell.appendChild(clEl('div', 'cl-err', clErrText(err)));
+}
+
+function clShowIndex() {
+  var shell = clShell();
+  if (!shell) return;
+  if (clIndexCache) { clRenderIndex(clIndexCache, shell); window.scrollTo(0, 0); return; }
+  shell.innerHTML = '';
+  shell.appendChild(clEl('p', 'cl-loading', 'Loading tracks…'));
+  clApi('index', {}, function(res) {
+    if (!res || !res.success) { clShowError(shell, res && res.error); return; }
+    clIndexCache = res;
+    clRenderIndex(res, shell);
+    window.scrollTo(0, 0);
+  });
+}
+
+function clShowLesson(id) {
+  var shell = clShell();
+  if (!shell) return;
+  shell.innerHTML = '';
+  shell.appendChild(clEl('p', 'cl-loading', 'Loading lesson…'));
+  clApi('lesson', { id: id }, function(res) {
+    if (!res || !res.success) { clShowError(shell, res && res.error); return; }
+    clRenderLesson(res.lesson, shell);
+  });
+}
+
+// Hash routes: '' → the index, '#lesson/<id>' → one lesson. Deep links
+// survive a reload, and the browser's back button returns to the index.
+function clRoute() {
+  if (!clAdmitted()) return;
+  var h = String(window.location.hash || '').replace(/^#\/?/, '');
+  var m = /^lesson\/([a-z0-9][a-z0-9-]{0,63})$/.exec(h);
+  if (m) clShowLesson(m[1]); else clShowIndex();
+}
+
+// Mounted from the showApp wrapper below, so the curriculum appears only after
+// a validated session and only for an admitted tier.
+function clAppMount() {
+  if (!clAdmitted()) return;
+  var app = document.getElementById('cl-app');
+  if (!app) {
+    app = clEl('div'); app.id = 'cl-app';
+    var head = document.getElementById('cl-header');
+    if (head && head.parentNode) head.parentNode.insertBefore(app, head.nextSibling);
+    else document.body.appendChild(app);
+  }
+  if (app.dataset.mounted === '1') return;
+  app.dataset.mounted = '1';
+  app.style.display = 'block';
+  window.addEventListener('hashchange', clRoute);
+  clRoute();
+}
 
 // PROJECT END
 // ══════════════

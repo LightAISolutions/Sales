@@ -25,6 +25,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 GS = ROOT / "googleAppsScripts" / "Classroom" / "Classroom.gs"
+CONCEPTS = ROOT / "live-site-pages" / "profiler-data" / "profiler-concepts.json"
 
 SECTION_KINDS = {"prose", "callout", "table", "proscons", "timeline", "bars",
                  "flashcards", "quiz", "ledger"}
@@ -33,6 +34,7 @@ ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{0,63}$")            # CL_ID_RE
 REF_RE = re.compile(r"^([a-z]+):([A-Za-z0-9][A-Za-z0-9._-]{0,127})$")  # CL_REF_RE
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 CITE_TOKEN = re.compile(r"\[c:[^\]]+\]")
+TERM_TOKEN = re.compile(r"\{\{([^}]+)\}\}")
 
 errors, warnings = [], []
 
@@ -51,6 +53,45 @@ def read_gs():
     except OSError as e:
         err("cannot read %s — %s" % (GS, e))
         return ""
+
+
+def public_terms():
+    """Lowercased terms + aliases from the public concepts registry.
+
+    {{term}} tooltips resolve the lesson's own glossary first, then this
+    registry (CLASSROOM-SCHEMA.md, sections[]). A term in neither renders as a
+    dotted span with no tooltip behind it — visible to a reader, invisible in
+    review — so check_terms below warns on it. Returns None when the registry
+    cannot be read, which disables the check rather than failing the run.
+    """
+    try:
+        reg = json.loads(CONCEPTS.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        warn("cannot read %s — {{term}} coverage not checked" % CONCEPTS.name)
+        return None
+    out = set()
+    for c in reg.get("concepts") or []:
+        if not (isinstance(c, dict) and c.get("term")):
+            continue
+        out.add(str(c["term"]).lower())
+        for a in c.get("aliases") or []:
+            out.add(str(a).lower())
+    return out
+
+
+def check_terms(lesson, tag, public):
+    if public is None:
+        return
+    local = {str(g.get("t", "")).lower() for g in (lesson.get("glossary") or []) if isinstance(g, dict)}
+    seen = set()
+    for text in strings_in(lesson.get("sections") or []):
+        for t in TERM_TOKEN.findall(text):
+            k = t.lower()
+            if k in seen or k in local or k in public:
+                continue
+            seen.add(k)
+            warn("%s: {{%s}} resolves to no definition — add it to the lesson glossary "
+                 "or to profiler-concepts.json, or drop the braces" % (tag, t))
 
 
 def js_map(src, name):
@@ -195,7 +236,7 @@ def strings_in(node):
             yield from strings_in(v)
 
 
-def check_lesson(lesson, tag, ref_kinds, strictness, schema_ver):
+def check_lesson(lesson, tag, ref_kinds, strictness, schema_ver, public):
     for f in ("schemaVersion", "id", "title", "short", "group", "updated", "reviewBy",
               "provenance", "sections"):
         if f not in lesson:
@@ -234,6 +275,7 @@ def check_lesson(lesson, tag, ref_kinds, strictness, schema_ver):
         warn("%s: more than four tiles" % tag)
     check_stamp(lesson, tag, ref_kinds, strictness)
     check_sections(lesson.get("sections"), tag)
+    check_terms(lesson, tag, public)
 
 
 def check_track(track, tag, lessons_by_id, schema_ver):
@@ -456,10 +498,11 @@ def main():
         if fn not in tracks:
             err("clTracks_() registers %s() which is not defined" % fn)
 
+    public = public_terms()
     lessons_by_id, tracks_by_id = {}, {}
     for fn, l in lessons.items():
         tag = "%s()" % fn
-        check_lesson(l, tag, ref_kinds, strictness, lesson_ver)
+        check_lesson(l, tag, ref_kinds, strictness, lesson_ver, public)
         lid = l.get("id")
         if lid in lessons_by_id:
             err("%s: duplicate lesson id %r" % (tag, lid))

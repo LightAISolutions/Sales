@@ -45,7 +45,7 @@ The rule that makes "Everything" safe (`PHASE6-CLASSROOM-DESIGN.md`): **a lesson
 
 ## Lesson schema — `clLesson<Name>_()` (schema v1)
 
-A lesson is one teachable unit: a **module** (lives in tracks, taught once, refreshed when its inputs move) or a **briefing** (a dated "This week in BESS/AIDC" edition, a feed rather than a track member). Both use the same shape; `type` tells them apart. The section vocabulary is the guidance renderer's, so the Classroom renderer (next C1 slice) is the same engine study guides and reports already render on — one code path, per Phase 5.
+A lesson is one teachable unit: a **module** (lives in tracks, taught once, refreshed when its inputs move) or a **briefing** (a dated "This week in BESS/AIDC" edition, a feed rather than a track member). Both use the same shape; `type` tells them apart. The section vocabulary is the guidance renderer's, so the Classroom renderer in `Classroom.html` is that engine ported onto this page's palette — the same one study guides and reports render on, per Phase 5. A change to a section kind in either app belongs in both.
 
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
@@ -138,7 +138,7 @@ The stamp folds to `guidance` (one guidance input outranks the two public ones),
 
 ## Verification
 
-Run **`python3 scripts/check-classroom-content.py`** after any lesson, track, or stamp write — a write without a clean pass is incomplete (sibling rule to the study and report checkers). It parses every `clLesson<Name>_()` / `clTrack<Name>_()` literal out of `Classroom.gs` and validates both schemas, id rules and uniqueness, section kinds, track membership, prerequisite cycles, and every stamp against the prefix table **read from the `.gs` itself** (so the checker cannot drift from the code); then it loads the PROJECT region into Node and asserts the stamp → gate truth table (`clStampKinds_` → `clGateForProvenance_` → `clLessonVisible_` per tier, plus the per-tier index filtering) against fixtures. Also run `node --check` on a `.js` copy of `Classroom.gs` and `node scripts/check-gas-inner-scripts.js`, as for every GAS change.
+Run **`python3 scripts/check-classroom-content.py`** after any lesson, track, or stamp write — a write without a clean pass is incomplete (sibling rule to the study and report checkers). It parses every `clLesson<Name>_()` / `clTrack<Name>_()` literal out of `Classroom.gs` and validates both schemas, id rules and uniqueness, section kinds, track membership, prerequisite cycles, and every stamp against the prefix table **read from the `.gs` itself** (so the checker cannot drift from the code); then it loads the PROJECT region into Node and asserts the stamp → gate truth table (`clStampKinds_` → `clGateForProvenance_` → `clLessonVisible_` per tier, plus the per-tier index filtering) against fixtures. It also **warns on any `{{term}}` that resolves in neither the lesson's own glossary nor `profiler-data/profiler-concepts.json`** — an unresolvable term renders as a dotted span with no tooltip behind it, which a reader sees and a reviewer does not. Also run `node --check` on a `.js` copy of `Classroom.gs` and `node scripts/check-gas-inner-scripts.js`, as for every GAS change.
 
 ## Extending the schema
 

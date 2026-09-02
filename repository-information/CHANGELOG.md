@@ -3,11 +3,43 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.13r] — 2026-09-01 11:14:26 PM EST
+
+> **Prompt:** "Picking up from my last session, assemble the first tracks from the existing corpus on Opus 5 Extra: author public-stamped modules from the study guides and concepts registry plus one guidance-stamped module that deep-links pre-C3, register them in clLessons_() / clTracks_(), pass check-classroom-content.py, then port the guidance renderer into Classroom.html so the index and lesson views render through the new action=classroom ops."
+
+### Added
+
+**Classroom C1, content + renderer slice — the first tracks, and the guidance engine ported onto them.** The schema slice shipped empty registries on purpose; this fills them from the corpus that already exists and gives the page something to render. Every `provenance.inputs[]` entry names a source that was actually read while authoring — the stamp is a record, not a citation of convenience — and one lesson is deliberately guidance-derived so the fold is exercised by real content rather than only by fixtures.
+
+**`googleAppsScripts/Classroom/Classroom.gs` (v01.01g → v01.02g)**
+
+- **Five lesson literals, four public-stamped and one guidance-stamped.** `cell-to-container` and `duration-and-degradation` (from `study:catl`, `study:sungrow`, `study:fluence`, `study:tesla`), `the-aidc-power-chain` and `heat-is-the-constraint` (from `study:eaton`, `study:vertiv`, `study:nvidia`), each with `concepts:profiler-concepts`; and `spec-sheet-decoded`, built on `guidance:bess-tech-fundamentals-2026-08` plus public inputs, which folds to `guidance` and so is contributor+ only. The schema doc's worked example is now a real lesson
+- **Two track literals** — `bess-foundations` (3 lessons, Technology Foundations) and `aidc-power-primer` (2 lessons, The AI Data-Center Wave) — registered with the lessons in `clLessons_()` / `clTracks_()`, ordered by lane as `guidanceDocs_()` is in `Profiler.gs`
+- **The gate now runs on real content, not only fixtures:** analyst sees `bess-foundations` with two lessons and `withheld: 1`, and `spec-sheet-decoded` never appears in their lesson index at all; contributor and admin see all five
+
+**`live-site-pages/Classroom.html` (v01.00w → v01.01w)**
+
+- **The guidance renderer, ported.** `clRenderSection` and the per-kind primitives (`clTable`, `clProsCons`, `clTimeline`, `clBars`, `clFlashcards`, `clQuiz`, `clBindTermTips`, `clFmt`, `clReviewChip`) are Profiler's `gd*` engine on a light palette, so one section vocabulary now serves study guides, guidance modules, reports and lessons. Progress ticks are deliberately absent — that is the next slice, and the nav marker is a bullet rather than an empty checkbox so the page does not promise an interaction it lacks
+- **Index and lesson views over the `action=classroom` ops** — `clApi` rides the existing `_gasPost` transport (POST `action=classroom`, GET `api`/`op=classroom` fallback), so no new transport was introduced. The index groups tracks by lane, badges guidance/corpus/report-derived lessons, and shows a track's withheld count; `#lesson/<id>` hash routing makes a lesson bookmarkable and the browser's back button return to the index
+- **A provenance strip** renders a lesson's stamp as typed identities rather than URLs; a `guidance:` input deep-links to `Profiler.html#guidance`, matching the masthead's own pre-C3 link, so no data depends on another app's routes
+- **`--cl-measure`** unifies the masthead and curriculum column widths (C0 set the masthead to 900px when it was alone on the page); `#cl-app` paints above the template's fixed GAS iframe, which is left exactly as the template injects it because it carries the auth plumbing
+
+### Fixed
+
+- **Tooltip handlers were bound once per render onto a reused shell**, so a second lesson view stacked a click handler that re-hid the tip the instant the first showed it. Bound once per shell now — Profiler builds a fresh shell per document, which is why the original never hit this
+- **The tooltip hid on any nested scroll.** The scroll-to-hide listener was capture-phase on `window`, so scrolling a table's horizontal wrapper — which happens when hovering a term inside a wide table — dismissed the tip immediately. Non-capture on `window` catches document scroll only, which is the intent (the tip is positioned from viewport coordinates and must not float away)
+- **`{{Cycle life}}` in `spec-sheet-decoded` resolved to no definition**, rendering as a dotted term with nothing behind it. Added to that lesson's glossary, and `{{CRAC}}` / `{{CRAH}}` wired into the drill that names them
+
+### Changed
+
+- **`scripts/check-classroom-content.py`** now reads `profiler-data/profiler-concepts.json` and warns on any `{{term}}` that resolves in neither the lesson's glossary nor the public registry — the exact defect above, invisible in review and easy for C2's pipeline to reintroduce. Verified by probe: the warning fires and the run stays clean once the term resolves
+- **`repository-information/diagrams/Classroom-diagram.md`** gains the curriculum sequence (index → gated lesson fetch → stamp enforcement → concepts fallback) and a Key Design Note for the ops, matching how `profiler-diagram.md` and `Scraper-diagram.md` document their data ops. The mermaid.live pako URL was regenerated and verified by decompression
 
 ## [v04.12r] — 2026-09-01 10:31:20 PM EST
 

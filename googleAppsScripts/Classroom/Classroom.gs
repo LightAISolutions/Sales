@@ -1,4 +1,4 @@
-var VERSION = "v01.01g";
+var VERSION = "v01.02g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -469,12 +469,1502 @@ function clLessonVisible_(sess, lesson) {
   return !!cap && clCan_(sess, cap);
 }
 
-// Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs. Empty at
-// the schema slice: the next C1 slice assembles the first tracks from the
-// corpus and C2's pipeline appends to both. Register every clLesson<Name>_()
-// / clTrack<Name>_() here — the checker flags an unregistered literal.
-function clLessons_() { return []; }
-function clTracks_() { return []; }
+// ── The first tracks, assembled from the existing corpus (C1) ─────────────
+// Four public-stamped modules authored from the company study guides and the
+// public concepts registry, plus one guidance-stamped module built on the BESS
+// technology-fundamentals guidance analysis. Every input below is a source
+// actually read while authoring — the stamp is not a citation of convenience.
+// The guidance-stamped lesson folds to 'guidance', so analyst sees it only as
+// a withheld count inside its track; pre-C3 the renderer turns its guidance
+// input into a deep link out to Profiler's hub rather than embedding it.
+// Keep these literals strict JSON — scripts/check-classroom-content.py parses
+// them straight out of this file.
+
+function clLessonCellToContainer_() {
+  return {
+ "schemaVersion": 1,
+ "id": "cell-to-container",
+ "type": "module",
+ "title": "From Cell to Container",
+ "short": "How a 3-volt chemistry becomes the box a developer buys by the megawatt-hour — and why every layer in between costs money.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-01",
+ "reviewBy": "2027-03-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:catl",
+    "date": "2026-08-08",
+    "note": "the cell scoreboard, the assembly ladder, and the container-density argument"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sungrow",
+    "date": "2026-08-08",
+    "note": "P=V*I, why plants run high DC voltage, and the liquid-cooling rationale"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-08-31",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "~3.2 V",
+   "v": "one LFP cell",
+   "sub": "everything useful is thousands of them, wired and watched"
+  },
+  {
+   "k": "5 numbers",
+   "v": "the cell scoreboard",
+   "sub": "and they fight each other — no chemistry wins all five"
+  },
+  {
+   "k": "I²R",
+   "v": "why voltage keeps climbing",
+   "sub": "double the volts, quarter the loss, same power"
+  },
+  {
+   "k": "MWh / 20 ft",
+   "v": "what the buyer shops on",
+   "sub": "density per footprint is a direct project-cost lever"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "separator",
+   "d": "The thin porous film that keeps a cell's two electrodes from touching. Ions pass through it; if it fails, the electrodes short and the cell burns."
+  },
+  {
+   "t": "SEI",
+   "d": "Solid-electrolyte interphase — a parasitic layer that grows on the anode every cycle, permanently consuming a little lithium. It is the chemical reason capacity fades."
+  },
+  {
+   "t": "cell-to-pack",
+   "d": "Building a pack from large cells mounted straight into its structure, deleting the intermediate module layer and the housing that stores no energy."
+  },
+  {
+   "t": "DC block",
+   "d": "A container of batteries only, sold without the inverter. The buyer wires many DC blocks to central power-conversion skids and owns the integration."
+  },
+  {
+   "t": "balance of system",
+   "d": "Everything a plant buys that is not the generating or storing hardware itself — cabling, combiners, transformers, foundations. Often rivals the cells in cost."
+  },
+  {
+   "t": "cycle life",
+   "d": "How many full charge-discharge round trips a cell survives before its usable capacity falls to the warranty floor — conventionally about 80% of the original rating."
+  }
+ ],
+ "sections": [
+  {
+   "id": "what-a-cell-is",
+   "title": "What a cell actually is",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A battery cell is a controlled chemical reaction with a wire in the way. Ions shuttle between two electrodes through a liquid electrolyte while the electrons — blocked from taking the direct route — are forced around an external circuit, where they do useful work. Charging runs the shuttle backwards. A {{separator}} keeps the electrodes apart, because electrodes touching is a short circuit, and a short circuit in a lithium cell is a fire.",
+    "One cell is about 3.2 to 3.7 volts and, in grid sizes, a few hundred amp-hours. That is a torch, not a power plant. Everything useful — a vehicle pack, a grid container — is thousands of cells in series and parallel with a {{BMS}} watching every one of them for voltage and temperature. The management electronics are not an accessory; without them a large series string is a hazard.",
+    "Three chemistries carry the conversation. {{NMC}} packs the most energy per kilogram, costs the most, and is the least thermally forgiving — which is why it went into long-range vehicles. {{LFP}} gives up roughly a fifth to a third of that density, drops the nickel and cobalt, tolerates far more cycles and is much harder to set alight — which is why it took nearly all of grid storage. {{sodium-ion}} swaps lithium for sodium: cheaper feedstock, excellent in deep cold, and a further density penalty, so it lands on short-duration and cold-climate duty rather than replacing LFP.",
+    "Degradation is the chemistry's tax and it is charged every cycle. The {{SEI}} layer grows on the anode and takes a little lithium out of circulation forever; heat, deep discharge and hard charging all accelerate it. That is why a cell rated for 15,000 cycles and one rated for 6,000 are not the same product with different stickers — they are a 25-year asset and a 10-year asset."
+   ],
+   "sales": "When a buyer asks \"which chemistry\", they are usually asking \"what is my risk in year twelve\". Answer with cycle life and thermal behaviour, not with energy density."
+  },
+  {
+   "id": "the-five-numbers",
+   "title": "The scoreboard, and why it fights itself",
+   "kind": "table",
+   "read": "2 min",
+   "intro": "Every chemistry is a different compromise among the same five numbers. No cell wins all of them, so the useful question is always *which two matter for this duty*.",
+   "cols": [
+    "Number",
+    "What it measures",
+    "Who it actually matters to"
+   ],
+   "rows": [
+    [
+     "Energy density by weight (Wh/kg)",
+     "Energy per kilogram of cell",
+     "Vehicles and aircraft, where mass is carried. A parked container does not care."
+    ],
+    [
+     "Energy density by volume (Wh/L)",
+     "Energy per litre of cell",
+     "Anything with a fixed footprint — a car floor, a 20-foot container, a leased acre."
+    ],
+    [
+     "Cycle life",
+     "Full charge-discharge round trips before capacity fades to the warranty floor",
+     "Grid owners financing a 20-year asset that cycles daily. This is the number lenders read."
+    ],
+    [
+     "Charge rate ({{C-rate}})",
+     "How fast energy goes in or out relative to capacity",
+     "Fast-charging vehicles and power-duty grid work. A high rate is a materials-and-cooling claim, not a charger setting."
+    ],
+    [
+     "Cost per kWh",
+     "What the energy costs to buy",
+     "Everyone — but it is set by manufacturing scale, not by chemistry alone."
+    ]
+   ],
+   "note": "Two systems can quote the same MWh and behave nothing alike. The MWh is the tank; the other four numbers describe how long it lasts and how hard you may use it."
+  },
+  {
+   "id": "the-assembly-ladder",
+   "title": "The ladder from cell to grid",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The classic build stacks layers: cells are welded into **modules** with sensors and cooling plates, modules stack into **racks**, and racks fill an **enclosure** with liquid cooling, fire suppression and venting. Each layer adds brackets, housing and wiring that store exactly zero energy, which is why the industry keeps deleting layers — {{cell-to-pack}} designs mount large cells directly into the structure and win back volume without changing chemistry at all.",
+    "Grid storage is the same cells in a different costume. Cells go into liquid-cooled racks, racks fill a 20-foot container, and that container — the {{DC block}} — is the product a developer shops for. Downstream sits the {{PCS}}, the bidirectional inverter that turns container DC into grid-synchronised AC and back, then a medium-voltage transformer, then the substation, then the grid.",
+    "Voltage discipline runs through the whole chain, and it is one equation. Power is voltage times current, and wires waste power as heat proportional to current *squared*. Move the same megawatts at twice the voltage and you need half the current and a quarter of the copper losses. That is why plants run 1,500-volt DC strings and why every generation of equipment pushes the working voltage up again.",
+    "Liquid cooling won for a reason that is about ageing rather than comfort. Cells age faster when hot, and — worse — cells that age *unevenly* drift apart in behaviour until the weakest one limits the whole string. Cold plates hold every cell within a couple of degrees of its neighbours, which buys both life and the right to pack more energy into the same box. {{thermal runaway}} is the failure the rest of the fire engineering exists to contain."
+   ],
+   "sales": "Know which layer you are quoting. A DC-block spec sheet answers nothing about the conversion chain, and a buyer comparing a DC block against an AC block is comparing two different scopes of work."
+  },
+  {
+   "id": "why-containers-grew",
+   "title": "Why the container kept growing",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MWh per 20-foot footprint (class-representative)",
+   "intro": "A project that needs a gigawatt-hour pays for every container it installs — foundation, cable run, crane lift, conversion skid. Density per footprint is therefore a direct cost lever, and vendors have raced on it for four years.",
+   "items": [
+    {
+     "label": "2022 class",
+     "v": 3.35,
+     "sub": "the then-standard 20-foot DC block"
+    },
+    {
+     "label": "2023 class",
+     "v": 5,
+     "sub": "larger cells, same footprint"
+    },
+    {
+     "label": "2024 class",
+     "v": 6.25,
+     "sub": "the volume workhorse of the delivered fleet"
+    },
+    {
+     "label": "2025+ class",
+     "v": 9,
+     "sub": "kilo-amp-hour-class cells, fewer parts per megawatt-hour"
+    }
+   ],
+   "note": "Fewer, bigger cells means fewer welds and fewer connections — directionally cheaper to integrate. The honest tradeoff is thermal management and propagation behaviour, which is why fire-test data has to keep pace with the cell ladder."
+  },
+  {
+   "id": "stationary-is-not-automotive",
+   "title": "The mistake to stop making",
+   "kind": "callout",
+   "read": "1 min",
+   "ps": [
+    "Nobody weighs a grid container. Wh/kg — the number that sells a car — is close to irrelevant once the box is bolted to a concrete pad. What a storage buyer reads instead is energy per square metre of leased land, {{round-trip efficiency}}, auxiliary draw from the cooling system, safety listings, {{cycle life}}, and the shape of the degradation warranty that decides how much {{augmentation}} has to be budgeted for year ten.",
+    "The same cell family sells as 1-, 2-, 4-, 6- or 8-hour storage purely by changing the ratio of energy to conversion power. Long {{duration}} means more containers per megawatt, which means cell cost dominates the bill — which is exactly the ground where cheap, long-lived chemistries win."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why does grid storage use LFP when premium EVs use NMC?",
+     "a": "Stationary storage does not carry its own weight, so it trades energy density for the things it does need: cycle life, thermal stability and cost per cycle. NMC's density advantage buys vehicle range, which a container has no use for."
+    },
+    {
+     "q": "What does the separator do, and what happens when it fails?",
+     "a": "It is the porous film that lets ions pass while keeping the two electrodes from touching. If it fails, the electrodes short internally — the origin of most cell fires."
+    },
+    {
+     "q": "Why do plants keep raising DC voltage?",
+     "a": "Power = voltage x current, and losses go as current squared. Doubling voltage halves the current and quarters the resistive loss for the same power, so less copper carries more energy."
+    },
+    {
+     "q": "What is augmentation and why is it designed in on day one?",
+     "a": "Adding fresh capacity later so a faded site still meets its contracted megawatt-hours. It needs spare space, spare conversion headroom and controls that can mix old and new cells — none of which can be retrofitted into a full site."
+    },
+    {
+     "q": "Why did liquid cooling displace air in grid containers?",
+     "a": "It holds every cell within a couple of degrees of its neighbours. That slows ageing and, more importantly, keeps cells ageing *evenly* so no weak cell limits the string — which also permits more energy in the same enclosure."
+    },
+    {
+     "q": "A container is quoted at 5 MWh. What have you not yet been told?",
+     "a": "Its power rating — and therefore its duration — plus the degradation curve, the round-trip efficiency, the auxiliary draw and whether the price includes the conversion system."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A developer says footprint is their binding constraint. Which cell number matters most?",
+     "c": [
+      "Energy density by volume (Wh/L)",
+      "Energy density by weight (Wh/kg)",
+      "Charge rate (C-rate)",
+      "Nominal cell voltage"
+     ],
+     "a": 0,
+     "why": "Land is fixed and the container is a fixed box, so energy per unit volume — and ultimately per square metre of site — is what converts into fewer containers, pads and cable runs."
+    },
+    {
+     "q": "What does a 4-hour system mean?",
+     "c": [
+      "It discharges at rated power for about four hours",
+      "It fully charges in four hours",
+      "Its cells last four times longer",
+      "It has four conversion systems"
+     ],
+     "a": 0,
+     "why": "Duration is energy divided by power. Four hours means the tank holds four hours of flow at the rated pipe size — it says nothing about charging time or cell life."
+    },
+    {
+     "q": "Why does deleting the module layer increase pack energy without changing chemistry?",
+     "c": [
+      "The module housing and brackets stored no energy",
+      "It raises the cell voltage",
+      "It lowers the C-rate",
+      "It removes the need for a BMS"
+     ],
+     "a": 0,
+     "why": "Every intermediate layer spends weight and volume on structure. Mounting large cells straight into the pack recovers that space for active material."
+    },
+    {
+     "q": "A vendor advertises a 12C cell. What is that mainly a claim about?",
+     "c": [
+      "Materials and cooling design",
+      "The charger supplied with it",
+      "The warranty length",
+      "The cell's nominal voltage"
+     ],
+     "a": 0,
+     "why": "Pushing ions in that fast risks plating lithium as metal on the anode and generates a lot of heat, so a high C-rate is a statement about electrode materials and thermal design, not about the power supply."
+    },
+    {
+     "q": "Two 20-foot containers both quote 5 MWh. What most plausibly differs in project cost?",
+     "c": [
+      "Everything around them — pads, cabling, conversion, land per MWh",
+      "The chemistry of the electrolyte",
+      "The colour of the enclosure",
+      "The nominal grid frequency"
+     ],
+     "a": 0,
+     "why": "Balance-of-system costs scale with the number of installed units and the site area they occupy, and they routinely rival the cells themselves."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonDurationDegradation_() {
+  return {
+ "schemaVersion": 1,
+ "id": "duration-and-degradation",
+ "type": "module",
+ "title": "Duration, Degradation, and the Twenty-Year Promise",
+ "short": "Power and energy are two different numbers. What each one buys, how capacity fades, and what a vendor is actually guaranteeing.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-01",
+ "reviewBy": "2027-03-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:fluence",
+    "date": "2026-08-08",
+    "note": "the DC-block / AC-block split, the project cast, augmentation and synthetic inertia"
+   },
+   {
+    "kind": "public",
+    "ref": "study:tesla",
+    "date": "2026-08-08",
+    "note": "power-versus-energy framing, revenue stacking, merchant versus contracted"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-08-31",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "MW vs MWh",
+   "v": "pipe vs tank",
+   "sub": "duration = energy / power, and it decides the job"
+  },
+  {
+   "k": "~80%",
+   "v": "the warranty floor",
+   "sub": "cycle-life ratings are quoted down to it, not to zero"
+  },
+  {
+   "k": "year 10",
+   "v": "when augmentation lands",
+   "sub": "the headroom for it is a day-one design choice"
+  },
+  {
+   "k": "milliseconds",
+   "v": "why batteries win ancillary",
+   "sub": "paid for readiness, not only for energy delivered"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "state of charge",
+   "d": "How full the battery is right now, as a percentage of usable capacity. The control system holds it inside limits that protect both safety and warranty."
+  },
+  {
+   "t": "AC block",
+   "d": "A storage product delivered with its inverter included, arriving as grid-ready AC. The vendor owns the performance of the whole conversion chain."
+  },
+  {
+   "t": "commissioning",
+   "d": "The handover gate: every subsystem configured and tested against contract specification before commercial operation. The meter only starts earning afterwards."
+  },
+  {
+   "t": "revenue stacking",
+   "d": "Running one battery across several markets in the same period — frequency response in the afternoon, arbitrage in the evening, capacity all month."
+  },
+  {
+   "t": "synthetic inertia",
+   "d": "Programming an inverter to imitate the stabilising response a spinning generator gives a grid for free, so a grid full of inverters keeps its frequency steady."
+  },
+  {
+   "t": "cycle life",
+   "d": "How many full charge-discharge round trips a cell survives before usable capacity reaches the warranty floor."
+  }
+ ],
+ "sections": [
+  {
+   "id": "power-and-energy",
+   "title": "Two numbers, not one",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Every storage system is described by two independent numbers, and confusing them is the most common mistake a newcomer makes. **Power** — megawatts — is how fast the system can push or pull. It is the size of the pipe, and it is set by the {{PCS}}. **Energy** — megawatt-hours — is how much it holds. It is the size of the tank, and it is set by the cells.",
+    "{{Duration}} is simply energy divided by power. A 20 MWh system with a 5 MW conversion rating is a four-hour system: it delivers 5 MW for four hours. The same cells behind a 10 MW conversion rating would be a two-hour system instead. Nothing about the chemistry changed — the ratio did.",
+    "Duration decides which jobs the asset can take. Short duration suits fast, frequent, shallow work: correcting grid frequency second by second, standing ready as reserve. Long duration suits shifting bulk energy — charging on a midday solar glut and discharging into the evening peak. As solar penetration rises the market keeps asking for longer durations, because the surplus it must absorb keeps getting wider.",
+    "Batteries respond in milliseconds, which is faster than any turbine can physically move. That is why they earn disproportionately in the markets that pay for *response* rather than for energy — and why a battery's revenue is a portfolio rather than a single line."
+   ],
+   "sales": "Never quote MWh alone. A megawatt-hour figure without its power rating describes a tank with no stated tap."
+  },
+  {
+   "id": "what-duration-buys",
+   "title": "What each duration class is for",
+   "kind": "table",
+   "read": "2 min",
+   "cols": [
+    "Duration",
+    "Typical duty",
+    "What decides the economics"
+   ],
+   "rows": [
+    [
+     "Under 1 hour",
+     "Frequency response and fast reserve — being paid to stand ready",
+     "Conversion power and response speed. Cell energy is almost incidental, so cost per MW dominates."
+    ],
+    [
+     "1–2 hours",
+     "Peak shaving, ramp smoothing, capacity obligations",
+     "A balance: enough energy to cover the peak, enough power to be useful between peaks."
+    ],
+    [
+     "4 hours",
+     "The workhorse shifting duty — charge on midday solar, discharge into the evening",
+     "Cell cost per kWh and the degradation curve, because the asset cycles deeply every single day."
+    ],
+    [
+     "6–8 hours and beyond",
+     "Bulk shifting on high-renewable grids; long-duration contracts",
+     "Almost entirely cell cost and {{cycle life}} — more containers per MW means the chemistry bill dominates."
+    ]
+   ],
+   "note": "These are different products, not one product throttled. Duration is chosen at design time by the energy-to-power ratio, and the container count, land area and conversion scope all move with it."
+  },
+  {
+   "id": "the-fade",
+   "title": "How the promise is written",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Capacity fades with use, and the vendor's degradation curve is a commitment about how fast. Ratings are quoted down to a floor — conventionally around 80% of original capacity — not to zero, because a contract that needs a fixed number of megawatt-hours stops being satisfied long before the cells stop working.",
+    "That is what {{augmentation}} is for: adding fresh capacity partway through life so a faded site still delivers its contracted energy. It sounds like a maintenance decision, but it is a design decision. Augmentation needs physical space, spare conversion and cabling headroom, and controls willing to mix new cells with aged ones. None of that can be added to a site that was built full.",
+    "This is why the degradation curve gets more scrutiny than almost any other line on the sheet. The financial model — the pro forma the lenders underwrite — is built directly on it, and an independent engineer will test the revenue assumptions against the warranty envelope rather than against the marketing headline. A curve that is optimistic by two points a year moves an augmentation event forward by years.",
+    "The control layer is what keeps the promise honest in operation. An energy management system watches every rack's temperature and {{state of charge}}, enforces the safety and warranty limits, and executes dispatch. Cycling harder earns more today and ages the asset measurably faster, so the optimiser is always trading present revenue against a warranty it must not breach."
+   ],
+   "sales": "The warranty curve and the augmentation path are where the second decade of the deal is won. Lead with them; they are the questions the lender is going to ask anyway."
+  },
+  {
+   "id": "block-architecture",
+   "title": "Where the inverter sits",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "Batteries are DC and the grid is AC, so every site needs conversion. *Where that conversion sits* defines the two architectures on the market — and defines who owns the integration risk.",
+   "cards": [
+    {
+     "t": "DC block",
+     "meta": "Container of batteries only; conversion bought separately",
+     "adv": [
+      "Lowest cost per delivered megawatt-hour of hardware",
+      "Buyer can select conversion vendors independently and standardise across sites",
+      "Central conversion skids can be sized and maintained as their own fleet"
+     ],
+     "dis": [
+      "The buyer, or their engineering firm, owns the integration and its risk",
+      "Performance guarantees stop at the container boundary — nobody warrants the whole chain",
+      "More field-installed cable and connection points, each one labour and a potential fault"
+     ]
+    },
+    {
+     "t": "AC block",
+     "meta": "Conversion included; delivers grid-ready AC — the vendor warrants the whole chain",
+     "adv": [
+      "One vendor warrants the entire conversion chain end to end",
+      "Far less site engineering; each block is independent and factory-testable",
+      "Faster to commission, which pulls revenue forward"
+     ],
+     "dis": [
+      "Higher unit price for the same stored energy",
+      "Conversion vendor choice is made for you",
+      "A small efficiency cost relative to sharing large central inverters"
+     ]
+    }
+   ],
+   "note": "Neither is the right answer in general. The question is who in the deal is best placed to carry integration risk — and whether that party is being paid for it."
+  },
+  {
+   "id": "how-the-plant-earns",
+   "title": "How the asset actually earns",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "There are three income shapes. **Energy arbitrage** pays for megawatt-hours moved from cheap hours to expensive ones. **Ancillary services** pay for being ready — correcting frequency within seconds, holding reserve. **Capacity** pays for being reliably available at system peak, whether or not the asset is called.",
+    "{{Revenue stacking}} means running the same battery across all three in the same month without violating its {{state of charge}} limits or its warranty cycle budget. Bids go into wholesale markets every few minutes against price forecasts, which is far beyond human pace — the trading software is not a convenience, it is the revenue.",
+    "The commercial split follows. A **contracted** battery earns a fixed toll — a capacity payment or a utility offtake agreement — and its returns are predictable and financeable. A **merchant** battery keeps whatever its forecasting and bidding extract from volatile prices: bigger upside, and entirely dependent on software quality.",
+    "One physics job is worth knowing because it keeps appearing in tenders. Grids historically got stability free from the spinning mass of large generators resisting frequency change. As that mass retires, inverter-based storage can be programmed to imitate the response — {{synthetic inertia}} — and to damp oscillations on long transmission lines. Storage sited to relieve a congested line is sometimes sold as a virtual power line rather than as a generator at all."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "A system is 40 MWh and 10 MW. What is its duration, and what is that good for?",
+     "a": "Four hours. That is the workhorse shifting duty — charge on a midday surplus, discharge across the evening peak — where cell cost and the degradation curve dominate the economics."
+    },
+    {
+     "q": "Why is cycle life quoted to about 80% of capacity rather than to failure?",
+     "a": "Because the contract needs a fixed number of megawatt-hours. Once capacity falls below what the contract accepts, the asset has failed commercially long before the cells stop working."
+    },
+    {
+     "q": "Why can augmentation not be retrofitted into a full site?",
+     "a": "It needs space, conversion and cabling headroom, and controls able to mix aged and new cells. All three are decided when the site is designed, not when the capacity runs short."
+    },
+    {
+     "q": "What is the real difference between a DC block and an AC block?",
+     "a": "Who owns integration risk. A DC block leaves the conversion chain to the buyer; an AC block arrives grid-ready with one vendor warranting the whole path."
+    },
+    {
+     "q": "Why do batteries earn disproportionately in ancillary markets?",
+     "a": "They respond in milliseconds — faster than any rotating machine — and those markets pay for speed and readiness rather than for energy delivered."
+    },
+    {
+     "q": "What does the energy management system trade off every day?",
+     "a": "Revenue now against warranty later. Deeper, harder cycling earns more today and measurably ages the cells, so dispatch is optimised inside state-of-charge and cycle-budget limits."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "The same battery cells are put behind twice as much conversion power. What changes?",
+     "c": [
+      "Duration halves; stored energy is unchanged",
+      "Stored energy doubles",
+      "Cycle life doubles",
+      "Round-trip efficiency doubles"
+     ],
+     "a": 0,
+     "why": "Duration is energy divided by power. Widening the pipe empties the same tank in half the time — it does not add energy."
+    },
+    {
+     "q": "Which number does a lender scrutinise hardest on a 20-year storage asset?",
+     "c": [
+      "The degradation curve",
+      "The container's paint specification",
+      "Energy density in Wh/kg",
+      "The number of MPPT channels"
+     ],
+     "a": 0,
+     "why": "The financial model is built on how much capacity remains each year. An optimistic curve moves the augmentation spend and breaks the pro forma."
+    },
+    {
+     "q": "A merchant battery differs from a contracted one mainly in that it:",
+     "c": [
+      "Earns whatever forecasting and bidding extract from volatile prices",
+      "Uses a different battery chemistry",
+      "Cannot provide frequency response",
+      "Is exempt from commissioning"
+     ],
+     "a": 0,
+     "why": "Contracted assets earn a fixed toll and are easy to finance. Merchant assets keep the volatility — upside and downside both — which makes the trading software the differentiator."
+    },
+    {
+     "q": "Why does revenue stacking need software rather than a schedule?",
+     "c": [
+      "Bids are re-optimised every few minutes against forecasts and warranty limits",
+      "Regulators require a software vendor",
+      "Batteries cannot be dispatched manually at all",
+      "It reduces the cell count"
+     ],
+     "a": 0,
+     "why": "Prices move on a five-minute cadence, and every bid has to respect state-of-charge and cycle-budget constraints simultaneously. That is an optimisation problem, not a timetable."
+    },
+    {
+     "q": "What is synthetic inertia for?",
+     "c": [
+      "Imitating the stabilising response retiring spinning generators used to provide",
+      "Increasing the container's energy density",
+      "Reducing the cost of the transformer",
+      "Extending warranty cycle counts"
+     ],
+     "a": 0,
+     "why": "Grids leaned on the physical mass of large turbines to resist frequency change. Inverters can be programmed to reproduce that response as those machines retire."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonSpecSheet_() {
+  return {
+ "schemaVersion": 1,
+ "id": "spec-sheet-decoded",
+ "type": "module",
+ "title": "The Spec Sheet, Decoded",
+ "short": "Every line on a grid-BESS container spec sheet, what it plainly means, and the question the buyer is really asking.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-01",
+ "reviewBy": "2027-02-24",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "guidance",
+    "ref": "guidance:bess-tech-fundamentals-2026-08",
+    "date": "2026-08-24",
+    "note": "the spec-sheet decode table, the cell ladder, and the certification vocabulary"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sungrow",
+    "date": "2026-08-08",
+    "note": "worked example of one vendor's conversion and container line"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-08-31",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "8 lines",
+   "v": "decide the deal",
+   "sub": "the rest of the sheet is context"
+  },
+  {
+   "k": "280 → 1300 Ah",
+   "v": "the cell ladder",
+   "sub": "fewer, larger cells per megawatt-hour"
+  },
+  {
+   "k": "≥95%",
+   "v": "round-trip, DC side",
+   "sub": "every lost point is energy bought twice"
+  },
+  {
+   "k": "test method",
+   "v": "not a certification",
+   "sub": "UL 9540A has no pass or fail"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "cycle life",
+   "d": "How many full charge-discharge round trips a cell survives before usable capacity reaches the warranty floor — conventionally about 80% of the original rating."
+  },
+  {
+   "t": "state of health",
+   "d": "Remaining usable capacity as a percentage of the original rating — the running score the degradation warranty is written against."
+  },
+  {
+   "t": "derating",
+   "d": "Operating below rated power or energy because a condition — usually temperature — is outside the window the equipment was designed for."
+  },
+  {
+   "t": "footprint density",
+   "d": "Energy delivered per square metre of occupied site. The stationary industry's answer to the vehicle industry's energy-per-kilogram."
+  },
+  {
+   "t": "UL 1973",
+   "d": "A certification listing covering cells, modules and racks — the component level of the battery safety file."
+  },
+  {
+   "t": "UL 9540",
+   "d": "The certification listing covering a complete integrated energy storage system, and the umbrella listing local authorities normally require."
+  },
+  {
+   "t": "large-scale fire test",
+   "d": "A full unit deliberately set alight with suppression disabled, to demonstrate that fire does not propagate to neighbouring units."
+  }
+ ],
+ "sections": [
+  {
+   "id": "why-the-sheet-is-the-sale",
+   "title": "Why the sheet is the sale",
+   "kind": "prose",
+   "read": "2 min",
+   "ps": [
+    "Buyers of grid storage rarely ask how the chemistry works. They ask what happens in year twelve, whether the site still meets contract, and who pays if it does not. Almost every one of those questions is answered — or dodged — somewhere on the container spec sheet, which is why reading one properly is the single most transferable skill in this business.",
+    "The sheet has two kinds of line. Some are descriptive: how much energy, at what power, in what box. Those are easy and everyone quotes them. The rest are commitments — degradation, operating window, augmentation path, safety file — and those are where a comparison between two vendors actually resolves.",
+    "The discipline that follows is simple to state and hard to hold: quote what ships today, show the roadmap separately, and be explicit about what will be committed to in writing. A spec line that blurs shipping product with roadmap is the single easiest thing for a competitor to take apart in front of your buyer."
+   ],
+   "sales": "Lead with the warranty curve and the augmentation path, not with the chemistry. The chemistry is table stakes; the second decade is the argument."
+  },
+  {
+   "id": "line-by-line",
+   "title": "Line by line",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The eight lines that carry the decision. Read the third column as the question the buyer is actually asking when they point at the second.",
+   "cols": [
+    "Spec line",
+    "Plain meaning",
+    "What the buyer is really asking"
+   ],
+   "rows": [
+    [
+     "{{Cycle life}}",
+     "Full round trips before capacity reaches the warranty floor",
+     "How long is this a working asset, and how often must I spend on {{augmentation}}? Storage-class {{LFP}} rates in the ten-thousand-plus range by class."
+    ],
+    [
+     "Energy density (Wh/kg · Wh/L)",
+     "Energy per unit of weight and of volume",
+     "How much land do I lease? Weight is a vehicle metric — answer a developer in {{footprint density}}, energy per square metre of site, instead."
+    ],
+    [
+     "{{Round-trip efficiency}}",
+     "Energy out divided by energy in",
+     "What do losses cost me over twenty years? Every lost point is energy bought twice. Modern systems run at or above 95% on the DC side."
+    ],
+    [
+     "Degradation / {{state of health}} curve",
+     "Capacity remaining, year by year",
+     "Does my financial model survive an independent engineer? The pro forma is built on this curve, and it will be tested against the warranty envelope, not the brochure."
+    ],
+    [
+     "{{Duration}} class",
+     "Hours of discharge at rated power",
+     "Does this product match my revenue duty at all? Two-, four- and eight-hour systems are different products, not one product turned down."
+    ],
+    [
+     "Operating window",
+     "Temperature range without {{derating}}",
+     "Where can I actually site this? Hardened variants extend the range at both ends; outside it, the nameplate is not the delivered capacity."
+    ],
+    [
+     "{{Footprint density}}",
+     "Energy per square metre of occupied site",
+     "How many pads, cable runs and crane lifts am I buying? Land and balance-of-plant scale with area, not with nameplate."
+    ],
+    [
+     "{{Augmentation}} path",
+     "How capacity is restored later",
+     "Did you design year ten in, or are you selling me a problem? Space, conversion and controls headroom must exist on day one — they cannot be retrofitted into a full site."
+    ]
+   ],
+   "note": "A sheet that answers the first column confidently and goes quiet on the third is a sheet written for a procurement checklist rather than for an owner."
+  },
+  {
+   "id": "the-cell-ladder",
+   "title": "The cell ladder behind the sheet",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "Ah per cell (class-representative sizes)",
+   "intro": "Container density did not improve by magic. It improved because the industry climbed a cell ladder, and knowing where a product sits on it explains most of its spec sheet.",
+   "items": [
+    {
+     "label": "280 Ah class",
+     "v": 280,
+     "sub": "the long-standing catalogue baseline across vendors"
+    },
+    {
+     "label": "314 Ah class",
+     "v": 314,
+     "sub": "the current volume workhorse of the delivered fleet"
+    },
+    {
+     "label": "500–600 Ah class",
+     "v": 587,
+     "sub": "in mass production and delivering since 2025"
+    },
+    {
+     "label": "kilo-amp-hour class",
+     "v": 1175,
+     "sub": "1,000+ Ah cells, first mass production 2025"
+    },
+    {
+     "label": "8-hour-native kAh",
+     "v": 1300,
+     "sub": "long-duration-native designs, deliveries ramping"
+    }
+   ],
+   "note": "Fewer cells per container means fewer welds, fewer connections and fewer failure points — a directional integration-cost argument, not a costed bill of materials. The honest counterweight is thermal management and propagation behaviour, which is why the fire-test file has to climb the ladder alongside the cells."
+  },
+  {
+   "id": "safety-words",
+   "title": "The certification words, precisely",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "{{Thermal runaway}} is the failure everything else is designed against: a cell overheats past the point of self-acceleration, and its neighbours follow. Liquid cooling, cell spacing, venting, gas detection and suppression all exist to prevent the first event and to contain it if it happens. LFP's thermal stability is the head start the chemistry gives you.",
+    "The vocabulary is worth getting exactly right, because getting it wrong is the fastest way to lose a technical buyer. {{UL 1973}} covers cells, modules and racks. {{UL 9540}} covers the complete integrated system and is the listing local authorities normally require. **{{UL 9540A}} is a test method with no pass or fail** — it produces propagation data at cell, module and unit level. Never say \"9540A certified\"; say *tested at cell, module and unit level, reports available*.",
+    "{{NFPA 855}} is the installation standard, and as states adopt it the {{large-scale fire test}} — one unit fully alight, suppression off, no propagation to its neighbours — becomes effectively mandatory. A larger cell without matching test data is a harder bankability story, not an easier one."
+   ],
+   "sales": "Precision here is credibility. \"Certified\" where the correct word is \"tested\" tells a technical buyer you have not read your own safety file."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "A developer asks about energy density. What do you answer with instead?",
+     "a": "Footprint economics — energy per square metre of site. Weight is a vehicle metric; land cost is its stationary equivalent, and it is what converts into pads, cable runs and lifts."
+    },
+    {
+     "q": "Why is UL 9540A never something a product is 'certified' to?",
+     "a": "Because it is a test method, not a listing. It has no pass or fail — it produces propagation data at cell, module and unit level. The correct claim is that testing was done and reports are available."
+    },
+    {
+     "q": "Two vendors quote the same MWh, the same duration and the same efficiency. Where does the comparison actually resolve?",
+     "a": "The degradation curve and the augmentation path — how much capacity remains each year, and whether the site was designed with the space and headroom to restore it."
+    },
+    {
+     "q": "What does climbing the cell ladder buy, and what does it cost?",
+     "a": "It buys fewer cells, welds and connections per megawatt-hour, so lower integration cost and fewer failure points. It costs harder thermal management and propagation behaviour, so the fire-test file must keep pace."
+    },
+    {
+     "q": "Why does the operating window matter more than it looks?",
+     "a": "Outside the stated range the system derates, so the nameplate stops being the delivered capacity. It is a siting constraint disguised as a footnote."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "4 questions",
+   "items": [
+    {
+     "q": "Which spec line most directly sets how often a site needs augmentation?",
+     "c": [
+      "The degradation / state-of-health curve",
+      "The enclosure ingress rating",
+      "The nominal cell voltage",
+      "The transport dimensions"
+     ],
+     "a": 0,
+     "why": "Augmentation is triggered when remaining capacity can no longer meet the contracted energy. The curve is what predicts that date, which is why the pro forma is built on it."
+    },
+    {
+     "q": "A buyer says round-trip efficiency is 'only a couple of points'. What is the correct reply?",
+     "c": [
+      "Every lost point is energy bought twice, across twenty years of daily cycling",
+      "Efficiency is fixed by the grid operator",
+      "Efficiency only matters for short-duration systems",
+      "It affects the warranty length"
+     ],
+     "a": 0,
+     "why": "Losses are paid on the way in and never recovered on the way out. Over a daily-cycling twenty-year asset, a point or two of efficiency is a large cumulative energy bill."
+    },
+    {
+     "q": "What is the honest tradeoff of larger cells?",
+     "c": [
+      "Fewer parts and connections, against harder thermal and propagation behaviour",
+      "More energy per kilogram, against higher cost",
+      "Longer warranty, against slower charging",
+      "Lower voltage, against higher current"
+     ],
+     "a": 0,
+     "why": "The integration saving is real and directional. The counterweight is that a bigger cell releases more energy if it fails, so the test file has to keep pace with the ladder."
+    },
+    {
+     "q": "Which claim would a technical buyer most likely challenge on the spot?",
+     "c": [
+      "'UL 9540A certified'",
+      "'Tested at cell, module and unit level'",
+      "'Listed to UL 9540'",
+      "'Rated -30 °C to 60 °C without derating'"
+     ],
+     "a": 0,
+     "why": "UL 9540A is a test method with no pass or fail, so nothing can be certified to it. The other three are claims that a document can actually support."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonAidcPowerChain_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-aidc-power-chain",
+ "type": "module",
+ "title": "The AI Data-Center Power Chain",
+ "short": "Follow a megawatt from the utility service entrance to the rack — switchgear, busway, the UPS dial, and the choreography of an outage.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-01",
+ "reviewBy": "2027-03-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:eaton",
+    "date": "2026-08-21",
+    "note": "distribution hierarchy, busway versus cable, selective coordination, the UPS efficiency dial, transfer choreography"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vertiv",
+    "date": "2026-08-21",
+    "note": "the rack as an airflow and structural device at the end of the chain"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-08-31",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "service → rack",
+   "v": "one hierarchy",
+   "sub": "each tier rated for fault energy, not just current"
+  },
+  {
+   "k": "busway",
+   "v": "capacity you reconfigure",
+   "sub": "tap-off units move rack power without rewiring"
+  },
+  {
+   "k": "10–20 ms",
+   "v": "the hold-up window",
+   "sub": "how long a server rides out a transfer unnoticed"
+  },
+  {
+   "k": "10+ s",
+   "v": "generator start",
+   "sub": "every backup layer covers another layer's gap"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "switchgear",
+   "d": "The heavy assembly of breakers and protection at a building's service entrance, rated to interrupt the fault energy the utility can deliver."
+  },
+  {
+   "t": "busway",
+   "d": "A prefabricated metal-enclosed conductor bar that bolts together in sections, replacing bundles of cable and accepting plug-in tap-offs anywhere along its run."
+  },
+  {
+   "t": "selective coordination",
+   "d": "Nesting breaker trip characteristics so a fault opens only the nearest upstream device, cutting the failure away without darkening anything else."
+  },
+  {
+   "t": "time-current curve",
+   "d": "The plotted personality of a protective device: how fast it trips at each level of current. Engineers nest these curves to achieve selectivity."
+  },
+  {
+   "t": "hold-up time",
+   "d": "How long a server power supply keeps its output alive on internal capacitance after input power disappears — roughly 10 to 20 milliseconds."
+  },
+  {
+   "t": "automatic transfer switch",
+   "d": "The device that senses utility failure, signals generators to start, and moves the load between sources — then manages the return when utility power comes back."
+  },
+  {
+   "t": "eco-mode",
+   "d": "Running the load on raw utility through a UPS bypass with the conversion stage idling in reserve, trading a few points of efficiency gain for a millisecond-scale transfer on failure."
+  }
+ ],
+ "sections": [
+  {
+   "id": "service-to-rack",
+   "title": "The hierarchy from service to rack",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Power enters a building once and then fans out through tiers: {{switchgear}} at the service entrance, distribution boards, then panelboards and {{PDU}}s near the load. What sizes each tier is not simply the current it carries but the *fault* energy it must survive — the short-circuit power the utility can deliver into a failure at that point. That distinction is why the equipment gets dramatically heavier as you move upstream.",
+    "There are two ways to move power across a data hall. The classic method pulls cable in conduit: familiar, flexible, and every circuit is field labour — changing anything means pulling wire again. {{Busway}} replaces those bundles with a prefabricated conductor bar that bolts together in sections.",
+    "Busway's real feature is the tap-off. Plug-in units clamp anywhere along the run, so an overhead busway down an aisle turns rack power into something you *reconfigure* rather than something you reconstruct. In a facility where rack density changes between generations of hardware, that is worth more than the copper.",
+    "The choice is economics as much as engineering. Busway installs faster with less skilled-labour time and carries very high current compactly; cable still wins on long single runs and tight budgets. Modern data halls overwhelmingly hang busway overhead, and the reason is the reconfiguration, not the ampacity."
+   ],
+   "sales": "When a customer describes a refresh cycle rather than a build, they are describing a busway argument — the value is in changing rack power without pulling wire."
+  },
+  {
+   "id": "selective-coordination",
+   "title": "One fault should trip one breaker",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Breakers sit in series from the utility service down to every receptacle. {{Selective coordination}} means a fault opens only the nearest upstream device — the failure is cut away surgically while everything else keeps running. In a critical facility the alternative is the nightmare scenario: a fault in one rack's power strip opening a main breaker and darkening the hall.",
+    "The engineering tool is the {{time-current curve}}. Every protective device has a plotted personality showing how fast it trips at each current, and the design nests those curves so the downstream device always wins the race at any plausible fault current.",
+    "It is harder than it sounds. At very high fault currents the curves converge and both devices want to trip instantly. Short-time delays, instantaneous pickup settings, and zone-selective interlocking — the downstream breaker signalling upstream *I have this one* — are what restore order at the top of the range.",
+    "Because the consequence is a whole hall rather than a rack, coordination studies are a contract deliverable rather than an internal exercise, and codes mandate selectivity outright for life-safety circuits."
+   ]
+  },
+  {
+   "id": "the-ups-dial",
+   "title": "The UPS efficiency dial",
+   "kind": "proscons",
+   "read": "4 min",
+   "intro": "Uninterruptible power is not one design but a dial between two positions, and at tens of megawatts the setting is a multi-million-dollar annual decision rather than a preference.",
+   "cards": [
+    {
+     "t": "Double conversion",
+     "meta": "Everything flows through the converters, continuously",
+     "adv": [
+      "The load sees a synthesised waveform regardless of what the utility does",
+      "No transfer event at all on utility failure — the conversion stage is already carrying the load",
+      "Simplest story to defend to a risk-averse operator or an insurer"
+     ],
+     "dis": [
+      "Costs a few percent of every megawatt-hour, around the clock",
+      "Those losses become heat, so the cooling plant pays a second time",
+      "At tens of megawatts, two efficiency points is millions of dollars a year"
+     ]
+    },
+    {
+     "t": "Eco-mode",
+     "meta": "Load runs on utility through bypass; conversion idles in reserve",
+     "adv": [
+      "Efficiency in the 98–99% range, with the cooling saving on top",
+      "Same hardware — the mode is a commissioning decision, not a different product",
+      "Adaptive variants keep converters primed for near-instant takeover"
+     ],
+     "dis": [
+      "Requires detecting failure and transferring inside the server hold-up window",
+      "The debate is whether detection is reliably that fast for *every* fault type, not the typical one",
+      "Harder to defend after an incident, whatever the statistics say"
+     ]
+    }
+   ],
+   "note": "The physics referee is {{hold-up time}}: server power supplies ride roughly 10 to 20 milliseconds on internal capacitors, so a transfer completed inside that window is invisible to the IT load. Operators pick a point on the dial per facility, not a dogma."
+  },
+  {
+   "id": "outage-choreography",
+   "title": "The choreography of an outage",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Backup is a relay race in which every layer exists to cover another layer's startup gap. The {{automatic transfer switch}} is the conductor.",
+   "cols": [
+    "Moment",
+    "What is happening",
+    "What is carrying the load"
+   ],
+   "rows": [
+    [
+     "0 ms",
+     "Utility fails",
+     "Stored energy — UPS batteries or flywheels — instantly and without a decision"
+    ],
+    [
+     "A few ms",
+     "The transfer switch senses the failure and signals the generators to start",
+     "Still stored energy"
+    ],
+    [
+     "~10 s and up",
+     "Engines crank, stabilise, and reach a state where they can accept load",
+     "Still stored energy — this gap is why the stored layer is sized in minutes, not seconds"
+    ],
+    [
+     "Transfer",
+     "The switch hands the load from stored energy to generation",
+     "Generators, once synchronised or after a brief open transition"
+    ],
+    [
+     "Steady state",
+     "Paralleling switchgear adds engines in priority order and sheds non-critical load if generation runs short",
+     "A room of engines behaving as one coordinated plant"
+    ],
+    [
+     "Return",
+     "Utility comes back; the switch manages the trip home",
+     "Generators, then utility"
+    ]
+   ],
+   "note": "Transfer style matters. **Open transition** breaks the connection momentarily — the load blinks unless stored energy bridges it. **Closed transition** briefly parallels generator and utility for a seamless swap, at the cost of strict synchronisation and utility approval."
+  },
+  {
+   "id": "dirty-loads",
+   "title": "What the load does back to the building",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Power flows both ways as a *problem*. Loads that chop current — drives, {{rectifier}} front ends, ageing equipment — reflect distortion back into the building's wiring. That distortion heats transformers and conductors while doing no useful work, which is why specifications call for K-rated transformers and oversized neutrals where harmonics are expected.",
+    "IEEE 519 draws the property line at the point of common coupling, where the building meets the utility. Limits apply *there*, so one customer's dirty loads cannot degrade a neighbour's power quality — and compliance is measured at that point rather than assumed from equipment datasheets.",
+    "Power factor is billed, not merely calculated: utilities levy penalties when a facility's reactive draw ties up capacity they cannot sell to anyone else. Modern IT gear with active front ends behaves well here; the correction burden usually falls on the mechanical plant and on legacy equipment.",
+    "AI computing added a new species of disturbance. Large GPU clusters swing tens of megawatts in milliseconds, and they do it *rhythmically* — training steps are periodic. Those repeating oscillations can interact with grid resonances below normal line frequency, which is new enough that detecting them only recently became a monitoring product feature rather than a research topic."
+   ],
+   "sales": "The megawatt-scale periodic swing is the newest thing in this chain. If a customer is standing up AI capacity on an older electrical plant, that conversation is happening whether or not you start it."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What sizes electrical equipment at each tier of the distribution hierarchy?",
+     "a": "The fault energy it must survive, not only the current it normally carries. That is why gear gets dramatically heavier towards the service entrance."
+    },
+    {
+     "q": "What is busway's actual selling point over cable?",
+     "a": "The tap-off. Plug-in units clamp anywhere along the run, so rack power becomes something you reconfigure rather than rewire — which matters most in facilities that refresh hardware."
+    },
+    {
+     "q": "Why is selective coordination hardest at high fault currents?",
+     "a": "The time-current curves of upstream and downstream devices converge there, so both want to trip instantly. Short-time delays and zone-selective interlocking restore the ordering."
+    },
+    {
+     "q": "What is hold-up time and why does it referee the eco-mode debate?",
+     "a": "It is the 10–20 ms a server power supply keeps running on internal capacitors after input power vanishes. A transfer finished inside that window is invisible to the load; outside it, the load drops."
+    },
+    {
+     "q": "Why does the stored-energy layer have to last minutes rather than seconds?",
+     "a": "Generators need ten-plus seconds to crank, stabilise and accept load, and the transfer sequence follows that. Stored energy has to cover the whole gap with margin."
+    },
+    {
+     "q": "What is new about AI load from a power-quality point of view?",
+     "a": "Tens of megawatts swinging in milliseconds, periodically. The repetition is the novel part — it can excite grid resonances below line frequency in a way steady loads never did."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A hall's rack layout changes every hardware generation. Which distribution choice does that argue for?",
+     "c": [
+      "Overhead busway with plug-in tap-offs",
+      "Cable in conduit to each rack",
+      "A larger service transformer",
+      "More generator capacity"
+     ],
+     "a": 0,
+     "why": "Tap-offs make rack power reconfigurable without field rewiring, which is exactly the cost that repeats every refresh."
+    },
+    {
+     "q": "A fault in one rack's power strip darkens the whole hall. What failed?",
+     "c": [
+      "Selective coordination between breakers",
+      "The chiller plant",
+      "The building automation system",
+      "Power factor correction"
+     ],
+     "a": 0,
+     "why": "Selectivity means the nearest upstream device trips alone. A main opening for a downstream fault is the definition of miscoordination."
+    },
+    {
+     "q": "Eco-mode raises UPS efficiency to 98–99%. What does it spend to get there?",
+     "c": [
+      "It must detect failure and transfer within the server hold-up window",
+      "It requires a second utility feed",
+      "It halves generator runtime",
+      "It removes the need for an ATS"
+     ],
+     "a": 0,
+     "why": "The load rides raw utility, so on failure the UPS has milliseconds to notice and take over. The risk is detection speed across every fault type, not the typical one."
+    },
+    {
+     "q": "Why does an open-transition transfer make the load blink without stored energy?",
+     "c": [
+      "It breaks the connection momentarily before making the new one",
+      "It reverses phase rotation",
+      "It requires utility approval",
+      "It runs the generators in parallel"
+     ],
+     "a": 0,
+     "why": "Open transition deliberately disconnects before reconnecting. Something with stored energy has to bridge that instant, or the load sees the gap."
+    },
+    {
+     "q": "IEEE 519 limits are measured at the point of common coupling because:",
+     "c": [
+      "That is where one customer's distortion could reach a neighbour",
+      "It is the cheapest place to install a meter",
+      "Utilities cannot measure inside a building",
+      "Harmonics only exist at that point"
+     ],
+     "a": 0,
+     "why": "The standard is drawing a property line. What a facility does internally is its own business until it degrades the shared supply."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clLessonHeatConstraint_() {
+  return {
+ "schemaVersion": 1,
+ "id": "heat-is-the-constraint",
+ "type": "module",
+ "title": "Heat Is the Constraint",
+ "short": "Why AI racks outran air cooling, and how the chip-to-atmosphere thermal chain spends a fixed budget of degrees.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-01",
+ "reviewBy": "2027-03-01",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:vertiv",
+    "date": "2026-08-21",
+    "note": "precision cooling machines, the CDU and liquid kit, the thermal chain as a temperature budget, rack airflow physics"
+   },
+   {
+    "kind": "public",
+    "ref": "study:nvidia",
+    "date": "2026-08-21",
+    "note": "why accelerator design pushes density — throughput cores, memory bandwidth, and the rack as the scale-up domain"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-08-31",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "one rack",
+   "v": "the scale-up domain",
+   "sub": "copper's reach at memory speed sets the box size"
+  },
+  {
+   "k": "Q = m·c·ΔT",
+   "v": "the air ceiling",
+   "sub": "airflow times temperature rise, and it runs out"
+  },
+  {
+   "k": "40–45 °C",
+   "v": "warm-water supply",
+   "sub": "the temperature that buys chiller-free hours"
+  },
+  {
+   "k": "chip → sky",
+   "v": "one series path",
+   "sub": "every interface spends part of the same budget"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "CRAC",
+   "d": "Computer room air conditioner — a self-contained refrigeration machine, compressor included, cooling a room directly."
+  },
+  {
+   "t": "CRAH",
+   "d": "Computer room air handler — a coil and fans fed chilled water from a central plant, with no compressor of its own."
+  },
+  {
+   "t": "economiser",
+   "d": "A mode that rejects heat using cool outdoor conditions instead of running mechanical refrigeration. The number of hours per year it works is a function of climate."
+  },
+  {
+   "t": "CDU",
+   "d": "Coolant distribution unit — pumps plus a heat exchanger that isolate the facility's water from the clean technology loop touching the servers."
+  },
+  {
+   "t": "cold plate",
+   "d": "A liquid-cooled block bolted directly to a processor, carrying its heat away by conduction into a coolant loop instead of into room air."
+  },
+  {
+   "t": "rear-door heat exchanger",
+   "d": "A radiator that replaces a rack's back door, neutralising exhaust heat with liquid while the servers themselves stay air-cooled."
+  },
+  {
+   "t": "approach",
+   "d": "The temperature difference a heat exchanger needs in order to move heat across it. Every stage in the chain consumes some of the total available difference."
+  },
+  {
+   "t": "scale-up domain",
+   "d": "The group of accelerators that can share data at near-memory speed over short, high-bandwidth links — in practice about one rack, because that is copper's reach at those rates."
+  }
+ ],
+ "sections": [
+  {
+   "id": "why-the-rack-got-hot",
+   "title": "Why the rack got hot",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A CPU spends most of its silicon making a handful of cores individually fast, because it has to race through one unpredictable instruction stream. A GPU inverts that bet: thousands of simple cores, each slow alone, arranged for total throughput. Neural networks happen to be exactly that shape — enormous matrix multiplications whose individual operations do not depend on each other — so they saturate every simple core at once.",
+    "Saturating silicon is another way of saying *drawing power continuously*. And the memory side made it worse: compute grew far faster than memory bandwidth for decades, so accelerators starve unless memory is stacked vertically and mounted almost touching the processor. That packaging pulls the heat sources tightly together instead of spreading them out.",
+    "Then the wiring set the box size. Links fast enough for accelerators to pool memory and act as one machine ride copper, and copper's reach at those data rates is roughly one rack. The {{scale-up domain}} ends where the copper does — so the industry's engineering effort pours into packing more accelerators, more memory and more power into a single rack-sized volume rather than spreading them across a hall.",
+    "Put those three together and the density is not a fashion. It is the consequence of a throughput architecture, a memory wall, and a physical reach limit — which is why the cooling problem arrived all at once rather than gradually."
+   ]
+  },
+  {
+   "id": "air-runs-out",
+   "title": "Where air runs out",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A rack is an airflow device before it is furniture. Servers pull air front to back, and the cabinet's job is making sure that air arrives cold and leaves without sneaking back around to the intake. Blanking panels sealing empty slots remain the cheapest cooling fix in the industry, for exactly that reason.",
+    "The ceiling is simple bookkeeping: heat removed equals airflow times temperature rise. A rack's power limit is therefore set by how much air its servers can pull and how much rise their components tolerate — and that arithmetic runs out somewhere in the tens of kilowatts per cabinet, no matter how good the room is.",
+    "Below that ceiling, internal discipline is most of the win. Cable bundles blocking exhaust, unsealed cutouts, and mixed airflow directions quietly tax every server's fans, and fan power is not free — it is electricity spent to move air rather than to compute.",
+    "Above the ceiling, the cabinet stops being furniture altogether. Manifolds, busbars and heavier hardware push racks past a tonne, with millimetre tolerances for rail-mounted equipment, seismic bracing, and floor-loading calculations. The enclosure becomes a structural, plumbed, powered machine."
+   ],
+   "sales": "If a customer is quoting rack densities above the air ceiling and has not mentioned liquid, they have a plumbing project they have not budgeted."
+  },
+  {
+   "id": "the-thermal-chain",
+   "title": "The chain, and its temperature budget",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Heat flows in series from silicon to sky, and every interface needs an {{approach}} — a temperature difference — to drive it across. The chip's junction limit minus the hottest outdoor day is the whole budget; each stage spends part of it.",
+   "cols": [
+    "Stage",
+    "What it is",
+    "What it spends the budget on"
+   ],
+   "rows": [
+    [
+     "Die to {{cold plate}}",
+     "Conduction out of the package into a liquid-cooled block",
+     "Thermal interface quality and contact pressure"
+    ],
+    [
+     "Cold plate to technology coolant",
+     "Convection into the clean, controlled loop",
+     "Flow rate and channel design"
+    ],
+    [
+     "Technology loop to {{CDU}}",
+     "The isolating heat exchanger between server loop and facility water",
+     "Exchanger approach — the classic place a design gets pinched"
+    ],
+    [
+     "Facility water to plant",
+     "Pumped loop out to chillers or an {{economiser}}",
+     "Pipe losses and pump power"
+    ],
+    [
+     "Plant to outdoor air",
+     "Vapour compression, or free cooling when the weather permits",
+     "Compressor power, or nothing at all in economiser hours"
+    ]
+   ],
+   "note": "Waste too many degrees in one exchanger and there is nothing left to drive the rest. That is why vendors increasingly sell the chip-to-atmosphere path as one guaranteed system: a single undersized stage throttles the entire chain regardless of how good the other four are."
+  },
+  {
+   "id": "the-liquid-kit",
+   "title": "The equipment between chip and plant",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "The {{CDU}} is liquid cooling's central appliance: pumps plus a heat exchanger isolating the facility's water from the pristine loop that touches the servers. It keeps two domains apart that must never mix — different chemistry, different pressure, different cleanliness standards.",
+    "It comes in an order of magnitude of sizes. In-rack units serve one cabinet, in-row units serve a pod, and facility-scale skids serve megawatts. Liquid-to-air variants reject heat into room air where no facility water exists at all, trading capacity for the ability to retrofit.",
+    "Downstream sits a plumbing product family: manifolds distributing coolant vertically through the rack, {{cold plate}}s bolted to each processor, drip-free quick disconnects that allow live service, and leak detection woven throughout. It is reliability engineering expressed in fittings.",
+    "The {{rear-door heat exchanger}} is the transitional species worth knowing by name. It replaces the rack's back door with a radiator that neutralises exhaust heat using liquid, while the servers themselves stay air-cooled — bringing liquid to the rack without touching the IT hardware. It is how most facilities take the first step."
+   ]
+  },
+  {
+   "id": "warm-water-economics",
+   "title": "Why warm water is the whole argument",
+   "kind": "callout",
+   "read": "2 min",
+   "ps": [
+    "The counter-intuitive move in modern cooling is to ask for *warmer* water, not colder. If servers accept supply water at 40–45 °C, then in most climates the plant can reject heat to outdoor air for most of the year without running compressors at all.",
+    "That is what the temperature budget buys when it is spent carefully: giving each stage fewer degrees to consume leaves enough difference at the end to reject heat against a warm sky. {{Economiser}} hours are not a weather accident — they are a design outcome, which is why cooling design starts with a climate file rather than with equipment selection.",
+    "Precision cooling was always a different animal from comfort cooling for a related reason: IT heat is dry, sensible heat, so the machines are built for high sensible ratios, tight bands and continuous year-round duty. The liquid generation simply pushed that specialisation further down the chain, all the way to the die."
+   ],
+   "sales": "Chiller-free hours are the number that survives a CFO conversation. Efficiency ratios are abstract; months per year without running compressors are not."
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why did the rack become the unit of AI computing?",
+     "a": "The links that let accelerators pool memory at near-memory speed ride copper, and copper's reach at those rates is about one rack. The scale-up domain ends where the copper does."
+    },
+    {
+     "q": "What sets a rack's power ceiling on air?",
+     "a": "Heat removed equals airflow times temperature rise. How much air the servers can pull, and how much rise they tolerate, caps the cabinet somewhere in the tens of kilowatts."
+    },
+    {
+     "q": "What is the difference between a {{CRAC}} and a {{CRAH}}?",
+     "a": "A CRAC is a self-contained refrigeration machine with its own compressor. A CRAH is only a coil and fans, fed chilled water from a central plant — which is how large facilities centralise."
+    },
+    {
+     "q": "What does a CDU actually isolate?",
+     "a": "The facility's water from the clean technology loop touching the servers — two domains with different chemistry, pressure and cleanliness that must never mix."
+    },
+    {
+     "q": "Why ask for warmer supply water rather than colder?",
+     "a": "Because at 40–45 °C most climates can reject the heat to outdoor air for most of the year without compressors. Warmer water converts directly into chiller-free hours."
+    },
+    {
+     "q": "Why is a rear-door heat exchanger the usual first step into liquid?",
+     "a": "It brings liquid to the rack — neutralising exhaust heat at the back door — without changing the servers, which stay air-cooled. It is a retrofit rather than a hardware transition."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "The cooling chain's total temperature budget is:",
+     "c": [
+      "The chip's junction limit minus the hottest outdoor design day",
+      "The chilled-water setpoint",
+      "The rack inlet temperature",
+      "The difference across the CDU alone"
+     ],
+     "a": 0,
+     "why": "Heat flows in series from die to atmosphere. The whole available difference is between the hottest the silicon may get and the hottest it must reject into — every stage spends part of it."
+    },
+    {
+     "q": "One undersized heat exchanger in the middle of the chain does what?",
+     "c": [
+      "Throttles the entire chain regardless of the other stages",
+      "Only affects that stage's efficiency",
+      "Increases economiser hours",
+      "Reduces pump power"
+     ],
+     "a": 0,
+     "why": "Series paths are limited by their worst stage. Spending too many degrees at one exchanger leaves nothing to drive the rest, which is why the path is increasingly sold as one guaranteed system."
+    },
+    {
+     "q": "Blanking panels are famous in this field because they:",
+     "c": [
+      "Stop hot exhaust air sneaking back to the intakes, for almost no money",
+      "Increase the rack's structural rating",
+      "Reduce fan noise",
+      "Improve power factor"
+     ],
+     "a": 0,
+     "why": "Recirculation raises inlet temperature for free, and sealing empty slots stops it. It is the cheapest cooling improvement available in most halls."
+    },
+    {
+     "q": "Why does the memory wall matter to a cooling conversation?",
+     "c": [
+      "It forces memory to be stacked and mounted right against the processor, concentrating heat",
+      "It lowers total rack power",
+      "It removes the need for cold plates",
+      "It sets the utility service size"
+     ],
+     "a": 0,
+     "why": "Feeding starved arithmetic units requires stacked memory placed almost touching the die. That packaging concentrates the heat sources instead of spreading them out."
+    },
+    {
+     "q": "A facility with no chilled-water plant wants liquid cooling for one pod. What fits?",
+     "c": [
+      "A liquid-to-air CDU rejecting heat into room air",
+      "A facility-scale skid",
+      "Nothing — liquid requires facility water",
+      "A larger service transformer"
+     ],
+     "a": 0,
+     "why": "Liquid-to-air variants exist precisely for this case: they trade capacity for the ability to retrofit where no facility water loop exists."
+    }
+   ]
+  }
+ ]
+};
+}
+
+function clTrackBessFoundations_() {
+  return {
+ "schemaVersion": 1,
+ "id": "bess-foundations",
+ "title": "BESS Foundations",
+ "short": "Finish this and you can read a grid-storage spec sheet and hold a technical conversation about cells, duration and degradation.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-01",
+ "lessons": [
+  "cell-to-container",
+  "duration-and-degradation",
+  "spec-sheet-decoded"
+ ]
+};
+}
+
+function clTrackAidcPowerPrimer_() {
+  return {
+ "schemaVersion": 1,
+ "id": "aidc-power-primer",
+ "title": "The AI Data-Center Power Primer",
+ "short": "Finish this and you can follow a megawatt from the utility service entrance to the chip, and explain why heat now sets the density.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-01",
+ "lessons": [
+  "the-aidc-power-chain",
+  "heat-is-the-constraint"
+ ]
+};
+}
+
+// Registries — ordered by lane, as guidanceDocs_() is in Profiler.gs:
+// Technology Foundations first, then the AI data-center wave. C2's pipeline
+// appends to both. Register every clLesson<Name>_() / clTrack<Name>_() here —
+// the checker flags an unregistered literal.
+function clLessons_() {
+  return [clLessonCellToContainer_(), clLessonDurationDegradation_(), clLessonSpecSheet_(),
+          clLessonAidcPowerChain_(), clLessonHeatConstraint_()];
+}
+function clTracks_() {
+  return [clTrackBessFoundations_(), clTrackAidcPowerPrimer_()];
+}
 function clLesson_(id) {
   var all = clLessons_();
   for (var i = 0; i < all.length; i++) if (all[i].id === id) return all[i];
