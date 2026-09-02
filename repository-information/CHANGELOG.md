@@ -3,11 +3,25 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 94/100`
+`Sections: 95/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.15r] — 2026-09-02 12:41:49 AM EST
+
+> **Prompt:** "I have set myself to TRUE in the MasterACL and confirmed that jonyang92@gmail.com is an Admin. Why then does my Classroom app not allow me to sign in? Fix it."
+
+### Fixed
+
+**The sign-in denial was a stale ACL cache, not a code fault — and the bootstrap sequence guarantees it happens on every new project.** `checkSpreadsheetAccess` reads its cache before it opens the spreadsheet (`if (cached !== null) { … return denied; }`) and caches denials under `access_<email>` for 600 seconds. `registerSelfProject()` creates a new project's ACL column on the very first page load and seeds every non-`developer` user to FALSE, so that same load denies the developer and writes `"0"`. Granting TRUE afterwards changes nothing until the entry expires, because the read never happens. The operational fix is `clearAllAccessCache()` from the editor; no code was wrong, so none was changed.
+
+- **`.claude/rules/gas-scripts-reference.md`** — Setup Steps gains step 14: run `clearAllAccessCache` after granting yourself ACL access on a newly registered project, with the mechanism, the exact symptom (`code: not_authorized` while the sheet plainly says TRUE), and two sub-notes: how to tell a cached denial from `rate_limited` and `acl_unavailable` by the error code alone (and that `auditLog` no-ops while `SPREADSHEET_ID` is a placeholder, so the Executions tab is the only trail), and that a Role with no matching row in the `Roles` tab downgrades to viewer rather than denying — which on Classroom presents as a successful sign-in with no curriculum, looking like a rendering bug rather than an access one
+
+### Worth noting (no change made)
+
+- **The 10-minute denial TTL and the FALSE-seeding in `registerSelfProject()` were left alone.** Both live in the shared AUTH region propagated across five GAS projects, and the TTL is deliberate per its own comment. Making the first sign-in to a new project not self-deny is a real improvement, but it is template surgery affecting every project and belongs to its own decision, not to a "fix my login" request
 
 ## [v04.14r] — 2026-09-02 12:20:16 AM EST
 
