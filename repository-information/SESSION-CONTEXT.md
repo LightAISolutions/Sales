@@ -5,6 +5,51 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 > **Note on stale-context auto-reconstruction** — when a session starts and this file's `Repo version:` doesn't match the current repo version, Claude reconstructs the missing entry from CHANGELOG.md and commits it **without pushing**. The commit rides along with the session's first user-task commit on the next push. If a session ends before any user-task push happens, the reconstructed entry stays **local-only** and the next session will just re-reconstruct from CHANGELOG if still stale. This is intentional — pushing a dedicated reconstruction commit on its own would force every subsequent user push in the same session to wait for the auto-merge workflow to finish before it could push too (push-once enforcement). The reconstructed entry is a convenience hint, not load-bearing state, so the small persistence risk is a fair trade.
 
 ## Latest Session
+**Date:** 2026-09-02 02:17:43 AM EST
+**Repo version:** v04.21r
+**Branch:** `claude/c2a-unattended-committer-spec-0d10mk`
+
+**What we worked on (one push, v04.21r — C2a, the unattended-committer contract, design only, on Fable 5.1 Extra as a fresh session):**
+
+- **`repository-information/CLASSROOM-COMMITTER-CONTRACT.md` (new, ten sections)** — the contract a scheduled Classroom pipeline run is held to. **§3 write set (closed):** the *content region* of `Classroom.gs` (the `clLesson*_()` / `clTrack*_()` literals + the two registries — C2b fences it with `// CONTENT START` / `// CONTENT END`), the `VERSION` line, the GAS version/changelog files, the repo CHANGELOG (+ archive), `repository.version.txt`, two lines of `README.md`, and a new `classroom-pipeline-ledger.json`. Deliberately excluded: `SESSION-CONTEXT.md` (weekly auto-reconstruction would flush the developer's handoff under the 2-session cap), `REMINDERS.md`/`TODO.md`, `Classroom.html`, the whole corpus
+- **§4 frozen surfaces:** the AUTH region + template (shared across five projects), the gate derivation (every `CL_*` constant and `cl*` gating/progress/ops function — frozen so the stamp stays *checked* not *trusted*), the stamp vocabulary (no new prefix/kind/rung, no `note:`, no unread input, no unresolved ref, no URL), permanent ids (section ids never removed — `clProgressVisible_` would erase the tick for every account), append-only tracks/registries, and **the gate of an existing lesson never changes in either direction**
+- **§5 fail-closed:** `COMMIT` / `STAND-DOWN` (repo untouched, silent — the Profiler drift-check precedent) / `BLOCKED` (repo untouched, reported via final message + Routine notification + `BLOCKED —` session title). Pre-flight blocks on identity, a red baseline checker, gate-surface drift vs the ledger's `gateDigest`, a schema bump without a contract update. One attempt per run, never edits its judge, blast-radius caps (≤1 briefing, ≤1 module, ≤3 revisions, ≤1 track)
+- **§6 thirteen corpus-delta guarantees** (pinned baseline, read-before-re-pin, contradiction-not-novelty, meaning-not-wording, monotone pins, gate invariance, ref resolution, superseded-report swap, watermark discipline, determinism, minimum material, progress safety, `reviewBy` from the lesson's own gate) + per-layer revision-signal table + a minimal ledger (`coveredThrough`, `gateDigest`, `lastRun`; pins stay in the lessons). **§7** the twelve assertions of a diff-aware `check-classroom-pipeline.py` C2b must add, each with a failing fixture. **§8** CHANGELOG run record. **§9** cadence recommendation Wednesday 11:00 UTC. **§10** seven items handed to C2b/C2c
+- **Pointers:** `.claude/rules/classroom-app.md` (path scope + new "Unattended (pipeline) sessions" section, including the one obligation that flows back to developer sessions — refresh `gateDigest` when the gate surface changes), `PHASE6-CLASSROOM-DESIGN.md` (C2 status note), `CLASSROOM-SCHEMA.md` (Freshness pointer), `CLAUDE.md` Reference Files row, README tree
+- **CHANGELOG rotated** — the 2026-08-28 date group (27 sections, v03.21r → v03.47r) archived with SHA enrichment; counter 100 → **74/100**
+
+**Where we left off:**
+
+- **C2a is complete, pushed and merged** (v04.21r on `main`). No page, GAS, or data file changed — Classroom stays **v01.04w / v01.06g**
+- **C2b and C2c have not been started.** Nothing mechanical enforces the contract yet — no content fence, no ledger, no pipeline checker, no Routine
+
+**Key decisions made:**
+
+- **"PROJECT region" is too coarse an allowlist** — the gate derivation and the lesson literals share it in `Classroom.gs`, so the contract defines a narrower *content region* and makes C2b fence it explicitly
+- **The gate of an existing lesson never changes in a pipeline run, in either direction** — raising hides a lesson analysts were reading; lowering is the "content flows down the ladder" failure. New material at a different gate becomes a new lesson
+- **Stand-downs leave no repo trace; blocked runs report out of band** — a quiet week must not cost a workflow run, a version bump and a CHANGELOG section; a blocked run must not write anything (not even a reminder) because a blocked run's judgment is exactly what is in doubt
+- **Pins stay in the lessons; the ledger carries only what lessons cannot** (the watermark, the gate digest, the last committing run) — one source of truth, nothing to drift
+- **A separate document rather than a schema section** — the schema says what a lesson *is*; the contract says what an unwatched actor may *do to the repository*
+- **Two prerequisite gaps found and handed to C2b, not patched here:** the Scraper timeline route identifies items by `url` (cannot fit `CL_REF_RE`'s id charset — no `corpus:` ref can be written yet), and `profiler-projects.json` / `profiler-concepts.json` carry no per-entry revision date
+
+**Active context:**
+
+- Repo **v04.21r** · Classroom **v01.04w** / **v01.06g** · Profiler **v01.79w** / **v01.33g** · Scraper **v01.71w** / **v01.98g**
+- Capacity: repo CHANGELOG **74/100** (room again); `Profilerhtml.changelog.md` still **50/50** — the next Profiler page change forces its rotation
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
+- Verification set for any Classroom change: `python3 scripts/check-classroom-content.py`, `node --check` on a `.js` copy of `Classroom.gs`, `node scripts/check-gas-inner-scripts.js`. For Profiler role surfaces: `python3 scripts/verify-profiler-roles.py`
+- **Still flagged, not fixed:** `ENTERPRISE-SETUP.md`'s token record is stale (needs the developer to read the Script Property); the template-wide first-sign-in self-denial (Setup Step 14 trap) is documented but not designed out
+- **Model plan for the rest of C2:** C2b — build the machinery — **Opus 5 Extra**; C2c — authoring prompt + freshness deltas — **Fable 5.1 High**; the weekly runs — **Opus 5 High**, measured against the contract's caps
+
+**Recommendation for next session:**
+
+- Run **C2b — the pipeline machinery** on **Opus 5 Extra**, working the contract's §10 in order: (1) expose a stable, charset-safe item key on the Scraper timeline route, (2) decide the undated-layer signal for projects/concepts in `PROFILER-SCHEMA.md`, (3) add the `// CONTENT START` / `// CONTENT END` fence to `Classroom.gs` and teach `check-classroom-content.py` to flag literals outside it, (4) write `scripts/check-classroom-pipeline.py` with its twelve assertions and a failing fixture for each, (5) create the ledger, and only then (6) arm the weekly Routine with push + email notifications. Read `CLASSROOM-COMMITTER-CONTRACT.md` first — the machinery is built *to* it, not the other way round.
+
+**To continue:** type `build C2b — the pipeline machinery`
+
+## Previous Sessions
+
+### Session — 2026-09-02 (Classroom C1 finished end-to-end + Profiler sign-in log — v04.20r)
 **Date:** 2026-09-02 01:39:01 AM EST
 **Repo version:** v04.20r
 **Branch:** `claude/opus5-extra-first-tracks-dne4vq`
@@ -49,50 +94,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 - Run **C2a — the unattended-committer contract** on **Fable 5.1 Extra**: a written spec, no implementation. It must answer what the scheduled pipeline may write (which files, which registries), what it must never touch (the provenance stamp vocabulary, the gate derivation, anything under `AUTH`), how it fails closed when the corpus delta is ambiguous or the checker fails, and what the delta computation must guarantee before a lesson is allowed to change. C1 shipped the invariants; C2a is where they get stated as a contract an unattended committer can be held to — before any code can quietly weaken them.
 
 **To continue:** type `build C2a — the unattended-committer contract`
-
-## Previous Sessions
-
-### Session — 2026-09-01 (Classroom C1 — track/lesson schema + provenance stamp — v04.12r)
-**Date:** 2026-09-01 10:37:01 PM EST
-**Repo version:** v04.12r
-**Branch:** `claude/c1-track-lesson-schema-k4nh88`
-
-**What we worked on (one push, v04.12r — Classroom C1, schema slice, on Fable 5.1 High):**
-
-- **The track/lesson schema and its provenance stamp — the one irreversible decision in v1 — built first, before any renderer or progress code.** `repository-information/CLASSROOM-SCHEMA.md` (new) is the single source of truth: id rules, the stamp (`provenance.inputs[]{kind, ref, date}`), lesson schema v1 (`module` / `briefing`, guidance section-kind vocabulary, `reviewBy`, `revisions[].changed[]`), track schema v1, freshness hooks, the `action=classroom` op contract, a worked example, verification and extension rules
-- **The stamp is checked, not trusted.** `CL_PROVENANCE_REF_KINDS` in `Classroom.gs` (v01.01g) maps ref prefixes to kinds (`profile`/`study`/`project`/`graph`/`concepts` → public; `guidance` → guidance; `corpus`/`briefing` → briefing; `report` → report). `clStampKinds_()` reads a lesson's stamp into the list the C0 gate folds and returns `[]` (→ deny) on a missing/empty stamp, malformed ref, unknown prefix, or kind/prefix mismatch. There is no `note:` prefix by design
-- **Registries + filtering + ops:** `clLessons_()` / `clTracks_()` (empty), `clLessonCard_()` metadata cards, per-tier `clLessonIndexFor_` / `clTrackFor_` / `clTrackIndexFor_` (withheld counts; unreadable tracks are not enumerable), and read-only `handleClassroomOp_()` (`cop=index|track|lesson`, wired in `doPost` and the GET `api` mirror) — session → `clRequire_(sess,'tracks')` → `clRequireLesson_()` on the lesson's own stamp before any section text leaves the server
-- **`scripts/check-classroom-content.py` (new)** parses the strict-JSON lesson/track literals out of the `.gs`, validates both schemas and every stamp against the prefix table read from the code itself, then loads the PROJECT region into Node and asserts a 97-case truth table (fold outcomes, per-tier visibility, index filtering, card shape, audited denials). Clean pass, no warnings
-- **`.claude/rules/classroom-app.md` (new, path-scoped) + CLAUDE.md Reference Files row** — the authoring contract C2's pipeline sessions inherit; PHASE6 doc carries a C1 status note; README tree lists the three new files
-
-**Where we left off:**
-
-- The schema slice is complete, pushed and merged (v04.12r). Classroom is at **v01.00w / v01.01g**; the page was not touched this session
-- **Registries are empty by design.** Nothing renders in Classroom yet — the remaining C1 slices are: first tracks from the corpus, the renderer (port the guidance engine), per-account progress (`gd_progress` pattern), and the study-next pointer
-- **`DEPLOYMENT_ID` is still a placeholder** — the ops answer only after the developer deploys the GAS project once and records the ID in `googleAppsScripts/Classroom/Classroom.config.json`
-
-**Key decisions made:**
-
-- **Content lives in `Classroom.gs` as strict-JSON literals** (`clLesson<Name>_()` / `clTrack<Name>_()`, guidance content-in-GAS pattern) — never on Pages — so the checker can parse them and tracks can name gated titles
-- **The gate is never stored in data**; it is derived from the stamp at serve time. A malformed stamp denies to every tier rather than gating down
-- **Guidance inputs are stored by module id, never a URL** — Profiler's hash router has no `#guidance` route (found this session), so data must not depend on another app's routes; the renderer derives links. C0's masthead deep link to `Profiler.html#guidance` was left as is
-- **`corpus:` refs carry the `briefing` kind** (contributor+), matching Coverage's tier in Profiler — the gate follows the content across apps
-- **A briefing's "public-only edition"** for analysts is simply a briefing whose inputs are all public — no special field
-- **The Classroom tree entry keeps its `[template]` label** — C0 deliberately left that convention unsettled, so it was not changed unilaterally here either
-
-**Active context:**
-
-- Repo **v04.12r** · Classroom **v01.00w** / **v01.01g** · Profiler **v01.77w** / **v01.32g** · Scraper **v01.71w** / **v01.98g**
-- Capacity: repo CHANGELOG **92/100**; Classroom GAS changelog **1/50**
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
-- Model plan for the remaining phases (agreed last session): next C1 slice (tracks, renderer, progress, study-next) on **Opus 5 Extra**; C2 machinery on Opus 5 Extra; C2 authoring prompt + freshness deltas on Fable 5.1 High
-- Verification set for any Classroom change: `python3 scripts/check-classroom-content.py`, `node --check` on a `.js` copy of `Classroom.gs`, `node scripts/check-gas-inner-scripts.js`
-- Quiz item shape in the shared renderer is `{ q, c: [choices], a: <index>, why }` (documented in the schema example)
-
-**Recommendation for next session:**
-
-- Assemble the first tracks from the existing corpus on Opus 5 Extra: author public-stamped modules from the study guides and concepts registry plus one guidance-stamped module that deep-links pre-C3, register them in `clLessons_()` / `clTracks_()`, pass `check-classroom-content.py`, then port the guidance renderer into `Classroom.html` so the index and lesson views render through the new `action=classroom` ops.
-
-**To continue:** type `build C1 — first tracks and the renderer`
 
 Developed by: LightAISolutions
