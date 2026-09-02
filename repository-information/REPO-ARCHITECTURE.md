@@ -55,6 +55,7 @@ graph TB
             SCRAPER_PAGE["[template] Scraper.html\n(News Scraper)"]
             RECEIPTS_PAGE["[template] Receipts.html\n(Receipts)"]
             PROFILER_PAGE["Profiler.html\n(Company Dossiers)"]
+            CLASSROOM_PAGE["[template] Classroom.html\n(Classroom — BESS/AIDC Curriculum)"]
         end
 
         subgraph "Google Apps Scripts [template]"
@@ -103,6 +104,7 @@ graph TB
             GAS_SCRAPER["[template] Scraper.gs"]
             GAS_RECEIPTS["[template] Receipts.gs"]
             GAS_PROFILER["Profiler.gs\n(field-note intake)"]
+            GAS_CLASSROOM["[template] Classroom.gs"]
             INIT_SCRIPT -.->|"auto-detects org/repo\nreplaces 22 files"| CLAUDE_MD
         end
     end
@@ -113,12 +115,14 @@ graph TB
     TPL_AUTH -.->|"copy to create\nnew auth pages"| MASTERACL_PAGE
     TPL_AUTH -.->|"copy to create\nnew auth pages"| SCRAPER_PAGE
     TPL_AUTH -.->|"copy to create\nnew auth pages"| RECEIPTS_PAGE
+    TPL_AUTH -.->|"copy to create\nnew auth pages"| CLASSROOM_PAGE
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_TESTAUTHGAS1
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_TESTAUTHHTML1
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_GLOBALACL
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_MASTERACL
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_SCRAPER
     GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_RECEIPTS
+    GASTPL_MIN_AUTH -.->|"template source\n(setup-gas-project.sh)"| GAS_CLASSROOM
     GASTPL_MIN_AUTH -.->|"template source"| GAS_PROFILER
     TESTAUTHGAS1_PAGE -.->|"embeds via iframe"| GAS_TESTAUTHGAS1
     TESTAUTHHTML1_PAGE -.->|"embeds via iframe"| GAS_TESTAUTHHTML1
@@ -131,6 +135,7 @@ graph TB
     LIVE -.->|"serves"| SCRAPER_PAGE
     LIVE -.->|"serves"| RECEIPTS_PAGE
     LIVE -.->|"serves"| PROFILER_PAGE
+    LIVE -.->|"serves"| CLASSROOM_PAGE
     GAS_DEPLOY -.->|"triggers self-update"| GAS_TESTAUTHGAS1
     GAS_DEPLOY -.->|"triggers self-update"| GAS_TESTAUTHHTML1
     GAS_DEPLOY -.->|"triggers self-update"| GAS_GLOBALACL
@@ -138,6 +143,7 @@ graph TB
     GAS_DEPLOY -.->|"triggers self-update"| GAS_SCRAPER
     GAS_DEPLOY -.->|"triggers self-update"| GAS_RECEIPTS
     GAS_DEPLOY -.->|"triggers self-update"| GAS_PROFILER
+    GAS_DEPLOY -.->|"triggers self-update"| GAS_CLASSROOM
     SHA_FILE -.->|"read by"| SHA_CHECK
     UPDATE_SHA -.->|"writes"| SHA_FILE
     HTML_VERS -.->|"version polling"| GASTPL_PAGE
@@ -149,6 +155,7 @@ graph TB
     HTML_VERS -.->|"version polling"| SCRAPER_PAGE
     HTML_VERS -.->|"version polling"| RECEIPTS_PAGE
     HTML_VERS -.->|"version polling"| PROFILER_PAGE
+    HTML_VERS -.->|"version polling"| CLASSROOM_PAGE
     TPL_NOAUTH -.->|"copy to create\nnew noauth pages"| TEXTCOMPARE_PAGE
     TPL_NOAUTH -.->|"copy to create\nnew noauth pages"| PROFILER_PAGE
     GAS_PROFILER -.->|"Coverage proxy\n(token-gated corpus read)"| GAS_SCRAPER
@@ -367,6 +374,7 @@ Environment-specific internals (page lifecycle states, maintenance mode, splash 
 | MasterACL | [`repository-information/diagrams/MasterACL-diagram.md`](diagrams/MasterACL-diagram.md) |
 | News Scraper | [`repository-information/diagrams/Scraper-diagram.md`](diagrams/Scraper-diagram.md) |
 | Receipts | [`repository-information/diagrams/Receipts-diagram.md`](diagrams/Receipts-diagram.md) |
+| Classroom — BESS/AIDC Curriculum | [`repository-information/diagrams/Classroom-diagram.md`](diagrams/Classroom-diagram.md) |
 
 
 ## 4. Git Graph — Branching Strategy
@@ -562,6 +570,7 @@ classDiagram
     MASTERACL_PAGE -.->|"embeds via iframe"| GAS_MASTERACL
     SCRAPER_PAGE -.->|"embeds via iframe"| GAS_SCRAPER
     RECEIPTS_PAGE -.->|"embeds via iframe"| GAS_RECEIPTS
+    CLASSROOM_PAGE -.->|"embeds via iframe"| GAS_CLASSROOM
     PROFILER_PAGE -.->|"embeds inline note-box iframe"| GAS_PROFILER
     HTMLPage "1" --> "1" Changelog : html changelog
     HTMLPage "1" --> "1" EnvironmentDiagram : internals documented in

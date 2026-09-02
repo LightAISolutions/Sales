@@ -3,11 +3,16 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 50/50`
+`Sections: 48/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.77w] — 2026-09-01 10:08:49 PM EST — v04.11r
+
+### Added
+- A **🎓 Classroom** link at the top of the page opens the new Classroom app, where the material behind these dossiers is taught as tracks and lessons. It appears for administrators, contributors and analysts
 
 ## [v01.76w] — 2026-09-01 09:22:14 PM EST — v04.10r
 
@@ -334,27 +339,3 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older s
 ### Changed
 - Recordings and transcripts are named more readably: `Catl 2026-08-10 Voice 260810_015240.m4a` rather than the previous run-together form. Files saved under the old naming are still recognised, so nothing already in your folders needs renaming
 - The summary heading on a written-up note now reads `Auto-summary (model)` instead of the bracketed form
-
-## [v01.29w] — 2026-08-17 08:36:32 PM EST — v02.64r
-
-### Added
-- **Transcripts you have already transcribed are now picked up for you.** Opening the notes log checks your "2-transcribed" folder and lists any meeting transcript that has not been written up yet. Choose a confidence rating once, press one button, and every waiting transcript is filed against the right company and written up in turn
-- Each pending transcript is shown with the company it will be filed under **before** you commit to importing, so a mis-named file is visible rather than quietly filed in the wrong place. A file whose name does not match a company you cover is filed under General instead of being skipped
-- Progress is reported per file while the batch runs, so a long transcript no longer looks like a stall
-
-### Fixed
-- The write-up and copy-with-transcript buttons no longer appear on notes whose attachment is a Word or PDF document. Those buttons could never work on such a note, and pressing one always failed
-- A folder that cannot be checked now says so, instead of looking identical to having nothing new to import
-
-## [v01.28w] — 2026-08-17 02:34:37 AM EST — v02.56r
-
-### Changed
-- When sign-in cannot reach the access list, the message now says **which** part is at fault instead of giving the same wording for every cause, and it includes a short code you can quote when reporting it
-- A retry is only suggested when the problem is genuinely temporary. A structural problem with the list now says plainly that it will not clear on its own and needs an administrator, rather than inviting you to keep trying
-
-## [v01.27w] — 2026-08-17 02:10:00 AM EST — v02.54r
-
-### Fixed
-- A brief interruption while the app was checking your access no longer appears as "Access denied". Sign-in now says it is a temporary service problem and asks you to try again, instead of turning you away with a message that suggests your access had been removed
-- After one of these interruptions, sign-in works again as soon as the service recovers rather than staying blocked for the next several minutes
-- Retrying during an interruption no longer counts toward the failed-attempt limit, so a service hiccup can no longer escalate into a temporary lockout

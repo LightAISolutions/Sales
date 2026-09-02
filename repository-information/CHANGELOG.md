@@ -3,11 +3,52 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.11r] — 2026-09-01 10:08:49 PM EST
+
+> **Prompt:** "Start building Classroom v1 C0. When you are ready to start C1, then remember session, so I can build C1 on Fable 5.1 High in a new session."
+
+### Added
+
+**Classroom scaffolded as its own federated app — Phase 6, C0.** The design gate's first build phase: `setup-gas-project.sh` spawned the app from the auth template (own sign-in wall, Master ACL, deploy webhook, version and changelog files), then the v1 access matrix and the cross-links to Profiler were built on top. C0's other slice, the Profiler access retune, shipped ahead of schedule on 2026-08-31 as v01.75w / v01.30g and needed nothing here.
+
+#### `Classroom.gs` — v01.00g (new)
+
+- `CL_ROLE_CAPS` — the server half of the v1 matrix: admin holds `tracks`/`guidance`/`briefing`/`reports`/`pipeline`, contributor drops `reports` and `pipeline`, analyst keeps `tracks` alone, and viewer is not admitted to the app at all (decision 2). An unrecognised role collapses to viewer, so an unknown tier fails closed rather than inheriting the reading surface
+- `CL_PROVENANCE_CAPS` + `clGateForProvenance_()` encode the provenance-gating rule before any content exists to gate: a lesson inherits the strictest gate of its inputs, folding a list of provenances down to the one capability its strictest input demands. An empty list, an unknown provenance, or a field-note provenance (deliberately absent from the map, per notes-are-not-sources) returns `''`, which callers must treat as deny
+- `clRequire_()` / `clRequireLesson_()` — the gates C1's data ops call after `validateSessionForData`. Both throw rather than returning false, so a forgotten return value cannot serve gated content, and both write an audit-log entry naming the tier and capability
+
+#### `Classroom.html` — v01.00w (new)
+
+- Client half of the matrix mirroring `CL_ROLE_CAPS`, with `?as=<tier>` preview that only ever intersects with the real capabilities — it can subtract a tier's surface but never grant one
+- A masthead (`#cl-header`) that renders only after a validated session and stays hidden entirely for viewer. It carries a link back to Profiler for every admitted tier, and, for guidance-capable tiers, a deep link into Profiler's guidance hub — the pre-C3 arrangement decision 6 called for, with no interim guidance route built
+- The masthead is wired by wrapping the auth layer's `showApp()` from the project region rather than editing the AUTH region, so template propagation stays conflict-free, and the only call sits inside a `try`/`catch` so a cosmetic masthead can never break sign-in
+
+#### `Profiler.html` — v01.77w
+
+- A `🎓 Classroom` cross-link in the masthead, gated on the existing `study` capability rather than a new one: the three tiers holding `study` are exactly the three Classroom admits, so the two apps' matrices cannot drift apart at this seam
+- The masthead stack was re-slotted so the least restrictive button sits innermost — Classroom at 4px, guidance at 44px, network at 84px, reports at 124px — preserving the existing invariant that a tier missing the outer buttons sees a contiguous stack rather than a gap
+
+#### `scripts/verify-profiler-roles.py`
+
+- Extended with a `classroom` surface across all four tiers, as the design document's verification expectations require of any C0 access-matrix change
+
+### Verified
+
+- `scripts/verify-profiler-roles.py` — all checks pass across the four tiers including the new Classroom column: shown for admin, contributor and analyst, hidden for viewer. Per-account isolation and the Technical Annex audit (89 of 89 dossiers) still pass
+- `node --check` on `Classroom.gs` and `Profiler.gs`; `scripts/check-gas-inner-scripts.js` — 86 inner script blocks across 9 files parse cleanly
+- Headless Chromium against `Classroom.html`: the capability matrix resolves correctly for all four tiers plus an unrecognised role, which fails closed; the masthead renders for admin, contributor and analyst and stays hidden for viewer; the guidance deep link appears only for guidance-capable tiers; an analyst requesting an admin capability is refused. No page errors on load
+- Screenshot reads of both mastheads. The first Classroom render was near-illegible — the masthead had been styled for a dark shell after the version modal's colours were mistaken for the page's, on a page whose body is white — and was restyled dark-on-paper before commit. Profiler's re-slotted stack measures a clean 40px pitch with no overlap
+
+### Notes
+
+- `DEPLOYMENT_ID` remains a placeholder, which is the expected bootstrap gap: the ID does not exist until the GAS project is created and deployed once. The workflow's deploy step reads it at merge time and no-ops silently until it is filled in
+- The scaffold labelled Classroom's README and architecture entries `[template]`. That matches Scraper but not Profiler, which carries no label — the repo holds both conventions today, so the script's output was left alone rather than settled unilaterally mid-phase
 
 ## [v04.10r] — 2026-09-01 09:22:14 PM EST
 

@@ -1,0 +1,11 @@
+{
+  "TITLE": "Classroom — BESS/AIDC Curriculum",
+  "DEPLOYMENT_ID": "YOUR_DEPLOYMENT_ID",
+  "SPREADSHEET_ID": "YOUR_SPREADSHEET_ID",
+  "SHEET_NAME": "YOUR_SHEET_NAME",
+  "MASTER_ACL_SPREADSHEET_ID": "1kG2KftqfKOeYwBCEkxRpw-QBh9s-1-Dvy31sH037UvE",
+  "ACL_SHEET_NAME": "Access",
+  "ACL_PAGE_NAME": "Classroom",
+  "PORTAL_ICON": "🎓",
+  "PORTAL_DESCRIPTION": "Curriculum and retention layer — taught from the Profiler and Scraper corpus."
+}

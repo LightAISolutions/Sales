@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.76w">
+  <meta name="build-version" content="v01.77w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -393,7 +393,7 @@
     #ov-network-btn {
       /* Second slot (44px) — visible to every tier, so it sits flush under the
          guidance button; the admin-only Reports button takes the outer slot. */
-      position: absolute; top: 44px; right: 0;
+      position: absolute; top: 84px; right: 0;
       background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
       border-radius: 999px; padding: 8px 16px; cursor: pointer;
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
@@ -838,21 +838,31 @@
        six-checks, 2026-08-22): gold #b18f35 / blue #4f83e6 / rose #cc5f75. */
     #ov-header { position: relative; }
     #ov-guide-btn {
-      position: absolute; top: 4px; right: 0; display: none;
+      position: absolute; top: 44px; right: 0; display: none;
       background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
       border-radius: 999px; padding: 8px 16px; cursor: pointer;
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
     }
     #ov-guide-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
+    /* Inner slot (4px) — visible to admin, contributor and analyst, the three
+       tiers Classroom admits, so it is the least restrictive of the stack. */
+    #ov-classroom-btn {
+      position: absolute; top: 4px; right: 0;
+      display: inline-block; text-decoration: none;
+      background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
+      border-radius: 999px; padding: 8px 16px; cursor: pointer;
+      font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
+    }
+    #ov-classroom-btn:hover { border-color: var(--ov-gold); background: rgba(216,180,90,0.08); }
     .gd-group { font: 600 10px/1 var(--ov-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ov-faint); margin: 20px 0 4px; border-bottom: 1px solid var(--ov-line); padding-bottom: 6px; }
     /* ── Industry Reports (v01.52w) ─────────────────────────────────────
        In-page views (#reports / #report/<id>) reusing the gd-* section
        primitives; rp-* covers only what reports add — citation superscripts,
        confidence chips, coverage drift badges, the masthead button. */
     #ov-reports-btn {
-      /* Outer slot (84px) — admin-only, so tiers without it see a contiguous
+      /* Outer slot (124px) — admin-only, so tiers without it see a contiguous
          button stack instead of a gap where Reports would have been. */
-      position: absolute; top: 84px; right: 0;
+      position: absolute; top: 124px; right: 0;
       background: transparent; color: var(--ov-gold); border: 1px solid var(--ov-line2);
       border-radius: 999px; padding: 8px 16px; cursor: pointer;
       font: 600 12px/1 var(--ov-mono); letter-spacing: 0.14em; text-transform: uppercase;
@@ -6190,6 +6200,23 @@ function ovReloadFresh() {
       b.style.display = 'inline-block';
     }
 
+    // Cross-link to the Classroom app (Phase 6 C0). Gated on 'study' rather
+    // than a new capability: admin, contributor and analyst all hold it and are
+    // exactly the three tiers Classroom admits, while viewer holds neither it
+    // nor Classroom access — so the two matrices cannot drift apart here.
+    function ovClassroomBtnShow() {
+      if (!ovCan('study')) return;
+      if (document.getElementById('ov-classroom-btn')) return;
+      var head = document.getElementById('ov-header');
+      if (!head) return;
+      var a = document.createElement('a');
+      a.id = 'ov-classroom-btn';
+      a.href = 'Classroom.html';
+      a.textContent = '🎓 Classroom';
+      a.title = 'Curriculum and retention layer built from this corpus';
+      head.appendChild(a);
+    }
+
     function ovGuideOpen() {
       gdProgressSync();   // no-op once a sync has succeeded; retries after failures
       var ov = document.getElementById('ov-guide-overlay');
@@ -7632,6 +7659,7 @@ function ovReloadFresh() {
       function pass() {
         wall.style.display = 'none';
         ovStyleBtnShow(); ovGuideBtnShow(); ovReportsBtnShow(); ovNetworkBtnShow();
+        ovClassroomBtnShow();
         // The first render can run before whoami resolves, so the role-gated
         // controls in it were decided without a tier. Repaint now that we have one.
         try { if (ovRegistry) ovRoute(); } catch (rErr) {}

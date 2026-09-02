@@ -43,6 +43,7 @@ Each GAS project has a code file and a corresponding embedding page. Register th
 | Scraper | `googleAppsScripts/Scraper/Scraper.gs` | `googleAppsScripts/Scraper/Scraper.config.json` | `live-site-pages/Scraper.html` |
 | Receipts | `googleAppsScripts/Receipts/Receipts.gs` | `googleAppsScripts/Receipts/Receipts.config.json` | `live-site-pages/Receipts.html` |
 | Profiler | `googleAppsScripts/Profiler/Profiler.gs` | `googleAppsScripts/Profiler/Profiler.config.json` | `live-site-pages/Profiler.html` (inline note-box iframe — PROJECT OVERRIDE, not full-screen) |
+| Classroom | `googleAppsScripts/Classroom/Classroom.gs` | `googleAppsScripts/Classroom/Classroom.config.json` | `live-site-pages/Classroom.html` |
 
 
 ## GAS Project Config (config.json)

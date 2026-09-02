@@ -2,6 +2,30 @@
 
 Archived changelog sections rotated from [Profilerhtml.changelog.md](Profilerhtml.changelog.md).
 
+## [v01.29w] — 2026-08-17 08:36:32 PM EST — v02.64r — [9326148](https://github.com/LightAISolutions/Sales/commit/93261486e9ccea0ab47d76615dd15ee0b335cbc9)
+
+### Added
+- **Transcripts you have already transcribed are now picked up for you.** Opening the notes log checks your "2-transcribed" folder and lists any meeting transcript that has not been written up yet. Choose a confidence rating once, press one button, and every waiting transcript is filed against the right company and written up in turn
+- Each pending transcript is shown with the company it will be filed under **before** you commit to importing, so a mis-named file is visible rather than quietly filed in the wrong place. A file whose name does not match a company you cover is filed under General instead of being skipped
+- Progress is reported per file while the batch runs, so a long transcript no longer looks like a stall
+
+### Fixed
+- The write-up and copy-with-transcript buttons no longer appear on notes whose attachment is a Word or PDF document. Those buttons could never work on such a note, and pressing one always failed
+- A folder that cannot be checked now says so, instead of looking identical to having nothing new to import
+
+## [v01.28w] — 2026-08-17 02:34:37 AM EST — v02.56r — [6762fd6](https://github.com/LightAISolutions/Sales/commit/6762fd62fc42f36d33dbf3061edfb74653d4d8de)
+
+### Changed
+- When sign-in cannot reach the access list, the message now says **which** part is at fault instead of giving the same wording for every cause, and it includes a short code you can quote when reporting it
+- A retry is only suggested when the problem is genuinely temporary. A structural problem with the list now says plainly that it will not clear on its own and needs an administrator, rather than inviting you to keep trying
+
+## [v01.27w] — 2026-08-17 02:10:00 AM EST — v02.54r — [4832a48](https://github.com/LightAISolutions/Sales/commit/4832a488b385fc40ff070724181c18fab99582f2)
+
+### Fixed
+- A brief interruption while the app was checking your access no longer appears as "Access denied". Sign-in now says it is a temporary service problem and asks you to try again, instead of turning you away with a message that suggests your access had been removed
+- After one of these interruptions, sign-in works again as soon as the service recovers rather than staying blocked for the next several minutes
+- Retrying during an interruption no longer counts toward the failed-attempt limit, so a service hiccup can no longer escalate into a temporary lockout
+
 ## [v01.26w] — 2026-08-13 04:34:03 AM EST — v02.37r — [09f990c](https://github.com/LightAISolutions/Sales/commit/09f990cfd3ee8cc87516087965ebe0c58ed07bf1)
 
 ### Added

@@ -5,6 +5,58 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 > **Note on stale-context auto-reconstruction** — when a session starts and this file's `Repo version:` doesn't match the current repo version, Claude reconstructs the missing entry from CHANGELOG.md and commits it **without pushing**. The commit rides along with the session's first user-task commit on the next push. If a session ends before any user-task push happens, the reconstructed entry stays **local-only** and the next session will just re-reconstruct from CHANGELOG if still stale. This is intentional — pushing a dedicated reconstruction commit on its own would force every subsequent user push in the same session to wait for the auto-merge workflow to finish before it could push too (push-once enforcement). The reconstructed entry is a convenience hint, not load-bearing state, so the small persistence risk is a fair trade.
 
 ## Latest Session
+**Date:** 2026-09-01 10:08:49 PM EST
+**Repo version:** v04.11r
+**Branch:** `claude/classroom-v1-model-selection-ja05mu`
+
+**What we worked on:**
+
+- **Model selection across the Classroom v1 build plan (research, no commit).** Read `PHASE6-CLASSROOM-DESIGN.md` against the `claude-api` skill's model reference. Fable 5.1 is $10/$50 per MTok against Opus 5 at $5/$25 — exactly 2× — and "Extra" reads as the `xhigh` effort tier. Because lower effort on the newest models often matches or exceeds prior-generation performance at high effort, **Fable 5.1 High** is the efficient way to buy Fable's capability; Fable 5.1 Extra was not recommended anywhere in v1
+- **C0 built and pushed (v04.11r).** Classroom scaffolded from the auth template via `setup-gas-project.sh` (10 files), the v1 access matrix built on both sides, masthead cross-links wired between the two apps, and `verify-profiler-roles.py` extended with the new surface
+
+**The agreed model plan for the remaining phases:**
+
+| Phase | Model |
+|---|---|
+| C0 — scaffold + cross-links | Opus 5 Extra ✅ done |
+| **C1 — schema + provenance gating** | **Fable 5.1 High** ← next session |
+| C1 — tracks, progress, study-next plumbing | Opus 5 Extra |
+| C2 — pipeline machinery | Opus 5 Extra |
+| C2 — authoring prompt + freshness deltas | Fable 5.1 High (one session) |
+| C3 / C4 | the only candidates for Fable 5.1 Extra |
+
+**Where we left off:**
+
+- C0 is complete and pushed. Classroom is at **v01.00w / v01.00g**, Profiler at **v01.77w** (GAS unchanged at v01.32g)
+- **`DEPLOYMENT_ID` is still a placeholder** — the expected bootstrap gap. The developer must create the GAS project, deploy it once, then put the real ID in `googleAppsScripts/Classroom/Classroom.config.json`. The workflow's deploy step reads it at merge time and no-ops silently until then, so Classroom's GAS half is not live yet
+- Nothing in C1 has been started — no track schema, no lesson storage, no progress store
+
+**Key decisions made:**
+
+- **The provenance-gating rule was encoded in C0, before any content exists to gate.** `CL_PROVENANCE_CAPS` + `clGateForProvenance_()` fold a lesson's inputs down to the capability its strictest input demands, and fail closed (`''` = deny) on an empty list, an unknown provenance, or a field-note provenance. C1 should stamp lessons and call `clRequireLesson_()` rather than inventing a parallel path
+- **The Profiler cross-link is gated on the existing `study` capability, not a new one** — the three tiers holding `study` are exactly the three Classroom admits, so the two matrices cannot drift apart at that seam
+- **Viewer exclusion is an app-door gate**, not a per-op one: `clAdmitted_` turns viewer away before any capability is consulted, and an unrecognised role collapses to viewer
+- **The masthead is wired by wrapping `showApp()` from the project region**, never by editing the AUTH region, so template propagation ([PC-TEMPLATE-PROP] #19) stays conflict-free
+- The scaffold's `[template]` labels on Classroom's README/architecture entries were **left alone** — Scraper carries them, Profiler does not, so the repo holds both conventions and it was not settled unilaterally mid-phase
+
+**Active context:**
+
+- Repo **v04.11r** · Classroom **v01.00w** / **v01.00g** · Profiler **v01.77w** / **v01.32g** · Scraper **v01.71w** / **v01.98g**
+- Capacity: repo CHANGELOG **91/100**; Profiler page changelog rotated this push — now **48/50**, archive holds 29 sections
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
+- **Classroom is light-themed, Profiler is dark.** The masthead was styled for the page's actual white body. Giving Classroom a visual identity that matches the Profiler family is a C1 decision, deliberately not made in C0
+- Playwright works here via `pip install playwright` (package only) + `executable_path=/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell`, serving `live-site-pages/` over `python3 -m http.server`
+- **Test trap hit this session:** seeding only `localStorage` when `getStorage()` may return `sessionStorage` made a working masthead look broken. Seed both stores in page-level role tests
+
+**Recommendation for next session:**
+
+- Build **C1's track/lesson schema and its provenance stamp first**, on Fable 5.1 High, before any renderer or progress work — it is the one irreversible decision in v1 (Phase 5 showed study.json v1 stays renderable forever behind an adapter), it must slot into `clGateForProvenance_()`'s existing vocabulary, and every lesson C2 later auto-authors inherits it.
+
+**To continue:** type `build C1 — start with the track and lesson schema`
+
+## Previous Sessions
+
+### Session — 2026-09-01 (Apex Clean Energy dossier; renderer fix for 20 dossiers — v04.09r–v04.10r)
 **Date:** 2026-09-01 09:30:32 PM EST
 **Repo version:** v04.10r
 **Branch:** `claude/profiler-apex-clean-energy-wunvad`
@@ -43,28 +95,4 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **To continue:** type `check the fixed dossiers render`
 
-## Previous Sessions
-
-### Session — 2026-09-01 (Scraper diagnostics, federal feeds, EO 14420 guidance module — v04.04r–v04.08r, reconstructed)
-**Date:** 2026-09-01 08:03:04 PM EST
-**Reconstructed:** Auto-recovered from CHANGELOG (original session did not save context)
-**Repo version:** v04.08r
-
-**What was done (v04.04r–v04.08r, reconstructed from CHANGELOG — Scraper diagnostics, federal feeds, an EO 14420 guidance module; no session context was saved):**
-
-- Scraper's status strip split `tick 8h ago · 5 err/24h` into two tiles: a run tile that says `overdue` past the served `tickOverdueMin`, and a `BACKGROUND FAULTS · LAST 24H` tile that opens a panel listing each fault with **Copy all** and a manager-gated **Mark resolved & clear**. The count became exact via an hourly tally (`scDigestErrCount_`) instead of a `.slice(-5).length` ceiling, and the silent-throw path in `scSchedulerTick` now logs `tick.fatal` and rethrows (Scraper.html v01.69w, Scraper.gs v01.94g) (v04.04r)
-- Fixed the fault tile vanishing right after that deploy — the new tally property did not exist yet, so `recentErrorCount` read 0 while five entries sat unreachable in the detail log; now `max(tally, in-window log length)` (Scraper.gs v01.95g) (v04.05r)
-- Five primary federal feeds added to Scraper after live probes (White House Presidential Actions, Federal Register FERC + IRS, DOE Newsroom, EIA Today in Energy); ferc.gov (Cloudflare 403), the IRS newsroom (404) and EPA (empty 202) retired with rules-file entries; `topic-bps-security` + `topic-federal-action` seeds; EO 14420 bulk-power-system guidance module `eo14420-bulk-power-2026-08` authored from the primary text, with analysis markdown + archived source under `repository-information/industry-guidance/` (Scraper.gs v01.96g, Profiler.gs v01.32g) (v04.06r)
-- "Why thin?" gained a per-source contribution table (`bySource`, `silentSources`) so a silent feed and a sub-threshold feed are distinguishable; the edition picker was rebuilt (grouped by edition, issue number first, weekday shown, edition filter, weekend builds shown as unnumbered) with `wdDgDate_` parsing through `Date.UTC` (Scraper.gs v01.97g, Scraper.html v01.70w) (v04.07r)
-- "Why thin?" had never rendered once: its 25 s client deadline set `settled`, and the success handler discarded any later reply. The timer now shows a live elapsed count instead of giving up, transport aborts are explained with a retry hint, the subtitle shows desk vs round-trip time, and `scDigestScoreRows_` is bounded to the newest 8,000 intake rows (Scraper.html v01.71w, Scraper.gs v01.98g) (v04.08r)
-
-**Where we left off:** All changes committed and merged to main
-
-**Active context:**
-
-- Repo **v04.08r** · HTML: Scraper **v01.71w**, Profiler **v01.75w** · GAS: Scraper **v01.98g**, Profiler **v01.32g**, Receipts **v01.29g**, MasterACL **v01.14g**
-- Repo CHANGELOG at **88/100**
-- TODO.md empty; REMINDERS.md has no active reminders
-- Toggles: `START_OF_RESPONSE_BLOCK` On, `CHAT_BOOKENDS` Off, `TIMING_ESTIMATES` On, `END_OF_RESPONSE_BLOCK` On
-- Open items carried forward: the daily ACL health Routine (`trig_01GeTqB8xp5nG8FCC139Bgr9`) has not yet been observed staying silent on a healthy day (v04.03r recommendation); v04.07r made "are the Federal Register feeds contributing?" answerable in-app but did not answer it
-
+Developed by: LightAISolutions

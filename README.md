@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-01 09:30:32 PM EST` · Repo version: `v04.10r`
+Last updated: `2026-09-01 10:08:49 PM EST` · Repo version: `v04.11r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -49,7 +49,7 @@ Last updated: `2026-09-01 09:30:32 PM EST` · Repo version: `v04.10r`
 │   │
 │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/globalacl.html">globalacl.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/globalacl.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Globalacl/globalacl.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/globalaclhtml.changelog.md">v01.05w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/globalaclgs.changelog.md">v01.07g</a> | [template] Global ACL page
 │   │
-│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.76w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">v01.32g</a> | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs; in-dossier field-note intake
+│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.77w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">v01.32g</a> | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs; in-dossier field-note intake
 │   │
 │   <b>│ ─ Standalone Utilities ─────────────────────────────────────────────────────</b>
 │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/text-compare.html">text-compare.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/text-compare.html">🌐</a>  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/text-comparehtml.changelog.md">v01.01w</a> · vNoGASg | [template] Text comparison tool with side-by-side diff highlighting
@@ -60,6 +60,8 @@ Last updated: `2026-09-01 09:30:32 PM EST` · Repo version: `v04.10r`
 │   │
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Receipts.html">Receipts.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Receipts.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1SfVRsHm6pUn1bq633BSKiQ8c3IsQeVAs7H0265ckdDM/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Receipts/Receipts.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog.md">v01.36w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog.md">v01.28g</a> | [template] Receipts page
 │   │
+│   │
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Classroom.html">Classroom.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Classroom.html">🌐</a>🟢 · ◽ · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Classroom/Classroom.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Classroomhtml.changelog.md">v01.00w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">v01.00g</a> | [template] Classroom — BESS/AIDC Curriculum page
 │   │
 │   <b>│ ─ External Sites (Placeholder) ────────────────────────────────────────────</b>
 │   │   <i>(No external-site pages yet)</i>
@@ -469,7 +471,9 @@ Last updated: `2026-09-01 09:30:32 PM EST` · Repo version: `v04.10r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog.md">Receiptshtml.changelog.md</a>             — [template] Receipts page changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog-archive.md">Receiptshtml.changelog-archive.md</a>     — [template] Older sections (rotated)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">Profilerhtml.changelog.md</a>             — Profiler page changelog
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog-archive.md">Profilerhtml.changelog-archive.md</a>     — Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog-archive.md">Profilerhtml.changelog-archive.md</a>     — Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Classroomhtml.changelog.md">Classroomhtml.changelog.md</a>             — [template] Classroom page changelog
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Classroomhtml.changelog-archive.md">Classroomhtml.changelog-archive.md</a>     — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/gs-changelogs">gs-changelogs/</a>           — [template] GAS changelogs (source of truth + deployed)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/testauthgas1gs.changelog.md">testauthgas1gs.changelog.md</a>               — [template] Testauthgas1 GAS changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/testauthgas1gs.changelog-archive.md">testauthgas1gs.changelog-archive.md</a>       — [template] Older sections (rotated)
@@ -484,7 +488,9 @@ Last updated: `2026-09-01 09:30:32 PM EST` · Repo version: `v04.10r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog.md">Receiptsgs.changelog.md</a>               — [template] Receipts GAS changelog
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog-archive.md">Receiptsgs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">Profilergs.changelog.md</a>               — Profiler GAS changelog
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog-archive.md">Profilergs.changelog-archive.md</a>       — Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog-archive.md">Profilergs.changelog-archive.md</a>       — Older sections (rotated)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">Classroomgs.changelog.md</a>               — [template] Classroom GAS changelog
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog-archive.md">Classroomgs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (171 images across 47 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
@@ -511,9 +517,12 @@ Last updated: `2026-09-01 09:30:32 PM EST` · Repo version: `v04.10r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/googleAppsScripts/Receipts">Receipts/</a>             — [template] GAS for live-site-pages/Receipts.html
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Receipts/Receipts.gs">Receipts.gs</a>              — [template] Self-updating GAS web app
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Receipts/Receipts.config.json">Receipts.config.json</a>     — [template] Project config (source of truth)
-│   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/googleAppsScripts/Profiler">Profiler/</a>             — GAS for live-site-pages/Profiler.html (in-dossier field-note intake)
-│       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">Profiler.gs</a>              — Self-updating GAS web app (note + Word/PDF intake)
-│       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.config.json">Profiler.config.json</a>     — Project config (source of truth)
+│   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/googleAppsScripts/Profiler">Profiler/</a>             — GAS for live-site-pages/Profiler.html (in-dossier field-note intake)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">Profiler.gs</a>              — Self-updating GAS web app (note + Word/PDF intake)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.config.json">Profiler.config.json</a>     — Project config (source of truth)
+│   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/googleAppsScripts/Classroom">Classroom/</a>             — [template] GAS for live-site-pages/Classroom.html
+│       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Classroom/Classroom.gs">Classroom.gs</a>              — [template] Self-updating GAS web app
+│       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Classroom/Classroom.config.json">Classroom.config.json</a>     — [template] Project config (source of truth)
 │
 <b>─── Sample Components ────────────────────────────────────────────────────────</b>
 ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/sample-components">sample-components/</a>          — Self-contained starter kit (HTML version-polling + GAS self-update) for bootstrapping a new repo
@@ -526,13 +535,15 @@ Last updated: `2026-09-01 09:30:32 PM EST` · Repo version: `v04.10r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/sample-components/html-versions/samplehtml.version.txt">samplehtml.version.txt</a>  — `|v01.00w|`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/MasterACLhtml.version.txt">MasterACLhtml.version.txt</a>          — [template]
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/Scraperhtml.version.txt">Scraperhtml.version.txt</a>          — [template]
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/Receiptshtml.version.txt">Receiptshtml.version.txt</a>          — [template]
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/Receiptshtml.version.txt">Receiptshtml.version.txt</a>          — [template]
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-versions/Classroomhtml.version.txt">Classroomhtml.version.txt</a>          — [template]
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/sample-components/gs-versions">gs-versions/</a>                — GAS-version files (cross-referenced from page changelogs)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/sample-components/gs-versions/samplegs.version.txt">samplegs.version.txt</a>    — `|v01.00g|`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/MasterACLgs.version.txt">MasterACLgs.version.txt</a>            — [template]
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/Scrapergs.version.txt">Scrapergs.version.txt</a>            — [template]
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/Receiptsgs.version.txt">Receiptsgs.version.txt</a>            — [template]
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/Profilergs.version.txt">Profilergs.version.txt</a>            — Profiler GAS version
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/Profilergs.version.txt">Profilergs.version.txt</a>            — Profiler GAS version
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-versions/Classroomgs.version.txt">Classroomgs.version.txt</a>            — [template]
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/sample-components/workflows">workflows/</a>                  — Workflow stubs (drop into `.github/workflows/` in the new repo)
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/sample-components/workflows/auto-merge-and-deploy.yml">auto-merge-and-deploy.yml</a>  — Minimal CI: merge claude/* → main + fire GAS deploy webhook
 │
@@ -597,7 +608,8 @@ Last updated: `2026-09-01 09:30:32 PM EST` · Repo version: `v04.10r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/MasterACL-diagram.md">MasterACL-diagram.md</a>         — [template] MasterACL page GAS integration sequence
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/Scraper-diagram.md">Scraper-diagram.md</a>         — [template] Scraper page GAS integration sequence
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/Receipts-diagram.md">Receipts-diagram.md</a>         — [template] Receipts page GAS integration sequence
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/profiler-diagram.md">profiler-diagram.md</a>         — Profiler page GAS integration sequence (inline note-box iframe)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/profiler-diagram.md">profiler-diagram.md</a>         — Profiler page GAS integration sequence (inline note-box iframe)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/diagrams/Classroom-diagram.md">Classroom-diagram.md</a>         — [template] Classroom page GAS integration sequence
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.md">AIDC-MARKET-REPORT.md</a>   — AIDC market report: an equity-research guide to the US AI data-center infrastructure market, written to teach it — 11 chapters of argument; the 40 per-company entries live in the Coverage Universe companion
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT.pdf">AIDC-MARKET-REPORT.pdf</a>  — Formatted market report, BloombergNEF Research Report style (canonical edition; 109 pages, single-column contents on page 2, every chapter on a fresh page)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/AIDC-MARKET-REPORT-analyst-prose.pdf">AIDC-MARKET-REPORT-analyst-prose.pdf</a> — Same report, Analyst Prose style (the Profiler house style)

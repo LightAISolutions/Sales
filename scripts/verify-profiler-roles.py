@@ -18,11 +18,16 @@ ovNormalizeRole, so the test exercises the real sign-in path.
 The matrix under test (developer directives, 2026-08-22; Reports added
 2026-08-29; ecosystem retune 2026-08-31 per PHASE6-CLASSROOM-DESIGN.md):
 
-    tier         Note  Vers  Guid  Export  Reports  Network  Coverage  Study  Compare
-    admin         yes   yes   yes    yes     yes      yes      yes      yes     yes
-    contributor    no    no   yes    yes      no      yes      yes      yes     yes
-    analyst        no    no    no     no      no       no       no      yes     yes
-    viewer         no    no    no     no      no       no       no       no      no
+    tier         Note  Vers  Guid  Export  Reports  Network  Coverage  Study  Compare  Classroom
+    admin         yes   yes   yes    yes     yes      yes      yes      yes     yes       yes
+    contributor    no    no   yes    yes      no      yes      yes      yes     yes       yes
+    analyst        no    no    no     no      no       no       no      yes     yes       yes
+    viewer         no    no    no     no      no       no       no       no      no        no
+
+'classroom' is the masthead cross-link to the Classroom app (Phase 6 C0).
+It is gated on 'study' rather than a capability of its own because the
+three tiers holding 'study' are exactly the three Classroom admits — so a
+drift between the two apps' matrices fails here.
 
 'network' gates BOTH the per-dossier Relationships tab and the #network
 explorer — one capability, two doors, so they cannot drift apart. The probe
@@ -51,16 +56,20 @@ SHOTS.mkdir(exist_ok=True)
 # Expected matrix — the developer's directive, encoded as the test oracle.
 EXPECT = {
     'admin':       {'fieldNote': True,  'versions': True,  'guidance': True,  'export': True,
-                    'reports': True,  'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True},
+                    'reports': True,  'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True,
+                    'classroom': True},
     'contributor': {'fieldNote': False, 'versions': False, 'guidance': True,  'export': True,
-                    'reports': False, 'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True},
+                    'reports': False, 'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True,
+                    'classroom': True},
     'analyst':     {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False,
-                    'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': True,  'compare': True},
+                    'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': True,  'compare': True,
+                    'classroom': True},
     'viewer':      {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False,
-                    'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': False, 'compare': False},
+                    'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': False, 'compare': False,
+                    'classroom': False},
 }
 CAPS = ('fieldNote', 'versions', 'guidance', 'export', 'reports',
-        'network', 'relTab', 'coverage', 'study', 'compare')
+        'network', 'relTab', 'coverage', 'study', 'compare', 'classroom')
 GUIDANCE_ALLOWED = {'admin', 'contributor'}   # mirrors guidanceAllowed_ in Profiler.gs
 COVERAGE_ALLOWED = {'admin', 'contributor'}   # mirrors coverageAllowed_ in Profiler.gs
 
@@ -144,6 +153,7 @@ def probe(page):
         relTab:    vis('ov-tab-rels'),
         coverage:  vis('ov-cov-btn'),
         study:     vis('ov-study-btn'),
+        classroom: vis('ov-classroom-btn'),
         wall:      vis('ov-authwall'),
         role:      localStorage.getItem('ov_note_role')
       };
@@ -343,7 +353,7 @@ def run():
 
     mark = lambda b: 'shown ' if b else 'hidden'
     hdr = ('ROLE', 'NoteBtn', 'Cog', 'Versions', 'Guidance', 'Export', 'Reports',
-           'Network', 'RelTab', 'Coverage', 'Study', 'Compare')
+           'Network', 'RelTab', 'Coverage', 'Study', 'Compare', 'Classrm')
     fmt = '%-12s' + ' %-8s' * (len(hdr) - 1)
     print('\nRole + Access matrix')
     print('\n' + fmt % hdr)
@@ -353,7 +363,7 @@ def run():
             role, mark(g['noteBtn']), mark(g['cog']), mark(g['versions']),
             mark(g['guidance']), mark(g['export']), mark(g['reports']),
             mark(g['network']), mark(g['relTab']), mark(g['coverage']),
-            mark(g['study']), mark(g['compare'])))
+            mark(g['study']), mark(g['compare']), mark(g['classroom'])))
     print()
     if failures:
         print('FAILURES (%d):' % len(failures))
