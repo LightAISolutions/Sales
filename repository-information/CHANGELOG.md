@@ -3,11 +3,107 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 79/100`
+`Sections: 80/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.27r] — 2026-09-02 05:16:32 PM EST
+
+> **Prompt:** "I don't want to use Sonnet for anything; Only Opus 5 or Fable 5.1. Since the rest of this build is recommended to be built with Opus and Sonnet, just go with Opus 5 for everything. Implement Session B of IMPROVEMENT-PLAN.md."
+
+**Session B of the improvement plan: completion dates + computed deltas (P1 prerequisite + P2a/b).** Both
+progress stores change from booleans to completion dates, and both apps grow the "what changed since you read
+it" surface the dates make computable. `CLASSROOM-SCHEMA.md` has promised this since its first draft; the code
+now matches the document rather than the document being aspirational.
+
+### Changed
+
+**`googleAppsScripts/Classroom/Classroom.gs` (v01.08g) — `cl_progress` values are completion dates.**
+`clProgressWrite_` stamps `YYYY-MM-DD` instead of `true`; `clProgressVisible_` passes a valid date through and
+normalises anything else to `true`. An existing value is never overwritten — re-ticking a completed section
+must not move its date, or the delta resets on every repaint. **Legacy `true` is accepted forever and never
+rewritten**: it means "completed, date unknown" and yields no delta. Stamping old ticks with today would
+fabricate history *and* mark every pre-existing tick stale against every past revision, which is backwards.
+That is the whole migration — the type widens, old values stand, the store dates itself forward.
+
+- **`clStudyNext_` needed no change** — it was already truthiness-based, and a date is truthy
+- **The date comes from `Intl` (`toLocaleDateString('en-CA', …)`), not `Utilities.formatDate`.** The progress
+  store's only Apps Script dependencies are `PropertiesService` and `LockService`, which is precisely what lets
+  `scripts/check-classroom-content.py` execute the whole region in Node against real fixtures. A third service
+  would have bought a tidier call and cost the test. Falls back to UTC if the runtime lacks full ICU
+
+**`googleAppsScripts/Profiler/Profiler.gs` (v01.34g) — same value change for `gd_progress`, plus
+`dossier-<slug>` doc ids.** The `study-<slug>` containment branch is generalised to cover both prefixes: slug
+must exist in the registry, section ids must match the kebab-case anchor pattern, per-doc tick set still capped.
+Guidance modules keep the stricter enumerated validation. Same `Intl` stamp, same never-overwrite rule.
+
+**`live-site-pages/Classroom.html` (v01.05w) — the delta renders.** `clSectionDelta` implements the schema's
+rule exactly: the newest revision dated strictly after the completion date whose `changed[]` names the section.
+Painted by `clApplyProgressUI` like every other progress-dependent state, so a sync landing after the render
+fills it in. An amber strip on the section, an amber marker in the section nav, and the completion date on the
+button's tooltip. Reworded sections never appear — only `changed[]` entries do.
+
+**`live-site-pages/Profiler.html` (v01.80w) — read state and a computed changed-strip.** Read marks are one
+progress doc per dossier (`dossier-<slug>`), with the **dossier's own `lastUpdated` as the section id**, so
+"have I read the current one" is a key lookup and the roster needs nothing beyond the registry it already
+fetches — the single-fetch roster design is preserved. The roster badge shows `✓ read` or `↻ revised`. The
+changed-strip diffs the live dossier against the newest archived version and names the tabs that moved, with
+`+N` counts on arrays; each is a button that jumps to that tab. It is **derived, and labelled as derived** —
+Profiler dossiers carry no authored `revisions[]`, and this does not add one.
+
+### Fixed
+
+**`repository-information/CLASSROOM-SCHEMA.md` Freshness now describes the code.** The "(next slice)" hedges
+are gone from both places they appeared, the stored value is documented as a date, the client-side computation
+is named, and the legacy-`true` semantics are stated. R4's remaining page-comment drift is also cleared: three
+`Classroom.html` comments still said progress ticks were "deliberately absent" and that the nav tick box was
+"never filled". They shipped; the page is being bumped anyway, so they are corrected here.
+
+### Obligations discharged
+
+- **`gateDigest` refreshed** in `repository-information/classroom-pipeline-ledger.json`, in this commit, as
+  `.claude/rules/classroom-app.md` requires of any developer session that changes the gate surface —
+  `clProgressVisible_` and `clProgressWrite_` are both `GATE_SYMBOLS`. It was refreshed **twice**: the first
+  refresh went stale when the `Utilities` → `Intl` change edited `Classroom.gs` again. A stale digest here is
+  silent until next Wednesday, when the pipeline run would block on "the ground moved". `coveredThrough` and
+  `lastRun` were left alone — they are the pipeline's own fields
+- **`scripts/check-classroom-content.py` — two assertions updated, and one added.** Two progress checks
+  asserted `is True` on the stored value, pinning the boolean contract this session deliberately replaces;
+  their own failure messages say the intent is "a permitted tick did not read back" and "the stored tick was
+  destroyed by the demotion rather than filtered" — presence and survival, not the value's type. They now
+  accept a date **or** legacy `true` via a shared `_done()` helper. A **new** assertion requires that a tick
+  written by this version reads back as a *string*, so the dating contract is now tested rather than assumed —
+  the suite is stricter than before, not looser. Editing the checker is closed to the pipeline committer
+  (contract §2/§4.5) and open to a developer session (`classroom-app.md`), which is what this is
+- **Both checkers green**: `check-classroom-content` 5 lessons, 2 tracks, **124 gate cases, 0 errors, 0
+  warnings** (123 before — the extra case is the new assertion). `check-classroom-pipeline --base origin/main`
+  reports P3 only against `origin/main`, which is the pre-change base by definition; the head ledger matches
+- **`node --check`** on both `.gs` files and on every inline page script; `check-gas-inner-scripts` clean
+  across all 9 projects
+
+### Verified
+
+Playwright against both real pages: **no page errors on either**, and the new functions exercised in-page —
+`clSectionDelta` returns the newest qualifying revision (`2026-09-01`, correctly preferring it over an older
+`2026-08-01` match and ignoring a same-day revision that named a different section), returns null for a
+revision dated *equal* to the completion (strictly after, as specified), null for legacy `true`, null for
+unread, and null when `changed[]` does not name the section. `ovDiffSections` returned `overview, devs+1` for a
+summary edit plus one added development. Remaining console messages are `file://` CORS artifacts (audio,
+version polling, registry fetch), not defects.
+
+The new UI was rendered against each page's real stylesheet, since the pages themselves are behind an auth
+wall. That check earned its keep: the Classroom stale marker first shipped as `#9a6a12` against the existing
+`--cl-accent` `#8a6d1f` — two colours close enough to read as a rendering glitch rather than a distinction.
+Retoned to `#a1560b`, which is visibly warmer than the accent and measures 4.72:1 on the strip background.
+
+### Housekeeping
+
+- **`Profilerhtml.changelog.md` rotated** — it stood at 50/50, so the oldest date group (2026-08-18: v01.30w,
+  v01.31w, v01.32w) moved to `Profilerhtml.changelog-archive.md` with commit-SHA enrichment on all three
+  headers. Active file now at `Sections: 48/50`. SHA enrichment required `git fetch --unshallow` first: the
+  session clone had 53 commits of history and the archive's own existing SHAs did not resolve against it
 
 ## [v04.26r] — 2026-09-02 04:48:45 PM EST
 

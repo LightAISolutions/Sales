@@ -559,6 +559,14 @@ def run_gate_truth_table(src):
             err("progress test: %s may tick %s, but may read %s — progress must not be a weaker gate"
                 % (t, got, sorted(want["lessons"])))
     pr = out["progress"]
+
+    # A completed section stores its COMPLETION DATE ('YYYY-MM-DD') as of
+    # Classroom v01.08g; legacy `true` still reads as done, dateless. These
+    # two shapes are what "done" means now — the assertions below check
+    # presence and, separately, that a NEW write is dated.
+    def _done(v):
+        return v is True or (isinstance(v, str) and re.match(r"^\d{4}-\d{2}-\d{2}$", v) is not None)
+
     checks = [
         (pr["analystTicksGuidance"].get("changed") == 0,
          "an analyst tick against a guidance-gated lesson changed %s rows (expected 0)"
@@ -569,11 +577,15 @@ def run_gate_truth_table(src):
          "a tick against a section id that does not exist was stored"),
         (pr["contribTicksGuidance"].get("changed") == 1,
          "a permitted tick changed %s rows (expected 1)" % pr["contribTicksGuidance"].get("changed")),
-        (pr["readAsContrib"].get("l-gd", {}).get("a") is True,
+        (_done(pr["readAsContrib"].get("l-gd", {}).get("a")),
          "a permitted tick did not read back for the tier that made it"),
+        (isinstance(pr["readAsContrib"].get("l-gd", {}).get("a"), str),
+         "a tick written by this version read back as %r — new writes must "
+         "carry a completion date, not a bare boolean"
+         % (pr["readAsContrib"].get("l-gd", {}).get("a"),)),
         ("l-gd" not in pr["readAsAnalyst"],
          "a guidance-derived tick leaked to the same account seen as analyst"),
-        (pr["rawKept"].get("l-gd", {}).get("a") is True,
+        (_done(pr["rawKept"].get("l-gd", {}).get("a")),
          "the stored tick was destroyed by the demotion rather than filtered"),
         ("l-gd" not in pr["afterUntick"],
          "un-ticking did not remove the section"),

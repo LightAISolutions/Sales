@@ -1,4 +1,4 @@
-var VERSION = "v01.07g";
+var VERSION = "v01.08g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -2060,10 +2060,25 @@ function clTrackIndexFor_(sess) {
 // first successful sync (the guidance pattern, Profiler.gs gd_progress).
 //
 // Storage is one Script Property per account ('cl_progress:<email>' →
-// {lessonId:{secId:true}}). The blobs are tiny, well under the 9KB/value cap,
-// and have no cross-project consumers, so PropertiesService beats a
-// spreadsheet round-trip per tick. C4's drill history will NOT fit this
-// pattern — that is why the design doc calls out a sheet-backed store there.
+// {lessonId:{secId:'YYYY-MM-DD'}}). The blobs are tiny, well under the
+// 9KB/value cap, and have no cross-project consumers, so PropertiesService
+// beats a spreadsheet round-trip per tick. C4's drill history will NOT fit
+// this pattern — that is why the design doc calls out a sheet-backed store.
+//
+// **The value is a COMPLETION DATE, not a boolean** (v01.08g). CLASSROOM-SCHEMA
+// promised this from the first draft — "the progress store records when an
+// account completed a section", so a revision dated after that completion
+// whose changed[] names the section renders as a delta. Booleans could not
+// answer "after", so the delta the whole freshness discipline exists to
+// surface never rendered.
+//
+// Legacy `true` is accepted forever and is NEVER rewritten. It means
+// "completed, date unknown" — the honest reading of a tick made before dates
+// existed. Stamping those with today's date would fabricate history and would
+// mark every pre-existing tick stale against every past revision, which is
+// exactly backwards. A `true` section simply shows no delta; a dated one does.
+// This is the whole migration: the type widens, the old values stand, and the
+// store dates itself forward as sections are ticked.
 //
 // The one Classroom-specific rule: **progress is never a weaker gate than
 // reading.** Validation is built from the lessons this session may actually
@@ -2073,6 +2088,15 @@ function clTrackIndexFor_(sess) {
 // reads but never deleted — access can be restored, and progress is the
 // developer's own history, not resettable state.
 var CL_PROGRESS_PROP_PREFIX = 'cl_progress:';
+
+// Today in the fleet's reporting zone as 'YYYY-MM-DD'. 'en-CA' is the locale
+// whose short date IS ISO order. Falls back to UTC if the runtime was built
+// without full ICU, which costs at most a few hours of accuracy at a date
+// boundary and never throws.
+function clProgressToday_() {
+  try { return new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' }); }
+  catch (te) { return new Date().toISOString().slice(0, 10); }
+}
 
 function clProgressAcct_(sess) {
   var em = String((sess && sess.email) || '').toLowerCase().trim();
@@ -2102,13 +2126,22 @@ function clProgressRaw_(acct) {
 // Narrow a stored map to what this session may currently read. Unknown lesson
 // ids and sections that no longer exist drop out too, so a renamed section
 // cannot resurrect as a phantom tick.
+// The stored VALUE passes through: a 'YYYY-MM-DD' completion date, or legacy
+// boolean true. Anything else stored by an older or corrupted write is
+// normalised to true rather than dropped — a tick is the developer's own
+// history, so an unreadable date loses the date, never the completion. The
+// date literal is matched inline rather than via a shared helper so the whole
+// value contract stays inside a gate-surface function the digest covers.
 function clProgressVisible_(stored, valid) {
   var out = {};
   for (var lid in stored) {
     if (!stored.hasOwnProperty(lid) || !valid[lid]) continue;
     var keep = {}, any = false;
     for (var sid in stored[lid]) {
-      if (stored[lid].hasOwnProperty(sid) && stored[lid][sid] && valid[lid][sid]) { keep[sid] = true; any = true; }
+      if (!stored[lid].hasOwnProperty(sid) || !stored[lid][sid] || !valid[lid][sid]) continue;
+      var v = stored[lid][sid];
+      keep[sid] = (typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v)) ? v : true;
+      any = true;
     }
     if (any) out[lid] = keep;
   }
@@ -2137,6 +2170,15 @@ function clProgressWrite_(sess, p) {
   } else {
     return { success: false, error: 'NO_DELTA' };
   }
+  // One stamp per call, so a batch merge dates every section it completes
+  // identically rather than straddling midnight mid-loop.
+  //
+  // Intl rather than Utilities.formatDate on purpose: the progress store's
+  // only Apps Script dependencies are PropertiesService and LockService, which
+  // is what lets scripts/check-classroom-content.py run this whole region in
+  // Node against real fixtures. Reaching for a third service would buy a
+  // tidier call and cost the test.
+  var today = clProgressToday_();
   var lock = null;
   try { lock = LockService.getScriptLock(); lock.waitLock(5000); }
   catch (le) { lock = null; /* best effort — same-account collisions are rare */ }
@@ -2152,7 +2194,10 @@ function clProgressWrite_(sess, p) {
         if (!secMap.hasOwnProperty(sid) || !valid[lid][sid]) continue;
         if (secMap[sid]) {
           if (!cur[lid]) cur[lid] = {};
-          if (!cur[lid][sid]) { cur[lid][sid] = true; wrote++; }
+          // Stamp the completion date. An existing value is left alone —
+          // re-ticking a section already done must not move its date forward,
+          // or every repaint would reset the delta the date exists to compute.
+          if (!cur[lid][sid]) { cur[lid][sid] = today; wrote++; }
         } else if (cur[lid] && cur[lid][sid]) {
           delete cur[lid][sid]; wrote++;
         }

@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 7/50`
+`Sections: 8/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.08g] — 2026-09-02 05:16:32 PM EST — v04.27r
+
+### Changed
+- Marking a section understood now records the date it happened, instead of only that it happened. This is what lets a lesson tell you it was revised after you read it. The record still follows your account across devices
+- Sections marked before this version keep their mark and simply carry no date
 
 ## [v01.07g] — 2026-09-02 02:41:00 AM EST — v04.22r
 

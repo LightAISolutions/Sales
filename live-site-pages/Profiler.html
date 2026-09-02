@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.79w">
+  <meta name="build-version" content="v01.80w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -209,6 +209,11 @@
     .ov-card .cov .dot.stale { background: var(--ov-adv); }
     .ov-card .cov .kpi { color: var(--ov-dev); }
     .ov-card .cov .nokpi { opacity: 0.55; }
+    /* Read state (v01.80w). Muted when you are current, gold when the dossier
+       moved under you — the same palette the freshness dot already uses, so
+       the card gains a signal without gaining a new colour language. */
+    .ov-card .cov .readmark { color: var(--ov-dev); }
+    .ov-card .cov .readmark.revised { color: var(--ov-gold); }
     #ov-cov-strip { display: flex; flex-wrap: wrap; gap: 6px 22px; margin: 2px 0 16px; color: var(--ov-muted); font: 11px/1.6 var(--ov-mono); letter-spacing: 0.04em; }
     #ov-cov-strip b { color: var(--ov-paper); font-weight: 400; }
     #ov-cov-strip .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
@@ -566,6 +571,16 @@
     .ov-btn:hover { background: #fff; }
     .ov-btn.ghost { background: none; color: var(--ov-muted); border-color: var(--ov-line2); }
     .ov-btn.ghost:hover { color: var(--ov-paper); border-color: var(--ov-paper); }
+    .ov-btn.ghost.on { color: var(--ov-dev); border-color: var(--ov-dev); }
+    /* The computed changed-strip: what moved since the archived previous
+       version. Derived, so it is styled as an aid rather than as content. */
+    .ov-changed { display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+      margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--ov-line); }
+    .ov-changed .lb { color: var(--ov-gold); font: 10.5px/1.4 var(--ov-mono);
+      letter-spacing: 0.10em; text-transform: uppercase; }
+    .ov-changed .ch { background: none; border: 1px solid var(--ov-line2); border-radius: 999px;
+      color: var(--ov-muted); padding: 4px 11px; font: 11px/1 var(--ov-mono); cursor: pointer; }
+    .ov-changed .ch:hover { color: var(--ov-paper); border-color: var(--ov-gold); }
     #ov-export-btn { margin-top: 14px; background: var(--ov-gold); border-color: var(--ov-gold); }
     #ov-export-btn:hover { background: #e6c46e; }
     #ov-prev-overlay {
@@ -2001,6 +2016,38 @@ function ovReloadFresh() {
       var cls = days <= 45 ? 'fresh' : (days <= 120 ? 'aging' : 'stale');
       return { cls: cls, days: days, label: days === 0 ? 'updated today' : 'updated ' + days + 'd ago' };
     }
+    // ── Have I read this, and has it changed since? (v01.80w) ─────────────
+    // Read state is one progress doc per dossier — 'dossier-<slug>', validated
+    // server-side by containment exactly like 'study-<slug>' (Profiler.gs
+    // v01.34g). The SECTION id is the dossier's lastUpdated date at the moment
+    // it was marked read, so "have I read the CURRENT one" is a key lookup and
+    // the roster needs nothing beyond the registry it already has. Values are
+    // the completion date, so "read on the 2nd, revised on the 5th" is legible.
+    function ovDossierDoc(slug) { return 'dossier-' + slug; }
+    function ovReadState(c) {
+      var marks = gdProgress(ovDossierDoc(c.slug)) || {};
+      var keys = Object.keys(marks);
+      if (!keys.length) return { state: 'unread' };
+      if (c.lastUpdated && marks[c.lastUpdated]) {
+        return { state: 'read', on: marks[c.lastUpdated], version: c.lastUpdated };
+      }
+      keys.sort();
+      var last = keys[keys.length - 1];
+      return { state: 'revised', on: marks[last], version: last };
+    }
+    function ovReadBadge(c) {
+      var r = ovReadState(c);
+      if (r.state === 'unread') return null;
+      var revised = r.state === 'revised';
+      var b = ovEl('span', revised ? 'readmark revised' : 'readmark',
+        revised ? '↻ revised' : '✓ read');
+      var when = (typeof r.on === 'string') ? r.on : 'an earlier session';
+      b.title = revised
+        ? 'You read the ' + r.version + ' version on ' + when +
+          '; this dossier was revised ' + (c.lastUpdated || 'since') + '.'
+        : 'You marked the current version read on ' + when + '.';
+      return b;
+    }
     function ovCovLine(c) {
       var line = ovEl('div', 'cov');
       var fr = ovFreshness(c.lastUpdated);
@@ -2015,6 +2062,8 @@ function ovReloadFresh() {
         ? c.srcTotal + ' cited sources, ' + c.srcFirstPct + '% first-party (company channels + filings/releases)'
         : 'Source coverage not synced yet — run scripts/sync-profiler-registry.py';
       line.appendChild(srcBit);
+      var rb = ovReadBadge(c);
+      if (rb) line.appendChild(rb);
       var kpi = ovEl('span', c.kpiNorm ? 'kpi' : 'nokpi', c.kpiNorm ? '$ comparable' : '$ not normalized');
       kpi.title = c.kpiNorm
         ? 'Latest annual revenue is normalized to USD and comparable in the Compare view'
@@ -3737,8 +3786,12 @@ function ovReloadFresh() {
             vBtn.title = 'Browse previous versions of this dossier';
             vBtn.addEventListener('click', function() { ovShowVersions(p, entries); });
             head.appendChild(vBtn);
+            ovChangedStrip(p, entries, head);
           })
-          .catch(function() { /* no archive index — button stays hidden */ });
+          .catch(function() { /* no archive index — no changed strip either */ });
+        // Mark-as-read sits with the other head controls and does not depend
+        // on the archive — an unrevised dossier is still readable and markable.
+        ovMarkReadBtn(p, head);
       }
       main.appendChild(head);
 
@@ -6666,6 +6719,103 @@ function ovReloadFresh() {
     // was shared, so signing a second account into the same browser inherited
     // the first account's ticks. The account digest is part of the key, so each
     // account keeps its own progress and a new one starts clean.
+
+    // ── The computed changed-strip (v01.80w) ──────────────────────────────
+    // "What changed in this revision" without anyone authoring a changelog:
+    // the archive already holds the version this one superseded, so the diff
+    // is computable. Profiler dossiers deliberately carry no revisions[] (that
+    // is Classroom's discipline, and PROFILER-SCHEMA leaves authored revision
+    // notes as a later, optional addition) — so this is derived, and labelled
+    // as derived. Section granularity matches the tab bar, because that is the
+    // unit the reader navigates by; a field-level diff would be noise.
+    var OV_DIFF_TABS = [
+      ['overview', ['summary', 'ecosystemRole', 'ownership', 'employees', 'headquarters', 'categories']],
+      ['rels',     ['relationships']],
+      ['products', ['productsAndServices', 'technicalSpecs']],
+      ['devs',     ['recentDevelopments']],
+      ['policy',   ['policyExposure']],
+      ['strategy', ['strategyRead']],
+      ['people',   ['decisionMakers']],
+      ['fin',      ['financials']],
+      ['sources',  ['sources']]
+    ];
+    function ovDiffSections(prev, cur) {
+      var out = [];
+      for (var i = 0; i < OV_DIFF_TABS.length; i++) {
+        var key = OV_DIFF_TABS[i][0], fields = OV_DIFF_TABS[i][1];
+        var changed = false, addedN = 0;
+        for (var f = 0; f < fields.length; f++) {
+          var a = prev[fields[f]], b = cur[fields[f]];
+          if (JSON.stringify(a === undefined ? null : a) === JSON.stringify(b === undefined ? null : b)) continue;
+          changed = true;
+          if (Array.isArray(b)) addedN += Math.max(0, b.length - (Array.isArray(a) ? a.length : 0));
+        }
+        if (changed) out.push({ key: key, label: ovSecLabel(key), added: addedN });
+      }
+      return out;
+    }
+    // `head` is passed in rather than looked up: this resolves asynchronously
+    // and the head element may not be in the document yet when it does.
+    function ovChangedStrip(p, entries, head) {
+      if (p._archived || !head || document.getElementById('ov-changed')) return;
+      // Newest archived entry = the version this one superseded.
+      var prevEntry = null;
+      for (var i = 0; i < entries.length; i++) {
+        if (!prevEntry || (entries[i].profileVersion || 0) > (prevEntry.profileVersion || 0)) prevEntry = entries[i];
+      }
+      if (!prevEntry) return;
+      ovFetchJson('archive/' + prevEntry.file).then(function(prev) {
+        if (!prev || document.getElementById('ov-changed')) return;
+        var diffs = ovDiffSections(prev, p);
+        if (!diffs.length) return;
+        var strip = ovEl('div', 'ov-changed'); strip.id = 'ov-changed';
+        var lb = ovEl('span', 'lb', 'Changed since v' + (prevEntry.profileVersion || '?'));
+        lb.title = 'Computed by comparing this dossier against ' + prevEntry.file +
+                   ', archived ' + (prevEntry.archivedAt || '—') + '. Derived, not authored.';
+        strip.appendChild(lb);
+        for (var d = 0; d < diffs.length; d++) {
+          var chip = ovEl('button', 'ch', diffs[d].label + (diffs[d].added ? ' +' + diffs[d].added : ''));
+          chip.type = 'button';
+          chip.setAttribute('data-tab', diffs[d].key);
+          chip.title = 'Jump to ' + diffs[d].label;
+          chip.addEventListener('click', function() {
+            var t = document.querySelector('.ov-tabs [data-tab="' + this.getAttribute('data-tab') + '"]');
+            if (t) t.click();
+          });
+          strip.appendChild(chip);
+        }
+        head.appendChild(strip);
+      }).catch(function() { /* archived file unreadable — no strip, no error */ });
+    }
+    // Mark-as-read. The section id is the dossier's own lastUpdated, so the
+    // mark is version-specific by construction: a later revision simply has no
+    // mark, and the roster badge flips to "revised" on its own.
+    function ovMarkReadBtn(p, head) {
+      if (p._archived || !p.slug || document.getElementById('ov-read-btn')) return;
+      var stamp = p.lastUpdated || '';
+      if (!stamp) return;
+      var doc = ovDossierDoc(p.slug);
+      var btn = ovEl('button', 'ov-btn ghost', '');
+      btn.id = 'ov-read-btn'; btn.type = 'button';
+      function paint() {
+        var marks = gdProgress(doc) || {};
+        var on = !!marks[stamp];
+        btn.classList.toggle('on', on);
+        btn.textContent = on ? '✓ Read' : 'Mark as read';
+        btn.title = on
+          ? 'You marked the ' + stamp + ' version read' +
+            (typeof marks[stamp] === 'string' ? ' on ' + marks[stamp] : '') + '. Click to clear.'
+          : 'Mark the ' + stamp + ' version of this dossier read. The roster shows ↻ revised when it changes.';
+      }
+      btn.addEventListener('click', function() {
+        var on = btn.classList.contains('on');
+        gdSetProgress(doc, stamp, !on);
+        paint();
+      });
+      paint();
+      head.appendChild(btn);
+    }
+
     function gdProgressKey(docId) {
       return GD_PROGRESS_KEY + '_' + ovAcctKey() + '_' + docId;
     }
@@ -6686,14 +6836,25 @@ function ovReloadFresh() {
       if (gdServerProg) return gdServerProg[docId] || {};
       return gdLocalProgress(docId);
     }
+    // Local today as 'YYYY-MM-DD'. Values in the progress store are COMPLETION
+    // DATES from v01.34g (legacy `true` still reads as done, dateless) — the
+    // date is what lets a dossier revised after you read it say so.
+    function gdToday() {
+      var d = new Date(), m = d.getMonth() + 1, y = d.getDate();
+      return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (y < 10 ? '0' : '') + y;
+    }
     function gdSetProgress(docId, secId, done) {
+      var stamp = gdToday();
       try {
-        var pr = gdLocalProgress(docId); pr[secId] = !!done;
+        var pr = gdLocalProgress(docId);
+        if (done) { if (!pr[secId]) pr[secId] = stamp; } else { delete pr[secId]; }
         localStorage.setItem(gdProgressKey(docId), JSON.stringify(pr));
       } catch (e) { /* private mode — offline fallback just not persisted */ }
       if (gdServerProg) {
-        if (done) (gdServerProg[docId] = gdServerProg[docId] || {})[secId] = true;
-        else if (gdServerProg[docId]) delete gdServerProg[docId][secId];
+        if (done) {
+          var dp = (gdServerProg[docId] = gdServerProg[docId] || {});
+          if (!dp[secId]) dp[secId] = stamp;
+        } else if (gdServerProg[docId]) delete gdServerProg[docId][secId];
       }
       ovGuideApi('setprogress', { id: docId, sec: secId, done: done ? '1' : '0' }, function(res) {
         if (res && res.success && res.progress) gdServerProg = res.progress;

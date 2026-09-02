@@ -10,7 +10,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-HASH_HERE' 'strict-dynamic' https://accounts.google.com/gsi/client https://apis.google.com; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'none'; upgrade-insecure-requests;">
   -->
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.04w">
+  <meta name="build-version" content="v01.05w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Classroom — BESS/AIDC Curriculum</title>
 <!-- ══════════════ -->
@@ -368,13 +368,14 @@
        the per-kind primitives) onto Classroom's light palette — same section
        vocabulary, same widget behaviour, `cl` prefixes to match this file's
        own naming. Keep the two in step: a change to a section kind in either
-       app should land in both. Progress ticks are deliberately absent — the
-       per-account progress store is the next C1 slice. */
+       app should land in both. Progress ticks are painted from the per-account
+       store; a section revised since you read it also carries an amber
+       delta strip (see .cl-stale). */
     :root {
       --cl-paper: #ffffff;   --cl-card: #fbfaf7;  --cl-card2: #f4f1ea;
       --cl-ink: #23201b;     --cl-muted: #5d574e; --cl-faint: #8a8378;
       --cl-line: #e2ddd3;    --cl-line2: #b8b2a7; --cl-accent: #8a6d1f;
-      --cl-adv: #2f6b3f;     --cl-dis: #a33a4c;
+      --cl-adv: #2f6b3f;     --cl-dis: #a33a4c;   --cl-warn: #a1560b;
       /* Shared page measure — the masthead and the curriculum column below it
          must line up, so both read from this one value. */
       --cl-measure: 1180px;
@@ -475,6 +476,14 @@
       font: 12px/1 var(--cl-mono); }
     .cl-done-btn:hover { border-color: var(--cl-accent); color: var(--cl-accent); }
     .cl-done-btn.on { background: var(--cl-accent); border-color: var(--cl-accent); color: #fff; }
+    /* "Revised after you read it" — the delta CLASSROOM-SCHEMA's Freshness
+       section promises. Amber rather than the accent: it is an advisory, not
+       an error, and it must not read as a broken state. */
+    .cl-stale { margin: 6px 0 10px; padding: 7px 10px; border-radius: 8px;
+      border: 1px solid var(--cl-warn); background: rgba(180, 128, 42, 0.10);
+      font: 12px/1.6 var(--cl-mono); color: var(--cl-warn); }
+    .cl-nav a.stale .tick { border-color: var(--cl-warn); background: var(--cl-warn); }
+    .cl-nav a.stale .nm { color: var(--cl-warn); text-decoration: none; }
     .cl-next { border: 1px solid var(--cl-accent); border-left-width: 4px; border-radius: 10px;
       background: #fbf6e8; padding: 14px 18px 16px; margin: 18px 0 4px; }
     .cl-next.all { border-color: var(--cl-adv); background: #f2f7f2; }
@@ -4460,7 +4469,7 @@ if (typeof showApp === 'function') {
 // study guides, guidance modules, reports and lessons (Phase 5): a change to a
 // kind in either app belongs in both.
 //
-// Deliberately absent: per-account progress ticks and the study-next pointer.
+// Per-account progress ticks and the study-next pointer are both live below.
 // Those are the next C1 slice and key on lesson id + section id, both of which
 // the schema already fixes as permanent.
 var CL_DATA_BASE = 'profiler-data/';
@@ -4747,6 +4756,7 @@ var clNext = null;            // study-next pointer, server-computed
 var clServerProg = null;      // null until a sync succeeds — then authoritative
 var clProgSyncStarted = false;
 var clCurLesson = null;       // lesson currently rendered, for repaints
+var clCurLessonObj = null;    // ...and the object itself, for revisions[]
 
 function clAcctKey() {
   var e = String((loadSession() || {}).email || '').trim().toLowerCase();
@@ -4766,14 +4776,25 @@ function clProgress(lessonId) {
   if (clServerProg) return clServerProg[lessonId] || {};
   return clLocalProgress(lessonId);
 }
+// Local today, as 'YYYY-MM-DD' in the browser's own zone. The server stamps
+// authoritatively on the next sync; this is only so an offline tick still
+// carries a usable date into the delta until that lands.
+function clToday() {
+  var d = new Date(), m = d.getMonth() + 1, y = d.getDate();
+  return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (y < 10 ? '0' : '') + y;
+}
 function clSetProgress(lessonId, secId, done) {
+  var stamp = clToday();
   try {
-    var pr = clLocalProgress(lessonId); pr[secId] = !!done;
+    var pr = clLocalProgress(lessonId);
+    if (done) { if (!pr[secId]) pr[secId] = stamp; } else { delete pr[secId]; }
     localStorage.setItem(clProgressKey(lessonId), JSON.stringify(pr));
   } catch (e) { /* private mode — the offline fallback just is not persisted */ }
   if (clServerProg) {
-    if (done) (clServerProg[lessonId] = clServerProg[lessonId] || {})[secId] = true;
-    else if (clServerProg[lessonId]) delete clServerProg[lessonId][secId];
+    if (done) {
+      var lp = (clServerProg[lessonId] = clServerProg[lessonId] || {});
+      if (!lp[secId]) lp[secId] = stamp;
+    } else if (clServerProg[lessonId]) delete clServerProg[lessonId][secId];
   }
   clApplyProgressUI();
   clApi('setprogress', { id: lessonId, sec: secId, done: done ? '1' : '0' }, function(res) {
@@ -4894,6 +4915,37 @@ function clRenderNext(host) {
 // Repaint whichever view is on screen after a sync lands or a tick changes.
 // Both views are handled here rather than in their renderers, because the
 // server map can arrive after either one has already painted.
+// PROJECT: ── "Changed since you read it" (C1 + B) ────────────────────────
+// CLASSROOM-SCHEMA's Freshness section defines this exactly: a revision dated
+// AFTER an account completed a section, whose changed[] names that section,
+// is a delta. Everything needed is now on the client — completion dates from
+// the progress store, revisions[] from the lesson — so it is computed here
+// rather than server-side; the server already sent both.
+//
+// A section completed with legacy `true` (no date) yields NO delta. That is
+// deliberate: an undated tick cannot be compared to a revision date, and
+// guessing would either cry wolf on every past revision or stay silent on
+// every future one. It resolves itself the next time that section is ticked.
+//
+// Returns the NEWEST qualifying revision, or null. Reworded sections never
+// appear here — the schema puts only meaning changes in changed[].
+function clSectionDelta(lesson, secId, completed) {
+  if (!lesson || !completed || typeof completed !== 'string') return null;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(completed)) return null;
+  var revs = lesson.revisions || [], best = null;
+  for (var i = 0; i < revs.length; i++) {
+    var r = revs[i];
+    if (!r || !r.date || String(r.date) <= completed) continue;   // ISO dates sort as strings
+    var ch = r.changed || [];
+    for (var j = 0; j < ch.length; j++) {
+      if (ch[j] !== secId) continue;
+      if (!best || String(r.date) > String(best.date)) best = r;
+      break;
+    }
+  }
+  return best;
+}
+
 function clApplyProgressUI() {
   var shell = document.getElementById('cl-shell');
   if (!shell) return;
@@ -4907,9 +4959,24 @@ function clApplyProgressUI() {
     }
     var btns = shell.querySelectorAll('.cl-done-btn[data-sec]');
     for (var j = 0; j < btns.length; j++) {
-      var on = !!prog[btns[j].getAttribute('data-sec')];
+      var bsec = btns[j].getAttribute('data-sec');
+      var on = !!prog[bsec];
       btns[j].classList.toggle('on', on);
       btns[j].textContent = on ? '✓ Understood' : 'Mark as understood';
+      if (on && typeof prog[bsec] === 'string') btns[j].title = 'Marked understood ' + prog[bsec];
+      else btns[j].removeAttribute('title');
+    }
+    // The delta strip: revised after you read it.
+    var stales = shell.querySelectorAll('.cl-stale[data-sec]');
+    for (var k = 0; k < stales.length; k++) {
+      var ssec = stales[k].getAttribute('data-sec');
+      var delta = clSectionDelta(clCurLessonObj, ssec, prog[ssec]);
+      stales[k].textContent = delta
+        ? 'Revised ' + delta.date + ' — after you marked this understood. ' + (delta.note || '')
+        : '';
+      stales[k].hidden = !delta;
+      var navEl = document.getElementById('clnav-' + ssec);
+      if (navEl) navEl.classList.toggle('stale', !!delta);
     }
   }
   // Index view — per-row completion and the per-track rollup.
@@ -4946,6 +5013,12 @@ function clRenderSection(lesson, sec) {
   var el = clEl('section', 'cl-sec');
   el.id = 'cl-' + sec.id;
   el.appendChild(clEl('h3', null, sec.title));
+  // Painted by clApplyProgressUI, like every other progress-dependent state,
+  // so a server sync landing after the render fills it in without a re-render.
+  var stale = clEl('div', 'cl-stale');
+  stale.setAttribute('data-sec', sec.id);
+  stale.hidden = true;
+  el.appendChild(stale);
   if (sec.read) el.appendChild(clEl('div', 'cl-read', sec.read));
   var host = el, wrap = null, pi;
   if (sec.kind === 'callout') {
@@ -5031,6 +5104,7 @@ function clProvStrip(lesson) {
 function clRenderLesson(lesson, shell, scrollTo) {
   clGlossMap = {};
   clCurLesson = lesson.id;
+  clCurLessonObj = lesson;
   clProgressSync();          // no-op once a sync has succeeded; retries after failures
   clConceptsLoad().then(function(concepts) {
     var ck;
@@ -5090,8 +5164,8 @@ function clRenderLesson(lesson, shell, scrollTo) {
     body.appendChild(nav); body.appendChild(main);
     shell.appendChild(body);
 
-    // The nav tick box is rendered but never filled — the progress slice adds
-    // the 'done' class here and the mark-as-understood control per section.
+    // The nav tick box is filled by clApplyProgressUI, which sets 'done' from
+    // the progress store and 'stale' when a revision post-dates the tick.
     function navLink(id, label) {
       var a = document.createElement('a');
       a.href = '#cl-' + id;
@@ -5200,6 +5274,7 @@ function clTrackCard(track) {
 
 function clRenderIndex(res, shell) {
   clCurLesson = null;
+  clCurLessonObj = null;
   clProgressSync();
   shell.innerHTML = '';
   var tracks = res.tracks || [], lessons = res.lessons || [];
