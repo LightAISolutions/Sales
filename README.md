@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-02 01:10:32 AM EST` · Repo version: `v04.18r`
+Last updated: `2026-09-02 01:21:25 AM EST` · Repo version: `v04.19r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -49,7 +49,7 @@ Last updated: `2026-09-02 01:10:32 AM EST` · Repo version: `v04.18r`
 │   │
 │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/globalacl.html">globalacl.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/globalacl.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/YOUR_SPREADSHEET_ID/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Globalacl/globalacl.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/globalaclhtml.changelog.md">v01.05w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/globalaclgs.changelog.md">v01.07g</a> | [template] Global ACL page
 │   │
-│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.77w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">v01.32g</a> | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs; in-dossier field-note intake
+│   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Profiler.html">Profiler.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/Profiler.html">🌐</a>🟢 · 🔸 · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Profiler/Profiler.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Profilerhtml.changelog.md">v01.78w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Profilergs.changelog.md">v01.33g</a> | Ecosystem company dossiers — products, decision makers, financials vs expectations, technical specs; in-dossier field-note intake
 │   │
 │   <b>│ ─ Standalone Utilities ─────────────────────────────────────────────────────</b>
 │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/text-compare.html">text-compare.html</a>  →  <a href="https://lightaisolutions.github.io/Sales/text-compare.html">🌐</a>  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/text-comparehtml.changelog.md">v01.01w</a> · vNoGASg | [template] Text comparison tool with side-by-side diff highlighting
@@ -61,7 +61,7 @@ Last updated: `2026-09-02 01:10:32 AM EST` · Repo version: `v04.18r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Receipts.html">Receipts.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Receipts.html">🌐</a>🟢 · <a href="https://docs.google.com/spreadsheets/d/1SfVRsHm6pUn1bq633BSKiQ8c3IsQeVAs7H0265ckdDM/">📊</a> · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Receipts/Receipts.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Receiptshtml.changelog.md">v01.36w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Receiptsgs.changelog.md">v01.28g</a> | [template] Receipts page
 │   │
 │   │
-│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Classroom.html">Classroom.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Classroom.html">🌐</a>🟢 · ◽ · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Classroom/Classroom.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Classroomhtml.changelog.md">v01.04w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">v01.05g</a> | [template] Classroom — BESS/AIDC Curriculum page
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/Classroom.html">Classroom.html</a>  →  <a href="https://LightAISolutions.github.io/Sales/Classroom.html">🌐</a>🟢 · ◽ · ◽ · <a href="https://github.com/LightAISolutions/Sales/blob/main/googleAppsScripts/Classroom/Classroom.gs">⛽</a> · ◽  — <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/html-changelogs/Classroomhtml.changelog.md">v01.04w</a> · <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">v01.06g</a> | [template] Classroom — BESS/AIDC Curriculum page
 │   │
 │   <b>│ ─ External Sites (Placeholder) ────────────────────────────────────────────</b>
 │   │   <i>(No external-site pages yet)</i>

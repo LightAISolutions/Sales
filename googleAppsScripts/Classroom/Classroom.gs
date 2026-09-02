@@ -1,4 +1,4 @@
-var VERSION = "v01.05g";
+var VERSION = "v01.06g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -23,8 +23,10 @@ var PARENT_ORIGIN = EMBED_PAGE_URL.replace(/^(https?:\/\/[^\/]+).*$/, '$1').toLo
 // AUTH CONFIG
 // ══════════════
 // Spreadsheet ID for project data (the GAS app reads/writes user data here).
-// "Classroom - Audit Log" (developer-created 2026-09-02). Holds ONLY the two
-// audit tabs, which _writeAuditLogEntry/dataAuditLog create on first write.
+// "BESS/AIDC - Audit Log" (developer-created 2026-09-02, renamed from
+// "Classroom - Audit Log" once Profiler began logging into it too — one
+// workbook, one tab per app). Holds ONLY audit tabs, which
+// _writeAuditLogEntry/dataAuditLog create on first write.
 // It is deliberately not the Master ACL spreadsheet: that file is read on
 // every sign-in by every project and already carries a contention retry
 // loop, so an append-heavy log does not belong in it. Note this does NOT

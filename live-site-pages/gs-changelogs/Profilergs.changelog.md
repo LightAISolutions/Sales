@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilergs.changelog-archive.md](Profilergs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 32/50`
+`Sections: 33/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.33g] — 2026-09-02 01:21:25 AM EST — v04.19r
+
+### Added
+- Sign-ins, refusals and other access events are now recorded, and can be read back inside the app by an administrator
+- The record is administrator-only: any other account asking for it is refused, and that refusal is itself recorded
+
+### Changed
+- The record starts from this update onward — it cannot show anything from before logging was switched on
 
 ## [v01.32g] — 2026-09-01 03:41:19 AM EST — v04.06r
 

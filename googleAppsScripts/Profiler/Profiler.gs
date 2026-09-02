@@ -1,4 +1,4 @@
-var VERSION = "v01.32g";
+var VERSION = "v01.33g";
 var TITLE = "Profiler — Ecosystem Company Dossiers";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -23,7 +23,12 @@ var PARENT_ORIGIN = EMBED_PAGE_URL.replace(/^(https?:\/\/[^\/]+).*$/, '$1').toLo
 // AUTH CONFIG
 // ══════════════
 // Spreadsheet ID for project data (the GAS app reads/writes user data here).
-var SPREADSHEET_ID = "YOUR_SPREADSHEET_ID";
+// "BESS/AIDC - Audit Log" (developer-created 2026-09-02, shared with
+// Classroom, one tab per app). Holds audit rows ONLY. This does not make
+// the workbook an authorization source: checkSpreadsheetAccess consults a
+// project sheet's sharing list only when no Master ACL is configured, and
+// MASTER_ACL_SPREADSHEET_ID above is set.
+var SPREADSHEET_ID = "16tt7n_1sEcOzLYOEOWZbkw81dva7i9zT6-1e5CTzXDk";
 var SHEET_NAME     = "YOUR_SHEET_NAME";
 // Master ACL spreadsheet — centralized access control for all GAS-powered pages.
 // Two tabs:
@@ -51,6 +56,14 @@ var PROJECT_OVERRIDES = {
   // google.script.run transport (only reachable from the signed-in served
   // page) — that assumption does not hold for a public HTTP route.
   ENABLE_DATA_OP_VALIDATION: true,
+  // Sign-in log (developer directive 2026-09-02). The 'standard' preset ships
+  // the session audit writer off; this turns it on so "who has been signing in
+  // to Profiler" has an answer. The tab is renamed away from the template's
+  // default because SPREADSHEET_ID below is a workbook shared with Classroom
+  // and the row schema has no project column — one tab, two apps, no way to
+  // tell them apart afterwards.
+  ENABLE_AUDIT_LOG: true,
+  AUDIT_LOG_SHEET_NAME: 'ProfilerSessionAuditLog',
 };
 
 // ══════════════
@@ -342,6 +355,70 @@ function roleAllowed_(sess, roles) {
 }
 function guidanceAllowed_(sess) { return roleAllowed_(sess, GUIDANCE_ROLES); }
 function coverageAllowed_(sess) { return roleAllowed_(sess, COVERAGE_ROLES); }
+
+// PROJECT: ── Sign-in log (admin-only, v01.33g) ───────────────────────────
+// The audit trail already existed as code; what it lacked was a destination
+// and a way to look at it. SPREADSHEET_ID + ENABLE_AUDIT_LOG above give it the
+// first; this op gives it the second, so "who has been signing in to Profiler"
+// is answered in the app instead of by opening a spreadsheet.
+//
+// The tab is ProfilerSessionAuditLog rather than the template's default
+// SessionAuditLog, because the workbook is shared with Classroom and the row
+// schema carries no project column — two apps appending to one tab would
+// interleave with no way to tell them apart afterwards.
+//
+// Admin-only, and not merely by hiding the button: roleAllowed_(sess, []) lets
+// nothing through on a role name, so only the 'admin' permission passes. The
+// rows name every account that has touched the app, which is exactly the kind
+// of thing a contributor should not be able to enumerate.
+var SIGNIN_ROLES = [];   // no role name qualifies — the admin permission is the only door
+function signinsAllowed_(sess) { return roleAllowed_(sess, SIGNIN_ROLES); }
+
+var SIGNIN_MAX_ROWS = 300;
+
+function handleSigninsOp_(e) {
+  var p = (e && e.parameter) || {};
+  var session = p.session || '';
+  if (!session || session.length < 32) return { success: false, error: 'SESSION_EXPIRED' };
+  try {
+    var sess = validateSessionForData(session, 'signins');
+    if (!signinsAllowed_(sess)) {
+      auditLog('security_alert', (sess && sess.email) || 'unknown', 'signins_denied',
+        { role: sess.role || RBAC_DEFAULT_ROLE });
+      return { success: false, error: 'ROLE_DENIED', role: sess.role || RBAC_DEFAULT_ROLE };
+    }
+    if (!SPREADSHEET_ID || SPREADSHEET_ID === 'YOUR_SPREADSHEET_ID') {
+      return { success: true, rows: [], unconfigured: true };
+    }
+    var name = AUTH_CONFIG.AUDIT_LOG_SHEET_NAME || 'SessionAuditLog';
+    var sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(name);
+    // No tab yet simply means nothing has been logged since logging was turned
+    // on — an empty log, not a fault. The writer creates it on its first row.
+    if (!sheet) return { success: true, rows: [], empty: true, tab: name };
+    var last = sheet.getLastRow();
+    if (last < 2) return { success: true, rows: [], empty: true, tab: name };
+    // Read the tail only. The log grows without bound and the overlay shows a
+    // window of it; pulling the whole sheet would get slower every week.
+    var take = Math.min(SIGNIN_MAX_ROWS, last - 1);
+    var vals = sheet.getRange(last - take + 1, 1, take, 5).getValues();
+    var rows = [];
+    for (var i = vals.length - 1; i >= 0; i--) {   // newest first
+      var ts = vals[i][0];
+      rows.push({
+        ts: (ts instanceof Date) ? ts.toISOString() : String(ts || ''),
+        event: String(vals[i][1] || ''),
+        user: String(vals[i][2] || ''),
+        result: String(vals[i][3] || ''),
+        details: String(vals[i][4] || '')
+      });
+    }
+    return { success: true, rows: rows, total: last - 1, tab: name };
+  } catch (sErr) {
+    var msg = String((sErr && sErr.message) || sErr);
+    if (msg.indexOf('SESSION_EXPIRED') >= 0) return { success: false, error: 'SESSION_EXPIRED' };
+    return { success: false, error: msg };
+  }
+}
 
 // PROJECT: ── Industry Guidance ───────────────────────────────────────────
 // Document-analysis modules rendered by the Profiler page's Industry Guidance
@@ -5119,6 +5196,12 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.JSON);
   }
 
+  // PROJECT: Sign-in log — same transport, admin-gated in handleSigninsOp_.
+  if (action === "signins") {
+    return ContentService.createTextOutput(JSON.stringify(handleSigninsOp_(e)))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
   // PROJECT: Coverage-panel ops via fetch() — same transport rationale as the
   // note ops; session-validated inside handleNewsOp_, which then proxies the
   // token-gated Scraper corpus route server-to-server.
@@ -7559,6 +7642,9 @@ function doGet(e) {
       } else if (apiOp === 'guidance') {
         // PROJECT: GET mirror of the guidance ops (read-only, no payloads)
         apiResult = handleGuidanceOp_(e);
+      } else if (apiOp === 'signins') {
+        // PROJECT: GET mirror of the sign-in log op (read-only)
+        apiResult = handleSigninsOp_(e);
       } else if (apiOp === 'news') {
         // PROJECT: GET mirror of the Coverage-panel ops (read-only)
         apiResult = handleNewsOp_(e);

@@ -18,11 +18,16 @@ ovNormalizeRole, so the test exercises the real sign-in path.
 The matrix under test (developer directives, 2026-08-22; Reports added
 2026-08-29; ecosystem retune 2026-08-31 per PHASE6-CLASSROOM-DESIGN.md):
 
-    tier         Note  Vers  Guid  Export  Reports  Network  Coverage  Study  Compare  Classroom
-    admin         yes   yes   yes    yes     yes      yes      yes      yes     yes       yes
-    contributor    no    no   yes    yes      no      yes      yes      yes     yes       yes
-    analyst        no    no    no     no      no       no       no      yes     yes       yes
-    viewer         no    no    no     no      no       no       no       no      no        no
+    tier         Note  Vers  Guid  Export  Reports  Network  Coverage  Study  Compare  Classroom  Signins
+    admin         yes   yes   yes    yes     yes      yes      yes      yes     yes       yes        yes
+    contributor    no    no   yes    yes      no      yes      yes      yes     yes       yes         no
+    analyst        no    no    no     no      no       no       no      yes     yes       yes         no
+    viewer         no    no    no     no      no       no       no       no      no        no         no
+
+'signins' is the admin-only sign-in log (v01.78w/v01.33g). Unlike the
+static-JSON surfaces it is a real data boundary: handleSigninsOp_ reads the
+audit tab server-side and roleAllowed_(sess, []) admits nothing on a role
+name, so only the 'admin' permission passes and a denial is itself audited.
 
 'classroom' is the masthead cross-link to the Classroom app (Phase 6 C0).
 It is gated on 'study' rather than a capability of its own because the
@@ -57,19 +62,19 @@ SHOTS.mkdir(exist_ok=True)
 EXPECT = {
     'admin':       {'fieldNote': True,  'versions': True,  'guidance': True,  'export': True,
                     'reports': True,  'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True,
-                    'classroom': True},
+                    'classroom': True, 'signins': True},
     'contributor': {'fieldNote': False, 'versions': False, 'guidance': True,  'export': True,
                     'reports': False, 'network': True,  'relTab': True,  'coverage': True,  'study': True,  'compare': True,
-                    'classroom': True},
+                    'classroom': True, 'signins': False},
     'analyst':     {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False,
                     'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': True,  'compare': True,
-                    'classroom': True},
+                    'classroom': True, 'signins': False},
     'viewer':      {'fieldNote': False, 'versions': False, 'guidance': False, 'export': False,
                     'reports': False, 'network': False, 'relTab': False, 'coverage': False, 'study': False, 'compare': False,
-                    'classroom': False},
+                    'classroom': False, 'signins': False},
 }
 CAPS = ('fieldNote', 'versions', 'guidance', 'export', 'reports',
-        'network', 'relTab', 'coverage', 'study', 'compare', 'classroom')
+        'network', 'relTab', 'coverage', 'study', 'compare', 'classroom', 'signins')
 GUIDANCE_ALLOWED = {'admin', 'contributor'}   # mirrors guidanceAllowed_ in Profiler.gs
 COVERAGE_ALLOWED = {'admin', 'contributor'}   # mirrors coverageAllowed_ in Profiler.gs
 
@@ -154,6 +159,7 @@ def probe(page):
         coverage:  vis('ov-cov-btn'),
         study:     vis('ov-study-btn'),
         classroom: vis('ov-classroom-btn'),
+        signins:   vis('ov-signins-btn'),
         wall:      vis('ov-authwall'),
         role:      localStorage.getItem('ov_note_role')
       };
@@ -353,7 +359,7 @@ def run():
 
     mark = lambda b: 'shown ' if b else 'hidden'
     hdr = ('ROLE', 'NoteBtn', 'Cog', 'Versions', 'Guidance', 'Export', 'Reports',
-           'Network', 'RelTab', 'Coverage', 'Study', 'Compare', 'Classrm')
+           'Network', 'RelTab', 'Coverage', 'Study', 'Compare', 'Classrm', 'Signins')
     fmt = '%-12s' + ' %-8s' * (len(hdr) - 1)
     print('\nRole + Access matrix')
     print('\n' + fmt % hdr)
@@ -363,7 +369,7 @@ def run():
             role, mark(g['noteBtn']), mark(g['cog']), mark(g['versions']),
             mark(g['guidance']), mark(g['export']), mark(g['reports']),
             mark(g['network']), mark(g['relTab']), mark(g['coverage']),
-            mark(g['study']), mark(g['compare']), mark(g['classroom'])))
+            mark(g['study']), mark(g['compare']), mark(g['classroom']), mark(g['signins'])))
     print()
     if failures:
         print('FAILURES (%d):' % len(failures))

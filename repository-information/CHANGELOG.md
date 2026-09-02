@@ -3,11 +3,42 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 98/100`
+`Sections: 99/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.19r] — 2026-09-02 01:21:25 AM EST
+
+> **Prompt:** "build the Profiler sign-in log - I have renamed the Audit Log from \"Classroom\" to \"BESS/AIDC\"."
+
+### Added
+
+**Profiler sign-in log — the audit trail gets a destination and a window.** The writer already existed in the AUTH region; what it lacked was somewhere to write and a way to read it back. Both halves land here, as one slice, so the log is answerable in the app rather than by opening a spreadsheet.
+
+**`googleAppsScripts/Profiler/Profiler.gs` (v01.32g → v01.33g)**
+
+- **`ENABLE_AUDIT_LOG: true`** and **`AUDIT_LOG_SHEET_NAME: 'ProfilerSessionAuditLog'`** in `PROJECT_OVERRIDES`. The tab is renamed away from the template default deliberately: the workbook is shared with Classroom and the row schema carries no project column, so two apps appending to one tab would interleave with no way to separate them afterwards
+- **`SPREADSHEET_ID`** set to the shared "BESS/AIDC - Audit Log" workbook, with the same in-place note Classroom carries: this does not make it an authorization source, because `checkSpreadsheetAccess` consults a project sheet's sharing list only when no Master ACL is configured, and `MASTER_ACL_SPREADSHEET_ID` is set
+- **`handleSigninsOp_`** — session-validated, then **`roleAllowed_(sess, SIGNIN_ROLES)` with `SIGNIN_ROLES = []`**, so no role *name* qualifies and only the `admin` permission passes. The rows name every account that has touched the app, which is precisely what a contributor should not be able to enumerate; a denial is itself audited. Reads the tail only (`SIGNIN_MAX_ROWS = 300`) because the log grows without bound, and treats a missing tab as an empty log rather than a fault — the writer creates it on its first row
+- Routed on `doPost action=signins` with the usual GET `api`/`op=signins` mirror
+
+**`live-site-pages/Profiler.html` (v01.77w → v01.78w)**
+
+- **`signins` capability**, admin-only, added to `OV_ROLE_CAPS`. A real capability rather than a hidden button, so the role verifier asserts it per tier alongside the other nine surfaces
+- **`◷ Sign-ins` masthead button** and overlay, reusing the existing `#ov-guide-overlay` shell and `gdTable` primitive so the surface looks like Reports and Guidance rather than like a new app. Newest-first, exact local time plus a relative hint ("20m ago"), a summary line counting total entries and refusals, and a one-click refusals-only filter
+- Refusal detection tests the **event** rather than enumerating results, because the writer's result vocabulary is open (`login_failed` alone carries several)
+
+### Changed
+
+- **`scripts/verify-profiler-roles.py`** — `signins` added to the matrix, the probe, the `CAPS` tuple and the printed table; the docstring records that unlike the static-JSON surfaces this one is a real data boundary. Run clean: `signins` shown for admin, hidden for contributor, analyst and viewer, with the per-account progress isolation and Technical Annex audits still passing
+- **`googleAppsScripts/Classroom/Classroom.gs` (v01.05g → v01.06g)** — the `SPREADSHEET_ID` comment named the workbook by its old title. Corrected to "BESS/AIDC - Audit Log" with a note that it is now shared, one tab per app. Comment only; no behaviour change
+
+### Verified
+
+- Headless pass over the real page with a stubbed op: 11 checks green — the button appears for an admin, the overlay opens with all four fixture rows newest-first, the summary line reports "of 412 entries · 2 refused", relative times render, and the refusals filter narrows to 2 and restores to 4
+- `verify-profiler-roles.py` full run: matrix correct across all four tiers, 89 dossiers audited, progress isolation intact
 
 ## [v04.18r] — 2026-09-02 01:10:32 AM EST
 

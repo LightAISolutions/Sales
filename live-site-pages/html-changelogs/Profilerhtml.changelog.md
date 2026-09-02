@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.78w] — 2026-09-02 01:21:25 AM EST — v04.19r
+
+### Added
+- A **◷ Sign-ins** button on the masthead, for administrators: it opens a record of who has signed in, when, and what was refused
+- The list shows the most recent entries newest-first with a plain-language "20m ago" alongside the exact time, and a one-click filter for refusals only
 
 ## [v01.77w] — 2026-09-01 10:08:49 PM EST — v04.11r
 
