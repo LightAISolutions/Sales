@@ -3,11 +3,58 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 78/100`
+`Sections: 79/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.26r] — 2026-09-02 04:48:45 PM EST
+
+> **Prompt:** "CORPUS_TOKEN: [redacted — the developer supplied the value; it lives in the earnings-desk Routine prompt only, never in a repo file]. I confirmed this is the same value across Scraper and Profiler.\n\nThen, summarize where we are in the overall build plan, and recommend me the remaining build phases with recommended AI model."
+
+**Session A of the improvement plan is complete.** The corpus token arrived, so the three steps v04.25r
+deferred all landed: the desk Routine exists, it was hand-fired as a report-only dry run and reached the
+repository, and the 22 per-company one-shots are deleted.
+
+### Added
+
+**The "Profiler earnings desk" Routine (`trig_01UyH77BMKJnxzBUZJ11ej6A`)** — weekdays 13:00 UTC (`0 13 * * 1-5`),
+fresh session per fire, push + email notifications. Its prompt is the short one recorded in
+`.claude/rules/profiler-app.md`: identity, the calendar path, a pointer to the rules file, the cap of three with
+carry-over, the verify-published step, the calendar advance, the silent stand-down, and the report shape. It
+carries `CORPUS_TOKEN` — the first scheduled Profiler session ever to do so, which is what switches the
+Scraper→Profiler news-triage bridge on. Two prohibitions are explicit in the prompt: never write the token into a
+file or commit, and never create, update or delete a trigger.
+
+### Changed
+
+**`.claude/rules/profiler-app.md`** — the "Status: the desk Routine is not created yet" block added in v04.25r is
+removed, and the Routine id is recorded in the section's opening line. The section now describes what is actually
+running.
+
+### Removed
+
+**The 22 armed per-company one-shot refresh Routines**, after the dry run confirmed the desk works: Applied
+Digital, ABB, Tesla, Hitachi Energy, Core Scientific, Wärtsilä, Samsung SDI, Google, Microsoft, Meta, Equinix,
+Amazon, LG Energy Solution, Quanta Services, Panasonic, CATL, Primoris, Constellation Energy, TeraWulf, Nebius,
+Siemens Energy and Fluence. Their dates, confirmation status, cited sources and per-company watch items were
+transferred to `profiler-refresh-calendar.json` in v04.25r before any deletion.
+
+**The active Routine inventory is now six**, verified against the API: the earnings desk, the weekly Classroom
+pipeline, the daily ACL health check, the monthly opportunity-report drift check, the quarterly Industry Guidance
+review, and the quarterly private-company sweep. Zero per-company one-shots.
+
+### Verified
+
+**The dry-run fire** (`fire_trigger`, session `cse_01K7fDhNt5aaddkRjxm4T9La`, 20:29:57 → 20:35:33 UTC = 5m36s,
+`SUCCEEDED`) ran with an appended report-only instruction: read the calendar, say what you would do, change no
+files, make no commit. It read 10.8M tokens of context and left `main` at `73253cf` with no branch pushed — the
+instruction was respected. The contrast with the convention it replaces is the point: the seven August refresh
+runs lasted 2–4 minutes, spent ~5k output tokens, and never reached the repository at all.
+
+**Cost note for the operator:** that read-only dry run cost **$6.24**. A real run refreshing up to three dossiers
+will cost more. The cap of three per run is now a budget control as much as a scope control.
 
 ## [v04.25r] — 2026-09-02 04:23:00 PM EST
 
