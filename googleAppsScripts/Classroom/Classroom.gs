@@ -1,4 +1,4 @@
-var VERSION = "v01.13g";
+var VERSION = "v01.14g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -2815,6 +2815,372 @@ function clLessonHeatConstraint_() {
 };
 }
 
+function clLessonEightHundredVdcShift_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-800-vdc-shift",
+ "type": "module",
+ "title": "The 800 VDC Shift: Convert Once, Early, High",
+ "short": "The chain converts to DC twice and throws it away once. China fixed that at 240 volts in 2010; the West is fixing it at 800.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-03",
+ "reviewBy": "2027-03-03",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:zhonhen",
+    "date": "2026-08-19",
+    "note": "the physics toolkit, the Western AC chain and its stage count, China's 240/336 V HVDC chain and the stock-PSU adoption trick, the one-stage medium-voltage module, the 800 VDC chain and its published figures, and DC safety literacy"
+   },
+   {
+    "kind": "public",
+    "ref": "study:megmeet",
+    "date": "2026-08-07",
+    "note": "the legacy chain stage by stage and why it stops working at rack scale, the four conversion machines, compounding efficiency, and the new boxes: SST, sidecar, power shelf, BBU and supercapacitor shelves, CRPS supplies"
+   },
+   {
+    "kind": "public",
+    "ref": "study:nvidia",
+    "date": "2026-08-21",
+    "note": "why the rack became the unit of computing: the scale-up link rides copper and copper's reach at those speeds is about one rack, so compute, memory and power are packed into a single rack-sized domain"
+   },
+   {
+    "kind": "public",
+    "ref": "study:delta-electronics",
+    "date": "2026-08-21",
+    "note": "the in-rack precedent for the same voltage argument, efficiency as a curve rather than a number, the stated trade that every stage removed makes the survivor's job harder, and why architecture transitions are when component vendors can sell a subsystem"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-03",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "convert once",
+   "v": "early, and high",
+   "sub": "the whole thesis in four words"
+  },
+  {
+   "k": "7–8 → ~5",
+   "v": "series stages",
+   "sub": "the Western AC chain against China's DC chain"
+  },
+  {
+   "k": "+157%",
+   "v": "power through the same copper",
+   "sub": "800 VDC against 415 V AC, as the architecture's owner publishes it"
+  },
+  {
+   "k": "2010",
+   "v": "China got there first",
+   "sub": "at 240 V, because a stock server supply already accepted it"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "conversion stage",
+   "d": "One place in a power chain where the electricity changes form or level — AC to DC, one DC voltage to another, one AC voltage to another. Each stage costs roughly one to three per cent of the power as heat, which must then be cooled; each is also a box that occupies floor space, a capital line and a way for the chain to fail. Designing a power architecture is largely the art of deleting stages."
+  },
+  {
+   "t": "inverter",
+   "d": "A converter that turns direct current into alternating current — the mirror image of a rectifier. It appears wherever DC has to be handed back to an AC world: on the output of a battery-backed supply, on a solar array, and between an electric car's battery and its motor."
+  },
+  {
+   "t": "double-conversion UPS",
+   "d": "The standard data-center uninterruptible supply: it rectifies incoming AC to DC to hold its battery, then inverts that DC straight back to AC for the load. The load is therefore fed from the battery's DC at all times, which is why a grid disturbance never reaches it — and it is also why the legacy chain converts to DC twice and throws the first one away."
+  },
+  {
+   "t": "DC-DC converter",
+   "d": "A converter that changes one DC voltage to another, without ever passing through AC. It is the stage that does the work inside a rack once the power has arrived as DC, and the reason a high-voltage DC bus can still feed low-voltage electronics."
+  },
+  {
+   "t": "universal input",
+   "d": "The wide input range designed into a commodity server power supply so that one part number works anywhere in the world. The range is specified for AC, but the front end is a rectifier — so a supply built for a band of AC voltages will also accept a DC voltage inside that band. That accident, not a standards decision, is what let one DC architecture reach stock servers unmodified."
+  },
+  {
+   "t": "busbar",
+   "d": "A solid bar of copper or aluminium used instead of cable to carry very large currents over short distances inside equipment, a rack or a switchboard. It is the same idea as facility busway, one scale smaller and inside the machine: cross-section is the only thing standing between the current and the heat it makes."
+  },
+  {
+   "t": "I²R loss",
+   "d": "The heat a conductor makes when current flows through its resistance. The name is the formula: loss is proportional to the *square* of the current, so halving the current cuts the loss to a quarter. It is the reason nearly every question about a power architecture turns out to be a question about voltage."
+  },
+  {
+   "t": "sidecar",
+   "d": "A conversion cabinet that stands beside a rack and produces the rack's high-voltage DC bus from whatever the building already distributes. It is a bridge product by design: it delivers the new architecture to one rack without rebuilding the hall around it."
+  },
+  {
+   "t": "power shelf",
+   "d": "A slide-in conversion tray that occupies rack units and feeds the rack's own DC busbar, replacing per-server conversion with a pooled stage. Shelves are built with one more module than the load needs, so any single module can fail or be swapped while the rack keeps running."
+  },
+  {
+   "t": "supercapacitor",
+   "d": "A device that stores energy as separated charge rather than as a chemical reaction. It holds far less energy than a battery of the same size but can take it in and give it back in milliseconds, over and over, for many years — which makes it the right part for absorbing a spike and the wrong one for riding out an outage."
+  },
+  {
+   "t": "CRPS",
+   "d": "Common Redundant Power Supply: the industry-standard shape, connector and signalling for a server power supply module, so that any compliant vendor's unit fits any compliant server. Standardising the slot is what turns server power into a contested commodity market rather than a per-vendor design."
+  },
+  {
+   "t": "zero crossing",
+   "d": "The instant an alternating waveform passes through zero on its way from positive to negative or back — a hundred and twenty times a second on a 60 Hz supply. For a fraction of a millisecond there is no voltage sustaining an arc, so an arc drawn on AC tends to go out on its own. Direct current never has that instant."
+  }
+ ],
+ "sections": [
+  {
+   "id": "three-chains",
+   "title": "Three chains, side by side",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The previous lesson walked a megawatt from the service entrance to the rack and stopped at the rack. This one asks a harder question about the same walk: how many times does the power change *form* on the way, and how many of those changes are physics rather than history? Start from one fact that decides the whole argument — **the grid is AC because transformers only work on AC, while chips, batteries and solar panels are all DC-native.** Every AC segment between a battery and a chip is inherited, not required. Three architectures have made three different decisions about which of those segments to keep.",
+   "cols": [
+    "Chain",
+    "The path, as the source states it",
+    "Series stages",
+    "Efficiency — and what kind of number it is",
+    "What it asked of the server"
+   ],
+   "rows": [
+    [
+     "**Western AC** — the incumbent",
+     "Transmission at 115–345 kV AC → substation at 12.47–34.5 kV AC → {{medium voltage}} transformer to 480 V AC (400 V internationally) → {{UPS}} → {{PDU}} transformer → server supply at 54 V DC → {{VRM}}s at about 1 V at the die. The {{double-conversion UPS}} rectifies AC to DC to hold its battery and then inverts it straight back to AC — so **the chain converts to DC twice and throws the first one away.**",
+     "**Seven to eight**, as the source counts them",
+     "**88–94 % end to end** — the only figure in this column stated on that basis",
+     "Nothing. This is the chain every server ever built was built for, and that is most of why it survives"
+    ],
+    [
+     "**China's HVDC** — 240 / 336 V DC, standardised 2010",
+     "10 kV AC → 380 V AC → an {{HVDC}} {{rectifier}} producing 240 or 336 V DC with the batteries **floated directly on the bus** → DC distribution → server supply → chip. There is no UPS, no {{inverter}} and no transfer switch, because there is nothing to transfer *to*: the battery is already on the wire. Transfer time is zero by construction. The design descends from the telecom −48 V battery plant, which had solved this problem decades earlier at a smaller scale",
+     "**About five**, against the AC chain's eight",
+     "The rectifier stage is stated at **≥ 97.5 %**, and a one-stage medium-voltage module at **> 97.5 % system** efficiency. Neither is an end-to-end chain figure",
+     "**At 240 V, nothing at all.** A stock supply's {{universal input}} accepts it unmodified, so the transition needed no server changes and could happen at fleet scale. **336 V does need DC-rated supplies**, which is why it is used where the operator controls the hardware fleet"
+    ],
+    [
+     "**800 V DC** — the Western answer, arriving now",
+     "13.8 kV AC → {{SST}} or medium-voltage {{rectifier}} {{sidecar}} → an **800 V DC bus** → in-rack {{DC-DC converter}} → about 0.8 V at the die. {{supercapacitor}} and battery shelves hang directly on the DC bus, the same trick China's chain used one voltage down",
+     "The source states the chain but **does not count it** — so neither does this table",
+     "Stated as a **relative** gain: about **+5 % end to end** against the AC chain, alongside −45 % copper and roughly 30 % lower total cost of ownership",
+     "The most of the three. A new conversion box inside the rack, a new supply form factor, and shelves where the {{UPS}} room used to be. It is being adopted anyway, which tells you how hard the copper argument has become"
+    ]
+   ],
+   "note": "**The three efficiency figures are not on one basis and must not be read as a ladder.** One is an end-to-end chain measurement, one is a stage rating, one is a relative gain against the first. That is what the sources state, and tidying it into three comparable percentages would be inventing a number. Read the column for what each chain claims to be good at, not for a ranking. The stage counts have the same problem in reverse — two of the three are counted for us and the third is not, so the third is left as a path.",
+   "sales": "Read the second column for **where the stored energy sits**, because that is the room you would be selling into. In the AC chain it is a {{UPS}} room, with a transfer to manage and a facilities team that owns it. In China's chain it is floated on the bus and the transfer disappears along with it. In the 800 V chain it is **shelves inside the rack**. Same function, three different rooms, three different buyers — and only one of those rooms is the one storage vendors already know."
+  },
+  {
+   "id": "why-800",
+   "title": "Why the number is 800",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Everything in this lesson comes out of one equation and one consequence of it. Power is voltage times current, so the same megawatt is **2,500 amps at 400 volts or 1,250 amps at 800 volts** — identical power, very different copper. The consequence is that the heat produced in that copper does not scale with the current; it scales with the **square** of it. Double the voltage, halve the current, and the {{I²R loss}} falls to a quarter. That is the entire physics of the shift, and it is why almost every architecture question in this field turns out, underneath, to be a voltage question.",
+    "The second ingredient is the rack, and it arrived from the chip side rather than the power side. Accelerators are wired together two ways: a {{scale-up}} link that lets a group of them pool memory and behave as one enormous accelerator, and a switched network between those groups. The scale-up link is memory-like — huge bandwidth, tiny latency, almost no protocol overhead — and it **rides copper, whose reach at those speeds is about one rack.** The rack became the unit of computing because that is where the fast wire stops. So the industry's engineering effort pours into packing more processors, more memory and more *power* into a single rack-sized domain. Nobody chose rack density as a goal; it is what you get when the fastest link only reaches that far.",
+    "Now put the two together. A rack that drew five to fifteen kilowatts was comfortably fed by the AC chain. AI racks draw **120–150 kW today**, with roughly 600 kW machines expected in the second half of 2027 and a megawatt beyond that. At 415 V AC, feeding one megawatt takes about **1,400 amps**, and a legacy megawatt rack needs on the order of **200 kilograms of {{busbar}}** to carry it. That is not an efficiency problem any more. It is a mechanical and thermal one — bars you cannot bend, breakers you cannot buy, and heat generated in the distribution itself. **The old chain does not get expensive at these densities; it stops making sense.**",
+    "The published case for 800 V, as the architecture's owner states it, is **+157 % power through the same copper against 415 V AC, −45 % copper, about +5 % end-to-end efficiency and roughly 30 % lower total cost of ownership.** Those are vendor-published figures for a comparison the vendor chose, and they should be read as the shape of the claim rather than as an independent measurement — but the direction is not in dispute, because it is the same square law in the first paragraph.",
+    "Why 800 specifically, and not 400 or 1,500? Partly the physics runs out of free lunch: higher voltages bring insulation, clearance and safety-classification problems that grow faster than the copper saving. But the decisive reason is unglamorous — **the electric-vehicle industry already made 800 V-class components cheap.** Cars needed high-voltage switches, connectors, contactors and magnetics at volume, and they got them. The data center is standardising on a voltage class that already has a supply chain, which is a far better reason than elegance.",
+    "The last piece is why anyone fights this hard over single percentage points. Efficiency compounds: **a chain of five stages at 97 % each delivers only about 86 % of the power**, and what does not arrive left as heat that must also be cooled. At megawatt scale, every one per cent lost is roughly ten kilowatts of heat per megawatt, paid for twice — once in the fuel and once in the chiller. That is the arithmetic behind {{PUE}}, and it is why deleting a {{conversion stage}} is worth rebuilding an architecture for."
+  ]
+  },
+  {
+   "id": "the-new-boxes",
+   "title": "The new boxes, and what each one replaces",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Deleting a {{conversion stage}} does not delete the work it was doing — it moves that work into fewer, harder boxes. This is the new chain as a parts list. Read it as the physical answer to the previous section: each row exists because some job the old chain spread across several stages now has to be done once, at a higher voltage, in less space.",
+   "cols": [
+    "Box",
+    "What it replaces",
+    "Where it stands",
+    "What the sources state about it"
+   ],
+   "rows": [
+    [
+     "**{{SST}}** — solid-state transformer",
+     "The {{medium voltage}} transformer, the {{rectifier}} layer, and part of the {{UPS}}'s job — three stages collapsed into one device",
+     "At the front of the chain, taking medium-voltage AC straight off the grid",
+     "Megawatt-scale and stated above **98.5 %** efficient. Described as the endgame product of the transition, and as what puts a {{PUE}} below 1.1 within reach"
+    ],
+    [
+     "Medium-voltage {{rectifier}} **{{sidecar}}**",
+     "Nothing — and that is the point. It leaves the hall's existing AC distribution exactly where it is",
+     "A cabinet standing beside the rack",
+     "Converts the building's existing 480 or 380 V AC into 800 V DC and delivers **over a megawatt to a single rack**. Described as the bridge product shipping now. One source notes that this device class is what China's one-stage medium-voltage module has been since 2019, under a different name"
+    ],
+    [
+     "**{{power shelf}}**",
+     "Per-server conversion, pooled into one stage the whole rack shares",
+     "A slide-in tray inside the rack, feeding the rack's own DC {{busbar}}",
+     "**33 kW air-cooled; 110 kW liquid-cooled** for the densest racks, and built {{N+1}} so one module can fail or be hot-swapped while the rack runs. The 110 kW shelf is liquid-cooled for a blunt reason: at that density air physically cannot carry the heat away fast enough"
+    ],
+    [
+     "**{{BBU}} shelf**",
+     "The part of the central {{UPS}} that was there for **minutes**",
+     "In the rack, hanging on the DC bus",
+     "**16.5 kW**, riding through outages of seconds to minutes"
+    ],
+    [
+     "**{{supercapacitor}} shelf**",
+     "The part of the central {{UPS}} that was there for **milliseconds** — a duty a battery was always over-qualified for",
+     "In the rack, hanging on the DC bus",
+     "**15 kW**, absorbing millisecond spikes and dips. It exists because accelerator clusters swing their draw violently between training steps, which is a load shape no {{UPS}} room was designed around"
+    ],
+    [
+     "**{{CRPS}}** server supply",
+     "The old server supply — same standardised slot, different insides",
+     "Inside the server, as before",
+     "**800 W to 5.5 kW at over 100 W per cubic inch**, roughly double traditional density, with efficiency graded in metals — 80 PLUS Titanium at 96 %, and a higher tier above it"
+    ]
+   ],
+   "note": "**Timing is stated at the level of the class, not the box:** the shelves and the sidecars are shipping into today's racks, while **full 800 V DC facilities with megawatt racks are projected from about 2027.** So the two halves of this table are on different clocks — the in-rack boxes are a product you can buy into a hall that already exists, and the front-of-chain box is an architecture you commit a building to. Two further cautions. The ratings in the last column are one supplier's published figures for its own products in each class, so they show the shape and scale of a class rather than an industry specification. And the converter that takes the rack's supply the last step down to the roughly one volt the silicon actually drinks is named in the same sources but belongs with the walk from the power supply to the die — not with this lesson.",
+   "sales": "Two rows of this table are a battery product. The {{BBU}} and {{supercapacitor}} shelves are stored energy sold by the kilowatt into a rack — and they are specified by the server and rack designers and bought by the hyperscaler's hardware organisation, **not by the facilities team that buys a {{UPS}} room.** That is a battery sale happening in a room most storage sellers have never been in, against a spec written by people who do not use the word *storage*. It is also, honestly, the row where this corpus is thinnest: there is no study guide here for a backup-power cell incumbent or a DC-shelf vendor, so treat this as the shape of the opening rather than a map of who currently supplies it."
+  },
+  {
+   "id": "same-thesis-twice",
+   "title": "The same thesis, twice, fifteen years apart",
+   "kind": "callout",
+   "read": "4 min",
+   "ps": [
+    "It is tempting to read 800 V DC as a product launch. It is better read as **the second time this argument won.** The dates are worth holding in order. In **2010** the first-generation 240 V DC system shipped in China, descended from the telecom −48 V battery plant: rectify once, float the battery on the bus, zero transfer time. The same company lead-drafted the national 240 / 336 V standard. In **2019** came the one-stage medium-voltage module — transformer, rectification and distribution folded into a single factory-built, pre-tested block, co-developed with a hyperscaler and named after the canal, because it is one cut instead of four locks. By **2025** that company was independently ranked first in Chinese data-center HVDC at 31 % share. And now the Western ecosystem is standardising on 800 V DC.",
+    "The two transitions had different triggers and the identical logic. China's worked because **240 V DC rides through a stock server supply's {{universal input}} unmodified** — the change was free on the server side, so it could happen across a fleet without touching hardware. The West's is happening because **AI racks broke AC**: at megawatt-rack power the copper argument stops being an optimisation and becomes a physical limit. Same thesis — convert once, early, high — with **the voltage scaled to the load.**",
+    "One practical consequence is vocabulary. The same box has two names depending on which ecosystem you learned it in: the one-stage medium-voltage module and the {{SST}} or MV rectifier {{sidecar}} are the same device class, described by two industries that arrived at it a decade apart. Being able to read across the two vocabularies is most of what it takes to follow this conversation internationally — and it saves you from treating a solved problem as a new one. The prefabrication argument travels with it: folding the medium-voltage stage into a factory-built block moves the DC engineering into a factory, and **substitutes factory labour for field electricians**, who are scarce. That is a supply-chain argument as much as an engineering one.",
+    "It is worth asking why the AC chain lasted so long if the case against it is this clean. The answer in the sources is not technical: **it persists because it is inherited** — electrical codes written around it, field labour trained on it, and fifty years of UPS and PDU vendor incumbency built on it. Architectures do not lose arguments; they lose the conditions that made them reasonable."
+   ],
+   "sales": "**Architecture transitions are the only moments when the sockets are open.** A vendor that sells one component of a stable chain can, while the chain is being redefined, sell the whole new subsystem instead — which is exactly why every ambitious supplier in this market arrived at once. Server power has been roughly three-quarters Taiwanese, with a single supplier near 41 % of it; the challengers are not attacking that share in yesterday's sockets, they are trying to own tomorrow's. The window is open while the architecture is unsettled, and the sources put full facilities at around 2027. **Whatever you sell into this chain, the question is not whether you are competitive — it is whether you are early.**"
+  },
+  {
+   "id": "dc-safety-in-plain-terms",
+   "title": "Why direct current needs different safety thinking",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "An alternating arc gets a free reset. The waveform passes through zero volts **a hundred and twenty times a second**, and at each {{zero crossing}} there is briefly nothing sustaining the arc, so it tends to extinguish itself. Almost every protective device in an AC building is quietly leaning on that fact, and almost nobody who specifies one thinks about it.",
+    "Direct current never has that instant. A DC arc has no zero crossing, so nothing puts it out on its own — **it has to be engineered out.** In practice that means breakers rated for DC rather than AC devices pressed into DC service, deliberate arc-fault management as a designed function, and grounding treated as a decision the architecture makes rather than a default the code hands you.",
+    "None of this is exotic, and none of it is unproven. It is *unfamiliar*, which is a different risk. The same engineering was done once already at 240 and 336 V and validated across a decade of fleet operation in Chinese data centres. The 800 V ecosystem is doing the same work now, at a higher voltage where the energies are larger and the tolerance for a wrong assumption is smaller.",
+    "One structural answer is worth naming because it is not obvious from the schematic: **prefabrication.** Folding the medium-voltage stage into a factory-built, pre-tested block moves the DC arc-management engineering into a factory, where it is done once under controlled conditions and repeated identically — instead of being re-derived on every site by field electricians who are in short supply. The safety argument and the labour argument point the same way, which is unusual and is part of why the packaged block won in China.",
+    "What this section deliberately does not do is teach the engineering. How a DC fault behaves against an AC one, which grounding scheme a hall adopts and what each costs it, where the protection zones are drawn, the interlock that keeps hands off a live whip, and how quickly the device classes — the {{SSCB}} among them — actually clear: that is a separate lesson at a stricter gate. **What belongs here is the literacy to know that layer exists, and why it is not optional at this voltage.**"
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**A stage deleted without a plan for its fault duty.** Deleting stages is the whole point of this architecture, and it is also where it breaks. Every stage in the old chain was doing several jobs at once — converting, yes, but also isolating, limiting how much fault current could reach downstream, and buying milliseconds. When the stage goes, the *conversion* moves to a new box and everybody notices; the other jobs move too, and often nobody names where they landed. The trade is stated plainly in the sources for the in-rack case — fewer stages waste less, but **every stage removed makes the surviving converter's job harder** — and it reads the same way at building scale. The question to ask of any collapsed chain is not what the new box converts. It is what the deleted box was also doing.",
+    "**An arc with no moment when it must die.** In an AC building a fault gets a hundred and twenty chances a second to stop being a fault. On a DC bus it gets none. The danger is not that direct current is exotic — it is that a hall can be built to AC habits, wired by people trained on AC, and then energised at 800 V, where the habit that used to be free is now an engineering requirement. *The taxonomy of arc types and how each is detected and cleared belongs to the engineering lesson at the stricter gate; what belongs here is that the absence of the {{zero crossing}} is a design input, not a footnote.*",
+    "**A stock supply that was never rated for DC.** The most seductive fact in this lesson is that China's 240 V transition needed no server changes at all, because a commodity supply's {{universal input}} already accepted it. That is true — at 240 V. It is also exactly the kind of fact that gets carried one voltage too far. **336 V already needs DC-rated supplies,** which is precisely why it is deployed where the operator controls the hardware fleet, and 800 V is a different chain with a different conversion box in the rack. A supply that *works* on a bench is not a supply that is *rated*, and the difference surfaces as a fault rather than as a warning.",
+    "**A sidecar retrofit that outruns the hall.** The {{sidecar}}'s selling point is that you do not rebuild the facility: it takes the building's existing 480 or 380 V AC and hands 800 V DC to one rack, above a megawatt. That is genuine, and it is also the precise boundary of what it fixes. **That megawatt still arrives through the hall's existing upstream distribution, transformers and protection** — gear sized for a generation of racks that drew a fraction of it. The new architecture's benefits all sit downstream of the cabinet; the hall's capacity sits upstream of it, and installing one changes nothing about the upstream number. A retrofit that pencils per rack and fails per hall is a planning failure, not an equipment failure, which is why it is usually found late.",
+    "*Two failures on the other side of the shelf are deliberately not here. A busbar behaving like a heater, and a thousand amps arriving at a regulator with no thermal margin, are the same square law one stage further in — and they belong with the walk from the power supply to the die, alongside the last centimetre itself.*"
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "The legacy AC chain converts to DC twice and throws one of them away. Where, and why does that matter?",
+     "a": "In the double-conversion UPS. It rectifies incoming AC to DC to hold its battery, then inverts that DC straight back to AC for the distribution and the server supply, which rectifies it to DC yet again. Every conversion costs roughly one to three per cent as heat, plus a box, floor space and a way to fail. The DC the UPS already had is discarded for historical reasons — codes written around AC, field labour trained on it, decades of UPS and PDU incumbency — not physical ones."
+    },
+    {
+     "q": "Why is an argument about power architecture always, underneath, an argument about voltage?",
+     "a": "Because power is voltage times current, so the same power at double the voltage is half the current — and conductor loss scales with the square of the current, so half the current is a quarter of the loss. The same megawatt is 2,500 amps at 400 V and 1,250 amps at 800 V. At megawatt-rack power this stops being an efficiency question: 1 MW at 415 V AC is about 1,400 amps, and a legacy megawatt rack needs on the order of 200 kilograms of busbar to carry it."
+    },
+    {
+     "q": "Why did the rack become the unit of computing, and what did that do to the power chain?",
+     "a": "Because the scale-up link that lets a group of accelerators pool memory and act as one machine rides copper, and copper's reach at those speeds is about one rack. So all the engineering effort goes into packing more compute, memory and power into a single rack-sized domain. Racks went from 5–15 kW to 120–150 kW, with roughly 600 kW machines expected in the second half of 2027 and a megawatt beyond — which is what broke a chain that had worked for fifty years."
+    },
+    {
+     "q": "China standardised DC to the rack in 2010 at 240 V; the West is doing it now at 800 V. Same thesis — so why different voltages?",
+     "a": "The voltage was scaled to the trigger. China's transition was free on the server side, because a stock supply's universal input already accepted 240 V DC, so it could happen across a fleet without touching hardware; 336 V goes further but needs DC-rated supplies. The West's trigger is that AI racks broke AC — at megawatt-rack power the current is simply unmanageable — and 800 V was the reachable class because the electric-vehicle industry had already made 800 V-class components cheap and plentiful."
+    },
+    {
+     "q": "Name the boxes in the 800 V chain, and say what each one replaces.",
+     "a": "The solid-state transformer replaces the medium-voltage transformer, the rectifier layer and part of the UPS's job, at the front of the chain. The medium-voltage rectifier sidecar replaces nothing — it is a bridge that leaves the hall's AC in place and feeds one rack. The power shelf pools per-server conversion and feeds the rack's DC busbar, built N+1. The BBU shelf replaces the minutes part of the central UPS and the supercapacitor shelf the milliseconds part. And the standardised server supply keeps its slot with new insides."
+    },
+    {
+     "q": "What does an AC breaker get for free that a DC breaker does not?",
+     "a": "A zero crossing. The AC waveform passes through zero 120 times a second, so an arc is briefly left with nothing sustaining it and tends to self-extinguish. Direct current never offers that instant, so the arc has to be engineered out: DC-rated devices rather than AC ones pressed into service, deliberate arc-fault management, and grounding as a design decision rather than an inherited default. It is unfamiliar rather than unproven — the same engineering was validated at 240 and 336 V across a decade of fleet operation."
+    },
+    {
+     "q": "A hall installs an 800 V sidecar beside one rack without touching its distribution. What has changed, and what has not?",
+     "a": "Changed: that rack now runs on an 800 V DC bus with over a megawatt available to it, and gains the new architecture's density and efficiency everywhere downstream of the cabinet. Not changed: the megawatt still arrives through the hall's existing 480 or 380 V AC distribution, transformers and protection, all sized for a much lighter generation of racks. The sidecar is a bridge product precisely because it does not rebuild the facility — which is also the exact limit of what it can fix."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "In the legacy AC chain, which stage already has the power as DC and then gives it up?",
+     "c": [
+      "The double-conversion UPS",
+      "The PDU transformer",
+      "The medium-voltage substation transformer",
+      "The voltage regulator at the die"
+     ],
+     "a": 0,
+     "why": "The double-conversion UPS rectifies AC to DC to hold its battery and then inverts it straight back to AC, so the load is always fed from the battery's DC — and a grid disturbance never reaches it. That is why it exists. But the next two stages then rectify the same power to DC again, which is the redundancy the whole 800 V argument is aimed at."
+    },
+    {
+     "q": "Moving the same power at double the voltage changes the loss in the conductor by how much?",
+     "c": [
+      "It falls to a quarter",
+      "It falls by half",
+      "It is unchanged — power is power",
+      "It doubles"
+     ],
+     "a": 0,
+     "why": "Doubling the voltage halves the current, and loss scales with the square of current — so half the current is a quarter of the loss. This single relationship is why every chain in this lesson is trying to raise the voltage and shorten the distance the low-voltage current has to travel."
+    },
+    {
+     "q": "China's 240 V DC transition required no server hardware changes at all. Why — and where does that trick stop working?",
+     "c": [
+      "A stock supply's universal input already accepted 240 V DC; at 336 V the supplies must be DC-rated",
+      "AC and DC are interchangeable below 400 V, so nothing above that works",
+      "Servers had shipped with DC supplies since 2010, so the fleet was already converted",
+      "A transfer switch at the rack converted it back to AC before the server saw it"
+     ],
+     "a": 0,
+     "why": "A commodity supply is specified for a wide band of AC voltages, and its front end is a rectifier — so it will also accept a DC voltage inside that band. That accident, not a standards decision, made the transition free on the server side. It stops at 240 V: 336 V needs DC-rated supplies, which is why it is used only where the operator controls the hardware fleet."
+    },
+    {
+     "q": "An operator wants the new architecture in a hall they are not rebuilding. Which box is that, and what does it leave unsolved?",
+     "c": [
+      "The medium-voltage rectifier sidecar — it feeds one rack from the hall's existing AC and does nothing about the hall's upstream capacity",
+      "The solid-state transformer — it replaces the transformer, so the upstream is upgraded along with it",
+      "The power shelf — it converts inside the rack, so the building's distribution stops mattering",
+      "The BBU shelf — it stores enough energy to cover the shortfall between what the hall has and what the rack needs"
+     ],
+     "a": 0,
+     "why": "The sidecar's whole proposition is that you do not rebuild the facility: it takes the building's existing 480 or 380 V AC and hands over 800 V DC to one rack. Everything it improves is downstream of the cabinet, while the hall's transformers, distribution and protection are upstream of it and unchanged — so the megawatt still has to get there through gear sized for a lighter generation of racks."
+    },
+    {
+     "q": "The three chains' efficiency figures are 88–94 %, ≥ 97.5 %, and about +5 %. What is the correct way to read them?",
+     "c": [
+      "They are not on one basis — one is end-to-end, one is a single stage, one is a relative gain against the first",
+      "They are three end-to-end measurements taken the same way, so they rank the chains directly",
+      "Only the 800 V figure is end-to-end; the other two are marketing numbers",
+      "Only the Chinese chain has a stated efficiency; the other two are estimates"
+     ],
+     "a": 0,
+     "why": "The 88–94 % is the Western AC chain measured end to end. The ≥ 97.5 % is one rectifier stage in China's chain, not the chain. The +5 % is a relative gain claimed for 800 V against the AC chain. Lining them up as a ladder would invent a comparison none of the sources make — and noticing that is the more durable skill than remembering any of the three numbers."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -2836,13 +3202,14 @@ function clTrackAidcGridToChip_() {
  "schemaVersion": 1,
  "id": "aidc-grid-to-chip",
  "title": "The AIDC Power Chain, Grid to Chip",
- "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, and the chain from the service entrance to the rack.",
+ "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, the chain from the service entrance to the rack, and the case for converting it to DC once, early and high.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-02",
+ "updated": "2026-09-03",
  "lessons": [
   "the-fence-line",
   "bridge-power",
-  "the-aidc-power-chain"
+  "the-aidc-power-chain",
+  "the-800-vdc-shift"
  ]
 };
 }
@@ -2877,7 +3244,7 @@ function clTrackAidcCampus_() {
 function clLessons_() {
   return [clLessonCellToContainer_(), clLessonDurationDegradation_(), clLessonSpecSheet_(),
           clLessonTheFenceLine_(), clLessonBridgePower_(), clLessonAidcPowerChain_(),
-          clLessonHeatConstraint_()];
+          clLessonHeatConstraint_(), clLessonEightHundredVdcShift_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcCampus_()];

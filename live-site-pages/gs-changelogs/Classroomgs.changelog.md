@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 13/50`
+`Sections: 14/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.14g] — 2026-09-03 12:59:55 AM EST — v04.35r
+
+### Added
+- A new lesson closing out the grid-to-chip walk: why the traditional building power chain converts to direct current twice and throws one of them away, and what happens when that redundancy is designed out
+- It sets three architectures side by side — the incumbent chain, the one standardised in China fifteen years ago, and the high-voltage direct-current chain arriving now — and explains why the whole argument comes down to a single relationship between voltage, current and heat
+- It walks the new equipment: what each box replaces, where it physically stands, and which parts are shipping into existing halls today versus which commit a building to a new architecture
+- It closes on where the approach fails — a stage deleted without a plan for the jobs it was quietly doing, an arc with no moment when it must go out, a commodity power supply pressed one voltage too far, and a retrofit that works per rack and fails per hall
+- Reading the sources honestly is taught as part of the material: the efficiency figures quoted for the three architectures are not measured on the same basis, and the lesson says so rather than lining them up as a ranking
+
+### Changed
+- The grid-to-chip track now runs four lessons end to end, and its summary describes the walk as it currently reads
 
 ## [v01.13g] — 2026-09-02 11:38:08 PM EST — v04.34r
 
