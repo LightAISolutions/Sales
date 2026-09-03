@@ -6,6 +6,47 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-03 04:33 AM EST
+**Repo version:** v04.42r (started at v04.41r — one push commit, `861a85b`, merged to `main` within minutes; plus this context write)
+**Branch:** `claude/phase-a2-profiler-coverage-62yjq1` — restarted from `origin/main` (`git checkout -B … origin/main`) before this context commit because the workflow had merged and swept it
+**Model:** Fable 5.1 xhigh — the second of the four Phase A anchor sessions
+
+**What we worked on — Phase A2 of `PROFILER-COVERAGE-PLAN.md`, Piller Power Systems, dossier + study guide in one commit (v04.42r):**
+
+- **`piller.profile.json`** — schema v7, profileVersion 1, `supplier`, intel-briefing: BLUF summary, six confidence-tagged key judgments, a dated INDICATORS TO WATCH bullet, collection gap stated. **Ten product lines** with all depth fields (SHIELDX; UB-V; UNIBLOCK UBT+/UBTD+/DeRUPS; the Isolated Parallel bus; POWERBRIDGE; Active Power CleanSource; CPM; M+ Series/APOSTAR/APOTRANS; converters, ground power, naval and Grid series; service and rental), **ten banded spec groups** quoted verbatim, Langley Holdings financials FY2023–H1 2026 with Langley's own guidance as the only expectations (private, unlisted — stated), the one Piller-level figure (2025 revenue €332M, +28%, per the Northeim chamber) carried as `kpi: revenue` at the researched 2025 EUR/USD average (1.1296, cited), 23 developments, nine relationships (Crusoe, Nebius, Tesla, Caterpillar, Bloom Energy, Vertiv, Schneider Electric, Eaton, ABB), three policy exposures, five decision makers, **185 sources at 64% first-party**
+- **`piller.study.json`** — schema v2, **15 sections**: who owns the seconds; IEC 62040-3 grades (`table`); battery vs flywheel (`proscons`, with the 15 MJ ≈ 4.2 kWh arithmetic); static and rotary anatomy; DRUPS; static vs rotary (nine-row `table`); the stiff source; topologies to the isolated-parallel ring (`table`); the swinging load and the island; products table and single-unit-then-system `bars` ladder; `where-it-fails` aligned to §5 row 6 plus the rotary family's own failures; 14 flashcards; 10-item quiz. 131 `{{term}}` spans over 58 registry terms, no local glossary
+- **24 shared concepts** registered (138 → 162): `autonomy`, `concurrent maintainability`, `coupling choke`, `DC link`, `distributed redundant`, `double conversion`, `DRUPS`, `eco-mode`, `excitation`, `fault current`, `flywheel`, `frequency converter`, `IEC 62040-3`, `IGBT`, `isolated parallel bus`, `low voltage`, `magnetic bearing`, `MTBF`, `power conditioning`, `rotary UPS`, `static bypass`, `static UPS`, `synchronous machine`, `VRLA`; the `UPS` definition widened from "battery-backed" to "a battery string or a spinning flywheel"
+- **`study-prep/piller/piller-lesson-plan.md`** — five modules (the seconds and the classification; chemistry vs spinning steel; static, rotary and DRUPS anatomy; topologies, the ring and the stiff source; the catalogue against the chain, the ladder, who buys, who competes)
+- **Bookkeeping**: registry entry after Panasonic + sync, graph 506 → 519 edges (13 touch `piller`), calendar row as `cadence: "quarterly"` with Langley's disclosure cadence in `source` (annual report early Feb, interim early Aug), README tree entries, §8 row A2 flipped to `v1 · v04.42r` / `✓ · v04.42r`. §6 register checks deliberately not re-run (phase-end)
+- **Verification**: all three checkers clean plus a local schema-v7 validator (scratchpad, not committed); Playwright on localhost with a stubbed backend rendered nine dossier tabs and the full Study Guide (15 sections, 4 tables, 2 pros/cons, callout, 11 bars, 14 cards, 10 quiz items, 127 resolving tooltips), zero page errors
+
+**Where we left off:**
+
+- **A1 and A2 are done on `main`.** Next: **A3 Dominion Energy → A4 Vicor**, each on Fable 5.1 xhigh as `profiler <Company>` + `profiler prep <Company>` in one commit. **A3 carries the program's only page change**: add `utility` to `profiler-companies.json`'s `categories` (after `ipp` is the natural slot), to PROFILER-SCHEMA.md's category table (registry row and the intro list), and to `Profiler.html` — chip label, `.ov-tag` colour, `known` list, compare peer groups, `OV_REL_CAT_COLORS` — with a Profiler bump v01.80w → v01.81w, meta tag, a public-safe page changelog entry, and `verify-profiler-roles.py` re-run. Do not file Dominion under `ipp` or `other`
+- **The xhigh test, second data point.** Where the extra reasoning visibly showed on A2: the Vineland contradiction (Langley never names the site; third parties tie it to DataOne/Nebius; WHYY reports the engine plan replaced by fuel cells) was surfaced, hedged everywhere it appears and made the low-confidence judgment rather than smoothed; the "flywheel and battery are complements, not substitutes" judgment came from reading Crusoe's dossier against the Bergen release; the guide's design (the seconds as a power problem in an energy costume, the ring drawn as impedance rather than logic, the same machine in five catalogue rows); source discipline (Microsoft, VoltaGrid, Wärtsilä left out of relationships; aggregator DRUPS-market figures spanning 10× left unused; the FX rate researched and cited). What it did not buy: research yield or schema compliance — the two agents ran 23 and 20 minutes and returned clean. Still no High-effort control; B1 is the natural one
+- **Sequencing during agent waits worked again**: concepts, lesson-plan modules 1–4, 13 of 15 guide sections, the Playwright harness, README and ledger edits were all built while the agents ran, so post-report work was assembly and checks (~25 minutes). Repeat on A3 — for a utility, the company-independent half is the regulated-procurement concept chain (rate base and cost of service, IRP → CPCN → RFP, PJM capacity and transmission planning, large-load tariffs and minimum-demand contracts, interconnection studies and cost allocation, SCC dockets), which can be drafted before a single Dominion fact arrives
+- **First-party sites**: piller.com served everything; langleyholdings.com HTML returned 503 but its PDFs downloaded; web.archive.org is blocked for WebFetch in this environment. Expect Dominion's IR site (investors.dominionenergy.com) and SCC dockets to be reachable; SEC EDGAR always is
+- CHANGELOG at **95/100**; archive rotation fires above 100 — roughly five pushes out, inside Phase B. The earnings desk Routine and the weekly C2 pipeline remain live and unreviewed; sessions D and E of `IMPROVEMENT-PLAN.md` not started
+
+**Key decisions and positions taken:**
+
+- **Private, unit-level subject → `financials.type: "private"`, parent-group periods with the parent's own guidance as `expected`, verdicts against that guidance, and every "no consensus exists" stated in the row.** The one whole-company figure from an independent chamber-of-commerce report carries the KPI overlay; nothing at the parent or division level does
+- **Piller-authored datasheets read from distributor mirrors carry `party: "company"`** explicitly, with the mirror flagged in the label and the canonical download page named — the words are the company's, the host is not
+- **Calendar row is `cadence: "quarterly"`** (unit-level, no earnings clock) with the parent's disclosure cadence written into `source` so the desk knows when the next Piller-relevant document lands (~early Feb 2027)
+- **A registry definition may be corrected when a new guide teaches something the old definition excluded** (UPS: battery-backed → battery or flywheel); recorded in the CHANGELOG as a Changed item
+- **A data-only change still lists the Profiler page as an indirect affect** at its current version, no bump (per `profiler-app.md`)
+
+**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · Profiler `v01.80w` / `v01.34g` (no page or GAS version moved) · Classroom `v01.07w` / `v01.16g` · 91 dossiers · 64 study guides · concepts registry 162 · graph 519 edges · CHANGELOG 95/100 · no active reminders · TODO empty
+
+**Recommendation for next session:**
+
+- **Run Phase A3 — Dominion Energy — on Fable 5.1 xhigh** as a fresh session: `profiler Dominion Energy` then `profiler prep Dominion Energy`, one push commit, per `PROFILER-COVERAGE-PLAN.md` §3 and §7, **adding the `utility` category** (registry, schema, `Profiler.html` with a page bump) in the same commit. It closes the utility half of G5 that the guidance modules mention 30 times and no public source teaches, and it is the first public-company anchor, so the calendar row is a researched `nextReport` (Q3 2026 results, early November) rather than a cadence.
+**To continue:** type `run Phase A3 of PROFILER-COVERAGE-PLAN.md — Dominion Energy — on Fable 5.1 xhigh`
+
+## Previous Sessions
+
+### 2026-09-03 — Phase A1 Caterpillar: dossier + study guide on Fable 5.1 xhigh (v04.41r)
+
 **Date:** 2026-09-03 03:40 AM EST
 **Repo version:** v04.41r (started at v04.40r — one push commit, `a39b4dd`, plus this context write)
 **Branch:** `claude/caterpillar-phase-a1-profiler-gztswc` — the push merged to `main` within minutes and the workflow swept the branch; it was restarted from `origin/main` (`git checkout -B … origin/main`) before this context commit
@@ -41,42 +82,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - **Run Phase A2 — Piller Power Systems — on Fable 5.1 xhigh** as a fresh session: `profiler Piller` then `profiler prep Piller`, one push commit, per `PROFILER-COVERAGE-PLAN.md` §3 and §7. It closes the rotary/flywheel half of G3 that no guide in the corpus carries, and it is the most design-sensitive guide of the remaining anchors — the one where xhigh's guide-side advantage should show most clearly.
 **To continue:** type `run Phase A2 of PROFILER-COVERAGE-PLAN.md — Piller — on Fable 5.1 xhigh`
-
-## Previous Sessions
-
-### 2026-09-03 — Profiler coverage plan approved: 65 companies + 30 guides ordered by model (v04.40r)
-
-**Date:** 2026-09-03 02:29 AM EST
-**Repo version:** v04.40r (started at v04.39r — one push commit, this one)
-**Branch:** `claude/profiler-coverage-gaps-sg0mzu` — clean against `origin/main` at commit time; the branch did not exist on the remote, so no rebase and no restart were needed
-**Model:** Fable 5.1 — a planning session, by the standing decision that planning runs on Fable and authoring on Opus 5. **That decision is now refined for dossier work** — see Key decisions
-
-**What we worked on — a coverage analysis, an approved roster, and the plan file that carries it:**
-
-- **Analyzed Profiler's coverage against Classroom's gap register** (`CLASSROOM-CURRICULUM-PLAN.md` §6, the twelve rows with the new `Status` column). Coverage stood at 89 dossiers / 62 study guides. Three structural findings the register did not state: the nine `ipp` dossiers — the entire BESS buyer side — carry **zero** study guides; the `investor` and `advisor` categories exist in the schema and have never held a company; there is no `utility` category at all
-- **Counted corpus mentions of uncovered companies** across every dossier and guide, which is the strongest evidence of an ecosystem gap and surfaced names the register never listed: Digital Realty (13 docs), Blackstone (12), AEP (11 dossiers + 25 guidance hits), Anthropic (10 docs, 97 hits), MGX (10), Fluidstack (6), Intersect Power (6), Mitsubishi Power (6). Powin (13 docs) tops the list and is deliberately excluded — defunct, told inside FlexGen's dossier, excluded by the earlier v02.91r plan too
-- **Recommended 65 companies in six tiers plus 30 study-guide passes**; the developer **approved all tiers** and chose to run the program by model — every Fable 5.1 xhigh session first, then Fable 5.1 High, then Opus 5 xhigh — and to return to the Classroom build only after the whole roster lands
-- **Wrote `repository-information/PROFILER-COVERAGE-PLAN.md`** — the plan reorganized into that order: §2 model rule, §3 Phase A (4 anchors), §4 Phase B (29), §5 Phase C (32 + 30 guides), §6 Phase D (back to Classroom), §7 per-session bookkeeping and the paste-in prompt template, §8 the status ledger every session flips
-
-**Where we left off:**
-
-- **Nothing in Profiler has been built yet.** The plan is committed; the first dossier session is the developer's next action. Order: **A1 Caterpillar → A2 Piller → A3 Dominion → A4 Vicor** on Fable 5.1 xhigh, each as `profiler <Company>` + `profiler prep <Company>` in one commit; then Phase B (B1–B10) on Fable 5.1 High; then Phase C (C1–C12 plus the guide revisions and the 27 backfills) on Opus 5 xhigh; then Phase D
-- **Session A3 (Dominion) carries a page change**: the `utility` category must be added to `profiler-companies.json`'s `categories`, PROFILER-SCHEMA.md, and `Profiler.html` (chip label, `.ov-tag` colour, `known` list, compare peer groups, `OV_REL_CAT_COLORS`) — a Profiler page version bump, the only page change in the program
-- **The repo CHANGELOG is at 93/100.** Archive rotation fires above 100 — roughly seven pushes out, i.e. inside Phase B. Whoever lands that push does the rotation in the same commit
-- The Classroom cut line (`redundancy-by-the-numbers`, `inside-the-rack`, the second wave) is **paused by the developer's decision** until Phase D. The earnings desk Routine and the weekly C2 pipeline remain live and unreviewed; sessions D and E of `IMPROVEMENT-PLAN.md` not started
-
-**Key decisions and positions taken:**
-
-- **Dossier work has its own model rule, layered on the standing decision.** Fable 5.1 xhigh only for the four anchors a future lesson will pin, as dossier + guide in one session; Fable 5.1 High for private/opaque subjects and the utilities (regulatory synthesis); Opus 5 xhigh for public companies with deep first-party records and for every study-guide pass on an existing dossier. Stated as judgment, not measurement — the repo has never compared dossier quality by model, and Phase A doubles as the test: if Caterpillar's guide on xhigh reads no better than High, demote A2–A4 before running them
-- **Every company is a pair.** Classroom pins study guides, not dossiers, for equipment lessons (the §5 failure map is built from guides only). A dossier without a prep pass adds nothing to Classroom, so the plan never schedules one without the other, and the backfill of existing dossiers starts with the nine IPPs because the buyer side has no guides at all
-- **Phase-end, not session-end, register checks.** A row in §6 is not closed until someone re-runs its check and dates it (last session's rule). The plan schedules that at the end of each phase and again in Phase D, and keeps the §8 ledger as the per-session record so the two never substitute for each other
-- **Powin, Broad Reach, Boyd, Motivair, Prolec, Cupertino Electric and Calpine stay uncovered** — each is already told inside a covered parent's dossier. Wood Mackenzie and BNEF are ranking sources, not counterparties
-
-**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · Profiler `v01.80w` / `v01.33g` · Classroom `v01.07w` / `v01.16g` · concepts registry 112 entries · CHANGELOG 93/100 · no active reminders · TODO empty
-
-**Recommendation for next session:**
-
-- **Run Phase A1 — Caterpillar — on Fable 5.1 xhigh**, as a fresh session: `profiler Caterpillar` then `profiler prep Caterpillar`, one push commit, per `PROFILER-COVERAGE-PLAN.md` §3 and §7. It closes G2's first half, anchors the `backup-generation` lesson, and is the cheapest test of whether xhigh earns its cost over High on a dossier + guide pair before A2–A4 spend it.
-**To continue:** type `run Phase A1 of PROFILER-COVERAGE-PLAN.md — Caterpillar — on Fable 5.1 xhigh`
 
 Developed by: LightAISolutions
