@@ -6,6 +6,111 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-02 08:17:50 PM EST
+**Repo version:** v04.29r (started at v04.24r — five push commits)
+**Branch:** `claude/session-a-earnings-desk-y6ns6e` (all five merged to `main`)
+
+**What we worked on — Sessions A, B and C of `IMPROVEMENT-PLAN.md`, plus a fix:**
+
+- **`7c7e2b6` v04.25r — Session A part 1 (the earnings desk, P3 + R1 + R4).** Created
+  `repository-information/profiler-refresh-calendar.json`: 50 rows (29 public with
+  `nextReport`/`confirmed`/`source`/`lastRefreshed`/`watch[]`, 21 `cadence: "quarterly"` private),
+  seeded by reading **all 22** armed one-shot prompts in full. Schema section added to
+  `PROFILER-SCHEMA.md`. Rewrote "Scheduled Refreshes" in `.claude/rules/profiler-app.md` around the
+  calendar; deleted the stale "Currently armed" list. Fixed R4 brochure drift (Scraper's retired
+  👍/👎 + Calibrate advice; Profiler page 5, which described the convention this commit retired),
+  rebuilt both PDFs, re-measured the 1006 px limit — Profiler p5 came back at **1007 px**, trimmed to
+  989. Folded in the CHANGELOG entry + README tree row the plan commit had skipped
+- **`4b6deda` v04.26r — Session A part 2.** Created the **Profiler earnings desk** Routine
+  `trig_01UyH77BMKJnxzBUZJ11ej6A` (weekdays 13:00 UTC, fresh session, push + email) carrying
+  `CORPUS_TOKEN` — the first scheduled Profiler session ever to have it, which switches the
+  Scraper news-triage bridge on. Hand-fired it as a report-only dry run (5m36s, 10.8M tokens read,
+  `main` untouched, no branch), then deleted all 22 one-shots. **Six Routines remain, zero
+  per-company one-shots**
+- **`b126e33` v04.27r — Session B (completion dates + computed deltas).** Both progress stores moved
+  from booleans to `YYYY-MM-DD` completion dates (`Classroom.gs` v01.08g, `Profiler.gs` v01.34g);
+  legacy `true` accepted forever, never rewritten, yields no delta. `Profiler.gs` accepts
+  `dossier-<slug>` doc ids. `Classroom.html` v01.05w renders the schema's delta exactly (newest
+  revision strictly after the completion date whose `changed[]` names the section).
+  `Profiler.html` v01.80w adds mark-as-read keyed by the dossier's own `lastUpdated`, a roster
+  `✓ read` / `↻ revised` badge, and a computed changed-strip vs the newest archived version.
+  `CLASSROOM-SCHEMA.md` Freshness now describes the code
+- **`4c77b47` v04.28r — Session C (the drill, C4).** Schema first: "Drill items and history" in
+  `CLASSROOM-SCHEMA.md`. `Classroom.gs` v01.09g: `ClassroomDrill` + `ClassroomDrillLog` sheet tabs,
+  `cop=drill` / `cop=grade`, SM-2 collapsed to four buttons. `Classroom.html` v01.06w: landing card,
+  `#drill` route, reveal-then-grade, source links. `PHASE6-CLASSROOM-DESIGN.md` C4 marked built with
+  the C4-before-C3 order note (Decision 6 untouched — no guidance item in the drill until C3)
+- **`12555d8` v04.29r — the drill fix.** See "Where we left off"
+
+**Where we left off:**
+
+- **The drill shipped broken in v04.28r and was fixed in v04.29r.** The developer's screenshot showed
+  no drill card. Two causes: the page hadn't deployed yet (`v01.05w` next to `GAS v01.09g` in the
+  footer pills), **and** the deployed version could not have worked. `cop=drill` had the client send
+  its study inventory as a parameter, but the shared `_gasPost` transport carries everything in the
+  **query string** — 802 study cards URL-encode to **~39,000 chars**, ~5× what Apps Script accepts.
+  The op failed, and a failed sync is indistinguishable from "nothing due" at the UI. Fixed by moving
+  the study pool server-side (`clDrillStudyItems_`, `UrlFetchApp.fetchAll`, cached 6h as ids+hashes
+  only, ~23 KB); the page now sends nothing and fetches text only for the queue's guides
+- **⚠️ The Classroom GAS still needs redeploying** — v01.10g is merged but not deployed. Until it is,
+  the drill card will not appear and it will look like the fix failed. **This is the first thing to
+  check next session**
+- **Every checker passed on the broken version.** `node --check`, both Classroom checkers, Playwright
+  "no page errors" — none of them exercise a signed-in session against the live deployment. Worth
+  remembering before trusting a green board on anything session-gated
+- **Delivered in chat, not committed:** a full copy/paste handoff prompt for a **fresh Fable 5.1
+  session** to design the Classroom curriculum (see Recommendation below). It is in the transcript
+  only — if it is wanted again, it can be regenerated from the corpus inventory below
+
+**Key decisions and positions taken:**
+
+- **Opus 5 for every remaining build phase** (developer directive — no Sonnet anywhere). My earlier
+  Sonnet suggestion for S3/S4 and the Session E audit was a cost note, not a capability one
+- **Fable 5.1 recommended for curriculum *planning* only**, in a *fresh* session; authoring returns to
+  Opus 5 where the schema, checkers and stamp discipline are the actual work
+- **Checkers were edited twice, both times to strengthen.** Session B: two assertions pinned `is True`
+  on the progress value — the contract this session replaced — so they now accept a date or legacy
+  `true`, plus a **new** assertion that new writes must be dated. Session C: +12 drill gate cases,
+  **mutation-tested** (disabling `clLessonVisible_` produced exactly the leaks the assertion names).
+  Editing the checker is closed to the pipeline committer, open to a developer session
+- **`gateDigest` refreshed in every commit that touched a gate symbol** — four times total, including
+  once where the first refresh went stale because a later edit re-touched `Classroom.gs`. A stale
+  digest is silent until the next Wednesday pipeline run blocks on "the ground moved"
+- **The corpus token is in this transcript.** The developer pasted it; it is in the desk Routine's
+  prompt and no repo file. Rotating it in both Script Properties and re-pasting is a 5-minute job if
+  wanted
+
+**Active context:**
+
+- Repo **v04.29r** · Classroom **v01.07w / v01.10g** · Profiler **v01.80w / v01.34g** ·
+  Scraper **v01.71w / v01.99g**
+- **Routines (6, no per-company one-shots):** Profiler earnings desk `trig_01UyH77BMKJnxzBUZJ11ej6A`
+  (weekdays 13:00 UTC — **first real run fires tomorrow with 7 overdue rows**: NVIDIA, IREN, Sungrow,
+  BYD, Sinexcel, EVE, Jinko, three per run); weekly C2 pipeline `trig_017pcCGpj1fkNYcUyCXPY3Wd`
+  (Wed 11:00 UTC, stood down cleanly on its first real run this morning); daily ACL check; monthly
+  drift check; quarterly guidance review; quarterly private sweep
+- Ledger: `coveredThrough` `2026-09-01`, `lastRun` `null`, `gateDigest` `sha256:83d1d03d…`
+- Capacity: repo CHANGELOG **82/100**; `Profilerhtml` **48/50** (rotated this session at 50/50 —
+  needed `git fetch --unshallow` for SHA enrichment); `Scrapergs` **46/50**; Classroom logs 7 and 10
+- **Corpus for curriculum work:** 89 dossiers · 62 study guides (802 flashcards) · 44 concepts ·
+  8 named projects · 7 guidance modules · 5 lessons across 2 tracks (`bess-foundations`,
+  `aidc-power-primer`)
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md empty
+- **Not started:** Sessions D (S1 notes route, S3 cross-links, S4 report seeds) and E (the R2 audit)
+
+**Recommendation for next session:**
+
+- **Redeploy the Classroom GAS to v01.10g and confirm the drill card appears**, then use the drill for
+  a few days before building anything else — its caps (`CL_DRILL_SESSION_CAP` 20, `CL_DRILL_NEW_CAP`
+  10) are single constants worth tuning from real use rather than from a guess. The curriculum
+  planning run on Fable 5.1 can happen in parallel in its own session; Session D waits.
+
+**To continue:** type `redeploy check — confirm the drill card renders`
+
+## Previous Sessions
+
+### Session — 2026-09-02 (Three-app architecture review — IMPROVEMENT-PLAN.md, v04.24r)
+
 **Date:** 2026-09-02 04:58:20 AM EST
 **Repo version:** v04.24r *(unchanged — this session's plan commit was documentation-only by instruction, no version bump)*
 **Branch:** `claude/three-app-architecture-review-e1on3o`
@@ -46,47 +151,4 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 **To continue:** type `implement Session A of IMPROVEMENT-PLAN.md`
 
-## Previous Sessions
-
-### Session — 2026-09-02 (App brochures + model selection — v04.24r)
-**Date:** 2026-09-02 04:29:02 AM EST
-**Repo version:** v04.24r
-**Branch:** `claude/app-brochures-model-selection-4hrge9`
-
-**What we worked on (one push, v04.24r — app brochures + a model-selection decision, on Opus 5):**
-
-- **`repository-information/brochures/` — three 8-page informational PDF brochures**, one per app, for a new user: what it does, the methodology, the workflow, and how to use it effectively. **Authored from the apps' own code and rules, not from the design documents**, so every figure is the shipped value — Scraper's 40/25/20/15 rubric weights and ×1.00/×0.55/×0.25 geo multipliers, Classroom's ≥3-items/≥2-sources briefing bar and nine ref prefixes, Profiler's four-tier matrix and 0–100 note-confidence bands
-- **Build tooling** — `build-brochures.py` renders each `<slug>.body.html` fragment through the shared `brochure.css` (Letter, per-app accent) with headless Chromium at `/opt/pw-browsers/chromium-1194/chrome-linux/chrome`. `brochures/README.md` records the rebuild command and the one constraint that bit: pages are fixed-height with `overflow: hidden`, so content past **~1006px of the 1056px box** is *silently clipped* — no error, no reflow
-- **Kept out of `live-site-pages/`** — the brochures describe access matrices, the corpus route and private note handling; GitHub Pages is public
-- **`REPO-ARCHITECTURE.md` deliberately not touched** — its diagram carries no node for `study-prep/` or `industry-guidance/` either; content directories under `repository-information/` are outside its repo-wide-architecture scope. Flagged rather than silently added
-- **Model-selection question answered** (`claude-api` skill read first, per its trigger): **Fable 5.1** for the improvement/ideation prompt — most capable widely released model, built for demanding long-horizon reasoning, $10/$50 vs Opus 5's $5/$25 (a rounding error one-shot). Matches the developer's own precedent: C2c authoring on Fable 5.1, the checker-bound weekly pipeline runs on Opus 5
-- **Wrote the Fable 5.1 handoff prompt** (delivered in chat, not committed) — loose on analysis, tight only on constraints; its highest-value instruction is *read the `.claude/rules/` files before proposing*, with four concrete already-rejected examples (notes-are-not-sources, the unmarked-geography default, Google News site-feeds, deferred in-app AI) so the session doesn't re-propose walked ground
-
-**Where we left off:**
-
-- **v04.24r merged to `main`** (commit `80d1d26`); the brochure PDFs were also delivered to the developer directly
-- The **Fable 5.1 prompt is in the chat transcript of this session only** — it was never written to a file. If it is wanted again, it is reproducible from the design notes below but not stored in the repo
-- Nothing else pending. Classroom's first real pipeline run (Wed 07:06 ET) was **not** reviewed this session — that carries over
-
-**Key decisions made:**
-
-- **Brochures are repo documentation, not site content.** `repository-information/brochures/`, never `live-site-pages/`
-- **Build artifacts are committed** (`<slug>-brochure.html`) rather than gitignored — keeps the working tree clean for the stop hook, and the intermediate HTML is browser-viewable
-- **The Fable prompt makes the final chat message the deliverable, not a file.** In this remote environment an uncommitted file dies with the container, so "research-only, no commit" and "write it to disk" are in conflict; the transcript is the durable option. A one-line swap to a docs-only commit was offered as the alternative
-- **Prompt design for Fable 5.1**: full task spec up front, loose on *how to think*, tight on constraints and deliverable — the `claude-api` skill warns that prompts written for prior models are often too prescriptive and reduce Fable 5.1's output quality, and this repo's CLAUDE.md is already maximally prescriptive ambient context
-- **Ask for conviction, not ranking** — "three you'd stake your reputation on" over "rank fifteen politely"
-
-**Active context:**
-
-- Repo **v04.24r** · Classroom **v01.04w** / **v01.07g** · Scraper **v01.71w** / **v01.99g** · Profiler **v01.79w** / **v01.33g** — **no app code changed this session**
-- Capacity: repo CHANGELOG **77/100**; `Scrapergs.changelog.md` **46/50**; `Classroomgs.changelog.md` **7/50**; `Profilerhtml.changelog.md` still **50/50** — the next Profiler page change forces its rotation
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
-- **Pre-existing drift, flagged not fixed:** the README tree's root line shows `v01.03r` beside the CHANGELOG link while the repo is at v04.24r
-- **Still flagged, not fixed:** `ENTERPRISE-SETUP.md`'s token record is stale; the template-wide first-sign-in self-denial (Setup Step 14 trap)
-- **Useful technique from this session:** a measurement harness that sets `.page { overflow: visible }` and compares each page's last child's bottom against the 1006px limit via headless Chromium `--dump-dom`. Anything fixed-height and print-bound in this repo should be checked that way rather than by eye
-
-**Recommendation for next session:**
-
-- Run the **Fable 5.1 xhigh** improvement session with the three brochures attached, using the prompt from this session's transcript — then bring its plan back to **Opus 5** to implement. If the transcript is gone, the prompt's shape is recorded above: open on the analysis, tight on constraints (read anything / change nothing / deliver in the final chat message), and leading with the instruction to read `.claude/rules/` before proposing so it doesn't re-tread rejected ground. **Before that**, spend two minutes on the one thing that carried over: read the §5.4 report from the Wednesday 07:06 ET Classroom pipeline run — a `BLOCKED` on P3 means the ledger's `gateDigest` is stale against `main`, and a `STAND-DOWN` is the first real measurement of how much the corpus moves week to week.
-
-**To continue:** type `review the first pipeline run, then give me the Fable prompt again`
+Developed by: LightAISolutions
