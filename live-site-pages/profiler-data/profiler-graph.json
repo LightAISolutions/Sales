@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-03",
- "companies": 90,
+ "companies": 91,
  "edges": [
   {
    "a": "abb",
@@ -363,6 +363,43 @@
     }
    ],
    "last": "2026-03-25"
+  },
+  {
+   "a": "abb",
+   "b": "piller",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "ABB's HiPerGuard medium-voltage static UPS (2.5 MW units, 25 MW parallel, to 34.5 kV) attacks the medium-voltage niche rotary UPS held; ABB's 2014 ring-bus release conceded that the ring topology 'has traditionally only been deployed with rotary UPS systems' for fault-current reasons.",
+     "context": "ABB introduced a ring-bus (isolated-parallel-style) architecture for static UPS in 2014, stating the topology had been rotary-only because static units lacked fault-current capability and risked DC-link back-feed — an independent statement of the rotary machine's protection advantage from a static vendor. ABB's HiPerGuard, deployed at Applied Digital's Polaris Forge campuses in 25 MW blocks, is the static industry's move onto the medium-voltage ground where Piller's UNIBLOCK and UB-V have sold at 10–35 kV. ABB's guide also carries the corpus's one paragraph on flywheels as grid stabilizers.",
+     "source": "https://new.abb.com/news/detail/16888/abbs-ring-bus-with-static-ups-for-critical-power-applications",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Piller as the one vendor in this corpus whose product answers the UPS-room question with a rotating machine rather than power electronics and a battery — the reference for how rotary, diesel-rotary and flywheel UPS differ from the static units Vertiv, Schneider Electric, Eaton and ABB sell, and for what the isolated-parallel bus buys at tens of megawatts.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Piller's own reference list (Federal Reserve, NYSE, Bank of England, CIA, a classified US facility, NEXTDC's Tier IV IP-bus sites, GM, a 24 kV US fab); Uptime Institute's account of NEXTDC choosing DRUPS on an IP bus to remove batteries and static switches; ABB's 2014 concession that the ring bus was rotary-only for fault-current reasons; against it, Schneider's White Paper 222 on part-load efficiency, single-vendor overhaul and scaling, and Langley's own account of hyperscale's departure.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Isolated Parallel (IP) bus system",
+     "date": "",
+     "text": "Its home is the operator who wants Tier IV without 2N and without a battery room; the static majors answer with ring-bus variants of their own (ABB, 2014) and, at medium voltage, ABB's HiPerGuard.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "abb",
@@ -3180,6 +3217,44 @@
    "last": "2026-04-27"
   },
   {
+   "a": "bloom-energy",
+   "b": "piller",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "At the Vineland, NJ campus third parties identify as the first 400 MW Bergen/SHIELDX plant, WHYY reports the gas-engine plan was scrapped over emissions opposition in favour of Bloom Energy fuel cells (300 MW proposed) — a fuel-cell displacement of the engine-plus-flywheel bundle.",
+     "context": "WHYY reported on 6 August 2026 that at a six-hour Vineland Planning Board hearing DataOne proposed Bloom Energy fuel cells for Phase 2 and described the earlier plan of 32 gas engines (5 for backup) plus 6 diesel gen-sets as scrapped because of public opposition over air emissions; on 28 August 2026 WHYY reported NJDEP finding no permit and no application for the generators already running on site. Neither WHYY piece names Bergen, E-Finity or Piller; the linkage of the site to the 400 MW Bergen/SHIELDX contract comes from Sierra Club NJ and SJ Climate News. What this means for Piller's SHIELDX scope on that project is not stated by any source — recorded here as the one documented case of a fuel-cell plant displacing the engine plant SHIELDX is sold with.",
+     "source": "https://whyy.org/articles/vineland-data-center-hearing-power-generation/",
+     "status": "active",
+     "since": "2026-08"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Crusoe, Nebius and Tesla are covered customers; the static-UPS majors are competitors on the hall side; Caterpillar distributed Active Power flywheels as the Cat UPS from 2000 and is now a rival prime-mover OEM to Bergen; Bloom Energy's fuel cells are reported to have displaced the gas-engine plan at the Vineland site third parties tie to the first 400 MW SHIELDX order.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the first 400 MW order's site — identified as Vineland, NJ only by third parties — is reported by WHYY (Aug 2026) to have had its gas-engine plan replaced by Bloom Energy fuel cells and its running generators found unpermitted by NJDEP, against Powertrain International's January schedule of all 36 engines and SHIELDX modules on site by end-2026; no source states the effect on Piller's scope.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-28",
+     "text": "New Jersey DEP says the DataOne/Nebius Vineland data center has no air permit and no application for its on-site gas generators; the operator says it is moving to Bloom Energy fuel cells — the site third parties identify as the 400 MW Bergen/SHIELDX plant — The first SHIELDX order's plant is in doubt on permitting and technology choice; no source states the effect on Piller's delivery scope, and Langley has never named Vineland.",
+     "src": "https://whyy.org/articles/vineland-new-jersey-data-center-gas-generators-permit/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-28"
+  },
+  {
    "a": "burns-mcdonnell",
    "b": "kiewit",
    "curated": {
@@ -4231,6 +4306,31 @@
     }
    ],
    "last": "2026-06-22"
+  },
+  {
+   "a": "caterpillar",
+   "b": "piller",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Caterpillar distributed Active Power's flywheel UPS as the 'Cat UPS' from August 2000, renewing the agreement in 2008; the channel predates Piller's ownership and its current status is not stated by either company.",
+     "context": "Data Center Knowledge reported in April 2008 that Caterpillar and Active Power had renewed a distribution agreement under which Caterpillar had sold Active Power's flywheel-based UPS as the 'Cat UPS' since August 2000, for a further three years. No source records the termination date or any current arrangement, and Active Power's post-2016 literature does not mention Caterpillar. Today the two groups meet as rival prime-mover suppliers to AI campuses: Caterpillar's diesel and gas gen-sets and Solar turbines against Bergen Engines' medium-speed gas engines, with which SHIELDX is bundled.",
+     "source": "https://www.datacenterknowledge.com/deals/caterpillar-active-power-renew-flywheel-deal",
+     "status": "historical",
+     "since": "2000",
+     "via": "Cat UPS distribution of Active Power flywheels"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Crusoe, Nebius and Tesla are covered customers; the static-UPS majors are competitors on the hall side; Caterpillar distributed Active Power flywheels as the Cat UPS from 2000 and is now a rival prime-mover OEM to Bergen; Bloom Energy's fuel cells are reported to have displaced the gas-engine plan at the Vineland site third parties tie to the first 400 MW SHIELDX order.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2000"
   },
   {
    "a": "caterpillar",
@@ -6919,6 +7019,67 @@
   },
   {
    "a": "crusoe",
+   "b": "piller",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Crusoe's ~750 MW Bergen Engines agreement (June 2026) integrates Piller SHIELD-X with Marelli alternators across multiple US AI data-center sites, deliveries through 2027.",
+     "context": "Bergen Engines, Piller's sister company under Langley Holdings, signed a 438 MW firm contract plus a 310 MW letter of intent with Crusoe on 3 June 2026 for 27 B36:45V20AG2 (12.5 MWe) and 20 B36:45L9AG (5 MWe) gen-sets, phased through 2027. Crusoe's own release states the gen-sets are 'integrated with SHIELD-X Dynamic Power Stabilization technology from Piller' and quotes Dean Richards as Piller's CEO.\n\nThe same Crusoe energy stack, per Crusoe's dossier, includes 5 GW of ON.energy medium-voltage 'AI UPS' BESS — so at Crusoe the flywheel stabilizer and the battery buffer are being deployed side by side, which is the clearest evidence in the corpus that the two are complements at plant scale rather than substitutes.",
+     "source": "https://www.crusoe.ai/resources/newsroom/bergen-engines-signs-approx-750mw-u-s-power-agreement-with-crusoe-for-ai-data-centers",
+     "status": "active",
+     "since": "2026-06",
+     "scale": "438 MW contract + 310 MW LOI",
+     "via": "SHIELD-X Dynamic Power Stabilization with Bergen Engines gen-sets"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the AI campus, its relevance has shifted from the hall to the fence line: SHIELDX is a flywheel-and-synchronous-machine stabilizer sold as one unit per 12 MW Bergen Engines gen-set to hold frequency through GPU load steps on islanded plants, which places it beside — and in competition with — the battery buffers this corpus tracks (ON.energy's medium-voltage BESS at the same Crusoe campuses, Tesla Megapacks at xAI per SemiAnalysis).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Langley states in its own reports that hyperscale 'moved away from Piller rotary technology in recent years in favour of battery-static UPS'; that 'Every BTM solution being sold incorporates SHIELDX™'; and that more than 3 GW of such plants were signed in the year to June 2026 (Crusoe ~750 MW, Liberty 500 MW+, E-Finity 400 MW), each counterparty naming Piller.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Piller positions SHIELDX against BESS ('Avoids C-rate limits, thermal stress, and degradation cycles') and claims real inertia, fault current and zero storage degradation; SemiAnalysis independently frames flywheels (5–30 s of real power) against Tesla Megapacks, which xAI uses; Crusoe's dossier shows the same campuses taking 5 GW of ON.energy medium-voltage BESS alongside the Bergen/SHIELD-X plant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Through 2027:* first SHIELD-X deliveries to Crusoe sites and Liberty's H2 2027 engines; a first named hyperscaler order for SHIELDX or the M+ Series would refute the hall-side judgment; a campus choosing SHIELDX without a BESS, or a BESS without SHIELDX, would sharpen the complement-versus-substitute judgment.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SHIELDX™ Dynamic Power Stabilization — kinetic stabilizer for islanded AI campuses",
+     "date": "",
+     "text": "The rotating-mass answer to GPU load swings on islanded gas-engine plants, competing with battery buffers — ON.energy's medium-voltage 'AI UPS' BESS at the same Crusoe campuses and Tesla Megapacks at xAI (per SemiAnalysis) — rather than with static UPS.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-03",
+     "text": "Bergen Engines signs a ~750 MW agreement with Crusoe — 438 MW contract plus 310 MW LOI, 27 × 12.5 MWe and 20 × 5 MWe gen-sets with Marelli alternators and Piller SHIELD-X, deliveries to multiple US sites through 2027 — The largest named SHIELDX customer, and one that also buys ON.energy medium-voltage BESS for the same campuses — evidence that flywheel stabilization and battery buffers are being bought together, not either/or.",
+     "src": "https://www.crusoe.ai/resources/newsroom/bergen-engines-signs-approx-750mw-u-s-power-agreement-with-crusoe-for-ai-data-centers",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-03"
+  },
+  {
+   "a": "crusoe",
    "b": "primoris",
    "curated": {
     "b": {
@@ -7839,6 +8000,43 @@
      "where": "Capabilities · AI UPS™ (the pivot product)",
      "date": "",
      "text": "Creates a new category between conventional low-voltage UPS (Vertiv, Eaton, Schneider) and grid-scale BESS — and lands directly on Hithium's own ∞Power AI-data-center product territory (Dec 2025: 1300Ah cell, 6.9 MW/55.2 MWh system, grid-buffering positioning).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "eaton",
+   "b": "piller",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Eaton's 9395X large static UPS and its static transfer switches compete with Piller's UB-V/UNIBLOCK and APOTRANS lines; Eaton's guide in this app is the corpus's other UPS teaching source.",
+     "context": "Eaton is one of the top-five data-center UPS vendors (MarketsandMarkets, aggregator) whose battery-static architecture displaced rotary UPS at hyperscale, per Langley's own account. The two companies' teaching in this app is complementary: Eaton's dossier and guide carry the double-conversion-versus-eco-mode dial and the outage choreography; Piller's carry the rotary machine, the flywheel and the isolated-parallel bus. Eaton's supercapacitor fast-cycle modules for 800 VDC racks are a millisecond-scale store adjacent to — but not a substitute for — the second-scale flywheel.",
+     "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-ups-market.asp",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Piller as the one vendor in this corpus whose product answers the UPS-room question with a rotating machine rather than power electronics and a battery — the reference for how rotary, diesel-rotary and flywheel UPS differ from the static units Vertiv, Schneider Electric, Eaton and ABB sell, and for what the isolated-parallel bus buys at tens of megawatts.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Critical Power Module (CPM) with flywheel — 225 kW to 2.4 MW",
+     "date": "",
+     "text": "Sits between the CleanSource modules and the multi-megawatt UNIBLOCK machines: a containerable, low-voltage block for the 0.2–2.4 MW range where static modular UPS (Schneider Galaxy, Vertiv, Eaton) is the default.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Static UPS and static transfer switches — M+ Series (M+500, M+1200), APOSTAR, APOTRANS",
+     "date": "",
+     "text": "Head-on with Schneider Electric Galaxy VXL (500–1,250 kW frames, 125 kW modules), Vertiv Trinergy (1.5–2.5 MW blocks to 20 MW) and Eaton 9395X (to 1,700 kVA) — a late entrant at 500–1,200 kW per unit whose stated edge is Piller's service network and short-circuit capacity, and whose hardware provenance the company has not disclosed.",
      "src": "",
      "from": "b"
     }
@@ -15767,6 +15965,46 @@
   },
   {
    "a": "nebius",
+   "b": "piller",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Nebius's Mäntsälä, Finland campus took more than 200 Active Power CleanSource flywheel UPS units for a 75 MW expansion in 2025; Langley says the same customer then placed 'a much larger order for an AI data centre in the USA' for 2026 delivery.",
+     "context": "Piller announced on 16 June 2025 that Nebius Group NV's Mäntsälä data center would receive 'Over 200 CleanSource® UPS units' for a 75 MW expansion, built at Active Power's Austin plant in collaboration with Piller Germany, with 'several hundred' units delivered during 2025. Langley's 2025 annual report attributes Active Power's 'excellent year' largely to this project and states that 'shortly after the year end the same customer placed a much larger order for an AI data centre in the USA for delivery this year'; the 2026 interim reports Austin production 'increasing four-fold on 2025'.\n\nSeparately, third parties (Sierra Club NJ, SJ Climate News) identify DataOne's Vineland, New Jersey campus — built for Nebius under its Microsoft contract — as the site of the 400 MW Bergen/SHIELDX plant that Langley announced without naming a location; Langley itself has never confirmed that linkage, and WHYY reported in August 2026 that the site's gas-engine plan was being replaced by Bloom Energy fuel cells.",
+     "source": "https://www.piller.com/major-expansion-of-high-performance-data-center-in-southern-finland/",
+     "status": "active",
+     "since": "2025",
+     "scale": "Over 200 CleanSource UPS units for a 75 MW expansion",
+     "via": "Active Power CleanSource flywheel UPS"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Crusoe, Nebius and Tesla are covered customers; the static-UPS majors are competitors on the hall side; Caterpillar distributed Active Power flywheels as the Cat UPS from 2000 and is now a rival prime-mover OEM to Bergen; Bloom Energy's fuel cells are reported to have displaced the gas-engine plan at the Vineland site third parties tie to the first 400 MW SHIELDX order.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-28",
+     "text": "New Jersey DEP says the DataOne/Nebius Vineland data center has no air permit and no application for its on-site gas generators; the operator says it is moving to Bloom Energy fuel cells — the site third parties identify as the 400 MW Bergen/SHIELDX plant — The first SHIELDX order's plant is in doubt on permitting and technology choice; no source states the effect on Piller's delivery scope, and Langley has never named Vineland.",
+     "src": "https://whyy.org/articles/vineland-new-jersey-data-center-gas-generators-permit/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Datacloud Global Congress: over 3 GW of BTM deals signed in the first year, pipeline 'tens of GW', Bergen B36:45V20 12.5 MW engines sold out until Q2 2028; Nebius, CloudHQ and VoltaGrid executives hosted — Every SHIELDX unit is tied to an engine build slot, so Bergen's sold-out book is also SHIELDX's delivery calendar.",
+     "src": "https://www.piller.com/datacloud-global-congress-2026-marks-major-milestone/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-28"
+  },
+  {
+   "a": "nebius",
    "b": "vantage",
    "curated": {
     "a": {
@@ -16529,6 +16767,41 @@
     }
    ],
    "last": "2026-08-21"
+  },
+  {
+   "a": "on-energy",
+   "b": "piller",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the AI campus, its relevance has shifted from the hall to the fence line: SHIELDX is a flywheel-and-synchronous-machine stabilizer sold as one unit per 12 MW Bergen Engines gen-set to hold frequency through GPU load steps on islanded plants, which places it beside — and in competition with — the battery buffers this corpus tracks (ON.energy's medium-voltage BESS at the same Crusoe campuses, Tesla Megapacks at xAI per SemiAnalysis).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Piller positions SHIELDX against BESS ('Avoids C-rate limits, thermal stress, and degradation cycles') and claims real inertia, fault current and zero storage degradation; SemiAnalysis independently frames flywheels (5–30 s of real power) against Tesla Megapacks, which xAI uses; Crusoe's dossier shows the same campuses taking 5 GW of ON.energy medium-voltage BESS alongside the Bergen/SHIELD-X plant.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · SHIELDX™ Dynamic Power Stabilization — kinetic stabilizer for islanded AI campuses",
+     "date": "",
+     "text": "The rotating-mass answer to GPU load swings on islanded gas-engine plants, competing with battery buffers — ON.energy's medium-voltage 'AI UPS' BESS at the same Crusoe campuses and Tesla Megapacks at xAI (per SemiAnalysis) — rather than with static UPS.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-03",
+     "text": "Bergen Engines signs a ~750 MW agreement with Crusoe — 438 MW contract plus 310 MW LOI, 27 × 12.5 MWe and 20 × 5 MWe gen-sets with Marelli alternators and Piller SHIELD-X, deliveries to multiple US sites through 2027 — The largest named SHIELDX customer, and one that also buys ON.energy medium-voltage BESS for the same campuses — evidence that flywheel stabilization and battery buffers are being bought together, not either/or.",
+     "src": "https://www.crusoe.ai/resources/newsroom/bergen-engines-signs-approx-750mw-u-s-power-agreement-with-crusoe-for-ai-data-centers",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-03"
   },
   {
    "a": "on-energy",
@@ -17413,6 +17686,211 @@
     }
    ],
    "last": "2025-11-25"
+  },
+  {
+   "a": "piller",
+   "b": "schneider-electric",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Schneider Electric's Galaxy VXL (500–1,250 kW frames, to 5 MW) competes with the M+ Series and UB-V; Schneider's White Paper 222 is the quantified static-side case against DRUPS that Piller's positioning answers.",
+     "context": "Schneider Electric's 2016 White Paper 222, 'Diesel Rotary UPS (DRUPS) vs. Static UPS: A Quantitative Comparison', found a top DRUPS peaking near 92% efficiency against static up to 97.6%, 68% lower energy losses for static at 43–47% utilisation, 8–12 s of flywheel ride-through against 5–6 min of battery, single-vendor DRUPS overhaul, and a 7.2% ten-year TCO advantage for static in a 2N IT-plus-cooling case — while conceding DRUPS a 10.6% advantage when the rental value of its smaller footprint is credited in an IT-only design. Piller's UB-V literature is written against this framing ('up to 98% at 100% load and 97% at 50% load… compared with static UPS which typically operate around 96.3%'). Schneider is also a named NVIDIA 800 VDC partner; Piller is not.",
+     "source": "https://www.se.com/us/en/download/document/SPD_VAVR-9WFNHS_EN/",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Piller as the one vendor in this corpus whose product answers the UPS-room question with a rotating machine rather than power electronics and a battery — the reference for how rotary, diesel-rotary and flywheel UPS differ from the static units Vertiv, Schneider Electric, Eaton and ABB sell, and for what the isolated-parallel bus buys at tens of megawatts.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · UB-V Series rotary UPS — fifth-generation UNIBLOCK™, 1.0–3.24 MW per module",
+     "date": "",
+     "text": "The high end of the rotary UPS market — Hitec Power Protection (Air Water), Rolls-Royce Solutions Liège (mtu Kinetic PowerPack, 1,250–3,000 kVA units) and Hitzinger are the named peers by product class; against static UPS the company's pitch is fewer modules per megawatt, no capacitors or fans, fault clearing and harmonic isolation, and a medium-voltage option, conceded against static's finer scaling and multi-vendor batteries (Schneider Electric White Paper 222).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · UNIBLOCK™ UBT+ rotary UPS, UBTD+ diesel rotary UPS (DRUPS) and the DeRUPS™ configuration",
+     "date": "",
+     "text": "Where a buyer wants one machine per block with no battery room, medium-voltage connection and large fault current — finance, government, semiconductor, Tier IV colocation — UNIBLOCK is the incumbent; the trade against it, quantified in Schneider Electric's White Paper 222 (2016), is efficiency at part load ('one of the top DRUPS in market' peaking ~92% against static up to 97.6%), 8–12 s of flywheel ride-through against minutes of battery, single-vendor overhaul, and non-modular scaling.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Static UPS and static transfer switches — M+ Series (M+500, M+1200), APOSTAR, APOTRANS",
+     "date": "",
+     "text": "Head-on with Schneider Electric Galaxy VXL (500–1,250 kW frames, 125 kW modules), Vertiv Trinergy (1.5–2.5 MW blocks to 20 MW) and Eaton 9395X (to 1,700 kVA) — a late entrant at 500–1,200 kW per unit whose stated edge is Piller's service network and short-circuit capacity, and whose hardware provenance the company has not disclosed.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "piller",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Active Power supplies CleanSource flywheel UPS to Tesla, named by Langley as a notable new Active Power customer in 2022; Tesla's Megapack is also the battery buffer SemiAnalysis positions against flywheels for AI load swings.",
+     "context": "Active Power's August 2024 case study describes a 'top EV producer' installation of two CleanSource PLUS MMS systems at 2.4 MW each plus a 333 kW SMS unit, with 'eight additional 4.8MW installations planned'; Langley's 2022 annual report names Tesla alongside Mayo Clinic as notable new Active Power customers. The relationship is dual: Tesla buys Piller-group flywheel UPS for its own facilities, while Tesla Energy argues — per SemiAnalysis (Dec 2025) — that hundreds of megawatts of Megapacks are the right fix for AI load swings, the job SHIELDX is sold for, and xAI uses Megapacks for it.",
+     "source": "https://www.activepower.com/active-power-flywheel-solution/",
+     "status": "active",
+     "since": "2022",
+     "scale": "2 × CleanSource PLUS MMS (2.4 MW each) + 1 × SMS 333 kW; 8 additional 4.8 MW installations planned",
+     "via": "Active Power CleanSource PLUS MMS flywheel UPS"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the AI campus, its relevance has shifted from the hall to the fence line: SHIELDX is a flywheel-and-synchronous-machine stabilizer sold as one unit per 12 MW Bergen Engines gen-set to hold frequency through GPU load steps on islanded plants, which places it beside — and in competition with — the battery buffers this corpus tracks (ON.energy's medium-voltage BESS at the same Crusoe campuses, Tesla Megapacks at xAI per SemiAnalysis).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Crusoe, Nebius and Tesla are covered customers; the static-UPS majors are competitors on the hall side; Caterpillar distributed Active Power flywheels as the Cat UPS from 2000 and is now a rival prime-mover OEM to Bergen; Bloom Energy's fuel cells are reported to have displaced the gas-engine plan at the Vineland site third parties tie to the first 400 MW SHIELDX order.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Piller positions SHIELDX against BESS ('Avoids C-rate limits, thermal stress, and degradation cycles') and claims real inertia, fault current and zero storage degradation; SemiAnalysis independently frames flywheels (5–30 s of real power) against Tesla Megapacks, which xAI uses; Crusoe's dossier shows the same campuses taking 5 GW of ON.energy medium-voltage BESS alongside the Bergen/SHIELD-X plant.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · SHIELDX™ Dynamic Power Stabilization — kinetic stabilizer for islanded AI campuses",
+     "date": "",
+     "text": "The rotating-mass answer to GPU load swings on islanded gas-engine plants, competing with battery buffers — ON.energy's medium-voltage 'AI UPS' BESS at the same Crusoe campuses and Tesla Megapacks at xAI (per SemiAnalysis) — rather than with static UPS.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-30",
+     "text": "SemiAnalysis: Bergen Engines 'has sold engines with flywheels from a vendor under the same parent company' that inject or absorb real power for 5–30 seconds; medium-speed engine supply consolidated in Wärtsilä, Bergen and Everllence; xAI prefers Tesla Megapacks for load swings — Independent confirmation of the SHIELDX role without naming Piller — and of the battery alternative the flywheel competes with.",
+     "src": "https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power",
+     "from": "a"
+    }
+   ],
+   "last": "2025-12-30"
+  },
+  {
+   "a": "piller",
+   "b": "vertiv",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Vertiv's Trinergy static UPS (1.5–2.5 MW blocks to 20 MW) is the incumbent form Piller's UB-V rotary UPS and M+ Series static UPS compete against in AI halls; Langley concedes hyperscale 'moved away from Piller rotary technology… in favour of battery-static UPS'.",
+     "context": "Vertiv sits in the top-five data-center UPS group (with Schneider Electric, Eaton, Huawei and ABB, roughly 40–42% share per MarketsandMarkets, an aggregator) that took the hyperscale UPS segment as it standardized on low-voltage modular battery-static units. Piller's answer is two-sided: the UB-V rotary machine pitched as 'a real alternative to increasingly sprawling multiple static UPS solutions', and the M+ Series launched in June 2024 to compete on static's own terms. Vertiv's dossier records Trinergy as the large-UPS franchise the 800 VDC architecture threatens; Piller has published no 800 VDC position.",
+     "source": "https://www.langleyholdings.com/wp-content/uploads/2025/03/LAH_RA_2024_Full_Web_sp.pdf",
+     "status": "active"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Piller as the one vendor in this corpus whose product answers the UPS-room question with a rotating machine rather than power electronics and a battery — the reference for how rotary, diesel-rotary and flywheel UPS differ from the static units Vertiv, Schneider Electric, Eaton and ABB sell, and for what the isolated-parallel bus buys at tens of megawatts.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Critical Power Module (CPM) with flywheel — 225 kW to 2.4 MW",
+     "date": "",
+     "text": "Sits between the CleanSource modules and the multi-megawatt UNIBLOCK machines: a containerable, low-voltage block for the 0.2–2.4 MW range where static modular UPS (Schneider Galaxy, Vertiv, Eaton) is the default.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Static UPS and static transfer switches — M+ Series (M+500, M+1200), APOSTAR, APOTRANS",
+     "date": "",
+     "text": "Head-on with Schneider Electric Galaxy VXL (500–1,250 kW frames, 125 kW modules), Vertiv Trinergy (1.5–2.5 MW blocks to 20 MW) and Eaton 9395X (to 1,700 kVA) — a late entrant at 500–1,200 kW per unit whose stated edge is Piller's service network and short-circuit capacity, and whose hardware provenance the company has not disclosed.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Service, lifecycle and rental",
+     "date": "",
+     "text": "The long-term service agreement model every rotating-machine vendor sells, here across an installed base of more than 9,000 units the company services; the static majors' service arms (Vertiv's 4,000+ field engineers) are the comparison.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "piller",
+   "b": "voltagrid",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-10",
+     "text": "Datacloud Global Congress: over 3 GW of BTM deals signed in the first year, pipeline 'tens of GW', Bergen B36:45V20 12.5 MW engines sold out until Q2 2028; Nebius, CloudHQ and VoltaGrid executives hosted — Every SHIELDX unit is tied to an engine build slot, so Bergen's sold-out book is also SHIELDX's delivery calendar.",
+     "src": "https://www.piller.com/datacloud-global-congress-2026-marks-major-milestone/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-10"
+  },
+  {
+   "a": "piller",
+   "b": "wartsila",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-30",
+     "text": "SemiAnalysis: Bergen Engines 'has sold engines with flywheels from a vendor under the same parent company' that inject or absorb real power for 5–30 seconds; medium-speed engine supply consolidated in Wärtsilä, Bergen and Everllence; xAI prefers Tesla Megapacks for load swings — Independent confirmation of the SHIELDX role without naming Piller — and of the battery alternative the flywheel competes with.",
+     "src": "https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power",
+     "from": "a"
+    }
+   ],
+   "last": "2025-12-30"
+  },
+  {
+   "a": "piller",
+   "b": "xai",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the AI campus, its relevance has shifted from the hall to the fence line: SHIELDX is a flywheel-and-synchronous-machine stabilizer sold as one unit per 12 MW Bergen Engines gen-set to hold frequency through GPU load steps on islanded plants, which places it beside — and in competition with — the battery buffers this corpus tracks (ON.energy's medium-voltage BESS at the same Crusoe campuses, Tesla Megapacks at xAI per SemiAnalysis).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Piller positions SHIELDX against BESS ('Avoids C-rate limits, thermal stress, and degradation cycles') and claims real inertia, fault current and zero storage degradation; SemiAnalysis independently frames flywheels (5–30 s of real power) against Tesla Megapacks, which xAI uses; Crusoe's dossier shows the same campuses taking 5 GW of ON.energy medium-voltage BESS alongside the Bergen/SHIELD-X plant.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · SHIELDX™ Dynamic Power Stabilization — kinetic stabilizer for islanded AI campuses",
+     "date": "",
+     "text": "The rotating-mass answer to GPU load swings on islanded gas-engine plants, competing with battery buffers — ON.energy's medium-voltage 'AI UPS' BESS at the same Crusoe campuses and Tesla Megapacks at xAI (per SemiAnalysis) — rather than with static UPS.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-30",
+     "text": "SemiAnalysis: Bergen Engines 'has sold engines with flywheels from a vendor under the same parent company' that inject or absorb real power for 5–30 seconds; medium-speed engine supply consolidated in Wärtsilä, Bergen and Everllence; xAI prefers Tesla Megapacks for load swings — Independent confirmation of the SHIELDX role without naming Piller — and of the battery alternative the flywheel competes with.",
+     "src": "https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power",
+     "from": "a"
+    }
+   ],
+   "last": "2025-12-30"
   },
   {
    "a": "plus-power",

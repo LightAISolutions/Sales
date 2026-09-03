@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-03 03:42:04 AM EST` · Repo version: `v04.41r`
+Last updated: `2026-09-03 04:27:26 AM EST` · Repo version: `v04.42r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -186,6 +186,8 @@ Last updated: `2026-09-03 03:42:04 AM EST` · Repo version: `v04.41r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/oracle.study.json">oracle.study.json</a> — Oracle in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/panasonic.profile.json">panasonic.profile.json</a> — Panasonic dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/panasonic.study.json">panasonic.study.json</a> — Panasonic in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/piller.profile.json">piller.profile.json</a> — Piller Power Systems dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/piller.study.json">piller.study.json</a> — Piller Power Systems in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/plus-power.profile.json">plus-power.profile.json</a> — Plus Power dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/prevalon.profile.json">prevalon.profile.json</a> — Prevalon Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/primoris.profile.json">primoris.profile.json</a>  — Primoris dossier profile
@@ -703,6 +705,8 @@ Last updated: `2026-09-03 03:42:04 AM EST` · Repo version: `v04.41r`
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf">MEGMEET-LESSON-PLAN.pdf</a> — The lesson plan typeset for print/download, BloombergNEF Research Report style (5 pages)
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-interview-brief.md">megmeet-interview-brief.md</a> — Sales-role interview layer: NA go-to-market, objection handling, questions to ask, self-test
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-INTERVIEW-BRIEF.pdf">MEGMEET-INTERVIEW-BRIEF.pdf</a> — The interview brief typeset for print/download, BloombergNEF Research Report style (13 pages)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/piller">piller/</a> — Piller Power Systems technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/piller/piller-lesson-plan.md">piller-lesson-plan.md</a> — Full-depth lesson plan: who owns the seconds, battery versus flywheel, static versus rotary versus diesel-rotary UPS, the isolated-parallel ring, the UPS room as the island's stabilizer
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sinexcel">sinexcel/</a> — Sinexcel technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/sinexcel/sinexcel-lesson-plan.md">sinexcel-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sungrow">sungrow/</a> — Sungrow technology curriculum

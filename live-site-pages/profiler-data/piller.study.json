@@ -1,0 +1,593 @@
+{
+ "schemaVersion": 2,
+ "slug": "piller",
+ "title": "Piller — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "the-ups-room",
+   "title": "The UPS room: who owns the seconds",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "This guide sits in the room that owns the interval nobody else can. A server power supply coasts on its capacitors for its {{hold-up time}} — ten to twenty milliseconds. A standby engine needs about ten seconds to crank, stabilize and take load, the {{transfer time}} the usual {{NFPA 110}} class is built around. Between those two numbers is a gap three orders of magnitude wide, and only stored energy can fill it. The {{UPS}} is that stored energy plus the machinery to deliver it as clean alternating current — and in practice it also owns the minutes an operator wants in hand before trusting that the engine will start.",
+    "The engine's side of those ten seconds is taught in the Caterpillar guide and the choreography of the transfer in the Eaton guide; the efficiency dial — {{double conversion}} against {{eco-mode}} — is taught there too and is not repeated here. This guide asks a prior question: what does 'uninterruptible' physically require, and what follows when a manufacturer answers it with a rotating machine and a {{flywheel}} rather than with power electronics and a battery room.",
+    "Three requirements fall out of the clock. The machine must deliver the full load instantly, with no time to detect and decide — so the store must already be on the bus, or the switching finished inside the hold-up window. It must produce a waveform the servers accept whatever the supply upstream is doing. And it must be removable for service without dropping the load, which means a path around it: the {{static bypass}}, automatic through a solid-state switch when the unit overloads or fails, manual when a technician needs the unit out. While the load is on bypass it is unprotected. That one sentence is the origin of the first row in this guide's failure map.",
+    "Two sizing words carry the rest. Ratings are quoted in kVA and kW and the ratio between them is the {{power factor}} the machine is designed for; modern IT loads run near unity, so the kW figure is the one that matters. {{Autonomy}} is how long the store carries rated load — seconds for a flywheel, minutes for batteries — and it is insurance rather than runtime: sized to beat the generator's start with margin, and bought in cabinets and floor space."
+   ]
+  },
+  {
+   "id": "what-uninterruptible-means",
+   "title": "What 'uninterruptible' means: the three grades",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "{{IEC 62040-3}} grades a UPS by how much of the supply's misbehavior reaches the load. A full code such as VFI-SS-111 adds letters for the output waveform in normal and stored-energy modes and digits for how far the output may deviate during a mode change, a linear load step and a non-linear load step — so a rotary machine and a static unit can be held to the same yardstick.",
+   "cols": [
+    "Class",
+    "What reaches the load",
+    "How it is built",
+    "Where it belongs"
+   ],
+   "rows": [
+    [
+     "VFD — voltage and frequency dependent",
+     "Everything, until the supply fails and a switch acts; the load rides the supply's voltage and frequency",
+     "A standby or 'off-line' unit: the inverter is idle until needed",
+     "Desktops and small loads that can tolerate a transfer"
+    ],
+    [
+     "VI — voltage independent",
+     "The supply's frequency, with the voltage corrected by a regulator or a machine",
+     "Line-interactive electronics, or a synchronous machine conditioning the output in normal operation",
+     "Loads that need clean voltage but can follow the grid's frequency"
+    ],
+    [
+     "{{VFI}} — voltage and frequency independent",
+     "Nothing from the supply — the load is fully isolated in both voltage and frequency",
+     "{{Double conversion}} in a {{static UPS}}; a {{rotary UPS}} or {{DRUPS}} feeding the load from its own machine",
+     "Data centers — the class the whole guide assumes"
+    ]
+   ],
+   "note": "The class is a promise about the output under normal operation. Put the load on bypass for maintenance, or run a static unit in eco-mode, and the machine is temporarily behaving as a lower class than the one on its nameplate — which is why the classification and the failure map are the same lesson read twice."
+  },
+  {
+   "id": "seconds-or-minutes",
+   "title": "Seconds or minutes: a battery and a flywheel are answers to different questions",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "Do the arithmetic once. Carrying a 1 MW hall for 15 seconds needs 15 megajoules — about 4.2 kWh, the energy in a few laptop batteries' worth of cells, delivered at the rate of a small town's demand. Carrying it for ten minutes needs forty times more, about 170 kWh, before the margins engineers add for aging and temperature. The seconds store is sized by power; the minutes store is sized by energy. The two stores below are opposite personalities on exactly that axis.",
+   "cards": [
+    {
+     "t": "Battery string",
+     "meta": "Cells on the {{DC link}} — for decades {{VRLA}} lead-acid, increasingly lithium-ion ({{LFP}} for its thermal stability)",
+     "adv": [
+      "Energy is cheap per kilowatt-hour, so minutes are affordable — time to confirm the generators, attempt a second start, or shut a hall down in order",
+      "Already on the bus in a {{static UPS}}: it takes over without any switching event",
+      "Modular and familiar; the whole industry knows how to install, monitor and replace it"
+     ],
+     "dis": [
+      "Power is limited by how fast the chemistry can be drawn down — the {{C-rate}} — so a seconds-only battery is oversized for its energy",
+      "Every discharge and every warm day costs {{cycle life}} and calendar life; {{state of health}} must be tested rather than read, and one weak cell limits a whole series string",
+      "A room of cells is a fire-code object under {{NFPA 855}} — spacing, suppression, ventilation — and a replacement cycle every few years"
+     ]
+    },
+    {
+     "t": "Flywheel",
+     "meta": "Energy as rotation — half the moment of inertia times speed squared; a heavy steel rotor at machine speed, or a light composite one at tens of thousands of rpm in a vacuum on {{magnetic bearings}}",
+     "adv": [
+      "Enormous power for a short time, essentially unlimited cycles, no chemical aging and no meaningful temperature sensitivity",
+      "{{State of charge}} is read directly from the tachometer — if it is spinning at speed, it is full and proven, every second of every day",
+      "No battery room, no fire-code review for the store, and a footprint that does not grow with the minutes you did not buy"
+     ],
+     "dis": [
+      "The seconds are all you get — typically on the order of ten to thirty at full load — so the generator's start must be engineered to be reliable inside that window",
+      "The rotor must be kept spinning: a standing loss that a battery does not have",
+      "It is a precision rotating machine with bearings and a maintenance calendar of its own"
+     ]
+    }
+   ],
+   "note": "Which seconds do you actually need? Honest engineers give two answers: about ten to fifteen with margin, if the start path is engineered reliable (redundant starters, a second engine already cranking, or a diesel on the same shaft as the store); or several minutes, because the first start sometimes fails and an orderly shutdown is worth more than an abrupt one. The industry's split between flywheel-backed and battery-backed UPS is, at bottom, a split between these two answers — and a hybrid with a flywheel to take the hit and a small battery behind it exists because each is right about something."
+  },
+  {
+   "id": "anatomy-of-a-static-ups",
+   "title": "Anatomy of a static UPS: clean power by switching",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A {{static UPS}} is three {{conversion stage}}s in a row. A {{rectifier}} turns the supply into direct current. The {{DC link}} carries it, with the battery hanging on the same bus so that when the supply fails the cells simply keep the bus up — nothing switches. An {{inverter}} built on {{IGBT}}s, or in the newest units on {{SiC}} switches, chops the DC back into alternating current thousands of times a second and filters it into a sine wave. Around the three stages sit the {{static bypass}}, the controls and the fans, and that is the whole machine: no moving parts but the fans.",
+    "It is built at {{low voltage}} — 400 or 480 V — so a large hall needs many units and a {{transformer}} above them. It is modular: power modules of a few hundred kilowatts slide into a frame and can be swapped live, frames are paralleled to a few megawatts, and systems are multiplied beyond that. Its efficiency in {{double conversion}} is in the mid-to-high nineties at full load and higher still in {{eco-mode}} — and it is lowest at part load, where the fixed losses of switching and magnetics dominate. That matters because redundancy parks units at half load by design.",
+    "Two properties follow from making the wave by switching. The output is a synthesized sine wave, as good as the filter and the control loop make it. And the {{fault current}} is limited to a little above the unit's rating by the very switches that make the wave — they would be destroyed by more — so the protection downstream of a static UPS has to be designed around a soft source, and designed twice: once for the load on the inverter and once for the load on bypass, when the utility's full fault current is available again."
+   ]
+  },
+  {
+   "id": "anatomy-of-a-rotary-ups",
+   "title": "Anatomy of a rotary UPS: clean power by spinning a magnet",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A {{rotary UPS}} is built around a {{synchronous machine}} — an alternating-current machine whose rotor turns in exact step with the grid frequency, 1,500 rpm for a four-pole machine at 50 Hz and 1,800 rpm at 60 Hz — fed from the supply through a {{coupling choke}}, with the critical load connected at the machine's terminals and a {{flywheel}} on or coupled to its shaft. Read that sentence as a diagram: utility, then a large inductor, then a rotating machine, and the load hanging off the machine.",
+    "In normal operation the machine runs as a motor and, at the same time, as a {{synchronous condenser}} for the load. Its {{excitation}} — the direct current in its rotor winding — is adjusted continuously to hold the output voltage, so a sag on the supply side is absorbed across the choke rather than seen by the servers. It supplies the reactive power the load needs, so the utility sees a corrected {{power factor}}. And because the load is fed from a spinning magnet through a large inductance rather than straight from the wires, {{harmonics}} on the supply do not reach the load and the load's own distortion does not reach the supply. The {{power conditioning}} is continuous — not a mode.",
+    "When the supply fails or falls out of tolerance, the choke-side breaker opens and the flywheel drives the machine as a generator. Nothing switches on the load side, because the machine was already feeding the load. The output is a sine wave by construction — a rotating field induces one — and the machine delivers {{fault current}} several times its rating for the first cycles from its stored magnetic energy, so a short circuit downstream trips the nearest breaker exactly as it would on utility power.",
+    "Its costs are the mirror image of its gifts. Bearings and a rotor inspection replace the battery replacement cycle. Standing losses — windage, friction, magnetizing current — make it less efficient than the best static units, especially at light load. It is heavy and it is loud. And the store gives seconds only, so the generator path behind it must be trusted. Its structural advantage is that a wound machine can be built for {{medium voltage}} directly, which is where the largest campuses want their UPS to sit."
+   ]
+  },
+  {
+   "id": "the-diesel-on-the-shaft",
+   "title": "The diesel on the shaft: DRUPS",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Put a diesel engine on the same shaft line as the rotary machine, joined by a clutch, and the {{flywheel}} now covers the engine's own start rather than a separate generator's. That is a {{DRUPS}} — a diesel rotary uninterruptible power supply — and in normal operation it is the rotary UPS of the previous section with an engine standing idle beside it.",
+    "On a supply failure the flywheel takes the load instantly. The engine starts and runs up to speed in a few seconds, the clutch engages, and the engine is carrying the hall well inside the flywheel's window — with no {{ATS}}, no separate {{gen-set}}, no {{synchronization}} of a remote engine onto a bus, and no battery. When the supply returns, the machine is brought back into step with it, the choke breaker closes, the clutch releases and the engine cools down and stops. One machine has done the work of UPS, transfer switch and generator for its block, which is the whole appeal at forty-megawatt scale: fewer boxes, fewer hand-offs, one thing to test.",
+    "The price is that the engine is now in the critical path. The flywheel's seconds are the entire margin for a start; the clutch is a mechanical element that must engage under load; the engine carries an {{emergency generator}} air-permit class like any standby diesel, with the same test-hour arithmetic; and taking the machine out for service means the load goes to bypass or to the ring taught two sections on. Where a battery-backed static UPS fails gracefully into minutes of warning, a DRUPS that does not start has seconds — which is why it is almost never installed alone, and why the topology it lives in matters as much as the machine."
+   ]
+  },
+  {
+   "id": "static-versus-rotary",
+   "title": "Static versus rotary: one difference, nine consequences",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "A static UPS makes clean power by switching — chopping DC into a sine wave thousands of times a second. A rotary UPS makes it by spinning a magnet. Everything they differ on follows from that one difference.",
+   "cols": [
+    "Dimension",
+    "{{Static UPS}}",
+    "{{Rotary UPS}}",
+    "{{DRUPS}}"
+   ],
+   "rows": [
+    [
+     "How the clean wave is made",
+     "Switching — an {{IGBT}} or {{SiC}} inverter and a filter",
+     "A rotating magnet — the {{synchronous machine}}",
+     "A rotating magnet"
+    ],
+    [
+     "Stored energy",
+     "Battery string on the {{DC link}} — minutes",
+     "{{Flywheel}} — seconds",
+     "Flywheel — seconds, covering the engine's own start"
+    ],
+    [
+     "{{Fault current}}",
+     "A little above rating; switch-limited",
+     "Several times rating for the first cycles",
+     "Several times rating"
+    ],
+    [
+     "Harmonic isolation",
+     "Depends on mode; the rectifier is itself a harmonic load on the supply",
+     "Inherent — the {{coupling choke}} and the machine decouple supply and load",
+     "Inherent"
+    ],
+    [
+     "Voltage class",
+     "{{Low voltage}}, with a {{transformer}} above it",
+     "Low or {{medium voltage}}",
+     "Low or medium voltage"
+    ],
+    [
+     "Efficiency shape",
+     "Highest at full load, falls at part load; {{eco-mode}} higher still",
+     "High but with standing losses; worst at light load",
+     "As rotary; the engine is idle in normal operation"
+    ],
+    [
+     "Store maintenance",
+     "Battery replacement cycle, {{NFPA 855}} fire code, {{state of health}} testing",
+     "Bearings and rotor inspection; {{state of charge}} is rpm",
+     "Bearings, plus a diesel to test and permit"
+    ],
+    [
+     "What else the block still buys",
+     "{{Gen-set}}s, {{ATS}}, {{paralleling switchgear}}, a battery room",
+     "Gen-sets, ATS, paralleling switchgear",
+     "Nothing — engine, transfer and UPS are one machine"
+    ],
+    [
+     "Failure signature",
+     "Load on bypass; an eco-mode transfer that misses; a weak string",
+     "A bearing or {{excitation}} fault; the ring as a shared element",
+     "The engine fails to start or the clutch to engage inside the flywheel's seconds"
+    ]
+   ],
+   "note": "Neither column wins the table. The static machine wins on efficiency at full load, modularity, and the minutes; the rotary machine wins on fault current, harmonic isolation, voltage class and a store that is proven every second. Which one a campus buys is decided by the row it cares about most — and hyperscalers, who standardize on low-voltage modular blocks and buy minutes, have mostly chosen the left-hand column, which is why the rotary family's home is the very large block, the medium-voltage connection and the operator who wants one machine per block."
+  },
+  {
+   "id": "the-stiff-source",
+   "title": "The stiff source: why fault current is a feature",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "{{Selective coordination}} — arranging breakers so a fault opens only the nearest device upstream — depends on the fault current being large enough, fast enough, to separate the breakers' time-current curves. A rotating machine is a stiff source: it delivers a large {{fault current}} for the first cycles from its stored magnetic energy, so protection downstream behaves as it would on utility power. An {{inverter}} is a soft source that limits current to protect its own switches, so on a {{static UPS}} the fault-current picture changes the moment the load moves from bypass onto the inverter — and the coordination study must cover both states, because a scheme proven on utility power can miscoordinate on the inverter.",
+    "The same stiffness is why a rotary machine's output barely notices a large non-linear load stepping on or off, and why its {{power conditioning}} — voltage held by {{excitation}}, {{harmonics}} blocked by the choke, {{power factor}} corrected by the machine — is continuous rather than a mode to be selected. It is also why a rotating machine can be asked to do a second job that no inverter of the same rating can: to be the {{inertia}} of a small grid, which is the last technical section of this guide."
+   ]
+  },
+  {
+   "id": "redundancy-without-doubling",
+   "title": "Redundancy without doubling: from 2N to the isolated-parallel ring",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "A UPS block's reliability is decided by how the units are arranged at least as much as by how good each unit is. The arrangements differ in one thing above all: whether the redundancy lives in a switching event that must work, or in a bus that shares by physics. N is the equipment the load needs; {{Uptime tier}} III demands {{concurrent maintainability}} — any component out for planned work without dropping the load — and Tier IV demands surviving any single unplanned failure.",
+   "cols": [
+    "Topology",
+    "How the spare reaches the load",
+    "What must work",
+    "Cost against 2N"
+   ],
+   "rows": [
+    [
+     "{{N+1}} in one system",
+     "Units paralleled on one output bus; one more than the load needs",
+     "The shared bus and its controls — a fault there takes every unit",
+     "Cheapest; the bus is a single point"
+    ],
+    [
+     "{{2N}} (and 2(N+1))",
+     "Two independent paths from source to rack, each able to carry everything",
+     "Nothing has to switch — the load's dual power supplies already draw from both",
+     "The reference cost; the most forgiving"
+    ],
+    [
+     "Block-redundant / {{catcher}}",
+     "A spare system stands ready; static transfer switches move a failed block onto it",
+     "The transfer switch must detect the failure and act inside the {{hold-up time}}, every time",
+     "Well below 2N; the redundancy lives in a switch"
+    ],
+    [
+     "{{Distributed redundant}} ('three to make two')",
+     "Each load fed from two of several systems through dual-input equipment",
+     "The load's input selection, and the arithmetic that the survivors are not overloaded",
+     "Below 2N; the redundancy lives in the load's inputs"
+    ],
+    [
+     "{{Isolated parallel bus}}",
+     "Units joined in a ring through {{coupling choke}}s: each feeds its own load in normal operation; a failed unit's load flows to all the others at once, a share each",
+     "Nothing switches — the chokes share by impedance the instant a unit stops contributing; the ring and its protection are the shared element",
+     "One spare across a very large block; the shape in which rotary UPS is sold at tens of megawatts"
+    ]
+   ],
+   "note": "The isolated-parallel ring is the idea most worth being able to draw from memory: a circle of machines, a choke between each pair, each machine with its own load hanging below it. Remove one and its load goes to the others, a fraction each, through the chokes — and nothing had to detect, decide or switch. Its exposures are the ones any shared element has, so the engineering effort goes into the ring's protection and its operating procedure rather than into a transfer switch."
+  },
+  {
+   "id": "the-load-that-swings-and-the-island",
+   "title": "The load that swings, and the island",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Two things have changed the UPS room's job. The first is the load itself: thousands of accelerators starting, stopping or checkpointing together swing a hall's demand by tens of megawatts inside milliseconds, and no engine or turbine answers in milliseconds. Something with stored energy and a fast response has to stand between the generation and the load so that the engines see the average and the buffer sees the swing. A {{BESS}} on a {{grid-forming inverter}} is one answer; a rotating machine with a {{flywheel}} is the other — the same synchronous machine that conditions the load in a rotary UPS, asked now to hold frequency and voltage against a load that moves faster than any governor.",
+    "The second is the {{islanded}} campus. Connected to a utility, an engine's frequency is set for it by a continent of spinning machines; islanded, frequency is whatever the balance between generation and load makes it, and there is no larger system to lean on. The quantity that buys the controls time is {{inertia}} — the resistance of spinning mass to a change in speed — and a heavy synchronous machine with a flywheel supplies real inertia, real {{fault current}} and reactive power exactly as a {{synchronous condenser}} does on a weak grid. That is why the rotary UPS family has a second product in it: the same machine, sold not to protect a hall from the grid but to stabilize a {{microgrid}} of reciprocating engines or turbines that has no grid at all.",
+    "Read the two together and the room's job description has widened. It still owns the seconds between the grid dropping and the engines carrying the hall. It now also owns the milliseconds of every load swing on a campus that runs on its own generation for years before its interconnection energizes — and the question of whether that stabilizer is chemistry on an inverter or steel on a shaft is the same question as Module 2's, asked at campus scale."
+   ]
+  },
+  {
+   "id": "where-pillers-products-slot-in",
+   "title": "Where Piller's products slot in",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Read the guide's chain against the catalogue. Each row is one job in the UPS room or at the fence line, the product line the company sells for it, the spec that decides whether it is fit for the job, and what it displaces or sits beside. Figures are the company's own; the dossier carries the sources.",
+   "cols": [
+    "The job",
+    "Piller line",
+    "The spec that matters",
+    "What it displaces or sits beside"
+   ],
+   "rows": [
+    [
+     "Condition the hall continuously and ride a sag without touching stored energy",
+     "UB-V Series {{rotary UPS}} (1.0–3.24 MW per module, to 100 MW in parallel) and UNIBLOCK UBT+ (500–2,700 kW, to 40 MW at {{medium voltage}})",
+     "'voltage dips of up to -50% without recourse to stored energy or diesel generators'; '99% input/output harmonic isolation'; 'up to 98% at 100% load and 97% at 50% load'; no capacitors or fans",
+     "The large {{static UPS}} — Vertiv Trinergy, Schneider Galaxy VXL, Eaton 9395X, ABB MegaFlex — which won the hyperscale hall on modularity and minutes of battery"
+    ],
+    [
+     "Hold the seconds to a generator start with no battery room",
+     "POWERBRIDGE PB6+ / PB21 / PB60+ {{flywheel}}s",
+     "'3.6MJ up to 60MJ+ per unit'; '1MW of electrical power for over 60 seconds'; magnetic bearings in an inert enclosure; 'Life time > 20 years'; 'Up to 90%' floor-space saving versus batteries",
+     "{{VRLA}} and lithium-ion strings, the {{NFPA 855}} room around them, and the replacement cycle"
+    ],
+    [
+     "One machine for UPS, transfer and generator",
+     "UNIBLOCK UBTD+ {{DRUPS}} (500 kW to 40 MW) and the DeRUPS configuration",
+     "'adjustable diesel start delay (seconds to minutes)'; DeRUPS decouples engine count from UPS count and runs loads from the gen-sets during UPS maintenance",
+     "A standby {{gen-set}} fleet plus {{ATS}} plus static UPS plus battery room — the Caterpillar and Eaton guides' equipment, replaced by one shaft line"
+    ],
+    [
+     "N+1 across tens of megawatts with no transfer switch",
+     "{{Isolated parallel bus}} (IP-bus)",
+     "'Low Voltage deployment up to 20MW', medium voltage to 40 MW; 'approximately 97% efficiency'; 'avoids unnecessary switchgear operations under fault conditions'; Uptime Tier IV approved; '500MVA' deployed",
+     "{{Catcher}} and {{distributed redundant}} schemes built on static transfer switches; ABB's ring bus for static UPS"
+    ],
+    [
+     "Flywheel UPS in a modular low-voltage frame, or a container",
+     "Active Power CleanSource PLUS MMS / HD / POWERHOUSE",
+     "333 kW modules to 2,667 kW; '10,000RPM'; '6.2 MJ' per module; run time '100% 18s… 25% 62s'; HD 675 kW at 7,700 rpm with 10.2 MJ; 1,333 kW in a 40 ft container",
+     "Modular static UPS at the same power — the Nebius Mäntsälä hall (200+ units, 75 MW) is the reference where a neocloud chose this instead"
+    ],
+    [
+     "Hold frequency against a load that swings faster than any governor, on an island",
+     "SHIELDX Dynamic Power Stabilization",
+     "'±1%' voltage and frequency; 'Sub-millisecond response'; '1× SHIELDX™ : 1× 12MW Bergen–Marelli genset' against '25–30% instantaneous load steps'; 'zero energy storage degradation'; ships in 4–6 weeks",
+     "The {{BESS}} buffer on a {{grid-forming inverter}} — ON.energy's medium-voltage BESS at the same Crusoe campuses, Tesla Megapacks at xAI — bought alongside it rather than instead of it"
+    ],
+    [
+     "Hyperscale wants hot-swappable static blocks",
+     "M+ Series modular static UPS (M+500, M+1200)",
+     "'10 x 50 kW power modules delivering 500 kW'; 'up to 97%'; lithium-ion cabinets 250–1,200 kW; 'hot-swappable'",
+     "Head-on with Galaxy VXL, Trinergy and 9395X — the company's stated 'return to the sector' it lost, with no published order yet"
+    ],
+    [
+     "Change the frequency, not just protect it",
+     "50/60 Hz converters (30 kVA static, to 2,300 kVA rotary), APOJET 400 Hz ground power, naval shore power to 1,500 kVA, Grid series (GridPB, GridGate)",
+     "'THD at input current < 5%'; 'Parallel operation up to 8 systems'; 'MTBF 1.000.000 hours'; GridPB 'additional inertia for island grids'",
+     "A specialist field outside this corpus — airports and navies — plus the same rotating machines sold as {{inertia}} for renewable islands"
+    ],
+    [
+     "Years of running",
+     "Service, Unity Service Pack, e-VENTLOG remote monitoring, rental fleet",
+     "'off-line service intervals as little as once every five years'; life 'at least 20 years'; '24h/365 days' hotline; bearing change every third or fourth year on CleanSource",
+     "The battery-replacement calendar of a static plant, and the static majors' own service arms"
+    ]
+   ],
+   "note": "Notice the shape: the same synchronous machine and flywheel appear in five rows doing five jobs — hall conditioning, the seconds, the diesel's start, the ring, and the island's inertia. The company's bet is that one rotating-machine technology, made at scale in one factory, can be sold into all five; its exposure is that the factory is the constraint on every one of them."
+  },
+  {
+   "id": "megawatts-per-machine",
+   "title": "Megawatts per machine — single unit, then system",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MW (company ratings; single units first, then systems)",
+   "intro": "The catalogue read as a scale. The first rungs are one module or one machine; the last rungs are what the same machines reach when paralleled or ringed — which is the whole argument of the topology section. The rungs are not strictly comparable (kW ratings at different voltages and duties), which is itself the lesson.",
+   "items": [
+    {
+     "label": "CPM 300/360 module",
+     "sub": "flywheel, low voltage",
+     "v": 0.36
+    },
+    {
+     "label": "CleanSource HD",
+     "sub": "flywheel, 480 V, 10.2 MJ",
+     "v": 0.675
+    },
+    {
+     "label": "M+1200 static unit",
+     "sub": "lithium-ion, hot-swap",
+     "v": 1.2
+    },
+    {
+     "label": "POWERHOUSE container",
+     "sub": "4 flywheels, 40 ft ISO",
+     "v": 1.333
+    },
+    {
+     "label": "UNIBLOCK UBT+ single machine",
+     "sub": "rotary, LV or MV",
+     "v": 2.7
+    },
+    {
+     "label": "UB-V single module",
+     "sub": "rotary, LV or MV",
+     "v": 3.24
+    },
+    {
+     "label": "IPCS 'Power of 10' module",
+     "sub": "4 × 2.5 MW UB-V behind one choke",
+     "v": 10
+    },
+    {
+     "label": "IP-bus at low voltage",
+     "sub": "system",
+     "v": 20
+    },
+    {
+     "label": "UNIBLOCK paralleled at MV",
+     "sub": "system",
+     "v": 40
+    },
+    {
+     "label": "UB-V paralleled",
+     "sub": "system",
+     "v": 100
+    }
+   ],
+   "note": "SHIELDX has no published megawatt rating of its own — it is sized as one unit per 12 MW gen-set — so it is absent from the ladder; that gap is the dossier's largest open specification question."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**Load exposed on bypass.** A unit is on maintenance {{static bypass}} while a monolithic system waits for a specialist, or a module swap runs long, and the supply dips for longer than the {{hold-up time}}. Nothing failed except the assumption that maintenance mode is safe mode; the {{transfer time}} the UPS exists to cover was not covered because the UPS was not in the circuit. Owned by the operator and the service contract — and by the topology that decided whether bypass was the only option.",
+    "**The transfer that is fast for the typical fault and not for every fault.** {{Eco-mode}} on a {{static UPS}} runs the load on the raw supply and bets that detection and transfer back to the inverter finish inside the hold-up time for every kind of failure. A clean open-circuit is easy; a slow sag, a single-phase fault or a frequency drift is where the bet is tested. Owned by the operator who set the dial and the OEM who published the detection times.",
+    "**Modules parked below their sweet spot.** Redundancy holds every unit at half load by design, and a switching converter's efficiency falls at part load while a rotating machine's standing losses stay constant. Either way the block's real efficiency is lower than the nameplate curve, and the difference is heat that must be cooled for the life of the building. Owned by the designer who chose N and the operator who never re-checked as the hall filled.",
+    "**The engine does not start inside the flywheel's seconds.** In a {{DRUPS}} the store's {{autonomy}} is the entire margin for a diesel start and a clutch engagement under load. A fuel, starter or control fault that a battery-backed plant would have minutes to notice presents here with seconds left — which is why a lone DRUPS is a design error and the ring, not the machine, is what carries the block. Owned by the topology and the test calendar.",
+    "**The shared element on the ring.** An {{isolated parallel bus}} removes the transfer switch and puts the redundancy in impedance — and makes the ring, its chokes and its controls common to every unit on it. A fault on the ring, a protection setting that isolates the wrong segment, or a procedure that opens the wrong breaker during maintenance is the one failure the topology was not built to absorb. Owned by the protection engineer and the operating procedure.",
+    "**Bearings, rotors and the maintenance window.** A {{rotary UPS}} is a precision rotating machine. Its store never ages chemically, but its bearings do, and the inspection that keeps them honest is a planned outage of that unit — which means load on bypass or on the ring, exactly the two states above. Owned by the OEM's service calendar and whoever decides it can slip.",
+    "**The string that was proven three years ago.** A battery-backed plant's {{state of health}} is known only when tested, one weak cell limits a whole series string, and a hot battery room ages twice as fast per ten degrees. The flywheel's rpm is on the display every second; the battery's condition is on a report. Owned by the operator and the monitoring the room did or did not get.",
+    "**Rated for, read as operating at.** kVA on the nameplate against kW at the load's {{power factor}}; autonomy quoted at a load the hall no longer runs; a fault-current study done on utility power and never repeated for the load on the {{inverter}}. The UPS room inherits every one of the {{commissioning}} sins the rest of the chain commits — and it is the room where they present as a dropped hall."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Which interval does the UPS own, and why can nothing else fill it?",
+     "a": "From the end of a server's hold-up time — ten to twenty milliseconds on its own capacitors — to the moment a generator is carrying the load, about ten seconds in the usual emergency-power class. Only stored energy already on the bus can act without a decision inside that gap; every engine needs seconds to crank and stabilize."
+    },
+    {
+     "q": "What do VFD, VI and VFI mean, and which one does a data center buy?",
+     "a": "IEC 62040-3 grades how much of the supply's misbehavior reaches the load: VFD passes voltage and frequency through until a switch acts; VI corrects voltage but follows the grid's frequency; VFI isolates the load from both. Data centers buy VFI — double conversion in a static unit, or a rotary machine feeding the load from its own terminals."
+    },
+    {
+     "q": "Why is the UPS problem 'a power problem wearing an energy costume'?",
+     "a": "A 1 MW hall for 15 seconds needs about 4.2 kWh — trivially little energy — delivered at 1 MW. The seconds store is sized by power, the minutes store by energy, and a battery and a flywheel are opposite personalities on exactly that axis."
+    },
+    {
+     "q": "What does E = ½Iω² tell you about how flywheels are designed?",
+     "a": "Energy grows with the square of speed, so one school spins a light composite rotor very fast in a vacuum on magnetic bearings, while the other spins a heavy steel mass at the synchronous machine's own speed and accepts the friction. Both give high power for seconds; neither is a store for hours."
+    },
+    {
+     "q": "How does a static UPS take over when the supply fails, and why is there no switching event?",
+     "a": "The battery hangs on the DC link between the rectifier and the inverter. When the supply fails the cells simply hold the DC bus up and the inverter keeps making AC from it — the store was already on the bus."
+    },
+    {
+     "q": "Describe a rotary UPS as a diagram in one sentence.",
+     "a": "Utility, then a coupling choke — a large inductor — then a synchronous machine with a flywheel on its shaft, and the critical load hanging off the machine's terminals."
+    },
+    {
+     "q": "What is the synchronous machine doing in normal operation, before anything fails?",
+     "a": "Running as a motor and as a synchronous condenser at once: its excitation holds the output voltage, it supplies the load's reactive power so the utility sees a corrected power factor, and the choke plus the spinning magnet block harmonics in both directions. The conditioning is continuous, not a mode."
+    },
+    {
+     "q": "Why is fault current a feature and not a hazard in the UPS room?",
+     "a": "Selective coordination needs enough fault current, fast, to separate breaker curves. A rotating machine dumps several times its rating into a short from its stored magnetic energy, so the nearest breaker trips as it would on utility power; an inverter limits current to protect its switches, so protection on a static UPS must be designed around a soft source — twice, for inverter and bypass."
+    },
+    {
+     "q": "What does a DRUPS eliminate, and what does it put in the critical path?",
+     "a": "It eliminates the separate generator, the ATS, the synchronizing of a remote engine and the battery: the diesel shares the shaft line through a clutch and the flywheel covers its start. It puts the engine start and the clutch engagement inside the flywheel's seconds — so a DRUPS is almost never installed alone."
+    },
+    {
+     "q": "Block-redundant, distributed redundant, isolated parallel: where does the redundancy live in each?",
+     "a": "In a static transfer switch that must move the block onto the catcher; in the load's own dual inputs and the arithmetic that survivors are not overloaded; in impedance — a ring of chokes that shares a failed unit's load among all the others with nothing detecting or switching."
+    },
+    {
+     "q": "Draw an isolated-parallel ring of five units and remove one. What happens?",
+     "a": "Its load flows to the other four through the chokes, a quarter each, the instant it stops contributing. Nothing had to detect, decide or switch. The shared element is now the ring itself and its protection — which is where the engineering effort goes."
+    },
+    {
+     "q": "Why does the rotary UPS family have a second product that is not a UPS at all?",
+     "a": "A heavy synchronous machine with a flywheel supplies real inertia, fault current and reactive power like a synchronous condenser. On an islanded campus of engines with no grid behind it — or under an AI load that swings tens of megawatts in milliseconds — that same machine stabilizes frequency and voltage faster than any governor can."
+    },
+    {
+     "q": "What does a stabilizer rated 'one unit per 12 MW gen-set for 25–30% instantaneous load steps' tell you about the machine's job?",
+     "a": "That it is sized to the generator's tolerance, not to the hall's energy. A medium-speed gas engine cannot follow a load that steps by a quarter of its rating in milliseconds; the flywheel and synchronous machine take that step so the engine sees a ramp. Cover a full 100% step and you need more units per engine — the ratio is the sizing rule."
+    },
+    {
+     "q": "Why does the isolated-parallel bus claim to avoid 'unnecessary switchgear operations under fault conditions', and why is that the point?",
+     "a": "Because sharing happens through the chokes by impedance, no breaker has to detect and act for a failed unit's load to be picked up; the only breakers that operate are the ones isolating the actual fault. Uptime Institute's account of NEXTDC choosing it says the same in the operator's words — human error and switching complexity cause most failures, so remove the switching."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A hall dropped for 40 ms while a UPS module was being swapped and one row of servers rebooted. The mechanism is:",
+     "c": [
+      "The flywheel ran out of energy",
+      "The load was on maintenance bypass — raw supply, no stored seconds — when the supply dipped for longer than the hold-up time",
+      "The generators failed to synchronize",
+      "The battery string was at end of life"
+     ],
+     "a": 1,
+     "why": "Forty milliseconds is longer than any server's hold-up time and far shorter than any store's autonomy. Only a load that was not behind the UPS at all shows that signature — the assumption that maintenance mode is safe mode is the failure."
+    },
+    {
+     "q": "A brief asks for 1 MW of UPS with 30 seconds of stored energy and whether a battery or a flywheel is 'bigger'. The right answer is:",
+     "c": [
+      "The battery — 30 seconds is a lot of energy",
+      "The flywheel — flywheels are always larger",
+      "Neither is 'bigger': the energy (about 8 kWh) is trivial for either; the constraint is 1 MW of power, for which the flywheel is sized exactly and a battery must be oversized for its C-rate",
+      "It depends on the battery chemistry"
+     ],
+     "a": 2,
+     "why": "The UPS problem is a power problem wearing an energy costume. Thirty seconds of a megawatt is 30 MJ, roughly 8 kWh — a rounding error for a battery room, which is why a seconds-only battery is oversized for its energy and a flywheel is the natural fit."
+    },
+    {
+     "q": "Why can a static UPS take over from the supply with no switching event?",
+     "c": [
+      "Because eco-mode is always on",
+      "Because the battery hangs on the DC link between rectifier and inverter, so when the supply fails the cells simply hold the bus up",
+      "Because the static bypass closes instantly",
+      "Because IGBTs switch faster than the hold-up time"
+     ],
+     "a": 1,
+     "why": "The store is already on the bus. That is the structural reason double conversion is the highest protection class — and why eco-mode, which moves the load off the inverter, reintroduces a transfer."
+    },
+    {
+     "q": "In a rotary UPS during normal operation, the synchronous machine is:",
+     "c": [
+      "Idle, waiting for a failure",
+      "Running as a motor and as a synchronous condenser at once — holding voltage through excitation, correcting power factor and blocking harmonics in both directions",
+      "Driving the flywheel only",
+      "Acting as the ATS"
+     ],
+     "a": 1,
+     "why": "The conditioning is continuous rather than a mode. A sag on the supply is absorbed across the coupling choke; the load sees a wave made by a spinning magnet."
+    },
+    {
+     "q": "A coordination study was done with the hall on utility power. The load now runs on a static UPS's inverter and a rack-level fault opened a main breaker. What changed?",
+     "c": [
+      "The breakers were replaced",
+      "The inverter limits fault current to a little above its rating, so the curves that separated on utility power no longer do",
+      "The flywheel slowed",
+      "The battery voltage dropped"
+     ],
+     "a": 1,
+     "why": "An inverter is a soft source; a rotating machine or the utility is a stiff one. Selective coordination depends on enough fault current, fast, and the study must be done for both states of a static UPS — inverter and bypass."
+    },
+    {
+     "q": "Which element does a DRUPS place inside the flywheel's seconds that a battery-backed static plant has minutes to deal with?",
+     "c": [
+      "The rectifier",
+      "The engine start and the clutch engagement under load",
+      "The battery replacement",
+      "The transformer tap change"
+     ],
+     "a": 1,
+     "why": "One machine has replaced the UPS, the ATS and the generator — so a fuel, starter or control fault that a battery plant would notice with minutes in hand presents with seconds left. That is why a lone DRUPS is a design error and the ring carries the block."
+    },
+    {
+     "q": "Five units on an isolated-parallel ring; one fails. Its load:",
+     "c": [
+      "Is dropped until an operator intervenes",
+      "Moves to a dedicated catcher through a static transfer switch",
+      "Flows to the other four through the chokes, a quarter each, with nothing detecting or switching",
+      "Is carried by the battery room"
+     ],
+     "a": 2,
+     "why": "The chokes share by impedance the instant a unit stops contributing. The redundancy lives in physics rather than in a switching event — and the ring and its protection become the shared element to engineer."
+    },
+    {
+     "q": "A design parks every UPS unit at half load for redundancy. Which statement about efficiency is right?",
+     "c": [
+      "Efficiency is unaffected; nameplate figures apply",
+      "A switching converter's efficiency falls at part load and a rotating machine's standing losses stay constant, so the block's real efficiency is below the nameplate curve either way",
+      "Only the flywheel is affected",
+      "Eco-mode makes part load irrelevant"
+     ],
+     "a": 1,
+     "why": "Nameplate curves are quoted at full load. Redundancy is a permanent part-load condition, and the difference is heat that must be cooled for the life of the building."
+    },
+    {
+     "q": "An islanded AI campus of reciprocating engines specifies heavy synchronous machines with flywheels beside the engines. They are there to:",
+     "c": [
+      "Replace the diesel fuel",
+      "Supply real inertia, fault current and reactive power so frequency and voltage hold through load swings faster than any governor",
+      "Provide minutes of autonomy for an orderly shutdown",
+      "Convert the frequency to 400 Hz"
+     ],
+     "a": 1,
+     "why": "The same machine that conditions a hall in a rotary UPS becomes the synchronous condenser of a small grid. An inverter-based battery is the other answer to the same question — Module 2's choice, asked at campus scale."
+    },
+    {
+     "q": "A campus specifies flywheel stabilizers beside its gas engines and also a medium-voltage battery plant. Which statement best explains buying both?",
+     "c": [
+      "One of them is a mistake — they do the same job",
+      "The flywheel holds the seconds and supplies real inertia and fault current for load steps; the battery holds the minutes and hours of duration — different jobs on different clocks",
+      "Batteries cannot connect at medium voltage",
+      "Flywheels cannot absorb power, only deliver it"
+     ],
+     "a": 1,
+     "why": "The seconds store and the duration store are answers to different questions, exactly as in the battery-versus-flywheel section — asked at campus scale. A campus choosing only one would be the interesting case."
+    }
+   ]
+  }
+ ]
+}

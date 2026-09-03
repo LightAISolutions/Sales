@@ -690,6 +690,21 @@
         "EMEA restructuring under founder Cox after the Apollo colo carve-out",
         "Americas master-trust ABS cadence"
       ]
+    },
+    {
+      "slug": "piller",
+      "cadence": "quarterly",
+      "source": "Unit-level subsidiary of the privately held Langley Holdings plc — no earnings calendar of its own. Langley publishes its annual report in the first half of February (6 Feb 2026; 10 Feb 2025; 14 Feb 2024) and an interim trading statement in the first days of August (4 Aug 2026; 7 Aug 2025), each republished the same day on piller.com as 'Parent Company…'; the FY2026 report (~early Feb 2027) is the next Piller-relevant disclosure. Covered by the recurring quarterly sweep (Jan/Apr/Jul/Oct 1, ~13:00 UTC), which refreshes only when a material development warrants it.",
+      "lastRefreshed": "2026-09-03",
+      "watch": [
+        "Langley Annual Report 2026 (~early Feb 2027): Piller 2026 growth vs the ~30% guide (NW-IHK/StadtRadio), Power Solutions division vs its €1,346M forecast, FY2026 PBT vs the €237.8M August guide; any Piller-level SHIELDX unit count or revenue disclosure",
+        "SHIELDX: first published per-module MW/MJ datasheet; the autumn 2026 Osterode 12.5 MW Bergen + SHIELD-X demonstration; first deliveries to Crusoe sites (through 2027) and Liberty Energy (H2 2027)",
+        "The 400 MW E-Finity plant (third parties: DataOne/Nebius, Vineland NJ) — energization Q1 2027 vs the WHYY-reported switch to Bloom fuel cells and the NJDEP compliance determination; any stated effect on Piller's scope",
+        "Bilshausen expansion progress toward ~400 large systems/yr by end-2027; Bergen build slots (sold out to Q2 2028); any US assembly announcement for SHIELDX or UNIBLOCK (tariff exposure)",
+        "First published M+ Series order or hyperscaler customer; Nebius's 'much larger' US CleanSource order (2026 delivery); Active Power's four-fold output",
+        "Leadership: successor as President of Piller Power Systems Inc after Dean Richards' move; whether Jack Pearce now leads Bergen Engines Inc",
+        "Competitor moves in the rotary niche: Hitec (Air Water), Rolls-Royce Solutions Liège (mtu Kinetic PowerPack), Hitzinger; ABB HiPerGuard MV UPS deployments"
+      ]
     }
   ]
 }

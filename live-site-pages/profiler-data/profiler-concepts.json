@@ -70,6 +70,17 @@
    "def": "Adding new battery capacity to an operating storage plant to offset degradation, keeping the plant at its contracted capacity over its life."
   },
   {
+   "slug": "autonomy",
+   "term": "autonomy",
+   "aliases": [
+    "autonomy time",
+    "backup time",
+    "runtime",
+    "UPS runtime"
+   ],
+   "def": "How long a UPS can carry its rated load from stored energy alone — seconds for a flywheel, minutes for a battery string. It is sized to cover the generator's start with a margin, not to run the hall: a longer autonomy is insurance against the engine failing its first start attempt, and it is bought in battery cabinets and floor space."
+  },
+  {
    "slug": "availability-guarantee",
    "term": "availability guarantee",
    "def": "A contracted promise about the fraction of hours a plant will be ready to perform, with money attached to missing it. It matters more than an average suggests, because storage and generation revenue concentrate into a small number of extreme-price hours — a site that is available almost all year and unavailable for the wrong afternoon has not lost a proportional share of its income.",
@@ -231,6 +242,15 @@
    ]
   },
   {
+   "slug": "concurrent-maintainability",
+   "term": "concurrent maintainability",
+   "aliases": [
+    "concurrently maintainable",
+    "concurrent maintenance"
+   ],
+   "def": "The property that any single component can be taken out of service for planned work without dropping the critical load — the defining requirement of Uptime Tier III. It is decided by topology rather than by equipment quality: there must be a second path, and the switch onto it must itself be safe."
+  },
+  {
    "slug": "continuous-rating",
    "term": "continuous rating",
    "def": "The generator rating for carrying a constant load at full output for unlimited hours a year, as a power station would. It is the most conservative of the standard ratings — the same engine carries a smaller number as continuous than as prime or standby — and the one a permanently islanded campus should be reading.",
@@ -249,6 +269,18 @@
     "conversion stages",
     "power conversion stage"
    ]
+  },
+  {
+   "slug": "coupling-choke",
+   "term": "coupling choke",
+   "aliases": [
+    "choke",
+    "line reactor",
+    "coupling reactor",
+    "series reactor",
+    "decoupling choke"
+   ],
+   "def": "A large iron-cored inductor placed in series between the utility and a rotary UPS's synchronous machine, or between the units of an isolated-parallel bus. Because an inductor resists sudden changes in current, it lets the machine hold its output voltage clean while the supply behind it dips, distorts or fails, and it limits how much of a fault on one side is felt on the other."
   },
   {
    "slug": "crps",
@@ -288,6 +320,16 @@
    ]
   },
   {
+   "slug": "dc-link",
+   "term": "DC link",
+   "aliases": [
+    "DC bus",
+    "intermediate DC bus",
+    "DC-link"
+   ],
+   "def": "The direct-current stage inside a static UPS between the rectifier and the inverter, where the battery connects. Every watt the load draws in double conversion passes through it as DC, which is why the batteries can take over without any switching event — they are already on the bus."
+  },
+  {
    "slug": "degradation",
    "term": "degradation",
    "def": "The gradual loss of a battery's usable capacity with cycling and age. Storage contracts manage it with capacity guarantees and planned augmentation."
@@ -319,6 +361,28 @@
    ]
   },
   {
+   "slug": "distributed-redundant",
+   "term": "distributed redundant",
+   "aliases": [
+    "catcher system",
+    "block redundant",
+    "distributed-redundant",
+    "catcher"
+   ],
+   "def": "UPS topologies that reach N+1 or better without doubling everything. In a block-redundant or catcher design a spare UPS system stands ready to take any block's load through static transfer switches; in a distributed-redundant design each load is fed from two of several systems so any one can fail. Both cost less than 2N, and both place the redundancy in a switching event that has to work."
+  },
+  {
+   "slug": "double-conversion",
+   "term": "double conversion",
+   "aliases": [
+    "double-conversion",
+    "online double conversion",
+    "online UPS",
+    "true online"
+   ],
+   "def": "The UPS mode in which all power is rectified to DC and re-made as AC by the inverter, continuously, so the load always sees a synthesized waveform and never the raw supply. It is the highest grade of protection — VFI in the IEC classification — and costs a few percent of every megawatt-hour as conversion heat; eco-mode is the alternative that idles the conversion and accepts a transfer."
+  },
+  {
    "slug": "droop",
    "term": "droop",
    "def": "A governor setting that lets an engine's speed fall slightly as its load rises, so several engines sharing a bus each take a predictable share of the load instead of fighting over it. Its partner is isochronous control, which holds speed exactly constant and is given to one machine or to the paralleling controller so the bus frequency stays put.",
@@ -329,9 +393,32 @@
    ]
   },
   {
+   "slug": "drups",
+   "term": "DRUPS",
+   "aliases": [
+    "diesel rotary UPS",
+    "diesel-rotary UPS",
+    "diesel rotary uninterruptible power supply",
+    "dynamic diesel UPS",
+    "diesel dynamic UPS"
+   ],
+   "def": "Diesel rotary uninterruptible power supply: a rotary UPS whose flywheel and synchronous machine share a shaft line with a diesel engine through a clutch. When the supply fails the flywheel carries the load for the seconds the engine needs to start and clutch in, so one machine does the work of UPS, transfer switch and generator — with no battery and no separate transfer."
+  },
+  {
    "slug": "duration",
    "term": "duration",
    "def": "How long a storage plant can discharge at full power (energy divided by power, MWh ÷ MW). Duration decides which grid jobs a battery can do — most US grid-scale projects run a few hours."
+  },
+  {
+   "slug": "eco-mode",
+   "term": "eco-mode",
+   "aliases": [
+    "ECO mode",
+    "economy mode",
+    "eco mode",
+    "energy-saver mode"
+   ],
+   "def": "Running a static UPS with the load on the raw supply through the bypass and the conversion stage idling in reserve, lifting efficiency toward 98–99 percent. The bet is that the unit can detect a supply failure and transfer back to the inverter inside the servers' hold-up time, for every kind of fault — which is exactly what the mode's critics doubt."
   },
   {
    "slug": "emergency-generator",
@@ -384,12 +471,56 @@
    "def": "The Texas grid operator. An energy-only market with its own interconnection process — faster to connect, more volatile to operate in — which is why so much US storage and data-center buildout lands in Texas."
   },
   {
+   "slug": "excitation",
+   "term": "excitation",
+   "aliases": [
+    "field excitation",
+    "exciter",
+    "excitation system"
+   ],
+   "def": "The DC current fed to a synchronous machine's rotor winding to create its magnetic field. Raising it lifts the output voltage and the reactive power the machine supplies; the automatic voltage regulator adjusts it continuously, and it is how a rotary UPS or a synchronous condenser holds voltage through a disturbance."
+  },
+  {
+   "slug": "fault-current",
+   "term": "fault current",
+   "aliases": [
+    "short-circuit current",
+    "fault-current contribution",
+    "short circuit current",
+    "prospective fault current"
+   ],
+   "def": "The current that flows into a short circuit before a breaker clears it — many times the normal load current. A protection scheme needs enough of it to be sure the right breaker trips fast: a rotating machine delivers a large surge from its stored magnetic energy, while an inverter can supply only a little more than its rating, which changes how the downstream protection must be designed."
+  },
+  {
    "slug": "feoc",
    "term": "FEOC",
    "def": "Foreign entity of concern: a US legal designation (tied to China, Russia, Iran, and North Korea) that disqualifies projects and products with too much such involvement from federal tax credits — a central bankability question for China-linked battery supply.",
    "aliases": [
     "foreign entity of concern"
    ]
+  },
+  {
+   "slug": "flywheel",
+   "term": "flywheel",
+   "aliases": [
+    "flywheel energy storage",
+    "kinetic energy storage",
+    "flywheel UPS",
+    "kinetic UPS",
+    "flywheels"
+   ],
+   "def": "Energy stored as rotation — half the moment of inertia times speed squared — in a heavy rotor or a fast light one on low-friction bearings, sometimes in a vacuum. It gives very high power for seconds, essentially unlimited cycles and no chemical aging, and its state of charge is simply its speed. In a UPS it covers a generator start; as a battery for hours it is the wrong tool."
+  },
+  {
+   "slug": "frequency-converter",
+   "term": "frequency converter",
+   "aliases": [
+    "static frequency converter",
+    "400 Hz",
+    "400 Hz ground power",
+    "50/60 Hz converter"
+   ],
+   "def": "Equipment that turns power at one frequency into power at another — 50 Hz to 60 Hz between grids and ships, or grid power to the 400 Hz that aircraft systems use on the ground. Rotary versions do it with a motor-generator, static versions with a rectifier and an inverter."
   },
   {
    "slug": "front-of-meter",
@@ -495,6 +626,18 @@
    ]
   },
   {
+   "slug": "iec-62040-3",
+   "term": "IEC 62040-3",
+   "aliases": [
+    "VFI",
+    "VFD",
+    "UPS classification",
+    "VFI-SS-111",
+    "voltage and frequency independent"
+   ],
+   "def": "The international standard that classifies a UPS by how much of the supply's misbehavior reaches the load: VFD (voltage and frequency dependent — the supply passes through until it fails), VI (voltage independent — line-interactive, voltage corrected), and VFI (voltage and frequency independent — the load is fully isolated, as in double conversion or a rotary machine). Codes such as VFI-SS-111 add the output-waveform and transient grades so two makers' promises can be compared."
+  },
+  {
    "slug": "ieee-519",
    "term": "IEEE 519",
    "def": "The standard that sets harmonic-distortion limits at the point of common coupling — the property line where a facility's electrical system meets the utility. It draws the boundary so one customer's distorted loads cannot degrade a neighbor's power quality, and compliance is measured at that point rather than assumed.",
@@ -502,6 +645,15 @@
     "point of common coupling",
     "PCC"
    ]
+  },
+  {
+   "slug": "igbt",
+   "term": "IGBT",
+   "aliases": [
+    "insulated-gate bipolar transistor",
+    "IGBTs"
+   ],
+   "def": "Insulated-gate bipolar transistor: the silicon switch that static UPS inverters, drives and grid inverters have been built on for three decades — fast enough to chop DC into a clean sine wave thousands of times a second and rugged enough for megawatts. Silicon carbide is displacing it where the last points of efficiency matter."
   },
   {
    "slug": "independent-engineer",
@@ -564,6 +716,18 @@
    ]
   },
   {
+   "slug": "isolated-parallel-bus",
+   "term": "isolated parallel bus",
+   "aliases": [
+    "IP bus",
+    "isolated-parallel",
+    "IP system",
+    "isolated parallel system",
+    "isolated parallel"
+   ],
+   "def": "A UPS topology in which many units are joined in a ring through chokes: in normal operation each unit feeds its own load, and when one fails its load is picked up by all the others sharing through the ring rather than by one dedicated spare. It reaches N+1 with one spare across a very large block instead of doubling the plant, and it is the shape in which rotary UPS is sold at tens of megawatts."
+  },
+  {
    "slug": "itc",
    "term": "ITC",
    "def": "The US investment tax credit: a percentage of a storage or solar project's cost returned as a federal tax credit. A core driver of BESS project economics, with bonus tiers for domestic content.",
@@ -611,12 +775,30 @@
    ]
   },
   {
+   "slug": "low-voltage",
+   "term": "low voltage",
+   "aliases": [
+    "LV",
+    "low-voltage"
+   ],
+   "def": "Utilization-level voltage — under about a thousand volts, the 400 or 480 V that feeds distribution boards, UPS units and the racks. Most UPS equipment has historically lived here; moving it up to medium voltage is one of the live arguments in gigawatt campuses."
+  },
+  {
    "slug": "ltsa",
    "term": "LTSA",
    "def": "Long-term service agreement: the multi-year operations-and-maintenance contract through which a supplier delivers availability guarantees on the equipment it sold. Suppliers generally will not extend long-dated warranties without holding it, so the LTSA and the warranty are negotiated as one package.",
    "aliases": [
     "long-term service agreement"
    ]
+  },
+  {
+   "slug": "magnetic-bearing",
+   "term": "magnetic bearing",
+   "aliases": [
+    "magnetic bearings",
+    "active magnetic bearing"
+   ],
+   "def": "A bearing that holds a shaft in place with controlled magnetic fields instead of contact, so a high-speed flywheel can spin with almost no friction and no lubrication. It is what lets a small, light rotor store useful energy at tens of thousands of rpm — and it needs control power of its own."
   },
   {
    "slug": "major-source",
@@ -650,6 +832,14 @@
     "synthetic minor",
     "minor-source"
    ]
+  },
+  {
+   "slug": "mtbf",
+   "term": "MTBF",
+   "aliases": [
+    "mean time between failures"
+   ],
+   "def": "Mean time between failures: the average running time between one failure and the next across a population of a device, calculated from its parts count or from field data. It is a statement about a fleet rather than a promise about one unit, and it says nothing about how long the repair takes — which is why availability also needs the mean time to repair."
   },
   {
    "slug": "n-plus-1",
@@ -799,6 +989,16 @@
    ]
   },
   {
+   "slug": "power-conditioning",
+   "term": "power conditioning",
+   "aliases": [
+    "conditioning",
+    "power quality conditioning",
+    "voltage conditioning"
+   ],
+   "def": "Cleaning up the supply before it reaches the load — holding voltage and frequency steady, removing harmonics, riding through sags and spikes — as distinct from replacing the supply when it fails. Every UPS does some of it; a double-conversion or rotary unit does all of it, all the time."
+  },
+  {
    "slug": "power-factor",
    "term": "power factor",
    "def": "The ratio of useful power to apparent power — how much of the current a facility draws actually does work. The rest is reactive power: magnetizing current sloshing between source and load, doing nothing but occupying wires and transformers, which is why utilities bill penalties when it runs low.",
@@ -862,6 +1062,17 @@
     "fault ride-through",
     "ride-through capability"
    ]
+  },
+  {
+   "slug": "rotary-ups",
+   "term": "rotary UPS",
+   "aliases": [
+    "rotary uninterruptible power supply",
+    "dynamic UPS",
+    "rotating UPS",
+    "motor-generator UPS"
+   ],
+   "def": "A UPS built around a rotating synchronous machine rather than power electronics: the machine, fed through a choke, generates a clean sine wave for the load, and a flywheel on its shaft supplies the energy when the input fails. It has no battery, delivers a large fault current, isolates the load from harmonics on the supply and connects readily at medium voltage; its costs are bearings, maintenance and a few points of efficiency."
   },
   {
    "slug": "round-trip-efficiency",
@@ -1034,6 +1245,28 @@
    ]
   },
   {
+   "slug": "static-bypass",
+   "term": "static bypass",
+   "aliases": [
+    "bypass",
+    "maintenance bypass",
+    "static switch",
+    "wrap-around bypass"
+   ],
+   "def": "The path around a UPS's conversion stages that connects the load straight to the raw supply — automatically, through a solid-state static switch, when the UPS overloads or fails, or manually, through a maintenance bypass, so the unit can be serviced. While the load is on bypass it is unprotected: the stored seconds are not available."
+  },
+  {
+   "slug": "static-ups",
+   "term": "static UPS",
+   "aliases": [
+    "static uninterruptible power supply",
+    "solid-state UPS",
+    "battery UPS",
+    "electronic UPS"
+   ],
+   "def": "A UPS built from power electronics — a rectifier, a DC link with batteries on it and an inverter — with no moving parts except fans. It is the incumbent form in data centers: modular, efficient, factory-built at low voltage, and dependent on a battery room whose chemistry, life and fire code are a design in themselves."
+  },
+  {
    "slug": "supercapacitor",
    "term": "supercapacitor",
    "def": "A device storing energy as separated electric charge rather than as a chemical reaction. It holds far less energy than a battery of the same size but takes it in and gives it back within milliseconds, over and over, for many years — which makes it the right part for absorbing a spike and the wrong one for riding out an outage.",
@@ -1072,6 +1305,18 @@
     "synchronous condensers",
     "syncon"
    ]
+  },
+  {
+   "slug": "synchronous-machine",
+   "term": "synchronous machine",
+   "aliases": [
+    "synchronous motor-generator",
+    "motor-generator",
+    "synchronous generator",
+    "synchronous motor",
+    "motor generator"
+   ],
+   "def": "An AC machine whose rotor turns in exact step with the grid frequency — 1,500 or 1,800 rpm for a four-pole machine at 50 or 60 Hz — carrying a magnetic field set by its excitation. Driven one way it is a motor, the other way a generator; in a rotary UPS it does both, and because its output is made by a spinning magnet rather than by switching, the waveform is inherently a sine wave."
   },
   {
    "slug": "take-or-pay",
@@ -1132,7 +1377,7 @@
   {
    "slug": "ups",
    "term": "UPS",
-   "def": "Uninterruptible power supply: a battery-backed power stage that carries the load through grid disturbances until generators start. In data centers it sits between utility power and the IT load.",
+   "def": "Uninterruptible power supply: a power stage backed by stored energy — a battery string or a spinning flywheel — that carries the load through grid disturbances until generators start. In data centers it sits between utility power and the IT load.",
    "aliases": [
     "uninterruptible power supply"
    ]
@@ -1155,6 +1400,17 @@
     "VSG",
     "virtual synchronous machine"
    ]
+  },
+  {
+   "slug": "vrla",
+   "term": "VRLA",
+   "aliases": [
+    "valve-regulated lead-acid",
+    "lead-acid battery",
+    "VRLA battery",
+    "sealed lead-acid"
+   ],
+   "def": "Valve-regulated lead-acid: the sealed lead-acid battery that backed data-center UPS for decades — cheap per kilowatt for a few minutes of runtime, but heavy, sensitive to heat, good for only a few hundred deep cycles and replaced every few years. Lithium-ion has been displacing it in new UPS installations on life and footprint."
   },
   {
    "slug": "vrm",

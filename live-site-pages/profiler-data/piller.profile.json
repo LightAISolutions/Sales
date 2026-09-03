@@ -1,0 +1,2160 @@
+{
+ "schemaVersion": 7,
+ "slug": "piller",
+ "name": "Piller Group GmbH (Piller Power Systems)",
+ "shortName": "Piller",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.piller.com",
+ "headquarters": "Osterode am Harz, Germany",
+ "founded": 1909,
+ "employees": "Around 1,000 worldwide, about 650 of them at Osterode and Bilshausen (company statements 2019–2026; NW-IHK, Feb 2026)",
+ "ownership": {
+  "type": "subsidiary"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Piller is Europe's largest maker of rotary and diesel-rotary UPS and, through Active Power, of flywheel UPS — a franchise that lost the hyperscale segment to battery-static UPS over the past decade and has re-entered the AI buildout from the generation side instead: its SHIELDX kinetic stabilizer now ships inside every behind-the-meter gas-engine plant its sister company Bergen Engines sells to US AI data centers, more than 3 GW of them signed by June 2026, and the binding constraint is the Osterode and Bilshausen factories, which are being taken from about 100 to about 400 large systems a year by the end of 2027. BACKGROUND. Founded in Hamburg in 1909 by Anton Piller, in Osterode am Harz since 1919, wholly owned by the privately held UK engineering group Langley Holdings plc since December 2004 (Piller's own history page says 2005), with the former NASDAQ-listed flywheel maker Active Power of Austin, Texas acquired for a nominal price plus assumed liabilities in November 2016. Products: UB-V and UNIBLOCK UBT+ rotary UPS (1.0–3.24 MW per module, paralleled to 40–100 MW), UBTD+ diesel rotary UPS (DRUPS), the Isolated Parallel bus, POWERBRIDGE kinetic energy storage to 60 MJ+ per unit, the CleanSource flywheel UPS family, the M+ Series modular static UPS launched in 2024 to re-enter the segment, aircraft ground power and naval frequency converters, and since August 2025 SHIELDX Dynamic Power Stabilization for islanded AI campuses. Per the Northeim chamber of commerce (Feb 2026), Piller's 2025 revenue was €332M (+28%) on order intake of €370M (+24%); Langley itself discloses only its Power Solutions division (Bergen Engines, Piller, Marelli Motori) — 2025 revenue €793M, orders on hand €1,952M, 2026 forecast €1,346M — and states Piller set records for revenue, profit and order intake in 2023, 2024 and 2025. There is no analyst consensus: Langley is unlisted and its own forward statements are the only expectations on record.",
+ "ecosystemRole": "We assess Piller as the one vendor in this corpus whose product answers the UPS-room question with a rotating machine rather than power electronics and a battery — the reference for how rotary, diesel-rotary and flywheel UPS differ from the static units Vertiv, Schneider Electric, Eaton and ABB sell, and for what the isolated-parallel bus buys at tens of megawatts. Basis: company product literature and Uptime Institute's account of NEXTDC's Tier IV IP-bus sites. For the AI campus, its relevance has shifted from the hall to the fence line: SHIELDX is a flywheel-and-synchronous-machine stabilizer sold as one unit per 12 MW Bergen Engines gen-set to hold frequency through GPU load steps on islanded plants, which places it beside — and in competition with — the battery buffers this corpus tracks (ON.energy's medium-voltage BESS at the same Crusoe campuses, Tesla Megapacks at xAI per SemiAnalysis). Crusoe, Nebius and Tesla are covered customers; the static-UPS majors are competitors on the hall side; Caterpillar distributed Active Power flywheels as the Cat UPS from 2000 and is now a rival prime-mover OEM to Bergen; Bloom Energy's fuel cells are reported to have displaced the gas-engine plan at the Vineland site third parties tie to the first 400 MW SHIELDX order.",
+ "productsAndServices": [
+  {
+   "name": "SHIELDX™ Dynamic Power Stabilization — kinetic stabilizer for islanded AI campuses",
+   "category": "AI load stabilization",
+   "description": "Launched 21 August 2025 and, per Langley's 2026 interim, incorporated in every behind-the-meter plant the Power Solutions division sells. Per Piller's product page it 'brings together two complementary battery-free technologies': 'A high-inertia electromechanical stabilizer providing continuous voltage and frequency conditioning' and 'Ultra-fast, bi-directional kinetic power modules that absorb or inject active power in real time', in 'A modular, scalable architecture positioned between generation and the data-centre electrical distribution'. Built on Piller's Dynamic Power Conditioning and Stabilization (DPCS) technology — the UB-V synchronous machine, coupling choke and POWERBRIDGE flywheel lineage. Stated performance: voltage and frequency held to ±1%, sub-millisecond response, a reference ratio of one SHIELDX per 12 MW Bergen–Marelli gen-set 'against 25–30% instantaneous load steps', scalable 'to cover 100% load steps with increased ratios', 'true short-circuit contribution, high fault-clearing capability and zero energy storage degradation', 'engineered to meet TIER IV fault-tolerance standards and up to 99.999% uptime'. Sector page: 'large-scale load stabilization (50 MW to 1 GW+)'. No per-module MW or MJ rating, efficiency, harmonic figure or footprint is published.",
+   "highlights": [
+    "Embedded in more than 3 GW of Bergen Engines behind-the-meter orders signed by June 2026: Crusoe (438 MW contract plus 310 MW LOI, June 2026), Liberty Energy (45 × 11.2 MWe, 500 MW+, May 2026) and E-Finity Distributed Generation (36 × 11.2 MW, 400 MW, November 2025) — every counterparty release names Piller",
+    "Langley, February 2026: 'AI load profiles are being found to wreak havoc with battery solutions, whereas Piller flywheel technology handles the erratic profiles caused by AI compute with ease' — the company's stated rationale; SemiAnalysis independently describes Bergen selling engines 'with flywheels from a vendor under the same parent company' that inject or absorb real power for 5–30 seconds",
+    "Built-to-stock: 'shipment in under 4-6 weeks' per company; a live 12.5 MW Bergen engine plus SHIELD-X demonstration at Osterode is planned for customer tours in autumn 2026",
+    "Positioned by the company against oversized generation ('enables right-sizing rather than oversizing'), against BESS ('Avoids C-rate limits, thermal stress, and degradation cycles') and against static UPS, which 'stabilise the load, not the power source'"
+   ],
+   "positioning": "The rotating-mass answer to GPU load swings on islanded gas-engine plants, competing with battery buffers — ON.energy's medium-voltage 'AI UPS' BESS at the same Crusoe campuses and Tesla Megapacks at xAI (per SemiAnalysis) — rather than with static UPS. Its advantages as stated are real inertia, fault current and no storage degradation; its limit is that a flywheel holds seconds, so the battery keeps the duration role. The only rotary stabilizer of this kind in the corpus; the peer set (Hitec, Rolls-Royce Solutions Liège mtu Kinetic PowerPack, Hitzinger) has announced nothing comparable in the AI-plant market.",
+   "soldThrough": "Direct through Piller subsidiaries, and bundled into Langley Power Solutions' behind-the-meter plant sales led by Bergen Engines Americas (ShieldX@piller.com / PowerOn@langleyholdings.com); standard off-the-shelf product 'available to the sector for both our own BTM solution and others'.",
+   "targetSegments": [
+    "AI data centers on behind-the-meter islanded generation (100 MW to multi-GW campuses)",
+    "Islanded plants with gas turbines, high-speed gen-sets or hybrid configurations",
+    "Grid-tied facilities requiring stabilization; retrofit applications"
+   ],
+   "roadmap": "Plant-level: contract to first shipment under 12 months, power-on in 18 months (company); Bergen B36:45V20 12.5 MW engines sold out until Q2 2028; ~€100M divisional capex through 2028 with Piller 'increasing capacity accordingly'. Product-level: no published datasheet or per-module rating yet; the spelling alternates between SHIELDX™ and SHIELD-X in company texts."
+  },
+  {
+   "name": "UB-V Series rotary UPS — fifth-generation UNIBLOCK™, 1.0–3.24 MW per module",
+   "category": "Rotary UPS",
+   "description": "Electrically coupled rotary UPS launched 14 January 2020 in data-centre and industrial variants. Per company pages and the 2021 industrial brochure: '1100kVA 1.0MW to 3600kVA 3.24MW' per module, 'in both battery and kinetic energy storage versions', 'paralleling up to 100MW / 115MVA', 'Available in low or medium voltage levels'; 'on-line efficiency of up to 98% at 100% load and 97% at 50% load when compared with static UPS which typically operate around 96.3% efficiency at both 50% and 100% loads' (IEC 62040-3); 'Wide input voltage tolerance (up to -50%)' — 'can compensate for voltage dips of up to -50% without recourse to stored energy or diesel generators'; 'Handling of load steps up to 100%'; 'no power capacitors or electric fans', MTBF '5 times' that of static UPS, 'off-line service intervals as little as once every five years' with e-VENTLOG remote monitoring. The 'Power of 10' IPCS module combines 'four 2.5MW UB-V Series modules' with two POWERBRIDGE PB21 each behind a '10MW decoupling choke', holding a 20 kV microgrid to '± 8 %' voltage and '± 1 %' frequency with 'more than ten seconds' of ride-through.",
+   "highlights": [
+    "Company claim: 'up to 3.24MW of UPS in a single module' — 'a real alternative to increasingly sprawling multiple static UPS solutions', sized as a 'single-entity building block' matching 3 MW-class IT strings so 'multi-module paralleling' is eliminated",
+    "Within twelve months of launch 'evaluated or commissioned to provide more than 1.3GW' across 22 projects at 1.2–3.4 MW each (company webinar release, 2020); named installs include NEXTDC S3/M3 (IP-bus with mtu engines), Helmholtz-Zentrum Berlin (6,750 kW at 10 kV, Nov 2024) and a US semiconductor fab (five 2,700 kW units with PB60 flywheels at 24 kV, >12 MW, no batteries)",
+    "Per the charakter.me employer profile (Apr 2026), 3.2 MW systems are in series production for AI load profiles; Seidel: 'the AI boom brings us to our capacity limits'",
+    "The 2020 roadmap targeted '5.0MW single-entity medium voltage solutions planned by 2025' and '10.0MW solutions… by decade's end' with Marelli Motori; the 2023 Power of 10 delivers 10 MW as four 2.5 MW modules under one choke — no first-party confirmation that a 5 MW single machine has shipped"
+   ],
+   "positioning": "The high end of the rotary UPS market — Hitec Power Protection (Air Water), Rolls-Royce Solutions Liège (mtu Kinetic PowerPack, 1,250–3,000 kVA units) and Hitzinger are the named peers by product class; against static UPS the company's pitch is fewer modules per megawatt, no capacitors or fans, fault clearing and harmonic isolation, and a medium-voltage option, conceded against static's finer scaling and multi-vendor batteries (Schneider Electric White Paper 222).",
+   "soldThrough": "Piller subsidiaries in eleven countries plus agents and distributors in about 38 more; Piller Unity Service Pack service contracts and e-VENTLOG remote monitoring.",
+   "targetSegments": [
+    "Cloud hyperscale, wholesale colocation and large enterprise data centers",
+    "Semiconductor fabs, photomask and pharmaceutical plants",
+    "Research (synchrotrons, HPC), broadcasting, airports, healthcare, microgrids"
+   ],
+   "roadmap": "Bilshausen expansion (€20M, announced May 2026) to lift output from about 100 to about 400 large systems a year by end-2027, adding 150 jobs; the 5 MW single-entity MV machine remains a stated target without a shipped reference."
+  },
+  {
+   "name": "UNIBLOCK™ UBT+ rotary UPS, UBTD+ diesel rotary UPS (DRUPS) and the DeRUPS™ configuration",
+   "category": "Rotary and diesel-rotary UPS",
+   "description": "The core platform since the 1970s. UBT+ per the 2018 brochure: 'Single machine sizes from 500kW up to 2700kW'; 'Paralleling up to 40MW' at medium voltage, while 'At low voltages, simple paralleling is limited to about 5MW but there are configurations using fault isolated parallel techniques that allow this to be increased to up to 20MW'; 'Highest efficiency, up to 97% with energy store connected'; 'Battery or flywheel-backed versions' — batteries manage 'complete utility failure up to 30 minutes'; '99% input/output harmonic isolation'; 'Virtual unity input power factor'; rides 'voltage sags to 50% of nominal' and 'brownouts to 30% without even using the stored energy'; 'handles 100% non-linear loads as well as 100% step loads'; 'Life expectancy… easily exceeds 20 years'. The motor-generator and coupling choke act 'as a rotating isolation transformer', 'power capacitors are eliminated', and the machine is 'inherently capable of clearing short circuit faults'. UBTD+ couples the same machine to a diesel engine: '500kW up to 40MW', low and medium voltage, 'adjustable diesel start delay (seconds to minutes)', 'critical and emergency supplies can be isolated or combined'; named sizes include UBTD+ 2700 at 2,250 kW and 35 kV (American Regent, 2024) and sixteen UBTD units totalling 34.4 MVA on one IP system (a global bank, 2025). DeRUPS™ 'integrates external diesel generators with a UNIBLOCK™ UBT+ Rotary UPS through an intelligent control system' so 'Generator count need not match UPS unit quantity' and 'Loads can operate from gensets while UPS undergoes maintenance', with 'simple mechanical design without freewheel clutches'.",
+   "highlights": [
+    "Installed base per company: 'more than 6000 high power UPS units' and 'over 7000 kinetic energy storage devices' (2021), technicians 'taking care of over 9000 units of high power UPS equipment in over 40 countries'; the 2008 'world's largest single Diesel UPS (3000 kVA)'",
+    "The reference installations the company leads with are institutional: 'from the Federal Reserve and the NYSE, to the Bank of England, the LSE and the CIA' (Langley brochure 2026), a classified US Government data center at Langley, Virginia (2017, repeat order Feb 2026), NYC 911 (eight EC UBT+ 675 battery modules, >5 MW), General Motors (eight MV UNIBLOCK 3000 kVA with two 21 MJ POWERBRIDGE each)",
+    "Medium-voltage direct connection is the differentiator the static majors have only recently answered: installations at 10 kV, 20 kV, 24 kV and 35 kV are company-documented; Rolls-Royce's competing dynamic UPS is likewise offered 'to 15 kV class' (Consulting-Specifying Engineer, 2024)",
+    "Odense University Hospital (handover mid-2025) is described by the company as 'Scandinavia's second largest battery-free DRUPS system'"
+   ],
+   "positioning": "Where a buyer wants one machine per block with no battery room, medium-voltage connection and large fault current — finance, government, semiconductor, Tier IV colocation — UNIBLOCK is the incumbent; the trade against it, quantified in Schneider Electric's White Paper 222 (2016), is efficiency at part load ('one of the top DRUPS in market' peaking ~92% against static up to 97.6%), 8–12 s of flywheel ride-through against minutes of battery, single-vendor overhaul, and non-modular scaling. Langley concedes hyperscale 'moved away from Piller rotary technology' toward battery-static UPS.",
+   "soldThrough": "Direct via Piller subsidiaries and distributors; rental and containerised units through Piller's hire fleet; long-term service through the Unity Service Pack.",
+   "targetSegments": [
+    "Financial institutions, exchanges and government facilities",
+    "Colocation and enterprise data centers, especially IP-bus Tier IV designs",
+    "Hospitals, airports, broadcasting and continuous-process industry"
+   ],
+   "roadmap": "No new UBT+/UBTD+ ratings announced; the platform's growth path is the UB-V generation and the Bilshausen capacity step-up."
+  },
+  {
+   "name": "Isolated Parallel (IP) bus system",
+   "category": "UPS topology",
+   "description": "Piller's trademarked ring topology, per its product page: 'combines isolated-redundant and parallel-redundant UPS configurations offering outstanding maintainability'; 'fault tolerant and concurrently maintainable'; 'Modules operate at approximately 97% efficiency'; the 'system naturally balances in all conditions and avoids unnecessary switchgear operations under fault conditions'; 'Low Voltage deployment up to 20MW' (medium voltage to 40 MW per the UBT+ brochure); 'Over 500MVA of IP Bus systems deployed globally to date'; 'Tier IV Scheme approved by Uptime Institute'. Independent account (Uptime Institute Journal, 2015): NEXTDC S1 Sydney ran 12+1 continuous-rated 1,336 kW Piller DRUPS on an IP bus (11.5 MW, later 14+1 for 13.8 MW), chosen to eliminate batteries, static switches and 'complex switching', giving N+1 'without switching' at efficiency 'approaching 98%'.",
+   "highlights": [
+    "NEXTDC B2 Brisbane: 'World first – using Piller IP-Bus technology, the Uptime Institute awards Asia Pacific's first Tier IV Certification of Constructed Facility' (company); NEXTDC's S1, S2, S3, M1 and M3 pages document Piller rotary UPS with Penske and mtu engines",
+    "ABB, introducing a ring bus for static UPS in 2014, stated the topology 'has traditionally only been deployed with rotary UPS systems' because static units lacked fault-current capability and risked DC-link back-feed — the fault-current argument for rotary, made by a static vendor",
+    "A 'leading global bank' in Europe doubled its Piller IP system from eight UBTD units (17.2 MVA, since 2012) to sixteen (34.4 MVA) in 2025; Telehouse Frankfurt Building M lists '3 x DRUPS in IP-Bus system configuration' (vendor implied, not stated)"
+   ],
+   "positioning": "The alternative to catcher (block-redundant) and distributed-redundant static schemes: redundancy in choke impedance rather than in a static transfer switch. Its home is the operator who wants Tier IV without 2N and without a battery room; the static majors answer with ring-bus variants of their own (ABB, 2014) and, at medium voltage, ABB's HiPerGuard.",
+   "soldThrough": "Engineered as a system by Piller with the UPS order; consulting engineers (e.g. Hurley Palmer Flatt on the 2020 webinar series) specify it.",
+   "targetSegments": [
+    "Tier III/IV colocation and enterprise data centers",
+    "Banks and exchanges",
+    "Any UPS block from ~5 MW to 40 MW that must be concurrently maintainable"
+   ],
+   "roadmap": "None announced; the IPCS 10 MW module for microgrids (four UB-V units behind one 10 MW choke) is the same idea applied to generation."
+  },
+  {
+   "name": "POWERBRIDGE™ kinetic energy storage (PB6+, PB21, PB60+) and battery options",
+   "category": "Stored energy",
+   "description": "The flywheel behind UNIBLOCK, UB-V, CPM and SHIELDX. Per company pages: 'kinetic energy storage ranging from 3.6MJ up to 60MJ+ per unit'; the PB60+ is 'the World's largest, commercially available kinetic energy store, delivering from 3MJ to over 60MJ… and can even provide 1MW of ride-through power for over 60 seconds' and 'can deliver power above 3MW'; 'vertically mounted flywheel and generator utilising magnetic bearing technology'; 'Bearings are greased automatically from a reservoir'; 'The unit operates in an inert environment'; 'Life time > 20 years'; 'Floor Space Up to 90% can be saved when compared to batteries'; 'air conditioning is not required'; and 'a POWERBRIDGE™ will absorb energy at the same rate as it can deliver… can stabilize a diesel or natural gas engine'. Deployed pairs: two 21 MJ units per MV UNIBLOCK at General Motors, two PB21 per 2.5 MW UB-V in the Power of 10 module, PB60+ units giving 3,600 kW at PT Santos Jaya Abadi. Battery alternative: UPS 'designed for both conventional lead-acid batteries and lithium-ion batteries' — a 3.6 MW German data-centre UPS used LFP with UL 9540A certification for 7 minutes of bridging; the M+ Series offers Li-ion cabinets from 250 to 1,200 kW. No rotational speed is published for POWERBRIDGE.",
+   "highlights": [
+    "Company positioning: 'no toxic batteries', 'stored energy levels are certain', 'no environmental disposal issue'; the UBT+ brochure claims '3 times longer bridging time from Piller POWERBRIDGE™' than earlier flywheels",
+    "Piller's history page dates '21 MWs kinetic energy storage' development to 2008–2014 and the Magnetic Bearings Technologies acquisition to 1992 — the bearing technology that lets the rotor run in an inert enclosure",
+    "The bidirectional absorb-and-inject capability is what SHIELDX productises for AI load steps"
+   ],
+   "positioning": "Against VRLA and lithium-ion strings on the seconds-to-a-generator-start job: no battery room, no fire-code review under NFPA 855, no replacement cycle, a state of charge read from speed; against them on duration it concedes minutes. Active Power's CleanSource flywheels (6.2 and 10.2 MJ, 10,000 and 7,700 rpm) are the group's low-voltage counterpart.",
+   "soldThrough": "Sold with the UPS or stabilizer it backs; also rented in Piller's hire fleet.",
+   "targetSegments": [
+    "Every rotary UPS and SHIELDX installation",
+    "Microgrid and engine stabilization",
+    "Sites where battery rooms are unwanted (semiconductor, research, hospitals)"
+   ],
+   "roadmap": "None announced beyond the PB60+ already in service."
+  },
+  {
+   "name": "Active Power CleanSource® flywheel UPS family (PLUS SMS/MMS, XT, HD, POWERHOUSE, GenSTART)",
+   "category": "Flywheel UPS (low voltage)",
+   "description": "Austin, Texas — 'a stand-alone business within the Piller group' since November 2016, with a '135,000+ square feet' ISO 9001 plant and 'annual production capacity exceeding 300MW'. CleanSource PLUS MMS per the June 2022 datasheet: modules of 333/667/1,000/1,333 kW (370–1,480 kVA) expandable to 2,667 kW, 'Integrated Steel Flywheel spinning at 10,000RPM', flywheel run time '100% 18s, 75% 24s, 50% 35s, 25% 62s', 'Flywheel Recharge Time < 3 min (nominal) at 65kW', 'Efficiency – Energy Storage Online 98%', 'Transient +/-1% within 50 mSec for 100% load step', UL 1778 listed; SMS single modules 333 kW (480 V) / 300 kW (CE) with '6.2 MJ' and 'Up to 2 minutes' load-dependent. CleanSource HD: '750kVA/675kW', 'STORES 10.2 MJ OF ENERGY', '7,700RPM', run time 15 s at 100% load to 56 s at 25%, 'Up to 7 UPS systems can be paralleled… supporting over 4.725MW', 'UPS Efficiency 96.5% @ 50% load up to 98% @ 100% load', 65 kA withstand, two cabinets on '35 square feet'. CleanSource XT: 225–250 kW modules to 2,000 kW. POWERHOUSE: '1,333kW OF MODULAR UPS IN A STANDARD ISO CONTAINER', customisable '333kW up to 2,667kW', −25 °C to 50 °C, 'just 4.4kW to spin all four wheels', '97%' at 50% load, TCO claimed '32% less on day one and 36% lower over a 20 year lifespan' versus static UPS with lithium. GenSTART supplies '1725 Cold Cranking Amps' from the UPS output to a generator starter, replacing starter batteries.",
+   "highlights": [
+    "Nebius Group, Mäntsälä, Finland: 'Over 200 CleanSource® UPS units' for a 75 MW expansion (June 2025), built in Austin with Piller Germany; per Langley's 2025 report 'the same customer placed a much larger order for an AI data centre in the USA for delivery this year' and Active Power's 2026 output is 'increasing four-fold on 2025' — the group's largest AI-hall reference and the one that lands in the corpus's neocloud set",
+    "Named users per Active Power: Tesla (two CleanSource PLUS MMS at 2.4 MW each plus a 333 kW SMS, 'eight additional 4.8MW installations planned'), Mayo Clinic, Parkland Hospital, Stratasys, Albuquerque Airport; Langley: Active Power was 'around 10% of Piller Group revenues and profits' in 2023 and 2024",
+    "Independent context: Active Power's FY2015 10-K showed $57.4M revenue and a $6.5M net loss; the 2016 sale to Langley's Piller USA was 'for a nominal purchase price, plus the assumption of all debt, liabilities' and framed by its CEO as preferable to 'a costly liquidation process'; Caterpillar had distributed its flywheels as the 'Cat UPS' from 2000 (renewed 2008)",
+    "OSHPD/HCAI seismic pre-approval OSP-0829 (July 2025) for hospitals; 400 kW rooftop solar on the Austin plant (Jan 2025)"
+   ],
+   "positioning": "The low-voltage, modular flywheel answer to modular static UPS: 'clear alternative to modular static UPS systems reliant on battery storage', 'battery failures are the leading cause of UPS load loss' (company claims). It concedes minutes of autonomy to batteries and competes on footprint, no battery replacement, and TCO claims; flywheel-only rivals are VYCON/Calnetix, Amber Kinetics and Beacon Power, static rivals the top-five UPS majors.",
+   "soldThrough": "US customers direct from Austin; international customers 'through Piller's global network of sales and service subsidiaries'; Piller lists 'CleanSource® – Static UPS with Flywheel, 250 – 1200kW' in its own product menu.",
+   "targetSegments": [
+    "AI and enterprise data centers (Nebius, Tesla)",
+    "Healthcare (Mayo, Parkland — seismic pre-approval)",
+    "Industrial, transportation, defense, broadcasting"
+   ],
+   "roadmap": "Production 'four-fold on 2025' in 2026 (Langley interim); a 'much larger' US AI data-centre order from the Finland customer for 2026 delivery; no new model announced."
+  },
+  {
+   "name": "Critical Power Module (CPM) with flywheel — 225 kW to 2.4 MW",
+   "category": "Flywheel UPS (skid-mounted)",
+   "description": "Skid-mounted flywheel UPS built on POWERBRIDGE PB6+ storage. Per company pages and the 2016 datasheet: '225kW to 2.4MW (300/360kW modules scalable to 2400/2880kW)'; 'Efficiency above 96% at 25% load (IEC 62040-3)', efficiency that can 'approach 99% at full load' ('up to 99%* (*480V 60Hz without DC store)'), 'higher than 98%' in VFD mode; '100kA short circuit withstand'; 'Ambient up to 50°C for optimum use of free cooling'; 'Extended (10 year) major maintenance interval' — 'No substantial work is necessary within the first 10 years of service'; 'Unity input power factor (>0.99)'; 'Parallel capability up to 8 units'; five operating modes 'Mode 1 (VFI), Mode 2 (VI), Mode 3 (VFI2), Mode 4 (VFD), Mode 5 (ERM)' including an Enhanced Redundancy Mode; '380V-480V', '50 & 60Hz'; footprint '2450w x 900d x 1900h' mm per 300/360 kW module, 'up to 75% of the space normally taken up can be saved'.",
+   "highlights": [
+    "The product that brings IEC 62040-3 mode selection to a flywheel unit — the same VFI/VI/VFD dial static vendors sell, on kinetic storage",
+    "Company positioning: 'No Battery risk, no Battery replacement'; 'Ideal for rapid deployment' with PDUs on the skid"
+   ],
+   "positioning": "Sits between the CleanSource modules and the multi-megawatt UNIBLOCK machines: a containerable, low-voltage block for the 0.2–2.4 MW range where static modular UPS (Schneider Galaxy, Vertiv, Eaton) is the default.",
+   "soldThrough": "Piller subsidiaries and partners.",
+   "targetSegments": [
+    "Data centers and edge deployments",
+    "Manufacturing, healthcare, banking, communications, aviation, naval"
+   ],
+   "roadmap": "None announced."
+  },
+  {
+   "name": "Static UPS and static transfer switches — M+ Series (M+500, M+1200), APOSTAR, APOTRANS",
+   "category": "Static UPS",
+   "description": "The re-entry into the segment hyperscale took to battery-static UPS. M+500 launched 12–17 June 2024 at Data Centre World Frankfurt; M+1200 followed. Per company pages: '10 x 50 kW power modules delivering 500 kW of UPS per unit', 'Infinitely scalable', 'hot-swappable modular design', '250kW to 1200kW' per unit, efficiency 'up to 97%', 'wide input voltage and frequency tolerance', 'High short circuit capacity duration', with 'Lithium-ion Backup Battery' cabinets in a 'modular parallel design' with 'automatic module failure detection and exit', and three service tiers. Langley's account of why it exists (AR 2023): hyperscale 'has moved away from Piller's tailored solutions to a more commoditised cookie cutter approach… discussions were held with a major Chinese manufacturer of these volume produced hardware with a view to re-entering the segment. Piller's profound expertise… paired with cost-effective hardware'; AR 2024: 'The hyperscalers have moved away from Piller rotary technology in recent years in favour of battery-static UPS technology but after more than three years of development, Piller announced its return to the sector with its M+ battery-static UPS offering'. The product page names no OEM partner. APOSTAR static UPS covers 3–500 kVA ('true online UPS with VFI SS 1111 characteristic double voltage conversion'); APOTRANS is a thyristor static transfer switch from 25 to 1,600 A whose 'changeover occurs within milliseconds', 'available as standalone units or chassis based for integration directly into switchgear' for 'isolated redundancy or distributed redundancy'.",
+   "highlights": [
+    "Dr Zaki Slgini at launch: 'Our customers told us they wanted rapidly deployable hot-swappable high-density modular static UPS. With the M+500 Piller has responded'",
+    "'Available through Piller subsidiaries and partners in approximately 40 countries'; regional launch tour Sydney, Singapore, UK (Sep–Oct 2024)",
+    "No M+ Series order, customer or shipped volume has been published by the company or found in independent press as of September 2026"
+   ],
+   "positioning": "Head-on with Schneider Electric Galaxy VXL (500–1,250 kW frames, 125 kW modules), Vertiv Trinergy (1.5–2.5 MW blocks to 20 MW) and Eaton 9395X (to 1,700 kVA) — a late entrant at 500–1,200 kW per unit whose stated edge is Piller's service network and short-circuit capacity, and whose hardware provenance the company has not disclosed.",
+   "soldThrough": "Piller subsidiaries and partners; M+500Static@piller.com.",
+   "targetSegments": [
+    "Core and edge data centers",
+    "High-density rack environments"
+   ],
+   "roadmap": "The company said in October 2024 it would 'release the next iteration of the M+ Series in early 2025' — the M+1200 is now listed; nothing further announced."
+  },
+  {
+   "name": "Frequency converters, aircraft ground power, naval and shore power, and the Grid series",
+   "category": "Power conversion and grid stabilization",
+   "description": "The non-data-centre half of the catalogue. 50/60 Hz converters: static 'From 30kVA up to 500kVA', rotary motor-generator sets '125kVA to 2300kVA' with 'Up to 12% automatic line drop compensation'. 400 Hz aviation: 'Static APOJET AJS: 5kVA to 200kVA' solid-state converters with IGBT rectifiers ('THD at input current < 5%'), 'Rotary APOJET AJR: 20 to 150kVA', 'APOJET AJT Gatebox: 90-180kVA', APOCOIL cable coiling and 28 V DC ground power units at 400 and 600 A ('Peak current up to 2000A'); centralised ground power at King Abdulaziz International Airport, Jeddah 'at stands up to 450m from the converter room'. Naval and shore power: 'Frequency converters up to 1500kVA', 'Parallel operation up to 8 systems', 'Maximum reliability (MTBF 1.000.000 hours)', for 'submarines and surface ships' — Piller has built brushless submarine generators since 1975. Grid series: 'GridPB can provide significant additional inertia for island grids utilising large amounts of variable renewable energy'; 'GridGate' for 'Datacentre microgrid solutions… stabilising voltage and frequency, absorbing power variations'; the company states its flywheel systems 'are capable of additional microgrid services such as grid-forming, inertia and SCR enhancement' (synchronous condenser replacement). A semiconductor-fab reference runs 'nine 3.9 MW generator sets' exchanging 'up to a level of 5 MW in each direction' with the utility. No datasheet with MW, MVAr or inertia figures is published for the Grid series.",
+   "highlights": [
+    "Langley 2025: 'Strong demand from governmental, defence, pharmaceuticals and chip manufacturing sectors were the main drivers' of Piller's record year — defence and aviation are a material part of the base that data centres are layered on",
+    "Exhibited at EURONAVAL Paris (Nov 2024) and Middle East Energy Dubai (Apr 2025, GridGate and UNIBLOCK stabilisers; ALMA Observatory Chile reference)",
+    "No independent report of a Piller grid-inertia or synchronous-condenser project with a transmission operator was found — the flywheel-syncon projects in the public record (ElectraNet Robertstown, Moneypoint) are Siemens Energy's"
+   ],
+   "positioning": "In aviation ground power and naval converters Piller competes in a specialist field outside this corpus; the Grid series positions the same rotary machines against BESS and synchronous condensers for inertia and grid-forming on islands and campuses — a claim the SHIELDX orders are the first to monetise at scale.",
+   "soldThrough": "Direct, with defence and airport procurement channels; rental fleet for aircraft GPUs and converters.",
+   "targetSegments": [
+    "Civil and military airports",
+    "Navies and shipyards (shore-to-ship, on-board)",
+    "Island grids, mining microgrids, research observatories"
+   ],
+   "roadmap": "None announced."
+  },
+  {
+   "name": "Service, lifecycle and rental",
+   "category": "Services",
+   "description": "Per company pages: a '24h/365 days emergency hotline and rapid response times', preventative maintenance 'to extend the useable life of UPS systems to at least 20 years', 'a network of stocked parts held at service centres and at strategic locations', and around 300 service technicians in more than 40 countries. The Piller Unity Service Pack offers 'up to 5 years of continuous UPS operation… without the need to take the UPS offline' with Pillerlink connectivity and predictive maintenance; e-VENTLOG™ (trademarked July 2020) remote monitoring 'can extend servicing needs to five years'. Active Power quotes 'one simple and non-invasive annual maintenance' and a bearing change 'every third year' (HD) or 'every fourth year' (PLUS MMS). The hire fleet covers rotary UPS (hybrid and diesel), static UPS, static transfer switches, kinetic storage, aircraft GPUs and frequency converters, in containers operable 'from a truck trailer', for 'outside broadcast, sporting events, data centers, and temporary manufacturing'.",
+   "highlights": [
+    "The maintenance interval is the commercial counter to the static vendors' battery argument: a five-year off-line interval on UB-V versus battery strings replaced every few years",
+    "Piller replaced its own 2000-vintage system at Helmholtz-Zentrum Berlin after '200,000+ hours' and Düsseldorf Airport's runway-lighting UPS after 27 years — the installed base is the service annuity",
+    "Schneider Electric's White Paper 222 counts single-vendor overhaul against DRUPS ('has to be done by the [DRUPS] vendor') — the same lock-in the service line monetises"
+   ],
+   "positioning": "The long-term service agreement model every rotating-machine vendor sells, here across an installed base of more than 9,000 units the company services; the static majors' service arms (Vertiv's 4,000+ field engineers) are the comparison.",
+   "soldThrough": "Direct service contracts through subsidiaries and partners.",
+   "targetSegments": [
+    "Every installed Piller and Active Power system",
+    "Temporary and event power"
+   ],
+   "roadmap": "None announced."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-28",
+   "category": "regulatory",
+   "headline": "New Jersey DEP says the DataOne/Nebius Vineland data center has no air permit and no application for its on-site gas generators; the operator says it is moving to Bloom Energy fuel cells — the site third parties identify as the 400 MW Bergen/SHIELDX plant",
+   "read": "The first SHIELDX order's plant is in doubt on permitting and technology choice; no source states the effect on Piller's delivery scope, and Langley has never named Vineland.",
+   "source": "https://whyy.org/articles/vineland-new-jersey-data-center-gas-generators-permit/"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Langley H1 2026: PBT €55.3M after a €19.8M print-exit loss, FY2026 forecast €237.8M, orders on hand €2.4B heading to €4.0B, ~€100M capex for Power Solutions; 'Every BTM solution being sold incorporates SHIELDX™'; Active Power output four-fold on 2025",
+   "read": "The parent's growth is now the power book, and Piller's share of it is stated as universal rather than optional — but the FY2026 forecast was cut from €282.4M in February.",
+   "source": "https://www.langleyholdings.com/wp-content/uploads/2026/07/Pages-LAH-Interim-Report-2026_EN-V3c-CMYK-p.pdf"
+  },
+  {
+   "date": "2026-07-01",
+   "category": "corporate",
+   "headline": "Third Power Solutions Symposium at Piller's Osterode HQ: 'more than three gigawatts of BTM power deals for AI data centres across the USA' signed in twelve months; target above 2 GW a year of BTM production by 2028; a 12.5 MW Bergen engine plus SHIELD-X demonstration planned for autumn customer tours",
+   "read": "Piller's headquarters is now the showroom for the divisional plant, which is how the company wants SHIELDX evaluated — alongside the engine, not against a static UPS.",
+   "source": "https://www.piller.com/picks-and-shovels-for-the-ai-gold-rush/"
+  },
+  {
+   "date": "2026-06-10",
+   "category": "market",
+   "headline": "Datacloud Global Congress: over 3 GW of BTM deals signed in the first year, pipeline 'tens of GW', Bergen B36:45V20 12.5 MW engines sold out until Q2 2028; Nebius, CloudHQ and VoltaGrid executives hosted",
+   "read": "Every SHIELDX unit is tied to an engine build slot, so Bergen's sold-out book is also SHIELDX's delivery calendar.",
+   "source": "https://www.piller.com/datacloud-global-congress-2026-marks-major-milestone/"
+  },
+  {
+   "date": "2026-06-03",
+   "category": "order-win",
+   "headline": "Bergen Engines signs a ~750 MW agreement with Crusoe — 438 MW contract plus 310 MW LOI, 27 × 12.5 MWe and 20 × 5 MWe gen-sets with Marelli alternators and Piller SHIELD-X, deliveries to multiple US sites through 2027",
+   "read": "The largest named SHIELDX customer, and one that also buys ON.energy medium-voltage BESS for the same campuses — evidence that flywheel stabilization and battery buffers are being bought together, not either/or.",
+   "source": "https://www.crusoe.ai/resources/newsroom/bergen-engines-signs-approx-750mw-u-s-power-agreement-with-crusoe-for-ai-data-centers"
+  },
+  {
+   "date": "2026-05-22",
+   "category": "capacity",
+   "headline": "Piller invests €20M to double the Bilshausen production area, lifting output from about 100 to about 400 large systems a year by end-2027 and adding 150 jobs; ~30% growth expected in 2026",
+   "read": "A fourfold capacity step that lands only at the end of 2027 — the constraint on 2026–27 revenue is the factory, not the order book.",
+   "source": "https://www.karriere-suedniedersachsen.de/piller-group"
+  },
+  {
+   "date": "2026-05-08",
+   "category": "order-win",
+   "headline": "Liberty Energy orders 45 Bergen B36:45V20 gen-sets (11.2 MWe, 500 MW+) for delivery in H2 2027, with Piller SHIELDX 'managing sub-second AI load step variations up to 30%'",
+   "read": "A listed oilfield-services company becoming a power-as-a-service provider is the customer type the divisional bundle is built for; its release misnames Piller's CEO 'Dean Miller'.",
+   "source": "https://libertyenergy.com/bergen-engines-liberty-energy-to-advance-power-services-for-ai-data-centers/"
+  },
+  {
+   "date": "2026-04-08",
+   "category": "leadership",
+   "headline": "Dean Richards, President and CEO of Piller Power Systems Inc since 2010, appointed Geschäftsführer and Co-CEO Global Businesses; Dr Detlev Seidel Co-CEO Operations; Dr Zaki Slgini retires in June 2026",
+   "read": "The US subsidiary's chief taking the group role, with regional press describing the strategy shift toward AI load management and the US as the primary growth driver.",
+   "source": "https://www.piller.com/piller-group-appoints-dean-richards-as-chief-executive-officer/"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "customer",
+   "headline": "PT Santos Jaya Abadi (Kapal Api coffee, Indonesia): UNIBLOCK UBT+ with POWERBRIDGE PB60+ flywheels, 3,600 kW at 20 kV expandable in 1,800 kW units, commissioned May 2024",
+   "read": "The medium-voltage industrial base the data-centre story sits on — process manufacturing buying a rotary machine at 20 kV with no batteries.",
+   "source": "https://www.piller.com/pillers-ups-provides-support-to-pt-santos-jaya-abadi/"
+  },
+  {
+   "date": "2026-02-23",
+   "category": "order-win",
+   "headline": "Classified US Government data center at Langley, Virginia orders two additional UNIBLOCK systems matching its 2017 installation",
+   "read": "Government and finance remain the rotary franchise's core; a repeat order nine years on is the installed-base annuity working as designed.",
+   "source": "https://www.piller.com/classified-us-government-data-center-repeat-order/"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "financial",
+   "headline": "Piller 2025 revenue €332M (+28%) and order intake €370M (+24%) per the Northeim chamber of commerce; Co-CEO Seidel: 'the AI boom brings us to our capacity limits' and expects 'a doubling of revenue mid-term'",
+   "read": "The only Piller-level revenue figure in the public record, and it confirms the growth is already capacity-bound.",
+   "source": "https://nw-ihk.de/news/piller-erzielt-deutliches-umsatzplus"
+  },
+  {
+   "date": "2026-02-06",
+   "category": "financial",
+   "headline": "Langley Annual Report 2025: record PBT €152.3M, revenue €1,338.7M, orders on hand €2,069.4M; Piller 'once again breaking previous records'; 'something of a renaissance for Piller in the data centre sector'; the Finland customer 'placed a much larger order for an AI data centre in the USA'",
+   "read": "Langley's own framing — battery UPS struggles with AI load profiles, flywheels do not — is the thesis the SHIELDX orders are testing.",
+   "source": "https://www.langleyholdings.com/wp-content/uploads/2026/02/LAH_Profile_Pages_2025-sp-FINAL7.pdf"
+  },
+  {
+   "date": "2026-01-06",
+   "category": "project",
+   "headline": "Bergen ships the first four of 36 B36:45V20 engines for the 400 MW US AI project; all gen-sets and Piller SHIELDX modules due on site by end-2026, full 400 MW gross BTM in Q1 2027; Bergen took 'over $1 billion of orders' in December 2025",
+   "read": "The first SHIELDX plant's schedule as stated in January — to be read against the August 2026 Vineland reporting.",
+   "source": "https://www.powertraininternationalweb.com/powergen/bergen-ai-usa/"
+  },
+  {
+   "date": "2025-12-30",
+   "category": "market",
+   "headline": "SemiAnalysis: Bergen Engines 'has sold engines with flywheels from a vendor under the same parent company' that inject or absorb real power for 5–30 seconds; medium-speed engine supply consolidated in Wärtsilä, Bergen and Everllence; xAI prefers Tesla Megapacks for load swings",
+   "read": "Independent confirmation of the SHIELDX role without naming Piller — and of the battery alternative the flywheel competes with.",
+   "source": "https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power"
+  },
+  {
+   "date": "2025-11-26",
+   "category": "order-win",
+   "headline": "Bergen secures a 400 MW contract for a fully islanded US East Coast AI data-center plant: 36 × 11.2 MW engines, Marelli alternators, Piller SHIELDX units 'using mechanical inertia and bi-directional active power modules'; E-Finity Distributed Generation as EPC and O&M",
+   "read": "The first plant-scale SHIELDX order, grown from a 100 MW concept; the site is unnamed by Langley and identified as Vineland, NJ only by third parties.",
+   "source": "https://www.piller.com/bergen-engines-secures-400mw-contract-for-us-ai-data-center-power-plant/"
+  },
+  {
+   "date": "2025-08-21",
+   "category": "product-launch",
+   "headline": "SHIELDX™ launched — 'Tier IV Resilience for the AI Era': kinetic stabilization that 'absorbs AI transients in real time', 99.999% availability claimed, with the CIA, Federal Reserve, stock exchanges and central banks named as the installed base the technology comes from",
+   "read": "Piller productises the conditioning machine as a standard unit sold with the engine, rather than as a bespoke UPS project.",
+   "source": "https://www.piller.com/shieldx-has-arrived-tier-iv-resilience-for-the-ai-era/"
+  },
+  {
+   "date": "2025-08-07",
+   "category": "financial",
+   "headline": "Langley H1 2025: record PBT ~€60M, full-year guide ~€140M 'largely underwritten'; 'Bergen Engines significantly over-achieved its PBT target in the period, as did Piller'; first 200 MW BTM deal signed at Cannes",
+   "read": "Piller was already beating plan before SHIELDX shipped, on the semiconductor, pharmaceutical and government base.",
+   "source": "https://www.langleyholdings.com/wp-content/uploads/2025/08/Langley-Interim-Report-2025_New-spreads-3.pdf"
+  },
+  {
+   "date": "2025-07-28",
+   "category": "regulatory",
+   "headline": "Active Power's CleanSource PLUS SMS and MMS receive California OSHPD/HCAI seismic pre-approval OSP-0829",
+   "read": "A hospital-market credential for the flywheel line, where battery rooms are least welcome.",
+   "source": "https://www.activepower.com/active-powers-cleansource-plus-ups-now-earthquake-certified-ready-when-it-shakes/"
+  },
+  {
+   "date": "2025-06-16",
+   "category": "order-win",
+   "headline": "Nebius Group's Mäntsälä, Finland campus: 'Over 200 CleanSource® UPS units' from Active Power for a 75 MW expansion, built in Austin with Piller Germany",
+   "read": "The group's one hall-side AI reference at scale — a neocloud choosing flywheel UPS in a market that had standardized on batteries.",
+   "source": "https://www.piller.com/major-expansion-of-high-performance-data-center-in-southern-finland/"
+  },
+  {
+   "date": "2025-06-04",
+   "category": "order-win",
+   "headline": "Bergen's 'first AI-dedicated power plant in the USA': 12 × B36:45V20 (11.2 MW), 'over 130MW of initial capacity' for E-Finity, go-live 2026; Power Engineering later reports Piller SHIELDX conditioning on the project",
+   "read": "The starting point of the BTM book that SHIELDX rides — signed 'within 4 weeks of initial contact' per Langley's May 2025 symposium release.",
+   "source": "https://www.piller.com/bergen-engines-first-ai-dedicated-power-plant-in-the-usa/"
+  },
+  {
+   "date": "2025-03-11",
+   "category": "order-win",
+   "headline": "A 'leading global bank' doubles its European IP-bus system from eight UBTD diesel rotary units (17.2 MVA, since 2012) to sixteen (34.4 MVA)",
+   "read": "The IP-bus franchise renewing itself in the finance segment where it began.",
+   "source": "https://www.piller.com/leading-global-bank-expands-piller-ip-bus-systems-for-maximum-power-security/"
+  },
+  {
+   "date": "2025-02-07",
+   "category": "customer",
+   "headline": "Helmholtz-Zentrum Berlin (BESSY II synchrotron): UNIBLOCK UB-V with POWERBRIDGE, 6,750 kW at 10 kV, commissioned November 2024, replacing a 2000-vintage Piller system after '200,000+ hours'",
+   "read": "A 24-year replacement cycle on a medium-voltage rotary machine — the life claim in the brochure, demonstrated.",
+   "source": "https://www.piller.com/hzbresearch-institute-driving-climate-neutral-energy/"
+  },
+  {
+   "date": "2024-06-17",
+   "category": "product-launch",
+   "headline": "M+500 modular static UPS launched at Data Centre World Frankfurt — 10 × 50 kW hot-swappable modules, lithium-ion batteries; Langley: the hyperscalers 'moved away from Piller rotary technology… in favour of battery-static UPS' and this is 'its return to the sector'",
+   "read": "Kept in the window as the strategic pivot the SHIELDX story later overtook: the company's admission that the hall-side battle was lost to static, and its hedge back into it.",
+   "source": "https://www.piller.com/piller-launches-all-new-hot-swappable-static-ups-for-data-centres/"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Piller's relevance to the AI buildout runs through Langley's behind-the-meter engine plant, not through the hyperscale UPS room it lost. Basis: Langley states in its own reports that hyperscale 'moved away from Piller rotary technology in recent years in favour of battery-static UPS'; that 'Every BTM solution being sold incorporates SHIELDX™'; and that more than 3 GW of such plants were signed in the year to June 2026 (Crusoe ~750 MW, Liberty 500 MW+, E-Finity 400 MW), each counterparty naming Piller. SHIELDX therefore sells one unit per 12 MW Bergen gen-set on Bergen's order book, and its volume is a function of engine sales rather than of UPS bids.",
+  "(High confidence) We assess that factory capacity, not demand, is the binding constraint on Piller through 2027. Basis: Co-CEO Seidel's 'the AI boom brings us to our capacity limits' (NW-IHK, Feb 2026; charakter.me, Apr 2026); the €20M Bilshausen programme lifts output from about 100 to about 400 large systems a year only by end-2027 (StadtRadio, May 2026); Langley's H1 2026 statement that capacity is 'sold out for this year and next, with build slots now being released for 2028' and that 'it will be 2028 before the ramp-up is complete'; Bergen's 12.5 MW engines sold out until Q2 2028. Langley already recorded in 2023 that 'capacity constraints meant that not all projects originally planned could be fulfilled within the year'. Expect 2026 growth near the ~30% Seidel guided rather than the order-intake rate.",
+  "(Moderate confidence) We assess that the rotary and flywheel franchise wins where a buyer values fault current, harmonic isolation, medium-voltage connection, no battery room and one accountable vendor per block — finance, government, semiconductor, hospitals, Tier IV colocation — and loses where the buyer standardizes on modular low-voltage blocks bought in minutes of battery autonomy from several vendors. Basis: Piller's own reference list (Federal Reserve, NYSE, Bank of England, CIA, a classified US facility, NEXTDC's Tier IV IP-bus sites, GM, a 24 kV US fab); Uptime Institute's account of NEXTDC choosing DRUPS on an IP bus to remove batteries and static switches; ABB's 2014 concession that the ring bus was rotary-only for fault-current reasons; against it, Schneider's White Paper 222 on part-load efficiency, single-vendor overhaul and scaling, and Langley's own account of hyperscale's departure. The M+ Series is the hedge back into static; no M+ order has been published in two years, so the hedge is unproven.",
+  "(Moderate confidence) We assess that SHIELDX's competitive contest is with battery buffers, not with static UPS, and that the two are being bought together rather than instead of each other. Basis: Piller positions SHIELDX against BESS ('Avoids C-rate limits, thermal stress, and degradation cycles') and claims real inertia, fault current and zero storage degradation; SemiAnalysis independently frames flywheels (5–30 s of real power) against Tesla Megapacks, which xAI uses; Crusoe's dossier shows the same campuses taking 5 GW of ON.energy medium-voltage BESS alongside the Bergen/SHIELD-X plant. The flywheel holds the seconds and the inertia; the battery holds the duration. A campus choosing only one would be the signal that this judgment is wrong.",
+  "(Moderate confidence) We assess that Piller's US tariff exposure is structural and unquantified, and that the Austin flywheel plant is its only stated US manufacturing base. Basis: UNIBLOCK, UB-V and SHIELDX are built in Germany and shipped to US projects; EU machinery has paid a 15% all-inclusive US tariff since 1 July 2026 and Section 232 derivative duties apply to many chapter 84/85 articles (Bundesregierung; Perkins Coie); no Langley or Piller statement on tariff cost, HTS treatment or US assembly of SHIELDX was found in English or German press; Active Power's 135,000 sq ft Austin plant (300 MW a year) and the 24,000 sq ft Middletown, NY facility are the US footprint on record.",
+  "(Low confidence) We assess that the execution risk to the SHIELDX book sits in the plants it is sold into rather than in Piller's product. Basis: the first 400 MW order's site — identified as Vineland, NJ only by third parties — is reported by WHYY (Aug 2026) to have had its gas-engine plan replaced by Bloom Energy fuel cells and its running generators found unpermitted by NJDEP, against Powertrain International's January schedule of all 36 engines and SHIELDX modules on site by end-2026; no source states the effect on Piller's scope. Langley's willingness to discontinue Manroland Sheetfed (744 jobs, June 2026) and its FY2026 PBT forecast cut from €282.4M to €237.8M show a parent that reprices quickly. Collection gap: Piller Group GmbH's own revenue, profit and order book are disclosed only qualitatively by Langley and once, for 2025, by the Northeim chamber of commerce; no SHIELDX or POWERBRIDGE datasheet with per-module MW, MJ or rpm exists; no independent market-share figure for Piller or the rotary niche was found; Bundesanzeiger filings sit behind paywalls; there is no analyst consensus at any level.",
+  "INDICATORS TO WATCH — *Autumn 2026, Osterode:* the 12.5 MW Bergen engine plus SHIELD-X live demonstration; a published per-module rating or datasheet would close the largest specification gap. *Q4 2026–Q1 2027:* whether the 400 MW E-Finity plant energizes on schedule with SHIELDX, or the Vineland fuel-cell switch and NJDEP compliance determination alter its scope — the first test of plant-level execution risk. *Early February 2027, Langley Annual Report 2026:* Piller's 2026 growth against the ~30% guide and the Power Solutions division against its €1,346M forecast; whether the FY2026 PBT lands near the €237.8M August guide; any Piller-level disclosure of SHIELDX units shipped. *Through 2027:* first SHIELD-X deliveries to Crusoe sites and Liberty's H2 2027 engines; a first named hyperscaler order for SHIELDX or the M+ Series would refute the hall-side judgment; a campus choosing SHIELDX without a BESS, or a BESS without SHIELDX, would sharpen the complement-versus-substitute judgment. *End-2027:* Bilshausen at ~400 large systems a year — the date after which capacity stops explaining the growth rate. *Any date:* a US assembly announcement for SHIELDX or UNIBLOCK, which would answer the tariff judgment."
+ ],
+ "relationships": [
+  {
+   "slug": "crusoe",
+   "type": "customer",
+   "status": "active",
+   "since": "2026-06",
+   "via": "SHIELD-X Dynamic Power Stabilization with Bergen Engines gen-sets",
+   "scale": "438 MW contract + 310 MW LOI",
+   "note": "Crusoe's ~750 MW Bergen Engines agreement (June 2026) integrates Piller SHIELD-X with Marelli alternators across multiple US AI data-center sites, deliveries through 2027.",
+   "context": "Bergen Engines, Piller's sister company under Langley Holdings, signed a 438 MW firm contract plus a 310 MW letter of intent with Crusoe on 3 June 2026 for 27 B36:45V20AG2 (12.5 MWe) and 20 B36:45L9AG (5 MWe) gen-sets, phased through 2027. Crusoe's own release states the gen-sets are 'integrated with SHIELD-X Dynamic Power Stabilization technology from Piller' and quotes Dean Richards as Piller's CEO.\n\nThe same Crusoe energy stack, per Crusoe's dossier, includes 5 GW of ON.energy medium-voltage 'AI UPS' BESS — so at Crusoe the flywheel stabilizer and the battery buffer are being deployed side by side, which is the clearest evidence in the corpus that the two are complements at plant scale rather than substitutes.",
+   "source": "https://www.crusoe.ai/resources/newsroom/bergen-engines-signs-approx-750mw-u-s-power-agreement-with-crusoe-for-ai-data-centers"
+  },
+  {
+   "slug": "nebius",
+   "type": "customer",
+   "status": "active",
+   "since": "2025",
+   "via": "Active Power CleanSource flywheel UPS",
+   "scale": "Over 200 CleanSource UPS units for a 75 MW expansion",
+   "note": "Nebius's Mäntsälä, Finland campus took more than 200 Active Power CleanSource flywheel UPS units for a 75 MW expansion in 2025; Langley says the same customer then placed 'a much larger order for an AI data centre in the USA' for 2026 delivery.",
+   "context": "Piller announced on 16 June 2025 that Nebius Group NV's Mäntsälä data center would receive 'Over 200 CleanSource® UPS units' for a 75 MW expansion, built at Active Power's Austin plant in collaboration with Piller Germany, with 'several hundred' units delivered during 2025. Langley's 2025 annual report attributes Active Power's 'excellent year' largely to this project and states that 'shortly after the year end the same customer placed a much larger order for an AI data centre in the USA for delivery this year'; the 2026 interim reports Austin production 'increasing four-fold on 2025'.\n\nSeparately, third parties (Sierra Club NJ, SJ Climate News) identify DataOne's Vineland, New Jersey campus — built for Nebius under its Microsoft contract — as the site of the 400 MW Bergen/SHIELDX plant that Langley announced without naming a location; Langley itself has never confirmed that linkage, and WHYY reported in August 2026 that the site's gas-engine plan was being replaced by Bloom Energy fuel cells.",
+   "source": "https://www.piller.com/major-expansion-of-high-performance-data-center-in-southern-finland/"
+  },
+  {
+   "slug": "tesla",
+   "type": "customer",
+   "status": "active",
+   "since": "2022",
+   "via": "Active Power CleanSource PLUS MMS flywheel UPS",
+   "scale": "2 × CleanSource PLUS MMS (2.4 MW each) + 1 × SMS 333 kW; 8 additional 4.8 MW installations planned",
+   "note": "Active Power supplies CleanSource flywheel UPS to Tesla, named by Langley as a notable new Active Power customer in 2022; Tesla's Megapack is also the battery buffer SemiAnalysis positions against flywheels for AI load swings.",
+   "context": "Active Power's August 2024 case study describes a 'top EV producer' installation of two CleanSource PLUS MMS systems at 2.4 MW each plus a 333 kW SMS unit, with 'eight additional 4.8MW installations planned'; Langley's 2022 annual report names Tesla alongside Mayo Clinic as notable new Active Power customers. The relationship is dual: Tesla buys Piller-group flywheel UPS for its own facilities, while Tesla Energy argues — per SemiAnalysis (Dec 2025) — that hundreds of megawatts of Megapacks are the right fix for AI load swings, the job SHIELDX is sold for, and xAI uses Megapacks for it.",
+   "source": "https://www.activepower.com/active-power-flywheel-solution/"
+  },
+  {
+   "slug": "caterpillar",
+   "type": "partner",
+   "status": "historical",
+   "since": "2000",
+   "via": "Cat UPS distribution of Active Power flywheels",
+   "note": "Caterpillar distributed Active Power's flywheel UPS as the 'Cat UPS' from August 2000, renewing the agreement in 2008; the channel predates Piller's ownership and its current status is not stated by either company.",
+   "context": "Data Center Knowledge reported in April 2008 that Caterpillar and Active Power had renewed a distribution agreement under which Caterpillar had sold Active Power's flywheel-based UPS as the 'Cat UPS' since August 2000, for a further three years. No source records the termination date or any current arrangement, and Active Power's post-2016 literature does not mention Caterpillar. Today the two groups meet as rival prime-mover suppliers to AI campuses: Caterpillar's diesel and gas gen-sets and Solar turbines against Bergen Engines' medium-speed gas engines, with which SHIELDX is bundled.",
+   "source": "https://www.datacenterknowledge.com/deals/caterpillar-active-power-renew-flywheel-deal"
+  },
+  {
+   "slug": "bloom-energy",
+   "type": "competitor",
+   "status": "active",
+   "since": "2026-08",
+   "note": "At the Vineland, NJ campus third parties identify as the first 400 MW Bergen/SHIELDX plant, WHYY reports the gas-engine plan was scrapped over emissions opposition in favour of Bloom Energy fuel cells (300 MW proposed) — a fuel-cell displacement of the engine-plus-flywheel bundle.",
+   "context": "WHYY reported on 6 August 2026 that at a six-hour Vineland Planning Board hearing DataOne proposed Bloom Energy fuel cells for Phase 2 and described the earlier plan of 32 gas engines (5 for backup) plus 6 diesel gen-sets as scrapped because of public opposition over air emissions; on 28 August 2026 WHYY reported NJDEP finding no permit and no application for the generators already running on site. Neither WHYY piece names Bergen, E-Finity or Piller; the linkage of the site to the 400 MW Bergen/SHIELDX contract comes from Sierra Club NJ and SJ Climate News. What this means for Piller's SHIELDX scope on that project is not stated by any source — recorded here as the one documented case of a fuel-cell plant displacing the engine plant SHIELDX is sold with.",
+   "source": "https://whyy.org/articles/vineland-data-center-hearing-power-generation/"
+  },
+  {
+   "slug": "vertiv",
+   "type": "competitor",
+   "status": "active",
+   "note": "Vertiv's Trinergy static UPS (1.5–2.5 MW blocks to 20 MW) is the incumbent form Piller's UB-V rotary UPS and M+ Series static UPS compete against in AI halls; Langley concedes hyperscale 'moved away from Piller rotary technology… in favour of battery-static UPS'.",
+   "context": "Vertiv sits in the top-five data-center UPS group (with Schneider Electric, Eaton, Huawei and ABB, roughly 40–42% share per MarketsandMarkets, an aggregator) that took the hyperscale UPS segment as it standardized on low-voltage modular battery-static units. Piller's answer is two-sided: the UB-V rotary machine pitched as 'a real alternative to increasingly sprawling multiple static UPS solutions', and the M+ Series launched in June 2024 to compete on static's own terms. Vertiv's dossier records Trinergy as the large-UPS franchise the 800 VDC architecture threatens; Piller has published no 800 VDC position.",
+   "source": "https://www.langleyholdings.com/wp-content/uploads/2025/03/LAH_RA_2024_Full_Web_sp.pdf"
+  },
+  {
+   "slug": "schneider-electric",
+   "type": "competitor",
+   "status": "active",
+   "note": "Schneider Electric's Galaxy VXL (500–1,250 kW frames, to 5 MW) competes with the M+ Series and UB-V; Schneider's White Paper 222 is the quantified static-side case against DRUPS that Piller's positioning answers.",
+   "context": "Schneider Electric's 2016 White Paper 222, 'Diesel Rotary UPS (DRUPS) vs. Static UPS: A Quantitative Comparison', found a top DRUPS peaking near 92% efficiency against static up to 97.6%, 68% lower energy losses for static at 43–47% utilisation, 8–12 s of flywheel ride-through against 5–6 min of battery, single-vendor DRUPS overhaul, and a 7.2% ten-year TCO advantage for static in a 2N IT-plus-cooling case — while conceding DRUPS a 10.6% advantage when the rental value of its smaller footprint is credited in an IT-only design. Piller's UB-V literature is written against this framing ('up to 98% at 100% load and 97% at 50% load… compared with static UPS which typically operate around 96.3%'). Schneider is also a named NVIDIA 800 VDC partner; Piller is not.",
+   "source": "https://www.se.com/us/en/download/document/SPD_VAVR-9WFNHS_EN/"
+  },
+  {
+   "slug": "eaton",
+   "type": "competitor",
+   "status": "active",
+   "note": "Eaton's 9395X large static UPS and its static transfer switches compete with Piller's UB-V/UNIBLOCK and APOTRANS lines; Eaton's guide in this app is the corpus's other UPS teaching source.",
+   "context": "Eaton is one of the top-five data-center UPS vendors (MarketsandMarkets, aggregator) whose battery-static architecture displaced rotary UPS at hyperscale, per Langley's own account. The two companies' teaching in this app is complementary: Eaton's dossier and guide carry the double-conversion-versus-eco-mode dial and the outage choreography; Piller's carry the rotary machine, the flywheel and the isolated-parallel bus. Eaton's supercapacitor fast-cycle modules for 800 VDC racks are a millisecond-scale store adjacent to — but not a substitute for — the second-scale flywheel.",
+   "source": "https://www.marketsandmarkets.com/ResearchInsight/data-center-ups-market.asp"
+  },
+  {
+   "slug": "abb",
+   "type": "competitor",
+   "status": "active",
+   "note": "ABB's HiPerGuard medium-voltage static UPS (2.5 MW units, 25 MW parallel, to 34.5 kV) attacks the medium-voltage niche rotary UPS held; ABB's 2014 ring-bus release conceded that the ring topology 'has traditionally only been deployed with rotary UPS systems' for fault-current reasons.",
+   "context": "ABB introduced a ring-bus (isolated-parallel-style) architecture for static UPS in 2014, stating the topology had been rotary-only because static units lacked fault-current capability and risked DC-link back-feed — an independent statement of the rotary machine's protection advantage from a static vendor. ABB's HiPerGuard, deployed at Applied Digital's Polaris Forge campuses in 25 MW blocks, is the static industry's move onto the medium-voltage ground where Piller's UNIBLOCK and UB-V have sold at 10–35 kV. ABB's guide also carries the corpus's one paragraph on flywheels as grid stabilizers.",
+   "source": "https://new.abb.com/news/detail/16888/abbs-ring-bus-with-static-ups-for-critical-power-applications"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US import tariffs on German-built equipment (Section 232 derivatives; EU–US 15% ceiling)",
+   "status": "in-effect",
+   "effectiveDate": "2026-07-01",
+   "exposure": "Piller's UNIBLOCK, UB-V and SHIELDX systems are manufactured at Osterode and Bilshausen, Germany and shipped to US behind-the-meter projects; Active Power's flywheel UPS are built in Austin, Texas. Since 1 July 2026 EU goods including HTS chapter 84 machinery pay a flat 15% all-inclusive US tariff under the EU–US framework (Bundesregierung FAQ); the restructured Section 232 metals regime assesses 50% on covered steel and aluminium articles and listed derivatives — many in chapters 84/85 — on full customs value from 6 April 2026, with 'metal-intensive industrial base and electrical grid equipment' capped at 15% including MFN to end-2027 and EU/UK/Japan/Korea keeping agreement rates (Perkins Coie, Global Trade & Sanctions Law). The IEEPA tariffs were ruled unlawful on 20 February 2026 and a Section 122 surcharge ran 24 February–24 July 2026 (Bruegel). No source states Piller's specific HTS treatment, tariff cost or any US assembly of UNIBLOCK or SHIELDX.",
+   "source": "https://www.globaltradeandsanctionslaw.com/trump-administration-section-232-metal-duties/"
+  },
+  {
+   "regime": "US stationary engine and data-center generator rules (RICE NESHAP/NSPS; state and local air permits)",
+   "status": "in-effect",
+   "effectiveDate": "2025-05-01",
+   "exposure": "The diesel engines in Piller's UBTD+ diesel rotary UPS are stationary emergency engines under US rules — unlimited emergency hours, 100 hours a year of non-emergency running and 50 hours of demand response — and EPA's 1 May 2025 clarification on data-center backup generators said it is 'evaluating more substantive changes' while states tighten generator rules (Sidley, Encino Environmental). The larger exposure is indirect: SHIELDX is sold into islanded gas-engine plants that need local air permits, and at the Vineland, NJ campus third parties tie to the first 400 MW Bergen/SHIELDX order, NJDEP found in August 2026 that generators were operating with no permit and no application while the developer moved its plan to fuel cells (WHYY).",
+   "source": "https://www.epa.gov/newsreleases/epa-issues-clarification-help-power-data-centers-ensure-us-ai-capital-world"
+  },
+  {
+   "regime": "EU Medium Combustion Plant Directive and UK Specified Generator controls (DRUPS engines in Europe)",
+   "status": "in-effect",
+   "exposure": "Directive (EU) 2015/2193 covers permanently installed combustion plant of 1–50 MW thermal input — which techUK notes captures 'virtually every' data-centre engine, including the diesels in DRUPS — with member-state discretion to exempt emergency plant running under 500 hours a year; the UK's Specified Generator rules add conditions on demand-side response and testing hours, and EU Stage V applies to transportable sets such as Piller's containerised hire units (techUK; Axces). Sources address the engine class generally, not Piller by name.",
+   "source": "https://www.techuk.org/asset/8E10811D-BA7A-49B8-A90206653E971384/"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "SHIELDX™ Dynamic Power Stabilization",
+   "specs": [
+    {
+     "band": "Performance",
+     "label": "Voltage and frequency regulation",
+     "value": "±1%"
+    },
+    {
+     "band": "Performance",
+     "label": "Response",
+     "value": "Sub-millisecond response time"
+    },
+    {
+     "band": "Performance",
+     "label": "Load steps",
+     "value": "Protects against 25–30% instantaneous load steps"
+    },
+    {
+     "band": "Performance",
+     "label": "Scaling",
+     "value": "Can scale to cover 100% load steps with increased ratios"
+    },
+    {
+     "band": "Sizing",
+     "label": "Reference ratio",
+     "value": "1× SHIELDX™ : 1× 12MW Bergen–Marelli genset"
+    },
+    {
+     "band": "Sizing",
+     "label": "Application range",
+     "value": "large-scale load stabilization (50 MW to 1 GW+)"
+    },
+    {
+     "band": "Design",
+     "label": "Fault behaviour",
+     "value": "true short-circuit contribution, high fault-clearing capability and zero energy storage degradation over its lifecycle"
+    },
+    {
+     "band": "Design",
+     "label": "Availability",
+     "value": "engineered to meet TIER IV fault-tolerance standards and up to 99.999% uptime"
+    },
+    {
+     "band": "Delivery",
+     "label": "Lead time",
+     "value": "Built-to-stock manufacturing enabling shipment in under 4-6 weeks"
+    }
+   ],
+   "notes": "No per-module MW or MJ rating, efficiency, harmonic figure, footprint or datasheet has been published (company product page, whitepaper article and Langley brochure, 2025–2026)."
+  },
+  {
+   "product": "UB-V Series rotary UPS (data-centre and industrial variants)",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Single module",
+     "value": "1100kVA 1.0MW to 3600kVA 3.24MW"
+    },
+    {
+     "band": "Ratings",
+     "label": "Paralleling",
+     "value": "paralleling up to 100MW / 115MVA"
+    },
+    {
+     "band": "Ratings",
+     "label": "Voltage class",
+     "value": "Available in low or medium voltage levels"
+    },
+    {
+     "band": "Efficiency",
+     "label": "On-line efficiency (IEC 62040-3)",
+     "value": "up to 98% at 100% load and 97% at 50% load"
+    },
+    {
+     "band": "Performance",
+     "label": "Input tolerance",
+     "value": "Wide input voltage tolerance (up to -50%); can compensate for voltage dips of up to -50% without recourse to stored energy or diesel generators"
+    },
+    {
+     "band": "Performance",
+     "label": "Load steps",
+     "value": "Handling of load steps up to 100%"
+    },
+    {
+     "band": "Design",
+     "label": "Stored energy",
+     "value": "in both battery and kinetic energy storage versions"
+    },
+    {
+     "band": "Design",
+     "label": "Components",
+     "value": "no power capacitors or electric fans"
+    },
+    {
+     "band": "Design",
+     "label": "Reliability",
+     "value": "up to 5x fewer failures compared to static UPS"
+    },
+    {
+     "band": "Service",
+     "label": "Off-line interval",
+     "value": "off-line service intervals as little as once every five years"
+    },
+    {
+     "band": "Environment",
+     "label": "Ambient (containerised)",
+     "value": "operating in ambient temperatures up to 40ºC"
+    }
+   ],
+   "notes": "Company product pages (2026) and the UB-V industrial brochure Issue 1 (April 2021). The IPCS 'Power of 10' module packages four 2.5 MW UB-V modules, each with two POWERBRIDGE PB21, behind a 10 MW decoupling choke: 20 kV at ±8% voltage and 50 Hz at ±1%, 'more than ten seconds' of 10 MW ride-through."
+  },
+  {
+   "product": "UNIBLOCK™ UBT+ rotary UPS and UBTD+ diesel rotary UPS",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Single machine (UBT+)",
+     "value": "Single machine sizes from 500kW up to 2700kW"
+    },
+    {
+     "band": "Ratings",
+     "label": "Medium-voltage paralleling",
+     "value": "Paralleling up to 40MW"
+    },
+    {
+     "band": "Ratings",
+     "label": "Low-voltage paralleling",
+     "value": "simple paralleling is limited to about 5MW but there are configurations using fault isolated parallel techniques that allow this to be increased to up to 20MW"
+    },
+    {
+     "band": "Ratings",
+     "label": "UBTD+ range",
+     "value": "500kW up to 40MW"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Efficiency",
+     "value": "up to 97% with energy store connected"
+    },
+    {
+     "band": "Power quality",
+     "label": "Harmonic isolation",
+     "value": "99% input/output harmonic isolation"
+    },
+    {
+     "band": "Power quality",
+     "label": "Input power factor",
+     "value": "Virtual unity input power factor"
+    },
+    {
+     "band": "Power quality",
+     "label": "Sag and brownout",
+     "value": "voltage sags to 50% of nominal and can protect against brownouts to 30% without even using the stored energy"
+    },
+    {
+     "band": "Power quality",
+     "label": "Load handling",
+     "value": "handles 100% non-linear loads as well as 100% step loads"
+    },
+    {
+     "band": "Stored energy",
+     "label": "Battery autonomy",
+     "value": "complete utility failure up to 30 minutes is easily managed"
+    },
+    {
+     "band": "Stored energy",
+     "label": "Flywheel",
+     "value": "3 times longer bridging time from Piller POWERBRIDGE™"
+    },
+    {
+     "band": "Diesel (UBTD+)",
+     "label": "Start delay",
+     "value": "adjustable diesel start delay (seconds to minutes)"
+    },
+    {
+     "band": "Design",
+     "label": "Cooling",
+     "value": "Air or chilled water cooling"
+    },
+    {
+     "band": "Design",
+     "label": "Life",
+     "value": "Life expectancy of the UBT+ easily exceeds 20 years"
+    },
+    {
+     "band": "Legacy UBT (2011 data sheet)",
+     "label": "Models",
+     "value": "UBT 420 (420kVA/336kW/606A); UBT 500 (500kVA/400kW/722A); UBT 625 (625kVA/500kW/902A); UBT 800 (800kVA/640kW/1155A); UBT 1100 (1100kVA/880kW/1588A); UBT 1670 (1670kVA/1336kW/2410A)"
+    },
+    {
+     "band": "Legacy UBT (2011 data sheet)",
+     "label": "Output",
+     "value": "400 / 231V ±5% (adjustable); 50Hz (0,1% static self controlled / 1% on mains / 1% dynamic)"
+    },
+    {
+     "band": "Legacy UBT (2011 data sheet)",
+     "label": "Input",
+     "value": "power factor 0,99; current distortion < 3%; Efficiency up to 96%"
+    },
+    {
+     "band": "Legacy UBT (2011 data sheet)",
+     "label": "Mass",
+     "value": "5800 kg (UBT 420–625); 13050 kg (UBT 800–1100); 14500 kg (UBT 1670)"
+    }
+   ],
+   "notes": "UBT+ brochure Issue 3 (April 2018, Piller-authored, read from a distributor mirror) and the UNIBLOCK product page; legacy UBT product data sheet of 29 March 2011 (Piller-authored, distributor mirror)."
+  },
+  {
+   "product": "Isolated Parallel (IP) bus system",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Low-voltage deployment",
+     "value": "Low Voltage deployment up to 20MW"
+    },
+    {
+     "band": "Ratings",
+     "label": "Medium-voltage deployment",
+     "value": "Paralleling up to 40MW (UBT+ brochure)"
+    },
+    {
+     "band": "Performance",
+     "label": "Module efficiency",
+     "value": "Modules operate at approximately 97% efficiency"
+    },
+    {
+     "band": "Performance",
+     "label": "Fault behaviour",
+     "value": "system naturally balances in all conditions and avoids unnecessary switchgear operations under fault conditions"
+    },
+    {
+     "band": "Track record",
+     "label": "Deployed",
+     "value": "Over 500MVA of IP Bus systems deployed globally to date"
+    },
+    {
+     "band": "Track record",
+     "label": "Certification",
+     "value": "Tier IV Scheme approved by Uptime Institute"
+    }
+   ]
+  },
+  {
+   "product": "POWERBRIDGE™ kinetic energy storage (PB6+, PB21, PB60+)",
+   "specs": [
+    {
+     "band": "Energy",
+     "label": "Stored energy per unit",
+     "value": "kinetic energy storage ranging from 3.6MJ up to 60MJ+ per unit"
+    },
+    {
+     "band": "Energy",
+     "label": "PB60+ power",
+     "value": "can deliver power above 3MW and provide 1MW of electrical power for over 60 seconds"
+    },
+    {
+     "band": "Design",
+     "label": "Construction",
+     "value": "vertically mounted flywheel and generator utilising magnetic bearing technology"
+    },
+    {
+     "band": "Design",
+     "label": "Lubrication",
+     "value": "Bearings are greased automatically from a reservoir"
+    },
+    {
+     "band": "Design",
+     "label": "Enclosure",
+     "value": "The unit operates in an inert environment"
+    },
+    {
+     "band": "Design",
+     "label": "Bidirectional",
+     "value": "a POWERBRIDGE™ will absorb energy at the same rate as it can deliver"
+    },
+    {
+     "band": "Lifecycle",
+     "label": "Life",
+     "value": "Life time > 20 years"
+    },
+    {
+     "band": "Installation",
+     "label": "Footprint",
+     "value": "Floor Space Up to 90% can be saved when compared to batteries"
+    },
+    {
+     "band": "Installation",
+     "label": "Cooling",
+     "value": "air conditioning is not required"
+    }
+   ],
+   "notes": "No rotational speed is published. Company product page and Group Profile."
+  },
+  {
+   "product": "Critical Power Module (CPM) 300/360 with flywheel",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Module",
+     "value": "300/360kW"
+    },
+    {
+     "band": "Ratings",
+     "label": "System",
+     "value": "225kW to 2.4MW (300/360kW modules scalable to 2400/2880kW)"
+    },
+    {
+     "band": "Ratings",
+     "label": "Paralleling",
+     "value": "Parallel capability up to 8 units"
+    },
+    {
+     "band": "Electrical",
+     "label": "Voltage",
+     "value": "380V-480V; 50 & 60Hz"
+    },
+    {
+     "band": "Electrical",
+     "label": "Short-circuit withstand",
+     "value": "100kA short circuit withstand"
+    },
+    {
+     "band": "Electrical",
+     "label": "Input power factor",
+     "value": "Unity input power factor (>0.99); 0pf lagging to 0.9pf capacitive without derating"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Part load",
+     "value": "Efficiency above 96% at 25% load (IEC 62040-3)"
+    },
+    {
+     "band": "Efficiency",
+     "label": "Full load",
+     "value": "up to 99%* (*480V 60Hz without DC store)"
+    },
+    {
+     "band": "Modes",
+     "label": "Operating modes",
+     "value": "Mode 1 (VFI), Mode 2 (VI), Mode 3 (VFI2), Mode 4 (VFD), Mode 5 (ERM)"
+    },
+    {
+     "band": "Environment",
+     "label": "Ambient",
+     "value": "Ambient up to 50°C for optimum use of free cooling"
+    },
+    {
+     "band": "Service",
+     "label": "Major maintenance",
+     "value": "Extended (10 year) major maintenance interval"
+    },
+    {
+     "band": "Physical",
+     "label": "Dimensions (mm)",
+     "value": "2450w x 900d x 1900h"
+    }
+   ],
+   "notes": "Company product page and CPM 300/360 datasheet Issue 1 (June 2016, Piller-authored, distributor mirror)."
+  },
+  {
+   "product": "Active Power CleanSource® PLUS MMS (UL, 480 V, 60 Hz)",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Models (kW)",
+     "value": "333/667/1000/1333"
+    },
+    {
+     "band": "Ratings",
+     "label": "Maximum kVA",
+     "value": "370/740/1110/1480"
+    },
+    {
+     "band": "Ratings",
+     "label": "Expansion",
+     "value": "333kW building blocks expandable to 2667kW; up to four 333kW modules with built-in wireway. In total, 8 modules can operate in a single system"
+    },
+    {
+     "band": "Flywheel",
+     "label": "Speed",
+     "value": "Integrated Steel Flywheel spinning at 10,000RPM"
+    },
+    {
+     "band": "Flywheel",
+     "label": "Stored energy",
+     "value": "6.2 MJ"
+    },
+    {
+     "band": "Flywheel",
+     "label": "Run time (% load)",
+     "value": "100% 18s, 75% 24s, 50% 35s, 25% 62s"
+    },
+    {
+     "band": "Flywheel",
+     "label": "Recharge",
+     "value": "Flywheel Recharge Time < 3 min (nominal) at 65kW"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "Efficiency – Energy Storage Online 98%"
+    },
+    {
+     "band": "Performance",
+     "label": "Transient",
+     "value": "+/-1% within 50 mSec for 100% load step"
+    },
+    {
+     "band": "Performance",
+     "label": "Input THD",
+     "value": "Linear load <2%… Non-linear <8% at 100% load"
+    },
+    {
+     "band": "Environment",
+     "label": "Noise",
+     "value": "Audible Noise <75 dBA at 1 meter"
+    },
+    {
+     "band": "Environment",
+     "label": "Heat rejection",
+     "value": "6.8kW/23,204BTU/Hr (per 333 kW)"
+    },
+    {
+     "band": "Physical",
+     "label": "Dimensions",
+     "value": "78.0in/1.981mm high; width 127.0in/3,226mm (333 kW) to 256.0in/6,502mm (1333 kW); depth 34.0in/865mm"
+    },
+    {
+     "band": "Physical",
+     "label": "Weight",
+     "value": "6,750lbs/3,063kg to 20,250lbs/9,185kg"
+    },
+    {
+     "band": "Compliance",
+     "label": "Listing",
+     "value": "UL 1778 Listed"
+    }
+   ],
+   "notes": "CleanSource PLUS MMS datasheet CS PLUS MMS-CE-UL-062022; CE variants 300–2,400 kW at 380/400/415 V."
+  },
+  {
+   "product": "Active Power CleanSource® HD (UL, 480 V)",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Rating",
+     "value": "rated at 750kVA/675kW (60 Hz); 625kW – 380/400/415V @ 50Hz"
+    },
+    {
+     "band": "Ratings",
+     "label": "Paralleling",
+     "value": "Up to 7 UPS systems can be paralleled… supporting over 4.725MW"
+    },
+    {
+     "band": "Flywheel",
+     "label": "Stored energy",
+     "value": "STORES 10.2 MJ OF ENERGY"
+    },
+    {
+     "band": "Flywheel",
+     "label": "Speed",
+     "value": "Integrated Steel Flywheel spinning at 7,700RPM"
+    },
+    {
+     "band": "Flywheel",
+     "label": "Run time (% load)",
+     "value": "100%: 15s, 75%: 20s, 50%: 29s, 25%: 56s"
+    },
+    {
+     "band": "Flywheel",
+     "label": "Recharge",
+     "value": "Flywheel Recharge Time < 2 min (nominal) at 175kW"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "UPS Efficiency 96.5% @ 50% load up to 98% @ 100% load"
+    },
+    {
+     "band": "Electrical",
+     "label": "Withstand",
+     "value": "Withstand Capability 65kA"
+    },
+    {
+     "band": "Environment",
+     "label": "Noise",
+     "value": "Audible Noise <83dBA"
+    },
+    {
+     "band": "Environment",
+     "label": "Heat rejection",
+     "value": "Heat Rejection – Online 19.10kW"
+    },
+    {
+     "band": "Physical",
+     "label": "Dimensions and weight",
+     "value": "Height 80in/2,032mm, Width 132.0in/3,353mm, Depth 39in/991mm, Weight 10,971lbs/4,976kg"
+    },
+    {
+     "band": "Physical",
+     "label": "Footprint",
+     "value": "two cabinets consuming 35 square feet"
+    }
+   ],
+   "notes": "CleanSource HD UL datasheet (June 2020); the product page quotes 'Up to 2 minutes' of run time and paralleling 'up to 5400kW' against the datasheet's one minute and 4.725 MW — both company figures, recorded as written."
+  },
+  {
+   "product": "Active Power POWERHOUSE® containerised UPS",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Standard",
+     "value": "1,333kW OF MODULAR UPS IN A STANDARD ISO CONTAINER"
+    },
+    {
+     "band": "Ratings",
+     "label": "Range",
+     "value": "customized from 333kW up to 2,667kW, with N+1 options up to 2,333kW"
+    },
+    {
+     "band": "Design",
+     "label": "Enclosure",
+     "value": "standard 40ft ISO corrosion-resistant steel container"
+    },
+    {
+     "band": "Design",
+     "label": "Flywheels",
+     "value": "10,000 RPM; just 4.4kW to spin all four wheels in your 1,333kW system"
+    },
+    {
+     "band": "Environment",
+     "label": "Ambient",
+     "value": "-13°F to 122°F"
+    },
+    {
+     "band": "Environment",
+     "label": "Structural",
+     "value": "330lb/sqft snow load and 186mph winds"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "at a 50% loading… efficiency sits at 97%"
+    }
+   ],
+   "notes": "POWERHOUSE brochure (US, issue 012023); TCO and carbon claims are the company's."
+  },
+  {
+   "product": "M+ Series modular static UPS (M+500, M+1200)",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Modules",
+     "value": "10 x 50 kW power modules delivering 500 kW of UPS per unit"
+    },
+    {
+     "band": "Ratings",
+     "label": "Units",
+     "value": "M+ 500 and M+ 1200; 250kW to 1200kW"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "up to 97%"
+    },
+    {
+     "band": "Performance",
+     "label": "Input",
+     "value": "wide input voltage and frequency tolerance; High short circuit capacity duration"
+    },
+    {
+     "band": "Design",
+     "label": "Modules",
+     "value": "hot-swappable modular design"
+    },
+    {
+     "band": "Stored energy",
+     "label": "Battery",
+     "value": "Lithium-ion Backup Battery… 250kW to 1200kW; modular parallel design… automatic module failure detection and exit"
+    }
+   ],
+   "notes": "Company product page and launch release (June 2024). No brochure PDF is openly published."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Dean Richards",
+   "title": "Geschäftsführer and Co-CEO, Global Businesses, Piller Group GmbH",
+   "background": [
+    "Co-CEO Global Businesses since 8 April 2026 (age 55 at appointment); Companies House records him as a director of Piller UK Ltd from 1 April 2026",
+    "President and CEO of Piller Power Systems Inc (Middletown, New York) from 2010 — variously titled Managing Director Piller US and CEO of Piller USA in company releases 2024–2026; quoted as Piller's CEO in the Crusoe and Liberty Energy announcements",
+    "Presented the Power of 10 at Microgrid Knowledge, Baltimore (May 2024); Bernard Langley on the appointment: 'His international experience and engineering background suit this key leadership role'",
+    "Rundblick Niedersachsen (May 2026): the appointment marks a strategy shift toward AI data-centre load management with the US as the primary growth driver; Liberty Energy's release misnames him 'Dean Miller'"
+   ]
+  },
+  {
+   "name": "Dr Detlev Seidel",
+   "title": "Geschäftsführer and Co-CEO, Operations, Piller Group GmbH",
+   "background": [
+    "Co-CEO Operations since April 2026; previously Managing Director, Operations; 25 years at Piller marked 1 March 2024 (joined c.1999)",
+    "Public voice on capacity and results: 'the AI boom brings us to our capacity limits' (NW-IHK, Feb 2026); expects 'a doubling of revenue mid-term'; announced the €20M Bilshausen expansion (May 2026)",
+    "Hosted the 2019 centenary in Osterode and the 2026 Power Solutions Symposium at Piller HQ"
+   ]
+  },
+  {
+   "name": "Anthony J. (Tony) Langley",
+   "title": "Chairman and Chief Executive, Langley Holdings plc (parent)",
+   "background": [
+    "Founded Langley Holdings in 1975; director since before 1992 per Companies House; signs every chairman's review and interim statement",
+    "Architect of the behind-the-meter power strategy: 'AI is like a latter day California Gold Rush… and we have shovels' (Datacloud 2025); 'more than three gigawatts of BTM power deals' (July 2026)",
+    "Acquired Piller in December 2004, Marelli Motori in May 2019, Bergen Engines from Rolls-Royce on 31 December 2021, and Active Power via Piller USA in November 2016"
+   ]
+  },
+  {
+   "name": "Bernard J. Langley",
+   "title": "Main Board Director and Group Executive Director, Langley Holdings plc",
+   "background": [
+    "Director since 21 October 2015 (Companies House); announced the 2016 Active Power acquisition ('We plan to maintain Active Power's manufacturing operations in Austin') and the 2026 Richards appointment",
+    "Group executive across the Power Solutions division (Bergen Engines, Piller, Marelli Motori)"
+   ]
+  },
+  {
+   "name": "Jack Pearce",
+   "title": "Chief Executive Officer, Active Power Inc (Austin, Texas)",
+   "background": [
+    "CEO of Active Power since 1 July 2021; previously Austin plant general manager and COO; earlier a project manager at Piller Australia (company release)",
+    "Quoted on the Austin factory's 400 kW solar array (Jan 2025) and the CleanSource PLUS seismic pre-approval (Jul 2025)",
+    "Langley's June 2026 symposium release lists him as 'CEO, Bergen Engines Inc.' — a possible move to Bergen's US arm not confirmed on any Active Power page"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "EUR",
+  "type": "private",
+  "periods": [
+   {
+    "period": "FY2023 (Langley Holdings plc; Piller unit-level commentary)",
+    "periodType": "annual",
+    "periodEnd": "2023-12-31",
+    "metrics": [
+     {
+      "name": "Langley Holdings group revenue",
+      "actual": "€1,206.2M (2022: €1,172.5M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Parent-group figure per the IFRS annual report; Piller Group GmbH's own revenue and profit are not disclosed. Langley: Piller 'reported all-time record high revenues in 2023, and this resulted in a record profit for the year. Order book also set a new record, the third in successive years'"
+     },
+     {
+      "name": "Langley Holdings profit before tax",
+      "actual": "€124.9M (2022: €75.7M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "No consensus exists for the unlisted parent; the 2022 report's outlook was the only expectation on record"
+     },
+     {
+      "name": "Power Solutions Division revenue (Bergen Engines + Piller incl. Active Power + Marelli Motori)",
+      "actual": "€574.1M; orders on hand €685.2M; 2,257 employees",
+      "expected": "€687M (2023 forecast in the 2022 annual report)",
+      "verdict": "miss",
+      "result": "About 16% under the division forecast given a year earlier; the division was 'around half of 2023 revenues and two thirds of Group profits'"
+     },
+     {
+      "name": "Active Power share of Piller",
+      "actual": "around 10% of Piller revenues and profits; over two thirds from the US market",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per Langley's chairman's review"
+     }
+    ],
+    "commentary": "Record year for Piller by Langley's account, with two caveats the report itself states: 'capacity constraints meant that not all projects originally planned could be fulfilled within the year' (capex approved, subassemblies outsourced to Marelli), and hyperscale had 'moved away from Piller's tailored solutions to a more commoditised cookie cutter approach', prompting talks with 'a major Chinese manufacturer' about re-entering the static segment. Piller Australia missed its target on a slipped Sydney project that closed in December."
+   },
+   {
+    "period": "FY2024 (Langley Holdings plc; Piller unit-level commentary)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Langley Holdings group revenue",
+      "actual": "€1,203.1M (flat)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Piller 'breaking all-time records reached in 2023 in terms of revenues, PBT and order intake… despite Piller effectively being absent from the hyperscale data centre sector'"
+     },
+     {
+      "name": "Langley Holdings profit before tax",
+      "actual": "€124.4M (restated to €125.4M in the 2025 report)",
+      "expected": "€126.4M — 'realistically achievable' (interim trading statement, 9 Aug 2024)",
+      "verdict": "miss",
+      "result": "About €2M under the August guide and flat on 2023; the interim had Piller 'slightly behind with revenues at June but more or less on target with PBT', expected to catch up in the second half — which the full-year record confirms"
+     },
+     {
+      "name": "Power Solutions Division revenue",
+      "actual": "€620M; orders on hand €793M; 2,302 employees",
+      "expected": "€644.9M (2024 forecast in the 2023 annual report)",
+      "verdict": "miss",
+      "result": "About 4% under forecast; 'around half of 2024 revenues and more than two thirds of profits'"
+     },
+     {
+      "name": "Active Power share of Piller",
+      "actual": "around 10% of Piller Group revenues and profits",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per Langley; US customers served from Austin, exports through Piller subsidiaries"
+     }
+    ],
+    "commentary": "Guidance for 2025 was 'a slightly increased level of profitability' (Feb 2025). Piller's growth drivers per Langley were semiconductor, pharmaceuticals, data centres and defence; Piller Inc 'exceeded target' on government, pharmaceutical and semiconductor work despite CHIPS Act delays. The M+ Series static UPS launched in June 2024 as the stated route back into the hyperscale segment."
+   },
+   {
+    "period": "FY2025 (Piller Group per NW-IHK; Langley Holdings plc)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Piller Group revenue",
+      "actual": "€332M (+28%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per the Northeim chamber of commerce (NW-IHK, 11 Feb 2026) citing Co-CEO Detlev Seidel — the only Piller-level revenue figure in the public record; order intake €370M (+24%). Langley: Piller 'once again breaking previous records for revenues, PBT and order intake'. No consensus exists",
+      "kpi": "revenue",
+      "usdMillions": 375,
+      "fxBasis": "EUR at 1.1296 USD/EUR (2025 calendar-year average, poundsterlinglive.com EUR-USD 2025 history)"
+     },
+     {
+      "name": "Langley Holdings group revenue",
+      "actual": "€1,338.7M (+11.3%)",
+      "expected": "'slightly improved performance' (Feb 2025); ~€1.35B sales reported as the August 2025 interim's implied full-year (Printweek snippet)",
+      "verdict": "inline",
+      "result": "Group revenue by region 2025: Other Europe €545.8M, Germany €193.5M, North America €156.6M, South & Central America €93.3M, UK €84.8M"
+     },
+     {
+      "name": "Langley Holdings profit before tax",
+      "actual": "€152.3M (record)",
+      "expected": "'approximately €140 million… largely underwritten' (interim trading statement, 7 Aug 2025)",
+      "verdict": "beat",
+      "result": "About €12M above the August guide despite a €43.2M loss at Manroland Sheetfed; the Power Solutions division was 'the majority of revenues and PBT'"
+     },
+     {
+      "name": "Power Solutions Division revenue",
+      "actual": "€793M; orders on hand €1,952M; 2,496 employees",
+      "expected": "€738M (2025 forecast in the 2024 annual report)",
+      "verdict": "beat",
+      "result": "About 7% above forecast; 2026 division forecast €1,346M. Bergen USA took 'over 1.5GW of orders… for BTM power in the second half [2025] alone'"
+     },
+     {
+      "name": "Langley Holdings orders on hand",
+      "actual": "€2,069.4M (2024: €930.4M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Unsatisfied performance obligations €1,699.5M, '48% (2024: 80%)… expected to be recognised as revenue in 2026' — the book has lengthened as BTM plants were added"
+     }
+    ],
+    "commentary": "The year Langley calls 'something of a renaissance for Piller in the data centre sector': SHIELDX launched in August, the first behind-the-meter plant (200 MW) was signed at Datacloud Cannes in June, and 'shortly after the year end the same customer placed a much larger order for an AI data centre in the USA for delivery this year'. February 2026 guidance: 'a step-change in activity in 2026, together with a corresponding increase in profitability'; BTM capacity 'sold out for 2026 and all but for 2027'. Seidel to NW-IHK: 'a doubling of revenue mid-term'."
+   },
+   {
+    "period": "H1 2026 (Langley Holdings plc interim, six months to 30 June 2026)",
+    "periodType": "half",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Langley Holdings group revenue",
+      "actual": "€588.7M (highlights table) / €558.7M (income statement); H1 2025: €596.6M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Two figures appear in the same document; both recorded. Revenue is lower year on year because Manroland Sheetfed (c.750 staff) was discontinued on 1 June 2026"
+     },
+     {
+      "name": "Langley Holdings operating profit and PBT",
+      "actual": "Operating profit €69.9M (H1 2025: €54.9M); PBT €55.3M after a €19.8M discontinued-operations loss (H1 2025: €59.4M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "'Bergen Engines is ramping up for a more than fourfold increase in output. Piller and Marelli are increasing capacity accordingly and the board has committed approximately €100 million of capital expenditure'"
+     },
+     {
+      "name": "Langley Holdings orders on hand",
+      "actual": "€2,389.0M (chairman's text also says €2.4B and €2.7B); €4.0B expected at year-end",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "'Record order intake for power infrastructure equipment due to unprecedented demand from AI data centres in the USA'; 'Our own capacity is sold out for this year and next, with build slots now being released for 2028'"
+     },
+     {
+      "name": "FY2026 profit-before-tax forecast (company guidance, revised)",
+      "actual": "€237.8M — 'another record, is now largely underwritten'",
+      "expected": "€282.4M (forecast in the annual report of 6 Feb 2026)",
+      "verdict": "miss",
+      "result": "The February forecast was cut by about 16% by August as the print business was discontinued; the FY2026 revenue forecast moved from €1,973.0M to €1,487.6M over the same interval. This row is guidance, not an actual"
+     },
+     {
+      "name": "Active Power (Austin) output",
+      "actual": "'production increasing four-fold on 2025'",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "'Every BTM solution being sold incorporates SHIELDX™'; a live 12.5 MW Bergen engine plus SHIELD-X demonstration at Osterode is planned for autumn 2026"
+     }
+    ],
+    "commentary": "No Piller-level H1 2026 figures have been published. Independent regional reporting fills part of the gap: Piller expects about 30% growth in 2026 and is spending €20M to take Bilshausen from about 100 to about 400 large systems a year by end-2027 (StadtRadio Göttingen, May 2026), and Seidel says 'the AI boom brings us to our capacity limits' (NW-IHK, charakter.me)."
+   }
+  ],
+  "commentary": "Piller Group GmbH is a wholly owned subsidiary of a privately held, unlisted group, so there is no sell-side consensus at any level; the 'expected' values above are Langley's own forward statements as reported, and the verdicts compare delivery against them. Piller's stand-alone results are disclosed only qualitatively by Langley ('record revenues, PBT and order intake' in 2023, 2024 and 2025) and once quantitatively by the Northeim chamber of commerce for 2025 (€332M revenue, €370M order intake). The division Langley does report — Power Solutions — bundles Piller with Bergen Engines and Marelli Motori, and its 2026 forecast (€1,346M, up 70%) is driven by Bergen's behind-the-meter engine book, of which SHIELDX is a component. Bundesanzeiger filings for the German entities exist behind paywalls and were not retrieved."
+ },
+ "sources": [
+  {
+   "label": "DCNN — Bergen Engines signs 750MW data centre deal",
+   "url": "https://dcnnmagazine.com/business/investment/bergen-engines-signs-750mw-data-centre-deal/",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "WHYY — Vineland data center allegedly operates gas generators without permit",
+   "url": "https://whyy.org/articles/vineland-new-jersey-data-center-gas-generators-permit/",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "WHYY — Vineland data center makes case for on-site power generation (6-hour hearing)",
+   "url": "https://whyy.org/articles/vineland-data-center-hearing-power-generation/",
+   "date": "2026-08-06"
+  },
+  {
+   "label": "Piller — Parent Company Interim Financials Released Today",
+   "url": "https://www.piller.com/parent-company-interim-financials-released-today/",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Langley Holdings — Interim Trading Statement 6 months to 30 June 2026",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2026/07/Pages-LAH-Interim-Report-2026_EN-V3c-CMYK-p.pdf",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "DCD — Piller puts power into NEXTDC Melbourne data center",
+   "url": "https://www.datacenterdynamics.com/en/news/piller-puts-power-into-nextdc-melbourne-data-center/",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "Companies House — Langley Holdings plc filing history (CS01 2026-07-27; AA to 31 Dec 2025 filed 2026-03-06)",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/01321615/filing-history",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "Piller — Picks and Shovels for the AI Gold Rush",
+   "url": "https://www.piller.com/picks-and-shovels-for-the-ai-gold-rush/",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "Bundesregierung — FAQ EU-US-Zolleinigung",
+   "url": "https://www.bundesregierung.de/breg-de/aktuelles/faq-eu-us-zolleinigung-2340924",
+   "date": "2026-07-01"
+  },
+  {
+   "label": "Langley — Third Global Power Solutions Symposium at Piller HQ",
+   "url": "https://www.langleyholdings.com/news/2026/06/29/langley-hosts-third-global-power-solutions-symposium-at-piller-headquarters/",
+   "date": "2026-06-29"
+  },
+  {
+   "label": "Piller — Datacloud Global Congress 2026 Marks Major Milestone",
+   "url": "https://www.piller.com/datacloud-global-congress-2026-marks-major-milestone/",
+   "date": "2026-06-10"
+  },
+  {
+   "label": "Piller/Bergen — ~750MW U.S. Power Agreement with Crusoe",
+   "url": "https://www.piller.com/bergen-engines-signs-approximately-750mw-u-s-power-agreement-with-crusoe-for-ai-data-centers/",
+   "date": "2026-06-03"
+  },
+  {
+   "label": "Crusoe newsroom — Bergen Engines ~750MW US power agreement",
+   "url": "https://www.crusoe.ai/resources/newsroom/bergen-engines-signs-approx-750mw-u-s-power-agreement-with-crusoe-for-ai-data-centers",
+   "date": "2026-06-03"
+  },
+  {
+   "label": "Powertrain International — Bergen Crusoe for AI in US",
+   "url": "https://www.powertraininternationalweb.com/powergen/bergen-crusoe-us-data-centers/",
+   "date": "2026-06-03"
+  },
+  {
+   "label": "Print Monthly — Manroland Sheetfed to cease all offset press production",
+   "url": "https://www.printmonthly.co.uk/news/industry/manroland-sheetfed-to-cease-all-offset-press-production/",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "Karriere Südniedersachsen — Piller Group GmbH: €20M Bilshausen investment, 150 jobs, 100 → 400 large systems a year (corroborating StadtRadio Göttingen, 22 May 2026)",
+   "url": "https://www.karriere-suedniedersachsen.de/piller-group",
+   "date": "2026-05-22"
+  },
+  {
+   "label": "Rundblick Niedersachsen — Führungswechsel bei Piller in Osterode",
+   "url": "https://rundblick-niedersachsen.de/fuehrungswechsel-bei-piller-in-osterode-us-chef-richards-rueckt-an-die-gruppenspitze",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Piller/Bergen — 500MW+ Orders from Liberty Energy",
+   "url": "https://www.piller.com/bergen-engines-secures-500mw-of-orders-from-liberty-energy-to-advance-power-services-for-ai-data-centers/",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "Liberty Energy — Liberty selects Bergen Engines for 500MW+ (Piller SHIELDX)",
+   "url": "https://libertyenergy.com/bergen-engines-liberty-energy-to-advance-power-services-for-ai-data-centers/",
+   "date": "2026-05-08"
+  },
+  {
+   "label": "charakter.me — Piller Group: ein Arbeitgeber mit Perspektive",
+   "url": "https://www.charakter.me/2026/04/26/piller-group-ein-arbeitgeber-mit-perspektive/",
+   "date": "2026-04-26"
+  },
+  {
+   "label": "Piller — Appoints Dean Richards as Co-CEO",
+   "url": "https://www.piller.com/piller-group-appoints-dean-richards-as-chief-executive-officer/",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "Langley — Piller Appoints Dean Richards as Co-CEO",
+   "url": "https://www.langleyholdings.com/news/2026/04/08/piller-group-appoints-dean-richards-as-chief-executive-officer/",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "Global Trade & Sanctions Law — Section 232 metal duties revamped",
+   "url": "https://www.globaltradeandsanctionslaw.com/trump-administration-section-232-metal-duties/",
+   "date": "2026-04-06"
+  },
+  {
+   "label": "Piller — UPS Provides Support to PT Santos Jaya Abadi",
+   "url": "https://www.piller.com/pillers-ups-provides-support-to-pt-santos-jaya-abadi/",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "Piller — Classified US Government Data Center Repeat Order",
+   "url": "https://www.piller.com/classified-us-government-data-center-repeat-order/",
+   "date": "2026-02-23"
+  },
+  {
+   "label": "Bruegel — An EU strategy in the wake of the US Supreme Court tariffs ruling",
+   "url": "https://www.bruegel.org/first-glance/eu-strategy-wake-united-states-supreme-court-tariffs-ruling",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "printindustry.news — Manroland Sheetfed: Langley deems situation unsustainable (FY2025 figures)",
+   "url": "https://www.printindustry.news/story/51250/manroland-sheetfed-langley-deems-situation-unsustainable-and-considers-options",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "NW-IHK — Piller erzielt deutliches Umsatzplus",
+   "url": "https://nw-ihk.de/news/piller-erzielt-deutliches-umsatzplus",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Langley — IFRS Annual Report & Accounts 2025, full",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2026/02/LAH_Full_Accounts_2025-sp-FINAL-1.pdf",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "Langley — Annual Report 2025 profile pages / Key Highlights / Chairman's Review",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2026/02/LAH_Profile_Pages_2025-sp-FINAL7.pdf",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "Piller — Parent Company Annual Report & Accounts 2025",
+   "url": "https://www.piller.com/parent-company-annual-report-accounts-2025/",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "Langley Holdings — Annual Report & Accounts 2025",
+   "url": "https://www.langleyholdings.com/news/2026/02/06/annual-report-accounts-2025/",
+   "date": "2026-02-06"
+  },
+  {
+   "label": "Sierra Club New Jersey — Opposition to the Vineland data center and new gas generation (identifies the 36-engine Bergen plant with the DataOne/Nebius site)",
+   "url": "https://www.sierraclub.org/new-jersey/blog/2026/02/sierra-club-sustain-south-jersey-and-local-farmers-oppose-massive-vineland",
+   "date": "2026-02"
+  },
+  {
+   "label": "Langley — Power Solutions Brochure 2026 V.2",
+   "url": "https://www.piller.com/wp-content/uploads/2026/02/Langley-Power-Solutions-Brochure-2026.pdf",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "Powertrain International — Bergen ships first engines for 400MW AI project in the USA",
+   "url": "https://www.powertraininternationalweb.com/powergen/bergen-ai-usa/",
+   "date": "2026-01-06"
+  },
+  {
+   "label": "Piller — The Race to Power AI is on!",
+   "url": "https://www.piller.com/the-race-to-power-ai-is-on/",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "SemiAnalysis — How AI Labs Are Solving the Power Crisis: The Onsite Gas Deep Dive",
+   "url": "https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power",
+   "date": "2025-12-30"
+  },
+  {
+   "label": "Piller/Bergen — 400MW Contract for US AI Data Center Power Plant",
+   "url": "https://www.piller.com/bergen-engines-secures-400mw-contract-for-us-ai-data-center-power-plant/",
+   "date": "2025-11-26"
+  },
+  {
+   "label": "Langley Holdings — Bergen secures 400MW contract for US AI data center power plant",
+   "url": "https://www.langleyholdings.com/news/2025/11/26/bergen-engines-secures-400mw-contract-for-us-ai-data-center-power-plant/",
+   "date": "2025-11-26"
+  },
+  {
+   "label": "Piller — Let's talk behind-the-meter (island) power for AI Data Centres",
+   "url": "https://www.piller.com/lets-talk-behind-the-meter-island-power-for-ai-data-centres/",
+   "date": "2025-11-18"
+  },
+  {
+   "label": "Pipeline & Gas Journal — Load smoothing in AI data centers: the case for batteries",
+   "url": "https://pgjonline.com/news/2025/november/load-smoothing-in-ai-data-centers-the-case-for-batteries-and-integrated-electrical-system-design",
+   "date": "2025-11"
+  },
+  {
+   "label": "DCD product news (Piller-authored) — Behind-the-meter (island) power for AI data centers",
+   "url": "https://www.datacenterdynamics.com/en/product-news/lets-talk-behind-the-meter-island-power-for-ai-data-centers/",
+   "date": "2025-10"
+  },
+  {
+   "label": "Power Engineering — Bergen Engines powers AI's next frontier",
+   "url": "https://www.power-eng.com/gas/bergen-engines-powers-ais-next-frontier-a-historic-company-at-the-heart-of-americas-data-center-boom/",
+   "date": "2025-09-11"
+  },
+  {
+   "label": "Piller — Missed the Launch? SHIELDX™ is Here",
+   "url": "https://www.piller.com/missed-the-launch-shieldx-is-here-for-the-ai-era/",
+   "date": "2025-09-04"
+  },
+  {
+   "label": "Piller — SHIELDX™ Has Arrived – Tier IV Resilience for the AI Era",
+   "url": "https://www.piller.com/shieldx-has-arrived-tier-iv-resilience-for-the-ai-era/",
+   "date": "2025-08-21"
+  },
+  {
+   "label": "Langley — Interim Trading Statement 6 months to 30 June 2025",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2025/08/Langley-Interim-Report-2025_New-spreads-3.pdf",
+   "date": "2025-08-07"
+  },
+  {
+   "label": "Piller — Parent Company Interim Report Released Today",
+   "url": "https://www.piller.com/parent-company-interim-report-released-today/",
+   "date": "2025-08-07"
+  },
+  {
+   "label": "Active Power — CleanSource PLUS earthquake certified",
+   "url": "https://www.activepower.com/active-powers-cleansource-plus-ups-now-earthquake-certified-ready-when-it-shakes/",
+   "date": "2025-07-28"
+  },
+  {
+   "label": "ABB — MegaFlex UL UPS for high-power data centers",
+   "url": "https://new.abb.com/news/detail/66678/megaflex-an-efficient-and-resilient-ups-for-high-power-data-centers",
+   "date": "2025-06-25"
+  },
+  {
+   "label": "Piller — Finland AI infrastructure expansion (Nebius, Mäntsälä)",
+   "url": "https://www.piller.com/major-expansion-of-high-performance-data-center-in-southern-finland/",
+   "date": "2025-06-16"
+  },
+  {
+   "label": "Powertrain International — Bergen provides 12 engines for an AI data center (E-Finity)",
+   "url": "https://www.powertraininternationalweb.com/powergen/bergen-ai-us/",
+   "date": "2025-06-16"
+  },
+  {
+   "label": "Piller — Datacloud Global Congress 2025 Cannes",
+   "url": "https://www.piller.com/datacloud-global-congress-2025-cannes/",
+   "date": "2025-06-10"
+  },
+  {
+   "label": "Piller/Bergen — First AI-Dedicated Power Plant",
+   "url": "https://www.piller.com/bergen-engines-first-ai-dedicated-power-plant-in-the-usa/",
+   "date": "2025-06-04"
+  },
+  {
+   "label": "Piller — MD's Gather in Italy for 2nd Power Solutions Symposium",
+   "url": "https://www.piller.com/mds-gather-in-italy-for-2nd-annual-power-solutions-symposium/",
+   "date": "2025-05-19"
+  },
+  {
+   "label": "Uptime Institute — Annual Outage Analysis press releases 2026 and 2025",
+   "url": "https://uptimeinstitute.com/about-ui/press-releases/uptime-announces-annual-outage-analysis-report-2026",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "Uptime Institute — Annual Outage Analysis press releases 2026 and 2025",
+   "url": "https://uptimeinstitute.com/about-ui/press-releases/uptime-announces-annual-outage-analysis-report-2025",
+   "date": "2025-05-13"
+  },
+  {
+   "label": "US EPA — Clarification on emergency generators for data centers",
+   "url": "https://www.epa.gov/newsreleases/epa-issues-clarification-help-power-data-centers-ensure-us-ai-capital-world",
+   "date": "2025-05-01"
+  },
+  {
+   "label": "Sidley Austin — EPA clarifies rules for backup generator use",
+   "url": "https://www.sidley.com/en/insights/newsupdates/2025/05/us-epa-issues-new-guidance-on-data-center-emergency-generator-operations",
+   "date": "2025-05"
+  },
+  {
+   "label": "Piller — Microgrid Solutions at Middle East Energy Dubai",
+   "url": "https://www.piller.com/piller-power-systems-showcases-microgrid-solutions-for-remote-data-centres-at-middle-east-energy-dubai/",
+   "date": "2025-04-10"
+  },
+  {
+   "label": "Piller — Australia's Mining Industry (Iron Bridge)",
+   "url": "https://www.piller.com/solving-energy-challenges-sustainably-in-australias-mining-industry-offers-hope-for-powering-ai/",
+   "date": "2025-04-08"
+  },
+  {
+   "label": "PRWeb — Global Power Supply adds mtu Kinetic PowerPack",
+   "url": "https://www.prweb.com/releases/global-power-expands-product-portfolio-with-mtu-kinetic-powerpack-addition-302411576.html",
+   "date": "2025-03-27"
+  },
+  {
+   "label": "Piller — Leading Global Bank Expands IP-Bus Systems",
+   "url": "https://www.piller.com/leading-global-bank-expands-piller-ip-bus-systems-for-maximum-power-security/",
+   "date": "2025-03-11"
+  },
+  {
+   "label": "BusinessWire — Nebius adds up to 300MW at new New Jersey data center",
+   "url": "https://www.businesswire.com/news/home/20250305405030/en/Nebius-accelerates-US-expansion-adding-up-to-300-MW-capacity-at-new-data-center-in-New-Jersey",
+   "date": "2025-03-05"
+  },
+  {
+   "label": "ThePackagingPortal — Langley Holdings FY24 results",
+   "url": "https://www.thepackagingportal.com/industry-news/langley-holdings-fy24-results/",
+   "date": "2025-02-25"
+  },
+  {
+   "label": "Langley — IFRS Annual Report & Accounts 2024, full",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2025/03/LAH_RA_2024_Full_Web_sp.pdf",
+   "date": "2025-02-10"
+  },
+  {
+   "label": "Langley — Annual Report 2024 Group Profile, Key Highlights & Chairman's Review",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2025/02/Final_LAH_Profile_2024_V5_sp-web.pdf",
+   "date": "2025-02-10"
+  },
+  {
+   "label": "Piller — 2024 Results Published",
+   "url": "https://www.piller.com/2024-results-published/",
+   "date": "2025-02-10"
+  },
+  {
+   "label": "Piller — Research Institute HZB (BESSY II)",
+   "url": "https://www.piller.com/hzbresearch-institute-driving-climate-neutral-energy/",
+   "date": "2025-02-07"
+  },
+  {
+   "label": "Active Power — Sustainability at Austin Factory (400 kW solar)",
+   "url": "https://www.activepower.com/active-power-advances-sustainability/",
+   "date": "2025-01-29"
+  },
+  {
+   "label": "Vertiv — Trinergy UPS 2500kW 480V product page",
+   "url": "https://www.vertiv.com/en-us/products-catalog/critical-power/uninterruptible-power-supplies-ups/2.5mw-ul/",
+   "date": "2024-12"
+  },
+  {
+   "label": "Piller — Denmark's 'Hospital of the Future' (Odense)",
+   "url": "https://www.piller.com/the-region-of-southern-denmark-installs-scandinavias-second-largest-battery-free-drups-system-in-university-hospital-project/",
+   "date": "2024-11-12"
+  },
+  {
+   "label": "Piller — EURONAVAL 2024",
+   "url": "https://www.piller.com/euronaval-2024-a-resounding-success-in-paris-france/",
+   "date": "2024-11-11"
+  },
+  {
+   "label": "Piller — M+ Series Static UPS launch tour",
+   "url": "https://www.piller.com/piller-m500-ups-showcases-welcomed-by-data-centre-experts-at-dc-events-across-the-world/",
+   "date": "2024-10-28"
+  },
+  {
+   "label": "Piller — AI: where will the tech titans find enough clean power (Slgini)",
+   "url": "https://www.piller.com/article/ai-where-will-the-global-tech-titans-find-enough-clean-power-for-their-hyperscale-ai-data-centers/",
+   "date": "2024-09-02"
+  },
+  {
+   "label": "Piller — Parent Company Interim Trading Statement (H1 2024)",
+   "url": "https://www.piller.com/interim-trading-statement-published-today/",
+   "date": "2024-08-09"
+  },
+  {
+   "label": "Langley Holdings — Interim trading statement H1 2024",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2024/08/LAH-Interim-report-2024_EN.pdf",
+   "date": "2024-08-09"
+  },
+  {
+   "label": "Active Power — Solution for Top EV Producer (Tesla)",
+   "url": "https://www.activepower.com/active-power-flywheel-solution/",
+   "date": "2024-08-01"
+  },
+  {
+   "label": "Piller — Inaugural Power Solutions Symposium",
+   "url": "https://www.piller.com/inaugural-power-solutions-symposium/",
+   "date": "2024-06-24"
+  },
+  {
+   "label": "Piller — A Testament to Piller's Trusted Expertise (American Regent)",
+   "url": "https://www.piller.com/a-testament-to-pillers-trusted-expertise/",
+   "date": "2024-06-20"
+  },
+  {
+   "label": "Piller — The M+500 is here",
+   "url": "https://www.piller.com/piller-launches-all-new-hot-swappable-static-ups-for-data-centres/",
+   "date": "2024-06-17"
+  },
+  {
+   "label": "Langley — Piller Launches All New Hot-Swappable Static UPS",
+   "url": "https://www.langleyholdings.com/news/2024/06/12/piller-launches-all-new-hot-swappable-static-ups-for-data-centres/",
+   "date": "2024-06-12"
+  },
+  {
+   "label": "Consulting-Specifying Engineer — Kinetic energy storage: what to know about a dynamic UPS (Rolls-Royce author)",
+   "url": "https://www.csemag.com/kinetic-energy-storage-what-to-know-about-a-dynamic-ups/",
+   "date": "2024-06-03"
+  },
+  {
+   "label": "Piller — AI and the urgent need for on-site power generation",
+   "url": "https://www.piller.com/ai-and-the-urgent-need-for-on-site-power-generation/",
+   "date": "2024-05-29"
+  },
+  {
+   "label": "Piller — Düsseldorf Airport UPS upgrade after 27 years",
+   "url": "https://www.piller.com/airport-ups-upgrade-after-27-years/",
+   "date": "2024-05-07"
+  },
+  {
+   "label": "Piller — Dr. Detlev Seidel 25-year milestone",
+   "url": "https://www.piller.com/piller-honours-dr-detlev-seidels-25-years-of-service/",
+   "date": "2024-03-01"
+  },
+  {
+   "label": "Powertrain International — Langley Holdings: 2023 annual report",
+   "url": "https://www.powertraininternationalweb.com/news/langley-holdings-2023-annual-report/",
+   "date": "2024-02-20"
+  },
+  {
+   "label": "Langley — Annual Report 2023 Key Highlights & Chairman's Review",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2024/03/LAH_Key_Highlights_and_CR_V4-sp.pdf",
+   "date": "2024-02-14"
+  },
+  {
+   "label": "Langley — Annual Report 2023 Group Profile",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2024/03/LAH_Group_Profile_artwork-V2-sp.pdf",
+   "date": "2024-02-14"
+  },
+  {
+   "label": "Piller — UPS Chosen by US Semiconductor Manufacturer",
+   "url": "https://www.piller.com/piller-us-secures-power-protection-at-multi-billion-dollar-advanced-semiconductor-manufacturing-development/",
+   "date": "2024-02-12"
+  },
+  {
+   "label": "Piller — Energy Transition and Grid Constraints",
+   "url": "https://www.piller.com/energy-transition-and-grid-constraints/",
+   "date": "2024-01-25"
+  },
+  {
+   "label": "Piller — General Motors Warren & Milford data centers",
+   "url": "https://www.piller.com/piller-completes-power-build-out-for-general-motors-strategic-warren-and-milford-data-centers/",
+   "date": "2024-01-04"
+  },
+  {
+   "label": "Langley Power Solutions — Power of 10 Case Study: 100MW Industrial Microgrid",
+   "url": "https://www.piller.com/wp-content/uploads/2024/01/Power-of-10-Case-Study-Industrial-Microgrid-1.pdf",
+   "date": "2023-10"
+  },
+  {
+   "label": "Piller — 3.6 MW UPS with Li-Ion storage at German data centre",
+   "url": "https://www.piller.com/article/piller-installs-3-6-mw-ups-systems-with-li-ion-energy-storage-at-german-data-centre/",
+   "date": "2023-08-25"
+  },
+  {
+   "label": "Piller — UBT+ and UB-V at NEXTDC S3 Tier IV",
+   "url": "https://www.piller.com/article/piller-ubt-and-ub-v-ups-series-at-nextdcs-s3-100-fault-tolerant-tier-iv-data-centre/",
+   "date": "2023-08-25"
+  },
+  {
+   "label": "Piller — 3Sun deploys Piller's latest UPS technology",
+   "url": "https://www.piller.com/italys-largest-solar-panel-maker-3sun-deploys-pillers-latest-ups-technology/",
+   "date": "2023-06-19"
+  },
+  {
+   "label": "Piller — The Power of 10 lands at Datacenter World Austin",
+   "url": "https://www.piller.com/the-power-of-10-lands-at-datacenter-world-austin-texas/",
+   "date": "2023-05-15"
+  },
+  {
+   "label": "Langley — IFRS Annual Report & Accounts 2022, full",
+   "url": "https://www.langleyholdings.com/wp-content/uploads/2023/09/full-ifrs-annual-report-accounts-2022-2.pdf",
+   "date": "2023-02-21"
+  },
+  {
+   "label": "Piller — Power Solutions division launch The Power of 10",
+   "url": "https://www.piller.com/langley-holdings-power-solutions-division-launch-the-power-of-10/",
+   "date": "2023-02-01"
+  },
+  {
+   "label": "Piller — New MD for Piller Power India",
+   "url": "https://www.piller.com/new-managing-director-for-piller-power-india-pvt-ltd/",
+   "date": "2022-11-09"
+  },
+  {
+   "label": "Langley Holdings — New MD Global Business, Piller (Slgini)",
+   "url": "https://www.langleyholdings.com/news/2022/09/02/new-managing-director-global-business-piller-power-systems/",
+   "date": "2022-09-02"
+  },
+  {
+   "label": "Piller — New Managing Director, Global Business (Slgini)",
+   "url": "https://www.piller.com/new-managing-director-global-business/",
+   "date": "2022-09-01"
+  },
+  {
+   "label": "Active Power — CleanSource PLUS MMS UL 333–2667 kW 480 V datasheet",
+   "url": "https://www.activepower.com/wp-content/uploads/2023/11/CleanSource-PLUS-MMS-UL-333-2667kW-480V-1.pdf",
+   "date": "2022-06"
+  },
+  {
+   "label": "Piller — Bergen microgrid offering with Piller and Marelli (Boston)",
+   "url": "https://www.piller.com/see-us-at-the-10th-national-conference-on-microgrids-30-31st-march-2022-boston-ma-usa/",
+   "date": "2022-03-21"
+  },
+  {
+   "label": "Active Power — Appoints new CEO Jack Pearce",
+   "url": "https://www.activepower.com/active-power-appoints-new-ceo-to-lead-the-company-in-its-next-phase-of-growth/",
+   "date": "2021-07"
+  },
+  {
+   "label": "Piller — NYC 911 emergency services 20 more years",
+   "url": "https://www.piller.com/piller-usa-to-protect-nyc-911-emergency-services-for-another-20-years/",
+   "date": "2021-04-07"
+  },
+  {
+   "label": "Piller — UB-V Series Industrial & Healthcare brochure Issue 1",
+   "url": "https://www.piller.com/wp-content/uploads/2023/08/ub-v-series-industrial-healthcare-brochure.pdf",
+   "date": "2021-04"
+  },
+  {
+   "label": "MarketsandMarkets — Rotary UPS market 2021–2026",
+   "url": "https://www.marketsandmarkets.com/Market-Reports/rotary-uninterruptible-power-supply-market-66258457.html",
+   "date": "2021-04"
+  },
+  {
+   "label": "Rolls-Royce — Expands mtu range with Kinolt UPS (renamed Rolls-Royce Solutions Liège)",
+   "url": "https://www.rolls-royce.com/media/press-releases/2021/02-02-2021-rr-expands-mtu-product-range-with-kinolt-uninterruptible-power-supply-systems.aspx",
+   "date": "2021-02-02"
+  },
+  {
+   "label": "Piller — Global webinar series: Future of UPS Power at Scale",
+   "url": "https://www.piller.com/piller-global-webinar-series-addresses-future-of-ups-power-at-scale/",
+   "date": "2020-12-01"
+  },
+  {
+   "label": "Piller — e-VENTLOG™ trademarked",
+   "url": "https://www.piller.com/piller-trademarks-new-e-ventlog-system-to-cut-on-site-visits/",
+   "date": "2020-07-06"
+  },
+  {
+   "label": "Active Power — CleanSource HD UL 675 kW 480 V datasheet",
+   "url": "https://www.activepower.com/wp-content/uploads/2023/10/CleanSource-HD-UL-675kW-480V.pdf",
+   "date": "2020-06"
+  },
+  {
+   "label": "Piller — AUDI AG IN-Campus data centre",
+   "url": "https://www.piller.com/piller-power-protection-chosen-for-audi-ag-multi-mega-watt-data-centre/",
+   "date": "2020-05-18"
+  },
+  {
+   "label": "Piller — Unveil new UB-V Platform for Data Centre",
+   "url": "https://www.piller.com/piller-unveil-new-ub-v-platform-for-data-centre/",
+   "date": "2020-01-14"
+  },
+  {
+   "label": "Piller — Celebrates 100 years in Osterode",
+   "url": "https://www.piller.com/piller-celebrates-100-years-in-osterode/",
+   "date": "2019-09-06"
+  },
+  {
+   "label": "Egeria — Air Water Inc acquires Hitec",
+   "url": "https://egeriagroup.com/news/air-water-inc-acquires-hitec/",
+   "date": "2019-07-17"
+  },
+  {
+   "label": "techUK — Briefing note for data centres: MCPD & Specified Generator Controls",
+   "url": "https://www.techuk.org/asset/8E10811D-BA7A-49B8-A90206653E971384/",
+   "date": "2018-11"
+  },
+  {
+   "label": "Piller — Group Profile \"Nothing protects quite like Piller\" Issue 4",
+   "url": "https://www.activepower.com/wp-content/uploads/2023/11/piller-active-power-overview_compressed.pdf",
+   "date": "2018-04"
+  },
+  {
+   "label": "Piller — UNIBLOCK™ UBT+ Rotary UPS brochure Issue 3, April 2018 (Piller-authored; read from a distributor mirror — canonical download page piller.com/download/piller-ubt-product-brochure-2/)",
+   "url": "https://databus-cy.com/wp-content/uploads/2018/11/UNIBLOCK-UBT-Rotary-UPS-from-500-kW-up-to-40-MW.pdf",
+   "date": "2018-04",
+   "party": "company"
+  },
+  {
+   "label": "Data Center Knowledge — How to prevent DRUPS-related data center outages",
+   "url": "https://www.datacenterknowledge.com/outages/how-to-prevent-drups-related-data-center-outages",
+   "date": "2017-05-17"
+  },
+  {
+   "label": "Data Center Frontier — FORTRUST adopts diesel rotary UPS (E1 Dynamics)",
+   "url": "https://www.datacenterfrontier.com/energy/article/11430964/fortrust-adopts-diesel-rotary-ups-for-backup-power",
+   "date": "2016-12-29"
+  },
+  {
+   "label": "Active Power/Langley — asset purchase release (SEC 8-K exhibit; first-party release filed by acquiree)",
+   "url": "https://www.sec.gov/Archives/edgar/data/1044435/000104443516000139/acpwexhibit991langleyrelea.htm",
+   "date": "2016-11-19"
+  },
+  {
+   "label": "SEC 8-K Ex.99.1 — Active Power sale complete to Langley (Piller Power Systems, Inc.)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001044435/000104443516000161/exhibit991closing.htm",
+   "date": "2016-11-19"
+  },
+  {
+   "label": "DCD — Langley's Piller USA to acquire Active Power",
+   "url": "https://www.datacenterdynamics.com/en/news/langleys-piller-usa-to-acquire-active-power/",
+   "date": "2016-09-30"
+  },
+  {
+   "label": "Schneider Electric — White Paper 222, DRUPS vs Static UPS: A Quantitative Comparison",
+   "url": "https://www.se.com/us/en/download/document/SPD_VAVR-9WFNHS_EN/",
+   "date": "2016-07"
+  },
+  {
+   "label": "AWS — Summary of the AWS service event in the Sydney region (DRUPS)",
+   "url": "https://aws.amazon.com/fr/message/4372T8/",
+   "date": "2016-06-05"
+  },
+  {
+   "label": "Piller — CPM 300/360 datasheet Issue 1, June 2016 (Piller-authored; distributor mirror)",
+   "url": "https://www.piller.co.th/wp-content/uploads/piller-cpm-300-360-en.pdf",
+   "date": "2016-06",
+   "party": "company"
+  },
+  {
+   "label": "SEC 10-K — Active Power FY2015",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001044435/000104443516000065/acpw1231201510-k.htm",
+   "date": "2016-03"
+  },
+  {
+   "label": "The Register — Telecity fix nixed: hub had no UPS protection (Sovereign House)",
+   "url": "https://www.theregister.com/on-prem/2015/11/19/telecity-fix-nixed-borked-uk-internet-hub-had-no-ups-protection/913750",
+   "date": "2015-11-19"
+  },
+  {
+   "label": "Uptime Institute Journal — Australian colo provider achieves high reliability (NEXTDC/Piller)",
+   "url": "https://journal.uptimeinstitute.com/australian-colo-provider-achieves-high-reliability-using-innovative-techniques/",
+   "date": "2015-09-22"
+  },
+  {
+   "label": "SGX — BCOI findings on 5 Nov 2014 breakdown",
+   "url": "https://links.sgx.com/1.0.0/corporate-announcements/5NDW88WZ0QVNLLAT/357241_20150624_News_Release_BCOI_report.pdf",
+   "date": "2015-06-24"
+  },
+  {
+   "label": "Piller — UNIBLOCK UBT 420–1670 kVA product data sheet, 29 March 2011 (Piller-authored; distributor mirror)",
+   "url": "https://piller.dk/wp-content/uploads/2019/08/roterende-ups-ubt_data.pdf",
+   "date": "2011-03-29",
+   "party": "company"
+  },
+  {
+   "label": "Data Center Knowledge — Caterpillar, Active Power renew flywheel deal",
+   "url": "https://www.datacenterknowledge.com/deals/caterpillar-active-power-renew-flywheel-deal",
+   "date": "2008-04-24"
+  },
+  {
+   "label": "Active Power — POWERHOUSE brochure UL",
+   "url": "https://www.activepower.com/wp-content/uploads/2023/10/powerhouse-brochure-us.pdf"
+  },
+  {
+   "label": "Piller — SHIELDX™ Dynamic Power Stabilization",
+   "url": "https://www.piller.com/product/shieldx-dynamic-power-stabilisation/"
+  },
+  {
+   "label": "Piller — UB-V Series for Data Centres",
+   "url": "https://www.piller.com/product/ub-v-series-for-data-centres/"
+  },
+  {
+   "label": "Piller — UB-V Series for Industrial & Other Sectors",
+   "url": "https://www.piller.com/product/ub-v-series-for-industrial-other-sectors/"
+  },
+  {
+   "label": "Piller — UNIBLOCK™ UPS up to 50MW (UBT+, UBTD+)",
+   "url": "https://www.piller.com/product/uniblock-ups-from-150kw-up-to-50mw/"
+  },
+  {
+   "label": "Piller — M+ Series Modular Static UPS",
+   "url": "https://www.piller.com/product/m-series-modular-static-ups/"
+  },
+  {
+   "label": "Piller — CPM Critical Power Modules with Flywheel",
+   "url": "https://www.piller.com/product/critical-power-modules-with-flywheel/"
+  },
+  {
+   "label": "Piller — Energy Storage Flywheels and Battery Systems (POWERBRIDGE)",
+   "url": "https://www.piller.com/product/energy-storage-flywheels-and-battery-systems/"
+  },
+  {
+   "label": "Piller — DeRUPS™ Configuration",
+   "url": "https://www.piller.com/product/derups-configuration/"
+  },
+  {
+   "label": "Piller — Isolated Parallel (IP) System Configuration",
+   "url": "https://www.piller.com/product/isolated-parallel-ip-system-configuration/"
+  },
+  {
+   "label": "Piller — Frequency Converters / APOJET / naval",
+   "url": "https://www.piller.com/product/frequency-converters/"
+  },
+  {
+   "label": "Piller — APOSTAR Static UPS 3–500 kVA",
+   "url": "https://www.piller.com/product/static-ups-from-3kva-up-to-500kva/"
+  },
+  {
+   "label": "Piller — APOTRANS Static Transfer Switch 25–1600 A",
+   "url": "https://www.piller.com/product/static-transfer-switch-25a-up-to-1600a/"
+  },
+  {
+   "label": "Piller — Hire / rental & service",
+   "url": "https://www.piller.com/hire/"
+  },
+  {
+   "label": "Piller — Sector: Data Centres",
+   "url": "https://www.piller.com/sector/data-hosting-and-it/"
+  },
+  {
+   "label": "Piller — Sector: Energy (Grid series, GridPB, GridGate)",
+   "url": "https://www.piller.com/sector/energy/"
+  },
+  {
+   "label": "Piller — Sector: Manufacturing",
+   "url": "https://www.piller.com/sector/manufacturing/"
+  },
+  {
+   "label": "Piller — Sector: Banking and Finance",
+   "url": "https://www.piller.com/sector/banking-and-finance/"
+  },
+  {
+   "label": "Piller — Case studies (comms)",
+   "url": "https://www.piller.com/comms/"
+  },
+  {
+   "label": "Piller — About",
+   "url": "https://www.piller.com/about/"
+  },
+  {
+   "label": "Piller — History",
+   "url": "https://www.piller.com/history/"
+  },
+  {
+   "label": "Piller — Facilities",
+   "url": "https://www.piller.com/facilities/"
+  },
+  {
+   "label": "Piller — Contact / offices",
+   "url": "https://piller.com/en-US/offices"
+  },
+  {
+   "label": "Langley — Home (divisions, headline stats)",
+   "url": "https://www.langleyholdings.com/"
+  },
+  {
+   "label": "Langley — Grid-Free Power",
+   "url": "https://www.langleyholdings.com/grid-free-power/"
+  },
+  {
+   "label": "Active Power — News (pages 1–2)",
+   "url": "https://www.activepower.com/en-US/news"
+  },
+  {
+   "label": "Active Power — Leadership",
+   "url": "https://www.activepower.com/leadership/"
+  },
+  {
+   "label": "Active Power — About",
+   "url": "https://www.activepower.com/about/"
+  },
+  {
+   "label": "Active Power — CleanSource PLUS SMS",
+   "url": "https://www.activepower.com/product/cleansource-sms-plus-ups/"
+  },
+  {
+   "label": "Active Power — CleanSource PLUS MMS",
+   "url": "https://www.activepower.com/product/cleansource-plus-mms/"
+  },
+  {
+   "label": "Active Power — CleanSource XT",
+   "url": "https://www.activepower.com/product/cleansource-xt-mms/"
+  },
+  {
+   "label": "Active Power — CleanSource HD",
+   "url": "https://www.activepower.com/product/cleansource-hd-ups/"
+  },
+  {
+   "label": "Active Power — POWERHOUSE",
+   "url": "https://www.activepower.com/product/powerhouse-ups/"
+  },
+  {
+   "label": "Active Power — GenSTART",
+   "url": "https://www.activepower.com/product/genstart/"
+  },
+  {
+   "label": "MarketsandMarkets — Data Center UPS market insight",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-ups-market.asp"
+  },
+  {
+   "label": "Global Market Insights — Data Center UPS market / UPS market",
+   "url": "https://www.gminsights.com/industry-analysis/data-center-UPS-market"
+  },
+  {
+   "label": "ResearchAndMarkets — Diesel Rotary UPS market to 2032",
+   "url": "https://www.researchandmarkets.com/report/global-diesel-rotary-ups-market"
+  },
+  {
+   "label": "Encino Environmental — States tightening rules for data center backup generators",
+   "url": "https://encinoenviron.com/states-are-tightening-the-rules-for-data-center-backup-generators/"
+  },
+  {
+   "label": "Axces — Data center backup power and emission regulations (MCPD/Stage V)",
+   "url": "https://axces.com/knowledge/datacenter-backup-power-emission-regulations"
+  },
+  {
+   "label": "Westfair — Piller USA breaks ground for new Wallkill facility",
+   "url": "https://westfaironline.com/construction/piller-usa-breaks-ground-for-new-wallkill-facility/"
+  },
+  {
+   "label": "ABB — Ring bus with static UPS for critical power applications",
+   "url": "https://new.abb.com/news/detail/16888/abbs-ring-bus-with-static-ups-for-critical-power-applications"
+  },
+  {
+   "label": "Companies House — Langley Holdings plc overview",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/01321615"
+  },
+  {
+   "label": "Companies House — Langley Holdings plc officers",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/01321615/officers"
+  },
+  {
+   "label": "Companies House — Piller UK Limited overview and officers",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/01234302"
+  },
+  {
+   "label": "Companies House — Piller UK Limited overview and officers",
+   "url": "https://find-and-update.company-information.service.gov.uk/company/01234302/officers"
+  },
+  {
+   "label": "Creditreform — Piller Group GmbH Firmenauskunft (Seidel, Richards)",
+   "url": "https://firmeneintrag.creditreform.de/37520/2130000138/PILLER_GROUP_GMBH"
+  },
+  {
+   "label": "NEXTDC — S1, S2, S3 Sydney and M3 Melbourne data centre pages (Piller ratings, engine suppliers)",
+   "url": "https://www.nextdc.com/data-centres/sydney-data-centres/s1-sydney"
+  },
+  {
+   "label": "NEXTDC — S1, S2, S3 Sydney and M3 Melbourne data centre pages (Piller ratings, engine suppliers)",
+   "url": "https://www.nextdc.com/data-centres/sydney-data-centres/s2-sydney"
+  },
+  {
+   "label": "NEXTDC — S1, S2, S3 Sydney and M3 Melbourne data centre pages (Piller ratings, engine suppliers)",
+   "url": "https://www.nextdc.com/data-centres/sydney-data-centres/s3-sydney"
+  },
+  {
+   "label": "NEXTDC — S1, S2, S3 Sydney and M3 Melbourne data centre pages (Piller ratings, engine suppliers)",
+   "url": "https://www.nextdc.com/data-centres/melbourne-data-centres/m3-melbourne"
+  },
+  {
+   "label": "baxtel — Telehouse FRA Building M (3 × DRUPS on IP-Bus)",
+   "url": "https://baxtel.com/data-center/telehouse-fra-bldg-m"
+  },
+  {
+   "label": "Hitec Power Protection — About us",
+   "url": "https://hitec-ups.com/about-us/"
+  },
+  {
+   "label": "PoundSterlingLive — Euro-U.S. Dollar History: 2025 (calendar-year average 1.1296)",
+   "url": "https://www.poundsterlinglive.com/history/EUR-USD-2025"
+  }
+ ],
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1
+}

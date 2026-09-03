@@ -1136,6 +1136,25 @@
       "kpiNorm": false
     },
     {
+      "slug": "piller",
+      "name": "Piller Power Systems",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The rotary, diesel-rotary and flywheel UPS maker whose SHIELDX kinetic stabilizer now ships inside every Bergen Engines behind-the-meter AI plant — more than 3 GW signed by mid-2026 after a decade absent from hyperscale UPS; the constraint is the Osterode factory, going from ~100 to ~400 large systems a year by end-2027.",
+      "hq": "Osterode am Harz, Germany",
+      "status": "active",
+      "lastUpdated": "2026-09-03",
+      "domains": [
+        "piller.com",
+        "activepower.com",
+        "langleyholdings.com"
+      ],
+      "srcTotal": 185,
+      "srcFirstPct": 64,
+      "kpiNorm": true
+    },
+    {
       "slug": "plus-power",
       "name": "Plus Power",
       "categories": [
