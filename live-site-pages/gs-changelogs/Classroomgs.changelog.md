@@ -3,11 +3,18 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 10/50`
+`Sections: 11/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.11g] — 2026-09-02 10:36:47 PM EST — v04.32r
+
+### Added
+- A new lesson on how a site gets connected to the grid in the first place: the studies that gate it, the queue that forms behind them, the substation that arrives at the end, and the five different quantities a campus announcement can mean by "megawatts"
+- The lesson closes on where the process fails — the date that moves, the equipment slot nobody reserved, energization treated as a formality, and the permit problem that looks exactly like an equipment problem
+- A new track that walks the data-center power chain in physical order, starting at the property line. The new lesson opens it, and the rest of the walk is added as each part is written
 
 ## [v01.10g] — 2026-09-02 06:23:38 PM EST — v04.29r
 

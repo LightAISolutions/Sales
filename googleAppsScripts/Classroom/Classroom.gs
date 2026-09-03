@@ -1,4 +1,4 @@
-var VERSION = "v01.10g";
+var VERSION = "v01.11g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -499,7 +499,7 @@ function clLessonVisible_(sess, lesson) {
 // the gate derivation below the fence is frozen precisely so a stamp can be
 // checked rather than trusted.
 // ── The first tracks, assembled from the existing corpus (C1) ─────────────
-// Four public-stamped modules authored from the company study guides and the
+// Five public-stamped modules authored from the company study guides and the
 // public concepts registry, plus one guidance-stamped module built on the BESS
 // technology-fundamentals guidance analysis. Every input below is a source
 // actually read while authoring — the stamp is not a citation of convenience.
@@ -1370,6 +1370,358 @@ function clLessonSpecSheet_() {
 };
 }
 
+// ── The AIDC power chain, front half (2026-09-02) ──────────────────
+// the-fence-line opens the aidc-grid-to-chip track: everything from the
+// utility's side of the property line up to the service entrance, which is
+// where the-aidc-power-chain already picks the walk up. Public-stamped from
+// five company study guides and the concepts registry, so it folds to
+// 'tracks' and an analyst reads it. The track is authored short on purpose —
+// the remaining lessons of CLASSROOM-CURRICULUM-PLAN.md §3.3 are inserted at
+// their positions as they are written, not appended to the end.
+function clLessonTheFenceLine_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-fence-line",
+ "type": "module",
+ "title": "The Fence Line: Interconnection and the Substation",
+ "short": "Nothing connects to the grid unstudied. The three studies, the queue they form, the substation at the end of them, and five numbers all called megawatts.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-02",
+ "reviewBy": "2027-03-02",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:burns-mcdonnell",
+    "date": "2026-08-21",
+    "note": "the interconnection study, its three queued phases, who funds the network upgrades, and load versus generation interconnection"
+   },
+   {
+    "kind": "public",
+    "ref": "study:mortenson",
+    "date": "2026-08-21",
+    "note": "the substation as the end of the process: 345 kV as a bulk-grid plug, medium voltage on campus, and the transformer-slot critical path"
+   },
+   {
+    "kind": "public",
+    "ref": "study:stack-infrastructure",
+    "date": "2026-08-22",
+    "note": "power banking, the dedicated on-site substation, and why an approved connection is worth more than the land"
+   },
+   {
+    "kind": "public",
+    "ref": "study:nebius",
+    "date": "2026-08-21",
+    "note": "contracted versus connected versus active power, and permits as the schedule input"
+   },
+   {
+    "kind": "public",
+    "ref": "study:terawulf",
+    "date": "2026-08-21",
+    "note": "gross versus critical IT megawatts, the brownfield connection, and lead times as the gap between contracted and billing"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-03",
+    "note": "term definitions used by the {{...}} tooltips, and the large-load rule vocabulary"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "3 studies",
+   "v": "feasibility → impact → facilities",
+   "sub": "and the requester funds the upgrades they price"
+  },
+  {
+   "k": "5+ years",
+   "v": "a new large-load queue slot",
+   "sub": "which is why siting follows power, not land"
+  },
+  {
+   "k": "≥ 75 MW",
+   "v": "when a load gets grid rules",
+   "sub": "ERCOT's ride-through threshold for large loads"
+  },
+  {
+   "k": "5 numbers",
+   "v": "all of them called megawatts",
+   "sub": "gross · critical IT · contracted · connected · active"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "interconnection study",
+   "d": "The engineering analysis a utility or grid operator runs before anything new is allowed to connect: what the addition does to power flows, voltages and fault currents, and what network upgrades it therefore requires."
+  },
+  {
+   "t": "network upgrades",
+   "d": "The transmission and substation work the grid needs in order to absorb a new connection. The party requesting the connection typically funds them, even though the utility owns and controls the result."
+  },
+  {
+   "t": "energization",
+   "d": "The moment a finished substation and its feeders are first put under live voltage and proven. It is a tested, scheduled event with the utility present, not a switch someone throws at handover."
+  },
+  {
+   "t": "front-of-meter",
+   "d": "Power that arrives through the utility's grid connection and is measured at its meter — the opposite side of that meter from on-site generation. Large campuses commonly blend both."
+  },
+  {
+   "t": "brownfield",
+   "d": "A site that already carried heavy industrial load — a retired coal plant, an aluminium smelter — and therefore already has a substation, high-voltage lines and a utility relationship a new build would have to queue for."
+  },
+  {
+   "t": "power banking",
+   "d": "Acquiring sites where a large grid connection can be secured early and holding the position until demand arrives. The developer's inventory is approved megawatts rather than acreage."
+  },
+  {
+   "t": "entitlement",
+   "d": "The legal right to build a specific use at a specific scale on a specific piece of land — zoning, permits and environmental review, secured before construction and challengeable after it."
+  }
+ ],
+ "sections": [
+  {
+   "id": "nothing-connects-unstudied",
+   "title": "Nothing connects to the grid unstudied",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Nothing plugs into the grid on request. A solar farm feeding power in and a gigawatt campus drawing power out both have to go through an {{interconnection study}}: engineers model what the addition does to power flows, voltages and fault currents across the surrounding network, then price the {{network upgrades}} needed to absorb it. The party asking for the connection typically funds those upgrades — on equipment the utility will own, schedule and operate. No study, no connection.",
+    "Requests are processed in order, and the studies themselves run in queued phases, so the queue is the bottleneck rather than the engineering. In busy regions the wait runs years; a new large-load request can sit for five or more. That single fact reorganised an industry. It is why campuses are sited where capacity already exists rather than where land is cheap, why a {{brownfield}} — a retired coal plant, an aluminium smelter — sells for its wire rather than its dirt, and why {{behind-the-meter}} generation exists at all.",
+    "So the developer's real inventory is not acreage. A site with an approved connection is worth far more than the ground under it, which is what **{{power banking}}** means: acquire positions where a large connection can be secured early, then hold them until demand catches up. Siting next to a high-voltage transmission corridor shortens the path to the network and is priced accordingly — a \"premier power corridor\" location is selling proximity to a wire.",
+    "One more thing changes at the fence: who is in the room. The studies, the substation design and the utility upgrade programme are engineering work paid on the regulated utility side, largely independent of which contractor eventually wins the building. The people who decide when a campus gets power are frequently not the people who decide what goes inside it."
+   ],
+   "sales": "\"How much power?\" is the wrong opening question because every answer to it is true. \"Where are you in the queue, and what is your connection date?\" is the question that sorts a funded project from an announcement — and it is a normal thing for a supplier to ask."
+  },
+  {
+   "id": "the-three-studies",
+   "title": "The three studies, and what happens after them",
+   "kind": "timeline",
+   "read": "3 min",
+   "intro": "The phases run in a fixed order and each waits on the one before it. **The numbers on the left are the order, not the calendar** — the sequence is well defined, the duration of any single phase is not.",
+   "lanes": {
+    "gen": "Study and approval",
+    "deploy": "Build and energize"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "gen",
+     "label": "The request enters the queue",
+     "sub": "Grid operators process connection requests in order. Everything that follows happens behind everyone already in front of you."
+    },
+    {
+     "x": 2,
+     "lane": "gen",
+     "label": "Feasibility study",
+     "sub": "The first queued phase: can this connect here at all, and roughly on what terms."
+    },
+    {
+     "x": 3,
+     "lane": "gen",
+     "label": "System impact study",
+     "sub": "The modelling proper — what the new load or generator does to power flows, voltages and fault currents on the surrounding network."
+    },
+    {
+     "x": 4,
+     "lane": "gen",
+     "label": "Facilities study",
+     "sub": "Prices the {{network upgrades}} the impact study identified and specifies the equipment. This is the number the requester will be asked to fund."
+    },
+    {
+     "x": 5,
+     "lane": "deploy",
+     "label": "Upgrades and the substation get built",
+     "sub": "A gigawatt-class substation delivered in about a year counts as fast — and the reason is not the concrete. The critical path runs through transformer manufacturing slots."
+    },
+    {
+     "x": 6,
+     "lane": "deploy",
+     "label": "Energization",
+     "sub": "The finished substation is put under live voltage and proven, with the utility present. Before this, contracted megawatts are a promise; after it, they are a connection."
+    }
+   ],
+   "note": "The sequence is fixed; the wait is not. What varies is how many requests sit in front of yours — which is why an approved connection date is an asset in its own right, and why a brownfield that inherits an energized substation gets to skip most of this diagram."
+  },
+  {
+   "id": "load-is-not-generation",
+   "title": "A load is not a generator, and the rules are being written now",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "Generation interconnection and load interconnection are different studies under different rules. One asks what your output does to the network; the other asks what your demand does to it. For most of the grid's history the second was the easy case — a factory is a big, steady, well-behaved customer — and the rulebooks reflect that.",
+    "A hall that draws hundreds of megawatts and can swing that draw in milliseconds is not a big factory. It behaves like a piece of grid equipment, and regulators have started writing rules that treat it as one. Three instruments show the shape of what is arriving.",
+    "A **{{large-load tariff}}** is a rate class written specifically for very large customers: long contract terms, {{take-or-pay}} minimums, exit fees and collateral. Its real job is filtering — separating demand somebody will pay for from speculative queue positions. **{{SB 6}}**, the 2025 Texas law, made screening-study fees, proof of site control, curtailment protocols and disclosure of on-site backup generation conditions of connecting at all. And **{{NOGRR 282}}** requires new large electronic loads of 75 MW and up to ride through voltage and frequency disturbances instead of tripping off together.",
+    "Texas is ahead because {{ERCOT}} is where the load landed first, and SB 6 is the template other states are copying. Expect the vocabulary to travel even where the rule numbers do not."
+   ],
+   "sales": "The ride-through rule is the clearest storage opening in this lesson. A rule saying a 75-megawatt load may not simply drop off the grid is a rule that requires something to carry it through the dip — which in {{ERCOT}} makes buffering between the grid and the GPUs close to mandatory rather than optional. Learn to hear the rule, not only the megawatts."
+  },
+  {
+   "id": "what-arrives-at-the-fence",
+   "title": "What actually arrives at the property line",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "What all that queuing is really scheduling is a substation. Transmission arrives at hundreds of kilovolts and nothing on a campus can use it at that voltage, so somewhere at the property line the voltage has to change — and the building that changes it is the fence line in the physical sense.",
+    "The voltage class it arrives at tells you what kind of customer the campus is. Fed at 345 kV, a campus is plugged into the bulk transmission grid the way a small city is, not the way a customer is. Below the substation, {{medium voltage}} — roughly single-digit to tens of kilovolts — is the on-campus distribution tier that carries power to the buildings, and that is where the building-side chain takes over at the service entrance.",
+    "The substation's heart is the {{transformer}}, and a gigawatt-class site needs several main units. Each is a custom order measured in hundreds of tons and multi-year factory books, and the cores require {{GOES}} — a specialty magnetic steel from a handful of mills worldwide. This is why a gigawatt substation delivered in about a year counts as fast: the schedule was set by the manufacturing slot and the {{commissioning}} that follows it, not by the civil work. Reserving slots early is the whole game.",
+    "Where that substation sits is increasingly a choice rather than an inheritance. A substation dedicated to one campus, built with the local utility, removes the shared-infrastructure bottleneck and makes expansion increments predictable. Adjacency to a high-voltage corridor shortens the path to it. And a {{brownfield}} arrives with one already built, already energized and already accepted by the utility — which is the entire argument for buying a dead coal plant."
+   ]
+  },
+  {
+   "id": "megawatts-that-differ",
+   "title": "Five numbers, all of them called megawatts",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Five different quantities travel under the same unit, and an announcement will reach for whichever is largest. Learning to ask *which* is the fastest way to tell a study request from energized iron.",
+   "cols": [
+    "Number",
+    "What it counts",
+    "Who quotes it — and how it flatters"
+   ],
+   "rows": [
+    [
+     "Gross (facility) MW",
+     "Everything the site draws from the grid — computers, cooling, conversion losses and building overhead together",
+     "The utility, and the interconnection request. It is the largest honest number, and a headline using it is describing a grid connection rather than a computer."
+    ],
+    [
+     "Critical IT MW",
+     "What actually reaches the servers. The ratio between this and gross is {{PUE}}: a site at 1.25 draws 125 MW to deliver 100 MW of IT load, against roughly 1.2–1.3 for modern liquid-cooled builds and 1.5 or worse for older air-cooled halls",
+     "Landlords and tenants, because leases and build costs are priced per critical-IT megawatt. It is the smallest number and the one that pays."
+    ],
+    [
+     "Contracted MW",
+     "Land and utility commitments signed",
+     "The developer, in the announcement — a \"5 GW target\" is this number. Real money has been spent and no power has been delivered."
+    ],
+    [
+     "Connected MW",
+     "Buildings finished and energized, so the grid can feed them",
+     "Operations, and any lender checking a schedule against a plan. This is the first number with iron behind it."
+    ],
+    [
+     "Active MW",
+     "IT equipment installed, running and earning",
+     "Nobody, voluntarily. It is the only tier that generates revenue, and the distance back to contracted is the entire execution story — a company can hold 3.5 GW contracted against roughly 170 MW active."
+    ]
+   ],
+   "note": "The gaps between the last three are time, not accounting. Contracted becomes connected only as {{transformer}}s and {{switchgear}} arrive and buildings energize; connected becomes active only as racks fill. That is why the distance between contracted and billing megawatts is quoted in equipment lead times rather than in months of construction.",
+   "sales": "Ask which megawatt every time, and ask it as a scheduling question rather than a challenge: *which of those is energized today, and what is the connected number at the end of next year?* The answer tells you whether there is a delivery date to sell against or a target to wait on."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "3 min",
+   "ps": [
+    "**The date moves, and not for reasons you control.** A queue position is not a delivery date: requests are processed in order, and in busy regions the wait runs years — five or more for a new large-load request. Meanwhile the requester funds the {{network upgrades}} the studies priced, on equipment the utility will own, schedule and operate. Paying for the fix without controlling the calendar is the structural exposure at the fence, and it belongs to the developer and the utility jointly.",
+    "**The slot nobody reserved.** {{Transformer}}s, {{switchgear}} and chillers run multi-year order books across the entire industry. GPU racks arrive in months; the electrical gear that feeds them does not, and a gigawatt substation's critical path is a manufacturing slot rather than concrete. This is the mechanism under most slipped energization dates — and the reason the gap between contracted and billing megawatts is measured in lead times.",
+    "**Energization treated as a formality.** It is a scheduled, witnessed test under live voltage with the utility present, and it shares the critical path with the transformer order instead of trailing construction. A building is not connected because it is finished.",
+    "**The failure that is not electrical at all.** {{Entitlement}} and environmental review are schedule inputs with their own politics. Resident opposition, noise complaints and stop-work orders can freeze a site with billions of contracted revenue waiting on it, and a review conducted without the true scale or end user disclosed can be ordered redone. Note that the paperwork failure and the transformer failure present identically — a date that moves — and only one of them is visible from inside an equipment conversation."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is an interconnection study, and who pays for the upgrades it identifies?",
+     "a": "The engineering analysis of what a new load or generator does to grid power flows, voltages and fault currents. It prices the network upgrades needed to absorb the connection, and the party requesting the connection typically funds them — on equipment the utility will own and operate. No study, no connection."
+    },
+    {
+     "q": "Why does the interconnection queue gate the AI buildout more than land or chips do?",
+     "a": "Requests are processed in order and the studies run in queued phases, so in busy regions the wait runs years — five or more for a new large-load request. Nothing earns before power flows, so approved megawatts with a date are the scarce input, and siting follows them rather than land price."
+    },
+    {
+     "q": "Why is a retired coal plant or aluminium smelter worth paying a premium for?",
+     "a": "It arrives with an energized substation, high-voltage lines and an accepted utility relationship that a greenfield site would have to queue years to obtain. The buyer is paying for the wire, not the dirt."
+    },
+    {
+     "q": "How does load interconnection differ from generation interconnection, and why does it suddenly matter?",
+     "a": "Generation interconnection studies what your output does to the network; load interconnection studies what your demand does to it — different studies, different rules. It matters now because a hall drawing hundreds of megawatts and swinging that draw in milliseconds behaves like grid equipment rather than like a factory, so regulators have begun writing rules that treat it as one."
+    },
+    {
+     "q": "Why is a gigawatt-class substation's critical path not the construction?",
+     "a": "It is the main power transformers. Few factories build them, each unit is a custom several-hundred-ton order against multi-year books, and the cores need grain-oriented electrical steel from a handful of mills. About a year for a gigawatt substation is fast, and the slot reservation is what made it possible."
+    },
+    {
+     "q": "A campus announcement says \"1 GW\". What have you not been told?",
+     "a": "Which megawatt. Gross facility draw, critical IT load, contracted, connected and active are five different numbers, and only the last one earns anything. The distance from contracted to active is the execution story, and it is measured in transformer and switchgear lead times."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A developer calls a site \"shovel ready\". Which fact would most change your view of its schedule?",
+     "c": [
+      "Where it sits in the interconnection queue",
+      "The acreage of the parcel",
+      "Which fibre routes reach it",
+      "The local construction labour rate"
+     ],
+     "a": 0,
+     "why": "Requests are processed in order and the wait runs years in busy regions. The other three can be solved with money on a normal timescale; a queue position cannot."
+    },
+    {
+     "q": "Who typically funds the network upgrades an interconnection study identifies?",
+     "c": [
+      "The party requesting the connection",
+      "The utility's existing ratepayers",
+      "The equipment manufacturer",
+      "The grid operator, from queue fees"
+     ],
+     "a": 0,
+     "why": "The requester funds them — on equipment the utility will own, schedule and operate afterwards. Paying for the fix without controlling the calendar is the structural exposure at the fence."
+    },
+    {
+     "q": "A campus announces a 5 GW target. Which tier of power is that, and which tier earns revenue?",
+     "c": [
+      "Contracted; only active power earns",
+      "Connected; only contracted power earns",
+      "Active; only gross power earns",
+      "Critical IT; only connected power earns"
+     ],
+     "a": 0,
+     "why": "Contracted means land and utility commitments signed. Connected means buildings energized. Active means IT equipment installed and running — and it is the only tier that bills. The distance between the first and the last is the execution story."
+    },
+    {
+     "q": "Why can a gigawatt-class substation take years to arrange but about a year to build?",
+     "c": [
+      "Its main transformers are custom orders against multi-year factory books",
+      "Concrete cures slowly at that scale",
+      "Environmental review must finish before construction starts",
+      "Medium-voltage cable is the scarce component"
+     ],
+     "a": 0,
+     "why": "Few factories build them, each is a several-hundred-ton custom unit, and the cores need a specialty steel from a handful of mills. Reserving the slot early is what turns \"years\" into \"about a year\"."
+    },
+    {
+     "q": "ERCOT requires new large electronic loads of 75 MW and up to ride through voltage and frequency disturbances. What does that rule create a market for?",
+     "c": [
+      "Something that buffers between the grid and the load",
+      "Larger service transformers",
+      "A second position in the interconnection queue",
+      "Higher-voltage on-campus distribution"
+     ],
+     "a": 0,
+     "why": "A load that may not trip off together with its neighbours needs energy stored close enough to carry it through the dip. The rule is written about how load behaves, and the answer to it is equipment."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clLessonAidcPowerChain_() {
   return {
  "schemaVersion": 1,
@@ -1968,6 +2320,20 @@ function clTrackBessFoundations_() {
 };
 }
 
+function clTrackAidcGridToChip_() {
+  return {
+ "schemaVersion": 1,
+ "id": "aidc-grid-to-chip",
+ "title": "The AIDC Power Chain, Grid to Chip",
+ "short": "Walk a megawatt from the grid to the chip in physical order. It opens at the fence line: the studies, the queue behind them, the substation at the end, and what a campus's megawatt number actually means.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-02",
+ "lessons": [
+  "the-fence-line"
+ ]
+};
+}
+
 function clTrackAidcPowerPrimer_() {
   return {
  "schemaVersion": 1,
@@ -1989,10 +2355,10 @@ function clTrackAidcPowerPrimer_() {
 // the checker flags an unregistered literal.
 function clLessons_() {
   return [clLessonCellToContainer_(), clLessonDurationDegradation_(), clLessonSpecSheet_(),
-          clLessonAidcPowerChain_(), clLessonHeatConstraint_()];
+          clLessonTheFenceLine_(), clLessonAidcPowerChain_(), clLessonHeatConstraint_()];
 }
 function clTracks_() {
-  return [clTrackBessFoundations_(), clTrackAidcPowerPrimer_()];
+  return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcPowerPrimer_()];
 }
 // CONTENT END — below here the gate derivation is frozen for pipeline runs
 function clLesson_(id) {
