@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-03 02:05:31 PM EST` · Repo version: `v04.44r`
+Last updated: `2026-09-03 03:38:59 PM EST` · Repo version: `v04.45r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -119,6 +119,8 @@ Last updated: `2026-09-03 02:05:31 PM EST` · Repo version: `v04.44r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/delta-electronics.study.json">delta-electronics.study.json</a> — Delta Electronics in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/dominion-energy.profile.json">dominion-energy.profile.json</a> — Dominion Energy dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/dominion-energy.study.json">dominion-energy.study.json</a> — Dominion Energy in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/entergy.profile.json">entergy.profile.json</a> — Entergy dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/entergy.study.json">entergy.study.json</a> — Entergy in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/dpr.profile.json">dpr.profile.json</a>       — DPR Construction dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/dpr.study.json">dpr.study.json</a>     — DPR Construction in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/eaton.profile.json">eaton.profile.json</a>     — Eaton dossier profile
@@ -211,6 +213,8 @@ Last updated: `2026-09-03 02:05:31 PM EST` · Repo version: `v04.44r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.profile.json">sinexcel.profile.json</a>  — Sinexcel dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sinexcel.study.json">sinexcel.study.json</a>     — Sinexcel in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/solv-energy.profile.json">solv-energy.profile.json</a> — SOLV Energy dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/southern-company.profile.json">southern-company.profile.json</a> — Southern Company (Georgia Power) dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/southern-company.study.json">southern-company.study.json</a> — Southern Company in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/stack-infrastructure.profile.json">stack-infrastructure.profile.json</a> — STACK Infrastructure dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/stack-infrastructure.study.json">stack-infrastructure.study.json</a> — STACK Infrastructure in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/sungrow.profile.json">sungrow.profile.json</a>   — Sungrow dossier profile
@@ -500,7 +504,7 @@ Last updated: `2026-09-03 02:05:31 PM EST` · Repo version: `v04.44r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">Classroomgs.changelog.md</a>               — [template] Classroom GAS changelog
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog-archive.md">Classroomgs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (188 images across 49 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (211 images across 51 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Code_Ready_Voice_1.mp3">Code_Ready_Voice_1.mp3</a>      — [template] "Code Ready" splash sound
@@ -689,6 +693,8 @@ Last updated: `2026-09-03 02:05:31 PM EST` · Repo version: `v04.44r`
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/catl/catl-lesson-plan.md">catl-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/dominion-energy">dominion-energy/</a> — Dominion Energy technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/dominion-energy/dominion-energy-lesson-plan.md">dominion-energy-lesson-plan.md</a> — Full-depth lesson plan: how a regulated utility buys — rate base and cost of service, IRP → CPCN → RFP, the rate case and the docket, the large-load tariff and its minimum-demand arithmetic, interconnecting a load, PJM capacity and transmission planning, why the clock is years
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/entergy">entergy/</a> — Entergy technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/entergy/entergy-lesson-plan.md">entergy-lesson-plan.md</a> — Full-depth lesson plan: one parent and five regulators, the formula rate plan, MISO South, buying generation for one named campus and the Louisiana order that names the customer, ratepayer protection in four state dialects, storms and securitization
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/flexgen">flexgen/</a> — FlexGen technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/flexgen/flexgen-lesson-plan.md">flexgen-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/fluence">fluence/</a> — Fluence technology curriculum
@@ -715,6 +721,8 @@ Last updated: `2026-09-03 02:05:31 PM EST` · Repo version: `v04.44r`
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/piller/piller-lesson-plan.md">piller-lesson-plan.md</a> — Full-depth lesson plan: who owns the seconds, battery versus flywheel, static versus rotary versus diesel-rotary UPS, the isolated-parallel ring, the UPS room as the island's stabilizer
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sinexcel">sinexcel/</a> — Sinexcel technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/sinexcel/sinexcel-lesson-plan.md">sinexcel-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/southern-company">southern-company/</a> — Southern Company technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/southern-company/southern-company-lesson-plan.md">southern-company-lesson-plan.md</a> — Full-depth lesson plan: the elected commission and the grid with no RTO, certifying a decade in one cycle, the pipeline in tranches, the large-load rule and the freeze, Vogtle as the risk memory, the four procurement channels and who picks the equipment
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sungrow">sungrow/</a> — Sungrow technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/sungrow/sungrow-lesson-plan.md">sungrow-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/tesla">tesla/</a> — Tesla technology curriculum

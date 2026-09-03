@@ -156,8 +156,8 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | A2 | `piller` | Piller Power Systems | supplier | Fable 5.1 xhigh | G3 | v1 · v04.42r | ✓ · v04.42r |
 | A3 | `dominion-energy` | Dominion Energy | utility (new) | Fable 5.1 xhigh | G5 | v1 · v04.43r | ✓ · v04.43r |
 | A4 | `vicor` | Vicor | supplier | Fable 5.1 xhigh | G9 | v1 · v04.44r | ✓ · v04.44r |
-| B1 | `southern-company` | Southern Company (Georgia Power) | utility | Fable 5.1 High | G5 | — | — |
-| B1 | `entergy` | Entergy | utility | Fable 5.1 High | G5 | — | — |
+| B1 | `southern-company` | Southern Company (Georgia Power) | utility | Fable 5.1 High | G5 | v1 · v04.45r | ✓ · v04.45r |
+| B1 | `entergy` | Entergy | utility | Fable 5.1 High | G5 | v1 · v04.45r | ✓ · v04.45r |
 | B2 | `oncor` | Oncor | utility | Fable 5.1 High | G5 | — | — |
 | B2 | `aep` | AEP | utility | Fable 5.1 High | G5 | — | — |
 | B2 | `xcel-energy` | Xcel Energy | utility | Fable 5.1 High | G5 | — | — |

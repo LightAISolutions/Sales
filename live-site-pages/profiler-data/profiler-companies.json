@@ -419,6 +419,57 @@
       "kpiNorm": true
     },
     {
+      "slug": "southern-company",
+      "name": "Southern Company",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The Southeast's regulated AI-load gatekeeper with no RTO above it and an elected commission beneath it — 17 GW of contracted large load at July 2026 against a 75 GW-plus prospective pipeline it does not count, 9,885 MW certified by the Georgia PSC in one December 2025 order under a base-rate freeze through 2028 and a 2029–2031 shareholder backstop, an $81B plan backed by $26.5B of DOE loan guarantees, and the Vogtle overrun as its risk memory.",
+      "hq": "Atlanta, GA, USA",
+      "ticker": "NYSE: SO",
+      "status": "active",
+      "lastUpdated": "2026-09-03",
+      "domains": [
+        "southerncompany.com",
+        "georgiapower.com",
+        "alabamapower.com",
+        "mississippipower.com",
+        "southernpowercompany.com",
+        "southernnuclear.com",
+        "s27.q4cdn.com",
+        "southerncompany2021rd.q4web.com"
+      ],
+      "srcTotal": 118,
+      "srcFirstPct": 64,
+      "kpiNorm": true
+    },
+    {
+      "slug": "entergy",
+      "name": "Entergy",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "The utility that certifies generation for one named hyperscaler at a time — 2,262 MW approved in Louisiana for Meta in 2025 and 5,278 MW more filed for its second phase, three 754 MW plants pre-certified in Mississippi for AWS, solar-plus-storage and gas in Arkansas for Google — inside MISO South, under five regulators and three formula rate plans, on a turbine exclusivity agreement raised to 27 power islands and a $67B plan.",
+      "hq": "New Orleans, LA, USA",
+      "ticker": "NYSE: ETR",
+      "status": "active",
+      "lastUpdated": "2026-09-03",
+      "domains": [
+        "entergy.com",
+        "entergylouisiana.com",
+        "entergyarkansas.com",
+        "entergymississippi.com",
+        "entergytexas.com",
+        "entergyneworleans.com",
+        "entergynewsroom.com",
+        "s201.q4cdn.com",
+        "rfp.entergy.com"
+      ],
+      "srcTotal": 94,
+      "srcFirstPct": 56,
+      "kpiNorm": true
+    },
+    {
       "slug": "dpr",
       "name": "DPR Construction",
       "categories": [

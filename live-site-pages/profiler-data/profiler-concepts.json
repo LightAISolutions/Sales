@@ -37,6 +37,14 @@
    ]
   },
   {
+   "slug": "afudc",
+   "term": "AFUDC",
+   "def": "Allowance for funds used during construction: the financing cost a utility is allowed to add to the price of a plant while it is being built, so the plant enters rate base at construction cost plus the interest and equity return accrued during the build. It is a non-cash earning until the plant enters service.",
+   "aliases": [
+    "allowance for funds used during construction"
+   ]
+  },
+  {
    "slug": "air-permit",
    "term": "air permit",
    "def": "The authorization from a state or local air agency that a combustion source needs before it can be built and run, written around what leaves the stack — chiefly nitrogen oxides and particulates — and around how many hours it may run. For an on-site power plant it is usually the longest lead item after the machines themselves, and its terms decide whether the same engine may be used as backup only or as prime power.",
@@ -99,6 +107,17 @@
    "aliases": [
     "availability commitment",
     "uptime guarantee"
+   ]
+  },
+  {
+   "slug": "balancing-authority",
+   "term": "balancing authority",
+   "def": "The entity that keeps generation and load matched second by second inside a defined area of the grid. In an RTO region the RTO is the balancing authority; outside one, a large vertically integrated utility can be its own — it dispatches its own plants, holds its own reserves and has no organized capacity market to buy from.",
+   "aliases": [
+    "BA",
+    "non-RTO",
+    "balancing area",
+    "Southern Balancing Authority"
    ]
   },
   {
@@ -225,6 +244,15 @@
    "def": "How fast a battery charges or discharges relative to its capacity: 1C empties it in one hour, 0.25C in four. Grid storage typically runs at low C-rates — multi-hour durations rather than sprints."
   },
   {
+   "slug": "capacity-factor",
+   "term": "capacity factor",
+   "def": "The energy a plant actually produced over a period divided by what it would have produced running flat out the whole time. A nuclear unit near 90 percent runs almost continuously; a solar farm in the 20s runs only when the sun does; a peaker in single digits runs only on the hardest days.",
+   "aliases": [
+    "CF",
+    "capacity factors"
+   ]
+  },
+  {
    "slug": "capacity-market",
    "term": "capacity market",
    "def": "A market that pays a resource for being available to serve peak demand — a payment for existing, not for energy produced. PJM runs its auction, the Base Residual Auction, three years ahead; the clearing price per megawatt-day is the signal that new data-center load has moved the region from surplus to scarcity, and it flows straight into a regulated utility's bills.",
@@ -243,6 +271,14 @@
    "def": "Coolant distribution unit: the heat exchanger and pump station that separates the facility's water loop from the clean liquid loop feeding the servers, delivering coolant to the cold plates at the right temperature and pressure. It is the interface that lets one facility cooling spine serve many different rack designs.",
    "aliases": [
     "coolant distribution unit"
+   ]
+  },
+  {
+   "slug": "cecpn",
+   "term": "CECPN",
+   "def": "Arkansas's certificate of environmental compatibility and public need — the state's version of a CPCN, the commission order a utility must obtain before building a major generating plant or transmission line and putting it in rate base.",
+   "aliases": [
+    "certificate of environmental compatibility and public need"
    ]
   },
   {
@@ -312,6 +348,16 @@
    "def": "The property that any single component can be taken out of service for planned work without dropping the critical load — the defining requirement of Uptime Tier III. It is decided by topology rather than by equipment quality: there must be a second path, and the switch onto it must itself be safe."
   },
   {
+   "slug": "construction-monitoring",
+   "term": "construction monitoring",
+   "def": "A recurring commission review of a certified project while it is being built — schedule, spend against the certified cost, and whether the money so far was prudent — so cost overruns are examined as they happen rather than in one prudence review at the end. Georgia adopted it for Vogtle 3 and 4.",
+   "aliases": [
+    "Vogtle construction monitoring",
+    "VCM",
+    "construction-monitoring report"
+   ]
+  },
+  {
    "slug": "continuous-rating",
    "term": "continuous rating",
    "def": "The generator rating for carrying a constant load at full output for unlimited hours a year, as a power station would. It is the most conservative of the standard ratings — the same engine carries a smaller number as continuous than as prime or standby — and the one a permanently islanded campus should be reading.",
@@ -352,6 +398,16 @@
     "contribution in aid of construction",
     "CIAC",
     "transmission cost allocation"
+   ]
+  },
+  {
+   "slug": "cost-cap",
+   "term": "cost cap",
+   "def": "A ceiling on what a utility may recover from customers for a certified project. Costs above the cap fall on shareholders unless the commission later finds them prudent, which is why a certified cost figure matters as much to the utility as the approval itself.",
+   "aliases": [
+    "certified cost",
+    "cost ceiling",
+    "construction cost cap"
    ]
   },
   {
@@ -447,6 +503,15 @@
    ]
   },
   {
+   "slug": "cwip",
+   "term": "CWIP",
+   "def": "Construction work in progress: plant that is being built but is not yet in service. Normally it earns no return until it is finished; a legislature or commission that lets CWIP into rate base lets the utility charge customers for a plant before it produces anything, which lowers financing cost and shifts construction risk toward customers.",
+   "aliases": [
+    "construction work in progress",
+    "CWIP in rate base"
+   ]
+  },
+  {
    "slug": "cycle-life",
    "term": "cycle life",
    "def": "How many full charge-discharge cycles a cell delivers before its capacity falls to a stated fraction of new — commonly 70 or 80 percent. It is the number a storage warranty is written around, and it is quoted against specific depth-of-discharge and temperature conditions, so two figures are only comparable when those conditions match.",
@@ -479,6 +544,17 @@
    "slug": "degradation",
    "term": "degradation",
    "def": "The gradual loss of a battery's usable capacity with cycling and age. Storage contracts manage it with capacity guarantees and planned augmentation."
+  },
+  {
+   "slug": "demand-charge",
+   "term": "demand charge",
+   "def": "The part of a large customer's bill priced per kilowatt of peak demand rather than per kilowatt-hour of energy used. It pays for the wires and plant that have to exist to serve the customer's maximum draw, whether or not that draw occurs often — which is why a data center's bill is mostly demand, not energy.",
+   "aliases": [
+    "kW charge",
+    "capacity charge",
+    "demand charges",
+    "$/kW-month"
+   ]
   },
   {
    "slug": "demand-response",
@@ -612,6 +688,28 @@
    ]
   },
   {
+   "slug": "elected-commission",
+   "term": "elected commission",
+   "def": "A public utility commission whose members are chosen by voters rather than appointed by a governor. Its decisions on rates and plants carry directly into election campaigns, so affordability politics reach the docket faster than in an appointed state — and a single election can change who decides the next case.",
+   "aliases": [
+    "elected regulators",
+    "elected PSC",
+    "elected commissioners",
+    "elected utility commission"
+   ]
+  },
+  {
+   "slug": "electric-service-agreement",
+   "term": "ESA",
+   "def": "Electric service agreement: the contract between a utility and one large customer that fixes the megawatts to be served, the term, the minimum bill, collateral and exit terms — the document that turns a request for load into an obligation the utility can finance a plant against.",
+   "aliases": [
+    "electric service agreement",
+    "electric service agreements",
+    "ESAs",
+    "service agreement"
+   ]
+  },
+  {
    "slug": "emergency-generator",
    "term": "emergency generator",
    "def": "The regulatory class for a stationary engine that runs only when the normal supply fails, plus a small annual allowance of hours for testing and maintenance. The class is what lets a backup fleet be permitted quickly and without the strictest emission controls — and it is lost the moment the same engines are run for prime power, peak shaving or a demand-response payment.",
@@ -646,6 +744,16 @@
    "aliases": [
     "energy cell",
     "energy-optimized battery"
+   ]
+  },
+  {
+   "slug": "energy-charge",
+   "term": "energy charge",
+   "def": "The part of a bill priced per kilowatt-hour consumed — fuel and the variable cost of running plants. For a flat, always-on load it is large in total but it is the demand charge, not the energy charge, that decides whether the customer has paid for the capacity built to serve it.",
+   "aliases": [
+    "kWh charge",
+    "volumetric charge",
+    "energy rate"
    ]
   },
   {
@@ -722,6 +830,17 @@
    "def": "Energy stored as rotation — half the moment of inertia times speed squared — in a heavy rotor or a fast light one on low-friction bearings, sometimes in a vacuum. It gives very high power for seconds, essentially unlimited cycles and no chemical aging, and its state of charge is simply its speed. In a UPS it covers a generator start; as a battery for hours it is the wrong tool."
   },
   {
+   "slug": "formula-rate-plan",
+   "term": "formula rate plan",
+   "def": "A rate mechanism that resets a utility's rates every year by formula — actual earned return compared with an allowed band, with automatic adjustment — instead of a full contested rate case every few years. It cuts regulatory lag for the utility and gives the commission a yearly look at earnings; Entergy's Louisiana, Arkansas and Mississippi companies run on one.",
+   "aliases": [
+    "FRP",
+    "formula rate",
+    "formula rates",
+    "formula rate plans"
+   ]
+  },
+  {
    "slug": "frequency-converter",
    "term": "frequency converter",
    "aliases": [
@@ -740,6 +859,19 @@
     "FOM",
     "front of meter",
     "in front of the meter"
+   ]
+  },
+  {
+   "slug": "fuel-clause",
+   "term": "fuel clause",
+   "def": "The bill line that passes a utility's fuel and purchased-power costs straight through to customers, usually reset monthly or yearly with a true-up, and earning the utility no return. It is why gas prices show up on a bill within months while a new plant shows up only after a rate order.",
+   "aliases": [
+    "fuel cost recovery",
+    "fuel adjustment clause",
+    "fuel rider",
+    "fuel cost rider",
+    "fuel and purchased power",
+    "fuel cost"
    ]
   },
   {
@@ -836,6 +968,19 @@
    "aliases": [
     "holdup time",
     "ride-through window"
+   ]
+  },
+  {
+   "slug": "holding-company",
+   "term": "holding company",
+   "def": "A parent corporation that owns several regulated operating utilities, each with its own territory, commission and rate base. Investors buy the parent; regulators regulate the subsidiaries — so one earnings call can describe five different regulatory relationships at once.",
+   "aliases": [
+    "utility holding company",
+    "operating company",
+    "operating companies",
+    "OpCo",
+    "OpCos",
+    "operating subsidiary"
    ]
   },
   {
@@ -964,6 +1109,18 @@
    ]
   },
   {
+   "slug": "interruptible",
+   "term": "interruptible",
+   "def": "A tariff under which a large customer accepts that the utility may curtail its supply on short notice a set number of hours a year, in exchange for a lower rate. It lets the utility count on shedding that load at the system peak, which reduces the capacity it must build to serve everyone else.",
+   "aliases": [
+    "interruptible load",
+    "interruptible tariff",
+    "curtailable load",
+    "interruptible service",
+    "curtailable"
+   ]
+  },
+  {
    "slug": "inverter",
    "term": "inverter",
    "def": "A converter that turns direct current into alternating current — the mirror image of a rectifier. It appears wherever DC has to be handed back to an AC world: on the output of a battery or solar array, inside a UPS, and between an electric vehicle's pack and its motor. A bidirectional one that does both jobs is a power conversion system.",
@@ -1065,6 +1222,16 @@
    "aliases": [
     "lithium iron phosphate",
     "LiFePO4"
+   ]
+  },
+  {
+   "slug": "load-factor",
+   "term": "load factor",
+   "def": "Average demand divided by peak demand over a period. A data center running at 90 percent or more is the flattest load a utility serves; a house at 30 percent peaks for a few hours a day. Flat loads use the wires and plants built for them almost all the time, which is why tariffs single them out.",
+   "aliases": [
+    "load factors",
+    "high load factor",
+    "flat load"
    ]
   },
   {
@@ -1175,12 +1342,32 @@
    ]
   },
   {
+   "slug": "miso",
+   "term": "MISO",
+   "def": "The Midcontinent Independent System Operator — the RTO for fifteen central US states and Manitoba. Its South region, added in 2013, covers Louisiana, Arkansas, Mississippi and the Texas Gulf coast, so Entergy's operating companies buy and sell wholesale power, get their capacity accredited and have their big lines planned there rather than in ERCOT or PJM.",
+   "aliases": [
+    "Midcontinent Independent System Operator",
+    "MISO South",
+    "MISO South region"
+   ]
+  },
+  {
    "slug": "mtbf",
    "term": "MTBF",
    "aliases": [
     "mean time between failures"
    ],
    "def": "Mean time between failures: the average running time between one failure and the next across a population of a device, calculated from its parts count or from field data. It is a statement about a fleet rather than a promise about one unit, and it says nothing about how long the repair takes — which is why availability also needs the mean time to repair."
+  },
+  {
+   "slug": "mtep",
+   "term": "MTEP",
+   "def": "The MISO Transmission Expansion Plan — the RTO's yearly regional transmission plan, the MISO counterpart of PJM's RTEP. Big lines are approved here and their cost allocated across the footprint, on a horizon of five to fifteen years.",
+   "aliases": [
+    "MISO Transmission Expansion Plan",
+    "MTEP portfolio",
+    "Tranche 2"
+   ]
   },
   {
    "slug": "n-plus-1",
@@ -1264,6 +1451,18 @@
    ]
   },
   {
+   "slug": "nuclear-uprate",
+   "term": "nuclear uprate",
+   "def": "Raising an existing reactor's licensed output — by a few percent through better instrumentation, or by up to a fifth through new turbines and equipment — with the regulator's approval. It is the cheapest firm capacity a utility with a nuclear fleet can add, because the site, the licence and the operators already exist.",
+   "aliases": [
+    "uprate",
+    "power uprate",
+    "uprates",
+    "extended power uprate",
+    "measurement uncertainty recapture"
+   ]
+  },
+  {
    "slug": "offtake",
    "term": "offtake",
    "def": "The committed purchase of a project's output — power, capacity, or storage services. Signed offtake is what turns a development pipeline into a financeable project."
@@ -1342,6 +1541,18 @@
    "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
   },
   {
+   "slug": "planning-reserve-margin",
+   "term": "planning reserve margin",
+   "def": "The cushion of accredited capacity a system must hold above its forecast peak — typically 15 to 25 percent — so that outages, weather and forecast error do not produce shortfalls. A rising load forecast raises the megawatts the margin requires; the margin, not the peak, is what a utility certifies plants against.",
+   "aliases": [
+    "reserve margin",
+    "PRM",
+    "planning reserve",
+    "resource adequacy",
+    "target reserve margin"
+   ]
+  },
+  {
    "slug": "point-of-load",
    "term": "point of load",
    "def": "The final converter in the chain, placed as close as physically possible to the device it feeds, so that the very large current at a very low voltage travels only millimetres. Everything upstream can run at a higher voltage; the point of load is where the chain gives that up.",
@@ -1405,6 +1616,15 @@
    "def": "Power purchase agreement: a long-term contract to buy a project's power or capacity at agreed terms — the bankable revenue stream that lets developers finance construction.",
    "aliases": [
     "power purchase agreement"
+   ]
+  },
+  {
+   "slug": "pra",
+   "term": "PRA",
+   "def": "MISO's Planning Resource Auction — the yearly auction that clears capacity for the coming year, by season and by zone, and sets the price a utility short of its reserve margin pays. MISO's counterpart of PJM's Base Residual Auction, with a one-year rather than three-year horizon.",
+   "aliases": [
+    "Planning Resource Auction",
+    "MISO capacity auction"
    ]
   },
   {
@@ -1508,9 +1728,42 @@
    ]
   },
   {
+   "slug": "rate-freeze",
+   "term": "rate freeze",
+   "def": "An agreement or order holding a utility's base rates flat for a set period, usually in exchange for something — a settled case, deferred costs, a political truce before an election. Costs still accrue; the freeze decides when customers pay them, not whether.",
+   "aliases": [
+    "base rate freeze",
+    "rate moratorium",
+    "frozen rates",
+    "rate stay-out"
+   ]
+  },
+  {
    "slug": "rectifier",
    "term": "rectifier",
    "def": "A power-electronics device that turns AC into DC — the first stage of nearly every power supply, charger, and data-center power shelf."
+  },
+  {
+   "slug": "regulatory-lag",
+   "term": "regulatory lag",
+   "def": "The gap between when a utility spends money and when a rate order lets it recover that money. Long lag erodes the earned return below the allowed one; riders, formula rate plans and CWIP recovery all exist to shorten it.",
+   "aliases": [
+    "lag",
+    "recovery lag"
+   ]
+  },
+  {
+   "slug": "retail-choice",
+   "term": "retail choice",
+   "def": "A restructured market in which the wires company delivers power but customers buy the energy from competing retailers, and generation is not in rate base. Most of Texas works this way inside ERCOT; the Southeast and MISO South do not, which is why a data center there signs with one integrated utility rather than a retailer and a wires company.",
+   "aliases": [
+    "retail competition",
+    "deregulated market",
+    "restructured market",
+    "deregulation",
+    "retail electric provider",
+    "REP"
+   ]
   },
   {
    "slug": "revenue-requirement",
@@ -1664,6 +1917,26 @@
    ]
   },
   {
+   "slug": "securitization",
+   "term": "securitization",
+   "def": "Financing a specific approved cost — storm damage, a retired plant — by selling bonds backed by a dedicated charge on customer bills, so the utility recovers the money at once at a low interest rate instead of carrying it in rate base for years. Common after Gulf hurricanes.",
+   "aliases": [
+    "securitized",
+    "securitization bonds",
+    "storm securitization",
+    "storm cost recovery",
+    "system restoration bonds"
+   ]
+  },
+  {
+   "slug": "seem",
+   "term": "SEEM",
+   "def": "The Southeast Energy Exchange Market — a bilateral, fifteen-minute trading platform among Southeastern utilities that are not in any RTO. It is not a market operator: there is no central dispatch, no capacity auction and no queue; each utility remains its own balancing authority.",
+   "aliases": [
+    "Southeast Energy Exchange Market"
+   ]
+  },
+  {
    "slug": "selective-catalytic-reduction",
    "term": "selective catalytic reduction",
    "def": "Exhaust after-treatment that injects a urea or ammonia solution across a catalyst to convert nitrogen oxides into nitrogen and water. It is the standard control that lets a diesel or gas plant meet a tight air permit, and it is equipment, space and a consumable rather than a setting.",
@@ -1680,6 +1953,18 @@
    "aliases": [
     "selectivity",
     "zone-selective interlocking"
+   ]
+  },
+  {
+   "slug": "self-build",
+   "term": "self-build",
+   "def": "A utility's proposal to build and own a plant itself, evaluated against third-party bids in an all-source solicitation. Because owned plant enters rate base and a contract does not, commissions watch whether the self-build was compared fairly with the bids.",
+   "aliases": [
+    "self-build option",
+    "utility self-build",
+    "self-build bid",
+    "utility-owned",
+    "company-owned"
    ]
   },
   {
@@ -1719,7 +2004,11 @@
    "aliases": [
     "simple-cycle",
     "open cycle",
-    "SCGT"
+    "SCGT",
+    "peaker",
+    "peaking plant",
+    "peakers",
+    "combustion turbine peaker"
    ]
   },
   {

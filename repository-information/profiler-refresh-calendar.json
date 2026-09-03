@@ -743,6 +743,43 @@
         "Execution of the $150M buyback authorized 2026-08-25; insider selling flagged by trade press",
         "Chesterton check on next refresh: Vicor's IR site was unreachable this session — results were read from 8-K Ex. 99.1; re-derive consensus from Nasdaq/Zacks if reachable"
       ]
+    },
+    {
+      "slug": "southern-company",
+      "nextReport": "2026-10-29",
+      "confirmed": false,
+      "source": "Tracker date plus cadence inference — Southern had posted no Q3 2026 scheduling release as of 2026-09-03 (its Q2 notice came Jun 25 for a Jul 30 release; the last seven releases were Thursdays: 2026-07-30, 2026-04-30, 2026-02-19, 2025-10-30, 2025-07-31, 2025-05-01, 2025-02-20). Investing.com and MarketBeat both show Thursday 2026-10-29 (MarketBeat labels it 'based on past reporting schedules'); Zacks was bot-walled and Nasdaq returned 503. Treat as unconfirmed until the 'Southern Company third-quarter 2026 earnings to be released…' notice posts on PR Newswire (~4 weeks ahead) or the IR events page lists it; the release is issued by 7:30 a.m. ET with a 1:00 p.m. ET call.",
+      "lastRefreshed": "2026-09-03",
+      "watch": [
+        "Q3 2026 vs the company's $1.65 estimate and the ~$1.45 tracker consensus; whether 2026 lands at the top of $4.50–4.60; any change to the 7–8% long-term growth from a 2028 base",
+        "The contracted-load ladder after 17 GW (Georgia Power 12.5 / Alabama Power 4 / Mississippi Power 0.5): the contracted, finalizing and late-stage tranches separately, the 2028/2030/mid-2030s ramps (12/19/25 GW), and any change to the 'contracted' definition; keep the 75 GW+ prospective figure apart",
+        "Georgia PSC general election Nov 3, 2026 (Districts 3 and 5): the resulting majority and its first votes — the large-customer fuel-asset allocation hearing due by December 2026, the storage RFP short list (December) and contracts (January 2027)",
+        "The Fulton County petition against the December 2025 certification (decertification of at least 757 MW sought): any ruling; the PSC's and Georgia Power's motions to dismiss",
+        "Groundbreaking or supply releases naming the Bowen, Wansley or McIntosh combined-cycle turbine OEM and EPCs, and any named battery OEM for the 2025-certified BESS projects (none to date)",
+        "The 2032–2033 capacity RFP (2,000–6,000 MW; bids Q2 2026; certification filing mid-2027): winners, self-build share",
+        "OpenAI contract execution and the semiannual large-load portfolio reports the August 2026 approval requires; any 15-day cancellation notices; Alabama PSC large-load rules effective Oct 1, 2026 and the redacted Meta/Nebius/Woostor contracts",
+        "DOE loan draws, the ~$1.1B remaining equity need, Moody's negative outlook (Baa1) after the $81B plan; the August 2026 convertibles",
+        "Vogtle 1–2 uprate schedule (54 MW from 2028), Hatch uprate engineering, any risk-sharing statement on new nuclear beyond 'not going to be next'",
+        "Chesterton check on next refresh: the Georgia large-load rule's formal citation was not confirmed in any PSC document found — verify against the PSC rules page if reachable"
+      ]
+    },
+    {
+      "slug": "entergy",
+      "nextReport": "2026-11-04",
+      "confirmed": false,
+      "source": "Tracker date — Entergy had not announced its Q3 2026 date as of 2026-09-03 (investors.entergy.com's Q3 2026 event page returned 404; no scheduling release found). Investing.com (EPS f/c $1.66), MarketBeat ('estimated', $1.65) and TipRanks all show Wednesday 2026-11-04. The company's cadence has been late October / early November on a Wednesday (2025-10-29; 2026-07-29 and 2026-04-29 for the last two quarters) with a scheduling release ~1 week ahead ('Entergy to report third quarter 2026 financial results on…'). Treat as unconfirmed; verify on entergy.com/news/releases or the 8-K feed (CIK 65984) — Nov 4 is a week later than the cadence would suggest.",
+      "lastRefreshed": "2026-09-03",
+      "watch": [
+        "Q3 2026 vs the ~$1.65–1.66 tracker consensus on both the Zacks and Investing.com bases (they diverged by $0.19 in Q2); whether the $4.25–4.45 guidance moves; the share-count drag after the May forward sale",
+        "LPSC docket U-37882 (Meta phase two, seven CCCTs 5,278 MW, $12.9B): the Oct 7, 2026 hearing and the December 2026 vote — approval as filed vs conditions on the term, after-term allocation, transmission CIAC or the parent guaranty; whether the 4–1 pattern holds",
+        "Turbine exclusivity: any further increase beyond 27 power-island sets, sets fulfilled, and the first release naming the OEM/EPC for Franklin Farms, Waterford 5 or the phase-two units",
+        "Arkansas: the Nov 17, 2026 APSC hearing on the Google special-rate contract's cost allocation (staff: 'well below the full cost'), the Jefferson prudence finding, the base rate case decision targeted December 2026 (docket 26-001-U)",
+        "Storage: the 2025 Louisiana BESS RFP selections (delayed as of Aug 31, 2026), the phase-two batteries' sizes and supplier, Cypress Solar's battery integrator (Orion/Wanzek named; OEM not), any named BESS supplier on an owned project — none to date",
+        "Mississippi: the Q3 2026 storm securitization filing, Traceview/Vicksburg construction, the Hinds County campus's supply, the residential bill trajectory the company and Synapse dispute",
+        "Hut 8 River Bend: the first 330 MW in Q2 2027 and any generation filed for its growth to 1,000 MW; Waterford 6/Westlake (U-37853) and the Cottonwood acquisition (U-37801) decisions in Q4 2026; Babel–Webre 500 kV",
+        "Louisiana phase-one: the Blue Owl joint-venture guaranty question the intervenors raised; the transparency ruling; the Sierra Club air-permit challenge",
+        "Chesterton check on next refresh: the LPSC order text for U-37425 was not retrievable this session — the ESA terms rest on the intervenors' quotations and the company's 2026 testimony; re-pull the order if the LPSC portal is reachable"
+      ]
     }
   ]
 }

@@ -1,0 +1,600 @@
+{
+ "schemaVersion": 2,
+ "slug": "entergy",
+ "title": "Entergy — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "one-parent-five-utilities",
+   "title": "One parent, five utilities: what a holding company is to a regulator and to an investor",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The Dominion guide taught the regulated chain with a single utility in a single state under a single commission and a single grid operator. Entergy is the case where that chain runs five times over inside one company. Entergy Corporation is a {{holding company}}: the shares trade on the New York Stock Exchange, but the company that serves a customer, files a {{rate case}} and owns a power plant is one of five regulated operating companies — Entergy Louisiana, Entergy Arkansas, Entergy Mississippi, Entergy Texas and Entergy New Orleans — each with its own service territory, its own {{rate base}}, its own {{allowed return}} and its own regulator. Investors buy the parent; regulators regulate the subsidiaries.",
+    "That split is the first thing to learn, because it decides which room a decision is made in. A gas plant built for a data center in Louisiana is certified by the Louisiana Public Service Commission and paid for by Entergy Louisiana's customers; a campus in Arkansas is a matter for the Arkansas commission and Entergy Arkansas's rate base; the parent's earnings call describes all five relationships at once, in one guidance number, but no proceeding at the parent level can move a plant from one state's books to another's. The {{revenue requirement}} equation the Dominion guide wrote — costs plus depreciation plus taxes plus rate base times the allowed return — is solved five separate times, on five separate calendars, and the parent's growth is the sum.",
+    "The second thing to learn is what is shared. All five companies sit inside one grid operator — {{MISO}}, in its South region — so the wholesale market, the capacity auction, the {{interconnection queue}} and the regional transmission plan are common even though the retail regulation is not. They also share a system agreement and a service company that plans, operates and buys for the fleet, which is why a single {{RFP}} can be issued on behalf of several operating companies and why a plant in one state can be dispatched for the whole system. A seller who understands which layer is common and which is state-by-state can read an Entergy announcement correctly: the megawatts are the parent's story, the certificate is the state's.",
+    "The guide runs in this order: the four commissions and the council, and which instrument each uses to certify a plant; the formula rate plans that reset three of the five companies' rates every year and what that does to the parent's earnings and its regulatory lag; the MISO layer above all five; then the mechanism this company has made its own — building generation for one named customer under a service agreement that underwrites the plant — read from the Louisiana order that first did it at scale, with the Arkansas and Mississippi versions beside it; the ratepayer-protection terms each state wrote; the storm-and-securitization background that shapes how much political room exists for any of it; the sourced megawatts on a clock; and the failure section, the flashcards and the self-test."
+   ]
+  },
+  {
+   "id": "four-commissions-and-a-council",
+   "title": "Four commissions and a council: who certifies what, under which instrument",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Five retail regulators, one grid operator, one federal regulator. The certification instrument has a different name in each state and the same job: it is the order that lets a plant into rate base. The rate mechanism differs more — three of the five companies reset rates yearly by formula, two through contested cases.",
+   "cols": [
+    "Regulator",
+    "Company it regulates",
+    "How it is chosen",
+    "The certification instrument",
+    "The rate mechanism"
+   ],
+   "rows": [
+    [
+     "Louisiana Public Service Commission",
+     "Entergy Louisiana",
+     "Five commissioners, elected by district — an {{elected commission}}",
+     "Certification under the commission's general order on new generation — the Louisiana {{CPCN}}; the order approving a plant can name the customer it is built for",
+     "A {{formula rate plan}} with an annual reset, plus {{rider}}s and the {{fuel clause}}"
+    ],
+    [
+     "Arkansas Public Service Commission",
+     "Entergy Arkansas",
+     "Three commissioners, appointed by the governor",
+     "The {{CECPN}} — certificate of environmental compatibility and public need",
+     "A {{formula rate plan}} under the state's 2015 statute, with a cap on the yearly change"
+    ],
+    [
+     "Mississippi Public Service Commission",
+     "Entergy Mississippi",
+     "Three commissioners, elected by district",
+     "The {{CPCN}}; a separate statute lets certified plant earn during construction",
+     "A {{formula rate plan}} — Mississippi's oldest, dating to the 1980s"
+    ],
+    [
+     "Public Utility Commission of Texas",
+     "Entergy Texas",
+     "Five commissioners, appointed by the governor",
+     "The certificate of convenience and necessity — Texas's {{CPCN}}; Entergy Texas is the part of Texas outside {{ERCOT}} and outside {{retail choice}}",
+     "Contested base {{rate case}}s, plus generation and transmission {{rider}}s between them"
+    ],
+    [
+     "New Orleans City Council",
+     "Entergy New Orleans",
+     "Seven elected council members, advised by consultants",
+     "Council approval of new generation — the same function as a commission's certificate",
+     "A {{formula rate plan}} adopted by the council, with reliability penalties"
+    ],
+    [
+     "{{MISO}} — the grid operator for all five",
+     "All five operating companies",
+     "A membership organization under a {{FERC}}-approved tariff",
+     "None — MISO does not certify plants; it accredits their capacity, queues their interconnection and plans the regional lines ({{MTEP}})",
+     "The {{PRA}} capacity price and the wholesale energy price flow through the fuel clause"
+    ],
+    [
+     "{{FERC}} and the NRC",
+     "The system agreement among the five; the four reactors",
+     "Federal appointees",
+     "Wholesale and transmission tariffs; reactor licences and any {{nuclear uprate}}",
+     "The transmission tariff's cost allocation; no retail rates"
+    ]
+   ],
+   "note": "The row to memorize is Louisiana's: an elected commission, a formula rate plan and a certification order that can name a single customer. That combination is what the mechanism in the later sections runs on."
+  },
+  {
+   "id": "the-formula-rate-plan",
+   "title": "The formula rate plan, worked once",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**What it replaces.** In the Dominion guide the utility's rates were set in a contested {{rate case}} every two years, and between cases the earned return drifted away from the allowed one — the {{regulatory lag}} that every rider and clause exists to shorten. A {{formula rate plan}} removes most of the case. Each year the utility files its actual earned return on equity; the commission compares it with a band around the {{allowed return}}; if the company earned below the band, rates rise by a formula to bring it back, and if above, rates fall. No hearing on the whole {{revenue requirement}}, no re-litigation of the cost of service — an annual arithmetic exercise with a short review.",
+    "**Do the arithmetic.** Suppose the allowed return is 9.5 percent with a band of plus or minus 0.5 points, and the company's filing shows it earned 8.6 percent on a $10 billion equity rate base. It is 0.4 points below the bottom of the band — $40 million of shortfall — and the plan raises rates to recover it, sometimes with a cap on how much rates may move in one year. The following year the new plant that entered service is in the filing, the earned return is recomputed, and the reset runs again. The rate base grows; the rates follow it within twelve months rather than within a rate-case cycle.",
+    "**What it does to the parent.** Three of Entergy's five operating companies run on a formula rate plan, so most of the company's earnings track its rate base with a lag of about a year. That is why an investor can read a capital plan almost as a forecast of earnings, and why a multi-billion-dollar plant certified for one customer shows up in guidance so soon after the order. It is also why the parent's earnings are smoother than a rate-case utility's — the reset is annual and formulaic, not episodic and contested.",
+    "**What it does to the commission.** A formula plan gives the regulator a look at earnings every year rather than every three, which sounds like more oversight and is also less: the annual filing reviews the arithmetic, not the wisdom of the spend. The {{prudence review}} still exists — a plant built imprudently can still be disallowed — but the yearly reset makes the cost of a plant visible to customers quickly, and in an elected state that visibility is political. A plan with a large customer paying the plant's cost through its own {{ESA}} is a plan the formula can carry without moving anyone else's bill; a plan where the cost is spread is one the next election can reprice."
+   ]
+  },
+  {
+   "id": "miso-south",
+   "title": "MISO South: the layer above all five, and what it does not decide",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Every Entergy operating company joined {{MISO}} in December 2013, forming the RTO's South region with Cleco, CenterPoint's Louisiana territory and the Texas Gulf coast utilities. That put the fleet inside an organized wholesale market — energy dispatched by the RTO every five minutes, capacity cleared in the yearly {{PRA}} by season and by zone, resources accredited by {{ELCC}}-style methods that discount solar and storage against their nameplate, interconnection through the RTO's {{interconnection queue}}, and big lines planned in the {{MTEP}} with their cost allocated across the footprint. The Dominion guide's PJM section applies almost line for line, with one horizon change: MISO's auction clears one year ahead, not three, so the price signal is shorter and noisier.",
+    "What MISO does not do is certify a plant. A combined-cycle unit built for a data center in Louisiana is a state decision — the Louisiana commission's certification order lets it into {{rate base}} — and MISO's role is to study its interconnection, accredit its capacity and dispatch it once built. That is the reverse of the merchant world: in {{ERCOT}}, the market decides whether a plant is worth building and no commission certifies it; in MISO South, the commission decides and the market absorbs the result. A seller who confuses the two will pitch a merchant business case to a utility that has never needed one.",
+    "The Texas company is the case that makes the point. Entergy Texas serves the southeast corner of the state, and it is in MISO, not ERCOT — outside the {{retail choice}} market that covers most Texans, still a {{vertically integrated utility}} that owns generation and sells to the end customer, certified by the Public Utility Commission of Texas under the same certificate the Dominion guide called a CPCN. Texas's 2025 large-load statute, {{SB 6}}, was written for ERCOT's queue but reaches Entergy Texas's data-center customers too, so a campus on the Sabine River lives under Texas law, MISO's market and a regulated utility's tariff at once.",
+    "Two MISO features matter more to a data-center campus than anything in the state docket. The first is accreditation: a battery or a solar farm counts toward the {{planning reserve margin}} at a fraction of its nameplate, which is why a utility that has signed to serve a flat, always-on load reaches for gas first. The second is the seasonal auction: MISO South has cleared short in summer more than once, and a utility that is long on accredited capacity because it built plants for a customer can sell the surplus into the {{PRA}} — a revenue line that flows back through the {{fuel clause}} to every customer, and one of the arguments the utility makes when a commission asks who benefits from a plant built for one company."
+   ]
+  },
+  {
+   "id": "buying-for-one-campus",
+   "title": "Buying for one campus: the mechanism, before the order",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The Dominion guide's chain assumes the utility plans for a population: a {{load forecast}} of thousands of customers, an {{IRP}} that sizes the fleet to the system peak plus a {{planning reserve margin}}, a {{CPCN}} for each plant justified against that system need. Entergy has made a different move its signature. When one customer asks for a gigawatt or more in a territory whose whole peak is a few gigawatts, the utility does not fold the request into the forecast and plan for the average. It signs an {{ESA}} with that customer, sizes specific plants to that contract, and asks the commission to certify those plants for that customer — an order that names the campus it is built for.",
+    "The service agreement is the load-bearing document. It fixes the megawatts the customer will take and the years it will take them for; it sets a {{minimum demand charge}} that bills a percentage of the contracted capacity whether or not the campus is running; it requires collateral against the customer's obligations; and it says what the customer owes if it leaves early. Those four terms are what let the utility carry the plant to its commission with a straight face: the {{revenue requirement}} the plant adds is matched, year by year, by a contract that obliges one counterparty to pay it. The plant is still {{rate base}} — it enters the utility's books, earns the {{allowed return}} and is recovered through the {{formula rate plan}} like any other — but the revenue that recovers it comes, for the contract term, from the customer who caused it.",
+    "That is why the commission's order, in this structure, reads differently from a system-need certificate. It recites the customer's obligations as findings: that the contract covers the plant's cost, that the minimum bill is sufficient, that collateral is posted, that a shortfall would be the customer's and not the other ratepayers'. It typically adds conditions the utility did not volunteer — reporting, a review of the {{cost allocation}} at intervals, a renewable or storage commitment alongside the gas, a rule about who pays for transmission that other customers will also use. And it states the one thing the {{ESA}} cannot settle, which is what happens when the term ends: a combined-cycle plant lives forty years and a fifteen-year contract does not, so the {{stranded cost}} question that a {{large-load tariff}} answers with exit fees is answered here with renewal rights, {{take-or-pay}} extensions and, in the end, a judgment call the commission makes on the record.",
+    "For the seller the mechanism inverts the usual order. In a system-need purchase the plan comes first and the customer is a forecast; here the customer comes first and the plan follows. The equipment decision is made when the utility and the customer settle the service agreement — the turbine order, the site, the {{EPC}} — and the certificate ratifies a purchase already in motion, because a plant that has to be in service when the campus opens cannot wait for a contested case to finish. The regulatory risk does not disappear; it moves to the commission's conditions and to the {{elected commission}}'s reading of whether one customer paying for one plant protects everyone else or merely says it does. The next section reads the Louisiana order that first did this at scale, clause by clause."
+   ]
+  },
+  {
+   "id": "anatomy-of-an-order-that-names-the-customer",
+   "title": "Anatomy of an order that names the customer: Louisiana's 2025 approval, clause by clause",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The Louisiana commission's August 2025 approval of Entergy Louisiana's application 'for approval of generation and transmission resources in connection with service to a single customer for a project in North Louisiana' is the first order of its size to certify plants for one named campus. Its terms are read here from the utility's own application and testimony and from the intervenors' filings in the same docket, since the order text itself was not retrievable; the dossier carries each source. The second-phase application of March 2026, still pending, is set beside it where the terms moved.",
+   "cols": [
+    "Clause",
+    "Phase one — approved August 2025",
+    "Phase two — filed March 2026, decision targeted December 2026",
+    "What the clause does"
+   ],
+   "rows": [
+    [
+     "The customer",
+     "A Meta subsidiary, named in the application; the campus in Richland Parish",
+     "A second Meta subsidiary for an adjacent campus, with a guaranty from the parent company itself",
+     "Turns a forecast into a counterparty; the guaranty is what the collateral finding rests on"
+    ],
+    [
+     "The plants",
+     "Three 1×1 combined-cycle units, about 2,260 MW — two at a new site beside the campus for late 2028, one at an existing plant site downstream for 2029",
+     "Seven 754 MW combined-cycle units, 5,278 MW, about $12.9 billion — four beside the campus, three near an existing plant in Pointe Coupee Parish — for 2030–2031, plus three battery projects",
+     "The certificate proper: permission to build these specific units and put them in {{rate base}}"
+    ],
+    [
+     "The wires",
+     "About a hundred miles of new 500 kV line, eight 230 kV lines, two utility-owned and six customer-owned substations; the customer funds the full interconnection cost",
+     "A new 500 kV line of about $1.4 billion, a 500 kV substation and nine switching stations funded by the customer as contributions in aid of construction",
+     "The {{cost allocation}} clause — how much of the shared system the deal admits it uses, and who pays for it"
+    ],
+    [
+     "The term",
+     "Fifteen years, with up to three five-year extensions and a one-year non-renewal notice, per the intervenors' reading of the agreement",
+     "Twenty years, automatic five-year renewals, a three-year non-renewal notice",
+     "The gap between this and a forty-year plant is the {{stranded cost}} exposure; the second phase lengthened it by five years and tripled the notice"
+    ],
+    [
+     "The minimum bill",
+     "Minimum monthly charges designed so the customer's payments recover the annual {{revenue requirement}} of the new infrastructure during the term",
+     "Minimum monthly charges sized to the full incremental cost to serve, with true-up provisions",
+     "The {{minimum demand charge}} written as a revenue-requirement match rather than a percentage of demand"
+    ],
+    [
+     "Collateral and exit",
+     "Termination payments; a parent guaranty from the customer's parent in force through the original term",
+     "Early termination: the customer pays all unrecovered cost of the assets, or their net book value once in service; a parent guaranty plus credit-default insurance",
+     "The {{ESA}}'s security — and the clause the intervenors questioned when the first campus was moved into a financing joint venture after the vote"
+    ],
+    [
+     "What the customer adds",
+     "At least 1,500 MW of solar and storage through an expedited certification, a bill-assistance contribution, a stated saving to other customers over fifteen years and a reduction of about a tenth in storm charges",
+     "Up to 2,500 MW of renewables, more than a billion dollars toward the utility's embedded cost of service and about $700 million toward storm and resilience costs over the term, a nuclear memorandum",
+     "The conditions that make the order defensible to an {{elected commission}}: benefits to customers who are not the counterparty"
+    ],
+    [
+     "The vote and the dissent",
+     "Four to one on a settlement placed on the agenda ahead of the hearing officer's deadline; the dissenting commissioner said he could not verify the numbers",
+     "Four to one to fast-track the schedule so the commission could vote in December 2026 without a hearing officer's recommendation",
+     "An elected commission's signature: the same 4–1 twice, and the same dissent"
+    ],
+    [
+     "What the record could not show",
+     "The contracted megawatts and the minimum-bill percentage — redacted as highly sensitive; the utility acknowledged it ran no formal competitive solicitation for the turbines",
+     "The contracted megawatts and storage sizes — redacted; a 2026 vote declined to compel the customer to disclose jobs and load data",
+     "The transparency cost of a one-customer certificate: the terms that protect other customers are the ones they cannot read"
+    ]
+   ],
+   "note": "Three numbers to take from the order: the term (15 years, then 20), the life of the plants (decades longer), and the customer's share of the wires (the interconnection in full, the shared 500 kV lines by contribution). The rest of the order is conditions that convert a private contract into something a commission can defend on the record."
+  },
+  {
+   "id": "who-pays-when-the-customer-pays",
+   "title": "Who pays when the customer pays: the two readings of a one-customer plant",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "The Dominion guide set cost-causation against socialization for shared wires. A plant built for one customer sharpens the question: if the customer's contract covers the plant, is anyone else exposed? Both readings are made in every one of these dockets, and the commission's conditions are where they meet.",
+   "cards": [
+    {
+     "t": "The customer pays, so no one else does",
+     "meta": "The {{ESA}}'s minimum bill, term and collateral match the plant's {{revenue requirement}}; the utility earns its return; other customers gain a stronger system and a larger tax base",
+     "adv": [
+      "The load is real by construction — a customer that has posted collateral against a fifteen-year minimum is not a forecast",
+      "A plant in {{rate base}} that a contract pays for is the cleanest growth a {{formula rate plan}} can carry: earnings rise, other bills do not",
+      "Surplus capacity in the early years sells into the {{PRA}} and the energy market, and that revenue flows back through the {{fuel clause}} to everyone"
+     ],
+     "dis": [
+      "A contract of fifteen years against a plant of forty leaves twenty-five years the contract does not cover — the {{stranded cost}} lands on the system unless the customer renews",
+      "Transmission built to reach the campus serves the region once it exists; who pays for it is a separate fight the contract rarely settles",
+      "Fuel, emissions and reserve-margin effects of a plant that runs flat out are shared whether or not its capital cost is"
+     ]
+    },
+    {
+     "t": "Everyone pays something, so the terms must say what",
+     "meta": "The commission conditions the certificate — reporting, cost reviews, a renewable or storage commitment, an explicit rule for the years after the term, a share of the transmission assigned to the customer",
+     "adv": [
+      "Puts the after-the-term question on the record instead of leaving it to a future rate case nobody in the room will attend",
+      "Lets the commission trade its approval for things the customer would not otherwise offer — solar alongside the gas, a contribution to the wires, public reporting",
+      "Gives an {{elected commission}} something to point to when the plant's cost is the next campaign's issue"
+     ],
+     "dis": [
+      "Conditions negotiated after the turbine is ordered cannot change the plant; they can only change who pays for it",
+      "A condition that the customer pay 'its share' of shared wires needs an allocation method, and every method is contested",
+      "The more the certificate promises other customers, the more a shortfall in the customer's load becomes the commission's problem rather than the utility's"
+     ]
+    }
+   ],
+   "note": "Read a one-customer certificate for three numbers: the term of the contract, the life of the plant, and the percentage of the transmission the customer funds. The gap between the first two is the exposure; the third is how much of the shared system the deal admits it uses."
+  },
+  {
+   "id": "storms-and-securitization",
+   "title": "Storms and securitization: the background that sets the political room",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "Every Entergy docket happens in a territory that Gulf hurricanes cross. A major storm can do billions of dollars of damage to a single operating company's wires in a week, and the cost of restoring them is a legitimate cost of service — but a cost that size cannot go through a {{rate case}} and into {{rate base}} without raising bills for a decade. The instrument the Gulf states built for it is {{securitization}}: the legislature authorizes a dedicated charge on customer bills, a state entity or the utility sells bonds backed by that charge at a rate close to sovereign debt, and the utility recovers the storm cost at once. Customers pay the bonds off over years at a low interest rate instead of paying the utility's cost of capital on the same money; the utility's balance sheet is repaired in months.",
+    "Two things follow for a reader of the data-center dockets. First, securitization is a political habit as much as a financial one: the legislature, the commission and the utility have used it repeatedly, and the same machinery — a non-bypassable charge, a bond, a true-up — is what a commission reaches for when it wants a data-center plant's cost carried in a way it can explain. Second, the storm charges already on the bill are the affordability baseline against which any new plant is judged. A commission that has just added a storm-recovery line to every customer's bill is a commission that needs a one-customer plant to be visibly paid for by that customer, which is why the conditions in these orders are as long as they are.",
+    "The reliability side matters too. Storm restoration is measured, penalized and campaigned on; a city council that regulates its own utility has attached reliability penalties to a {{formula rate plan}} for that reason. A utility whose customers have lived through multi-week outages has less room to argue that a plant for a newcomer is a public good — and more reason to make sure the order says who pays."
+   ]
+  },
+  {
+   "id": "three-states-three-campuses",
+   "title": "Three states, three campuses: the same mechanism in three regulatory dialects",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The company's own filings describe the same move in Louisiana, Arkansas and Mississippi — a named customer, plants sized to it, a certificate that names it — and each state's law shaped it differently. Texas, where the growth is industrial and the certificates are conventional, is the control case. Figures are as the company states them in its filings and releases; the dossier carries the sources and the commission-side reading.",
+   "cols": [
+    "Jurisdiction and customer",
+    "What is built for it",
+    "The certification path",
+    "What the state's law added"
+   ],
+   "rows": [
+    [
+     "Louisiana — a Meta campus in Richland Parish, phase one",
+     "Three 1×1 combined-cycle units totalling about 2,260 MW — two at a new Franklin Farms site beside the campus for late 2028, one at the existing Waterford site for 2029 — about $2.4 billion for the first two; a new 500 kV line of about $550 million; up to 1,500 MW of solar and storage under an expedited path",
+     "A single-customer certification application in October 2024; approved August 2025; the order is the one the next section reads",
+     "A 'Lightning Amendment' to the commission's general order on new generation: the usual solicitation requirement is waived where a signed {{ESA}} with a new load has an in-service date within five years"
+    ],
+    [
+     "Louisiana — the same customer's second campus phase, filed March 2026",
+     "Seven 754 MW combined-cycle units, 5,278 MW, about $12.9 billion — four beside the campus, three near an existing plant in Pointe Coupee Parish — for 2030–2031; three battery projects; a 500 kV line of about $1.4 billion; up to 2,500 MW of renewables committed by the customer",
+     "Certification pending: staff and intervenor testimony July 2026, hearing October, a commission decision targeted for December 2026",
+     "A 20-year term with five-year renewals and three-year notice; minimum monthly charges sized to the full incremental cost with true-ups; contributions in aid of construction; a parent guaranty plus credit insurance; the first project under the Lightning Amendment"
+    ],
+    [
+     "Arkansas — a Google campus at West Memphis",
+     "A 600 MW solar farm with 350 MW of storage at about $1.6 billion for 2028; a 754 MW combined-cycle unit at Jefferson County at about $1.6 billion for 2029; a 446 MW simple-cycle unit at Lake Catherine for 2028",
+     "A special-rate contract approved December 2025; the {{CECPN}} for the solar-plus-storage approved in early 2026; the combined-cycle order in January 2026 found need but not cost prudence, so its cost is still being litigated",
+     "A 2025 statute that fixes a 180-day clock on public-interest and prudence findings, and a 'Generating Arkansas Jobs' rider that recovers financing cost during construction — {{CWIP}} recovery by another name, worth a few dollars a month on a residential bill"
+    ],
+    [
+     "Mississippi — Amazon Web Services campuses in Madison, Warren and Hinds counties",
+     "Three 754 MW combined-cycle 'advanced power stations' — Delta Blues (2028), Vicksburg (2028), Traceview (2029) — at roughly $1.2 billion each, plus solar and 170 MW of storage",
+     "Pre-certified under a Mississippi statute written for plants serving data-processing customers: no contested certificate before construction; a {{prudence review}} after completion",
+     "A formula-rate change that pays a cash return on construction work in progress for the data-center plants, and a 2024 large-customer supply agreement structured so the customer pays its incremental cost; the company reports the first bill reductions from it in mid-2026"
+    ],
+    [
+     "Texas — industrial and population growth, no named campus",
+     "A 1,215 MW combined-cycle unit in Orange County for 2026; a 754 MW unit at Port Arthur and a 453 MW peaker near Cleveland for 2028; a 145-mile 500 kV line for 2029",
+     "Conventional certificates of convenience and necessity from the state commission; generation cost recovered through an interim rider between rate cases",
+     "The Port Arthur plant was sold in construction to investors and leased back under a build-to-suit lease — a financing structure, not a regulatory one; Texas's 2025 large-load statute reaches this territory though it sits in MISO, not ERCOT"
+    ]
+   ],
+   "note": "Three dialects, one grammar. Louisiana waived the solicitation where a service agreement exists; Arkansas kept the certificate and put a clock on it; Mississippi removed the pre-construction certificate and moved the test to the end. In all three the customer's contract is what makes the plant financeable, and in all three the after-the-term question is answered by the commission's conditions rather than by the contract."
+  },
+  {
+   "id": "the-turbine-slot",
+   "title": "The turbine slot: why the equipment is bought before the certificate",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A combined-cycle plant that has to be running when a campus opens in 2028 cannot wait for a contested case that ends in late 2026 before its turbine is ordered, because the lead time on a large gas turbine has stretched to years. Entergy's answer, stated in its own filings, is an exclusivity agreement with one manufacturer for power-island equipment and combustion turbines in the largest frame class — one manufacturing slot per quarter, with a minimum order that has been raised twice, from fifteen power islands to twenty-one to twenty-seven, as the campus filings multiplied. By mid-2026 ten of those sets and two turbine slots had been fulfilled. The company has said it has secured ten combined-cycle units for growth, and separately signed a memorandum with the same manufacturer's group on carbon capture for the J-class machines it is buying.",
+    "For a seller this is the most important paragraph in the guide, because it inverts the Dominion chain's order. The equipment decision here precedes the certificate by years and is made at the parent level, for the whole system, against a forecast of campuses that have not yet signed. The certificate — Louisiana's, Arkansas's, Mississippi's — decides which operating company's customers pay for a machine already in the queue. A turbine competitor arriving at a certification docket is two years late; a balance-of-plant, transformer, switchgear or storage seller arriving at the {{EPC}} selection for a named plant is on time; a battery seller answering the operating company's storage {{RFP}} is on the one lane the exclusivity agreement does not touch.",
+    "The structure also explains the company's exposure. Twenty-seven power islands are a commitment made against a pipeline the company itself describes as potential rather than contracted — a range of seven to twelve gigawatts of data-center additions beyond its base case. If the campuses sign, the slots are the moat that lets Entergy promise a 2028 or 2030 in-service date when a rival utility cannot; if they do not, the slots are the {{stranded cost}} of a different kind — equipment without a certificate — and the commission conditions that require the customer to fund construction in advance are the company's hedge against exactly that."
+   ]
+  },
+  {
+   "id": "megawatts-on-the-entergy-clock",
+   "title": "Megawatts on the Entergy clock: the system, the plants for named customers, the pipeline",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "MW (company figures)",
+   "intro": "Company-stated figures, all from the same filings and decks the dossier cites. The point is proportion: the plants filed for one customer's second phase exceed a quarter of the whole system's decade-average peak, and the company's stated potential pipeline is larger still.",
+   "items": [
+    {
+     "label": "Owned and leased capability",
+     "sub": "all five companies plus Grand Gulf, end of 2025",
+     "v": 24621
+    },
+    {
+     "label": "Decade-average summer peak",
+     "sub": "the whole utility system",
+     "v": 22168
+    },
+    {
+     "label": "Announced gas units approved or in progress",
+     "sub": "ten units across the four states, 2026–2029",
+     "v": 8146
+    },
+    {
+     "label": "Louisiana phase-one plants for one customer",
+     "sub": "three combined-cycle units, approved 2025",
+     "v": 2262
+    },
+    {
+     "label": "Louisiana phase-two plants for the same customer",
+     "sub": "seven units, filed March 2026, decision targeted December 2026",
+     "v": 5278
+    },
+    {
+     "label": "Data-center additions the company calls potential",
+     "sub": "lower end of the stated 7–12 GW range beyond the base case",
+     "v": 7000
+    },
+    {
+     "label": "Renewables and storage for customer demand",
+     "sub": "nameplate the plan sets aside, most still to be identified",
+     "v": 7000
+    }
+   ],
+   "note": "The gas figure is the sum of the units the company lists as approved or in progress: 1,215 in Texas for 2026; 754 + 754 + 754 + 453 + 446 + 1,508 for 2028; 754 + 754 + 754 for 2029. Phase-two Louisiana, the Cottonwood purchase and two further Louisiana units are pending and excluded."
+  },
+  {
+   "id": "where-entergy-slots-in",
+   "title": "Where Entergy's programs slot into the chain",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The Dominion guide's chain — plan, certificate, solicitation, rate order, interconnection, regional layer — with Entergy's instruments and the seller's entry point on each rung.",
+   "cols": [
+    "Rung",
+    "Entergy's instrument",
+    "Who decides",
+    "Where a seller enters"
+   ],
+   "rows": [
+    [
+     "The plan",
+     "A system-wide resource plan built by the service company; state {{IRP}} filings where required; the parent's capital plan and investor-day resource plan",
+     "The parent, then each commission",
+     "Too early for a purchase; the place to learn which state's need is real"
+    ],
+    [
+     "The customer contract",
+     "An {{ESA}} or large-customer supply agreement with one campus — term, minimum bills, collateral, termination terms",
+     "The operating company and the customer; filed with the commission",
+     "Not a seller's document — but the date it is signed is when the plant's equipment is committed"
+    ],
+    [
+     "The certificate",
+     "Louisiana certification, the Arkansas {{CECPN}}, Mississippi pre-certification, the Texas certificate",
+     "Each commission, on its own clock and under its own statute",
+     "Balance-of-plant and {{EPC}} selection for the named plant runs alongside it"
+    ],
+    [
+     "The solicitation",
+     "Operating-company {{RFP}}s — all-source, combined-cycle, renewables-and-storage, stand-alone {{BESS}} — run through one portal for all five companies",
+     "The operating company with commission oversight; an independent monitor where the state requires one",
+     "The battery lane: the developer bidding, or the utility for an owned project — the one channel outside the turbine exclusivity"
+    ],
+    [
+     "The rate order",
+     "A {{formula rate plan}} in three states, a base {{rate case}} in Texas, the council's plan in New Orleans; riders that recover construction cost during the build",
+     "Each commission, yearly",
+     "Where the plant's cost lands on customers; the political test of the whole structure"
+    ],
+    [
+     "Interconnection",
+     "{{MISO}}'s queue and its expedited process for resources tied to signed load; the utility's own transmission build, including new 500 kV lines",
+     "MISO, on {{FERC}}-approved rules; the state for the line's certificate",
+     "Transformers, switchgear and line hardware to the utility's transmission organization"
+    ],
+    [
+     "The regional layer",
+     "{{MISO}} South — the {{PRA}}, accreditation, the {{MTEP}}",
+     "MISO's stakeholders and FERC",
+     "Surplus capacity from customer-funded plants sells here; not a seller's rung"
+    ]
+   ],
+   "note": "Two rungs are Entergy-specific: the customer contract precedes the certificate rather than following the plan, and the turbine commitment precedes both. Everything else is the Dominion chain with five commissions instead of one."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The date moves.** A plant built for a 2028 campus depends on a {{MISO}} interconnection agreement, a 500 kV line with its own certificate and a turbine slot in a queue the company shares with every other utility buying the same frame. The RTO's expedited process for resources tied to signed load shortens one of the three; the line's route and the slot's delivery are not the commission's to hurry. Owned by the utility, the RTO and the manufacturer together; the reason a campus's {{energization}} date, not its groundbreaking, is the supplier's delivery date.",
+    "**The term ends before the plant does.** A fifteen- or twenty-year {{ESA}} against a forty-year combined-cycle unit leaves decades the contract does not cover. Renewal rights and notice periods manage it; they do not remove it. The {{stranded cost}} lands on the operating company's other customers unless the commission's order said otherwise — and the order is read again at every {{formula rate plan}} reset. Owned by the commission that signed the conditions; felt by the seller whose maintenance contract assumed the plant runs.",
+    "**The second phase is filed before the first is built.** A certificate for three units is followed within a year by an application for seven more, and the exclusivity agreement is raised to match. If the campus's second phase slows, the company holds manufacturing slots against a certificate it has not received. Owned by the parent's growth desk; the origin of the advance-payment and contribution-in-aid-of-construction terms in every one of these contracts.",
+    "**Five regulators, five readings.** The same structure was certified quickly in Louisiana under a waiver, found needed but not yet prudent in Arkansas, pre-certified in Mississippi with the review moved to the end, and handled conventionally in Texas. A seller who learned the mechanism in one state and assumes it in the next has learned the wrong docket. Owned by the seller.",
+    "**The formula makes the cost visible fast.** A formula rate plan puts a new plant on bills within a year of service; in an {{elected commission}} state that is one election cycle. The company's answer — publishing the customer-funded bill reductions the contracts produce — is a political instrument as much as a financial one, and it holds only while the customer's payments exceed the plant's cost. Owned by the utility; watched by every commissioner on a ballot.",
+    "**The storm arrives.** A hurricane or an ice storm adds a nine-figure restoration cost and a {{securitization}} charge to every bill in the same year a data-center plant enters rates. The plant's cost does not change; the room to defend it does. Owned by nobody; scheduled by the Gulf.",
+    "**Sold to the wrong desk.** The turbines were committed at the parent level years ahead of any certificate, and no state docket will reopen that choice. The balance of plant is the {{EPC}}'s; the storage is the operating company's solicitation; the wires are the transmission organization's. A seller who takes a turbine, a battery or a transformer to the certification hearing has arrived at the one room where none of those is decided. Owned by the seller."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is a utility holding company, and what does it mean for where a decision is made?",
+     "a": "A parent that owns several regulated operating companies, each with its own territory, rate base, allowed return and regulator. Investors buy the parent; regulators regulate the subsidiaries — so a plant is certified and paid for in one state's docket, never at the parent."
+    },
+    {
+     "q": "Write the formula rate plan's reset in one sentence.",
+     "a": "Each year the utility files its earned return on equity; if it falls outside a band around the allowed return, rates move by formula to bring it back — no full rate case, no re-litigation of the cost of service."
+    },
+    {
+     "q": "Why are a formula-rate utility's earnings smoother than a rate-case utility's?",
+     "a": "The reset is annual and arithmetic, so earnings track rate base with about a year's lag; a rate-case utility drifts between contested cases every few years."
+    },
+    {
+     "q": "What does MISO decide about a plant built for a data center, and what does it not?",
+     "a": "It studies the interconnection, accredits the capacity, dispatches the plant and plans the regional lines. It does not certify the plant — that is the state commission's order."
+    },
+    {
+     "q": "How does MISO's capacity auction differ from PJM's?",
+     "a": "The Planning Resource Auction clears one year ahead, by season and by zone; PJM's Base Residual Auction clears three years ahead. The shorter horizon means a noisier price signal."
+    },
+    {
+     "q": "Name the four terms in a service agreement that let a utility carry a one-customer plant to its commission.",
+     "a": "The contracted megawatts and term; a minimum monthly bill that covers the incremental cost whether or not the campus runs; collateral against the obligations; and what the customer owes on early termination."
+    },
+    {
+     "q": "What does an order that names the customer contain that a system-need certificate does not?",
+     "a": "Findings that the customer's contract covers the plant's cost; conditions the utility did not volunteer — reporting, cost reviews, renewables alongside the gas, who pays for transmission; and a stated answer to what happens when the term ends before the plant does."
+    },
+    {
+     "q": "Louisiana's 'Lightning Amendment' waives what, and on what condition?",
+     "a": "The solicitation requirement in the commission's general order on new generation, where a signed electric service agreement with a new load has an in-service date within five years of the certification application."
+    },
+    {
+     "q": "Arkansas kept the certificate and changed what?",
+     "a": "It put a 180-day clock on the commission's public-interest and prudence findings and added a rider that recovers financing cost during construction — CWIP recovery under another name."
+    },
+    {
+     "q": "Mississippi's pre-certification statute moves the test where?",
+     "a": "To the end: a plant serving a data-processing customer needs no contested certificate before construction; its costs are reviewed for prudence after completion, and a formula-rate change pays a cash return on construction work in progress meanwhile."
+    },
+    {
+     "q": "Why does a turbine exclusivity agreement matter more to a seller than any certificate?",
+     "a": "The turbine is committed at the parent level years before the state decides who pays for it. A competitor arriving at the docket is too late; the balance of plant, the storage solicitation and the wires are the lanes still open."
+    },
+    {
+     "q": "What is securitization, and why does it shape a data-center docket?",
+     "a": "Bonds backed by a dedicated bill charge that recover an approved cost — usually storm damage — at once and at a low rate. The storm charges already on the bill are the affordability baseline a new plant is judged against, and the same machinery is what a commission reaches for to carry a plant's cost in a way it can explain."
+    },
+    {
+     "q": "Entergy Texas is in Texas. Why is it not in ERCOT?",
+     "a": "It serves the state's southeast corner inside MISO South, outside the retail-choice market — a vertically integrated utility certified by the Texas commission and dispatched by MISO, reached by Texas's large-load statute all the same."
+    },
+    {
+     "q": "Why does a utility serving a flat, always-on load reach for gas before solar or storage?",
+     "a": "MISO accredits solar and batteries at a fraction of nameplate toward the planning reserve margin. A combined-cycle unit counts near its full size, so the capacity a campus needs is cheapest to certify as gas."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A holding company's earnings call describes a gas plant for a data center in Louisiana. Which body decides whether the plant enters rate base?",
+     "c": [
+      "The parent's board",
+      "MISO",
+      "The Louisiana Public Service Commission, in a certification docket for the Louisiana operating company",
+      "FERC"
+     ],
+     "a": 2,
+     "why": "The parent reports it; the state certifies it. A plant lives on one operating company's books under one commission's order."
+    },
+    {
+     "q": "Under a formula rate plan with a 9.5 percent allowed return and a ±0.5-point band, a utility earns 8.6 percent on $10 billion of equity rate base. What happens?",
+     "c": [
+      "Nothing — 8.6 is within the band",
+      "Rates rise by formula to recover roughly the 0.4-point shortfall, about $40 million, subject to any yearly cap",
+      "A full rate case is triggered automatically",
+      "Rates fall because the company under-earned"
+     ],
+     "a": 1,
+     "why": "The bottom of the band is 9.0; the company is 0.4 points below it. The plan's arithmetic restores the return without re-litigating the revenue requirement."
+    },
+    {
+     "q": "Which of these is decided by MISO rather than by a state commission?",
+     "c": [
+      "Whether a combined-cycle unit for a campus is certified",
+      "Whether the customer's contract terms are adequate",
+      "How much of the unit's nameplate counts toward the planning reserve margin",
+      "Whether the plant's cost is prudent"
+     ],
+     "a": 2,
+     "why": "Accreditation, dispatch, interconnection and the regional plan are the RTO's; the certificate, the contract review and the prudence finding are the state's."
+    },
+    {
+     "q": "A twenty-year service agreement underwrites a combined-cycle unit with a forty-year life. Which document answers what happens in years 21–40?",
+     "c": [
+      "The service agreement",
+      "MISO's interconnection agreement",
+      "The commission's certification order, through its conditions on renewal, notice and cost allocation — and ultimately a future rate proceeding",
+      "The turbine warranty"
+     ],
+     "a": 2,
+     "why": "The contract ends; the plant does not. Only the commission's order and the rate proceedings after it can say who pays for the uncovered decades."
+    },
+    {
+     "q": "Which state moved the certification test to after construction for plants serving data-processing customers?",
+     "c": [
+      "Louisiana",
+      "Arkansas",
+      "Mississippi",
+      "Texas"
+     ],
+     "a": 2,
+     "why": "Mississippi's pre-certification statute lets the plant be built without a contested certificate and reviews prudence at completion, with a cash return on construction work in progress meanwhile."
+    },
+    {
+     "q": "Louisiana's Lightning Amendment lets a utility skip:",
+     "c": [
+      "The certification order itself",
+      "The commission's solicitation requirement, where a signed service agreement has an in-service date within five years",
+      "MISO's interconnection study",
+      "The prudence review"
+     ],
+     "a": 1,
+     "why": "The certificate still issues; what is waived is the requirement to run a solicitation first, on the strength of a signed load with a near-term date."
+    },
+    {
+     "q": "Entergy raised its minimum order under a turbine exclusivity agreement from fifteen power islands to twenty-seven. What does that tell a seller about the certification docket?",
+     "c": [
+      "The docket will choose the turbine vendor",
+      "The turbine decision was made at the parent level years before any certificate; the docket decides who pays, not what is bought",
+      "The commission ordered the purchase",
+      "The turbines are for the merchant market"
+     ],
+     "a": 1,
+     "why": "Slots are secured against a forecast of campuses; the state order ratifies a purchase already in motion. The open lanes are balance of plant, storage and wires."
+    },
+    {
+     "q": "Which of these is an argument the utility makes for a one-customer plant's benefit to other customers?",
+     "c": [
+      "The plant lowers the customer's own bill",
+      "Surplus capacity in the early years sells into the MISO auction and energy market, with the revenue flowing back through the fuel clause",
+      "The plant is exempt from the reserve margin",
+      "The plant is not in rate base"
+     ],
+     "a": 1,
+     "why": "A customer-funded plant makes the operating company long on accredited capacity; the sales flow through the pass-through clause to everyone. Whether that outweighs the after-the-term exposure is the commission's judgment."
+    },
+    {
+     "q": "Why does the Entergy Texas territory sit under Texas's 2025 large-load statute even though it is not in ERCOT?",
+     "c": [
+      "It is in ERCOT",
+      "The statute is a state law that reaches every Texas utility's large customers, whichever grid operator dispatches it",
+      "MISO adopted the statute",
+      "It does not — the statute applies only to ERCOT"
+     ],
+     "a": 1,
+     "why": "State law follows the state's borders; the grid operator follows the wires. A campus on the Sabine River lives under both."
+    },
+    {
+     "q": "A hurricane adds a securitization charge to every Louisiana bill in the year a data-center plant enters rates. What changes for the plant?",
+     "c": [
+      "Its certified cost",
+      "Its turbine delivery date",
+      "The political room to defend its cost — which is why the order's customer-pays conditions and the published bill reductions matter",
+      "Its MISO accreditation"
+     ],
+     "a": 2,
+     "why": "The plant's economics are fixed by the order; the storm changes the baseline every commissioner is judged against."
+    }
+   ]
+  }
+ ]
+}

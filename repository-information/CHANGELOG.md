@@ -3,11 +3,104 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 97/100`
+`Sections: 98/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.45r] — 2026-09-03 03:38:59 PM EST
+
+> **Prompt:** "Picking up from my last session, run Phase B1 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Fable 5.1 High as a fresh session: Southern Company (Georgia Power) and Entergy. Phase A is closed; this is
+> the first Phase B session, it is data-only (no page change), and it lands two utility dossiers and two study
+> guides in one push commit.
+>
+> READ FIRST, before writing anything: 1. repository-information/SESSION-CONTEXT.md (the A4 entry — the
+> sequencing-during-agent-waits pattern, the environment notes including the exact Playwright stub shape and
+> the blocked hosts, and the xhigh verdict); 2. PROFILER-COVERAGE-PLAN.md §2 (model rule — Phase B is Fable
+> 5.1 High; Opus 5 xhigh only if the weekly cap binds, recorded in §8), §4 (Phase B — why the utilities run
+> here), §7 (what every session owes) and the `southern-company` and `entergy` rows in §8; 3.
+> .claude/rules/profiler-app.md — Profiler Command (two parallel research subagents per company, first-party
+> exhaustive then third-party, ~50–70 sources each, products & services as the priority section), Profiler
+> Prep Command (technology curriculum, high-school-STEM baseline, never company trivia), Scheduled Refreshes
+> (both are public — researched nextReport rows); 4. repository-information/PROFILER-SCHEMA.md (profile
+> schema v7, study schema v2, the `utility` category row, concepts registry, calendar schema); 5.
+> repository-information/PROFILER-STYLES.md — active style is intel-briefing; 6. CLASSROOM-CURRICULUM-PLAN.md
+> §3.5 (`how-a-utility-buys`) and §6 row G5, so the guides carry what that lesson will pin as its second and
+> third public sources; 7. dominion-energy.profile.json and dominion-energy.study.json — the utility exemplar
+> and the guide that already teaches the revenue-requirement equation, the IRP → CPCN → RFP chain, the rate
+> case, the large-load tariff and PJM; the B1 guides must teach each utility's own regulatory story against
+> that chain and not duplicate it.
+>
+> THE TASK: `profiler Southern Company` then `profiler prep Southern Company`, then `profiler Entergy` then
+> `profiler prep Entergy`, one push commit. Dossiers: slugs `southern-company` (NYSE: SO; treat Georgia Power
+> as the operating subsidiary the AI story runs through, with Alabama Power and Mississippi Power in scope
+> where sourced) and `entergy` (NYSE: ETR; Entergy Louisiana, Arkansas, Mississippi, Texas and New Orleans),
+> category `utility`, profileVersion 1, all prose in intel-briefing style with confidence-tagged key
+> judgments. Research priorities, Southern: Georgia Power's most recent IRP and the capacity it was certified
+> to build or buy (gas, storage, nuclear uprates, PPAs), the Georgia PSC's large-load rules and the
+> large-customer tariff terms (minimum bills, contract length, cost allocation), the data-center load
+> pipeline as the company states it (committed vs. contracted vs. pipeline — keep them apart), the storage
+> procurements and who won them, Vogtle's operating status, the PSC's composition and election politics as
+> they bear on rates, FY2024, FY2025 and the latest interims vs consensus, decision makers with verified
+> sources. Entergy: the four-jurisdiction footprint and which commission decides what, the Louisiana PSC
+> approvals for the data-center campuses in its territory and the generation built for them (verify the
+> plants, sizes, costs and who pays from the orders themselves, not press coverage), the large-load tariffs
+> and the ratepayer-protection terms, storage and gas RFPs, the Arkansas and Mississippi large-load rules,
+> FY2024, FY2025 and the latest interims vs consensus, decision makers. relationships[] resolve only to
+> covered slugs (the hyperscalers a source names — Meta, Google, Microsoft, Amazon — plus Dominion,
+> NextEra Energy Resources and any covered developer or EPC a source names — verify each from a source
+> before writing it). Study guides: Southern — how a vertically integrated utility in an elected-commission
+> state certifies a decade of load, and what Vogtle's history does to its risk appetite; Entergy — how a
+> multi-jurisdiction holding company buys for one campus at a time, and what an order that names the
+> customer looks like. Both with a where-it-fails section aligned to §5 row 1, {{term}} tooltips against
+> the 224-entry registry (check terms AND aliases; the regulatory vocabulary — rate base, revenue
+> requirement, rate case, docket, CPCN, IRP, RFP, large-load tariff, minimum demand charge, rider, prudence
+> review, cost allocation, cross-subsidy, ELCC, RTO — already exists from A3), new shared concepts in
+> profiler-concepts.json rather than local glossaries, and flashcards/quiz on how the process works, not
+> company trivia.
+>
+> BOOKKEEPING, same commit: python3 scripts/sync-profiler-registry.py, python3
+> scripts/build-profiler-graph.py, python3 scripts/check-profiler-study.py; two calendar rows (public —
+> research each next earnings date, mark confirmed honestly, write the source and watch[]); README tree
+> entries for both profile and study files and both study-prep folders; flip both §8 rows (Dossier → v1,
+> Guide → ✓, with the repo version; record a model substitution only if one happened). CHANGELOG is at
+> 97/100 — rotation is mandatory above 100 and may fire on this or the next push; budget for it. Do NOT
+> re-run the §6 register checks — those are owed at the Phase B close.
+>
+> VERIFY BEFORE COMMITTING: sync-profiler-registry.py --check clean, check-profiler-study.py clean, both
+> dossiers and both Study Guides render in Profiler.html via Playwright with zero page errors (mirror
+> scripts/verify-profiler-roles.py's stub exactly, per the A4 notes), every relationships[] slug and every
+> {{term}} resolving, the Utility chip counting 3. Data-only: no page or GAS file changes, no Profiler
+> version bump — the Profiler page is an indirect affect. Normal Pre-Commit and Pre-Push checklists; bump
+> the repo version on the push commit; push on a claude/* branch. If a tariff term, a plant or a figure
+> cannot be sourced from a commission order, a filing or the utility's own IRP or release, leave it out and
+> say so — a thinner dossier beats a fabricated line. And tell me at the end what, if anything, read
+> visibly thinner than the four xhigh anchors, so I can judge the model rule for the rest of Phase B."
+
+### Added
+- **`live-site-pages/profiler-data/southern-company.profile.json`** — Southern Company (Georgia Power) dossier, schema v7, profileVersion 1, `utility`, intel-briefing: BLUF, seven confidence-tagged key judgments, a collection-gap statement and dated INDICATORS TO WATCH. Eight product lines (regulated service and the large-load contracting framework; the December 2025 all-source certification; the utility-owned BESS program and the 500 MW storage RFP; the nuclear fleet and Vogtle; transmission and the DOE loan guarantees; Alabama Power and Mississippi Power; Southern Power; Southern Company Gas), seven banded spec groups verbatim from the PSC releases, the Rules and Regulations for Electric Service, the 8-Ks and the earnings decks, FY2024–Q2 2026 vs tracker consensus with the contracted-load ladder as a physical KPI, 51 developments, eight relationships (OpenAI, Tesla, Burns & McDonnell, Wärtsilä, Microsoft, Meta, NextEra Energy Resources, Dominion), five policy exposures, twelve decision makers with twelve company headshots, **118 sources at 64% first-party**
+- **`live-site-pages/profiler-data/entergy.profile.json`** — Entergy dossier, schema v7, profileVersion 1, `utility`, intel-briefing: seven key judgments and a collection-gap statement. Seven product lines (five operating companies and three formula rate plans; generation built for named customers in Louisiana, Arkansas and Mississippi; Texas generation and SETEX; the solar/storage RFP program; the nuclear fleet; the turbine exclusivity agreement and the MHI partnership; transmission, resilience and storm recovery), seven spec groups (the 10-K capability table, the retail-regulation table, the U-37425 and U-37882 terms, the Google contract as the Arkansas Democrat-Gazette read it, the Mississippi pre-certified plants, the exclusivity agreement), FY2024–Q2 2026 vs three trackers' divergent consensus, 47 developments, four relationships (Meta, Google, Amazon, Dominion), five policy exposures, eleven decision makers with eleven headshots, **94 sources at 56% first-party**
+- **`live-site-pages/profiler-data/southern-company.study.json`** — schema v2, 15 sections: the elected commission; who decides in Georgia (no RTO row); its own grid; the pipeline in tranches (`callout`); certifying a decade; the large-load rule vs GS-5 (`table`); the freeze and the fuel line; Vogtle and the risk appetite (`timeline`); four channels (`table`); who picks the battery (`proscons`); gigawatts on the Georgia clock (`bars`); where Southern slots in; `where-it-fails` aligned to §5 row 1; 14 flashcards; 10-item quiz. 109 `{term}` spans, no local glossary
+- **`live-site-pages/profiler-data/entergy.study.json`** — schema v2, 15 sections: one parent, five utilities; four commissions and a council (`table`); the formula rate plan worked once (`callout`); MISO South; buying for one campus; anatomy of an order that names the customer (`table`, U-37425 vs U-37882 clause by clause); who pays when the customer pays (`proscons`); storms and securitization; three states, three campuses (`table`); the turbine slot; megawatts on the Entergy clock (`bars`); where Entergy slots in; `where-it-fails`; 14 flashcards; 10-item quiz. 111 `{term}` spans
+- **`repository-information/study-prep/southern-company/southern-company-lesson-plan.md`** and **`repository-information/study-prep/entergy/entergy-lesson-plan.md`** — five modules each plus a ten-question self-test, both assuming the Dominion plan as prerequisite
+- **27 shared concepts** in `profiler-concepts.json` (224 → 251): `AFUDC`, `balancing authority`, `capacity factor`, `CECPN`, `construction monitoring`, `cost cap`, `CWIP`, `demand charge`, `elected commission`, `ESA`, `energy charge`, `formula rate plan`, `fuel clause`, `holding company`, `interruptible`, `load factor`, `MISO`, `MTEP`, `nuclear uprate`, `planning reserve margin`, `PRA`, `rate freeze`, `regulatory lag`, `retail choice`, `securitization`, `SEEM`, `self-build`; `simple cycle` gains the `peaker` aliases
+- **23 company-published headshots** in `live-site-pages/images/execs/` (12 Southern, 11 Entergy)
+- **Two calendar rows** in `profiler-refresh-calendar.json` (54 → 56): `southern-company` nextReport 2026-10-29 and `entergy` 2026-11-04, both `confirmed: false` (tracker dates; neither company had announced), with sources and watch[]
+
+### Changed
+- `profiler-companies.json` — two `utility` entries after Dominion (93 → 95 companies; the Utility chip counts 3) with domains for the registry's provenance tiers; synced (`--check` clean)
+- `profiler-graph.json` rebuilt: 540 → 555 edges, 12 curated on the two new slugs
+- `README.md` — tree entries for both profile and study files and both study-prep folders; execs count 188/49 → 211/51
+- `PROFILER-COVERAGE-PLAN.md` §8 — both B1 rows flipped to `v1 · v04.45r` / `✓ · v04.45r`; model as planned (Fable 5.1 High), no substitution
+
+### Notes
+- Data-only: no page or GAS change, no Profiler version bump; the Profiler page is an indirect affect
+- Verified: registry `--check` clean, graph rebuilt, study checker clean (68 guides, 251 concepts), a local schema-v7 validator clean on both files, and Playwright on localhost with the `verify-profiler-roles.py` stub (accounts.google.com fulfilled with an empty script) — nine tabs on each dossier, 8 + 4 curated relationship cards with resolved sources, both guides with 15 sections and every tooltip resolving on hover, zero page errors, zero console errors
+- Left out for want of a source, and said so in each dossier: Georgia's minimum-bill percentages and the rule's formal citation; the eleven PPA counterparties in the December 2025 certificate; the combined-cycle turbine OEM at Bowen, Wansley and McIntosh; Vogtle 3–4 capacity factors; the contracted megawatts in every Entergy ESA (redacted); the LPSC U-37425 order text (terms rest on the company's filings and the intervenors' quotations); the Entergy turbine OEM/EPC for all but two units; any battery supplier on an Entergy-owned project; a Georgia Power–Google relationship (no explicit source); the Entergy–NextEra Energy Resources joint development agreement and a FERC show-cause alert (no verifiable URL)
+- Blocked hosts this session: selc.org, georgiarecorder.com, datacenterdynamics.com, insideclimatenews.org, wabe.org, alabamareflector.com, lailluminator.com, arkansasonline.com, cnbc.com, mississippitoday.org, businesswire.com, spglobal.com, moodys.com, linkedin.com (999), zacks.com, nasdaq.com (503), interchange.puc.texas.gov (503), tdworld.com (404 on the given path); the four subagents exhausted the session's 200-call web-search budget, so the last gap-fills were curl-only
+- CHANGELOG `Sections: 97/100` → `98/100`; rotation not yet due
 
 ## [v04.44r] — 2026-09-03 02:05:31 PM EST
 

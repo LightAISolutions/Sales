@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-03",
- "companies": 93,
+ "companies": 95,
  "edges": [
   {
    "a": "abb",
@@ -1153,6 +1153,67 @@
   },
   {
    "a": "amazon",
+   "b": "entergy",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Entergy Mississippi signed large-customer supply and service agreements with Amazon Web Services campuses in March 2024, February 2025 and April 2026 and is building the Delta Blues, Vicksburg and Traceview combined-cycle plants under Mississippi's pre-certification statute to serve them.",
+     "context": "The Q2 2026 10-Q states that the March 2024 agreement serves two Madison County campuses, the February 2025 agreement a Warren County campus and the April 2026 expansion, and that an April 2026 agreement serves a Hinds County campus; the company's April 2026 blog puts Amazon's Mississippi investment at $25B. The plants are pre-certified with prudence reviewed after construction and a cash return on construction work in progress; Synapse's report for Earthjustice puts the pre-certified spend at about $3.88B and residential payments at $38M through March 2026, which the company's July 2026 FAQ disputes. Amazon's Louisiana campuses (Bossier and Caddo parishes) are in SWEPCO's territory, not Entergy's, per the Alliance for Affordable Energy.",
+     "source": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000283/etr-20260630.htm",
+     "status": "active",
+     "since": "2024-03",
+     "scale": "three 754 MW plants pre-certified (about $3.9B including solar per Synapse)",
+     "via": "Large customer supply and service agreements — Madison, Warren and Hinds counties, Mississippi"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Entergy is the utility that has most completely replaced the system-need certificate with the single-customer certificate — generation sized to one hyperscaler's electric service agreement and approved for that customer by name — and it has now filed for more of it than its whole system peaks at: 2,262 MW of combined-cycle capacity certified in Louisiana in August 2025 for a Meta campus, 5,278 MW more at about $12.9B applied for in March 2026 for the same customer's second phase with a decision targeted for December 2026, three 754 MW plants pre-certified in Mississippi for Amazon Web Services, a 600 MW solar-plus-350 MW storage resource and a 754 MW gas unit in Arkansas for Google, and ten combined-cycle units 'secured' against a turbine exclusivity agreement whose minimum order has risen to 27 power islands — under a $67B five-year plan, a 2030 EPS outlook of $7.05–7.35 and an equity program that sold $2.175B of forward stock in May 2026.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the sellers in this corpus it is four different counterparties: for turbine competitors, a market closed for the decade by the exclusivity agreement; for balance-of-plant, transformer and switchgear suppliers, ten approved combined-cycle units and more than a thousand miles of new transmission whose EPCs — Sargent & Lundy and TIC at Orange County — are named only for the first; for battery sellers, operating-company RFPs (Louisiana's 2025 BESS solicitation, Mississippi's and Arkansas's renewables-and-storage RFPs) and the utility-owned Cypress project, with no supplier yet named on any owned system; and for the hyperscalers and developers in this file — Meta, Google, Amazon Web Services and Hut 8 by name — the counterparty whose 15- to 20-year ESAs, minimum bills sized to the revenue requirement, parent guaranties and contributions in aid of construction are the price of a 2028 in-service date.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the phase-one Louisiana order certified 2,262 MW for a named Meta subsidiary on an ESA whose minimum charges are 'designed to ensure that the payments received from Laidley are sufficient to recover the annual revenue requirements' (intervenors' motion quoting the agreement); the phase-two application repeats the structure for 5,278 MW with a 20-year term; Mississippi's three plants are pre-certified by statute for the Amazon campuses; Arkansas's Cypress and Jefferson resources exist for the Google special-rate contract.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Generation built for named customers — Louisiana (Meta), Arkansas (Google), Mississippi (Amazon Web Services)",
+     "date": "",
+     "text": "Mississippi: large customer supply and service agreements with Amazon Web Services campuses in Madison County (March 2024), Warren County (February 2025) and Hinds County (April 2026), served by three 754 MW 'Advanced Power Stations' — Delta Blues (Greenville, $1.2B, May 2028), Vicksburg ($1.2B, August 2028) and Traceview (Ridgeland, more than $1B, 2029) — pre-certified under a Mississippi statute for facilities serving data-processing customers, with prudence reviewed after construction and a cash return on construction work in progress collected through the formula rate plan (10-K).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-10",
+     "text": "Entergy publishes an FAQ answering whether Amazon's data centers are raising Mississippi electricity bills: customers 'are not subsidizing data centers' — A direct reply to the Synapse/Earthjustice and 404 Media accounts of pre-certified plant costs on residential bills.",
+     "src": "https://www.entergy.com/blog/faq-are-amazon-data-centers-raising-electricity-bills",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-04-11",
+     "text": "Entergy Mississippi selects a Ridgeland site for the third advanced power station (Traceview) — The third pre-certified plant for the Amazon campuses.",
+     "src": "https://www.entergy.com/news/entergy-mississippi-selects-new-power-generation-site-prioritizes-community-needs",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-10"
+  },
+  {
+   "a": "amazon",
    "b": "fluence",
    "evid": [
     {
@@ -1567,6 +1628,20 @@
     }
    ],
    "last": "2026-04"
+  },
+  {
+   "a": "amazon",
+   "b": "southern-company",
+   "evid": [
+    {
+     "where": "Capabilities · Nuclear fleet — Vogtle 3 and 4, the Vogtle 1–2 and Hatch uprates, and Southern Nuclear",
+     "date": "",
+     "text": "Dominion holds an SMR memorandum with Amazon at North Anna; Southern's stated position is that it will not be the next AP1000 builder without others sharing the overrun risk.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "amazon",
@@ -3358,6 +3433,67 @@
     }
    ],
    "last": "2026-06-24"
+  },
+  {
+   "a": "burns-mcdonnell",
+   "b": "southern-company",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "Burns & McDonnell is the EPC for Georgia Power's Robins, McGrau Ford Phase I and II and Wadley batteries.",
+     "context": "Georgia Power's May 7, 2025 release names Burns & McDonnell as EPC for Robins (128 MW, Bibb County), McGrau Ford Phase I (265 MW, Cherokee County) and McGrau Ford Phase II (265 MW); the March 31, 2026 release names it again for Wadley (260 MW, Jefferson County, co-located with third-party solar, in service 2027). Crowder Industrial Construction, not covered here, holds the other Georgia BESS EPC contracts (Moody, Hammond, Twiggs).",
+     "source": "https://www.georgiapower.com/news-hub/press-releases/construction-now-underway-on-765-mw-of-new-battery-energy-storage-systems-across-georgia.html",
+     "status": "active",
+     "since": "2025-05",
+     "scale": "Robins 128 MW, McGrau Ford I and II 530 MW, Wadley 260 MW",
+     "via": "BESS EPC"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For battery sellers it is the rare utility that owns its storage — Wärtsilä at Mossy Branch, Tesla (per trade press) across the 2024 portfolio, Burns & McDonnell and Crowder as EPCs, with 3,022.5 MW more certified in December 2025 and a 500 MW RFP closing in January 2027.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Mossy Branch, the 765 MW portfolio, Twiggs and Wadley are all company-owned under supply agreements and named EPCs (Burns & McDonnell, Crowder, Wärtsilä), the December 2025 certificate added 3,022.5 MW of owned stand-alone storage against 2,821 MW of purchases of all kinds, and the 2025 IRP's storage target exceeds 1,500 MW by 2035 on top of that.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Battery energy storage — utility-owned BESS program and the 2025 storage RFP",
+     "date": "",
+     "text": "The 765 MW portfolio under construction per the May 7, 2025 release: Robins 128 MW (Bibb County, June 2026, EPC Burns & McDonnell), Moody 49.5 MW (Lowndes County, co-located with Moody solar, completed ahead of schedule July 2026, EPC Crowder Industrial Construction), Hammond 57.5 MW (Floyd County, November 2026, Crowder), McGrau Ford Phase I 265 MW (Cherokee County, October 2026, Burns & McDonnell) and McGrau Ford Phase II 265 MW (September 2026, Burns & McDonnell).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Battery energy storage — utility-owned BESS program and the 2025 storage RFP",
+     "date": "",
+     "text": "A 200 MW four-hour battery in Twiggs County (Crowder) was certified in an expedited proceeding on September 4, 2025 for 2027, and Wadley (260 MW, Jefferson County, Burns & McDonnell, co-located with third-party solar) began construction in March 2026 for 2027.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-31",
+     "text": "Wadley 260 MW battery construction begins (Burns & McDonnell EPC, co-located with third-party solar); the company counts nearly 3,000 MW of certified storage across nine facilities — The owned-storage lane keeps naming the same two EPCs; the battery OEM is still unnamed by the company.",
+     "src": "https://www.prnewswire.com/news-releases/georgia-power-begins-construction-of-newest-battery-storage-system-in-wadley-ga-302730157.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-07",
+     "text": "765 MW of utility-owned batteries under construction at five sites with Burns & McDonnell and Crowder as EPCs — The 2024 portfolio moves to construction a year before the December certificate.",
+     "src": "https://www.georgiapower.com/news-hub/press-releases/construction-now-underway-on-765-mw-of-new-battery-energy-storage-systems-across-georgia.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-31"
   },
   {
    "a": "byd",
@@ -7628,6 +7764,37 @@
   },
   {
    "a": "dominion-energy",
+   "b": "entergy",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Dominion's GS-5 class binds data-center customers through a published tariff; Entergy binds them through single-customer electric service agreements and certificates that name the customer — the two ends of the regulated-contracting spectrum in this file.",
+     "context": "Dominion Energy Virginia's GS-5 class publishes 85 percent transmission-and-distribution and 60 percent generation minimums with 14-year terms, effective January 2027; Entergy's contracts state 15- to 20-year terms with minimum bills sized to the incremental revenue requirement, filed under seal, and its plants are certified for the named customer under Louisiana's Lightning Amendment, Arkansas's Act 373 clock and Mississippi's pre-certification statute. The two utilities do not compete for load; they set the terms hyperscalers compare when choosing a state.",
+     "source": "https://s201.q4cdn.com/714390239/files/doc_presentations/2026/Jun/09/Entergy-2026-Investor-Day.pdf",
+     "status": "active",
+     "via": "Large-load contracting design"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Dispatchable generation build — Chesterfield Energy Reliability Center and the gas program",
+     "date": "",
+     "text": "Alongside Entergy's Meta-funded plants and Georgia Power's certified combined cycles, Dominion's gas build is the mid-Atlantic instance of the guidance literature's 'massive gas procurement' move; its distinctive feature is that it is being litigated under a clean-energy statute rather than simply certified.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Solar, storage and renewable procurement — the VCEA program and the annual RFPs",
+     "date": "",
+     "text": "Among the regulated storage buyers the guidance literature compares — Georgia Power's certified 3,022.5 MW, Entergy's first standalone RFP, PSO/SWEPCO's all-source solicitations — Dominion is the one with a standing annual cycle and a statutory floor; the self-build slice is EPC-mediated, and no battery integrator or cell supplier for any Dominion project is named on a first-party page.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dominion-energy",
    "b": "equinix",
    "curated": {
     "a": {
@@ -7750,6 +7917,37 @@
    },
    "evid": [],
    "last": "2021"
+  },
+  {
+   "a": "dominion-energy",
+   "b": "southern-company",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Dominion Energy Virginia's GS-5 class and Georgia Power's large-load rule are the two Southeastern templates for binding data-center customers; the dossiers compare their terms directly.",
+     "context": "The Georgia framework (15-year contracts, minimum bills at 100 percent of incremental cost, confidential percentages, contracts filed 30 days before signing) and Virginia's GS-5 class (14-year terms, published 85 percent transmission-and-distribution and 60 percent generation minimums, effective January 2027) are the reference points regulators and trade press cite against each other; the two utilities do not compete for customers, but they compete for the same hyperscale capital and set each other's terms.",
+     "source": "https://psc.ga.gov/site/downloads/datacenterfactsheet.pdf",
+     "status": "active",
+     "via": "Large-load tariff design"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Regulated retail electric service — Georgia Power, and the large-load contracting framework",
+     "date": "",
+     "text": "Georgia's framework is a rule plus confidential contracts rather than a published rate class: Dominion Energy Virginia's GS-5 class publishes 85 percent transmission-and-distribution and 60 percent generation minimums and a 14-year term, while Georgia Power's contracts state 15-year terms and minimum bills at 100 percent of incremental cost with the percentages of demand unpublished.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Certified generation build — the 2025 all-source certification (gas, storage, solar-plus-storage)",
+     "date": "",
+     "text": "The largest single certification in Georgia's history and, at roughly ten gigawatts against about 22 GW of deployed Georgia Power capacity (PSC fact sheet), close to half the system in one order — against Dominion Energy Virginia's one 944 MW plant certified in 2025.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "dominion-energy",
@@ -8598,6 +8796,20 @@
   },
   {
    "a": "enchanted-rock",
+   "b": "entergy",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-01",
+     "text": "Baton Rouge General 9.4 MW activated under Entergy 'Power Through' — The utility-partner channel keeps compounding outside the data-center spotlight.",
+     "src": "Entergy",
+     "from": "a"
+    }
+   ],
+   "last": "2025-11-01"
+  },
+  {
+   "a": "enchanted-rock",
    "b": "hithium",
    "curated": {
     "a": {
@@ -8826,6 +9038,303 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "entergy",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Entergy Arkansas serves Google's West Memphis campus under a special-rate contract approved in December 2025 and is building the 600 MW Cypress Solar facility with a 350 MW battery for it; Google also backstops Fluidstack's tenancy at Hut 8's Entergy-served River Bend campus.",
+     "context": "The company's October 2, 2025 release states Google 'will cover the full energy costs associated with powering the facility' and that Entergy Arkansas filed a 600 MW solar and 350 MW storage resource with $1.1B of stated net benefits and a $25M Energy Impact Fund. The 10-K records the September 2025 application for a long-term special rate contract between Altitude, LLC and Entergy Arkansas, approved in December 2025 with the requested ratemaking treatment of Google's upfront payments denied. The Arkansas Democrat-Gazette's August–September 2026 reading of the FOIA'd contract adds $526M of payments plus $190M for transmission over 20 years, a 480 MW minimum-bill demand and a termination fee of about $2B, with APSC staff testifying that Google 'is paying well below the full cost of this resource' — figures absent from company sources. The Hut 8 release states Fluidstack's River Bend lease carries a financial backstop from Google.",
+     "source": "https://www.entergy.com/news/entergy-arkansas-powers-googles-4b-investment-in-the-state",
+     "status": "active",
+     "since": "2025-10",
+     "scale": "$4B campus; 600 MW solar + 350 MW storage built for it (press: 480 MW minimum, 600 MW maximum)",
+     "via": "Special-rate contract (Altitude, LLC) — West Memphis, Arkansas; Cypress Solar"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Entergy is the utility that has most completely replaced the system-need certificate with the single-customer certificate — generation sized to one hyperscaler's electric service agreement and approved for that customer by name — and it has now filed for more of it than its whole system peaks at: 2,262 MW of combined-cycle capacity certified in Louisiana in August 2025 for a Meta campus, 5,278 MW more at about $12.9B applied for in March 2026 for the same customer's second phase with a decision targeted for December 2026, three 754 MW plants pre-certified in Mississippi for Amazon Web Services, a 600 MW solar-plus-350 MW storage resource and a 754 MW gas unit in Arkansas for Google, and ten combined-cycle units 'secured' against a turbine exclusivity agreement whose minimum order has risen to 27 power islands — under a $67B five-year plan, a 2030 EPS outlook of $7.05–7.35 and an equity program that sold $2.175B of forward stock in May 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the sellers in this corpus it is four different counterparties: for turbine competitors, a market closed for the decade by the exclusivity agreement; for balance-of-plant, transformer and switchgear suppliers, ten approved combined-cycle units and more than a thousand miles of new transmission whose EPCs — Sargent & Lundy and TIC at Orange County — are named only for the first; for battery sellers, operating-company RFPs (Louisiana's 2025 BESS solicitation, Mississippi's and Arkansas's renewables-and-storage RFPs) and the utility-owned Cypress project, with no supplier yet named on any owned system; and for the hyperscalers and developers in this file — Meta, Google, Amazon Web Services and Hut 8 by name — the counterparty whose 15- to 20-year ESAs, minimum bills sized to the revenue requirement, parent guaranties and contributions in aid of construction are the price of a 2028 in-service date.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the phase-one Louisiana order certified 2,262 MW for a named Meta subsidiary on an ESA whose minimum charges are 'designed to ensure that the payments received from Laidley are sufficient to recover the annual revenue requirements' (intervenors' motion quoting the agreement); the phase-two application repeats the structure for 5,278 MW with a 20-year term; Mississippi's three plants are pre-certified by statute for the Amazon campuses; Arkansas's Cypress and Jefferson resources exist for the Google special-rate contract.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: a 15-year phase-one ESA (three five-year extensions, one-year notice) and a 20-year phase-two ESA (five-year renewals, three-year notice) against combined-cycle units the company depreciates over decades; UCS's estimate that ratepayers could fund up to 75 percent of a plant's capital where a 30-year life exceeds a 15-year contract; the intervenors' unanswered question about the phase-one parent guaranty after the Blue Owl joint venture; and the Arkansas staff's testimony that Google is paying 'well below the full cost' of Cypress.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "November 17, 2026 — Arkansas PSC hearing on the Google contract's cost allocation, and December 2026 — the Arkansas base rate case decision: a finding against the special-rate treatment would be the first commission remedy on the term-versus-life gap.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Generation built for named customers — Louisiana (Meta), Arkansas (Google), Mississippi (Amazon Web Services)",
+     "date": "",
+     "text": "Arkansas: a special-rate contract with Altitude, LLC (Google) for a West Memphis campus, approved by the Arkansas PSC in December 2025, served by the 600 MW Arkansas Cypress Solar facility with a 350 MW battery ($1,602M, in service by end-2028, approved early 2026) and by the 754 MW Jefferson Power Station ($1,602M, 2029), on which the APSC in January 2026 'had demonstrated a need for the resource but had not met its burden with respect to supporting the prudence of the costs'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-09-03",
+     "text": "Arkansas Democrat-Gazette: APSC staff testified that 'Google is paying well below the full cost of this resource' on Cypress Solar; the November 17, 2026 hearing is mostly closed; Entergy sought to stop publication of the FOIA'd contract — The first public look inside a one-customer contract in the system, and the regulator's own staff disputing the customer-pays claim.",
+     "src": "https://www.nwaonline.com/news/2026/sep/03/googles-contribution-was-at-issue-in-arkansas/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-31",
+     "text": "Arkansas Democrat-Gazette reads the Google contract: $526M ($443M accelerated, $83M minimum-demand) plus $190M for transmission, a 20-year term, 480 MW minimum against 600 MW maximum, a ~$2B termination fee declining after year 13 — The terms the company's 'Fair Share Plus' describes in categories, in dollars — from a records request rather than a filing.",
+     "src": "https://www.nwaonline.com/news/2026/aug/31/google-to-pay-entergy-arkansas-526-million-for/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-17",
+     "text": "Hut 8 selects Entergy Louisiana for a $10B AI campus at River Bend, West Feliciana Parish — 330 MW initial utility capacity, scalable to 1,000 MW, Fluidstack as tenant with a Google backstop, operations from Q2 2027 — A second Louisiana hyperscale load, sized in utility megawatts, with no plant filed for it yet.",
+     "src": "https://www.entergy.com/news/hut-8-selects-entergy-southeast-louisiana-for-10-billion-artificial-intelligence-data-center",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-06",
+     "text": "Entergy Arkansas launches the Jefferson Power Station campaign: 754 MW combined cycle, $1.6B, in service 2029 — The Arkansas gas unit for the Google load — the one whose cost the commission has not yet found prudent.",
+     "src": "https://www.entergy.com/news/jefferson-power-station-powering-arkansas-today-and-into-the-next-generation",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-02",
+     "text": "Entergy Arkansas to power Google's $4B West Memphis campus; Google 'will cover the full energy costs'; 600 MW solar and 350 MW storage filed with the APSC; $1.1B of stated net benefits — The Arkansas one-customer structure: a special-rate contract, a solar-plus-storage resource and a gas unit certified separately.",
+     "src": "https://www.entergy.com/news/entergy-arkansas-powers-googles-4b-investment-in-the-state",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Energy Parks & Storage Procurement",
+     "date": "",
+     "text": "Demand response: 1 GW signed across I&M, TVA, Entergy Arkansas, Minnesota Power, DTE.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-09-03"
+  },
+  {
+   "a": "entergy",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Meta subsidiaries (Laidley LLC, Evest LLC) are the customers for whom Entergy Louisiana certified three combined-cycle units in 2025 and has applied to certify seven more, under 15- and 20-year electric service agreements with parent guaranties.",
+     "context": "The company's December 2024 release announced Meta's $10B Richland Parish data center and three combined-cycle units of 2,260 MW; the LPSC approved the phase-one application on August 20, 2025 with 'Meta … paying its share of the costs'. The Q2 2026 10-Q records the March 2026 ESA with Evest LLC and the application for seven units totaling 5,278 MW at about $12.9B, with contributions in aid of construction, minimum monthly bills, early-termination obligations and 'a guaranty from Meta Platforms, Inc.'; the Beauchamp testimony gives the 20-year term with five-year renewals and three-year notice. Intervenors' January 2026 motion questioned whether the phase-one parent guaranty survived Meta's transfer of the campus into a Blue Owl financing joint venture. The contracted megawatts are redacted in the LPSC filings; the company states Meta's sustainability commitments at 1,500 MW (phase one) and up to 2,500 MW (phase two) of renewables and storage, and that Meta will pay about 10 percent of Entergy Louisiana's storm and resiliency charges.",
+     "source": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000283/etr-20260630.htm",
+     "status": "active",
+     "since": "2024-12",
+     "scale": "2,262 MW of generation certified (phase one); 5,278 MW applied for (phase two)",
+     "via": "Electric service agreements — Richland Parish campuses (LPSC dockets U-37425 and U-37882)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "BOTTOM LINE UP FRONT: Entergy is the utility that has most completely replaced the system-need certificate with the single-customer certificate — generation sized to one hyperscaler's electric service agreement and approved for that customer by name — and it has now filed for more of it than its whole system peaks at: 2,262 MW of combined-cycle capacity certified in Louisiana in August 2025 for a Meta campus, 5,278 MW more at about $12.9B applied for in March 2026 for the same customer's second phase with a decision targeted for December 2026, three 754 MW plants pre-certified in Mississippi for Amazon Web Services, a 600 MW solar-plus-350 MW storage resource and a 754 MW gas unit in Arkansas for Google, and ten combined-cycle units 'secured' against a turbine exclusivity agreement whose minimum order has risen to 27 power islands — under a $67B five-year plan, a 2030 EPS outlook of $7.05–7.35 and an equity program that sold $2.175B of forward stock in May 2026.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For the sellers in this corpus it is four different counterparties: for turbine competitors, a market closed for the decade by the exclusivity agreement; for balance-of-plant, transformer and switchgear suppliers, ten approved combined-cycle units and more than a thousand miles of new transmission whose EPCs — Sargent & Lundy and TIC at Orange County — are named only for the first; for battery sellers, operating-company RFPs (Louisiana's 2025 BESS solicitation, Mississippi's and Arkansas's renewables-and-storage RFPs) and the utility-owned Cypress project, with no supplier yet named on any owned system; and for the hyperscalers and developers in this file — Meta, Google, Amazon Web Services and Hut 8 by name — the counterparty whose 15- to 20-year ESAs, minimum bills sized to the revenue requirement, parent guaranties and contributions in aid of construction are the price of a 2028 in-service date.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the phase-one Louisiana order certified 2,262 MW for a named Meta subsidiary on an ESA whose minimum charges are 'designed to ensure that the payments received from Laidley are sufficient to recover the annual revenue requirements' (intervenors' motion quoting the agreement); the phase-two application repeats the structure for 5,278 MW with a 20-year term; Mississippi's three plants are pre-certified by statute for the Amazon campuses; Arkansas's Cypress and Jefferson resources exist for the Google special-rate contract.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the votes as reported by KNOE, KALB and KPLC; the August 2026 3–1 vote declining to compel Meta's disclosures; and the intervenor testimony schedule (July 31, hearing October 7, decision December 2026).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Collection gap: the contracted megawatts of both Meta ESAs and of the Mississippi and Arkansas agreements are redacted or unpublished; the LPSC order text for U-37425 was not retrievable, so its terms rest on the company's filings and the intervenors' quotations; the turbine OEM and EPC for every Louisiana, Arkansas and Mississippi unit except Orange County and Delta Blues are unnamed; no battery supplier is named on any owned project; the Q3 2026 earnings date is unannounced.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Generation built for named customers — Louisiana (Meta), Arkansas (Google), Mississippi (Amazon Web Services)",
+     "date": "",
+     "text": "The LPSC approved it on August 20, 2025; the company's release states the two Richland Parish units come online in late 2028 and the Waterford unit by the end of 2029, that up to 1,500 MW of solar will be certified on an expedited basis, and that 'Meta is paying its share of the costs for the infrastructure needed to support its operations'.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Generation built for named customers — Louisiana (Meta), Arkansas (Google), Mississippi (Amazon Web Services)",
+     "date": "",
+     "text": "Construction began December 1, 2025 with the company stating Meta 'funds full interconnection infrastructure cost' and is expected to save customers about $650M over 15 years.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Generation built for named customers — Louisiana (Meta), Arkansas (Google), Mississippi (Amazon Web Services)",
+     "date": "",
+     "text": "Phase two (docket U-37882): in March 2026 the company signed an ESA with Evest LLC, a Meta subsidiary, for a second campus and applied to certify 'seven new combined cycle combustion turbine generation resources totaling 5,278 MW at a total cost of approximately $12.9 billion' — Richland Parish Units 1–4 near the site and Pointe Coupee Units 1–3 near the Big Cajun site — plus three batteries and a $1.4B West Fork Creek–St.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Solar, storage and renewables procurement — the RFP program and the corporate sustainability riders",
+     "date": "",
+     "text": "Company-listed projects per the Q2 2026 deck: Greer Solar 170 MW PPA (Mississippi, 2026), Delta Solar 80 MW ($157.2M, 2027) and Penton Solar 190 MW ($327.2M, 2028) with a 170 MW Penton battery (Mississippi), Bogalusa West Solar 200 MW and Cypress Harvest Solar 200 MW (Louisiana, 2028) with batteries filed in March 2026, Arkansas Cypress Solar 600 MW with a 350 MW / 1,400 MWh battery ($1,602M, 2028 — developer Orion Renewables, EPC Wanzek, Canadian Solar modules per Energy-Storage.news), Big Island Solar 440 MW PPA (Arkansas, 2028, pending) and the Segno and Votaw solar projects (311 MW, Texas-sited, 2029, filed to help fill Meta's corporate sustainability subscription per the company's LPSC testimony).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Nuclear fleet — Arkansas Nuclear One, Waterford 3, River Bend, Grand Gulf, and the uprate and new-build options",
+     "date": "",
+     "text": "The phase-two Meta agreement includes funding for nuclear uprates and a memorandum on future nuclear; in August 2026 the company, Holtec and Hyundai E&C announced an evaluation of new reactors for the Gulf South (ANS).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Transmission, resilience and storm recovery",
+     "date": "",
+     "text": "The 2026–2030 capital plan carries about $10B of transmission and $6B of distribution, with more than 1,000 miles of new transmission; named projects include the Louisiana 500 kV lines for the Meta campuses (about 100 miles in phase one; the 147-mile, ~$1.2B Babel–Webre line in docket U-37812 with a hearing September 29, 2026; the $1.4B West Fork Creek–St.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-27",
+     "text": "Entergy says customers are beginning to see benefits from the data-center agreements — about $7B over two decades; Mississippi residential bills avoided a $4.87 monthly increase in July; Meta to pay about 10 percent of Entergy Louisiana's storm and resiliency charges — The company's political instrument: customer-funded plants presented as bill relief, with the storm line named explicitly.",
+     "src": "https://www.entergy.com/news/entergy-customers-begin-seeing-benefits-from-data-center-agreements-fair-share-plus-pledge-keeps-money-in-customers-pockets",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-12",
+     "text": "LPSC votes 3–1 to reject a hearing officer's ruling that would have compelled Meta to disclose jobs, economic and load data sought by intervenors in the phase-one docket — The transparency cost of the one-customer certificate: the commission declined to make the customer's numbers public.",
+     "src": "https://www.wwno.org/politics/2026-08-12/louisiana-psc-kills-ruling-that-would-force-meta-to-turn-over-key-data-center-information",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-05",
+     "text": "Sierra Club challenges the Meta campus's minor-source air permit (31 emergency diesel generators, 44 gas boilers; NOx at 96.83 tons a year against a 100-ton major-source threshold); the ten Entergy turbines are permitted separately — The campus's own permit and the utility's plant permits are two proceedings; a seller of backup generation reads the first.",
+     "src": "https://www.magnoliareporter.com/news_and_business/north_louisiana/article_7210197d-6960-4b6b-8542-5d7c4a4b418e.html",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-18",
+     "text": "Alliance for Affordable Energy report: the LPSC rejected calls to investigate the Meta campus's move into an 80/20 Blue Owl financing joint venture; the lease structure could let Meta exit as early as 2033 — The counterparty behind the phase-one guaranty changed after the vote; the intervenors' question is whether the guaranty still binds the customer.",
+     "src": "https://www.all4energy.org/wp-content/uploads/2026/05/2026-05-18-Data-Centers-Financing-Energy-Overview-Report.pdf",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-04-30",
+     "text": "Utility Dive: the Meta phase-two agreement adds about $14B to the capital plan ($57B for 2026–2029, up more than 30 percent); Latitude Media had ranked Entergy's 15.5 GW of executed ESAs the largest disclosed block among nineteen utilities — The independent reading of the plan's step-up and of the ESA base beneath it.",
+     "src": "https://www.utilitydive.com/news/new-generation-adds-12b-entergy-capital-plan/818790/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-27",
+     "text": "Entergy Louisiana signs a second agreement with Meta: seven combined-cycle units of more than 5,200 MW, about 240 miles of 500 kV, batteries at three sites, nuclear uprate funding, up to 2,500 MW of renewables from the customer, a 20-year structure, $2B of stated customer savings — the first project under the Lightning Amendment — The single largest generation filing in the company's history, for one customer, before the first phase's plants are built.",
+     "src": "https://www.entergy.com/news/entergy-louisiana-announces-a-new-agreement-with-meta-that-will-deliver-an-additional-2b-in-customer-savings",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-06",
+     "text": "Entergy Louisiana files to certify Waterford 6 and Westlake power stations — two 754 MW combined-cycle units at $2,027M and $2,091M for July and October 2030 — with third-party financing considered for Waterford 6 — Two more units for Louisiana growth outside the Meta dockets; decision targeted December 2026.",
+     "src": "https://www.sec.gov/Archives/edgar/data/65984/000006598426000174/etr-20251231.htm",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-12-01",
+     "text": "Franklin Farms Power Station 1 and 2 break ground (about 1,500 MW, Richland Parish, late 2028); the company states Meta funds the full interconnection cost and is expected to save customers about $650M over 15 years — The first one-customer plants under construction; EPC and turbine OEM unnamed.",
+     "src": "https://www.entergy.com/news/entergy-louisiana-breaks-ground-on-new-state-of-the-art-generation-facilities-to-power-reliability-growth-and-innovation",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-08-20",
+     "text": "LPSC approves the phase-one generation and transmission for Meta's Richland Parish campus 4–1 on a contested settlement: two units in Richland Parish for late 2028, one at Waterford for 2029, up to 1,500 MW of solar; 'Meta is paying its share of the costs' — The order that names the customer — the template for everything filed since.",
+     "src": "https://www.entergy.com/news/entergy-louisiana-receives-lpsc-approval-for-major-infrastructure-investments-to-support-metas-data-center-and-improve-reliability",
+     "from": "a"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "We assess Meta as the ecosystem's most aggressive single energy buyer relative to its size: >30 GW of clean energy contracted, ~7.7 GW of nuclear (Constellation Clinton 1.1 GW + the January 2026 TerraPower/Oklo/Vistra package of up to 6.6 GW), seven new gas plants plus three grid-scale batteries in the Entergy Louisiana package, and frontier bets (1 GW/100 GWh Noon Energy long-duration storage reservation; 1 GW space solar).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess Meta's storage demand will remain utility-side rather than on-campus near-term: the Entergy batteries, the Enbridge tolling structure, and the absence of behind-the-meter BESS at its flagship campuses point to Meta buying grid firmness as a service — the sales channel for BESS suppliers is Meta's utility counterparties, not Meta directly.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy Procurement Portfolio",
+     "date": "",
+     "text": "Gas: seven new plants (~5.2 GW Phase 2 proposal + ~2.3 GW Phase 1) with Entergy Louisiana for Hyperion.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Energy Procurement Portfolio",
+     "date": "",
+     "text": "Storage: three grid-scale batteries in the Entergy package; 50 MW/4-hr BESS paired with 190 MW NM solar; Enbridge Cowboy (365 MW solar + 200 MW/1,600 MWh Tesla BESS, tolled via the Wyoming utility); Noon Energy LDES reservation up to 1 GW/100 GWh (>100-hr, pilot 2028).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-13",
+     "text": "Richland Parish (Hyperion) expanded to 5 GW / $50B+; Entergy package confirmed: seven new gas plants + three grid-scale batteries + nuclear uprates — The single largest AI-campus commitment in the covered set — and the one carrying the most regulatory and ratepayer friction.",
+     "src": "https://about.fb.com/news/2026/07/teachers-local-businesses-win-as-meta-expands-louisiana-data-center/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-27"
   },
   {
    "a": "envision-energy",
@@ -15665,6 +16174,37 @@
   },
   {
    "a": "meta",
+   "b": "southern-company",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Meta is an Alabama Power large-load customer under a contract filed in June 2026 with its terms redacted, and operates the Stanton Springs campus in Georgia Power's territory.",
+     "context": "The Energy and Policy Institute reported on August 28, 2026 that Alabama Power filed a contract with Meta's Dotier LLC on June 18, 2026 with the term, minimum bill and megawatts redacted, ahead of the Alabama PSC's generic large-load docket. Meta's contracted megawatts with either utility are not public.",
+     "source": "https://energyandpolicy.org/alabama-power-data-center-contracts-redacted/",
+     "status": "active",
+     "via": "Alabama Power large-load contract (Dotier LLC); Stanton Springs, Georgia"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Alabama Power and Mississippi Power — the other two retail utilities",
+     "date": "",
+     "text": "The parent's Q2 2026 deck attributes 4 GW of its 17 GW of contracted large load to Alabama Power in three projects; the Energy and Policy Institute reports that Alabama Power's contracts filed in June–August 2026 for Meta (Dotier LLC), Nebius/Alabama ADC and Woostor carry redacted terms, minimum bills and megawatts, and that the Alabama PSC opened a generic large-load docket on July 8, 2026 under a 2026 statute (SB 270) effective October 1, 2026 for loads of 150 MW or more.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-08",
+     "text": "Alabama PSC opens a generic review of data-center power contracts under a 2026 statute effective October 1, 2026 for loads of 150 MW or more; Alabama Power's Meta, Nebius and Woostor contracts filed with terms redacted — Alabama's 4 GW of contracted load is moving onto a statutory footing a year after Georgia's rule; the redactions are the same transparency pattern.",
+     "src": "https://mynbc15.com/news/local/alabama-psc-opens-review-of-data-center-power-contracts-sets-august-comment-deadlines",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-08"
+  },
+  {
+   "a": "meta",
    "b": "stack-infrastructure",
    "evid": [
     {
@@ -16074,6 +16614,22 @@
   },
   {
    "a": "microsoft",
+   "b": "southern-company",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Microsoft operates and is building data centers across Georgia Power's territory and in January 2026 pledged to prevent electricity price increases for existing customers.",
+     "context": "The AJC reported on January 13, 2026 that Microsoft pitched local benefits for its Georgia sites — Atlanta Southside, Douglasville, Fayetteville, Rome and a roughly $2B Union City project — and pledged to 'Prevent electricity price increases for existing customers' and to stop seeking local tax breaks. Microsoft's contracted megawatts with Georgia Power are not disclosed; the company's decks identify hyperscalers only by letter.",
+     "source": "https://www.ajc.com/business/2026/01/as-georgians-push-back-on-data-centers-microsoft-pitches-local-benefits/",
+     "status": "active",
+     "via": "Georgia data-center sites (Atlanta Southside, Douglasville, Fayetteville, Rome, Union City)"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "microsoft",
    "b": "stack-infrastructure",
    "curated": {
     "b": {
@@ -16443,6 +16999,27 @@
   },
   {
    "a": "nebius",
+   "b": "southern-company",
+   "evid": [
+    {
+     "where": "Capabilities · Alabama Power and Mississippi Power — the other two retail utilities",
+     "date": "",
+     "text": "The parent's Q2 2026 deck attributes 4 GW of its 17 GW of contracted large load to Alabama Power in three projects; the Energy and Policy Institute reports that Alabama Power's contracts filed in June–August 2026 for Meta (Dotier LLC), Nebius/Alabama ADC and Woostor carry redacted terms, minimum bills and megawatts, and that the Alabama PSC opened a generic large-load docket on July 8, 2026 under a 2026 statute (SB 270) effective October 1, 2026 for loads of 150 MW or more.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-08",
+     "text": "Alabama PSC opens a generic review of data-center power contracts under a 2026 statute effective October 1, 2026 for loads of 150 MW or more; Alabama Power's Meta, Nebius and Woostor contracts filed with terms redacted — Alabama's 4 GW of contracted load is moving onto a statutory footing a year after Georgia's rule; the redactions are the same transparency pattern.",
+     "src": "https://mynbc15.com/news/local/alabama-psc-opens-review-of-data-center-power-contracts-sets-august-comment-deadlines",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-08"
+  },
+  {
+   "a": "nebius",
    "b": "vantage",
    "curated": {
     "a": {
@@ -16530,6 +17107,23 @@
     }
    ],
    "last": "2025-03-13"
+  },
+  {
+   "a": "nextera-energy-resources",
+   "b": "southern-company",
+   "curated": {
+    "b": {
+     "type": "supplier",
+     "note": "NextEra Energy Resources is among the counterparties to the 2,821 MW of purchase agreements certified for Georgia Power in December 2025, per Perkins Coie's summary of the order.",
+     "context": "Perkins Coie's January 5, 2026 client note lists NextEra Energy Resources, Tenaska (Heard County) and Mississippi Power among the PPA counterparties in the certified 2,821 MW; Georgia Power's own 8-K describes the purchases by term and megawatts without naming non-affiliate counterparties. The specific NextEra resource and megawatts are not stated in any source found.",
+     "source": "https://www.ashurstperkinscoie.com/en/insights/georgia-public-service-commission-approves-georgia-powers-major-generation-expansion-to-support-data/",
+     "status": "announced",
+     "since": "2025-12",
+     "via": "Purchase agreements in the December 2025 Georgia certification"
+    }
+   },
+   "evid": [],
+   "last": "2025-12"
   },
   {
    "a": "nextera-energy-resources",
@@ -17583,6 +18177,60 @@
     }
    ],
    "last": "2025-10-01"
+  },
+  {
+   "a": "openai",
+   "b": "southern-company",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Georgia Power will serve OpenAI's Effingham County project under a 25-year agreement of approximately 3,200 MW with up to 1,000 MW of flexible demand response; the contract cleared the PSC's 30-day review in August 2026.",
+     "context": "Georgia Power's July 22, 2026 release states the project is 'approximately 3,200 MW', that OpenAI 'pays all infrastructure costs' and that up to 1,000 MW can be curtailed as flexible demand response. The AJC reported on August 27, 2026 that the contract was approved with protections against recovering a revenue shortfall from residential customers on early termination, PSC notification within 15 days of any large-customer cancellation and semiannual public reporting; The Current noted the approval came by staff statement under the 30-day rule rather than a commission vote. The company's August 26 release folds the contract into a portfolio it says delivers approximately $950M a year of customer savings from 2029. Trade press describes the campus as 'Project Camellia', a 1,400-acre, $20B site with service from 2028.",
+     "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-to-serve-openai-project-in-effingham-county.html",
+     "status": "announced",
+     "since": "2026-07",
+     "scale": "approximately 3,200 MW; 25-year agreement",
+     "via": "Georgia Power large-load contract — Effingham County campus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that the December 2025 backstop and the OpenAI-contract protections mark a shift from tariff design to political guarantee, and that the shift will be tested in the 2028 rate case rather than before.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-27",
+     "text": "AJC: the OpenAI contract's added protections — no recovery of a revenue shortfall from residential customers on early termination, PSC notice within 15 days of any large-customer cancellation, semiannual public reporting; Georgia Watch calls the commitment letter 'full of ifs' — Georgia's protections are negotiated contract by contract, so the terms in one deal are not the rule for the next — the seller's read of any campus starts with its own filed contract.",
+     "src": "https://www.ajc.com/business/2026/08/georgia-power-deal-to-power-openai-data-center-near-savannah-is-approved/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-26",
+     "text": "Georgia PSC review window closes on Georgia Power's OpenAI contract (~3,200 MW, 25 years, Effingham County); the company says its large-load contract portfolio now delivers approximately $950M a year of customer savings from 2029, up from the $556M the December order required — The first contract tested under the 30-day rule cleared on a staff statement rather than a vote, with new protections on early termination; the backstop arithmetic has moved from a floor to a claim 1.7 times larger.",
+     "src": "https://www.prnewswire.com/news-releases/georgia-powers-contract-with-openai-approved-latest-approval-part-of-portfolio-of-large-load-contracts-delivering-approximately-950-million-in-annual-savings-beginning-in-2029-302861080.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-22",
+     "text": "Georgia Power to serve an OpenAI project in Effingham County: approximately 3,200 MW, up to 1,000 MW of flexible demand response, a 25-year agreement, the customer paying all infrastructure costs — The single largest named load in the Southern system and the first with a stated flexible-demand tranche — the 'up to 1 GW' of interruptibility is a reserve-margin instrument as much as a contract term.",
+     "src": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-to-serve-openai-project-in-effingham-county.html",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-15",
+     "text": "Georgia Power issues a six-point Customer Protection Pledge on making growth work for existing customers — A political instrument timed to the 2026 commission elections and the OpenAI review.",
+     "src": "https://www.prnewswire.com/news-releases/georgia-power-reaffirms-longstanding-commitment-to-make-growth-work-for-customers-with-customer-protection-pledge-302826812.html",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-27"
   },
   {
    "a": "openai",
@@ -19360,6 +20008,114 @@
     }
    ],
    "last": "2024-11-21"
+  },
+  {
+   "a": "southern-company",
+   "b": "tesla",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Tesla supplies Megapacks to Alabama Power's 150 MW Gorgas battery per the company, and, per Energy-Storage.news, the 2024 Georgia Power portfolio (Robins, Moody, Hammond, McGrau Ford II) under a Megapack 2XL agreement with a 20-year capacity guarantee.",
+     "context": "Alabama Power's March 4, 2026 article states 92 Tesla Megapacks are being installed at the Gorgas site for a 2027 completion — the one Tesla reference in the company's own channels. Energy-Storage.news reported on September 5, 2024 that Georgia Power's 500 MW / 2,000 MWh portfolio uses Tesla Megapack 2XL lithium iron phosphate units with a 20-year capacity guarantee, with costs redacted under a PSC confidentiality rule; Georgia Power's own releases name only the EPCs. Battery OEMs for the ten projects certified in December 2025 are not disclosed.",
+     "source": "https://www.alabamapower.com/news/strengthening-reliability/alabama-power-installing-tesla-megapacks-at-gorgas-bess-increasing-reliability-during-peak-times.html",
+     "status": "active",
+     "since": "2024-09",
+     "scale": "500 MW / 2,000 MWh (Georgia, per Energy-Storage.news); 92 Megapacks at Gorgas (Alabama)",
+     "via": "Megapack 2XL supply agreement; Gorgas BESS"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For battery sellers it is the rare utility that owns its storage — Wärtsilä at Mossy Branch, Tesla (per trade press) across the 2024 portfolio, Burns & McDonnell and Crowder as EPCs, with 3,022.5 MW more certified in December 2025 and a 500 MW RFP closing in January 2027.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery energy storage — utility-owned BESS program and the 2025 storage RFP",
+     "date": "",
+     "text": "Energy-Storage.news reported in September 2024 that the 2024 portfolio (500 MW / 2,000 MWh — Robins, Moody, Hammond and McGrau Ford II) is supplied under a Tesla Megapack 2XL agreement with a 20-year capacity guarantee, with costs redacted under a PSC rule; the company's own releases name the EPCs but not the battery supplier.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery energy storage — utility-owned BESS program and the 2025 storage RFP",
+     "date": "",
+     "text": "Alabama Power's first utility-scale battery — Gorgas, 150 MW two-hour lithium iron phosphate on a retired plant site in Walker County, 92 Tesla Megapacks, completion 2027 — extends the owned-storage model to a second operating company.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery energy storage — utility-owned BESS program and the 2025 storage RFP",
+     "date": "",
+     "text": "Trade press names Tesla as the 2024 portfolio's supplier; Wärtsilä is the one supplier the company itself has named.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Alabama Power and Mississippi Power — the other two retail utilities",
+     "date": "",
+     "text": "Alabama Power's December 2, 2025 order holds Rate RSE flat through 2027 and defers recovery of the Lindsay Hill Generating Station — a gas combined-cycle plant of about 880–895 MW acquired September 30, 2025 after an Alabama PSC certificate of August 13, 2025 — to January 2028 billings; its first utility-scale battery (Gorgas, 150 MW, 92 Tesla Megapacks) completes in 2027, and Barry Unit 5's coal-to-gas conversion is scheduled for 2026–2028.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-04",
+     "text": "Alabama Power begins installing 92 Tesla Megapacks at the 150 MW Gorgas battery, the state's first utility-scale storage, for 2027 — The utility-owned storage model extends to Alabama with a named supplier — the one Tesla reference in the company's own channels.",
+     "src": "https://www.alabamapower.com/news/strengthening-reliability/alabama-power-installing-tesla-megapacks-at-gorgas-bess-increasing-reliability-during-peak-times.html",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-04"
+  },
+  {
+   "a": "southern-company",
+   "b": "wartsila",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Wärtsilä was EPC and technology provider for Mossy Branch, Georgia Power's first battery, which reached commercial operation in November 2024.",
+     "context": "Georgia Power's November 8, 2024 release credits Wärtsilä with the engineering, procurement and construction of the 65 MW, four-hour Mossy Branch facility in Talbot County using its Quantum energy storage system and GEMS digital platform — the only battery supplier Georgia Power has itself named.",
+     "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-powers-first-battery-energy-storage-system-reaches-comme.html",
+     "status": "active",
+     "since": "2024-11",
+     "scale": "65 MW / 4-hour",
+     "via": "Quantum energy storage and GEMS platform — Mossy Branch"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "For battery sellers it is the rare utility that owns its storage — Wärtsilä at Mossy Branch, Tesla (per trade press) across the 2024 portfolio, Burns & McDonnell and Crowder as EPCs, with 3,022.5 MW more certified in December 2025 and a 500 MW RFP closing in January 2027.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: Mossy Branch, the 765 MW portfolio, Twiggs and Wadley are all company-owned under supply agreements and named EPCs (Burns & McDonnell, Crowder, Wärtsilä), the December 2025 certificate added 3,022.5 MW of owned stand-alone storage against 2,821 MW of purchases of all kinds, and the 2025 IRP's storage target exceeds 1,500 MW by 2035 on top of that.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery energy storage — utility-owned BESS program and the 2025 storage RFP",
+     "date": "",
+     "text": "Mossy Branch (65 MW, four hours, Talbot County) reached commercial operation in November 2024 with Wärtsilä as EPC and technology provider (Quantum system, GEMS platform).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Battery energy storage — utility-owned BESS program and the 2025 storage RFP",
+     "date": "",
+     "text": "Trade press names Tesla as the 2024 portfolio's supplier; Wärtsilä is the one supplier the company itself has named.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2024-11"
   },
   {
    "a": "stack-infrastructure",

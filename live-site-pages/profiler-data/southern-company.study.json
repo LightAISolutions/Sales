@@ -1,0 +1,621 @@
+{
+ "schemaVersion": 2,
+ "slug": "southern-company",
+ "title": "Southern Company — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "the-elected-commission",
+   "title": "The elected commission: what changes when the regulator runs for office",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The Dominion guide taught the chain every regulated purchase moves through — the {{revenue requirement}}, the {{IRP}}, the {{CPCN}}, the {{RFP}}, the {{rate case}} and the {{large-load tariff}} — with a utility whose regulator is a three-judge court appointed by a legislature. This guide changes one variable and follows the consequences: in Georgia the {{public utility commission}} is an {{elected commission}}. Five commissioners are chosen statewide, one from each of five districts, in partisan elections, and they decide every rate, every plan and every certificate that Georgia Power brings them. Nothing else about the chain is different. Everything about its timing is.",
+    "An appointed regulator answers to a record; an elected one answers to a record and to a ballot. A {{rate case}} that raises the residential bill lands in a campaign; a {{load forecast}} that says data centers will double the system in a decade becomes a question at a town hall; a {{cost cap}} on a nuclear plant is a promise made to voters as much as to a hearing examiner. That does not make the commission less rigorous — the dockets are as long and the testimony as technical as anywhere — but it means affordability reaches the docket faster than it does in an appointed state, and it means the composition of the body that decides the next case can change on a Tuesday in November.",
+    "For a seller into this market the practical lesson is that the political calendar is part of the procurement calendar. A utility facing an election year negotiates a {{rate freeze}}; a commission facing one certifies capacity with conditions that make the cost fall on the customer whose load caused it; the {{IRP}} cycle, fixed by statute at three years, is timed against an election cycle fixed at six. Read the two clocks together and the sequence of Georgia Power's 2025 decisions — the forecast, the certification, the freeze, the large-load rule — stops looking like a set of separate proceedings and starts looking like one negotiation.",
+    "The guide runs in this order: the bodies that decide in Georgia and how they differ from a PJM state; how the state certifies a decade of capacity in one cycle and what a certificate carries with it; the forecast and the discipline of keeping its tranches apart; what it means that the utility is its own {{balancing authority}} with no capacity market above it; the large-load rule and the freeze; then Vogtle — the one story a seller must know to understand the company's appetite for risk — and the four channels the 2025 certification opened. The company sections put the sourced figures against each rung; the failure section, the flashcards and the self-test close."
+   ]
+  },
+  {
+   "id": "who-decides-in-georgia",
+   "title": "Who decides in Georgia: the commission, the legislature, the utility itself — and no grid operator",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Set beside the Dominion guide's table, one row is missing and one is changed. There is no regional grid operator with a capacity auction above Georgia Power; the utility runs its own system. And the commission is elected, so the ballot is a fifth body with its own clock.",
+   "cols": [
+    "Body",
+    "What it decides",
+    "The instrument",
+    "Its clock"
+   ],
+   "rows": [
+    [
+     "The Georgia Public Service Commission — five commissioners, one per district, elected statewide",
+     "Retail rates and the {{rate case}}, the triennial {{IRP}}, the certification of every new plant and purchase (Georgia's {{CPCN}}), the {{cost cap}} and {{construction monitoring}} on certified projects, the {{large-load tariff}} and the January 2025 rule that governs contracts above 100 MW, {{rider}}s, the {{fuel clause}}, the {{prudence review}}",
+     "A {{docket}} with an order at the end, decided by vote of the five",
+     "Months to a year per proceeding; the IRP on a fixed three-year statutory cycle; commissioners on staggered six-year terms"
+    ],
+    [
+     "The ballot",
+     "Who sits on the commission — and therefore how the next rate case, forecast and certificate are read",
+     "Partisan elections by district, statewide vote",
+     "A cycle of its own; a special election can reset the body between IRPs"
+    ],
+    [
+     "The Georgia General Assembly",
+     "The IRP statute itself, tax treatment of data centers, who may be charged for what, the rules the commission may write, election timing",
+     "Statute",
+     "Sessions; a bill can rewrite what the commission may do"
+    ],
+    [
+     "The utility as its own {{balancing authority}}",
+     "Second-by-second balancing, its own {{planning reserve margin}} target as approved by the commission, its own generation queue, its own transmission plan; bilateral trades through {{SEEM}}",
+     "The company's plan and the commission's approval of it — no auction, no regional plan",
+     "The IRP horizon; there is no three-years-ahead capacity price to read"
+    ],
+    [
+     "The federal regulator — {{FERC}} and, for nuclear, the NRC",
+     "Wholesale sales, the transmission tariff, interconnection procedures; reactor licences, {{nuclear uprate}} approvals, the Vogtle operating licences",
+     "Orders on the company's filings",
+     "Years; a licence amendment on the NRC's calendar, not the state's"
+    ]
+   ],
+   "note": "The missing row is the point. In Virginia the {{capacity market}} price and the {{RTEP}} are decided above the utility and land on its customers; in Georgia every one of those decisions is the commission's, which concentrates both the authority and the political exposure in one elected body."
+  },
+  {
+   "id": "its-own-grid",
+   "title": "Its own grid: what a utility does when there is no RTO above it",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Most of the utilities in this corpus live inside a regional grid operator — {{PJM}}, {{MISO}}, {{ERCOT}} — that runs the wholesale market, holds the {{capacity market}}, keeps the {{interconnection queue}} and plans the big lines. The Southeast never formed one. Southern Company's operating companies are their own {{balancing authority}}: the company's own control centre matches generation to load every few seconds across Georgia, Alabama and Mississippi, dispatches its own plants, holds its own reserves and builds its own transmission. What it cannot self-supply it buys bilaterally, and since 2022 it can trade fifteen-minute blocks with its neighbours through {{SEEM}} — a trading platform, not a market operator, with no central dispatch and no auction.",
+    "Three things follow for a buyer of capacity. First, there is no capacity price. In {{PJM}} the auction clears three years ahead and tells everyone what a megawatt of accredited capacity is worth; in Georgia the value of a megawatt is whatever the {{IRP}} says the system needs to hold its {{planning reserve margin}}, and the commission decides that number in the docket. Second, there is no outside queue for the utility's own plants: a certified self-build joins the company's own plan, while an independent developer's project connects through the company's transmission tariff under {{FERC}} rules. Third, the {{dispatchable}} resources that keep the lights on are almost entirely the company's own — gas, nuclear, hydro, coal — so a reserve-margin shortfall is answered by certifying plant, not by bidding into an auction.",
+    "That is why the channels a seller can enter through are narrower and longer-dated than in an RTO state. There is no merchant lane: a battery cannot be built on speculation and sold into a Georgia capacity market, because there is none. It enters either as company-owned plant — certified, put in {{rate base}}, built by an {{EPC}} the company selects — or under a {{PPA}} the company signs with a developer after an all-source {{RFP}} that the commission reviews with an independent evaluator. Both lanes start in the IRP and pass through the certification docket. Both are decided by the same five people.",
+    "The counterweight is that the utility's own forecast is the whole story. With no regional operator publishing its own load forecast, the commission's staff and the intervenors are the only independent check on how many gigawatts of data-center demand are real, which is why the discipline of the next section — keeping the tranches of a pipeline apart — matters more in Georgia than in a PJM state, where the RTO's forecast and the utility's can be compared."
+   ]
+  },
+  {
+   "id": "the-pipeline-in-tranches",
+   "title": "The pipeline in tranches: committed, contracted, and everything else",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**Three words that are not synonyms.** A utility describing its data-center prospects uses a vocabulary that sounds interchangeable and is not. *Pipeline* is every request that has reached the company — a letter, a study application, a conversation with an economic-development office. *Contracted* is load under a signed {{ESA}} with a term, a minimum bill and collateral. *Committed* sits between the two in most utilities' usage: a customer that has signed something — a study agreement, a letter of intent, a deposit — but not the service agreement that binds it. The Dominion guide showed the same ladder with different labels: engineering study, construction authorization, service agreement. The names change by company; the discipline does not.",
+    "**Why the distinction is the whole argument.** A {{load forecast}} that counts the pipeline as load produces a plan that certifies plants for customers who may never arrive, and the {{stranded cost}} lands on everyone else — the intervenors' case in every large-load docket of the decade. A forecast that counts only contracted load under-builds for a cluster that is coming, and the utility is late by the four years a combined-cycle plant takes. The commission's job in the {{IRP}} is to decide how much of each tranche to believe, and the {{large-load tariff}} is the instrument that moves load from the first tranche to the third — a customer that signs a minimum bill has proven its megawatts are real.",
+    "**Do the arithmetic once.** Suppose a utility reports 50 GW of pipeline, of which 10 GW is committed and 3 GW is contracted, against a system peak of 17 GW. The 3 GW is bankable — it carries a {{minimum demand charge}} and can be financed against. The 10 GW is a forecast with money behind it: study fees and deposits, no take-or-pay. The remaining 37 GW is a queue, and a queue in a state with no {{RTO}} is one the utility itself keeps. A plan that certifies 8 GW of new capacity against that picture is betting that the committed tranche mostly converts; a plan that certifies 3 GW is betting that it mostly does not. Neither number is wrong. Each is a judgment about a conversion rate the commission will be asked to defend at the next election.",
+    "**The seller's use of it.** The tranche a customer sits in tells you how far its power is from real. A campus at the pipeline stage has no plant certified for it and no supplier chosen; a campus under a service agreement has its megawatts in a certification docket and its equipment on somebody's bill of materials. Read a utility's quarterly figures with the three words separated and the timing of every downstream purchase — the turbine, the battery, the substation — falls out."
+   ]
+  },
+  {
+   "id": "certifying-a-decade",
+   "title": "Certifying a decade: how Georgia turns one IRP cycle into ten gigawatts of permission",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Georgia's statute puts the {{IRP}} and the certificate in one act. Every three years Georgia Power files a twenty-year plan; the commission rules on it; and then, in a separate certification {{docket}} that follows within months, the company asks to certify the specific plants and purchases the plan called for — the {{CPCN}} step, though Georgia does not use that name. A certificate in Georgia carries three things a seller should know about. It fixes a certified cost, which functions as a {{cost cap}}: spend above it is the company's to justify later. It can attach {{construction monitoring}}, a periodic review of a project while it is being built, which the state adopted for Vogtle and has kept. And it puts the plant into {{rate base}} on completion, which is the whole economic point.",
+    "The 2025 cycle is the worked example, and it ran in four moves inside one year. In July 2025 the commission accepted the plan with its {{load forecast}} intact — roughly 8,500 MW of load growth over six years, a peak about 2,600 MW higher by 2030 than the previous plan had foreseen, and a stipulation that added quarterly reporting on large-load developments and a joint effort to refine the forecast method. Also in July it approved a three-year base {{rate freeze}} through 2028. In December it certified, by a five-to-nothing vote on a stipulation between the company and its own staff, 9,885 MW of new capacity: three company-built combined-cycle blocks at existing plant sites, eleven battery projects, and about 2,800 MW of purchases from third parties — with the company agreeing to backstop the new projects financially for 2029 through 2031, the three years after the freeze ends. And in between, the January 2025 large-load rule, the subject of the next section, set the terms under which the customers driving the forecast would be served.",
+    "Read the December order the way the Dominion guide read the Virginia one: what was asked, what was granted, and what the dissent said. The company's own staff had recommended certifying about a third of the request and called the rest speculative — staff testimony put the load supported by executed contracts at about 1,900 MW when the request was filed, against nearly 2 GW of first contracts under the new rules by September and more than 3 GW filed with the commission by December — and then settled for the whole request in exchange for the backstop and a stated downward pressure on residential bills. The vote was unanimous under the outgoing commission. Two months later the new commission, with two members seated in January 2026, denied reconsideration three to two on party lines; environmental and faith groups then took the order to court in March 2026, arguing that need had not been proven for the portion beyond the contracted load. The certificate stands while the case runs. That sequence — unanimous certification, contested reconsideration, litigation — is what an {{elected commission}} changing hands mid-cycle looks like from a seller's chair.",
+    "Two features distinguish the Georgia certificate from the Virginia one. The first is scale: Virginia certified one 944 MW plant in its 2025 order; Georgia certified nearly ten gigawatts in one stipulation, because its statute lets the certification docket sweep up everything the plan called for. The second is the backstop, which is a Georgia invention worth understanding. The company committed that if the large customers behind the forecast do not arrive, the cost of the new plants in 2029–2031 will not land on residential and small-business customers — a shareholder guarantee that converts the commission's stranded-cost worry into a company risk for three years. After 2031 the plants are in rate base like any other, which is exactly the reconsideration dissent's objection: the relief is three years long and the plants run for forty.",
+    "For the seller the timing is the lesson. The turbines for the first of these plants were ordered around the 2023 mid-cycle update, two years before the plan that justified them was approved, because the lead time on a large gas turbine had stretched to five years or more; the battery portfolio's supplier and its two EPCs were named in 2024, a year before certification; and the next storage solicitation, for 500 MW, closes its short list in December 2026 with contracts in January 2027 and certification of the next round in mid-2027. The certificate is where the money becomes recoverable. The purchase decisions were made a year or two earlier, in the plan and the solicitation, by the utility's engineers and the bidding developers — and that is where a seller has to be."
+   ]
+  },
+  {
+   "id": "the-large-load-rule",
+   "title": "The large-load rule: what Georgia wrote in January 2025, and what it did not publish",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Georgia's instrument is a commission rule rather than a rate class. The large-load rule the commission adopted unanimously on January 23, 2025 — written out of the 2023 plan-update docket and carried into Georgia Power's Rules and Regulations for Electric Service from February 1 — lets Georgia Power serve any new customer above 100 MW on terms beyond the standard tariff and requires every such contract to be filed with the commission before it is signed. Set against Dominion's GS-5 class, the shape is the same and the transparency is not: the class publishes its minimums; the rule leaves them to the contract, which is filed under seal.",
+   "cols": [
+    "Term",
+    "Georgia — the January 2025 rule and the contracts under it",
+    "Virginia — the GS-5 class, for contrast",
+    "What it does"
+   ],
+   "rows": [
+    [
+     "Threshold",
+     "New customers above 100 MW",
+     "25 MW or more with a 75 percent {{load factor}}",
+     "Draws the line between the standard tariff and the negotiated one"
+    ],
+    [
+     "Contract length",
+     "Lengthened from five-year to fifteen-year terms",
+     "14 years — a four-year ramp plus ten — then one-year renewals",
+     "Matches the customer's obligation to the depreciation life of what is built for it"
+    ],
+    [
+     "{{Minimum demand charge}}",
+     "'Minimum billing requirements' — the percentage is in the filed contract, not the rule",
+     "85 percent of contracted transmission-and-distribution demand, 60 percent of generation",
+     "Converts contracted megawatts into bankable revenue whether or not the campus fills"
+    ],
+    [
+     "Upstream costs",
+     "The customer pays 'costs incurred by upstream generation, transmission and distribution' as construction progresses, in addition to site-specific costs",
+     "Direct assignment of defined transmission through mandatory contributions in aid of construction, ordered July 2026",
+     "The {{cost allocation}} answer — who pays for the wires and plant beyond the fence"
+    ],
+    [
+     "Collateral and termination",
+     "Termination payments and collateral requirements per contract; the company has described its contracted portfolio as backed by collateral in the tens of billions of dollars",
+     "Exit fees equal to the remaining minimum obligations; cash deposits and enhanced collateral",
+     "The {{stranded cost}} guard — the plant is paid for even if the customer leaves"
+    ],
+    [
+     "Commission review",
+     "Every contract above 100 MW filed with the commission at least 30 days before execution; approval can proceed on a staff statement without a vote",
+     "A published rate class; the contract terms are the tariff",
+     "Georgia's review is contract by contract and largely confidential; Virginia's is a tariff anyone can read"
+    ],
+    [
+     "The first tested case",
+     "The 2026 contract for a 3.2 GW campus in Effingham County cleared the 30-day window in August 2026 with added protections: no recovery of a shortfall from residential customers on early termination, notice to the commission within 15 days of any large-customer cancellation, semiannual public reporting on the portfolio",
+     "The GS-5 order itself, effective January 1, 2027",
+     "Shows the rule is negotiated case by case — the protections in one contract are not in the rule"
+    ]
+   ],
+   "note": "The percentages and dollar figures Georgia's contracts carry are not public; the commission's own release describes the rule's terms in categories, and the company's investor materials describe 15-year minimums, minimum bills, termination payments and collateral in the same categories. A seller should treat any specific Georgia minimum-bill percentage quoted in trade press as unverified."
+  },
+  {
+   "id": "the-freeze-and-the-fuel-line",
+   "title": "The freeze and the fuel line: what a rate freeze holds still, and what keeps moving",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "A {{rate freeze}} sounds like a promise about the bill and is a promise about one line of it. Georgia Power's July 2025 agreement holds base rates — the part of the bill that recovers the {{revenue requirement}} through the {{rate case}} — flat from 2026 through 2028. It came after six bill increases in three years and four months before an election in which those increases were the issue, and it was approved unanimously. Everything outside base rates kept moving: the {{fuel clause}}, which passes fuel and purchased-power cost through with no return; storm-cost recovery, which the commission set in a separate case; and the recovery of Vogtle, which had its own order. A customer's total bill can rise during a freeze, and the commission's own critics said so the week it was approved.",
+    "What a freeze does inside the company is defer. Costs that would have gone into a 2026 rate case accumulate as regulatory assets to be recovered later, which is why the certification stipulation five months afterward had to say something about the years after 2028 — the backstop for 2029 through 2031 exists because that is when the deferred costs and the new plants would otherwise hit base rates together. A seller reading a freeze should ask two questions: what is excluded, and what happens when it ends. In Georgia the answers were fuel and storms, and a three-year shareholder guarantee.",
+    "The fuel line is where the data-center question moved next. In May 2026 the commission approved a fuel-and-storm stipulation that cut the typical bill by a few dollars a month, capped hedging, stretched storm amortization to 67 months — and, on a three-to-two vote, declined the two new commissioners' motions to investigate whether large customers were raising everyone else's fuel cost. Staff testimony had put that effect at several percent of the monthly fuel bill. A separate hearing on whether a particular regulatory asset should be recovered only from large customers was scheduled to conclude by the end of 2026. The point for a seller is that in Georgia the {{cross-subsidy}} argument does not live in one docket; it has moved from the rate case to the certificate to the fuel clause, and it will move again at the next election."
+   ]
+  },
+  {
+   "id": "vogtle-and-the-risk-appetite",
+   "title": "Vogtle 3 and 4: the history that decides what this company will and will not build",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "A representative sequence in years from the certificate, not a calendar. The company files and builds (gold), the commission and the federal regulator decide (blue), customers and shareholders pay (red). Fourteen years from certification to the second unit's commercial operation, a cost more than doubled, one bankruptcy, one construction-monitoring regime that outlived the project, and one recovery order that split the overrun between customers and shareholders. Every subsequent decision in the 2025 cycle is legible against it.",
+   "lanes": {
+    "gen": "Company files and builds",
+    "deploy": "Commission and NRC decide",
+    "eco": "Customers and shareholders pay"
+   },
+   "items": [
+    {
+     "x": 0.0,
+     "lane": "deploy",
+     "label": "Certificate: two AP1000 units",
+     "sub": "Certified in 2009 at a total project cost of about $14 billion for all owners, with Georgia Power's share the largest; a construction-recovery statute let financing costs be charged during the build — {{CWIP}} in rate base, which lowered the financing cost and moved construction risk toward customers."
+    },
+    {
+     "x": 0.5,
+     "lane": "deploy",
+     "label": "{{Construction monitoring}} begins",
+     "sub": "Semi-annual reviews of schedule and spend, numbered from one. They ran past twenty-nine, and the practice became part of how Georgia certifies anything large."
+    },
+    {
+     "x": 3.0,
+     "lane": "gen",
+     "label": "Construction, then delay",
+     "sub": "First-of-a-kind design changes, module fabrication problems and a contractor that had never built the design in the United States. Each monitoring report recorded a later date and a higher forecast."
+    },
+    {
+     "x": 8.0,
+     "lane": "eco",
+     "label": "Contractor bankruptcy",
+     "sub": "The reactor vendor filed for bankruptcy in 2017; the owners took over the project with a new constructor. The commission voted to continue rather than abandon, on a revised cost and schedule."
+    },
+    {
+     "x": 11.0,
+     "lane": "gen",
+     "label": "Fuel load, testing, more delay",
+     "sub": "Pre-operational testing found further problems; the schedule slipped again through the pandemic years, and the co-owners invoked cost-sharing provisions against Georgia Power."
+    },
+    {
+     "x": 14.0,
+     "lane": "gen",
+     "label": "Units in service",
+     "sub": "Unit 3 commercial operation July 31, 2023; Unit 4 April 29, 2024. Total cost for all owners reported at roughly $35 billion — more than double the certified figure."
+    },
+    {
+     "x": 14.4,
+     "lane": "eco",
+     "label": "The recovery order",
+     "sub": "December 2023, unanimous: customers pay about $7.6 billion of Georgia Power's remaining cost through rates, roughly $9 a month on a typical bill; about $3 billion of the overrun stays with shareholders. The {{prudence review}} that every certificate promises, delivered."
+    },
+    {
+     "x": 15.0,
+     "lane": "deploy",
+     "label": "Operating record",
+     "sub": "The company reports availability above 95 percent since commercial operation and an expected output above 30 million megawatt-hours a year for the four-unit site, with each new unit's first refueling outage in the autumn of its second year; the federal regulator issued a low-level finding on Unit 3 after two 2024 shutdowns traced to an over-conservative safety-system design, and closed it in 2025. A {{capacity factor}} for the two new units alone is not published."
+    },
+    {
+     "x": 16.0,
+     "lane": "gen",
+     "label": "What it did to the appetite",
+     "sub": "The 2025 plan and certificate contain gas, batteries, purchases and {{nuclear uprate}}s of the older units — and no new reactor. The chief executive's 2026 statement that Southern would not be the next to build an AP1000 unless others shared the overrun risk is the sentence a seller should keep."
+    }
+   ],
+   "note": "The Dominion guide's chain runs plan → certificate → build → recover. Vogtle is the case where every link stretched, and the instruments Georgia now uses — construction monitoring, certified cost as a cap, the 2025 backstop, the rule that every large-load contract is filed before signing — are the institutional memory of it. A seller offering anything first-of-a-kind to this buyer is selling to a commission that has already lived through one."
+  },
+  {
+   "id": "four-channels",
+   "title": "Four channels: what the 2025 certificate opened, and who supplies each",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The December 2025 certification put 9,885 MW into four procurement channels. Each has a different buyer of record, a different way the equipment gets chosen, and a different place a seller enters. The figures are as the commission and the company stated them at certification; the dossier carries the sources.",
+   "cols": [
+    "Channel",
+    "What was certified",
+    "How the equipment is chosen",
+    "Where a seller enters"
+   ],
+   "rows": [
+    [
+     "{{Self-build}} combined-cycle gas",
+     "Three blocks at existing plant sites — about 1,480 MW at Bowen, about 1,450 MW at Wansley, about 760 MW at McIntosh — with a fourth site's simple-cycle units (three large turbines, about 1.3 GW, at Yates) certified in the 2023 mid-cycle update and arriving from 2025",
+     "The utility's engineering and procurement organization selects the turbine OEM and the {{EPC}}; the {{IRP}} evaluated the self-build against third-party bids in an all-source {{RFP}} with an independent evaluator",
+     "Turbine and balance-of-plant supply into the utility's own project teams, years before certification — the Yates turbines were ordered two years ahead of the plan that justified them"
+    ],
+    [
+     "Utility-owned battery storage",
+     "Eleven projects — nine stand-alone and two beside solar — at Bowen, Hammond, McIntosh, Wansley, Yates and stand-alone sites in Hall and McDuffie counties; the plan's total is more than 1,500 MW by 2035 on top of the 2024 portfolio of 500 MW / 2,000 MWh already under construction",
+     "The utility buys the battery system under a supply agreement with a named integrator and hires EPCs by project; the 2024 portfolio's supplier and its two EPCs were named a year before certification",
+     "A supply agreement with the utility, or subcontract to its EPC — the one channel where the utility, not a developer, picks the {{BESS}}"
+    ],
+    [
+     "Purchases from third parties — {{PPA}}s",
+     "About 2,800 MW of capacity purchases in the certificate from named counterparties, including an independent power producer's fleet, a merchant gas plant in Heard County and a sister utility's coal-and-gas plant in Mississippi kept open to supply Georgia through 2028",
+     "The bidding developer or generator chooses its own equipment; the utility chooses the bid; the commission approves the contract",
+     "Sell to the developer bidding the RFP — the utility never sees the bill of materials"
+    ],
+    [
+     "{{Nuclear uprate}}s and existing-plant upgrades",
+     "Uprates of the two older Vogtle units (about 54 MW) and preliminary work at Hatch; turbine and unit upgrades at existing gas plants; coal units at Scherer and Bowen kept running to 2038 rather than retired",
+     "Owner's engineer and the original equipment manufacturer; NRC licence amendments on the federal clock",
+     "OEM-only for the reactor side; a narrow but low-risk channel for turbine and generator upgrades"
+    ]
+   ],
+   "note": "A fifth channel is the storage solicitation that runs on its own calendar — a 500 MW, two-hour-plus request for proposals whose short list is due in December 2026 and contracts in January 2027 — and a sixth is the customer's own supply under the 2026 customer-identified-resource program, which lets a large customer bring its own clean energy under a savings-sharing rule. Neither had a winner at the time of writing."
+  },
+  {
+   "id": "who-picks-the-battery",
+   "title": "Who picks the battery: the utility's own project against the developer's bid",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "In Georgia both lanes are real and both pass through the same commission. The difference for a seller is who holds the purchase order and how far ahead of the certificate it is placed.",
+   "cards": [
+    {
+     "t": "The utility-owned project",
+     "meta": "Certified, put in {{rate base}}, built by an {{EPC}} the utility hires, with the battery bought under the utility's own supply agreement",
+     "adv": [
+      "One buyer, known in advance, with a published plan and a solicitation calendar — the supplier is named before the certificate",
+      "Earns the {{allowed return}} for the utility, so the utility fights for the lane in the IRP and defends the cost in the {{prudence review}}",
+      "Warranties and capacity guarantees run direct from the integrator to the utility for the life of the asset"
+     ],
+     "dis": [
+      "Costs are filed under a confidentiality rule, so competitors and the public cannot see what was paid",
+      "Slower — the project waits for the certificate, the construction schedule and the utility's own procurement gates",
+      "One buyer means one qualification list; a seller not on it is not in the lane at all"
+     ]
+    },
+    {
+     "t": "The developer's bid into the all-source RFP",
+     "meta": "A third party wins a {{PPA}} in a solicitation reviewed by an independent evaluator; the developer owns the plant and chooses the hardware",
+     "adv": [
+      "Many potential buyers — every developer preparing a bid — and the equipment decision is a commercial one made on price, bankability and schedule",
+      "Faster to market for the seller: the bid locks the bill of materials before the utility has decided anything",
+      "The commission prefers to see the self-build tested against real bids, so the lane is politically protected"
+     ],
+     "dis": [
+      "The utility earns nothing on a PPA, so it argues for the self-build wherever the numbers are close",
+      "In a state with no {{capacity market}} the contract is the only revenue — a developer that loses the bid has no merchant fallback",
+      "The winning bid can expire while a contested certificate runs; a price locked in the bid year is at the seller's risk"
+     ]
+    }
+   ],
+   "note": "The 2024 storage portfolio is the utility-owned lane made concrete: one integrator's supply agreement, two EPCs, four sites, certified before the batteries were ordered. The 2,800 MW of purchases in the 2025 certificate are the other lane: the equipment inside those plants was never the utility's decision."
+  },
+  {
+   "id": "gigawatts-on-the-georgia-clock",
+   "title": "Gigawatts on the Georgia clock: the system, the certificate, the tranches",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "MW (company and commission figures)",
+   "intro": "Company- and commission-stated figures, all carried with sources in the dossier. The proportion is the lesson: the capacity certified in one December afternoon is close to half the system Georgia Power runs today, and the prospective pipeline the parent reports is more than three times the whole Southern Company system peak.",
+   "items": [
+    {
+     "label": "Georgia Power capacity deployed today",
+     "sub": "per the commission's March 2026 fact sheet",
+     "v": 22000
+    },
+    {
+     "label": "Load growth in the accepted forecast",
+     "sub": "winter 2025/26 to winter 2030/31, September 2025 update",
+     "v": 8448
+    },
+    {
+     "label": "Certified in December 2025",
+     "sub": "three combined-cycle blocks, eleven battery projects, eleven purchase agreements",
+     "v": 9885
+    },
+    {
+     "label": "Of which company-owned",
+     "sub": "gas, batteries and solar-plus-storage in rate base, 2026–2030",
+     "v": 6804
+    },
+    {
+     "label": "Georgia Power large load contracted",
+     "sub": "the parent's Q2 2026 split of its 17 GW",
+     "v": 12500
+    },
+    {
+     "label": "Georgia committed customers",
+     "sub": "32 customers with signed requests for service, April 2026",
+     "v": 15600
+    },
+    {
+     "label": "Next solicitation, 2032–2033",
+     "sub": "upper end of the 2,000–6,000 MW dispatchable request",
+     "v": 6000
+    }
+   ],
+   "note": "Not on the chart because it would flatten it: the parent's stated prospective pipeline of more than 75 GW across more than a hundred projects — the tranche the previous sections warned against reading as load. The two figures that are load are the contracted 12.5 GW and, with the company's own definition attached, the committed 15.6 GW."
+  },
+  {
+   "id": "where-southern-slots-in",
+   "title": "Where Southern's programs slot into the chain",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "The Dominion guide's chain — plan, certificate, solicitation, rate order, interconnection, regional layer — with Georgia's instruments and the seller's entry point on each rung. The regional rung is the utility's own.",
+   "cols": [
+    "Rung",
+    "Georgia Power's instrument",
+    "Who decides",
+    "Where a seller enters"
+   ],
+   "rows": [
+    [
+     "The plan",
+     "The triennial {{IRP}} with a mid-cycle update; a twenty-year forecast and a preferred mix; quarterly large-load reports since 2025",
+     "The company files; the {{elected commission}} rules",
+     "Too early for a purchase; the place to read which resource classes the state will certify"
+    ],
+    [
+     "The certificate",
+     "The certification docket that follows the plan — one stipulation in December 2025 for 9,885 MW, each project at its own certified cost, with {{construction monitoring}}",
+     "The commission, by vote of five; reconsideration and the courts after",
+     "Balance-of-plant and {{EPC}} supply to the company's project teams — the turbines were already ordered"
+    ],
+    [
+     "The solicitation",
+     "The all-source {{RFP}} with an independent evaluator, run ahead of the certificate; a 500 MW storage RFP on its own calendar; a 2,000–6,000 MW request for 2032–2033",
+     "The company selects; the commission reviews the winners in the certificate",
+     "The developer's bid on the {{PPA}} lane; the company's supply agreement on the owned-storage lane"
+    ],
+    [
+     "The customer contract",
+     "A large-load contract above 100 MW under the January 2025 rule — fifteen-year term, minimum bill, termination payment, collateral — filed thirty days before signing",
+     "The company and the customer; the commission's staff reviews it",
+     "Not a seller's document; the tranche a customer is in tells the seller how far its plant is from real"
+    ],
+    [
+     "The rate order",
+     "The 2025 rate plan — base rates frozen through 2028, a return-on-equity band, a required rate case by mid-2028 — with the {{fuel clause}} and storm recovery in separate cases",
+     "The commission",
+     "Where the plants' cost lands; the freeze's end date is the seller's political calendar"
+    ],
+    [
+     "Interconnection",
+     "The company's own generation queue and transmission plan — a thousand-plus miles in the ten-year plan, a 500 kV ring around metro Atlanta",
+     "The company, under its {{FERC}} tariff for third parties",
+     "Transformers, {{switchgear}} and line hardware to the company's transmission organization"
+    ],
+    [
+     "The regional layer",
+     "None above the company: it is its own {{balancing authority}}; {{SEEM}} for bilateral trades; the {{planning reserve margin}} set in the plan",
+     "The company and the commission",
+     "Not a rung a seller can enter — there is no auction to bid into"
+    ]
+   ],
+   "note": "Two rungs differ from Virginia's chain: the regional layer is inside the company, and the certificate can carry a decade of capacity in one order. Everything else is the Dominion chain with an elected commission reading it."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The date moves.** In Georgia the utility keeps its own queue, so the {{system impact study}} that sets a campus's connection date is re-run by the same company that is building the wires — and the wires are a thousand miles of new transmission across hundreds of parcels, some taken by eminent domain. A slipped line, a parcel in court, a substation behind its transformer: the {{energization}} date moves, the campus's minimum bill does not, and the supplier's delivery date was the campus's. Owned by the developer and the utility together; the reason the connection date, not the lease date, is the real one.",
+    "**The commission changes hands mid-cycle.** A certificate voted five to nothing in December can be contested three to two in February and litigated in March. A seller whose project rests on that certificate is exposed not to a reversal — the order stands while the case runs — but to the conditions and the reporting the new majority attaches to everything after it. Owned by nobody in the deal; a property of an {{elected commission}}.",
+    "**The tranche that evaporates.** A {{load forecast}} counts committed load that has not signed; the certificate is sized to it; the customers exit — a third of the projects removed from Georgia's pipeline since 2023 left in one year. The plant is built anyway, and the argument over who pays for it is the next {{rate case}}. Owned by the commission that believed the forecast; felt by the turbine supplier whose second block is deferred.",
+    "**The certified cost becomes the cap.** A {{cost cap}} in a Georgia certificate is a promise the utility made to voters. When the overrun comes — a first-of-a-kind design, a contractor bankruptcy, a pandemic — the {{prudence review}} splits it, and the half that lands on shareholders teaches the company to buy proven equipment from proven vendors for a generation. Owned by the utility; the origin of this buyer's risk appetite.",
+    "**The freeze ends.** Three years of flat base rates defer costs rather than remove them; the year the freeze lifts is the year the deferred costs, the new plants and the end of the backstop meet in one rate case. A seller with a project timed for 2029 is timed for that case. Owned by the commission and the legislature; scheduled.",
+    "**No price signal.** Without a {{capacity market}} there is no three-years-ahead number telling anyone what a megawatt is worth; the value of capacity is what the {{IRP}} says it is, decided in a docket. A merchant battery has no lane; a developer's bid has no fallback if it loses; the utility's own project has no benchmark but the bids it chose to run against. Owned by the structure of the Southeast — a fact, not a fault.",
+    "**Sold to the wrong desk.** The utility-owned battery lane exists and is the exception among utilities; on the {{PPA}} lane the bidding developer chooses the hardware, and on the self-build gas lane the turbine was ordered before the certificate. A seller who pitches the commission's staff, or the utility's regulatory team, is pitching people who decide whether the plant is needed — never which battery is in it. Owned by the seller."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What changes in the regulated chain when the commission is elected?",
+     "a": "Nothing in the sequence — IRP, certificate, solicitation, rate case — and everything in its timing and exposure. Affordability reaches the docket faster, a rate freeze gets timed to an election, and a single election can change who reads the next case."
+    },
+    {
+     "q": "Why is there no capacity price in Georgia?",
+     "a": "Southern's utilities are their own balancing authority, outside any RTO. There is no auction; the value of a megawatt is what the IRP says the system needs to hold its planning reserve margin, decided by the commission."
+    },
+    {
+     "q": "What does SEEM do, and what does it not do?",
+     "a": "It is a bilateral fifteen-minute trading platform among Southeastern utilities. It is not a market operator: no central dispatch, no capacity auction, no queue. Each utility stays its own balancing authority."
+    },
+    {
+     "q": "Georgia's statute puts two documents in one cycle. Which two, and how far apart?",
+     "a": "The triennial IRP and the certification docket that follows it within months. The plan is the forecast and the preferred mix; the certificate is permission to build the specific plants and sign the specific purchases, with a certified cost attached."
+    },
+    {
+     "q": "What three things does a Georgia certificate carry with it?",
+     "a": "A certified cost that works as a cost cap; construction monitoring — periodic review of the project while it is built; and entry into rate base on completion."
+    },
+    {
+     "q": "Pipeline, committed, contracted — define each and say which one is bankable.",
+     "a": "Pipeline is every request received; committed is a customer that has signed something short of a service agreement; contracted is load under a signed ESA with a minimum bill and collateral. Only the contracted tranche can be financed against."
+    },
+    {
+     "q": "What did the January 2025 rule change about Georgia Power's large customers?",
+     "a": "Customers above 100 MW can be served on terms beyond the standard tariff — fifteen-year contracts, minimum bills, payment for upstream generation, transmission and distribution as construction proceeds, termination payments, collateral — and every such contract goes to the commission before it is signed."
+    },
+    {
+     "q": "Why can a bill rise during a rate freeze?",
+     "a": "A freeze holds base rates — the rate-case line — flat. The fuel clause, storm recovery and separately ordered items keep moving, and deferred costs accumulate to be recovered when the freeze ends."
+    },
+    {
+     "q": "What was the 2025 certificate's backstop, and what was the dissent's objection to it?",
+     "a": "A company commitment that new-plant costs in 2029–2031 would not fall on residential and small-business customers if the large loads did not arrive. The objection: the relief lasts three years and the plants run for forty."
+    },
+    {
+     "q": "What did Vogtle 3 and 4 cost against their certified figure, and how was the overrun split?",
+     "a": "Roughly $35 billion for all owners against about $14 billion certified. The 2023 recovery order put about $7.6 billion of Georgia Power's remaining cost on customers and left about $3 billion with shareholders."
+    },
+    {
+     "q": "What is CWIP in rate base, and why does it matter to a nuclear build?",
+     "a": "Charging customers for construction financing before the plant produces anything. It lowers the financing cost and moves construction risk toward customers — which is why legislatures argue over it and why Georgia allowed it for Vogtle."
+    },
+    {
+     "q": "Name the four channels the 2025 certificate opened and who picks the equipment in each.",
+     "a": "Self-build gas — the utility's own engineers and EPC; utility-owned batteries — the utility under a supply agreement with an integrator; third-party PPAs — the bidding developer; nuclear uprates and plant upgrades — the OEM and owner's engineer."
+    },
+    {
+     "q": "Why is the utility-owned battery lane unusual, and what does it mean for a seller?",
+     "a": "Most utilities buy storage through developers' bids; Georgia Power buys some under its own supply agreements and hires EPCs. It is the one lane where the utility itself chooses the battery — so qualification with the utility, not the developer, is the sale."
+    },
+    {
+     "q": "A large gas turbine was ordered two years before the plan that justified it was approved. Why, and what does it say about where purchases are decided?",
+     "a": "Turbine lead times had stretched to five years or more, so waiting for the certificate would have missed the load. Purchases are decided in the plan and the solicitation; the certificate makes them recoverable."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A Georgia commission certifies 9,885 MW in December on a five-to-nothing vote; two members are replaced in January. What can the new majority do to the certificate?",
+     "c": [
+      "Revoke it outright by a new vote",
+      "Nothing — a certificate is final once voted",
+      "Deny reconsideration or grant it, attach conditions and reporting to what follows, and read the next case differently; the order itself stands while any appeal runs",
+      "Refer it to the RTO for review"
+     ],
+     "a": 2,
+     "why": "The order is an order. What an elected commission changes is the reading of everything after it — reconsideration votes, conditions, the fuel-clause fight, the next rate case."
+    },
+    {
+     "q": "A utility outside any RTO reports 50 GW of pipeline, 10 GW committed and 3 GW contracted against a 17 GW peak. Which figure can it finance a plant against?",
+     "c": [
+      "50 GW — the pipeline is the market",
+      "10 GW — committed customers have paid deposits",
+      "3 GW — only load under a service agreement with a minimum bill is bankable",
+      "17 GW — the peak is what the reserve margin is built on"
+     ],
+     "a": 2,
+     "why": "The minimum demand charge in an ESA is what converts intent into revenue a lender will count. Deposits and study fees are not take-or-pay."
+    },
+    {
+     "q": "Which body sets the value of a megawatt of capacity in Georgia?",
+     "c": [
+      "PJM's Base Residual Auction",
+      "The SEEM clearing price",
+      "The commission, by approving the IRP's planning reserve margin and certifying plant against it",
+      "FERC"
+     ],
+     "a": 2,
+     "why": "No RTO, no auction. Capacity value is a docket finding, not a market price; SEEM trades energy in fifteen-minute blocks and has no capacity product."
+    },
+    {
+     "q": "Georgia's January 2025 large-load rule requires:",
+     "c": [
+      "A published 85 percent minimum demand charge for all customers above 25 MW",
+      "Contracts above 100 MW on extended terms, filed with the commission before execution",
+      "Data centers to build their own generation",
+      "A moratorium on new large loads until 2027"
+     ],
+     "a": 1,
+     "why": "The rule sets categories — longer terms, minimum bills, upstream cost payment, collateral — and puts each contract in front of the commission thirty days before signing. The percentages live in the contracts."
+    },
+    {
+     "q": "A three-year base-rate freeze is approved. Which of these can still raise a customer's bill during it?",
+     "c": [
+      "Nothing — the bill is frozen",
+      "The fuel clause and separately ordered storm-cost recovery",
+      "Only a new rate case",
+      "Only the legislature"
+     ],
+     "a": 1,
+     "why": "A freeze holds base rates. Pass-through clauses and separately docketed recoveries keep moving; deferred costs wait for the freeze to end."
+    },
+    {
+     "q": "The 2025 certificate's backstop protects residential customers from new-plant costs in which years?",
+     "c": [
+      "2026–2028, the freeze years",
+      "2029–2031, the three years after the freeze ends",
+      "The life of the plants",
+      "None — it applies to industrial customers"
+     ],
+     "a": 1,
+     "why": "The freeze already covers 2026–2028; the backstop bridges the three years after it, which is exactly why the dissent called it short against forty-year plants."
+    },
+    {
+     "q": "What is construction monitoring?",
+     "c": [
+      "The NRC's inspection program for operating reactors",
+      "A recurring commission review of a certified project's schedule and spend while it is being built",
+      "The RTO's study of a plant's interconnection",
+      "A quarterly earnings disclosure"
+     ],
+     "a": 1,
+     "why": "Georgia adopted it for Vogtle so overruns were examined as they happened rather than in one prudence review at the end; it stayed in the toolkit."
+    },
+    {
+     "q": "Which channel in the 2025 certificate is the one where the utility itself chooses the battery?",
+     "c": [
+      "The third-party PPAs",
+      "The utility-owned storage projects",
+      "The nuclear uprates",
+      "The customer-identified-resource program"
+     ],
+     "a": 1,
+     "why": "On a PPA the bidding developer picks the hardware; on the owned projects the utility signs the supply agreement and hires the EPC — the 2024 portfolio named its integrator and two EPCs a year before certification."
+    },
+    {
+     "q": "Why did Georgia Power order three large gas turbines in 2023 for a plan approved in 2025?",
+     "c": [
+      "The commission ordered it to",
+      "Turbine lead times had stretched to five years or more, so the order had to precede the certificate to meet the load",
+      "The turbines were surplus from Vogtle",
+      "To qualify for a federal loan"
+     ],
+     "a": 1,
+     "why": "The purchase decision lives in the plan and the utility's procurement; the certificate makes it recoverable. Lead time set the order date."
+    },
+    {
+     "q": "What did the Vogtle overrun most directly change about what this buyer will build?",
+     "c": [
+      "Nothing — the units run well, so more are planned",
+      "The 2025 cycle certified gas, batteries, purchases and uprates of older units, and no new reactor; the company has said it will not be the next to build an AP1000 without others sharing the overrun risk",
+      "It ended the use of construction monitoring",
+      "It moved Georgia into PJM"
+     ],
+     "a": 1,
+     "why": "A commission and a company that split a twenty-billion-dollar overrun buy proven equipment from proven vendors afterward. The certificate's contents are the evidence."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1629 @@
+{
+ "schemaVersion": 7,
+ "slug": "entergy",
+ "name": "Entergy Corporation",
+ "shortName": "Entergy",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.entergy.com",
+ "headquarters": "New Orleans, LA, USA",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: ETR"
+ },
+ "employees": "~12,000 at December 31, 2025 (FY2025 Form 10-K)",
+ "summary": "BOTTOM LINE UP FRONT: Entergy is the utility that has most completely replaced the system-need certificate with the single-customer certificate — generation sized to one hyperscaler's electric service agreement and approved for that customer by name — and it has now filed for more of it than its whole system peaks at: 2,262 MW of combined-cycle capacity certified in Louisiana in August 2025 for a Meta campus, 5,278 MW more at about $12.9B applied for in March 2026 for the same customer's second phase with a decision targeted for December 2026, three 754 MW plants pre-certified in Mississippi for Amazon Web Services, a 600 MW solar-plus-350 MW storage resource and a 754 MW gas unit in Arkansas for Google, and ten combined-cycle units 'secured' against a turbine exclusivity agreement whose minimum order has risen to 27 power islands — under a $67B five-year plan, a 2030 EPS outlook of $7.05–7.35 and an equity program that sold $2.175B of forward stock in May 2026. BACKGROUND. New Orleans; NYSE: ETR. Per the FY2025 Form 10-K the company serves about 3.1 million customers in Arkansas, Louisiana, Mississippi and Texas through five operating companies with five regulators, owns and leases 24,621 MW (43 percent combined-cycle and peaking gas, 25 percent legacy gas and oil, 21 percent nuclear, 8 percent coal, 3 percent renewables), operates inside MISO's South region, employs about 12,000 and reported 2025 revenue of $12.9B and adjusted EPS of $3.91 with 2026 guidance of $4.25–4.45. Three of the five companies run formula rate plans that reset rates yearly, which puts a customer-funded plant on bills within a year of service; the company's answer is a 'Fair Share Plus' pledge and published bill reductions it puts at about $7B over two decades, while intervenors, the Arkansas commission's staff and independent reports contest whether the customers pay the full cost. Collection gap: the contracted megawatts in every one of these agreements are redacted or unpublished, the Louisiana order text was not retrievable, the turbine OEM is unnamed for all but two units, and no battery supplier is named on any owned project.",
+ "ecosystemRole": "We assess Entergy as the utility whose plants are decided by a customer's signature and whose regulators decide who pays for them — the case in this file where the equipment order precedes the certificate by years and the certificate names the campus it serves. Basis: the Louisiana, Arkansas and Mississippi filings described above, the Lightning Amendment that waives a solicitation for a signed load with a five-year in-service date, Mississippi's pre-certification statute, and a turbine exclusivity agreement with a quarterly slot in the largest frame class. For the sellers in this corpus it is four different counterparties: for turbine competitors, a market closed for the decade by the exclusivity agreement; for balance-of-plant, transformer and switchgear suppliers, ten approved combined-cycle units and more than a thousand miles of new transmission whose EPCs — Sargent & Lundy and TIC at Orange County — are named only for the first; for battery sellers, operating-company RFPs (Louisiana's 2025 BESS solicitation, Mississippi's and Arkansas's renewables-and-storage RFPs) and the utility-owned Cypress project, with no supplier yet named on any owned system; and for the hyperscalers and developers in this file — Meta, Google, Amazon Web Services and Hut 8 by name — the counterparty whose 15- to 20-year ESAs, minimum bills sized to the revenue requirement, parent guaranties and contributions in aid of construction are the price of a 2028 in-service date. Per the company, the potential data-center additions beyond its base case are 7–12 GW; per its filings, the load it has certified plants for is redacted.",
+ "productsAndServices": [
+  {
+   "name": "Regulated retail electric service — five operating companies, five regulators, three formula rate plans",
+   "category": "Regulated utility service",
+   "description": "Entergy delivers electricity to approximately 3.1 million customers in Arkansas, Louisiana, Mississippi and Texas through five regulated operating companies, each with its own commission and rate construct per the FY2025 Form 10-K and the 2026 Investor Day deck: Entergy Louisiana (1,115,000 customers; Louisiana Public Service Commission; authorized return on equity 9.3–10.1 percent; rate base $16.7B at the December 2024 test year plus transmission, distribution and resilience riders), Entergy Arkansas (738,000; Arkansas PSC; 9.15–10.15 percent; $11.4B retail rate base on a 2026 test year), Entergy Mississippi (459,000; Mississippi PSC; 10.25–12.26 percent performance-adjusted; $4.6B), Entergy Texas (538,000; Public Utility Commission of Texas; 9.57 percent; $4.4B on a 2021 test year plus $1.4B of interim riders) and Entergy New Orleans (209,000; New Orleans City Council; 8.85–9.85 percent; $1.2B). Louisiana, Arkansas and Mississippi run formula rate plans that reset rates annually against an earnings band; Texas files historical-test-year base rate cases with transmission, distribution and generation cost-recovery riders between them; New Orleans runs a council-adopted formula plan. System Energy Resources, which owns and leases 90 percent of Grand Gulf, is FERC-regulated at a 9.65 percent return. The company's 2026 large-load framework is stated on the Investor Day deck as '15- to 20-year terms; Minimum bills; Robust credit terms; Early termination fee to recoup costs not yet recovered; Contributions in aid of construction and other cash flow support during heavy investment', and in the March 2026 'Fair Share Plus' pledge as seven principles including sufficiently long terms, liquid deposits and credit guarantees, revenues covering incremental service cost and 'Strong Commission oversight'.",
+   "highlights": [
+    "2025 retail sales 128,960 GWh, of which industrial 60,882 GWh (+7 percent); industrial volume grew 14.9 percent in Q1 2026 and 9.9 percent in Q2 2026 on data-center, primary-metals and chlor-alkali customers (8-K releases)",
+    "Louisiana 2026 formula rate plan filing (docket U-37950): $149M total — $15M base, $36M transmission rider, $36M distribution rider, $40M capacity and cost-of-service riders, $22M transmission-adjustment — rates effective September 2026; transmission and distribution riders capped at $400M each for 2026 (Q2 2026 deck)",
+    "Arkansas: first base rate case since 2016 filed February 2026 (docket 26-001-U, $45M, 9.9 percent proposed ROE, hearing November 4, 2026, decision targeted December 2026), with the forward-test-year formula plan to resume with the 2027 filing",
+    "Company-stated customer benefit from the data-center agreements: approximately $7B over two decades as of August 27, 2026, with Mississippi residential bills avoiding a $4.87 monthly increase in July 2026 and Louisiana and Arkansas benefits 'beginning early 2027'",
+    "Independent reading: Electron Economics describes Fair Share Plus as 'a revenue-backed credit support mechanism embedded in rate design' rather than ratepayer protection; the Synapse/Earthjustice Mississippi report puts residential payments for the pre-certified plants at $38M through March 2026 and $10.60 a month"
+   ],
+   "positioning": "The one utility in this file whose retail regulation is five-fold: three formula-rate jurisdictions that put new plant on bills within a year, one rate-case jurisdiction with riders, and a municipal regulator. Against Dominion (biennial review, one commission) and Georgia Power (elected commission, triennial IRP, frozen base rates), Entergy's structure makes the cost of a customer-funded plant visible fastest and its earnings smoothest.",
+   "soldThrough": "Direct retail service under each commission's tariff; large loads under negotiated electric service agreements or special-rate contracts filed with the relevant commission.",
+   "targetSegments": [
+    "Residential and commercial customers in four states",
+    "Industrial customers on the Gulf coast (petrochemical, primary metals, chlor-alkali, LNG)",
+    "Hyperscale data-center campuses under electric service agreements (Meta, Google, Amazon Web Services, Hut 8 and others named by the company)"
+   ],
+   "roadmap": "Louisiana formula-rate extension and 2026 filing effective September 2026; Arkansas base rate case decision targeted December 2026; New Orleans four-year formula-plan extension requested July 2026; Texas Orange County generation rider effective on the plant's in-service date in Q3 2026."
+  },
+  {
+   "name": "Generation built for named customers — Louisiana (Meta), Arkansas (Google), Mississippi (Amazon Web Services)",
+   "category": "Generation (single-customer certification)",
+   "description": "Entergy's distinguishing product is generation sized to one customer's electric service agreement and certified for that customer. Louisiana phase one (LPSC docket U-37425): the company's October 2024 application sought certification of 'three new combined cycle combustion turbine generation resources totaling 2,262 MW, each of which will be enabled for future carbon capture and storage, a new 500 kV transmission line, and 500 kV substation upgrades' — Franklin Farms Power Station Units 1 and 2 in Richland Parish at a combined cost of approximately $2,387M, a third unit (Waterford 5 Power Station) at a similar per-unit cost, and a 500 kV line at $546M (FY2025 10-K). The LPSC approved it on August 20, 2025; the company's release states the two Richland Parish units come online in late 2028 and the Waterford unit by the end of 2029, that up to 1,500 MW of solar will be certified on an expedited basis, and that 'Meta is paying its share of the costs for the infrastructure needed to support its operations'. Construction began December 1, 2025 with the company stating Meta 'funds full interconnection infrastructure cost' and is expected to save customers about $650M over 15 years. Phase two (docket U-37882): in March 2026 the company signed an ESA with Evest LLC, a Meta subsidiary, for a second campus and applied to certify 'seven new combined cycle combustion turbine generation resources totaling 5,278 MW at a total cost of approximately $12.9 billion' — Richland Parish Units 1–4 near the site and Pointe Coupee Units 1–3 near the Big Cajun site — plus three batteries and a $1.4B West Fork Creek–St. Landry 500 kV line, with in-service dates in 2030 and 2031; the LPSC voted in April 2026 to schedule a decision for December 2026 without a hearing-officer recommendation (Q2 2026 10-Q). Arkansas: a special-rate contract with Altitude, LLC (Google) for a West Memphis campus, approved by the Arkansas PSC in December 2025, served by the 600 MW Arkansas Cypress Solar facility with a 350 MW battery ($1,602M, in service by end-2028, approved early 2026) and by the 754 MW Jefferson Power Station ($1,602M, 2029), on which the APSC in January 2026 'had demonstrated a need for the resource but had not met its burden with respect to supporting the prudence of the costs'. Mississippi: large customer supply and service agreements with Amazon Web Services campuses in Madison County (March 2024), Warren County (February 2025) and Hinds County (April 2026), served by three 754 MW 'Advanced Power Stations' — Delta Blues (Greenville, $1.2B, May 2028), Vicksburg ($1.2B, August 2028) and Traceview (Ridgeland, more than $1B, 2029) — pre-certified under a Mississippi statute for facilities serving data-processing customers, with prudence reviewed after construction and a cash return on construction work in progress collected through the formula rate plan (10-K).",
+   "highlights": [
+    "Phase-one ESA terms as read from the intervenors' January 2026 motion and the company's 2026 testimony: a 15-year term with up to three five-year extensions, minimum monthly charges 'designed to ensure that the payments received from Laidley are sufficient to recover the annual revenue requirements associated with the new electrical infrastructure during the term', termination fees, a parent guaranty from Meta through the original term, and a one-year non-renewal notice",
+    "Phase-two ESA terms per the company's Beauchamp testimony: a 20-year initial term with automatic five-year renewals and three-year notice; minimum charges 'sized to cover the full incremental cost to serve during the contract with true-up provisions'; early termination at all unrecovered cost or net book value; a Meta Platforms guaranty plus credit-default insurance; more than $1B toward embedded cost of service and $695M toward storm and resilience costs over the term",
+    "The LPSC's phase-one vote was 4–1 with Commissioner Davante Lewis dissenting ('There's a lot of things I just can't verify at the moment' — KNOE); the fast-track for phase two also passed 4–1 in April 2026 (KPLC); on August 12, 2026 the commission voted 3–1 to reject a hearing officer's ruling that would have compelled Meta to disclose jobs and load data (WWNO)",
+    "Arkansas contract as reported from a records request by the Arkansas Democrat-Gazette: Google pays $526M ($443M accelerated plus $83M minimum-demand payments) and $190M toward transmission over a 20-year term with three-year renewals, a 480 MW minimum-bill demand against 600 MW maximum, and a termination fee of about $2B declining after year 13; APSC staff testified that 'Google is paying well below the full cost of this resource' — none of which appears in company sources",
+    "Mississippi's pre-certified spend per the Synapse/Earthjustice report: about $3.88B across the three plants and two solar farms, with $757.6M spent in 2025 and residential customers paying $38M through March 2026; the company's July 2026 FAQ states customers 'are not subsidizing data centers'",
+    "Collection gap: the contracted megawatts of both Meta ESAs are redacted as highly sensitive in the LPSC filings; the turbine OEM and EPC for Franklin Farms, Waterford 5 and the phase-two units are not named in any company or independent source found; Mississippi's plants are pre-certified without a contested docket, so no order text exists to read"
+   ],
+   "positioning": "Entergy is the utility in this file that has most fully replaced the system-need certificate with the single-customer certificate: Louisiana waived its solicitation requirement for signed loads with a five-year in-service date (the 'Lightning Amendment' of December 2025), Mississippi removed the pre-construction certificate by statute, Arkansas kept the certificate and put a 180-day clock on it. Dominion and Georgia Power certify capacity against a forecast; Entergy certifies it against a counterparty. Latitude Media's April 2026 comparison called Entergy's 15.5 GW 'the largest single block of load backed by fully executed, disclosed ESA terms' among nineteen utilities.",
+   "soldThrough": "The operating company signs the ESA and self-builds the plant into rate base; recovery through the formula rate plan (Louisiana, Mississippi) or the Generating Arkansas Jobs rider (Arkansas), with the customer's minimum bills, contributions in aid of construction and advance payments carrying the incremental revenue requirement.",
+   "targetSegments": [
+    "Meta (Richland Parish, Louisiana — two phases)",
+    "Google (West Memphis, Arkansas)",
+    "Amazon Web Services (Madison, Warren and Hinds counties, Mississippi)",
+    "Hut 8 (River Bend campus, West Feliciana Parish, 330 MW scalable to 1,000 MW, Fluidstack as tenant)",
+    "AVAIO Digital (Arkansas and Mississippi, per the Fair Share Plus release)"
+   ],
+   "roadmap": "Franklin Farms 1 and 2 in service late 2028, Waterford 5 in 2029; LPSC decision on the seven phase-two units targeted December 2026 for 2030–2031 service; Cypress Solar and its battery by end-2028; Jefferson in 2029 subject to the Arkansas cost finding; Delta Blues May 2028, Vicksburg August 2028, Traceview 2029; Hut 8's initial 330 MW in Q2 2027."
+  },
+  {
+   "name": "Texas generation and transmission — Orange County, Legend, Lone Star and the SETEX 500 kV line",
+   "category": "Generation and transmission (Entergy Texas)",
+   "description": "Entergy Texas, the part of Texas inside MISO rather than ERCOT, is adding more than 2.4 GW of gas capacity by 2028 for industrial and population growth, with no named data-center customer in company sources. The Orange County Advanced Power Station (approximately 1,215 MW, two Mitsubishi Power M501JAC units, EPC consortium Mitsubishi Power, Sargent & Lundy and TIC per POWER) achieved first fire in April 2026 and is expected in service in Q3 2026; the Q2 2026 10-Q states a generation cost recovery rider of $150.4M a year takes effect on that date and that Entergy Texas made a $248M payment in June 2026 on a financed portion of construction work in progress. The PUCT approved the Legend Power Station (754 MW combined cycle, Port Arthur, $1.6B) and the Lone Star Power Station (453 MW simple cycle near Cleveland, $799M) on September 11, 2025 — with, per Utility Dive, a $2.4B hard cost cap and the commission chair saying regulators had been 'backed into a corner' by the absence of a solicitation — both for mid-2028. In December 2025 investors purchased the in-process Legend project from Entergy Texas for $359M and will spend up to $1.45B to complete it under a triple-net build-to-suit lease beginning at first synchronization in early 2028 (10-K). The PUCT approved the SETEX project on October 2, 2025: a single-circuit 500 kV line of about 145 miles from Babel (Newton County) to Running Bear (Montgomery County), fully energized by the end of 2029, plus a Cypress-to-Legend 500 kV line of up to 49 miles for 2028. A 2026 combined-cycle RFP seeks resources from 2032 against about 1 GW of projected load growth by 2030, and the STEP Ahead plan of December 2025 adds $137M of resilience work and a $200M Texas Energy Fund grant.",
+   "highlights": [
+    "Orange County Advanced Power Station 1,215 MW: first fire April 2026, in service Q3 2026, $150.4M annual rider; EPC Mitsubishi Power / Sargent & Lundy / TIC",
+    "Legend 754 MW ($1.6B) and Lone Star 453 MW ($799M) approved September 2025 under a $2.4B hard cap; Legend sold in construction and leased back ($359M plus up to $1.45B)",
+    "SETEX 145-mile 500 kV line approved October 2025 for 2029; Cypress–Legend 500 kV for 2028",
+    "2026 combined-cycle RFP for 2032 resources; Texas's 2025 large-load statute (SB 6) is written for ERCOT interconnections and no source extends its fee-and-security rules to Entergy Texas"
+   ],
+   "positioning": "The control case in the Entergy system: conventional certificates for system growth, a rate-case jurisdiction with interim riders, a cost cap imposed by an appointed commission, and an off-balance-sheet lease structure that the formula-rate states have not used.",
+   "soldThrough": "Self-build into rate base recovered through generation and transmission cost-recovery riders between base rate cases; the Legend lease is a third-party-financed build-to-suit.",
+   "targetSegments": [
+    "Southeast Texas industrial and residential load (LNG, petrochemicals, population growth)"
+   ],
+   "roadmap": "Orange County in service Q3 2026; Legend and Lone Star mid-2028; SETEX end-2029; RFP resources from 2032."
+  },
+  {
+   "name": "Solar, storage and renewables procurement — the RFP program and the corporate sustainability riders",
+   "category": "Procurement (solar and storage)",
+   "description": "Entergy procures renewables and storage through operating-company solicitations on a shared portal — a 2026 Entergy Louisiana all-source RFP, a 2026 Entergy Mississippi renewables-and-storage RFP, a 2025 Entergy Louisiana BESS RFP whose selections were 'delayed' as of August 2026, 2025 Entergy Arkansas combined-cycle and renewables-and-storage RFPs, and earlier Louisiana solar RFPs including a 3 GW solar RFP in LPSC docket U-36697 — and through customer-funded sustainability riders that let a large customer subscribe to new renewables. Company-listed projects per the Q2 2026 deck: Greer Solar 170 MW PPA (Mississippi, 2026), Delta Solar 80 MW ($157.2M, 2027) and Penton Solar 190 MW ($327.2M, 2028) with a 170 MW Penton battery (Mississippi), Bogalusa West Solar 200 MW and Cypress Harvest Solar 200 MW (Louisiana, 2028) with batteries filed in March 2026, Arkansas Cypress Solar 600 MW with a 350 MW / 1,400 MWh battery ($1,602M, 2028 — developer Orion Renewables, EPC Wanzek, Canadian Solar modules per Energy-Storage.news), Big Island Solar 440 MW PPA (Arkansas, 2028, pending) and the Segno and Votaw solar projects (311 MW, Texas-sited, 2029, filed to help fill Meta's corporate sustainability subscription per the company's LPSC testimony). Mondu Solar (100 MW PPA, Louisiana) entered service in Q2 2026. The Investor Day deck sets aside about 7 GW of nameplate renewables and storage for customer demand, 5 GW of it still to be identified.",
+   "highlights": [
+    "Cypress Solar: 600 MW solar + 350 MW / 1,400 MWh battery, $1,602M, White Bluff 500 kV interconnection, in service by end-2028 — the largest storage project in the system and the one built for Google",
+    "Louisiana: 2025 BESS RFP selections delayed as of August 31, 2026; three batteries filed with the phase-two Meta application; the phase-one order expects up to 1,500 MW of solar through expedited certification",
+    "Meta's sustainability commitments — 1,500 MW (phase one) and up to 2,500 MW (phase two) of renewables and storage — are the demand behind the Louisiana solar filings",
+    "Collection gap: no battery supplier or integrator is named on any Entergy-owned storage project in company or trade-press sources"
+   ],
+   "positioning": "The storage lane is the one procurement channel outside the company's turbine exclusivity: a developer bidding an operating-company RFP or a supplier to the utility's own Cypress-type projects. In megawatts the gas program dwarfs it — roughly 8 GW of approved gas units against about 1 GW of storage in the listed projects.",
+   "soldThrough": "Developer PPAs and build-transfer projects selected in operating-company RFPs with commission oversight; utility-owned projects self-built with named EPCs; customer subscriptions through sustainability riders.",
+   "targetSegments": [
+    "Operating-company reserve margins and MISO accreditation",
+    "Large customers subscribing under sustainability riders (Meta, Google)"
+   ],
+   "roadmap": "Greer 2026; Delta Solar 2027; Penton, Bogalusa West, Cypress Harvest and Cypress Solar in 2028; Segno and Votaw 2029; Louisiana BESS RFP selections pending."
+  },
+  {
+   "name": "Nuclear fleet — Arkansas Nuclear One, Waterford 3, River Bend, Grand Gulf, and the uprate and new-build options",
+   "category": "Generation (nuclear)",
+   "description": "Entergy owns and operates four nuclear plants with five reactors: Arkansas Nuclear One Units 1 and 2 (Entergy Arkansas, 1,807 MW), Waterford 3 and River Bend (Entergy Louisiana, 2,055 MW), and Grand Gulf (System Energy Resources 90 percent, 1,251 MW), 5,113 MW in total per the FY2025 10-K's capability table. The Waterford 3 uprate (LPSC docket U-37677) adds 40 MW in November 2026 and 5 MW in December 2029 for about $69M (Q2 2026 deck; World Nuclear News puts the benefit at $205M net present value). The phase-two Meta agreement includes funding for nuclear uprates and a memorandum on future nuclear; in August 2026 the company, Holtec and Hyundai E&C announced an evaluation of new reactors for the Gulf South (ANS). The chief executive said on the Q1 2026 call, per the AOL transcript, that the company would not 'enter into any agreement that creates an existential risk' on new nuclear. System Energy's Grand Gulf disputes with the retail regulators were resolved by settlements — $142M with Arkansas accepted in October 2023 per KATV and an LPSC settlement approved by FERC in November 2024 — and its early site permit renewal application was noticed in the Federal Register in December 2025. River Bend marked forty years of operation in 2026.",
+   "highlights": [
+    "5,113 MW across five reactors; 21 percent of owned capability",
+    "Waterford 3 uprate: 40 MW in late 2026, 5 MW in 2029, ~$69M",
+    "New-build evaluation with Holtec and Hyundai E&C (August 2026); nuclear memorandum and uprate funding in the phase-two Meta agreement",
+    "Grand Gulf FERC disputes settled with Arkansas (2023) and Louisiana (2024)"
+   ],
+   "positioning": "A larger fleet than Georgia Power's in reactor count and a smaller one in new-build exposure: no AP1000 history, an uprate on the Louisiana clock, and a new-build evaluation the chief executive has fenced with an 'existential risk' test.",
+   "soldThrough": "Regulated generation in the operating companies' rate base; Grand Gulf through the FERC-regulated System Energy unit-power agreements.",
+   "targetSegments": [
+    "Entergy Arkansas, Louisiana, Mississippi and New Orleans customers",
+    "Meta under the phase-two agreement's nuclear provisions"
+   ],
+   "roadmap": "Waterford 3 uprate outage late 2026; Grand Gulf early-site-permit renewal; Holtec / Hyundai E&C evaluation."
+  },
+  {
+   "name": "Turbine supply exclusivity and the MHI carbon-capture partnership",
+   "category": "Procurement (gas turbines)",
+   "description": "The company's filings describe an exclusivity agreement with 'a major vendor to manufacture power island equipment (PIE) and combustion turbines (CT) for combustion turbine generator set frames larger than 400 MWs', with one manufacturing slot per quarter; the minimum order was raised from 15 sets of power-island equipment and two turbines to 21 in Q3 2025 and to 27 sets in Q2 2026, with 10 sets and two turbine slots fulfilled as of June 30, 2026 (10-K; Q2 2026 10-Q). The filings do not name the vendor; the July 15, 2026 memorandum with MHI Group names Mitsubishi Power Americas' M501JAC turbines and MHIA carbon capture with a goal of a 50 percent reduction in carbon-capture cost, and Mitsubishi Power supplied the Orange County units and, per Global Energy Monitor, the Delta Blues unit. The Investor Day deck states '10 CCCTs secured for growth' and that every new combined-cycle unit is enabled for future carbon capture and storage. Gas supply for the north Louisiana plants comes from an Energy Transfer Tiger Pipeline lateral under a firm agreement from February 2028 to January 2048 (company release, November 2025, reported by trade press; the release host was unreachable).",
+   "highlights": [
+    "Exclusivity agreement: one slot per quarter; minimum order raised 15 → 21 → 27 power-island sets; 10 sets and 2 turbine slots fulfilled by June 2026",
+    "MHI MOU (July 2026): M501JAC turbines plus carbon capture, 50 percent CCS cost-reduction goal",
+    "Every new combined-cycle unit 'enabled for future carbon capture and storage' (10-K)",
+    "Collection gap: the vendor in the exclusivity agreement is unnamed in filings; the phase-one Louisiana testimony acknowledged no formal competitive solicitation on the generator equipment (per a secondary summary of the record)"
+   ],
+   "positioning": "The structural moat behind the 2028–2031 in-service dates: a utility that holds a quarterly slot in the largest-frame turbine queue can promise a campus a date a rival cannot. It also concentrates the fleet on one OEM's J-class machine.",
+   "soldThrough": "A parent-level supply agreement; the operating companies' certificates decide which customers pay for each machine.",
+   "targetSegments": [
+    "The ten approved combined-cycle units and the seven pending Louisiana units"
+   ],
+   "roadmap": "Slots fulfilled quarterly through the early 2030s; the carbon-capture plan under the MHI memorandum."
+  },
+  {
+   "name": "Transmission, resilience and storm recovery",
+   "category": "Transmission and distribution",
+   "description": "The system runs 16,128 circuit miles of high-voltage transmission and 107,838 circuit miles of distribution (Investor Day deck). The 2026–2030 capital plan carries about $10B of transmission and $6B of distribution, with more than 1,000 miles of new transmission; named projects include the Louisiana 500 kV lines for the Meta campuses (about 100 miles in phase one; the 147-mile, ~$1.2B Babel–Webre line in docket U-37812 with a hearing September 29, 2026; the $1.4B West Fork Creek–St. Landry line filed with phase two), SETEX in Texas, and the Ashley-scale resilience programs — Entergy Louisiana's resilience rider, Superpower Mississippi ($1B, a 50 percent outage reduction target) and Entergy New Orleans's $100M phase-one and $400M phase-two plans. Storm costs are recovered through riders and securitization: Hurricane Francine (September 2024) cost Entergy Louisiana about $183.6M with interim recovery from March 2025 and a $173.3M settlement recovered at $15M a year per the Alliance for Affordable Energy; Winter Storm Fern (January 2026) cost about $450M mainly in Louisiana and Mississippi, and Mississippi's 2026 Severe Winter Storm System Restoration Act enables securitization with a filing planned in Q3 2026 (Q2 2026 10-Q). The New Orleans City Council adopted a reliability resolution in August 2026 after equipment-caused outages (The Lens).",
+   "highlights": [
+    "~$10B transmission and ~$6B distribution in the 2026–2030 plan; more than 1,000 miles of new transmission",
+    "Louisiana 500 kV program: phase-one lines with Meta funding the interconnection; Babel–Webre (~$1.2B) hearing September 2026; West Fork Creek–St. Landry ($1.4B) pending",
+    "Winter Storm Fern ~$450M (January 2026); Mississippi securitization statute April 2026; Francine settlement $173.3M",
+    "Customer-funded reductions to storm charges: Meta to pay about 10 percent of Entergy Louisiana's storm and resilience charges (company, August 2026)"
+   ],
+   "positioning": "The Gulf's storm exposure is the affordability baseline every data-center certificate is judged against; the company's answer is to route customer contributions into the storm line explicitly.",
+   "soldThrough": "Self-build into rate base through transmission and distribution riders; storm costs through riders and securitization bonds.",
+   "targetSegments": [
+    "All operating companies' customers",
+    "The Meta campuses' interconnection (customer-funded)"
+   ],
+   "roadmap": "Babel–Webre decision Q4 2026; West Fork Creek–St. Landry with the December 2026 phase-two decision; Mississippi storm securitization filing Q3 2026; New Orleans phase-two resilience 2027–2031."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Owned and leased capability at December 31, 2025 (FY2025 Form 10-K), MW",
+   "specs": [
+    {
+     "band": "By company",
+     "label": "Entergy Arkansas",
+     "value": "5,542 total — CT/CCGT 1,535; legacy gas/oil 522; nuclear 1,807; coal 974; hydro 74; solar 630"
+    },
+    {
+     "band": "By company",
+     "label": "Entergy Louisiana",
+     "value": "10,853 total — CT/CCGT 5,659; legacy gas/oil 2,799; nuclear 2,055; coal 340"
+    },
+    {
+     "band": "By company",
+     "label": "Entergy Mississippi",
+     "value": "3,031 total — CT/CCGT 1,720; legacy gas/oil 793; coal 416; solar 102"
+    },
+    {
+     "band": "By company",
+     "label": "Entergy New Orleans",
+     "value": "669 total — CT/CCGT 642; solar 27"
+    },
+    {
+     "band": "By company",
+     "label": "Entergy Texas",
+     "value": "3,275 total — CT/CCGT 1,023; legacy gas/oil 2,001; coal 251"
+    },
+    {
+     "band": "By company",
+     "label": "System Energy",
+     "value": "1,251 nuclear (Grand Gulf, 90%)"
+    },
+    {
+     "band": "System",
+     "label": "Total",
+     "value": "24,621 — CT/CCGT 10,579; legacy gas/oil 6,115; nuclear 5,113; coal 1,981; hydro 74; solar 759"
+    },
+    {
+     "band": "System",
+     "label": "Peak",
+     "value": "Summer peak load for the Utility has averaged 22,168 MW over the previous decade"
+    },
+    {
+     "band": "System",
+     "label": "Wires",
+     "value": "16,128 circuit miles of high-voltage transmission; 107,838 circuit miles of distribution"
+    }
+   ]
+  },
+  {
+   "product": "Retail regulation by operating company (2026 Investor Day deck; Q2 2026 presentation; FY2025 10-K)",
+   "specs": [
+    {
+     "band": "Entergy Louisiana",
+     "label": "Customers / regulator / ROE / rate base",
+     "value": "1,115,000 / LPSC / 9.3%–10.1% (9.7% midpoint) / $16.7B (12/31/24 TY) + $0.2B TRM, $0.4B DRM, $0.8B RPCR"
+    },
+    {
+     "band": "Entergy Louisiana",
+     "label": "Construct",
+     "value": "FRP: base – historical test year… TRM and DRM riders – assets in service through 8/31 of filing year… generation rider – effective month following in service date; TRM/DRM caps $400M each for 2026"
+    },
+    {
+     "band": "Entergy Arkansas",
+     "label": "Customers / regulator / ROE / rate base",
+     "value": "738,000 / APSC / 9.15%–10.15% / $11.4B retail (2026 test yr)"
+    },
+    {
+     "band": "Entergy Arkansas",
+     "label": "Construct",
+     "value": "Forward test-year FRP (rate case required after 10 FRP filings); currently base rate case; riders incl. Generating Arkansas Jobs Act rider"
+    },
+    {
+     "band": "Entergy Mississippi",
+     "label": "Customers / regulator / ROE / rate base",
+     "value": "459,000 / MPSC / 10.25%–12.26% (11.25% performance-adjusted midpoint) / $4.6B (2025 forward TY)"
+    },
+    {
+     "band": "Entergy Mississippi",
+     "label": "Construct",
+     "value": "FRP with forward-looking features; performance-based bandwidth… maximum rate increase 4% of test year retail revenue; FRP interim facilities rate adjustment (CWIP return for data-center-serving facilities)"
+    },
+    {
+     "band": "Entergy Texas",
+     "label": "Customers / regulator / ROE / rate base",
+     "value": "538,000 / PUCT / 9.57% / $4.4B (12/31/21 TY) + $1.0B DCRF (thru 12/25), $0.4B TCRF"
+    },
+    {
+     "band": "Entergy Texas",
+     "label": "Construct",
+     "value": "Historical test year rate case (required every four years)… interim rate base riders: TCRF, DCRF, and GCRR"
+    },
+    {
+     "band": "Entergy New Orleans",
+     "label": "Customers / regulator / ROE / rate base",
+     "value": "209,000 / New Orleans City Council / 8.85%–9.85% (9.35% midpoint) / $1.2B + $0.1B RSHCR; 55% equity ratio for ratemaking"
+    },
+    {
+     "band": "System Energy",
+     "label": "Regulator / ROE / rate base",
+     "value": "FERC / 9.65% / $2.01B; Grand Gulf allocation E-AR 24% / E-MS 56% / E-NO 19%"
+    }
+   ]
+  },
+  {
+   "product": "Louisiana phase one — LPSC docket U-37425 (company filings; intervenors' January 2026 motion for the ESA terms)",
+   "specs": [
+    {
+     "band": "Generation",
+     "label": "Application",
+     "value": "three new combined cycle combustion turbine generation resources totaling 2,262 MW, each of which will be enabled for future carbon capture and storage"
+    },
+    {
+     "band": "Generation",
+     "label": "Units",
+     "value": "Franklin Farms Power Station Units 1 and 2 (Richland Parish) — combined cost approximately $2,387 million; Waterford 5 Power Station — estimated cost similar to the cost of each of Franklin Farms units"
+    },
+    {
+     "band": "Generation",
+     "label": "In service",
+     "value": "two of the facilities located in Richland Parish and expected to come online in late 2028; one at the existing Waterford site… online by the end of 2029"
+    },
+    {
+     "band": "Transmission",
+     "label": "500 kV",
+     "value": "Nearly 100 miles of 500kV transmission lines; Eight new 230kV transmission lines; Two Entergy-owned substations and six customer-owned substations; 500 kV line $546 million"
+    },
+    {
+     "band": "Renewables",
+     "label": "Sustainability rider",
+     "value": "Up to 1,500 megawatts of new solar and storage resources"
+    },
+    {
+     "band": "ESA (intervenors' reading)",
+     "label": "Term",
+     "value": "The ESA is a 15-year agreement with up to three 5-year extensions (i.e. up to 30 years in total)"
+    },
+    {
+     "band": "ESA (intervenors' reading)",
+     "label": "Minimum charges",
+     "value": "minimum monthly charges established in the ESA were designed to ensure that the payments received from Laidley are sufficient to recover the annual revenue requirements associated with the new electrical infrastructure during the term"
+    },
+    {
+     "band": "ESA (intervenors' reading)",
+     "label": "Security",
+     "value": "termination fees and other collateral; Parent Guaranty from Meta in force… throughout the fifteen-year original term"
+    },
+    {
+     "band": "Vote",
+     "label": "August 20, 2025",
+     "value": "4–1 (Lewis dissenting) on a contested settlement"
+    }
+   ],
+   "notes": "Company values from the December 2024 release, the FY2025 Form 10-K and the August 2025 approval release; ESA terms from the Alliance for Affordable Energy / Union of Concerned Scientists motion in the same docket; the vote from KNOE and UCS. The order text and the contracted megawatts were not retrievable."
+  },
+  {
+   "product": "Louisiana phase two — LPSC docket U-37882 (Q2 2026 10-Q; Beauchamp testimony)",
+   "specs": [
+    {
+     "band": "Generation",
+     "label": "Application",
+     "value": "seven new combined cycle combustion turbine generation resources totaling 5,278 MW at a total cost of approximately $12.9 billion, each of which will be enabled for future carbon capture and storage"
+    },
+    {
+     "band": "Generation",
+     "label": "Sites",
+     "value": "Four … near the customer site in north Louisiana (Richland Parish Units 1-4), while the remaining three units will be located near the existing Big Cajun site in Pointe Coupee Parish (Pointe Coupee Units 1-3)"
+    },
+    {
+     "band": "Generation",
+     "label": "Unit",
+     "value": "Seven new 754 MW 1x1 CCCT generators"
+    },
+    {
+     "band": "Generation",
+     "label": "In service",
+     "value": "various estimated in-service dates in 2030 and 2031"
+    },
+    {
+     "band": "Storage",
+     "label": "BESS",
+     "value": "three battery energy storage systems, including two that will be co-located with solar resources at the Cypress Harvest Solar Facility in Iberville Parish and the Bogalusa West Solar Facility in Washington Parish; BESS $0.7B + TBD"
+    },
+    {
+     "band": "Transmission",
+     "label": "500 kV",
+     "value": "a new 500 kV transmission line, from West Fork Creek to St. Landry, estimated to cost $1.4 billion; Transmission and related facilities $1.5B"
+    },
+    {
+     "band": "ESA",
+     "label": "Term",
+     "value": "20-year initial term with automatic 5-year renewals, 3-year non-renewal notice"
+    },
+    {
+     "band": "ESA",
+     "label": "Minimum charges",
+     "value": "MMCs sized to cover the full incremental cost to serve during the contract with true-up provisions"
+    },
+    {
+     "band": "ESA",
+     "label": "Early termination",
+     "value": "Customer to pay all unrecovered costs of assets or, if after in-service date, the net book value"
+    },
+    {
+     "band": "ESA",
+     "label": "Security",
+     "value": "guaranty from Meta, and credit default insurance or similar financial products"
+    },
+    {
+     "band": "ESA",
+     "label": "Other contributions",
+     "value": "more than $1 billion toward ELL's embedded cost of service… and… an additional $695 million toward storm and resilience costs"
+    },
+    {
+     "band": "Schedule",
+     "label": "LPSC",
+     "value": "7/31/26 staff/intervenor direct, 9/4/26 E-LA rebuttal, 10/7/26 hearing, Dec. 2026 targeted decision"
+    }
+   ],
+   "notes": "Load and storage megawatts are redacted in the public testimony. The LPSC voted 4–1 in April 2026 to adopt the expedited schedule (KPLC)."
+  },
+  {
+   "product": "Arkansas — Google special-rate contract and Cypress Solar (company filings; contract terms per the Arkansas Democrat-Gazette's records request)",
+   "specs": [
+    {
+     "band": "Resource",
+     "label": "Arkansas Cypress Solar",
+     "value": "600 MW solar photovoltaic array with a 350 MW battery energy storage system… interconnecting at… White Bluff substation. The estimated cost of the project is $1,602 million"
+    },
+    {
+     "band": "Resource",
+     "label": "Jefferson Power Station",
+     "value": "approximately 754 MW natural gas-fired combined cycle… Jefferson County… estimated cost… $1,602 million; in service 2029"
+    },
+    {
+     "band": "Resource",
+     "label": "Ironwood Power Station",
+     "value": "446 MW simple cycle natural gas combustion turbine at Lake Catherine, Hot Spring County; in service 2028"
+    },
+    {
+     "band": "Contract (press)",
+     "label": "Payments",
+     "value": "$526M ($443M accelerated + $83M minimum-demand payments) + $190M transmission"
+    },
+    {
+     "band": "Contract (press)",
+     "label": "Term and demand",
+     "value": "20-year term, successive 3-year auto-renewals; min-bill demand 480 MW, max 600 MW; service Feb 2027 → full Oct 2029"
+    },
+    {
+     "band": "Contract (press)",
+     "label": "Termination",
+     "value": "~$2B termination fee declining after year 13"
+    },
+    {
+     "band": "Regulatory",
+     "label": "APSC orders",
+     "value": "special rate contract approved (December 2025) but ratemaking treatment of Google's upfront payments denied; Cypress CECPN approved early 2026; Jefferson: need demonstrated but cost prudence not supported (January 2026)"
+    },
+    {
+     "band": "Rider",
+     "label": "Generating Arkansas Jobs Act",
+     "value": "$110.4 million of financing costs during construction for Ironwood, Jefferson and Cypress; $5.77/month (+4.17%) for 1,000 kWh residential, effective June 2026"
+    }
+   ],
+   "notes": "Company figures from the 10-K, 10-Q and releases; the contract figures are from the Arkansas Democrat-Gazette's reading of a FOIA'd contract marked confidential and do not appear in any company source."
+  },
+  {
+   "product": "Mississippi — pre-certified Advanced Power Stations (company pages; Synapse/Earthjustice report for the spend)",
+   "specs": [
+    {
+     "band": "Plants",
+     "label": "Delta Blues",
+     "value": "754 MW CCCT, Greenville, Washington Co., $1.2B, groundbreaking Nov. 7, 2024, in service May 2028"
+    },
+    {
+     "band": "Plants",
+     "label": "Vicksburg",
+     "value": "754 MW, Warren Co., $1.2B, in service Aug. 2028"
+    },
+    {
+     "band": "Plants",
+     "label": "Traceview",
+     "value": "754 MW, Ridgeland, Madison Co., in excess of $1 billion, in service Aug. 2029"
+    },
+    {
+     "band": "Statute",
+     "label": "Pre-certification",
+     "value": "pre-certification under Mississippi legislation providing for the pre-certification of construction of certain types of facilities that directly or indirectly provide electric service to customers who own certain data processing center projects… project costs will be reviewed for prudence by the MPSC following the completion of construction"
+    },
+    {
+     "band": "Rate treatment",
+     "label": "FRP",
+     "value": "interim rate adjustments, including the collection of a return on construction work in progress on a cash basis"
+    },
+    {
+     "band": "Spend (independent)",
+     "label": "Synapse",
+     "value": "total $3.884B pre-certified; $757.6M spent in 2025; residential customers paid $38M through Mar 2026, $74M by end-2026, $10.60/mo (~7%)"
+    }
+   ]
+  },
+  {
+   "product": "Turbine exclusivity agreement (FY2025 10-K; Q2 2026 10-Q)",
+   "specs": [
+    {
+     "band": "Scope",
+     "label": "Equipment",
+     "value": "power island equipment (PIE) and combustion turbines (CT) for combustion turbine generator set frames larger than 400 MWs"
+    },
+    {
+     "band": "Scope",
+     "label": "Cadence",
+     "value": "one manufacturing slot per quarter"
+    },
+    {
+     "band": "Minimum order",
+     "label": "History",
+     "value": "minimum order of 15 sets of PIE and two CTs to a minimum order of 21 sets of PIE and two CTs (Q3 2025); updating the minimum order commitment of PIE to 27 sets (Q2 2026)"
+    },
+    {
+     "band": "Fulfilled",
+     "label": "June 30, 2026",
+     "value": "10 sets of PIE and two CT slots… have been fulfilled"
+    }
+   ],
+   "notes": "The vendor is not named in the filings; the July 2026 MHI memorandum names Mitsubishi Power's M501JAC and Mitsubishi Power supplied Orange County and Delta Blues."
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$11,879.7M",
+      "expected": "Q4: $3.03B (Zacks)",
+      "verdict": "miss",
+      "result": "Q4 2024 revenue $2.74B against $3.03B expected; full-year figure per the FY2025 release's comparative column",
+      "kpi": "revenue",
+      "usdMillions": 11880,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$3.65 (net income $1,577M)",
+      "expected": "$3.63 (Zacks); Q4 $0.63",
+      "verdict": "beat",
+      "result": "Q4 2024 adjusted EPS $0.66 against $0.63; 2025 guidance initiated at $3.75–3.95; a 2-for-1 stock split effective December 13, 2024",
+      "kpi": "eps"
+     },
+     {
+      "name": "As-reported earnings per share",
+      "actual": "$2.45 (net income $1,056M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Weather-adjusted retail sales +3.7 percent, industrial +8.1 percent"
+     }
+    ],
+    "commentary": "The year the first single-customer structures were signed — the March 2024 Mississippi agreement with Amazon Web Services and the December 2024 Meta announcement in Louisiana. No full-year revenue consensus was located; the Q4 figures are the comparison."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$12,946.7M",
+      "expected": "Q4: $3.0B (Investing.com)",
+      "verdict": "miss",
+      "result": "Q4 2025 revenue $2.92B against about $3.0B; shares fell 1.2 percent pre-market to $98.99 per Investing.com",
+      "kpi": "revenue",
+      "usdMillions": 12947,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$3.91 (net income $1,758M; top half of the $3.85–3.95 range)",
+      "expected": "Q4: $0.54",
+      "verdict": "miss",
+      "result": "Q4 2025 EPS $0.51 against $0.54; 2026 guidance initiated at $4.25–4.45",
+      "kpi": "eps"
+     },
+     {
+      "name": "Retail sales",
+      "actual": "128,960 GWh, of which industrial 60,882 GWh (+7 percent); weather-adjusted retail +3.9 percent, industrial +6.7 percent",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per the FY2025 10-K and release"
+     },
+     {
+      "name": "Capital plan",
+      "actual": "About $43.5B for 2026–2029 in the 10-K's table ($11,615M / $12,965M / $10,655M / $8,235M)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Raised to $57B in April 2026 and $67B for 2026–2030 at the June Investor Day"
+     }
+    ],
+    "commentary": "A top-half year on guidance with a Q4 miss and a revenue shortfall; the plan, not the print, drove the year. The gas distribution businesses were sold on July 1, 2025. Adjusted and as-reported EPS coincided at $3.91."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$3.19B",
+      "expected": "$3.01B (Zacks); Investing.com's figures differ ($2.96B against $3.08B)",
+      "verdict": "beat",
+      "result": "Beat on the Zacks basis; shares rose 1.5 percent pre-market and had fallen about 7 percent by the end of May per Yahoo/Zacks"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$0.86 (net income $399M); as-reported $0.83",
+      "expected": "$0.89 (Zacks); $0.90 (Investing.com)",
+      "verdict": "miss",
+      "result": "A three-cent miss; the four-year 2026–2029 capital plan was raised to $57B, the equity plan to $6.6B, and 2027–2029 outlooks to $4.90–5.20, $5.55–5.85 and $6.25–6.55"
+     },
+     {
+      "name": "Industrial sales volume",
+      "actual": "+14.9 percent",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Data-center, primary-metals and chlor-alkali customers; operating cash flow $829M"
+     }
+    ],
+    "commentary": "The Meta phase-two agreement landed in the quarter and the plan grew more than 30 percent; the earnings miss was secondary. Utility Dive put the added generation at about $14B."
+   },
+   {
+    "period": "Q2 2026 (latest interim)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Operating revenues",
+      "actual": "$3.52B",
+      "expected": "$3.53B (Zacks); $3.61B (Investing.com)",
+      "verdict": "inline",
+      "result": "Effectively in line on the Zacks basis, a miss on Investing.com's; shares fell 1.85 percent pre-market to $110.25"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$1.03 (net income $483M; vs $1.05); as-reported $1.03",
+      "expected": "$0.94 (Zacks); $1.13 (Investing.com); $1.01 (MarketBeat)",
+      "verdict": "beat",
+      "result": "A beat on the Zacks and MarketBeat bases and a miss on Investing.com's; 2026 guidance of $4.25–4.45 affirmed; Utility segment $626M / $1.34; parent and other $(143)M; diluted shares now about 472M after the May forward sale with a stated share-count drag of $(0.20)–(0.25)"
+     },
+     {
+      "name": "Retail sales",
+      "actual": "Weather-adjusted retail +5.7 percent, industrial +9.9 percent",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Operating cash flow $1.9B; June 22 forward settlement of 8.7M shares for $672M"
+     },
+     {
+      "name": "Turbine exclusivity",
+      "actual": "Minimum order raised to 27 power-island sets; 10 sets and two turbine slots fulfilled at June 30, 2026",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per the Q2 2026 10-Q"
+     }
+    ],
+    "commentary": "Three trackers, three verdicts — the dossier carries all of them. The next report is expected November 4, 2026 per Investing.com, MarketBeat and TipRanks, with a Q3 consensus around $1.65–1.66; the company had not announced the date as of September 3, 2026 (its cadence is late October: October 29, 2025; October 29 and July 29, 2026 for the two most recent calls)."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-09-03",
+   "category": "regulatory",
+   "headline": "Arkansas Democrat-Gazette: APSC staff testified that 'Google is paying well below the full cost of this resource' on Cypress Solar; the November 17, 2026 hearing is mostly closed; Entergy sought to stop publication of the FOIA'd contract",
+   "read": "The first public look inside a one-customer contract in the system, and the regulator's own staff disputing the customer-pays claim.",
+   "source": "https://www.nwaonline.com/news/2026/sep/03/googles-contribution-was-at-issue-in-arkansas/"
+  },
+  {
+   "date": "2026-08-31",
+   "category": "customer",
+   "headline": "Arkansas Democrat-Gazette reads the Google contract: $526M ($443M accelerated, $83M minimum-demand) plus $190M for transmission, a 20-year term, 480 MW minimum against 600 MW maximum, a ~$2B termination fee declining after year 13",
+   "read": "The terms the company's 'Fair Share Plus' describes in categories, in dollars — from a records request rather than a filing.",
+   "source": "https://www.nwaonline.com/news/2026/aug/31/google-to-pay-entergy-arkansas-526-million-for/"
+  },
+  {
+   "date": "2026-08-27",
+   "category": "corporate",
+   "headline": "Entergy says customers are beginning to see benefits from the data-center agreements — about $7B over two decades; Mississippi residential bills avoided a $4.87 monthly increase in July; Meta to pay about 10 percent of Entergy Louisiana's storm and resiliency charges",
+   "read": "The company's political instrument: customer-funded plants presented as bill relief, with the storm line named explicitly.",
+   "source": "https://www.entergy.com/news/entergy-customers-begin-seeing-benefits-from-data-center-agreements-fair-share-plus-pledge-keeps-money-in-customers-pockets"
+  },
+  {
+   "date": "2026-08-20",
+   "category": "capacity",
+   "headline": "Entergy Arkansas breaks ground on Ironwood Power Station (446 MW simple cycle, Lake Catherine, in service 2028)",
+   "read": "The first new Arkansas gas unit under construction; APSC staff had argued it was not a designated 'strategic investment' under the new rider.",
+   "source": "https://www.entergy.com/news/entergy-arkansas-breaks-ground-on-ironwood-power-station"
+  },
+  {
+   "date": "2026-08-12",
+   "category": "regulatory",
+   "headline": "LPSC votes 3–1 to reject a hearing officer's ruling that would have compelled Meta to disclose jobs, economic and load data sought by intervenors in the phase-one docket",
+   "read": "The transparency cost of the one-customer certificate: the commission declined to make the customer's numbers public.",
+   "source": "https://www.wwno.org/politics/2026-08-12/louisiana-psc-kills-ruling-that-would-force-meta-to-turn-over-key-data-center-information"
+  },
+  {
+   "date": "2026-08-05",
+   "category": "regulatory",
+   "headline": "Sierra Club challenges the Meta campus's minor-source air permit (31 emergency diesel generators, 44 gas boilers; NOx at 96.83 tons a year against a 100-ton major-source threshold); the ten Entergy turbines are permitted separately",
+   "read": "The campus's own permit and the utility's plant permits are two proceedings; a seller of backup generation reads the first.",
+   "source": "https://www.magnoliareporter.com/news_and_business/north_louisiana/article_7210197d-6960-4b6b-8542-5d7c4a4b418e.html"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "financial",
+   "headline": "Q2 2026: adjusted EPS $1.03 (Zacks consensus $0.94, Investing.com $1.13, MarketBeat $1.01); revenue $3.52B; industrial volume +9.9 percent; 2026 guidance of $4.25–4.45 affirmed; exclusivity minimum raised to 27 power-island sets; shares fell about 1.8 percent pre-market",
+   "read": "A beat or a miss depending on the tracker; the operating story was the turbine slots and the diluted share count after the May forward sale.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000279/earningsrelease2q26_ex991.htm"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "partnership",
+   "headline": "Entergy and MHI Group outline a carbon-capture partnership around Mitsubishi Power's M501JAC turbines with a goal of halving carbon-capture cost",
+   "read": "Names the OEM the exclusivity agreement does not, and the carbon-capture readiness every certificate promises.",
+   "source": "https://www.entergy.com/news/entergy-and-mhi-group-outline-collaborative-partnership-designed-to-accelerate-commercialization-and-affordability-around-carbon-capture-solutions"
+  },
+  {
+   "date": "2026-07-10",
+   "category": "corporate",
+   "headline": "Entergy publishes an FAQ answering whether Amazon's data centers are raising Mississippi electricity bills: customers 'are not subsidizing data centers'",
+   "read": "A direct reply to the Synapse/Earthjustice and 404 Media accounts of pre-certified plant costs on residential bills.",
+   "source": "https://www.entergy.com/blog/faq-are-amazon-data-centers-raising-electricity-bills"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "financial",
+   "headline": "Investor Day: $67B 2026–2030 capital plan (about $31B of new generation, $10B transmission, $7B renewables and storage), 2030 adjusted EPS outlook $7.05–7.35, greater than 8 percent growth through 2035, 'Planning for 24 GW build out', '10 CCCTs secured for growth', data-center pipeline of 7–12 GW beyond the base case",
+   "read": "The largest plan in the company's history, sized to campuses the company itself calls potential.",
+   "source": "https://s201.q4cdn.com/714390239/files/doc_presentations/2026/Jun/09/Entergy-2026-Investor-Day.pdf"
+  },
+  {
+   "date": "2026-05-18",
+   "category": "market",
+   "headline": "Alliance for Affordable Energy report: the LPSC rejected calls to investigate the Meta campus's move into an 80/20 Blue Owl financing joint venture; the lease structure could let Meta exit as early as 2033",
+   "read": "The counterparty behind the phase-one guaranty changed after the vote; the intervenors' question is whether the guaranty still binds the customer.",
+   "source": "https://www.all4energy.org/wp-content/uploads/2026/05/2026-05-18-Data-Centers-Financing-Energy-Overview-Report.pdf"
+  },
+  {
+   "date": "2026-05-05",
+   "category": "financial",
+   "headline": "Entergy prices a $2.175B forward equity offering (19.2M shares at $113.00)",
+   "read": "Equity for a plan that grew $14B in a quarter; the forward settles by April 2028.",
+   "source": "https://www.entergy.com/news/entergy-corporation-announces-pricing-of-common-stock-offering-with-a-forward-component-2"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "financial",
+   "headline": "Utility Dive: the Meta phase-two agreement adds about $14B to the capital plan ($57B for 2026–2029, up more than 30 percent); Latitude Media had ranked Entergy's 15.5 GW of executed ESAs the largest disclosed block among nineteen utilities",
+   "read": "The independent reading of the plan's step-up and of the ESA base beneath it.",
+   "source": "https://www.utilitydive.com/news/new-generation-adds-12b-entergy-capital-plan/818790/"
+  },
+  {
+   "date": "2026-04-29",
+   "category": "financial",
+   "headline": "Q1 2026: adjusted EPS $0.86 against Zacks consensus of $0.89; four-year capital plan raised to $57B; 2027–2029 outlooks raised; industrial volume +14.9 percent; the APSC approves Cypress Solar with its 350 MW battery",
+   "read": "A cents miss beside the largest plan step-up in the company's history.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000217/earningsrelease1q26_ex991.htm"
+  },
+  {
+   "date": "2026-04-23",
+   "category": "capacity",
+   "headline": "Orange County Advanced Power Station achieves first fire (1,215 MW; Mitsubishi Power, Sargent & Lundy and TIC)",
+   "read": "The first of the ten combined-cycle units to reach a milestone; in service Q3 2026.",
+   "source": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone"
+  },
+  {
+   "date": "2026-04-15",
+   "category": "regulatory",
+   "headline": "LPSC votes 4–1 to fast-track the phase-two application so it can decide in December 2026 without a hearing officer's recommendation; Commissioner Francis: 'I'd like to put the lightning speed to this one'",
+   "read": "Eight months from filing to decision on seven combined-cycle units — the Lightning Amendment used at full scale.",
+   "source": "https://www.kplctv.com/2026/04/15/louisiana-psc-aproves-fast-track-entergy-21b-proposal-tied-meta-data-center/"
+  },
+  {
+   "date": "2026-04-09",
+   "category": "customer",
+   "headline": "Amazon Web Services announces an $11B expansion in Madison County and a $1B Clinton (Hinds County) project; Entergy Mississippi signs a fourth large-customer agreement",
+   "read": "The Mississippi plants pre-certified for the first two campuses now serve four.",
+   "source": "https://www.entergy.com/blog/amazon-expands-and-entergy-mississippi-stands-ready-to-deliver-benefits-for-all-our-customers"
+  },
+  {
+   "date": "2026-04-01",
+   "category": "capacity",
+   "headline": "Entergy Texas breaks ground on Legend (754 MW combined cycle, Port Arthur) and Lone Star (453 MW peaker) for mid-2028; with Orange County, more than 2.4 GW of new capacity by 2028 (month-dated; day not stated)",
+   "read": "Texas growth built under conventional certificates and a hard cost cap.",
+   "source": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star"
+  },
+  {
+   "date": "2026-03-27",
+   "category": "customer",
+   "headline": "Entergy Louisiana signs a second agreement with Meta: seven combined-cycle units of more than 5,200 MW, about 240 miles of 500 kV, batteries at three sites, nuclear uprate funding, up to 2,500 MW of renewables from the customer, a 20-year structure, $2B of stated customer savings — the first project under the Lightning Amendment",
+   "read": "The single largest generation filing in the company's history, for one customer, before the first phase's plants are built.",
+   "source": "https://www.entergy.com/news/entergy-louisiana-announces-a-new-agreement-with-meta-that-will-deliver-an-additional-2b-in-customer-savings"
+  },
+  {
+   "date": "2026-03-06",
+   "category": "regulatory",
+   "headline": "Entergy Arkansas files its first Generating Arkansas Jobs Act rider update: $110.4M of construction financing cost for Ironwood, Jefferson and Cypress, $5.77 a month for a 1,000 kWh residential customer from June 2026",
+   "read": "CWIP recovery by statute — the Arkansas answer to regulatory lag, and the line critics point to.",
+   "source": "https://www.entergy.com/news/entergy-arkansas-files-annual-strategic-investment-update"
+  },
+  {
+   "date": "2026-03-05",
+   "category": "corporate",
+   "headline": "Entergy issues its 'Fair Share Plus' pledge — seven contracting principles — and claims about $5B of customer savings over 20 years from data-center agreements in three states",
+   "read": "The company-wide framework for one-customer plants, stated as principles rather than tariff terms.",
+   "source": "https://www.entergy.com/news/5b-in-customer-savings-delivered-by-data-center-agreements-issues-fair-share-plus-pledge"
+  },
+  {
+   "date": "2026-02-27",
+   "category": "regulatory",
+   "headline": "Entergy Arkansas files its first base rate case since 2016 ($45M, 9.9 percent proposed ROE; decision targeted December 2026)",
+   "read": "The formula plan's ten-filing limit forces a contested case in the year the Arkansas data-center plants are litigated.",
+   "source": "https://www.entergy.com/news/entergy-arkansas-files-rate-review-with-arkansas-public-service-commission"
+  },
+  {
+   "date": "2026-02-12",
+   "category": "financial",
+   "headline": "FY2025: adjusted EPS $3.91 (guidance $3.85–3.95; Q4 $0.51 against $0.54 consensus); revenue $12.95B; 2026 guidance $4.25–4.45",
+   "read": "A top-half year on guidance and a Q4 miss; the plan, not the print, moves the stock.",
+   "source": "https://www.sec.gov/Archives/edgar/data/65984/000006598426000164/earningsrelease4q25_ex991.htm"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "policy",
+   "headline": "UCS: the LPSC's December 2025 'Lightning Amendment' — a 15-year minimum ESA, at least 50 percent of new infrastructure cost on the customer, an eight-month target, the solicitation requirement waived — could leave ratepayers funding up to 75 percent of a plant's capital where a 30-year life exceeds a 15-year contract",
+   "read": "The independent arithmetic on the term-versus-life gap the dossier's judgments turn on.",
+   "source": "https://blog.ucs.org/paul-arbaje/louisianas-new-policy-allows-even-more-data-center-costs-to-be-passed-to-ratepayers/"
+  },
+  {
+   "date": "2026-02-06",
+   "category": "regulatory",
+   "headline": "Entergy Louisiana files to certify Waterford 6 and Westlake power stations — two 754 MW combined-cycle units at $2,027M and $2,091M for July and October 2030 — with third-party financing considered for Waterford 6",
+   "read": "Two more units for Louisiana growth outside the Meta dockets; decision targeted December 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/65984/000006598426000174/etr-20251231.htm"
+  },
+  {
+   "date": "2026-01-14",
+   "category": "legal",
+   "headline": "Alliance for Affordable Energy and UCS move for an LPSC investigation: Meta moved the campus into a Blue Owl joint venture registered the day of the vote; 'Meta is no longer Laidley's parent, so the only signed parent guaranty is from an entity that has no connection to the customer'",
+   "read": "The collateral finding in a one-customer order depends on who owns the customer; the intervenors say that changed after the order.",
+   "source": "https://www.all4energy.org/wp-content/uploads/2026/01/2026-01-14-U-37425-AAE-UCS-Mtn-for-Investigation.pdf"
+  },
+  {
+   "date": "2026-01-01",
+   "category": "regulatory",
+   "headline": "APSC finds Entergy Arkansas demonstrated need for the Jefferson combined-cycle unit but 'had not met its burden' on the prudence of its costs; Winter Storm Fern costs about $450M, mainly in Louisiana and Mississippi (month-dated; day not stated)",
+   "read": "The Arkansas certificate kept its teeth; the storm sets the affordability baseline for the year's dockets.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000283/etr-20260630.htm"
+  },
+  {
+   "date": "2025-12-19",
+   "category": "policy",
+   "headline": "LPSC adopts the Lightning Amendment 4–1 (Lewis dissenting): certification without a solicitation for signed loads with in-service dates within five years, on a 15-year minimum contract",
+   "read": "The rule that converts the phase-one exception into the Louisiana process.",
+   "source": "https://www.kalb.com/2025/12/19/louisiana-creates-fast-track-approve-power-plants-data-centers-big-electricity-users/"
+  },
+  {
+   "date": "2025-12-17",
+   "category": "customer",
+   "headline": "Hut 8 selects Entergy Louisiana for a $10B AI campus at River Bend, West Feliciana Parish — 330 MW initial utility capacity, scalable to 1,000 MW, Fluidstack as tenant with a Google backstop, operations from Q2 2027",
+   "read": "A second Louisiana hyperscale load, sized in utility megawatts, with no plant filed for it yet.",
+   "source": "https://www.entergy.com/news/hut-8-selects-entergy-southeast-louisiana-for-10-billion-artificial-intelligence-data-center"
+  },
+  {
+   "date": "2025-12-12",
+   "category": "capacity",
+   "headline": "Entergy Texas advances its STEP Ahead plan: $137M of resilience work and a $200M Texas Energy Fund grant",
+   "read": "State money for Texas wires in a MISO territory.",
+   "source": "https://www.entergy.com/news/entergy-texas-advances-step-ahead-plan-to-meet-southeast-texas-growing-power-needs"
+  },
+  {
+   "date": "2025-12-03",
+   "category": "financial",
+   "headline": "Entergy Louisiana files to acquire the 1,263 MW Cottonwood combined-cycle plant in Deweyville, Texas for about $1.8B including upgrades, targeting January 2027 (docket U-37801)",
+   "read": "A brownfield purchase for Louisiana capacity — faster than any new unit.",
+   "source": "https://s201.q4cdn.com/714390239/files/doc_financials/2026/q2/2Q26-Presentation.pdf"
+  },
+  {
+   "date": "2025-12-01",
+   "category": "capacity",
+   "headline": "Franklin Farms Power Station 1 and 2 break ground (about 1,500 MW, Richland Parish, late 2028); the company states Meta funds the full interconnection cost and is expected to save customers about $650M over 15 years",
+   "read": "The first one-customer plants under construction; EPC and turbine OEM unnamed.",
+   "source": "https://www.entergy.com/news/entergy-louisiana-breaks-ground-on-new-state-of-the-art-generation-facilities-to-power-reliability-growth-and-innovation"
+  },
+  {
+   "date": "2025-12-01",
+   "category": "financial",
+   "headline": "Investors buy the in-process Legend Power Station from Entergy Texas for $359M and will spend up to $1.45B to complete it under a triple-net build-to-suit lease from first synchronization in early 2028 (month-dated; day not stated)",
+   "read": "An off-balance-sheet structure for a rate-case jurisdiction with a hard cost cap.",
+   "source": "https://www.sec.gov/Archives/edgar/data/65984/000006598426000174/etr-20251231.htm"
+  },
+  {
+   "date": "2025-11-20",
+   "category": "market",
+   "headline": "UCS: the phase-one plants depreciate over 30 years against a 15-year contract, leaving roughly half the initial capital exposed; Entergy estimated about $178M a year of new shareholder profit from the project",
+   "read": "The critics' arithmetic on the term-versus-life gap, from the docket record.",
+   "source": "https://blog.ucs.org/paul-arbaje/whats-next-after-louisianas-gas-plant-approval-for-meta-data-center/"
+  },
+  {
+   "date": "2025-11-06",
+   "category": "capacity",
+   "headline": "Entergy Arkansas launches the Jefferson Power Station campaign: 754 MW combined cycle, $1.6B, in service 2029",
+   "read": "The Arkansas gas unit for the Google load — the one whose cost the commission has not yet found prudent.",
+   "source": "https://www.entergy.com/news/jefferson-power-station-powering-arkansas-today-and-into-the-next-generation"
+  },
+  {
+   "date": "2025-11-03",
+   "category": "financial",
+   "headline": "Utility Dive: the data-center pipeline rises to 7–12 GW from 5–10 GW; 4.5 GW more of power-island equipment reserved; the capital plan at $41B",
+   "read": "The turbine commitment tracks the pipeline, not the contracts.",
+   "source": "https://www.utilitydive.com/news/gas-continues-to-dominate-entergy-plans-as-data-center-pipeline-grows/804521/"
+  },
+  {
+   "date": "2025-10-29",
+   "category": "financial",
+   "headline": "Q3 2025: EPS $1.53 against Zacks consensus of $1.46; guidance narrowed to $3.85–3.95; the power-island agreement expanded by 4.5 GW",
+   "read": "Beat, and the first quarter the exclusivity agreement was described as a growth instrument.",
+   "source": "https://www.sec.gov/Archives/edgar/data/65984/000006598425000126/earningsrelease3q25_ex991.htm"
+  },
+  {
+   "date": "2025-10-22",
+   "category": "market",
+   "headline": "Bisnow: Meta moves the Louisiana campus into a $27B joint venture with Blue Owl (80/20), a four-year initial lease with extensions and a residual-value guarantee",
+   "read": "The customer's financing changed after the certificate; the utility's counterparty did not, on paper.",
+   "source": "https://www.bisnow.com/national/news/data-center-capital-markets/meta-pushes-its-largest-data-center-project-off-its-books-with-27b-joint-venture-131490"
+  },
+  {
+   "date": "2025-10-03",
+   "category": "regulatory",
+   "headline": "PUCT approves SETEX — a 145-mile 500 kV Babel–Running Bear line, about $1.4B, energized by end-2029",
+   "read": "Texas wires on a four-year clock.",
+   "source": "https://www.utilitydive.com/news/texas-puc-entergy-500-kv-setex-transmission-project/801900/"
+  },
+  {
+   "date": "2025-10-02",
+   "category": "customer",
+   "headline": "Entergy Arkansas to power Google's $4B West Memphis campus; Google 'will cover the full energy costs'; 600 MW solar and 350 MW storage filed with the APSC; $1.1B of stated net benefits",
+   "read": "The Arkansas one-customer structure: a special-rate contract, a solar-plus-storage resource and a gas unit certified separately.",
+   "source": "https://www.entergy.com/news/entergy-arkansas-powers-googles-4b-investment-in-the-state"
+  },
+  {
+   "date": "2025-09-24",
+   "category": "capacity",
+   "headline": "Superpower Mississippi grid upgrade expanded by $300M to $1B with a 50 percent outage-reduction target",
+   "read": "Resilience spend beside the data-center plants — the affordability baseline in Mississippi.",
+   "source": "https://www.entergy.com/news/entergy-mississippi-launches-largest-most-comprehensive-grid-upgrade-in-company-history-superpower-mississippi"
+  },
+  {
+   "date": "2025-09-11",
+   "category": "regulatory",
+   "headline": "PUCT approves Legend (754 MW, $1.6B) and Lone Star (453 MW, $799M) with a $2.4B hard cap; the commission chair says regulators were 'backed into a corner' by the lack of a solicitation",
+   "read": "An appointed commission certifying without an RFP and capping the cost — the Texas version of the Lightning Amendment.",
+   "source": "https://www.utilitydive.com/news/texas-regulators-approve-2-entergy-gas-plants-with-24b-hard-cap/759981/"
+  },
+  {
+   "date": "2025-08-20",
+   "category": "regulatory",
+   "headline": "LPSC approves the phase-one generation and transmission for Meta's Richland Parish campus 4–1 on a contested settlement: two units in Richland Parish for late 2028, one at Waterford for 2029, up to 1,500 MW of solar; 'Meta is paying its share of the costs'",
+   "read": "The order that names the customer — the template for everything filed since.",
+   "source": "https://www.entergy.com/news/entergy-louisiana-receives-lpsc-approval-for-major-infrastructure-investments-to-support-metas-data-center-and-improve-reliability"
+  },
+  {
+   "date": "2025-07-30",
+   "category": "financial",
+   "headline": "Q2 2025: EPS $1.05; guidance affirmed; the natural-gas distribution businesses sold on July 1",
+   "read": "Portfolio simplified to electric before the plan step-ups.",
+   "source": "https://www.entergy.com/news/entergy-reports-second-quarter-2025-financial-results"
+  },
+  {
+   "date": "2025-06-26",
+   "category": "capacity",
+   "headline": "Entergy Texas proposes SETEX (up to 160 miles, 2029) and a Cypress–Legend 500 kV line (up to 49 miles, 2028)",
+   "read": "The Texas wires the 2028 plants need.",
+   "source": "https://www.entergy.com/news/entergy-texas-proposes-major-transmission-investments-to-power-southeast-texas-growth"
+  },
+  {
+   "date": "2025-04-11",
+   "category": "capacity",
+   "headline": "Entergy Mississippi selects a Ridgeland site for the third advanced power station (Traceview)",
+   "read": "The third pre-certified plant for the Amazon campuses.",
+   "source": "https://www.entergy.com/news/entergy-mississippi-selects-new-power-generation-site-prioritizes-community-needs"
+  },
+  {
+   "date": "2025-03-27",
+   "category": "leadership",
+   "headline": "Kimberly Cook-Nelson named chief operating officer and John Dinelli chief nuclear officer, effective May 1, 2025, on Pete Norgeot's retirement",
+   "read": "The COO who ran nuclear now runs the gas build.",
+   "source": "https://www.entergy.com/news/entergy-board-of-directors-appoints-new-chief-operating-and-chief-nuclear-officers"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Entergy has made the single-customer certificate its operating model, and that the model's economics rest on the customer's contract rather than on any system-need finding. Basis: the phase-one Louisiana order certified 2,262 MW for a named Meta subsidiary on an ESA whose minimum charges are 'designed to ensure that the payments received from Laidley are sufficient to recover the annual revenue requirements' (intervenors' motion quoting the agreement); the phase-two application repeats the structure for 5,278 MW with a 20-year term; Mississippi's three plants are pre-certified by statute for the Amazon campuses; Arkansas's Cypress and Jefferson resources exist for the Google special-rate contract. Latitude Media's April 2026 comparison ranked the company's 15.5 GW of executed ESAs the largest disclosed block among nineteen utilities.",
+  "(High confidence) We assess that the turbine exclusivity agreement, not the certificates, is the company's competitive moat for 2028–2031 in-service dates, and that it is also its largest unhedged commitment. Basis: the 10-K and 10-Q describe a quarterly manufacturing slot for frames above 400 MW with the minimum order raised from 15 to 21 to 27 power-island sets as the campus filings multiplied, 10 sets fulfilled by June 2026, and '10 CCCTs secured for growth' on the Investor Day deck; the pipeline those slots are sized against is described by the company as 7–12 GW of potential data-center additions beyond the base case, and the contributions in aid of construction and advance payments in every ESA are the stated hedge. The phase-one testimony acknowledged no formal competitive solicitation on the generator equipment (per a secondary summary of the record).",
+  "(High confidence) We assess that the formula rate plans in Louisiana, Arkansas and Mississippi make the cost of a customer-funded plant visible to customers within a year of service, and that this is why the company's communications have shifted from 'the customer pays' to published bill reductions. Basis: the August 2026 releases quantify avoided increases ($4.87 a month in Mississippi in July 2026) and total savings of about $7B; the Arkansas rider put $5.77 a month on residential bills in June 2026 for financing cost during construction; and the Synapse/Earthjustice and 404 Media accounts put Mississippi residential payments at $38M through March 2026 — the same mechanism read from the other side.",
+  "(Moderate confidence) We assess that the term-versus-life gap is the structural risk regulators will litigate next, and that the company has priced it as a renewal option rather than a stranded cost. Basis: a 15-year phase-one ESA (three five-year extensions, one-year notice) and a 20-year phase-two ESA (five-year renewals, three-year notice) against combined-cycle units the company depreciates over decades; UCS's estimate that ratepayers could fund up to 75 percent of a plant's capital where a 30-year life exceeds a 15-year contract; the intervenors' unanswered question about the phase-one parent guaranty after the Blue Owl joint venture; and the Arkansas staff's testimony that Google is paying 'well below the full cost' of Cypress. The moderate confidence reflects that no commission has yet ordered a remedy — Louisiana declined to investigate, Arkansas's hearing is in November 2026.",
+  "(Moderate confidence) We assess that the storage lane is the one procurement channel in the system a new supplier can enter, and that it is small and slow relative to the gas program. Basis: the exclusivity agreement covers turbines and power islands, not batteries; the operating-company RFPs (a 2025 Louisiana BESS RFP with selections delayed as of August 2026, a 2026 Mississippi renewables-and-storage RFP, Arkansas renewables-and-storage RFPs) and the utility-owned Cypress project (350 MW / 1,400 MWh, developer Orion, EPC Wanzek per trade press) are the entry points; no battery supplier is named on any Entergy-owned project in any source found; and the listed storage totals about 1 GW against roughly 8 GW of approved gas units. The Investor Day's '5 GW to be identified' in renewables and storage is the upside.",
+  "(Moderate confidence) We assess that the Louisiana commission's 4–1 pattern — the same majority and the same dissent on the phase-one order, the Lightning Amendment and the phase-two fast-track — makes the December 2026 phase-two decision a formality on the merits and a live question on conditions. Basis: the votes as reported by KNOE, KALB and KPLC; the August 2026 3–1 vote declining to compel Meta's disclosures; and the intervenor testimony schedule (July 31, hearing October 7, decision December 2026). The moderate confidence reflects the size of the ask — $12.9B of plants for one customer, more than a quarter of the system's decade-average peak — and an elected commission's sensitivity to bills in an election cycle.",
+  "(Low confidence) We assess that the vendor in the exclusivity agreement is Mitsubishi Power, on the basis that Mitsubishi supplied the Orange County and Delta Blues units, that the July 2026 MHI memorandum names the M501JAC, and that no second J-class OEM appears in any filing or release. No source states it; treat as inference.",
+  "Collection gap: the contracted megawatts of both Meta ESAs and of the Mississippi and Arkansas agreements are redacted or unpublished; the LPSC order text for U-37425 was not retrievable, so its terms rest on the company's filings and the intervenors' quotations; the turbine OEM and EPC for every Louisiana, Arkansas and Mississippi unit except Orange County and Delta Blues are unnamed; no battery supplier is named on any owned project; the Q3 2026 earnings date is unannounced. INDICATORS TO WATCH. October 7, 2026 — LPSC hearing on the phase-two application, and December 2026 — the commission's vote: approval with the company's terms intact would confirm Judgments 1 and 6; conditions on the term, the after-term allocation or the parent guaranty would move Judgment 4 from moderate to high. November 4, 2026 (expected, not company-confirmed) — Q3 2026 results: a further increase in the exclusivity minimum or a new 'secured' unit count would confirm Judgment 2's direction; a first named BESS supplier would resolve Judgment 5's gap. November 17, 2026 — Arkansas PSC hearing on the Google contract's cost allocation, and December 2026 — the Arkansas base rate case decision: a finding against the special-rate treatment would be the first commission remedy on the term-versus-life gap. Q3 2026 — Mississippi storm securitization filing; Q3 2026 — Orange County in service and its $150.4M rider; Q2 2027 — Hut 8's first 330 MW and whatever plant is filed for the campus's growth to 1,000 MW. Any release naming the Franklin Farms or phase-two turbine OEM resolves Judgment 7."
+ ],
+ "relationships": [
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-12",
+   "scale": "2,262 MW of generation certified (phase one); 5,278 MW applied for (phase two)",
+   "via": "Electric service agreements — Richland Parish campuses (LPSC dockets U-37425 and U-37882)",
+   "note": "Meta subsidiaries (Laidley LLC, Evest LLC) are the customers for whom Entergy Louisiana certified three combined-cycle units in 2025 and has applied to certify seven more, under 15- and 20-year electric service agreements with parent guaranties.",
+   "context": "The company's December 2024 release announced Meta's $10B Richland Parish data center and three combined-cycle units of 2,260 MW; the LPSC approved the phase-one application on August 20, 2025 with 'Meta … paying its share of the costs'. The Q2 2026 10-Q records the March 2026 ESA with Evest LLC and the application for seven units totaling 5,278 MW at about $12.9B, with contributions in aid of construction, minimum monthly bills, early-termination obligations and 'a guaranty from Meta Platforms, Inc.'; the Beauchamp testimony gives the 20-year term with five-year renewals and three-year notice. Intervenors' January 2026 motion questioned whether the phase-one parent guaranty survived Meta's transfer of the campus into a Blue Owl financing joint venture. The contracted megawatts are redacted in the LPSC filings; the company states Meta's sustainability commitments at 1,500 MW (phase one) and up to 2,500 MW (phase two) of renewables and storage, and that Meta will pay about 10 percent of Entergy Louisiana's storm and resiliency charges.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000283/etr-20260630.htm"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-10",
+   "scale": "$4B campus; 600 MW solar + 350 MW storage built for it (press: 480 MW minimum, 600 MW maximum)",
+   "via": "Special-rate contract (Altitude, LLC) — West Memphis, Arkansas; Cypress Solar",
+   "note": "Entergy Arkansas serves Google's West Memphis campus under a special-rate contract approved in December 2025 and is building the 600 MW Cypress Solar facility with a 350 MW battery for it; Google also backstops Fluidstack's tenancy at Hut 8's Entergy-served River Bend campus.",
+   "context": "The company's October 2, 2025 release states Google 'will cover the full energy costs associated with powering the facility' and that Entergy Arkansas filed a 600 MW solar and 350 MW storage resource with $1.1B of stated net benefits and a $25M Energy Impact Fund. The 10-K records the September 2025 application for a long-term special rate contract between Altitude, LLC and Entergy Arkansas, approved in December 2025 with the requested ratemaking treatment of Google's upfront payments denied. The Arkansas Democrat-Gazette's August–September 2026 reading of the FOIA'd contract adds $526M of payments plus $190M for transmission over 20 years, a 480 MW minimum-bill demand and a termination fee of about $2B, with APSC staff testifying that Google 'is paying well below the full cost of this resource' — figures absent from company sources. The Hut 8 release states Fluidstack's River Bend lease carries a financial backstop from Google.",
+   "source": "https://www.entergy.com/news/entergy-arkansas-powers-googles-4b-investment-in-the-state"
+  },
+  {
+   "slug": "amazon",
+   "type": "customer",
+   "status": "active",
+   "since": "2024-03",
+   "scale": "three 754 MW plants pre-certified (about $3.9B including solar per Synapse)",
+   "via": "Large customer supply and service agreements — Madison, Warren and Hinds counties, Mississippi",
+   "note": "Entergy Mississippi signed large-customer supply and service agreements with Amazon Web Services campuses in March 2024, February 2025 and April 2026 and is building the Delta Blues, Vicksburg and Traceview combined-cycle plants under Mississippi's pre-certification statute to serve them.",
+   "context": "The Q2 2026 10-Q states that the March 2024 agreement serves two Madison County campuses, the February 2025 agreement a Warren County campus and the April 2026 expansion, and that an April 2026 agreement serves a Hinds County campus; the company's April 2026 blog puts Amazon's Mississippi investment at $25B. The plants are pre-certified with prudence reviewed after construction and a cash return on construction work in progress; Synapse's report for Earthjustice puts the pre-certified spend at about $3.88B and residential payments at $38M through March 2026, which the company's July 2026 FAQ disputes. Amazon's Louisiana campuses (Bossier and Caddo parishes) are in SWEPCO's territory, not Entergy's, per the Alliance for Affordable Energy.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000283/etr-20260630.htm"
+  },
+  {
+   "slug": "dominion-energy",
+   "type": "competitor",
+   "status": "active",
+   "via": "Large-load contracting design",
+   "note": "Dominion's GS-5 class binds data-center customers through a published tariff; Entergy binds them through single-customer electric service agreements and certificates that name the customer — the two ends of the regulated-contracting spectrum in this file.",
+   "context": "Dominion Energy Virginia's GS-5 class publishes 85 percent transmission-and-distribution and 60 percent generation minimums with 14-year terms, effective January 2027; Entergy's contracts state 15- to 20-year terms with minimum bills sized to the incremental revenue requirement, filed under seal, and its plants are certified for the named customer under Louisiana's Lightning Amendment, Arkansas's Act 373 clock and Mississippi's pre-certification statute. The two utilities do not compete for load; they set the terms hyperscalers compare when choosing a state.",
+   "source": "https://s201.q4cdn.com/714390239/files/doc_presentations/2026/Jun/09/Entergy-2026-Investor-Day.pdf"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Louisiana PSC 'Lightning Amendment' and large-load guidelines",
+   "status": "in-effect",
+   "effectiveDate": "2025-12-17",
+   "exposure": "Certification of new generation without a solicitation where a signed electric service agreement with a new or expanding load has an in-service date within five years of the application, on a 15-year minimum contract with the customer covering at least half of new infrastructure cost, on an eight-month target; the phase-two Meta application is the first project under it and the LPSC adopted an eight-month schedule for a December 2026 decision. Non-binding large-load guidelines followed in February 2026.",
+   "mitigation": "The company's ESA terms — 20-year term, minimum charges sized to full incremental cost, contributions in aid of construction, a parent guaranty and credit-default insurance — are its stated answer to the term-versus-life exposure UCS quantified.",
+   "source": "https://www.kalb.com/2025/12/19/louisiana-creates-fast-track-approve-power-plants-data-centers-big-electricity-users/"
+  },
+  {
+   "regime": "Arkansas Act 373 of 2025 (Generating Arkansas Jobs Act)",
+   "status": "in-effect",
+   "effectiveDate": "2025-04",
+   "exposure": "Authorizes a rider recovering the financing cost of 'strategic investments' during construction with a return on construction work in progress, sets a 180-day clock on public-interest and prudence findings for such projects, and caps rates at ten percent below the national average unless the commission allows otherwise; Entergy Arkansas's first rider update recovers $110.4M for Ironwood, Jefferson and Cypress at $5.77 a month for a 1,000 kWh residential customer from June 2026, and APSC staff disputed whether Ironwood qualified.",
+   "mitigation": "The Google special-rate contract's accelerated payments and the nuclear production-tax-credit offset of $1.55 a month cited by Talk Business.",
+   "source": "https://arkleg.state.ar.us/Home/FTPDocument?path=%2FACTS%2F2025R%2FPublic%2FACT373.pdf"
+  },
+  {
+   "regime": "Mississippi pre-certification statute for facilities serving data-processing customers (SB 2001 of 2024)",
+   "status": "in-effect",
+   "effectiveDate": "2024",
+   "exposure": "Delta Blues, Vicksburg and Traceview and two solar farms are pre-certified — built without a contested certificate, with prudence reviewed after completion — and the formula rate plan collects a cash return on construction work in progress through interim facilities rate adjustments; Synapse's report for Earthjustice puts residential payments at $38M through March 2026 and $10.60 a month, the company says customers 'are not subsidizing data centers'.",
+   "mitigation": "Large-customer supply agreements structured so the customer pays its incremental cost, with early-termination protections (10-Q); the company reports the first bill reductions from them in July 2026.",
+   "source": "https://earthjustice.org/wp-content/uploads/2026/05/in-the-dark_mississippi-data-center-report.pdf"
+  },
+  {
+   "regime": "Texas SB 6 (2025) large-load rules",
+   "status": "in-effect",
+   "effectiveDate": "2025",
+   "exposure": "Texas's large-load statute and the PUCT's draft rule apply fees and security to ERCOT interconnections of 75 MW and above; no source found extends its fee-and-security mechanics to Entergy Texas's MISO territory, and the company's filings do not mention it. The PUCT's certificate practice — a $2.4B hard cap on Legend and Lone Star with the chair citing the absence of a solicitation — is the Texas exposure that is documented.",
+   "source": "https://www.utilitydive.com/news/texas-regulators-approve-2-entergy-gas-plants-with-24b-hard-cap/759981/"
+  },
+  {
+   "regime": "Storm-cost securitization statutes (Louisiana, Mississippi)",
+   "status": "in-effect",
+   "effectiveDate": "2026-04",
+   "exposure": "Hurricane Francine (2024) is being recovered by Entergy Louisiana at $15M a year under a $173.3M settlement; Winter Storm Fern (January 2026) cost about $450M mainly in Louisiana and Mississippi, and Mississippi's April 2026 Severe Winter Storm System Restoration Act enables securitization with a filing planned for Q3 2026. Storm charges are the affordability baseline the data-center certificates are judged against; the company says Meta will pay about 10 percent of Entergy Louisiana's storm and resiliency charges.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000283/etr-20260630.htm"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Drew (Andrew S.) Marsh",
+   "title": "Chair of the Board and Chief Executive Officer",
+   "photo": "images/execs/entergy-marsh.jpg",
+   "background": [
+    "CEO since 2022",
+    "Executive Vice President and CFO, Entergy; VP System Planning and Operations; VP Strategic Planning, Entergy-Koch LP; joined 1998",
+    "Chair, Nuclear Energy Institute; Chair, NEIL; Vice Chair, Edison Electric Institute; Kellogg MS Management, Notre Dame BSME (company bio)"
+   ]
+  },
+  {
+   "name": "Kimberly Fontan",
+   "title": "Executive Vice President and Chief Financial Officer",
+   "photo": "images/execs/entergy-fontan.jpg",
+   "background": [
+    "CFO since 2022",
+    "SVP and Chief Accounting Officer; VP System Planning and Operations; VP Regulatory Services; VP Louisiana Regulatory Affairs",
+    "Boards: Federal Reserve Bank of Atlanta, Energy Insurance Mutual; CPA; Loyola New Orleans MBA (company bio)"
+   ]
+  },
+  {
+   "name": "Kimberly Cook-Nelson",
+   "title": "Executive Vice President and Chief Operating Officer",
+   "photo": "images/execs/entergy-cook-nelson.jpg",
+   "background": [
+    "COO since May 1, 2025, succeeding Pete Norgeot",
+    "Chief Nuclear Officer (2022–2025); COO Nuclear Operations (2021–2022); VP System Planning and Operations (2019–2021); VP Operations Support (2016); General Manager Plant Operations, Waterford 3 (2011–2014); joined 1996 as a design engineer",
+    "University of New Orleans MBA/MS/BSME; Harvard Business School AMP (company bio)"
+   ]
+  },
+  {
+   "name": "John Dinelli",
+   "title": "Executive Vice President and Chief Nuclear Officer",
+   "photo": "images/execs/entergy-dinelli.jpg",
+   "background": [
+    "Chief nuclear officer since May 1, 2025",
+    "COO Nuclear Operations (2021–2025); VP Nuclear Independent Oversight; Site VP Arkansas Nuclear One (2019); Site VP Waterford 3; General Manager Plant Operations, Indian Point (2013); joined 1991",
+    "Manhattan College BSME; senior reactor operator licence 1996 (company bio)"
+   ]
+  },
+  {
+   "name": "Dan Falstad",
+   "title": "Senior Vice President, General Counsel and Secretary",
+   "photo": "images/execs/entergy-falstad.jpg",
+   "background": [
+    "General counsel per the company's leadership page (Marcus Brown, the prior EVP and general counsel, became executive legal advisor in December 2025 per trade press)",
+    "VP, Deputy General Counsel and Secretary; partner at Troutman Pepper, Kilpatrick Townsend and DLA Piper; joined 2009",
+    "Yale JD; Duke BA (company bio)"
+   ]
+  },
+  {
+   "name": "Phillip May",
+   "title": "President and Chief Executive Officer, Entergy Louisiana",
+   "photo": "images/execs/entergy-may.jpg",
+   "background": [
+    "Leads the operating company that certified the phase-one Meta plants and filed the phase-two application; quoted on the LPSC approval and the Hut 8 announcement",
+    "Led the consolidation of Entergy Louisiana and Entergy Gulf States Louisiana; joined 1986",
+    "UL Lafayette BSEE; University of New Orleans MBA; Wharton M&A program (company bio)"
+   ]
+  },
+  {
+   "name": "Laura Landreaux",
+   "title": "President and Chief Executive Officer, Entergy Arkansas",
+   "photo": "images/execs/entergy-landreaux.jpg",
+   "background": [
+    "President and CEO since 2018; quoted on the Google West Memphis announcement",
+    "VP Regulatory Affairs; Finance Director; Manager Regulatory Affairs; Senior Counsel, Entergy; attorney, Salt River Project; Quarles & Brady",
+    "University of Arkansas JD/BA (company bio)"
+   ]
+  },
+  {
+   "name": "Haley Fisackerly",
+   "title": "President and Chief Executive Officer, Entergy Mississippi",
+   "photo": "images/execs/entergy-fisackerly.jpg",
+   "background": [
+    "President and CEO since 2008; leads the operating company building the three pre-certified Advanced Power Stations for the Amazon Web Services campuses",
+    "VP Customer Operations, Entergy Mississippi; VP Governmental and Regulatory Affairs, Entergy Nuclear; Director System Regulatory Strategy; staff to Senator Thad Cochran",
+    "George Washington University MPPA; Mississippi State BBA (company bio)"
+   ]
+  },
+  {
+   "name": "Eliecer Viamontes",
+   "title": "Chair, President and Chief Executive Officer, Entergy Texas",
+   "photo": "images/execs/entergy-viamontes.jpg",
+   "background": [
+    "Entergy Texas chair, president and CEO since November 2021",
+    "VP Utility Distribution Operations, Entergy (2020–2021); Senior Director Labor Relations and Corporate Safety, Florida Power & Light (NextEra Energy)",
+    "FIU MBA/BSEE; professional engineer (company bio)"
+   ]
+  },
+  {
+   "name": "Deanna Rodriguez",
+   "title": "President and Chief Executive Officer, Entergy New Orleans",
+   "photo": "images/execs/entergy-rodriguez.jpg",
+   "background": [
+    "President and CEO since 2021",
+    "VP Regulatory and Public Affairs, Entergy Texas; VP Regulatory Affairs, Entergy New Orleans; VP Corporate Contributions (1999–2003)",
+    "University of Texas at Austin LBJ School MPAff/BA (company bio)"
+   ]
+  },
+  {
+   "name": "Elizabeth Adams",
+   "title": "Senior Vice President and Chief Customer Officer",
+   "photo": "images/execs/entergy-adams.jpg",
+   "background": [
+    "Chief customer officer per the company's leadership page (2026)",
+    "Collection gap: the company's bio was not extracted; career history not carried"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "Arkansas Democrat-Gazette — Google's contribution was at issue in Arkansas PSC case",
+   "url": "https://www.nwaonline.com/news/2026/sep/03/googles-contribution-was-at-issue-in-arkansas/",
+   "date": "2026-09-03"
+  },
+  {
+   "label": "Arkansas Democrat-Gazette — Google to pay Entergy Arkansas $526 million for solar-and-storage project",
+   "url": "https://www.nwaonline.com/news/2026/aug/31/google-to-pay-entergy-arkansas-526-million-for/",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "The Lens — Meta's data center will be the biggest in the U.S., but no one knows who they're hiring",
+   "url": "https://thelensnola.org/2026/08/31/metas-data-center-will-be-the-biggest-in-the-u-s-but-no-one-knows-who-theyre-hiring/",
+   "date": "2026-08-31"
+  },
+  {
+   "label": "Entergy — customers begin seeing benefits from data-center agreements (~$7B over two decades)",
+   "url": "https://www.entergy.com/news/entergy-customers-begin-seeing-benefits-from-data-center-agreements-fair-share-plus-pledge-keeps-money-in-customers-pockets",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Entergy Mississippi — first data-center benefits appear on customer bills",
+   "url": "https://www.entergy.com/news/first-benefits-from-data-centers-appear-in-entergy-mississippi-customer-bills-eliminating-nearly-5-monthly-increase",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Entergy Arkansas — breaks ground on Ironwood Power Station (446 MW)",
+   "url": "https://www.entergy.com/news/entergy-arkansas-breaks-ground-on-ironwood-power-station",
+   "date": "2026-08-20"
+  },
+  {
+   "label": "WWNO — Louisiana PSC kills ruling that would force Meta to turn over data-center information",
+   "url": "https://www.wwno.org/politics/2026-08-12/louisiana-psc-kills-ruling-that-would-force-meta-to-turn-over-key-data-center-information",
+   "date": "2026-08-12"
+  },
+  {
+   "label": "Entergy — Form 10-Q for the quarter ended June 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000283/etr-20260630.htm",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "Magnolia Reporter / Louisiana Illuminator — Sierra Club challenges Meta data center's minor-source air permit",
+   "url": "https://www.magnoliareporter.com/news_and_business/north_louisiana/article_7210197d-6960-4b6b-8542-5d7c4a4b418e.html",
+   "date": "2026-08-05"
+  },
+  {
+   "label": "EEI — list of large customer projects and tariffs",
+   "url": "https://www.eei.org/-/media/Project/EEI/Documents/Issues%20and%20Policy/List%20of%20Large%20Customer%20Projects%20and%20Tariffs",
+   "date": "2026-08"
+  },
+  {
+   "label": "Entergy — quarterly dividend of $0.64 declared",
+   "url": "https://www.entergy.com/news/entergy-announces-quarterly-dividend-payment-to-shareholders-4",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Entergy — Q2 2026 earnings release (8-K Ex. 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000279/earningsrelease2q26_ex991.htm",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Entergy — Q2 2026 earnings presentation",
+   "url": "https://s201.q4cdn.com/714390239/files/doc_financials/2026/q2/2Q26-Presentation.pdf",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Investing.com — Q2 2026 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-entergy-misses-q2-2026-estimates-as-stock-slips-93CH-4821148",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "The Lens — New Orleans City Council reliability resolution on Entergy New Orleans outages",
+   "url": "https://thelensnola.org/2026/07/29/",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Entergy and MHI Group — carbon-capture partnership (M501JAC, 50% CCS cost-reduction goal)",
+   "url": "https://www.entergy.com/news/entergy-and-mhi-group-outline-collaborative-partnership-designed-to-accelerate-commercialization-and-affordability-around-carbon-capture-solutions",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "Entergy — FAQ: are Amazon data centers raising electricity bills?",
+   "url": "https://www.entergy.com/blog/faq-are-amazon-data-centers-raising-electricity-bills",
+   "date": "2026-07-10"
+  },
+  {
+   "label": "Entergy — 2026 Investor Day presentation",
+   "url": "https://s201.q4cdn.com/714390239/files/doc_presentations/2026/Jun/09/Entergy-2026-Investor-Day.pdf",
+   "date": "2026-06-09"
+  },
+  {
+   "label": "Entergy Mississippi — investing now to power Mississippi's energy future (three advanced power stations)",
+   "url": "https://www.entergy.com/blog/were-investing-now-to-power-mississippis-energy-future",
+   "date": "2026-05-30"
+  },
+  {
+   "label": "Alliance for Affordable Energy — data centers financing and energy overview report",
+   "url": "https://www.all4energy.org/wp-content/uploads/2026/05/2026-05-18-Data-Centers-Financing-Energy-Overview-Report.pdf",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "Electron Economics — Fair Share Plus is a financing instrument",
+   "url": "https://electroneconomics.substack.com/p/fair-share-plus-is-a-financing-instrument",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "LouisianAI — Entergy Louisiana data-center load forecast brief",
+   "url": "https://louisianai.com/briefs/entergy-louisiana-data-center-load-forecast-2026",
+   "date": "2026-05-11"
+  },
+  {
+   "label": "Entergy — pricing of common stock offering with a forward component ($113.00)",
+   "url": "https://www.entergy.com/news/entergy-corporation-announces-pricing-of-common-stock-offering-with-a-forward-component-2",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Entergy — announces public offering of common stock with a forward component",
+   "url": "https://www.entergy.com/news/entergy-corporation-announces-public-offering-of-common-stock-with-a-forward-component-2",
+   "date": "2026-05-05"
+  },
+  {
+   "label": "Earthjustice / Synapse — 'In the Dark': Mississippi data-center report",
+   "url": "https://earthjustice.org/wp-content/uploads/2026/05/in-the-dark_mississippi-data-center-report.pdf",
+   "date": "2026-05"
+  },
+  {
+   "label": "Utility Dive — new generation adds $14B to Entergy's capital plan (Q1 2026)",
+   "url": "https://www.utilitydive.com/news/new-generation-adds-12b-entergy-capital-plan/818790/",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Entergy — Q1 2026 earnings release (8-K Ex. 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000065984/000006598426000217/earningsrelease1q26_ex991.htm",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Entergy — Q1 2026 earnings presentation",
+   "url": "https://s201.q4cdn.com/714390239/files/doc_financials/2026/q1/1Q26-Presentation.pdf",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Entergy Texas — Orange County Advanced Power Station achieves first fire",
+   "url": "https://www.entergy.com/news/entergy-texas-orange-county-advanced-power-station-achieves-first-fire-milestone",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "KPLC — Louisiana PSC approves fast track for Entergy proposal tied to Meta data center",
+   "url": "https://www.kplctv.com/2026/04/15/louisiana-psc-aproves-fast-track-entergy-21b-proposal-tied-meta-data-center/",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "WBRZ — Entergy asks PSC to fast-track billions in investments to power Meta data center",
+   "url": "https://www.wbrz.com/news/entergy-asking-psc-to-fast-track-proposed-billions-in-energy-investments-to-power-meta-data-center/",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "The Lens — Meta's Project Evest and what Louisiana's energy expansion could cost",
+   "url": "https://thelensnola.org/2026/04/14/meta-project-evest-louisiana-energy-expansion-costs-entergy/",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "Pelican Institute — Entergy's new mega-deal",
+   "url": "https://pelicanpolicy.org/energy/entergys-new-mega-deal/",
+   "date": "2026-04-10"
+  },
+  {
+   "label": "Entergy Mississippi — Amazon expands; Entergy Mississippi stands ready",
+   "url": "https://www.entergy.com/blog/amazon-expands-and-entergy-mississippi-stands-ready-to-deliver-benefits-for-all-our-customers",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "Arkansas Times — ratepayers assume the risk under Act 373 (Jefferson Power Station)",
+   "url": "https://arktimes.com/arkansas-blog/2026/04/09/",
+   "date": "2026-04-09"
+  },
+  {
+   "label": "Latitude Media — not all data-center commitments are created equal (Entergy's 15.5 GW of ESAs)",
+   "url": "https://www.latitudemedia.com/news/not-all-data-center-commitments-are-created-equal/",
+   "date": "2026-04-02"
+  },
+  {
+   "label": "Entergy Texas — breaks ground on Legend and Lone Star power stations",
+   "url": "https://www.entergy.com/news/entergy-texas-breaks-ground-legend-and-lone-star",
+   "date": "2026-04"
+  },
+  {
+   "label": "UCS — Louisiana regulators fast-track seven-gas-plant proposal for Meta data center",
+   "url": "https://www.ucs.org/about/news/louisiana-regulators-fast-track-7-gas-plant-proposal-meta-data-center",
+   "date": "2026-04"
+  },
+  {
+   "label": "Entergy Louisiana — new agreement with Meta delivers an additional $2B in customer savings",
+   "url": "https://www.entergy.com/news/entergy-louisiana-announces-a-new-agreement-with-meta-that-will-deliver-an-additional-2b-in-customer-savings",
+   "date": "2026-03-27"
+  },
+  {
+   "label": "Talk Business — Entergy Arkansas rate filing: investments, rate hikes and decreases",
+   "url": "https://talkbusiness.net/2026/03/entergy-arkansas-rate-filing-outlines-investments-rate-hikes-and-decreases/",
+   "date": "2026-03-07"
+  },
+  {
+   "label": "Entergy Arkansas — annual strategic investment (GAJA rider) update filed",
+   "url": "https://www.entergy.com/news/entergy-arkansas-files-annual-strategic-investment-update",
+   "date": "2026-03-06"
+  },
+  {
+   "label": "Entergy — $5B in customer savings from data-center agreements; Fair Share Plus pledge",
+   "url": "https://www.entergy.com/news/5b-in-customer-savings-delivered-by-data-center-agreements-issues-fair-share-plus-pledge",
+   "date": "2026-03-05"
+  },
+  {
+   "label": "Entergy Louisiana — direct testimony of Laura K. Beauchamp, Project Evest certification (LPSC, public redacted)",
+   "url": "https://lpscpubvalence.lpsc.louisiana.gov/portal/PSC/ViewFile?fileId=kt5JixLAYFY%3D",
+   "date": "2026-03",
+   "party": "disclosure"
+  },
+  {
+   "label": "Entergy Arkansas — files rate review with the Arkansas PSC",
+   "url": "https://www.entergy.com/news/entergy-arkansas-files-rate-review-with-arkansas-public-service-commission",
+   "date": "2026-02-27"
+  },
+  {
+   "label": "Entergy — Form 10-K for fiscal 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/65984/000006598426000174/etr-20251231.htm",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "Entergy — Q4 and full-year 2025 earnings release (8-K Ex. 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/65984/000006598426000164/earningsrelease4q25_ex991.htm",
+   "date": "2026-02-12"
+  },
+  {
+   "label": "UCS — Louisiana's new policy allows even more data-center costs to be passed to ratepayers",
+   "url": "https://blog.ucs.org/paul-arbaje/louisianas-new-policy-allows-even-more-data-center-costs-to-be-passed-to-ratepayers/",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Entergy Texas — 2026 combined-cycle RFP",
+   "url": "https://www.entergy.com/news/entergy-texas-issues-rfp",
+   "date": "2026-02"
+  },
+  {
+   "label": "Alliance for Affordable Energy and UCS — motion for investigation, LPSC Docket U-37425",
+   "url": "https://www.all4energy.org/wp-content/uploads/2026/01/2026-01-14-U-37425-AAE-UCS-Mtn-for-Investigation.pdf",
+   "date": "2026-01-14",
+   "party": "disclosure"
+  },
+  {
+   "label": "Federal Register — Grand Gulf early site permit renewal application",
+   "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23843/",
+   "date": "2025-12-29"
+  },
+  {
+   "label": "KALB — Louisiana creates fast track to approve power plants for data centers",
+   "url": "https://www.kalb.com/2025/12/19/louisiana-creates-fast-track-approve-power-plants-data-centers-big-electricity-users/",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "Entergy — Hut 8 selects Entergy and Southeast Louisiana for a $10B AI data center",
+   "url": "https://www.entergy.com/news/hut-8-selects-entergy-southeast-louisiana-for-10-billion-artificial-intelligence-data-center",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Entergy Texas — STEP Ahead plan and Texas Energy Fund grant",
+   "url": "https://www.entergy.com/news/entergy-texas-advances-step-ahead-plan-to-meet-southeast-texas-growing-power-needs",
+   "date": "2025-12-12"
+  },
+  {
+   "label": "Entergy Louisiana — breaks ground on Franklin Farms Power Station 1 and 2",
+   "url": "https://www.entergy.com/news/entergy-louisiana-breaks-ground-on-new-state-of-the-art-generation-facilities-to-power-reliability-growth-and-innovation",
+   "date": "2025-12-01"
+  },
+  {
+   "label": "Entergy Texas — construction nears completion on Orange County Advanced Power Station",
+   "url": "https://www.entergy.com/news/construction-nears-completion-on-entergy-texas-orange-county-advanced-power-station",
+   "date": "2025-11-21"
+  },
+  {
+   "label": "UCS — what's next after Louisiana's gas-plant approval for the Meta data center",
+   "url": "https://blog.ucs.org/paul-arbaje/whats-next-after-louisianas-gas-plant-approval-for-meta-data-center/",
+   "date": "2025-11-20"
+  },
+  {
+   "label": "Arkansas Times — Cypress Solar and the $2-a-month residential impact",
+   "url": "https://arktimes.com/arkansas-blog/2025/11/12/",
+   "date": "2025-11-12"
+  },
+  {
+   "label": "Entergy Arkansas — Jefferson Power Station (754 MW combined cycle)",
+   "url": "https://www.entergy.com/news/jefferson-power-station-powering-arkansas-today-and-into-the-next-generation",
+   "date": "2025-11-06"
+  },
+  {
+   "label": "Utility Dive — gas continues to dominate Entergy plans as data-center pipeline grows (Q3 2025)",
+   "url": "https://www.utilitydive.com/news/gas-continues-to-dominate-entergy-plans-as-data-center-pipeline-grows/804521/",
+   "date": "2025-11-03"
+  },
+  {
+   "label": "Entergy Louisiana — direct testimony of Fluth, Votaw and Segno solar (LPSC)",
+   "url": "https://lpscpubvalence.lpsc.louisiana.gov/portal/PSC/ViewFile?fileId=MNIQ3EnRWsI%3D",
+   "date": "2025-11",
+   "party": "disclosure"
+  },
+  {
+   "label": "Entergy — Q3 2025 earnings release (8-K Ex. 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/65984/000006598425000126/earningsrelease3q25_ex991.htm",
+   "date": "2025-10-29"
+  },
+  {
+   "label": "Bisnow — Meta pushes its largest data-center project off its books with a $27B joint venture",
+   "url": "https://www.bisnow.com/national/news/data-center-capital-markets/meta-pushes-its-largest-data-center-project-off-its-books-with-27b-joint-venture-131490",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "Utility Dive — Texas PUC approves Entergy 500 kV SETEX transmission project",
+   "url": "https://www.utilitydive.com/news/texas-puc-entergy-500-kv-setex-transmission-project/801900/",
+   "date": "2025-10-03"
+  },
+  {
+   "label": "POWER — Entergy will power $4 billion Google data center in Arkansas",
+   "url": "https://www.powermag.com/entergy-will-power-4-billion-google-data-center-in-arkansas/",
+   "date": "2025-10-03"
+  },
+  {
+   "label": "Entergy Arkansas — powers Google's $4B investment in Arkansas",
+   "url": "https://www.entergy.com/news/entergy-arkansas-powers-googles-4b-investment-in-the-state",
+   "date": "2025-10-02"
+  },
+  {
+   "label": "Entergy Mississippi — Superpower Mississippi grid upgrade",
+   "url": "https://www.entergy.com/news/entergy-mississippi-launches-largest-most-comprehensive-grid-upgrade-in-company-history-superpower-mississippi",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "Energy-Storage.news — Entergy Arkansas seeks approval of 1.4 GWh hybrid BESS (Cypress Solar)",
+   "url": "https://www.energy-storage.news/arkansas-utility-seeks-approval-of-1-4gwh-hybrid-bess-",
+   "date": "2025-09-17"
+  },
+  {
+   "label": "Entergy Texas — PUCT approves Legend and Lone Star power stations",
+   "url": "https://www.entergy.com/news/entergy-texas-receives-puct-approval-for-two-power-plants-to-support-southeast-texas-growth",
+   "date": "2025-09-11"
+  },
+  {
+   "label": "Utility Dive — Texas regulators approve two Entergy gas plants with $2.4B hard cap",
+   "url": "https://www.utilitydive.com/news/texas-regulators-approve-2-entergy-gas-plants-with-24b-hard-cap/759981/",
+   "date": "2025-09-11"
+  },
+  {
+   "label": "IndustrialInfo — Louisiana greenlights massive power projects for Meta data center",
+   "url": "https://www.industrialinfo.com/iirenergy/industry-news/article/louisiana-greenlights-massive-power-projects-for-meta-data-center--345274",
+   "date": "2025-08-27"
+  },
+  {
+   "label": "Power Engineering — Entergy Louisiana gets approval to build three combined-cycle plants for Meta",
+   "url": "https://www.power-eng.com/gas/combined-cycle/entergy-louisiana-gets-approval-to-build-3-new-combined-cycle-plants-to-power-huge-meta-data-center/",
+   "date": "2025-08-21"
+  },
+  {
+   "label": "Entergy Louisiana — LPSC approves generation and transmission for Meta's data center (U-37425)",
+   "url": "https://www.entergy.com/news/entergy-louisiana-receives-lpsc-approval-for-major-infrastructure-investments-to-support-metas-data-center-and-improve-reliability",
+   "date": "2025-08-20"
+  },
+  {
+   "label": "KNOE — Entergy gains regulatory approval for massive Meta power project",
+   "url": "https://www.knoe.com/2025/08/20/entergy-gains-regulatory-approval-massive-meta-power-project/",
+   "date": "2025-08-20"
+  },
+  {
+   "label": "Entergy — Q2 2025 earnings release",
+   "url": "https://www.entergy.com/news/entergy-reports-second-quarter-2025-financial-results",
+   "date": "2025-07-30"
+  },
+  {
+   "label": "Entergy Texas — proposes SETEX and Cypress–Legend 500 kV transmission",
+   "url": "https://www.entergy.com/news/entergy-texas-proposes-major-transmission-investments-to-power-southeast-texas-growth",
+   "date": "2025-06-26"
+  },
+  {
+   "label": "UCS — Entergy doesn't want Louisianans to know how expensive this gas project could be",
+   "url": "https://blog.ucs.org/paul-arbaje/entergy-doesnt-want-louisianans-to-know-how-expensive-this-gas-project-could-be/",
+   "date": "2025-05-29"
+  },
+  {
+   "label": "Entergy — Q1 2025 earnings release",
+   "url": "https://www.entergy.com/news/entergy-reports-first-quarter-2025-financial-results",
+   "date": "2025-04-29"
+  },
+  {
+   "label": "Entergy Mississippi — selects Ridgeland site for new generation (Traceview)",
+   "url": "https://www.entergy.com/news/entergy-mississippi-selects-new-power-generation-site-prioritizes-community-needs",
+   "date": "2025-04-11"
+  },
+  {
+   "label": "Arkansas General Assembly — Act 373 of 2025 (Generating Arkansas Jobs Act)",
+   "url": "https://arkleg.state.ar.us/Home/FTPDocument?path=%2FACTS%2F2025R%2FPublic%2FACT373.pdf",
+   "date": "2025-04"
+  },
+  {
+   "label": "Entergy — board appoints new chief operating and chief nuclear officers",
+   "url": "https://www.entergy.com/news/entergy-board-of-directors-appoints-new-chief-operating-and-chief-nuclear-officers",
+   "date": "2025-03-27"
+  },
+  {
+   "label": "Entergy — Q4 and full-year 2024 earnings release (8-K Ex. 99.1)",
+   "url": "https://www.sec.gov/Archives/edgar/data/65984/000006598425000009/earningsrelease4q24_ex991.htm",
+   "date": "2025-02-18"
+  },
+  {
+   "label": "Entergy Louisiana — to power Meta's data center in Richland Parish",
+   "url": "https://www.entergy.com/news/entergy-louisiana-power-meta-s-data-center-in-richland-parish",
+   "date": "2024-12-06"
+  },
+  {
+   "label": "Entergy Mississippi — breaks ground on Delta Blues Advanced Power Station",
+   "url": "https://www.entergy.com/news/entergy-mississippi-breaks-ground-on-delta-blues-advanced-power-station",
+   "date": "2024-11-07"
+  },
+  {
+   "label": "POWER — Entergy picks EPC team for hydrogen-capable CCGT project in Texas (OCAPS)",
+   "url": "https://www.powermag.com/entergy-picks-epc-team-for-massive-hydrogen-capable-ccgt-project-in-texas/",
+   "date": "2023-03-03"
+  },
+  {
+   "label": "Entergy — leadership page",
+   "url": "https://www.entergy.com/leadership"
+  },
+  {
+   "label": "Entergy — data centers page",
+   "url": "https://www.entergy.com/datacenters"
+  },
+  {
+   "label": "Entergy — RFP portal",
+   "url": "https://rfp.entergy.com/"
+  },
+  {
+   "label": "Entergy Louisiana — 2025 BESS RFP",
+   "url": "https://rfp.entergy.com/ENTRFP/SEND/2025ELLBESSRFP/index.htm"
+  },
+  {
+   "label": "Entergy Texas — SETEX transmission project page",
+   "url": "https://www.entergytexas.com/transmission/setex"
+  },
+  {
+   "label": "Entergy Mississippi — Vicksburg Advanced Power Station page",
+   "url": "https://www.entergymississippi.com/generation/vicksburg"
+  },
+  {
+   "label": "Entergy Mississippi — Traceview Advanced Power Station page",
+   "url": "https://www.entergymississippi.com/generation/traceview"
+  },
+  {
+   "label": "Investing.com — Entergy earnings calendar",
+   "url": "https://www.investing.com/equities/entergy-corp-earnings"
+  },
+  {
+   "label": "MarketBeat — Entergy earnings",
+   "url": "https://www.marketbeat.com/stocks/NYSE/ETR/earnings/"
+  },
+  {
+   "label": "Global Energy Monitor — Delta Blues Advanced Power Station",
+   "url": "https://www.gem.wiki/Delta_Blues_Advanced_Power_Station"
+  }
+ ],
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1
+}

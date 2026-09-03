@@ -1,0 +1,1840 @@
+{
+ "schemaVersion": 7,
+ "slug": "southern-company",
+ "name": "The Southern Company",
+ "shortName": "Southern Company",
+ "categories": [
+  "utility"
+ ],
+ "website": "https://www.southerncompany.com",
+ "headquarters": "Atlanta, GA, USA",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: SO"
+ },
+ "employees": "~29,800 at December 31, 2025 — Georgia Power 7,700, Alabama Power 6,100, Mississippi Power 1,100, Southern Power 500, Southern Company Gas 5,000, Southern Company Services 4,800, Southern Nuclear 3,700 (FY2025 Form 10-K)",
+ "summary": "BOTTOM LINE UP FRONT: Southern Company is the Southeast's regulated gatekeeper for AI load with no grid operator above it and an elected commission beneath it, and it has converted that position into the largest single certification in Georgia's history: 17 GW of contracted large load at July 2026 (Georgia Power 12.5 GW, Alabama Power 4 GW, Mississippi Power 0.5 GW) against a stated 75 GW-plus prospective pipeline it does not count as load; 9,885 MW certified by the Georgia PSC on December 19, 2025 — three combined-cycle blocks, eleven battery projects and 2,821 MW of purchases at about $16.3B of company-owned capital — under a three-year base-rate freeze through 2028 and a shareholder backstop for 2029–2031; an $81B five-year capital plan financed in part by $26.54B of DOE loan guarantees; and a commission whose composition changed on affordability between the certificate's stipulation and its reconsideration, with two more seats on the November 2026 ballot. BACKGROUND. Atlanta; NYSE: SO. Per the FY2025 Form 10-K the system serves 4.59 million retail electric customers (Georgia Power 2.83 million, Alabama Power 1.56 million, Mississippi Power 0.19 million) and about 4.4 million gas customers, employs about 29,800, and owns roughly 45 GW of nameplate generation across the three retail utilities and Southern Power's 12.6 GW contracted fleet; the retail utilities are their own balancing authority outside any RTO. FY2025 adjusted EPS was $4.30 on operating revenue of $29.6B, 2026 guidance is $4.50–4.60 and the company projects 7–8 percent long-term growth from 2028. Georgia Power serves large loads under the PSC's January 2025 rule — 15-year contracts, minimum bills, upstream cost payment, collateral, every contract filed 30 days before signing — with the percentages confidential; Vogtle Units 3 and 4 (2023–2024, $10.670B of Georgia Power net investment, about $3B left with shareholders) are the reason the 2025 certificate contains gas, batteries, purchases and uprates of the older reactors and no new nuclear. Collection gap: the contract percentages, the PPA counterparties, the combined-cycle turbine OEM and the Q3 2026 earnings date were not obtainable from any source found; the dossier says so where it matters rather than filling the space.",
+ "ecosystemRole": "We assess Southern Company as the utility whose certificate, rather than any customer's lease, decides when the Southeast's AI campuses get power — and as three different counterparties to the sellers in this file at once. Basis: Georgia Power plans, certifies and builds inside a system it balances itself, so there is no capacity auction to bid into and no regional queue; the channels are the company's own certificate (turbines, balance of plant and batteries bought under its supply agreements and fixed-price EPCs), the all-source and storage RFPs (where the bidding developer picks the hardware and the utility picks the bid), and the customer's own supply under the 2026 customer-identified-resource program. For battery sellers it is the rare utility that owns its storage — Wärtsilä at Mossy Branch, Tesla (per trade press) across the 2024 portfolio, Burns & McDonnell and Crowder as EPCs, with 3,022.5 MW more certified in December 2025 and a 500 MW RFP closing in January 2027. For turbine and balance-of-plant sellers it is a buyer that reserved equipment for ten gigawatts before the certificate and ordered the Yates machines two years before the plan. For the hyperscalers and developers it is the counterparty whose 15-year contracts, minimum bills and collateral requirements — $21B-plus by 2028 — set the economics of every campus in Georgia and Alabama, and whose elected commission can reprice the deal at the next election. Per the company's own ladder, the load is 17 GW contracted and 75 GW prospective; the certificate was sized between the two.",
+ "productsAndServices": [
+  {
+   "name": "Regulated retail electric service — Georgia Power, and the large-load contracting framework",
+   "category": "Regulated utility service",
+   "description": "Georgia Power serves approximately 2.8 million retail customers across Georgia (2,834 thousand at December 31, 2025 per the FY2025 Form 10-K) as a vertically integrated utility regulated by the five-member elected Georgia Public Service Commission, which sets its rates, approves its triennial Integrated Resource Plan and certifies each new plant and purchase. The 2025 rate plan, approved by the PSC on July 1, 2025 per the company's 8-K, holds base rates unchanged in 2026, 2027 and 2028 with a retail return-on-equity set point of 10.50 percent inside a 9.50–11.90 percent band and a 56 percent equity ratio; earnings above 11.90 percent are split 40 percent to regulatory assets, 40 percent refunded and 20 percent retained, and a base rate case must be filed by July 1, 2028. Large loads are served under the PSC's January 23, 2025 rule and the company's Rules and Regulations for Electric Service as revised from February 1, 2025: a customer with an expected peak demand of 100 MW or greater may be required to accept 'minimum billing requirements and a longer term of contract', performance and credit provisions, and on termination 'any costs the Company incurred in serving or preparing to serve the customer, including distribution, transmission, and generation costs'. Per the company's Q1 and Q2 2026 investor decks the contracting framework requires at least 15-year terms for data centers (10 years for others), minimum bills covering at least 100 percent of annual incremental cost to serve, termination payments tied to the remaining incremental cost over the contract life, and collateral based on creditworthiness — the company states more than $21B of collateral is required by 2028 with an A+ average counterparty rating. Every contract above 100 MW is filed with the PSC at least 30 days before execution (PSC fact sheet, March 2026).",
+   "highlights": [
+    "PSC's own description of the January 2025 rule: new customers above 100 MW 'can be billed using terms and conditions beyond those used for standard customers', pay 'costs incurred by upstream generation, transmission and distribution … as construction of the data centers progresses', with contract lengths moved 'from 5-year contracts to 15-year contracts' and 'minimum billing requirements' (PSC release, January 23, 2025)",
+    "Q2 2026 10-Q: large-load contracts of approximately 11 GW reviewed by state commissions plus approximately 5 GW agreed and awaiting review; 'All … contain minimum bill provisions' and contracts totaling approximately 13 GW 'also contain minimum duration, termination payment requirements, and financial security'",
+    "The first contract tested under the 30-day review — OpenAI's ~3,200 MW Effingham County campus, 25-year agreement — cleared on a staff statement in August 2026 with added protections: no recovery of a revenue shortfall from residential customers on early termination, PSC notice within 15 days of any large-customer cancellation, semiannual public reporting (AJC, August 27, 2026)",
+    "Base-rate freeze context per The Current: six bill increases in the prior three years; fuel and storm cases excluded from the freeze; a May 2026 fuel-and-storm stipulation then cut the typical residential bill by about $4 a month",
+    "Collection gap: the minimum-bill percentages and termination-payment formulas in Georgia's large-load contracts are filed under seal; the company's categories (15-year term, 100 percent of incremental cost, collateral) are the most specific public terms"
+   ],
+   "positioning": "Georgia's framework is a rule plus confidential contracts rather than a published rate class: Dominion Energy Virginia's GS-5 class publishes 85 percent transmission-and-distribution and 60 percent generation minimums and a 14-year term, while Georgia Power's contracts state 15-year terms and minimum bills at 100 percent of incremental cost with the percentages of demand unpublished. Against AEP Ohio's 2025 data-center tariff (85 percent after a ramp, 12-year terms) the Georgia term is longer and the review is case by case. The elected commission and the July 2025 freeze make the political exposure of the framework higher than in appointed-commission states.",
+   "soldThrough": "Direct — the utility contracts with the customer under its PSC-approved rules; contracts above 100 MW are filed with the PSC 30 days before execution and reviewed by commission staff.",
+   "targetSegments": [
+    "Hyperscale and self-owned data-center operators (11 GW of the parent's 17 GW contracted at Q2 2026)",
+    "Large data-center developers above 300 MW (1.5 GW)",
+    "Industrial and smaller developers (4.5 GW)",
+    "Residential and commercial customers under the frozen base rates"
+   ],
+   "roadmap": "Base rate case due by July 1, 2028; the December 2025 certification order requires the next rate case to show at least $556M a year of downward pressure from large-load revenue in 2029–2031, since raised by the company to approximately $950M a year with the August 2026 contract approvals; a separate PSC hearing on whether a fuel-related regulatory asset should be recovered only from large customers was scheduled to conclude by December 2026."
+  },
+  {
+   "name": "Certified generation build — the 2025 all-source certification (gas, storage, solar-plus-storage)",
+   "category": "Generation (regulated self-build)",
+   "description": "On December 19, 2025 the Georgia PSC voted 5–0 to certify, per Georgia Power's 8-K, 'all 9,885 megawatts of requested resources in the All-Source Certification Proceeding … at their respective individual project cost'. The FY2025 Form 10-K breaks the 9,885 MW into 18 RFP resources totaling 7,999 MW (6,804 MW of Georgia Power-owned projects with commercial operation dates from 2028 to 2030), a 50 MW extension of an existing 750 MW affiliate purchase from Mississippi Power through 2029, a 20-year non-affiliate PPA for 930 MW from 2030, five 25-year non-affiliate PPAs totaling 646 MW from 2027, and a 260 MW company-owned battery paired with an existing solar PPA. The company-owned projects carry 'approximately $16.3 billion in projected capital investment (excluding AFUDC)', roughly $14B of it in 2026–2029, and the September and December 2025 certifications together total approximately $16.7B excluding AFUDC. The certified units per the July 31, 2025 request: two combined-cycle units at Plant Bowen (1,482 MW), one at Plant McIntosh (757 MW), two at Plant Wansley (1,453 MW); stand-alone batteries at Bowen (500 MW in two phases), Hammond (192.5 MW phase 2), McIntosh (250 MW), South Hall (250 MW), Thomson (500 MW), Wadley (260 MW), Wansley (500 MW) and Yates (570 MW in two projects); and two solar-plus-storage projects in Laurens County (200 MW + 200 MW) and at Mitchell in Dougherty County (150 MW + 150 MW). The company's build schedule from its earnings decks: 2026 five batteries (765 MW); 2027 Yates Unit 8 (441 MW simple cycle) and two batteries (750 MW); 2028 Yates Units 9–10 (882 MW), five batteries (1,570 MW) and two solar-plus-storage projects (350 MW); 2029 Wansley Unit 10 (777 MW), Bowen Unit 7 (780 MW) and three batteries (610 MW); 2030 McIntosh Unit 12 (797 MW), Bowen Unit 8 (780 MW) and Wansley Unit 11 (777 MW) — 1.2, 1.5, 1.9, 2.3 and 2.8 GW a year with more than 500 miles of new transmission. The Yates simple-cycle units (three Mitsubishi Power M501JAC turbines with VP-X generators, about 1.3 GW) were certified in the 2023 IRP Update; the Unit 9 turbine and generator were delivered in December 2025 for operation by end-2027.",
+   "highlights": [
+    "Execution posture per the Q4 2025 deck: 'All necessary equipment reserved … Turnkey fixed-price EPC agreements in place for project work being performed by external contractors … Internal construction team self-performing McIntosh Unit 12 (CC) and McIntosh BESS … Additional turbines reserved'",
+    "Customer-benefit condition in the order: the next base rate case must produce 'downward pressure … of at least $556 million per year' in 2029–2031 from large-load incremental revenue — $8.50 a month for a 1,000 kWh residential customer — and the company 'agreed to financially backstop new projects in years 2029, 2030, and 2031' (PSC release); company-owned projects are subject to PSC construction monitoring",
+    "PSC staff had recommended certifying about a third of the request and called the remainder speculative before settling for the whole request; the new commission denied reconsideration 3–2 on February 17, 2026, and a Fulton County petition filed March 25, 2026 seeks decertification of at least 757 MW (Q2 2026 10-Q; AJC)",
+    "Prior certifications: 'Through the 2022 IRP and the 2023 IRP Update, the Georgia PSC has certified resources totaling approximately 13 GWs, approximately nine GWs of which are new generation and battery energy storage facilities' at certified costs of $19.5B, in service through 2030 (10-K)",
+    "Plant Bowen construction on the two combined-cycle units and a 500 MW battery began July 31, 2026 with the DOE loan package cited; the Wansley units and a 500 MW battery were under construction per the April 2026 release",
+    "Collection gap: the combined-cycle turbine OEM and EPCs for Bowen, Wansley and McIntosh are not disclosed in any company or trade-press source found; only the Yates turbines (Mitsubishi Power) and McIntosh self-performance are stated"
+   ],
+   "positioning": "The largest single certification in Georgia's history and, at roughly ten gigawatts against about 22 GW of deployed Georgia Power capacity (PSC fact sheet), close to half the system in one order — against Dominion Energy Virginia's one 944 MW plant certified in 2025. Roughly 60 percent gas by capacity per the AJC. The self-build share (6,804 MW owned) was tested against an all-source RFP with an independent evaluator; the purchased share (2,821 MW of PPAs) went to counterparties the 8-K does not name beyond the Mississippi Power and Southern Power affiliate pieces.",
+   "soldThrough": "Self-build into rate base under fixed-price turnkey EPC agreements, with McIntosh Unit 12 and the McIntosh battery self-performed; equipment reserved ahead of certification; recovered through base rates after the 2028 rate case, with the 2029–2031 shareholder backstop.",
+   "targetSegments": [
+    "Georgia Power's retail system, with about 80 percent of the certified capacity expected to serve data centers per the PSC fact sheet"
+   ],
+   "roadmap": "Five batteries in 2026, Yates Unit 8 and two batteries in 2027, Yates 9–10 plus five batteries and two solar-plus-storage projects in 2028, the first two combined-cycle units in 2029, three more in 2030; a further 2,000–6,000 MW of dispatchable capacity for 2032–2033 solicited from June 2026 with certification filings in mid-2027."
+  },
+  {
+   "name": "Battery energy storage — utility-owned BESS program and the 2025 storage RFP",
+   "category": "Storage (utility-owned and procured)",
+   "description": "Georgia Power owns and operates its batteries, which distinguishes it from utilities that procure storage only through developer PPAs. Mossy Branch (65 MW, four hours, Talbot County) reached commercial operation in November 2024 with Wärtsilä as EPC and technology provider (Quantum system, GEMS platform). The 765 MW portfolio under construction per the May 7, 2025 release: Robins 128 MW (Bibb County, June 2026, EPC Burns & McDonnell), Moody 49.5 MW (Lowndes County, co-located with Moody solar, completed ahead of schedule July 2026, EPC Crowder Industrial Construction), Hammond 57.5 MW (Floyd County, November 2026, Crowder), McGrau Ford Phase I 265 MW (Cherokee County, October 2026, Burns & McDonnell) and McGrau Ford Phase II 265 MW (September 2026, Burns & McDonnell). Energy-Storage.news reported in September 2024 that the 2024 portfolio (500 MW / 2,000 MWh — Robins, Moody, Hammond and McGrau Ford II) is supplied under a Tesla Megapack 2XL agreement with a 20-year capacity guarantee, with costs redacted under a PSC rule; the company's own releases name the EPCs but not the battery supplier. A 200 MW four-hour battery in Twiggs County (Crowder) was certified in an expedited proceeding on September 4, 2025 for 2027, and Wadley (260 MW, Jefferson County, Burns & McDonnell, co-located with third-party solar) began construction in March 2026 for 2027. The December 2025 certification added ten stand-alone batteries (3,022.5 MW at eight sites) and two solar-plus-storage projects (350 MW). A separate 2025 Energy Storage System RFP seeks 500 MW of at least two-hour storage online by the end of 2031, with Ascend Analytics as independent evaluator; the 10-K states the RFP was initiated February 11, 2026. Alabama Power's first utility-scale battery — Gorgas, 150 MW two-hour lithium iron phosphate on a retired plant site in Walker County, 92 Tesla Megapacks, completion 2027 — extends the owned-storage model to a second operating company. Southern Power owns 640 MWh of storage in California (Garland 88 MW / 352 MWh and Tranquillity 72 MW / 288 MWh).",
+   "highlights": [
+    "Two of the 765 MW portfolio (Robins and Moody, 178 MW) were in service by April 2026 per the Q2 2026 deck; three more (587 MW) follow in 2026",
+    "The 2025 IRP order approved 'more than 1,500 MW' of battery storage by 2035 on top of the certified projects; the certified count after December 2025 is 'nearly 3,000 MW across nine facilities' per the Wadley release",
+    "Named EPCs: Burns & McDonnell (Robins, McGrau Ford I and II, Wadley), Crowder Industrial Construction (Moody, Hammond, Twiggs), Wärtsilä (Mossy Branch); battery OEMs for the 2025-certified projects are not disclosed",
+    "Storage RFP timeline per the evaluator's schedule reported by Utility Dive: bids in early 2026, short list December 2026, contracts January 2027 — no winners announced at the time of writing",
+    "Alabama Power: Tesla Megapacks began arriving at Gorgas in February 2026 per the company's March 2026 article"
+   ],
+   "positioning": "Among the utilities in this file Georgia Power is the one that most consistently buys and owns batteries under its own supply agreements and EPC contracts rather than through developer PPAs — the utility-owned lane that Dominion's 155 MW petition made small and Georgia's certificates made large. Trade press names Tesla as the 2024 portfolio's supplier; Wärtsilä is the one supplier the company itself has named.",
+   "soldThrough": "Utility-owned: supply agreement with the battery integrator plus a fixed-price EPC per project, certified into rate base; the 500 MW RFP lane is open to developer bids as well as owned projects.",
+   "targetSegments": [
+    "Georgia Power's own system (peak shaving, the winter peak, integration of the certified solar)",
+    "Alabama Power (Gorgas)",
+    "Southern Power's contracted fleet (California)"
+   ],
+   "roadmap": "Hammond, McGrau Ford I and II in service by late 2026; Twiggs and Wadley in 2027; the 3,022.5 MW certified in December 2025 in 2026–2030 per the build schedule; the 500 MW RFP contracts in January 2027 for service by 2031; a 200 MW solar + 200 MW storage Laurens County project and a 150 + 150 MW Mitchell project in 2028."
+  },
+  {
+   "name": "Nuclear fleet — Vogtle 3 and 4, the Vogtle 1–2 and Hatch uprates, and Southern Nuclear",
+   "category": "Generation (nuclear)",
+   "description": "Southern Nuclear operates Plant Vogtle (four units, Burke County) and Plant Hatch (two units) for Georgia Power and its co-owners, and Alabama Power's Plant Farley. Vogtle Units 3 and 4, the first new-design reactors built in the United States in a generation (Westinghouse AP1000, approximately 1,117 MW each per Southern Nuclear, ~2,234 MW combined per Georgia Power), reached commercial operation on July 31, 2023 and April 29, 2024. Georgia Power owns 45.7 percent (Oglethorpe Power 30 percent, MEAG Power 22.7 percent, Dalton Utilities 1.6 percent); the FY2025 10-K states 'Georgia Power's final net investment in connection with Plant Vogtle Units 3 and 4 is $10.670 billion, which excludes capitalized AFUDC of approximately $440 million'. The December 2023 PSC cost-recovery order, per GPB, let Georgia Power recover $7.56B of its remaining cost from customers at about $8.95 a month on a typical bill, leaving roughly $3B with shareholders; the all-owner cost was reported at around $35B against the roughly $14B certified in 2009. The company reports 'top decile safety performance and exceptional reliability, with availability factors over 95% since commercial operation' (Q4 2025 deck) and an expected site output above 30 million MWh a year; Unit 4 completed its first refueling outage in September 2025. The NRC issued a White finding on Unit 3 for two 2024 unplanned scrams with complications traced to an over-conservative passive residual heat removal actuation design, returned to Green effective March 20, 2025 (NRC ML25099A013). The 2025 IRP order approved uprates of Vogtle Units 1 and 2 of about 54 MW, some available as early as 2028, and preliminary planning, licensing and engineering for potential Hatch uprates; the NRC renewed Hatch's licences on June 12, 2026 to 2054 and 2058 (Hatch's decade-average capacity factor: 94 percent). The DOE loan guarantees of February 2026 include about 6.3 GW of nuclear uprates and renewals. The chief executive said on the Q2 2026 call, per the Investing.com transcript, that Southern 'is not going to be next' to build an AP1000 while discussing risk-sharing with the federal government and hyperscalers.",
+   "highlights": [
+    "Vogtle 3 and 4 in service July 2023 and April 2024; company availability above 95 percent; Georgia Power net investment $10.670B excluding AFUDC (10-K)",
+    "Customer share of the overrun set in the December 2023 order: $7.56B recovered, about $3B to shareholders, +$8.95 a month on a typical bill (GPB); the Vogtle NCCR tariff ceased after Unit 4's commercial operation",
+    "NRC White finding on Unit 3 (2024 scrams; PRHR actuation design) closed to Green in March 2025",
+    "Vogtle 1–2 uprates of 54 MW approved in the 2025 IRP; Hatch licence renewal June 2026; Hatch preliminary uprate work approved",
+    "Collection gap: capacity factors for Units 3 and 4 individually are not published by the company; the 2023 cost-recovery stipulation text was not re-pulled and its terms rest on GPB's report"
+   ],
+   "positioning": "The only utility in this file operating new-build large reactors, and the one whose overrun history most directly explains its appetite: the 2025 certificate contains gas, storage, purchases and uprates of the older units and no new reactor. Dominion holds an SMR memorandum with Amazon at North Anna; Southern's stated position is that it will not be the next AP1000 builder without others sharing the overrun risk.",
+   "soldThrough": "Regulated generation in Georgia Power's and Alabama Power's rate base; Southern Nuclear operates the plants for the owners; Vogtle 3–4 advanced nuclear production tax credits are monetized with co-owners (Georgia Power paid $131M to co-owners in 2024 per the FY2024 10-K as relayed by trade press).",
+   "targetSegments": [
+    "Georgia Power and Alabama Power retail systems",
+    "Co-owners Oglethorpe Power, MEAG Power and Dalton Utilities"
+   ],
+   "roadmap": "Vogtle 1–2 uprates from 2028; Hatch uprate licensing and engineering; licence renewals in the DOE loan package; no new-reactor commitment."
+  },
+  {
+   "name": "Electric transmission — the ten-year plan, the Ashley Park–Wansley 500 kV line and the DOE-guaranteed grid program",
+   "category": "Transmission",
+   "description": "Georgia Power's 2025 IRP included a ten-year transmission plan across 'more than 1,000 miles of transmission lines' (2025 IRP filing and approval releases), and the December 2025 build schedule adds '500+ Miles of New Transmission Lines' tied to the certified plants. The December 2025 Ashley Park project — a new 500/230 kV substation and a 35-mile Ashley Park–Wansley 500 kV line for south metro Atlanta, in service Q2 2028 — is the first named segment. The company's IRP construction and transmission capital footnote in the FY2025 10-K runs about $3.1B, $5.5B, $5.1B, $3.2B and $0.8B for 2026–2030. The February 2026 Department of Energy loan guarantees ($26.54B — Georgia Power $22.4B, Alabama Power $4.1B; draws through September 2033 at Treasury plus 37.5 basis points, maturing December 2055) cover, per Utility Dive's reading of the DOE package, 5.3 GW of new gas including Yates, about 500 MW of gas uprates, 6.3 GW of nuclear uprates and renewals, 1 GW of hydro, storage and more than 1,300 miles of transmission and distribution, with the company citing about $7B of customer savings. Fortune reported in July 2026 that the expansion spans more than 330 parcels with five eminent-domain uses in the prior year and that 70–80 percent of the new power will serve AI data centers.",
+   "highlights": [
+    "Ten-year transmission plan of more than 1,000 miles approved with the 2025 IRP; 500-plus miles tied to the certified 2026–2030 build",
+    "Ashley Park 500/230 kV substation and Ashley Park–Wansley 500 kV line, Q2 2028",
+    "DOE loan guarantees of $26.54B closed February 2026 — the largest in the department's history per Utility Dive — at Treasury + 37.5 bp with about $300M a year of interest savings",
+    "Quarterly large-load reporting and semi-annual transmission updates to PSC staff were added by the 2025 IRP stipulation (POWER)"
+   ],
+   "positioning": "Unlike Dominion, whose 500 kV and 765 kV lines are planned and cost-allocated through PJM's regional process, Georgia Power plans and builds its own transmission as its own balancing authority; the cost enters rate base directly and the routing fights are the company's alone.",
+   "soldThrough": "Self-build into rate base; the DOE loan guarantees finance the program at below-market cost.",
+   "targetSegments": [
+    "Georgia Power's system, with the certified plants and the data-center load centers (metro Atlanta, Effingham and the I-16 and I-75 corridors) as the drivers"
+   ],
+   "roadmap": "Ashley Park–Wansley 2028; the 500-plus miles tied to the certified plants through 2030; DOE draws through 2033."
+  },
+  {
+   "name": "Alabama Power and Mississippi Power — the other two retail utilities",
+   "category": "Regulated utility service (Alabama, Mississippi)",
+   "description": "Alabama Power serves 1,563 thousand retail customers and Mississippi Power 193 thousand (December 31, 2025, FY2025 10-K), both under appointed commissions with annual rate-stabilization mechanisms. Alabama Power's December 2, 2025 order holds Rate RSE flat through 2027 and defers recovery of the Lindsay Hill Generating Station — a gas combined-cycle plant of about 880–895 MW acquired September 30, 2025 after an Alabama PSC certificate of August 13, 2025 — to January 2028 billings; its first utility-scale battery (Gorgas, 150 MW, 92 Tesla Megapacks) completes in 2027, and Barry Unit 5's coal-to-gas conversion is scheduled for 2026–2028. The parent's Q2 2026 deck attributes 4 GW of its 17 GW of contracted large load to Alabama Power in three projects; the Energy and Policy Institute reports that Alabama Power's contracts filed in June–August 2026 for Meta (Dotier LLC), Nebius/Alabama ADC and Woostor carry redacted terms, minimum bills and megawatts, and that the Alabama PSC opened a generic large-load docket on July 8, 2026 under a 2026 statute (SB 270) effective October 1, 2026 for loads of 150 MW or more. Mississippi Power acquired FP&L's 50 percent of Plant Daniel Units 1 and 2 on July 30, 2025, extended the Daniel 2 and Watson 4 retirements in a March 2026 IRP update, received Mississippi PSC approval on July 7, 2026 to convert Daniel Unit 1 or 2 to gas by 2029, supplies Georgia Power under a 750 MW affiliate PPA extended in part through 2029, and reports 'recently signed economic development loads of approximately 600 MWs' including the Compass Datacenters $10B, ~500 MW Meridian campus (2025 Year in Review; Q2 2026 10-Q).",
+   "highlights": [
+    "Alabama Power: Lindsay Hill CC acquired September 2025; Rate RSE flat through 2027; Gorgas BESS 2027; 4 GW of the parent's contracted large load in three projects (Q2 2026 deck)",
+    "Alabama large-load contracts (Meta/Dotier, Nebius, Woostor) filed with terms redacted; a generic Alabama PSC docket opened July 2026 (EPI, NBC 15)",
+    "Mississippi Power: Plant Daniel 50 percent acquisition July 2025; gas conversion of one Daniel unit approved July 2026; 0.5 GW of the parent's contracted large load; Compass Datacenters ~500 MW Meridian campus",
+    "Grist reported in August 2024 that the Plant Daniel PPA to Georgia Power keeps two coal units open at about $3 per kilowatt-year"
+   ],
+   "positioning": "Alabama Power is the second large-load market in the system (4 GW contracted) under an appointed commission with a new large-load statute; Mississippi Power is the smallest of the three retail utilities and a capacity supplier to Georgia Power.",
+   "soldThrough": "Direct regulated retail service; affiliate PPAs to Georgia Power approved by FERC and the Georgia PSC.",
+   "targetSegments": [
+    "Alabama and southeast Mississippi retail customers",
+    "Data-center customers in Alabama (Meta, Nebius, Woostor per EPI) and Mississippi (Compass Datacenters)",
+    "Georgia Power as an affiliate purchaser"
+   ],
+   "roadmap": "Alabama PSC large-load rules from October 2026; Lindsay Hill in Rate CNP from January 2028; Daniel gas conversion 2029."
+  },
+  {
+   "name": "Southern Power — the contracted wholesale fleet, gas uprates and brownfield options",
+   "category": "Wholesale generation (contracted)",
+   "description": "Southern Power owns 12,648 MW in commercial operation (FY2025 10-K) sold under long-term contracts to utilities and corporate buyers, including 732 MW of affiliate PPAs in the December 2025 Georgia certification and two FERC-approved affiliate PPAs with Georgia Power (638 MW and 74 MW) that began in June 2026 under the 2022 IRP. Per the Q4 2025 and Q1 2026 decks and the Q2 2026 10-Q it holds 640 MWh of storage in California (Garland and Tranquillity), the 512 MW Millers Branch solar project in Texas (phase I of 200 MW in service February 2026), a 1 GW wind repowering program, committed gas-turbine uprates at Franklin (Alabama, 300 MW) and Wansley (Georgia, 100 MW) of about $700M for 2029–2031, is pursuing up to 700 MW of capacity uprates, and is evaluating gas generation at six brownfield sites. Chris Cummiskey, the parent's chief commercial officer, chairs it.",
+   "highlights": [
+    "12,648 MW contracted fleet; 732 MW of affiliate PPAs certified for Georgia Power in December 2025; 638 MW and 74 MW affiliate PPAs from June 2026",
+    "Gas uprates at Franklin and Wansley (400 MW, ~$700M, 2029–2031); up to 700 MW of uprates under evaluation; six brownfield gas sites",
+    "Millers Branch solar 512 MW (Texas) in phases through 2026; 1 GW wind repowering"
+   ],
+   "positioning": "The system's contracted, non-rate-base lane — the counterparty through which Georgia Power's certificates can include affiliate purchases and the vehicle for turbine uprates the retail utilities do not own.",
+   "soldThrough": "Long-term PPAs with affiliates and third parties; FERC-jurisdictional wholesale sales.",
+   "targetSegments": [
+    "Georgia Power and other Southern utilities under affiliate PPAs",
+    "Municipal, cooperative and corporate offtakers"
+   ],
+   "roadmap": "Franklin and Wansley uprates 2029–2031; brownfield gas evaluations; further solar phases in 2026."
+  },
+  {
+   "name": "Southern Company Gas — natural gas distribution",
+   "category": "Gas distribution",
+   "description": "Southern Company Gas serves approximately 4.4 million natural gas customers in Illinois, Georgia, Virginia and Tennessee (Q4 2025 deck) and holds the SNG pipeline partnership with Kinder Morgan whose South System Expansion is in the Q4 2025 deck. The FY2025 capital plan allocates about $9B of the $81B five-year total to the gas utilities, against $68B for the electric utilities; the parent describes 95 percent of the plan as state-regulated.",
+   "highlights": [
+    "About 4.4 million gas customers in four states; ~$9B of the 2026–2030 capital plan",
+    "SNG partnership with Kinder Morgan — South System Expansion (Q4 2025 deck)"
+   ],
+   "positioning": "The regulated gas segment is outside the AI-load story except as fuel supply context for the certified combined-cycle fleet; it is carried here because the standard treatment covers every business line.",
+   "soldThrough": "Regulated distribution service under four state commissions.",
+   "targetSegments": [
+    "Residential, commercial and industrial gas customers in Illinois, Georgia, Virginia and Tennessee"
+   ],
+   "roadmap": "Rate-base growth within the ~$9B five-year allocation; the South System Expansion on the SNG pipeline."
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "Large-load contracting framework (Georgia Power, per the January 2025 PSC rule, the Rules and Regulations for Electric Service and the 2026 investor decks)",
+   "specs": [
+    {
+     "band": "Applicability",
+     "label": "Threshold",
+     "value": "any new customers using more than 100 megawatts of energy"
+    },
+    {
+     "band": "Applicability",
+     "label": "Rules and Regulations text",
+     "value": "a customer with an expected peak demand of 100 MW or greater"
+    },
+    {
+     "band": "Contract term",
+     "label": "Rule",
+     "value": "longer contract lengths (from 5-year contracts to 15-year contracts)"
+    },
+    {
+     "band": "Contract term",
+     "label": "Company framework",
+     "value": "At least 15 years for data centers and 10 years for all others"
+    },
+    {
+     "band": "Minimum bill",
+     "label": "Company framework",
+     "value": "minimum bills to cover at least 100% of annual incremental costs to serve"
+    },
+    {
+     "band": "Upstream costs",
+     "label": "Rule",
+     "value": "costs incurred by upstream generation, transmission and distribution … as construction of the data centers progresses"
+    },
+    {
+     "band": "Termination",
+     "label": "Company framework",
+     "value": "Termination Payments tied to the remaining incremental costs to serve over the life of the contract"
+    },
+    {
+     "band": "Termination",
+     "label": "Rules and Regulations text",
+     "value": "pay any costs the Company incurred in serving or preparing to serve the customer, including … distribution, transmission, and generation costs"
+    },
+    {
+     "band": "Collateral",
+     "label": "Company framework",
+     "value": "Collateral … based on customer's creditworthiness; $21B+ collateral required by '28 with A+ average rating"
+    },
+    {
+     "band": "Review",
+     "label": "PSC",
+     "value": "all new contracts with data centers at least 30 days before execution"
+    }
+   ],
+   "notes": "Verbatim from the PSC's January 23, 2025 release, the Rules and Regulations for Electric Service as revised effective February 1, 2025, the PSC's March 2026 fact sheet and the Q1/Q2 2026 investor decks. The minimum-bill percentage of contracted demand and the termination formula in the filed contracts are confidential."
+  },
+  {
+   "product": "2025 rate plan (base-rate freeze), per Georgia Power's 8-Ks of May 19 and July 1, 2025",
+   "specs": [
+    {
+     "band": "Base rates",
+     "label": "Term",
+     "value": "base rates will not be adjusted in 2026, 2027 or 2028"
+    },
+    {
+     "band": "Return on equity",
+     "label": "Set point and band",
+     "value": "retail ROE set point 10.50%, range 9.50%–11.90%"
+    },
+    {
+     "band": "Return on equity",
+     "label": "Equity ratio",
+     "value": "56%"
+    },
+    {
+     "band": "Earnings sharing",
+     "label": "Above 11.90%",
+     "value": "40% to regulatory assets / 40% refunded / 20% retained"
+    },
+    {
+     "band": "Exclusions",
+     "label": "Storm and fuel",
+     "value": "storm costs through 2025-12-31 in a separate proceeding filed Feb 1–Jul 1, 2026; Interim Cost Recovery tariff available if projected ROE < 9.50%"
+    },
+    {
+     "band": "Next case",
+     "label": "Filing",
+     "value": "required to file a base rate case by July 1, 2028"
+    }
+   ]
+  },
+  {
+   "product": "December 19, 2025 certification order — the 9,885 MW as the 10-K and the July 31, 2025 request state them",
+   "specs": [
+    {
+     "band": "Totals",
+     "label": "Certified",
+     "value": "all 9,885 megawatts of requested resources in the All-Source Certification Proceeding have been approved and certified at their respective individual project cost"
+    },
+    {
+     "band": "Totals",
+     "label": "Composition",
+     "value": "18 RFP resources totaling 7,999 MW (6,804 MW Georgia Power projects), CODs 2028–2030; extension of 50 MW of an existing 750-MW affiliate PPA with Mississippi Power through 2029-12-31; a 20-year non-affiliate PPA for 930 MW commencing 2030; five 25-year non-affiliate PPAs totaling 646 MW commencing 2027; a 260-MW Georgia Power-owned BESS (COD 2027)"
+    },
+    {
+     "band": "Combined cycle",
+     "label": "Bowen",
+     "value": "2 units 1,482 MW (Bartow Co.)"
+    },
+    {
+     "band": "Combined cycle",
+     "label": "McIntosh",
+     "value": "1 unit 757 MW (Effingham Co.)"
+    },
+    {
+     "band": "Combined cycle",
+     "label": "Wansley",
+     "value": "2 units 1,453 MW (Heard Co.)"
+    },
+    {
+     "band": "Battery storage",
+     "label": "Ten facilities, eight sites",
+     "value": "Bowen Ph 1&2 500 MW; Hammond Ph 2 192.5 MW; McIntosh 250 MW; South Hall 250 MW; Thomson 500 MW; Wadley 260 MW; Wansley 500 MW; Yates 570 MW (two)"
+    },
+    {
+     "band": "Solar plus storage",
+     "label": "Two projects",
+     "value": "Laurens Co. 200 MW solar + 200 MW BESS; Mitchell (Dougherty Co.) 150 + 150"
+    },
+    {
+     "band": "Purchases",
+     "label": "PPAs",
+     "value": "Eleven additional PPAs totaling 2,821 MW for new BESS and natural gas generation"
+    },
+    {
+     "band": "Cost",
+     "label": "Company-owned projects",
+     "value": "approximately $16.3 billion in projected capital investment (excluding AFUDC) … roughly $14 billion expected between 2026-2029"
+    },
+    {
+     "band": "Conditions",
+     "label": "Customer benefit",
+     "value": "downward pressure … of at least $556 million per year for 2029–2031; $8.50 per month (or approximately $102 per year) for a 1,000-kWh residential customer"
+    },
+    {
+     "band": "Conditions",
+     "label": "Backstop",
+     "value": "Georgia Power has agreed to financially backstop new projects in years 2029, 2030, and 2031"
+    }
+   ],
+   "notes": "Values verbatim from Georgia Power's July 31 and December 19, 2025 releases and 8-Ks, the FY2025 Form 10-K and the PSC's December 19, 2025 release. The PSC vote was 5–0; reconsideration was denied 3–2 on February 17, 2026."
+  },
+  {
+   "product": "Company-owned build schedule 2026–2030 (Q4 2025 / Q2 2026 earnings decks)",
+   "specs": [
+    {
+     "band": "2026",
+     "label": "In service",
+     "value": "5 BESS 765 MW (2 BESS 178 MW completed through April 2026 + 3 BESS 587 MW)"
+    },
+    {
+     "band": "2027",
+     "label": "In service",
+     "value": "Yates Unit 8 (CT) 441 MW, 2 BESS 750 MW"
+    },
+    {
+     "band": "2028",
+     "label": "In service",
+     "value": "Yates Units 9–10 (CT) 882 MW, 5 BESS 1,570 MW, 2 solar+BESS 350 MW"
+    },
+    {
+     "band": "2029",
+     "label": "In service",
+     "value": "Wansley Unit 10 (CC) 777 MW, Bowen Unit 7 (CC) 780 MW, 3 BESS 610 MW"
+    },
+    {
+     "band": "2030",
+     "label": "In service",
+     "value": "McIntosh Unit 12 (CC) 797 MW, Bowen Unit 8 (CC) 780 MW, Wansley Unit 11 (CC) 777 MW"
+    },
+    {
+     "band": "Totals",
+     "label": "Annual",
+     "value": "1.2/1.5/1.9/2.3/2.8 GW; 500+ Miles of New Transmission Lines"
+    },
+    {
+     "band": "Execution",
+     "label": "Posture",
+     "value": "All necessary equipment reserved … Turnkey fixed-price EPC agreements in place for project work being performed by external contractors … Internal construction team self-performing McIntosh Unit 12 (CC) and McIntosh BESS … Additional turbines reserved"
+    }
+   ]
+  },
+  {
+   "product": "Utility-owned battery portfolio (company releases; supplier per Energy-Storage.news)",
+   "specs": [
+    {
+     "band": "In service",
+     "label": "Mossy Branch",
+     "value": "65 MW / 4-hr, Talbot Co., COD Nov 2024; EPC & technology Wärtsilä (Quantum ESS, GEMS)"
+    },
+    {
+     "band": "In service",
+     "label": "Robins",
+     "value": "128 MW (Bibb) COD Jun 2026, EPC Burns & McDonnell"
+    },
+    {
+     "band": "In service",
+     "label": "Moody",
+     "value": "49.5 MW (Lowndes) May 2026, Crowder Industrial Construction; completed ahead of schedule; 4-hour; co-located with Moody solar"
+    },
+    {
+     "band": "Under construction",
+     "label": "Hammond",
+     "value": "57.5 MW (Floyd) Nov 2026, Crowder"
+    },
+    {
+     "band": "Under construction",
+     "label": "McGrau Ford Ph I",
+     "value": "265 MW (Cherokee) Oct 2026, Burns & McDonnell"
+    },
+    {
+     "band": "Under construction",
+     "label": "McGrau Ford Ph II",
+     "value": "265 MW Sep 2026, Burns & McDonnell"
+    },
+    {
+     "band": "Under construction",
+     "label": "Twiggs County",
+     "value": "200 MW / 4-hr, COD 2027, Crowder Industrial Construction, LLC"
+    },
+    {
+     "band": "Under construction",
+     "label": "Wadley",
+     "value": "260 MW, Jefferson Co., COD 2027, EPC Burns & McDonnell, co-located with third-party solar"
+    },
+    {
+     "band": "Supplier (trade press)",
+     "label": "2024 portfolio",
+     "value": "Tesla Megapack 2XL (LFP) — Robins 128 MW/512 MWh; Moody 49.5/198; Hammond 57.5/230; McGrau Ford II 265/1,060; 20-year Tesla capacity guarantee"
+    },
+    {
+     "band": "Alabama Power",
+     "label": "Gorgas",
+     "value": "150 MW / 2-hour, lithium iron phosphate, standalone grid-charged; 92 Tesla Megapacks; construction began Q3 2025, completion 2027"
+    }
+   ],
+   "notes": "Company releases name the EPCs; the Tesla supply agreement for the Georgia 2024 portfolio is reported by Energy-Storage.news (September 5, 2024) with costs redacted under a PSC confidentiality rule. Battery OEMs for the projects certified in December 2025 are not disclosed."
+  },
+  {
+   "product": "Plant Vogtle Units 3 and 4 (Southern Nuclear, Georgia Power, NRC)",
+   "specs": [
+    {
+     "band": "Units",
+     "label": "Design and capacity",
+     "value": "Westinghouse AP1000; approximately 1,117 MW each; ~2,234 MW combined"
+    },
+    {
+     "band": "Units",
+     "label": "Commercial operation",
+     "value": "Unit 3 2023-07-31; Unit 4 2024-04-29"
+    },
+    {
+     "band": "Ownership",
+     "label": "Shares",
+     "value": "Georgia Power 45.7%, Oglethorpe 30%, MEAG 22.7%, Dalton 1.6%"
+    },
+    {
+     "band": "Cost",
+     "label": "Georgia Power",
+     "value": "final net investment … is $10.670 billion, which excludes capitalized AFUDC of approximately $440 million"
+    },
+    {
+     "band": "Cost",
+     "label": "Customer recovery (GPB, December 2023 order)",
+     "value": "customers pay $7.56B of Georgia Power's remaining cost; ~$3B shareholder loss; +$8.95/month on a $157 typical bill"
+    },
+    {
+     "band": "Performance",
+     "label": "Company statement",
+     "value": "availability factors over 95% since commercial operation; expected annual output: over 30 million megawatt hours (site)"
+    },
+    {
+     "band": "Regulatory",
+     "label": "NRC Unit 3",
+     "value": "White finding for unplanned scrams with complications (2024-07-08 and 2024-09-17); returned to Green/Column 1 effective 2025-03-20"
+    }
+   ]
+  },
+  {
+   "product": "Southern Company system snapshot (FY2025 Form 10-K)",
+   "specs": [
+    {
+     "band": "Customers",
+     "label": "Retail electric (Dec 31, 2025)",
+     "value": "Alabama Power 1,563K; Georgia Power 2,834K; Mississippi Power 193K; total 4,590K"
+    },
+    {
+     "band": "Customers",
+     "label": "Gas",
+     "value": "4.4M (Q4 deck)"
+    },
+    {
+     "band": "Capacity",
+     "label": "Nameplate (kW)",
+     "value": "Alabama Power 13,822,077; Georgia Power 14,789,068; Mississippi Power 4,017,874; Southern Power 12,647,880"
+    },
+    {
+     "band": "Territory",
+     "label": "Electric",
+     "value": "~116,000 sq mi, ~17M population (AL, GA, SE Mississippi)"
+    },
+    {
+     "band": "Employees",
+     "label": "Dec 31, 2025",
+     "value": "~29,800"
+    },
+    {
+     "band": "Capital plan",
+     "label": "2026–2030",
+     "value": "$81B … 95% in state-regulated utilities ($68B electric, $9B gas); $42B Growth-Related Capital; 9% Rate Base Growth"
+    }
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$26.7B",
+      "expected": "Q4: $6.31B (Zacks)",
+      "verdict": "beat",
+      "result": "Q4 2024 revenue $6.34B against $6.31B expected per Zacks; full-year figure per the FY2025 results release's comparative column",
+      "kpi": "revenue",
+      "usdMillions": 26700,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$4.05 (top of $3.95–4.05 guidance)",
+      "expected": "Q4: $0.51 (Zacks); $0.53 (Investing.com)",
+      "verdict": "miss",
+      "result": "Q4 2024 adjusted EPS $0.50 — a 1.96 percent miss on the Zacks basis; the full year landed at the top of company guidance",
+      "kpi": "eps"
+     },
+     {
+      "name": "GAAP earnings per share",
+      "actual": "$4.02",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per the Q4 2025 release's comparatives"
+     },
+     {
+      "name": "Five-year capital plan",
+      "actual": "$63B (2025–2029), raised from $48B at Q3 2024",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per Utility Dive's reading of the Q4 2024 and Q3 2025 decks; the plan reached $76B at Q3 2025 and $81B in February 2026"
+     }
+    ],
+    "commentary": "The year the Georgia large-load rule was written and the 2025 IRP filed. Guidance for 2025 was set at $4.20–4.30. No full-year revenue consensus was located; the Q4 figures are the comparison, and the same-day stock reaction was not found."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$29.6B (+10.6%)",
+      "expected": "Q4: $6.86B (Zacks)",
+      "verdict": "beat",
+      "result": "Q4 2025 revenue $6.98B (+10.1%) against $6.86B, a 1.7 percent surprise",
+      "kpi": "revenue",
+      "usdMillions": 29600,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$4.30 (vs $4.05; top of $4.20–4.30 guidance)",
+      "expected": "Q4: $0.56 (Zacks)",
+      "verdict": "miss",
+      "result": "Q4 2025 adjusted EPS $0.55 — a 1.79 percent miss on the Zacks basis; 2026 guidance set at $4.50–4.60 with long-term growth raised to 7–8 percent from a 2028 base",
+      "kpi": "eps"
+     },
+     {
+      "name": "GAAP earnings per share",
+      "actual": "$3.94 (Q4 $0.38)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per the Q4 2025 release"
+     },
+     {
+      "name": "Contracted large load",
+      "actual": "10 GW (26 projects) at Q4 2025, up 2 GW in the quarter; 3 GW finalizing, 7 GW late-stage, over 75 GW prospective (125+ projects)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company definition: contracted = 'Fully executed agreement… submitted to, or reviewed by, state regulator'; 10 GW already under construction",
+      "kpi": "mw-contracted",
+      "qty": 10000
+     },
+     {
+      "name": "Five-year capital plan",
+      "actual": "$81B for 2026–2030, 95 percent state-regulated; 9 percent rate-base growth",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Up from $76B at Q3 2025; the 10-K states $78.1B currently estimated for 2026–2030 against the deck's $81B base plan"
+     }
+    ],
+    "commentary": "Adjusted EPS grew 6 percent and the capital plan grew from $63B to $81B in twelve months on the certified Georgia build. Moody's had moved the parent's outlook to negative in September on the capex trajectory. FFO to debt stood at 15.4 percent with a company objective of about 17 percent by 2029; $9B of an $11B equity need had been addressed."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$8.4B (+8.0%)",
+      "expected": "$8.22B (Zacks)",
+      "verdict": "beat",
+      "result": "A 2.2 percent revenue surprise; shares rose 0.2 percent on the day per Investing.com"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$1.32 (vs $1.23)",
+      "expected": "$1.21 (Zacks); $1.23 (Investing.com); company estimate $1.20",
+      "verdict": "beat",
+      "result": "A 9.1 percent surprise on the Zacks basis; GAAP EPS $1.21"
+     },
+     {
+      "name": "Contracted large load",
+      "actual": "Over 11 GW (28 projects); 6 GW finalizing (8 projects), 6 GW late-stage (10 projects), 75 GW+ prospective",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Ramps published: 10 GW by 2028, 16 GW by 2030, 23 GW by the mid-2030s across contracted, finalizing and late-stage; nearly all contracted projects under construction; two hyperscalers newly contracted at 0.5 GW and 1.4 GW",
+      "kpi": "mw-contracted",
+      "qty": 11000
+     }
+    ],
+    "commentary": "A clean beat on both lines; data-center sales were up 42 percent year on year. The $500M at-the-market equity tranche left about $2.3B of the equity plan remaining through 2030."
+   },
+   {
+    "period": "Q2 2026 (latest interim)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Operating revenue",
+      "actual": "$6.977B (+0.1%)",
+      "expected": "$7.24B (Investing.com)",
+      "verdict": "miss",
+      "result": "A 3.6 percent revenue miss on the Investing.com basis; shares fell 1.84 percent pre-market to $94.29"
+     },
+     {
+      "name": "Adjusted earnings per share",
+      "actual": "$1.13 (vs $0.92); year-to-date $2.46",
+      "expected": "$0.99 (Investing.com); $1.01 (MarketBeat); company estimate $1.00",
+      "verdict": "beat",
+      "result": "A 14 percent surprise on the Investing.com basis; GAAP EPS $1.03; the company now projects 'near, or at, the top' of the $4.50–4.60 range; Q3 2026 company estimate $1.65"
+     },
+     {
+      "name": "Contracted large load",
+      "actual": "17 GW (31 projects) — Georgia Power 12.5 GW, Alabama Power 4 GW, Mississippi Power 0.5 GW; 6 GW newly contracted; 8 GW late-stage or finalizing; 75 GW+ prospective",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "By customer type: self-owned data center/hyperscaler 11 GW, large developers above 300 MW 1.5 GW, industrial and smaller developers 4.5 GW; 27 projects broken ground; over 12 GW of contracted projects under construction; ramps 12 GW by 2028, 19 GW by 2030, 25 GW by the mid-2030s",
+      "kpi": "mw-contracted",
+      "qty": 17000
+     },
+     {
+      "name": "Data-center operating load",
+      "actual": "Over 1.2 GW operating (+500 MW year on year); data-center usage up 55 percent in the quarter and 49 percent year to date",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per Data Center Frontier's and Investing.com's readings of the call; the CEO: 'The bottom line is the load is very real'"
+     }
+    ],
+    "commentary": "The tenth consecutive quarter of contracted-load growth and the first revenue miss of the year; the $700M at-the-market tranche left about $1.1B of equity remaining, then supplemented by the August convertible notes. Next report expected October 29, 2026 per Investing.com and MarketBeat but not company-confirmed."
+   }
+  ]
+ },
+ "recentDevelopments": [
+  {
+   "date": "2026-08-27",
+   "category": "regulatory",
+   "headline": "AJC: the OpenAI contract's added protections — no recovery of a revenue shortfall from residential customers on early termination, PSC notice within 15 days of any large-customer cancellation, semiannual public reporting; Georgia Watch calls the commitment letter 'full of ifs'",
+   "read": "Georgia's protections are negotiated contract by contract, so the terms in one deal are not the rule for the next — the seller's read of any campus starts with its own filed contract.",
+   "source": "https://www.ajc.com/business/2026/08/georgia-power-deal-to-power-openai-data-center-near-savannah-is-approved/"
+  },
+  {
+   "date": "2026-08-26",
+   "category": "regulatory",
+   "headline": "Georgia PSC review window closes on Georgia Power's OpenAI contract (~3,200 MW, 25 years, Effingham County); the company says its large-load contract portfolio now delivers approximately $950M a year of customer savings from 2029, up from the $556M the December order required",
+   "read": "The first contract tested under the 30-day rule cleared on a staff statement rather than a vote, with new protections on early termination; the backstop arithmetic has moved from a floor to a claim 1.7 times larger.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-powers-contract-with-openai-approved-latest-approval-part-of-portfolio-of-large-load-contracts-delivering-approximately-950-million-in-annual-savings-beginning-in-2029-302861080.html"
+  },
+  {
+   "date": "2026-08-03",
+   "category": "financial",
+   "headline": "Southern Company places $650M of convertible senior notes due 2027 and $1.5B due 2029",
+   "read": "Equity-linked funding for an $81B plan whose remaining equity need the company puts at about $1.1B after two at-the-market tranches in 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000058/ex99-1southern2026a2026bco.htm"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "capacity",
+   "headline": "Construction begins at Plant Bowen on two combined-cycle units of nearly 1,500 MW and a 500 MW battery, with DOE officials citing the loan package",
+   "read": "The first of the December 2025 combined-cycle blocks moves from certificate to site two years before the plant's 2029 in-service date; the turbine OEM remains undisclosed.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-department-of-energy-and-elected-officials-celebrate-the-future-of-energy-production-at-plant-bowen-302840183.html"
+  },
+  {
+   "date": "2026-07-30",
+   "category": "financial",
+   "headline": "Q2 2026: adjusted EPS $1.13 against a company estimate of $1.00 and a Street consensus of $0.99–1.01; revenue $6.98B; 17 GW of contracted large load (31 projects, 6 GW newly contracted, 3 GW each in Alabama and Georgia); data-center usage up 55 percent; guidance tracking 'near, or at, the top' of $4.50–4.60",
+   "read": "The contracted tranche doubled in three quarters (8 → 17 GW) while the parent kept the 75 GW prospective figure separate — the vocabulary discipline the dossier's judgments rest on.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000092122/000009212226000056/ex99-pressreleaseq22026.htm"
+  },
+  {
+   "date": "2026-07-27",
+   "category": "capacity",
+   "headline": "Moody battery (49.5 MW, four hours, co-located with solar) opens ahead of schedule",
+   "read": "Second of the 2024 portfolio in service; the utility-owned storage lane is delivering on the certificate's dates.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-cuts-ribbon-on-new-moody-battery-energy-storage-facility-paired-with-solar-302835688.html"
+  },
+  {
+   "date": "2026-07-26",
+   "category": "regulatory",
+   "headline": "Fortune: the Georgia Power expansion spans more than 330 parcels with five eminent-domain uses in the past year; 70–80 percent of the new power will serve AI data centers",
+   "read": "The wires are the political surface of the plan — routing fights are the company's alone with no RTO to share them.",
+   "source": "https://fortune.com/2026/07/26/georgia-power-utility-company-eminent-domain-grid-expansion-data-center/"
+  },
+  {
+   "date": "2026-07-22",
+   "category": "customer",
+   "headline": "Georgia Power to serve an OpenAI project in Effingham County: approximately 3,200 MW, up to 1,000 MW of flexible demand response, a 25-year agreement, the customer paying all infrastructure costs",
+   "read": "The single largest named load in the Southern system and the first with a stated flexible-demand tranche — the 'up to 1 GW' of interruptibility is a reserve-margin instrument as much as a contract term.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-to-serve-openai-project-in-effingham-county.html"
+  },
+  {
+   "date": "2026-07-15",
+   "category": "corporate",
+   "headline": "Georgia Power issues a six-point Customer Protection Pledge on making growth work for existing customers",
+   "read": "A political instrument timed to the 2026 commission elections and the OpenAI review.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-reaffirms-longstanding-commitment-to-make-growth-work-for-customers-with-customer-protection-pledge-302826812.html"
+  },
+  {
+   "date": "2026-07-08",
+   "category": "regulatory",
+   "headline": "Alabama PSC opens a generic review of data-center power contracts under a 2026 statute effective October 1, 2026 for loads of 150 MW or more; Alabama Power's Meta, Nebius and Woostor contracts filed with terms redacted",
+   "read": "Alabama's 4 GW of contracted load is moving onto a statutory footing a year after Georgia's rule; the redactions are the same transparency pattern.",
+   "source": "https://mynbc15.com/news/local/alabama-psc-opens-review-of-data-center-power-contracts-sets-august-comment-deadlines"
+  },
+  {
+   "date": "2026-06-15",
+   "category": "regulatory",
+   "headline": "NRC renews Plant Hatch's licences for 20 years (Unit 1 to 2054, Unit 2 to 2058)",
+   "read": "Existing-fleet life extension is the low-risk nuclear lane the company prefers; uprate engineering at Hatch follows.",
+   "source": "https://www.prnewswire.com/news-releases/georgias-plant-hatch-receives-20-year-license-renewal-from-the-nuclear-regulatory-commission-302800398.html"
+  },
+  {
+   "date": "2026-06-09",
+   "category": "procurement",
+   "headline": "Georgia Power initiates an RFP for 2,000–6,000 MW of dispatchable capacity for 2032–2033 (thermal, storage, storage-plus-renewables), with certification filings in mid-2027",
+   "read": "The next certification cycle's solicitation opens before the last cycle's plants are built — the pipeline is the plan's clock now.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000092122/000009212226000054/so-20260630.htm"
+  },
+  {
+   "date": "2026-05-28",
+   "category": "regulatory",
+   "headline": "PSC approves the fuel and storm stipulation: fuel rate down 12.6 percent (~$388M a year), Helene costs of about $800M amortized over 67 months, hedging capped at 20 percent, the typical residential bill down about $4 a month; the two new commissioners' motions to investigate large customers' effect on fuel costs fail 3–2",
+   "read": "The cross-subsidy argument has moved from the certificate to the fuel clause; a separate hearing on recovering a regulatory asset only from large customers is due by December 2026.",
+   "source": "https://psc.ga.gov/site/assets/files/9488/media_advisory_5_28_26_fuel_storm_stip_approval.pdf"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "financial",
+   "headline": "Q1 2026: adjusted EPS $1.32 against a $1.20 company estimate and $1.21 Zacks consensus; revenue $8.4B; more than 11 GW contracted (28 projects), 6 GW finalizing, 6 GW late-stage; nearly all contracted projects under construction",
+   "read": "A beat on both lines; the ramp the company published — 10 GW by 2028, 16 GW by 2030, 23 GW by the mid-2030s — is the forecast the certificates are sized to.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000092122/000009212226000036/ex99-pressreleaseq12026.htm"
+  },
+  {
+   "date": "2026-04-23",
+   "category": "regulatory",
+   "headline": "Georgia Power files to procure 2,000–6,000 MW for 2032–2033 and reports 32 large-load customers committed to approximately 15,600 MW, 21 under construction",
+   "read": "The Georgia-only 'committed' figure (signed requests for service) sits between the parent's contracted and late-stage tranches — three vocabularies for one pipeline.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-plans-for-additional-generation-to-meet-energy-needs.html"
+  },
+  {
+   "date": "2026-04-20",
+   "category": "financial",
+   "headline": "Dividend raised $0.08 to $3.04 annualized — the 25th consecutive annual increase",
+   "read": "Dividend growth continues through the largest capital plan in the company's history.",
+   "source": "https://www.prnewswire.com/news-releases/southern-company-increases-dividend-for-25th-consecutive-year-302747618.html"
+  },
+  {
+   "date": "2026-04-15",
+   "category": "regulatory",
+   "headline": "Canary Media: PSC unanimously approves the Customer Identified Resource program — a large customer may bring its own clean energy above 3 MW under a 75/25 savings split; critics note it carries no capacity credit and displaces no planned gas",
+   "read": "A sixth procurement channel opens for the customer rather than the utility; it does not touch the certified fleet.",
+   "source": "https://www.canarymedia.com/articles/data-centers/georgia-power-byo-clean-energy"
+  },
+  {
+   "date": "2026-03-31",
+   "category": "capacity",
+   "headline": "Wadley 260 MW battery construction begins (Burns & McDonnell EPC, co-located with third-party solar); the company counts nearly 3,000 MW of certified storage across nine facilities",
+   "read": "The owned-storage lane keeps naming the same two EPCs; the battery OEM is still unnamed by the company.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-begins-construction-of-newest-battery-storage-system-in-wadley-ga-302730157.html"
+  },
+  {
+   "date": "2026-03-26",
+   "category": "legal",
+   "headline": "Environmental and faith groups petition Fulton County Superior Court against the December 2025 certification, arguing need was not proven beyond the contracted load; the Q2 10-Q says the petition seeks decertification of at least 757 MW",
+   "read": "The certificate stands while the case runs; the exposure is the McIntosh block's timing, not the program.",
+   "source": "https://www.eenews.net/articles/enviros-faith-groups-sue-over-georgia-gas-expansion/"
+  },
+  {
+   "date": "2026-03-04",
+   "category": "capacity",
+   "headline": "Alabama Power begins installing 92 Tesla Megapacks at the 150 MW Gorgas battery, the state's first utility-scale storage, for 2027",
+   "read": "The utility-owned storage model extends to Alabama with a named supplier — the one Tesla reference in the company's own channels.",
+   "source": "https://www.alabamapower.com/news/strengthening-reliability/alabama-power-installing-tesla-megapacks-at-gorgas-bess-increasing-reliability-during-peak-times.html"
+  },
+  {
+   "date": "2026-02-25",
+   "category": "financial",
+   "headline": "DOE closes $26.54B of loan guarantees (Georgia Power $22.4B, Alabama Power $4.1B) for 5.3 GW of new gas, 6.3 GW of nuclear uprates and renewals, 1 GW of hydro, storage and 1,300-plus miles of wires, at Treasury plus 37.5 basis points maturing 2055",
+   "read": "The largest DOE loan in history finances the certified build at below-market cost — about $300M a year of interest savings per the company, cited at every groundbreaking since.",
+   "source": "https://www.prnewswire.com/news-releases/southern-company-receives-historic-department-of-energy-26-5-billion-loan-guarantees-to-increase-grid-reliability-302697140.html"
+  },
+  {
+   "date": "2026-02-19",
+   "category": "financial",
+   "headline": "FY2025: adjusted EPS $4.30 at the top of the $4.20–4.30 range; revenue $29.6B (+10.6%); 2026 guidance $4.50–4.60; five-year capital plan raised to $81B (95 percent state-regulated); long-term growth 7–8 percent from a 2028 base; 10 GW contracted, 75 GW prospective",
+   "read": "The plan grew from $63B to $81B in twelve months on the certified Georgia build; the Q4 print itself was a one-cent miss on the Zacks basis.",
+   "source": "https://www.prnewswire.com/news-releases/southern-company-reports-fourth-quarter-and-full-year-2025-earnings-302692191.html"
+  },
+  {
+   "date": "2026-02-18",
+   "category": "regulatory",
+   "headline": "The reconstituted PSC denies reconsideration of the December 2025 certification 3–2 on party lines; Commissioner Hubbard: 'a great risk here that we are not protecting residential and small commercial customers'",
+   "read": "The first vote of the new majority on the certificate — a dissent, not a reversal, and the shape of every contested vote since.",
+   "source": "https://www.ajc.com/business/2026/02/georgia-regulators-wont-revisit-approval-of-new-power-plants-for-data-centers/"
+  },
+  {
+   "date": "2026-02-17",
+   "category": "regulatory",
+   "headline": "Georgia Power files a 12.6 percent fuel-rate decrease and a $912M four-year storm-cost recovery, nearly $800M of it from Hurricane Helene",
+   "read": "The freeze excludes both lines; the bills the election was fought over move here.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-delivers-lower-costs-for-customers-with-latest-filings-302689958.html"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "procurement",
+   "headline": "Georgia Power initiates the 500 MW battery-storage RFP for capacity online by 2031 (short list December 2026, contracts January 2027 per the evaluator's schedule)",
+   "read": "The one Georgia storage lane open to developers' bids as well as owned projects; no winners at the time of writing.",
+   "source": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000006/so-20251231.htm"
+  },
+  {
+   "date": "2026-01-27",
+   "category": "policy",
+   "headline": "Capitol Beat: a flood of Georgia bills targets data centers — cost-shift (SB 34), sales-tax-exemption limits, disclosure and a moratorium; none becomes law, and the exemption stands through 2031",
+   "read": "The legislature declined to move the cost-allocation fight out of the commission; the exemption remains a state subsidy the commission cannot touch.",
+   "source": "https://capitol-beat.org/2026/01/resistance-to-data-centers-fuels-flood-of-georgia-bills-targeting-the-industry/"
+  },
+  {
+   "date": "2026-01-13",
+   "category": "customer",
+   "headline": "AJC: Microsoft pitches local benefits for its Georgia sites (Atlanta Southside, Douglasville, Fayetteville, Rome, Union City) and pledges to prevent electricity price increases for existing customers",
+   "read": "A hyperscaler adopting the utility's own cost-protection language — the political cover the certificate needs from its customers.",
+   "source": "https://www.ajc.com/business/2026/01/as-georgians-push-back-on-data-centers-microsoft-pitches-local-benefits/"
+  },
+  {
+   "date": "2025-12-19",
+   "category": "regulatory",
+   "headline": "PSC certifies all 9,885 MW 5–0 at each project's certified cost: 7,999 MW of RFP resources (6,804 MW company-owned), PPAs of 930 MW (20 years, from 2030) and 646 MW (25 years, from 2027), a 260 MW battery; company-owned capital about $16.3B ex-AFUDC; a $556M-a-year customer-benefit condition and a 2029–2031 backstop",
+   "read": "Close to half of Georgia Power's deployed capacity certified in one order, on a stipulation with staff who had called two-thirds of it speculative.",
+   "source": "https://www.sec.gov/Archives/edgar/data/41091/000009212225000100/so-20251219.htm"
+  },
+  {
+   "date": "2025-12-15",
+   "category": "capacity",
+   "headline": "Yates Unit 9's Mitsubishi Power M501JAC turbine and generator delivered; Units 8–10 (1,300 MW) online by end-2027",
+   "read": "Ordered around the 2023 update, two years before the 2025 plan — the lead-time lesson in one delivery.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-receives-turbine-and-generator-for-new-unit-9-at-plant-yates-302642442.html"
+  },
+  {
+   "date": "2025-12-10",
+   "category": "regulatory",
+   "headline": "Georgia Power and PSC staff reach a stipulation on all 9,885 MW after staff had recommended approving about a third; Southface: 'everything they've asked for with very little in return'",
+   "read": "The outgoing majority settled the certificate before the two new commissioners were seated on January 1.",
+   "source": "https://www.ajc.com/news/2025/12/georgia-power-psc-staff-strike-deal-to-allow-historic-data-center-expansion/"
+  },
+  {
+   "date": "2025-12-08",
+   "category": "capacity",
+   "headline": "Ashley Park 500/230 kV substation and 35-mile Ashley Park–Wansley 500 kV line announced for south metro Atlanta, in service Q2 2028",
+   "read": "The first named segment of the 500-plus miles tied to the certified plants.",
+   "source": "https://www.prnewswire.com/news-releases/south-metro-atlanta-communities-to-benefit-from-new-transmission-infrastructure-projects-including-ashley-park-wansley-line-302635506.html"
+  },
+  {
+   "date": "2025-12-02",
+   "category": "regulatory",
+   "headline": "Alabama PSC holds Alabama Power's Rate RSE flat through 2027 and defers Lindsay Hill recovery to January 2028",
+   "read": "A second rate freeze in the system, on an appointed commission's clock rather than an election's.",
+   "source": "https://www.prnewswire.com/news-releases/alabama-power-commits-to-steady-rates-through-2027-302630887.html"
+  },
+  {
+   "date": "2025-11-24",
+   "category": "market",
+   "headline": "Utility Dive: Georgia Power's pipeline at 50.9 GW (down 6 GW in a quarter), 24.4 GW near-term, 11 GW committed across 28 projects; staff: 'Only about 1,900 MW is supported by executed contracts… The rest is speculative'; 14.3 GW of projects exited",
+   "read": "The independent reading of the tranches at the moment the certificate was being negotiated — the number the court petition rests on.",
+   "source": "https://www.utilitydive.com/news/georgia-power-large-load-data-centers/806300/"
+  },
+  {
+   "date": "2025-11-04",
+   "category": "policy",
+   "headline": "Democrats flip two Georgia PSC seats in a special election on utility-bill affordability (~60 percent margins); first change of party on the commission since 2006",
+   "read": "The body that decides every Georgia certificate changed composition between the stipulation and the vote's reconsideration.",
+   "source": "https://thecurrentga.org/2025/11/04/democrats-flip-two-seats-on-the-georgia-public-service-commission/"
+  },
+  {
+   "date": "2025-10-30",
+   "category": "financial",
+   "headline": "Q3 2025: adjusted EPS $1.60 against a $1.50 estimate; revenue $7.8B (+7.5%); contracts for 8 GW (up 2 GW), 7 GW already broken ground, over 50 GW pipeline; 8 percent annual sales growth through 2029",
+   "read": "The quarter the company began publishing the contracted / committed / pipeline ladder in earnest.",
+   "source": "https://www.sec.gov/Archives/edgar/data/3153/000009212225000086/ex99-pressreleaseq32025.htm"
+  },
+  {
+   "date": "2025-10-20",
+   "category": "capacity",
+   "headline": "Twiggs County 200 MW four-hour battery construction begins (Crowder), certified in an expedited proceeding on September 4, 2025 for 2027",
+   "read": "Georgia's expedited storage certification in use — a one-project docket between the plan and the big certificate.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-begins-construction-of-newest-battery-storage-system-near-macon-302589070.html"
+  },
+  {
+   "date": "2025-09-30",
+   "category": "customer",
+   "headline": "Georgia Power reports nearly 2 GW of first contracts under the new large-load rules and an updated forecast of 8,448 MW of load growth between winter 2025/26 and winter 2030/31",
+   "read": "The contracted tranche's starting point for the certification docket.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-highlights-new-customer-contracts-continued-economic-growth-updated-forecasts-in-latest-filings-with-georgia-psc.html"
+  },
+  {
+   "date": "2025-09-24",
+   "category": "financial",
+   "headline": "Moody's changes Southern Company's outlook to negative (Baa1) on metrics 'that may not be sustained' as capex rises from $63B to $76B; Georgia Power's outlook moves to stable from positive",
+   "read": "The credit cost of the certified build, priced before the plan reached $81B.",
+   "source": "https://www.investing.com/news/stock-market-news/southern-company-outlook-changed-to-negative-by-moodys-93CH-4253742"
+  },
+  {
+   "date": "2025-09-23",
+   "category": "procurement",
+   "headline": "Georgia Power announces the 2025 Energy Storage System RFP: 500 MW, at least two hours, online by end-2031, Ascend Analytics as independent evaluator",
+   "read": "The developer lane for Georgia storage opens on its own calendar, separate from the certificate.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-announces-2025-energy-storage-system-request-for-proposals-302564964.html"
+  },
+  {
+   "date": "2025-09-05",
+   "category": "procurement",
+   "headline": "PSC approves five CARES 2023 solar PPAs totaling 1,068 MW, including 91.5 MW of storage at Wilkinson; developers unnamed",
+   "read": "The PPA lane at work: the utility picks the bids, the developers pick the hardware.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-receives-approval-from-georgia-psc-for-five-new-solar-facilities-to-supply-cares-2023-solar-program-302547990.html"
+  },
+  {
+   "date": "2025-08-04",
+   "category": "leadership",
+   "headline": "Pedro Cherry elected chairman and CEO of Mississippi Power",
+   "read": "Leadership change at the smallest retail utility in the system.",
+   "source": "https://www.prnewswire.com/news-releases/mississippi-power-president-pedro-cherry-elected-chairman-and-ceo-during-companys-centennial-year-302518707.html"
+  },
+  {
+   "date": "2025-07-31",
+   "category": "regulatory",
+   "headline": "Georgia Power requests certification of about 9,900 MW: 8,000 MW from the all-source RFP plus 1,886 MW supplemental — 3,692 MW of combined cycle, 3,022.5 MW of stand-alone storage at ten facilities, 350 MW of solar-plus-storage, and 2,821 MW of PPAs",
+   "read": "The request that became the December certificate, filed two weeks after the plan was approved.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-requests-certification-of-approximately-9900-mw-of-new-resources-from-the-georgia-psc.html"
+  },
+  {
+   "date": "2025-07-22",
+   "category": "leadership",
+   "headline": "Tyler Cook named Georgia Power's CFO and treasurer; Aaron Abramovitz and Matt Kim move to Southern Company finance roles, all effective July 31",
+   "read": "Finance bench reshuffled beneath the new parent CFO.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-names-tyler-cook-senior-vp-cfo-treasurer.html"
+  },
+  {
+   "date": "2025-07-15",
+   "category": "regulatory",
+   "headline": "PSC approves the 2025 IRP unanimously with the forecast intact — about 8,500 MW of load growth over six years, +2,600 MW of 2030 peak versus the 2023 update; Vogtle 1–2 uprates, McIntosh +268 MW, Bowen and Scherer coal through at least 2034, more than 1,500 MW of storage by 2035, up to 4,000 MW of renewables, a 1,000-mile transmission plan; quarterly large-load reporting added",
+   "read": "The plan that sized the certificate; staff and intervenors had argued the forecast was overstated and the commission accepted it with reporting conditions.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-public-service-commission-approves-plan-to-meet-the-energy-needs-of-a-growing-georgia.html"
+  },
+  {
+   "date": "2025-07-11",
+   "category": "leadership",
+   "headline": "CFO transition: Dan Tucker to retire; David Poroch named CFO effective July 31, 2025",
+   "read": "Continuity hire from the comptroller's chair through the largest plan in the company's history.",
+   "source": "https://prnewswire.com/news-releases/southern-company-announces-cfo-transition-302502960.html"
+  },
+  {
+   "date": "2025-07-01",
+   "category": "regulatory",
+   "headline": "PSC approves the three-year base-rate freeze through 2028 unanimously — after six bill increases in three years and four months before the special election",
+   "read": "The political instrument of the cycle; fuel and storm cases excluded, a base rate case due by mid-2028.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-psc-approves-plan-to-freeze-base-rates-through-2028.html"
+  },
+  {
+   "date": "2025-05-07",
+   "category": "capacity",
+   "headline": "765 MW of utility-owned batteries under construction at five sites with Burns & McDonnell and Crowder as EPCs",
+   "read": "The 2024 portfolio moves to construction a year before the December certificate.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/construction-now-underway-on-765-mw-of-new-battery-energy-storage-systems-across-georgia.html"
+  },
+  {
+   "date": "2025-04-17",
+   "category": "policy",
+   "headline": "EPA grants Plants Bowen and Scherer two-year exemptions from the mercury rule",
+   "read": "Federal cover for the coal-retirement deferrals the IRP relies on through 2034.",
+   "source": "https://www.yahoo.com/news/two-georgia-power-coal-plants-222932376.html"
+  },
+  {
+   "date": "2025-03-03",
+   "category": "capacity",
+   "headline": "Alabama Power announces the state's first utility-scale battery — 150 MW at the retired Gorgas plant site",
+   "read": "The owned-storage model's first Alabama project.",
+   "source": "https://www.prnewswire.com/news-releases/alabama-power-to-build-states-first-utility-scale-battery-storage-system-on-retired-power-plant-site-302390369.html"
+  },
+  {
+   "date": "2025-01-31",
+   "category": "regulatory",
+   "headline": "Georgia Power files the 2025 IRP: about 8,200 MW of load growth over six years, more than 1,500 MW of storage, 4,000 MW of renewables by 2035, coal at Bowen and Scherer through at least 2034",
+   "read": "The forecast that started the cycle, revised upward to 8,500 MW by the July order.",
+   "source": "https://www.prnewswire.com/news-releases/georgia-power-files-plan-to-reliably-economically-meet-the-energy-needs-of-a-growing-georgia-302365281.html"
+  },
+  {
+   "date": "2025-01-23",
+   "category": "regulatory",
+   "headline": "Georgia PSC adopts the large-load rule unanimously: customers above 100 MW on extended terms — 15-year contracts, minimum bills, upstream cost payment — every contract filed for review",
+   "read": "The instrument that moves load from the pipeline tranche to the contracted one.",
+   "source": "https://psc.ga.gov/site/assets/files/8617/media_advisory_data_centers_rule_1-23-2025.pdf"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Southern Company's large-load story is one of the most disciplined in the sector in its vocabulary and one of the most exposed in its politics. Basis: since Q3 2025 the parent has published a four-tranche ladder — contracted, finalizing, late-stage, prospective — with a written definition of 'contracted' (a fully executed agreement submitted to or reviewed by the state regulator) and a separate Georgia-only 'committed' figure for signed requests for service; the contracted figure rose from 8 GW to 17 GW in three quarters while the 75 GW prospective figure was never counted as load. The exposure is that the body reading those figures is elected: the commission that certified 9,885 MW five to nothing in December 2025 denied reconsideration three to two two months later after two seats changed hands on affordability, and two more seats are on the November 2026 ballot with data-center overbuilding a stated issue.",
+  "(High confidence) We assess that Georgia Power's certificate, not any customer's contract, is the instrument that converts the pipeline into equipment orders, and that the purchasing decisions were made a year or more before it. Basis: the Yates turbines were ordered around the 2023 update and delivered in December 2025 for a plan approved in July 2025; the 2024 battery portfolio's supplier and EPCs were named in 2024–2025 for a portfolio certified in 2022 and expanded in 2025; the Q4 2025 deck states all equipment for the ten-gigawatt build is reserved under fixed-price turnkey EPCs; and the next solicitation (2,000–6,000 MW for 2032–2033) opened in June 2026 with certification in mid-2027. A seller's calendar in Georgia is the RFP and the reservation, not the docket.",
+  "(High confidence) We assess that Georgia Power is the utility in this file most likely to buy a battery itself rather than through a developer, and that this is structural rather than incidental. Basis: Mossy Branch, the 765 MW portfolio, Twiggs and Wadley are all company-owned under supply agreements and named EPCs (Burns & McDonnell, Crowder, Wärtsilä), the December 2025 certificate added 3,022.5 MW of owned stand-alone storage against 2,821 MW of purchases of all kinds, and the 2025 IRP's storage target exceeds 1,500 MW by 2035 on top of that. The 500 MW storage RFP is the developer lane; it is smaller than the owned lane by an order of magnitude.",
+  "(Moderate confidence) We assess that the December 2025 backstop and the OpenAI-contract protections mark a shift from tariff design to political guarantee, and that the shift will be tested in the 2028 rate case rather than before. Basis: the certificate's condition requires at least $556M a year of downward residential pressure in 2029–2031 — which the company has since restated as about $950M a year with the August 2026 contract approvals — and the freeze defers base-rate costs to a case that must be filed by July 2028, so the deferred costs, the new plants and the end of the backstop meet in one proceeding. The court petition and the fuel-clause hearing on large-customer allocation are the interim tests; the moderate confidence reflects that the backstop's enforcement mechanism (suspension or alteration of certification if contracts fail to materialize) has not been exercised.",
+  "(Moderate confidence) We assess that Vogtle's history has fixed the company's technology appetite for the rest of the decade: proven gas turbines from one OEM at existing sites, lithium iron phosphate batteries from established integrators, uprates of the existing reactors, and no first-of-a-kind commitment. Basis: the 2025 IRP and certificate contain no new reactor; the chief executive's July 2026 statement that Southern 'is not going to be next' to build an AP1000 without others sharing the overrun risk; the $10.670B net investment and the ~$3B shareholder loss recorded in the 10-K and the 2023 recovery order; and a DOE loan package whose nuclear content is uprates and renewals. The moderate confidence reflects the company's stated talks with the federal government and hyperscalers on risk-sharing, which could reopen the question.",
+  "(Moderate confidence) We assess that the Southeast's lack of an RTO makes Georgia Power's own forecast the single point of failure for the plan, and that the reporting conditions attached in 2025 are the commission's substitute for a regional check. Basis: the IRP stipulation added quarterly large-load reports and semi-annual transmission updates; staff testimony in November 2025 put executed-contract support at about 1,900 MW when the certificate was requested; an SELC-commissioned model put a 1-in-500 probability on needing 10 GW; and the pipeline lost 14.3 GW of exited projects in a year. Against that, the contracted tranche has grown every quarter since, so the forecast's credibility is improving with the ladder rather than with the model.",
+  "(Low confidence) We assess that the turbine OEM for the Bowen, Wansley and McIntosh combined-cycle units is the same J-class supplier as Yates, on the basis that the Q4 2025 deck describes 'additional turbines reserved' and no second OEM appears in any filing or release. No source states it; treat as inference until a groundbreaking release names the equipment.",
+  "Collection gap: the minimum-bill percentages, termination formulas and contracted megawatts in Georgia's large-load contracts are filed under seal; the rule's formal citation was not confirmed in any PSC document found; the eleven PPA counterparties in the December 2025 certificate are unnamed beyond the affiliate pieces; capacity factors for Vogtle Units 3 and 4 are not published; and the Q3 2026 earnings date was not company-confirmed. INDICATORS TO WATCH. October 29, 2026 (expected, not company-confirmed) — Q3 2026 results: a contracted figure above 17 GW with Georgia Power's share above 12.5 GW would confirm Judgment 1's ladder is still converting; a flat contracted figure beside a rising prospective one would not. November 3, 2026 — Georgia PSC general election (Districts 3 and 5): a 3–2 Democratic majority would make the fuel-clause allocation hearing and the 2028 rate case the venue for Judgment 4; a Republican hold keeps the certificate's terms as written. December 2026 — storage RFP short list and the PSC's large-customer allocation hearing; January 2027 — storage contracts: a developer winner other than the company's existing EPCs would widen the battery lane. Mid-2027 — certification filing for the 2032–2033 request: a self-build share above two-thirds would confirm Judgment 2; a PPA-heavy filing would indicate the commission has begun preferring purchases. First groundbreaking release naming the Bowen or Wansley turbine OEM — resolves Judgment 7. Fulton County ruling on the certification petition — a decertification of the McIntosh block would be the first reversal of a Georgia certificate in this cycle."
+ ],
+ "relationships": [
+  {
+   "slug": "openai",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026-07",
+   "scale": "approximately 3,200 MW; 25-year agreement",
+   "via": "Georgia Power large-load contract — Effingham County campus",
+   "note": "Georgia Power will serve OpenAI's Effingham County project under a 25-year agreement of approximately 3,200 MW with up to 1,000 MW of flexible demand response; the contract cleared the PSC's 30-day review in August 2026.",
+   "context": "Georgia Power's July 22, 2026 release states the project is 'approximately 3,200 MW', that OpenAI 'pays all infrastructure costs' and that up to 1,000 MW can be curtailed as flexible demand response. The AJC reported on August 27, 2026 that the contract was approved with protections against recovering a revenue shortfall from residential customers on early termination, PSC notification within 15 days of any large-customer cancellation and semiannual public reporting; The Current noted the approval came by staff statement under the 30-day rule rather than a commission vote. The company's August 26 release folds the contract into a portfolio it says delivers approximately $950M a year of customer savings from 2029. Trade press describes the campus as 'Project Camellia', a 1,400-acre, $20B site with service from 2028.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-to-serve-openai-project-in-effingham-county.html"
+  },
+  {
+   "slug": "tesla",
+   "type": "supplier",
+   "status": "active",
+   "since": "2024-09",
+   "scale": "500 MW / 2,000 MWh (Georgia, per Energy-Storage.news); 92 Megapacks at Gorgas (Alabama)",
+   "via": "Megapack 2XL supply agreement; Gorgas BESS",
+   "note": "Tesla supplies Megapacks to Alabama Power's 150 MW Gorgas battery per the company, and, per Energy-Storage.news, the 2024 Georgia Power portfolio (Robins, Moody, Hammond, McGrau Ford II) under a Megapack 2XL agreement with a 20-year capacity guarantee.",
+   "context": "Alabama Power's March 4, 2026 article states 92 Tesla Megapacks are being installed at the Gorgas site for a 2027 completion — the one Tesla reference in the company's own channels. Energy-Storage.news reported on September 5, 2024 that Georgia Power's 500 MW / 2,000 MWh portfolio uses Tesla Megapack 2XL lithium iron phosphate units with a 20-year capacity guarantee, with costs redacted under a PSC confidentiality rule; Georgia Power's own releases name only the EPCs. Battery OEMs for the ten projects certified in December 2025 are not disclosed.",
+   "source": "https://www.alabamapower.com/news/strengthening-reliability/alabama-power-installing-tesla-megapacks-at-gorgas-bess-increasing-reliability-during-peak-times.html"
+  },
+  {
+   "slug": "burns-mcdonnell",
+   "type": "supplier",
+   "status": "active",
+   "since": "2025-05",
+   "scale": "Robins 128 MW, McGrau Ford I and II 530 MW, Wadley 260 MW",
+   "via": "BESS EPC",
+   "note": "Burns & McDonnell is the EPC for Georgia Power's Robins, McGrau Ford Phase I and II and Wadley batteries.",
+   "context": "Georgia Power's May 7, 2025 release names Burns & McDonnell as EPC for Robins (128 MW, Bibb County), McGrau Ford Phase I (265 MW, Cherokee County) and McGrau Ford Phase II (265 MW); the March 31, 2026 release names it again for Wadley (260 MW, Jefferson County, co-located with third-party solar, in service 2027). Crowder Industrial Construction, not covered here, holds the other Georgia BESS EPC contracts (Moody, Hammond, Twiggs).",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/construction-now-underway-on-765-mw-of-new-battery-energy-storage-systems-across-georgia.html"
+  },
+  {
+   "slug": "wartsila",
+   "type": "supplier",
+   "status": "active",
+   "since": "2024-11",
+   "scale": "65 MW / 4-hour",
+   "via": "Quantum energy storage and GEMS platform — Mossy Branch",
+   "note": "Wärtsilä was EPC and technology provider for Mossy Branch, Georgia Power's first battery, which reached commercial operation in November 2024.",
+   "context": "Georgia Power's November 8, 2024 release credits Wärtsilä with the engineering, procurement and construction of the 65 MW, four-hour Mossy Branch facility in Talbot County using its Quantum energy storage system and GEMS digital platform — the only battery supplier Georgia Power has itself named.",
+   "source": "https://www.georgiapower.com/news-hub/press-releases/georgia-powers-first-battery-energy-storage-system-reaches-comme.html"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "active",
+   "via": "Georgia data-center sites (Atlanta Southside, Douglasville, Fayetteville, Rome, Union City)",
+   "note": "Microsoft operates and is building data centers across Georgia Power's territory and in January 2026 pledged to prevent electricity price increases for existing customers.",
+   "context": "The AJC reported on January 13, 2026 that Microsoft pitched local benefits for its Georgia sites — Atlanta Southside, Douglasville, Fayetteville, Rome and a roughly $2B Union City project — and pledged to 'Prevent electricity price increases for existing customers' and to stop seeking local tax breaks. Microsoft's contracted megawatts with Georgia Power are not disclosed; the company's decks identify hyperscalers only by letter.",
+   "source": "https://www.ajc.com/business/2026/01/as-georgians-push-back-on-data-centers-microsoft-pitches-local-benefits/"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "via": "Alabama Power large-load contract (Dotier LLC); Stanton Springs, Georgia",
+   "note": "Meta is an Alabama Power large-load customer under a contract filed in June 2026 with its terms redacted, and operates the Stanton Springs campus in Georgia Power's territory.",
+   "context": "The Energy and Policy Institute reported on August 28, 2026 that Alabama Power filed a contract with Meta's Dotier LLC on June 18, 2026 with the term, minimum bill and megawatts redacted, ahead of the Alabama PSC's generic large-load docket. Meta's contracted megawatts with either utility are not public.",
+   "source": "https://energyandpolicy.org/alabama-power-data-center-contracts-redacted/"
+  },
+  {
+   "slug": "nextera-energy-resources",
+   "type": "supplier",
+   "status": "announced",
+   "since": "2025-12",
+   "via": "Purchase agreements in the December 2025 Georgia certification",
+   "note": "NextEra Energy Resources is among the counterparties to the 2,821 MW of purchase agreements certified for Georgia Power in December 2025, per Perkins Coie's summary of the order.",
+   "context": "Perkins Coie's January 5, 2026 client note lists NextEra Energy Resources, Tenaska (Heard County) and Mississippi Power among the PPA counterparties in the certified 2,821 MW; Georgia Power's own 8-K describes the purchases by term and megawatts without naming non-affiliate counterparties. The specific NextEra resource and megawatts are not stated in any source found.",
+   "source": "https://www.ashurstperkinscoie.com/en/insights/georgia-public-service-commission-approves-georgia-powers-major-generation-expansion-to-support-data/"
+  },
+  {
+   "slug": "dominion-energy",
+   "type": "competitor",
+   "status": "active",
+   "via": "Large-load tariff design",
+   "note": "Dominion Energy Virginia's GS-5 class and Georgia Power's large-load rule are the two Southeastern templates for binding data-center customers; the dossiers compare their terms directly.",
+   "context": "The Georgia framework (15-year contracts, minimum bills at 100 percent of incremental cost, confidential percentages, contracts filed 30 days before signing) and Virginia's GS-5 class (14-year terms, published 85 percent transmission-and-distribution and 60 percent generation minimums, effective January 2027) are the reference points regulators and trade press cite against each other; the two utilities do not compete for customers, but they compete for the same hyperscale capital and set each other's terms.",
+   "source": "https://psc.ga.gov/site/downloads/datacenterfactsheet.pdf"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Georgia PSC large-load rule (contracts above 100 MW)",
+   "status": "in-effect",
+   "effectiveDate": "2025-02-01",
+   "exposure": "Every new Georgia Power customer above 100 MW is served on extended terms — 15-year contracts, minimum bills, payment for upstream generation, transmission and distribution, termination payments, collateral — and every such contract is filed with the PSC at least 30 days before execution; the OpenAI contract cleared this review in August 2026 with added protections. Alabama's 2026 statute (150 MW threshold, effective October 1, 2026) and generic docket extend the model to Alabama Power.",
+   "mitigation": "The company's stated framework: at least 15-year terms, minimum bills at 100 percent of incremental cost, termination payments, $21B-plus of collateral by 2028, and the July 2026 Customer Protection Pledge.",
+   "source": "https://psc.ga.gov/site/assets/files/8617/media_advisory_data_centers_rule_1-23-2025.pdf"
+  },
+  {
+   "regime": "Federal clean-energy credits (ITC/45X, nuclear PTC) after the 2025 reconciliation act",
+   "status": "in-effect",
+   "exposure": "The company's storage and nuclear programs rely on transferable credits: Georgia Power paid $131M to Vogtle co-owners in 2024 for advanced nuclear production tax credits per the FY2024 10-K as relayed by trade press, and the 2024 battery portfolio was planned with IRA credits per Energy-Storage.news. Analyses of the July 2025 act cited by the research indicate the storage credit phase-out does not apply to energy-storage technology and nuclear credits were largely preserved; the company has not quantified the effect in the sources found.",
+   "mitigation": "The DOE loan guarantees of February 2026 ($26.54B) and continued use of third-party credit transfers per the 10-K.",
+   "source": "https://www.energy-storage.news/georgia-power-secures-tesla-battery-supply-agreement-for-2gwh-bess-portfolio/"
+  },
+  {
+   "regime": "EPA power-plant rules (mercury and air toxics, greenhouse-gas standards)",
+   "status": "in-effect",
+   "effectiveDate": "2025-04",
+   "exposure": "The 2025 IRP keeps Plants Bowen and Scherer's coal units running through at least 2034 with gas co-firing and environmental controls; the EPA granted both plants two-year exemptions from the mercury rule in April 2025.",
+   "mitigation": "Gas co-firing at Bowen 1–4 and Scherer, and the certified combined-cycle replacements from 2029.",
+   "source": "https://www.yahoo.com/news/two-georgia-power-coal-plants-222932376.html"
+  },
+  {
+   "regime": "Georgia data-center sales-tax exemption and 2026 cost-shift bills",
+   "status": "in-effect",
+   "exposure": "The state's data-center sales-and-use tax exemption runs through December 31, 2031; the 2026 session's bills to end it, to move data-center costs off other customers (SB 34) or to impose a moratorium all died, so the commission's contracts remain the only cost-allocation instrument.",
+   "source": "https://capitol-beat.org/2026/01/resistance-to-data-centers-fuels-flood-of-georgia-bills-targeting-the-industry/"
+  },
+  {
+   "regime": "DOE Loan Programs Office guarantees",
+   "status": "in-effect",
+   "effectiveDate": "2026-02-25",
+   "exposure": "$26.54B of federal loan guarantees (Georgia Power $22.4B, Alabama Power $4.1B) at Treasury plus 37.5 basis points, drawn through September 2033 and maturing December 2055, finance the certified gas, nuclear-uprate, hydro, storage and transmission program with about $300M a year of interest savings per Utility Dive.",
+   "source": "https://www.prnewswire.com/news-releases/southern-company-receives-historic-department-of-energy-26-5-billion-loan-guarantees-to-increase-grid-reliability-302697140.html"
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Christopher C. (Chris) Womack",
+   "title": "Chairman, President and Chief Executive Officer, Southern Company",
+   "photo": "images/execs/southern-company-womack.jpg",
+   "background": [
+    "President since March 2023, CEO since May 2023, Chairman since December 2023",
+    "Chairman and CEO, Georgia Power (June 2021 – March 2023); President, Georgia Power (November 2020 – March 2023)",
+    "Executive Vice President and President of External Affairs, Southern Company; EVP External Affairs, Georgia Power; SVP and Senior Production Officer, Southern Company Generation; SVP Human Resources and Chief People Officer; SVP Public Relations, Alabama Power; joined 1988 (company bio)"
+   ]
+  },
+  {
+   "name": "David P. Poroch",
+   "title": "Executive Vice President and Chief Financial Officer, Southern Company",
+   "photo": "images/execs/southern-company-poroch.jpg",
+   "background": [
+    "CFO since July 31, 2025, succeeding Daniel S. Tucker, who retired October 1, 2025",
+    "SVP, Comptroller and Chief Accounting Officer, Southern Company (March 2023 – July 2025)",
+    "EVP, CFO, Chief Risk Officer and Treasurer, Southern Company Gas (January 2021 – February 2023); EVP, CFO and Treasurer, Georgia Power (2019–2021); VP and Comptroller, Georgia Power (2014–2019); VP and Chief Audit Executive, Southern Company Services (2012); partner, Deloitte & Touche"
+   ]
+  },
+  {
+   "name": "Stanley W. (Stan) Connally Jr.",
+   "title": "Executive Vice President and Chief Operating Officer, Southern Company",
+   "photo": "images/execs/southern-company-connally.jpg",
+   "background": [
+    "COO since January 2025",
+    "Chairman, President and CEO, Southern Company Services (April 2021 – January 2025); EVP Operations, Southern Company Services (2018–2021)",
+    "Chairman, President and CEO, Gulf Power (2012–2018); SVP and Senior Production Officer, Georgia Power; joined 1989"
+   ]
+  },
+  {
+   "name": "Kimberly S. (Kim) Greene",
+   "title": "Chairman, President and Chief Executive Officer, Georgia Power",
+   "photo": "images/execs/southern-company-greene.jpg",
+   "background": [
+    "Georgia Power's chairman, president and CEO since April 2023",
+    "Chairman, President and CEO, Southern Company Gas (June 2018 – March 2023); Chief Operating Officer, Southern Company; President, Southern Company Services",
+    "Tennessee Valley Authority — Chief Generation Officer, Group President and CFO (2007–2013); joined Southern in 1991 (company bio, August 2026)"
+   ]
+  },
+  {
+   "name": "Tyler M. Cook",
+   "title": "Senior Vice President, Chief Financial Officer and Treasurer, Georgia Power",
+   "photo": "images/execs/southern-company-cook.jpg",
+   "background": [
+    "Georgia Power CFO and treasurer since July 31, 2025, succeeding Aaron Abramovitz",
+    "SVP Finance and Enterprise Transformation, Southern Company; VP Finance and Enterprise Transformation, Georgia Power; joined 2000 (company release, July 2025)"
+   ]
+  },
+  {
+   "name": "Aaron Mitchell",
+   "title": "Senior Vice President, Strategic Growth, Georgia Power",
+   "photo": "images/execs/southern-company-mitchell.jpg",
+   "background": [
+    "Named July 2025 to lead Georgia Power's commercial efforts related to serving large customers — the large-load and data-center portfolio",
+    "VP Pricing and Planning; VP Environmental Affairs; area manager, Coastal Region; joined 2001 (company bio)"
+   ]
+  },
+  {
+   "name": "Rick Anderson",
+   "title": "Senior Vice President and Senior Production Officer, Georgia Power",
+   "photo": "images/execs/southern-company-anderson.jpg",
+   "background": [
+    "Georgia Power's senior production officer, quoted on each of the 2025–2026 generation and battery construction releases (Bowen, Wadley, Twiggs, Moody)",
+    "Collection gap: the company's bio document was not retrievable; career history not carried"
+   ]
+  },
+  {
+   "name": "J. Jeffrey (Jeff) Peoples",
+   "title": "Chairman, President and Chief Executive Officer, Alabama Power",
+   "photo": "images/execs/southern-company-peoples.jpg",
+   "background": [
+    "Alabama Power's chairman, president and CEO since January 2023",
+    "EVP Customer and Employee Services, Alabama Power (June 2020 – January 2023); EVP and Chief Administrative Officer, Southern Company Gas; SVP Operations Services, Southern Company Services",
+    "Began in 1984 as a chemical technician at Plant Miller (company leadership page)"
+   ]
+  },
+  {
+   "name": "Pedro P. Cherry",
+   "title": "Chairman, President and Chief Executive Officer, Mississippi Power",
+   "photo": "images/execs/southern-company-cherry.jpg",
+   "background": [
+    "President since March 2025; chairman and CEO since August 2025, succeeding Anthony Wilson",
+    "President and CEO, Atlanta Gas Light and Chattanooga Gas (August 2020 – March 2025); EVP Customer Service and Operations, Georgia Power; SVP Metro Atlanta Region",
+    "Southern Energy / Mirant (1997–2006) (company leadership page)"
+   ]
+  },
+  {
+   "name": "Chris Cummiskey",
+   "title": "Executive Vice President and Chief Commercial Officer, Southern Company; Chairman and CEO, Southern Power; Chairman, President and CEO, Southern Company Services",
+   "photo": "images/execs/southern-company-cummiskey.jpg",
+   "background": [
+    "Chief commercial officer and Southern Company Services chairman since January 2025; leads the system's growth and customer-solutions organization",
+    "EVP External Affairs and Nuclear Development, Georgia Power",
+    "Commissioner, Georgia Department of Economic Development (company leadership page)"
+   ]
+  },
+  {
+   "name": "Peter P. (Pete) Sena III",
+   "title": "Chairman, President and Chief Executive Officer, Southern Nuclear",
+   "photo": "images/execs/southern-company-sena.jpg",
+   "background": [
+    "Chairman, president and CEO since June 29, 2024; President since March 2023; EVP and Chief Nuclear Officer (July 2019 – 2023)",
+    "Chief nuclear officer at PSEG and FirstEnergy; NRC resident inspector; U.S. Navy nuclear officer (company leadership page)"
+   ]
+  },
+  {
+   "name": "Sterling A. Spainhour",
+   "title": "Executive Vice President and Chief Legal Officer, Southern Company",
+   "photo": "images/execs/southern-company-spainhour.jpg",
+   "background": [
+    "Chief legal officer since April 2023",
+    "SVP, General Counsel, Corporate Secretary and Chief Compliance Officer, Georgia Power (June 2020 – March 2023); SVP and General Counsel–East, Southern Company Services",
+    "Partner, Jones Day; counsel, CNN (company leadership page)"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "Energy and Policy Institute — Alabama Power's redacted data-center contracts",
+   "url": "https://energyandpolicy.org/alabama-power-data-center-contracts-redacted/",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "AJC — Georgia Power's deal to power OpenAI data center near Savannah is approved",
+   "url": "https://www.ajc.com/business/2026/08/georgia-power-deal-to-power-openai-data-center-near-savannah-is-approved/",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Georgia Power — OpenAI contract approved; large-load portfolio delivering ~$950M in annual savings from 2029",
+   "url": "https://www.prnewswire.com/news-releases/georgia-powers-contract-with-openai-approved-latest-approval-part-of-portfolio-of-large-load-contracts-delivering-approximately-950-million-in-annual-savings-beginning-in-2029-302861080.html",
+   "date": "2026-08-26"
+  },
+  {
+   "label": "The Current — PSC deadline arrives for Georgia Power's 3.2 GW OpenAI contract",
+   "url": "https://thecurrentga.org/2026/08/25/psc-deadline-arrives-for-georgia-powers-3-2-gigawatt-openai-data-center-contract/",
+   "date": "2026-08-25"
+  },
+  {
+   "label": "Data Center Frontier — Southern's 17 GW pipeline puts AI power demand into utility math",
+   "url": "https://www.datacenterfrontier.com/energy/article/55398810/southerns-17-gw-pipeline-puts-ai-power-demand-into-utility-math",
+   "date": "2026-08-18"
+  },
+  {
+   "label": "Southern Company — 8-K, $2.15B convertible senior notes (2027 and 2029)",
+   "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000058/ex99-1southern2026a2026bco.htm",
+   "date": "2026-08-03"
+  },
+  {
+   "label": "Georgia Power — Plant Bowen: construction begins on two combined-cycle units and 500 MW BESS",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-department-of-energy-and-elected-officials-celebrate-the-future-of-energy-production-at-plant-bowen-302840183.html",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Southern Company — Q2 2026 earnings release (8-K Ex. 99)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000092122/000009212226000056/ex99-pressreleaseq22026.htm",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Southern Company — Q2 2026 earnings call slides",
+   "url": "https://s27.q4cdn.com/273397814/files/doc_financials/2026/q2/SO-2026-Q2-Earnings-Call-Final.pdf",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Southern Company — Form 10-Q for the quarter ended June 30, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000092122/000009212226000054/so-20260630.htm",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Investing.com — Q2 2026 earnings call transcript (EPS beat, revenue miss)",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-southern-company-tops-q2-2026-eps-estimate-but-misses-revenue-93CH-4825848",
+   "date": "2026-07-30"
+  },
+  {
+   "label": "Georgia Power — Moody battery energy storage facility ribbon-cutting",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-cuts-ribbon-on-new-moody-battery-energy-storage-facility-paired-with-solar-302835688.html",
+   "date": "2026-07-27"
+  },
+  {
+   "label": "Fortune — Georgia Power's eminent-domain use for the grid expansion",
+   "url": "https://fortune.com/2026/07/26/georgia-power-utility-company-eminent-domain-grid-expansion-data-center/",
+   "date": "2026-07-26"
+  },
+  {
+   "label": "Georgia Power — to serve OpenAI project in Effingham County (~3,200 MW)",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-to-serve-openai-project-in-effingham-county.html",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "Georgia Power — Customer Protection Pledge",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-reaffirms-longstanding-commitment-to-make-growth-work-for-customers-with-customer-protection-pledge-302826812.html",
+   "date": "2026-07-15"
+  },
+  {
+   "label": "NBC 15 — Alabama PSC opens review of data-center power contracts",
+   "url": "https://mynbc15.com/news/local/alabama-psc-opens-review-of-data-center-power-contracts-sets-august-comment-deadlines",
+   "date": "2026-07-08"
+  },
+  {
+   "label": "Southern Company — Q2 2026 earnings date notice",
+   "url": "https://www.prnewswire.com/news-releases/southern-company-second-quarter-2026-earnings-to-be-released-july-30-302804101.html",
+   "date": "2026-06-25"
+  },
+  {
+   "label": "AJC — PSC races that could affect your Georgia Power bill (2026 candidate guide)",
+   "url": "https://www.ajc.com/politics/2026/04/care-about-your-georgia-power-bill-these-psc-races-could-have-a-big-impact/",
+   "date": "2026-06-19"
+  },
+  {
+   "label": "Georgia Power — Plant Hatch 20-year license renewal",
+   "url": "https://www.prnewswire.com/news-releases/georgias-plant-hatch-receives-20-year-license-renewal-from-the-nuclear-regulatory-commission-302800398.html",
+   "date": "2026-06-15"
+  },
+  {
+   "label": "Georgia Power — Anthony Oni named vice president of corporate affairs",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-names-anthony-oni-as-vice-president-of-corporate-affairs-302787425.html",
+   "date": "2026-06-01"
+  },
+  {
+   "label": "GPB — Georgia PSC backs disputed fuel deal amid data-center cost concerns",
+   "url": "https://www.gpb.org/news/2026/05/29/georgia-psc-backs-disputed-georgia-power-fuel-deal-amid-data-center-cost-concerns",
+   "date": "2026-05-29"
+  },
+  {
+   "label": "Georgia Power — PSC approves fuel and storm plan: $50 a year residential savings",
+   "url": "https://www.prnewswire.com/news-releases/georgia-psc-approves-plan-to-lower-overall-rates-deliver-annual-savings-of-50-per-year-for-georgia-power-residential-customers-302784773.html",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "Georgia PSC — fuel and storm stipulation approval (news release)",
+   "url": "https://psc.ga.gov/site/assets/files/9488/media_advisory_5_28_26_fuel_storm_stip_approval.pdf",
+   "date": "2026-05-28"
+  },
+  {
+   "label": "Georgia Power — stipulated agreement offering $285M in annual savings",
+   "url": "https://www.prnewswire.com/news-releases/new-stipulated-agreement-offers-285-million-in-annual-savings-for-georgia-power-customers-starting-this-summer-302769888.html",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Southern Company — Q1 2026 earnings release (8-K Ex. 99)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000092122/000009212226000036/ex99-pressreleaseq12026.htm",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Southern Company — Q1 2026 earnings call slides",
+   "url": "https://s27.q4cdn.com/273397814/files/doc_financials/2026/q1/SO-2026-Q1-Earnings-Call-Final.pdf",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Southern Company — Form 10-Q for the quarter ended March 31, 2026",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000092122/000009212226000034/so-20260331.htm",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Investing.com — Q1 2026 slides: data centers drive earnings beat, 11 GW contracted",
+   "url": "https://www.investing.com/news/company-news/southern-q1-2026-slides-data-centers-drive-earnings-beat-11gw-contracted-93CH-4650968",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Georgia Power — plans for 2,000–6,000 MW of additional generation for 2032–2033",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-plans-for-additional-generation-to-meet-energy-needs.html",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "Southern Company — dividend raised for the 25th consecutive year",
+   "url": "https://www.prnewswire.com/news-releases/southern-company-increases-dividend-for-25th-consecutive-year-302747618.html",
+   "date": "2026-04-20"
+  },
+  {
+   "label": "Canary Media — Georgia Power's bring-your-own clean energy program",
+   "url": "https://www.canarymedia.com/articles/data-centers/georgia-power-byo-clean-energy",
+   "date": "2026-04-15"
+  },
+  {
+   "label": "Southern Company — shareholder engagement presentation",
+   "url": "https://www.southerncompany.com/content/dam/southerncompany/sustainability/pdfs/sustainability-shareholder-presentation.pdf",
+   "date": "2026-04-03"
+  },
+  {
+   "label": "Georgia Power — Wadley 260 MW BESS construction begins",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-begins-construction-of-newest-battery-storage-system-in-wadley-ga-302730157.html",
+   "date": "2026-03-31"
+  },
+  {
+   "label": "E&E News — environmental and faith groups sue over Georgia gas expansion",
+   "url": "https://www.eenews.net/articles/enviros-faith-groups-sue-over-georgia-gas-expansion/",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "CleanTechnica — groups challenge PSC approval of Georgia Power gas expansion",
+   "url": "https://cleantechnica.com/2026/03/25/groups-challenge-pscs-approval-of-massive-georgia-power-gas-expansion/",
+   "date": "2026-03-25"
+  },
+  {
+   "label": "Georgia Power — largest distributed-generation solar procurement (28 contracts, 110+ MW)",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-continues-renewable-energy-growth-by-awarding-largest-distributed-generation-solar-procurement-in-companys-history-302723433.html",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Alabama Power — installing Tesla Megapacks at Gorgas BESS",
+   "url": "https://www.alabamapower.com/news/strengthening-reliability/alabama-power-installing-tesla-megapacks-at-gorgas-bess-increasing-reliability-during-peak-times.html",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "Georgia PSC — data center fact sheet",
+   "url": "https://psc.ga.gov/site/downloads/datacenterfactsheet.pdf",
+   "date": "2026-03-04"
+  },
+  {
+   "label": "Southern Company — $26.5B DOE loan guarantees",
+   "url": "https://www.prnewswire.com/news-releases/southern-company-receives-historic-department-of-energy-26-5-billion-loan-guarantees-to-increase-grid-reliability-302697140.html",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Utility Dive — DOE loans Southern Co. $26.5B including 5 GW of new gas",
+   "url": "https://www.utilitydive.com/news/doe-loans-southern-co-265b-for-gid-investment-including-5-gw-new-gas/813080/",
+   "date": "2026-02-25"
+  },
+  {
+   "label": "Utility Dive — Southern's $81B plan and data-center load (Q4 2025)",
+   "url": "https://www.utilitydive.com/news/southern-co-load-data-center-earnings/812681/",
+   "date": "2026-02-20"
+  },
+  {
+   "label": "Southern Company — Q4 and full-year 2025 earnings release",
+   "url": "https://www.prnewswire.com/news-releases/southern-company-reports-fourth-quarter-and-full-year-2025-earnings-302692191.html",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "Southern Company — Q4 2025 earnings call slides",
+   "url": "https://s27.q4cdn.com/273397814/files/doc_financials/2025/q4/SO-2025-Q4-Earnings-Call-Final.pdf",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "Southern Company — Form 10-K for fiscal 2025",
+   "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000006/so-20251231.htm",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "AJC — Georgia regulators won't revisit approval of new power plants for data centers",
+   "url": "https://www.ajc.com/business/2026/02/georgia-regulators-wont-revisit-approval-of-new-power-plants-for-data-centers/",
+   "date": "2026-02-18"
+  },
+  {
+   "label": "Georgia Power — fuel decrease and storm cost recovery filings",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-delivers-lower-costs-for-customers-with-latest-filings-302689958.html",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "Capitol Beat — resistance to data centers fuels flood of Georgia bills",
+   "url": "https://capitol-beat.org/2026/01/resistance-to-data-centers-fuels-flood-of-georgia-bills-targeting-the-industry/",
+   "date": "2026-01-27"
+  },
+  {
+   "label": "AJC — as Georgians push back on data centers, Microsoft pitches local benefits",
+   "url": "https://www.ajc.com/business/2026/01/as-georgians-push-back-on-data-centers-microsoft-pitches-local-benefits/",
+   "date": "2026-01-13"
+  },
+  {
+   "label": "Perkins Coie — Georgia PSC approves Georgia Power's major generation expansion",
+   "url": "https://www.ashurstperkinscoie.com/en/insights/georgia-public-service-commission-approves-georgia-powers-major-generation-expansion-to-support-data/",
+   "date": "2026-01-05"
+  },
+  {
+   "label": "Georgia Power — Georgia marks 50 years of nuclear energy (Vogtle 4 first refueling)",
+   "url": "https://www.prnewswire.com/news-releases/georgia-marks-50-years-of-clean-reliable-nuclear-energy-302650717.html",
+   "date": "2025-12-30"
+  },
+  {
+   "label": "Georgia Power — 8-K: PSC certifies all 9,885 MW (December 19, 2025 order)",
+   "url": "https://www.sec.gov/Archives/edgar/data/41091/000009212225000100/so-20251219.htm",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "Georgia Power — PSC approves certification and customer savings",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/psc-approves-savings-for-customers-and-energy-demands.html",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "Georgia PSC — December 19, 2025 certification decision (news release)",
+   "url": "https://psc.ga.gov/site/assets/files/9176/media_advisory_dec_19_decision.pdf",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "AJC — Georgia Power gets PSC's go-ahead on $16B data-center power plant expansion",
+   "url": "https://www.ajc.com/business/2025/12/georgia-power-gets-pscs-go-ahead-on-16b-data-center-power-plant-expansion/",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "The Current — Georgia Power wins approval for massive expansion despite protests",
+   "url": "https://thecurrentga.org/2025/12/19/georgia-power-wins-approval-for-massive-expansion-despite-protests/",
+   "date": "2025-12-19"
+  },
+  {
+   "label": "Science for Georgia — report on inflated load-growth projections in the Southeast",
+   "url": "https://scienceforgeorgia.org/knowledge-base1/dec-16-2025-new-report-exposes-inflated-load-growth-projections-from-data-centers-in-the-southeast/",
+   "date": "2025-12-16"
+  },
+  {
+   "label": "Georgia Power — Yates Unit 9 turbine and generator delivered",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-receives-turbine-and-generator-for-new-unit-9-at-plant-yates-302642442.html",
+   "date": "2025-12-15"
+  },
+  {
+   "label": "AJC — Georgia Power and PSC staff strike deal on historic data-center expansion",
+   "url": "https://www.ajc.com/news/2025/12/georgia-power-psc-staff-strike-deal-to-allow-historic-data-center-expansion/",
+   "date": "2025-12-11"
+  },
+  {
+   "label": "Georgia Power — 8-K: stipulation with PSC staff on all 9,885 MW",
+   "url": "https://www.sec.gov/Archives/edgar/data/41091/000009212225000098/so-20251209.htm",
+   "date": "2025-12-10"
+  },
+  {
+   "label": "Georgia Power — stipulated agreement reached with PSC staff",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/stipulated-agreement-reached-to-help-keep-electricity-affordable-and-meet-future-energy-demand-in-georgia.html",
+   "date": "2025-12-10"
+  },
+  {
+   "label": "Georgia Power — Ashley Park–Wansley 500 kV transmission projects",
+   "url": "https://www.prnewswire.com/news-releases/south-metro-atlanta-communities-to-benefit-from-new-transmission-infrastructure-projects-including-ashley-park-wansley-line-302635506.html",
+   "date": "2025-12-08"
+  },
+  {
+   "label": "Alabama Power — commits to steady rates through 2027",
+   "url": "https://www.prnewswire.com/news-releases/alabama-power-commits-to-steady-rates-through-2027-302630887.html",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "Alabama Power — 8-K: Alabama PSC rate order (Rate RSE flat through 2027)",
+   "url": "https://www.sec.gov/Archives/edgar/data/3153/000000315325000029/so-20251202.htm",
+   "date": "2025-12-02"
+  },
+  {
+   "label": "Utility Dive — Georgia Power's large-load pipeline: 50.9 GW, staff calls most speculative",
+   "url": "https://www.utilitydive.com/news/georgia-power-large-load-data-centers/806300/",
+   "date": "2025-11-24"
+  },
+  {
+   "label": "The Current — Democrats flip two seats on the Georgia PSC",
+   "url": "https://thecurrentga.org/2025/11/04/democrats-flip-two-seats-on-the-georgia-public-service-commission/",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "Southern Company — Q3 2025 earnings release (8-K Ex. 99)",
+   "url": "https://www.sec.gov/Archives/edgar/data/3153/000009212225000086/ex99-pressreleaseq32025.htm",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Southern Company — Q3 2025 earnings call slides",
+   "url": "https://s27.q4cdn.com/273397814/files/doc_financials/2025/q3/SO-2025-Q3-Earnings-Call-FINAL.pdf",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Investing.com — Q3 2025 slides: EPS beats as electricity demand surges",
+   "url": "https://www.investing.com/news/company-news/southern-company-q3-2025-slides-eps-beats-estimates-as-electricity-demand-surges-93CH-4321271",
+   "date": "2025-10-30"
+  },
+  {
+   "label": "Georgia Power — Twiggs County 200 MW BESS construction begins",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-begins-construction-of-newest-battery-storage-system-near-macon-302589070.html",
+   "date": "2025-10-20"
+  },
+  {
+   "label": "Georgia Power — first contracts under the new large-load rules; updated 8,448 MW forecast",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-highlights-new-customer-contracts-continued-economic-growth-updated-forecasts-in-latest-filings-with-georgia-psc.html",
+   "date": "2025-09-30"
+  },
+  {
+   "label": "Investing.com — Moody's changes Southern Company outlook to negative",
+   "url": "https://www.investing.com/news/stock-market-news/southern-company-outlook-changed-to-negative-by-moodys-93CH-4253742",
+   "date": "2025-09-24"
+  },
+  {
+   "label": "Georgia Power — 2025 Energy Storage System RFP (500 MW)",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-announces-2025-energy-storage-system-request-for-proposals-302564964.html",
+   "date": "2025-09-23"
+  },
+  {
+   "label": "Georgia Power — PSC approves five CARES 2023 solar facilities (1,068 MW)",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-receives-approval-from-georgia-psc-for-five-new-solar-facilities-to-supply-cares-2023-solar-program-302547990.html",
+   "date": "2025-09-05"
+  },
+  {
+   "label": "Georgia Power — hydro fleet modernization",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-continues-hydro-fleet-modernization-effort-to-serve-a-growing-georgia-302536771.html",
+   "date": "2025-08-22"
+  },
+  {
+   "label": "Mississippi Power — Pedro Cherry elected chairman and CEO",
+   "url": "https://www.prnewswire.com/news-releases/mississippi-power-president-pedro-cherry-elected-chairman-and-ceo-during-companys-centennial-year-302518707.html",
+   "date": "2025-08-04"
+  },
+  {
+   "label": "Utility Dive — Georgia Power's gas turbine delivery delays (Mitsubishi M501JAC at Yates)",
+   "url": "https://www.utilitydive.com/news/georgia-power-natural-gas-turbine-delivery-delays-mitsubishi/758252/",
+   "date": "2025-08"
+  },
+  {
+   "label": "Southern Company — Q2 2025 earnings release",
+   "url": "https://www.prnewswire.com/news-releases/southern-company-reports-second-quarter-2025-earnings-302518169.html",
+   "date": "2025-07-31"
+  },
+  {
+   "label": "Georgia Power — requests certification of ~9,900 MW of new resources",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-requests-certification-of-approximately-9900-mw-of-new-resources-from-the-georgia-psc.html",
+   "date": "2025-07-31"
+  },
+  {
+   "label": "Southern Company — 8-K Item 5.02, director election and comptroller appointment",
+   "url": "https://www.sec.gov/Archives/edgar/data/92122/000009212225000072/so-20250721.htm",
+   "date": "2025-07-23"
+  },
+  {
+   "label": "Southern Company — accounting, finance and treasury leadership moves",
+   "url": "https://www.prnewswire.com/news-releases/southern-company-announces-accounting-finance-and-treasury-leadership-moves-302511146.html",
+   "date": "2025-07-22"
+  },
+  {
+   "label": "Georgia Power — Tyler Cook named senior vice president, CFO and treasurer",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/georgia-power-names-tyler-cook-senior-vp-cfo-treasurer.html",
+   "date": "2025-07-22"
+  },
+  {
+   "label": "Southern Company — Hans Brown named chief information technology officer",
+   "url": "https://www.prnewswire.com/news-releases/southern-company-names-hans-brown-executive-vice-president--chief-information-technology-officer-302509934.html",
+   "date": "2025-07-21"
+  },
+  {
+   "label": "POWER — PSC greenlights Georgia Power plan to expand coal, gas, nuclear and grid",
+   "url": "https://www.powermag.com/psc-greenlights-georgia-power-plan-to-expand-coal-gas-nuclear-and-grid-infrastructure/",
+   "date": "2025-07-17"
+  },
+  {
+   "label": "Utility Dive — Georgia Power IRP approved: coal, gas plants and data centers",
+   "url": "https://www.utilitydive.com/news/georgia-power-irp-coal-gas-plants-data-centers/753170/",
+   "date": "2025-07-16"
+  },
+  {
+   "label": "Georgia Power — PSC approves 2025 Integrated Resource Plan",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/georgia-public-service-commission-approves-plan-to-meet-the-energy-needs-of-a-growing-georgia.html",
+   "date": "2025-07-15"
+  },
+  {
+   "label": "Southern Company — CFO transition (Tucker to retire; Poroch named)",
+   "url": "https://prnewswire.com/news-releases/southern-company-announces-cfo-transition-302502960.html",
+   "date": "2025-07-11"
+  },
+  {
+   "label": "The Current — PSC freezes Georgia Power rates, but bills could still increase",
+   "url": "https://thecurrentga.org/2025/07/07/psc-freezes-georgia-power-rates-but-bills-could-still-increase/",
+   "date": "2025-07-07"
+  },
+  {
+   "label": "Georgia Power — 8-K: PSC approves base-rate freeze through 2028",
+   "url": "https://www.sec.gov/Archives/edgar/data/41091/000009212225000066/so-20250701.htm",
+   "date": "2025-07-01"
+  },
+  {
+   "label": "Georgia Power — PSC approves plan to freeze base rates through 2028",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/georgia-psc-approves-plan-to-freeze-base-rates-through-2028.html",
+   "date": "2025-07-01"
+  },
+  {
+   "label": "Georgia Power — 8-K: 2025 rate stipulation filed",
+   "url": "https://www.sec.gov/Archives/edgar/data/41091/000009212225000048/so-20250519.htm",
+   "date": "2025-05-19"
+  },
+  {
+   "label": "Georgia Power — construction under way on 765 MW of BESS across Georgia",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/construction-now-underway-on-765-mw-of-new-battery-energy-storage-systems-across-georgia.html",
+   "date": "2025-05-07"
+  },
+  {
+   "label": "NRC — Vogtle Unit 3 supplemental inspection report (ML25099A013)",
+   "url": "https://www.nrc.gov/docs/ML2509/ML25099A013.pdf",
+   "date": "2025-05-02"
+  },
+  {
+   "label": "Yahoo/AP — two Georgia Power coal plants get EPA mercury-rule exemptions",
+   "url": "https://www.yahoo.com/news/two-georgia-power-coal-plants-222932376.html",
+   "date": "2025-04-17"
+  },
+  {
+   "label": "Alabama Power — first utility-scale BESS at retired Gorgas site (150 MW)",
+   "url": "https://www.prnewswire.com/news-releases/alabama-power-to-build-states-first-utility-scale-battery-storage-system-on-retired-power-plant-site-302390369.html",
+   "date": "2025-03-03"
+  },
+  {
+   "label": "Georgia Power — 2025 IRP filed (8,200 MW load-growth forecast)",
+   "url": "https://www.prnewswire.com/news-releases/georgia-power-files-plan-to-reliably-economically-meet-the-energy-needs-of-a-growing-georgia-302365281.html",
+   "date": "2025-01-31"
+  },
+  {
+   "label": "Georgia PSC — large-load rule approved (news release)",
+   "url": "https://psc.ga.gov/site/assets/files/8617/media_advisory_data_centers_rule_1-23-2025.pdf",
+   "date": "2025-01-23"
+  },
+  {
+   "label": "Georgia Power — Mossy Branch, first BESS, reaches commercial operation",
+   "url": "https://www.georgiapower.com/news-hub/press-releases/georgia-powers-first-battery-energy-storage-system-reaches-comme.html",
+   "date": "2024-11-08"
+  },
+  {
+   "label": "Energy-Storage.news — Georgia Power secures Tesla battery supply for 2 GWh BESS portfolio",
+   "url": "https://www.energy-storage.news/georgia-power-secures-tesla-battery-supply-agreement-for-2gwh-bess-portfolio/",
+   "date": "2024-09-05"
+  },
+  {
+   "label": "Grist — why Mississippi coal is powering Georgia data centers (Plant Daniel PPA)",
+   "url": "https://grist.org/georgia-psc/why-mississippi-coal-is-powering-georgia-data-centers/",
+   "date": "2024-08-27"
+  },
+  {
+   "label": "GPB — regulators approve deal to pay for Georgia Power's new nuclear reactors",
+   "url": "https://www.gpb.org/news/2023/12/19/regulators-approve-deal-pay-for-georgia-powers-new-nuclear-reactors",
+   "date": "2023-12-19"
+  },
+  {
+   "label": "Southern Company — leadership page",
+   "url": "https://www.southerncompany.com/about/leadership.html"
+  },
+  {
+   "label": "Southern Company — 2025 Year in Review",
+   "url": "https://www.southerncompany.com/miscellaneous-pages/2025-year-in-review.html"
+  },
+  {
+   "label": "Georgia Power — leadership page",
+   "url": "https://www.georgiapower.com/about/company/leadership.html"
+  },
+  {
+   "label": "Georgia Power — Integrated Resource Plan page",
+   "url": "https://www.georgiapower.com/about/company/filings/irp.html"
+  },
+  {
+   "label": "Georgia Power — 2025 IRP one-page summary",
+   "url": "https://www.georgiapower.com/content/dam/georgia-power/pdfs/about/2025-irp-one-page-summary.pdf"
+  },
+  {
+   "label": "Georgia Power — Rules and Regulations for Electric Service (large-load provisions effective February 1, 2025)",
+   "url": "https://www.georgiapower.com/content/dam/georgia-power/pdfs/tariffs/rules-regs.pdf"
+  },
+  {
+   "label": "Georgia Power — data centers customer pledge page",
+   "url": "https://www.georgiapower.com/about/customer-pledge/data-centers.html"
+  },
+  {
+   "label": "Georgia Power — rate freeze page",
+   "url": "https://www.georgiapower.com/rate-freeze.html"
+  },
+  {
+   "label": "Georgia Power — Plant Vogtle page",
+   "url": "https://www.georgiapower.com/about/energy/plants/plant-vogtle.html"
+  },
+  {
+   "label": "Georgia Power — Vogtle Units 3 and 4 FAQs",
+   "url": "https://www.georgiapower.com/about/energy/plants/plant-vogtle/units-3-4/vogtle-faqs.html"
+  },
+  {
+   "label": "Southern Nuclear — Plant Vogtle page",
+   "url": "https://www.southernnuclear.com/our-plants/plant-vogtle.html"
+  },
+  {
+   "label": "Southern Nuclear — leadership page",
+   "url": "https://www.southernnuclear.com/about-us/leadership.html"
+  },
+  {
+   "label": "Southern Power — leadership page",
+   "url": "https://www.southernpowercompany.com/who-we-are/our-leadership.html"
+  },
+  {
+   "label": "Alabama Power — leadership page",
+   "url": "https://www.alabamapower.com/company/about-us/our-leadership.html"
+  },
+  {
+   "label": "Mississippi Power — leadership page",
+   "url": "https://www.mississippipower.com/company/about-us/our-leadership.html"
+  },
+  {
+   "label": "Georgia PSC — commissioners page",
+   "url": "https://psc.ga.gov/about-the-psc/commissioners/"
+  },
+  {
+   "label": "Investing.com — Southern Company earnings calendar",
+   "url": "https://www.investing.com/equities/southern-co-earnings"
+  },
+  {
+   "label": "MarketBeat — Southern Company earnings",
+   "url": "https://www.marketbeat.com/stocks/NYSE/SO/earnings/"
+  }
+ ],
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1
+}
