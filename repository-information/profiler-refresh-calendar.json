@@ -725,6 +725,24 @@
         "North Anna: NRC action on the ESP renewal (filed Jul 14, 2026); any binding SMR agreement with Amazon or another high-load partner beyond the Oct 2024 MOU; Rider SMR spending",
         "Ratings and financing: S&P positive outlook on VEPCO (Aug 2026) converting to an upgrade; 2026 debt issuance vs the $6.0–9.5B guide; fuel-cost securitization order (deadline Sept 29, 2026); Rider RGGI reinstatement (PUR-2026-00085)"
       ]
+    },
+    {
+      "slug": "vicor",
+      "nextReport": "2026-10-20",
+      "confirmed": false,
+      "source": "Tracker estimate — Vicor had announced no Q3 2026 earnings date as of 2026-09-03 (its IR site vicorcorporation.gcs-web.com returned 403/503 to this session; the press room shows nothing after 2026-07-31). MarketBeat and public.com show Tue 2026-10-20, Market Chameleon 'between October 20 and 23 (not announced)', Investing.com India 2026-10-27. Oct 20 matches the third/fourth-Tuesday cadence of the last eight 8-K Item 2.02 dates (2026-07-21, 2026-04-21, 2026-02-19, 2025-10-21, 2025-07-22, 2025-04-29, 2025-02-20, 2024-10-22; calls moved to 8:00 a.m. ET from Q1 2026). Vicor announces the call ~2 weeks ahead over GlobeNewswire — verify there and on the SEC 8-K feed (CIK 751978), since the IR host may stay unreachable.",
+      "lastRefreshed": "2026-09-03",
+      "watch": [
+        "Q3 2026 vs Street (~$158.2M revenue / ~$0.77–0.80 EPS, tracker figures): royalty line vs Q2's $30.4M (the newest licence was guided at $5M for Q3 after $15M in Q2) and product revenue against the $380M backlog",
+        "Second ChiP fab: site announcement (two sites down-selected in July 2026, decision was 'in the coming weeks'), size (2–3x Fab 1), capex plan; any 'alternate source' for 2nd-gen VPD modules built outside Andover",
+        "337-TA-1484 (Delta, MPS, Luxshare, Wistron, Wiwynn, Quanta): Markman and hearing dates, final ID due 2027-05-20, target date 2027-09-20; any new licensee or settlement announced before it — the CFO said new licences may wait for the 2027 determination",
+        "CAFC No. 25-1616 (appeal of the FII USA/Ingrasys licence finding in 337-TA-1370): any opinion; the MPS and Delta trade-secret suits in W.D. Texas (July 2026) — any injunction ruling",
+        "2nd-generation VPD: a datasheet, part number or named customer (trade press infers Cerebras; sampling Q1 2027; volume late 2027); the second '3Di' line in Fab 1 (3Q–4Q 2026)",
+        "Any Vicor appearance on NVIDIA's next 800 VDC partner list (GTC 2027) or any named hyperscaler licensee — both absent from every primary source as of 2026-09-03",
+        "Customer concentration in the FY2026 10-K (one customer 11.1% in 2025); Brick Products share (39.0% in 2025) as Advanced Products scale",
+        "Execution of the $150M buyback authorized 2026-08-25; insider selling flagged by trade press",
+        "Chesterton check on next refresh: Vicor's IR site was unreachable this session — results were read from 8-K Ex. 99.1; re-derive consensus from Nasdaq/Zacks if reachable"
+      ]
     }
   ]
 }

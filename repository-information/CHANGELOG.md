@@ -3,11 +3,100 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 96/100`
+`Sections: 97/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.44r] — 2026-09-03 02:05:31 PM EST
+
+> **Prompt:** "Picking up from my last session, run Phase A4 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Fable 5.1 xhigh as a fresh session: Vicor. This is the last of the four anchor sessions, it is data-only
+> (no page change), and because it ends Phase A it also owes the phase-end register re-check.
+>
+> READ FIRST, before writing anything: 1. repository-information/SESSION-CONTEXT.md (the A3 entry — the
+> sequencing-during-agent-waits pattern, the in-rack concept chain to pre-draft, and the environment notes:
+> pip install playwright, git fetch origin main before the rebase check, ignore the stop hook's first prompt
+> while the agents run); 2. PROFILER-COVERAGE-PLAN.md §2 (model rule), §3 (Phase A — the Vicor row and why it
+> anchors `inside-the-rack` and the battery side of `the-800-vdc-shift`), §7 (what every session owes,
+> including the phase-end register checks) and the `vicor` row in §8; 3. .claude/rules/profiler-app.md —
+> Profiler Command (two parallel research subagents, first-party exhaustive then third-party, ~50–70 sources,
+> products & services as the priority section), Profiler Prep Command (technology curriculum, high-school-STEM
+> baseline, never company trivia), Scheduled Refreshes (the calendar row — Vicor is public, so a researched
+> nextReport); 4. repository-information/PROFILER-SCHEMA.md (profile schema v7, study schema v2, concepts
+> registry, calendar schema); 5. repository-information/PROFILER-STYLES.md — active style is intel-briefing;
+> 6. CLASSROOM-CURRICULUM-PLAN.md §3.3 (`inside-the-rack` and `the-800-vdc-shift` lesson specs), §5 rows 9–11
+> (server PSU, the 48 V bus and the last centimetre, 800 VDC distribution) and §6 row G9, so the study guide
+> carries what those lessons will need to pin; 7. delta-electronics.study.json, megmeet.study.json and
+> liteon.study.json — the three guides that teach the rack chain today, so the Vicor guide is the
+> point-of-load silicon's view of the same chain and does not duplicate them.
+>
+> THE TASK: `profiler Vicor` then `profiler prep Vicor`, one push commit. Dossier: slug `vicor`, category
+> supplier, NASDAQ: VICR, profileVersion 1, all prose in intel-briefing style with confidence-tagged key
+> judgments. Research priorities: the product lines for the AI rack — factorized power (PRM regulators and
+> VTM/MCM current multipliers), the 800 V / 48 V bus converter modules (BCM, NBM, the ChiP packaging), the
+> lateral and vertical power-delivery (LPD/VPD) parts for the last centimetre, the DCM and PFM front ends, and
+> the licensing program — with concrete specs (voltage ranges, current density, efficiency, package sizes)
+> from Vicor's own datasheets; then the Delta Electronics patent litigation (the ITC investigation and the
+> district-court cases, their status and any licensing outcome), the trailing 18 months of hyperscaler and
+> AI-rack design-win and licensing news, the Andover fab and capacity, FY2024, FY2025 and the latest interims
+> vs consensus, decision makers with verified sources, and a relationships[] set that resolves only to covered
+> slugs (Delta Electronics, NVIDIA, Megmeet, LITEON, Infineon-adjacent names in the corpus, and any hyperscaler
+> a source names — verify each from a source before writing it). Study guide: the in-rack conversion chain —
+> why loss is I²R and voltage climbs, the 48 V bus and the 60 V safety line, why regulation and transformation
+> are separated (factorized power), current multiplication and the sine-amplitude converter idea, the last
+> centimetre at about one volt and why the converter moves onto the substrate, vertical versus lateral power
+> delivery, 800 VDC → 48 V → point-of-load, the BBU shelf on the DC bus, hold-up and ORing — with a
+> where-it-fails section aligned to §5 rows 9–11, {{term}} tooltips for everything the 193-entry concepts
+> registry holds (check terms AND aliases; 800 VDC, DC-DC converter, power shelf, VRM, BBU, hold-up time,
+> CRPS, GaN, SiC already exist), new shared concepts registered in profiler-concepts.json rather than the
+> guide's local glossary, and flashcards/quiz on how the technology works, not company trivia.
+>
+> BOOKKEEPING, same commit: python3 scripts/sync-profiler-registry.py, python3 scripts/build-profiler-graph.py,
+> python3 scripts/check-profiler-study.py; a calendar row (public — research the next earnings date, mark
+> confirmed honestly, write the source and watch[]); README tree entries for vicor.profile.json,
+> vicor.study.json and study-prep/vicor/; flip the vicor row in PROFILER-COVERAGE-PLAN.md §8 (Dossier → v1,
+> Guide → ✓, with the repo version). THEN, because A4 ends Phase A: re-run every §6 register check in
+> CLASSROOM-CURRICULUM-PLAN.md against the corpus and date the results — G2 (Caterpillar), G3 (Piller), G5
+> (Dominion) and G9 (Vicor) should move; leave G6, G11 and G12 as the register judges them, and do not touch
+> Phase B or C rows.
+>
+> VERIFY BEFORE COMMITTING: sync-profiler-registry.py --check clean, check-profiler-study.py clean, the
+> dossier and the Study Guide render in Profiler.html via Playwright with zero page errors, every
+> relationships[] slug and every {{term}} resolving. Data-only: no page or GAS file changes, no Profiler
+> version bump — the Profiler page is an indirect affect. Normal Pre-Commit and Pre-Push checklists; bump the
+> repo version on the push commit; push on a claude/* branch. If a product or spec cannot be sourced from
+> Vicor's own datasheets, a filing or a court or ITC document, leave it out and say so — I would rather a
+> thinner dossier than a fabricated line. And tell me at the end what xhigh visibly bought across all four
+> anchors, so I can decide whether to demote Phase B to High."
+
+**Phase A4 of the Profiler coverage plan — the fourth and last anchor company, run on Fable 5.1 xhigh as a dossier + study-guide pair in one commit, and the Phase A close.** Gives Classroom gap register row G9 its 800 VDC silicon half: `inside-the-rack` and `the-800-vdc-shift` can now pin `study:vicor` for I²R and the climbing voltage, the 48 V bus and the 60 V line, factorized power, current multiplication and the sine-amplitude converter, the last centimetre and vertical versus lateral delivery, the 800 VDC → 48 V → point-of-load chain, and the BBU and supercapacitor shelves on the DC bus — the point-of-load silicon's view of the chain that the Delta, LITEON and Megmeet guides teach from the shelf's side. Every §6 register check was re-run and dated at the phase end.
+
+### Added
+
+- **`live-site-pages/profiler-data/vicor.profile.json`** — Vicor Corporation (Andover, MA; NASDAQ: VICR), `supplier`, schema v7, profileVersion 1, intel-briefing prose (BLUF summary, seven confidence-tagged key judgments, a collection-gap statement and a dated INDICATORS TO WATCH bullet). **Ten product lines** with all four depth fields — the Factorized Power Architecture (PRM regulators + VTM current multipliers, the Sine Amplitude Converter), Power-on-Package and vertical power delivery (MCM/MCD ChiP-sets, GCM/GTM, the 2nd-generation VPD that exists on first-party channels only as CEO sentences), BCM isolated bus converters (800 V and 400 V to 48 V), NBM bidirectional 48 V ↔ 12 V converters, DCM regulated converters, PFM AC-DC front ends and ZVS bucks, the IP licensing practice, automotive 48 V, aerospace/defense and Brick Products, and the ChiP packaging platform with the Andover fab; **seven banded spec groups** quoted verbatim from Vicor datasheets and family overviews (VTM48EF012, MCM4609 ChiP-set and VPD examples, BCM4414 800 V, BCM6135 384 V and automotive 800 V, NBM2317, DCM3717/3735, ChiP/fab); financials FY2024–Q2 2026 vs tracker consensus with `kpi: revenue` on both annual periods; **34 developments** (the two ITC investigations, the $45M settlement, the May 2026 all-inclusive OEM licence, the SynQor payment, the July 2026 trade-secret counter-suits, three NVIDIA 800 VDC partner lists without Vicor); four relationships (Delta Electronics as competitor via the ITC record; NVIDIA, Google and Tesla as historical customers on SemiAnalysis's account); two policy exposures (Section 337 as complainant; CHIPS Act §48D credits); twelve decision makers from the officers page and 2026 proxy; **136 sources at 57% first-party** (70 first-party URLs incl. 11 datasheets/PDFs and the 10-K/10-Q/proxy/8-K exhibits; 78 third-party incl. the ITC's own Federal Register notices via govinfo, CourtListener and PacerMonitor dockets, the First Circuit opinion, NVIDIA's partner blogs, call transcripts and consensus trackers)
+- **`live-site-pages/profiler-data/vicor.study.json`** — schema v2, **17 sections**: the last centimetre (prose); amps per kilowatt at each voltage (`bars`); the sixteen-to-one arithmetic (`callout`); the 48 V bus and the 60 V line; two jobs in one box — two-stage vs direct vs factorized (`table`); current multiplication and the sine-amplitude idea; the PDN at one volt; lateral vs vertical (`proscons`); the 800 V → 48 V → chip chain (`table`); the battery on the DC bus; living on a shared bus — ORing, precharge, sharing, hold-up (`callout`); where Vicor's products slot in (`table`); amps per package (`bars`); who buys, who competes and the licence; `where-it-fails` aligned to §5 rows 9–11; 14 flashcards; 11-item quiz. 91 `{{term}}` spans over the registry, no local glossary
+- **`repository-information/study-prep/vicor/vicor-lesson-plan.md`** — five modules (current squared; factorized power and the multiplier; the last centimetre and vertical delivery; 800 V to the chip and the battery on the bus; Vicor against the chain — catalogue, fab, licence, who buys, who competes) plus a ten-question self-test
+- **30 shared concepts in `live-site-pages/profiler-data/profiler-concepts.json`** (193 → 224, alphabetical, no term/alias collisions): `buck converter`, `bus converter`, `conversion efficiency`, `current density`, `current multiplier`, `current sharing`, `design win`, `factorized power`, `galvanic isolation`, `hot-swap`, `I²R loss`, `inrush`, `intermediate bus`, `IP licensing`, `lateral power delivery`, `load transient`, `ORing`, `PDN`, `point of load`, `power density`, `precharge`, `PWM`, `Section 337`, `SELV`, `sine amplitude converter`, `soft switching`, `substrate`, `switching frequency`, `thermal resistance`, `vertical power delivery`, `voltage regulation`
+- **Eleven company-published headshots** in `live-site-pages/images/execs/vicor-*.jpg` (Vicor corporate-officers page; resized; no photoCredit needed) — D'Amico has no headshot on the officers page and renders as an initials avatar
+
+### Changed
+
+- **`live-site-pages/profiler-data/profiler-companies.json`** — Vicor registry entry (tagline, HQ Andover, ticker NASDAQ: VICR, domains `vicorpower.com` · `vicorcorporation.gcs-web.com`), inserted after Vertiv; denormalized fields synced (`srcTotal` 136, `srcFirstPct` 57, `kpiNorm` true)
+- **`live-site-pages/profiler-data/profiler-graph.json`** — rebuilt: 528 → 540 edges (415 curated); 12 edges touch `vicor` — the four curated plus derived-only mentions of ABB, Eaton, GE Vernova, Hitachi Energy, LITEON, Megmeet, Schneider Electric and Vertiv arising from the dossier's own NVIDIA-partner-list prose
+- **`repository-information/profiler-refresh-calendar.json`** — Vicor row appended: `nextReport` 2026-10-20 / `confirmed: false` (no company announcement as of 2026-09-03; trackers split Oct 20 vs Oct 27; Oct 20 matches the 8-K cadence) with a nine-item `watch[]`; `updated` → 2026-09-03
+- **`repository-information/PROFILER-COVERAGE-PLAN.md`** — §8 row A4 flipped: Dossier `v1 · v04.44r`, Guide `✓ · v04.44r`
+- **`repository-information/CLASSROOM-CURRICULUM-PLAN.md`** — §6 gap register re-run in full at the Phase A close and dated: G2, G3, G5 and G9 moved Open → **Partial** (each anchor closes one half of its row and names the scheduled second half — C1, the Vertiv/Schneider revisions, B1–B2, the Narada backfill); G4, G6, G7, G8 and G10 re-checked and unchanged; G11 and G12 dated as the register judges them; a "where the register stands after Phase A" paragraph added and the intro's verification sentence extended
+- **`README.md`** — tree entries for `vicor.profile.json`, `vicor.study.json` and `study-prep/vicor/`; execs count 177/48 → 188/49; `Last updated:` and repo version
+- **`repository-information/repository.version.txt`** — `v04.43r` → `v04.44r`
+
+### Notes
+
+- **Research vehicle** — two parallel `general-purpose` subagents on the two-stage Source Priority Protocol: Agent A (first-party) read 70 Vicor URLs in ~24 minutes — Vicor's IR host (`vicorcorporation.gcs-web.com`) returned 403/503 throughout, so every results release was read from Vicor's own SEC 8-K Exhibit 99.1 copy and one from the company's GlobeNewswire wire copy; Agent B (third-party) evaluated 78 sources in ~21 minutes — usitc.gov, federalregister.gov HTML, Justia and Nasdaq were blocked, so the ITC record came from govinfo's Federal Register text and the Federal Register API, the dockets from CourtListener via curl and PacerMonitor
+- **Left out for want of a source, as the plan requires:** no datasheet, part number, package size or A/cm² figure for the 2nd-generation VPD (first-party references are CEO sentences only — carried as such); no 800 V-input regulated DCM (none exists); no datasheet weight for the automotive BCM6135 (Vicor's own pages say 58 g and 65 g); no licensee, settlement counterparty or lead VPD customer name (none in any primary source — the Cerebras inference is labeled as trade-press inference); no Vicor account of the 337-TA-1484 respondents (its filings never describe the ITC cases); no LinkedIn URLs; no `mw`/`gwh` KPIs. Megmeet and LITEON were **declined as relationships** — no source states a Vicor–Megmeet or Vicor–LITEON link beyond their presence on partner lists Vicor is absent from; Infineon, MPS, AMD, Cerebras, Quanta, Wistron, Wiwynn and Foxconn are not covered slugs
+- **Verification** — `sync-profiler-registry.py --check` and `build-profiler-graph.py --check` clean; `check-profiler-study.py` 0 errors / 0 warnings over 66 guides and 224 concepts; a local schema-v7 validator (canonical development categories, relationship slugs and types, policy statuses, spec bands, KPI overlay rules, source ordering) 0 errors / 0 warnings; Playwright (localhost, GAS whoami stubbed as admin, Google sign-in loader stubbed) — nine dossier tabs, four relationship chips with resolved sources, the Study Guide with 17 sections and 91 resolving tooltips, **zero page errors and zero console errors**; the 11 headshots checked on a contact sheet
+- **Data-only** — no page or GAS file changed; no Profiler version bump; the Profiler page is an indirect affect. Phase A is closed; the next §6 register re-run is owed at the close of Phase B
 
 ## [v04.43r] — 2026-09-03 05:23:31 AM EST
 

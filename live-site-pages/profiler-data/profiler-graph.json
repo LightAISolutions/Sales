@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-03",
- "companies": 92,
+ "companies": 93,
  "edges": [
   {
    "a": "abb",
@@ -566,6 +566,20 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "abb",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA's OCP Summit 800 VDC ecosystem list adds AOS, EPC, Power Integrations, Richtek, Bizlink, Flex, ABB, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric and Siemens; Vicor is absent — Second published list without Vicor.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
   },
   {
    "a": "abb",
@@ -7560,6 +7574,59 @@
    "last": "2026-06-02"
   },
   {
+   "a": "delta-electronics",
+   "b": "vicor",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Respondent in both of Vicor's ITC investigations (337-TA-1370, 2023–25; 337-TA-1484, instituted 2026) and in Vicor's 2023 and 2026 E.D. Texas suits; the ITC found Delta's power converter modules infringed the '761 patent and its redesigned products did not infringe the '481 and '950 patents.",
+     "context": "Vicor's first Section 337 complaint (instituted August 17, 2023) named Delta Electronics, Inc., Delta Electronics (Americas) and Delta Electronics (USA) alongside Cyntec, Quanta and Foxconn entities over three bus-converter patents. The Commission's February 13, 2025 final determination found a violation as to the '481 and '761 patents, issued a limited exclusion order and a cease-and-desist order against Delta Electronics (Americas), and at the same time affirmed that 'the accused Delta Products do not infringe claim 1' of the '481 patent and found no violation on the '950 — the redesign findings that Taiwanese reporting summarized as Delta's design-around succeeding. Delta's own W.D. Texas case against Vicor was terminated May 7, 2025 and Vicor's E.D. Texas case against Delta May 13, 2025, within two weeks of the $45M settlement whose counterparties Vicor does not name.\n\nThe second act opened January 2026: an '087-patent suit against Delta in E.D. Texas (stayed February 24, 2026 pending the ITC) and the 337-TA-1484 investigation with Delta and DET Logistics among fifteen respondents, on a target date of September 20, 2027. Law360 reported in July 2026 a W.D. Texas trade-secret suit by Delta accusing Vicor of pursuing patent allegations 'in order to get licensing revenue'. In the corpus, Delta is the first-qualified power-shelf supplier for NVIDIA's racks and the deepest published 800 VDC catalogue; Vicor's bus-converter patents sit under the DC-DC stage of exactly those shelves.",
+     "source": "https://www.govinfo.gov/content/pkg/FR-2025-02-20/html/2025-02831.htm",
+     "status": "active",
+     "since": "2023",
+     "via": "Bus converter modules (BCM/NBM patents)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-24",
+     "text": "Law360 reports a W.D. Texas suit by Delta Electronics accusing Vicor of trade-secret misuse 'as part of a campaign of aggressively pursuing patent allegations against rivals in order to get licensing revenue' — The defendants of the second ITC case have opened a second front of their own; per trade press, not verified against the complaint.",
+     "src": "https://www.law360.com/articles/2505388/vicor-rival-alleges-trade-secret-misuse-in-wdtx-suit",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-24",
+     "text": "E.D. Texas grants an unopposed stay of Vicor v. Delta Electronics (2:26-cv-00017) pending the ITC's second investigation — The district damages case waits behind the ITC schedule, as the 2023 case did; the exclusion-order track is the one that moves.",
+     "src": "https://www.pacermonitor.com/public/case/62366272/Vicor_Corporation_v_Delta_Electronics,_Inc_et_al",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-01-09",
+     "text": "Vicor files '087-patent suits in E.D. Texas against Delta Electronics (2:26-cv-00017) and Luxshare/MetaPWR (2:26-cv-00018) and in W.D. Texas against Monolithic Power Systems and Wistron (7:26-cv-00005), three days before its second ITC complaint — The accused product per the public complaint is MPS's MPC12109 module on AMD MI3XX boards — the socket Vicor lost is now the socket it is litigating.",
+     "src": "https://news.bloomberglaw.com/ip-law/vicor-corp-hits-competitors-with-patent-suits-over-power-tech",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-13",
+     "text": "Vicor v. Delta Electronics et al. (E.D. Tex. 2:23-cv-00323) is terminated on May 13, 2025 — per PatSnap by joint stipulation of dismissal with prejudice — six days after Delta's own W.D. Texas case against Vicor (6:23-cv-00726) was terminated on May 7 — The 2023 district litigation ended within two weeks of the May 1 settlement; Vicor's filings never name the settling parties.",
+     "src": "https://www.courtlistener.com/docket/67602631/vicor-corporation-v-delta-electronics-inc/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-02-13",
+     "text": "ITC final determination in Inv. No. 337-TA-1370: a Section 337 violation as to the '481 and '761 patents (none as to the '950); a limited exclusion order on infringing power converter modules and computing systems containing them and cease-and-desist orders against Delta Electronics (Americas), FII USA, Ingrasys Technology USA, Quanta Computer and Quanta Computer USA; the Commission also finds Delta's redesigned products do not infringe the '481 patent and that FII USA and Ingrasys hold a licence to the '761 patent — The order that made the licensing business — and, in the same document, the two findings that limit it: the redesigns escaped and the largest contract manufacturer was already licensed by its purchase-order terms.",
+     "src": "https://www.govinfo.gov/content/pkg/FR-2025-02-20/html/2025-02831.htm",
+     "from": "b"
+    }
+   ],
+   "last": "2026-07-24"
+  },
+  {
    "a": "dominion-energy",
    "b": "equinix",
    "curated": {
@@ -8493,6 +8560,27 @@
     }
    ],
    "last": "2026-03-24"
+  },
+  {
+   "a": "eaton",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-19",
+     "text": "NVIDIA's GTC 2026 800 VDC partner roster, as reported by Power Electronics News, again lists ADI, Infineon, MPS, Navitas, onsemi, Renesas, ROHM, ST and TI for silicon and Delta, LITEON, Eaton, Schneider and Vertiv for racks — Vicor is not named — Third published list without Vicor; its 800 V position rests on module sockets and patents rather than ecosystem membership.",
+     "src": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-20",
+     "text": "NVIDIA's Computex 800 VDC architecture blog names its silicon partners (Analog Devices, Infineon, Innoscience, MPS, Navitas, onsemi, Renesas, ROHM, STMicroelectronics, Texas Instruments), component partners (Delta, Flex Power, Lead Wealth, LiteOn, Megmeet) and system partners (Eaton, Schneider Electric, Vertiv); Vicor is not among them — The architecture Vicor's 800 V bus converters were built for was announced with a partner list that omits it.",
+     "src": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-19"
   },
   {
    "a": "eaton",
@@ -10951,6 +11039,20 @@
   },
   {
    "a": "ge-vernova",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA's OCP Summit 800 VDC ecosystem list adds AOS, EPC, Power Integrations, Richtek, Bizlink, Flex, ABB, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric and Siemens; Vicor is absent — Second published list without Vicor.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "ge-vernova",
    "b": "voltagrid",
    "evid": [
     {
@@ -11563,6 +11665,30 @@
   },
   {
    "a": "google",
+   "b": "vicor",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "SemiAnalysis (2023) lists Google's TPU among Vicor's prior Power-on-Package design wins; no Vicor or Google statement of a current engagement was found.",
+     "context": "The only source connecting the two is SemiAnalysis's 2023 history, which names 'Google TPU' among the accelerators Vicor's substrate-mounted current multipliers had powered before the H100 loss. Vicor's 2026 results releases refer to TPUs as a market its 2nd-generation VPD IP addresses ('future advances in TPUs, GPUs and Wafer Scale Engines') without naming a customer, and Google's own guide in this app does not mention Vicor. Treat as historical and unconfirmed for any current generation.",
+     "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition",
+     "status": "historical",
+     "via": "Power-on-Package current multipliers (TPU)"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Factorized Power Architecture (FPA™) — PRM™ regulators and VTM™ current multipliers for 48 V point-of-load",
+     "date": "",
+     "text": "SemiAnalysis's 2023 history (independent) records Vicor 'designed out' of NVIDIA's H100 and 'replaced by Monolithic Power Systems', after V100/A100, Google TPU, AMD MI300, Tesla, Intel and Cerebras wins — so the position is contested socket by socket, and Vicor's 2026 ITC complaint names MPS's MPC12109 module and AMD MI3XX boards as the accused products.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "google",
    "b": "xai",
    "curated": {
     "a": {
@@ -11882,6 +12008,20 @@
      "text": "NVIDIA collaboration: co-designed grid-to-rack architecture for 800 VDC AI racks — claimed 15x power-supply increase — Hitachi's entry into the same NVIDIA 800 VDC ecosystem ABB and Vertiv joined — the substation giant reaching down to the rack. The release frames up to 125 GW of global AI data-center capacity 2025-2030 (≈ Spain's installed generation). The 15x claim is company-published and unverified independently.",
      "src": "https://www.hitachienergy.com/news-and-events/press-releases/2025/10/nvidia-800-vdc-collaboration",
      "from": "a"
+    }
+   ],
+   "last": "2025-10-13"
+  },
+  {
+   "a": "hitachi-energy",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA's OCP Summit 800 VDC ecosystem list adds AOS, EPC, Power Integrations, Richtek, Bizlink, Flex, ABB, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric and Siemens; Vicor is absent — Second published list without Vicor.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "b"
     }
    ],
    "last": "2025-10-13"
@@ -14574,6 +14714,62 @@
    "last": "2025-03-18"
   },
   {
+   "a": "liteon",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Against the shelf vendors this app covers (Delta, LITEON, Megmeet), Vicor sells the converter component rather than the shelf, and against the multiphase-regulator vendors on NVIDIA's 800 VDC silicon lists it sells an architecture rather than a part; it is the natural anchor for how a DC bus is stepped down inside the rack and, because a BBU or supercapacitor shelf lives on the same bus, for where a storage seller's in-rack conversation begins.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: absence from NVIDIA's May 2025, October 2025 and March 2026 partner lists while Delta, LITEON, Megmeet, MPS, Infineon and TI are named; SemiAnalysis's independent account of Vicor's design-out from H100 in favour of MPS; and the 2026 ITC respondents — Quanta, Wistron, Wiwynn, Luxshare, Delta, MPS — being exactly the ODMs and vendors that build the racks.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · BCM® isolated fixed-ratio bus converters — 800 V and 400 V to 48 V, 48 V to 12 V (ChiP, SM-ChiP, CM-ChiP and VIA packages)",
+     "date": "",
+     "text": "Against the 800 V → 50 V DC-DC shelves that Delta (1RU 90 kW, 98.5%), LITEON and Megmeet build for NVIDIA's 800 VDC racks, Vicor sells the converter module rather than the shelf — the BCM is a component a shelf or a tray designer places, and Vicor's rack chain puts it at the tray ('compact 400 to 48V conversion within the rack … can increase the number of processors in each rack by fourfold', HV-to-48V page).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · NBM™ non-isolated bidirectional bus converters — 48 V ↔ 12 V",
+     "date": "",
+     "text": "Vicor's non-isolated bus converter competes with the 48 V-to-12 V intermediate-bus converters from MPS, Infineon, Delta and the power-shelf vendors' own DC-DC bricks (LITEON's 2.5 kW 50 V → 12 V brick, Delta's DC-DC modules); the 2026 ITC action is the company's attempt to assert its bus-converter patents over that class of part as well.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PFM™ AC-DC front ends and ZVS buck regulators",
+     "date": "",
+     "text": "Sub-kilowatt, industrial-grade AC-DC and low-current POL — a completeness offer for customers standardizing on Vicor modules, not a contest with the CRPS and shelf vendors (Delta, LITEON, Megmeet, Advanced Energy) at kilowatt scale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · ChiP™ packaging platform and the Andover ChiP fab — panel-level module manufacturing",
+     "date": "",
+     "text": "Unlike the fabless module vendors and unlike Delta, LITEON and Megmeet, whose shelves are assembled on conventional SMT lines in Taiwan, Thailand and China, Vicor makes its modules on a proprietary panel process in one US factory — a domestic-industry fact that underpins its Section 337 standing ('Vicor has satisfied the domestic industry requirement', ITC Final ID) and a concentration risk at once.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-19",
+     "text": "NVIDIA's GTC 2026 800 VDC partner roster, as reported by Power Electronics News, again lists ADI, Infineon, MPS, Navitas, onsemi, Renesas, ROHM, ST and TI for silicon and Delta, LITEON, Eaton, Schneider and Vertiv for racks — Vicor is not named — Third published list without Vicor; its 800 V position rests on module sockets and patents rather than ecosystem membership.",
+     "src": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-19"
+  },
+  {
    "a": "ls-energy-solutions",
    "b": "nvidia",
    "evid": [
@@ -15059,6 +15255,55 @@
     }
    ],
    "last": "2025-03-18"
+  },
+  {
+   "a": "megmeet",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Against the shelf vendors this app covers (Delta, LITEON, Megmeet), Vicor sells the converter component rather than the shelf, and against the multiphase-regulator vendors on NVIDIA's 800 VDC silicon lists it sells an architecture rather than a part; it is the natural anchor for how a DC bus is stepped down inside the rack and, because a BBU or supercapacitor shelf lives on the same bus, for where a storage seller's in-rack conversation begins.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: absence from NVIDIA's May 2025, October 2025 and March 2026 partner lists while Delta, LITEON, Megmeet, MPS, Infineon and TI are named; SemiAnalysis's independent account of Vicor's design-out from H100 in favour of MPS; and the 2026 ITC respondents — Quanta, Wistron, Wiwynn, Luxshare, Delta, MPS — being exactly the ODMs and vendors that build the racks.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · BCM® isolated fixed-ratio bus converters — 800 V and 400 V to 48 V, 48 V to 12 V (ChiP, SM-ChiP, CM-ChiP and VIA packages)",
+     "date": "",
+     "text": "Against the 800 V → 50 V DC-DC shelves that Delta (1RU 90 kW, 98.5%), LITEON and Megmeet build for NVIDIA's 800 VDC racks, Vicor sells the converter module rather than the shelf — the BCM is a component a shelf or a tray designer places, and Vicor's rack chain puts it at the tray ('compact 400 to 48V conversion within the rack … can increase the number of processors in each rack by fourfold', HV-to-48V page).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · PFM™ AC-DC front ends and ZVS buck regulators",
+     "date": "",
+     "text": "Sub-kilowatt, industrial-grade AC-DC and low-current POL — a completeness offer for customers standardizing on Vicor modules, not a contest with the CRPS and shelf vendors (Delta, LITEON, Megmeet, Advanced Energy) at kilowatt scale.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · ChiP™ packaging platform and the Andover ChiP fab — panel-level module manufacturing",
+     "date": "",
+     "text": "Unlike the fabless module vendors and unlike Delta, LITEON and Megmeet, whose shelves are assembled on conventional SMT lines in Taiwan, Thailand and China, Vicor makes its modules on a proprietary panel process in one US factory — a domestic-industry fact that underpins its Section 337 standing ('Vicor has satisfied the domestic industry requirement', ITC Final ID) and a concentration risk at once.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-20",
+     "text": "NVIDIA's Computex 800 VDC architecture blog names its silicon partners (Analog Devices, Infineon, Innoscience, MPS, Navitas, onsemi, Renesas, ROHM, STMicroelectronics, Texas Instruments), component partners (Delta, Flex Power, Lead Wealth, LiteOn, Megmeet) and system partners (Eaton, Schneider Electric, Vertiv); Vicor is not among them — The architecture Vicor's 800 V bus converters were built for was announced with a partner list that omits it.",
+     "src": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-05-20"
   },
   {
    "a": "megmeet",
@@ -16834,6 +17079,114 @@
     }
    ],
    "last": "2026-07-23"
+  },
+  {
+   "a": "nvidia",
+   "b": "vicor",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "Independent history (SemiAnalysis, 2023) records Vicor's Power-on-Package in NVIDIA's V100 and A100 generations and its design-out from H100 in favour of Monolithic Power Systems; NVIDIA's published 800 VDC partner lists of 2025–26 do not name Vicor.",
+     "context": "SemiAnalysis's August 2023 account of the AI power-delivery competition lists V100 and A100 among Vicor's prior wins and states that Vicor was 'designed out' of H100 and 'replaced by Monolithic Power Systems (MPS)'; Vicor's own 2017 and 2020 releases describe the MCM/MCD ChiP-sets for AI accelerator cards without naming customers. Since then NVIDIA has published three 800 VDC ecosystem lists — Computex May 2025, OCP October 2025 and GTC March 2026 — naming ADI, Infineon, MPS, Navitas, onsemi, Renesas, ROHM, ST and TI for silicon and Delta, LITEON, Megmeet, Flex and Lead Wealth for components; Vicor appears on none of them, and no NVIDIA or Vicor statement of a Blackwell or Rubin design-in exists.\n\nThe relationship therefore reads as a lost socket with an open door: Vicor's 2026 ITC complaint targets MPS's module on AMD boards rather than NVIDIA systems, and its CEO's 'one hyperscaler' licensee is unnamed. NVIDIA is, in Vicor's framing, the architecture-setter whose 800 V rack its BCM parts were built for.",
+     "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition",
+     "status": "historical",
+     "via": "Power-on-Package current multipliers"
+    }
+   },
+   "evid": [
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Vicor is absent from every NVIDIA 800 VDC partner list published since May 2025.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Summary",
+     "date": "",
+     "text": "Against the shelf vendors this app covers (Delta, LITEON, Megmeet), Vicor sells the converter component rather than the shelf, and against the multiphase-regulator vendors on NVIDIA's 800 VDC silicon lists it sells an architecture rather than a part; it is the natural anchor for how a DC bus is stepped down inside the rack and, because a BBU or supercapacitor shelf lives on the same bus, for where a storage seller's in-rack conversation begins.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "(Moderate confidence) We assess that Vicor sits outside the NVIDIA 800 VDC ecosystem as published and that its route into those racks is the module socket at the contract manufacturer and the patent over the bus-converter design, not a partner listing.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: absence from NVIDIA's May 2025, October 2025 and March 2026 partner lists while Delta, LITEON, Megmeet, MPS, Infineon and TI are named; SemiAnalysis's independent account of Vicor's design-out from H100 in favour of MPS; and the 2026 ITC respondents — Quanta, Wistron, Wiwynn, Luxshare, Delta, MPS — being exactly the ODMs and vendors that build the racks.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "*Next NVIDIA 800 VDC partner list (GTC 2027):* Vicor's appearance would refute Judgment 3.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Factorized Power Architecture (FPA™) — PRM™ regulators and VTM™ current multipliers for 48 V point-of-load",
+     "date": "",
+     "text": "Against the multiphase-buck voltage regulators that Monolithic Power Systems, Infineon, Renesas, Analog Devices and Texas Instruments sell for 48 V and 12 V point-of-load (all of them, and not Vicor, on NVIDIA's published 800 VDC silicon partner lists of May 2025, October 2025 and March 2026), Vicor's argument is architectural rather than per-part: its FPA article claims '48V FPA dissipates 35W versus 2.2kW for 6V IBA' for the same processor.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · Factorized Power Architecture (FPA™) — PRM™ regulators and VTM™ current multipliers for 48 V point-of-load",
+     "date": "",
+     "text": "SemiAnalysis's 2023 history (independent) records Vicor 'designed out' of NVIDIA's H100 and 'replaced by Monolithic Power Systems', after V100/A100, Google TPU, AMD MI300, Tesla, Intel and Cerebras wins — so the position is contested socket by socket, and Vicor's 2026 ITC complaint names MPS's MPC12109 module and AMD MI3XX boards as the accused products.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · BCM® isolated fixed-ratio bus converters — 800 V and 400 V to 48 V, 48 V to 12 V (ChiP, SM-ChiP, CM-ChiP and VIA packages)",
+     "date": "",
+     "text": "Against the 800 V → 50 V DC-DC shelves that Delta (1RU 90 kW, 98.5%), LITEON and Megmeet build for NVIDIA's 800 VDC racks, Vicor sells the converter module rather than the shelf — the BCM is a component a shelf or a tray designer places, and Vicor's rack chain puts it at the tray ('compact 400 to 48V conversion within the rack … can increase the number of processors in each rack by fourfold', HV-to-48V page).",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Capabilities · BCM® isolated fixed-ratio bus converters — 800 V and 400 V to 48 V, 48 V to 12 V (ChiP, SM-ChiP, CM-ChiP and VIA packages)",
+     "date": "",
+     "text": "Vicor is absent from NVIDIA's published 800 VDC component and silicon partner lists; its route into those racks is the module socket at the contract manufacturer and the patent licence over the bus-converter designs those shelves use.",
+     "src": "",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-19",
+     "text": "NVIDIA's GTC 2026 800 VDC partner roster, as reported by Power Electronics News, again lists ADI, Infineon, MPS, Navitas, onsemi, Renesas, ROHM, ST and TI for silicon and Delta, LITEON, Eaton, Schneider and Vertiv for racks — Vicor is not named — Third published list without Vicor; its 800 V position rests on module sockets and patents rather than ecosystem membership.",
+     "src": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-02-11",
+     "text": "ITC institutes Inv. No. 337-TA-1484 on U.S. Patent 12,395,087 ('Power Distribution Architecture with Series-Connected Bus Converter', issued August 19, 2025) against fifteen respondents including Delta, Monolithic Power Systems, Luxshare, Wistron, Wiwynn and Quanta; scope: power converters for AI accelerators, TPUs, GPUs and CPUs and the computing systems containing them — The second act names the server ODMs that build the 800 VDC racks and the multiphase-buck vendor that replaced Vicor at NVIDIA; a single new patent carries it. Target date September 20, 2027 and a final ID due May 20, 2027 per a USITC notice seen only in snippet.",
+     "src": "https://www.govinfo.gov/content/pkg/FR-2026-02-17/html/2026-03032.htm",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-10-13",
+     "text": "NVIDIA's OCP Summit 800 VDC ecosystem list adds AOS, EPC, Power Integrations, Richtek, Bizlink, Flex, ABB, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric and Siemens; Vicor is absent — Second published list without Vicor.",
+     "src": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-20",
+     "text": "NVIDIA's Computex 800 VDC architecture blog names its silicon partners (Analog Devices, Infineon, Innoscience, MPS, Navitas, onsemi, Renesas, ROHM, STMicroelectronics, Texas Instruments), component partners (Delta, Flex Power, Lead Wealth, LiteOn, Megmeet) and system partners (Eaton, Schneider Electric, Vertiv); Vicor is not among them — The architecture Vicor's 800 V bus converters were built for was announced with a partner list that omits it.",
+     "src": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-19"
   },
   {
    "a": "nvidia",
@@ -18793,6 +19146,20 @@
    "last": "2025-03-25"
   },
   {
+   "a": "schneider-electric",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-20",
+     "text": "NVIDIA's Computex 800 VDC architecture blog names its silicon partners (Analog Devices, Infineon, Innoscience, MPS, Navitas, onsemi, Renesas, ROHM, STMicroelectronics, Texas Instruments), component partners (Delta, Flex Power, Lead Wealth, LiteOn, Megmeet) and system partners (Eaton, Schneider Electric, Vertiv); Vicor is not among them — The architecture Vicor's 800 V bus converters were built for was announced with a partner list that omits it.",
+     "src": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2025-05-20"
+  },
+  {
    "a": "siemens-energy",
    "b": "xai",
    "evid": [
@@ -19381,6 +19748,30 @@
   },
   {
    "a": "tesla",
+   "b": "vicor",
+   "curated": {
+    "b": {
+     "type": "customer",
+     "note": "SemiAnalysis (2023) lists Tesla among Vicor's prior AI-accelerator power design wins; no current engagement is stated by either company.",
+     "context": "SemiAnalysis's 2023 account includes Tesla in the roster of accelerator programs — with V100, A100, Google TPU, AMD MI300, Intel Gaudi3/PVC and Cerebras WSE2 — that used Vicor's Power-on-Package before the H100 design-out. Neither Vicor's releases nor Tesla's filings in this corpus mention the other, so the link is carried as historical on the strength of a single independent source.",
+     "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition",
+     "status": "historical",
+     "via": "Power-on-Package current multipliers"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Factorized Power Architecture (FPA™) — PRM™ regulators and VTM™ current multipliers for 48 V point-of-load",
+     "date": "",
+     "text": "SemiAnalysis's 2023 history (independent) records Vicor 'designed out' of NVIDIA's H100 and 'replaced by Monolithic Power Systems', after V100/A100, Google TPU, AMD MI300, Tesla, Intel and Cerebras wins — so the position is contested socket by socket, and Vicor's 2026 ITC complaint names MPS's MPC12109 module and AMD MI3XX boards as the accused products.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "tesla",
    "b": "voltagrid",
    "curated": {
     "b": {
@@ -19671,6 +20062,27 @@
     }
    ],
    "last": "2026-01-05"
+  },
+  {
+   "a": "vertiv",
+   "b": "vicor",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-19",
+     "text": "NVIDIA's GTC 2026 800 VDC partner roster, as reported by Power Electronics News, again lists ADI, Infineon, MPS, Navitas, onsemi, Renesas, ROHM, ST and TI for silicon and Delta, LITEON, Eaton, Schneider and Vertiv for racks — Vicor is not named — Third published list without Vicor; its 800 V position rests on module sockets and patents rather than ecosystem membership.",
+     "src": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+     "from": "b"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-05-20",
+     "text": "NVIDIA's Computex 800 VDC architecture blog names its silicon partners (Analog Devices, Infineon, Innoscience, MPS, Navitas, onsemi, Renesas, ROHM, STMicroelectronics, Texas Instruments), component partners (Delta, Flex Power, Lead Wealth, LiteOn, Megmeet) and system partners (Eaton, Schneider Electric, Vertiv); Vicor is not among them — The architecture Vicor's 800 V bus converters were built for was announced with a partner list that omits it.",
+     "src": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+     "from": "b"
+    }
+   ],
+   "last": "2026-03-19"
   },
   {
    "a": "vertiv",

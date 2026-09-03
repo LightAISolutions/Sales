@@ -1,0 +1,1888 @@
+{
+ "schemaVersion": 7,
+ "slug": "vicor",
+ "name": "Vicor Corporation",
+ "shortName": "Vicor",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.vicorpower.com",
+ "headquarters": "Andover, Massachusetts, USA",
+ "ownership": {
+  "type": "public",
+  "ticker": "NASDAQ: VICR"
+ },
+ "productsAndServices": [
+  {
+   "name": "Factorized Power Architecture (FPA™) — PRM™ regulators and VTM™ current multipliers for 48 V point-of-load",
+   "category": "48 V point-of-load power (AI, HPC, ATE)",
+   "description": "Vicor's proprietary distribution architecture, per its 10-K: an implementation 'for delivering 48V DC from a server backplane to a 1.0V microprocessor would consist of three modules: a PRM™ (Pre-Regulator Module) regulator, a VTM™ (Voltage Transformation Module) current multiplier, and a proprietary communications controller', with 'a regulated voltage approaching 48V … bussed across the circuit to the transformation module, which performs what we refer to as current multiplication, adjacent to the load'. The PRM is a zero-voltage-switching buck-boost regulator ('99.3% peak being achieved with the latest PRMs' per the FPA white paper); the VTM is a fixed-ratio Sine Amplitude Converter™ (SAC™) — 'a proprietary multi-megahertz ZCS/ZVS' topology — that divides the regulated 48 V bus by a K factor (1/40 to 1) and multiplies the current by the same factor at the point of load, responding 'to load changes regardless of magnitude in less than one microsecond' (typically 400 ns). Sold as discrete Full-Chip, Half-Chip and SM-ChiP modules and as the building block of the Power-on-Package and VPD lines below.",
+   "highlights": [
+    "Regulation and transformation are separated: the PRM regulates upstream at ~48 V where the current is small, and the VTM multiplies current next to the load — per the FPA white paper, 'a current gain of 1:48 or higher to provide higher efficiency, smaller size, faster response and scalability to 1000A and beyond'",
+    "Catalogue VTMs run from 26–55 V in to 0.7–1.4 V out at 130 A (VTM48EF012T130C01, K = 1/40, '>94%' efficiency, '443 A/in³') up to 26–55 V out at 6.3 A; PRMs from 400 W to 800 W (PRM2313S60E54H0T00, 38–60 V in, 30–54 V out) per the family overview (Rev 3.1, 02/2024)",
+    "Because the VTM's K factor scales capacitance by K², 'the capacitance value can be reduced by a factor of 1600' at the point of load versus a 48 V-side placement (VTM48EF012 datasheet) — the mechanism behind Vicor's small-footprint claims",
+    "Family overview claims 'Regulation 0.2% (Remote Sense)', 'Power density up to 2,040W/in3', 'Low profile: 0.265in' and VTM 'isolation to 2,250VDC' — quoted values, not independently tested",
+    "The same PRM + VTM chain is the 48 V-side half of every Vicor 800 V and 400 V rack chain (the BCM6135 datasheet's typical-application diagram shows 'BCM6135… with PRM™ + VTM™ and MCD + MCM™')"
+   ],
+   "positioning": "Against the multiphase-buck voltage regulators that Monolithic Power Systems, Infineon, Renesas, Analog Devices and Texas Instruments sell for 48 V and 12 V point-of-load (all of them, and not Vicor, on NVIDIA's published 800 VDC silicon partner lists of May 2025, October 2025 and March 2026), Vicor's argument is architectural rather than per-part: its FPA article claims '48V FPA dissipates 35W versus 2.2kW for 6V IBA' for the same processor. SemiAnalysis's 2023 history (independent) records Vicor 'designed out' of NVIDIA's H100 and 'replaced by Monolithic Power Systems', after V100/A100, Google TPU, AMD MI300, Tesla, Intel and Cerebras wins — so the position is contested socket by socket, and Vicor's 2026 ITC complaint names MPS's MPC12109 module and AMD MI3XX boards as the accused products.",
+   "soldThrough": "Direct sales and distribution (Mouser, Macnica and Marubun in Japan, ASTI, per Vicor's event releases) for catalogue modules; design-in engagements with AI OEMs and hyperscalers for custom Power-on-Package and VPD; and, since 2025, patent licences that let OEMs and contract manufacturers source FPA-covered designs from others (see the IP licensing line)",
+   "targetSegments": [
+    "AI accelerator, GPU, TPU and wafer-scale processor boards",
+    "high-performance computing and automatic test equipment (ATE)",
+    "48 V automotive zonal and 48 V industrial systems"
+   ],
+   "roadmap": "'5th generation ChiPs and 2nd Generation VPD' (Q3 2025 release) with a Q1 2026 production launch for the lead customer stated on the Q3 2025 call (trade-press transcript); an 'alternate source of high current density 2nd Gen VPD modules' for licensed OEMs and hyperscalers under exploration (Q4 2025 release); a second ChiP fab 'for high current density 2nd Gen VPD ChiPs' in site selection (Q2 2026 release). Vicor states it is 'feeding IVRs with a current multiplier' as an incremental opportunity (Q2 2026 release)."
+  },
+  {
+   "name": "Power-on-Package and Vertical Power Delivery — MCM/MCD ChiP-sets, GCM/GTM current multipliers, Gen 5 ChiPs and 2nd-Gen VPD",
+   "category": "AI processor point-of-load (substrate-mounted current multipliers)",
+   "description": "The last-centimetre line. Per the 10-K, Vicor's 'most popular Power-on-Package solution, consists of one MCD (Modular Current Driver) unit, providing high-bandwidth, low-noise regulation, and two MCM (Modular Current Multiplier) units, providing high performance current multiplication', delivering 'unprecedented current levels to GPUs and AI ASICs, in part due to the placement of the MCMs directly on the substrate onto which the processor is mounted, thereby minimizing distribution losses'. The lateral form (LPD) flanks the processor with current multipliers on the board; the vertical form (VPD) stacks 'current multipliers and bypass capacitors … on each other to form an integrated power module' mounted directly under the processor, with a custom GCM (Geared Current Multiplier) that maps the multiplier pinout to the processor's BGA. Company-stated headline figures: current density 'greater than 3.0A/mm²' with current gain 'greater than 40', modules '1.5mm thin' with 'a thermal resistance of 0.3°C/W'; the FPA article gives '5A/mm2 TDC (continuous), 10A/mm2 peak', 'up to 60x' gain, '600A' continuous per module and a transient response of 'Less than 100nsec'. The 2020 MCD4609 + 2× MCM4609 ChiP-set supplies 'up to 650A continuous and 1200A peak' from 48 V. The successor — '5th generation ChiPs and 2nd Generation VPD' — exists on first-party channels only as CEO statements in results releases; no product page, part number or datasheet was found.",
+   "highlights": [
+    "Vicor's own worked examples: an LPD design at ~800 A and 0.8 V with a 70 µΩ PDN using '2.8-mm-tall current multipliers'; a VPD design at 1,200 A with a 10 µΩ PDN (~14.4 W of PDN loss); VPD claimed to cut PDN losses 'by up to 50%' and to save 'about 100W per accelerator module versus traditional TLVR lateral power delivery' (company articles)",
+    "Q3 2025 call (trade-press transcript): Gen 5 VPD for the lead customer 'met target specifications' and was 'progressing to a Q1 2026 production launch', at 'up to five amperes per square millimeter peak current density' in a '1.5 millimeter thin' package; Q1 2026 call: 3 A/mm² baseline and 40× multiplication; Q2 2026 call: '>4 A/mm²' targeted around year-end, with sampling of the improved 2nd-gen part to Cerebras in Q1 2027 per Investing.com — the customer is unconfirmed by Vicor, which declined to name it on the call",
+    "The 2nd-Gen VPD IP is licensed as well as sold: the May 2026 OEM licence is 'all-inclusive' across 'Factorized Power (FPA) and Vertical Power Delivery (VPD)', and Vicor says it is 'exploring opportunities to expand total capacity by enabling an alternate source of high current density 2nd Gen VPD modules' (Q4 2025 release)",
+    "Independent history (SemiAnalysis, Aug 2023): Power-on-Package won V100, A100, Google TPU, AMD MI300, Tesla, Intel Gaudi3/PVC and Cerebras WSE2 sockets and was 'designed out' of H100 for MPS — the pattern is high-current design wins that are re-competed every generation",
+    "Craig-Hallum (Oct 2025) caveat, independent: the newest VPD product 'lacks field experience'; PhotonCap (Apr 2026): Vicor's 'performance claims lack independent third-party verification or disclosed competitor benchmarks'"
+   ],
+   "positioning": "Vicor claims VPD is the only architecture that can serve the next generation of TPUs, GPUs and wafer-scale engines — 'AI OEMs and Hyper-scalers are at a loss dealing with the current density and PDN limitations of 1st Gen. VPD systems' (Q2 2026 release) — and its VP of strategic marketing argued in Power Electronics News (July 2026) that VPD is 'effectively unavoidable' by about 2029 while in-package integrated voltage regulators offer 'no opportunity for rework'. The native VPD competitors trade press names are Infineon's quad-phase modules, MPS's Z-axis Power Delivery, Renesas power towers and, after Analog Devices' $1.5 billion purchase of Empower Semiconductor (Zacks), ADI's in-package regulators; Vicor's counter-position is to supply 'a building block that is critical to deployment of IVRs' — a current multiplier feeding the on-package regulator — which it says two companies have approached it for (Q2 2026 call).",
+   "soldThrough": "Direct design-in with the processor OEM or hyperscaler (custom GCM/GTM pinouts per processor) and the accelerator-board contract manufacturer; the module is built in Vicor's Andover ChiP fab; licensing offers a second path for OEMs that want an alternate source",
+   "targetSegments": [
+    "AI training accelerators, TPUs and wafer-scale engines",
+    "GPU and ASIC accelerator boards for OEMs and hyperscalers",
+    "high-current ATE and HPC boards"
+   ],
+   "roadmap": "Q1 2026 production launch of Gen 5 VPD for the lead customer (Q3 2025 call); a second '3Di line' in Fab 1 in 3Q–4Q 2026 (Zacks); improved 2nd-gen VPD demo systems in 2026 with volume ramps 'late third quarter, fourth quarter' of 2027 (Phil Davies, Q2 2026 call, trade-press transcript); a second ChiP fab dedicated to 'high current density 2nd Gen VPD ChiPs' (Q2 2026 release)."
+  },
+  {
+   "name": "BCM® isolated fixed-ratio bus converters — 800 V and 400 V to 48 V, 48 V to 12 V (ChiP, SM-ChiP, CM-ChiP and VIA packages)",
+   "category": "High-voltage DC-DC bus conversion (800 VDC / 400 VDC racks, automotive, defense)",
+   "description": "Per the BCM family overview, 'Essentially a very small high-frequency DC-DC transformer, the BCM steps down its input voltage by a range of ratios and provides galvanic isolation … With peak efficiencies of up to 98% and power densities of up to 2,870W/in³', in three input tiers — 'Ultra-high voltage: 400 – 800V input', 'High voltage: 200 – 410V input (meets ETSI requirements)' and 'Low voltage: 36 – 60V input' — and 'When BCMs operate in reverse, they provide an efficient step-up conversion.' The family page lists inputs from 36 V to 800 V, outputs of 2.4–55 V, currents to 150 A and efficiency 'Up to 98%'; the HV-to-48V page states 'As small as 22.0 x 16.5 x 6.7mm'. The 800 V data-center part is the BCM4414 (500–800 V in, K = 1/16, 31.3–50 V out, 35 A, VIA package with PMBus); the 380/384 V part is the BCM6135CD1E5165 (260–410 V in, K = 1/8, 65 A, '3.4kW/in³', '97.9% peak efficiency', '4,242VDC isolation') — whose current datasheet is stamped 'Not Recommended for New Designs'; the automotive-grade BCM6135 800 V-to-48 V (520–920 V in, 32.5–57.5 V out, up to 80 A, 2.5 kW, 97.3% peak) is listed as Available and won three industry awards in early 2026.",
+   "highlights": [
+    "Vicor's own 800 V argument, from 'Disaggregating Power in Data Centers': a 140 kW rack draws '350A at 400VDC and 175A at 800VDC'; '500MCM gauge copper cable for 400VDC distribution costs about $14 per foot, and 3/0AWG copper cable for 800VDC distribution costs about $5 per foot'; and a 1:8 fixed-ratio stage at 140 kW 'yields 2,800A at 50VDC'",
+    "The K factor scales bulk capacitance as K²: the 384 V BCM6135 datasheet describes 'enabling bulk capacitance across the 48V bus to be scaled down by a factor of 1/64 across the 384V bus'",
+    "'Inherently bidirectional' with 'Transient response times of eight million amps per second' and 'up to 65A (over 3000W) of power continuously' for the BCM6135 (company article on 800 V to 48 V SELV conversion); the company's own pages give the automotive module's weight as both 58 g and 65 g — no datasheet located for that variant",
+    "BCM catalogue (product listing, verbatim): BCM4414 500–800 V/31.2–50 V/1/16/35 A (110.60 × 35.50 × 9.40 mm); BCM6135 260–410 V/31.1–51.2 V/1/8/65 A (61.33 × 35.35 × 7.42 mm); BCM6123 260–410 V/8.1–12.8 V/1/32/125 A and 36–60 V/6–10 V/1/6/150 A (61.00 × 25.14 × 7.21 mm)",
+    "The foundational-patent claim behind the 2025 exclusion order covers '800V, 48V, and 12V bus converters' (Oct 2025 licensing release); the ITC's 2025 determination found Delta's power converter modules infringed the '761 patent while its redesigned products did not infringe the '481 and '950 patents"
+   ],
+   "positioning": "Against the 800 V → 50 V DC-DC shelves that Delta (1RU 90 kW, 98.5%), LITEON and Megmeet build for NVIDIA's 800 VDC racks, Vicor sells the converter module rather than the shelf — the BCM is a component a shelf or a tray designer places, and Vicor's rack chain puts it at the tray ('compact 400 to 48V conversion within the rack … can increase the number of processors in each rack by fourfold', HV-to-48V page). Vicor is absent from NVIDIA's published 800 VDC component and silicon partner lists; its route into those racks is the module socket at the contract manufacturer and the patent licence over the bus-converter designs those shelves use.",
+   "soldThrough": "Catalogue sales through distribution and direct; automotive-grade variants through Tier-1 and OEM design-ins (Hongfa active suspension customer story; co-developed 400–800 V and 400–12 V automotive units shown at AEE Nagoya, June 2026); MIL-COTS variants for defense primes; and the licence route for OEMs and contract manufacturers",
+   "targetSegments": [
+    "800 VDC and 380/400 VDC data-center racks and power shelves",
+    "800 V-to-48 V automotive zonal architectures and 48 V mild-hybrid systems",
+    "aerospace and defense 270 V / 800 V platforms, ATE"
+   ],
+   "roadmap": "A 400 V/48 V BCM6135 (260–410 V in, up to 65 A, 2.5 kW, 97.9%) listed as Upcoming; an NBM9280 800 V/400 V non-isolated converter (200–460 V ↔ 400–920 V, 37 kW, 99.0% peak, 92 × 80 × 7.4 mm) listed as Upcoming on the automotive listing; the second ITC investigation (337-TA-1484) over a series-connected bus-converter patent runs to a target date of September 20, 2027."
+  },
+  {
+   "name": "NBM™ non-isolated bidirectional bus converters — 48 V ↔ 12 V",
+   "category": "48 V to 12 V bus conversion (servers, HPC, automotive 48/12 V)",
+   "description": "Fixed-ratio, non-isolated Sine Amplitude Converters that bridge the 48 V and 12 V worlds in either direction — 'Bidirectional power converters', 'Input Voltage: 36 – 60V', 'Output Voltage: 7.2 – 15.3V', 'Power: Up to 2400W', 'Efficiency: Over 98%' per the family page, with 'high power density of up to 3,600W/in3'. The NBM2317 (2317 SM-ChiP, 22.80 × 17.30 × 5.20 mm) delivers 65 A or 80 A at K = 1/4 from 40–60 V; the NBM6123 (61.00 × 25.14 × 7.21 mm) delivers 160–170 A at K = 1/3 or 1/5. The NBM2317S60D1580 datasheet (Rev 1.4, 01/2025) states '97.9% peak efficiency', 'Up to 8kW/in3 power density', '1000W / Up to 1.5kW, 2ms peak power capability', '80A continuous / 120A transient' step-down and '20A continuous / 30A transient' step-up, and a weight of 8.67 g. The Computing page describes NBMs as 'high-efficiency DC transformers' with 'bidirectional capability'. Vicor's February 2026 release says the ITC 'has recently instituted a second investigation into illegal importation of power modules and computing systems infringing Vicor's IP to Non-isolated Bus Converters (\"NBMs\")'.",
+   "highlights": [
+    "The bridge product for 48 V racks that still carry 12 V loads — 'With a high-side to low-side K factor of 1/4, that capacitance value can be reduced by a factor of 16x' (NBM2317 datasheet)",
+    "Bidirectional start-up and steady-state operation lets the same module take a 12 V legacy bus up to 48 V — the 48 V-to-12 V and 12 V-to-48 V use cases share one part",
+    "The 2026 ITC complaint (337-TA-1484) on the '087 patent, 'Power Distribution Architecture with Series-Connected Bus Converter', names MPS's MPC12109-F-54-1000-0380 module and Wistron/Quanta servers with AMD MI3XX GPU boards as the accused products (trade-press summary of the public complaint)"
+   ],
+   "positioning": "Vicor's non-isolated bus converter competes with the 48 V-to-12 V intermediate-bus converters from MPS, Infineon, Delta and the power-shelf vendors' own DC-DC bricks (LITEON's 2.5 kW 50 V → 12 V brick, Delta's DC-DC modules); the 2026 ITC action is the company's attempt to assert its bus-converter patents over that class of part as well.",
+   "soldThrough": "Catalogue and distribution; automotive-grade variants (NBM2317 'TMR') for 48/12 V vehicle systems; licence route for infringing designs after any exclusion order",
+   "targetSegments": [
+    "48 V servers and accelerator boards with 12 V legacy rails",
+    "48/12 V automotive and industrial systems",
+    "HPC and ATE"
+   ],
+   "roadmap": "NBM9280 800 V/400 V non-isolated 37 kW converter listed as Upcoming (automotive listing); the 337-TA-1484 final initial determination is due May 20, 2027 with a target date of September 20, 2027."
+  },
+  {
+   "name": "DCM™ regulated DC-DC converters — isolated wide-input DCMs and the non-isolated 48 V-to-12 V DCM3717/DCM3735",
+   "category": "Regulated DC-DC conversion (48 V systems, industrial, MIL-COTS)",
+   "description": "The regulated half of the catalogue. The isolated DCM is 'an isolated, regulated DC-DC converter, operating from an unregulated, wide range input to generate an isolated output' on a ZVS topology, with inputs from 9 V to 420 V (family page tiers 9–36 V through 36–75 V; the HV-to-48V page states 'Input: 9 – 420V', 'Peak efficiency: 96%'), outputs of 3.3 V to 48 V and 35–320 W in 2322 and 3623 ChiP and 3414 VIA packages; MIL-COTS DCMs run to 1,300 W from 28, 30 and 270 V inputs. The March 2025 launch added the non-isolated 48 V-to-12 V DCM3717 and DCM3735 — 'regulated DC-DC converter modules that operate from a semi-regulated 40 – 60V input to generate a regulated point-of-load output with a voltage range of 10.0 – 12.5V', built as 'the Vicor patented zero-voltage switching (ZVS) buck-boost regulator stage followed by the Sine Amplitude Converter (SAC™)' at '>1MHz switching frequency', 750 W to 2 kW 'with an industry-leading power density of 5kW/in³', PMBus telemetry and arrays of up to four units. No 800 V-input regulated DCM exists on first-party channels — Vicor's regulated inputs top out at 420 V and 800 V is handled by fixed-ratio BCMs.",
+   "highlights": [
+    "DCM3717: 54 V (40–60 V) in, 12.2 V (10–12.5 V) out, 750 W or 1,000 W, 96.5%, 36.7 × 17.3 × 5.2 mm SM-ChiP, released; DCM3735: 2,000 W, 96.4%, 36.7 × 35.4 × 5.2 mm, listed 'Coming Soon' in the July 2025 family overview and shown at Automotive Engineering Exposition Yokohama in May 2025",
+    "Automotive-grade DCM3735 (35–58 V → 8–16 V, 2 kW, up to 160 A, 96.5%) and PRM3735 (31–58 V → 36–54 V, 2.5 kW, up to 52 A, 99.2%) were introduced with the automotive BCM6135 in October 2024",
+    "Where a regulated output is needed the DCM is the whole converter; where the chain is factorized it is the PRM that regulates and a fixed-ratio stage that transforms — the two philosophies coexist in the catalogue"
+   ],
+   "positioning": "Competes with the isolated brick and quarter-brick converters from Flex Power Modules, Advanced Energy, Delta and Murata, and with regulated 48 V-to-12 V modules from MPS and Infineon; Vicor's claim is density (5 kW/in³) and the ZVS efficiency of its regulator stage rather than price.",
+   "soldThrough": "Catalogue and distribution; automotive Tier-1 design-ins; MIL-COTS through defense primes",
+   "targetSegments": [
+    "48 V industrial and telecom systems",
+    "48/12 V automotive zonal architectures",
+    "MIL-COTS avionics, vetronics and naval systems (28 V, 270 V)"
+   ],
+   "roadmap": "DCM3735 volume release ('Coming Soon', July 2025 overview); automotive-grade DCM3735 'also available' per the same overview."
+  },
+  {
+   "name": "PFM™ AC-DC front ends and ZVS buck regulators",
+   "category": "AC input and low-voltage point-of-load (industrial, telecom, defense)",
+   "description": "Two smaller lines that complete a Vicor-only chain from the wall to the rail. The PFM ('Power Factor Module') is an isolated, regulated, universal-input AC-DC front end — 'Universal input (85 – 264VAC)', '48V output, regulated, isolated', '400W maximum power', 'Built-in EMI filtering', '127W/in3 power density', 'SELV Output', 'External rectification and transient protection required', 124.75 × 35.54 × 9.40 mm VIA package — with 24 V and 48 V variants. ZVS buck regulators convert a '48V distribution bus directly into multiple secondary voltages – including 12V, 5V, 3.3V, and 2.5V' (Computing page). Neither line is a data-center product at rack scale: the PFM is a 400 W front end and the AC-DC hub lists only 'Converters' and 'Input Modules'.",
+   "highlights": [
+    "The PFM is the only Vicor AC-DC conversion product; there is no Vicor CRPS server supply, power shelf or rectifier shelf — the company's data-center position begins at the DC bus",
+    "ZVS bucks are the conventional (non-factorized) end of the point-of-load range for low-current rails"
+   ],
+   "positioning": "Sub-kilowatt, industrial-grade AC-DC and low-current POL — a completeness offer for customers standardizing on Vicor modules, not a contest with the CRPS and shelf vendors (Delta, LITEON, Megmeet, Advanced Energy) at kilowatt scale.",
+   "soldThrough": "Catalogue and distribution",
+   "targetSegments": [
+    "industrial, medical and telecom equipment",
+    "defense and test systems"
+   ],
+   "roadmap": "None announced on first-party channels."
+  },
+  {
+   "name": "IP licensing practice — patent licences over bus converters, factorized power and vertical power delivery",
+   "category": "Intellectual-property licensing (royalties)",
+   "description": "A second business built on the patent estate ('128 patents having expirations scheduled between 2026 and 2043' in the US at end-2025, per the 10-K). Per the 10-K, 'we seek to license our intellectual property. In granting licenses, we generally retain the right to use our patented technologies and manufacture and sell our products in all licensed geographic areas and fields of use', and 'royalties due to the Company are generally based upon a percentage of the licensee's sales' (Q2 2026 10-Q). Royalty revenue was $15.9M in 2023 (3.9% of net revenues), $46.6M in 2024 (13.0%), $57.4M in 2025 (14.1%) and $45.4M in the first half of 2026 alone ($30.4M in Q2, 21% of the quarter's revenue), on top of a $45.0M patent-litigation settlement received in May 2025. The October 2025 release 'Vicor steps up its IP licensing practice' attributes the expansion to the 2025 ITC Limited Exclusion Order 'that bans importation of infringing bus converters and computing systems', says the resulting settlements and licences represent 'nearly $300 million in expected contribution to Vicor's revenues through 2026', and puts Andrew D'Amico in charge as General Counsel for Intellectual Property. The May 2026 guidance revision announced an OEM's 'all-inclusive license that includes all of Vicor's Patents … including Factorized Power (FPA) and Vertical Power Delivery (VPD)'; on the Q2 2026 call management described that licence as four $5M quarterly payments in its first year and $10M quarterly payments in its second — $60M in total — and said Vicor has 'a multiplicity of OEM licensees, one hyperscaler as of now' (trade-press transcript).",
+   "highlights": [
+    "The lever is the exclusion order, in the CEO's own words: 'Respect for intellectual property is motivated by exclusion orders barring importation of computing systems from infringing suppliers' (May 2026 release); the company 'plans to pursue additional enforcement actions against infringing contract manufacturers and power module makers' (Oct 2025 release)",
+    "Licensing revenue exceeded quarterly R&D spending in Q3 2025 (Oct 2025 release); management's stated ambition, per trade-press coverage of the calls, is $200–300M of annual licensing and royalty revenue at 'near-100% gross margin', which is why consolidated gross margin rose from 51.2% (2024) to 58.0% (Q2 2026)",
+    "Licensees are not named in any filing or release — the settlement counterparties of May 2025 are 'certain parties' in the 10-K, and the May 2026 licensee is 'an OEM'; the CFO said on the Q2 2026 call that new licences 'may not result until our second ITC case gets to its final determination in 2027' (trade-press transcript)",
+    "The practice has a counter-narrative: the ITC found Delta's redesigned products do not infringe two of the three 2023 patents; MPS's Q2 2026 10-Q does not mention Vicor at all; and trade press reports trade-secret suits against Vicor in W.D. Texas in July 2026 by MPS and by Delta, both alleging the patent campaign is a licensing-revenue strategy"
+   ],
+   "positioning": "Unusual among power-module vendors: none of Delta, MPS, Infineon or the shelf vendors runs a licensing business of this weight. Zacks calls it 'a structural advantage that Analog Devices does not share to the same degree'; the risk, stated by Finimize, is that 'Licensing only works if patents stay strong and enforceable' — the 2026 case rests on a single patent issued in August 2025.",
+   "soldThrough": "Direct negotiation with OEMs, contract manufacturers and hyperscalers, typically following or under the threat of a Section 337 exclusion order; inquiries routed to Vicor's Intellectual Property Department",
+   "targetSegments": [
+    "AI server OEMs and ODMs (Quanta, Wistron, Wiwynn, Foxconn named as respondents)",
+    "hyperscalers buying unlicensed computing systems",
+    "power-module makers (Delta, MPS named as respondents)"
+   ],
+   "roadmap": "Record licensing revenue projected for 2026 (Feb 2026 release); the 337-TA-1484 final ID is due May 20, 2027 (target date Sept 20, 2027) and the Federal Circuit appeal of the 2025 Foxconn-licence finding (No. 25-1616) was pending with no decision located as of Sept 3, 2026."
+  },
+  {
+   "name": "Automotive 48 V power — automotive-grade BCM6135, DCM3735 and PRM3735 for 800 V-to-48 V and 48 V zonal architectures",
+   "category": "Automotive high-voltage-to-SELV conversion",
+   "description": "Introduced in October 2024 as 'new high-density automotive-grade power modules' supporting '800V-to-48V conversion, 48V regulation, and 48V-to-12V regulation': the BCM6135 (800 V nominal, 520–920 V in, 48 V / 32.5–57.5 V out, up to 80 A, 2.5 kW, 97.3% peak, 61 × 35 × 7.4 mm, isolated, bidirectional), the DCM3735 (35–58 V → 8–16 V, 2 kW, up to 160 A, 96.5%) and the PRM3735 (31–58 V → 36–54 V, 2.5 kW, up to 52 A, 99.2%). Vicor's automotive argument is the one it makes for the rack — high voltage for distribution, SELV for the load, and a converter small enough to sit where the load is ('Power modules optimize EV performance and efficiency for high-voltage to SELV conversion', Tech Taipei 2025). The BCM6135 won Product of the Year at the 2025 World Electronics Achievement Awards, the 21Dianyuan Excellence Award and the 2026 Electronics Excellence Award for automotive innovation in a ten-week span; a Hongfa active-suspension customer story (May 2025) and Nagoya University's Student Formula car (Feb 2026) are the named design-ins on first-party channels.",
+   "highlights": [
+    "The same BCM6135 800 V-to-48 V module is the data-center and the automotive part — 'supports both 800VDC and 400VDC to 54, 50, or 48VDC conversion' (Disaggregating Power in Data Centers)",
+    "Company statements on the module: 'up to 65A (over 3000W) … continuously', '98% peak efficiency', 'power densities up to 2,400W/in3', 'Transient response times of eight million amps per second'; award releases state 'can reduce power system volume by nearly 50%'",
+    "Co-developed 400–800 V and 400–12 V automotive power units shown at Automotive Engineering Exposition Nagoya (June 2026) — partner not named on first-party channels"
+   ],
+   "positioning": "Positioned against discrete high-voltage DC-DC designs from the Tier-1s and against Infineon, STMicroelectronics and onsemi silicon on weight and volume — the fixed-ratio module 'weighs only 65 grams' per the automotive page (58 g in the award releases) for 2.5 kW. Volume automotive revenue is not disclosed separately; the 10-K reports one segment.",
+   "soldThrough": "Tier-1 and OEM design-ins via Vicor's automotive team and Japanese distribution (Marubun, Macnica, ASTI); event presence at AEE Nagoya/Yokohama, EEHE, WCX, Automotive Innovation Day and electronica Shanghai",
+   "targetSegments": [
+    "800 V battery-electric vehicles with 48 V zonal architectures",
+    "48 V active suspension, steering and mild-hybrid systems",
+    "eVTOL and low-altitude aircraft 800 V platforms"
+   ],
+   "roadmap": "400 V/48 V BCM6135 and the NBM9280 800 V/400 V 37 kW converter listed as Upcoming on the automotive listing."
+  },
+  {
+   "name": "Aerospace & defense (MIL-COTS, VITA 62/SOSA, radiation-tolerant FPA) and Brick Products for industrial, rail and ATE",
+   "category": "Defense, space and industrial power",
+   "description": "MIL-COTS variants of the same module families — BCMs at 'Input: 200–400V, 400–700V, 500–800V | Output: 8.1–55V', 'Up to 125A', 98%; DCMs from 28, 30 and 270 V inputs to 1,300 W; VITA 62 and SOSA-aligned power supplies — 'tested to MIL-STD 704/1275/461/810' per the A&D page, plus radiation-tolerant Factorized Power modules for LEO/MEO satellites presented at JAXA's 38th Microelectronics Workshop (September 2025) and customer stories in adaptive optics (Microgate) and satellite AI (Spacechips). Brick Products — the legacy converter and VI-200/Maxi-Mini brick lines — 'constitute one segment' with Advanced Products in the 10-K but were 39.0% of net revenues in 2025 (45.0% in 2024, 44.7% in 2023); Vicor's China and Hong Kong sales ($48.3M, 11.9% of 2025 revenue) are 'heavily oriented toward Brick Products for industrial and rail applications'. Automatic test equipment is named alongside high-performance compute in every 2026 results release as a rising-demand market.",
+   "highlights": [
+    "Brick Products' share fell from 44.7% (2023) to 39.0% (2025) as Advanced Products grew — the mix shift that the licensing and VPD story rides on (10-K)",
+    "ATE — where a tester board drains hundreds of amps at low voltage into a device under test — is the closest non-AI application to the point-of-load problem and is cited by the CEO in each of the Q4 2025, Q1 2026 and Q2 2026 releases",
+    "Vicor's MIL-COTS 270 V and 800 V BCMs reuse the data-center converter designs for aircraft and vehicle high-voltage buses"
+   ],
+   "positioning": "In defense, against Advanced Energy, Milpower, VPT and Crane with a density argument; in bricks, against the commodity brick vendors (Delta, Murata and others) where Vicor's share is legacy and declining as a proportion of revenue.",
+   "soldThrough": "Direct to defense primes and industrial OEMs; distribution for bricks",
+   "targetSegments": [
+    "defense avionics, vetronics, naval and radar systems",
+    "LEO/MEO satellite power",
+    "industrial, rail and semiconductor test equipment"
+   ],
+   "roadmap": "None announced beyond continued MIL-COTS variants of new module families."
+  },
+  {
+   "name": "ChiP™ packaging platform and the Andover ChiP fab — panel-level module manufacturing",
+   "category": "Manufacturing platform (packaging technology and captive fab)",
+   "description": "The manufacturing technology every Advanced Product depends on and the capacity constraint the company now names in every release. ChiP — 'Converter housed in Package' — arrays converters across a printed-circuit panel 'Like wafer fabrication … to utilize 100% of the PCB material', saws the panel into components and plates the exposed 'bar codes' into terminals; package names give the sawn size ('a \"4623\" package measures 46mm by 23mm'), with two-sided assembly and variants for surface mount (SM-ChiP, 'a plated, overmolded package'), chassis mount (CM-ChiP) and the filtered, PMBus-equipped VIA. Vicor's white paper claims 'a staggering 4X increase in power density and 20% reduction in power loss vs earlier generation components' and 'power densities up to 3kW/in3 … at up to 98% efficiency', with a stated path to '800V and power capability up to 4kW per ChiP-based component'. The panels are built in Andover: a 320,000-square-foot manufacturing building that 'houses all Massachusetts manufacturing activities' (10-K), whose 'world's first ChiP … fabrication facility' opened at 400 Federal Street on May 18, 2022 — a 90,000–95,000 sq ft addition that 'Expanded manufacturing capacity by 2.5x' with pick-and-place at 'up to 420,000 components per hour', in-house electroplating 'previously outsourced to a third-party partner' and 'zero wastewater and air discharge' (company pages and 10-K).",
+   "highlights": [
+    "Capacity is the 2026 story: 'Rising demand … is absorbing increased capacity within our first ChiP fab' (Q1 2026), 'As we get closer to full capacity utilization, we are taking steps toward a second fab for high current density 2nd Gen VPD ChiPs' (Q2 2026); on the Q2 call management said two sites were down-selected for a fab of 'As much as 2x, potentially 3x the first fab' and that Fab 1's revenue capacity had been raised toward $1.5 billion (trade-press transcripts)",
+    "Capital-expenditure commitments rose from about $3.9M at end-2025 to about $22.7M at June 30, 2026, 'principally for manufacturing equipment'; capex was $12.4M in Q1 and $11.2M in Q2 2026 versus $4.6M and $6.2M a year earlier (10-Q, releases)",
+    "The company earned CHIPS Act advanced-manufacturing investment tax credits on the fab — receivables of $13.2M (2023), $6.3M (2024) and $3.7M (2025) per the 10-K",
+    "Single-site risk stated in the 10-K: the fab and all Massachusetts manufacturing are in one owned building, and 'work is underway to bring in-house an additional final step … now conducted by a subcontractor'"
+   ],
+   "positioning": "Unlike the fabless module vendors and unlike Delta, LITEON and Megmeet, whose shelves are assembled on conventional SMT lines in Taiwan, Thailand and China, Vicor makes its modules on a proprietary panel process in one US factory — a domestic-industry fact that underpins its Section 337 standing ('Vicor has satisfied the domestic industry requirement', ITC Final ID) and a concentration risk at once. The 'alternate source of high current density 2nd Gen VPD modules' Vicor says it is exploring for licensees would be the first time its ChiPs were built elsewhere.",
+   "soldThrough": "Captive — the fab builds Vicor's own modules; no foundry service is offered on first-party channels",
+   "targetSegments": [
+    "all Advanced Products (BCM, NBM, DCM, PRM, VTM, MCM/MCD, VPD)"
+   ],
+   "roadmap": "Second ChiP fab site decision (two sites down-selected as of July 21, 2026; no announcement located by September 3, 2026); a second '3Di' VPD line in Fab 1 in 3Q–4Q 2026 per Zacks; in-housing of the last subcontracted module step (10-K)."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-27",
+   "category": "corporate",
+   "headline": "Board approves a $150 million share-repurchase authorization with no expiration, replacing the prior program (8-K, event date August 25, 2026)",
+   "read": "Cash of $453.6M and a licensing-fed margin now fund buybacks alongside a second fab; the authorization is six times the $64.3M left on the old program.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312526370420/d161606d8k.htm"
+  },
+  {
+   "date": "2026-07-24",
+   "category": "legal",
+   "headline": "Law360 reports a W.D. Texas suit by Delta Electronics accusing Vicor of trade-secret misuse 'as part of a campaign of aggressively pursuing patent allegations against rivals in order to get licensing revenue'",
+   "read": "The defendants of the second ITC case have opened a second front of their own; per trade press, not verified against the complaint.",
+   "source": "https://www.law360.com/articles/2505388/vicor-rival-alleges-trade-secret-misuse-in-wdtx-suit"
+  },
+  {
+   "date": "2026-07-21",
+   "category": "financial",
+   "headline": "Q2 2026: revenue $143.4M (+26.9% sequential), royalty $30.4M, gross margin 58.0%, EPS $1.04, backlog $380M; 'taking steps toward a second fab'; management says Vicor has 'a multiplicity of OEM licensees, one hyperscaler as of now' and guides 2026 revenue 'over $600 million'",
+   "read": "Licensing became a fifth of revenue in one quarter on a single new OEM licence; the product line's test is whether backlog converts before the fab fills.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000751978/000119312526309538/d115827dex991.htm"
+  },
+  {
+   "date": "2026-07-16",
+   "category": "market",
+   "headline": "Power Electronics News interview: Vicor's VP of strategic marketing argues vertical power delivery is 'effectively unavoidable' by about 2029 and that in-package voltage regulators leave 'no opportunity for rework'",
+   "read": "The company's public framing of the VPD-versus-IVR contest, in its own voice, ahead of ADI's Empower integration and MPS's Z-axis parts.",
+   "source": "https://www.powerelectronicsnews.com/power-corner-vicors-maury-wood-on-vertical-power-delivery-for-ai-data-centers/"
+  },
+  {
+   "date": "2026-07-07",
+   "category": "legal",
+   "headline": "Austin American-Statesman reports Monolithic Power Systems v. Vicor (W.D. Tex. 1:26-cv-01846), a Defend Trade Secrets Act suit alleging Vicor used litigation and a former MPS employee to obtain accelerator-product information; MPS calls Vicor's ITC complaint 'spurious'",
+   "read": "Reported from a search snippet only — the article was inaccessible — and unreconciled with the Law360 report of a Delta suit; treat both as unverified.",
+   "source": "https://www.statesman.com/business/article/monolithic-vicor-lawsuit-austin-amd-ai-espionage-22345493.php"
+  },
+  {
+   "date": "2026-06-19",
+   "category": "corporate",
+   "headline": "Annual meeting re-elects all eleven directors unchanged from 2025; say-on-pay passes 143.0M to 0.35M; the CEO, 79, holds Class B ten-vote shares and the proxy contains no succession language",
+   "read": "No governance change at a founder-led company whose product and licensing theses both run through one person.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312526279247/d107799d8k.htm"
+  },
+  {
+   "date": "2026-06-02",
+   "category": "product-launch",
+   "headline": "Vicor presents 'co-developed 400V – 800V and 400V – 12V automotive power units' at Automotive Engineering Exposition Nagoya",
+   "read": "The 800 V-to-SELV module is being sold as a co-developed automotive unit; the partner is unnamed on first-party channels.",
+   "source": "https://www.vicorpower.com/press-room"
+  },
+  {
+   "date": "2026-05-26",
+   "category": "financial",
+   "headline": "Q2 2026 revenue guidance raised from $126M to $142M after an OEM took 'an all-inclusive license that includes all of Vicor's Patents … including Factorized Power (FPA) and Vertical Power Delivery (VPD)'; the CEO: 'Respect for intellectual property is motivated by exclusion orders barring importation of computing systems from infringing suppliers'",
+   "read": "The first licence to cover VPD, and the company's plainest statement of how licences are won; the licensee is unnamed and trade press reported the shares up 24% intraday.",
+   "source": "https://www.globenewswire.com/news-release/2026/05/26/3301036/0/en/vicor-corporation-revises-q2-2026-revenue-guidance.html"
+  },
+  {
+   "date": "2026-04-21",
+   "category": "financial",
+   "headline": "Q1 2026: revenue $113.0M (+20.2%), EPS $0.44, backlog $301M (+70% sequential); operating cash flow $(3.9)M after the $28.6M SynQor payment; 'our lead computing customer is continuing a steep production ramp' (call)",
+   "read": "The backlog step is the product story's first hard number; trade press infers the lead customer is Cerebras, which Vicor has not confirmed.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312526165105/d139425dex991.htm"
+  },
+  {
+   "date": "2026-03-19",
+   "category": "market",
+   "headline": "NVIDIA's GTC 2026 800 VDC partner roster, as reported by Power Electronics News, again lists ADI, Infineon, MPS, Navitas, onsemi, Renesas, ROHM, ST and TI for silicon and Delta, LITEON, Eaton, Schneider and Vertiv for racks — Vicor is not named",
+   "read": "Third published list without Vicor; its 800 V position rests on module sockets and patents rather than ecosystem membership.",
+   "source": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/"
+  },
+  {
+   "date": "2026-03-18",
+   "category": "legal",
+   "headline": "Vicor pays SynQor $28,557,256, 'the full amount due under the District Court's judgment', after the Federal Circuit affirmed the 2011-filed case on February 13, 2026",
+   "read": "A fifteen-year defence closed at the same time as the company's own enforcement campaign accelerates; the payment ran through Q1 operating cash flow.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312526322462/vicr-20260630.htm"
+  },
+  {
+   "date": "2026-03-12",
+   "category": "other",
+   "headline": "BCM6135 800 V-to-48 V bus converter wins the 2026 Electronics Excellence Award for automotive innovation — its third award since January",
+   "read": "Recognition for the automotive variant of the data-center part; awards, not orders.",
+   "source": "https://www.vicorpower.com/press-room/2026/vicor-bcm-bus-converter-wins-2026-electronics-excellence-award"
+  },
+  {
+   "date": "2026-02-24",
+   "category": "legal",
+   "headline": "E.D. Texas grants an unopposed stay of Vicor v. Delta Electronics (2:26-cv-00017) pending the ITC's second investigation",
+   "read": "The district damages case waits behind the ITC schedule, as the 2023 case did; the exclusion-order track is the one that moves.",
+   "source": "https://www.pacermonitor.com/public/case/62366272/Vicor_Corporation_v_Delta_Electronics,_Inc_et_al"
+  },
+  {
+   "date": "2026-02-19",
+   "category": "financial",
+   "headline": "Q4/FY2025: revenue $452.7M including the $45.0M settlement, net income $118.6M ($2.61), backlog $176.9M; the CEO announces 'a second investigation' at the ITC over non-isolated bus converters, 'record revenues' for licensing in 2026, and 'we are planning a second fab' plus an 'alternate source of high current density 2nd Gen VPD modules'",
+   "read": "The 2026 strategy in one release: enforce, license, and add capacity — including, for the first time, capacity not in Andover.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312526059563/d240534dex991.htm"
+  },
+  {
+   "date": "2026-02-13",
+   "category": "legal",
+   "headline": "Federal Circuit affirms the SynQor v. Vicor judgment (No. 24-1879)",
+   "read": "Ends the one patent case Vicor was defending; the $28.6M followed in March.",
+   "source": "https://www.cafc.uscourts.gov/opinions-orders/24-1879.OPINION.2-13-2026_2647866.pdf"
+  },
+  {
+   "date": "2026-02-11",
+   "category": "legal",
+   "headline": "ITC institutes Inv. No. 337-TA-1484 on U.S. Patent 12,395,087 ('Power Distribution Architecture with Series-Connected Bus Converter', issued August 19, 2025) against fifteen respondents including Delta, Monolithic Power Systems, Luxshare, Wistron, Wiwynn and Quanta; scope: power converters for AI accelerators, TPUs, GPUs and CPUs and the computing systems containing them",
+   "read": "The second act names the server ODMs that build the 800 VDC racks and the multiphase-buck vendor that replaced Vicor at NVIDIA; a single new patent carries it. Target date September 20, 2027 and a final ID due May 20, 2027 per a USITC notice seen only in snippet.",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2026-02-17/html/2026-03032.htm"
+  },
+  {
+   "date": "2026-01-22",
+   "category": "other",
+   "headline": "BCM6135 named Product of the Year at the 2025 World Electronics Achievement Awards ('Delivers up to 2.5kW', 'Module weight: 58 grams')",
+   "read": "Award for the 800 V-to-48 V module; the weight differs from the 65 g on Vicor's automotive page.",
+   "source": "https://www.vicorpower.com/press-room/2026/vicor-bcm-bus-converter-wins-product-of-the-year"
+  },
+  {
+   "date": "2026-01-09",
+   "category": "legal",
+   "headline": "Vicor files '087-patent suits in E.D. Texas against Delta Electronics (2:26-cv-00017) and Luxshare/MetaPWR (2:26-cv-00018) and in W.D. Texas against Monolithic Power Systems and Wistron (7:26-cv-00005), three days before its second ITC complaint",
+   "read": "The accused product per the public complaint is MPS's MPC12109 module on AMD MI3XX boards — the socket Vicor lost is now the socket it is litigating.",
+   "source": "https://news.bloomberglaw.com/ip-law/vicor-corp-hits-competitors-with-patent-suits-over-power-tech"
+  },
+  {
+   "date": "2025-10-22",
+   "category": "market",
+   "headline": "Shares rise 27% to $82.64 as Needham and Craig-Hallum upgrade to Buy ($90 targets); Craig-Hallum cites engagement with 'a HSDC and a large OEM' on Gen 2 VPD but notes the product 'lacks field experience'",
+   "read": "The market priced the licensing run-rate and a VPD pipeline that no customer has confirmed.",
+   "source": "https://www.itiger.com/news/2577318987"
+  },
+  {
+   "date": "2025-10-21",
+   "category": "financial",
+   "headline": "Q3 2025: revenue $110.4M, royalty $21.7M ('a record rate'), EPS $0.63, backlog $152.8M; the CEO: 'The current density of 5th generation ChiPs and 2nd Generation VPD will bring about greater foundry capacity utilization'; the call cites a $90M licensing run-rate and a Q1 2026 production launch of Gen 5 VPD for the lead customer",
+   "read": "Licensing revenue exceeded quarterly R&D for the first time; the VPD launch date is the product commitment to track.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312525245175/d93346dex991.htm"
+  },
+  {
+   "date": "2025-10-20",
+   "category": "legal",
+   "headline": "'Vicor steps up its IP licensing practice': the 2025 LEO 'has led to settlements and licensing agreements by leading OEMs and hyper-scalers resulting in nearly $300 million in expected contribution to Vicor's revenues through 2026'; Andrew D'Amico named General Counsel for Intellectual Property; Vicor 'plans to pursue additional enforcement actions against infringing contract manufacturers and power module makers'",
+   "read": "The licensing business given a name, a number and a head — and a stated intent to sue the contract manufacturers next, which it did in January.",
+   "source": "https://www.vicorpower.com/press-room/vicor-steps-up-its-ip-licensing-practice"
+  },
+  {
+   "date": "2025-10-13",
+   "category": "market",
+   "headline": "NVIDIA's OCP Summit 800 VDC ecosystem list adds AOS, EPC, Power Integrations, Richtek, Bizlink, Flex, ABB, GE Vernova, Heron Power, Hitachi Energy, Mitsubishi Electric and Siemens; Vicor is absent",
+   "read": "Second published list without Vicor.",
+   "source": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/"
+  },
+  {
+   "date": "2025-09-25",
+   "category": "product-launch",
+   "headline": "Vicor presents radiation-tolerant Factorized Power modules for LEO/MEO satellites at JAXA's 38th Microelectronics Workshop",
+   "read": "The FPA chain extended to space-grade parts; a niche that reuses the data-center silicon.",
+   "source": "https://www.vicorpower.com/press-room"
+  },
+  {
+   "date": "2025-07-22",
+   "category": "financial",
+   "headline": "Q2 2025: revenue $141.0M including a $45.0M 'patent litigation settlement' line, gross margin 65.3%, EPS $0.91; 'Having brought to fruition our first ITC action with cease-and-desist and exclusion orders, we are pursuing additional actions to curtail importation into the US of infringing power and computing systems sourced from contract manufacturers by unlicensed OEMs and Hyper-scalers'",
+   "read": "The settlement quarter; the CEO's sentence is the licensing model stated as strategy.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312525162605/d73980dex991.htm"
+  },
+  {
+   "date": "2025-06-06",
+   "category": "legal",
+   "headline": "N.D. California grants Vicor's motion to dismiss the short-seller securities class action (In re Vicor Securities Litigation, 3:24-cv-04196) with leave to amend; no amended complaint is reported in the Q2 2026 10-Q",
+   "read": "The 2023 'non-cancellable orders' episode that the suit alleged was misrepresented is closed unless refiled.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312526322462/vicr-20260630.htm"
+  },
+  {
+   "date": "2025-05-20",
+   "category": "market",
+   "headline": "NVIDIA's Computex 800 VDC architecture blog names its silicon partners (Analog Devices, Infineon, Innoscience, MPS, Navitas, onsemi, Renesas, ROHM, STMicroelectronics, Texas Instruments), component partners (Delta, Flex Power, Lead Wealth, LiteOn, Megmeet) and system partners (Eaton, Schneider Electric, Vertiv); Vicor is not among them",
+   "read": "The architecture Vicor's 800 V bus converters were built for was announced with a partner list that omits it.",
+   "source": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/"
+  },
+  {
+   "date": "2025-05-13",
+   "category": "legal",
+   "headline": "Vicor v. Delta Electronics et al. (E.D. Tex. 2:23-cv-00323) is terminated on May 13, 2025 — per PatSnap by joint stipulation of dismissal with prejudice — six days after Delta's own W.D. Texas case against Vicor (6:23-cv-00726) was terminated on May 7",
+   "read": "The 2023 district litigation ended within two weeks of the May 1 settlement; Vicor's filings never name the settling parties.",
+   "source": "https://www.courtlistener.com/docket/67602631/vicor-corporation-v-delta-electronics-inc/"
+  },
+  {
+   "date": "2025-05-01",
+   "category": "legal",
+   "headline": "Vicor 'entered into various settlement agreements to resolve lawsuits, arbitrations, and appeals related to certain intellectual property claims between the Company and certain parties, pursuant to which a total of $45,000,000 was paid to the Company in May 2025', with $5.1M of legal fees (10-K)",
+   "read": "The exclusion order converted to cash in eleven weeks; the counterparties are undisclosed, so whether Delta itself is licensed cannot be stated.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312526085102/vicr-20251231.htm"
+  },
+  {
+   "date": "2025-03-26",
+   "category": "product-launch",
+   "headline": "Vicor releases the DCM3717 and DCM3735 regulated 48 V-to-12 V converters — 750 W to 2 kW 'with an industry-leading power density of 5kW/in³', ZVS buck-boost regulator followed by a Sine Amplitude Converter, >1 MHz switching, PMBus",
+   "read": "The regulated counterpart to the NBM for 48 V racks that keep a 12 V rail.",
+   "source": "https://www.vicorpower.com/press-room/2025/vicor-releases-a-dcm-family-of-regulated-48v-to-12v-dc-dc-converters"
+  },
+  {
+   "date": "2025-03-06",
+   "category": "legal",
+   "headline": "First Circuit vacates the preliminary injunction Vicor had won against Foxconn subsidiaries' CIETAC arbitration over purchase-order licence terms, holding the district court was required to stay the case under 28 U.S.C. §1659 during the ITC investigation",
+   "read": "The purchase-order licence the ITC found in FII USA's and Ingrasys's favour is the weakest point of the first case; Vicor's appeal of that finding (CAFC 25-1616) showed no decision as of September 3, 2026.",
+   "source": "https://caselaw.findlaw.com/court/us-1st-circuit/117024513.html"
+  },
+  {
+   "date": "2025-02-20",
+   "category": "financial",
+   "headline": "FY2024: revenue $359.1M (−11.4%), gross margin 51.2%, net income $6.1M ($0.14) after a $19.5M SynQor litigation charge; royalty revenue $46.6M; backlog $155.5M; 'Further margin improvements depend upon higher utilization of our ChiP fab and increased licensing income'",
+   "read": "The low point: an operating loss and a product business without the licensing tailwind, three weeks before the exclusion order.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312525030771/d905898dex991.htm"
+  },
+  {
+   "date": "2025-02-13",
+   "category": "legal",
+   "headline": "ITC final determination in Inv. No. 337-TA-1370: a Section 337 violation as to the '481 and '761 patents (none as to the '950); a limited exclusion order on infringing power converter modules and computing systems containing them and cease-and-desist orders against Delta Electronics (Americas), FII USA, Ingrasys Technology USA, Quanta Computer and Quanta Computer USA; the Commission also finds Delta's redesigned products do not infringe the '481 patent and that FII USA and Ingrasys hold a licence to the '761 patent",
+   "read": "The order that made the licensing business — and, in the same document, the two findings that limit it: the redesigns escaped and the largest contract manufacturer was already licensed by its purchase-order terms.",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2025-02-20/html/2025-02831.htm"
+  },
+  {
+   "date": "2024-10-16",
+   "category": "product-launch",
+   "headline": "Vicor introduces automotive-grade BCM6135 (800 V-to-48 V), DCM3735 and PRM3735 modules supporting '800V-to-48V conversion, 48V regulation, and 48V-to-12V regulation'",
+   "read": "The 800 V chain productized for vehicles with the same silicon as the rack.",
+   "source": "https://www.vicorpower.com/press-room/2024/new-high-density-automotive-grade-power-modules"
+  },
+  {
+   "date": "2024-09-27",
+   "category": "legal",
+   "headline": "ITC administrative law judge issues a Final Initial Determination finding a Section 337 violation on the '761 and '481 patents and that respondents 'do not possess a license to practice any claim of the asserted patents' (Vicor release of September 30)",
+   "read": "The first ruling in Vicor's favour; the Commission later reversed the licence finding for Foxconn's FII USA and Ingrasys.",
+   "source": "https://www.vicorpower.com/press-room/modules-infringe-vicor-patents"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Vicor is now two businesses — power modules from one Andover fab and patent licences enforced by exclusion orders — and that the licensing business is the faster-growing and higher-margin of the two. Basis: royalty revenue of $15.9M (3.9% of net revenues) in 2023, $46.6M (13.0%) in 2024, $57.4M (14.1%) in 2025 and $45.4M in the first half of 2026, with Q2 2026 royalty at 21% of revenue on a single new OEM licence structured as $60M over two years; consolidated gross margin rising from 51.2% (2024) to 58.0% (Q2 2026); the company's own October 2025 statement of 'nearly $300 million in expected contribution … through 2026' and its 'record revenues' projection for 2026 licensing (SEC 8-K exhibits, company releases).",
+  "(High confidence) We assess that the ITC exclusion order, not the datasheet, is what brought OEMs to the licensing table. Basis: the sequence — final determination February 13, 2025, $45M settlement May 1, 2025, record royalty rate in Q3 2025, all-inclusive OEM licence May 2026 — and the CEO's own words that 'Respect for intellectual property is motivated by exclusion orders barring importation of computing systems from infringing suppliers'; the CFO's statement on the Q2 2026 call that new licences 'may not result until our second ITC case gets to its final determination in 2027' (trade-press transcript) ties the next tranche to the next order.",
+  "(Moderate confidence) We assess that Vicor sits outside the NVIDIA 800 VDC ecosystem as published and that its route into those racks is the module socket at the contract manufacturer and the patent over the bus-converter design, not a partner listing. Basis: absence from NVIDIA's May 2025, October 2025 and March 2026 partner lists while Delta, LITEON, Megmeet, MPS, Infineon and TI are named; SemiAnalysis's independent account of Vicor's design-out from H100 in favour of MPS; and the 2026 ITC respondents — Quanta, Wistron, Wiwynn, Luxshare, Delta, MPS — being exactly the ODMs and vendors that build the racks. The counter-evidence is Vicor's 2026 backlog (+145% YoY) and management's claim of one hyperscaler licensee.",
+  "(Moderate confidence) We assess that the second-generation vertical-power-delivery ramp is the product thesis and is unproven in the field. Basis: Vicor's only first-party references to '5th generation ChiPs and 2nd Generation VPD' are CEO sentences in results releases — no datasheet, part number or package exists on its site; the lead customer is unnamed (trade press infers Cerebras, which the CEO declined to confirm); Craig-Hallum's independent caveat that the product 'lacks field experience'; and the 10-K's one-customer concentration of 11.1% of 2025 revenues with Advanced Products customers 'concentrated in the data center and hyperscaler segments'. A Q1 2026 production launch was stated on the Q3 2025 call; volume ramps were placed in late 2027 on the Q2 2026 call.",
+  "(Moderate confidence) We assess that manufacturing capacity is the binding constraint on product revenue through 2027 and the largest single-site risk in the file's power-module set. Basis: 'Rising demand … is absorbing increased capacity within our first ChiP fab' and 'As we get closer to full capacity utilization, we are taking steps toward a second fab' (Q1 and Q2 2026 releases); capital-expenditure commitments rising from $3.9M at end-2025 to $22.7M at June 30, 2026; two sites down-selected with a decision 'in the coming weeks' as of July 21 and none announced by September 3; and the 10-K's statement that one owned Andover building 'houses all Massachusetts manufacturing activities'. The stated exploration of an 'alternate source' for VPD modules would be the first ChiPs built outside Andover.",
+  "(Low confidence) We assess that the second litigation campaign carries more legal risk than the first and that licensing revenue beyond 2026 depends on its outcome. Basis: 337-TA-1484 rests on one patent issued August 19, 2025; the first case's own findings included redesigned Delta products that do not infringe and a purchase-order licence for Foxconn's FII USA and Ingrasys that Vicor is still appealing (CAFC 25-1616, no decision located); MPS's 10-Q does not mention Vicor; and trade press reports trade-secret counter-suits by MPS and Delta in July 2026. The judgment is low-confidence because the ITC record, the CAFC docket and the counter-suits could be read only in part through this session's proxy.",
+  "(Moderate confidence) We assess key-person and governance concentration as a material risk the company does not address. Basis: a founder who is chairman, president and CEO at 79, controls ten-vote Class B shares, and whose 2026 proxy contains no succession language; an eleven-member board unchanged from 2025; both the product architecture and the litigation strategy are his in the company's own telling (2019 IEEE Newell award, 'more than 100 patents').",
+  "Collection gap: Vicor's investor site was unreachable throughout (HTTP 403/503), so results were read from its SEC 8-K exhibits and one GlobeNewswire copy; no licensee, settlement counterparty or lead VPD customer is named in any primary source; the USITC's own documents for the 2026 investigation were blocked and its schedule is known from a search snippet and the CFO's call remark; Nasdaq and Zacks consensus pages could not be captured, so 'expected' figures are aggregator-tracker values with both shown where they disagree; the July 2026 trade-secret suits are known from a Law360 lede and a newspaper snippet and were not verified against the complaints.",
+  "INDICATORS TO WATCH — *~20 Oct 2026 — Q3 2026 results (tracker-estimated, not company-confirmed; Vicor announces its call about two weeks ahead):* royalty revenue against Q2's $30.4M would confirm or refute Judgment 1's run-rate ($5M was guided from the newest licence for Q3 versus $15M in Q2); product revenue against the $380M backlog would test Judgment 5's capacity ceiling. *Any date — second-fab site announcement:* confirms Judgment 5; a further delay past year-end would indicate the capital plan is slipping. *2026–27 — 337-TA-1484 milestones (Markman, evidentiary hearing, final ID due 20 May 2027, target date 20 Sept 2027):* a violation finding would confirm Judgment 2's mechanism; a no-violation or licence finding would confirm Judgment 6. *Any date — Federal Circuit decision in No. 25-1616:* reversal of the Foxconn licence finding would widen the first order's reach. *Q1 2027 — sampling of improved 2nd-gen VPD (per trade press, to Cerebras):* a named customer or a datasheet would move Judgment 4 to moderate-high. *Next NVIDIA 800 VDC partner list (GTC 2027):* Vicor's appearance would refute Judgment 3. *W.D. Texas — MPS and Delta trade-secret suits:* a preliminary-injunction ruling either way would change the licensing calculus."
+ ],
+ "relationships": [
+  {
+   "slug": "delta-electronics",
+   "type": "competitor",
+   "status": "active",
+   "since": "2023",
+   "via": "Bus converter modules (BCM/NBM patents)",
+   "note": "Respondent in both of Vicor's ITC investigations (337-TA-1370, 2023–25; 337-TA-1484, instituted 2026) and in Vicor's 2023 and 2026 E.D. Texas suits; the ITC found Delta's power converter modules infringed the '761 patent and its redesigned products did not infringe the '481 and '950 patents.",
+   "context": "Vicor's first Section 337 complaint (instituted August 17, 2023) named Delta Electronics, Inc., Delta Electronics (Americas) and Delta Electronics (USA) alongside Cyntec, Quanta and Foxconn entities over three bus-converter patents. The Commission's February 13, 2025 final determination found a violation as to the '481 and '761 patents, issued a limited exclusion order and a cease-and-desist order against Delta Electronics (Americas), and at the same time affirmed that 'the accused Delta Products do not infringe claim 1' of the '481 patent and found no violation on the '950 — the redesign findings that Taiwanese reporting summarized as Delta's design-around succeeding. Delta's own W.D. Texas case against Vicor was terminated May 7, 2025 and Vicor's E.D. Texas case against Delta May 13, 2025, within two weeks of the $45M settlement whose counterparties Vicor does not name.\n\nThe second act opened January 2026: an '087-patent suit against Delta in E.D. Texas (stayed February 24, 2026 pending the ITC) and the 337-TA-1484 investigation with Delta and DET Logistics among fifteen respondents, on a target date of September 20, 2027. Law360 reported in July 2026 a W.D. Texas trade-secret suit by Delta accusing Vicor of pursuing patent allegations 'in order to get licensing revenue'. In the corpus, Delta is the first-qualified power-shelf supplier for NVIDIA's racks and the deepest published 800 VDC catalogue; Vicor's bus-converter patents sit under the DC-DC stage of exactly those shelves.",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2025-02-20/html/2025-02831.htm"
+  },
+  {
+   "slug": "nvidia",
+   "type": "customer",
+   "status": "historical",
+   "via": "Power-on-Package current multipliers",
+   "note": "Independent history (SemiAnalysis, 2023) records Vicor's Power-on-Package in NVIDIA's V100 and A100 generations and its design-out from H100 in favour of Monolithic Power Systems; NVIDIA's published 800 VDC partner lists of 2025–26 do not name Vicor.",
+   "context": "SemiAnalysis's August 2023 account of the AI power-delivery competition lists V100 and A100 among Vicor's prior wins and states that Vicor was 'designed out' of H100 and 'replaced by Monolithic Power Systems (MPS)'; Vicor's own 2017 and 2020 releases describe the MCM/MCD ChiP-sets for AI accelerator cards without naming customers. Since then NVIDIA has published three 800 VDC ecosystem lists — Computex May 2025, OCP October 2025 and GTC March 2026 — naming ADI, Infineon, MPS, Navitas, onsemi, Renesas, ROHM, ST and TI for silicon and Delta, LITEON, Megmeet, Flex and Lead Wealth for components; Vicor appears on none of them, and no NVIDIA or Vicor statement of a Blackwell or Rubin design-in exists.\n\nThe relationship therefore reads as a lost socket with an open door: Vicor's 2026 ITC complaint targets MPS's module on AMD boards rather than NVIDIA systems, and its CEO's 'one hyperscaler' licensee is unnamed. NVIDIA is, in Vicor's framing, the architecture-setter whose 800 V rack its BCM parts were built for.",
+   "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition"
+  },
+  {
+   "slug": "google",
+   "type": "customer",
+   "status": "historical",
+   "via": "Power-on-Package current multipliers (TPU)",
+   "note": "SemiAnalysis (2023) lists Google's TPU among Vicor's prior Power-on-Package design wins; no Vicor or Google statement of a current engagement was found.",
+   "context": "The only source connecting the two is SemiAnalysis's 2023 history, which names 'Google TPU' among the accelerators Vicor's substrate-mounted current multipliers had powered before the H100 loss. Vicor's 2026 results releases refer to TPUs as a market its 2nd-generation VPD IP addresses ('future advances in TPUs, GPUs and Wafer Scale Engines') without naming a customer, and Google's own guide in this app does not mention Vicor. Treat as historical and unconfirmed for any current generation.",
+   "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition"
+  },
+  {
+   "slug": "tesla",
+   "type": "customer",
+   "status": "historical",
+   "via": "Power-on-Package current multipliers",
+   "note": "SemiAnalysis (2023) lists Tesla among Vicor's prior AI-accelerator power design wins; no current engagement is stated by either company.",
+   "context": "SemiAnalysis's 2023 account includes Tesla in the roster of accelerator programs — with V100, A100, Google TPU, AMD MI300, Intel Gaudi3/PVC and Cerebras WSE2 — that used Vicor's Power-on-Package before the H100 design-out. Neither Vicor's releases nor Tesla's filings in this corpus mention the other, so the link is carried as historical on the strength of a single independent source.",
+   "source": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "Section 337 (USITC exclusion orders)",
+   "status": "in-effect",
+   "effectiveDate": "2025-02-13",
+   "exposure": "Vicor is the complainant, not the target: the ITC found a Section 337 violation on its '481 and '761 patents on February 13, 2025 and issued a limited exclusion order on infringing power converter modules and computing systems containing them, with cease-and-desist orders against Delta Electronics (Americas), FII USA, Ingrasys Technology USA, Quanta Computer and Quanta Computer USA; the Commission also found Delta's redesigned products non-infringing and FII USA and Ingrasys licensed. The domestic-industry requirement was met by the Andover fab. A second investigation (337-TA-1484) on U.S. Patent 12,395,087 was instituted February 11, 2026 against fifteen respondents including Delta, Monolithic Power Systems, Luxshare, Wistron, Wiwynn and Quanta. Vicor's filings do not describe either investigation; its releases attribute its licensing revenue to the order.",
+   "mitigation": "Company-stated: 'plans to pursue additional enforcement actions against infringing contract manufacturers and power module makers' (October 2025) and an intent to appeal the Foxconn licence finding (CAFC 25-1616, pending).",
+   "source": "https://www.govinfo.gov/content/pkg/FR-2025-02-20/html/2025-02831.htm"
+  },
+  {
+   "regime": "CHIPS Act §48D advanced manufacturing investment credit",
+   "status": "in-effect",
+   "exposure": "Vicor's Andover ChiP fab qualified for the advanced manufacturing investment tax credit: the 10-K reports credit receivables of $13.2M (2023), $6.3M (2024) and $3.7M (2025). The company's US manufacturing base also underpins its Section 337 standing; a second fab's location was undecided as of September 2026.",
+   "source": "https://www.sec.gov/Archives/edgar/data/751978/000119312526085102/vicr-20251231.htm"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "VTM48EF012T130C01 — 48 V-to-1 V current multiplier (VTM family overview Rev 3.1, 02/2024; datasheet Rev 1.0, 05/2016)",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Input voltage",
+     "value": "VIN = 26 to 55V"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output voltage",
+     "value": "VOUT = 0.7 to 1.4V (no load)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output current",
+     "value": "IOUT = 130A (nom)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Transformation ratio",
+     "value": "K = 1/40"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "High efficiency (>94%) reduces system power consumption"
+    },
+    {
+     "band": "Performance",
+     "label": "Density",
+     "value": "High density (443 A/in3)"
+    },
+    {
+     "band": "Performance",
+     "label": "Capacitance effect",
+     "value": "Since the K factor of the VTM48EF012T130C01 is 1/40, the capacitance value can be reduced by a factor of 1600"
+    },
+    {
+     "band": "Design",
+     "label": "Topology",
+     "value": "ZVS / ZCS resonant Sine Amplitude Converter topology"
+    },
+    {
+     "band": "Design",
+     "label": "Package",
+     "value": "32.5 x 22 x 6.73mm Full VI Chip"
+    },
+    {
+     "band": "Family",
+     "label": "Response",
+     "value": "The VTM responds to load changes regardless of magnitude in less than one microsecond with an effective switching frequency of 3.5MHz"
+    },
+    {
+     "band": "Family",
+     "label": "Isolation",
+     "value": "isolation to 2,250VDC"
+    },
+    {
+     "band": "Family",
+     "label": "Package range",
+     "value": "Full Chip (32.5 x 22.0 x 6.73mm), Half Chip (22.0 x 16.5 x 6.73mm), 2308 SM-Chip (22.83 x 8.52 x 4.90mm); K factor 1/40 to 1; output current 6.25A to 130A"
+    }
+   ],
+   "notes": "The PRM regulators that pair with it run 400–800 W (PRM48AF480T400A00 36–75 V in, 20–55 V out; PRM2313S60E54H0T00 38–60 V in, 30–54 V out, 800 W) with 'Regulation 0.2% (Remote Sense)' and 'Power density up to 2,040W/in3' per the same family overview. Values quoted from Vicor documents; not independently tested."
+  },
+  {
+   "product": "Power-on-Package MCD4609 + 2 × MCM4609 ChiP-set and vertical power delivery (company releases and articles, 2020–2026)",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Input",
+     "value": "48V input"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output current",
+     "value": "supply up to 650A continuous and 1200A peak"
+    },
+    {
+     "band": "Design",
+     "label": "MCM4609 package",
+     "value": "45.7 x 8.6 x 3.2mm"
+    },
+    {
+     "band": "Design",
+     "label": "Placement",
+     "value": "placement of the MCMs directly on the substrate onto which the processor is mounted"
+    },
+    {
+     "band": "Claimed performance",
+     "label": "Current density",
+     "value": "Current densities of greater than 3.0A/mm² and current gains of greater than 40 enable best-in-class vertical power delivery"
+    },
+    {
+     "band": "Claimed performance",
+     "label": "Profile and thermal",
+     "value": "Vicor current multipliers are 1.5mm thin and have a thermal resistance of 0.3°C/W"
+    },
+    {
+     "band": "Claimed performance",
+     "label": "Peak density (article)",
+     "value": "5A/mm2 TDC (continuous), 10A/mm2 peak"
+    },
+    {
+     "band": "Claimed performance",
+     "label": "Transient response (article)",
+     "value": "Less than 100nsec"
+    },
+    {
+     "band": "Worked examples",
+     "label": "Lateral (LPD)",
+     "value": "~800A at 0.8V with 70µΩ PDN resistance at 100°C using 2.8-mm-tall current multipliers"
+    },
+    {
+     "band": "Worked examples",
+     "label": "Vertical (VPD)",
+     "value": "10µΩ PDN for a 1,200A design (~14.4W loss)"
+    },
+    {
+     "band": "Second generation",
+     "label": "Gen 5 ChiPs / 2nd Gen VPD (Q3 2025 call, transcript)",
+     "value": "up to five amperes per square millimeter peak current density; 1.5 millimeter thin"
+    }
+   ],
+   "notes": "The 2017 MCM3208S59Z01A6C00 solution was rated 'Up to 320A continuous current; 640A peak' in a 32 × 8 × 2.75 mm package. No first-party datasheet, part number or package size exists for the 2nd-generation VPD parts; the current-density figures are CEO statements on earnings calls as relayed by trade-press transcripts."
+  },
+  {
+   "product": "BCM4414xH0E5035yzz — 800 V-to-48 V isolated bus converter (datasheet Rev 1.2, 10/2020)",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "High-voltage side",
+     "value": "VHI = 650V (500 – 800V)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Low-voltage side",
+     "value": "VLO = 40.6V (31.3 – 50.0V)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Low-voltage-side current",
+     "value": "ILO = up to 35A"
+    },
+    {
+     "band": "Electrical",
+     "label": "Transformation ratio",
+     "value": "Fixed transformation ratio (K) of 1/16"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "97.7% peak efficiency"
+    },
+    {
+     "band": "Performance",
+     "label": "Power density",
+     "value": "Up to 776W/in3 power density"
+    },
+    {
+     "band": "Design",
+     "label": "Package",
+     "value": "Thermally enhanced VIA package; 4.35 x 1.40 x 0.37in [110.55 x 35.54 x 9.40mm]"
+    },
+    {
+     "band": "Design",
+     "label": "Features",
+     "value": "Integrated filtering; Parallel operation for multi-kW arrays; PMBus® management interface"
+    },
+    {
+     "band": "Applications",
+     "label": "Stated applications",
+     "value": "High-Voltage DC Power Distribution; High-End Computing Systems; Automated Test Equipment"
+    }
+   ],
+   "notes": "Vicor's own 800 V rack arithmetic: '350A at 400VDC and 175A at 800VDC' for a 140 kW rack, and '500MCM gauge copper cable for 400VDC distribution costs about $14 per foot, and 3/0AWG copper cable for 800VDC distribution costs about $5 per foot' (Disaggregating Power in Data Centers)."
+  },
+  {
+   "product": "BCM6135CD1E5165yzz — 384 V-to-48 V isolated bus converter (datasheet Rev 1.2, 04/2024, stamped 'Not Recommended for New Designs') and the automotive 800 V-to-48 V BCM6135 (product listing)",
+   "specs": [
+    {
+     "band": "384 V part",
+     "label": "High-voltage side",
+     "value": "VHI = 384V (260 – 410V)"
+    },
+    {
+     "band": "384 V part",
+     "label": "Low-voltage side",
+     "value": "VLO = 48V (32.5 – 51.3V)"
+    },
+    {
+     "band": "384 V part",
+     "label": "Current",
+     "value": "ILO = up to 65A"
+    },
+    {
+     "band": "384 V part",
+     "label": "Transformation ratio",
+     "value": "K = 1/8"
+    },
+    {
+     "band": "384 V part",
+     "label": "Efficiency and density",
+     "value": "97.9% peak efficiency; Up to 3.4kW/in3 power density"
+    },
+    {
+     "band": "384 V part",
+     "label": "Isolation",
+     "value": "4,242VDC isolation"
+    },
+    {
+     "band": "384 V part",
+     "label": "Package",
+     "value": "Chassis-Mount CM-ChiP™ Package 2.415 x 1.392 x 0.292in [61.33 x 35.35 x 7.42mm]; Weight: 68g"
+    },
+    {
+     "band": "384 V part",
+     "label": "Capacitance effect",
+     "value": "enabling bulk capacitance across the 48V bus to be scaled down by a factor of 1/64 across the 384V bus"
+    },
+    {
+     "band": "800 V automotive part",
+     "label": "Input",
+     "value": "Input: 800V (520 – 920V)"
+    },
+    {
+     "band": "800 V automotive part",
+     "label": "Output",
+     "value": "Output: 48V (32.5 – 57.5V)"
+    },
+    {
+     "band": "800 V automotive part",
+     "label": "Current and power",
+     "value": "Current: Up to 80A; Power: 2.5kW"
+    },
+    {
+     "band": "800 V automotive part",
+     "label": "Efficiency",
+     "value": "Peak efficiency: 97.3%"
+    },
+    {
+     "band": "800 V automotive part",
+     "label": "Size",
+     "value": "61 x 35 x 7.4mm"
+    }
+   ],
+   "notes": "The 800 V automotive module's weight is given as 58 g in Vicor's award releases and 65 g on its automotive page; no datasheet for that variant was located on vicorpower.com, so no datasheet weight is quoted."
+  },
+  {
+   "product": "NBM2317S60D1580T0R — 48 V-to-12 V non-isolated bidirectional bus converter (datasheet Rev 1.4, 01/2025)",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "High side",
+     "value": "VHI = 54V (40 – 60V)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Low side",
+     "value": "VLO = 13.5V (10 – 15V)"
+    },
+    {
+     "band": "Electrical",
+     "label": "Transformation ratio",
+     "value": "K = 1/4"
+    },
+    {
+     "band": "Electrical",
+     "label": "Step-down current",
+     "value": "80A continuous / 120A transient, up to 2ms"
+    },
+    {
+     "band": "Electrical",
+     "label": "Step-up current",
+     "value": "20A continuous / 30A transient, up to 2ms"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output power",
+     "value": "Maximum continuous output power: 1000W / Up to 1.5kW, 2ms peak power capability"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "97.9% peak efficiency"
+    },
+    {
+     "band": "Performance",
+     "label": "Power density",
+     "value": "Up to 8kW/in3 power density"
+    },
+    {
+     "band": "Design",
+     "label": "Operation",
+     "value": "Bidirectional start up and steady-state operation"
+    },
+    {
+     "band": "Design",
+     "label": "Package",
+     "value": "Thermally-Adept SM-ChiP™ 22.8 x 17.3 x 5.2mm [0.90 x 0.68 x 0.20in]; Weight: 8.67g"
+    },
+    {
+     "band": "Design",
+     "label": "Capacitance effect",
+     "value": "With a high-side to low-side K factor of 1/4, that capacitance value can be reduced by a factor of 16x"
+    }
+   ],
+   "notes": "The larger NBM6123x60E12A7 (Rev 1.8, 11/2017) is rated 'Up to 170A continuous secondary current', 'Up to 3000W/in3 power density', '98% peak efficiency' at K = 1/5 in a 61.00 × 25.14 × 7.21 mm through-hole ChiP."
+  },
+  {
+   "product": "DCM3717 / DCM3735 — regulated 48 V-to-12 V converters (family overview Rev 1.2, 07/2025; launch release 2025-03-26)",
+   "specs": [
+    {
+     "band": "Electrical",
+     "label": "Input",
+     "value": "operate from a semi‑regulated 40 – 60V input"
+    },
+    {
+     "band": "Electrical",
+     "label": "Output",
+     "value": "a regulated point‑of‑load output with a voltage range of 10.0 – 12.5V"
+    },
+    {
+     "band": "Electrical",
+     "label": "Power",
+     "value": "range from 750W to 2kW"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "DCM3717S60E13G5TN1 96.5%; DCM3735S60D13L0TN1 96.4%"
+    },
+    {
+     "band": "Performance",
+     "label": "Power density",
+     "value": "an industry-leading power density of 5kW/in³"
+    },
+    {
+     "band": "Design",
+     "label": "Topology",
+     "value": "the Vicor patented zero‑voltage switching (ZVS) buck-boost regulator stage followed by the Sine Amplitude Converter (SAC™)"
+    },
+    {
+     "band": "Design",
+     "label": "Switching frequency",
+     "value": ">1MHz switching frequency"
+    },
+    {
+     "band": "Design",
+     "label": "Packages",
+     "value": "DCM3717 SM-ChiP 36.7 x 17.3 x 5.2mm; DCM3735 SM-ChiP 36.7 x 35.4 x 5.2mm"
+    },
+    {
+     "band": "Design",
+     "label": "Control",
+     "value": "PMBus® compatible telemetry; Array configuration of up to four units"
+    }
+   ],
+   "notes": "The DCM3735 (2,000 W) was 'Coming Soon' in the July 2025 overview; the automotive-grade DCM3735 is listed at 35–58 V → 8–16 V, 2 kW, up to 160 A, 96.5%."
+  },
+  {
+   "product": "ChiP™ packaging platform and Andover ChiP fab (company white paper, articles and 10-K)",
+   "specs": [
+    {
+     "band": "Packaging",
+     "label": "Definition",
+     "value": "ChiP = Converter housed in Package"
+    },
+    {
+     "band": "Packaging",
+     "label": "Density claim",
+     "value": "ChiP technology has already demonstrated power densities up to 3kW/in3, and up to 850/in2, at up to 98% efficiency"
+    },
+    {
+     "band": "Packaging",
+     "label": "Generation claim",
+     "value": "a staggering 4X increase in power density and 20% reduction in power loss vs earlier generation components"
+    },
+    {
+     "band": "Packaging",
+     "label": "Range",
+     "value": "packages as thin as 4.7 mm in ChiP sizes ranging from 1323 to 6123 with current capability up to 180A, voltage capability up 430V and power capability up to 1.5kW"
+    },
+    {
+     "band": "Packaging",
+     "label": "Roadmap",
+     "value": "voltage capability up to 800V and power capability up to 4kW per ChiP-based component are possible"
+    },
+    {
+     "band": "Fab",
+     "label": "Site",
+     "value": "a building of approximately 320,000 square feet in Andover, Massachusetts, which houses all Massachusetts manufacturing activities"
+    },
+    {
+     "band": "Fab",
+     "label": "Opening",
+     "value": "the world's first ChiP (Converter housed in Package) fabrication facility — ribbon cutting May 18, 2022 at 400 Federal Street, Andover"
+    },
+    {
+     "band": "Fab",
+     "label": "Capacity statements",
+     "value": "Expanded manufacturing capacity by 2.5x; 45% increase in manufacturing floor capacity; 90,000 / 95,000 square-foot addition"
+    },
+    {
+     "band": "Fab",
+     "label": "Process",
+     "value": "Panel-based manufacturing that uses a standard-size PCB, analogous to a Si wafer, in a highly automated approach; pick-and-place up to 420,000 components per hour"
+    },
+    {
+     "band": "Fab",
+     "label": "Environmental",
+     "value": "zero wastewater and air discharge; save up to 20 million gallons of water each year"
+    }
+   ],
+   "notes": "Vicor's own pages give both 90,000 and 95,000 sq ft for the addition and both '45%' and '2.5x' for the capacity increase — different metrics, both first-party, reproduced as stated."
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Patrizio Vinciarelli",
+   "title": "Chairman of the Board, President and Chief Executive Officer",
+   "photo": "images/execs/vicor-vinciarelli.jpg",
+   "background": [
+    "Founded Vicor in 1981 and has been Chairman, President and CEO since; age 79 per the 2026 proxy; holds Class B ten-vote shares — the 2026 proxy contains no succession language",
+    "Fellow, Institute for Advanced Study, Princeton (1977–80); CERN (1973–76); physics doctorate, University of Rome",
+    "Inventor on 'more than 100 patents for power conversion technology' per the officers page (the governance page says 150+); 2019 IEEE William E. Newell Power Electronics Award",
+    "Author of every 2025–26 results-release statement on licensing, the second ITC case, the second fab and 2nd-generation VPD"
+   ]
+  },
+  {
+   "name": "James F. Schmidt",
+   "title": "Corporate Vice President, Chief Financial Officer, Treasurer, and Secretary; Director",
+   "photo": "images/execs/vicor-schmidt.jpg",
+   "background": [
+    "CFO since June 2021 (Vicor's last leadership-change release); director since 2021; age 65",
+    "Analog Devices from 1984 in quality, operations, finance and sales, latterly Vice President, Global Broad Market Channel Sales",
+    "B.S. Chemical Engineering, University of Cincinnati; MBA, UNC Greensboro",
+    "On the Q2 2026 call: new licences 'may not result until our second ITC case gets to its final determination in 2027' (trade-press transcript)"
+   ]
+  },
+  {
+   "name": "Philip D. Davies",
+   "title": "Corporate Vice President, Global Sales and Marketing; Director",
+   "photo": "images/execs/vicor-davies.jpg",
+   "background": [
+    "In role since 2011; director since 2019; age 66",
+    "OSRAM Sylvania; NoblePeak Vision; Analog Devices (worldwide business development); Allegro MicroSystems",
+    "B.S.E.E. and master's in Power Electronics, University of Glamorgan",
+    "Placed the 2nd-generation VPD volume ramp in 'late third quarter, fourth quarter' of 2027 on the Q2 2026 call (trade-press transcript)"
+   ]
+  },
+  {
+   "name": "Michael S. McNamara",
+   "title": "Corporate Vice President, General Manager, Operations; Director",
+   "photo": "images/execs/vicor-mcnamara.jpg",
+   "background": [
+    "In role since 2015; at Vicor since 1995 (VP Quality & Technical Operations 2011–15); director since 2019",
+    "Alpha Industries before Vicor; B.S. Industrial Technology, University of Lowell",
+    "Led the 2022 ChiP fab opening: 'Our new ChiP fab integrates all of the process steps necessary to manufacture high-density power modules in wafer-like panels'"
+   ]
+  },
+  {
+   "name": "Claudio Tuozzolo",
+   "title": "Corporate Vice President, President Vicor Power Components; Director",
+   "photo": "images/execs/vicor-tuozzolo.jpg",
+   "background": [
+    "President of Picor from 2003 and of Vicor Power Components after Picor merged into Vicor in May 2018; director since 2007; age 63",
+    "SIPEX before Picor; nine US patents; B.S. and M.S. Electrical Engineering, University of Rhode Island"
+   ]
+  },
+  {
+   "name": "Robert Gendron, P.E.",
+   "title": "Corporate Vice President, Product Management & Development",
+   "photo": "images/execs/vicor-gendron.jpg",
+   "background": [
+    "In role since September 2021; Corporate VP Product Marketing & Technical Resources 2017–21; age 61",
+    "Picor; Analog Devices; STMicroelectronics",
+    "B.S. Electrical Engineering, Clarkson; M.S., Northeastern; MBA, University of New Hampshire"
+   ]
+  },
+  {
+   "name": "Sean Crilly",
+   "title": "Corporate Vice President, Engineering, Power Systems",
+   "photo": "images/execs/vicor-crilly.jpg",
+   "background": [
+    "In role since 2015; VP VI Chip Engineering 2012–15; Director of Sustaining Engineering 2006–12; age 68",
+    "Intepro Systems before Vicor; B.Eng. Electronics, Limerick Institute of Technology"
+   ]
+  },
+  {
+   "name": "Alex Gusinov",
+   "title": "Corporate Vice President, Engineering, Power Components",
+   "photo": "images/execs/vicor-gusinov.jpg",
+   "background": [
+    "In role since 2015; VP Design Engineering, Picor 2006–15; age 62",
+    "SIPEX; Analog Devices; B.S.E.E., Boston University; M.S. Engineering Management, Tufts Gordon Institute"
+   ]
+  },
+  {
+   "name": "Andrew T. D'Amico",
+   "title": "General Counsel for Intellectual Property; Director",
+   "background": [
+    "General Counsel since January 2006; named head of the IP licensing practice as General Counsel for Intellectual Property in October 2025; director since 2020; age 65",
+    "Eighteen years in private patent practice (Fish & Richardson per the proxy) before Vicor",
+    "J.D., George Washington University; B.S.E.E. magna cum laude, New Jersey Institute of Technology",
+    "No company-published headshot on the officers page"
+   ]
+  },
+  {
+   "name": "Alvaro Doyle",
+   "title": "Corporate Vice President, Chief Information Officer",
+   "photo": "images/execs/vicor-doyle.jpg",
+   "background": [
+    "In role since 2020; at Vicor since 1998 (VP Application Development & Business Analytics; Chief Compliance Officer); age 58",
+    "B.S. Information Systems Management, University of San Francisco"
+   ]
+  },
+  {
+   "name": "Quentin Fendelet",
+   "title": "Corporate Vice President, Chief Accounting Officer",
+   "photo": "images/execs/vicor-fendelet.jpg",
+   "background": [
+    "Joined February 2022; Chief Accounting Officer since March 2022; age 54",
+    "Fenway Consulting; Wheelabrator; Courier Corporation; TomTom; CPA/CGMA",
+    "B.S. Accounting, Merrimack College; MBA, Bentley University"
+   ]
+  },
+  {
+   "name": "Nancy L. Grava",
+   "title": "Corporate Vice President, Human Resources",
+   "photo": "images/execs/vicor-grava.jpg",
+   "background": [
+    "In role since 2015; at Vicor since 1993 (Director of Human Resources 2009–15); age 55",
+    "B.A., Massachusetts College of Liberal Arts; MBA, Bentley University"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "Q2 2026 (quarter ended June 30, 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Product and royalty revenues",
+      "actual": "$143.4M (product $112.9M; royalty $30.4M), +26.9% sequential and +1.6% YoY against a Q2 2025 that included the $45.0M settlement",
+      "expected": "$138.4M consensus (Investing.com, MarketBeat); Zacks: beat by 3.13%",
+      "verdict": "beat",
+      "result": "Beat the $138.4M consensus and the company's own revised guidance of $142M (raised from $126M on May 26 after a new OEM licence)",
+      "kpi": "revenue",
+      "usdMillions": 143.4,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$1.04 (net income $49.8M, including a $10.9M income-tax benefit)",
+      "expected": "$0.65 consensus (Investing.com, MarketBeat, public.com); Zacks: beat by 68%",
+      "verdict": "beat",
+      "result": "Fifth consecutive EPS beat per the tracker record",
+      "kpi": "eps"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "58.0% ($83.1M), up from 55.2% in Q1 2026",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Royalty at near-full margin lifts the consolidated figure; the CFO cited a one-time cost of moving equipment in the first fab (trade-press transcript)"
+     },
+     {
+      "name": "Backlog",
+      "actual": "$380M at June 30, 2026, +26% sequential from $301M and +145% from $155M a year earlier",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company-reported; no consensus for backlog"
+     },
+     {
+      "name": "Cash and cash equivalents",
+      "actual": "approximately $453.6M, +12.2% sequential; capital expenditures $11.2M; cash flow from operations $34.0M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company-reported"
+     }
+    ],
+    "commentary": "The quarter in which licensing became a fifth of revenue: royalty $30.4M against $10.4M a year earlier, on a new OEM licence structured as four $5M quarterly payments in its first year and $10M a quarter in its second (Q2 call, trade-press transcript). Management guided 2026 revenue to 'over $600 million' on the call versus 'nearly $570 million' in April, with no further licences assumed before the 2027 ITC determination."
+   },
+   {
+    "period": "Q1 2026 (quarter ended March 31, 2026)",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Product and royalty revenues",
+      "actual": "$113.0M (product $98.0M; royalty $15.0M), +20.2% YoY and +5.3% sequential",
+      "expected": "$109.05M consensus (Investing.com)",
+      "verdict": "beat",
+      "result": "Beat by about 3.6%",
+      "kpi": "revenue",
+      "usdMillions": 113.0,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$0.44 (net income $20.7M)",
+      "expected": "$0.37 (Investing.com) / $0.40 (public.com)",
+      "verdict": "beat",
+      "result": "Beat both tracker figures",
+      "kpi": "eps"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "55.2% ($62.4M), up from 47.2% a year earlier",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company-reported"
+     },
+     {
+      "name": "Backlog",
+      "actual": "$301M, +75% YoY and +70% sequential",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "The CEO: 'a 70% sequential increase in backlog, setting the stage for revenue growth'"
+     },
+     {
+      "name": "Cash flow",
+      "actual": "Cash flow used for operations $(3.9)M, net of a $28.6M payment of an award for past litigation (SynQor); capex $12.4M; cash approximately $404.2M",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company-reported"
+     }
+    ],
+    "commentary": "The SynQor judgment — $28,557,256 paid March 18, 2026 after the Federal Circuit affirmed on February 13 — ran through operating cash flow. Trade press relayed a 2026 revenue outlook of 'nearly $570 million' assuming no new licences before the second ITC case's 2027 determination."
+   },
+   {
+    "period": "FY2025 (year ended December 31, 2025)",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Total revenues",
+      "actual": "$452.7M including a $45.0M patent-litigation settlement; net revenues $407.7M (product $350.3M, +12.1%; royalty $57.4M, +23.2%)",
+      "expected": "$430.7M (GuruFocus consensus as of October 2025; no February 2026 full-year consensus located)",
+      "verdict": "beat",
+      "result": "Beat the last located full-year consensus; the comparison is against a stale October snapshot",
+      "kpi": "revenue",
+      "usdMillions": 452.7,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$2.61 (net income $118.6M, including a $24.0M income-tax benefit)",
+      "expected": "$1.26 (GuruFocus, October 2025)",
+      "verdict": "beat",
+      "result": "Beat; the settlement and the tax benefit both flatter the comparison",
+      "kpi": "eps"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "57.3% of total revenues (51.2% in 2024)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company-reported"
+     },
+     {
+      "name": "Operating income",
+      "actual": "$81.8M versus a $(1.3)M loss in 2024",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company-reported",
+      "kpi": "operating-profit",
+      "usdMillions": 81.8,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Q4 2025 (quarter)",
+      "actual": "Revenue $107.3M (product $92.7M, +15.3%; royalty $14.5M, −7.8% YoY and −33.1% sequential); gross margin 55.4%; net income $46.5M, $1.01 per diluted share; backlog $176.9M; cash approximately $402.8M",
+      "expected": "Q4: $107.8M revenue (StockStory / Investing.com); EPS $0.37 (StockStory) / $0.44 (Investing.com, public.com)",
+      "verdict": "beat",
+      "result": "Revenue in line (−0.5%); EPS beat on a $27.3M deferred-tax benefit (StockStory)"
+     },
+     {
+      "name": "Backlog",
+      "actual": "$176.9M at year-end, +13.8% YoY",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company-reported"
+     }
+    ],
+    "commentary": "The settlement year. Royalty revenue was 14.1% of net revenues (13.0% in 2024, 3.9% in 2023); R&D $78.6M (19.3%); cash flow from operations $139.5M (+174.5%). One customer was 11.1% of net revenues (12.1% in 2024). Sales outside the US were 50.8%; China and Hong Kong 11.9%, 'heavily oriented toward Brick Products'. Brick Products were 39.0% of net revenues (45.0% in 2024). Consensus for the full year could only be located as an October 2025 snapshot, so the 'expected' figures understate what the Street carried by February 2026."
+   },
+   {
+    "period": "FY2024 (year ended December 31, 2024)",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Total revenues",
+      "actual": "$359.1M, −11.4% from $405.1M (product $312.5M; royalty $46.6M)",
+      "expected": "$353.9M (GuruFocus consensus, February 2025)",
+      "verdict": "beat",
+      "result": "Beat a consensus that already embedded the decline; revenue fell for the year",
+      "kpi": "revenue",
+      "usdMillions": 359.1,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Diluted EPS",
+      "actual": "$0.14 (net income $6.1M, 1.7% of revenues) after a $19.5M litigation-contingency expense for SynQor",
+      "expected": "−$0.05 (GuruFocus, February 2025)",
+      "verdict": "beat",
+      "result": "Beat a consensus that expected a small loss",
+      "kpi": "eps"
+     },
+     {
+      "name": "Gross margin",
+      "actual": "51.2% (50.6% in 2023)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company-reported"
+     },
+     {
+      "name": "Q4 2024 (quarter)",
+      "actual": "Revenue $96.2M, +3.8% YoY; gross margin 52.4%; net income $10.2M, $0.23 per diluted share; backlog $155.5M, −3.3% YoY; cash approximately $277.3M",
+      "expected": "Q4: $91.0M revenue (GuruFocus/Yahoo) or $87.1M (Investing.com); EPS $0.15 (GuruFocus) / $0.18 (Investing.com)",
+      "verdict": "beat",
+      "result": "Beat on both lines"
+     },
+     {
+      "name": "Cash flow from operations",
+      "actual": "$50.8M, −31.8%",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Company-reported"
+     }
+    ],
+    "commentary": "A down year: revenue fell 11.4%, income from operations was a $(1.3)M loss and the year absorbed a $19.5M SynQor litigation charge. Royalty revenue had already tripled to $46.6M (13.0% of revenues) from $15.9M in 2023. The CEO's year-end statement tied further margin improvement to 'higher utilization of our ChiP fab and increased licensing income'. One customer was 12.1% of net revenues; sales outside the US 48.2%."
+   }
+  ],
+  "commentary": "Vicor reports one segment on a calendar fiscal year, with product revenue and royalty revenue as separate lines; the May 2025 $45.0M patent-litigation settlement is shown as its own line in the 2025 periods and is included in the $452.7M headline as the company reported it. 'Expected' figures are tracker-aggregated consensus (GuruFocus/Yahoo, Investing.com, MarketBeat, StockStory, public.com, Zacks percentages) — Vicor does not publish consensus and its IR site was unreachable, and Nasdaq.com and Zacks' own pages could not be captured, so where trackers disagreed both figures are shown. The record since Q1 2025's miss is five consecutive EPS beats, the last three of them lifted by licensing income and tax benefits rather than product margin. Q3 2026 results are tracker-estimated for about October 20, 2026 with consensus of $158.2M revenue and $0.77–0.80 EPS; the company had not announced the date as of September 3, 2026."
+ },
+ "sources": [
+  {
+   "label": "Vicor — 8-K: $150 million share-repurchase authorization (SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312526370420/d161606d8k.htm",
+   "date": "2026-08-27"
+  },
+  {
+   "label": "Monolithic Power Systems — Form 10-Q for the quarter ended June 30, 2026 (SEC; no Vicor mention)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0001280452/000162828026053275/mpwr-20260630.htm",
+   "date": "2026-08"
+  },
+  {
+   "label": "Vicor — Tech Taipei 2026 presentation on 48V power delivery networks (release)",
+   "url": "https://www.vicorpower.com/press-room/2026/tech-taipei",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Vicor — Form 10-Q for the quarter ended June 30, 2026 (SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312526322462/vicr-20260630.htm",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Vicor — Form 10-Q for the quarter ended June 30, 2026 (SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000751978/000119312526322462/vicr-20260630.htm",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Law360 — Vicor rival alleges trade secret misuse in WDTX suit",
+   "url": "https://www.law360.com/articles/2505388/vicor-rival-alleges-trade-secret-misuse-in-wdtx-suit",
+   "date": "2026-07-24"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Vicor Q2 earnings beat estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/vicor-q2-earnings-beat-estimates-172100119.html",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Vicor Q2 earnings call highlights",
+   "url": "https://finance.yahoo.com/technology/ai/articles/vicor-q2-earnings-call-highlights-133000709.html",
+   "date": "2026-07-22"
+  },
+  {
+   "label": "Vicor — Q2 2026 results release (8-K Ex. 99.1, SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000751978/000119312526309538/d115827dex991.htm",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Motley Fool — Vicor Q2 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/vicor-vicr-q2-2026-earnings-call-transcript/",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Investing.com — Needham cuts Vicor price target to $320",
+   "url": "https://www.investing.com/news/analyst-ratings/needham-cuts-vicor-stock-price-target-to-320-on-valuation-concerns-93CH-4804038",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "Investing.com — Vicor faces earnings test on licensing shift and AI power play",
+   "url": "https://www.investing.com/news/earnings/vicor-faces-earnings-test-on-licensing-shift-and-ai-power-play-93CH-4801181",
+   "date": "2026-07-20"
+  },
+  {
+   "label": "Finimize — VICR asset snapshot",
+   "url": "https://finimize.com/content/vicr-asset-snapshot",
+   "date": "2026-07-17"
+  },
+  {
+   "label": "Power Electronics News — Power Corner: Vicor's Maury Wood on vertical power delivery for AI data centers",
+   "url": "https://www.powerelectronicsnews.com/power-corner-vicors-maury-wood-on-vertical-power-delivery-for-ai-data-centers/",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Vicor's capacity expansion",
+   "url": "https://finance.yahoo.com/technology/articles/vicors-capacity-expansion-unlock-next-135600977.html",
+   "date": "2026-07-16"
+  },
+  {
+   "label": "Vicor — Q2 2026 earnings call notice (GlobeNewswire)",
+   "url": "https://www.globenewswire.com/news-release/2026/07/07/3323559/0/en/Vicor-Corporation-to-Hold-Second-Quarter-Earnings-Conference-Call-and-Webcast-on-July-21-2026.html",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Zacks via Yahoo Finance — Is Vicor stock still a buy after a 160% surge YTD?",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/vicor-stock-still-buy-160-140500396.html",
+   "date": "2026-07-07"
+  },
+  {
+   "label": "Austin American-Statesman — Monolithic Power Systems v. Vicor trade-secret suit (blocked; snippet)",
+   "url": "https://www.statesman.com/business/article/monolithic-vicor-lawsuit-austin-amd-ai-espionage-22345493.php",
+   "date": "2026-07"
+  },
+  {
+   "label": "Vicor — 8-K: 2026 annual meeting voting results (SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312526279247/d107799d8k.htm",
+   "date": "2026-06-23"
+  },
+  {
+   "label": "Vicor — Revises Q2 2026 revenue guidance (release, GlobeNewswire copy)",
+   "url": "https://www.globenewswire.com/news-release/2026/05/26/3301036/0/en/vicor-corporation-revises-q2-2026-revenue-guidance.html",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "Vicor — Form 10-Q for the quarter ended March 31, 2026 (SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312526194947/vicr-20260331.htm",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Vicor — 2026 proxy statement (DEF 14A, SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000751978/000119312526194790/vicr-20260428.htm",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "PhotonCap — The last 15 mm of AI power: three numbers",
+   "url": "https://photoncap.net/p/the-last-15mm-of-ai-power-three-numbers",
+   "date": "2026-04-22"
+  },
+  {
+   "label": "Vicor — Q1 2026 results release (8-K Ex. 99.1, SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312526165105/d139425dex991.htm",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "Investing.com — Vicor Q1 2026 earnings call transcript",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-vicor-q1-2026-beats-estimates-but-sees-stock-dip-93CH-4626358",
+   "date": "2026-04-21"
+  },
+  {
+   "label": "USITC — 337-TA-1484 target-date notice (PDF; snippet only)",
+   "url": "https://www.usitc.gov/sites/default/files/secretary/fed_reg_notices/337/337_1484_notice03242026sgl.pdf",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Temple 8 Capital — NVIDIA Vera Rubin supply-chain toll booths",
+   "url": "https://temple8capital.substack.com/p/nvidia-vera-rubin-stocks-gtc-2026-supply-chain-toll-booths",
+   "date": "2026-03-24"
+  },
+  {
+   "label": "Power Electronics News — Nvidia GTC 2026: power from grid to GPU",
+   "url": "https://www.powerelectronicsnews.com/nvidia-gtc-2026-800-vdc-power-partnerships-from-grid-to-processor/",
+   "date": "2026-03-19"
+  },
+  {
+   "label": "Vicor — BCM bus converter wins 2026 Electronics Excellence Award (release)",
+   "url": "https://www.vicorpower.com/press-room/2026/vicor-bcm-bus-converter-wins-2026-electronics-excellence-award",
+   "date": "2026-03-12"
+  },
+  {
+   "label": "Vicor — Form 10-K for fiscal 2025 (SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312526085102/vicr-20251231.htm",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Vicor — Q4 and full-year 2025 results release (8-K Ex. 99.1, SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312526059563/d240534dex991.htm",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "StockStory via Yahoo Finance — Vicor posts Q4 2025 results",
+   "url": "https://finance.yahoo.com/news/vicor-nasdaq-vicr-posts-q4-211925228.html",
+   "date": "2026-02-19"
+  },
+  {
+   "label": "USITC — Institution of Inv. 337-TA-1484 (Federal Register, govinfo)",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2026-02-17/html/2026-03032.htm",
+   "date": "2026-02-17"
+  },
+  {
+   "label": "CAFC — SynQor v. Vicor No. 24-1879 opinion (PDF)",
+   "url": "https://www.cafc.uscourts.gov/opinions-orders/24-1879.OPINION.2-13-2026_2647866.pdf",
+   "date": "2026-02-13"
+  },
+  {
+   "label": "USITC — press release instituting 337-TA-1484 (blocked; snippet)",
+   "url": "https://www.usitc.gov/press_room/news_release/2026/er0211_68125.htm",
+   "date": "2026-02-11"
+  },
+  {
+   "label": "Vicor — BCM wins Excellence Award for Modular Power Supply Industry 2025 (release)",
+   "url": "https://www.vicorpower.com/press-room/2026/vicor-bcm-wins-excellence-award-for-modular-power-supply-industry-2025",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Vicor — BCM bus converter wins Product of the Year at the 2025 World Electronics Achievement Awards (release)",
+   "url": "https://www.vicorpower.com/press-room/2026/vicor-bcm-bus-converter-wins-product-of-the-year",
+   "date": "2026-01-22"
+  },
+  {
+   "label": "Bloomberg Law — Vicor Corp. hits competitors with patent suits over power tech",
+   "url": "https://news.bloomberglaw.com/ip-law/vicor-corp-hits-competitors-with-patent-suits-over-power-tech",
+   "date": "2026-01-09"
+  },
+  {
+   "label": "Motley Fool — Vicor Q3 2025 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2025/10/22/vicor-vicr-q3-2025-earnings-call-transcript/",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "Barron's via iTiger — Vicor shares jump on licensing outlook",
+   "url": "https://www.itiger.com/news/2577318987",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "TheFly via TipRanks — Craig-Hallum upgrades Vicor to Buy",
+   "url": "https://www.tipranks.com/news/the-fly/craig-hallum-upgrades-vicor-to-buy-on-better-royalty-outlook-new-vpd-customers-thefly",
+   "date": "2025-10-22"
+  },
+  {
+   "label": "Vicor — Q3 2025 results release (8-K Ex. 99.1, SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312525245175/d93346dex991.htm",
+   "date": "2025-10-21"
+  },
+  {
+   "label": "Vicor — Vicor steps up its IP licensing practice (release)",
+   "url": "https://www.vicorpower.com/press-room/vicor-steps-up-its-ip-licensing-practice",
+   "date": "2025-10-20"
+  },
+  {
+   "label": "Vicor — Vicor steps up its IP licensing practice (GlobeNewswire)",
+   "url": "https://www.globenewswire.com/news-release/2025/10/20/3169740/0/en/Vicor-steps-up-its-IP-licensing-practice.html",
+   "date": "2025-10-20"
+  },
+  {
+   "label": "GuruFocus via Yahoo Finance — Earnings watch: Vicor Q3 2025",
+   "url": "https://finance.yahoo.com/news/earnings-watch-vicor-corp-vicr-131923721.html",
+   "date": "2025-10-20"
+  },
+  {
+   "label": "NVIDIA Technical Blog — Building the 800 VDC ecosystem for efficient, scalable AI factories",
+   "url": "https://developer.nvidia.com/blog/building-the-800-vdc-ecosystem-for-efficient-scalable-ai-factories/",
+   "date": "2025-10-13"
+  },
+  {
+   "label": "Seeking Alpha — Vicor Q3 2025 earnings preview",
+   "url": "https://seekingalpha.com/news/4505692-vicor-q3-2025-earnings-preview",
+   "date": "2025-10"
+  },
+  {
+   "label": "Federal Circuit Blog — Vicor v. ITC No. 25-1616 redacted reply brief (PDF)",
+   "url": "https://fedcircuitblog.com/wp-content/uploads/2025/09/25-1616_Vicor_Redacted-Reply-Brief.pdf",
+   "date": "2025-09"
+  },
+  {
+   "label": "Vicor — Q2 2025 results release (8-K Ex. 99.1, SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312525162605/d73980dex991.htm",
+   "date": "2025-07-22"
+  },
+  {
+   "label": "Vicor — DCM37xx family overview, Rev 1.2 (PDF)",
+   "url": "https://www.vicorpower.com/documents/family_overviews/fo-DCM37xx-VICOR.pdf",
+   "date": "2025-07"
+  },
+  {
+   "label": "GuruFocus via Yahoo Finance — Vicor Q2 2025 earnings preview",
+   "url": "https://finance.yahoo.com/news/vicor-corp-vicr-q2-2025-132115813.html",
+   "date": "2025-07"
+  },
+  {
+   "label": "NVIDIA Technical Blog — NVIDIA 800 VDC architecture will power the next generation of AI factories",
+   "url": "https://developer.nvidia.com/blog/nvidia-800-v-hvdc-architecture-will-power-the-next-generation-of-ai-factories/",
+   "date": "2025-05-20"
+  },
+  {
+   "label": "Vicor — 2025 proxy statement (DEF 14A, SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000095017025060646/vicr-20250430.htm",
+   "date": "2025-04-30"
+  },
+  {
+   "label": "MarketBeat — Vicor announces Q1 2025 results, misses estimates",
+   "url": "https://www.marketbeat.com/instant-alerts/vicor-nasdaqvicr-announces-quarterly-earnings-results-misses-estimates-by-023-eps-2025-04-29",
+   "date": "2025-04-29"
+  },
+  {
+   "label": "Vicor — Releases a DCM family of regulated 48V to 12V DC-DC converters (release)",
+   "url": "https://www.vicorpower.com/press-room/2025/vicor-releases-a-dcm-family-of-regulated-48v-to-12v-dc-dc-converters",
+   "date": "2025-03-26"
+  },
+  {
+   "label": "FindLaw — Vicor Corp. v. FII USA Inc., 1st Cir. No. 24-1620 opinion",
+   "url": "https://caselaw.findlaw.com/court/us-1st-circuit/117024513.html",
+   "date": "2025-03-06"
+  },
+  {
+   "label": "Sterne Kessler — Purchase orders and IP licenses: recent ITC decision underscores need for caution",
+   "url": "https://www.sternekessler.com/news-insights/client-alerts/purchase-orders-and-ip-licenses-recent-itc-decision-underscores-need-for-caution/",
+   "date": "2025-03-05"
+  },
+  {
+   "label": "Vicor — Form 10-K for fiscal 2024 (SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000095017025030619/vicr-20241231.htm",
+   "date": "2025-03-03"
+  },
+  {
+   "label": "Vicor — Q4 and full-year 2024 results release (8-K Ex. 99.1, SEC)",
+   "url": "https://www.sec.gov/Archives/edgar/data/751978/000119312525030771/d905898dex991.htm",
+   "date": "2025-02-20"
+  },
+  {
+   "label": "USITC — Final determination, LEO and CDOs in Inv. 337-TA-1370 (Federal Register, govinfo)",
+   "url": "https://www.govinfo.gov/content/pkg/FR-2025-02-20/html/2025-02831.htm",
+   "date": "2025-02-20"
+  },
+  {
+   "label": "Vicor — Q4 and full-year 2024 results release (GlobeNewswire)",
+   "url": "https://www.globenewswire.com/news-release/2025/02/20/3030086/0/en/Vicor-Corporation-Reports-Results-for-the-Fourth-Quarter-and-Year-Ended-December-31-2024.html",
+   "date": "2025-02-20"
+  },
+  {
+   "label": "GuruFocus via Yahoo Finance — Vicor Q4 2024 earnings preview",
+   "url": "https://finance.yahoo.com/news/vicor-corp-vicr-q4-2024-140624740.html",
+   "date": "2025-02-20"
+  },
+  {
+   "label": "Vicor — ITC bars importation of power modules and unlicensed computing systems that infringe Vicor patents (release)",
+   "url": "https://www.vicorpower.com/press-room/itc-bars-importation-of-power-modules",
+   "date": "2025-02-14"
+  },
+  {
+   "label": "Vicor — ITC bars importation of power modules and unlicensed computing systems that infringe Vicor patents (GlobeNewswire)",
+   "url": "https://www.globenewswire.com/news-release/2025/02/14/3026816/0/en/ITC-bars-importation-of-power-modules-and-unlicensed-computing-systems-that-infringe-Vicor-patents.html",
+   "date": "2025-02-14"
+  },
+  {
+   "label": "Vicor — NBM2317S60D1580T0R datasheet, Rev 1.4 (PDF)",
+   "url": "https://www.vicorpower.com/documents/datasheets/ds-NBM2317S60D1580T0R-VICOR.pdf",
+   "date": "2025-01"
+  },
+  {
+   "label": "Vicor — Introduces new high-density automotive-grade power modules (release)",
+   "url": "https://www.vicorpower.com/press-room/2024/new-high-density-automotive-grade-power-modules",
+   "date": "2024-10-16"
+  },
+  {
+   "label": "Vicor — Computing systems containing certain power modules infringe Vicor patents (release)",
+   "url": "https://www.vicorpower.com/press-room/modules-infringe-vicor-patents",
+   "date": "2024-09-30"
+  },
+  {
+   "label": "Vicor — Responds to allegations made in recently filed securities litigation (release)",
+   "url": "https://www.vicorpower.com/press-room/2024/vicor-responds-to-allegations",
+   "date": "2024-09-03"
+  },
+  {
+   "label": "Vicor — Wins preliminary injunction against Foxconn subsidiaries (release)",
+   "url": "https://www.vicorpower.com/press-room/2024/Vicor-wins-preliminary-injunction-against-Foxconn-subsidiaries",
+   "date": "2024-06-26"
+  },
+  {
+   "label": "Vicor — Patents asserted against infringing NBMs withstand validity challenges (release)",
+   "url": "https://www.vicorpower.com/press-room/2024/vicor-patents-asserted-against-infringing-nbms-withstand-validity-challenges",
+   "date": "2024-05-28"
+  },
+  {
+   "label": "TheFly via TipRanks — Vicor says PTAB denied institution of IPRs on patents asserted against Delta",
+   "url": "https://www.tipranks.com/news/the-fly/vicor-says-ptab-denied-institution-of-ipr-of-patents-asserted-against-delta",
+   "date": "2024-05-28"
+  },
+  {
+   "label": "Vicor — BCM6135CD1E5165yzz datasheet, Rev 1.2 (PDF)",
+   "url": "https://www.vicorpower.com/documents/datasheets/ds-BCM6135CD1E5165yzz-VICOR.pdf",
+   "date": "2024-04"
+  },
+  {
+   "label": "Vicor — PRM regulator and VTM current multiplier family overview, Rev 3.1 (PDF)",
+   "url": "https://www.vicorpower.com/documents/family_overviews/fo_PRM-Module-VTM-Current-Multiplier.pdf",
+   "date": "2024-02"
+  },
+  {
+   "label": "MoneyDJ — Delta Electronics statement on the Vicor complaint",
+   "url": "https://www.moneydj.com/kmdj/news/newsviewer.aspx?a=ed0f9ee4-c672-4215-a69f-b0a2666e0823",
+   "date": "2023-09-19"
+  },
+  {
+   "label": "USITC — press release instituting 337-TA-1370 (blocked; snippet)",
+   "url": "https://www.usitc.gov/press_room/news_release/2023/er0814_64231.htm",
+   "date": "2023-08-14"
+  },
+  {
+   "label": "SemiAnalysis — Energizing AI: power delivery competition",
+   "url": "https://newsletter.semianalysis.com/p/energizing-ai-power-delivery-competition",
+   "date": "2023-08-01"
+  },
+  {
+   "label": "Vicor — ChiP fab ribbon cutting (release)",
+   "url": "https://www.vicorpower.com/press-room/2022/vicor-ribbon-cutting-chip-fab",
+   "date": "2022-05-17"
+  },
+  {
+   "label": "Vicor — BCM4414xH0E5035yzz datasheet, Rev 1.2 (PDF)",
+   "url": "https://www.vicorpower.com/documents/datasheets/ds-BCM4414xH0E5035yzz-VICOR.pdf",
+   "date": "2020-10"
+  },
+  {
+   "label": "Vicor — 1200A ChiP-set enables higher performance AI accelerator cards (release)",
+   "url": "https://www.vicorpower.com/press-room/2016-2021/hydra-ii",
+   "date": "2020-05-14"
+  },
+  {
+   "label": "Military & Aerospace Electronics — Vicor to showcase 48V power modules at ODCC Summit (2019)",
+   "url": "https://www.militaryaerospace.com/directory/press-release/14062351/vicor-corp-vicor-to-showcase-its-latest-48v-power-module-innovations-at-open-data-center-committee-summit",
+   "date": "2019-10-30"
+  },
+  {
+   "label": "Vicor — BCM family overview, Rev 1.0 (PDF)",
+   "url": "https://www.vicorpower.com/documents/family_overviews/fo-BCM-VICOR.pdf",
+   "date": "2019-08"
+  },
+  {
+   "label": "Vicor — PFM4914xB6M48D0yAz datasheet, Rev 1.1 (PDF)",
+   "url": "https://www.vicorpower.com/documents/datasheets/ds_PFM4914xB6M48D0yAz.pdf",
+   "date": "2018-08"
+  },
+  {
+   "label": "Vicor — NBM6123x60E12A7yzz datasheet, Rev 1.8 (PDF)",
+   "url": "https://www.vicorpower.com/documents/datasheets/ds_NBM6123x60E12A7yzz.pdf",
+   "date": "2017-11"
+  },
+  {
+   "label": "Vicor — Power-on-Package enables higher performance for AI processors (release)",
+   "url": "https://www.vicorpower.com/press-room/power-on-package",
+   "date": "2017-08-22"
+  },
+  {
+   "label": "Vicor — VTM48EF012T130C01 datasheet, Rev 1.0 (PDF)",
+   "url": "https://www.vicorpower.com/documents/datasheets/ds-VTM48EF012T130C01-VICOR.pdf",
+   "date": "2016-05"
+  },
+  {
+   "label": "Vicor — press room index",
+   "url": "https://www.vicorpower.com/press-room"
+  },
+  {
+   "label": "Vicor — corporate officers page",
+   "url": "https://www.vicorpower.com/about-the-company/corporate-officers"
+  },
+  {
+   "label": "Vicor — corporate governance page",
+   "url": "https://www.vicorpower.com/about-the-company/corporate-governance"
+  },
+  {
+   "label": "Vicor — Power-on-Package page",
+   "url": "https://www.vicorpower.com/industries-and-innovations/power-on-package"
+  },
+  {
+   "label": "Vicor — non-isolated fixed-ratio converters (NBM) family page",
+   "url": "https://www.vicorpower.com/dc-dc/non-isolated-fixed-ratio"
+  },
+  {
+   "label": "Vicor — NBM product listing",
+   "url": "https://www.vicorpower.com/dc-dc/non-isolated-fixed-ratio/nbm"
+  },
+  {
+   "label": "Vicor — isolated fixed-ratio converters (BCM) family page",
+   "url": "https://www.vicorpower.com/dc-dc/isolated-fixed-ratio"
+  },
+  {
+   "label": "Vicor — BCM product listing",
+   "url": "https://www.vicorpower.com/dc-dc/isolated-fixed-ratio/bus-converter-module"
+  },
+  {
+   "label": "Vicor — buck-boost current multipliers page",
+   "url": "https://www.vicorpower.com/dc-dc/isolated-regulated/buck-boost-current-multipliers"
+  },
+  {
+   "label": "Vicor — VTM current multiplier product page",
+   "url": "https://www.vicorpower.com/dc-dc-converters-board-mount/vtm-current-multiplier"
+  },
+  {
+   "label": "Vicor — DCM isolated regulated converters page",
+   "url": "https://www.vicorpower.com/dc-dc/isolated-regulated/dcm"
+  },
+  {
+   "label": "Vicor — high voltage to 48 V page",
+   "url": "https://www.vicorpower.com/industries-and-innovations/vicor-48v/hv-to-48v"
+  },
+  {
+   "label": "Vicor — computing industry page",
+   "url": "https://www.vicorpower.com/industries-and-innovations/computing"
+  },
+  {
+   "label": "Vicor — automotive industry page",
+   "url": "https://www.vicorpower.com/industries-and-innovations/automotive"
+  },
+  {
+   "label": "Vicor — automotive product listing",
+   "url": "https://www.vicorpower.com/all-products/automotive"
+  },
+  {
+   "label": "Vicor — HV battery conversion page",
+   "url": "https://www.vicorpower.com/industries-and-innovations/automotive/hv-battery-conversion"
+  },
+  {
+   "label": "Vicor — aerospace and defense page",
+   "url": "https://www.vicorpower.com/industries-and-innovations/aerospace-and-defense"
+  },
+  {
+   "label": "Vicor — AC-DC hub page",
+   "url": "https://www.vicorpower.com/ac-dc"
+  },
+  {
+   "label": "Vicor — Vertical power delivery enables cutting-edge processing (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/high-performance-computing/vertical-power-delivery-enables-cutting-edge-processing"
+  },
+  {
+   "label": "Vicor — Tackling power challenges of GenAI data centers (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/high-performance-computing/tackling-power-challenges-of-genai-data-centers"
+  },
+  {
+   "label": "Vicor — Current multipliers powering AI processors (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/high-performance-computing/current-multipliers-powering-ai-processors"
+  },
+  {
+   "label": "Vicor — Disaggregating power in data centers (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/high-performance-computing/disaggregating-power-in-data-centers"
+  },
+  {
+   "label": "Vicor — Powering AI processors using a 48V FPA (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/high-performance-computing/powering-ai-processors-using-a-48v-fpa"
+  },
+  {
+   "label": "Vicor — Powering clustered AI processors (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/high-performance-computing/powering-clustered-ai-processors"
+  },
+  {
+   "label": "Vicor — Power modules accelerate the path from 800V to 48V SELV (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/automotive/power-modules-accelerate-path-800v-to-48v-selv"
+  },
+  {
+   "label": "Vicor — Innovating power module packaging (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/innovating-power-module-packaging"
+  },
+  {
+   "label": "Vicor — Vicor completes 95,000 s/f ChiP fab expansion (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/vicor-completes-95000-sf-chip-fab-expansion"
+  },
+  {
+   "label": "Vicor — Vicor touts its American ChiP fab (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/vicor-touts-its-american-chip-fab"
+  },
+  {
+   "label": "Vicor — ChiP fab: automated and sustainable manufacturing (article)",
+   "url": "https://www.vicorpower.com/resource-library/articles/vicor-chip-fab--automated-and-sustainable-manufacturing"
+  },
+  {
+   "label": "Vicor — ChiP backgrounder white paper (PDF)",
+   "url": "https://www.vicorpower.com/documents/whitepapers/wp-ChiP-Backgrounder.pdf"
+  },
+  {
+   "label": "Vicor — Factorized Power Architecture white paper (PDF)",
+   "url": "https://www.vicorpower.com/documents/whitepapers/wp-FPA-Achieving-high-density-efficiency-VICOR.pdf"
+  },
+  {
+   "label": "Vicor — about the company page",
+   "url": "https://www.vicorpower.com/about-the-company"
+  },
+  {
+   "label": "SEC EDGAR — Vicor filing index (CIK 751978)",
+   "url": "https://data.sec.gov/submissions/CIK0000751978.json"
+  },
+  {
+   "label": "Federal Register API — notices in Inv. 337-TA-1370",
+   "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"337-TA-1370\""
+  },
+  {
+   "label": "Federal Register API — notices in Inv. 337-TA-1484",
+   "url": "https://www.federalregister.gov/api/v1/documents.json?conditions[term]=\"337-TA-1484\""
+  },
+  {
+   "label": "CourtListener — Vicor v. Delta Electronics et al., E.D. Tex. 2:23-cv-00323 docket",
+   "url": "https://www.courtlistener.com/docket/67602631/vicor-corporation-v-delta-electronics-inc/"
+  },
+  {
+   "label": "CourtListener — Delta Electronics v. Vicor, W.D. Tex. 6:23-cv-00726 docket",
+   "url": "https://www.courtlistener.com/docket/67907084/delta-electronics-inc-v-vicor-corporation/"
+  },
+  {
+   "label": "PacerMonitor — Vicor v. Delta Electronics, E.D. Tex. 2:26-cv-00017 docket",
+   "url": "https://www.pacermonitor.com/public/case/62366272/Vicor_Corporation_v_Delta_Electronics,_Inc_et_al"
+  },
+  {
+   "label": "exparte — Vicor v. Luxshare Precision et al., E.D. Tex. 2:26-cv-00018 complaint analysis",
+   "url": "https://ai-lab.exparte.com/case/dct/txed/2:26-cv-00018/doc/analysis/1"
+  },
+  {
+   "label": "CAFC — opinions and orders search for No. 25-1616 (none listed)",
+   "url": "https://www.cafc.uscourts.gov/home/case-information/opinions-orders/?field_case_number_value=25-1616"
+  },
+  {
+   "label": "Zacks via TradingView — Gen 2 VPD boosts VICR's power management prospects against TXN and ADI",
+   "url": "https://www.tradingview.com/news/zacks:85cc6f0f7094b:0-gen-2-vpd-boosts-vicr-s-power-management-prospects-against-txn-adi/"
+  },
+  {
+   "label": "Zacks via TradingView — Vicor stock outlook as AI demand, capacity and royalties align",
+   "url": "https://www.tradingview.com/news/zacks:b97faa52d094b:0-vicor-stock-outlook-as-ai-demand-capacity-and-royalties-align/"
+  },
+  {
+   "label": "Investing.com India — Vicor earnings consensus and history",
+   "url": "https://in.investing.com/equities/vicor-corp-earnings"
+  },
+  {
+   "label": "Public.com — VICR earnings page",
+   "url": "https://public.com/stocks/vicr/earnings"
+  },
+  {
+   "label": "Market Chameleon — VICR earnings dates",
+   "url": "https://marketchameleon.com/Overview/VICR/Earnings/Earnings-Dates/"
+  },
+  {
+   "label": "iKnow (Taiwan STPI) — Vicor and Delta end district-court litigation; CAFC appeal continues (title only)",
+   "url": "https://iknow.stpi.niar.org.tw/post/Read.aspx?PostID=21806"
+  },
+  {
+   "label": "iKnow (Taiwan STPI) — ITC opinion: Delta/Cyntec design-around succeeded (title only)",
+   "url": "https://iknow.stpi.niar.org.tw/post/Read.aspx?PostID=21191"
+  },
+  {
+   "label": "PatSnap — Vicor v. Delta Electronics / Foxconn power converter patent dispute",
+   "url": "https://www.patsnap.com/de/resources/blog/litigation/vicor-v-delta-electronics-foxconn-power-converter-patent-dispute-patsnap/"
+  },
+  {
+   "label": "Wikimedia Commons — File:Patrizio Vinciarelli.jpg",
+   "url": "https://commons.wikimedia.org/wiki/File:Patrizio_Vinciarelli.jpg"
+  },
+  {
+   "label": "Wikipedia — Patrizio Vinciarelli",
+   "url": "https://en.wikipedia.org/wiki/Patrizio_Vinciarelli"
+  },
+  {
+   "label": "Wikimedia Commons — Category:Vicor Corporation (404)",
+   "url": "https://commons.wikimedia.org/wiki/Category:Vicor_Corporation"
+  }
+ ],
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1,
+ "founded": 1981,
+ "employees": "1,092 full-time + 23 part-time (Dec 31, 2025)",
+ "summary": "BOTTOM LINE UP FRONT: Vicor is the point-of-load and bus-converter silicon vendor for the 48 V and 800 V AI rack whose revenue has been re-based by patent enforcement — a February 2025 ITC exclusion order over its bus-converter patents turned royalties from 3.9% of revenue in 2023 into 21% of the June 2026 quarter, while its single Andover ChiP fab approaches capacity on a second-generation vertical-power-delivery ramp for a lead customer it will not name; the next verifiable tests are the Q3 2026 results expected around 20 October 2026 (unconfirmed), the second-fab site decision management said in July was weeks away, and the May 2027 initial determination in its second ITC case against Delta, Monolithic Power Systems and the server ODMs. BACKGROUND. Founded in Andover, Massachusetts in 1981 by Patrizio Vinciarelli, who remains chairman, president and CEO at 79 with ten-vote Class B shares; NASDAQ: VICR; 1,092 full-time employees at end-2025 per the 10-K; one reportable segment split between Advanced Products (the Factorized Power Architecture — PRM regulators, VTM current multipliers, Power-on-Package and vertical power delivery — plus BCM, NBM and DCM converters) and legacy Brick Products (39.0% of 2025 net revenues). FY2025 revenue was $452.7M including a $45.0M patent-litigation settlement (net revenues $407.7M: product $350.3M, royalty $57.4M), net income $118.6M; Q2 2026 revenue $143.4M with royalty $30.4M, backlog $380M and cash $453.6M, per SEC 8-K exhibits. Products are built on a proprietary panel-level 'ChiP' process in one company-owned 320,000-square-foot Andover building whose fab opened in May 2022; the company earned CHIPS Act advanced-manufacturing credits on it. The IP practice, headed by a General Counsel for Intellectual Property since October 2025, rests on 128 US patents; the ITC found a Section 337 violation on two of three patents in February 2025 (with Delta's redesigned products non-infringing and Foxconn affiliates licensed), a $45M settlement with unnamed parties followed in May 2025, an all-inclusive OEM licence structured as $60M over two years followed in May 2026, and a second investigation on a patent issued in August 2025 was instituted in February 2026 with a target date of September 2027. Vicor is absent from every NVIDIA 800 VDC partner list published since May 2025.",
+ "ecosystemRole": "We assess Vicor as this corpus's reference for the last centimetre of the AI power chain — the fixed-ratio bus converters that take an 800 V or 400 V rack bus to 48 V, and the current multipliers that take 48 V to about one volt at a thousand amps beside or beneath the processor — and the one vendor in the file paid for that idea twice, as a module built in its own fab and as a licence enforced at the border. Basis: its 10-K's description of the Factorized Power Architecture and Power-on-Package, its datasheets, and the ITC's 2025 determination. Against the shelf vendors this app covers (Delta, LITEON, Megmeet), Vicor sells the converter component rather than the shelf, and against the multiphase-regulator vendors on NVIDIA's 800 VDC silicon lists it sells an architecture rather than a part; it is the natural anchor for how a DC bus is stepped down inside the rack and, because a BBU or supercapacitor shelf lives on the same bus, for where a storage seller's in-rack conversation begins."
+}

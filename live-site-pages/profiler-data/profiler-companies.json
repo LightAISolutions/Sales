@@ -1606,6 +1606,25 @@
       "kpiNorm": true
     },
     {
+      "slug": "vicor",
+      "name": "Vicor",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "Point-of-load and bus-converter silicon for the 48 V and 800 V AI rack — factorized power, current multipliers and vertical power delivery from one Andover ChiP fab; a 2025 ITC exclusion order over its bus-converter patents took royalties to 21% of Q2 2026 revenue, a second ITC case runs to 2027, and it is absent from every NVIDIA 800 VDC partner list.",
+      "hq": "Andover, MA, USA",
+      "ticker": "NASDAQ: VICR",
+      "status": "active",
+      "lastUpdated": "2026-09-03",
+      "domains": [
+        "vicorpower.com",
+        "vicorcorporation.gcs-web.com"
+      ],
+      "srcTotal": 136,
+      "srcFirstPct": 57,
+      "kpiNorm": true
+    },
+    {
       "slug": "voltagrid",
       "name": "VoltaGrid",
       "categories": [

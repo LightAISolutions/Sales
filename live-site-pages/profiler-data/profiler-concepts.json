@@ -179,6 +179,30 @@
    ]
   },
   {
+   "slug": "buck-converter",
+   "term": "buck converter",
+   "def": "The workhorse step-down switching converter: a switch chops the input on and off thousands to millions of times a second, and an inductor and capacitor smooth the chopped pulses into a lower steady voltage set by the fraction of time the switch is on. Several bucks running out of step with each other — a multiphase buck — share the current and cancel each other's ripple, which is how the regulators beside a processor deliver hundreds of amps.",
+   "aliases": [
+    "buck",
+    "step-down converter",
+    "multiphase buck",
+    "multi-phase buck",
+    "buck regulator"
+   ]
+  },
+  {
+   "slug": "bus-converter",
+   "term": "bus converter",
+   "def": "A DC-DC stage that steps a distribution voltage down by a fixed ratio, like a transformer for direct current, without trying to hold its output constant. Giving up regulation lets it run at its resonant sweet spot with very high efficiency and density; a separate regulator elsewhere in the chain does the holding.",
+   "aliases": [
+    "intermediate bus converter",
+    "IBC",
+    "fixed-ratio converter",
+    "fixed-ratio bus converter",
+    "DC transformer"
+   ]
+  },
+  {
    "slug": "busbar",
    "term": "busbar",
    "def": "A solid bar of copper or aluminum used instead of cable to carry very large currents over short distances inside equipment, a rack, or a switchboard. It is the same idea as facility busway one scale smaller and inside the machine, and its cross-section is the only thing standing between the current and the heat that current makes.",
@@ -299,6 +323,16 @@
    ]
   },
   {
+   "slug": "conversion-efficiency",
+   "term": "conversion efficiency",
+   "def": "Output power divided by input power for a converter — the rest leaves as heat. Efficiency is a curve, not a number: it collapses at light load and peaks somewhere below full load, so where a unit is parked on that curve matters as much as its headline figure.",
+   "aliases": [
+    "efficiency curve",
+    "peak efficiency",
+    "efficiency sweet spot"
+   ]
+  },
+  {
    "slug": "conversion-stage",
    "term": "conversion stage",
    "def": "One place in a power chain where electricity changes form or level — AC to DC, one DC voltage to another, one AC voltage to another. Each stage costs roughly one to three percent of the power as heat that must then be cooled, plus a box, floor space, and a way to fail; designing a power architecture is largely the art of deleting stages.",
@@ -376,6 +410,34 @@
    ]
   },
   {
+   "slug": "current-density",
+   "term": "current density",
+   "def": "How much current a converter or conductor delivers per unit of area, usually amps per square centimetre of board or package footprint. As chip currents climb past a thousand amps, the current density a regulator can achieve decides whether it fits beside — or beneath — the processor at all.",
+   "aliases": [
+    "amps per square centimetre",
+    "A/cm²",
+    "current per area"
+   ]
+  },
+  {
+   "slug": "current-multiplier",
+   "term": "current multiplier",
+   "def": "A converter that trades voltage for current at a fixed ratio — halve the voltage, double the current — much as a gear train trades speed for torque. In a factorized power chain it is the stage nearest the load, turning a modest current at a higher voltage into the very large current the chip needs at about one volt.",
+   "aliases": [
+    "current multiplication",
+    "current-multiplier"
+   ]
+  },
+  {
+   "slug": "current-sharing",
+   "term": "current sharing",
+   "def": "Making several converters or supplies that feed one bus each carry a fair fraction of the load instead of one hogging it. Without deliberate sharing, small differences in output voltage let one unit take everything and overheat while its neighbours idle.",
+   "aliases": [
+    "load sharing",
+    "active current sharing"
+   ]
+  },
+  {
    "slug": "curtailment",
    "term": "curtailment",
    "def": "Being instructed to reduce output or consumption because the network cannot accommodate it at that moment. For a generator it is power that cannot be sold; for a very large load it is a contractual duty to back off — and a curtailment protocol is the document saying under what conditions, for how long, and who decides.",
@@ -434,6 +496,17 @@
    "aliases": [
     "derate",
     "derated"
+   ]
+  },
+  {
+   "slug": "design-win",
+   "term": "design win",
+   "def": "Being selected as the supplier for a component in a product that is about to be built — decided during the customer's design phase, often years before volume revenue. Once designed in, a part is expensive to replace, so the win locks in the socket for that product's life.",
+   "aliases": [
+    "design-in",
+    "design wins",
+    "design-win",
+    "designed in"
    ]
   },
   {
@@ -599,6 +672,17 @@
    "def": "The DC current fed to a synchronous machine's rotor winding to create its magnetic field. Raising it lifts the output voltage and the reactive power the machine supplies; the automatic voltage regulator adjusts it continuously, and it is how a rotary UPS or a synchronous condenser holds voltage through a disturbance."
   },
   {
+   "slug": "factorized-power",
+   "term": "factorized power",
+   "def": "A power-chain design that splits the two jobs a converter normally does — holding the voltage steady (regulation) and changing its level (transformation) — into separate stages, so each can be built where it works best. The regulator lives upstream where the current is small, and a fixed-ratio current multiplier lives next to the load where the current is enormous.",
+   "aliases": [
+    "Factorized Power Architecture",
+    "FPA",
+    "factorized power architecture",
+    "factorized"
+   ]
+  },
+  {
    "slug": "fault-current",
    "term": "fault current",
    "aliases": [
@@ -656,6 +740,19 @@
     "FOM",
     "front of meter",
     "in front of the meter"
+   ]
+  },
+  {
+   "slug": "galvanic-isolation",
+   "term": "galvanic isolation",
+   "def": "An electrical barrier — usually a transformer — that lets power cross from one circuit to another with no conducting path between them, so a fault on one side cannot reach people or equipment on the other. A non-isolated converter drops the barrier for simplicity and density where the chain already provides one upstream.",
+   "aliases": [
+    "isolation",
+    "isolated converter",
+    "non-isolated converter",
+    "isolation barrier",
+    "non-isolated",
+    "isolated"
    ]
   },
   {
@@ -742,6 +839,18 @@
    ]
   },
   {
+   "slug": "hot-swap",
+   "term": "hot-swap",
+   "def": "Removing or inserting a unit — a power supply, a converter shelf, a drive — while the rest of the system stays live. It works only because the unit and its slot were engineered for it: the connector sequence, the inrush control and the isolation of a failed unit are all deliberate design work.",
+   "aliases": [
+    "hot swap",
+    "hot-swappable",
+    "hot swappable",
+    "hot-plug",
+    "live swap"
+   ]
+  },
+  {
    "slug": "hvdc",
    "term": "HVDC",
    "def": "High-voltage direct current: moving power as DC instead of AC — over long transmission links, and now inside the data center as the 800 VDC rack architecture. Fewer conversion stages and far less copper, at the cost of protection that cannot wait for an AC waveform to cross zero and extinguish the arc for it.",
@@ -753,6 +862,20 @@
    "slug": "hyperscaler",
    "term": "hyperscaler",
    "def": "One of the giant cloud and platform operators that build and lease data-center capacity at gigawatt scale. Their capital spending sets the pace of the AI data-center buildout."
+  },
+  {
+   "slug": "i2r-loss",
+   "term": "I²R loss",
+   "def": "The heat made by current flowing through resistance: power lost equals current squared times resistance. Doubling the current through the same conductor quadruples the loss, which is why every power chain climbs to a higher voltage — and a lower current — for the long stretch and converts down only at the end.",
+   "aliases": [
+    "I2R loss",
+    "I²R",
+    "I2R",
+    "resistive loss",
+    "copper loss",
+    "ohmic loss",
+    "conduction loss"
+   ]
   },
   {
    "slug": "ibr",
@@ -811,6 +934,15 @@
    ]
   },
   {
+   "slug": "inrush",
+   "term": "inrush",
+   "def": "The brief surge of current a device draws at the instant it is connected, as its empty capacitors charge in a rush. Uncontrolled, it can sag a shared bus, trip protection or pit a connector; precharge circuits exist to tame it.",
+   "aliases": [
+    "inrush current",
+    "inrush surge"
+   ]
+  },
+  {
    "slug": "interconnection-queue",
    "term": "interconnection queue",
    "def": "The waiting line for grid-connection studies and approval. Multi-year queues are one of the main bottlenecks for new data centers and storage plants.",
@@ -819,11 +951,36 @@
    ]
   },
   {
+   "slug": "intermediate-bus",
+   "term": "intermediate bus",
+   "def": "The voltage a rack or a server distributes between its main supply and the point-of-load converters — 12 volts in the older chain, 48 volts (often run at 54) in the modern one. Choosing it is a trade between the current the bus must carry, the safety rules it falls under, and how hard the final conversion becomes.",
+   "aliases": [
+    "intermediate bus architecture",
+    "IBA",
+    "48 V bus",
+    "48-volt bus",
+    "48V bus",
+    "54 V bus"
+   ]
+  },
+  {
    "slug": "inverter",
    "term": "inverter",
    "def": "A converter that turns direct current into alternating current — the mirror image of a rectifier. It appears wherever DC has to be handed back to an AC world: on the output of a battery or solar array, inside a UPS, and between an electric vehicle's pack and its motor. A bidirectional one that does both jobs is a power conversion system.",
    "aliases": [
     "inverters"
+   ]
+  },
+  {
+   "slug": "ip-licensing",
+   "term": "IP licensing",
+   "def": "Earning revenue by letting other companies use patented technology under a royalty or fee instead of, or as well as, selling products. For a hardware company it turns a patent portfolio into a second business — and a lawsuit into a negotiation.",
+   "aliases": [
+    "licensing",
+    "royalty",
+    "royalties",
+    "patent license",
+    "licensing program"
    ]
   },
   {
@@ -883,6 +1040,15 @@
    ]
   },
   {
+   "slug": "lateral-power-delivery",
+   "term": "lateral power delivery",
+   "def": "Feeding a processor from converters mounted on the board beside the package, with the current running sideways through the board's copper for the last centimetre. It is the conventional arrangement, and the one that runs out of room and out of copper as chip currents climb.",
+   "aliases": [
+    "LPD",
+    "lateral power"
+   ]
+  },
+  {
    "slug": "lean-burn",
    "term": "lean-burn",
    "def": "A gas-engine combustion strategy that burns with excess air, which lowers peak flame temperature and so forms far less nitrogen oxide inside the cylinder. It is how a natural-gas gen-set meets a tight air permit with little after-treatment, at the cost of a slower response to sudden load steps than a diesel.",
@@ -922,6 +1088,18 @@
     "load-shed priority",
     "load-shedding",
     "shed load"
+   ]
+  },
+  {
+   "slug": "load-transient",
+   "term": "load transient",
+   "def": "A sudden change in the current a load draws — a processor jumping from idle to full work in microseconds. The converter must hold the voltage through it, and how fast it responds, and how much stored charge sits beside the chip to cover the gap, is a central design constraint.",
+   "aliases": [
+    "transient response",
+    "di/dt",
+    "current slew rate",
+    "load transients",
+    "transient"
    ]
   },
   {
@@ -1101,6 +1279,18 @@
    ]
   },
   {
+   "slug": "oring",
+   "term": "ORing",
+   "def": "Joining two or more sources to one bus through devices that let current flow only out of each source — an OR gate for power. A source that fails or is unplugged cannot drag the bus down or draw current from its neighbours, which is what makes redundant supplies and live swaps safe.",
+   "aliases": [
+    "OR-ing",
+    "ORing diode",
+    "ORing FET",
+    "ORing controller",
+    "oring"
+   ]
+  },
+  {
    "slug": "paralleling-switchgear",
    "term": "paralleling switchgear",
    "def": "Switchgear whose controller synchronizes several generators onto one common bus, adds them in a set order, shares the load between them and sheds low-priority load if generation runs short — a room of engines behaving as one plant. It is what turns a collection of standby gen-sets into a campus-scale power source.",
@@ -1130,6 +1320,15 @@
    ]
   },
   {
+   "slug": "pdn",
+   "term": "PDN",
+   "def": "Power delivery network: everything between a converter's output and the transistors on the chip — board copper, package pins, vias, the substrate and the decoupling capacitors along the way. Its resistance and inductance set how much voltage is lost on the way and how fast the supply can answer a transient.",
+   "aliases": [
+    "power delivery network",
+    "power distribution network"
+   ]
+  },
+  {
    "slug": "pdu",
    "term": "PDU",
    "def": "Power distribution unit: data-center gear that splits and distributes power to the racks — the branch circuits between the UPS and the servers.",
@@ -1141,6 +1340,17 @@
    "slug": "pjm",
    "term": "PJM",
    "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
+  },
+  {
+   "slug": "point-of-load",
+   "term": "point of load",
+   "def": "The final converter in the chain, placed as close as physically possible to the device it feeds, so that the very large current at a very low voltage travels only millimetres. Everything upstream can run at a higher voltage; the point of load is where the chain gives that up.",
+   "aliases": [
+    "point-of-load",
+    "POL",
+    "POL converter",
+    "point-of-load converter"
+   ]
   },
   {
    "slug": "power-battery",
@@ -1160,6 +1370,16 @@
     "voltage conditioning"
    ],
    "def": "Cleaning up the supply before it reaches the load — holding voltage and frequency steady, removing harmonics, riding through sags and spikes — as distinct from replacing the supply when it fails. Every UPS does some of it; a double-conversion or rotary unit does all of it, all the time."
+  },
+  {
+   "slug": "power-density",
+   "term": "power density",
+   "def": "How much conversion capability fits in a given volume, usually watts per cubic inch or per litre. In racks where every rack unit is contested, a denser converter buys back space for compute — which is why the metric has become a competitive scoreboard.",
+   "aliases": [
+    "watts per cubic inch",
+    "W/in³",
+    "volumetric density"
+   ]
   },
   {
    "slug": "power-factor",
@@ -1193,6 +1413,17 @@
    "def": "The North American reliability standard making ride-through mandatory for inverter-based resources, storage included — the continent-wide counterpart to what individual grid operators had already required regionally. It is the point at which ride-through capability stops being a regional differentiator and becomes a baseline everywhere.",
    "aliases": [
     "PRC-029"
+   ]
+  },
+  {
+   "slug": "precharge",
+   "term": "precharge",
+   "def": "A circuit that charges a unit's capacitors gently through a resistor or a controlled switch before the main connection closes, so a live insertion does not draw a damaging inrush surge. It is the quiet engineering that makes hot-swap possible.",
+   "aliases": [
+    "pre-charge",
+    "precharge circuit",
+    "soft-start",
+    "soft start"
    ]
   },
   {
@@ -1232,6 +1463,16 @@
    "def": "Power usage effectiveness: total facility power divided by the power that reaches the IT equipment. A PUE of 1.0 would mean every watt went to computing; the gap above it is cooling, conversion, and lighting overhead — the industry's headline efficiency number.",
    "aliases": [
     "power usage effectiveness"
+   ]
+  },
+  {
+   "slug": "pwm",
+   "term": "PWM",
+   "def": "Pulse-width modulation: controlling a converter by switching fully on and fully off at a fixed rate and varying only the fraction of each cycle spent on — the duty cycle. A switch that is either fully on or fully off wastes little, which is the basic reason switching converters beat the old linear ones.",
+   "aliases": [
+    "pulse-width modulation",
+    "pulse width modulation",
+    "duty cycle"
    ]
   },
   {
@@ -1411,6 +1652,18 @@
    ]
   },
   {
+   "slug": "section-337",
+   "term": "Section 337",
+   "def": "The U.S. trade statute under which the International Trade Commission investigates imported products accused of infringing a U.S. patent. Its remedy is not damages but an exclusion order — the product is stopped at the border — which makes it a fast and heavy lever in hardware patent disputes.",
+   "aliases": [
+    "USITC",
+    "U.S. International Trade Commission",
+    "International Trade Commission",
+    "exclusion order",
+    "limited exclusion order"
+   ]
+  },
+  {
    "slug": "selective-catalytic-reduction",
    "term": "selective catalytic reduction",
    "def": "Exhaust after-treatment that injects a urea or ammonia solution across a catalyst to convert nitrogen oxides into nitrogen and water. It is the standard control that lets a diesel or gas plant meet a tight air permit, and it is equipment, space and a consumable rather than a setting.",
@@ -1427,6 +1680,19 @@
    "aliases": [
     "selectivity",
     "zone-selective interlocking"
+   ]
+  },
+  {
+   "slug": "selv",
+   "term": "SELV",
+   "def": "Safety extra-low voltage: a supply below about 60 volts DC that the safety standards treat as safe to touch, so it can be handled, wired and serviced without the insulation, clearances and lockout that higher voltages demand. The 48-volt rack bus sits deliberately just under that line.",
+   "aliases": [
+    "safety extra-low voltage",
+    "60 V limit",
+    "60-volt limit",
+    "extra-low voltage",
+    "ELV",
+    "touch-safe"
    ]
   },
   {
@@ -1457,6 +1723,16 @@
    ]
   },
   {
+   "slug": "sine-amplitude-converter",
+   "term": "sine amplitude converter",
+   "def": "A fixed-ratio converter that drives its transformer with a pure sine-wave current at resonance and switches its transistors only as that current passes through zero, so almost nothing is wasted in the switching itself. The idea lets a current multiplier run at very high frequency, which shrinks its magnetics and raises its density.",
+   "aliases": [
+    "SAC",
+    "Sine Amplitude Converter",
+    "sine-amplitude converter"
+   ]
+  },
+  {
    "slug": "smr",
    "term": "SMR",
    "def": "Small modular reactor: a nuclear plant designed as factory-built units of roughly 50 to 300 MW each rather than one gigawatt-class build, meant to be licensed once and repeated. None is yet operating commercially in the United States; for a utility and a hyperscaler the attraction is clean, dispatchable power on an existing nuclear site, and the constraint is a licensing and construction clock measured in a decade.",
@@ -1472,6 +1748,19 @@
    "def": "A battery chemistry replacing lithium with abundant sodium — cheaper materials and better cold-weather performance at lower energy density; an emerging challenger for stationary storage.",
    "aliases": [
     "Na-ion"
+   ]
+  },
+  {
+   "slug": "soft-switching",
+   "term": "soft switching",
+   "def": "Switching a converter's transistors at the instant the voltage or current across them is zero, so the transition itself dissipates almost nothing. Hard switching — turning off while current still flows — wastes energy on every edge, which limits how fast a converter can switch and therefore how small it can be.",
+   "aliases": [
+    "zero-voltage switching",
+    "ZVS",
+    "zero-current switching",
+    "ZCS",
+    "resonant switching",
+    "hard switching"
    ]
   },
   {
@@ -1581,6 +1870,15 @@
    ]
   },
   {
+   "slug": "substrate",
+   "term": "substrate",
+   "def": "The layered board a processor die is mounted on inside its package, carrying the die's thousands of connections out to the pins or balls beneath. It is where the power delivery network ends — and, increasingly, where the last converter is asked to sit.",
+   "aliases": [
+    "package substrate",
+    "interposer"
+   ]
+  },
+  {
    "slug": "supercapacitor",
    "term": "supercapacitor",
    "def": "A device storing energy as separated electric charge rather than as a chemical reaction. It holds far less energy than a battery of the same size but takes it in and gives it back within milliseconds, over and over, for many years — which makes it the right part for absorbing a spike and the wrong one for riding out an outage.",
@@ -1596,6 +1894,15 @@
    "def": "The assemblies of breakers, switches, and protective relays that route power and isolate faults at a substation or in a power room. It is where the electrical system decides which circuits go dark when something fails — and, built into factory-tested skids, it is how much of a data center's power room now arrives on site.",
    "aliases": [
     "switchboard"
+   ]
+  },
+  {
+   "slug": "switching-frequency",
+   "term": "switching frequency",
+   "def": "How many times a second a switching converter turns on and off. A higher frequency lets the inductors, transformers and capacitors that smooth the output shrink in proportion, at the cost of more switching loss — the trade that wide-bandgap semiconductors and soft switching exist to improve.",
+   "aliases": [
+    "switching speed",
+    "high-frequency switching"
    ]
   },
   {
@@ -1653,6 +1960,17 @@
     "take or pay",
     "committed capacity",
     "minimum take"
+   ]
+  },
+  {
+   "slug": "thermal-resistance",
+   "term": "thermal resistance",
+   "def": "How hard it is for heat to escape from a part to the air or liquid that carries it away, measured as temperature rise per watt. A converter's current rating is really a thermal statement: the current it can carry before its junction temperature reaches the limit through the path it has been given.",
+   "aliases": [
+    "junction temperature",
+    "thermal path",
+    "heat flux",
+    "thermal margin"
    ]
   },
   {
@@ -1728,6 +2046,15 @@
    ]
   },
   {
+   "slug": "vertical-power-delivery",
+   "term": "vertical power delivery",
+   "def": "Mounting the final converters directly beneath the processor package, on the far side of the board, so current flows straight up through the board into the chip instead of sideways across it. The shorter path cuts resistive loss and frees the board area around the package for signal connections.",
+   "aliases": [
+    "VPD",
+    "vertical power"
+   ]
+  },
+  {
    "slug": "vertically-integrated-utility",
    "term": "vertically integrated utility",
    "def": "A utility that owns generation, transmission and distribution and sells to the end customer under one regulated franchise — Dominion Energy Virginia, Georgia Power and Entergy are the pattern. Contrast a wires-only utility in a restructured market such as Texas, which delivers power it does not generate. Which kind sits across the table decides whether the utility buys plants or only substations.",
@@ -1746,6 +2073,19 @@
    "aliases": [
     "VSG",
     "virtual synchronous machine"
+   ]
+  },
+  {
+   "slug": "voltage-regulation",
+   "term": "voltage regulation",
+   "def": "Holding a converter's output voltage steady as its input voltage and its load change. A regulated converter watches its output and corrects continuously; an unregulated one simply follows its input by a fixed ratio, trading precision for efficiency and relying on regulation elsewhere in the chain.",
+   "aliases": [
+    "line regulation",
+    "load regulation",
+    "regulated converter",
+    "unregulated converter",
+    "voltage regulator",
+    "regulated output"
    ]
   },
   {

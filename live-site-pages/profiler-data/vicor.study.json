@@ -1,0 +1,611 @@
+{
+ "schemaVersion": 2,
+ "slug": "vicor",
+ "title": "Vicor — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "the-last-centimetre-problem",
+   "title": "The last centimetre: where all the amps are",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "This guide sits at the far end of the data-center power chain — after the {{substation}}, the {{UPS}} room, the {{PDU}} and the rack whip, which other guides in this app walk from the grid inward. Here the camera sits with the silicon that makes the final conversions: from the rack's distribution bus, whether that is 48 volts or 800, down to the roughly one volt a processor actually drinks. The distance involved is a few centimetres of board copper, and it is the hardest stretch in the whole chain.",
+    "Start with two rules of arithmetic. Power is voltage times current, so delivering a fixed number of watts at a lower voltage means a proportionally higher current. And the heat a conductor makes is current squared times its resistance — {{I²R loss}} — so the current climbing at each step down in voltage is not a linear problem but a squared one. Halve the voltage and the current doubles; the loss through the same copper quadruples.",
+    "Now put a modern accelerator on the bench. A single AI processor can draw more than a kilowatt at a rail of about 0.8 to 1.0 volts, which is more than a thousand amps. A thousand amps cannot be routed across a motherboard: copper wide enough to carry it would be thicker than the board, and the voltage lost along the way would exceed what the chip tolerates. So the chain keeps the voltage high — 800 volts to the rack, 48 volts across the tray — for as long as it can, and makes the thousand amps only in the last centimetre, as close to the die as the packaging allows.",
+    "Everything in this guide follows from that constraint: why the rack bus moved from 12 volts to 48; why the 48-volt figure was chosen and not 100; why the best converters split regulation from transformation into two different boxes; why the last converter is being pushed off the board and under the processor package; and why, once the rack runs on a DC bus, the battery can sit on that bus too. The company whose products anchor this guide makes the silicon for exactly that last stretch, and its catalogue is read against the chain near the end."
+   ]
+  },
+  {
+   "id": "amps-per-kilowatt",
+   "title": "Amps per kilowatt: the same power at each voltage",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "amps per kilowatt delivered",
+   "intro": "One kilowatt of chip power, and the current it takes at each voltage the chain passes through on the way down. The bars are the whole argument of the guide in one picture: the current is tiny where the voltage is high and explodes at the final rail, which is why the final conversion has to happen as close to the chip as physically possible.",
+   "items": [
+    {
+     "label": "13.8 kV grid feed",
+     "sub": "three-phase, utility side",
+     "v": 0.04
+    },
+    {
+     "label": "800 VDC rack bus",
+     "sub": "the new architecture's distribution voltage",
+     "v": 1.25
+    },
+    {
+     "label": "415 V AC",
+     "sub": "three-phase, the legacy rack feed",
+     "v": 1.39
+    },
+    {
+     "label": "54 V bus",
+     "sub": "the open-rack busbar as run",
+     "v": 18.5
+    },
+    {
+     "label": "48 V bus",
+     "sub": "nominal",
+     "v": 20.8
+    },
+    {
+     "label": "12 V bus",
+     "sub": "the old server bus",
+     "v": 83.3
+    },
+    {
+     "label": "1 V processor rail",
+     "sub": "the point of load",
+     "v": 1000
+    }
+   ],
+   "note": "A modern accelerator draws more than one of these kilowatts, so multiply the last bar accordingly. At a megawatt per rack — the scale the 800-volt architecture is built for — the 12-volt bus would need more than eighty thousand amps and the 48-volt bus more than twenty thousand; the 800-volt bus needs 1,250. Nobody carries a thousand amps at one volt anywhere: it is made at the chip."
+  },
+  {
+   "id": "why-loss-is-current-squared",
+   "title": "Do the arithmetic once: sixteen to one",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "**The same kilowatt, two bus voltages.** At 12 volts a kilowatt is 83 amps; at 48 volts it is 21 amps — a quarter of the current. Push each through the same one-milliohm stretch of busbar and connector. The 12-volt bus loses 83² × 0.001 ≈ 6.9 watts as heat; the 48-volt bus loses 21² × 0.001 ≈ 0.43 watts. Four times less current, sixteen times less loss, through identical copper. That is the whole case for the 48-volt rack, and it is the same case, run again, for the 800-volt hall.",
+    "**Read it the other way.** For the same loss, the 48-volt bus can carry the kilowatt through a quarter of the copper cross-section — or carry four kilowatts through the copper that used to carry one. The higher voltage does not just save watts; it saves the metal, the weight and the rack space that the metal occupies, which in a rack contested by compute is the scarcer resource.",
+    "**And then it stops working.** The chip does not run at 48 volts. Whatever the bus does, the final rail is about one volt and the current is a thousand amps or more, so the sixteen-to-one advantage is only available for the stretch *before* the last converter. The design problem is therefore to make that stretch as long as possible — keep the voltage up until the very last centimetre — and then to make the final converter so small and so close that its own output copper is almost nothing. The rest of this guide is about the boxes that do that."
+   ]
+  },
+  {
+   "id": "the-48-volt-bus-and-the-60-volt-line",
+   "title": "The 48-volt bus and the 60-volt line",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "For decades a server was a 12-volt machine inside: the power supply made 12 volts, the motherboard distributed it, and small regulators beside each chip stepped it down. At a few hundred watts per server that was fine. At a multi-kilowatt server it is not — a 12-volt {{intermediate bus}} at those powers carries hundreds of amps and the board's copper becomes a heater. The hyperscalers' open-rack designs moved the bus to 48 volts, distributed through a vertical {{busbar}} at the back of the rack that every tray clips onto, with a pooled {{power shelf}} feeding the bar instead of a supply in every server.",
+    "Why 48 and not 100, given that a higher voltage would cut the current further? Because of a line drawn by the safety standards, not by physics. Below about 60 volts DC a supply is classed as {{SELV}} — safe to touch — so it can be wired with ordinary connectors, serviced by ordinary technicians without lockout, and clipped onto a live bar with a bare-metal tray. Cross the line and the bus becomes a hazardous voltage: insulation ratings, clearances, arc-fault considerations and service rules all change. Forty-eight volts nominal, run in practice around 54 volts, is the highest bus that stays comfortably under the line with room for the swings a live bus sees. The telecom industry had reached the same number for the same reason a century earlier.",
+    "The bar has consequences that the rest of the chain inherits. It is a shared DC bus, so anything connected to it must be able to join it live without dragging it down and leave it without taking it down — the {{ORing}} and {{precharge}} engineering that makes {{hot-swap}} safe, taught in the server-supply guide and revisited here from the converter's side. It carries the whole rack's current, so a megawatt rack at 48 volts is a twenty-thousand-amp bar, which is where the 48-volt rack itself runs out of road and the 800-volt architecture begins. And it is the voltage every converter downstream has to start from, which is the design problem the next sections take up.",
+    "Keep the chain's three voltages in view from here on: a distribution voltage — 800 volts in the new hall, 415 volts AC in the old one — that reaches the rack; the 48-volt bus that reaches the tray; and the roughly one-volt rail that reaches the die. Each step down is a {{conversion stage}}, each stage costs efficiency and space, and the questions that decide a rack's power design are how many of those stages there are, where each one sits, and which of them has to hold its output steady."
+   ]
+  },
+  {
+   "id": "two-jobs-one-box",
+   "title": "Two jobs in one box — and why the best designs split them",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "A converter that feeds a chip has two jobs. It must change the voltage level — 48 volts down to about one — and it must hold that output steady as the input drifts and the load swings: {{voltage regulation}}. A conventional converter does both with the same switches, which forces the regulating stage to handle the chip's full current. {{Factorized power}} is the design idea of pulling the two jobs apart so that regulation happens upstream, where the current is small, and only the level change happens at the chip. The three ways of getting from the 48-volt bus to the processor rail, side by side:",
+   "cols": [
+    "Approach",
+    "Stages",
+    "Where regulation sits",
+    "Current the regulating stage handles",
+    "What it costs",
+    "What limits it"
+   ],
+   "rows": [
+    [
+     "Two-stage: 48 V → 12 V {{bus converter}} → multiphase {{buck converter}} to ~1 V",
+     "Two",
+     "At the second stage, on the board beside the chip",
+     "The chip's full current — hundreds to a thousand amps through the buck's switches and inductors",
+     "A whole intermediate bus with its own copper; switching loss at high current in the final stage",
+     "The multiphase buck's inductors and switches occupy board area that grows with the current, and that area is beside the package where space is scarcest"
+    ],
+    [
+     "Direct: 48 V → ~1 V in one multiphase buck",
+     "One",
+     "At the only stage, beside the chip",
+     "The chip's full current, plus a 48-to-1 step in a single stage",
+     "A very short {{PWM}} on-time — the switch is on about two percent of each cycle — so the switching edges dominate the loss",
+     "Efficiency falls off at extreme step-down ratios; the regulator still has to live beside the chip and still handles every amp"
+    ],
+    [
+     "Factorized: 48 V → regulator → fixed-ratio {{current multiplier}} → ~1 V",
+     "Two, but split by job",
+     "Upstream, at the regulator, before the current is multiplied",
+     "A fraction of the chip's current — the regulator passes the chip's watts at close to 48 volts, so tens of amps rather than a thousand",
+     "A small regulator plus a resonant multiplier that switches at zero current; a sense line from the load back to the regulator",
+     "The multiplier is unregulated by design, so the regulator has to be told what the point of load needs, and the two stages are engineered as a pair rather than bought separately"
+    ]
+   ],
+   "note": "The arithmetic behind the third row is the same {{I²R loss}} arithmetic as the rest of the guide. If the regulator sits where the voltage is forty-eight times higher, it handles one forty-eighth of the current and its own losses are far smaller for the same job; the multiplier that follows is a fixed-ratio machine, which is the kind of converter that can be made extremely efficient because it never has to change what it is doing. The idea is general — it is how a utility grid works, regulating at the generator and transforming near the load — and one company has built its catalogue on it for two decades."
+  },
+  {
+   "id": "current-multiplication-and-the-sine-amplitude-idea",
+   "title": "Current multiplication and the sine-amplitude idea",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A {{current multiplier}} is a transformer's job description written from the output side. A transformer with a 48-to-1 turns ratio takes 48 volts at one amp on its primary and delivers one volt at 48 amps on its secondary — power in equals power out, and the current has been multiplied by the same factor the voltage was divided by. Think of a gear train: high speed and low torque on one shaft, low speed and high torque on the other. The chip wants the low-speed, high-torque shaft — one volt, a thousand amps — and the multiplier is the gearbox that makes it from a modest current at a comfortable voltage.",
+    "Transformers only work on alternating current, so a DC current multiplier has to chop its DC input into AC, pass it through a transformer, and rectify it back. Do that at mains frequency and the transformer is the size of a brick; do it at a megahertz and the transformer's core shrinks to a few millimetres, because the magnetic core only has to hold energy for one microsecond at a time. The obstacle to running that fast is {{soft switching}}: turning a transistor off while current flows through it wastes energy on every edge, and at a million edges a second the waste becomes the dominant loss.",
+    "The {{sine amplitude converter}} is one answer to that. Instead of forcing a square-wave current through the transformer, it drives the primary at the resonant frequency of the transformer's own leakage inductance and a capacitor, so the current flowing is a clean sine wave. The transistors switch only at the instants the sine passes through zero — there is no current to interrupt, so almost nothing is lost in the switching itself. The converter is unregulated on purpose: its output simply tracks its input by the transformer's fixed ratio, which is exactly what a current multiplier should do, and what makes it possible to run it at frequencies that shrink the magnetics enough to fit beside — or under — a processor.",
+    "Two consequences matter for the chip. A fixed-ratio resonant stage looks, from the output, like a DC transformer with a very low output impedance: when the chip's demand jumps, the extra current is drawn through the transformer from the higher-voltage side within a cycle, so the stage answers a {{load transient}} in nanoseconds rather than the microseconds a regulated buck takes to adjust its duty cycle. And because the multiplier itself does not regulate, its output filter can be tiny, which is what lets the {{point of load}} stage shed the bulky inductors and capacitors that a buck of the same current would need. The bulk capacitance that once sat beside the chip to cover the regulator's reaction time can shrink — which, at a thousand amps in a contested square centimetre, is the difference between fitting and not."
+   ]
+  },
+  {
+   "id": "the-last-centimetre-and-the-pdn",
+   "title": "The last centimetre: the power delivery network at one volt",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Between the last converter and the transistors on the die lies the {{PDN}}: copper planes in the board, vias through it, the balls under the package, the layers of the {{substrate}}, and the decoupling capacitors that sit along the route. At a thousand amps every part of that route counts. One hundred microohms — a tenth of a milliohm, the resistance of a few centimetres of board plane — drops a tenth of a volt, which is ten percent of a one-volt rail, and dissipates a hundred watts as heat in copper that was never meant to be a heater. The engineering target for the whole network is measured in tens of microohms, and it gets harder every generation as the current climbs and the rail falls.",
+    "Distance is the enemy twice over. Resistance grows with the length of copper the current crosses, so a converter a centimetre farther away costs voltage and watts. And a processor's demand does not change gently: an accelerator can step hundreds of amps in a microsecond as a workload starts. The converter cannot answer that instantly — even a resonant stage takes a cycle, a buck takes several — so the first microseconds are covered by charge stored in capacitors on the package and the board, and the inductance of the route decides how quickly that charge can arrive. Shorter is better here too: a long path is an inductive path, and the rail sags before the converter has noticed.",
+    "So the last converter is being pushed toward the die. First it moved from a corner of the board to the package perimeter — as close as the {{lateral power delivery}} layout allows, with the current running sideways into the package. Then the perimeter filled up, because the same edge is where a modern accelerator's fastest signals — its memory stacks and its interconnect — have to leave the package, and a chip that draws more power also talks faster. The next move is off the top of the board entirely: converters mounted on the underside, directly beneath the package, so that the last centimetre becomes the thickness of the board and the current flows straight up into the {{substrate}}. That is {{vertical power delivery}}, and the trade it makes is the subject of the next section.",
+    "Read the industry this way and a converter vendor's specifications make sense. {{Current density}} — amps per square centimetre of footprint — says whether the part can deliver the chip's current from the area it is allowed. Output impedance and transient response say how much capacitance the board can drop. {{Thermal resistance}} says whether the part survives the current it is rated for through the cooling path it is given. Efficiency matters, but at this stage the constraint is space and heat in a square centimetre, and a part that is two points less efficient and half the size can be the better answer."
+   ]
+  },
+  {
+   "id": "lateral-versus-vertical",
+   "title": "Lateral versus vertical power delivery",
+   "kind": "proscons",
+   "read": "4 min",
+   "intro": "Where the final converters sit relative to the processor package. The lateral layout is what every board has used; the vertical layout is what the current is forcing, and both are live choices in current AI systems.",
+   "cards": [
+    {
+     "t": "Lateral power delivery — beside the package",
+     "meta": "Converters on the top of the board around the processor; current runs sideways through the board copper for the last centimetre",
+     "adv": [
+      "The conventional layout: standard board, standard assembly, the converters cooled from the top by the same airflow or cold plate as the processor",
+      "Serviceable — the converters are visible and reachable without pulling the board",
+      "Well understood: every multiphase regulator for two decades has been placed this way"
+     ],
+     "dis": [
+      "The last centimetre is a centimetre — resistance and inductance in the board copper cost voltage drop, watts and transient response, and both grow as current climbs",
+      "The package perimeter is contested: memory stacks and the fastest signal lanes need the same edge, so the space for converters shrinks exactly as the current they must deliver grows",
+      "At a thousand-plus amps, copper wide enough for the sideways route stops fitting in the board at all"
+     ]
+    },
+    {
+     "t": "Vertical power delivery — beneath the package",
+     "meta": "Converters mounted on the underside of the board directly under the processor; current flows straight up through the board into the substrate",
+     "adv": [
+      "The last centimetre becomes the board's thickness, a couple of millimetres — the PDN resistance and inductance fall by a large factor, and the voltage drop and heat in copper fall with them",
+      "Frees the package perimeter for signals, which is what the chip designers most want",
+      "Scales with the chip: a larger current is answered by a larger converter footprint under the package rather than a wider copper route beside it"
+     ],
+     "dis": [
+      "The converters now sit on the back of the board and must be cooled there — a second cooling path, usually a cold plate on the underside, which complicates the mechanical stack",
+      "The underside loses whatever else used to live there, and board stiffness and flatness tolerances become part of the power design",
+      "Service means pulling the board; a failed converter is no longer a component you can see"
+     ]
+    }
+   ],
+   "note": "The two are not rival products but points on a path. The industry's answer to a thousand amps was to go lateral with a fixed-ratio multiplier at the perimeter; its answer to two thousand is to go vertical. The vendors that can do both in the same converter family — and can package the multiplier flat enough and cool enough to sit under a package — are the ones the current is selecting for."
+  },
+  {
+   "id": "eight-hundred-to-forty-eight-to-the-chip",
+   "title": "800 volts → 48 volts → the chip: the in-rack chain under the new architecture",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The {{800 VDC}} hall converts the grid's AC to DC once, early, and distributes 800 volts to the racks. Everything after that is DC-to-DC, and the stages below are what remain. Read the table down the 'regulated?' and 'isolated?' columns: only one stage needs an {{galvanic isolation}} barrier, because 800 volts is a hazardous voltage and 48 is not, and only one stage needs to regulate, because the multiplier that follows it is built not to.",
+   "cols": [
+    "Stage",
+    "In → out",
+    "Regulated?",
+    "Isolated?",
+    "Where it sits",
+    "What it replaces in the AC chain"
+   ],
+   "rows": [
+    [
+     "Hall conversion — {{SST}} or a rectifier {{sidecar}}",
+     "13.8 kV AC or 480 V AC → 800 VDC",
+     "Regulated bus",
+     "Isolated",
+     "In the hall beside the rows, or beside the rack",
+     "The UPS's rectifier and inverter, the PDU's transformer and most of the AC switchgear between them"
+    ],
+    [
+     "800-to-48 {{bus converter}}",
+     "800 VDC → about 50 V",
+     "Fixed ratio, typically 16:1 — unregulated",
+     "Isolated: the 800-volt side is hazardous, the 48-volt side is {{SELV}}",
+     "In the {{power shelf}}, or on the tray itself",
+     "The AC-to-DC server supply and the shelf's rectifier modules — the {{CRPS}} slot's reason to exist"
+    ],
+    [
+     "48-volt regulator",
+     "40–60 V → a controlled voltage sized for the multiplier",
+     "Regulated",
+     "Non-isolated",
+     "On the board or in the shelf, upstream of the multiplier",
+     "The 12-volt intermediate stage, and the regulating half of the multiphase buck"
+    ],
+    [
+     "{{Current multiplier}} — the {{point of load}}",
+     "About 48 V → about 1 V at a thousand amps or more",
+     "Fixed ratio (for example 1/48) — unregulated",
+     "Non-isolated; isolation was done a stage earlier",
+     "Beside the package (lateral) or beneath it (vertical)",
+     "The transforming half of the multiphase buck and most of the bulk capacitance beside the chip"
+    ],
+    [
+     "{{BBU}} shelf and {{supercapacitor}} shelf",
+     "Battery or capacitor ↔ the DC bus, bidirectional",
+     "Regulated charge, ORed discharge onto the bus",
+     "—",
+     "On the rack's DC bus — 48 V or 800 V, depending on the design",
+     "The UPS room's minutes (the battery) and the load swing the grid used to see (the capacitor)"
+    ]
+   ],
+   "note": "A further collapse is on the roadmap of more than one vendor: an 800-volt input taken straight to the board, or straight to a multiplier under the package, deleting the 48-volt stage as the 48-volt stage deleted the 12. Every deleted stage saves its own loss and space and, as the Delta guide in this app puts it, makes the surviving converter's job harder: an 800-to-1 step is a hazardous-voltage isolation barrier and a thousand-amp multiplier in the same square centimetre, a millimetre from a processor."
+  },
+  {
+   "id": "the-battery-on-the-dc-bus",
+   "title": "The battery on the DC bus: the BBU shelf, hold-up and the swing",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "In the AC chain the battery lives in the UPS room, behind a rectifier that charges it and an inverter that turns its DC back into AC for the hall, and the servers never see it. A DC bus changes that. A battery is a DC source; a rack running on a 48-volt or 800-volt DC bus can take a battery shelf onto that bus directly, through a bidirectional {{DC-DC converter}} that charges the cells from the bus and, when the bus sags, discharges them onto it through {{ORing}} devices so the shelf can join and leave the bus without disturbing it. The {{BBU}} — a battery backup unit sized for seconds to a few minutes — moves the last line of stored energy from the UPS room into the rack, and the {{800 VDC}} architectures published for the next generation of AI racks put energy storage in the power rack for exactly this reason.",
+    "Two different jobs are being asked of stored energy inside the rack, and they call for two different stores. The first is {{hold-up time}}: when the upstream supply drops, the bus must be carried for long enough that the transfer upstream — or a controlled shutdown — completes without the servers noticing. Capacitors in the power shelf give tens of milliseconds; a BBU gives seconds to minutes, which is what lets a hall shrink or delete its central UPS. The second job is the AI load swing. A training cluster's power draw rises and falls in rhythm with its computation, thousands of racks in step, and a swing of that shape and size is one the grid and the generators upstream were never built to follow. A {{supercapacitor}} shelf absorbs and returns that energy within milliseconds, thousands of times an hour, which a battery cannot do without wearing out; a battery holds the bus for minutes, which a capacitor cannot do at all. The two shelves are complements on the same bus.",
+    "The arithmetic of putting cells on a bus is worth doing once. Lithium cells sit around three to four volts each, so a 48-volt shelf is a string of a dozen or so cells, and its own voltage moves with its state of charge — which is why a converter, not a wire, connects it to the bus. An 800-volt string is two hundred cells or more, with the insulation, balancing and fault-clearing demands of a hazardous-voltage pack; the choice between a 48-volt BBU on the tray bus and an 800-volt battery in the power rack is a choice about which side of the {{SELV}} line the stored energy lives on. Either way, the converter that manages the cells — its charge control, its ORing, its {{precharge}} on insertion and its {{current sharing}} with the neighbouring shelves — is the same family of silicon as the rest of the chain.",
+    "For a storage seller this is the closest an in-hall socket ever gets to a battery sale. The BBU shelf and the capacitor shelf are bought by the server OEM or the operator as part of the rack's power design, not by the utility-side team that buys a plant-scale BESS, and they are specified in the vocabulary of this guide — hold-up seconds, ORing, bus voltage, cycle count at millisecond swings — rather than in the megawatt-hours of the BESS guides elsewhere in this app. Knowing which room the conversation is in, and which store the buyer actually needs, is most of the sale."
+   ]
+  },
+  {
+   "id": "living-on-a-shared-bus",
+   "title": "Living on a shared bus: ORing, precharge, sharing and hold-up from the converter's side",
+   "kind": "callout",
+   "tone": "info",
+   "read": "4 min",
+   "ps": [
+    "**Nothing on the bus may drag it down.** A shelf of converters feeding one busbar is a set of sources in parallel, and a source that fails short — or is simply pulled out while live — would pull the bus with it. {{ORing}} devices in each module's output let current flow only out of the module; a dead module is cut off by its own diode-like behaviour, and the survivors carry on. The server-supply guide in this app teaches this from the supply's side; the converter silicon has to do the same thing one stage down, wherever two outputs meet.",
+    "**Nothing joining the bus may pull it down either.** A module's empty output capacitors, connected to a live 48-volt bar, would draw a spike of {{inrush}} large enough to sag the bus and pit the connector. {{Precharge}} brings the capacitors up gently through a controlled path before the main contact closes; the connector itself is staged so that ground touches first and the live pin last. Live insertion is engineered in, never assumed.",
+    "**Everyone on the bus must carry a fair share.** Two supplies with outputs a few millivolts apart will not split the load: the higher one takes everything until it overheats. {{Current sharing}} — a small deliberate droop in each output, or an active control loop between modules — makes the split fair. The tax on that fairness is the {{conversion efficiency}} curve: with one more module than the load needs, each one runs below its sweet spot, which is why some shelves switch spare modules off and accept a wake-up delay instead.",
+    "**The bus must hold up.** When the input to a shelf disappears, the {{hold-up time}} of its capacitors is all the time the rack has. In the AC chain the UPS upstream made that window mostly theoretical; on a DC bus with the UPS shrunk or gone, the window is real and the {{BBU}} shelf is what extends it — which means the bus voltage, the BBU's ORing threshold and the converters' undervoltage limits all have to be designed together, or the battery joins the bus a few milliseconds after the servers have already reset."
+   ]
+  },
+  {
+   "id": "where-vicor-slots-in",
+   "title": "Where Vicor's products slot in",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Vicor makes no server supply, no power shelf and no rectifier: its catalogue begins where the rack's power is already DC and ends at the processor's substrate. Every line below is one of the stages this guide has walked, read as a product. Figures are the company's own catalogue and datasheet statements, quoted in the dossier; none is independently tested.",
+   "cols": [
+    "Product line",
+    "Stage in the chain",
+    "What it is",
+    "Company-stated headline figures",
+    "What it displaces"
+   ],
+   "rows": [
+    [
+     "BCM® bus converters",
+     "800 V or 400 V → ~48 V, isolated, fixed ratio",
+     "A resonant {{sine amplitude converter}} with an {{galvanic isolation}} barrier — a 'DC transformer' — in ChiP, CM-ChiP or VIA packages",
+     "500–800 V in at K = 1/16 (BCM4414, 35 A); 260–410 V in at K = 1/8 (BCM6135, 65 A, 97.9% peak, 3.4 kW/in³); an automotive 800 V → 48 V module at 2.5 kW; the family claims up to 98% and up to 2,870 W/in³",
+     "The AC-to-DC server supply and the rectifier modules in a {{power shelf}} — the {{CRPS}} slot's job — once the hall distributes DC"
+    ],
+    [
+     "NBM™ bus converters",
+     "48 V ↔ 12 V, non-isolated, fixed ratio, bidirectional",
+     "The same resonant stage without the barrier, running either direction",
+     "K = 1/4 at 80 A in a 22.8 × 17.3 × 5.2 mm package (97.9% peak, up to 8 kW/in³); K = 1/3 or 1/5 at 160–170 A",
+     "The 48 V-to-12 V {{intermediate bus}} converter — and, run backwards, the way a 12 V legacy bus is lifted to 48"
+    ],
+    [
+     "PRM™ regulators",
+     "The one regulated stage of a {{factorized power}} chain, upstream of the multiplier",
+     "A zero-voltage-switching buck-boost regulator that sets the voltage the multiplier will divide",
+     "400–800 W modules; the company states 99.3% peak for the latest PRMs, 0.2% regulation with remote sense",
+     "The regulating half of a multiphase {{buck converter}} — moved to where the current is tens of amps"
+    ],
+    [
+     "VTM™ current multipliers",
+     "The {{point of load}}: ~48 V → ~1 V at a fixed ratio",
+     "A {{current multiplier}} — the Sine Amplitude Converter at K = 1/40 to 1, 'isolated or non-isolated'",
+     "0.7–1.4 V at 130 A from 26–55 V in a 32.5 × 22 × 6.73 mm module; response in under a microsecond; capacitance beside the chip 'reduced by a factor of 1600'",
+     "The transforming half of the multiphase buck and most of the bulk capacitance beside the processor"
+    ],
+    [
+     "Power-on-Package (MCD + MCM) and VPD",
+     "The last centimetre, laterally beside the package or vertically beneath it",
+     "A driver (regulator) plus current multipliers mounted on the processor {{substrate}}; the vertical form stacks multipliers and bypass capacitors under the package with a custom pin map (GCM)",
+     "'greater than 3.0 A/mm²' with gains 'greater than 40', modules 1.5 mm thin at 0.3 °C/W; a 2020 ChiP-set at 650 A continuous, 1,200 A peak; company examples of a 10 µΩ {{PDN}} at 1,200 A",
+     "The lateral {{VRM}} array at the package perimeter, and the board copper of {{lateral power delivery}}"
+    ],
+    [
+     "DCM™ regulated converters",
+     "Regulated 48 V → 12 V (and isolated wide-input DCMs)",
+     "A ZVS regulator followed by a resonant stage — regulation and transformation in one module for loads that need a fixed rail",
+     "750 W to 2 kW at 5 kW/in³ from 40–60 V; isolated DCMs from 9 V to 420 V in",
+     "The conventional regulated intermediate-bus converter"
+    ],
+    [
+     "IP licensing",
+     "No stage — the right to build the stages",
+     "Patent licences over bus converters, factorized power and vertical power delivery, sold to OEMs and contract manufacturers after an {{exclusion order}}",
+     "Royalties were 14% of 2025 revenue and 21% of the June 2026 quarter's",
+     "The socket itself: a licensee builds its own converter to the licensed design instead of buying the module"
+    ]
+   ],
+   "note": "Read the table against the {{800 VDC}} chain in this guide and the company's shape is clear: it owns silicon-and-magnetics for the two fixed-ratio stages and the last centimetre, sells nothing at shelf scale, and — uniquely among the power vendors in this app — is paid twice for the same idea, once as a module and once as a licence."
+  },
+  {
+   "id": "amps-per-package",
+   "title": "Amps per package — the catalogue as a ladder",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "continuous output amps per module (company ratings)",
+   "intro": "The same catalogue read as a current ladder, from the 800-volt bus converter at the top of the chain to the substrate-mounted multiplier at the bottom. The rungs are not like-for-like — each is rated at its own voltage and its own package — which is itself the lesson: current is what the chain manufactures on the way down, and the module nearest the die carries the most from the smallest footprint.",
+   "items": [
+    {
+     "label": "BCM4414 — 800 V → 50 V",
+     "sub": "K = 1/16, VIA package",
+     "v": 35
+    },
+    {
+     "label": "BCM6135 — 384 V → 48 V",
+     "sub": "K = 1/8, CM-ChiP",
+     "v": 65
+    },
+    {
+     "label": "NBM2317 — 48 V → 12 V",
+     "sub": "K = 1/4, SM-ChiP, 22.8 × 17.3 mm",
+     "v": 80
+    },
+    {
+     "label": "VTM48EF012 — 48 V → 1 V",
+     "sub": "K = 1/40, Full VI Chip",
+     "v": 130
+    },
+    {
+     "label": "BCM6123 — 48 V → 8 V",
+     "sub": "K = 1/6, ChiP",
+     "v": 150
+    },
+    {
+     "label": "NBM6123 — 48 V → 12 V",
+     "sub": "K = 1/5, ChiP",
+     "v": 170
+    },
+    {
+     "label": "Power-on-Package (MCD + 2 × MCM4609)",
+     "sub": "48 V → ~1 V on the substrate, 1,200 A peak",
+     "v": 650
+    }
+   ],
+   "note": "Above the top rung sit the shelf makers' products — Delta's 90 kW 800 V-to-50 V shelf is the equivalent of dozens of bus-converter modules on one tray — and below the bottom rung is the roadmap: the company's stated second-generation vertical modules are specified in amps per square millimetre rather than amps per module, because at the substrate the footprint, not the part, is the unit that is rationed."
+  },
+  {
+   "id": "who-buys-who-competes-and-the-licence",
+   "title": "Who buys, who competes, and why the licence matters",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The buyer for a point-of-load module is not the data-center operator and not the utility-side team: it is the processor company or the OEM designing the accelerator board, working years ahead of volume, and its contract manufacturer. A {{design win}} at that table is decided on {{current density}}, transient response and thermal behaviour in a square centimetre next to the most expensive silicon in the building, and it is re-competed every processor generation — which is why the independent history of this company reads as a list of sockets won and lost: the older NVIDIA generations, a Google TPU, an AMD accelerator and a wafer-scale engine on one side, and a design-out at NVIDIA's H100 in favour of a multiphase-buck vendor on the other. The rest of the chain is bought differently: the 800 V-to-48 V stage by the shelf or tray designer, the 48 V-to-12 V stage by whoever still has a 12 V load.",
+    "The competition therefore comes in two shapes. For the last centimetre it is the multiphase-buck and vertical-module vendors — Monolithic Power Systems, Infineon, Renesas, Texas Instruments, Analog Devices with the in-package regulator company it bought — all of whom appear on NVIDIA's published 800 VDC silicon partner lists, on which this company does not. For the bus-converter stages it is the shelf makers who build the conversion into their own trays — Delta, LITEON, Megmeet — whose guides elsewhere in this app describe the shelf, the sidecar and the BBU as a system sale. A module vendor selling into that world is selling a part the system vendor can choose to design for itself.",
+    "That is what the licence is for. Under {{Section 337}} a U.S. patent holder can ask the trade commission to bar an infringing import at the border, and in 2025 the commission did exactly that over this company's bus-converter patents, against a power-module maker and the contract manufacturers whose servers contained its modules. An {{exclusion order}} on a computing system reaches the system's buyer, so an OEM or a hyperscaler that wants to keep importing servers has two choices: buy the patented module, or take a licence and have its contract manufacturer build a licensed design. The company's own words are that respect for its patents 'is motivated by exclusion orders', and its royalties rose from a few percent of revenue to a fifth of a quarter's in three years. {{IP licensing}} at near-full margin, on top of module sales built in one factory, is the whole shape of the business — and its exposure: a second case now rests on one patent issued in 2025, the first case's own findings included redesigned products that did not infringe, and the accused vendors have answered with trade-secret suits of their own.",
+    "For a storage seller the map has one useful landmark. The battery and capacitor shelves on the DC bus are specified by the same rack designers who buy these modules, in the same vocabulary — hold-up, ORing, bus voltage, cycle life at millisecond swings — and they are bought as part of the rack's power design, never as a plant-scale energy project. Knowing which room that decision is made in, and that the converter vendor beside the processor is usually already in it, is the practical value of understanding this company."
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**Inrush on a live swap.** A shelf module or a converter tray slotted onto a live bus with its {{precharge}} path faulty, its connector pins worn so the live pin touches first, or a design that never staged the contacts at all: the empty capacitors draw an {{inrush}} spike, the bus sags below the converters' undervoltage trip, and a whole rack resets from a maintenance action. Owned by the server OEM whose slot it is — hot-swap is a designed property, not an inherited one.",
+    "**A failed unit dragging the shared bus.** An {{ORing}} device that fails short, or a module whose output stage shorts upstream of it, turns a redundant supply into a load on its neighbours; the survivors current-limit, the bus collapses, and N+1 protected nothing. The failure is invisible until the day it matters, which is why the ORing path is tested at commissioning by pulling modules under load rather than by reading the datasheet.",
+    "**Two supplies each at half load.** Redundant modules split the rack's power and each sits far down its {{conversion efficiency}} curve; the shelf runs hotter and wastes more than the load it protects deserves. The fixes — parking spares in standby, phase-shedding inside multiphase regulators — buy back the watts at the price of a wake-up delay that is itself a way to miss a {{load transient}}. A supplier whose modules are efficient across the curve rather than at one point removes the trade.",
+    "**A bus that behaves like a heater.** A 48-volt bar sized for the rack it was designed for and then asked to carry the rack it grew into: {{I²R loss}} scales with the square of the current, so a doubled load quadruples the heat in the same copper, and the connector at each tray — the highest-resistance point on the bar — is where it shows first. Owned by the rack designer; the cure is the one this guide is about, a higher distribution voltage that puts fewer amps on the bar.",
+    "**A thousand amps with no thermal margin.** A {{point of load}} converter rated for the chip's current at a {{thermal resistance}} it never actually gets — a cold plate that does not reach the underside of the board, a gap-filler pad that was specified and not fitted, airflow that the next-generation accelerator's heat sink now blocks. The regulator's rating is a thermal statement, and a part run above its junction limit derates, then fails, in the millimetres next to the most expensive silicon in the building.",
+    "**A sustained series arc.** On a DC bus a loose lug, a cracked joint or a connector unseated under vibration draws an arc that has no {{zero crossing}} to extinguish it; it sustains, heats, and spreads. At 48 volts the energy is small and the damage local; at 800 volts the arc is a fire, and the protection — {{SSCB}}s and arc detection, not the fuses the AC hall inherited — has to be engineered in. Owned by whoever chose the connector and whoever specified the protection.",
+    "**A stage deleted without a plan for its fault duty.** Every converter in the old chain also did something protective — the server supply's isolation barrier, the UPS's fault current, the transformer's impedance — and deleting a stage deletes that too. An 800-to-48 module that is the *only* isolation barrier in the rack must carry the safety rating the whole chain now depends on; a hall that removed the UPS must get its hold-up from a {{BBU}} whose thresholds were designed with the converters, or the bus resets before the battery joins it.",
+    "**A stock supply that was never rated for DC.** A {{CRPS}} unit or a shelf module designed for AC input, fed from a DC bus because the connector fitted: its input rectifier is bypassed by the DC, its inrush and hold-up behaviour change, its fusing was chosen for an AC fault, and its safety approvals do not apply. It runs — until the first fault, when it fails in a way nobody modelled. The rack designer owns it; the fix is a part whose input was designed, rated and approved for the bus it is on."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why does a power chain keep its voltage high for as long as it can?",
+     "a": "Loss in a conductor is current squared times resistance. For the same power, four times the voltage means a quarter of the current and a sixteenth of the loss through the same copper — so the chain stays high-voltage for the long stretch and converts down only at the end."
+    },
+    {
+     "q": "Why is the rack bus 48 volts and not 100?",
+     "a": "The safety standards treat supplies under about 60 volts DC as SELV — safe to touch — so a 48-volt bus (run around 54) can use ordinary connectors and be serviced live. Above the line the bus becomes a hazardous voltage with different insulation, clearance and service rules."
+    },
+    {
+     "q": "What are the two jobs a point-of-load converter does, and what does factorized power change?",
+     "a": "It changes the voltage level and it holds the output steady (regulation). Factorized power separates them: a regulator upstream at the higher voltage, where the current is small, feeding a fixed-ratio current multiplier at the load, so the regulating stage never carries the chip's full current."
+    },
+    {
+     "q": "What is a current multiplier?",
+     "a": "A fixed-ratio converter that trades voltage for current like a gear train trades speed for torque — a 48:1 stage delivers one volt at forty-eight times the input current. It is a transformer's job read from the output side, built to work on DC by chopping, transforming and rectifying at very high frequency."
+    },
+    {
+     "q": "What does the sine-amplitude converter do differently, and why does that let it run fast?",
+     "a": "It drives the transformer at the resonance of its own leakage inductance and a capacitor, so the current is a sine wave, and it switches only as that sine passes through zero — nothing to interrupt, so almost no switching loss. That lets it run at frequencies where the magnetics shrink to millimetres."
+    },
+    {
+     "q": "Why is a fixed-ratio stage deliberately unregulated?",
+     "a": "Never changing what it does is what lets it be resonant, fast and small; regulation is done by a separate stage upstream. From the output it looks like a DC transformer with very low output impedance, which answers a load transient within a cycle."
+    },
+    {
+     "q": "What is the PDN, and why does 100 microohms matter?",
+     "a": "The power delivery network is everything between the last converter and the transistors — planes, vias, package balls, substrate, decoupling capacitors. At a thousand amps, 100 µΩ drops 0.1 V — ten percent of a one-volt rail — and burns 100 W in copper that was never meant to be a heater."
+    },
+    {
+     "q": "Lateral versus vertical power delivery — the one-line trade?",
+     "a": "Lateral puts the converters beside the package with a centimetre of sideways copper; vertical puts them beneath it so the path is the board's thickness. Vertical cuts loss and frees the package edge for signals; it costs a second cooling path on the back of the board and a converter you cannot see."
+    },
+    {
+     "q": "Under 800 VDC, which in-rack stage is isolated and which is regulated?",
+     "a": "Only the 800-to-48 bus converter is isolated, because 800 volts is hazardous and 48 is SELV. Only the 48-volt regulator regulates; the bus converter and the point-of-load multiplier are fixed-ratio stages."
+    },
+    {
+     "q": "Why can a battery sit directly on a DC rack bus but not on an AC one?",
+     "a": "A battery is a DC source. On an AC chain it needs the UPS's rectifier to charge and inverter to discharge; on a 48 V or 800 V DC bus a BBU shelf joins through a bidirectional DC-DC converter and ORing devices, with no inversion at all."
+    },
+    {
+     "q": "Why two stores on the bus — a BBU shelf and a supercapacitor shelf?",
+     "a": "Two jobs. The battery gives seconds to minutes of hold-up, which lets the hall shrink its central UPS; the supercapacitor absorbs and returns the AI training swing within milliseconds thousands of times an hour, which a battery cannot do without wearing out. Complements, not rivals."
+    },
+    {
+     "q": "ORing, precharge, current sharing — what does each protect against?",
+     "a": "ORing stops a failed or unplugged source from dragging the bus down. Precharge stops a unit joining the bus from pulling it down with inrush. Current sharing stops one supply from taking the whole load and overheating while its neighbours idle."
+    },
+    {
+     "q": "What is hold-up time, and what changes when the central UPS is deleted?",
+     "a": "How long the shelf's capacitors carry the bus after the input drops — tens of milliseconds. With the UPS gone that window is real, and the BBU must extend it: the bus voltage, the BBU's turn-on threshold and the converters' undervoltage limits have to be designed together."
+    },
+    {
+     "q": "Why does every deleted conversion stage make the surviving stage's job harder?",
+     "a": "Each stage also carried something protective or convenient — isolation, hold-up, a modest step ratio. Delete the 48-volt stage and the survivor must be an isolation barrier for a hazardous voltage and a thousand-amp multiplier in the same square centimetre, a millimetre from the processor."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A server bus is redesigned from 12 V to 48 V for the same power. Through the same copper, the resistive loss becomes:",
+     "c": [
+      "A quarter",
+      "A sixteenth",
+      "Half",
+      "Unchanged — power is power"
+     ],
+     "a": 1,
+     "why": "Current falls to a quarter, and loss is current squared times resistance: a quarter squared is a sixteenth."
+    },
+    {
+     "q": "The rack bus stops at 48 volts rather than climbing further mainly because:",
+     "c": [
+      "Transformers cannot be wound for higher ratios",
+      "Below about 60 V DC the bus is SELV — safe to touch — and above it the safety rules change",
+      "Lithium cells cannot be stacked past 48 V",
+      "Processors run internally at 48 V"
+     ],
+     "a": 1,
+     "why": "It is a line drawn by the safety standards, not by physics; 48 V nominal, run around 54, is the highest bus that stays comfortably under it."
+    },
+    {
+     "q": "In a factorized power chain, the stage that carries the chip's full thousand amps is:",
+     "c": [
+      "The upstream regulator",
+      "The fixed-ratio current multiplier at the point of load",
+      "The 800-to-48 bus converter",
+      "The BBU shelf"
+     ],
+     "a": 1,
+     "why": "Regulation moves upstream where the current is a fraction of the chip's; only the multiplier, right at the load, handles the multiplied current."
+    },
+    {
+     "q": "A sine-amplitude converter switches its transistors when:",
+     "c": [
+      "The output voltage peaks",
+      "The resonant sine-wave current passes through zero",
+      "The duty cycle reaches fifty percent",
+      "The load transient begins"
+     ],
+     "a": 1,
+     "why": "Switching at the current's zero crossing means there is nothing to interrupt, so switching loss nearly vanishes — which is what lets it run fast enough to shrink its magnetics."
+    },
+    {
+     "q": "A point-of-load stage answers a load step in nanoseconds rather than microseconds because:",
+     "c": [
+      "It has a larger output capacitor",
+      "It is a fixed-ratio resonant stage with very low output impedance, drawing the extra current through its transformer within a cycle",
+      "Its switching frequency is lower",
+      "It is isolated"
+     ],
+     "a": 1,
+     "why": "A regulated buck must move its duty cycle over several cycles; a DC-transformer-like stage passes the demand straight through by its fixed ratio."
+    },
+    {
+     "q": "Under the 800 VDC architecture, the one in-rack stage that must carry an isolation barrier is:",
+     "c": [
+      "The 48-volt regulator",
+      "The point-of-load multiplier",
+      "The 800-to-48 bus converter",
+      "The supercapacitor shelf"
+     ],
+     "a": 2,
+     "why": "800 volts is a hazardous voltage and 48 is SELV; the barrier is bought once, at the step between them, and everything below stays non-isolated."
+    },
+    {
+     "q": "Why is the package perimeter a problem for lateral power delivery specifically on AI accelerators?",
+     "c": [
+      "Accelerators have no perimeter",
+      "The same edge is needed by the memory stacks and the fastest signal lanes, so converter space shrinks exactly as current grows",
+      "The perimeter is where the cold plate attaches",
+      "Lateral converters are heavier"
+     ],
+     "a": 1,
+     "why": "A chip that draws more power also talks faster, and both demands land on the same edge — which is the pressure pushing converters beneath the package."
+    },
+    {
+     "q": "A rack on a DC bus deleted its central UPS. During a 20 ms upstream dropout the bus must be held by:",
+     "c": [
+      "The processors' own capacitors",
+      "The power shelf's hold-up capacitors and then the BBU shelf joining through its ORing path",
+      "The grid",
+      "The supercapacitor shelf alone, for two minutes"
+     ],
+     "a": 1,
+     "why": "Capacitors give tens of milliseconds; the BBU extends it to seconds or minutes — provided its turn-on threshold sits above the converters' undervoltage trip."
+    },
+    {
+     "q": "A training cluster's power swings in rhythm with its computation, thousands of racks in step. The store that absorbs and returns that swing is:",
+     "c": [
+      "The BBU shelf",
+      "The supercapacitor shelf",
+      "The 800-to-48 bus converter",
+      "The diesel generator"
+     ],
+     "a": 1,
+     "why": "A supercapacitor takes and returns energy within milliseconds thousands of times an hour without wearing out; a battery holds the bus for minutes, which a capacitor cannot do — the two are complements."
+    },
+    {
+     "q": "A rack browned out and reset the moment a technician slotted a converter tray onto the live bus. The most likely cause is:",
+     "c": [
+      "The tray's precharge path was faulty or its connector not staged, so inrush sagged the bus below the converters' undervoltage trip",
+      "The rack's air permit expired",
+      "The supercapacitor shelf discharged",
+      "The 800-volt bus had no zero crossing"
+     ],
+     "a": 0,
+     "why": "Hot-swap is engineered, not inherited: precharge tames the inrush of empty capacitors, and without it a maintenance action becomes an outage."
+    },
+    {
+     "q": "A stock AC-input server supply is fed from an 800 VDC bus because the connector fits. The risk is:",
+     "c": [
+      "None — a rectifier passes DC",
+      "Its inrush, hold-up, fusing and safety approvals were designed for AC, so it fails in a way nobody modelled at the first fault",
+      "It will run at half efficiency only",
+      "The bus will be isolated twice"
+     ],
+     "a": 1,
+     "why": "Every stage deleted or repurposed also deletes the protective behaviour it carried; a part must be designed, rated and approved for the bus it is on."
+    }
+   ]
+  }
+ ]
+}
