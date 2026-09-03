@@ -3,11 +3,40 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 82/100`
+`Sections: 83/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.30r] — 2026-09-02 08:41:24 PM EST
+
+> **Prompt:** "Picking up from my last session, I confirm the drill card renders.
+>
+> Design the Classroom curriculum. This is a PLANNING session — produce a design document, not code. Do not edit Classroom.gs, do not author lesson JSON, do not commit anything except the plan file itself.
+>
+> READ FIRST: 1. repository-information/CLASSROOM-SCHEMA.md — the lesson/track schema and, most importantly, "The provenance stamp" and "Drill items and history" 2. .claude/rules/classroom-app.md — how a session authors a lesson, the content fence, the checkers 3. repository-information/PHASE6-CLASSROOM-DESIGN.md — the phase plan and the access matrix 4. googleAppsScripts/Classroom/Classroom.gs — read the five existing lessons in full. They are the quality bar and the house voice; match them.
+>
+> THE CONSTRAINT THAT SHAPES EVERYTHING: A lesson is not "what a model knows about transformers." Every lesson carries a provenance stamp — provenance.inputs[] — pinning the corpus material it was built from, and it inherits the STRICTEST gate of those inputs: profile:<slug> · study:<slug> · project:<slug> · graph:profiler-graph · concepts:profiler-concepts → gate "tracks" (analyst and up); guidance:<module-id> → gate "guidance" (contributor+); report:<report-id> → gate "reports" (admin only). Field notes can never be a source. A lesson you cannot stamp is a lesson that cannot exist here. So the real question is not "what would be nice to teach" but "what does this corpus support teaching, and where are the gaps worth filling."
+>
+> WHAT THE CORPUS HOLDS (verify these numbers yourself, don't trust the prompt): 89 company dossiers, 62 study guides (802 flashcards), 8 named projects (colossus, frontier, homer-city, hyperion, jupiter-nm, lighthouse, stargate, trimount), a 490-edge relationship graph; 44 concepts in profiler-concepts.json. They split along the two existing tracks: BESS — LFP, NMC, C-rate, BMS, PCS, EMS, thermal runaway, degradation, augmentation, duration, round-trip efficiency, sodium-ion, NFPA 855, UL 9540A, bankability; AIDC power — 800 VDC, SST, UPS, PDU, rectifier, GaN, SiC, medium voltage, N+1, microgrid, behind-the-meter, colocation, interconnection queue, grid-forming inverter, ERCOT, PJM, PPA, tolling agreement. 7 Industry Guidance modules (contributor+): power-infra-aidc-2026-08, bess-tech-fundamentals-2026-08, bess-bankability-2026-08, nvidia-800vdc-2026-08, utility-aidc-procurement-2026-08, china-policy-stack-2026-08, eo14420-bulk-power-2026-08
+>
+> WHAT EXISTS TODAY — five lessons, two tracks: bess-foundations: cell-to-container · duration-and-degradation · spec-sheet-decoded (guidance-gated); aidc-power-primer: the-aidc-power-chain · heat-is-the-constraint
+>
+> WHAT I WANT: I am one person learning this market well enough to sell into it. I have no strong view on which focus areas matter — that judgment is what I want from you. (a) TECHNOLOGY FOUNDATIONS is currently only BESS. It could span other technologies. Tell me which ones earn a place and which do not. (b) THE AI DATA CENTER WAVE — I want to understand every important piece of equipment along the grid-to-chip power flow: what each one does, how they interoperate, where the common failure points are and why they fail there, and anything else you think belongs that I haven't thought to ask for.
+>
+> DELIVERABLE — write repository-information/CLASSROOM-CURRICULUM-PLAN.md: 1. A recommended track structure. Argue for it. If you think the two existing tracks are the wrong cut of the material, say so and propose better — the two I have were a first guess, not a decision. 2. Per proposed lesson: id (kebab-case, permanent), title, one-line `short`, `group`, the provenance.inputs[] it would pin, the resulting gate, a section-by-section outline, and 2-3 sentences on why this lesson exists — what a reader can do afterward that they could not before. 3. Teaching order within each track. Registry order IS teaching order here; the study-next pointer walks it literally. 4. A gap register: things worth teaching that the corpus CANNOT currently stamp, and what would have to be added to Profiler first (a dossier, a study guide, a guidance module, concepts entries). This section is as valuable as the lesson list — it tells me what research to commission. 5. Your honest cut line: which lessons are the first five to build, and which are "later, if the first five get used."
+>
+> TWO THINGS TO KEEP IN MIND WHILE DESIGNING: Every lesson's flashcards and quiz items feed the spaced-repetition drill automatically (Classroom v01.09g). A lesson without drillable items teaches once and is forgotten; assume every lesson carries both. Section kinds available: prose, callout, table, proscons, timeline, bars, flashcards, quiz, ledger. Vary them — five prose sections in a row is a wall.
+>
+> Push the plan file on a claude/* branch under the repo's normal Pre-Commit and Pre-Push checklists. No app code, no version bumps beyond what those checklists require for a docs-only change."
+
+**Planning session — design document only.** `Classroom.gs` untouched, no lesson JSON authored, no GAS or page version bump.
+
+### Added
+
+- **`repository-information/CLASSROOM-CURRICULUM-PLAN.md`** — the Classroom curriculum design. Corpus inventory re-verified from the files (89 dossiers, 62 study guides / 802 flashcards, 8 projects, 490 graph edges, 44 concepts, 7 guidance modules, 4 reports) and mapped to fourteen topic clusters with a public / guidance / thin verdict each. Argues the two existing tracks are the right *lanes* and the wrong *cut* (BESS stops at the product; the AIDC primer starts at the service entrance; the third lane has no track; both markets share an untaught electrical floor) and proposes **five tracks in three lanes**: `bess-foundations` (extended to 6), new `electrical-foundations` (5), `aidc-grid-to-chip` replacing `aidc-power-primer` (8, the equipment walk in physical order), new `aidc-campus` (4), new `market-access` (7) — 25 new lessons, 23 public and 7 guidance-gated, zero report-derived. Every lesson specified with a permanent id, title, `short`, `group`, the `provenance.inputs[]` it would pin and what it takes from each, the folded gate, a section-by-section outline with varied kinds, and why it exists. Teaching order fixed per track against how `clStudyNext_` actually walks. A 14-row grid-to-chip failure-point map (stage · failure · why there · who owns it · source guide) as the spec for the `where-the-chain-breaks` capstone. A 12-entry gap register naming what Profiler needs first (30 concepts entries; gen-set, UPS, switchgear and utility dossiers; two guidance modules) and what each unlocks. The cut line: first five (`the-fence-line`, `bridge-power`, `the-800-vdc-shift`, `the-control-stack`, `where-bess-plugs-in`), second and third waves, and a reasoned recommendation *against* report-derived modules. Eleven notes for the authoring sessions (Opus 5 per the standing decision, pin-on-read, `reviewBy` inheritance from guidance modules — `bess-bankability` is due 2026-10-01 — drill item arithmetic, section-kind variety, the analyst view as the acceptance test)
+- README structure tree entry for the new file
 
 ## [v04.29r] — 2026-09-02 06:23:38 PM EST
 

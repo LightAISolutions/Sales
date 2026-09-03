@@ -1,0 +1,474 @@
+# Classroom Curriculum Plan
+
+**Status:** design document — planning output, 2026-09-02. Nothing here is built. No lesson JSON was authored, `Classroom.gs` was not touched, and every id below is a *proposed* permanent id: once one is registered it can never change (`CLASSROOM-SCHEMA.md`, Id rules), so treat the id column as the thing to argue about before an authoring session starts.
+
+**What this is for.** One person is learning the US BESS/AIDC market well enough to sell into it. Classroom (`PHASE6-CLASSROOM-DESIGN.md`) is the institution that turns the Profiler corpus into taught, retained, current knowledge. Today it holds five lessons across two tracks. This plan says what the corpus can support teaching, proposes the track structure that fits the material, specifies every lesson to the level an authoring session can build from, registers the gaps worth commissioning research for, and draws the cut line.
+
+**The constraint that shapes everything.** A lesson exists only if it can be stamped: `provenance.inputs[]` pins the corpus material it was built from, and the lesson inherits the strictest gate of its inputs (`profile:` · `study:` · `project:` · `graph:` · `concepts:` → `tracks`, analyst and up; `guidance:` → contributor+; `report:` → admin only; field notes never). So the question this plan answers is not "what would be nice to teach" but "what does this corpus support, and where are the gaps worth filling". Every input named below is a source this planning session actually read; an authoring session re-reads it and pins the date off the fetched document (G2, `.claude/rules/classroom-app.md`).
+
+**Reading order.** §1 inventories the corpus. §2 argues the track structure. §3 specifies every lesson. §4 fixes teaching order. §5 is the cross-cutting failure-point map the AIDC track is built around. §6 is the gap register — what to commission before certain lessons can exist. §7 is the cut line. §8 is what an authoring session needs to know before it opens `Classroom.gs`.
+
+---
+
+## 1 · What the corpus holds (verified 2026-09-02)
+
+The numbers in the planning brief were re-derived from the files, not taken on trust.
+
+| Layer | Count | Ref prefix · gate | Notes |
+|-------|-------|-------------------|-------|
+| Company dossiers (`<slug>.profile.json`, schema v7) | **89** | `profile:` · `tracks` | 39 supplier · 12 developer · 12 EPC · 10 integrator · 9 IPP · 7 hyperscaler · 5 neocloud · 5 GC (a company may carry two). 27 have a dossier but **no study guide** — mostly IPPs/developers (Plus Power, NextEra, Arevon, Eolian, Jupiter Power, Key Capture, Terra-Gen, Apex, Lightsource bp), EPCs (Blattner, MasTec, SOLV, Samsung C&T), integrators (Canadian Solar, Envision, HyperStrong, LS Energy, Narada, Sunwoda, Trina, CRRC), and bridge-power suppliers (VoltaGrid, ProEnergy, Enchanted Rock, Mainspring, ON.energy, Prevalon) |
+| Study guides (`<slug>.study.json`) | **62** | `study:` · `tracks` | **802 flashcards** total. Ten "Technology Study Guide" v1 sets (BYD, CATL, FlexGen, Fluence, Hithium, Megmeet, Sinexcel, Sungrow, Tesla, Wärtsilä; 15 cards each, `lastUpdated` 2026-08-07/08) and 52 six-section guides (12–18 cards, mostly 2026-08-21) |
+| Named projects (`profiler-projects.json`) | **8** | `project:` · `tracks` | colossus · frontier · homer-city · hyperion · jupiter-nm · lighthouse · stargate · trimount — six AIDC campuses/programs, one power campus, one BESS project |
+| Relationship graph (`profiler-graph.json`) | **490 edges** | `graph:profiler-graph` · `tracks` | `built` 2026-09-02; edges carry curated type/note/context and evidence excerpts |
+| Concepts registry (`profiler-concepts.json`) | **44** | `concepts:profiler-concepts` · `tracks` | The `{{term}}` tooltip vocabulary. Splits roughly BESS (LFP, NMC, C-rate, BMS, PCS, EMS, thermal runaway, degradation, augmentation, duration, round-trip efficiency, sodium-ion, NFPA 855, UL 9540A, bankability), AIDC power (800 VDC, SST, UPS, PDU, rectifier, GaN, SiC, medium voltage, N+1, microgrid, behind-the-meter, colocation, interconnection queue, grid-forming inverter, ERCOT, PJM, PPA, tolling agreement), and policy/commercial (45X, ITC, FEOC, NDAA §154, Section 301, AD/CVD, offtake, EPC, hyperscaler, neocloud, BESS) |
+| Industry Guidance modules (`guidanceDocs_()` in `Profiler.gs`) | **7** | `guidance:` · `guidance` (contributor+) | `bess-tech-fundamentals-2026-08` · `power-infra-aidc-2026-08` (lane: Technology Foundations) · `nvidia-800vdc-2026-08` · `utility-aidc-procurement-2026-08` (The AI Data-Center Wave) · `bess-bankability-2026-08` · `china-policy-stack-2026-08` · `eo14420-bulk-power-2026-08` (Market Access & Bankability). `reviewBy` dates run **2026-10-01** (bankability) through 2027-02-24 (tech fundamentals) — see §8 on inheritance |
+| Reports (`reports/*.report.json`) | **4** | `report:` · `reports` (admin only) | Two competitive (grid-scale BESS; AIDC power conversion / 800 VDC race), one risk (§154-listed suppliers), one opportunity (named-project BESS attach). All `generated` 2026-08-29/30, all `status: current` |
+
+**What that supports, by topic cluster.** The point of the inventory is which clusters are deep enough to carry a lesson on public inputs alone (analyst-visible), which need a guidance module (contributor+), and which are thin:
+
+| Cluster | Public depth | Guidance depth | Verdict |
+|---------|-------------|----------------|---------|
+| Cells, chemistry, containers, degradation, duration | CATL, BYD, Hithium, EVE, LGES, Panasonic, Samsung SDI, Sungrow, Fluence, Tesla, Wärtsilä + 15 concepts | `bess-tech-fundamentals` | **Deep** — already carries the BESS track; two or three more lessons available |
+| Storage controls (BMS/EMS/PCS, dispatch, warranties) | FlexGen, Sinexcel, Wärtsilä (GEMS), Fluence, Tesla + 3 concepts | — | **Deep enough** for one public lesson; the gap in the current BESS track |
+| Power conversion physics and converter architecture | Sinexcel, Sungrow, Megmeet, Delta, Huawei Digital Power, Hitachi Energy + SiC/GaN/rectifier/PCS/grid-forming | `nvidia-800vdc` (advanced) | **Deep** — the shared layer under both markets, and untaught today |
+| Transformers, switchgear, protection, grid stability | Hitachi Energy, GE Vernova, ABB, Mortenson, Burns & McDonnell, Black & Veatch, Eaton | `power-infra-aidc` (the fence-line walk) | **Deep** on mechanism; **thin on vendors** beyond three (§6) |
+| On-site / bridge generation (turbines, engines, fuel cells) | Kiewit, Wärtsilä, Bloom, GE Vernova, Siemens Energy, Vantage, Crusoe, xAI, Primoris + VoltaGrid/ProEnergy/Enchanted Rock/Mainspring dossiers + projects frontier/jupiter-nm/homer-city/colossus | `power-infra-aidc` | **Deep** — the largest untaught AIDC cluster in the corpus |
+| Inside the building: UPS, distribution, redundancy, commissioning | Eaton, Rosendin, LITEON, Huawei, Switch, Microsoft, HITT, Turner, Samsung SDI (UPS batteries), Schneider | `nvidia-800vdc` | **Deep** on one lesson already; two more available |
+| Inside the rack: PSU, 48 V, VRM, the rack as a machine, 800 VDC | Delta, LITEON, Lambda, NVIDIA, Megmeet, Zhonhen + 800 VDC/SST concepts | `nvidia-800vdc` | **Deep** — public thesis plus a guidance-gated engineering layer |
+| Cooling plant, water, containment, DCIM/BMS | Vertiv, Aligned, QTS, Switch, Holder, Vantage, Google, Schneider | — | **Deep enough** for one facility-side lesson beyond `heat-is-the-constraint` |
+| Named campuses as power projects | 8 projects + graph + Vantage, STACK, Crusoe, xAI, Meta, Oracle, OpenAI, Applied Digital, TeraWulf, IREN, Nebius | — | **Deep** — worked examples, public |
+| Buyers, contracts, project lifecycle | Constellation, CoreWeave, Core Scientific, Amazon, Equinix, Mortenson, Turner, Primoris, Fluence, Tesla + IPP/developer dossiers + 6 concepts | `utility-aidc-procurement` | **Deep** on public inputs for buyer classes and contract forms; the utility-side machinery is guidance-only |
+| Certification, fire record, bankability | Spec-sheet vocabulary only (public) | `bess-bankability` | **Guidance-only** beyond vocabulary — contributor+ lessons |
+| Policy: FEOC, MACR, §154, 301, AD/CVD, 45X, EO 14420 | 6 concepts + policyExposure blocks on dossiers | `china-policy-stack`, `eo14420-bulk-power` | **Guidance-only** for the mechanics; a public "vocabulary" lesson is possible but shallow |
+| Competitive landscapes | dossier ecosystemRole prose | — (reports, admin only) | **Report-only** — and reports are point-in-time, see §7 on why this is not module material |
+| Solar PV physics, hydrogen, wind, nuclear/SMR, EV charging, solid-state cells, flywheels | one guide each (Jinko, Black & Veatch, GE Vernova, Constellation/Bechtel/Kiewit, Delta/Sinexcel, Samsung SDI/Panasonic, ABB) | — | **A section, not a lesson** — see §2 on what does not earn a place |
+
+---
+
+## 2 · Recommended track structure
+
+### 2.1 · The two existing tracks are the right lanes and the wrong cut
+
+The `group` vocabulary — *Technology Foundations*, *The AI Data-Center Wave*, *Market Access & Bankability* — is the right taxonomy: it is the guidance lanes, it is what the index groups by, and it maps cleanly onto the stamp gates. Keep it. The two **tracks** built on it in C1 were a first assembly from what was easiest to stamp, and the seams show in three places:
+
+1. **`bess-foundations` stops at the product.** It teaches the cell, the container, duration, degradation and the spec sheet, and never teaches the control layer that actually operates the asset (BMS → EMS → PCS: who decides what, second by second) or where the cells come from. A seller who has finished it can read a spec sheet and cannot explain what the EMS is trading off every afternoon — which is the conversation a developer's asset manager wants to have.
+2. **`aidc-power-primer` starts at the service entrance.** It is two good lessons about the building (distribution, UPS, transfer; heat). Everything *before* the fence — interconnection, the substation, the transformer queue, and the on-site generation that now powers whole campuses — is missing, and that is precisely the half of the chain a **BESS** seller can enter. The inside-the-rack half (PSU, 48 V, the rack as one machine, 800 VDC) is also missing, and that is the half every customer conversation drifts toward.
+3. **There is no track in the third lane at all.** Three of the seven guidance modules and every IPP/developer/EPC dossier are market-access material, and none of it is taught. For a *sales* curriculum, the lane that explains who buys, under what contract, against which certification file, inside which policy fence, cannot be the one with zero lessons.
+
+A fourth, structural point: **both markets sit on the same electrical layer** — conversion physics, transformers, switchgear, protection, grid stability — and the current cut has no home for it. Teaching it twice (once inside BESS, once inside AIDC) would duplicate; teaching it nowhere leaves both tracks assuming knowledge a high-school-STEM reader does not have. It wants its own track under Technology Foundations, with both market tracks pointing at it as a prerequisite.
+
+### 2.2 · The proposed cut — five tracks in three lanes
+
+| # | Track id | Title | Lane (`group`) | Lessons (existing + new) | Gate profile |
+|---|----------|-------|----------------|--------------------------|--------------|
+| 1 | `bess-foundations` *(existing, extended)* | BESS Foundations | Technology Foundations | 3 + 3 = **6** | 5 public · 1 guidance |
+| 2 | `electrical-foundations` *(new)* | Electrical Foundations — from the grid to the DC bus | Technology Foundations | 0 + 5 = **5** | 5 public |
+| 3 | `aidc-grid-to-chip` *(replaces `aidc-power-primer`)* | The AIDC Power Chain, Grid to Chip | The AI Data-Center Wave | 1 + 7 = **8** | 7 public · 1 guidance |
+| 4 | `aidc-campus` *(new)* | The AI Campus: Heat, Water, Power Projects, and the BESS Socket | The AI Data-Center Wave | 1 + 3 = **4** | 3 public · 1 guidance |
+| 5 | `market-access` *(new)* | Selling Into the Market | Market Access & Bankability | 0 + 7 = **7** | 3 public · 4 guidance |
+| | | | **Total** | **5 + 25 = 30** | 23 public · 7 guidance · 0 report |
+
+**Why five and not two.** Track length is a learning-design number, not a taxonomy number. Registry order is teaching order and the study-next pointer walks it literally (`clStudyNext_`: tracks in `clTracks_()` order, then each track's `lessons[]`), so a twelve-lesson track is a four-hour commitment with no natural landing between "I understand the grid interface" and "I understand the rack". Splitting the AIDC lane into the *equipment walk* (grid → chip, in physical order) and the *campus* (heat, water, worked examples, the BESS socket) gives the reader a completion point exactly where the material changes from "how it works" to "where I fit". The `prereqs[]` field (advisory, never blocking) carries the dependencies: tracks 3 and 4 name track 2; track 5 names tracks 1 and 3.
+
+**Why `aidc-power-primer` is replaced rather than extended.** Its two lessons are good and keep their ids — they simply move into `aidc-grid-to-chip` at their correct positions in the chain (lesson 3 and, for `heat-is-the-constraint`, into `aidc-campus` as lesson 1). A track id is permanent once progress keys on it; today nobody's progress rolls up to `aidc-power-primer` except the developer's, and the rollup is per-lesson underneath, so retiring the track id now — before analysts exist — costs nothing and avoids carrying a title that stops describing its contents. If the developer would rather keep the id, the same lesson list works under the old id with a new title; it is a naming choice, not a design one.
+
+**What does not earn a place — and why.** The corpus has one study guide each on several technologies, and the temptation is to give each a lesson. The test applied: *would a BESS/AIDC seller lose a conversation for not knowing it?*
+
+- **Solar PV physics** (Jinko: band gaps, passivation, bifacial) — no. The seller needs the *solar-plus-storage plant* (Sungrow, Primoris), which is a section of `the-control-stack` and of `how-a-storage-project-happens`, not a lesson on the cell.
+- **Hydrogen / electrolyzers** (Black & Veatch, Siemens Energy) — no. Thin corpus, no concept entries, no route into a BESS or AIDC sale.
+- **Wind** (GE Vernova) — no.
+- **Nuclear and SMRs** (Constellation, Bechtel, Kiewit, Microsoft/Meta offtakes) — not as technology. Where it matters to this seller is *procurement* — restarts, clean-firm PPAs, the offtake as bankable revenue — and that is one section of `contracts-and-revenue`. A nuclear technology lesson waits for a vendor dossier (§6).
+- **EV charging** (Delta, Sinexcel, CATL) — no; a different market. Its one transferable fact (800 V-class components got cheap because of EVs) is a single paragraph in `the-800-vdc-shift`.
+- **Solid-state, silicon-anode, high-nickel roadmap chemistries** (Samsung SDI, Panasonic) — no lesson; two flashcards in `how-a-cell-is-made` on why they are vehicle roadmaps, not stationary ones.
+- **Flywheels and synchronous condensers** (ABB, Black & Veatch) — as *sections* of `grid-stability-and-the-generator` and `redundancy-by-the-numbers`, where they are the right answer to a specific question. Not lessons.
+- **HVDC transmission** (Hitachi Energy, Kiewit) — one section of `the-transformer-and-the-substation`, because "why the biggest lines run DC" is the same I²R argument the track is built on.
+
+What *does* earn a place beyond BESS in Technology Foundations is the electrical layer (track 2) — five lessons that neither market can be taught without and that the corpus supports on public inputs alone. That is the answer to question (a).
+
+---
+
+## 3 · Lesson specifications
+
+Each entry: **id** (kebab-case, permanent) · **title** · `short` · `group` · **inputs** the stamp would pin (the ref, and what the lesson takes from it) · **gate** the stamp folds to · **outline** (section id · kind · what it teaches) · **why this lesson exists**. Every lesson carries a `flashcards` section and a `quiz` section — the drill (Classroom v01.09g) enumerates both automatically, and a lesson without them teaches once and is forgotten. Kinds are varied deliberately; the outline column shows the mix.
+
+### 3.1 · Track `bess-foundations` — BESS Foundations (Technology Foundations)
+
+**Track `short` (revised):** "Finish this and you can read a grid-storage spec sheet, explain what the control stack is trading off every afternoon, say where the cells came from, and know where batteries stop and engines begin." **Order:** `cell-to-container` → `duration-and-degradation` → `spec-sheet-decoded` → `the-control-stack` → `how-a-cell-is-made` → `where-batteries-stop`. The three existing lessons are unchanged.
+
+#### `the-control-stack` — BMS, EMS, PCS: Who Decides What
+- **short:** Three layers of control run a storage plant — one protects the cells, one converts the power, one decides the day. What each owns, and where the money is made and lost.
+- **group:** Technology Foundations · **gate:** `tracks` (public)
+- **inputs:** `study:flexgen` (what an EMS is; a site's day — dispatch, state of charge, warranty budget, augmentation mixing) · `study:sinexcel` (the PCS as gatekeeper: follows grid commands in milliseconds, rides through faults; harmonics and power factor) · `study:wartsila` (GEMS as fleet control; frequency response as the fastest responder) · `study:fluence` (the project cast — who operates, who warrants) · `concepts:profiler-concepts` (BMS, EMS, PCS, round-trip efficiency)
+- **outline:**
+
+  | Section id | Kind | Teaches |
+  |---|---|---|
+  | `three-layers` | prose | BMS (cell-level guardian: voltage, temperature, balancing, disconnect) · PCS (the bidirectional gate: MW rating, grid commands, ride-through) · EMS (the supervisor: price, contract, warranty budget). Which layer a given number belongs to |
+  | `a-day-in-dispatch` | timeline | One 24-hour day on three lanes — price, state of charge, dispatch — midday charge on the solar glut, ancillary readiness through the afternoon, evening discharge, the warranty cycle budget as the ceiling the whole day runs under |
+  | `who-owns-which-number` | table | Number (SoC window · cycle count · MW setpoint · ride-through · balancing) → owning layer → what goes wrong if that layer is wrong |
+  | `the-warranty-envelope` | callout | Cycling harder earns more today and ages the cells measurably; the EMS is an optimiser inside a contract, not a trader |
+  | `where-it-fails` | callout | BMS communication loss = a string offline; EMS mis-dispatch = a voided warranty; PCS anti-islanding trips during grid faults = revenue and ride-through penalties. Why each failure lands on the layer it does |
+  | `drill` · `check-yourself` | flashcards · quiz | 6 cards, 5 items — mechanism, never product names |
+- **why:** After `duration-and-degradation` the reader knows the asset earns by stacking revenue but cannot say *who* decides, at 4:55 pm, whether to discharge — or why a developer's asset manager and a warranty engineer disagree. This lesson lets the seller hold that conversation and recognise when a tender's control requirements (ride-through, fleet dispatch, warranty reporting) are the real spec.
+
+#### `how-a-cell-is-made` — From Powder to Cell: Manufacturing, Formats, and Yield
+- **short:** How a lithium cell is actually built, why yield is the whole game, what changes when a cell gets big, and why a factory is the product a country is buying.
+- **group:** Technology Foundations · **gate:** `tracks` (public)
+- **inputs:** `study:eve-energy` (how a cell is made; yield economics; scaling physics of big cells; cylindrical/prismatic/pouch; battery passports) · `study:lg-energy-solution` (gigafactory capital; JVs; production credits and content rules, taught generically; EV lines pivoting to storage) · `study:panasonic` (cylindrical engineering; statistical process control at billions of units) · `study:samsung-sdi` (breaking the thermal-runaway chain at the cell) · `study:hithium` (the big-cell bet: 280 → 587 → 1,175 Ah) · `concepts:profiler-concepts` (45X, thermal runaway — vocabulary only; policy mechanics stay in track 5)
+- **outline:**
+
+  | Section id | Kind | Teaches |
+  |---|---|---|
+  | `the-line` | prose | Slurry → coating → calendering → slitting → winding or stacking → can/pouch → electrolyte fill → formation → ageing. Where the weeks go, where the scrap goes |
+  | `three-formats` | proscons | Cylindrical · prismatic · pouch — what each buys in thermal path, packaging efficiency, tooling, and why stationary storage settled on large prismatic |
+  | `yield-is-the-game` | table | Defect class → where it surfaces (formation, ageing, field) → what it costs (scrap, warranty, recall) → why a point of yield moves the margin more than a point of price |
+  | `scaling-physics` | prose | What changes when a cell gets big: heat path length, propagation energy, fewer welds per MWh — the honest counterweight the spec-sheet lesson gestured at, taught from the cell side |
+  | `factories-are-the-product` | callout | Gigafactory capital, joint ventures as risk splits, EV lines converting to storage, and why "domestic content" is a factory question before it is a policy question |
+  | `drill` · `check-yourself` | flashcards · quiz | 6 cards, 5 items |
+- **why:** Every US storage conversation now reaches "where is the cell made" within ten minutes. The reader who has done this lesson can explain why a factory takes years, why a yield problem is a warranty problem, and why a bigger cell is a manufacturing bet as much as a density bet — instead of reciting a domestic-content percentage they cannot defend.
+
+#### `where-batteries-stop` — Long Duration, Sodium, and the Engine Boundary
+- **short:** Every extra hour of duration is bought in cells. Where that stops making sense, what sodium and 8-hour-native cells change, and why engines own the long end.
+- **group:** Technology Foundations · **gate:** `tracks` (public)
+- **inputs:** `study:wartsila` (storage short, engines long: efficiency, start time, fuel as duration; engines vs turbines at part load and temperature) · `study:hithium` (long duration and sodium through the same lens; 8-hour-native kilo-amp-hour cells) · `study:catl` (sodium-ion as a cold-climate and short-duration play) · `study:sungrow` (the solar-plus-storage plant that sets the duration ask) · `concepts:profiler-concepts` (duration, sodium-ion, C-rate, round-trip efficiency)
+- **outline:**
+
+  | Section id | Kind | Teaches |
+  |---|---|---|
+  | `the-cost-of-an-hour` | bars | Relative cell cost by duration class (1 → 2 → 4 → 8 h, class-representative proportions) — the visual argument that duration is a cell bill |
+  | `eight-hour-native` | prose | What an 8-hour-native design changes: low C-rate, auxiliary draw as a share of throughput, round-trip efficiency at gentle rates, containers per MW |
+  | `sodium-honestly` | proscons | Sodium-ion against LFP: feedstock, cold performance, density penalty, where it lands and where it does not |
+  | `engines-own-the-long-end` | table | Battery · reciprocating engine · gas turbine: start time · efficiency · part-load behaviour · temperature sensitivity · what an extra day of duration costs |
+  | `where-it-fails` | callout | Over-promising duration; auxiliary load quietly eroding round-trip efficiency; quoting a cold-climate chemistry into a hot site |
+  | `drill` · `check-yourself` | flashcards · quiz | 6 cards, 5 items |
+- **why:** "Why not twelve hours?" is the question every utility planner and every AI-campus power lead asks, and the honest answer — batteries stop where the cell bill outruns anything that burns fuel — is what makes a BESS seller credible in a room that also contains an engine vendor. This lesson is also the hand-off to `bridge-power` in track 3.
+
+### 3.2 · Track `electrical-foundations` — Electrical Foundations (Technology Foundations)
+
+**Track `short`:** "Finish this and you can follow a megawatt through a transformer, a breaker and a converter, explain why the grid needs inertia, and hold the electrical conversation both the storage and the data-center markets sit on." **Order:** `four-machines` → `string-versus-central` → `the-transformer-and-the-substation` → `breakers-relays-and-faults` → `grid-stability-and-the-generator`. **Prereqs:** none — this is the floor. All five public.
+
+#### `four-machines` — Rectifier, Inverter, DC-DC, Transformer
+- **short:** Power is voltage times current, wires waste it as current squared, and four machines move it between the AC world and the DC world. Everything else in both markets is a stack of these.
+- **group:** Technology Foundations · **gate:** `tracks`
+- **inputs:** `study:sinexcel` (P = V·I and I²R; the four machines; the PCS as a rectifier and inverter in one box; SiC switching; harmonics, reactive power, sags) · `study:sungrow` (the physics you need first; why plants run 1,500 V DC) · `study:delta-electronics` (why switch-mode beat linear; fans as real engineering) · `concepts:profiler-concepts` (rectifier, PCS, SiC, GaN, round-trip efficiency)
+- **outline:** `power-is-v-times-i` (prose — the one equation, and why every generation of equipment raises the voltage) · `the-four-machines` (table — machine · converts · where you meet it in a BESS plant · where you meet it in a data hall) · `switching-not-linear` (prose — chopping current at tens of kilohertz; what SiC and GaN change; why 0.1 % of efficiency is real money at utility scale, lost twice and paid a third time in cooling) · `three-ways-to-ruin-a-wave` (callout — harmonics/THD, power factor, sags; who is billed for each) · `where-it-fails` (callout — converters derate with heat; harmonic heating in transformers and neutrals; a 100 ms sag that scraps a batch or drops a hall) · `drill` · `check-yourself`
+- **why:** Both existing tracks use "PCS", "rectifier", "inverter" and "I²R" as if the reader had met them. After this lesson the reader has, once, from the physics — and can place any box a vendor names into one of four slots.
+
+#### `string-versus-central` — One Big Box or Many Small Ones
+- **short:** Every large conversion problem faces the same fork: one central machine or many modules. Solar settled it first; UPS rooms and battery plants are arguing it now.
+- **group:** Technology Foundations · **gate:** `tracks`
+- **inputs:** `study:huawei-digital-power` (string vs central; MPPT and why granularity harvests more; modular UPS and the availability case; decentralised control) · `study:fluence` (DC block vs AC block; central conversion skids as a fleet) · `study:sungrow` (string PCS in the storage portfolio) · `study:liteon` (N+1 and N+N modules; cold redundancy) · `concepts:profiler-concepts` (N+1, PCS)
+- **outline:** `the-fork` (prose) · `solar-taught-it` (prose — mismatch, MPPT, a failed string vs a failed central unit) · `same-argument-three-rooms` (table — solar inverter · UPS · BESS conversion: cost per watt · availability · repair time · part-load efficiency · who does the swap) · `the-hidden-engineering` (callout — paralleled modules sharing current with no single master) · `where-it-fails` (callout — a central failure is a crane and a wait; a module fleet with one controller is a monolith in disguise; redundancy that parks modules below their efficiency sweet spot) · `drill` · `check-yourself`
+- **why:** "Modular" is the most-used word on both markets' spec sheets and the least-defined. The reader learns the one tradeoff behind it and can ask the vendor the question that matters: what happens to the load while you swap the failed unit?
+
+#### `the-transformer-and-the-substation` — Why Electricity Changes Clothes
+- **short:** Transmission runs at hundreds of kilovolts and a chip drinks one volt; the transformer is every step in between. How one is built, why it takes years, and why it is the slot everyone is fighting for.
+- **group:** Technology Foundations · **gate:** `tracks`
+- **inputs:** `study:mortenson` (substations and voltage; 345 kV as a bulk-grid plug; a 1 GW substation in a year and what its critical path really is) · `study:hitachi-energy` (inside a transformer factory: cores, GOES laminations, hand-laid windings, vacuum drying, bushings as a known failure point, impulse tests; HVDC converters) · `study:ge-vernova` (why grid-equipment factories cannot just scale: people-limited, GOES, test bays) · `study:abb` (medium voltage vs low voltage — why a campus keeps a middle tier; 60,000 A at 480 V) · `concepts:profiler-concepts` (medium voltage)
+- **outline:** `changing-clothes` (prose — the voltage ladder and the current it implies at each rung) · `inside-the-tank` (prose — core, windings, paper, oil, bushings, tap changers, the tests) · `why-forty-months` (timeline — order → custom design → winding → drying → testing → shipping a 300-tonne object; where the queue is) · `the-biggest-lines-run-dc` (callout — the HVDC aside, same I²R argument) · `where-it-fails` (table — bushings · moisture · tap changers · harmonic and overload heating · the slot itself; why each is the failure point it is) · `drill` · `check-yourself`
+- **why:** The transformer is the single most-cited bottleneck in both markets and almost nobody selling into them can say what is inside one. After this lesson the reader can explain a 40-month lead time from first principles, which is the difference between repeating a headline and being believed.
+
+#### `breakers-relays-and-faults` — Stopping Ten Thousand Amps
+- **short:** A breaker's hard job is not carrying current but stopping it. How arcs are killed, how relays decide, and why direct current changes the rules.
+- **group:** Technology Foundations · **gate:** `tracks`
+- **inputs:** `study:abb` (arc interruption: chutes, vacuum, SF6, solid-state; protection relays, IEDs, IEC 61850, reclosers and FLISR) · `study:eaton` (fault energy as what sizes each tier — taken as the sizing argument only; selective coordination stays taught in `the-aidc-power-chain`) · `study:zhonhen` (DC safety literacy: no zero crossing) · `concepts:profiler-concepts`
+- **outline:** `what-a-fault-is` (prose — 10 to 50 times normal current, and why equipment upstream is heavier) · `killing-the-arc` (proscons — arc chutes · vacuum · SF6 · solid-state, each with what it buys and what it costs) · `the-brain-and-the-muscle` (prose — relays, instrument transformers, differential and distance protection, the networked substation and its cybersecurity debt) · `dc-has-no-zero` (callout — why a DC arc must be engineered out rather than waited out) · `where-it-fails` (table — miscoordination · nuisance trips · relay settings nobody re-checked after a load change · a sustained DC series arc · SF6 handling) · `drill` · `check-yourself`
+- **why:** Protection is where an electrical spec stops being a parts list and becomes a design. The reader learns enough to follow a coordination-study conversation and to understand why the 800 VDC transition is, at bottom, a breaker problem — which `dc-fault-engineering` in track 3 then takes to engineering depth.
+
+#### `grid-stability-and-the-generator` — Inertia, Reactive Power, and Teaching Electronics to Lead
+- **short:** A generator is a magnet locked to the grid's rhythm. What retires with it, why a grid of followers has no leader, and what a grid-forming inverter actually does.
+- **group:** Technology Foundations · **gate:** `tracks`
+- **inputs:** `study:ge-vernova` (generator physics: excitation, 3,600 rpm, torque angle vs excitation as two independent knobs, hydrogen cooling) · `study:black-veatch` (inertia, reactive power, synchronous condensers, the afterlife of coal plants) · `study:hitachi-energy` (grid-following vs grid-forming; the stability ceiling; forming as a tender requirement) · `study:sinexcel` (frequency as the live balance meter) · `concepts:profiler-concepts` (grid-forming inverter)
+- **outline:** `the-spinning-machine` (prose) · `frequency-is-a-meter` (prose — supply, demand, and the number that moves) · `what-retires-with-coal` (callout — inertia, voltage support, fault current; the synchronous condenser as the elegant fix) · `following-versus-forming` (proscons) · `where-it-fails` (callout — a region of pure followers through a fault; anti-islanding trips that take storage offline exactly when it is needed; ride-through as the rule that answers it) · `drill` · `check-yourself`
+- **why:** "Grid-forming" is now a line in storage tenders and a line in NVIDIA's data-center papers, and it cannot be understood without the generator it imitates. This lesson closes the foundations track by explaining what the grid is losing and what inverters are being asked to give back — the physics behind `synthetic inertia` in `duration-and-degradation` and behind every ride-through rule in tracks 4 and 5.
+
+### 3.3 · Track `aidc-grid-to-chip` — The AIDC Power Chain, Grid to Chip (The AI Data-Center Wave)
+
+**Track `short`:** "Finish this and you can walk a megawatt from the interconnection study to the one-volt rail on the chip, name every box on the way, say what each is for, and say where and why each one fails." **Order:** `the-fence-line` → `bridge-power` → `the-aidc-power-chain` *(existing)* → `redundancy-by-the-numbers` → `inside-the-rack` → `the-800-vdc-shift` → `dc-fault-engineering` *(guidance)* → `where-the-chain-breaks`. **Prereqs:** `electrical-foundations`. This is the answer to question (b): the walk is in physical order, every equipment lesson carries a `where-it-fails` section, and the track closes on the failure-point capstone (§5).
+
+#### `the-fence-line` — Interconnection and the Substation
+- **short:** Nothing connects to the grid unstudied. The three studies, the queue they form, the substation at the end of them, and the four kinds of megawatt that are not the same number.
+- **group:** The AI Data-Center Wave · **gate:** `tracks`
+- **inputs:** `study:burns-mcdonnell` (interconnection studies: feasibility → system impact → facilities; requester funds upgrades; load vs generation interconnection; large-load rules) · `study:mortenson` (a 1 GW substation in a year — the critical path is transformer slots and energisation testing) · `study:stack-infrastructure` (land and power banking as the queue game) · `study:nebius` (contracted vs connected vs active power) · `study:terawulf` (gross MW vs critical IT MW; brownfields win the power race) · `concepts:profiler-concepts` (interconnection queue, medium voltage, ERCOT, PJM)
+- **outline:** `nothing-connects-unstudied` (prose) · `the-three-studies` (timeline — the queued phases and the years each takes in a busy region) · `four-megawatts-that-differ` (table — gross · critical IT · contracted · connected · active: who quotes which and why it flatters) · `load-is-not-generation` (callout — why regulators started writing large-load rules) · `where-it-fails` (callout — queue re-pricing and audits; the transformer slot nobody reserved; energisation testing as a schedule, not a formality) · `drill` · `check-yourself`
+- **why:** The campus announcement the seller reads says "1 GW" and the seller cannot tell whether that is a study request, a signed contract, or energised iron. After this lesson they can — and can place their own product's scope relative to the fence.
+
+#### `bridge-power` — Power Before the Grid Arrives
+- **short:** Why a campus builds its own power plant, the three ways to eat the same gas, the turbine queue that sets the calendar, and how four real campuses did it.
+- **group:** The AI Data-Center Wave · **gate:** `tracks`
+- **inputs:** `study:kiewit` (combined-cycle vs simple-cycle; H-class; heat rate; the turbine queue and slot reservations) · `study:wartsila` (reciprocating engines: efficiency, start time, part-load, temperature; engines vs turbines) · `study:bloom-energy` (onsite primary power; grid-parallel vs islanded; reliability from granularity; DC-native pairing) · `study:vantage` (behind-the-meter: prime vs backup engines, off-grid vs bridge, the ratepayer politics) · `study:crusoe` (running an island) · `study:xai` (grid power vs your own plant; air permits) · `study:primoris` (behind-the-meter gas as the fast power AI cannot wait for) · `profile:voltagrid` · `profile:proenergy` · `profile:enchanted-rock` · `profile:mainspring-energy` (the four bridge-power supplier archetypes: engine fleets, aeroderivatives, gas microgrids, linear generators) · `project:frontier` · `project:jupiter-nm` · `project:colossus` · `project:homer-city` · `concepts:profiler-concepts` (behind-the-meter, microgrid, N+1)
+- **outline:** `why-a-campus-builds-a-power-plant` (prose — the queue, the calendar, and the arithmetic) · `three-ways-to-eat-the-same-gas` (proscons — turbine · engine · fuel cell) · `the-turbine-queue` (prose — three OEMs, sold-out slots, slot reservations as assets, turbine orders as a leading indicator) · `prime-backup-n-plus-one` (callout — a power plant run on data-hall redundancy logic) · `four-campuses` (table — Frontier · Jupiter · Colossus · Homer City: prime source · scale · grid posture · who supplies) · `where-it-fails` (callout — air permits; turbines at part load and in hot thin air; fuel supply; a slot that slips) · `drill` · `check-yourself`
+- **why:** This is the largest untaught cluster in the corpus and the one where a BESS product most plausibly rides along (buffering an engine plant, firming an islanded campus). The reader leaves able to say which prime mover a campus chose and why — and where a battery would sit next to it.
+
+#### `the-aidc-power-chain` *(existing — unchanged, position 3)*
+Service entrance to rack: the hierarchy, busway, selective coordination, the UPS dial, outage choreography, dirty loads. Inputs `study:eaton`, `study:vertiv`, `concepts:profiler-concepts`. Its `dirty-loads` section is the first place the periodic AI load swing appears; `inside-the-rack` picks that thread up from the other end.
+
+#### `redundancy-by-the-numbers` — N+1, 2N, and Six Nines
+- **short:** How reliability is written, priced, and proven: the redundancy vocabulary, what a nine costs, the Uptime tiers, the five levels of commissioning, and the operators who are deleting the UPS altogether.
+- **group:** The AI Data-Center Wave · **gate:** `tracks`
+- **inputs:** `study:liteon` (N+1 vs N+N supplies; A and B feeds; ORing and precharge; cold redundancy) · `study:huawei-digital-power` (modular UPS: repair time is the availability case) · `study:switch` (Uptime Tiers I–IV and a self-declared "Tier 5") · `study:microsoft` (regions, zones, nines, the vanishing UPS) · `study:hitt` (commissioning L1–L5; commissioned megawatts as the honest metric) · `study:rosendin` (the rack whip and A/B feeds; thousands of terminations proven in commissioning) · `study:turner-construction` (six nines as what reliability engineering sells) · `concepts:profiler-concepts` (N+1, UPS)
+- **outline:** `the-vocabulary` (table — N · N+1 · 2N · 2(N+1) · catcher/reserve bus · A/B feeds: what each protects against and what it doubles) · `pricing-a-nine` (bars — allowed downtime per year at 99.9 / 99.99 / 99.999 %) · `the-tiers` (prose — what each Uptime tier requires, and why a marketing tier is not one) · `commissioning` (timeline — L1 factory witness → L5 integrated systems test with load banks; pull the feed, watch the generators catch) · `the-vanishing-ups` (callout — reliability moved into software across zones; buy firm power upstream, bank the capital) · `where-it-fails` (table — the shared bypass · the transfer switch · human error during commissioning · supplies parked below their efficiency sweet spot · wake-up latency of cold redundancy) · `drill` · `check-yourself`
+- **why:** Redundancy is where the data-center buyer's money goes and where its vocabulary is most opaque to outsiders. After this lesson the reader can read "2N, Tier III, 99.999 %" as a set of engineering commitments — and can hear when a BESS-based UPS proposal is being judged on this vocabulary rather than on storage vocabulary.
+
+#### `inside-the-rack` — The Last Ten Metres
+- **short:** From the power strip to the die: the server supply, the 48-volt busbar, the thousand-amp last centimetre, the rack that became one machine, and the load that swings in rhythm.
+- **group:** The AI Data-Center Wave · **gate:** `tracks`
+- **inputs:** `study:delta-electronics` (12 V → 48 V; sixteenfold loss reduction; the last centimetre at ~1 V; two-stage vs direct conversion) · `study:liteon` (standard PSU slots and the density race; hot-swap as engineered) · `study:lambda` (the rack is the new server; NVL72 as one NVLink domain; ~130–150 kW; scale-up vs scale-out) · `study:nvidia` (why thousands of simple cores draw power continuously; HBM and the memory wall) · `study:megmeet` (the legacy chain stage by stage; PUE defined; 1 MW at 415 V is ~1,400 A) · `concepts:profiler-concepts` (PDU, rectifier, N+1, UPS)
+- **outline:** `the-rack-is-the-machine` (prose) · `psu-to-die` (table — stage · voltage · current · why that voltage · what it wastes) · `forty-eight-volts` (prose — the open-rack busbar, the 60 V line, why the win is sixteenfold) · `hot-swap-is-engineered` (callout — ORing, precharge, current sharing) · `the-periodic-swing` (prose — training steps as a rhythm; supercapacitor and battery shelves as the answer inside the rack; what the grid sees) · `where-it-fails` (callout — inrush on a live swap; a bus that behaves like a heater; the last centimetre with no thermal margin; the swing that excites a resonance) · `drill` · `check-yourself`
+- **why:** The inside of the rack is where every AIDC power conversation now ends up and where a storage seller is most often out of their depth. This lesson gives the reader the whole chain to the die so that `the-800-vdc-shift` reads as an inevitability rather than a product launch.
+
+#### `the-800-vdc-shift` — Convert Once, Early, High
+- **short:** The AC chain converts to DC twice and throws it away once. China fixed that at 240 volts in 2010; NVIDIA is fixing it at 800. The thesis, the three chains side by side, and the new boxes.
+- **group:** The AI Data-Center Wave · **gate:** `tracks` (public — the thesis; the engineering layer is the next lesson)
+- **inputs:** `study:zhonhen` (the Western AC chain; China's 240/336 V HVDC; Panama power; 800 VDC as the West arriving at the same thesis; DC safety literacy) · `study:megmeet` (the disrupted chain; SST, sidecar, power shelves, BBU and supercapacitor shelves, CRPS) · `study:nvidia` (the rack as scale-up domain) · `study:delta-electronics` (why every removed stage makes the survivor's job harder) · `concepts:profiler-concepts` (800 VDC, SST, SiC, rectifier)
+- **outline:** `three-chains` (table — Western AC (7–8 stages, ~88–94 %) · China 240/336 VDC (~5 stages) · 800 VDC (13.8 kV → SST/sidecar → 800 V bus → in-rack DC/DC): stages · efficiency · what it needed from the server) · `why-800` (prose — I²R at megawatt racks; +157 % power through the same copper; −45 % copper; the EV industry made 800 V-class parts cheap) · `the-new-boxes` (table — SST · MV rectifier sidecar · power shelf · BBU shelf · supercapacitor shelf: what it replaces, where it stands, when it ships) · `same-thesis-twice` (callout — 2010 and 2025, voltage scaled to the load) · `dc-safety-in-plain-terms` (prose — no zero crossing, DC-rated breakers, grounding as a design decision) · `where-it-fails` (callout — a stage deleted without a plan for its fault duty; a stock PSU that was never DC-rated; a sidecar retrofit that outruns the hall's upstream capacity) · `drill` · `check-yourself`
+- **why:** After this lesson the reader can explain the 800 VDC shift from first principles, place any vendor's product in the new chain, and — the sales point — recognise that a BBU or supercapacitor shelf on a DC bus is a battery sale happening in a room they have not been in.
+
+#### `dc-fault-engineering` — Faults, Grounding, and the Interlock at 800 Volts
+- **short:** The genuinely new engineering: how DC faults differ, four grounding schemes, two protection zones, the interlock that keeps hands off live whips, and why solid-state breakers matter.
+- **group:** The AI Data-Center Wave · **gate:** `guidance` (contributor+)
+- **inputs:** `guidance:nvidia-800vdc-2026-08` (the four deployment architectures; AC vs DC fault behaviour; grounding schemes; protection zones, interlock, SSCBs; what the paper does not say) · `study:zhonhen` (DC safety literacy) · `study:abb` (solid-state breakers; why DC has no natural moment to die) · `concepts:profiler-concepts` (800 VDC, SST)
+- **outline:** `four-deployment-options` (proscons — AC baseline · rack-level power rack · cluster-level power center · hall-level DC power block) · `ac-versus-dc-faults` (table — fault current · fault energy · shock · protection devices · ground-fault detection · series and parallel arcing) · `grounding` (table — the four schemes, mechanism, strengths, weaknesses) · `zones-and-the-interlock` (prose — facility distribution zone vs rack interface zone; the de-energised whip; lock before enable, open before unlock) · `sscb-versus-mccb` (bars — clearing time by device class, read as shape not datasheet) · `what-the-paper-does-not-say` (callout) · `drill` · `check-yourself`
+- **why:** This is the module's own field note made a lesson: advanced material, not week-one material. A contributor who has done it can sit in an 800 VDC engineering conversation and follow it; the analyst tier sees it as a withheld count and still has the public thesis from the previous lesson.
+
+#### `where-the-chain-breaks` — The Failure-Point Map
+- **short:** One chain, a dozen weak points. Where the grid-to-chip path fails, why the physics makes it fail there, and who owns each failure.
+- **group:** The AI Data-Center Wave · **gate:** `tracks`
+- **inputs:** the equipment guides the track was built from, re-read for their failure content: `study:hitachi-energy` · `study:ge-vernova` · `study:abb` · `study:eaton` · `study:rosendin` · `study:hitt` · `study:huawei-digital-power` · `study:liteon` · `study:delta-electronics` · `study:vertiv` · `study:sinexcel` · `study:kiewit` · `study:zhonhen` · `concepts:profiler-concepts`. (An authoring session pins only the guides whose failure content it actually used; the §5 map names the source per row.)
+- **outline:** `one-chain-twelve-weak-points` (table — the §5 map: stage · failure · why there · who owns it) · `the-physics-behind-them` (callout — four causes recur: current squared as heat, no zero crossing, a series thermal path, and human hands) · `who-owns-the-failure` (prose — utility · EPC · electrical contractor · OEM · operator, and where the warranties stop) · `a-fault-walks-the-chain` (timeline — one downstream fault, millisecond by millisecond, through coordination, transfer and hold-up) · `drill` (flashcards — one per row of the map) · `check-yourself` (quiz — scenario-based: "the hall went dark; which layer failed?")
+- **why:** The capstone the developer asked for. Every earlier lesson taught one stage's failure; this one puts them on a single map so the reader can diagnose a described outage to a layer, which is the skill that makes a seller sound like an engineer in front of one.
+
+### 3.4 · Track `aidc-campus` — The AI Campus: Heat, Water, Power Projects, and the BESS Socket (The AI Data-Center Wave)
+
+**Track `short`:** "Finish this and you can explain why heat and water set the density, read a campus announcement as a power project, and say exactly where — and where not — a battery plugs into the AI buildout." **Order:** `heat-is-the-constraint` *(existing)* → `the-cooling-plant-and-water` → `the-campus-as-a-power-project` → `where-bess-plugs-in` *(guidance)*. **Prereqs:** `aidc-grid-to-chip`.
+
+#### `heat-is-the-constraint` *(existing — unchanged, position 1)*
+Why the rack got hot, where air runs out, the thermal chain and its temperature budget, the liquid kit, warm-water economics. Inputs `study:vertiv`, `study:nvidia`, `concepts:profiler-concepts`.
+
+#### `the-cooling-plant-and-water` — PUE, WUE, and the Plant Outside the Hall
+- **short:** The chip-side chain ends at facility water; this is what happens after. Chillers versus economisers, why water became the fight, containment, and the software that runs the building.
+- **group:** The AI Data-Center Wave · **gate:** `tracks`
+- **inputs:** `study:vertiv` (CRACs, CRAHs, chillers; riding the capex cycle) · `study:aligned` (heat as the product; the air-cooling density wall; waterless heat rejection and WUE) · `study:qts` (water-free pumped-refrigerant cooling) · `study:holder-construction` (air, water, and the water-neutrality constraint; hot/cold aisles and containment) · `study:vantage` (PUE, WUE and the cooling stack) · `study:switch` (heat containment; hybrid halls) · `study:google` (running liquid cooling as a fleet) · `study:schneider-electric` (DCIM; the building management system; sequences of operations; fault detection) · `concepts:profiler-concepts`
+- **outline:** `two-ratios` (table — PUE · WUE: definition, what moves it, what a good number looks like by climate) · `chillers-economisers-and-the-climate-file` (prose) · `waterless` (proscons — evaporative · dry/pumped-refrigerant: water, energy, capacity, where each wins) · `containment` (prose — hot aisle, cold aisle, blanking panels, hybrid halls) · `the-nervous-system` (callout — DCIM, the BMS, and why the sequence of operations decides the energy bill) · `where-it-fails` (table — stranded capacity · a bad sequence · the CDU approach pinch · water rights · a hall that cannot take the tenant's next rack) · `drill` · `check-yourself`
+- **why:** Cooling is the other half of the megawatt and the half where campuses now get refused permits. The reader learns to talk PUE and WUE with a facilities lead, and — the seller's angle — to see that a BESS site has the same thermal-plant conversation in miniature.
+
+#### `the-campus-as-a-power-project` — Reading the Eight Named Projects
+- **short:** An AI campus is a power project with servers attached. The development lifecycle, who is in the room, and the eight named projects in the corpus read as worked examples.
+- **group:** The AI Data-Center Wave · **gate:** `tracks`
+- **inputs:** `project:colossus` · `project:frontier` · `project:homer-city` · `project:hyperion` · `project:jupiter-nm` · `project:lighthouse` · `project:stargate` · `project:trimount` · `graph:profiler-graph` (who builds, powers and supplies each) · `study:vantage` (the campus lifecycle from land and power banking to fit-out; giga-campus economics) · `study:stack-infrastructure` (powered shell → turnkey → build-to-suit) · `study:crusoe` (powered shell to full stack) · `study:xai` (compressing the build) · `study:meta` (compute shelters, not monuments) · `study:applied-digital` (siting economics; the unnamed tenant) · `study:nebius` (power and permits as the critical path) · `study:oracle` (capex-on-demand) · `concepts:profiler-concepts` (hyperscaler, neocloud, colocation)
+- **outline:** `from-land-to-fit-out` (timeline — land and power banking → entitlement → shell → fit-out → commissioned MW) · `the-eight-projects` (table — name · kind · location · prime power · who builds · who is the tenant) · `who-is-in-the-room` (prose — developer, GC bench, power partner, OEM, tenant, utility; whose problem each layer is) · `reading-an-announcement` (callout — gross vs critical MW, contracted vs connected, "up to", and what a first phase actually energises) · `where-it-fails` (callout — the tenant that is never named; a bridge plant whose permit lags the shell; a campus scaled to a GPU generation that moved) · `drill` (mechanism cards, e.g. "why did an islanded campus choose engines over turbines?") · `check-yourself`
+- **why:** These are the projects the seller will be asked about by name. The content contract forbids trivia, so the lesson teaches the lifecycle and uses the projects as evidence — after it, the reader can take any new campus headline and place it on the same lifecycle with the same cast.
+
+#### `where-bess-plugs-in` — The Three Sockets
+- **short:** Sell to the grid, not to the data centre. The three places a battery enters the AI buildout, the ride-through rules that created one of them, and the honest no in the third.
+- **group:** The AI Data-Center Wave · **gate:** `guidance` (contributor+)
+- **inputs:** `guidance:power-infra-aidc-2026-08` (the fence-line chain; the three BESS sockets; the 2026–28 gates; the seller's vocabulary discipline) · `study:samsung-sdi` (a UPS battery is a power battery, not an energy battery; float duty; why the niche pays a premium) · `profile:on-energy` (the medium-voltage AI UPS category) · `project:colossus` · `graph:profiler-graph` (the buffering and MV-UPS edges the sockets are evidenced by) · `concepts:profiler-concepts` (behind-the-meter, UPS, microgrid, ERCOT)
+- **outline:** `sell-to-the-grid` (prose — the orienting rule and why AI load growth is ordinary front-of-meter storage demand) · `three-sockets` (proscons — grid-side FOM · campus/behind-the-meter buffering · inside the hall) · `the-rules-that-made-a-socket` (timeline — SB 6 · NOGRR 282 grandfather line · PRC-029-1 · the Texas queue audit and repricing) · `power-battery-versus-energy-battery` (table — duty · sizing · what is optimised · what certifies it) · `the-honest-no` (callout — knowing your layer is itself the credibility signal) · `drill` · `check-yourself`
+- **why:** The payoff of the whole AIDC lane for a BESS seller: after the equipment walk and the campus view, this lesson says where the product fits. It inherits the guidance module's `reviewBy` (2026-12-10) and its dated gates, so it is the first lesson the refresh pipeline will re-open.
+
+### 3.5 · Track `market-access` — Selling Into the Market (Market Access & Bankability)
+
+**Track `short`:** "Finish this and you can name who signs the PO, under which contract, against which certification file, inside which policy fence — and say what 'bankable' concretely means to the lender who decides." **Order:** `who-buys-storage` → `how-a-storage-project-happens` → `contracts-and-revenue` → `the-certification-stack` *(guidance)* → `what-bankable-means` *(guidance)* → `the-china-policy-stack` *(guidance)* → `utility-procurement-meets-ai-load` *(guidance)*. **Prereqs:** `bess-foundations`, `aidc-grid-to-chip`. The three public lessons front-load the track so an analyst finishes something coherent before the withheld count begins.
+
+#### `who-buys-storage` — Eight Buyer Classes
+- **short:** Supplier, integrator, developer, IPP, EPC, GC, hyperscaler, neocloud — the roster's own categories as a map of who buys what, on which criteria, and from which desk.
+- **group:** Market Access & Bankability · **gate:** `tracks`
+- **inputs:** `profile:plus-power` (the tolling franchise; dual-sourcing) · `profile:nextera-energy-resources` (the market-maker IPP) · `profile:arevon` (a single-vendor-locked IPP) · `profile:jupiter-power` (a developer as a cell maker's anchor customer) · `study:constellation-energy` (merchant power; capacity markets) · `study:equinix` (retail, wholesale, build-to-suit) · `study:vantage` (the operator-landlord model) · `study:mortenson` (EPC vs GC: who owns the power-plant problem) · `study:turner-construction` (why procurement became the product) · `study:stack-infrastructure` (the product ladder) · `concepts:profiler-concepts` (hyperscaler, neocloud, EPC, PPA, tolling agreement, offtake, colocation)
+- **outline:** `eight-classes` (table — class · what they buy · what they buy on · who signs · how fast) · `the-ipp` (prose — merchant vs contracted, safe-harboured fleets, why dual-sourcing is a strategy) · `epc-versus-gc` (proscons) · `the-landlord-tiers` (prose — retail, wholesale, build-to-suit; powered shell vs turnkey) · `where-it-fails` (callout — pitching storage criteria to an AI-criteria desk and vice versa; selling to the utility when the developer picks the OEM) · `drill` · `check-yourself`
+- **why:** The single most common early-career sales error is selling to the wrong desk. The reader leaves with the roster's eight categories as a working model of who decides, so every dossier they open afterwards slots into a buyer class before they read a word of it.
+
+#### `how-a-storage-project-happens` — From Site Control to Commercial Operation
+- **short:** The lifecycle of a grid-storage project: site, interconnection, offtake, financing, EPC, commissioning, the meter turning on — and where along it a supplier actually gets chosen.
+- **group:** Market Access & Bankability · **gate:** `tracks`
+- **inputs:** `study:fluence` (how a project gets built and operated) · `study:tesla` (how a utility-scale project actually happens) · `study:mortenson` (developer vs builder; entitlement and environmental review; MW vs MWh) · `study:primoris` (how a solar farm gets built; backlog quality; percentage-of-completion) · `profile:solv-energy` · `profile:blattner` (the pure-play storage builders) · `study:hitt` (commissioning as proof) · `concepts:profiler-concepts` (EPC, interconnection queue, offtake, ITC, PPA)
+- **outline:** `the-lifecycle` (timeline — site control → interconnection → offtake → financing → EPC award → construction → commissioning → COD) · `who-does-what-when` (table — stage · owner · what is decided · what a supplier can influence) · `where-the-seller-enters` (prose — bid-stage BOM lock, approved-vendor lists, the IE's technical review) · `how-overruns-hide` (callout — percentage-of-completion, backlog that is not one number) · `where-it-fails` (callout — offtake that does not close; the interconnection date that moves the pro forma; a vendor qualified after the RFP cycle) · `drill` · `check-yourself`
+- **why:** Knowing the product is not knowing the sale. After this lesson the reader knows at which stage the OEM is chosen, by whom, and what must already be true (qualification, certification, bankability) for their product to be in the running.
+
+#### `contracts-and-revenue` — Who Carries Which Risk
+- **short:** PPA, tolling, take-or-pay, capacity, merchant, hedge — the instruments a storage or compute asset is financed on, and which party each one hands the risk to.
+- **group:** Market Access & Bankability · **gate:** `tracks`
+- **inputs:** `study:constellation-energy` (merchant power; capacity markets paying plants to exist; restarting a reactor; attribute markets) · `study:coreweave` (take-or-pay; GPU-backed debt) · `study:core-scientific` (anatomy of a take-or-pay colocation contract) · `study:amazon` (how a corporate PPA actually works; the co-location cost-shifting fight) · `study:google` (hourly matching; clean firm power) · `profile:plus-power` (tolling as a franchise) · `concepts:profiler-concepts` (PPA, tolling agreement, offtake, ERCOT, PJM)
+- **outline:** `the-instruments` (table — instrument · who pays for what · who carries price risk · who carries volume risk · who finances on it) · `capacity-markets` (prose — being paid to exist; accreditation as the fight) · `take-or-pay` (prose — committed capacity from colocation to compute) · `clean-firm-and-the-restart` (callout — nuclear restarts, corporate PPAs, and why hourly matching changes what "100 % renewable" buys) · `where-it-fails` (callout — a merchant asset's software; a toller's warranty cycle budget; a PPA priced on a queue date) · `drill` · `check-yourself`
+- **why:** `duration-and-degradation` taught the revenue *shapes*; this teaches the *contracts* that turn them into a financeable asset, which is what the developer on the other side of the table is actually optimising. The reader can then read a tender's commercial section as carefully as its technical one.
+
+#### `the-certification-stack` — Listing, Test Method, Code
+- **short:** UN 38.3 to NFPA 855: what each standard covers, whether it is a listing, a test method or a code, who demands it — and the fire record that wrote the rules.
+- **group:** Market Access & Bankability · **gate:** `guidance` (contributor+)
+- **inputs:** `guidance:bess-bankability-2026-08` (the certification stack table; UL 9540A and NFPA 855-2026 precisely; the fire record and how incidents price) · `concepts:profiler-concepts` (UL 9540A, NFPA 855, thermal runaway)
+- **outline:** `three-different-things` (prose — a listing, a test method and an installation code are demanded by three different authorities) · `the-stack` (table — standard · covers · nature · who demands) · `9540a-precisely` (prose) · `the-fire-record` (timeline — McMicken 2019 → Moss Landing Jan 2025 → the setback bill dies → NFPA 855-2026 adoption; the failure rate per GWh falling) · `how-incidents-price` (callout — why underwriters distinguished legacy indoor NMC from modern outdoor LFP) · `drill` · `check-yourself`
+- **why:** `spec-sheet-decoded` taught the vocabulary; this teaches the file. A contributor who has done it can hand a fire marshal, an insurer and a lender each the document they are actually asking for, and can tell a buyer why Moss Landing is a different risk object from the product being quoted.
+
+#### `what-bankable-means` — The Independent Engineer's Report
+- **short:** Lenders close on an IE report, not a brochure. What it tests, the contract skeleton it expects, the scorecards it consults, and the RFP diligence checklist that follows from all three.
+- **group:** Market Access & Bankability · **gate:** `guidance` (contributor+)
+- **inputs:** `guidance:bess-bankability-2026-08` (what bankable concretely means; the counterparty file; the RFP diligence checklist; sales implications) · `concepts:profiler-concepts` (bankability, augmentation, degradation)
+- **outline:** `the-ie-report` (prose — revenue model against real capability; two-cycles-a-day against a one-cycle warranty) · `the-contract-skeleton` (table — commissioning guarantee · energy-retention warranty · availability guarantee through the LTSA · liquidated damages: who gives it, on what condition) · `the-scorecards` (prose — the Tier 1 list as a financeability screen; independent lab scorecards; factory audits and where defects now live) · `the-rfp-checklist` (table — the diligence items, grouped) · `where-it-fails` (callout — a warranty without the LTSA; a curve two points optimistic; a supplier that cannot survive a prudence review) · `drill` · `check-yourself`
+- **why:** "Bankable" is the word that decides regulated-market sales and the word sellers use most loosely. After this lesson the reader can say what it means to the one person whose opinion counts, and can pre-empt the IE's questions in the proposal.
+
+#### `the-china-policy-stack` — Four Levers and One Order
+- **short:** FEOC, MACR, §154 and the tariff stack as one machine; the timeline to 2031; the compliant lanes that remain; and what EO 14420 does and does not say.
+- **group:** Market Access & Bankability · **gate:** `guidance` (contributor+)
+- **inputs:** `guidance:china-policy-stack-2026-08` (the four levers; the MACR ladder; entity tests and the paper trail; the timeline; the interaction map; compliant pathways; red lines) · `guidance:eo14420-bulk-power-2026-08` (what the order is; covered equipment; the dated gates; the four definitions; what it does not say) · `concepts:profiler-concepts` (FEOC, NDAA §154, Section 301 tariffs, AD/CVD, 45X, ITC)
+- **outline:** `four-levers` (table — the four machines side by side) · `the-macr-ladder` (bars) · `the-timeline` (timeline — 2023 to 2031) · `eo-14420` (callout — scope, gates, the four definitions, and what the order does not say) · `compliant-lanes` (proscons) · `red-lines` (callout — for listed-supplier sales teams) · `drill` · `check-yourself`
+- **why:** The policy fence decides which US sales are possible before any technical conversation starts. The reader leaves able to walk a developer through "can I buy this cell in 2026 and keep my credit" without improvising — and knowing the red lines that end careers.
+
+#### `utility-procurement-meets-ai-load` — The Gatekeeper
+- **short:** When the regulated utility is the gatekeeper for AI load: the four-move playbook, the five channels storage enters through, who signs the PO, and ERCOT against the regulated states.
+- **group:** Market Access & Bankability · **gate:** `guidance` (contributor+)
+- **inputs:** `guidance:utility-aidc-procurement-2026-08` (the gatekeeper thesis; the playbook; Texas; the large-load tariffs; the Southeast machine; the five channels; the buyer map; ERCOT vs regulated; concrete awards; the dated gates) · `concepts:profiler-concepts` (ERCOT, PJM, interconnection queue, PPA)
+- **outline:** `the-gatekeeper` (prose) · `the-four-moves` (table) · `five-channels` (proscons — storage RFPs · all-source RFPs · self-build supply agreements · ERCOT merchant · ride-through buffering) · `who-signs-the-po` (callout — regulated chain vs self-build vs PPA; the two-lane motion) · `ercot-versus-regulated` (table) · `the-dated-gates` (timeline) · `drill` · `check-yourself`
+- **why:** The complement to `where-bess-plugs-in`: that lesson is the campus-side view of where storage attaches, this is the utility-side view. Together they are the map of every US storage purchase that AI load is driving, and the reader can say which channel a given opportunity is in and therefore who decides and how fast.
+
+---
+
+## 4 · Teaching order
+
+Registry order is teaching order. `clStudyNext_` walks `clTracks_()` in order and each track's `lessons[]` in order, skipping what the tier cannot read, and returns the first unfinished section — so the two lists below *are* the curriculum's path, not a suggestion. `clLessons_()` order only governs the index grouping; keep it aligned with the track order anyway so the index reads as the path does.
+
+**`clTracks_()` order** (lane order, foundations first): `bess-foundations` → `electrical-foundations` → `aidc-grid-to-chip` → `aidc-campus` → `market-access`.
+
+**Per-track `lessons[]`** — the position column is the walk; the gate column shows what an analyst skips over:
+
+| Track | # | Lesson id | Gate |
+|-------|---|-----------|------|
+| `bess-foundations` | 1 | `cell-to-container` | tracks |
+| | 2 | `duration-and-degradation` | tracks |
+| | 3 | `spec-sheet-decoded` | guidance |
+| | 4 | `the-control-stack` | tracks |
+| | 5 | `how-a-cell-is-made` | tracks |
+| | 6 | `where-batteries-stop` | tracks |
+| `electrical-foundations` | 1 | `four-machines` | tracks |
+| | 2 | `string-versus-central` | tracks |
+| | 3 | `the-transformer-and-the-substation` | tracks |
+| | 4 | `breakers-relays-and-faults` | tracks |
+| | 5 | `grid-stability-and-the-generator` | tracks |
+| `aidc-grid-to-chip` | 1 | `the-fence-line` | tracks |
+| | 2 | `bridge-power` | tracks |
+| | 3 | `the-aidc-power-chain` | tracks |
+| | 4 | `redundancy-by-the-numbers` | tracks |
+| | 5 | `inside-the-rack` | tracks |
+| | 6 | `the-800-vdc-shift` | tracks |
+| | 7 | `dc-fault-engineering` | guidance |
+| | 8 | `where-the-chain-breaks` | tracks |
+| `aidc-campus` | 1 | `heat-is-the-constraint` | tracks |
+| | 2 | `the-cooling-plant-and-water` | tracks |
+| | 3 | `the-campus-as-a-power-project` | tracks |
+| | 4 | `where-bess-plugs-in` | guidance |
+| `market-access` | 1 | `who-buys-storage` | tracks |
+| | 2 | `how-a-storage-project-happens` | tracks |
+| | 3 | `contracts-and-revenue` | tracks |
+| | 4 | `the-certification-stack` | guidance |
+| | 5 | `what-bankable-means` | guidance |
+| | 6 | `the-china-policy-stack` | guidance |
+| | 7 | `utility-procurement-meets-ai-load` | guidance |
+
+**Why this order and not lane-by-lane strictness.** A reader who follows the pointer literally does BESS first, then the electrical floor, then the AIDC chain. That is deliberate: the developer's stated goal is to sell *storage* into this market, so the product comes first and the electrical floor is met just before the track that most needs it. A reader who wants the AIDC lane first can open any track — the pointer only says what is next on the default path, and `prereqs[]` on tracks 3–5 will suggest the floor without blocking.
+
+**Two ordering rules the authoring sessions must respect:**
+
+1. **Within a track, the equipment walk is in physical order** — grid → fence → substation → building → rack → die — and the market track goes buyer → project → contract → file → policy → procurement. Do not reorder for gate convenience (e.g. moving guidance lessons to the end): the study-next pointer already skips withheld lessons, so an analyst walking `aidc-grid-to-chip` lands on `where-the-chain-breaks` straight after `the-800-vdc-shift` and loses nothing.
+2. **Existing ids keep their position semantics.** `the-aidc-power-chain` and `heat-is-the-constraint` change track, not id; their sections and progress keys are untouched. The retired track id `aidc-power-primer` is not reused.
+
+**Insertion versus append.** The unattended pipeline may only *append* to a registry or a track's `lessons[]` (P5). A developer authoring session is not bound by P5 and should place each new lesson at its position above, re-sequencing `clLessons_()` and `lessons[]` in the same commit — then run `check-classroom-pipeline.py --base origin/main` and expect P5 findings on that commit as the known cost of a curriculum reorder (the contract's §7 selftest must still pass; P5 is a diff assertion on pipeline commits, not a schema rule). Once the curriculum is in place, later pipeline runs append after the last lesson of the track whose `short` covers the new module, exactly as the C2c rule says.
+
+---
+
+## 5 · The failure-point map (grid to chip)
+
+This is the spec for `where-the-chain-breaks` and the checklist every equipment lesson's `where-it-fails` section draws its row from. It is built from the study guides only (public), and each row names the guide that carries it so the authoring session pins what it actually uses. Four causes recur, and the lesson says so: **current squared becomes heat**, **direct current has no zero crossing**, **heat flows through a series path**, and **human hands are in the loop**.
+
+| # | Stage (grid → chip) | Common failure | Why it fails there | Who owns it | Carried by |
+|---|---|---|---|---|---|
+| 1 | Interconnection | The date moves: study re-runs, queue re-pricing, an audit that pauses a batch | The study models the grid as it will be, and the grid keeps changing; the requester funds upgrades it does not control | Developer · utility | `study:burns-mcdonnell`, `study:stack-infrastructure` |
+| 2 | Substation transformer | Bushing failure; moisture in paper insulation; tap-changer wear; a slot that slips | Bushings carry a conductor through a grounded wall — the highest-stress interface in the tank; paper that was not dried enough ages fast; the unit is custom and the queue is people-limited | OEM · owner's engineer | `study:hitachi-energy`, `study:ge-vernova`, `study:mortenson` |
+| 3 | MV switchgear and protection | Miscoordination (a downstream fault opens a main); relay settings never re-checked after a load change; arc-flash energy | Time-current curves converge at high fault current; protection is a networked application now and drifts like software | Electrical contractor · EPC | `study:abb`, `study:eaton` |
+| 4 | On-site generation | Turbines at part load or in hot thin air; air permits that lag the shell; fuel supply; a slot reservation that slips | A large turbine is efficient only at full load; the permit is for what comes out of the stack, not for the building | Power partner · developer | `study:kiewit`, `study:wartsila`, `study:xai`, `study:vantage` |
+| 5 | Transfer switch and generator paralleling | Open transition with no stored energy; generators that do not synchronise; load that is not shed in priority | An open transition deliberately breaks before it makes; paralleling is a control problem with a human-written sequence | Electrical contractor · operator | `study:eaton`, `study:rosendin` |
+| 6 | UPS | Load exposed on bypass while a monolithic unit waits for a specialist; eco-mode detection that is fast for the typical fault and not for every fault; modules parked below their efficiency sweet spot | Hold-up time is 10–20 ms and a monolith's repair time is hours; redundancy taxes efficiency | Operator · OEM | `study:eaton`, `study:huawei-digital-power`, `study:liteon` |
+| 7 | Distribution and busway | Harmonic heating of transformers and neutrals; power-factor penalties; a tap-off added without a coordination re-check | Chopped current reflects distortion back into the building; distortion is heat doing no work | Electrical contractor · operator | `study:eaton`, `study:sinexcel` |
+| 8 | Rack whip and PDU | Termination quality; A/B feeds that share an upstream point | Thousands of terminations are proven only in commissioning; redundancy that meets upstream is not redundancy | Electrical contractor · commissioning agent | `study:rosendin`, `study:hitt` |
+| 9 | Server power supply | Inrush on a live swap; a failed unit dragging the shared bus; two supplies each at half load | ORing and precharge are engineered, not given; efficiency curves peak near full load | OEM · operator | `study:liteon` |
+| 10 | 48 V bus and the last centimetre | A bus that behaves like a heater; a thousand amps with no thermal margin at the regulator | Loss scales with current squared; the final conversion is millimetres from the silicon | Server OEM | `study:delta-electronics` |
+| 11 | DC distribution (800 VDC) | A sustained series arc; a stage deleted without a plan for its fault duty; a stock PSU never rated for DC | A DC arc has no zero crossing and must be engineered out; every stage removed makes the survivor's job harder | OEM · electrical contractor | `study:zhonhen`, `study:abb`, `study:delta-electronics` |
+| 12 | The load itself | Tens of megawatts swinging in milliseconds, periodically, exciting resonances below line frequency | Training steps are rhythmic; the grid has never served a load of this shape at this scale | Operator · utility · buffer vendor | `study:eaton`, `study:megmeet` |
+| 13 | The thermal chain (cooling) | One exchanger's approach pinched; recirculation for want of blanking panels; a sequence of operations that heats and cools at once | Heat flows in series and the worst stage limits the path; the sequence is invisible and decisive | Mechanical contractor · operator | `study:vertiv`, `study:schneider-electric` |
+| 14 | Commissioning | Integrated tests skipped or run on temporary power; "rated for" read as "operating at" | Level 5 is the theatre of failure — what was not pulled under load was not proven | Commissioning agent · GC | `study:hitt`, `study:switch` |
+
+Rows 1–12 are the power chain the developer asked for; rows 13–14 are the two failures that most often *present* as power failures and are not. The capstone's quiz is scenario-based ("the hall browned out for 40 ms and one row rebooted — which row of this table?"), which is the drillable form of the skill.
+
+---
+
+## 6 · Gap register — what the corpus cannot stamp yet
+
+Things worth teaching that no stamp can currently carry, and what Profiler would need first. Ordered by leverage — the cheapest additions that unlock the most are at the top. "Unlocks" names the lesson or section that becomes possible, or becomes *analyst-visible* where today it would be guidance-gated.
+
+| # | Gap | What to add to Profiler | Unlocks | Effort |
+|---|-----|-------------------------|---------|--------|
+| G1 | **Concepts registry is missing the electrical and data-hall vocabulary.** Track 2 and most of track 3 would need lesson-local glossaries for terms that should resolve everywhere: transformer, switchgear, busway, automatic transfer switch, selective coordination, hold-up time, harmonics/THD, power factor, IEEE 519, PUE, WUE, CDU, cold plate, HVDC, synchronous condenser, inertia, GOES, arc flash, SSCB, BBU, VRM, scale-up/scale-out, Uptime tier, commissioning, take-or-pay, LTSA, independent engineer, IRP, NOGRR 282, SB 6, large-load tariff | ~30 entries in `profiler-concepts.json` (public), definitions in the registry's existing voice | Every lesson in tracks 2–5 drops its private glossary for these; study guides and dossiers gain the same tooltips; `check-classroom-content.py` stops warning on them | Low — one session, no schema change |
+| G2 | **No dossier for a backup-generation OEM.** Gen-sets, ATS and paralleling switchgear are taught only through Eaton's choreography and Rosendin's walk | Dossiers + study guides for two of: Caterpillar, Cummins, Kohler, Rolls-Royce Power Systems (mtu) | A full `backup-generation` lesson in track 3 (today a section of `bridge-power` and rows 4–5 of §5); a public source for the generator-side of `redundancy-by-the-numbers` | Medium — two profiler sessions |
+| G3 | **UPS as a product is thin.** Vertiv's guide is cooling-only; Schneider's has no UPS section; Eaton's is the one deep source; rotary/flywheel UPS has no home | Revise `vertiv.study.json` and `schneider-electric.study.json` to add a UPS section each; a dossier for Piller or Mitsubishi Electric (rotary/large static UPS) | An analyst-visible `the-ups-room` lesson in track 3 separating static, rotary and modular UPS and the battery choices under each (today folded into `the-aidc-power-chain` and `redundancy-by-the-numbers`) | Medium — one revision session, one dossier session |
+| G4 | **Switchgear and protection vendors beyond ABB.** Siemens Energy's guide covers turnarounds and hydrogen, not grid tech; no Powell, no Schneider MV | Revise `siemens-energy.study.json` toward grid technologies; a dossier for Powell Industries; a guidance module "The grid-equipment shortage: GOES, bushings, test bays, lead times" | Deepens `the-transformer-and-the-substation` and `breakers-relays-and-faults` with a second and third vendor; the guidance module would make the *supply-side* story a contributor lesson | Medium |
+| G5 | **No utility dossiers.** Dominion, Georgia Power/Southern, Entergy, Oncor, AEP appear only inside the (contributor-gated) procurement module | Four utility dossiers with study guides | A **public** `how-a-utility-buys` lesson in track 5 (today the whole utility-side story is guidance-only, so analysts never see it); public corroboration for `utility-procurement-meets-ai-load` so its refresh has a second source | Medium-high — four profiler sessions; the earnings desk would pick them up thereafter |
+| G6 | **Large-load interconnection as a subject.** FERC Order 2023, large-load tariffs, study-fee regimes exist only as fragments in the procurement module and Burns & McDonnell | A guidance module "Interconnection for large loads" | A contributor-gated deep lesson behind `the-fence-line`; the public lesson stays as specified | Medium — one guidance session |
+| G7 | **Cooling equipment vendors.** No chiller OEM (Trane, Carrier, Johnson Controls), no CDU specialist (CoolIT, Motivair, Boyd) | One chiller OEM dossier, one CDU specialist dossier | Deepens `the-cooling-plant-and-water` from operator-side (Aligned, QTS, Switch) to equipment-side; unlocks a `liquid-cooling-hardware` lesson if the developer's product line ever touches it | Low priority — cooling is context, not the sale |
+| G8 | **Nuclear and SMRs.** Constellation, Bechtel, Kiewit and the hyperscaler offtakes support a section, not a lesson; no vendor | A dossier for one SMR vendor (NuScale, X-energy, Kairos or Oklo) and a study guide on what is actually new about SMRs | A `clean-firm-power` lesson in `aidc-campus`; today the material lives as one callout in `contracts-and-revenue` | Low priority until a campus in the corpus signs one |
+| G9 | **UPS batteries and BBU cells as a product line.** Samsung SDI's section is the only source; no Narada study guide (dossier exists), no Vicor/Infineon for the DC-DC silicon | A study guide for Narada (backup-power incumbent) and for one 800 VDC silicon or shelf vendor | Deepens `inside-the-rack` and `the-800-vdc-shift` on the *battery* side of the DC bus — which is the closest an in-hall socket ever gets to a BESS seller | Medium |
+| G10 | **Insurance and independent engineers.** DNV, Sargent & Lundy, Black & Veatch (as IE), brokers — the bankability lesson names them from the guidance module only | A guidance module revision or a dossier for one IE firm | A public corroborating source for `what-bankable-means`; today it is single-sourced to one module | Low |
+| G11 | **Water rights and siting law** | No public source beyond sections of Aligned, QTS, Holder, Black & Veatch | A section in `the-cooling-plant-and-water` is all the corpus supports; a lesson would need a guidance module | Do not commission yet |
+| G12 | **Sales simulations (C5).** Objection and discovery scenarios need customer language, and field notes can never be a source | Nothing in Profiler fixes this: the source would have to be a guidance module authored from *public* customer statements (earnings calls, RFP documents already in dossier sources) | C5 as designed — flagged so nobody expects notes to fill it | Design decision, not research |
+
+**What this register says to commission first.** G1 is nearly free and lifts every track. G2 and G3 are the two that turn the AIDC equipment walk from "taught through the electrical contractor's eyes" into "taught with the OEMs in the room", which is what a seller needs. G5 is the expensive one that matters most for the *team* case: without utility dossiers the entire regulated-procurement story is invisible below contributor, and that is the story an analyst on a sales team would most need.
+
+---
+
+## 7 · The cut line
+
+Twenty-five new lessons is a curriculum, not a session. The honest cut, judged on three things — what the developer asked for in this brief, what the corpus supports deepest today, and what yields drillable understanding fastest:
+
+### First five — build these, in this order
+
+| # | Lesson | Track · position | Gate | Why first |
+|---|--------|------------------|------|-----------|
+| 1 | `the-fence-line` | `aidc-grid-to-chip` · 1 | tracks | The missing front half of the chain the developer asked for; five deep public guides; every later AIDC lesson assumes it |
+| 2 | `bridge-power` | `aidc-grid-to-chip` · 2 | tracks | The largest untaught cluster in the corpus (seven guides, four dossiers, four projects) and the place a BESS most plausibly attaches to an AI campus |
+| 3 | `the-800-vdc-shift` | `aidc-grid-to-chip` · 6 | tracks | The topic every customer conversation drifts to; Zhonhen and Megmeet carry the whole public thesis; the guidance layer follows later as its own lesson |
+| 4 | `the-control-stack` | `bess-foundations` · 4 | tracks | The one hole in the existing BESS track that a developer's asset manager would find in the first meeting; four public guides |
+| 5 | `where-bess-plugs-in` | `aidc-campus` · 4 | guidance | The payoff: after three AIDC lessons and one BESS lesson, this says where the product fits. Guidance-gated, but the developer is the admin and the module is the corpus's best single answer to "so what" |
+
+Building these five also creates track 3 (with the existing `the-aidc-power-chain` at position 3, so it opens with four readable lessons), extends track 1 to four, and creates track 4 with `heat-is-the-constraint` plus this lesson. Track 2 and track 5 wait. Every one of the five carries a `where-it-fails` section, so the failure-point ask is answered from the first commit even though the capstone is second-wave.
+
+### Second wave — build if the first five get used
+
+`redundancy-by-the-numbers` · `inside-the-rack` · `where-the-chain-breaks` (the capstone — after 1, 3 and the two before it exist) · `the-transformer-and-the-substation` · `four-machines` · `who-buys-storage` · `how-a-storage-project-happens`. This wave completes the AIDC equipment walk, opens track 2 with its two most-needed lessons, and opens track 5 on public inputs.
+
+### Third wave — the guidance-derived market lessons and the rest of the floor
+
+`the-certification-stack` · `what-bankable-means` · `the-china-policy-stack` · `utility-procurement-meets-ai-load` · `dc-fault-engineering` · `string-versus-central` · `breakers-relays-and-faults` · `grid-stability-and-the-generator` · `the-cooling-plant-and-water` · `the-campus-as-a-power-project` · `how-a-cell-is-made` · `where-batteries-stop` · `contracts-and-revenue`. The four guidance-derived market lessons are quick to author (one module each, the outline is the module's own) and are deliberately not in wave one because they are contributor-gated *and* they inherit near `reviewBy` dates (§8): building them first would mean the refresh pipeline's first real revisions land on the lessons with the least drill value per hour of authoring.
+
+### Not recommended — report-derived modules
+
+Four reports exist and could stamp admin-only lessons ("the grid-scale BESS field", "the 800 VDC race", "§154-listed supplier risk", "named-project BESS attach"). Recommendation: **do not build modules from reports.** Three reasons. A report is point-in-time — its own schema carries `status` and the pipeline handles supersession by swapping refs (G8) — while a module is meant to hold for months. A report's content is company-ranked competitive judgment, which the content contract keeps out of flashcards ("never company trivia"), so a report lesson would drill exactly the wrong thing. And the admin already reads the report in Profiler's lens; a lesson wrapping it adds a progress tick and nothing taught. If the developer wants report material in the drill, the right vehicle is the **weekly briefing** — a dated feed is what a report is — and the pipeline already knows how to cite a report there.
+
+### Also not recommended now
+
+A "policy vocabulary" public lesson (FEOC, §154, 301, AD/CVD, 45X, ITC from the concepts registry alone). It is stampable and analyst-visible, but six definitions without the mechanics behind them is a glossary, and the glossary already exists as tooltips. Revisit if G5 lands and a public `how-a-utility-buys` lesson needs a public policy companion.
+
+---
+
+## 8 · Notes for the authoring sessions
+
+Everything an authoring session needs that the schema and the classroom rules do not already say, or say somewhere a session under task pressure will not look.
+
+1. **Model and session shape.** Per the standing decision (SESSION-CONTEXT, 2026-09-02): planning here on Fable 5.1; **authoring on Opus 5**, where the schema, the checkers and stamp discipline are the actual work. One lesson per session is the safe unit — the five existing lessons average ~290 lines of strict JSON each, and a session that authors two is a session that copies a section between them.
+2. **Pins are read, never carried over from this plan.** The dates in §1 are what this planning session observed; an authoring session re-fetches every input and pins the date off the fetched document (`lastUpdated` in the profile or study JSON, `updated` in `guidanceDocs_()`, `built` in the graph, `git log -1 --format=%cs` for `profiler-projects.json` and `profiler-concepts.json`). G2 and G7 in `.claude/rules/classroom-app.md` bind developer sessions in spirit even though the contract binds only pipeline runs — a wrong pin is a silent freshness bug either way.
+3. **`reviewBy` inheritance from guidance modules.** A lesson's `reviewBy` is its own nearest dated gate, and for a guidance-stamped lesson that is usually the module's: `bess-bankability` **2026-10-01**, `nvidia-800vdc` 2026-11-30, `utility-aidc-procurement` and `power-infra-aidc` 2026-12-10, `eo14420` 2026-12-24, `china-policy-stack` 2026-12-31, `bess-tech-fundamentals` 2027-02-24. Two consequences: `the-certification-stack` and `what-bankable-means` would show "⚠ review due" within a month of being built (one argument for their third-wave placement), and the quarterly guidance review must land before these lessons or they go red together. Public lessons default to ~6 months from `updated`; `the-fence-line` and `bridge-power` should instead take the nearest dated gate in their own material (a queue-audit date, a Batch Zero target) if the authoring session teaches it.
+4. **Do G1 before track 2.** Thirty concept entries is one session and removes ~30 lesson-local glossary entries from tracks 2–4 before they are written. If G1 is skipped, each lesson carries its glossary locally (the schema allows it) and the concepts entries are added later without touching the lessons — `{{term}}` resolves lesson-first, so nothing breaks; it is only duplication.
+5. **Drill implications.** Five lessons at ~6 cards + ~5 quiz items add ~55 items to the drill's lesson pool; the full plan adds ~300 on top of the 802 study cards. `CL_DRILL_NEW_CAP` = 10 new items per day means a reader meets a new lesson's items over roughly a week — fine — but it also means the drill's *first* week after a five-lesson push is entirely new material with no reviews due; consider that a feature. Item ids are positional (`lc:<lessonId>:<sectionId>:<n>`), so a revision must **append** cards, never insert mid-array, unless the hash reset is intended.
+6. **Section-kind variety is a check, not a taste.** Every outline above mixes at least four kinds, and no lesson runs two `prose` sections back to back without a `table`, `callout`, `proscons`, `timeline` or `bars` between them. `bars` needs numbers the source actually states (the cell ladder, the rack-power ladder, downtime per nine, relative cell cost by duration) — never invented proportions; where the source gives a relationship without figures, use `table` instead. `ledger` is the guidance modules' claims ledger and is not planned for any lesson: a lesson's sourcing is its stamp and its provenance strip.
+7. **The `sales` line.** The existing lessons put a one-line `sales` on roughly half their sections. Keep that ratio; a `sales` line on every section reads as a pitch deck.
+8. **Two lessons touch each other's material by design and must not duplicate it.** `breakers-relays-and-faults` (track 2) cites `study:eaton` for fault-energy sizing only — selective coordination stays in `the-aidc-power-chain`. `contracts-and-revenue` (track 5) teaches instruments — revenue *shapes* stay in `duration-and-degradation`. `where-batteries-stop` (track 1) ends where `bridge-power` (track 3) begins; the engine table appears once, in track 1, and track 3 refers to it.
+9. **Track edits are a developer-session write.** Creating `electrical-foundations`, `aidc-grid-to-chip`, `aidc-campus` and `market-access`, retiring `aidc-power-primer`, and re-sequencing `clLessons_()` all happen inside the content fence in one commit with `gateDigest` unchanged (no gate symbol moves). Run `check-classroom-content.py` (zero errors), `check-classroom-pipeline.py --base origin/main` (expect P1/P5 findings on a reorder commit, expect **no** P3 finding), `--selftest` (zero failures), `node --check`, and `check-gas-inner-scripts.js`. Bump the GAS version once per commit and keep the public changelog line generic.
+10. **The analyst view is the test.** After each commit, the acceptance check that matters is the one C1 established: `?as=analyst` (or a real analyst session) sees every public lesson, sees each guidance lesson only as a withheld count inside its track, and never sees `dc-fault-engineering`, `where-bess-plugs-in` or the four guidance market lessons in its index. The provenance gate is only as real as its last check against real content.
+11. **What this plan does not decide.** Whether to keep the id `aidc-power-primer` (a naming choice, §2.2); whether G5 (utility dossiers) is worth four profiler sessions before track 5's guidance lessons exist; and whether the first five should be authored before or after G1. Those are the developer's calls, and the recommendation on each is in the section that raises it.
+
+Developed by: LightAISolutions
