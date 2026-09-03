@@ -29,6 +29,23 @@
    ]
   },
   {
+   "slug": "arc-flash",
+   "term": "arc flash",
+   "def": "The explosive release of energy when current jumps through the air between conductors — a blast hot enough to be lethal at a panel door. An arc-flash study calculates that energy at every piece of gear so the right protective clothing and breaker settings can be specified, and it has to be redone whenever the electrical system changes.",
+   "aliases": [
+    "arc-flash",
+    "arc-flash study"
+   ]
+  },
+  {
+   "slug": "ats",
+   "term": "ATS",
+   "def": "Automatic transfer switch: the device that senses utility failure, signals the generators to start, and moves the load onto them once generation is stable — then manages the return trip when utility power comes back. It is the conductor of a data center's outage choreography.",
+   "aliases": [
+    "automatic transfer switch"
+   ]
+  },
+  {
    "slug": "augmentation",
    "term": "augmentation",
    "def": "Adding new battery capacity to an operating storage plant to offset degradation, keeping the plant at its contracted capacity over its life."
@@ -37,6 +54,14 @@
    "slug": "bankability",
    "term": "bankability",
    "def": "Whether lenders and investors will finance a project or accept a supplier — a function of certifications, warranties, balance-sheet strength, track record, and policy exposure rather than spec-sheet performance."
+  },
+  {
+   "slug": "bbu",
+   "term": "BBU",
+   "def": "Battery backup unit: a small battery shelf inside the rack itself, carrying the servers for seconds rather than minutes — long enough to cover a transfer or ride out a disturbance. It moves the last line of stored energy from the UPS room to the point of use.",
+   "aliases": [
+    "battery backup unit"
+   ]
   },
   {
    "slug": "behind-the-meter",
@@ -63,9 +88,34 @@
    ]
   },
   {
+   "slug": "busway",
+   "term": "busway",
+   "def": "Prefabricated bus bar running overhead along a row of racks, with tap-off boxes that branch power down to each cabinet. It replaces bundles of individually pulled feeders, so capacity can be added or moved without rewiring — which is why the 800 VDC designs distribute at the row on busway rather than conduit.",
+   "aliases": [
+    "bus duct"
+   ]
+  },
+  {
    "slug": "c-rate",
    "term": "C-rate",
    "def": "How fast a battery charges or discharges relative to its capacity: 1C empties it in one hour, 0.25C in four. Grid storage typically runs at low C-rates — multi-hour durations rather than sprints."
+  },
+  {
+   "slug": "cdu",
+   "term": "CDU",
+   "def": "Coolant distribution unit: the heat exchanger and pump station that separates the facility's water loop from the clean liquid loop feeding the servers, delivering coolant to the cold plates at the right temperature and pressure. It is the interface that lets one facility cooling spine serve many different rack designs.",
+   "aliases": [
+    "coolant distribution unit"
+   ]
+  },
+  {
+   "slug": "cold-plate",
+   "term": "cold plate",
+   "def": "A liquid-cooled metal block clamped directly onto a processor, carrying heat away in a coolant loop instead of an air stream. Above roughly 100 kW per rack air physically cannot move the heat fast enough, so liquid has to touch the silicon.",
+   "aliases": [
+    "direct-to-chip cooling",
+    "cold plates"
+   ]
   },
   {
    "slug": "colocation",
@@ -73,6 +123,14 @@
    "def": "Data-center space, power, and cooling leased to tenants who bring their own IT equipment. Colocation providers are the landlords of the AI buildout.",
    "aliases": [
     "colo"
+   ]
+  },
+  {
+   "slug": "commissioning",
+   "term": "commissioning",
+   "def": "The structured testing that proves a finished plant performs as contracted before it is handed over and paid for. For storage it is where capacity and round-trip-efficiency guarantees are measured; for a data center it is where the outage choreography gets rehearsed rather than discovered in production.",
+   "aliases": [
+    "commissioned"
    ]
   },
   {
@@ -123,6 +181,14 @@
    ]
   },
   {
+   "slug": "goes",
+   "term": "GOES",
+   "def": "Grain-oriented electrical steel: the specialty magnetic steel every transformer core requires. Only a handful of mills worldwide produce it, and every announced transformer plant bids for the same tonnage — which is why transformer lead times, not capital, gate so many projects.",
+   "aliases": [
+    "grain-oriented electrical steel"
+   ]
+  },
+  {
    "slug": "grid-forming",
    "term": "grid-forming inverter",
    "def": "An inverter that sets its own voltage and frequency like a traditional generator, rather than following the grid's. It lets storage stabilize weak grids and restart dead ones (black start).",
@@ -131,9 +197,62 @@
    ]
   },
   {
+   "slug": "harmonics",
+   "term": "harmonics",
+   "def": "Distortion added to a clean AC waveform by loads that draw current in gulps rather than smoothly — rectifiers, drives, server power supplies. Harmonics overheat transformers and neutral conductors, nuisance-trip breakers, and distort the voltage other equipment sees; total harmonic distortion (THD) is the score, and under 5% is the common target.",
+   "aliases": [
+    "THD",
+    "total harmonic distortion",
+    "harmonic distortion"
+   ]
+  },
+  {
+   "slug": "hold-up-time",
+   "term": "hold-up time",
+   "def": "How long a server power supply can carry its load on internal capacitors after its input disappears — roughly 10 to 20 milliseconds. It is the physics referee for every power transfer: a switchover completed inside that window is invisible to the IT load, and one that misses it is an outage.",
+   "aliases": [
+    "holdup time",
+    "ride-through window"
+   ]
+  },
+  {
+   "slug": "hvdc",
+   "term": "HVDC",
+   "def": "High-voltage direct current: moving power as DC instead of AC — over long transmission links, and now inside the data center as the 800 VDC rack architecture. Fewer conversion stages and far less copper, at the cost of protection that cannot wait for an AC waveform to cross zero and extinguish the arc for it.",
+   "aliases": [
+    "high-voltage direct current"
+   ]
+  },
+  {
    "slug": "hyperscaler",
    "term": "hyperscaler",
    "def": "One of the giant cloud and platform operators that build and lease data-center capacity at gigawatt scale. Their capital spending sets the pace of the AI data-center buildout."
+  },
+  {
+   "slug": "ieee-519",
+   "term": "IEEE 519",
+   "def": "The standard that sets harmonic-distortion limits at the point of common coupling — the property line where a facility's electrical system meets the utility. It draws the boundary so one customer's distorted loads cannot degrade a neighbor's power quality, and compliance is measured at that point rather than assumed.",
+   "aliases": [
+    "point of common coupling",
+    "PCC"
+   ]
+  },
+  {
+   "slug": "independent-engineer",
+   "term": "independent engineer",
+   "def": "The technical diligence firm lenders hire to review a project on their behalf — the design, the equipment, the contracts, the production estimate. Its report is the gate to financial close, which makes the independent engineer, not the buyer, the audience a supplier's certifications and track record ultimately have to satisfy.",
+   "aliases": [
+    "IE"
+   ]
+  },
+  {
+   "slug": "inertia",
+   "term": "inertia",
+   "def": "The stabilizing effect of heavy spinning generator masses, which resist sudden changes in grid frequency and buy operators seconds to react. As synchronous plants retire in favor of inverter-connected wind, solar, and storage, that inertia has to be replaced — by synchronous condensers, or by grid-forming inverters imitating it electronically.",
+   "aliases": [
+    "synthetic inertia",
+    "grid inertia"
+   ]
   },
   {
    "slug": "interconnection-queue",
@@ -141,6 +260,14 @@
    "def": "The waiting line for grid-connection studies and approval. Multi-year queues are one of the main bottlenecks for new data centers and storage plants.",
    "aliases": [
     "interconnection"
+   ]
+  },
+  {
+   "slug": "irp",
+   "term": "IRP",
+   "def": "Integrated resource plan: a regulated utility's commission-filed roadmap of what it expects to need and how it intends to procure it. Certified IRP megawatts are the real demand pipeline for an equipment supplier — they become purchase orders on a multi-year fuse.",
+   "aliases": [
+    "integrated resource plan"
    ]
   },
   {
@@ -152,12 +279,29 @@
    ]
   },
   {
+   "slug": "large-load-tariff",
+   "term": "large-load tariff",
+   "def": "A utility rate class written specifically for very large customers such as data centers: long contract terms, minimum-take obligations, exit fees, and collateral. It is the filter that separates real demand from speculative interconnection requests, and the instrument that turns AI load into something a utility can plan and finance against.",
+   "aliases": [
+    "large load tariff",
+    "large-load rate class"
+   ]
+  },
+  {
    "slug": "lfp",
    "term": "LFP",
    "def": "Lithium iron phosphate: a lithium-ion battery chemistry using an iron-phosphate cathode. It trades some energy density for lower cost, longer cycle life, and much better thermal stability than nickel-based chemistries — which is why it dominates grid-scale storage.",
    "aliases": [
     "lithium iron phosphate",
     "LiFePO4"
+   ]
+  },
+  {
+   "slug": "ltsa",
+   "term": "LTSA",
+   "def": "Long-term service agreement: the multi-year operations-and-maintenance contract through which a supplier delivers availability guarantees on the equipment it sold. Suppliers generally will not extend long-dated warranties without holding it, so the LTSA and the warranty are negotiated as one package.",
+   "aliases": [
+    "long-term service agreement"
    ]
   },
   {
@@ -210,6 +354,14 @@
    ]
   },
   {
+   "slug": "nogrr-282",
+   "term": "NOGRR 282",
+   "def": "The ERCOT rule requiring new large electronic loads — data centers of 75 MW and up — to ride through voltage and frequency disturbances instead of tripping off together. It is a load rule rather than a storage standard (those are NOGRR 245 and 272), and it is what makes buffering between the grid and the GPUs close to mandatory in Texas.",
+   "aliases": [
+    "NOGRR282"
+   ]
+  },
+  {
    "slug": "offtake",
    "term": "offtake",
    "def": "The committed purchase of a project's output — power, capacity, or storage services. Signed offtake is what turns a development pipeline into a financeable project."
@@ -236,11 +388,28 @@
    "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
   },
   {
+   "slug": "power-factor",
+   "term": "power factor",
+   "def": "The ratio of useful power to apparent power — how much of the current a facility draws actually does work. The rest is reactive power: magnetizing current sloshing between source and load, doing nothing but occupying wires and transformers, which is why utilities bill penalties when it runs low.",
+   "aliases": [
+    "PF",
+    "reactive power"
+   ]
+  },
+  {
    "slug": "ppa",
    "term": "PPA",
    "def": "Power purchase agreement: a long-term contract to buy a project's power or capacity at agreed terms — the bankable revenue stream that lets developers finance construction.",
    "aliases": [
     "power purchase agreement"
+   ]
+  },
+  {
+   "slug": "pue",
+   "term": "PUE",
+   "def": "Power usage effectiveness: total facility power divided by the power that reaches the IT equipment. A PUE of 1.0 would mean every watt went to computing; the gap above it is cooling, conversion, and lighting overhead — the industry's headline efficiency number.",
+   "aliases": [
+    "power usage effectiveness"
    ]
   },
   {
@@ -257,11 +426,39 @@
    ]
   },
   {
+   "slug": "sb-6",
+   "term": "SB 6",
+   "def": "The 2025 Texas law setting the terms on which very large loads connect to the grid: screening-study fees and proof of site control up front, mandatory curtailment protocols, and disclosure of on-site backup generation. It is the template other states are copying, and it is what makes a data center's ability to shed or buffer load a condition of connecting at all.",
+   "aliases": [
+    "Texas SB 6",
+    "Senate Bill 6"
+   ]
+  },
+  {
+   "slug": "scale-up-scale-out",
+   "term": "scale-up",
+   "def": "The two ways AI machines are wired together. Scale-up is the memory-speed link that makes a group of GPUs behave as one accelerator — it rides copper, so its reach is about one rack. Scale-out is the switched network between racks, with longer latency and protocol overhead, which is why so much engineering effort goes into packing more compute and more power into that single rack-sized domain.",
+   "aliases": [
+    "scale-out",
+    "scale-up network",
+    "scale-out network"
+   ]
+  },
+  {
    "slug": "section-301",
    "term": "Section 301 tariffs",
    "def": "US tariffs on Chinese imports imposed under Section 301 of the Trade Act — including steep rates on lithium-ion batteries — that reshape the landed cost of China-sourced storage hardware.",
    "aliases": [
     "Section 301"
+   ]
+  },
+  {
+   "slug": "selective-coordination",
+   "term": "selective coordination",
+   "def": "Arranging breakers in series so a fault trips only the nearest device upstream of it, cutting the failure away surgically while the rest of the building keeps running. Engineers nest the devices' time-current curves so the downstream breaker always wins the race; without it, a rack-level fault can open a main breaker and darken a whole hall.",
+   "aliases": [
+    "selectivity",
+    "zone-selective interlocking"
    ]
   },
   {
@@ -281,11 +478,46 @@
    ]
   },
   {
+   "slug": "sscb",
+   "term": "SSCB",
+   "def": "Solid-state circuit breaker: a breaker that interrupts electronically in a fraction of a millisecond, before fault current reaches its peak, instead of physically parting contacts. It is the enabling protection device for DC distribution, where there is no AC zero crossing to help extinguish the arc.",
+   "aliases": [
+    "solid-state circuit breaker"
+   ]
+  },
+  {
    "slug": "sst",
    "term": "SST",
    "def": "Solid-state transformer: a power-electronics replacement for the iron transformer that converts medium-voltage AC directly to regulated DC using high-frequency switching — a candidate to collapse today's multi-stage data-center power chain into one device.",
    "aliases": [
     "solid-state transformer"
+   ]
+  },
+  {
+   "slug": "switchgear",
+   "term": "switchgear",
+   "def": "The assemblies of breakers, switches, and protective relays that route power and isolate faults at a substation or in a power room. It is where the electrical system decides which circuits go dark when something fails — and, built into factory-tested skids, it is how much of a data center's power room now arrives on site.",
+   "aliases": [
+    "switchboard"
+   ]
+  },
+  {
+   "slug": "synchronous-condenser",
+   "term": "synchronous condenser",
+   "def": "A large generator spinning in synchronism with the grid with no fuel and no turbine — it produces no energy, but supplies inertia, reactive power, and fault current on demand. Retired coal and gas units are being converted into them, keeping the machine and its interconnection alive to stabilize the grid that replaced it.",
+   "aliases": [
+    "synchronous condensers",
+    "syncon"
+   ]
+  },
+  {
+   "slug": "take-or-pay",
+   "term": "take-or-pay",
+   "def": "A contract in which the buyer pays for a committed quantity whether or not it is used. It shifts utilization risk to the buyer and turns a speculative revenue line into one lenders will underwrite — the structure behind both colocation leases and the minimum-take terms in large-load utility tariffs.",
+   "aliases": [
+    "take or pay",
+    "committed capacity",
+    "minimum take"
    ]
   },
   {
@@ -302,6 +534,14 @@
    ]
   },
   {
+   "slug": "transformer",
+   "term": "transformer",
+   "def": "A device that changes AC voltage through two magnetically coupled windings, stepping transmission voltage down through substation, medium-voltage, and unit tiers until equipment can use it. Every step costs a little efficiency, a data-center power chain passes through several, and the lead time on large units is one of the buildout's hardest constraints.",
+   "aliases": [
+    "transformers"
+   ]
+  },
+  {
    "slug": "ul-9540a",
    "term": "UL 9540A",
    "def": "The test method that characterizes how battery fires start and propagate at cell, module, unit, and installation level. Its data feeds fire-safety design and permitting for storage projects."
@@ -312,6 +552,32 @@
    "def": "Uninterruptible power supply: a battery-backed power stage that carries the load through grid disturbances until generators start. In data centers it sits between utility power and the IT load.",
    "aliases": [
     "uninterruptible power supply"
+   ]
+  },
+  {
+   "slug": "uptime-tier",
+   "term": "Uptime tier",
+   "def": "The Uptime Institute's availability ladder for data centers: Tier I basic, Tier II redundant components, Tier III concurrently maintainable — any part serviceable without downtime — and Tier IV fault-tolerant, surviving any single failure. It is the shorthand buyers use for how much redundancy, and how much capital, a facility carries.",
+   "aliases": [
+    "Uptime Institute Tier",
+    "Tier III",
+    "Tier IV"
+   ]
+  },
+  {
+   "slug": "vrm",
+   "term": "VRM",
+   "def": "Voltage regulator module: the last conversion stage on the server board, stepping the rack's supply down to roughly one volt at the processor die. It is the final link in a chain of conversions running from the transmission line to the chip, and every one of them costs efficiency.",
+   "aliases": [
+    "voltage regulator module"
+   ]
+  },
+  {
+   "slug": "wue",
+   "term": "WUE",
+   "def": "Water usage effectiveness: water consumed per unit of IT energy, the cooling counterpart to PUE. Closed-loop and air-cooled designs spend a little more electricity to spend almost no water, which in a water-stressed watershed is usually the more permittable trade.",
+   "aliases": [
+    "water usage effectiveness"
    ]
   }
  ]

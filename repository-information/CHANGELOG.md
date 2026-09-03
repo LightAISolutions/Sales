@@ -3,11 +3,38 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 83/100`
+`Sections: 84/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.31r] — 2026-09-02 09:46:09 PM EST
+
+> **Prompt:** "Picking up from my last session, run gap G1 on Opus 5 Extra: add the ~30 concepts listed in CLASSROOM-CURRICULUM-PLAN.md §6 G1 to profiler-concepts.json in the registry's existing voice, run check-classroom-content.py to confirm no {{term}} warnings, bump only the repo version, and push. The first authored lesson (the-fence-line) follows in its own Opus 5 session."
+
+**Gap G1 from the curriculum plan — data-only.** `Classroom.gs` and both embedding pages untouched; no GAS or page version bump, per the data-only rule that governs every `profiler-data/` write.
+
+### Added
+
+- **`live-site-pages/profiler-data/profiler-concepts.json`** — the 31 electrical, data-hall, and market-access terms named in `CLASSROOM-CURRICULUM-PLAN.md` §6 G1, taking the registry from 44 concepts to 75. Written in the registry's existing voice (one to three sentences, expansion → mechanism → why it matters to a seller, high-school-STEM baseline, no figures needing their own citation) and grounded in what the corpus already teaches rather than authored from scratch — the Eaton, Sinexcel, Vertiv, Black & Veatch, Bechtel and NVIDIA-architecture study guides and the guidance modules' own glossaries supplied the mechanics for hold-up time, selective coordination, the harmonics/power-factor pair, IEEE 519 at the point of common coupling, the CDU/cold-plate split, synchronous condensers and inertia, GOES as the transformer chokepoint, SSCB, BBU, busway, VRM, IRP, LTSA, the independent engineer, NOGRR 282 and SB 6. Entries merged alphabetically by slug as a pure insertion, so no existing entry moved or changed
+  - Equipment and protection: `transformer`, `switchgear`, `busway`, `ats`, `selective-coordination`, `arc-flash`, `sscb`, `bbu`, `vrm`
+  - Power quality and the physics referee: `hold-up-time`, `harmonics` (THD), `power-factor` (reactive power), `ieee-519`
+  - Facility efficiency and cooling: `pue`, `wue`, `cdu`, `cold-plate`
+  - Grid stability and the DC shift: `hvdc`, `synchronous-condenser`, `inertia`, `goes`
+  - Compute and availability: `scale-up-scale-out`, `uptime-tier`
+  - Contracts, diligence, and regulation: `commissioning`, `take-or-pay`, `ltsa`, `independent-engineer`, `irp`, `nogrr-282`, `sb-6`, `large-load-tariff`
+- Aliases so the forms a lesson will actually write resolve to the same definition — `THD`, `scale-out`, `Tier III`/`Tier IV`, `IE`, `minimum take`, `reactive power`, `point of common coupling`, `automatic transfer switch`, and every acronym expansion. Checked against all 44 existing terms and aliases: zero collisions
+
+### Changed
+
+- Tracks 2–5 of the curriculum plan no longer need lesson-local glossaries for this vocabulary. `{{term}}` resolves lesson-glossary-first then the registry, so the first authored lesson (`the-fence-line`) can write `{{transformer}}`, `{{switchgear}}`, `{{GOES}}` and the rest with nothing local to carry; the same tooltips now reach study guides and dossiers, which share the registry
+
+### Verified
+
+- `python3 scripts/check-classroom-content.py` — 5 lessons, 2 tracks, 134 gate cases, **0 errors, 0 warnings**; no `{{term}}` resolves to nothing
+- `python3 scripts/check-profiler-study.py` — 62 study guides + registry (75 concepts), **0 errors, 0 warnings**; registry shape, slug pattern, term/alias collisions and alphabetical order all clean
+- File formatting is byte-identical in style to the pre-existing file (`json.dumps(indent=1, ensure_ascii=False)`), and the diff is 266 insertions with zero deletions — confirming no existing entry was disturbed
 
 ## [v04.30r] — 2026-09-02 08:41:24 PM EST
 
