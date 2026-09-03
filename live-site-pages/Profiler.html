@@ -7,7 +7,7 @@
   <!-- PROJECT OVERRIDE: manifest-src 'self' (template ships 'none') — required for the PWA manifest (profiler.webmanifest) -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/client; connect-src 'self' https://accounts.google.com/gsi/ https://www.googleapis.com https://script.google.com https://script.googleusercontent.com; frame-src https://accounts.google.com/gsi/ https://script.google.com https://*.googleusercontent.com; style-src 'self' 'unsafe-inline' https://accounts.google.com/gsi/style; img-src 'self' data: https://www.shadowaisolutions.com https://logoipsum.com; object-src 'none'; base-uri 'self'; form-action 'self'; media-src 'self'; worker-src 'none'; manifest-src 'self'; upgrade-insecure-requests;">
   <meta name="template-id" content="sais-aut-7f3e9b2d">
-  <meta name="build-version" content="v01.80w">
+  <meta name="build-version" content="v01.81w">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- PROJECT: PWA — installable to the phone home screen (manifest + icons).
        Requires the manifest-src 'self' PROJECT OVERRIDE in the CSP above. -->
@@ -158,6 +158,7 @@
       --ov-sup: #e0a458; --ov-dev: #82b56d; --ov-int: #4fc1b4; --ov-inv: #b18cf2;
       --ov-hyp: #6ea8fe; --ov-neo: #59c2e6; --ov-adv: #e07a8b; --ov-oth: #9aa3af;
       --ov-epc: #d9c74a; --ov-gc: #b5896a; --ov-ipp: #cf6fc0;
+      --ov-utl: #7fcfa0;
     }
     body {
       background: radial-gradient(1100px 620px at 72% -8%, #1e2233 0%, var(--ov-ink) 58%) fixed;
@@ -230,7 +231,7 @@
     .ov-tag.hyperscaler { background: var(--ov-hyp); } .ov-tag.advisor { background: var(--ov-adv); }
     .ov-tag.neocloud { background: var(--ov-neo); }
     .ov-tag.epc { background: var(--ov-epc); } .ov-tag.gc { background: var(--ov-gc); }
-    .ov-tag.ipp { background: var(--ov-ipp); }
+    .ov-tag.ipp { background: var(--ov-ipp); } .ov-tag.utility { background: var(--ov-utl); }
     /* Detail view */
     .ov-back {
       display: inline-block; margin-bottom: 22px; color: var(--ov-gold); text-decoration: none;
@@ -1804,7 +1805,10 @@ function ovReloadFresh() {
     // is this corpus's capacity-provider like-for-like. EPCs and GCs build the
     // same campuses (Mortenson is registered as both). The ipp category is the
     // BESS project-developer/owner-operator set; the family gives it its market
-    // name. Hyperscalers stay their own family — they are the buyers.
+    // name. The utility category (v01.81w) is the regulated gatekeeper set —
+    // rate-based, commission-supervised buyers that compete with no one in the
+    // roster and compare only with each other. Hyperscalers stay their own
+    // family — they are the buyers.
     // Deliberately declarative: the US BESS/AIDC map keeps moving, and a family
     // change should be a one-line data edit, never a logic change. A category
     // named in no family is its own family, so adding a category to the
@@ -1814,7 +1818,8 @@ function ovReloadFresh() {
       { key: 'hardware', label: 'Hardware', members: ['supplier', 'integrator'] },
       { key: 'colocation', label: 'Colocation & Cloud Capacity', members: ['developer', 'neocloud'] },
       { key: 'construction', label: 'EPC & GC', members: ['epc', 'gc'] },
-      { key: 'developer-ipp', label: 'Developers & IPPs', members: ['ipp'] }
+      { key: 'developer-ipp', label: 'Developers & IPPs', members: ['ipp'] },
+      { key: 'utility', label: 'Utilities', members: ['utility'] }
     ];
     function ovPeerKey(cat) {
       for (var i = 0; i < OV_PEER_FAMILIES.length; i++)
@@ -1855,13 +1860,14 @@ function ovReloadFresh() {
       return a;
     }
     function ovSafeCat(cat) {
-      var known = ['supplier', 'developer', 'integrator', 'investor', 'hyperscaler', 'neocloud', 'advisor', 'epc', 'gc', 'ipp'];
+      var known = ['supplier', 'developer', 'integrator', 'investor', 'hyperscaler', 'neocloud', 'advisor', 'epc', 'gc', 'ipp', 'utility'];
       return known.indexOf(cat) >= 0 ? cat : 'other';
     }
     function ovCatLabel(cat) {
       if (cat === 'epc') return 'EPC';
       if (cat === 'gc') return 'General Contractor';
       if (cat === 'ipp') return 'IPP';
+      if (cat === 'utility') return 'Utility';
       return cat;
     }
     // Profiles exist in two data shapes: legacy ({headquarters, ownership:{type,ticker}, shortName})
@@ -2923,7 +2929,7 @@ function ovReloadFresh() {
       return s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…';
     }
     var OV_REL_TYPES = { customer: 'Customer', supplier: 'Supplier', partner: 'Partner', competitor: 'Competitor', investor: 'Investor', other: 'Linked' };
-    var OV_REL_CAT_COLORS = { supplier: '#e0a458', developer: '#82b56d', integrator: '#4fc1b4', investor: '#b18cf2', hyperscaler: '#6ea8fe', neocloud: '#59c2e6', advisor: '#e07a8b', epc: '#d9c74a', gc: '#b5896a', ipp: '#cf6fc0' };
+    var OV_REL_CAT_COLORS = { supplier: '#e0a458', developer: '#82b56d', integrator: '#4fc1b4', investor: '#b18cf2', hyperscaler: '#6ea8fe', neocloud: '#59c2e6', advisor: '#e07a8b', epc: '#d9c74a', gc: '#b5896a', ipp: '#cf6fc0', utility: '#7fcfa0' };
     function ovRelColor(cats) { return OV_REL_CAT_COLORS[(cats || [])[0]] || '#9aa3af'; }
     function ovRelEscapeRe(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
     // Ambiguity guard: a one-word name that is also an ordinary English word

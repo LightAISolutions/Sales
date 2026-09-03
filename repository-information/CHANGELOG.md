@@ -3,11 +3,101 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 95/100`
+`Sections: 96/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.43r] — 2026-09-03 05:23:31 AM EST
+
+> **Prompt:** "Picking up from my last session, run Phase A3 of repository-information/PROFILER-COVERAGE-PLAN.md on
+> Fable 5.1 xhigh as a fresh session: Dominion Energy. This is the third of four anchor sessions and the
+> only one in the program that changes a page, so do the pair properly and add the category cleanly.
+>
+> READ FIRST, before writing anything: 1. repository-information/SESSION-CONTEXT.md (the A2 entry — the
+> sequencing-during-agent-waits pattern and the utility concept chain to pre-draft); 2. PROFILER-COVERAGE-PLAN.md
+> §2 (model rule), §3 (Phase A — the Dominion row and why it anchors `how-a-utility-buys`), §7 (what every
+> session owes, including the `utility` category paragraph) and the `dominion-energy` row in §8;
+> 3. .claude/rules/profiler-app.md — Profiler Command (two parallel research subagents, first-party exhaustive
+> then third-party, ~50–70 sources, products & services as the priority section), Profiler Prep Command
+> (technology curriculum, high-school-STEM baseline, never company trivia), Scheduled Refreshes (the calendar
+> row — Dominion is public, so a researched nextReport); 4. repository-information/PROFILER-SCHEMA.md (profile
+> schema v7, study schema v2, concepts registry, calendar schema, and the registry `categories` row you will
+> extend); 5. repository-information/PROFILER-STYLES.md — active style is intel-briefing; 6. .claude/rules/html-pages.md
+> (the Profiler.html version bump, meta tag, page changelog) and .claude/rules/changelog-security.md (the page
+> changelog is public); 7. CLASSROOM-CURRICULUM-PLAN.md §5 row 1 (Interconnection) and §6 row G5, so the study
+> guide carries what `how-a-utility-buys` will need to pin; 8. the guidance modules' 30 Dominion mentions
+> (grep Profiler.gs) so the public guide teaches what is today only visible to contributor and above.
+>
+> THE CATEGORY, same commit: add `utility` to profiler-companies.json's `categories` array (after `ipp`), to
+> PROFILER-SCHEMA.md's registry table and intro list, and to Profiler.html — chip label, `.ov-tag` colour,
+> `known` list, compare peer groups, OV_REL_CAT_COLORS — with a Profiler page bump v01.80w → v01.81w, the
+> build-version meta tag, a public-safe entry in live-site-pages/html-changelogs/Profilerhtml.changelog.md, the
+> README tree version display, and scripts/verify-profiler-roles.py still passing. Do NOT file Dominion under
+> `ipp` or `other` to avoid the change.
+>
+> THE TASK: `profiler Dominion Energy` then `profiler prep Dominion Energy`, one push commit. Dossier: slug
+> `dominion-energy`, categories `utility`, NYSE: D, profileVersion 1, all prose in intel-briefing style with
+> confidence-tagged key judgments. Research priorities: how Dominion Energy Virginia serves data-center load —
+> the contracted and pipeline data-center capacity (the GW figures and their dates), the GS-5 large-load rate
+> class and its minimum-demand and contract terms from the 2024–2025 SCC biennial review, the 2025 IRP and its
+> gas, storage, nuclear and offshore-wind build plan (Chesterfield Energy Reliability Center, CVOW, the North
+> Anna SMR work with Amazon), the interconnection and transmission constraints in Loudoun and the PJM capacity
+> and transmission-planning exposure, then FY2024, FY2025 and the latest interims vs consensus, the trailing 18
+> months of data-center-related orders, filings and dockets, decision makers with verified sources, and a
+> relationships[] set that resolves only to covered slugs (Amazon, Microsoft, Google, Meta, Equinix, QTS,
+> Vantage, Aligned, STACK Infrastructure and GE Vernova are the likely ones — verify each from a source
+> before writing it). Study guide: the regulated-procurement concept chain — rate base and cost of service,
+> IRP → CPCN → RFP, the rate case and the docket, large-load tariffs and minimum-demand contracts, interconnection
+> studies and cost allocation, PJM capacity and transmission planning, why a utility's clock is measured in
+> years — with a where-it-fails section aligned to §5 row 1, {{term}} tooltips for everything the 162-entry
+> concepts registry holds (check terms AND aliases; IRP, large-load tariff, interconnection queue, PJM already
+> exist), new shared concepts registered in profiler-concepts.json rather than the guide's local glossary, and
+> flashcards/quiz on how the system works, not company trivia.
+>
+> BOOKKEEPING, same commit: python3 scripts/sync-profiler-registry.py, python3 scripts/build-profiler-graph.py,
+> python3 scripts/check-profiler-study.py, python3 scripts/verify-profiler-roles.py; a calendar row (public —
+> research the Q3 2026 results date, mark confirmed honestly, write the source and watch[]); README tree entries
+> for dominion-energy.profile.json and dominion-energy.study.json; flip the dominion-energy row in
+> PROFILER-COVERAGE-PLAN.md §8 (Dossier → v1, Guide → ✓, with the repo version). Do NOT re-run the §6 register
+> checks — that happens at the end of Phase A, after A4.
+>
+> VERIFY BEFORE COMMITTING: sync-profiler-registry.py --check clean, check-profiler-study.py clean,
+> verify-profiler-roles.py passing, the `utility` chip filtering the roster and the dossier and Study Guide
+> rendering in Profiler.html via Playwright with zero page errors, every relationships[] slug and every {{term}}
+> resolving. Normal Pre-Commit and Pre-Push checklists; bump the repo version on the push commit; push on a
+> claude/* branch. If a figure cannot be sourced from Dominion's own pages, a filing or an SCC docket, leave it
+> out and say so — I would rather a thinner dossier than a fabricated line."
+
+**Phase A3 of the Profiler coverage plan — the third anchor company, run on Fable 5.1 xhigh as a dossier + study-guide pair in one commit, and the program's only page change: a `utility` category.** Gives Classroom gap register row G5 its first public source: the `how-a-utility-buys` lesson can now pin `study:dominion-energy` for the regulated-procurement chain — rate base and cost of service, IRP → CPCN → RFP, the rate case and the docket, the large-load tariff and its minimum-demand arithmetic, the load-interconnection study, PJM's capacity auction and regional plan — which until now existed only inside the contributor-gated utility-procurement guidance module.
+
+### Added
+
+- **`live-site-pages/profiler-data/dominion-energy.profile.json`** — Dominion Energy, Inc. (NYSE: D; Richmond, VA), `utility`, schema v7, profileVersion 1, intel-briefing prose (BLUF summary, seven confidence-tagged key judgments plus a dated INDICATORS TO WATCH bullet, collection gap stated). **Eight product lines** with all four depth fields — regulated retail service and the GS-5 large-load class (25 MW / 75 % load factor; 85 % T&D and 60 % generation minimums; 14-year term as a four-year ramp plus ten; exit fees; enhanced collateral up to 60 % of minimum charges; effective January 1, 2027); the large-load interconnection ladder (SELOA → CLOA → ESA) with the contracted-capacity series July 2023 → July 2026 (16.5 → 21.4 → 40.2 → 47.1 → 48.5 → 51.0 → 53.8 GW, with the firm ESA tranche at 12.0 GW) and connections per year; the gas program (Chesterfield Energy Reliability Center 944 MW / ~$1.5B / 2029, certified, suspended, reinstated and appealed to the Supreme Court of Virginia; 6.5 GW with turbines secured; the 2026 Dispatchable Generation RFP); solar, storage and renewable procurement (the annual PPA and Acquisition RFPs, the October 2025 petition and April 2026 approvals, $2.0B of storage capital, the April 2026 statute's 4.0 GW by 2030 / 16.0 GW by 2045); transmission (the Loudoun Reliability Loop's three dated lines, Morrisville–Wishing Star, Line 514, the 765 kV backbone, the Heritage–Mosby ±525 kV HVDC award); Coastal Virginia Offshore Wind (2.6 GW, 176 Siemens Gamesa turbines, $11.65B, 81 % complete, final turbine year-end 2027); the nuclear fleet and North Anna SMR work (Rider SMR, the Amazon MOU, the July 2026 ESP renewal); Dominion Energy South Carolina and Contracted Energy — and **seven banded spec groups** quoted verbatim (GS-5 terms, the contracted-capacity ladder, CVOW, CERC, the transmission program, the 2025 IRP Update's preferred plan, the system and plan snapshot). Financials FY2024, FY2025, Q1 2026 and Q2 2026 each with the consensus and verdict (Investing.com, Zacks, LSEG via Reuters), the contracted-capacity reading per period, `kpi: revenue` on both annual periods ($14,459M; $16,506M). **38 developments** (February 2025 – September 3, 2026, today's merger vote first), **nine curated relationships** (Amazon's SMR MOU; Microsoft, Google and Meta as GS-5-class customers and Rider T-1 intervenors; Equinix, STACK Infrastructure and Vantage as Dominion-served campuses; Siemens Energy as CVOW's turbine supplier through Siemens Gamesa; NextEra Energy Resources as the subsidiary of the acquirer), **six policy exposures** (the PJM capacity market at its cap two years running; Virginia's GS-5 / Rider T-1 direct-assignment / HB 1393 / consumption-tax regime; federal offshore-wind policy and tariffs on CVOW; the VCEA and the April 2026 storage statute; FERC's PJM co-location order; the merger approvals), six decision makers with company-published headshots (no LinkedIn URLs), **123 sources at 48 % first-party**, newest first, undated pages last
+- **The headline neither brief anticipated** — Dominion agreed on May 15, 2026 to an all-stock combination with NextEra Energy (0.8138 NEE shares plus a pro rata share of $360M cash per share; NEE 74.5 % / D 25.5 %; close expected 2H 2027; SCC hearing November 17, 2026), with the Dominion shareholder vote on the session date. It is the BLUF's second clause, a key judgment ("changes the buyer more than the docket"), a relationship, a policy exposure and the calendar row's caveat
+- **`live-site-pages/profiler-data/dominion-energy.study.json`** — schema v2, **17 sections** on the guidance engine: the utility as gatekeeper; the monopoly bargain with the revenue-requirement equation and the $47M-on-$1B arithmetic; who decides what (`table`: commission, RTO, FERC, legislature, utility); from plan to plant (`timeline`, nine steps on three lanes); IRP / CPCN / RFP as three documents, three questions (`table`); the rate case and the docket; anatomy of a large-load tariff (`table`, seven terms with what each protects against); the minimum-demand arithmetic worked once (`callout`); interconnecting a load and why the date moves; who pays for the wires (`proscons`: cost-causation vs socialization); PJM's capacity auction, ELCC accreditation and the regional plan; why the clock is years (`bars`, nine durations); where Dominion's programs slot in (`table`, nine links with dated instances); gigawatts on the clock (`bars`, eleven company figures from 0.16 GW of owned storage to 70 GW of requests); a `where-it-fails` warn `callout` aligned to `CLASSROOM-CURRICULUM-PLAN.md` §5 row 1 (the date moves; the tariff nobody modelled; the certificate denied, delayed or conditioned; the rate case reprices the deal; the capacity price nobody in the state controls; the wires arrive after the load; sold to the wrong desk); 14 flashcards and a 10-item quiz on how the system works. 145 `{term}` spans over 50 distinct registry terms, checked against terms and aliases; no local glossary
+- **`repository-information/study-prep/dominion-energy/dominion-energy-lesson-plan.md`** — the full-depth five-module lesson plan (the monopoly bargain and the equation; from plan to plant — the three documents; the rate case, the docket and the large-load tariff with the arithmetic by hand; interconnecting a load and the layer above the utility; Dominion against the chain — programs, ladder, who buys, who competes, and the change of owner), with pacing, per-module self-checks and a ten-question whole-plan self-test
+- **31 shared concepts in `live-site-pages/profiler-data/profiler-concepts.json`** (162 → 193, alphabetical, no term/alias collisions): `allowed return`, `capacity market`, `coincident peak`, `cost allocation`, `cost of service`, `CPCN`, `cross-subsidy`, `dispatchable`, `docket`, `ELCC`, `FERC`, `high voltage`, `load forecast`, `minimum demand charge`, `prudence review`, `public utility commission`, `rate base`, `rate case`, `rate class`, `revenue requirement`, `RFP`, `rider`, `RTEP`, `RTO`, `SCC`, `SMR`, `stranded cost`, `substation`, `system impact study`, `VCEA`, `vertically integrated utility`
+- **Six executive headshots** in `live-site-pages/images/execs/` (`dominion-energy-blue.jpg`, `-ridge`, `-baine`, `-arnett`, `-carr`, `-woomer`) — company-published photos from Dominion's executive-leadership page; no `photoCredit` needed
+- **The `utility` category** — `profiler-companies.json`'s `categories` array (after `ipp`); `PROFILER-SCHEMA.md`'s intro list and registry row (with the category's definition and the rule that utilities are never filed under `ipp` or `other`); `live-site-pages/Profiler.html` v01.80w → **v01.81w**: `--ov-utl: #7fcfa0` and `.ov-tag.utility`, the `known` list in `ovSafeCat`, `ovCatLabel` → "Utility", a `Utilities` compare peer family in `OV_PEER_FAMILIES` (its own family, so it never widens a hardware or colocation comparison), and `utility` in `OV_REL_CAT_COLORS`; `<meta name="build-version">` synced; `Profilerhtml.version.txt` bumped; `Profilerhtml.changelog.md` gains a public-safe v01.81w section (`Sections: 48/50` → `49/50`); README tree version display updated
+
+### Changed
+
+- **`live-site-pages/profiler-data/profiler-companies.json`** — Dominion Energy registry entry (tagline, HQ Richmond, ticker NYSE: D, domains `dominionenergy.com` · `coastalvawind.com` · `s2.q4cdn.com` · `s205.q4cdn.com` · `cdn-dominionenergy-prd-001.azureedge.net`), inserted before DPR; denormalized fields synced (`srcTotal` 123, `srcFirstPct` 48, `kpiNorm` true)
+- **`live-site-pages/profiler-data/profiler-graph.json`** — rebuilt: 519 → 528 edges (411 curated); nine edges touch `dominion-energy`, all curated
+- **`repository-information/profiler-refresh-calendar.json`** — Dominion row appended as a public row: `nextReport` 2026-10-30 (a Friday, matching the October 31, 2025 cadence and both trackers), `confirmed: false` because Dominion had posted no Q3 2026 scheduling release as of the session date, the merger caveat in `source`, an eleven-item `watch[]`; `updated` → 2026-09-03
+- **`repository-information/PROFILER-COVERAGE-PLAN.md`** — §8 row A3 flipped: Dossier `v1 · v04.43r`, Guide `✓ · v04.43r`
+- **`README.md`** — tree entries for `dominion-energy.profile.json`, `dominion-energy.study.json` and `study-prep/dominion-energy/`; the `images/execs/` count (177 images across 48 companies); Profiler version display v01.81w; `Last updated:` and repo version
+- **`repository-information/repository.version.txt`** — `v04.42r` → `v04.43r`
+
+### Notes
+
+- **Research vehicle** — two parallel `general-purpose` subagents on the two-stage Source Priority Protocol: Agent A (first-party) evaluated 63 Dominion pages and documents in 20 minutes — the IR site's list pages are JS-rendered and its `/news` pagination is dead, so releases were located by search; the Q4 2024, Q3 2025, Q4 2025, Q1 2026 and Q2 2026 earnings decks (74–83 pages each) and the 255-page 2025 IRP Update were text-extracted and are the source of every contracted-capacity, connection, tariff-slide and plan figure; Agent B (third-party) evaluated ~75 URLs in 19 minutes — the SCC's releases and fact sheets, PJM's auction report, load forecast and board whitepaper, JLARC, SEC EDGAR (10-K, 10-Q, proxy, three VEPCO term sheets), consensus trackers, Utility Dive, Loudoun Now, ReisingerGooch, offshorewind.biz and others. Virginia Mercury, Inside Climate News, PEC, Data Center Dynamics, DEQ and FERC's own release all returned 403 and are not cited; Nasdaq and Zacks were bot-blocked
+- **Left out for want of a source, as the developer asked:** the standalone Schedule GS-5 rate sheet (dollars per kW, collateral per MW, the ramp and notice mechanics — not among the published tariff PDFs; the 4-year/20 % ramp and three-year notice are attributed to secondary summaries and flagged as such); the SCC's final-order text for the biennial review and how it altered Dominion's proposed large-load terms; the 2024 RPS order's MW and any final order on the 2025 clean-energy petition beyond the April 2026 approvals; JLARC's peak-MW tables and PJM's DOM-zone MW rows; CERC's turbine OEM (a GE 7FA.05 attribution seen only in a search snippet was not used); an installed utility-owned storage fleet total; a founding year; **QTS, Aligned, GE Vernova, Hitachi Energy, Fluence, Tesla and Constellation are not in `relationships[]`** — no source names them with Dominion; Google's link rests only on its intervention in the Rider T-1 case and says so; a Federal Register NRC notice that neither agent read was dropped from the sources
+- **Verification** — `sync-profiler-registry.py --check` and `build-profiler-graph.py` clean; `check-profiler-study.py` 0 errors / 0 warnings over 65 guides and 193 concepts; a local schema-v7 validator (scratchpad, not committed: canonical development categories, relationship slugs and sources, policy statuses, spec bands, KPI overlay rules, source ordering, photo paths) 0 errors; Playwright (localhost, stubbed backend, admin tier) showed the roster's `Utility` chip with a count of 1 filtering to the Dominion card, the `.ov-tag.utility` colour rendered, all nine dossier tabs and nine relationship chips, and the Study Guide with 17 sections, 4 tables, 2 pros/cons cards, 20 bars, a 9-item timeline and 142 resolving tooltip spans — zero page errors and no console error beyond the Google sign-in script the stub environment blocks; `verify-profiler-roles.py` passes the access matrix for all four tiers and the Technical Annex audit over all 92 dossiers, while its two guidance-progress-isolation assertions fail **identically on an unchanged checkout of `main`** (a pre-existing stub/page drift unrelated to this change — see the developer note)
+- **Model note for the plan's xhigh test** — where the extra reasoning showed on A3: catching and re-verifying the NextEra acquisition from three sources before letting it reshape the BLUF; keeping the 53.8 GW headline and the 12.0 GW firm tranche apart everywhere they appear; treating the 2025 IRP Update's 2,000 MW of storage and the April 2026 law's 4.0 GW as a contradiction to teach rather than a figure to smooth; the guide's design (the equation before the documents, the tariff read as a list of the ways commissions have been burned, Dominion's numbers arriving only after the chain is taught); and source discipline (the unread Federal Register notice dropped, four relationships declined, the GS-5 ramp attributed to secondary sources). Research yield and schema compliance again looked no different from High
+- **Register checks** in `CLASSROOM-CURRICULUM-PLAN.md` §6 deliberately not re-run (phase-end, after A4, per the plan)
 
 ## [v04.42r] — 2026-09-03 04:27:26 AM EST
 

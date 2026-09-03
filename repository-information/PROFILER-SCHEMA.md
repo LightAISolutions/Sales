@@ -1,6 +1,6 @@
 # Profiler App — Company Profile Schema
 
-The **Profiler** app (`live-site-pages/Profiler.html`) renders standardized corporate dossiers for companies in the ecosystem (suppliers, developers, integrators, EPCs, general contractors, investors, hyperscalers, neoclouds, advisors). All data lives in `live-site-pages/profiler-data/` and is fetched by the page at runtime via relative URLs (works with a private repo — GitHub Pages serves it publicly):
+The **Profiler** app (`live-site-pages/Profiler.html`) renders standardized corporate dossiers for companies in the ecosystem (suppliers, developers, integrators, EPCs, general contractors, IPPs, utilities, investors, hyperscalers, neoclouds, advisors). All data lives in `live-site-pages/profiler-data/` and is fetched by the page at runtime via relative URLs (works with a private repo — GitHub Pages serves it publicly):
 
 - `profiler-companies.json` — the **registry**: the roster the app lists and filters
 - `<slug>.profile.json` — one **profile** per company: the full dossier
@@ -20,7 +20,7 @@ This file is the **single source of truth for the data schema**. Profiles are ge
 | Field | Type | Required | Meaning |
 |-------|------|----------|---------|
 | `schemaVersion` | number | yes | Registry schema version (currently `2` — v2 added `companies[].domains`) |
-| `categories` | string[] | yes | Canonical category order for the filter chips: `supplier`, `developer`, `integrator`, `epc`, `gc`, `ipp`, `investor`, `hyperscaler`, `neocloud`, `advisor`, `other` (`epc` renders as "EPC", `gc` as "General Contractor", `ipp` as "IPP") |
+| `categories` | string[] | yes | Canonical category order for the filter chips: `supplier`, `developer`, `integrator`, `epc`, `gc`, `ipp`, `utility`, `investor`, `hyperscaler`, `neocloud`, `advisor`, `other` (`epc` renders as "EPC", `gc` as "General Contractor", `ipp` as "IPP", `utility` as "Utility"). `utility` (added 2026-09-03 with the Dominion Energy dossier) is the regulated, rate-based electric utility — the commission-supervised gatekeeper whose IRP, rate case, large-load tariff and interconnection process decide whether AI load and the storage behind it get built; it is its own compare peer family and is never filed under `ipp` or `other` |
 | `companies[]` | object[] | yes | One entry per covered company |
 | `companies[].slug` | string | yes | Per Slug rules; must have a matching `<slug>.profile.json` |
 | `companies[].name` | string | yes | Display name (short form, e.g. "Sinexcel") |

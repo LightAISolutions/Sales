@@ -3,11 +3,17 @@
 All notable user-facing changes to this page are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Profilerhtml.changelog-archive.md](Profilerhtml.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 48/50`
+`Sections: 49/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.81w] — 2026-09-03 05:23:31 AM EST — v04.43r
+
+### Added
+- **A Utility category.** Regulated electric utilities — the companies whose plans, rate cases, large-load tariffs and interconnection processes decide whether data-center load gets connected — now have their own place on the roster: a Utility filter chip, a colour of their own on company cards and relationship links, and their own peer group in Compare, so a utility is only ever compared with another utility
+- The first company in the new category is Dominion Energy, with a dossier and a Study Guide on how a regulated utility buys
 
 ## [v01.80w] — 2026-09-02 05:16:32 PM EST — v04.27r
 

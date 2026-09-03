@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "built": "2026-09-03",
- "companies": 91,
+ "companies": 92,
  "edges": [
   {
    "a": "abb",
@@ -1110,6 +1110,32 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "amazon",
+   "b": "dominion-energy",
+   "curated": {
+    "b": {
+     "type": "partner",
+     "note": "Amazon and Dominion Energy Virginia signed a memorandum of understanding in October 2024 to explore development and financing structures for one or more SMRs at North Anna.",
+     "context": "The company's October 16, 2024 release says the MOU 'documents … efforts to jointly explore innovative ways to advance SMR development and financing while also mitigating potential cost and development risks for customers and capital providers', with Robert Blue calling it 'a potential path to advance SMRs with minimal rate impacts for our residential customers' and Amazon's Kevin Miller stating that nuclear 'can help meet the energy needs of our customers for decades to come'. Utility Dive reported the aim as at least 300 MW of new capacity near North Anna.\n\nThe 2025 IRP Update records that the company 'continues to explore opportunities for innovative financial partnerships with third parties and high load customers, which may provide avenues for earlier deployment of SMRs', and the July 2026 Early Site Permit renewal keeps the site available; no binding agreement, unit count or supplier had been announced by September 2026. Amazon also intervened in the 2026 Rider T-1 case, where Google, Amazon, Microsoft and Meta argued for voluntary contributions in aid of construction (Utility Dive).",
+     "source": "https://news.dominionenergy.com/press-releases/press-releases/2024/Dominion-Energy-and-Amazon-to-explore-advancement-of-Small-Modular-Reactor-SMR-nuclear-development-in-Virginia-10-16-2024/default.aspx",
+     "status": "active",
+     "since": "2024-10",
+     "scale": "at least 300 MW (Utility Dive)",
+     "via": "North Anna small modular reactor development"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-08-03",
+     "text": "Dominion files (July 14) to renew North Anna's Early Site Permit for 20 years beyond November 2027 and places the North Anna 3 license in deferred status, stating it 'has not made any commitments' to build — Optionality preserved at the one nuclear site where the Amazon SMR memorandum and six planned SMRs would land; no commitment, no counterparty named.",
+     "src": "https://www.world-nuclear-news.org/articles/dominion-keeps-options-open-for-north-anna",
+     "from": "b"
+    }
+   ],
+   "last": "2026-08-03"
   },
   {
    "a": "amazon",
@@ -7532,6 +7558,173 @@
     }
    ],
    "last": "2026-06-02"
+  },
+  {
+   "a": "dominion-energy",
+   "b": "equinix",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Equinix's Ashburn expansion in 2026 is scheduled against Dominion's eastern-Loudoun transmission upgrades, which its filing described as the gating factor for new megawatts.",
+     "context": "Hoodline's March 25, 2026 report on Equinix's application for the DC-23 building at Beaumeade Circle states that 'Dominion Energy's transmission upgrades remain a gating factor for delivering new megawatts in eastern Loudoun, with those upgrades expected to ease constraints around 2026'. Equinix's Ashburn campus sits in the pocket Dominion identified in 2022 as transmission-constrained; the Loudoun Reliability Loop's first segment energizes in summer 2026 and the remaining two in 2028.",
+     "source": "https://hoodline.com/2026/03/equinix-muscles-in-on-ashburn-data-center-alley/",
+     "status": "active",
+     "via": "Ashburn campus power"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the 2022 eastern-Loudoun pause with reduced allocations through January 2026 (Data Center Frontier); the Reliability Loop's dates — Mars–Wishing Star summer 2026, Aspen–Golden and Golden–Mars 2028 — with Morrisville–Wishing Star in 2030, Line 514 in 2031 and the Heritage–Mosby HVDC link in June 2032; transmission at 25 percent of the $65B plan; Equinix's 2026 filing still citing Dominion's upgrades as a gating factor; and PJM's own note that a delayed 500 kV backbone moved the DOM Zone's import limits in the 2027/2028 auction.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dominion-energy",
+   "b": "google",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Google appeared with Amazon, Microsoft and Meta as a large-load intervenor in Dominion's 2026 transmission cost-allocation proceeding, arguing for voluntary rather than mandatory contributions in aid of construction.",
+     "context": "Utility Dive's report on the July 14–15, 2026 SCC hearing states that 'Google, Amazon, Microsoft, and Meta advocated for voluntary contributions in aid of construction (CIAC) payments', while SCC staff described 'a glaring cross-class subsidization occurring to the benefit of new GS-5 customers'. The SCC's July 31 order chose mandatory direct assignment. No Dominion–Google supply, tariff or demand-response agreement was found in the public record; the link is the intervention itself, which places Google among the GS-5-class customers whose connection terms the order sets.",
+     "source": "https://www.utilitydive.com/news/virginia-scc-dominion-data-center-transmission-cost-allocation/825300/",
+     "status": "active",
+     "since": "2026-07",
+     "via": "Rider T-1 intervenor"
+    }
+   },
+   "evid": [],
+   "last": "2026-07"
+  },
+  {
+   "a": "dominion-energy",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Meta's Henrico County data-center park is served by Dominion Energy over two 230 kV transmission lines, and Meta and Dominion created the Schedule RF renewable-energy tariff that lets large customers add renewable supply.",
+     "context": "The Virginia Economic Development Partnership's case study states that 'the park is served by Dominion Energy via two 230 KVA transmission lines', that 'Dominion Energy and Meta worked together to create a renewable energy tariff called Schedule RF' allowing 'Meta and other large energy users to meet their needs through the addition of renewable energy sources', and that Meta 'has worked closely with Dominion Energy and other partners to bring over 500MW of new renewable energy to the Virginia grid'. Meta also intervened in the 2026 Rider T-1 case (Utility Dive). The case study is undated; the investments it records were announced in 2017 and 2018.",
+     "source": "https://www.vedp.org/case-study/meta-friends-virginia",
+     "status": "active",
+     "via": "Henrico data-center park; Schedule RF renewable tariff"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Dispatchable generation build — Chesterfield Energy Reliability Center and the gas program",
+     "date": "",
+     "text": "Alongside Entergy's Meta-funded plants and Georgia Power's certified combined cycles, Dominion's gas build is the mid-Atlantic instance of the guidance literature's 'massive gas procurement' move; its distinctive feature is that it is being litigated under a clean-energy statute rather than simply certified.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "dominion-energy",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft has been a Dominion Energy Virginia renewable-energy customer since a 20 MW Remington solar project supplied under a 25-year Commonwealth PPA, and intervened in Dominion's 2026 transmission cost-allocation case.",
+     "context": "C2ES's account of the Remington project describes 20 MW of solar power in Fauquier County under a 25-year PPA with the Commonwealth of Virginia, with the renewable energy certificates 'helping offset the carbon footprint of its data center in Boydton, Virginia' — Microsoft's largest Virginia campus, in Dominion's Mecklenburg County territory.\n\nIn July 2026 Utility Dive reported that 'Google, Amazon, Microsoft, and Meta advocated for voluntary contributions in aid of construction (CIAC) payments' at the SCC's Rider T-1 hearing, the proceeding that ended with mandatory direct assignment of transmission costs to data centers. No 2025–2026 Microsoft-specific supply agreement with Dominion was found; Microsoft's Virginia load is served under the general large-load process.",
+     "source": "https://www.c2es.org/content/dominion-microsoft-team-up-to-build-solar-project/",
+     "status": "active",
+     "via": "Remington solar PPA; Rider T-1 intervenor"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "dominion-energy",
+   "b": "nextera-energy-resources",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "NextEra Energy, the parent of NextEra Energy Resources, agreed on May 15, 2026 to acquire Dominion Energy in an all-stock combination expected to close in the second half of 2027.",
+     "context": "The May 18, 2026 joint release sets the exchange ratio at 0.8138 NextEra shares per Dominion share plus a one-time aggregate cash payment of $360 million, pro forma ownership of approximately 74.5 percent and 25.5 percent, a combined company of approximately 10 million customer accounts, 110 GW of generation and $138 billion of rate base, John Ketchum as chairman and CEO, Robert Blue as president and CEO of regulated utilities, Edward Baine as president and CEO of Dominion Energy Virginia, dual headquarters in Juno Beach and Richmond and a board of ten NextEra and four Dominion directors. Applications were filed July 15, 2026 with the SCC (Case PUR-2026-00112, hearing November 17, 2026), the NCUC, the South Carolina PSC, FERC and the NRC, with $2.25 billion of shareholder-funded bill credits over two years post-close.\n\nThe covered dossier is NextEra Energy Resources, the merchant development subsidiary; the acquirer is its parent. For this corpus the consequence is that the largest regulated data-center utility and the largest storage developer would share an owner from late 2027.",
+     "source": "https://news.dominionenergy.com/press-releases/press-releases/2026/NextEra-Energy-and-Dominion-Energy-to-Combine-Creating-the-Worlds-Largest-Regulated-Electric-Utility-Business-and-North-Americas-Premier-Energy-Infrastructure-Platform-Benefiting-Customers/default.aspx",
+     "status": "announced",
+     "since": "2026-05",
+     "scale": "0.8138 NextEra shares plus a pro rata share of $360M cash per Dominion share; NextEra 74.5% / Dominion 25.5%",
+     "via": "NextEra Energy–Dominion Energy combination"
+    }
+   },
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-05-18",
+     "text": "$67B merger with Dominion Energy announced — 0.8138 NEE shares per D share; >80% regulated; ~10M customers; VA/NC/SC + FERC + NRC filings made Jul 15 — NextEra buys the world's largest data-center market's utility. If approved, the merged entity becomes the dominant AIDC energy counterparty in the country — and regulated procurement is even more politically domestic-biased.",
+     "src": "NextEra newsroom / trade press",
+     "from": "b"
+    }
+   ],
+   "last": "2026-05-18"
+  },
+  {
+   "a": "dominion-energy",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "supplier",
+     "note": "Siemens Gamesa, Siemens Energy's wind subsidiary, supplies the 176 turbines for Coastal Virginia Offshore Wind.",
+     "context": "Dominion's February 2025 cost release names the turbine supplier as 'SiemensGamesa (manufacturing same model as Moray West project)'; offshorewind.biz describes the fleet as 176 Siemens Gamesa 14 MW turbines. The Q2 2026 deck reports 100 percent of nacelles, about 99 percent of towers and 85 percent of blades fabricated, 31 turbines installed and the final turbine expected at year-end 2027. Siemens Energy has owned Siemens Gamesa outright since 2023; the relationship is recorded here at the parent.",
+     "source": "https://news.dominionenergy.com/press-releases/press-releases/2025/Coastal-Virginia-Offshore-Wind-CVOW-Project-Part-of-Comprehensive-All-of-the-Above-Energy-Strategy-to-Affordably-Meet-Growing-Energy-Needs-Continues-on-Schedule-Cost-Updated/default.aspx",
+     "status": "active",
+     "since": "2021",
+     "scale": "176 turbines, 2.6 GW",
+     "via": "Siemens Gamesa offshore wind turbines (CVOW)"
+    }
+   },
+   "evid": [],
+   "last": "2021"
+  },
+  {
+   "a": "dominion-energy",
+   "b": "stack-infrastructure",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "STACK's 1 GW-plus Stafford Technology Campus draws committed power from six 300 MW substations supplied by Dominion Energy.",
+     "context": "STACK Infrastructure's January 16, 2025 release describes a 500-acre campus with four sub-campuses and 19 data centers 'drawing committed power from six 300MW substations supplied by Dominion Energy'. Stafford County is south of the Loudoun pocket, in the part of Dominion's territory where the 2025 IRP Update counts Southern Virginia's 2,000 MW market; the campus is the largest single Dominion-supplied colocation commitment named in the sources.",
+     "source": "https://www.stackinfra.com/about/news-press/press-releases/stack-infrastructure-announces-landmark-1gw-stafford-technology-campus-in-northern-virginia/",
+     "status": "announced",
+     "since": "2025-01",
+     "scale": "six 300 MW substations",
+     "via": "Stafford Technology Campus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Americas hyperscale platform (core business)",
+     "date": "",
+     "text": "Northern Virginia is the anchor — 7 sites and 2,400MW, led by the Stafford Technology Campus (1+GW across ~500 acres, 19 data centers in four sub-campuses, Dominion Energy substations), the 200MW/62-acre NVA05 campus in Manassas ($900M green financing, January 2025) and a 144MW two-building Loudoun County campus (announced February 2025).",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2025-01"
+  },
+  {
+   "a": "dominion-energy",
+   "b": "vantage",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Vantage was among the Ashburn operators whose 2022–2023 deliveries were constrained by Dominion's eastern-Loudoun transmission limits.",
+     "context": "Data Center Frontier's September 26, 2022 report on the Loudoun constraint quoted Vantage — 'We have gone all the way out into 2023 to see what workloads will be compromised or delayed' — alongside Digital Realty, and reported Dominion's statement that most planned development would 'receive a significantly reduced allocation of the anticipated power through January of 2026', with reconductoring, a Goose Creek 500/230 kV transformer, series reactors and a southern-Loudoun 500 kV line as the fixes. Vantage's Ashburn campuses remain on Dominion's system; no later Vantage-specific statement was found.",
+     "source": "https://www.datacenterfrontier.com/energy/article/11436951/dominion-resumes-new-connections-but-loudoun-faces-lengthy-power-constraints",
+     "status": "active",
+     "via": "Ashburn campuses"
+    }
+   },
+   "evid": [],
+   "last": ""
   },
   {
    "a": "dpr",

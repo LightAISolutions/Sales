@@ -705,6 +705,26 @@
         "Leadership: successor as President of Piller Power Systems Inc after Dean Richards' move; whether Jack Pearce now leads Bergen Engines Inc",
         "Competitor moves in the rotary niche: Hitec (Air Water), Rolls-Royce Solutions Liège (mtu Kinetic PowerPack), Hitzinger; ABB HiPerGuard MV UPS deployments"
       ]
+    },
+    {
+      "slug": "dominion-energy",
+      "nextReport": "2026-10-30",
+      "confirmed": false,
+      "source": "Cadence inference plus tracker date — Dominion had posted no Q3 2026 scheduling release or IR calendar entry as of 2026-09-03 (its Q3 2025 call was Friday Oct 31, 2025, announced by a scheduling release on Oct 2, 2025; Q2 2026 was Friday Jul 31, 2026; Q1 2026 Friday May 1; FY2025 Mon Feb 23). TipRanks and Investing.com both show Oct 30, 2026 (a Friday), TipRanks labelled 'Confirmed' — treat as unconfirmed until the company's 'Schedules Third-Quarter 2026 Earnings Call' release posts (~4 weeks ahead) at https://news.dominionenergy.com/ or https://investors.dominionenergy.com/events-and-presentations/. Caveat: the pending NextEra combination (shareholder vote 2026-09-03; close expected 2H 2027) may change stand-alone reporting after closing, not before.",
+      "lastRefreshed": "2026-09-03",
+      "watch": [
+        "Q3 2026 vs Street (~$1.20 operating EPS / ~$4.95B revenue at arming, Zacks); whether the $3.45–$3.69 full-year guidance moves; the first post-vote print",
+        "Data-center contracted capacity after ~53.8 GW (July 2026) — the ESA (firm) tranche above 12.0 GW is the number that matters; connections vs the 13 expected in 2026; any change to the SELOA/CLOA/ESA definitions or a new 'requests' figure beyond ~70 GW",
+        "GS-5 run-up: ESAs signed under existing terms before the Jan 1, 2027 effective date; the amended line-extension policy with mandatory CIAC due ~Oct 29, 2026 (Rider T-1 order of Jul 31, 2026); alternative cost-allocation proposals for generation and transmission",
+        "NextEra merger path: SCC Case PUR-2026-00112 evidentiary hearing Nov 17, 2026 and final order expected Jan 29, 2027; South Carolina PSC hearings Dec 8, 2026; FERC Section 203 and NRC license transfers; any merger conditions touching data-center cost allocation; whether stand-alone guidance continues",
+        "Storage: the 2026 PPA RFP (issued Oct 1, 2026) and Acquisition RFP awards; the next comprehensive IRP reconciling the preferred plan's 2,000 MW with the April 2026 law's 4.0 GW by 2030; any named BESS supplier or integrator for utility-owned projects (none named to date); SCC action on the 2025 clean-energy petition beyond the 532 MW solar / 80 MW storage approved",
+        "Gas: the Supreme Court of Virginia's decision on the Chesterfield Energy Reliability Center appeal (filed May 27, 2026); construction start; the 2026 Dispatchable Generation RFP (bids due Dec 18, 2026) and its winners; CCGT certificate filings for the 2032–2034 units",
+        "Transmission: Mars–Wishing Star energization (summer 2026); Golden–Mars construction; Morrisville–Wishing Star SCC hearings Sept–Nov 2026; Heritage–Mosby HVDC opposition and any PJM re-scoping; 765 kV Valley Link timing",
+        "CVOW: third offshore substation by year-end 2026; turbine installation rate against the year-end 2027 final-turbine date; any budget move beyond $11.65B and its split between customers, Stonepeak and shareholders; the Interior litigation",
+        "PJM: the next Base Residual Auction result for the DOM Zone (cap/floor collar ends after 2027/2028); the 2027 load forecast's Dominion-zone growth rate (5.4% in the 2026 vintage); FERC co-location compliance outcomes",
+        "North Anna: NRC action on the ESP renewal (filed Jul 14, 2026); any binding SMR agreement with Amazon or another high-load partner beyond the Oct 2024 MOU; Rider SMR spending",
+        "Ratings and financing: S&P positive outlook on VEPCO (Aug 2026) converting to an upgrade; 2026 debt issuance vs the $6.0–9.5B guide; fuel-cost securitization order (deadline Sept 29, 2026); Rider RGGI reinstatement (PUR-2026-00085)"
+      ]
     }
   ]
 }

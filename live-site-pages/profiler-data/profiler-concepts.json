@@ -48,6 +48,18 @@
    ]
   },
   {
+   "slug": "allowed-return",
+   "term": "allowed return",
+   "def": "The return on equity a commission authorizes a utility to earn on its rate base — typically nine to ten percent in recent US decisions. Because it multiplies every dollar of plant, a tenth of a point moves tens of millions a year on a large utility, which is why the return is the most litigated number in a rate case.",
+   "aliases": [
+    "authorized ROE",
+    "authorized return",
+    "return on equity",
+    "ROE",
+    "allowed ROE"
+   ]
+  },
+  {
    "slug": "arc-flash",
    "term": "arc flash",
    "def": "The explosive release of energy when current jumps through the air between conductors — a blast hot enough to be lethal at a panel door. An arc-flash study calculates that energy at every piece of gear so the right protective clothing and breaker settings can be specified, and it has to be redone whenever the electrical system changes.",
@@ -189,6 +201,19 @@
    "def": "How fast a battery charges or discharges relative to its capacity: 1C empties it in one hour, 0.25C in four. Grid storage typically runs at low C-rates — multi-hour durations rather than sprints."
   },
   {
+   "slug": "capacity-market",
+   "term": "capacity market",
+   "def": "A market that pays a resource for being available to serve peak demand — a payment for existing, not for energy produced. PJM runs its auction, the Base Residual Auction, three years ahead; the clearing price per megawatt-day is the signal that new data-center load has moved the region from surplus to scarcity, and it flows straight into a regulated utility's bills.",
+   "aliases": [
+    "capacity auction",
+    "Base Residual Auction",
+    "BRA",
+    "capacity price",
+    "capacity markets",
+    "capacity payment"
+   ]
+  },
+  {
    "slug": "cdu",
    "term": "CDU",
    "def": "Coolant distribution unit: the heat exchanger and pump station that separates the facility's water loop from the clean liquid loop feeding the servers, delivering coolant to the cold plates at the right temperature and pressure. It is the interface that lets one facility cooling spine serve many different rack designs.",
@@ -204,6 +229,18 @@
     "closed-transition transfer",
     "make-before-break",
     "closed-transition ATS"
+   ]
+  },
+  {
+   "slug": "coincident-peak",
+   "term": "coincident peak",
+   "def": "A customer's demand at the moment the whole system peaks, as opposed to its own highest hour. Transmission and capacity costs are allocated on it, so a flat load such as a data center that draws the same at the system peak as at 3 a.m. is charged a full share — and a load that can back off for the peak hours can shed a large part of its bill.",
+   "aliases": [
+    "CP",
+    "4CP",
+    "1CP",
+    "coincident-peak demand",
+    "coincident peak demand"
    ]
   },
   {
@@ -271,6 +308,30 @@
    ]
   },
   {
+   "slug": "cost-allocation",
+   "term": "cost allocation",
+   "def": "The question of who pays for a shared upgrade — the customer whose request triggered it, everyone in the rate class, or every ratepayer. Cost-causation says whoever causes the cost pays it; socialization spreads it. Large-load tariffs, contribution-in-aid-of-construction rules and transmission cost allocation are all answers to the same question.",
+   "aliases": [
+    "cost-allocation",
+    "cost causation",
+    "cost-causation",
+    "contribution in aid of construction",
+    "CIAC",
+    "transmission cost allocation"
+   ]
+  },
+  {
+   "slug": "cost-of-service",
+   "term": "cost of service",
+   "def": "The ratemaking method behind almost every US regulated utility: customers pay the utility's prudent costs of serving them — operations, fuel, depreciation, taxes — plus a return on the rate base. Rates are set by customer class, so the cost-of-service study is where the argument over who pays for a data center's substation is actually fought.",
+   "aliases": [
+    "cost-of-service",
+    "cost-of-service ratemaking",
+    "cost of service study",
+    "cost-of-service study"
+   ]
+  },
+  {
    "slug": "coupling-choke",
    "term": "coupling choke",
    "aliases": [
@@ -281,6 +342,29 @@
     "decoupling choke"
    ],
    "def": "A large iron-cored inductor placed in series between the utility and a rotary UPS's synchronous machine, or between the units of an isolated-parallel bus. Because an inductor resists sudden changes in current, it lets the machine hold its output voltage clean while the supply behind it dips, distorts or fails, and it limits how much of a fault on one side is felt on the other."
+  },
+  {
+   "slug": "cpcn",
+   "term": "CPCN",
+   "def": "Certificate of public convenience and necessity: the commission's permission to build a specific plant or line and put it into rate base. An IRP says what a utility expects to need; a CPCN is the docket in which it proves one project is needed, prudent and the right choice — and the order that turns a plan into a purchase.",
+   "aliases": [
+    "certificate of public convenience and necessity",
+    "certificate of need",
+    "CPCNs",
+    "certification"
+   ]
+  },
+  {
+   "slug": "cross-subsidy",
+   "term": "cross-subsidy",
+   "def": "When one customer class pays part of the cost of serving another. The live version: whether residential bills rise to pay for the generation and wires a data-center cluster requires — the finding regulators, legislatures and state auditors have been testing, and the political reason large-load tariffs exist.",
+   "aliases": [
+    "cross subsidy",
+    "cost shift",
+    "cost-shift",
+    "cost shifting",
+    "cross-subsidization"
+   ]
   },
   {
    "slug": "crps",
@@ -361,6 +445,19 @@
    ]
   },
   {
+   "slug": "dispatchable",
+   "term": "dispatchable",
+   "def": "Generation that can be turned on, up, down or off when the grid operator asks — gas, nuclear, hydro, and storage for as long as its energy lasts — as opposed to output that follows the weather. A plan that must serve a data center's flat load at night still buys dispatchable capacity, which is why gas keeps appearing in resource plans written under clean-energy mandates.",
+   "aliases": [
+    "dispatchable capacity",
+    "firm capacity",
+    "firm generation",
+    "firm power",
+    "dispatchable generation",
+    "firm resource"
+   ]
+  },
+  {
    "slug": "distributed-redundant",
    "term": "distributed redundant",
    "aliases": [
@@ -370,6 +467,16 @@
     "catcher"
    ],
    "def": "UPS topologies that reach N+1 or better without doubling everything. In a block-redundant or catcher design a spare UPS system stands ready to take any block's load through static transfer switches; in a distributed-redundant design each load is fed from two of several systems so any one can fail. Both cost less than 2N, and both place the redundancy in a switching event that has to work."
+  },
+  {
+   "slug": "docket",
+   "term": "docket",
+   "def": "A commission's case file: a numbered proceeding holding the application, testimony, discovery, intervenor filings, hearing transcripts and the final order. For a seller the docket is the only place a utility's plans are stated under oath with dates attached — read the docket, not the press release.",
+   "aliases": [
+    "dockets",
+    "case number",
+    "proceeding"
+   ]
   },
   {
    "slug": "double-conversion",
@@ -419,6 +526,17 @@
     "energy-saver mode"
    ],
    "def": "Running a static UPS with the load on the raw supply through the bypass and the conversion stage idling in reserve, lifting efficiency toward 98–99 percent. The bet is that the unit can detect a supply failure and transfer back to the inverter inside the servers' hold-up time, for every kind of fault — which is exactly what the mode's critics doubt."
+  },
+  {
+   "slug": "elcc",
+   "term": "ELCC",
+   "def": "Effective load carrying capability: how much of a resource's nameplate a grid operator counts toward meeting peak — its accredited capacity. A four-hour battery or a solar farm is credited well below nameplate and a gas plant close to it, so accreditation decides how many megawatts of storage a utility must build to satisfy a reserve requirement and how much a battery earns in a capacity market.",
+   "aliases": [
+    "effective load carrying capability",
+    "capacity accreditation",
+    "accredited capacity",
+    "accreditation"
+   ]
   },
   {
    "slug": "emergency-generator",
@@ -497,6 +615,14 @@
    "def": "Foreign entity of concern: a US legal designation (tied to China, Russia, Iran, and North Korea) that disqualifies projects and products with too much such involvement from federal tax credits — a central bankability question for China-linked battery supply.",
    "aliases": [
     "foreign entity of concern"
+   ]
+  },
+  {
+   "slug": "ferc",
+   "term": "FERC",
+   "def": "The Federal Energy Regulatory Commission: the US regulator of interstate transmission, wholesale power markets and the regional grid operators. State commissions set retail rates and certify plants; FERC sets the transmission tariff and approves the market rules and interconnection procedures the state-level story sits on top of.",
+   "aliases": [
+    "Federal Energy Regulatory Commission"
    ]
   },
   {
@@ -592,6 +718,18 @@
    "def": "The efficiency yardstick for a thermal power plant: fuel energy in per unit of electricity out, so a lower number is better. It decides which plants a market dispatches first, hour by hour, and it is the same quantity as percentage efficiency quoted the other way up.",
    "aliases": [
     "heat-rate"
+   ]
+  },
+  {
+   "slug": "high-voltage",
+   "term": "high voltage",
+   "def": "The transmission tier — roughly 100 kV and up in the United States, with 230 kV, 500 kV and 765 kV the workhorse classes — used to move bulk power between regions and into a cluster of substations. Higher voltage carries more power over the same right-of-way with less loss, which is why the lines proposed for data-center corridors keep going up a class.",
+   "aliases": [
+    "HV",
+    "high-voltage",
+    "extra-high voltage",
+    "EHV",
+    "transmission voltage"
    ]
   },
   {
@@ -764,6 +902,18 @@
    ]
   },
   {
+   "slug": "load-forecast",
+   "term": "load forecast",
+   "def": "The projection of future peak demand and energy that a utility's plan and a grid operator's markets are built on. Data-center requests inflated these forecasts faster than anything in the industry's history, and the arguments — how much of the queue is real, whether the same campus is counted by several utilities — are arguments about this number.",
+   "aliases": [
+    "peak load forecast",
+    "load growth forecast",
+    "long-term load forecast",
+    "demand forecast",
+    "load growth"
+   ]
+  },
+  {
    "slug": "load-shedding",
    "term": "load shedding",
    "def": "Dropping pre-ranked non-critical loads — chillers, offices, lower-priority halls — when generation cannot carry everything, so the critical load keeps its power. The priority list is written in advance and executed automatically by the paralleling controls; it is the reason an under-strength generator fleet degrades gracefully instead of tripping.",
@@ -822,6 +972,19 @@
    "slug": "microgrid",
    "term": "microgrid",
    "def": "A self-contained power system — generation, storage, and controls — that can run connected to the grid or islanded on its own. It is how some AI campuses get power before utility interconnection arrives."
+  },
+  {
+   "slug": "minimum-demand-charge",
+   "term": "minimum demand charge",
+   "def": "A tariff term that bills a large customer for a fixed share of its contracted capacity every month whether or not it draws it — the utility's version of take-or-pay. It converts a speculative interconnection request into demand the utility can finance plant against, and it is what makes a phased campus pay for megawatts it has not energized yet.",
+   "aliases": [
+    "minimum-demand charge",
+    "minimum demand",
+    "minimum-demand",
+    "contract demand",
+    "minimum bill",
+    "minimum billing demand"
+   ]
   },
   {
    "slug": "minor-source",
@@ -1041,6 +1204,29 @@
    ]
   },
   {
+   "slug": "prudence-review",
+   "term": "prudence review",
+   "def": "The commission's after-the-fact test of whether a utility's spending was reasonable when the decision was made; imprudent cost is disallowed and falls on shareholders instead of customers. It is the reason a regulated buyer cares so much about a supplier's bankability and paperwork: every purchase must survive this review years later.",
+   "aliases": [
+    "prudence",
+    "prudently incurred",
+    "prudence disallowance",
+    "prudency"
+   ]
+  },
+  {
+   "slug": "public-utility-commission",
+   "term": "public utility commission",
+   "def": "The state body that regulates a monopoly utility: it approves rates, certifies new plants and lines, reviews the integrated resource plan and decides what the utility may recover from customers. Called a PUC, a PSC or, in Virginia, the State Corporation Commission — whatever the name, nothing a regulated utility buys at scale is final until it has been through this body.",
+   "aliases": [
+    "PUC",
+    "PSC",
+    "utility commission",
+    "public service commission",
+    "state commission"
+   ]
+  },
+  {
    "slug": "pue",
    "term": "PUE",
    "def": "Power usage effectiveness: total facility power divided by the power that reaches the IT equipment. A PUE of 1.0 would mean every watt went to computing; the gap above it is cooling, conversion, and lighting overhead — the industry's headline efficiency number.",
@@ -1049,9 +1235,61 @@
    ]
   },
   {
+   "slug": "rate-base",
+   "term": "rate base",
+   "def": "The value of a regulated utility's plant in service — generation, wires, substations, meters — net of depreciation, on which the commission lets it earn a return. Every dollar of prudently built plant that goes into rate base earns the allowed return for decades, which is why a regulated utility's growth story is a capital-spending story and why it would rather own an asset than contract for one.",
+   "aliases": [
+    "rate-base",
+    "rate base growth"
+   ]
+  },
+  {
+   "slug": "rate-case",
+   "term": "rate case",
+   "def": "The commission proceeding in which a utility's base rates are reset: the utility files its costs and rate base, intervenors test them, and an order sets the revenue requirement, the allowed return and the rate classes for the years ahead. Virginia runs Dominion Energy Virginia's as a biennial review. It is the moment a large-load tariff can be created or rewritten.",
+   "aliases": [
+    "biennial review",
+    "base rate case",
+    "general rate case",
+    "rate review",
+    "rate cases"
+   ]
+  },
+  {
+   "slug": "rate-class",
+   "term": "rate class",
+   "def": "A group of customers billed under the same tariff schedule — residential, small commercial, large industrial, and now very large loads — because they cost the utility different amounts to serve. Creating a rate class is how a commission fences a data center's costs off from everyone else's bill.",
+   "aliases": [
+    "rate schedule",
+    "customer class",
+    "rate classes",
+    "tariff schedule"
+   ]
+  },
+  {
    "slug": "rectifier",
    "term": "rectifier",
    "def": "A power-electronics device that turns AC into DC — the first stage of nearly every power supply, charger, and data-center power shelf."
+  },
+  {
+   "slug": "revenue-requirement",
+   "term": "revenue requirement",
+   "def": "The total a utility is allowed to collect from customers over a period: operating costs plus depreciation plus taxes plus the allowed return on rate base. A rate case is an argument about this one number, and the tariffs are how it is divided among customer classes.",
+   "aliases": [
+    "revenue requirements"
+   ]
+  },
+  {
+   "slug": "rfp",
+   "term": "RFP",
+   "def": "Request for proposals: the competitive solicitation a utility issues for the capacity its plan calls for — a storage-specific, solar or all-source RFP — evaluated by the utility or an independent evaluator and then taken to the commission for approval. For an equipment vendor it is the moment the bidding developer's bill of materials locks, which is earlier than the award.",
+   "aliases": [
+    "request for proposals",
+    "all-source RFP",
+    "solicitation",
+    "RFPs",
+    "request for proposal"
+   ]
   },
   {
    "slug": "ride-through",
@@ -1061,6 +1299,18 @@
     "ride through",
     "fault ride-through",
     "ride-through capability"
+   ]
+  },
+  {
+   "slug": "rider",
+   "term": "rider",
+   "def": "A separate line on the bill that recovers one program's cost outside the base rates — a new plant, a transmission program, offshore wind, fuel. Riders let a utility start earning on a project without waiting for the next rate case, which is why regulators guard them and why a utility's biggest projects each tend to arrive with one.",
+   "aliases": [
+    "riders",
+    "rate adjustment clause",
+    "RAC",
+    "cost recovery rider",
+    "rate rider"
    ]
   },
   {
@@ -1080,6 +1330,29 @@
    "def": "The share of energy put into a storage system that comes back out after conversion and thermal losses — typically in the high-80s percent range for lithium-ion. The gap is energy bought but never sold.",
    "aliases": [
     "RTE"
+   ]
+  },
+  {
+   "slug": "rtep",
+   "term": "RTEP",
+   "def": "PJM's Regional Transmission Expansion Plan: the annual process in which the grid operator identifies reliability needs, opens competitive windows and assigns transmission projects — with their cost allocation — to utilities and developers. The billion-dollar lines into a data-center cluster are chosen here, years before they are built.",
+   "aliases": [
+    "Regional Transmission Expansion Plan",
+    "transmission planning",
+    "transmission plan",
+    "RTEP window"
+   ]
+  },
+  {
+   "slug": "rto",
+   "term": "RTO",
+   "def": "Regional transmission organization: the FERC-regulated operator that runs the wholesale markets, the interconnection queue and the regional transmission plan across many utilities — PJM, MISO, SPP. A regulated utility inside one still owns its wires and plants, but the price of capacity and the plan for the big lines are set at the RTO, one level above its own commission.",
+   "aliases": [
+    "regional transmission organization",
+    "ISO",
+    "independent system operator",
+    "grid operator",
+    "RTOs"
    ]
   },
   {
@@ -1117,6 +1390,16 @@
     "scale-out",
     "scale-up network",
     "scale-out network"
+   ]
+  },
+  {
+   "slug": "scc",
+   "term": "SCC",
+   "def": "Virginia's State Corporation Commission — the state's public utility commission, a three-judge body that sets Dominion Energy Virginia's rates in biennial reviews, certifies its plants and lines, reviews its integrated resource plan and approved its large-load rate class. Its dockets are the primary record of how Data Center Alley gets its power.",
+   "aliases": [
+    "State Corporation Commission",
+    "Virginia SCC",
+    "Virginia State Corporation Commission"
    ]
   },
   {
@@ -1171,6 +1454,16 @@
     "simple-cycle",
     "open cycle",
     "SCGT"
+   ]
+  },
+  {
+   "slug": "smr",
+   "term": "SMR",
+   "def": "Small modular reactor: a nuclear plant designed as factory-built units of roughly 50 to 300 MW each rather than one gigawatt-class build, meant to be licensed once and repeated. None is yet operating commercially in the United States; for a utility and a hyperscaler the attraction is clean, dispatchable power on an existing nuclear site, and the constraint is a licensing and construction clock measured in a decade.",
+   "aliases": [
+    "small modular reactor",
+    "small modular reactors",
+    "SMRs"
    ]
   },
   {
@@ -1267,6 +1560,27 @@
    "def": "A UPS built from power electronics — a rectifier, a DC link with batteries on it and an inverter — with no moving parts except fans. It is the incumbent form in data centers: modular, efficient, factory-built at low voltage, and dependent on a battery room whose chemistry, life and fire code are a design in themselves."
   },
   {
+   "slug": "stranded-cost",
+   "term": "stranded cost",
+   "def": "Investment a utility made to serve a customer or a market that then went away, leaving the plant unpaid for. The fear behind every large-load tariff term — minimum demand, long contracts, collateral, exit fees — is a substation and a gas plant built for a data center that never fully arrives, with the bill landing on everyone else.",
+   "aliases": [
+    "stranded costs",
+    "stranded asset",
+    "stranded assets",
+    "stranded-cost"
+   ]
+  },
+  {
+   "slug": "substation",
+   "term": "substation",
+   "def": "The fenced yard where transmission voltage is stepped down through large transformers and routed through switchgear onto distribution or onto a customer's own feeders. A data-center campus gets one — often several — and the transformer lead time, the land and the transmission line feeding it are what a utility means when it says it cannot connect a load before a given year.",
+   "aliases": [
+    "substations",
+    "switching station",
+    "switchyard"
+   ]
+  },
+  {
    "slug": "supercapacitor",
    "term": "supercapacitor",
    "def": "A device storing energy as separated electric charge rather than as a chemical reaction. It holds far less energy than a battery of the same size but takes it in and gives it back within milliseconds, over and over, for many years — which makes it the right part for absorbing a spike and the wrong one for riding out an outage.",
@@ -1317,6 +1631,19 @@
     "motor generator"
    ],
    "def": "An AC machine whose rotor turns in exact step with the grid frequency — 1,500 or 1,800 rpm for a four-pole machine at 50 or 60 Hz — carrying a magnetic field set by its excitation. Driven one way it is a motor, the other way a generator; in a rotary UPS it does both, and because its output is made by a spinning magnet rather than by switching, the waveform is inherently a sine wave."
+  },
+  {
+   "slug": "system-impact-study",
+   "term": "system impact study",
+   "def": "The engineering study a utility runs before connecting a large new load or generator: what the request does to the network, which transformers, lines and substations it overloads, and what upgrades are needed. It follows a feasibility screen and precedes a facilities study that prices those upgrades — and each study is valid only against the grid as modelled that day, which is why the date moves.",
+   "aliases": [
+    "interconnection study",
+    "load study",
+    "feasibility study",
+    "facilities study",
+    "impact study",
+    "interconnection studies"
+   ]
   },
   {
    "slug": "take-or-pay",
@@ -1390,6 +1717,26 @@
     "Uptime Institute Tier",
     "Tier III",
     "Tier IV"
+   ]
+  },
+  {
+   "slug": "vcea",
+   "term": "VCEA",
+   "def": "The Virginia Clean Economy Act of 2020: the state law that sets Dominion Energy Virginia on a path to carbon-free generation by 2045 and mandates specific gigawatts of solar, offshore wind and energy storage along the way, executed through annual filings the commission approves. It is the statutory reason the utility runs a standing storage procurement.",
+   "aliases": [
+    "Virginia Clean Economy Act"
+   ]
+  },
+  {
+   "slug": "vertically-integrated-utility",
+   "term": "vertically integrated utility",
+   "def": "A utility that owns generation, transmission and distribution and sells to the end customer under one regulated franchise — Dominion Energy Virginia, Georgia Power and Entergy are the pattern. Contrast a wires-only utility in a restructured market such as Texas, which delivers power it does not generate. Which kind sits across the table decides whether the utility buys plants or only substations.",
+   "aliases": [
+    "vertically integrated",
+    "regulated utility",
+    "integrated utility",
+    "wires-only utility",
+    "wires-only"
    ]
   },
   {

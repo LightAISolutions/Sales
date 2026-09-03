@@ -1,0 +1,733 @@
+{
+ "schemaVersion": 2,
+ "slug": "dominion-energy",
+ "title": "Dominion Energy — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "the-gatekeeper",
+   "title": "The utility is the gatekeeper: why its clock is measured in years",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "This guide sits on the other side of the meter from every equipment guide in the corpus. A {{hyperscaler}}'s campus can be designed in months and its shell raised in a year; the utility that has to feed it works on a clock measured in years, and the reason is not slowness but structure. A {{vertically integrated utility}} is a legal monopoly: in exchange for the exclusive right to serve a territory it accepts that a {{public utility commission}} sets what it may charge, approves what it may build and decides, after the fact, whether what it spent was prudent. Nothing it buys at scale is its own decision alone.",
+    "That structure is what a seller into the regulated market has to learn, because it decides who signs, when, and against which document. The utility does not buy a battery because a battery is good; it buys one because a plan it filed said it needed the capacity, a commission certified that need, a solicitation chose the winner, and a rate order lets it recover the cost. Each of those is a proceeding with a {{docket}} number and a calendar, and the sale is made or lost inside them — often a year or more before any purchase order exists.",
+    "The AI buildout put this machine under a load it was never sized for. A single {{load forecast}} in the mid-Atlantic moved by more in three years than in the previous thirty; utilities fielded {{interconnection queue}} requests many times their own peak; and the political question — whether every other customer pays for the wires and plants a data-center cluster needs — became the central fight of the {{rate case}}. The answers arrived as {{large-load tariff}} classes, expedited gas certifications, statutory storage mandates and multi-billion-dollar transmission plans. Dominion Energy Virginia, which serves the largest data-center cluster in the world, is the clearest single case of every one of those instruments being used at once.",
+    "Read the chain in order. The bargain and the arithmetic first (why a utility prefers to own), then the three documents that turn a need into a purchase, then the rate case where the terms of service are written, then the tariff that binds the data center, then the study that connects it, then the regional layer — {{PJM}} — that prices capacity and plans the big lines above the utility's head. The company sections put Dominion's own programs against each link, and the failure map says where the clock breaks."
+   ]
+  },
+  {
+   "id": "the-monopoly-bargain",
+   "title": "The monopoly bargain: rate base, cost of service and the revenue requirement",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Start with the one equation. A regulated utility's {{revenue requirement}} — what it is allowed to collect in a year — is its operating costs plus depreciation plus taxes plus a return on its {{rate base}}, the depreciated value of the plant it has built to serve customers. The return is the {{allowed return}} the commission sets on the equity share of that plant, somewhere between nine and ten percent in most recent US decisions. Everything about a utility's behaviour follows from the last term.",
+    "Do the arithmetic once. A one-billion-dollar substation-and-transmission program, half of it financed with equity at a 9.5 percent allowed return, earns the utility roughly $47 million of profit in its first year, declining slowly as the plant depreciates over thirty or forty years. A one-billion-dollar {{PPA}} for the same capacity from someone else's plant earns nothing — it is a pass-through cost. The utility is not being greedy when it prefers to own; it is being exactly what its incentives make it. This is why storage mandates in a regulated state produce company-owned batteries as well as contracted ones, and why the seller who understands which purchases go into rate base understands which ones the utility will fight for.",
+    "{{Cost of service}} is how the requirement is divided. A cost-of-service study allocates each category of cost — generation, transmission, distribution, customer service — to the {{rate class}}es that cause it, using measures such as each class's share of the system's {{coincident peak}}, its energy and its number of meters. The result is a set of tariffs: a residential schedule, small and large commercial schedules, an industrial schedule and, since the data-center wave, a very-large-load schedule. The study is dry, and it is where the real fight over data centers happens, because a flat load that draws the same at 3 a.m. as at the system peak looks nothing like a factory or a suburb, and where its costs are assigned decides whether everyone else's bill rises.",
+    "Two more terms complete the vocabulary. A {{rider}} — in Virginia, a rate adjustment clause — recovers one program outside base rates, so a new plant or a transmission program starts earning before the next rate case; it is why a utility's largest projects each arrive with their own line on the bill. And a {{prudence review}} is the commission's after-the-fact test: a cost found imprudent when it was incurred is disallowed and falls on shareholders. That review, years later, is the reason a regulated buyer is so attentive to a supplier's {{bankability}} and paperwork — every purchase must still look reasonable to a hearing examiner in 2032."
+   ]
+  },
+  {
+   "id": "who-decides-what",
+   "title": "Who decides what: the commission, the grid operator, the federal regulator, the legislature",
+   "kind": "table",
+   "read": "3 min",
+   "intro": "Three regulators, a legislature and the utility itself, each with its own clock. The seller who cannot say which one owns the decision in front of them is selling to the wrong room.",
+   "cols": [
+    "Body",
+    "What it decides",
+    "The instrument",
+    "Its clock"
+   ],
+   "rows": [
+    [
+     "The state commission — a {{public utility commission}}; in Virginia the {{SCC}}",
+     "Retail rates, the {{rate case}} and its {{rate class}}es, the {{IRP}}, every {{CPCN}}, approval of {{RFP}} results, {{rider}}s, the {{prudence review}}",
+     "A {{docket}} with an order at the end",
+     "Months to a year per proceeding; the rate case on a fixed statutory cycle"
+    ],
+    [
+     "The regional grid operator — an {{RTO}}; for Virginia, {{PJM}}",
+     "Wholesale energy and {{capacity market}} prices, resource {{ELCC}} accreditation, the generation {{interconnection queue}}, the regional {{RTEP}} and its {{cost allocation}}",
+     "Market rules, auction results, planning windows",
+     "Auction cycles run three years ahead; transmission plans on five-to-fifteen-year horizons"
+    ],
+    [
+     "The federal regulator — {{FERC}}",
+     "The transmission tariff, market rules, interconnection procedures, the rules on co-located load",
+     "Orders on the grid operator's filings",
+     "Years; its orders reshape the field rather than a single deal"
+    ],
+    [
+     "The legislature",
+     "Mandates and fences — {{VCEA}} storage and offshore-wind targets, tax treatment of data centers, cost-allocation directives, siting law",
+     "Statute",
+     "Sessions; a bill can rewrite what the commission may do"
+    ],
+    [
+     "The utility itself",
+     "What to file, what to propose, which projects to self-build and which to contract, the annual solicitation calendar",
+     "Filings and RFPs",
+     "Its own five-year capital plan, refreshed every year"
+    ]
+   ],
+   "note": "None of these bodies buys equipment. The utility's engineering and procurement staff do — but only what the other four have already authorized, which is why the purchase order is the last document in the chain rather than the first."
+  },
+  {
+   "id": "from-plan-to-plant",
+   "title": "From plan to plant: the sequence a regulated purchase moves through",
+   "kind": "timeline",
+   "read": "4 min",
+   "intro": "A representative sequence measured in years from the first filing, not a calendar. The utility files (gold), the commission decides (blue), the plant gets built and paid for (red). Every arrow can loop back: a forecast revision reopens the plan, a rejected certificate restarts the solicitation, a rate case can reprice everything.",
+   "lanes": {
+    "gen": "Utility files",
+    "deploy": "Commission decides",
+    "eco": "Build and recover"
+   },
+   "items": [
+    {
+     "x": 1.0,
+     "lane": "gen",
+     "label": "{{IRP}} filed",
+     "sub": "The utility's forecast and preferred plan: what it expects to need over fifteen to twenty-five years and how it intends to procure it. Certified need starts here."
+    },
+    {
+     "x": 1.6,
+     "lane": "deploy",
+     "label": "Order on the plan",
+     "sub": "Reasonable or not, with findings on the {{load forecast}} and the resource mix. Not an approval to build anything."
+    },
+    {
+     "x": 2.0,
+     "lane": "gen",
+     "label": "{{RFP}} issued",
+     "sub": "A storage, solar or all-source solicitation for the capacity the plan calls for. Bids lock the bidding developer's bill of materials — the equipment vendor's real deadline."
+    },
+    {
+     "x": 2.5,
+     "lane": "gen",
+     "label": "{{CPCN}} application",
+     "sub": "One project, proven needed and prudent: cost, site, alternatives, the winning bids or the self-build case."
+    },
+    {
+     "x": 3.3,
+     "lane": "deploy",
+     "label": "Certificate granted",
+     "sub": "Permission to build and to put the plant into {{rate base}} — the order that turns a plan into a purchase order."
+    },
+    {
+     "x": 3.5,
+     "lane": "eco",
+     "label": "Contracts signed, construction starts",
+     "sub": "{{EPC}} and supply agreements. A battery site takes one to two years, a gas plant three to five, a transmission line longer."
+    },
+    {
+     "x": 5.0,
+     "lane": "eco",
+     "label": "{{Commissioning}} and {{energization}}",
+     "sub": "The plant proves itself and enters service; its capacity counts toward the reserve requirement at its {{ELCC}} value."
+    },
+    {
+     "x": 5.2,
+     "lane": "gen",
+     "label": "{{Rider}} filing for recovery",
+     "sub": "The project's cost enters rates through its own rate adjustment clause, or waits for the next {{rate case}}."
+    },
+    {
+     "x": 6.0,
+     "lane": "deploy",
+     "label": "{{Prudence review}}",
+     "sub": "Was the spending reasonable when it was decided? Disallowed cost falls on shareholders — the review a supplier's paperwork has to survive."
+    }
+   ],
+   "note": "The seller's leverage is highest between the order on the plan and the solicitation's bid date — before the bill of materials locks — and lowest after the certificate, when the buyer is a contracting officer executing an approved plan."
+  },
+  {
+   "id": "three-documents-three-questions",
+   "title": "IRP, CPCN, RFP: three documents, three questions",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Three documents that are constantly confused. They answer different questions, are decided by different people, and open different doors for a supplier.",
+   "cols": [
+    "Instrument",
+    "The question it answers",
+    "Who decides",
+    "What a supplier can influence",
+    "Typical clock"
+   ],
+   "rows": [
+    [
+     "{{IRP}}",
+     "What will the system need over the next fifteen to twenty-five years, and what mix of resources should meet it? A forecast and a preferred plan, modelled under scenarios",
+     "Filed by the utility; reviewed by the commission, which finds it reasonable (or not) but approves no project",
+     "Almost nothing directly — but the plan's storage and {{dispatchable}} totals are the addressable market for the next decade, and its assumptions on battery cost and {{ELCC}} decide how much storage it calls for",
+     "A full plan every two or three years with annual updates; six to twelve months of review"
+    ],
+    [
+     "{{CPCN}}",
+     "Is this one plant or line needed, prudent and the right choice among alternatives — and may it enter {{rate base}}?",
+     "The commission, on the record of a {{docket}} with intervenors",
+     "Indirectly, through the applicant's case: the vendor of the chosen technology supplies the cost, performance and schedule evidence the utility files",
+     "Nine to fifteen months from application to order"
+    ],
+    [
+     "{{RFP}}",
+     "Who will supply the capacity the plan calls for, at what price and on what terms — utility-owned, or contracted through a {{PPA}}?",
+     "The utility, often with an {{independent engineer}} or evaluator; results go to the commission for approval",
+     "Directly: the developer bidding a project chooses its OEM at bid stage, and the utility's own self-build bids run through its {{EPC}} and approved-vendor list — two lanes, two buyers",
+     "A bid window of a few months; evaluation and approval about a year; award to purchase order another twelve to thirty-six months"
+    ],
+    [
+     "{{Rate case}}",
+     "What may the utility collect in total, at what {{allowed return}}, from which {{rate class}}es — and on what terms may it serve a very large load?",
+     "The commission, on a statutory cycle",
+     "Nothing directly; everything indirectly, because the {{large-load tariff}} written here decides whether the data center that would buy the storage can afford to connect",
+     "About a year; in Virginia a biennial review"
+    ]
+   ],
+   "note": "A common seller's error is to treat a utility's plan megawatts as a pipeline. They are the ceiling of the market, not orders; the orders are the certificates and the solicitation awards on a fuse of one to three years, and the developer bidding the solicitation — not the utility — chooses the hardware in most of them."
+  },
+  {
+   "id": "the-rate-case-and-the-docket",
+   "title": "The rate case and the docket: where the terms of service are written",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "A {{rate case}} is the proceeding in which base rates are reset. The utility files a test year — its costs, its rate base, the return it asks for — and the case is argued by intervenors: the consumer counsel, industrial customers, environmental groups, the data-center industry itself, and the commission's own staff. Discovery, testimony, rebuttal and a hearing follow; the order at the end sets the {{revenue requirement}}, the {{allowed return}}, the depreciation schedules and the tariffs by {{rate class}}, effective on a stated date. Virginia runs Dominion Energy Virginia's on a fixed two-year cycle, so the calendar is known years in advance.",
+    "The rate case is also where a new class of customer gets its own rules. When a commission concludes that very large loads cost the system something the existing tariffs do not capture — a dedicated {{substation}}, a share of new generation, a risk that the load never fully arrives — it can create a {{large-load tariff}} inside the rate order, with a threshold in megawatts, a contract term, a {{minimum demand charge}} and collateral. The biennial review that produced Dominion's GS-5 class is exactly this: the data-center terms were decided in the same order that set everyone else's rates.",
+    "The {{docket}} is how you read any of it. Every proceeding has a case number; under it sit the application, the exhibits, the testimony of every witness, the discovery responses, the hearing examiner's report and the final order — all public. A press release announces what the utility asked for; the docket records what it was granted, what it conceded, what the staff recommended and what the commissioners wrote. For a seller the discipline is simple: the plan is not real until it has a docket number, and the terms are not final until the order posts. Track the case, not the headline.",
+    "Two dates matter on every order: the order date and the effective date. A tariff approved in November can take effect more than a year later, and the gap is where a developer decides whether to sign before or after the new terms apply. That decision, multiplied across a cluster, is what moves a utility's contracted pipeline from one quarter to the next."
+   ]
+  },
+  {
+   "id": "anatomy-of-a-large-load-tariff",
+   "title": "Anatomy of a large-load tariff",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The terms of a {{large-load tariff}} and what each one is for. The first US classes — AEP Ohio's in 2025, Georgia Power's, Dominion's GS-5 — converged on the same handful of terms; Dominion's own numbers are in the company sections below.",
+   "cols": [
+    "Term",
+    "What it says",
+    "What it protects against",
+    "What it does to a campus plan"
+   ],
+   "rows": [
+    [
+     "Threshold",
+     "Which customers the class applies to — a contract demand at or above a stated number of megawatts (25 MW in the Virginia and AEP Ohio classes; 100 MW in Georgia's rules)",
+     "Applying data-center terms to a hospital or a factory that happens to be large",
+     "A campus below the line stays on the ordinary schedule; a phase sized just under it is a choice someone made"
+    ],
+    [
+     "Contract term",
+     "How long the customer is bound — twelve to fifteen years is the range the first classes settled on",
+     "{{Stranded cost}}: plant built for a customer that leaves after the hype cycle",
+     "The lease the developer signs with its tenant has to be at least as long, or the developer carries the difference"
+    ],
+    [
+     "{{Minimum demand charge}}",
+     "A percentage of contracted capacity billed every month whether used or not — 85 percent of transmission-and-distribution demand is the norm, with a separate and often lower generation minimum",
+     "Speculative requests: a queue of paper megawatts the utility would otherwise plan and build for",
+     "The campus pays for megawatts it has not energized; phasing a 300 MW site as three 100 MW steps becomes a decision about the bill, not the construction schedule"
+    ],
+    [
+     "Ramp",
+     "A schedule over which the minimum rises — the first years at a lower share, the full minimum after three or four",
+     "Punishing a real project for the normal time it takes to fill a building",
+     "The tenant fit-out schedule and the ramp have to be planned together; a slip of a year can cost a year of minimum charges"
+    ],
+    [
+     "Collateral",
+     "Security posted up front — a deposit, a letter of credit or a parent guarantee sized to some months of minimum charges",
+     "The developer's own {{bankability}}: a shell company that walks away",
+     "A hyperscaler tenant can post it easily; a speculative developer cannot, which is one reason the tenant's name decides the interconnection"
+    ],
+    [
+     "Exit fee",
+     "What it costs to leave before the term ends — often a multiple of the annual minimum",
+     "The same stranded-cost fear, priced for the case where the customer does go",
+     "It makes the site sticky: moving load to the next utility over is not free"
+    ],
+    [
+     "Flexibility and {{curtailment}}",
+     "Whether the customer may be asked to reduce load, and whether accepting curtailment or {{demand response}} buys an earlier connection",
+     "The peak the system cannot serve; in Texas {{SB 6}} makes it a condition of connecting at all",
+     "The on-site generation and storage that lets a campus back off for the peak hours is what the tariff rewards — the socket for a {{BESS}} seller"
+    ]
+   ],
+   "note": "Every term is a translation of one fear — that a utility builds a substation and a gas plant for a data center that never fully arrives, and the bill lands on everyone else. Read a tariff as a list of the ways a commission has been burned."
+  },
+  {
+   "id": "the-minimum-demand-arithmetic",
+   "title": "The minimum-demand arithmetic, worked once",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "**Set it up.** A developer contracts 300 MW of transmission-and-distribution demand for a campus it intends to fill over four years, on a class whose minimum is 85 percent of contracted demand and whose generation minimum is 60 percent. Assume, for the arithmetic only, demand charges of $12 per kilowatt-month on the wires and $8 per kilowatt-month on generation — illustrative numbers, not any utility's tariff.",
+    "**Year one, one-tenth occupied.** The campus draws 30 MW. It is billed for 255 MW of wires demand (85 percent of 300) and 180 MW of generation demand (60 percent) — about $3.1 million and $1.4 million a month, roughly $54 million a year, for a building that is one-tenth full. The energy it actually uses is a rounding error beside the demand charges.",
+    "**What the developer does about it.** It either contracts in phases — 100 MW now, more when leases sign — and accepts that each phase joins the {{interconnection queue}} on its own date, or it signs the full 300 MW to hold its place and carries the minimum until the tenants arrive. Neither is free, and the choice is the most important number in a data-center pro forma after the lease rate. A tariff with a ramp softens year one; a tariff without one turns the minimum into the price of the queue position.",
+    "**What it does for the utility.** It converts 300 MW of intent into 255 MW of bankable revenue — demand the utility can take to a {{CPCN}} docket and finance a {{substation}} against, exactly as {{take-or-pay}} converts a colocation lease into debt capacity. The minimum charge is not a penalty. It is the utility's own version of the contract structure the rest of this ecosystem runs on."
+   ]
+  },
+  {
+   "id": "interconnecting-a-load",
+   "title": "Interconnecting a load: the study sequence, and why the date moves",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A generator joins an {{interconnection queue}} under rules {{FERC}} and the {{RTO}} set; a large load connects under the utility's own process, and the two are constantly confused. For a data center the sequence is: a request stating the site and the megawatts; a feasibility screen; a {{system impact study}} that models what the load does to the network and which lines, {{transformer}}s and {{substation}}s it overloads; a facilities study that prices the upgrades; then the construction agreement, the substation design and build, and finally {{energization}} — the date every schedule upstream is measured against.",
+    "The study is the hinge, and it has a property that explains most of the disappointment in this industry: it models the grid as it will be on the connection date, and the grid keeps changing. Every other request in the same corridor, every retirement, every transmission line that slips, changes the answer. A study that was valid in March is stale in September, and a utility with a hundred requests in one county cannot study them one at a time — hence the batch and cluster processes, the re-runs, and the pauses while a corridor's transmission is rebuilt. This is the first row of the corpus's failure map, and it is not a failure of competence: the requester funds upgrades it does not control, on a network it shares with everyone else.",
+    "{{Cost allocation}} is the second hinge. Who pays for the new line into the corridor — the campus that triggered it, every large load in the class, or every customer in the state? The answer differs by utility and by what the upgrade is. A dedicated substation is typically the customer's cost, as a contribution in aid of construction that is refundable if other customers later use it; a network upgrade that strengthens the whole system is socialized into {{rate base}}; and the argument about which is which is the {{cross-subsidy}} argument that state auditors and legislatures have been running since the load forecasts moved.",
+    "Three practical consequences for the seller. First, the requester's most valuable asset is a study position with a date, and anything that protects that date — flexibility, on-site buffering, accepting a {{curtailment}} protocol — is worth real money. Second, the energization date is the true delivery date for every megawatt of equipment behind it, so a slip upstream is a slip in the supplier's revenue. Third, a utility that cannot connect a load for four years is the reason the {{behind-the-meter}} bridge-power market exists at all: the seller who understands the study sequence understands where that market comes from, and when it ends."
+   ]
+  },
+  {
+   "id": "who-pays-for-the-wires",
+   "title": "Who pays for the wires: cost-causation against socialization",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "The same question sits under the tariff, the study and the rate case. Both answers are defensible, both have costs, and every commission is somewhere between them.",
+   "cards": [
+    {
+     "t": "Make the load pay — cost-causation",
+     "meta": "The customer whose request triggered the cost carries it: contribution in aid of construction, a {{large-load tariff}} class, a {{minimum demand charge}}",
+     "adv": [
+      "Protects every other {{rate class}} from a {{cross-subsidy}} it did not ask for — the political condition for connecting the cluster at all",
+      "Filters the queue: only requests with money behind them survive, so the {{load forecast}} the plan is built on gets closer to the truth",
+      "Matches the regulator's oldest principle — cost follows cause — and is defensible in a {{prudence review}}"
+     ],
+     "dis": [
+      "Shared assets are hard to attribute: a 500 kV line into a corridor serves the whole region once it exists",
+      "Front-loaded charges push development to the next utility over, or {{behind-the-meter}}, where the system then cannot see it",
+      "A campus that pays for a substation it later cannot fill has paid for a {{stranded cost}} of its own"
+     ]
+    },
+    {
+     "t": "Spread it across the system — socialization",
+     "meta": "Network upgrades go into {{rate base}} and are recovered from all customers, on the ground that everyone benefits from a stronger grid and a larger tax base",
+     "adv": [
+      "Gets the lines built: a utility can plan a corridor rather than wait for each customer to fund its piece",
+      "Treats transmission as the network good it is — the {{RTEP}} allocates most regional lines this way already",
+      "Keeps the utility's growth story intact, which is what its capital markets are pricing"
+     ],
+     "dis": [
+      "Residential bills rise for load they do not use — the finding that made data centers a legislative issue",
+      "A weak filter: paper megawatts get planned for, and the plant built for them is everyone's problem if they never arrive",
+      "Invites the prudence disallowance years later, when the load did not show"
+     ]
+    }
+   ],
+   "note": "Most large-load tariffs are a hybrid: dedicated facilities on the customer, shared network on the system, and a minimum charge that makes the customer fund its share of the shared plant through time rather than up front."
+  },
+  {
+   "id": "pjm-capacity-and-the-regional-plan",
+   "title": "PJM: the capacity auction, accreditation and the regional plan",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A vertically integrated utility inside an {{RTO}} keeps its wires and its plants, but two of the largest numbers on its customers' bills are set one level up. {{PJM}} — the mid-Atlantic and Midwestern grid operator whose footprint includes Virginia — runs the wholesale energy market, the generation {{interconnection queue}}, the {{capacity market}} and the {{RTEP}}. Dominion Energy Virginia is a member and a transmission owner; it competes in none of PJM's markets as a merchant, but it buys from them and builds inside them.",
+    "The capacity market pays a resource for existing. In the Base Residual Auction PJM buys, three years ahead, enough accredited capacity to meet each zone's forecast peak plus a reserve; the clearing price, in dollars per megawatt-day, is what every load in the zone then pays for that capacity through its utility. For years the region was long and the price was low. Data-center load growth, plant retirements and a slow queue moved it to scarcity, and the price rose to the administrative cap in consecutive auctions — a cost that flows straight into a regulated utility's purchased-power line and from there into a residential bill, which is how a wholesale auction became state politics.",
+    "Accreditation is the number a storage seller must know. {{ELCC}} — effective load carrying capability — is how much of a resource's nameplate PJM counts toward the peak. A gas plant is credited near its nameplate, a solar farm at a fraction, a four-hour battery somewhere in between and declining as more storage joins the system. The consequence is arithmetic: a utility that needs a thousand accredited megawatts from batteries must build more than a thousand nameplate megawatts, and a plan that assumes a generous credit buys less storage than one that assumes a strict one. The plan's accreditation assumptions are, quietly, a sizing decision on the storage market.",
+    "The regional plan is where the big lines come from. PJM's planners identify reliability violations from the {{load forecast}}, open competitive windows, and assign projects — a 500 kV loop, a {{high voltage}} direct-current link, a new 765 kV backbone — to transmission owners and developers, with a {{cost allocation}} rule that decides how much each zone pays. A multi-billion-dollar award to a utility is a decade of construction and a decade of {{rate base}} growth, decided in a planning window rather than in any single customer's request. For a corridor like northern Virginia the award is the answer to the question the load study keeps asking: when will the wires exist?",
+    "Two more PJM facts sit under the data-center story. The generation-queue reforms — batch studies replacing serial ones — decide how fast new supply can arrive to relieve the scarcity price. And the rules on co-located load — whether a data center can sit behind an existing plant's meter and what it then owes the grid — are decided at {{FERC}} on PJM's filings, not by any state commission."
+   ]
+  },
+  {
+   "id": "why-the-clock-is-years",
+   "title": "Why the clock is years: how long each link takes",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "yr (typical, low end of the usual range)",
+   "intro": "Typical durations, not any one utility's. The lesson is the shape: the two steps a seller can see — the study and the docket — are the shortest, and everything the utility must build to serve the load takes longer than the data center that needs it.",
+   "items": [
+    {
+     "label": "Feasibility and system impact study",
+     "sub": "large-load request",
+     "v": 1
+    },
+    {
+     "label": "Rate case",
+     "sub": "filing to order; Virginia's biennial review",
+     "v": 1
+    },
+    {
+     "label": "CPCN docket",
+     "sub": "application to order",
+     "v": 1
+    },
+    {
+     "label": "Battery storage",
+     "sub": "award to energization",
+     "v": 1.5
+    },
+    {
+     "label": "Simple-cycle gas peaker",
+     "sub": "certificate to service",
+     "v": 3
+    },
+    {
+     "label": "Combined-cycle gas plant",
+     "sub": "certificate to service",
+     "v": 4
+    },
+    {
+     "label": "500 kV transmission line",
+     "sub": "planning window to energization",
+     "v": 6
+    },
+    {
+     "label": "Offshore wind farm",
+     "sub": "federal permit to full operation",
+     "v": 8
+    },
+    {
+     "label": "Small modular reactor",
+     "sub": "early site work to first power — the plan's own horizon",
+     "v": 10
+    }
+   ],
+   "note": "The company sections put Dominion's dated milestones — the tariff order and its effective date, the certificate for its gas plant, the offshore-wind schedule, the transmission awards — against several of these rungs."
+  },
+  {
+   "id": "where-dominion-slots-in",
+   "title": "Where Dominion's programs slot into the chain",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Every link of the chain, with the dossier's own dated instance of it. The figures are from Dominion Energy Virginia's filings and investor decks as of September 2026 — read the dossier for sources and the parts that moved.",
+   "cols": [
+    "Link in the chain",
+    "Dominion's instance",
+    "The figures",
+    "What it means for a seller"
+   ],
+   "rows": [
+    [
+     "The bargain — {{rate base}} and the {{allowed return}}",
+     "2025 {{biennial review}} (SCC Case PUR-2025-00058, order November 25, 2025); a 2026–2030 capital plan that is 64 percent {{rider}}-eligible",
+     "Authorized ROE 9.8 percent; base-rate increases cut from $822M and $345M requested to $565.7M and $209.9M; utility rate base $48.2B in 2025 growing 11.9 percent a year; consolidated plan $64.7B — 25 percent transmission, 20 percent distribution, 18 percent new gas, 13 percent solar and storage",
+     "The utility's incentive is to own; the storage it self-builds enters rate base, the storage it contracts does not"
+    ],
+    [
+     "The plan — {{IRP}}",
+     "2025 IRP Update (Case PUR-2025-00184, filed October 15, 2025); the SCC found the 2024 plan legally sufficient on July 15, 2025 and ordered a 20-year horizon",
+     "Demand +6.3 percent a year over the next decade; preferred plan through 2045 adds 17,534 MW solar, 3,460 MW wind, 2,000 MW storage, six {{SMR}}s (1,944 MW) and 8,510 MW gas; an April 2026 statute requires 4.0 GW of storage by 2030",
+     "The plan's 2,000 MW and the law's 4,000 MW disagree — the next comprehensive plan is where the storage ceiling gets set"
+    ],
+    [
+     "The certificate — {{CPCN}}",
+     "Chesterfield Energy Reliability Center (Case PUR-2025-00037): filed March 3, 2025, certified November 25, 2025, suspended, reinstated February 2026, appealed to the Supreme Court of Virginia May 27, 2026",
+     "944 MW, four simple-cycle turbines of up to 250 MW, about $1.5B, operations 2029",
+     "Nine months from filing to certificate, then a year of litigation — the fastest link and the most contested one"
+    ],
+    [
+     "The solicitation — {{RFP}}",
+     "Annual PPA and Acquisition RFPs for solar, wind and storage; the 2026 PPA RFP issues October 1, 2026; a Dispatchable Generation RFP with bids due December 18, 2026",
+     "October 2025 petition: 845 MW solar, 155 MW owned storage, 439 MW of PPAs (~$2.9B); SCC approved 532 MW solar and 80 MW storage for ~$1.5B in April 2026; $2.0B of storage capital 2026–2030",
+     "Two lanes with the volumes attached: the PPA lane is larger and the developer picks the battery; the owned lane runs through the EPC"
+    ],
+    [
+     "The tariff — {{large-load tariff}}",
+     "Rate class GS-5, created in the biennial-review order, effective for new agreements January 1, 2027",
+     "25 MW or more on a contiguous site at 75 percent load factor; {{minimum demand charge}} 85 percent of contracted transmission-and-distribution capacity and 60 percent of generation; 14-year term (four-year ramp plus ten); exit fees equal to remaining minimums; enhanced collateral, up to 60 percent of minimum charges for weaker credits",
+     "A 300 MW campus at one-tenth occupancy is billed for 255 MW of wires demand; the fourteen months to the effective date are where developers decide when to sign"
+    ],
+    [
+     "The study — {{system impact study}} and the ladder",
+     "Substation Engineering Letter of Authorization → Construction Letter of Authorization → Electric Service Agreement; the process filed for SCC review February 2, 2026",
+     "Contracted capacity ~53.8 GW at July 2026 (ESA 12.0 GW, CLOA 9.4 GW, SELOA 32.4 GW); ~70,000 MW of requests, 45,000 MW undated; 11 data centers (744 MW) connected in 2025, 13 expected in 2026; all-time peak 24,678 MW",
+     "Requests exceed the peak three times over; the firm ESA tranche and the annual connection count are the real demand"
+    ],
+    [
+     "The wires — {{RTEP}} and the {{substation}}s",
+     "Loudoun Reliability Loop (500/230 kV); Morrisville–Wishing Star; Line 514; the 765 kV backbone with AEP and FirstEnergy; PJM's February 2026 award of the Heritage–Mosby HVDC link",
+     "Mars–Wishing Star summer 2026; Aspen–Golden and Golden–Mars 2028; Morrisville 2030; Line 514 2031; HVDC ±525 kV, 185 miles underground, 3,000 MW, about $3.8B, June 2032; transmission $13.9B plus a $1.0B joint venture 2026–2030",
+     "The corridor's connection dates are these energization dates; the gap between them and the load is the bridge-power market"
+    ],
+    [
+     "The region — {{PJM}} and the {{capacity market}}",
+     "DOM Zone cleared at the cap two years running; PJM's 2026 forecast cut the zone's growth to 5.4 percent a year",
+     "$329.17/MW-day for 2026/2027; $333.44 for 2027/2028 with a 14.4 percent reserve margin against 20 percent and load up 5,249.9 MW on large loads",
+     "The price the certificate filings cite and the reason the tariff and the July 2026 direct-assignment order exist"
+    ],
+    [
+     "Who pays — {{cost allocation}}",
+     "SCC order of July 31, 2026 in the Rider T-1 case; Virginia's 2026 budget levy",
+     "Defined transmission facilities directly assigned to data centers through mandatory contributions in aid of construction; a $0.011/kWh data-center electricity tax from July 1, 2026, capped at $600M a year",
+     "The {{cross-subsidy}} fight moved from tariff minimums to the wires themselves"
+    ],
+    [
+     "The owner",
+     "Agreed all-stock combination with NextEra Energy (May 15, 2026); SCC hearing November 17, 2026; close expected second half of 2027",
+     "0.8138 NextEra shares plus a pro rata share of $360M cash per Dominion share; NextEra 74.5 percent / Dominion 25.5 percent; $2.25B of bill credits pledged",
+     "The docket calendar stays; the buyer's platform, capital allocation and supplier qualification change"
+    ]
+   ],
+   "note": "The lesson of the table is the column on the right read top to bottom: the utility's own incentives, its plan's ceiling, the certificate's speed and fragility, the solicitation's two lanes, the tariff's arithmetic, the ladder's real tranche, the wires' dates, the auction's price, and the owner — nine things a seller needs to have a view on before pitching a battery into Virginia."
+  },
+  {
+   "id": "gigawatts-on-the-clock",
+   "title": "Gigawatts on the clock — the system, the ladder and the plan",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "GW (company figures; see the dossier for dates and sources)",
+   "intro": "The same utility's numbers on one scale. The first rungs are what exists; the middle rungs are the ladder of intent; the last rungs are what the plan and the law say must be built. Storage — the seller's rung — is the smallest bar on the chart, which is itself the lesson.",
+   "items": [
+    {
+     "label": "Utility-owned storage approved to date",
+     "sub": "pilots plus 80 MW approved April 2026",
+     "v": 0.16
+    },
+    {
+     "label": "Chesterfield Energy Reliability Center",
+     "sub": "simple-cycle gas, 2029",
+     "v": 0.94
+    },
+    {
+     "label": "Storage in the 2025 preferred plan",
+     "sub": "through 2045",
+     "v": 2.0
+    },
+    {
+     "label": "Coastal Virginia Offshore Wind",
+     "sub": "176 turbines, final one year-end 2027",
+     "v": 2.6
+    },
+    {
+     "label": "Storage mandate, April 2026 law",
+     "sub": "short-duration by end-2030",
+     "v": 4.0
+    },
+    {
+     "label": "Gas in the 2025 preferred plan",
+     "sub": "through 2045",
+     "v": 8.51
+    },
+    {
+     "label": "Electric service agreements (firm)",
+     "sub": "July 2026",
+     "v": 12.0
+    },
+    {
+     "label": "Owned generation, Dominion Energy Virginia",
+     "sub": "excludes 1,560 MW of PPAs",
+     "v": 19.1
+    },
+    {
+     "label": "All-time DOM Zone peak",
+     "sub": "January 23, 2025",
+     "v": 24.678
+    },
+    {
+     "label": "Contracted data-center capacity, all stages",
+     "sub": "July 2026",
+     "v": 53.8
+    },
+    {
+     "label": "Pending data-center requests",
+     "sub": "February 2026 SCC filing",
+     "v": 70
+    }
+   ],
+   "note": "Two arithmetic facts the chart makes visible. Requests are nearly three times the peak and the firm tranche is about half the peak — the ladder's shape is the tariff's justification. And the storage the utility itself has been allowed to build is a rounding error beside the mandate: the difference is the market, and most of it will be bought on the PPA lane."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The date moves.** The {{system impact study}} models the grid as it will be, and the grid keeps changing — a neighbouring request, a slipped line, a retirement — so the study re-runs, a batch is re-priced, or an audit pauses the whole queue. The requester funds upgrades it does not control. Owned by the developer and the utility together, and the reason the {{energization}} date, not the lease date, is the supplier's real delivery date.",
+    "**The tariff nobody modelled.** A campus phased for construction rather than for the {{minimum demand charge}} pays for megawatts it has not energized — or contracts small to avoid it and finds each phase at the back of the queue. Owned by the developer's finance desk, and discovered in year one's bill.",
+    "**The certificate that is denied, delayed or conditioned.** A {{CPCN}} is a contested case; a plant can be rejected on need, approved with a cost cap, or approved a year late while the storage bid priced against it expires. Owned by the utility's regulatory team; felt by the vendor whose bid-stage price was locked.",
+    "**The rate case reprices the deal.** A cut to the {{allowed return}}, a disallowance, a new {{rate class}} — a rate order can change the economics of a contract signed two years earlier, and a legislature can change what the commission may do. Owned by nobody who was in the room when the equipment was sold.",
+    "**The capacity price nobody in the state controls.** A {{capacity market}} clearing at its cap raises every customer's bill, turns the data-center cluster into a political liability, and can produce a moratorium or a cost-allocation bill in the next session. Owned by the {{RTO}} and the market; landed on the utility.",
+    "**The wires arrive after the load.** A {{RTEP}} award is a decade of construction; a corridor's transmission can run five years behind its data centers, and the gap is filled with {{behind-the-meter}} bridge power and paused connections. Owned by the transmission owner and the planners — and the origin of a whole competing market for the load's dollars.",
+    "**Sold to the wrong desk.** The utility's storage plan is real and the utility rarely picks the battery: on a solicitation the bidding developer does, and on a self-build the {{EPC}} and the approved-vendor list do. A seller who pitches the utility's engineers after the bids are in has arrived after the decision. Owned by the seller."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is rate base, and why does it explain a utility's preference to own rather than contract?",
+     "a": "The depreciated value of plant the utility built to serve customers, on which the commission lets it earn an allowed return. Owned plant earns that return for decades; a PPA is a pass-through that earns nothing — so, given the choice, the utility fights to own."
+    },
+    {
+     "q": "Write the revenue requirement in one line.",
+     "a": "Operating costs + depreciation + taxes + (rate base × allowed return). A rate case is an argument about this number; the cost-of-service study divides it among the rate classes."
+    },
+    {
+     "q": "IRP, CPCN, RFP — which one is a purchase?",
+     "a": "None. The IRP is a forecast and a preferred plan; the CPCN is permission to build one project and put it in rate base; the RFP is the solicitation that picks the supplier. The purchase order follows the certificate and the award — and on most solicitations the bidding developer, not the utility, chooses the hardware."
+    },
+    {
+     "q": "Why does a large-load tariff exist?",
+     "a": "Stranded cost. Minimum demand, long terms, collateral and exit fees all guard against plant built for a data center that never fully arrives, with the bill landing on everyone else — and together they filter paper megawatts out of the load forecast."
+    },
+    {
+     "q": "What does an 85 percent minimum demand charge do to a 300 MW campus that is one-tenth full?",
+     "a": "It bills 255 MW of wires demand every month regardless of use. Phasing the contract avoids the charge but puts each phase at the back of the queue; signing the full amount holds the queue position at the price of the minimum."
+    },
+    {
+     "q": "Where do a data center's terms of service get written?",
+     "a": "In the rate case — Virginia's biennial review — as a rate class inside the same order that sets everyone else's rates, effective on a stated date that can be more than a year after the order."
+    },
+    {
+     "q": "What is a docket, and why read it instead of the press release?",
+     "a": "The commission's numbered case file: application, testimony, discovery, hearing record, order. The press release says what was asked; the docket records what was granted, conceded and conditioned, with the order date and the effective date."
+    },
+    {
+     "q": "Why does a load's connection date move?",
+     "a": "The system impact study models the grid as it will be on the connection date, and the grid keeps changing — other requests, retirements, slipped lines. Studies re-run, batches re-price, and the requester funds upgrades it does not control."
+    },
+    {
+     "q": "Cost-causation versus socialization — what is each protecting?",
+     "a": "Cost-causation protects the other rate classes from a cross-subsidy and filters the queue; socialization gets network lines built and treats transmission as a shared good. Most tariffs are a hybrid: dedicated facilities on the customer, network upgrades on the system."
+    },
+    {
+     "q": "What does PJM's capacity market pay for, and why did its price become state politics?",
+     "a": "For being available at peak — a payment for existing, set three years ahead in the Base Residual Auction. Data-center load moved the region to scarcity, the price hit its cap, and the cost flowed through regulated utilities into residential bills."
+    },
+    {
+     "q": "What is ELCC, and why does it size the storage market?",
+     "a": "Effective load carrying capability — the share of nameplate a resource is credited toward peak. A four-hour battery is credited below nameplate and the credit falls as more storage joins, so a plan that needs a thousand accredited megawatts must build more than a thousand nameplate megawatts."
+    },
+    {
+     "q": "What is the RTEP, and what does an award to a utility mean?",
+     "a": "PJM's regional transmission plan: reliability needs identified from the load forecast, competitive windows, projects assigned with a cost allocation. An award is a decade of construction and a decade of rate-base growth, decided in a planning window rather than in any customer's request."
+    },
+    {
+     "q": "What is a rider, and why do regulators guard it?",
+     "a": "A separate bill line that recovers one program outside base rates, so a project earns before the next rate case. Guarded because it moves cost onto customers without the full rate-case test — and every large project tends to arrive with one."
+    },
+    {
+     "q": "Where is a supplier's leverage highest in the regulated chain, and where is it lowest?",
+     "a": "Highest between the order on the plan and the solicitation's bid date, before the bidding developer's bill of materials locks; lowest after the certificate, when the buyer is executing an approved plan and the vendor was chosen months earlier."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A utility's integrated resource plan calls for 2,000 MW of storage by 2035. What is that number to a battery seller?",
+     "c": [
+      "A purchase order for 2,000 MW",
+      "The ceiling of the addressable market; the orders are the certificates and the solicitation awards, on a one-to-three-year fuse",
+      "A forecast the commission has already rejected",
+      "A commitment to buy from the utility's existing supplier"
+     ],
+     "a": 1,
+     "why": "Plan megawatts define the market; the purchases are the CPCNs and the RFP awards, and the developer bidding the RFP usually chooses the OEM."
+    },
+    {
+     "q": "A one-billion-dollar substation program financed half with equity at a 9.5 percent allowed return earns the utility roughly how much in year one — and what would a one-billion-dollar PPA earn?",
+     "c": [
+      "$95 million; the same",
+      "$47 million; nothing — a pass-through",
+      "Nothing; $47 million",
+      "$9.5 million; $9.5 million"
+     ],
+     "a": 1,
+     "why": "Return on the equity half of rate base: $500 million × 9.5 percent ≈ $47 million. A PPA is a cost recovered without a return, which is why the utility prefers to own."
+    },
+    {
+     "q": "Under a class with an 85 percent minimum on 300 MW of contracted wires demand, a campus drawing 30 MW is billed for:",
+     "c": [
+      "30 MW",
+      "85 MW",
+      "255 MW",
+      "300 MW"
+     ],
+     "a": 2,
+     "why": "85 percent of 300 MW. The minimum demand charge bills contracted capacity whether used or not — the utility's take-or-pay."
+    },
+    {
+     "q": "A commission's order granting permission to build a gas plant and put it in rate base is a:",
+     "c": [
+      "Rate case order",
+      "CPCN",
+      "RTEP award",
+      "Tariff filing"
+     ],
+     "a": 1,
+     "why": "A certificate of public convenience and necessity: one project proven needed and prudent, and the order that turns a plan into a purchase."
+    },
+    {
+     "q": "The date in a large load's connection study moved by eighteen months. The most likely reason:",
+     "c": [
+      "The utility changed its mind about the customer",
+      "The study models the grid as it will be, and other requests, retirements or a slipped line changed the answer",
+      "The tariff threshold was raised",
+      "PJM lowered the capacity price"
+     ],
+     "a": 1,
+     "why": "Row one of the failure map: the grid keeps changing, studies re-run and batches re-price, and the requester funds upgrades it does not control."
+    },
+    {
+     "q": "Which body sets the capacity price a Virginia data center ultimately pays through its utility?",
+     "c": [
+      "The State Corporation Commission",
+      "The Virginia General Assembly",
+      "PJM, through the Base Residual Auction",
+      "The utility's board"
+     ],
+     "a": 2,
+     "why": "The grid operator's capacity auction clears three years ahead; the price flows through the regulated utility's purchased-power costs into retail bills."
+    },
+    {
+     "q": "A four-hour battery's ELCC falls from 60 percent to 45 percent in a plan revision. The effect on the storage the utility must build for the same accredited need:",
+     "c": [
+      "It falls",
+      "It rises — more nameplate is needed per accredited megawatt",
+      "It is unchanged",
+      "It depends on the allowed return"
+     ],
+     "a": 1,
+     "why": "Accreditation converts nameplate to counted capacity; a lower credit means more nameplate. The plan's ELCC assumptions are a sizing decision on the storage market."
+    },
+    {
+     "q": "Which document tells a seller what a utility was actually granted?",
+     "c": [
+      "The press release",
+      "The investor deck",
+      "The docket's final order",
+      "The plan's executive summary"
+     ],
+     "a": 2,
+     "why": "The docket records what was granted, conceded and conditioned, with the order date and the effective date; everything else records what was asked."
+    },
+    {
+     "q": "A dedicated substation for a single campus is most often paid for by:",
+     "c": [
+      "All residential customers through base rates",
+      "The customer, as a contribution in aid of construction, often refundable if others later use it",
+      "PJM through the regional transmission plan",
+      "FERC"
+     ],
+     "a": 1,
+     "why": "Dedicated facilities follow cost-causation; shared network upgrades are the socialized part, and the argument between them is the cross-subsidy fight."
+    },
+    {
+     "q": "A seller pitches a utility's engineers after the storage solicitation's bids are in. What went wrong?",
+     "c": [
+      "Nothing — the utility always picks the battery",
+      "The hardware was chosen by the bidding developers at bid stage; the utility's engineers are executing an approved plan",
+      "The tariff threshold excluded the seller",
+      "The certificate had not been filed"
+     ],
+     "a": 1,
+     "why": "Two lanes: the developer bidding the RFP locks its bill of materials at bid stage; the self-build lane runs through the EPC and the approved-vendor list. Arriving after the bids is arriving after the decision."
+    }
+   ]
+  }
+ ]
+}

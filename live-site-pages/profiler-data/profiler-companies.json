@@ -7,6 +7,7 @@
     "epc",
     "gc",
     "ipp",
+    "utility",
     "investor",
     "hyperscaler",
     "neocloud",
@@ -393,6 +394,28 @@
       ],
       "srcTotal": 14,
       "srcFirstPct": 57,
+      "kpiNorm": true
+    },
+    {
+      "slug": "dominion-energy",
+      "name": "Dominion Energy",
+      "categories": [
+        "utility"
+      ],
+      "tagline": "Data Center Alley's regulated gatekeeper — ~53.8 GW of data-center capacity contracted at July 2026 (12.0 GW firm) against a 24.7 GW peak, a GS-5 large-load class with 14-year terms and 85%/60% minimums from January 2027, a $64.7B plan that is a quarter transmission, and an agreed all-stock sale to NextEra Energy closing in late 2027.",
+      "hq": "Richmond, VA, USA",
+      "ticker": "NYSE: D",
+      "status": "active",
+      "lastUpdated": "2026-09-03",
+      "domains": [
+        "dominionenergy.com",
+        "coastalvawind.com",
+        "s2.q4cdn.com",
+        "s205.q4cdn.com",
+        "cdn-dominionenergy-prd-001.azureedge.net"
+      ],
+      "srcTotal": 123,
+      "srcFirstPct": 48,
       "kpiNorm": true
     },
     {
