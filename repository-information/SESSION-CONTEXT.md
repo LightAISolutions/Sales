@@ -6,6 +6,50 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-03 07:31 AM EST
+**Repo version:** v04.43r (started at v04.42r — one push commit, `9884c03`, merged to `main` within minutes; plus this context write)
+**Branch:** `claude/phase-a3-dominion-energy-l3celf` — restarted from `origin/main` (`git checkout -B … origin/main`) before this context commit because the workflow had merged and swept it
+**Model:** Fable 5.1 xhigh — the third of the four Phase A anchor sessions, and the program's only page change
+
+**What we worked on — Phase A3 of `PROFILER-COVERAGE-PLAN.md`, Dominion Energy, dossier + study guide + the `utility` category in one commit (v04.43r):**
+
+- **`dominion-energy.profile.json`** — schema v7, profileVersion 1, `utility`, intel-briefing: BLUF summary, seven confidence-tagged key judgments, a dated INDICATORS TO WATCH bullet, collection gap stated. **Eight product lines** with all depth fields (regulated service and the GS-5 class; the SELOA → CLOA → ESA interconnection ladder; the gas program incl. Chesterfield 944 MW / 2029; solar-storage procurement and the annual RFPs; transmission incl. the Loudoun loop and the Heritage–Mosby HVDC award; CVOW; nuclear and the North Anna SMR work; DESC and Contracted Energy), **seven banded spec groups** quoted verbatim, financials FY2024–Q2 2026 vs consensus with `kpi: revenue` on both annual periods, 38 developments, nine relationships (Amazon, Microsoft, Google, Meta, Equinix, STACK, Vantage, Siemens Energy, NextEra Energy Resources), six policy exposures, six decision makers with company-published headshots, **123 sources at 48% first-party**
+- **The headline neither brief anticipated: NextEra Energy agreed to acquire Dominion** (May 15, 2026; 0.8138 NEE shares + pro rata of $360M cash per share; NEE 74.5% / D 25.5%; SCC hearing Nov 17, 2026; close 2H 2027; the Dominion shareholder vote was on the session date). Verified from Dominion's release, NextEra's release, the Q2 10-Q and Reuters before it shaped the BLUF, a judgment, a relationship, a policy exposure and the calendar caveat
+- **`dominion-energy.study.json`** — schema v2, **17 sections**: the utility as gatekeeper; the monopoly bargain (revenue-requirement equation, $47M-on-$1B arithmetic); who decides what (`table`); from plan to plant (`timeline`); IRP / CPCN / RFP (`table`); the rate case and the docket; anatomy of a large-load tariff (`table`); the minimum-demand arithmetic (`callout`); interconnecting a load; who pays for the wires (`proscons`); PJM capacity, ELCC and the RTEP; why the clock is years (`bars`); where Dominion slots in (`table`); gigawatts on the clock (`bars`); `where-it-fails` aligned to §5 row 1; 14 flashcards; 10-item quiz. 145 `{{term}}` spans over 50 registry terms, no local glossary
+- **31 shared concepts** registered (162 → 193): the regulated-procurement vocabulary — `rate base`, `cost of service`, `revenue requirement`, `allowed return`, `rate case`, `docket`, `public utility commission`, `SCC`, `CPCN`, `RFP`, `vertically integrated utility`, `rider`, `prudence review`, `minimum demand charge`, `system impact study`, `cost allocation`, `cross-subsidy`, `capacity market`, `ELCC`, `RTO`, `FERC`, `RTEP`, `load forecast`, `stranded cost`, `dispatchable`, `VCEA`, `SMR`, `substation`, `high voltage`, `coincident peak`, `rate class`
+- **`study-prep/dominion-energy/dominion-energy-lesson-plan.md`** — five modules (the bargain and the equation; the three documents; the rate case, the docket and the tariff with the arithmetic by hand; interconnecting a load and PJM; Dominion against the chain incl. the change of owner) plus a ten-question self-test
+- **The `utility` category** — registry `categories` (after `ipp`), PROFILER-SCHEMA.md (intro list + registry row with the never-`ipp`/`other` rule), `Profiler.html` v01.80w → **v01.81w** (`--ov-utl: #7fcfa0`, `.ov-tag.utility`, `known`, `ovCatLabel` → "Utility", a `Utilities` peer family, `OV_REL_CAT_COLORS`), meta tag, version file, public-safe page changelog section (49/50), README version display
+- **Bookkeeping**: registry entry before DPR + sync; graph 519 → 528 edges (nine touch `dominion-energy`); calendar row `nextReport` 2026-10-30 / `confirmed: false` (no Dominion scheduling release yet; Q3 2025 was Oct 31; merger caveat in `source`); README tree entries + execs count (177 / 48); §8 row A3 → `v1 · v04.43r` / `✓ · v04.43r`; CHANGELOG 96/100. §6 register checks deliberately not re-run (phase-end, after A4)
+- **Verification**: registry `--check`, graph, study checker and a local schema-v7 validator clean; Playwright (localhost, stubbed backend) — the `Utility` chip counts 1 and filters to Dominion, the tag colour renders, nine dossier tabs, nine relationship chips, 17 guide sections with 142 resolving tooltips, zero page errors (only the environment-blocked Google sign-in script in the console); `verify-profiler-roles.py` access matrix and specs audit pass — its two progress-isolation assertions fail identically on an unchanged worktree of `main` (pre-existing stub drift, not this commit)
+
+**Where we left off:**
+
+- **A1, A2 and A3 are done on `main`.** Next: **A4 Vicor**, the last anchor, on Fable 5.1 xhigh as `profiler Vicor` + `profiler prep Vicor` in one commit — data-only (no page change) — and, because it ends Phase A, **re-run and date the §6 register checks** in `CLASSROOM-CURRICULUM-PLAN.md` in the same session (G2, G3, G5, G9 should move; the plan defers the rest to Phase D)
+- **Sequencing during agent waits worked a third time**: the 31 concepts, 15 of 17 guide sections, four of five lesson-plan modules, the Playwright harness, the README and ledger edits were all built while the two agents ran (20 and 19 minutes); post-report work was assembly, validation and the commit cycle (~25 minutes). For Vicor the company-independent half is the in-rack conversion chain — I²R and why voltage climbs, the 48 V bus and the 60 V line, factorized power (regulation separated from transformation), current multiplication and the sine-amplitude converter idea, the last centimetre at ~1 V, vertical/lateral power delivery, 800 VDC → 48 V → point-of-load, the BBU shelf on the DC bus, hold-up and ORing — which can be drafted before a single Vicor fact arrives
+- **Environment notes for A4**: `pip install playwright` is needed each container (Chromium is pre-installed; do not run `playwright install`); the local `origin/main` ref was stale at session start — `git fetch origin main` before the rebase check; Dominion's IR list pages are JS-rendered (search located the decks) — expect Vicor's IR site (investors.vicorpower.com) to be reachable and SEC EDGAR always; the stop hook fires on any uncommitted tree, so a single-commit session must ignore its first prompt while agents run
+- **The xhigh test, third data point**: visible on A3 in the merger's verification before use, the 53.8 GW headline kept apart from the 12.0 GW firm ESA tranche everywhere, the IRP-vs-statute storage contradiction taught rather than smoothed, the guide's design (equation before documents, the tariff read as a list of the ways commissions have been burned, Dominion's numbers arriving only after the chain), and source discipline (an unread Federal Register notice dropped, seven candidate relationships declined for want of a source). Research yield and schema compliance again indistinguishable from High
+- CHANGELOG at **96/100**; archive rotation fires above 100 — roughly four pushes out, inside Phase B. The earnings desk Routine and the weekly C2 pipeline remain live and unreviewed; sessions D and E of `IMPROVEMENT-PLAN.md` not started
+
+**Key decisions and positions taken:**
+
+- **A pending acquisition of the subject goes in the BLUF's second clause, one key judgment ("changes the buyer more than the docket"), a `relationships[]` entry typed `other` to the covered subsidiary (`nextera-energy-resources`) with the parent named in `context`, a `policyExposure[]` regime for the approvals, and the calendar row's `source` caveat** — never only in developments
+- **A utility's data-center pipeline is carried as prose per period, not as a `mw-contracted` KPI** — the ladder mixes firm ESAs with engineering-stage requests, so the physical-KPI overlay would fake comparability with a colocation operator's contracted MW
+- **A regulated buyer's sources are the regulator's**: SCC releases and fact sheets, PJM's own reports and the 10-K/10-Q outrank trade press; secondary summaries of an order are cited only with an explicit "not verified against the order text" flag
+- **The `utility` compare peer family is its own family** (a category named in no family never widens a hardware or colocation comparison), and the chip label capitalizes like the other named categories
+- **A test failure that reproduces on an unchanged worktree of `main` is reported, not fixed in the same commit** (Chesterton's fence — `verify-profiler-roles.py`'s progress stub is a separate task)
+- **A data-only change lists the Profiler page as an indirect affect; a page change lists it with the new version** — this session was the latter (v01.81w)
+
+**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · Profiler `v01.81w` / `v01.34g` · Classroom `v01.07w` / `v01.16g` · 92 dossiers · 65 study guides · concepts registry 193 · graph 528 edges · calendar 53 rows · CHANGELOG 96/100 · no active reminders · TODO empty
+
+**Recommendation for next session:**
+
+- **Run Phase A4 — Vicor — on Fable 5.1 xhigh** as a fresh session: `profiler Vicor` then `profiler prep Vicor`, one push commit, data-only, per `PROFILER-COVERAGE-PLAN.md` §3 and §7 — then, because A4 ends Phase A, re-run and date the §6 register checks in `CLASSROOM-CURRICULUM-PLAN.md` in the same session. It closes the DC-DC-silicon half of G9 that `inside-the-rack` and `the-800-vdc-shift` had to state the thinness of in their own text, and it is the first anchor where the guide has to teach power conversion at the board level from a high-school-STEM baseline.
+**To continue:** type `run Phase A4 of PROFILER-COVERAGE-PLAN.md — Vicor — on Fable 5.1 xhigh`
+
+## Previous Sessions
+
+### 2026-09-03 — Phase A2 Piller Power Systems: dossier + study guide on Fable 5.1 xhigh (v04.42r)
+
 **Date:** 2026-09-03 04:33 AM EST
 **Repo version:** v04.42r (started at v04.41r — one push commit, `861a85b`, merged to `main` within minutes; plus this context write)
 **Branch:** `claude/phase-a2-profiler-coverage-62yjq1` — restarted from `origin/main` (`git checkout -B … origin/main`) before this context commit because the workflow had merged and swept it
@@ -42,45 +86,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 - **Run Phase A3 — Dominion Energy — on Fable 5.1 xhigh** as a fresh session: `profiler Dominion Energy` then `profiler prep Dominion Energy`, one push commit, per `PROFILER-COVERAGE-PLAN.md` §3 and §7, **adding the `utility` category** (registry, schema, `Profiler.html` with a page bump) in the same commit. It closes the utility half of G5 that the guidance modules mention 30 times and no public source teaches, and it is the first public-company anchor, so the calendar row is a researched `nextReport` (Q3 2026 results, early November) rather than a cadence.
 **To continue:** type `run Phase A3 of PROFILER-COVERAGE-PLAN.md — Dominion Energy — on Fable 5.1 xhigh`
-
-## Previous Sessions
-
-### 2026-09-03 — Phase A1 Caterpillar: dossier + study guide on Fable 5.1 xhigh (v04.41r)
-
-**Date:** 2026-09-03 03:40 AM EST
-**Repo version:** v04.41r (started at v04.40r — one push commit, `a39b4dd`, plus this context write)
-**Branch:** `claude/caterpillar-phase-a1-profiler-gztswc` — the push merged to `main` within minutes and the workflow swept the branch; it was restarted from `origin/main` (`git checkout -B … origin/main`) before this context commit
-**Model:** Fable 5.1 xhigh — the first of the four Phase A anchor sessions, and the developer's stated test of whether xhigh earns its cost over High on a dossier + study-guide pair
-
-**What we worked on — Phase A1 of `PROFILER-COVERAGE-PLAN.md`, Caterpillar, dossier + study guide in one commit (v04.41r):**
-
-- **`caterpillar.profile.json`** — schema v7, profileVersion 1, `supplier`, intel-briefing: BLUF summary, five confidence-tagged key judgments plus a dated INDICATORS TO WATCH bullet and a stated collection gap. Six product lines with all depth fields (C175/3516E/D1500 standby diesel; G3520 Fast Response, G3500K/H, CG260 and the 10 MW medium-speed restart for prime and bridge; Solar Turbines Titan 130/250/350, PGM 130, SMT130; Cat ESS and microgrid controls; ATC/EMCP/EGP switchgear; services and channel), seven banded spec groups quoted verbatim, FY2024–Q2 2026 vs consensus with the Power Generation line per period (+22% / +38% / +41% / +29%) and backlog $30B → $72.1B, 24 developments, nine curated relationships, three policy exposures, five decision makers, **127 sources at 46% first-party**
-- **`caterpillar.study.json`** — schema v2, **16 sections, the first guide in the corpus to use the rich section kinds** (tables, proscons, callout, bars, flashcards, quiz): the concept chain from the grid dropping to the load being back, the gen-set-vs-bridge-plant boundary, a product-mapping table and a megawatts-per-machine ladder, a `where-it-fails` callout aligned to `CLASSROOM-CURRICULUM-PLAN.md` §5 rows 4 and 5, 12 flashcards, a 9-item quiz. 114 `{{term}}` spans over 43 registry terms, no local glossary
-- **26 shared concepts** registered in `profiler-concepts.json` (112 → 138) per the developer's instruction, checked against terms and aliases, and written consistently with the five that Classroom's `bridge-power` lesson also defines locally
-- **`study-prep/caterpillar/caterpillar-lesson-plan.md`** — five modules with a worked fleet-sizing example and the industry map
-- **Bookkeeping**: registry entry + sync, graph rebuild (490 → 506 edges), calendar row (`nextReport` 2026-10-29, `confirmed: false` — no advisory yet; trackers split Oct 28 / Oct 29 / Nov 4), README tree entries, §8 row A1 flipped to `v1 · v04.41r` / `✓ · v04.41r`. §6 register checks deliberately not re-run (phase-end)
-- **Verification**: all three checkers clean; Playwright on localhost with a stubbed backend rendered nine dossier tabs and the full Study Guide with zero page errors (the harness ignores the aborted Google sign-in script, as the roles verifier does)
-
-**Where we left off:**
-
-- **A1 is done on `main`.** Next in the plan: **A2 Piller Power Systems → A3 Dominion Energy → A4 Vicor**, each on Fable 5.1 xhigh as `profiler <Company>` + `profiler prep <Company>` in one commit. A3 carries the only page change of the program (the `utility` category in the registry, `PROFILER-SCHEMA.md` and `Profiler.html`)
-- **The xhigh test has an answer but no control.** Where the extra reasoning visibly showed: mid-draft self-correction (an overstated gas-vs-diesel CO₂ claim reduced to roughly a quarter; the EPA 100-hour allowance stated only after verification), source discipline against the prompt's own "likely" list (Kiewit, VoltaGrid, Vantage, Eaton omitted — no source states a link), the guide's design (three nested clocks, one-engine-three-numbers, the products table keyed to moments in the event, the ladder), and analytical traps surfaced rather than smoothed (Rail-inclusive vs ex-Rail segment basis, the earnings-date disagreement). What it did not buy: research yield or schema compliance. A real comparison needs a High-effort guide — the first Phase B pair is the natural control
-- **First-party sites block direct fetches from this environment** (cat.com, caterpillar.com, solarturbines.com returned 403/timeouts); Agent 1 worked around it through Caterpillar's catalog and CDN hosts, IR store, SEC filings and archived captures, and ran 38 minutes against a 12–18 minute budget. Expect the same on Piller
-- CHANGELOG at **94/100**; archive rotation fires above 100 — roughly six pushes out, inside Phase B. The earnings desk Routine and the weekly C2 pipeline remain live and unreviewed; sessions D and E of `IMPROVEMENT-PLAN.md` not started
-
-**Key decisions and positions taken:**
-
-- **Thinner beats fabricated, applied literally.** Four relationships the prompt named as likely were left out because no source states them; fuel-consumption tables, an MW-delivered figure, LinkedIn URLs and a company-confirmed Q3 date were all omitted and said so in the CHANGELOG. Microsoft and Meta are typed `customer` as end users procured through developers, with the note saying so
-- **A data-only change still lists the Profiler page as an indirect affect** (per `profiler-app.md`) — it went in AFFECTED URLS at its current version with no bump
-- **New shared concepts go to the registry, not the guide's glossary**, and the registry definitions were written to agree with Classroom's lesson-local definitions where they overlap, so `{{term}}` resolves identically on both surfaces
-- **The calendar date is chosen by cadence when trackers disagree** (Oct 29 matches Q3 2025), marked unconfirmed, with the disagreement written into `source` for the desk's confirm step
-- **Sequencing during agent waits** — every company-independent artefact (concepts, technology sections, lesson-plan modules 1–4, the Playwright script, README and ledger edits) was built while the research agents ran, so the post-report work collapsed to assembly and checks. Worth repeating on A2–A4
-
-**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · Profiler `v01.80w` / `v01.34g` (no page or GAS version moved) · Classroom `v01.07w` / `v01.16g` · 90 dossiers · 63 study guides · concepts registry 138 · graph 506 edges · CHANGELOG 94/100 · no active reminders · TODO empty
-
-**Recommendation for next session:**
-
-- **Run Phase A2 — Piller Power Systems — on Fable 5.1 xhigh** as a fresh session: `profiler Piller` then `profiler prep Piller`, one push commit, per `PROFILER-COVERAGE-PLAN.md` §3 and §7. It closes the rotary/flywheel half of G3 that no guide in the corpus carries, and it is the most design-sensitive guide of the remaining anchors — the one where xhigh's guide-side advantage should show most clearly.
-**To continue:** type `run Phase A2 of PROFILER-COVERAGE-PLAN.md — Piller — on Fable 5.1 xhigh`
 
 Developed by: LightAISolutions
