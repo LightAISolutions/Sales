@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-03 03:38:59 PM EST` · Repo version: `v04.45r`
+Last updated: `2026-09-03 07:33:43 PM EST` · Repo version: `v04.46r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -82,6 +82,8 @@ Last updated: `2026-09-03 03:38:59 PM EST` · Repo version: `v04.45r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/profiler-projects.json">profiler-projects.json</a> — Named-projects registry (Stargate, Colossus, Homer City as first-class entities that relationship `project` pins reference)
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/abb.profile.json">abb.profile.json</a>       — ABB dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/abb.study.json">abb.study.json</a> — ABB in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/aep.profile.json">aep.profile.json</a> — American Electric Power dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/aep.study.json">aep.study.json</a> — American Electric Power in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/aligned.profile.json">aligned.profile.json</a> — Aligned Data Centers dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/aligned.study.json">aligned.study.json</a> — Aligned Data Centers in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/amazon.profile.json">amazon.profile.json</a>    — Amazon dossier profile
@@ -184,6 +186,8 @@ Last updated: `2026-09-03 03:38:59 PM EST` · Repo version: `v04.45r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nvidia.profile.json">nvidia.profile.json</a>    — NVIDIA dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/nvidia.study.json">nvidia.study.json</a> — NVIDIA in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/on-energy.profile.json">on-energy.profile.json</a> — ON.energy dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/oncor.profile.json">oncor.profile.json</a> — Oncor Electric Delivery dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/oncor.study.json">oncor.study.json</a> — Oncor Electric Delivery in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/openai.profile.json">openai.profile.json</a>    — OpenAI dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/openai.study.json">openai.study.json</a> — OpenAI in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/oracle.profile.json">oracle.profile.json</a>    — Oracle dossier profile
@@ -241,6 +245,8 @@ Last updated: `2026-09-03 03:38:59 PM EST` · Repo version: `v04.45r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/wartsila.study.json">wartsila.study.json</a>     — Wärtsilä in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/xai.profile.json">xai.profile.json</a>       — xAI dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/xai.study.json">xai.study.json</a> — xAI in-app technology study guide
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/xcel-energy.profile.json">xcel-energy.profile.json</a> — Xcel Energy dossier profile
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/xcel-energy.study.json">xcel-energy.study.json</a> — Xcel Energy in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/zhonhen.profile.json">zhonhen.profile.json</a>   — Zhonhen Electric dossier profile
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/profiler-data/zhonhen.study.json">zhonhen.study.json</a>     — Zhonhen Electric in-app technology study guide
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/profiler-data/reports">reports/</a>                — Industry reports generated by the Profiler Report Command (immutable snapshot JSONs; schema: repository-information/PROFILER-SCHEMA.md)
@@ -504,7 +510,7 @@ Last updated: `2026-09-03 03:38:59 PM EST` · Repo version: `v04.45r`
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog.md">Classroomgs.changelog.md</a>               — [template] Classroom GAS changelog
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/gs-changelogs/Classroomgs.changelog-archive.md">Classroomgs.changelog-archive.md</a>       — [template] Older sections (rotated)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images">images/</a>                  — Test images and visual assets
-│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (211 images across 51 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
+│   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/images/execs">execs/</a>               — Executive headshots for Profiler dossiers — company-published photos (leadership pages and PDF annual/ESG reports) plus verified free-licensed Wikimedia Commons portraits (249 images across 54 companies; CC-licensed files carry a photoCredit attribution shown in-app and in exports)
 │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/live-site-pages/sounds">sounds/</a>                 — [template] Audio feedback files
 │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Website_Ready_Voice_1.mp3">Website_Ready_Voice_1.mp3</a>   — [template] "Website Ready" splash sound
 │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/live-site-pages/sounds/Code_Ready_Voice_1.mp3">Code_Ready_Voice_1.mp3</a>      — [template] "Code Ready" splash sound
@@ -685,6 +691,8 @@ Last updated: `2026-09-03 03:38:59 PM EST` · Repo version: `v04.45r`
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/sources/eo14420-bulk-power-system-2026-08.txt">eo14420-bulk-power-system-2026-08.txt</a> — Extracted order text (what the analysis was written against)
 │   │       └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/industry-guidance/sources/nvidia-800vdc-white-paper-2026-08.pdf">nvidia-800vdc-white-paper-2026-08.pdf</a> — NVIDIA, 800 VDC Architecture: Industry Alignment &amp; Execution (36 pp, image-only PDF)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep">study-prep/</a>           — Technology lesson plans from the Profiler Prep Command (not deployed)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/aep">aep/</a> — American Electric Power technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/aep/aep-lesson-plan.md">aep-lesson-plan.md</a> — Full-depth lesson plan: one holding company in three RTOs, why eight approved large-load tariffs are one argument in eight dialects, what a tariff does to an interconnection queue, contracted against pipeline, three ways to buy capacity, why the highest transmission voltage is a strategy, and allocating one backbone across four planning processes
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/byd">byd/</a> — BYD technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/byd/byd-lesson-plan.md">byd-lesson-plan.md</a> — Full-depth 5-module lesson plan
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/caterpillar">caterpillar/</a> — Caterpillar technology curriculum
@@ -717,6 +725,8 @@ Last updated: `2026-09-03 03:38:59 PM EST` · Repo version: `v04.45r`
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-LESSON-PLAN.pdf">MEGMEET-LESSON-PLAN.pdf</a> — The lesson plan typeset for print/download, BloombergNEF Research Report style (5 pages)
 │   │   │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/megmeet-interview-brief.md">megmeet-interview-brief.md</a> — Sales-role interview layer: NA go-to-market, objection handling, questions to ask, self-test
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/megmeet/MEGMEET-INTERVIEW-BRIEF.pdf">MEGMEET-INTERVIEW-BRIEF.pdf</a> — The interview brief typeset for print/download, BloombergNEF Research Report style (13 pages)
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/oncor">oncor/</a> — Oncor Electric Delivery technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/oncor/oncor-lesson-plan.md">oncor-lesson-plan.md</a> — Full-depth lesson plan: the wires-only utility and what is left when a state takes the utility apart, the energy-only market where nobody is obliged to serve, connecting a gigawatt under the 2025 statute, requests against approvals against metered load, the wires rate case with no fuel line, and who builds the generation when the utility may not
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/piller">piller/</a> — Piller Power Systems technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/piller/piller-lesson-plan.md">piller-lesson-plan.md</a> — Full-depth lesson plan: who owns the seconds, battery versus flywheel, static versus rotary versus diesel-rotary UPS, the isolated-parallel ring, the UPS room as the island's stabilizer
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/sinexcel">sinexcel/</a> — Sinexcel technology curriculum
@@ -731,6 +741,8 @@ Last updated: `2026-09-03 03:38:59 PM EST` · Repo version: `v04.45r`
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/vicor/vicor-lesson-plan.md">vicor-lesson-plan.md</a> — Full-depth lesson plan: the in-rack conversion chain from the 800-volt bus to the one-volt die, factorized power and current multiplication, the last centimetre, and the battery shelf on the DC bus
 │   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/wartsila">wartsila/</a> — Wärtsilä technology curriculum
 │   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/wartsila/wartsila-lesson-plan.md">wartsila-lesson-plan.md</a> — Full-depth 5-module lesson plan
+│   │   ├── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/xcel-energy">xcel-energy/</a> — Xcel Energy technology curriculum
+│   │   │   └── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/xcel-energy/xcel-energy-lesson-plan.md">xcel-energy-lesson-plan.md</a> — Full-depth lesson plan: four operating utilities in eight states, what a resource plan decides and what it leaves open, the two solicitations running at once, the same large-load tariff in three drafts and the two knobs that set its strictness, a customer paying for its own supply and the hundred-hour battery inside it, and wildfire as a financing input in a state with no liability cap
 │   │   └── <a href="https://github.com/LightAISolutions/Sales/tree/main/repository-information/study-prep/zhonhen">zhonhen/</a> — Zhonhen Electric interview preparation
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/zhonhen-deck-summary.md">zhonhen-deck-summary.md</a> — Absorption summary of the company-provided AIDC introduction deck (confidential source; summary for personal prep only)
 │   │       ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/study-prep/zhonhen/ZHONHEN-DECK-SUMMARY.pdf">ZHONHEN-DECK-SUMMARY.pdf</a> — The deck summary typeset for print/download (4 pages)

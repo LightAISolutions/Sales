@@ -158,9 +158,9 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 | A4 | `vicor` | Vicor | supplier | Fable 5.1 xhigh | G9 | v1 · v04.44r | ✓ · v04.44r |
 | B1 | `southern-company` | Southern Company (Georgia Power) | utility | Fable 5.1 High | G5 | v1 · v04.45r | ✓ · v04.45r |
 | B1 | `entergy` | Entergy | utility | Fable 5.1 High | G5 | v1 · v04.45r | ✓ · v04.45r |
-| B2 | `oncor` | Oncor | utility | Fable 5.1 High | G5 | — | — |
-| B2 | `aep` | AEP | utility | Fable 5.1 High | G5 | — | — |
-| B2 | `xcel-energy` | Xcel Energy | utility | Fable 5.1 High | G5 | — | — |
+| B2 | `oncor` | Oncor | utility | Fable 5.1 High → **Opus 5 xhigh** (weekly Fable cap bound mid-session; §2 substitution) | G5 | v1 · v04.46r | ✓ · v04.46r |
+| B2 | `aep` | AEP | utility | Fable 5.1 High → **Opus 5 xhigh** (weekly Fable cap bound mid-session; §2 substitution) | G5 | v1 · v04.46r | ✓ · v04.46r |
+| B2 | `xcel-energy` | Xcel Energy | utility | Fable 5.1 High → **Opus 5 xhigh** (weekly Fable cap bound mid-session; §2 substitution) | G5 | v1 · v04.46r | ✓ · v04.46r |
 | B3 | `aypa-power` | Aypa Power | developer · ipp | Fable 5.1 High | buyer side | — | — |
 | B3 | `spearmint-energy` | Spearmint Energy | developer · ipp | Fable 5.1 High | buyer side | — | — |
 | B3 | `intersect-power` | Intersect Power | developer · ipp | Fable 5.1 High | buyer side | — | — |

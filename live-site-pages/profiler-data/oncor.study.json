@@ -1,0 +1,626 @@
+{
+ "schemaVersion": 2,
+ "slug": "oncor",
+ "title": "Oncor — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "the-wires-only-utility",
+   "title": "The wires-only utility: what a company that owns no generation is for",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The three utility guides before this one — Dominion, Southern, Entergy — all describe a {{vertically integrated utility}}: one company owns the plants, the wires and the customer relationship, and a commission decides what it may build and charge. Texas took that company apart in 1999. Inside {{ERCOT}}, generation was sold to merchants who compete in a wholesale market, the retail relationship went to competitive {{retail choice}} providers that buy energy and resell it, and what was left — the poles, lines, substations and meters — became a regulated {{TDU}}: a transmission and distribution utility that delivers electricity for everyone and generates none of it. Oncor is the largest of them. It serves the Dallas–Fort Worth region and a band of Texas from the Panhandle plains to the Permian Basin, and its whole business is moving power that other companies made to customers that other companies bill.",
+    "That changes what the {{revenue requirement}} equation is solved on. The Dominion guide wrote it as costs plus depreciation plus taxes plus {{rate base}} times the {{allowed return}}; for a wires utility the rate base is wires alone — no combined-cycle plants, no nuclear, no fuel. Growth in earnings comes only from building more transmission and distribution and putting it into rate base, which is why a wires company welcomes load the way a merchant generator welcomes scarcity: every gigawatt that connects needs a substation, and every substation is rate base. It also means the two largest arguments in the other three guides — is the plant needed, and who pays for it — happen somewhere else. Nobody certifies Oncor's supply, because Oncor has none.",
+    "The seller's first consequence is that the regulated chain the corpus has taught has been cut in half and reordered. There is no {{IRP}} for generation, no {{CPCN}} for a plant, no all-source {{RFP}}, no utility-owned battery lane. There is a {{CCN}} for transmission lines, a transmission-and-distribution {{rate case}} in which the wires' cost of service is set, interim mechanisms that recover new wires within months, and a {{large-load interconnection}} process that decides when a campus can be energized. Everything about generation — who builds it, whether it is worth building, what a megawatt is worth — is decided by the market and by whoever the developer signs with, and the commission's role in it is the exception, not the rule.",
+    "The guide runs in this order: who decides what in Texas; the {{energy-only market}} above the wires and what it means for a load that wants a gigawatt; the connection sequence itself, from the request to the energized substation; the 2025 law that rewrote that sequence, clause by clause; the queue in the three numbers that must be kept apart; the wires rate case and the mechanisms around it; who pays for the substation and the lines; the 765 kV decision and who builds it; who builds the generation and where storage enters when the utility never buys one; the sourced megawatts on a clock; and the failure section, the flashcards and the self-test."
+   ]
+  },
+  {
+   "id": "who-decides-in-texas",
+   "title": "Who decides in Texas: the commission, the grid operator, the legislature, and the companies that own no wires",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Five decision-makers, none of which is the utility that generates the power, because inside ERCOT no such utility exists. The instrument column is what each one signs; the last column is what none of them decides.",
+   "cols": [
+    "Who",
+    "How it is chosen",
+    "What it decides about a large load",
+    "The instrument",
+    "What it does not decide"
+   ],
+   "rows": [
+    [
+     "Public Utility Commission of Texas ({{public utility commission}})",
+     "Three commissioners appointed by the governor, expanded to five in 2021",
+     "The wires utility's rates and its {{CCN}} for lines; the rules for {{large-load interconnection}} the 2025 statute told it to write; approval of {{private use network}} arrangements behind existing plants",
+     "Rate orders, CCN orders, rulemakings in numbered projects",
+     "Whether any plant is built — it certifies no generation in ERCOT"
+    ],
+    [
+     "{{ERCOT}} — the grid operator",
+     "A non-profit corporation overseen by the commission; its board is appointed, not elected, since 2021",
+     "Reviews every large-load request against the wider system, keeps the queue, plans the regional transmission network, runs the {{energy-only market}} and orders {{firm load shed}} in an emergency",
+     "Planning Guide procedures, the regional transmission plan, operating instructions",
+     "Retail rates, the wires utility's cost of service, whether a customer is creditworthy"
+    ],
+    [
+     "The Texas Legislature",
+     "Elected; meets in regular session for 140 days every two years",
+     "Wrote {{SB 6}} in 2025 — the fee, the security, the disclosure and the curtailment terms for loads of 75 MW and up — and funds the Texas Energy Fund that lends to new gas plants",
+     "Statute; the commission and ERCOT implement it",
+     "Individual requests — it sets the terms, never the queue position"
+    ],
+    [
+     "The wires utility ({{TDU}}) — Oncor, CenterPoint, AEP Texas, TNMP",
+     "A regulated monopoly in its territory, owned by shareholders (Oncor by Sempra and a Texas investor group)",
+     "Runs the studies, designs and builds the substation and the lines, signs the interconnection agreement, and earns a return on the wires it puts into {{rate base}}",
+     "The interconnection agreement and its own tariff; a {{rate case}} sets what it may charge",
+     "Which generator serves the load, what energy costs, whether the load's business case works"
+    ],
+    [
+     "Retail electric providers and merchant generators",
+     "Competitive companies; no franchise, no rate base",
+     "The retail provider sells the campus its energy and passes through the wires charge; the generator decides, on expected market prices and on contracts, whether to build the plant that serves it",
+     "Retail contracts, {{PPA}}s, hedges",
+     "Anything about the wires — they pay the {{postage-stamp rate}} like everyone else"
+    ]
+   ]
+  },
+  {
+   "id": "the-energy-only-market",
+   "title": "The energy-only market: what it means that nobody is obliged to serve the load",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The Dominion guide's {{PJM}} section described a {{capacity market}} that pays a plant to exist, three years ahead, so that the region's {{planning reserve margin}} is bought before it is needed. The Southern guide described the other extreme: no market, a utility that certifies its own reserve margin in an {{IRP}} docket. ERCOT is a third design. It is an {{energy-only market}}: a generator is paid only for the megawatt-hours it sells, and the money that persuades anyone to build a new plant is the price during the hours when supply is scarce — administered upward through the operating reserve demand curve, capped at a system-wide offer cap. Nobody buys capacity ahead of time, no commission finds a plant needed, and the {{planning reserve margin}} is a forecast ERCOT publishes, not an obligation anyone holds.",
+    "For a data center that wants a gigawatt this is the central fact. In Virginia or Georgia the utility that connects the load is also obliged to serve it, and the plant that serves it is certified against that obligation. In ERCOT the wires utility connects the load and is obliged to deliver whatever energy the customer's retail provider buys; whether a plant exists to sell that energy is a question the market answers with a price. A campus that connects into a scarce region raises the scarcity price for everyone, which is the signal that is supposed to bring the next plant — and which, in a market where new gas plants take four years and every other data center is arriving on the same clock, has led the state to intervene twice: a public loan fund for new {{dispatchable}} gas plants, and a statute that treats the largest loads as resources the operator may call on.",
+    "Three things follow that a seller must hold at once. First, the buyer of generation is never the wires utility: it is a merchant developer, an independent power producer, or the campus itself building behind the meter — the counterparties this corpus files under developer, IPP and hyperscaler. Second, the value of a megawatt of storage is a market price, not a docket finding — batteries in ERCOT earn on energy arbitrage and ancillary services, which is why the state has more grid batteries than any but California and why they were financed without a single certificate. Third, a load with its own generation is a {{private use network}}, and what it owes the grid it leans on is the Texas form of the co-location argument the Dominion guide left with FERC: here it is the commission's and ERCOT's to decide, and the 2025 statute told them to.",
+    "The counterweight is reliability. An energy-only market runs closer to its margin by design, and ERCOT's answer for the largest loads is to make them part of the reserve: a customer with backup generation can be told to run it, and a customer without it can be told to curtail, before the operator sheds homes. That is the mechanism the next two sections walk through, and it is the reason a Texas data center's electrical design — how much on-site generation, how much storage, how fast it can shed — is a regulatory question as much as an engineering one."
+   ]
+  },
+  {
+   "id": "connecting-a-gigawatt",
+   "title": "Connecting a gigawatt: the sequence from request to energized substation",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "A representative sequence, in years from the first request, for a large load in ERCOT after the 2025 rules. The requester and the wires utility act in gold, the grid operator and the commission in blue, the build in red. There is no plant to certify anywhere on this line — every arrow is about wires, studies and permission to draw.",
+   "lanes": {
+    "gen": "Requester and wires utility",
+    "deploy": "Grid operator and commission",
+    "eco": "Build and energize"
+   },
+   "items": [
+    {
+     "x": 0.0,
+     "lane": "gen",
+     "label": "Request to the {{TDU}}",
+     "sub": "Site, megawatts, in-service date, proof of site control and the statutory study fee; since 2025 also a disclosure of whether the same load has asked another utility in ERCOT for service."
+    },
+    {
+     "x": 0.3,
+     "lane": "gen",
+     "label": "Screening and {{system impact study}}",
+     "sub": "The wires utility models what the load does to its own network — which lines and transformers overload, what substation and feed it needs — and prices the facilities."
+    },
+    {
+     "x": 0.8,
+     "lane": "deploy",
+     "label": "ERCOT review",
+     "sub": "Requests above the threshold are submitted to the grid operator, which studies them against the wider transmission system under its Planning Guide and, since 2025, in batches; the operator's approval to energize is the gate the campus cannot pass without."
+    },
+    {
+     "x": 1.0,
+     "lane": "gen",
+     "label": "Interconnection agreement and {{credit support}}",
+     "sub": "The customer signs for the facilities, posts the security the rules require and accepts the {{curtailment}} terms; this is the point at which a request becomes a signed agreement in the utility's count."
+    },
+    {
+     "x": 1.4,
+     "lane": "deploy",
+     "label": "{{CCN}} for new lines, if needed",
+     "sub": "A new 345 kV or 765 kV line to reach the corridor needs its own certificate from the commission — route, need and cost, with landowners as parties. A substation on existing lines needs none."
+    },
+    {
+     "x": 1.6,
+     "lane": "eco",
+     "label": "Substation and feed construction",
+     "sub": "Transformers ordered against the manufacturers' backlog, the switchyard built, the customer's own facilities behind the point of delivery built in parallel."
+    },
+    {
+     "x": 2.5,
+     "lane": "deploy",
+     "label": "Energization approval",
+     "sub": "The operator confirms the system can carry the load on the day; a phased ramp follows, hall by hall, against whatever transmission the corridor has by then."
+    },
+    {
+     "x": 2.8,
+     "lane": "eco",
+     "label": "{{Energization}} and the {{ramp period}}",
+     "sub": "The meter turns on; the wires enter {{rate base}} and are recovered through the interim mechanisms within months; the campus's retail contract and any {{PPA}} start to run."
+    },
+    {
+     "x": 4.0,
+     "lane": "eco",
+     "label": "Regional lines arrive",
+     "sub": "The 345 kV and 765 kV projects in the operator's regional plan, planned for the corridor rather than for any one customer, energize on their own clock — often after the loads they were planned for."
+    }
+   ]
+  },
+  {
+   "id": "sb-6-clause-by-clause",
+   "title": "SB 6, clause by clause: what a state does when the queue outgrows the grid",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Texas rewrote the terms of connection in 2025 and the commission was still writing the implementing rule a year later. Read the statute and the proposed rule as one instrument: the statute sets the powers, the rule sets the prices. Every clause here answers a failure the queue had already produced — speculative requests, duplicate requests at several utilities, and a grid operator that could not see what it would be asked to serve.",
+   "cols": [
+    "The clause",
+    "What it does",
+    "The number, where one is stated",
+    "What failure it answers"
+   ],
+   "rows": [
+    [
+     "The threshold",
+     "Defines the customer class the whole regime applies to — a {{large-load interconnection}} request at or above the threshold enters the statutory process",
+     "75 MW, with the commission able to set a lower one",
+     "Below the threshold a campus was an ordinary commercial customer; above it, a request the size of a city with no terms attached"
+    ],
+    [
+     "The study fee",
+     "Makes the requester pay for the engineering its own request consumes, before any wires are designed",
+     "At least $100,000 by statute; the proposed rule scales it — $100,000 for 75–250 MW, $300,000 above 250 MW, plus actual costs",
+     "Free requests are infinitely cheap to make, so the queue filled with options nobody intended to exercise"
+    ],
+    [
+     "Financial commitment",
+     "{{Credit support}} that stands behind the request — cash, a letter of credit, an investment-grade guaranty, a contribution in aid of construction or advance payments",
+     "The proposed rule sets $50,000 per MW of security plus a non-refundable $50,000 per MW interconnection fee, with forfeited security split 80 percent to the transmission provider's {{rate base}} and 20 percent refunded on withdrawal",
+     "A request with no money behind it is indistinguishable from one with a signed lease until the utility has already built"
+    ],
+    [
+     "Duplicate-request disclosure",
+     "Requires the customer to say whether it has asked other utilities for the same load, plus site control, permitting and its energization schedule",
+     "Disclosure obligation; no figure",
+     "One campus shopping five utilities appeared in the state's forecast five times"
+    ],
+    [
+     "Backup-generation disclosure",
+     "The customer must declare on-site generation capable of serving a material share of its own demand, with fuel, run-hour limits and ramp time",
+     "Aggregate capability of at least 50 percent of on-site demand triggers disclosure",
+     "The grid operator could not see generation inside the fence that changes what the site actually draws"
+    ],
+    [
+     "Deploy or curtail",
+     "Lets the grid operator direct the utility to require a large load either to run its own backup generation or to reduce its draw",
+     "No figure — a standing authority",
+     "In an energy-only market nothing else obliged the largest customers to help in a shortage"
+    ],
+    [
+     "Curtailment equipment",
+     "Requires the equipment that makes remote curtailment possible to be installed before the customer is interconnected — the {{kill switch}} in press shorthand",
+     "Applies to loads interconnecting after December 31, 2025; deployments count as firm load shed in price calculations",
+     "An operator's authority is worth nothing if the physical means to exercise it was never built"
+    ],
+    [
+     "Demand-response service",
+     "Directs the operator to build a service that competitively buys demand reductions from the largest loads ahead of an emergency",
+     "Loads of at least 75 MW, with at least 24 hours' notice",
+     "Curtailment as a last resort is a blunt instrument; a paid, scheduled version is a market"
+    ],
+    [
+     "Co-location review",
+     "Requires commission approval before an arrangement pairs an existing generator with a new large load behind one point of connection",
+     "A grid-operator impact study within 120 days; the commission decides within 60 days of it",
+     "A {{private use network}} that leaves the grid can strand the costs the grid built, and the rules never said who decided"
+    ],
+    [
+     "The allocation review",
+     "Orders the commission to re-examine whether the four-{{coincident peak}} method still assigns transmission cost fairly",
+     "Rule changes due by the end of 2026",
+     "A flat load pays its full share of the peak under 4CP, and a grid rebuilt for that load is paid for on the {{postage-stamp rate}} — both halves were written for a different system"
+    ]
+   ],
+   "note": "The statute took effect in 2025; the interconnection rule was published for comment in March 2026 and, as of this guide's date, had not been adopted. Read every figure in the rule column as proposed, not final — the dossier carries the dockets and the dates."
+  },
+  {
+   "id": "three-numbers-not-one",
+   "title": "Three numbers, not one: requests, approvals, and load that actually showed up",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**The discipline this guide exists to teach.** A Texas large-load figure is meaningless without knowing which of three things it counts, and the three differ by two orders of magnitude. A **request** is a form submitted to a wires utility naming a site and a megawatt number. An **approval to energize** is the grid operator's finding that the system can carry that load. **Observed peak** is what the connected loads actually drew. Every public argument about Texas data centers is really an argument about which of the three someone quoted.",
+    "**The gap, in the operator's own numbers.** In its March 2026 status reporting the grid operator recorded roughly nine gigawatts of load approved to energize, against an observed non-simultaneous monthly peak from those loads of under four gigawatts — the connected campuses were drawing well under half of what they were approved for. In the same period the tracked request total passed four hundred gigawatts. The whole system's all-time peak is in the low nineties. Requests were therefore running at something like a hundred times the load those requests had so far produced in the meter.",
+    "**Why the gap is structural, not dishonest.** A developer with a site under option submits to several utilities to keep its choices open, and until 2025 nothing made that expensive. A campus energizes in halls over years, so approved capacity always leads drawn capacity. And a request is written for the site's build-out decade, not its opening year. None of that is fraud; all of it means the request count measures interest, not demand.",
+    "**What the state did about it.** The fee, the security, the duplicate-request disclosure and the batch process are all instruments for turning a number that measures interest into one that measures intent — and the {{batch study}} does something more, replacing serial studies with clustered ones so that a corridor's requests are modelled against each other rather than each against a grid that pretends the others are not coming. In 2026 the state went a step further and paused the process to audit the projects moving through it.",
+    "**The rule for a seller.** Ask which number you are being given before you build a forecast on it. A utility's own queue figure, a grid operator's tracked total, the batch-eligible subset in one territory, and the megawatts connected and ramping are four different quantities that all get called 'the pipeline' — and only the last one has ever bought equipment."
+   ]
+  },
+  {
+   "id": "the-wires-rate-case",
+   "title": "The wires rate case: a cost of service with no fuel line, and the mechanisms that run between cases",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The Dominion guide's {{rate case}} set a whole utility's revenue requirement — plant, wires, fuel, purchased power — every two years. A {{TDU}}'s case is narrower and, in Texas, rarer: it sets the {{cost of service}} for transmission and distribution only, on a historical test year, and the company then lives on that base for years while three interim mechanisms carry the new investment. The first is the transmission side. Every transmission owner in ERCOT has a {{TCOS}} — a transmission cost of service — that the commission sets and that is recovered not from the owner's own customers but from every distribution utility in the state on a {{postage-stamp rate}}: the cost of all ERCOT transmission is pooled and allocated across all load in proportion to each utility's share of the four summer {{coincident peak}}s, the 4CP. A transmission owner may update its TCOS between rate cases as new lines enter service, so a 765 kV line in the Permian Basin becomes a charge on a Houston bill within months of energizing.",
+    "The second mechanism is the {{DCRF}} — the distribution cost recovery factor — an annual filing under a statutory formula that lets the utility recover new distribution plant between cases. The third, since 2023, is the {{system resiliency plan}}: a multi-year package of hardening, wildfire-mitigation, flood and cyber investment filed for approval up front and recovered through its own rider. Between the three, most of a wires utility's capital plan reaches rates without a contested case, and its earnings track its {{rate base}} with months of {{regulatory lag}} rather than years. The comprehensive case still matters — it resets the {{allowed return}}, the capital structure and the depreciation rates that every interim mechanism then uses — and it is the one docket in which the cities the utility serves, the industrial customers and the consumer advocate can argue the whole picture.",
+    "What is not in the case is as important as what is. There is no fuel clause, because the utility buys no fuel; no purchased-power line; no {{capacity market}} pass-through, because there is no capacity market; and no plant to disallow. The {{prudence review}} is about wires and about the storm response, and the political exposure — which in the Southeast guides was the plant a customer did or did not pay for — is here the delivery charge on every bill, which rises with every substation built for a customer that is not the household paying it. That is why the {{cost allocation}} argument the Dominion guide framed as cost-causation against socialization reappears in Texas in a specific form: the 4CP allocation of transmission, which charges a flat load its full share of the peak and charges every other customer for the lines the flat load needed.",
+    "Two consequences for a seller. A wires utility's growth is visible in its capital plan and its interim filings, not in a resource plan, and the filings say which corridors and substations are next. And the allocation rule means a data center's wires are largely socialized once they are network — which is the argument the 2025 statute's fee and security provisions were written to answer, and the argument the next commission will reopen if the queue's requests turn out to be several times the load that ever arrives."
+   ]
+  },
+  {
+   "id": "who-pays-for-the-substation",
+   "title": "Who pays for the substation: the customer's facilities against the postage stamp",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "The Dominion guide set cost-causation against socialization for a vertically integrated utility. In ERCOT the split is drawn by rule: the facilities that serve only the customer are the customer's, the network is everyone's, and the 2025 statute moved the line a little toward the customer. Both readings are still made in every rate case.",
+   "cards": [
+    {
+     "t": "The customer's facilities are the customer's",
+     "meta": "The dedicated substation, the transformer and the tap line are paid for by the load under a contribution in aid of construction or a facilities charge, with {{credit support}} posted before the wires are ordered",
+     "adv": [
+      "Screens the queue: a request that will not post security or pay the study fee was never a load — the 2025 statute's fee and security terms exist for this",
+      "Matches cost to cause for the one asset that has exactly one beneficiary",
+      "Keeps the delivery charge on every other bill from carrying a campus that may never energize"
+     ],
+     "dis": [
+      "The line between a customer facility and a network upgrade is an engineering judgment argued in every case",
+      "A customer that funds a substation it later cannot fill has bought a {{stranded cost}} of its own — and pushed its next phase to the back of the queue",
+      "Front-loaded charges push a campus to the next utility over, or {{behind-the-meter}}, where the grid cannot see it"
+     ]
+    },
+    {
+     "t": "The network is everyone's — the postage stamp",
+     "meta": "New 345 kV and 765 kV lines enter the owner's {{TCOS}} and are recovered from every ERCOT load on the {{postage-stamp rate}}, allocated on the four coincident peaks",
+     "adv": [
+      "Gets the lines built: Texas built more transmission in fifteen years than any other region because nobody had to prove who benefited from each mile",
+      "Treats the backbone as the network good it is — a 765 kV loop serves every generator and load on it",
+      "Lets the grid operator plan corridors ahead of individual requests instead of waiting for each one to fund its piece"
+     ],
+     "dis": [
+      "A household in Dallas pays for a line built because a cluster of campuses arrived in the Permian Basin",
+      "A flat load's 4CP share is its full share of the peak — fair to it, and a reason its own costs are then socialized in the other direction",
+      "Requests inflate the plan: if the regional plan is sized to a queue that is several times the load that will connect, the postage stamp carries the difference"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "the-765-kv-decision",
+   "title": "The 765 kV decision: how a state buys a backbone, and who gets to build it",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Transmission voltage is a throughput choice. The workhorse of the Texas grid has been 345 kV; **{{765 kV}}** is the highest class in common American use and carries several times the power over the same right-of-way with lower losses per megawatt-mile. It costs more per mile, needs bigger towers and wider corridors, and its {{transformer}}s and breakers are long-lead items from a short list of manufacturers. The trade is therefore simple to state and hard to decide: pay more now for a corridor that does not need to be rebuilt in a decade, or build the familiar voltage and come back.",
+    "In 2025 the Texas commission made that choice for the Permian Basin — the oil-producing region in the west whose electrification, plus the data centers arriving beside it, had outgrown the wires. It approved the state's first 765 kV lines, on three import paths, at roughly seventeen billion dollars for the extra-high-voltage lines with several billion more for local improvements; the wider statewide expansion those paths anchor runs to thousands of miles of new 765 kV and a figure in the thirties of billions. That decision is the single largest thing that has happened to the wires-only utilities of Texas in a generation, because it converts a policy finding into decades of {{rate base}}.",
+    "Who builds it is decided line by line, in a {{CCN}} case at the commission. Oncor took the two western segments; a joint build with a river authority took another; the segment reaching south went to a different utility with a municipal partner; a four-sponsor eastern backbone extends the network toward the coast. Each case decides route and need with the affected landowners as parties, and that is where a project meets its real friction: in 2026 the two western segments drew organized landowner opposition, a finding that hundreds of additional property owners had not been notified of route changes, and public calls from senior state officials to deny the applications pending legislative reform. They were approved anyway, in the same month, at a combined cost near four billion dollars for roughly four hundred miles.",
+    "Two consequences for the corpus's sellers. First, the equipment: extra-high-voltage transformers, breakers, series compensation and the substations at each terminus are ordered years ahead against manufacturer backlogs, which is why the transformer supply chain and a transmission plan are the same story told from two ends. Second, the money: because ERCOT recovers transmission on the {{postage-stamp rate}}, this backbone is paid for by every customer in the state and updated into bills through the {{TCOS}} mechanism within months of energizing. Nobody had to prove which campus benefited — which is exactly why Texas builds transmission faster than regions that argue the question, and exactly what the state's own critics attack when they argue the same reliability could be bought by building generation near the load instead."
+   ]
+  },
+  {
+   "id": "who-builds-the-generation",
+   "title": "Who builds the generation, and where storage enters when the utility never buys one",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "In the three earlier guides the utility's plan was the storage seller's pipeline: certified megawatts became an {{RFP}}, a {{self-build}} or a {{PPA}}, and the question was only which lane. Inside ERCOT the wires utility has no plan and no lane. It may not own generation, and its storage is limited by statute to narrow reliability uses that must not compete with the market. The generation that serves a Texas data center is built by four kinds of company, and every one of them is a buyer this corpus already files: the merchant developer that builds a gas plant or a battery on expected market prices and hedges; the independent power producer that signs a {{PPA}} or a {{tolling agreement}} with the campus and builds against it; the hyperscaler or its developer building {{behind-the-meter}} — turbines, engines, fuel cells and storage inside the fence, connected to the grid as a {{private use network}} or not at all; and the bridge-power vendors whose whole market is the gap between a campus's opening date and the grid's.",
+    "Storage enters through the market, not the docket. A grid battery in ERCOT earns on energy arbitrage — charging when prices are low, discharging in the scarce hours the {{energy-only market}} prices high — and on ancillary services the operator buys: regulation, responsive reserve, the newer fast-frequency products. Those revenues were enough to build the largest battery fleet outside California without a single certificate, and the fleet is now large enough that the ancillary markets it once lived on have saturated, pushing new projects toward energy revenues and longer durations. The wires utility's part in that story is the interconnection: a merchant battery is a generator in ERCOT's queue, studied and connected by the transmission owner, and the transmission owner's substation and line schedule is its energization date.",
+    "The seller's map is therefore different from the regulated states'. The counterparty for a utility-scale battery is the developer or the IPP, and the decision is made at the developer's bid stage against a market forecast, not at a commission's certification. The counterparty for on-site storage is the campus and its EPC, and the decision is made in the electrical design — sized to ride through the operator's {{curtailment}} calls, to shave the 4CP peaks that set the transmission charge, and to buffer the load swings the grid operator has begun to regulate. The utility appears in neither sale except as the owner of the date, and a seller who pitches Oncor's engineers a battery is pitching a company the statute forbids from buying it.",
+    "One exception is worth knowing exactly. Texas allows a wires utility to lease or procure a small amount of storage for reliability in places a wires solution cannot reach in time, and the rules around it are narrow and contested — every proposal is argued as market intrusion. The other exception is the state itself: the public loan fund for {{dispatchable}} gas plants is capacity policy by another name, and its awards say which merchants the state chose to bank."
+   ]
+  },
+  {
+   "id": "gigawatts-on-the-texas-clock",
+   "title": "Gigawatts on the Texas clock: what was asked for, what was approved, what showed up",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "GW (as stated by the sources; see the dossier for dates)",
+   "intro": "One scale, four kinds of number, and the reason the previous section insists you name which one you mean. The bottom bars are meters and megawatts that exist. The top bars are forms.",
+   "items": [
+    {
+     "label": "Observed peak from approved large loads",
+     "sub": "grid operator's monthly observation, March 2026",
+     "v": 3.883
+    },
+    {
+     "label": "Connected and ramping in one utility's territory",
+     "sub": "the utility's own figure, mid-2026",
+     "v": 8
+    },
+    {
+     "label": "Approved to energize, grid-operator-wide",
+     "sub": "March 2026",
+     "v": 9.042
+    },
+    {
+     "label": "Batch-eligible large load in that territory",
+     "sub": "27 GW base plus 17 GW studied, mid-2026",
+     "v": 44
+    },
+    {
+     "label": "All-time system peak",
+     "sub": "the whole Texas grid, July 2026",
+     "v": 91
+    },
+    {
+     "label": "One utility's interconnection queue",
+     "sub": "the utility's own total, mid-2026",
+     "v": 298
+    },
+    {
+     "label": "Grid-operator tracked large-load requests",
+     "sub": "about 89 percent data centers, mid-2026",
+     "v": 438
+    },
+    {
+     "label": "Long-term forecast peak for 2032",
+     "sub": "the operator's preliminary filing, which it publicly cautioned was high",
+     "v": 367.79
+    }
+   ],
+   "note": "Two facts the chart is drawn to make unmissable. The requests are roughly five times the all-time system peak, and more than a hundred times the load those requests had actually put on a meter. And the operator's own forecast, built partly from utility submissions, was described by the operator itself as higher than it expected growth to be — a forecast published with its own caveat attached."
+  },
+  {
+   "id": "where-oncor-slots-in",
+   "title": "Where a wires-only utility slots into the chain",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The same rungs the three earlier utility guides walked, with the generation rungs struck out and two new ones added. The last column is what a seller can actually influence, and when.",
+   "cols": [
+    "Rung",
+    "In a vertically integrated state",
+    "In ERCOT, for the wires utility",
+    "What a seller can influence, and when"
+   ],
+   "rows": [
+    [
+     "The plan",
+     "An {{IRP}} naming the megawatts the utility expects to need",
+     "None for generation. The equivalent is the grid operator's regional transmission plan and long-term load forecast, plus the utility's own capital plan",
+     "Read it for corridors and substations, not for a purchase order"
+    ],
+    [
+     "The customer contract",
+     "A {{large-load tariff}} class or a negotiated service agreement",
+     "An interconnection agreement with the wires utility plus a separate retail contract with a competitive provider — two counterparties, two documents",
+     "The campus's own electrical design is settled here: on-site generation, storage, shed logic"
+    ],
+    [
+     "The certificate",
+     "A {{CPCN}} for a specific plant",
+     "A {{CCN}} for a transmission line only. No plant is ever certified",
+     "Transformer, breaker and substation packages, at the transmission owner's procurement — years ahead of energization"
+    ],
+    [
+     "The solicitation",
+     "An all-source or storage {{RFP}} the utility runs",
+     "None. The utility may not own generation, and its storage is confined by statute to narrow reliability uses",
+     "Nothing here. This rung is the one that does not exist, and mistaking it for the others is the classic error"
+    ],
+    [
+     "The rate order",
+     "A general {{rate case}} covering plant, wires and fuel",
+     "A transmission-and-distribution {{cost of service}}, plus {{TCOS}} updates, the {{DCRF}} and the {{system resiliency plan}} rider between cases",
+     "Nothing directly; it sets the pace at which the utility's wires spending converts to earnings, and therefore its appetite"
+    ],
+    [
+     "Interconnection",
+     "The utility's own load study and the {{RTO}} generator queue",
+     "The {{large-load interconnection}} process, now with statutory fees, security and a {{batch study}} — and a separate generator queue for the merchant plants and batteries",
+     "The date. Everything a campus can do to protect its position in the queue is worth money"
+    ],
+    [
+     "The regional layer",
+     "{{PJM}} capacity, accreditation, the {{RTEP}}",
+     "An {{energy-only market}} with no capacity auction, scarcity pricing, and a regional transmission plan paid for on the {{postage-stamp rate}}",
+     "Merchant storage economics live entirely here — arbitrage and ancillary services, not a docket"
+    ],
+    [
+     "Who buys the generation",
+     "The utility, after a certificate",
+     "A merchant developer, an independent power producer, or the campus itself behind the fence",
+     "This is the sale. It was never at the utility"
+    ]
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The date moves.** The wires utility's {{system impact study}} and the operator's review model the grid as it will be, and in a corridor where requests outnumber the load that will ever arrive by several times, the model changes with every batch. A 765 kV line planned for the corridor has its own {{CCN}}, its own landowners and its own transformer backlog. The {{energization}} date moves; the campus's lease does not; the supplier's delivery date was the campus's. Owned by the developer, the wires utility and the operator together — and the first row of the corpus's failure map in its purest form, because here no one is even obliged to build the supply.",
+    "**The queue is not the load.** A request count in the hundreds of gigawatts against a system peak in the high eighties is a signal about the process, not about demand. A plan sized to the requests builds wires the {{postage-stamp rate}} then spreads over everyone; a plan sized to the signed agreements builds too little if the campuses come. The 2025 statute's fee, security and disclosure terms exist to make the number honest, and a seller who quotes the request figure as pipeline has quoted the wrong number. Owned by the operator and the legislature; felt by every forecast.",
+    "**No one is obliged to build the plant.** The {{energy-only market}} brings supply through scarcity prices, and a campus that needs its megawatts on a date rather than at a price cannot wait for that signal. Hence the {{behind-the-meter}} bridge market, the state's loan fund, and the statute that makes the load itself a reserve the operator may call. A seller who assumes the utility will procure the supply — as it would in Virginia or Georgia — has assumed a mechanism that does not exist here. Owned by the market; a fact, not a fault.",
+    "**The operator calls the load.** A curtailment order during {{firm load shed}}, a directive to run the backup generation the customer disclosed, a {{kill switch}} the rules require — the campus's electrical design is a regulatory compliance question, and a hall built without the shed logic, the transfer scheme and the storage to ride through the call is out of compliance the day the operator first uses the power the statute gave it. Owned by the campus and its EPC; written in Austin.",
+    "**The allocation reopens.** The 4CP {{coincident peak}} charge socializes network wires across everyone and charges a flat load its full peak share; the next {{rate case}} or the next session can move the line either way — toward the customer with a fee, or toward the system with a plan sized to requests. A contract priced on today's delivery charge is priced on a rule two arguments away from changing. Owned by the commission and the legislature; scheduled every two years.",
+    "**The wires arrive after the load.** The regional plan's backbone is a decade of construction; the postage stamp pays for it, but it does not hurry it. A corridor's campuses run on bridge power and phased connections until the loop closes, and the gap is the whole market for the on-site generation and storage sellers in this corpus. Owned by the transmission owners and the operator; the origin of the competing market for the load's dollars.",
+    "**Sold to the wrong desk.** The wires utility buys transformers, breakers, conductor and substation packages — and never a battery, a turbine or a fuel cell. The generation is the developer's, the IPP's or the campus's; the storage is a merchant's bid or an EPC's design. A seller who takes a battery to Oncor has arrived at the one company in the chain the statute forbids from buying it. Owned by the seller."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "What is a wires-only utility, and what does it earn a return on?",
+     "a": "A transmission and distribution utility in a restructured market: it owns poles, lines, substations and meters, generates nothing and sells no energy. Its rate base is wires alone, so its earnings grow only by building more transmission and distribution."
+    },
+    {
+     "q": "In an energy-only market, who decides whether a new power plant gets built?",
+     "a": "Whoever is putting up the money — a merchant developer, an IPP, or the campus itself. No commission certifies it and no capacity auction pays it to exist; the incentive is the price during scarce hours."
+    },
+    {
+     "q": "Name the three large-load numbers that must never be collapsed into one.",
+     "a": "Requests submitted, capacity approved to energize, and load actually observed on the meter. In Texas they have differed by roughly two orders of magnitude."
+    },
+    {
+     "q": "What is the postage-stamp rate, and what does it do to who pays for a new transmission line?",
+     "a": "Transmission cost is pooled and allocated across all load in the region rather than to the customers nearest the line. A line built in West Texas is paid for by customers everywhere in the market."
+    },
+    {
+     "q": "What is 4CP and why does it matter to a data center?",
+     "a": "The four coincident peaks: transmission cost is allocated on a customer's demand during the system's four highest summer intervals. A flat, always-on load draws its full share at every one of them, so it pays a full share — which is why on-site storage that shaves those intervals has direct value."
+    },
+    {
+     "q": "What does a CCN certify in ERCOT, and what does it not?",
+     "a": "It certifies a transmission line — route and need. Inside ERCOT it never certifies a generating plant, because no plant needs a certificate there."
+    },
+    {
+     "q": "What are the four commercial terms that make a large-load connection financeable?",
+     "a": "The contract term, the ramp schedule, the credit support or collateral, and the exit fee. They are what convert a request into an obligation a utility can build against."
+    },
+    {
+     "q": "What is a batch study and what does it cost the participant?",
+     "a": "Studying a cluster of interconnection requests together so their combined effect on a corridor is modelled at once. The cost is that every request in the batch moves at the pace of the batch."
+    },
+    {
+     "q": "What does the grid operator's 'deploy or curtail' authority over large loads mean in practice?",
+     "a": "In an emergency it can require a very large customer to run its own backup generation or reduce its draw — and since 2025 the equipment enabling remote curtailment must be installed before such a customer is interconnected."
+    },
+    {
+     "q": "Why does a wires utility welcome large load in a way a vertically integrated utility does not?",
+     "a": "Every connection needs a substation and feeds, and those are rate base. It carries none of the supply obligation and none of the fuel risk, so load growth is close to pure earnings growth for it."
+    },
+    {
+     "q": "Why is 765 kV chosen over 345 kV for a long backbone?",
+     "a": "It moves several times the power over the same right-of-way with lower losses per megawatt-mile. It costs more per mile and its transformers are long-lead items, so it is chosen where the alternative is rebuilding the corridor again within a decade."
+    },
+    {
+     "q": "What is a private use network, and which argument does it belong to?",
+     "a": "A site with its own generation and load behind a single point of connection to the grid. It is the Texas form of the co-location argument — what a partly self-supplied campus owes for the grid it still leans on."
+    },
+    {
+     "q": "Between the TCOS, the DCRF and a full rate case, which one resets the allowed return?",
+     "a": "Only the full rate case. The interim mechanisms recover new investment between cases using the return, capital structure and depreciation rates that the rate case set."
+    },
+    {
+     "q": "A developer says the utility will procure the generation for its Texas campus. What is wrong with that sentence?",
+     "a": "Inside ERCOT the wires utility may not own generation and runs no resource solicitation. Supply comes from a merchant, an IPP or the campus's own build — the utility supplies delivery and a date."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A wires-only utility in ERCOT wants to grow its earnings. What does it build?",
+     "c": [
+      "A combined-cycle plant, certified by the commission",
+      "Transmission and distribution — the only assets it may put into rate base",
+      "A battery fleet bid into the energy market",
+      "Whatever the integrated resource plan certifies"
+     ],
+     "a": 1,
+     "why": "It owns no generation and may not. Its rate base is wires, so wires are the only route to earnings growth — which is why load growth is so valuable to it and so different from a vertically integrated utility's problem."
+    },
+    {
+     "q": "The grid operator reports 438 GW of tracked large-load requests, and the all-time system peak is about 91 GW. What follows?",
+     "c": [
+      "The system will need to quadruple within a year",
+      "Nothing yet — a request measures interest, and the load actually approved and drawing power is a small fraction of it",
+      "The requests are fraudulent",
+      "The forecast is the operator's official demand projection"
+     ],
+     "a": 1,
+     "why": "Requests were free to submit, one campus can appear at several utilities, and campuses energize in halls over years. The operator's own approved-to-energize and observed-peak figures were two orders of magnitude smaller."
+    },
+    {
+     "q": "Which of these does the Public Utility Commission of Texas NOT do for an ERCOT data-center project?",
+     "c": [
+      "Set the wires utility's rates",
+      "Certify the generating plant that will serve it",
+      "Issue the CCN for a new transmission line",
+      "Write the large-load interconnection rules"
+     ],
+     "a": 1,
+     "why": "Inside ERCOT no generating plant is certified by the commission. Generation is a private investment decision answering market prices — that is what an energy-only market means."
+    },
+    {
+     "q": "Under the proposed Texas interconnection rule, a 300 MW request faces which study fee?",
+     "c": [
+      "$100,000",
+      "$300,000 plus actual costs",
+      "Nothing — the utility absorbs study cost",
+      "A percentage of the project's capital cost"
+     ],
+     "a": 1,
+     "why": "The proposed rule scales the statutory minimum: $100,000 for requests of 75 to 250 MW, $300,000 above 250 MW, plus actual costs. The fee exists to make a speculative request cost something."
+    },
+    {
+     "q": "A campus in West Texas connects. Who pays for the new 765 kV line into the region?",
+     "c": [
+      "The campus, as a contribution in aid of construction",
+      "Every load in the market, through the postage-stamp transmission rate",
+      "The merchant generator that serves the campus",
+      "The county in which the line is built"
+     ],
+     "a": 1,
+     "why": "ERCOT pools transmission cost of service and allocates it across all load. The dedicated substation is the customer's; the network backbone is everyone's — which is the split the whole cost-allocation argument turns on."
+    },
+    {
+     "q": "Why does a flat, always-on load pay a full share of transmission cost under 4CP?",
+     "c": [
+      "Because it uses more energy in total",
+      "Because it draws at essentially the same rate during the system's four peak intervals as at any other time",
+      "Because large loads pay a statutory surcharge",
+      "Because it is billed on nameplate capacity"
+     ],
+     "a": 1,
+     "why": "The allocation is on demand during the coincident peaks. A load with no daily shape is present at full strength at every one of them — which is also why storage that shaves those specific intervals has a direct, calculable value."
+    },
+    {
+     "q": "The grid operator directs a large load to run its backup generators during an emergency. What made that possible?",
+     "c": [
+      "The retail contract with its electricity provider",
+      "The 2025 statute's deploy-or-curtail authority, plus the curtailment equipment required before interconnection",
+      "A voluntary demand-response program",
+      "The wires utility's tariff"
+     ],
+     "a": 1,
+     "why": "The statute gave the operator the authority and required the physical means to be installed before a qualifying load connects. An authority with no equipment behind it would be unenforceable."
+    },
+    {
+     "q": "A battery developer wants to sell a utility-scale system in Oncor's territory. Who is the buyer?",
+     "c": [
+      "Oncor's engineering team",
+      "The merchant developer or IPP building the project, or the campus and its EPC for an on-site system",
+      "The Public Utility Commission of Texas",
+      "The grid operator"
+     ],
+     "a": 1,
+     "why": "The wires utility may not own generation and runs no storage solicitation. The purchase decision sits with whoever is financing the project against market revenues, or with the campus designing behind its own fence."
+    },
+    {
+     "q": "What is the practical difference between a CCN case and a CPCN case in the earlier utility guides?",
+     "c": [
+      "None — they are the same instrument under different names",
+      "The CCN here certifies transmission only; the CPCN in a vertically integrated state certifies a plant into rate base",
+      "The CCN is federal",
+      "The CCN applies only to distribution"
+     ],
+     "a": 1,
+     "why": "The name is nearly the same and the job is not. In ERCOT the certificate is a wires instrument, because there is no plant for a commission to certify."
+    },
+    {
+     "q": "Which mechanism gets a newly energized transmission line into customer bills fastest?",
+     "c": [
+      "The next general rate case",
+      "An interim transmission cost of service update, recovered on the postage-stamp rate",
+      "The system resiliency plan rider",
+      "The distribution cost recovery factor"
+     ],
+     "a": 1,
+     "why": "Transmission cost of service can be updated between rate cases as lines enter service, so a backbone energized this year reaches bills within months. The DCRF does the same job for distribution; the resiliency rider covers a pre-approved hardening program."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 2,
+  "slug": "xcel-energy",
+  "title": "Xcel Energy — Technology Study Guide",
+  "lastUpdated": "2026-09-03",
+  "sections": [
+    {
+      "id": "eight-states-four-utilities",
+      "kind": "prose",
+      "read": "4 min",
+      "title": "Eight states, four utilities, one holding company — and why the state line is the unit of analysis",
+      "ps": [
+        "Xcel Energy is a holding company that owns four operating utilities. Northern States Power Minnesota serves Minnesota, North Dakota and South Dakota. Northern States Power Wisconsin serves Wisconsin and Michigan. Public Service Company of Colorado serves Colorado. Southwestern Public Service serves Texas and New Mexico. Eight states, three grid regions, five million electric and gas customers, and eleven and a half thousand employees. The parent has a ticker; the operating companies have the customers, the power plants and the regulators.",
+        "That structure is the reason nothing about this company can be understood at the group level. A {{rate case}} is filed by an operating company in one state, against that state's commission, on that state's {{test year}} convention, seeking that state's {{return on equity}}. Xcel ran seven of them across 2025 and 2026 and got seven different answers. Minnesota raised its allowed return to 9.60 percent. Wisconsin allowed 9.8 percent. Colorado cut a settled increase of $225 million to $157 million and switched to a thirteen-month average historical test year on the way. There is no group-wide rate case, no group-wide tariff, and no group-wide answer to what a gigawatt of data-center load costs.",
+        "The Entergy guide made this point about a five-state holding company under {{formula rate plan}}s. Xcel is the same shape with a different mechanism: where Entergy's operating companies mostly adjust rates by formula between cases, Xcel's mostly litigate. Where Southern Company answers to an {{elected commission}} in its largest state, Xcel answers to appointed ones everywhere. And where Dominion has one dominant state, Xcel's largest is only 43 percent of {{rate base}} — big enough to dominate results, not big enough to be the whole story.",
+        "Keep one operating company in mind as you read: Public Service Company of Colorado. It is the largest, it earns the lowest return, it belongs to no {{RTO}}, its proposed large-load tariff is the strictest of the three and is not decided until 2027, and it is where the Marshall Fire burned. Almost every hard question in this file lands there."
+      ]
+    },
+    {
+      "id": "what-a-resource-plan-decides",
+      "kind": "prose",
+      "read": "5 min",
+      "title": "What a resource plan actually decides, and what it deliberately leaves open",
+      "ps": [
+        "An {{electric resource plan}} — called an {{IRP}} in most states — is a proceeding, not a document. The utility files a forecast of demand and a set of portfolios that would meet it. Intervenors file testimony attacking the forecast, the portfolio costs, or both. The commission issues an order that finds a **need** in megawatts and authorizes the utility to go acquire resources to fill it. Everything downstream depends on that finding, because a utility cannot rate-base a plant that no order found necessary.",
+        "Three things the order settles. First, the load forecast: Colorado's commission accepted about 3 percent compound annual growth, and that acceptance is what makes the rest defensible. Second, the quantity and rough shape of the need — Colorado's 2024 cycle found roughly 5,400 MW, Minnesota's 2024 plan authorized a 420 MW combustion turbine, a 300 MW four-hour battery at the Sherco site, 3,200 MW of wind, 400 MW of solar and 600 MW of storage through 2030, plus nuclear licence extensions into the early 2050s. Third, the retirement schedule for existing coal, which is what creates the need in the first place.",
+        "Three things the order does not settle. It does not name the projects. It does not name the developers. And it does not, in Xcel's states, set the price — that happens in a competitive {{solicitation}} afterwards, where the utility's own {{self-build}} proposals compete against third-party bids. Colorado's 2024 cycle is a live demonstration: the commission approved the plan, the Phase II solicitation has bids due in the third quarter of 2026, and as of September 2026 **nothing has been selected**. A plan that authorizes 5,400 MW and a portfolio that procures it are eighteen months apart.",
+        "The trap this creates for a reader is assuming an approved plan means signed contracts. It does not. It means permission to go shopping. The Southern Company guide showed a commission certifying 9,885 MW in a single order — that is a different instrument, a {{CPCN}}, which does name the plants. Xcel's states mostly keep the two steps apart, which is slower and more competitive.",
+        "One more thing the plan does not cover: anything the utility buys outside it. Minnesota's 2024 order also directed something unrelated to resources — that Northern States Power file a tariff for super-large-load customers by July 15, 2025. The resource plan created the tariff obligation. That is worth noticing, because it means the proceeding that decides what to build is also where the rules for who pays got started."
+      ]
+    },
+    {
+      "id": "the-approval-sequence",
+      "kind": "timeline",
+      "read": "5 min",
+      "title": "From coal retirement to steel in the ground: the sequence a resource-plan state runs",
+      "intro": "A representative sequence in an integrated-resource-planning state, in years from the utility's plan filing. Gold is the utility acting, blue is the commission, red is construction. Note where the customer contract enters — much later than most readers expect, and on a completely separate track from the plan.",
+      "items": [
+        {
+          "x": 0.0,
+          "lane": "gen",
+          "label": "Utility files the resource plan",
+          "sub": "A demand forecast, retirement dates for existing units, and several portfolios that would meet the resulting need. Filed by one operating company against one state's commission."
+        },
+        {
+          "x": 0.3,
+          "lane": "deploy",
+          "label": "Intervenors file testimony",
+          "sub": "Consumer advocates, industrial customers, environmental groups and commission staff attack the forecast and the portfolio economics. This is where a load forecast built on a data-center pipeline gets tested."
+        },
+        {
+          "x": 0.8,
+          "lane": "deploy",
+          "label": "Settlement, or a contested hearing",
+          "sub": "Most plans settle. Minnesota's 2024 plan was approved as a settlement in February 2025. A settlement is not a win: the commission can modify it, and in Colorado's August 2026 rate case it did."
+        },
+        {
+          "x": 1.0,
+          "lane": "deploy",
+          "label": "Commission order finds the need",
+          "sub": "A megawatt number, a retirement schedule and authority to solicit. No projects named, no prices set. This is the document every later filing cites."
+        },
+        {
+          "x": 1.2,
+          "lane": "gen",
+          "label": "Utility issues the competitive solicitation",
+          "sub": "An all-source {{RFP}}. The utility's own self-build proposals bid against third parties, usually behind an independent evaluator to police the conflict."
+        },
+        {
+          "x": 2.0,
+          "lane": "gen",
+          "label": "Bids in, evaluation runs",
+          "sub": "Colorado's current Phase II has bids due in the third quarter of 2026 against a plan approved earlier. Eighteen months from order to bid deadline is normal, not slow."
+        },
+        {
+          "x": 2.5,
+          "lane": "deploy",
+          "label": "Commission approves the selected portfolio",
+          "sub": "Now the projects have names, prices and ownership structures — {{PPA}}, {{build-own-transfer}} or self-build. Only here does the plan become contracts."
+        },
+        {
+          "x": 3.0,
+          "lane": "gen",
+          "label": "Large-load customer signs, on a separate track",
+          "sub": "The customer's {{ESA}} and the {{large-load tariff}} that prices it are a different proceeding entirely. Xcel filed its Google package for approval in February 2026 with a decision expected in early 2027 — while the Colorado resource-plan solicitation was still open."
+        },
+        {
+          "x": 4.5,
+          "lane": "eco",
+          "label": "Construction, interconnection, commercial operation",
+          "sub": "Southwestern Public Service's 2025 portfolio of 17 projects and 5,168 MW nameplate has roughly 2,490 MW entering service in 2028 and 1,740 MW across 2029 and 2030 — the build back-loads hard."
+        },
+        {
+          "x": 5.5,
+          "lane": "deploy",
+          "label": "Rate case recovers it",
+          "sub": "The plant enters {{rate base}} only after it is used and useful, through a rate case that can disallow imprudent spend. Between order and recovery the utility carries the capital."
+        }
+      ],
+      "lanes": {
+        "gen": "Utility acting",
+        "deploy": "Commission acting",
+        "eco": "Build and energize"
+      }
+    },
+    {
+      "id": "two-states-two-plans",
+      "kind": "table",
+      "read": "5 min",
+      "title": "Two states, two plans, two vocabularies for the same decision",
+      "intro": "Colorado and Minnesota run the same logical process under different names, on different clocks, with different amounts already settled. Reading a utility across states means holding both columns at once. Every figure below is from the dossier's cited sources.",
+      "cols": [
+        "Question",
+        "Colorado (Public Service Company of Colorado)",
+        "Minnesota (Northern States Power)"
+      ],
+      "rows": [
+        [
+          "What the proceeding is called",
+          "Electric Resource Plan and Clean Energy Plan",
+          "Upper Midwest Resource Plan, an {{IRP}}"
+        ],
+        [
+          "Current docket",
+          "Proceeding No. 24A-0442E",
+          "Docket No. E002/RP-24-67"
+        ],
+        [
+          "Status",
+          "Plan approved; Phase II competitive solicitation open with bids due in the third quarter of 2026 and nothing selected",
+          "Settlement approved February 2025; resources authorized"
+        ],
+        [
+          "What was authorized",
+          "Approximately 5,400 MW of need against an accepted ~3 percent compound growth forecast",
+          "420 MW combustion turbine, 300 MW four-hour battery at Sherco, 3,200 MW wind, 400 MW solar, 600 MW storage through 2030"
+        ],
+        [
+          "Nuclear",
+          "None owned in Colorado",
+          "Monticello licensed to 2050; Prairie Island extensions to the early 2050s"
+        ],
+        [
+          "Procurement outside the plan",
+          "A separate Near-Term Procurement selected ten projects up to 4,100 MW in February 2026 — a different track from Phase II",
+          "Resources acquired under the approved plan"
+        ],
+        [
+          "Large-load tariff",
+          "Proposed in Proceeding No. 26AL-0137E; 50 MW threshold, 80 percent minimum demand; decision expected early 2027",
+          "Approved in the second quarter of 2026; the Google package is structured to sit inside it"
+        ],
+        [
+          "{{RTO}} membership",
+          "None — participates in the Southwest Power Pool's Western Energy Imbalance Service but belongs to no regional transmission organization",
+          "{{MISO}} member; transmission planned through the Long Range Transmission Planning tranches"
+        ],
+        [
+          "2026 rate outcome",
+          "$157 million granted against $225 million settled; thirteen-month average historical {{test year}} imposed; {{return on equity}} 9.3 percent",
+          "Approximately $211 million over two years; return on equity raised to 9.60 percent from 9.25 percent"
+        ],
+        [
+          "Share of 2025 rate base",
+          "43 percent — the largest",
+          "The second largest, and the largest five-year capital allocation"
+        ]
+      ]
+    },
+    {
+      "id": "procuring-outside-the-plan",
+      "kind": "prose",
+      "read": "4 min",
+      "title": "Procuring outside the plan: why a utility runs two solicitations at once",
+      "ps": [
+        "Colorado in 2026 shows something worth understanding in general. The commission approved a resource plan whose competitive Phase II has bids due in the third quarter of 2026. Separately, in February 2026, the same commission approved ten projects totalling up to 4,100 MW under a **Near-Term Procurement**. Two solicitations, one state, overlapping years. A reader who assumes the February award came out of the resource plan gets the whole sequence wrong.",
+        "The reason is timing. A resource-plan cycle takes three years from filing to signed contract, and load does not wait. When a utility needs capacity before the main solicitation can deliver, it asks the commission for a bounded, faster procurement — smaller, narrower and justified by a near-term reliability need rather than by the plan's long-run portfolio. The commission grants it because refusing means either a reliability gap or an emergency purchase at worse prices.",
+        "The cost of running two tracks is that the second one is decided on thinner analysis. A near-term procurement does not get the full portfolio modelling, the full intervenor testimony or the full independent evaluation. It is a shortcut, granted knowingly. Watch for it in any state whose load forecast is rising faster than its planning cycle: the near-term track is where the schedule pressure shows up first.",
+        "There is a third procurement channel too, and Xcel used it before either solicitation opened. In February 2026 it signed a strategic alliance with GE Vernova reserving five F-class gas turbines — later restated as twelve combustion-turbine reservations with options into the 2030s — plus a capacity reservation for multiple gigawatts of wind turbines. In the same week it signed a memorandum with a NextEra Energy subsidiary, converted to a joint development agreement in April, to co-develop generation for about 2 GW of data-center capacity under a fully regulated ownership structure mixing {{PPA}}s, {{build-own-transfer}} projects and self-builds.",
+        "Both deals were signed **before** the tariffs that would price the load were approved and before either Colorado solicitation closed. That is the strategic move worth taking from this company: when the constraint is turbines and crews rather than permission, the binding contract to sign first is with the supply chain, not the customer. It also creates a conflict a commission has to police — a utility that has already reserved turbines is not a neutral evaluator of bids that would use someone else's."
+      ]
+    },
+    {
+      "id": "a-tariff-in-three-drafts",
+      "kind": "table",
+      "read": "5 min",
+      "title": "The same tariff in three drafts: Minnesota approved, Colorado proposed, Wisconsin filed",
+      "intro": "A large-load tariff is a set of answers to the same five questions. Watching one company file three versions in three states, at three stages of approval, is the cleanest available way to see which terms are conventional and which are contested. Terms are as stated in the company's filings and decks.",
+      "cols": [
+        "Term",
+        "What it does",
+        "Minnesota",
+        "Colorado",
+        "Wisconsin"
+      ],
+      "rows": [
+        [
+          "Status",
+          "Whether it is law yet",
+          "Approved, second quarter of 2026",
+          "Proposed, Proceeding No. 26AL-0137E, decision expected early 2027",
+          "Filed"
+        ],
+        [
+          "Applicability threshold",
+          "The size at which a customer stops being ordinary and becomes a class of one",
+          "Higher threshold; the statute reaches very large electric customers",
+          "**50 MW — the lowest of the three**, so the net catches more customers",
+          "Filed threshold"
+        ],
+        [
+          "{{Minimum demand charge}}",
+          "The share of contracted capacity billed whether or not it is used — the whole point of the instrument",
+          "Minimum demand applies",
+          "**80 percent — the highest of the three**",
+          "Minimum demand applies"
+        ],
+        [
+          "Contract term",
+          "How long the customer is locked in",
+          "Multi-year",
+          "Multi-year",
+          "Multi-year"
+        ],
+        [
+          "Exit and collateral",
+          "What the customer forfeits for leaving early",
+          "Cost-causation provisions",
+          "{{Exit fee}} and {{credit support}} provisions",
+          "Similar structure"
+        ],
+        [
+          "What it protects against",
+          "The failure mode the tariff exists to prevent",
+          "A customer that never arrives leaving other ratepayers holding the build",
+          "Same, with the widest net and the tightest minimum",
+          "Same"
+        ]
+      ],
+      "note": "Read the Colorado column against the Minnesota one. Colorado sets the lowest threshold and the highest minimum, which is the strictest combination of the three — and it is the state that has not decided yet, has the lowest earned return, and had its settled rate increase cut. A commission under pressure to protect ordinary customers writes a harder tariff. That is not a coincidence; it is the mechanism."
+    },
+    {
+      "id": "what-a-minimum-demand-charge-buys",
+      "kind": "proscons",
+      "read": "4 min",
+      "title": "What an 80 percent minimum demand charge actually buys, and what it costs",
+      "intro": "The Dominion guide set cost-causation against socialization in general terms. Here is the same argument at one number. Colorado proposes billing a large-load customer for 80 percent of contracted capacity whether or not it is used. Both columns are real; the commission is choosing between them, not discovering which is true.",
+      "proTitle": "What the high minimum protects",
+      "pros": [
+        "**It converts a forecast into a receivable.** The utility's own risk factor says the danger is that anticipated load 'does not materialize as expected'. A minimum charge means a customer that arrives at half its contracted size still pays for four fifths of it, so the build is funded even when the forecast was wrong.",
+        "**It prices optionality honestly.** A developer that reserves 200 MW it may not need is buying an option on grid capacity. Without a minimum, that option is free and other customers write it. With one, the option has a price and the developer decides whether it is worth paying.",
+        "**It filters speculative requests before they enter the queue.** A threshold as low as 50 MW combined with an 80 percent minimum makes a placeholder application expensive. That is a queue-management tool disguised as a rate.",
+        "**It protects the credit rating, which protects everyone's bills.** A utility funding a $60 billion plan against uncertain load faces credit pressure; contracted revenue is what agencies count. Cheaper debt is cheaper for all customers."
+      ],
+      "conTitle": "What the high minimum costs",
+      "cons": [
+        "**It can price the state out of the market.** A customer comparing Colorado at 50 MW and 80 percent against a state with a higher threshold and a lower minimum is comparing real dollars. The load goes where the tariff is softer, and the state gets neither the investment nor the tax base.",
+        "**Eighty percent is close to take-or-pay on a ramping asset.** A data center reaches full load over years, not months. Billing 80 percent from day one charges for capacity the customer physically cannot consume yet — a timing mismatch, not a subsidy.",
+        "**It assumes the utility's cost estimate is right.** The minimum is set against a build the utility scoped. If that build is oversized, the customer funds the excess and the {{prudence review}} that would catch it comes years later.",
+        "**It does not settle who pays for the network.** The minimum covers the customer's own facilities and contracted capacity. Shared transmission is still allocated by the state's ordinary {{cost allocation}} rules, so the cross-subsidy argument moves rather than disappears."
+      ],
+      "cards": [
+        {
+          "t": "A high minimum demand charge on large loads",
+          "meta": "Colorado proposes a 50 MW applicability threshold with 80 percent of contracted capacity billed whether or not it is used, decided in Proceeding No. 26AL-0137E in early 2027",
+          "adv": [
+            "Converts a forecast into a receivable — a customer that arrives at half its contracted size still funds four fifths of the build, which is the utility's own stated risk",
+            "Prices optionality honestly: a developer reserving capacity it may not need is buying an option on the grid, and without a minimum that option is free and other customers write it",
+            "Filters speculative requests before they enter the queue — a low threshold plus a high minimum makes a placeholder application expensive, which is queue management disguised as a rate",
+            "Protects the credit rating, and therefore everyone's bills: contracted revenue is what rating agencies count against a $60 billion capital plan"
+          ],
+          "dis": [
+            "Can price the state out of the market — a customer comparing 50 MW at 80 percent against a softer state is comparing real dollars, and the load, the investment and the tax base all move",
+            "Eighty percent is close to take-or-pay on an asset that ramps over years, so it bills for capacity the customer physically cannot yet consume",
+            "Assumes the utility's cost estimate is right; if the build is oversized the customer funds the excess, and the {{prudence review}} that would catch it arrives years later",
+            "Does not settle who pays for the shared network — that is still ordinary {{cost allocation}}, so the cross-subsidy argument moves rather than disappears"
+          ]
+        },
+        {
+          "t": "A low minimum, or none at all",
+          "meta": "The alternative most states ran before 2024: large loads served under ordinary industrial rates with no dedicated class and no contracted-capacity floor",
+          "adv": [
+            "Keeps the state competitive for load that is genuinely mobile, which matters most where the utility needs the revenue to spread fixed costs",
+            "Bills for what is actually consumed, which is the ordinary principle of every other rate class and is easier to defend to a customer",
+            "Avoids charging a ramping customer for capacity it cannot use, so the tariff does not penalise a realistic construction schedule",
+            "Leaves the utility free to negotiate terms case by case, which can extract more from a customer with few alternatives"
+          ],
+          "dis": [
+            "Leaves the utility carrying the forecast risk — if the load never arrives, the build is stranded and the cost falls to the residual customer base",
+            "Makes a speculative request free, so the queue fills with capacity nobody intends to take and real projects wait behind it",
+            "Invites the cross-subsidy attack that consumer advocates will make anyway, without the tariff terms that would answer it",
+            "Weakens the contracted-revenue case with rating agencies at exactly the moment the capital plan needs cheap debt"
+          ]
+        }
+      ],
+      "note": "The instrument is genuinely contested, and Colorado's file shows why: the state that most needs large-load revenue is proposing the terms most likely to deter it, because the same commission just cut a settled rate increase and is being watched on affordability. A tariff is a political document with a spreadsheet attached."
+    },
+    {
+      "id": "paying-for-your-own-supply",
+      "kind": "prose",
+      "read": "5 min",
+      "title": "A different instrument: when the customer pays for the generation, not just the connection",
+      "ps": [
+        "Everything so far assumes the ordinary structure: the utility builds, the {{rate base}} grows, all customers pay, and a tariff limits how much of the large customer's cost lands on everyone else. Xcel's February 2026 Google filing does something else, and it is worth studying as a distinct template.",
+        "The package is 1,900 MW of new clean supply for a data center at Pine Island, Minnesota: 1,400 MW of wind, 200 MW of solar and 300 MW of {{long-duration storage}}. It is proposed for recovery not through ordinary rates but through a **Clean Energy Accelerator Charge**, under which — in the company's words — Google 'will pay all costs for its new service for the duration of the contract'. Xcel projects roughly $1.1 billion of benefits to other Minnesota customers, and Google contributed $50 million to a capacity programme on the side. A decision is expected in early 2027.",
+        "Compare the three templates now on the table. Entergy certifies gas plants for one named hyperscaler through a {{CPCN}} and rate-bases them, with the customer's contract as the assurance. Southern Company certifies a decade of capacity in one order under a base-rate freeze, with a shareholder backstop behind it. Xcel proposes a charge that sits outside general rates entirely, so the asset's cost never reaches the residential class at all. Three regulatory answers to the same commercial question, and the differences are the states', not the companies'.",
+        "The storage inside the Google package deserves its own note, because it is the most unusual technical fact in this file. It is a 300 MW, 30 GWh {{iron-air}} system — a hundred-hour duration. Ordinary grid batteries are four-hour lithium; a hundred hours is a different physical job, covering multi-day wind lulls rather than the evening peak. And it was procured inside a customer's service agreement rather than through a resource plan, which means a commission is being asked to approve a hundred-hour technology on a single customer's dime without the portfolio modelling a resource plan would have applied.",
+        "Why would a customer volunteer to pay for its own supply? Because it buys speed and it buys a clean-energy claim. Waiting for a resource-plan cycle costs years; paying for the package directly skips the queue. And a customer that funds 1,900 MW of new wind, solar and storage can say its load is served by new clean resources rather than by the existing grid mix — which is a procurement objective, not a regulatory one. The lesson generalises: when a customer's constraint is time and reputation rather than money, the cheapest tariff is not necessarily the one it wants."
+      ]
+    },
+    {
+      "id": "contracted-is-not-pipeline",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "4 min",
+      "title": "Contracted is not pipeline: reading a three-tier slide honestly",
+      "ps": [
+        "**The discipline this guide shares with the Oncor one.** Xcel publishes three data-center numbers on the same slide, and they are separated by an order of magnitude. Approximately **2 GW contracted or under construction**. Approximately **4 GW contracted by the end of 2027**. More than **20 GW of additional pipeline**. Only the first describes agreements that exist today.",
+        "**Contracted** means a signed service agreement, or a project physically under construction. **Contracted by year-end 2027** is a target, not a contract — it describes what the company expects to have signed, which is a forecast wearing the word 'contracted'. **Pipeline** is interest: enquiries, studies and proposals with no signature behind any of them.",
+        "**Two details make the point sharper.** First, the contracted block did **not grow** between the first-quarter and second-quarter 2026 decks — the same approximately 2 GW appeared in both. Second, one 200 MW project's planned online date moved from 2026 to 2027 between those two decks. A flat contracted figure and a slipping date, published without comment, tell you more about conversion than any pipeline number does.",
+        "**Third detail, and the most honest one:** four of the five project rows on Xcel's own slide are disclosed and the fifth is marked 'Not publicly disclosed'. The company is telling you its own list is incomplete.",
+        "**Set it against the other utilities in this file.** AEP reports 69 GW of incremental load under fully executed service agreements. Oncor reports 298 GW of interconnection requests, 44 GW cleared into a batch process, and about 8 GW energized. Dominion reports roughly 53.8 GW contracted of which 12.0 GW is firm. Xcel reports 2 GW contracted against 20 GW-plus of pipeline. **These numbers are not comparable and were never meant to be.** Each company chose which line of its own funnel to headline. The only defensible way to read across them is to find the equivalent tier in each — and for most of these companies, that tier is not the one on the slide."
+      ]
+    },
+    {
+      "id": "wildfire-as-a-balance-sheet-item",
+      "kind": "prose",
+      "read": "6 min",
+      "title": "Wildfire as a balance-sheet item: liability, insurance, mitigation and the state legislature",
+      "ps": [
+        "For most of this curriculum the constraint on a utility has been permission — a commission deciding what may be built and who pays. Xcel introduces a different constraint: an open-ended liability that no rate case resolves and that changes the cost of capital for everything else.",
+        "Two fires. The Marshall Fire in Boulder County, Colorado, December 2021, settled in September 2025 for approximately **$640 million**, of which roughly $350 million came from insurance and — in the company's own words — 'none from its customers'. That left about $298 million of shareholder charges, and it is the **only** item reconciling 2025 GAAP earnings of $3.42 per share to ongoing earnings of $3.80. The Smokehouse Creek complex in the Texas Panhandle, February 2024, which the Texas A&M Forest Service attributed to Southwestern Public Service-owned power lines after wooden poles failed, has produced **$404 million** of settlements against a $525 million policy period, with approximately $80 million of coverage remaining at mid-2026 and the company stating it 'remains unable to reasonably estimate any additional loss or the upper end of the range'.",
+        "Read that last clause carefully, because it is the whole difference between this risk and a rate case. A rate case has a number on both sides. An unbounded liability has a number on one side only. The company can tell you what it has paid; it cannot tell you what it will pay.",
+        "**What that does to the rest of the business.** Excess liability insurance now costs roughly $135 million a year for $450 million of coverage, against about $40 million for $520 million two years earlier — three times the premium for less protection. Approximately $5 billion of the $60 billion base capital plan is wildfire mitigation. A Colorado {{securitization}} is planned for 2029 and already appears in the plan's own capital tables, which means the company is budgeting today for a financing instrument that exists to spread a cost it has not yet incurred. Rating agencies carry negative outlooks on the Colorado utility and on the parent.",
+        "**The variable that decides all of it is state law, not utility conduct.** Whether a state applies {{strict liability}} or {{inverse condemnation}}, whether it caps aggregate damages, whether it offers an affirmative defence to a utility that followed an approved {{wildfire mitigation plan}} — these determine exposure far more than any hardening programme. Xcel's own framework grid credits legislative wins in **Texas, North Dakota and South Dakota**, and does not check **Colorado**, where its largest utility and its largest settled fire both sit. The company says only that it 'continues to explore similar structures in our other states'.",
+        "So the sequence to remember is: a fire creates a liability, the liability's size depends on a statute the utility does not write, the statute's absence raises the insurance premium and lowers the credit rating, and the higher cost of capital raises the price of every unrelated megawatt in the plan. Wildfire is not a safety line item. It is a financing input."
+      ]
+    },
+    {
+      "id": "no-rto-above-colorado",
+      "kind": "prose",
+      "read": "4 min",
+      "title": "No regional operator above Colorado, and what that changes",
+      "ps": [
+        "The Dominion guide taught {{PJM}}: a regional transmission organization that runs a capacity auction, plans transmission across states and publishes an independent load forecast. The Southern guide taught the opposite, a {{balancing authority}} with no RTO above it. The Entergy guide taught {{MISO}} South. Oncor taught {{ERCOT}}, an energy-only market with no capacity obligation at all. Xcel manages to be in three of those worlds at once — and in one state, in none of them.",
+        "Northern States Power Minnesota and Wisconsin are MISO members. Southwestern Public Service is in the Southwest Power Pool. And Public Service Company of Colorado, the largest of the four, 'is not presently a member of an RTO', though it makes sales into neighbouring markets and participates in the Southwest Power Pool's Western Energy Imbalance Service.",
+        "Three consequences follow, and they are the reason this section exists. **First, no capacity price.** There is no auction in Colorado setting a value for firm capacity, so a resource's worth is whatever the resource-plan model says it is. **Second, no regional planner.** Transmission is planned and allocated by the state, not by a regional process that spreads cost across a footprint — which is why Colorado's own $1.7 billion Power Pathway line is a state proceeding and drew local objection at county level. **Third, and most important, no independent load forecast.** In PJM or MISO, the regional operator publishes its own demand projection against which a utility's forecast can be checked. In Colorado the commission's acceptance of about 3 percent compound growth is the only such finding that exists.",
+        "Put those together and you get the structural fact: in Colorado, **the commission is the market**. It sets the need, it approves the procurement, it allocates the transmission, and it decides the tariff. Every megawatt of supply passes through a state solicitation. For a seller, that means the buying decision is not made in a company's procurement department — it is made in a docket, on a schedule published a year ahead, with intervenors who will read your bid.",
+        "That is also why Colorado is the state where the company's regulatory pressure concentrates. When one body holds every lever, its mood is a business risk. The August 2026 order — settled at $225 million, granted at $157 million, with a historical {{test year}} imposed that the parties had not agreed to — is what that risk looks like when it lands."
+      ]
+    },
+    {
+      "id": "gigawatts-on-the-xcel-clock",
+      "kind": "bars",
+      "read": "3 min",
+      "unit": "GW (as stated by the cited sources; see the dossier for dates)",
+      "title": "Gigawatts on the Xcel clock: what is signed, what is targeted, what is interest",
+      "intro": "One scale, several kinds of number, and the reason the earlier section insists you name which one you mean. The bottom bars are agreements or authorizations that exist. The top bar is interest.",
+      "items": [
+        {
+          "label": "Contracted or under construction",
+          "sub": "company's own three-tier slide, unchanged Q1 to Q2 2026",
+          "v": 2.0
+        },
+        {
+          "label": "NextEra joint development scope",
+          "sub": "data-center capacity to be co-developed, April 2026 agreement",
+          "v": 2.0
+        },
+        {
+          "label": "Google Pine Island package",
+          "sub": "1,400 MW wind + 200 MW solar + 300 MW storage, filed for approval",
+          "v": 1.9
+        },
+        {
+          "label": "Contracted by end-2027",
+          "sub": "a target, not a contract",
+          "v": 4.0
+        },
+        {
+          "label": "Southwestern Public Service 2025 portfolio",
+          "sub": "17 projects, nameplate — accredited capacity is 3.121",
+          "v": 5.168
+        },
+        {
+          "label": "Colorado need found in the resource plan",
+          "sub": "commission finding; nothing selected in Phase II as of September 2026",
+          "v": 5.4
+        },
+        {
+          "label": "Colorado Near-Term Procurement approved",
+          "sub": "ten projects, up to this much, February 2026",
+          "v": 4.1
+        },
+        {
+          "label": "Additional pipeline",
+          "sub": "stated as 'more than 20 GW' — enquiries, not agreements",
+          "v": 20.0
+        }
+      ],
+      "note": "Two bars are the same height for different reasons: the contracted block and the NextEra development scope both read 2 GW, but one is customers signed and the other is generation to be built. Notice also that the Southwestern Public Service portfolio is quoted in {{nameplate capacity}} — 5,168 MW nameplate is 3,121 MW accredited, a 40 percent haircut that disappears if you read only the headline."
+    },
+    {
+      "id": "where-xcel-slots-in",
+      "kind": "table",
+      "read": "5 min",
+      "title": "Where Xcel slots in among the utilities in this curriculum",
+      "intro": "Six utilities, six different answers to the same questions. This table is the point of studying more than one: the differences are structural, and none of them is a company being better or worse at its job.",
+      "cols": [
+        "Question",
+        "Xcel",
+        "Dominion",
+        "Southern",
+        "Entergy",
+        "Oncor",
+        "AEP"
+      ],
+      "rows": [
+        [
+          "Owns generation?",
+          "Yes, in four operating companies",
+          "Yes",
+          "Yes",
+          "Yes",
+          "**No — wires only**",
+          "Yes, and competitive too"
+        ],
+        [
+          "Market above it",
+          "{{MISO}}, {{SPP}}, and **no RTO in Colorado**",
+          "{{PJM}}",
+          "No RTO — its own balancing authority",
+          "MISO South",
+          "{{ERCOT}}, energy-only",
+          "PJM, SPP and ERCOT at once"
+        ],
+        [
+          "Commission",
+          "Appointed, in eight states",
+          "Appointed",
+          "**Elected** in Georgia",
+          "Appointed, plus a city council",
+          "Appointed",
+          "Appointed, in eleven states"
+        ],
+        [
+          "What authorizes a plant",
+          "A resource-plan order plus a competitive solicitation",
+          "An {{IRP}} then a {{CPCN}}",
+          "A {{CPCN}} certifying a decade at once",
+          "A CPCN naming the customer",
+          "Nothing — it certifies no generation",
+          "State-by-state, varies"
+        ],
+        [
+          "Large-load instrument",
+          "Three tariffs at three stages, plus a customer-funded charge",
+          "GS-5 class, 14-year terms, 85/60 minimums",
+          "Contracted capacity under a rate freeze",
+          "Certificates naming one customer",
+          "Statute and a batch process, not a tariff",
+          "**Eight approved tariffs**"
+        ],
+        [
+          "Headline load number",
+          "~2 GW contracted, 20 GW+ pipeline",
+          "~53.8 GW contracted, 12.0 GW firm",
+          "17 GW contracted",
+          "Certified per customer",
+          "298 GW requested, ~8 GW energized",
+          "**69 GW under executed agreements**"
+        ],
+        [
+          "Distinctive risk",
+          "**Unbounded wildfire liability in a state with no cap**",
+          "Concentration in one county",
+          "Construction cost memory from Vogtle",
+          "Single-customer concentration",
+          "Political intervention in the queue",
+          "Coordinating three RTOs at once"
+        ],
+        [
+          "Distinctive asset",
+          "Upstream supply-chain reservations signed before the tariffs",
+          "Offshore wind at scale",
+          "A commission that can certify a decade in one order",
+          "Turbine exclusivity",
+          "The largest wires system in the country",
+          "~90 percent of the national 765 kV network"
+        ]
+      ],
+      "note": "Read the bottom two rows together. Every one of these companies has a structural advantage and a structural exposure, and in most cases they are the same fact seen twice. Xcel's supply-chain reservations are an advantage precisely because its states cannot approve resources fast enough — and its wildfire exposure is unbounded precisely because the state where it is largest has passed no cap."
+    },
+    {
+      "id": "where-it-fails",
+      "kind": "callout",
+      "tone": "warn",
+      "read": "5 min",
+      "title": "Where this model fails: five things a resource-plan state cannot tell you",
+      "ps": [
+        "**A commission order is not a contract, and an approved plan is not a portfolio.** Colorado's commission approved a resource plan and found roughly 5,400 MW of need. As of September 2026 the Phase II solicitation has selected **nothing** — bids are due in the third quarter of 2026. Anyone treating the plan approval as procurement is eighteen months early. The same trap runs the other way: the ten projects and up to 4,100 MW approved in February 2026 came from a *separate* near-term procurement, not from the plan.",
+        "**A settlement is not an outcome.** In June 2026 every party to Colorado's electric rate case signed a settlement at $225 million. In August the commission granted $157 million and imposed a thirteen-month average historical {{test year}} nobody had agreed to. Unanimous agreement among the parties does not bind the body that decides. Read {{settlement}} filings as the best case, never as the answer.",
+        "**The tariff you can read is not necessarily the tariff that will apply.** Of Xcel's three large-load tariffs, one is approved, one is proposed with a decision expected in early 2027 and one is filed. Terms move between filing and order — that is what intervenor testimony is for. A term sheet drawn from a proposed tariff is a negotiating position, not a price.",
+        "**Nameplate is not accredited, and neither is contracted.** The Southwestern Public Service portfolio is 5,168 MW {{nameplate capacity}} and 3,121 MW accredited. The three-tier data-center slide reads 2 GW, 4 GW and 20 GW-plus, and only the first is signed. Every number in this sector has a unit and a tier; a figure quoted without both is unusable.",
+        "**Liability without a statutory cap has no ceiling you can model.** The company states plainly that it 'remains unable to reasonably estimate any additional loss or the upper end of the range' for Smokehouse Creek. No mitigation programme, insurance tower or rate mechanism converts that into a number. When a state has passed no liability limit — as Colorado has not — the honest analytical answer is that the exposure is open, and the correct response is to watch the legislature rather than the utility.",
+        "**And one gap this guide will not paper over.** Xcel's own leadership gallery listed Adrian Rodriguez as president of Southwestern Public Service after a separate company's release showed he had moved on in March 2026. Who runs that operating company today is not established by any source reviewed. A collection gap stated is worth more than a name guessed."
+      ]
+    },
+    {
+      "id": "drill",
+      "kind": "flashcards",
+      "read": "drill",
+      "title": "Flashcards",
+      "cards": [
+        {
+          "q": "What does a resource-plan order actually authorize?",
+          "a": "A quantity of need in megawatts, a retirement schedule for existing units, and permission to run a solicitation. It does not name projects, name developers or set prices — those come from a competitive solicitation afterwards, typically eighteen months or more later."
+        },
+        {
+          "q": "What is the difference between an integrated resource plan and a certificate of public convenience and necessity?",
+          "a": "The plan finds a need and authorizes shopping; the certificate approves a specific facility. A state can approve a plan and still have selected nothing. Some states, like Georgia, certify a decade of specific capacity in one order; most keep the two steps separate."
+        },
+        {
+          "q": "Why does a utility run a near-term procurement alongside its main resource-plan solicitation?",
+          "a": "Because the planning cycle takes about three years from filing to signed contract and load does not wait. The near-term track is smaller, faster and justified by reliability rather than by long-run portfolio economics — and it is decided on thinner analysis, which is the cost of the shortcut."
+        },
+        {
+          "q": "What is a test year, and why does the convention matter?",
+          "a": "The twelve-month period of costs and sales a rate case uses as its base. A historic test year uses costs already incurred; a forecast year projects them. A utility investing faster than it depreciates recovers less under a historic year, which is why a commission can impose one as a discipline even when the parties settled on something else."
+        },
+        {
+          "q": "A commission grants less than the parties unanimously settled on. Is that unusual?",
+          "a": "No. A settlement is a joint recommendation, not a binding outcome. The commission is free to modify or reject it. Read settlements as the best plausible case and wait for the order."
+        },
+        {
+          "q": "What are the two knobs that define a large-load tariff's strictness?",
+          "a": "The applicability threshold — the size at which the special class begins — and the minimum demand charge, the share of contracted capacity billed whether used or not. A low threshold plus a high minimum is the strictest combination, because it catches more customers and holds each one to more."
+        },
+        {
+          "q": "What does a minimum demand charge protect against, in one sentence?",
+          "a": "A customer that contracts for capacity, causes the utility to build for it, and then arrives smaller or later than promised — leaving other ratepayers funding the difference."
+        },
+        {
+          "q": "What is a build-own-transfer, and where does it sit between the alternatives?",
+          "a": "A developer builds the project and transfers ownership to the utility at commercial operation. It sits between a purchase agreement, where the utility never owns the asset, and a self-build, where the utility carries construction risk itself. It gives rate-based ownership without the build risk."
+        },
+        {
+          "q": "What is unusual about recovering a customer's supply through a dedicated charge rather than general rates?",
+          "a": "The cost never reaches the residential class at all. The customer pays the full cost of its own new generation for the contract's duration, so the cross-subsidy argument does not arise — but a commission is then approving a large asset outside the portfolio analysis a resource plan would have applied to it."
+        },
+        {
+          "q": "Why is a hundred-hour storage duration a different job from a four-hour battery?",
+          "a": "A four-hour battery shifts energy within a day, covering the evening peak. A hundred-hour system covers multi-day shortfalls — a still, cloudy week — which is a resource-adequacy job rather than a peak-shifting one. The technologies, chemistries and economics are not comparable."
+        },
+        {
+          "q": "What three things does the absence of a regional transmission organization remove?",
+          "a": "A capacity price set by auction, a regional planner that allocates transmission cost across a footprint, and an independent load forecast against which the utility's own can be checked. What replaces all three is the state commission, which becomes the effective buyer."
+        },
+        {
+          "q": "Why does an unbounded wildfire liability change the cost of unrelated projects?",
+          "a": "Because it raises insurance premiums and pressures credit ratings, and a lower rating raises the cost of the debt funding every megawatt in the plan. Liability is a financing input, not a safety line item."
+        },
+        {
+          "q": "Which single variable most determines a utility's wildfire exposure?",
+          "a": "State law — whether the state applies strict liability or inverse condemnation, caps aggregate damages, or grants an affirmative defence to a utility that followed an approved mitigation plan. Hardening programmes reduce ignition probability; statutes bound the consequence."
+        },
+        {
+          "q": "What does 'nameplate capacity' overstate, and by roughly how much in a mixed renewable portfolio?",
+          "a": "It overstates the contribution to meeting peak demand. In one 17-project portfolio of wind, solar, storage and gas, 5,168 MW nameplate corresponded to 3,121 MW accredited — about a 40 percent reduction. Always ask which figure a portfolio announcement is quoting."
+        },
+        {
+          "q": "Why would a large customer volunteer to pay the full cost of new generation?",
+          "a": "Speed and a clean-energy claim. Waiting for a resource-plan cycle costs years, and a customer that funds new wind, solar and storage can say its load is served by new clean resources rather than the existing grid mix. Its constraint is time and reputation, not price."
+        }
+      ]
+    },
+    {
+      "id": "check-yourself",
+      "kind": "quiz",
+      "read": "drill",
+      "title": "Self-test",
+      "items": [
+        {
+          "q": "A state commission approves a utility's resource plan finding 5,400 MW of need. What has the utility obtained?",
+          "c": [
+            "Signed contracts for 5,400 MW",
+            "Authority to run a competitive solicitation to fill that need",
+            "Certificates for named power plants",
+            "A guaranteed return on 5,400 MW of new rate base"
+          ],
+          "a": 1,
+          "why": "The order finds need and authorizes procurement. Projects, developers and prices come out of a competitive solicitation afterwards — often more than a year later. In one live example the plan was approved and the solicitation had selected nothing eighteen months on."
+        },
+        {
+          "q": "Every party to a rate case signs a settlement at $225 million. The commission grants $157 million and imposes a test-year convention nobody agreed to. What does this demonstrate?",
+          "c": [
+            "The settlement was improperly filed",
+            "A settlement is a joint recommendation, not a binding outcome",
+            "The commission exceeded its authority",
+            "The intervenors withdrew"
+          ],
+          "a": 1,
+          "why": "Commissions are not bound by settlements. They may modify or reject them. A unanimous settlement is the best plausible case, not the answer — and the test-year convention is one of the levers a commission uses to reduce a settled number."
+        },
+        {
+          "q": "Two states file large-load tariffs. State A: 100 MW threshold, 60 percent minimum demand. State B: 50 MW threshold, 80 percent minimum demand. Which is stricter, and why?",
+          "c": [
+            "State A, because a higher threshold is more restrictive",
+            "State B, because it catches more customers and holds each to more",
+            "They are equivalent",
+            "Cannot tell without the contract term"
+          ],
+          "a": 1,
+          "why": "A lower threshold widens the net and a higher minimum tightens the obligation. Both knobs move the same way in State B. Contract term and exit provisions matter too, but on these two variables B is unambiguously stricter."
+        },
+        {
+          "q": "A utility signs turbine and wind-turbine capacity reservations before its large-load tariffs are approved and before its resource-plan solicitation closes. What is the strategic logic, and what is the cost?",
+          "c": [
+            "It is hedging fuel prices; the cost is basis risk",
+            "The binding constraint is equipment and crews rather than permission, so the supply chain is contracted first; the cost is that the utility is no longer a neutral evaluator of competing bids",
+            "It is avoiding tariffs on imports; the cost is inventory",
+            "It is a financing arrangement; the cost is interest"
+          ],
+          "a": 1,
+          "why": "When lead times on turbines exceed the regulatory calendar, reserving capacity early is the move that protects the schedule. The consequence is a conflict the commission must police: a utility holding turbine slots has an interest in bids that use them."
+        },
+        {
+          "q": "What is the practical effect of an operating company belonging to no regional transmission organization?",
+          "c": [
+            "It cannot sell power outside its state",
+            "There is no capacity auction, no regional transmission planner and no independent load forecast — the state commission becomes the effective buyer",
+            "It is exempt from federal reliability standards",
+            "Its rates are set federally"
+          ],
+          "a": 1,
+          "why": "All three regional functions disappear and the state commission absorbs them. Sales into neighbouring markets and participation in an imbalance market can continue; what is missing is the regional price, plan and forecast."
+        },
+        {
+          "q": "A utility states it 'remains unable to reasonably estimate any additional loss or the upper end of the range' for a wildfire. What does that tell you about the exposure?",
+          "c": [
+            "It is fully insured",
+            "It is bounded by the settlements already reached",
+            "There is no ceiling that can be modelled from public information",
+            "It has been securitized"
+          ],
+          "a": 2,
+          "why": "That sentence is the disclosure language for an unbounded liability. Settlements reached are a floor, not a cap. What would create a ceiling is a statute limiting aggregate damages or granting an affirmative defence — which is a legislative question, not a utility one."
+        },
+        {
+          "q": "A portfolio announcement quotes 5,168 MW of new projects. The same filing gives an accredited figure of 3,121 MW. Which should you use to assess how much peak demand the portfolio serves?",
+          "c": [
+            "5,168 MW, the nameplate",
+            "3,121 MW, the accredited capacity",
+            "The average of the two",
+            "Neither; use the capital cost"
+          ],
+          "a": 1,
+          "why": "Nameplate is the rating under ideal conditions. Accredited capacity is the contribution planners count toward meeting peak. For a wind-heavy portfolio the gap is large — here about 40 percent — and headlines almost always quote the larger number."
+        },
+        {
+          "q": "A company's slide shows 2 GW contracted, 4 GW contracted by year-end 2027, and more than 20 GW of additional pipeline. Which figure describes agreements that exist today?",
+          "c": [
+            "All three",
+            "2 GW only",
+            "2 GW and 4 GW",
+            "20 GW, since pipeline includes everything signed"
+          ],
+          "a": 1,
+          "why": "Only the first tier describes signed agreements or projects under construction. The 4 GW is a target using the word 'contracted' about the future, and pipeline is interest. The contracted block staying flat across two consecutive quarters is the detail that makes the distinction concrete."
+        },
+        {
+          "q": "Why can a data-center load figure from one utility not be compared with another's?",
+          "c": [
+            "Different accounting standards",
+            "Each company headlines a different tier of its own funnel — requests, contracted, firm, energized — and the tiers differ by an order of magnitude",
+            "Different fiscal years",
+            "Regulatory confidentiality"
+          ],
+          "a": 1,
+          "why": "One reports interconnection requests, another executed agreements, another energized load. Reading across requires finding the equivalent tier in each company's disclosure, which is frequently not the tier on the slide."
+        },
+        {
+          "q": "A commission approves a customer-funded charge that recovers the full cost of new generation from one large customer. What ordinary regulatory argument does this structure avoid, and what new question does it raise?",
+          "c": [
+            "It avoids the prudence review; it raises a question about the return on equity",
+            "It avoids the cross-subsidy argument; it raises the question of approving a large asset outside the portfolio analysis a resource plan would apply",
+            "It avoids the interconnection queue; it raises a question about transmission",
+            "It avoids the test year; it raises a question about depreciation"
+          ],
+          "a": 1,
+          "why": "If the customer pays every cost, no other ratepayer is subsidizing the build, so the usual cost-allocation fight does not arise. But the asset is then approved on a single customer's contract rather than through the portfolio modelling and intervenor testimony a resource plan would have applied to it."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,670 @@
+{
+ "schemaVersion": 2,
+ "slug": "aep",
+ "title": "AEP — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "one-company-three-markets",
+   "title": "One company, three markets: what changes when the holding company spans PJM, SPP and ERCOT",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The Entergy guide taught the {{holding company}}: one stock, five operating companies, five regulators, and one grid operator above all of them. AEP is that structure with the last simplification removed. Its seven operating companies sit in **three different regional markets** — Appalachian Power, AEP Ohio, Indiana Michigan Power and Kentucky Power in {{PJM}}; Public Service Company of Oklahoma and Southwestern Electric Power in {{SPP}}; AEP Texas in {{ERCOT}} — and two of the seven own no generation at all. So the regulated chain this corpus has taught runs in two different shapes and under three different market designs inside one balance sheet.",
+    "Hold the two axes apart, because almost every confusion about this company comes from collapsing them. The **retail axis** is the state: eight commissions decide rates, certificates and the terms on which a large load connects, and they decide them differently — Ohio and Texas are restructured, so AEP Ohio and AEP Texas are wires-only; Indiana, Michigan, Virginia, West Virginia, Kentucky, Oklahoma, Arkansas and Louisiana are traditional, so those companies still own plants. The **wholesale axis** is the market: PJM runs a {{capacity market}} that clears three years ahead, SPP sets a capacity obligation on its members without a centralized auction, and ERCOT has no capacity product at all — an {{energy-only market}} where scarcity pricing is the whole signal. A single sentence about 'AEP's load growth' therefore describes at least three different commercial mechanisms.",
+    "What is genuinely common across all of it is the wires. AEP operates roughly 38,000 circuit miles of transmission including about 2,000 miles at {{765 kV}} — a network the company says is nearly ninety percent of all the 765 kV in the United States, built starting in 1969. That asset is the reason a company with this much regulatory complexity is nonetheless coherent as an investment: transmission earns under {{FERC formula rate}}s that update annually, it is the same business in every RTO, and by the company's own account it produces more than half of operating earnings.",
+    "The guide runs in this order: who decides what and where; what a large-load tariff actually is as an instrument, and the four terms that make one; the eight-state comparison; the one public measurement of what a tariff does to a queue; the discipline of keeping contracted load apart from pipeline; the three different ways this company has to buy capacity; why transmission voltage is a strategy rather than an engineering detail; how one backbone capability gets awarded through four different planning processes; who pays for a line that crosses five states; the sourced gigawatts on a clock; then the failure section, the flashcards and the self-test."
+   ]
+  },
+  {
+   "id": "who-decides-where",
+   "title": "Who decides where: seven operating companies, eight commissions, three markets",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "Read this table down the 'Market' column first and the 'Owns generation' column second. Those two facts, together, determine what a seller can sell into each territory — and they differ inside one company.",
+   "cols": [
+    "Operating company",
+    "States",
+    "Market",
+    "Owns generation",
+    "What its large-load instrument is"
+   ],
+   "rows": [
+    [
+     "AEP Ohio",
+     "Ohio",
+     "{{PJM}}",
+     "No — a wires-only utility in a restructured state",
+     "Schedule DCT, the data-center tariff the PUCO adopted in July 2025: 25 MW threshold, 12-year term, 85 percent minimum demand"
+    ],
+    [
+     "AEP Texas",
+     "Texas",
+     "{{ERCOT}}",
+     "No — a {{TDU}}, like Oncor",
+     "No company tariff. {{SB 6}} governs, and the customer signs a letter of agreement with posted {{credit support}}"
+    ],
+    [
+     "Appalachian Power (with Wheeling Power)",
+     "Virginia, West Virginia",
+     "{{PJM}}",
+     "Yes — a {{vertically integrated utility}}",
+     "Schedule L.P.S. in Virginia (100 MW site / 150 MW aggregated, 14 years, 80 percent) and revised Large Capacity Power tariffs in West Virginia"
+    ],
+    [
+     "Indiana Michigan Power",
+     "Indiana, Michigan",
+     "{{PJM}}",
+     "Yes",
+     "Tariff I.P. in Indiana (70 MW site / 150 MW aggregated, 12-year minimum term, 80 percent) and a separate Michigan tariff at 50 MW and 90 percent"
+    ],
+    [
+     "Kentucky Power",
+     "Kentucky",
+     "{{PJM}}",
+     "Yes",
+     "Industrial General Service — 150 MW, 20 years, 90 percent: the strictest terms in the set"
+    ],
+    [
+     "Public Service Company of Oklahoma",
+     "Oklahoma",
+     "{{SPP}}",
+     "Yes",
+     "A two-tier Large Power and Light proposal — 75 MW and above on 10–15 years, 10–75 MW on 2–5 years"
+    ],
+    [
+     "Southwestern Electric Power",
+     "Arkansas, Louisiana, Texas",
+     "{{SPP}}",
+     "Yes",
+     "An Electric Service Large Load contract in Texas at 75 MW aggregated, 17 years including a five-year {{ramp period}}"
+    ],
+    [
+     "AEP Transmission (Holdco, the state transcos, Transource and the JVs)",
+     "Across the footprint",
+     "PJM, SPP, MISO and ERCOT",
+     "No — transmission only",
+     "No large-load instrument. It sells transmission service under {{FERC formula rate}}s and builds what the regional plans award"
+    ]
+   ]
+  },
+  {
+   "id": "the-tariff-as-an-instrument",
+   "title": "The tariff as an instrument: what a utility is actually selling a data center",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "The Dominion guide introduced the {{large-load tariff}} and worked its {{minimum demand charge}} arithmetic. This guide asks the next question: why does a utility want one, and what does the document actually do? A large-load tariff is not primarily a price. It is a **risk-transfer instrument** that converts a request the utility cannot verify into an obligation the utility can finance against — and it does that with four terms, which are worth learning as a set because every state's version is a different setting of the same four dials.",
+    "**The term** is how many years the customer is bound. Twelve to twenty in this company's tariffs. It matters because it is compared against the depreciation life of whatever the utility builds: a substation and a feeder over twelve years is a comfortable match, a combined-cycle plant over twelve years is not, which is why the tariffs lengthened as the build shifted from wires to generation. **The {{ramp period}}** is how long the customer has to grow into its contracted demand before the minimum bill applies in full — four years in Ohio, up to five in Indiana — because a campus energizes in halls, not at once. **{{Credit support}}** is the collateral: a letter of credit, cash, or a parent guaranty, typically waived only for customers above a stated credit rating. And **the {{exit fee}}** is what is owed for leaving early — commonly the remaining minimum charges, capped at some years.",
+    "The **{{minimum demand charge}}** is the fifth number and the one that gets quoted, because it is the take-or-pay: 80 percent in Indiana, Virginia and West Virginia, 85 percent in Ohio, 90 percent in Michigan and Kentucky. Read it together with the other four rather than alone. An 85 percent obligation over twelve years with a four-year ramp and three years of exit charges is a very different instrument from a 90 percent obligation over twenty years — and both are different again from ERCOT, where no such tariff exists and the equivalent protection is cash posted under a statute.",
+    "Why the utility wants this is straightforward: without it, a load forecast is a collection of unpriced options, and a utility that builds against unpriced options strands the cost on everyone else. Why the customer signs is more interesting. A signed minimum-demand obligation is what converts a queue position into a construction schedule the utility will actually staff — so the tariff is, from the developer's side, the price of a date. That is the trade the whole regulated large-load market now runs on, and the reason AEP's eight-state franchise is a competitive asset rather than a compliance burden."
+   ]
+  },
+  {
+   "id": "eight-tariffs-one-argument",
+   "title": "Eight tariffs, one argument: the same four dials, set differently",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The company's own comparison, as published in August 2026. Read across a row to price one state; read down a column to see where a commission was strict. The pattern worth noticing: the states where the utility owns generation carry the longest terms, because the asset being underwritten is a power plant rather than a substation.",
+   "cols": [
+    "Jurisdiction",
+    "Threshold",
+    "Term",
+    "Minimum demand",
+    "Exit terms",
+    "Status"
+   ],
+   "rows": [
+    [
+     "Ohio",
+     "25 MW individual site, aggregated",
+     "12 years including a 4-year {{ramp period}}",
+     "85%",
+     "After year 5, minimum bills for the remaining term, capped at 3 years",
+     "Approved — and under appeal"
+    ],
+    [
+     "Indiana",
+     "70 MW site / 150 MW aggregated",
+     "12–17 years",
+     "80%",
+     "After year 5, remaining term capped at 5 years",
+     "Approved"
+    ],
+    [
+     "Michigan",
+     "50 MW site, aggregated",
+     "15–20 years",
+     "90%",
+     "Same structure",
+     "Approved August 2026"
+    ],
+    [
+     "Virginia",
+     "100 MW site / 150 MW aggregated",
+     "14 years including a 4-year ramp",
+     "80%",
+     "Same structure",
+     "Approved June 2026"
+    ],
+    [
+     "West Virginia",
+     "100 MW site / 150 MW aggregated",
+     "12–17 years depending on ramp",
+     "80%",
+     "Same structure",
+     "Approved"
+    ],
+    [
+     "Kentucky",
+     "150 MW individual site",
+     "20 years",
+     "90%",
+     "Same structure",
+     "Approved"
+    ],
+    [
+     "Oklahoma",
+     "75 MW+ site (10–15 yrs); 10–75 MW site (2–5 yrs)",
+     "Two tiers",
+     "80%",
+     "Above 75 MW: after year 5, capped at 5 years. 10–75 MW: after year 2, capped at 2 years",
+     "Pending"
+    ],
+    [
+     "Texas (SWEPCO)",
+     "75 MW aggregated",
+     "17 years including a 5-year ramp",
+     "80%",
+     "Minimum bills for the remaining term",
+     "Pending"
+    ],
+    [
+     "Texas (AEP Texas, {{ERCOT}})",
+     "75 MW under {{SB 6}}",
+     "No tariff term — a letter of agreement",
+     "No tariff minimum",
+     "Statutory security rather than an exit fee",
+     "Governed by statute, not tariff"
+    ]
+   ],
+   "note": "Every approved row also requires collateral. The company's footnotes add that the percentage 'may be higher based on prior period's peak demand', and that the Indiana, Michigan, Texas, Virginia and West Virginia minimum-bill calculations include an energy component as well as a demand component — so the headline percentage understates the obligation in five of the eight."
+  },
+  {
+   "id": "what-a-tariff-does-to-a-queue",
+   "title": "What a tariff does to a queue, measured once",
+   "kind": "callout",
+   "tone": "info",
+   "read": "3 min",
+   "ps": [
+    "**The measurement.** Most claims about large-load tariffs are theoretical. Ohio produced an actual before-and-after, because AEP Ohio had to report its contracting to the commission. Before the tariff, the utility described roughly **30,000 MW** of original requests. After it, the February 2026 filing showed **17,861 MW** of total contracted projects — of which 5,642 MW were signed under the new tariff and 12,219 MW were pre-tariff contracts — with 13,022.7 MW proceeding to engineering study. Against a system whose peak is roughly 8,000 to 10,500 MW.",
+    "**Read the subtraction carefully.** Roughly two fifths of the stated demand did not convert into a contract once a contract meant an 85 percent take-or-pay obligation for twelve years. That is not evidence the requests were dishonest; it is evidence that a free request and a committed one are different objects, and that the difference is large enough to reshape a resource plan. It is the same lesson the Oncor guide draws from ERCOT's request-versus-energized gap, arrived at from the opposite direction — Texas measured the gap and priced it, Ohio priced it and then measured what survived.",
+    "**And notice what remained.** Even after the tariff, contracted load is roughly twice the system's own peak. The instrument filtered the queue without shrinking the problem: the utility still has to build for a doubling. So the tariff's real function is not to reduce demand but to make the demand that remains **financeable** — which is exactly why the company's capital plan and its contracted-load ladder move together in every release.",
+    "**The seller's use of this.** When a utility quotes a contracted figure, ask whether it is post-tariff. A number gathered before a minimum-demand obligation existed and a number gathered after are not comparable, and in this one case the ratio between them was measured at about 0.6."
+   ]
+  },
+  {
+   "id": "contracted-is-not-pipeline",
+   "title": "Contracted is not pipeline — and a letter of agreement is not a service agreement",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**Two numbers, always.** This company reports contracted load and queue activity as separate figures, and a reader who merges them will be wrong by a factor of about three. As of mid-2026 the contracted figure was **69 GW by 2030, backed by fully executed agreements**; the queue figure was **about 195 GW of active projects**. The ladder to 69 GW is worth memorizing because it is the clearest public record of how fast this market moved: more than 20 GW in February 2025, 24 GW in July, 28 GW in October, **56 GW** in February 2026, 63 GW in May, 69 GW in July.",
+    "**Then split the contracted number by instrument.** The company discloses the contract form by market, and the disclosure matters more than the total. In {{PJM}} the load is 100 percent letters of agreement and about 95 percent executed {{ESA}}s. In {{SPP}} it is 100 percent letters and about 55 percent service agreements. In {{ERCOT}} it is **100 percent letters of agreement only** — because, in the company's words, the ERCOT contracting structure allows for letters of agreement alone. And ERCOT is 45 of the 69 gigawatts.",
+    "**So the largest tranche rests on the weakest instrument — and the strongest collateral.** A letter of agreement is not a tariffed service contract; it is a commitment to proceed. What stands behind the ERCOT tranche instead is cash: approximately **$2 billion** of security in cash, corporate or parental guarantees and letters of credit, received in July 2026 for the 40 GW submitted into the grid operator's batch process. Whether that is stronger or weaker than a filed tariff obligation is a genuine question, and the honest answer is that it is different — money now against enforceable terms later.",
+    "**The event that tests it.** In August 2026 the grid operator paused the batch process and began an audit of the projects moving through it, with a verification report due that December and the prior study timeline to be reassessed. Two thirds of the contracted book therefore sits behind a process that was, at the time of writing, suspended. That is the single largest piece of schedule risk in this dossier, and it is not a risk the company controls."
+   ]
+  },
+  {
+   "id": "three-ways-to-buy-capacity",
+   "title": "Three ways to buy capacity: the same company under three market designs",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The Dominion guide taught PJM's capacity auction and the Southern guide taught life without any market. This company lives in both worlds at once, plus a third. The last column is the one a seller should read: what actually gets built, and who decides.",
+   "cols": [
+    "Market",
+    "How capacity is procured",
+    "What sets the price",
+    "What it means for building new supply",
+    "AEP companies in it"
+   ],
+   "rows": [
+    [
+     "{{PJM}}",
+     "A {{capacity market}} — the Base Residual Auction clears three years ahead against a zonal reliability requirement, with resources credited at their {{ELCC}}",
+     "The auction's clearing price per megawatt-day, which cleared at the cap in consecutive auctions and left the 2028/2029 procurement thousands of megawatts below the reliability requirement",
+     "A three-year-ahead price signal that has been screaming, and an interconnection queue that cannot answer it fast enough. Utilities inside {{FRR}} carry their own capacity instead and are insulated from the clearing price in both directions",
+     "AEP Ohio, Appalachian Power, Indiana Michigan Power, Kentucky Power"
+    ],
+    [
+     "{{SPP}}",
+     "A capacity obligation placed on each member — a required {{planning reserve margin}} met with owned or contracted accredited capacity — rather than a centralized auction",
+     "No single public clearing price; the cost is whatever the utility's own procurement costs, tested in a state {{prudence review}}",
+     "New supply arrives through utility all-source {{RFP}}s and state pre-approval, so the state commission is the effective buyer",
+     "Public Service Company of Oklahoma, Southwestern Electric Power"
+    ],
+    [
+     "{{ERCOT}}",
+     "Nothing. An {{energy-only market}} with no capacity product",
+     "Scarcity prices during tight hours, administratively supported up to a system-wide offer cap",
+     "Nobody is obliged to build, and no commission certifies a plant. Supply is a private investment decision, which is why on-site generation and merchant storage carry the load-growth story there",
+     "AEP Texas"
+    ]
+   ],
+   "note": "One consequence worth holding: the same corporate decision — sign a gigawatt of data-center load — produces a certification docket in Oklahoma, a capacity-auction cost passed to customers in Ohio, and a private financing question in Texas. A seller who has learned one of these has learned a third of this company."
+  },
+  {
+   "id": "why-voltage-is-a-strategy",
+   "title": "Why voltage is a strategy: what 765 kV buys and what it costs",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Transmission is a throughput problem with a simple physical core. Power delivered is voltage times current; the heat wasted in a conductor rises with the **square** of the current ({{I²R loss}}). So moving the same power at a higher voltage means proportionally less current and dramatically less loss, and it means more power through the same right-of-way. That is the whole argument for extra-high voltage, and it is why the company states a single {{765 kV}} circuit carries up to six times the power of a 345 kV line with half the transmission losses.",
+    "The costs are equally concrete. Higher voltage needs taller towers, wider corridors, greater clearances, and — critically — **{{transformer}}s, breakers and series compensation built by a very short list of manufacturers with multi-year backlogs**. This is why AEP's November 2025 agreement with Quanta Services pairs a 765 kV construction relationship with a development agreement to expand domestic manufacturing capacity for extra-high-voltage transformers and circuit breakers. The company's constraint is not the permit or the crew; it is the tank. A seller who understands transformer lead times understands this transmission plan better than one who reads the mileage.",
+    "The franchise is historical and hard to copy. AEP energized the world's first 765 kV line in 1969 and today operates more than 2,100 miles and about 30 substations at that voltage across six states — by its own account nearly ninety percent of the national total. Sixty years of design practice, spare-parts inventory, protection settings and trained crews is a real barrier, and the company monetizes it explicitly, describing itself as 'working with other IOUs to assist in their capability to build out 765 kV infrastructure' and entering joint ventures rather than bidding alone.",
+    "Two things follow for the corpus. First, when a region decides to build a backbone rather than patch a corridor — as {{SPP}} did in approving 949 miles of new 765 kV, and as Texas did in choosing 765 kV for the Permian Basin — the addressable market for extra-high-voltage equipment steps up discontinuously, and the equipment order precedes the construction by years. Second, this voltage choice is the strongest available signal that a planner expects load to keep growing: nobody builds 765 kV for a corridor they expect to be adequate."
+   ]
+  },
+  {
+   "id": "one-backbone-four-planning-processes",
+   "title": "One capability, four planning processes: how the same line gets awarded four different ways",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The engineering is the same in every row. The process that authorizes it, the entity that pays, and the counterparty a seller must reach are not. This is the table that explains why a multi-RTO transmission owner is a genuinely different business from a single-state one.",
+   "cols": [
+    "Where",
+    "The planning process",
+    "How a project is awarded",
+    "Who pays",
+    "AEP's vehicle"
+   ],
+   "rows": [
+    [
+     "{{PJM}}",
+     "The {{RTEP}} — the grid operator identifies reliability needs from its {{load forecast}} and opens competitive windows",
+     "Bids are submitted into a window and the board approves a portfolio; the 2024 window produced a $6.7B plan and the 2025 window an $11.8B plan",
+     "Regional {{cost allocation}} across zones, which is itself contested — advocates argued about 60 percent of one Ohio project's cost falls on Ohio ratepayers",
+     "Joint ventures: Valley Link with FirstEnergy Transmission and Dominion; Grid Growth Ventures with FirstEnergy Transmission"
+    ],
+    [
+     "{{SPP}}",
+     "The {{ITP}} — an annual portfolio assembled by the grid operator against a regional benefit-cost test",
+     "The board approves a slate; the 2025 plan was about $8.6B across 50 projects including 949 miles of new 765 kV",
+     "Allocated across the SPP footprint under the regional formula",
+     "The operating companies and the transmission business directly"
+    ],
+    [
+     "MISO",
+     "The {{MTEP}} — long-range portfolios assembled in tranches",
+     "The operator selects upgrades and assigns them; a nearly 200-mile 765 kV project into Wisconsin was selected in January 2026",
+     "Allocated across the MISO footprint",
+     "Midcontinent Grid Solutions, a joint venture with a Berkshire Hathaway Energy affiliate"
+    ],
+    [
+     "{{ERCOT}}",
+     "A state process: the grid operator plans, and the {{public utility commission}} approves the plan and then each line's {{CCN}}",
+     "The commission chose 765 kV for the Permian Basin in April 2025 and assigned the import paths among transmission owners",
+     "Every load in the market, on the {{postage-stamp rate}}",
+     "AEP Texas building the Howard–Solstice path, roughly 300 miles"
+    ],
+    [
+     "A single customer",
+     "No regional process at all — a bilateral arrangement the state commission reviews",
+     "The customer funds the transmission directly",
+     "The customer. At Piketon, a developer committed to pay the entire $4.2B",
+     "AEP Ohio, with the campus developer paying"
+    ]
+   ],
+   "note": "The last row is the outlier that proves the rule. Everywhere else the argument is about how to spread the cost; in a customer-funded build there is nothing to spread, which is why it needs no window, no benefit-cost test and no allocation fight — and why it sits outside the company's capital plan entirely."
+  },
+  {
+   "id": "who-pays-for-a-multi-state-line",
+   "title": "Who pays for a line that crosses five states",
+   "kind": "proscons",
+   "read": "3 min",
+   "intro": "The Dominion guide set cost-causation against socialization inside one state. A 765 kV backbone crossing an RTO footprint raises the same question between states, and the arguments are made by state consumer advocates against a regional planner rather than by classes against a utility.",
+   "cards": [
+    {
+     "t": "Spread it regionally — the backbone is a network good",
+     "meta": "Regional {{cost allocation}} under the RTO's formula puts the cost on every zone that benefits from a stronger interconnected system",
+     "adv": [
+      "Gets continent-scale lines built at all: no single state's ratepayers could justify a corridor whose value is regional reliability",
+      "Matches the physics — power does not respect the state line, and a 765 kV loop supports every generator and load electrically connected to it",
+      "Lets the planner build ahead of individual requests rather than waiting for each load to fund its own piece, which is the only way to close a decade-long lead time"
+     ],
+     "dis": [
+      "A state whose customers pay a large share for a line built mainly to serve growth elsewhere has a political problem its regulator cannot solve alone — one estimate put West Virginia ratepayers at more than $440 million over 40 years for two such lines",
+      "Ratepayers carry construction-cost overruns and even the cost of a cancelled project, without having chosen it",
+      "The allocation formula is decided at {{FERC}}, so a state commission that disagrees has no forum in which to say so"
+     ]
+    },
+    {
+     "t": "Make the beneficiary pay — trace the cause",
+     "meta": "Charge the load or the zone whose growth triggered the need, through {{cost allocation}} rules, contributions in aid of construction, or a direct customer-funded build",
+     "adv": [
+      "Politically survivable: it is the only version a residential customer in an untouched state can be told with a straight face",
+      "Filters the plan — a line nobody will fund directly may be a line the region does not need",
+      "It has been demonstrated at scale: one 10 GW campus's developer committed to pay $4.2 billion of transmission in full"
+     ],
+     "dis": [
+      "Tracing benefit on a meshed network is genuinely hard, and every method is arguable — the same line relieves congestion for parties who never asked for it",
+      "Customer-funded builds work only for a single very large load with a single very large balance sheet; nothing about them scales to ordinary growth",
+      "Front-loading cost onto the load pushes it to the next region, or {{behind-the-meter}}, where the planner can no longer see it"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gigawatts-on-the-aep-clock",
+   "title": "Gigawatts on the AEP clock: the fleet, the contracts, the queue",
+   "kind": "bars",
+   "read": "3 min",
+   "unit": "GW (company figures; see the dossier for dates and sources)",
+   "intro": "All from the company's own filings and decks. The lesson is in the middle of the chart: contracted load by 2030 now exceeds the entire owned generating fleet, and the queue exceeds it several times over.",
+   "items": [
+    {
+     "label": "Cook nuclear plant",
+     "sub": "the two units, licensed to 2034 and 2037",
+     "v": 2.296
+    },
+    {
+     "label": "Approved renewables and storage not yet in service",
+     "sub": "at June 30, 2026, of which one 224 MW battery",
+     "v": 1.808
+    },
+    {
+     "label": "Gas turbine capacity secured",
+     "sub": "through 2031, with options on 10 GW more to 2035",
+     "v": 13
+    },
+    {
+     "label": "Coal-fired capacity owned",
+     "sub": "of the fleet, end of 2025",
+     "v": 10.7
+    },
+    {
+     "label": "Owned generating capacity",
+     "sub": "end of 2025",
+     "v": 25.4
+    },
+    {
+     "label": "Current system peak demand",
+     "sub": "as stated in October 2025",
+     "v": 37
+    },
+    {
+     "label": "Contracted incremental load by 2030",
+     "sub": "fully executed agreements, July 2026",
+     "v": 69
+    },
+    {
+     "label": "Projected peak demand by 2030",
+     "sub": "company projection, October 2025",
+     "v": 65
+    },
+    {
+     "label": "Active projects in the interconnection queue",
+     "sub": "not contracted — August 2026",
+     "v": 195
+    }
+   ],
+   "note": "Two arithmetic facts the chart makes visible. The contracted additions by 2030 are larger than everything the company owns today, and nearly three times the gas turbine capacity it has secured to serve them — the balance comes from the market, from purchased power and from load that has not yet arrived. And the queue is about five times the system's current peak, which is why the contracted figure, not the queue, is the one the company puts in its headline."
+  },
+  {
+   "id": "where-aep-slots-in",
+   "title": "Where AEP's programs slot into the chain",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The same rungs the earlier utility guides walked, with the multi-market complication in the third column. The last column is what a seller can influence and when.",
+   "cols": [
+    "Rung",
+    "What it is here",
+    "Which market it differs in",
+    "What a seller can influence"
+   ],
+   "rows": [
+    [
+     "The plan",
+     "State {{IRP}}s in the five vertically integrated states; the capital plan for the wires; the regional transmission plans above all of them",
+     "Ohio and Texas have no generation plan — those companies build wires only",
+     "Read the state plans for generation and the RTO plans for corridors; they are different documents with different buyers"
+    ],
+    [
+     "The customer contract",
+     "A large-load tariff in seven jurisdictions; a letter of agreement under {{SB 6}} in ERCOT",
+     "The tariff's four terms differ by state; ERCOT has no tariff at all",
+     "This is where the campus's own electrical design is settled — on-site generation, storage, shed capability"
+    ],
+    [
+     "The certificate",
+     "{{CPCN}}-equivalents for plants in the integrated states; a {{CCN}} for lines in Texas; RTO board approval for regional transmission",
+     "Three different authorizing bodies for what is physically the same construction",
+     "Balance-of-plant, transformers and switchgear are procured alongside the certificate — and for {{765 kV}}, years before it"
+    ],
+    [
+     "The solicitation",
+     "All-source and technology-specific {{RFP}}s at Appalachian Power, Indiana Michigan Power and PSO — roughly 12,100 MW outstanding",
+     "Only in the integrated states. AEP Texas and AEP Ohio run none",
+     "The battery lane. Appalachian Power's Virginia standalone storage RFP and PSO's all-source RFP are the live doors"
+    ],
+    [
+     "The rate order",
+     "Eight commissions; Ohio moves to triennial cases after 2028; Texas uses an annual tracker",
+     "Wires-only companies file transmission-and-distribution cases with no fuel line",
+     "Nothing directly, but it sets how fast capital converts to earnings and therefore the appetite for the next tranche"
+    ],
+    [
+     "Interconnection",
+     "{{PJM}} and {{SPP}} generator queues; ERCOT's large-load batch process; the utility's own load studies",
+     "A generator queue and a large-load process are different lines with different rules",
+     "The date, which is the delivery date for everything behind it"
+    ],
+    [
+     "The regional layer",
+     "A {{capacity market}} in PJM, a capacity obligation in SPP, nothing in ERCOT",
+     "The three designs in the earlier table",
+     "Merchant storage economics exist only in ERCOT; in PJM and SPP the buyer is the utility or its bidder"
+    ]
+   ]
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The date moves, and here it moves in three different ways.** In {{PJM}} the generator queue and the {{RTEP}} set it; in {{SPP}} the {{ITP}} and a state pre-approval do; in {{ERCOT}} a batch process that was paused mid-2026 pending an audit. Two thirds of the contracted book sits behind that suspended process. A seller whose delivery date is a campus's {{energization}} date is exposed to whichever of the three governs that campus — and they are not correlated.",
+    "**The instrument is weaker than the number sounds.** Sixty-nine gigawatts 'backed by fully executed agreements' is 45 GW of letters of agreement in ERCOT, where the company says the market's structure permits nothing else. Cash collateral is real security and a letter of agreement is real intent, but neither is a tariffed service obligation, and the distinction is invisible in the headline figure. Owned by the reader of the press release.",
+    "**The template is on appeal.** The Ohio data-center tariff — the instrument the other seven filings were modelled on — is before the Supreme Court of Ohio, brought by manufacturers and supported by the hyperscalers who lost the settlement, and attacked from the other flank by a free-market institute arguing it charges the most elastic customers the highest markups. A reversal would not void signed contracts, but it would remove the template. Owned by nobody in any deal.",
+    "**The capacity price nobody in the company controls.** Two consecutive PJM auctions cleared at the cap, the later one procuring thousands of megawatts below the reliability requirement. That flows into bills across four states and turns a load-growth story into an affordability fight in each of them — which is why the company is now filing rate *reductions* in Indiana and Ohio while its capital plan grows. Owned by the {{RTO}}; landed on the utility.",
+    "**Balance sheet before demand.** The plan is $78B against a Moody's {{FFO}}-to-debt metric the company itself reports at 13.9 percent against a 13 percent downgrade threshold, with one operating company already on negative outlook. The financing answers so far — a $2.82B {{minority interest}} sale, $3B of equity forwards, an at-the-market programme and roughly $5B of federal loans — are why the plan is fundable and also why reported earnings fell year over year. A seller reading the capital plan as demand should read the credit metrics as the governor on it.",
+    "**The equipment, not the permit.** Extra-high-voltage {{transformer}}s and breakers come from a short list of manufacturers with multi-year backlogs, which is why the company signed a development agreement to expand domestic manufacturing capacity rather than simply ordering more. A transmission award is not a delivery slot. Owned by the supply chain.",
+    "**Sold to the wrong desk.** The turbines were reserved at the parent, years ahead, in volumes that close the market for the decade. The transmission equipment is bought by the transmission business against regional awards. The batteries — the smallest line in the plan — are bought through operating-company solicitations in the integrated states only, and in ERCOT not at all. Three different desks, three different clocks, and the one a storage seller wants is neither of the first two. Owned by the seller."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Name the two axes that determine what can be sold into any one AEP territory.",
+     "a": "The retail axis (which state commission, and whether the operating company owns generation) and the wholesale axis (which market — PJM, SPP or ERCOT). Two of the seven operating companies are wires-only; the rest are vertically integrated."
+    },
+    {
+     "q": "What are the four terms that make a large-load tariff an instrument rather than a price?",
+     "a": "The contract term, the ramp period, the credit support or collateral, and the exit fee. The minimum demand percentage is the fifth number and is meaningless read alone."
+    },
+    {
+     "q": "Why did large-load tariff terms lengthen as utilities moved from wires to generation?",
+     "a": "The term is compared against the depreciation life of what is built. Twelve years covers a substation comfortably and a combined-cycle plant badly, so the states underwriting plants wrote longer terms."
+    },
+    {
+     "q": "What happened to Ohio's stated data-center demand once a tariff applied?",
+     "a": "Roughly 30,000 MW of original pre-tariff requests became 17,861 MW of contracted projects — about two fifths did not convert once a contract meant an 85 percent take-or-pay obligation for twelve years."
+    },
+    {
+     "q": "What is the difference between a letter of agreement and an executed electric service agreement, and why does it matter here?",
+     "a": "A letter of agreement is a commitment to proceed; a service agreement is a tariffed obligation. ERCOT's structure permits only letters, and ERCOT is 45 of AEP's 69 contracted gigawatts — backed instead by about $2 billion of posted collateral."
+    },
+    {
+     "q": "Give the three capacity constructs AEP operates under and who effectively buys new supply in each.",
+     "a": "PJM: a capacity auction clearing three years ahead — the market signals, the queue delivers. SPP: a capacity obligation on each member — the state commission is the effective buyer through utility RFPs and pre-approval. ERCOT: nothing — a private investment decision against scarcity prices."
+    },
+    {
+     "q": "State the physical case for 765 kV over 345 kV in one sentence.",
+     "a": "At higher voltage the same power flows as less current, and loss rises with the square of current — so a single 765 kV circuit carries up to six times the power of a 345 kV line with about half the losses, on the same right-of-way."
+    },
+    {
+     "q": "What is the real constraint on building 765 kV, according to the company's own actions?",
+     "a": "Extra-high-voltage transformers and circuit breakers — built by a short list of manufacturers with multi-year backlogs. AEP signed a development agreement to expand domestic manufacturing capacity for them rather than simply ordering more."
+    },
+    {
+     "q": "Name the four planning processes that can authorize the same 765 kV line, and the fifth route that avoids all of them.",
+     "a": "PJM's RTEP, SPP's ITP, MISO's MTEP, and a state commission process in ERCOT. The fifth route is a single customer funding the transmission directly, as at the Piketon campus."
+    },
+    {
+     "q": "What is FRR and why can two utilities in PJM experience the same auction differently?",
+     "a": "The Fixed Resource Requirement: a utility carries its own accredited capacity to cover load plus a reserve instead of bidding into the auction. It is insulated from the clearing price in both directions — no windfall, no relief."
+    },
+    {
+     "q": "Why can a utility's reported earnings fall in a year its business grew?",
+     "a": "A minority interest. Selling a stake in a subsidiary raises cash without issuing shares, and the outside investor's share of earnings is permanently deducted from the parent's reported result."
+    },
+    {
+     "q": "What is supplemental transmission and why do consumer advocates single it out?",
+     "a": "Transmission built for a utility's own reliability or ageing-equipment needs rather than to solve a regional problem. It enters the regional plan without the competitive window or benefit-cost test regional projects face, so it is the least-reviewed large category of spending."
+    },
+    {
+     "q": "A campus developer says the tariff is expensive. What is it buying?",
+     "a": "A date. A signed minimum-demand obligation is what converts a queue position into a construction schedule the utility will actually staff and finance."
+    },
+    {
+     "q": "Where in this company can a battery actually be sold, and where can it not?",
+     "a": "Through all-source and standalone storage solicitations at the vertically integrated operating companies — Appalachian Power and PSO have live ones. Not at AEP Ohio or AEP Texas, which own no generation, and not into ERCOT through the utility at all."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "An operating company of this holding company is in a restructured state. What follows for a generation seller?",
+     "c": [
+      "It buys generation through a state resource plan",
+      "It owns no generation and runs no resource solicitation — the buyer is a merchant, an IPP or the campus",
+      "It buys generation but only through PPAs",
+      "Nothing changes; all the operating companies procure the same way"
+     ],
+     "a": 1,
+     "why": "AEP Ohio and AEP Texas are wires-only. The five vertically integrated companies run resource plans and RFPs; those two do not, so a generation or storage pitch to them has no counterparty."
+    },
+    {
+     "q": "Ohio's tariff carries 85 percent minimum demand and Kentucky's carries 90 percent. Which is the stricter instrument?",
+     "c": [
+      "Ohio, because 85 percent applies sooner",
+      "Kentucky, on that number alone",
+      "It cannot be judged from the minimum demand alone — Kentucky's is 20 years against Ohio's 12, and the exit terms and ramp differ",
+      "They are identical in effect"
+     ],
+     "a": 2,
+     "why": "The minimum demand is the fifth of five dials. Term, ramp, collateral and exit fee change the obligation as much as the percentage does — Kentucky pairs 90 percent with a 20-year term, which is a materially heavier instrument."
+    },
+    {
+     "q": "About 30,000 MW of Ohio requests became 17,861 MW of contracts. What does that measure?",
+     "c": [
+      "That the utility rejected two fifths of applicants",
+      "The difference between a free request and a committed one, once a take-or-pay obligation applied",
+      "A drop in data-center demand nationally",
+      "An error in the original forecast"
+     ],
+     "a": 1,
+     "why": "The tariff did not reduce demand; it filtered unpriced options out of it. The remaining contracted load was still roughly twice the system's own peak."
+    },
+    {
+     "q": "Forty-five of sixty-nine contracted gigawatts sit in ERCOT. What form do those commitments take?",
+     "c": [
+      "Executed electric service agreements under a state tariff",
+      "Letters of agreement only, because the market's contracting structure permits nothing else — backed by about $2 billion of posted collateral",
+      "Take-or-pay contracts at 85 percent minimum demand",
+      "Verbal commitments"
+     ],
+     "a": 1,
+     "why": "The company discloses contract form by market. ERCOT is 100 percent letters of agreement; PJM is about 95 percent service agreements. The security is cash rather than tariff terms."
+    },
+    {
+     "q": "Which market gives a merchant battery developer a business case without any commission's approval?",
+     "c": [
+      "PJM",
+      "SPP",
+      "ERCOT",
+      "All three equally"
+     ],
+     "a": 2,
+     "why": "ERCOT is energy-only: revenue comes from energy arbitrage and ancillary services, no plant is certified and no capacity auction pays it to exist. In PJM and SPP the effective buyer is the utility or its winning bidder."
+    },
+    {
+     "q": "Why does a single 765 kV circuit carry roughly six times the power of a 345 kV line?",
+     "c": [
+      "The conductors are six times thicker",
+      "At higher voltage the same power flows as less current, and losses rise with the square of current",
+      "It runs at a higher frequency",
+      "It uses direct current"
+     ],
+     "a": 1,
+     "why": "Power is voltage times current. Raising voltage cuts the current needed for the same power, and I²R loss falls with the square of that current — more throughput and lower losses on the same right-of-way."
+    },
+    {
+     "q": "A 765 kV project is awarded in a PJM planning window. What is the most likely thing to delay it?",
+     "c": [
+      "Finding an EPC contractor",
+      "Extra-high-voltage transformer and breaker lead times",
+      "Obtaining a FERC formula rate",
+      "The capacity auction result"
+     ],
+     "a": 1,
+     "why": "The company's own response — a development agreement to expand domestic manufacturing capacity for EHV transformers and circuit breakers — identifies the constraint. An award is not a delivery slot."
+    },
+    {
+     "q": "The Piketon campus's developer committed to pay the entire $4.2 billion of transmission. Why does that project need no cost-allocation fight?",
+     "c": [
+      "Because it is inside one state",
+      "Because there is nothing to allocate — a single customer funds it directly",
+      "Because FERC pre-approved it",
+      "Because the RTO waived the requirement"
+     ],
+     "a": 1,
+     "why": "Every other route argues about how to spread the cost across zones or classes. A fully customer-funded build removes the question, which is also why it sits outside the utility's capital plan."
+    },
+    {
+     "q": "AEP's reported operating earnings fell year over year in Q2 2026 while contracted load rose. What was the largest structural cause?",
+     "c": [
+      "A drop in electricity sales",
+      "The minority interest created by selling 19.9 percent of two transmission companies, plus tax timing",
+      "A rate case loss",
+      "Storm restoration costs"
+     ],
+     "a": 1,
+     "why": "The $2.82 billion stake sale raised equity without issuing shares, and the outside investors' share of transmission earnings is a permanent deduction from the parent's reported result."
+    },
+    {
+     "q": "A storage seller wants into this company. Which door is open?",
+     "c": [
+      "AEP Ohio's resource planning team",
+      "AEP Texas's interconnection desk",
+      "An all-source or standalone storage RFP at a vertically integrated operating company such as Appalachian Power or PSO",
+      "The parent's turbine reservation programme"
+     ],
+     "a": 2,
+     "why": "The two wires-only companies own no generation and run no solicitations, and the turbine reservations are a separate, closed programme. The live doors are the integrated companies' solicitations — Appalachian Power's Virginia standalone storage RFP and PSO's all-source RFP."
+    }
+   ]
+  }
+ ]
+}

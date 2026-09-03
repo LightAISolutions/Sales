@@ -1,0 +1,1596 @@
+{
+  "schemaVersion": 7,
+  "slug": "oncor",
+  "name": "Oncor Electric Delivery Company LLC",
+  "shortName": "Oncor",
+  "categories": [
+    "utility"
+  ],
+  "website": "https://www.oncor.com",
+  "headquarters": "1616 Woodall Rodgers Freeway, Dallas, Texas, United States",
+  "founded": "2007 (successor to a Texas corporation formed in 2001; serving Texas since 1912)",
+  "ownership": {
+    "type": "subsidiary",
+    "detail": "Oncor Holdings owns 80.25 percent of Oncor's membership interests and is indirectly wholly owned by Sempra (NYSE: SRE); Texas Transmission Investment LLC owns 19.75 percent, with designees drawn from GIC Special Investments and OMERS Infrastructure. Oncor has no ticker of its own but files its own 10-K, 10-Qs and earnings releases with the SEC under CIK 0001193311. Ring-fencing measures dating from 2007 and the PUCT's 2018 Sempra Order mean Sempra states plainly that it 'does not control Oncor' and does not consolidate it."
+  },
+  "employees": "~5,600 (December 2025), plus nearly 9,000 contractors",
+  "summary": "BOTTOM LINE UP FRONT: Oncor is the largest transmission and distribution utility in Texas and, by its own claim, the largest pure-play wires utility in the United States. It owns no generation and sells no electricity: it moves power for more than 100 retail electric providers to roughly 4.1 million points of delivery across 145,000 circuit miles, and earns a regulated return on the poles, wires and substations rather than on the energy. Two facts define it in 2026. First, its interconnection queue reached 298 GW of large commercial and industrial requests at June 30, 2026 against a 31 GW system peak, of which 44 GW has cleared into ERCOT's Batch Zero process and only about 8 GW is actually energized and ramping — three numbers that must not be conflated and that Oncor itself keeps apart. Second, it is building the first 765 kV transmission in ERCOT history, with four certificate applications pending, an $8 billion Permian Basin programme and a $47.5 billion 2026-2030 base capital plan that would double its rate base to roughly $69 billion by 2030. Both are now subject to political intervention: the governor directed an audit of every data center in ERCOT's interconnection process in August 2026, and the lieutenant governor asked the commission to deny the pending 765 kV applications in July.",
+  "ecosystemRole": "The wires layer of the ERCOT market, and the transmission service provider through which the largest single concentration of proposed United States data-center load must physically connect. Oncor certifies no generation and holds no capacity obligation — in an energy-only market there is none to hold — so its role in a large-load deal is narrower and more absolute than a vertically integrated utility's: it decides whether and when a customer gets a transmission-voltage point of delivery, at what contribution in aid of construction, against what collateral, and in what batch sequence. For a developer, Oncor is the gate; for the generation that will serve the load, Oncor is a counterparty only at the point of interconnection. It is also, through the Permian Basin Reliability Plan and the Strategic Transmission Expansion Plan, the builder of the backbone that other Texas transmission providers connect into.",
+  "productsAndServices": [
+    {
+      "name": "Wholesale transmission service (TCOS network transmission)",
+      "category": "Regulated utility service",
+      "description": "Regulated transmission of electricity over facilities operating at 60 kV and above, billed to load-serving entities through ERCOT's postage-stamp transmission cost of service rather than to the end customer directly. Oncor states it is 'not a seller of electricity, nor do we purchase electricity for resale'.",
+      "highlights": [
+        "Scale: 18,418 circuit miles of transmission line at December 31, 2025 — 7,603 miles at 345 kV and 10,815 miles at 138 kV and 69 kV — plus 1,333 transmission and distribution substations and interconnections to 230 third-party generation facilities totalling 63,670 MW.",
+        "Commercial terms: Rates are set by the commission and updated through interim filings. Interim TCOS Docket 57610 added $165 million of annual revenue effective March 2025. From 2026 the mechanism shifts to a single annual Unified Tracker Mechanism filing."
+      ],
+      "targetSegments": "Municipally owned utilities, electric cooperatives, other distribution companies and, through the four-coincident-peak allocation, every load in ERCOT.",
+      "roadmap": "First Unified Tracker Mechanism application filed April 22, 2026 in Docket 59249 covering roughly $4.4 billion of 2025 investment; rate base projected to roughly double from $31.5 billion at end-2025 to about $69 billion by 2030."
+    },
+    {
+      "name": "Distribution delivery service to retail electric providers",
+      "category": "Regulated utility service",
+      "description": "Retail delivery services to competitive retailers that sell electricity to end users, plus wholesale delivery to cooperatives and municipal utilities. Oncor never has a billing relationship with the household — the retailer does.",
+      "highlights": [
+        "Scale: 127,398 circuit miles of distribution line (90,568 overhead, 36,830 underground), 3,874 distribution feeders and approximately 4,111,000 points of delivery, up about 65,000 year over year against a five-year average growth rate of 1.85 percent.",
+        "Commercial terms: Residential and small business billed on actual monthly kilowatt-hours; large commercial and industrial billed on actual monthly demand or the greater of that and 80 percent of peak demand in the prior eleven months — a ratchet that is the distribution-side analogue of a large-load minimum charge. Current residential base rates effective June 1, 2026: $1.48 customer charge, $2.58 metering charge and $0.036043 per kilowatt-hour, plus six riders."
+      ],
+      "targetSegments": "Over 100 retail electric providers at December 31, 2025. Retailer subsidiaries of Vistra and NRG Energy are the two largest customers, at 25 percent and 21 percent of total operating revenues for 2025; no other customer exceeded 10 percent.",
+      "roadmap": "Approximately 2 percent annual premise growth assumed in the capital plan; roughly 350,000 premises added over the last five years."
+    },
+    {
+      "name": "Large commercial and industrial interconnection service",
+      "category": "Regulated utility service",
+      "description": "Transmission-voltage points of delivery at 69, 138 and 345 kV — and 765 kV once built — for data centers, crypto miners, manufacturers above 100 MW and oil-and-gas electrification, governed by Oncor's Transmission Standard 520-106, the tariff's facilities extension policy and, since Senate Bill 6, ERCOT's batch sequencing for loads of 75 MW or greater.",
+      "highlights": [
+        "Scale: 737 active requests and 298 GW at June 30, 2026 (282 GW data center plus over 16 GW other industrial); 44 GW eligible in ERCOT's Batch Zero as 27 GW base load plus 17 GW studied load; approximately 8 GW energized and ramping. Customer collateral held rose from $2.8 billion to $5.9 billion across four quarters.",
+        "Commercial terms: Customers below Oncor's credit thresholds post collateral before construction begins, and provide contribution in aid of construction for the direct interconnection cost. Oncor states that if it cannot recoup a project's costs through customer collateral and the project is not placed in service, it 'would likely not be able to recover our construction costs in rates'."
+      ],
+      "targetSegments": "Hyperscale and colocation data centers are by far the largest share — 384 of 650 requests and 255 of 273 GW at December 31, 2025 — followed by oil and gas, utilities and government, manufacturing and crypto. Oncor names no individual large-load customer in any first-party document.",
+      "roadmap": "Batch Zero timing 'remains to be determined' after the governor's August 2026 audit directive; ERCOT will suspend certain Batch Zero notifications. A roughly 4 GW south-Dallas-Fort Worth upgrade package was endorsed by the ERCOT board on April 20, 2026 with Oncor expecting 'to be responsible for a majority'."
+    },
+    {
+      "name": "Generation and storage interconnection",
+      "category": "Regulated utility service",
+      "description": "Transmission grid connections for merchant generation and interconnections to other transmission grids in Texas, governed by Transmission Standard 520-108.",
+      "highlights": [
+        "Scale: 230 third-party generation facilities totalling 63,670 MW directly connected at December 31, 2025. The active point-of-interconnection queue held 552 requests at June 30, 2026, approximately 46 percent storage, 39 percent solar, 8 percent wind and 7 percent gas.",
+        "Commercial terms: Customer-funded impact and facilities studies; collateral from customers below credit thresholds; and no obligation to begin design, procurement or construction until an interconnection agreement is executed."
+      ],
+      "targetSegments": "Merchant developers of storage, solar, wind and gas. Oncor reports the queue only by technology mix and never by developer name.",
+      "roadmap": "Storage has been the largest single category in every quarter reported, sliding 48 to 46 percent, while gas has risen from 4 to 7 percent — the clearest signal in Oncor's own data that the generation mix answering the load is shifting."
+    },
+    {
+      "name": "System Resiliency Plan",
+      "category": "Grid hardening",
+      "description": "A commission-approved grid-hardening programme, approved in Docket 56545 in November 2024 — the first system resiliency plan any Texas utility obtained — organised in seven stated focus areas: overhead and underground resiliency and modernization, vegetation management plus, enhanced digital grid and cybersecurity, wildfire mitigation, a flexible and self-healing distribution system, and physical security.",
+      "highlights": [
+        "Scale: Approximately $2.9 billion of capital expenditure and $520 million of operations and maintenance expense, with the majority of the spend in 2025 to 2027 and roughly $300 million of capital carried into 2028.",
+        "Commercial terms: Regulatory-asset revenue recognised as spent — $56 million in the second quarter of 2026 against $43 million a year earlier."
+      ],
+      "targetSegments": "All distribution customers; recovered in rates through a regulatory asset rather than a separate customer charge.",
+      "roadmap": "A second plan is to be filed in 2027 covering 2028 to 2030 at a size 'similar to phase 1'; roughly $4 billion of it sits in the $10 billion incremental capital bucket outside the base plan."
+    },
+    {
+      "name": "Wildfire mitigation and vegetation management",
+      "category": "Grid hardening",
+      "description": "Eight stated programme areas from risk modelling through plan performance monitoring, with two named operating tools: fire safety protection settings, which temporarily disable certain automatic reclosing devices during red flag warnings, and public safety power shutoffs, which Oncor describes as 'a tool of last-resort'.",
+      "highlights": [
+        "Scale: 15,000 miles of overhead system hardening, more than 14,000 inspections on critical equipment, more than 17,600 poles wrapped in fire-retardant mesh, and approximately $285 million of vegetation-management spend planned across 2025 to 2027.",
+        "Commercial terms: Vegetation clearances of less than 10 feet from high-voltage primary distribution, at least seven feet around open-wire secondary and three to five feet from neutrals; only line-clearance-certified personnel approved by Oncor may work within six feet of high-voltage lines."
+      ],
+      "targetSegments": "Customers in wildfire-prone areas of west, north and central Texas; coordinated with the National Weather Service and the Texas A&M Forest Service.",
+      "roadmap": "Texas House Bill 145 (2025) requires commission-approved wildfire mitigation plans in high-risk areas; Oncor filed its plan in May 2026. The rate case raised the self-insurance accrual to $200 million a year from $122 million."
+    },
+    {
+      "name": "Advanced metering and grid modernization",
+      "category": "Grid technology",
+      "description": "Smart meters recording consumption in 15-minute intervals, doubling as distribution sensors so that Oncor can 'identify and resolve problems before a service disruption occurs', and providing retailers a platform for innovative rate plans.",
+      "highlights": [
+        "Scale: Approximately 4,111,000 points of delivery.",
+        "Commercial terms: Meters are manufactured by Landis+Gyr — the only equipment vendor Oncor names anywhere — certified above market-rule accuracy, fully encrypted 'in a manner comparable to the system used by banks', and monitored 24 hours a day."
+      ],
+      "targetSegments": "Every point of delivery on the system; usage is surfaced to customers and retailers through Smart Meter Texas.",
+      "roadmap": "Measurement and billing sits under the chief digital officer; the current senior vice president of distribution came from the vice president of measurement and billing role."
+    },
+    {
+      "name": "Distributed generation interconnection and electrification programmes",
+      "category": "Customer programmes",
+      "description": "Three lanes of distributed-generation interconnection — residential and small commercial, installer, and energy system developer from 500 kW to 10 MW and above — alongside electric-vehicle enablement and the Take A Load Off, Texas energy-efficiency brand.",
+      "highlights": [
+        "Scale: More than 11,000 residential and small commercial interconnections approved in 2025, nearly 90 percent within 30 days, representing approximately 300 MW; roughly 2,320 MW of aggregate distributed generation connected, nearly half of it solar.",
+        "Commercial terms: Automated review with document recognition and machine-learning tools drives the 30-day approval rate. Oncor participated in ERCOT's first virtual power plant pilot in 2023."
+      ],
+      "targetSegments": "Rooftop solar owners, installers, storage developers and fleet customers. Oncor's electric-vehicle posture is enablement rather than charger ownership.",
+      "roadmap": "Vehicle-to-grid research with Toyota moved from microgrid testing to a fully operational phase at Toyota's North American headquarters in Plano during 2025. Oncor names distributed energy resources, behind-the-meter alternatives, private use networks and virtual power plants as a competitive threat to its own infrastructure."
+    }
+  ],
+  "technicalSpecs": [
+    {
+      "product": "System scale (December 31, 2025)",
+      "specs": [
+        {
+          "band": "System scale (December 31, 2025)",
+          "label": "Transmission circuit miles",
+          "value": "18,418 — 7,603 at 345 kV, 10,815 at 138 kV and 69 kV"
+        },
+        {
+          "band": "System scale (December 31, 2025)",
+          "label": "Distribution circuit miles",
+          "value": "127,398 — 90,568 overhead, 36,830 underground"
+        },
+        {
+          "band": "System scale (December 31, 2025)",
+          "label": "Total circuit miles",
+          "value": "More than 145,000; Oncor's deck says 'nearly 150K'"
+        },
+        {
+          "band": "System scale (December 31, 2025)",
+          "label": "Transmission and distribution substations",
+          "value": "1,333"
+        },
+        {
+          "band": "System scale (December 31, 2025)",
+          "label": "Distribution feeders",
+          "value": "3,874"
+        },
+        {
+          "band": "System scale (December 31, 2025)",
+          "label": "Points of delivery",
+          "value": "Approximately 4,111,000, up about 65,000 year over year"
+        },
+        {
+          "band": "System scale (December 31, 2025)",
+          "label": "Interconnected third-party generation",
+          "value": "230 facilities totalling 63,670 MW"
+        },
+        {
+          "band": "System scale (December 31, 2025)",
+          "label": "System peak demand",
+          "value": "31 GW"
+        }
+      ]
+    },
+    {
+      "product": "Service territory",
+      "specs": [
+        {
+          "band": "Service territory",
+          "label": "Population served",
+          "value": "Approximately 14 million"
+        },
+        {
+          "band": "Service territory",
+          "label": "Counties",
+          "value": "Over 120 where assets sit; 98 in the certificated service area"
+        },
+        {
+          "band": "Service territory",
+          "label": "Municipalities",
+          "value": "More than 400 incorporated municipalities; 210 cities retain original rate jurisdiction"
+        },
+        {
+          "band": "Service territory",
+          "label": "Share of Texas",
+          "value": "'Nearly one-third of the state' — Oncor publishes no square-mileage figure"
+        },
+        {
+          "band": "Service territory",
+          "label": "Principal cities",
+          "value": "Dallas, Fort Worth, Waco, Wichita Falls, Odessa, Midland, Tyler, Temple, Killeen, Round Rock"
+        },
+        {
+          "band": "Service territory",
+          "label": "Market",
+          "value": "ERCOT, approximately 90 percent of Texas electricity consumption"
+        }
+      ]
+    },
+    {
+      "product": "Large-load funnel (June 30, 2026)",
+      "specs": [
+        {
+          "band": "Large-load funnel (June 30, 2026)",
+          "label": "Active large commercial and industrial requests",
+          "value": "737 requests, 298 GW — 282 GW data center plus over 16 GW other industrial"
+        },
+        {
+          "band": "Large-load funnel (June 30, 2026)",
+          "label": "Batch Zero eligible",
+          "value": "Approximately 44 GW — 27 GW base load plus 17 GW studied load"
+        },
+        {
+          "band": "Large-load funnel (June 30, 2026)",
+          "label": "Within base load",
+          "value": "~8 GW energized and ramping, ~9 GW with ERCOT-validated studies, ~10 GW awaiting validation"
+        },
+        {
+          "band": "Large-load funnel (June 30, 2026)",
+          "label": "Signed or executed interconnection agreements",
+          "value": "Not published — Oncor discloses no agreement count or gigawatt figure anywhere in its first-party materials"
+        },
+        {
+          "band": "Large-load funnel (June 30, 2026)",
+          "label": "Customer collateral held",
+          "value": "Approximately $5.9 billion, of which over $2 billion relates to Batch Zero"
+        },
+        {
+          "band": "Large-load funnel (June 30, 2026)",
+          "label": "Submitted to ERCOT's 2026 regional transmission plan",
+          "value": "122 GW large load plus 5.2 GW medium load, filed April 1, 2026"
+        },
+        {
+          "band": "Large-load funnel (June 30, 2026)",
+          "label": "Generation interconnection queue",
+          "value": "552 requests — approximately 46 percent storage, 39 percent solar, 8 percent wind, 7 percent gas"
+        },
+        {
+          "band": "Large-load funnel (June 30, 2026)",
+          "label": "Queue growth rate",
+          "value": "Decelerating: 24 percent year over year at end-2025, 19 percent in Q1 2026, 15 percent in Q2 2026"
+        }
+      ]
+    },
+    {
+      "product": "765 kV programme",
+      "specs": [
+        {
+          "band": "765 kV programme",
+          "label": "Longshore Switch to Drill Hole Switch",
+          "value": "Docket 59029, filed December 15, 2025, ~180 miles across ten Permian counties, decision expected June 2026, energization by December 2028 — the first 765 kV certificate application in Texas history"
+        },
+        {
+          "band": "765 kV programme",
+          "label": "Big Hill Switch to Sand Lake Switch",
+          "value": "Docket 59182, filed January 15, 2026 jointly with LCRA Transmission Services, ~197 miles, decision expected July 2026, energization winter 2030"
+        },
+        {
+          "band": "765 kV programme",
+          "label": "Dinosaur to Longshore",
+          "value": "Docket 59315, filed February 19, 2026, Somervell to Howard counties, decision expected August 2026, energization by 2029"
+        },
+        {
+          "band": "765 kV programme",
+          "label": "Bell County East to Big Hill",
+          "value": "Docket 59475, filed March 26, 2026 jointly with LCRA Transmission Services, 15-county study area, decision expected September 2026, energization by 2030"
+        },
+        {
+          "band": "765 kV programme",
+          "label": "Permian Basin Reliability Plan",
+          "value": "Approximately $8 billion, 1,500 circuit miles"
+        },
+        {
+          "band": "765 kV programme",
+          "label": "Non-Permian 765 kV",
+          "value": "Approximately $5 billion, 600 circuit miles"
+        },
+        {
+          "band": "765 kV programme",
+          "label": "North and central Texas upgrades",
+          "value": "Approximately $7 billion, 1,800 circuit miles"
+        },
+        {
+          "band": "765 kV programme",
+          "label": "Design rationale as stated",
+          "value": "765 kV 'move more electricity, farther, more efficiently, and with reduced land requirements'; more than 2,400 miles are already in use across the United States and Canada"
+        },
+        {
+          "band": "765 kV programme",
+          "label": "Landowner notice radius",
+          "value": "500 feet of the proposed routes"
+        }
+      ]
+    },
+    {
+      "product": "Capital plan and rate base",
+      "specs": [
+        {
+          "band": "Capital plan and rate base",
+          "label": "2026-2030 base capital plan",
+          "value": "Approximately $47.5 billion — $9.0B in 2026, $10.0B 2027, $10.1B 2028, $9.4B 2029, $9.0B 2030"
+        },
+        {
+          "band": "Capital plan and rate base",
+          "label": "Plan history",
+          "value": "$24.2 billion (2024-2028), $36 billion (2025-2029), $47.5 billion (2026-2030)"
+        },
+        {
+          "band": "Capital plan and rate base",
+          "label": "The $11 billion raise",
+          "value": "$6B Permian reliability, $2B new transmission, $2B distribution upgrades, $1B Delaware Basin transmission"
+        },
+        {
+          "band": "Capital plan and rate base",
+          "label": "Incremental opportunity outside the plan",
+          "value": "As much as approximately $10 billion — ~$3B non-Permian 765 kV, ~$3B north and central Texas upgrades, ~$4B resiliency phase two, plus unquantified Batch Zero upside"
+        },
+        {
+          "band": "Capital plan and rate base",
+          "label": "Growth share",
+          "value": "Approximately 77 percent of the base plan is attributable to growth"
+        },
+        {
+          "band": "Capital plan and rate base",
+          "label": "Rate base trajectory",
+          "value": "$31.5 billion at end-2025, projected $39B in 2026, $46B 2027, $54B 2028, $59B 2029, $69B 2030"
+        },
+        {
+          "band": "Capital plan and rate base",
+          "label": "Financing",
+          "value": "$5.5 to $6.5 billion of new long-term debt in 2026 and $5.0 to $6.0 billion in 2027, plus member capital contributions and reduced distributions"
+        }
+      ]
+    },
+    {
+      "product": "Rate case outcome, effective June 1, 2026",
+      "specs": [
+        {
+          "band": "Rate case outcome, effective June 1, 2026",
+          "label": "Annual revenue requirement",
+          "value": "Approximately $6.97 billion, an increase of $560 million or 8.7 percent"
+        },
+        {
+          "band": "Rate case outcome, effective June 1, 2026",
+          "label": "Regulatory capital structure",
+          "value": "56.5 percent debt to 43.5 percent equity — the equity layer rose 100 basis points"
+        },
+        {
+          "band": "Rate case outcome, effective June 1, 2026",
+          "label": "Authorized return on equity",
+          "value": "9.75 percent"
+        },
+        {
+          "band": "Rate case outcome, effective June 1, 2026",
+          "label": "Authorized cost of debt",
+          "value": "4.94 percent"
+        },
+        {
+          "band": "Rate case outcome, effective June 1, 2026",
+          "label": "Self-insurance accrual",
+          "value": "$200 million a year, up from $122 million"
+        },
+        {
+          "band": "Rate case outcome, effective June 1, 2026",
+          "label": "Regulatory asset amortization",
+          "value": "Five years, excluding rate case expenses, year-end 2024 deferred resiliency costs and excess accumulated deferred income taxes"
+        },
+        {
+          "band": "Rate case outcome, effective June 1, 2026",
+          "label": "Residential bill impact",
+          "value": "$4.64 a month for 1,000 kilowatt-hours, about 3 percent of the total retail bill at $0.15 per kilowatt-hour, plus a $3.63 surcharge from August 1 and a requested $3.85 from the tracker filing"
+        },
+        {
+          "band": "Rate case outcome, effective June 1, 2026",
+          "label": "Storm exposure funded",
+          "value": "An average of 31 major storm events a year — one somewhere in the territory every 12 days"
+        }
+      ]
+    },
+    {
+      "product": "Reliability, workforce and supply chain",
+      "specs": [
+        {
+          "band": "Reliability, workforce and supply chain",
+          "label": "Non-storm reliability",
+          "value": "SAIDI 78.1, SAIFI 1.1, CAIDI 70.4 — Oncor claims industry top quartile on SAIDI"
+        },
+        {
+          "band": "Reliability, workforce and supply chain",
+          "label": "Employees",
+          "value": "Approximately 5,600, of whom about 860 are under a collective bargaining agreement expiring October 2026; average tenure 11.1 years; turnover 5.4 percent"
+        },
+        {
+          "band": "Reliability, workforce and supply chain",
+          "label": "Contractors",
+          "value": "Nearly 9,000 supporting construction and maintenance"
+        },
+        {
+          "band": "Reliability, workforce and supply chain",
+          "label": "Supplier base",
+          "value": "Over 500 suppliers; over 100 new supplier contracts each year; 700 crews contracted each year on average"
+        },
+        {
+          "band": "Reliability, workforce and supply chain",
+          "label": "Equipment secured",
+          "value": "Over 2,000 high-voltage circuit breakers and large and medium power transformers reserved through 2030; over 30,000 steel structures and approximately 50,000 miles of high-voltage conductor confirmed, deliveries starting in the third or fourth quarter of 2026"
+        },
+        {
+          "band": "Reliability, workforce and supply chain",
+          "label": "Execution capacity",
+          "value": "Supports approximately $10 billion or more of annual capital expenditure; labour and key materials secured through 2028"
+        },
+        {
+          "band": "Reliability, workforce and supply chain",
+          "label": "Construction throughput",
+          "value": "Approximately 3,100 circuit miles built, rebuilt or upgraded in 2025; more than 900 in the second quarter of 2026 alone"
+        }
+      ]
+    },
+    {
+      "product": "Balance sheet (June 30, 2026)",
+      "specs": [
+        {
+          "band": "Balance sheet (June 30, 2026)",
+          "label": "Long-term debt",
+          "value": "$21.401 billion aggregate principal, up from $19.224 billion at December 31, 2025"
+        },
+        {
+          "band": "Balance sheet (June 30, 2026)",
+          "label": "Covenant",
+          "value": "Consolidated senior debt to capitalization no greater than 0.65 to 1.00"
+        },
+        {
+          "band": "Balance sheet (June 30, 2026)",
+          "label": "Commercial paper program",
+          "value": "$3.0 billion cap"
+        },
+        {
+          "band": "Balance sheet (June 30, 2026)",
+          "label": "Available liquidity",
+          "value": "Approximately $3.6 billion at August 5, 2026"
+        },
+        {
+          "band": "Balance sheet (June 30, 2026)",
+          "label": "Ring-fencing rating trigger",
+          "value": "If senior secured debt falls below BBB at any of the three major agencies, Oncor suspends dividends and distributions unless the commission allows otherwise"
+        },
+        {
+          "band": "Balance sheet (June 30, 2026)",
+          "label": "Credit action",
+          "value": "One agency lowered Oncor's rating in July 2025 citing elevated wildfire risk, raising borrowing and commitment fees under the credit facilities"
+        }
+      ]
+    }
+  ],
+  "financials": {
+    "currency": "USD",
+    "periods": [
+      {
+        "period": "FY2024",
+        "periodType": "annual",
+        "periodEnd": "2024-12-31",
+        "metrics": [
+          {
+            "name": "Operating revenues",
+            "actual": "$6,082M",
+            "expected": "n/a — no listed equity, no published consensus",
+            "verdict": "inline",
+            "result": "The last full year before the rate case and the tracker mechanism both landed",
+            "kpi": "revenue",
+            "usdMillions": 6082,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income",
+            "actual": "$968M",
+            "expected": "n/a",
+            "verdict": "inline",
+            "result": "Earned on a regulatory rate base of $26.6 billion at December 31, 2024",
+            "kpi": "net-income",
+            "usdMillions": 968,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Capital expenditures",
+            "actual": "$4,683M",
+            "expected": "n/a",
+            "verdict": "inline",
+            "result": "Up 22 percent on 2023's $3,824M, the first year of the step-change",
+            "kpi": "capex",
+            "usdMillions": 4683,
+            "fxBasis": "as reported"
+          }
+        ],
+        "commentary": "The $36 billion 2025-2029 capital plan was announced with these results on February 25, 2026, itself a 49 percent raise on the $24.2 billion plan of a year earlier. Rates at this point were still those set in the 2022 case, based on 2021 wages and costs."
+      },
+      {
+        "period": "FY2025",
+        "periodType": "annual",
+        "periodEnd": "2025-12-31",
+        "metrics": [
+          {
+            "name": "Operating revenues",
+            "actual": "$6,778M",
+            "expected": "n/a",
+            "verdict": "inline",
+            "result": "Up 11.4 percent, driven by interim rate updates rather than by new base rates, which did not take effect until June 2026",
+            "kpi": "revenue",
+            "usdMillions": 6778,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income",
+            "actual": "$1,070M",
+            "expected": "n/a",
+            "verdict": "inline",
+            "result": "Oncor crossed a billion dollars of net income for the first time",
+            "kpi": "net-income",
+            "usdMillions": 1070,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Capital expenditures",
+            "actual": "$6,761M",
+            "expected": "n/a",
+            "verdict": "inline",
+            "result": "Up 44 percent year over year, and 77 percent above 2023 — the build is running well ahead of the revenue that will eventually recover it",
+            "kpi": "capex",
+            "usdMillions": 6761,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Sempra Texas Utilities adjusted segment earnings",
+            "actual": "$861M",
+            "expected": "$1,180M to $1,260M guided for 2026",
+            "verdict": "inline",
+            "result": "Sempra's proportionate 80.25 percent share of Oncor plus 50 percent of Sharyland — the only forward earnings number published on Oncor, guided to rise 37 to 46 percent in 2026 and to $1,410M–$1,520M in 2027"
+          }
+        ],
+        "commentary": "Estimated regulatory rate base reached $31.5 billion, up from $26.6 billion. The $47.5 billion 2026-2030 plan was announced with these results on February 26, 2026 — an $11 billion raise composed of $6B Permian reliability, $2B new transmission, $2B distribution upgrades and $1B Delaware Basin. Operating cash flow of $2,340M funded roughly a third of the year's capital spend; the rest came from debt and member contributions."
+      },
+      {
+        "period": "Q1 2026",
+        "periodType": "quarter",
+        "periodEnd": "2026-03-31",
+        "metrics": [
+          {
+            "name": "Operating revenues",
+            "actual": "$1,724M (vs $1,548M in Q1 2025)",
+            "expected": "n/a",
+            "verdict": "inline",
+            "result": "Up 11.4 percent on interim rates and customer growth, still before the June base-rate reset",
+            "kpi": "revenue",
+            "usdMillions": 1724,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income",
+            "actual": "$212M (vs $181M)",
+            "expected": "n/a",
+            "verdict": "inline",
+            "result": "Up 17 percent",
+            "kpi": "net-income",
+            "usdMillions": 212,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Large-load interconnection queue",
+            "actual": "697 requests, approximately 271 GW data center plus over 18 GW other industrial",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "Growth decelerating to 19 percent year over year from 24 percent; collateral held rose to approximately $4.0 billion"
+          }
+        ],
+        "commentary": "Oncor submitted a 122 GW large-load and 5.2 GW medium-load forecast to ERCOT's 2026 regional transmission plan on April 1. Nearly 700 circuit miles were built, rebuilt or upgraded in the quarter, and about 13,400 premises added."
+      },
+      {
+        "period": "Q2 2026 (latest interim)",
+        "periodType": "quarter",
+        "periodEnd": "2026-06-30",
+        "metrics": [
+          {
+            "name": "Operating revenues",
+            "actual": "$2,062M (vs $1,654M in Q2 2025); first-half revenue $3,786M",
+            "expected": "n/a",
+            "verdict": "inline",
+            "result": "Up 24.7 percent — the first quarter carrying new base rates, the surcharge and the tracker mechanism together",
+            "kpi": "revenue",
+            "usdMillions": 2062,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Net income",
+            "actual": "$428M (vs $259M); first-half $640M against $440M",
+            "expected": "n/a",
+            "verdict": "beat",
+            "result": "Up 65 percent. Oncor attributes the $169 million increase to the rate-case surcharge, tracker and resiliency revenue, new base rates from June 1, interim rate updates and customer growth",
+            "kpi": "net-income",
+            "usdMillions": 428,
+            "fxBasis": "as reported"
+          },
+          {
+            "name": "Sempra Texas Utilities segment earnings",
+            "actual": "$346M (vs $208M); first-half $517M against $354M",
+            "expected": "On track for $1,180M–$1,260M full-year guidance",
+            "verdict": "inline",
+            "result": "A 46 percent first-half increase, with the equity-method carrying value rising to $19,135M from $17,601M at year end"
+          },
+          {
+            "name": "Large-load interconnection queue",
+            "actual": "737 requests, 298 GW total (282 GW data center plus over 16 GW other industrial); 44 GW in Batch Zero; ~8 GW energized",
+            "expected": "—",
+            "verdict": "inline",
+            "result": "The three figures move differently: requests grew 15 percent year over year and decelerating, Batch Zero is unchanged and now suspended pending the governor's audit, and the energized figure is the only one Oncor publishes that reflects load actually taking power",
+            "kpi": "mw-energized",
+            "qty": 8000
+          }
+        ],
+        "commentary": "First-half capital expenditure reached $4,150M against $2,821M a year earlier, funded partly by $1,851M of member capital contributions. Available liquidity was approximately $3.6 billion at August 5. Long-term debt rose to $21.401 billion from $19.224 billion in six months, and the year's financing included Australian dollar, euro and Canadian dollar issuance plus Oncor's first hybrid — an €850 million junior subordinated note."
+      }
+    ],
+    "type": "annual-and-quarterly",
+    "commentary": "Oncor files its own results with the SEC and is not consolidated by Sempra, which accounts for its 80.25 percent indirect interest as an equity-method investment because the ring-fencing measures deny it control. There is therefore no sell-side consensus on Oncor itself — no analyst publishes an estimate for a company with no listed equity. The 'expected' column below uses Sempra's own published segment guidance for Sempra Texas Utilities, the only forward number any party puts on Oncor's earnings, and marks the rest as not applicable rather than inventing a consensus."
+  },
+  "strategyRead": [
+    "(High confidence) We assess that Oncor's own disclosure is deliberately structured to prevent the queue from being read as a forecast, and that this discipline is the single most useful thing in its file. Basis: the company reports three separate figures every quarter and never blends them — 737 requests totalling 298 GW at June 30, 2026; approximately 44 GW eligible in ERCOT's Batch Zero as 27 GW base plus 17 GW studied; and approximately 8 GW already energized and ramping, disclosed as a subset of the base load rather than as an addition to it. It publishes no signed or executed interconnection-agreement count or gigawatt figure anywhere, which means the gap between 44 GW and 8 GW cannot be closed from public sources. Its risk factor says so directly: projected demand 'is currently expected to far exceed our current system peak load' and 'a high usage customer may decide not to take energy, to take less energy than anticipated, or not to take service on the anticipated schedule'.",
+    "(High confidence) We assess that customer collateral, not the queue, is Oncor's real commitment metric, and that it is the number to watch. Basis: collateral held for active generation and large-load interconnection requests rose from approximately $2.8 billion in November 2025 to $3.5 billion in February 2026, $4.0 billion in May and $5.9 billion in August — more than doubling in nine months while the request queue's growth rate decelerated from 24 percent to 15 percent year over year. Over $2 billion of the total relates specifically to Batch Zero. Oncor states it requires collateral 'before we commence construction' and that if a project is not placed in service and the costs cannot be recouped from that collateral, 'we would likely not be able to recover our construction costs in rates'. Money posted is the only commitment test in the file that a customer cannot walk away from for free.",
+    "(High confidence) We assess that Oncor is uniquely exposed to political rather than commercial risk in 2026, and that both of its growth engines were interrupted by state officials in a single quarter. Basis: in July 2026 the lieutenant governor and the chair of the Texas Senate's Business and Commerce Committee called on the commission to deny the pending 765 kV certificate applications — all four of Oncor's. In August the governor directed the commission and ERCOT to audit every data center advancing through the interconnection process before any project moves forward, and ERCOT indicated it would suspend certain Batch Zero notifications. Oncor's own filing states that denial or significant delay of the certificate applications 'could have various material financial, operational, legal, and other impacts', and separately notes that 'a growing number of cities and counties in Texas have recently considered or proposed restrictions on data center development'. Neither risk is priced by a market, because Oncor has no listed equity.",
+    "(Moderate confidence) We assess that the wires-only structure makes Oncor the cleanest available read on Texas load growth precisely because it has no generation position to defend. Basis: the company states it is 'not a seller of electricity, nor do we purchase electricity for resale', certifies no generation, and holds no capacity obligation because ERCOT's energy-only market creates none. Its revenue comes from a commission-set revenue requirement on rate base, so a megawatt that never arrives costs it a stranded investment rather than a stranded plant. That also means Oncor is not the counterparty for the generation that will serve the load: its generation queue of 552 requests, 46 percent storage and 39 percent solar, belongs to merchant developers it does not name and does not contract with beyond the point of interconnection.",
+    "(Moderate confidence) We assess that the 2026 rate case and House Bill 5247 together reset the recovery machinery in Oncor's favour more than the headline increase suggests, and that the tracker mechanism is the more consequential of the two. Basis: the April 17, 2026 order granted an $8.7 percent increase to a $6.97 billion revenue requirement, raised the equity layer 100 basis points to 43.5 percent and the return on equity five basis points to 9.75 percent, and lifted the storm self-insurance accrual to $200 million a year from $122 million. But the Unified Tracker Mechanism, signed into law June 20, 2025, replaces separate distribution and transmission tracker filings with a single annual update through 2035, with a 120-day review clock and the right to place rates in effect temporarily if no order issues in 165 days. The first filing covers roughly $4.4 billion of 2025 investment. Against a plan spending $9 to $10 billion a year, annual recovery matters more than the size of any one case — and the residual risk is a future prudence review with the power to order refunds.",
+    "(Moderate confidence) We assess that the supply chain, not the certificate dockets, is where Oncor has already committed capital that the political process has not yet approved. Basis: the company reports reserved capacity or confirmed deliveries for over 2,000 high-voltage circuit breakers and large and medium power transformers through 2030, confirmed capacity for over 30,000 steel structures and approximately 50,000 miles of high-voltage conductor with deliveries starting in the third or fourth quarter of 2026, 700 crews contracted each year on average, labour and key materials secured through 2028, and 250,000 square feet added for the first 765 kV deliveries. All four 765 kV certificate applications are still pending. It also states that 2025 federal tariffs 'impacted our suppliers' and that 'our suppliers in many instances have shifted that increased cost directly to us' without quantifying the effect.",
+    "(Moderate confidence) We assess that Texas's wildfire liability regime is a structural credit issue for Oncor that no operational programme resolves. Basis: Oncor's own risk factors state that rating agencies 'have highlighted wildfire risk in Texas in particular given that Texas does not have certain legal protections available in other jurisdictions, such as an aggregate liability cap on damages relating to a wildfire event and the lack of an affirmative defense', and that in July 2025 one agency lowered Oncor's rating citing elevated wildfire risk, raising borrowing and commitment fees. Excess liability insurance is described as 'limited in scope and subject to exceptions, conditions and coverage limitations'. The mitigation is real — 15,000 miles of hardening, 17,600 poles wrapped, a $200 million self-insurance accrual, a House Bill 145 plan filed in May 2026 — but the exposure is uncapped by statute, and the ring-fencing agreement suspends distributions if senior secured debt falls below BBB at any of the three agencies.",
+    "(Low confidence) We assess that Oncor's refusal to name a single large-load customer is a durable feature rather than a disclosure lag, and that it materially limits what can be known about the queue's quality. Basis: no Oncor document reviewed — the FY2025 10-K, both 2026 quarterly filings, every earnings release, the March 2026 investor presentation, the 2025 sustainability report or any of 151 newsroom items — names a hyperscaler, a colocation developer, an engineering contractor or a transformer manufacturer, with the single exception of Landis+Gyr for meters and Toyota for vehicle-to-grid research. Texas law restricts utilities from providing customer information to third parties other than retail providers, ERCOT or customer-authorised entities, which supplies a legal basis for the practice. The consequence is that the composition of the 298 GW — how much is one developer filing at several sites, how much is speculative — is not determinable from Oncor's own materials."
+  ],
+  "recentDevelopments": [
+    {
+      "date": "2026-08-06",
+      "category": "financial",
+      "headline": "Q2 2026: net income $428M against $259M, the queue at 737 requests and 298 GW, and collateral held at $5.9 billion",
+      "read": "The first quarter carrying new base rates, the rate-case surcharge and the tracker mechanism at once — and the quarter in which the governor's audit directive was disclosed.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000019/c311-20260630x10q.htm"
+    },
+    {
+      "date": "2026-08-06",
+      "category": "policy",
+      "headline": "The governor of Texas directed the commission and ERCOT to audit every data center in the interconnection process before any project moves forward",
+      "read": "ERCOT indicated it would suspend certain Batch Zero notifications, which puts the 44 GW figure and its timing outside Oncor's control.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000019/c311-20260630x10q.htm"
+    },
+    {
+      "date": "2026-08-01",
+      "category": "regulatory",
+      "headline": "The rate-case surcharge took effect, recovering approximately $212 million of unbilled revenue through year end",
+      "read": "$169 million of distribution and $43 million of transmission base revenue for the five months between January 1 and the June rate reset, at about $3.63 a month for a residential customer.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-reports-second-quarter-2026-results.html"
+    },
+    {
+      "date": "2026-06-24",
+      "category": "financial",
+      "headline": "A$750 million of 5.70 percent senior secured notes due 2033, swapped to US$530 million at 5.172 percent",
+      "read": "The third currency of the year after euro and Canadian dollar — Oncor is funding a $9 billion annual programme wherever the cost of capital is lowest.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526281044/d25700d8k.htm"
+    },
+    {
+      "date": "2026-06-01",
+      "category": "regulatory",
+      "headline": "New base rates took effect, the first since May 2023",
+      "read": "Tariff Revision Twenty-Two implements the April order: $1.48 customer charge, $2.58 metering charge and $0.036043 per kilowatt-hour, plus six riders.",
+      "source": "https://www.oncor.com/content/dam/oncorwww/documents/about-us/regulatory/tariff-and-rate-schedules/Tariff%20for%20Retail%20Delivery%20Service.pdf.coredownload.pdf"
+    },
+    {
+      "date": "2026-05-27",
+      "category": "financial",
+      "headline": "€850 million of 4.55 percent junior subordinated notes due 2056, Oncor's first hybrid, swapped to US$986 million",
+      "read": "Hybrid capital receives partial equity treatment from the rating agencies — a response to the wildfire-driven downgrade rather than to the capital plan alone.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526241882/d146142d8k.htm"
+    },
+    {
+      "date": "2026-05-07",
+      "category": "financial",
+      "headline": "Q1 2026: net income $212M against $181M, with 697 requests and approximately 271 GW in queue",
+      "read": "Growth in the request queue decelerated to 19 percent year over year while collateral rose to $4.0 billion — commitment strengthening as raw volume slows.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-reports-first-quarter-2026-results.html"
+    },
+    {
+      "date": "2026-04-23",
+      "category": "regulatory",
+      "headline": "Oncor filed its first Unified Tracker Mechanism request covering approximately $4.4 billion of 2025 investment",
+      "read": "Docket 59249 replaces the separate distribution and transmission tracker filings with one annual proceeding, at a requested $3.85 a month or about 2.5 percent.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-files-unified-tracker-mechanism-request-to-support-reliabi.html"
+    },
+    {
+      "date": "2026-04-20",
+      "category": "capacity",
+      "headline": "The ERCOT board endorsed a south Dallas-Fort Worth transmission package supporting approximately 4 GW of new load",
+      "read": "Oncor expects 'to be responsible for a majority' of it, and it sits in the $10 billion incremental bucket outside the base capital plan.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-reports-first-quarter-2026-results.html"
+    },
+    {
+      "date": "2026-04-17",
+      "category": "regulatory",
+      "headline": "The commission issued its final order in the base rate review, setting a $6.97 billion revenue requirement, a 9.75 percent return on equity and a 43.5 percent equity layer",
+      "read": "An $560 million or 8.7 percent increase on an unopposed settlement, with the storm self-insurance accrual raised to $200 million a year from $122 million.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526161536/d285147d8k.htm"
+    },
+    {
+      "date": "2026-03-26",
+      "category": "regulatory",
+      "headline": "Oncor and LCRA Transmission Services applied for the Bell County East to Big Hill 765 kV line, completing all four phase-one filings",
+      "read": "A 15-county study area with a decision expected in September and energization by 2030 — the second of the two projects built jointly with LCRA.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/-oncor--lcra-tsc-request-approval-to-build-next-generation-trans.html"
+    },
+    {
+      "date": "2026-02-27",
+      "category": "corporate",
+      "headline": "Oncor posted its March 2026 investor presentation with the supply-chain and resiliency detail behind the plan",
+      "read": "The document that quantifies what has already been committed: over 2,000 breakers and transformers reserved through 2030, 50,000 miles of conductor confirmed, labour secured through 2028.",
+      "source": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/March%202026%20Investor%20Presentation.pdf"
+    },
+    {
+      "date": "2026-02-26",
+      "category": "financial",
+      "headline": "FY2025 results and a $47.5 billion 2026-2030 base capital plan, an $11 billion raise on the prior vintage",
+      "read": "Net income crossed a billion dollars for the first time at $1,070M, and the plan would roughly double rate base to $69 billion by 2030.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/ONCOR-REPORTS-2025-RESULTS---ANNOUNCES--47-5-BILLION-2026-2030-BASE-CAPITAL-PLAN.html"
+    },
+    {
+      "date": "2026-02-19",
+      "category": "regulatory",
+      "headline": "Oncor applied for the Dinosaur to Longshore 765 kV line from Somervell to Howard counties",
+      "read": "The third of four filings, with route selection expected in August and energization by 2029.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-requests-approval-to-build-next-generation-transmission-li.html"
+    },
+    {
+      "date": "2026-01-29",
+      "category": "regulatory",
+      "headline": "Oncor filed an unopposed comprehensive settlement in the base rate review",
+      "read": "Every party signed, which is why the case moved from filing in June 2025 to a final order in April 2026 with no contested hearing on the merits.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526029420/d46774d8k.htm"
+    },
+    {
+      "date": "2026-01-15",
+      "category": "regulatory",
+      "headline": "Oncor and LCRA Transmission Services applied for the Big Hill to Sand Lake 765 kV line, approximately 197 miles",
+      "read": "The first joint filing, connecting LCRA's Big Hill substation in Schleicher County to Oncor's Sand Lake switch in Ward County, energization targeted for winter 2030.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor--lcra-tsc-request-approval-to-build-765kv-transmission-lin.html"
+    },
+    {
+      "date": "2026-01-02",
+      "category": "leadership",
+      "headline": "Ellen Buck became chief operating officer, Wes Speed senior vice president of transmission and Daniel Hall senior vice president of distribution",
+      "read": "Buck succeeds Jim Greer after 41 years and Hall succeeds Keith Hull after 44 — the operating leadership turned over completely at the start of the largest build in the company's history.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-announces-ellen-buck--wes-speed-and-daniel-hall-as-new-sen.html"
+    },
+    {
+      "date": "2025-12-15",
+      "category": "regulatory",
+      "headline": "Oncor filed the first 765 kV certificate application in Texas history — Longshore to Drill Hole, approximately 180 miles across ten Permian counties",
+      "read": "A decision was expected in June 2026 with energization by December 2028; the commission had approved the first use of the 765 kV class in April 2025.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-requests-approval-for-first-765kv-transmission-line-in-tex.html"
+    },
+    {
+      "date": "2025-11-05",
+      "category": "financial",
+      "headline": "Q3 2025: net income $380M, with the queue over 600 requests and roughly 210 GW, up about 60 percent year over year",
+      "read": "Collateral stood at approximately $2.8 billion, and long-lead Permian equipment was secured with first delivery due in the first quarter of 2027.",
+      "source": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/Q3%202025%20Oncor%20Earnings%20Release.pdf"
+    },
+    {
+      "date": "2025-10-30",
+      "category": "leadership",
+      "headline": "Jim Greer to retire as chief operating officer; Don Clevenger elected executive vice president and chief financial officer and Ellen Buck senior vice president and chief operating officer",
+      "read": "Both effective January 1, 2026 — the succession was planned and announced a full quarter ahead.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119312525257338/d97228d8k.htm"
+    },
+    {
+      "date": "2025-08-14",
+      "category": "legal",
+      "headline": "The Fifteenth Court of Appeals ruled for the commission on the 2022 rate case appeal, and Oncor elected not to appeal further",
+      "read": "Closes the rate-base disallowance challenge from the prior case, three months before the current one settled.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+    },
+    {
+      "date": "2025-07-01",
+      "category": "financial",
+      "headline": "A credit rating agency lowered Oncor's rating citing elevated wildfire risk as the primary consideration",
+      "read": "Borrowing and commitment fees rose under the credit facilities. Oncor's own framing is that Texas lacks an aggregate liability cap and an affirmative defense available elsewhere.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+    },
+    {
+      "date": "2025-06-26",
+      "category": "regulatory",
+      "headline": "Oncor filed a comprehensive base rate review with the commission and the 210 cities retaining original jurisdiction",
+      "read": "About $7 a month or 4.7 percent was sought: roughly 45 percent for storm costs, 25 percent for debt costs and 20 percent for inflation and wages, against insurance premiums up more than 500 percent since 2021.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-files-rate-review-to-further-support-critical-investments-.html"
+    },
+    {
+      "date": "2025-06-20",
+      "category": "policy",
+      "headline": "Texas House Bill 5247 was signed into law, establishing the Unified Tracker Mechanism",
+      "read": "A single annual interim rate update through 2035, available only to ERCOT-only utilities with Permian Basin construction responsibility spending more than 300 percent of annual depreciation — a test written narrowly enough that few utilities meet it.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+    },
+    {
+      "date": "2025-05-13",
+      "category": "capacity",
+      "headline": "Oncor reported its first System Resiliency Plan well underway, roughly $3 billion aimed at reducing outages",
+      "read": "Oncor was the first utility to obtain commission approval for a resiliency plan, in November 2024 under Docket 56545.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-s-first-system-resiliency-plan-well-underway-.html"
+    },
+    {
+      "date": "2025-04-01",
+      "category": "policy",
+      "headline": "The commission approved the Permian Basin Reliability Plan, authorising the first use of the 765 kV voltage class in ERCOT",
+      "read": "The decision that made every subsequent certificate filing possible, and that anchors roughly $8 billion of the base capital plan.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+    },
+    {
+      "date": "2025-02-25",
+      "category": "financial",
+      "headline": "FY2024 results and a $36 billion 2025-2029 capital plan",
+      "read": "Net income $968M on revenue of $6,082M; the plan was itself a 49 percent raise on the prior year's $24.2 billion, and would be raised again to $47.5 billion twelve months later.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-reports-2024-results--announces--36-billion-2025-2029-capi.html"
+    },
+    {
+      "date": "2024-11-14",
+      "category": "regulatory",
+      "headline": "The commission approved Oncor's System Resiliency Plan in Docket 56545",
+      "read": "Approximately $2.9 billion of capital and $520 million of operating expense, the first such plan approved for any Texas utility.",
+      "source": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-system-resiliency-plan-approved-by-puct-.html"
+    }
+  ],
+  "relationships": [
+    {
+      "slug": "meta",
+      "type": "customer",
+      "status": "active",
+      "since": "2026",
+      "scale": "More than $1.2 billion invested in Temple, Texas",
+      "via": "Transmission and distribution infrastructure planning",
+      "note": "The only hyperscaler any source places in Oncor's territory in its own words — and the source is Meta, not Oncor.",
+      "context": "Meta's own data-center site states that 'Meta worked with Oncor Electric' on infrastructure planning for its Temple, Texas facility, describing more than $1.2 billion of investment, 1,200 peak construction workers, almost 100 operational roles and 'our first AI-optimized data center to come online'. Oncor names no data-center customer anywhere in its own materials, so this link exists only because the customer disclosed it. Temple is inside Oncor's certificated territory per the same source. Meta states its Texas electricity is 'matched with 100% clean and renewable energy' and that more than 40 Meta-supported projects are adding 9,000 MW in the state — none of which Oncor procures, since it owns no generation.",
+      "source": "https://datacenters.atmeta.com/2026/07/temple-we-are-online/"
+    },
+    {
+      "slug": "aep",
+      "type": "partner",
+      "status": "announced",
+      "since": "2025",
+      "scale": "765 kV eastern backbone, co-sponsored by four transmission providers",
+      "via": "ERCOT Regional Planning Group project 25RPG025",
+      "note": "Co-sponsor of the eastern half of the Texas 765 kV backbone that Oncor is building the western half of.",
+      "context": "An ERCOT Regional Planning Group filing dated December 1, 2025 is titled '25RPG025 — AEP Texas, CPS Energy, Oncor and CNP Texas 765-kV STEP Eastern Backbone Project', naming the four utilities as co-sponsors. The two companies are also long-standing interconnected counterparties: Oncor's Form 10-K grid-connections table records 21 lines each at 345 kV, 138 kV and 69 kV with American Electric Power, and notes that one of the 345 kV lines is an asynchronous high-voltage direct current tie to the Southwest Power Pool — the only path off the ERCOT island in Oncor's table. AEP Texas's Howard to Solstice 765 kV line connects into the same Permian backbone Oncor is certifying.",
+      "source": "https://www.ercot.com/files/docs/2025/12/01/14.1-25RPG025-AEP-Texas-CPS-Energy-Oncor-and-CNP-Texas-765-kV-STEP-Eastern-Backbone-Project.pdf"
+    }
+  ],
+  "policyExposure": [
+    {
+      "regime": "Texas Senate Bill 6 and the ERCOT batch interconnection framework",
+      "status": "in-effect",
+      "effectiveDate": "2025-06",
+      "exposure": "Oncor's 10-K never uses the label Senate Bill 6, describing the statute functionally as legislation 'addressing wildfire risk mitigation, distribution pole inspection standards, and infrastructure planning related to large load interconnections'. The label appears only in its investor decks, tied to the implementing rule: the commission's order adopting 16 Texas Administrative Code section 25.370 on ERCOT large load forecasting criteria, issued February 6, 2026 in Project 58480. The operational consequence is ERCOT's 'system-wide approach to sequence large load customer interconnection requests (loads of 75 MW or greater) in a recurring batch interconnection framework, the first stage of which is known as the batch zero process'. Oncor's risk factor is blunt about the uncertainty: these rules are 'under significant and rapidly evolving scrutiny, development and modification', and how they are implemented 'could significantly impact the desirability of the ERCOT market to these customers or our ability to interconnect them'.",
+      "mitigation": "Oncor requires collateral from customers below its credit thresholds before construction begins, plus contribution in aid of construction for the direct interconnection cost — $5.9 billion held at August 2026, over $2 billion of it tied to Batch Zero. It reports the queue in three separated tiers so that no reader can mistake a request for a commitment.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000019/c311-20260630x10q.htm"
+    },
+    {
+      "regime": "The governor's August 2026 data-center audit directive and municipal restrictions",
+      "status": "in-effect",
+      "effectiveDate": "2026-08",
+      "exposure": "The governor directed the commission and ERCOT to conduct 'a comprehensive verification and audit of all data centers advancing through ERCOT's interconnection process before allowing any data center project to move forward'. ERCOT indicated it would suspend certain Batch Zero notifications and seek further guidance on timelines. Oncor states the determination and timing of which projects may advance 'could have various financial, operational, legal and other impacts on us as a transmission service provider'. It separately flags that 'a growing number of cities and counties in Texas have recently considered or proposed restrictions on data center development'. This is the first time in the file that the state has intervened in a queue rather than in a rate.",
+      "mitigation": "None available to Oncor — it is the transmission provider, not the applicant. Its chief executive's public posture is accommodation: 'We share the concerns of ensuring a well-balanced process that meets the needs of both reliability and Texas stakeholders.' The collateral already posted is the only economic protection if projects are removed.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000019/c311-20260630x10q.htm"
+    },
+    {
+      "regime": "Political opposition to the 765 kV certificate applications",
+      "status": "in-effect",
+      "effectiveDate": "2026-07",
+      "exposure": "'In July, the Lieutenant Governor of Texas and the Chair of the Texas Senate's Business and Commerce Committee called on the PUCT to deny pending certificate of convenience and necessity (CCN) applications relating to 765-kV transmission lines.' All four of Oncor's pending applications are 765 kV Permian Basin projects. The company states that denial, significant delay, significant modification or cancellation 'could have various material financial, operational, legal, and other impacts on us', and separately that legislative or regulatory action stopping the 765 kV programme 'could result in a material adverse impact'. Landowner and community participation has already 'resulted in, and could continue to result in, higher than anticipated real property-related costs'.",
+      "mitigation": "Oncor mails notice to landowners within 500 feet of proposed routes and files with named study areas rather than fixed routes, leaving the commission room to select. Two of the four projects are filed jointly with LCRA Transmission Services, a public authority, which broadens the applicant base. Roughly $8 billion of Permian work sits in the base plan; the non-Permian 765 kV work is deliberately parked in the incremental bucket instead.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000019/c311-20260630x10q.htm"
+    },
+    {
+      "regime": "Texas House Bill 5247 and the Unified Tracker Mechanism",
+      "status": "in-effect",
+      "effectiveDate": "2025-06",
+      "exposure": "Signed June 20, 2025, the bill allows a single annual interim rate update through 2035 in place of separate distribution and transmission tracker filings, but only for utilities that operate solely inside ERCOT, have been identified as having Permian Basin construction responsibility, and make annual transmission and distribution capital expenditures exceeding 300 percent of annual depreciation. The commission must review within 120 days, and temporary rates may be placed in effect if no final order issues within 165 days. Regulatory-asset amortization for tracker recoveries cannot exceed 18 months. The residual risk is stated plainly: investments in the mechanism remain 'subject to a future prudence review by the PUCT, with a potential for the PUCT to also order refunds of previously collected amounts'. A separate provision means that if Permian project in-service dates slip, Oncor 'could lose the ability to defer certain expenses' unless it demonstrates the delay was reasonable.",
+      "mitigation": "The first filing, Docket 59249 of April 22, 2026, covers roughly $4.4 billion of 2025 investment at a requested $3.85 a month. Oncor recognised $102 million of regulatory-asset revenue in the second quarter of 2026 and $200 million in the first half, against $19 million a year earlier.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+    },
+    {
+      "regime": "Texas wildfire liability and House Bill 145 mitigation plans",
+      "status": "in-effect",
+      "effectiveDate": "2025-06",
+      "exposure": "Oncor states that rating agencies 'have highlighted wildfire risk in Texas in particular given that Texas does not have certain legal protections available in other jurisdictions, such as an aggregate liability cap on damages relating to a wildfire event and the lack of an affirmative defense to shield utilities from liabilities'. In July 2025 one agency lowered Oncor's rating on that basis, increasing borrowing and commitment fees. Excess liability insurance is 'limited in scope and subject to exceptions, conditions and coverage limitations'. House Bill 145 now requires commission-approved wildfire mitigation plans covering vegetation management, infrastructure inspection and emergency protocols for utilities in high-risk areas, with distribution pole inspection standards as the second limb of the same package.",
+      "mitigation": "Oncor filed its House Bill 145 plan in May 2026. The rate case raised the storm and self-insured-loss accrual to $200 million a year from $122 million, and recent legislation clarifies the ability to self-insure wildfire risk subject to commission approval. Operationally: 15,000 miles of overhead hardening, more than 14,000 critical-equipment inspections, more than 17,600 poles wrapped in fire-retardant mesh, approximately $285 million of vegetation spend across 2025 to 2027, plus fire safety protection settings and public safety power shutoffs as last resorts.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+    },
+    {
+      "regime": "Federal jurisdiction — why Oncor is not a public utility under the Federal Power Act",
+      "status": "in-effect",
+      "effectiveDate": "2026-02",
+      "exposure": "'As our operations are wholly within Texas, we believe we are not a public utility as defined in the Federal Power Act and, as a result, are generally not subject to FERC regulation.' Oncor remains subject to reliability standards adopted and enforced by Texas Reliability Entity and the North American Electric Reliability Corporation, including critical infrastructure protection, and to federal jurisdiction in the narrow case of 'transmission service related to limited interconnections to other markets' — the asynchronous direct-current tie to the Southwest Power Pool. It files a FERC Form 1 annually nonetheless. The practical effect is that no federal regulator sets Oncor's transmission rates: the state commission has original jurisdiction over wholesale transmission rates and services, which is the structural difference between Oncor and every transmission owner inside a federally regulated regional transmission organization.",
+      "mitigation": "North American Electric Reliability Corporation compliance sits with the senior vice president of transmission and distribution operations. Interconnection Standard 520-106 is written to comply with the current version of reliability standard FAC-001.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+    },
+    {
+      "regime": "Trade tariffs on equipment and materials",
+      "status": "in-effect",
+      "effectiveDate": "2025-04",
+      "exposure": "'For example, in 2025, the current administration began implementing tariffs on materials and equipment that has impacted our suppliers. Our suppliers in many instances have shifted that increased cost directly to us. Additional or higher than anticipated costs in the future could have an adverse impact.' Tariffs also appear in Oncor's list of project-execution uncertainties alongside global trade restrictions, volatile commodity prices, supply chain disruptions and executive orders. Oncor does not quantify the impact or identify which commodities — transformers, steel or conductor — are affected.",
+      "mitigation": "The pre-purchase and reservation programme is the stated answer: over 2,000 high-voltage circuit breakers and transformers reserved through 2030, over 30,000 steel structures and approximately 50,000 miles of conductor confirmed, inventory days on hand increased by more than 50 percent, and deliberate diversification of sole-sourced categories including engineering, construction, large power transformers and high-voltage circuit breakers.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+    },
+    {
+      "regime": "Ring-fencing under the 2018 Sempra Order",
+      "status": "in-effect",
+      "effectiveDate": "2018-03",
+      "exposure": "Ring-fencing is a constraint on the owner, not only a protection for the utility. 'As a result of these ring-fencing measures, Sempra does not control Oncor', and the measures limit Sempra's ability to direct management, policies and operations including the deployment or disposition of assets, dividend declarations and strategic planning. The board must have thirteen members — seven disinterested, two designated by Sempra, two by Texas Transmission and two Oncor officers. Any budget whose capital or operating expenditure moves more than 10 percent from the prior period requires approval from a majority of disinterested directors and at least one Texas Transmission designee. Dividends must be suspended if senior secured debt falls below BBB at any of the three major agencies, or if a majority of disinterested directors or either Texas Transmission designee determines retention is in Oncor's interest.",
+      "mitigation": "The same structure is why Oncor's debt is not exposed to Sempra's: 'None of the assets of the Oncor Ring-Fenced Entities are available to satisfy the debt or obligations of any Sempra entity', and no Sempra affiliate may incur debt dependent on Oncor's revenues. Sempra's 2025 and 2026 capital recycling — a 45 percent stake in Sempra Infrastructure Partners to KKR affiliates for $10 billion and a 49.9 percent interest in Port Arthur LNG Phase 2 for $7 billion — has not touched Oncor; no source reviewed reports an Oncor or Sempra Texas stake sale.",
+      "source": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm"
+    }
+  ],
+  "decisionMakers": [
+    {
+      "name": "E. Allen Nye, Jr.",
+      "title": "Chief Executive and Director",
+      "photo": "images/execs/oncor-nye.jpg",
+      "background": [
+        "Chief executive and board member since March 2018 — a lawyer, not an engineer, running the largest wires utility in the country",
+        "Senior vice president, general counsel and secretary of Oncor from January 2011, with responsibility expanded in January 2013 to cover all regulatory and governmental affairs",
+        "Partner in the Dallas office of Vinson & Elkins from 2008 to 2011, representing regulated energy companies before the commission, the State Office of Administrative Hearings and FERC",
+        "Partner at Hunton & Williams from 2002 to 2008; also a director of Oncor Holdings"
+      ]
+    },
+    {
+      "name": "Don J. Clevenger",
+      "title": "Executive Vice President and Chief Financial Officer",
+      "photo": "images/execs/oncor-clevenger.jpg",
+      "background": [
+        "Chief financial officer since March 2018, elevated to executive vice president effective January 1, 2026",
+        "Remit covers accounting, treasury, internal audit, asset investment strategy and risk management — the officer funding a $9 billion annual programme across four currencies",
+        "Senior vice president, strategic planning at Oncor from 2013 to 2018; senior vice president, external affairs from 2010 to 2012; vice president, legal and corporate secretary from 2007",
+        "Senior counsel, business services at TXU Corp from 2004 to 2005; earlier a partner at Hunton & Williams — the second lawyer in the top two seats"
+      ]
+    },
+    {
+      "name": "Ellen E. Buck",
+      "title": "Senior Vice President and Chief Operating Officer",
+      "photo": "images/execs/oncor-buck.jpg",
+      "background": [
+        "Principal operating officer since January 2026, succeeding Jim Greer after 41 years; owns all distribution and transmission planning, engineering, construction, maintenance, system operations and supply chain",
+        "Vice president of business and operations services from 2017 to 2025, leading asset planning, supply chain, transmission development, asset management and engineering support",
+        "Joined Oncor in 2005 from Georgia Transmission Corporation, where she was a transmission engineer; earlier roles in transmission engineering and transmission operations",
+        "Registered professional engineer in Texas; BS industrial engineering, Georgia Institute of Technology; MBA, Southern Methodist University",
+        "The public face of the 765 kV programme — quoted in all four certificate press releases"
+      ]
+    },
+    {
+      "name": "Wes Speed",
+      "title": "Senior Vice President, Transmission",
+      "photo": "images/execs/oncor-speed.jpg",
+      "background": [
+        "Responsible for the design, project management, construction and field operations of Oncor's transmission lines and substations since January 2026",
+        "Vice president of transmission operations from February 2010 to December 2025, overseeing what Oncor calls some of the largest transmission expansion programmes in its history",
+        "Joined Oncor as an intern in 1987 — more than 35 years across transmission engineering, transmission operations, system protection and asset management",
+        "Registered professional engineer in Texas; BS electrical engineering, Texas A&M University"
+      ]
+    },
+    {
+      "name": "Daniel Hall",
+      "title": "Senior Vice President, Distribution",
+      "photo": "images/execs/oncor-hall.jpg",
+      "background": [
+        "Owns distribution operations and construction, distribution engineering and the health and safety department since January 2026, succeeding Keith Hull after 44 years",
+        "Vice president of measurement and billing from March 2020 to December 2025 — the metering franchise, now reporting into the distribution build",
+        "Joined Oncor as an engineer associate in 2000; more than 25 years across measurement services, revenue management, transmission engineering, distribution construction, vegetation management, fleet, emergency preparedness and information technology",
+        "Registered professional engineer in Texas; BS engineering and technology, Texas A&M University"
+      ]
+    },
+    {
+      "name": "Walter Mark Carpenter",
+      "title": "Senior Vice President, Transmission and Distribution Operations",
+      "photo": "images/execs/oncor-carpenter.jpg",
+      "background": [
+        "The ERCOT-interface and reliability-compliance officer: transmission grid management operations, Oncor's interface with ERCOT, the distribution operating centres and the management platforms, in post since October 2011",
+        "Responsible for environmental and North American Electric Reliability Corporation compliance since March 2018 — the officer who answers for reliability standards",
+        "Vice president and chief technology officer of Oncor from 2010 to 2011; vice president and chief information officer from 2008 to 2010",
+        "More than 40 years with Oncor and its predecessors in field and engineering management; registered professional engineer in Texas"
+      ]
+    },
+    {
+      "name": "Matthew C. Henry",
+      "title": "Senior Vice President, General Counsel and Secretary",
+      "photo": "images/execs/oncor-henry.jpg",
+      "background": [
+        "Oversees all legal and compliance matters plus regulatory and governmental affairs since March 2018 — the seat Allen Nye held before becoming chief executive",
+        "Partner in the Dallas office of Vinson & Elkins from 2008 to 2018, where he led the firm's energy regulatory practice",
+        "Partner at Hunton & Williams from 2002 to 2008 — the same firm and the same decade as Nye and Clevenger"
+      ]
+    },
+    {
+      "name": "Deborah L. Dennis",
+      "title": "Senior Vice President, Chief Customer Officer and Chief Human Resources Officer",
+      "photo": "images/execs/oncor-dennis.jpg",
+      "background": [
+        "Chief customer officer since March 2018 and chief human resources officer since February 2020; senior vice president since January 2013",
+        "Remit spans customer service, community relations, corporate communications, economic development and all human resources",
+        "The named public voice on rate filings — quoted on both the June 2025 rate review and the April 2026 tracker application",
+        "Vice president of corporate affairs from 2011; vice president of Dallas customer operations from 2007; more than 40 years with Oncor and its predecessors"
+      ]
+    },
+    {
+      "name": "Joel S. Austin",
+      "title": "Senior Vice President and Chief Digital Officer",
+      "photo": "images/execs/oncor-austin.jpg",
+      "background": [
+        "Leads what Oncor calls the fundamental transformation of how it shares information with its customers; measurement and billing sits under this function",
+        "More than 30 years across technology, energy and finance",
+        "Serves on the Southern Methodist University IT operations management advisory board"
+      ]
+    },
+    {
+      "name": "Malia Hodges",
+      "title": "Senior Vice President and Chief Information Officer",
+      "photo": "images/execs/oncor-hodges.jpg",
+      "background": [
+        "Owns the information technology function including strategy and operations, technology investment management and cybersecurity operations",
+        "Cybersecurity is one of the seven named focus areas of the System Resiliency Plan, so this seat carries a funded capital programme",
+        "Previously with Sendero Business Services, which advised Oncor before she joined"
+      ]
+    },
+    {
+      "name": "Angela Y. Guillory",
+      "title": "Senior Vice President, Human Resources and Corporate Affairs",
+      "photo": "images/execs/oncor-guillory.jpg",
+      "background": [
+        "Owns the workforce behind the build: approximately 5,600 employees plus nearly 9,000 contractors, with 700 crews contracted each year on average",
+        "The collective bargaining agreement covering about 860 employees expires in October 2026",
+        "Oversees the lineworker apprenticeship programme and the linemen schools developed with technical institutions"
+      ]
+    },
+    {
+      "name": "K. Erin McClure",
+      "title": "Senior Vice President, Financial Planning",
+      "photo": "images/execs/oncor-mcclure.jpg",
+      "background": [
+        "Promoted to senior vice president in February 2026, after eight years as vice president of financial planning from March 2018",
+        "Joined Oncor in 1999 as a financial analyst associate",
+        "BBA and MBA in finance, Texas Tech University; chartered financial analyst"
+      ]
+    },
+    {
+      "name": "Robert S. Shapard",
+      "title": "Non-executive Chairman of the Board",
+      "background": [
+        "Non-executive chairman since March 2018 and a director since April 2007; chairman previously from 2007 to 2015",
+        "Chief executive of Oncor from April 2007 to March 2018 — the predecessor whose ring-fencing structure and Sempra transaction he presided over",
+        "Chief financial officer of Tenet Healthcare in 2005, of Exelon from 2002 to 2005, and of Ultramar Diamond Shamrock from 2000 to 2002; chief executive of TXU Australia from 1998 to 2000",
+        "Chairs Oncor's finance committee; also a director of Leidos Holdings and NACCO Industries. Oncor publishes no director photographs, so no company-published image exists"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "WBAP — Texas regulators approve 424 miles of power lines despite calls to wait",
+      "url": "https://www.wbap.com/2026/08/30/texas-regulators-approve-424-miles-of-power-lines-despite-calls-to-wait/",
+      "date": "2026-08-30"
+    },
+    {
+      "label": "Texas Scorecard — Oncor pushes regulators to approve controversial 765 kV transmission line",
+      "url": "https://texasscorecard.com/state/oncor-pushes-regulators-to-approve-controversial-765-kv-transmission-line/",
+      "date": "2026-08-24"
+    },
+    {
+      "label": "Baker Botts — Texas large load interconnection update: ERCOT Batch Zero pause and verification process",
+      "url": "https://www.bakerbotts.com/thought-leadership/publications/2026/august/texas-large-load-interconnection-update---ercot-batch-zero-pause-and-verification-process",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "The Texas Dispatch — Commission sets an August 21 meeting on two 765 kV Oncor lines",
+      "url": "https://thetexasdispatch.com/puc-special-meeting-august-21-oncor-765-kv-lines/",
+      "date": "2026-08-17"
+    },
+    {
+      "label": "Oncor Form 10-Q, quarter ended June 30, 2026 (governor's audit directive; 765 kV political opposition; rate-case order terms)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000019/c311-20260630x10q.htm",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Oncor Q2 2026 earnings release (737 requests, 298 GW; 44 GW Batch Zero; ~8 GW energized; $5.9B collateral)",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/Q2%202026%20Oncor%20Earnings%20Release.pdf",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Oncor Form 8-K (Items 2.02/7.01/9.01) — Q2 2026 results",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526336875/d171086d8k.htm",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Sempra Q2 2026 earnings slides — Oncor pages, filed by Oncor as Exhibit 99.2",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526336875/d171086dex992.htm",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Sempra Form 10-Q, quarter ended June 30, 2026 (Sempra Texas Utilities segment note; equity-method treatment)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1032208/000103220826000045/sre-20260630.htm",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Newsroom — Oncor Reports Second Quarter 2026 Results",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-reports-second-quarter-2026-results.html",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Utility Dive — NRG nears 1.2 GW hyperscaler deal amid Texas data center pause (Skybox substation caption)",
+      "url": "https://www.utilitydive.com/news/nrg-nears-12-gw-hyperscaler-deal-amid-texas-data-center-pause/827212/",
+      "date": "2026-08-06"
+    },
+    {
+      "label": "Global Data Center Hub — US data center infrastructure: the binding constraint",
+      "url": "https://www.globaldatacenterhub.com/p/us-data-center-infrastructure-the",
+      "date": "2026-07-30"
+    },
+    {
+      "label": "Meta Data Centers — Temple, we are online (Meta worked with Oncor Electric)",
+      "url": "https://datacenters.atmeta.com/2026/07/temple-we-are-online/",
+      "date": "2026-07-22"
+    },
+    {
+      "label": "Newsroom — Oncor to release second quarter 2026 results August 6",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-to-release-second-quarter-2026-results-august-6.html",
+      "date": "2026-07-21"
+    },
+    {
+      "label": "Oncor Form 8-K (Item 2.03) — A$750M 5.70 percent senior secured notes due 2033",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526281044/d25700d8k.htm",
+      "date": "2026-06-24"
+    },
+    {
+      "label": "Renewable Energy World — Can ERCOT's new Batch Zero process alleviate 438,000 MW of large load requests?",
+      "url": "https://www.renewableenergyworld.com/energy-business/policy-and-regulation/can-ercots-new-batch-zero-process-alleviate-the-burden-of-438000-mw-of-large-load-requests/",
+      "date": "2026-06-24"
+    },
+    {
+      "label": "ERCOT — Commission approves ERCOT's Batch Zero process for connecting large electricity users",
+      "url": "https://www.ercot.com/news/release/06182026-puct-approves-ercots",
+      "date": "2026-06-18"
+    },
+    {
+      "label": "Texas Public Policy Foundation — An economic assessment of the 765 kV Strategic Transmission Expansion Plan",
+      "url": "https://www.texaspolicy.com/an-economic-assessment-of-the-765-kv-strategic-transmission-expansion-plan/",
+      "date": "2026-06-02"
+    },
+    {
+      "label": "Oncor Tariff for Retail Delivery Service, Revision Twenty-Two",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/about-us/regulatory/tariff-and-rate-schedules/Tariff%20for%20Retail%20Delivery%20Service.pdf.coredownload.pdf",
+      "date": "2026-06-01"
+    },
+    {
+      "label": "Oncor Form 8-K (Items 1.01/2.03/9.01) — €850M junior subordinated notes due 2056",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526241882/d146142d8k.htm",
+      "date": "2026-05-27"
+    },
+    {
+      "label": "Newsroom — Oncor convenes East Texas leaders for a storm-readiness roundtable",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-convenes-east-texas-leaders-for-storm-readiness---communit.html",
+      "date": "2026-05-15"
+    },
+    {
+      "label": "Oncor Q1 2026 earnings release",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/Q1%202026%20Earnings%20Release.pdf",
+      "date": "2026-05-07"
+    },
+    {
+      "label": "Oncor Form 10-Q, quarter ended March 31, 2026",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000014/c311-20260331x10q.htm",
+      "date": "2026-05-07"
+    },
+    {
+      "label": "Newsroom — Oncor Reports First Quarter 2026 Results",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-reports-first-quarter-2026-results.html",
+      "date": "2026-05-07"
+    },
+    {
+      "label": "DocketWatcher — Commission daily brief, Oncor certificate dockets 59315, 59182 and 59307",
+      "url": "https://amitavm.substack.com/p/docketwatcher-puct-daily-brief-542026",
+      "date": "2026-05-05"
+    },
+    {
+      "label": "Newsroom — Oncor files Unified Tracker Mechanism request (Docket 59249)",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-files-unified-tracker-mechanism-request-to-support-reliabi.html",
+      "date": "2026-04-23"
+    },
+    {
+      "label": "Oncor Form 8-K (Item 7.01) — commission final order in the base rate review",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526161536/d285147d8k.htm",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "TradingView — Sempra says Oncor rate case approved with a $560M, 8.7 percent annual revenue increase",
+      "url": "https://www.tradingview.com/news/tradingview:5beb886045750:0-sempra-says-oncor-rate-case-approved-with-560m-8-7-annual-revenue-increase/",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "Oncor FERC Form 1 for 2025",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/ferc-form/Oncor%20FERC%20Form%201%2025%204.17.26.pdf",
+      "date": "2026-04-17"
+    },
+    {
+      "label": "Utility Dive — Texas demand to quadruple by 2032, ERCOT says; maybe, but don't bet on it",
+      "url": "https://www.utilitydive.com/news/texas-demand-to-quadruple-by-2032-ercot-says-maybe-but-dont-bet-on-it/817698/",
+      "date": "2026-04-16"
+    },
+    {
+      "label": "ERCOT — Preliminary long-term load forecast for 2026 to 2032 (Project 58777)",
+      "url": "https://www.ercot.com/news/release/04152026-ercot-releases-preliminary",
+      "date": "2026-04-15"
+    },
+    {
+      "label": "Modo Energy — Battery storage buildout crosses 15 GW in ERCOT in Q1 2026",
+      "url": "https://modoenergy.com/research/en/ercot-bess-buildout-15-gw-q1-2026-engie-tesla-constellation",
+      "date": "2026-04-13"
+    },
+    {
+      "label": "ERCOT — Large load update to the Senate Committee on Business and Commerce (410 GW of large loads)",
+      "url": "https://www.ercot.com/files/docs/2026/04/01/ERCOT_LargeLoad_Update_April2026_B-C_-Hearing.pdf",
+      "date": "2026-04-01"
+    },
+    {
+      "label": "RTO Insider — ERCOT large load interconnection queue hits 410 GW",
+      "url": "https://www.rtoinsider.com/129421-ercot-large-load-requests-soar-again/",
+      "date": "2026-04-01"
+    },
+    {
+      "label": "Utility Dive — Oncor and LCRA propose up to 244 miles of 765 kV Texas transmission",
+      "url": "https://www.utilitydive.com/news/oncor-lcra-propose-up-to-244-miles-of-765-kv-texas-transmission/816207/",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "Foley & Lardner — Commission issues proposed rules for large load interconnections",
+      "url": "https://www.foley.com/p/102mokd/public-utility-commission-of-texas-issues-proposed-rules-for-large-load-interconn/",
+      "date": "2026-03-31"
+    },
+    {
+      "label": "DLA Piper — Texas proposes new interconnection standards for large electric loads (Project 58481, section 25.194)",
+      "url": "https://www.dlapiper.com/en-us/insights/publications/2026/03/texas-proposes-new-interconnection-standards-for-large-electric-loads",
+      "date": "2026-03-30"
+    },
+    {
+      "label": "Newsroom — Oncor and LCRA Transmission Services request approval for the Bell County East to Big Hill 765 kV line (Docket 59475)",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/-oncor--lcra-tsc-request-approval-to-build-next-generation-trans.html",
+      "date": "2026-03-26"
+    },
+    {
+      "label": "Oncor Form 8-K (Items 2.03/9.01) — $750M 4.50 percent notes due 2031 and $850M 5.90 percent due 2056",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526117626/d127318d8k.htm",
+      "date": "2026-03-20"
+    },
+    {
+      "label": "Greenberg Traurig — Texas Senate Bill 6 update: proposed interconnection standards",
+      "url": "https://www.gtlaw.com/en/insights/2026/3/texas-senate-bill-6-update-what-data-centers-large-load-customers-should-know-about-proposed-interconnection-standards",
+      "date": "2026-03-17"
+    },
+    {
+      "label": "ERCOT — Large load interconnection status update, March Technical Advisory Committee report (9,042 MW approved to energize; 3,883 MW observed peak)",
+      "url": "https://www.ercot.com/files/docs/2026/03/12/March-TAC-Report.pdf",
+      "date": "2026-03-13"
+    },
+    {
+      "label": "Oncor March 2026 Investor Presentation",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/March%202026%20Investor%20Presentation.pdf",
+      "date": "2026-02-27"
+    },
+    {
+      "label": "Oncor Form 10-K for fiscal year ended December 31, 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119331126000007/c311-20251231x10k.htm",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Oncor Q4 and FY2025 earnings release",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/Q4%202025%20Oncor%20Earnings%20Release.pdf",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Sempra Q4 2025 earnings slides — Oncor pages, filed by Oncor as Exhibit 99.2 (segment guidance; rate-base projection; the $11B raise)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526073624/d17515dex992.htm",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Newsroom — Oncor reports 2025 results and announces a $47.5 billion 2026-2030 base capital plan",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/ONCOR-REPORTS-2025-RESULTS---ANNOUNCES--47-5-BILLION-2026-2030-BASE-CAPITAL-PLAN.html",
+      "date": "2026-02-26"
+    },
+    {
+      "label": "Newsroom — Oncor requests approval to build the Dinosaur to Longshore 765 kV line (Docket 59315)",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-requests-approval-to-build-next-generation-transmission-li.html",
+      "date": "2026-02-19"
+    },
+    {
+      "label": "Energy-Storage.news — ERCOT battery interconnection applications drop 50 percent in the second half of 2025",
+      "url": "https://www.ess-news.com/2026/02/06/ercot-bess-interconnection-applications-drop-50-in-h2-2025-as-faults-in-the-boom-emerge/",
+      "date": "2026-02-06"
+    },
+    {
+      "label": "Oncor 2025 Corporate Sustainability Report",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/sustainability-reports/2025%20Sustainability%20Report.pdf",
+      "date": "2026-02-01"
+    },
+    {
+      "label": "Oncor Form 8-K (Item 7.01) — unopposed comprehensive rate-case settlement filed (Docket 58306)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526029420/d46774d8k.htm",
+      "date": "2026-01-29"
+    },
+    {
+      "label": "Newsroom — Oncor and LCRA Transmission Services request approval for the Big Hill to Sand Lake 765 kV line (Docket 59182)",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor--lcra-tsc-request-approval-to-build-765kv-transmission-lin.html",
+      "date": "2026-01-15"
+    },
+    {
+      "label": "Oncor Form S-4 (registered exchange offer)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312526006934/d37308ds4.htm",
+      "date": "2026-01-08"
+    },
+    {
+      "label": "Utility Dive — ERCOT's large load queue jumped almost 300 percent last year",
+      "url": "https://www.utilitydive.com/news/ercots-large-load-queue-jumped-almost-300-last-year-official/808820/",
+      "date": "2026-01-06"
+    },
+    {
+      "label": "Newsroom — Oncor announces Ellen Buck, Wes Speed and Daniel Hall as new senior vice presidents",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-announces-ellen-buck--wes-speed-and-daniel-hall-as-new-sen.html",
+      "date": "2026-01-02"
+    },
+    {
+      "label": "RTO Insider — ERCOT again revising the large load interconnection process",
+      "url": "https://www.rtoinsider.com/122182-ercot-add-new-interconnection-rules-large-loads/",
+      "date": "2025-12-22"
+    },
+    {
+      "label": "Newsroom — Oncor requests approval for the first 765 kV transmission line in Texas (Docket 59029)",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-requests-approval-for-first-765kv-transmission-line-in-tex.html",
+      "date": "2025-12-15"
+    },
+    {
+      "label": "Latitude Media — ERCOT's large load queue has nearly quadrupled in a single year",
+      "url": "https://www.latitudemedia.com/news/ercots-large-load-queue-has-nearly-quadrupled-in-a-single-year/",
+      "date": "2025-12-03"
+    },
+    {
+      "label": "ERCOT board item 14.1 — 25RPG025, AEP Texas, CPS Energy, Oncor and CNP Texas 765 kV STEP eastern backbone project",
+      "url": "https://www.ercot.com/files/docs/2025/12/01/14.1-25RPG025-AEP-Texas-CPS-Energy-Oncor-and-CNP-Texas-765-kV-STEP-Eastern-Backbone-Project.pdf",
+      "date": "2025-12-01"
+    },
+    {
+      "label": "Newsroom — $520,000 to volunteer fire departments in west, north and central Texas",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/volunteer-fire-departments-in-west--north--central-texas-receive.html",
+      "date": "2025-11-12"
+    },
+    {
+      "label": "Oncor 2025 EEI Investor Presentation",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/2025%20EEI%20Investor%20Presentation.pdf",
+      "date": "2025-11-07"
+    },
+    {
+      "label": "Oncor Q3 2025 earnings release",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/Q3%202025%20Oncor%20Earnings%20Release.pdf",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "Oncor Form 10-Q, quarter ended September 30, 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119331125000026/c311-20250930x10q.htm",
+      "date": "2025-11-05"
+    },
+    {
+      "label": "EPE Consulting — Updates to ERCOT's 765 kV Permian reliability plan",
+      "url": "https://epeconsulting.com/epe-intelligence/news/latest-updates-to-ercots-milestone-765-kv-permian-reliability-plan",
+      "date": "2025-11-03"
+    },
+    {
+      "label": "Oncor Form 8-K (Item 5.02) — Greer retirement; Clevenger to executive vice president and chief financial officer; Buck to chief operating officer",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312525257338/d97228d8k.htm",
+      "date": "2025-10-30"
+    },
+    {
+      "label": "Oncor Form 8-K (Items 2.03/9.01) — C$500M senior secured notes due 2035",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312525223187/d941439d8k.htm",
+      "date": "2025-09-29"
+    },
+    {
+      "label": "Newsroom — Oncor statement on an inaccurate land purchase release",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-statement-on-inaccurate-land-purchase-release.html",
+      "date": "2025-09-15"
+    },
+    {
+      "label": "Oncor Q2 2025 earnings release",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/Q2%202025%20Oncor%20Earnings%20Release.pdf",
+      "date": "2025-08-07"
+    },
+    {
+      "label": "Texas Legislature — Senate Bill 6 (89th Regular Session), Senate Research Center bill analysis, enrolled",
+      "url": "https://capitol.texas.gov/tlodocs/89R/analysis/html/SB00006F.htm",
+      "date": "2025-08-05"
+    },
+    {
+      "label": "Energy and Policy Institute — Oncor tries to resurrect a dead bill to justify an interim rate increase in Texas",
+      "url": "https://energyandpolicy.org/oncor-tries-to-resurrect-dead-bill-to-justify-interim-rate-increase-in-texas/",
+      "date": "2025-07-30"
+    },
+    {
+      "label": "Bracewell — Texas Senate Bill 6 ushers in a major overhaul of large load interconnection and grid access rules",
+      "url": "https://www.bracewell.com/resources/texas-senate-bill-6-ushers-in-major-overhaul-of-large-load-interconnection-and-grid-access-rules/",
+      "date": "2025-07-09"
+    },
+    {
+      "label": "Newsroom — Oncor files a rate review to further support critical investments in Texas (Docket 58306)",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-files-rate-review-to-further-support-critical-investments-.html",
+      "date": "2025-06-26"
+    },
+    {
+      "label": "Oncor Form 8-K (Items 2.03/7.01/9.01) — €700M senior secured notes due 2034",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119312525144167/d71598d8k.htm",
+      "date": "2025-06-23"
+    },
+    {
+      "label": "Insurance Journal — Texas lawmakers pass legislation to improve wildfire preparedness",
+      "url": "https://www.insurancejournal.com/news/southcentral/2025/06/03/826158.htm",
+      "date": "2025-06-03"
+    },
+    {
+      "label": "Newsroom — Oncor's first System Resiliency Plan well underway",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-s-first-system-resiliency-plan-well-underway-.html",
+      "date": "2025-05-13"
+    },
+    {
+      "label": "Utility Dive — Sempra to sell its Mexican natural gas business to fund transmission expansion in Texas",
+      "url": "https://www.utilitydive.com/news/sempra-earnings-mexican-natural-gas-oncor-transmission/747618/",
+      "date": "2025-05-09"
+    },
+    {
+      "label": "Oncor Q1 2025 earnings release",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/investorrelations/financial-news/Q1%202025%20Oncor%20Earnings%20Release.pdf",
+      "date": "2025-05-08"
+    },
+    {
+      "label": "RTO Insider — Texas commission approves the 765 kV transmission option for the Permian Basin",
+      "url": "https://www.rtoinsider.com/103773-texas-pucs-approves-765-kv-transmission-option-for-permian-basin/",
+      "date": "2025-04-24"
+    },
+    {
+      "label": "S&P Global Ratings — Oncor Electric Delivery outlook revised to negative on incremental capital spending, ratings affirmed",
+      "url": "https://www.spglobal.com/ratings/en/regulatory/article/-/view/type/HTML/id/3331653",
+      "date": "2025-03-03"
+    },
+    {
+      "label": "Oncor Form 10-K for fiscal year ended December 31, 2024",
+      "url": "https://www.sec.gov/Archives/edgar/data/1193311/000119331125000006/c311-20241231x10k.htm",
+      "date": "2025-02-25"
+    },
+    {
+      "label": "Newsroom — Oncor reports 2024 results and announces a $36 billion 2025-2029 capital plan",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-reports-2024-results--announces--36-billion-2025-2029-capi.html",
+      "date": "2025-02-25"
+    },
+    {
+      "label": "Newsroom — Oncor receives the EEI emergency response award for recovery after the May 2024 storms",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-receives-eei-emergency-response-award-for-recovery-efforts.html",
+      "date": "2025-01-22"
+    },
+    {
+      "label": "Newsroom — Oncor System Resiliency Plan approved by the commission (Docket 56545)",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-system-resiliency-plan-approved-by-puct-.html",
+      "date": "2024-11-14"
+    },
+    {
+      "label": "Cbonds — Fitch Ratings affirms Oncor Electric Delivery at BBB+ with a negative outlook",
+      "url": "https://cbonds.com/news/3050169/",
+      "date": "2024-09-05"
+    },
+    {
+      "label": "NBC DFW — Oncor says the May 28 storms in Dallas were the worst in company history",
+      "url": "https://www.nbcdfw.com/news/local/oncor-worst-storm-ever-outage-damage/3561661/",
+      "date": "2024-06-06"
+    },
+    {
+      "label": "Newsroom — Oncor reports 2023 results and announces a $24.2 billion 2024-2028 capital plan",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-reports-2023-results--announces-24-2-billion-2024-2028-cap.html",
+      "date": "2024-02-27"
+    },
+    {
+      "label": "Oncor Transmission Standard 520-106 — facility interconnection requirements for transmission-voltage retail customers",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/about-us/transmission-system/determining-the-need-for-new-lines/520-106%20Retail%20Interconnection.pdf.coredownload.pdf",
+      "date": "2023-11-21"
+    },
+    {
+      "label": "Newsroom — Oncor and Toyota collaborate to research vehicle-to-grid technology",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom/oncor-and-toyota-collaborate-to-research-vehicle-to-grid-technol.html",
+      "date": "2022-12-15"
+    },
+    {
+      "label": "Oncor Transmission Standard 520-108 — generating plant and gen-tie interconnection",
+      "url": "https://www.oncor.com/content/dam/oncorwww/documents/about-us/transmission-system/determining-the-need-for-new-lines/520-108%20Gen%20Tie%20Interconnection.pdf.coredownload.pdf"
+    },
+    {
+      "label": "Oncor Investor Relations — earnings, SEC filings, commission earnings reports and FERC Form 1 (where Q3 2026 results will post)",
+      "url": "https://www.oncor.com/us/en/home/investors.html"
+    },
+    {
+      "label": "Oncor investor-documents JSON feed for the financial-news folder",
+      "url": "https://www.oncor.com/content/oncorwww/us/en/home/investors/jcr:content.getFileList.html?dampath=/content/dam/oncorwww/documents/investorrelations/financial-news"
+    },
+    {
+      "label": "Oncor Corporate Governance — executive leadership team bios and headshots",
+      "url": "https://www.oncor.com/us/en/home/investors/corporate-governance.html"
+    },
+    {
+      "label": "Oncor Board of Directors — bios, committees and charters",
+      "url": "https://www.oncor.com/us/en/home/investors/board-of-directors.html"
+    },
+    {
+      "label": "Oncor Newsroom index",
+      "url": "https://www.oncor.com/content/oncorwww/wire/en/home/newsroom.html"
+    },
+    {
+      "label": "Oncor — transmission system",
+      "url": "https://www.oncor.com/us/en/home/about-us/transmission-systems.html"
+    },
+    {
+      "label": "Oncor — current transmission line projects",
+      "url": "https://www.oncor.com/us/en/home/about-us/transmission-systems/current-transmission-line-projects.html"
+    },
+    {
+      "label": "Oncor — electric distribution system and storm restoration priorities",
+      "url": "https://www.oncor.com/us/en/home/about-us/electric-distribution-system.html"
+    },
+    {
+      "label": "Oncor — advanced metering service (Landis+Gyr meters; 15-minute intervals)",
+      "url": "https://www.oncor.com/us/en/home/about-us/advanced-metering-service.html"
+    },
+    {
+      "label": "Oncor — wildfire safety and mitigation (fire safety protection settings; public safety power shutoffs)",
+      "url": "https://www.oncor.com/us/en/home/about-us/wildfire-safety-and-mitigation.html"
+    },
+    {
+      "label": "Oncor — vegetation management standards",
+      "url": "https://www.oncor.com/us/en/home/about-us/vegetation-management.html"
+    },
+    {
+      "label": "Oncor — energy system developers, distributed generation interconnection",
+      "url": "https://www.oncor.com/us/en/home/smart-energy/renewables-solar-and-more/energy-system-developers.html"
+    },
+    {
+      "label": "Oncor — electric vehicles and the Evolution programme",
+      "url": "https://www.oncor.com/us/en/home/smart-energy/electric-vehicles.html"
+    },
+    {
+      "label": "Oncor — economic development (400 communities, 98 counties)",
+      "url": "https://www.oncor.com/us/en/home/about-us/economic-development.html"
+    },
+    {
+      "label": "Oncor — new construction, customer load requirements and distribution design specifications",
+      "url": "https://www.oncor.com/us/en/home/constructionanddevelopment/new-construction.html"
+    },
+    {
+      "label": "Oncor — retail electric provider partner hub",
+      "url": "https://www.oncor.com/us/en/home/partners/retail-electric-providers.html"
+    },
+    {
+      "label": "Oncor — regulatory tariffs and rate schedules",
+      "url": "https://www.oncor.com/us/en/home/about-us/regulatory/tariffs-rate-schedules.html"
+    },
+    {
+      "label": "ERCOT — large load integration and Batch Zero",
+      "url": "https://www.ercot.com/services/rq/large-load-integration"
+    },
+    {
+      "label": "Texas Condemnation Rights — Texas 765 kV transmission line projects, docket by docket",
+      "url": "https://txcondemnationrights.com/eminent-domain-projects/texas-765-kv-transmission-line-projects/"
+    },
+    {
+      "label": "LCRA — Bell County East to Big Hill 765 kV transmission project (Docket 59475)",
+      "url": "https://www.lcra.org/energy/electric-transmission/transmission-line-routing/bell-county-east-to-big-hill-765-kv-transmission-project/"
+    },
+    {
+      "label": "AEP Transmission — Howard to Solstice transmission line project (Docket 59366)",
+      "url": "https://www.aeptransmission.com/texas/howard-solstice/"
+    },
+    {
+      "label": "Lloyd Gosselink — implementation of electric and utility bills from the 89th legislative session (Projects 58479 through 58484)",
+      "url": "https://www.lglawfirm.com/now-what-implementation-of-electric-and-utility-bills-from-the-89th-legislative-session/"
+    },
+    {
+      "label": "Texas Legislature — Senate Bill 6 (89th Regular Session) enrolled bill text",
+      "url": "https://capitol.texas.gov/tlodocs/89R/billtext/html/SB00006F.htm"
+    },
+    {
+      "label": "Investing.com — Sempra earnings history and next-date tracker (proxy for Oncor's reporting cadence)",
+      "url": "https://www.investing.com/equities/sempra-energy-earnings"
+    },
+    {
+      "label": "SEC EDGAR submissions API — Oncor Electric Delivery (CIK 0001193311)",
+      "url": "https://data.sec.gov/submissions/CIK0001193311.json"
+    }
+  ],
+  "lastUpdated": "2026-09-03",
+  "profileVersion": 1
+}
