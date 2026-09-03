@@ -3,11 +3,34 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 91/100`
+`Sections: 92/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.39r] — 2026-09-03 01:58:03 AM EST
+
+> **Prompt:** "continue with your recommendation"
+
+**The structural fix for the failure the previous commit ran into.** §6's gap register had no way to record that a gap was closed, so G1 sat closed-since-v04.31r while still reading as open work with a *do this first* note attached — and produced a wrong recommendation two commits later. This commit gives the register a `Status` column and backfills all twelve rows **from checks run against the corpus, not from memory**.
+
+### Changed
+
+- **`repository-information/CLASSROOM-CURRICULUM-PLAN.md`** — §6 gains a **`Status` column** in second position, where a reader meets it before the gap text. Twelve rows backfilled: **G1 Closed** (v04.31r, extended v04.38r) · **G4 Partial** · **G2, G3, G5, G6, G7, G8, G9, G10 Open** · **G11 Deferred** · **G12 By design**. The last two are the register's own judgments that a row should not be commissioned, not work waiting to happen — a distinction the old table could not express at all
+- **Every status was verified, and the verification is stated above the table** so the next reader knows what was checked and when: dossier and study-guide files by slug, section titles and keyword coverage inside the guides a row names, and the module ids in `guidanceDocs_()`. The note also fixes the rule that was missing — **a row is not closed until someone re-runs its check and dates it here**
+- **G1's row was restored to its original wording.** v04.38r had marked the closure with a long inline `[CLOSED — …]` prefix inside the Gap cell, which was the only place available at the time; with a column to carry it, the prefix is gone and the row reads as it originally did
+- **Four rows carry a dated verification clause** where the check changed the reading or the evidence is unusually strong: G3, G4, G5 and G9
+- **The "commission first" paragraph was rewritten** rather than patched. It now opens on G2 and G3 as the top of the list with their verification stated, and promotes **G9 to the row this curriculum has hit in practice rather than in theory** — `the-800-vdc-shift` and `where-bess-plugs-in` both had to state its thinness in their own lesson text rather than teach around it, which is stronger evidence than anything else in the register carries
+- **`repository-information/repository.version.txt`**, **`README.md`** — `v04.38r` → `v04.39r` and the `Last updated:` line
+
+### Notes
+
+- **What the checks actually returned**, since the column is only worth what the verification behind it is worth. **G2** — no gen-set OEM dossier of any kind: Caterpillar, Cummins, Kohler, Rolls-Royce/mtu, INNIO and Generac are all absent, so the row is open exactly as written. **G3** — exact: `vertiv.study.json` contains **zero** UPS content, `schneider-electric.study.json` **zero**, `eaton.study.json` is the only substantial source, and no guide in the corpus mentions rotary or flywheel UPS; Piller and Mitsubishi Electric are both absent. **G5** — no utility dossier exists at all. **G6** — seven guidance modules exist and none is a large-load interconnection module. **G7** — no chiller OEM, no CDU specialist. **G8** — no SMR vendor; Constellation, Bechtel and Kiewit exist and support a section, exactly as the row says. **G9** — Narada has a dossier and no study guide, Vicor and Infineon are absent. **G10** — Black & Veatch's guide has an *owner's engineer* section but **zero** occurrences of *independent engineer*, which are different roles, so the bankability material is still single-sourced to the guidance module. **G11** — Aligned, QTS, Holder and Black & Veatch all present, which is precisely the "no public source beyond sections of" state the row describes and defers
+- **G4 is the row whose premise had moved, which is why it is `Partial` rather than `Open` or `Closed`.** "Beyond ABB" no longer describes the corpus: ABB's own guide already covers arc interruption and protection relays, and Hitachi Energy and GE Vernova both carry study guides with grid-equipment content that §5's failure map already cites. But all three of the row's *stated asks* are untouched — `siemens-energy.study.json` is still turnarounds and hydrogen with no grid-technology section, there is no Powell dossier, and no grid-equipment-shortage module exists. A binary column would have had to lie in one direction or the other
+- **This is a documentation-only commit.** No lesson, track, registry, page or script changed, so [PC-GS-VERSION] #1, [PC-HTML-VERSION] #2, [PC-PAGE-CHANGELOG] #16 and the README tree do not fire, and neither `node --check` nor the classroom checkers have anything new to judge — the corpus they read is byte-identical to v04.38r
+- The branch was **restarted from `origin/main`** before committing, as on the previous three commits; the working edit was carried across with `git stash`
+- Register now reads: **1 closed, 1 partial, 8 open, 1 deferred, 1 by design**
 
 ## [v04.38r] — 2026-09-03 01:39:08 AM EST
 
