@@ -6,6 +6,102 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-02 10:17:40 PM EST
+**Repo version:** v04.31r (started at v04.30r — one push commit)
+**Branch:** `claude/gap-g1-profiler-concepts-nflhuk` (merged to `main` by the auto-merge workflow)
+**Model:** Opus 5 — an authoring session, by the standing decision that planning runs on Fable and authoring on Opus 5
+
+**What we worked on — gap G1 from the curriculum plan (`5c66534` v04.31r, data only):**
+
+- **Added all 31 concepts named in `CLASSROOM-CURRICULUM-PLAN.md` §6 G1** to
+  `live-site-pages/profiler-data/profiler-concepts.json`, taking the registry from **44 to 75 entries**.
+  Merged alphabetically by slug as a **pure insertion** — 266 additions, zero deletions, no existing
+  entry moved or changed
+- **The definitions are corpus-derived, not model-derived.** Before writing anything, the mechanics were
+  pulled from the material the lessons will cite: Eaton (selective coordination, hold-up time, the ATS
+  outage choreography, arc-flash studies, IEEE 519 at the point of common coupling), Sinexcel (reactive
+  power / power factor / THD), Vertiv (CDU, cold plate), Black & Veatch (synchronous condenser,
+  inertia), Bechtel (GOES as the transformer chokepoint), the `nvidia-800vdc` guidance module (SSCB,
+  BBU, busway, VRM, TRU/SST), and the procurement + bankability modules (IRP, LTSA, independent
+  engineer, NOGRR 282, SB 6, large-load tariff). For the regulatory terms this mattered — NOGRR 282's
+  ≥75 MW threshold and its "load rule, not a storage standard" distinction come from the module's own
+  glossary, not from memory
+- **Voice matched to the registry:** one to three sentences, expansion → mechanism → why it matters to a
+  seller, high-school-STEM baseline, no figures needing their own citation, US spelling, em dashes only.
+  The file round-trips byte-identically against `json.dumps(indent=1, ensure_ascii=False)`, same as
+  before the write
+- **Aliases cover the forms a lesson will actually write** — `THD`, `scale-out`, `Tier III`/`Tier IV`,
+  `IE`, `minimum take`, `reactive power`, `point of common coupling`, `automatic transfer switch`, and
+  every acronym expansion. Checked against all 44 pre-existing terms and aliases: **zero collisions**
+- **Verified:** `check-classroom-content.py` — 5 lessons, 2 tracks, 134 gate cases, **0 errors /
+  0 warnings** (no `{{term}}` resolves to nothing); `check-profiler-study.py` — 62 study guides +
+  registry at 75 concepts, **0 errors / 0 warnings** (shape, slug pattern, collisions, alphabetical
+  order all clean)
+- **Bumped only the repo version** (v04.30r → v04.31r) as instructed. No page or GAS version bump —
+  `profiler-data/` writes are data-only by rule; `Profiler.html` and `Classroom.html` are **indirect
+  affects** (both fetch `profiler-concepts.json` at runtime for their `{{term}}` tooltips)
+
+**Where we left off:**
+
+- **G1 is done and merged.** The vocabulary exists but nothing yet *uses* it — no lesson or study guide
+  writes `{{transformer}}` or `{{GOES}}` today. The payoff is entirely forward-looking and lands the
+  moment `the-fence-line` is authored
+- **The concepts layer date moved twice in two days** (2026-09-02 for the plan commit, then again for
+  this one). The five existing lessons still pin `concepts:profiler-concepts` at **2026-08-31**, so all
+  five now show input drift. That is the refresh pipeline working as designed, **not** a checker
+  failure — P7 only fails on a pin moving *backwards*. The pins were deliberately left alone: rewriting
+  them is a `Classroom.gs` write with a GAS version bump, outside the session's scope and inside what
+  the `the-fence-line` session touches anyway
+- **`check-classroom-pipeline.py` was deliberately not run.** It judges the *unattended committer's*
+  write set; `CHANGELOG.md`, `README.md` and `repository.version.txt` sit outside it, so it reports P1
+  findings on any developer-session commit. Plan §8 note 9 scopes it to `Classroom.gs` writes
+- **Three calls the plan still leaves to the developer** (§8 item 11), all untouched: keep or retire the
+  track id `aidc-power-primer` (naming only); whether G5 (four utility dossiers) is worth commissioning
+  before track 5's guidance lessons; the first-five ordering now that G1 has landed
+- The earnings desk Routine (weekdays 13:00 UTC) and the weekly C2 pipeline (Wed 11:00 UTC) remain live
+  and unreviewed across the last three sessions; neither was touched here
+- Sessions D and E of `IMPROVEMENT-PLAN.md` remain not started
+
+**Key decisions and positions taken:**
+
+- **Two G1 rows are one concept each, not two.** `harmonics/THD` is a single entry (THD as an alias) and
+  `scale-up/scale-out` is a single entry (scale-out as an alias) — the plan writes them slash-joined and
+  the corpus teaches each pair as one idea. That lands the count at 31, matching the plan's "~30"
+- **`reactive power` is an alias of `power-factor`, not its own entry.** The corpus teaches them in one
+  breath (Sinexcel's flashcard is literally "What is reactive power, and what does power factor
+  measure?"), so one tooltip covers both. Flagged to the developer as a veto-able call — if a track-2
+  lesson ever needs reactive power on its own terms, promote the alias to an entry then
+- **Definitions are grounded in the corpus, never authored from model memory** — established here as the
+  working method for registry writes, and the reason the regulatory entries (NOGRR 282, SB 6,
+  large-load tariff, IRP, LTSA, IE) are safe to state without a web check
+- **Planning on Fable 5.1, authoring on Opus 5** — restated and applied; one unit of work per session
+
+**Active context:**
+
+- Repo **v04.31r** · Classroom **v01.07w / v01.10g** · Profiler **v01.80w / v01.34g** · Scraper
+  **v01.71w / v01.99g** — no page or GAS version moved this session
+- Concepts registry now **75 entries** (was 44); capacity: repo CHANGELOG **84/100**; `Profilerhtml`
+  48/50; `Scrapergs` 46/50
+- Curriculum still **5 lessons / 2 tracks** in `Classroom.gs`; the plan proposes 30 / 5
+- Routines unchanged (6): earnings desk, C2 pipeline, daily ACL, monthly drift, quarterly guidance
+  review, quarterly private sweep
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md empty
+
+**Recommendation for next session:**
+
+- **Author `the-fence-line` on Opus 5** (`CLASSROOM-CURRICULUM-PLAN.md` §3.3, first on the cut line). It
+  is the missing front half of the grid-to-chip chain, every later AIDC lesson assumes it, five deep
+  public guides support it, and its entire front-half vocabulary (`transformer`, `switchgear`, `GOES`,
+  `large-load tariff`, `NOGRR 282`, `SB 6`, `IRP`, `interconnection queue`) now resolves from the shared
+  registry with nothing lesson-local to carry. Re-fetch and re-pin every input off the fetched document
+  (§8 note 2) — do not carry the plan's dates or the existing lessons' stale `2026-08-31` concepts pin
+
+**To continue:** type `author the-fence-line from CLASSROOM-CURRICULUM-PLAN.md §3.3`
+
+## Previous Sessions
+
+### Session — 2026-09-02 (Classroom curriculum design — planning, v04.30r)
+
 **Date:** 2026-09-02 09:36:11 PM EST
 **Repo version:** v04.30r (started at v04.29r — one push commit)
 **Branch:** `claude/classroom-curriculum-design-woh4a7` (merged to `main` by the auto-merge workflow)
@@ -89,110 +185,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
   (`the-fence-line`, plan §3.3) follows in its own Opus 5 session
 
 **To continue:** type `implement gap G1 from CLASSROOM-CURRICULUM-PLAN.md`
-
-## Previous Sessions
-
-### Session — 2026-09-02 (The drill — Sessions A/B/C of IMPROVEMENT-PLAN.md, v04.29r)
-
-**Date:** 2026-09-02 08:17:50 PM EST
-**Repo version:** v04.29r (started at v04.24r — five push commits)
-**Branch:** `claude/session-a-earnings-desk-y6ns6e` (all five merged to `main`)
-
-**What we worked on — Sessions A, B and C of `IMPROVEMENT-PLAN.md`, plus a fix:**
-
-- **`7c7e2b6` v04.25r — Session A part 1 (the earnings desk, P3 + R1 + R4).** Created
-  `repository-information/profiler-refresh-calendar.json`: 50 rows (29 public with
-  `nextReport`/`confirmed`/`source`/`lastRefreshed`/`watch[]`, 21 `cadence: "quarterly"` private),
-  seeded by reading **all 22** armed one-shot prompts in full. Schema section added to
-  `PROFILER-SCHEMA.md`. Rewrote "Scheduled Refreshes" in `.claude/rules/profiler-app.md` around the
-  calendar; deleted the stale "Currently armed" list. Fixed R4 brochure drift (Scraper's retired
-  👍/👎 + Calibrate advice; Profiler page 5, which described the convention this commit retired),
-  rebuilt both PDFs, re-measured the 1006 px limit — Profiler p5 came back at **1007 px**, trimmed to
-  989. Folded in the CHANGELOG entry + README tree row the plan commit had skipped
-- **`4b6deda` v04.26r — Session A part 2.** Created the **Profiler earnings desk** Routine
-  `trig_01UyH77BMKJnxzBUZJ11ej6A` (weekdays 13:00 UTC, fresh session, push + email) carrying
-  `CORPUS_TOKEN` — the first scheduled Profiler session ever to have it, which switches the
-  Scraper news-triage bridge on. Hand-fired it as a report-only dry run (5m36s, 10.8M tokens read,
-  `main` untouched, no branch), then deleted all 22 one-shots. **Six Routines remain, zero
-  per-company one-shots**
-- **`b126e33` v04.27r — Session B (completion dates + computed deltas).** Both progress stores moved
-  from booleans to `YYYY-MM-DD` completion dates (`Classroom.gs` v01.08g, `Profiler.gs` v01.34g);
-  legacy `true` accepted forever, never rewritten, yields no delta. `Profiler.gs` accepts
-  `dossier-<slug>` doc ids. `Classroom.html` v01.05w renders the schema's delta exactly (newest
-  revision strictly after the completion date whose `changed[]` names the section).
-  `Profiler.html` v01.80w adds mark-as-read keyed by the dossier's own `lastUpdated`, a roster
-  `✓ read` / `↻ revised` badge, and a computed changed-strip vs the newest archived version.
-  `CLASSROOM-SCHEMA.md` Freshness now describes the code
-- **`4c77b47` v04.28r — Session C (the drill, C4).** Schema first: "Drill items and history" in
-  `CLASSROOM-SCHEMA.md`. `Classroom.gs` v01.09g: `ClassroomDrill` + `ClassroomDrillLog` sheet tabs,
-  `cop=drill` / `cop=grade`, SM-2 collapsed to four buttons. `Classroom.html` v01.06w: landing card,
-  `#drill` route, reveal-then-grade, source links. `PHASE6-CLASSROOM-DESIGN.md` C4 marked built with
-  the C4-before-C3 order note (Decision 6 untouched — no guidance item in the drill until C3)
-- **`12555d8` v04.29r — the drill fix.** See "Where we left off"
-
-**Where we left off:**
-
-- **The drill shipped broken in v04.28r and was fixed in v04.29r.** The developer's screenshot showed
-  no drill card. Two causes: the page hadn't deployed yet (`v01.05w` next to `GAS v01.09g` in the
-  footer pills), **and** the deployed version could not have worked. `cop=drill` had the client send
-  its study inventory as a parameter, but the shared `_gasPost` transport carries everything in the
-  **query string** — 802 study cards URL-encode to **~39,000 chars**, ~5× what Apps Script accepts.
-  The op failed, and a failed sync is indistinguishable from "nothing due" at the UI. Fixed by moving
-  the study pool server-side (`clDrillStudyItems_`, `UrlFetchApp.fetchAll`, cached 6h as ids+hashes
-  only, ~23 KB); the page now sends nothing and fetches text only for the queue's guides
-- **⚠️ The Classroom GAS still needs redeploying** — v01.10g is merged but not deployed. Until it is,
-  the drill card will not appear and it will look like the fix failed. **This is the first thing to
-  check next session**
-- **Every checker passed on the broken version.** `node --check`, both Classroom checkers, Playwright
-  "no page errors" — none of them exercise a signed-in session against the live deployment. Worth
-  remembering before trusting a green board on anything session-gated
-- **Delivered in chat, not committed:** a full copy/paste handoff prompt for a **fresh Fable 5.1
-  session** to design the Classroom curriculum (see Recommendation below). It is in the transcript
-  only — if it is wanted again, it can be regenerated from the corpus inventory below
-
-**Key decisions and positions taken:**
-
-- **Opus 5 for every remaining build phase** (developer directive — no Sonnet anywhere). My earlier
-  Sonnet suggestion for S3/S4 and the Session E audit was a cost note, not a capability one
-- **Fable 5.1 recommended for curriculum *planning* only**, in a *fresh* session; authoring returns to
-  Opus 5 where the schema, checkers and stamp discipline are the actual work
-- **Checkers were edited twice, both times to strengthen.** Session B: two assertions pinned `is True`
-  on the progress value — the contract this session replaced — so they now accept a date or legacy
-  `true`, plus a **new** assertion that new writes must be dated. Session C: +12 drill gate cases,
-  **mutation-tested** (disabling `clLessonVisible_` produced exactly the leaks the assertion names).
-  Editing the checker is closed to the pipeline committer, open to a developer session
-- **`gateDigest` refreshed in every commit that touched a gate symbol** — four times total, including
-  once where the first refresh went stale because a later edit re-touched `Classroom.gs`. A stale
-  digest is silent until the next Wednesday pipeline run blocks on "the ground moved"
-- **The corpus token is in this transcript.** The developer pasted it; it is in the desk Routine's
-  prompt and no repo file. Rotating it in both Script Properties and re-pasting is a 5-minute job if
-  wanted
-
-**Active context:**
-
-- Repo **v04.29r** · Classroom **v01.07w / v01.10g** · Profiler **v01.80w / v01.34g** ·
-  Scraper **v01.71w / v01.99g**
-- **Routines (6, no per-company one-shots):** Profiler earnings desk `trig_01UyH77BMKJnxzBUZJ11ej6A`
-  (weekdays 13:00 UTC — **first real run fires tomorrow with 7 overdue rows**: NVIDIA, IREN, Sungrow,
-  BYD, Sinexcel, EVE, Jinko, three per run); weekly C2 pipeline `trig_017pcCGpj1fkNYcUyCXPY3Wd`
-  (Wed 11:00 UTC, stood down cleanly on its first real run this morning); daily ACL check; monthly
-  drift check; quarterly guidance review; quarterly private sweep
-- Ledger: `coveredThrough` `2026-09-01`, `lastRun` `null`, `gateDigest` `sha256:83d1d03d…`
-- Capacity: repo CHANGELOG **82/100**; `Profilerhtml` **48/50** (rotated this session at 50/50 —
-  needed `git fetch --unshallow` for SHA enrichment); `Scrapergs` **46/50**; Classroom logs 7 and 10
-- **Corpus for curriculum work:** 89 dossiers · 62 study guides (802 flashcards) · 44 concepts ·
-  8 named projects · 7 guidance modules · 5 lessons across 2 tracks (`bess-foundations`,
-  `aidc-power-primer`)
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md empty
-- **Not started:** Sessions D (S1 notes route, S3 cross-links, S4 report seeds) and E (the R2 audit)
-
-**Recommendation for next session:**
-
-- **Redeploy the Classroom GAS to v01.10g and confirm the drill card appears**, then use the drill for
-  a few days before building anything else — its caps (`CL_DRILL_SESSION_CAP` 20, `CL_DRILL_NEW_CAP`
-  10) are single constants worth tuning from real use rather than from a guess. The curriculum
-  planning run on Fable 5.1 can happen in parallel in its own session; Session D waits.
-
-**To continue:** type `redeploy check — confirm the drill card renders`
 
 Developed by: LightAISolutions
