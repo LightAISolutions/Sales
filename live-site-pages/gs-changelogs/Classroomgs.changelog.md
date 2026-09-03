@@ -3,11 +3,21 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 11/50`
+`Sections: 12/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.12g] — 2026-09-02 11:04:43 PM EST — v04.33r
+
+### Added
+- A new lesson on what a campus does when its grid connection is still years away: building its own power station on site, the four kinds of machine that can burn the same gas, and what each one costs in fuel, in permitting and in delivery date
+- The lesson covers why the waiting line moved from the utility to the engine factory, how an on-site power plant ends up designed with data-hall redundancy logic, and how four real campuses each answered the same problem differently
+- It closes on where the approach fails — the air permit rather than the plant, machines that lose output at part load and in hot thin air, fuel that is a supply chain rather than a tank, a manufacturing slot that slips, and an island that cannot hold a load swinging in milliseconds
+
+### Changed
+- The data-center power track now runs two lessons in order, and its summary describes both
 
 ## [v01.11g] — 2026-09-02 10:36:47 PM EST — v04.32r
 

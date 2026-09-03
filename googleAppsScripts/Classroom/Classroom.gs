@@ -1,4 +1,4 @@
-var VERSION = "v01.11g";
+var VERSION = "v01.12g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -1722,6 +1722,517 @@ function clLessonTheFenceLine_() {
 };
 }
 
+function clLessonBridgePower_() {
+  return {
+ "schemaVersion": 1,
+ "id": "bridge-power",
+ "type": "module",
+ "title": "Bridge Power: Building the Plant Before the Grid Arrives",
+ "short": "The queue is too slow, so the campus builds its own plant. Four machines that eat the same gas, the factory queue behind them, and four campuses that did it.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-02",
+ "reviewBy": "2026-12-31",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:kiewit",
+    "date": "2026-08-21",
+    "note": "simple versus combined cycle and the efficiency gap, heat rate, H-class ratings, the three-OEM turbine queue and slot reservations, and coal-to-AI site conversion"
+   },
+   {
+    "kind": "public",
+    "ref": "study:wartsila",
+    "date": "2026-08-08",
+    "note": "reciprocating engines against turbines: part-load behaviour, temperature and altitude, start times, modular redundancy, and why batteries own seconds-to-hours while fuel owns the long end"
+   },
+   {
+    "kind": "public",
+    "ref": "study:bloom-energy",
+    "date": "2026-08-21",
+    "note": "solid-oxide electrochemistry, the three-ways-to-eat-the-same-gas framing, grid-parallel versus islanded posture, and reliability from granularity"
+   },
+   {
+    "kind": "public",
+    "ref": "study:vantage",
+    "date": "2026-08-21",
+    "note": "behind-the-meter definition, prime versus backup engines, off-grid versus bridge, the Frontier engine fleet, and the ratepayer politics of self-supply"
+   },
+   {
+    "kind": "public",
+    "ref": "study:crusoe",
+    "date": "2026-08-21",
+    "note": "running an island: second-by-second balancing, spinning reserve, black start, and energy-first siting"
+   },
+   {
+    "kind": "public",
+    "ref": "study:xai",
+    "date": "2026-08-21",
+    "note": "the grid-versus-own-plant decision, air permitting from ambient standards to major-source thresholds, and compressing a build with temporary generation"
+   },
+   {
+    "kind": "public",
+    "ref": "study:primoris",
+    "date": "2026-08-21",
+    "note": "behind-the-meter gas as the fast power the queue cannot deliver, the two machine families by block size, and the three-to-seven-year bridge contract shape"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:voltagrid",
+    "date": "2026-08-30",
+    "note": "the stacked minor-source permit strategy, the Frontier engine count and rating, the Colossus bring-up bridge, and holding transients with inertia instead of storage"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:proenergy",
+    "date": "2026-08-30",
+    "note": "the aeroderivative archetype: refurbished aero cores, mid-block ratings and start time, and quoted delivery against OEM waitlists"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:enchanted-rock",
+    "date": "2026-08-30",
+    "note": "the modular gas-microgrid archetype, small-unit granularity, and the utility-owned customer-funded bridge structure"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:mainspring-energy",
+    "date": "2026-08-30",
+    "note": "the linear generator as a fourth machine family, flat part-load efficiency, and the air-quality wedge in non-attainment areas"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:kiewit",
+    "date": "2026-08-30",
+    "note": "Homer City: the turbine count and rating, the coal-site conversion, and the first-power target"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:bloom-energy",
+    "date": "2026-08-30",
+    "note": "Project Jupiter's fuel-cell allocation and its displacement of planned turbines and gensets"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:stack-infrastructure",
+    "date": "2026-08-30",
+    "note": "Project Jupiter's scale, its developer, and the initial-operations target that sets this lesson's review date"
+   },
+   {
+    "kind": "public",
+    "ref": "project:frontier",
+    "date": "2026-09-02",
+    "note": "campus identity, location and primary power source"
+   },
+   {
+    "kind": "public",
+    "ref": "project:jupiter-nm",
+    "date": "2026-09-02",
+    "note": "campus identity, location and primary power source"
+   },
+   {
+    "kind": "public",
+    "ref": "project:colossus",
+    "date": "2026-09-02",
+    "note": "campus identity and location"
+   },
+   {
+    "kind": "public",
+    "ref": "project:homer-city",
+    "date": "2026-09-02",
+    "note": "the retired coal site redeveloped as a gas-powered data-center energy campus"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-03",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "3–7 yr",
+   "v": "the length of a bridge",
+   "sub": "gear sized and permitted for it, then the grid takes over"
+  },
+  {
+   "k": "210 engines",
+   "v": "one campus's power station",
+   "sub": "197 prime + 13 backup ≈ 700 MW at Frontier"
+  },
+  {
+   "k": "200 MW",
+   "v": "under one minor-source permit",
+   "sub": "the permit strategy that sets the block size"
+  },
+  {
+   "k": "4 machines",
+   "v": "eating the same gas",
+   "sub": "turbine · engine · fuel cell · linear generator"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "prime power",
+   "d": "Generation that carries the site's full load continuously, as its main source. The opposite of standby or backup plant, which sits idle and only runs when the normal supply fails — a distinction that changes the machine, the permit and the maintenance regime."
+  },
+  {
+   "t": "bridge power",
+   "d": "On-site generation installed to carry a campus through the years before its grid connection matures, after which the site converts to grid supply and the plant becomes backup. Equipment and permits are commonly sized for a three-to-seven-year bridge, so the contract shape is temporary even when the iron is not."
+  },
+  {
+   "t": "simple cycle",
+   "d": "A gas turbine that drives a generator and vents its hot exhaust. Cheaper, faster to build and quick to start, but roughly 35–40 per cent of the fuel's energy reaches the wires — which is why it survives as a peaking and bridge machine rather than as baseload."
+  },
+  {
+   "t": "combined cycle",
+   "d": "Two heat engines on one fuel: a gas turbine burns the gas, then its roughly 600 °C exhaust boils water to spin a second, steam turbine. Recovering that otherwise-wasted heat pushes modern H-class plants past 60 per cent efficiency, at the cost of far more equipment and a much longer build."
+  },
+  {
+   "t": "heat rate",
+   "d": "The industry's efficiency yardstick for a thermal plant: fuel energy in per unit of electricity out, so lower is better. It decides which plants a market dispatches first, hour by hour."
+  },
+  {
+   "t": "aeroderivative",
+   "d": "A power-generation turbine derived from an aircraft engine rather than designed as a heavy industrial frame. Lighter and much faster to start than a heavy-duty machine, in blocks of roughly tens of megawatts, and — because the cores come off retiring airliners — sourceable outside the heavy-frame factory queue."
+  },
+  {
+   "t": "selective catalytic reduction",
+   "d": "Exhaust after-treatment that injects ammonia across a catalyst to convert nitrogen oxides into nitrogen and water. It is the standard control that lets a combustion plant meet a data-center-grade air permit, and it is equipment, space and a consumable rather than a setting."
+  },
+  {
+   "t": "minor source",
+   "d": "An air-permitting category for a plant whose potential emissions sit below the thresholds that trigger major-source review. Staying under them replaces months of modelling, public comment and best-available-control analysis with a far lighter permit — which is why on-site plants are deliberately packaged in blocks that fit beneath the line."
+  },
+  {
+   "t": "non-attainment area",
+   "d": "A region where outdoor air already fails a federal ambient standard for a pollutant such as ozone or fine particulates. Adding a combustion source there faces the strictest review, so a machine that emits almost nothing without after-treatment can site where its competitors cannot."
+  },
+  {
+   "t": "islanded",
+   "d": "Running electrically disconnected from the grid, with on-site generation alone matching the load every second. There is no larger system to lean on, so frequency and voltage are the plant's own problem — and so is restarting after a total loss."
+  },
+  {
+   "t": "black start",
+   "d": "Restarting a dead plant with no outside power to draw on: small units boot first to energise controls and fuel systems, then larger machines and load are returned in stages. Rarely used and definitional for an island, which has nothing else to start from."
+  },
+  {
+   "t": "spinning reserve",
+   "d": "Generating units already running and synchronised but deliberately loaded below their capability, so their headroom is available in seconds rather than in the minutes a cold start would take."
+  },
+  {
+   "t": "linear generator",
+   "d": "A flameless machine that compresses a fuel-air charge until it reacts and drives opposed magnets straight through copper coils — electricity without a crankshaft, a turbine wheel or a flame. Because nothing burns in a flame front it emits very little nitrogen oxide, and its efficiency is claimed to hold flat as output is turned down."
+  },
+  {
+   "t": "solid-oxide fuel cell",
+   "d": "A fuel cell with a ceramic electrolyte that works only when very hot — roughly 700–1,000 °C. The heat is the point: at that temperature natural gas breaks down into hydrogen right at the electrode, so the cell runs on pipeline gas instead of purified hydrogen. There is no flame, so nitrogen oxides and particulates are near zero, but the ceramics dislike being cycled and prefer steady output."
+  },
+  {
+   "t": "power delivery agreement",
+   "d": "A contract in which the generation supplier owns and operates the plant on the customer's site and the customer buys the delivered power at an agreed rate over time. It moves the plant off the campus's balance sheet and makes fuel, availability and maintenance the supplier's problem."
+  }
+ ],
+ "sections": [
+  {
+   "id": "why-a-campus-builds-a-power-plant",
+   "title": "Why a campus builds its own power station",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "The previous lesson ended at the {{interconnection queue}}, with a connection date somewhere years out and a requester funding upgrades it does not control. This lesson starts from the obvious next thought: build the power yourself. A single-tenant campus now faces a choice the grid never used to pose — wait years for a utility connection delivering cheap, reliable, professionally maintained power, or generate on site starting in months, at a higher cost per megawatt-hour, with the operational burden in house.",
+    "Four things decide it: time to power, delivered cost per megawatt-hour, emissions and permitting exposure, and reliability engineering. **The grid wins three of the four.** It loses only the first — and the first is the one a participant in a compute arms race weighs most heavily, because nothing else in the project earns until power flows. That single asymmetry is the entire market this lesson describes.",
+    "The mechanism is {{behind-the-meter}} generation: plant connected on the customer's side of the utility meter, serving the site directly, which sidesteps the connection queue rather than shortening it. Two distinctions do most of the work. **{{prime power}} versus backup** — prime machines carry the load continuously as the main source, backup units cover maintenance and failures — and **off-grid versus {{bridge power}}**. Some campuses are permanently islanded and intend to stay that way. Far more are bridges: gear commonly sized and permitted for a three-to-seven-year run, after which the site converts to grid supply and the engines become the backup plant it would have needed anyway.",
+    "Once power is the binding constraint, siting inverts. The old playbook picked sites for fibre routes, customer proximity and tax incentives and assumed the electricity; the new one scouts where gigawatt-scale energy already exists or can be built quickly, and buys land afterwards — which is abundant and cheap exactly where the power is. The developer's skill set changes with the order: fuel buyers, turbine procurement teams and power-plant engineers sit alongside the construction managers. The underlying arbitrage is that moving energy is slow and lossy — transmission costs millions of dollars a mile, loses several per cent over distance, and takes the better part of a decade to permit — while moving data over fibre is nearly free. So the factory moves to the fuel.",
+    "There is a politics to it that shapes the contract. When a campus leans on the grid, the cost of reinforcing that grid tends to land on households through rates, and the counter-model — the developer funding its own generation and infrastructure, sometimes with a share of new capacity dedicated to the public and a rate structure written for the arrangement — is becoming a regulatory expectation rather than a gesture. That is why the ownership structures are unusual. Some plants are sold as a **{{power delivery agreement}}**: the generation supplier owns and operates the machines on the campus's site and the campus buys delivered power at a rate over time. Others are stranger still — a utility owns the plant, the hyperscaler pays for all of it under a commission-approved rate, and a third party operates it, which converts a merchant bridge sale into regulated paper."
+   ],
+   "sales": "The question that sorts these sites is not *how many megawatts* but *is this a bridge or the permanent plant?* A bridge has a stated end, a conversion to grid supply behind it, and a second act where the engines become backup — three separate moments when somebody re-opens the architecture. A permanent island has none of them, and its equipment decisions are already made."
+  },
+  {
+   "id": "ways-to-eat-the-same-gas",
+   "title": "Four ways to eat the same gas",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "Nearly every on-site plant in this market runs on pipeline natural gas. What differs is the machine that turns it into electricity — and the choice sets the permit, the delivery date, the behaviour under a swinging load and whether anything else gets to sit next to it.",
+   "cards": [
+    {
+     "t": "Gas turbine",
+     "meta": "Jet-engine physics driving a generator. Heavy frames run roughly 430–570 MW each; {{aeroderivative}} machines land in blocks of about 50 MW",
+     "adv": [
+      "The most power per machine and per acre by a wide margin — one heavy frame is a small plant on its own",
+      "A {{simple cycle}} machine vents its exhaust; add a steam bottoming cycle and it becomes {{combined cycle}}, past 60 per cent efficiency — the only route on this list that reaches there",
+      "{{aeroderivative}} versions start in about five minutes at high start reliability, and their cores can come from retiring airliners rather than from a factory queue",
+      "Hydrogen-enabled combustion systems are offered as a future fuel option on new heavy frames"
+     ],
+     "dis": [
+      "Efficient only near full load, with long minimum run times — a large turbine held part-loaded burns fuel for nothing",
+      "Output falls in hot, thin air, which is exactly where a lot of this load is being sited",
+      "Heavy-frame factory slots are the scarcest asset in the sector; quoted deliveries run toward the end of the decade",
+      "Turbine plants can be thirsty, and water is a live permitting issue in arid markets"
+     ]
+    },
+    {
+     "t": "Reciprocating gas engine",
+     "meta": "Car-engine physics scaled to house-sized cylinders. Modular units of roughly 1–23 MW, ganged into fleets that reach hundreds of megawatts",
+     "adv": [
+      "Around 50 per cent efficiency without a steam cycle, and one vendor's spark-ignited unit is quoted up to 52.1 per cent — near the top for any single-cycle machine",
+      "The plant is dozens of independent units, so it runs only the engines it needs, each at its own sweet spot, and adds or sheds them in minutes",
+      "Starts in as little as two minutes, with some models synchronising in thirty seconds; full output from −45 °C to +50 °C, and almost no water",
+      "{{N+1}} by construction — a unit out for service costs a slice of capacity, never the plant",
+      "Factory-built and deliverable in months, which is the whole argument for it"
+     ],
+     "dis": [
+      "Cost scales with power: more megawatts means more engines, more foundations, more connections, more permits",
+      "A 700 MW plant is hundreds of machines, each with its own service interval and its own way of failing",
+      "Efficiency tops out below a combined-cycle plant, so the fuel bill is the price paid for the speed",
+      "The permitting strategy depends on staying beneath a threshold, and the vendors' own filings flag challenges to that stacking as the regulatory risk that could re-open the architecture"
+     ]
+    },
+    {
+     "t": "Solid-oxide fuel cell",
+     "meta": "{{solid-oxide fuel cell}} modules — electrochemical, not thermal. No flame, no pistons, no blades; hundreds of small units per installation",
+     "adv": [
+      "No flame means near-zero nitrogen oxides and particulates — precisely the pollutants that drive air permitting",
+      "Efficiency is nearly scale-free, so a building-sized installation performs like a combustion plant many times its size",
+      "Reliability comes from granularity: hundreds of independent modules mean a failure shaves capacity rather than dropping the building, and modules rotate through service while the rest carry the load",
+      "Quiet, vibration-free, dense per acre and DC-native — it suits the direction the hall's own distribution is already moving"
+     ],
+     "dis": [
+      "Prefers steady output. The ceramics dislike thermal cycling, so the cells hold a load rather than chase a swing, and pair with batteries for transients",
+      "Stacks age and are replaced on a schedule — a recurring cost designed into the service contract from day one",
+      "Carbon dioxide per kilowatt-hour is roughly comparable to efficient combustion. It is the criteria pollutants that vanish, not the carbon"
+     ]
+    },
+    {
+     "t": "Linear generator",
+     "meta": "A {{linear generator}}: flameless compression driving opposed magnets through coils. 250 kW units on 2.5 MW factory skids, arrayed upward",
+     "adv": [
+      "Nitrogen oxides under 1.5 ppm with no {{selective catalytic reduction}} at all — the property that lets it site in a {{non-attainment area}} where the other three cannot",
+      "Efficiency claimed flat across turndown, where turbines and engines both lose ground at part load",
+      "Software-switchable fuel — natural gas, biogas, propane, hydrogen — with tested operation on pure hydrogen and pure ammonia",
+      "No water, no crankshaft and no lubricating oil"
+     ],
+     "dis": [
+      "By far the smallest installed base of the four, with no named hyperscaler reference campus",
+      "Manufacturing capacity is the constraint — a planned plant on the order of 250 MW a year is small against gigawatt-class procurement",
+      "Lower electrical efficiency than a combined-cycle plant, and lower than a fuel cell on the vendor's own comparison"
+     ]
+    }
+   ],
+   "note": "The four are not ranked. A campus picks on what can actually be delivered, what the local air permit will allow, and how the machine behaves when a training cluster changes its mind — and the answer differs by site even inside one developer's portfolio.",
+   "sales": "This is the single most useful discrimination in the lesson, because the machine tells you whether there is a socket. A fuel-cell or turbine site pairs with storage for transients as a matter of physics. An engine-fleet site may have been sold explicitly on *not* needing storage. Find out which machine before you find out which battery."
+  },
+  {
+   "id": "fuel-in-electricity-out",
+   "title": "How much of the fuel actually reaches the wires",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "% of fuel energy converted to electricity (class-representative)",
+   "intro": "Every bar below is a figure a source states for its machine class. Where a source gives a range, the bar takes one end and the caption says which end — these are vendor-facing class figures, not measurements on one basis, so **read the ladder, not the decimal**. The same quantity is often quoted the other way up, as a plant's {{heat rate}}: fuel energy in per unit of electricity out, where lower is better.",
+   "items": [
+    {
+     "label": "Simple-cycle turbine",
+     "v": 40,
+     "sub": "stated as roughly 35–40%; the bar takes the top of that range"
+    },
+    {
+     "label": "Linear generator",
+     "v": 46,
+     "sub": "46% claimed, and claimed to hold flat as output is turned down"
+    },
+    {
+     "label": "Reciprocating engine",
+     "v": 52,
+     "sub": "about 50% typical; one spark-ignited unit is quoted up to 52.1%"
+    },
+    {
+     "label": "Combined-cycle turbine",
+     "v": 60,
+     "sub": "stated as exceeding 60% in modern H-class plants; the bar takes the floor of that claim"
+    }
+   ],
+   "note": "The fuel cell is missing on purpose. Its guide describes its efficiency as nearly scale-free — a building-sized installation matching what combustion reaches only at power-plant size — which is a relationship rather than a class figure, and inventing a bar for it would be inventing a number. The real lesson is the gap at the top: only the combined-cycle bar belongs to a machine that takes years to build. Everything a campus can actually have within months sits in the band below it, so **bridge power buys its speed with fuel** — and that is a cost the campus carries every hour until the grid arrives."
+  },
+  {
+   "id": "the-turbine-queue",
+   "title": "The queue moved — it is a factory queue now",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Building your own plant escapes the connection queue and lands you in a different one. Three manufacturers make virtually all the heavy-duty gas turbines for the western market, and when AI demand arrived their factory slots sold out years ahead. **Turbine delivery, not construction, now sets when new gas power can exist.** One supplier's heavy-frame book has been described as effectively sold out to 2030, with slots quoting into 2031 and something like ten gigawatts of open capacity across 2029–2030 against a hundred gigawatts under contract. Mid-size {{aeroderivative}} machines are no better: three-to-five-year waitlists on the popular frame.",
+    "So slot reservations became assets in their own right. Developers and contractors pay to hold manufacturing positions before projects are final, because a builder holding reserved slots can promise a 2027–29 power date that a rival physically cannot, whatever the price. The strongest position in this market bundles the machine maker, the {{EPC}} and the {{offtake}} into one venture and locks the chain competitors have to assemble piece by piece.",
+    "There are exactly three ways out of a factory queue, and every supplier archetype in this lesson is one of them. **Change machine class:** reciprocating engines quote in fifteen to twenty-four months rather than four to seven years, which is why one operator locked roughly 3.8 gigawatts of a single engine maker's production across two orders — the two largest that manufacturer had ever taken — and why another signed a multi-year exclusive supply deal for its engine blocks and built its own packaging plants toward gigawatt-a-year output. **Change where the machine comes from:** refurbish retired airliner cores into a power package built to your own spec, interchangeable with the OEM's product but outside the OEM's queue, against a claimed thousand or so engine retirements over the coming decade. **Or build a machine nobody queues for at all** — which is the linear generator's position, and also its ceiling, since a plant sized in the low hundreds of megawatts a year is small against gigawatt-class procurement.",
+    "The queue also leaks information, and this is the part worth carrying out of the lesson. A turbine or engine order is placed two to three years before the campus it will power exists. **Order announcements are therefore a leading indicator of where the campuses appear**, and they are public long before the site is."
+   ],
+   "sales": "Read the order book, not the campus announcement. A large engine or turbine order names the region, the approximate megawatts and roughly when power is intended — two to three years before anything is energised, and long before a procurement conversation about anything that sits next to it. That window is the only part of this market where a supplier is early rather than late."
+  },
+  {
+   "id": "prime-backup-n-plus-one",
+   "title": "A power plant run on data-hall logic",
+   "kind": "callout",
+   "read": "4 min",
+   "ps": [
+    "The strangest thing about these plants is the vocabulary. A campus power station is not designed the way a utility designs a power station; it is designed the way the hall inside it is designed. Frontier's fleet is **197 prime engines plus 13 backup** — {{N+1}} thinking, the redundancy grammar of a {{UPS}} room, applied to a 700-megawatt power plant. The plant is a {{microgrid}}, and the people specifying it think in nines.",
+    "Being {{islanded}} makes that discipline mandatory rather than tasteful. With no grid to lean on, generation must match consumption every second, and the mismatch shows up as frequency: the machines speed up when supply exceeds load and slow down when it lags, so controls trim output continuously to hold sixty hertz. Reliability becomes redundancy arithmetic — carry more generators than the load needs, keep some running part-loaded as {{spinning reserve}} so their headroom is available in seconds, and stagger maintenance so any single machine can fail without dropping the campus. And because there is no outside supply, the island must be able to {{black start}} itself: small units first to energise controls and fuel systems, then the large machines and the load returned in careful stages.",
+    "Then the load does something no power plant was built for. Thousands of accelerators starting, stopping or checkpointing in unison swing demand by tens of megawatts in milliseconds — **faster than any engine or turbine can respond.** That is the seam in the whole architecture, and the industry has two answers to it. One is storage: a battery buffer absorbs the jolt while generation catches up, rides through a generator trip, and lets an islanded campus run with grid-class stability. The other is rotating mass: hold the transient with the engines' own {{inertia}}, plus {{synchronous condenser}}s and flywheels, plus fast controls holding voltage and frequency inside a few per cent — an architecture marketed explicitly as needing no battery storage at all.",
+    "Both work, and the choice is made before anyone talks about batteries. It is a protection-and-controls decision — grid-parallel or islanded sets the protection design, the permitting and which failure modes matter — and it is made at the same table as the prime mover."
+   ]
+  },
+  {
+   "id": "four-campuses",
+   "title": "Four campuses, four answers",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The same problem — power years before the grid can give it — solved four different ways, at four real sites. Read across the rows and the pattern is that the machine choice follows the site, not a house style.",
+   "cols": [
+    "Campus",
+    "What generates the power",
+    "Scale, as the sources state it",
+    "Who builds and supplies it"
+   ],
+   "rows": [
+    [
+     "**Frontier** — Shackelford County, Texas",
+     "210 reciprocating gas engines {{behind-the-meter}}: 197 prime and 13 backup, about 700 MW initially",
+     "1.4 GW of IT load across ten single-storey halls, designed for racks above 250 kW; first building due in the second half of 2026",
+     "Vantage develops and operates the campus; VoltaGrid built and runs the {{microgrid}} on INNIO Jenbacher engines"
+    ],
+    [
+     "**Project Jupiter** — Doña Ana County, New Mexico",
+     "{{solid-oxide fuel cell}} modules as {{prime power}}, explicitly displacing the gas turbines and diesel gensets that had been planned",
+     "A gigawatt-plus campus; a master agreement earmarks up to 2.45 GW of cells to it. Construction began September 2025; initial operations targeted for Q4 2026",
+     "STACK Infrastructure develops and owns it for Oracle and OpenAI; Bloom Energy supplies the cells"
+    ],
+    [
+     "**Colossus** — Memphis, Tennessee",
+     "Mobile gas gensets first, then a larger turbine fleet, then grid supply with a battery layer beside it",
+     "Fourteen trailer-mounted units, roughly 35 MW, carried a 122-day bring-up in 2024; the site's battery layer was procured at 150 MW",
+     "xAI builds and operates; VoltaGrid supplied the mobile bridge, Solar Turbines the larger machines, Tesla the storage"
+    ],
+    [
+     "**Homer City Energy Campus** — Homer City, Pennsylvania",
+     "Seven hydrogen-enabled heavy-frame gas turbines, built on the site of a retired coal plant that already had the wires",
+     "Up to 4.5 GW — the largest gas plant under construction in the United States — feeding a campus of more than 3,200 acres; first power targeted 2027",
+     "Homer City Redevelopment owns the site; Kiewit is the {{EPC}}; GE Vernova supplies the 7HA.02 turbines"
+    ]
+   ],
+   "note": "Two of the four have a stated grid posture and two do not. Frontier runs fully off-grid. Colossus bridged on mobile generation until the grid and its batteries arrived, which is the classic bridge shape. Nothing in these sources says whether Jupiter or Homer City is islanded or grid-parallel — and that gap is itself worth knowing, because the prime mover is announced and the posture usually is not. They are separate decisions.",
+   "sales": "This table is the honest map of where storage did and did not attach. At Colossus it did, at scale, and at the bring-up stage. At Frontier the plant was sold on holding transients with rotating mass instead. At Jupiter the fuel cells displaced the gensets that a battery would otherwise have sat beside. **The socket is not the campus, it is the moment** — the bring-up, the transient and ride-through duty, and the conversion at the end of a bridge when the engines drop back to backup. Turn up at the wrong moment and the architecture is already closed."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**The permit, not the plant.** Air law regulates what leaves the stack, and the thresholds decide the process: a major source triggers rigorous pre-construction review with modelling, public comment and best-available-control requirements, while staying under the line permits far faster with far less scrutiny. So the plants are packaged to stay under it — one platform stacks up to 200 MW of {{prime power}} beneath a single {{minor source}} permit, and that packaging strategy, not the engineering, sets the block size. The exposure is obvious once stated: whether dozens of nominally mobile machines running together for months constitute one major stationary source is a live question, and the vendors' own filings name aggregation challenges as the risk that could re-open the architecture. Nitrogen oxides are the pollutant that matters, {{selective catalytic reduction}} is the standard control, and a {{non-attainment area}} may simply refuse the combustion machine altogether.",
+    "**The machine at part load, and in hot thin air.** A large turbine is efficient only near full load, needs long minimum run times, and loses output as air gets hotter and thinner — which describes a great many of the sites this load is choosing. Mitigations exist and are real: water-spray injection recovers something like a fifth of hot-day output, modular engine fleets keep full output across an enormous temperature range and run only the units they need. But the failure mode is a plant sized on a nameplate that the site's own summer never delivers, and it presents as a capacity shortfall rather than as an equipment fault.",
+    "**The fuel is a supply chain, not a tank.** The reason duration is nearly free for these machines is that the energy lives in a pipeline — weeks of it, effectively, in the network rather than on the site. That is a strength until it is the exposure. Firm supply and storage get contracted deliberately, and operators build out compressed-gas terminals and virtual pipelines precisely because the pipe is the single point of failure that no amount of {{N+1}} on the generators addresses. Where the fuel is a byproduct rather than a purchase, it is worse: flare volumes fluctuate and wells decline, so the supply itself has a decay curve.",
+    "**The slot that slips.** The plant's schedule is a manufacturing schedule. A campus that reserved a heavy-frame turbine position is holding a place in a queue quoting into the next decade, and if that slot moves there is no second supplier to call — three manufacturers make the machine. This is the same structural failure as the {{transformer}} slot in the previous lesson, arriving from a different factory, and it is why the escape routes in this lesson exist at all.",
+    "**The island that cannot hold itself together.** An islanded plant must match load every second with no grid behind it, and the AI load swings tens of megawatts in milliseconds — faster than any engine or turbine responds. Generators alone handle that badly. If the transient answer is undersized, the symptom is not a blackout but frequency and voltage wandering outside what the hall's own equipment will tolerate, and then a trip that looks like an electrical fault and is actually a controls-and-sizing decision made two years earlier. Behind it sit the {{spinning reserve}} that was not carried, the maintenance that was not staggered, and the {{black start}} sequence that has never been rehearsed on this plant. *The transfer switch and the paralleling sequence that turn all of this into an outage are the next lesson's material — this one stops at the fence of the power station.*"
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "The grid is cheaper, cleaner on paper and professionally maintained. Why does a campus build its own power station anyway?",
+     "a": "Because of four decision inputs — time to power, delivered cost per megawatt-hour, emissions and permitting exposure, and reliability engineering — the grid wins three and loses only the first. Nothing in the project earns until power flows, so for a participant in a compute arms race that one input outweighs the other three. On-site generation does not shorten the connection queue; it sidesteps it."
+    },
+    {
+     "q": "Distinguish prime from backup, and off-grid from bridge.",
+     "a": "Prime machines carry the site's full load continuously as the main source; backup units sit idle and cover maintenance and failures. Off-grid means the campus intends to stay islanded permanently. A bridge is temporary by design — gear commonly sized and permitted for three to seven years, after which the site converts to grid supply and the same engines become the backup plant. The two axes are independent, and the contract usually states one of them and not the other."
+    },
+    {
+     "q": "Four machine families burn the same pipeline gas. What actually decides between them?",
+     "a": "Not efficiency alone. Delivery date, what the local air permit allows, and how the machine behaves under a load that swings. Turbines give the most power per machine and are the only route past 60 per cent — as combined cycle, which takes years to build. Engines are modular, fast to deliver, good at part load and redundant by construction. Fuel cells emit almost no criteria pollutants and prefer steady output. Linear generators emit least of all with no after-treatment, and are the smallest supply."
+    },
+    {
+     "q": "The interconnection queue is not the only queue. What replaced it, and what are the three ways out?",
+     "a": "The factory queue. Three manufacturers make virtually all western heavy-duty gas turbines and their slots sold out years ahead, so turbine delivery rather than construction now sets when new gas power can exist. The escapes are: change machine class (engines quote in months, not years), change where the machine comes from (refurbished aero cores outside the OEM queue), or use a machine nobody queues for — which trades the queue for a manufacturing ceiling."
+    },
+    {
+     "q": "Why is an islanded AI campus harder to hold together than an ordinary off-grid plant?",
+     "a": "Generation must match load every second with no grid behind it, and the mismatch appears as frequency. An AI load swings tens of megawatts in milliseconds — faster than any engine or turbine can respond. There are two answers: a storage buffer that absorbs the jolt while generation catches up, or rotating mass — engine inertia, synchronous condensers and flywheels with fast controls. The architecture picks one before anyone discusses equipment."
+    },
+    {
+     "q": "What does an air-permit threshold have to do with the physical size of a power block?",
+     "a": "Everything. A plant above the major-source threshold faces pre-construction review with modelling, public comment and best-available-control requirements; below it, the permit is far lighter and far faster. So blocks are packaged to stay under the line — up to 200 MW of prime power stacked beneath a single minor-source permit in one platform. Whether many nominally mobile units running together for months count as one major source is unresolved, and it is the risk that could re-open the whole architecture."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A campus can wait four years for a utility connection or generate on site within a year at a higher cost per megawatt-hour. Which decision input does on-site generation actually win?",
+     "c": [
+      "Time to power",
+      "Delivered cost per megawatt-hour",
+      "Emissions and permitting exposure",
+      "Reliability engineering"
+     ],
+     "a": 0,
+     "why": "The grid wins the other three. On-site generation wins time to power alone — and since nothing in the project earns until power flows, that single input carries the decision for anyone racing."
+    },
+    {
+     "q": "Which of these reaches past 60 per cent efficiency, and what is the catch?",
+     "c": [
+      "Combined-cycle gas turbine — but it takes years to build, so it is rarely the bridge",
+      "Reciprocating engine — but only above 40 °C ambient",
+      "Solid-oxide fuel cell — but only when islanded",
+      "Simple-cycle turbine — but only at part load"
+     ],
+     "a": 0,
+     "why": "A combined-cycle plant runs a second, steam turbine on the first one's exhaust and exceeds 60 per cent in modern H-class machines. Everything a campus can actually have within months sits in the 40–52 per cent band, which is why bridge power buys its speed with fuel."
+    },
+    {
+     "q": "One campus's plant is 197 prime engines plus 13 backup. What convention is that, and where does it come from?",
+     "c": [
+      "N+1 redundancy — the data hall's own grammar applied to a power station",
+      "A utility reserve-margin requirement imposed by the grid operator",
+      "The minimum spinning reserve required to hold 60 hertz",
+      "An air-permit limit on how many units may run at once"
+     ],
+     "a": 0,
+     "why": "These plants are specified by people who think in nines. Carrying spare units so one can fail or be serviced without dropping the load is UPS-room logic, scaled up to a 700-megawatt power station."
+    },
+    {
+     "q": "An operator advertises a campus microgrid that needs no battery storage. What is holding the millisecond load swings instead?",
+     "c": [
+      "Rotating mass — engine inertia plus synchronous condensers and flywheels, with fast controls",
+      "Oversized fuel storage on site",
+      "A faster grid interconnection with ride-through rights",
+      "Running every engine at part load so all of them can ramp"
+     ],
+     "a": 0,
+     "why": "Inertia is stored energy in spinning steel, and it responds instantly because it is physics rather than a control loop. It is a genuine alternative to a battery for the transient duty — which is why the machine choice tells you whether a storage socket exists before any procurement conversation starts."
+    },
+    {
+     "q": "Why is a 200 MW on-site plant assembled from many small stacked units rather than one large machine?",
+     "c": [
+      "To stay beneath major-source air-permitting thresholds, which is far faster",
+      "Because no single machine of that rating exists",
+      "Because grid operators cap the size of behind-the-meter units",
+      "To qualify the plant as temporary rather than permanent"
+     ],
+     "a": 0,
+     "why": "The permit strategy sets the block size, not the engineering. Below the threshold the review is far lighter and far quicker; above it comes modelling, public comment and best-available-control analysis. The unresolved question — whether many units running together aggregate into one major source — is the live regulatory risk in the whole category."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clLessonAidcPowerChain_() {
   return {
  "schemaVersion": 1,
@@ -2325,11 +2836,12 @@ function clTrackAidcGridToChip_() {
  "schemaVersion": 1,
  "id": "aidc-grid-to-chip",
  "title": "The AIDC Power Chain, Grid to Chip",
- "short": "Walk a megawatt from the grid to the chip in physical order. It opens at the fence line: the studies, the queue behind them, the substation at the end, and what a campus's megawatt number actually means.",
+ "short": "Walk a megawatt from the grid to the chip in physical order. It opens at the fence line — the studies, the queue, the substation — then builds the power station a campus puts up when that queue is slower than the compute race.",
  "group": "The AI Data-Center Wave",
  "updated": "2026-09-02",
  "lessons": [
-  "the-fence-line"
+  "the-fence-line",
+  "bridge-power"
  ]
 };
 }
@@ -2355,7 +2867,8 @@ function clTrackAidcPowerPrimer_() {
 // the checker flags an unregistered literal.
 function clLessons_() {
   return [clLessonCellToContainer_(), clLessonDurationDegradation_(), clLessonSpecSheet_(),
-          clLessonTheFenceLine_(), clLessonAidcPowerChain_(), clLessonHeatConstraint_()];
+          clLessonTheFenceLine_(), clLessonBridgePower_(), clLessonAidcPowerChain_(),
+          clLessonHeatConstraint_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcPowerPrimer_()];
