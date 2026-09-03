@@ -29,6 +29,14 @@
    ]
   },
   {
+   "slug": "aeroderivative",
+   "term": "aeroderivative",
+   "def": "A power-generation gas turbine derived from an aircraft engine rather than designed as a heavy industrial frame. Lighter and far quicker to start than a heavy-duty machine, in blocks of roughly tens of megawatts — and because the cores can come from retiring airliners, sourceable outside the heavy-frame factory queue that sets everyone else's delivery date.",
+   "aliases": [
+    "aeroderivative turbine"
+   ]
+  },
+  {
    "slug": "arc-flash",
    "term": "arc flash",
    "def": "The explosive release of energy when current jumps through the air between conductors — a blast hot enough to be lethal at a panel door. An arc-flash study calculates that energy at every piece of gear so the right protective clothing and breaker settings can be specified, and it has to be redone whenever the electrical system changes.",
@@ -49,6 +57,15 @@
    "slug": "augmentation",
    "term": "augmentation",
    "def": "Adding new battery capacity to an operating storage plant to offset degradation, keeping the plant at its contracted capacity over its life."
+  },
+  {
+   "slug": "availability-guarantee",
+   "term": "availability guarantee",
+   "def": "A contracted promise about the fraction of hours a plant will be ready to perform, with money attached to missing it. It matters more than an average suggests, because storage and generation revenue concentrate into a small number of extreme-price hours — a site that is available almost all year and unavailable for the wrong afternoon has not lost a proportional share of its income.",
+   "aliases": [
+    "availability commitment",
+    "uptime guarantee"
+   ]
   },
   {
    "slug": "bankability",
@@ -80,11 +97,38 @@
    ]
   },
   {
+   "slug": "black-start",
+   "term": "black start",
+   "def": "Restarting a dead network with no outside power to draw on: small units boot first to energize controls and fuel systems, then larger machines and load return in stages. Rarely exercised on the grid and definitional for an island or a microgrid, which has nothing else to start from.",
+   "aliases": [
+    "black-start",
+    "blackstart"
+   ]
+  },
+  {
    "slug": "bms",
    "term": "BMS",
    "def": "Battery management system: the electronics that watch every cell's voltage, current, and temperature, balance the cells, and disconnect the battery when limits are crossed — the battery's safety and health guardian.",
    "aliases": [
     "battery management system"
+   ]
+  },
+  {
+   "slug": "brownfield",
+   "term": "brownfield",
+   "def": "A site that already carries industrial infrastructure — most valuably an existing grid connection and substation from a retired plant. In a market where interconnection is the long pole, inheriting energized wires can move a project years ahead of an equivalent greenfield, which is why retired coal and industrial sites are being bought for their electrical position rather than their land.",
+   "aliases": [
+    "brownfield site",
+    "brownfield redevelopment"
+   ]
+  },
+  {
+   "slug": "busbar",
+   "term": "busbar",
+   "def": "A solid bar of copper or aluminum used instead of cable to carry very large currents over short distances inside equipment, a rack, or a switchboard. It is the same idea as facility busway one scale smaller and inside the machine, and its cross-section is the only thing standing between the current and the heat that current makes.",
+   "aliases": [
+    "bus bar",
+    "DC busbar"
    ]
   },
   {
@@ -126,6 +170,16 @@
    ]
   },
   {
+   "slug": "combined-cycle",
+   "term": "combined cycle",
+   "def": "Two heat engines on one fuel: a gas turbine burns the gas, and its hot exhaust then boils water to spin a second, steam turbine. Recovering that otherwise-wasted heat pushes modern plants past 60 percent efficiency — the highest of any gas machine — at the cost of far more equipment and a much longer build than simple cycle.",
+   "aliases": [
+    "combined-cycle",
+    "CCGT",
+    "combined cycle gas turbine"
+   ]
+  },
+  {
    "slug": "commissioning",
    "term": "commissioning",
    "def": "The structured testing that proves a finished plant performs as contracted before it is handed over and paid for. For storage it is where capacity and round-trip-efficiency guarantees are measured; for a data center it is where the outage choreography gets rehearsed rather than discovered in production.",
@@ -134,9 +188,72 @@
    ]
   },
   {
+   "slug": "conversion-stage",
+   "term": "conversion stage",
+   "def": "One place in a power chain where electricity changes form or level — AC to DC, one DC voltage to another, one AC voltage to another. Each stage costs roughly one to three percent of the power as heat that must then be cooled, plus a box, floor space, and a way to fail; designing a power architecture is largely the art of deleting stages.",
+   "aliases": [
+    "conversion stages",
+    "power conversion stage"
+   ]
+  },
+  {
+   "slug": "crps",
+   "term": "CRPS",
+   "def": "Common Redundant Power Supply: the industry-standard shape, connector, and signaling for a server power-supply module, so any compliant vendor's unit fits any compliant server. Standardizing the slot is what turns server power into a contested commodity market rather than a per-vendor design.",
+   "aliases": [
+    "M-CRPS",
+    "common redundant power supply"
+   ]
+  },
+  {
+   "slug": "curtailment",
+   "term": "curtailment",
+   "def": "Being instructed to reduce output or consumption because the network cannot accommodate it at that moment. For a generator it is power that cannot be sold; for a very large load it is a contractual duty to back off — and a curtailment protocol is the document saying under what conditions, for how long, and who decides.",
+   "aliases": [
+    "curtail",
+    "curtailment protocol"
+   ]
+  },
+  {
+   "slug": "cycle-life",
+   "term": "cycle life",
+   "def": "How many full charge-discharge cycles a cell delivers before its capacity falls to a stated fraction of new — commonly 70 or 80 percent. It is the number a storage warranty is written around, and it is quoted against specific depth-of-discharge and temperature conditions, so two figures are only comparable when those conditions match.",
+   "aliases": [
+    "cycle count",
+    "rated cycles"
+   ]
+  },
+  {
+   "slug": "dc-dc-converter",
+   "term": "DC-DC converter",
+   "def": "A converter that changes one DC voltage to another without passing through AC. It is the stage that does the work once power has arrived as direct current — inside a rack, inside a vehicle, or on a server board — and it is what lets a high-voltage DC bus feed low-voltage electronics.",
+   "aliases": [
+    "DC-DC",
+    "DC to DC converter",
+    "DC/DC converter"
+   ]
+  },
+  {
    "slug": "degradation",
    "term": "degradation",
    "def": "The gradual loss of a battery's usable capacity with cycling and age. Storage contracts manage it with capacity guarantees and planned augmentation."
+  },
+  {
+   "slug": "derating",
+   "term": "derating",
+   "def": "Operating equipment below its nameplate rating because real conditions — ambient temperature, altitude, state of charge, or age — do not match the conditions the rating assumed. A specification read as a guaranteed operating number rather than a rated one is one of the most common sources of a capacity shortfall that presents as an equipment fault.",
+   "aliases": [
+    "derate",
+    "derated"
+   ]
+  },
+  {
+   "slug": "digital-twin",
+   "term": "digital twin",
+   "def": "A simulated copy of a real asset, fed by its live data, used to rehearse changes before they touch the hardware — testing a control strategy, forecasting degradation, or learning what normal looks like so anomalies stand out. It is how an operator tries something on a plant without trying it on the plant.",
+   "aliases": [
+    "digital twins"
+   ]
   },
   {
    "slug": "duration",
@@ -149,6 +266,25 @@
    "def": "Energy management system: the supervisory software that decides when a storage plant charges and discharges — following price signals, grid instructions, or a contract — and coordinates the PCS and BMS to do it.",
    "aliases": [
     "energy management system"
+   ]
+  },
+  {
+   "slug": "energization",
+   "term": "energization",
+   "def": "The moment new electrical infrastructure is first put under live voltage and proven, with the utility present. It is the line between contracted megawatts and connected ones: before it, a connection agreement is a promise; after it, power can actually flow, and every schedule upstream of it is measured against this date.",
+   "aliases": [
+    "energisation",
+    "energize",
+    "energized"
+   ]
+  },
+  {
+   "slug": "energy-battery",
+   "term": "energy battery",
+   "def": "A battery optimized for how much it holds and how many times it can be emptied and refilled — sized by hours of duration and judged on cycle life and cost per stored unit. A grid storage container is the archetype, and it is the near-inverse of a power battery in almost every design choice.",
+   "aliases": [
+    "energy cell",
+    "energy-optimized battery"
    ]
   },
   {
@@ -173,6 +309,16 @@
    ]
   },
   {
+   "slug": "front-of-meter",
+   "term": "front-of-meter",
+   "def": "A resource that interconnects on the utility's side of the customer meter, like a small power plant, and is paid by wholesale markets or by contract — as opposed to behind-the-meter equipment on a customer's own site. Which side of the meter a project sits on decides the buyer, the contract, the rulebook, and the length of the sales cycle, which is why it is usually the first qualifying question asked.",
+   "aliases": [
+    "FOM",
+    "front of meter",
+    "in front of the meter"
+   ]
+  },
+  {
    "slug": "gan",
    "term": "GaN",
    "def": "Gallium nitride: a wide-bandgap semiconductor suited to very fast, compact low-to-mid-voltage converters — one of the two key materials (with SiC) shrinking modern power electronics.",
@@ -186,6 +332,15 @@
    "def": "Grain-oriented electrical steel: the specialty magnetic steel every transformer core requires. Only a handful of mills worldwide produce it, and every announced transformer plant bids for the same tonnage — which is why transformer lead times, not capital, gate so many projects.",
    "aliases": [
     "grain-oriented electrical steel"
+   ]
+  },
+  {
+   "slug": "grid-following",
+   "term": "grid-following",
+   "def": "An inverter that locks onto the grid's existing voltage wave and injects current into it — a surfer riding a wave someone else is making. It is the conventional mode and works well, but it cannot operate at all without a live grid to follow, so it contributes nothing during the outage it is standing beside.",
+   "aliases": [
+    "grid following",
+    "grid-following inverter"
    ]
   },
   {
@@ -204,6 +359,14 @@
     "THD",
     "total harmonic distortion",
     "harmonic distortion"
+   ]
+  },
+  {
+   "slug": "heat-rate",
+   "term": "heat rate",
+   "def": "The efficiency yardstick for a thermal power plant: fuel energy in per unit of electricity out, so a lower number is better. It decides which plants a market dispatches first, hour by hour, and it is the same quantity as percentage efficiency quoted the other way up.",
+   "aliases": [
+    "heat-rate"
    ]
   },
   {
@@ -227,6 +390,15 @@
    "slug": "hyperscaler",
    "term": "hyperscaler",
    "def": "One of the giant cloud and platform operators that build and lease data-center capacity at gigawatt scale. Their capital spending sets the pace of the AI data-center buildout."
+  },
+  {
+   "slug": "ibr",
+   "term": "IBR",
+   "def": "Inverter-based resource: anything that reaches the grid through power electronics rather than through a spinning machine — solar, wind, and battery storage. The category exists because inverters behave differently from generators during a disturbance, so the reliability rules written for them are separate rules.",
+   "aliases": [
+    "inverter-based resource",
+    "inverter-based resources"
+   ]
   },
   {
    "slug": "ieee-519",
@@ -263,11 +435,29 @@
    ]
   },
   {
+   "slug": "inverter",
+   "term": "inverter",
+   "def": "A converter that turns direct current into alternating current — the mirror image of a rectifier. It appears wherever DC has to be handed back to an AC world: on the output of a battery or solar array, inside a UPS, and between an electric vehicle's pack and its motor. A bidirectional one that does both jobs is a power conversion system.",
+   "aliases": [
+    "inverters"
+   ]
+  },
+  {
    "slug": "irp",
    "term": "IRP",
    "def": "Integrated resource plan: a regulated utility's commission-filed roadmap of what it expects to need and how it intends to procure it. Certified IRP megawatts are the real demand pipeline for an equipment supplier — they become purchase orders on a multi-year fuse.",
    "aliases": [
     "integrated resource plan"
+   ]
+  },
+  {
+   "slug": "islanded",
+   "term": "islanded",
+   "def": "Running electrically disconnected from the grid, with on-site generation alone matching the load every second. There is no larger system to lean on, so frequency and voltage become the site's own problem — and so does restarting after a total loss.",
+   "aliases": [
+    "islanding",
+    "island mode",
+    "off-grid operation"
    ]
   },
   {
@@ -354,6 +544,14 @@
    ]
   },
   {
+   "slug": "nogrr-245",
+   "term": "NOGRR 245",
+   "def": "The ERCOT rule change setting ride-through obligations for inverter-based resources, battery storage included. It is the resource-side counterpart to NOGRR 282, which governs large electronic loads: adjacent numbers, opposite sides of the same interface, and confusing the two is a common and expensive error in a technical room.",
+   "aliases": [
+    "NOGRR245"
+   ]
+  },
+  {
    "slug": "nogrr-282",
    "term": "NOGRR 282",
    "def": "The ERCOT rule requiring new large electronic loads — data centers of 75 MW and up — to ride through voltage and frequency disturbances instead of tripping off together. It is a load rule rather than a storage standard (those are NOGRR 245 and 272), and it is what makes buffering between the grid and the GPUs close to mandatory in Texas.",
@@ -388,6 +586,15 @@
    "def": "The largest US regional grid operator, spanning the mid-Atlantic and parts of the Midwest — including northern Virginia's data-center corridor. Its capacity market and interconnection queue shape much of the AI data-center power story."
   },
   {
+   "slug": "power-battery",
+   "term": "power battery",
+   "def": "A battery optimized for how fast it can deliver rather than how much it holds — sized by discharge rate against a short duration, and judged on rate capability and on how well it survives sitting fully charged. A backup-supply battery is the archetype, and its design choices run opposite to an energy battery's at almost every point.",
+   "aliases": [
+    "power cell",
+    "power-optimized battery"
+   ]
+  },
+  {
    "slug": "power-factor",
    "term": "power factor",
    "def": "The ratio of useful power to apparent power — how much of the current a facility draws actually does work. The rest is reactive power: magnetizing current sloshing between source and load, doing nothing but occupying wires and transformers, which is why utilities bill penalties when it runs low.",
@@ -397,11 +604,36 @@
    ]
   },
   {
+   "slug": "power-shelf",
+   "term": "power shelf",
+   "def": "A slide-in conversion tray occupying rack units and feeding the rack's own DC busbar, replacing per-server conversion with a pooled stage. Shelves are built with one more module than the load needs, so any single module can fail or be swapped while the rack keeps running.",
+   "aliases": [
+    "power shelves",
+    "rack power shelf"
+   ]
+  },
+  {
    "slug": "ppa",
    "term": "PPA",
    "def": "Power purchase agreement: a long-term contract to buy a project's power or capacity at agreed terms — the bankable revenue stream that lets developers finance construction.",
    "aliases": [
     "power purchase agreement"
+   ]
+  },
+  {
+   "slug": "prc-029-1",
+   "term": "PRC-029-1",
+   "def": "The North American reliability standard making ride-through mandatory for inverter-based resources, storage included — the continent-wide counterpart to what individual grid operators had already required regionally. It is the point at which ride-through capability stops being a regional differentiator and becomes a baseline everywhere.",
+   "aliases": [
+    "PRC-029"
+   ]
+  },
+  {
+   "slug": "prime-power",
+   "term": "prime power",
+   "def": "Generation that carries a site's full load continuously, as its main source — the opposite of standby plant that sits idle until the normal supply fails. The distinction changes the machine, the air permit, and the maintenance regime, so a plant sold as prime and a plant sold as backup are different products even when the hardware looks alike.",
+   "aliases": [
+    "prime generation"
    ]
   },
   {
@@ -418,11 +650,31 @@
    "def": "A power-electronics device that turns AC into DC — the first stage of nearly every power supply, charger, and data-center power shelf."
   },
   {
+   "slug": "ride-through",
+   "term": "ride-through",
+   "def": "Staying connected and operating through a grid disturbance — a voltage dip or a frequency excursion — instead of protectively disconnecting. Grid codes increasingly require it of both resources and very large loads, for a blunt reason: if everything connected trips at the first sign of trouble, a local fault becomes a system-wide one.",
+   "aliases": [
+    "ride through",
+    "fault ride-through",
+    "ride-through capability"
+   ]
+  },
+  {
    "slug": "round-trip-efficiency",
    "term": "round-trip efficiency",
    "def": "The share of energy put into a storage system that comes back out after conversion and thermal losses — typically in the high-80s percent range for lithium-ion. The gap is energy bought but never sold.",
    "aliases": [
     "RTE"
+   ]
+  },
+  {
+   "slug": "safe-harbor",
+   "term": "safe harbor",
+   "def": "Starting a project far enough — by spending, or by taking delivery of equipment — to lock in the tax rules in force at that moment, even if those rules later change. It creates a cohort of owners still buying under older terms, and therefore a procurement channel whose constraints differ from everyone else's.",
+   "aliases": [
+    "safe harbour",
+    "safe-harbored",
+    "safe harbor equipment"
    ]
   },
   {
@@ -432,6 +684,14 @@
    "aliases": [
     "Texas SB 6",
     "Senate Bill 6"
+   ]
+  },
+  {
+   "slug": "scada",
+   "term": "SCADA",
+   "def": "Supervisory control and data acquisition: the operator's window onto a plant — live telemetry out, remote commands in. It is a visibility and intervention layer rather than a deciding one; the automated control loops below it are acting far faster than anyone is watching.",
+   "aliases": [
+    "supervisory control and data acquisition"
    ]
   },
   {
@@ -470,11 +730,39 @@
    ]
   },
   {
+   "slug": "sidecar",
+   "term": "sidecar",
+   "def": "A conversion cabinet standing beside a rack that produces the rack's high-voltage DC bus from whatever the building already distributes. It is a bridge product by design: it delivers a new power architecture to one rack without rebuilding the hall around it — which is also the precise boundary of what it fixes, since the hall's upstream capacity is unchanged.",
+   "aliases": [
+    "MV rectifier sidecar",
+    "HVDC sidecar"
+   ]
+  },
+  {
+   "slug": "simple-cycle",
+   "term": "simple cycle",
+   "def": "A gas turbine that drives a generator and vents its hot exhaust rather than recovering it. Cheaper, faster to build, and quick to start, but only roughly 35 to 40 percent of the fuel's energy reaches the wires — which is why it survives as a peaking and bridge machine rather than as baseload.",
+   "aliases": [
+    "simple-cycle",
+    "open cycle",
+    "SCGT"
+   ]
+  },
+  {
    "slug": "sodium-ion",
    "term": "sodium-ion",
    "def": "A battery chemistry replacing lithium with abundant sodium — cheaper materials and better cold-weather performance at lower energy density; an emerging challenger for stationary storage.",
    "aliases": [
     "Na-ion"
+   ]
+  },
+  {
+   "slug": "solid-oxide-fuel-cell",
+   "term": "solid-oxide fuel cell",
+   "def": "A fuel cell with a ceramic electrolyte that works only when very hot, roughly 700 to 1,000 degrees Celsius. The heat is the point: at that temperature natural gas breaks down into hydrogen right at the electrode, so the cell runs on pipeline gas rather than purified hydrogen. There is no flame, so nitrogen oxides and particulates are near zero — but the ceramics dislike being cycled and prefer steady output.",
+   "aliases": [
+    "SOFC",
+    "solid oxide fuel cell"
    ]
   },
   {
@@ -491,6 +779,34 @@
    "def": "Solid-state transformer: a power-electronics replacement for the iron transformer that converts medium-voltage AC directly to regulated DC using high-frequency switching — a candidate to collapse today's multi-stage data-center power chain into one device.",
    "aliases": [
     "solid-state transformer"
+   ]
+  },
+  {
+   "slug": "state-of-charge",
+   "term": "state of charge",
+   "def": "The fuel gauge: how much energy is on board right now, as a percentage of what the plant can hold. Operators run a narrower window than the physical one because cells age faster held near either extreme, and every dispatch decision is planned around this number.",
+   "aliases": [
+    "SOC",
+    "state-of-charge"
+   ]
+  },
+  {
+   "slug": "state-of-health",
+   "term": "state of health",
+   "def": "The long-term gauge: how much capacity a battery still holds compared with when it was new. Where state of charge moves through the day, state of health only ever falls — and how fast it falls is what a capacity warranty is a promise about.",
+   "aliases": [
+    "SOH",
+    "state-of-health"
+   ]
+  },
+  {
+   "slug": "supercapacitor",
+   "term": "supercapacitor",
+   "def": "A device storing energy as separated electric charge rather than as a chemical reaction. It holds far less energy than a battery of the same size but takes it in and gives it back within milliseconds, over and over, for many years — which makes it the right part for absorbing a spike and the wrong one for riding out an outage.",
+   "aliases": [
+    "supercapacitors",
+    "ultracapacitor",
+    "supercap"
    ]
   },
   {
@@ -565,6 +881,15 @@
    ]
   },
   {
+   "slug": "virtual-synchronous-generator",
+   "term": "virtual synchronous generator",
+   "def": "A control mode that makes a grid-forming inverter behave like a traditional spinning generator, resisting frequency change as though it had rotating mass it does not have. It is how an inverter-based plant supplies the stabilizing behavior retiring thermal plants used to provide for free, and it is what makes black start and off-grid running possible.",
+   "aliases": [
+    "VSG",
+    "virtual synchronous machine"
+   ]
+  },
+  {
    "slug": "vrm",
    "term": "VRM",
    "def": "Voltage regulator module: the last conversion stage on the server board, stepping the rack's supply down to roughly one volt at the processor die. It is the final link in a chain of conversions running from the transmission line to the chip, and every one of them costs efficiency.",
@@ -578,6 +903,15 @@
    "def": "Water usage effectiveness: water consumed per unit of IT energy, the cooling counterpart to PUE. Closed-loop and air-cooled designs spend a little more electricity to spend almost no water, which in a water-stressed watershed is usually the more permittable trade.",
    "aliases": [
     "water usage effectiveness"
+   ]
+  },
+  {
+   "slug": "zero-crossing",
+   "term": "zero crossing",
+   "def": "The instant an alternating waveform passes through zero volts, twice per cycle. For a fraction of a millisecond nothing sustains an arc, so an arc drawn on AC tends to extinguish itself — and almost every protective device in an AC building quietly relies on that. Direct current never offers the instant, which is why DC protection has to be engineered rather than inherited.",
+   "aliases": [
+    "zero-crossing",
+    "zero cross"
    ]
   }
  ]

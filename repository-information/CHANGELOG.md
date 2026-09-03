@@ -3,11 +3,37 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 90/100`
+`Sections: 91/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.38r] — 2026-09-03 01:39:08 AM EST
+
+> **Prompt:** "continue with your recommendation"
+
+**The recommendation this commit set out to execute was based on a false premise, and the correction is the more useful half of the work.** The recommendation was to "run the G1 concepts-registry session" — add §6 gap G1's ~30 electrical and data-hall terms, and re-pin the five lessons carrying a stale `concepts:profiler-concepts` date. **G1 had already been done**, in `5c66534` ("v04.31r Add the 31 G1 concepts to the Profiler concepts registry"), and the plan's §6 row was never marked closed — which is exactly what produced the wrong recommendation. Checking G1's list against the registry's **terms and aliases** (rather than its terms alone, the mistake in the first pass) shows **all 34 of its terms already resolve.** So this commit closes the plan's stale rows and adds the genuinely-missing next increment instead. **The re-pin was dropped on reflection and is not in this commit** — see Notes.
+
+### Added
+
+- **`live-site-pages/profiler-data/profiler-concepts.json`** — **37 new concepts, 75 → 112 entries**, each with `slug`, `term`, `def` and `aliases`, written in the registry's existing voice and merged in slug order (334 insertions, **0 deletions** — no existing entry was reformatted). The set: aeroderivative · availability guarantee · black start · brownfield · busbar · combined cycle · conversion stage · CRPS · curtailment · cycle life · DC-DC converter · derating · digital twin · energization · energy battery · front-of-meter · grid-following · heat rate · IBR · inverter · islanded · NOGRR 245 · power battery · power shelf · PRC-029-1 · prime power · ride-through · safe harbor · SCADA · sidecar · simple cycle · solid-oxide fuel cell · state of charge · state of health · supercapacitor · virtual synchronous generator · zero crossing
+- **The selection rule was made explicit and checkable rather than intuited**: a term is promoted when it is defined locally in **two or more lessons**, or appears **at least five times** across the public corpus (62 study guides + dossiers + the projects registry) or in the guidance modules. Two documented exception classes: a term that is one half of a pair whose other half qualifies (`energy battery` ↔ `power battery`, `simple cycle` ↔ `combined cycle`), and a regulatory identifier whose sibling is already in the registry (`NOGRR 245`, whose absence beside `NOGRR 282` is precisely the asymmetry that causes the confusion both the registry and the curriculum warn about). **Twelve candidates were excluded** by the same rule and stay lesson-local: grid code, setpoint, control loop, universal input, I²R loss, cell balancing, cycle budget, point of interconnection, spinning reserve, minor source, revenue stacking, balance of system
+
+### Changed
+
+- **`repository-information/CLASSROOM-CURRICULUM-PLAN.md`** — four stale references corrected, with the original reasoning kept rather than deleted. §6's **G1 row is marked `[CLOSED — v04.31r, extended v04.38r]`**; the "what to commission first" paragraph no longer opens on G1; **§8 note 4 is rewritten from "do G1 before track 2" into the standing practice that keeps it done** — define locally, check against terms *and aliases*, and promote on the two-lessons-or-five-corpus-hits rule; and §8 note 11's open developer call about sequencing the first five against G1 is marked moot, since G1 landed first and all five are now built
+- **`repository-information/repository.version.txt`**, **`README.md`** — `v04.37r` → `v04.38r` and the `Last updated:` line
+
+### Notes
+
+- **The re-pin half of the recommendation was dropped, and the reasoning generalises.** Advancing the five stale lessons' `concepts:profiler-concepts` pin from `2026-08-31` to the current date would assert those lessons were authored against a document they were not. The contract's own rule is the right one here even though it binds pipeline runs rather than developer sessions: *a source that moved without contradicting anything leaves the lesson untouched — pin included* (G3). Adding definitions to a registry contradicts nothing any lesson teaches, and because `{{term}}` resolves lesson-first, it cannot even change what a reader sees. Executing it would also have required either five fabricated `revisions[]` entries that revised nothing, or five `updated` bumps with no content change — both worse than the drift they would fix
+- **No lesson was touched, which is what §8 note 4 predicted.** The five terms proven duplicated across lessons (cycle life ×3; black start, ride-through, state of charge, state of health ×2) are now in the registry, and every lesson keeps its local definition, which simply shadows the registry entry. `check-classroom-content.py` reports **0 errors / 0 warnings** — unchanged, since adding registry entries can only reduce unresolved-term warnings, and there were none
+- **The first pass of this analysis was wrong twice and both errors are worth recording.** It compared candidates against the registry's `term` values only, missing that `automatic transfer switch`, `THD`, `total harmonic distortion`, `scale-out`, `minimum take` and `synthetic inertia` all already resolve **through aliases** — which is why G1 reads as 31/34 closed on a naive check and 34/34 on a correct one. And the previous response's claim of "38 lesson-local entries, many defined twice" was an overstatement: the corpus holds **94 local entries across 88 distinct terms, with exactly 5 terms duplicated.** The alias lesson is now written into §8 note 4 so the next session does not repeat it
+- **Verification** — `check-profiler-study.py`: 62 study guides + the concepts registry (112 concepts), **0 errors / 0 warnings**. `check-classroom-content.py`: 10 lessons, 3 tracks, 134 gate cases, **0 errors / 0 warnings**. `check-classroom-pipeline.py --base origin/main`: **2 findings, both P1**, naming `profiler-concepts.json` and `CLASSROOM-CURRICULUM-PLAN.md` as outside the committer's write set — the expected and correct noise for a developer commit touching files a pipeline run may not. **No P3**, so the gate digest is untouched and the next pipeline run will not block; no P5, P7 or P8, because no lesson literal was opened. `--selftest`: 13 fixtures, **0 failures**
+- **No version moved except the repo version**, following the convention `5c66534` established for a registry-only change: the registry is deployed data rather than a page, and no HTML page or `.gs` file was modified, so [PC-HTML-VERSION] #2, [PC-GS-VERSION] #1 and [PC-PAGE-CHANGELOG] #16 do not fire. `node --check` and `check-gas-inner-scripts.js` were not run, as no JavaScript changed
+- The branch was **restarted from `origin/main`** before any edit, as on the previous two commits
+- Registry now at **112 concepts**; curriculum unchanged at **10 lessons / 3 tracks**
 
 ## [v04.37r] — 2026-09-03 01:27:59 AM EST
 
