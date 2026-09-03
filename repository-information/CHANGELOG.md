@@ -3,11 +3,33 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 92/100`
+`Sections: 93/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.40r] — 2026-09-03 02:29:23 AM EST
+
+> **Prompt:** "I approve all tiers of additions and plan to create dossiers + study guides for all new additions as well as study guides for existing dossiers that are missing them. I plan to start with all companies that are advised to be built with Fable 5.1 xhigh, then the ones with Fable 5.1 high, then the ones with Opus 5 xhigh last. In the grand scheme of things, once all new dossiers and study guides have been added, I will go back to the Classroom build and backfill the gaps before continuing the overall build. Thus, reorganize the action plan accordingly and clearly mention which phases (and companies) should be built with which AI model. Then, remember session and give me the prompt to paste into a new Fable 5.1 xhigh session to begin updating Profiler."
+
+*(The research response this approves — "Analyze Profiler's current coverage and the gaps and recommend me a list of companies that I should add to Profiler in order to make Classroom's industry coverage comprehensive … recommend whether I should use Opus 5, Fable 5.1 High, or Fable 5.1 xhigh to create each dossier … recommend me an action plan to approve" — made no commit; its findings are recorded in the new plan file's §1 and §2.)*
+
+### Added
+
+- **`repository-information/PROFILER-COVERAGE-PLAN.md`** — the approved Profiler coverage expansion, ordered by model the way the developer will run it. **§1** the coverage shape at approval (89 dossiers / 62 guides; the `ipp` category's nine BESS buyers have **zero** study guides; `investor` and `advisor` have never held a company; no utility of any kind) and the corpus mention count that surfaced gaps the register never named — Digital Realty (13 docs), Blackstone (12), AEP (11 + 25 guidance hits), Anthropic (10 docs, 97 hits), MGX, Fluidstack, Intersect Power, Mitsubishi Power — and why Powin (13 docs, the most-mentioned uncovered name) is deliberately left out. **§2** the model rule: Fable 5.1 xhigh only for the four anchors a Classroom lesson will pin, as dossier + guide in one session; Fable 5.1 High for private/opaque subjects and the regulatory-dense utilities; Opus 5 xhigh for public companies with deep first-party records and all guide work — with the confidence note that this is judgment, the repo has never compared dossier quality by model, and Phase A doubles as the test. **§3 Phase A** — Caterpillar, Piller, Dominion, Vicor. **§4 Phase B** — 29 companies in ten sessions: five utilities, ten BESS developers, nine AIDC developers/neoclouds/Anthropic, MGX, DNV, Sargent & Lundy, CoolIT, X-energy. **§5 Phase C** — 32 companies in twelve sessions (Cummins, mtu, Rehlko; Mitsubishi Electric, Powell, Mitsubishi Power; Infineon, Flex; Talen, Vistra, NRG; ENGIE NA, AES, RWE; Clearway, Recurrent, Form Energy; Power Electronics; Digital Realty, CyrusOne; Cipher, Hut 8, Galaxy; Blackstone, Brookfield, Macquarie; Oklo, Trane, McCarthy; Whiting-Turner, Gotion, REPT) plus three guide revisions (Vertiv and Schneider gain UPS sections, Siemens Energy gains grid technology) and 27 guide backfills, IPPs first. **§6 Phase D** — back to Classroom: re-run and date every §6 register check, author the lessons the closures unlock, then resume the cut line. **§7** what every session owes (dossier then guide in one commit; registry sync, graph build, study validator; a calendar row; README tree entries; flip the ledger; phase-end register checks; the `utility` category that session A3 must add to the registry, the schema and `Profiler.html`; the first-ever `investor`/`advisor` render check; CHANGELOG rotation ~eight pushes out) and the paste-in prompt template. **§8** the status ledger — 65 new-company rows and 30 guide rows, each flipped in the commit that lands it
+
+### Changed
+
+- **`repository-information/SESSION-CONTEXT.md`** — "remember session": Latest Session rewritten for this planning session (what was analyzed, what was decided, the model order, the Caterpillar prompt), the `bridge-power`/§2.2 entry rotated out under the 2-session cap
+- **`README.md`** — tree entry for `PROFILER-COVERAGE-PLAN.md`; `Last updated:` and repo version
+- **`repository-information/repository.version.txt`** — `v04.39r` → `v04.40r`
+
+### Notes
+
+- **Planning ran on Fable 5.1; nothing in Profiler or Classroom changed.** No page, GAS or data file moved — no page/GAS changelog entry, no AFFECTED URL. The first dossier session is the developer's next action, on Fable 5.1 xhigh, with the prompt recorded in SESSION-CONTEXT.md
+- **The two research findings that most changed the list:** Classroom pins study guides, not dossiers, for every equipment lesson (the §5 failure map is built from guides only), so a dossier without a `profiler prep` pass adds nothing to Classroom and every row is a pair; and the BESS buyer side — nine `ipp` dossiers — carries no guide at all, which is why the backfill starts there rather than with the suppliers
+- **Web-verified at approval:** Caterpillar ~18% and Cummins ~16% of the data-center generator market; Powell's >$400M single data-center order and $1.8B backlog; Aypa at ~6.5 GW moving from Blackstone to Brookfield; ENGIE's 5.6 GW and the CBRE IM stake; Google's Intersect acquisition; EdgeCore's 1.8 GW; CyrusOne Fairfield 760 MW; Hut 8's Anthropic/Fluidstack and Texas leases, Cipher's AWS lease, Galaxy's CoreWeave lease; Anthropic's published guidance to start Fable 5.1 at high effort and step up only on measured headroom
 
 ## [v04.39r] — 2026-09-03 01:58:03 AM EST
 

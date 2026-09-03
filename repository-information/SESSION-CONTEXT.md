@@ -6,6 +6,43 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-03 02:29 AM EST
+**Repo version:** v04.40r (started at v04.39r — one push commit, this one)
+**Branch:** `claude/profiler-coverage-gaps-sg0mzu` — clean against `origin/main` at commit time; the branch did not exist on the remote, so no rebase and no restart were needed
+**Model:** Fable 5.1 — a planning session, by the standing decision that planning runs on Fable and authoring on Opus 5. **That decision is now refined for dossier work** — see Key decisions
+
+**What we worked on — a coverage analysis, an approved roster, and the plan file that carries it:**
+
+- **Analyzed Profiler's coverage against Classroom's gap register** (`CLASSROOM-CURRICULUM-PLAN.md` §6, the twelve rows with the new `Status` column). Coverage stood at 89 dossiers / 62 study guides. Three structural findings the register did not state: the nine `ipp` dossiers — the entire BESS buyer side — carry **zero** study guides; the `investor` and `advisor` categories exist in the schema and have never held a company; there is no `utility` category at all
+- **Counted corpus mentions of uncovered companies** across every dossier and guide, which is the strongest evidence of an ecosystem gap and surfaced names the register never listed: Digital Realty (13 docs), Blackstone (12), AEP (11 dossiers + 25 guidance hits), Anthropic (10 docs, 97 hits), MGX (10), Fluidstack (6), Intersect Power (6), Mitsubishi Power (6). Powin (13 docs) tops the list and is deliberately excluded — defunct, told inside FlexGen's dossier, excluded by the earlier v02.91r plan too
+- **Recommended 65 companies in six tiers plus 30 study-guide passes**; the developer **approved all tiers** and chose to run the program by model — every Fable 5.1 xhigh session first, then Fable 5.1 High, then Opus 5 xhigh — and to return to the Classroom build only after the whole roster lands
+- **Wrote `repository-information/PROFILER-COVERAGE-PLAN.md`** — the plan reorganized into that order: §2 model rule, §3 Phase A (4 anchors), §4 Phase B (29), §5 Phase C (32 + 30 guides), §6 Phase D (back to Classroom), §7 per-session bookkeeping and the paste-in prompt template, §8 the status ledger every session flips
+
+**Where we left off:**
+
+- **Nothing in Profiler has been built yet.** The plan is committed; the first dossier session is the developer's next action. Order: **A1 Caterpillar → A2 Piller → A3 Dominion → A4 Vicor** on Fable 5.1 xhigh, each as `profiler <Company>` + `profiler prep <Company>` in one commit; then Phase B (B1–B10) on Fable 5.1 High; then Phase C (C1–C12 plus the guide revisions and the 27 backfills) on Opus 5 xhigh; then Phase D
+- **Session A3 (Dominion) carries a page change**: the `utility` category must be added to `profiler-companies.json`'s `categories`, PROFILER-SCHEMA.md, and `Profiler.html` (chip label, `.ov-tag` colour, `known` list, compare peer groups, `OV_REL_CAT_COLORS`) — a Profiler page version bump, the only page change in the program
+- **The repo CHANGELOG is at 93/100.** Archive rotation fires above 100 — roughly seven pushes out, i.e. inside Phase B. Whoever lands that push does the rotation in the same commit
+- The Classroom cut line (`redundancy-by-the-numbers`, `inside-the-rack`, the second wave) is **paused by the developer's decision** until Phase D. The earnings desk Routine and the weekly C2 pipeline remain live and unreviewed; sessions D and E of `IMPROVEMENT-PLAN.md` not started
+
+**Key decisions and positions taken:**
+
+- **Dossier work has its own model rule, layered on the standing decision.** Fable 5.1 xhigh only for the four anchors a future lesson will pin, as dossier + guide in one session; Fable 5.1 High for private/opaque subjects and the utilities (regulatory synthesis); Opus 5 xhigh for public companies with deep first-party records and for every study-guide pass on an existing dossier. Stated as judgment, not measurement — the repo has never compared dossier quality by model, and Phase A doubles as the test: if Caterpillar's guide on xhigh reads no better than High, demote A2–A4 before running them
+- **Every company is a pair.** Classroom pins study guides, not dossiers, for equipment lessons (the §5 failure map is built from guides only). A dossier without a prep pass adds nothing to Classroom, so the plan never schedules one without the other, and the backfill of existing dossiers starts with the nine IPPs because the buyer side has no guides at all
+- **Phase-end, not session-end, register checks.** A row in §6 is not closed until someone re-runs its check and dates it (last session's rule). The plan schedules that at the end of each phase and again in Phase D, and keeps the §8 ledger as the per-session record so the two never substitute for each other
+- **Powin, Broad Reach, Boyd, Motivair, Prolec, Cupertino Electric and Calpine stay uncovered** — each is already told inside a covered parent's dossier. Wood Mackenzie and BNEF are ranking sources, not counterparties
+
+**Active context:** `TEMPLATE_DEPLOY` Off · `MULTI_SESSION_MODE` Off · `CHAT_BOOKENDS` Off · Profiler `v01.80w` / `v01.33g` · Classroom `v01.07w` / `v01.16g` · concepts registry 112 entries · CHANGELOG 93/100 · no active reminders · TODO empty
+
+**Recommendation for next session:**
+
+- **Run Phase A1 — Caterpillar — on Fable 5.1 xhigh**, as a fresh session: `profiler Caterpillar` then `profiler prep Caterpillar`, one push commit, per `PROFILER-COVERAGE-PLAN.md` §3 and §7. It closes G2's first half, anchors the `backup-generation` lesson, and is the cheapest test of whether xhigh earns its cost over High on a dossier + guide pair before A2–A4 spend it.
+**To continue:** type `run Phase A1 of PROFILER-COVERAGE-PLAN.md — Caterpillar — on Fable 5.1 xhigh`
+
+## Previous Sessions
+
+### 2026-09-03 — the second cut-line wave: `the-800-vdc-shift`, `the-control-stack`, `where-bess-plugs-in` + the §6 Status column (v04.39r)
+
 **Date:** 2026-09-03 02:03 AM EST
 **Repo version:** v04.39r (started at v04.34r — **six push commits**, plus this context write)
 **Branch:** `claude/800-vdc-shift-lesson-av3l62` — every push merged to `main` by the auto-merge workflow, and the
@@ -125,121 +162,3 @@ pattern to repeat: restart *before* making edits, so no intermediate commit is n
   are all present, and two of them were read in full this session.
 
 **To continue:** type `author inside-the-rack from CLASSROOM-CURRICULUM-PLAN.md §3.3`
-
-## Previous Sessions
-
-### 2026-09-03 — `bridge-power` + the §2.2 track cut (v04.34r)
-
-**Date:** 2026-09-03 12:10:00 AM EST
-**Repo version:** v04.34r (started at v04.32r — two push commits, plus this context write)
-**Branch:** `claude/bridge-power-lesson-oajbui` (both pushes merged to `main` by the auto-merge workflow)
-**Model:** Opus 5 — an authoring session, by the standing decision that planning runs on Fable and authoring on Opus 5
-
-**What we worked on — two commits: `bridge-power`, then the §2.2 track cut:**
-
-- **Authored `clLessonBridgePower_()`** (`8f557e2`, v04.33r) inside the `// CONTENT START` … `// CONTENT END`
-  fence in `googleAppsScripts/Classroom/Classroom.gs`, at position 2 of `aidc-grid-to-chip`. **Nine sections
-  across seven kinds** — `why-a-campus-builds-a-power-plant` (prose) · `ways-to-eat-the-same-gas` (proscons,
-  four cards) · `fuel-in-electricity-out` (bars) · `the-turbine-queue` (prose) · `prime-backup-n-plus-one`
-  (callout) · `four-campuses` (table) · `where-it-fails` (callout, `tone: warn`) · `drill` (6 flashcards) ·
-  `check-yourself` (5 quiz items). No two of a kind adjacent; `sales` on four of seven teaching sections
-- **Nineteen public inputs, every pin read off the document fetched that session** (G2), every ref resolved
-  before writing (G7): seven study guides (`kiewit@2026-08-21`, `wartsila@2026-08-08`,
-  `bloom-energy@2026-08-21`, `vantage@2026-08-21`, `crusoe@2026-08-21`, `xai@2026-08-21`,
-  `primoris@2026-08-21`), seven dossiers (`voltagrid`, `proenergy`, `enchanted-rock`, `mainspring-energy`,
-  `kiewit`, `bloom-energy`, `stack-infrastructure`, all `@2026-08-30`), four projects (`frontier`,
-  `jupiter-nm`, `colossus`, `homer-city`, all `@2026-09-02`) and `concepts:profiler-concepts@2026-09-03`.
-  Folds to **`tracks`** — analyst and up. **Fifteen lesson-local glossary entries**
-- **Executed the plan's §2.2 track cut** (`ddd7c5f`, v04.34r): `the-aidc-power-chain` moved to position 3 of
-  `aidc-grid-to-chip`; **`aidc-power-primer` retired, not renamed**; `clTrackAidcCampus_()` created in the
-  same commit holding `heat-is-the-constraint` at position 1, with the curriculum's **first `prereqs[]`**
-  (`["aidc-grid-to-chip"]`). `clLessons_()` needed **no edit** — registry order already equalled the new
-  teaching order. Also corrected a stale header comment ("Five public-stamped modules" → "Six")
-- **Verified both commits:** `check-classroom-content.py` — 7 lessons, 3 tracks, 134 gate cases,
-  **0 errors / 0 warnings** each time. `check-classroom-pipeline.py --base origin/main` — v04.33r: **1
-  finding, P5** on the lesson-registry insertion; v04.34r: **2 findings, both P5** (`track
-  'aidc-power-primer' disappeared`, `clTracks_() not append-only`). **No P1, no P3 either time**, so
-  `gateDigest` was correctly never touched. `--selftest` 13/0 both times; `node --check` and
-  `check-gas-inner-scripts.js` clean. **The gate derivation was run against the real registries**, not the
-  checker's fixtures, on both commits
-- **Versions:** Classroom GAS `v01.11g` → `v01.12g` → `v01.13g`, each with `Classroomgs.version.txt` in the
-  same commit and a generic public changelog entry naming no title, ref or company
-
-**Where we left off:**
-
-- **`aidc-grid-to-chip` holds 3 of its 8 planned lessons** in plan order — `the-fence-line` → `bridge-power`
-  → `the-aidc-power-chain` — and its `short` describes the walk as it now reads end to end.
-  **`aidc-campus` holds 1 of 4** (`heat-is-the-constraint`), with its prereq attached
-- **The next cut-line item is `the-800-vdc-shift`** (§7 item 3), which lands at **position 6** of
-  `aidc-grid-to-chip`. Positions 4 and 5 (`redundancy-by-the-numbers`, `inside-the-rack`) are second-wave,
-  so it is appended to the end of the current `lessons[]` — **append-only, no reorder, so it should be the
-  first commit in this sequence to produce zero P5 findings**
-- **The retired track id `aidc-power-primer` must never be reused** (plan §4 item 2). Asking for it now
-  answers `UNKNOWN_TRACK`, which was verified rather than assumed
-- The five pre-existing lessons still pin `concepts:profiler-concepts` at the stale **`2026-08-31`** —
-  untouched again, still a one-line correction whenever the developer wants it
-- The earnings desk Routine (weekdays 13:00 UTC) and the weekly C2 pipeline (Wed 11:00 UTC) remain live and
-  unreviewed across five sessions; neither was touched. Sessions D and E of `IMPROVEMENT-PLAN.md` not started
-
-**Key decisions and positions taken:**
-
-- **`aidc-power-primer` was retired rather than retitled, and the reasoning is the one that generalises.**
-  The retitle was the conservative option and §2.2 explicitly allows it. It was rejected because the only
-  thing a permanent track id protects is progress keyed on it — and Classroom keys progress on **lesson id
-  + section id, never on track id**, so the rollup is reconstructed from the lessons wherever they sit.
-  **Had track-level progress been stored, or had any analyst account existed, the retitle would have been
-  correct.** The removal was surfaced in chat before it was made, per the Chesterton's Fence gate
-- **Retiring a track and creating its replacement must happen in one commit**, so no registered lesson is
-  ever in no track. A lesson outside every track still appears in the lesson index (`clLessonIndexFor_`
-  walks the lesson registry, not the tracks), so that failure would have been quiet rather than visible
-- **Three §3.3 deviations on `bridge-power`, all reported before writing.** (a) `three-ways-to-eat-the-same-gas`
-  became **four** ways with a count-free id `ways-to-eat-the-same-gas` — the Mainspring dossier positions the
-  linear generator as an explicit fourth category, and teaching three while pinning that dossier would have
-  made the pin ornamental. (b) `four-campuses` **lost its "grid posture" column** — stated for only two of
-  four rows; it became "who builds and supplies it" and the two known postures moved to the `note`, which
-  says plainly the other two are not stated. (c) `where-it-fails` carries §5 row 4 in full but only the
-  **paralleling half** of row 5 — the transfer-switch specifics belong to `study:eaton` / `study:rosendin`
-  and to `the-aidc-power-chain`, so the section names them as the next lesson's material instead
-- **One section was added that the outline omits** — a `bars` on the efficiency ladder, with four
-  source-stated figures. **The fuel cell is deliberately absent from that chart**: its guide gives
-  efficiency as a relationship ("nearly scale-free"), not a class figure, and §8 note 6 forbids inventing
-  the proportion. The `note` says so. **This is the pattern for `bars` under note 6**
-- **`reviewBy` is `2026-12-31` — a real dated gate, not the ~6-month default**, unlike `the-fence-line`.
-  Frontier's first building (H2 2026) and Project Jupiter's initial operations (Q4 2026) both close on that
-  date, and both are taught in `four-campuses`, so two flagship rows change state when they land
-- **The sales lines were written to what the sources actually say, which is uncomfortable.** All four pinned
-  supplier dossiers describe platforms with no storage in the product line, and one advertises prime power
-  with "zero reliance on battery storage". So the lesson teaches that this cohort is where storage is being
-  **designed out**, and that the openings are narrow and specific — the bring-up, the transient/ride-through
-  duty, and the conversion at the end of a bridge. "A battery rides along" was the comfortable read and the
-  wrong one
-- **Three inputs the plan's §3.3 list does not name were added** because the lesson genuinely drew on them:
-  `profile:kiewit`, `profile:bloom-energy`, `profile:stack-infrastructure`. The plan's own list would have
-  left two of the four campus rows unsourced. **The plan is a specification; the corpus is the authority**
-
-**Active context:**
-
-- Repo **v04.34r** · Classroom **v01.07w / v01.13g** · Profiler **v01.80w / v01.34g** · Scraper
-  **v01.71w / v01.99g** — no page version moved this session (content-only, GAS side)
-- Curriculum now **7 lessons / 3 tracks** (`bess-foundations` 3, `aidc-grid-to-chip` 3, `aidc-campus` 1);
-  the plan proposes 30 / 5. Concepts registry unchanged at 75 entries
-- Capacity: repo CHANGELOG **87/100**; `Classroomgs` changelog **13/50**
-- `classroom-pipeline-ledger.json` untouched — `gateDigest`, `coveredThrough` and `lastRun` all unchanged
-- Routines unchanged (6): earnings desk, C2 pipeline, daily ACL, monthly drift, quarterly guidance review,
-  quarterly private sweep
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md empty
-- Plan §8 item 11's open developer calls are now **two**, not three: G5 (four utility dossiers) and whether
-  G1's second wave should precede the remaining cut-line lessons. The `aidc-power-primer` naming question
-  is **closed**
-
-**Recommendation for next session:**
-
-- **Author `the-800-vdc-shift` on Opus 5** (`CLASSROOM-CURRICULUM-PLAN.md` §3.3, cut-line item 3), appended
-  to the end of `aidc-grid-to-chip`'s `lessons[]`. It is the topic every customer conversation drifts to,
-  `study:zhonhen` and `study:megmeet` carry the whole public thesis between them, and — because positions 4
-  and 5 are second-wave — it is a pure append that needs no registry reorder, making it the first commit in
-  this sequence that should come back with **zero P5 findings**. Its `bars`/`table` split is the live
-  judgement call: the three-chain comparison has stated stage counts and efficiency bands, but "the new
-  boxes" gives shape without figures and must be a `table` under §8 note 6.
-
-**To continue:** type `author the-800-vdc-shift from CLASSROOM-CURRICULUM-PLAN.md §3.3`

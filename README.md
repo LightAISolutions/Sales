@@ -2,7 +2,7 @@
 
 A GitHub Pages deployment framework with automatic version polling, auto-refresh, and Google Apps Script (GAS) embedding support.
 
-Last updated: `2026-09-03 02:05:04 AM EST` · Repo version: `v04.39r`
+Last updated: `2026-09-03 02:29:23 AM EST` · Repo version: `v04.40r`
 
 **Live site:** [lightaisolutions.github.io/Sales](https://lightaisolutions.github.io/Sales/)
 
@@ -656,6 +656,7 @@ Last updated: `2026-09-03 02:05:04 AM EST` · Repo version: `v04.39r`
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/KNOWN-CONSTRAINTS-AND-FIXES.md">KNOWN-CONSTRAINTS-AND-FIXES.md</a>    — Architectural constraints &amp; resolved bug fixes (GAS double-iframe, postMessage, HMAC, deploy webhook)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PHASE5-LEARNING-LAYER-PLAN.md">PHASE5-LEARNING-LAYER-PLAN.md</a> — Phase 5 spec: study.json v2 on the guidance engine + concepts registry (built v03.97r)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PHASE6-CLASSROOM-DESIGN.md">PHASE6-CLASSROOM-DESIGN.md</a> — Phase 6 spec (approved design-gate output): Classroom as its own app, access matrices, provenance-gated content, phase plan C0–C6 with v1 = C0–C2
+│   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-COVERAGE-PLAN.md">PROFILER-COVERAGE-PLAN.md</a> — Approved Profiler coverage expansion (2026-09-03): 65 new companies + 30 study-guide passes ordered by model (Fable 5.1 xhigh anchors → Fable 5.1 High → Opus 5 xhigh), the model rule, per-session bookkeeping, the paste-in prompt template, and the status ledger sessions flip as files land
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-SCHEMA.md">PROFILER-SCHEMA.md</a>      — Profiler app company-profile data schema (single source of truth)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/PROFILER-STYLES.md">PROFILER-STYLES.md</a>      — Profiler dossier writing-style registry (active style + Default/Bloomberg/alternative styles with mock-ups)
 │   ├── <a href="https://github.com/LightAISolutions/Sales/blob/main/repository-information/profiler-refresh-calendar.json">profiler-refresh-calendar.json</a> — Report calendar driving the Profiler earnings desk Routine — next report date, confirmation status and watch items per covered company (schema: repository-information/PROFILER-SCHEMA.md)
