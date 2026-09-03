@@ -247,6 +247,26 @@
       "kpiNorm": true
     },
     {
+      "slug": "caterpillar",
+      "name": "Caterpillar",
+      "categories": [
+        "supplier"
+      ],
+      "tagline": "The gen-set OEM the AI buildout runs on — ~18% of the data-center generator market and 33% of tracked behind-the-meter capacity with Solar Turbines; a $72.1B backlog with diesel sets sold into 2028 and gas prime into 2029, Power Generation sales +38% in FY2025, large-engine capacity heading to ~3x 2024.",
+      "hq": "Irving, TX, USA",
+      "ticker": "NYSE: CAT",
+      "status": "active",
+      "lastUpdated": "2026-09-03",
+      "domains": [
+        "caterpillar.com",
+        "cat.com",
+        "solarturbines.com"
+      ],
+      "srcTotal": 127,
+      "srcFirstPct": 46,
+      "kpiNorm": true
+    },
+    {
       "slug": "catl",
       "name": "CATL",
       "categories": [

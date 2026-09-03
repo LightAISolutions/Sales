@@ -152,7 +152,7 @@ VERIFY: sync-profiler-registry.py --check clean, check-profiler-study.py clean, 
 
 | Session | Slug | Company | Categories | Model | Closes | Dossier | Guide |
 |---------|------|---------|------------|-------|--------|---------|-------|
-| A1 | `caterpillar` | Caterpillar | supplier | Fable 5.1 xhigh | G2 | — | — |
+| A1 | `caterpillar` | Caterpillar | supplier | Fable 5.1 xhigh | G2 | v1 · v04.41r | ✓ · v04.41r |
 | A2 | `piller` | Piller Power Systems | supplier | Fable 5.1 xhigh | G3 | — | — |
 | A3 | `dominion-energy` | Dominion Energy | utility (new) | Fable 5.1 xhigh | G5 | — | — |
 | A4 | `vicor` | Vicor | supplier | Fable 5.1 xhigh | G9 | — | — |

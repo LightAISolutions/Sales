@@ -37,6 +37,17 @@
    ]
   },
   {
+   "slug": "air-permit",
+   "term": "air permit",
+   "def": "The authorization from a state or local air agency that a combustion source needs before it can be built and run, written around what leaves the stack — chiefly nitrogen oxides and particulates — and around how many hours it may run. For an on-site power plant it is usually the longest lead item after the machines themselves, and its terms decide whether the same engine may be used as backup only or as prime power.",
+   "aliases": [
+    "air permitting",
+    "Title V",
+    "PSD review",
+    "air-quality permit"
+   ]
+  },
+  {
    "slug": "arc-flash",
    "term": "arc flash",
    "def": "The explosive release of energy when current jumps through the air between conductors — a blast hot enough to be lethal at a panel door. An arc-flash study calculates that energy at every piece of gear so the right protective clothing and breaker settings can be specified, and it has to be redone whenever the electrical system changes.",
@@ -106,11 +117,33 @@
    ]
   },
   {
+   "slug": "block-load",
+   "term": "block load",
+   "def": "The share of a generator's rating that can be applied in a single step without voltage and frequency sagging past what the load tolerates. A set that accepts 100 percent block load can pick up a whole data hall at once; one that cannot must have the load added in stages by the transfer or paralleling controls.",
+   "aliases": [
+    "load acceptance",
+    "step load",
+    "100% block load",
+    "load step"
+   ]
+  },
+  {
    "slug": "bms",
    "term": "BMS",
    "def": "Battery management system: the electronics that watch every cell's voltage, current, and temperature, balance the cells, and disconnect the battery when limits are crossed — the battery's safety and health guardian.",
    "aliases": [
     "battery management system"
+   ]
+  },
+  {
+   "slug": "bridge-power",
+   "term": "bridge power",
+   "def": "On-site generation installed to carry a campus through the years before its grid connection matures, after which the site converts to grid supply and the same plant becomes its backup. The gear and the permits are typically sized for a run of a few years, so the contract is temporary even when the machines are not.",
+   "aliases": [
+    "bridge-power",
+    "bridging power",
+    "bridge generation",
+    "bridge plant"
    ]
   },
   {
@@ -153,6 +186,16 @@
    ]
   },
   {
+   "slug": "closed-transition",
+   "term": "closed transition",
+   "def": "A transfer that closes onto the new source before opening the old one, so the two are briefly in parallel and the load never sees a break. It requires the generator to be synchronized to the utility first, and the utility's permission, because for a fraction of a second the site's engines are feeding the grid.",
+   "aliases": [
+    "closed-transition transfer",
+    "make-before-break",
+    "closed-transition ATS"
+   ]
+  },
+  {
    "slug": "cold-plate",
    "term": "cold plate",
    "def": "A liquid-cooled metal block clamped directly onto a processor, carrying heat away in a coolant loop instead of an air stream. Above roughly 100 kW per rack air physically cannot move the heat fast enough, so liquid has to touch the silicon.",
@@ -185,6 +228,17 @@
    "def": "The structured testing that proves a finished plant performs as contracted before it is handed over and paid for. For storage it is where capacity and round-trip-efficiency guarantees are measured; for a data center it is where the outage choreography gets rehearsed rather than discovered in production.",
    "aliases": [
     "commissioned"
+   ]
+  },
+  {
+   "slug": "continuous-rating",
+   "term": "continuous rating",
+   "def": "The generator rating for carrying a constant load at full output for unlimited hours a year, as a power station would. It is the most conservative of the standard ratings — the same engine carries a smaller number as continuous than as prime or standby — and the one a permanently islanded campus should be reading.",
+   "aliases": [
+    "continuous power",
+    "COP",
+    "continuous operating power",
+    "continuous duty"
    ]
   },
   {
@@ -239,6 +293,15 @@
    "def": "The gradual loss of a battery's usable capacity with cycling and age. Storage contracts manage it with capacity guarantees and planned augmentation."
   },
   {
+   "slug": "demand-response",
+   "term": "demand response",
+   "def": "A program that pays a customer to cut its grid draw when the system is stressed — by shedding load or by switching to on-site generation. Running backup engines for it moves them out of the emergency-only class, which is why the permit, not the machine, decides whether a data center can join.",
+   "aliases": [
+    "demand-response program",
+    "load response"
+   ]
+  },
+  {
    "slug": "derating",
    "term": "derating",
    "def": "Operating equipment below its nameplate rating because real conditions — ambient temperature, altitude, state of charge, or age — do not match the conditions the rating assumed. A specification read as a guaranteed operating number rather than a rated one is one of the most common sources of a capacity shortfall that presents as an equipment fault.",
@@ -256,9 +319,29 @@
    ]
   },
   {
+   "slug": "droop",
+   "term": "droop",
+   "def": "A governor setting that lets an engine's speed fall slightly as its load rises, so several engines sharing a bus each take a predictable share of the load instead of fighting over it. Its partner is isochronous control, which holds speed exactly constant and is given to one machine or to the paralleling controller so the bus frequency stays put.",
+   "aliases": [
+    "speed droop",
+    "droop control",
+    "droop mode"
+   ]
+  },
+  {
    "slug": "duration",
    "term": "duration",
    "def": "How long a storage plant can discharge at full power (energy divided by power, MWh ÷ MW). Duration decides which grid jobs a battery can do — most US grid-scale projects run a few hours."
+  },
+  {
+   "slug": "emergency-generator",
+   "term": "emergency generator",
+   "def": "The regulatory class for a stationary engine that runs only when the normal supply fails, plus a small annual allowance of hours for testing and maintenance. The class is what lets a backup fleet be permitted quickly and without the strictest emission controls — and it is lost the moment the same engines are run for prime power, peak shaving or a demand-response payment.",
+   "aliases": [
+    "emergency engine",
+    "emergency stationary engine",
+    "emergency-only"
+   ]
   },
   {
    "slug": "ems",
@@ -324,6 +407,17 @@
    "def": "Gallium nitride: a wide-bandgap semiconductor suited to very fast, compact low-to-mid-voltage converters — one of the two key materials (with SiC) shrinking modern power electronics.",
    "aliases": [
     "gallium nitride"
+   ]
+  },
+  {
+   "slug": "gen-set",
+   "term": "gen-set",
+   "def": "Generator set: an engine or turbine coupled to an alternator on one frame, with its controls, cooling and fuel system — the packaged unit a data center buys, rather than a bare engine. Rated in kilowatts or kilovolt-amperes at a declared duty: standby, prime or continuous.",
+   "aliases": [
+    "genset",
+    "generator set",
+    "gen set",
+    "gensets"
    ]
   },
   {
@@ -461,6 +555,15 @@
    ]
   },
   {
+   "slug": "iso-8528",
+   "term": "ISO 8528",
+   "def": "The international standard that defines how reciprocating gen-sets are rated, so a kilowatt from one maker means the same as a kilowatt from another. Its rating classes — emergency standby, limited-time, prime and continuous — differ in the hours a year the set may run and the average load it may carry, not in the hardware.",
+   "aliases": [
+    "ISO 8528-1",
+    "ISO-8528"
+   ]
+  },
+  {
    "slug": "itc",
    "term": "ITC",
    "def": "The US investment tax credit: a percentage of a storage or solar project's cost returned as a federal tax credit. A core driver of BESS project economics, with bonus tiers for domestic content.",
@@ -478,6 +581,16 @@
    ]
   },
   {
+   "slug": "lean-burn",
+   "term": "lean-burn",
+   "def": "A gas-engine combustion strategy that burns with excess air, which lowers peak flame temperature and so forms far less nitrogen oxide inside the cylinder. It is how a natural-gas gen-set meets a tight air permit with little after-treatment, at the cost of a slower response to sudden load steps than a diesel.",
+   "aliases": [
+    "lean burn",
+    "lean-burn gas engine",
+    "lean-burn engine"
+   ]
+  },
+  {
    "slug": "lfp",
    "term": "LFP",
    "def": "Lithium iron phosphate: a lithium-ion battery chemistry using an iron-phosphate cathode. It trades some energy density for lower cost, longer cycle life, and much better thermal stability than nickel-based chemistries — which is why it dominates grid-scale storage.",
@@ -487,11 +600,32 @@
    ]
   },
   {
+   "slug": "load-shedding",
+   "term": "load shedding",
+   "def": "Dropping pre-ranked non-critical loads — chillers, offices, lower-priority halls — when generation cannot carry everything, so the critical load keeps its power. The priority list is written in advance and executed automatically by the paralleling controls; it is the reason an under-strength generator fleet degrades gracefully instead of tripping.",
+   "aliases": [
+    "load shed",
+    "load-shed priority",
+    "load-shedding",
+    "shed load"
+   ]
+  },
+  {
    "slug": "ltsa",
    "term": "LTSA",
    "def": "Long-term service agreement: the multi-year operations-and-maintenance contract through which a supplier delivers availability guarantees on the equipment it sold. Suppliers generally will not extend long-dated warranties without holding it, so the LTSA and the warranty are negotiated as one package.",
    "aliases": [
     "long-term service agreement"
+   ]
+  },
+  {
+   "slug": "major-source",
+   "term": "major source",
+   "def": "An air-permitting classification for a plant whose potential emissions exceed the thresholds that trigger full pre-construction review — modelling, public comment and best-available-control analysis. Crossing the line turns a permit measured in months into one measured in years, so on-site plants are packaged to stay under it.",
+   "aliases": [
+    "major stationary source",
+    "major-source review",
+    "major-source threshold"
    ]
   },
   {
@@ -506,6 +640,16 @@
    "slug": "microgrid",
    "term": "microgrid",
    "def": "A self-contained power system — generation, storage, and controls — that can run connected to the grid or islanded on its own. It is how some AI campuses get power before utility interconnection arrives."
+  },
+  {
+   "slug": "minor-source",
+   "term": "minor source",
+   "def": "An air-permitting category for a plant whose potential emissions sit below the major-source thresholds, sometimes by accepting enforceable limits on hours or fuel — a synthetic minor. It replaces months of modelling and public comment with a far lighter permit, which is why on-site power blocks are sized to fit beneath the line.",
+   "aliases": [
+    "minor-source permit",
+    "synthetic minor",
+    "minor-source"
+   ]
   },
   {
    "slug": "n-plus-1",
@@ -529,6 +673,16 @@
    "slug": "neocloud",
    "term": "neocloud",
    "def": "A newer GPU-cloud provider renting AI compute capacity, typically growing faster than its capital base — a distinct buyer class from the hyperscalers."
+  },
+  {
+   "slug": "nfpa-110",
+   "term": "NFPA 110",
+   "def": "The US standard for emergency and standby power systems. It classes a system by how fast it must pick up the load after the normal supply fails — the usual data-center class must be carrying load within ten seconds — and by how long it must be able to run, and it sets the testing and maintenance regime that keeps a backup plant honest.",
+   "aliases": [
+    "NFPA 110 Type 10",
+    "Type 10",
+    "NFPA-110"
+   ]
   },
   {
    "slug": "nfpa-855",
@@ -560,9 +714,59 @@
    ]
   },
   {
+   "slug": "non-attainment-area",
+   "term": "non-attainment area",
+   "def": "A region where outdoor air already fails a federal ambient standard for a pollutant such as ozone or fine particulates. Adding a combustion source there faces the strictest review and offset requirements, so low-emission machines can site where diesel and open-flame plants cannot.",
+   "aliases": [
+    "nonattainment area",
+    "non-attainment",
+    "nonattainment"
+   ]
+  },
+  {
+   "slug": "nox",
+   "term": "NOx",
+   "def": "Nitrogen oxides: the pollutant family formed when the air's own nitrogen burns at high flame temperature. It drives ozone formation downwind and is the number most air permits are written around — which is why diesels carry after-treatment, gas engines run lean and turbines carry low-NOx combustors.",
+   "aliases": [
+    "nitrogen oxides",
+    "oxides of nitrogen"
+   ]
+  },
+  {
    "slug": "offtake",
    "term": "offtake",
    "def": "The committed purchase of a project's output — power, capacity, or storage services. Signed offtake is what turns a development pipeline into a financeable project."
+  },
+  {
+   "slug": "open-transition",
+   "term": "open transition",
+   "def": "A transfer that opens the old source before closing onto the new one — break-before-make — so for a moment the load is fed by nothing. Simpler, and it never back-feeds the utility, but the gap means the UPS or some other stored energy has to carry the load across it or the servers see an outage.",
+   "aliases": [
+    "open-transition transfer",
+    "break-before-make",
+    "open-transition ATS"
+   ]
+  },
+  {
+   "slug": "paralleling-switchgear",
+   "term": "paralleling switchgear",
+   "def": "Switchgear whose controller synchronizes several generators onto one common bus, adds them in a set order, shares the load between them and sheds low-priority load if generation runs short — a room of engines behaving as one plant. It is what turns a collection of standby gen-sets into a campus-scale power source.",
+   "aliases": [
+    "generator paralleling",
+    "paralleling",
+    "paralleling gear",
+    "paralleling controls"
+   ]
+  },
+  {
+   "slug": "part-load",
+   "term": "part load",
+   "def": "Running a generating machine below its full rating. Efficiency and emissions both move with load — a large gas turbine is efficient only near full output, while a fleet of engines can shut units down and keep the rest at their sweet spot — so the shape of the load, not just its peak, decides which machine is cheaper to run.",
+   "aliases": [
+    "part-load",
+    "part-load efficiency",
+    "turndown"
+   ]
   },
   {
    "slug": "pcs",
@@ -713,6 +917,16 @@
    ]
   },
   {
+   "slug": "selective-catalytic-reduction",
+   "term": "selective catalytic reduction",
+   "def": "Exhaust after-treatment that injects a urea or ammonia solution across a catalyst to convert nitrogen oxides into nitrogen and water. It is the standard control that lets a diesel or gas plant meet a tight air permit, and it is equipment, space and a consumable rather than a setting.",
+   "aliases": [
+    "SCR",
+    "SCR after-treatment",
+    "SCR aftertreatment"
+   ]
+  },
+  {
    "slug": "selective-coordination",
    "term": "selective coordination",
    "def": "Arranging breakers in series so a fault trips only the nearest device upstream of it, cutting the failure away surgically while the rest of the building keeps running. Engineers nest the devices' time-current curves so the downstream breaker always wins the race; without it, a rack-level fault can open a main breaker and darken a whole hall.",
@@ -766,6 +980,14 @@
    ]
   },
   {
+   "slug": "spinning-reserve",
+   "term": "spinning reserve",
+   "def": "Generating units already running and synchronized but deliberately loaded below their capability, so their headroom is available in seconds rather than in the minutes a cold start would take. On an islanded campus it is the margin that absorbs a load swing or a unit trip without the frequency wandering.",
+   "aliases": [
+    "spinning reserves"
+   ]
+  },
+  {
    "slug": "sscb",
    "term": "SSCB",
    "def": "Solid-state circuit breaker: a breaker that interrupts electronically in a fraction of a millisecond, before fault current reaches its peak, instead of physically parting contacts. It is the enabling protection device for DC distribution, where there is no AC zero crossing to help extinguish the arc.",
@@ -779,6 +1001,18 @@
    "def": "Solid-state transformer: a power-electronics replacement for the iron transformer that converts medium-voltage AC directly to regulated DC using high-frequency switching — a candidate to collapse today's multi-stage data-center power chain into one device.",
    "aliases": [
     "solid-state transformer"
+   ]
+  },
+  {
+   "slug": "standby-rating",
+   "term": "standby rating",
+   "def": "The generator rating for carrying a varying load only while the normal supply is out, for a limited number of hours a year and with no overload allowance. It is the highest kilowatt number the same engine will carry — and the one a data center's backup fleet is bought against, which is why a standby set cannot simply be re-labelled prime.",
+   "aliases": [
+    "standby power",
+    "emergency standby power",
+    "ESP",
+    "standby duty",
+    "standby generator"
    ]
   },
   {
@@ -818,6 +1052,19 @@
    ]
   },
   {
+   "slug": "synchronization",
+   "term": "synchronization",
+   "def": "Matching a generator's voltage, frequency, phase angle and phase rotation to a live bus before its breaker closes. Close out of step and the machine takes a torque shock and a current surge; the synchronizer or sync-check relay exists to make that impossible.",
+   "aliases": [
+    "synchronizing",
+    "synchronize",
+    "synchronise",
+    "sync check",
+    "synchronizer",
+    "in sync"
+   ]
+  },
+  {
    "slug": "synchronous-condenser",
    "term": "synchronous condenser",
    "def": "A large generator spinning in synchronism with the grid with no fuel and no turbine — it produces no energy, but supplies inertia, reactive power, and fault current on demand. Retired coal and gas units are being converted into them, keeping the machine and its interconnection alive to stabilize the grid that replaced it.",
@@ -842,11 +1089,31 @@
    "def": "A self-accelerating overheating reaction inside a battery cell: heat triggers reactions that release more heat, potentially propagating cell to cell. The failure mode BESS safety standards are designed to contain."
   },
   {
+   "slug": "tier-4",
+   "term": "Tier 4",
+   "def": "The strictest US EPA emission stage for diesel engines, cutting nitrogen oxides and particulates to a small fraction of earlier stages, usually with after-treatment such as SCR and a particulate filter. Emergency-only stationary engines are held to an earlier stage; a diesel that will run for prime power, peak shaving or demand response generally must meet it — the regulatory fork in a data center's generator strategy.",
+   "aliases": [
+    "Tier 4 Final",
+    "EPA Tier 4",
+    "Tier 4F",
+    "Tier 4 Interim"
+   ]
+  },
+  {
    "slug": "tolling-agreement",
    "term": "tolling agreement",
    "def": "A storage contract where the offtaker pays a fixed fee for the right to charge and discharge the battery as they wish — the owner operates the asset, the toller takes the market risk.",
    "aliases": [
     "tolling"
+   ]
+  },
+  {
+   "slug": "transfer-time",
+   "term": "transfer time",
+   "def": "The interval between the normal supply failing and the load being carried by the alternate source — sensing, engine start and stabilization, then the switch itself. Stored energy must cover all of it; the standards fix the outer bound and the design decides how much shorter it actually is.",
+   "aliases": [
+    "transfer delay",
+    "time to transfer"
    ]
   },
   {

@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
- "built": "2026-09-02",
- "companies": 89,
+ "built": "2026-09-03",
+ "companies": 90,
  "edges": [
   {
    "a": "abb",
@@ -42,6 +42,20 @@
     }
    ],
    "last": "2025-11-25"
+  },
+  {
+   "a": "abb",
+   "b": "caterpillar",
+   "evid": [
+    {
+     "where": "Capabilities · Switchgear, transfer switches, paralleling and generator controls — Cat ATC ATS, EGP and XLM switchgear, EMCP 4, ECS controllers",
+     "date": "",
+     "text": "Competes with the electrical incumbents' ATS and switchgear lines — Eaton, Schneider Electric and ABB in this file — inside the generator scope, and complements them outside it.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": ""
   },
   {
    "a": "abb",
@@ -2983,6 +2997,21 @@
   },
   {
    "a": "bloom-energy",
+   "b": "caterpillar",
+   "curated": {
+    "b": {
+     "type": "competitor",
+     "note": "Second-largest OEM in Cleanview's tracker of permitted behind-the-meter data-center generation (14% to Caterpillar/Solar's 33%), and the flameless alternative the permit section of the study guide describes.",
+     "source": "https://cleanview.co/reports/behind-the-meter-data-centers",
+     "status": "active",
+     "via": "Fuel cells as prime power displacing gen-sets and turbines"
+    }
+   },
+   "evid": [],
+   "last": ""
+  },
+  {
+   "a": "bloom-energy",
    "b": "coreweave",
    "curated": {
     "b": {
@@ -3998,6 +4027,374 @@
     }
    ],
    "last": ""
+  },
+  {
+   "a": "caterpillar",
+   "b": "crusoe",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Solar Turbines Titan 350 units supply half of the ~360 MW simple-cycle plant at Crusoe's Abilene campus for Oracle and OpenAI; the other half is GE Vernova LM2500.",
+     "context": "The Texas standard-permit technical review for Crusoe's Longhorn Data Center (registration 177263, approved January 22, 2025) lists five Titan 350 units at 38 MW each beside five GE LM2500 units at 34.1 MW. Trade press separately records Titan 350 units deployed at the Oracle/OpenAI Stargate site in Texas, and a tracker citing Business Insider splits the plant's supply half GE Vernova, half Solar Turbines. No direct Crusoe–Caterpillar contract document was found; the relationship is site-level, established through the permit record.",
+     "source": "https://www.datacenterknowledge.com/sustainability/replacing-diesel-in-ai-scale-data-centers-gas-engines-turbines-and-steam",
+     "status": "active",
+     "since": "2025-01",
+     "scale": "5 Titan 350 units (~190 MW) of a ~360 MW plant",
+     "via": "Solar Turbines Titan 350",
+     "project": "stargate"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Solar Turbines — Titan 130 / 250 / 350, Mars 100, Taurus, PGM 130 modules and SMT130 mobile turbines",
+     "date": "",
+     "text": "The corpus records Solar units at xAI's Colossus (SMT-130, PGM-130, Titan 350), Crusoe's Abilene plant (Titan 350), Meta's Socrates South (Titan 250, PGM 130) and Chevron–Microsoft's Kilby.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": "2025-01"
+  },
+  {
+   "a": "caterpillar",
+   "b": "eaton",
+   "evid": [
+    {
+     "where": "Capabilities · Switchgear, transfer switches, paralleling and generator controls — Cat ATC ATS, EGP and XLM switchgear, EMCP 4, ECS controllers",
+     "date": "",
+     "text": "Competes with the electrical incumbents' ATS and switchgear lines — Eaton, Schneider Electric and ABB in this file — inside the generator scope, and complements them outside it.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-11-18",
+     "text": "Vertiv and Caterpillar sign an MOU: Caterpillar and Solar Turbines to supply gas turbines and reciprocating engines for power and CCHP inside Vertiv's data-center energy designs — Puts Caterpillar's prime movers into a critical-infrastructure vendor's reference architecture — the same route Eaton and Schneider take to hyperscalers, from the generation side.",
+     "src": "https://www.solarturbines.com/en_US/about-us/news-and-press-releases/vertiv-and-caterpillar-press-release.html",
+     "from": "a"
+    }
+   ],
+   "last": "2025-11-18"
+  },
+  {
+   "a": "caterpillar",
+   "b": "flexgen",
+   "curated": {
+    "a": {
+     "type": "other",
+     "note": "Caterpillar Ventures joined FlexGen's $25.5M Series A in 2015; no Caterpillar participation is recorded in FlexGen's later rounds and no current commercial tie was found.",
+     "source": "https://www.altiragroup.com/news/flexgenr-power-systems-announces-255-million-series-funding-altira-group-ge-ventures-and/",
+     "status": "historical",
+     "since": "2015",
+     "scale": "$25.5M Series A (with Altira and GE Ventures)",
+     "via": "Caterpillar Ventures Series A participation"
+    }
+   },
+   "evid": [],
+   "last": "2015"
+  },
+  {
+   "a": "caterpillar",
+   "b": "fluence",
+   "evid": [
+    {
+     "where": "Capabilities · Cat Energy Storage Systems, microgrid controls and hybrid solutions — PGS/PGS HD, ETS/ECE, BDP1000 inverter, Master Microgrid Controller, Cat AMP",
+     "date": "",
+     "text": "A gen-set OEM's storage line rather than a grid-scale BESS platform: sized in megawatt blocks to sit beside engines, not in the hundreds of megawatt-hours that Tesla, Fluence or the Chinese integrators in this file supply to standalone projects.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "caterpillar",
+   "b": "ge-vernova",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The heavy-frame turbine incumbent Solar Turbines both competes with and sits beside: the Abilene plant is half LM2500, half Titan 350, and Kilby pairs two large GE Vernova machines with Solar units for the balance.",
+     "context": "GE Vernova reports 100 GW under contract and 56 GW of slot reservations with roughly 10 GW of 2029–2030 capacity left, which is the queue Solar Turbines' 5–40 MW machines and Caterpillar's engines are sold as the way around. Where a campus wants megawatts per machine it buys the frame; where it wants blocks that fit under a permit and arrive in months it buys engines or small turbines — often from both vendors on one site.",
+     "source": "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/",
+     "status": "active",
+     "via": "Gas turbines — co-supplier at Abilene and Kilby, rival for bridge-power turbine slots"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Solar Turbines — Titan 130 / 250 / 350, Mars 100, Taurus, PGM 130 modules and SMT130 mobile turbines",
+     "date": "",
+     "text": "Occupies the 5–40 MW gap between reciprocating engines and the heavy frames of GE Vernova, Siemens Energy and Mitsubishi Power — the machine a campus buys when it wants megawatts per unit but cannot wait for a heavy-frame slot, and often the balance-of-plant turbine beside a frame (Abilene, Kilby).",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-22",
+     "text": "Chevron–Microsoft Project Kilby (2.67 GW, West Texas, 20-year PPA): two large GE Vernova turbines carry most of the load, Solar Turbines supplies the rest — Solar's role as the balance-of-plant turbine beside heavy frames is now visible at gigawatt scale — the same pairing as Abilene.",
+     "src": "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Aeroderivative turbines & bridging power (LM2500/LM6000/TM2500)",
+     "date": "",
+     "text": "The 'two weeks to power generation' pitch versus multi-year interconnection queues — competing against Bloom fuel cells, Caterpillar/Cummins gensets, and Solaris mobile turbines for the bridge-power wedge.",
+     "src": "",
+     "from": "b"
+    }
+   ],
+   "last": "2026-06-22"
+  },
+  {
+   "a": "caterpillar",
+   "b": "meta",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "The 200 MW islanded on-site plant serving Meta's Socrates South data center in New Albany, Ohio (developer Will-Power OH / Williams, approved June 2025) runs on Solar Titan 250 and PGM 130 turbines plus Cat 3520 gas and C15 diesel gen-sets, beside three Siemens SGT-400s.",
+     "context": "The Ohio Power Siting Board approval of June 9, 2025 lists three Solar Titan 250, nine Solar PGM 130, three Siemens SGT-400, fifteen Cat 3520 reciprocating gen-sets, eight Cat C15 500 kW diesels and one SMT-130 backup unit for a plant due to operate by end-2026. It is one of the clearest records of Caterpillar selling the whole on-site stack — turbines, gas engines and diesel backup — into a single campus. Meta is the end user; the plant is owned and procured by the developer.",
+     "source": "https://www.power-eng.com/onsite-power/onsite-gas-turbines-reciprocating-engines-to-power-meta-data-center/",
+     "status": "active",
+     "since": "2025-06",
+     "scale": "200 MW islanded plant at Socrates South, Ohio",
+     "via": "Solar Titan 250 / PGM 130 / SMT-130 turbines and Cat 3520 / C15 gen-sets"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the Socrates South and Meta record lists Solar turbines, Cat gas sets and Cat diesels in one plant; the Joule award pairs G3520K gas sets with a grid-forming battery; the Monarch order was described as a complete power solution; and the Power & Energy group president has stated that a continuous-duty gas gen-set yields roughly forty times the lifetime services opportunity of a standby diesel.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Solar Turbines — Titan 130 / 250 / 350, Mars 100, Taurus, PGM 130 modules and SMT130 mobile turbines",
+     "date": "",
+     "text": "The corpus records Solar units at xAI's Colossus (SMT-130, PGM-130, Titan 350), Crusoe's Abilene plant (Titan 350), Meta's Socrates South (Titan 250, PGM 130) and Chevron–Microsoft's Kilby.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-06-11",
+     "text": "Ohio approves the 200 MW islanded plant for Meta's Socrates South data center: 3 Solar Titan 250, 9 Solar PGM 130, 15 Cat 3520 gas sets, 8 Cat C15 diesels and an SMT-130, beside 3 Siemens SGT-400s — The clearest single record of Caterpillar selling the whole on-site stack — turbines, gas engines and diesel backup — into one campus.",
+     "src": "https://www.power-eng.com/onsite-power/onsite-gas-turbines-reciprocating-engines-to-power-meta-data-center/",
+     "from": "a"
+    }
+   ],
+   "last": "2025-06-11"
+  },
+  {
+   "a": "caterpillar",
+   "b": "microsoft",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Microsoft is the announced end user of two Caterpillar-powered campuses: the 2 GW G3516-powered Monarch Compute Campus in West Virginia (LOI for up to 1.35 GW of AI compute) and Chevron's 2.67 GW Project Kilby in West Texas, where Solar Turbines supplies the balance of generation behind two large GE Vernova turbines.",
+     "context": "Monarch (American Intelligence & Power, acquired by Nscale, with Boyd CAT as dealer) ordered 2 GW of Cat G3516 fast-response gas gen-sets — full load in about seven seconds — for delivery September 2026 through August 2027, with 2 GW on site by the first half of 2028; management called it one of the largest single orders for a complete power solution. Project Kilby is a 20-year PPA structure announced June 2026. Microsoft procures through the developers in both cases rather than from Caterpillar directly.",
+     "source": "https://www.power-eng.com/onsite-power/caterpillar-engines-to-support-2-gw-of-onsite-power-at-west-virginia-data-center-campus-tied-to-microsoft-nvidia/",
+     "status": "announced",
+     "since": "2026-03",
+     "scale": "2 GW of G3516 sets at Monarch; part of 2.67 GW at Kilby",
+     "via": "Cat G3516 fast-response gas gen-sets; Solar Turbines at Project Kilby"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Solar Turbines — Titan 130 / 250 / 350, Mars 100, Taurus, PGM 130 modules and SMT130 mobile turbines",
+     "date": "",
+     "text": "The corpus records Solar units at xAI's Colossus (SMT-130, PGM-130, Titan 350), Crusoe's Abilene plant (Titan 350), Meta's Socrates South (Titan 250, PGM 130) and Chevron–Microsoft's Kilby.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Cat Energy Storage Systems, microgrid controls and hybrid solutions — PGS/PGS HD, ETS/ECE, BDP1000 inverter, Master Microgrid Controller, Cat AMP",
+     "date": "",
+     "text": "A 1.5 MW hydrogen fuel-cell backup demonstration with Microsoft (Cheyenne, 48-hour simulation, two PGS 1260 units) and a 4.99 MW / 15 MWh utility BESS operated by Cat AMP under a 15-year agreement (Danvers, 2026) are the published references.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-06-22",
+     "text": "Chevron–Microsoft Project Kilby (2.67 GW, West Texas, 20-year PPA): two large GE Vernova turbines carry most of the load, Solar Turbines supplies the rest — Solar's role as the balance-of-plant turbine beside heavy frames is now visible at gigawatt scale — the same pairing as Abilene.",
+     "src": "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-17",
+     "text": "2 GW of Cat G3516 fast-response gas gen-sets for the Monarch Compute Campus (West Virginia, American Intelligence & Power / Nscale; Microsoft LOI for up to 1.35 GW of AI compute) — deliveries September 2026 to August 2027 — Management calls it one of the largest single orders for a complete power solution; full load in about seven seconds is the spec that lets a gas fleet serve an AI hall's swing when paired with storage.",
+     "src": "https://www.power-eng.com/onsite-power/caterpillar-engines-to-support-2-gw-of-onsite-power-at-west-virginia-data-center-campus-tied-to-microsoft-nvidia/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-06-22"
+  },
+  {
+   "a": "caterpillar",
+   "b": "proenergy",
+   "evid": [
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-10",
+     "text": "Mississippi Permit Board approves xAI's 41-turbine permanent Southaven plant (~1.2 GW) as a PSD major source — reported as 17 Solar PGM-130, 16 Solar Titan 350 and 8 ProEnergy units — The bridge-plant model reaching its end state: mobile units out, a permitted plant in, and Solar Turbines holding the majority of the permanent slots.",
+     "src": "https://www.mississippifreepress.org/mississippi-permit-board-grants-xais-request-for-41-southaven-gas-turbines-to-power-memphis-data-center/",
+     "from": "a"
+    }
+   ],
+   "last": "2026-03-10"
+  },
+  {
+   "a": "caterpillar",
+   "b": "schneider-electric",
+   "evid": [
+    {
+     "where": "Capabilities · Switchgear, transfer switches, paralleling and generator controls — Cat ATC ATS, EGP and XLM switchgear, EMCP 4, ECS controllers",
+     "date": "",
+     "text": "Competes with the electrical incumbents' ATS and switchgear lines — Eaton, Schneider Electric and ABB in this file — inside the generator scope, and complements them outside it.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "caterpillar",
+   "b": "siemens-energy",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "Turbine rival and same-site co-supplier: three Siemens SGT-400s share the Socrates South plant with Solar Titan 250 and PGM 130 units.",
+     "source": "https://www.power-eng.com/onsite-power/onsite-gas-turbines-reciprocating-engines-to-power-meta-data-center/",
+     "status": "active",
+     "via": "SGT-400 turbines beside Solar units at Socrates South"
+    }
+   },
+   "evid": [
+    {
+     "where": "Capabilities · Solar Turbines — Titan 130 / 250 / 350, Mars 100, Taurus, PGM 130 modules and SMT130 mobile turbines",
+     "date": "",
+     "text": "Occupies the 5–40 MW gap between reciprocating engines and the heavy frames of GE Vernova, Siemens Energy and Mitsubishi Power — the machine a campus buys when it wants megawatts per unit but cannot wait for a heavy-frame slot, and often the balance-of-plant turbine beside a frame (Abilene, Kilby).",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "caterpillar",
+   "b": "tesla",
+   "evid": [
+    {
+     "where": "Capabilities · Cat Energy Storage Systems, microgrid controls and hybrid solutions — PGS/PGS HD, ETS/ECE, BDP1000 inverter, Master Microgrid Controller, Cat AMP",
+     "date": "",
+     "text": "A gen-set OEM's storage line rather than a grid-scale BESS platform: sized in megawatt blocks to sit beside engines, not in the hundreds of megawatt-hours that Tesla, Fluence or the Chinese integrators in this file supply to standalone projects.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "caterpillar",
+   "b": "voltagrid",
+   "evid": [
+    {
+     "where": "Capabilities · Natural-gas generator sets — G3520 Fast Response, G3500K/H series, CG260/CG170 (MWM), medium-speed 10 MW restart",
+     "date": "",
+     "text": "Contests the prime-power segment against Wärtsilä's medium-speed engines (more than 1.6 GW across four US data-center projects), INNIO's Jenbacher J920 (VoltaGrid's supplier) and Cummins, and against fuel cells (Bloom) on emissions.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "caterpillar",
+   "b": "wartsila",
+   "curated": {
+    "a": {
+     "type": "competitor",
+     "note": "The medium-speed gas-engine rival in the prime-power segment — 40-engine 412 MW Ohio order and more than 1.6 GW across four US data-center projects — against which Caterpillar is restarting about 1.5 GW of its own medium-speed capacity.",
+     "source": "https://www.power-eng.com/gas/data-center-power-crunch-lifts-engines-aeroderivatives-into-larger-role/",
+     "status": "active",
+     "via": "Medium-speed gas engines for data-center prime power"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Basis: the prime-power segment is where Wärtsilä (more than 1.6 GW across four US projects), INNIO and the fuel-cell vendors are winning named campuses, where Caterpillar's own 2029 lead time is longest, and where the medium-speed restart is an explicit response.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Natural-gas generator sets — G3520 Fast Response, G3500K/H series, CG260/CG170 (MWM), medium-speed 10 MW restart",
+     "date": "",
+     "text": "Contests the prime-power segment against Wärtsilä's medium-speed engines (more than 1.6 GW across four US data-center projects), INNIO's Jenbacher J920 (VoltaGrid's supplier) and Cummins, and against fuel cells (Bloom) on emissions.",
+     "src": "",
+     "from": "a"
+    }
+   ],
+   "last": ""
+  },
+  {
+   "a": "caterpillar",
+   "b": "xai",
+   "curated": {
+    "a": {
+     "type": "customer",
+     "note": "Solar Turbines is the principal turbine OEM behind xAI's Colossus bring-up: 15 SMT-130 mobile units permitted in Memphis in July 2025 and Solar PGM-130 / Titan 350 units in the 41-turbine permanent Southaven plant approved March 2026.",
+     "context": "The Shelby County Health Department permit of July 2, 2025 covered 15 Solar SMT-130 turbines (247 MW, up to 421 MW across all generators) after eight were already running; the NAACP and SELC appealed, arguing the campus was an existing major source. At Southaven, Mississippi, the NAACP sued in April 2026 over 27 unpermitted turbines, public-records emails later showed 59, and the Mississippi Permit Board approved a 41-turbine permanent plant (reported as 17 Solar PGM-130, 16 Solar Titan 350 and 8 ProEnergy units, ~1.2 GW) as a PSD major source. Temporary turbines are being removed from August 2026 through July 2027. Caterpillar and Solar Turbines appear only as the equipment OEM; the litigation targets xAI.",
+     "source": "https://techcrunch.com/2025/07/03/xai-gets-permits-for-15-natural-gas-generators-at-memphis-data-center",
+     "status": "active",
+     "since": "2025",
+     "scale": "15 SMT-130 permitted at Colossus 1 (247 MW); 41-turbine ~1.2 GW permanent plant approved for Southaven",
+     "via": "Solar Turbines SMT-130 / PGM-130 / Titan 350 gas turbines",
+     "project": "colossus"
+    }
+   },
+   "evid": [
+    {
+     "where": "Key Judgments",
+     "date": "",
+     "text": "Through July 2027: xAI's removal of temporary turbines at Southaven and any EPA ruling on aggregation — an adverse ruling would constrain the mobile-turbine bridge model in which Solar Turbines leads.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Capabilities · Solar Turbines — Titan 130 / 250 / 350, Mars 100, Taurus, PGM 130 modules and SMT130 mobile turbines",
+     "date": "",
+     "text": "The corpus records Solar units at xAI's Colossus (SMT-130, PGM-130, Titan 350), Crusoe's Abilene plant (Titan 350), Meta's Socrates South (Titan 250, PGM 130) and Chevron–Microsoft's Kilby.",
+     "src": "",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-07-31",
+     "text": "xAI to remove 69 temporary turbines from its Southaven site by July 2027, replaced by the approved 41-turbine ~1.2 GW permanent plant built on Solar PGM-130 and Titan 350 units — The worked example of aggregation risk for the mobile-turbine bridge model: the temporary fleet — Solar Turbines the leading OEM — is being unwound into a PSD major-source plant, with Caterpillar a supplier, not a party.",
+     "src": "https://www.actionnews5.com/2026/07/31/xai-announces-fourth-data-center-turbines-be-removed-southaven-site/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2026-03-10",
+     "text": "Mississippi Permit Board approves xAI's 41-turbine permanent Southaven plant (~1.2 GW) as a PSD major source — reported as 17 Solar PGM-130, 16 Solar Titan 350 and 8 ProEnergy units — The bridge-plant model reaching its end state: mobile units out, a permitted plant in, and Solar Turbines holding the majority of the permanent slots.",
+     "src": "https://www.mississippifreepress.org/mississippi-permit-board-grants-xais-request-for-41-southaven-gas-turbines-to-power-memphis-data-center/",
+     "from": "a"
+    },
+    {
+     "where": "Recent Reporting",
+     "date": "2025-07-02",
+     "text": "Shelby County issues xAI's air permit for 15 Solar SMT-130 turbines (247 MW) at Colossus after eight were already running; NAACP/SELC appeal alleging up to 35 unpermitted units follows — Solar's mobile turbines are the bring-up machine of record for the fastest AI campus built — and the test case for whether 'temporary' units aggregate into a major source.",
+     "src": "https://techcrunch.com/2025/07/03/xai-gets-permits-for-15-natural-gas-generators-at-memphis-data-center",
+     "from": "a"
+    }
+   ],
+   "last": "2026-07-31"
   },
   {
    "a": "catl",

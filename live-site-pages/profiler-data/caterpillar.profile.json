@@ -1,0 +1,1525 @@
+{
+ "schemaVersion": 7,
+ "slug": "caterpillar",
+ "name": "Caterpillar Inc.",
+ "shortName": "Caterpillar",
+ "categories": [
+  "supplier"
+ ],
+ "website": "https://www.caterpillar.com",
+ "headquarters": "Irving, TX, USA",
+ "founded": 1925,
+ "employees": "118,000 full-time at year-end 2025 (FY2025 10-K)",
+ "ownership": {
+  "type": "public",
+  "ticker": "NYSE: CAT"
+ },
+ "summary": "BOTTOM LINE UP FRONT: Caterpillar is the largest supplier of the machines that carry an AI data hall when the grid drops and, through Solar Turbines and its gas gen-set line, one of the two OEMs whose equipment sits behind most permitted behind-the-meter data-center generation in the United States; its constraint is factory capacity, not demand, with diesel gen-set orders sold into 2028, gas prime power into 2029 and a $72.1B backlog that has nearly doubled in a year. BACKGROUND. Founded 1925, headquartered in Irving, Texas, listed NYSE: CAT. Four reportable segments — Construction Industries, Resource Industries, Power & Energy (renamed from Energy & Transportation at the November 2025 investor day, with Rail moved to Resource Industries from January 2026) and Financial Products. FY2025 sales and revenues $67.6B (+4%), adjusted profit per share $19.06 (−13%) after $1.7B of net incremental tariff cost, per company filings. Power & Energy is now the largest segment by sales ($34.5B in FY2025 on the Rail-inclusive basis) and its Power Generation application grew 38% to $11.5B, driven by large reciprocating engines for data centers and by turbines. Q2 2026 sales $20.5B (+24%), adjusted EPS $8.17 against a $6.20 consensus, guidance raised twice in 2026 to mid-to-high-teens growth. Third-party market data put Caterpillar at about 18% of the data-center generator market (Cummins ~16%) and, with Solar Turbines, at 33% of tracked permitted behind-the-meter data-center capacity.",
+ "ecosystemRole": "We assess Caterpillar as the equipment vendor with the widest footprint across the on-site power chain this corpus tracks — standby diesel gen-sets for the transfer event, lean-burn gas gen-sets for prime and bridge duty, Solar Turbines for the turbine layer, and its own switchgear, microgrid controller and battery storage around them — sold through a dealer network that also services the fleet for its life. Basis: the Socrates South, Monarch, Joule and Colossus records, each of which names Caterpillar or Solar equipment across more than one layer of the plant. For the BESS and power-electronics vendors in this file, Caterpillar is simultaneously the prime mover their storage sits beside on islanded campuses, a competitor through Cat Energy Storage, and the clearest read on how a gen-set OEM prices the transition from backup fleets that run hours a year to power stations that run for years. Per trade press, the two other archetypes it competes with for the prime role — the heavy-frame turbine OEMs on megawatts per machine and the fuel-cell and linear-generator vendors on emissions — both cite Caterpillar's delivery cadence and dealer service as the benchmark to beat.",
+ "productsAndServices": [
+  {
+   "name": "Diesel generator sets for standby and mission-critical duty — C175-20, C175-16, 3516E (and D1500, 3512C, C32B)",
+   "category": "Backup generation",
+   "description": "The data-center standby line. Per Cat product pages and spec sheets: the C175-20 carries 4000 ekW standby (without fan) / 3900 ekW (with fan), 3600/3500 ekW prime and 3250/3150 ekW continuous at 60 Hz on a 105.8-litre V-20 with common-rail fuel; the C175-16 3100/3000 ekW standby, 2825/2725 ekW prime, 2600/2500 ekW continuous on an 84.7-litre V-16; the 3516E 3000 ekW standby and mission critical, 2725 ekW prime, on a 78.1-litre V-16 — all 'U.S. EPA Stationary Emergency (Tier 2)' with Northern Virginia NOx variants, and the C175-16 also offered in a U.S. EPA Tier 4 configuration. Every large set claims 'Accepts 100% block load in one step and meets NFPA 110 loading requirements', ISO 8528-5 G3 transient performance, operation to 50 °C ambient (C175 nodes to 55 °C without derating) and UL 2200 listing. Cat's own standby definition: 70% average load, 'typical operation is 200 hours per year, with maximum expected usage of 500 hours per year'. Renewable diesel and HVO are approved fuels. The August 2025 D1500 packages 1.5 MW of standby on the 32.1-litre C32B in up to 13% less floor space. Reference installs the company publishes: 101 C175 sets giving 313 MW of standby at CloudHQ's LC4 in Ashburn.",
+   "highlights": [
+    "Per Fortune Business Insights (August 2026), Caterpillar holds about 18% of the data-center generator market against Cummins' 16% — the largest share of any OEM",
+    "Diesel gen-set orders are being taken 'well into 2028' per the Q2 2026 call; large-reciprocating-engine capacity is being taken to nearly 3x 2024 levels, with the Lafayette, Indiana campus absorbing $725M plus a further $890M",
+    "The C175 family is rated to 4 MW per set, tested 'more than 200,000 hours on generator sets', and sold with 24-month/1,000-hour warranties for standby and mission-critical ratings",
+    "The emergency-class positioning is deliberate: Tier 2 certification for stationary emergency use keeps the set permit-light, and the Tier 4 C175-16 variant exists for the non-emergency case"
+   ],
+   "positioning": "The incumbent in the standby segment: Cummins (Centum Force containerized sets) and Rolls-Royce Power Systems' mtu Series 4000 are the named rivals in trade press, with Rehlko and Mitsubishi behind them. Caterpillar's edge is block-load performance, the dealer service base and delivery capacity rather than price; its exposure is that the emergency class it dominates is the one an AI campus grows out of.",
+   "soldThrough": "Cat dealer network — 150 dealers (41 US, 109 outside) serving 190 countries; Cat Financial for project finance; Customer Value Agreements for service.",
+   "targetSegments": [
+    "Hyperscale and colocation data centers",
+    "Healthcare and other NFPA 110 Level 1 facilities",
+    "Industrial standby"
+   ],
+   "roadmap": "Tier 4 Final aftertreatment upgrades for the C175 nodes; renewable-fuel (HVO/RD) qualification across the line; large-engine capacity step-up landing late 2026 into 2027 (company guidance)."
+  },
+  {
+   "name": "Natural-gas generator sets — G3520 Fast Response, G3500K/H series, CG260/CG170 (MWM), medium-speed 10 MW restart",
+   "category": "Prime, bridge and peaking generation",
+   "description": "The prime and bridge line. The G3520 Fast Response 3.1 MW carries a 3120 ekW gas standby rating, is 'U.S. EPA Stationary Non-Emergency Certified' for emergency and non-emergency use, can 'start and accept load from a cold start in under 10 seconds, aligning with NFPA 110', and is NOx-selectable down to 0.5 g/bhp-hr without aftertreatment; 2.0 and 2.5 MW nodes were 'the first-ever EPA-certified natural gas generator sets on the market' at those 60 Hz ratings. The G3520K delivers 2552 ekW continuous at 46.0% electrical efficiency on natural gas or propane and can start, take full load and sync to the grid in 4.5 minutes; the G3520H/G3516H run natural gas with up to 25% hydrogen (a demonstrator G3516 runs 100% hydrogen). The MWM-heritage CG260-16 reaches 4500 ekW continuous at 44.6% efficiency with overhaul only after 80,000 hours. In August 2026 Caterpillar said it would restart its 10 MW medium-speed (former MaK) gas platform — 'about 1.5 GW of capacity back online', shipments from Q4 2026 — to fill the gap between high-speed engines and Solar's turbines.",
+   "highlights": [
+    "Six announced agreements of at least 1 GW for prime-power applications by Q1 2026: Joule (4 GW, G3520K), Monarch/AIP (2 GW G3516 fast-response), PROPWR (up to 2.1 GW), Hunt Energy (up to 1 GW), plus Williams and QTS named at the investor day",
+    "Gas prime lead times run 'towards the back half of 2028 and into 2029' — the longest in the portfolio, and the reason for the medium-speed restart",
+    "The AIP/Monarch G3516 sets are specified at 'zero to full load in approximately seven seconds', paired with battery storage, for AI-hall load swings",
+    "Management says a continuous-duty gas gen-set yields roughly 40x the lifetime services opportunity of a standby diesel (Kaiser, May 2026)"
+   ],
+   "positioning": "Contests the prime-power segment against Wärtsilä's medium-speed engines (more than 1.6 GW across four US data-center projects), INNIO's Jenbacher J920 (VoltaGrid's supplier) and Cummins, and against fuel cells (Bloom) on emissions. Caterpillar's high-speed sets are smaller per unit but faster to respond and to deliver; the medium-speed restart is the direct answer to the 10 MW class it had ceded.",
+   "soldThrough": "Cat dealers (Boyd CAT, Wheeler, Toromont in the named deals) with Cat Financial project finance; framework agreements with power-as-a-service operators.",
+   "targetSegments": [
+    "Behind-the-meter AI data-center campuses (prime and bridge)",
+    "Power-as-a-service and rental fleets",
+    "CHP and industrial prime power"
+   ],
+   "roadmap": "Four additional G3500K models announced for launch after the K HR; 25% hydrogen blending across the CG132B/CG170B/CG260/G3500H platforms; medium-speed ~1.5 GW ramp over 18 months from Q4 2026; OnePWR/Vero3 500 MW prime-power-with-carbon-capture site targeted for 2026 launch."
+  },
+  {
+   "name": "Solar Turbines — Titan 130 / 250 / 350, Mars 100, Taurus, PGM 130 modules and SMT130 mobile turbines",
+   "category": "Gas turbines (wholly owned subsidiary)",
+   "description": "San Diego-based Solar Turbines makes 'the world's most widely used family of mid-sized industrial gas turbines, ranging from 1 to 39 megawatts', with more than 16,000 units installed and 3 billion operating hours. Generator-set ISO ratings: Titan 130 16,530 kWe at 10,160 kJ/kWe-hr; Titan 250 23,100 kWe at 9,130 kJ/kWe-hr; Titan 350 34,000 or 38,000 kWe at 8,965 kJ/kWe-hr; Mars 100 11,350 kWe; Taurus 70 9,450 kWe; Taurus 60 5,670 kWe; Centaur 50 4,600 kWe. The SMT130 is 'the 16 MWe complete power plant' built around the Titan 130 — set-up in under 12 hours, no concrete foundation, dual fuel, SoLoNOx combustion at 25 ppm NOx standard with options to 15 and 9 ppm. Solar's data-center page sells a 'Bridge to Grid' offer: PGM modules of 6–8 MW and up to 16.5 MW, mobile plants at 6 and 16.5 MWe, scalable combined cycle in 15–80 MW modules, continuous-rated turbines, 100% block-load acceptance and island-mode paralleling. The corpus records Solar units at xAI's Colossus (SMT-130, PGM-130, Titan 350), Crusoe's Abilene plant (Titan 350), Meta's Socrates South (Titan 250, PGM 130) and Chevron–Microsoft's Kilby.",
+   "highlights": [
+    "Cleanview's tracker puts Caterpillar and Solar Turbines behind 33% of permitted behind-the-meter data-center generation (>8.8 GW), the largest OEM position",
+    "Turbine capacity is being taken to 2.5x 2024 levels (investor day, November 2025), 'biased towards the larger turbines'; a Wamego, Kansas plant now packages the PGM 130 'popular for data center power generation'",
+    "Bank of America called Solar 'CAT's highest margin product with a robust growth outlook'; management called the Titan 130 'a great product for prime power and prime power data centers'",
+    "Turbines are sold direct by Solar's own sales force rather than through dealers (FY2025 10-K)"
+   ],
+   "positioning": "Occupies the 5–40 MW gap between reciprocating engines and the heavy frames of GE Vernova, Siemens Energy and Mitsubishi Power — the machine a campus buys when it wants megawatts per unit but cannot wait for a heavy-frame slot, and often the balance-of-plant turbine beside a frame (Abilene, Kilby). Its mobile SMT units are the bring-up machine of the fastest AI campuses and, through the Memphis case, the most permit-exposed.",
+   "soldThrough": "Direct sales force (turbines and locomotives are the products Caterpillar sells directly per the 10-K); more than 60 service locations worldwide.",
+   "targetSegments": [
+    "Bridge and prime power for AI data centers",
+    "Oil and gas compression and power",
+    "Utilities and industrial CHP"
+   ],
+   "roadmap": "Titan 350 (38 MW class) ramping into data-center prime power; 2.5x capacity program; StationEdge microgrid control on mobile units; Vertiv MOU (November 2025) for turbine- and engine-based power and CCHP in data-center reference designs."
+  },
+  {
+   "name": "Cat Energy Storage Systems, microgrid controls and hybrid solutions — PGS/PGS HD, ETS/ECE, BDP1000 inverter, Master Microgrid Controller, Cat AMP",
+   "category": "Storage and microgrid",
+   "description": "Launched January 2025, the Cat ESS line splits into Power Grid Stabilization blocks (PGS: 840–1260 kW, 448–672 kWh; PGS HD 1000–1260 kW, 672 kWh, trailer-mountable and rentable) built for 'generator set transient assist', grid firming and facility backup, and Energy Time Shift / Energy Capacity Expansion blocks (570–1000 kW, 1518–9108 kWh, 30 minutes to nine hours). All run on the BDP1000 bi-directional inverter — 'grid forming, firming, and following', seamless mode transfer, automatic anti-islanding — and parallel to '100+MW'. The Cat Microgrid Master Controller (MMC-S/MMC-M) dispatches gen-sets, storage and renewables in hybrid solutions from 10 kW to 100 MW, with black start and Cat AMP as the DERMS layer; the Cat ECS 100–400 controllers run open and closed transition, soft load/unload and up to 32 DER assets. A 1.5 MW hydrogen fuel-cell backup demonstration with Microsoft (Cheyenne, 48-hour simulation, two PGS 1260 units) and a 4.99 MW / 15 MWh utility BESS operated by Cat AMP under a 15-year agreement (Danvers, 2026) are the published references.",
+   "highlights": [
+    "The Joule 4 GW campus pairs G3520K gen-sets with 1.1 GWh of grid-forming BESS — the OEM's own prescription for holding an islanded AI load's transients",
+    "PGS blocks are marketed explicitly for 'generator set transient assist', i.e. as the buffer between engines and a swinging hall",
+    "Energy-as-a-service and rental variants let dealers place storage without a capital sale"
+   ],
+   "positioning": "A gen-set OEM's storage line rather than a grid-scale BESS platform: sized in megawatt blocks to sit beside engines, not in the hundreds of megawatt-hours that Tesla, Fluence or the Chinese integrators in this file supply to standalone projects. Its advantage is that the engine, the inverter and the controller come from one vendor with one dealer accountable.",
+   "soldThrough": "Cat dealers; rental fleet; EaaS and Cat Financial structures; Tangent Energy Solutions (wholly owned) as operator.",
+   "targetSegments": [
+    "Islanded and bridge-power data-center campuses",
+    "C&I microgrids and CHP sites",
+    "Utility distribution and telecom hybrids"
+   ],
+   "roadmap": "UL 9540 / UL 1741 SB certification of the ETS module (pending per product page); hydrogen fuel-cell backup commercialization following the DOE-funded Microsoft demonstration."
+  },
+  {
+   "name": "Switchgear, transfer switches, paralleling and generator controls — Cat ATC ATS, EGP and XLM switchgear, EMCP 4, ECS controllers",
+   "category": "Electrical balance of plant",
+   "description": "The choreography hardware. Cat ATC transfer switches run 40–5000 A in open, delayed and closed transition (the power-breaker series with 'source paralleling duration … limited to 100 msec or less', switching in under three cycles, 100 kA withstand at 600 V, load shed from emergency, bypass-isolation variants, ATC-300/900 controllers). EMCP 4 generator controllers provide 'automatic synchronization and load sharing of up to 16 gensets' and utility paralleling; the EMCP 4.4 master panel manages eight sets with eight stages of load shed/add and closed-transition soft unload. Cat EGP switchgear is PLC-based lineups for multiple gen-sets, tie and load breakers with automatic dead-bus coordination, 208 V to 38 kV, built to UL 1558/891, NFPA 110 and NFPA 99; Cat XLM adds utility import/export, peak shaving and base-load operation with redundant controls.",
+   "highlights": [
+    "Caterpillar claims to be 'the only OEM offering fully in-house control solutions' — engine, alternator, ATS, paralleling and microgrid control under one brand",
+    "The EGP lineup is specified for standby and emergency applications up to 38 kV, so a campus-scale paralleling plant can be bought with the engines",
+    "ECS 300/400 retrofit kits (June 2025) bring closed-transition and multi-asset control to the installed base through dealers"
+   ],
+   "positioning": "Competes with the electrical incumbents' ATS and switchgear lines — Eaton, Schneider Electric and ABB in this file — inside the generator scope, and complements them outside it. The commercial logic is scope: a dealer that sells the sets, the switchgear and the service agreement owns the outage sequence end to end.",
+   "soldThrough": "Cat dealers and Cat custom power solutions (engineered-to-order lineups).",
+   "targetSegments": [
+    "Data-center and healthcare standby plants",
+    "Utility-paralleled peak-shaving sites",
+    "Microgrids"
+   ],
+   "roadmap": "Retrofit-kit rollout for ECS controllers; expanded ATC closed-transition ratings."
+  },
+  {
+   "name": "Services, dealer channel and financing — Customer Value Agreements, Cat Connect, Reman, rental power, EaaS, Cat Financial",
+   "category": "Aftermarket and channel",
+   "description": "Services revenues reached $24B in 2025 with a $30B-by-2030 target set at the November 2025 investor day (the earlier $28B-by-2026 goal was not restated afterwards). The channel is 150 dealers with more than 1,800 branches; reciprocating engines and gen-sets sell through it, turbines direct. Customer Value Agreements, Cat Connect remote asset monitoring and condition-based maintenance attach to the fleet; Cat Reman (reported in Power & Energy) rebuilds engines and controllers; rental power runs 20–2000 kW mobile sets and containerized bridge plants (SoEnergy's 35 MW, 31 containerized 3512/3516C sets commissioned in ten weeks); Cat Financial funds 'power generation facilities that incorporate Caterpillar products', and Tangent Energy Solutions operates assets under EaaS contracts.",
+   "highlights": [
+    "Per the Power & Energy group president, a continuous-duty gas gen-set carries roughly 40x the lifetime services opportunity of a standby diesel — the economic reason prime power matters more than its unit volume",
+    "Dealers are named parties in the gigawatt deals (Boyd CAT at Monarch, Wheeler at Joule, Toromont at Linamar), so the channel carries project delivery as well as service",
+    "Cat Financial appears in the LC4 and Linamar references as project financier"
+   ],
+   "positioning": "The dealer-and-service annuity is the moat the standby installed base built and that prime-power sales multiply; no rival gen-set OEM matches the branch count.",
+   "soldThrough": "Dealer service organizations; Cat Financial; Cat Rental Power.",
+   "targetSegments": [
+    "Installed gen-set and turbine base",
+    "Data-center operators on multi-year CVAs",
+    "Bridge-power tenants"
+   ],
+   "roadmap": "Services $30B by 2030; MP&E capex 2x the 2019–2024 level over 2025–2030 (investor day)."
+  }
+ ],
+ "recentDevelopments": [
+  {
+   "date": "2026-08-28",
+   "category": "capacity",
+   "headline": "Second Lafayette expansion — $890M ($350M buildings, $540M equipment) on top of the $725M large-engine program, taking the Indiana campus investment to ~$1.6B",
+   "read": "The capacity commitment is now larger than the original 2024 program and tied to retaining ~2,000 jobs; the large-engine backlog is being answered with bricks, not just price.",
+   "source": "https://manufacturing-today.com/news/caterpillar-targets-890-million-boost-to-manufacturing-capacity/"
+  },
+  {
+   "date": "2026-08-04",
+   "category": "financial",
+   "headline": "Record Q2 2026 — sales $20.5B (+24%), adjusted EPS $8.17 vs $6.20 consensus, backlog $72.1B (+92%); FY2026 growth guidance raised to mid-to-high teens",
+   "read": "Power generation sales to users grew 72%; diesel gen-set orders are being taken well into 2028 and gas prime into 2029 — the constraint is capacity, not demand.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000018230/000001823026000040/ex991toformcat2q2026earnin.htm"
+  },
+  {
+   "date": "2026-07-31",
+   "category": "regulatory",
+   "headline": "xAI to remove 69 temporary turbines from its Southaven site by July 2027, replaced by the approved 41-turbine ~1.2 GW permanent plant built on Solar PGM-130 and Titan 350 units",
+   "read": "The worked example of aggregation risk for the mobile-turbine bridge model: the temporary fleet — Solar Turbines the leading OEM — is being unwound into a PSD major-source plant, with Caterpillar a supplier, not a party.",
+   "source": "https://www.actionnews5.com/2026/07/31/xai-announces-fourth-data-center-turbines-be-removed-southaven-site/"
+  },
+  {
+   "date": "2026-07-29",
+   "category": "market",
+   "headline": "Baird downgrades to Neutral (PT $1,200 → $900) on state data-center regulatory risk and an expected 2027–2028 order slowdown; shares −6% intraday",
+   "read": "The first sell-side break in the AI-power thesis frames the risk correctly — permits and siting law, not engine demand — and it lands a month after a disclosed short at ~$1,061.",
+   "source": "https://www.investing.com/news/stock-market-news/baird-downgrades-caterpillar-to-neutral-on-rising-data-center-regulatory-risks-4820436"
+  },
+  {
+   "date": "2026-06-22",
+   "category": "project",
+   "headline": "Chevron–Microsoft Project Kilby (2.67 GW, West Texas, 20-year PPA): two large GE Vernova turbines carry most of the load, Solar Turbines supplies the rest",
+   "read": "Solar's role as the balance-of-plant turbine beside heavy frames is now visible at gigawatt scale — the same pairing as Abilene.",
+   "source": "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/"
+  },
+  {
+   "date": "2026-05-01",
+   "category": "market",
+   "headline": "Morgan Stanley upgrades to Equal Weight and doubles its target to $915 on the record backlog and data-center power demand; JPMorgan sees earnings more than doubling by 2030",
+   "read": "At ~44x earnings the stock now discounts the power-generation upcycle; the debate has moved from whether the demand is real to how long the backlog holds.",
+   "source": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-doubles-caterpillar-price-161644674.html"
+  },
+  {
+   "date": "2026-04-30",
+   "category": "financial",
+   "headline": "Q1 2026 — sales $17.4B (+22%) and adjusted EPS $5.54 beat by 6% and 22%; backlog $63B; large-recip backlog up more than 3.5x since January 2024; tariff estimate cut to $2.2–2.4B",
+   "read": "Guidance moved from 'top of 5–7%' to low double digits in one quarter; the CFO succession (Epley from May 1) was announced in the same week.",
+   "source": "https://www.sec.gov/Archives/edgar/data/0000018230/000001823026000017/ex991toformcat1q2026earnin.htm"
+  },
+  {
+   "date": "2026-04-29",
+   "category": "order-win",
+   "headline": "PROPWR (ProPetro) framework agreement for up to 2.1 GW of Caterpillar power-generation assets over five years — at least 1.5 GW firm — for data-center, oil-and-gas and industrial customers",
+   "read": "A power-as-a-service operator locking gen-set supply years ahead is the demand-side mirror of Caterpillar's capacity build; with 550 MW already ordered PROPWR targets ~2.6 GW deployed by 2032.",
+   "source": "https://investors.caterpillar.com/news/news-details/2026/PROPWR-Secures-Strategic-Framework-Agreement-with-Caterpillar-Inc-/default.aspx"
+  },
+  {
+   "date": "2026-03-17",
+   "category": "order-win",
+   "headline": "2 GW of Cat G3516 fast-response gas gen-sets for the Monarch Compute Campus (West Virginia, American Intelligence & Power / Nscale; Microsoft LOI for up to 1.35 GW of AI compute) — deliveries September 2026 to August 2027",
+   "read": "Management calls it one of the largest single orders for a complete power solution; full load in about seven seconds is the spec that lets a gas fleet serve an AI hall's swing when paired with storage.",
+   "source": "https://www.power-eng.com/onsite-power/caterpillar-engines-to-support-2-gw-of-onsite-power-at-west-virginia-data-center-campus-tied-to-microsoft-nvidia/"
+  },
+  {
+   "date": "2026-03-10",
+   "category": "regulatory",
+   "headline": "Mississippi Permit Board approves xAI's 41-turbine permanent Southaven plant (~1.2 GW) as a PSD major source — reported as 17 Solar PGM-130, 16 Solar Titan 350 and 8 ProEnergy units",
+   "read": "The bridge-plant model reaching its end state: mobile units out, a permitted plant in, and Solar Turbines holding the majority of the permanent slots.",
+   "source": "https://www.mississippifreepress.org/mississippi-permit-board-grants-xais-request-for-41-southaven-gas-turbines-to-power-memphis-data-center/"
+  },
+  {
+   "date": "2026-01-29",
+   "category": "financial",
+   "headline": "Q4 2025 — record sales $19.1B (+18%) and adjusted EPS $5.16 beat; FY2025 sales $67.6B; Power Generation +38% to $11.5B; backlog $51B (+71%); 2026 tariff cost guided at $2.6B",
+   "read": "Power & Energy became the largest segment by sales; 38% of the backlog extends into 2027–2028 on multiyear data-center scheduling.",
+   "source": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000003/cat_exx991x4qx2025xearning.htm"
+  },
+  {
+   "date": "2026-01-28",
+   "category": "partnership",
+   "headline": "American Intelligence & Power, Caterpillar and Boyd CAT form a strategic alliance to deploy 2 GW of fast-response G3516 gas gen-sets with battery storage for hyperscale AI infrastructure",
+   "read": "The company's own framing of the Monarch order: alliance, dealer-delivered, storage-paired — the template for how a gen-set OEM sells a power station.",
+   "source": "https://investors.caterpillar.com/news/news-details/2026/American-Intelligence--Power-Forms-Strategic-Alliance-with-Caterpillar-and-Boyd-CAT-to-Deploy-2-Gigawatts-of-Dedicated-Power-for-Hyperscale-AI-Infrastructure/default.aspx"
+  },
+  {
+   "date": "2026-01-06",
+   "category": "leadership",
+   "headline": "Joe Creed elected Chairman effective April 1, 2026; Jim Umpleby retires after 45 years",
+   "read": "Completes the transition begun with Creed's May 2025 CEO appointment; the data-center capacity program is now his in full.",
+   "source": "https://www.prnewswire.com/news-releases/caterpillar-chief-executive-officer-joe-creed-elected-chairman-of-the-board-302654312.html"
+  },
+  {
+   "date": "2025-11-18",
+   "category": "partnership",
+   "headline": "Vertiv and Caterpillar sign an MOU: Caterpillar and Solar Turbines to supply gas turbines and reciprocating engines for power and CCHP inside Vertiv's data-center energy designs",
+   "read": "Puts Caterpillar's prime movers into a critical-infrastructure vendor's reference architecture — the same route Eaton and Schneider take to hyperscalers, from the generation side.",
+   "source": "https://www.solarturbines.com/en_US/about-us/news-and-press-releases/vertiv-and-caterpillar-press-release.html"
+  },
+  {
+   "date": "2025-11-07",
+   "category": "product-launch",
+   "headline": "3.1 MW Cat G3520 Fast Response gas gen-set — cold start to load in under 10 seconds per NFPA 110, EPA-certified for emergency and non-emergency use; seven 60 Hz gas standby nodes now span 500 kW to 3.1 MW",
+   "read": "A gas set that meets the diesel's ten-second clock is the product that lets a campus run gas for both prime and standby duty — and earn on demand response without changing machine class.",
+   "source": "https://www.cat.com/en_US/news/engine-press-releases/caterpillar-releases-fast-response-generator-sets-delivering-energy-security-and-additional-revenue-opportunities.html"
+  },
+  {
+   "date": "2025-11-04",
+   "category": "corporate",
+   "headline": "Investor day — Energy & Transportation renamed Power & Energy (Rail moves to Resource Industries from January 2026); large-engine capacity to double and turbine capacity to more than double; 2030 power-generation sales target above 2x 2024",
+   "read": "The segment was renamed around the data-center business — a 'picks-and-shovels play on data center buildouts' in the sell-side phrase, and the first time the 2030 target was quantified.",
+   "source": "https://www.ttnews.com/articles/caterpillar-goals-energy"
+  },
+  {
+   "date": "2025-10-21",
+   "category": "capacity",
+   "headline": "Caterpillar confirms the $725M Lafayette large-engine expansion alongside a $100M five-year workforce pledge, citing energy demand 'increasing like never before'",
+   "read": "The first-party statement of the capacity program that the $890M second phase (August 2026) would extend.",
+   "source": "https://investors.caterpillar.com/news/news-details/2025/Caterpillar-Invests-in-U-S--Manufacturing-and-Future-Workforce-Skills-Training/default.aspx"
+  },
+  {
+   "date": "2025-08-21",
+   "category": "order-win",
+   "headline": "Long-term strategic agreement with Hunt Energy for up to 1 GW of gas turbines, gen-sets, switchgear and aftertreatment for North American data centers, first project in Texas",
+   "read": "A power-partner customer buying the whole stack — turbines, engines, switchgear and aftertreatment — under one agreement.",
+   "source": "https://investors.caterpillar.com/news/news-details/2025/Caterpillar-and-Hunt-Energy-Company-L-P--Sign-Long-Term-Strategic-Agreement-to-Deliver-Power-Solutions-for-Data-Centers/default.aspx"
+  },
+  {
+   "date": "2025-08-20",
+   "category": "product-launch",
+   "headline": "Cat D1500 — 1.5 MW standby from the 32.1-litre C32B, up to 13% less floor space and 32% lighter, NFPA 110 Level 1 Type 10, EPA Tier 2 stationary emergency",
+   "read": "Density and footprint are the standby line's competitive variables now that block-load performance is table stakes.",
+   "source": "https://www.cat.com/en_US/news/engine-press-releases/caterpillar-launches-new-1-5-mw-diesel-generator-set-offering-reliable-standby-power-with-smaller-footprint-and-space-conscious-design.html"
+  },
+  {
+   "date": "2025-08-07",
+   "category": "order-win",
+   "headline": "4 GW combined-heat-and-power commitment for Joule Capital Partners' Millard County, Utah AI campus — G3520K gas gen-sets with a 1.1 GWh grid-forming BESS, through dealer Wheeler Machinery",
+   "read": "The largest engine-based data-center plant announced to date pairs Cat gas sets with storage for the transient — the OEM's own prescription for islanded AI load.",
+   "source": "https://investors.caterpillar.com/news/news-details/2025/Joule-Caterpillar-and-Wheeler-Announce-an-Agreement-to-Power-Americas-Growing-Data-Center-Energy-Needs/default.aspx"
+  },
+  {
+   "date": "2025-07-02",
+   "category": "regulatory",
+   "headline": "Shelby County issues xAI's air permit for 15 Solar SMT-130 turbines (247 MW) at Colossus after eight were already running; NAACP/SELC appeal alleging up to 35 unpermitted units follows",
+   "read": "Solar's mobile turbines are the bring-up machine of record for the fastest AI campus built — and the test case for whether 'temporary' units aggregate into a major source.",
+   "source": "https://techcrunch.com/2025/07/03/xai-gets-permits-for-15-natural-gas-generators-at-memphis-data-center"
+  },
+  {
+   "date": "2025-06-11",
+   "category": "project",
+   "headline": "Ohio approves the 200 MW islanded plant for Meta's Socrates South data center: 3 Solar Titan 250, 9 Solar PGM 130, 15 Cat 3520 gas sets, 8 Cat C15 diesels and an SMT-130, beside 3 Siemens SGT-400s",
+   "read": "The clearest single record of Caterpillar selling the whole on-site stack — turbines, gas engines and diesel backup — into one campus.",
+   "source": "https://www.power-eng.com/onsite-power/onsite-gas-turbines-reciprocating-engines-to-power-meta-data-center/"
+  },
+  {
+   "date": "2025-05-01",
+   "category": "leadership",
+   "headline": "Joe Creed becomes CEO; Jim Umpleby moves to Executive Chairman",
+   "read": "A COO and former Energy & Transportation group president takes over at the start of the power-generation upcycle.",
+   "source": "https://www.sec.gov/Archives/edgar/data/18230/000110465925034874/tm2511879d2_8k.htm"
+  },
+  {
+   "date": "2024-12-12",
+   "category": "product-launch",
+   "headline": "G3500K series unveiled — the G3520K HR at 2.5 MW continuous can start, take full load and sync to the grid in 4.5 minutes; four more models and 25% hydrogen blends to follow",
+   "read": "Just outside the 18-month window but the platform under the Joule 4 GW award; the grid-sync time is the spec that matters for a prime-rated gas fleet.",
+   "source": "https://www.cat.com/en_US/news/engine-press-releases/caterpillar-unveils-new-g3500k-series-gas-generator-sets.html"
+  }
+ ],
+ "strategyRead": [
+  "(High confidence) We assess that Caterpillar's data-center exposure is a capacity story, not a demand story, and that the company is answering it with irreversible investment. Basis: per company filings and calls, the large-reciprocating-engine backlog is up more than 3.5x since January 2024, orders are being taken into 2028 for diesel and 2029 for gas prime, capacity is being taken to roughly 3x 2024 for large engines and 2.5x for turbines, about 1.5 GW of medium-speed capacity is being restarted, and the Lafayette campus has now absorbed two programs totalling about $1.6B. A demand pause would show first as a flattening backlog, not as a cut in these commitments.",
+  "(High confidence) We assess that Caterpillar is selling the whole on-site power stack, not a component, and that this is the margin lever management is pricing. Basis: the Socrates South and Meta record lists Solar turbines, Cat gas sets and Cat diesels in one plant; the Joule award pairs G3520K gas sets with a grid-forming battery; the Monarch order was described as a complete power solution; and the Power & Energy group president has stated that a continuous-duty gas gen-set yields roughly forty times the lifetime services opportunity of a standby diesel. The dealer channel converts every prime-power sale into a service annuity.",
+  "(Moderate confidence) We assess that the gas gen-set — not the diesel and not the turbine — is where Caterpillar's data-center share is most contestable. Basis: the prime-power segment is where Wärtsilä (more than 1.6 GW across four US projects), INNIO and the fuel-cell vendors are winning named campuses, where Caterpillar's own 2029 lead time is longest, and where the medium-speed restart is an explicit response. The diesel standby franchise is protected by block-load performance and installed base; the turbine layer is protected by the heavy-frame OEMs' own queues.",
+  "(Moderate confidence) We assess that the principal risk to the power-generation book is regulatory rather than technical — the aggregation of nominally mobile or temporary units into major sources, and state-level siting moratoria — and that Solar Turbines is the OEM most exposed to the first of these. Basis: the Memphis and Southaven proceedings (59 unpermitted mobile turbines, a 41-turbine major-source replacement plant, removals through July 2027), the Baird downgrade citing New York's 50 MW review moratorium and more than 300 state bills, and EPA's unresolved position on temporary units. Caterpillar is a supplier in all of these, never a party, which limits direct liability but not order risk.",
+  "(Moderate confidence) We assess that the market already prices the upcycle and that 2027–2028 is the window in which the thesis is tested. Basis: shares traded near 44x earnings in May 2026 and price-to-sales at a three-decade high in July; sell-side targets span $900 (Baird) to $1,118 (Oppenheimer); a disclosed short at ~$1,061; and management's own guidance that new capacity does not significantly affect 2026 results. Collection gap: no independent consensus exists for full-year FY2024 or FY2025 revenue in the sources collected, so the annual verdicts above rest on the fourth-quarter prints.",
+  "INDICATORS TO WATCH. Q3 2026 results (late October or early November; date not yet company-confirmed): a backlog above $72.1B and Power Generation growth above 25% would confirm Judgment 1; the first sequential backlog decline would open Judgment 5's window early. Q4 2026: first shipments from the ~1.5 GW medium-speed restart and the large-engine capacity step-up — slippage would confirm that capacity, not demand, gates 2027 revenue. September 2026 to August 2027: Monarch's 2 GW of G3516 deliveries against schedule. Through July 2027: xAI's removal of temporary turbines at Southaven and any EPA ruling on aggregation — an adverse ruling would constrain the mobile-turbine bridge model in which Solar Turbines leads. October 1, 2026: the CFO handover completes."
+ ],
+ "relationships": [
+  {
+   "slug": "xai",
+   "type": "customer",
+   "status": "active",
+   "since": "2025",
+   "project": "colossus",
+   "via": "Solar Turbines SMT-130 / PGM-130 / Titan 350 gas turbines",
+   "scale": "15 SMT-130 permitted at Colossus 1 (247 MW); 41-turbine ~1.2 GW permanent plant approved for Southaven",
+   "note": "Solar Turbines is the principal turbine OEM behind xAI's Colossus bring-up: 15 SMT-130 mobile units permitted in Memphis in July 2025 and Solar PGM-130 / Titan 350 units in the 41-turbine permanent Southaven plant approved March 2026.",
+   "context": "The Shelby County Health Department permit of July 2, 2025 covered 15 Solar SMT-130 turbines (247 MW, up to 421 MW across all generators) after eight were already running; the NAACP and SELC appealed, arguing the campus was an existing major source. At Southaven, Mississippi, the NAACP sued in April 2026 over 27 unpermitted turbines, public-records emails later showed 59, and the Mississippi Permit Board approved a 41-turbine permanent plant (reported as 17 Solar PGM-130, 16 Solar Titan 350 and 8 ProEnergy units, ~1.2 GW) as a PSD major source. Temporary turbines are being removed from August 2026 through July 2027. Caterpillar and Solar Turbines appear only as the equipment OEM; the litigation targets xAI.",
+   "source": "https://techcrunch.com/2025/07/03/xai-gets-permits-for-15-natural-gas-generators-at-memphis-data-center"
+  },
+  {
+   "slug": "crusoe",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-01",
+   "project": "stargate",
+   "via": "Solar Turbines Titan 350",
+   "scale": "5 Titan 350 units (~190 MW) of a ~360 MW plant",
+   "note": "Solar Turbines Titan 350 units supply half of the ~360 MW simple-cycle plant at Crusoe's Abilene campus for Oracle and OpenAI; the other half is GE Vernova LM2500.",
+   "context": "The Texas standard-permit technical review for Crusoe's Longhorn Data Center (registration 177263, approved January 22, 2025) lists five Titan 350 units at 38 MW each beside five GE LM2500 units at 34.1 MW. Trade press separately records Titan 350 units deployed at the Oracle/OpenAI Stargate site in Texas, and a tracker citing Business Insider splits the plant's supply half GE Vernova, half Solar Turbines. No direct Crusoe–Caterpillar contract document was found; the relationship is site-level, established through the permit record.",
+   "source": "https://www.datacenterknowledge.com/sustainability/replacing-diesel-in-ai-scale-data-centers-gas-engines-turbines-and-steam"
+  },
+  {
+   "slug": "microsoft",
+   "type": "customer",
+   "status": "announced",
+   "since": "2026-03",
+   "via": "Cat G3516 fast-response gas gen-sets; Solar Turbines at Project Kilby",
+   "scale": "2 GW of G3516 sets at Monarch; part of 2.67 GW at Kilby",
+   "note": "Microsoft is the announced end user of two Caterpillar-powered campuses: the 2 GW G3516-powered Monarch Compute Campus in West Virginia (LOI for up to 1.35 GW of AI compute) and Chevron's 2.67 GW Project Kilby in West Texas, where Solar Turbines supplies the balance of generation behind two large GE Vernova turbines.",
+   "context": "Monarch (American Intelligence & Power, acquired by Nscale, with Boyd CAT as dealer) ordered 2 GW of Cat G3516 fast-response gas gen-sets — full load in about seven seconds — for delivery September 2026 through August 2027, with 2 GW on site by the first half of 2028; management called it one of the largest single orders for a complete power solution. Project Kilby is a 20-year PPA structure announced June 2026. Microsoft procures through the developers in both cases rather than from Caterpillar directly.",
+   "source": "https://www.power-eng.com/onsite-power/caterpillar-engines-to-support-2-gw-of-onsite-power-at-west-virginia-data-center-campus-tied-to-microsoft-nvidia/"
+  },
+  {
+   "slug": "meta",
+   "type": "customer",
+   "status": "active",
+   "since": "2025-06",
+   "via": "Solar Titan 250 / PGM 130 / SMT-130 turbines and Cat 3520 / C15 gen-sets",
+   "scale": "200 MW islanded plant at Socrates South, Ohio",
+   "note": "The 200 MW islanded on-site plant serving Meta's Socrates South data center in New Albany, Ohio (developer Will-Power OH / Williams, approved June 2025) runs on Solar Titan 250 and PGM 130 turbines plus Cat 3520 gas and C15 diesel gen-sets, beside three Siemens SGT-400s.",
+   "context": "The Ohio Power Siting Board approval of June 9, 2025 lists three Solar Titan 250, nine Solar PGM 130, three Siemens SGT-400, fifteen Cat 3520 reciprocating gen-sets, eight Cat C15 500 kW diesels and one SMT-130 backup unit for a plant due to operate by end-2026. It is one of the clearest records of Caterpillar selling the whole on-site stack — turbines, gas engines and diesel backup — into a single campus. Meta is the end user; the plant is owned and procured by the developer.",
+   "source": "https://www.power-eng.com/onsite-power/onsite-gas-turbines-reciprocating-engines-to-power-meta-data-center/"
+  },
+  {
+   "slug": "ge-vernova",
+   "type": "competitor",
+   "status": "active",
+   "via": "Gas turbines — co-supplier at Abilene and Kilby, rival for bridge-power turbine slots",
+   "note": "The heavy-frame turbine incumbent Solar Turbines both competes with and sits beside: the Abilene plant is half LM2500, half Titan 350, and Kilby pairs two large GE Vernova machines with Solar units for the balance.",
+   "context": "GE Vernova reports 100 GW under contract and 56 GW of slot reservations with roughly 10 GW of 2029–2030 capacity left, which is the queue Solar Turbines' 5–40 MW machines and Caterpillar's engines are sold as the way around. Where a campus wants megawatts per machine it buys the frame; where it wants blocks that fit under a permit and arrive in months it buys engines or small turbines — often from both vendors on one site.",
+   "source": "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/"
+  },
+  {
+   "slug": "siemens-energy",
+   "type": "competitor",
+   "status": "active",
+   "via": "SGT-400 turbines beside Solar units at Socrates South",
+   "note": "Turbine rival and same-site co-supplier: three Siemens SGT-400s share the Socrates South plant with Solar Titan 250 and PGM 130 units.",
+   "source": "https://www.power-eng.com/onsite-power/onsite-gas-turbines-reciprocating-engines-to-power-meta-data-center/"
+  },
+  {
+   "slug": "wartsila",
+   "type": "competitor",
+   "status": "active",
+   "via": "Medium-speed gas engines for data-center prime power",
+   "note": "The medium-speed gas-engine rival in the prime-power segment — 40-engine 412 MW Ohio order and more than 1.6 GW across four US data-center projects — against which Caterpillar is restarting about 1.5 GW of its own medium-speed capacity.",
+   "source": "https://www.power-eng.com/gas/data-center-power-crunch-lifts-engines-aeroderivatives-into-larger-role/"
+  },
+  {
+   "slug": "bloom-energy",
+   "type": "competitor",
+   "status": "active",
+   "via": "Fuel cells as prime power displacing gen-sets and turbines",
+   "note": "Second-largest OEM in Cleanview's tracker of permitted behind-the-meter data-center generation (14% to Caterpillar/Solar's 33%), and the flameless alternative the permit section of the study guide describes.",
+   "source": "https://cleanview.co/reports/behind-the-meter-data-centers"
+  },
+  {
+   "slug": "flexgen",
+   "type": "other",
+   "status": "historical",
+   "since": "2015",
+   "via": "Caterpillar Ventures Series A participation",
+   "scale": "$25.5M Series A (with Altira and GE Ventures)",
+   "note": "Caterpillar Ventures joined FlexGen's $25.5M Series A in 2015; no Caterpillar participation is recorded in FlexGen's later rounds and no current commercial tie was found.",
+   "source": "https://www.altiragroup.com/news/flexgenr-power-systems-announces-255-million-series-funding-altira-group-ge-ventures-and/"
+  }
+ ],
+ "policyExposure": [
+  {
+   "regime": "US import tariffs (IEEPA and Section 232)",
+   "status": "in-effect",
+   "effectiveDate": "2025",
+   "exposure": "Net incremental tariff cost of $1.7B in 2025 per company filings; 2026 guided at $2.6B in January, cut to $2.2–2.4B in April and to about $2.2B in August. The IEEPA-based tariffs were found unauthorized by the Supreme Court; Caterpillar recognized $392M of expected IEEPA recoveries in Q2 2026 against roughly $1.0B paid across 2025–2026, and called the second-half 2026 impact not significant. Section 232 steel and aluminum tariffs remain.",
+   "source": "https://www.fool.com/earnings/call-transcripts/2026/08/11/caterpillar-cat-q2-2026-earnings-call-transcript/"
+  },
+  {
+   "regime": "EPA stationary-engine rules (NSPS Subparts IIII/JJJJ, NESHAP ZZZZ)",
+   "status": "in-effect",
+   "effectiveDate": "2013-01",
+   "exposure": "The rules define the product line: an emergency engine may run for outages plus 100 hours a year of testing, maintenance and specified grid-support dispatch (50 of them for demand response under five conditions), and is exempt from add-on controls; a non-emergency stationary diesel must meet Tier 4 with after-treatment, and non-emergency gas engines above 500 hp carry a 1.0 g/hp-hr NOx limit. May 2025 EPA guidance eased backup-generator dispatch by balancing authorities. Caterpillar sells into both classes — standby diesel into the first, prime and continuous gas into the second.",
+   "source": "https://www.sidley.com/en/insights/newsupdates/2025/05/us-epa-issues-new-guidance-on-data-center-emergency-generator-operations"
+  },
+  {
+   "regime": "State data-center siting and air-permit review",
+   "status": "proposed",
+   "effectiveDate": "2026",
+   "exposure": "Baird's July 2026 downgrade cited New York's moratorium on environmental reviews for data centers above 50 MW and more than 300 state data-center bills proposed in Q1 2026 as demand risk for the power-generation book. The xAI Memphis and Southaven turbine cases — 59 unpermitted mobile units per public-records emails, a 41-turbine PSD major-source plant approved in March 2026, temporary units being removed through July 2027 — are the worked example of aggregation risk for the mobile-turbine bridge model in which Solar Turbines equipment is the leading OEM. Caterpillar and Solar Turbines are not parties to those proceedings.",
+   "source": "https://www.investing.com/news/stock-market-news/baird-downgrades-caterpillar-to-neutral-on-rising-data-center-regulatory-risks-4820436"
+  }
+ ],
+ "technicalSpecs": [
+  {
+   "product": "C175-20 / C175-16 diesel gen-sets (60 Hz)",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "C175-20 standby / prime / continuous",
+     "value": "4000 (no fan) / 3900 ekW; 3600 (no fan) / 3500 ekW; 3250 (no fan) / 3150 ekW"
+    },
+    {
+     "band": "Ratings",
+     "label": "C175-16 standby / prime / continuous",
+     "value": "3100 (no fan) / 3000 ekW; 2825 (no fan) / 2725 ekW; 2600 (no fan) / 2500 ekW"
+    },
+    {
+     "band": "Engine",
+     "label": "C175-20",
+     "value": "C175-20 SCAC, V-20; 175 x 220 mm; 105.8 l; 15.3:1; Common Rail; ADEM A4"
+    },
+    {
+     "band": "Engine",
+     "label": "C175-16",
+     "value": "C175-16 SCAC, V-16; 175 x 220 mm; 84.7 l; 16.7:1; Turbo Aftercooled; Common Rail; ADEM A4"
+    },
+    {
+     "band": "Performance",
+     "label": "Load acceptance",
+     "value": "Accepts 100% block load in one step and meets NFPA 110 loading requirements"
+    },
+    {
+     "band": "Performance",
+     "label": "Transient class",
+     "value": "Conform to ISO 8528-5 steady state and transient response requirements (G3)"
+    },
+    {
+     "band": "Performance",
+     "label": "Ambient",
+     "value": "full power up to 131 degrees Fahrenheit (55 degrees Celsius) without derating (3250/3500 kW nodes)"
+    },
+    {
+     "band": "Compliance",
+     "label": "Emissions",
+     "value": "U.S. EPA Stationary Emergency (Tier 2); Northern Virginia NOx Requirements variant; C175-16 also U.S. EPA Certified Tier 4"
+    },
+    {
+     "band": "Compliance",
+     "label": "Listings",
+     "value": "UL 2200 Listed, CSA, IBC seismic certification, OSHPD pre-approval"
+    },
+    {
+     "band": "Electrical",
+     "label": "Voltage",
+     "value": "480 to 13,800 V"
+    },
+    {
+     "band": "Physical",
+     "label": "C175-20 package",
+     "value": "6667–8409 x 2336–3264 x 2536–3828 mm; 25000–30000 kg"
+    }
+   ]
+  },
+  {
+   "product": "3516E diesel gen-set (60 Hz)",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Standby / Mission Critical / Prime",
+     "value": "3000 ekW (3750 kVA) / 3000 ekW (3750 kVA) / 2725 ekW (3406 kVA)"
+    },
+    {
+     "band": "Ratings",
+     "label": "Cat standby definition",
+     "value": "Average power output is 70% of the standby power rating. Typical operation is 200 hours per year, with maximum expected usage of 500 hours per year"
+    },
+    {
+     "band": "Engine",
+     "label": "Configuration",
+     "value": "3516E, V-16, 4-Stroke, Water-Cooled Diesel; 170 x 215 mm; 78.1 l; 13.9:1 / 14.3:1; ATAAC; MEUI; Adem A5"
+    },
+    {
+     "band": "Compliance",
+     "label": "Emissions",
+     "value": "U.S. EPA Certified for Emergency Stationary Applications (Tier 2) and meets Northern Virginia NOx requirements"
+    },
+    {
+     "band": "Fuel",
+     "label": "Renewable fuels",
+     "value": "Hydrotreated Vegetable Oil (HVO), Renewable Diesel (RD) and Hydrotreated Renewable Diesel (HRD) which meet EN 15940 or ASTM D975 can be used or blended with EN 590 diesel"
+    },
+    {
+     "band": "Warranty",
+     "label": "Standby / mission critical",
+     "value": "24 months/1000-hour warranty for standby and mission critical ratings"
+    },
+    {
+     "band": "Physical",
+     "label": "Package",
+     "value": "max 7678 x 2874 x 3639 mm; 20380 kg"
+    }
+   ]
+  },
+  {
+   "product": "G3520 Fast Response 3.1 MW gas gen-set",
+   "specs": [
+    {
+     "band": "Ratings",
+     "label": "Gas standby rating",
+     "value": "3120 ekW @ 1.0pf; 1800 rpm; 50/60 Hz"
+    },
+    {
+     "band": "Performance",
+     "label": "Start-to-load",
+     "value": "can start and accept load from a cold start in under 10 seconds, aligning with NFPA 110 requirements"
+    },
+    {
+     "band": "Performance",
+     "label": "Efficiency",
+     "value": "39.6% maximum electrical efficiency"
+    },
+    {
+     "band": "Fuel",
+     "label": "Fuel",
+     "value": "Natural Gas, Hydrogen Blend (up to 5%)"
+    },
+    {
+     "band": "Compliance",
+     "label": "Emissions",
+     "value": "U.S. EPA Stationary Non-Emergency Certified; EPA Certified for use in Emergency and Non-Emergency applications; NOx selectable down to 0.5 g/bhp-hr NOx or 250 mg/Nm3 level without aftertreatment"
+    },
+    {
+     "band": "Physical",
+     "label": "Package",
+     "value": "6597 x 2188 x 2509 mm; 21974 kg; Cat ECS 100 (capable with Cat ECS 300 & 400)"
+    }
+   ]
+  },
+  {
+   "product": "G3520K / G3516H / CG260-16 gas gen-sets (continuous)",
+   "specs": [
+    {
+     "band": "G3520K",
+     "label": "Continuous rating",
+     "value": "2567 / 2552 ekW @ 1.0pf (50/60 Hz); 46.0% maximum electrical efficiency; Natural Gas & Propane; 97.6 l; 10.5:1"
+    },
+    {
+     "band": "G3520K",
+     "label": "Grid response",
+     "value": "can start, take on full load, and sync to the grid in 4.5 minutes, compared to 6 minutes for G3500H"
+    },
+    {
+     "band": "G3520K",
+     "label": "Emissions",
+     "value": "Meets most worldwide emissions requirements down to 0.5 g/bhp-hr Nox level without aftertreatment"
+    },
+    {
+     "band": "G3516H",
+     "label": "Continuous rating",
+     "value": "2027 / 2007 ekW @ 1.0pf; 45.30% efficiency; Natural Gas, Hydrogen Blend (up to 25%); 78 l; 12.1"
+    },
+    {
+     "band": "CG260-16",
+     "label": "Continuous rating",
+     "value": "4500 / 4050 ekW @1.0pf; 44.60 / 44.3% efficiency; 1000/900 rpm; 271.8 l; Natural Gas, Hydrogen Blend (up to 25%)"
+    },
+    {
+     "band": "CG260-16",
+     "label": "Service",
+     "value": "general overhaul only after 80,000 oh; full power up to 45º C (113º F) intake air"
+    }
+   ]
+  },
+  {
+   "product": "Solar Turbines generator sets (ISO ratings)",
+   "specs": [
+    {
+     "band": "Output",
+     "label": "Titan 350",
+     "value": "34,000 kWe (35 MW) / 38,000 kWe (39 MW); heat rate 9,130 / 8,965 kJ/kWe-hr"
+    },
+    {
+     "band": "Output",
+     "label": "Titan 250",
+     "value": "23,100 kWe; 9,130 kJ/kWe-hr; Engine efficiency: 38.6% (measured at generator terminals); Pressure Ratio: 24:1"
+    },
+    {
+     "band": "Output",
+     "label": "Titan 130",
+     "value": "16,530 kWe; 10,160 kj/kW-hr; Pressure Ratio: 17.1:1; 14 Lean-Premixed, Dry Low Emissions SoLoNOx Injectors"
+    },
+    {
+     "band": "Output",
+     "label": "Mars 100 / Taurus 70 / Taurus 60 / Centaur 50",
+     "value": "11,350 / 9,450 / 5,670 / 4,600 kWe"
+    },
+    {
+     "band": "Mobile",
+     "label": "SMT130",
+     "value": "16 000 kWe; 10 160 kJ/kWe-hr; Dual Fuel System (Natural Gas and Diesel #2); Quick and Innovative Setup − Less Than 12 Hours; No Concrete Foundation Required"
+    },
+    {
+     "band": "Mobile",
+     "label": "SMT130 emissions",
+     "value": "Standard Offering at 25 PPM NOx with Optional Configurations Down to 15 and 9 PPM NOx; Temperature Range from -18°C to 49°C"
+    },
+    {
+     "band": "Data centers",
+     "label": "Bridge to Grid offer",
+     "value": "Power Generation Module (PGM), ranging from 6MW-8MW and larger units up to 16.5 MW; scalable combined cycle available in 15-30MW, 20- 40MW, or 40-80MW modules; ability to take 100% load blocks, ability to run in island mode with reliable parallelling"
+    },
+    {
+     "band": "Conditions",
+     "label": "ISO basis",
+     "value": "Sea level, 15°C (59°F), no gas path losses, relative humidity 60%, natural gas fuel with LHV = 35 MJ/Nm3"
+    }
+   ]
+  },
+  {
+   "product": "Cat Energy Storage — PGS / PGS HD / ETS blocks and BDP1000 inverter",
+   "specs": [
+    {
+     "band": "PGS",
+     "label": "Power / energy",
+     "value": "840 – 1260 kW; 448 – 672 kWh; 60 Hz 480 Volt; 50 Hz 400 & 690 Volt"
+    },
+    {
+     "band": "PGS HD",
+     "label": "Power / energy",
+     "value": "1000 – 1260 kW; 672 kWh; Transport trailer available on 60 Hz versions; Temporary rental"
+    },
+    {
+     "band": "ETS / ECE",
+     "label": "Power / energy",
+     "value": "570 – 1000 kW; 1518 – 9108 kWh; from 30 minutes to nine (9) hours of capacity per energy storage system"
+    },
+    {
+     "band": "Inverter",
+     "label": "BDP1000",
+     "value": "Rated Power 1000 kVA (1000kW 1PF); Grid forming, firming, and following capabilities; Seamless mode transfer; Islanding detection – automatic anti-islanding"
+    },
+    {
+     "band": "Scaling",
+     "label": "Parallel",
+     "value": "Parallel ready – multiple modules may be used in parallel to increase total output up to 100+MW"
+    },
+    {
+     "band": "Applications",
+     "label": "PGS",
+     "value": "Renewable smoothing; Grid firming/grid stabilization; Generator set transient assist; Facility backup; Reserve power capacity"
+    },
+    {
+     "band": "Compliance",
+     "label": "ETS",
+     "value": "UL 9540; UL 1741 SB (certification and mark pending)"
+    }
+   ]
+  },
+  {
+   "product": "Cat ATC transfer switches, EMCP 4 and EGP switchgear",
+   "specs": [
+    {
+     "band": "ATS",
+     "label": "Power breaker & case switch",
+     "value": "200 to 5000A; Fixed Mount 200-3200A; Drawout 200-5000A; 120 - 600 Vac; 100,000 amps withstand/closing/interrupting at 600 Vac"
+    },
+    {
+     "band": "ATS",
+     "label": "Transfer",
+     "value": "Fastest switching times available (<3 cycles); Source paralleling duration is limited to 100 msec or less; Closed transition / Open transition; ATC-900 microprocessor-based controller"
+    },
+    {
+     "band": "ATS",
+     "label": "Contactor-based",
+     "value": "Rating Range 40-3000A; Transfer Type Open / Closed Transition; UL 1008 listed, CSA C22.2 No. 178 certified"
+    },
+    {
+     "band": "Controls",
+     "label": "EMCP 4",
+     "value": "Automatic synchronization and load sharing of up to 16 gensets; Single generator to single utility paralleling functionality"
+    },
+    {
+     "band": "Controls",
+     "label": "EMCP 4.4 Master Control Panel",
+     "value": "monitors and controls up to eight (8) Cat EMCP 4.4 equipped generator sets; Closed transition (with soft unload) or open transition on return to normal service; Automatic load shed/load add control up to eight (8) stages"
+    },
+    {
+     "band": "Switchgear",
+     "label": "Cat EGP",
+     "value": "LV and MV (208V - 38 kV); UL 1558 or UL 891, NFPA 110, NFPA 99; Programmable Load Shed / Load Add Functions; Automatic 'Dead Bus' Coordination"
+    },
+    {
+     "band": "Switchgear",
+     "label": "Cat XLM",
+     "value": "Emergency Standby, Utility Import/Export, Peak shaving, and base load operations with redundant controls and components. Closed transition to/from generator power"
+    }
+   ]
+  }
+ ],
+ "decisionMakers": [
+  {
+   "name": "Joseph E. (Joe) Creed",
+   "title": "Chairman and Chief Executive Officer",
+   "background": [
+    "CEO since May 1, 2025; elected Chairman effective April 1, 2026 on Jim Umpleby's retirement after 45 years",
+    "Chief Operating Officer from November 2023; Group President, Energy & Transportation, 2021–2023",
+    "Joined 1997; CFO of Energy & Transportation 2013; SVP Finance Services 2017; interim CFO 2018; SVP Oil & Gas and Marine and Electric Power 2019; B.S. accounting, Western Illinois University",
+    "Owns the data-center capacity bet: the 2025 investor-day targets and the frame agreements with hyperscalers"
+   ]
+  },
+  {
+   "name": "Kyle Epley",
+   "title": "Chief Financial Officer",
+   "background": [
+    "CFO effective May 1, 2026, succeeding Andrew Bonfield, who retires October 1, 2026 after eight years and advises through the transition",
+    "More than thirty years at Caterpillar; corporate controller 2017, SVP Global Finance Services Division 2019; also responsible for Financial Products, Enterprise Strategy and IT; Bradley University, CPA",
+    "Presented the Q2 2026 results, including the $392M IEEPA tariff-recovery accounting"
+   ]
+  },
+  {
+   "name": "Jason Kaiser",
+   "title": "Group President, Power & Energy",
+   "background": [
+    "Group President since January 1, 2024 (segment renamed from Energy & Transportation to Power & Energy effective January 1, 2026)",
+    "Responsible for Solar Turbines, Large Power Systems, the Electric Power Division, Oil & Gas and Marine, Reman and Electrification",
+    "Previously SVP, Electric Power Division; joined 2000; BSEE, Rose-Hulman",
+    "Public voice of the capacity plan: large reciprocating engines to ~3x 2024 output, turbines to 2.5x"
+   ]
+  },
+  {
+   "name": "Melissa Busen",
+   "title": "Senior Vice President, Electric Power Division",
+   "background": [
+    "Runs the Electric Power Division — gen-sets, renewable assets, power optimization and aftermarket under the Cat, MWM and FG Wilson brands; joined 2004; previously VP and GM of Large Electric Power Solutions and VP Digital Product Management; Western Illinois University, CMA",
+    "Named spokesperson on the 4 GW Joule Capital Partners / Wheeler Machinery combined-heat-and-power award (Utah, August 2025)"
+   ]
+  },
+  {
+   "name": "Derrick York",
+   "title": "President, Solar Turbines; Senior Vice President, Caterpillar",
+   "background": [
+    "Leads the wholly owned gas-turbine subsidiary — the Titan, Mars, Taurus and mobile SMT/PGM lines that the corpus records at Colossus, Abilene and Socrates South",
+    "Previously SVP of the Oil, Gas & Marine division, GM Marine, and a CFO within Services, Distribution and Digital; joined 2010; B.S. finance (Illinois), MBA (Kellogg)",
+    "Turbine capacity to 2.5x 2024 levels per the November 2025 investor day; appointment date not independently verified"
+   ]
+  }
+ ],
+ "financials": {
+  "currency": "USD",
+  "type": "public",
+  "periods": [
+   {
+    "period": "FY2024",
+    "periodType": "annual",
+    "periodEnd": "2024-12-31",
+    "metrics": [
+     {
+      "name": "Sales & revenues",
+      "actual": "$64.8B (−3%)",
+      "expected": "Q4: $16.61B (consensus, Fool.com)",
+      "verdict": "miss",
+      "result": "Q4 2024 sales $16.2B (−5%) missed; full year down 3% on lower volume and dealer destocking",
+      "kpi": "revenue",
+      "usdMillions": 64800,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted profit per share",
+      "actual": "$21.90",
+      "expected": "Q4: $5.02 (consensus, Fool.com)",
+      "verdict": "beat",
+      "result": "Q4 adjusted EPS $5.14 beat; GAAP Q4 EPS $5.78 included a divestiture gain"
+     },
+     {
+      "name": "Energy & Transportation — Power Generation sales",
+      "actual": "Q4 2024: $2.24B (+22%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Per company: growth in large reciprocating engines, primarily data-center applications; turbines and turbine services also up. Sales to users in power generation +27% on the call"
+     }
+    ],
+    "commentary": "The year the data-center line became visible: Power Generation grew while the rest of the company shrank, and management disclosed a ~125% capacity expansion over 2023 for large engines. The Q4 print set the pattern — revenue miss, EPS beat, shares down roughly 4–5% (trade press disagreed on the close). Backlog $30B. No formal consensus for the full-year figures was located; the Q4 consensus is quoted."
+   },
+   {
+    "period": "FY2025",
+    "periodType": "annual",
+    "periodEnd": "2025-12-31",
+    "metrics": [
+     {
+      "name": "Sales & revenues",
+      "actual": "$67.6B (+4%)",
+      "expected": "Q4: $17.86B (LSEG via Reuters)",
+      "verdict": "beat",
+      "result": "Q4 2025 sales $19.1B (+18%) — a record quarter, 7% above consensus",
+      "kpi": "revenue",
+      "usdMillions": 67600,
+      "fxBasis": "as reported"
+     },
+     {
+      "name": "Adjusted profit per share",
+      "actual": "$19.06 (−13%)",
+      "expected": "Q4: $4.68 (LSEG via Reuters)",
+      "verdict": "beat",
+      "result": "Q4 adjusted EPS $5.16 beat by 10%; full-year fell on $1.7B of net incremental tariff cost and Construction/Resource profit declines"
+     },
+     {
+      "name": "Power & Energy — Power Generation sales",
+      "actual": "$11.5B (+38%); Q4 $3.2B (+44%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Segment (Rail-inclusive basis) sales $34.5B (+21%), profit $6.9B (+19%); now the largest segment by sales"
+     },
+     {
+      "name": "Backlog",
+      "actual": "$51B (+$21B, +71% YoY)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "62% deliverable within 12 months; ~38% extends into 2027–2028 on multiyear data-center scheduling",
+      "kpi": "backlog",
+      "usdMillions": 51000,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "Record Q4 sales, a beat on both lines, and a backlog that grew faster than revenue. The profit line was carried by Power & Energy while the machine segments absorbed tariffs. Guidance for 2026 was set around the top of the 5–7% long-term growth target with a $2.6B tariff estimate — both revised within a quarter."
+   },
+   {
+    "period": "Q1 2026",
+    "periodType": "quarter",
+    "periodEnd": "2026-03-31",
+    "metrics": [
+     {
+      "name": "Sales & revenues",
+      "actual": "$17.4B (+22%)",
+      "expected": "$16.44B (Zacks consensus)",
+      "verdict": "beat",
+      "result": "+6% surprise; 2026 sales growth guidance raised to low double digits"
+     },
+     {
+      "name": "Adjusted profit per share",
+      "actual": "$5.54 (+30%)",
+      "expected": "$4.55 (Zacks consensus)",
+      "verdict": "beat",
+      "result": "+22% surprise; shares up ~5–6% premarket"
+     },
+     {
+      "name": "Power & Energy — Power Generation sales",
+      "actual": "$2.82B (+41%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Segment (ex-Rail) sales $7.03B (+22%), profit $1.45B (+13%); sales to users in power generation +48%"
+     },
+     {
+      "name": "Backlog",
+      "actual": "$63B (+$28B, +79% YoY)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Record quarterly orders; large-reciprocating-engine backlog up more than 3.5x since the January 2024 expansion announcement"
+     }
+    ],
+    "commentary": "Tariff cost came in at ~$600M against $800M planned and the full-year estimate was cut to $2.2–2.4B. CFO succession announced the same week (Kyle Epley from May 1). The segment now reports without Rail, so the Power & Energy figures here are not directly comparable with the FY2025 line above."
+   },
+   {
+    "period": "Q2 2026 (latest interim)",
+    "periodType": "quarter",
+    "periodEnd": "2026-06-30",
+    "metrics": [
+     {
+      "name": "Sales & revenues",
+      "actual": "$20.54B (+24%)",
+      "expected": "$19.0B (Bloomberg average); $6.20 EPS (LSEG)",
+      "verdict": "beat",
+      "result": "First quarter above $20B; 2026 growth guidance raised again to mid-to-high teens"
+     },
+     {
+      "name": "Adjusted profit per share",
+      "actual": "$8.17 (+73%)",
+      "expected": "$6.20 (LSEG via Reuters)",
+      "verdict": "beat",
+      "result": "~32% surprise; adjusted operating margin 21.9% helped by $392M of expected IEEPA tariff recoveries; shares +11% premarket"
+     },
+     {
+      "name": "Power & Energy — Power Generation sales",
+      "actual": "$3.10B (+29%)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Segment sales $8.24B (+17%), profit $2.03B (+30%); power generation sales to users +72%, per the CEO"
+     },
+     {
+      "name": "Backlog",
+      "actual": "$72.1B (+92% YoY, +$9B QoQ)",
+      "expected": "—",
+      "verdict": "inline",
+      "result": "Q2 orders $9.4B; diesel gen-set orders being taken well into 2028, gas prime into 2029",
+      "kpi": "backlog",
+      "usdMillions": 72100,
+      "fxBasis": "as reported"
+     }
+    ],
+    "commentary": "The strongest print of the run and the one where the tariff story reversed: IEEPA tariffs were found unauthorized, recoveries were booked, and the second-half tariff impact was called not significant. The valuation debate opened the same month — Baird downgraded on state-level data-center regulatory risk and a 2027–2028 order slowdown; Morgan Stanley and Oppenheimer raised targets."
+   }
+  ]
+ },
+ "sources": [
+  {
+   "label": "Manufacturing Today — Lafayette $890M expansion",
+   "url": "https://manufacturing-today.com/news/caterpillar-targets-890-million-boost-to-manufacturing-capacity/",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Based in Lafayette — abatement approval for the $890M expansion",
+   "url": "https://www.basedinlafayette.com/p/tax-abatement-gets-initial-ok-on",
+   "date": "2026-08-28"
+  },
+  {
+   "label": "Insider Monkey via Yahoo — Caterpillar vs Cummins in the AI boom",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/diesel-engines-meet-ai-boom-030015033.html",
+   "date": "2026-08-19"
+  },
+  {
+   "label": "Fortune Business Insights — data-center generator market (Caterpillar 18%, Cummins 16%)",
+   "url": "https://www.fortunebusinessinsights.com/data-center-generator-market-114458",
+   "date": "2026-08-17"
+  },
+  {
+   "label": "Motley Fool — Q2 2026 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/08/11/caterpillar-cat-q2-2026-earnings-call-transcript/",
+   "date": "2026-08-11"
+  },
+  {
+   "label": "TheStreet via Yahoo — IEEPA tariff recoveries",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/caterpillar-tariffs-send-major-signal-200700895.html",
+   "date": "2026-08-08"
+  },
+  {
+   "label": "Caterpillar — Q2 2026 earnings call transcript (IR)",
+   "url": "https://s25.q4cdn.com/358376879/files/doc_financials/2026/q2/2Q-2026-Earnings-Call-Transcript.pdf",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Caterpillar — Q2 2026 analyst slide deck",
+   "url": "https://s25.q4cdn.com/358376879/files/doc_financials/2026/q2/2Q-2026-Analyst-Slide-Deck_Final.pdf",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Caterpillar Q2 2026 results (8-K exhibit)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000018230/000001823026000040/ex991toformcat2q2026earnin.htm",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Reuters via Yahoo — Q2 2026 beat and guidance raise",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/caterpillar-lifts-2026-sales-growth-115130477.html",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Bloomberg via Transport Topics — Q2 2026",
+   "url": "https://www.ttnews.com/articles/caterpillar-earnings-q2-2026",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Investing.com — Q2 2026 slides",
+   "url": "https://www.investing.com/news/company-news/caterpillar-q2-2026-slides-record-205b-revenue-backlog-soars-93CH-4835057",
+   "date": "2026-08-04"
+  },
+  {
+   "label": "Caterpillar Q2 2026 Form 10-Q",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000018230/000001823026000046/cat-20260630.htm",
+   "date": "2026-08"
+  },
+  {
+   "label": "Action News 5 — xAI Southaven turbine removal",
+   "url": "https://www.actionnews5.com/2026/07/31/xai-announces-fourth-data-center-turbines-be-removed-southaven-site/",
+   "date": "2026-07-31"
+  },
+  {
+   "label": "Investing.com — Baird downgrade",
+   "url": "https://www.investing.com/news/stock-market-news/baird-downgrades-caterpillar-to-neutral-on-rising-data-center-regulatory-risks-4820436",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Yahoo Finance — shares −6.2% on Baird downgrade",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/caterpillar-stock-drops-6-2-182157993.html",
+   "date": "2026-07-29"
+  },
+  {
+   "label": "Caterpillar — Q2 2026 results advisory",
+   "url": "https://investors.caterpillar.com/news/news-details/2026/Caterpillar-Inc--to-Announce-Second-Quarter-2026-Financial-Results-on-August-4/default.aspx",
+   "date": "2026-07-21"
+  },
+  {
+   "label": "The Next Web (Reuters reporting) — 59 unpermitted turbines",
+   "url": "https://thenextweb.com/news/xai-59-unpermitted-gas-turbines-memphis-southaven",
+   "date": "2026-07-14"
+  },
+  {
+   "label": "Floodlight — Texas data-center air-permit loophole (Abilene, Vantage San Antonio)",
+   "url": "https://floodlightnews.org/ai-data-centers-texas-pollution-loophole/",
+   "date": "2026-07-09"
+  },
+  {
+   "label": "Fortune — Burry short and the valuation debate",
+   "url": "https://fortune.com/2026/07/02/michael-burry-short-caterpillar-ai-infrastructure-bubble-power-systems-valuation/",
+   "date": "2026-07-02"
+  },
+  {
+   "label": "USITC — investigation 337-TA-1507 instituted (Caterpillar v. Doosan Bobcat)",
+   "url": "https://www.usitc.gov/press_room/news_release/2026/er0626_68812.htm",
+   "date": "2026-06-26"
+  },
+  {
+   "label": "TechCrunch — Chevron–Microsoft Project Kilby",
+   "url": "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/",
+   "date": "2026-06-22"
+  },
+  {
+   "label": "Data Center Knowledge — replacing diesel: gas engines, turbines and steam",
+   "url": "https://www.datacenterknowledge.com/sustainability/replacing-diesel-in-ai-scale-data-centers-gas-engines-turbines-and-steam",
+   "date": "2026-06-04"
+  },
+  {
+   "label": "MarketsandMarkets — data-center generator companies",
+   "url": "https://www.marketsandmarkets.com/ResearchInsight/data-center-generators-companies.asp",
+   "date": "2026-05-26"
+  },
+  {
+   "label": "TIKR — Jason Kaiser at the BofA conference",
+   "url": "https://www.tikr.com/blog/caterpillar-power-chief-just-revealed-what-the-data-center-boom-really-means-for-cat-stock",
+   "date": "2026-05-21"
+  },
+  {
+   "label": "Power Magazine — from backup to prime power",
+   "url": "https://www.powermag.com/from-backup-to-prime-power-how-ai-data-centers-are-bypassing-the-grid/",
+   "date": "2026-05-18"
+  },
+  {
+   "label": "Caterpillar — 2025 Annual and Sustainability Reports release",
+   "url": "https://investors.caterpillar.com/news/news-details/2026/Caterpillar-Inc--Releases-2025-Annual-and-Sustainability-Reports/default.aspx",
+   "date": "2026-05-12"
+  },
+  {
+   "label": "Yahoo Finance — Morgan Stanley upgrade",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-doubles-caterpillar-price-161644674.html",
+   "date": "2026-05-01"
+  },
+  {
+   "label": "Caterpillar — 2025 Annual Report (Form ARS)",
+   "url": "https://www.sec.gov/Archives/edgar/data/18230/000130817926000360/cat015318-ars.pdf",
+   "date": "2026-05"
+  },
+  {
+   "label": "Caterpillar — Q1 2026 earnings call transcript (IR)",
+   "url": "https://s25.q4cdn.com/358376879/files/doc_financials/2026/q1/Q1-2026-Earnings-Transcript.pdf",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Caterpillar — Q1 2026 analyst slide deck",
+   "url": "https://s25.q4cdn.com/358376879/files/doc_financials/2026/q1/1Q-2026-Analyst-Slide-Deck_Final.pdf",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Caterpillar Q1 2026 results (8-K exhibit)",
+   "url": "https://www.sec.gov/Archives/edgar/data/0000018230/000001823026000017/ex991toformcat1q2026earnin.htm",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Investing.com — Q1 2026 earnings call summary",
+   "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-caterpillar-inc-q1-2026-earnings-beat-forecasts-stock-surges-93CH-4649919",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Zacks via Yahoo — Q1 2026 vs estimates",
+   "url": "https://finance.yahoo.com/markets/stocks/articles/cat-q1-earnings-beat-estimates-172400999.html",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Reuters via KFGO — Q1 2026",
+   "url": "https://kfgo.com/2026/04/30/caterpillars-quarterly-profit-rises-on-strong-construction-power-equipment-sales/",
+   "date": "2026-04-30"
+  },
+  {
+   "label": "Caterpillar — PROPWR strategic framework agreement (IR)",
+   "url": "https://investors.caterpillar.com/news/news-details/2026/PROPWR-Secures-Strategic-Framework-Agreement-with-Caterpillar-Inc-/default.aspx",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Caterpillar — PROPWR strategic framework agreement (press release)",
+   "url": "https://www.caterpillar.com/en/news/corporate-press-releases/h/pro-pwr-agreement.html",
+   "date": "2026-04-29"
+  },
+  {
+   "label": "Power Engineering — GE Vernova turbine slots tighten through 2030",
+   "url": "https://www.power-eng.com/gas/turbines/data-centers-drive-record-surge-in-ge-vernova-power-equipment-orders-as-turbine-slots-tighten-through-2030/",
+   "date": "2026-04-23"
+  },
+  {
+   "label": "Power Engineering — engines and aeroderivatives take a larger role",
+   "url": "https://www.power-eng.com/gas/data-center-power-crunch-lifts-engines-aeroderivatives-into-larger-role/",
+   "date": "2026-04-16"
+  },
+  {
+   "label": "NAACP — lawsuit over xAI's Southaven turbines",
+   "url": "https://naacp.org/articles/naacp-sues-xai-illegal-pollution-data-center-power-plant",
+   "date": "2026-04-14"
+  },
+  {
+   "label": "Caterpillar — CFO transition (8-K exhibit)",
+   "url": "https://www.sec.gov/Archives/edgar/data/18230/000110465926042062/tm2611571d1_ex99-1.htm",
+   "date": "2026-04-08"
+  },
+  {
+   "label": "Lanin — Crusoe's Abilene turbines (TCEQ registration 177263)",
+   "url": "https://lanin.substack.com/p/crusoe-is-not-a-neocloud-its-americas",
+   "date": "2026-04-05"
+  },
+  {
+   "label": "Caterpillar — 8-K segment realignment (Rail to Resource Industries)",
+   "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000013/cat-20260326.htm",
+   "date": "2026-03-26"
+  },
+  {
+   "label": "Power Engineering — 2 GW of Cat G3516 for Monarch Compute Campus",
+   "url": "https://www.power-eng.com/onsite-power/caterpillar-engines-to-support-2-gw-of-onsite-power-at-west-virginia-data-center-campus-tied-to-microsoft-nvidia/",
+   "date": "2026-03-17"
+  },
+  {
+   "label": "Mississippi Free Press — 41-turbine Southaven permit",
+   "url": "https://www.mississippifreepress.org/mississippi-permit-board-grants-xais-request-for-41-southaven-gas-turbines-to-power-memphis-data-center/",
+   "date": "2026-03-10"
+  },
+  {
+   "label": "Power Magazine — engine power plants surge on data-center demand",
+   "url": "https://www.powermag.com/engine-power-plants-surge-as-data-centers-drive-unprecedented-demand/",
+   "date": "2026-03-02"
+  },
+  {
+   "label": "Caterpillar FY2025 Form 10-K",
+   "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm",
+   "date": "2026-02-13"
+  },
+  {
+   "label": "Modern Power Systems — could a delivery backlog derail the gas-turbine boom",
+   "url": "https://www.modernpowersystems.com/data-centre-power/could-a-delivery-backlog-derail-a-gt-boom/",
+   "date": "2026-02-09"
+  },
+  {
+   "label": "Caterpillar — Q4 and full-year 2025 results (IR)",
+   "url": "https://investors.caterpillar.com/news/news-details/2026/Caterpillar-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Caterpillar — Q4 2025 analyst slide deck",
+   "url": "https://s25.q4cdn.com/358376879/files/doc_financials/2025/q4/4Q-2025-Analyst-Slide-Deck_Final.pdf",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Caterpillar Q4 / FY2025 results (8-K exhibit)",
+   "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000003/cat_exx991x4qx2025xearning.htm",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Motley Fool — Q4 2025 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2026/01/29/caterpillar-cat-q4-2025-earnings-call-transcript/",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Reuters via Yahoo — Q4 2025 beat",
+   "url": "https://finance.yahoo.com/news/caterpillar-reports-higher-quarterly-profit-114819799.html",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Reuters via Business Reporter — $2.6B 2026 tariff estimate",
+   "url": "https://www.business-reporter.co.uk/news/caterpillar-flags-26-billion-tariff-hit-in-2026-power-equipment-demand-lifts-quarter-14035",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Investing.com — Q4 2025 slides",
+   "url": "https://www.investing.com/news/company-news/caterpillar-q4-2025-slides-record-revenues-despite-margin-pressure-from-tariffs-93CH-4473727",
+   "date": "2026-01-29"
+  },
+  {
+   "label": "Caterpillar — AIP / Boyd CAT 2 GW alliance (IR)",
+   "url": "https://investors.caterpillar.com/news/news-details/2026/American-Intelligence--Power-Forms-Strategic-Alliance-with-Caterpillar-and-Boyd-CAT-to-Deploy-2-Gigawatts-of-Dedicated-Power-for-Hyperscale-AI-Infrastructure/default.aspx",
+   "date": "2026-01-28"
+  },
+  {
+   "label": "Caterpillar — Creed elected Chairman (PR Newswire)",
+   "url": "https://www.prnewswire.com/news-releases/caterpillar-chief-executive-officer-joe-creed-elected-chairman-of-the-board-302654312.html",
+   "date": "2026-01-06"
+  },
+  {
+   "label": "VPM / Inside Climate News — Virginia's 9,000 data-center generators",
+   "url": "https://www.vpm.org/news/2025-12-17/virginia-data-centers-diesel-backup-generators-deq-loudoun-turner-dowd",
+   "date": "2025-12-17"
+  },
+  {
+   "label": "Solar Turbines — Vertiv and Caterpillar energy optimization collaboration",
+   "url": "https://www.solarturbines.com/en_US/about-us/news-and-press-releases/vertiv-and-caterpillar-press-release.html",
+   "date": "2025-11-18"
+  },
+  {
+   "label": "Caterpillar — 3.1 MW G3520 Fast Response gas generator sets",
+   "url": "https://www.cat.com/en_US/news/engine-press-releases/caterpillar-releases-fast-response-generator-sets-delivering-energy-security-and-additional-revenue-opportunities.html",
+   "date": "2025-11-07"
+  },
+  {
+   "label": "Caterpillar — 2025 Investor Day transcript",
+   "url": "https://s25.q4cdn.com/358376879/files/doc_events/2025/11-4-25-Investor-Day-Transcript.pdf",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "Caterpillar — 2025 Investor Day presentation",
+   "url": "https://s25.q4cdn.com/358376879/files/doc_presentations/2025/0-Combined-All-Q4-Version.pdf",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "Bloomberg via Transport Topics — investor day, Power & Energy rename",
+   "url": "https://www.ttnews.com/articles/caterpillar-goals-energy",
+   "date": "2025-11-04"
+  },
+  {
+   "label": "Caterpillar — $725M Lafayette expansion and workforce pledge (IR)",
+   "url": "https://investors.caterpillar.com/news/news-details/2025/Caterpillar-Invests-in-U-S--Manufacturing-and-Future-Workforce-Skills-Training/default.aspx",
+   "date": "2025-10-21"
+  },
+  {
+   "label": "Bloomberg via Energy Connects — Caterpillar emerges as an AI winner on turbine demand",
+   "url": "https://www.energyconnects.com/news/utilities/2025/october/caterpillar-emerges-as-unlikely-ai-winner-on-turbine-demand/",
+   "date": "2025-10-02"
+  },
+  {
+   "label": "Caterpillar — Hunt Energy 1 GW strategic agreement (IR)",
+   "url": "https://investors.caterpillar.com/news/news-details/2025/Caterpillar-and-Hunt-Energy-Company-L-P--Sign-Long-Term-Strategic-Agreement-to-Deliver-Power-Solutions-for-Data-Centers/default.aspx",
+   "date": "2025-08-21"
+  },
+  {
+   "label": "Caterpillar — Cat D1500 1.5 MW diesel generator set launch",
+   "url": "https://www.cat.com/en_US/news/engine-press-releases/caterpillar-launches-new-1-5-mw-diesel-generator-set-offering-reliable-standby-power-with-smaller-footprint-and-space-conscious-design.html",
+   "date": "2025-08-20"
+  },
+  {
+   "label": "Caterpillar — Joule / Wheeler 4 GW data-center energy agreement (IR)",
+   "url": "https://investors.caterpillar.com/news/news-details/2025/Joule-Caterpillar-and-Wheeler-Announce-an-Agreement-to-Power-Americas-Growing-Data-Center-Energy-Needs/default.aspx",
+   "date": "2025-08-07"
+  },
+  {
+   "label": "Microgrid Knowledge — 4 GW CHP for Joule's Utah campus",
+   "url": "https://www.microgridknowledge.com/data-center-microgrids/news/55308489/cat-commits-to-providing-4-gw-of-chp-power-for-utah-ai-data-center",
+   "date": "2025-08-07"
+  },
+  {
+   "label": "NAACP — appeal of xAI's Memphis permit",
+   "url": "https://naacp.org/articles/naacp-and-advocacy-groups-appeal-permit-xais-south-memphis-data-center-decisions-around",
+   "date": "2025-07-16"
+  },
+  {
+   "label": "TechCrunch — xAI permitted for 15 Solar SMT-130 turbines",
+   "url": "https://techcrunch.com/2025/07/03/xai-gets-permits-for-15-natural-gas-generators-at-memphis-data-center",
+   "date": "2025-07-03"
+  },
+  {
+   "label": "Trinity Consultants — air permitting for data-center development",
+   "url": "https://trinityconsultants.com/resources/powering-the-next-generation-of-data-centers-navigating-due-diligence-and-air-permitting-for-data-center-development/",
+   "date": "2025-06-23"
+  },
+  {
+   "label": "Power Engineering — on-site turbines and engines for Meta's Socrates South",
+   "url": "https://www.power-eng.com/onsite-power/onsite-gas-turbines-reciprocating-engines-to-power-meta-data-center/",
+   "date": "2025-06-11"
+  },
+  {
+   "label": "Kirkland & Ellis — EPA guidance on emergency backup generators",
+   "url": "https://www.kirkland.com/publications/kirkland-alert/2025/05/new-epa-guidance-clarifies-when-data-centers-and-other-operators-may-utilize-emergency-backup",
+   "date": "2025-05-12"
+  },
+  {
+   "label": "Sidley — EPA guidance on data-center emergency generator operations",
+   "url": "https://www.sidley.com/en/insights/newsupdates/2025/05/us-epa-issues-new-guidance-on-data-center-emergency-generator-operations",
+   "date": "2025-05-01"
+  },
+  {
+   "label": "Caterpillar — CEO succession: Creed elected CEO, Umpleby Executive Chairman (IR)",
+   "url": "https://investors.caterpillar.com/news/news-details/2025/Caterpillar-Chairman-and-CEO-Jim-Umpleby-to-become-Executive-Chairman-Caterpillar-Chief-Operating-Officer-Joe-Creed-Elected-as-Caterpillars-Next-CEO/default.aspx",
+   "date": "2025-04-15"
+  },
+  {
+   "label": "Caterpillar — Creed appointed CEO (8-K)",
+   "url": "https://www.sec.gov/Archives/edgar/data/18230/000110465925034874/tm2511879d2_8k.htm",
+   "date": "2025-04-15"
+  },
+  {
+   "label": "Data Center Frontier — Crusoe adds 4.5 GW of gas, Abilene to 1.2 GW",
+   "url": "https://www.datacenterfrontier.com/hyperscale/article/55276169/crusoe-adds-45-gw-natural-gas-to-fuel-ai-expands-abilene-data-center-to-12-gw",
+   "date": "2025-03-24"
+  },
+  {
+   "label": "Caterpillar Q4 / FY2024 results (8-K exhibit)",
+   "url": "https://www.sec.gov/Archives/edgar/data/18230/000001823025000004/cat_exx991x4qx2024xearning.htm",
+   "date": "2025-01-30"
+  },
+  {
+   "label": "Motley Fool — Q4 2024 earnings call transcript",
+   "url": "https://www.fool.com/earnings/call-transcripts/2025/01/30/caterpillar-cat-q4-2024-earnings-call-transcript/",
+   "date": "2025-01-30"
+  },
+  {
+   "label": "Fool.com — Q4 2024 beats EPS, misses revenue",
+   "url": "https://www.fool.com/data-news/2025/01/30/caterpillar-beats-eps-misses-on-revenue",
+   "date": "2025-01-30"
+  },
+  {
+   "label": "Stocktwits — Q4 2024 share reaction",
+   "url": "https://stocktwits.com/news-articles/markets/equity/caterpillar-q4-tops-wall-street-earnings-expectations/chbAVzFRqP",
+   "date": "2025-01-30"
+  },
+  {
+   "label": "Caterpillar — G3500K series gas generator sets unveiled",
+   "url": "https://www.cat.com/en_US/news/engine-press-releases/caterpillar-unveils-new-g3500k-series-gas-generator-sets.html",
+   "date": "2024-12-12"
+  },
+  {
+   "label": "Waupaca Foundry (Power Progress reprint) — Lafayette groundbreaking",
+   "url": "https://waupacafoundry.com/blog/caterpillar-breaks-ground-on-large-engine-campus-expansion",
+   "date": "2024-08-19"
+  },
+  {
+   "label": "Caterpillar — Lafayette large-engine expansion groundbreaking",
+   "url": "https://www.caterpillar.com/en/news/corporate-press-releases/h/lafayette-large-engine-expansion.html",
+   "date": "2024-08-13"
+  },
+  {
+   "label": "Inside Indiana Business — Lafayette $725M expansion",
+   "url": "https://www.insideindianabusiness.com/articles/caterpillar-planning-725m-expansion-in-lafayette",
+   "date": "2024-02-23"
+  },
+  {
+   "label": "Caterpillar — hydrogen fuel-cell backup demonstration at Microsoft data center (IR)",
+   "url": "https://investors.caterpillar.com/news/news-details/2024/Caterpillar-Demonstrates-Viability-of-Using-Hydrogen-Fuel-Cell-Technology-for-Backup-Power-at-Microsoft-Data-Center/default.aspx",
+   "date": "2024-01-19"
+  },
+  {
+   "label": "Caterpillar — Jason Kaiser appointed Group President (PR Newswire)",
+   "url": "https://www.prnewswire.com/news-releases/caterpillar-appoints-new-energy--transportation-group-president-302016007.html",
+   "date": "2023-12-14"
+  },
+  {
+   "label": "Altira Group — FlexGen $25.5M Series A with Caterpillar Ventures",
+   "url": "https://www.altiragroup.com/news/flexgenr-power-systems-announces-255-million-series-funding-altira-group-ge-ventures-and/",
+   "date": "2015-08"
+  },
+  {
+   "label": "Cat — data centers industry page",
+   "url": "https://www.cat.com/en_US/by-industry/electric-power/electric-power-industries/data-centers.html"
+  },
+  {
+   "label": "Cat — C175-20 diesel generator set product page",
+   "url": "https://www.cat.com/en_US/products/new/power-systems/electric-power/diesel-generator-sets/1000028913.html"
+  },
+  {
+   "label": "Cat — C175-16 diesel generator set product page",
+   "url": "https://www.cat.com/en_US/products/new/power-systems/electric-power/diesel-generator-sets/1000028916.html"
+  },
+  {
+   "label": "Cat — 3516E diesel generator set product page",
+   "url": "https://www.cat.com/en_US/products/new/power-systems/electric-power/diesel-generator-sets/1000033111.html"
+  },
+  {
+   "label": "Cat — C175 generator set brochure (LEXE0605)",
+   "url": "https://emc.cat.com/n/api/pubdirect?media_string_id=LEXE0605-"
+  },
+  {
+   "label": "Cat — 3516E HPD brochure (LEHE22485)",
+   "url": "https://emc.cat.com/n/api/pubdirect?media_string_id=LEHE22485-"
+  },
+  {
+   "label": "Cat — 3516 spec sheet with standby rating definition",
+   "url": "https://emc.cat.com/n/api/pubdirect?media_string_id=SS-9599243-1000006026-035.pdf"
+  },
+  {
+   "label": "Cat — G3520 Fast Response 3.1 MW gas generator set product page",
+   "url": "https://www.cat.com/en_US/products/new/power-systems/electric-power/gas-generator-sets/130060.html"
+  },
+  {
+   "label": "Cat — G3520K gas generator set product page",
+   "url": "https://www.cat.com/en_US/products/new/power-systems/electric-power/gas-generator-sets/126540.html"
+  },
+  {
+   "label": "Cat — G3520K continuous spec sheet (LEHE22852)",
+   "url": "https://emc.cat.com/pubdirect.ashx?media_string_id=LEHE22852-"
+  },
+  {
+   "label": "Cat — CG260-16 gas generator set product page",
+   "url": "https://www.cat.com/en_US/products/new/power-systems/electric-power/gas-generator-sets/15969827.html"
+  },
+  {
+   "label": "Cat — G3520 critical-power natural gas generator campaign page",
+   "url": "https://www.cat.com/en_US/campaigns/npi/cat-g3520-gas-generators.html"
+  },
+  {
+   "label": "Cat — hydrogen generator sets page",
+   "url": "https://www.cat.com/en_US/by-industry/electric-power/electric-power-industries/hydrogen.html"
+  },
+  {
+   "label": "Cat — energy storage systems campaign page",
+   "url": "https://www.cat.com/en_US/campaigns/npi/cat-energy-storage-systems.html"
+  },
+  {
+   "label": "Cat — microgrids page (Master Microgrid Controller, Cat AMP)",
+   "url": "https://www.cat.com/en_US/by-industry/electric-power/electric-power-industries/microgrids.html"
+  },
+  {
+   "label": "Cat — Power Grid Stabilization (PGS) spec sheet (LEHE2650)",
+   "url": "https://emc.cat.com/pubdirect.ashx?media_string_id=LEHE2650-"
+  },
+  {
+   "label": "Cat — ATC power breaker transfer switch spec sheet (LEHE0830)",
+   "url": "https://emc.cat.com/pubdirect.ashx?media_string_id=LEHE0830-"
+  },
+  {
+   "label": "Cat — EMCP 4.4 Master Control Panel spec sheet (LEHE0891)",
+   "url": "https://emc.cat.com/pubdirect.ashx?media_string_id=LEHE0891-"
+  },
+  {
+   "label": "Cat — EMCP 4 generator controllers page",
+   "url": "https://www.cat.com/en_US/by-industry/electric-power/electric-power-products/custom-power-solutions/ep-custom-products/custom-control-systems-and-switchgear/generator-controllers/emcp-4.html"
+  },
+  {
+   "label": "Solar Turbines — turbine ratings",
+   "url": "https://www.solarturbines.com/en_US/products/turbine-ratings.html"
+  },
+  {
+   "label": "Solar Turbines — power generation product handbook (ISO ratings and heat rates)",
+   "url": "https://s7d2.scene7.com/is/content/Caterpillar/CM20190218-53670-53247"
+  },
+  {
+   "label": "Solar Turbines — Titan 130 power generation package",
+   "url": "https://www.solarturbines.com/en_US/products/power-generation-packages/titan-130.html"
+  },
+  {
+   "label": "Solar Turbines — Titan 250 power generation package",
+   "url": "https://www.solarturbines.com/en_US/products/power-generation-packages/titan-250.html"
+  },
+  {
+   "label": "Solar Turbines — Titan 350 38 MW power generation package",
+   "url": "https://www.solarturbines.com/en_US/products/power-generation-packages/titan-350-38mw.html"
+  },
+  {
+   "label": "Solar Turbines — SMT130 mobile turbomachinery datasheet",
+   "url": "https://s7d2.scene7.com/is/content/Caterpillar/CM20201215-9943b-379e0"
+  },
+  {
+   "label": "Solar Turbines — data centers: Bridge to Grid",
+   "url": "https://www.solarturbines.com/en_US/solutions/applications/data-centers.html"
+  },
+  {
+   "label": "Solar Turbines — about us",
+   "url": "https://www.solarturbines.com/en_US/about-us.html"
+  },
+  {
+   "label": "Caterpillar — officers page",
+   "url": "https://www.caterpillar.com/en/company/governance/officers.html"
+  },
+  {
+   "label": "Caterpillar — Joseph E. Creed biography",
+   "url": "https://www.caterpillar.com/en/company/governance/officers/joseph-e-creed.html"
+  },
+  {
+   "label": "Caterpillar — Jason Kaiser biography",
+   "url": "https://www.caterpillar.com/en/company/governance/officers/jason-kaiser.html"
+  },
+  {
+   "label": "Caterpillar — Melissa Busen biography",
+   "url": "https://www.caterpillar.com/en/company/governance/officers/melissa-busen.html"
+  },
+  {
+   "label": "Caterpillar — Derrick York biography",
+   "url": "https://www.caterpillar.com/en/company/governance/officers/derrick-york.html"
+  },
+  {
+   "label": "Caterpillar — Kyle Epley biography",
+   "url": "https://www.caterpillar.com/en/company/governance/officers/kyle-epley.html"
+  },
+  {
+   "label": "Cleanview — behind-the-meter data-center generation tracker",
+   "url": "https://cleanview.co/reports/behind-the-meter-data-centers"
+  },
+  {
+   "label": "DieselNet — stationary CI engine NSPS (Subpart IIII)",
+   "url": "https://dieselnet.com/standards/us/stationary_nsps_ci.php"
+  },
+  {
+   "label": "DieselNet — stationary SI engine NSPS (Subpart JJJJ)",
+   "url": "https://dieselnet.com/standards/us/stationary_nsps_si.php"
+  },
+  {
+   "label": "Investing.com — Caterpillar earnings calendar (aggregator)",
+   "url": "https://www.investing.com/equities/caterpillar-earnings"
+  },
+  {
+   "label": "The Org — Derrick York, President, Solar Turbines",
+   "url": "https://theorg.com/org/caterpillar-inc/org-chart/derrick-york"
+  }
+ ],
+ "lastUpdated": "2026-09-03",
+ "profileVersion": 1
+}

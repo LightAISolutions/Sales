@@ -1,0 +1,631 @@
+{
+ "schemaVersion": 2,
+ "slug": "caterpillar",
+ "title": "Caterpillar — Technology Study Guide",
+ "lastUpdated": "2026-09-03",
+ "sections": [
+  {
+   "id": "the-grid-drops",
+   "title": "The grid drops: what the first twenty milliseconds decide",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "This guide walks one event from end to end — the utility feed to a data hall fails, and some seconds later the hall is running on its own engines — and teaches each machine and rule you meet along the way. The transfer-switch choreography itself is taught from the electrical side elsewhere in this app; here the camera sits with the engine maker, and the question at every step is what the {{gen-set}} has to be, be rated for, and be permitted to do.",
+    "Start with the physics that sets the clock. A server power supply holds a small reserve of charge in its capacitors — its {{hold-up time}}, roughly ten to twenty milliseconds. That is the whole budget for anything electrical that happens upstream without the server noticing. No engine on earth starts inside it, so the first machine to act is never the generator: it is the {{UPS}}, whose batteries or flywheel pick up the hall within that window and hold it for minutes. The generator's job is to arrive before those minutes run out.",
+    "The {{ATS}} is the referee of the hand-off. It watches the utility voltage, waits out a short delay so a flicker does not start a multi-megawatt engine for nothing, then commands the start and moves the load once the engine is stable. Its {{transfer time}} is the number the whole design is built around, and the standard that fixes its outer bound — {{NFPA 110}} — puts the usual data-center class at ten seconds from loss of supply to load on the engine.",
+    "So the chain has three clocks nested inside each other: milliseconds for the power supply, minutes for the UPS, and about ten seconds for the engine. Every failure in this guide is a failure to keep those clocks in order — a transfer that outruns the stored energy, an engine that will not take the load when it arrives, a fleet that cannot agree on a frequency, or a permit that forbids the engine from running at all."
+   ]
+  },
+  {
+   "id": "the-ten-second-race",
+   "title": "The ten-second race: from a dead bus to a loaded engine",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "What happens inside the transfer window, in order. The times are typical for a diesel standby set; a lean-burn gas set is slower to accept load, and a turbine slower still, which is exactly why standby fleets are diesel even where the campus runs on gas.",
+   "cols": [
+    "Clock",
+    "What is happening",
+    "Who is in charge"
+   ],
+   "rows": [
+    [
+     "0 ms",
+     "Utility voltage collapses or drifts out of tolerance",
+     "The grid, or a fault on the site's own feeder"
+    ],
+    [
+     "0–20 ms",
+     "Server power supplies ride on their capacitors — the {{hold-up time}}",
+     "Physics"
+    ],
+    [
+     "Inside that window",
+     "The {{UPS}} inverter carries the critical load from its battery or flywheel; the hall notices nothing",
+     "UPS controls"
+    ],
+    [
+     "~1–3 s",
+     "The {{ATS}} times out its start delay so a momentary dip does not launch the engines, then signals start",
+     "ATS / paralleling controller"
+    ],
+    [
+     "~2–8 s",
+     "Starter cranks, fuel fires, the engine climbs to rated speed and the alternator builds rated voltage and frequency",
+     "The gen-set's own controller"
+    ],
+    [
+     "~8–10 s",
+     "Voltage and frequency are within limits: the ATS opens the utility side and closes the generator side — the {{transfer time}} is met",
+     "ATS"
+    ],
+    [
+     "The next second",
+     "The hall's load lands on the engine as a {{block load}}; speed dips and recovers, the governor settles",
+     "Engine governor and voltage regulator"
+    ],
+    [
+     "Minutes",
+     "The UPS recharges from the engine; chillers and other mechanical load are added in priority order",
+     "Paralleling controller / building management"
+    ],
+    [
+     "Hours to days",
+     "The fleet runs on stored fuel; deliveries are arranged; testing regimes assume this is rare",
+     "Operations"
+    ],
+    [
+     "Utility returns",
+     "The ATS waits out a return-to-utility delay, transfers back — open or closed — and lets the engines cool down before stopping",
+     "ATS"
+    ]
+   ],
+   "note": "The diesel's advantage is concentrated in the two middle rows: it cranks from cold and accepts a large block of load in one step. Everything else in this guide is about what changes when the engine must run for weeks instead of seconds."
+  },
+  {
+   "id": "open-versus-closed-transition",
+   "title": "Open versus closed transition",
+   "kind": "proscons",
+   "read": "4 min",
+   "intro": "Every transfer is one of two kinds, and the choice decides whether stored energy must cover a gap and whether the utility has to give permission.",
+   "cards": [
+    {
+     "t": "Open transition — break before make",
+     "meta": "The old source opens first; the load is fed by nothing for a fraction of a second",
+     "adv": [
+      "Simple, cheap, and never connects the engine to the grid, so nothing can back-feed a de-energized utility line",
+      "No {{synchronization}} needed — the engine and the grid never meet",
+      "The default for emergency-only fleets and for the return trip after an outage"
+     ],
+     "dis": [
+      "The gap is longer than the {{hold-up time}}, so the {{UPS}} or other stored energy must carry every transfer — planned test transfers included",
+      "A UPS that is on bypass, out of battery or under-sized turns a routine monthly test into an outage",
+      "Motor loads see a re-energization transient; large chillers often have to be restarted rather than transferred"
+     ]
+    },
+    {
+     "t": "Closed transition — make before break",
+     "meta": "The new source closes first; both feed the load together for under a tenth of a second",
+     "adv": [
+      "The load never sees a break, so routine tests and the return to utility are invisible to the hall — the UPS is not consumed by them",
+      "With soft loading, the engine's share can be ramped up or down gradually instead of landing as a step",
+      "The same gear can run the engines in parallel with the grid for longer, for peak shaving or {{demand response}}"
+     ],
+     "dis": [
+      "Requires {{synchronization}} — voltage, frequency, phase angle and rotation matched before the breaker closes — and a sync-check relay that refuses to close otherwise",
+      "For the parallel instant the site is a generator on the utility's network, so the utility must approve it and the protection must detect a lost grid and separate at once",
+      "More expensive switchgear, more settings to get wrong, and a utility interconnection agreement with its own conditions"
+     ]
+    }
+   ],
+   "note": "A third shape sits between them: a closed-transition transfer that stays paralleled for minutes so the engines can be loaded gently. That is the door to running standby engines as a grid resource — and, as the permit section explains, the door that changes what class of machine you are allowed to own."
+  },
+  {
+   "id": "standby-prime-continuous",
+   "title": "Standby, prime, continuous: one engine, three numbers",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The same iron carries different kilowatt ratings depending on how it will be used, and the rating is a promise about hours and average load rather than a description of the hardware. {{ISO 8528}} is the rulebook that makes one maker's kilowatt comparable with another's; every serious {{gen-set}} spec sheet quotes its ratings against it.",
+   "cols": [
+    "Rating",
+    "Hours a year",
+    "Load it is allowed to carry",
+    "Where it belongs"
+   ],
+   "rows": [
+    [
+     "{{Standby rating}} (emergency standby, ESP)",
+     "Limited — on the order of a couple of hundred, and only while the normal supply is out",
+     "Varying load, averaged well below the rating; no overload allowance at all",
+     "A data center's backup fleet: the biggest number the engine will ever wear, bought on the assumption it almost never runs"
+    ],
+    [
+     "Limited-time running power (LTP)",
+     "Capped, typically a few hundred hours",
+     "Up to the full rating for those hours",
+     "Sites that expect long but bounded outages — or standby fleets that will also test under real load"
+    ],
+    [
+     "{{Prime power}} (PRP)",
+     "Unlimited",
+     "Varying load, averaged around seventy percent of the rating, with a short overload allowance",
+     "The engine that is the site's main supply: a {{bridge power}} plant, a remote mine, an island utility"
+    ],
+    [
+     "{{Continuous rating}} (COP)",
+     "Unlimited",
+     "Constant load at up to the full rating, hour after hour",
+     "A machine run like a power station — a permanently {{islanded}} campus at steady output, or grid export"
+    ]
+   ],
+   "note": "Read down the table and the number shrinks: a set that says three megawatts standby is a smaller machine prime and smaller again continuous, because the manufacturer is promising the engine will survive the duty. This is why a backup fleet cannot simply be re-declared as the campus's main supply when the grid date slips — the rating, the maintenance interval and, as the permit section shows, the emission class all move together. Manufacturers also publish data-center-specific ratings that relax the average-load rule for critical facilities; treat those as brand vocabulary layered on the same standard."
+  },
+  {
+   "id": "block-load-and-the-swinging-hall",
+   "title": "Block load: why a data hall is a hard load to catch",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "When the transfer closes, the hall's whole demand lands on the alternator in one step. Speed dips because the engine was carrying nothing an instant ago; voltage dips because the alternator's magnetic field takes time to rebuild under current. The governor opens the fuel, the voltage regulator raises excitation, and within a second or two both recover — if the step was within what the set can take. That share of its rating is its {{block load}} capability, and it is the single spec that most separates a standby diesel from everything else. A turbocharged diesel can typically accept its full rated load in one step; the companion part of the rating standard grades how far speed and voltage may dip and how fast they must recover, and critical-load specifications call for its tightest common class.",
+    "A {{lean-burn}} gas engine cannot do that. Burning with excess air keeps the flame cool and the {{NOx}} low, but it also leaves less fuel in the cylinder to answer a sudden call for torque, and the turbocharger has to spool before the air-fuel ratio can be held. So gas sets take load in steps — a fraction of the rating at a time — and the controls add it in stages. That is acceptable for a plant that runs all day and sees load creep, and it is why the standby fleet stays diesel even at a campus whose main supply is gas: the transfer event is the one moment the whole hall arrives at once.",
+    "Ratings also assume an atmosphere. Every engine and turbine is rated at a reference temperature and altitude, and {{derating}} takes over above them: thinner or hotter air carries less oxygen per stroke, so output falls. A turbocharged engine shrugs off a fair amount of both; a gas turbine, which is a mass-flow machine, loses output steeply on a hot afternoon — the worst possible time, because that is when the chillers are working hardest. A fleet sized from nameplate rather than site-rated numbers is one of the quiet ways a backup plant ends up smaller than the hall it protects.",
+    "Then there is the load nobody used to design for. Thousands of accelerators starting, stopping or checkpointing together swing a hall's demand by tens of megawatts inside milliseconds, and no governor answers in milliseconds. A diesel that took the initial block gracefully can still be driven out of its frequency band by a load that oscillates faster than it can breathe. The industry's answer is to put something electronic between the engines and the load — the {{UPS}} on a backup site, a {{BESS}} with a {{grid-forming inverter}} or a bank of {{synchronous condenser}}s on a prime-power one — so the engines see the average and the electronics see the swing. From the engine maker's side, that buffer is a product line, not a competitor."
+   ]
+  },
+  {
+   "id": "paralleling",
+   "title": "Paralleling: a room of engines behaving as one plant",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A hall of any size needs more than one engine, and engines cannot simply be wired together. Two alternators connected out of step push against each other with the full force of the grid behind them: the one that is ahead in phase throws its load onto the one behind, currents surge, shafts take a torque shock. {{Synchronization}} is the discipline of never letting that happen — matching voltage, frequency, phase angle and phase rotation before a breaker closes — and the sync-check relay is the device that physically refuses to close until they match. The first set onto a dead bus needs no partner and closes freely; every set after it has to catch up with the bus that is already alive.",
+    "{{Paralleling switchgear}} is the equipment that does this automatically, and it is the most complex electrical gear in the building. Its controller starts the whole fleet on the {{ATS}} signal, lets the fastest set claim the dead bus, synchronizes the others onto it one by one, and then transfers the load — so the ten-second clock is met by whichever engine wins the race, while the rest arrive seconds later. Once several sets share the bus they have to agree how to split the load. The usual method is {{droop}}: each governor is set to let its speed sag slightly as its load rises, so the machines settle into shares proportional to their size instead of fighting. One machine — or the controller acting for all of them — runs in isochronous mode to pin the bus frequency exactly where it belongs.",
+    "The fleet is sized in the same grammar as the rest of the data center. {{N+1}} means one more engine than the load needs, so any single unit can fail or be down for maintenance; the more cautious buyers carry more. The spare capacity is not idle while the plant runs — it is {{spinning reserve}}, headroom already synchronized and available in seconds, which is what lets the bus absorb a unit trip or a chiller starting without a frequency excursion. This is also why an outage plan says how many engines must be running, not just how many exist.",
+    "Everything in this section is a written sequence executed by a computer, and that is its weakness as much as its strength. The order in which sets are added, the delays between steps, the frequency and voltage windows for a permitted close — all of it is settings, and settings drift as the plant is expanded, as engines are swapped, as someone tunes a nuisance alarm away. A paralleling lineup that worked on {{commissioning}} day is proven again only when it runs under real load, which is why the test calendar in the next section is not paperwork."
+   ]
+  },
+  {
+   "id": "load-shed-and-the-return-trip",
+   "title": "Load-shed priority and the return trip",
+   "kind": "prose",
+   "read": "3 min",
+   "ps": [
+    "If generation runs short — an engine fails to start, one trips under load, the fleet was never the size the hall grew into — the plant does not go dark. It sheds. {{Load shedding}} drops pre-ranked non-critical circuits in order: the office floors, then the lower-priority mechanical plant, then whole halls by contract tier, until the remaining engines can carry what is left. The list is written in advance, agreed with the tenants, and executed by the paralleling controller in a fraction of a second, because a human cannot decide it fast enough and a frequency collapse would take everything.",
+    "The add-back runs the same list in reverse as engines join the bus. Chillers are the awkward case: a data hall can ride a few minutes without cooling on thermal mass, but not many, and a large chiller motor starting is itself a block load. So the mechanical plant is staged deliberately, and a site's real thermal ride-through — not its electrical one — is often the tighter clock in a long outage.",
+    "When the utility comes back, the {{ATS}} does not trust it immediately. A return delay lets the supply prove itself stable before the load is moved home; the transfer back is open or closed like the outbound one, and a closed return spares the hall a second interruption. Then the engines run unloaded for a cool-down period, so turbochargers and exhaust systems come down in temperature gradually, and stop. The whole event is logged — start time, time to load, hours run — because those numbers feed both the maintenance schedule and, as the permit section shows, a legal limit."
+   ]
+  },
+  {
+   "id": "black-start-and-the-island",
+   "title": "Black start and the islanded campus",
+   "kind": "prose",
+   "read": "4 min",
+   "ps": [
+    "Everything so far assumed a grid to fall back from and, eventually, to return to. Take the grid away and two things change. The first is {{black start}}: with no outside power at all, the plant has to boot itself — small units or batteries energize the controls, fuel pumps and starters first, the first engine closes onto a dead bus, the next ones synchronize to it, and the load returns in stages. On a backup site this is rehearsed on test days; on an {{islanded}} campus it is the only way home from a total loss, so the plant is designed around it from the start.",
+    "The second is that the plant becomes the grid. Connected to a utility, an engine's frequency is set for it by a continent of spinning machines; islanded, the frequency is whatever the balance between generation and load makes it. Too much load and the engines slow down; too little and they speed up; the controls trim output continuously to hold sixty hertz, and there is no larger system to lean on when they get it wrong. That is why {{spinning reserve}} stops being a comfort and becomes arithmetic, why the AI load swing from the block-load section is the island's defining hazard, and why the machines that hold frequency through it — {{synchronous condenser}}s supplying {{inertia}}, or storage on a {{grid-forming inverter}} — are specified at the same table as the engines.",
+    "The device that runs all of this is a {{microgrid}} controller: the software that decides which engines run, holds the bus frequency, dispatches the battery, sheds and restores load, and manages the seams between grid-connected and islanded operation when a campus has both. Engine makers have moved into this layer because whoever controls the dispatch controls how many engines are sold and how they are run — and because a campus buying a {{bridge power}} plant wants one party accountable for the plant behaving as a plant."
+   ]
+  },
+  {
+   "id": "why-gas-is-displacing-diesel",
+   "title": "Why gas is displacing diesel — and where diesel stays",
+   "kind": "proscons",
+   "read": "5 min",
+   "intro": "For decades the data-center engine question had one answer: diesel, standby-rated, tested monthly, run a few hours a year. AI campuses that need power for years before their grid connection arrives have changed the question — not from backup to something else, but to backup plus a second, different plant. The two machines are compared here on what a campus actually buys.",
+   "cards": [
+    {
+     "t": "Diesel gen-set",
+     "meta": "The standby incumbent — 1 to 4 MW per set, cranks from cold, takes the whole hall in one step",
+     "adv": [
+      "Full {{block load}} acceptance and a start-to-load time comfortably inside the ten-second class — the transfer event is its home ground",
+      "Fuel on site, so the plant is independent of every pipeline and wire for as long as the tanks last; deliveries extend it",
+      "Highest power density per footprint and the largest installed base, dealer network and spare-parts pool of any generating machine",
+      "Permitted quickly as an {{emergency generator}} — a class the regulators created for exactly this duty"
+     ],
+     "dis": [
+      "The emergency class caps non-emergency running to a small annual allowance; run it for prime power or {{demand response}} and it must meet {{Tier 4}} with {{selective catalytic reduction}} and a particulate filter",
+      "Highest {{NOx}} and particulate emissions per hour of any option — the pollutants an {{air permit}} is written around",
+      "Fuel logistics do not scale to months: a 100 MW campus burns tanker-loads a day, and stored diesel degrades",
+      "Long idle periods and low-load running foul the engine — wet stacking — so the test regime has to load it properly"
+     ]
+    },
+    {
+     "t": "Natural-gas gen-set",
+     "meta": "The bridge and prime machine — a few MW per set, pipeline-fed, lean-burn",
+     "adv": [
+      "Duration is nearly free: the fuel lives in a pipeline network, so the plant runs for years without a tank farm",
+      "{{Lean-burn}} combustion cuts {{NOx}} at the source and cuts carbon dioxide per unit of energy by roughly a quarter versus diesel — the numbers that let a prime-rated fleet fit under a {{minor source}} permit",
+      "Modular: a fleet of engines can shut units down and keep the rest near full load, so {{part load}} costs little and {{N+1}} comes by construction",
+      "Delivery in months rather than the years quoted for large turbines, and the same dealer and service model as the diesel fleet"
+     ],
+     "dis": [
+      "Slower to accept load — it takes the hall in steps, not one block — so it is a poor transfer machine and usually keeps a diesel fleet or a battery beside it",
+      "The pipeline is a single point of failure that no amount of engine redundancy fixes; firm supply, compressed-gas trailers or on-site storage are contracted separately",
+      "Lower output per set than diesel, so more machines, more foundations and more connections for the same megawatts",
+      "Running it as {{prime power}} moves the whole plant out of the emergency class and into a permit written around hours, tons per year and aggregation across the campus"
+     ]
+    }
+   ],
+   "note": "Two other machine families compete for the prime-power role and are taught in the campus-power lessons: the gas turbine, which delivers tens of megawatts per unit and starts fast but derates in hot air and dislikes {{part load}}, and the fuel cell, which has no flame and so almost no NOx but prefers a steady load. An engine maker with a turbine subsidiary sells across that boundary — small gas engines where the campus wants granularity and permits by the block, turbines where it wants megawatts per machine — while its diesel line keeps the standby duty in both cases."
+  },
+  {
+   "id": "what-the-air-permit-constrains",
+   "title": "What the air permit constrains — from the engine's side",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "Air law regulates what leaves the stack, and the pollutant it mostly cares about here is {{NOx}}, because nitrogen oxides make ground-level ozone downwind and every metropolitan region with a data-center cluster is watching its ozone number. The first thing the permit decides is what class of machine you own. An {{emergency generator}} may run when the supply fails, plus up to a hundred hours a year for testing, maintenance and the like; in exchange it is held to an earlier emission stage and permitted with little review. Run the same engine for {{prime power}}, peak shaving or a {{demand response}} payment and it is a non-emergency engine: it must meet {{Tier 4}}, which in practice means {{selective catalytic reduction}} and a particulate filter on the exhaust, urea in a tank, and a much larger and hotter after-treatment package on the skid. The run-hour meter on the controller is a legal instrument.",
+    "The second thing it decides is how big the plant may be before the review changes character. Potential emissions are counted for the whole site, and above the thresholds the plant is a {{major source}}: modelling, public comment, best-available-control analysis, and a schedule measured in years. Below them it is a {{minor source}}, and a plant can stay below deliberately by accepting enforceable limits on hours or fuel — a synthetic minor. That is why on-site power is packaged in blocks sized to the permit rather than to the engineering, why a campus in a {{non-attainment area}} pays a premium for the lowest-emitting machine, and why the unresolved question of whether dozens of nominally separate or mobile units running together count as one source is the live legal risk over the entire category.",
+    "For the engine maker this rewrites the product. The diesel that sells into the emergency class is rated for standby, certified to the earlier stage, and optimized for block load and cost per kilowatt of a machine that seldom runs. The gas engine that sells into the non-emergency class is rated for prime or continuous duty, certified as a spark-ignition stationary engine with its own NOx limits, and optimized for efficiency and emissions over thousands of hours. The turbine that sells into the bridge-plant class carries a low-NOx combustor and, above a certain size, SCR of its own. Three different engineering targets, one campus — and the permit, not the purchasing department, is what sorts a project into them."
+   ]
+  },
+  {
+   "id": "where-a-gen-set-ends",
+   "title": "Where a gen-set ends and a bridge-power plant begins",
+   "kind": "table",
+   "read": "4 min",
+   "intro": "The same word — generator — covers two products that are bought, permitted, operated and priced differently. Reading down the columns is the fastest way to tell which conversation a campus is actually having.",
+   "cols": [
+    "Dimension",
+    "Backup gen-set fleet",
+    "Bridge-power plant"
+   ],
+   "rows": [
+    [
+     "Rating class",
+     "{{Standby rating}} — bought on the assumption it rarely runs",
+     "{{Prime power}} or {{continuous rating}} — bought to run all day for years"
+    ],
+    [
+     "Machine",
+     "Diesel, 1–4 MW per set, full {{block load}}",
+     "Natural-gas engines or gas turbines; diesel only as the backup layer beside them"
+    ],
+    [
+     "Fuel",
+     "Tanks on site, sized for a day or two, refilled by truck",
+     "A pipeline connection with firm supply contracted, plus storage or virtual pipeline as the hedge"
+    ],
+    [
+     "Hours a year",
+     "A few — tests, and the outages that actually happen",
+     "Thousands — it is the main supply until the grid arrives"
+    ],
+    [
+     "Permit",
+     "{{Emergency generator}} class, earlier emission stage, limited review",
+     "Non-emergency: {{Tier 4}} or spark-ignition limits, {{minor source}} packaging or a full {{major source}} review, tons-per-year caps"
+    ],
+    [
+     "Controls",
+     "{{ATS}} and {{paralleling switchgear}} executing an outage sequence",
+     "A {{microgrid}} controller dispatching engines, storage and, later, the grid tie — with {{black start}} as a designed case"
+    ],
+    [
+     "Stability",
+     "The {{UPS}} carries the transfer and hides the swing",
+     "The plant is the grid: {{spinning reserve}}, {{inertia}} or a grid-forming battery must hold frequency through every transient"
+    ],
+    [
+     "Who owns and runs it",
+     "The operator, through a dealer service agreement and a test calendar",
+     "Often the supplier or a power partner under a long-term service or power-delivery contract, with availability guarantees"
+    ],
+    [
+     "Where it ends",
+     "Never — it stays as long as the building does",
+     "When the interconnection energizes: the engines drop back to backup duty and the permit is amended to match"
+    ]
+   ],
+   "note": "The seam between the two is the moment a campus decides it cannot wait for the grid. From that decision onward the buyer is procuring a power station with data-hall redundancy grammar, and the vendor conversation moves from kilowatts per skid to fuel contracts, permit strategy and who is accountable when the plant does not behave as a plant."
+  },
+  {
+   "id": "where-caterpillars-products-slot-in",
+   "title": "Where Caterpillar's products slot in",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "Read the chain from the top of this guide against the catalogue. Each row is one moment in the event, the product line the company sells for it, and the spec that decides whether the product is fit for that moment. Figures are the company's own ratings; the dossier carries the sources.",
+   "cols": [
+    "Moment in the event",
+    "Cat product line",
+    "The spec that matters",
+    "What it displaces or sits beside"
+   ],
+   "rows": [
+    [
+     "The hall lands on the engine (seconds 8–10)",
+     "C175-20 / C175-16 / 3516E diesel {{gen-set}}s, 3.0–4.0 MW standby, plus the 1.5 MW D1500",
+     "Accepts 100% {{block load}} in one step; ISO 8528-5 G3 transients; full power to 55 °C without {{derating}} on the C175 nodes; Tier 2 stationary-emergency certification",
+     "Cummins, mtu (Rolls-Royce Power Systems), Rehlko in the same {{standby rating}} class"
+    ],
+    [
+     "The hand-off itself",
+     "Cat ATC transfer switches (40–5000 A), EMCP 4 controllers, EGP and XLM {{paralleling switchgear}} to 38 kV",
+     "{{Open transition}} or {{closed transition}} with parallel time held under 100 ms; sync and load share for up to 16 sets; eight stages of {{load shedding}}; automatic dead-bus coordination",
+     "The electrical incumbents' ATS and switchgear — the point of selling it in-house is one dealer owning the whole sequence"
+    ],
+    [
+     "A gas fleet that must still meet the ten-second clock",
+     "G3520 Fast Response 3.1 MW (and 2.0 / 2.5 MW nodes)",
+     "Cold start to load in under 10 seconds per {{NFPA 110}}; certified for emergency *and* non-emergency use; NOx selectable to 0.5 g/bhp-hr without after-treatment",
+     "Diesel standby sets — the first gas machines allowed to do the diesel's job at this size"
+    ],
+    [
+     "Prime power for months or years",
+     "G3520K / G3520H / G3516H high-speed gas sets (2.0–2.6 MW continuous), CG260 medium-speed to 4.5 MW, the 10 MW medium-speed platform restarting in late 2026",
+     "{{Continuous rating}} at 44–46% electrical efficiency; grid-sync in 4.5 minutes; hydrogen blends to 25%; 80,000-hour overhaul on the CG260",
+     "Wärtsilä and INNIO engines, and the fuel cell — the contested segment"
+    ],
+    [
+     "Megawatts per machine, delivered in months",
+     "Solar Turbines: Titan 130 (16.5 MW), Titan 250 (23 MW), Titan 350 (34–38 MW); PGM 130 modules; SMT130 mobile plants",
+     "Continuous-rated; SoLoNOx to 9 ppm without water; SMT130 set-up in under 12 hours on no foundation; {{part load}} and hot-day {{derating}} are the trade-offs",
+     "Heavy-frame turbines from GE Vernova, Siemens Energy and Mitsubishi Power — often on the same site, taking the base while Solar takes the balance"
+    ],
+    [
+     "The load swings faster than any engine",
+     "Cat Energy Storage PGS blocks (840–1260 kW, 448–672 kWh) on the BDP1000 grid-forming inverter; ETS blocks for hours of energy",
+     "'Generator set transient assist'; grid forming, firming and following; anti-islanding; parallel to 100 MW and beyond",
+     "Standalone {{BESS}} from the storage integrators — smaller blocks, sold with the engines"
+    ],
+    [
+     "Running the island",
+     "Cat Microgrid Master Controller, Cat ECS 100–400, Cat AMP",
+     "Dispatch of engines, storage and renewables from 10 kW to 100 MW; {{black start}}; open/closed transition and soft loading; up to 32 assets",
+     "Third-party {{EMS}} and the developer's own controls — whoever holds the dispatch decides how many engines run"
+    ],
+    [
+     "Years of running, and the slot to get the iron at all",
+     "Dealer service (150 dealers, 1,800+ branches), Customer Value Agreements, Cat Connect monitoring, rental bridge plants, Cat Financial",
+     "A continuous-duty gas set carries roughly forty times the lifetime service opportunity of a standby diesel (the company's own figure); large-engine capacity heading to ~3x 2024",
+     "The {{LTSA}} and availability-guarantee model every prime mover vendor sells — here through the channel that already services the standby base"
+    ]
+   ],
+   "note": "Notice what the table does not contain: a machine that does every job. The diesel wins the transfer, the gas engine wins the years, the turbine wins megawatts per unit, and the battery wins the milliseconds — and the company's bet is that owning all four, plus the switchgear and the controller, is worth more than being best at one."
+  },
+  {
+   "id": "megawatts-per-machine",
+   "title": "Megawatts per machine — the catalogue as a ladder",
+   "kind": "bars",
+   "read": "2 min",
+   "unit": "MW (60 Hz, company ratings)",
+   "intro": "The same portfolio read as a scale. Standby ratings for the diesels, continuous ratings for the gas engines, ISO generator-set ratings for the turbines — so the rungs are not strictly comparable, which is itself the lesson: each machine is rated for the duty it is sold into.",
+   "items": [
+    {
+     "label": "D1500 diesel",
+     "sub": "standby",
+     "v": 1.5
+    },
+    {
+     "label": "G3520K gas",
+     "sub": "continuous",
+     "v": 2.55
+    },
+    {
+     "label": "3516E diesel",
+     "sub": "standby / mission critical",
+     "v": 3.0
+    },
+    {
+     "label": "G3520 Fast Response gas",
+     "sub": "gas standby",
+     "v": 3.12
+    },
+    {
+     "label": "C175-20 diesel",
+     "sub": "standby, no fan",
+     "v": 4.0
+    },
+    {
+     "label": "CG260-16 gas",
+     "sub": "continuous",
+     "v": 4.5
+    },
+    {
+     "label": "Medium-speed gas platform",
+     "sub": "restarting Q4 2026",
+     "v": 10
+    },
+    {
+     "label": "SMT130 mobile turbine",
+     "sub": "ISO",
+     "v": 16
+    },
+    {
+     "label": "Titan 130",
+     "sub": "ISO gen-set",
+     "v": 16.53
+    },
+    {
+     "label": "Titan 250",
+     "sub": "ISO gen-set",
+     "v": 23.1
+    },
+    {
+     "label": "Titan 350",
+     "sub": "ISO gen-set, 39 MW class",
+     "v": 38
+    }
+   ],
+   "note": "Above the top rung sit the heavy frames — hundreds of megawatts each — from the three turbine majors, and the ladder explains the market structure in one glance: a campus that needs a gigawatt in eighteen months either stacks a great many of these rungs, or waits years for a machine that is not on the ladder at all."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "4 min",
+   "ps": [
+    "**Open transition with nothing behind it.** The transfer breaks before it makes, and the gap is longer than any server's {{hold-up time}}. If the {{UPS}} is on bypass for maintenance, has a tired battery string, or was never sized for the hall the way it grew, the monthly test — not the outage — is what drops the load. Owned by the operator and the electrical contractor who wrote the test procedure.",
+    "**Generators that will not synchronize.** {{Paralleling switchgear}} is a control problem with a human-written sequence. A governor set to the wrong {{droop}}, a voltage window tightened to silence a nuisance alarm, an engine swapped for a slightly different model, a sync-check relay that refuses a close nobody can explain — the fleet starts on time and the bus stays empty. It presents as an electrical fault and is a settings fault, and it is proven only under real load.",
+    "**Load that is not shed in priority.** Generation runs short and the {{load shedding}} list is stale: a hall that was empty when the list was written is now full, the chillers were re-fed from a different bus, a tenant's tier changed. The controller sheds what it was told to shed, the frequency collapses anyway, and everything goes. The list is a document that has to be re-checked every time the building changes.",
+    "**Rated for, read as operating at.** Nameplate kilowatts at reference conditions against a July afternoon at altitude: {{derating}} makes the fleet smaller than the hall, and a turbine-based plant loses far more than an engine-based one on exactly the days the cooling load peaks. Prime-rated iron run at {{part load}} to keep reserve is another version — a large turbine at half output is neither efficient nor, on some permits, compliant.",
+    "**The permit lags the shell.** Buildings finish in months; an {{air permit}} for a non-emergency plant takes as long as the review it triggers, and a {{major source}} review is measured in years. A campus that assumed its standby diesels could carry it as a bridge discovers the {{emergency generator}} class forbids exactly that. The permit is for what comes out of the stack, not for the building — and it belongs to the developer and its power partner, not to the engine maker.",
+    "**The fuel is a supply chain.** Diesel scales to hours; a pipeline scales to years but is a single point of failure that {{N+1}} on the engines does nothing to cover. Firm supply, on-site storage and a tested black-start path are separate line items, and the one that was not bought is the one the island fails on.",
+    "**The slot slips.** Large engines and turbines are now sold against multi-year order books, and a reserved production slot is a schedule asset the way a substation transformer is. A bridge plant that is late is a campus that earns nothing, and the engine order is on the critical path with the {{interconnection queue}} it was meant to bypass."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Why can no generator take over inside a server's hold-up time, and what does instead?",
+     "a": "Hold-up time is the ten to twenty milliseconds a server power supply rides on its own capacitors; an engine needs seconds to crank and stabilize. The UPS bridges the gap from its battery or flywheel and holds the load for minutes, and the generator's job is to arrive before those minutes run out."
+    },
+    {
+     "q": "What does the ten-second figure in the emergency-power standard actually measure?",
+     "a": "The whole transfer: sensing the failure, waiting out a short delay so a flicker does not start the engines, cranking, reaching rated speed and voltage, and closing the transfer switch — loss of supply to load on the engine. It is an outer bound the design must beat, and stored energy has to cover all of it."
+    },
+    {
+     "q": "Open versus closed transition — what changes for the UPS and for the utility?",
+     "a": "Open transition breaks before it makes, so the UPS must carry the gap on every transfer, tests included; nothing ever back-feeds the grid. Closed transition makes before it breaks, so the hall sees no gap and the UPS is not consumed — but the engine must be synchronized to the utility first and the utility must permit the momentary parallel."
+    },
+    {
+     "q": "One engine, three kilowatt numbers: what differs between standby, prime and continuous?",
+     "a": "Nothing in the hardware — everything in the promise. Standby allows the highest number for limited hours while the supply is out; prime allows unlimited hours at a varying load averaging around seventy percent; continuous allows unlimited hours at a constant full load. The number shrinks as the duty gets harder, so a standby fleet cannot be re-declared as the site's main supply."
+    },
+    {
+     "q": "Why does a campus that runs on gas still keep a diesel standby fleet?",
+     "a": "Block load. A diesel accepts the whole hall in one step; a lean-burn gas engine burns with excess air to keep NOx low and takes load in stages. The transfer event is the one moment the entire load arrives at once, and that is diesel's home ground."
+    },
+    {
+     "q": "What has to match before two alternators may be connected, and what happens if it does not?",
+     "a": "Voltage, frequency, phase angle and phase rotation. Closed out of step, the machine that is ahead throws its load onto the one behind: currents surge and the shafts take a torque shock. The sync-check relay exists to refuse the close, and the first set onto a dead bus is the only one that needs no partner."
+    },
+    {
+     "q": "What is droop, and why does one machine run isochronous?",
+     "a": "Droop lets an engine's speed sag slightly as its load rises, so several engines sharing a bus settle into proportional shares instead of fighting. One machine — or the paralleling controller acting for all — holds speed exactly constant, isochronous, so the bus frequency itself stays pinned."
+    },
+    {
+     "q": "What is spinning reserve on an islanded campus, and why is it arithmetic rather than comfort?",
+     "a": "Engines already running and synchronized but loaded below capability, so their headroom is available in seconds. Islanded, the frequency is whatever the balance between generation and load makes it, with no grid to lean on — so the reserve is what absorbs a unit trip or a load swing without the frequency wandering out of what the hall tolerates."
+    },
+    {
+     "q": "Why does running a backup engine for a demand-response payment change what machine you own?",
+     "a": "It moves the engine out of the emergency-only class, which is permitted lightly and held to an earlier emission stage in exchange for running only during outages plus a small testing allowance. A non-emergency diesel must meet Tier 4 — SCR and a particulate filter — and its hours and tons per year become permit terms."
+    },
+    {
+     "q": "How does an air-permit threshold end up setting the physical size of a power block?",
+     "a": "Potential emissions are counted for the site, and above the major-source thresholds the review becomes years of modelling and public comment. Plants are packaged to stay under the line — a minor source, sometimes by accepting enforceable hour or fuel limits — so the block size follows the permit, not the engineering."
+    },
+    {
+     "q": "Where does a gen-set end and a bridge-power plant begin?",
+     "a": "At the decision not to wait for the grid. A backup fleet is standby-rated diesel, emergency-class, running a few hours a year under an ATS sequence. A bridge plant is prime-rated gas engines or turbines running thousands of hours under a non-emergency permit and a microgrid controller, with fuel contracted, frequency held by reserve or storage, and an end date when the interconnection energizes."
+    },
+    {
+     "q": "Why does a gas turbine lose output on a hot afternoon and an engine mostly does not?",
+     "a": "A turbine is a mass-flow machine: hot, thin air carries less oxygen per second through it, so power falls steeply with temperature and altitude. A turbocharged engine compresses its intake air and shrugs off much of the same change — which matters because the hottest afternoon is also the chillers' peak."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "drill",
+   "items": [
+    {
+     "q": "A hall browned out for 40 milliseconds during a monthly generator test and one row of servers rebooted. The most likely cause is:",
+     "c": [
+      "The diesel failed to accept block load",
+      "An open-transition transfer with the UPS on bypass or under-sized",
+      "The engines failed to synchronize",
+      "The air permit limited run hours"
+     ],
+     "a": 1,
+     "why": "Forty milliseconds is longer than any server's hold-up time and shorter than any engine start. Only a break-before-make gap with nothing bridging it produces that signature — the engines were never the problem."
+    },
+    {
+     "q": "A three-megawatt standby-rated diesel is to become a campus's main supply while its grid date slips two years. Which statement is right?",
+     "c": [
+      "It can, at three megawatts, if the fuel deliveries are arranged",
+      "It carries a smaller prime rating, and running it as prime power moves it out of the emergency class into Tier 4 territory",
+      "Only the maintenance interval changes",
+      "Standby and prime are marketing labels for the same duty"
+     ],
+     "a": 1,
+     "why": "The rating standard ties the kilowatt number to hours and average load, so the same engine is smaller prime than standby — and the air permit ties the emission class to the duty, so a prime-running diesel must meet the strictest stage."
+    },
+    {
+     "q": "Why do lean-burn gas engines take the load in steps rather than one block?",
+     "c": [
+      "Their alternators are smaller",
+      "Burning with excess air leaves less fuel in the cylinder to answer a sudden torque demand, and the turbocharger must spool first",
+      "Gas pipelines cannot deliver fuel fast enough",
+      "Regulations forbid block loading of gas engines"
+     ],
+     "a": 1,
+     "why": "Lean combustion is the NOx strategy, and its cost is transient response. That trade is why the standby fleet stays diesel at a campus whose main supply is gas."
+    },
+    {
+     "q": "Two generators were closed onto the same bus and one immediately tripped on overcurrent while the other's shaft took a shock. What was skipped?",
+     "c": [
+      "Load shedding",
+      "Cool-down",
+      "Synchronization — matching voltage, frequency, phase angle and rotation before the close",
+      "The return-to-utility delay"
+     ],
+     "a": 2,
+     "why": "Out-of-step closing throws one machine's load onto the other with the full force of the bus behind it. The sync-check relay is the device that should have refused the close."
+    },
+    {
+     "q": "Four engines share an islanded bus. Three run in droop and one runs isochronous. What is the isochronous machine doing?",
+     "c": [
+      "Carrying no load, as spinning reserve",
+      "Setting the bus frequency exactly, while the droop machines settle into proportional load shares",
+      "Charging the battery",
+      "Acting as the sync-check reference for black start"
+     ],
+     "a": 1,
+     "why": "Droop lets machines share load without fighting; something still has to pin the frequency. That is the isochronous unit — or the controller acting for all of them."
+    },
+    {
+     "q": "Which of these is the single point of failure that N+1 on the engines does nothing to cover at a gas-fired bridge plant?",
+     "c": [
+      "The paralleling controller",
+      "The pipeline feeding the whole fleet",
+      "The utility transformer",
+      "The chillers"
+     ],
+     "a": 1,
+     "why": "Redundant engines share one fuel supply. Firm supply contracts, on-site storage and virtual pipelines exist precisely because the pipe is the exposure, not the machines."
+    },
+    {
+     "q": "A developer packages its on-site plant in blocks that stay just under a permitting threshold. What is the developer avoiding?",
+     "c": [
+      "Higher fuel prices",
+      "Major-source review — modelling, public comment and best-available-control analysis on a schedule measured in years",
+      "Tier 4 certification of the diesels",
+      "Utility interconnection charges"
+     ],
+     "a": 1,
+     "why": "Below the thresholds the plant is a minor source and the permit is far lighter and faster. The block size follows the permit; the unresolved question is whether many such blocks running together count as one source."
+    },
+    {
+     "q": "On the hottest afternoon of the year a turbine-based bridge plant fell short of the hall's demand while the engine-based backup fleet next door would not have. The mechanism is:",
+     "c": [
+      "Turbines cannot run in daylight",
+      "Derating — a mass-flow machine loses output steeply in hot, thin air, while a turbocharged engine compresses its intake and loses much less",
+      "The turbines were emergency-class",
+      "Load shedding was disabled"
+     ],
+     "a": 1,
+     "why": "Ratings assume a reference atmosphere. Turbines derate hardest on exactly the days the cooling load peaks, which is why a fleet must be sized from site-rated numbers rather than nameplate."
+    },
+    {
+     "q": "The utility feed returns after a six-hour outage. What does a well-set transfer scheme do first?",
+     "c": [
+      "Transfers back immediately to save fuel",
+      "Waits out a return delay so the supply proves stable, then transfers — closed if it can — and cools the engines down unloaded before stopping",
+      "Sheds load",
+      "Black-starts the bus"
+     ],
+     "a": 1,
+     "why": "A returning utility is not trusted at once; a closed return spares the hall a second break; and the cool-down protects turbochargers and exhaust systems. The hours run are then logged against both maintenance and the permit."
+    }
+   ]
+  }
+ ]
+}
