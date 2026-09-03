@@ -6,6 +6,94 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-02 09:36:11 PM EST
+**Repo version:** v04.30r (started at v04.29r — one push commit)
+**Branch:** `claude/classroom-curriculum-design-woh4a7` (merged to `main` by the auto-merge workflow)
+**Model:** Fable 5.1 — a planning session, by the standing decision that planning runs on Fable and authoring on Opus 5
+
+**What we worked on — the Classroom curriculum design (`3cf0254` v04.30r, docs only):**
+
+- **Confirmed the drill card renders** on the redeployed Classroom GAS (v01.10g) — the v04.29r fix held
+- **Wrote `repository-information/CLASSROOM-CURRICULUM-PLAN.md`** (474 lines). Re-verified every corpus
+  number from the files (89 dossiers · 62 study guides / 802 flashcards · 8 projects · 490 graph edges ·
+  44 concepts · 7 guidance modules · 4 reports) and mapped fourteen topic clusters to a public /
+  guidance / thin verdict. Argued the two existing tracks are the right *lanes* and the wrong *cut*, and
+  proposed **five tracks in three lanes**: `bess-foundations` extended to 6 lessons; new
+  `electrical-foundations` (5); `aidc-grid-to-chip` replacing `aidc-power-primer` (8 — the equipment
+  walk in physical order); new `aidc-campus` (4); new `market-access` (7). **25 new lessons, 23 public
+  and 7 guidance-gated, none report-derived**, each with a permanent id, `short`, `group`, the
+  `provenance.inputs[]` it would pin, the folded gate, a section-by-section outline and a rationale
+- **Teaching order** fixed against how `clStudyNext_` actually walks (tracks in `clTracks_()` order,
+  then each track's `lessons[]`), with a note that a developer session may re-sequence registries
+  (P5 binds only pipeline runs)
+- **A 14-row grid-to-chip failure-point map** (stage · failure · why there · owner · source guide) as
+  the spec for the `where-the-chain-breaks` capstone; every equipment lesson carries a `where-it-fails`
+  section
+- **A 12-entry gap register** (G1–G12): the cheapest lever is ~30 concepts-registry entries; the ones
+  that matter most are dossiers for a gen-set OEM, a UPS vendor, a switchgear vendor and four utilities;
+  two guidance modules (large-load interconnection; the grid-equipment shortage)
+- **The cut line:** first five = `the-fence-line`, `bridge-power`, `the-800-vdc-shift`,
+  `the-control-stack`, `where-bess-plugs-in`; second and third waves listed; **reasoned recommendation
+  against report-derived modules** (point-in-time, trivia-prone, already readable in the lens)
+- Pre-Commit/Pre-Push run in full: README tree row + timestamp, CHANGELOG v04.30r with the verbatim
+  prompt (`Sections: 83/100`), repo version bump. No GAS or page version touched; REPO-ARCHITECTURE
+  needed no change (individual docs are not diagrammed)
+- **Answered "which model for the next step":** Opus 5 Extra (the standing build directive; the task is
+  voice-matching authoring, not judgment-limited; Fable is 2× the per-token price)
+
+**Where we left off:**
+
+- The plan is merged to `main` and is the spec for every Classroom authoring session from here. Nothing
+  in it is built: `Classroom.gs` untouched, no lesson JSON, no track changes, no concepts entries
+- **Three calls the plan leaves to the developer** (§8 item 11): keep or retire the track id
+  `aidc-power-primer` (naming only); whether G5 (four utility dossiers) is worth commissioning before
+  track 5's guidance lessons; whether the first five lessons come before or after G1
+- **Heads-up carried in the plan:** `bess-bankability-2026-08` has `reviewBy` **2026-10-01**, so any
+  lesson stamped on it goes "⚠ review due" within a month — one reason the two bankability lessons are
+  third-wave; the quarterly guidance review should land first
+- The earnings desk Routine's first real run (weekdays 13:00 UTC) and the weekly C2 pipeline
+  (Wed 11:00 UTC) are both live and unreviewed since the last session's notes; neither was touched here
+- Sessions D and E of `IMPROVEMENT-PLAN.md` remain not started
+
+**Key decisions and positions taken:**
+
+- **Planning on Fable 5.1, authoring on Opus 5 Extra** — restated and applied; one lesson per authoring
+  session is the safe unit (the five existing lessons average ~290 lines of strict JSON)
+- **Lanes kept, tracks re-cut** — the `group` vocabulary (Technology Foundations · The AI Data-Center
+  Wave · Market Access & Bankability) stays; the *tracks* are re-cut into five because track length is a
+  learning-design number and both markets share an untaught electrical floor
+- **No report-derived modules** — reports belong in the weekly briefing feed, not in modules
+- **Technologies turned down as lessons** (solar PV physics, hydrogen, wind, nuclear/SMR, EV charging,
+  roadmap chemistries, flywheels, HVDC) are kept as sections where they answer a specific question
+- Section-kind variety treated as a check: no lesson runs two `prose` sections back to back; `bars` only
+  where the source states numbers; `ledger` not planned for any lesson
+
+**Active context:**
+
+- Repo **v04.30r** · Classroom **v01.07w / v01.10g** (deployed, drill confirmed) · Profiler
+  **v01.80w / v01.34g** · Scraper **v01.71w / v01.99g**
+- Capacity: repo CHANGELOG **83/100**; `Profilerhtml` 48/50; `Scrapergs` 46/50
+- Curriculum today: still 5 lessons / 2 tracks in `Classroom.gs`; the plan proposes 30 / 5
+- Routines unchanged (6): earnings desk, C2 pipeline, daily ACL, monthly drift, quarterly guidance
+  review, quarterly private sweep. Ledger `coveredThrough` `2026-09-01`
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md empty
+
+**Recommendation for next session:**
+
+- **Run gap G1 on Opus 5 Extra:** add the ~30 concepts listed in `CLASSROOM-CURRICULUM-PLAN.md` §6 G1
+  to `live-site-pages/profiler-data/profiler-concepts.json` in the registry's existing voice (two
+  sentences, high-school-STEM baseline, industry context), then run
+  `python3 scripts/check-classroom-content.py` to confirm no `{{term}}` warnings, bump nothing but the
+  repo version, and push. It is one session, needs no schema change, and removes a lesson-local glossary
+  from every track-2 and track-3 lesson before any of them is written. The first authored lesson
+  (`the-fence-line`, plan §3.3) follows in its own Opus 5 session
+
+**To continue:** type `implement gap G1 from CLASSROOM-CURRICULUM-PLAN.md`
+
+## Previous Sessions
+
+### Session — 2026-09-02 (The drill — Sessions A/B/C of IMPROVEMENT-PLAN.md, v04.29r)
+
 **Date:** 2026-09-02 08:17:50 PM EST
 **Repo version:** v04.29r (started at v04.24r — five push commits)
 **Branch:** `claude/session-a-earnings-desk-y6ns6e` (all five merged to `main`)
@@ -106,49 +194,5 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
   planning run on Fable 5.1 can happen in parallel in its own session; Session D waits.
 
 **To continue:** type `redeploy check — confirm the drill card renders`
-
-## Previous Sessions
-
-### Session — 2026-09-02 (Three-app architecture review — IMPROVEMENT-PLAN.md, v04.24r)
-
-**Date:** 2026-09-02 04:58:20 AM EST
-**Repo version:** v04.24r *(unchanged — this session's plan commit was documentation-only by instruction, no version bump)*
-**Branch:** `claude/three-app-architecture-review-e1on3o`
-
-**What we worked on (one docs-only push, commit `25b279c`, merged to `main` — the three-app architecture review):**
-
-- **`repository-information/IMPROVEMENT-PLAN.md`** (296 lines, §0–§9) — the improvement plan for Profiler · Scraper · Classroom, written from a full read of all six app source files, the four rules files, both schemas, the Phase 6 design + committer contract, the brochures, every file in `profiler-data/`, and the **live Routine inventory including prompts** (27 active, 33 completed). §0 is a measured ground-truth table; §1 the diagnosis; §2 the three flagship proposals; §3 second tier; §4 stop/remove/freeze; §5 the C3→C6 sequencing verdict; **§6 a collision register** naming every rule or recorded decision a proposal touches and the argument for reconsidering it; **§7 a session-by-session build order (A–E)**; §8 what was examined and left alone; **§9 facts to verify before building**
-- **The three flagship proposals:** **P1** build the retention loop now — pull **C4 ahead of C3** (SM-2 drill over the 802 study-guide flashcards + 53 lesson items, sheet-backed history in a `ClassroomDrill` tab, a "due today" landing card; prerequisite: both progress stores change from booleans to **completion dates** so the schema-promised "changed since you learned this" delta can render); **P2** deltas not documents — Profiler adopts Classroom's revision discipline (computed "what changed in vN" strip from the archive, a per-account mark-as-read stamp + roster badge, optional authored `revisions[]` at schema v8); **P3** one **earnings desk** Routine driven by `repository-information/profiler-refresh-calendar.json`, replacing the 21 hand-armed one-shot refreshes and carrying the corpus token once
-- **Second tier:** S1 token-gated **notes route** on Profiler.gs (`pending` / `triage` / `recent`) so unattended refreshes can weigh field notes — Classroom pipeline explicitly *not* a consumer (contract §4.3 intact); S2 corpus token in the C2 prompt, decided after 2–3 measured runs; S3 cross-links (digest → dossier, all mastheads ↔ Scraper); S4 report `indicators[]` as Scraper topic seeds; S5 quizzes only via `profiler prep`. **Removals/freezes:** R1 stop hand-arming one-shots; R2 audit-then-remove Scraper's legacy Projects machinery (~1,900 GAS + ~1,700 HTML lines, three AI-spend paths); R3 a one-quarter freeze on production-side building; R4 doc/prompt drift
-- **Evidence the plan stands on** (all measured 2026-09-02): the **seven August post-earnings triggers fired — six `SUCCEEDED`, IREN `ABANDONED` — and none re-armed a successor or wrote the fallback reminder**; `profiler-app.md` still lists them as armed. **0 of 21 armed refresh prompts mention the corpus bridge** (they predate it); the Tesla prompt says "schema-v2" and "mirror via add_repo" (both superseded). The **C2 prompt states "CORPUS TOKEN: none is supplied"**. Both progress stores hold `{sec: true}`. All 89 dossiers carry `lastUpdated` 2026-08-30 (mass pass). 62 study guides, 0 quiz sections. The Scraper brochure teaches 👍/👎 rating and Calibrate, retired by `SCRAPER_FEEDBACK_UI_ENABLED = false` (D3, 2026-08-27)
-- **Delivered in chat, not committed:** the copy/paste Opus 5 prompt for Session A of the plan
-
-**Where we left off:**
-
-- `25b279c` merged to `main` by the auto-merge workflow; `main` at `7a451ba`. This Remember-session commit is the branch's second push
-- **Deliberately skipped for the plan commit, per the developer's "that file and nothing else":** Pre-Commit [PC-CHANGELOG] #6 (no CHANGELOG entry for `IMPROVEMENT-PLAN.md`), [PC-README-TREE] #7 (no README tree row), [PC-README-TIMESTAMP] #10, [PC-REPO-VERSION] #15. **The next push commit should fold these in** — the plan's Session A is the natural place
-- **Classroom's first real pipeline run (today 11:06 UTC / 07:06 ET) is still unreviewed** — carried over from two sessions now; §9 item 1 of the plan predicts a `STAND-DOWN`
-- Nothing else pending
-
-**Key positions taken (proposals, not decisions — the developer decides):**
-
-- **Documentation only.** No code, schema, rules file, changelog, README or version file changed; every collision with a recorded decision is named in §6 with its argument, never made silently
-- **Order of build:** Session A = P3 (small, operational, stops a failure already happening) before P1 (the flagship); then B = completion dates + computed dossier deltas; C = the drill; D = seams (S1, S3, S4); E = the R2 audit; then C3 as designed
-- **Decision 6 honoured:** guidance items stay out of the drill until C3 — no interim Profiler→Classroom guidance route
-- **S1 respects M3's purpose** (notes never in repo or on Pages) and argues from the corpus-token precedent; the Classroom pipeline is excluded as a consumer
-
-**Active context:**
-
-- Repo **v04.24r** · Classroom **v01.04w** / **v01.07g** · Scraper **v01.71w** / **v01.99g** · Profiler **v01.79w** / **v01.33g** — **no app code changed this session**
-- Capacity unchanged: repo CHANGELOG **77/100**; `Scrapergs.changelog.md` **46/50**; `Classroomgs.changelog.md` **7/50**; `Profilerhtml.changelog.md` **50/50** — the next Profiler page change forces its rotation
-- Ledger `coveredThrough` `2026-09-01`, `lastRun` `null`. Routines: 21 one-shot refreshes (2026-10-15 → 11-25) + quarterly private sweep + monthly drift check + quarterly guidance review + daily ACL check + weekly C2
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md both empty
-- **Still flagged, not fixed:** README tree root line shows `v01.03r`; `ENTERPRISE-SETUP.md` token record stale; the template-wide first-sign-in self-denial (Setup Step 14 trap)
-
-**Recommendation for next session:**
-
-- Run **Session A of `IMPROVEMENT-PLAN.md` §7 (the earnings desk)** on Opus 5: first verify §9 items 1–3 (today's pipeline report; what the seven August refresh sessions did and why IREN was abandoned; whether the 08-30 dossiers carry the H1/Q2 figures), then seed `repository-information/profiler-refresh-calendar.json` from the 21 armed prompts + the 7 fired ones, create the one desk Routine with the corpus token pasted at creation and nowhere else, hand-fire it on a no-due day to confirm a silent stand-down, retire the 21 one-shots, rewrite "Scheduled Refreshes" in `profiler-app.md` around the calendar, fix the R4 drift, and fold in the CHANGELOG entry + README tree row the plan commit skipped. No app code in that session
-
-**To continue:** type `implement Session A of IMPROVEMENT-PLAN.md`
 
 Developed by: LightAISolutions
