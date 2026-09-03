@@ -1,4 +1,4 @@
-var VERSION = "v01.15g";
+var VERSION = "v01.16g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3621,6 +3621,414 @@ function clLessonControlStack_() {
 };
 }
 
+function clLessonWhereBessPlugsIn_() {
+  return {
+ "schemaVersion": 1,
+ "id": "where-bess-plugs-in",
+ "type": "module",
+ "title": "Where BESS Plugs In: The Three Sockets",
+ "short": "Sell to the grid, not to the data centre. The three places a battery enters the AI buildout, the rules that made one of them, and the honest no in the third.",
+ "group": "The AI Data-Center Wave",
+ "updated": "2026-09-03",
+ "reviewBy": "2026-12-10",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "guidance",
+    "ref": "guidance:power-infra-aidc-2026-08",
+    "date": "2026-08-24",
+    "note": "the orienting rule and the three sockets; front-of-meter versus behind-the-meter as the qualification question; queue against tariff-committed megawatts; the 2026-28 dated gates; and the seller's vocabulary discipline"
+   },
+   {
+    "kind": "public",
+    "ref": "study:samsung-sdi",
+    "date": "2026-08-21",
+    "note": "a UPS battery is a power battery rather than an energy battery: float duty, what that flips in the optimisation, why lithium displaced lead-acid on floor area, and why the niche is decided by certification and rate capability rather than by price"
+   },
+   {
+    "kind": "public",
+    "ref": "profile:on-energy",
+    "date": "2026-08-30",
+    "note": "the medium-voltage AI UPS as a defined product category — where it sits, what it buffers, and the compliance attributes designed into it"
+   },
+   {
+    "kind": "public",
+    "ref": "project:colossus",
+    "date": "2026-09-02",
+    "note": "the campus identity behind the second socket's other worked example"
+   },
+   {
+    "kind": "public",
+    "ref": "graph:profiler-graph",
+    "date": "2026-09-02",
+    "note": "the buffering and medium-voltage-UPS edges the second socket is evidenced by: the scale, the timing and the stated compliance attributes of two campus deployments"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-03",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "3 sockets",
+   "v": "and only one is the core lane",
+   "sub": "front-of-meter · campus buffering · inside the hall"
+  },
+  {
+   "k": "~474 GW",
+   "v": "asked of one grid",
+   "sub": "against a tariff filter that left 5.6 GW actually signed elsewhere"
+  },
+  {
+   "k": "Dec 10, 2026",
+   "v": "when this lesson expires",
+   "sub": "the Texas queue repricing lands and the forecasts have to be re-verified"
+  },
+  {
+   "k": "MW ≠ MWh",
+   "v": "the fastest credibility loss",
+   "sub": "duration is simply one divided by the other"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "FOM",
+   "d": "Front of meter: a resource that interconnects on the utility's side of the customer meter, like a small power plant, and is paid by wholesale markets or by contract. Its counterpart is behind-the-meter equipment sitting on a customer's own site. Which side of the meter a project sits on decides the buyer, the contract, the rulebook and the sales cycle — which is why the question opens nearly every qualification call."
+  },
+  {
+   "t": "minimum take",
+   "d": "A clause in a large-load tariff obliging a customer to pay for a stated fraction of its contracted capacity whether or not it uses it — 85 per cent is the national norm. It is how a utility turns a speculative load into a financeable one, and it is also the filter that separates a signed customer from a queue entry."
+  },
+  {
+   "t": "IBR",
+   "d": "Inverter-based resource: anything that reaches the grid through power electronics rather than through a spinning machine — solar, wind, and battery storage. The category exists because inverters behave differently from generators during a disturbance, so the rules written for them are separate rules."
+  },
+  {
+   "t": "ride-through",
+   "d": "Staying connected and operating through a grid disturbance instead of protectively disconnecting. It matters at scale for a blunt reason: if every connected resource trips at the first sign of trouble, a local fault becomes a system-wide one — so what used to be a courtesy is becoming an obligation."
+  },
+  {
+   "t": "curtailment",
+   "d": "Being instructed to reduce output or consumption because the network cannot accommodate it at that moment. For a generator it means power it cannot sell; for a very large load it means a contractual duty to back off — and a protocol saying under what conditions, for how long, and who decides."
+  },
+  {
+   "t": "power battery",
+   "d": "A battery optimised for how fast it can deliver, not for how much it holds. It is sized by discharge rate against a short duration, and it is judged on rate capability and on how long it survives sitting fully charged. A backup supply's battery is the archetype."
+  },
+  {
+   "t": "energy battery",
+   "d": "A battery optimised for how much it holds and how many times it can be emptied and refilled. It is sized by hours of duration and judged on cycle life and cost per stored unit. A grid storage container is the archetype, and it is the near-inverse of a power battery in almost every design choice."
+  },
+  {
+   "t": "float service",
+   "d": "The duty cycle of a standby battery: held at high charge for years, discharging rarely but hard when finally called. It inverts what the cell is optimised for — calendar life at full charge and rate capability become the specification, and deep-cycle count almost stops mattering."
+  },
+  {
+   "t": "NOGRR 245",
+   "d": "The ERCOT rule change setting ride-through obligations for inverter-based resources, storage included. Worth learning as a pair with the numerically adjacent rule for large electronic loads, because they govern opposite sides of the same interface and confusing them in a technical room is expensive."
+  },
+  {
+   "t": "PRC-029-1",
+   "d": "The North American reliability standard making ride-through mandatory for inverter-based resources, storage included — the national counterpart to what a single grid operator had already required regionally. It is the point at which ride-through stops being a regional differentiator and becomes a baseline everywhere."
+  },
+  {
+   "t": "safe harbor",
+   "d": "Starting a project far enough — by spending or by taking delivery of equipment — to lock in the tax rules that applied at that moment, even if the rules later change. It creates a cohort of owners still buying under older terms, and therefore a channel whose procurement constraints differ from everyone else's."
+  }
+ ],
+ "sections": [
+  {
+   "id": "sell-to-the-grid",
+   "title": "Sell to the grid, not to the data centre",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "This is the payoff of the whole AI data-centre lane, and it opens with a sentence that reads like a disappointment before it reads like a strategy: **the largest storage buildout the AI boom causes is ordinary front-of-meter storage, judged on ordinary storage criteria.** Not AI-branded, not rack-shaped, not sold into a data hall. Utilities and independent power producers procure storage because load is growing and the network has to absorb it, and that procurement happens whether or not any particular campus ever buys a battery. A seller who chases the campus and ignores the utility has walked past the volume to reach the story.",
+    "The distinction that organises everything after this is which side of the meter a project sits on. A grid-scale battery interconnects like a small power plant — **{{FOM}}**, in front of the customer's meter, paid by markets or by contract. Equipment on a customer's own site is **{{behind-the-meter}}**: a different business, with different buyers, different contracts and a different rulebook. It is a boring question and it opens nearly every qualification call, because the answer changes who signs, how long it takes, and which regulator is in the room.",
+    "The second discipline is arithmetic, and it is where new sellers lose a room fastest. **A megawatt is a rate and a megawatt-hour is an amount** — the width of the pipe against the size of the tank — and {{duration}} is simply one divided by the other, so a 100 MW / 400 MWh system is a four-hour battery. The earlier track lesson taught the five different numbers a campus may call *megawatts*; this is the sibling error on the storage side, and it is the fastest credibility loss available.",
+    "The third is that **a queue is not a pipeline.** One grid operator carries something like 474 GW of large-load requests — roughly five times its all-time peak — and another utility has fielded about 190 GW of inquiries against a 37 GW system. Those numbers are real requests and they are not demand. What separates the two is the {{large-load tariff}}: one utility's terms — twelve-year contracts, a ramp schedule, {{minimum take}} at 85 per cent, exit fees and collateral — collapsed a 30 GW pipeline into about **5.6 GW of signed, financially committed load.** That pair of numbers is the one to remember whenever somebody quotes a queue at you. Certified and contracted megawatts are purchase orders on a twelve-to-thirty-six-month fuse; queue gigawatts are press releases.",
+    "So the orienting rule is not modesty, it is targeting. Sell to the grid, because that is where the volume, the repeat procurement and the criteria you can actually compete on are. Then, and only then, look at the two places the campus itself might buy — which is what the rest of this lesson is about."
+   ],
+   "sales": "Two questions, asked early, sort almost every AI-adjacent storage lead. **Which side of the meter?** and **is that a queue number or a committed one?** The first tells you the buyer, the contract length and the rulebook. The second tells you whether the opportunity exists at all. Neither is a technical question, and both are more predictive than anything on the datasheet."
+  },
+  {
+   "id": "three-sockets",
+   "title": "The three sockets",
+   "kind": "proscons",
+   "read": "6 min",
+   "intro": "Where batteries actually enter the AI buildout, and the honest fit in each. They are not three market segments of equal size or equal openness — one is the core lane, one is genuinely contested and new, and one is closed to most of the people reading this. Knowing which is which before a first call is most of the value of this lesson.",
+   "cards": [
+    {
+     "t": "Socket 1 — grid-side {{FOM}} storage",
+     "meta": "The core lane. Ordinary front-of-meter storage, bought by utilities and independent power producers because load is growing",
+     "adv": [
+      "Judged on {{duration}}, cycle life and price — **storage criteria, not AI criteria**, which is to say the criteria you already compete on",
+      "AI load growth drives utility and IPP procurement regardless of what happens inside any individual campus, so the demand is not contingent on winning a campus",
+      "Merchant owners and those buying under {{safe harbor}} terms live here, on economics rather than on optics"
+     ],
+     "dis": [
+      "It is not *AI revenue* in any way a marketing team would enjoy — it is ordinary front-of-meter storage, **which is precisely the point**",
+      "The regulated half of this lane is fenced by bankability and by foreign-entity rules, so who may bid is decided before the technical evaluation starts"
+     ]
+    },
+    {
+     "t": "Socket 2 — campus and {{behind-the-meter}} buffering",
+     "meta": "Contested, new, and code-driven. A battery inline between the grid and the campus, holding the load transients and the faults",
+     "adv": [
+      "**Demand created by rules rather than by preference** — large-load ride-through obligations and curtailment protocols made this socket exist, and rules do not change their minds",
+      "Decided in quarters by developers and power partners, not in rate-case years — a materially faster sales cycle than socket 1",
+      "It is a real, evidenced category rather than a concept: a medium-voltage battery-based AI uninterruptible supply, ride-through-certified and built foreign-entity-clean by design, anchored by a **5 GW deployment agreement across multiple hyperscale campuses commissioning through 2026–2027** — and separately, roughly 1.15 GWh of grid-battery buffering deployed and planned across one named campus alongside its gas fleet"
+     ],
+     "dis": [
+      "Foreign-entity optics dominate hyperscale specifications, so the realistic wins are non-US campuses and operators without tax-credit exposure. **Qualify hard before spending pipeline time here**",
+      "The category's terms are being set now by whoever gets certified first, and the attributes being written into them — medium voltage, ride-through certification, supply-chain provenance — are as much compliance as engineering"
+     ]
+    },
+    {
+     "t": "Socket 3 — inside the data hall",
+     "meta": "Incumbent-held. The uninterruptible supply room and the rack, served by an entrenched few",
+     "adv": [
+      "Worth tracking regardless: the category spend is enormous, and **its specifications cascade outward** to the campus level, so what is decided here shapes socket 2 next year",
+      "**The honest no is itself credibility** — knowing your layer is a technical-audience signal, and it is cheaper than a lost year"
+     ],
+     "dis": [
+      "There is no entry for a grid-storage supplier without a rack form factor or a {{UPS}}-class product. Not a hard sale — no product",
+      "It is the most supply-chain-averse buyer class in the market, and it is held by entrenched critical-power incumbents"
+     ]
+    }
+   ],
+   "note": "Read the three as decreasing in size and increasing in specificity. Socket 1 is where the megawatt-hours are and where nothing about the buyer is new. Socket 2 is small, fast, growing and defined by compliance attributes. Socket 3 is enormous and, for most of the people this lesson is written for, closed. The earlier lesson on high-voltage direct current described a battery shelf on a rack's DC bus as *a battery sale happening in a room most storage sellers have never been in* — this card is the same observation from the commercial side, and the two agree: it is an opening only if you have the product, and a distraction if you do not.",
+   "sales": "The machine tells you which socket you are in before the customer does. A campus that bought engines and rotating mass has already answered the transient question without a battery. A campus buying medium-voltage buffering has created socket 2 and will evaluate you on certification files. And a hall specifying rack shelves is socket 3, where the answer is usually no. **Find the machine, then find the socket, then decide whether to spend the quarter.**"
+  },
+  {
+   "id": "the-honest-no",
+   "title": "The honest no",
+   "kind": "callout",
+   "read": "3 min",
+   "ps": [
+    "Socket 3 deserves its own moment, because the instinct it triggers is the wrong one. An enormous category, adjacent to everything you sell, full of batteries — and the correct answer for a grid-storage supplier without a rack-scale or {{UPS}}-class product is **no.** Not *not yet*, not *let us explore a partnership*. No.",
+    "That is not defeatism, it is positioning. **Knowing your layer is a technical-audience signal.** The people specifying the inside of a hall have spent careers on hold-up windows, form factors and indoor fire-test evidence; a supplier who arrives with grid-storage vocabulary and a container datasheet marks themselves in the first two minutes, and everything said afterwards is discounted. A supplier who says *that is not our layer — here is the layer where we are the right answer, and here is what we can tell you about yours* has spent the same two minutes buying credibility instead of losing it.",
+    "There is a second reason, and it is about time rather than pride. Socket 3 is held by entrenched critical-power incumbents and is the most supply-chain-averse buyer class in the market. A pursuit there is not a long shot with a normal cost — it is a long shot that consumes the quarter you needed for socket 1, where the procurement is real, repeating and judged on criteria you already meet.",
+    "**Keep watching it anyway.** Its specifications cascade: what the hall standardises on this year becomes what the campus asks for next year, and socket 2's compliance attributes are downstream of decisions made inside socket 3. Tracking a market you cannot sell into is not sentiment — it is where the second socket's next requirement is written."
+   ]
+  },
+  {
+   "id": "the-rules-that-made-a-socket",
+   "title": "The rules that made a socket",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "Socket 2 is unusual: it was created by rule-writing rather than by a product launch, which is why it appeared quickly and why it will not quietly go away. These are the dated gates a seller navigates, in two lanes — the rules that impose the duty, and the one grid whose queue arithmetic sets the forecasts. **The dates are exact; they are the reason this lesson carries the review date it does.**",
+   "lanes": {
+    "rules": "The rules that create the duty",
+    "tx": "The queue that sets the forecast"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "tx",
+     "label": "SB 6 signed — 20 June 2025",
+     "sub": "Large loads at or above 75 MW get study fees, {{curtailment}} protocols, and review of co-location arrangements. The first statutory acknowledgement that a very large electronic load is a different kind of customer with duties attached."
+    },
+    {
+     "x": 2,
+     "lane": "rules",
+     "label": "{{NOGRR 282}} grandfather line — 14 November 2025",
+     "sub": "**This is the line that created the socket.** New electronic loads at or above 75 MW must {{ride-through}} disturbances rather than trip off them. A campus can no longer answer a voltage dip by disconnecting, which means something inline has to hold it — and that something is a battery."
+    },
+    {
+     "x": 3,
+     "lane": "rules",
+     "label": "{{NOGRR 245}} maximisation deadline passed — 31 December 2025",
+     "sub": "The other half of the pair, and the one sellers confuse with the first: ride-through obligations for storage and other {{IBR}}s now in force. 245 governs the resource; 282 governs the load. Same interface, opposite sides."
+    },
+    {
+     "x": 4,
+     "lane": "tx",
+     "label": "Queue audit — Batch Zero paused, 3 August 2026",
+     "sub": "Roughly 49.8 GW paused, with up to $15 billion at risk on one third-party estimate. The clearest demonstration available that a queue position is not an asset until it survives an audit."
+    },
+    {
+     "x": 5,
+     "lane": "rules",
+     "label": "{{PRC-029-1}} enforceable — around 1 October 2026",
+     "sub": "Ride-through becomes mandatory for {{IBR}}s, storage included, at the North American reliability level rather than the regional one. What was a single grid operator's requirement becomes a baseline everywhere — so a certification file built for one market stops being a regional differentiator and starts being the entry ticket."
+    },
+    {
+     "x": 6,
+     "lane": "tx",
+     "label": "Batch Zero target — 10 December 2026",
+     "sub": "The queue repricing lands. **Every forecast in this lesson that depends on that market has to be re-verified on this date** — which is exactly why it is this lesson's review date rather than a date six months out."
+    }
+   ],
+   "note": "Two things this timeline deliberately leaves out. The utility procurement lane — certification orders, storage RFP cycles, new large-load tariffs taking effect — is real and dated, but it belongs to the market-access material rather than here; this lesson is about where the product plugs in, not how a regulated utility buys. And fire-code adoption, which is a genuine 2028-ward gate, is a certification question the storage-technology track owns. What is left is the shortest honest answer to *why does socket 2 exist* — a ride-through obligation with a date on it."
+  },
+  {
+   "id": "power-battery-versus-energy-battery",
+   "title": "A power battery is not an energy battery",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The technical reason the three sockets are three different products rather than one product sold three ways. Sockets 2 and 3 want a battery that can deliver ferociously for a very short time and then sit still for years; socket 1 wants a battery that can be emptied and refilled gently, thousands of times. Almost every design choice runs in the opposite direction between them.",
+   "cols": [
+    "",
+    "{{energy battery}} — socket 1",
+    "{{power battery}} — sockets 2 and 3"
+   ],
+   "rows": [
+    [
+     "**The duty**",
+     "Cycled deliberately, most days: charge on cheap hours, discharge into expensive ones, hold reserve for frequency work in between",
+     "**{{float service}}** — held at high charge for years, discharging rarely but violently when finally called"
+    ],
+    [
+     "**How it is sized**",
+     "By hours. {{duration}} is the specification, and the megawatt-hours are bought to reach it",
+     "By discharge *rate* against a tiny duration — seconds to minutes, bridging a disturbance until something else takes the load"
+    ],
+    [
+     "**What the design optimises**",
+     "Cycle life and cost per stored unit. How many times can it be emptied, and how much does each stored unit cost",
+     "**Rate capability and calendar life at full charge.** Deep-cycle count barely matters, because the deep cycles are not coming. Cell design and chemistry follow the duty, not the other way round"
+    ],
+    [
+     "**What decides the sale**",
+     "Duration, cycle life and price — storage criteria, evaluated against other storage",
+     "**Certification and rate capability, not cost.** The battery protects revenue measured in millions per minute of downtime, buyers procure against safety certifications rather than price per stored unit, and indoor fire-test evidence is a hard gate"
+    ],
+    [
+     "**Where it physically sits**",
+     "Containers on pads, interconnected like a small power plant",
+     "Inline between the grid and the campus at medium voltage, or inside the building — where lithium displaced lead-acid on **floor area**: roughly an order of magnitude less space and multiples of the service life, in a building where every square metre could otherwise earn compute revenue"
+    ],
+    [
+     "**What it is judged against**",
+     "Other grid storage",
+     "The incumbent critical-power vendors, whose vocabulary, form factors and certification files are the reference — not other battery companies"
+    ]
+   ],
+   "note": "Socket 2 sits between the two columns and takes attributes from both, which is what makes it genuinely new rather than a relabelled version of either. It is a grid-scale battery in size and interconnection, and a power battery in duty — buffering load transients that swing in milliseconds to seconds and riding through voltage faults, at medium voltage, inline. That combination is why it was a defined product category before it was a large market, and why the attributes written into it are compliance attributes as much as electrical ones.",
+   "sales": "This table is the honest answer to *can we just sell our container into that?* Usually no — and the reason is not quality, it is that the two columns optimise opposite properties, so a product excellent in one column reads as over-specified and under-certified in the other. **The transferable asset is not the container, it is the certification discipline.** A supplier who already runs a serious testing and certification programme has the muscle socket 2 evaluates on; a supplier who competes on price per stored unit has the muscle socket 1 evaluates on. Know which one you are before choosing which socket to chase."
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "*Every other lesson in this walk ends on where the equipment fails. This one has no stage of the chain to break, so it ends on the other kind of failure — the ones that cost a seller the room, the quarter or the forecast. They are just as dated and just as specific.*",
+    "**Quoting a queue as a pipeline.** A grid operator carrying roughly five times its all-time peak in large-load requests is not describing demand, and a forecast built on those gigawatts is a forecast built on press releases. The correction is mechanical: track tariff-committed and certification-order megawatts. One utility's terms turned a 30 GW pipeline into about 5.6 GW of signed load, and **that ratio is the sanity check** — not because it transfers exactly, but because it is the right order of magnitude for the gap between asking and signing.",
+    "**Confusing the two rules that sit next to each other.** {{NOGRR 245}} is ride-through for storage and other {{IBR}}s; {{NOGRR 282}} is ride-through for large electronic loads. They govern opposite sides of the same interface, their numbers are adjacent, and mixing them in a room full of grid engineers costs the technical audience for the rest of the meeting. The same category of error is the megawatt-against-megawatt-hour slip: **duration is one divided by the other**, and getting it backwards is the fastest credibility loss available.",
+    "**Spending a quarter on a campus that could never buy from you.** Socket 2's realistic wins are non-US campuses and operators without tax-credit exposure, because supply-chain provenance dominates hyperscale specification regardless of engineering merit. This is not an objection to be overcome in a later meeting — it is a screen that was applied before the first one. Qualify on it early, and treat a disqualification as a saved quarter rather than a lost deal.",
+    "**Letting a compliance requirement be someone else's spec.** In the market where the ride-through obligation started, the architectural requirements around remote access are known in advance and will be asked for. Leading with the architecture before it is requested converts an objection into a specification you wrote; waiting for it converts you into a vendor being audited. The same logic runs through socket 2 generally — **the category's terms are being set now by whoever gets certified first**, and a certification file is a years-long asset, not a document produced when a tender arrives.",
+    "**And the dated one: a forecast that outlives its gate.** Everything in this lesson that depends on the Texas queue has a repricing landing on 10 December 2026. A model carried past that date without re-verification is not stale in the ordinary way — it is resting on a number that a scheduled event is going to move."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "State the orienting rule for storage in the AI buildout, and say why it is a targeting decision rather than modesty.",
+     "a": "Sell to the grid, not to the data centre. The largest storage buildout AI causes is ordinary front-of-meter storage, judged on ordinary storage criteria — duration, cycle life and price. Utilities and independent power producers procure it because load is growing, and that procurement happens whether or not any particular campus ever buys a battery. It is a targeting decision because that lane has the volume, the repeat purchasing and the evaluation criteria a storage supplier already competes on."
+    },
+    {
+     "q": "Name the three sockets and say, in one phrase each, how open they are.",
+     "a": "Grid-side front-of-meter storage — the core lane, open, and judged on storage criteria. Campus and behind-the-meter buffering — contested and new, created by ride-through rules, decided in quarters rather than rate-case years, but screened hard on supply-chain provenance. Inside the data hall — incumbent-held and effectively closed to any grid-storage supplier without a rack form factor or a UPS-class product, though its specifications cascade outward and are worth tracking."
+    },
+    {
+     "q": "A rule change required large electronic loads to ride through disturbances rather than trip off them. Why did that create a market for batteries?",
+     "a": "Because a campus can no longer answer a voltage dip by disconnecting, so something inline has to hold it through the disturbance — and the only thing that responds fast enough with stored energy is a battery. That is what makes this socket unusual: it was created by rule-writing rather than by a product launch, which is why it appeared quickly and why it will not quietly go away. Rules do not change their minds."
+    },
+    {
+     "q": "Distinguish a power battery from an energy battery across duty, sizing and what the design optimises.",
+     "a": "An energy battery is cycled deliberately most days, sized by hours of duration, and optimised for cycle life and cost per stored unit. A power battery sits in float service — held at high charge for years and discharging rarely but violently — is sized by discharge rate against a duration of seconds to minutes, and is optimised for rate capability and calendar life at full charge, with deep-cycle count barely mattering. Cell design and chemistry follow the duty, not the other way round."
+    },
+    {
+     "q": "Why is the backup-power niche able to charge premium prices in a commodity industry?",
+     "a": "Because the battery protects revenue measured in millions per minute of downtime, so the buyer is not optimising price per stored unit. Procurement runs against safety certifications rather than cost, indoor fire-test evidence is a hard gate, and rate capability rather than energy is the specification. Certification and rate capability decide the sale — which is why the transferable asset from a grid-storage business is its certification discipline, not its container."
+    },
+    {
+     "q": "Someone quotes a grid operator's interconnection queue as evidence of demand. What is wrong with that, and what should be tracked instead?",
+     "a": "A queue is requests, not demand — one operator carries roughly five times its all-time peak in large-load requests. The filter that separates real from vapour is the large-load tariff: long contracts, ramp schedules, a minimum-take obligation at around 85 per cent, exit fees and collateral. One utility's terms collapsed a 30 GW pipeline to about 5.6 GW of signed, financially committed load. Track tariff-committed and certification-order megawatts, which are purchase orders on a twelve-to-thirty-six-month fuse."
+    },
+    {
+     "q": "Why is declining the in-hall socket described as a credibility move rather than a lost opportunity?",
+     "a": "Because the people specifying inside a hall have spent careers on hold-up windows, form factors and indoor fire-test evidence, and a supplier arriving with grid-storage vocabulary marks themselves in the first two minutes. Saying 'that is not our layer, here is the layer where we are the right answer' buys credibility with the same two minutes. There is also a time argument: it is a long shot held by entrenched incumbents that consumes the quarter the open socket needed."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "Which statement best captures where the AI boom's largest storage demand actually lands?",
+     "c": [
+      "In ordinary front-of-meter storage bought by utilities and IPPs, judged on storage criteria",
+      "Inside data halls, in rack-mounted backup units specified by hyperscalers",
+      "In behind-the-meter campus buffering, which is where the AI-branded revenue is",
+      "In whichever socket the campus's prime-mover vendor recommends"
+     ],
+     "a": 0,
+     "why": "AI load growth drives utility and IPP storage procurement regardless of what happens inside any individual campus. That lane is not AI-branded and is judged on duration, cycle life and price — which is precisely the point, because those are criteria a storage supplier already competes on. Chasing the campus and ignoring the utility means walking past the volume to reach the story."
+    },
+    {
+     "q": "A colleague uses NOGRR 245 and NOGRR 282 interchangeably in a meeting with grid engineers. What did they get wrong?",
+     "c": [
+      "One governs ride-through for storage and other inverter-based resources; the other governs it for large electronic loads",
+      "One is a Texas rule and the other is a national reliability standard",
+      "One applies before the grandfather date and the other after it",
+      "One covers ride-through and the other covers curtailment protocols"
+     ],
+     "a": 0,
+     "why": "They govern opposite sides of the same interface — the resource and the load — and their numbers being adjacent is exactly what makes the mistake easy. It costs the technical audience for the rest of the meeting, which puts it in the same category as confusing a megawatt with a megawatt-hour."
+    },
+    {
+     "q": "Why does a backup battery's design optimise almost the opposite properties from a grid storage container's?",
+     "c": [
+      "It sits in float service — held at high charge for years and discharging rarely but hard — so rate capability and calendar life matter and deep-cycle count barely does",
+      "It uses a different chemistry, and chemistry determines the duty cycle",
+      "It is indoors, so thermal limits rather than electrical ones set every specification",
+      "It is smaller, and small batteries always favour power over energy"
+     ],
+     "a": 0,
+     "why": "The duty comes first and the cell design follows it, not the other way round. A grid container is emptied and refilled thousands of times, so cycle life and cost per stored unit decide it. A standby battery may go years between real discharges, so what matters is how it survives sitting full and how hard it can push when finally called."
+    },
+    {
+     "q": "A campus asks for a medium-voltage, ride-through-certified battery buffer. Which socket is that, and what will actually decide the award?",
+     "c": [
+      "Socket 2 — and it turns on certification and supply-chain provenance at least as much as on engineering",
+      "Socket 1 — and it turns on duration and price per stored unit like any front-of-meter project",
+      "Socket 3 — and it turns on rack form factor and hold-up window",
+      "None of them — a medium-voltage buffer is conversion equipment, not storage"
+     ],
+     "a": 0,
+     "why": "This is the socket the ride-through rules created. It is grid-scale in size and interconnection but power-battery in duty, and the attributes being written into the category — medium voltage, ride-through certification, supply-chain provenance — are compliance attributes as much as electrical ones. The screen is applied before the first meeting, so qualify on it early."
+    },
+    {
+     "q": "Why does this lesson carry a review date in December 2026 rather than the usual six months out?",
+     "c": [
+      "A scheduled queue repricing lands on that date and will move numbers the lesson teaches",
+      "The guidance material it draws on is republished on a fixed December cycle",
+      "Fire-code adoption becomes effectively mandatory on that date",
+      "It is six months from when the ride-through obligation became enforceable"
+     ],
+     "a": 0,
+     "why": "A review date should be the material's own nearest dated gate rather than a fixed cadence. Here the gate is a scheduled event: the queue repricing that every forecast depending on that market has to be re-verified against. A model carried past it is not stale in the ordinary way — it is resting on a number a scheduled event is going to move."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
@@ -3666,11 +4074,12 @@ function clTrackAidcCampus_() {
  "schemaVersion": 1,
  "id": "aidc-campus",
  "title": "The AI Campus: Heat, Water, Power Projects, and the BESS Socket",
- "short": "Read an AI campus as a set of physical constraints rather than a footprint. So far: why heat, not power, decides how much compute fits in a hall.",
+ "short": "Read an AI campus as a set of physical constraints rather than a footprint. So far: why heat, not power, decides how much compute fits in a hall — and where a battery does and does not plug into the buildout.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-02",
+ "updated": "2026-09-03",
  "lessons": [
-  "heat-is-the-constraint"
+  "heat-is-the-constraint",
+  "where-bess-plugs-in"
  ],
  "prereqs": [
   "aidc-grid-to-chip"
@@ -3686,7 +4095,7 @@ function clLessons_() {
   return [clLessonCellToContainer_(), clLessonDurationDegradation_(), clLessonSpecSheet_(),
           clLessonTheFenceLine_(), clLessonBridgePower_(), clLessonAidcPowerChain_(),
           clLessonHeatConstraint_(), clLessonEightHundredVdcShift_(),
-          clLessonControlStack_()];
+          clLessonControlStack_(), clLessonWhereBessPlugsIn_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcCampus_()];

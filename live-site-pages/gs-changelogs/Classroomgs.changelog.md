@@ -3,11 +3,20 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 15/50`
+`Sections: 16/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.16g] — 2026-09-03 01:27:59 AM EST — v04.37r
+
+### Added
+- A new lesson has been added to the campus track. It is restricted to the contributor tier and above; readers below that tier will see it counted as withheld rather than listed
+- Curriculum updated
+
+### Changed
+- The campus track now runs two lessons and its summary describes what the walk covers today
 
 ## [v01.15g] — 2026-09-03 01:16:17 AM EST — v04.36r
 
