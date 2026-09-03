@@ -1,4 +1,4 @@
-var VERSION = "v01.14g";
+var VERSION = "v01.15g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -3181,18 +3181,459 @@ function clLessonEightHundredVdcShift_() {
 };
 }
 
+function clLessonControlStack_() {
+  return {
+ "schemaVersion": 1,
+ "id": "the-control-stack",
+ "type": "module",
+ "title": "The Control Stack: BMS, PCS, EMS — Who Decides What",
+ "short": "Three layers of control run a storage plant: one protects the cells, one converts the power, one decides the day. What each owns, and where the money goes.",
+ "group": "Technology Foundations",
+ "updated": "2026-09-03",
+ "reviewBy": "2027-03-03",
+ "provenance": {
+  "inputs": [
+   {
+    "kind": "public",
+    "ref": "study:flexgen",
+    "date": "2026-08-08",
+    "note": "what an EMS is and how the stack layers; control loops and response time; a site's operating day — dispatch, the interconnection limit, state-of-charge windows, rack balancing, warranty caps enforced automatically; availability as revenue; the control-brain retrofit and orphaned fleets"
+   },
+   {
+    "kind": "public",
+    "ref": "study:sinexcel",
+    "date": "2026-08-08",
+    "note": "the power conversion system as the gatekeeper: bidirectional conversion, millisecond command following, fault ride-through, the grid-following versus grid-forming split and virtual synchronous generator mode, and the datasheet numbers that matter — efficiency, overload headroom, grid-code certification"
+   },
+   {
+    "kind": "public",
+    "ref": "study:wartsila",
+    "date": "2026-08-08",
+    "note": "frequency as the grid's balance gauge and the battery as its fastest responder; an energy-management platform spanning cell to fleet at sub-second speed; analytics estimating state of health from fleet data; and why control-system cybersecurity certification matters at fleet scale"
+   },
+   {
+    "kind": "public",
+    "ref": "study:fluence",
+    "date": "2026-08-08",
+    "note": "the project cast — developer, integrator, EPC, grid operator — and who warrants what; the bidding layer with warranty limits and ageing cost built into every bid; the digital twin; and the reserved state-of-charge buffer as controls-quality profit"
+   },
+   {
+    "kind": "public",
+    "ref": "concepts:profiler-concepts",
+    "date": "2026-09-03",
+    "note": "term definitions used by the {{...}} tooltips"
+   }
+  ]
+ },
+ "tiles": [
+  {
+   "k": "3 layers",
+   "v": "that actually decide",
+   "sub": "the cells · the conversion · the day — plus two above them that only watch"
+  },
+  {
+   "k": "~5 min",
+   "v": "the re-bidding cycle",
+   "sub": "far beyond human pace, which is why the software is the revenue"
+  },
+  {
+   "k": "8% vs 15%",
+   "v": "the reserved buffer",
+   "sub": "about 7% more sellable energy out of identical hardware"
+  },
+  {
+   "k": "milliseconds",
+   "v": "the fastest responder on the grid",
+   "sub": "but only as fast as its control software"
+  }
+ ],
+ "glossary": [
+  {
+   "t": "control loop",
+   "d": "The pattern every layer of this stack runs on: measure something, compare it against the value you want, command a change, then measure again — repeating every second or faster. Nothing in a storage plant is set once and left; everything is held at a target by a loop that never stops."
+  },
+  {
+   "t": "setpoint",
+   "d": "The value a control loop is trying to hold — a megawatt output, a state of charge, a temperature. Most arguments about how a storage plant behaves are really arguments about which layer is allowed to set which setpoint, and how far it may move it."
+  },
+  {
+   "t": "state of charge",
+   "d": "The fuel gauge: how much energy is on board right now, as a percentage of what the plant can hold. It is a live number that changes minute by minute, and it is the single value the whole day's dispatch is planned around."
+  },
+  {
+   "t": "state of health",
+   "d": "The long-term gauge: how much capacity the cells still hold compared with when they were new. Where state of charge changes through the day, state of health only ever falls — and how fast it falls is what a warranty is a promise about."
+  },
+  {
+   "t": "cell balancing",
+   "d": "Equalising the charge across the cells in a string so they stay in step. Cells drift apart with age and temperature, and a string can only be charged until its highest cell hits the limit and discharged until its lowest one does — so an unbalanced string is limited by its worst cell, and the same logic scales up to a whole site being limited by its weakest rack."
+  },
+  {
+   "t": "cycle budget",
+   "d": "The number of charge-discharge cycles, and the total energy throughput, that a battery warranty permits per year — usually alongside a temperature-exposure limit. It is a contractual allowance, not a physical one: the plant can exceed it, and the consequence is not a breakdown but a voided warranty."
+  },
+  {
+   "t": "point of interconnection",
+   "d": "The physical and contractual boundary where a plant meets the grid, and the megawatt ceiling written into that connection agreement. However much the batteries could deliver, this is the most the site may push into or pull from the network — so it is the hard cap every dispatch command is divided up beneath."
+  },
+  {
+   "t": "SCADA",
+   "d": "Supervisory control and data acquisition: the operator's window onto the plant — live telemetry out, remote commands in. It is how humans see and intervene, which makes it a visibility layer rather than a deciding one; the automated decisions are being made below it, far faster than anyone is watching."
+  },
+  {
+   "t": "grid-following",
+   "d": "An inverter that locks onto the grid's existing voltage wave and injects current into it — a surfer riding a wave someone else is making. It is the conventional mode and it works well, but it cannot operate at all without a live grid to follow."
+  },
+  {
+   "t": "virtual synchronous generator",
+   "d": "A control mode that makes a grid-forming inverter behave like a traditional spinning generator — resisting frequency change as though it had rotating mass it does not have. It is what lets an inverter-based plant supply the stabilising behaviour that retiring thermal plants used to provide for free, and what makes black start and off-grid running possible."
+  },
+  {
+   "t": "ride-through",
+   "d": "Staying connected and operating through a grid disturbance — a voltage dip or a frequency excursion — instead of protectively disconnecting. Grid codes increasingly require it, because a fault that trips every connected resource offline turns a local problem into a system one."
+  },
+  {
+   "t": "grid code",
+   "d": "The rulebook a national or regional grid operator writes for anything connecting to its network: how it must behave during faults, how fast it must respond, what it may and may not do to the waveform. Equipment is certified against each one separately, which is why a certification portfolio is a market-access asset rather than a formality."
+  },
+  {
+   "t": "black start",
+   "d": "Re-energising a dead network with no outside power to draw on, bringing load and sources back in stages. It is rare and definitional: a resource that can do it is one that does not need the grid to already be there."
+  },
+  {
+   "t": "availability guarantee",
+   "d": "A contracted promise about the fraction of hours a plant will be ready to perform, with money attached to missing it. It matters more than an average would suggest, because storage revenue is concentrated into a small number of extreme-price hours a year."
+  },
+  {
+   "t": "digital twin",
+   "d": "A simulated copy of a real plant, fed by its live data, used to rehearse changes before they touch the hardware — testing a market strategy, forecasting degradation, or learning what normal looks like so anomalies stand out. It is how a control vendor tries something on a site without trying it on the cells."
+  }
+ ],
+ "sections": [
+  {
+   "id": "the-layers",
+   "title": "The stack, layer by layer",
+   "kind": "prose",
+   "read": "5 min",
+   "ps": [
+    "A grid-scale battery is, in the sources' own phrase, **dumb hardware**: racks of cells holding DC energy, a {{PCS}} to convert it, transformers to lift it to grid voltage. None of it does anything at all until software tells the inverter what to do, when, and how hard. That is worth sitting with, because it inverts the intuition a spec sheet gives you. The earlier lessons in this track were about what the hardware *can* do. This one is about what decides.",
+    "The stack is layered like an org chart, and it has **five levels — three that decide and two that watch.** The **{{BMS}}** is the cell-level guardian: it watches every cell's voltage and temperature, performs {{cell balancing}}, isolates faults, and reports what it sees upward. The **{{PCS}}** is the bidirectional gate — a rectifier and an inverter in one box, turning battery DC into grid AC when discharging and back when charging. It executes power commands, follows grid-operator signals in milliseconds, and is the thing that must {{ride-through}} a grid fault rather than trip off it. The **{{EMS}}**, or site controller, is the supervisor: it decides charge and discharge, coordinates every device on site, and keeps the whole thing inside its safety and warranty limits. Above those sit **{{SCADA}}**, the operator's window — telemetry out, remote commands in — and a **fleet or market layer** that dispatches many sites at once against prices and grid signals across a portfolio.",
+    "Everything at every level runs on {{control loop}}s: measure frequency, voltage, power and {{state of charge}}; compare against a {{setpoint}}; command the inverters; repeat, every second or faster. Grid frequency — 60 Hz in the United States, 50 Hz in Europe — is the balance gauge the whole system is watching. More demand than supply and it sags; more supply than demand and it rises. **Batteries are the fastest responders on the grid, but only as fast as their control software**, which is why the vendors in this layer compete on response time rather than on hardware.",
+    "The unglamorous half of the job is translation. Batteries, inverters, meters, transformers and even fire panels each expose their data over industrial protocols with their own register maps, one per vendor. A control layer described as *hardware-agnostic* is simply one engineered to map anybody's equipment into a single coherent system — which sounds like plumbing and is in fact the thing that decides whether a site can be built from best-of-breed parts or has to be bought whole from one supplier.",
+    "One property of the top layer is easy to miss and hard to unsee. A fleet controller commanding gigawatt-hours across many sites at sub-second speed is, viewed from the outside, a very large and very fast lever on the grid. The sources treat control-system cybersecurity certification as a product requirement for exactly that reason — **a compromised multi-gigawatt battery fleet is not a data breach, it is a grid weapon** — and the certifications named are industrial-control and cloud-security ones rather than anything battery-specific."
+   ],
+   "sales": "Every requirement in a storage tender belongs to exactly one of these layers, and knowing which one tells you who is actually going to evaluate you. A ride-through or grid-code clause is a {{PCS}} requirement and it will be judged by an electrical engineer against a certification list. A fleet-dispatch or warranty-reporting clause is an {{EMS}} requirement and it will be judged by an asset manager against an operating record. A balancing or thermal clause is a {{BMS}} requirement and it may well be judged by the cell supplier's own engineer. **Answering a tender at the wrong layer is the most common way to be technically compliant and commercially invisible.**"
+  },
+  {
+   "id": "a-day-in-dispatch",
+   "title": "One day, three lanes",
+   "kind": "timeline",
+   "read": "5 min",
+   "intro": "You already know from the earlier lesson *what* the plant earns — arbitrage, ancillary services, capacity — and that the same asset stacks several of them. This is the day underneath that. Three lanes run in parallel: what the market is doing, what the plant does about it, and the ceiling the whole thing runs under. **The order is the shape the sources state, not a clock** — the sequence of a storage day is well defined; the hour any given phase starts is a market and a site fact, and none of these sources puts a time on it.",
+   "lanes": {
+    "price": "The market signal",
+    "plant": "What the plant does",
+    "limit": "The ceiling it runs under"
+   },
+   "items": [
+    {
+     "x": 1,
+     "lane": "limit",
+     "label": "Before anything: the {{cycle budget}}",
+     "sub": "The battery warranty caps cycles per year, total energy throughput and temperature exposure. The {{EMS}} logs every cycle and enforces those caps automatically — it doubles as the site's compliance officer. Everything below happens inside that allowance."
+    },
+    {
+     "x": 2,
+     "lane": "price",
+     "label": "Midday: solar floods the market and the price falls",
+     "sub": "The daily shape that made storage a business. Renewables produce when the weather says so rather than when demand does, and the gap between the two now swings hard inside a single hour."
+    },
+    {
+     "x": 3,
+     "lane": "plant",
+     "label": "The site charges",
+     "sub": "The {{EMS}} sets a charge command, the {{PCS}} executes it, and the {{BMS}} keeps every rack inside its {{state of charge}} window and balanced against its neighbours. The window is deliberately not 0–100 %: lithium cells age faster sitting at either extreme."
+    },
+    {
+     "x": 4,
+     "lane": "limit",
+     "label": "The {{point of interconnection}} caps how hard",
+     "sub": "A command such as *deliver 80 MW for the next hour* is split by the site controller across dozens of inverters and hundreds of racks — all of it beneath the contractual maximum the site may push into or pull from the grid, whatever the batteries could physically do."
+    },
+    {
+     "x": 5,
+     "lane": "plant",
+     "label": "Through the afternoon: standing ready is itself the product",
+     "sub": "Frequency response pays for readiness, not for energy moved. When frequency deviates the plant injects or absorbs power in under a second — faster than anything else connected — and it is paid for having been able to."
+    },
+    {
+     "x": 6,
+     "lane": "price",
+     "label": "Every few minutes, the bids are re-optimised",
+     "sub": "Machine-learning price forecasts re-bid the asset across energy and ancillary markets roughly every five minutes. This is far beyond human pace, which is the point: **the bidding software is not a convenience, it is the revenue.** The better implementations build the warranty limits and the ageing cost into every bid, so revenue chasing cannot quietly eat the asset."
+    },
+    {
+     "x": 7,
+     "lane": "price",
+     "label": "Evening: the peak arrives and the price rises",
+     "sub": "The other half of the shape. Energy bought in the glut is sold into the peak, and the spread between them — minus the round-trip loss — is the arbitrage."
+    },
+    {
+     "x": 8,
+     "lane": "plant",
+     "label": "The site discharges — down to the buffer, not through it",
+     "sub": "Every operator holds back a reserve of charge it never touches, so that a dispatch commitment is never missed by a rounding error in the {{state of charge}} estimate. How large that reserve has to be is a measure of how well the plant knows itself."
+    },
+    {
+     "x": 9,
+     "lane": "limit",
+     "label": "And a handful of hours decide the year",
+     "sub": "Storage income is spiky. A site offline during the year's few extreme-price hours misses much of its annual profit — which is why the industry runs 24/7 remote operations centres and sells {{availability guarantee}}s with financial teeth rather than quoting an average."
+    }
+   ],
+   "note": "Read the three lanes as a hierarchy rather than a sequence. The market lane is the only one that moves on its own; the plant lane is a response to it; and the limit lane never moves at all during the day — it was fixed by a warranty, a connection agreement and a service contract signed long before, and it is what turns an optimisation problem into a bounded one."
+  },
+  {
+   "id": "who-owns-which-number",
+   "title": "Who owns which number",
+   "kind": "table",
+   "read": "5 min",
+   "intro": "The practical skill this lesson is for. Any number quoted about a storage plant belongs to exactly one layer, and putting it on the wrong one is how a specification, a tender answer or a root-cause analysis goes wrong. Read the last column as the diagnostic: it is what you would actually observe if that layer were the one at fault.",
+   "cols": [
+    "The number",
+    "Whose it is",
+    "What it is doing there",
+    "What you see when that layer is wrong"
+   ],
+   "rows": [
+    [
+     "Cell voltage, cell temperature, {{cell balancing}}",
+     "**{{BMS}}**",
+     "Watching every cell, equalising drift across a string, isolating a fault before it spreads. It measures and protects; it does not decide anything commercial",
+     "A string that cannot be charged or discharged as far as its neighbours, because it is limited by its worst cell — and a site limited by its weakest rack"
+    ],
+    [
+     "The {{state of charge}} window",
+     "**{{EMS}}** enforces it, **{{BMS}}** measures it",
+     "Cells age faster held near 0 or 100 %, so the operating window is narrower than the physical one. Two layers touch this number, which is exactly why it is argued about",
+     "Capacity fading faster than the warranty curve predicted, with nothing visibly broken"
+    ],
+    [
+     "The {{cycle budget}} — cycles per year, energy throughput, temperature exposure",
+     "**{{EMS}}**",
+     "A contractual allowance the controller enforces and logs automatically. The plant is physically capable of exceeding it; the enforcement is the point",
+     "A warranty claim refused on equipment worth hundreds of millions — discovered years after the cycling that caused it"
+    ],
+    [
+     "The megawatt setpoint, and its split across inverters and racks",
+     "**{{EMS}}** decides, **{{PCS}}** executes",
+     "One instruction is divided across dozens of inverters and hundreds of racks, beneath the {{point of interconnection}} ceiling",
+     "The site delivering less than it bid, or breaching its connection limit — a commercial failure that looks like an equipment failure"
+    ],
+    [
+     "{{ride-through}}, and grid-code behaviour during a fault",
+     "**{{PCS}}**",
+     "Staying connected through a dip or an excursion instead of protectively disconnecting, exactly as the region's {{grid code}} requires",
+     "A plant that drops offline during the disturbance it was contracted to help with — and the certification questions that follow"
+    ],
+    [
+     "Conversion efficiency (~98.5–99 %) and overload headroom (around 1.5×)",
+     "**{{PCS}}**",
+     "Efficiency is paid on every kilowatt-hour **twice**, once charging and once discharging, and a third time in cooling. The headroom exists so the unit can briefly push extra current — enough for breakers to trip properly during a fault, and for large loads to start when running off-grid",
+     "A plant quietly under-earning against its model, or one that cannot clear a downstream fault it was assumed to cover"
+    ],
+    [
+     "The reserved buffer nobody dispatches into",
+     "**{{EMS}}**, and it is the purest measure of controls quality on this table",
+     "Guaranteeing dispatch accuracy down to an **8 %** buffer instead of an industry-typical **~15 %** unlocks about **7 % more sellable energy from identical hardware**",
+     "Money left in the cells — invisible, because nothing is broken and the plant meets every commitment it made"
+    ]
+   ],
+   "note": "Two rows have two owners, and those are the two that generate the most argument on a real site: the {{state of charge}} window, where the protection layer measures and the supervisor decides, and the megawatt setpoint, where the supervisor decides and the conversion layer executes. Wherever a number is shared, the failure is usually not in either layer but in what they assumed about each other.",
+   "sales": "The buffer row is the whole commercial argument for the control layer in one line. Seven per cent more sellable energy out of hardware that did not change is not a feature, it is margin — and it is invisible on any spec sheet, because a plant running a 15 % buffer is not malfunctioning. **When a buyer says the cells are a commodity, this row is the answer:** the cells are, and the difference between two sites built from the same cells is sitting in this table."
+  },
+  {
+   "id": "the-warranty-envelope",
+   "title": "An optimiser inside a contract",
+   "kind": "callout",
+   "read": "4 min",
+   "ps": [
+    "The previous lesson established that cycling harder earns more today and ages the asset measurably faster. This is what that constraint looks like from inside the control room, because it is not a philosophy — **it is a set of enforced numbers with a compliance log behind them.** The warranty caps cycles per year, total energy throughput and temperature exposure, and the controller enforces those caps automatically while recording every cycle against them. Exceeding them does not break anything. It voids coverage on equipment worth hundreds of millions of dollars, and it does so silently, at the moment of a claim that may be a decade away.",
+    "So the bidding layer is **not a trader.** A trader maximises return against risk. This optimiser maximises return against a contract it must not breach, on an asset whose remaining life is one of the things it is spending. The better implementations make that explicit by pricing it: the warranty limits and the ageing cost are built into every bid, so that a high-price hour is evaluated against what taking it costs the cells rather than against the price alone. Where that is not built in, the trade is still being made — just not by anyone who knows they are making it.",
+    "The second-order consequence is that the control layer becomes a forecasting business. Predicting when {{augmentation}} will be needed, and budgeting for it, is a data problem answered from field-measured {{state of health}} across a fleet rather than from a datasheet curve. The same data feeds a {{digital twin}} — a simulated copy of the plant that learns what normal looks like — so a market strategy can be rehearsed, and a degradation forecast tested, without spending real cycles finding out.",
+    "This is also where the project's cast becomes visible in the software. A **developer** finds the land and the connection and arranges the financing; an **integrator** engineers cells, enclosures, conversion and controls into a warranted product; an **EPC** builds it; the **grid operator** runs the market it earns in. The integrator's whole position sits in one gap: cell factories sell commodity cells by the million and do not warrant grid performance, while lenders will only finance a system somebody guarantees for fifteen to twenty years. **The control stack is what makes that guarantee sayable** — availability, deliverable energy and {{round-trip efficiency}} are contracted numbers, and the layer that proves them is the layer being sold."
+   ]
+  },
+  {
+   "id": "following-or-forming",
+   "title": "Following or forming: the choice inside the PCS",
+   "kind": "proscons",
+   "read": "4 min",
+   "intro": "One decision inside the conversion layer changes what a storage plant *is*, and it now appears in tenders as a requirement rather than as a preference. The sources put it as a pair of images: a grid-following inverter is a surfer, and a {{grid-forming inverter}} is a metronome.",
+   "cards": [
+    {
+     "t": "{{grid-following}}",
+     "meta": "Locks onto the grid's existing voltage wave and injects current into it. The conventional mode, and still the majority of what is installed",
+     "adv": [
+      "Simpler control problem, long-proven, and certified against every grid code in the market",
+      "Entirely sufficient for the jobs that pay most of the bills today — arbitrage, frequency response, capacity",
+      "Cheaper, and the behaviour is well understood by everyone who has to approve it"
+     ],
+     "dis": [
+      "It cannot operate at all without a live grid to follow — so it contributes nothing during the outage it is sitting next to",
+      "It cannot {{black start}} anything, and it cannot hold an island on its own",
+      "As thermal plant retires, a grid made mostly of followers has nobody left setting the beat"
+     ]
+    },
+    {
+     "t": "{{grid-forming inverter}}",
+     "meta": "Creates the voltage wave itself and sets the beat for others to synchronise to. In {{virtual synchronous generator}} mode it impersonates a spinning machine",
+     "adv": [
+      "Supplies the stabilising behaviour that retiring thermal plant used to give the grid for free — resisting frequency change as though it had rotating mass",
+      "Enables {{black start}} and off-grid operation, with many units sharing load in parallel",
+      "Rides through the millisecond load swings of an AI campus and can island the site during an outage — which is why data-center buyers ask for it specifically",
+      "Increasingly a stated tender requirement rather than a premium option, as the regulatory direction hardens"
+     ],
+     "dis": [
+      "A harder control problem, and a shorter track record in front of the engineers who must approve it",
+      "Certification is per grid code and per country, so the portfolio takes years of laboratory queues to build",
+      "Paying for it on a site whose duty never needs it is paying for a capability that will not show up in the revenue"
+     ]
+    }
+   ],
+   "note": "This is not a chemistry question or a megawatt question — the same battery, the same cells and the same enclosure sit behind either choice. It is a decision made in the conversion layer and expressed in software, which is precisely why it is easy to leave out of a hardware conversation and expensive to discover late. The same power-electronics building block is also what the industry sells as harmonic filters, reactive-power compensators and sag protection; **what those devices do to the waveform belongs to the data-hall lesson in the AI track, not here.**",
+   "sales": "Read the grid-forming line in a tender as a question about *what the buyer thinks this asset is for.* A merchant developer asking for it is hedging a regulatory direction. A transmission operator asking for it means the plant is being bought as grid infrastructure and will be judged on uptime and grid-code behaviour rather than on price per kilowatt-hour. And a data-center buyer asking for it means island, ride-through and {{black start}} are the actual specification, and the storage vocabulary you arrived with is the wrong one for the room. **Same word, three different deals.**"
+  },
+  {
+   "id": "where-it-fails",
+   "title": "Where it fails",
+   "kind": "callout",
+   "tone": "warn",
+   "read": "5 min",
+   "ps": [
+    "**The blast radius is set by the architecture, not by the fault.** The same cell fault can cost a fraction of a percent or a whole block, and what decides is how finely the control and conversion layers are divided. A block whose conversion is arranged per string derates slightly when one string fails; a block sharing one conversion path trips entirely. The same logic runs all the way down: a string can only be charged until its highest cell reaches its limit and discharged until its lowest one does, so an unbalanced string is capped by its worst cell — and a site is capped by its weakest rack. **Granularity is a control-architecture decision that presents as a reliability number,** and it is made long before anyone sees the reliability number.",
+    "**Mis-dispatch that voids the warranty.** This is the failure with the longest fuse in storage. The controller is the layer enforcing the {{cycle budget}}, so a controller that enforces it wrongly — or is configured to chase a price signal past it — does not produce a fault, an alarm or a bad day. It produces a refused claim on hundreds of millions of dollars of equipment, years later, backed by the plant's own compliance log. Nothing about the failure is visible while it is happening, which is why the logging is not paperwork.",
+    "**A converter that trips where it was required to {{ride-through}}.** A {{PCS}} is contracted to stay connected through a disturbance and keep supporting the network. One that protectively disconnects instead turns a local fault into a lost obligation — and the consequences are commercial rather than physical: the revenue for the interval, the performance record, and a conversation about which {{grid code}} the unit was actually certified against. Certification is per country and per code and takes years of laboratory queues, so *this unit is certified* and *this unit is certified here* are different sentences, and the second one is the one that matters.",
+    "**The orphaned control layer.** A storage plant lasts fifteen to twenty years. Its control software is supplied by a company that may not. Vendor failures in this industry have left live fleets running on software nobody supports, and the repair is a genuine operation — swapping the control brain of an operating site, with each vendor's register map re-mapped and the changes rehearsed off-site before anyone touches the plant. It is done, and it is done routinely enough to be a product. But it is a risk that belongs to the software layer alone: the cells do not care who wrote the code, and neither does the warranty.",
+    "**And the failure that is only ever visible in the annual number.** Storage income is concentrated into a small number of extreme-price hours. A plant that is available 98 % of the year and unavailable for the wrong 2 % has not lost 2 % of its revenue. That is why availability is contracted with financial teeth rather than reported as an average, why the remote operations centre runs continuously, and why *the site was fine* and *the site earned* are not the same claim."
+   ]
+  },
+  {
+   "id": "drill",
+   "title": "Flashcards",
+   "kind": "flashcards",
+   "read": "drill",
+   "cards": [
+    {
+     "q": "Name the layers of a storage plant's control stack, and say which ones actually decide anything.",
+     "a": "Five layers, three of which decide. The battery management system guards the cells — voltage, temperature, balancing, fault isolation — and reports upward. The power conversion system executes power commands, follows grid signals in milliseconds and rides through faults. The energy management system, or site controller, decides charge and discharge, coordinates every device and enforces the safety and warranty limits. Above those, SCADA is the operator's window — telemetry out, commands in — and a fleet or market layer dispatches many sites at once. The top two watch and command; they are not where the second-by-second decisions are made."
+    },
+    {
+     "q": "Why is a grid-scale battery described as dumb hardware, and what follows from that commercially?",
+     "a": "Because racks of cells, an inverter and a transformer do nothing until software tells the inverter what to do, when and how hard. What follows is that the cells are a commodity bought from similar suppliers, so the control layer is where system vendors genuinely differ — and where a guarantee about availability, deliverable energy and round-trip efficiency becomes sayable at all. Lenders finance the guarantee, not the hardware."
+    },
+    {
+     "q": "A site is told to deliver 80 MW for the next hour. Trace what each layer does with that instruction.",
+     "a": "The energy management system decides whether to accept it against price, state of charge and the remaining cycle budget, then splits it across dozens of inverters and hundreds of racks — all beneath the point of interconnection limit, the contractual maximum the site may push into or pull from the grid. Each power conversion system executes its share, converting DC to grid AC. Each battery management system holds its racks inside their state-of-charge window and keeps cells balanced, and reports back anything that would make its share undeliverable."
+    },
+    {
+     "q": "What is the reserved state-of-charge buffer, and why is it the clearest measure of controls quality?",
+     "a": "It is charge the operator never dispatches into, held back so a commitment is never missed by an error in the state-of-charge estimate. Its size is a confession about how well the plant knows itself: guaranteeing dispatch accuracy down to an 8 % buffer instead of an industry-typical 15 % unlocks about 7 % more sellable energy from identical hardware. It is pure controls-quality profit, and it is invisible — a plant running the larger buffer is not malfunctioning, it is just earning less."
+    },
+    {
+     "q": "Why is the bidding layer an optimiser rather than a trader?",
+     "a": "Because it maximises return against a contract it must not breach, on an asset whose remaining life is one of the things it is spending. The warranty caps cycles per year, energy throughput and temperature exposure; the controller enforces those caps automatically and logs every cycle against them. Exceeding them breaks nothing — it voids coverage on hundreds of millions of dollars of equipment, silently, until a claim years later. The better implementations price that in, building the warranty limits and ageing cost into every bid."
+    },
+    {
+     "q": "Grid-following versus grid-forming: what is the difference, and why has it moved from preference to requirement?",
+     "a": "A grid-following inverter locks onto the grid's existing wave and injects current into it — a surfer, which cannot operate without a live grid. A grid-forming inverter creates the voltage wave itself and sets the beat others synchronise to, and in virtual-synchronous-generator mode it resists frequency change as though it had rotating mass. As thermal plants retire, the stabilising behaviour their spinning mass supplied for free has to be bought deliberately — so grid-forming appears in tenders as a requirement, and it is also what lets a plant black-start, hold an island, and ride through the millisecond swings of an AI campus."
+    },
+    {
+     "q": "A plant was available 98 % of last year and badly missed its revenue forecast. What is the likeliest explanation, and what does it imply about how availability is sold?",
+     "a": "Storage income is concentrated into a small number of extreme-price hours, so which 2 % the plant was unavailable for matters far more than the size of the 2 %. That is why availability is contracted with financial teeth rather than reported as an average, why operators run 24/7 remote operations centres, and why 'the site was fine' and 'the site earned' are separate claims that have to be checked separately."
+    }
+   ]
+  },
+  {
+   "id": "check-yourself",
+   "title": "Self-test",
+   "kind": "quiz",
+   "read": "5 questions",
+   "items": [
+    {
+     "q": "A tender requires the plant to stay connected and keep supporting the network through a voltage dip. Which layer owns that requirement, and who will judge the answer?",
+     "c": [
+      "The power conversion system — judged by an engineer against grid-code certifications",
+      "The battery management system — judged by the cell supplier against its thermal limits",
+      "The energy management system — judged by an asset manager against an operating record",
+      "SCADA — judged by the operator against telemetry coverage"
+     ],
+     "a": 0,
+     "why": "Ride-through is conversion-layer behaviour: the converter either stays connected through the disturbance or protectively disconnects. It is certified per country and per grid code, which is why the evaluation is a certification-list question rather than an operating-history one. Answering a tender at the wrong layer is how a compliant bid becomes commercially invisible."
+    },
+    {
+     "q": "Cells age faster when held near 0 % or 100 %, so the operating window is narrower than the physical one. Which layer sets that window, and which one measures it?",
+     "c": [
+      "The energy management system enforces it; the battery management system measures it",
+      "The battery management system enforces it; SCADA measures it",
+      "The power conversion system enforces it; the energy management system measures it",
+      "The fleet layer enforces it; the power conversion system measures it"
+     ],
+     "a": 0,
+     "why": "Two layers touch this number, which is exactly why it gets argued about on real sites. The protection layer measures cell state and reports it; the supervisor decides how much of the physical range the plant is allowed to use. Where a number has two owners, the failure is usually not in either layer but in what each assumed about the other."
+    },
+    {
+     "q": "What does exceeding the warranty's cycle budget actually cause?",
+     "c": [
+      "No fault at all — it voids coverage on the equipment, discovered years later at a claim",
+      "An immediate protective shutdown by the battery management system",
+      "A grid-code violation reported to the system operator",
+      "A permanent reduction in the point-of-interconnection limit"
+     ],
+     "a": 0,
+     "why": "The cycle budget is a contractual allowance, not a physical one — the plant is entirely capable of exceeding it. That is what makes it dangerous: nothing alarms, nothing trips, and the controller's own compliance log is what the refused claim will eventually be based on. This is the longest fuse in storage operations."
+    },
+    {
+     "q": "Two sites are built from identical cells, enclosures and converters, and one earns meaningfully more. Which explanation is best supported by how the control stack works?",
+     "c": [
+      "It runs a smaller reserved state-of-charge buffer, so more of the same energy is sellable",
+      "Its cells were manufactured in a later production batch with higher capacity",
+      "It has a higher point-of-interconnection limit written into the same connection agreement",
+      "Its converters are rated for a larger overload, so it can bid more megawatts"
+     ],
+     "a": 0,
+     "why": "Buffer size is a statement about how accurately the plant knows its own state of charge — down to an 8 % buffer instead of a typical 15 % is about 7 % more sellable energy from identical hardware. It is controls quality converted directly into margin, and it never appears on a spec sheet, because the site running the larger buffer is behaving perfectly correctly."
+    },
+    {
+     "q": "A data-center buyer specifies grid-forming capability. What are they actually asking the plant to be able to do?",
+     "c": [
+      "Set voltage and frequency itself — so it can ride through swings, island the site and black-start it",
+      "Follow the grid's wave more accurately, so its frequency response is faster",
+      "Charge and discharge at a higher C-rate to cover short load spikes",
+      "Meet a stricter harmonic-distortion limit at the point of common coupling"
+     ],
+     "a": 0,
+     "why": "A grid-following converter is a surfer and cannot operate without a live grid, so it contributes nothing during the outage it is standing next to. A grid-forming one is the metronome: it creates the wave, which is what makes islanding and black start possible and what lets it hold a campus through millisecond load swings. When that word appears from this buyer, island and ride-through are the real specification — not price per kilowatt-hour."
+    }
+   ]
+  }
+ ]
+};
+}
+
 function clTrackBessFoundations_() {
   return {
  "schemaVersion": 1,
  "id": "bess-foundations",
  "title": "BESS Foundations",
- "short": "Finish this and you can read a grid-storage spec sheet and hold a technical conversation about cells, duration and degradation.",
+ "short": "Finish this and you can read a grid-storage spec sheet, hold a technical conversation about cells, duration and degradation, and say which control layer is deciding what while the plant runs.",
  "group": "Technology Foundations",
- "updated": "2026-09-01",
+ "updated": "2026-09-03",
  "lessons": [
   "cell-to-container",
   "duration-and-degradation",
-  "spec-sheet-decoded"
+  "spec-sheet-decoded",
+  "the-control-stack"
  ]
 };
 }
@@ -3244,7 +3685,8 @@ function clTrackAidcCampus_() {
 function clLessons_() {
   return [clLessonCellToContainer_(), clLessonDurationDegradation_(), clLessonSpecSheet_(),
           clLessonTheFenceLine_(), clLessonBridgePower_(), clLessonAidcPowerChain_(),
-          clLessonHeatConstraint_(), clLessonEightHundredVdcShift_()];
+          clLessonHeatConstraint_(), clLessonEightHundredVdcShift_(),
+          clLessonControlStack_()];
 }
 function clTracks_() {
   return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcCampus_()];

@@ -3,11 +3,23 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 14/50`
+`Sections: 15/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.15g] — 2026-09-03 01:16:17 AM EST — v04.36r
+
+### Added
+- A new lesson on the software that actually runs a storage plant: the layers of control between the cells and the market, which layer decides what, and which two of them only watch
+- It walks a single operating day on three lanes — what the market is doing, what the plant does about it, and the ceiling the whole day runs under — and shows why the bidding software is the revenue rather than a convenience
+- A reference table assigns every number quoted about a storage plant to the layer that owns it, and says what you would actually observe if that layer were the one at fault
+- It covers the choice between an inverter that follows the grid's wave and one that creates it, why that has moved from a preference to a tender requirement, and what it means when three different kinds of buyer ask for the same thing
+- It closes on where control fails: a fault whose blast radius was set by the architecture years earlier, a mis-dispatch that voids a warranty silently, a converter that disconnects where it was contracted to stay connected, a control layer whose supplier is gone, and a plant that was available almost all year and still missed the hours that mattered
+
+### Changed
+- The BESS foundations track now runs four lessons and its summary describes what the walk covers today
 
 ## [v01.14g] — 2026-09-03 12:59:55 AM EST — v04.35r
 
