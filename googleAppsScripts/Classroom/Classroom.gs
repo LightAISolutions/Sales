@@ -1,4 +1,4 @@
-var VERSION = "v01.12g";
+var VERSION = "v01.13g";
 var TITLE = "Classroom — BESS/AIDC Curriculum";
 var GITHUB_OWNER  = "LightAISolutions";
 var GITHUB_REPO   = "Sales";
@@ -499,7 +499,7 @@ function clLessonVisible_(sess, lesson) {
 // the gate derivation below the fence is frozen precisely so a stamp can be
 // checked rather than trusted.
 // ── The first tracks, assembled from the existing corpus (C1) ─────────────
-// Five public-stamped modules authored from the company study guides and the
+// Six public-stamped modules authored from the company study guides and the
 // public concepts registry, plus one guidance-stamped module built on the BESS
 // technology-fundamentals guidance analysis. Every input below is a source
 // actually read while authoring — the stamp is not a citation of convenience.
@@ -2836,27 +2836,36 @@ function clTrackAidcGridToChip_() {
  "schemaVersion": 1,
  "id": "aidc-grid-to-chip",
  "title": "The AIDC Power Chain, Grid to Chip",
- "short": "Walk a megawatt from the grid to the chip in physical order. It opens at the fence line — the studies, the queue, the substation — then builds the power station a campus puts up when that queue is slower than the compute race.",
+ "short": "Walk a megawatt from the grid to the chip in physical order. So far: the fence line and the queue behind it, the power station a campus builds when that queue is too slow, and the chain from the service entrance to the rack.",
  "group": "The AI Data-Center Wave",
  "updated": "2026-09-02",
  "lessons": [
   "the-fence-line",
-  "bridge-power"
+  "bridge-power",
+  "the-aidc-power-chain"
  ]
 };
 }
 
-function clTrackAidcPowerPrimer_() {
+// `aidc-power-primer` is retired here, not renamed: its two lessons keep their
+// ids and move to the positions the curriculum plan fixes for them —
+// `the-aidc-power-chain` to position 3 of `aidc-grid-to-chip`, and
+// `heat-is-the-constraint` to position 1 of this track. Per-lesson progress is
+// keyed on the lesson, not the track, so the rollup survives the move; the
+// retired track id is never reused.
+function clTrackAidcCampus_() {
   return {
  "schemaVersion": 1,
- "id": "aidc-power-primer",
- "title": "The AI Data-Center Power Primer",
- "short": "Finish this and you can follow a megawatt from the utility service entrance to the chip, and explain why heat now sets the density.",
+ "id": "aidc-campus",
+ "title": "The AI Campus: Heat, Water, Power Projects, and the BESS Socket",
+ "short": "Read an AI campus as a set of physical constraints rather than a footprint. So far: why heat, not power, decides how much compute fits in a hall.",
  "group": "The AI Data-Center Wave",
- "updated": "2026-09-01",
+ "updated": "2026-09-02",
  "lessons": [
-  "the-aidc-power-chain",
   "heat-is-the-constraint"
+ ],
+ "prereqs": [
+  "aidc-grid-to-chip"
  ]
 };
 }
@@ -2871,7 +2880,7 @@ function clLessons_() {
           clLessonHeatConstraint_()];
 }
 function clTracks_() {
-  return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcPowerPrimer_()];
+  return [clTrackBessFoundations_(), clTrackAidcGridToChip_(), clTrackAidcCampus_()];
 }
 // CONTENT END — below here the gate derivation is frozen for pipeline runs
 function clLesson_(id) {

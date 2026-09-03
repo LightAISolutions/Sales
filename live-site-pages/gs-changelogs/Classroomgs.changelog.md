@@ -3,11 +3,17 @@
 All notable user-facing changes to this script are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Older sections are rotated to [Classroomgs.changelog-archive.md](Classroomgs.changelog-archive.md) when this file exceeds 50 version sections.
 
-`Sections: 12/50`
+`Sections: 13/50`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v01.13g] — 2026-09-02 11:38:08 PM EST — v04.34r
+
+### Changed
+- The lesson on the building's own power chain — service entrance to rack — now sits in the grid-to-chip track at its proper place in the walk, so the track finally reads end to end: the property line and the queue behind it, the power station a campus builds when that queue is too slow, then the chain inside the building
+- The older two-lesson power track has been retired and replaced by a campus track that opens on why heat, rather than power, decides how much compute fits in a hall. Both lessons kept their identity through the move, so nothing you have already completed is reset
 
 ## [v01.12g] — 2026-09-02 11:04:43 PM EST — v04.33r
 

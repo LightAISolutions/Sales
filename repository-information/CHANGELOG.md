@@ -3,11 +3,43 @@
 All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), with project-specific versioning (`w` = website, `g` = Google Apps Script, `r` = repository). Older sections are rotated to [CHANGELOG-archive.md](CHANGELOG-archive.md) when this file exceeds 100 version sections.
 
-`Sections: 86/100`
+`Sections: 87/100`
 
 ## [Unreleased]
 
 *(No changes yet)*
+
+## [v04.34r] — 2026-09-02 11:38:08 PM EST
+
+> **Prompt:** "continue with your recommendation"
+
+**The curriculum plan's §2.2 track cut, executed.** `the-aidc-power-chain` moves to position 3 of `aidc-grid-to-chip`, `aidc-power-primer` is retired rather than renamed, and `aidc-campus` is created to hold `heat-is-the-constraint` at position 1. Both lessons keep their ids, their sections and their progress keys; only track membership changes. The gate surface is untouched, so `classroom-pipeline-ledger.json` — `gateDigest` included — is not written.
+
+### Added
+
+- **`googleAppsScripts/Classroom/Classroom.gs`** — `clTrackAidcCampus_()`, the track `aidc-campus` (The AI Campus: Heat, Water, Power Projects, and the BESS Socket), opening with `heat-is-the-constraint` alone. Its `short` describes what it teaches today rather than the four-lesson outcome in `CLASSROOM-CURRICULUM-PLAN.md` §3.4 — the same convention `aidc-grid-to-chip` was created under. It is the **first track in the curriculum to carry `prereqs[]`**: `["aidc-grid-to-chip"]`, which the plan specifies and which now resolves because that track exists. The field is advisory — the renderer suggests, it never blocks — and the checker confirms no prerequisite cycle
+- **`googleAppsScripts/Classroom/Classroom.gs`** — a comment above the new literal recording *why* the retired id was retired rather than renamed, so the reasoning survives without a reader having to find §2.2
+
+### Changed
+
+- **`googleAppsScripts/Classroom/Classroom.gs`** — `clTrackAidcGridToChip_()` now lists `the-fence-line` → `bridge-power` → `the-aidc-power-chain`, the first three positions of the plan's eight, and its `short` is rewritten to describe the walk as it now reads end to end: the property line and its queue, the plant a campus builds when that queue is too slow, then the chain from the service entrance to the rack
+- **`googleAppsScripts/Classroom/Classroom.gs`** — `clTracks_()` registers `clTrackAidcCampus_()` in the retired track's position. **`clLessons_()` is unchanged**, and deliberately so: with `the-aidc-power-chain` at position 3 of one track and `heat-is-the-constraint` at position 1 of the next, the existing registry order *already equals* the new teaching order, so `clStudyNext_` walks correctly with no lesson-registry edit at all
+- **`googleAppsScripts/Classroom/Classroom.gs`** — the content-region header comment corrected from "Five public-stamped modules" to "Six". It should have moved when `bridge-power` landed in `v04.33r` and did not; this is that correction. `VERSION` `v01.12g` → `v01.13g`
+- **`live-site-pages/gs-versions/Classroomgs.version.txt`** — `|v01.12g|` → `|v01.13g|`
+- **`live-site-pages/gs-changelogs/Classroomgs.changelog.md`** — a `v01.13g` section, generic entries only; capacity `12/50` → `13/50`
+
+### Removed
+
+- **`googleAppsScripts/Classroom/Classroom.gs`** — `clTrackAidcPowerPrimer_()` and the track id `aidc-power-primer`. **The removal was surfaced before it was made**, per the Chesterton's Fence gate, and the origin trace is the plan's own §2.2: *"A track id is permanent once progress keys on it; today nobody's progress rolls up to `aidc-power-primer` except the developer's, and the rollup is per-lesson underneath, so retiring the track id now — before analysts exist — costs nothing and avoids carrying a title that stops describing its contents."* Nothing outside the planning documents referenced the id — no `prereqs[]`, no page code, no checker fixture. Per §4 item 2 the id is **not reused**, and asking for it now answers `UNKNOWN_TRACK`, which was verified against the real registries rather than assumed
+
+### Notes
+
+- **Retire rather than retitle — the decision, and what would have made it go the other way.** Keeping the id under a new title was the conservative option and the plan explicitly allows it (*"it is a naming choice, not a design one"*). It was rejected because the only thing a permanent id protects is progress keyed on it, and Classroom keys progress on **lesson id + section id**, never on the track — so the rollup the id exists to protect is reconstructed from the lessons wherever they sit. Had track-level progress been stored, or had any analyst account existed to hold it, the retitle would have been correct instead
+- **`heat-is-the-constraint` was never homeless.** Retiring the old track and creating `aidc-campus` happen in the same commit precisely so no registered lesson is ever in no track. A lesson outside every track still appears in the lesson index — `clLessonIndexFor_` walks the lesson registry, not the tracks — so the failure would have been quiet rather than visible, which is the kind that survives a commit
+- **`aidc-campus` is created three lessons early, and that is the plan's shape, not an accident.** §7 lists `where-bess-plugs-in` as cut-line item 5 and says building it *"creates track 4 with `heat-is-the-constraint` plus this lesson"*. Creating the track now, one lesson deep, is the same trade `aidc-grid-to-chip` was created under last session: a track that describes what it teaches today and grows as each lesson is written
+- **Verification** — `check-classroom-content.py`: 7 lessons, 3 tracks, 134 gate cases, **0 errors / 0 warnings**, including the first `prereqs[]` resolution and cycle check in the curriculum. `check-classroom-pipeline.py --base origin/main`: **two findings, both P5** — `track 'aidc-power-primer' disappeared` and `clTracks_(): registration is not append-only` — which are precisely the two assertions a track retirement is expected to trip (plan §8 item 9). P1 did not fire, and as required **no P3**: no gate symbol moved, so `gateDigest` was not refreshed. `--selftest`: 13 fixtures, **0 failures**. `node --check` and `node scripts/check-gas-inner-scripts.js`: clean
+- **The gate derivation was run against the real registries again, not the checker's fixtures.** `aidc-power-primer` resolves to nothing; the lesson walk order is unchanged and still equals teaching order; the track walk order is `bess-foundations` → `aidc-grid-to-chip` → `aidc-campus`; analyst, contributor and admin each see `aidc-grid-to-chip` with all three lessons in walk order at `withheld=0` and `aidc-campus` with its one lesson at `withheld=0` and its prereq attached; **viewer sees no tracks and no lessons at all**. Analyst reads 6 of the 7 lessons — `spec-sheet-decoded` stays withheld on its `guidance` stamp, unchanged by any of this
+- **What this leaves for the next session.** `aidc-grid-to-chip` now holds 3 of its 8 planned lessons and `aidc-campus` 1 of 4. The next cut-line item is `the-800-vdc-shift` (§7 item 3), which lands at position 6 of `aidc-grid-to-chip` — so it can be authored and appended without another track edit
 
 ## [v04.33r] — 2026-09-02 11:04:43 PM EST
 
