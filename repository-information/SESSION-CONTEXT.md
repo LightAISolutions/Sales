@@ -6,6 +6,130 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
 
 ## Latest Session
 
+**Date:** 2026-09-03 02:03 AM EST
+**Repo version:** v04.39r (started at v04.34r — **six push commits**, plus this context write)
+**Branch:** `claude/800-vdc-shift-lesson-av3l62` — every push merged to `main` by the auto-merge workflow, and the
+branch was **restarted from `origin/main` before each of the last five commits** (`git checkout -B <branch>
+origin/main`), because the previous push had already merged and the workflow had swept the branch. That is the
+pattern to repeat: restart *before* making edits, so no intermediate commit is needed to get a clean tree.
+**Model:** Opus 5 — an authoring session, by the standing decision that planning runs on Fable and authoring on Opus 5
+
+**What we worked on — three lessons, a registry increment, and two corrections to the plan itself:**
+
+- **`the-800-vdc-shift`** (`34edfe9`, v04.35r) — cut-line item 3, appended at position 4 of `aidc-grid-to-chip`.
+  Eight sections across five kinds, 12 lesson-local glossary terms, five public inputs. Gate `tracks`.
+  **The first commit in the sequence to return zero pipeline findings** — a pure append, exactly as predicted
+- **`the-control-stack`** (`beb650a`, v04.36r) — cut-line item 4, appended at position 4 of `bess-foundations`.
+  Eight sections across seven kinds, 15 glossary terms, five public inputs. Gate `tracks`. First commit to
+  exercise a **mixed-gate track**: analyst sees 3 of 4 lessons with `withheld: 1`, because `spec-sheet-decoded`
+  pins a `guidance:` input
+- **`where-bess-plugs-in`** (`54d2084`, v04.37r) — cut-line item 5, appended at position 2 of `aidc-campus`.
+  Eight sections across seven kinds, 11 glossary terms, six inputs (one `guidance`, five `public`). Gate
+  **`guidance`** — the first in this sequence, and the commit that finally exercised **the strict half of the
+  provenance fold**: analyst cannot read it and it is absent from their lesson index entirely
+- **37 concepts added to the registry** (`b018487`, v04.38r), 75 → 112 entries, 334 insertions and **zero
+  deletions**. Plus four stale rows corrected in `CLASSROOM-CURRICULUM-PLAN.md`
+- **§6's gap register gained a `Status` column** (`e753963`, v04.39r), all twelve rows backfilled from checks run
+  against the corpus: **1 closed, 1 partial, 8 open, 1 deferred, 1 by design**
+- **Versions:** Classroom GAS `v01.13g` → `v01.14g` → `v01.15g` → `v01.16g`, each with `Classroomgs.version.txt`
+  in the same commit. No page version moved all session — every change was GAS-side or data-side
+
+**Where we left off:**
+
+- **§7's first five are complete.** `the-fence-line` → `bridge-power` → `the-800-vdc-shift` (aidc-grid-to-chip,
+  4 lessons) · `the-control-stack` (bess-foundations, 4) · `where-bess-plugs-in` (aidc-campus, 2). Curriculum is
+  **10 lessons / 3 tracks** against the plan's 30 / 5
+- **What remains on the cut line is the second wave**, opening with `redundancy-by-the-numbers` and
+  `inside-the-rack` — positions 4 and 5 of `aidc-grid-to-chip`, deliberately skipped this session. **Three
+  lessons written today refer forward to `inside-the-rack`** (twice from `the-800-vdc-shift`, once implicitly
+  from `the-control-stack`), all phrased descriptively rather than by lesson id, so nothing dangles for a reader
+  — but the promises are accumulating against it
+- **The repo CHANGELOG is at 92/100.** Archive rotation is **mandatory** above 100, so roughly eight more push
+  commits before it fires. Worth knowing before starting a run of small commits
+- Five of the ten lessons still pin `concepts:profiler-concepts` at the stale **2026-08-31**; the five written
+  today pin the real **2026-09-03**. **This is now a deliberate non-fix — see Key decisions**
+- The earnings desk Routine (weekdays 13:00 UTC) and the weekly C2 pipeline (Wed 11:00 UTC) remain live and
+  unreviewed across six sessions; neither was touched. Sessions D and E of `IMPROVEMENT-PLAN.md` not started
+
+**Key decisions and positions taken:**
+
+- **A closed gap that still reads as open is worse than an open one — it actively generates wrong
+  recommendations.** §6's G1 had been closed since `5c66534` (v04.31r) and the register still said *do this
+  first*. That produced a recommendation this session executed on a false premise. The fix was structural: a
+  `Status` column, plus the rule that **a row is not closed until someone re-runs its check and dates it**. The
+  same shape of defect will recur in any register without a status field — worth checking §5 and §7 for it
+- **Check the concepts registry against its terms AND its aliases, never terms alone.** Six candidate terms
+  (`automatic transfer switch`, `THD`, `total harmonic distortion`, `scale-out`, `minimum take`, `synthetic
+  inertia`) already resolve through aliases. On a terms-only comparison G1 reads 31/34 closed; on a correct one
+  it is **34/34**. This is now written into §8 note 4 as standing practice
+- **A moved source does not justify a re-pin.** The recommendation to advance the five stale concepts pins was
+  **dropped on reflection and deliberately not executed.** Advancing a pin asserts the lesson was authored
+  against a document it was not; adding registry definitions contradicts nothing any lesson teaches, and because
+  `{{term}}` resolves lesson-first it cannot even change what a reader sees. The contract's G3 rule — *a source
+  that moved without contradicting anything leaves the lesson untouched, pin included* — is right here even
+  though it formally binds only pipeline runs. Executing it would have needed five fabricated `revisions[]`
+  entries or five contentless `updated` bumps
+- **The registry promotion rule is now explicit and checkable**, rather than intuited: promote a term when it is
+  defined locally in **two or more lessons**, or appears **at least five times** across the public corpus or the
+  guidance modules. Two exception classes: one half of a pair whose other half qualifies (`energy battery` ↔
+  `power battery`), and a regulatory identifier whose sibling is already present (`NOGRR 245` beside `NOGRR
+  282`). Twelve candidates were excluded by that rule and stay lesson-local
+- **The real cross-lesson glossary duplication was 5 terms, not the 38 claimed in a recommendation.** 94 local
+  entries across 88 distinct terms; only `cycle life` (×3) and `black start`, `ride-through`, `state of charge`,
+  `state of health` (×2) repeat. Measure before recommending
+- **Fourteen deviations from the plan's §3.x outlines were reported before writing, across three lessons.** The
+  pattern that generalises: the outline is a specification, the corpus is the authority, and where they
+  disagree the corpus wins and the disagreement is stated in the CHANGELOG. The two most instructive —
+  **(a)** `the-800-vdc-shift` carries **no `bars` section**, because its only chartable numbers come from two
+  sources on two different bases (a single-phase `P = V·I` illustration against a real three-phase figure) and
+  charting them together would manufacture a comparability neither source claims; **(b)** `where-bess-plugs-in`
+  gained a `where-it-fails` section its §3.4 outline omits but §7 promises — **a contradiction inside the plan**,
+  resolved in §7's favour only because the sources genuinely carry a dated set of *commercial* failure modes
+- **"Anti-islanding" appears in the plan's §3.1 outline and in none of the four study guides that section pins.**
+  A small factual gap in the plan itself, not just an authoring call — worth remembering if a later electrical
+  lesson leans on the phrase
+- **`reviewBy` is the material's own nearest dated gate, and this session produced the cleanest example yet.**
+  `where-bess-plugs-in` carries **2026-12-10** because that is simultaneously the guidance module's own review
+  date *and* the Batch Zero queue-repricing gate its timeline teaches — one event, not two facts that agree. The
+  other two lessons took the ~6-month default and said why: their sources carry no forward dated gate at all
+- **A registry-only or docs-only change bumps the repo version and nothing else** — no page version, no GAS
+  version, no page changelog — per the convention `5c66534` established. Data is deployed, but it is not a page
+
+**Active context:**
+
+- Repo **v04.39r** · Classroom **v01.07w / v01.16g** · Profiler **v01.80w / v01.34g** · Scraper
+  **v01.71w / v01.99g** — no page version moved this session
+- Curriculum **10 lessons / 3 tracks**: `bess-foundations` 4, `aidc-grid-to-chip` 4, `aidc-campus` 1 + 1
+  (`where-bess-plugs-in` is guidance-gated, so analysts see 1 of 2 there). Concepts registry at **112 entries**
+- **The gate derivation has now been run against the real registries on both halves of the fold.** Analyst sees
+  8 of 10 lessons; contributor and admin see 10; viewer sees none and is refused every track. Withheld counts:
+  `bess-foundations` 1, `aidc-campus` 1, `aidc-grid-to-chip` 0
+- Capacity: repo CHANGELOG **92/100**; `Classroomgs` changelog **16/50**
+- `classroom-pipeline-ledger.json` untouched all session — `gateDigest`, `coveredThrough` and `lastRun`
+  unchanged, and **no commit produced a P3 finding**, so the next pipeline run will not block
+- Routines unchanged (6): earnings desk, C2 pipeline, daily ACL, monthly drift, quarterly guidance review,
+  quarterly private sweep
+- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md empty
+- **§8 note 11's open developer calls are down to one**: whether G5 (four utility dossiers) is worth commissioning
+  before track 5's guidance lessons exist. The `aidc-power-primer` naming question and the G1-sequencing question
+  are both closed
+
+**Recommendation for next session:**
+
+- **Author `inside-the-rack` on Opus 5** (`CLASSROOM-CURRICULUM-PLAN.md` §3.3, second wave), at position 4 of
+  `aidc-grid-to-chip` — still a pure append, since position 5's `redundancy-by-the-numbers` is also unwritten.
+  It is the right next lesson for a reason no other candidate has: **three lessons shipped today already refer
+  forward to it** — the PSU-to-die walk, the 48 V busbar, the last centimetre and the periodic load swing were
+  all explicitly deferred to it — so it is the only unwritten lesson the existing curriculum has made promises
+  about. Its inputs (`study:delta-electronics`, `study:liteon`, `study:lambda`, `study:nvidia`, `study:megmeet`)
+  are all present, and two of them were read in full this session.
+
+**To continue:** type `author inside-the-rack from CLASSROOM-CURRICULUM-PLAN.md §3.3`
+
+## Previous Sessions
+
+### 2026-09-03 — `bridge-power` + the §2.2 track cut (v04.34r)
+
 **Date:** 2026-09-03 12:10:00 AM EST
 **Repo version:** v04.34r (started at v04.32r — two push commits, plus this context write)
 **Branch:** `claude/bridge-power-lesson-oajbui` (both pushes merged to `main` by the auto-merge workflow)
@@ -119,123 +243,3 @@ Claude writes to this file when the developer says **"Remember Session"** — ca
   boxes" gives shape without figures and must be a `table` under §8 note 6.
 
 **To continue:** type `author the-800-vdc-shift from CLASSROOM-CURRICULUM-PLAN.md §3.3`
-
-## Previous Sessions
-
-### 2026-09-02 — `the-fence-line` (v04.32r)
-
-**Date:** 2026-09-02 10:42:26 PM EST
-**Repo version:** v04.32r (started at v04.31r — one push commit, plus this context write)
-**Branch:** `claude/fence-line-lesson-authoring-950vj0` (merged to `main` by the auto-merge workflow)
-**Model:** Opus 5 — an authoring session, by the standing decision that planning runs on Fable and authoring on Opus 5
-
-**What we worked on — `the-fence-line`, the first lesson off the curriculum plan's cut line (`31d704e` v04.32r):**
-
-- **Authored `clLessonTheFenceLine_()`** inside the `// CONTENT START` … `// CONTENT END` fence in
-  `googleAppsScripts/Classroom/Classroom.gs` — 343 lines of strict JSON, at its position in the walk
-  (between `clLessonSpecSheet_` and `clLessonAidcPowerChain_`). **Eight sections across six kinds**:
-  `nothing-connects-unstudied` (prose) · `the-three-studies` (timeline) · `load-is-not-generation`
-  (callout) · `what-arrives-at-the-fence` (prose) · `megawatts-that-differ` (table) · `where-it-fails`
-  (callout, `tone: "warn"` — the first use of that field in the curriculum, deliberately establishing the
-  convention for the seven `where-it-fails` sections that follow in this track) · `drill` (6 flashcards)
-  · `check-yourself` (5 quiz items). No two sections of the same kind adjacent; `sales` on three of the
-  six teaching sections
-- **Created `clTrackAidcGridToChip_()`** (`aidc-grid-to-chip`, The AI Data-Center Wave) holding
-  `the-fence-line` alone, and **re-sequenced both registries by insertion** so registry order stays
-  teaching order for `clStudyNext_`: the lesson between `spec-sheet-decoded` and `the-aidc-power-chain`,
-  the track between `bess-foundations` and `aidc-power-primer`. `prereqs[]` omitted rather than pointing
-  at the unregistered `electrical-foundations`
-- **Six public inputs, every pin read off the document fetched this session** (G2):
-  `study:burns-mcdonnell@2026-08-21` · `study:mortenson@2026-08-21` · `study:stack-infrastructure@2026-08-22`
-  · `study:nebius@2026-08-21` · `study:terawulf@2026-08-21` · `concepts:profiler-concepts@2026-09-03`.
-  The stamp folds to **`tracks`** — analyst and up
-- **Seven lesson-local glossary entries only**, all for meanings the 75-entry registry does not carry:
-  `interconnection study`, `network upgrades`, `energization`, `front-of-meter`, `brownfield`,
-  `power banking`, `entitlement`. Everything else (`{{transformer}}`, `{{GOES}}`, `{{medium voltage}}`,
-  `{{large-load tariff}}`, `{{NOGRR 282}}`, `{{SB 6}}`, `{{take-or-pay}}`, `{{PUE}}`, `{{ERCOT}}`,
-  `{{commissioning}}`, `{{switchgear}}`, `{{behind-the-meter}}`) resolves from the registry — **G1's payoff
-  landed exactly as predicted, zero duplication, zero `{{term}}` warnings**
-- **Verified:** `check-classroom-content.py` — 6 lessons, 3 tracks, 134 gate cases, **0 errors / 0 warnings**;
-  `check-classroom-pipeline.py --base origin/main` — six paths changed, **2 findings, both P5** on the
-  registry insertions (the documented cost of a curriculum reorder, plan §4). **P1 did not fire** — all six
-  paths sit inside the contract's write set — and **no P3**, so `gateDigest` was correctly left untouched;
-  `--selftest` 13 fixtures / 0 failures; `node --check` and `check-gas-inner-scripts.js` clean
-- **Ran the gate derivation against the real content**, not just the checker's fixtures: `the-fence-line`
-  → gate `tracks`, viewer not admitted, analyst reads it, `aidc-grid-to-chip` lists it with `withheld=0`
-- **Bumped `VERSION` + `Classroomgs.version.txt` together to `v01.11g`**, generic `v01.11g` changelog entry
-  (no refs, no company names), `v04.32r` CHANGELOG section, repo version, README. **The live GAS deploy was
-  confirmed after merge** — `?action=api&op=deploy` returns `Already up to date (v01.11g)`
-
-**Where we left off:**
-
-- **The track exists and holds one lesson.** `aidc-grid-to-chip` is real, opens with `the-fence-line`, and
-  its `short` describes what it actually teaches today rather than the eight-lesson outcome in §3.3 — each
-  later authoring session extends both the list and the `short`
-- **Two things deliberately left alone, both reversible developer calls.** (a) The five pre-existing lessons
-  still pin `concepts:profiler-concepts` at **2026-08-31**. Re-pinning them is not required by this lesson,
-  and a pin that moves with no contradiction behind it is the write G3 tells a pipeline run not to make.
-  (b) `the-aidc-power-chain` stays in `aidc-power-primer` rather than moving into the new track — moving it
-  now would half-dismantle a working track to open a hole at position 2 where `bridge-power` goes
-- **Three §3.3 outline deviations were reported, not written around**, per the developer's standing
-  instruction to say so rather than stamp a section on material the sources do not carry — see "Key
-  decisions" below
-- The earnings desk Routine (weekdays 13:00 UTC) and the weekly C2 pipeline (Wed 11:00 UTC) remain live and
-  unreviewed across the last four sessions; neither was touched here
-- Sessions D and E of `IMPROVEMENT-PLAN.md` remain not started
-- The three developer calls from plan §8 item 11 are still open, and one has moved: keeping or retiring the
-  track id `aidc-power-primer` is now a *live* question rather than a hypothetical, because a second AIDC
-  track exists beside it
-
-**Key decisions and positions taken:**
-
-- **The section id is `megawatts-that-differ`, not the plan's `four-megawatts-that-differ`.** The plan's own
-  outline lists five quantities in that row (gross · critical IT · contracted · connected · active). Ids are
-  permanent, so one that miscounts its own rows would be permanent too
-- **One section was added that the outline omits but the lesson's `short` promises** — the substation.
-  `what-arrives-at-the-fence` is scoped to what physically arrives at the property line and what set its
-  date; the voltage ladder, the inside of the tank and the 40-month lead time are left to
-  `the-transformer-and-the-substation` in track 2, so the two lessons do not duplicate
-- **Two §5 failure-map claims were cut for want of a source.** "Queue re-pricing" and "an audit that pauses
-  a batch" appear only in the plan's own analysis column — no study guide states them — so `where-it-fails`
-  teaches only what the five guides carry. An "interconnection agreement" phase was likewise dropped from
-  the timeline: the guides name three studies, not a contract stage. **This is the working method: the plan
-  is a specification, the corpus is the authority, and the gap gets reported**
-- **The `timeline` axis is the phase order, not a calendar.** The renderer prints `Math.floor(x)` in a year
-  gutter and no source gives a per-phase duration, so `x` is 1–6 and both the `intro` and the `note` say so
-  in the reader's own words. The durations that *are* carried (years in busy regions, 5+ for a new large-load
-  request, about a year for a gigawatt substation) are stated where they belong. **Any later lesson using
-  `timeline` for a non-calendar sequence should do the same**
-- **`reviewBy` is `2027-03-02` — the ~6-month default, chosen after looking for a dated gate and not finding
-  one.** §8 note 3 asks this lesson to take the nearest dated gate in its own material. There is none: the
-  only dated instrument is Texas SB 6 (2025), already in force and therefore a *past* gate, and the guides
-  carry no queue-audit date or Batch Zero target. If gap **G6** (a large-load interconnection guidance
-  module) is ever commissioned, a revision drawing on it should inherit that module's `reviewBy`
-- **The concepts pin is `2026-09-03`, one day ahead of `updated` (2026-09-02), and that is correct.** It is
-  the literal `git log -1 --format=%cs` output — the G1 commit landed 01:47 UTC, just past local midnight.
-  Pinning the observed value means the next pipeline run reads *unchanged*; pinning 2026-09-02 would have
-  made it read *moved* every week for nothing
-- **A developer session inserting into the registries accepts P5 findings** and does not work around them
-  (plan §4, "Insertion versus append"). The `--selftest` staying at zero failures is the check that matters
-
-**Active context:**
-
-- Repo **v04.32r** · Classroom **v01.07w / v01.11g** (live deploy confirmed) · Profiler **v01.80w / v01.34g**
-  · Scraper **v01.71w / v01.99g** — no page version moved this session
-- Curriculum now **6 lessons / 3 tracks** (was 5 / 2); the plan proposes 30 / 5. Concepts registry unchanged
-  at 75 entries. Capacity: repo CHANGELOG **85/100**; `Classroomgs` changelog 11/50
-- `classroom-pipeline-ledger.json` untouched — `gateDigest`, `coveredThrough` and `lastRun` all unchanged
-- Routines unchanged (6): earnings desk, C2 pipeline, daily ACL, monthly drift, quarterly guidance review,
-  quarterly private sweep
-- Toggles unchanged (START/TIMING/END `On`, `CHAT_BOOKENDS` `Off`); TODO.md and REMINDERS.md empty
-
-**Recommendation for next session:**
-
-- **Author `bridge-power` on Opus 5** (`CLASSROOM-CURRICULUM-PLAN.md` §3.3, cut-line item 2, position 2 of
-  the track just opened). It is the single insertion that turns `aidc-grid-to-chip` from a stub into a walk,
-  it is the largest untaught cluster in the corpus (seven study guides, four supplier dossiers, four named
-  projects), and `the-fence-line` now sets it up explicitly — the queue that makes on-site generation exist
-  is taught, and the engine table stays in `where-batteries-stop` per §8 note 8. Re-fetch and re-pin every
-  input off the fetched document; do not carry this lesson's pins or the older lessons' stale `2026-08-31`
-  concepts pin.
-
-**To continue:** type `author bridge-power from CLASSROOM-CURRICULUM-PLAN.md §3.3`
